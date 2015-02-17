@@ -1,46 +1,22 @@
 (function () {
     'use strict';
 
-    var Table = React.createClass({
-        getInitialState: function () {
-            return {text: [], counter: 0};
-        },
-        render: function () {
-            return React.createElement(
-                'div', null,
-                React.createElement('button', {
-                    style: {color: 'red'},
-                    onClick: this.handleClick,
-                }, "Click Me!"),
-                React.createElement('ul', null, this.state.text.map(function (item) {
-                    return React.createElement(
-                        'li', null, "This is number ", item);
-                }))
-            );
-        },
-        handleClick: function () {
-            this.setState({
-                text: this.state.text.concat([this.state.counter]),
-                counter: this.state.counter + 1,
-            })
-        },
-    });
-
     function item(it) {
         if (it.credit && it.debit) {
             throw new Error("A journal item can't have both credit and debit, got " + JSON.stringify(it));
         }
-        return React.createElement(
-            'tr', null,
-            React.createElement('td', null, (it.credit ? '\u2001' : '') + it.label),
-            React.createElement('td', null, it.debit),
-            React.createElement('td', null, it.credit)
+        return React.DOM.tr(
+            {key: it.label.toLowerCase().split(' ').concat(
+                ['debit', it.debit, 'credit', it.credit]
+            ).join('-')
+            },
+            React.DOM.td(null, (it.credit ? '\u2001' : '') + it.label),
+            React.DOM.td(null, it.debit),
+            React.DOM.td(null, it.credit)
         );
     }
-    function spacer() {
-        return React.createElement(
-            'tr', null, React.createElement(
-                'td', {colSpan: 3}, "\u00A0"));
+    function spacer(key) {
+        return React.DOM.tr({key: 'spacer-' + key}, React.DOM.td({colSpan: 3}, "\u00A0"));
     }
 
     var ClotureTable = React.createClass({
@@ -68,18 +44,18 @@
         },
         
         render: function () {
-            return React.createElement(
-                'div', null,
+            return React.DOM.div(
+                null,
                 this.controls(),
-                React.createElement(
-                    'table', {className: 'table'},
+                React.DOM.table(
+                    {className: 'table'},
                     this.makeHeader(),
-                    React.createElement(
-                        'tbody', null,
+                    React.DOM.tbody(
+                        null,
                         this.revenues(this.state.revenues),
-                        spacer(),
+                        spacer('table-1'),
                         this.expenses(this.state.expenses),
-                        spacer(),
+                        spacer('table-2'),
                         this.closure({
                             dividends: this.state.dividends,
                             income: this.income(),
@@ -89,13 +65,13 @@
             );
         },
         makeHeader: function () {
-            return React.createElement(
-                'thead', null,
-                React.createElement(
-                    'tr', null,
-                    React.createElement('th'),
-                    React.createElement('th', null, "Debit"),
-                    React.createElement('th', null, "Credit")
+            return React.DOM.thead(
+                null,
+                React.DOM.tr(
+                    null,
+                    React.DOM.th(),
+                    React.DOM.th(null, "Debit"),
+                    React.DOM.th(null, "Credit")
                 )
             );
         },
@@ -103,12 +79,12 @@
         controls: function () {
             var _this = this;
             return [
-                React.createElement(
-                    'fieldset', null,
-                    React.createElement('legend', null, "Income"),
-                    React.createElement(
-                        'label', null, "Cash ",
-                        React.createElement('input', {
+                React.DOM.fieldset(
+                    {key: 'income'},
+                    React.DOM.legend(null, "Income"),
+                    React.DOM.label(
+                        null, "Cash ",
+                        React.DOM.input({
                             type: 'number',
                             step: 1,
                             value: this.state.revenues.cash,
@@ -123,9 +99,10 @@
                             }
                         })
                     ),
-                    React.createElement(
-                        'label', null, " Accounts Receivable ",
-                        React.createElement('input', {
+                    ' ',
+                    React.DOM.label(
+                        null, " Accounts Receivable ",
+                        React.DOM.input({
                             type: 'number',
                             step: 1,
                             value: this.state.revenues.receivable,
@@ -141,12 +118,12 @@
                         })
                     )
                 ),
-                React.createElement(
-                    'fieldset', null,
-                    React.createElement('legend', null, "Expenses"),
-                    React.createElement(
-                        'label', null, "Cash ",
-                        React.createElement('input', {
+                React.DOM.fieldset(
+                    {key: 'expenses'},
+                    React.DOM.legend(null, "Expenses"),
+                    React.DOM.label(
+                        null, "Cash ",
+                        React.DOM.input({
                             type: 'number',
                             step: 1,
                             value: this.state.expenses.cash,
@@ -161,9 +138,10 @@
                             }
                         })
                     ),
-                    React.createElement(
-                        'label', null, " Accounts Payable ",
-                        React.createElement('input', {
+                    ' ',
+                    React.DOM.label(
+                        null, " Accounts Payable ",
+                        React.DOM.input({
                             type: 'number',
                             step: 1,
                             value: this.state.expenses.payable,
@@ -179,13 +157,13 @@
                         })
                     )
                 ),
-                React.createElement(
-                    'fieldset', null,
-                    React.createElement('legend', null, "Dividends"),
-                    React.createElement(
-                        'label', null,
+                React.DOM.fieldset(
+                    {key: 'dividends'},
+                    React.DOM.legend(null, "Dividends"),
+                    React.DOM.label(
+                        null,
                         "Ratio (from retained earnings) ",
-                        React.createElement('input', {
+                        React.DOM.input({
                             type: 'range',
                             min: 0,
                             max: 1,
@@ -220,7 +198,7 @@
             }
             if (dividends) {
                 result = result.concat([
-                    spacer(),
+                    spacer('closure'),
                     item({label: "Retained Earnings", debit: dividends}),
                     item({label: "Dividends Payable", credit: dividends})
                 ]);
@@ -233,13 +211,10 @@
                 item({label: "Cash", debit: props.cash}),
                 item({label: "Accounts Receivable", debit: props.receivable}),
                 item({label: "Revenue", credit: total}),
-                React.createElement(
-                    'tr', null, React.createElement(
-                        'td', {colSpan: 3},
-                        "\u2001\u2001Consolidation of revenues"
-                    )
-                ),
-                spacer(),
+                React.DOM.tr({key: 'revenue-notes'}, React.DOM.td(
+                    {colSpan: 3},
+                    "\u2001\u2001Consolidation of revenues")),
+                spacer('revenues'),
                 item({label: "Revenue", debit: total}),
                 item({label: "Income Summary", credit: total})
             ];
@@ -250,13 +225,13 @@
                 item({label: "Expenses", debit: total}),
                 item({label: "Cash", credit: props.cash}),
                 item({label: "Accounts Payable", credit: props.payable}),
-                React.createElement(
-                    'tr', null, React.createElement(
-                        'td', {colSpan: 3},
+                React.DOM.tr(
+                    {key: 'expenses-note'}, React.DOM.td(
+                        {colSpan: 3},
                         "\u2001\u2001Consolidation of expenses"
                     )
                 ),
-                spacer(),
+                spacer('expenses'),
                 item({label: "Income Summary", debit: total}),
                 item({label: "Expenses", credit: total})
             ];

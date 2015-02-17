@@ -265,5 +265,8 @@ texinfo_documents = [
 #texinfo_no_detailmenu = False
 
 def setup(app):
+    app.add_javascript('atom.js')
+    app.add_javascript('immutable.js')
     app.add_javascript('react.js')
-    app.add_javascript('accounting.js')
+    app.add_javascript('chart-of-accounts.js')
+    app.add_javascript('fiscalyear.js')

@@ -52,35 +52,37 @@ them being consumed for the company to "work".
    What is owned has been financed through debts to reimburse or acquired
    assets (profits, capical).
 
-Journal Entries
-===============
+Journals
+========
 
-The chart of accounts is a list of P&L and balance sheet accounts. Journal
-entries record debits and credits to accounts. For instance, for a banking
-account:
-
-* debit 500€ (500€ income)
-* Credit 200€ (paid out 200€)
-* Balance: 300€ (300€ left on the account)
-
-Operations on an account are sometimes represented by T-accounts.
+Accounting journals record business financial transactions as *journal
+entries* before posting entries to account-specific ledgers.
 
 To each financial document (invoice, bank statement, receipt, loan agreement)
-corresponds a *Journal Entry*, which is itself composed of multiple *journal
-items*. Each journal item represents a single change to a single account, but
-entries must be balanced, the sum of all credits in an entry must be equal to
-the sum of all debits.
+corresponds a *journal entry*.
 
-Example: a house doesn't get owned out of thin air, it must have been paid
-(conversion of an asset to an other asset, no change in wealth) and that money
-generally comes from a loan (liability to asset).
+Each journal entry is composed of multiple *journal items*.
+
+Each journal item represents a single change (debit or credit) to a single
+account.
+
+In *double-entry bookkeeping*, a journal entry must be balanced by having the
+sum of all its debits be equal to the sum of all its credits. A journal entry
+is thus composed of at least two *journal items*, a debit and a credit, and
+involves at least two accounts.
+
+Conventionally, all *debits* in journal entries are written first, with the
+account name flush with their column, followed by all *credits* indented
+slightly (to match the position/offset of the corresponding amount
+column). Journal entries can include a note providing context for the
+transaction.
 
 A journal entry almost always corresponds to a separate justifying document:
 invoice, pay slip, …. Financial audits may include matching "hard" evidence to
 journal entries.
 
-Journal entries are generally triaged into **accounting journals** based on
-their classification or frequency. Common accounting journals are:
+Journal entries are generally triaged into accounting journals based on their
+classification or frequency. Common accounting journals are:
 
 * Sales journals with all client transactions
 * Purchase journals with supplier transactions
@@ -89,30 +91,56 @@ their classification or frequency. Common accounting journals are:
 
 .. rst-class:: force-right
 
-.. todo::
+Transactions
+------------
 
-   Switch: European | Storno | Anglo-Saxon
+.. h:div:: journals
 
-   Balance = Debit - Credit
+   needs javascript
 
-   By convention, on financial accounts.
+Ledgers
+=======
 
-   Active Documents To Show Impact:
-   Customer Invoice $100 + 9% tax
-   Customer Refund
-   Customer Payment
-   Customer Delivery
-   Pay Taxes Due
-   Supplier Invoice (an Asset)
-   Supplier Invoice (an Expense)
-   Inventory Reception
+Where journals are general transaction logs (usually contextual on transaction
+type or frequency), ledgers are change logs for a single account (or as a
+central repository for all account changes when it comes to *general
+ledgers*).
 
-   * provide a bunch of pre-defined operations (customisable accounts?)
-     * some operations enable further operations (e.g. a customer can only pay
-       if he got an invoice)
-   * selected operations get reflected on the ledger
-   * update the chart of accounts with content of each account?
-   * provide multiple GAAP accounts things?
+.. todo:: is there a concept of ledger in Odoo?
+
+Ledgers are collections of T-accounts which summarize operations affecting a
+specific account. T-accounts are shaped thus because they are shaped as a T,
+with debits under the left arm and all credits under the right arm of the T:
+
+T-accounts can also be used as temporary scratch space when preparing
+transactions by hand.
+
+.. rst-class:: force-right
+
+T-accounts for the transactions
+-------------------------------
+
+.. h:div:: t-accounts
+
+   needs javascript
+
+Chart of Accounts
+=================
+
+The **chart of accounts** lists all balance sheet (assets, liabilities) and
+P&L (revenue, expense) accounts. These accounts are used to organize and
+classify the finances of the company to better understand the company's
+financial state, and the chart can be used to get a snapshot of a company's
+financial period.
+
+.. rst-class:: force-right
+
+Balance = debit - credit
+------------------------
+
+.. h:div:: chart-of-accounts
+
+   Requires javascript
 
 Debit and credit
 ================
@@ -135,31 +163,39 @@ that adding money to a bank account is a *debit* (in accounting terms):
   credit on the receivable
 * the invoice must thus be a debit on receivable and a credit on income.
 
-.. h:div:: force-right
+.. rst-class:: force-right
 
-   Follow the money:
+Follow the money
+----------------
 
-   1. Customer Payment: Increase bank account, it's a Debit. Thus, the
-      receivable is a credit.
+1. Customer Payment: Increase bank account, it's a Debit. Thus, the receivable
+   is a credit.
 
-      ================== ===== ======
-      \                  Debit Credit
-      ================== ===== ======
-      Bank Account        109€
-      Account Receivable        109€
-      ================== ===== ======
+   +---------------------+-----+------+
+   |                     |Debit|Credit|
+   +=====================+=====+======+
+   |Bank Account         | 109 |      |
+   +---------------------+-----+------+
+   ||  Account Receivable|     | 109  |
+   +---------------------+-----+------+
+   ||   Payment by customer XXX       |
+   +---------------------+-----+------+
 
-   2. As the invoice should compensate the receivable
+2. As the invoice should compensate the receivable
 
-      ================== ===== ======
-      \                  Debit Credit
-      ================== ===== ======
-      Account Receivable  109€
-      Income                    100€
-      Taxes                       9€
-      ================== ===== ======
+   +---------------------+-----+------+
+   |                     |Debit|Credit|
+   +=====================+=====+======+
+   |Account Receivable   | 109 |      |
+   +---------------------+-----+------+
+   ||  Income            |      | 100 |
+   +---------------------+-----+------+
+   ||  Taxes             |      |   9 |
+   +---------------------+-----+------+
+   ||   Invoicing of customer XXX     |
+   +---------------------+-----+------+
 
-   → The income should be negative (a credit)
+→ The income should be negative (a credit)
 
 Closing Fiscal Years
 ====================
@@ -179,7 +215,12 @@ E.g. if a company had 1000€ revenue and 600€ expenses it had a 400€ net
 income. At FY closure the following closure operation is applied: net income
 (debit 400) to retained earnings (credit 400).
 
-.. h:div:: force-right fiscal-year-closing
+.. rst-class:: force-right
+
+Ledger for a fiscal year
+------------------------
+
+.. h:div:: fiscal-year-closing
 
    +--------------------------+-------------------------+-------------------------+
    |                          |Debit                    |Credit                   |
