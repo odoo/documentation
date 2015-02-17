@@ -8,31 +8,48 @@ Financial accounting is used to know the situation of a company (its balance
 sheet) and its performance (Profit and Loss, P&L). It is set up by reporting
 every financial transaction in the relevant accounts of a Chart of Accounts.
 
-**P&L** is always analysed on a specific period rather than since the
-company's founding (e.g. 2014, Q3 2012, …).
+.. rst-class:: intro-list
 
-Gross profits is revenues (sales, interest, royalties) minus cost of goods
-sold (raw materials, storage costs, production labor costs).
+* .. rst-class:: intro-p-l
 
-Operating expenses include administration, sales and R&D salaries as well as
-rent and utilities, legal costs, insurance, ... anything beyond fabrication
-itself.
+  **P&L** is always analysed on a specific period rather than since the
+  company's founding (e.g. 2014, Q3 2012, …).
 
-**Balance sheet** is a snapshot of the situation at a specific moment, listing
-the company's assets and its liabilities at that point.
+* .. rst-class:: intro-gross-profit
 
-**Assets** represent the company's wealth. A person's assets would be a house
-or car ("fixed" or "tangible" assets), bank accounts or cash ("liquid" or
-"current" assets). For a company, a client owing money is an asset. An
-employee is not an asset as it is not owned by the company (slavery being
-illegal under the International Covenant on Civil and Political Rights's
-article 8).
+  **Gross profits** is revenues (sales, interest, royalties) minus cost of
+  goods sold (raw materials, storage costs, production labor costs).
 
-**Liabilities** are obligations from past events resulting in future use or
-transfer of current assets (utility bills, debts, payroll, unpaid suppliers).
+* .. rst-class:: intro-opex
 
-**Equity** is assets which have no liability counterpart: shares, other stocks
-and surplus.
+  **Operating expenses** include administration, sales and R&D salaries as
+  well as rent and utilities, legal costs, insurance, ... anything beyond
+  fabrication itself.
+
+* .. rst-class:: intro-balance
+
+  The **Balance sheet** is a snapshot of the situation at a specific moment,
+  listing the company's assets and its liabilities at that point.
+
+* .. rst-class:: intro-assets
+
+  **Assets** represent the company's wealth. A person's assets would be a
+  house or car ("fixed" or "tangible" assets), bank accounts or cash ("liquid"
+  or "current" assets). For a company, a client owing money is an asset. An
+  employee is not an asset as it is not owned by the company (slavery being
+  illegal under the International Covenant on Civil and Political Rights's
+  article 8).
+
+* .. rst-class:: intro-liabilities
+
+  **Liabilities** are obligations from past events resulting in future use or
+  transfer of current assets (utility bills, debts, payroll, unpaid
+  suppliers).
+
+* .. rst-class:: intro-equity
+
+  **Equity** is assets which have no liability counterpart: shares, other
+  stocks and surplus.
 
 Assets have necessarily been financed via liabilities or equity: a company can
 buy work space through profits, borrowing money or injected capital (for
@@ -42,7 +59,7 @@ A difference is made between assets (e.g. a building) and expenses (e.g. fuel)
 in assets having intrinsic value over time, versus expenses having value in
 them being consumed for the company to "work".
 
-.. rst-class:: force-right
+.. rst-class:: force-right accounts-table
 
 .. figure:: images/accounts.png
    :align: center
