@@ -18,32 +18,34 @@
         return s.replace(/[^0-9a-z ]/gi, '').toLowerCase().split(/\s+/).join('-');
 
     }
-    function isEnabled(transaction) {
-        var item = data.deref().get(transaction);
-        return item.get('enabled');
-    }
     var Controls = React.createClass({
         render: function () {
-            var _this = this;
+            var state = this.props.p;
             return React.DOM.div(null, operations.map(function (op) {
                 var label = op.get('label'), operations = op.get('operations');
                 return React.DOM.label(
                     {
                         key: toKey(label),
                         style: {display: 'block'},
-                        className: (operations === _this.props.p.last() && 'highlight-op')
+                        className: (operations === state.get('active') && 'highlight-op')
                     },
                     React.DOM.input({
                         type: 'checkbox',
-                        checked: _this.props.p.contains(operations),
+                        checked: state.get('operations').contains(operations),
                         onChange: function (e) {
                             if (e.target.checked) {
-                                data.swap(function (ops) {
-                                    return ops.add(operations);
+                                data.swap(function (d) {
+                                    return d.set('active', operations)
+                                        .update('operations', function (ops) {
+                                            return ops.add(operations)
+                                        });
                                 });
                             } else {
-                                data.swap(function (ops) {
-                                    return ops.remove(operations);
+                                data.swap(function (d) {
+                                    return d.set('active', null) // keep visible in state map
+                                        .update('operations', function (ops) {
+                                            return ops.remove(operations);
+                                        })
                                 });
                             }
                         }
@@ -58,7 +60,7 @@
     var Chart = React.createClass({
         render: function () {
             var lastop = Immutable.Map(
-                (this.props.p.last() || Immutable.List()).map(function (op) {
+                (this.props.p.get('active') || Immutable.List()).map(function (op) {
                     return [op.get('account'), op.has('credit') ? 'credit' : 'debit'];
                 })
             );
@@ -97,7 +99,7 @@
         accounts: function() {
             var _this = this;
             var zero = function () { return 0; };
-            var data = this.props.p;
+            var data = this.props.p.get('operations');
 
             var totals = data.flatten(true).reduce(function (acc, op) {
                 return acc
@@ -135,7 +137,13 @@
             controls = document.createElement('div');
         controls.setAttribute('id', 'chart-controls');
         chart.insertBefore(controls, chart.lastElementChild);
-        data.reset(Immutable.OrderedSet());
+
+        data.reset(Immutable.Map({
+            // last-selected operation
+            active: null,
+            // set of all currently enabled operations
+            operations: Immutable.OrderedSet()
+        }));
     });
 
     var NULL = Immutable.Map({debit: 0, credit: 0});
