@@ -69,6 +69,28 @@ them being consumed for the company to "work".
    What is owned has been financed through debts to reimburse or acquired
    assets (profits, capical).
 
+Chart of Accounts
+=================
+
+The **chart of accounts** lists all the accounts used by the company, whether
+they are balance sheet accounts (assets and liabilities) or P&L accounts
+(revenues and expenses), and provides their state at a given moment (their
+credit, debit and balance).
+
+The accounts are used to organize and classify the finances of the company in
+order to better understand its state and health, and the chart of accounts can
+be used to get a snapshot of a company's financial period: because it includes
+P&L, a chart of accounts is also generally viewed over a specific period.
+
+.. rst-class:: force-right
+
+Balance = debit - credit
+------------------------
+
+.. h:div:: chart-of-accounts
+
+   Requires javascript
+
 Journals
 ========
 
@@ -140,24 +162,6 @@ T-accounts for the transactions
 .. h:div:: t-accounts
 
    needs javascript
-
-Chart of Accounts
-=================
-
-The **chart of accounts** lists all balance sheet (assets, liabilities) and
-P&L (revenue, expense) accounts. These accounts are used to organize and
-classify the finances of the company to better understand the company's
-financial state, and the chart can be used to get a snapshot of a company's
-financial period.
-
-.. rst-class:: force-right
-
-Balance = debit - credit
-------------------------
-
-.. h:div:: chart-of-accounts
-
-   Requires javascript
 
 Debit and credit
 ================
