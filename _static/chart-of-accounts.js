@@ -84,13 +84,15 @@
                             React.DOM.td({className: React.addons.classSet({
                                 'text-right': true,
                                 'highlight-op': highlight === 'debit'
-                            })}, data.get('debit')),
+                            })}, data.get('debit') || ''),
                             React.DOM.td({className: React.addons.classSet({
                                 'text-right': true,
                                 'highlight-op': highlight === 'credit'
-                            })}, data.get('credit')),
-                            React.DOM.td({className: 'text-right'},
-                                         data.get('debit') - data.get('credit'))
+                            })}, data.get('credit') || ''),
+                            React.DOM.td(
+                                {className: 'text-right'},
+                                (data.get('debit') - data.get('credit')) || ''
+                            )
                         );
                     }).toArray()
                 )
