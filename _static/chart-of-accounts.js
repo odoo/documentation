@@ -27,7 +27,7 @@
                     {
                         key: toKey(label),
                         style: {display: 'block'},
-                        className: (operations === state.get('active') && 'highlight-op')
+                        className: (operations === state.get('active') ? 'highlight-op' : void 0)
                     },
                     React.DOM.input({
                         type: 'checkbox',

@@ -272,4 +272,4 @@ def setup(app):
     app.add_javascript('react.js')
     app.add_javascript('accounts.js')
     app.add_javascript('chart-of-accounts.js')
-    app.add_javascript('fiscalyear.js')
+    app.add_javascript('entries.js')

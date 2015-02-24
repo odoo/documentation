@@ -123,7 +123,7 @@ context. Common journals are:
 
 .. h:div:: force-right journal-entries
 
-   .. todo:: insert examples of accounting entries for various transactions
+   examples of accounting entries for various transactions
 
 Reconciliation
 ==============
