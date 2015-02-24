@@ -81,8 +81,6 @@
         }
     });
 
-    // TODO: help explaining what the operation is about?
-    // TODO: link to relevant Odoo operation?
     var entries = Immutable.fromJS([
         {
             title: "Company Founding",

@@ -125,6 +125,12 @@ context. Common journals are:
 
    examples of accounting entries for various transactions
 
+   .. todo::
+
+      * help explaining what the operation is about?
+      * link to relevant Odoo operation?
+
+
 Reconciliation
 ==============
 

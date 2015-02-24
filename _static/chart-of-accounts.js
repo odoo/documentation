@@ -1,14 +1,6 @@
 (function () {
     'use strict';
 
-    // .journals
-    // .t-accounts
-    // .chart-of-accounts
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     React.render(
-    //         React.createElement(CoA),
-    //         document.querySelector('.chart-of-accounts'));
-    // });
     var data = createAtom();
 
     function toKey(s, postfix) {
@@ -208,7 +200,6 @@
     }, {
         label: "Customer Payment",
         operations: [
-            // TODO: depends of refund
             {account: ASSETS.CASH.code, debit: function (ops) {
                 return ops.contains(operations.getIn(['customer_refund', 'operations']))
                     ? total - refund
