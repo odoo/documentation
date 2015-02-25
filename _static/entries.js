@@ -107,32 +107,32 @@
                 {account: 'Cash', credit: 3000}
             ]
         }, {
-            title: "Sale paid immediately",
+            title: "Cash sale (paid immediately)",
             operations: [
                 {account: 'Cash', debit: 100},
                 {account: 'Sales', credit: 100}
             ]
         }, {
-            title: "Delayed payment (trade credit)",
+            title: "Invoiced sale (trade credit)",
             operations: [
                 {account: 'Accounts Receivable', debit: 1000},
                 {account: 'Sales', credit: 1000}
             ]
         }, {
-            title: "Customer invoice paid",
+            title: "Customer pays invoice",
             operations: [
                 {account: 'Cash', debit: 1000},
                 {account: 'Accounts Receivable', credit: 1000}
             ]
         }, {
-            title: "Customer invoice, 10% early payment rebate",
+            title: "Customer pays invoice, 10% early payment rebate",
             operations: [
                 {account: 'Cash', debit: 900},
                 {account: 'Sales Discount', debit: 100},
                 {account: 'Accounts Receivable', credit: 1000}
             ]
         }, {
-            title: "Sale with tax",
+            title: "Cash sale with tax",
             operations: [
                 {account: 'Cash', debit: 109},
                 {account: 'Sales', credit: 100},
