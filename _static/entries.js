@@ -45,14 +45,14 @@
     var FormatEntry = React.createClass({
         render: function () {
             return React.DOM.table(
-                {className: 'table table-condensed'},
+                {className: 'table table-condensed d-c-table'},
                 React.DOM.thead(
                     null,
                     React.DOM.tr(
                         null,
                         React.DOM.th(),
-                        React.DOM.th({width: '25%', className: 'text-right'}, "Debit"),
-                        React.DOM.th({width: '25%', className: 'text-right'}, "Credit")
+                        React.DOM.th(null, "Debit"),
+                        React.DOM.th(null, "Credit")
                     )
                 ),
                 React.DOM.tbody(
@@ -75,8 +75,8 @@
             return React.DOM.tr(
                 {key: index},
                 React.DOM.td(null, entry.get('account')),
-                React.DOM.td({className: 'text-right'}, entry.get('debit')),
-                React.DOM.td({className: 'text-right'}, entry.get('credit'))
+                React.DOM.td(null, entry.get('debit')),
+                React.DOM.td(null, entry.get('credit'))
             );
         }
     });
