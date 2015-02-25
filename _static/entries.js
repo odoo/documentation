@@ -45,7 +45,7 @@
     var FormatEntry = React.createClass({
         render: function () {
             return React.DOM.table(
-                {className: 'table'},
+                {className: 'table table-condensed'},
                 React.DOM.thead(
                     null,
                     React.DOM.tr(

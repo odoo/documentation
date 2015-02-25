@@ -59,7 +59,7 @@
             return React.DOM.div(
                 null,
                 React.DOM.table(
-                    {className: 'table'},
+                    {className: 'table table-condensed'},
                     React.DOM.tr(
                         null,
                         React.DOM.th(),
