@@ -4,23 +4,17 @@ li > p {
 }
 
 .related {
-    background-color: #cbdbf8 !important;
+    background-color: hsl(219, 76%, 88%) !important;
 }
 .secondary {
-    background-color: #dce6f8 !important;
+    background-color: hsl(219, 67%, 94%) !important;
+}
+.highlight-op {
+    background-color: hsl(219, 67%, 94%);
 }
 
 .accounts-table {
     font-size: 90%;
-    color: #888 !important;
-}
-.accounts-table .related {
-    background-color: transparent !important;
-    color: #eee !important;
-}
-.accounts-table .secondary {
-    background-color: transparent !important;
-    color: #aaa !important;
 }
 
 .accounts-table dl {
@@ -46,9 +40,10 @@ li > p {
     padding: 5px;
     margin: 5%;
 
-    border: 3px solid #666;
+    border-width: 3px;
     border-radius: 3px;
 }
+
 /* sections */
 .accounts-table > div > div div {
     display: flex;
@@ -78,17 +73,32 @@ li > p {
     font-style: normal;
 }
 
-.highlight-op {
-    background-color: #dce6f8;
-}
-.chart-of-accounts .highlight-op {
-    background-color: #030035;
-}
-
 /* 3-column (thing, debit, credit) tables */
 /* 2nd and 3rd th & td of each row right-aligned and 1/4th width */
 .d-c-table tr > :nth-child(2),
 .d-c-table tr > :nth-child(3) {
     width: 25%;
     text-align: right;
+}
+
+@media (min-width: 992px) {
+    .accounts-table {
+        font-size: 90%;
+        color: #888 !important;
+    }
+    .accounts-table .related {
+        background-color: transparent !important;
+        color: #eee !important;
+    }
+    .accounts-table .secondary {
+        background-color: transparent !important;
+        color: #aaa !important;
+    }
+    .accounts-table > div > div {
+        border-color: #666;
+    }
+
+    .chart-of-accounts .highlight-op {
+        background-color: #030035;
+    }
 }
