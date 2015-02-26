@@ -145,66 +145,51 @@ specific client owes or which specific invoices are still unpaid (in order to
 send reminders for instance).
 
 Reconciliation is the process of correlating and linking journal items,
-matching the credits and debits of a specific account.
+matching the credits and debits of a specific financial account:
 
-* within a single account, look for all non-reconciled items
+* within a single account, look for all non-reconciled items (usually with a
+  specific second party, e.g. all operations on *Accounts Receivable*
+  concerning the same client)
 * link debiting items with crediting items, each side (debiting and crediting)
-  can have mutliple items.
-
-For instance a customer could be sent two invoices for 121€ and 63€ (debits to
-the Receivable account), and send three payments of 75€, 75€ and 34€.
+  can have multiple items.
 
 The system can then use reconciliation to automatically mark invoices as paid
 (or partially paid), prepare and send reminders, flag accounting issues, …
 
-.. h:div:: force-right
+.. rst-class:: force-right
 
-   Journal entries wrt client Joe
+Example
+-------
 
-   .. rst-class:: table-condensed d-c-table
+* A customer got two invoices (invoice 1 and invoice 2) for 121€ and 63€
+* He sent two payments (payment 1 and payment 2) of 75€ each
 
-   +-------------------------+-------------------------+-------------------------+
-   |                         |Debit                    |Credit                   |
-   +=========================+=========================+=========================+
-   |Accounts Receivable      |121                      |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Sale                     |                         |121                      |
-   +-------------------------+-------------------------+-------------------------+
-   |Cash                     |75                       |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Accounts Receivable      |                         |75                       |
-   +-------------------------+-------------------------+-------------------------+
-   |Cash                     |75                       |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Accounts Receivable      |                         |75                       |
-   +-------------------------+-------------------------+-------------------------+
-   |Accounts Receivable      |63                       |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Sale                     |                         |63                       |
-   +-------------------------+-------------------------+-------------------------+
+Reconciling on *Accounts Receivable* with all operations involving that
+specific customer will result in:
 
-   Reconciliation on *Account Receivable* showing operations with Joe
+.. rst-class:: table-condensed d-c-table
 
-   .. rst-class:: table-condensed d-c-table
-   
-   +-------------------------+-------------------------+-------------------------+
-   |Accounts Receivable: Joe |Debit                    |Credit                   |
-   +=========================+=========================+=========================+
-   |Invoice 42               |121                      |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Payment 55               |                         |75                       |
-   +-------------------------+-------------------------+-------------------------+
-   |Payment 63 (partial)     |                         |46                       |
-   +-------------------------+-------------------------+-------------------------+
-   |                                                                             |
-   +-------------------------+-------------------------+-------------------------+
-   |Invoice 47               |63                       |                         |
-   +-------------------------+-------------------------+-------------------------+
-   |Payment 63               |                         |29                       |
-   +-------------------------+-------------------------+-------------------------+
-   |Open Balance             |                         |34                       |
-   +-------------------------+-------------------------+-------------------------+
++-------------------------+-------------------------+-------------------------+
+|Accounts Receivable      |Debit                    |Credit                   |
++=========================+=========================+=========================+
+|Invoice 1                |121                      |                         |
++-------------------------+-------------------------+-------------------------+
+|Payment 1                |                         |75                       |
++-------------------------+-------------------------+-------------------------+
+|Payment 2 (partial)      |                         |46                       |
++-------------------------+-------------------------+-------------------------+
+|                                                                             |
++-------------------------+-------------------------+-------------------------+
+|Invoice 2                |63                       |                         |
++-------------------------+-------------------------+-------------------------+
+|Payment 2                |                         |29                       |
++-------------------------+-------------------------+-------------------------+
+|Open Balance             |                         |34                       |
++-------------------------+-------------------------+-------------------------+
 
+The reconciliation process yields the first invoice being paid in full, but
+the customer having "Invoice 2" still open (it has an open balance) and an
+outstanding debt of 34€.
 
 Bank Reconciliation
 -------------------
