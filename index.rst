@@ -1,143 +1,142 @@
 :classes: stripe
 
-==========================================
-Understanding Accounting For Entrepreneurs
-==========================================
-
-Financial accounting is used to know the situation of a company (its balance
-sheet) and its performance (Profit and Loss, P&L). It is set up by reporting
-every financial transaction in the relevant accounts of a Chart of Accounts.
+====================================
+Accounting Memento For Entrepreneurs
+====================================
 
 .. rst-class:: intro-list
 
 * .. rst-class:: intro-p-l
 
-  **P&L** is always analysed on a specific period rather than since the
-  company's founding (e.g. 2014, Q3 2012, …).
+  The **Profit and Loss** (P&L) report shows the performance of the company
+  over a specific period (usually the current year).
 
 * .. rst-class:: intro-gross-profit
 
-  **Gross profits** is revenues (sales, interest, royalties) minus cost of
-  goods sold (raw materials, storage costs, production labor costs).
+  The **Gross Profit** equals the revenues from sales minus the cost of goods
+  sold.
 
 * .. rst-class:: intro-opex
 
-  **Operating expenses** include administration, sales and R&D salaries as
-  well as rent and utilities, legal costs, insurance, ... anything beyond
-  fabrication itself.
+  **Operating Expenses** (OPEX) include admininstration, sales and R&D
+  salaries as well as rent and utilities, miscellaneous costs, insurances, …
+  anything beyond the costs of products sold.
 
 * .. rst-class:: intro-balance
 
-  The **Balance sheet** is a snapshot of the situation at a specific moment,
-  listing the company's assets and its liabilities at that point.
+  The **Balance Sheet** is a snapshot of the company's finances at a specific
+  date (as opposed to the Profit and Loss which is an analysis over a period)
 
 * .. rst-class:: intro-assets
 
-  **Assets** represent the company's wealth. A person's assets would be a
-  house or car ("fixed" or "tangible" assets), bank accounts or cash ("liquid"
-  or "current" assets). For a company, a client owing money is an asset. An
-  employee is not an asset as it is not owned by the company (slavery being
-  illegal under the International Covenant on Civil and Political Rights's
-  article 8).
+  **Assets** represent the company's wealth, things it owns. Fixed assets
+  includes building and offices, current assets include bank accounts and
+  cash. A client owing money is an asset. An employee is not an asset.
 
 * .. rst-class:: intro-liabilities
 
   **Liabilities** are obligations from past events resulting in future use or
-  transfer of current assets (utility bills, debts, payroll, unpaid
-  suppliers).
+  transfer of current assets (utility bills, debts, unpaid suppliers).
 
 * .. rst-class:: intro-equity
 
-  **Equity** is assets which have no liability counterpart: shares, other
-  stocks and surplus.
+  **Equity** the amount of the funds contributed by the owners (founders or
+  shareholders) plus previously retained retained earnings (or losses).
+
+A difference is made between buying an assets (e.g. a building) and expenses
+(e.g. fuel). Assets have an intrinsic value over time, versus expenses having
+value in them being consumed for the company to "work".
 
 Assets have necessarily been financed via liabilities or equity: a company can
-buy work space through profits, borrowing money or injected capital (for
-shares).
+buy work space through profits, debts or injected capital (fund raising).
 
-A difference is made between assets (e.g. a building) and expenses (e.g. fuel)
-in assets having intrinsic value over time, versus expenses having value in
-them being consumed for the company to "work".
+.. highlights:: What is owned (assets) has been financed through debts to
+                reimburse (liabilities) or equity (profits, capital).
 
-.. rst-class:: force-right accounts-table
+.. h:div:: force-right accounts-table
 
-.. figure:: images/accounts.png
-   :align: center
-
-   Assets = Liabilities + Equity
-
-   What is owned has been financed through debts to reimburse or acquired
-   assets (profits, capical).
+   .. placeholder
 
 Chart of Accounts
 =================
 
 The **chart of accounts** lists all the accounts used by the company, whether
-they are balance sheet accounts (assets and liabilities) or P&L accounts
-(revenues and expenses), and provides their state at a given moment, generally
-the current point of an ongoing financial period, or the state at the end of a
-closed financial period.
-
-The accounts are used to organize and classify the finances of the company in
-order to better understand its state and health, and the chart of accounts can
-be used to get a snapshot of a company's financial period: because it includes
-P&L, a chart of accounts is also generally viewed over a specific period.
+they are balance sheet accounts or P&L accounts. Every financial transaction
+(e.g. a payment, an invoice) impacts accounts by moving value from one account
+(credit) to an other account (debit).
 
 .. rst-class:: force-right
 
-Balance = debit - credit
+Balance = Debit - Credit
 ------------------------
 
 .. h:div:: chart-of-accounts
 
-   Requires javascript
+   .. placeholder
 
 Journal Entries
 ===============
 
-The chart of accounts displays the state of the company at a given moment
-("current" or over an accounting period).
+Every financial document of the company (e.g. an invoice, a bank statement, a
+pay slip, a capital increase contract) is recorded as a journal entry,
+impacting several accounts.
 
-This state is the effect of the company's financial operations (being paid for
-services, paying rent, receiving interests, …). These transactions are
-recorded as journal entries over the course of financial periods:
-
-Each *journal entry* is the interaction between at least two accounts (one
-being debited and the other one credited). For a journal entry to be
-*balanced*, the sum of all its debits must be equal to the sum of all its
-credits. A journal entry almost always corresponds to a separate justifying
-document (invoice, pay slip, …; financial audits may include matching entries
-to the "hard" evidence of these documents).
-
-A journal entry is composed of multiple *journal items*. Journal items are
-either a credit or a debit on a specific account, and journal entries are thus
-composed of at least two items.
+For a journal entry to be *balanced*, the sum of all its debits must be equal
+to the sum of all its credits.
 
 Companies can triage entries in various journals based on their nature or
 context. Common journals are:
 
-* a sales journal with all client transactions
-* a purchase journal with all supplier transactions
+* a sales journal with all customer invoices and refunds
+* a purchase journal with all supplier bills
 * a bank journal for bank statements
 * a cash journal for cash operations
 
 .. h:div:: force-right journal-entries
 
-   examples of accounting entries for various transactions
+   examples of accounting entries for various transactions. Example:
+
+   Example 1: Customer Invoice:
+
+   Explanation:
+
+     . You generate a revenue of $1,000
+     . You have a tax to pay of $90
+     . The customer owes $1,090
+
+   Configuration:
+
+     . Income: defined on the product, or the product category
+     . Account Receivable: defined on the customer
+     . Tax: defined on the tax set on the invoice line
+
+     The fiscal position used on the invoice may have a rule that
+     replaces the Income Account or the tax defined on the product by another
+     one.
+
+   Example 2: Customer Payment:
+
+   Explanation:
+
+     . Your customer owes $1,090 less
+     . Your receive $1,090 on your bank account
+
+   Configuration:
+
+     . Bank Account: defined on the related bank journal
+     . Account Receivable: defined on the customer
 
    .. todo::
 
       * help explaining what the operation is about?
-      * link to relevant Odoo operation?
-
+      * use radio buttons instead of the selection box
 
 Reconciliation
 ==============
 
 At a financial level, journal entries (and the corresponding operations in a
 company's account) are independent from one another: the invoices a company
-emits and the payments it receives are separate journal entries and the
-account operations are not correlated.
+emits and the payments it receives are separate journal entries.
 
 It's thus easy to know how much was sold (by tallying the income account) and
 how the company is still owed overall (receivables) but not how much a
@@ -145,7 +144,7 @@ specific client owes or which specific invoices are still unpaid (in order to
 send reminders for instance).
 
 Reconciliation is the process of correlating and linking journal items,
-matching the credits and debits of a specific financial account:
+matching the credits and debits of a specific account:
 
 * within a single account, look for all non-reconciled items (usually with a
   specific second party, e.g. all operations on *Accounts Receivable*
@@ -172,24 +171,29 @@ specific customer will result in:
 +-------------------------+-------------------------+-------------------------+
 |Accounts Receivable      |Debit                    |Credit                   |
 +=========================+=========================+=========================+
-|Invoice 1                |121                      |                         |
+|Invoice 1                |100                      |                         |
 +-------------------------+-------------------------+-------------------------+
-|Payment 1                |                         |75                       |
+|Payment 1.1              |                         |70                       |
 +-------------------------+-------------------------+-------------------------+
-|Payment 2 (partial)      |                         |46                       |
+|Invoice 2                |65                       |                         |
 +-------------------------+-------------------------+-------------------------+
-|                                                                             |
+|Payment 1.2              |                         |30                       |
 +-------------------------+-------------------------+-------------------------+
-|Invoice 2                |63                       |                         |
+|Payment 2                |                         |65                       |
 +-------------------------+-------------------------+-------------------------+
-|Payment 2                |                         |29                       |
+|Invoice 3                |50                       |                         |
 +-------------------------+-------------------------+-------------------------+
-|Open Balance             |                         |34                       |
+|                         |                         |                         |
++-------------------------+-------------------------+-------------------------+
+|Total To Pay             |50                       |                         |
 +-------------------------+-------------------------+-------------------------+
 
-The reconciliation process yields the first invoice being paid in full, but
-the customer having "Invoice 2" still open (it has an open balance) and an
-outstanding debt of 34€.
+.. todo::
+
+   Add a button "Reconcile", when clicked:
+
+   - slowly hide: Invoice 2, Payment 2
+   - then, slowly hide: Invoice 1, Payment 1.1, Payment 1.2
 
 Bank Reconciliation
 -------------------

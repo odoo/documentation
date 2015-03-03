@@ -25,19 +25,23 @@
             return React.DOM.div(
                 null,
                 "Example journal entries: ",
-                React.DOM.select(
-                    {
-                        value: entries.indexOf(this.props.entry),
-                        onChange: function (e) {
-                            data.reset(entries.get(e.target.value));
-                        }
-                    },
-                    entries.map(function (entry, index) {
-                        return React.DOM.option(
-                            {key: index, value: index},
-                            entry.get('title')
-                        );
-                    }).toArray()),
+                entries.map(function (entry, index) {
+                    return React.DOM.label(
+                        {
+                            key: index,
+                            style: { display: 'block' },
+                        },
+                        React.DOM.input({
+                            type: 'radio',
+                            checked: Immutable.is(entry, this.props.entry),
+                            onChange: function (e) {
+                                data.reset(entry);
+                            }
+                        }),
+                        ' ',
+                        entry.get('title')
+                    );
+                }, this).toArray(),
                 this.props.entry && React.DOM.p(null, this.props.entry.get('help'))
             );
         }
@@ -89,13 +93,13 @@
                 {account: 'Common Stock', credit: 10000}
             ]
         }, {
-            title: "Buy work tooling",
+            title: "Buy work tooling (immediate cash payment)",
             operations: [
                 {account: 'Tooling', debit: 3000},
                 {account: 'Cash', credit: 3000}
             ]
         }, {
-            title: "Buy work tooling (invoiced)",
+            title: "Buy work tooling (invoiced, to pay later)",
             operations: [
                 {account: 'Tooling', debit: 3000},
                 {account: 'Accounts Payable', credit: 3000}

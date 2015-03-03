@@ -144,26 +144,35 @@
     var ASSETS = {
         code: 1,
         label: "Assets",
-        CASH: { code: 10100, label: "Cash" },
-        ACCOUNTS_RECEIVABLE: { code: 12100, label: "Accounts Receivable" }
+        CASH: { code: 10000, label: "Cash" },
+        ACCOUNTS_RECEIVABLE: { code: 12000, label: "Accounts Receivable" },
+        BUILDINGS: { code: 17100, label: "Buildings" },
+        DEPRECIATION: { code: 18100, label: "Accumulated Depreciation" }
     };
     var LIABILITIES = {
         code: 2,
         label: "Liabilities",
+        NOTES_PAYABLE: { code: 20100, label: "Notes Payable" },
         ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
-        TAXES_PAYABLE: { code: 23100, label: "Taxes Payable" }
+        TAXES_PAYABLE: { code: 24000, label: "Taxes Payable" }
+    };
+    var EQUITY = {
+        code: 3,
+        label: "Equity",
+        CAPITAL: { code: 30000, label: "Owner's Capital" }
     };
     var REVENUE = {
         code: 4,
         label: "Revenue",
-        SALES: { code: 40100, label: "Sales" }
+        SALES: { code: 40000, label: "Sales" }
     };
     var EXPENSES = {
         code: 5,
         label: "Expenses",
-        PURCHASES: { code: 50100, label: "Purchases" }
+        PURCHASES: { code: 50000, label: "Purchases" },
+        DEPRECIATION: { code: 58100, label: "Depreciation Expenses" }
     };
-    var categories = Immutable.fromJS([ASSETS, LIABILITIES, REVENUE, EXPENSES]);
+    var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES]);
     var accounts = categories.toSeq().flatMap(function (cat) {
         return Immutable.Seq.of(cat.set('level', 0)).concat(cat.filter(function (v, k) {
             return k.toUpperCase() === k;
@@ -185,17 +194,23 @@
         refund = sale * 0.1,
         purchase = 80;
     var operations = Immutable.fromJS([{
+        label: "Company Incorporation (Initial Capital $1,000)",
+        operations: [
+            {account: ASSETS.CASH.code, debit: constant(1000)},
+            {account: EQUITY.CAPITAL.code, credit: constant(1000)}
+        ]
+    }, {
         label: "Customer Invoice ($100 + 9% tax)",
         operations: [
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: function () { return total; }},
-            {account: REVENUE.SALES.code, credit: function () { return sale; }},
-            {account: LIABILITIES.TAXES_PAYABLE.code, credit: function () { return tax; }}
+            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
+            {account: REVENUE.SALES.code, credit: constant(sale)},
+            {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
         label: "Customer Refund 10%",
         operations: [
-            {account: REVENUE.SALES.code, debit: function () { return refund; }},
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: function () { return refund; }}
+            {account: REVENUE.SALES.code, debit: constant(refund)},
+            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: constant(refund)}
         ]
     }, {
         label: "Customer Payment",
@@ -212,23 +227,37 @@
             }}
         ]
     }, {
-        label: "Supplier Invoice",
+        label: "Supplier Bill",
         operations: [
-            {account: EXPENSES.PURCHASES.code, debit: function () { return purchase; }},
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: function () { return purchase; }}
+            {account: EXPENSES.PURCHASES.code, debit: constant(purchase)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase)}
         ]
     }, {
-        label: "Supplier Invoice Paid",
+        label: "Supplier Bill Paid",
         operations: [
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: function () { return purchase; }},
-            {account: ASSETS.CASH.code, credit: function () { return purchase; }}
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase)},
+            {account: ASSETS.CASH.code, credit: constant(purchase)}
+        ]
+    }, {
+        label: "Buy and pay a building (an asset)",
+        operations: [
+            {account: ASSETS.BUILDINGS.code, debit: constant(3000)},
+            {account: LIABILITIES.NOTES_PAYABLE.code, credit: constant(2500)},
+            {account: ASSETS.CASH.code, credit: constant(500)}
+        ]
+    }, {
+        label: "Yearly Asset Depreciation (10% per year)",
+        operations: [
+            {account: EXPENSES.DEPRECIATION.code, debit: constant(300)},
+            {account: ASSETS.DEPRECIATION.code, credit: constant(300)}
         ]
     }, {
         label: "Pay Taxes Due",
         operations: [
-            {account: LIABILITIES.TAXES_PAYABLE.code, debit: function () { return tax; }},
-            {account: ASSETS.CASH.code, credit: function () { return tax; }}
+            {account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(tax)},
+            {account: ASSETS.CASH.code, credit: constant(tax)}
         ]
     }
     ]);
+    function constant(val) {return function () { return val; };}
 })();
