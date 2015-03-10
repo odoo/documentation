@@ -188,7 +188,9 @@
                 {account: 'Accounts Receivable', credit: 1000}
             ],
             explanation: [
-                "A client paying an invoice is a financial movement from one asset to an other"
+                "The customer owes less",
+                "The bank account increases",
+                "A client paying an invoice is a financial movement from one asset to an other",
             ],
             configuration: []
         }, {
