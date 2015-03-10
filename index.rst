@@ -100,15 +100,15 @@ context. Common journals are:
 
    Explanation:
 
-     . You generate a revenue of $1,000
-     . You have a tax to pay of $90
-     . The customer owes $1,090
+     - You generate a revenue of $1,000
+     - You have a tax to pay of $90
+     - The customer owes $1,090
 
    Configuration:
 
-     . Income: defined on the product, or the product category
-     . Account Receivable: defined on the customer
-     . Tax: defined on the tax set on the invoice line
+     - Income: defined on the product, or the product category
+     - Account Receivable: defined on the customer
+     - Tax: defined on the tax set on the invoice line
 
      The fiscal position used on the invoice may have a rule that
      replaces the Income Account or the tax defined on the product by another
@@ -118,18 +118,17 @@ context. Common journals are:
 
    Explanation:
 
-     . Your customer owes $1,090 less
-     . Your receive $1,090 on your bank account
+     - Your customer owes $1,090 less
+     - Your receive $1,090 on your bank account
 
    Configuration:
 
-     . Bank Account: defined on the related bank journal
-     . Account Receivable: defined on the customer
+     - Bank Account: defined on the related bank journal
+     - Account Receivable: defined on the customer
 
    .. todo::
 
       * help explaining what the operation is about?
-      * use radio buttons instead of the selection box
 
 Reconciliation
 ==============
@@ -160,9 +159,6 @@ The system can then use reconciliation to automatically mark invoices as paid
 Example
 -------
 
-* A customer got two invoices (invoice 1 and invoice 2) for 121€ and 63€
-* He sent two payments (payment 1 and payment 2) of 75€ each
-
 Reconciling on *Accounts Receivable* with all operations involving that
 specific customer will result in:
 
@@ -187,13 +183,6 @@ specific customer will result in:
 +-------------------------+-------------------------+-------------------------+
 |Total To Pay             |50                       |                         |
 +-------------------------+-------------------------+-------------------------+
-
-.. todo::
-
-   Add a button "Reconcile", when clicked:
-
-   - slowly hide: Invoice 2, Payment 2
-   - then, slowly hide: Invoice 1, Payment 1.1, Payment 1.2
 
 Bank Reconciliation
 -------------------
