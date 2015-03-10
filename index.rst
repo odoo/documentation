@@ -126,10 +126,6 @@ context. Common journals are:
      - Bank Account: defined on the related bank journal
      - Account Receivable: defined on the customer
 
-   .. todo::
-
-      * help explaining what the operation is about?
-
 Reconciliation
 ==============
 
