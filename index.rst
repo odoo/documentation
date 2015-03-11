@@ -11,37 +11,37 @@ Accounting Memento For Entrepreneurs
   The **Profit and Loss** (P&L) report shows the performance of the company
   over a specific period (usually the current year).
 
-* .. rst-class:: intro-gross-profit
+  * .. rst-class:: intro-gross-profit
 
-  The **Gross Profit** equals the revenues from sales minus the cost of goods
-  sold.
+    The **Gross Profit** equals the revenues from sales minus the cost of
+    goods sold.
 
-* .. rst-class:: intro-opex
+  * .. rst-class:: intro-opex
 
-  **Operating Expenses** (OPEX) include admininstration, sales and R&D
-  salaries as well as rent and utilities, miscellaneous costs, insurances, …
-  anything beyond the costs of products sold.
+    **Operating Expenses** (OPEX) include admininstration, sales and R&D
+    salaries as well as rent and utilities, miscellaneous costs, insurances, …
+    anything beyond the costs of products sold.
 
 * .. rst-class:: intro-balance
 
   The **Balance Sheet** is a snapshot of the company's finances at a specific
   date (as opposed to the Profit and Loss which is an analysis over a period)
 
-* .. rst-class:: intro-assets
+  * .. rst-class:: intro-assets
 
-  **Assets** represent the company's wealth, things it owns. Fixed assets
-  includes building and offices, current assets include bank accounts and
-  cash. A client owing money is an asset. An employee is not an asset.
+    **Assets** represent the company's wealth, things it owns. Fixed assets
+    includes building and offices, current assets include bank accounts and
+    cash. A client owing money is an asset. An employee is not an asset.
 
-* .. rst-class:: intro-liabilities
+  * .. rst-class:: intro-liabilities
 
-  **Liabilities** are obligations from past events resulting in future use or
-  transfer of current assets (utility bills, debts, unpaid suppliers).
+    **Liabilities** are obligations from past events resulting in future use
+    or transfer of current assets (utility bills, debts, unpaid suppliers).
 
-* .. rst-class:: intro-equity
+  * .. rst-class:: intro-equity
 
-  **Equity** the amount of the funds contributed by the owners (founders or
-  shareholders) plus previously retained retained earnings (or losses).
+    **Equity** the amount of the funds contributed by the owners (founders or
+    shareholders) plus previously retained retained earnings (or losses).
 
 A difference is made between buying an assets (e.g. a building) and expenses
 (e.g. fuel). Assets have an intrinsic value over time, versus expenses having
