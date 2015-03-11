@@ -60,33 +60,39 @@
                 null,
                 React.DOM.table(
                     {className: 'table table-condensed'},
-                    React.DOM.tr(
+                    React.DOM.thead(
                         null,
-                        React.DOM.th(),
-                        React.DOM.th({className: 'text-right'}, "Debit"),
-                        React.DOM.th({className: 'text-right'}, "Credit"),
-                        React.DOM.th({className: 'text-right'}, "Balance")),
-                    this.accounts().map(function (data) {
-                        var highlight = lastop.get(data.get('code'));
-                        return React.DOM.tr(
-                            {key: data.get('code')},
-                            React.DOM.th(null,
-                                   data.get('level') ? '\u2001 ' : '',
-                                   data.get('code'), ' ', data.get('label')),
-                            React.DOM.td({className: React.addons.classSet({
-                                'text-right': true,
-                                'highlight-op': highlight === 'debit'
-                            })}, data.get('debit') || ''),
-                            React.DOM.td({className: React.addons.classSet({
-                                'text-right': true,
-                                'highlight-op': highlight === 'credit'
-                            })}, data.get('credit') || ''),
-                            React.DOM.td(
-                                {className: 'text-right'},
-                                (data.get('debit') - data.get('credit')) || ''
-                            )
-                        );
-                    })
+                        React.DOM.tr(
+                            null,
+                            React.DOM.th(),
+                            React.DOM.th({className: 'text-right'}, "Debit"),
+                            React.DOM.th({className: 'text-right'}, "Credit"),
+                            React.DOM.th({className: 'text-right'}, "Balance"))
+                    ),
+                    React.DOM.tbody(
+                        null,
+                        this.accounts().map(function (data) {
+                            var highlight = lastop.get(data.get('code'));
+                            return React.DOM.tr(
+                                {key: data.get('code')},
+                                React.DOM.th(null,
+                                             data.get('level') ? '\u2001 ' : '',
+                                             data.get('code'), ' ', data.get('label')),
+                                React.DOM.td({className: React.addons.classSet({
+                                    'text-right': true,
+                                    'highlight-op': highlight === 'debit'
+                                })}, data.get('debit') || ''),
+                                React.DOM.td({className: React.addons.classSet({
+                                    'text-right': true,
+                                    'highlight-op': highlight === 'credit'
+                                })}, data.get('credit') || ''),
+                                React.DOM.td(
+                                    {className: 'text-right'},
+                                    (data.get('debit') - data.get('credit')) || ''
+                                )
+                            );
+                        })
+                    )
                 )
             );
         },
