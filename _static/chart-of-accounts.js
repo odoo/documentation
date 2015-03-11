@@ -88,7 +88,9 @@
                                 })}, data.get('credit') || ''),
                                 React.DOM.td(
                                     {className: 'text-right'},
-                                    (data.get('debit') - data.get('credit')) || ''
+                                    ((data.get('debit') || data.get('credit'))
+                                     ? data.get('debit') - data.get('credit')
+                                     : '')
                                 )
                             );
                         })
