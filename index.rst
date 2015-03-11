@@ -88,14 +88,6 @@ impacting several accounts.
 For a journal entry to be *balanced*, the sum of all its debits must be equal
 to the sum of all its credits.
 
-Companies can triage entries in various journals based on their nature or
-context. Common journals are:
-
-* a sales journal with all customer invoices and refunds
-* a purchase journal with all supplier bills
-* a bank journal for bank statements
-* a cash journal for cash operations
-
 .. h:div:: force-right journal-entries
 
    examples of accounting entries for various transactions. Example:
