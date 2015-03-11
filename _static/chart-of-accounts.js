@@ -45,7 +45,7 @@
                     " ",
                     label
                 );
-            }).toArray());
+            }));
         }
     });
 
@@ -86,7 +86,7 @@
                                 (data.get('debit') - data.get('credit')) || ''
                             )
                         );
-                    }).toArray()
+                    })
                 )
             );
         },

@@ -41,7 +41,7 @@
                         ' ',
                         entry.get('title')
                     );
-                }, this).toArray(),
+                }, this),
                 this.props.entry && React.DOM.p(null, this.props.entry.get('help'))
             );
         }
@@ -79,7 +79,7 @@
         },
         render_rows: function () {
             if (!this.props.entry) { return; }
-            return this.props.entry.get('operations').map(this.render_row).toArray();
+            return this.props.entry.get('operations').map(this.render_row);
         },
         render_row: function (entry, index) {
             if (!entry) {
@@ -108,7 +108,7 @@
                     null,
                     this.props.items.map(function (item, index) {
                         return React.DOM.li({key: index}, item);
-                    }).toArray()
+                    })
                 )
             );
         }
