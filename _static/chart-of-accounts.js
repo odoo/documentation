@@ -156,14 +156,15 @@
         ACCOUNTS_RECEIVABLE: { code: 12000, label: "Accounts Receivable" },
         STOCK: { code: 14000, label: "Stock" },
         BUILDINGS: { code: 17100, label: "Buildings" },
-        DEPRECIATION: { code: 18100, label: "Accumulated Depreciation" }
+        DEPRECIATION: { code: 18100, label: "Accumulated Depreciation" },
+        TAXES_PAID: { code: 19000, label: "Taxes Paid" }
     };
     var LIABILITIES = {
         code: 2,
         label: "Liabilities",
         NOTES_PAYABLE: { code: 20100, label: "Notes Payable" },
         ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
-        TAXES_PAYABLE: { code: 24000, label: "Taxes Payable" }
+        TAXES_PAYABLE: { code: 29000, label: "Taxes Payable" }
     };
     var EQUITY = {
         code: 3,
@@ -204,7 +205,8 @@
         total = sale + tax,
         refund = sale * 0.1,
         refund_tax = refund * 0.09,
-        purchase = 80;
+        purchase = 80,
+        purchase_tax = 80 * 0.09;
     var operations = Immutable.fromJS([{
         label: "Company Incorporation (Initial Capital $1,000)",
         operations: [
@@ -251,13 +253,14 @@
         label: "Supplier Bill",
         operations: [
             {account: EXPENSES.PURCHASES.code, debit: constant(purchase)},
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase)}
+            {account: ASSETS.TAXES_PAID.code, debit: constant(purchase_tax)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
         ]
     }, {
         label: "Supplier Bill Paid",
         operations: [
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase)},
-            {account: ASSETS.CASH.code, credit: constant(purchase)}
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase + purchase_tax)},
+            {account: ASSETS.CASH.code, credit: constant(purchase + purchase_tax)}
         ]
     }, {
         label: "Buy and pay a building (an asset)",
