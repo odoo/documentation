@@ -29,10 +29,8 @@
                                 React.DOM.dt(null, "Income"),
                                 React.DOM.dd(
                                     null,
-                                    "Revenue",
-                                    React.DOM.br(),
-                                    "Sales"),
-                                React.DOM.dt(null, "Less ", "Cost of Sales"),
+                                    "Revenue"),
+                                React.DOM.dt(null, "Less ", "Cost of Revenue"),
                                 React.DOM.dd(null, "Direct Costs")
                             )
                         ),
@@ -67,6 +65,7 @@
                                 React.DOM.dd(
                                     null,
                                     "Current Assets", React.DOM.br(),
+                                    "Receivables", React.DOM.br(),
                                     "Prepayments", React.DOM.br()
                                 ),
                                 React.DOM.dt(null, "Plus ", "Bank"),
