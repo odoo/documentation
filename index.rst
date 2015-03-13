@@ -69,14 +69,13 @@ they are balance sheet accounts or P&L accounts. Every financial transaction
 (e.g. a payment, an invoice) impacts accounts by moving value from one account
 (credit) to an other account (debit).
 
-.. rst-class:: force-right
+.. h:div:: force-right
 
-Balance = Debit - Credit
-------------------------
+   .. highlights:: Balance = Debit - Credit
 
-.. h:div:: chart-of-accounts
+   .. h:div:: chart-of-accounts
 
-   .. placeholder
+      .. placeholder
 
 Journal Entries
 ===============
