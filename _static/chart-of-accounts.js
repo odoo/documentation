@@ -81,15 +81,15 @@
                                 React.DOM.td({className: React.addons.classSet({
                                     'text-right': true,
                                     'highlight-op': highlight === 'debit'
-                                })}, data.get('debit') || ''),
+                                })}, format(data.get('debit'))),
                                 React.DOM.td({className: React.addons.classSet({
                                     'text-right': true,
                                     'highlight-op': highlight === 'credit'
-                                })}, data.get('credit') || ''),
+                                })}, format(data.get('credit'))),
                                 React.DOM.td(
                                     {className: 'text-right'},
                                     ((data.get('debit') || data.get('credit'))
-                                     ? data.get('debit') - data.get('credit')
+                                     ? format(data.get('debit') - data.get('credit'), 0)
                                      : '')
                                 )
                             );
@@ -203,6 +203,7 @@
         tax = sale * 0.09,
         total = sale + tax,
         refund = sale * 0.1,
+        refund_tax = refund * 0.09,
         purchase = 80;
     var operations = Immutable.fromJS([{
         label: "Company Incorporation (Initial Capital $1,000)",
@@ -223,19 +224,26 @@
         label: "Customer Refund 10%",
         operations: [
             {account: REVENUE.SALES.code, debit: constant(refund)},
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: constant(refund)}
+            {account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(refund_tax)},
+            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: constant(refund + refund_tax)}
         ]
     }, {
         label: "Customer Payment",
         operations: [
             {account: ASSETS.CASH.code, debit: function (ops) {
-                return ops.contains(operations.getIn(['customer_refund', 'operations']))
-                    ? total - refund
+                var refund_op = operations.find(function (op) {
+                    return !!op.get('label').match(/refund/i);
+                });
+                return ops.contains(refund_op.get('operations'))
+                    ? total - (refund + refund_tax)
                     : total;
             }},
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: function (ops) {
-                return ops.contains(operations.getIn(['customer_refund', 'operations']))
-                    ? total - refund
+                var refund_op = operations.find(function (op) {
+                    return !!op.get('label').match(/refund/i);
+                });
+                return ops.contains(refund_op.get('operations'))
+                    ? total - (refund + refund_tax)
                     : total;
             }}
         ]
@@ -273,4 +281,9 @@
     }
     ]);
     function constant(val) {return function () { return val; };}
+    function format(val, def) {
+        if (!val) { return def === undefined ? '' : def; }
+        if (val % 1 === 0) { return val; }
+        return val.toFixed(2);
+    }
 })();
