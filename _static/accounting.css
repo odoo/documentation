@@ -100,43 +100,45 @@ li > p {
     }
 }
 
-#reconciliation #example button {
-    display: block;
-    margin: 0 auto;
+#reconciliation #example div.buttons {
+    display: flex;
+    justify-content: center;
 }
-/* When .reconcile-accounts is added to section, hide .invoice2 then .invoice1
-   rows */
-@keyframes invoice1 {
-    50% {
-        font-size: 100%;
-        /* should have no effect on tr */
-        /* don't touch horizontal padding to avoid moving content too much */
-        padding-top: 5px;
-        padding-bottom: 5px;
-    }
-    100% {
-        font-size: 0%;
-        padding-top: 0;
-        padding-bottom: 0;
-    }
+#reconciliation #example div.buttons button {
+    margin: 0 0.5em;
 }
-@keyframes invoice2 {
+
+@keyframes reconcile {
     0% {
         font-size: 100%;
         padding-top: 5px;
         padding-bottom: 5px;
+        background-color: rgba(2, 0, 31, 0);
+    }
+    60% {
+        background-color: rgba(2, 0, 31, 1);
+    }
+    80% {
+        font-size: 100%;
+        padding-top: 5px;
+        padding-bottom: 5px;
     }
     100% {
         font-size: 0%;
         padding-top: 0;
         padding-bottom: 0;
+        display: none;
     }
 }
-.reconcile-accounts .invoice1, .reconcile-accounts .invoice1 td {
-    animation: invoice1 5s ease-in forwards;
+.reconcile1 .invoice1, .reconcile1 .invoice1 td {
+    animation: reconcile 5s ease-in forwards;
 }
-.reconcile-accounts .invoice2, .reconcile-accounts .invoice2 td {
-    animation: invoice2 2.5s ease-in forwards;
+.reconcile2 .invoice2, .reconcile2 .invoice2 td {
+    animation: reconcile 5s ease-in forwards;
+}
+
+.invoice1.reconciled, .invoice2.reconciled {
+    display: none;
 }
 
 blockquote.highlights {
