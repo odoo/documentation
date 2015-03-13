@@ -263,11 +263,17 @@
             {account: ASSETS.CASH.code, credit: constant(purchase + purchase_tax)}
         ]
     }, {
-        label: "Buy and pay a building (an asset)",
+        label: "Acquire a building (purchase contract)",
         operations: [
             {account: ASSETS.BUILDINGS.code, debit: constant(3000)},
-            {account: LIABILITIES.NOTES_PAYABLE.code, credit: constant(2500)},
-            {account: ASSETS.CASH.code, credit: constant(500)}
+            {account: ASSETS.TAXES_PAID.code, debit: constant(300)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(3300)}
+        ]
+    }, {
+        label: "Pay for building",
+        operations: [
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(3300)},
+            {account: ASSETS.CASH.code, credit: constant(3300)}
         ]
     }, {
         label: "Yearly Asset Depreciation (10% per year)",
