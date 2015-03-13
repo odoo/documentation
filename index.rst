@@ -50,16 +50,16 @@ value in them being consumed for the company to "work".
 Assets have necessarily been financed via liabilities or equity: a company can
 buy work space through profits, debts or injected capital (fund raising).
 
+.. h:div:: force-right accounts-table
+
+   .. placeholder
+
 What is owned (assets) has been financed through debts to reimburse
 (liabilities) or equity (profits, capital).
 
-.. h:div:: force-right
+.. rst-class:: force-right
 
-   .. highlights:: Assets = Liabilities + Equity
-
-   .. h:div:: accounts-table
-
-      .. placeholder
+.. highlights:: Assets = Liabilities + Equity
 
 Chart of Accounts
 =================
@@ -71,11 +71,11 @@ they are balance sheet accounts or P&L accounts. Every financial transaction
 
 .. h:div:: force-right
 
-   .. highlights:: Balance = Debit - Credit
-
    .. h:div:: chart-of-accounts
 
       .. placeholder
+
+   .. highlights:: Balance = Debit - Credit
 
 Journal Entries
 ===============
