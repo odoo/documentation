@@ -154,6 +154,7 @@
         label: "Assets",
         CASH: { code: 10000, label: "Cash" },
         ACCOUNTS_RECEIVABLE: { code: 12000, label: "Accounts Receivable" },
+        STOCK: { code: 14000, label: "Stock" },
         BUILDINGS: { code: 17100, label: "Buildings" },
         DEPRECIATION: { code: 18100, label: "Accumulated Depreciation" }
     };
@@ -178,6 +179,7 @@
         code: 5,
         label: "Expenses",
         PURCHASES: { code: 50000, label: "Purchases" },
+        GOODS_SOLD: { code: 55000, label: "Cost of Revenue" },
         DEPRECIATION: { code: 58100, label: "Depreciation Expenses" }
     };
     var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES]);
@@ -197,6 +199,7 @@
     });
 
     var sale = 100,
+        cor = sale / 2,
         tax = sale * 0.09,
         total = sale + tax,
         refund = sale * 0.1,
@@ -211,7 +214,9 @@
         label: "Customer Invoice ($100 + 9% tax)",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
+            {account: EXPENSES.GOODS_SOLD.code, debit: constant(cor)},
             {account: REVENUE.SALES.code, credit: constant(sale)},
+            {account: ASSETS.STOCK.code, credit: constant(cor)},
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
