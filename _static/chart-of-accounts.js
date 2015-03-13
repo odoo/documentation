@@ -100,7 +100,6 @@
         },
         accounts: function() {
             var _this = this;
-            var zero = function () { return 0; };
             var data = this.props.p.get('operations');
 
             var totals = data.flatten(true).reduce(function (acc, op) {
@@ -223,6 +222,7 @@
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
+        id: 'refund',
         label: "Customer Refund 10%",
         operations: [
             {account: REVENUE.SALES.code, debit: constant(refund)},
@@ -234,7 +234,7 @@
         operations: [
             {account: ASSETS.CASH.code, debit: function (ops) {
                 var refund_op = operations.find(function (op) {
-                    return !!op.get('label').match(/refund/i);
+                    return op.get('id') === 'refund';
                 });
                 return ops.contains(refund_op.get('operations'))
                     ? total - (refund + refund_tax)
@@ -242,7 +242,7 @@
             }},
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: function (ops) {
                 var refund_op = operations.find(function (op) {
-                    return !!op.get('label').match(/refund/i);
+                    return op.get('id') === 'refund';
                 });
                 return ops.contains(refund_op.get('operations'))
                     ? total - (refund + refund_tax)
@@ -282,14 +282,31 @@
             {account: ASSETS.DEPRECIATION.code, credit: constant(300)}
         ]
     }, {
+        id: 'pay_taxes',
         label: "Pay Taxes Due",
         operations: [
-            {account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(tax)},
-            {account: ASSETS.CASH.code, credit: constant(tax)}
+            {account: LIABILITIES.TAXES_PAYABLE.code, debit: function (ops) {
+                var this_ops = operations.find(function (op) {
+                    return op.get('id') === 'pay_taxes';
+                }).get('operations');
+                return ops.filter(function (_ops) {
+                    return _ops !== this_ops;
+                }).flatten(true).filter(function (op) {
+                    return op.get('account') === LIABILITIES.TAXES_PAYABLE.code
+                }).reduce(function (acc, op) {
+                    return acc + op.get('credit', zero)(ops) - op.get('debit', zero)(ops);
+                }, 0);
+            }},
+            {account: ASSETS.CASH.code, credit: function (ops) {
+                return operations.find(function (op) {
+                    return op.get('id') === 'pay_taxes';
+                }).getIn(['operations', 0, 'debit'])(ops);
+            }}
         ]
     }
     ]);
     function constant(val) {return function () { return val; };}
+    var zero = constant(0);
     function format(val, def) {
         if (!val) { return def === undefined ? '' : def; }
         if (val % 1 === 0) { return val; }
