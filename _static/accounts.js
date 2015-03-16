@@ -107,7 +107,7 @@
                 target);
         }
 
-        var list = document.querySelectorAll('.intro-list li > p');
+        var list = document.querySelectorAll('.intro-list p');
         Array.prototype.forEach.call(list, function (node) {
             node.addEventListener('mouseover', function (e) {
                 if (!e.currentTarget.contains(e.target)) { return; }
