@@ -26,26 +26,35 @@
                                 "Gross Profit"),
                             React.DOM.dl(
                                 null,
-                                React.DOM.dt(null, "Income"),
+                                React.DOM.dt(null, "Revenue"),
                                 React.DOM.dd(
                                     null,
-                                    "Revenue"),
-                                React.DOM.dt(null, "Less ", "Cost of Revenue"),
-                                React.DOM.dd(null, "Direct Costs")
+                                    "Revenue"
+                                ),
+                                React.DOM.dt(null, "Less ", "Costs of Revenue"),
+                                React.DOM.dd(
+                                    null,
+                                    "Cost of Goods Sold"
+                                )
                             )
                         ),
                         React.DOM.dl(
                             null,
                             React.DOM.dt(null, "Plus ", "Other Income"),
-                            React.DOM.dd(null, "Other Income"),
+                            React.DOM.dd(
+                                null,
+                                "Dividends", React.DOM.br(),
+                                "Foreign Exchange Gains", React.DOM.br(),
+                                "Asset write-downs"
+                            ),
                             React.DOM.dt(
                                 highlight(this.props.current === 'opex'),
                                 "Less ", "Expenses"),
                             React.DOM.dd(
                                 highlight(null, this.props.current === 'opex'),
-                                "Expenses", React.DOM.br(),
+                                "Interest on debt", React.DOM.br(),
                                 "Depreciation", React.DOM.br(),
-                                "Overheads", React.DOM.br()
+                                "Overhead"
                             )
                         )
                     )
@@ -64,24 +73,34 @@
                                 React.DOM.dt(null, "Current Assets"),
                                 React.DOM.dd(
                                     null,
-                                    "Current Assets", React.DOM.br(),
-                                    "Receivables", React.DOM.br(),
-                                    "Prepayments", React.DOM.br()
+                                    "Cash", React.DOM.br(),
+                                    "Bank Accounts", React.DOM.br(),
+                                    "Accounts Receivable", React.DOM.br(),
+                                    "Prepayments", React.DOM.br(),
+                                    "Deferred Tax Assets"
                                 ),
-                                React.DOM.dt(null, "Plus ", "Bank"),
-                                React.DOM.dd(null, "Bank Accounts"),
-                                React.DOM.dt(null, "Plus ", "Fixed Assets"),
-                                React.DOM.dd(null, "Fixed Assets"),
                                 React.DOM.dt(null, "Plus ", "Non-current Assets"),
-                                React.DOM.dd(null, "Non-current Assets")
+                                React.DOM.dd(
+                                    null,
+                                    "Land & buildings", React.DOM.br(),
+                                    "Investments", React.DOM.br(),
+                                    "Intangible Assets"
+                                )
                             )
                         ),
                         React.DOM.dl(
                             highlight(this.props.current === 'liabilities'),
                             React.DOM.dt(null, "Less ", "Current Liabilities"),
-                            React.DOM.dd(null, "Current Liabilities"),
+                            React.DOM.dd(
+                                null,
+                                "Accounts Payable", React.DOM.br(),
+                                "Deferred Revenue", React.DOM.br(),
+                                "Deferred Tax Liabilities"),
                             React.DOM.dt(null, "Less ", "Non-current liabilities"),
-                            React.DOM.dd(null, "Liabilities", React.DOM.br(), "Non-current Liabilities")
+                            React.DOM.dd(
+                                null,
+                                "Long-term loans", React.DOM.br(),
+                                "Product Warranties")
                         )
                     ),
                     React.DOM.div(
@@ -90,7 +109,11 @@
                         React.DOM.dl(
                             null,
                             React.DOM.dt(null, "Equity"),
-                            React.DOM.dd(null, "Equity"),
+                            React.DOM.dd(
+                                null,
+                                "Common Stock", React.DOM.br(),
+                                "Treasury Stock"
+                            ),
                             React.DOM.dt(null, "Plus ", "Net Profit")
                         )
                     )
