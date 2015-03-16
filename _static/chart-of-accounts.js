@@ -151,36 +151,38 @@
     var ASSETS = {
         code: 1,
         label: "Assets",
-        CASH: { code: 10000, label: "Cash" },
-        ACCOUNTS_RECEIVABLE: { code: 12000, label: "Accounts Receivable" },
-        STOCK: { code: 14000, label: "Stock" },
-        BUILDINGS: { code: 17100, label: "Buildings" },
-        DEPRECIATION: { code: 18100, label: "Accumulated Depreciation" },
-        TAXES_PAID: { code: 19000, label: "Taxes Paid" }
+        BANK: { code: 11000, label: "Cash" },
+        ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
+        STOCK_OUT: { code: 14600, label: "Temporary Inventory Output" },
+        STOCK: { code: 14000, label: "Inventory" },
+        STOCK_IN: { code: 14700, label: "Inventory Purchases" },
+        BUILDINGS: { code: 17200, label: "Buildings" },
+        DEPRECIATION: { code: 17800, label: "Accumulated Depreciation" },
+        TAXES_PAID: { code: 19000, label: "Deferred Tax Assets" }
     };
     var LIABILITIES = {
         code: 2,
         label: "Liabilities",
-        NOTES_PAYABLE: { code: 20100, label: "Notes Payable" },
         ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
-        TAXES_PAYABLE: { code: 29000, label: "Taxes Payable" }
+        DEFERRED_REVENUE: { code: 22300, label: "Deferred Revenue" },
+        TAXES_PAYABLE: { code: 26200, label: "Deferred Tax Liabilities" }
     };
     var EQUITY = {
         code: 3,
         label: "Equity",
-        CAPITAL: { code: 30000, label: "Owner's Capital" }
+        CAPITAL: { code: 31000, label: "Common Stock" }
     };
     var REVENUE = {
         code: 4,
         label: "Revenue",
-        SALES: { code: 40000, label: "Sales" }
+        SALES: { code: 41000, label: "Goods" },
+        SALES_SERVICES: { code: 42000, label: "Services" }
     };
     var EXPENSES = {
         code: 5,
         label: "Expenses",
-        PURCHASES: { code: 50000, label: "Purchases" },
-        GOODS_SOLD: { code: 55000, label: "Cost of Revenue" },
-        DEPRECIATION: { code: 58100, label: "Depreciation Expenses" }
+        GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
+        DEPRECIATION: { code: 52500, label: "Other Operating Expenses" }
     };
     var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES]);
     var accounts = categories.toSeq().flatMap(function (cat) {
@@ -199,17 +201,18 @@
     });
 
     var sale = 100,
-        cor = sale / 2,
+        cor = 50,
+        cor_tax = cor * 0.09,
         tax = sale * 0.09,
         total = sale + tax,
-        refund = sale * 0.1,
+        refund = sale,
         refund_tax = refund * 0.09,
-        purchase = 80,
-        purchase_tax = 80 * 0.09;
+        purchase = 52,
+        purchase_tax = 52 * 0.09;
     var operations = Immutable.fromJS([{
         label: "Company Incorporation (Initial Capital $1,000)",
         operations: [
-            {account: ASSETS.CASH.code, debit: constant(1000)},
+            {account: ASSETS.BANK.code, debit: constant(1000)},
             {account: EQUITY.CAPITAL.code, credit: constant(1000)}
         ]
     }, {
@@ -218,12 +221,18 @@
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
             {account: EXPENSES.GOODS_SOLD.code, debit: constant(cor)},
             {account: REVENUE.SALES.code, credit: constant(sale)},
-            {account: ASSETS.STOCK.code, credit: constant(cor)},
+            {account: ASSETS.STOCK_OUT.code, credit: constant(cor)},
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
+        label: "Goods Shipment to Customer",
+        operations: [
+            {account: ASSETS.STOCK_OUT.code, debit: constant(cor)},
+            {account: ASSETS.STOCK.code, credit: constant(cor)}
+        ]
+    }, {
         id: 'refund',
-        label: "Customer Refund 10%",
+        label: "Customer Refund",
         operations: [
             {account: REVENUE.SALES.code, debit: constant(refund)},
             {account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(refund_tax)},
@@ -232,7 +241,7 @@
     }, {
         label: "Customer Payment",
         operations: [
-            {account: ASSETS.CASH.code, debit: function (ops) {
+            {account: ASSETS.BANK.code, debit: function (ops) {
                 var refund_op = operations.find(function (op) {
                     return op.get('id') === 'refund';
                 });
@@ -250,17 +259,31 @@
             }}
         ]
     }, {
-        label: "Supplier Bill",
+        label: "Supplier Goods Received (Purchase Order: $50)",
         operations: [
-            {account: EXPENSES.PURCHASES.code, debit: constant(purchase)},
+            {account: ASSETS.STOCK_IN.code, credit: constant(cor)},
+            {account: ASSETS.STOCK.code, debit: constant(cor)},
+        ]
+    }, {
+        label: "Supplier Bill (Invoice: $50)",
+        operations: [
+            {account: ASSETS.STOCK_IN.code, debit: constant(cor)},
+            {account: ASSETS.TAXES_PAID.code, debit: constant(cor_tax)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(cor + cor_tax)},
+        ]
+    }, {
+        label: "Supplier Bill (Invoice: $52 but PO $50)",
+        operations: [
+            {account: ASSETS.STOCK.code, debit: constant(purchase-cor)},
+            {account: ASSETS.STOCK_IN.code, debit: constant(cor)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(purchase_tax)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
         ]
     }, {
-        label: "Supplier Bill Paid",
+        label: "Supplier Bill Paid ($52 + 9% tax)",
         operations: [
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase + purchase_tax)},
-            {account: ASSETS.CASH.code, credit: constant(purchase + purchase_tax)}
+            {account: ASSETS.BANK.code, credit: constant(purchase + purchase_tax)}
         ]
     }, {
         label: "Acquire a building (purchase contract)",
@@ -273,13 +296,27 @@
         label: "Pay for building",
         operations: [
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(3300)},
-            {account: ASSETS.CASH.code, credit: constant(3300)}
+            {account: ASSETS.BANK.code, credit: constant(3300)}
         ]
     }, {
         label: "Yearly Asset Depreciation (10% per year)",
         operations: [
             {account: EXPENSES.DEPRECIATION.code, debit: constant(300)},
             {account: ASSETS.DEPRECIATION.code, credit: constant(300)}
+        ]
+    }, {
+        label: "Customer Invoice (3 years service contract, $300)",
+        operations: [
+            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total*3)},
+            {account: LIABILITIES.DEFERRED_REVENUE.code, credit: constant(sale*2)},
+            {account: REVENUE.SALES_SERVICES.code, credit: constant(sale)},
+            {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax*3)}
+        ]
+    }, {
+        label: "Revenue Recognition (second year service contract)",
+        operations: [
+            {account: LIABILITIES.DEFERRED_REVENUE.code, debit: constant(sale)},
+            {account: REVENUE.SALES_SERVICES.code, credit: constant(sale)},
         ]
     }, {
         id: 'pay_taxes',
@@ -297,7 +334,7 @@
                     return acc + op.get('credit', zero)(ops) - op.get('debit', zero)(ops);
                 }, 0);
             }},
-            {account: ASSETS.CASH.code, credit: function (ops) {
+            {account: ASSETS.BANK.code, credit: function (ops) {
                 return operations.find(function (op) {
                     return op.get('id') === 'pay_taxes';
                 }).getIn(['operations', 0, 'debit'])(ops);
