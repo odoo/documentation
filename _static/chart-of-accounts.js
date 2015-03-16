@@ -153,8 +153,8 @@
         label: "Assets",
         BANK: { code: 11000, label: "Cash" },
         ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
-        STOCK_OUT: { code: 14600, label: "Temporary Inventory Output" },
         STOCK: { code: 14000, label: "Inventory" },
+        STOCK_OUT: { code: 14600, label: "Temporary Inventory Output" },
         STOCK_IN: { code: 14700, label: "Inventory Purchases" },
         BUILDINGS: { code: 17200, label: "Buildings" },
         DEPRECIATION: { code: 17800, label: "Accumulated Depreciation" },
@@ -184,7 +184,11 @@
         GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
         DEPRECIATION: { code: 52500, label: "Other Operating Expenses" }
     };
-    var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES]);
+    var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES], function (k, v) {
+        return Immutable.Iterable.isIndexed(v)
+            ? v.toList()
+            : v.toOrderedMap();
+    });
     var accounts = categories.toSeq().flatMap(function (cat) {
         return Immutable.Seq.of(cat.set('level', 0)).concat(cat.filter(function (v, k) {
             return k.toUpperCase() === k;
