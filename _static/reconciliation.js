@@ -47,16 +47,22 @@
 
         function update_btn() {
             var $reconcile = $('<button class="btn btn-success" type="button">')
-                .text("Reconcile")
+                .text("Next Reconcile")
                 .appendTo($buttons.empty())
             switch (state) {
-            case 0: case 1: break;
+            case 0:
+                $reconcile.text("Reconcile");
+                break;
+            case 1:
+                break;
             case 2:
                 $reconcile.prop('disabled', true);
                 $('<button class="btn btn-primary" type="button">')
                     .text("Unreconcile")
                     .appendTo($buttons);
                 break;
+            default:
+                throw new Error("Unknown button state " + state);
             }
         }
     });
