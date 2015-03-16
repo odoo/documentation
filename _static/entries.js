@@ -100,15 +100,24 @@
             if (!this.props.items || this.props.items.isEmpty()) {
                 return React.DOM.div();
             }
+            var items = this.props.items, epilog = Immutable.List();
+            var idx = items.indexOf(null);
+            if (idx !== -1) {
+                epilog = items.slice(idx+1);
+                items = items.take(idx);
+            }
             return React.DOM.div(
-                null,
+                {className: 'entries-listing'},
                 React.DOM.h4(null, this.props.heading, ':'),
                 React.DOM.ul(
                     null,
-                    this.props.items.map(function (item, index) {
+                    items.map(function (item, index) {
                         return React.DOM.li({key: index}, item);
                     })
-                )
+                ),
+                epilog.map(function (item, index) {
+                    return React.DOM.p({key: index}, item);
+                })
             );
         }
     });
