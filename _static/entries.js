@@ -160,22 +160,6 @@
                 "The fiscal position used on the invoice may have a rule that replaces the Income Account or the tax defined on the product by another one."
             ]
         }, {
-            title: "Reception of Goods - perpetual inventory",
-            operations: [
-                {account: 'Assets: Uninvoiced Inventory', debit: 48},
-                {account: 'Assets: Inventory', credit: 48},
-            ],
-            explanation: [
-                "Inventory is increased by $48, the expected amount coming from the purchase order",
-                "A temporary account is used for the counterpart and will be cleared when receiving the invoice"
-            ],
-            configuration: [
-                "Uninvoiced Inventory: defined on the product or the category of related product, field: Stock Input Account",
-                "Inventory: defined on the product category, field: Stock Valuation",
-                null,
-                "In this scenario, the purchase order is at $48, but the invoice the company will receive later will be at $50 (extra shipping costs)."
-            ]
-        }, {
             title: "Customer payment",
             operations: [
                 {account: 'Assets: Cash', debit: 109},
@@ -188,6 +172,40 @@
             configuration: [
                 "Cash: defined on the journal used when registering the payment, fields Default Credit Account and Default Debit Account",
                 "Accounts Receivable: defined on the customer (property)"
+            ]
+        }, {
+            title: "Supplier Bill (Purchase Order $50 but Invoice $52)",
+            operations: [
+                {account: 'Assets: Uninvoiced Inventory', debit: 50},
+                {account: 'Assets: Deferred Tax Assets', debit: 4.68},
+                {account: 'Expenses: Other Operating Expenses', debit: 2},
+                {account: 'Liabilities: Accounts Payable', credit: 56.68}
+            ],
+            explanation: [
+                "A temporary account is used to note goods to receive",
+                "The purchase order provides prices of goods, the actual invoice may include extra costs such as shipping",
+                "The company still needs to pay the vendor (traded an asset against a liability)"
+            ],
+            configuration: [
+                "Uninvoiced Inventory: defined on the product or the category of related product, field: Stock Input Account",
+                "Deferred Tax Assets: defined on the tax used on the purchase order line",
+                "Accounts Payable: defined on the supplier related to the bill",
+                null,
+                "In this scenario, the purchase order was $50 but the company received an invoice for $52 as there were extra shipping costs"
+            ]
+        }, {
+            title: "Supplier Goods Received (Purchase Order: $50)",
+            operations: [
+                {account: 'Assets: Inventory', debit: 50},
+                {account: 'Assets: Uninvoiced Inventory', credit: 50},
+            ],
+            explanation: [
+                "Inventory is increased by $50, the expected amount coming from the purchase order",
+                "A temporary account is used for the counterpart and will be cleared when receiving the invoice"
+            ],
+            configuration: [
+                "Uninvoiced Inventory: defined on the product or the category of related product, field: Stock Input Account",
+                "Inventory: defined on the product category, field: Stock Valuation"
             ]
         }, {
             title: "Buy an asset ($300,000 - no tax)",
