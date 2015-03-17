@@ -43,6 +43,8 @@ Accounting Memento For Entrepreneurs
      **Equity** is the amount of the funds contributed by the owners (founders
      or shareholders) plus previously retained earnings (or losses).
 
+     .. rst-class:: intro-retained
+
      Each year, net profits (or losses) are reported to retained earnings.
 
 .. h:div:: force-right accounts-table

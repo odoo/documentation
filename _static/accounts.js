@@ -18,7 +18,9 @@
                     React.DOM.h4(null, "Profit & Loss"),
                     React.DOM.div(
                         null,
-                        React.DOM.h5(null, "Net Profit"),
+                        React.DOM.h5(
+                            highlight(null, this.props.current === 'retained'),
+                            "Net Profit"),
                         React.DOM.div(
                             highlight(null, this.props.current === 'gross-profit'),
                             React.DOM.h5(
@@ -110,7 +112,10 @@
                                 "Common Stock", React.DOM.br(),
                                 "Treasury Stock"
                             ),
-                            React.DOM.dt(null, "Plus ", "Retained Earnings")
+                            React.DOM.dt(
+                                highlight(this.props.current === 'retained'),
+                                "Plus ", "Retained Earnings"
+                            )
                         )
                     )
                 )
