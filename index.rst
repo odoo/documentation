@@ -43,6 +43,8 @@ Accounting Memento For Entrepreneurs
      **Equity** is the amount of the funds contributed by the owners (founders
      or shareholders) plus previously retained earnings (or losses).
 
+     Each year, net profits (or losses) are reported to retained earnings.
+
 .. h:div:: force-right accounts-table
 
    .. placeholder
@@ -137,14 +139,14 @@ reconciled with the related payment journal items.
 Reconciliation is performed automatically by the system when:
 
 * the payment is registered directly on the invoice
-* the link between the payment and the invoice is detected at the bank matching
-  process
+* the links between the payments and the invoices are detected at the bank
+  matching process
 
 
-.. rst-class:: force-right
+.. rst-class:: force-right reconciliation-example
 
-Example
--------
+Customer Statement Example
+--------------------------
 
 .. rst-class:: table-condensed d-c-table
 

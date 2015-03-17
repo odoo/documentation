@@ -176,34 +176,6 @@
                 "In this scenario, the purchase order is at $48, but the invoice the company will receive later will be at $50 (extra shipping costs)."
             ]
         }, {
-            title: "Customer Invoice ($100 + 9% tax) - perpetual inventory",
-            operations: [
-                {account: 'Revenue: Goods', credit: 100},
-                {account: 'Liabilities: Deferred Tax Liabilities', credit: 9},
-                {account: 'Assets: Accounts Receivable', debit: 109},
-                {account: 'Assets: Uninvoiced Inventory', credit: 48},
-                {account: 'Assets: Inventory', credit: 2},
-                {account: 'Expenses: Cost of Goods Sold', debit: 50}
-            ],
-            explanation: [
-                "Revenues increase by $100",
-                "A tax to pay at the end of the month of $9",
-                "The customer owns you $109",
-                "The inventory is decreased by $2 ($48 has already been posted)",
-                "The temporary account (Uninvoiced Inventory) is cleared",
-                "The cost of goods sold decrease the gross profit by $50"
-            ],
-            configuration: [
-                "Revenue Goods: defined on the product, or the product category if not on the product, field: Income Account",
-                "Defered Tax Liabilities: defined on the tax used on the invoice line",
-                "Accounts Receivable: defined on the customer (property)",
-                "Inventory: defined on the category of the related product: Price Difference",
-                "Uninvoiced Inventory: defined on the product or the category of the related product: Stock Input Account",
-                "Expenses: defined on the product, or the category of product (property)",
-                null,
-                "The fiscal position used on the invoice may have a rule that replaces the Income Account or the tax defined on the product by another one."
-            ]
-        }, {
             title: "Customer payment",
             operations: [
                 {account: 'Assets: Cash', debit: 109},

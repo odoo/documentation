@@ -17,7 +17,7 @@
                 return 0;
             }
         ];
-        var $rec = $('#reconciliation #example');
+        var $rec = $('#reconciliation .reconciliation-example');
         var $buttons = $('<div class="buttons">').on('click', 'button', function () {
             this.disabled = true;
             state = operations[state]();

@@ -73,17 +73,14 @@
                                 React.DOM.dt(null, "Current Assets"),
                                 React.DOM.dd(
                                     null,
-                                    "Cash", React.DOM.br(),
-                                    "Bank Accounts", React.DOM.br(),
+                                    "Cash & Bank Accounts", React.DOM.br(),
                                     "Accounts Receivable", React.DOM.br(),
-                                    "Prepayments", React.DOM.br(),
                                     "Deferred Tax Assets"
                                 ),
                                 React.DOM.dt(null, "Plus ", "Non-current Assets"),
                                 React.DOM.dd(
                                     null,
                                     "Land & buildings", React.DOM.br(),
-                                    "Investments", React.DOM.br(),
                                     "Intangible Assets"
                                 )
                             )
@@ -99,8 +96,7 @@
                             React.DOM.dt(null, "Less ", "Non-current liabilities"),
                             React.DOM.dd(
                                 null,
-                                "Long-term loans", React.DOM.br(),
-                                "Product Warranties")
+                                "Long-term loans")
                         )
                     ),
                     React.DOM.div(
@@ -114,7 +110,7 @@
                                 "Common Stock", React.DOM.br(),
                                 "Treasury Stock"
                             ),
-                            React.DOM.dt(null, "Plus ", "Net Profit")
+                            React.DOM.dt(null, "Plus ", "Retained Earnings")
                         )
                     )
                 )

@@ -154,7 +154,7 @@
         BANK: { code: 11000, label: "Cash" },
         ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
         STOCK: { code: 14000, label: "Inventory" },
-        STOCK_OUT: { code: 14600, label: "Temporary Inventory Output" },
+        STOCK_OUT: { code: 14600, label: "Goods Issued Not Invoiced" },
         STOCK_IN: { code: 14700, label: "Inventory Purchases" },
         BUILDINGS: { code: 17200, label: "Buildings" },
         DEPRECIATION: { code: 17800, label: "Accumulated Depreciation" },
@@ -278,7 +278,7 @@
     }, {
         label: "Supplier Bill (Invoice: $52 but PO $50)",
         operations: [
-            {account: ASSETS.STOCK.code, debit: constant(purchase-cor)},
+            {account: EXPENSES.DEPRECIATION.code, debit: constant(purchase-cor)},
             {account: ASSETS.STOCK_IN.code, debit: constant(cor)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(purchase_tax)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
