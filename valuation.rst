@@ -1,0 +1,5 @@
+:classes: stripe
+
+====================
+Inventory Valuations
+====================
