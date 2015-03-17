@@ -137,6 +137,7 @@
 
     document.addEventListener('DOMContentLoaded', function () {
         var target = document.querySelector('.accounts-table');
+        if (!target) { return; }
         function render(current) {
             React.render(
                 React.createElement(AccountsTable, {current: current}),

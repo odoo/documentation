@@ -46,7 +46,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Understanding Accounting For Entrepreneurs'
+project = u'Odoo Functional'
 copyright = u'2015, Odoo S.A.'
 
 # The version info for the project you're documenting, acts as replacement for

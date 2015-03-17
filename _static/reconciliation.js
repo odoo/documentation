@@ -1,5 +1,8 @@
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
+        var $rec = $('#reconciliation .reconciliation-example');
+        if (!$rec.length) { return; }
+
         var state = 0;
         var operations = [
             function reconcile2() {
@@ -17,7 +20,6 @@
                 return 0;
             }
         ];
-        var $rec = $('#reconciliation .reconciliation-example');
         var $buttons = $('<div class="buttons">').on('click', 'button', function () {
             this.disabled = true;
             state = operations[state]();
@@ -67,4 +69,3 @@
         }
     });
 })();
-

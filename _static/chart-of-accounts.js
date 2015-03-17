@@ -134,8 +134,10 @@
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var chart = document.getElementById('chart-of-accounts'),
-            controls = document.createElement('div');
+        var chart = document.getElementById('chart-of-accounts');
+        if (!chart) { return; }
+
+        var controls = document.createElement('div');
         controls.setAttribute('id', 'chart-controls');
         chart.insertBefore(controls, chart.lastElementChild);
 

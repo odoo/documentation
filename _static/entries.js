@@ -11,8 +11,10 @@
             document.querySelector('.journal-entries'));
     });
     document.addEventListener('DOMContentLoaded', function () {
-        var entries_node = document.getElementById('journal-entries'),
-            controls = document.createElement('div');
+        var entries_node = document.getElementById('journal-entries');
+        if (!entries_node) { return; }
+
+        var controls = document.createElement('div');
         controls.setAttribute('id', 'entries-control');
         entries_node.insertBefore(controls, entries_node.lastElementChild);
 
