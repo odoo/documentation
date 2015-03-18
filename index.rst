@@ -124,6 +124,7 @@ to the sum of all its credits.
      - Bank Account: defined on the related bank journal
      - Account Receivable: defined on the customer
 
+.. _accounting/reconciliation:
 
 Reconciliation
 ==============
@@ -172,3 +173,76 @@ Customer Statement Example
 |Total To Pay             |50                       |                         |
 +-------------------------+-------------------------+-------------------------+
 
+
+Bank Reconciliation
+===================
+
+Bank reconciliation is the matching of bank statement lines (provided by your
+bank) with transactions recorded internally (payments to suppliers or from
+customers). For each line in a bank statement, it can be:
+
+matched with a previously recorded payment:
+  a payment is registered when a check is received from a customer, then
+  matched when checking the bank statement
+recorded as a new payment:
+  the payment's journal entry is created and :ref:`reconciled
+  <accounting/reconciliation>` with the related invoice when processing the
+  bank statement
+recorded as another transaction:
+  bank transfer, direct charge, etc.
+
+Odoo should automatically reconcile most transactions, only a few of them
+should need manual review. When the bank reconciliation process is finished,
+the balance on the bank account in Odoo should match the bank statement's
+balance.
+
+.. rst-class:: checks-handling
+
+Checks Handling
+===============
+
+There are two approaches to manage checks and internal wire transfer:
+
+* Two journal entries and a reconciliation
+* One journal entry and a bank reconciliation
+
+.. h:div:: force-right
+
+   The first journal entry is created by registering the payment on the
+   invoice. The second one is created when registering the bank statement.
+
+   .. rst-class:: table-condensed d-c-table
+
+   +-------------------------+--------------+------------+---------------+
+   |Account                  |Debit         |Credit      |Reconciliation |
+   +=========================+==============+============+===============+
+   |Account Receivable       |              |100         |Invoice ABC    |
+   +-------------------------+--------------+------------+---------------+
+   |Undeposited funds        |100           |            |Check 0123     |
+   +-------------------------+--------------+------------+---------------+
+
+   .. rst-class:: table-condensed d-c-table
+
+   +-------------------------+--------------+------------+---------------+
+   |Account                  |Debit         |Credit      |Reconciliation |
+   +=========================+==============+============+===============+
+   |Undeposited funds        |              |100         |Check 0123     |
+   +-------------------------+--------------+------------+---------------+
+   |Bank                     |100           |            |               |
+   +-------------------------+--------------+------------+---------------+
+
+.. h:div:: force-right
+
+   A journal entry is created by registering the payment on the invoice. When
+   reconciling the bank statement, the statement line is linked to the
+   existing journal entry.
+
+   .. rst-class:: table-condensed d-c-table
+
+   +-------------------------+--------------+------------+---------------+---------------+
+   |Account                  |Debit         |Credit      |Reconciliation |Bank Statement |
+   +=========================+==============+============+===============+===============+
+   |Account Receivable       |              |100         |Invoice ABC    |               |
+   +-------------------------+--------------+------------+---------------+---------------+
+   |Bank                     |100           |            |               |Statement XYZ  |
+   +-------------------------+--------------+------------+---------------+---------------+

@@ -274,3 +274,4 @@ def setup(app):
     app.add_javascript('chart-of-accounts.js')
     app.add_javascript('entries.js')
     app.add_javascript('reconciliation.js')
+    app.add_javascript('misc.js')
