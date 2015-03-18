@@ -109,8 +109,7 @@
                             React.DOM.dt(null, "Equity"),
                             React.DOM.dd(
                                 null,
-                                "Common Stock", React.DOM.br(),
-                                "Treasury Stock"
+                                "Common Stock"
                             ),
                             React.DOM.dt(
                                 highlight(this.props.current === 'retained'),
