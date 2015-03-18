@@ -155,7 +155,7 @@
         ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
         STOCK: { code: 14000, label: "Inventory" },
         STOCK_OUT: { code: 14600, label: "Goods Issued Not Invoiced" },
-        STOCK_IN: { code: 14700, label: "Inventory Purchases" },
+        STOCK_IN: { code: 14700, label: "Goods Received Not Purchased" },
         BUILDINGS: { code: 17200, label: "Buildings" },
         DEPRECIATION: { code: 17800, label: "Accumulated Depreciation" },
         TAXES_PAID: { code: 19000, label: "Deferred Tax Assets" }
