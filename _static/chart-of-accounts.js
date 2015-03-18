@@ -312,12 +312,11 @@
         label: "Customer Invoice (3 years service contract, $300)",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total*3)},
-            {account: LIABILITIES.DEFERRED_REVENUE.code, credit: constant(sale*2)},
-            {account: REVENUE.SALES_SERVICES.code, credit: constant(sale)},
+            {account: LIABILITIES.DEFERRED_REVENUE.code, credit: constant(sale*3)},
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax*3)}
         ]
     }, {
-        label: "Revenue Recognition (second year service contract)",
+        label: "Revenue Recognition (each year, including first)",
         operations: [
             {account: LIABILITIES.DEFERRED_REVENUE.code, debit: constant(sale)},
             {account: REVENUE.SALES_SERVICES.code, credit: constant(sale)},
