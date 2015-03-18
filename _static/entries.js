@@ -131,7 +131,10 @@
             ],
             explanation: [
                 "The company receives $1,000 in cash",
-                "Shares worth of $1,000 belong to the founders"
+                "Shares worth of $1,000 belong to the founders",
+                null,
+                "The initial capital can be cash, but could also be intellectual property, goodwill from a previous company, licences, know how, etc…",
+                "Sometimes, capital is not released immediately, accounts for \"capital to be released\" may be necessary."
             ],
             configuration: []
         }, {
