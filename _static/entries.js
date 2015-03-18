@@ -181,7 +181,7 @@
             operations: [
                 {account: 'Assets: Uninvoiced Inventory', debit: 50},
                 {account: 'Assets: Deferred Tax Assets', debit: 4.68},
-                {account: 'Expenses: Other Operating Expenses', debit: 2},
+                {account: 'Expenses: Price Difference', debit: 2},
                 {account: 'Liabilities: Accounts Payable', credit: 56.68}
             ],
             explanation: [

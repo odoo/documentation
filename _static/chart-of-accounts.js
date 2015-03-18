@@ -182,7 +182,8 @@
         code: 5,
         label: "Expenses",
         GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
-        DEPRECIATION: { code: 52500, label: "Other Operating Expenses" }
+        DEPRECIATION: { code: 52500, label: "Other Operating Expenses" },
+        PRICE_DIFFERENCE: { code: 53000, label: "Price Difference" }
     };
     var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES], function (k, v) {
         return Immutable.Iterable.isIndexed(v)
@@ -278,7 +279,7 @@
     }, {
         label: "Supplier Bill (Invoice: $52 but PO $50)",
         operations: [
-            {account: EXPENSES.DEPRECIATION.code, debit: constant(purchase-cor)},
+            {account: EXPENSES.PRICE_DIFFERENCE.code, debit: constant(purchase-cor)},
             {account: ASSETS.STOCK_IN.code, debit: constant(cor)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(purchase_tax)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
