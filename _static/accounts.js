@@ -40,23 +40,36 @@
                                 )
                             )
                         ),
+                        React.DOM.div(
+                            highlight(this.props.current === 'opex'),
+                            React.DOM.h5(null, "Operating Income or Loss"),
+                            React.DOM.dl(
+                                null,
+                                React.DOM.dt(
+                                    null,
+                                    "Less ", "Operating Expenses"),
+                                React.DOM.dd(
+                                    null,
+                                    "R&D", React.DOM.br(),
+                                    "Sales, General & Administrative"
+                                )
+                            )
+                        ),
                         React.DOM.dl(
                             null,
                             React.DOM.dt(null, "Plus ", "Other Income"),
                             React.DOM.dd(
                                 null,
-                                "Dividends", React.DOM.br(),
                                 "Foreign Exchange Gains", React.DOM.br(),
                                 "Asset write-downs"
                             ),
                             React.DOM.dt(
-                                highlight(this.props.current === 'opex'),
-                                "Less ", "Expenses"),
+                                null,
+                                "Less ", "Other Expenses"),
                             React.DOM.dd(
-                                highlight(null, this.props.current === 'opex'),
+                                null,
                                 "Interest on debt", React.DOM.br(),
-                                "Depreciation", React.DOM.br(),
-                                "Overhead"
+                                "Depreciation"
                             )
                         )
                     )
