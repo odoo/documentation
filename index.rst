@@ -1,10 +1,10 @@
-====================
-Functional Mementoes
-====================
+=======================
+Odoo Business Mementoes
+=======================
 
 .. rst-class:: index-tree
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 1
 
     accounting
