@@ -275,3 +275,12 @@ def setup(app):
     app.add_javascript('entries.js')
     app.add_javascript('reconciliation.js')
     app.add_javascript('misc.js')
+
+    app.connect('html-page-context', analytics)
+    app.add_config_value('google_analytics_key', '', 'env')
+
+def analytics(app, pagename, templatename, context, doctree):
+    if not app.config.google_analytics_key:
+        return
+
+    context['google_analytics_key'] = app.config.google_analytics_key
