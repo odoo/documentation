@@ -1,8 +1,8 @@
 :classes: stripe
 
-====================================
-Accounting Memento For Entrepreneurs
-====================================
+==============================================
+Accounting Memento For Entrepreneurs (US GAAP)
+==============================================
 
 .. h:div:: intro-list
 
