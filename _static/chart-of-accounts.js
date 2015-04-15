@@ -99,10 +99,9 @@
             );
         },
         accounts: function() {
-            var _this = this;
             var data = this.props.p.get('operations');
 
-            var totals = data.flatten(true).reduce(function (acc, op) {
+            var totals = data.toIndexedSeq().flatten(true).reduce(function (acc, op) {
                 return acc
                     .updateIn([op.get('account'), 'debit'], function (d) {
                         return (d || 0) + op.get('debit', zero)(data);
