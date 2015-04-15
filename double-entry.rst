@@ -7,13 +7,9 @@ Double-Entry Inventory Management
 In a double-entry inventory, there is no stock input, output (disparition) or
 transformation. Instead, there are only stock moves between locations.
 
-* Inventory: 3 products in Zone 1
-* Reception: 2 products in Zone 1
-* Delivery: 1 product to client
-* Return: 1 product from client
-* Scrap: 1 product  broken in zone 1
-* Inventory Zone 1: loss of 1 product
-* Move: 1 product Zone 1 ➔ Zone 2
+.. h:div:: force-right chart-of-locations
+
+   .. placeholder
 
 Operations
 ==========
@@ -95,4 +91,3 @@ Some example:
 
 Procurement Groups
 ==================
-
