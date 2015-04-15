@@ -134,7 +134,7 @@ html_theme_path = ['_themes']
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
 html_style = 'odoodoc.css'
-html_add_permalinks = False
+html_add_permalinks = ''
 
 # Add any extra paths that contain custom files (such as robots.txt or
 # .htaccess) here, relative to this directory. These files are copied
