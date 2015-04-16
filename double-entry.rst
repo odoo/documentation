@@ -15,33 +15,46 @@ or transformation. Instead, all operations are stock moves between locations
 Operations
 ==========
 
-Stock moves represent the transit of goods and materials between inventory
-locations.
+Stock moves represent the transit of goods and materials between locations.
 
 .. rst-class:: alternatives force-right
 
 Manufacturing Order
   Consume:
-    | 2 Wheels: Warehouse → Manufacturing
-    | 1 Bike Frame: Warehouse → Manufacturing
+    | 2 Wheels: Stock → Production
+    | 1 Bike Frame: Stock → Production
   Produce:
-    1 Bicycle: Manufacturing → Warehouse
+    1 Bicycle: Production → Stock
   Configuration:
-    | Warehouse: the location the Manufacturing Order is initiated
-    | Manufacturing: on the product form, field “Manufacturing Location”
+    | Stock: the location the Manufacturing Order is initiated from
+    | Production: on the product form, field "Production Location"
 
 Drop-shipping
-  stuff 1
-Picking ➔ Packing ➔ Shipping
-  stuff 2
-Inter-Warehouse transfert
-  stuff 3
-Loss of product
-  stuff 4
+  1 Bicycle: Supplier → Customer
+Client Delivery
+  Pick
+    1 Bicycle: Stock → Packing Zone
+  Pack
+    1 Bicycle: Packing Zone → Output
+  Shipping
+    1 Bicycle: Output → Customer
+Inter-Warehouse transfer
+  Transfer:
+    | 1 Bicycle: Warehouse 1 → Transit
+    | 1 Bicycle: Transit → Warehouse 2
+  Configuration:
+    | Warehouse 2: the location the transfer is initiated from
+    | Warehouse 1: on the transit route
+Broken Product (scrapped)
+  1 Bicycle: Warehouse → Scrap
 Inventory
-  stuff 5
+  Missing products in inventory
+    1 Bicycle: Warehouse → Inventory Loss
+  Extra products in inventory
+    1 Bicycle: Inventory Loss → Warehouse
 Reception
-  stuff 6
+  | 1 Bicycle: Supplier → Input
+  | 1 Bicycle: Input → Stock
 
 Analysis
 ========
@@ -131,14 +144,12 @@ New sale orders
     Procurement Location: on the customer, field “Customer Location” (property)
 Minimum Stock Rules
   Effect
-    todo
+    A procurement is created at the rule's location.
   Configuration
-    todo
-Custom rules
+    Procurement location: on the rule, field "Location"
+Procurement rules
   Effect
-    todo
-  Configuration
-    todo
+    A new procurement is created on the rule's source location
 
 *Procurement rules* describe how procurements on specific locations should be
 fulfilled e.g.:
@@ -164,8 +175,8 @@ that are defined in (by order of priority):
 .. rst-class:: alternatives force-right
 
 Warehouses
-  Warehouse Route Example:
-    Pick → Pack → Ship
+  Warehouse Route Example: Pick → Pack → Ship
+
   Picking List:
     Pick Zone → Pack Zone
   Pack List:
@@ -175,13 +186,28 @@ Warehouses
 
   Routes that describe how you organize your warehouse should be defined on the warehouse.
 A Product
-  Product Route Example:
-    Supplier → Quality Control → Inventory
+  Product Route Example: Quality Control
+
+  Reception:
+    Supplier → Input
+  Confirmation:
+    Input → Quality Control
+  Storage:
+    Quality Control → Stock
+
 Product Category
-  Product Category Route Example:
-    Supplier → Cross-Docks → Pack Zone
+  Product Category Route Example: cross-dock
+
+  Reception:
+    Supplier → Input
+  Cross-Docks:
+    Input → Output
+  Delivery:
+    Output → Customer
 Sale Order Line
   Sale Order Line Example: Drop-shipping
+
+  Order:
     Supplier → Customer
 
 Push Rules
@@ -194,11 +220,12 @@ applicable routes.
 .. rst-class:: alternatives force-right
 
 Quality Control
-  * Product lands in Arrival Zone
-  * Push 1: Arrival Zone → Quality Control
-  * Push 2: Quality Control → Inventry
-Transit Warehouse 1
-  * Product lands in ?
+  * Product lands in Input
+  * Push 1: Input → Quality Control
+  * Push 2: Quality Control → Stock
+Warehouse Transit
+  * Product lands in Transit
+  * Push: Transit → Warehouse 2
 
 Procurement Groups
 ==================
