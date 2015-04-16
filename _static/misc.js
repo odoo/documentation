@@ -1,9 +1,27 @@
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
-        alternatives()
+        alternatives();
+        highlight();
         checks_handling();
     });
 
+    function highlight() {
+        $('.highlighter-list').each(function () {
+            var $this = $(this),
+                $target = $($this.data('target'));
+            $this.on('mouseout', 'li', function (e) {
+                $(e.currentTarget).removeClass('secondary');
+                $target.find('.related').removeClass('related');
+            }).on('mouseover', 'li', function (e) {
+                if (!e.currentTarget.contains(e.target)) { return; }
+
+                var $li = $(e.currentTarget);
+                console.log($li, $li.data('highlight'), $target.find($li.data('highlight')));
+                $li.addClass('secondary');
+                $target.find($li.data('highlight')).addClass('related');
+            });
+        });
+    }
     /** alternatives display:
      *  - prepend control for each <dt>
      *    - radio input with link to following dd

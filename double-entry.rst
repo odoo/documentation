@@ -50,13 +50,69 @@ products cost).
 
 For each inventory location, multiple data points can be analysed:
 
-* inventory valuation
-* value creation (difference between the value of manufactured products and
-  the cost of raw materials used during manufacturing)
-* value of lost/stolen products
-* value of scrapped products
-* value of products delivered to clients over a period
-* value of products in transit between locations
+.. raw:: html
+
+   <ul class="highlighter-list" data-target=".analysis-table">
+     <li data-highlight=".analysis-valuation">inventory valuation</li>
+     <li data-highlight=".analysis-creation">
+       value creation (difference between the value of manufactured products
+       and the cost of raw materials used during manufacturing) (negative)
+     </li>
+     <li data-highlight=".analysis-lost">value of lost/stolen products</li>
+     <li data-highlight=".analysis-scrapped">value of scrapped products</li>
+     <li data-highlight=".analysis-delivered">value of products delivered to clients over a period</li>
+     <li data-highlight=".analysis-transit">value of products in transit between locations</li>
+   </ul>
+
+.. h:div:: force-right analysis-table
+
+ .. raw:: html
+
+   <table class="table table-condensed highlighter-target">
+     <thead>
+       <tr>
+         <th>Location</th> <th class="text-right">Value</th>
+       </tr>
+     </thead>
+     <tbody>
+       <tr class="analysis-valuation">
+         <th>Physical Locations</th> <td class="text-right">$1,000</td>
+       </tr>
+       <tr>
+         <th>&#8193;Warehouse 1</th> <td class="text-right">$600</td>
+       </tr>
+       <tr>
+         <th>&#8193;Warehouse 2</th> <td class="text-right">$400</td>
+       </tr>
+       <tr>
+         <th>Partner Locations</th> <td class="text-right">- $1,500</td>
+       </tr>
+       <tr class="analysis-delivered">
+         <th>&#8193;Customers</th> <td class="text-right">$2,000</td>
+       </tr>
+       <tr>
+         <th>&#8193;Suppliers</th> <td class="text-right">- $3,500</td>
+       </tr>
+       <tr>
+         <th>Virtual Locations</th> <td class="text-right">$500</td>
+       </tr>
+       <tr class="analysis-transit">
+         <th>&#8193;Transit Location</th> <td class="text-right">$600</td>
+       </tr>
+       <tr>
+         <th>&#8193;Initial Inventory</th> <td class="text-right">$0</td>
+       </tr>
+       <tr class="analysis-lost">
+         <th>&#8193;Inventory Loss</th> <td class="text-right">$350</td>
+       </tr>
+       <tr class="analysis-scrapped">
+         <th>&#8193;Scraped</th> <td class="text-right">$550</td>
+       </tr>
+       <tr class="analysis-creation">
+         <th>&#8193;Manufacturing</th> <td class="text-right">- $1,000</td>
+       </tr>
+     </tbody>
+  </table>
 
 Procurements & Procurement Rules
 ================================
