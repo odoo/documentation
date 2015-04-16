@@ -17,13 +17,30 @@ Operations
 Stock moves represent the transit of goods and materials between inventory
 locations.
 
-* Manufacturing Order
-* Drop-shipping
-* Picking ➔ Packing ➔ Shipping
-* Inter-Warehouse transfert
-* Loss of product
-* Inventory
-* Reception
+.. rst-class:: alternatives force-right
+
+Manufacturing Order
+  Consume:
+    | 2 Wheels: Warehouse → Manufacturing
+    | 1 Bike Frame: Warehouse → Manufacturing
+  Produce:
+    1 Bicycle: Manufacturing → Warehouse
+  Configuration:
+    | Warehouse: the location the Manufacturing Order is initiated
+    | Manufacturing: on the product form, field “Manufacturing Location”
+
+Drop-shipping
+  stuff 1
+Picking ➔ Packing ➔ Shipping
+  stuff 2
+Inter-Warehouse transfert
+  stuff 3
+Loss of product
+  stuff 4
+Inventory
+  stuff 5
+Reception
+  stuff 6
 
 Analysis
 ========
@@ -41,17 +58,33 @@ For each inventory location, multiple data points can be analysed:
 * value of products delivered to clients over a period
 * value of products in transit between locations
 
-Procurements & Pull Rules
-=========================
+Procurements & Procurement Rules
+================================
 
 A procurement is a request for a specific quantity of products to a specific
 location. They can be created manually or automatically triggered by:
 
-* sale orders
-* minimum stock rules
-* rules
+.. rst-class:: alternatives force-right
 
-*Pull rules* describe how to fulfill procurements on specific locations:
+Sale order
+  Effect
+    A procurement is created at the customer location for every product
+    ordered by the customer (you have to deliver the customer)
+  Configuration
+    Procurement Location: on the customer, field “Customer Location” (property)
+Minimum Stock Rule
+  Effect
+    todo
+  Configuration
+    todo
+Rules
+  Effect
+    todo
+  Configuration
+    todo
+
+*Procurement rules* describe how to fulfill procurements on specific
+locations:
 
 * where the product should come from (source location)
 * whether the procurement is :abbr:`MTO (Made To Order)` or :abbr:`MTS (Made
@@ -64,30 +97,68 @@ location. They can be created manually or automatically triggered by:
 Routes
 ======
 
-At each step or a procurement's fulfillment, multiple rules may be
-available. *Routes* define which rules should be used based on the environment
-(product, sales orders, warehouse, …). To fulfill a procurement, the system
-will search for routes in the following order:
+Procurement rules are grouped in routes. Routes define paths the product must
+follow. Routes may be applicable or not, depending on the products, sales
+order lines, warehouse,...
 
-1. sale order line routes
-2. product routes
-3. product category routes
-4. warehouse routes
+To fulfill a procurement, the system will search for rules belonging to routes
+that are defined in (by order of priority):
+
+.. rst-class:: alternatives force-right
+
+Warehouses
+  Warehouse Route Example:
+    Pick → Pack → Ship
+  Picking List:
+    Pick Zone → Pack Zone
+  Pack List:
+    Pack Zone → Gate A
+  Delivery Order:
+    Gate A → Customer
+
+  Routes that describe how you organize your warehouse should be defined on the warehouse.
+A Product
+  Product Route Example:
+    Supplier → Quality Control → Inventory
+Product Category
+  Product Category Route Example:
+    Supplier → Cross-Docks → Pack Zone
+Sale Order Line
+  Sale Order Line Example: Drop-shipping
+    Supplier → Customer
 
 Push Rules
 ==========
 
-Push rules are triggered when a product enters a specific location, and allows
-chaining locations. Push rules can also be configured and filtered using
-routes.
 
-Some example:
-* quality control
-* transit warehouse 1
+Push rule are trigered when products arrive at a specific location and allows
+to automatically move them to another location. Push rules applications also
+depends on applicable routes.
 
-.. warning:: push rules and pull rules are *not* symmetrical, pull rules are
-             triggered by procurement requests whereas push rules are
-             triggered by stock moves
+.. rst-class:: alternatives force-right
+
+Quality Control
+  * Product lands in Arrival Zone
+  * Push 1: Arrival Zone → Quality Control
+  * Push 2: Quality Control → Inventry
+Transit Warehouse 1
+  * Product lands in ?
 
 Procurement Groups
 ==================
+
+Routes and rules defines the inventory moves. On every rule, the document type
+is provided:
+
+* Picking
+* Packing
+* Delivery Order
+* Purchase Order
+* ...
+
+Moves are grouped within the same document type if their procurement group and
+locations are the same.
+
+A sale order creates a procurement group so that pickings and delivery orders
+of the same order are grouped. But you can define specific groups on
+reordering rules too. (e.g. to group purchases of specific products together)
