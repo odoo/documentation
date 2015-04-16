@@ -4,8 +4,9 @@
 Double-Entry Inventory Management
 =================================
 
-In a double-entry inventory, there is no stock input, output (disparition) or
-transformation. Instead, there are only stock moves between locations.
+A double-entry inventory has no stock input, output (disparition of products)
+or transformation. Instead, all operations are stock moves between locations
+(possibly virtual).
 
 .. h:div:: force-right chart-of-locations
 
@@ -45,8 +46,8 @@ Reception
 Analysis
 ========
 
-Inventory analysis can use products count or value (number of products *
-products cost).
+Inventory analysis can use products count or products value (= number of
+products * product cost).
 
 For each inventory location, multiple data points can be analysed:
 
@@ -122,25 +123,25 @@ location. They can be created manually or automatically triggered by:
 
 .. rst-class:: alternatives force-right
 
-Sale order
+New sale orders
   Effect
     A procurement is created at the customer location for every product
     ordered by the customer (you have to deliver the customer)
   Configuration
     Procurement Location: on the customer, field “Customer Location” (property)
-Minimum Stock Rule
+Minimum Stock Rules
   Effect
     todo
   Configuration
     todo
-Rules
+Custom rules
   Effect
     todo
   Configuration
     todo
 
-*Procurement rules* describe how to fulfill procurements on specific
-locations:
+*Procurement rules* describe how procurements on specific locations should be
+fulfilled e.g.:
 
 * where the product should come from (source location)
 * whether the procurement is :abbr:`MTO (Made To Order)` or :abbr:`MTS (Made
@@ -186,10 +187,9 @@ Sale Order Line
 Push Rules
 ==========
 
-
-Push rule are trigered when products arrive at a specific location and allows
-to automatically move them to another location. Push rules applications also
-depends on applicable routes.
+Push rules trigger when products enter a specific location. They automatically
+move the product to a new location. Whether a push rule can be used depends on
+applicable routes.
 
 .. rst-class:: alternatives force-right
 
@@ -203,8 +203,8 @@ Transit Warehouse 1
 Procurement Groups
 ==================
 
-Routes and rules defines the inventory moves. On every rule, the document type
-is provided:
+Routes and rules define inventory moves. For every rule, a document type is
+provided:
 
 * Picking
 * Packing

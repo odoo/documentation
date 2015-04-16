@@ -165,7 +165,7 @@
             : v.toOrderedMap();
     });
     var operations = Immutable.fromJS([{
-        label: "Inventaire Initial",
+        label: "Initial Inventory",
         operations: [
             {location: locations.getIn(['virtual','locations','initial']), qty: -3},
             {location: locations.getIn(['warehouse','locations','zone1']), qty: +3}
