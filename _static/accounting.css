@@ -13,8 +13,9 @@
     background-color: hsl(219, 67%, 94%);
 }
 
-#chart-controls label:hover,
-#entries-control label:hover {
+label:hover,
+label:hover,
+.highlighter-list li:hover {
     background-color: hsl(0, 0%, 94%);
     cursor: pointer;
 }
@@ -77,6 +78,13 @@
     font-style: normal;
 }
 
+.values-table tr > * {
+    text-align: right;
+}
+.values-table tr > :first-child {
+    text-align: left;
+}
+
 /* 3-column (thing, debit, credit) tables */
 /* 2nd and 3rd th & td of each row right-aligned and 1/4th width */
 .d-c-table tr > :nth-child(2),
@@ -86,20 +94,25 @@
 }
 
 @media (min-width: 992px) {
-    .accounts-table {
+    .accounts-table, .force-right .highlighter-target {
         font-size: 90%;
         color: #888 !important;
     }
-    .accounts-table .related {
+    .force-right .highlighter-target th {
+        font-weight: normal;
+        font-size: 110%;
+    }
+    .accounts-table .related, .force-right .highlighter-target .related {
         background-color: transparent !important;
         color: #eee !important;
     }
-    .accounts-table .secondary {
+    .accounts-table .secondary, .force-right .highlighter-target .secondary {
         background-color: transparent !important;
         color: #aaa !important;
     }
 
-    .chart-of-accounts .highlight-op {
+    .chart-of-accounts .highlight-op,
+    .valuation-chart .highlight-op {
         background-color: #030035;
     }
 }
@@ -152,4 +165,18 @@
 blockquote.highlights {
     margin-bottom: 0;
     text-align: center;
+}
+
+/*
+  lists of alternatives
+*/
+.alternatives-controls label {
+    display: block;
+}
+dl.alternatives > dt,
+dl.alternatives > dd {
+    display: none;
+}
+dl.alternatives > dd {
+    margin-left: 0;
 }

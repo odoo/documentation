@@ -129,16 +129,16 @@
             document.getElementById('chart-controls'));
         React.render(
             React.createElement(Chart, {p: next}),
-            document.querySelector('.chart-of-accounts'));
+            document.querySelector('.valuation-chart'));
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var chart = document.getElementById('chart-of-accounts');
+        var chart = document.querySelector('.valuation-chart');
         if (!chart) { return; }
 
         var controls = document.createElement('div');
         controls.setAttribute('id', 'chart-controls');
-        chart.insertBefore(controls, chart.lastElementChild);
+        chart.parentNode.insertBefore(controls, chart);
 
         data.reset(Immutable.Map({
             // last-selected operation
@@ -155,16 +155,14 @@
         BANK: { code: 11000, label: "Cash" },
         ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
         STOCK: { code: 14000, label: "Inventory" },
+        RAW_MATERIALS: { code: 14100, label: "Raw Materials Inventory" },
         STOCK_OUT: { code: 14600, label: "Goods Issued Not Invoiced" },
-        BUILDINGS: { code: 17200, label: "Buildings" },
-        DEPRECIATION: { code: 17800, label: "Accumulated Depreciation" },
         TAXES_PAID: { code: 19000, label: "Deferred Tax Assets" }
     };
     var LIABILITIES = {
         code: 2,
         label: "Liabilities",
         ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
-        DEFERRED_REVENUE: { code: 22300, label: "Deferred Revenue" },
         STOCK_IN: { code: 23000, label: "Goods Received Not Purchased" },
         TAXES_PAYABLE: { code: 26200, label: "Deferred Tax Liabilities" }
     };
@@ -177,13 +175,12 @@
         code: 4,
         label: "Revenue",
         SALES: { code: 41000, label: "Goods" },
-        SALES_SERVICES: { code: 42000, label: "Services" }
     };
     var EXPENSES = {
         code: 5,
         label: "Expenses",
         GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
-        DEPRECIATION: { code: 52500, label: "Other Operating Expenses" },
+        MANUFACTURING_OVERHEAD: { code: 52000, label: "Manufacturing Overhead" },
         PRICE_DIFFERENCE: { code: 53000, label: "Price Difference" }
     };
     var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES], function (k, v) {
@@ -211,18 +208,37 @@
         cor_tax = cor * 0.09,
         tax = sale * 0.09,
         total = sale + tax,
-        refund = sale,
-        refund_tax = refund * 0.09,
         purchase = 52,
         purchase_tax = 52 * 0.09;
     var operations = Immutable.fromJS([{
-        label: "Company Incorporation (Initial Capital $1,000)",
+        label: "Supplier Invoice (PO $50, Invoice $40)",
         operations: [
-            {account: ASSETS.BANK.code, debit: constant(1000)},
-            {account: EQUITY.CAPITAL.code, credit: constant(1000)}
+            {account: LIABILITIES.STOCK_IN.code, debit: constant(50)},
+            {account: ASSETS.TAXES_PAID.code, debit: constant(50 * 0.09)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(50 * 1.09)},
         ]
     }, {
-        label: "Customer Invoice ($100 + 9% tax)",
+        label: "Supplier Goods Reception (PO $50, Invoice $50)",
+        operations: [
+            {account: LIABILITIES.STOCK_IN.code, credit: constant(50)},
+            {account: ASSETS.STOCK.code, debit: constant(50)},
+        ]
+    }, {
+        label: "Supplier Invoice (PO $48, Invoice $50)",
+        operations: [
+            {account: EXPENSES.PRICE_DIFFERENCE.code, debit: constant(2)},
+            {account: LIABILITIES.STOCK_IN.code, debit: constant(48)},
+            {account: ASSETS.TAXES_PAID.code, debit: constant(50 * 0.09)},
+            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(50 * 1.09)},
+        ]
+    }, {
+        label: "Supplier Goods Reception (PO $48, Invoice $50)",
+        operations: [
+            {account: LIABILITIES.STOCK_IN.code, credit: constant(48)},
+            {account: ASSETS.STOCK.code, debit: constant(48)},
+        ]
+    }, {
+        label: "Customer Invoice",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
             {account: EXPENSES.GOODS_SOLD.code, debit: constant(cor)},
@@ -231,122 +247,19 @@
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
-        label: "Goods Shipment to Customer",
+        label: "Customer Shipping",
         operations: [
             {account: ASSETS.STOCK_OUT.code, debit: constant(cor)},
             {account: ASSETS.STOCK.code, credit: constant(cor)}
         ]
     }, {
-        id: 'refund',
-        label: "Customer Refund",
+        label: "Manufacturing Order",
         operations: [
-            {account: REVENUE.SALES.code, debit: constant(refund)},
-            {account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(refund_tax)},
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: constant(refund + refund_tax)}
+            {account: ASSETS.STOCK.code, debit: constant(50)},
+            {account: EXPENSES.MANUFACTURING_OVERHEAD.code, debit: constant(2)},
+            {account: ASSETS.RAW_MATERIALS.code, debit: constant(52)}
         ]
-    }, {
-        label: "Customer Payment",
-        operations: [
-            {account: ASSETS.BANK.code, debit: function (ops) {
-                var refund_op = operations.find(function (op) {
-                    return op.get('id') === 'refund';
-                });
-                return ops.contains(refund_op.get('operations'))
-                    ? total - (refund + refund_tax)
-                    : total;
-            }},
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: function (ops) {
-                var refund_op = operations.find(function (op) {
-                    return op.get('id') === 'refund';
-                });
-                return ops.contains(refund_op.get('operations'))
-                    ? total - (refund + refund_tax)
-                    : total;
-            }}
-        ]
-    }, {
-        label: "Supplier Goods Received (Purchase Order: $50)",
-        operations: [
-            {account: LIABILITIES.STOCK_IN.code, credit: constant(cor)},
-            {account: ASSETS.STOCK.code, debit: constant(cor)},
-        ]
-    }, {
-        label: "Supplier Bill (Invoice: $50)",
-        operations: [
-            {account: LIABILITIES.STOCK_IN.code, debit: constant(cor)},
-            {account: ASSETS.TAXES_PAID.code, debit: constant(cor_tax)},
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(cor + cor_tax)},
-        ]
-    }, {
-        label: "Supplier Bill (Invoice: $52 but PO $50)",
-        operations: [
-            {account: EXPENSES.PRICE_DIFFERENCE.code, debit: constant(purchase-cor)},
-            {account: LIABILITIES.STOCK_IN.code, debit: constant(cor)},
-            {account: ASSETS.TAXES_PAID.code, debit: constant(purchase_tax)},
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
-        ]
-    }, {
-        label: "Supplier Bill Paid ($52 + 9% tax)",
-        operations: [
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase + purchase_tax)},
-            {account: ASSETS.BANK.code, credit: constant(purchase + purchase_tax)}
-        ]
-    }, {
-        label: "Acquire a building (purchase contract)",
-        operations: [
-            {account: ASSETS.BUILDINGS.code, debit: constant(3000)},
-            {account: ASSETS.TAXES_PAID.code, debit: constant(300)},
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(3300)}
-        ]
-    }, {
-        label: "Pay for building",
-        operations: [
-            {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(3300)},
-            {account: ASSETS.BANK.code, credit: constant(3300)}
-        ]
-    }, {
-        label: "Yearly Asset Depreciation (10% per year)",
-        operations: [
-            {account: EXPENSES.DEPRECIATION.code, debit: constant(300)},
-            {account: ASSETS.DEPRECIATION.code, credit: constant(300)}
-        ]
-    }, {
-        label: "Customer Invoice (3 years service contract, $300)",
-        operations: [
-            {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total*3)},
-            {account: LIABILITIES.DEFERRED_REVENUE.code, credit: constant(sale*3)},
-            {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax*3)}
-        ]
-    }, {
-        label: "Revenue Recognition (each year, including first)",
-        operations: [
-            {account: LIABILITIES.DEFERRED_REVENUE.code, debit: constant(sale)},
-            {account: REVENUE.SALES_SERVICES.code, credit: constant(sale)},
-        ]
-    }, {
-        id: 'pay_taxes',
-        label: "Pay Taxes Due",
-        operations: [
-            {account: LIABILITIES.TAXES_PAYABLE.code, debit: function (ops) {
-                var this_ops = operations.find(function (op) {
-                    return op.get('id') === 'pay_taxes';
-                }).get('operations');
-                return ops.filter(function (_ops) {
-                    return _ops !== this_ops;
-                }).flatten(true).filter(function (op) {
-                    return op.get('account') === LIABILITIES.TAXES_PAYABLE.code
-                }).reduce(function (acc, op) {
-                    return acc + op.get('credit', zero)(ops) - op.get('debit', zero)(ops);
-                }, 0);
-            }},
-            {account: ASSETS.BANK.code, credit: function (ops) {
-                return operations.find(function (op) {
-                    return op.get('id') === 'pay_taxes';
-                }).getIn(['operations', 0, 'debit'])(ops);
-            }}
-        ]
-    }
-    ]);
+    }]);
     function constant(val) {return function () { return val; };}
     var zero = constant(0);
     function format(val, def) {

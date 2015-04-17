@@ -276,6 +276,9 @@ def setup(app):
     app.add_javascript('reconciliation.js')
     app.add_javascript('misc.js')
 
+    app.add_javascript('inventory.js');
+    app.add_javascript('coa-valuation.js')
+
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
 
