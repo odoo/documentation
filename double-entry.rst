@@ -120,7 +120,7 @@ For each inventory location, multiple data points can be analysed:
          <th>&#8193;Inventory Loss</th> <td class="text-right">$350</td>
        </tr>
        <tr class="analysis-scrapped">
-         <th>&#8193;Scraped</th> <td class="text-right">$550</td>
+         <th>&#8193;Scrapped</th> <td class="text-right">$550</td>
        </tr>
        <tr class="analysis-creation">
          <th>&#8193;Manufacturing</th> <td class="text-right">- $1,000</td>
