@@ -191,10 +191,9 @@ Supplier Invoice
   ============================= ===== ======
   \                             Debit Credit
   ============================= ===== ======
-  Assets: Uninvoiced Inventory     50
+  Assets: Inventory                50
   Assets: Deferred Tax Assets    4.68
-  Expenses: Price Difference        2
-  Liabilities: Accounts Payable	       56.68
+  Liabilities: Accounts Payable	       54.68
   ============================= ===== ======
 
   Explanation:
@@ -204,13 +203,10 @@ Supplier Invoice
     * The company still needs to pay the vendor (traded an asset against a
       liability)
   Configuration:
-    * Uninvoiced Inventory: defined on the product or the category of related
-      product, field: Stock Input Account
+    * Inventory: defined on the product or the category of related product,
+      field: Stock Input Account
     * Deferred Tax Assets: defined on the tax used on the purchase order line
     * Accounts Payable: defined on the supplier related to the bill
-
-  In this scenario, the purchase order was $50 but the company received an
-  invoice for $52 as there were extra shipping costs.
 Goods Receptions
   No Journal Entry
 Customer Invoice
