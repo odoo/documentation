@@ -253,19 +253,9 @@ its cost to know the inventory value of the company.
 
 .. h:div:: force-right
 
-   Current Values in Accounting:
-
-   .. rst-class:: values-table
-
-   =============== ====== ====== =======
-   Account         Debit  Credit Balance
-   =============== ====== ====== =======
-   14000 Inventory $5,000 $800   $4,200
-   =============== ====== ====== =======
-
-   Real Inventory Valuation: $4,800
-
-   Journal Entry to create:
+   If the real value of the inventory is $4800 but the *14000 Inventory*
+   account has a balance of $4200, the following journal entry is created
+   manually:
 
    .. rst-class:: values-table
 
@@ -273,7 +263,6 @@ its cost to know the inventory value of the company.
    14000 Inventory            $600
    14700 Inventory Variations      $600
    ========================== ==== ====
-
 
 Perpetual Inventory Valuation
 =============================
