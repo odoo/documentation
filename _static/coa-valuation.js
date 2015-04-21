@@ -253,11 +253,11 @@
             {account: ASSETS.STOCK.code, credit: constant(cor)}
         ]
     }, {
-        label: "Manufacturing Order",
+        label: "Production Order",
         operations: [
             {account: ASSETS.STOCK.code, debit: constant(50)},
             {account: EXPENSES.MANUFACTURING_OVERHEAD.code, debit: constant(2)},
-            {account: ASSETS.RAW_MATERIALS.code, debit: constant(52)}
+            {account: ASSETS.RAW_MATERIALS.code, credit: constant(52)}
         ]
     }]);
     function constant(val) {return function () { return val; };}
