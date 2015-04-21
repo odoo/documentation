@@ -75,6 +75,7 @@ For each inventory location, multiple data points can be analysed:
      <li data-highlight=".analysis-lost">value of lost/stolen products</li>
      <li data-highlight=".analysis-scrapped">value of scrapped products</li>
      <li data-highlight=".analysis-delivered">value of products delivered to clients over a period</li>
+     <li data-highlight=".analysis-received">value of products received from suppliers over a period (negative)</li>
      <li data-highlight=".analysis-transit">value of products in transit between locations</li>
    </ul>
 
@@ -104,7 +105,7 @@ For each inventory location, multiple data points can be analysed:
        <tr class="analysis-delivered">
          <th>&#8193;Customers</th> <td class="text-right">$2,000</td>
        </tr>
-       <tr>
+       <tr class="analysis-received">
          <th>&#8193;Suppliers</th> <td class="text-right">- $3,500</td>
        </tr>
        <tr>
