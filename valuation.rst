@@ -30,7 +30,7 @@ Standard Price
        - 10
        - +8*$10
        - $80
-     * - Receive 4 Products at $12
+     * - Receive 4 Products at $16
        - $10
        - 12
        - +4*$10
