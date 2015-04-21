@@ -19,7 +19,7 @@ Stock moves represent the transit of goods and materials between locations.
 
 .. rst-class:: alternatives force-right
 
-Manufacturing Order
+Production Order
   Consume:
     | 2 Wheels: Stock → Production
     | 1 Bike Frame: Stock → Production
