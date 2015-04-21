@@ -25,6 +25,11 @@ Standard Price
        - Qty On Hand
        - Delta Value
        - Inventory Value
+     * -
+       - $10
+       - 0
+       -
+       - $0
      * - Receive 8 Products at $10
        - $10
        - 8
@@ -59,6 +64,11 @@ Average Price
        - Qty On Hand
        - Delta Value
        - Inventory Value
+     * -
+       - $0
+       - 0
+       -
+       - $0
      * - Receive 8 Products at $10
        - $10
        - 8
@@ -93,6 +103,11 @@ FIFO
        - Qty On Hand
        - Delta Value
        - Inventory Value
+     * -
+       - $0
+       - 0
+       -
+       - $0
      * - Receive 8 Products at $10
        - $10
        - 8
@@ -127,6 +142,11 @@ LIFO (not accepted in IFRS)
        - Qty On Hand
        - Delta Value
        - Inventory Value
+     * -
+       - $0
+       - 0
+       -
+       - $0
      * - Receive 8 Products at $10
        - $10
        - 8
