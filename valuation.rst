@@ -219,7 +219,7 @@ Customer Invoice
   Liabilities: Deferred Tax Liabilities            9
   Assets: Accounts Receivable             109
   Assets: Inventory                               50
-  Expenses: Cost of Goods Sold                    50
+  Expenses: Cost of Goods Sold             50
   ===================================== ===== ======
 
   Explanation:
