@@ -31,6 +31,10 @@ Production Order
 
 Drop-shipping
   1 Bicycle: Supplier → Customer
+
+  Configurarion:
+    | Supplier: on the product form
+    | Customer: on the sale order itself
 Client Delivery
   Pick
     1 Bicycle: Stock → Packing Zone
@@ -38,6 +42,8 @@ Client Delivery
     1 Bicycle: Packing Zone → Output
   Shipping
     1 Bicycle: Output → Customer
+  Configuration:
+    | on the pick+pack+ship route for the warehouse
 Inter-Warehouse transfer
   Transfer:
     | 1 Bicycle: Warehouse 1 → Transit
@@ -47,14 +53,21 @@ Inter-Warehouse transfer
     | Warehouse 1: on the transit route
 Broken Product (scrapped)
   1 Bicycle: Warehouse → Scrap
+  Configuration:
+    Scrap: Scrap Location when creating the scrapping
 Inventory
   Missing products in inventory
     1 Bicycle: Warehouse → Inventory Loss
   Extra products in inventory
     1 Bicycle: Inventory Loss → Warehouse
+  Configuration:
+    Inventory Loss: "Inventory Location" field on the product
 Reception
   | 1 Bicycle: Supplier → Input
   | 1 Bicycle: Input → Stock
+  Configuration:
+    | Supplier: purchase order supplier
+    | Input: "destination" field on the purchase order
 
 Analysis
 ========
