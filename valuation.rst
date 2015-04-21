@@ -27,7 +27,7 @@ Standard Price
        - Inventory Value
      * - Receive 8 Products at $10
        - $10
-       - 10
+       - 8
        - +8*$10
        - $80
      * - Receive 4 Products at $16
