@@ -53,6 +53,7 @@ Inter-Warehouse transfer
     | Warehouse 1: on the transit route
 Broken Product (scrapped)
   1 Bicycle: Warehouse → Scrap
+
   Configuration:
     Scrap: Scrap Location when creating the scrapping
 Inventory
@@ -65,6 +66,7 @@ Inventory
 Reception
   | 1 Bicycle: Supplier → Input
   | 1 Bicycle: Input → Stock
+
   Configuration:
     | Supplier: purchase order supplier
     | Input: "destination" field on the purchase order
