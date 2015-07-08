@@ -1,4 +1,4 @@
-:classes: stripe
+:code-column:
 
 =================================
 Double-Entry Inventory Management
@@ -8,7 +8,7 @@ A double-entry inventory has no stock input, output (disparition of products)
 or transformation. Instead, all operations are stock moves between locations
 (possibly virtual).
 
-.. h:div:: force-right chart-of-locations
+.. h:div:: doc-aside chart-of-locations
 
    .. placeholder
 
@@ -17,7 +17,7 @@ Operations
 
 Stock moves represent the transit of goods and materials between locations.
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 Production Order
   Consume:
@@ -94,7 +94,7 @@ For each inventory location, multiple data points can be analysed:
      <li data-highlight=".analysis-transit">value of products in transit between locations</li>
    </ul>
 
-.. h:div:: force-right analysis-table
+.. h:div:: doc-aside analysis-table
 
  .. raw:: html
 
@@ -150,7 +150,7 @@ Procurements & Procurement Rules
 A procurement is a request for a specific quantity of products to a specific
 location. They can be created manually or automatically triggered by:
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 New sale orders
   Effect
@@ -174,7 +174,7 @@ fulfilled e.g.:
 * whether the procurement is :abbr:`MTO (Made To Order)` or :abbr:`MTS (Made
   To Stock)`
 
-.. h:div:: force-right
+.. h:div:: doc-aside
 
    .. todo:: needs schema thing from FP
 
@@ -188,7 +188,7 @@ order lines, warehouse,...
 To fulfill a procurement, the system will search for rules belonging to routes
 that are defined in (by order of priority):
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 Warehouses
   Warehouse Route Example: Pick → Pack → Ship
@@ -233,7 +233,7 @@ Push rules trigger when products enter a specific location. They automatically
 move the product to a new location. Whether a push rule can be used depends on
 applicable routes.
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 Quality Control
   * Product lands in Input

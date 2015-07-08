@@ -1,4 +1,4 @@
-:classes: stripe
+:code-column:
 
 ====================
 Inventory Valuations
@@ -10,7 +10,7 @@ Costing Method
 International accounting standards define several ways to compute product
 costs:
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 Standard Price
   .. rst-class:: values-table
@@ -183,7 +183,7 @@ no direct impact in the accounting. At the end of the month or year, the
 accountant post one journal entry representing the value of the physical
 inventory.
 
-.. rst-class:: alternatives force-right
+.. rst-class:: alternatives doc-aside
 
 Supplier Invoice
   .. rst-class:: values-table
@@ -251,7 +251,7 @@ At the end of the month/year, the company do a physical inventory (or just
 rely on the inventory in Odoo). They multiply the quantity of each product by
 its cost to know the inventory value of the company.
 
-.. h:div:: force-right
+.. h:div:: doc-aside
 
    If the real value of the inventory is $4800 but the *14000 Inventory*
    account has a balance of $4200, the following journal entry is created
@@ -271,7 +271,7 @@ In a perpetual inventory valuation, goods reception and outgoing shipments are
 directly posted in the accounting. The inventory valuation is always
 up-to-date.
 
-.. h:div:: valuation-chart force-right
+.. h:div:: valuation-chart doc-aside
 
    .. placeholder
 

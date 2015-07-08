@@ -1,4 +1,4 @@
-:classes: stripe
+:code-column:
 
 ==============================================
 Accounting Memento For Entrepreneurs (US GAAP)
@@ -47,7 +47,7 @@ Accounting Memento For Entrepreneurs (US GAAP)
 
      Each year, net profits (or losses) are reported to retained earnings.
 
-.. h:div:: force-right accounts-table
+.. h:div:: doc-aside accounts-table
 
    .. placeholder
 
@@ -59,7 +59,7 @@ A difference is made between buying an assets (e.g. a building) and expenses
 value in them being consumed for the company to "work".
 
 
-.. rst-class:: force-right
+.. rst-class:: doc-aside
 
 .. highlights:: Assets = Liabilities + Equity
 
@@ -71,7 +71,7 @@ sheet accounts or P&L accounts. Every financial transaction (e.g. a payment, an
 invoice) impacts accounts by moving value from one account (credit) to an other
 account (debit).
 
-.. h:div:: force-right
+.. h:div:: doc-aside
 
    .. highlights:: Balance = Debit - Credit
 
@@ -90,7 +90,7 @@ impacting several accounts.
 For a journal entry to be *balanced*, the sum of all its debits must be equal
 to the sum of all its credits.
 
-.. h:div:: force-right journal-entries
+.. h:div:: doc-aside journal-entries
 
    examples of accounting entries for various transactions. Example:
 
@@ -146,32 +146,31 @@ Reconciliation is performed automatically by the system when:
   matching process
 
 
-.. rst-class:: force-right reconciliation-example
+.. h:div:: doc-aside reconciliation-example
 
-Customer Statement Example
---------------------------
+   .. rubric:: Customer Statement Example
 
-.. rst-class:: table-condensed d-c-table
+   .. rst-class:: table-condensed d-c-table
 
-+-------------------------+-------------------------+-------------------------+
-|Accounts Receivable      |Debit                    |Credit                   |
-+=========================+=========================+=========================+
-|Invoice 1                |100                      |                         |
-+-------------------------+-------------------------+-------------------------+
-|Payment 1.1              |                         |70                       |
-+-------------------------+-------------------------+-------------------------+
-|Invoice 2                |65                       |                         |
-+-------------------------+-------------------------+-------------------------+
-|Payment 1.2              |                         |30                       |
-+-------------------------+-------------------------+-------------------------+
-|Payment 2                |                         |65                       |
-+-------------------------+-------------------------+-------------------------+
-|Invoice 3                |50                       |                         |
-+-------------------------+-------------------------+-------------------------+
-|                         |                         |                         |
-+-------------------------+-------------------------+-------------------------+
-|Total To Pay             |50                       |                         |
-+-------------------------+-------------------------+-------------------------+
+   +-------------------------+-------------------------+-----------------------+
+   |Accounts Receivable      |Debit                    |Credit                 |
+   +=========================+=========================+=======================+
+   |Invoice 1                |100                      |                       |
+   +-------------------------+-------------------------+-----------------------+
+   |Payment 1.1              |                         |70                     |
+   +-------------------------+-------------------------+-----------------------+
+   |Invoice 2                |65                       |                       |
+   +-------------------------+-------------------------+-----------------------+
+   |Payment 1.2              |                         |30                     |
+   +-------------------------+-------------------------+-----------------------+
+   |Payment 2                |                         |65                     |
+   +-------------------------+-------------------------+-----------------------+
+   |Invoice 3                |50                       |                       |
+   +-------------------------+-------------------------+-----------------------+
+   |                         |                         |                       |
+   +-------------------------+-------------------------+-----------------------+
+   |Total To Pay             |50                       |                       |
+   +-------------------------+-------------------------+-----------------------+
 
 
 Bank Reconciliation
@@ -206,7 +205,7 @@ There are two approaches to manage checks and internal wire transfer:
 * Two journal entries and a reconciliation
 * One journal entry and a bank reconciliation
 
-.. h:div:: force-right
+.. h:div:: doc-aside
 
    The first journal entry is created by registering the payment on the
    invoice. The second one is created when registering the bank statement.
@@ -231,7 +230,7 @@ There are two approaches to manage checks and internal wire transfer:
    |Bank                     |100           |            |               |
    +-------------------------+--------------+------------+---------------+
 
-.. h:div:: force-right
+.. h:div:: doc-aside
 
    A journal entry is created by registering the payment on the invoice. When
    reconciling the bank statement, the statement line is linked to the
