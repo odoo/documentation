@@ -61,10 +61,9 @@ Types`
 
 .. demo:fields:: account_asset.action_account_asset_asset_list_normal_sale
 
-+--------------------------------------------------------+
-| **View Asset Types in the our online demonstration**   |
-+========================================================+
-+--------------------------------------------------------+
+.. demo:action:: account_asset.action_account_asset_asset_list_normal_sale
+
+   View *Asset Types* in our Online Demonstration
 
 Create assets manually
 ======================

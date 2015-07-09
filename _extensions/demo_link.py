@@ -1,6 +1,7 @@
 import Queue
 import collections
 import threading
+import urllib
 import xmlrpclib
 
 from xml.etree import ElementTree as ET
@@ -74,7 +75,22 @@ class Fields(Directive):
         return q
 
 class Action(Directive):
-    pass
+    required_arguments = 1
+    final_argument_whitespace = True
+    has_content = True
+
+    def run(self):
+        self.assert_has_content()
+        external_id = self.arguments[0]
+        text = "action button"
+        node = nodes.reference(
+            refuri='https://demo.odoo.com?{}'.format(urllib.urlencode({
+                'module': external_id
+            })),
+            classes=['btn', 'btn-primary', 'btn-lg', 'btn-block', 'center-block']
+        )
+        self.state.nested_parse(self.content, self.content_offset, node)
+        return [node]
 
 class OdooDemoDomain(Domain):
     name = 'demo'
