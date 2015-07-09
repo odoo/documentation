@@ -10,3 +10,4 @@ Accounting
    accounting/overview
    accounting/receivables
    accounting/payables
+   accounting/adviser
