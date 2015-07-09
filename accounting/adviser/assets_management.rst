@@ -59,11 +59,7 @@ Types`
 .. image:: media/image01.png
    :align: center
 
-**Explanation of the fields**
-
-**[Add here a code that loads automatically all fields of the asset type
-objects and their tooltips. This will give something similar to the
-above section, but no need for duplicate content]**
+.. demo:fields:: account_asset.action_account_asset_asset_list_normal_sale
 
 +--------------------------------------------------------+
 | **View Asset Types in the our online demonstration**   |
