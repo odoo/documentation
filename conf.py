@@ -282,8 +282,28 @@ def setup(app):
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
 
+    app.connect('doctree-resolved', tag_toctrees)
+
 def analytics(app, pagename, templatename, context, doctree):
     if not app.config.google_analytics_key:
         return
 
     context['google_analytics_key'] = app.config.google_analytics_key
+
+from sphinx import addnodes
+def tag_toctrees(app, doctree, docname):
+    """ Adds a 'toc' metadata entry to all documents containing a toctree node"""
+    # document
+    #   section
+    #     title
+    #     compound@toctree-wrapper
+    if not len(doctree.children) == 1:
+        return
+    [section] = doctree.children
+    if not len(section.children) == 2:
+        return;
+    [_, compound] = section.children
+    if not 'toctree-wrapper' in compound['classes']:
+        return
+
+    app.env.metadata[docname]['has-toc'] = True

@@ -7,5 +7,4 @@ Odoo Business Mementoes
 .. toctree::
     :titlesonly:
 
-    accounting
-    inventory
+    applications

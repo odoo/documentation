@@ -1,3 +1,5 @@
+:banner: banners/warehouse.png
+
 =========
 Warehouse
 =========
@@ -5,5 +7,4 @@ Warehouse
 .. toctree::
    :titlesonly:
 
-   double-entry
-   valuation
+   warehouse/overview
