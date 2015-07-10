@@ -29,7 +29,7 @@ class Fields(Directive):
     required_arguments = 1
     option_spec = {
         'view': directives.unchanged,
-        'fields': directives.unchanged,
+        'only': directives.unchanged,
     }
     def __init__(self, name, arguments, options, content, lineno,
                  content_offset, block_text, state, state_machine):
@@ -50,7 +50,7 @@ class Fields(Directive):
             return [self.state_machine.reporter.warning(
                 "Could not find any field related to the action [%s]" % self.arguments[0]
             )]
-        whitelist = set(filter(None, self.options.get('fields', '').split(',')))
+        whitelist = set(self.options.get('only', '').split(''))
         return [nodes.field_list('', *(
             nodes.field('',
                 nodes.field_name(text=v['string'] or k),
