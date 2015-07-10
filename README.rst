@@ -44,7 +44,7 @@ Extensions
 Two custom directives are provided for integration with Odoo's demo
 system:
 
-* :samp:`demo:fields:: {external_id}` lists all the fields with a
+* ``demo:fields:: {external_id}`` lists all the fields with a
   tooltip (``help``) of the action whose ``external_id`` is provided.
 
   - Uses the ``form`` view by default, can be customized by specifying
@@ -62,7 +62,7 @@ system:
   will display a table of just the ``name`` field and its ``help`` (or
   nothing if the ``name`` field does not have a ``help``)
 
-* :samp:`demo:action:: {external_id}` will create a link button to the
+* ``demo:action:: {external_id}`` will create a link button to the
   action (specified by external id) on the demo site. The text of the
   button should be provided as the directive's content:
 
