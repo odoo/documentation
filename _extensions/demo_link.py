@@ -50,7 +50,7 @@ class Fields(Directive):
             return [self.state_machine.reporter.warning(
                 "Could not find any field related to the action [%s]" % self.arguments[0]
             )]
-        whitelist = set(self.options.get('only', '').split(''))
+        whitelist = set(self.options.get('only', '').split())
         return [nodes.field_list('', *(
             nodes.field('',
                 nodes.field_name(text=v['string'] or k),
