@@ -13,13 +13,18 @@ Building requirements:
 
      $ sphinx-build --version
 
-After checking out, at the root of the documentation just type
+  See `the sphinx documentation <http://sphinx-doc.org/install.html>`_
+  for local installation instructions.
+* `git <http://www.git-scm.com>`_
+* clone this repository using git, then at the root of the repository,
+  in a console,
 
-.. code-block:: console
+  .. code-block:: console
 
-   $ make html
+     $ make html
 
-the HTML content will be built to ``_build/html/index.html``.
+  this should compile the documentation to HTML, and put the generated
+  HTML in ``_build/html/index.html``.
 
 Contributions
 =============
