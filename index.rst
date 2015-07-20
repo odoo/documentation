@@ -7,4 +7,5 @@ Odoo User Documentation
 .. toctree::
     :titlesonly:
 
+    Index <self>
     applications
