@@ -1,5 +1,5 @@
 =======================
-Odoo Business Mementoes
+Odoo User Documentation
 =======================
 
 .. rst-class:: index-tree
