@@ -62,7 +62,17 @@
         </button>
         <nav class="nav navbar-nav navbar-left">
           <li id="main-back">
-            <a href="{{ pathto(master_doc) }}" class="mdi-navigation-arrow-back"></a>
+            {# warning: if doc structure change, these rules may have
+               to change as well #}
+            {% if pagename.count('/') %}
+              {# If the current document is an application's content,
+                 link to the application root #}
+              {% set updoc, _ = pagename.split('/', 1) %}
+            {% else %}
+              {# otherwise link to master_doc #}
+              {% set updoc = master_doc %}
+            {% endif %}
+            <a href="{{ pathto(updoc) }}" class="mdi-navigation-arrow-back"></a>
           </li>
           <li>
             <h1 id="main_title">
