@@ -33,6 +33,7 @@ extensions = [
     'odoo',
     'html_domain',
     'demo_link',
+    'github_link',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -55,8 +56,6 @@ copyright = u'2015, Odoo S.A.'
 # |version| and |release|, also used in various other places throughout the
 # built documents.
 #
-# The short X.Y version.
-version = '0.1'
 # The full version, including alpha/beta/rc tags.
 release = '0.1'
 
@@ -264,6 +263,9 @@ texinfo_documents = [
 
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
+
+github_user = 'odoo'
+github_project = 'documentation-user'
 
 def setup(app):
     app.add_stylesheet('accounting.css')
