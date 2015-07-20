@@ -61,9 +61,13 @@
           <span class="icon-bar"></span>
         </button>
         <nav class="nav navbar-nav navbar-left">
-          <li id="main-back"><a href="{{ pathto(master_doc) }}" class="mdi-navigation-arrow-back"></a></li>
+          <li id="main-back">
+            <a href="{{ pathto(master_doc) }}" class="mdi-navigation-arrow-back"></a>
+          </li>
           <li>
-            <h1 id="main_title">{{ meta.get('main-title', title) }}</h1>
+            <h1 id="main_title">
+              {{ meta.get('main-title', title) }}
+            </h1>
           </li>
         </nav>
       </div>
@@ -101,10 +105,6 @@
       {% if 'has-toc' not in meta %}
       <aside>
         <div class="navbar-aside text-center">
-          <div class="logo_box">
-            <span class="logo"></span>
-            Documentation
-          </div>
           {{ toc }}
           {% if github_link %}
           <p class="gith-container"><a href="{{ github_link(mode='edit') }}" class="gith-link">
