@@ -98,8 +98,8 @@ Create assets automatically from a supplier bill
 ================================================
 
 Assets can be automatically created from supplier bills. All you need to
-do is to set an asset category on your bill line. When the use will
-Validate the bill, an asset will be automatically created, using the
+do is to set an asset category on your bill line. When the user will
+validate the bill, an asset will be automatically created, using the
 information of the supplier bill.
 
 .. image:: media/image09.png
