@@ -65,10 +65,10 @@ def navbarify(node, navbar=None):
             # no subrefs -> ignore
             if not list_item.children[1].children:
                 continue
-            # otherwise replace reference node by its own children
+            # otherwise replace reference node by an inline (so it can still be styled)
             para = n.parent
             para.remove(n)
-            para.extend(n.children)
+            para.append(nodes.inline('', '', *n.children))
 
 
 def resolve_content_toctree(
