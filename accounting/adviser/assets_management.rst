@@ -87,12 +87,11 @@ before confirming the asset.
 
 Explanation of the fields:
 
--  [Insert here tTooltips of all fields of the asset form view.]
+.. demo:fields:: account_asset.action_account_asset_asset_form
 
-+---------------------------------------------------------+
-| **Try creating an Asset in our online demonstration**   |
-+=========================================================+
-+---------------------------------------------------------+
+.. demo:action:: account_asset.action_account_asset_asset_form
+
+   Try creating an *Asset* in our online demonstration
 
 Create assets automatically from a supplier bill
 ================================================
