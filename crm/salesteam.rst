@@ -1,10 +1,10 @@
 :banner: banners/crm.png
 
-===
-CRM
-===
+==========
+Sales Team
+==========
 
 .. toctree::
    :titlesonly:
 
-   crm/salesteam
+   salesteam/setup
