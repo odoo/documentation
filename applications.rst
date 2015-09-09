@@ -8,5 +8,6 @@ Applications
    accounting
    crm
    expenses
+   purchase
    recruitment
    warehouse
