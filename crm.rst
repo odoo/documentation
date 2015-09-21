@@ -1,4 +1,4 @@
-:banner: banners/crm.png
+:banner: banners/crm.jpg
 
 ===
 CRM

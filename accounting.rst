@@ -1,4 +1,4 @@
-:banner: banners/accounting.png
+:banner: banners/accounting.jpg
 
 ==========
 Accounting

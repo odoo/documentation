@@ -1,4 +1,4 @@
-:banner: banners/purchase.png
+:banner: banners/purchase.jpg
 
 ========
 Purchase

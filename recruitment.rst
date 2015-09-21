@@ -1,4 +1,4 @@
-:banner: banners/recruitment.png
+:banner: banners/recruitment.jpg
 
 ===========
 Recruitment

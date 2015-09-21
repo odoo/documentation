@@ -1,4 +1,4 @@
-:banner: banners/expense.png
+:banner: banners/expense.jpg
 
 ========
 Expenses

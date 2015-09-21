@@ -1,4 +1,4 @@
-:banner: banners/warehouse.png
+:banner: banners/warehouse.jpg
 
 =========
 Warehouse

@@ -1,5 +1,3 @@
-:banner: banners/crm.png
-
 ==========
 Sales Team
 ==========
