@@ -8,3 +8,5 @@ Warehouse
    :titlesonly:
 
    warehouse/overview
+   warehouse/settings
+   warehouse/management

@@ -9,3 +9,4 @@ Purchase
 
    purchase/overview
    purchase/purchases
+   purchase/replenishment
