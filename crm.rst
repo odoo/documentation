@@ -7,4 +7,6 @@ CRM
 .. toctree::
    :titlesonly:
 
+   crm/overview
    crm/salesteam
+   crm/leads

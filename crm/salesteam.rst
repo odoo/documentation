@@ -6,3 +6,4 @@ Sales Team
    :titlesonly:
 
    salesteam/setup
+   salesteam/manage
