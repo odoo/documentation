@@ -1,5 +1,5 @@
 ============
-Maange leads
+Manage leads
 ============
 
 .. toctree::
