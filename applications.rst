@@ -10,4 +10,4 @@ Applications
    expenses
    purchase
    recruitment
-   warehouse
+   inventory

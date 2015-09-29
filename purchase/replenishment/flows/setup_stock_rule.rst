@@ -93,7 +93,7 @@ location in which the product will be stored in the **Location** field.
 
 .. seealso::
 
-  :doc:`../../../warehouse/settings/warehouses/difference_warehouse_location`
+  :doc:`../../../inventory/settings/warehouses/difference_warehouse_location`
 
 
 .. image:: media/setup02.png
@@ -133,13 +133,13 @@ based on your maximum quantity to replenish your stock.
          12:00PM.
 
          To know how to configure and run the schedulers manually, read the
-         document on :doc:`../../../warehouse/management/miscellaneous/schedulers`
+         document on :doc:`../../../inventory/management/miscellaneous/schedulers`
 
 .. seealso::
   
   :doc:`replenishment_methods`
 
-  :doc:`../../../warehouse/management/miscellaneous/schedulers`
+  :doc:`../../../inventory/management/miscellaneous/schedulers`
 
 .. rst-class:: text-muted
 
