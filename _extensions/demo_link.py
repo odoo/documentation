@@ -118,7 +118,7 @@ def _submit(result_queue, xid, view='form'):
             launcher.start()
 
 def _launcher():
-    info = xmlrpclib.ServerProxy('https://demo.odoo.com').start()
+    info = xmlrpclib.ServerProxy('https://demo.odoo.com/start').start()
     url, db, username, password = \
         info['host'], info['database'], info['user'], info['password']
 
