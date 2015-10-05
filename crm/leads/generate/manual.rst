@@ -64,14 +64,13 @@ the contact details by clicking on it.
 .. image:: ./media/manual04.png
 	:align: center
 
-Related topics
-==============
+.. seealso::
 
-* :doc:`import`
+	* :doc:`import`
 
-* :doc:`from_emails`
+	* :doc:`from_emails`
 
-* :doc:`website`
+	* :doc:`website`
 
 .. rst-class:: text-muted
 
