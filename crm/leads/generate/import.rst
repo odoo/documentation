@@ -30,7 +30,6 @@ if…** as shown below and click on **Apply**.
 .. image:: ./media/import01.jpg
    :align: center
 
-
 This activation will create a new submenu :menuselection:`Sales --> Leads`
 from which you will be able to import your contacts from the
 **Import** button (if you want to create a lead manually, :doc:`click here <manual>`)
@@ -88,7 +87,7 @@ click the Import button: the same validations will be done.
 .. seealso::
 
 	- :doc:`manual`
-	- :doc:`from_emails`
+	- :doc:`emails`
 	- :doc:`website`
 
 .. rst-class:: text-muted

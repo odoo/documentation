@@ -68,7 +68,7 @@ the contact details by clicking on it.
 
 	* :doc:`import`
 
-	* :doc:`from_emails`
+	* :doc:`emails`
 
 	* :doc:`website`
 

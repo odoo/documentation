@@ -7,5 +7,5 @@ Generate leads
 
    generate/manual
    generate/import
-   generate/from_emails
+   generate/emails
    generate/website

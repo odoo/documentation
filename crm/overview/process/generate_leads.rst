@@ -36,7 +36,7 @@ analyze your sales processes easily.
 
 Odoo CRM provides you with several methods to generate leads:
 
-* :doc:`../../leads/generate/from_emails`
+* :doc:`../../leads/generate/emails`
 
   An inquiry email sent to one of your company’s generic email addresses
   can automatically generate a lead or an opportunity.

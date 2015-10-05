@@ -105,7 +105,7 @@ personal email address of your Direct team is
 every email sent will automatically create a new opportunity into the
 sales team.
 
-Refer to the page :doc:`../../leads/generate/from_emails` to set it up.
+Refer to the page :doc:`../../leads/generate/emails` to set it up.
 
 Automate lead assignation
 -------------------------
