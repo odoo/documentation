@@ -1,5 +1,5 @@
-@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic);
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+@import url(https://fonts.googleapis.com/css?family=Lato:300,400,900,300italic,400italic);
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
@@ -8719,6 +8719,72 @@ main.has_code_col article.doc-body section {
 .code-fields ul {
   margin: .2em 0;
   padding: 0;
+}
+@media print {
+  body header,
+  body footer {
+    display: none;
+  }
+  body .fadeInUp,
+  body .fadeIn {
+    opacity: 1 !important;
+    filter: alpha(opacity=100) !important;
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+  }
+  body #main_navbar {
+    position: relative;
+    display: block;
+    height: 100px!important;
+  }
+  body #main_navbar #main-back {
+    display: none;
+  }
+  body #main_navbar #main_title {
+    position: relative;
+    transform: none;
+  }
+  body #main_navbar .navbar-main {
+    display: none!important;
+  }
+  body main {
+    opacity: 1;
+    filter: alpha(opacity=100);
+    -webkit-animation: none;
+    -o-animation: none;
+    animation: none;
+  }
+  body main aside {
+    display: none;
+  }
+  body main article h1,
+  body main article .h1 {
+    font-size: 2em;
+  }
+  body main article h2,
+  body main article .h2 {
+    font-size: 1.642857143em;
+  }
+  body main article h3,
+  body main article .h3 {
+    font-size: 1.25em;
+  }
+  body main article p,
+  body main article ul,
+  body main article ol,
+  body main article table,
+  body main article blockquote,
+  body main article .alert,
+  body main article .doc-code,
+  body main article .admonition {
+    margin-top: inherit;
+    margin-bottom: inherit;
+    font-size: inherit;
+  }
+  body .floating_action_container {
+    display: none;
+  }
 }
 html,
 body {
