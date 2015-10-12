@@ -50,6 +50,11 @@ class Fields(Directive):
             return [self.state_machine.reporter.warning(
                 "Could not find any field related to the action [%s]" % self.arguments[0]
             )]
+        if isinstance(fields, str):
+            return [self.state_machine.reporter.warning(
+                "Error while fetching fields related to the action [%s]: %s" % (
+                    self.arguments[0], fields))]
+
         whitelist = set(self.options.get('only', '').split())
         return [nodes.field_list('', *(
             nodes.field('',
@@ -118,7 +123,14 @@ def _submit(result_queue, xid, view='form'):
             launcher.start()
 
 def _launcher():
-    info = xmlrpclib.ServerProxy('https://demo.odoo.com/start').start()
+    try:
+        info = xmlrpclib.ServerProxy('https://demo.odoo.com/start').start()
+    except xmlrpclib.Fault, e:
+        threading.Thread(
+            target=_fault_requests,
+            args=["Demo start() failed: %s" % e.faultString],
+            name="fields_get login failed").start()
+        return
     url, db, username, password = \
         info['host'], info['database'], info['user'], info['password']
 
@@ -133,6 +145,12 @@ def _launcher():
             'password': password,
             'url': '{}/xmlrpc/2/object'.format(url)
         }, name="fields_get fetcher thread %d/%d" % (i, FETCH_THREADS)).start()
+
+def _fault_requests(error):
+    while True:
+        task = work_queue.get()
+        task.result.put(error)
+        work_queue.task_done()
 
 def _fetch_fields(url, db, uid, password):
     server = xmlrpclib.ServerProxy(url)
