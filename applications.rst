@@ -11,3 +11,4 @@ Applications
    purchase
    recruitment
    inventory
+   point_of_sale
