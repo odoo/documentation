@@ -2,4 +2,7 @@
 Getting Started
 ===============
 
-(copy of planner but add screenshots)
+.. toctree::
+   :titlesonly:
+
+   getting_started/setup
