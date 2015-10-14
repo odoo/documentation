@@ -472,6 +472,22 @@ main .alert {
       }
   }
 
+  &.alert-go_to {
+    border-color: lighten(@doc_info, 30%);
+    background-color: lighten(@doc_info, 45%);
+    border-width: 2px;
+    margin: 2em auto;
+    a{
+      color: darken(@doc_info, 25%);
+    }
+    > .alert-title, > h3 {
+      color: @doc_info
+    }
+    > .alert-title:before, > h3:before {
+      content: "\e70d";
+    }
+  }
+
   &.doc-content{
     @media (min-width: @w-size-large) {
       max-width: 55%;
@@ -481,7 +497,7 @@ main .alert {
 
 .figure {
   h4 {
-    margin-top: 0.5em 0 1.5em;
+    margin: 0.5em 0 1.5em;
     padding-left: 1em;
     font-size: 1em;
     font-style: italic;
