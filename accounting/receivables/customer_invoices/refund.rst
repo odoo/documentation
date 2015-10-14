@@ -61,7 +61,9 @@ Then, send the refund by regular mail or email to your customer.
 	Refunding an invoice is different from refunding a payment. Usually, a
 	refund invoice is sent before the customer has done a payment. If the
 	customer has already paid, they should be reimbursed by doing a customer
-	payment refund. See :doc:`../customer_payments/refund`
+	payment refund.
+
+	.. todo:: See doc ../customer_payments/refund
 
 .. rst-class:: text-muted
 
