@@ -9,4 +9,4 @@ Customer Payments
    customer_payments/credit_cards
    customer_payments/paypal
    customer_payments/cheques
-   customer_payments/refund
+   customer_payments/followup
