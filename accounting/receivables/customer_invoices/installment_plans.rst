@@ -29,6 +29,7 @@ doing 50% in 10 days and 50% in 21 days because, with the rounding, it
 may not compute exactly 100%)
 
 .. image:: ./media/installment01.png
+  :align: center
 
 .. tip::
 
