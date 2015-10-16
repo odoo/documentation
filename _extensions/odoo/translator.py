@@ -247,7 +247,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             'note': 'alert-info',
             'hint': 'alert-info',
             'tip': 'alert-info',
-            'seealso': 'alert-info',
+            'seealso': 'alert-go_to',
 
             'warning': 'alert-warning',
             'attention': 'alert-warning',
