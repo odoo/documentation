@@ -45,6 +45,7 @@ From the Accounting application, go to the menu :menuselection:`Configuration --
 Revenues Types`.
 
 .. figure:: ./media/deffered01.png
+  :figclass: figure
   :align: center
 
   Example: 12 months maintenance contract
