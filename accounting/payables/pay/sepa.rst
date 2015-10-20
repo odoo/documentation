@@ -134,7 +134,7 @@ field.
 	.. todo:: How to define a new bank?
 	.. todo:: How to reconcile bank statements?
 
-. rst-class:: text-muted
+.. rst-class:: text-muted
 
 | Written by Fabien Pinckaers (Odoo)
 | Proofread by Arthur Maniet (Odoo), Jordi Ballester (eficent)
