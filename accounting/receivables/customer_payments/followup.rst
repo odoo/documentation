@@ -165,7 +165,7 @@ under Reporting (check the KPI average debtors days).
 .. seealso::
 
 	* :doc:`recording`
-	* :doc:`cheques`
+	* :doc:`check`
 
 .. rst-class:: text-muted
 

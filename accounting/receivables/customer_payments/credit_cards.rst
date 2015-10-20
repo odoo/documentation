@@ -165,7 +165,7 @@ account).
    
    * :doc:`recording`
    * :doc:`paypal`
-   * :doc:`cheques`
+   * :doc:`check`
    * :doc:`followup`
 
 .. rst-class:: text-muted

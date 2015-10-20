@@ -7,4 +7,4 @@ Pay supplier bills
 
    pay/sepa
    pay/wire
-   pay/cheque
+   pay/check

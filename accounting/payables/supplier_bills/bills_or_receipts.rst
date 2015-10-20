@@ -64,5 +64,5 @@ For the example we suppose the tea is a 12% taxe and the Tea Pott 21%.
   :align: center
 
 Validate the Purchase Receipt to post it. Don't forget you need to
-:doc:`reconcile payments <../../bank/reconciliation/use_cases>` in order to completely close the transaction in your
-accounting.
+:doc:`reconcile payments <../../bank/reconciliation/use_cases>` in order to
+completely close the transaction in your accounting.

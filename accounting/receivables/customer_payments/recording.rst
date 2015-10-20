@@ -126,7 +126,7 @@ payments.
 
 	* :doc:`credit_cards`
 	* :doc:`paypal`
-	* :doc:`cheques`
+	* :doc:`check`
 	* :doc:`followup`
 
 .. rst-class:: text-muted
