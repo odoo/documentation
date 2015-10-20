@@ -157,7 +157,7 @@ New sale orders
     A procurement is created at the customer location for every product
     ordered by the customer (you have to deliver the customer)
   Configuration
-    Procurement Location: on the customer, field “Customer Location” (property)
+    Procurement Location: on the customer, field "Customer Location" (property)
 Minimum Stock Rules
   Effect
     A procurement is created at the rule's location.

@@ -3,7 +3,7 @@ How to setup Odoo Accounting?
 =============================
 
 The Odoo Accounting application has an implementation guide that you
-should follow to configure it. It’s a step-by-step wizard with links to
+should follow to configure it. It's a step-by-step wizard with links to
 the different screens you will need.
 
 Once you have `installed the Accounting

@@ -27,7 +27,7 @@ When to use?
 ============
 
 A **RfQ** is interesting when you have never purchased the products with
-that supplier before and therefore don’t know their price. It is also
+that supplier before and therefore don't know their price. It is also
 useful if you want to challenge your suppliers once you have a
 well-established relationship with them. You can also use it to assess
 the cost of a project and see if it makes it feasible.

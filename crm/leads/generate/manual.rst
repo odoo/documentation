@@ -47,7 +47,7 @@ Create a new opportunity
 You can also directly add a contact into a specific sales team without
 having to convert the lead first. On the Sales module, go to your
 dashboard and click on the **Pipeline** button of the desired sales
-team. If you don’t have any sales team yet, :doc:`you need to create one first <../../salesteam/setup/create_team>`.
+team. If you don't have any sales team yet, :doc:`you need to create one first <../../salesteam/setup/create_team>`.
 Then, click on **Create** and fill in the contact details as shown here
 above. By default, the newly created opportunity will appear on the
 first stage of your sales pipeline.

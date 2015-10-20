@@ -15,7 +15,7 @@ sale order, expenses, inventory moves, etc.
 Odoo uses the rules of double-entry bookkeeping system: all journal
 entries are automatically balanced (sum of debits = sum of credits).
 
-→ Understand Odoo’s accounting transactions per document. (link to
+→ Understand Odoo's accounting transactions per document. (link to
 memento)
 
 Accrual and Cash Basis Methods
@@ -56,7 +56,7 @@ countries and specific modules exists per country for the
 specificities of the country like the chart of accounts, taxes, or
 bank interfaces.
 
-In particular, Odoo’s core accounting engine support:
+In particular, Odoo's core accounting engine support:
 
 * Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
   countries including Ireland, Canada, Australia, and New Zealand)
@@ -74,7 +74,7 @@ Accounts Receivable & Payable
 
 By default, Odoo uses a single account for all account
 receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don’t need
+create separate accounts per customers/suppliers, but you don't need
 to.
 
 As transactions are associated to customers or suppliers, you get

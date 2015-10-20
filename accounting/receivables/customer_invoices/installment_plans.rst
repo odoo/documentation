@@ -13,7 +13,7 @@ Example, for a specific invoice:
 .. note::
 
 	payment terms are not to be confused with a payment in several parts. If,
-	for a specific order, you invoice the customer in two parts, that’s not a
+	for a specific order, you invoice the customer in two parts, that's not a
 	payment term but an invoice policy.
 
 Configuration

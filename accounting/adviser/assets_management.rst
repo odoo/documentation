@@ -74,7 +74,7 @@ To register an asset manually, go to the menu :menuselection:`Adviser
 .. image:: media/image08.png
    :align: center
 
-Once your asset is created, don’t forget to Confirm it. You can also
+Once your asset is created, don't forget to Confirm it. You can also
 click on the Compute Depreciation button to check the depreciation board
 before confirming the asset.
 
@@ -104,8 +104,8 @@ information of the supplier bill.
 .. image:: media/image09.png
 
 Depending on the information on the asset category, the asset will be
-created in draft or directly validated\ *.* It’s easier to confirm
-assets directly so that you won’t forget to confirm it afterwards.
+created in draft or directly validated\ *.* It's easier to confirm
+assets directly so that you won't forget to confirm it afterwards.
 (check the field *Skip Draft State* on *Asset Category)* Generate assets
 in draft only when you want your adviser to control all the assets
 before posting them to your accounts.

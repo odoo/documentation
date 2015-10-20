@@ -8,7 +8,7 @@ Accounting Terminologies
 
      A journal is like a folder in which you record all transactions
      of the same type: all the statements of a bank account, all
-     customer invoices, all supplier bills. It’s used to organize
+     customer invoices, all supplier bills. It's used to organize
      similar transactions together.
 
    Payment Terms
