@@ -20,70 +20,53 @@ You will need :
 * A local network set up with DHCP (this is the default setting)
 * An RJ45 Ethernet Cable or a Linux compatible USB Wi-Fi adapter
 * An Epson USB TM-T20 Printer or another compatible printer
-  (officially supported printers are listed at
-  ``https://www.odoo.com/page/pos-ipad-android-hardware``)
+  (officially supported printers are listed at the `POS Hardware page
+  <https://www.odoo.com/page/pos-ipad-android-hardware>`_)
 * A Honeywell Eclipse USB Barcode Scanner or another compatible scanner
 * An Epson compatible cash drawer
 
 Step By Step Setup Guide
 ------------------------
 
-Current version of the posbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Current version of the posbox (since 2015)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/posbox_2_doc_schema.svg
 
-Old version of the posbox
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Old version of the posbox (before 2015)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/posbox_doc_schema.svg
 
 Connect peripheral devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Officially supported hardware is listed on
-``https://www.odoo.com/page/pos-ipad-android-hardware``, but other
+Officially supported hardware is listed on `the POS Hardware page
+<https://www.odoo.com/page/pos-ipad-android-hardware>`_, but other
 hardware might work as well.
 
-Printer
-^^^^^^^
+* **Printer**: Connect an ESC/POS printer to a USB port and power it
+  on.
 
-Connect an ESC/POS printer to a USB port and power it on.
+* **Cash drawer**: The cash drawer should be connected to the printer
+  with an RJ25 cable.
 
-Cash drawer
-^^^^^^^^^^^
+* **Barcode scanner**: Connect your barcode scanner. In order for your
+  barcode scanner to be compatible it must behave as a keyboard and
+  must be configured in US QWERTY. It also must end barcodes with an
+  Enter character (keycode 28). This is most likely the default
+  configuration of your barcode scanner.
 
-The cash drawer should be connected to the printer with an RJ25 cable.
+* **Scale**: Connect your scale and power it on.
 
-Barcode scanner
-^^^^^^^^^^^^^^^
+* **Ethernet**: If you do not wish to use Wi-Fi, plug in the Ethernet
+  cable. Make sure this will connect the posbox to the same network as
+  your POS device.
 
-Connect your barcode scanner. In order for your barcode scanner to be
-compatible it must behave as a keyboard and must be configured in US
-QWERTY. It also must end barcodes with an Enter character (keycode
-28). This is most likely the default configuration of your barcode
-scanner.
-
-Scale
-^^^^^
-
-Connect your scale and power it on.
-
-Ethernet
-^^^^^^^^
-
-If you do not wish to use Wi-Fi, plug in the Ethernet cable. Make sure
-this will connect the posbox to the same network as your POS device.
-
-Wi-Fi
-^^^^^
-
-If you do not wish to use Ethernet, plug in a Linux compatible USB
-Wi-Fi adapter. Most commercially available Wi-Fi adapters are Linux
-compatible. Officially supported are Wi-Fi adapters with a Ralink 5370
-chipset.
-
-Make sure not to plug in an Ethernet cable, because all Wi-Fi
-functionality will be bypassed when a wired network connection is
-available.
+* **Wi-Fi**: If you do not wish to use Ethernet, plug in a Linux
+  compatible USB Wi-Fi adapter. Most commercially available Wi-Fi
+  adapters are Linux compatible. Officially supported are Wi-Fi
+  adapters with a Ralink 5370 chipset. Make sure not to plug in an
+  Ethernet cable, because all Wi-Fi functionality will be bypassed
+  when a wired network connection is available.
 
 Power the posbox
 ~~~~~~~~~~~~~~~~
@@ -102,17 +85,20 @@ green.
 Setup the Point of Sale
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-Make sure to activate the right Posbox related options in the Point of
-Sale configuration. Specifying the IP of the Posbox is recommended (it
-is printed on the receipt that gets printed after booting up the
-posbox). When the IP is not specified the Point of Sale will attempt
-to find it on the local network.
+To setup the posbox in the Point of Sale go to :menuselection:`Point
+of Sale --> Configuration --> Settings` and select your Point of
+Sale. Scroll down to the ``Hardware Proxy / PosBox`` section and
+activate the options for the hardware you want to use through the
+posbox. Specifying the IP of the Posbox is recommended (it is printed
+on the receipt that gets printed after booting up the posbox). When
+the IP is not specified the Point of Sale will attempt to find it on
+the local network.
 
 If you are running multiple Point of Sales on the same Posbox, make sure
 that only one of them has Remote Scanning/Barcode Scanner activated.
 
 It might be a good idea to make sure the Posbox IP never changes in
-your network. Refer to the router documentation on how to achieve
+your network. Refer to your router documentation on how to achieve
 this.
 
 Launch the Point of Sale
@@ -194,8 +180,7 @@ behaves like the Odoo instance running on the Posbox.
 Image building process
 ----------------------
 
-We generate the posbox images at
-``http://nightly.odoo.com/master/posbox/`` using the scripts in
+We generate the official posbox images using the scripts in
 ``https://github.com/odoo/odoo/tree/8.0/addons/point_of_sale/tools/posbox``. More
 specifically, we run ``posbox_create_image.sh``. This builds an image
 called ``posbox.img``, which we zip and upload to ``nightly.odoo.com``
@@ -207,17 +192,17 @@ get stuck or want more detail about something.
 Summary of the image creation process
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The image creation process starts by downloading the latest Raspbian
-image. It then locally mounts this Raspbian image and copies over some
-files and scripts that will make the Raspbian image turn itself into a
-posbox when it boots. These scripts will update Raspbian, remove
-non-essential packages and install required packages. In order to boot
-Raspbian we use qemu, which is capable of providing ARM
-emulation. After this, the emulated Raspbian OS will shut itself
-down. We then once again locally mount the image, remove the scripts
-that were used to initialize the image at boot and we copy over some
-extra configuration files. The resulting image is then ready to be
-tested and used.
+The image creation process starts by downloading the latest `Raspbian
+<https://www.raspbian.org/>`_ image. It then locally mounts this
+Raspbian image and copies over some files and scripts that will make
+the Raspbian image turn itself into a posbox when it boots. These
+scripts will update Raspbian, remove non-essential packages and
+install required packages. In order to boot Raspbian we use qemu,
+which is capable of providing ARM emulation. After this, the emulated
+Raspbian OS will shut itself down. We then once again locally mount
+the image, remove the scripts that were used to initialize the image
+at boot and we copy over some extra configuration files. The resulting
+image is then ready to be tested and used.
 
 Prerequisites
 -------------
@@ -286,9 +271,7 @@ Start the local Odoo instance
 
 We must launch the Odoo server with the correct settings
 
-``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,\``
-
-``hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``
+``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale, hw_scanner,hw_escpos``
 
 Test the instance
 ~~~~~~~~~~~~~~~~~
@@ -325,8 +308,9 @@ Technical Overview
 The Posbox Hardware
 ~~~~~~~~~~~~~~~~~~~
 
-The Posbox's Hardware is based on a Raspberry Pi 2, a popular Open
-Source single-board computer. The Raspberry Pi 2 is powered with a 2A
+The Posbox's Hardware is based on a `Raspberry Pi 2
+<https://www.raspberrypi.org/products/raspberry-pi-2-model-b/>`_, a
+popular single-board computer. The Raspberry Pi 2 is powered with a 2A
 micro-usb power adapter. 2A is needed to give enough power to the
 barcode scanners. The Software is installed on a 8Gb Class 10 or
 Higher SD Card. All this hardware is easily available worldwide from
@@ -335,8 +319,8 @@ independent vendors.
 Compatible Peripherals
 ~~~~~~~~~~~~~~~~~~~~~~
 
-Officially supported hardware is listed on
-``https://www.odoo.com/page/pos-ipad-android-hardware``.
+Officially supported hardware is listed on the `POS Hardware page
+<https://www.odoo.com/page/pos-ipad-android-hardware>`_.
 
 The Posbox Software
 ~~~~~~~~~~~~~~~~~~~
@@ -402,12 +386,12 @@ newly implemented features.
 
 The best way to update the Posbox software is to download a new
 version of the image and flash the SD-Card with it. This operation is
-described in detail in the following tutorial
-``http://elinux.org/RPi_Easy_SD_Card_Setup``, just replace the
-standard Raspberry Pi image to the latest one found at
-``http://nightly.odoo.com/master/posbox/``. This method of upgrading
-will ensure that you're running the latest version of the Posbox
-software.
+described in detail in `this tutorial
+<http://elinux.org/RPi_Easy_SD_Card_Setup>`_, just replace the
+standard Raspberry Pi image with the latest one found at `the official
+posbox image page <http://nightly.odoo.com/master/posbox/>`_. This
+method of upgrading will ensure that you're running the latest version
+of the Posbox software.
 
 The second way of upgrading is through the built in upgrade interface
 that can be reached through the posbox homepage. The nice thing about
