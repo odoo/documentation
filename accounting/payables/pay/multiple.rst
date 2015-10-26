@@ -75,8 +75,8 @@ recorded.
 
 First, we need to create a payment
 
-This will handle from :menuselection:`Dashboard -> Bank journal ->
-More Option -> Send Money`
+This will handle from :menuselection:`Dashboard --> Bank journal -->
+More Option --> Send Money`
 
 .. image:: ./media/multiple07.png
   :align: center
