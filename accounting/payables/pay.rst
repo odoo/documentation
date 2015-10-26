@@ -6,5 +6,5 @@ Pay supplier bills
    :titlesonly:
 
    pay/sepa
-   pay/wire
    pay/check
+   pay/multiple
