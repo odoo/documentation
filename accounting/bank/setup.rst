@@ -5,4 +5,6 @@ Setup
 .. toctree::
    :titlesonly:
 
-   reconciliation/use_cases
+   setup/create_bank_account
+   setup/manage_cash_register
+   setup/foreign_currency
