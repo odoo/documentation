@@ -53,7 +53,7 @@ term is specified, the invoice date will be considered as the due date.
 For each level, you should define the number of days and create a note
 which will automatically be added into the reminder letter.
 
-.. image:: ./media/automated_followups02.png
+.. image:: ./media/automated_followups04.png
   :align: center
 
 Odoo defines several actions for every reminder:
@@ -62,7 +62,7 @@ Odoo defines several actions for every reminder:
 -  **Send an Email:** send an email to customer using the provided text
 -  **Send a Letter:** send a letter by regular mail, using the provided note
 
-.. image:: ./media/automated_followups03.png
+.. image:: ./media/automated_followups02.png
   :align: center
 
 .. Note:: 
@@ -79,7 +79,7 @@ Once everything is setup, Odoo will prepare follow-up letters and emails
 automatically for you. All you have to do is to the menu 
 :menuselection:`Sales --> Customers Statement` in the accounting application.
 
-.. image:: ./media/automated_followups04.png
+.. image:: ./media/automated_followups09.png
   :align: center
 
 Odoo will automatically propose you actions based on the follow-up plan
@@ -149,7 +149,7 @@ clicking on **Log a Note**, then choose one of the ready options (*one week*,
 *two weeks*, *one month*, *two months*), So Odoo will calculate the
 required date according to the current date.
 
-.. image:: ./media/automated_followups06.png
+.. image:: ./media/automated_followups03.png
   :align: center
 
 Another way to achieve it is the following: click on the required invoice, 
@@ -167,5 +167,5 @@ the checkbox **Excluded**
 .. note::
     If you click on **History**, you can see all follow ups actions.
 
-.. image:: ./media/automated_followups09.png
+.. image:: ./media/automated_followups06.png
   :align: center

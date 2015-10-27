@@ -21,7 +21,7 @@ When a vendor bill is received, you can record it from :menuselection:`Purchases
 in the Accounting application. As a shortcut,
 you can also use the **New Bill** feature on the accounting dashboard.
 
-.. image:: ./media/vendor_bill01.png
+.. image:: ./media/vendor_bill05.png
    :align: center
 
 To register a new vendor bill, start by selecting a vendor and inputting
@@ -29,7 +29,7 @@ their invoice as the **Vendor Reference**, then add and confirm the product
 lines, making sure to have the right product quantities, taxes and
 prices.
 
-.. image:: ./media/vendor_bill02.png
+.. image:: ./media/vendor_bill01.png
    :align: center
 
 Save the invoice to update the pre tax and tax amounts at the bottom of
@@ -86,7 +86,7 @@ memo field, we recommend you set the vendor invoice number as a
 reference (Odoo will auto fill this field from the from the vendor bill
 if set it correctly).
 
-.. image:: ./media/vendor_bill03.png
+.. image:: ./media/vendor_bill06.png
    :align: center
 
 
@@ -106,7 +106,7 @@ print in checks in batches.
 If you have checks to print, Odoo’s accounting dashboard acts as a to do
 list and reminds you of how many checks you have left to be printed.
 
-.. image:: ./media/vendor_bill04.png
+.. image:: ./media/vendor_bill02.png
    :align: center
 
 By selecting the amount of checks to be printed, you can dive right into
@@ -117,7 +117,7 @@ select them all) and set the action to **Print Checks**. Odoo will ask you
 to set the next check number in the sequence and will then print all the
 checks at once.
 
-.. image:: ./media/vendor_bill05.png
+.. image:: ./media/vendor_bill03.png
    :align: center
 
 Reporting
@@ -131,7 +131,7 @@ you can use the **Aged Payable** report, under the reporting menu, (in
 :menuselection:`Reporting --> Business Statement --> Aged payable`) to get a visual of all of
 your outstanding bills.
 
-.. image:: ./media/vendor_bill06.png
+.. image:: ./media/vendor_bill04.png
    :align: center
 
 From here, you can click directly on a vendors name to open up the

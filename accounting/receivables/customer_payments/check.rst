@@ -59,7 +59,7 @@ on **Register Payment**. Fill in the information about the payment:
 
 -  Memo: write the Check number
 
-.. image:: ./media/check01.png
+.. image:: ./media/check02.png
   :align: center
 
 This operation will produce the following journal entry:
@@ -115,7 +115,7 @@ on **Register Payment**. Fill in the information about the payment:
 
 -  Memo: write the check number
 
-.. image:: ./media/check02.png
+.. image:: ./media/check03.png
   :align: center
 
 The invoice is marked as paid as soon as you record the check.
@@ -147,5 +147,5 @@ report **Bank Reconciliation Report** to verify which checks have been
 received or paid by the bank. (this report is available from the **More**
 option from the Accounting dashboard on the related bank account).
 
-.. image:: ./media/check03.png
+.. image:: ./media/check01.png
   :align: center
