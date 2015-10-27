@@ -6,3 +6,4 @@ Bank & Cash
    :titlesonly:
 
    bank/setup
+   bank/feeds
