@@ -1,0 +1,181 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>The Accounting behind Odoo &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Main Concepts" href="../main_concepts.html" />
+    <link rel="next" title="Accounting Memento For Entrepreneurs (US GAAP)" href="memento.html" />
+    <link rel="prev" title="Main Concepts" href="../main_concepts.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              The Accounting behind Odoo
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#double-entry-bookkeeping" class="ripple internal reference">Double-entry bookkeeping</a></li><li class="list-group-item"><a href="#accrual-and-cash-basis-methods" class="ripple internal reference">Accrual and Cash Basis Methods</a></li><li class="list-group-item"><a href="#multi-companies" class="ripple internal reference">Multi-companies</a></li><li class="list-group-item"><a href="#multi-currencies" class="ripple internal reference">Multi-currencies</a></li><li class="list-group-item"><a href="#international-standards" class="ripple internal reference">International Standards</a></li><li class="list-group-item"><a href="#accounts-receivable-payable" class="ripple internal reference">Accounts Receivable &amp; Payable</a></li><li class="list-group-item"><a href="#wide-range-of-financial-reports" class="ripple internal reference">Wide range of financial reports</a></li><li class="list-group-item"><a href="#import-bank-feeds-automatically" class="ripple internal reference">Import bank feeds automatically</a></li><li class="list-group-item"><a href="#calculates-the-tax-you-owe-your-tax-authority" class="ripple internal reference">Calculates the tax you owe your tax authority</a></li><li class="list-group-item"><a href="#inventory-valuation" class="ripple internal reference">Inventory Valuation</a></li><li class="list-group-item"><a href="#easy-retained-earnings" class="ripple internal reference">Easy retained earnings</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/overview/main_concepts/in_odoo.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="the-accounting-behind-odoo"><p >This page summarises the way Odoo deals with typical accounts and
+transactions.</p></section><section id="double-entry-bookkeeping"><h2 >Double-entry bookkeeping</h2><p >Odoo automatically creates all the behind-the-scenes journal entries
+for each of your accounting transactions: customer invoices, point of
+sale order, expenses, inventory moves, etc.</p><p >Odoo uses the rules of double-entry bookkeeping system: all journal
+entries are automatically balanced (sum of debits = sum of credits).</p><p >→ Understand Odoo's accounting transactions per document. (link to
+memento)</p></section><section id="accrual-and-cash-basis-methods"><h2 >Accrual and Cash Basis Methods</h2><p >Odoo support both accrual and cash basis reporting. This allows you to
+report income / expense at the time transactions occur, or when
+payment is made or received.</p></section><section id="multi-companies"><h2 >Multi-companies</h2><p >Odoo allows to manage several companies within the same database. Each
+company has its own chart of accounts an rules. You can get
+consolidation reports following your consolidation rules.</p><p >Users can access several companies but always work in one company at a
+time.</p></section><section id="multi-currencies"><h2 >Multi-currencies</h2><p >Every transaction is recorded in the default currency of the
+company. For transactions occurring in another currency, Odoo stores
+both the value in the currency of the company and the value in the
+currency of the transaction. Odoo can generate currencies gains and
+losses after the reconciliation of the journal items.</p><p >Currency rates are updated once a day using a yahoo.com online
+web-service.</p></section><section id="international-standards"><h2 >International Standards</h2><p >Odoo accounting support more than 50 countries. The Odoo core
+accounting implement accounting standards that is common to all
+countries and specific modules exists per country for the
+specificities of the country like the chart of accounts, taxes, or
+bank interfaces.</p><p >In particular, Odoo's core accounting engine support:</p><ul ><li >Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
+countries including Ireland, Canada, Australia, and New Zealand)
+where cost of good sold are reported when products are
+sold/delivered.</li><li >European accounting where expenses are accounted at the supplier
+bill.</li><li >Storno accounting (italy) where refund invoices have negative
+credit/debit instead of a reverting the original journal items.</li></ul><p >Odoo also have modules to comply with IFRS rules.</p></section><section id="accounts-receivable-payable"><h2 >Accounts Receivable &amp; Payable</h2><p >By default, Odoo uses a single account for all account
+receivable entries and one for all accounts payable entries. You can
+create separate accounts per customers/suppliers, but you don't need
+to.</p><p >As transactions are associated to customers or suppliers, you get
+reports to perform analysis per customer/supplier such as the customer
+statement, revenues per customers, aged receivable/payables, ...</p></section><section id="wide-range-of-financial-reports"><h2 >Wide range of financial reports</h2><p >In Odoo, you can generate financial reports in real time. Odoo's
+reports range from basic accounting reports to advanced management
+reports. Odoo's reports include:</p><ul ><li >Performance reports (such as Profit and Loss, Budget Variance)</li><li >Position reports (such as Balance Sheet, Aged Payables, Aged
+Receivables)</li><li >Cash reports (such as Bank Summary)</li><li >Detail reports (such as Trial Balance and General Ledger)</li><li >Management reports (such as Budgets, Executive Summary)</li></ul><p >Odoo's report engine allows you to customize your own report based on
+your own formulae.</p></section><section id="import-bank-feeds-automatically"><h2 >Import bank feeds automatically</h2><p >Bank reconciliation is a process that matches your bank statement
+lines, as supplied by the bank, to your accounting transactions in the
+general ledger. Odoo makes bank reconciliation easy by frequently
+importing bank statement lines from your bank directly into your Odoo
+account. This means you can have a daily view of your cashflow without
+having to log into your online banking or wait for your paper bank
+statements.</p><p >Odoo speeds up bank reconciliation by matching most of your imported
+bank statement lines to your accounting transactions. Odoo also
+remembers how you've treated other bank statement lines and provides
+suggested general ledger transactions.</p></section><section id="calculates-the-tax-you-owe-your-tax-authority"><h2 >Calculates the tax you owe your tax authority</h2><p >Odoo totals all your accounting transactions for your tax period and
+uses these totals to calculate your tax obligation. You can then check
+your sales tax by running Odoo's Tax Report.</p></section><section id="inventory-valuation"><h2 >Inventory Valuation</h2><p >Odoo support both periodic (manual) and perpetual (automated)
+inventory valuations. The available methods are standard price,
+average price, LIFO (for countries allowing it) and FIFO.</p><p >→ View impact of the valuation method on your transactions (link to
+memento)</p></section><section id="easy-retained-earnings"><h2 >Easy retained earnings</h2><p >Retained earnings is the portion of income retained by your
+business. Odoo automatically calculates your current year earnings in
+real time so no year-end journal or rollover is required.  This is
+calculated by reporting the profit and loss balance to your balance
+sheet report automatically.</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

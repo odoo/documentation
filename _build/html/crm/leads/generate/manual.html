@@ -1,0 +1,153 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to create a contact into Odoo CRM? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Generate leads" href="../generate.html" />
+    <link rel="next" title="How to import contacts to the CRM?" href="import.html" />
+    <link rel="prev" title="Generate leads" href="../generate.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../crm.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to create a contact into Odoo CRM?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="current toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-lead-stage" class="ripple internal reference">Activate the lead stage</a></li><li class="list-group-item"><a href="#create-a-new-lead" class="ripple internal reference">Create a new lead</a></li><li class="list-group-item"><a href="#create-a-new-opportunity" class="ripple internal reference">Create a new opportunity</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/crm/leads/generate/manual.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-create-a-contact-into-odoo-crm"><p >Odoo CRM allows you to manually add contacts into your pipeline. It can
+be either a lead or an opportunity.</p></section><section id="activate-the-lead-stage"><h2 >Activate the lead stage</h2><p >By default, the lead stage is not activated in Odoo CRM. To activate it,
+go to <span class="menuselection">Configuration ‣ Settings</span>, select the option &quot;&quot;use leads
+if…** as shown below and click on <strong >Apply</strong>.</p><img src="../../../_images/manual01.jpg" class="img-responsive center-block"><p >This activation will create a new submenu <strong >Leads</strong> under
+<strong >Sales</strong> that gives you access to a list of all your leads from
+which you will be able to create a new contact.</p><img src="../../../_images/manual02.jpg" class="img-responsive center-block"></section><section id="create-a-new-lead"><h2 >Create a new lead</h2><p >Go to <span class="menuselection">Sales ‣ Leads</span> and click the <strong >Create</strong> button.</p><img src="../../../_images/manual03.jpg" class="img-responsive center-block"><p >From the contact form, provide all the details in your possession
+(contact name, email, phone, address, etc.) as well as some additional
+information in the <strong >Internal notes</strong> field. You can also link the
+lead to an existing company by editing the**Customer** field. Click
+on save and the contact will be visible as a lead in your pipeline .</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >your lead can be directly handed over to specific sales team and salesperson
+by clicking on <strong >Convert to Opportunity</strong> on the upper left corner of the screen.</p></div></section><section id="create-a-new-opportunity"><h2 >Create a new opportunity</h2><p >You can also directly add a contact into a specific sales team without
+having to convert the lead first. On the Sales module, go to your
+dashboard and click on the <strong >Pipeline</strong> button of the desired sales
+team. If you don't have any sales team yet, <a href="../../salesteam/setup/create_team.html" class="internal reference"><em >you need to create one first</em></a>.
+Then, click on <strong >Create</strong> and fill in the contact details as shown here
+above. By default, the newly created opportunity will appear on the
+first stage of your sales pipeline.</p><p >Another way to create an opportunity is by adding it directly on a
+specific stage. For example, if you have have spoken to Mr. Smith at a
+meeting and you want to send him a quotation right away, you can add his
+contact details on the fly directly into the <strong >Proposition</strong> stage. From
+the Kanban view of your sales team, just click on the <strong >+</strong> icon
+at the right of your stage to create the contact. The new opportunity
+will then pop up into the corresponding stage and you can then fill in
+the contact details by clicking on it.</p><img src="../../../_images/manual04.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="import.html" class="internal alert-link reference"><em >How to import contacts to the CRM?</em></a></li><li ><a href="emails.html" class="internal alert-link reference"><em >How to generate leads from incoming emails?</em></a></li><li ><a href="website.html" class="internal alert-link reference"><em >How to generate leads from my website?</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Geoffrey Bressan (Odoo)</div><div class="line">Proofread by Yves-Pascal Mukadi (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

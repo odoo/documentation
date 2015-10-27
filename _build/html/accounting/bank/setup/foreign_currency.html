@@ -1,0 +1,165 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage a bank in a foreign currency? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Setup" href="../setup.html" />
+    <link rel="next" title="Bank Feeds" href="../feeds.html" />
+    <link rel="prev" title="How to manage a cash register?" href="manage_cash_register.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to manage a bank in a foreign currency?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#activate-the-multi-currency-feature" class="ripple internal reference">Activate the multi-currency feature</a></li><li class="list-group-item"><a href="#configure-currencies" class="ripple internal reference">Configure currencies</a></li><li class="list-group-item"><a href="#create-a-new-bank-account" class="ripple internal reference">Create a new bank account</a></li></ul></li><li class="list-group-item"><a href="#example-a-vendor-bill-in-a-foreign-currency" class="ripple internal reference">Example: A vendor bill in a foreign currency</a></li><li class="list-group-item"><a href="#customers-statements" class="ripple internal reference">Customers Statements</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/setup/foreign_currency.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-manage-a-bank-in-a-foreign-currency"><p >In Odoo, every transaction is recorded in the default currency of the
+company. Reports are all based on the currency of the company. But for
+transactions occurring in another currency, Odoo stores both the value
+in the currency of the company and the value in the currency of the
+transaction.</p><p >When you have a bank account in a foreign currencies, for every
+transaction, Odoo stores two values:</p><ul ><li >The debit/credit in the currency of the company</li><li >The debit/credit in the currency of the bank account</li></ul><p >Currency rates are updated automatically using yahoo.com, or the
+European Central bank web-services.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="activate-the-multi-currency-feature"><h3 >Activate the multi-currency feature</h3><p >In order to allow your company to work with multiple currencies, you
+should activate the multi-currency mode. In the accounting application,
+go into <span class="menuselection">Configuration ‣ Settings ‣ Accounting &amp; Finance Features</span>
+make sure the <strong >Allow Multi-currencies</strong> box is ticked. Provide
+a <strong >Currency Exchange Gain / Loss</strong> account, then click on <strong >Apply</strong>.</p></section><section id="configure-currencies"><h3 >Configure currencies</h3><p >Once the Odoo is configured to support multiple currencies, you should
+activate the currencies you plan to work with. To do that, go the menu
+<span class="menuselection">Configuration ‣ Currencies</span>. All the currencies are created by default,
+but you should activate the ones you plan to support. (to activate a
+currency, check his active field)</p><p >After having activated the currencies, you can configure the parameters
+to automate the currency rate update. These options are also in the
+settings of the Accounting application, in the bottom of the page:</p><img src="../../../_images/foreign01.png" class="img-responsive center-block"><p >Click on the <strong >Update Now</strong> link to update the currency rates now.</p></section><section id="create-a-new-bank-account"><h3 >Create a new bank account</h3><p >In the accounting application, we first go to <span class="menuselection">Configuration ‣
+Accounting / Bank account</span>, and we create a new one.</p><img src="../../../_images/foreign02.png" class="img-responsive center-block"><p >Once you save this bank account, Odoo will create all the documents for
+you:</p><ul ><li >An account in the trial balance</li><li >A journal in your dashboard</li><li >Information about the bank account in the footer of your invoices if
+checked the box <strong >Show in Invoices Footer</strong></li></ul></section><section id="example-a-vendor-bill-in-a-foreign-currency"><h2 >Example: A vendor bill in a foreign currency</h2><p >Based on the above example, let's assume we receive the following bill
+from a supplier in China.</p><p >In the <span class="menuselection">Purchase ‣ Vendor Bills</span> , this is what you could see:</p><img src="../../../_images/foreign03.png" class="img-responsive center-block"><p >Once you are ready to pay this bill, click on register payment on the
+bill to record a payment.</p><img src="../../../_images/foreign04.png" class="img-responsive center-block"><p >That's all you have to do. Odoo will automatically post the foreign
+exchange gain or loss at the reconciliation of the payment with the
+invoice, depending if the currency rate increased or decreased between
+the invoice and the payment date.</p><p >Note that you can pay a foreign bill with another currency. In such a
+case, Odoo will automatically convert between the two currencies.</p></section><section id="customers-statements"><h2 >Customers Statements</h2><p >Customers and vendor statements are managed in the currency of the
+invoice. So, the amount due by your customer (to your vendor) is always
+expressed in the currency of the invoice.</p><p >If you have several invoices with different currencies for the same
+customer, Odoo will split the customer statement by currency, as shown
+in the report below.</p><img src="../../../_images/foreign05.png" class="img-responsive center-block"><p >In the above report, the account receivable associated to Camptocamp is
+not managed in a secondary currency, which means that it keeps every
+transaction in his own currency. If you prefer, you can set the account
+receivable of this customer with a secondary currency and all his debts
+will automatically be converted in this currency.</p><p >In such a case, the customer statement always has only one currency. In
+general, this is not what the customer expect as he prefers to see the
+amounts in the currency of the invoices he received;</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

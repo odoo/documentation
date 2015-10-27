@@ -1,0 +1,163 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Pay by Checks &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Pay supplier bills" href="../pay.html" />
+    <link rel="next" title="How to pay several bills at once?" href="multiple.html" />
+    <link rel="prev" title="Pay with SEPA" href="sepa.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Pay by Checks
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-required-module" class="ripple internal reference">Install the required module</a></li><li class="list-group-item"><a href="#activate-checks-payment-methods" class="ripple internal reference">Activate checks payment methods</a></li></ul></li><li class="list-group-item"><a href="#compatible-check-stationery-for-printing-checks" class="ripple internal reference">Compatible check stationery for printing checks</a><ul ><li class="list-group-item"><a href="#united-states" class="ripple internal reference">United States</a></li></ul></li><li class="list-group-item"><a href="#pay-a-supplier-bill-with-a-check" class="ripple internal reference">Pay a supplier bill with a check</a><ul ><li class="list-group-item"><a href="#register-a-payment-by-check" class="ripple internal reference">Register a payment by check</a></li><li class="list-group-item"><a href="#print-checks" class="ripple internal reference">Print checks</a></li><li class="list-group-item"><a href="#reconcile-bank-statements" class="ripple internal reference">Reconcile Bank Statements</a></li></ul></li><li class="list-group-item"><a href="#pay-anything-with-a-check" class="ripple internal reference">Pay anything with a check</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/payables/pay/check.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="pay-by-checks"><p >Once you decide to pay a supplier bill, you can select to pay by check.
+Then, at the end of the day, the manager can print all checks by batch.
+Finally, the bank reconciliation process will match the checks you sent
+to suppliers with actual bank statements.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-required-module"><h3 >Install the required module</h3><p >To record supplier payments by checks, you must install the <strong >Check
+Writing</strong> module. This module handle the process of recording checks in
+Odoo. Others modules are necessary to print checks, according to the
+country. As an example, the <strong >U.S. Check Printing</strong> module is required to
+print U.S. checks.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >According to your country and the chart of account you use, those
+modules may be installed by default. (example: United States users have
+nothing to install, it's configured by default).</p></div></section><section id="activate-checks-payment-methods"><h3 >Activate checks payment methods</h3><p >In order to allow payments by checks, you must activate the payment
+method on related bank journals. From the accounting dashboard (the
+screen you get when you enter the accounting application), click on your bank
+account on <span class="menuselection">More ‣ Settings</span> option. On the
+<strong >Payment Method</strong> field, set <strong >Check</strong>.</p><img src="../../../_images/check01.png" class="img-responsive center-block"></section><section id="compatible-check-stationery-for-printing-checks"><h2 >Compatible check stationery for printing checks</h2></section><section id="united-states"><h3 >United States</h3><p >For the United States, Odoo supports by default the check formats of:</p><ul ><li ><strong >Quickbooks &amp; Quicken</strong>: check on top, stubs in the middle and bottom</li><li ><strong >Peachtree</strong>: check in the middle, stubs on top and bottom</li><li ><strong >ADP</strong>: check in the bottom, and stubs on the top.</li></ul><p >It is also possible to customize your own check format through customizations.</p></section><section id="pay-a-supplier-bill-with-a-check"><h2 >Pay a supplier bill with a check</h2><p >Paying a supplier with a check is done in three steps:</p><ol ><li >registering a payment you'd like to do on the bill</li><li >printing checks in batch for all registered payments</li><li >reconcile bank statements</li></ol></section><section id="register-a-payment-by-check"><h3 >Register a payment by check</h3><p >To register a payment on a bill, open any supplier bill from the menu
+<span class="menuselection">Purchases ‣ Supplier Bills</span>. Once the supplier bill is
+validated, you can register a payment. Set the <strong >Payment Method</strong> to <strong >Check</strong>
+and validate the payment dialog.</p><img src="../../../_images/check02.png" class="img-responsive center-block"><p >Explanation of the fields of the payment screen:</p><div class="code-fields"><div class="code-field"><div class="code-field-name">Has invoices</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used for usablity purposes</div></div></div></div><div class="code-field"><div class="code-field-name">Hide payment method</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to hide the payment method if the selected journal has only one available which is 'manual'</div></div></div></div><div class="code-field"><div class="code-field-name">Code</div><div class="code-field-body"><div class="line-block"><div class="line">Technical field used to adapt the interface to the payment type selected.</div></div></div></div><div class="code-field"><div class="code-field-name">Manual Numbering</div><div class="code-field-body"><div class="line-block"><div class="line">Check this option if your pre-printed checks are not numbered.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Number</div><div class="code-field-body"><div class="line-block"><div class="line">The selected journal is configured to print check numbers. If your pre-printed check paper already has numbers or if the current numbering is wrong, you can change it in the journal configuration page.</div></div></div></div></div><a href="https://demo.odoo.com?module=account.action_account_payments" class="center-block reference btn-lg btn-primary external btn-block btn">Try paying a supplier bill with a check</a></section><section id="print-checks"><i id="printchecks"></i><h3 >Print checks</h3><p >From the accounting dashboard, on your bank account, you should see a
+link &quot;X checks to print&quot;. Click on this link and you will get the list
+of all checks that are not printed yet. From this screen, you can print
+all checks in batch or review them one by one.</p><p >If you want to review every payment one by one before printing the
+check, open on the payment and click on <strong >Print Check</strong> if you accept it. A dialog
+will ask you the number of the check. It automatically proposes you the
+next number, but you can change it if it does not match your next check
+number.</p><p >To print all checks in batch, select all payments from the list view and
+Print Check from the top &quot;print&quot; menu.</p><img src="../../../_images/check03.png" class="img-responsive center-block"></section><section id="reconcile-bank-statements"><i id="reconiclebankstatements"></i><h3 >Reconcile Bank Statements</h3><p >Once you process your bank statement, when the check is credited from
+your bank account, Odoo will propose you automatically to match it with
+the payment. This will mark the payment as <strong >Reconciled</strong>.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >to review checks that have not been credited, open the list of
+payments and filter on the Sent state. Review those payments that have a
+date more than 2 weeks ago.</p></div></section><section id="pay-anything-with-a-check"><h2 >Pay anything with a check</h2><p >You can register a payment that is not related to a supplier bill. To do
+so, use the top menu <span class="menuselection">Purchases ‣ Payments</span>. Register your
+payment and select a payment method by check.</p><p >If you pay a specific supplier bill, put the reference of the bill in
+the <strong >Memo</strong> field.</p><img src="../../../_images/check04.png" class="img-responsive center-block"><p >Once your payment by check is registered, don't forget to <strong >Confirm</strong> it.
+Once confirmed, you can use <strong >Print Check</strong> directly or follow the preceding
+flow to print checks in batch:</p><ul ><li ><a href="#printchecks" class="internal reference">Print checks</a></li><li ><a href="#reconiclebankstatements" class="internal reference">Reconcile bank statements</a></li></ul></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

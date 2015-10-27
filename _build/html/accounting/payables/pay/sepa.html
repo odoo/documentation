@@ -1,0 +1,174 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Pay with SEPA &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Pay supplier bills" href="../pay.html" />
+    <link rel="next" title="Pay by Checks" href="check.html" />
+    <link rel="prev" title="Pay supplier bills" href="../pay.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Pay with SEPA
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-the-required-module" class="ripple internal reference">Install the required module</a></li><li class="list-group-item"><a href="#activate-sepa-payment-methods-on-banks" class="ripple internal reference">Activate SEPA payment methods on banks</a></li></ul></li><li class="list-group-item"><a href="#id1" class="ripple internal reference">Pay with SEPA</a><ul ><li class="list-group-item"><a href="#register-your-payments" class="ripple internal reference">Register your payments</a></li><li class="list-group-item"><a href="#generate-sepa-files" class="ripple internal reference">Generate SEPA files</a></li></ul></li><li class="list-group-item"><a href="#troubleshooting" class="ripple internal reference">Troubleshooting</a><ul ><li class="list-group-item"><a href="#the-bank-refuses-my-sepa-file" class="ripple internal reference">The bank refuses my SEPA file</a></li><li class="list-group-item"><a href="#there-is-no-bank-identifier-code-recorded-for-bank-account" class="ripple internal reference">There is no Bank Identifier Code recorded for bank account ...</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/payables/pay/sepa.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="pay-with-sepa"><p >SEPA, the Single Euro Payments Area, is a payment-integration initiative
+of the European union for simplification of bank transfers denominated
+in EURO. SEPA allows you to send payment orders to your bank to automate
+bank wire transfer.</p><p >SEPA is supported by the banks of the 28 EU member states as well as
+Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.</p><p >With Odoo, once you decide to pay a vendor, you can select to pay the
+bill with SEPA. Then, at the end of the day, the manager can generate
+the SEPA file containing all bank wire transfers and send it to the
+bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
+specifications. This is a well-defined standard that makes consensus
+among banks.</p><p >Once the payments are processed by your bank, you can directly import
+the account statement inside Odoo. The bank reconciliation process will
+seamlessly match the SEPA orders you sent to your bank with actual bank
+statements.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-the-required-module"><h3 >Install the required module</h3><p >To pay suppliers with SEPA, you must install the <strong >SEPA Credit Transfer</strong>
+module. This module handle the process of generating SEPA files based on
+Odoo payments.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >According to your country and the chart of account you use, this module may
+be installed by default.</p></div></section><section id="activate-sepa-payment-methods-on-banks"><h3 >Activate SEPA payment methods on banks</h3><p >In order to allow payments by SEPA, you must activate the payment method
+on related bank journals. From the accounting dashboard (the screen you
+get when you enter the accounting application), click on &quot;More&quot; on your
+bank account and select the &quot;Settings&quot; option.</p><p >To activate SEPA, click the <strong >Advanced Settings</strong> tab and, in the <strong >Payment
+Methods</strong> part of the <strong >Miscellaneous</strong> section, check the box <strong >Sepa Credit
+Transfer</strong>.</p><p >Make sure to specify the IBAN account number (domestic account number
+won't work with SEPA) and the BIC (bank identifier code) on your bank
+journal.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >By default, the payments you send using SEPA will use your company name as
+initiating party name. This is what appears on the recipient's bank statement
+in the <strong >payment from</strong> field. You can customize it in your company settings,
+in the tab <strong >Configuration</strong>, under the <strong >SEPA</strong> section.</p></div><img src="../../../_images/sepa01.png" class="img-responsive center-block"></section><section id="id1"><h2 >Pay with SEPA</h2></section><section id="register-your-payments"><h3 >Register your payments</h3><p >You can register a payment that is not related to a supplier bill. To do
+so, use the top menu <span class="menuselection">Purchases ‣ Payments</span>. Register your
+payment and select a payment method by Sepa Credit Transfer.</p><p >If it's the first time you pay this vendor, you will have to fill in the
+Recipient Bank Account field with, at least, the bank name, IBAN and BIC
+(Bank Identifier Code). Odoo will automatically verify the IBAN format.</p><p >For future payments to this vendor, Odoo will propose you automatically
+the bank accounts but you will be able to select another one or create a
+new one.</p><p >If you pay a specific supplier bill, put the reference of the bill in
+the <strong >memo</strong> field.</p><img src="../../../_images/sepa02.png" class="img-responsive center-block"><p >Once your payment is registered, don't forget to Confirm it. You can
+also pay vendor bills from the bill directly using the Register Payment
+button on top of a vendor bill. The form is the same, but the payment is
+directly linked to the bill and will be automatically reconciled to it.</p></section><section id="generate-sepa-files"><h3 >Generate SEPA files</h3><p >From your accounting dashboard, you should see if there are SEPA files
+to generate for every bank account.</p><img src="../../../_images/sepa03.png" class="img-responsive center-block"><p >Click on the link to check all the payments that are ready to transfer
+via SEPA. Then, select all the payments you want to send (or check the
+top box to select all payment at once) and click on <span class="menuselection">More ‣
+Download SEPA Payments</span>.</p><img src="../../../_images/sepa04.png" class="img-responsive center-block"></section><section id="troubleshooting"><h2 >Troubleshooting</h2></section><section id="the-bank-refuses-my-sepa-file"><h3 >The bank refuses my SEPA file</h3><p >Ask your bank if they support <strong >PAIN.001.001.03 SEPA Credit Transfers</strong>. If
+they don't, or cannot provide relevant informations, please forward the
+error message to your Odoo partner.</p></section><section id="there-is-no-bank-identifier-code-recorded-for-bank-account"><h3 >There is no Bank Identifier Code recorded for bank account ...</h3><p >In order to send a SEPA payment, the recipient must be identified by a
+valid IBAN and BIC. If this message appear, you probably encoded an IBAN
+account for the partner you are paying but forgot to fill in the BIC
+field.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="check.html" class="internal alert-link reference"><em >Pay by Checks</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Arthur Maniet (Odoo), Jordi Ballester (eficent)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,145 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to edit or refund an invoice? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="How to modify a validated invoice?" href="modify_validated.html" />
+    <link rel="prev" title="Deferred revenues: how to automate them?" href="deferred_revenues.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to edit or refund an invoice?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#modifying-a-validated-invoice" class="ripple internal reference">Modifying a validated invoice</a></li><li class="list-group-item"><a href="#cancelling-an-invoice" class="ripple internal reference">Cancelling an invoice</a></li><li class="list-group-item"><a href="#refunding-part-of-an-invoice" class="ripple internal reference">Refunding part of an invoice</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_invoices/refund.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-edit-or-refund-an-invoice"><p >In Odoo, it's not possible to modify an invoice that has been validated
+and sent to the customer. If a mistake was made on a validated invoice,
+the legal way to handle that is to refund the invoice, reconcile it with
+the original invoice to close them and create a new invoice.</p></section><section id="modifying-a-validated-invoice"><h2 >Modifying a validated invoice</h2><p >If you need to modify an existing invoice, use the Refund Invoice button
+on the invoice. In the refund method field, select &quot;Modify: create a
+refund, reconcile, and create a new draft invoice&quot;.</p><img src="../../../_images/image04.png" class="img-responsive center-block"><p >Odoo will automatically:</p><ul ><li >Create a refund for your invoice</li><li >Reconcile the refund invoice with the original invoice (marking both as Paid)</li><li >Create a new draft invoice you can modify</li></ul><p >Then, you can modify the draft invoice and validate it once it's correct.</p></section><section id="cancelling-an-invoice"><h2 >Cancelling an invoice</h2><p >If you need to cancel an existing invoice, use the Refund Invoice button
+on the invoice. In the refund method field, select &quot;Cancel: create a
+refund and reconcile&quot;.</p><img src="../../../_images/image05.png" class="img-responsive center-block"><p >Odoo will automatically:</p><ul ><li >Create a refund for your invoice</li><li >Reconcile the refund invoice with the original invoice (marking both as Paid)</li></ul><p >Nothing else needs to be done. You can send the refund by regular mail or email
+to your customer, if you already sent the original invoice.</p></section><section id="refunding-part-of-an-invoice"><h2 >Refunding part of an invoice</h2><p >If you need to refund an existing invoice partially, use the Refund
+Invoice button on the invoice. In the refund method field, select
+&quot;Create a draft refund&quot;.</p><img src="../../../_images/image031.png" class="img-responsive center-block"><p >Odoo will automatically create a draft refund. You may modify the refund
+(example: remove the lines you do not want to refund) and validate it.
+Then, send the refund by regular mail or email to your customer.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Refunding an invoice is different from refunding a payment. Usually, a
+refund invoice is sent before the customer has done a payment. If the
+customer has already paid, they should be reimbursed by doing a customer
+payment refund.</p></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Johan Bosma (Onestein)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

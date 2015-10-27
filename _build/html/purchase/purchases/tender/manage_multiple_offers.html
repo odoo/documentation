@@ -1,0 +1,156 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage multiple offers from suppliers with purchase tenders? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Purchase Tenders" href="../tender.html" />
+    <link rel="next" title="Replenishment" href="../../replenishment.html" />
+    <link rel="prev" title="Purchase Tenders" href="../tender.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../purchase.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to manage multiple offers from suppliers with purchase tenders?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="current toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#activating-the-purchase-tender-function" class="ripple internal reference">Activating the Purchase Tender function</a></li><li class="list-group-item"><a href="#creating-a-purchase-tender" class="ripple internal reference">Creating a Purchase Tender</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/purchase/purchases/tender/manage_multiple_offers.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-manage-multiple-offers-from-suppliers-with-purchase-tenders"><p >A <strong >Purchase Tender</strong> (PT), also known as Call for Bids, is used to
+drive competition between several suppliers in order to get the best
+offer for a list of products. In comparison to the RfQ, a Purchase
+Tender is sent to multiple suppliers, stating each are competing with
+one another, and that the best offer will win. The main interest is that
+it usually leads to better offers.</p><p >For more information on best uses, please read the chapter <a href="../../overview/difference.html" class="internal reference"><em >Request for Quotation, Purchase Tender or Purchase Order?</em></a></p></section><section id="configuration"><h2 >Configuration</h2></section><section id="activating-the-purchase-tender-function"><h3 >Activating the Purchase Tender function</h3><p >By default, the Purchase Tender is not activated. To be able to use PTs,
+you must first activate the option.</p><p >In the Purchases module, open the Configuration menu and click on
+Settings. In the Purchase Order section, locate the <strong >Calls for
+Tenders</strong> and tick the box Allow using call for tenders… (advanced),
+then click on <strong >Apply</strong>.</p><img src="../../../_images/image16.png" class="img-responsive center-block"></section><section id="creating-a-purchase-tender"><h3 >Creating a Purchase Tender</h3><p >To create a new Purchase Tender, open <span class="menuselection">Purchase ‣ Purchase Tenders</span>.</p><img src="../../../_images/image19.png" class="img-responsive center-block"><p >In the Purchase Tenders window, click on <strong >Create</strong>. A new Purchase Tenders
+window opens.</p><p >By default, Odoo names PTs &quot;TEXXXXX&quot; but you can change it as you like.</p><img src="../../../_images/image21.png" class="img-responsive center-block"><p >In the <strong >Responsible</strong> field, you can select the person who will be in
+charge of the PT.</p><p >In the <strong >Tender Selection Type</strong> menu, you can decide to:</p><ul ><li >select only one RfQ and automatically cancel all other bid: <em >Select only one RFQ (exclusive)</em></li><li >allow multiple purchase orders for this PT: <em >Select multiple RFQ</em></li></ul><p >Tick in the box <strong >Multiple RFQ per vendor</strong> if you wish to allow
+suppliers to send in more than one Request for Quotation.</p><img src="../../../_images/image18.png" class="img-responsive center-block"><p >In the <strong >Tender Closing Deadline</strong> field, select the date to bids are
+closed for suppliers.</p><p >In the <strong >Scheduled Ordering Date</strong> field, select the date to which you
+will place the order.</p><p >In the <strong >Scheduled Date</strong> field, select the date to which the products
+should be delivered.</p><p >In the <strong >Source Document</strong> field, you can insert a previous PO to use as
+a template.</p><img src="../../../_images/image15.png" class="img-responsive center-block"><p >In the Products section, click on <strong >Add an item</strong>.</p><p >Select the product in the <strong >Product</strong> list, then insert <strong >Quantity</strong>.
+You can add as many products as you wish.</p><img src="../../../_images/image042.png" class="img-responsive center-block"><p >Click on <strong >Save</strong>, then on <strong >Confirm Call</strong>. Two new RFQs/Bids and Request a
+Quotation tabs have appeared on the right side of the window.</p><img src="../../../_images/image17.png" class="img-responsive center-block"><p >Click on <strong >Request a Quotation</strong> and type in the names of the suppliers you
+wish to include in the PT, then click on <strong >Create Request for Quotation</strong>.</p><img src="../../../_images/image12.png" class="img-responsive center-block"><p >A list of suppliers has appeared in the <strong >Requests for Quotation</strong>
+section.</p><img src="../../../_images/image091.png" class="img-responsive center-block"><p >To send the RfQs to your suppliers, click on the green V icon. You can
+also review the RfQ before sending them by clicking on them.</p><p >When you receive offers, click on the RFQs/Bids tab. In the list view,
+select the company and click on <strong >Edit</strong> to adapt the details as stated in
+the offer.</p><img src="../../../_images/image20.png" class="img-responsive center-block"><p >When you have edited all the corresponding fields, click on <strong >Save</strong>.</p><p >When the deadline has been reached, click on <strong >Close Call for Tenders</strong>. The
+status of the PT is now <strong >Bid Selection</strong>. Open the RFQs/Bids tab and open
+the RfQ(s) you wish to proceed with.</p><img src="../../../_images/image14.png" class="img-responsive center-block"><p >Click on <strong >Approve Order</strong> to convert the RfQ into a Purchase Order, the go
+back to your PT and click on <strong >Done</strong> to close the PT.</p><a href="https://demo.odoo.com?module=purchase_requisition.action_purchase_requisition" class="center-block reference btn-lg btn-primary external btn-block btn">View <em >Purchase Tenders</em> in our Online Demonstration</a><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p ><a href="../../overview/from_po_to_invoice.html" class="internal alert-link reference"><em >From purchase order to invoice and receptions</em></a></p><p ><a href="../../overview/difference.html" class="internal alert-link reference"><em >Request for Quotation, Purchase Tender or Purchase Order?</em></a></p></div><div class="text-muted line-block"><div class="line">Written by Samuel Cabodi (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

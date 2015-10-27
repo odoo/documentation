@@ -1,0 +1,149 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Import OFX statement files &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Bank Feeds" href="../feeds.html" />
+    <link rel="next" title="Import QIF statement files" href="qif.html" />
+    <link rel="prev" title="Bank Feeds" href="../feeds.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Import OFX statement files
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#importing-ofx-files" class="ripple internal reference">Importing OFX files</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/feeds/ofx.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="import-ofx-statement-files"><p >Open Financial Exchange (OFX) is a unified specification for the
+electronic exchange of financial data between financial institutions,
+businesses and consumers via the Internet.</p><p >With Odoo, you can download an OFX file from your bank or accounting
+software and import it directly in your Odoo instance. This will create
+all bank statements.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Test now the feature <a href="https://drive.google.com/file/d/0B5BDHVRYo-q5Mmg4T3oxTWszeEk/view" class="external reference alert-link">with this sample OFX file</a></p></div></section><section id="configuration"><h2 >Configuration</h2><p >In order to import OFX statements, you need to activate the feature in
+Odoo. In the Accounting application, go to the menu <span class="menuselection">Configuration ‣
+Settings</span>. From the accounting settings, check the bank statements option
+<strong >Import in .OFX Format</strong> and apply.</p><img src="../../../_images/ofx01.png" class="img-responsive center-block"><p >Once you have installed this feature, you can setup your bank account to
+allow importing bank statement files. To do this, go to the accounting
+Dashboard, and click on the <strong >More</strong> button of the bank account.
+Then, click on <strong >Import Statement</strong> to load your first OFX file.</p><img src="../../../_images/ofx02.png" class="img-responsive center-block"><p >Load your OFX file in the following screen and click <strong >Import</strong> to
+create all your bank statements.</p><img src="../../../_images/ofx03.png" class="img-responsive center-block"><p >If the file is successfully loaded, you will get redirected to the bank
+reconciliation screen with all the transactions to reconcile.</p></section><section id="importing-ofx-files"><h2 >Importing OFX files</h2><p >After having imported your first file, the Odoo accounting dashboard
+will automatically propose you to import more files for your bank. For
+the next import, you don't need to go to the <strong >More</strong> menu anymore,
+you can directly click on the link <strong >Import Statement</strong>.</p><img src="../../../_images/ofx04.png" class="img-responsive center-block"><p >Every time you get a statement related to a new customer / supplier,
+Odoo will ask you to select the right contact to reconcile the
+transaction. Odoo learns from that operation and will automatically
+complete the next payments you get or do to these contacts. This will
+speed up a lot the reconciliation process.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="qif.html" class="internal alert-link reference"><em >Import QIF statement files</em></a></li><li ><a href="coda.html" class="internal alert-link reference"><em >Import Coda statement files (Belgium only)</em></a></li><li ><a href="synchronize.html" class="internal alert-link reference"><em >How to synchronize Odoo with your bank?</em></a></li><li ><a href="manual.html" class="internal alert-link reference"><em >Register bank statements manually</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

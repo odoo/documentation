@@ -1,0 +1,150 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to synchronize Odoo with your bank? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Bank Feeds" href="../feeds.html" />
+    <link rel="next" title="Register bank statements manually" href="manual.html" />
+    <link rel="prev" title="Import Coda statement files (Belgium only)" href="coda.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to synchronize Odoo with your bank?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#odoo-online-users" class="ripple internal reference">Odoo Online Users</a></li><li class="list-group-item"><a href="#odoo-enterprise-users" class="ripple internal reference">Odoo Enterprise Users</a></li></ul></li><li class="list-group-item"><a href="#sync-your-bank-feeds" class="ripple internal reference">Sync your bank feeds</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/feeds/synchronize.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-synchronize-odoo-with-your-bank"><p >Odoo is able to synchronize directly with your bank in order to get all
+bank statements imported automatically in Odoo every 4 hours. Before
+moving forward in this tutorial, you should check if your bank is
+supported. You can find it out from the <a href="https://www.odoo.com/page/accounting-features" class="external reference">Odoo Accounting Features</a></p><img src="../../../_images/synchronize01.png" class="img-responsive center-block"><p >Search for your bank name in the above page. If your bank appears in the
+proposition, it means it is supported by Odoo. The countries which are
+fully supported (meaning more than 95% of the banks) include: United
+States, Canada, New Zealand, Austria. More than 30 countries are
+partially supported, including: Colombia, India, France, Spain, etc.</p><p >In order to connect with the banks, Odoo uses two web-services:</p><ul ><li >Plaid: for the main banks in the U.S.</li><li >Yodlee: for all other banks</li></ul></section><section id="configuration"><h2 >Configuration</h2></section><section id="odoo-online-users"><h3 >Odoo Online Users</h3><p >If you we support banks of your country, the bank integration feature
+should already been installed. If it's not installed, you can manually
+install the module <strong >account_yodlee</strong>.</p></section><section id="odoo-enterprise-users"><h3 >Odoo Enterprise Users</h3><p >If you plan to use a bank interface with your Odoo Enterprise
+subscription, contact <a href="mailto:online@odoo.com" class="external reference">Odoo Support</a> in
+order to get the credentials to sync Yodlee or Plaid with your bank
+accounts.</p><p >Once you get your credentials, you can register them from the
+<span class="menuselection">Configuration ‣ Settings</span> menu of the Accounting application.</p></section><section id="sync-your-bank-feeds"><h2 >Sync your bank feeds</h2><p >Once the Plaid or Yodlee interface is installed, you can connect Odoo to
+your bank. To do that, click on <strong >More</strong> on the bank of your
+choice from the accounting dashboard. In the menu, click on Settings to
+configure this bank account.</p><img src="../../../_images/synchronize02.png" class="img-responsive center-block"><p >In the bank form, from the Bank Account tab, set the bank feeds option
+to <strong >Bank Synchronization</strong>.</p><img src="../../../_images/synchronize03.png" class="img-responsive center-block"><p >Once it's done, go back to your accounting dashboard. You should see a
+<strong >Online Synchronization</strong> button on your bank card. Click on this button
+and fill in your bank credentials.</p><p >Once you filled in your credentials, your bank feeds will be
+synchronized every 4 hours.</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

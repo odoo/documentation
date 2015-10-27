@@ -1,0 +1,176 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>From Vendor Bills to Payments &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Process overview" href="../process_overview.html" />
+    <link rel="next" title="Accounting Terminologies" href="../terminologies.html" />
+    <link rel="prev" title="From Invoice to Payment Collection" href="customer_invoice.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              From Vendor Bills to Payments
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#from-vendor-bill-to-payment" class="ripple internal reference">From Vendor Bill to Payment</a><ul ><li class="list-group-item"><a href="#record-a-new-vendor-bill" class="ripple internal reference">Record a new vendor bill</a></li><li class="list-group-item"><a href="#validate-the-vendor-bill" class="ripple internal reference">Validate The Vendor Bill</a></li><li class="list-group-item"><a href="#pay-a-bill" class="ripple internal reference">Pay a bill</a></li><li class="list-group-item"><a href="#printing-vendor-checks" class="ripple internal reference">Printing vendor Checks</a></li></ul></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Reporting</a><ul ><li class="list-group-item"><a href="#aged-payable-balance" class="ripple internal reference">Aged payable balance</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/overview/process_overview/supplier_bill.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="from-vendor-bills-to-payments"><p >Once vendor bills are registered in Odoo, you can easily pay vendors for
+the correct amount and at the right time (not too late, not too early;
+depending on your vendor policy). Odoo also offers reports to track your
+aged payable balances.</p><p >If you want to control vendor bills received from your vendors, you can
+use the Odoo Purchase application that allows you to control and
+pre-complete them automatically based on past purchase orders.</p></section><section id="from-vendor-bill-to-payment"><h2 >From Vendor Bill to Payment</h2></section><section id="record-a-new-vendor-bill"><h3 >Record a new vendor bill</h3><p >When a vendor bill is received, you can record it from <span class="menuselection">Purchases ‣ Vendor Bills</span>
+in the Accounting application. As a shortcut,
+you can also use the <strong >New Bill</strong> feature on the accounting dashboard.</p><img src="../../../_images/vendor_bill05.png" class="img-responsive center-block"><p >To register a new vendor bill, start by selecting a vendor and inputting
+their invoice as the <strong >Vendor Reference</strong>, then add and confirm the product
+lines, making sure to have the right product quantities, taxes and
+prices.</p><img src="../../../_images/vendor_bill01.png" class="img-responsive center-block"><p >Save the invoice to update the pre tax and tax amounts at the bottom of
+the screen. You will most likely need to configure the prices of your
+products without taxes as Odoo will compute the tax for you.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >On the bottom left corner, Odoo shows a summary table of all taxes on the vendor bill.
+In several countries, different methods are accepted to round the totals (round per line,
+or round globally). The default rounding method in Odoo is to round the final prices
+per line (as you may have different taxes per product. E.g. Alcohol and cigarettes).
+However if your vendor has a different tax amount on their bill, you can change the
+amount in the bottom left table to adjust and match.</p></div></section><section id="validate-the-vendor-bill"><h3 >Validate The Vendor Bill</h3><p >Once the vendor bill is validated, a journal entry will be generated
+based on the configuration on the invoice. This journal entry may differ
+depending on the the accounting package you choose to use.</p><p >For most European countries, the journal entry will use the following
+accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Expenses:</strong> defined on the line item product used</li></ul><p >For Anglo-Saxon (US) accounting, the journal entry will use the
+following accounts:</p><ul ><li ><strong >Accounts Payable:</strong> defined on the vendor form</li><li ><strong >Taxes:</strong> defined on the products and per line</li><li ><strong >Goods Received:</strong> defined on the product form</li></ul><p >You can check your Profit &amp; Loss or the Balance Sheet reports after
+having validated a couple of vendor bills to see the impact on your
+general ledger.</p></section><section id="pay-a-bill"><h3 >Pay a bill</h3><p >To create a payment for an open vendor bill directly, you can click on <strong >Register a
+Payment</strong> at the top of the form.</p><p >From there, you select the payment method (i.e. Checking account, credit
+card, check, etc…) and the amount you wish to pay. By default, Odoo will
+propose the entire remaining balance on the bill for payment. In the
+memo field, we recommend you set the vendor invoice number as a
+reference (Odoo will auto fill this field from the from the vendor bill
+if set it correctly).</p><img src="../../../_images/vendor_bill06.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can also register a payment to a vendor directly without applying it to a vendor bill.
+To do that, <span class="menuselection">Purchases ‣ Payments</span>. Then,
+from the vendor bill you will be able to reconcile this payment with directly.</p></div></section><section id="printing-vendor-checks"><h3 >Printing vendor Checks</h3><p >If you choose to pay your vendor bills by check, Odoo offers a method to
+do so directly from your vendor payments within Odoo. Whether you do so
+on a daily basis or prefer to do so at the end of the week, you can
+print in checks in batches.</p><p >If you have checks to print, Odoo’s accounting dashboard acts as a to do
+list and reminds you of how many checks you have left to be printed.</p><img src="../../../_images/vendor_bill02.png" class="img-responsive center-block"><p >By selecting the amount of checks to be printed, you can dive right into
+a list of all payments that are ready to be processed.</p><p >Select all the checks you wish to print (use the first checkbox to
+select them all) and set the action to <strong >Print Checks</strong>. Odoo will ask you
+to set the next check number in the sequence and will then print all the
+checks at once.</p><img src="../../../_images/vendor_bill03.png" class="img-responsive center-block"></section><section id="reporting"><h2 >Reporting</h2></section><section id="aged-payable-balance"><h3 >Aged payable balance</h3><p >In order to get a list of open vendor bills and their related due dates,
+you can use the <strong >Aged Payable</strong> report, under the reporting menu, (in
+<span class="menuselection">Reporting ‣ Business Statement ‣ Aged payable</span>) to get a visual of all of
+your outstanding bills.</p><img src="../../../_images/vendor_bill04.png" class="img-responsive center-block"><p >From here, you can click directly on a vendors name to open up the
+details of all outstanding bills and the amounts due, or you can
+annotate any line for managements information. At any point in time
+while you’re looking through the report, you can print directly to Excel
+or PDF and get exactly what you see on the screen.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="customer_invoice.html" class="internal alert-link reference"><em >From Invoice to Payment Collection</em></a></li></ul></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

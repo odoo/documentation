@@ -1,0 +1,175 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to handle credit card payments on invoices? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Payments" href="../customer_payments.html" />
+    <link rel="next" title="How to accept paypal payments on invoices?" href="paypal.html" />
+    <link rel="prev" title="What are the different ways to record a payment?" href="recording.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to handle credit card payments on invoices?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#option-1-undeposited-funds" class="ripple internal reference">Option 1: Undeposited Funds</a><ul ><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#from-credit-card-payments-to-bank-statements" class="ripple internal reference">From credit card payments to bank statements</a></li></ul></li><li class="list-group-item"><a href="#option-2-one-journal-entry-only" class="ripple internal reference">Option 2: One journal entry only</a><ul ><li class="list-group-item"><a href="#id1" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#id2" class="ripple internal reference">From credit card payments to bank statements</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_payments/credit_cards.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-handle-credit-card-payments-on-invoices"><p >There are two ways to handle payments received by credit cards. Odoo
+support both approaches so that you can use the one that better fits
+your habits.</p><ol ><li ><strong >Undeposited Funds</strong> (mostly used in european countries): once you
+receive the credit card payment authorization, you record a
+payment by credit card on the invoice (using a Credit card
+journal and posted on the Undeposited Fund account). Then, once
+the credit card payments arrives in your bank account, move money
+from Undeposited Funds to your bank account.</li><li ><strong >One journal entry only</strong> (mostly used in the U.S.): once your
+receive the credit card payment, you record a payment on your
+bank, paid by credit card, without going through the Undeposited
+Funds. Once you process your bank statement, you do the matching
+with your bank feed and the credit card payment, without creating
+a dedicated journal entry .</li></ol><p >We recommend the first approach as it is more accurate (your bank
+account balance is accurate, taking into accounts credit cards that have
+not been cashed yet). Both approaches require the same effort.</p><p >If you use eCommerce and an automated payment gateway, you will only
+need to take care of the bank reconciliation part as paid invoice will
+be automatically recorded in the right journal. You will use the second
+approach.</p><p >Even if the first method is cleaner, Odoo support the second approach
+because some accountants are used to it (<em >QuickBooks</em> and <em >Peachtree</em>
+users).</p></section><section id="option-1-undeposited-funds"><h2 >Option 1: Undeposited Funds</h2></section><section id="configuration"><h3 >Configuration</h3><p >On the Accounting module, go to <span class="menuselection">Configuration ‣ Journals ‣ Create</span></p><p >Create a Journal called 'Credit card payments' with the following data:</p><ul ><li ><strong >Journal Name</strong>: Credit card</li><li ><strong >Default debit account</strong>: Credit cards</li><li ><strong >Default credit account</strong>: Credit cards</li></ul><p >Once it's done, don't forget to set the &quot;Credit cards&quot; account as &quot;Allow
+Reconciliation&quot;.</p><img src="../../../_images/credit01.png" class="img-responsive center-block"></section><section id="from-credit-card-payments-to-bank-statements"><h3 >From credit card payments to bank statements</h3><p >The first way to handle credit cards is to create a credit card journal.
+Thus, credit cards become a payment method in itself and you will record
+two transactions.</p><p >Once you receive a customer credit card payment, go to the related
+invoice and click on Register Payment. Fill in the information about the
+payment:</p><ul ><li ><strong >Payment method</strong>: Credit card</li><li ><strong >Memo</strong>: write the invoice reference</li></ul><img src="../../../_images/credit02.png" class="img-responsive center-block"><p >This operation will produce the following journal entry:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td ></td><td ></td><td >100.00</td></tr><tr ><td >Credit Cards</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >The invoice is marked as paid as soon as you record the credit card
+payment.</p><p >Then, once you get the bank statements, you will match this statement
+with the credit card that is in the 'Credit card' account.</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Credit cards</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><p >If you use this approach to manage credit cards payments, you get the
+list of credit cards payments that have not been cashed in the &quot;Credit
+card&quot; account (accessible, for example, from the general ledger).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Both methods will produce the same data in your accounting at the end of the
+process. But, if you have credit cards that have not been cashed, this one
+is cleaner because those credit cards have not been reported yet on your bank
+account.</p></div></section><section id="option-2-one-journal-entry-only"><h2 >Option 2: One journal entry only</h2></section><section id="id1"><h3 >Configuration</h3><p >There is nothing to configure if you plan to manage your credit cards
+using this method.</p></section><section id="id2"><h3 >From credit card payments to bank statements</h3><p >Once you receive a customer credit card payment, go to the related
+invoice and click on Register Payment. Fill in the information about the
+payment:</p><ul ><li ><strong >Payment method</strong>: the bank that will be used for the deposit</li><li ><strong >Memo</strong>: write the credit card transaction number</li></ul><img src="../../../_images/credit03.png" class="img-responsive center-block"><p >The invoice is marked as paid as soon as the credit card payment has
+been recorded. Once you receive the bank statements, you will do the
+matching with the statement and this actual payment (technically: point
+this payment and relate it to the statement line).</p><p >With this approach, you will get the following journal entry in your
+books:</p><table class="table"><thead ><tr ><th >Account</th><th >Statement Match</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td >X</td><td ></td><td >100.00</td></tr><tr ><td >Bank</td><td ></td><td >100.00</td><td ></td></tr></tbody></table><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You may also record the payment directly without going on the customer
+invoice, using the top menu <span class="menuselection">Sales ‣ Payments</span>. This method may be more
+convenient if you have a lot of credit cards to record in a batch but you
+will have to reconcile entries afterwards (matching payments with invoices).</p></div><p >If you use this approach to manage received credit cards, you can use
+the report &quot;Bank Reconciliation Report&quot; to verify which credit cards
+have been received or paid by the bank (this report is available from
+the &quot;More&quot; option from the Accounting dashboard on the related bank
+account).</p><img src="../../../_images/credit04.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="recording.html" class="internal alert-link reference"><em >What are the different ways to record a payment?</em></a></li><li ><a href="paypal.html" class="internal alert-link reference"><em >How to accept paypal payments on invoices?</em></a></li><li ><a href="check.html" class="internal alert-link reference"><em >How to record a payment by checks?</em></a></li><li ><a href="followup.html" class="internal alert-link reference"><em >How to get paid and organize customer follow-ups?</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Alexandre Vandermeersch (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,152 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to forecast future bills to pay? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Misc" href="../misc.html" />
+    <link rel="next" title="Expenses paid by employee&#39;s own money" href="employee_expense.html" />
+    <link rel="prev" title="Misc" href="../misc.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to forecast future bills to pay?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration-payment-terms" class="ripple internal reference">Configuration: payment terms</a></li><li class="list-group-item"><a href="#forecast-bills-to-pay-with-the-aged-payables-report" class="ripple internal reference">Forecast bills to pay with the Aged Payables report</a></li><li class="list-group-item"><a href="#select-bills-to-pay" class="ripple internal reference">Select bills to pay</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/payables/misc/forecast.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-forecast-future-bills-to-pay"><p >When you get hundreds of vendor bills per month with each of them having
+different payment terms, it could be complex to follow what you have to
+pay and when. Paying your vendors too early can decrease your cash
+availabilities and paying too late can lead to extra charges.</p><p >Fortunately, Odoo provides you the right tools to manage payment orders
+to vendors efficiently.</p></section><section id="configuration-payment-terms"><h2 >Configuration: payment terms</h2><p >In order to track the vendor conditions, we use payment terms in Odoo.
+Payment terms allow to keep track of the conditions to compute the due
+date on an invoice. As an example, a payment term can be:</p><ul ><li >50% within 30 days</li><li >50% within 45 days</li></ul><p >To create your most common payment terms, use the menu: <span class="menuselection">Configuration ‣
+Management ‣ Payment Terms</span> in the <strong >Accounting</strong> application. The following
+example show a payment term of 30% directly and the balance after 30
+days.</p><img src="../../../_images/forecast01.png" class="img-responsive center-block"><p >Once payment terms are defined, you can assign them to your vendor by
+default. Set the Vendor Payment Term field on the Accounting tab of a
+vendor form. That way, every time you will purchase to this vendor, Odoo
+will propose you automatically the right payment term.</p><img src="../../../_images/forecast02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you do not set a specific payment term on a vendor, you will still be
+able to set a specific payment term on the vendor bill.</p></div></section><section id="forecast-bills-to-pay-with-the-aged-payables-report"><h2 >Forecast bills to pay with the Aged Payables report</h2><p >In order to track amounts to be paid to the vendors, use the Aged
+Payable report. You can get it from the Reports menu of the Accounting
+application. This report gives you a summary per vendor of the amounts
+to pay, compared to their due date (the due date being computed on each
+bill using the payment term).</p><img src="../../../_images/forecast03.png" class="img-responsive center-block"><p >This reports tells you how much you will have to pay within the next
+months.</p></section><section id="select-bills-to-pay"><h2 >Select bills to pay</h2><p >Using the menu <span class="menuselection">Purchases ‣ Vendor Bills</span>, you can get a list of vendor
+bills. Using the advanced filters, you can list all the bills that you
+should pay or the bills that are overdue (you are late on the payment).</p><img src="../../../_images/forecast04.png" class="img-responsive center-block"><p >From this screen, you can also switch to the pivot table or the graph
+view to get statistics on the amount due over the next month, using the
+group by &quot;Due Date&quot; feature.</p><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

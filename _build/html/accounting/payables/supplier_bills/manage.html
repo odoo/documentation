@@ -1,0 +1,210 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage vendor Bills &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Supplier Bills" href="../supplier_bills.html" />
+    <link rel="next" title="When should I use supplier bills or purchase receipts?" href="bills_or_receipts.html" />
+    <link rel="prev" title="Supplier Bills" href="../supplier_bills.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to manage vendor Bills
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#installing-the-purchase-and-inventory-applications" class="ripple internal reference">Installing the Purchase and Inventory applications</a></li><li class="list-group-item"><a href="#creating-products" class="ripple internal reference">Creating products</a></li></ul></li><li class="list-group-item"><a href="#managing-your-vendor-bills" class="ripple internal reference">Managing your Vendor Bills</a><ul ><li class="list-group-item"><a href="#purchasing-products-or-services" class="ripple internal reference">Purchasing products or services</a></li><li class="list-group-item"><a href="#receiving-products" class="ripple internal reference">Receiving Products</a></li><li class="list-group-item"><a href="#managing-vendor-bills" class="ripple internal reference">Managing Vendor Bills</a></li></ul></li><li class="list-group-item"><a href="#vendor-bill-matching" class="ripple internal reference">Vendor Bill Matching</a><ul ><li class="list-group-item"><a href="#what-to-do-if-your-vendor-bill-does-not-match-what-you-received" class="ripple internal reference">What to do if your vendor bill does not match what you received</a></li><li class="list-group-item"><a href="#how-product-quantities-are-managed" class="ripple internal reference">How product quantities are managed</a></li><li class="list-group-item"><a href="#batch-billing" class="ripple internal reference">Batch Billing</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/payables/supplier_bills/manage.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-manage-vendor-bills"><p >The <strong >Purchase</strong> application allows you to manage your purchase orders,
+incoming products, and vendor bills all seamlessly in one place.</p><p >If you want to set up a vendor bill control process, the first thing you
+need to do is to have purchase data in Odoo. Knowing what has been
+purchased and received is the first step towards understanding your
+purchase management processes.</p><p >Here is the standard work flow in Odoo:</p><ol ><li >You begin with a <strong >Request for Quotation (RFQ)</strong> to send out to your
+vendor(s).</li><li >Once the vendor has accepted the RFQ, confirm the RFQ into a
+<strong >Purchase Order (PO)</strong>.</li><li >Confirming the PO generates an <strong >Incoming Shipment</strong> if you purchased
+any stockable products.</li><li >Upon receiving a <strong >Vendor Bill</strong> from your Vendor, validate the bill
+with products received in the previous step to ensure accuracy.</li></ol><p >This process may be done by three different people within the company,
+or only one.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="installing-the-purchase-and-inventory-applications"><h3 >Installing the Purchase and Inventory applications</h3><p >From the <strong >Apps</strong> application, search for the <strong >Purchase</strong> module and
+install it. Due to certain dependencies, Installing Purchase will
+automatically install the <strong >Inventory</strong> and <strong >Accounting</strong> applications.</p></section><section id="creating-products"><h3 >Creating products</h3><p >Creating products in Odoo is essential for quick and efficient
+purchasing within Odoo. Simply navigate to the Products submenu under
+Purchase, and click create.</p><img src="../../../_images/manage01.png" class="img-responsive center-block"><p >When creating the product, Pay attention to the <strong >Product Type</strong> field,
+as it is important:</p><ul ><li >Products that are set as <strong >Stockable or Consumable</strong> will allow you
+to keep track of their inventory levels. These options imply
+stock management and will allow for receiving these kinds of
+products.</li><li >Conversely, products that are set as a <strong >Service or Digital Product</strong>
+will not imply stock management, simply due to the fact that
+there is no inventory to manage. You will not be able to receive
+products under either of these designations.</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >It is recommended that you create a <strong >Miscellaneous</strong> product for all purchases
+that occur infrequently and do not require inventory valuation or management.
+If you create such a product, it is recommend to set the product type to <strong >Service</strong>.</p></div></section><section id="managing-your-vendor-bills"><h2 >Managing your Vendor Bills</h2></section><section id="purchasing-products-or-services"><h3 >Purchasing products or services</h3><p >From the purchase application, you can create a purchase order with as
+many products as you need. If the vendor sends you a confirmation or
+quotation for an order, you may record the order reference number in the
+<strong >Vendor Reference</strong> field. This will enable you to easily match the PO
+with the the vendor bill later (as the vendor bill will probably include
+the Vendor Reference)</p><img src="../../../_images/manage02.png" class="img-responsive center-block"><p >Validate the purchase order and receive the products from the Inventory
+application.</p></section><section id="receiving-products"><h3 >Receiving Products</h3><p >If you purchased any stockable products that you manage the inventory
+of, you will need to receive the products from the Inventory application
+after you confirm a Purchase Order. From the <strong >Inventory dashboard</strong>, you
+should see a button linking you directly to the transfer of products.
+This button is outlined in red below:</p><img src="../../../_images/manage03.png" class="img-responsive center-block"><p >Navigating this route will take you to a list of all orders awaiting to
+be received.</p><img src="../../../_images/manage04.png" class="img-responsive center-block"><p >If you have a lot of awaiting orders, apply a filter using the search
+bar in the upper right. With this search bar, you may filter based on
+the Vendor (Partner), the product, or the source document, also known as
+the reference of your purchase order. You also have the capability to
+group the orders by different criteria under <strong >Group By</strong>. Selecting an
+item from this list will open the following screen where you then will
+receive the products.</p><img src="../../../_images/manage05.png" class="img-responsive center-block"><p >Purchasing service products does not trigger a delivery order.</p></section><section id="managing-vendor-bills"><h3 >Managing Vendor Bills</h3><p >When you receive a Vendor Bill for a previous purchase, be sure to
+record it in the Purchases application under the <strong >Control Menu</strong>. You
+need to create a new vendor bill even if you already registered a
+purchase order.</p><img src="../../../_images/manage06.png" class="img-responsive center-block"><p >The first thing you will need to do upon creating a Vendor Bill is to
+select the appropriate Vendor as this will also pull up any associated
+accounting or pricelist information. From there, you can choose to
+specify any one or multiple Purchase Orders to populate the Vendor Bill
+with. When you select a Purchase Order from the list, Odoo will pull any
+uninvoiced products associated to that Purchase Order and automatically
+populate that information below. If you are having a hard time finding
+the appropriate Vendor bill, you may search through the list by
+inputting the vendor reference number or your internal purchase order
+number.</p><img src="../../../_images/manage07.png" class="img-responsive center-block"><p >While the invoice is in draft state, you can make any modifications you
+need (i.e. remove or add product lines, modify quantities, and change
+prices).</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Your vendor may send you several bills for the same Purchase Order if:</p><ol ><li >Your vendor is in back-order and is sending you invoices as they ship the products.</li><li >Your vendor is sending you a partial bill or asking for a deposit.</li></ol></div><p >Every time you record a new vendor bill, Odoo will automatically
+populate the product quantities based on what has been received from the
+vendor. If this value is showing a zero, this means that you have not
+yet received this product and simply serves as a reminder that the
+product is not in hand and you may need to inquire further into this. At
+any point in time, before you validate the Vendor Bill, you may override
+this zero quantity.</p></section><section id="vendor-bill-matching"><h2 >Vendor Bill Matching</h2></section><section id="what-to-do-if-your-vendor-bill-does-not-match-what-you-received"><h3 >What to do if your vendor bill does not match what you received</h3><p >If the bill you receive from the vendor has different quantities than
+what Odoo automatically populates as quantities, this could be due to
+several reasons:</p><ul ><li >the vendor is incorrectly charging you for products and/or services
+that you have not ordered,</li><li >the vendor is billing you for products that you might not have
+received yet, as the invoicing control may be based on ordered or
+received quantities,</li><li >or the vendor did not bill you for previously purchased products.</li></ul><p >In these instances it is recommended that you verify that the bill, and
+any associated purchase order to the vendor, are accurate and that you
+understand what you have ordered and what you have already received.</p><p >If you are unable to find a purchase order related to a vendor bill,
+this could be due to one of a few reasons:</p><ul ><li >the vendor has already invoiced you for this purchase order,
+therefore it is not going to appear anywhere in the selection,</li><li >someone in the company forgot to record a purchase order for this
+vendor,</li><li >or the vendor is charging you for something you did not order.</li></ul></section><section id="how-product-quantities-are-managed"><h3 >How product quantities are managed</h3><p >By default, services are managed based on ordered quantities, while
+stockables and consumables are managed based on received quantities.</p><p >If you need to manage products based on ordered quantities over received
+quantities, you will need to belong to the group <strong >Purchase Manager</strong>.
+Ask your system administrator to enable these access on <span class="menuselection">Settings
+‣ Users ‣ Users ‣ Access Rights</span>. Once you belong to the correct group,
+select the product(s) you wish to modify, and you should see a new field appear,
+labeled <strong >Control Purchase Bills</strong>.</p><img src="../../../_images/manage08.png" class="img-responsive center-block"><p >You can then change the default management method for the selected
+product to be based on either:</p><ul ><li >Ordered quantities</li><li >or Received quantities</li></ul></section><section id="batch-billing"><h3 >Batch Billing</h3><p >When creating a vendor bill and selecting the appropriate purchase
+order, you may continue to select additional purchase orders and Odoo
+will add the additional line items from that purchase order.. If you
+have not deleted the previous line items from the first purchase order
+the bill will be linked to all the appropriate purchase orders.</p><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Richard Shall (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

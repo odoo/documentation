@@ -1,0 +1,170 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>What are the different ways to record a payment? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Payments" href="../customer_payments.html" />
+    <link rel="next" title="How to handle credit card payments on invoices?" href="credit_cards.html" />
+    <link rel="prev" title="Customer Payments" href="../customer_payments.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              What are the different ways to record a payment?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#paying-an-invoice" class="ripple internal reference">Paying an invoice</a></li><li class="list-group-item"><a href="#payments-not-tied-to-an-invoice" class="ripple internal reference">Payments not tied to an invoice</a><ul ><li class="list-group-item"><a href="#registering-a-payment" class="ripple internal reference">Registering a payment</a></li><li class="list-group-item"><a href="#reconciling-invoice-payments" class="ripple internal reference">Reconciling invoice payments</a></li><li class="list-group-item"><a href="#reconciling-all-your-outstanding-payments-and-invoices" class="ripple internal reference">Reconciling all your outstanding payments and invoices</a></li></ul></li><li class="list-group-item"><a href="#transferring-money-from-one-bank-account-to-another" class="ripple internal reference">Transferring money from one bank account to another</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_payments/recording.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="what-are-the-different-ways-to-record-a-payment"><p >In Odoo, a payment can either be linked directly to an invoice or be a
+stand alone record for use on a later date:</p><ul ><li >If a payment is linked to an invoice, it reduces the amount due of
+the invoice. You can have multiple payments linked to the same
+invoice.</li><li >If a payment is not linked to an invoice, the customer has an
+outstanding credit with your company, or your company as an
+outstanding balance with a vendor. You can use this outstanding
+credit/debit to pay future invoices or bills.</li></ul></section><section id="paying-an-invoice"><h2 >Paying an invoice</h2><p >If you register a payment on a customer invoice or a vendor bill, the
+payment is automatically reconciled with the invoice reducing the amount
+due.</p><img src="../../../_images/recording01.png" class="img-responsive center-block"><p >The green icon near the payment line will display more information about
+the payment. From there you can choose to open the journal entry or
+reconcile the payment.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you unreconcile a payment, it is still registered in your books but not
+linked to the specific invoice any longer. If you unreconcile a payment in a
+different currency, Odoo will create a journal entry to reverse the Currency
+Exchange Loss/Gain posted at the time of reconciliation.</p></div></section><section id="payments-not-tied-to-an-invoice"><h2 >Payments not tied to an invoice</h2></section><section id="registering-a-payment"><h3 >Registering a payment</h3><p >In the Accounting application, you can create a new payment from the
+Sales menu (register a customer payment) or the Purchases menu (pay a
+vendor). If you use these menus, the payment is not linked to an
+invoice, but can easily be reconciled on an invoice later on.</p><img src="../../../_images/recording02.png" class="img-responsive center-block"><p >When registering a new payment, you must select a customer or vendor,
+the payment method, and the amount of the payment. The currency of the
+transaction is defined by the payment method. If the payment refers to a
+document (sale order, purchase order or invoice), set the reference of
+this document in the memo field.</p><p >Once confirmed, a journal entry will be posted reflecting the
+transaction just made in the accounting application.</p></section><section id="reconciling-invoice-payments"><h3 >Reconciling invoice payments</h3><p >The easiest way of reconciling a payment with an invoice is to do so on
+the invoice directly.</p><p >When validating a new invoice, Odoo will warn you that an outstanding
+payment for this customer or vendor is available. In this case, you can
+reconcile this payment to the invoice near the totals at the bottom,
+under &quot;Outstanding Payments&quot;.</p><img src="../../../_images/recording03.png" class="img-responsive center-block"></section><section id="reconciling-all-your-outstanding-payments-and-invoices"><h3 >Reconciling all your outstanding payments and invoices</h3><p >If you want to reconcile all outstanding payments and invoices at once
+(instead of doing so one by one), you can use the batch reconciliation
+feature within Odoo.</p><p >The batch reconciliation feature is available from the dashboard on the
+Customer Invoices card and the Vendor Bills card for reconciling
+Accounts Receivable and Payable, respectively.</p><img src="../../../_images/recording04.png" class="img-responsive center-block"><p >The payments matching tool will open all unreconciled customers or
+vendors and will give you the opportunity to process them all one by
+one, doing the matching of all their payments and invoices at once.</p><img src="../../../_images/recording05.png" class="img-responsive center-block"><p >During the reconciliation, if the sum of the debits and credits do not
+match, it means there is still a remaining balance that either needs to
+be reconciled at a later date, or needs to be written off directly.</p></section><section id="transferring-money-from-one-bank-account-to-another"><h2 >Transferring money from one bank account to another</h2><p >Just like making a customer or vendor payment, you transfer cash
+internally between your bank accounts from the dashboard or from the
+menus up top.</p><img src="../../../_images/recording06.png" class="img-responsive center-block"><p >This will take you to the same screen you have for receiving and making
+payments.</p><img src="../../../_images/recording07.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >When making an internal transfer from one bank account to another, select
+the bank you want to apply the transfer from in the dashboard, and in the
+register payments screen, you select the transfer to account. Do not go
+through this process again in the other bank account or else you will end up
+with two journal entries for the same transaction.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="credit_cards.html" class="internal alert-link reference"><em >How to handle credit card payments on invoices?</em></a></li><li ><a href="paypal.html" class="internal alert-link reference"><em >How to accept paypal payments on invoices?</em></a></li><li ><a href="check.html" class="internal alert-link reference"><em >How to record a payment by checks?</em></a></li><li ><a href="followup.html" class="internal alert-link reference"><em >How to get paid and organize customer follow-ups?</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

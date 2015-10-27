@@ -1,0 +1,157 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Deferred revenues: how to automate them? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="How to edit or refund an invoice?" href="refund.html" />
+    <link rel="prev" title="How to define an installment plan for an invoice" href="installment_plans.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Deferred revenues: how to automate them?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#module-installation" class="ripple internal reference">Module installation</a></li><li class="list-group-item"><a href="#define-deferred-revenue-types" class="ripple internal reference">Define deferred revenue types</a></li><li class="list-group-item"><a href="#set-deferred-revenues-on-products" class="ripple internal reference">Set deferred revenues on products</a></li></ul></li><li class="list-group-item"><a href="#sell-and-invoice-products" class="ripple internal reference">Sell and invoice products</a></li><li class="list-group-item"><a href="#reporting" class="ripple internal reference">Reporting</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_invoices/deferred_revenues.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="deferred-revenues-how-to-automate-them"><p >Deferred/unearned revenue is an advance payment recorded on the
+recipient's balance sheet as a liability account until either the
+services have been rendered or the products have been delivered.
+Deferred revenue is a liability account because it refers to revenue
+that has not yet been earned, but represents products or services that
+are owed to the customer. As the products or services are delivered over
+time, the revenue is recognized and posted on the income statement.</p><p >For example: let's say you sell a 2 year support contract for $24,000
+that begins next month for a period of 24 months. Once you validate the
+customer invoice, the $24.000 should be posted into a deferred revenues
+account. This is because the $24,000 you received has not yet been
+earned.</p><p >Over the next 24 months, you will be reducing the deferred revenues
+account by $1,000 ($24,000/24) on a monthly basis and recognizing that
+amount as revenue.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="module-installation"><h3 >Module installation</h3><p >In order to automate deferred revenues, go to the settings menu under the application
+<span class="menuselection">Accounting ‣ Configuration</span> and activate the
+<strong >Assets management &amp; revenue recognition</strong> option. This will install the
+<strong >Revenue Recognition Management</strong> module.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >In some version of Odoo 9, besides checking this option, you need to install
+the &quot;Revenue Recognition Management&quot; module. If you are using Odoo 9, you
+might check if the module is correctly installed.</p></div></section><section id="define-deferred-revenue-types"><h3 >Define deferred revenue types</h3><p >Once the module is installed, you need to create deferred revenue types.
+From the Accounting application, go to the menu <span class="menuselection">Configuration ‣ Deferred
+Revenues Types</span>.</p><div id="id1" class="figure"><img src="../../../_images/deffered01.png" class="img-responsive"><h4 >Example: 12 months maintenance contract</h4></div><p >Some example of deferred revenues types:</p><ul ><li >1 year service contract</li><li >3 years service contracts</li></ul></section><section id="set-deferred-revenues-on-products"><h3 >Set deferred revenues on products</h3><p >Once deferred revenues types are defined, you can set them on the
+related products. On the product form, in the Accounting tab, you can
+set a deferred revenue type.</p><p >Here are some examples of products and their related deferred revenue
+types:</p><table class="table"><thead ><tr ><th >Product</th><th >Deferred Revenue Type</th></tr></thead><tbody ><tr ><td >Support Contract: 3 years</td><td >3 years service contracts</td></tr><tr ><td >Netflix subscription: 3 years</td><td >3 years service contracts</td></tr><tr ><td >Flowers every month</td><td >1 year product contract</td></tr></tbody></table></section><section id="sell-and-invoice-products"><h2 >Sell and invoice products</h2><p >Once the products are configured, you can create a customer invoice
+using this product. Once the customer invoice is validated, Odoo will
+automatically create a deferred revenue for you, and the related journal
+entry.</p><table class="table"><thead ><tr ><th ><strong >Account</strong></th><th ><strong >Dr</strong></th><th ><strong >Cr</strong></th></tr></thead><tbody ><tr ><td >Accounts receivable</td><td >24000</td><td ></td></tr><tr ><td >Deferred revenue account</td><td ></td><td >24000</td></tr></tbody></table><p >Then, every month, Odoo will post a journal entry for the revenue
+recognition.</p><table class="table"><thead ><tr ><th ><strong >Account</strong></th><th ><strong >Dr</strong></th><th ><strong >Cr</strong></th></tr></thead><tbody ><tr ><td >Deferred revenue account</td><td >1000</td><td ></td></tr><tr ><td >Service revenue account</td><td ></td><td >1000</td></tr></tbody></table></section><section id="reporting"><h2 >Reporting</h2><p >To analyze all your current contracts having a deferred revenue, you can
+use the menu Reporting &gt; Deferred Revenue Analysis.</p><img src="../../../_images/deffered02.png" class="img-responsive center-block"><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="overview.html" class="internal alert-link reference"><em >Overview of the invoicing process</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Aline Preillon (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

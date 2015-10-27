@@ -1,0 +1,162 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to setup cash discounts? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="Defining and using payment terms" href="payment_terms.html" />
+    <link rel="prev" title="Overview of the invoicing process" href="overview.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to setup cash discounts?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#payment-terms" class="ripple internal reference">Payment terms</a></li><li class="list-group-item"><a href="#bank-reconciliation-model" class="ripple internal reference">Bank reconciliation model</a></li></ul></li><li class="list-group-item"><a href="#creating-an-invoice-with-a-cash-discount" class="ripple internal reference">Creating an invoice with a cash discount</a></li><li class="list-group-item"><a href="#payment" class="ripple internal reference">Payment</a><ul ><li class="list-group-item"><a href="#paying-the-invoice-with-a-cash-discount" class="ripple internal reference">Paying the invoice with a cash discount</a></li><li class="list-group-item"><a href="#paying-the-invoice-in-full" class="ripple internal reference">Paying the invoice in full</a></li></ul></li><li class="list-group-item"><a href="#related-topics" class="ripple internal reference">Related topics</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_invoices/cash_discounts.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-setup-cash-discounts"><p >Cash discounts are an incentive (usually a small percentage) that you
+offer to customers in return for paying a bill owed before the scheduled
+due date. If used properly, cash discounts improve the Days Sales
+Outstanding aspect of a business's cash conversion cycle.</p><p >For example, a typical cash discount would be: you offer a 2% discount
+on an invoice due in 30 days if the customer were to pay within the
+first 5 days of receiving the invoice.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="payment-terms"><h3 >Payment terms</h3><p >In order to manage cash discounts, we will use the payment terms
+concept of Odoo (From the Accounting module, go to :menuselection`Configuration --&gt;
+Management --&gt; Payment terms --&gt; Create`).</p><p >Let's start with the above example: a 2% discount on an invoice due in
+30 days if the customer were to pay within the first 5 days.</p><p >A typical payment term of 30 days would have only one installment:
+balance in 30 days. But, in order to configure the cash discount, you
+can configure the payment term with two installments:</p><ul ><li >98% within 5 days</li><li >balance within 30 days</li></ul><img src="../../../_images/discount01.png" class="img-responsive center-block"><p >To make it clear that it's not a payment term but a cash discount, don't
+forget to set a clear description that will appear on the invoice:
+Invoice is due within 30 days, but you can benefit from a 2% cash
+discount if you pay within 5 days.</p></section><section id="bank-reconciliation-model"><h3 >Bank reconciliation model</h3><p >In order to speed up the bank reconciliation process, we can create a
+model of entry for all cash discounts. To do that, from the Accounting
+application dashboard, click on the &quot;More&quot; link on the bank and choose
+the option &quot;Reconciliation Models&quot;.</p><img src="../../../_images/discount02.png" class="img-responsive center-block"><p >Create a new model for cash discounts as follow:</p><ul ><li ><strong >Button Label</strong>: Cash Discount</li><li ><strong >Account</strong>: Cash Discount (according to your country)</li><li ><strong >Amount Type</strong>: Percentage</li><li ><strong >Amount</strong>: 100%</li><li ><dl ><dt ><strong >Taxes</strong>: depending on your country, you may put a tax on the cash</dt><dd >discount if taxes have to be deduced</dd></dl></li></ul><img src="../../../_images/discount03.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Even if it's a 2% cash discount, set a 100% amount on the reconciliation model
+as it means 100% of the remaining balance (the 2%). You can use the same
+reconciliation model for all your cash discount. No need to create a model
+per payment term.</p></div></section><section id="creating-an-invoice-with-a-cash-discount"><h2 >Creating an invoice with a cash discount</h2><p >When you create a customer invoice, set the right payment term &quot;30 days,
+2% cash discount&quot; right after having selected the customer.</p><img src="../../../_images/discount04.png" class="img-responsive center-block"><p >Once the invoice is validated, Odoo will automatically split the account
+receivable part of the journal entry with two installments having a
+different due date: 98% within 5 days, 2% within 30 days.</p><img src="../../../_images/discount05.png" class="img-responsive center-block"></section><section id="payment"><h2 >Payment</h2></section><section id="paying-the-invoice-with-a-cash-discount"><h3 >Paying the invoice with a cash discount</h3><p >If the customer pays with a cash discount, when processing the bank
+statement, you will match the payment (98%) with the related line in the
+journal entry.</p><img src="../../../_images/discount06.png" class="img-responsive center-block"><p >As you can see in the above screenshot, when selecting the customer, you
+also see the 2% remaining of 3$. If you want to accept the cash discount
+(if the customer paid within the 5 days), you can click on this line
+with 2%, click on &quot;Open Balance&quot;, and select your &quot;Cash Discount&quot;
+reconciliation model. That way, the invoice is marked as fully paid.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >from now on, matching the remaining 2% has to be done manually. In the future,
+we plan to automate the reconciliation of the 2% if the 98% are paid on time.</p></div></section><section id="paying-the-invoice-in-full"><h3 >Paying the invoice in full</h3><p >If the customer pays the invoice fully, without benefiting from the cash
+discount, you will reconcile the payment (in full) with the two lines
+from the invoice (98% and 2%). Just click on the two lines to match them
+with the payment.</p><img src="../../../_images/discount07.png" class="img-responsive center-block"></section><section id="related-topics"><h2 >Related topics</h2><ul ><li >Overview of the invoicing processes</li></ul><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,136 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to manage a cash register? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to manage a cash register?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#usage" class="ripple internal reference">Usage</a><ul ><li class="list-group-item"><a href="#how-to-register-cash-payments" class="ripple internal reference">How to register cash payments?</a></li><li class="list-group-item"><a href="#put-money-in" class="ripple internal reference">Put money in</a></li><li class="list-group-item"><a href="#take-money-out" class="ripple internal reference">Take money out</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/bank/setup/manage_cash_register.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-manage-a-cash-register"><p >The cash register is a journal to register receivings and payments transactions.
+It calculates the total money in and out, computing the total balance.</p></section><section id="configuration"><h2 >Configuration</h2><img src="../../../_images/journal.png" class="img-responsive center-block"><ol ><li >Configure the Cash journal in <span class="menuselection">Accounting ‣ Configuration ‣
+Journals</span>.</li><li >In the tab Journal Entries, the Default Debit and Credit Account can be
+configured as well as the currency of the journal</li></ol><div class="code-fields"><div class="code-field"><div class="code-field-name">Type</div><div class="code-field-body"><div class="line-block"><div class="line">Select 'Sale' for customer invoices journals. Select 'Purchase' for vendor bills journals. Select 'Cash' or 'Bank' for journals that are used in customer or vendor payments. Select 'General' for miscellaneous operations journals. Select 'Opening/Closing Situation' for entries generated for new fiscal years.</div></div></div></div><div class="code-field"><div class="code-field-name">Company</div><div class="code-field-body"><div class="line-block"><div class="line">Company related to this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Short Code</div><div class="code-field-body"><div class="line-block"><div class="line">The journal entries of this journal will be named using this prefix.</div></div></div></div><div class="code-field"><div class="code-field-name">Dedicated Refund Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if you don't want to share the same sequence for invoices and refunds made from this journal</div></div></div></div><div class="code-field"><div class="code-field-name">Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the journal entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Refund Entry Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">This field contains the information related to the numbering of the refund entries of this journal.</div></div></div></div><div class="code-field"><div class="code-field-name">Default Debit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for debit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Default Credit Account</div><div class="code-field-body"><div class="line-block"><div class="line">It acts as a default account for credit amount</div></div></div></div><div class="code-field"><div class="code-field-name">Currency</div><div class="code-field-body"><div class="line-block"><div class="line">The currency used to enter statement</div></div></div></div><div class="code-field"><div class="code-field-name">Debit Methods</div><div class="code-field-body"><div class="line-block"><div class="line">Means of payment for collecting money. Odoo modules offer various payments handling facilities, but you can always use the 'Manual' payment method in order to manage payments outside of the software.</div></div></div></div><div class="code-field"><div class="code-field-name">Payment Methods</div><div class="code-field-body"><div class="line-block"><div class="line">Means of payment for sending money. Odoo modules offer various payments handling facilities, but you can always use the 'Manual' payment method in order to manage payments outside of the software.</div></div></div></div><div class="code-field"><div class="code-field-name">Group Invoice Lines</div><div class="code-field-body"><div class="line-block"><div class="line">If this box is checked, the system will try to group the accounting lines when generating them from invoices.</div></div></div></div><div class="code-field"><div class="code-field-name">Profit Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a profit when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Loss Account</div><div class="code-field-body"><div class="line-block"><div class="line">Used to register a loss when the ending balance of a cash register differs from what the system computes</div></div></div></div><div class="code-field"><div class="code-field-name">Show journal on dashboard</div><div class="code-field-body"><div class="line-block"><div class="line">Whether this journal should be displayed on the dashboard or not</div></div></div></div><div class="code-field"><div class="code-field-name">Check printing payment method selected</div><div class="code-field-body"><div class="line-block"><div class="line">Technical feature used to know whether check printing was enabled as payment method.</div></div></div></div><div class="code-field"><div class="code-field-name">Check Sequence</div><div class="code-field-body"><div class="line-block"><div class="line">Checks numbering sequence.</div></div></div></div><div class="code-field"><div class="code-field-name">Manual Numbering</div><div class="code-field-body"><div class="line-block"><div class="line">Check this option if your pre-printed checks are not numbered.</div></div></div></div><div class="code-field"><div class="code-field-name">Next Check Number</div><div class="code-field-body"><div class="line-block"><div class="line">Sequence number of the next printed check.</div></div></div></div><div class="code-field"><div class="code-field-name">Show in Invoices Footer</div><div class="code-field-body"><div class="line-block"><div class="line">Display this bank account on the footer of printed documents like invoices and sales orders.</div></div></div></div><div class="code-field"><div class="code-field-name">Active in Point of Sale</div><div class="code-field-body"><div class="line-block"><div class="line">Check this box if this journal define a payment method that can be used in a point of sale.</div></div></div></div><div class="code-field"><div class="code-field-name">Amount Authorized Difference</div><div class="code-field-body"><div class="line-block"><div class="line">This field depicts the maximum difference allowed between the ending balance and the theoretical cash when closing a session, for non-POS managers. If this maximum is reached, the user will have an error message at the closing of his session saying that he needs to contact his manager.</div></div></div></div></div></section><section id="usage"><h2 >Usage</h2></section><section id="how-to-register-cash-payments"><h3 >How to register cash payments?</h3><p >To register a cash payment specific to another customer, you should follow
+these steps:</p><ol ><li >Go to <span class="menuselection">Accounting ‣ Dashboard ‣ Cash ‣ Register
+Transactions</span></li><li >Fill in the start and ending balance</li><li >Register the transactions, specifying the customers linked to the transaction</li></ol></section><section id="put-money-in"><h3 >Put money in</h3><p >Put money in is used to placed your cash manually before starting your
+transactions. From the Register Transactions window, go to <span class="menuselection">More
+‣ Put money in</span></p><img src="../../../_images/put-money-in.png" class="img-responsive center-block"></section><section id="take-money-out"><h3 >Take money out</h3><p >Take money out is used to collect/get yor your cash manually after
+ending all your transactions. From the Register Transaction windows, go to <span class="menuselection">More
+‣ Take money out</span></p><img src="../../../_images/put-money-out.png" class="img-responsive center-block"><p >The transactions will be added to the current cash payment registration.</p><div class="line-block"><div class="line">Written by Vasanth Ajay</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

@@ -1,0 +1,164 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to import contacts to the CRM? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Generate leads" href="../generate.html" />
+    <link rel="next" title="How to generate leads from incoming emails?" href="emails.html" />
+    <link rel="prev" title="How to create a contact into Odoo CRM?" href="manual.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../crm.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to import contacts to the CRM?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="current toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#activate-the-lead-stage" class="ripple internal reference">Activate the lead stage</a></li><li class="list-group-item"><a href="#import-your-csv-file" class="ripple internal reference">Import your CSV file</a></li><li class="list-group-item"><a href="#select-rows-to-import" class="ripple internal reference">Select rows to import</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/crm/leads/generate/import.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-import-contacts-to-the-crm"><p >In Odoo CRM, you can import a database of potential customers, for
+instance for a cold emailing or cold calling campaign, through a CSV
+file. You may be wondering if the best option is to import your contacts
+as leads or opportunities. It depends on your business specificities and
+workflow:</p><ul ><li >Some companies may decide to not use leads, but instead to keep all
+information directly in an opportunity. For some companies, leads
+are merely an extra step in the sales process. You could call
+this extended (start from lead) versus simplified (start from
+opportunity) customer relationship management.</li><li >Odoo perfectly allows for either one of these approaches to be
+chosen. If your company handles its sales from a pre
+qualification step, feel free to activate first the lead stage as
+described below in order to import your database as leads</li></ul></section><section id="activate-the-lead-stage"><h2 >Activate the lead stage</h2><p >By default, the lead stage is not activated in Odoo CRM. If you want to
+import your contacts as leads rather than opportunities, go to
+<span class="menuselection">Configuration ‣ Settings</span>, select the option <strong >use leads
+if…</strong> as shown below and click on <strong >Apply</strong>.</p><img src="../../../_images/import01.jpg" class="img-responsive center-block"><p >This activation will create a new submenu <span class="menuselection">Sales ‣ Leads</span>
+from which you will be able to import your contacts from the
+<strong >Import</strong> button (if you want to create a lead manually, <a href="manual.html" class="internal reference"><em >click here</em></a>)</p><img src="../../../_images/import02.jpg" class="img-responsive center-block"></section><section id="import-your-csv-file"><h2 >Import your CSV file</h2><p >On the new submenu <span class="menuselection">Sales ‣ Leads</span>, click on <strong >Import</strong> and select your
+Excel file to import from the <strong >Choose File</strong> button. Make sure its
+extension is <strong >.csv</strong> and don't forget to set up the correct File format
+options (<strong >Encoding</strong> and <strong >Separator</strong>) to match your local
+settings and display your columns properly.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If your prospects database is provided in another format than CSV, you can
+easily convert it to the CSV format using Microsoft Excel, OpenOffice /
+LibreOffice Calc, Google Docs, etc.</p></div><img src="../../../_images/import03.jpg" class="img-responsive center-block"></section><section id="select-rows-to-import"><h2 >Select rows to import</h2><p >Odoo will automatically map the column headers from your CSV file to the
+corresponding fields if you tick <em >The first row of the file contains the
+label of the column</em> option. This makes imports easier especially when
+the file has many columns. Of course, you can remap the column headers
+to describe the property you are importing data into (First Name, Last
+Name, Email, etc.).</p><img src="../../../_images/import04.jpg" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >If you want to import your contacts as opportunities rather than leads, make
+sure to add the <em >Type</em> column to your csv. This column is used to indicate
+whether your import will be flagged as a Lead (type = Lead) or as an
+opportunity (type = Opportunity).</p></div><p >Click the <strong >Validate</strong> button if you want to let Odoo verify that
+everything seems okay before importing. Otherwise, you can directly
+click the Import button: the same validations will be done.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >For additional technical information on how to import contacts into Odoo CRM,
+read the <strong >Frequently Asked Questions</strong> section located below the Import tool
+on the same window.</p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="manual.html" class="internal alert-link reference"><em >How to create a contact into Odoo CRM?</em></a></li><li ><a href="emails.html" class="internal alert-link reference"><em >How to generate leads from incoming emails?</em></a></li><li ><a href="website.html" class="internal alert-link reference"><em >How to generate leads from my website?</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Geoffrey Bressan (Odoo)</div><div class="line">Proofread by Samuel Cabodi (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

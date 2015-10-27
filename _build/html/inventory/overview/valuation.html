@@ -1,0 +1,150 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Inventory Valuations &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Overview" href="../overview.html" />
+    <link rel="next" title="Settings" href="../settings.html" />
+    <link rel="prev" title="Double-Entry Inventory Management" href="double-entry.html" /> 
+  </head>
+  <body role="document"><header class="has_code_col">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar has_code_col">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Inventory Valuations
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container-fluid has_code_col">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#costing-method" class="ripple internal reference">Costing Method</a></li><li class="list-group-item"><a href="#periodic-inventory-valuation" class="ripple internal reference">Periodic Inventory Valuation</a></li><li class="list-group-item"><a href="#perpetual-inventory-valuation" class="ripple internal reference">Perpetual Inventory Valuation</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/overview/valuation.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="inventory-valuations"></section><section id="costing-method"><h2 >Costing Method</h2><p >International accounting standards define several ways to compute product
+costs:</p><dl class="doc-aside alternatives"><dt >Standard Price</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$10</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$10</td><td >12</td><td >+4*$10</td><td >$120</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-10*$10</div><div class="line"><br /></div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $9</td><td >$10</td><td >4</td><td >+2*$10</td><td >$40</td></tr></tbody></table></dd><dt >Average Price</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products <a href="#average-removal" class="footnote-ref" id="id1">1</a></td><td >$12</td><td >2</td><td ><div class="line-block"><div class="line">-10*$12</div><div class="line"><br /></div></div></td><td >$24</td></tr><tr ><td >Receive 2 Products at $6</td><td >$9</td><td >4</td><td >+2*$6</td><td >$36</td></tr></tbody></table></dd><dt >FIFO</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$16</td><td >2</td><td ><div class="line-block"><div class="line">-8*$10</div><div class="line">-2*$16</div></div></td><td >$32</td></tr><tr ><td >Receive 2 Products at $6</td><td >$11</td><td >4</td><td >+2*$6</td><td >$44</td></tr></tbody></table></dd><dt >LIFO (not accepted in IFRS)</dt><dd ><table class="table values-table"><thead ><tr ><th >Operation</th><th >Unit Cost</th><th >Qty On Hand</th><th >Delta Value</th><th >Inventory Value</th></tr></thead><tbody ><tr ><td ></td><td >$0</td><td >0</td><td ></td><td >$0</td></tr><tr ><td >Receive 8 Products at $10</td><td >$10</td><td >8</td><td >+8*$10</td><td >$80</td></tr><tr ><td >Receive 4 Products at $16</td><td >$12</td><td >12</td><td >+4*$16</td><td >$144</td></tr><tr ><td >Deliver 10 Products</td><td >$10</td><td >2</td><td ><div class="line-block"><div class="line">-4*$16</div><div class="line">-6*$10</div></div></td><td >$20</td></tr><tr ><td >Receive 2 Products at $6</td><td >$8</td><td >4</td><td >+2*$6</td><td >$32</td></tr></tbody></table></dd></dl><p >The costing method is defined on the product form: standard, average or real
+price.</p><p >For &quot;real price&quot;, the costing is further refined by the removal strategy (on
+the warehouse location or product category), FIFO by default.</p></section><section id="periodic-inventory-valuation"><h2 >Periodic Inventory Valuation</h2><p >In a periodic inventory valuation, goods reception and outgoing shipments have
+no direct impact in the accounting. At the end of the month or year, the
+accountant post one journal entry representing the value of the physical
+inventory.</p><dl class="doc-aside alternatives"><dt >Supplier Invoice</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Assets: Inventory</td><td >50</td><td ></td></tr><tr ><td >Assets: Deferred Tax Assets</td><td >4.68</td><td ></td></tr><tr ><td >Liabilities: Accounts Payable</td><td ></td><td >54.68</td></tr></tbody></table><dl ><dt >Explanation:</dt><dd ><ul ><li >A temporary account is used to note goods to receive</li><li >The purchase order provides prices of goods, the actual invoice may
+include extra costs such as shipping</li><li >The company still needs to pay the vendor (traded an asset against a
+liability)</li></ul></dd><dt >Configuration:</dt><dd ><ul ><li >Inventory: defined on the product or the category of related product,
+field: Stock Input Account</li><li >Deferred Tax Assets: defined on the tax used on the purchase order line</li><li >Accounts Payable: defined on the supplier related to the bill</li></ul></dd></dl></dd><dt >Goods Receptions</dt><dd >No Journal Entry</dd><dt >Customer Invoice</dt><dd ><table class="table values-table"><thead ><tr ><th ></th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Revenue: Goods</td><td ></td><td >100</td></tr><tr ><td >Liabilities: Deferred Tax Liabilities</td><td ></td><td >9</td></tr><tr ><td >Assets: Accounts Receivable</td><td >109</td><td ></td></tr><tr ><td >Assets: Inventory</td><td ></td><td >50</td></tr><tr ><td >Expenses: Cost of Goods Sold</td><td >50</td><td ></td></tr></tbody></table><dl ><dt >Explanation:</dt><dd ><ul ><li >Revenues increase by $100</li><li >A tax to pay at the end of the month of $9</li><li >The customer owns you $109</li><li >The inventory is decreased by $50 (shipping of the goods)</li><li >The cost of goods sold decreases the gross profit by $50</li></ul></dd><dt >Configuration:</dt><dd ><ul ><li >Revenue: defined on the product, or the product category if not on the
+product, field Income Account</li><li >Deferred Tax Liabilities: defined on the tax used on the invoice line</li><li >Accounts Receivable: defined on the customer (property)</li><li >Inventory: defined on the category of the related product (property)</li><li >Expenses: defined on the product, or the category of product (property)</li></ul></dd></dl><p >The fiscal position used on the invoice may have a rule that replaces the
+Income Account or the tax defined on the product by another one.</p></dd><dt >Customer Shipping</dt><dd >No Journal Entry</dd><dt >Manufacturing Orders</dt><dd >No Journal Entry</dd></dl><hr style="float: none; visibility: hidden; margin: 0;"><p >At the end of the month/year, the company do a physical inventory (or just
+rely on the inventory in Odoo). They multiply the quantity of each product by
+its cost to know the inventory value of the company.</p><div class="doc-aside"><p >If the real value of the inventory is $4800 but the <em >14000 Inventory</em>
+account has a balance of $4200, the following journal entry is created
+manually:</p><table class="table values-table"><tbody ><tr ><td >14000 Inventory</td><td >$600</td><td ></td></tr><tr ><td >14700 Inventory Variations</td><td ></td><td >$600</td></tr></tbody></table></div>
+</section><section id="perpetual-inventory-valuation"><h2 >Perpetual Inventory Valuation</h2><p >In a perpetual inventory valuation, goods reception and outgoing shipments are
+directly posted in the accounting. The inventory valuation is always
+up-to-date.</p><div class="doc-aside valuation-chart"></div>
+<div class="footnote" id="average-removal"><span class="footnote-label"><a class="footnote-backref" href="#id1">[1]</a></span> products leaving the stock have no impact on the average
+price.</div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

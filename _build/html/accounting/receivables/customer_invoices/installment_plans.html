@@ -1,0 +1,150 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to define an installment plan for an invoice &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Customer Invoices" href="../customer_invoices.html" />
+    <link rel="next" title="Deferred revenues: how to automate them?" href="deferred_revenues.html" />
+    <link rel="prev" title="Defining and using payment terms" href="payment_terms.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to define an installment plan for an invoice
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a></li><li class="list-group-item"><a href="#payment-terms-for-customers" class="ripple internal reference">Payment terms for customers</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/customer_invoices/installment_plans.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-define-an-installment-plan-for-an-invoice"><p >In order to manage installment plans related to an invoice, you should
+use payment terms in Odoo. They apply on both customer invoices and
+supplier bills.</p><p >Example, for a specific invoice:</p><ul ><li >Pay 50% within 10 days</li><li >Pay the remaining balance within 30 days</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >payment terms are not to be confused with a payment in several parts. If,
+for a specific order, you invoice the customer in two parts, that's not a
+payment term but an invoice policy.</p></div></section><section id="configuration"><h2 >Configuration</h2><p >Configure your usual installment plans from the application <span class="menuselection">Accounting ‣
+Configuration &gt; Payment Terms</span>.</p><p >A payment term may have one line (ex: 21 days) or several lines (10%
+within 3 days and the balance within 21 days). If you create a payment
+term with several lines, make sure the latest one is the balance. (avoid
+doing 50% in 10 days and 50% in 21 days because, with the rounding, it
+may not compute exactly 100%)</p><img src="../../../_images/installment01.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The description of the payment term will appear on the invoice or the sale order.</p></div></section><section id="payment-terms-for-customers"><h2 >Payment terms for customers</h2><p >You can set payment terms on:</p><ul ><li ><strong >a customer</strong>: the payment term automatically applies on new sales
+orders or invoices for this customer. Set payment terms on
+customers if you grant this payment term for all future orders
+for this customer.</li><li ><strong >a quotation</strong>: the payment term will apply on all invoices created
+from this quotation or sale order, but not on other quotations</li><li ><strong >an invoice</strong>: the payment term will apply on this invoice only</li></ul><p >If an invoice contains a payment term, the journal entry related to the
+invoice is different. Without payment term, an invoice of $100 will
+produce the following journal entry (for the clarity of the example, we
+did not set any tax on the invoice):</p><table class="table"><thead ><tr ><th >Account</th><th >Due date</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td ></td><td >100</td><td ></td></tr><tr ><td >Income</td><td ></td><td ></td><td >100</td></tr></tbody></table><p >If you do an invoice the 1st of January with a payment term of 10%
+within 3 days and the balance within 30 days, you get the following
+journal entry:</p><table class="table"><thead ><tr ><th >Account</th><th >Due date</th><th >Debit</th><th >Credit</th></tr></thead><tbody ><tr ><td >Account Receivable</td><td >Jan 03</td><td >10</td><td ></td></tr><tr ><td >Account Receivable</td><td >Jan 30</td><td >90</td><td ></td></tr><tr ><td >Income</td><td ></td><td ></td><td >100</td></tr></tbody></table><p >On the customer statement, you will see two lines with different due
+dates. To get the customer statement, use the menu Sales &gt; Customers
+Statement.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><ul ><li ><a href="overview.html" class="internal alert-link reference"><em >Overview of the invoicing process</em></a></li><li ><a href="payment_terms.html" class="internal alert-link reference"><em >Defining and using payment terms</em></a></li></ul></div><div class="text-muted line-block"><div class="line">Written by Fabien Pinckaers (Odoo)</div><div class="line">Proofread by Jordi Ballester (eficent)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

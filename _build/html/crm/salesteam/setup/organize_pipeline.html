@@ -1,0 +1,175 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Set up and organize your sales pipeline &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Sales Team" href="../setup.html" />
+    <link rel="next" title="Manage salespeople" href="../manage.html" />
+    <link rel="prev" title="How to create a new team?" href="create_team.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../crm.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Set up and organize your sales pipeline
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="current toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#create-and-organize-your-stages" class="ripple internal reference">Create and organize your stages</a><ul ><li class="list-group-item"><a href="#add-rearrange-stages" class="ripple internal reference">Add/ rearrange stages</a></li><li class="list-group-item"><a href="#activate-the-lead-stage" class="ripple internal reference">Activate the lead stage</a></li></ul></li><li class="list-group-item"><a href="#set-up-stage-probabilities" class="ripple internal reference">Set up stage probabilities</a><ul ><li class="list-group-item"><a href="#what-is-a-stage-probability" class="ripple internal reference">What is a stage probability?</a></li><li class="list-group-item"><a href="#how-to-set-up-stage-probabilities" class="ripple internal reference">How to set up stage probabilities?</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/crm/salesteam/setup/organize_pipeline.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="set-up-and-organize-your-sales-pipeline"><p >A well structured sales pipeline is crucial in order to keep control of
+your sales process and to have a 360-degrees view of your leads,
+opportunities and customers.</p><p >The sales pipeline is a visual representation of your sales process,
+from the first contact to the final sale. It refers to the process by
+which you generate, qualify and close leads through your sales cycle.
+In Odoo CRM, leads are brought in at the left end of the sales
+pipeline in the Kanban view and then moved along to the right from one
+stage to another.</p><p >Each stage refers to a specific step in the sale cycle and
+specifically the sale-readiness of your potential customer. The number
+of stages in the sales funnel varies from one company to another. An
+example of a sales funnel will contain the following stages:
+<em >Territory, Qualified, Qualified Sponsor, Proposition, Negotiation,
+Won, Lost</em>.</p><img src="../../../_images/team_kanban.jpg" class="img-responsive center-block"><p >Of course, each organization defines the sales funnel depending on their
+processes and workflow, so more or fewer stages may exist.</p></section><section id="create-and-organize-your-stages"><h2 >Create and organize your stages</h2></section><section id="add-rearrange-stages"><h3 >Add/ rearrange stages</h3><p >From the sales module, go to your dashboard and click on the
+<strong >PIPELINE</strong> button of the desired sales team. If you don't have any
+sales team yet, you need to create one first.</p><img src="../../../_images/image09.jpg" class="img-responsive center-block"><p >From the Kanban view of
+your pipeline, you can add stages by clicking on <strong >Add new column.</strong>
+When a column is created, Odoo will then automatically propose you to
+add another column in order to complete your process. If you want to
+rearrange the order of your stages, you can easily do so by dragging and
+dropping the column you want to move to the desired location.</p><img src="../../../_images/add_column.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >You can add as many stages as you wish, even if we advise you not having
+more than 6 in order to keep a clear pipeline</p></div></section><section id="activate-the-lead-stage"><h3 >Activate the lead stage</h3><p >Some companies use a pre qualification step to manage their leads before
+to convert them into opportunities. To activate the lead stage, go to
+<span class="menuselection">Configuration ‣ Settings</span> and select the radio button as shown
+below. It will create a new submenu <strong >Leads</strong> under <strong >Sales</strong> that
+gives you access to a listview of all your leads.</p><img src="../../../_images/image01.jpg" class="img-responsive center-block"></section><section id="set-up-stage-probabilities"><h2 >Set up stage probabilities</h2></section><section id="what-is-a-stage-probability"><h3 >What is a stage probability?</h3><p >To better understand what are the chances of closing a deal for a given
+opportunity in your pipe, you have to set up a probability percentage
+for each of your stages. That percentage refers to the success rate of
+closing the deal.</p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >Setting up stage probabilities is essential if you want to estimate the expected revenues of your sales cycle</p></div><p >For example, if your sales cycle contains the stages <em >Territory,
+Qualified, Qualified Sponsor, Proposition, Negotiation, Won and Lost,</em>
+then your workflow could look like this :</p><ul ><li ><p ><strong >Territory</strong> : opportunity just received from Leads Management or
+created from a cold call campaign. Customer's Interest is not
+yet confirmed.</p><p ><em >Success rate : 5%</em></p></li><li ><p ><strong >Qualified</strong> : prospect's business and workflow are understood,
+pains are identified and confirmed, budget and timing are known</p><p ><em >Success rate : 15%</em></p></li><li ><p ><strong >Qualified sponsor</strong>: direct contact with decision maker has been
+done</p><p ><em >Success rate : 25%</em></p></li><li ><p ><strong >Proposition</strong> : the prospect received a quotation</p><p ><em >Success rate : 50%</em></p></li><li ><p ><strong >Negotiation</strong>: the prospect negotiates his quotation</p><p ><em >Success rate : 75%</em></p></li><li ><p ><strong >Won</strong> : the prospect confirmed his quotation and received a sales
+order. He his now a customer</p><p ><em >Success rate : 100%</em></p></li><li ><p ><strong >Lost</strong> : the prospect is no longer interested</p><p ><em >Success rate : 0%</em></p></li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Within your pipeline, each stage should correspond to a defined goal with
+a corresponding probability. Every time you move your opportunity to the
+next stage, your probability of closing the sale will automatically adapt.</p><p >You should consider using probability value as <strong >100</strong> when the deal is
+closed-won and <strong >0</strong> for deal closed-lost.</p></div></section><section id="how-to-set-up-stage-probabilities"><h3 >How to set up stage probabilities?</h3><p >To edit a stage, click on the <strong >Settings</strong> icon at the right of the
+desired stage then on EDIT</p><img src="../../../_images/image08.jpg" class="img-responsive center-block"><p >Select the Change probability automatically checkbox to let Odoo adapt
+the probability of the opportunity to the probability defined in the
+stage. For example, if you set a probability of 0% (Lost) or 100% (Won),
+Odoo will assign the corresponding stage when the opportunity is marked
+as Lost or Won.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >Under the requirements field you can enter the internal requirements for
+this stage. It will appear as a tooltip when you place your mouse over the
+name of a stage.</p></div><div class="text-muted line-block"><div class="line">Written by Geoffrey Bressan (Odoo)</div><div class="line">Proofread by Samuel Cabodi (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

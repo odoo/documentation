@@ -1,0 +1,203 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>Double-Entry Inventory Management &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Overview" href="../overview.html" />
+    <link rel="next" title="Inventory Valuations" href="valuation.html" />
+    <link rel="prev" title="Overview" href="../overview.html" /> 
+  </head>
+  <body role="document"><header class="has_code_col">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar has_code_col">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../inventory.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              Double-Entry Inventory Management
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../recruitment.html" class="internal reference">Recruitment</a></li><li class="current toctree-l2"><a href="../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container-fluid has_code_col">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#operations" class="ripple internal reference">Operations</a></li><li class="list-group-item"><a href="#analysis" class="ripple internal reference">Analysis</a></li><li class="list-group-item"><a href="#procurements-procurement-rules" class="ripple internal reference">Procurements &amp; Procurement Rules</a></li><li class="list-group-item"><a href="#routes" class="ripple internal reference">Routes</a></li><li class="list-group-item"><a href="#push-rules" class="ripple internal reference">Push Rules</a></li><li class="list-group-item"><a href="#procurement-groups" class="ripple internal reference">Procurement Groups</a></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/inventory/overview/double-entry.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="double-entry-inventory-management"><p >A double-entry inventory has no stock input, output (disparition of products)
+or transformation. Instead, all operations are stock moves between locations
+(possibly virtual).</p><div class="doc-aside chart-of-locations"></div>
+</section><section id="operations"><h2 >Operations</h2><p >Stock moves represent the transit of goods and materials between locations.</p><dl class="doc-aside alternatives"><dt >Production Order</dt><dd ><dl ><dt >Consume:</dt><dd ><div class="line-block"><div class="line">2 Wheels: Stock → Production</div><div class="line">1 Bike Frame: Stock → Production</div></div></dd><dt >Produce:</dt><dd >1 Bicycle: Production → Stock</dd><dt >Configuration:</dt><dd ><div class="line-block"><div class="line">Stock: the location the Manufacturing Order is initiated from</div><div class="line">Production: on the product form, field &quot;Production Location&quot;</div></div></dd></dl></dd><dt >Drop-shipping</dt><dd ><p >1 Bicycle: Supplier → Customer</p><dl ><dt >Configurarion:</dt><dd ><div class="line-block"><div class="line">Supplier: on the product form</div><div class="line">Customer: on the sale order itself</div></div></dd></dl></dd><dt >Client Delivery</dt><dd ><dl ><dt >Pick</dt><dd >1 Bicycle: Stock → Packing Zone</dd><dt >Pack</dt><dd >1 Bicycle: Packing Zone → Output</dd><dt >Shipping</dt><dd >1 Bicycle: Output → Customer</dd><dt >Configuration:</dt><dd ><div class="line-block"><div class="line">on the pick+pack+ship route for the warehouse</div></div></dd></dl></dd><dt >Inter-Warehouse transfer</dt><dd ><dl ><dt >Transfer:</dt><dd ><div class="line-block"><div class="line">1 Bicycle: Warehouse 1 → Transit</div><div class="line">1 Bicycle: Transit → Warehouse 2</div></div></dd><dt >Configuration:</dt><dd ><div class="line-block"><div class="line">Warehouse 2: the location the transfer is initiated from</div><div class="line">Warehouse 1: on the transit route</div></div></dd></dl></dd><dt >Broken Product (scrapped)</dt><dd ><p >1 Bicycle: Warehouse → Scrap</p><dl ><dt >Configuration:</dt><dd >Scrap: Scrap Location when creating the scrapping</dd></dl></dd><dt >Inventory</dt><dd ><dl ><dt >Missing products in inventory</dt><dd >1 Bicycle: Warehouse → Inventory Loss</dd><dt >Extra products in inventory</dt><dd >1 Bicycle: Inventory Loss → Warehouse</dd><dt >Configuration:</dt><dd >Inventory Loss: &quot;Inventory Location&quot; field on the product</dd></dl></dd><dt >Reception</dt><dd ><div class="line-block"><div class="line">1 Bicycle: Supplier → Input</div><div class="line">1 Bicycle: Input → Stock</div></div><dl ><dt >Configuration:</dt><dd ><div class="line-block"><div class="line">Supplier: purchase order supplier</div><div class="line">Input: &quot;destination&quot; field on the purchase order</div></div></dd></dl></dd></dl></section><section id="analysis"><h2 >Analysis</h2><p >Inventory analysis can use products count or products value (= number of
+products * product cost).</p><p >For each inventory location, multiple data points can be analysed:</p><ul class="highlighter-list" data-target=".analysis-table">
+  <li data-highlight=".analysis-valuation">inventory valuation</li>
+  <li data-highlight=".analysis-creation">
+    value creation (difference between the value of manufactured products
+    and the cost of raw materials used during manufacturing) (negative)
+  </li>
+  <li data-highlight=".analysis-lost">value of lost/stolen products</li>
+  <li data-highlight=".analysis-scrapped">value of scrapped products</li>
+  <li data-highlight=".analysis-delivered">value of products delivered to clients over a period</li>
+  <li data-highlight=".analysis-received">value of products received from suppliers over a period (negative)</li>
+  <li data-highlight=".analysis-transit">value of products in transit between locations</li>
+</ul><div class="doc-aside analysis-table"> <table class="table table-condensed highlighter-target">
+   <thead>
+     <tr>
+       <th>Location</th> <th class="text-right">Value</th>
+     </tr>
+   </thead>
+   <tbody>
+     <tr class="analysis-valuation">
+       <th>Physical Locations</th> <td class="text-right">$1,000</td>
+     </tr>
+     <tr>
+       <th>&#8193;Warehouse 1</th> <td class="text-right">$600</td>
+     </tr>
+     <tr>
+       <th>&#8193;Warehouse 2</th> <td class="text-right">$400</td>
+     </tr>
+     <tr>
+       <th>Partner Locations</th> <td class="text-right">- $1,500</td>
+     </tr>
+     <tr class="analysis-delivered">
+       <th>&#8193;Customers</th> <td class="text-right">$2,000</td>
+     </tr>
+     <tr class="analysis-received">
+       <th>&#8193;Suppliers</th> <td class="text-right">- $3,500</td>
+     </tr>
+     <tr>
+       <th>Virtual Locations</th> <td class="text-right">$500</td>
+     </tr>
+     <tr class="analysis-transit">
+       <th>&#8193;Transit Location</th> <td class="text-right">$600</td>
+     </tr>
+     <tr>
+       <th>&#8193;Initial Inventory</th> <td class="text-right">$0</td>
+     </tr>
+     <tr class="analysis-lost">
+       <th>&#8193;Inventory Loss</th> <td class="text-right">$350</td>
+     </tr>
+     <tr class="analysis-scrapped">
+       <th>&#8193;Scrapped</th> <td class="text-right">$550</td>
+     </tr>
+     <tr class="analysis-creation">
+       <th>&#8193;Manufacturing</th> <td class="text-right">- $1,000</td>
+     </tr>
+   </tbody>
+</table></div>
+</section><section id="procurements-procurement-rules"><h2 >Procurements &amp; Procurement Rules</h2><p >A procurement is a request for a specific quantity of products to a specific
+location. They can be created manually or automatically triggered by:</p><dl class="doc-aside alternatives"><dt >New sale orders</dt><dd ><dl ><dt >Effect</dt><dd >A procurement is created at the customer location for every product
+ordered by the customer (you have to deliver the customer)</dd><dt >Configuration</dt><dd >Procurement Location: on the customer, field &quot;Customer Location&quot; (property)</dd></dl></dd><dt >Minimum Stock Rules</dt><dd ><dl ><dt >Effect</dt><dd >A procurement is created at the rule's location.</dd><dt >Configuration</dt><dd >Procurement location: on the rule, field &quot;Location&quot;</dd></dl></dd><dt >Procurement rules</dt><dd ><dl ><dt >Effect</dt><dd >A new procurement is created on the rule's source location</dd></dl></dd></dl><p ><em >Procurement rules</em> describe how procurements on specific locations should be
+fulfilled e.g.:</p><ul ><li >where the product should come from (source location)</li><li >whether the procurement is <abbr title="Made To Order">MTO</abbr> or <abbr title="Made To Stock">MTS</abbr></li></ul><div class="doc-aside"></div>
+</section><section id="routes"><h2 >Routes</h2><p >Procurement rules are grouped in routes. Routes define paths the product must
+follow. Routes may be applicable or not, depending on the products, sales
+order lines, warehouse,...</p><p >To fulfill a procurement, the system will search for rules belonging to routes
+that are defined in (by order of priority):</p><dl class="doc-aside alternatives"><dt >Warehouses</dt><dd ><p >Warehouse Route Example: Pick → Pack → Ship</p><dl ><dt >Picking List:</dt><dd >Pick Zone → Pack Zone</dd><dt >Pack List:</dt><dd >Pack Zone → Gate A</dd><dt >Delivery Order:</dt><dd >Gate A → Customer</dd></dl><p >Routes that describe how you organize your warehouse should be defined on the warehouse.</p></dd><dt >A Product</dt><dd ><p >Product Route Example: Quality Control</p><dl ><dt >Reception:</dt><dd >Supplier → Input</dd><dt >Confirmation:</dt><dd >Input → Quality Control</dd><dt >Storage:</dt><dd >Quality Control → Stock</dd></dl></dd><dt >Product Category</dt><dd ><p >Product Category Route Example: cross-dock</p><dl ><dt >Reception:</dt><dd >Supplier → Input</dd><dt >Cross-Docks:</dt><dd >Input → Output</dd><dt >Delivery:</dt><dd >Output → Customer</dd></dl></dd><dt >Sale Order Line</dt><dd ><p >Sale Order Line Example: Drop-shipping</p><dl ><dt >Order:</dt><dd >Supplier → Customer</dd></dl></dd></dl></section><section id="push-rules"><h2 >Push Rules</h2><p >Push rules trigger when products enter a specific location. They automatically
+move the product to a new location. Whether a push rule can be used depends on
+applicable routes.</p><dl class="doc-aside alternatives"><dt >Quality Control</dt><dd ><ul ><li >Product lands in Input</li><li >Push 1: Input → Quality Control</li><li >Push 2: Quality Control → Stock</li></ul></dd><dt >Warehouse Transit</dt><dd ><ul ><li >Product lands in Transit</li><li >Push: Transit → Warehouse 2</li></ul></dd></dl></section><section id="procurement-groups"><h2 >Procurement Groups</h2><p >Routes and rules define inventory moves. For every rule, a document type is
+provided:</p><ul ><li >Picking</li><li >Packing</li><li >Delivery Order</li><li >Purchase Order</li><li >...</li></ul><p >Moves are grouped within the same document type if their procurement group and
+locations are the same.</p><p >A sale order creates a procurement group so that pickings and delivery orders
+of the same order are grouped. But you can define specific groups on
+reordering rules too. (e.g. to group purchases of specific products together)</p></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

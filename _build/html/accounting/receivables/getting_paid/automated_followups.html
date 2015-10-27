@@ -1,0 +1,168 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to automate customer follow-ups with plans? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="How to get paid?" href="../getting_paid.html" />
+    <link rel="next" title="Account Payables" href="../../payables.html" />
+    <link rel="prev" title="Doing customer followups" href="customer_followups.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../accounting.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to automate customer follow-ups with plans?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="current toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#install-reminder-module" class="ripple internal reference">Install Reminder Module</a></li><li class="list-group-item"><a href="#define-payment-follow-ups-levels" class="ripple internal reference">Define Payment Follow-ups Levels</a></li></ul></li><li class="list-group-item"><a href="#doing-your-weekly-follow-ups" class="ripple internal reference">Doing your weekly follow-ups</a></li><li class="list-group-item"><a href="#how-to-exclude-an-invoice-from-auto-follow-up" class="ripple internal reference">How to exclude an invoice from auto follow up?</a><ul ><li class="list-group-item"><a href="#exclude-a-specific-invoice-for-a-specific-date" class="ripple internal reference">Exclude a specific invoice for a specific date</a></li><li class="list-group-item"><a href="#exclude-a-specific-invoice-forever" class="ripple internal reference">Exclude a specific invoice forever</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/accounting/receivables/getting_paid/automated_followups.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-automate-customer-follow-ups-with-plans"><p >With the Odoo Accounting application, you get a dynamic aged receivable
+report, customer statements and you can easily send them to customers.</p><p >If you want to go further in the automation of the credit collection
+process, you can use follow-up plans. They will help you automate all
+the steps to get paid, by triggering them at the right time: send
+customer statements by emails, send regular letter (through the Docsaway
+integration), create a task to manually call the customer, etc...</p><p >Here is an example of a plan:</p><table class="table"><thead ><tr ><th >When?</th><th >What?</th><th >Who?</th></tr></thead><tbody ><tr ><td >3 days before due date</td><td >Email</td><td >automated</td></tr><tr ><td >1 day after due date</td><td >Email + Regular Letter</td><td >automated</td></tr><tr ><td >15 days after due date</td><td >Call the customer</td><td >John Mac Gregor</td></tr><tr ><td >35 days after due date</td><td >Email + Letter + Call</td><td >John Mac Gregor</td></tr><tr ><td >60 days after due date</td><td >Formal notice</td><td >Bailiff</td></tr></tbody></table></section><section id="configuration"><h2 >Configuration</h2></section><section id="install-reminder-module"><h3 >Install Reminder Module</h3><p >You must start by activating the feature, using the menu
+<span class="menuselection">Configuration ‣ Settings</span> of the Accounting application.
+From the settings screen, activate the feature <strong >Enable payment follow-up management</strong>.</p><img src="../../../_images/automated_followups01.png" class="img-responsive center-block"></section><section id="define-payment-follow-ups-levels"><h3 >Define Payment Follow-ups Levels</h3><p >To automate customer follow ups, you must configure your follow–up
+levels using the menu <span class="menuselection">Accounting ‣ Configuration ‣ Payment Follow-ups</span>.
+You should define one and only one follow-up plan per company.</p><p >The levels of follow-up are relative to the due date; when no payment
+term is specified, the invoice date will be considered as the due date.</p><p >For each level, you should define the number of days and create a note
+which will automatically be added into the reminder letter.</p><img src="../../../_images/automated_followups04.png" class="img-responsive center-block"><p >Odoo defines several actions for every reminder:</p><ul ><li ><strong >Manual Action:</strong> assign a responsible that will have to call the customer</li><li ><strong >Send an Email:</strong> send an email to customer using the provided text</li><li ><strong >Send a Letter:</strong> send a letter by regular mail, using the provided note</li></ul><img src="../../../_images/automated_followups02.png" class="img-responsive center-block"><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >As you need to provide a number of days relative to the due date,
+you can use a negative number. As an example, if an invoice is issued
+the January 1st but the due date is January 30, if you set a reminder 3
+days before the due date, the customer may receive an email in January
+17.</p></div></section><section id="doing-your-weekly-follow-ups"><h2 >Doing your weekly follow-ups</h2><p >Once everything is setup, Odoo will prepare follow-up letters and emails
+automatically for you. All you have to do is to the menu
+<span class="menuselection">Sales ‣ Customers Statement</span> in the accounting application.</p><img src="../../../_images/automated_followups09.png" class="img-responsive center-block"><p >Odoo will automatically propose you actions based on the follow-up plan
+you defined, invoices to pay and payment received.</p><p >You can use this menu every day, once a week or once a month. You do not
+risk to send two times the same reminder to your customer. Odoo only
+proposes you the action you have to do. If you do it every day, you will
+have a few calls to do per day. If you do it once a month, you will have
+much more work once you do it.</p><p >It’s up to you to organize the way you want to work. But it’s a good
+practice to reconcile your bank statements before launching the
+follow-ups. That way, all paid invoices will be reconciled and you will
+not send a follow-up letter to a customer that already paid his invoice.</p><p >From a customer follow-up proposition, you can:</p><ul ><li >Get the customer information to contact him</li><li >Drill down to the customer information form by clicking on its name</li><li >Change the text (or the email or letter) and adapt to the customer</li><li >Change the colored dot to mark the customer as being a good, normal
+or bad debtor</li><li >Log a note is you called the customer</li><li >Exclude some invoices from the statement table (litigation)</li><li >Send an email with the statement</li><li >Print a letter, or send a regular mail (if you installed the Docsaway
+integration)</li><li >Plan the next reminder (but it’s better to keep in automatic mode so that Odoo
+will stick to the follow-up plan of the company)</li><li >Drill down to an invoice</li><li >Change the expected payment date of an invoice (thus, impacting the
+next time Odoo will propose you to send a reminder)</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >You can force a customer statement, even if Odoo do not proposes
+you to do it, because it’s not the right date yet. To do this, you
+should go to the Aged Receivable report (in the report menu of the
+Accounting application). From this report, you can click on a customer
+to get to his customer statement.</p></div></section><section id="how-to-exclude-an-invoice-from-auto-follow-up"><h2 >How to exclude an invoice from auto follow up?</h2><p >To see all <strong >overdue invoices</strong> or <strong >on need of action</strong>,</p><p >Go to <span class="menuselection">Accounting ‣ Sales ‣ Customers Statement</span></p><img src="../../../_images/automated_followups05.png" class="img-responsive center-block"></section><section id="exclude-a-specific-invoice-for-a-specific-date"><h3 >Exclude a specific invoice for a specific date</h3><p >Odoo can exclude an invoice from follow-ups actions for specific date by
+clicking on <strong >Log a Note</strong>, then choose one of the ready options (<em >one week</em>,
+<em >two weeks</em>, <em >one month</em>, <em >two months</em>), So Odoo will calculate the
+required date according to the current date.</p><img src="../../../_images/automated_followups03.png" class="img-responsive center-block"><p >Another way to achieve it is the following: click on the required invoice,
+then choose <strong >Change expected payment date/note</strong>, then enter a new payment date and note.</p><img src="../../../_images/automated_followups07.png" class="img-responsive center-block"></section><section id="exclude-a-specific-invoice-forever"><h3 >Exclude a specific invoice forever</h3><p >Odoo can exclude an invoice for a specific customer by clicking on
+the checkbox <strong >Excluded</strong></p><div role="alert" class="alert-info alert"><p class="alert-title">Note</p><p >If you click on <strong >History</strong>, you can see all follow ups actions.</p></div><img src="../../../_images/automated_followups06.png" class="img-responsive center-block"></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>

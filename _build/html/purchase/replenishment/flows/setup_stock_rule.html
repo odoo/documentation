@@ -1,0 +1,175 @@
+<!doctype html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+    <title>How to setup a minimum stock rule? &mdash; Odoo Business 0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../../_static/style.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../../../_static/accounting.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../../',
+        VERSION:     '0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/prefixfree.min.js"></script>
+    <script type="text/javascript" src="../../../_static/atom.js"></script>
+    <script type="text/javascript" src="../../../_static/immutable.js"></script>
+    <script type="text/javascript" src="../../../_static/react.min.js"></script>
+    <script type="text/javascript" src="../../../_static/accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/chart-of-accounts.js"></script>
+    <script type="text/javascript" src="../../../_static/entries.js"></script>
+    <script type="text/javascript" src="../../../_static/reconciliation.js"></script>
+    <script type="text/javascript" src="../../../_static/misc.js"></script>
+    <script type="text/javascript" src="../../../_static/inventory.js"></script>
+    <script type="text/javascript" src="../../../_static/coa-valuation.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.min.js"></script>
+    <script type="text/javascript" src="../../../_static/bootstrap.js"></script>
+    <script type="text/javascript" src="../../../_static/doc.js"></script>
+    <script type="text/javascript" src="../../../_static/jquery.noconflict.js"></script>
+    <link rel="top" title="Odoo Business 0.1 documentation" href="../../../index.html" />
+    <link rel="up" title="Replenishment Flows" href="../flows.html" />
+    <link rel="next" title="Recruitment" href="../../../recruitment.html" />
+    <link rel="prev" title="What are the available automated replenishment methods?" href="replenishment_methods.html" /> 
+  </head>
+  <body role="document"><header class="">
+    <figure class="card top">
+      <span class="card-img" ></span>
+    </figure>
+  </header>
+  <nav id="main_navbar" class="navbar ">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target=".navbar-main">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <nav class="nav navbar-nav navbar-left">
+          <li id="main-back">
+            
+            
+              
+              
+            
+            <a href="../../../purchase.html" class="mdi-navigation-arrow-back"></a>
+          </li>
+          <li>
+            <h1 id="main_title">
+              How to setup a minimum stock rule?
+            </h1>
+          </li>
+        </nav>
+      </div>
+
+      <nav class="collapse navbar-collapse navbar-main navbar-right" role="navigation">
+        
+        <ul class="current navbar-nav navbar-right nav"><li class="toctree-l1"><a href="../../../index.html" class="internal reference">Index</a></li><li class="toctree-l1 current dropdown"><a data-toggle="dropdown" href="../../../applications.html" class="dropdown-toggle internal reference">Applications</a><ul class="current dropdown-menu"><li class="toctree-l2"><a href="../../../accounting.html" class="internal reference">Accounting</a></li><li class="toctree-l2"><a href="../../../crm.html" class="internal reference">CRM</a></li><li class="toctree-l2"><a href="../../../expenses.html" class="internal reference">Expenses</a></li><li class="current toctree-l2"><a href="../../../purchase.html" class="internal reference">Purchase</a></li><li class="toctree-l2"><a href="../../../recruitment.html" class="internal reference">Recruitment</a></li><li class="toctree-l2"><a href="../../../inventory.html" class="internal reference">Inventory</a></li><li class="toctree-l2"><a href="../../../point_of_sale.html" class="internal reference">Point of Sale</a></li></ul></li></ul>
+      </nav>
+    </div>
+  </nav>
+    
+  
+  <main class="container ">
+    
+    <div class="row">
+      
+      <aside>
+        <div class="navbar-aside text-center">
+          <ul class="list-group text-left nav"><li class="list-group-item"><a href="#when-should-i-use-reordering-rules" class="ripple internal reference">When should I use Reordering Rules?</a></li><li class="list-group-item"><a href="#when-should-i-avoid-reordering-rules" class="ripple internal reference">When should I avoid Reordering Rules?</a></li><li class="list-group-item"><a href="#example" class="ripple internal reference">Example</a></li><li class="list-group-item"><a href="#configuration" class="ripple internal reference">Configuration</a><ul ><li class="list-group-item"><a href="#set-up-your-product" class="ripple internal reference">Set up your product</a></li><li class="list-group-item"><a href="#create-a-reordering-rule" class="ripple internal reference">Create a reordering rule</a></li></ul></li></ul>
+          
+          <p class="gith-container"><a href="https://github.com/odoo/documentation-user/edit/master/purchase/replenishment/flows/setup_stock_rule.rst" class="gith-link">
+              Edit on GitHub
+          </a></p>
+          
+        </div>
+      </aside>
+      
+      <article class="doc-body ">
+        
+        
+  <section id="how-to-setup-a-minimum-stock-rule"><p >For some items you hold in stock, it might be useful to have rules
+making sure you never run out of stocks (for example, products with a
+high demand, or large items requiring a lot of storage space meaning
+they're harder to stock).</p><p >Odoo allows you to set up rules so that an automatic replenishment for
+those items is made, based on minimum stocks available.</p></section><section id="when-should-i-use-reordering-rules"><h2 >When should I use Reordering Rules?</h2><p >Reordering Rules work best for items that have a high demand and high
+flow. It will relieve you from a lot of work to focus on the rest of
+your activities knowing that stocks will always be right.</p><p >It can also be used when you have limited storage space and you need to
+keep large items in stock. In this case, you can keep as little as 1
+item in stock, and have a new one ordered as a stock replenishment as
+soon as the item in stock is sold.</p></section><section id="when-should-i-avoid-reordering-rules"><h2 >When should I avoid Reordering Rules?</h2><p >If you are offering a new product and don't know yet how fast it will
+go, you should handle stocks yourself first, and setup reordering rules
+only a few months into the sale to have better forecasts of the demand.</p><p >If you sell items that have a limited lifetime, such as fashion items,
+technology items, or products working together with a system that is
+meant to evolve, you have to be very well informed on when to stop
+automated replenishments, in order to avoid having to sell these items
+at a price that will not allow you to break even.</p></section><section id="example"><h2 >Example</h2><p >My company sells modern furniture. We sell a set of table and chairs
+that are available in 4 seatings and 6 seatings.</p><p >To keep things simple, we stock tables and chairs separately, but sell
+them all together to our clients as a kit. In order to make sure we can
+always deliver a complete set of table and chairs, I setup a Reordering
+Rule for the chairs to make sure I always have at least 10 chairs in
+stock, but no more than 20. This way, I can sell up to 5 sets of table
+at once while keeping my stock low enough not to eat up all my storage
+space.</p><p >The last table I sold was a 4 seatings, and there were 12 chairs left in
+my stock. Because the stock in chairs is now only 8 chairs, Odoo will
+automatically order 12 new chairs to fill up my stock to the maximum
+amount.</p></section><section id="configuration"><h2 >Configuration</h2></section><section id="set-up-your-product"><h3 >Set up your product</h3><p >In the Purchases module, open the Purchase menu and click on Products.
+Open the product to which you would like to add a Reordering Rule (or
+create a new one).</p><p >3 conditions for correct reordering rule :</p><ol ><li >In <span class="menuselection">General information ‣ Product type</span>, make the product
+stockable (as soon as this is done, the icon &quot;Reordering rule will appear)</li><li >In <span class="menuselection">Inventory ‣ route</span>, tick the &quot;Buy&quot; box (and untick the
+Make To Order box)</li><li >Select a vendor (don't forget to put a minimal quantity greater than 0)</li></ol></section><section id="create-a-reordering-rule"><h3 >Create a reordering rule</h3><p >Click on the Reordering Rules tab, click on Create. A new page opens.</p><img src="../../../_images/setup012.png" class="img-responsive center-block"><p >By default, Reordering Rules in Odoo are named as &quot;OP/XXXXX&quot; but you are
+free to use any nomenclature. You can modify it via the <strong >Name</strong> field.</p><p >The <strong >Product</strong> field is the product you are creating the rule for.</p><p >Select the warehouse to which the product should be delivered in the
+<strong >Warehouse</strong> field.</p><p >If you have configured multiple warehouses and location, specify the
+location in which the product will be stored in the <strong >Location</strong> field.</p><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p ><a href="../../../inventory/settings/warehouses/difference_warehouse_location.html" class="internal alert-link reference"><em >What is the difference between warehouses and locations?</em></a></p></div><img src="../../../_images/setup022.png" class="img-responsive center-block"><p >In the <strong >Minimum Quantity</strong> field, insert the quantity to which the
+system will trigger a new order for replenishment.</p><p >In the <strong >Maximum Quantity</strong> field, insert the maximum of items that has
+to be stocked. The replenishing order will be based on that quantity to
+reorder.</p><p >The <strong >Quantity Multiple</strong> is the lowest number of items that can be
+ordered at once. For instance, some items may be only available for
+purchase in a set of 2.</p><p >In the Misc section, the <strong >Active</strong> box allows you to activate or
+deactivate the rule.</p><p >In the <strong >Lead Time</strong> section, you can enter:</p><ul ><li >the number of Day(s) to purchase: correspond to the number of days
+for the supplier to receive the order</li><li >the number of Day(s) to get the products</li></ul><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >By default, the lead times are in calendar days. You can change that
+in <span class="menuselection">Inventory ‣ Configuration ‣ Settings ‣ Minimum Stock Rules</span></p></div><p >When you have entered all the info, click on Save.</p><p >From now on, every time a product with a reordering rule reaches the
+minimum stock, the system will automatically send a RfQ to your supplier
+based on your maximum quantity to replenish your stock.</p><div role="alert" class="alert-info alert"><p class="alert-title">Tip</p><p >The replenishments will take place when the scheduler in the Inventory
+module runs. By default in Odoo, the schedulers will run every night at
+12:00PM.</p><p >To know how to configure and run the schedulers manually, read the
+document on <a href="../../../inventory/management/miscellaneous/schedulers.html" class="internal alert-link reference"><em >How to configure and run schedulers?</em></a></p></div><div role="alert" class="alert-go_to alert"><p class="alert-title">See also</p><p ><a href="replenishment_methods.html" class="internal alert-link reference"><em >What are the available automated replenishment methods?</em></a></p><p ><a href="../../../inventory/management/miscellaneous/schedulers.html" class="internal alert-link reference"><em >How to configure and run schedulers?</em></a></p></div><div class="text-muted line-block"><div class="line">Written by Samuel Cabodi (Odoo)</div><div class="line">Proofread by Geoffrey Bressan (Odoo)</div></div></section>
+
+      </article>
+    </div>
+    
+    <div id="mask"></div>
+  </main>
+
+  <div class="floating_action_container">
+    <a id="floating_action" class="ripple" href="#">
+      <i class="mdi-action-explore"></i>
+    </a>
+    <div id="floating_action_menu">
+      <span class="bubble"></span>
+      <ul class="list-group content">
+        <li class="list-group-item ripple"><a>Cras justo odio</a></li>
+        <li class="list-group-item ripple"><a>Dapibus ac facilisis in</a></li>
+        <li class="list-group-item ripple"><a>Morbi leo risus</a></li>
+        <li class="list-group-item ripple"><a>Porta ac consectetur ac</a></li>
+        <li class="list-group-item ripple"><a>Vestibulum at eros</a></li>
+      </ul>
+    </div>
+  </div>
+  </body>
+</html>
