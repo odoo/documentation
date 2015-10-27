@@ -136,7 +136,7 @@ How to exclude an invoice from auto follow up?
 
 To see all **overdue invoices** or **on need of action**,
 
-Go to :menuselection:`Accounting -> Sales -> Customers Statement`
+Go to :menuselection:`Accounting --> Sales --> Customers Statement`
 
 .. image:: ./media/automated_followups05.png
   :align: center
@@ -145,8 +145,8 @@ Exclude a specific invoice for a specific date
 ------------------------------------------------
 
 Odoo can exclude an invoice from follow-ups actions for specific date by
-clicking on **Log a Note**, then choose one of the ready options (ONE
-WEEK, TWO WEEKS, ONE MONTH, and TWO MONTHS), So Odoo will calculate the
+clicking on **Log a Note**, then choose one of the ready options (*one week*, 
+*two weeks*, *one month*, *two months*), So Odoo will calculate the
 required date according to the current date.
 
 .. image:: ./media/automated_followups06.png
