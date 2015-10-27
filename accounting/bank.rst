@@ -7,3 +7,4 @@ Bank & Cash
 
    bank/setup
    bank/feeds
+   bank/reconciliation

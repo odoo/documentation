@@ -11,4 +11,4 @@ Accounting
    accounting/receivables
    accounting/payables
    accounting/bank
-   accounting/adviser
+   accounting/others
