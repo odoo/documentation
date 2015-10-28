@@ -194,8 +194,3 @@ related sales team in Odoo CRM.
 	- :doc:`manual`
 	- :doc:`import`
 	- :doc:`emails`
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Yves-Pascal Mukadi, Samuel Cabodi (Odoo)

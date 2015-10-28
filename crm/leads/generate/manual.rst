@@ -71,8 +71,3 @@ the contact details by clicking on it.
 	* :doc:`emails`
 
 	* :doc:`website`
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Yves-Pascal Mukadi (Odoo)

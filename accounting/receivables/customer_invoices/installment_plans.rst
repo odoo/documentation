@@ -85,8 +85,3 @@ Statement.
 
 	* :doc:`overview`
 	* :doc:`payment_terms`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Jordi Ballester (eficent)

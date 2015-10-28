@@ -134,8 +134,3 @@ Some specific modules are also able to generate draft invoices:
 -  **membership**: invoice your members every year
 
 -  **repairs**: invoice your after-sale services
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Johan Bosma (Onestein)

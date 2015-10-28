@@ -153,8 +153,3 @@ invoice.
 
    #. remove all "Red" lines
    #. create a new line that deprecate the whole residual value
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (https://odoo.com)
-| Proofread by Laurence Henrion, Antony Lesuisse

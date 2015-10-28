@@ -140,8 +140,3 @@ based on your maximum quantity to replenish your stock.
   :doc:`replenishment_methods`
 
   :doc:`../../../inventory/management/miscellaneous/schedulers`
-
-.. rst-class:: text-muted
-
-| Written by Samuel Cabodi (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

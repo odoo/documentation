@@ -94,8 +94,3 @@ The exact due date for all installments will be automatically created.
 .. seealso:: 
 
     :doc:`cash_discounts`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Johan Bosma (Onestein)

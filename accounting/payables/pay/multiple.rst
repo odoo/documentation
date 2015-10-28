@@ -156,6 +156,3 @@ Now we are going back to bank statement and opening reconcile view.
 
 
 .. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Samuel Cabodi, Benjamin Stiens (Odoo)

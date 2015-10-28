@@ -33,8 +33,3 @@ now access your new team from your Dashboard.
 .. note:: 
 
 	If you started to work on an empty database and didn't create new users, refer to the page :doc:`../manage/create_salesperson`.
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Yves-Pascal Mukadi (Odoo)

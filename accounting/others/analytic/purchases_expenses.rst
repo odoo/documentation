@@ -153,8 +153,3 @@ button to have an overview of all cost linked to the account.
 	If you would like to have the revenue as well you should
 	invoice the Consulting Pack in the Invoice menu and link the invoice
 	line to this same analytical account.
-
-.. rst-class:: text-muted
-
-| Written by Cédric Vandermeersch (Odoo)
-| Proofread by Benjamin Stiens (Odoo)

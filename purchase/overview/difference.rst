@@ -84,8 +84,3 @@ on :doc:`../purchases/rfq/create`
 
 If you want to know how to create a **Purchase Tender**, read the
 documentation on :doc:`../purchases/tender/manage_multiple_offers`
-
-.. rst-class:: text-muted
-
-| Written by Samuel Cabodi (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

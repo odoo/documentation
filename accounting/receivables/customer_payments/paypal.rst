@@ -151,8 +151,3 @@ You can either:
 .. seealso::
 
   * :doc:`credit_cards`
-
-.. rst-class:: text-muted
-
-| Written by Glen Babakhin (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

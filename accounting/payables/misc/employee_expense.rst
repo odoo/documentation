@@ -208,8 +208,3 @@ options:
 	* :doc:`forecast`
 
 	.. todo:: :doc: ../../../sale/invoicing/service/expense
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

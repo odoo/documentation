@@ -59,6 +59,3 @@ Click on the trashcan icon |image5| in the list of your bank accounts to remove 
 .. |image5| image:: media/image13.png
 	:class: btn-group
 
-.. rst-class:: text-muted
-
-| Written by Benjamin Stiens (Odoo)

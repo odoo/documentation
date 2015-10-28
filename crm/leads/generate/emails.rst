@@ -67,8 +67,3 @@ contact in Odoo CRM. Still from the Sales module, go to
 	* :doc:`manual`
 	* :doc:`import`
 	* :doc:`website`
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

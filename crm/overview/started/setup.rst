@@ -120,8 +120,3 @@ Refer to the document :doc:`../../leads/manage/automatic_assignation` for more i
     
     Related topics
     -  CRM onboarding video
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

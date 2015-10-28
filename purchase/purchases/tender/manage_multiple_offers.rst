@@ -131,8 +131,3 @@ back to your PT and click on **Done** to close the PT.
 	:doc:`../../overview/from_po_to_invoice`
 
 	:doc:`../../overview/difference`
-
-.. rst-class:: text-muted
-
-| Written by Samuel Cabodi (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

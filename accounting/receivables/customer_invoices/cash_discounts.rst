@@ -124,8 +124,3 @@ Related topics
 ==============
 
 -  Overview of the invoicing processes
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

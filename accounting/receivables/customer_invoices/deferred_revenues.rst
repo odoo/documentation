@@ -114,8 +114,3 @@ use the menu Reporting > Deferred Revenue Analysis.
 .. seealso::
 
 	* :doc:`overview`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Aline Preillon (Odoo)

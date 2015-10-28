@@ -67,8 +67,3 @@ your sales team.
 	*  :doc:`../../overview/started/setup`
 
 	*  :doc:`../setup/create_team`
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

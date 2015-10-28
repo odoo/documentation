@@ -70,8 +70,3 @@ should pay or the bills that are overdue (you are late on the payment).
 From this screen, you can also switch to the pivot table or the graph
 view to get statistics on the amount due over the next month, using the
 group by "Due Date" feature.
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

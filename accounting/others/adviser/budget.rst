@@ -150,7 +150,3 @@ purchase lines booked in the accounts and will display them in the
 	theoretical amount will be 1000, since this is the actual amount that could
 	have been realised.
 
-.. rst-class:: text-muted
-
-| Written by Cédric Vandermeersch (Odoo)
-| Proofread by Benjamin Stiens (Odoo)

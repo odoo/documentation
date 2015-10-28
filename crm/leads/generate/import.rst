@@ -89,8 +89,3 @@ click the Import button: the same validations will be done.
 	- :doc:`manual`
 	- :doc:`emails`
 	- :doc:`website`
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

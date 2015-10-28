@@ -66,8 +66,3 @@ speed up a lot the reconciliation process.
 	* :doc:`coda`
 	* :doc:`synchronize`
 	* :doc:`manual`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

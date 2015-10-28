@@ -166,8 +166,3 @@ under Reporting (check the KPI average debtors days).
 
 	* :doc:`recording`
 	* :doc:`check`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

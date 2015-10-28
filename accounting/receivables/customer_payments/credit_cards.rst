@@ -167,8 +167,3 @@ account).
    * :doc:`paypal`
    * :doc:`check`
    * :doc:`followup`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Alexandre Vandermeersch (Odoo)

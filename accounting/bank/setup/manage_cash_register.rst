@@ -58,5 +58,3 @@ ending all your transactions. From the Register Transaction windows, go to :menu
    :align: center
 
 The transactions will be added to the current cash payment registration.
-
-| Written by Vasanth Ajay

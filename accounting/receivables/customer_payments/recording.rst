@@ -128,8 +128,3 @@ payments.
 	* :doc:`paypal`
 	* :doc:`check`
 	* :doc:`followup`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

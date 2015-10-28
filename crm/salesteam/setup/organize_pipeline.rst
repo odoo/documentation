@@ -157,8 +157,3 @@ as Lost or Won.
   - *How to estimate the effectiveness of my sales cycle?*
   - *How to estimate expected revenues ?*
 
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

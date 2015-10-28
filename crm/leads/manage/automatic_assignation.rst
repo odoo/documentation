@@ -94,8 +94,3 @@ your rule in the *Domain* field.
 
 	.. todo:: * How to make sure my salespeople work on the most promising leads?
 
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

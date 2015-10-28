@@ -64,8 +64,3 @@ Then, send the refund by regular mail or email to your customer.
 	payment refund.
 
 	.. todo:: See doc ../customer_payments/refund
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Johan Bosma (Onestein)

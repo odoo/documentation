@@ -57,8 +57,3 @@ Odoo CRM provides you with several methods to generate leads:
   You can provide your salespeople lists of prospects - for example for a
   cold emailing or a cold calling campaign - by importing them from any
   CSV file.
-
-.. rst-class:: text-muted
-
-| Written by Geoffrey Bressan (Odoo)
-| Proofread by Samuel Cabodi (Odoo)

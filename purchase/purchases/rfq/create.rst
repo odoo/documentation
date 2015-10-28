@@ -73,8 +73,3 @@ right corner of the order will show 1 Shipment and 0 Invoice.
 .. seealso:: 
 
 	:doc:`../../overview/from_po_to_invoice`
-
-.. rst-class:: text-muted
-
-| Written by Samuel Cabodi (Odoo)
-| Proofread by Geoffrey Bressan (Odoo)

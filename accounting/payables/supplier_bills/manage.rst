@@ -227,8 +227,3 @@ order, you may continue to select additional purchase orders and Odoo
 will add the additional line items from that purchase order.. If you
 have not deleted the previous line items from the first purchase order
 the bill will be linked to all the appropriate purchase orders.
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Richard Shall (Odoo)

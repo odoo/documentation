@@ -48,8 +48,3 @@ Edit this new draft invoice and validate it when it's correct.
 .. seealso::
 	
 	* :doc:`refund`
-
-.. rst-class:: text-muted
-
-| Written by Fabien Pinckaers (Odoo)
-| Proofread by Aline Preillon (Odoo)
