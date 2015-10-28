@@ -6,3 +6,4 @@ Request for Quotatations
    :titlesonly:
 
    rfq/create
+   rfq/subcontracting
