@@ -42,7 +42,7 @@ Before we can register an internal transfer we need to add a new bank to
 our accounting dashboard. To do so enter the accounting module, click on
 :menuselection:`Configuration --> Bank Accounts`. Create a new bank account. You should
 fill in the **Account Number**. You can also create and edit your bank to
-specify your bank’s details.
+specify your bank's details.
 
 .. image:: media/interbank03.png
    :align: center
@@ -81,7 +81,7 @@ internal transfer. Select the **Bank** you want to transfer to, specify the
 Save and confirm the changes to register the payment.
 
 In terms of accounting the money is now booked in the transfer account.
-We’ll need to import bank statements to book the money in the final
+We'll need to import bank statements to book the money in the final
 accounts.
 
 .. _Reconcile:
@@ -96,7 +96,7 @@ statement of your bank.
    :align: center
 
 That is because we did not import the bank statement confirming the
-departure and arrival of the money. It’s thus necessary to import your
+departure and arrival of the money. It's thus necessary to import your
 bank statement and reconcile the payment with the correct bank statement
 line. Once you receive your bank statements click the **new statement**
 button of the corresponding bank to import them.

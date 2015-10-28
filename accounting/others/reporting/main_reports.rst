@@ -93,7 +93,7 @@ reporting :
         of current assets (assets that could be
         turned into cash within a year) to the current liabilities
         (liabilities which will be due in the next year). This is
-        typically used as as a measure of a company’s ability to service
+        typically used as as a measure of a company's ability to service
         its debt.
 
 .. image:: media/main_reports01.png  

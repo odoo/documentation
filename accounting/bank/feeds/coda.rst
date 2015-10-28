@@ -56,7 +56,7 @@ Importing CODA files
 
 After having imported your first file, the Odoo accounting dashboard
 will automatically propose you to import more files for your bank. For
-the next import, you don’t need to go to the **More** button anymore, 
+the next import, you don't need to go to the **More** button anymore, 
 you can directly click on the link **Import Statement**.
 
 .. image:: media/coda03.png

@@ -103,7 +103,7 @@ do so directly from your vendor payments within Odoo. Whether you do so
 on a daily basis or prefer to do so at the end of the week, you can
 print in checks in batches.
 
-If you have checks to print, Odoo’s accounting dashboard acts as a to do
+If you have checks to print, Odoo's accounting dashboard acts as a to do
 list and reminds you of how many checks you have left to be printed.
 
 .. image:: ./media/vendor_bill02.png
@@ -137,7 +137,7 @@ your outstanding bills.
 From here, you can click directly on a vendors name to open up the
 details of all outstanding bills and the amounts due, or you can
 annotate any line for managements information. At any point in time
-while you’re looking through the report, you can print directly to Excel
+while you're looking through the report, you can print directly to Excel
 or PDF and get exactly what you see on the screen.
 
 .. seealso::

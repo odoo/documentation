@@ -115,7 +115,7 @@ is applied automatically on sales order, purchase orders, web orders and invoice
 
 But, if you set the fiscal position, Odoo will use this specific fiscal
 position for this customer on orders (example: construction companies).
-In such a case, it’s recommended to set the fiscal position on the
+In such a case, it's recommended to set the fiscal position on the
 customer form. Odoo will automatically reuse this value for orders and
 invoices, without trying to auto-detect the fiscal position.
 
@@ -123,7 +123,7 @@ If you set the fiscal position at the sale order or invoice level, it
 will only apply to this document only and not to future orders/invoices
 of the same customer.
 
-For eCommerce orders, the tax of the visitor’s cart will automatically
+For eCommerce orders, the tax of the visitor's cart will automatically
 update and apply the new tax after the visitor has logged in or filled
 in his shipping address.
 

@@ -91,7 +91,7 @@ proposes you the action you have to do. If you do it every day, you will
 have a few calls to do per day. If you do it once a month, you will have
 much more work once you do it.
 
-It’s up to you to organize the way you want to work. But it’s a good
+It's up to you to organize the way you want to work. But it's a good
 practice to reconcile your bank statements before launching the
 follow-ups. That way, all paid invoices will be reconciled and you will
 not send a follow-up letter to a customer that already paid his invoice.
@@ -116,7 +116,7 @@ From a customer follow-up proposition, you can:
 -  Print a letter, or send a regular mail (if you installed the Docsaway
    integration)
 
--  Plan the next reminder (but it’s better to keep in automatic mode so that Odoo
+-  Plan the next reminder (but it's better to keep in automatic mode so that Odoo
    will stick to the follow-up plan of the company)
 
 -  Drill down to an invoice
@@ -126,7 +126,7 @@ From a customer follow-up proposition, you can:
 
 .. note::
     You can force a customer statement, even if Odoo do not proposes
-    you to do it, because it’s not the right date yet. To do this, you
+    you to do it, because it's not the right date yet. To do this, you
     should go to the Aged Receivable report (in the report menu of the
     Accounting application). From this report, you can click on a customer
     to get to his customer statement.
