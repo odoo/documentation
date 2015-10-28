@@ -144,11 +144,3 @@ has been refused.
 
 In this case, click on the line related to this check to remove it from
 the bank statement matching.
-
-.. |image0| image:: ./media/image10.png
-.. |image1| image:: ./media/image07.png
-.. |image2| image:: ./media/image05.png
-.. |image3| image:: ./media/image13.png
-.. |image4| image:: ./media/image02.png
-.. |image5| image:: ./media/image08.png
-.. |image6| image:: ./media/image11.png
