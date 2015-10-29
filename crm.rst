@@ -10,3 +10,4 @@ CRM
    crm/overview
    crm/salesteam
    crm/leads
+   crm/reporting
