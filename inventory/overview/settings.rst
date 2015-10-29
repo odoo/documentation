@@ -9,7 +9,7 @@ the different screens you will need.
 Once you have installed the **Inventory** application, you should click on
 the top-right progressbar to get access to the implementation guide.
 
-.. image:: media/setup02.png
+.. image:: media/setup01.png
    :align: center
 
 The implementation guide will help you through the following steps:
