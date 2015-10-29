@@ -1,10 +1,9 @@
 ====================
-Warehouse Management
+Inventory Adjustment
 ====================
 
 .. toctree::
    :titlesonly:
    :glob:
 
-   management/adjustment
-   management/miscellaneous
+   adjustment/initial_inventory
