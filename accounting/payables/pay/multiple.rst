@@ -154,5 +154,3 @@ Now we are going back to bank statement and opening reconcile view.
 
 	`*Configure model of entries* <https://goo.gl/KRbXiu>`__
 
-
-.. rst-class:: text-muted
