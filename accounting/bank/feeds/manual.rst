@@ -98,8 +98,3 @@ To close the bank statement, just click on **Validate**.
 
 	* :doc:`../reconciliation/use_cases`
 	* :doc:`../feeds/synchronize`
-
-.. rst-class:: text-muted
-
-| Written by Benjamin Stiens (Odoo)
-| Proofread by Samuel Cabodi (Odoo)
