@@ -129,4 +129,4 @@ in his shipping address.
 
 .. seealso::
 
-  * :doc:`creation`
+  * :doc:`create`
