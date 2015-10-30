@@ -15,8 +15,9 @@ sale order, expenses, inventory moves, etc.
 Odoo uses the rules of double-entry bookkeeping system: all journal
 entries are automatically balanced (sum of debits = sum of credits).
 
-→ Understand Odoo's accounting transactions per document. (link to
-memento)
+.. seealso::
+
+	`Understand Odoo's accounting transactions per document <https://odoo.com/documentation/functional/accounting.html>`__
 
 Accrual and Cash Basis Methods
 ==============================
@@ -128,8 +129,9 @@ Odoo support both periodic (manual) and perpetual (automated)
 inventory valuations. The available methods are standard price,
 average price, LIFO (for countries allowing it) and FIFO.
 
-→ View impact of the valuation method on your transactions (link to
-memento)
+.. seealso::
+
+	`View impact of the valuation method on your transactions <https://odoo.com/documentation/functional/valuation.html>`__
 
 Easy retained earnings
 ======================
