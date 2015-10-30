@@ -147,10 +147,9 @@ model for cash discount.
 
 Now we are going back to bank statement and opening reconcile view.
 
-.. todo:
+.. seealso::
 
-	For bank statement reconciliation with model option you can follow
-	following link
+	For bank statement reconciliation with model option, see
 
-	`*Configure model of entries* <https://goo.gl/KRbXiu>`__
+	* :doc:`../../bank/reconciliation/configure`
 
