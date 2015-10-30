@@ -6,4 +6,5 @@ Taxes
    :titlesonly:
 
    taxes/application
+   taxes/create
    taxes/retention
