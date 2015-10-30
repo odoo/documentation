@@ -127,5 +127,6 @@ For eCommerce orders, the tax of the visitor's cart will automatically
 update and apply the new tax after the visitor has logged in or filled
 in his shipping address.
 
-.. todo::
-    seealso to **How to define new taxes**
+.. seealso::
+
+  * :doc:`creation`

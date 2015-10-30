@@ -96,12 +96,11 @@ After receiving bank statement from the bank with payment detail, you
 can reconcile the transaction from the Dashboard. It will automatically
 map the transaction amount.
 
-.. todo:
+.. seealso::
 	
-	For more detail on the bank reconciliation process, please read the
-	following document
+	For more detail on the bank reconciliation process, please read:
 
-	`*Use cases in the bank reconciliation process?* <https://goo.gl/GvGsZB>`__
+	* :doc:`../../bank/reconciliation/use_cases`
 
 Partial payments of several supplier bills
 ==========================================

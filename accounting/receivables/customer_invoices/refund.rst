@@ -62,5 +62,3 @@ Then, send the refund by regular mail or email to your customer.
 	refund invoice is sent before the customer has done a payment. If the
 	customer has already paid, they should be reimbursed by doing a customer
 	payment refund.
-
-	.. todo:: See doc ../customer_payments/refund

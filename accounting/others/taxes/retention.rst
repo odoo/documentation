@@ -65,6 +65,6 @@ The printed invoice will show the different amounts in each tax group.
 .. image:: media/retention03.png
    :align: center
 
-.. todo::
-    seealso How to define new taxes?
-    seealso How to report on taxes due?
+.. seealso::
+
+  * :doc:`create`
