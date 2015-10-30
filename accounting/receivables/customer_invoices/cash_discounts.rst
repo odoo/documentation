@@ -18,7 +18,7 @@ Payment terms
 -------------
 
 In order to manage cash discounts, we will use the payment terms
-concept of Odoo (From the Accounting module, go to :menuselection`Configuration -->
+concept of Odoo (From the Accounting module, go to :menuselection:`Configuration -->
 Management --> Payment terms --> Create`).
 
 Let's start with the above example: a 2% discount on an invoice due in
@@ -120,7 +120,6 @@ with the payment.
 .. image:: ./media/discount07.png
    :align: center
 
-Related topics
-==============
+.. seealso::
 
--  Overview of the invoicing processes
+  * :doc:`overview`
