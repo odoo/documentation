@@ -25,7 +25,7 @@ Odoo CRM Terminologies
 
 -  **Lead :** 
         Someone who becomes aware of your company or someone who
-        you decide to pursue for a sale, even if they don’t know about
+        you decide to pursue for a sale, even if they don't know about
         your company yet.
 
 -  **Opportunity :** 

@@ -7,7 +7,7 @@ Overview
 
 Odoo provides multi-currency support with automatic currency gross or
 loss entry adjustment. There are a few things Odoo has been to ease the
-user’s life.
+user's life.
 
 All the account transactions will be done using the company currency.
 However you can see two extra fields with the journal entry where

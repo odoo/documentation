@@ -8,5 +8,6 @@ Inventory
    :titlesonly:
 
    inventory/overview
+   inventory/delivery
    inventory/settings
    inventory/management

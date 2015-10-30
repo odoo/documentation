@@ -2,7 +2,7 @@
 How to analyze the sales performance of your team and get customize reports
 ===========================================================================
 
-As a manager, you need to constantly monitor your team’s performance
+As a manager, you need to constantly monitor your team's performance
 in order to help you take accurate and relevant decisions for the
 company. Therefore, the **Reporting** section of **Odoo Sales** represents a
 very important tool that helps you get a better understanding of where

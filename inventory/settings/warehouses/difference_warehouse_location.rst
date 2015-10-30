@@ -18,7 +18,7 @@ There are 3 types of locations:
     warehouses for which you are the owner. They can be the loading and
     unloading area of your warehouse, a shelf or a department, etc.
 
--   The **Partner Locations** are spaces within a customer and/or vendor’s
+-   The **Partner Locations** are spaces within a customer and/or vendor's
     warehouse. They work the same way as Physical Locations with the only
     difference being that you are not the owner of the warehouse.
 

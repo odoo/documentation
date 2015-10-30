@@ -49,7 +49,7 @@ the **Inventory submenu**, do not forget to select a supplier.
    :align: center
 
 .. tip::
-    Don’t forget to select the right product type in the product form. 
+    Don't forget to select the right product type in the product form. 
     A consumable can not be stocked and will thus not be accounted for in the stock valuation.
 
 Make to Order 
