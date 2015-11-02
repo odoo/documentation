@@ -13,3 +13,4 @@ Inventory
    inventory/settings
    inventory/management
    inventory/misc
+   inventory/lots_serial_numbers
