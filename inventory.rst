@@ -12,5 +12,6 @@ Inventory
    inventory/incoming
    inventory/settings
    inventory/management
+   inventory/shipping
    inventory/misc
    inventory/lots_serial_numbers
