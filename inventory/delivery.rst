@@ -11,3 +11,4 @@ Delivery Orders
    delivery/two_steps
    delivery/three_steps
    delivery/scheduled_dates
+   delivery/dropshipping
