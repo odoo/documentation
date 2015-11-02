@@ -12,3 +12,4 @@ Inventory
    inventory/incoming
    inventory/settings
    inventory/management
+   inventory/misc
