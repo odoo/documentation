@@ -9,5 +9,6 @@ Inventory
 
    inventory/overview
    inventory/delivery
+   inventory/incoming
    inventory/settings
    inventory/management

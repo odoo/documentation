@@ -52,7 +52,7 @@ Configuring drop-shipping
 -   Open the menu :menuselection:`Inventory --> Configuration --> Settings`. 
     Go to **Location & Warehouse**, locate the **Dropshipping**
     option and tick the box **Allow suppliers to deliver directly to
-    your customers**. Then, click on *Apply**.
+    your customers**. Then, click on **Apply**.
 
 .. image:: media/dropshipping06.png
    :align: center
@@ -79,7 +79,7 @@ How to send products from the customers directly to the suppliers
 .. image:: media/dropshipping01.png
    :align: center
 
--  Open the menu :menuselection:`Purchases --> Purchase --> Requests for Quotation`.
+-  Open the menu :menuselection:`Purchases --> Purchases --> Requests for Quotation`.
    The draft purchase order is automatically created from the
    procurement with the drop-shipping route. Once the order is
    confirmed, you will see that one shipment has been created.
