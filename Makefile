@@ -17,6 +17,7 @@ endif
 PAPEROPT_a4     = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
 ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
+ALLI18NSPHINXOPTS = -d $(BUILDDIR)/doctrees/$(LANG) $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) -D language=$(LANG) .
 # the i18n builder cannot share the environment and doctrees with the others
 I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
@@ -29,6 +30,7 @@ _extensions/odoo/static/style.css: $(lessfiles)
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
 	@echo "  html       to make standalone HTML files"
+	@echo "  i18nhtml   to make standalone translated HTML files"
 	@echo "  dirhtml    to make HTML files named index.html in directories"
 	@echo "  singlehtml to make a single large HTML file"
 	@echo "  pickle     to make pickle files"
@@ -58,6 +60,11 @@ html: _extensions/odoo/static/style.css
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)/html
 	@echo
 	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html."
+
+i18nhtml: _extensions/odoo/static/style.css
+	$(SPHINXBUILD) -b html $(ALLI18NSPHINXOPTS) $(BUILDDIR)/html/$(LANG)
+	@echo
+	@echo "Build finished. The HTML pages are in $(BUILDDIR)/html/$(LANG)."
 
 dirhtml:
 	$(SPHINXBUILD) -b dirhtml $(ALLSPHINXOPTS) $(BUILDDIR)/dirhtml
@@ -151,9 +158,9 @@ info:
 	@echo "makeinfo finished; the Info files are in $(BUILDDIR)/texinfo."
 
 gettext:
-	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) $(BUILDDIR)/locale
+	$(SPHINXBUILD) -b gettext $(I18NSPHINXOPTS) locale/sources
 	@echo
-	@echo "Build finished. The message catalogs are in $(BUILDDIR)/locale."
+	@echo "Build finished. The message catalogs are in locale/sources."
 
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) $(BUILDDIR)/changes

@@ -267,6 +267,10 @@ texinfo_documents = [
 github_user = 'odoo'
 github_project = 'documentation-user'
 
+# Where are stored the localisations files
+locale_dirs = ['locale/']
+
+
 def setup(app):
     app.add_stylesheet('accounting.css')
     app.add_javascript('prefixfree.min.js')
