@@ -33,7 +33,7 @@ In the **Unit of Measure** section, select the unit in which the product
 will be sold and in which internal transfers will be done.
 
 In the **Purchase Unit of Measure** section, select the unit in which
-you purchase the product. When you’re done, click on **Save**.
+you purchase the product. When you're done, click on **Save**.
 
 .. image:: media/uom10.png
    :align: center

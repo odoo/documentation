@@ -23,11 +23,11 @@ scanner** and the **mobile computer scanner**.
     your keyboard layout or can be configured to be so.
 
 -   The **bluetooth scanner** can be paired with a smartphone or a tablet and
-    is a good choice if you want to be mobile but don’t need a big
+    is a good choice if you want to be mobile but don't need a big
     investment. An approach is to log in Odoo on you smartphone, pair
     the bluetooth scanner with the smartphone and work in the
     warehouse with always the possibility to check your smartphone
-    from time to time and use the software ‘manually’.
+    from time to time and use the software 'manually'.
 
 -   For heavy use, the **mobile computer scanner** is the handiest solution.
     It consists in a small computer with a built-in barcode scanner.

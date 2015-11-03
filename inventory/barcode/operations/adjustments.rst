@@ -14,7 +14,7 @@ From the Barcode application:
 
 .. note::
     If you manage multiple locations, scan the location before scanning the
-    products. Eg. scan a shelf’s barcode ; scan each product on the
+    products. Eg. scan a shelf's barcode ; scan each product on the
     shelf ; repeat for each shelf in the wharehouse.
 
 -   When you've scanned all the items of the location, validate the

@@ -17,7 +17,7 @@ You can easily cancel the request made to the carrier system.
 How to cancel a shipping request? 
 =================================
 
--   If the delivery order is not **Validated**, then the request hasn’t been
+-   If the delivery order is not **Validated**, then the request hasn't been
     made. You can choose to cancel the delivery or to change the
     carrier.
 
