@@ -7,3 +7,4 @@ Products
    :glob:
 
    products/variants
+   products/uom
