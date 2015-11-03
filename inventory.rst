@@ -15,3 +15,4 @@ Inventory
    inventory/shipping
    inventory/misc
    inventory/lots_serial_numbers
+   inventory/barcode
