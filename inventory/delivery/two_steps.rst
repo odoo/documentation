@@ -8,14 +8,14 @@ Overview
 When an order goes to the shipping department for final delivery, Odoo
 is set up by default to utilize a **one-step** operation: once all goods are
 available, they are able to be shipped in a single delivery order.
-However, your company’s business process may have one or more steps that
+However, your company's business process may have one or more steps that
 happen before shipping. In the **two steps** process, the items in a delivery
 order are **picked** in the warehouse and brought to an **output location** for
 **shipping**. The goods are then shipped.
 
 In order to accomplish a **Pick + Ship** delivery in Odoo, there are a few 
 necessary configuration steps. These steps create an additional
-location, which by default is called **Output**. So, if your warehouse’s
+location, which by default is called **Output**. So, if your warehouse's
 code is ``WH``, this configuration will create a location called
 ``WH/Output``. Goods will move from ``WH/Stock`` to ``WH/Output`` in the first
 step (picking). Then, they move from ``WH/Output`` to ``WH/Customers`` (in the
@@ -49,7 +49,7 @@ check the radio button above).
 .. note::
     If you checked option **Advanced routing of products using rules**
     you may need to activate **Manage several locations per warehouse** if it
-    wasn’t activated beforehand.
+    wasn't activated beforehand.
 
 Configure warehouse for Pick + Ship
 ------------------------------------

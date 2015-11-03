@@ -18,7 +18,7 @@ customers.
 
 A few configuration steps are necessary in order to accomplish **Pick +
 Pack + Ship** in Odoo. These steps create some additional locations, which
-by default are called **Output** and **Packing Zone**. So, if your warehouse’s
+by default are called **Output** and **Packing Zone**. So, if your warehouse's
 code is ``WH``, this configuration will create a location called ``WH/Output``
 and another one called ``WH/Packing Zone``.
 

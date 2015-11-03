@@ -11,7 +11,7 @@ delivery system, products are sent from your supplier to your warehouse
 to be put in stock, and then shipped to your customers after ordering.
 With drop-shipping, no item is stocked. When a customer places an order
 in your shop, the item is delivered straight from the supplier to the
-customer. Therefore, the product doesn’t need to get through your
+customer. Therefore, the product doesn't need to get through your
 warehouse.
 
 Points to be considered while implementing drop-shipping

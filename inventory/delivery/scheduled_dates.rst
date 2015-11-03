@@ -60,7 +60,7 @@ Time** as well. Manufacturing lead time is the time needed to
 manufacture the product.
 
 .. tip::
-    Don’t forget to tick the manufacturing box in inventory if you
+    Don't forget to tick the manufacturing box in inventory if you
     want to create manufacturing routes.
 
 At the company level
