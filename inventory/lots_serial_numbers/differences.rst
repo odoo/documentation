@@ -27,7 +27,7 @@ clothes or food.
 
 **Serial numbers** are interesting for items that could require after-sales
 service, such as smartphones, laptops, fridges, and any electronic
-devices. You could use the manufacturer’s serial number or your own,
+devices. You could use the manufacturer's serial number or your own,
 depending on the way you manage these products
 
 When not to use
