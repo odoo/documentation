@@ -7,4 +7,8 @@ Warehouse Management
    :glob:
 
    management/adjustment
-   management/miscellaneous
+   management/delivery
+   management/incoming
+   management/misc
+   management/lots_serial_numbers
+   management/reporting

@@ -6,5 +6,6 @@ Products
    :titlesonly:
    :glob:
 
-   products/variants
    products/uom
+   products/variants
+   products/usage

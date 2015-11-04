@@ -1,6 +1,6 @@
-=============
-Miscellaneous
-=============
+========================
+Miscellaneous Operations
+========================
 
 .. toctree::
    :titlesonly:

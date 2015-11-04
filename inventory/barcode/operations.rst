@@ -7,7 +7,7 @@ Daily Operations
    :glob:
 
    operations/adjustments
-   operations/delivery
    operations/internal
-   operations/lots_serial_numbers
+   operations/delivery
    operations/receipts
+   operations/lots_serial_numbers

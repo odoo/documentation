@@ -1,8 +1,8 @@
 :code-column:
 
-====================
-Inventory Valuations
-====================
+===================================================
+What are the different inventory valuation methods
+===================================================
 
 Costing Method
 ==============

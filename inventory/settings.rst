@@ -6,4 +6,5 @@ Settings
    :titlesonly:
    :glob:
 
-   settings/*
+   settings/products
+   settings/warehouses
