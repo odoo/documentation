@@ -9,4 +9,5 @@ Bank Feeds
    feeds/qif
    feeds/coda
    feeds/synchronize
+   feeds/paypal
    feeds/manual
