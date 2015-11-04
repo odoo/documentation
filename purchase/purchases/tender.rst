@@ -6,3 +6,4 @@ Purchase Tenders
    :titlesonly:
 
    tender/manage_multiple_offers
+   tender/partial_purchase

@@ -6,3 +6,5 @@ Replenishment
    :titlesonly:
 
    replenishment/flows
+   replenishment/multicompany
+   replenishment/trouble_shooting

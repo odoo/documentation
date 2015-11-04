@@ -5,5 +5,6 @@ Overview
 .. toctree::
    :titlesonly:
 
-   overview/difference
-   overview/from_po_to_invoice
+   overview/concepts
+   overview/start
+   overview/process

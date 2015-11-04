@@ -131,7 +131,7 @@ some Invoices and Vendors Bills.
 	for more information about booking invoices and purchase orders see:
 
 	* :doc:`../../receivables/customer_invoices/overview`
-	* :doc:`../../../purchase/overview/from_po_to_invoice`
+	* :doc:`../../../purchase/overview/process/from_po_to_invoice`
 
 Go back in the budget list and find the Smith Project.
 

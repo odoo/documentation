@@ -9,7 +9,8 @@ products to your supplier. Once your supplier has answered your request,
 you can choose to go ahead with the offer and purchase or to turn down
 the offer.
 
-For more information on best uses, please read the chapter :doc:`../../overview/difference`
+For more information on best uses, please read the chapter 
+:doc:`../../overview/process/difference`
 
 Configuration
 =============
@@ -72,4 +73,4 @@ right corner of the order will show 1 Shipment and 0 Invoice.
 
 .. seealso:: 
 
-	:doc:`../../overview/from_po_to_invoice`
+	:doc:`../../overview/process/from_po_to_invoice`

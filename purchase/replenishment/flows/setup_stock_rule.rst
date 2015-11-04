@@ -133,10 +133,10 @@ based on your maximum quantity to replenish your stock.
          12:00PM.
 
          To know how to configure and run the schedulers manually, read the
-         document on :doc:`../../../inventory/management/miscellaneous/schedulers`
+         document on :doc:`../../../inventory/management/misc/schedulers`
 
 .. seealso::
   
   :doc:`replenishment_methods`
 
-  :doc:`../../../inventory/management/miscellaneous/schedulers`
+  :doc:`../../../inventory/management/misc/schedulers`

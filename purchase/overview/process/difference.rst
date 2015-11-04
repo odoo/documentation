@@ -80,7 +80,7 @@ If you want to know how to create a **Purchase Order**, read the
 documentation on :doc:`from_po_to_invoice`
 
 If you want to know how to create a **RfQ**, read the documentation
-on :doc:`../purchases/rfq/create`
+on :doc:`../../purchases/rfq/create`
 
 If you want to know how to create a **Purchase Tender**, read the
-documentation on :doc:`../purchases/tender/manage_multiple_offers`
+documentation on :doc:`../../purchases/tender/manage_multiple_offers`

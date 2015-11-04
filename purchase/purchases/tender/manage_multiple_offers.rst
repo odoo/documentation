@@ -9,7 +9,8 @@ Tender is sent to multiple suppliers, stating each are competing with
 one another, and that the best offer will win. The main interest is that
 it usually leads to better offers.
 
-For more information on best uses, please read the chapter :doc:`../../overview/difference`
+For more information on best uses, please read the chapter 
+:doc:`../../overview/process/difference`
 
 Configuration
 =============
@@ -128,6 +129,6 @@ back to your PT and click on **Done** to close the PT.
 
 .. seealso:: 
 
-	:doc:`../../overview/from_po_to_invoice`
+	:doc:`../../overview/process/from_po_to_invoice`
 
-	:doc:`../../overview/difference`
+	:doc:`../../overview/process/difference`
