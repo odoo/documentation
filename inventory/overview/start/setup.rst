@@ -4,15 +4,15 @@ How to setup Odoo inventory?
 
 The Odoo Inventory application has an implementation guide that you
 should follow to configure it. It's a step-by-step manual with links to
-the different screens you will need.
+the different screens you need.
 
-Once you have installed the **Inventory** application, you should click on
-the top-right progressbar to get access to the implementation guide.
+Once you have installed the **Inventory** application, click on
+the top-right progress bar to get access to the implementation guide.
 
 .. image:: media/setup01.png
    :align: center
 
-The implementation guide will help you through the following steps:
+The implementation guide helps you through the following steps:
 
 1. Setup your warehouse
 
@@ -35,6 +35,6 @@ The implementation guide will help you through the following steps:
 .. note::
 
 	If you want to set up operations with barcode scanner in your
-	warehouse, you should install the **Barcode** application that will add
+	warehouse, you should install the **Barcode** application that adds
 	features on top of the inventory application. The barcode application
 	will guide you to configure and use your scanner optimally.
