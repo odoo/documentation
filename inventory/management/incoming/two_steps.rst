@@ -50,8 +50,8 @@ stock (2 steps)**.
 .. image:: media/two_steps02.png
    :align: center
 
-How to receipt a shipment in 2 steps ?
-======================================
+How to receipt a shipment in 2 steps?
+=====================================
 
 How to process the Receipt step ?
 ---------------------------------

@@ -1,6 +1,6 @@
-====================
-Set up your software
-====================
+=====================================
+How to activate the barcodes in Odoo?
+=====================================
 
 The barcode scanning features can save you a lot of the time usually
 lost switching between the keyboard, the mouse and the scanner. Properly

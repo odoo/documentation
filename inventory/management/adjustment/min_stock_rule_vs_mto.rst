@@ -1,6 +1,6 @@
-==========================================================
-How to choose between minimum stock rule and make to order
-==========================================================
+===========================================================
+How to choose between minimum stock rule and make to order?
+===========================================================
 
 **Minimum Stock rules** and **Make to Order** have similar consequences but
 different rules. They should be used depending on your manufacturing and

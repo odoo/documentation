@@ -1,6 +1,6 @@
-====================
-Set up your hardware
-====================
+===========================
+Set up your barcode scanner
+===========================
 
 Getting started with barcode scanning in Odoo is fairly easy. Yet, a
 good user experience relies on an appropriate hardware setup. This guide

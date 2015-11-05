@@ -58,8 +58,8 @@ admitted in stock (3 steps)**.
 .. image:: media/three_steps01.png
    :align: center
 
-How to control a receipt ?
-==========================
+How to control a receipt?
+=========================
 
 How to process the receipt step ?
 ---------------------------------

@@ -1,6 +1,6 @@
-=======================================================
-How to setup your teams, sales process and objectives ?
-=======================================================
+======================================================
+How to setup your teams, sales process and objectives?
+======================================================
 
 This quick step-by-step guide will lead you through Odoo CRM and help
 you handle your sales funnel easily and constantly manage your sales
