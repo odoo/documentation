@@ -59,12 +59,6 @@ Types`
 .. image:: media/image01.png
    :align: center
 
-.. demo:fields:: account_asset.action_account_asset_asset_list_normal_sale
-
-.. demo:action:: account_asset.action_account_asset_asset_list_normal_sale
-
-   View *Asset Types* in our Online Demonstration
-
 Create assets manually
 ======================
 
