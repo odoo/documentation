@@ -1,6 +1,6 @@
-================================================
-How to define an installment plan for an invoice
-================================================
+=======================================================
+How to define an installment plan on customer invoices?
+=======================================================
 In order to manage installment plans related to an invoice, you should
 use payment terms in Odoo. They apply on both customer invoices and
 supplier bills.

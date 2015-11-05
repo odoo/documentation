@@ -1,6 +1,6 @@
-==========================
-How to manage vendor Bills
-==========================
+===========================
+How to manage vendor Bills?
+===========================
 
 The **Purchase** application allows you to manage your purchase orders,
 incoming products, and vendor bills all seamlessly in one place.

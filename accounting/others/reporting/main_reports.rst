@@ -1,6 +1,6 @@
-======================================
-What are the main reports available ?
-======================================
+====================================
+What are the main reports available?
+====================================
 
 Besides the reports created specifically in each localisation module, a
 few very useful **generic** and **dynamic reports** are available for all

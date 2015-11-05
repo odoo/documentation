@@ -1,6 +1,6 @@
-=========================================================
-How to apply specific taxes by country, state or city ?
-=========================================================
+======================================================
+How to apply specific taxes by country, state or city?
+======================================================
 
 In Odoo, the default tax to apply on a product/service is set on the
 **product form**. But, some customers may have specific tax rates because of

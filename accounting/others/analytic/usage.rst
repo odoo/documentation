@@ -1,6 +1,6 @@
-======================
-Analytic account usage
-======================
+==========================
+Analytic account use cases
+==========================
 
 The analytic accounting can be used for several purposes:
 

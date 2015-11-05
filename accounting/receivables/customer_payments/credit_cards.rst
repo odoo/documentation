@@ -1,5 +1,5 @@
 ===============================================
-How to handle credit card payments on invoices?
+How to accept credit card payments on invoices?
 ===============================================
 
 There are two ways to handle payments received by credit cards. Odoo

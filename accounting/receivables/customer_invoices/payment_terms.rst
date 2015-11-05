@@ -1,6 +1,6 @@
-================================
-Defining and using payment terms
-================================
+==================================
+How to setup and use payment terms
+==================================
 
 Payment terms define the conditions to pay an invoice. They apply on
 both customer invoices and supplier bills.

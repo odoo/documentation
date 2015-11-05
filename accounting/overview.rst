@@ -8,4 +8,3 @@ Overview
    overview/main_concepts
    overview/getting_started
    overview/process_overview
-   overview/terminologies

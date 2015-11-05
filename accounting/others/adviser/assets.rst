@@ -1,5 +1,5 @@
 ========================
-Manage Your Fixed Assets
+Manage your fixed assets
 ========================
 
 The "Assets" module allows you to keep track of your fixed assets like

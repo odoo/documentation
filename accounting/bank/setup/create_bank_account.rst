@@ -1,5 +1,6 @@
-Set up your new bank account
-============================
+================================
+How to setup a new bank account?
+================================
 
 In Odoo, you can manage multiple bank accounts. In this page, you will
 be guided in the creation, modification or deletion of a bank or a

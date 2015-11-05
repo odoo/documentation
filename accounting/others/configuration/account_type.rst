@@ -57,8 +57,8 @@ account types. Just pick the one related to your account.
 | Direct Costs                |
 +-----------------------------+
 
-How do I configure my accounts ?
-================================
+How do I configure my accounts?
+===============================
 
 Account types are automatically created when installing a chart of
 account. By default, Odoo provides a lot of chart of accounts, just

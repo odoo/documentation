@@ -1,5 +1,5 @@
 ================================
-How to manage retention taxes?
+How to manage withholding taxes?
 ================================
 
 A withholding tax, also called a retention tax, is a government
