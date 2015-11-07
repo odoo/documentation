@@ -23,14 +23,14 @@ Accrual and Cash Basis Methods
 ==============================
 
 Odoo support both accrual and cash basis reporting. This allows you to
-report income / expense at the time transactions occur, or when
-payment is made or received.
+report income / expense at the time transactions occur (i.e., accrual basis), or when
+payment is made or received (i.e., cash basis).
 
 Multi-companies
 ===============
 
 Odoo allows to manage several companies within the same database. Each
-company has its own chart of accounts an rules. You can get
+company has its own chart of accounts and rules. You can get
 consolidation reports following your consolidation rules.
 
 Users can access several companies but always work in one company at a
@@ -57,7 +57,7 @@ countries and specific modules exists per country for the
 specificities of the country like the chart of accounts, taxes, or
 bank interfaces.
 
-In particular, Odoo's core accounting engine support:
+In particular, Odoo's core accounting engine supports:
 
 * Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
   countries including Ireland, Canada, Australia, and New Zealand)
@@ -65,7 +65,7 @@ In particular, Odoo's core accounting engine support:
   sold/delivered.
 * European accounting where expenses are accounted at the supplier
   bill.
-* Storno accounting (italy) where refund invoices have negative
+* Storno accounting (Italy) where refund invoices have negative
   credit/debit instead of a reverting the original journal items.
 
 Odoo also have modules to comply with IFRS rules.
