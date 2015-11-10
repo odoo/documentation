@@ -34,7 +34,7 @@ your existing sales teams.
 
 You can easily personalize your sales teams aliases. Click on the More
 button from the sales team of your choice, then on **Settings** to access
-the sales team form. From the **Email Alias** field, enter your email
+the sales team form. Into the **Email Alias** field, enter your email
 alias and click on **Save**. Make sure to allow receiving emails from
 everyone.
 
