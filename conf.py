@@ -332,7 +332,7 @@ def localize(app, pagename, templatename, context, doctree):
     current_lang = app.config.language or 'en'
     context['language'] = current_lang.upper()
     context['languages'] = [
-        (la.upper(), _build_url(app.config.canonical_root, la, pagename))
+        (la.upper(), _build_url(app.config.canonical_root, (la != 'en' and la or ''), pagename))
         for la in app.config.languages.split(',')
         if la != current_lang
     ]
