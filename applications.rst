@@ -7,6 +7,7 @@ Applications
 
    accounting
    crm
+   sales
    expenses
    purchase
    recruitment
