@@ -23,7 +23,7 @@ Register bank statements manually
 Create your Bank Statements
 ---------------------------
 
-In the Dashboard, click on the button **NEW STATEMENT** related to the
+In the Dashboard, click on the button **New Statement** related to the
 bank journal. If some reconciliations need to be done, the New Statement
 link will be found underneath.
 
@@ -41,7 +41,7 @@ should be equal to the computed balance.
 .. image:: media/manual03.png
    :align: center
 
-When you are done, click on **SAVE**.
+When you are done, click on **Save**.
 
 Reconcile your Bank Statements
 ------------------------------
