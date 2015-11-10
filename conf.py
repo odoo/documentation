@@ -286,8 +286,13 @@ def setup(app):
     app.add_javascript('inventory.js');
     app.add_javascript('coa-valuation.js')
 
+    app.add_config_value('canonical_root', None, 'env')
+
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
+
+    app.connect('html-page-context', localize)
+    app.add_config_value('languages', '', 'env')
 
     app.connect('doctree-resolved', tag_toctrees)
 
@@ -314,3 +319,29 @@ def tag_toctrees(app, doctree, docname):
         return
 
     app.env.metadata[docname]['has-toc'] = True
+
+
+def localize(app, pagename, templatename, context, doctree):
+    """ Adds a language switcher below the menu, requires ``canonical_root``
+    and ``languages`` (an ordered, space-separated lists of all possible
+    languages).
+    """
+    if not (app.config.canonical_root and app.config.languages):
+        return
+
+    current_lang = app.config.language or 'en'
+    context['language'] = current_lang.upper()
+    context['languages'] = [
+        (la.upper(), _build_url(app.config.canonical_root, la, pagename))
+        for la in app.config.languages.split(',')
+        if la != current_lang
+    ]
+
+
+def _build_url(root, branch, pagename):
+    return "{canonical_url}{canonical_branch}/{canonical_page}".format(
+        canonical_url=root,
+        canonical_branch=branch,
+        canonical_page=(pagename + '.html').replace('index.html', '')
+                                           .replace('index/', ''),
+    )
