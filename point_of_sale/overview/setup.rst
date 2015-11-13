@@ -1,6 +1,6 @@
-======
-POSBox
-======
+============================
+Point of Sale Hardware Setup
+============================
 
 POSBox Setup Guide
 ==================
