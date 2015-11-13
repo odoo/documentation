@@ -5,4 +5,6 @@ Overview
 .. toctree::
    :titlesonly:
 
-   posbox/index
+   overview/start
+   overview/setup
+
