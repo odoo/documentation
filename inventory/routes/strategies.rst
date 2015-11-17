@@ -7,5 +7,4 @@ Putaway & Removal Strategies
    :glob:
 
    strategies/putaway
-   strategies/storage
    strategies/removal
