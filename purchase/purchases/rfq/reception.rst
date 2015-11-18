@@ -43,7 +43,7 @@ When creating the product, the **Product Type** field is important:
 
 .. tip:: 
     It's always good to create a **Miscellaneous** product for all 
-    the products you purchased rarely and for which you don’t want 
+    the products you purchased rarely and for which you don't want 
     to manage the stocks or have purchase/sale statistics. 
     If you create such a product, we recommend to set his product 
     type field as **Service**.

@@ -29,7 +29,7 @@ Confirm your RFQ to have a confirmed purchase order
 Cancel your Purchase Order
 ==========================
 
-Use case 1 : you didn’t receive your goods yet
+Use case 1 : you didn't receive your goods yet
 ----------------------------------------------
 
 If you confirmed your purchase order and did not received your goods
