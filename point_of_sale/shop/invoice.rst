@@ -25,6 +25,9 @@ directly set the correct **Quantity/Weight** by typing it on the keyboard.
 Add a customer
 ==============
 
+By selecting in the customer list
+---------------------------------
+
 On the main view, click on **Customer** (above **Payment**):
 
 .. image:: media/invoice03.png
@@ -44,6 +47,36 @@ clicking on the icon.
 .. note::
     For more explanation about adding a new customer. Please read the
     document :doc:`../advanced/register`.
+
+By using a barcode for customer
+-------------------------------
+
+On the main view, click on **Customer** (above **Payment**):
+
+.. image:: media/invoice03.png
+    :align: center
+
+Select a customer and click on the pencil to edit.
+
+.. image:: media/invoice09.png
+    :align: center
+
+Set a the barcode for customer by scanning it.
+
+.. image:: media/invoice10.png
+    :align: center
+
+Save modifications and now when you scan the customer's barcode, he is assigned
+to the order
+
+.. note::
+    Be careful with the **Barcode Nomenclature**. By default, customers' barcodes 
+    have to begin with 042. To check the default barcode nomenclature, go to
+    :menuselection:`Point of Sale --> Configuration --> Barcode Nomenclatures`.
+
+    .. image:: media/invoice11.png
+        :align: center
+
 
 Payment and invoicing
 =====================
