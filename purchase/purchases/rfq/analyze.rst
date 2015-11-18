@@ -4,7 +4,7 @@ How to analyze the performance of my vendors?
 
 If your company regularly buys products from several suppliers, it would
 be useful to get statistics on your purchases. There are several reasons
-to track and analyze your vendor’s performance :
+to track and analyze your vendor's performance :
 
 -  You can see how dependant from a supplier your company is;
 

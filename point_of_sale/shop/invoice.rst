@@ -63,7 +63,7 @@ Your invoice is printed and you can continue to make orders.
 Retrieve invoices of a specific customer
 ========================================
 
-To retrieve the customer’s invoices, go to the **Sale** application, click
+To retrieve the customer's invoices, go to the **Sale** application, click
 on :menuselection:`Sales --> Customers`.
 
 On the customer information view, click on the **Invoiced** button :
