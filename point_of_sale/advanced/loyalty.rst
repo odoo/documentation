@@ -57,12 +57,17 @@ Your new rule is now created and rewards can be added by clicking on
 Three types of reward can be given: 
 
 -   **Resale**: convert your points into money. Set a product that represents the value of 1 point.
+
 .. image:: media/loyalty14.png
     :align: center
+
 -   **Discount**: give a discount for an amount of points. Set a product with a price of ``0 €`` and without any taxes.
+
 .. image:: media/loyalty13.png
     :align: center
+
 -   **Gift**: give a gift for an amount of points
+
 .. image:: media/loyalty07.png
     :align: center
 
