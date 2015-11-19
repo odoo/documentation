@@ -13,3 +13,4 @@ Applications
    recruitment
    inventory
    point_of_sale
+   project
