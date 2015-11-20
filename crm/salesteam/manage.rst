@@ -6,3 +6,4 @@ Manage salespeople
    :titlesonly:
 
    manage/create_salesperson
+   manage/reward
