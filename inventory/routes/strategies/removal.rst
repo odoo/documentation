@@ -17,8 +17,8 @@ category** or on the **location**.
 Configuration
 =============
 
-In the **Inventory** application, 
-go to ..menuselection:`Configuration --> Settings`:
+In the **Inventory** application, go to :menuselection:`Configuration
+--> Settings`:
 
 .. image:: media/removal01.png
     :align: center
