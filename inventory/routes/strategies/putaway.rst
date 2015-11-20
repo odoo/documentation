@@ -68,6 +68,3 @@ There you can see current inventory by location.
 
 .. image:: media/putaway04.png
     :align: center
-
-.. seealso::
-    * :doc:`storage`
