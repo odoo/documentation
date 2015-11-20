@@ -72,7 +72,15 @@ today_fmt = '%B %d, %Y'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
-exclude_patterns = ['_build', 'README.*']
+exclude_patterns = [
+    # build, extensions, statics, templates
+    '_*',
+    # translations
+    'locale',
+    'README.*',
+    # virtualenv
+    'bin', 'include', 'lib',
+]
 
 # The reST default role (used for this markup: `text`) to use for all
 # documents.
