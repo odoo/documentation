@@ -34,6 +34,7 @@ extensions = [
     'html_domain',
     'demo_link',
     'github_link',
+    'embedded_video',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
