@@ -5,4 +5,5 @@ Main Concepts
 .. toctree::
    :titlesonly:
 
-   main_concepts/terminologies.rst
+   main_concepts/introduction
+   main_concepts/terminologies
