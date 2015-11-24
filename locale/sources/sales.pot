@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-10 16:15+0100\n"
+"POT-Creation-Date: 2015-11-24 11:08+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -68,6 +68,144 @@ msgstr ""
 msgid "How to invoice milestones of a project?"
 msgstr ""
 
+#: ../../sales/invoicing/services/milestones.rst:5
+msgid "There are different kind of service sales: prepaid volume of hours/days (e.g. support contract), billing based on time and material (e.g. billing consulting hours) or a fixed price contract (e.g. a project)."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:9
+msgid "In this section, we will have a look at how to invoice milestones of a project."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:12
+msgid "Milestone invoicing can be used for expensive or large scale projects, with each milestone representing a clear sequence of work that will incrementally build up to the completion of the contract. For example, a marketing agency hired for a new product launch could break down a project into the following milestones, each of them considered as one service with a fixed price on the sale order :"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:19
+msgid "Milestone 1 : Marketing strategy audit - 5 000 euros"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:21
+msgid "Milestone 2 : Brand Identity - 10 000 euros"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:23
+msgid "Milestone 3 : Campaign launch & PR - 8 500 euros"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:25
+msgid "In this case, an invoice will be sent to the customer each time a milestone will be successfully reached. That invoicing method is comfortable both for the company which is ensured to get a steady cash flow throughout the project lifetime and for the client who can monitor the project's progress and pay in several times."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:32
+msgid "You can also use milestones to invoice percentages of the entire project. For example, for a million euros project, your company might require a 15% upfront payment, 30% at the midpoint and the balance at the contract conclusion. In that case, each payment will be considered as one milestone."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:39
+#: ../../sales/invoicing/services/reinvoice.rst:26
+#: ../../sales/invoicing/services/reinvoice.rst:95
+#: ../../sales/invoicing/services/support.rst:17
+#: ../../sales/quotation/setup/first_quote.rst:21
+msgid "Configuration"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:42
+msgid "Install the Sales application"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:44
+#: ../../sales/invoicing/services/reinvoice.rst:28
+msgid "In order to sell services and to send invoices, you need to install the **Sales** application, from the **Apps** icon."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:51
+msgid "Create products"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:53
+msgid "In Odoo, each milestone of your project is considered as a product. From the **Sales** application, use the menu :menuselection:`Sales --> Products`, create a new product with the following setup:"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:57
+msgid "**Name**: Strategy audit"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:59
+#: ../../sales/invoicing/services/support.rst:50
+msgid "**Product Type**: Service"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:61
+msgid "**Invoicing Policy**: Delivered Quantities, since you will invoice your milestone after it has been delivered"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:64
+msgid "**Track Service**: Manually set quantities on order, as you complete each milestone, you will manually update their quantity from the **Delivered** tab on your sale order"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:72
+msgid "Apply the same configuration for the others milestones."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:75
+msgid "Managing your project"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:78
+msgid "Quotations and sale orders"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:80
+msgid "Now that your milestones (or products) are created, you can create a quotation or a sale order with each line corresponding to one milestone. For each line, set the **Ordered Quantity** to ``1`` as each milestone is completed once. Once the quotation is confirmed and transformed into a sale order, you will be able to change the delivered quantities when the corresponding milestone has been achieved."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:91
+msgid "Invoice milestones"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:93
+msgid "Let's assume that your first milestone (the strategy audit) has been successfully delivered and you want to invoice it to your customer. On the sale order, click on **Edit** and set the **Delivered Quantity** of the related product to ``1``."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:99
+msgid "As soon as the above modification has been saved, you will notice that the color of the line has changed to blue, meaning that the service can now be invoiced. In the same time, the invoice status of the SO has changed from **Nothing To Invoice** to **To Invoice**"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:104
+msgid "Click on **Create invoice** and, in the new window that pops up, select **Invoiceable lines** and validate. It will create a new invoice (in draft status) with only the **strategy audit** product as invoiceable."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:112
+msgid "In order to be able to invoice a product, you need to set up the **Accounting** application and to configure an accounting journal and a chart of account. Click on the following link to learn more: :doc:`../../../accounting/overview/getting_started/setup`"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:117
+msgid "Back on your sale order, you will notice that the **Invoiced** column of your order line has been updated accordingly and that the **Invoice Status** is back to **Nothing to Invoice**."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:121
+msgid "Follow the same workflow to invoice your remaining milestones."
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:124
+#: ../../sales/quotation/setup/first_quote.rst:127
+msgid ":doc:`recurring`"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:125
+#: ../../sales/invoicing/services/reinvoice.rst:186
+#: ../../sales/invoicing/services/support.rst:159
+msgid ":doc:`time_materials`"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:126
+msgid ":doc:`reinvoice`"
+msgstr ""
+
+#: ../../sales/invoicing/services/milestones.rst:127
+#: ../../sales/invoicing/services/reinvoice.rst:185
+msgid ":doc:`support`"
+msgstr ""
+
 #: ../../sales/invoicing/services/recurring.rst:3
 msgid "How to manage recurring invoices (through contracts)?"
 msgstr ""
@@ -76,8 +214,310 @@ msgstr ""
 msgid "How to re-invoice expenses to your customers?"
 msgstr ""
 
+#: ../../sales/invoicing/services/reinvoice.rst:5
+msgid "It often happens that your employees have to spend their personal money while working on a project for your client. Let's take the example of an employee paying a parking spot for a meeting with your client. As a company, you would like to be able to invoice that expense to your client."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:11
+msgid "In this documentation we will see two use cases. The first, very basic, consists of invoicing a simple expense to your client like you would do for a product. The second, more advanced, will consist of invoicing expenses entered in your expense system by your employees directly to your customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:18
+msgid "Use case 1: Simple expense invoicing"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:20
+msgid "Let's take the following example. You are working on a promotion campaign for one of your customers (``Agrolait``) and you have to print a lot of copies. Those copies are an expense for your company and you would like to invoice them."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:35
+msgid "Create product to be expensed"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:37
+msgid "You will need now to create a product called ``Copies``."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:39
+#: ../../sales/invoicing/services/reinvoice.rst:112
+msgid "From your **Sales** module, go to :menuselection:`Sales --> Products` and create a product as follows:"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:42
+msgid "**Product type**: consumable"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:44
+msgid "**Invoicing policy**: on delivered quantities (you will manually set the quantities to invoice on the sale order)"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:51
+msgid "Create a sale order"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:53
+msgid "Now that your product is correctly set up, you can create a sale order for that product (from the menu :menuselection:`Sales --> Sales Orders`) with the ordered quantities set to 0. Click on **Confirm the Sale** to create the sale order. You will be able then to manually change the delivered quantities on the sale order to reinvoice the copies to your customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:64
+#: ../../sales/invoicing/services/reinvoice.rst:177
+msgid "Invoice expense to your client"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:66
+msgid "At the end of the month, you have printed ``1000`` copies on behalf of your client and you want to re-invoice them. From the related sale order, click on **Delivered Quantities**, manually enter the correct amount of copies and click on **Save**. Your order line will turn blue, meaning that it is ready to be invoiced. Click on **Create invoice**."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:73
+msgid "The total amount on your sale order will be of 0 as it is computed on the ordered quantities. It is your invoice which will compute the correct amount due by your customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:77
+msgid "The invoice generated is in draft, so you can always control the quantities and change the amount if needed. You will notice that the amount to be invoiced is based here on the delivered quantities."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:84
+msgid "Click on validate to issue the payment to your customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:87
+msgid "Use case 2: Invoice expenses via the expense module"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:89
+msgid "To illustrate this case, let's imagine that your company sells some consultancy service to your customer ``Agrolait`` and both parties agreed that the distance covered by your consultant will be re-invoiced at cost."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:97
+msgid "Here, you will need to install two more modules:"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:99
+msgid "Expense Tracker"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:101
+msgid "Accounting, where you will need to activate the analytic accounting from the settings"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:108
+msgid "Create a product to be expensed"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:110
+msgid "You will now need to create a product called ``Kilometers``."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:115
+msgid "Product can be expensed"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:117
+msgid "Product type: Service"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:119
+msgid "Invoicing policy: invoice based on time and material"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:121
+msgid "Expense invoicing policy: At cost"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:123
+msgid "Track service: manually set quantities on order"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:129
+msgid "Create a sales order"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:131
+msgid "Still from the Sales module, go to :menuselection:`Sales --> Sales Orders` and add your product **Consultancy** on the order line."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:135
+msgid "If your product doesn't exist yet, you can configure it on the fly from the SO. Just type the name on the **product** field and click on **Create and edit** to configure it."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:139
+msgid "Depending on your product configuration, an **Analytic Account** may have been generated automatically. If not, you can easily create one in order to link your expenses to the sale order. Do not forget to confirm the sale order."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:148
+msgid "Refer to the documentation :doc:`../../../accounting/others/analytic/usage` to learn more about that concept."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:152
+msgid "Create expense and link it to SO"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:154
+msgid "Let's assume that your consultant covered ``1.000km`` in October as part of his consultancy project. We will create a expense for it and link it to the related sales order thanks to the analytic account."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:158
+msgid "Go to the **Expenses** module and click on **Create**. Record your expense as follows:"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:161
+msgid "**Expense description**: Kilometers October 2015"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:163
+msgid "**Product**: Kilometers"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:165
+msgid "**Quantity**: 1.000"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:167
+msgid "**Analytic account**: SO0019 - Agrolait"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:172
+msgid "Click on **Submit to manager**. As soon as the expense has been validated and posted to the journal entries, a new line corresponding to the expense will automatically be generated on the sale order."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:179
+msgid "You can now invoice the invoiceable lines to your customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:187
+msgid ":doc:`milestones`"
+msgstr ""
+
+#: ../../sales/invoicing/services/reinvoice.rst:188
+msgid ":doc:`../products/delivery`"
+msgstr ""
+
 #: ../../sales/invoicing/services/support.rst:3
 msgid "How to invoice a support contract (prepaid hours)?"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:5
+msgid "There are different kinds of service sales: prepaid volume of hours/days (e.g. support contract), billing based on time and material (e.g. billing consulting hours) and a fixed price contract (e.g. a project)."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:9
+msgid "In this section, we will have a look at how to sell and keep track of a pre-paid support contract."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:12
+msgid "As an example, you may sell a pack of ``50 Hours`` of support at ``$25,000``. The price is fixed and charged initially. But you want to keep track of the support service you did for the customer."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:20
+msgid "Install the Sales and Timesheet applications"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:22
+msgid "In order to sell services, you need to install the **Sales** application, from the **Apps** icon. Install also the **Timesheets** application if you want to track support services you worked on every contract."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:33
+msgid "Create Products"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:35
+msgid "By default, products are sold by number of units. In order to sell services ``per hour``, you must allow using multiple unit of measures. From the **Sales** application, go to the menu :menuselection:`Configuration --> Settings`. From this screen, activate the multiple **Unit of Measures** option."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:44
+msgid "In order to sell a support contract, you must create a product for every support contract you sell. From the **Sales** application, use the menu :menuselection:`Sales --> Products`, create a new product with the following setup:"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:48
+msgid "**Name**: Technical Support"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:52
+msgid "**Unit of Measure**: Hours"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:54
+msgid "**Invoicing Policy**: Ordered Quantities, since the service is prepaid, we will invoice the service based on what has been ordered, not based on delivered quantities."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:58
+msgid "**Track Service**: Timesheet on contracts. An analytic account will automatically be created for every order containing this service so that you can track hours in the related account."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:66
+msgid "There are different ways to track the service related to a sale order or product sold. With the above configuration, you can only sell one support contract per order. If your customer orders several service contracts on timesheet, you will have to split the quotation into several orders."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:72
+msgid "Note that you can sell in different unit of measure than hours, example: days, pack of 40h, etc. To do that, just create a new unit of measure in the **Unit of Measure** category and set a conversion ratio compared to **Hours** (example: ``1 day = 8 hours``)."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:78
+msgid "Managing support contract"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:81
+msgid "Quotations and Sale Orders"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:83
+msgid "Once the product is created, you can create a quotation or a sale order with the related product. Once the quotation is confirmed and transformed into a sale order, your users will be able to record services related to this support contract using the timesheet application."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:93
+msgid "Timesheets"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:95
+msgid "To track the service you do on a specific contract, you should use the timesheet application. An analytic account related to the sale order has been automatically created (``SO009 - Agrolait`` on the screenshot here above), so you can start tracking services as soon as it has been sold."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:104
+msgid "Control delivered support on the sale order"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:106
+msgid "From the **Sales** application, use the menu :menuselection:`Sales --> Sales Orders`  to control the progress of every order. On the sales order line related to the support contract, you should see the **Delivered Quantities** that are updated automatically, based on the number of hours in the timesheet."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:116
+msgid "Upselling and renewal"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:118
+msgid "If the number of hours you performed on the support contract is bigger or equal to the number of hours the customer purchased, the sale order **Invoicing Status** is automatically set to **Upselling**. This means you have an opportunity to sell an extra contract to the customer since he used all his quota of service."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:124
+msgid "Periodically (ideally once every two weeks), you should check the sales order that are in an upselling status. To do this, go to the :menuselection:`Sales --> Sales Order` menu and use the **Upselling** filter to get all orders that are in upselling."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:130
+msgid "If you use Odoo CRM, a good practice is to create an opportunity for every sale order in upselling invoice status so that you easily track your upselling effort."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:134
+msgid "If you sell an extra support contract, you can either add a new line on the existing sale order (thus, you continue to timesheet on the same order) or create a new order (thus, people will timesheet their hours on the new contract). To unmark the sale order as **Upselling**, you can set the sale order as done and it will disappear from your upselling list."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:141
+msgid "Special Configuration"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:143
+msgid "When creating the product form, you may set a different approach to track the service:"
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:146
+msgid "**Create task and track hours**: in this mode, a task is created for every sale order line. Then when you do the timesheet, you don't record hours on a sale order/contract, but you record hours on a task (that represents the contract). The advantage of this solution is that it allows to sell several service contracts within the same sale order."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:153
+msgid "**Manually**: you can use this mode if you don't record timesheets in Odoo. The number of hours you worked on a specific contract can be recorded manually on the sale order line directly, in the delivered quantity field."
+msgstr ""
+
+#: ../../sales/invoicing/services/support.rst:160
+msgid ":doc:`../../../inventory/settings/products/uom`"
 msgstr ""
 
 #: ../../sales/invoicing/services/time_materials.rst:3
@@ -85,11 +525,76 @@ msgid "How to invoice based on time and material?"
 msgstr ""
 
 #: ../../sales/overview.rst:3
+#: ../../sales/quotation/setup/first_quote.rst:6
 msgid "Overview"
 msgstr ""
 
 #: ../../sales/overview/main_concepts.rst:3
 msgid "Main Concepts"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:3
+msgid "Introduction to Odoo Sales"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:11
+msgid "Transcript"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:13
+msgid "As a sales manager, closing opportunities with Odoo Sales is really simple."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:16
+msgid "I selected a predefined quotation for a new product line offer. The products, the service details are already in the quotation. Of course, I can adapt the offer to fit my clients needs."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:20
+msgid "The interface is really smooth. I can add references, some catchy phrases such as closing triggers (*here, you save $500 if you sign the quote within 15 days*). I have a beautiful and modern design. This will help me close my opportunities more easily."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:26
+msgid "Plus, reviewing the offer from a mobile phone is easy. Really easy. The customer got a clear quotation with a table of content. We can communicate easily. I identified an upselling opportunity. So, I adapt the offer by adding more products. When the offer is ready, the customer just need to sign it online in just a few clicks. Odoo Sales is integrated with major shipping services: UPS, Fedex, USPS and more. The signed offer creates a delivery order automatically."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:35
+msgid "That's it, I sucesfully sold my products in just a few clicks."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:37
+msgid "Oh, I also have the transaction and communication history at my fingertips. It's easy for every stakeholder to know clearly the past interaction. And any information related to the transaction."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:42
+msgid "If you want to show information, I would do it from a customer form, something like:"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:45
+msgid "Kanban of customers, click on one customer"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:47
+msgid "Click on opportunities, click on quotation"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:49
+msgid "Come back to customers (breadcrum)"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:51
+msgid "Click on customer statement letter"
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:53
+msgid "Anytime, I can get an in-depth report of my sales activity. Revenue by salespeople or department. Revenue by category of product, drill-down to specific products, by quarter or month,... I like this report: I can add it to my dashboard in just a click."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:58
+msgid "Odoo Sales is a powerful, yet easy-to-use app. At first, I used the sales planner. Thanks to it, I got tips and tricks to boost my sales performance."
+msgstr ""
+
+#: ../../sales/overview/main_concepts/introduction.rst:62
+msgid "Try Odoo Sales now and get beautiful quotations, amazing dashboards and increase your success rate."
 msgstr ""
 
 #: ../../sales/overview/main_concepts/invoicing.rst:3
@@ -174,6 +679,110 @@ msgstr ""
 
 #: ../../sales/quotation/setup/first_quote.rst:3
 msgid "How to create my first quotation?"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:8
+msgid "Quotations are documents sent to customers to offer an estimated cost for a particular set of goods or services. The customer can accept the quotation, in which case the seller will have to issue a sales order, or refuse it."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:13
+msgid "For example, my company sells electronic products and my client Agrolait showed interest in buying ``3 iPads`` to facilitate their operations. I would like to send them a quotation for those iPads with a sales price of ``320 USD`` by iPad with a ``5%`` discount."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:18
+msgid "This section will show you how to proceed."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:24
+msgid "Install the Sales Management module"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:26
+msgid "In order to be able to issue your first quotation, you'll need to install the **Sales Management** module from the app module in the Odoo backend."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:34
+msgid "Allow discounts on sales order line"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:36
+msgid "Allowing discounts on quotations is a common sales practice to improve the chances to convert the prospect into a client."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:39
+msgid "In our example, we wanted to grant ``Agrolait`` with a ``5%`` discount on the sale price. To enable the feature, go into the **Sales** application, select :menuselection:`Configuration --> Settings` and, under **Quotations and Sales**, tick **Allow discounts on sales order line** (see picture below) and apply your changes."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:49
+msgid "Create your quotation"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:51
+msgid "To create your first quotation, click on :menuselection:`Sales --> Quotations` and click on **Create**. Then, complete your quotation as follows:"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:55
+msgid "Customer and Products"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:57
+msgid "The basic elements to add to any quotation are the customer (the person you will send your quotation to) and the products you want to sell. From the quotation view, choose the prospect from the **Customer** drop-down list and under **Order Lines**, click on **Add an item** and select your product. Do not forget to manually add the number of items under **Ordered Quantity** and the discount if applicable."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:67
+msgid "If you don't have any customer or product recorded on your Odoo environment yet, you can create them on the fly directly from your quotations :"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:71
+msgid "To add a new customer, click on the **Customer** drop-down menu and click on **Create and edit**. In this new window, you will be able to record all the customer details, such as the address, website, phone number and person of contact."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:76
+msgid "To add a new product, under **Order line**, click on add an item and on **Create and Edit** from the drop-down list. You will be able to record your product information (product type, cost, sale price, invoicing policy, etc.) along with a picture."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:82
+msgid "Taxes"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:84
+msgid "To parameter taxes, simply go on the taxes section of the product line and click on **Create and Edit**. Fill in the details (for example if you are subject to a ``21%`` taxe on your sales, simply fill in the right amount in percentage) and save."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:93
+msgid "Terms and conditions"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:95
+msgid "You can select the expiration date of your quotation and add your company's terms and conditions directly in your quotation (see picture below)."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:103
+msgid "Preview and send quotation"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:105
+msgid "If you want to see what your quotation looks like before sending it, click on the **Print** button (upper left corner). It will give you a printable PDF version with all your quotation details."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:113
+msgid "Update your company's details (address, website, logo, etc) appearing on your quotation from the the **Settings** menu on the app switcher, and on click on the link :menuselection:`Settings --> General settings --> Configure company data`."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:118
+msgid "Click on **Send by email** to automatically send an email to your customer with the quotation as an attachment. You can adjust the email body before sending it and even save it as a template if you wish to reuse it."
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:128
+msgid ":doc:`../online/creation`"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:129
+msgid ":doc:`optional`"
+msgstr ""
+
+#: ../../sales/quotation/setup/first_quote.rst:130
+msgid ":doc:`terms_conditions`"
 msgstr ""
 
 #: ../../sales/quotation/setup/optional.rst:3
