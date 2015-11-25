@@ -10,9 +10,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0 Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-17 09:56+0100\n"
-"PO-Revision-Date: 2015-11-19 18:47+0000\n"
-"Last-Translator: Javier Sabena <jsabena@gmail.com>\n"
+"POT-Creation-Date: 2015-11-24 11:08+0100\n"
+"PO-Revision-Date: 2015-11-25 09:02+0000\n"
+"Last-Translator: Martin Trigaux\n"
 "Language-Team: Spanish (http://www.transifex.com/odoo/odoo-9-doc/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -668,6 +668,7 @@ msgstr ""
 #: ../../inventory/routes/concepts/use_routes.rst:22
 #: ../../inventory/routes/costing/landed_costs.rst:18
 #: ../../inventory/routes/strategies/putaway.rst:23
+#: ../../inventory/routes/strategies/removal.rst:18
 #: ../../inventory/settings/products/packages.rst:17
 #: ../../inventory/settings/products/packages.rst:66
 #: ../../inventory/settings/products/uom.rst:17
@@ -968,6 +969,7 @@ msgstr ""
 #: ../../inventory/routes/concepts/use_routes.rst:6
 #: ../../inventory/routes/costing/landed_costs.rst:6
 #: ../../inventory/routes/strategies/putaway.rst:6
+#: ../../inventory/routes/strategies/removal.rst:6
 #: ../../inventory/settings/products/packages.rst:6
 #: ../../inventory/settings/products/uom.rst:6
 #: ../../inventory/shipping/operation/cancel.rst:6
@@ -4045,18 +4047,18 @@ msgstr ""
 msgid ""
 "The Odoo Inventory application has an implementation guide that you should "
 "follow to configure it. It's a step-by-step manual with links to the "
-"different screens you will need."
+"different screens you need."
 msgstr ""
 
 #: ../../inventory/overview/start/setup.rst:9
 msgid ""
-"Once you have installed the **Inventory** application, you should click on "
-"the top-right progressbar to get access to the implementation guide."
+"Once you have installed the **Inventory** application, click on the top-"
+"right progress bar to get access to the implementation guide."
 msgstr ""
 
 #: ../../inventory/overview/start/setup.rst:15
-msgid "The implementation guide will help you through the following steps:"
-msgstr "La guía de implementación le ayudará a través de los siguientes pasos:"
+msgid "The implementation guide helps you through the following steps:"
+msgstr ""
 
 #: ../../inventory/overview/start/setup.rst:17
 msgid "Setup your warehouse"
@@ -4091,9 +4093,9 @@ msgstr ""
 #: ../../inventory/overview/start/setup.rst:37
 msgid ""
 "If you want to set up operations with barcode scanner in your warehouse, you"
-" should install the **Barcode** application that will add features on top of"
-" the inventory application. The barcode application will guide you to "
-"configure and use your scanner optimally."
+" should install the **Barcode** application that adds features on top of the"
+" inventory application. The barcode application will guide you to configure "
+"and use your scanner optimally."
 msgstr ""
 
 #: ../../inventory/routes.rst:3
@@ -4949,17 +4951,250 @@ msgstr ""
 msgid "There you can see current inventory by location."
 msgstr ""
 
-#: ../../inventory/routes/strategies/putaway.rst:73
-msgid ":doc:`storage`"
-msgstr ""
-
 #: ../../inventory/routes/strategies/removal.rst:3
 msgid ""
 "What is a removal strategy (FIFO, LIFO, FEFO, Specific Indentification)?"
 msgstr ""
 
-#: ../../inventory/routes/strategies/storage.rst:3
-msgid "How to store specific products to specific locations?"
+#: ../../inventory/routes/strategies/removal.rst:8
+msgid ""
+"Removal strategies are usually in picking operations to select the best "
+"products in order to optimize the distance for the worker, for quality "
+"control purpose or due to reason of product expiration."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:12
+msgid ""
+"When a product movement needs to be done, Odoo will find available products "
+"that can be assigned to shipping. The way Odoo assign these products depend "
+"on the **removal strategy** that is defined on the **product category** or "
+"on the **location**."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:20
+msgid ""
+"In the **Inventory** application, go to :menuselection:`Configuration --> "
+"Settings`:"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:29
+msgid ""
+"Check **Track lots or serial numbers**, **Manage several location per "
+"warehouse** and **Advanced routing of products using rules**, then click on "
+"**Apply**."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:33
+msgid ""
+"Then, open :menuselection:`Configuration --> Locations` and open the "
+"location on which you want to apply a removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:40
+msgid "Types of removal strategy"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:43
+msgid "FIFO ( First In First Out )"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:45
+msgid ""
+"A **First In First Out** strategy implies that the products that were "
+"stocked first will move out first. Companies should use FIFO method if they "
+"are selling perishable goods. Companies selling products with relatively "
+"short demand cycles, such as clothes, also may have to pick FIFO to ensure "
+"they are not stuck with outdated styles in inventory."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:51
+msgid ""
+"Go to :menuselection:`Inventory --> Configuration --> Locations`, open the "
+"stock location and set **FIFO** removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:54
+msgid "Let's take one example of FIFO removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:56
+msgid ""
+"In your warehouse stock (``WH/Stock``) location, there are ``3`` lots of "
+"``iPod 32 Gb`` available."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:59
+msgid ""
+"You can find details of available inventory in inventory valuation report."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:65
+msgid "Create one sales order ``25`` unit of ``iPod 32 GB`` and confirm it."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:67
+msgid ""
+"You can see in the outgoing shipment product that the ``Ipod 32 Gb`` are "
+"assigned with the **oldest** lots, using the FIFO removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:75
+msgid "LIFO (Last In First Out)"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:77
+msgid ""
+"In this warehouse management, the products which are brought in the last, "
+"moves out the first. LIFO is used in case of products which do not have a "
+"shelf life."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:81
+msgid ""
+"Go to :menuselection:`Inventory --> Configuration --> Locations`, open the "
+"stock location and set **LIFO** removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:84
+msgid ""
+"In our example, let's check the current available stock of ``Ipod 32 Gb`` on"
+" ``WH/Stock`` location."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:90
+msgid "Create a sale order with ``10`` units of ``Ipod 32 Gb``."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:92
+msgid ""
+"You can see in the outgoing shipment product that the ``Ipod 32 Gb`` are "
+"assigned with the **newest** lots, using the LIFO removal strategy."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:100
+msgid "FEFO ( First Expiry First Out )"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:102
+msgid ""
+"In FEFO warehouse management, the products are dispatched from the warehouse"
+" according to their expiration date."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:105
+msgid ""
+"Go to :menuselection:`Inventory --> Configuration --> Setting`. Check the "
+"option **Define Expiration date on serial numbers**. Then click on **Apply**"
+" to save changes."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:112
+msgid ""
+"It will allow you to set **best before date**, **end of life date**, **alert"
+" date** and **removal date** on the serial number. Go to "
+":menuselection:`Inventory Control --> Serial Numbers/Lots`."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:119
+msgid ""
+"**Best Before Date**: This is the date on which the goods with this serial "
+"number start deteriorating, without being dangerous yet."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:122
+msgid ""
+"**End of Life Date:** This is the date on which the goods with this serial "
+"number may become dangerous and must not be consumed."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:125
+msgid ""
+"**Removal Date:** This is the date on which the goods with this serial "
+"Number should be removed from the stock."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:128
+msgid ""
+"**Alert Date:** This is the date on which an alert should be notified about "
+"the goods with this serial number."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:131
+msgid ""
+"Products will pick first with expiry date (removal date), So you have to set"
+" removal date on lot/serial numbers."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:134
+msgid ""
+"To set the removal strategy on location, go to :menuselection:`Configuration"
+" --> Locations` and choose FEFO."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:140
+msgid ""
+"Let's take an example, there are ``3`` lots of ``ice cream`` available in "
+"``WH/Stock`` location: ``LOT0001``, ``LOT0002``, ``LOT0003`` with different "
+"expiration date."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:145
+msgid "**Lot / Serial No**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:145
+msgid "**Product**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:145
+msgid "**Expiration Date**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:147
+msgid "LOT0001"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:147
+#: ../../inventory/routes/strategies/removal.rst:149
+#: ../../inventory/routes/strategies/removal.rst:151
+msgid "Ice Cream"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:147
+msgid "08/20/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:149
+msgid "LOT0002"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:149
+msgid "08/10/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:151
+msgid "LOT0003"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:151
+msgid "08/15/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:154
+msgid ""
+"We will create a sale order with ``15kg`` of ``ice cream`` and confirm it."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:156
+msgid ""
+"The outgoing shipment related to sale order will make the move based on "
+"removal strategy **FEFO**."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:159
+msgid ""
+"It will take ``10kg`` from ``LOT0002`` and ``5kg`` from ``LOT0003`` based on"
+" the removal dates."
 msgstr ""
 
 #: ../../inventory/settings.rst:3
