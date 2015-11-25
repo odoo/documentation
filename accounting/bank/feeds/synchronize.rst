@@ -36,12 +36,14 @@ Odoo Enterprise Users
 ---------------------
 
 If you plan to use a bank interface with your Odoo Enterprise
-subscription, contact `Odoo Support <mailto:online@odoo.com>`__ in
-order to get the credentials to sync Yodlee or Plaid with your bank
-accounts.
+subscription, you don't have to do anything special, just make sure that your database is registered with your Odoo Enterprise contract.
 
-Once you get your credentials, you can register them from the
-:menuselection:`Configuration --> Settings` menu of the Accounting application.
+.. note::
+   you might want to check that you don't have a firewall/proxy blocking the following addresses
+   
+   * https://onlinesync.odoo.com/
+   * https://api.plaid.com/
+
 
 Sync your bank feeds
 ====================
