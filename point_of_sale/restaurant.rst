@@ -10,3 +10,4 @@ Advanced Restaurant Features
    restaurant/split
    restaurant/print
    restaurant/tips
+   restaurant/transfer
