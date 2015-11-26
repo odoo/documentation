@@ -11,3 +11,4 @@ Advanced Restaurant Features
    restaurant/print
    restaurant/tips
    restaurant/transfer
+   restaurant/multi_orders
