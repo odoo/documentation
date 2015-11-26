@@ -32,6 +32,10 @@ Configuration
 If you have just started with Odoo CRM and haven't set up your sales
 team nor registered your salespeople, :doc:`read this documentation first <../../overview/started/setup>`.
 
+.. note::
+    You have to install the module **Lead Scoring**. Go to 
+    :menuselection:`Apps` and install it if it's not the case already.
+
 Define rules for a sales team
 =============================
 
