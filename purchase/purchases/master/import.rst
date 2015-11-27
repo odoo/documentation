@@ -34,8 +34,8 @@ or update an existing vendor pricelist. In both scenarios, we assume
 your product list and vendor list is updated and you want to import the
 price list of vendors for a given product.
 
-.. note::
-    To understand big principle of import of data, we invite you to read related doc.
+.. todo::
+    note when import page has been written To understand the principles of import of data, we invite you to read the following document.
 
 To import a list from a document, the best pratice is to export first to
 get an example of data formating and a proper header to reimport.
