@@ -6,5 +6,5 @@ Lots and Serial Numbers
    :titlesonly:
    :glob:
 
-   reporting/valuation_methods
-   reporting/inventory_valuation
+   reporting/valuation_methods_continental
+   reporting/valuation_methods_anglo_saxon
