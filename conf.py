@@ -294,6 +294,7 @@ def setup(app):
     app.add_javascript('inventory.js');
     app.add_javascript('coa-valuation.js')
     app.add_javascript('coa-valuation-continental.js')
+    app.add_javascript('coa-valuation-anglo-saxon.js')
 
     app.add_config_value('canonical_root', None, 'env')
 
