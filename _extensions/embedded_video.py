@@ -55,7 +55,7 @@ class Youtube(IframeVideo):
 
 
 class Vimeo(IframeVideo):
-    html = '<iframe src="http://player.vimeo.com/video/%(video_id)s" \
+    html = '<iframe src="https://player.vimeo.com/video/%(video_id)s" \
     width="%(width)u" height="%(height)u" frameborder="0" \
     webkitAllowFullScreen mozallowfullscreen allowFullScreen \
     class="align-%(align)s"></iframe>'
