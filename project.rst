@@ -12,3 +12,4 @@ Project
    project/planning
    project/advanced
    project/reporting
+   project/application
