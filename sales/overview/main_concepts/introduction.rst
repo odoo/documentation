@@ -2,7 +2,7 @@
 Introduction to Odoo Sales
 ==========================
 
-.. youtube:: PWKez0gn6Ts
+.. youtube:: VMuCr5_arsY
     :align: right
     :width: 700
     :height: 394
