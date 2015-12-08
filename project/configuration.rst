@@ -7,5 +7,4 @@ Configuration and basic usage
 
    configuration/setup
    configuration/visualization
-   configuration/collaboration
    configuration/time_record

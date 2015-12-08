@@ -9,7 +9,5 @@ Request for Quotations
    rfq/bills
    rfq/reception
    rfq/cancel
-   rfq/currency
    rfq/approvals
    rfq/analyze
-   rfq/subcontracting

@@ -6,4 +6,3 @@ Planning your project
    :titlesonly:
 
    planning/assignments
-   planning/forecast

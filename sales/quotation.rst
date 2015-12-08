@@ -6,4 +6,3 @@ Quotation
    :titlesonly:
 
    quotation/setup
-   quotation/online

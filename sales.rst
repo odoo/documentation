@@ -10,6 +10,3 @@ Sales
    sales/overview
    sales/quotation
    sales/invoicing
-   sales/products_prices
-   sales/advanced
-   sales/reporting

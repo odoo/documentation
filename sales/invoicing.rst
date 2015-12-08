@@ -6,5 +6,3 @@ Invoicing Method
    :titlesonly:
 
    invoicing/services
-   invoicing/products
-   invoicing/misc

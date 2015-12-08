@@ -11,5 +11,4 @@ Project
    project/configuration
    project/planning
    project/advanced
-   project/reporting
    project/application

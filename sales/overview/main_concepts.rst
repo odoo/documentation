@@ -6,5 +6,4 @@ Main Concepts
    :titlesonly:
 
    main_concepts/introduction
-   main_concepts/terminologies
    main_concepts/invoicing
