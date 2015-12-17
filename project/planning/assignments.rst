@@ -68,7 +68,7 @@ dragging and dropping the column you want to move to the desired
 location. You can also fold or unfold your stages by using the **setting**
 icon on your desired stage.
 
-.. image:: media/assignments06.png
+.. image:: media/assignments10.png
     :align: center
 
 .. tip::
@@ -90,7 +90,7 @@ Note that dates that passed their deadlines will appear in red( in the
 list view too) so you can easily follow up the progression of different
 tasks.
 
-.. image:: media/assignments07.png
+.. image:: media/assignments06.png
     :align: center
 
 .. tip::
@@ -104,7 +104,7 @@ will be able to log their activities on tasks under the **Timesheets**
 sub-menu along with their duration. The **Working Time Progress** bar will
 be updated each time the employee will add an activity.
 
-.. image:: media/assignments08.png
+.. image:: media/assignments07.png
     :align: center
 
 As a manager, you can easily overview the time spent on tasks for all
@@ -112,7 +112,7 @@ employees by using the list view. To do so, access the project of your
 choice and click on the List view icon (see below). The last column will
 show you the progression of each task.
 
-.. image:: media/assignments09.png
+.. image:: media/assignments08.png
     :align: center
 
 Keep an eye on deadlines with the Calendar view
@@ -122,7 +122,7 @@ If you add a deadline in your task, they will appear in the calendar
 view. As a manager, this view enables you to keep an eye on all
 deadlines in a single window.
 
-.. image:: media/assignments10.png
+.. image:: media/assignments09.png
     :align: center
 
 All the tasks are tagged with a color corresponding to the employee
