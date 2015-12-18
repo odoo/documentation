@@ -49,8 +49,8 @@ have any sales team yet, :doc:`you need to create one first <../../salesteam/set
 
 On your sales team menu, use in the **Domain** field a specific domain
 rule (for technical details on the domain refer on the
-`Building a Module tutorial <https://www.odoo.com/documentation/8.0/howtos/backend.html#domains>`__
-or `Syntax reference guide <https://www.odoo.com/documentation/8.0/reference/orm.html#reference-orm-domains>`__)
+`Building a Module tutorial <https://www.odoo.com/documentation/9.0/howtos/backend.html#domains>`__
+or `Syntax reference guide <https://www.odoo.com/documentation/9.0/reference/orm.html#reference-orm-domains>`__)
 which will allow only the leads matching the team domain.
 
 For example, if you want your *Direct Sales* team to only receive leads
