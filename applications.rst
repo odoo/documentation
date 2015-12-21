@@ -14,3 +14,4 @@ Applications
    inventory
    point_of_sale
    project
+   getting_started
