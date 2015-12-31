@@ -9,8 +9,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 9.0 Documentation\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-27 09:42+0100\n"
-"PO-Revision-Date: 2015-12-11 09:20+0000\n"
+"POT-Creation-Date: 2015-12-21 11:00+0100\n"
+"PO-Revision-Date: 2015-12-22 13:38+0000\n"
 "Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>\n"
 "Language-Team: Dutch (http://www.transifex.com/odoo/odoo-9-doc/language/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -782,6 +782,140 @@ msgstr "Kies de datums. Selecteer de kassier door te klikken op **Item toevoegen
 #: ../../point_of_sale/analyze/statistics.rst:41
 msgid "You will get a full report in a PDF file. Here is an example :"
 msgstr "U krijgt een volledig rapport in een PDF bestand. Hier is een voorbeeld:"
+
+#: ../../point_of_sale/belgian_fdm.rst:3
+msgid "Belgian Fiscal Data Module"
+msgstr "Belgische fiscale data module"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:3
+msgid "Setting up the Fiscal Data Module with the Odoo POS"
+msgstr "De fiscale data module opzetten met de Odoo kassa"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:6
+msgid "Introduction"
+msgstr "Introductie"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:8
+msgid ""
+"The Belgian government requires certain businesses to use a government-"
+"certified device called a **Fiscal Data Module** (also known as a "
+"**blackbox**). This device works together with the POS application and logs "
+"certain transactions. On top of that, the used POS application must also be "
+"certified by the government and must adhere to strict standards specified by"
+" them. `Odoo 9 is a certified application "
+"<http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More "
+"information concerning the Fiscal Data Module can be found on `the official "
+"website <http://www.systemedecaisseenregistreuse.be/>`_."
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:19
+msgid ""
+"**As of December 2015, due to Belgian government restriction, the "
+"certification is only valid for Odoo Online instances.**"
+msgstr "**Vanaf Decemer 2015, door de restricties van de Belgische wetgeving, is de certificering enkel geld voor Odoo Online instanties.**"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:23
+msgid "Required hardware"
+msgstr "Vereiste hardware"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:25
+msgid ""
+"A government certified `Fiscal Data Module "
+"<http://www.systemedecaisseenregistreuse.be/systemes-"
+"certifies#FDM%20certifiés>`_ per POS, all of them should work, but the "
+"Cleancash SC-B is recommended, you will also need:"
+msgstr "Een door de regering gecertificeerd `Fiscale data module <http://www.systemedecaisseenregistreuse.be/systemes-certifies#FDM%20certifiés>`_ per Kassa, ze zouden allemaal moeten werken, maar de Cleancash SC-B is aanbevolen, u heeft ook het volgende nodig:"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:30
+msgid ""
+"Serial null modem cable per FDM (`example <http://www.startech.com/Cables"
+"/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-Wired-Serial-Null-Modem-Cable-"
+"DB9-FM~SCNM9FM>`__)"
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:32
+msgid ""
+"Serial-to-USB adapter per FDM (`example "
+"<http://trendnet.com/products/proddetail.asp?prod=265_TU-S9>`__)"
+msgstr "Serieel-naar-USB adaptor per FDM (`voorbeeld <http://trendnet.com/products/proddetail.asp?prod=265_TU-S9>`__)"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:35
+msgid "A POSBox per POS"
+msgstr "Een POSBox per kassa"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:38
+msgid "Setup"
+msgstr "Opzet"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:41
+msgid "POSBox"
+msgstr "POSBox"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:43
+msgid ""
+"In order to setup the blackbox, you will first have to ensure that the "
+"POSBoxes you're using have a recent image on them (support for the FDM was "
+"added to the POSBox image on the 10th of December 2015). See "
+":doc:`../overview/setup` on how to upgrade the POSBox. You can verify that "
+"the Fiscal Data Module is recognized by the POSBox by going to the *Hardware"
+" status page* via the POSBox homepage."
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:54
+msgid "Odoo"
+msgstr "Odoo"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:56
+msgid ""
+"An Odoo POS is turned into a certified POS by installing the **Belgian "
+"Registered Cash Register** app (technical name: ``pos_blackbox_be``). "
+"Because of government restrictions imposed on us, this installation cannot "
+"be undone. After this, you will have to ensure that each POS configuration "
+"has a unique POSBox associated with it (:menuselection:`Point of Sale --> "
+"Configuration --> Point of Sale` and ensure Hardware Proxy / POSBox is set)."
+" The first time you open the Point of Sale and attempt to do a transaction, "
+"you will be asked to input the PIN that you received with your VAT signing "
+"card."
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:70
+msgid "Restrictions"
+msgstr "Restricties"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:72
+msgid ""
+"As mentioned before, in order to get certified the POS application must "
+"adhere to strict government guidelines. Because of this, a certified Odoo "
+"POS has some limitations not present in the non-certified Odoo POS."
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:77
+msgid "Refunding is disabled"
+msgstr "Terugbetalen is uitgeschakeld"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:78
+msgid "Modifying orderline prices"
+msgstr "Prijzen van orderlijnen wijzigen"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:79
+msgid "Creating/modifying/deleting POS orders"
+msgstr "Maken/wijzigen/verwijderen van kassa orders"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:80
+msgid "Selling products without a valid tax"
+msgstr "Producten verkopen zonder een valide belasting"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:81
+msgid "Multiple Odoo POS configurations per POSBox are not allowed"
+msgstr "Meerdere Odoo kassa configuraties per POSBox zijn niet toegestaan"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:82
+msgid "Using the POS without a connection to the POSBox (and thus FDM)"
+msgstr "De Kassa gebruiken zonder een connectie naar de POSBox (en dus FDM)"
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:83
+msgid "Blacklisted modules: pos_discount, pos_reprint, pos_loyalty"
+msgstr "Zwarte lijst modules: pos_discount, pos_reprint, pos_loyalty"
 
 #: ../../point_of_sale/overview/setup.rst:3
 msgid "Point of Sale Hardware Setup"
