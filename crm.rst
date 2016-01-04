@@ -11,3 +11,4 @@ CRM
    crm/salesteam
    crm/leads
    crm/reporting
+   crm/sale_ebay
