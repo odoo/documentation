@@ -6,32 +6,41 @@ In Odoo, you can manage multiple bank accounts. In this page, you will
 be guided in the creation, modification or deletion of a bank or a
 credit card account.
 
-Go to the list of your bank accounts
-------------------------------------
+Edit a bank account
+--------------------
 
-Go to :menuselection:`Configuration --> Settings --> Configure your company bank
-accounts` >
-The bank accounts are configured on the company information. You have to
-be in the edit mode to be able to do your changes.
+To ease the process, a bank account is already there. We suggest you to 
+edit it first before filling your own bank information. 
 
-.. image:: media/image10.png
+Go to :menuselection:`Accounting --> Configuration --> Bank
+Accounts` and click on the **Bank** item. Edit it. 
+
+.. image:: media/image04.png
    :align: center
 
 .. note::
 
-	If you are working in a multi-company environnement, you have to switch company to add, edit or delete bank accounts on another company.
+    Odoo will detect the bank account type (e.g. IBAN) to allow some payment 
+    method like SEPA
 
-Add or edit a bank account
---------------------------
 
-Click on **Add an item** to add a new bank account. If you want to edit one, simply click on the line.
+Create a bank account
+---------------------
 
-.. image:: media/image03.png
+Go to :menuselection:`Accounting --> Configuration --> Bank
+Accounts`. Click on **create** and fill in the form. You can 
+decide to show the bank account number in you intend to send documents 
+like sales orders or invoices. Select the payments methods you 
+support with this bank account. 
+
+.. image:: media/image06.png
    :align: center
 
 .. note::
-	
-	If the bank account type is IBAN, Odoo will check if the number is valid
+
+    If you are working in a multi-company environnement, you'll have to switch 
+    the company on your user preferences in order to add, edit or delete bank 
+    accounts from another company.
 
 .. demo:fields:: base.action_res_partner_bank_account_form
 
@@ -41,22 +50,20 @@ Click on **Add an item** to add a new bank account. If you want to edit one, sim
 
 .. todo:: add inherited field tooltip
 
-	**Display on reports :** Display this bank account on the documents that
-	will be printed or send to the customers
+    **Display on reports :** Display this bank account on the documents that
+    will be printed or send to the customers
 
-	**Bank Identifier Code** = BIC : SWIFT Address assigned to a bank in
-	order to send automated payments quickly and accurately to the banks
-	concerned
+    **Bank Identifier Code** = BIC : SWIFT Address assigned to a bank in
+    order to send automated payments quickly and accurately to the banks
+    concerned
 
 The initial balance of a bank statement will be set to the closing balance of the previous one within the same journal automatically.
-
-As you may notice in the journal form, a dedicated account has been generated automatically at the bank account creation.
 
 Delete a bank account or credit card account
 --------------------------------------------
 
-Click on the trashcan icon |image5| in the list of your bank accounts to remove one bank account.
+From the list of bank accounts, select items to delete and delete them from the action menu or go to the form and delete a single item from the action menu
 
-.. |image5| image:: media/image13.png
+.. |image5| image:: media/image05.png
 	:class: btn-group
 
