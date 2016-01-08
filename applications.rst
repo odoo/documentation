@@ -14,4 +14,5 @@ Applications
    inventory
    point_of_sale
    project
-   getting_started
+   getting_started/documentation
+   website/seo

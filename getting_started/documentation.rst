@@ -1,6 +1,8 @@
-================================
-Getting Started with Odoo Online
-================================
+:banner: banners/getting_started.jpg
+
+===========
+Odoo Online
+===========
 
 This document summarizes **Odoo's Online services**, our Success Pack
 **implementation methodology**, and *best practices* to **get started**
