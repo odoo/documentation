@@ -16,7 +16,7 @@ be the Odoo **Forecast Quantity**.
 
 The **Description Template** allows you to use templates for your listings. The
 default template only use the **eBay Description** field of the product. You can
-use html inside the **Description Template** and in the **eBay Descritpion**.
+use html inside the **Description Template** and in the **eBay Description**.
 
 Listing with variations
 =======================
