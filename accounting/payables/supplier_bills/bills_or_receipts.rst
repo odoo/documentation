@@ -6,7 +6,7 @@ Purchase receipts are different than vendor bills. Vendor bills are
 requests for payment. If I issue a Purchase Order my vendor will in most
 business cases send me a Vendor Bill. Depending on his invoice policy I
 then have a defined amount of time to pay the Bill. A Purchase receipts
-are confirmations of received paiements. They are my day-to-day ticket
+are confirmations of received payments. They are my day-to-day ticket
 receipts.
 
 From an accounting point of view this makes a difference as a Vendor
@@ -15,13 +15,13 @@ account. On the other hand we usually immediately pay the purchase
 receipts, which means no debt account is necessary.
 
 Moreover purchase receipts can have a different tax amount per product
-line, as vendors bills apply one taxe amount over the entire bill.
+line, as vendors bills apply one tax amount over the entire bill.
 
-If my company's bank account is used to pay for goods were only a
+If my company's bank account is used to pay for goods where only a
 purchase receipt are issued I should use the purchase receipts function
 in Odoo to handle them in accounting.
 
-Let's take the following example: we need to buy foreign tea for our
+Let's take the following example: we need to buy tea for our
 customers from a local tea store that doesn't issue bills. We go every
 week buy 50 euros worth of tea and a teapot worth 20 euros. We pay with
 the company's bank account.
@@ -52,7 +52,7 @@ accounting app, select :menuselection:`Purchases --> Purchase Receipts`.
 
 Create a new Purchase Receipt and fill in all the necessary information.
 Note that you have the choice in the Payment field between **Pay Later**
-or **Pay Now**. It's a significant difference as Pay Later, will generate
+or **Pay Now**. It's a significant difference as Pay Later will generate
 a debt accounting entry whereas Pay Now will immediately credit the Bank
 account.
 
