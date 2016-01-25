@@ -1,6 +1,6 @@
-=======================
-Lots and Serial Numbers
-=======================
+=================
+Valuation Methods
+=================
 
 .. toctree::
    :titlesonly:
