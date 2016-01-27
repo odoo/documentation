@@ -1,4 +1,4 @@
-:banner: banners/getting_started.jpg
+:banner: banners/seo.jpg
 
 =======
 Website
@@ -8,3 +8,4 @@ Website
    :titlesonly:
 
    website/seo
+   website/google_analytics

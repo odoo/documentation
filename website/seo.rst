@@ -1,8 +1,6 @@
-:banner: banners/seo.jpg
-
-=======
-Website
-=======
+==========================
+Search Engine Optimisation
+==========================
 
 How is SEO handled in Odoo?
 ===========================

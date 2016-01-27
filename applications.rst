@@ -15,4 +15,4 @@ Applications
    point_of_sale
    project
    getting_started/documentation
-   website/seo
+   website
