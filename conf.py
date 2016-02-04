@@ -278,7 +278,7 @@ github_project = 'documentation-user'
 # Where are stored the localisations files
 locale_dirs = ['locale/']
 
-LANGUAGES = {'nl': 'Dutch', 'es': 'Spanish', 'zn_CH': 'Chinese'}
+LANGUAGES = {'nl': 'Dutch', 'es': 'Spanish', 'zh_CN': 'Chinese'}
 
 def setup(app):
     app.add_stylesheet('accounting.css')
