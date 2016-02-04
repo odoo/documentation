@@ -278,6 +278,7 @@ github_project = 'documentation-user'
 # Where are stored the localisations files
 locale_dirs = ['locale/']
 
+LANGUAGES = {'nl': 'Dutch', 'es': 'Spanish', 'zn_CH': 'Chinese'}
 
 def setup(app):
     app.add_stylesheet('accounting.css')
@@ -340,9 +341,9 @@ def localize(app, pagename, templatename, context, doctree):
         return
 
     current_lang = app.config.language or 'en'
-    context['language'] = current_lang.upper()
+    context['language'] = LANGUAGES.get(current_lang, current_lang.upper())
     context['languages'] = [
-        (la.upper(), _build_url(app.config.canonical_root, (la != 'en' and la or ''), pagename))
+        (LANGUAGES.get(la, la.upper()), _build_url(app.config.canonical_root, (la != 'en' and la or ''), pagename))
         for la in app.config.languages.split(',')
         if la != current_lang
     ]
