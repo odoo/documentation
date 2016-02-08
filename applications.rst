@@ -9,6 +9,7 @@ Applications
    crm
    sales
    expenses
+   discuss/getting_started
    purchase
    recruitment
    inventory
