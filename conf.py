@@ -51,7 +51,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Odoo Business'
-copyright = u'2015, Odoo S.A.'
+copyright = u'2015-TODAY, Odoo S.A.'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
@@ -197,27 +197,35 @@ htmlhelp_basename = 'UnderstandingAccountingForEntrepreneursdoc'
 # -- Options for LaTeX output ---------------------------------------------
 
 latex_elements = {
+
 # The paper size ('letterpaper' or 'a4paper').
 #'papersize': 'letterpaper',
+'papersize': 'a4paper',
 
 # The font size ('10pt', '11pt' or '12pt').
 #'pointsize': '10pt',
 
 # Additional stuff for the LaTeX preamble.
-#'preamble': '',
+'preamble': r'\usepackage{odoo}',
+
+'maketitle': r'\makeodootitle',
+
 }
+
+latex_additional_files = ['_static/latex/odoo.sty']
 
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation',
-   u'fp, xmo', 'manual'),
+  ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement v5', '', 'howto'),
+  ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement v5', '', 'howto'),
+  #('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation', u'fp, xmo', 'manual'),
 ]
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-#latex_logo = None
+latex_logo = '_static/banners/odoo_logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
@@ -227,7 +235,7 @@ latex_documents = [
 #latex_show_pagerefs = False
 
 # If true, show URL addresses after external links.
-#latex_show_urls = False
+latex_show_urls = True
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
@@ -301,7 +309,7 @@ def setup(app):
     app.add_javascript('reconciliation.js')
     app.add_javascript('misc.js')
 
-    app.add_javascript('inventory.js');
+    app.add_javascript('inventory.js')
     app.add_javascript('coa-valuation.js')
     app.add_javascript('coa-valuation-continental.js')
     app.add_javascript('coa-valuation-anglo-saxon.js')
@@ -322,24 +330,23 @@ def analytics(app, pagename, templatename, context, doctree):
 
     context['google_analytics_key'] = app.config.google_analytics_key
 
-from sphinx import addnodes
 def tag_toctrees(app, doctree, docname):
     """ Adds a 'toc' metadata entry to all documents containing a toctree node"""
     # document
     #   section
     #     title
     #     compound@toctree-wrapper
+    #     ....
     if not len(doctree.children) == 1:
         return
     [section] = doctree.children
-    if not len(section.children) == 2:
-        return;
-    [_, compound] = section.children
-    if not 'toctree-wrapper' in compound['classes']:
+    if len(section.children) < 2:
+        return
+    compound = section.children[1]
+    if 'toctree-wrapper' not in compound['classes']:
         return
 
     app.env.metadata[docname]['has-toc'] = True
-
 
 def localize(app, pagename, templatename, context, doctree):
     """ Adds a language switcher below the menu, requires ``canonical_root``

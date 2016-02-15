@@ -1,0 +1,109 @@
+%\usepackage{droid}
+\usepackage[default]{lato}
+%\usepackage{inconsolata}
+\usepackage{fancyhdr}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{graphicx}
+
+% temp while drafting!
+\usepackage{draftwatermark}
+\SetWatermarkText{DRAFT}
+\SetWatermarkScale{1}
+\SetWatermarkLightness{.9}
+
+
+% fancy titlepage
+\usepackage{amsmath}
+\usepackage{tikz}
+\usepackage{epigraph}
+\renewcommand\epigraphflush{flushright}
+\renewcommand\epigraphsize{\normalsize}
+\setlength\epigraphwidth{0.7\textwidth}
+
+\definecolor{titlepagecolor}{rgb}{.63,.28,.54}
+
+\DeclareFixedFont{\titlefont}{T1}{ppl}{b}{it}{0.5in}
+
+\newcommand\titlepagedecoration{%
+\begin{tikzpicture}[remember picture,overlay,shorten >= -10pt]
+
+\coordinate (aux1) at ([yshift=-15pt]current page.north east);
+\coordinate (aux2) at ([yshift=-410pt]current page.north east);
+\coordinate (aux3) at ([xshift=-4.5cm]current page.north east);
+\coordinate (aux4) at ([yshift=-150pt]current page.north east);
+\coordinate (aux5) at ([yshift=-355pt]current page.north west);
+
+\begin{scope}[titlepagecolor!40,line width=12pt,rounded corners=12pt, opacity=0.2]
+\draw
+  (aux1) -- coordinate (a)
+  ++(225:5) --
+  ++(-45:5.1) coordinate (b);
+\draw[shorten <= -10pt]
+  (aux3) --
+  (a) --
+  (aux1);
+\draw[opacity=0.6,titlepagecolor,shorten <= -10pt]
+  (b) --
+  ++(225:2.2) --
+  ++(-45:2.2);
+\end{scope}
+\draw[titlepagecolor,line width=30pt,rounded corners=8pt,shorten <= -10pt]
+  (aux5) --
+  ++(15,0);
+\draw[titlepagecolor,line width=8pt,rounded corners=8pt,shorten <= -10pt]
+  (aux4) --
+  ++(225:0.8) --
+  ++(-45:0.8);
+\begin{scope}[titlepagecolor!70,line width=6pt,rounded corners=8pt]
+\draw[shorten <= -10pt]
+  (aux2) --
+  ++(225:3) coordinate[pos=0.45] (c) --
+  ++(-45:3.1);
+\draw
+  (aux2) --
+  (c) --
+  ++(135:2.5) --
+  ++(45:2.5) --
+  ++(-45:2.5) coordinate[pos=0.3] (d);
+\draw
+  (d) -- +(45:1);
+\end{scope}
+\end{tikzpicture}%
+}
+
+
+% No automatic numbering, dual HTML/PDF output requires hardcoded ones
+\setcounter{secnumdepth}{0}
+
+% Max latex toc depth
+\setcounter{tocdepth}{2}
+
+\makeatletter
+
+
+\setlength{\headheight}{15.2pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot[L]{{\py@HeaderFamily\thepage}}
+\fancyhead[R]{{\py@HeaderFamily \@title}}
+\renewcommand{\headrulewidth}{0.1pt}
+\renewcommand{\footrulewidth}{0.1pt}
+
+\newcommand{\makeodootitle}{%
+  \begin{titlepage}
+  \titlepagedecoration
+  \begin{center}
+  \vspace{3cm}
+  \includegraphics{_static/banners/odoo_logo}
+  \end{center}
+
+  \vspace{2cm}
+
+  { \bf \color{white}  \Large \@title }
+  %\fdsfamily
+
+  \end{titlepage}
+  \newpage
+}
+
+\makeatother
