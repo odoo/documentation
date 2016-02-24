@@ -9,3 +9,4 @@ Website
 
    website/seo
    website/google_analytics
+   website/translate_website
