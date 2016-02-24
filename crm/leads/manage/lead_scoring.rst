@@ -4,7 +4,7 @@ How to do efficient Lead Scoring?
 
 Odoo's Lead Scoring module allows you to give a score to your leads
 based on specific criteria - the higher the value, the more likely the
-prospect is “ready for sales”. Therefore, the best leads are
+prospect is "ready for sales". Therefore, the best leads are
 automatically assigned to your salespeople so their pipe are not
 polluted with poor-quality opportunities.
 

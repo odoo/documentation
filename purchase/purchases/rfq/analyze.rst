@@ -61,7 +61,7 @@ extra data to your report by clicking on the **Measures** icon.
     your report in order to change the way your information is displayed. 
     For example, if I want to see all the products bought for the current 
     month, I need to click on the **+** icon on the vertical axis and 
-    then on “Products”.
+    then on "Products".
 
 
 Depending on the data you want to highlight, you may need to display

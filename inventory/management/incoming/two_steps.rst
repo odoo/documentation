@@ -32,7 +32,7 @@ To allow management of routes, go to the menu
 Ensure that the routes option **Advance routing of product using
 rules** is checked, then click on **Apply** to save changes.
 
-Make sure that **“Manage several locations per warehouse”** is also
+Make sure that **"Manage several locations per warehouse"** is also
 ticked.
 
 How to configure your warehouse ?

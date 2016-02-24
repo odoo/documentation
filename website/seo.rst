@@ -335,7 +335,7 @@ With the following components:
 
 -  **my-great-product** = by default, this is the slugified title of the
    product this page refers to. But you can customize it for SEO
-   purposes. A product named “Pain carré” will be slugified to
+   purposes. A product named "Pain carré" will be slugified to
    "pain-carre". Depending on the namespace, this could be different
    objects (blog post, page title, forum post, forum comment,
    product category, etc)
@@ -375,7 +375,7 @@ by search engines. Example:
 
 .. note:: 
   Having the language code as fr\_FR is not perfect in terms of SEO.
-  Although most search engines treat now “\_” as a word separator, it has
+  Although most search engines treat now "\_" as a word separator, it has
   not always been the case. We plan to improve that for Odoo 10.
 
 Changes in URLs & Titles

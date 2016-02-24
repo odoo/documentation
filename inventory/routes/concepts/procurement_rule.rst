@@ -25,8 +25,8 @@ Configuration
 =============
 
 Procurement rules are part of the routes. Go to the Inventory
-application>Configuration>Settings and tick “Advance routing of products
-using rules”.
+application>Configuration>Settings and tick "Advance routing of products
+using rules".
 
 .. image:: media/procurement_rule01.png
     :align: center
