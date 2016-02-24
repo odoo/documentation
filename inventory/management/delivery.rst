@@ -13,4 +13,5 @@ Delivery Orders
    delivery/scheduled_dates
    delivery/dropshipping
    delivery/label_type
+   delivery/packaging_type
    delivery/delivery_countries
