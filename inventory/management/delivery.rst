@@ -12,3 +12,4 @@ Delivery Orders
    delivery/three_steps
    delivery/scheduled_dates
    delivery/dropshipping
+   delivery/label_type
