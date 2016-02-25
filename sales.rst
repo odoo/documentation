@@ -11,3 +11,4 @@ Sales
    sales/quotation
    sales/invoicing
    sales/products_prices
+   sales/sale_ebay
