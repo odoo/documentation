@@ -161,3 +161,8 @@ removal dates.
 
 .. image:: media/removal11.png
     :align: center
+
+.. seealso::
+
+    * :doc:`../../management/reporting/valuation_methods_continental`
+    * :doc:`../../management/reporting/valuation_methods_anglo_saxon`

@@ -4,9 +4,6 @@
 How to do an inventory valuation? (Continental Accounting)
 ==========================================================
 
-Costing Method
-==============
-
 Every year your inventory valuation has to be recorded in your 
 balance sheet. This implies two main choices:
 
@@ -15,6 +12,9 @@ balance sheet. This implies two main choices:
 
 - the way you record the inventory value into your books 
   (periodic vs. Perpetual).
+
+Costing Method
+==============
 
 .. rst-class:: alternatives doc-aside
 
@@ -91,7 +91,7 @@ Average Price
        - 12
        - +4*€16
        - €144
-     * - Deliver 10 Products [#average-removal]_
+     * - Deliver 10 Products
        - €12
        - 2
        - | -10*€12
@@ -103,18 +103,20 @@ Average Price
        - +2*€6
        - €36
 
-  The **Average Price** method recomputes the cost price as a 
-  receipt order has been processed, based on prices defined in 
-  tied purchase orders. This method is mainly justified in case 
-  of huge purchase price variations and is quite unusual due to 
-  its operational complexity. Your actually need a software like 
-  Odoo to keep this cost up-to-date.
+  The **Average Price** method recomputes the cost price as a receipt order 
+  has been processed, based on prices defined in tied purchase orders:
+  FORMULA (see here attached)
 
-  This method is dedicated to advanced users. It requires well 
-  established business processes because the order in which you 
-  process receipt orders matters in the cost computation. Moreover 
-  if you mistakenly process such an order, there is no way to 
-  reset the cost price at its initial value.
+  The average cost does not change when products leave the warehouse.
+
+  From an accounting point of view, this method is mainly justified in 
+  case of huge purchase price variations and is quite unusual due to its 
+  operational complexity. Your actually need a software like Odoo to 
+  easily keep this cost up-to-date.
+
+  This method is dedicated to advanced users. It requires well established 
+  business processes because the order in which you process receipt orders 
+  matters in the cost computation.
 
 FIFO
   .. rst-class:: values-table
@@ -156,19 +158,18 @@ FIFO
        - +2*€6
        - €44
 
-  For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is
-  further refined by the removal strategy set on the warehouse 
-  location or product's internal category. The default strategy
-  is FIFO. With such method, your inventory value is computed 
-  from the real cost of your stored products (cfr. Quantitative 
-  Valuation) and not from the cost price shown in the product 
-  form. Whenever you ship items, the cost price is reset to the 
-  cost of the last item(s) shipped. This cost price is used to 
-  value any product not received from a purchase order (e.g. 
-  inventory adjustments).
+  For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further 
+  refined by the removal strategy set on the warehouse location 
+  or product's internal category. The default strategy is FIFO. With 
+  such method, your inventory value is computed from the real cost 
+  of your stored products (cfr. Quantitative Valuation) and not from 
+  the cost price shown in the product form. Whenever you ship items, 
+  the cost price is reset to the cost of the last item(s) shipped. 
+  This cost price is used to value any product not received from a 
+  purchase order (e.g. inventory adjustments).
 
-  Such a method is advised if you manage all your workflow into 
-  Odoo (Sales, Purchases, Inventory). It suits any kind of users.
+  FIFO is advised if you manage all your workflow into Odoo (Sales, 
+  Purchases, Inventory). It suits any kind of users.
 
 LIFO (not accepted in IFRS)
   .. rst-class:: values-table
@@ -209,6 +210,18 @@ LIFO (not accepted in IFRS)
        - 4
        - +2*€6
        - €32
+
+  For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further 
+  refined by the removal strategy set on the warehouse location 
+  or product's internal category. The default strategy is FIFO. 
+  With such method, your inventory value is computed from the 
+  real cost of your stored products (cfr. Quantitative Valuation) 
+  and not from the cost price shown in the product form. Whenever 
+  you ship items, the cost price is reset to the cost of the last 
+  item(s) shipped. This cost price is used to value any product 
+  not received from a purchase order (e.g. inventory adjustments).
+
+  LIFO is not permitted outside the United States.
 
 Odoo allows any method. The default one is **Standard Price**. 
 To change it, check **Use a 'Fixed', 'Real' or 'Average' price 
@@ -295,7 +308,8 @@ Profit&Loss section to your assets.
   Expenses: Inventory Variations                   X            
   ===================================== ===== ======
 
-  If the stock value decreased, he makes it upside down.
+  If the stock value decreased, the **Inventory** account is credited
+  and te **Inventory Variations** debited.
    
 .. raw:: html
 
@@ -317,8 +331,6 @@ Let's take the case of a reseller.
 
    .. placeholder
 
-.. [#average-removal] products leaving the stock have no impact on the average price.
-
 .. raw:: html
 
    <hr style="float: none; visibility: hidden; margin: 0;">
@@ -338,3 +350,9 @@ Let's take the case of a reseller.
      category
      
    - Inventory: to set as Stock Valuation Account in product's internal category
+
+.. seealso::
+
+  * :doc:`../../routes/strategies/removal`
+  * :doc:`../../../accounting/others/inventory/avg_price_valuation`
+  * :doc:`../../routes/costing/landed_costs`
