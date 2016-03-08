@@ -36,8 +36,7 @@ someone else in your company, send an e-mail to
     :align: center
 
 Fill in the sign-in or sign-up screens and you will get your first Odoo
-database ready to be used. **Don't be afraid of messing up the data**,
-it's very easy to duplicate your database, clean it or start a new one.
+database ready to be used. 
 
 In order to familiarize yourself with the user interface, take a few
 minutes to create records: *products, customers, opportunities or
