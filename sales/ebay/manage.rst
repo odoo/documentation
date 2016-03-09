@@ -18,6 +18,8 @@ The **Description Template** allows you to use templates for your listings. The
 default template only use the **eBay Description** field of the product. You can
 use html inside the **Description Template** and in the **eBay Description**.
 
+To use pictures in your listing, you need to add them as **Attachments** on the product template.
+
 Listing with variations
 =======================
 
@@ -37,3 +39,12 @@ value in the **Variants** tab on the product form.
 
 .. image:: ./media/manage03.png
   :align: center
+
+Product Identifiers
+===================
+
+Products identifiers such as EAN, UPC, Brand or MPN are required in most of the eBay category.
+The module manages the EAN and UPC identifiers with the **Barcode** field of the product variant.
+If the **Barcode** field is empty or is value is not valid, the EAN and UPC values will be set as 'Does not apply' as recommended by eBay.
+The Brand and MPN values are working as item specifics and should be define in the **Variants** tab on the product form.
+If theses values are not set, 'Does not apply' will be used for the eBay listing.
