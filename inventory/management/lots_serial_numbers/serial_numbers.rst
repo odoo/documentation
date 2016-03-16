@@ -50,6 +50,9 @@ Transfers
 
 In order to process a transfer of a product tracked by serial number,
 you have to input the number(s).
+In order to be able to assign serial numbers to products with tracking features
+enabled you will first need to mark your transfer as to do. Click on the **Mark
+as TODO** button to display the Lot Split icon.
 
 Click on the serial number icon :
 
