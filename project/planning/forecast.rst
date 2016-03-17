@@ -90,7 +90,7 @@ should take.
 
     For example: When a user fills in a Timesheet with your Project name 
     (Analytic account), with 10 hours spent, the forecast will display 10 hours 
-    in the Estimated Time field.
+    in the Effective hours field.
 
 What are the difference between the views?
 ==========================================
