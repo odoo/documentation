@@ -16,9 +16,6 @@ application
 information concerning the Fiscal Data Module can be found on `the
 official website <http://www.systemedecaisseenregistreuse.be/>`_.
 
-**As of December 2015, due to Belgian government restriction, the
-certification is only valid for Odoo Online instances.**
-
 Required hardware
 =================
 
@@ -32,7 +29,7 @@ Required hardware
   * Serial-to-USB adapter per FDM (`example
     <http://trendnet.com/products/proddetail.asp?prod=265_TU-S9>`__)
 
-* A POSBox per POS
+* A registered POSBox per POS configuration
 
 Setup
 =====
@@ -40,12 +37,13 @@ Setup
 POSBox
 ------
 
-In order to setup the blackbox, you will first have to ensure that the
-POSBoxes you're using have a recent image on them (support for the FDM
-was added to the POSBox image on the 10th of December 2015). See
-:doc:`../overview/setup` on how to upgrade the POSBox. You can verify
-that the Fiscal Data Module is recognized by the POSBox by going to
-the *Hardware status page* via the POSBox homepage.
+In order to use a Fiscal Data Module, you will need a registered
+POSBox. These POSBoxes are similar to the regular POSBoxes we sell,
+but they are registered with the Belgian government. This is required
+by law. Attempting to use a Fiscal Data Module on a non-registered
+POSBox will not work. You can verify that the Fiscal Data Module is
+recognized by the POSBox by going to the *Hardware status page* via
+the POSBox homepage.
 
 .. image:: media/posbox_fdm_hardware_status.png
     :align: center
@@ -53,18 +51,27 @@ the *Hardware status page* via the POSBox homepage.
 Odoo
 ----
 
-An Odoo POS is turned into a certified POS by installing the **Belgian
-Registered Cash Register** app (technical name:
+An Odoo POS app can be given certified POS capabilities by installing
+the **Belgian Registered Cash Register** app (technical name:
 ``pos_blackbox_be``). Because of government restrictions imposed on
 us, this installation cannot be undone. After this, you will have to
-ensure that each POS configuration has a unique POSBox associated with
-it (:menuselection:`Point of Sale --> Configuration --> Point of Sale`
-and ensure Hardware Proxy / POSBox is set). The first time you open
-the Point of Sale and attempt to do a transaction, you will be asked
-to input the PIN that you received with your VAT signing card.
+ensure that each POS configuration has a unique registered POSBox
+associated with it (:menuselection:`Point of Sale --> Configuration
+--> Point of Sale` and ensure Hardware Proxy / POSBox and the serial
+number of your POSBox is set). The first time you open the Point of
+Sale and attempt to do a transaction, you will be asked to input the
+PIN that you received with your VAT signing card.
 
 .. image:: media/vat_signing_card_pin.png
     :align: center
+
+On-premise
+==========
+
+We do not only support the Fiscal Data Module on our SaaS platform, we
+also support the Fiscal Data Module in on-premise installations. The
+main restriction is that this requires an obfuscated version of the
+``pos_blackbox_be`` module we will provide on request.
 
 Restrictions
 ============
