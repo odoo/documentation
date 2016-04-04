@@ -15,5 +15,6 @@ Applications
    project
    getting_started/documentation
    website
+   general
 ..   expenses
 ..   recruitment
