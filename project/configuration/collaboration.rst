@@ -227,9 +227,10 @@ tick "Collaborative rich text on task description".
 
 .. tip::
     If you just need the pad and not the whole task page, you can click 
-    on the icon on the top right to get to the pad directly. This also
-    gives you the direct url of the task description: useful if you want 
-    to send it to someone without adding this person as a follower.
+    on the icon on the top right to get to the pad directly in a full 
+    screen view. Click on the ``</>`` icon to get the direct URL of the task 
+    description: useful if you want to send it to someone without adding 
+    this person as a follower.
 
 .. image:: media/manage_collaborate13.png
     :align: center
