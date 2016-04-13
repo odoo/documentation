@@ -23,7 +23,7 @@ Quotations
 ----------
 
 To add suggested products to quotations, you must first enable online quotations 
-in the Sales app from :menuselection:’Configuration → Settings’. Doing so will 
+in the Sales app from **Configuration → Settings**. Doing so will 
 prompt you to install the Website app if you haven’t already.
 
 .. image:: media/enable-online-quotes.png
