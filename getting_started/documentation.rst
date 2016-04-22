@@ -279,9 +279,8 @@ extra services:
 -   **Customization of reports (PDF):** our project managers have access
     to developers for advanced customizations.
 
--   **Website Design:** standard themes are provided to get started with
-    no extra cost. However, our project manager have access to
-    designers and developers if you need a customized design. Their
+-   **Website Design:** standard themes are provided to get started at
+    no extra cost. However, our project manager can coach you on how to utilize the building blocks of the website designer. Their
     hours will consume hours of your success pack.
 
 -   **Workflow automations:** e.g. setting values in fields based on
