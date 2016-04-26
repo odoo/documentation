@@ -126,7 +126,7 @@
 main {
   z-index: 0;
   position: relative;
-  margin: 0px auto;
+  margin: -10px auto 0;
   display: block;
   border-radius: 2px;
   background-color: @doc_paper;
@@ -242,8 +242,20 @@ main.index {
   .box-shadow(none);
   .transform-origin(50% 0px 0px);
 
+  @media screen and (min-width: @screen-sm-min) and (max-width: (@screen-md-min - 1)) {
+    padding-top: 12%;
+  }
+
   #wrap.index & {
     padding: 0 0 4%;
+
+    @media screen and (min-width: @screen-sm-min) {
+      padding-top: 12%;
+    }
+
+    @media screen and (min-width: @screen-lg-min) {
+      padding-top: 8%;
+    }
   }
 
   &.stacked{
