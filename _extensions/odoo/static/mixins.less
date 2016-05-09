@@ -216,6 +216,104 @@
   @keyframes @name { @arguments(); }
 }
 
+//-- Documentation Dropdown style
+.o-doc-dropdown {
+    > a.dropdown-toggle {
+        padding: 0 5px 0 10px;
+        &:after {
+            .mdi-icon( "\e7c1");
+
+            @media screen and (max-width: @screen-xs-max) {
+                font-size: 1.5em
+            }
+        }
+    }
+
+    &.open {
+        z-index: 1;
+        position: relative;
+        background-color: @gray-light;
+        color: @header-link-normal;
+
+        @media screen and (min-width: @screen-sm-min){
+            background-color: @w-header-white;
+        }
+
+        .dropdown-toggle {
+            color: @header-link-normal;
+
+            &:hover {
+                color: @headings-color;
+            }
+        }
+
+        .dropdown-menu {
+            margin-top: 0;
+            border: none;
+            border-radius: 0;
+            text-align: left;
+            min-width: 100%;
+            background-color: @w-header-white;
+            padding-bottom: @w-header-height/4;
+            .deep-1();
+
+            > li > a {
+                font-size: 12px;
+                display: block;
+                color: @header-link-normal;
+                float: none;
+                text-transform: none;
+                font-weight: @fw_medium;
+
+                @media screen and (max-width: @screen-xs-max) {
+                    padding-left: 10px;
+                }
+            }
+            > li.active > a {
+                color: white;
+                background-color: desaturate(@brand-primary, 40%);
+            }
+
+            @media screen and (max-width: @screen-xs-max) {
+                position: static;
+            }
+            @media screen and (min-width: @screen-sm-min) {
+                background-color: @w-header-white;
+            }
+        }
+    }
+
+    &.o_dropdown_mobile_nav {
+        margin-left: 0;
+
+        > .dropdown-toggle {
+            &:after {
+                .o-position-absolute(0, 0);
+            }
+        }
+
+        .o_breadcrumb_dropdown_menu > li{
+            > a {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            > a:before {
+                content: "|";
+                margin-right: 0.5em;
+            }
+            &:nth-child(1) > a:before {
+                display: none;
+            }
+            &:nth-child(2) > a:before {
+                padding-left: 0.5em;
+            }
+            &:nth-child(3) > a:before {
+                padding-left: 1em;
+            }
+        }
+    }
+}
 
 
 // Shadows

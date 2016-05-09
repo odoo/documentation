@@ -162,55 +162,47 @@
     </div>
     <nav class="navbar o_sub_nav">
       <div class="container">
-        <span class="o_main_back">
-          {# warning: if doc structure change, these rules may have
-            to change as well #}
-            {% if pagename.count('/') %}
-            {# If the current document is an application's content,
-            link to the application root #}
-            {% set updoc, _ = pagename.split('/', 1) %}
-            {% else %}
-            {# otherwise link to master_doc #}
-            {% set updoc = master_doc %}
-            {% endif %}
-            <a href="{{ pathto(updoc) }}" class="mdi-navigation-arrow-back"></a>
-        </span>
-        <a href="#" class="navbar-header">
-          <span id="o_doc_title" class="o_app_name_title">{{ meta.get('main-title', title) }}</span>
-        </a>
-        <div class="collapse navbar-collapse">
-          <div class="call-to-action navbar-right">
+        <div class="navbar-header visible-xs">
+            <button type="button" class="navbar-toggle collapsed text-left btn-block" data-toggle="collapse" data-target="#o_sub-menu" aria-expanded="false">
+              Navigate
+              <span class="mdi-hardware-keyboard-arrow-down pull-right"></span>
+            </button>
+        </div>
+
+        <div class="collapse navbar-collapse" id="o_sub-menu">
+          <ol class="o_breadcrumb breadcrumb nav navbar-left">
+              {% block breadcrumb_desktop %}
+              {% include "breadcrumb_list.html" %}
+              {% endblock %}
+          </ol>
+
+          <div class="call-to-action navbar-right hidden-xs">
             <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
           </div>
-          {% if languages %}
-          <ul class="navbar-nav navbar-right nav">
-            <li class="languages dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                {{ language }}
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                {% for name, url in languages %}
-                  <li><a href="{{ url }}">{{ name }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            {% if pagename != master_doc %}
+              <li class="divider"></li>
+            {% endif%}
+
+            {% block switchers_desktop %}
+            {% include "switchers_list.html" %}
+            {% endblock %}
           </ul>
-          {% endif %}
-          {% if versions %}
+
           <ul class="nav navbar-nav navbar-right">
-            <li class="versions dropdown">
-              <a class="dropdown-toggle" data-toggle="dropdown">
-                {{ version }}
-              </a>
-              <ul class="dropdown-menu" role="menu">
-                {% for name, url in versions %}
-                <li><a href="{{ url }}">{{ name }}</a></li>
-                {% endfor %}
-              </ul>
-            </li>
+            {% if languages or versions %}
+              <li class="divider"></li>
+            {% endif %}
+
+            {% block sub_menu_desktop %}
+            {% include "sub-menu_list.html" %}
+            {% endblock %}
+
+            {% if languages or versions %}
+              <li class="divider"></li>
+            {% endif %}
           </ul>
-          {% endif %}
-          {{ toctree(titles_only=True, maxdepth=2, includehidden=True, collapse=False, navbar='main') }}
         </div>
       </div>
     </nav>

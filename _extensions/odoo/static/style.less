@@ -22,17 +22,130 @@
 // The following rules are specific for the documentation website.
 
 .o_main_header {
-
-  .mdi-navigation-menu {
-    padding: 13px;
-  }
+  @o-sub-inner-h:  @w-sub-nav-height - 2;
 
   &.o_mobile_menu_opened .mdi-navigation-menu {
     background-color: @footer-bg-color;
     color: @gray-lighter;
   }
 
-  .o_sub_nav {
+  > .o_sub_nav #o_sub-menu .o_breadcrumb {
+
+    @media screen and (min-width: @screen-sm-min) {
+      background-color: transparent;
+      padding: 0;
+      margin: 0 0 0 -15px;
+      height: @o-sub-inner-h;
+      line-height: @o-sub-inner-h;
+    }
+
+    > li {
+      display: block;
+      &, > a {
+        height: 30px;
+        line-height: 2;
+      }
+
+      &:before {
+        font-weight: @fw_bold;
+        float: left;
+        padding: 0;
+        margin-right: -1px;
+        display: none;
+      }
+
+      @media screen and (min-width: @screen-sm-min) {
+        margin-left: 0;
+        margin-right: -1px;
+        height: @o-sub-inner-h;
+        line-height: @o-sub-inner-h;
+        display: inline-block;
+
+        &:before {
+          display: block;
+        }
+
+        > a {
+          padding: 0;
+          height: @o-sub-inner-h;
+          line-height: @w-sub-nav-height;
+          letter-spacing: -0.1px;
+          word-spacing: -1px;
+          font-size: 0.9em;
+          display: inline-block;
+          height: 100%;
+          max-width: 80px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+
+        &:last-child > a {
+          max-width: 170px;
+        }
+      }
+
+      @media screen and (min-width: 1980px) {
+        > a {
+          max-width: 120px;
+        }
+      }
+
+      @media screen and (min-width: @screen-lg-min) {
+        &:last-child > a {
+          max-width: none;
+        }
+      }
+
+      @media screen and (max-width: @screen-xs-max) {
+        > a {
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+        > a:before {
+          content: "|";
+          margin-right: 0.5em;
+        }
+        &:nth-child(1) > a:before {
+          display: none;
+        }
+        &:nth-child(2) > a:before {
+          padding-left: 0.5em;
+        }
+        &:nth-child(3) > a:before {
+          padding-left: 1em;
+        }
+      }
+    }
+  }
+
+  &.index {
+    @media screen and (max-width: @screen-xs-max ){
+       > .o_sub_nav #o_sub-menu .o_breadcrumb {
+         display: none;
+       }
+    }
+  }
+
+  > .o_sub_nav {
+    border-radius: 0;
+
+    .navbar-toggle {
+      padding: 0 15px;
+      margin: 0;
+      height: @o-sub-inner-h;
+      background-color: @gray-lighter;
+
+      span {
+        line-height: @o-sub-inner-h;
+      }
+
+      &.collapsed {
+        background-color: @w-header-white;
+      }
+    }
+
     .collapse .nav {
       margin-right: 0;
       margin-bottom: 0;
@@ -45,82 +158,95 @@
         margin: 0;
 
         > a {
-          padding:0 10px;
+          padding:0 0 0 10px;
+        }
+
+        &.divider {
+          height: auto;
+          line-height: 1;
+          border-bottom: 1px solid @gray-light;
+          padding: 4px 0px 5px;
         }
 
         &.dropdown {
-          > a.dropdown-toggle {
-            padding: 0 15px 0 10px;
+         .o-doc-dropdown();
+        }
+      }
+    }
 
-            &:after {
-              .mdi-icon("\e7c1");
-              .o-position-absolute(0,0);
-            }
-          }
+    > .container > .collapse > .nav,
+    > .container .o_breadcrumb {
+       > li > a {
+        @media screen and (min-width: @screen-sm-min) and ( max-width: @screen-sm-max ) {
+          font-size: 10px;
+          font-weight: @fw_semibold;
+        }
+      }
+    }
 
-          &.open {
-            background-color: @w-header-white;
-            color: @header-link-normal;
+    li.dropdown {
+      .o-doc-dropdown();
+    }
+  }
 
-            .dropdown-toggle {
+
+  &.o_inverted:not(.o_scrolled) {
+    @media (max-width: @screen-xs-max) {
+      .o_sub_nav {
+        display: block;
+        margin-bottom: 0;
+
+        .nav {
+          margin: 0 0 0 -8px;
+
+          > li > a{
+            color: @text-color;
+
+            &:hover, &:focus {
               color: @header-link-normal;
-              &:hover {
-                color: @headings-color;
-              }
-            }
-
-            .dropdown-menu {
-              background-color: @w-header-white;
-              margin-top: 0;
-              border: none;
-              border-radius: 0;
-              text-align: left;
-              min-width: 100%;
-              padding-bottom: @w-header-height/4;
-              .deep-1();
-
-              > li > a {
-                font-size     : 12px;
-                display       : block;
-                color         : @header-link-normal;
-                float         : none;
-                text-transform: none;
-                font-weight   : normal;
-              }
             }
           }
         }
       }
     }
 
-    .o_main_back {
-      float: left;
-      height: 35px;
-      line-height: 50px;
-      a {
-        color: white;
-      }
-    }
+    .o_sub_nav_actions {
+      margin-left: 10px;
 
-    #o_doc_title {
-      padding-left: 10px;
-      display: inline-block;
-      .transform-origin(0 50%);
-      .translate(50px, 0);
-      .opacity(0);
-      .transition(all 0.3s);
+      > li {
+        background: fade(@gray-lightest, 10%);
+        margin-right: 1px;
+
+        &:last-child {
+          margin-right: 0
+        }
+      }
     }
   }
 
   &.o_scrolled {
     .o_sub_nav {
-      .o_main_back a{
-        color: @odoo-brand-primary;
-      }
       #o_doc_title {
         .opacity(1);
         .translate(0, 0);
         .transition(~'opacity 1s, transform 0.3s');
+      }
+
+      .o_sub_nav_actions {
+        margin-left: 10px;
+
+        &:first-of-type {
+          margin-right: -25px;
+        }
+
+        > li {
+          background: fade(@gray, 10%);
+          margin-right: 1px;
+
+          &:last-child {
+            margin-right: 0
+          }
+        }
       }
     }
   }
