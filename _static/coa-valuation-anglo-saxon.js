@@ -156,12 +156,14 @@
         ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
         STOCK: { code: 14000, label: "Inventory" },
         RAW_MATERIALS: { code: 14100, label: "Raw Materials Inventory" },
+        STOCK_OUT: { code: 14600, label: "Goods Issued Not Invoiced" },
         TAXES_PAID: { code: 19000, label: "Deferred Tax Assets" }
     };
     var LIABILITIES = {
         code: 2,
         label: "Liabilities",
         ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
+        STOCK_IN: { code: 23000, label: "Goods Received Not Purchased" },
         TAXES_PAYABLE: { code: 26200, label: "Deferred Tax Liabilities" }
     };
     var EQUITY = {
@@ -177,10 +179,9 @@
     var EXPENSES = {
         code: 5,
         label: "Expenses",
-        PURCHASED_GOODS: { code: 51000, label: "Purchased Goods" },
-        PURCHASED_SERVICES: { code: 52000, label: "Purchased Services" },
-        INVENTORY_VARIATIONS: { code: 58000, label: "Inventory Variations" },
-        OTHER_OPERATING_EXPENSES: { code: 59000, label: "Other Operating Expenses" },
+        GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
+        MANUFACTURING_OVERHEAD: { code: 52000, label: "Manufacturing Overhead" },
+        PRICE_DIFFERENCE: { code: 53000, label: "Price Difference" }
     };
     var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES], function (k, v) {
         return Immutable.Iterable.isIndexed(v)
@@ -210,45 +211,53 @@
         purchase = 52,
         purchase_tax = 52 * 0.09;
     var operations = Immutable.fromJS([{
-        label: "Vendor Invoice (PO $50, Invoice $50)",
+        label: "Supplier Invoice (PO $50, Invoice $40)",
         operations: [
-            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(50)},
+            {account: LIABILITIES.STOCK_IN.code, debit: constant(50)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(50 * 0.09)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(50 * 1.09)},
         ]
     }, {
-        label: "Vendor Goods Reception (PO $50, Invoice $50)",
+        label: "Supplier Goods Reception (PO $50, Invoice $50)",
         operations: [
-            {account: EXPENSES.INVENTORY_VARIATIONS.code, credit: constant(50)},
+            {account: LIABILITIES.STOCK_IN.code, credit: constant(50)},
             {account: ASSETS.STOCK.code, debit: constant(50)},
         ]
     }, {
-        label: "Vendor Invoice (PO $48, Invoice $50)",
+        label: "Supplier Invoice (PO $48, Invoice $50)",
         operations: [
-            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(48)},
+            {account: EXPENSES.PRICE_DIFFERENCE.code, debit: constant(2)},
+            {account: LIABILITIES.STOCK_IN.code, debit: constant(48)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(50 * 0.09)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(50 * 1.09)},
         ]
     }, {
-        label: "Vendor Goods Reception (PO $48, Invoice $50)",
+        label: "Supplier Goods Reception (PO $48, Invoice $50)",
         operations: [
-            {account: EXPENSES.INVENTORY_VARIATIONS.code, credit: constant(48)},
+            {account: LIABILITIES.STOCK_IN.code, credit: constant(48)},
             {account: ASSETS.STOCK.code, debit: constant(48)},
         ]
     }, {
-        label: "Customer Invoice ($100 + 9% tax)",
+        label: "Customer Invoice",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
-            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(cor)},
+            {account: EXPENSES.GOODS_SOLD.code, debit: constant(cor)},
             {account: REVENUE.SALES.code, credit: constant(sale)},
-            {account: EXPENSES.INVENTORY_VARIATIONS.code, credit: constant(cor)},
+            {account: ASSETS.STOCK_OUT.code, credit: constant(cor)},
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
         label: "Customer Shipping",
         operations: [
-            {account: EXPENSES.INVENTORY_VARIATIONS.code, debit: constant(cor)},
+            {account: ASSETS.STOCK_OUT.code, debit: constant(cor)},
             {account: ASSETS.STOCK.code, credit: constant(cor)}
+        ]
+    }, {
+        label: "Production Order",
+        operations: [
+            {account: ASSETS.STOCK.code, debit: constant(50)},
+            {account: EXPENSES.MANUFACTURING_OVERHEAD.code, debit: constant(2)},
+            {account: ASSETS.RAW_MATERIALS.code, credit: constant(52)}
         ]
     }]);
     function constant(val) {return function () { return val; };}
