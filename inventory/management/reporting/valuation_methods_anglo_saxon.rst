@@ -31,31 +31,31 @@ Standard Price
        - Delta Value
        - Inventory Value
      * -
-       - €10
+       - $10
        - 0
        -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
+       - $0
+     * - Receive 8 Products at $10
+       - $10
        - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €10
+       - +8*$10
+       - $80
+     * - Receive 4 Products at $16
+       - $10
        - 12
-       - +4*€10
-       - €120
+       - +4*$10
+       - $120
      * - Deliver 10 Products
-       - €10
+       - $10
        - 2
-       - | -10*€10
+       - | -10*$10
          |
-       - €20
-     * - Receive 2 Products at €9
-       - €10
+       - $20
+     * - Receive 2 Products at $9
+       - $10
        - 4
-       - +2*€10
-       - €40
+       - +2*$10
+       - $40
 
   **Standard Price** means you estimate the cost price based 
   on direct materials, direct labor and manufacturing overhead 
@@ -76,31 +76,31 @@ Average Price
        - Delta Value
        - Inventory Value
      * -
-       - €0
+       - $0
        - 0
        -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
+       - $0
+     * - Receive 8 Products at $10
+       - $10
        - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €12
+       - +8*$10
+       - $80
+     * - Receive 4 Products at $16
+       - $12
        - 12
-       - +4*€16
-       - €144
+       - +4*$16
+       - $144
      * - Deliver 10 Products
-       - €12
+       - $12
        - 2
-       - | -10*€12
+       - | -10*$12
          |
-       - €24
-     * - Receive 2 Products at €6
-       - €9
+       - $24
+     * - Receive 2 Products at $6
+       - $9
        - 4
-       - +2*€6
-       - €36
+       - +2*$6
+       - $36
 
   The **Average Price** method recomputes the cost price as a receipt order 
   has been processed, based on prices defined in tied purchase orders:
@@ -131,31 +131,31 @@ FIFO
        - Delta Value
        - Inventory Value
      * -
-       - €0
+       - $0
        - 0
        -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
+       - $0
+     * - Receive 8 Products at $10
+       - $10
        - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €12
+       - +8*$10
+       - $80
+     * - Receive 4 Products at $16
+       - $12
        - 12
-       - +4*€16
-       - €144
+       - +4*$16
+       - $144
      * - Deliver 10 Products
-       - €16
+       - $16
        - 2
-       - | -8*€10
-         | -2*€16
-       - €32
-     * - Receive 2 Products at €6
-       - €11
+       - | -8*$10
+         | -2*$16
+       - $32
+     * - Receive 2 Products at $6
+       - $11
        - 4
-       - +2*€6
-       - €44
+       - +2*$6
+       - $44
 
   For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further 
   refined by the removal strategy set on the warehouse location 
@@ -184,31 +184,31 @@ LIFO (not accepted in IFRS)
        - Delta Value
        - Inventory Value
      * -
-       - €0
+       - $0
        - 0
        -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
+       - $0
+     * - Receive 8 Products at $10
+       - $10
        - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €12
+       - +8*$10
+       - $80
+     * - Receive 4 Products at $16
+       - $12
        - 12
-       - +4*€16
-       - €144
+       - +4*$16
+       - $144
      * - Deliver 10 Products
-       - €10
+       - $10
        - 2
-       - | -4*€16
-         | -6*€10
-       - €20
-     * - Receive 2 Products at €6
-       - €8
+       - | -4*$16
+         | -6*$10
+       - $20
+     * - Receive 2 Products at $6
+       - $8
        - 4
-       - +2*€6
-       - €32
+       - +2*$6
+       - $32
 
   For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further 
   refined by the removal strategy set on the warehouse location 
