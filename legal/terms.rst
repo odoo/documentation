@@ -10,5 +10,3 @@ Terms and Conditions
     terms/online
     terms/enterprise
     terms/partnership
-
-.. + Link PDF version!s

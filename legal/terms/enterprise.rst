@@ -5,11 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. raw:: latex
-
-    \clearpage
-
-.. note:: Version 5 - Last revision: March 01, 2016.
+.. note:: Version 5a - Last revision: May 24, 2016.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -62,7 +58,7 @@ For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive, 
 license to use (execute, modify, execute after modification) the Odoo Enterprise Edition software,
 under the terms set forth in :ref:`appendix_a`.
 
-In return, the Customer agrees take all necessary measures to guarantee the unmodified execution of
+The Customer agrees to take all necessary measures to guarantee the unmodified execution of
 the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
 collects statistics for that purpose, including but not limited to the running of an instance and
 the number of Users.
@@ -71,10 +67,12 @@ Odoo SA commits not to disclose individual or named figures to third parties wit
 of the Customer, and to deal with all collected data in compliance with its official Privacy
 Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
 
-.. FIXME: reword this sentence.
+Upon expiration or termination of this Agreement, this license is revoked immediately and the
+Customer agrees to stop using the Odoo Enterprise Edition software.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
 fee equal to 300% of the applicable list price for the actual number of Users.
+
 
 .. _services:
 
@@ -289,7 +287,7 @@ supplier, on websites, press releases and other marketing materials.
 6.4 Confidentiality
 -------------------
 
-Definition of "Confidential Information"
+Definition of "Confidential Information":
     All information disclosed by a party (the "Disclosing Party") to the other party
     (the "Receiving Party"), whether orally or in writing, that is designated as confidential or
     that reasonably should be understood to be confidential given the nature of the information and
@@ -317,8 +315,10 @@ breach, this Agreement may be terminated immediately by the non-breaching Party.
 Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
 the applicable fees for the Services within the due date specified on the corresponding invoice.
 
-The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,  “:ref:`liability`”,
-and “:ref:`general_provisions`” will survive any termination or expiration of this Agreement.
+Surviving Provisions:
+  The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
+  “:ref:`liability`”, and “:ref:`general_provisions`” will survive any termination or expiration of
+  this Agreement.
 
 
 .. _warranties_disclaimers:
@@ -332,7 +332,6 @@ and “:ref:`general_provisions`” will survive any termination or expiration o
 --------------
 
 .. industry-standard warranties regarding our Services while Agreement in effect
-.. clarified "perform again the services"
 
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
@@ -366,8 +365,8 @@ Odoo SA does not warrant that the Software complies with any local or internatio
 ---------------------------
 
 To the maximum extent permitted by law, the aggregate liability of each party together with its
-affiliates arising out of or related to this Agreement will not exceed the total amount paid by the
-Customer under this Agreement during the 6 months immediately preceding the date of the event
+affiliates arising out of or related to this Agreement will not exceed 50% of the total amount
+paid by the Customer under this Agreement during the 12 months immediately preceding the date of the event
 giving rise to such claim. Multiple claims shall not enlarge this limitation.
 
 In no event will either party or its affiliates be liable for any indirect, special, exemplary,
@@ -389,7 +388,6 @@ regulations, fire, strike, war, flood, accident, epidemic, embargo, appropriatio
 product in whole or in part by any government or public authority, or any other cause or causes,
 whether of like or different nature, beyond the reasonable control of such party as long as such
 cause or causes exist.
-
 
 
 .. _general_provisions:

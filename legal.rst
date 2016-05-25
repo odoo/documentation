@@ -1,4 +1,4 @@
-:banner: banners/getting_started.jpg
+:banner: banners/sign.jpg
 
 =====
 Legal
@@ -32,11 +32,14 @@ Terms and Conditions
       :target: odoo_partnership_agreement_v5.pdf
 
 - :ref:`enterprise_agreement` |nbsp| |nbsp| |download_enterprise|
-- :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
+.. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
+
 
 
 Other legal references
 ======================
 
-- :ref:`privacy_policy`
+- `Odoo Online Service Level Agreement <https://www.odoo.com/page/odoo-online-sla>`_
 - :ref:`cla`
+
+.. - :ref:`privacy_policy`  TODO!
