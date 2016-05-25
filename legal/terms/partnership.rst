@@ -1,15 +1,11 @@
 
 .. _partnership_agreement:
 
-==========================
-Odoo Partnership Agreement
-==========================
+============================================
+Odoo Partnership Agreement - Under Revision!
+============================================
 
-.. raw:: latex
-
-    \clearpage
-
-.. note:: Version 5 - Last revision: March 02, 2016.
+.. note:: Version 5_work-in-progress - Last revision: March 02, 2016.
 
 
 BETWEEN:
