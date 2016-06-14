@@ -1,8 +1,8 @@
 :banner: banners/getting_started.jpg
 
-===========
-Odoo Online
-===========
+==========================
+Odoo Online Implementation
+==========================
 
 This document summarizes **Odoo's Online services**, our Success Pack
 **implementation methodology**, and *best practices* to **get started**
@@ -364,6 +364,9 @@ Organizations** page and click **Duplicate**.
 
 .. image:: media/getting_started12.png
     :align: center
+    
+You can find more information on how to manage your databases
+:ref:`here <db_management/documentation>`.
 
 Customer Success
 ================
@@ -386,6 +389,9 @@ them a solution the grows with their needs!
 
 Welcome aboard and enjoy your Odoo experience!
 
+.. seealso::
+    * :doc:`../../db_management/documentation`
+    
 .. image:: media/getting_started13.png
     :align: center
 
