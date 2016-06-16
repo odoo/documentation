@@ -28,7 +28,7 @@ day-to-day business is not impacted.
     us through our `support form <https://www.odoo.com/help>`__.
 
 .. note:: Database duplication, renaming, custom DNS, etc. is not available
-    to free customers.
+    to free customers of our Online platform.
 
 
 .. _duplicate:
@@ -93,6 +93,9 @@ the duplicated database's uuid (Unniversally Unique Identifier), since this
 uuid is how your database identifies itself with our servers. Having two
 databases with the same uuid could result in invoicing problems or registration
 problems down the line.
+
+.. note:: From July 2016 onward, Odoo 9 now automatically change the uuid of a
+    duplicated database; a manual operation is no longer required.
 
 The database uuid is currently accessible from the menu **Settings > Technical
 > System Parameters**, we advise you to use a 
