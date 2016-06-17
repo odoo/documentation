@@ -7,15 +7,15 @@ Overview
 
 A good warehouse implementation takes care that products automatically
 move to their appropriate destination location. Putaway is the process
-of taking products off the receiving shipment and put them into the most
-appropriate location.
+of taking products off the receiving shipment and putting them into the
+most appropriate location.
 
 If for instance a warehouse contains volatile substances, it is
 important to make sure that certain products are not stored close to
 each other because of a potential chemical reaction.
 
 A putaway strategy follows the same principle as removal strategies but
-affect on the destination location. Put away strategies are defined at
+affects the destination location. Putaway strategies are defined at
 the location level (unlike removal strategies which are defined at the
 product level).
 
@@ -58,7 +58,7 @@ strategy, and set the method and fixed location for each category.
 
 When you have entered all the necessary information, click on **Save**.
 
-Now, when you will purchase products from those categories, they will
+Now, when you purchase products with those categories, they will
 automatically be transferred to the correct location.
 
 To check current inventory, Go to 
