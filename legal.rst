@@ -27,11 +27,16 @@ Terms and Conditions
       :alt: Download Odoo Enterprise Agreement
       :target: odoo_enterprise_agreement_v5.pdf
 
+.. |download_enterprise_fr| image:: _static/banners/pdf-icon.png
+      :alt: Download Odoo Enterprise Agreement (FR)
+      :target: odoo_enterprise_agreement_v5_fr.pdf
+
 .. |download_partnership| image:: _static/banners/pdf-icon.png
       :alt: Download Odoo Partnership Agreement
       :target: odoo_partnership_agreement_v5.pdf
 
 - :ref:`enterprise_agreement` |nbsp| |nbsp| |download_enterprise|
+- :ref:`enterprise_agreement_fr` |nbsp| |nbsp| |download_enterprise_fr|
 .. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 

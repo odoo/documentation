@@ -5,7 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 5a - Last revision: May 24, 2016.
+.. note:: Version 5a - Last revision: June 6, 2016.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -127,7 +127,7 @@ the public disclosure.
 Upgrade Service for the Software
 ++++++++++++++++++++++++++++++++
 
-For these duration of this Agreement, the Customer can submit upgrade requests through the appropriate
+For the duration of this Agreement, the Customer can submit upgrade requests through the appropriate
 channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
 from one Covered Version of the Software to a more recent Covered Version (the "Target Version").
 
@@ -138,7 +138,8 @@ identifiable data inside a database before submitting the upgrade request, and a
 the anonymized data after the upgrade.
 
 This service provided through an automated platform in order to allow the Customer to perform
-unattended upgrades once a previous version of the Customer's database has been successfully upgraded.
+unattended upgrades once a previous version of the Customer's database has been successfully
+upgraded for a Covered Version.
 The Customer may submit successive upgrade requests for a database, and agrees to submit at least
 1 upgrade request for testing purposes before submitting the final upgrade request.
 
@@ -159,8 +160,8 @@ achieved.
 Upgrade Service for third-party extensions
 ++++++++++++++++++++++++++++++++++++++++++
 
-For the duration of this Agreement, the Customer may request optional upgrade services in addition
-to the regular Upgrade Services, for third-party extension modules of the Software.
+For the duration of this Agreement, the Customer may request optional upgrade services for
+third-party extension modules of the Software, in addition to the regular Upgrade Services.
 This optional service is subject to additional fees (as described in charges_) and includes the
 technical adaptation of third-party modules installed in the Customer's database and their
 corresponding data in order to be compatible with the Target Version. The Customer will receive an
@@ -195,8 +196,8 @@ of the first Term.
 
 Upon renewal as covered in section :ref:`term`, if the per-User charges applied during the previous Term
 are lower than the most current applicable per-User list price, the per-User charges will increase
-by up to 7%, unless Odoo SA provides written notice of a new price to the Customer 60 days prior
-to the end of the Term.
+by up to 7%, unless Odoo SA provides written notice of a new price to the Customer at least 60 days
+prior to the end of the Term.
 
 
 .. _charges_thirdparty:

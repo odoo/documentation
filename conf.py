@@ -223,6 +223,7 @@ latex_additional_files = ['_static/latex/odoo.sty']
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
   ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement', '', 'howto'),
+  ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_v5_fr.tex', 'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
   ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement', '', 'howto'),
   #('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation', u'fp, xmo', 'manual'),
 ]
