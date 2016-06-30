@@ -18,7 +18,7 @@ Odoo Enterprise Subscription Agreement (FR)
     The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
     Agreement” is the :ref:`original english version <enterprise_agreement>`.
 
-.. note:: Version 5a - Dernière modification: 6 juin 2016.
+.. note:: Version 5b - Dernière modification: 30 juin 2016.
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -41,10 +41,10 @@ reconduit pour une même durée, à moins que l'une des parties n’envoie à l'
 =============
 
 Utilisateur
-    Tout employé, contractant, client ou fournisseur du Client qui reçoit un accès au Logiciel
-    en mode création et/ou édition. Les Utilisateurs externes qui utilisent uniquement
-    le Logiciel par l'intermédiaire du portail ("Utilisateurs Portail") et les Utilisateurs dont
-    le compte est désactivé ne sont pas comptés comme Utilisateurs.
+    Tout compte utilisateur actif donnant accès au Logiciel en mode création et/ou édition.
+    Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieur(e)s
+    n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
+    comptés comme Utilisateurs.
 
 Bug
     Désigne toute défaillance du Logiciel qui se traduit par un arrêt complet, un message d'erreur

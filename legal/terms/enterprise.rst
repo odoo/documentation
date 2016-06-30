@@ -5,7 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 5a - Last revision: June 6, 2016.
+.. note:: Version 5b - Last revision: June 30, 2016.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -28,9 +28,10 @@ termination minimum 30 days before the end of the Term by registered mail to the
 =============
 
 User
-    Any employee, contractor, customer or vendor of the Customer who receives access to
-    the Software in creation and/or edition mode. External Users who only use the Software through
-    the portal facilities ("portal Users") and deactivated Users are not counted as Users.
+    Any active user account with access to the Software in creation and/or edition mode.
+    Deactivated user accounts and accounts used by external people (or systems) who only have
+    limited access to the Software through the portal facilities (known as "portal Users") are not
+    counted as Users.
 
 Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
