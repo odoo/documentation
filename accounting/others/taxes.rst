@@ -8,3 +8,4 @@ Taxes
    taxes/application
    taxes/create
    taxes/retention
+   taxes/taxcloud
