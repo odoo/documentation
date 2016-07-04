@@ -9,7 +9,7 @@ Activate the lead stage
 =======================
 
 By default, the lead stage is not activated in Odoo CRM. To activate it,
-go to :menuselection:`Configuration --> Settings`, select the option ""use leads
+go to :menuselection:`Sales --> Configuration --> Settings`, select the option ""use leads
 if…** as shown below and click on **Apply**.
 
 .. image:: ./media/manual01.jpg
