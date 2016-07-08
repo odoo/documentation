@@ -1,5 +1,5 @@
 ========================================================================
-What is a removal strategy (FIFO, LIFO, FEFO, Specific Indentification)?
+What is a removal strategy (FIFO, LIFO, and FEFO)?
 ========================================================================
 
 Overview
