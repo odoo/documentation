@@ -29,8 +29,8 @@ this email, you can activate your existing Odoo database or create a new
 one from scratch.
 
 If you did not receive this email, e.g. because the payment was made by
-someone else in your company, send an e-mail to 
-`help@odoo.com <mailto:online@odoo.com>`__.
+someone else in your company, contact our support using our 
+`online support form <https://www.odoo.com/help>`__.
 
 .. image:: media/getting_started02.png
     :align: center
@@ -76,8 +76,8 @@ you through all the steps. But you can also:
 -   Read the documentation on our website:
     `https://www.odoo.com/documentation/user <https://www.odoo.com/documentation/user>`__
 
--   Or send your questions to our online support by e-mail at
-    `help@odoo.com <mailto:online@odoo.com>`__.
+-   Or send your questions to our online support through our
+    `online support form <https://www.odoo.com/help>`__.
 
 What do we expect from you?
 ===========================
@@ -220,8 +220,8 @@ are in San Francisco, Belgium and India. Questions could be about
 anything and everything from: how to use or configure, bugfix requests,
 payments or subscription issues.
 
-Send your support requests to:
-`help@odoo.com <mailto:online@odoo.com>`__.
+Our support can be contacted through our
+`online support form <https://www.odoo.com/help>`__.
 
 Note: The support team cannot develop new features, customize, import
 data or train your users. These services are provided by your dedicated
@@ -237,7 +237,7 @@ features.
 
 We provide the option to upgrade in a test environment so that you can
 evaluate a new version or train your team before the roll out. Simply
-email `help@odoo.com <mailto:help@odoo.com>`__ to make this request.
+fill our `online support form <https://www.odoo.com/help>`__ to make this request.
 
 Success Pack Services
 ---------------------
