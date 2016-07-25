@@ -5,6 +5,7 @@
 # Translators:
 # AleEscandon <alejandra.escandon@jarsa.com.mx>, 2016
 # Alejandro Die Sanchis <marketing@domatix.com>, 2016
+# David Arnold <blaggacao@users.noreply.github.com>, 2016
 # Fairuoz Hussein Naranjo <l92hunaf@gmail.com>, 2016
 # Ivan Nieto <ivan.n.s@tuta.io>, 2016
 # Juan Carlos Daniel Fernandez <estudiofaz@gmail.com>, 2016
@@ -16,8 +17,8 @@ msgstr ""
 "Project-Id-Version: Odoo 9.0 Documentation\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2016-05-06 13:42+0200\n"
-"PO-Revision-Date: 2016-06-17 21:56+0000\n"
-"Last-Translator: Juan Carlos Daniel Fernandez <estudiofaz@gmail.com>\n"
+"PO-Revision-Date: 2016-07-25 04:57+0000\n"
+"Last-Translator: David Arnold <blaggacao@users.noreply.github.com>\n"
 "Language-Team: Spanish (http://www.transifex.com/odoo/odoo-9-doc/language/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -111,7 +112,7 @@ msgid ""
 "consider SEO a top priority. To guarantee Odoo Website and Odoo eCommerce "
 "users have a great SEO, Odoo abstracts all the technical complexities of SEO"
 " and handles everything for you, in the best possible way."
-msgstr ""
+msgstr "El constructor de páginas web de Odoo es probablemente el CMS mas apto para SEO en el mercado. Estamos considerando SEO con máxima prioridad. Para garantizar que usuarios de Odoo Página web y Odoo Tienda en linea otienen un excelente SEO, Odoo abstrae todas las complejidades técnicas en la mejor forma posible."
 
 #: ../../website/seo.rst:23
 msgid "Page speed"
@@ -183,7 +184,7 @@ msgid ""
 "directly. Since Odoo supports Less and Sass, so you can modify CSS rules, "
 "instead of overwriting them through extra CSS lines, resulting in a smaller "
 "file."
-msgstr ""
+msgstr "**Preprocesado:** El marco CSS usado por Odoo 9 es bootstrap 3. A pesar de que un tema pudria usar otro marco, la mayoría de `temas Odoo <https://www.odoo.com/apps/themes>`__ extienden y personalizan directamente a bootstrap. Debido al soporte de Odoo de Less y Sass, es decir que puede modificar reglas de css, en vez de sobrescribirlos a traves de lineas css addicionales, los archivos puden resultar de menor tamaño."
 
 #: ../../website/seo.rst:70
 msgid "**Both files in the <head>**"
@@ -237,7 +238,7 @@ msgid ""
 " is usually much longer than the actual data transfer time, for small files "
 "like .JS and .CSS. Thus, the time to load CSS resources depends more on the "
 "number of requests to be done than the actual file size."
-msgstr ""
+msgstr "**Concatenado:** todo módulo o libreria que desea utilizar en Odoo tiene su propio conjunto de archivos CSS, Less o Sass (tienad en linea, blog, tema, etcétera).  Teniendo varios archivos CSS es optimal para la modularidad pero pesimo para el rendimiento por que muchos navegadores solo pueden procesar 6 requests en paralelo, resultando en muchos archivos crgados en serie. Para archivos pequeños como JS o CSS, la latencia para transferir un archivo normalmente es mucho mas largo que el tiempo de transferencia actual de datos. Por ende el tiempo necesario para cargar recursos CSS depende mas del número de requests por ejecutar que del tamaño actual de los archivos."
 
 #: ../../website/seo.rst:94
 msgid ""
@@ -246,7 +247,7 @@ msgid ""
 "file to load** per page, which is particularly efficient. As the CSS is "
 "shared amongst all pages, when the visitor clicks on another page, the "
 "browser does not even have to load a new CSS file!"
-msgstr ""
+msgstr "Para circumvenir este problema, tdos los archivos CSS / Less / Sass estan siendo concatenados en uns solo archivo CSS que se envia hacia el navegador. En consequencia, un visitador, solo **necesita cargar un solo archivo CSS** per página, algo especialmente eficiente. Como el CSS esta siendo compartido entre todas las páginas, cuando un visitador hace clic en otra página, ¡el navegador ni siquera debe recargar un nuevo archivo CSS!"
 
 #: ../../website/seo.rst:100
 msgid ""
@@ -258,20 +259,20 @@ msgid ""
 "that is loaded only when the page using it is requested. An example of this "
 "is the backend that is only loaded when the visitor logs in and accesses the"
 " backend (/web)."
-msgstr ""
+msgstr "El archivo CSS enviado por Odoo incluye todos los CSS / Less / Sass de todas las páginas y módulos. Haciendo esto, visitas de páginas addiciónales del mismo visitador no deben recargar nigun archivo CSS. Sin embargo, algunos módulos pueden incluir recursos CSS / Javascript pesados los cuales no quiere precargar con la primera página por el mero tamaño. En este caso, Odoo separa este recurso en un segundo paquete que solo se carga cuando la página que lo este usando esta siendo soliciada. Un ejemplo es el backand que solamente esta cargado cuando un visitador esta ingresando al backend (/web)."
 
 #: ../../website/seo.rst:110
 msgid ""
 "If the CSS file is very big, Odoo will split it into two smaller files to "
 "avoid the 4095 selectors limit per sheet of Internet Explorer 8. But most "
 "themes fit below this limit."
-msgstr ""
+msgstr "Si un archivo CCS es muy grand, Odoo lo dividirá en partes menores para circumvenir la limitación de seleccionadores de 4095 por página en Internet Explorer 8. Sin embargo, la mayoría de temas estan por debajo de este limite."
 
 #: ../../website/seo.rst:114
 msgid ""
 "**Minified:** After being pre-processed and concatenated, the resulting CSS "
 "is minified to reduce its size."
-msgstr ""
+msgstr "**Minimizados:** Después de ser preprocesado y concatenado, el archivo CSS es minimizados para reducir su tamaño."
 
 #: ../../website/seo.rst:118
 msgid "**Before minification**"
@@ -299,13 +300,13 @@ msgid ""
 "Then, a cached version is stored on the server side (so we do not have to "
 "pre-process, concatenate, minify at every request) and the browser side (so "
 "the same visitor will load the CSS only once for all pages he will visit)."
-msgstr ""
+msgstr "Luego, a versión cacheada esta guardada en el servidor (para evitar la necesidad de preprocesar, concatenar y minimizar en cada request) y en el navegador (para que un visitador solo cargue el archivo una sola vez)."
 
 #: ../../website/seo.rst:135
 msgid ""
 "If you are in debug mode, the CSS resources are neither concatenated nor "
 "minified. That way, it's easier to debug (but it's much slower)"
-msgstr ""
+msgstr "Si se encuentra en modo depurador, los recursos CSS no son concatenados ni minifimizados. De este modo, depurando es mas fácil (pero más lento)."
 
 #: ../../website/seo.rst:140
 msgid "Static resources: Javascript"
@@ -315,7 +316,7 @@ msgstr "Recursos Estáticos: Javascript"
 msgid ""
 "As with CSS resources, Javascript resources are also concatenated, minified,"
 " compressed and cached (server side and browser side)."
-msgstr ""
+msgstr "Todos los archivos CSS son preprocesados, concatenados, minimizados, comprimidos y cacheados (del lado del servidor y del lado del navegador)."
 
 #: ../../website/seo.rst:145
 msgid "Odoo creates three Javascript bundles:"
@@ -336,7 +337,7 @@ msgstr "Un código comun Javascript compartido entre el frontend y el backend (b
 msgid ""
 "One for backend specific Javascript code (Odoo Web Client interface for your"
 " employees using Odoo)"
-msgstr ""
+msgstr "Uno para código Javascript del backend (interfaz del Odoo Web Client para sus empleados utilizando Odoo)"
 
 #: ../../website/seo.rst:156
 msgid ""
@@ -352,7 +353,7 @@ msgid ""
 "nor minified. Thus, it's much slower. But it allows you to easily debug with"
 " the Chrome debugger as CSS and Javascript resources are not transformed "
 "from their original versions."
-msgstr ""
+msgstr "Si esta trabajando en modo depurador, ni los archivos CSS ni Javascript estan concatenados o minimizados. Por ende, es más lento. Pero esto le permite depurar de forma fácil con el Chrome debugger debido a que recursos CSS y Javascript no son transformados de su versión original."
 
 #: ../../website/seo.rst:168
 msgid "Images"
@@ -370,7 +371,7 @@ msgid ""
 "From the upload button, you have the option to keep the original image "
 "unmodified if you prefer to optimize the quality of the image rather than "
 "performance."
-msgstr ""
+msgstr "Desde el botón de cargar, tiene la opción de mantener la imagen original sin modificar si prefiere optimizar la calidad de la imagen mas no el rendimiento."
 
 #: ../../website/seo.rst:182
 msgid ""
@@ -378,18 +379,18 @@ msgid ""
 "requested by the visitor. Thus, it's possible that, if you use a third-party"
 " theme, it will provide images that are not compressed efficiently. But all "
 "images used in Odoo official themes have been compressed by default."
-msgstr ""
+msgstr "Odoo comprime imagenes al momento que las carga en su página web, no en el momento qu un visitador los solicita. Por eso es posible en el caso de que utilice un tema de terceros que las imagenes proveídos no son comprimidos de manera eficiente. Sin embargo, todas las imagenes utilizadas en temas oficiales de Odoo han sidos comprimidas debidamente por defecto."
 
 #: ../../website/seo.rst:188
 msgid ""
 "When you click on an image, Odoo shows you the Alt and title attributes of "
 "the ``<img>`` tag. You can click on it to set your own title and Alt "
 "attributes for the image."
-msgstr ""
+msgstr "Si hace clic en una imagen, Odoo le muestra los attributos Alt y título de la etiqueta ``<img>`` . Puede dar cic para configurar su propio attributo título y Alt para la imagen."
 
 #: ../../website/seo.rst:195
 msgid "When you click on this link, the following window will appear:"
-msgstr ""
+msgstr "Cuando hace clic en este enlace, la siguente ventana aparecerá:"
 
 #: ../../website/seo.rst:200
 msgid ""
@@ -397,24 +398,24 @@ msgid ""
 "<https://fortawesome.github.io/Font-Awesome/icons/>`__ in most Odoo themes)."
 " Thus, you can use as many pictograms as you want in your page, they will "
 "not result in extra requests to load the page."
-msgstr ""
+msgstr "Los pictrogramas de Odoo han sido implementados utilizando une fuente (`Font Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ en la mayoría de temas Odoo). Por ende, puede utilizarlos sin limitaciones en su página. No resultaran en rqeusts addicionales para cargar la página."
 
 #: ../../website/seo.rst:209
 msgid "CDN"
-msgstr ""
+msgstr "CDN (Red de distribuición de contenido)"
 
 #: ../../website/seo.rst:211
 msgid ""
 "If you activate the CDN feature in Odoo, static resources (Javascript, CSS, "
 "images) are loaded from a Content Delivery Network. Using a Content Delivery"
 " Network has three advantages:"
-msgstr ""
+msgstr "Si activa la opción CDN en Odoo, recursos estaticos (Javascript, CSS, imagenes) estan siendo cargados desde una red de distribuicipon de contenido (CDN). Utilizando una red de distribuición de contenido conlleva tres ventajas:"
 
 #: ../../website/seo.rst:215
 msgid ""
 "Load resources from a nearby server (most CDN have servers in main countries"
 " around the globe)"
-msgstr ""
+msgstr "Cargar recursos de un servidor cercano (la mayoria de CDN mantiene servidores en los principales países alrededor del mundo)"
 
 #: ../../website/seo.rst:218
 msgid ""
@@ -427,13 +428,13 @@ msgid ""
 "Split the resource loading on different services allowing to load more "
 "resources in parallel (since the Chrome limit of 6 parallel requests is by "
 "domain)"
-msgstr ""
+msgstr "Distribuir la tarea de cargar recursos a traves de diferentes servicios permitiendo cargar maás recursos en paralelo (debido a que el límite de Chrome de 6 requestes en paralelo cuenta por dominio)"
 
 #: ../../website/seo.rst:225
 msgid ""
 "You can configure your CDN options from the **Website Admin** app, using the"
 " Configuration menu. Here is an example of configuration you can use:"
-msgstr ""
+msgstr "Puede configurar sus opciones CDN desde la aplicación **Administrador de página web** utilizando el menú de configuración. Aqui esta un ejemplo de configuración que puede utilizar:"
 
 #: ../../website/seo.rst:232
 msgid "HTML Pages"
