@@ -3,9 +3,9 @@ From Invoice to Payment Collection
 ==================================
 
 Odoo supports multiple invoicing and payment workflows, so you can
-choose and use the ones that match your business needs. Whether you want
+choose the ones that match your business needs. Whether you want
 to accept a single payment for a single invoice, or process a payment
-spanning multiple invoices and taking discounts for early payments, you
+spanning multiple invoices or take a discount for early payments, you
 can do so efficiently and accurately.
 
 From Draft Invoice to Profit and Loss
@@ -22,16 +22,16 @@ Invoicing in most countries occurs when a contractual obligation is met.
 If you ship a box to a customer, you have met the terms of the contract
 and can bill them. If your supplier sends you a shipment, they have met
 the terms of that contract and can bill you. Therefore, the terms of the
-contract is fulfilled when the box moves to or from the truck. At this
+contract are fulfilled when the box moves to or from the truck. At this
 point, Odoo supports the creation of what is called a Draft Invoice by
-Warehouse staff.
+the warehouse staff.
 
-Invoice creation
+Invoice Creation
 ================
 
 Draft invoices can be manually generated from other documents such as
 Sales Orders, Purchase Orders,etc. Although you can create a draft
-invoice directly if you would like.
+invoice directly if you want to.
 
 An invoice must be provided to the customer with the necessary
 information in order for them to pay for the goods and services ordered
@@ -42,9 +42,8 @@ Draft invoices
 ==============
 
 The system generates invoice which are initially set to the Draft state.
-While these invoices
-
-remain unvalidated, they have no accounting impact within the system.
+While these invoices remain unvalidated, they have no accounting
+impact within the system.
 There is nothing to stop users from creating their own draft invoices.
 
 Let's create a customer invoice with following information:
@@ -65,7 +64,7 @@ The document is composed of three parts:
 
 -  the top of the invoice, with customer information,
 -  the main body of the invoice, with detailed invoice lines,
--  the bottom of the page, with detail about the taxes, and the totals.
+-  the bottom of the page, with details about the taxes, and the totals.
 
 Open or Pro-forma invoices
 ==========================
@@ -101,7 +100,7 @@ customer via the 'Send by email' functionality.
    :align: center
 
 A typical journal entry generated from a validated invoice will look
-like as follows:
+like this:
 
 +-----------------------+---------------+----------------+-------------+--------------+
 | **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
@@ -121,8 +120,7 @@ accounting entry has been reconciled with the payment entries. If there
 has not been a reconciliation, the invoice will remain in the Open state
 until you have entered the payment.
 
-A typical journal entry generated from a payment will look like as
-follows:
+A typical journal entry generated from a payment will look like this:
 
 +-----------------------+---------------+----------------+-------------+--------------+
 | **Account**           | **Partner**   | **Due date**   | **Debit**   | **Credit**   |
@@ -137,7 +135,7 @@ Receive a partial payment through the bank statement
 
 You can manually enter your bank statements in Odoo, or you can import
 them in from a csv file or from several other predefined formats
-according to your accounting localisation.
+according to your accounting localization.
 
 Create a bank statement from the accounting dashboard with the related
 journal and enter an amount of $100 .
@@ -165,7 +163,7 @@ reconcile them to pay this invoice. "
 .. image:: ./media/invoice09.png
    :align: center
 
-Apply the payment. Below, you can see that the payment has been added to
+Apply the payment. Now you can see that the payment has been added to
 the invoice.
 
 .. image:: ./media/invoice10.png
@@ -186,7 +184,7 @@ invoice has passed a certain number of days. If there are other overdue
 invoices for the same customer, the actions of the most overdue invoice
 will be executed.
 
-By going to the customer record and diving into the "Overdue Payments"
+By going to the customer record and going to "Overdue Payments"
 you will see the follow-up message and all overdue invoices.
 
 .. image:: ./media/invoice11.png
@@ -212,7 +210,7 @@ Profit and loss
 ===============
 
 The Profit and Loss statement displays your revenue and expense details.
-Ultimately, this gives you a clear image of your Net Profit and Loss. It
+This gives you a clear image of your Net Profit and Loss. It
 is sometimes referred to as the "Income Statement" or "Statement of
 Revenues and Expenses."
 
@@ -232,5 +230,5 @@ assets and equity at a specific moment in time.
    :align: center
 
 For example, if you manage your inventory using the perpetual accounting
-method, you should expect a decrease in account "Current Assets" once
-the material has been shipped to the customer.
+method, you should expect a decrease in the account "Current Assets" once
+the product has been shipped to the customer.
