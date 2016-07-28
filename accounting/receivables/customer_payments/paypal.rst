@@ -63,7 +63,8 @@ Paypal Configuration
 
 .. _WebsitePreferences:
 
-2. Access "Website preferences" and configure Auto Return
+2. Access "Website preferences" and configure Auto Return (Payment Data Transfer
+   must be left to Off)
 
    * **Database name**: yourcompany
    * **Website URL**: https://yourcompany.odoo.com/
@@ -87,7 +88,8 @@ Paypal Configuration
    - **Website URL**: https://yourcompany.odoo.com/
    - **Notification URL**: https://yourcompany.odoo.com/payment/paypal/ipn/
 
-   .. tip:: verify that your Notify URL uses the correct protocol (HTTP / HTTPS)
+   .. tip:: Verify that your Notify URL uses the correct protocol (HTTP / HTTPS).
+            If you use the odoo.com domain, we advise you to use HTTPS.
 
 4. Set the encoding to UTF-8 from the menu :menuselection:`Settings --> 
    Language Encoding --> More Options --> More selling tools`
@@ -137,16 +139,18 @@ Paypal payment instead of being redirected to your database:
 .. image:: ./media/paypal16.png
   :align: center
 
-Verify the Auto Return URL you have `configured in Paypal <WebsitePreferences_>`_
-is correct and pointing to your own domain name.
+Verify the settings you have `configured in Paypal <WebsitePreferences_>`_:
 
-You can either:
+* Auto Return should be on (the value can be quite generic, like
+  <odoo_instance>/shop/confirmation; the correct URL will be set for each
+  transaction)
 
-* Enter the correct return URL and activate Auto Return
+* Payment Data Transfer should be off
 
-* or deactivate Auto Return and delete URL (this method will have an
-  extra click through Paypal in order to return to your ecommerce
-  page.)
+.. warning:: On-premise databases must be accessible through classic HTTP/HTTPS
+          ports (80/443) for Paypal to work correctly, usually through a reverse
+          proxy. Contact your integrating partner if you are unsure this is the
+          case. Databases hosted on odoo.com are already configured correctly.
 
 .. seealso::
 
