@@ -45,6 +45,7 @@ Other legal references
 ======================
 
 - `Odoo Online Service Level Agreement <https://www.odoo.com/page/odoo-online-sla>`_
+- `Odoo Online Acceptable Use Policy <https://www.odoo.com/page/odoo-online-acceptable-use-policy>`_
 - :ref:`cla`
 
 .. - :ref:`privacy_policy`  TODO!
