@@ -174,7 +174,7 @@ POSBox is very different from a 'real' Odoo instance however. It does
 not handle *any* business data (eg. POS orders), but only serves as a
 gateway between the Point of Sale and the hardware.
 
-The goal of this section will be to setup a local Odoo instance that
+The goal of this section will be to set up a local Odoo instance that
 behaves like the Odoo instance running on the POSBox.
 
 Image building process
