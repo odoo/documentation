@@ -428,8 +428,7 @@ The POS cannot connect to the POSBox
 - Make sure that your LAN is set up with DHCP, and gives IP addresses
   in the range 192.168.0.X, 192.168.1.X, 10.0.0.X. If you cannot setup
   your LAN that way, you must manually set up your POSBox's
-  IP address. See the relevant paragraph in the Setup chapter of this
-  documentation.
+  IP address.
 - If you have specified the POSBox's IP address in the configuration,
   make sure it correspond to the printed on the POSBox's status
   receipt.
