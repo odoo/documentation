@@ -182,8 +182,8 @@ Managing combination possibilities
 ----------------------------------
 
 By default, with the above product template, you get 15 different
-products (3 colors, 5 sizes). If the XXL size does not exist for red and
-blue t-shirts, you can deactivate this product variant.
+products (3 colors, 5 sizes). If the XXL size only exists for red and
+blue t-shirts, you can deactivate the white product variant.
 
 To do this, click on the **Variants** button, select the XXL, White
 T-shirt. From the product form, uncheck the **Active** box of the T-shirt
