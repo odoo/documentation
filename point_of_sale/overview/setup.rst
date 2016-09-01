@@ -256,11 +256,11 @@ create a group that has access to USB devices
 
 Then we add the user who will run the OpenERP server to ``usbusers``
 
-``# useradd -G usbusers USERNAME``
+``# usermod -a -G usbusers USERNAME``
 
 Then we need to create a udev rule that will automatically allow members
 of ``usbusers`` to access raw USB devices. To do so create a file called
-``99-usbusers.rule`` in the ``/etc/udev/rules.d/`` directory with the
+``99-usbusers.rules`` in the ``/etc/udev/rules.d/`` directory with the
 following content::
 
     SUBSYSTEM=="usb", GROUP="usbusers", MODE="0660"
