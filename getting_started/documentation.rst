@@ -301,7 +301,7 @@ progressively, by groups of apps.
 .. image:: media/getting_started09.png
     :align: center
 
-The goal of the **Kick-off call** is, for our project manager, to come
+The goal of the **Kick-off call** is for our project manager to come
 to an understanding of your business in order to propose an
 implementation plan (phasing). Each phase is the deployment of a set
 applications that you will fully use in production at the end of the
@@ -314,7 +314,7 @@ For every phase, the steps are the following:
     you, validate the business process and configure according to
     your specific needs.
 
-2.  **Data:** are created manually or imported from your existing system.
+2.  **Data:** created manually or imported from your existing system.
     You are responsible to export the data from your existing system
     and Odoo's project manager will import them in Odoo.
 
@@ -371,21 +371,21 @@ You can find more information on how to manage your databases
 Customer Success
 ================
 
-Odoo is passionate about delighting our customers, and ensuring that
+Odoo is passionate about delighting our customers and ensuring that
 they have all the resources needed to complete their project.
 
 During the implementation phase, your point of contact is the project
-manager, and eventually the support team.
+manager and eventually the support team.
 
-Once your are in production, you will probably have less interaction
-with your project manager. At that time, we will assign you a member of
-our Client Success Team, that is specialized in the long-term
-relationship with our customers. He will contact you to showcase new
+Once you are in production, you will probably have less interaction
+with your project manager. At that time, we will assign a member of
+our Client Success Team to you. They are specialized in the long-term
+relationship with our customers. They will contact you to showcase new
 versions, improve the way you work with Odoo, assess your new needs,
-etc.
+etc...
 
-Our internal goal is to keep a customer at least for 10 years, and offer
-them a solution the grows with their needs!
+Our internal goal is to keep customers for at least 10 years and offer
+them a solution that grows with their needs!
 
 Welcome aboard and enjoy your Odoo experience!
 
