@@ -5,11 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. raw:: latex
-
-    \clearpage
-
-.. note:: Version 5 - Last revision: March 01, 2016.
+.. note:: Version 5b - Last revision: June 30, 2016.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -32,9 +28,10 @@ termination minimum 30 days before the end of the Term by registered mail to the
 =============
 
 User
-    Any employee, contractor, customer or vendor of the Customer who receives access to
-    the Software in creation and/or edition mode. External Users who only use the Software through
-    the portal facilities ("portal Users") and deactivated Users are not counted as Users.
+    Any active user account with access to the Software in creation and/or edition mode.
+    Deactivated user accounts and accounts used by external people (or systems) who only have
+    limited access to the Software through the portal facilities (known as "portal Users") are not
+    counted as Users.
 
 Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
@@ -62,7 +59,7 @@ For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive, 
 license to use (execute, modify, execute after modification) the Odoo Enterprise Edition software,
 under the terms set forth in :ref:`appendix_a`.
 
-In return, the Customer agrees take all necessary measures to guarantee the unmodified execution of
+The Customer agrees to take all necessary measures to guarantee the unmodified execution of
 the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
 collects statistics for that purpose, including but not limited to the running of an instance and
 the number of Users.
@@ -71,10 +68,12 @@ Odoo SA commits not to disclose individual or named figures to third parties wit
 of the Customer, and to deal with all collected data in compliance with its official Privacy
 Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
 
-.. FIXME: reword this sentence.
+Upon expiration or termination of this Agreement, this license is revoked immediately and the
+Customer agrees to stop using the Odoo Enterprise Edition software.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
 fee equal to 300% of the applicable list price for the actual number of Users.
+
 
 .. _services:
 
@@ -129,7 +128,7 @@ the public disclosure.
 Upgrade Service for the Software
 ++++++++++++++++++++++++++++++++
 
-For these duration of this Agreement, the Customer can submit upgrade requests through the appropriate
+For the duration of this Agreement, the Customer can submit upgrade requests through the appropriate
 channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
 from one Covered Version of the Software to a more recent Covered Version (the "Target Version").
 
@@ -140,7 +139,8 @@ identifiable data inside a database before submitting the upgrade request, and a
 the anonymized data after the upgrade.
 
 This service provided through an automated platform in order to allow the Customer to perform
-unattended upgrades once a previous version of the Customer's database has been successfully upgraded.
+unattended upgrades once a previous version of the Customer's database has been successfully
+upgraded for a Covered Version.
 The Customer may submit successive upgrade requests for a database, and agrees to submit at least
 1 upgrade request for testing purposes before submitting the final upgrade request.
 
@@ -161,8 +161,8 @@ achieved.
 Upgrade Service for third-party extensions
 ++++++++++++++++++++++++++++++++++++++++++
 
-For the duration of this Agreement, the Customer may request optional upgrade services in addition
-to the regular Upgrade Services, for third-party extension modules of the Software.
+For the duration of this Agreement, the Customer may request optional upgrade services for
+third-party extension modules of the Software, in addition to the regular Upgrade Services.
 This optional service is subject to additional fees (as described in charges_) and includes the
 technical adaptation of third-party modules installed in the Customer's database and their
 corresponding data in order to be compatible with the Target Version. The Customer will receive an
@@ -197,8 +197,8 @@ of the first Term.
 
 Upon renewal as covered in section :ref:`term`, if the per-User charges applied during the previous Term
 are lower than the most current applicable per-User list price, the per-User charges will increase
-by up to 7%, unless Odoo SA provides written notice of a new price to the Customer 60 days prior
-to the end of the Term.
+by up to 7%, unless Odoo SA provides written notice of a new price to the Customer at least 60 days
+prior to the end of the Term.
 
 
 .. _charges_thirdparty:
@@ -289,7 +289,7 @@ supplier, on websites, press releases and other marketing materials.
 6.4 Confidentiality
 -------------------
 
-Definition of "Confidential Information"
+Definition of "Confidential Information":
     All information disclosed by a party (the "Disclosing Party") to the other party
     (the "Receiving Party"), whether orally or in writing, that is designated as confidential or
     that reasonably should be understood to be confidential given the nature of the information and
@@ -317,8 +317,10 @@ breach, this Agreement may be terminated immediately by the non-breaching Party.
 Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
 the applicable fees for the Services within the due date specified on the corresponding invoice.
 
-The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,  “:ref:`liability`”,
-and “:ref:`general_provisions`” will survive any termination or expiration of this Agreement.
+Surviving Provisions:
+  The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
+  “:ref:`liability`”, and “:ref:`general_provisions`” will survive any termination or expiration of
+  this Agreement.
 
 
 .. _warranties_disclaimers:
@@ -332,7 +334,6 @@ and “:ref:`general_provisions`” will survive any termination or expiration o
 --------------
 
 .. industry-standard warranties regarding our Services while Agreement in effect
-.. clarified "perform again the services"
 
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
@@ -366,8 +367,8 @@ Odoo SA does not warrant that the Software complies with any local or internatio
 ---------------------------
 
 To the maximum extent permitted by law, the aggregate liability of each party together with its
-affiliates arising out of or related to this Agreement will not exceed the total amount paid by the
-Customer under this Agreement during the 6 months immediately preceding the date of the event
+affiliates arising out of or related to this Agreement will not exceed 50% of the total amount
+paid by the Customer under this Agreement during the 12 months immediately preceding the date of the event
 giving rise to such claim. Multiple claims shall not enlarge this limitation.
 
 In no event will either party or its affiliates be liable for any indirect, special, exemplary,
@@ -389,7 +390,6 @@ regulations, fire, strike, war, flood, accident, epidemic, embargo, appropriatio
 product in whole or in part by any government or public authority, or any other cause or causes,
 whether of like or different nature, beyond the reasonable control of such party as long as such
 cause or causes exist.
-
 
 
 .. _general_provisions:

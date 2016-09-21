@@ -62,7 +62,7 @@ From the Inventory Dashboard
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When opening the **Inventory** application, click on **# to receive** to see
-the list of your receipts to process.
+the list of your deliveries to process.
 
 .. image:: media/sale_to_delivery04.png
     :align: center
@@ -159,7 +159,7 @@ Process the delivery
 .. image:: media/sale_to_delivery12.png
     :align: center
 
-To process the stock transfer. Simply click on **Vaidate** to complete
+To process the stock transfer. Simply click on **Validate** to complete
 the transfer. A message will appear asking if you want to process the
 whole order, accept it by clicking on **Apply**.
 

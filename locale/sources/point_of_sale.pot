@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-04-04 16:08+0200\n"
+"POT-Creation-Date: 2016-09-01 11:43+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -676,7 +676,7 @@ msgid "Introduction"
 msgstr ""
 
 #: ../../point_of_sale/belgian_fdm/setup.rst:8
-msgid "The Belgian government requires certain businesses to use a government-certified device called a **Fiscal Data Module** (also known as a **blackbox**). This device works together with the POS application and logs certain transactions. On top of that, the used POS application must also be certified by the government and must adhere to strict standards specified by them. `Odoo 9 is a certified application <http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More information concerning the Fiscal Data Module can be found on `the official website <http://www.systemedecaisseenregistreuse.be/>`_."
+msgid "The Belgian government requires certain businesses to use a government-certified device called a **Fiscal Data Module** (also known as a **blackbox**). This device works together with the POS application and logs certain transactions. On top of that, the used POS application must also be certified by the government and must adhere to strict standards specified by them. `Odoo 9 (Enterprise Edition) is a certified application <http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More information concerning the Fiscal Data Module can be found on `the official website <http://www.systemedecaisseenregistreuse.be/>`_."
 msgstr ""
 
 #: ../../point_of_sale/belgian_fdm/setup.rst:20
@@ -720,46 +720,46 @@ msgid "An Odoo POS app can be given certified POS capabilities by installing the
 msgstr ""
 
 #: ../../point_of_sale/belgian_fdm/setup.rst:69
-msgid "On-premise"
+msgid "Certification & On-premise"
 msgstr ""
 
 #: ../../point_of_sale/belgian_fdm/setup.rst:71
-msgid "We do not only support the Fiscal Data Module on our SaaS platform, we also support the Fiscal Data Module in on-premise installations. The main restriction is that this requires an obfuscated version of the ``pos_blackbox_be`` module we will provide on request."
-msgstr ""
-
-#: ../../point_of_sale/belgian_fdm/setup.rst:77
-msgid "Restrictions"
+msgid "The certification granted by the government is restricted to the use on odoo.com SaaS instance. The usage of the module from the source or a modified version will **not** be certified. For on-premise users, we also support the Fiscal Data Module in such installations. The main restriction is that this requires an obfuscated version of the ``pos_blackbox_be`` module we will provide on request for Enterprise customers."
 msgstr ""
 
 #: ../../point_of_sale/belgian_fdm/setup.rst:79
+msgid "Restrictions"
+msgstr ""
+
+#: ../../point_of_sale/belgian_fdm/setup.rst:81
 msgid "As mentioned before, in order to get certified the POS application must adhere to strict government guidelines. Because of this, a certified Odoo POS has some limitations not present in the non-certified Odoo POS."
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:84
+#: ../../point_of_sale/belgian_fdm/setup.rst:86
 msgid "Refunding is disabled"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:85
+#: ../../point_of_sale/belgian_fdm/setup.rst:87
 msgid "Modifying orderline prices"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:86
+#: ../../point_of_sale/belgian_fdm/setup.rst:88
 msgid "Creating/modifying/deleting POS orders"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:87
+#: ../../point_of_sale/belgian_fdm/setup.rst:89
 msgid "Selling products without a valid tax"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:88
+#: ../../point_of_sale/belgian_fdm/setup.rst:90
 msgid "Multiple Odoo POS configurations per POSBox are not allowed"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:89
+#: ../../point_of_sale/belgian_fdm/setup.rst:91
 msgid "Using the POS without a connection to the POSBox (and thus FDM)"
 msgstr ""
 
-#: ../../point_of_sale/belgian_fdm/setup.rst:90
+#: ../../point_of_sale/belgian_fdm/setup.rst:92
 msgid "Blacklisted modules: pos_discount, pos_reprint, pos_loyalty"
 msgstr ""
 
@@ -951,7 +951,7 @@ msgid "Drivers for the various types of supported hardware are provided as Odoo 
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:177
-msgid "The goal of this section will be to setup a local Odoo instance that behaves like the Odoo instance running on the POSBox."
+msgid "The goal of this section will be to set up a local Odoo instance that behaves like the Odoo instance running on the POSBox."
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:181
@@ -1044,11 +1044,11 @@ msgid "Then we add the user who will run the OpenERP server to ``usbusers``"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:259
-msgid "``# useradd -G usbusers USERNAME``"
+msgid "``# usermod -a -G usbusers USERNAME``"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:261
-msgid "Then we need to create a udev rule that will automatically allow members of ``usbusers`` to access raw USB devices. To do so create a file called ``99-usbusers.rule`` in the ``/etc/udev/rules.d/`` directory with the following content::"
+msgid "Then we need to create a udev rule that will automatically allow members of ``usbusers`` to access raw USB devices. To do so create a file called ``99-usbusers.rules`` in the ``/etc/udev/rules.d/`` directory with the following content::"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:269
@@ -1212,166 +1212,166 @@ msgid "Make sure the POSBox is connected to the same network as your POS device.
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:428
-msgid "Make sure that your LAN is set up with DHCP, and gives IP addresses in the range 192.168.0.X, 192.168.1.X, 10.0.0.X. If you cannot setup your LAN that way, you must manually set up your POSBox's IP address. See the relevant paragraph in the Setup chapter of this documentation."
+msgid "Make sure that your LAN is set up with DHCP, and gives IP addresses in the range 192.168.0.X, 192.168.1.X, 10.0.0.X. If you cannot setup your LAN that way, you must manually set up your POSBox's IP address."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:433
+#: ../../point_of_sale/overview/setup.rst:432
 msgid "If you have specified the POSBox's IP address in the configuration, make sure it correspond to the printed on the POSBox's status receipt."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:436
+#: ../../point_of_sale/overview/setup.rst:435
 msgid "Make sure that the POS is not loaded over HTTPS."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:437
+#: ../../point_of_sale/overview/setup.rst:436
 msgid "A bug in Firefox's HTTP implementation prevents the autodiscovery from working reliably. When using Firefox you should manually set up the POSBox's IP address in the POS configuration."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:442
+#: ../../point_of_sale/overview/setup.rst:441
 msgid "The Barcode Scanner is not working"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:444
+#: ../../point_of_sale/overview/setup.rst:443
 msgid "The barcode scanner must be configured in US QWERTY and emit an Enter after each barcode. This is the default configuration of most barcode readers. Refer to the barcode reader documentation for more information."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:448
+#: ../../point_of_sale/overview/setup.rst:447
 msgid "The POSBox needs a 2A power supply to work with some barcode scanners. If you are not using the provided power supply, make sure the one you use has enough power."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:451
+#: ../../point_of_sale/overview/setup.rst:450
 msgid "Some barcode scanners will need more than 2A and will not work, or will work unreliably, even with the provided power supply. In those case you can plug the barcode scanner in a self-powered USB hub."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:454
+#: ../../point_of_sale/overview/setup.rst:453
 msgid "Some poorly built barcode scanners do not advertise themselves as barcode scanners but as a usb keyboard instead, and will not be recognized by the POSBox."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:459
+#: ../../point_of_sale/overview/setup.rst:458
 msgid "The Barcode Scanner is not working reliably"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:461
+#: ../../point_of_sale/overview/setup.rst:460
 msgid "Make sure that no more than one device with 'Scan via Proxy'/'Barcode Scanner' enabled are connected to the POSBox at the same time."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:466
+#: ../../point_of_sale/overview/setup.rst:465
 msgid "Printing the receipt takes too much time"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:468
+#: ../../point_of_sale/overview/setup.rst:467
 msgid "A small delay before the first print is expected, as the POSBox will do some preprocessing to speed up the next printings. If you suffer delays afterwards it is most likely due to poor network connection between the POS and the POSBox."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:474
+#: ../../point_of_sale/overview/setup.rst:473
 msgid "Some characters are not correctly printed on the receipt"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:476
+#: ../../point_of_sale/overview/setup.rst:475
 msgid "The POSBox does not support all languages and characters. It currently supports Latin and Cyrillic based scripts, with basic Japanese support."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:481
+#: ../../point_of_sale/overview/setup.rst:480
 msgid "The printer is offline"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:483
+#: ../../point_of_sale/overview/setup.rst:482
 msgid "Make sure the printer is connected, powered, has enough paper and has its lid closed, and is not reporting an error. If the error persists, please contact support."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:488
+#: ../../point_of_sale/overview/setup.rst:487
 msgid "The cashdrawer does not open"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:490
+#: ../../point_of_sale/overview/setup.rst:489
 msgid "The cashdrawer should be connected to the printer and should be activated in the POS configuration."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:494
+#: ../../point_of_sale/overview/setup.rst:493
 msgid "Credits"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:495
+#: ../../point_of_sale/overview/setup.rst:494
 msgid "The POSBox project was developed by Frédéric van der Essen with the kind help of Gary Malherbe, Fabien Meghazi, Nicolas Wisniewsky, Dimitri Del Marmol, Joren Van Onder and Antony Lesuisse."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:499
+#: ../../point_of_sale/overview/setup.rst:498
 msgid "This development would not have been possible without the Indiegogo campaign and those who contributed to it. Special thanks goes to the partners who backed the campaign with founding partner bundles:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:503
+#: ../../point_of_sale/overview/setup.rst:502
 msgid "Camptocamp"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:504
+#: ../../point_of_sale/overview/setup.rst:503
 msgid "BHC"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:505
+#: ../../point_of_sale/overview/setup.rst:504
 msgid "openBig"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:506
+#: ../../point_of_sale/overview/setup.rst:505
 msgid "Eeezee-IT"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:507
+#: ../../point_of_sale/overview/setup.rst:506
 msgid "Solarsis LDA"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:508
+#: ../../point_of_sale/overview/setup.rst:507
 msgid "ACSONE"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:509
+#: ../../point_of_sale/overview/setup.rst:508
 msgid "Vauxoo"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:510
+#: ../../point_of_sale/overview/setup.rst:509
 msgid "Ekomurz"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:511
+#: ../../point_of_sale/overview/setup.rst:510
 msgid "Datalp"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:512
+#: ../../point_of_sale/overview/setup.rst:511
 msgid "Dao Systems"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:513
+#: ../../point_of_sale/overview/setup.rst:512
 msgid "Eggs Solutions"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:514
+#: ../../point_of_sale/overview/setup.rst:513
 msgid "OpusVL"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:516
+#: ../../point_of_sale/overview/setup.rst:515
 msgid "And also the partners who've backed the development with the Founding POSBox Bundle:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:519
+#: ../../point_of_sale/overview/setup.rst:518
 msgid "Willow IT"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:520
+#: ../../point_of_sale/overview/setup.rst:519
 msgid "E\\. Akhalwaya & Sons"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:521
+#: ../../point_of_sale/overview/setup.rst:520
 msgid "Multibase"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:522
+#: ../../point_of_sale/overview/setup.rst:521
 msgid "Mindesa"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:523
+#: ../../point_of_sale/overview/setup.rst:522
 msgid "bpso.biz"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:524
+#: ../../point_of_sale/overview/setup.rst:523
 msgid "Shine IT."
 msgstr ""
 
@@ -1457,6 +1457,114 @@ msgstr ""
 
 #: ../../point_of_sale/overview/start.rst:95
 msgid "You can configure each point of sale according to your hardware, location,..."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "An internal identification of the point of sale"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Accounting journal used to post sales entries."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Check this if you want to group the Journal Items by Product while closing a Session"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Defines what kind of barcodes are available and how they are assigned to products, customers and cashiers"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "This sequence is automatically created by Odoo but you can change it to customize the reference numbers of your orders."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Enables an integrated Virtual Keyboard"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Enables invoice generation from the Point of Sale"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The payment input will behave similarily to bank payment input, and will be prefilled with the exact due amount"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The point of sale will display this product category by default. If no category is specified, all available products will be shown"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The product used to encode the customer tip. Leave empty if you do not accept tips."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The displayed prices will always include all taxes, even if the taxes have been setup differently"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "For imprecise industrial touchscreens"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The receipt will automatically be printed at the end of each order"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The product categories will be displayed with pictures."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The receipt screen will be skipped if the receipt can be printed automatically."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Check the amount of the cashbox at opening and closing."
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The hostname or ip address of the hardware proxy, Will be autodetected if left empty"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Bypass browser printing and prints via the hardware proxy"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Enable barcode scanning with a remotely connected barcode scanner"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Enables Electronic Scale integration"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Automatically open the cashdrawer"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "A short text that will be inserted as a header in the printed receipt"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "A short text that will be inserted as a footer in the printed receipt"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Enables Bill Splitting in the Point of Sale"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Allows to print the Bill before payment"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "Allow custom notes on Orderlines"
+msgstr ""
+
+#: ../../point_of_sale/overview/start.rst:0
+msgid "The restaurant floors served by this point of sale"
 msgstr ""
 
 #: ../../point_of_sale/overview/start.rst:100
@@ -2081,6 +2189,10 @@ msgstr ""
 
 #: ../../point_of_sale/shop/seasonal_discount.rst:36
 msgid "Create a **Pricelist** for your point of sale. Each pricelist can contain several items with different prices and different dates. It can be done on all products or only on specific ones. Click on **Add an item**."
+msgstr ""
+
+#: ../../point_of_sale/shop/seasonal_discount.rst:0
+msgid "If unchecked, it will allow you to hide the pricelist without removing it."
 msgstr ""
 
 #: ../../point_of_sale/shop/seasonal_discount.rst:45

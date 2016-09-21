@@ -13,8 +13,8 @@ Activate the developer mode
 ===========================
 
 In order to have access to the financial report creation interface, the
-**developer mode** needs to be activated. To do that, first click the
-**?** at the top right, then **About**.
+**developer mode** needs to be activated. To do that, first click on the
+user profile in the top right menu, then **About**.
 
 .. image:: media/customize01.png
    :align: center

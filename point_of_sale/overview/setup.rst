@@ -174,7 +174,7 @@ POSBox is very different from a 'real' Odoo instance however. It does
 not handle *any* business data (eg. POS orders), but only serves as a
 gateway between the Point of Sale and the hardware.
 
-The goal of this section will be to setup a local Odoo instance that
+The goal of this section will be to set up a local Odoo instance that
 behaves like the Odoo instance running on the POSBox.
 
 Image building process
@@ -256,11 +256,11 @@ create a group that has access to USB devices
 
 Then we add the user who will run the OpenERP server to ``usbusers``
 
-``# useradd -G usbusers USERNAME``
+``# usermod -a -G usbusers USERNAME``
 
 Then we need to create a udev rule that will automatically allow members
 of ``usbusers`` to access raw USB devices. To do so create a file called
-``99-usbusers.rule`` in the ``/etc/udev/rules.d/`` directory with the
+``99-usbusers.rules`` in the ``/etc/udev/rules.d/`` directory with the
 following content::
 
     SUBSYSTEM=="usb", GROUP="usbusers", MODE="0660"
@@ -428,8 +428,7 @@ The POS cannot connect to the POSBox
 - Make sure that your LAN is set up with DHCP, and gives IP addresses
   in the range 192.168.0.X, 192.168.1.X, 10.0.0.X. If you cannot setup
   your LAN that way, you must manually set up your POSBox's
-  IP address. See the relevant paragraph in the Setup chapter of this
-  documentation.
+  IP address.
 - If you have specified the POSBox's IP address in the configuration,
   make sure it correspond to the printed on the POSBox's status
   receipt.

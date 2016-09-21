@@ -1,15 +1,11 @@
 
 .. _partnership_agreement:
 
-==========================
-Odoo Partnership Agreement
-==========================
+============================================
+Odoo Partnership Agreement - Under Revision!
+============================================
 
-.. raw:: latex
-
-    \clearpage
-
-.. note:: Version 5 - Last revision: March 02, 2016.
+.. note:: Version 5_work-in-progress - Last revision: March 02, 2016.
 
 
 BETWEEN:
@@ -39,7 +35,7 @@ like "Odoo Community Edition", should it be needed.
 =======================
 The duration of this Agreement (the “Term”) shall be one year beginning on the date of the signature.
 It is automatically renewed for an equal Term, unless either party provides a written notice of
-termination minimum 30 days before the end of the Term by registered mail to the other party.
+termination minimum 30 days before the end of the Term to the other party.
 
 
 3 Access to Odoo Enterprise Edition

@@ -46,13 +46,13 @@ accounting box.
 .. image:: media/purchase05.png
    :align: center
 
-Moreover, scroll down and thick the **Analytic accounting for purchases**
+Moreover, scroll down and tick the **Analytic accounting for purchases**
 box.
 
 .. image:: media/purchase06.png
    :align: center
 
-Don't forget to save our changes.
+Don't forget to save your changes.
 
 Create an Analytical account.
 =============================

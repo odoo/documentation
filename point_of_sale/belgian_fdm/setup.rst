@@ -10,8 +10,8 @@ government-certified device called a **Fiscal Data Module** (also
 known as a **blackbox**). This device works together with the POS
 application and logs certain transactions. On top of that, the used
 POS application must also be certified by the government and must
-adhere to strict standards specified by them. `Odoo 9 is a certified
-application
+adhere to strict standards specified by them. `Odoo 9 (Enterprise Edition) is a
+certified application
 <http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More
 information concerning the Fiscal Data Module can be found on `the
 official website <http://www.systemedecaisseenregistreuse.be/>`_.
@@ -65,13 +65,15 @@ PIN that you received with your VAT signing card.
 .. image:: media/vat_signing_card_pin.png
     :align: center
 
-On-premise
-==========
+Certification & On-premise
+==========================
 
-We do not only support the Fiscal Data Module on our SaaS platform, we
-also support the Fiscal Data Module in on-premise installations. The
-main restriction is that this requires an obfuscated version of the
-``pos_blackbox_be`` module we will provide on request.
+The certification granted by the government is restricted to the use on odoo.com
+SaaS instance. The usage of the module from the source or a modified version
+will **not** be certified. For on-premise users, we also support the Fiscal Data
+Module in such installations. The main restriction is that this requires an
+obfuscated version of the ``pos_blackbox_be`` module we will provide on request
+for Enterprise customers.
 
 Restrictions
 ============

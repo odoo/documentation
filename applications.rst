@@ -14,6 +14,7 @@ Applications
    point_of_sale
    project
    getting_started/documentation
+   db_management/documentation
    website
    general
 ..   expenses

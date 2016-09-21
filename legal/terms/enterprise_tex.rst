@@ -1,6 +1,6 @@
 
 .. toctree::
    :maxdepth: 4
-   :numbered:
+   :hidden:
 
    enterprise

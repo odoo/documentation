@@ -1,8 +1,8 @@
 :banner: banners/getting_started.jpg
 
-===========
-Odoo Online
-===========
+==========================
+Odoo Online Implementation
+==========================
 
 This document summarizes **Odoo's Online services**, our Success Pack
 **implementation methodology**, and *best practices* to **get started**
@@ -29,8 +29,8 @@ this email, you can activate your existing Odoo database or create a new
 one from scratch.
 
 If you did not receive this email, e.g. because the payment was made by
-someone else in your company, send an e-mail to 
-`help@odoo.com <mailto:online@odoo.com>`__.
+someone else in your company, contact our support using our 
+`online support form <https://www.odoo.com/help>`__.
 
 .. image:: media/getting_started02.png
     :align: center
@@ -76,8 +76,8 @@ you through all the steps. But you can also:
 -   Read the documentation on our website:
     `https://www.odoo.com/documentation/user <https://www.odoo.com/documentation/user>`__
 
--   Or send your questions to our online support by e-mail at
-    `help@odoo.com <mailto:online@odoo.com>`__.
+-   Or send your questions to our online support through our
+    `online support form <https://www.odoo.com/help>`__.
 
 What do we expect from you?
 ===========================
@@ -220,8 +220,8 @@ are in San Francisco, Belgium and India. Questions could be about
 anything and everything from: how to use or configure, bugfix requests,
 payments or subscription issues.
 
-Send your support requests to:
-`help@odoo.com <mailto:online@odoo.com>`__.
+Our support can be contacted through our
+`online support form <https://www.odoo.com/help>`__.
 
 Note: The support team cannot develop new features, customize, import
 data or train your users. These services are provided by your dedicated
@@ -237,7 +237,7 @@ features.
 
 We provide the option to upgrade in a test environment so that you can
 evaluate a new version or train your team before the roll out. Simply
-email `help@odoo.com <mailto:help@odoo.com>`__ to make this request.
+fill our `online support form <https://www.odoo.com/help>`__ to make this request.
 
 Success Pack Services
 ---------------------
@@ -279,10 +279,10 @@ extra services:
 -   **Customization of reports (PDF):** our project managers have access
     to developers for advanced customizations.
 
--   **Website Design:** standard themes are provided to get started with
-    no extra cost. However, our project manager have access to
-    designers and developers if you need a customized design. Their
-    hours will consume hours of your success pack.
+-   **Website Design:** standard themes are provided to get started at
+    no extra cost. However, our project manager can coach you on how to utilize
+    the building blocks of the website designer. The time spent will consume
+    hours of your success pack.
 
 -   **Workflow automations:** e.g. setting values in fields based on
     triggers, sending reminders by emails, automating actions, etc.
@@ -301,7 +301,7 @@ progressively, by groups of apps.
 .. image:: media/getting_started09.png
     :align: center
 
-The goal of the **Kick-off call** is, for our project manager, to come
+The goal of the **Kick-off call** is for our project manager to come
 to an understanding of your business in order to propose an
 implementation plan (phasing). Each phase is the deployment of a set
 applications that you will fully use in production at the end of the
@@ -314,7 +314,7 @@ For every phase, the steps are the following:
     you, validate the business process and configure according to
     your specific needs.
 
-2.  **Data:** are created manually or imported from your existing system.
+2.  **Data:** created manually or imported from your existing system.
     You are responsible to export the data from your existing system
     and Odoo's project manager will import them in Odoo.
 
@@ -364,28 +364,34 @@ Organizations** page and click **Duplicate**.
 
 .. image:: media/getting_started12.png
     :align: center
+    
+You can find more information on how to manage your databases
+:ref:`here <db_management/documentation>`.
 
 Customer Success
 ================
 
-Odoo is passionate about delighting our customers, and ensuring that
+Odoo is passionate about delighting our customers and ensuring that
 they have all the resources needed to complete their project.
 
 During the implementation phase, your point of contact is the project
-manager, and eventually the support team.
+manager and eventually the support team.
 
-Once your are in production, you will probably have less interaction
-with your project manager. At that time, we will assign you a member of
-our Client Success Team, that is specialized in the long-term
-relationship with our customers. He will contact you to showcase new
+Once you are in production, you will probably have less interaction
+with your project manager. At that time, we will assign a member of
+our Client Success Team to you. They are specialized in the long-term
+relationship with our customers. They will contact you to showcase new
 versions, improve the way you work with Odoo, assess your new needs,
-etc.
+etc...
 
-Our internal goal is to keep a customer at least for 10 years, and offer
-them a solution the grows with their needs!
+Our internal goal is to keep customers for at least 10 years and offer
+them a solution that grows with their needs!
 
 Welcome aboard and enjoy your Odoo experience!
 
+.. seealso::
+    * :doc:`../../db_management/documentation`
+    
 .. image:: media/getting_started13.png
     :align: center
 

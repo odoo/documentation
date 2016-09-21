@@ -8,10 +8,10 @@ Overview
 Odoo Project allows you to manage a project together with your whole
 team, and to communicate with any member for each project and task.
 
-It works with projects containing tasks following customizable stages. A
-can be internal or customer-oriented. A task is something to perform as
-part of a project. You will be able to give different tasks to several
-employees working on this project.
+It works with projects containing tasks following customizable stages. 
+A project can be internal or customer-oriented. A task is something to 
+perform as part of a project. You will be able to give different tasks 
+to several employees working on this project.
 
 Installing the Project module
 =============================

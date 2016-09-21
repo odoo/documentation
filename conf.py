@@ -207,8 +207,12 @@ latex_elements = {
 
 # Additional stuff for the LaTeX preamble.
 'preamble': r'\usepackage{odoo}',
+'tableofcontents': r'', # no TOC
 
-'maketitle': r'\makeodootitle',
+# output manually in latex docs
+'releasename': '',
+'release': '',
+'date': '',
 
 }
 
@@ -218,8 +222,9 @@ latex_additional_files = ['_static/latex/odoo.sty']
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement v5', '', 'howto'),
-  ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement v5', '', 'howto'),
+  ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement', '', 'howto'),
+  ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_v5_fr.tex', 'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
+  ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement', '', 'howto'),
   #('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation', u'fp, xmo', 'manual'),
 ]
 
@@ -235,7 +240,7 @@ latex_logo = '_static/banners/odoo_logo.png'
 #latex_show_pagerefs = False
 
 # If true, show URL addresses after external links.
-# latex_show_urls = True
+latex_show_urls = "True"
 
 # Documents to append as an appendix to all manuals.
 #latex_appendices = []
