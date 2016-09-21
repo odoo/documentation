@@ -12,7 +12,7 @@ Setup
   *Advanced pricing based on formula* for *Sale Price*.
 
 * Go to :menuselection:`Website Admin --> Catalog --> Pricelists` and create a new
-  pricelist with the discount rule (see :doc:`../managing_products/pricelists`).
+  pricelist with the discount rule (see :doc:`pricing`).
   Then enter a code.
 
 .. image:: ./media/promocode.png
@@ -40,4 +40,4 @@ performance of your marketing campaigns.
 
 .. seealso::
 
-  * :doc:`../managing_products/pricelists`
+  * :doc:`pricing`

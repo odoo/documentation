@@ -72,7 +72,7 @@ value is selected.
 
 .. tip::
    Pricelist formulas let you set advanced price computation methods for product variants.
-   See :doc:`pricelists`.
+   See :doc:`../maximizing_revenue/pricing`.
 
 How to disable/archive variants
 ===============================

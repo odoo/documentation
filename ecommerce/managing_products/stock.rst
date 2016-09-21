@@ -23,4 +23,4 @@ A custom warning message can be anything related to a stock out, delivery delay,
 
 .. tip::
     If one item is no longer sellable, unpublish it from your website. If it comes to
-    one particular product variant, deactivate the variant in the backend (see :doc:`pricelists`).
+    one particular product variant, deactivate the variant in the backend (see :doc:`../maximizing_revenue/pricing`).
