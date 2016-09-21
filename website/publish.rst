@@ -1,5 +1,3 @@
-:banner: banners/seo.jpg
-
 =======
 Publish
 =======
