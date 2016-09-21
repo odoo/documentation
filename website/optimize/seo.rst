@@ -1,5 +1,5 @@
 ==========================
-Search Engine Optimisation
+How to do Search Engine Optimisation in Odoo
 ==========================
 
 How is SEO handled in Odoo?
