@@ -8,6 +8,7 @@ Applications
    accounting
    crm
    sales
+   ecommerce
    discuss/getting_started
    purchase
    inventory

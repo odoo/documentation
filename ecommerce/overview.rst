@@ -1,9 +1,9 @@
 =================
-Manage your pricing
+Overview
 =================
 
 .. toctree::
    :titlesonly:
 
-   prices/pricing
-   prices/currencies
+   overview/introduction
+
