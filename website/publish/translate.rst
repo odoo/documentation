@@ -1,5 +1,5 @@
 ===============================
-How can I translate my website?
+How to translate my website
 ===============================
 
 Overview
