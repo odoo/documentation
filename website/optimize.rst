@@ -1,13 +1,14 @@
 :banner: banners/seo.jpg
 
 =======
-Website
+Optimize
 =======
 
 .. toctree::
    :titlesonly:
 
-   website/publish
-   website/optimize
+   optimize/seo
+   optimize/google_analytics
+
 
 

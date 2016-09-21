@@ -1,13 +1,14 @@
 :banner: banners/seo.jpg
 
 =======
-Website
+Publish
 =======
 
 .. toctree::
    :titlesonly:
 
-   website/publish
-   website/optimize
+   publish/domain_name
+   publish/translate
+
 
 
