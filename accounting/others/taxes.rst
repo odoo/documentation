@@ -5,7 +5,10 @@ Taxes
 .. toctree::
    :titlesonly:
 
-   taxes/application
    taxes/create
+   taxes/default_taxes
+   taxes/application
+   taxes/tax_cloud
+   taxes/tax_included
    taxes/retention
-   taxes/taxcloud
+   taxes/B2B_B2C

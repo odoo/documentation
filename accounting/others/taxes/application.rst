@@ -1,132 +1,96 @@
-======================================================
-How to apply specific taxes by country, state or city?
-======================================================
+==========================================================
+How to adapt taxes to your customer status or localization
+==========================================================
 
-In Odoo, the default tax to apply on a product/service is set on the
-**product form**. But, some customers may have specific tax rates because of
-their status (in some countries, construction companies are VAT exempts)
-or their location (customers in a different country, state and/or city
-may be subjected to another tax rate).
+Most often sales tax rates depend on your customer status or localization.
+To map taxes, Odoo brings the so-called *Fiscal Positions*. 
 
-In order to select the right tax to apply according to the customer or
-product, Odoo uses the concept of **fiscal positions**. If a customer has a
-specific fiscal position, the default tax may be replaced by another
-one. (as an example, construction companies have 0% instead of 21% in
-Belgium for construction related work).
+Create tax mapping
+==================
 
-As an example, in Belgium, for the VAT tax, there are 3 fiscal positions
-that depend on on the country of the customer and some companies (like
-construction companies) benefit from a specific fiscal treatments:
-
--  **Belgian companies:** with 21% VAT (default, on product form)
-
--  **European companies:** with 0% VAT (intra-EU)
-
--  **Other countries:** 0% (but a different tax since it uses different
-   accounts)
-
--  **Construction companies:** with 0% VAT, only for construction companies
-   in Belgium
-
-Configuration
-=============
-
-Set the right taxes on your products
-------------------------------------
-
-The main taxes are automatically configured according to the chart of
-accounts of your country.
-
-But if you want to set a specific tax on a specific product, you can set
-the **sales and purchases taxes** on the **product form**, under the **Accounting
-tab**. These taxes are the default one (used when you sell to companies
-that are in the same country/state than you)
-
-.. image:: media/application05.png
-   :align: center
-
-.. tip::
-    If you work in a multi-company environment, the sales and 
-    purchase taxes may have a different value according to the 
-    company you work for. You can login into two different companies 
-    and change this field for each company.
-
-Defining Fiscal Positions
--------------------------
-
-The main fiscal positions are automatically created according to the
-chart of accounts of your country. But you may have to create fiscal
-positions manually for specific use cases.
-
-To define fiscal positions, from the **Accounting** application, go to
-:menuselection:`Configuration --> Fiscal Positions`.
-
-Fiscal position is just a set of rules that maps default taxes (as defined on
-product form) into other taxes. In the screenshot below, european
-customers have a VAT of 0% instead of the default 15%, for both sales
-and purchases.
+A fiscal position is just a set of rules that maps default taxes (as defined
+on product form) into other taxes. In the screenshot below, foreign customers
+get a 0% tax instead of the default 15%, for both sales and purchases.
 
 .. image:: media/application02.png
    :align: center
 
+The main fiscal positions are automatically created according to your
+localization. But you may have to create fiscal positions for specific use cases.
+To define fiscal positions, go to
+:menuselection:`Invoicing/Accounting --> Configuration --> Fiscal Positions`.
+
 .. note::
-    You can also map the **income / expense account** according to the fiscal
-    position. For example, in Belgium, revenues from sales are not posted in
+    If you use Odoo Accounting, you can also map the Income/Expense accounts according to the fiscal
+    position. For example, in some countries, revenues from sales are not posted in
     the same account than revenues from sales in foreign countries.
 
-Apply fiscal positions automatically
-------------------------------------
+Adapt taxes to your customer status
+===================================
 
-If you check the box **Detect Automatically**, the fiscal position will be
-applied automatically if the **Country**, **State**, **City** or even the 
-**Country Group** matches. You can also apply the fiscal position only 
-to companies having a valid **VAT number**.
+If a customer falls into a specific taxation rule, you need to apply a tax-mapping.
+To do so, create a fiscal position and assign it to your customers.
 
-You can also set a target **Country/State/City**. The fiscal position will
-be applied if the destination address of the customer matches these
-criteria.
+.. image:: media/application01.png
+   :align: center
+
+Odoo will use this specific fiscal position for any order/invoice recorded for the customer.
+
+.. note:: 
+    If you set the fiscal position in the sales order or invoice manually, it will only
+    apply to this document and not to future orders/invoices of the same customer.
+
+Adapt taxes to your customer address (destination-based)
+========================================================
+
+Depending on your localization, sales taxes may be origin-based or destination-based.
+Most states or countries require you to collect taxes at the rate of the destination
+(i.e. your buyer’s address) while some others require to collect them at the rate effective
+at the point of origin (i.e. your office or warehouse).
+
+If you are under the destination-based rule, create one fiscal position per tax-mapping to apply.
+
+* Check the box *Detect Automatically*.
+* Select a country group, country, state or city to trigger the tax-mapping.
 
 .. image:: media/application04.png
    :align: center
 
+This way if no fiscal position is set on the customer, Odoo will choose the fiscal position matching the
+shipping address on creating an order.
+
+.. note::
+    For eCommerce orders, the tax of the visitor's cart will automatically
+    update and apply the new tax after the visitor has logged in or filled
+    in his shipping address.
+
+In the US
+---------
+If you are based in the US, right tax rates can be computed automatically thanks to TaxCloud.
+This is effort-less.
+
+* Create an account on TaxCloud.com.
+* Install *Account TaxCloud* addon in :menuselection:`Apps`.
+* Enter your credentials in :menuselection:`Accounting --> Configuration --> Settings`.
+* Hit *Sync TaxCloud Catgories (TIC)*.
+* Select a default TIC to compute taxes in :menuselection:`Accounting --> Configuration --> Settings`.
+* If some products go under a different TIC, select it from the product detail form (in *Invoicing* tab).
+
 Specific use cases
-------------------
+==================
 
 If, for some fiscal positions, you want to remove a tax, instead of
-replacing by another, just keep the **Tax to Apply** field empty.
+replacing by another, just keep the *Tax to Apply* field empty.
 
 .. image:: media/application03.png
    :align: center
 
 If, for some fiscal positions, you want to replace a tax by two other
-taxes, just create two lines having the same **Tax on Product**. You can
-also create one that is a grouping of two other taxes, depending on how
-you want to make them appear on the invoice.
+taxes, just create two lines having the same *Tax on Product*.
 
-Using fiscal positions
-======================
-
-If you keep the field **Fiscal Position** empty on customers 
-:menuselection:`Accounting --> Sales --> Customers`, the fiscal position 
-is applied automatically on sales order, purchase orders, web orders and invoices.
-
-.. image:: media/application01.png
-   :align: center
-
-But, if you set the fiscal position, Odoo will use this specific fiscal
-position for this customer on orders (example: construction companies).
-In such a case, it's recommended to set the fiscal position on the
-customer form. Odoo will automatically reuse this value for orders and
-invoices, without trying to auto-detect the fiscal position.
-
-If you set the fiscal position at the sale order or invoice level, it
-will only apply to this document only and not to future orders/invoices
-of the same customer.
-
-For eCommerce orders, the tax of the visitor's cart will automatically
-update and apply the new tax after the visitor has logged in or filled
-in his shipping address.
 
 .. seealso::
 
   * :doc:`create`
+  * :doc:`tax_included`
+  * :doc:`B2B_B2C`
