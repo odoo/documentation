@@ -1,7 +1,9 @@
 ===================
-Products Management
+Manage your products
 ===================
 
 .. toctree::
    :titlesonly:
+
+   products/import
 
