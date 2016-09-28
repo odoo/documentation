@@ -67,7 +67,7 @@ attribute landed costs.
 
 Select the account journal in which to post the landed costs. We
 recommend you to create a specific journal for landed costs. Therefore
-it will be easier to keep track your postings.
+it will be easier to keep track of your postings.
 
 .. image:: media/landed_costs05.png
     :align: center
