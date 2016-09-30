@@ -1,5 +1,5 @@
 ==========================================================
-How to adapt taxes to your customer status or localization
+How to adapt taxes to my customer status or localization
 ==========================================================
 
 Most often sales tax rates depend on your customer status or localization.
@@ -64,18 +64,6 @@ shipping address on creating an order.
     update and apply the new tax after the visitor has logged in or filled
     in his shipping address.
 
-In the US
----------
-If you are based in the US, right tax rates can be computed automatically thanks to TaxCloud.
-This is effort-less.
-
-* Create an account on TaxCloud.com.
-* Install *Account TaxCloud* addon in :menuselection:`Apps`.
-* Enter your credentials in :menuselection:`Accounting --> Configuration --> Settings`.
-* Hit *Sync TaxCloud Catgories (TIC)*.
-* Select a default TIC to compute taxes in :menuselection:`Accounting --> Configuration --> Settings`.
-* If some products go under a different TIC, select it from the product detail form (in *Invoicing* tab).
-
 Specific use cases
 ==================
 
@@ -92,5 +80,6 @@ taxes, just create two lines having the same *Tax on Product*.
 .. seealso::
 
   * :doc:`create`
+  * :doc:`taxcloud`
   * :doc:`tax_included`
   * :doc:`B2B_B2C`

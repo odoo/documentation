@@ -1,5 +1,5 @@
 =================
-Improve the shopper experience
+Improve shopper experience
 =================
 
 .. toctree::

@@ -1,5 +1,5 @@
 =================
-Manage your products
+Manage my products
 =================
 
 .. toctree::

@@ -1,5 +1,5 @@
 ==========================================
-How your customers can access their portal
+How customers can access their portal
 ==========================================
 
 It has never been so easy for your customers to access their documents

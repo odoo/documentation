@@ -1,5 +1,5 @@
 =================
-Maximize your revenue
+Maximize my revenue
 =================
 
 .. toctree::

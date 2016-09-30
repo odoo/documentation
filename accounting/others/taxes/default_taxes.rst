@@ -26,5 +26,6 @@ To change the default taxes set for any new product created go to
 
   * :doc:`create`
   * :doc:`application`
+  * :doc:`taxcloud`
   * :doc:`B2B_B2C`
   * :doc:`tax_included`

@@ -1,5 +1,5 @@
 ===================
-Launch your website
+Launch my website
 ===================
 
 .. toctree::
