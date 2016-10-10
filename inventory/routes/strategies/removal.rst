@@ -11,7 +11,7 @@ control purpose or due to reason of product expiration.
 
 When a product movement needs to be done, Odoo will find available
 products that can be assigned to shipping. The way Odoo assign these
-products depend on the **removal strategy** that is defined on the **product
+products depend on the **removal strategy** that is defined on the **product 
 category** or on the **location**.
 
 Configuration
@@ -109,27 +109,52 @@ Then click on **Apply** to save changes.
 .. image:: media/removal08.png
     :align: center
 
-It will allow you to set **best before date**, **end of life date**, **alert
-date** and **removal date** on the serial number. Go to 
-:menuselection:`Inventory Control --> Serial Numbers/Lots`.
+This will allow you to set four expiration fields for each lot or serial number: 
+**best before date**, **end of life date**, **alert date** and **removal date**.
+These dates can be set from :menuselection:`Inventory Control --> Serial Numbers/Lots`.
 
 .. image:: media/removal09.png
     :align: center
 
 -   **Best Before Date**: This is the date on which the goods with this
-    serial number start deteriorating, without being dangerous yet.
+    serial/lot number start deteriorating, without being dangerous yet.
 
 -   **End of Life Date:** This is the date on which the goods with this
-    serial number may become dangerous and must not be consumed.
+    serial/lot number may become dangerous and must not be consumed.
 
 -   **Removal Date:** This is the date on which the goods with this
-    serial Number should be removed from the stock.
+    serial/lot number should be removed from the stock. Using the FEFO
+    removal strategym goods are picked for delivery orders using this date.
 
--   **Alert Date:** This is the date on which an alert should be notified
-    about the goods with this serial number.
+-   **Alert Date:** This is the date on which an alert should be sent
+    about the goods with this serial/lot number.
 
-Products will pick first with expiry date (removal date), So you have
-to set removal date on lot/serial numbers.
+Lots will be picked based on their **removal date**, from earliest 
+to latest. Lots without a removal date defined will be picked after 
+lots with removal dates.
+
+All dates except **removal date** are for informational and reporting purposes only. 
+Lots that are past any or all of the above expiration dates may still be picked 
+for delivery orders, and no alerts will be sent when lots pass their **alert date**.
+
+Expiration dates on lots can also be set automatically when goods are received into stock.
+After enabling expiration dates on serial numbers, four new fields will become available 
+in the inventory tab of the product form: **product life time**, **product use time**, 
+**product removal time**, and **product alert time**. When an integer is entered into one 
+of these fields, the expiration date of a lot/serial of the product in question will be set 
+to the creation date of the lot/serial number plus the number of days entered in the time
+increment field. If the time increment field is set to zero, then the expiration date of 
+a lot/serial must be defined manually after the lot has been created.
+
+Each of these time increment fields is used to generate one of the lot expiration date fields as follows:
+
+Product Use Time --> Best Before Date
+
+Product Removal Time --> Removal Date
+
+Product Life Time --> End of Life Date
+
+Product Alert Time --> Alert Date
 
 To set the removal strategy on location, go to 
 :menuselection:`Configuration --> Locations` and choose FEFO.
