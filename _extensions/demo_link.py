@@ -167,10 +167,10 @@ def _fetch_fields(url, db, uid, password):
             result = None
         else:
             action = server.execute_kw(db, uid, password, model, 'read', [id_, ['res_model', 'views']])
-            view_id = next((id_ for type, id_ in action['views'] if type == task.view), False)
+            view_id = next((id_ for type, id_ in action[0]['views'] if type == task.view), False)
             fvg = server.execute_kw(
                 db, uid, password,
-                action['res_model'], 'fields_view_get', [], {
+                action[0]['res_model'], 'fields_view_get', [], {
                     'view_id': view_id,
                     'view_type': task.view
                 })
