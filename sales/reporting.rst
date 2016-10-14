@@ -1,7 +1,0 @@
-=========
-Reporting
-=========
-
-.. toctree::
-   :titlesonly:
-

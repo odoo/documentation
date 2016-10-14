@@ -121,7 +121,5 @@ Status** is back to **Nothing to Invoice**.
 Follow the same workflow to invoice your remaining milestones.
 
 .. seealso::
-    * :doc:`recurring`
-    * :doc:`time_materials`
     * :doc:`reinvoice`
     * :doc:`support`

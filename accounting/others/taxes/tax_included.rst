@@ -33,7 +33,7 @@ You can rely on following documentation if you need both tax-included (B2C) and
 tax-excluded prices (B2B): :doc:`B2B_B2C`.
 
 Show tax-included prices in eCommerce catalog
-============================================
+=============================================
 
 By default prices displayed in your eCommerce catalog are tax-excluded. To display
 it in tax-included, check *Show line subtotals with taxes included (B2C)* in

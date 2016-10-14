@@ -17,7 +17,7 @@ As admin, you need *Adviser* access rights on Invoicing/Accounting apps.
 Prices in foreign currencies can be defined in two fashions.
 
 Automatic conversion from public price
-=====================================
+======================================
 
 The public price is in your company's main currency (see
 :menuselection:`Accounting --> Settings`) and is set in product detail form.

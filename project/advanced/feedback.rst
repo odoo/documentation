@@ -109,5 +109,3 @@ it in the front end of the website.
 
 .. seealso::
     * :doc:`claim_issue`
-    * :doc:`invoicing`
-    * :doc:`external`

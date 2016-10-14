@@ -1,7 +1,0 @@
-==============
-Miscellaneaous
-==============
-
-.. toctree::
-   :titlesonly:
-

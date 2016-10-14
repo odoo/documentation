@@ -33,9 +33,6 @@ should install the Sales management app as well.
 .. image:: media/purchase04.png
    :align: center
 
-You can refer to the following docs about reinvoicing costs through
-analytical accounts: :doc:`../../../purchase/purchases/rfq/subcontracting`
-
 Enable Analytical accounting
 ----------------------------
 
@@ -125,9 +122,6 @@ handle subcontracting. if we purchase a service from another company we
 can re invoice this cost by linking the purchase order line to the
 correct analytical account. We simply need to create the correct vendors
 product.
-
-For more information about subcontracting please refer to the following
-document: :doc:`../../../purchase/purchases/rfq/subcontracting`
 
 .. note::
 

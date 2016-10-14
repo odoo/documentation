@@ -1,6 +1,6 @@
-=======
+========
 Optimize
-=======
+========
 
 .. toctree::
    :titlesonly:

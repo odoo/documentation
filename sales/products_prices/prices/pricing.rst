@@ -110,7 +110,7 @@ The default pricelist can be replaced when creating a sales order.
 .. tip:: You can change the pricelists sequence by drag & drop in list view. 
 
 Compute and show discount % to customers
-=============================
+========================================
 
 In case of discount, you can show the public price and the computed discount % on printed sales orders and in your eCommerce catalog. To do so:
 

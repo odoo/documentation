@@ -1,6 +1,6 @@
-=======================================
+=======================================================
 How to get right tax rates in the US thanks to TaxCloud
-=======================================
+=======================================================
 
 The **TaxCloud** integration allows you to calculate the sales tax for every
 address in the United States and keeps track of which product types are
@@ -72,7 +72,7 @@ your system and return it in the order item line (e.g. 7.0%).
   :align: center
 
 How to create specific tax mappings using TaxCloud
-============================
+==================================================
 
 You can create several fiscal positions using TaxCloud.
 Check *Use TaxCloud API* to do so. Such fiscal postions can be

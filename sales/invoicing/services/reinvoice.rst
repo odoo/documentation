@@ -183,6 +183,4 @@ You can now invoice the invoiceable lines to your customer.
 
 .. seealso::
     * :doc:`support`
-    * :doc:`time_materials`
     * :doc:`milestones`
-    * :doc:`../products/delivery`

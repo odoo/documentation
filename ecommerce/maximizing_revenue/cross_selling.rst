@@ -9,7 +9,7 @@ screen or an extra-warranty? That's the goal of cross-selling functionalities:
 * Optional products on a new *Add to Cart* screen (not installed by default).
 
 Accessory products when checking out
-===================================
+====================================
 
 Accessories (e.g. for computers: mouse, keyboard) show up when the customer
 reviews the cart before paying.

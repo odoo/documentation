@@ -18,5 +18,6 @@ Applications
    db_management/documentation
    website
    general
+   legal
 ..   expenses
 ..   recruitment

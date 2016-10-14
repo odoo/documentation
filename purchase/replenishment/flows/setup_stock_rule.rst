@@ -137,6 +137,4 @@ based on your maximum quantity to replenish your stock.
 
 .. seealso::
   
-  :doc:`replenishment_methods`
-
   :doc:`../../../inventory/management/misc/schedulers`
