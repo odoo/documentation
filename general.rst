@@ -1,3 +1,5 @@
+:banner: banners/general.jpg
+
 =======
 General
 =======
