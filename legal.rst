@@ -36,7 +36,9 @@ Terms and Conditions
       :target: odoo_partnership_agreement_v5.pdf
 
 - :ref:`enterprise_agreement` |nbsp| |nbsp| |download_enterprise|
+
 - :ref:`enterprise_agreement_fr` |nbsp| |nbsp| |download_enterprise_fr|
+
 .. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 

@@ -74,9 +74,10 @@ Each pricelist item can be associated to either all products, to a product inter
 
 .. note::
 
-* Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item. 
+    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item. 
 
-* Make sure at least one pricelist item covers all your products.
+    * Make sure at least one pricelist item covers all your products.
+  
 There are 3 modes of computation: fix price, discount & formula.
 
 .. image:: ./media/price_computation.png

@@ -5,13 +5,13 @@ How to sell in foreign currencies
 Pricelists can also be used to manage prices in foreign currencies.
 
 * Check *Allow multi currencies* in :menuselection:`Invoicing/Accounting --> Settings`.
-As admin, you need *Adviser* access rights on Invoicing/Accounting apps.
+  As admin, you need *Adviser* access rights on Invoicing/Accounting apps.
 
 * Create one pricelist per currency. A new *Currency* field shows up in pricelist setup form.
 
 .. tip::
     To activate a new currency, go to :menuselection:`Accounting --> Configuration --> Currencies`,
-    select it in the list and press *Activate*in the top-right corner. Now it will show up in
+    select it in the list and press *Activate* in the top-right corner. Now it will show up in
     currencies drop-down lists.
 
 Prices in foreign currencies can be defined in two fashions.

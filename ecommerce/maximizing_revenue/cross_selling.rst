@@ -40,7 +40,7 @@ such a new screen pops up as an extra step.
 To publish optional products:
 
 * Install *eCommerce Optional Products* addon in *Apps* menu. Remove the default filter to
-search on addons as well, otherwise only main apps show up.
+  search on addons as well, otherwise only main apps show up.
 
 .. image:: ./media/cross_sell_optional_install.png
    :align: center
