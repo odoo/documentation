@@ -19,7 +19,7 @@ You will need :
 * A running SaaS or Odoo instance with the Point of Sale installed
 * A local network set up with DHCP (this is the default setting)
 * An RJ45 Ethernet Cable or a Linux compatible USB Wi-Fi adapter
-* An Epson USB TM-T20 Printer or another compatible printer
+* An Epson USB TM-T20 Printer or another ESC/POS compatible printer
   (officially supported printers are listed at the `POS Hardware page
   <https://www.odoo.com/page/pos-ipad-android-hardware>`_)
 * A Honeywell Eclipse USB Barcode Scanner or another compatible scanner
