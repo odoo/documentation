@@ -273,7 +273,7 @@ Start the local Odoo instance
 
 We must launch the Odoo server with the correct settings
 
-``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale, hw_scanner,hw_escpos``
+``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``
 
 Test the instance
 ~~~~~~~~~~~~~~~~~
