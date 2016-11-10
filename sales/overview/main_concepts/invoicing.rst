@@ -35,7 +35,7 @@ fixed advance.
 
 This process is good for both services and physical products.
 
-Read more: *Invoice based on sales orders.*
+.. todo:: Read more: *Invoice based on sales orders.*
 
 :menuselection:`Sales Order --> Delivery --> Invoice`
 -----------------------------------------------------
