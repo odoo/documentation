@@ -1,6 +1,6 @@
-==================================================
-Setting up a BoM for a Product With Sub-Assemblies
-==================================================
+====================================
+How to manage semi-finished products
+====================================
 
 A subassembly is a manufactured product which is intended to be used as
 a component of another manufactured product. You may wish to employ
