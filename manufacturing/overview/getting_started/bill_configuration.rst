@@ -1,6 +1,6 @@
-====================================
-How to Configure a Bill of Materials
-====================================
+=================================
+How to create a Bill of Materials
+=================================
 
 A bill of materials (BoM) is a document that describes the component
 products, the quantity of each component, and the process required to

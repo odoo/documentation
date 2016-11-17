@@ -8,3 +8,4 @@ How to consume composents to make a finished product
    :titlesonly:
 
    getting_started/bill_configuration
+   getting_started/manufacturing_order
