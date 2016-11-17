@@ -13,6 +13,7 @@ Applications
    discuss/getting_started
    purchase
    inventory
+   manufacturing
    point_of_sale
    project
    expense/expense
