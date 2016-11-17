@@ -6,3 +6,4 @@ Overview
    :titlesonly:
 
    overview/main_concepts
+   overview/getting_started
