@@ -6,3 +6,4 @@ Main Concepts
    :titlesonly:
 
    main_concepts/intro
+   main_concepts/terminologies
