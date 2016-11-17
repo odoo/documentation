@@ -7,4 +7,5 @@ General
 .. toctree::
    :titlesonly:
 
+   general/odoo_basics
    general/base_import
