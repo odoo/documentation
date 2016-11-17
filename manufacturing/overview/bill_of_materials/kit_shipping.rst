@@ -36,14 +36,18 @@ should be unchecked.
 
 All other parameters on the kit product may be modified according to
 your preference. The component products require no special
-configuration.\ |image2|
+configuration.
+
+.. image:: media/kit_shipping03.png
+    :align: center
 
 Once the products are configured, create a bill of materials for the kit
 product. Add each component and its quantity. Select the BoM Type
 **Ship this product as a set of components**. All other options may
 be left with their default values.
 
-|image3|
+.. image:: media/kit_shipping04.png
+    :align: center
 
 Manage Stock of Kit Product and Component Products
 ==================================================
@@ -62,17 +66,15 @@ select **Make to Order**, which will create a manufacturing order
 whenever a sales order is confirmed. Select the product type
 **Stockable Product** to enable stock management.
 
-|image4|
+.. image:: media/kit_shipping05.png
+    :align: center
 
 When you create the bill of materials, select the BoM Type
 **Manufacture this product**. The assembly of the kit will be
 described by a manufacturing order rather than a packing operation.
 
-|image5|
+.. image:: media/kit_shipping06.png
+    :align: center
 
 .. |image0| image:: ./media/kit_shipping01.png
 .. |image1| image:: ./media/kit_shipping02.png
-.. |image2| image:: ./media/kit_shipping03.png
-.. |image3| image:: ./media/kit_shipping04.png
-.. |image4| image:: ./media/kit_shipping05.png
-.. |image5| image:: ./media/kit_shipping06.png
