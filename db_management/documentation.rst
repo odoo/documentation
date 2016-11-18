@@ -31,6 +31,22 @@ day-to-day business is not impacted.
     to free customers of our Online platform.
 
 
+Doing something cool
+====================
+
+alsddda
+dsas
+das
+da
+sd
+as
+
+.. image:: media/databases.png
+    :align: center
+
+To be continued...
+
+
 .. _duplicate:
 
 Duplicating a database (online)
