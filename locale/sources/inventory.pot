@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 9.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2016-11-22 13:16+0100\n"
+"POT-Creation-Date: 2016-11-22 13:24+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -4188,7 +4188,7 @@ msgid "Click on the **Create** button and select the picking(s) you want to attr
 msgstr ""
 
 #: ../../inventory/routes/costing/landed_costs.rst:68
-msgid "Select the account journal in which to post the landed costs. We recommend you to create a specific journal for landed costs. Therefore it will be easier to keep track your postings."
+msgid "Select the account journal in which to post the landed costs. We recommend you to create a specific journal for landed costs. Therefore it will be easier to keep track of your postings."
 msgstr ""
 
 #: ../../inventory/routes/costing/landed_costs.rst:75
@@ -4360,96 +4360,124 @@ msgid "Go to :menuselection:`Inventory --> Configuration --> Setting`. Check the
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:112
-msgid "It will allow you to set **best before date**, **end of life date**, **alert date** and **removal date** on the serial number. Go to :menuselection:`Inventory Control --> Serial Numbers/Lots`."
+msgid "This will allow you to set four expiration fields for each lot or serial number: **best before date**, **end of life date**, **alert date** and **removal date**. These dates can be set from :menuselection:`Inventory Control --> Serial Numbers/Lots`."
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:119
-msgid "**Best Before Date**: This is the date on which the goods with this serial number start deteriorating, without being dangerous yet."
+msgid "**Best Before Date**: This is the date on which the goods with this serial/lot number start deteriorating, without being dangerous yet."
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:122
-msgid "**End of Life Date:** This is the date on which the goods with this serial number may become dangerous and must not be consumed."
+msgid "**End of Life Date:** This is the date on which the goods with this serial/lot number may become dangerous and must not be consumed."
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:125
-msgid "**Removal Date:** This is the date on which the goods with this serial Number should be removed from the stock."
+msgid "**Removal Date:** This is the date on which the goods with this serial/lot number should be removed from the stock. Using the FEFO removal strategym goods are picked for delivery orders using this date."
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:128
-msgid "**Alert Date:** This is the date on which an alert should be notified about the goods with this serial number."
+#: ../../inventory/routes/strategies/removal.rst:129
+msgid "**Alert Date:** This is the date on which an alert should be sent about the goods with this serial/lot number."
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:131
-msgid "Products will pick first with expiry date (removal date), So you have to set removal date on lot/serial numbers."
+#: ../../inventory/routes/strategies/removal.rst:132
+msgid "Lots will be picked based on their **removal date**, from earliest to latest. Lots without a removal date defined will be picked after lots with removal dates."
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:134
-msgid "To set the removal strategy on location, go to :menuselection:`Configuration --> Locations` and choose FEFO."
+#: ../../inventory/routes/strategies/removal.rst:136
+msgid "All dates except **removal date** are for informational and reporting purposes only. Lots that are past any or all of the above expiration dates may still be picked for delivery orders, and no alerts will be sent when lots pass their **alert date**."
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:140
-msgid "Let's take an example, there are ``3`` lots of ``ice cream`` available in ``WH/Stock`` location: ``LOT0001``, ``LOT0002``, ``LOT0003`` with different expiration date."
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:145
-msgid "**Lot / Serial No**"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:145
-msgid "**Product**"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:145
-msgid "**Expiration Date**"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:147
-msgid "LOT0001"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:147
-#: ../../inventory/routes/strategies/removal.rst:149
-#: ../../inventory/routes/strategies/removal.rst:151
-msgid "Ice Cream"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:147
-msgid "08/20/2015"
+msgid "Expiration dates on lots can also be set automatically when goods are received into stock. After enabling expiration dates on serial numbers, four new fields will become available in the inventory tab of the product form: **product life time**, **product use time**, **product removal time**, and **product alert time**. When an integer is entered into one of these fields, the expiration date of a lot/serial of the product in question will be set to the creation date of the lot/serial number plus the number of days entered in the time increment field. If the time increment field is set to zero, then the expiration date of a lot/serial must be defined manually after the lot has been created."
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:149
-msgid "LOT0002"
-msgstr ""
-
-#: ../../inventory/routes/strategies/removal.rst:149
-msgid "08/10/2015"
+msgid "Each of these time increment fields is used to generate one of the lot expiration date fields as follows:"
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:151
-msgid "LOT0003"
+msgid "Product Use Time --> Best Before Date"
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:151
-msgid "08/15/2015"
+#: ../../inventory/routes/strategies/removal.rst:153
+msgid "Product Removal Time --> Removal Date"
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:154
-msgid "We will create a sale order with ``15kg`` of ``ice cream`` and confirm it."
+#: ../../inventory/routes/strategies/removal.rst:155
+msgid "Product Life Time --> End of Life Date"
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:156
-msgid "The outgoing shipment related to sale order will make the move based on removal strategy **FEFO**."
+#: ../../inventory/routes/strategies/removal.rst:157
+msgid "Product Alert Time --> Alert Date"
 msgstr ""
 
 #: ../../inventory/routes/strategies/removal.rst:159
+msgid "To set the removal strategy on location, go to :menuselection:`Configuration --> Locations` and choose FEFO."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:165
+msgid "Let's take an example, there are ``3`` lots of ``ice cream`` available in ``WH/Stock`` location: ``LOT0001``, ``LOT0002``, ``LOT0003`` with different expiration date."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:170
+msgid "**Lot / Serial No**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:170
+msgid "**Product**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:170
+msgid "**Expiration Date**"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:172
+msgid "LOT0001"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:172
+#: ../../inventory/routes/strategies/removal.rst:174
+#: ../../inventory/routes/strategies/removal.rst:176
+msgid "Ice Cream"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:172
+msgid "08/20/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:174
+msgid "LOT0002"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:174
+msgid "08/10/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:176
+msgid "LOT0003"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:176
+msgid "08/15/2015"
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:179
+msgid "We will create a sale order with ``15kg`` of ``ice cream`` and confirm it."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:181
+msgid "The outgoing shipment related to sale order will make the move based on removal strategy **FEFO**."
+msgstr ""
+
+#: ../../inventory/routes/strategies/removal.rst:184
 msgid "It will take ``10kg`` from ``LOT0002`` and ``5kg`` from ``LOT0003`` based on the removal dates."
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:167
+#: ../../inventory/routes/strategies/removal.rst:192
 msgid ":doc:`../../management/reporting/valuation_methods_continental`"
 msgstr ""
 
-#: ../../inventory/routes/strategies/removal.rst:168
+#: ../../inventory/routes/strategies/removal.rst:193
 msgid ":doc:`../../management/reporting/valuation_methods_anglo_saxon`"
 msgstr ""
 
