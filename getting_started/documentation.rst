@@ -318,19 +318,13 @@ For every phase, the steps are the following:
     You are responsible to export the data from your existing system
     and Odoo's project manager will import them in Odoo.
 
-3.  **Training:** once the applications are set up and the data imported,
-    you have to train your users on the environment that is perfectly
-    working. There will be some back and forth with Odoo's project
-    manager to answer questions and process your feedback. (\*)
+3.  **Training:** once your applications are set up, your data imported, and
+    the system is working smoothly, you will train your users. There will 
+    be some back and forth with your Odoo project manager to answer questions 
+    and process your feedback.
 
 4.  **Production**: Once everyone is trained, your users start using
     Odoo.
-
-(\*) *Before the training, our project manager will have done the
-customizations that are required to go into production. If you can use
-the software without these customizations (even if it requires extra
-manual tasks), we will push these customizations after going into
-production (see phase below).*
 
 Once you are comfortable using Odoo, we will fine-tune the process and
 **automate** some tasks and do the remaining customizations (**extra
