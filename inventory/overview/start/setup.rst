@@ -14,17 +14,17 @@ the top-right progress bar to get access to the implementation guide.
 
 The implementation guide helps you through the following steps:
 
-1. Setup your warehouse
+1. Set up your warehouse
 
 2. Import your vendors
 
 3. Import your products
 
-4. Make the initial inventory
+4. Set up the initial inventory
 
 5. Configure your sales and purchase flows
 
-6. Set-up replenishment mechanisms
+6. Set up replenishment mechanisms
 
 7. Configure advanced features like package, traceability, routes and
    inventory valuation.
