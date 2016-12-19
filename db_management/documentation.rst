@@ -1,10 +1,10 @@
-:banner: banners/db_management.jpg
+:banner: banners/users.jpg
 
 .. _db_management/documentation:
 
-============================
-How to manage your databases
-============================
+==================
+Users and Features
+==================
 
 As the administrator of your database, you are responsible for its usage.
 This includes the Apps you install as well as the number of users currently
@@ -17,94 +17,18 @@ subscription amount significantly (or switch you from a free account
 to a paying one on our online platform).
 
 This page contains some information as to how you can manage your Odoo 
-instances. The most important section concern the
-:ref:`duplication <duplicate>` of your database: whenever you wish to
-install or remove an App, you should **always** test it first on a duplicate
-of your production database. That way, if something goes wrong, your
-day-to-day business is not impacted.
+instances. Before carrying any of these procedures, we **strongly** advise
+to test them on a duplicate of your database first. That way, if something goes
+wrong, your day-to-day business is not impacted. 
+
+.. note:: You can find guides on how to duplicate your databases both for
+    :ref:`online <duplicate_online>` and :ref:`on premise <duplicate_premise>`
+    installations.
 
 .. note:: If you have questions about the content of this page or if you
     encounter an issue while carrying out these procedures, please contact
     us through our `support form <https://www.odoo.com/help>`__.
 
-.. note:: Database duplication, renaming, custom DNS, etc. is not available
-    to free customers of our Online platform.
-
-
-.. _duplicate:
-
-Duplicating a database (online)
-===============================
-
-Access the `database management page <https://www.odoo.com/my/databases>`__
-(you will have to sign in). Next, make sure you are connected as the
-administrator of the database you want to duplicate. After that, click
-on the **Manage Your Databases** button.
-
-.. image:: media/databases.png
-    :align: center
-
-In the line of the database you want to duplicate, you will have a few
-buttons. To duplicate your database, just click **Duplicate**. You will
-have to give a name to your duplicate, then click **Duplicate Database**.
-
-.. image:: media/db_buttons.png
-    :align: center
-
-.. image:: media/db_duplicate.png
-    :align: center
-
-.. danger:: A duplicated database has the same behaviour as a real one:
-
-  * Emails are sent
-
-  * Payments are processed (in the e-commerce, for example)
-
-  * Delivery orders (shipping providers) are sent
-
-  * Etc.
-
-  It is **strongly** advised to test behaviour using sample
-  customers/products (with a `disposable e-mail <http://www.mailinator.com>`__
-  address, for example)
-
-After a few seconds, you will be logged in your duplicated database.
-Notice that the url uses the name you chose for your duplicated
-database.
-
-.. note :: Duplicate databases expire automatically after 15 days.
-
-    .. image:: media/dup_expires.png
-        :align: center
-
-Duplicating a database (on-premise)
-===================================
-
-You can duplicate your database by accessing the database manager on your
-server (<odoo-server>/web/database/manager). In this page, you can easily
-duplicate your database (among other things).
-
-.. image:: media/db_manager.gif
-    :align: center
-
-
-When you duplicate a local database, it is **strongly** advised to change
-the duplicated database's uuid (Unniversally Unique Identifier), since this
-uuid is how your database identifies itself with our servers. Having two
-databases with the same uuid could result in invoicing problems or registration
-problems down the line.
-
-.. note:: From July 2016 onward, Odoo 9 now automatically change the uuid of a
-    duplicated database; a manual operation is no longer required.
-
-The database uuid is currently accessible from the menu **Settings > Technical
-> System Parameters**, we advise you to use a 
-`uuid generator <https://www.uuidgenerator.net>`__ or to use the unix command
-``uuidgen`` to generate a new uuid. You can then simply replace it like any
-other record by clicking on it and using the edit button.
-
-.. image:: media/db_uuid.png
-    :align: center
 
 Deactivating Users
 ==================
