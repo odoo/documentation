@@ -1,5 +1,5 @@
 ========================
-Manufactufing Operations
+Manufacturing Operations
 ========================
 
 .. toctree::
