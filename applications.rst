@@ -18,6 +18,5 @@ Applications
    project
    expense/expense
    general
-   legal
 ..   expenses
 ..   recruitment
