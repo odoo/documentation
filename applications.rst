@@ -18,8 +18,6 @@ Applications
    project
    expense/expense
    general
-   getting_started/documentation
-   db_management/documentation
    legal
 ..   expenses
 ..   recruitment
