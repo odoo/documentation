@@ -1,6 +1,6 @@
-==================
-How to add an user
-==================
+=================
+How to add a user
+=================
 
 Odoo provides you with the option to add additional users at any given
 point.
