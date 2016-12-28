@@ -66,7 +66,7 @@ the number of Users.
 
 Odoo SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
-Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
+Policy, as published on `Odoo SA's website <https://www.odoo.com/page/odoo-privacy-policy>`_.
 
 Upon expiration or termination of this Agreement, this license is revoked immediately and the
 Customer agrees to stop using the Odoo Enterprise Edition software.
