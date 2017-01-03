@@ -11,3 +11,4 @@ CRM
    crm/salesteam
    crm/leads
    crm/reporting
+   crm/calendar
