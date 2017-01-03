@@ -2,7 +2,7 @@
 How to synchronize your calendar with Google Calendar
 =====================================================
 
-- Connect on your google account and go to https://console.developers.google.com/
+- Connect on your google account and go to `https://console.developers.google.com/ <https://console.developers.google.com/>`_.
 
 - Click on **Create a project...** and enter a project name and change your id if you want.
   Don't forget to accept the Terms of Services 
