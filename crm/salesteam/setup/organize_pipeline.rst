@@ -114,7 +114,7 @@ then your workflow could look like this :
   *Success rate : 75%*
 
 - **Won** : the prospect confirmed his quotation and received a sales
-  order. He his now a customer
+  order. He is now a customer
  
   *Success rate : 100%*
 
