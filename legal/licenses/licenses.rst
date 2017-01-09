@@ -8,7 +8,7 @@ Licenses
 .. _odoo_community_license:
 
 Odoo 10 Community Edition
-========================
+=========================
 
 Odoo 10 Community Edition is licensed under
 `LGPL version 3 <http://www.gnu.org/licenses/lgpl-3.0.en.html>`_  (also known as LGPLv3).
@@ -19,7 +19,7 @@ See also the `GPL FAQ <http://www.gnu.org/licenses/gpl-faq.en.html>`_ and the
 .. _odoo_enterprise_license:
 
 Odoo 10 Enterprise Edition
-=========================
+==========================
 
 Odoo 10 Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
 defined as follows:
@@ -85,21 +85,13 @@ DEALINGS IN THE SOFTWARE.
     </tt>
 
 
-.. _odoo_9_community:
+.. _odoo_9_license:
 
-Odoo 9 Community Edition
-========================
+Odoo 9
+======
 
-See previous section `Odoo 10 Community Edition`_.
-
-
-.. _odoo_9_enterprise:
-
-Odoo 9 Enterprise Edition
-=========================
-
-See previous section `Odoo 10 Enterprise Edition`_.
-
+The licenses for both editions of Odoo 9 were respectively the same as for
+:ref:`odoo_community_license` and :ref:`odoo_enterprise_license`.
 
 .. _odoo_8_license:
 
