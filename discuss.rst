@@ -7,4 +7,9 @@ Discuss
 .. toctree::
    :titlesonly:
 
-   discuss/getting_started
+   discuss/overview
+   discuss/team_communication
+   discuss/monitoring
+   discuss/mentions
+   discuss/tracking
+   discuss/integrations

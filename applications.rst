@@ -10,7 +10,7 @@ Applications
    sales
    website
    ecommerce
-   discuss/getting_started
+   discuss
    purchase
    inventory
    manufacturing
