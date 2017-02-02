@@ -314,6 +314,7 @@ def setup(app):
     app.add_javascript('reconciliation.js')
     app.add_javascript('misc.js')
 
+    app.add_javascript('account_retention.js')
     app.add_javascript('inventory.js')
     app.add_javascript('coa-valuation.js')
     app.add_javascript('coa-valuation-continental.js')
