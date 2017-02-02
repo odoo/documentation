@@ -16,5 +16,6 @@ Applications
    getting_started/documentation
    db_management/documentation
    website
+   general
 ..   expenses
 ..   recruitment
