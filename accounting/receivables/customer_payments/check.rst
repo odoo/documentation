@@ -2,14 +2,14 @@
 How to register customer payments by checks?
 ============================================
 
-There are two ways to handle payments received by checks. Odoo support
+There are two ways to handle payments received by checks. Odoo supports
 both approaches so that you can use the one that better fits your
 habits.
 
 1. **Undeposited Funds:** 
    once you receive the check, you record a payment
-   by check on the invoice. (using a Check journal and posted on the
-   Undeposited Fund account) Then, once the check arrives in your
+   by check on the invoice. (using a Check Journal and posting to the
+   Undeposited Funds account) Then, once the check arrives in your
    bank account, move money from Undeposited Funds to your bank
    account.
 
@@ -21,16 +21,16 @@ habits.
    creating a dedicated journal entry.
 
 We recommend the first approach as it is more accurate (your bank
-account balance is accurate, taking into accounts checks that have not
-been cashed yet). Both approaches require the same effort.
+account balance is accurate, taking into account checks that have not
+been cashed yet). Both approaches require the same amount of effort.
 
-Even if the first method is cleaner, Odoo support the second approach
-because some accountants are used to it (quickbooks and peachtree
+Even if the first method is cleaner, Odoo supports the second approach
+because some accountants are used to it (Quickbooks and Peachtree
 users).
 
 .. Note:: 
-  You may have a look at the *Deposit Ticket feature* if you deposit
-  several checks to your bank accounts in batch.
+  You may want to take a look at the *Deposit Ticket feature* if you deposit
+  several checks to your bank accounts in batches.
 
 Option 1: Undeposited Funds
 ===========================
@@ -38,7 +38,7 @@ Option 1: Undeposited Funds
 Configuration
 -------------
 
--  Create a journal **Checks**
+-  Create a journal called **Checks**
 
 -  Set **Undeposited Checks** as a defaut credit/debit account
 
@@ -67,7 +67,7 @@ This operation will produce the following journal entry:
 +----------------------+-------------------+----------+----------+
 | Account              | Statement Match   | Debit    | Credit   |
 +======================+===================+==========+==========+
-| Account Receivable   |                   |          | 100.00   |
+| Accounts Receivable   |                   |          | 100.00   |
 +----------------------+-------------------+----------+----------+
 | Undeposited Funds    |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
@@ -87,8 +87,8 @@ with the check that is in Undeposited Funds.
 
 
 If you use this approach to manage received checks, you get the list of
-checks that have not been cashed in the **Undeposit Funds** account
-(accessible, for example, from the general ledger).
+checks that have not been cashed in the **Undeposited Funds** account
+(viewable from the general ledger).
 
 .. Note:: 
     Both methods will produce the same data in your accounting at the
