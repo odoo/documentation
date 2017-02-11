@@ -8,7 +8,7 @@ the different screens you will need.
 
 Once you have `installed the Accounting
 application <https://www.odoo.com/apps/modules/online/account_accountant/>`__,
-you should click on the top-right progressbar to get access to the
+you should click on the top-right progress bar to get access to the
 implementation guide.
 
 .. image:: ./media/setup01.png
@@ -19,7 +19,7 @@ The implementation guide will help you through the following steps:
 1.  Completing your company settings
 2.  Entering in your bank accounts
 3.  Selecting your chart of accounts
-4.  Confirming your usual tax rates
+4.  Confirming your normal tax rates
 5.  Setting up any foreign currencies
 6.  Importing your customers
 7.  Importing your suppliers
