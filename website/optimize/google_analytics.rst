@@ -1,54 +1,32 @@
-==================================================
-How to track your traffic through Google Analytics
-==================================================
+=======================================================
+How to track your website's traffic in Google Analytics
+=======================================================
 
-To setup the signin process with Google, first you have to perform the following steps:
+To follow your website's traffic with Google Analytics:
 
+- `Create a Google Analytics account <https://www.google.com/analytics/>`__ if 
+  you don't have any.
 
--   Connect on your google account and go to https://console.developers.google.com
+- Go through the creation form and accept the conditions to get the tracking ID.  
 
--   Click on **Create Project** and enter a project name
-
-    .. image:: media/GC_create_project.png
+    .. image:: media/google_analytics_account.png
         :align: center
 
-    .. image:: media/GC_new_project.png
+- Copy the tracking ID to insert it in Odoo.
+
+    .. image:: media/google_analytics_tracking_id.png
         :align: center
 
--   In the menu on left side, select the sub menu APIs (from menu APIs and auth) and
-    activate **"Analytics API"** by clicking on button "OFF". When it's done, check
-    that the button of **"Calendar API"** is well in green and with text "ON"
+- Go to the *Configuration* menu of your Odoo's Website app.
+  In the settings, turn on Google Analytics and paste the tracking ID.
+  Then save the page.
 
-    .. image:: media/GC_API.png
+      .. image:: media/google_analytics_settings.png
         :align: center
 
-    .. image:: media/GC_off_api.png
-        :align: center
+To make your first steps in Google Analytics, refer to `Google Documentation. 
+ <https://support.google.com/analytics/answer/1008015?hl=en/>`__
 
-    .. image:: media/GC_on_api.png
-        :align: center
+.. seealso::
 
--   In the menu on left side, select the sub menu **"Credentials"** (from menu APIs and
-    auth) and click on button **"Create New Client ID"**
-
-    .. image:: media/GC_credentials.png
-        :align: center
-
-    .. image:: media/GC_create_new_client_id.png
-        :align: center
-
--   Fill in the Name of application and check that the platform is well on **"Web Application"**.
-    You should now configure the allowed pages on which you will be redirected. To do
-    it, you need to complete the field **"Redirect RI"** and set as value (your own domain
-    followed by ``/google_account/authentication``) : You can now click on **"Create Client ID"**
-
-    .. image:: media/GC_client_id.png
-        :align: center
-
--   Once done, you will have the both informations (**Client ID** and **Client Secret**) that
-    you need to insert in the 2 fields below !
-
-    .. image:: media/GC_copy.png
-        :align: center
-
--   Click on **Apply**
+  * :doc:`google_analytics_dashboard`
