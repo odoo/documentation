@@ -11,7 +11,7 @@ Example, for a specific invoice:
 
 -  Pay the remaining balance within 30 days
 
-.. note::   Payment terms are different from invoicing in several times. If,
+.. note::   Payment terms are different from invoicing in several areas. If,
             for a specific order, you invoice the customer in two parts, that's not
             a payment term but invoice conditions.
 
