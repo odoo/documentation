@@ -5,6 +5,8 @@ How to reprint receipts?
 Configuration
 =============
 
+This feature requires a POSBox and a receipt printer.
+
 If you want to allow a cashier to reprint a ticket, go to
 :menuselection:`Configuration --> Settings` and tick the option 
 **Allow cashier to reprint receipts**.
@@ -22,20 +24,12 @@ open the one you want to configure and and tick the option **Reprinting**.
 How to reprint a receipt?
 =========================
 
-On the **Dashboard**, click on **More** and then on **Sales Orders**.
+In the Point of Sale interface click on the **Reprint Receipt** button.
 
 .. image:: media/reprint03.png
     :align: center
 
-On the orders list, search and click on the order you want to reprint.
-
-.. image:: media/reprint04.png
-    :align: center
-
-On the order, click on reprint.
-
-.. image:: media/reprint05.png
-    :align: center
+The last printed receipt will be printed again.
 
 .. seealso::
     * :doc:`../shop/cash_control`
