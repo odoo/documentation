@@ -2,9 +2,18 @@
 How to adapt your prices to your customers and apply discounts
 ==============================================================
 
-Have the pricing strategy tailored to your business, with specific prices
-and discounts per quantity, period, currency or customer segment. Odoo has an
-integrated tool to set and compute sales prices, the so-called Pricelists.
+Overview
+========
+
+Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
+
+A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
+
+Simple pricelists (lists of prices) are defined per customer segment.
+
+Complex pricelists (price rules) use advanced calculations to work out the pricing.  These rules allow for price changes based on any combination of Customer attributes (Country, size, Industry, relationship - reseller, distributor, etc); channel (Point of Sale, Website, Order via Rep, etc); quantity (meet a minumum order quantity and get a price break); and time period (temporary promotions or pricelists created in advance of being used).  Changes can be relative to the product list/catalog price, the product cost price, or to another pricelist.  Changes are calculated via discounts or surcharges and can be forced to fit within floor (minumum margin) and ceilings (maximum margins). Prices can be rounded to the nearest cent/dollar or multiple of either (nearest 5 cents, nearest 10 dollars).  
+
+As pricelists only suggest prices, they can be overridden by users completing Sales Order.
 
 Choose your pricing strategy in click on :menuselection:`Sales --> Settings`.
 
