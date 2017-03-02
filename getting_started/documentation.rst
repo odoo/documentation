@@ -111,7 +111,7 @@ must:
     departments. This person must have the support, or be part, of
     the top management.
 
-Integrate 95% of your business, not 100%
+Integrate 90% of your business, not 100%
 ----------------------------------------
 
 You probably chose Odoo because no other software allows for such a high
@@ -121,8 +121,8 @@ extremist in that direction.**
 Customizations cost you money, are more complex to maintain, add risks
 to the implementation and can cause issues with upgrades.
 
-Standard Odoo can probably cover 95% of your business. Be flexible on
-the remaining 5%, otherwise that 5% will cost you twice the original
+Standard Odoo can probably cover 90% of your business. Be flexible on
+the remaining 10%, otherwise that 10% will cost you twice the original
 project price. One always underestimates the hidden costs of
 customization.
 
@@ -279,7 +279,7 @@ extra services:
 -   **Customization of reports (PDF):** our project managers have access
     to developers for advanced customizations.
 
--   **Website Design:** standard themes are provided to get started at
+-   **Website design:** standard themes are provided to get started at
     no extra cost. However, our project manager can coach you on how to utilize
     the building blocks of the website designer. The time spent will consume
     hours of your success pack.
