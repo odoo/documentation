@@ -1,7 +1,0 @@
-================
-Getting Started
-================
-
-.. toctree::
-   :titlesonly:
-

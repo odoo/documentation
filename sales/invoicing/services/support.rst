@@ -156,5 +156,4 @@ track the service:
     delivered quantity field.
 
 .. seealso::
-    * :doc:`time_materials`
     * :doc:`../../../inventory/settings/products/uom`

@@ -95,4 +95,3 @@ a new issue will be created.
 .. seealso::
     * :doc:`../configuration/setup`
     * :doc:`../configuration/collaboration`
-    * :doc:`external`

@@ -124,7 +124,6 @@ it.
     :align: center
 
 .. seealso::
-    * :doc:`recurring`
     * :doc:`../online/creation`
     * :doc:`optional`
     * :doc:`terms_conditions`

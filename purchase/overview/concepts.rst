@@ -1,6 +1,0 @@
-================
-Main Concepts
-================
-
-.. toctree::
-   :titlesonly:

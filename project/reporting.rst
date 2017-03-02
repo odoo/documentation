@@ -1,6 +1,0 @@
-====================
-Reporting & Analysis
-====================
-
-.. toctree::
-   :titlesonly:

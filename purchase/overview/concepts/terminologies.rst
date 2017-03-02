@@ -1,5 +1,0 @@
-=============
-Terminologies
-=============
-
-*Coming soon...*

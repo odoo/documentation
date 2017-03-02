@@ -12,7 +12,7 @@ In order to use the Odoo DHL API, you will need:
 
 
 Getting SiteID and password for countries other than United States (UK and Rest of the world)
-====================================================================
+=============================================================================================
 
 You should contact DHL account manager and request integration for XML Express API. The presales should provide you live credentials.
 

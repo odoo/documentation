@@ -1,7 +1,0 @@
-========
-Products
-========
-
-.. toctree::
-   :titlesonly:
-

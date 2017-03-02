@@ -1,8 +1,9 @@
-=================
-Prices Management
-=================
+===================
+Manage your pricing
+===================
 
 .. toctree::
    :titlesonly:
 
-   prices/B2B_B2C
+   prices/pricing
+   prices/currencies

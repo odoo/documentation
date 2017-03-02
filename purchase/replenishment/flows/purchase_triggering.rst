@@ -108,6 +108,5 @@ The status of the delivery changed from **Waiting Availability** to
     :align: center
 
 .. seealso::
-    * :doc:`replenishment_methods`
     * :doc:`setup_stock_rule`
     * :doc:`warning_triggering`

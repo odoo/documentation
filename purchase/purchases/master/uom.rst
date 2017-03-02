@@ -129,8 +129,5 @@ It is now possible to input **square meters** as Unit of measure and a
 .. image:: media/uom07.png
     :align: center
 
-.. seealso::
-    * :doc:`configuration`
-
 .. |uom01| image:: ./media/uom01.png
 .. |uom02| image:: ./media/uom02.png
