@@ -1,6 +1,6 @@
-===================================================================
-How to manage multiple offers from suppliers with purchase tenders?
-===================================================================
+==============================
+How to manage Purchase Tenders
+==============================
 
 A **Purchase Tender** (PT), also known as Call for Bids, is used to
 drive competition between several suppliers in order to get the best
@@ -9,123 +9,66 @@ Tender is sent to multiple suppliers, stating each are competing with
 one another, and that the best offer will win. The main interest is that
 it usually leads to better offers.
 
-For more information on best uses, please read the chapter 
-:doc:`../../overview/process/difference`
+For more information on best uses, please read the chapter `Request for
+Quotation, Purchase Tender or Purchase
+Order? <https://www.odoo.com/documentation/user/10.0/purchase/overview/process/difference.html>`__
 
-Configuration
-=============
-
-Activating the Purchase Tender function
----------------------------------------
+Activate the Purchase Tender function
+-------------------------------------
 
 By default, the Purchase Tender is not activated. To be able to use PTs,
 you must first activate the option.
 
 In the Purchases module, open the Configuration menu and click on
 Settings. In the Purchase Order section, locate the **Calls for
-Tenders** and tick the box Allow using call for tenders… (advanced),
+Tenders** and tick the box Allow using call for tenders... (advanced),
 then click on **Apply**.
 
-.. image:: ./media/image16.png
+.. image:: media/manage_multiple_offers00.png
 	:align: center
 
-Creating a Purchase Tender
---------------------------
+Create a Purchase Tender
+------------------------
 
-To create a new Purchase Tender, open :menuselection:`Purchase --> Purchase Tenders`.
+To create a new Purchase Tender, open :menuselection:`Purchase --> Purchase Agreements
+(PA)`.
 
-.. image:: ./media/image19.png
+.. image:: media/manage_multiple_offers01.png
 	:align: center
 
-In the Purchase Tenders window, click on **Create**. A new Purchase Tenders
-window opens.
+In the Purchase Agreements window, click on **Create**. A new Purchase
+Agreement window opens.
 
-By default, Odoo names PTs "TEXXXXX" but you can change it as you like.
+In the **Agreement Type** field, choose Purchase Tender.
 
-.. image:: ./media/image21.png
+You do not have to define a **Vendor**.
+
+In the **Products** section, click on **Add an item**. Select products
+in the Product list, then insert **Quantity**. You can add as many
+products as you wish.
+
+.. image:: media/manage_multiple_offers02.png
 	:align: center
 
-In the **Responsible** field, you can select the person who will be in
-charge of the PT.
+Click on **Confirm Call**.
 
-In the **Tender Selection Type** menu, you can decide to:
+Now click on the button **New Quotation**. A RfQ is created with the
+products chosen on the PT. Choose a **Vendor** and send the RfQ to the
+vendor. Repeat this operation for each vendor.
 
-- select only one RfQ and automatically cancel all other bid: *Select only one RFQ (exclusive)*
-
-- allow multiple purchase orders for this PT: *Select multiple RFQ*
-
-Tick in the box **Multiple RFQ per vendor** if you wish to allow
-suppliers to send in more than one Request for Quotation.
-
-.. image:: ./media/image18.png
+.. image:: media/manage_multiple_offers03.png
 	:align: center
 
-In the **Tender Closing Deadline** field, select the date to bids are
-closed for suppliers.
+Once all the RfQs are sent, you can click on **Validate** on the PT.
 
-In the **Scheduled Ordering Date** field, select the date to which you
-will place the order.
+The vendors will send their offers, you can update the RfQs accordingly.
+Then, choose the ones you want to accept by clicking on **Confirm
+Order** on the RfQs and **Cancel** the others.
 
-In the **Scheduled Date** field, select the date to which the products
-should be delivered.
+You can now click on **Done** on the PT.
 
-In the **Source Document** field, you can insert a previous PO to use as
-a template.
-
-.. image:: ./media/image15.png
-	:align: center
-
-In the Products section, click on **Add an item**.
-
-Select the product in the **Product** list, then insert **Quantity**.
-You can add as many products as you wish.
-
-.. image:: ./media/image04.png
-	:align: center
-
-Click on **Save**, then on **Confirm Call**. Two new RFQs/Bids and Request a
-Quotation tabs have appeared on the right side of the window.
-
-.. image:: ./media/image17.png
-	:align: center
-
-Click on **Request a Quotation** and type in the names of the suppliers you
-wish to include in the PT, then click on **Create Request for Quotation**.
-
-.. image:: ./media/image12.png
-	:align: center
-
-A list of suppliers has appeared in the **Requests for Quotation**
-section.
-
-.. image:: ./media/image09.png
-	:align: center
-
-To send the RfQs to your suppliers, click on the green V icon. You can
-also review the RfQ before sending them by clicking on them.
-
-When you receive offers, click on the RFQs/Bids tab. In the list view,
-select the company and click on **Edit** to adapt the details as stated in
-the offer.
-
-.. image:: ./media/image20.png
-	:align: center
-
-When you have edited all the corresponding fields, click on **Save**.
-
-When the deadline has been reached, click on **Close Call for Tenders**. The
-status of the PT is now **Bid Selection**. Open the RFQs/Bids tab and open
-the RfQ(s) you wish to proceed with.
-
-.. image:: ./media/image14.png
-	:align: center
-
-Click on **Approve Order** to convert the RfQ into a Purchase Order, the go
-back to your PT and click on **Done** to close the PT.
-
-.. demo:action:: purchase_requisition.action_purchase_requisition
-
-   View *Purchase Tenders* in our Online Demonstration
+View `Purchase Tenders <https://demo.odoo.com/?module=purchase_requisition.action_purchase_requisition>`__
+in our Online Demonstration.
 
 .. seealso:: 
 
