@@ -13,7 +13,7 @@ however, describe multiple variants of the same product.
 Setting up a Basic BoM
 ======================
 
-If choose to manage your manufacturing operations using manufacturing
+If you choose to manage your manufacturing operations using manufacturing
 orders only, you will define basic bills of materials without routings.
 For more information about which method of management to use, review the
 **Getting Started** section of the *Manufacturing* chapter of the
