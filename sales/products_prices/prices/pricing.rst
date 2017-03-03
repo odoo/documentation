@@ -2,20 +2,12 @@
 How to adapt your prices to your customers and apply discounts
 ==============================================================
 
-Overview
-========
-
 Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
-
 A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
+You can set several critarias to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
+As pricelists only suggest prices, they can be overridden by users completing sales orders.
+Choose your pricing strategy from :menuselection:`Sales --> Settings`.
 
-Simple pricelists (lists of prices) are defined per customer segment.
-
-Complex pricelists (price rules) use advanced calculations to work out the pricing.  These rules allow for price changes based on any combination of Customer attributes (Country, size, Industry, relationship - reseller, distributor, etc); channel (Point of Sale, Website, Order via Rep, etc); quantity (meet a minumum order quantity and get a price break); and time period (temporary promotions or pricelists created in advance of being used).  Changes can be relative to the product list/catalog price, the product cost price, or to another pricelist.  Changes are calculated via discounts or surcharges and can be forced to fit within floor (minumum margin) and ceilings (maximum margins). Prices can be rounded to the nearest cent/dollar or multiple of either (nearest 5 cents, nearest 10 dollars).  
-
-As pricelists only suggest prices, they can be overridden by users completing Sales Order.
-
-Choose your pricing strategy in click on :menuselection:`Sales --> Settings`.
 
 .. image:: ./media/pricing_options.png
    :align: center
@@ -67,8 +59,14 @@ Prices per minimum quantity
 Discounts, margins, roundings
 =============================
 
-The third option allows to apply discounts % or amounts, margins and
-rounding based on formulas. Once installed go to
+The third option allows to set price change rules. 
+Changes can be relative to the product list/catalog price, the product cost price, 
+or to another pricelist. Changes are calculated via discounts or surcharges and can be 
+forced to fit within floor (minumum margin) and ceilings (maximum margins). 
+Prices can be rounded to the nearest cent/dollar or multiple of either 
+(nearest 5 cents, nearest 10 dollars). 
+
+Once installed go to
 :menuselection:`Sales --> Configuration --> Pricelists
 (or :menuselection:`Website Admin --> Catalog --> Pricelists` if you
 use e-Commerce).
