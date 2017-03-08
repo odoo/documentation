@@ -8,8 +8,9 @@ Discuss
    :titlesonly:
 
    discuss/overview
-   discuss/team_communication
+   discuss/tracking
    discuss/monitoring
    discuss/mentions
-   discuss/tracking
-   discuss/integrations
+   discuss/team_communication
+   discuss/mail_twitter
+   discuss/email_servers

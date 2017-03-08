@@ -1,12 +1,12 @@
-======================================
-Integrating Twitter Feed with Channels
-======================================
+====================================
+How to follow Twitter feed from Odoo
+====================================
 
 .. image:: media/twitter_user-image.png
     :align: center
 
-A user can follow specific hashtags on twitter and see the tweets within the 
-channels of his/her choice. The tweets are retrieved periodically from Twitter.
+You can follow specific hashtags on Twitter and see the tweets within the 
+Odoo Discuss channels of your choice. The tweets are retrieved periodically from Twitter.
 An authenticated user can retweet the messages.
 
 Setting up the App on Twitter's side
