@@ -1,8 +1,8 @@
 :banner: banners/expense.jpg
 
-=======
+========
 Expenses
-=======
+========
 
 .. toctree::
    :titlesonly:
