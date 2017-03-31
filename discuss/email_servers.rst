@@ -1,36 +1,25 @@
-====================================================================
-How to use my own email servers to send and receive messages in Odoo
-====================================================================
+=================================================================
+How to use my own email servers to send and receive email in Odoo
+=================================================================
 
 When is it needed
 =================
-You need it if you use Odoo Community or Enterprise. 
+Using your own email servers is required to send and receive messages
+in Odoo Community or Enterprise. Odoo Online embeds an out-of-box 
+email solution that works straight away. However you can still use
+your own email servers with the online edition. Some insights 
+are provided here below.
 
-What if I use Odoo Online
-=========================
-You are done! Odoo Online comes up with an embedded and ready-to-use email 
-server (*@yourcompany.odoo.com*).
-We recommend to keep this default setting as is as it is really convenient. 
-
-Indeed, while it is branded by Odoo, the visible source of any message
-sent from Odoo will be your personal email address (your Odoo login). 
-Your contacts will therefore trust your messages. 
-
-How does it work when a contact replies to an email sent from Odoo
-==================================================================
-Default reply-to is a generic address used to automatically route 
-any incoming email to the discussion thread of the origin business object 
-(opportunity, order, task, etc.) and to the inbox of all its followers.
-By default this address is "catchall@" but it can be changed. 
-Thanks to it, you get a perfect message thread in Odoo and you don't 
-pollute your external email box with Odoo-related topics. 
-
-How to use my own email servers
-===============================
-You need to be a system admin to set this up.
-Go to :menuselection:`Settings --> General Settings` and check *External 
-Email Servers* (watch out: this checkbox only shows up after Odoo 10).
+How to set it up 
+================
+As a system admin, go to :menuselection:`Settings --> General Settings` 
+and check *External Email Servers* 
+(watch out: this checkbox only shows up after Odoo 10).
 Then, go through the following steps.
+
+.. note:: Office 365 doesn't allow external hosts like Odoo. 
+Consequently you can't use Office 365 email servers to send
+or receive messages in Odoo.
 
 Set an outgoing email server for outbound messages
 --------------------------------------------------
@@ -65,6 +54,11 @@ in General Settings.
 
 Create a catchall address
 -------------------------
+When a contact replies to an email sent from Odoo, the *reply-to* address
+is a generic address used to route the reply to the right discussion thread
+in Odoo (opportunity, order, task, etc.) and to the inbox of all its followers.
+By default this address is "catchall@" but it can be changed. 
+
 Create a catchall address in your email server settings. We advise
 you to use "catchall@" so that everything works out straight away.
 If you want to use another alias, you have extra steps in Odoo:
@@ -83,17 +77,76 @@ If you want to use another alias, you have extra steps in Odoo:
 
 .. note:: You can edit the email alias used for bounced messages the same way.
 
-How to perfectly combine Odoo Discuss and my traditional email tool
-===================================================================
+How to use my own email servers with Odoo Online
+================================================
+Odoo Online comes up with an embedded and ready-to-use email 
+server (*@yourcompany.odoo.com*).
+We recommend to keep this default setting as it is really convenient. 
+Indeed, while it is Odoo-labelled, the visible source of any message
+sent from Odoo will be your personal email address (your Odoo login). 
+Your contacts will therefore trust your messages. 
+
+You can still use your own email servers if you want your contacts to see
+your historic email address when they reply to your messages or if you want 
+to manage the reputation of your email servers yourself.
+
+There are 2 methods:
+
+* [Recommended] **Use a catchall redirection** (your server -> Odoo server) 
+  to receive emails in Odoo in real time thanks to the Odoo email server.
+  Create a catchall address in your email server settings.
+  Then apply following redirection:
+  catchall@yourdomain.ext -> catchall@yourcompany.odoo.com.
+  That's it you're ready to go!
+* **Use a catchall mailbox** to exclusively use your own email server.
+  That way you can also manage your email server reputation (blacklisting, etc).
+  However, incoming messages are fetched from the email server
+  thanks to a cron running every hour. This is the shortest time lap
+  for crons in Online instances.
+  If you opt for this solution, simply follow the procedure
+  of above section.
+
+How to be SPF-compliant when using external email servers in Odoo
+=================================================================
+Sender Policy Framework (SPF) is an email-validation system that checks that 
+incoming mail from a domain comes from a host authorized by that domain's 
+administrator. Such a security system is used in most email servers. 
+If you don't comply with it, your emails sent from Odoo will be likely
+flagged as spam.
+
+To be SPF-compliant, you need to authorize Odoo as a sending host 
+in your domain name settings:
+
+* Sign in to your domain’s account at your domain host.
+* Locate the page for updating your domain’s DNS records. 
+* If no TXT record is set, create one with following definition:
+  v=spf1 include:_spf.odoo.com ~all
+* In case a TXT record is already set, add "include:_spf.odoo.com".
+  
+  e.g. for a Gmail server it should be:
+
+  v=spf1 include:_spf.odoo.com include:_spf.google.com ~all
+
+Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to 
+create or modify TXT records in your own domain registrar.
+
+Your new SPF record can take up to 48 hours to go into effect, 
+but this usually happens more quickly.
+
+.. note:: Adding more than one SPF record for a domain can cause problems 
+   with mail delivery and spam classification. Instead, we recommend using 
+   only one SPF record by modifying it to authorize Odoo.
+
+How to choose between Odoo and my traditional email box
+=======================================================
 Odoo Discuss is a perfect tool to send and read messages related to 
-business objects. But it doesn't aim to replace a full-featured email 
-software (Gmail, Outlook, Yahoo, AOL, etc.). 
+business documents. However it doesn't aim to replace a full-featured email 
+solution (Gmail, Outlook, Yahoo, AOL, etc.). 
 We recommend to take the most out of both systems without mingling them: 
 What is related to Odoo business objects or applications goes into Odoo; 
-What is not stays into your external email boxes. 
+What is not can be managed into your external email box. 
 
 To do so, create specific email aliases to use in Odoo (to generate leads 
 or opportunities, helpdesk tickets, etc.). If you take an email alias 
 already used for messaging outside of Odoo, incoming messages will land 
-into both systems.
-This will negatively impact your productivity when it comes to process them.
+into both systems. This will negatively impact your productivity.
