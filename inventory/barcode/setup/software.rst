@@ -8,6 +8,17 @@ attributing barcodes to products, pickings locations, etc. allows you to
 work more efficiently by controlling the software almost exclusively
 with the barcode scanner.
 
+.. |download_barcode| image:: ../../../_static/banners/pdf-icon.png
+      :alt: Download Barcode Document
+      :target: ../../../_static/files/barcodes_actions.pdf
+
+
+.. note::
+    Print this document to be able to use your barcode scanner to perform more actions.
+    
+    :ref:`Document:` |download_barcode|
+
+
 Set products barcodes
 =====================
 
