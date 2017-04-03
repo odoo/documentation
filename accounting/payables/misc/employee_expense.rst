@@ -206,5 +206,3 @@ options:
 .. seealso::
 
 	* :doc:`forecast`
-
-	.. todo:: :doc: ../../../sale/invoicing/service/expense
