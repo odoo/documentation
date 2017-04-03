@@ -32,10 +32,6 @@ Current version of the POSBox (since 2015)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 .. figure:: media/posbox_2_doc_schema.svg
 
-Old version of the POSBox (before 2015)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-.. figure:: media/posbox_doc_schema.svg
-
 Connect peripheral devices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 

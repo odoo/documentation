@@ -68,7 +68,7 @@ Odoo defines several actions for every reminder:
 .. Note:: 
     As you need to provide a number of days relative to the due date,
     you can use a negative number. As an example, if an invoice is issued
-    the January 1st but the due date is January 30, if you set a reminder 3
+    the January 1st but the due date is January 20, if you set a reminder 3
     days before the due date, the customer may receive an email in January
     17.
 

@@ -1,6 +1,6 @@
-=======================================================
-How to get right tax rates in the US thanks to TaxCloud
-=======================================================
+=========================================================
+How to get correct tax rates in the US thanks to TaxCloud
+=========================================================
 
 The **TaxCloud** integration allows you to calculate the sales tax for every
 address in the United States and keeps track of which product types are
