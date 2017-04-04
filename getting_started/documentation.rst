@@ -75,6 +75,12 @@ you through all the steps. But you can also:
 
 -   Read the documentation on our website:
     `https://www.odoo.com/documentation/user <https://www.odoo.com/documentation/user>`__
+    
+-   Watch the videos on our eLearning platform (Free with your first Success Pack):
+    `https://odoo.thinkific.com/courses/odoo-functional <https://odoo.thinkific.com/courses/odoo-functional>`__
+    
+-   Watch the webinars on our 
+    `Youtube channel <https://www.youtube.com/user/OpenERPonline>`__    
 
 -   Or send your questions to our online support through our
     `online support form <https://www.odoo.com/help>`__.
