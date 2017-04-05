@@ -88,72 +88,75 @@ you through all the steps. But you can also:
 What do we expect from you?
 ===========================
 
-We used to deploy full featured projects within 25 to 250 hours of
+We are used to deploying fully featured projects within 25 to 250 hours of
 services, which is much faster than any other ERP vendor on the market.
-Most projects are completed between 1 and 4 calendar months.
+Most projects are completed between 1 to 9 calendar months.
 
 But what really **differentiates between a successful implementation and
-a slow one, is you, the customer!** From our experience, here is what
-leads to a successful project.
+a slow one, is you, the customer!** From our experience, when our customer 
+is engaged and proactive the implementation is smooth.
 
 Your internal implementation manager
 ------------------------------------
 
-We will ask you for a single point of contact within your company work
-on the project with our project manager. To be efficient, this person
-must:
+We ask that you maintain a single point of contact within your company to 
+work with our project manager on your Odoo Implementation. This is to ensure 
+efficiency and a single knowledge base in your company. 
+Additionally, this person must:
 
 -   **be available at least 2 full days a week** for the project,
-    otherwise you will slow down the implementation. More is better,
-    the fastest implementations have a full time project manager.
+    otherwise you risk slowing down your implementation. More is better with
+    the fastest implementations having a full time project manager.
 
 -   **have authority to take decisions** on their own. Odoo usually
-    transforms all departments of companies for the better. In such a
-    project, you have a lot of decisions to take on small details. If
-    there is too much back and forth between several decision makers,
-    it could potentially seriously slow things down.
+    transforms all departments within a company for the better. There 
+    can be many small details that need quick turn arounds for answers and
+    if there is too much back and forth between several internal decision 
+    makers within your company it could potentially seriously slow everything down.
 
--   **have the leadership** to train and enforce policies at most
-    departments. This person must have the support, or be part, of
-    the top management.
+-   **have the leadership** to train and enforce policies internally with full support
+    from all departments and top management, or be part of top management.
 
-Integrate 95% of your business, not 100%
+Integrate 90% of your business, not 100%
 ----------------------------------------
 
 You probably chose Odoo because no other software allows for such a high
-level of automation, feature coverage and integration. But **don't be an
-extremist in that direction.**
+level of automation, feature coverage, and integration. But **don't be an
+extremist.**
 
-Customizations cost you money, are more complex to maintain, add risks
-to the implementation and can cause issues with upgrades.
+Customizations cost you time, money, are more complex to maintain, add risks
+to the implementation, and can cause issues with upgrades.
 
-Standard Odoo can probably cover 95% of your business. Be flexible on
-the remaining 5%, otherwise that 5% will cost you twice the original
-project price. One always underestimates the hidden costs of
-customization.
+Standard Odoo can probably cover 90% of your business processes and requirements.
+Be flexible on the remaining 10%, otherwise that 10% will cost you twice the original
+project price. One always underestimates the hidden costs of customization.
 
 -   **Do it the Odoo way, not yours.** Be flexible, use Odoo the way it
     was designed. Learn how it works and don't try to replicate the
     way your old system(s) works.
 
--   **The project first, customizations second.** If you really want
-    customizations, phase them in at the end of the project, ideally
-    after going into production. Once a customer starts using Odoo,
-    they usually drop about 60% of their customization requests as
-    they learn to do it the out of the box Odoo way. It is more
-    important to have all your business processes working than
-    customizing a screen to add fields or automate a few e-mails.
+-   **The project first, customizations second.** If you really want to
+    customize Odoo, phase it towards the end of the project, ideally
+    after having been in production for several months. Once a customer 
+    starts using Odoo, they usually drop about 60% of their customization
+    requests as they learn to perform their work flows out of the box, or 
+    the Odoo way. It is more important to have all your business processes 
+    working than customizing a screen to add a few fields here and there 
+    or automating a few e-mails.
 
-Our project managers are trained to help you make the right decision and
+Our project managers are trained to help you make the right decisions and
 measure the tradeoffs involved but it is much easier if you are aligned
-with them on the objectives.
+with them on the objectives. Some processes may take more time than your 
+previous system(s), however you need to weigh that increase in time with 
+other decreases in time for other processes. If the net time spent is 
+decreased with your move to Odoo than you are already ahead.
 
 Invest time in learning Odoo
 ----------------------------
 
-Start your free trial. Play with the system. The more comfortable you
-are with Odoo, the better your decisions will be and the training phase
-will be that much easier.
+Start your free trial and play with the system. The more comfortable you
+are with navigating Odoo, the better your decisions will be and the quicker
+and easier your training phases will be.
 
 Nothing replaces playing with the software, but here are some extra
 resources:
