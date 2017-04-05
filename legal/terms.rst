@@ -10,3 +10,4 @@ Terms and Conditions
     terms/online
     terms/enterprise
     terms/partnership
+    terms/terms_of_sale
