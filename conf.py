@@ -225,6 +225,8 @@ latex_documents = [
   ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement', '', 'howto'),
   ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_v5_fr.tex', 'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
   ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement', '', 'howto'),
+  ('legal/terms/terms_of_sale', 'terms_of_sale_v1.tex', 'Odoo Terms of Sale', '', 'howto'),
+  ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_v1_fr.tex', u'Conditions Générales de Vente Odoo', '', 'howto'),
   #('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation', u'fp, xmo', 'manual'),
 ]
 
