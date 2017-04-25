@@ -6,3 +6,4 @@ Localizations
    :titlesonly:
 
    localizations/switzerland
+   localizations/mexico
