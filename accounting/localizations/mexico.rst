@@ -67,7 +67,7 @@ company’s contact.
    :align: center
 
 To configure the EDI with the **PACs**, you can go in
-:menuselection:`Accounting --> Settings --> Electronic Invoicing (MX)``.
+:menuselection:`Accounting --> Settings --> Electronic Invoicing (MX)`.
 You can choose a PAC within the`list of supported PACs and then enter
 your PAC username and PAC password.
 
