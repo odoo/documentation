@@ -1,6 +1,6 @@
-===================================================
-How to import products with categories and variants
-===================================================
+===============================
+How to adapt an import template
+===============================
 
 Import templates are provided in the import tool of the most common data to
 import (contacts, products, bank statements, etc.).
@@ -13,18 +13,25 @@ How to customize the file
 * Remove columns you don't need. We advise to not remove the *ID* one (see
   why here below).
 * Set a unique ID to every single record by dragging down the ID sequencing.
-* Don't change labels of columns you want to import. Otherwise Odoo won't recognize
-  them anymore and you will have to map them on your own in the import screen.
-* To add new columns,Feel free to add new columns but the fields need to exist in Odoo. If Odoo fails
-  in matching the column name with a field, you can make it manually when importing
-  by browsing a list of available fields.
 
+.. image:: media/dragdown.gif
+    :align: center
+
+* When you add a new column, Odoo might not be able to map it automatically if its 
+  label doesn't fit any field of the system. 
+  If so, find the corresponding field using the search.
+
+    .. image:: media/field_list.png
+        :align: center
+
+  Then, use the label you found in your import template in order to make it work
+  straight away the very next time you try to import.
 
 Why an “ID” column
 ==================
 
-The ID is an unique identifier for the line item. Feel free to use the one of your
-previous software to ease the transition to Odoo.
+The **ID** (External ID) is an unique identifier for the line item.
+Feel free to use the one of your previous software to ease the transition to Odoo.
 
 Setting an ID is not mandatory when importing but it helps in many cases:
 

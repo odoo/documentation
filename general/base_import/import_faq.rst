@@ -1,30 +1,79 @@
-=======================
-Import CSV file to Odoo
-=======================
+============================
+How to import data into Odoo
+============================
+
+How to start
+------------
+You can import data on any Odoo's business object using either Excel 
+(.xlsx) or CSV (.csv) formats:
+contacts, products, bank statements, journal entries and even orders!
+
+Open the view of the object you want to populate and click *Import*.
+
+.. image:: media/import_button.gif
+    :align: center
+
+There you are provided with templates you can easily populate
+with your own data. Such templates can be imported in one click; 
+The data mapping is already done.
 
 
+How to adapt the template
+-------------------------
 
-Frequently Asked Questions
---------------------------
+* Add, remove and sort columns to fit at best your data structure.
+* We advise to not remove the **ID** one (see why in the next section).
+* Set a unique ID to every single record by dragging down the ID sequencing.
+
+.. image:: media/dragdown.gif
+    :align: center
+
+* When you add a new column, Odoo might not be able to map it automatically if its 
+  label doesn't fit any field in Odoo. Don't worry! You can map
+  new columns manually when you test the import. Search the list for the
+  corresponding field.
+
+    .. image:: media/field_list.png
+        :align: center
+
+  Then, use this field's label in your file in order to make it work
+  straight on the very next time.
 
 
-Need to import data from an other application?
-----------------------------------------------
+How to import from another application
+--------------------------------------
 
-In order to re-create relationships between different records, you should use the unique identifier from the original application and map it to the **ID** (External ID) column in Odoo. When you import an other record that links to the first one, use **XXX/ID** (XXX/External ID) to the original unique identifier.
+In order to re-create relationships between different records, 
+you should use the unique identifier from the original application 
+and map it to the **ID** (External ID) column in Odoo. 
+When you import another record that links to the first one, 
+use **XXX/ID** (XXX/External ID) to the original unique identifier.
+You can also find this record using its name but you will be stuck 
+if at least 2 records have the same name.
 
-The **ID** (External ID) will also be used to update the original import if you need to re-import modified data later, it's thus good practice to specify it whenever possible.
+The **ID** will also be used to update the original import 
+if you need to re-import modified data later, 
+it's thus good practice to specify it whenever possible.
 
 
+I cannot find the field I want to map my column to
+--------------------------------------------------
 
-I cannot find the field I want to map my column to?
----------------------------------------------------
+Odoo tries to find with some heuristic, based on the first ten lines of 
+the files, the type of field for each column inside your file. 
+For example if you have a column only containing numbers, 
+only the fields that are of type *Integer* will be displayed for you 
+to choose from. 
+While this behavior might be good and easy for most cases, 
+it is also possible that it goes wrong or that you want to 
+map your column to a field that is not proposed by default.
 
-Odoo try to find with some heuristic, based on the first ten lines of the files, the type of field for each columns inside your file. For example if you have a column only containing numbers, only the fields that are of type integer will be displayed for you to choose from. While this behaviour might be good and easy for most cases scenarios, it is also possible that it goes wrong sometimes or that you want to map your column to a field that is not proposed by default.
+If that happens, you just have to check the 
+** Show fields of relation fields (advanced)** option, 
+you will then be able to choose from the complete list of fields for each column.
 
-If that happens, you just have to check the **Show all fields for completion (advanced)** option, you will then be able to choose from the complete list of fields for each columns.
-
-
+.. image:: media/field_list.png
+  :align: center
 
 Where can I change the date import format?
 ------------------------------------------

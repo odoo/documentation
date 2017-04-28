@@ -17,9 +17,10 @@ and check *External Email Servers*
 (watch out: this checkbox only shows up after Odoo 10).
 Then, go through the following steps.
 
-.. note:: Office 365 doesn't allow external hosts like Odoo. 
-Consequently you can't use Office 365 email servers to send
-or receive messages in Odoo.
+.. note::
+    Office 365 doesn't allow external hosts like Odoo. 
+    Consequently you can't use Office 365 email servers to send
+    or receive messages in Odoo.
 
 Set an outgoing email server for outbound messages
 --------------------------------------------------

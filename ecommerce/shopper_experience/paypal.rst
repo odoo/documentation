@@ -1,48 +1,112 @@
-===================================
-How to collect payments with Paypal
-===================================
+===========================
+How to get paid with Paypal
+===========================
 
-Paypal is the easiest payment method to configure. It is also the only one without any subscription
-free.
+Paypal is the easiest online payment method to configure. 
+It is also the only one without any subscription free.
+We definitely advise it to any starter.
 
-Setup your Paypal account
-=========================
 
-1. Create a business account at Paypal.com (see:
-https://www.paypal.com/in/cgi-bin/webscr?cmd=xpt/Marketing/general/how-to-set-up-a-paypal-account-outside)
-or upgrade your account to Business account (merchant) if you have a basic account.
+Set up your Paypal account
+==========================
 
-2. Log in to your account at Paypal.com and go to
-:menuselection:`My Account --> Profile --> My Selling Tools`. There click *PayPal button language
-encoding* under *More Selling Tools* section. Then, click *More Options* and replace the two default
-encoding formats by *UTF-8*.
+* Create a `Paypal Business Account <https://www.paypal.com>`__
+  or upgrade your account to *Business account* if you have a basic account.
 
-3. Open Paypal setup form in Odoo and enter your *Email ID*.
+* Log in to `Paypal <https://www.paypal.com>`__ 
+  and open the settings of your **Profile**.
 
-4. The Paypal Merchant ID is not mandatory (extra verification level). It is provided in
-Paypal under :menuselection:`My Account --> Overview`.
+  .. image:: media/paypal_profile.png
+    :align: center
 
-5. Configure the IPN feedback (Paypal contacting your Odoo instance without needing the
-redirection). The setting can be found in
-:menuselection:`Profile --> My Selling Tools --> Instant payment notification`.
-Activate it and set it to <odoo_instance_url>/payment/paypal/ipn.
+* Now enter the menu **My selling tools**.
 
-6. To test the workflow, you can create sandbox accounts by logging in at
-https://developer.paypal.com/webapps/developer/applications/myapps with the same Paypal credentials.
-Two default sandbox accounts are automatically generated when you register to Paypal:
-one is a buyer, the  other is a shopper.
+  .. image:: media/paypal_selling_tools.png
+    :align: center
 
-7. Log in with your buyer sandbox account to https://www.sandbox.paypal.com (same password than real
-account) and apply the same format change.
+* Let's start with the **Website Preferences**.
 
-.. tip::
-    To automatically redirect your customers when the payment is completed, go to your Website
-    Preferences and turn *Auto Return* on. Set *Return URL* to <odoo_instance_url>/shop/confirmation.
-    Verify that your *Notify URL* uses the correct protocol (HTTP/HTTPS).
-	
-.. tip::
-    If you want your customers to pay without creating a Paypal account, *Paypal Account
-    Optional* needs to be turned on.
+* Turn on **Auto Return** and enter the **Return URL**:
+  <odoo_instance_url>/shop/confirmation.
+  Verify that this address uses the correct protocol (HTTP/HTTPS).
+
+  .. image:: media/paypal_auto_return.png
+    :align: center
+
+* Turn on **Payment Data Transfer**. 
+  When saving, an **Identity Token** is generated.
+  You will be later requested to enter it in Odoo.
+
+  .. image:: media/paypal_data_transfer.png
+    :align: center
+
+* Then, get back to your profile to activate the 
+  **Instant Payment Notification (IPN)** in *My selling tools*.
+
+  Enter the **Notification URL**: <odoo_instance_url>/payment/paypal/ipn
+
+  .. image:: media/paypal_ipn_setup.png
+    :align: center
+
+* Now you must change the encoding format of the payment request sent by Odoo
+  to Paypal. To do so, get back to *My selling tools* and click 
+  **PayPal button language encoding** in *More Selling Tools* section.
+
+  .. image:: media/paypal_button_encoding.png
+    :align: center
+
+  Then, click *More Options* and set the two default encoding formats as **UTF-8**.
+
+  .. image:: media/paypal_more_options.png
+    :align: center
+
+  .. image:: media/paypal_encoding_options.png
+    :align: center
+
+  .. tip:: If you want your customers to pay without creating a Paypal account, 
+    **Paypal Account Optional** needs to be turned on.
+    
+    .. image:: media/paypal_account_optional.png
+     :align: center
+
+
+Set up Paypal's payment method in Odoo
+======================================
+* Open Paypal setup form in :menuselection:`Website or Sales or Accounting 
+  --> Settings --> Payment Acquirers+`. Enter both your **Email ID** 
+  and your **Merchant ID** and check **Use IPN**.
+
+  .. image:: media/paypal_credentials.png
+    :align: center
+
+  They are both provided in your Paypal profile,
+  under :menuselection:`My business info`.
+
+* Enter your **Identity Token** in Odoo (from *Auto Return* option).
+  To do so, open the *Settings* and activate the **Developer Mode**.
+
+  .. image:: media/paypal_debug.png
+    :align: center
+
+  Then, go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
+  and create a parameter with following values:
+
+  * Key: payment_paypal.pdt_token
+  * Value: your Paypal *Identity Token*
+
+  .. image:: media/paypal_identity_token.png
+    :align: center
+
+
+Go live
+=======
+Your configuration is now ready! 
+You can make Paypal visible on your merchant interface
+and activate the **Production mode**.
+
+.. image:: media/paypal_live.png
+    :align: center
+
 
 Transaction fees
 ================
@@ -50,5 +114,42 @@ Transaction fees
 You can charge an extra to the customer to cover the transaction fees Paypal charges you.
 Once redirected to Paypal, your customer sees an extra applied to the order amount. 
 
-To activate this, go to the *Configuration* tab and check *Add Extra Fees*. Default
-fees are the ones charged by Paypal.
+To activate this, go to the *Configuration* tab of Paypal config form in Odoo
+and check *Add Extra Fees*. Default fees for US can be seen here below.
+
+.. image:: media/paypal_fees.png
+    :align: center
+
+To apply the right fees for your country, please refer to 
+`Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`__.
+
+
+Test the payment flow
+=====================
+
+You can test the entire payment flow thanks to Paypal Sandbox accounts.
+
+* Log in to `Paypal Developer Site <https://developer.paypal.com>`__
+  with your Paypal credentials.
+  This will create two sandbox accounts:
+
+  * A business account (to use as merchant, e.g. pp.merch01-facilitator@example.com).
+  * A default personal account (to use as shopper, e.g. pp.merch01-buyer@example.com).
+
+* Log in to `Paypal Sandbox <https://www.sandbox.paypal.com>`__ 
+  with the merchant account and follow the same configuration instructions.
+
+* Enter your sandbox credentials in Odoo and make sure Paypal is 
+  still set on *Test* mode.
+  Also, make sure the confirmation mode of Paypal is not
+  *Authorize & capture the amount, confirm the SO and auto-validate 
+  the invoice on acquirer confirmation*.
+  Otherwise a confirmed invoice will be automatically generated when
+  the transaction is completed.
+
+* Run a test transaction from Odoo using the sandbox personal account.
+
+.. seealso::
+
+  * :doc:`payment`
+  * :doc:`payment_acquirer`
