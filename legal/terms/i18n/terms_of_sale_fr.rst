@@ -4,6 +4,19 @@
 Conditions Générales de Vente
 =============================
 
+.. note:: Dernière modification: 3 mai 2017.
+
+Ces conditions régissent la vente de produits et services entre
+Odoo S.A. et le client. Des conditions supplémentaires peuvent s'appliquer pour
+d'autres services offerts par Odoo S.A. (par exemple, l'Odoo Enterprise
+Subscription Agreement). Si ces conditions supplémentaires entrent en
+contradiction avec les Conditions Générales de Vente, les conditions
+supplémentaires prévaudront.
+
+Veuillez lire ces conditions attentivement avant de faire une commande
+auprès d'Odoo S.A. En commandant auprès d'Odoo S.A., le client marque son
+accord avec les présentes conditions.
+
 Le client renonce explicitement à ses propres conditions générales, même dans le
 cas où celles-ci seraient postérieures aux présentes conditions générales. Toute
 dérogation doit, pour être valable, être convenue de manière expresse, préalable
@@ -46,13 +59,17 @@ dommages et intérêts formulée par le consommateur final à l'encontre du clie
 
 Dans la limite autorisée par la loi, la responsabilité globale de chaque partie,
 ainsi que de ses filiales ne dépassera pas 50% du montant total réglé par le
-Client en vertu du présent Contrat au cours des 12 mois précédant la date de
-l'événement donnant lieu à une telle réclamation. Des réclamations multiples
+Client en vertu des présentes conditions au cours des 12 mois précédant la date
+de l'événement donnant lieu à une telle réclamation. Des réclamations multiples
 n'augmenteront pas cette limite.
 
 Toute réclamation doit, pour être recevable, être notifiée à Odoo S.A., à son
 siège social, par courrier recommandé dans les 8 jours suivant la livraison des
 marchandises ou la prestation des services.
+
+Odoo S.A. se réserve le droit de modifier ces conditions à n'importe quel moment
+et sans notification préalable. Le client est soumis aux conditions en
+application au moment de votre acceptation de ces conditions.
 
 Tout litige résultant de la présente convention ressort de l’application du
 droit belge et est de la compétence des Tribunaux de l’arrondissement du siège
