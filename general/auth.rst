@@ -1,6 +1,6 @@
-================
-Authentification
-================
+==============
+Authentication
+==============
 
 .. toctree::
    :titlesonly:
