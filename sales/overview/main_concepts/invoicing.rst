@@ -66,7 +66,7 @@ defined on the contract.
 :menuselection:`eCommerce Order --> Invoice`
 --------------------------------------------
 
-An eCommerce order will also trigger the creation of the order when it
+An eCommerce order will also trigger the creation of the invoice when it
 is fully paid. If you allow paying orders by check or wire transfer,
 Odoo only creates an order and the invoice will be triggered once the
 payment is received.
