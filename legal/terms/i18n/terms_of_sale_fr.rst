@@ -4,14 +4,14 @@
 Conditions Générales de Vente
 =============================
 
-.. note:: Dernière modification: 3 mai 2017.
+.. note:: Dernière modification: 5 mai 2017.
 
 Ces conditions régissent la vente de produits et services entre
-Odoo S.A. et le client. Des conditions supplémentaires peuvent s'appliquer pour
-d'autres services offerts par Odoo S.A. (par exemple, l'Odoo Enterprise
-Subscription Agreement). Si ces conditions supplémentaires entrent en
-contradiction avec les Conditions Générales de Vente, les conditions
-supplémentaires prévaudront.
+Odoo S.A. et ses filiales (collectivement, "Odoo S.A.") et le client.
+Des conditions supplémentaires peuvent s'appliquer pour d'autres services
+offerts par Odoo S.A. (par exemple, l'Odoo Enterprise Subscription Agreement).
+Si ces conditions supplémentaires entrent en contradiction avec les Conditions
+Générales de Vente, les conditions supplémentaires prévaudront.
 
 Veuillez lire ces conditions attentivement avant de faire une commande
 auprès d'Odoo S.A. En commandant auprès d'Odoo S.A., le client marque son
@@ -69,7 +69,7 @@ marchandises ou la prestation des services.
 
 Odoo S.A. se réserve le droit de modifier ces conditions à n'importe quel moment
 et sans notification préalable. Le client est soumis aux conditions en
-application au moment de votre acceptation de ces conditions.
+application au moment de son acceptation de ces conditions.
 
 Tout litige résultant de la présente convention ressort de l’application du
 droit belge et est de la compétence des Tribunaux de l’arrondissement du siège
