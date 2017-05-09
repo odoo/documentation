@@ -63,7 +63,7 @@ support contract you sell. From the **Sales** application, use the menu
     :align: center
 
 .. tip:: 
-    There are different ways to track the service related to a sale 
+    There are different ways to track the service related to a sales 
     order or product sold. With the above configuration, you can only 
     sell one support contract per order. If your customer orders 
     several service contracts on timesheet, you will have to split 
@@ -77,12 +77,12 @@ the **Unit of Measure** category and set a conversion ratio compared to
 Managing support contract
 =========================
 
-Quotations and Sale Orders
+Quotations and Sales Orders
 --------------------------
 
-Once the product is created, you can create a quotation or a sale order
+Once the product is created, you can create a quotation or a sales order
 with the related product. Once the quotation is confirmed and
-transformed into a sale order, your users will be able to record
+transformed into a sales order, your users will be able to record
 services related to this support contract using the timesheet
 application.
 
@@ -100,7 +100,7 @@ above), so you can start tracking services as soon as it has been sold.
 .. image:: media/support06.png
     :align: center
 
-Control delivered support on the sale order
+Control delivered support on the sales order
 -------------------------------------------
 
 From the **Sales** application, use the menu 
@@ -116,15 +116,12 @@ Upselling and renewal
 ---------------------
 
 If the number of hours you performed on the support contract is bigger
-or equal to the number of hours the customer purchased, the sale order
-**Invoicing Status** is automatically set to **Upselling**. This means you
-have an opportunity to sell an extra contract to the customer since he
-used all his quota of service.
-
+or equal to the number of hours the customer purchased, you are 
+suggested to sell an extra contract to the customer since they
+used all their quota of service.
 Periodically (ideally once every two weeks), you should check the sales
-order that are in an upselling status. To do this, go to the 
-:menuselection:`Sales --> Sales Order` menu and use the **Upselling** 
-filter to get all orders that are in upselling.
+order that are in such a case.
+To do so, go to :menuselection:`Sales --> Invoicing --> Orders to Upsell`.
 
 .. tip::
     If you use Odoo CRM, a good practice is to create an opportunity for 
@@ -132,10 +129,10 @@ filter to get all orders that are in upselling.
     your upselling effort.
 
 If you sell an extra support contract, you can either add a new line on
-the existing sale order (thus, you continue to timesheet on the same
+the existing sales order (thus, you continue to timesheet on the same
 order) or create a new order (thus, people will timesheet their hours on
-the new contract). To unmark the sale order as **Upselling**, you can set
-the sale order as done and it will disappear from your upselling list.
+the new contract). To unmark the sales order as **Upselling**, you can set
+the sales order as done and it will disappear from your upselling list.
 
 Special Configuration
 =====================
@@ -144,15 +141,15 @@ When creating the product form, you may set a different approach to
 track the service:
 
 -   **Create task and track hours**: in this mode, a task is created for
-    every sale order line. Then when you do the timesheet, you don't
-    record hours on a sale order/contract, but you record hours on a
+    every sales order line. Then when you do the timesheet, you don't
+    record hours on a sales order/contract, but you record hours on a
     task (that represents the contract). The advantage of this
     solution is that it allows to sell several service contracts
-    within the same sale order.
+    within the same sales order.
 
 -   **Manually**: you can use this mode if you don't record timesheets in
     Odoo. The number of hours you worked on a specific contract can
-    be recorded manually on the sale order line directly, in the
+    be recorded manually on the sales order line directly, in the
     delivered quantity field.
 
 .. seealso::
