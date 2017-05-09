@@ -71,7 +71,7 @@ Uninstalling Apps
 =================
 
 .. warning:: Make sure you first test what you are about to do on a 
-    :ref:`duplicate <duplicate>` of your database before making any
+    :ref:`duplicate <duplicate_online>` of your database before making any
     changes (*especially* installing/uninstalling apps).
 
 In your Odoo instance click on **Settings**; in this app, you will be
