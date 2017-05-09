@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 9.0\n"
+"Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-03-23 15:39+0100\n"
+"POT-Creation-Date: 2017-05-09 14:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Olivier Lenoir <olivier.lenoir@free.fr>, 2017\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
@@ -23,8 +23,8 @@ msgid "General"
 msgstr "Général"
 
 #: ../../general/auth.rst:3
-msgid "Authentification"
-msgstr ""
+msgid "Authentication"
+msgstr "Authentification"
 
 #: ../../general/auth/google.rst:3
 msgid "How to allow users to sign in with their Google account"
@@ -84,64 +84,196 @@ msgid ""
 msgstr ""
 
 #: ../../general/base_import.rst:3
-msgid "BASE IMPORT"
+msgid "Data Import"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:3
+msgid "How to adapt an import template"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:5
+msgid ""
+"Import templates are provided in the import tool of the most common data to "
+"import (contacts, products, bank statements, etc.). You can open them with "
+"any spreadsheets software (Microsoft Office, OpenOffice, Google Drive, "
+"etc.)."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:11
+msgid "How to customize the file"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:13
+msgid ""
+"Remove columns you don't need. We advise to not remove the *ID* one (see why"
+" here below)."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:15
+#: ../../general/base_import/import_faq.rst:26
+msgid ""
+"Set a unique ID to every single record by dragging down the ID sequencing."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:20
+msgid ""
+"When you add a new column, Odoo might not be able to map it automatically if"
+" its label doesn't fit any field of the system. If so, find the "
+"corresponding field using the search."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:27
+msgid ""
+"Then, use the label you found in your import template in order to make it "
+"work straight away the very next time you try to import."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:31
+msgid "Why an “ID” column"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:33
+msgid ""
+"The **ID** (External ID) is an unique identifier for the line item. Feel "
+"free to use the one of your previous software to ease the transition to "
+"Odoo."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:36
+msgid ""
+"Setting an ID is not mandatory when importing but it helps in many cases:"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:38
+msgid ""
+"Update imports: you can import the same file several times without creating "
+"duplicates;"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:39
+msgid "Import relation fields (see here below)."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:42
+msgid "How to import relation fields"
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:44
+msgid ""
+"An Odoo object is always related to many other objects (e.g. a product is "
+"linked to product categories, attributes, vendors, etc.). To import those "
+"relations you need to import the records of the related object first from "
+"their own list menu."
+msgstr ""
+
+#: ../../general/base_import/adapt_template.rst:48
+msgid ""
+"You can do it using either the name of the related record or its ID. The ID "
+"is expected when two records have the same name. In such a case add \" / "
+"ID\" at the end of the column title (e.g. for product attributes: Product "
+"Attributes / Attribute / ID)."
 msgstr ""
 
 #: ../../general/base_import/import_faq.rst:3
-msgid "Import CSV file to Odoo"
+msgid "How to import data into Odoo"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:8
-msgid "Frequently Asked Questions"
-msgstr "Foire aux questions"
+#: ../../general/base_import/import_faq.rst:6
+msgid "How to start"
+msgstr ""
 
-#: ../../general/base_import/import_faq.rst:12
-msgid "Need to import data from an other application?"
-msgstr "Besoin d'importer des données d'une autre application ?"
-
-#: ../../general/base_import/import_faq.rst:14
+#: ../../general/base_import/import_faq.rst:7
 msgid ""
-"In order to re-create relationships between different records, you should "
-"use the unique identifier from the original application and map it to the "
-"**ID** (External ID) column in Odoo. When you import an other record that "
-"links to the first one, use **XXX/ID** (XXX/External ID) to the original "
-"unique identifier."
+"You can import data on any Odoo's business object using either Excel (.xlsx)"
+" or CSV (.csv) formats: contacts, products, bank statements, journal entries"
+" and even orders!"
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:11
+msgid "Open the view of the object you want to populate and click *Import*."
 msgstr ""
 
 #: ../../general/base_import/import_faq.rst:16
 msgid ""
-"The **ID** (External ID) will also be used to update the original import if "
-"you need to re-import modified data later, it's thus good practice to "
-"specify it whenever possible."
+"There you are provided with templates you can easily populate with your own "
+"data. Such templates can be imported in one click; The data mapping is "
+"already done."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:21
-msgid "I cannot find the field I want to map my column to?"
+#: ../../general/base_import/import_faq.rst:22
+msgid "How to adapt the template"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:23
-msgid ""
-"Odoo try to find with some heuristic, based on the first ten lines of the "
-"files, the type of field for each columns inside your file. For example if "
-"you have a column only containing numbers, only the fields that are of type "
-"integer will be displayed for you to choose from. While this behaviour might"
-" be good and easy for most cases scenarios, it is also possible that it goes"
-" wrong sometimes or that you want to map your column to a field that is not "
-"proposed by default."
+#: ../../general/base_import/import_faq.rst:24
+msgid "Add, remove and sort columns to fit at best your data structure."
 msgstr ""
 
 #: ../../general/base_import/import_faq.rst:25
-msgid ""
-"If that happens, you just have to check the **Show all fields for completion"
-" (advanced)** option, you will then be able to choose from the complete list"
-" of fields for each columns."
+msgid "We advise to not remove the **ID** one (see why in the next section)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:30
+#: ../../general/base_import/import_faq.rst:31
+msgid ""
+"When you add a new column, Odoo might not be able to map it automatically if"
+" its label doesn't fit any field in Odoo. Don't worry! You can map new "
+"columns manually when you test the import. Search the list for the "
+"corresponding field."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:39
+msgid ""
+"Then, use this field's label in your file in order to make it work straight "
+"on the very next time."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:44
+msgid "How to import from another application"
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:46
+msgid ""
+"In order to re-create relationships between different records, you should "
+"use the unique identifier from the original application and map it to the "
+"**ID** (External ID) column in Odoo. When you import another record that "
+"links to the first one, use **XXX/ID** (XXX/External ID) to the original "
+"unique identifier. You can also find this record using its name but you will"
+" be stuck if at least 2 records have the same name."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:54
+msgid ""
+"The **ID** will also be used to update the original import if you need to "
+"re-import modified data later, it's thus good practice to specify it "
+"whenever possible."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:60
+msgid "I cannot find the field I want to map my column to"
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:62
+msgid ""
+"Odoo tries to find with some heuristic, based on the first ten lines of the "
+"files, the type of field for each column inside your file. For example if "
+"you have a column only containing numbers, only the fields that are of type "
+"*Integer* will be displayed for you to choose from. While this behavior "
+"might be good and easy for most cases, it is also possible that it goes "
+"wrong or that you want to map your column to a field that is not proposed by"
+" default."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:71
+msgid ""
+"If that happens, you just have to check the ** Show fields of relation "
+"fields (advanced)** option, you will then be able to choose from the "
+"complete list of fields for each column."
+msgstr ""
+
+#: ../../general/base_import/import_faq.rst:79
 msgid "Where can I change the date import format?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:32
+#: ../../general/base_import/import_faq.rst:81
 msgid ""
 "Odoo can automatically detect if a column is a date and it will try to guess"
 " the date format from a set of most used date format. While this process can"
@@ -151,7 +283,7 @@ msgid ""
 " day and which one is the month in a date like '01-03-2016'."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:34
+#: ../../general/base_import/import_faq.rst:83
 msgid ""
 "To view which date format Odoo has found from your file you can check the "
 "**Date Format** that is shown when clicking on **Options** under the file "
@@ -159,7 +291,7 @@ msgid ""
 " the *ISO 8601* to define the format."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:37
+#: ../../general/base_import/import_faq.rst:86
 msgid ""
 "If you are importing an excel (.xls, .xlsx) file, you can use date cells to "
 "store dates as the display of dates in excel is different from the way it is"
@@ -167,11 +299,11 @@ msgid ""
 "whatever your locale date format is."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:42
+#: ../../general/base_import/import_faq.rst:91
 msgid "Can I import numbers with currency sign (e.g.: $32.00)?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:44
+#: ../../general/base_import/import_faq.rst:93
 msgid ""
 "Yes, we fully support numbers with parenthesis to represent negative sign as"
 " well as numbers with currency sign attached to them. Odoo also "
@@ -181,56 +313,56 @@ msgid ""
 "crash."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:46
+#: ../../general/base_import/import_faq.rst:95
 msgid ""
 "Examples of supported numbers (using thirty-two thousands as an example):"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:48
+#: ../../general/base_import/import_faq.rst:97
 msgid "32.000,00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:49
+#: ../../general/base_import/import_faq.rst:98
 msgid "32000,00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:50
+#: ../../general/base_import/import_faq.rst:99
 msgid "32,000.00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:51
+#: ../../general/base_import/import_faq.rst:100
 msgid "-32000.00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:52
+#: ../../general/base_import/import_faq.rst:101
 msgid "(32000.00)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:53
+#: ../../general/base_import/import_faq.rst:102
 msgid "$ 32.000,00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:54
+#: ../../general/base_import/import_faq.rst:103
 msgid "(32000.00 €)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:56
+#: ../../general/base_import/import_faq.rst:105
 msgid "Example that will not work:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:58
+#: ../../general/base_import/import_faq.rst:107
 msgid "ABC 32.000,00"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:59
+#: ../../general/base_import/import_faq.rst:108
 msgid "$ (32.000,00)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:64
+#: ../../general/base_import/import_faq.rst:113
 msgid "What can I do when the Import preview table isn't displayed correctly?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:66
+#: ../../general/base_import/import_faq.rst:115
 msgid ""
 "By default the Import preview is set on commas as field separators and "
 "quotation marks as text delimiters. If your csv file does not have these "
@@ -238,20 +370,20 @@ msgid ""
 " CSV file bar after you select your file)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:68
+#: ../../general/base_import/import_faq.rst:117
 msgid ""
 "Note that if your CSV file has a tabulation as separator, Odoo will not "
 "detect the separations. You will need to change the file format options in "
 "your spreadsheet application. See the following question."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:73
+#: ../../general/base_import/import_faq.rst:122
 msgid ""
 "How can I change the CSV file format options when saving in my spreadsheet "
 "application?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:75
+#: ../../general/base_import/import_faq.rst:124
 msgid ""
 "If you edit and save CSV files in speadsheet applications, your computer's "
 "regional settings will be applied for the separator and delimiter. We "
@@ -260,17 +392,17 @@ msgid ""
 "filter settings' > Save)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:77
+#: ../../general/base_import/import_faq.rst:126
 msgid ""
 "Microsoft Excel will allow you to modify only the encoding when saving (in "
 "'Save As' dialog box > click 'Tools' dropdown list > Encoding tab)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:82
+#: ../../general/base_import/import_faq.rst:131
 msgid "What's the difference between Database ID and External ID?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:84
+#: ../../general/base_import/import_faq.rst:133
 msgid ""
 "Some fields define a relationship with another object. For example, the "
 "country of a contact is a link to a record of the 'Country' object. When you"
@@ -280,58 +412,58 @@ msgid ""
 "import."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:86
+#: ../../general/base_import/import_faq.rst:135
 msgid ""
 "For example, to reference the country of a contact, Odoo proposes you 3 "
 "different fields to import:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:88
+#: ../../general/base_import/import_faq.rst:137
 msgid "Country: the name or code of the country"
 msgstr "Pays : le nom ou code du pays"
 
-#: ../../general/base_import/import_faq.rst:89
+#: ../../general/base_import/import_faq.rst:138
 msgid ""
 "Country/Database ID: the unique Odoo ID for a record, defined by the ID "
 "postgresql column"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:90
+#: ../../general/base_import/import_faq.rst:139
 msgid ""
 "Country/External ID: the ID of this record referenced in another application"
 " (or the .XML file that imported it)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:92
+#: ../../general/base_import/import_faq.rst:141
 msgid "For the country Belgium, you can use one of these 3 ways to import:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:94
+#: ../../general/base_import/import_faq.rst:143
 msgid "Country: Belgium"
 msgstr "Pays : Belgique"
 
-#: ../../general/base_import/import_faq.rst:95
+#: ../../general/base_import/import_faq.rst:144
 msgid "Country/Database ID: 21"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:96
+#: ../../general/base_import/import_faq.rst:145
 msgid "Country/External ID: base.be"
 msgstr "Pays/Id. externe: base.be"
 
-#: ../../general/base_import/import_faq.rst:98
+#: ../../general/base_import/import_faq.rst:147
 msgid ""
 "According to your need, you should use one of these 3 ways to reference "
 "records in relations. Here is when you should use one or the other, "
 "according to your need:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:100
+#: ../../general/base_import/import_faq.rst:149
 msgid ""
 "Use Country: This is the easiest way when your data come from CSV files that"
 " have been created manually."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:101
+#: ../../general/base_import/import_faq.rst:150
 msgid ""
 "Use Country/Database ID: You should rarely use this notation. It's mostly "
 "used by developers as it's main advantage is to never have conflicts (you "
@@ -339,13 +471,13 @@ msgid ""
 "Database ID)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:102
+#: ../../general/base_import/import_faq.rst:151
 msgid ""
 "Use Country/External ID: Use External ID when you import data from a third "
 "party application."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:104
+#: ../../general/base_import/import_faq.rst:153
 msgid ""
 "When you use External IDs, you can import CSV files with the \"External ID\""
 " column to define the External ID of each record you import. Then, you will "
@@ -354,23 +486,23 @@ msgid ""
 "Products and their Categories."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:106
+#: ../../general/base_import/import_faq.rst:155
 msgid ""
 "`CSV file for categories "
 "<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:108
+#: ../../general/base_import/import_faq.rst:157
 msgid ""
 "`CSV file for Products "
 "<../../_static/example_files/External_id_3rd_party_application_products.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:112
+#: ../../general/base_import/import_faq.rst:161
 msgid "What can I do if I have multiple matches for a field?"
 msgstr "Que puis-je faire si j'ai plusieurs correspondances pour un champ ?"
 
-#: ../../general/base_import/import_faq.rst:114
+#: ../../general/base_import/import_faq.rst:163
 msgid ""
 "If for example you have two product categories with the child name "
 "\"Sellable\" (ie. \"Misc. Products/Sellable\" & \"Other "
@@ -381,20 +513,20 @@ msgid ""
 "the duplicates' values or your product category hierarchy."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:116
+#: ../../general/base_import/import_faq.rst:165
 msgid ""
 "However if you do not wish to change your configuration of product "
 "categories, we recommend you use make use of the external ID for this field "
 "'Category'."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:121
+#: ../../general/base_import/import_faq.rst:170
 msgid ""
 "How can I import a many2many relationship field (e.g. a customer that has "
 "multiple tags)?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:123
+#: ../../general/base_import/import_faq.rst:172
 msgid ""
 "The tags should be separated by a comma without any spacing. For example, if"
 " you want your customer to be linked to both tags 'Manufacturer' and "
@@ -402,19 +534,19 @@ msgid ""
 " of your CSV file."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:125
+#: ../../general/base_import/import_faq.rst:174
 msgid ""
 "`CSV file for Manufacturer, Retailer "
 "<../../_static/example_files/m2m_customers_tags.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:130
+#: ../../general/base_import/import_faq.rst:179
 msgid ""
 "How can I import a one2many relationship (e.g. several Order Lines of a "
 "Sales Order)?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:132
+#: ../../general/base_import/import_faq.rst:181
 msgid ""
 "If you want to import sales order having several order lines; for each order"
 " line, you need to reserve a specific row in the CSV file. The first order "
@@ -425,41 +557,41 @@ msgid ""
 "you can import, based on demo data."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:135
+#: ../../general/base_import/import_faq.rst:184
 msgid ""
 "`File for some Quotations "
 "<../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:137
+#: ../../general/base_import/import_faq.rst:186
 msgid ""
 "The following CSV file shows how to import purchase orders with their "
 "respective purchase order lines:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:139
+#: ../../general/base_import/import_faq.rst:188
 msgid ""
 "`Purchase orders with their respective purchase order lines "
 "<../../_static/example_files/o2m_purchase_order_lines.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:141
+#: ../../general/base_import/import_faq.rst:190
 msgid ""
 "The following CSV file shows how to import customers and their respective "
 "contacts:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:143
+#: ../../general/base_import/import_faq.rst:192
 msgid ""
 "`Customers and their respective contacts "
 "<../../_static/example_files/o2m_customers_contacts.csv>`_."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:148
+#: ../../general/base_import/import_faq.rst:197
 msgid "Can I import several times the same record?"
 msgstr "Puis-je importer plusieurs fois le même enregistrement ?"
 
-#: ../../general/base_import/import_faq.rst:150
+#: ../../general/base_import/import_faq.rst:199
 msgid ""
 "If you import a file that contains one of the column \"External ID\" or "
 "\"Database ID\", records that have already been imported will be modified "
@@ -469,17 +601,17 @@ msgid ""
 "depending if it's new or not."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:152
+#: ../../general/base_import/import_faq.rst:201
 msgid ""
 "This feature allows you to use the Import/Export tool of Odoo to modify a "
 "batch of records in your favorite spreadsheet application."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:157
+#: ../../general/base_import/import_faq.rst:206
 msgid "What happens if I do not provide a value for a specific field?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:159
+#: ../../general/base_import/import_faq.rst:208
 msgid ""
 "If you do not set all fields in your CSV file, Odoo will assign the default "
 "value for every non defined fields. But if you set fields with empty values "
@@ -487,11 +619,11 @@ msgid ""
 "assigning the default value."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:164
+#: ../../general/base_import/import_faq.rst:213
 msgid "How to export/import different tables from an SQL application to Odoo?"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:166
+#: ../../general/base_import/import_faq.rst:215
 msgid ""
 "If you need to import data from different tables, you will have to recreate "
 "relations between records belonging to different tables. (e.g. if you import"
@@ -499,7 +631,7 @@ msgid ""
 "person and the company they work for)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:168
+#: ../../general/base_import/import_faq.rst:217
 msgid ""
 "To manage relations between tables, you can use the \"External ID\" "
 "facilities of Odoo. The \"External ID\" of a record is the unique identifier"
@@ -509,7 +641,7 @@ msgid ""
 "'company_1', 'person_1' instead of '1')"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:170
+#: ../../general/base_import/import_faq.rst:219
 msgid ""
 "As an example, suppose you have a SQL database with two tables you want to "
 "import: companies and persons. Each person belong to one company, so you "
@@ -519,27 +651,27 @@ msgid ""
 "PostgreSQL database</a>)"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:172
+#: ../../general/base_import/import_faq.rst:221
 msgid ""
 "We will first export all companies and their \"External ID\". In PSQL, write"
 " the following command:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:178
+#: ../../general/base_import/import_faq.rst:227
 msgid "This SQL command will create the following CSV file::"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:185
+#: ../../general/base_import/import_faq.rst:234
 msgid ""
 "To create the CSV file for persons, linked to companies, we will use the "
 "following SQL command in PSQL:"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:191
+#: ../../general/base_import/import_faq.rst:240
 msgid "It will produce the following CSV file::"
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:199
+#: ../../general/base_import/import_faq.rst:248
 msgid ""
 "As you can see in this file, Fabien and Laurence are working for the Bigees "
 "company (company_1) and Eric is working for the Organi company. The relation"
@@ -549,7 +681,7 @@ msgid ""
 " who shared the same ID 1 in the orignial database)."
 msgstr ""
 
-#: ../../general/base_import/import_faq.rst:201
+#: ../../general/base_import/import_faq.rst:250
 msgid ""
 "The two files produced are ready to be imported in Odoo without any "
 "modifications. After having imported these two CSV files, you will have 4 "
