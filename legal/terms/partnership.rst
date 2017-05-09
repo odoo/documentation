@@ -214,7 +214,7 @@ For _____________,
 
 
 
-.. _appendix_a:
+.. _appendix_p_a:
 
 10 Appendix A: Odoo Enterprise Edition License
 ==============================================
