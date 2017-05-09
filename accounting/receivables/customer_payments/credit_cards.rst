@@ -164,6 +164,6 @@ account).
 .. seealso::
    
    * :doc:`recording`
-   * :doc:`paypal`
+   * :doc:`../../bank/feeds/paypal`
    * :doc:`check`
    * :doc:`followup`
