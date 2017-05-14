@@ -4,7 +4,7 @@ How to manage product variants
 
 Product variants are used to offer variations of the same product to your
 customers on the products page. For example, the customer chooses a T-shirt
-and then selects its size and color.
+and then selects its size and color.  In the example below, the customer chooses a phone, and then selects the memory; color and Wi-Fi band from the available options. 
 
 .. image:: ./media/variants.png
    :align: center
