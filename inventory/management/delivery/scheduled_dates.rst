@@ -12,7 +12,7 @@ are dependent on the different leads times configured in Odoo.
 Configuring lead times
 ======================
 
-Configuring **lead times** is a first essentiel move in order to compute
+Configuring **lead times** is a first essential move in order to compute
 scheduled dates. Lead times are the delays (in term of delivery,
 manufacturing, ...) promised to your different partners and/or clients.
 
