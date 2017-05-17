@@ -1,51 +1,84 @@
-=====================================================
-How to synchronize your calendar with Google Calendar
-=====================================================
+==========================================================
+How to synchronize your Odoo Calendar with Google Calendar
+==========================================================
 
-- Connect on your google account and go to `https://console.developers.google.com/ <https://console.developers.google.com/>`_.
+Odoo is perfectly integrated with Google Calendar so that you 
+can see & manage your meetings from both platforms 
+(updates go through both directions).
 
-- Click on **Create a project...** and enter a project name and change your id if you want.
-  Don't forget to accept the Terms of Services 
+Setup in Google
+===============
+- Go to `Google APIs platform <https://console.developers.google.com>`__ 
+  to generate Google Calendar API credentials. Log in with your Google account. 
+
+- Choose *Calendar API*.
 
 .. image:: media/google_calendar_credentials01.png
     :align: center
 
-- In the menu on left side, select the sub menu APIs (from menu APIs and auth) and click on 'Calendar API'. 
-  Activate the Calendar API by clicking on the blue button 'Enable API'. 
-  When it's done, the Calendar API overview will be available 
+- Create a new project and give it a name (e.g. Odoo). This project is needed
+  to store your API credentials.
 
 .. image:: media/google_calendar_credentials02.png
     :align: center
 
+- Enable the API.
+
 .. image:: media/google_calendar_credentials03.png
     :align: center
+
+- Create credentials to use in Odoo.
 
 .. image:: media/google_calendar_credentials04.png
     :align: center
 
-- In the menu on left side, select the sub menu 'Credentials' (from menu APIs and auth) and click on
-  button 'Create new Client ID'
+- Select *Web browser (Javascript)* 
+  as calling source and *User data* as kind of data.
 
 .. image:: media/google_calendar_credentials05.png
     :align: center
 
-- Check that the Application type is set on 'Web Application', then click on 'Configure consent screen'. 
-  Specify an email address and a product name, then save. 
+- Then you can create a Client ID.
+  Enter the name of the application (e.g. Odoo) and the allowed pages on 
+  which you will be redirected. The *Authorized JavaScript origin* is your 
+  Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
+  URL followed by '/google_account/authentication'.
 
 .. image:: media/google_calendar_credentials06.png
     :align: center
 
+- Go through the Consent Screen step by entering a product name 
+  (e.g. Odoo). Feel free to check the customizations options 
+  but this is not mandatory. The Consent Screen will only show up when you 
+  enter the Client ID in Odoo for the first time.
+
+- Finally you are provided with your **Client ID**. Go to *Credentials* to 
+  get the **Client secret** as well. You will need both of them in Odoo.
+
 .. image:: media/google_calendar_credentials07.png
     :align: center
 
-You should now configure the allowed pages on which you will be redirected. To do it, you need to complete the field "Authorized redirect URI" and set as value (your own domain followed by '/google_account/authentication'): 
-==> http://mydomain.odoo.com/google_account/authentication
-You can now click on 'Create Client ID'
+Setup in Odoo
+=============
+
+- Install **Google Calendar** app.
 
 .. image:: media/google_calendar_credentials08.png
     :align: center
 
-- Once done, you will have the both informations (Client ID and Client Secret) that you need to insert in the 2 fields below! 
+- Go to :menuselection:`Settings --> General Settings` and enter your 
+  credentials in Google Calendar option.
 
 .. image:: media/google_calendar_credentials09.png
     :align: center
+
+- The setup is now ready. Open your Odoo Calendar and sync with Google.
+  The first time you do it you are redirected to Google to authorize
+  the connection. Once back in Odoo, click the sync button again.
+  You can click it whenever you want to synchronize your calendar.
+
+.. image:: media/google_calendar_credentials10.png
+    :align: center
+
+As of now you no longer have excuses to miss a meeting!
+
