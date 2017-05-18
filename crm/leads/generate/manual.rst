@@ -32,9 +32,7 @@ Go to :menuselection:`Sales --> Leads` and click the **Create** button.
 
 From the contact form, provide all the details in your possession
 (contact name, email, phone, address, etc.) as well as some additional
-information in the **Internal notes** field. You can also link the
-lead to an existing company by editing the**Customer** field. Click
-on save and the contact will be visible as a lead in your pipeline .
+information in the **Internal notes** field.
 
 .. note::
 
