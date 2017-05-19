@@ -156,25 +156,14 @@ POSBoxless Guide (advanced)
 
 .. image:: media/posboxless_setup.png
 
-If you are running your Point of Sale on a Debian-based Linux
-distribution, you do not need the POSBox as you can run its software
-locally. However the installation process is not foolproof. You'll need
-at least to know how to install and run Odoo. You may also run into
-issues specific to your distribution or to your particular setup and
-hardware configuration.
+On a Raspberry Pi
+-----------------
 
-Drivers for the various types of supported hardware are provided as
-Odoo modules. In fact, the POSBox runs an instance of Odoo that the
-Point of Sale communicates with. The instance of Odoo running on the
-POSBox is very different from a 'real' Odoo instance however. It does
-not handle *any* business data (eg. POS orders), but only serves as a
-gateway between the Point of Sale and the hardware.
-
-The goal of this section will be to set up a local Odoo instance that
-behaves like the Odoo instance running on the POSBox.
+You will need to either download or generate an image and flash 
+it onto an SD card and plug it into a Raspberry Pi.
 
 Image building process
-----------------------
+~~~~~~~~~~~~~~~~~~~~~~
 
 We generate the official POSBox images using the scripts in
 https://github.com/odoo/odoo/tree/8.0/addons/point_of_sale/tools/posbox. More
@@ -202,8 +191,28 @@ the image, remove the scripts that were used to initialize the image
 at boot and we copy over some extra configuration files. The resulting
 image is then ready to be tested and used.
 
+On device running a Debian-based OS
+-----------------------------------
+
+If you are running your Point of Sale on a Debian-based Linux
+distribution, you do not need the POSBox as you can run its software
+locally. However the installation process is not foolproof. You'll need
+at least to know how to install and run Odoo. You may also run into
+issues specific to your distribution or to your particular setup and
+hardware configuration.
+
+Drivers for the various types of supported hardware are provided as
+Odoo modules. In fact, the POSBox runs an instance of Odoo that the
+Point of Sale communicates with. The instance of Odoo running on the
+POSBox is very different from a 'real' Odoo instance however. It does
+not handle *any* business data (eg. POS orders), but only serves as a
+gateway between the Point of Sale and the hardware.
+
+The goal of this section will be to set up a local Odoo instance that
+behaves like the Odoo instance running on the POSBox.
+
 Prerequisites
--------------
+~~~~~~~~~~~~~
 
 - A Debian-based Linux distribution (Debian, Ubuntu, Mint, etc.)
 - A running Odoo instance you connect to to load the Point of Sale
@@ -216,7 +225,7 @@ Step By Step Setup Guide
 Extra dependencies
 ~~~~~~~~~~~~~~~~~~
 
-Because Odoo runs on Python 2, you need to check which version of pip
+Because Odoo runs on Python 2 (not Python 3), you need to check which version of pip
 you need to use.
 
 ``# pip --version``
@@ -240,6 +249,8 @@ The driver modules requires the installation of new python modules:
 ``# pip install pyusb==1.0.0b1``
 
 ``# pip install qrcode``
+
+``# pip install evdev``
 
 Access Rights
 ~~~~~~~~~~~~~
