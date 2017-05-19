@@ -3,7 +3,7 @@ How to get paid with Paypal
 ===========================
 
 Paypal is the easiest online payment method to configure. 
-It is also the only one without any subscription free.
+It is also the only one without any subscription fee.
 We definitely advise it to any starter.
 
 
