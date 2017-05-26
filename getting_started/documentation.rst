@@ -280,13 +280,15 @@ His/her role includes:
 -   **Data Import**: we can do it or assist you on how to do it with a
     template prepared by the project manager.
 
-If you have subscribed to a **Custom App**, you benefit from following
+If you have subscribed to **Studio**, you benefit from following
 extra services:
 
--   **Customization of screens**
+-   **Customization of screens:** Studio takes the Drag and Drop approach to
+    customize most screens in any way you see fit.
 
--   **Customization of reports (PDF):** our project managers have access
-    to developers for advanced customizations.
+-   **Customization of reports (PDF):** Studio itself will not allow you
+    to customize the reports yourself, however our project managers have 
+    access to developers for advanced customizations. 
 
 -   **Website Design:** standard themes are provided to get started at
     no extra cost. However, our project manager can coach you on how to utilize
@@ -297,6 +299,23 @@ extra services:
     triggers, sending reminders by emails, automating actions, etc.
     For very advanced automations, our project managers have access
     to Odoo developers.
+    
+If any customization is needed, Odoo Studio App will be required. Customizations 
+made through Odoo Studio App will be maintained and upgraded at each Odoo upgrade, 
+at no extra cost.
+
+All time spent to perform these customizations by our Business Analysts will be 
+deducted from your Success Pack.
+
+In case of customizations that would require a developer’s intervention, a 
+recurring maintenance fee will be charged on the customer subscription, 
+to cover maintenance and upgrade services. This cost will be based on 
+hours spent by the developer: 4€ or $5/month, per hour of development will 
+be added to the subscription fee.
+
+**Example:** a customization that took 2 hours of development will cost:
+2 hours deducted from the Success Pack for the customization development
+2 * $5 = $10/month as recurring fee for the maintenance of this customization
 
 Implementation Methodology
 ==========================
