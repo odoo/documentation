@@ -2,7 +2,7 @@
 How to get paid with Paypal
 ===========================
 
-Paypal is the easiest online payment method to configure. 
+Paypal is the easiest online payment acquirer to configure. 
 It is also the only one without any subscription fee.
 We definitely advise it to any starter.
 
@@ -70,8 +70,8 @@ Set up your Paypal account
      :align: center
 
 
-Set up Paypal's payment method in Odoo
-======================================
+Set up Odoo
+===========
 * Open Paypal setup form in :menuselection:`Website or Sales or Accounting 
   --> Settings --> Payment Acquirers+`. Enter both your **Email ID** 
   and your **Merchant ID** and check **Use IPN**.
