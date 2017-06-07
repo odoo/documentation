@@ -78,7 +78,7 @@ Managing support contract
 =========================
 
 Quotations and Sales Orders
---------------------------
+---------------------------
 
 Once the product is created, you can create a quotation or a sales order
 with the related product. Once the quotation is confirmed and
@@ -101,7 +101,7 @@ above), so you can start tracking services as soon as it has been sold.
     :align: center
 
 Control delivered support on the sales order
--------------------------------------------
+--------------------------------------------
 
 From the **Sales** application, use the menu 
 :menuselection:`Sales --> Sales Orders`  to control

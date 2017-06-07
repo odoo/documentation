@@ -161,7 +161,7 @@ Ce service est fourni par le biais d'une plateforme automatisée, afin de permet
 d'effectuer des migration sans intervention humain, dès lors qu’une version précédente de la
 base de données du Client a été migrée avec succès pour une Version Couverte donnée.
 Le client peut soumettre des demandes de migration successives pour une base de données,
-et accepte de soumettre au moins 1 demande de mifration de test avant de soumettre la demande de
+et accepte de soumettre au moins 1 demande de migration de test avant de soumettre la demande de
 migration finale.
 
 Le service de migration est limité à la conversion et à l'adaptation techniques de la base

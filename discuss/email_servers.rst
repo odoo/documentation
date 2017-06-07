@@ -18,9 +18,9 @@ and check *External Email Servers*
 Then, go through the following steps.
 
 .. note::
-    Office 365 doesn't allow external hosts like Odoo. 
-    Consequently you can't use Office 365 email servers to send
-    or receive messages in Odoo.
+    Office 365 email servers don't allow to send external emails 
+    from hosts like Odoo. 
+    Consequently you can only use such email servers for incoming messages.
 
 Set an outgoing email server for outbound messages
 --------------------------------------------------
@@ -81,31 +81,28 @@ If you want to use another alias, you have extra steps in Odoo:
 How to use my own email servers with Odoo Online
 ================================================
 Odoo Online comes up with an embedded and ready-to-use email 
-server (*@yourcompany.odoo.com*).
-We recommend to keep this default setting as it is really convenient. 
-Indeed, while it is Odoo-labelled, the visible source of any message
-sent from Odoo will be your personal email address (your Odoo login). 
-Your contacts will therefore trust your messages. 
+solution with *@yourcompany.odoo.com* as domain.
+We recommend to keep this default setup as it is really convenient. 
 
-You can still use your own email servers if you want your contacts to see
-your historic email address when they reply to your messages or if you want 
-to manage the reputation of your email servers yourself.
+Nevertheless you can still use your own email servers if you want
+to manage your email server's reputation (blacklisting, etc).
+The configuration for both incoming and outgoing mail servers is
+given here above.
 
-There are 2 methods:
+However when it comes to incoming messages, we don't recommend
+to exclusively use your own email server. Indeed, Odoo Online is fetching
+incoming messages from the email server once every hour only. 
+To receive emails in real time, you should rather use
+a **catchall redirection** (your server -> Odoo server). To do so:
 
-* [Recommended] **Use a catchall redirection** (your server -> Odoo server) 
-  to receive emails in Odoo in real time thanks to the Odoo email server.
-  Create a catchall address in your email server settings.
-  Then apply following redirection:
+* Create a catchall address in your email server settings (e.g. catchall).
+* Still from such settings, set a redirection
+  from this catchall address to Odoo's one:
   catchall@yourdomain.ext -> catchall@yourcompany.odoo.com.
-  That's it you're ready to go!
-* **Use a catchall mailbox** to exclusively use your own email server.
-  That way you can also manage your email server reputation (blacklisting, etc).
-  However, incoming messages are fetched from the email server
-  thanks to a cron running every hour. This is the shortest time lap
-  for crons in Online instances.
-  If you opt for this solution, simply follow the procedure
-  of above section.
+* In Odoo check *External Email Servers* in :menuselection:`Settings --> General Settings`
+  and enter your email domain name (i.e. yourdomain.ext).
+* No need to set up an incoming email server in such a case.
+  
 
 How to be SPF-compliant when using external email servers in Odoo
 =================================================================

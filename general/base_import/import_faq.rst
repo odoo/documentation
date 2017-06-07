@@ -10,7 +10,7 @@ contacts, products, bank statements, journal entries and even orders!
 
 Open the view of the object you want to populate and click *Import*.
 
-.. image:: media/import_button.gif
+.. image:: media/import_button.png
     :align: center
 
 There you are provided with templates you can easily populate

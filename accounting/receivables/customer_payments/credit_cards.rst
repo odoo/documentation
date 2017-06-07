@@ -47,7 +47,7 @@ Create a Journal called 'Credit card payments' with the following data:
 -  **Default debit account**: Credit cards
 -  **Default credit account**: Credit cards
 
-Once it's done, don't forget to set the "Credit cards" account as "Allow
+The account type should be "Credit Card". Once it's done, don't forget to set the "Credit cards" account as "Allow
 Reconciliation".
 
 .. image:: ./media/credit01.png
@@ -164,6 +164,6 @@ account).
 .. seealso::
    
    * :doc:`recording`
-   * :doc:`paypal`
+   * :doc:`../../bank/feeds/paypal`
    * :doc:`check`
    * :doc:`followup`
