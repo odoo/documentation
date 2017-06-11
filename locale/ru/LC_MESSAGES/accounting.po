@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-09 14:24+0200\n"
+"POT-Creation-Date: 2017-06-07 09:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Denis Baranov <baranov@itlibertas.com>, 2017\n"
+"Last-Translator: Sergey Vilizhanin <sv@grimmette.ru>, 2017\n"
 "Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2949,6 +2949,9 @@ msgstr ""
 
 #: ../../accounting/others/analytic/usage.rst:64
 #: ../../accounting/others/analytic/usage.rst:157
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:48
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:62
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:74
 #: ../../accounting/overview/process_overview/customer_invoice.rst:107
 #: ../../accounting/overview/process_overview/customer_invoice.rst:128
 msgid "**Debit**"
@@ -2956,6 +2959,9 @@ msgstr ""
 
 #: ../../accounting/others/analytic/usage.rst:64
 #: ../../accounting/others/analytic/usage.rst:157
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:48
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:62
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:74
 #: ../../accounting/overview/process_overview/customer_invoice.rst:107
 #: ../../accounting/overview/process_overview/customer_invoice.rst:128
 msgid "**Credit**"
@@ -5144,6 +5150,107 @@ msgstr ""
 #: ../../accounting/others/taxes/application.rst:85
 #: ../../accounting/others/taxes/default_taxes.rst:30
 msgid ":doc:`B2B_B2C`"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:3
+msgid "How to manage cash basis taxes"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:5
+msgid ""
+"The cash basis taxes are due when the payment has been done and not at the "
+"validation of the invoice (as it is the case with standard taxes). Reporting"
+" your income and expenses to the administration based on the cash basis "
+"method is legal in some countries and under some conditions."
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:10
+msgid ""
+"Example : You sell a product in the 1st quarter of your fiscal year and "
+"receive the payment the 2nd quarter of your fiscal year. Based on the cash "
+"basis method, the tax you have to pay to the administration is due for the "
+"2nd quarter."
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:16
+msgid "How to configure cash basis taxes ?"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:18
+msgid ""
+"You first have to activate the setting in :menuselection:`Accounting --> "
+"Configuration --> Settings --> Allow Tax Cash Basis`. You will be asked to "
+"define the Tax Cash Basis Journal."
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:27
+msgid ""
+"Once this is done, you can configure your taxes in "
+":menuselection:`Accounting --> Configuration --> Taxes`. You can open a tax "
+"and in the *Advanced Options* tab you will see the checkbox *Use Cash "
+"Basis*. You will then have to define the *Tax Received Account*."
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:39
+msgid "What is the impact of cash basis taxes in my accounting ?"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:41
+msgid ""
+"Let’s take an example. You make a sale of $100 with a 15% cash basis tax. "
+"When you validate the customer invoice, the following entry is created in "
+"your accounting:"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:46
+msgid "Customer Invoices Journal"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:50
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:66
+msgid "Receivables $115"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:52
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:76
+msgid "Tax Account $15"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:54
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:80
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:82
+msgid "Income Account $100"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:57
+msgid "A few days later, you receive the payment:"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:60
+msgid "Bank Journal"
+msgstr "Журнал Банка"
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:64
+msgid "Bank $115"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:69
+msgid ""
+"When you reconcile the invoice and the payment, this entry is generated:"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:72
+msgid "Tax Cash Basis Journal"
+msgstr "Журнал Налога на Наличной Основе "
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:78
+msgid "Tax Received Account $15"
+msgstr ""
+
+#: ../../accounting/others/taxes/cash_basis_taxes.rst:86
+msgid ""
+"The two journal items created in the Income Account are neutral but they are"
+" needed to insure correct tax reports in Odoo."
 msgstr ""
 
 #: ../../accounting/others/taxes/create.rst:3
@@ -9716,8 +9823,8 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:50
 msgid ""
-"Once it's done, don't forget to set the \"Credit cards\" account as \"Allow "
-"Reconciliation\"."
+"The account type should be \"Credit Card\". Once it's done, don't forget to "
+"set the \"Credit cards\" account as \"Allow Reconciliation\"."
 msgstr ""
 
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:57
