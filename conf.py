@@ -287,6 +287,12 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+odoo_cover_external = {
+    'https://odoo.com/documentation/functional/accounting.html'   : 'banners/m_accounting.jpg',
+    'https://odoo.com/documentation/functional/double-entry.html' : 'banners/m_1.jpg',
+    'https://odoo.com/documentation/functional/valuation.html'    : 'banners/m_2.jpg',
+}
+
 github_user = 'odoo'
 github_project = 'documentation-user'
 
