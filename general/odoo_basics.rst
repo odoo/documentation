@@ -1,5 +1,5 @@
 ======
-BASICS
+Basics
 ======
 
 .. toctree::
