@@ -239,9 +239,7 @@
         label: "Customer Invoice (€100 + 9% tax)",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
-            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(cor)},
             {account: REVENUE.SALES.code, credit: constant(sale)},
-            {account: EXPENSES.INVENTORY_VARIATIONS.code, credit: constant(cor)},
             {account: LIABILITIES.TAXES_PAYABLE.code, credit: constant(tax)}
         ]
     }, {
