@@ -222,7 +222,7 @@
             {account: EQUITY.CAPITAL.code, credit: constant(1000)}
         ]
     }, {
-        label: "Customer Invoice ($100 + 9% tax)",
+        label: "Customer Invoice ($100 + 9% tax) & Shipping of the Goods",
         operations: [
             {account: ASSETS.ACCOUNTS_RECEIVABLE.code, debit: constant(total)},
             {account: EXPENSES.GOODS_SOLD.code, debit: constant(cor)},
@@ -265,20 +265,20 @@
             }}
         ]
     }, {
-        label: "Supplier Goods Received (Purchase Order: $50)",
+        label: "Vendor Goods Received (Purchase Order: $50)",
         operations: [
             {account: LIABILITIES.STOCK_IN.code, credit: constant(cor)},
             {account: ASSETS.STOCK.code, debit: constant(cor)},
         ]
     }, {
-        label: "Supplier Bill (Invoice: $50)",
+        label: "Vendor Bill (Invoice: $50)",
         operations: [
             {account: LIABILITIES.STOCK_IN.code, debit: constant(cor)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(cor_tax)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(cor + cor_tax)},
         ]
     }, {
-        label: "Supplier Bill (Invoice: $52 but PO $50)",
+        label: "Vendor Bill (Invoice: $52 but PO $50)",
         operations: [
             {account: EXPENSES.PRICE_DIFFERENCE.code, debit: constant(purchase-cor)},
             {account: LIABILITIES.STOCK_IN.code, debit: constant(cor)},
@@ -286,7 +286,7 @@
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(purchase + purchase_tax)},
         ]
     }, {
-        label: "Supplier Bill Paid ($52 + 9% tax)",
+        label: "Vendor Bill Paid ($52 + 9% tax)",
         operations: [
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, debit: constant(purchase + purchase_tax)},
             {account: ASSETS.BANK.code, credit: constant(purchase + purchase_tax)}

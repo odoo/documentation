@@ -344,9 +344,12 @@ Let's take the case of a reseller.
    - Deferred Tax Assets/Liabilities: defined on the tax used on the 
      invoice line
 
-   - Revenues/Expenses: defined by default on product's internal category 
-     and can be set in product form (Accounting tab) as a specific replacement 
-     value
+   - Revenues: defined on the product category as a default, or specifically
+     to a specific product.
+
+   - Expenses: this is where you should set the "Cost of Goods Sold" account.
+     Defined on the product category as a default value, or specifically on
+     the product form.
 
    - Goods Received Not Purchased: to set as Stock Input Account in product's 
      internal category
