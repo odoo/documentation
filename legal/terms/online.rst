@@ -96,9 +96,9 @@ unlimited number of tickets for bugs and functional questions: how to use and
 configure Odoo for your specific needs.
 
 This support service does not include support to customize Odoo, develop new
-modules, or perform specific actions on your own database on your behalf. (e.g.
-recording data for you) Those services can be offered in extra through our
-Success Pack service offer.
+modules, or perform specific actions on your database on your behalf. (e.g.
+recording data, or configuring the system for you) Those services can be
+offered in extra through our Success Pack service offer.
 
 Support Service
 +++++++++++++++
@@ -352,8 +352,10 @@ list price, the per-User charges will increase by up to 7% per year.
 .. FIXME: should we really fix the price in the contract?
 
 The additional charge for the Upgrade, Support and Bugfix Service for custom
-modules developed by Odoo SA is 4 EUR (€) / month per hour of development of
-these custom features.
+modules developed by Odoo SA is a recurring price depending on the number of
+hours done to develop these custom features:
+- 4 EUR / month per hour of development in European contries
+- 5 USD / month per hour of development in other countries
 
 In case the modules are not developed by Odoo SA, Odoo SA reserves the right to
 reject an upgrade request for third-party modules under the above conditions if
