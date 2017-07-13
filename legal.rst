@@ -50,6 +50,8 @@ Terms and Conditions
 - :ref:`terms_of_sale` |nbsp| |nbsp| |download_terms_of_sale|
 - :ref:`terms_of_sale_fr` |nbsp| |nbsp| |download_terms_of_sale_fr|
 
+- :ref:`online_terms_of_sale`
+
 .. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 
