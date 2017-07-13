@@ -1,3 +1,5 @@
+.. _online_terms_of_sale:
+
 ==============================
 Odoo Online Terms & Conditions
 ==============================
