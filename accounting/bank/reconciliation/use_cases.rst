@@ -25,8 +25,8 @@ to do is install the accounting app.
 .. image:: media/use01.png
    :align: center
 
-User cases
-==========
+Use cases
+=========
 
 Case 1: Payments registration
 -----------------------------
