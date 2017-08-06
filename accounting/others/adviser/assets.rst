@@ -107,7 +107,7 @@ before posting them to your accounts.
 .. tip:: if you put the asset on the product, the asset category will
          automatically be filled in the supplier bill.
 
-How to deprecate an asset?
+How to depreciate an asset?
 ==========================
 
 Odoo will create depreciation journal entries automatically at the right
