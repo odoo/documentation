@@ -226,7 +226,7 @@ Support
 Your Odoo Online subscription includes an **unlimited support service at
 no extra cost, 24/5, Monday to Friday**. To cover 24 hours, our teams
 are in San Francisco, Belgium and India. Questions could be about
-anything and everything from: how to use or configure, bugfix requests,
+anything and everything from: specific questions on current Odoo features and where to configure them, bugfix requests,
 payments or subscription issues.
 
 Our support can be contacted through our
