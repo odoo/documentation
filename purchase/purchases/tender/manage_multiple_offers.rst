@@ -41,6 +41,12 @@ Agreement window opens.
 
 In the **Agreement Type** field, choose Purchase Tender.
 
+The **Agreement Deadline** field tells the vendors when to have their offers submitted.
+
+The **Ordering Date** field tells the vendors when we will submit a purchase order to the chosen vendor.
+
+The **Delivery Date** field tells the vendors when the product will have to be delivered.
+
 You do not have to define a **Vendor**.
 
 In the **Products** section, click on **Add an item**. Select products
