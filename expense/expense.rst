@@ -30,9 +30,9 @@ Here are some examples to configure:
 
   * Cost: 0.0
 
-Don’t forget to set an expense tax on each expense type 
+Don't forget to set an expense tax on each expense type 
 (and an account if you use Odoo Accounting). 
-It’s usually a good practice to use a tax that is configured 
+It's usually a good practice to use a tax that is configured 
 with *Tax Included in Price* (see: :doc:`../accounting/others/taxes/tax_included`).
 That way, employees report expenses with 
 prices including taxes, which is usually the expected behaviour.
@@ -159,64 +159,68 @@ See how you can easily manage the payment process in Odoo:
 * :doc:`../accounting/payables/pay/sepa`
 
 
-How to reinvoice expenses to your customers
-===========================================
+How to re-invoice expenses to your customers
+============================================
 
-If you track expenses on customer projects, you can charge them 
-back to your customers automatically.
+If you track expenses on customer projects, you can charge them back to
+your customers automatically.
 
 Setup
 -----
 
-* Install *Sales* app if not yet done.
-* Go to :menuselection:`Accounting --> Configuration --> Settings` and install 
-  Analytic Accounting* (in Recommended Features).
+-  Enable **Customer Billing** in the Expenses settings
 
-* Go to :menuselection:`Sales --> Sales --> Products` and set the invoicing method 
-  on all your Expense types:
+-  Go to the product configuration menu and set the invoicing method on
+   all your Expense types:
 
-  * At cost: will invoice expenses at their real cost.
-  * At sales price: will invoice based on a fixed sales price 
-    defined in the product form. 
+   -  Ordered quantities : it will invoice expenses based on the ordered
+      quantity
 
-.. image:: ./media/expense_invoicing_01.png
-   :align: center
+   -  Delivered quantities :it will invoice expenses based on the
+      expenses quantity
+
+   -  At cost: will invoice expenses at their real cost.
+
+   -  At sales price: will invoice based on a fixed sales price set on
+      the sale order.
+
+.. image:: media/expense_invoicing_01.png
+  :align: center
 
 Create an order
 ---------------
-* As a salesman, create and confirm a Sales Order for the services 
-  delivered to your customer. Don’t put any expense in the order. 
-  They will be added automatically once posted by the accountant.
 
-* Link this order to an analytic account dedicated to the customer project. 
-  You can create it on the fly.
+-  As a salesman, create and confirm a Sales Order for the services
+   delivered to your customer. If you don't put any expense in the
+   order, it will be added automatically once posted by the
+   accountant.
 
-.. image:: ./media/expense_invoicing_02.png
-   :align: center
+-  Link the expense to the Sale Order.
 
-.. tip::
-    If you track *Timesheets* on customer projects, Odoo can create 
-    an analytic account automatically once the order confirmed. 
-    It's useful if your employees must record timesheets on customer-specific projects. 
-    To do so, open your order product (service item) and make sure *Track Service* 
-    is set on *Timesheets on project*.
+.. image:: media/expense_invoicing_02.png
+  :align: center
 
 Submit, validate and post expenses
 ----------------------------------
-* As a manager, make sure the analytic account is set on every expense line 
-  on approving expenses reports. Click the line to add one if missing. 
-  Employees are already able to set one when submitting.
 
-.. image:: ./media/expense_invoicing_03.png
-   :align: center
+-  As a manager, make sure the analytic account is set on every expense
+   line on approving expenses reports. Click the line to add one if
+   missing. Employees are already able to set one when submitting.
 
-* As an accountant, post journal entries.
+.. image:: media/expense_invoicing_03.png
+  :align: center
+
+-  As an accountant, post journal entries.
 
 Invoice expenses
 ----------------
-Now you can invoice the order.It shows up in :menuselection:`Sales --> Invoicing --> Sales to Invoice`. 
-The expenses have been added automatically in the order lines. 
-Such items show up in blue (i.e. to invoice). 
 
-.. image:: ./media/expense_invoicing_04.png
-   :align: center
+Now you can invoice the order. It shows up in 
+:menuselection:`Sales --> Invoicing --> Sales`
+to Invoice. The expenses have been added automatically in the order
+lines. Such items show up in blue (i.e. to invoice).
+
+.. image:: media/expense_invoicing_04.png
+  :align: center
+
+e (i.e. to invoice). 
