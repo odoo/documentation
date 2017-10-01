@@ -77,8 +77,8 @@ This has completed the Receipt Step and the move refered with **WH/IN**.
 The product has been moved from the **Vendor** to the **WH/Input** location, 
 which makes the product available for the next step.
 
-How to to transfer the receipt to your stock ? 
------------------------------------------------
+How to transfer the receipt to your stock ? 
+--------------------------------------------
 
 Go back to the **Inventory** dashboard. The waiting transfer is now
 ready. Click on the **# TRANSFERS** in the **Internal Transfers** to process
