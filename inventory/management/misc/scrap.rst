@@ -28,7 +28,7 @@ When you install inventory management, odoo automatically creates one
 default scrap location, namely **Virtual location/Scrapped**.
 
 To create an extra scrap location, Go to 
-:menuselection:`Inventory --> Configuration --> Setting`
+:menuselection:`Inventory --> Configuration --> Settings`
 and check **Manage several locations per warehouse**,
 then click on **Apply**.
 
@@ -103,4 +103,4 @@ quantity of products, and specify the scrap location, then click on
 .. note::
     To allow change scrap location on wizard, you have to select 
     **Manage several location per warehouse** in the settings at
-    :menuselection:`Inventory --> Configuration --> Setting`
+    :menuselection:`Inventory --> Configuration --> Settings`
