@@ -82,7 +82,7 @@ scrap products button on stock move in initial demand tab.
 ----------------------------------------------------------
 
 To scrap product from internal transfer, Go to 
-:menuselection:`Inventory --> Dashboard --> Receipts`
+:menuselection:`Inventory --> Dashboard --> Internal Transfers`
 
 .. image:: media/scrap05.png
    :align: center
