@@ -5,7 +5,9 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 5b - Last revision: June 30, 2016.
+.. note:: Version 6 - Last revision: October 3, 2017.
+
+.. v6: add "App" definition + update pricing per-App
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -32,6 +34,11 @@ User
     Deactivated user accounts and accounts used by external people (or systems) who only have
     limited access to the Software through the portal facilities (known as "portal Users") are not
     counted as Users.
+
+App
+    An "App" is a specialized group of features available for installation in the Software,
+    and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_ at the
+    signature of this Agreement.
 
 Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
@@ -115,7 +122,7 @@ Security Advisories include a complete description of the Bug, its cause, its po
 on the Customer's systems, and the corresponding remedy for each Covered Version.
 
 The Customer understands that the Bug and the information in the Security Advisory must be treated
-are Confidential Information as described in :ref:`confidentiality` during the embargo period prior to
+as Confidential Information as described in :ref:`confidentiality` during the embargo period prior to
 the public disclosure.
 
 .. _upgrade:
@@ -179,16 +186,16 @@ upgraded version of all installed third-party modules along with the upgraded da
 --------------------
 
 The standard charges for the Odoo Enterprise subscription, the Bug Fixing Service, Security Advisories
-Service and the Upgrade Service are based on the number of Users and the Software version used by
-the Customer, and specified in writing at the signature of the Agreement.
+Service and the Upgrade Service are based on the number of Users, the number of installed
+Apps, the Software version used by the Customer, and specified in writing at the signature of the Agreement.
 
-When during the Term, the Customer has more Users than specified at the time of signature of
-this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable list price
-(at the beginning of the Term) for the additional Users, for the remainder of the Term.
+When during the Term, the Customer has more Users or more installed Apps than specified at the time
+of signature of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
+list price (at the beginning of the Term) for the additional Users or Apps, for the remainder of the Term.
 
 If at the time of the signature of this Agreement, the Customer uses a Covered Version
-that is not the most recent one, the standard charges will be increased by 50% for the duration
-of the first Term.
+that is not the most recent one, the standard charges may be increased by 50% for the duration
+of the first Term, at the sole discretion of Odoo SA, to cover the extra maintenance costs.
 
 .. _charges_renewal:
 
@@ -246,9 +253,9 @@ The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
-- immediately notify Odoo SA when the actual number of Users exceeds the number of Users specified at
-  the signature of the Agreement, and in this event, pay the applicable additional fee as described
-  in section :ref:`charges_standard`;
+- immediately notify Odoo SA when their actual number of Users or installed Apps exceeds the numbers
+  specified at the signature of the Agreement, and in this event, pay the applicable additional fee
+  as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
   in :ref:`enterprise_access` ;
