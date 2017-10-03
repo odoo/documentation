@@ -52,6 +52,8 @@ Terms and Conditions
 
 - :ref:`online_terms_of_sale`
 
+- :ref:`odoo_sh_terms`
+
 .. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 
