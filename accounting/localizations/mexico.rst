@@ -262,12 +262,53 @@ Electronic Accounting (Requires Accounting App)
 Electronic Chart of account CoA
 +++++++++++++++++++++++++++++++
 
-TODO.
+The electronic accounting never has been easier, just go to
+:menuselection:`Accounting --> Reporting --> Mexico --> COA` and click on the
+ button **Export for SAT (XML)**
+
+.. image:: media/mexico19.png
+   :align: center
+
+**How to add new accounts?**
+
+If you add an account with the coding convention NNN.YY.ZZ where NNN.YY is a
+SAT coding group then your account will be automatically configured.
+
+Example to add an Account for a new Bank account go to
+:menuselection:`Accounting --> Settings --> Chart of Account` and then create
+a new account on the button "Create" and try to create an account with the
+number 102.01.99 once you change to set the name you will see a tag
+automatically set, the tags set are the one picked to be used in the COA on
+xml.
+
+.. image:: media/mexico20.png
+   :align: center
+
+**What is the meaning of the tag?**
+
+To know all possible tags you can read the `Anexo 24`_ in the SAT
+website on the section called **Código agrupador de cuentas del SAT**.
+
+.. tip::
+   When you install the module l10n_mx and yous Chart of Account rely on it
+   (this happen automatically when you install setting Mexico as country on
+   your database) then you will have the more common tags if the tag you need
+   is not created you can create one on the fly.
 
 Electronic Trial Balance
 ++++++++++++++++++++++++
 
-TODO
+Exactly as the COA but with Initial balance debit and credit, once you have
+your coa properly set you can go to :menuselection:`Accounting --> Reports --> Mexico --> Trial Balance`
+this is automatically generated, and can be exported to XML using the button
+in the top  **Export for SAT (XML)** with the previous selection of the
+period you want to export.
+
+.. image:: media/mexico21.png
+   :align: center
+
+All the normal auditory and analysis features are available here also as any
+regular Odoo Report.
 
 DIOT Report (Requires Accounting App)
 =====================================
@@ -295,7 +336,6 @@ retrieved from SAT and not being worried of put such information daily in the
 system manually.
 
 Go to settings and enable the multi currency feature.
-
 
 .. image:: media/mexico17.png
    :align: center
@@ -337,3 +377,4 @@ FAQ
 .. _`Solución Factible`: https://solucionfactible.com/sf/v3/timbrado.jsp
 .. _`SAT resolution`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
+.. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
