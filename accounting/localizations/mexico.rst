@@ -91,10 +91,11 @@ Morales*, just search it as a normal Odoo field if you can't see the option).
 5. Enabling CFDI Version 3.3
 ----------------------------
 
-This steps are only necessary when you will enable the CFDI 3.3 (only available
-for V11.0 and above) if you do not have Version 11.0 or above on your
-SaaS instance please ask for an upgrade sending a ticket to support in
-https://www.odoo.com/help.
+.. warning::
+   This steps are only necessary when you will enable the CFDI 3.3 (only available
+   for V11.0 and above) if you do not have Version 11.0 or above on your
+   SaaS instance please ask for an upgrade sending a ticket to support in
+   https://www.odoo.com/help.
 
 Enable debug mode:
 
