@@ -8,7 +8,7 @@ Mexico Localization
    experience working with odoo on such areas, we are not intended to put
    here procedures that are already explained on those documents, just the
    information necessary to allow you use odoo in a Company with the country
-   "México" set.
+   "Mexico" set.
 
 Introduction
 ~~~~~~~~~~~~
@@ -27,7 +27,7 @@ With the Mexican localization in Odoo you will be able not just to comply
 with the required features by law in México but to use it as your
 accounting and invoicing system due to all the set of normal requirements for
 this market, becoming your Odoo in the perfect solution to administer your
-company in México.
+company in Mexico.
 
 Configuration 
 ~~~~~~~~~~~~~
@@ -37,8 +37,8 @@ Configuration
    try to follow step by step in order to allow you to avoid expend time on
    fix debugging problems. In any step you can recall the step and try again.
 
-1. Install the Mexican Accounting Localization.
------------------------------------------------
+1. Install the Mexican Accounting Localization
+----------------------------------------------
 
 For this, go in Apps and search for Mexico. Then click on *Install*.
 
@@ -79,8 +79,8 @@ company’s contact.
 .. image:: media/mexico03.png
    :align: center
 
-4. Set the proper "Fiscal Position" on the partner that represent the company.
-------------------------------------------------------------------------------
+4. Set the proper "Fiscal Position" on the partner that represent the company
+-----------------------------------------------------------------------------
 
 Go In the same form where you are editing the company save the record in
 order to set this form as a readonly and on readonly view click on the partner
@@ -109,7 +109,9 @@ the entry with this name does not exist).
 
 .. warning::
    The CFDI 3.2 will be legally possible until November 30th 2017 enable the
-   3.3 version will be a mandatory step to comply with the new `SAT resolution`_.
+   3.3 version will be a mandatory step to comply with the new `SAT resolution`_
+   in any new database created since v11.0 released CFDI 3.3 is the default
+   behavior.
 
 .. image:: media/mexico11.png
    :align: center
@@ -125,7 +127,7 @@ set to "Tasa".
 .. image:: media/mexico13.png
    :align: center
 
-Yo must go to the Fiscal Position configuration and set the proper code (it is
+You must go to the Fiscal Position configuration and set the proper code (it is
 the first 3 numbers in the name) for example for the test one you should set
 601, it will look like the image.
 
@@ -164,28 +166,16 @@ and then enter your PAC username and PAC password.
    If you ticked the box *MX PAC test environment* there is no need
    to enter a PAC username or password.
 
-You then have to enter your **Private Key (CSD)**. You will have to
-upload your certificate and key file and then type your certificate password
-(this password is given by the SAT).
-
 .. image:: media/mexico05.png
    :align: center
-
-.. |download_mexico_certificate_cer| image:: ../../_static/banners/download-icon.png
-      :alt: Certificate
-      :target: ../../_static/files/certificate.cer
-
-.. |download_mexico_certificate_key| image:: ../../_static/banners/download-icon.png
-      :alt: Certificate Key
-      :target: ../../_static/files/certificate.key
 
 .. tip::
    Here is a SAT certificate you can use if you want to use the *Test
    Environment* for the Mexican Accounting Localization.
 
-   - :ref:`Certificate:` |download_mexico_certificate_cer|
-   - :ref:`Certificate Key:` |download_mexico_certificate_key|
-   - Certificate password : 12345678a
+   - `Certificate`_
+   - `Certificate Key`_
+   - **Password :** 12345678a
 
 Usage and testing
 ~~~~~~~~~~~~~~~~~
@@ -203,7 +193,7 @@ like this:
 .. image:: media/mexico07.png
    :align: center
 
-You can generate the PDF just clicking on the Print button on he invoice or
+You can generate the PDF just clicking on the Print button on the invoice or
 sending it by email following the normal process on odoo to send your invoice
 by email.
 
@@ -219,7 +209,40 @@ like.
 Cancelling invoices
 -------------------
 
-TODO
+The cancellation process is completely linked to the normal cancellation in Odoo.
+
+If the invoice is not paid.
+
+- Go to to the customer invoice journal where the invoice belong to
+
+.. image:: media/mexico28.png
+   :align: center
+
+.. image:: media/mexico29.png
+   :align: center
+
+- Check the "Allow cancelling entries" field
+
+.. image:: media/mexico29.png
+   :align: center
+
+- Go back to your invoice and click on the button "Cancel Invoice"
+
+.. image:: media/mexico30.png
+   :align: center
+
+- For security reasons it is recommendable return the check on the to allow
+  cancelling to false again, then go to the journal and un check such field.
+
+**Legal considerations**
+
+- A cancelled invoice will automatically cancelled on the SAT.
+- If you retry to use the same invoice after cancelled, you will have as much
+  cancelled CFDI as you tried, then all those xml are important to maintain a
+  good control of the cancellation reasons.
+- You must unlink all related payment done to an invoice on odoo before
+  cancel such document, this payments must be cancelled to following the same
+  approach but setting the "Allow Cancel Entries" in the payment itself.
 
 Payments (Just available for CFDI 3.3)
 --------------------------------------
@@ -265,7 +288,7 @@ Electronic Chart of account CoA
 
 The electronic accounting never has been easier, just go to
 :menuselection:`Accounting --> Reporting --> Mexico --> COA` and click on the
- button **Export for SAT (XML)**
+button **Export for SAT (XML)**
 
 .. image:: media/mexico19.png
    :align: center
@@ -314,7 +337,118 @@ regular Odoo Report.
 DIOT Report (Requires Accounting App)
 =====================================
 
-TODO
+**What is the DIOT and the importance of presenting it SAT**
+
+When it comes to procedures with the SAT Administration Service we know that
+we should not neglect what we present. So that things should not happen in Odoo.
+
+The DIOT is the Informational Statement of Operations with Third Parties (DIOT),
+which is an an additional obligation with the VAT, where we must give the status
+of our operations to third parties, or what is considered the same, with our
+providers.
+
+This applies both to individuals and to the moral as well, so if we have VAT
+for submitting to the SAT and also dealing with suppliers it is necessary to.
+submit the DIOT:
+
+**When to file the DIOT and in what format?**
+
+It is simple to present the DIOT, since like all format this you can obtain
+it in the page of the SAT, it is the electronic format A-29 that you can find
+in the SAT website.
+
+Every month if you have operations with third parties it is necessary to
+present the DIOT, just as we do with VAT, so that if in January we have deals
+with suppliers, by February we must present the information pertinent to
+said data.
+
+**Where the DIOT is presented?**
+
+You can present DIOT in different ways, it is up to you which one you will
+choose and which will be more comfortable for you than you will present every
+month or every time you have dealings with suppliers.
+
+The A-29 format is electronic so you can present it on the SAT page, but this
+after having made up to 500 records.
+
+Once these 500 records are entered in the SAT, you must present them to the
+Local Taxpayer Services Administration (ALSC) with correspondence to your tax
+address, these records can be presented in a digital storage medium such as a
+CD or USB, which once validated you will be returned, so do not doubt that you
+will still have these records and of course, your CD or USB.
+
+**One more fact to know: the Batch load?**
+
+When reviewing the official SAT documents on DIOT, you will find the Batch
+load, and of course the first thing we think is what is that ?, and according
+to the SAT site is:
+
+The "batch upload" is the conversion of records databases of transactions with
+suppliers made by taxpayers in text files (.txt). These files have the
+necessary structure for their application and importation into the system of
+the Informative Declaration of Operations with third parties, avoiding the
+direct capture and consequently, optimizing the time invested in its
+integration for the presentation in time and form to the SAT.
+
+You can use it to present the DIOT, since it is allowed, which will make this
+operation easier for you, so that it does not exist to avoid being in line
+with the SAT in regard to the Information Statement of Operations with
+Third Parties.
+
+You can find the `official information here`_.
+
+**How Generate this report in odoo?**
+
+- Go to  :menuselection:`Accounting --> Reports --> Mexico --> Transactions with third partied (DIOT)`.
+
+.. image:: media/mexico23.png
+   :align: center
+
+- A report view is shown, select last month to report the immediate before
+  month you are or left the current month if it suits to you.
+
+.. image:: media/mexico25.png
+   :align: center
+
+- Click on "Export (TXT).
+
+.. image:: media/mexico24.png
+   :align: center
+
+- Save in a secure place the downloaded file and go to SAT website and follow
+  the necessary steps to declare it.
+
+Important considerations on your Supplier and Invice data for the DIOT
+======================================================================
+
+- All suppliers must have set the fields on the accounting tab called "DIOT
+  Information", the *L10N Mx Nationality* field is filled with just select the
+  proper country in the address, you do not need to do anything else there, but
+  the *L10N Mx Type Of Operation* must be filled by you in all your suppliers.
+
+.. image:: media/mexico22.png
+   :align: center
+
+- There are 3 options of VAT for this report, 16%, 0% and exempt, an invoice
+  line in odoo is considered exempt if no tax on it, the other 2 taxes are
+  properly configured already.
+- Remember to pay an invoice which represent a payment in advance you must
+  ask for the invoice first and then pay it and reconcile properly the payment
+  following standard odoo procedure.
+- You do not need all you data on partners filled to try to generate the
+  supplier invoice, you can fix this information when you generate the report
+  itself.
+- Remember this report only shows the Supplier Invoices that were actually paid.
+
+If some of this considerations are not taken into account a message like this
+will appear when generate the DIOT on TXT with all the partners you need to
+check on this particular report, this is the reason we recommend use this
+report not just to export your legal obligation but to generate it before
+the end of the month and use it as your auditory process to see all your
+partners are correctly set.
+
+.. image:: media/mexico26.png
+   :align: center
 
 Extra Recommended features
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -366,12 +500,92 @@ generic one with no explanation.
 FAQ
 ~~~
 
-1. Error message (Only applicable on CFDI 3.3):
+- **Error message** (Only applicable on CFDI 3.3):
 
-   (":9:0:ERROR:SCHEMASV:SCHEMAV_CVC_MINLENGTH_VALID: Element '{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': [facet 'minLength'] The value '' has a length of '0'; this underruns the allowed minimum length of '1'.
+:9:0:ERROR:SCHEMASV:SCHEMAV_CVC_MINLENGTH_VALID: Element '{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': [facet 'minLength'] The value '' has a length of '0'; this underruns the allowed minimum length of '1'.
 
+:9:0:ERROR:SCHEMASV:SCHEMAV_CVC_PATTERN_VALID: Element '{http://www.sat.gob.mx/cfd/3}Concepto', attribute 'NoIdentificacion': [facet 'pattern'] The value '' is not accepted by the pattern '[^|]{1,100}'.
+
+.. tip::
    **Solution:** You forget to set the proper "Reference" field in the product,
    please go to the product form and set your internal reference properly.
+
+- **Error message**:
+
+:6:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element '{http://www.sat.gob.mx/cfd/3}RegimenFiscal': The attribute 'Regimen' is required but missing.
+
+:5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element '{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'RegimenFiscal' is required but missing.
+
+.. tip::
+   **Solution:** You forget to set the proper "Fiscal Position" on the
+   partner of the company, go to customers, remove the customer filter and
+   look for the partner called as your company and set the proper fiscal
+   position which is the kind of business you company does related to SAT
+   list of possible values, antoher option can be that you forgot follow the
+   considerations about fiscal positions.
+
+   Yo must go to the Fiscal Position configuration and set the proper code (it is
+   the first 3 numbers in the name) for example for the test one you should set
+   601, it will look like the image.
+
+.. image:: media/mexico27.png
+   :align: center
+
+.. tip::
+   For testing purposes this value must be *601 - General de Ley Personas Morales*
+   which is the one required for the demo VAT.
+
+- **Error message**:
+
+:2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'FormaPago': [facet 'enumeration'] The value '' is not an element of the set {'01', '02', '03', '04', '05', '06', '08', '12', '13', '14', '15', '17', '23', '24', '25', '26', '27', '28', '29', '30', '99'}
+
+.. tip::
+   **Solution:** The payment method is required on your invoice.
+
+.. image:: media/mexico31.png
+   :align: center
+
+- **Error message**:
+
+:2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': [facet 'enumeration'] The value '' is not an element of the set {'00
+:2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': '' is not a valid value of the atomic type '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_CodigoPostal'.
+:5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element '{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'Rfc' is required but missing.
+
+.. tip::
+   **Solution:** You must set the address on your company properly, this is a
+   mandatory group of fields, you can go to your company configuration on
+   :menuselection:`Settings --> Users & Companies --> Companies` and fill
+   all the required fields for your address following the step `3. Set you
+   legal information in the company`.
+
+- **Error message**:
+
+:2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion': '' is not a valid value of the atomic type '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_CodigoPostal'.
+
+.. tip::
+   **Solution:** The postal code on your company address is not a valid one
+   for Mexico, fix it.
+
+.. image:: media/mexico32.png
+   :align: center
+
+- **Error message**:
+
+:18:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element '{http://www.sat.gob.mx/cfd/3}Traslado': The attribute 'TipoFactor' is required but missing.
+:34:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element '{http://www.sat.gob.mx/cfd/3}Traslado': The attribute 'TipoFactor' is required but missing.", '')
+
+.. tip::
+   **Solution:** Set the mexican name for the tax 0% and 16% in your system
+   and used on the invoice.
+
+   Your tax which represent the VAT 16% and 0% must have the "Factor Type" field
+   set to "Tasa".
+
+.. image:: media/mexico12.png
+   :align: center
+.. image:: media/mexico13.png
+   :align: center
+
 
 .. _SAT: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
 .. _Finkok: https://facturacion.finkok.com/cuentas/registrar/
@@ -379,3 +593,6 @@ FAQ
 .. _`SAT resolution`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
 .. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
+.. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
+.. _`Certificate`: ../../_static/files/certificate.cer
+.. _`Certificate Key`: ../../_static/files/certificate.key
