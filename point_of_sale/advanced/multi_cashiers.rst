@@ -167,6 +167,8 @@ Sale** tab.
 .. image:: media/multi_cashier24.png
     :align: center
 
+Please note this functionality does not allow for multiple devices! 
+
 .. seealso::
     * :doc:`../shop/cash_control`
     * :doc:`../shop/invoice`
