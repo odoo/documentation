@@ -251,9 +251,16 @@ fill our `online support form <https://www.odoo.com/help>`__ to make this reques
 Success Pack Services
 ---------------------
 
-The Success Pack is a package of premium hour-based services performed
-by a dedicated project manager and business analyst. The list of
-services according to your success pack is detailed online:
+The Success Pack is a package of premium hour-based services performed by
+a dedicated project manager and business analyst. The initial alloted hours
+you purchased is purely an estimate and we do not guarantee completion of 
+your project within the first pack. We always strive to complete projects 
+within the initial allottement however any number of factors can contribute
+to us not being able to do so, for example a scope expansion or "Scope Creep"
+in the middle of your implementation, new detail descoveries, or an increase
+in complexity that was not apparent from the beginning.
+
+The list of services according to your success pack is detailed online:
 `https://www.odoo.com/pricing-packs <https://www.odoo.com/pricing-packs>`__
 
 The goal of the project manager is to help you get to production within
