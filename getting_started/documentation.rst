@@ -246,7 +246,7 @@ The Success Pack is a package of premium hour-based services performed by
 a dedicated project manager and business analyst. The initial alloted hours
 you purchased is purely an estimate and we do not guarantee completion of 
 your project within the first pack. We always strive to complete projects 
-within the initial allottement however any number of factors can contribute
+within the initial allotement however any number of factors can contribute
 to us not being able to do so, for example a scope expansion or "Scope Creep"
 in the middle of your implementation, new detail descoveries, or an increase
 in complexity that was not apparent from the beginning.
