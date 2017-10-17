@@ -5,7 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 6 - Last revision: October 3, 2017.
+.. note:: Version 6a - 2017-10-17
 
 .. v6: add "App" definition + update pricing per-App
 
@@ -68,12 +68,12 @@ under the terms set forth in :ref:`appendix_a`.
 
 The Customer agrees to take all necessary measures to guarantee the unmodified execution of
 the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
-collects statistics for that purpose, including but not limited to the running of an instance and
-the number of Users.
+collects statistics for that purpose, including but not limited to the running of an instance,
+the number of Users and installed Apps.
 
 Odoo SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
-Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
+Policy, published at https://www.odoo.com/privacy.
 
 Upon expiration or termination of this Agreement, this license is revoked immediately and the
 Customer agrees to stop using the Odoo Enterprise Edition software.
@@ -186,7 +186,7 @@ upgraded version of all installed third-party modules along with the upgraded da
 --------------------
 
 The standard charges for the Odoo Enterprise subscription, the Bug Fixing Service, Security Advisories
-Service and the Upgrade Service are based on the number of Users, the number of installed
+Service and the Upgrade Service are based on the number of Users, the installed
 Apps, the Software version used by the Customer, and specified in writing at the signature of the Agreement.
 
 When during the Term, the Customer has more Users or more installed Apps than specified at the time
@@ -253,9 +253,9 @@ The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
-- immediately notify Odoo SA when their actual number of Users or installed Apps exceeds the numbers
-  specified at the signature of the Agreement, and in this event, pay the applicable additional fee
-  as described in section :ref:`charges_standard`;
+- immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
+  numbers specified at the signature of the Agreement, and in this event, pay the applicable
+  additional fee as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
   in :ref:`enterprise_access` ;
