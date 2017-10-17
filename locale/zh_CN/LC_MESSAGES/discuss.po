@@ -10,7 +10,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-05-09 14:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Kate Lee <kateleelpk@gmail.com>, 2017\n"
+"Last-Translator: liAnGjiA <liangjia@qq.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,11 +24,11 @@ msgstr "讨论"
 
 #: ../../discuss/email_servers.rst:3
 msgid "How to use my own email servers to send and receive email in Odoo"
-msgstr ""
+msgstr "Odoo邮件收发服务器配置详解"
 
 #: ../../discuss/email_servers.rst:6
 msgid "When is it needed"
-msgstr ""
+msgstr "什么情况下需要在Odoo中收发邮件？"
 
 #: ../../discuss/email_servers.rst:7
 msgid ""
@@ -37,10 +37,11 @@ msgid ""
 "solution that works straight away. However you can still use your own email "
 "servers with the online edition. Some insights are provided here below."
 msgstr ""
+"当您在Odoo社区版或企业版中使用邮件服务器进行邮件收发来传递消息时您需要使用Odoo的这个功能。Odoo自带一个在线电子邮件管理系统。您可通过配置相关参数来在线收发电子邮件。以下操作仅供参考。"
 
 #: ../../discuss/email_servers.rst:14
 msgid "How to set it up"
-msgstr ""
+msgstr "如何设置"
 
 #: ../../discuss/email_servers.rst:15
 msgid ""
@@ -48,16 +49,19 @@ msgid ""
 "check *External Email Servers* (watch out: this checkbox only shows up after"
 " Odoo 10). Then, go through the following steps."
 msgstr ""
+"以系统管理员的身份登陆后点击菜单 :menuselection:`设置 --> "
+"通用设置，勾选*外部邮件服务器*（注意：只有Odoo10以上的版本才有这个复选框)。若是8.0版本请您以系统管理员的身份登陆后点击菜单 "
+":menuselection:`设置 --> 常规设置，看到电子邮件四个中国汉字，的边上对应两个配置项，点击进行相关参数配置。然后进入以下步骤。"
 
 #: ../../discuss/email_servers.rst:21
 msgid ""
 "Office 365 doesn't allow external hosts like Odoo. Consequently you can't "
 "use Office 365 email servers to send or receive messages in Odoo."
-msgstr ""
+msgstr "Office 365不支持Odoo这类的外部主机，因此无法通过Office 365电邮服务器在Odoo上收发消息。"
 
 #: ../../discuss/email_servers.rst:26
 msgid "Set an outgoing email server for outbound messages"
-msgstr ""
+msgstr "设置发件服务器相关参数"
 
 #: ../../discuss/email_servers.rst:27
 msgid ""
@@ -65,10 +69,12 @@ msgid ""
 "etc.) as well as your admin credentials. Once all the information has been "
 "filled out, click on *Test Connection*."
 msgstr ""
+"你需要找到电子邮件服务商（例如Gmail, Outlook, Yahoo, "
+"AOL）的SMTP参数和管理证书。比如在中国大陆用QQ邮箱的话，SMTP你可以这样设置：smtp.qq.com——前提是你需要开启QQ邮箱的SMTP，实在没办法的也可加应用群212904求助。填写完邮箱配置信息后，点击*测试连接*。"
 
 #: ../../discuss/email_servers.rst:35
 msgid "Set an incoming email server for inbound messages"
-msgstr ""
+msgstr "设置收件服务器相关参数"
 
 #: ../../discuss/email_servers.rst:36
 msgid ""
@@ -76,6 +82,7 @@ msgid ""
 "*Actions to Perform on Incoming Mails* blank. Once all the information has "
 "been filled out, click on *TEST & CONFIRM*."
 msgstr ""
+"根据电子邮件服务商的具体参数进行填写配置。例如中国大陆QQ邮箱您可以填写imap.qq.com。不要填写*对接收到的邮件采取的行动*栏。如实在没办法可加群374626483求助。填写完毕后，点击*测试并确认*。"
 
 #: ../../discuss/email_servers.rst:43
 msgid ""
@@ -83,20 +90,22 @@ msgid ""
 " value in developer mode. Go to :menuselection:`Settings --> Technical --> "
 "Automation --> Scheduled Actions` and look for *Mail: Fetchmail Service*."
 msgstr ""
+"默认的设置是每隔5分钟接收一次邮件。可以在开发模式中更改这个间隔值。方法是进入 :menuselection:`设置 --> 技术 --> 自动 -->"
+" 设定动作，然后找到*邮件: 邮件收发服务*。"
 
 #: ../../discuss/email_servers.rst:49
 msgid "Set the domain name"
-msgstr ""
+msgstr "设定邮箱域名"
 
 #: ../../discuss/email_servers.rst:50
 msgid ""
 "Enter the domain name of your email servers (e.g. mycompany.com) in General "
 "Settings."
-msgstr ""
+msgstr "在通用设置里面输入邮件服务器域名（如duuge.com）注：在8.0叫别名域。"
 
 #: ../../discuss/email_servers.rst:57
 msgid "Create a catchall address"
-msgstr ""
+msgstr "创建一个分组收件地址（类似QQ域名邮箱中的分组管理功能）"
 
 #: ../../discuss/email_servers.rst:58
 msgid ""
@@ -105,6 +114,8 @@ msgid ""
 " Odoo (opportunity, order, task, etc.) and to the inbox of all its "
 "followers. By default this address is \"catchall@\" but it can be changed."
 msgstr ""
+"当一个联系人回复Odoo发送的邮件时，*reply-to* "
+"地址是一个catchall地址，可将回复中继到Odoo（商机、订单、任务等）中正确的讨论话题，以及所有关注者的邮箱中。地址默认为\"catchall@\"，也可以更改。"
 
 #: ../../discuss/email_servers.rst:63
 msgid ""
@@ -112,10 +123,11 @@ msgid ""
 "use \"catchall@\" so that everything works out straight away. If you want to"
 " use another alias, you have extra steps in Odoo:"
 msgstr ""
+"在你的邮件服务器设置中创建一个catchall地址。我们建议您使用\"catchall@\"地址，可直接运行。如想使用其他别名，需要在Odoo中多设置一些步骤。"
 
 #: ../../discuss/email_servers.rst:67
 msgid "Activate the developer mode from your Settings Dashboard."
-msgstr ""
+msgstr "从设置仪表板激活开发者模式。"
 
 #: ../../discuss/email_servers.rst:72
 msgid ""
@@ -123,14 +135,16 @@ msgid ""
 "Parameters --> System Parameters` and enter your custom catchall alias in "
 "*mail.catchall.alias*."
 msgstr ""
+"刷新屏幕。然后进入 :menuselection:`设置 --> 技术 --> 参数 --> "
+"系统参数，在*mail.catchall.alias*中输入你自定的catchall别名。"
 
 #: ../../discuss/email_servers.rst:79
 msgid "You can edit the email alias used for bounced messages the same way."
-msgstr ""
+msgstr "可以用同样的方法编辑外发邮件的地址别名。"
 
 #: ../../discuss/email_servers.rst:82
 msgid "How to use my own email servers with Odoo Online"
-msgstr ""
+msgstr "如何通过Odoo在线使用我自己的邮件服务器"
 
 #: ../../discuss/email_servers.rst:83
 msgid ""
@@ -140,17 +154,18 @@ msgid ""
 "of any message sent from Odoo will be your personal email address (your Odoo"
 " login). Your contacts will therefore trust your messages."
 msgstr ""
+"Odoo在线具有嵌入式和立即可用的邮件服务器(*@yourcompany.odoo.com*)。我们建议保持此默认设置，因为它非常便捷。带有Odoo标签时，从Odoo发出的任何可见消息源都是你的个人邮件地址（你的Odoo登录），联系人也会因此而信任你发送的邮件。"
 
 #: ../../discuss/email_servers.rst:90
 msgid ""
 "You can still use your own email servers if you want your contacts to see "
 "your historic email address when they reply to your messages or if you want "
 "to manage the reputation of your email servers yourself."
-msgstr ""
+msgstr "如你希望联系人在回复邮件时看到你的历史地址，或者希望自行管理邮件服务器，仍可使用你自己的邮件服务器。"
 
 #: ../../discuss/email_servers.rst:94
 msgid "There are 2 methods:"
-msgstr ""
+msgstr "以下有两种设置方法："
 
 #: ../../discuss/email_servers.rst:96
 msgid ""
@@ -170,10 +185,11 @@ msgid ""
 "instances. If you opt for this solution, simply follow the procedure of "
 "above section."
 msgstr ""
+"**使用catchall邮箱**单独使用你自己的邮件服务器。这是你管理自己的邮件服务器可信度的方式（黑名单机制等）。由于cron每小时运行一次，接收的邮件从邮件服务器中获取。这是cron在线实例的最短时间段。如你选择了这种解决方案，只需按照以下步骤设置。"
 
 #: ../../discuss/email_servers.rst:111
 msgid "How to be SPF-compliant when using external email servers in Odoo"
-msgstr ""
+msgstr "在Odoo上使用外部邮件服务器时如何与SPF兼容"
 
 #: ../../discuss/email_servers.rst:112
 msgid ""
@@ -183,61 +199,62 @@ msgid ""
 "don't comply with it, your emails sent from Odoo will be likely flagged as "
 "spam."
 msgstr ""
+"发送者策略框架（SPF）是一种邮件确认系统，它可以检查某个域名发出的邮件是否经过域名管理者的授权。这种安全机制被用于多数邮件服务器。如果不兼容，则你从Odoo发出的邮件很可能被标记为垃圾邮件。"
 
 #: ../../discuss/email_servers.rst:118
 msgid ""
 "To be SPF-compliant, you need to authorize Odoo as a sending host in your "
 "domain name settings:"
-msgstr ""
+msgstr "为了与SPF兼容，你需要在域名设置中对Odoo授权。"
 
 #: ../../discuss/email_servers.rst:121
 msgid "Sign in to your domain’s account at your domain host."
-msgstr ""
+msgstr "在你的域名主机中登入你域名的帐户。"
 
 #: ../../discuss/email_servers.rst:122
 msgid "Locate the page for updating your domain’s DNS records."
-msgstr ""
+msgstr "找到域名DNS记录的更新页面。"
 
 #: ../../discuss/email_servers.rst:123
 msgid ""
 "If no TXT record is set, create one with following definition: v=spf1 "
 "include:_spf.odoo.com ~all"
-msgstr ""
+msgstr "如果未设置TXT格式的记录，用以下定义创建一个记录：v=spf1 include:_spf.odoo.com ~all "
 
 #: ../../discuss/email_servers.rst:125
 msgid "In case a TXT record is already set, add \"include:_spf.odoo.com\"."
-msgstr ""
+msgstr "如已经设置了TXT记录，添加\"include:_spf.odoo.com\""
 
 #: ../../discuss/email_servers.rst:127
 msgid "e.g. for a Gmail server it should be:"
-msgstr ""
+msgstr "例如，Gmail服务器可以这样设置："
 
 #: ../../discuss/email_servers.rst:129
 msgid "v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
-msgstr ""
+msgstr " v=spf1 include:_spf.odoo.com include:_spf.google.com ~all "
 
 #: ../../discuss/email_servers.rst:131
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
-msgstr ""
+msgstr "找到<https://www.mail-tester.com/spf/>，在你自己的域寄存器中以准确步骤创建或修改TXT记录。"
 
 #: ../../discuss/email_servers.rst:134
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
-msgstr ""
+msgstr "新的SPF记录48小时后生效，但通常用不了那么长时间。"
 
 #: ../../discuss/email_servers.rst:137
 msgid ""
 "Adding more than one SPF record for a domain can cause problems with mail "
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
-msgstr ""
+msgstr "为一个域添加多个SPF记录可能导致邮件被分类为垃圾。我们建议仅修改一个SPF记录以授权给Odoo。"
 
 #: ../../discuss/email_servers.rst:142
 msgid "How to choose between Odoo and my traditional email box"
-msgstr ""
+msgstr "如何在Odoo和传统的电子邮箱之间做出选择"
 
 #: ../../discuss/email_servers.rst:143
 msgid ""
@@ -248,6 +265,8 @@ msgid ""
 " or applications goes into Odoo; What is not can be managed into your "
 "external email box."
 msgstr ""
+"Odoo讨论是一种发送与读取业务相关信息的完美工具，但它不会替代功能完善的电邮解决方案（如Gmail, Outlook, Yahoo, "
+"AOL等）。我们建议采用两种方案的优势部分，而不是混用：与Odoo业务目标或应用相关的信息进入Odoo，无法管理的信息进入外部邮箱。"
 
 #: ../../discuss/email_servers.rst:150
 msgid ""
@@ -256,10 +275,11 @@ msgid ""
 "used for messaging outside of Odoo, incoming messages will land into both "
 "systems. This will negatively impact your productivity."
 msgstr ""
+"为此需要创建特定的电邮别名在Odoo中使用（以生成话题、机会或helpdesk工作票等）。如你已经采用了Odoo以外的邮箱别名，接收的邮件将同时进入两个系统。这会影响到工作效率。"
 
 #: ../../discuss/mail_twitter.rst:3
 msgid "How to follow Twitter feed from Odoo"
-msgstr ""
+msgstr "如何从Odoo跟踪Twitter推送"
 
 #: ../../discuss/mail_twitter.rst:8
 msgid ""
@@ -267,10 +287,11 @@ msgid ""
 "Odoo Discuss channels of your choice. The tweets are retrieved periodically "
 "from Twitter. An authenticated user can retweet the messages."
 msgstr ""
+"你可以在Twitter上关注特定的主题标签（#），查看你选择的Odoo讨论频道。可以定期从Twitter上接收推文。认证用户可以转发这些内容。"
 
 #: ../../discuss/mail_twitter.rst:13
 msgid "Setting up the App on Twitter's side"
-msgstr ""
+msgstr "在Twitter侧设置App"
 
 #: ../../discuss/mail_twitter.rst:15
 msgid ""
@@ -278,10 +299,11 @@ msgid ""
 " for tweets, and through which a user can retweet. To set up this app, go to"
 " http://apps.twitter.com/app/new and put in the values:"
 msgstr ""
+"Twitter的\"App\"向Odoo打开网关，推送内容，并允许用户转发推文。要设置APP，请访问http://apps.twitter.com/app/new并输入以下值："
 
 #: ../../discuss/mail_twitter.rst:19
 msgid "Name: this is the name of the application on Twitter"
-msgstr ""
+msgstr "Name：Twitter上应用的名称"
 
 #: ../../discuss/mail_twitter.rst:21
 msgid ""
@@ -290,28 +312,29 @@ msgid ""
 "\"http://www.example.com\", you should put \"http://www.example.com/web\" in"
 " this field."
 msgstr ""
+"Website：Odoo数据库的外部URL地址，添加了\"/web\"字段。例如，如你的Odoo实例主机位于\"http://www.example.com\\，那么可以在此字段中输入\"http://www.example.com/web\""
 
 #: ../../discuss/mail_twitter.rst:25
 msgid ""
 "Callback URL: this is the address on which Twitter will respond. Following "
 "the previous example you should write "
 "\"http://www.example.com/web/twitter/callback\"."
-msgstr ""
+msgstr "回访URL：这是Twitter要响应的地址。关注之前你应该写过的示例。"
 
 #: ../../discuss/mail_twitter.rst:28
 msgid ""
 "Do not forget to accept the terms **Developer agreement** of use and click "
 "on **Create your Twitter application** at the bottom of the page."
-msgstr ""
+msgstr "别忘记了接受**开发者协议**条款，然后点击页面底部的**创建你的Twitter应用程序**按钮。"
 
 #: ../../discuss/mail_twitter.rst:33
 msgid "Getting the API key and secret"
-msgstr ""
+msgstr "正在获取API密钥和机密"
 
 #: ../../discuss/mail_twitter.rst:35
 msgid ""
 "When on the App dashboard, switch to the **Keys and Access Tokens** tab."
-msgstr ""
+msgstr "在App仪表板界面切换到**密钥与访问令牌**页签下。"
 
 #: ../../discuss/mail_twitter.rst:40
 msgid ""
@@ -322,7 +345,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:3
 msgid "How to grab attention of other users in my messages"
-msgstr ""
+msgstr "如何在我的邮件中吸引用户的注意力"
 
 #: ../../discuss/mentions.rst:5
 msgid ""
@@ -342,7 +365,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:15
 msgid "Direct messaging a user"
-msgstr ""
+msgstr "直接向用户发送消息"
 
 #: ../../discuss/mentions.rst:17
 msgid ""
@@ -361,7 +384,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:28
 msgid "Desktop notifications from Discuss"
-msgstr ""
+msgstr "来自讨论模块的桌面通知"
 
 #: ../../discuss/mentions.rst:30
 msgid ""
@@ -375,18 +398,18 @@ msgstr ""
 
 #: ../../discuss/monitoring.rst:3
 msgid "How to be responsive at work thanks to my Odoo inbox"
-msgstr ""
+msgstr "如何用Odoo收件箱提高我的工作响应效率"
 
 #: ../../discuss/monitoring.rst:5
 msgid ""
 "Use the **Inbox** in Discuss app to monitor updates and progress on "
 "everything you do in Odoo. Notifications and messages from everything you "
 "follow or in which you are mentioned appear in your inbox."
-msgstr ""
+msgstr "使用Discuss模块上的**收件箱**监控你在Odoo上的一切更新与进程。你关注的所有内容有更新或你被提及时，都会在收件箱收到通知消息。"
 
 #: ../../discuss/monitoring.rst:13
 msgid "You can keep an eye on your **Inbox** from any screen."
-msgstr ""
+msgstr "你可以从任何屏幕上快速查看**收件箱**。"
 
 #: ../../discuss/monitoring.rst:18
 msgid ""
@@ -399,7 +422,7 @@ msgstr ""
 
 #: ../../discuss/overview.rst:3
 msgid "Why to use Odoo Discuss"
-msgstr ""
+msgstr "为什么要用Odoo Discuss"
 
 #: ../../discuss/overview.rst:5
 msgid ""
@@ -416,7 +439,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:3
 msgid "How to efficiently communicate in team using channels"
-msgstr ""
+msgstr "如何通过频道与团队进行有效沟通"
 
 #: ../../discuss/team_communication.rst:5
 msgid ""
@@ -429,7 +452,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:12
 msgid "Creating a channel"
-msgstr ""
+msgstr "创建一个频道"
 
 #: ../../discuss/team_communication.rst:14
 msgid ""
@@ -459,7 +482,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:31
 msgid "Configuring a channel"
-msgstr ""
+msgstr "正在配置频道"
 
 #: ../../discuss/team_communication.rst:33
 msgid ""
@@ -477,7 +500,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:47
 msgid "How to set up a mailing list"
-msgstr ""
+msgstr "如何设置邮件列表"
 
 #: ../../discuss/team_communication.rst:49
 msgid ""
@@ -488,12 +511,12 @@ msgid ""
 "next to the channel name in the list to indicate that a channel will send "
 "messages by email."
 msgstr ""
-"一个渠道可看作是邮件清单。从:menuselection:`#channel-name --> "
-"Settings`，定义要使用的电子邮件。用户将使用所定义的电子邮件地址收发通知。一个信封图标将出现在列表中的渠道名称旁边，表示可用电子邮件发送消息。"
+"一个频道可看作是邮件清单。从:menuselection:`#频道-"
+"名称-->设置，定义要使用的电子邮件。用户将使用所定义的电子邮件地址收发通知。一个信封图标将出现在列表中的频道名称旁边，表示可用电子邮件发送消息。"
 
 #: ../../discuss/team_communication.rst:57
 msgid "Locating a channel"
-msgstr ""
+msgstr "正在定位频道"
 
 #: ../../discuss/team_communication.rst:59
 msgid ""
@@ -517,7 +540,7 @@ msgstr "用户最好在创建新频道前先搜索列表，以确保不会重复
 
 #: ../../discuss/team_communication.rst:76
 msgid "Using filters to navigate within Discuss"
-msgstr ""
+msgstr "使用过滤器在Discuss内部导航"
 
 #: ../../discuss/team_communication.rst:78
 msgid ""
@@ -532,32 +555,32 @@ msgstr ""
 
 #: ../../discuss/tracking.rst:3
 msgid "How to follow a discussion thread and define what I want to hear about"
-msgstr ""
+msgstr "如何关注一个讨论话题，以及如何定义你希望收到的消息"
 
 #: ../../discuss/tracking.rst:6
 msgid "How to follow a discussion thread"
-msgstr ""
+msgstr "如何关注一个讨论话题"
 
 #: ../../discuss/tracking.rst:7
 msgid ""
 "You can keep track of virtually any business object in Odoo (an opportunity,"
 " a quotation, a task, etc.), by **following** it."
-msgstr ""
+msgstr "在Odoo中几乎可以**关注**任何业务目标（如一个机遇、报价或任务等）"
 
 #: ../../discuss/tracking.rst:14
 msgid "How to choose the events to follow"
-msgstr ""
+msgstr "如何选择要关注的事件"
 
 #: ../../discuss/tracking.rst:15
 msgid ""
 "You can choose which types of events you want to be notified about. The "
 "example below shows the options available when following a **task** in the "
 "**Project** app."
-msgstr ""
+msgstr "你可以选择收到何种类型的事件通知。下例显示了**Project**App的**任务**选项中有哪些选项是可用的。"
 
 #: ../../discuss/tracking.rst:23
 msgid "How to add other followers"
-msgstr ""
+msgstr "如何添加其他粉丝"
 
 #: ../../discuss/tracking.rst:24
 msgid ""
@@ -568,7 +591,7 @@ msgstr "您可邀请其他用户，并添加渠道作为追随者。添加渠道
 
 #: ../../discuss/tracking.rst:34
 msgid "How to be a default follower"
-msgstr ""
+msgstr "如何成为默认的粉丝"
 
 #: ../../discuss/tracking.rst:35
 msgid ""
@@ -577,10 +600,11 @@ msgid ""
 " new record created to get notified of specific events (e.g. a new task "
 "created, an opportunity won)."
 msgstr ""
+"你已自动成为你所创建的所有项目的默认粉丝。在CRM和Project等应用中，可以成为任何新创建记录的默认粉丝并收到特别事件的通知（如创建新任务、赢得机会等）"
 
 #: ../../discuss/tracking.rst:40
 msgid ""
 "To do so, start following the parent business object (e.g. the sales channel"
 " in CRM, the project in Project). Then, choose the events you want to hear "
 "about."
-msgstr ""
+msgstr "为此，需要开始关注上级业务目标（如CRM中的销售频道、Project中的项目），然后选择需要关注的事件。"

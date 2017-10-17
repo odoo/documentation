@@ -78,8 +78,8 @@ Solutions
     effortlessly for your and for us.
 
 
-Too much users error message
-----------------------------
+Error message due to too many users
+-----------------------------------
 
 If you have more users in your local database than provisionned in your
 Odoo Enterprise subscription, you may encounter this message:

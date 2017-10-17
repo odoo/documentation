@@ -27,12 +27,12 @@ Plus, reviewing the offer from a mobile phone is easy.
 Really easy. The customer got a clear quotation with a 
 table of content. We can communicate easily. I identified an 
 upselling opportunity. So, I adapt the offer by adding more 
-products. When the offer is ready, the customer just need to sign 
+products. When the offer is ready, the customer just needs to sign 
 it online in just a few clicks. 
 Odoo Sales is integrated with major shipping services: UPS, Fedex, 
 USPS and more. The signed offer creates a delivery order automatically.
 
-That's it, I sucesfully sold my products in just a few clicks.
+That's it, I successfully sold my products in just a few clicks.
 
 Oh, I also have the transaction and communication history 
 at my fingertips. It's easy for every stakeholder to know 
