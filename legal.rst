@@ -44,8 +44,9 @@ Terms and Conditions
       :target: odoo_partnership_agreement_v5.pdf
 
 - :ref:`enterprise_agreement` |nbsp| |nbsp| |download_enterprise|
-
 - :ref:`enterprise_agreement_fr` |nbsp| |nbsp| |download_enterprise_fr|
+
+- :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 - :ref:`terms_of_sale` |nbsp| |nbsp| |download_terms_of_sale|
 - :ref:`terms_of_sale_fr` |nbsp| |nbsp| |download_terms_of_sale_fr|
@@ -53,8 +54,6 @@ Terms and Conditions
 - :ref:`online_terms_of_sale`
 
 - :ref:`odoo_sh_terms`
-
-.. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
 
 
 
