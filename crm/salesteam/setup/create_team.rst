@@ -1,15 +1,15 @@
 =========================
-How to create a new team?
+How to create a new channel?
 =========================
 
-In the Sales module, your sales teams are accessible from the
+In the Sales module, your sales channels are accessible from the
 **Dashboard** menu. If you start from a new instance, you will find a
-sales team installed by default : Direct sales. You can either start
-using that default sales team and edit it (refer to the section
+sales channel installed by default : Direct sales. You can either start
+using that default sales channel and edit it (refer to the section
 *Create and Organize your stages* from the page :doc:`organize_pipeline`)
 or create a new one from scratch.
 
-To create a new team, go to :menuselection:`Configuration --> Sales Teams` and
+To create a new channel, go to :menuselection:`Configuration --> Sales Channels` and
 click on **Create**.
 
 .. image:: ./media/create01.png
@@ -17,15 +17,15 @@ click on **Create**.
 
 Fill in the fields :
 
--  Enter the name of your team
+-  Enter the name of your channel
 
--  Select your team leader
+-  Select your channel leader
 
 -  Select your team members
 
 Don't forget to tick the "Opportunities" box if you want to manage
 opportunities from it and to click on SAVE when you're done. Your can
-now access your new team from your Dashboard.
+now access your new channel from your Dashboard.
 
 .. image:: ./media/create02.png
   :align: center
