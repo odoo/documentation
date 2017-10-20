@@ -1,8 +1,8 @@
 :code-column:
 
-=================================
-Double-Entry Inventory Management
-=================================
+====================================
+Introduction to Inventory Management
+====================================
 
 A double-entry inventory has no stock input, output (disparition of products)
 or transformation. Instead, all operations are stock moves between locations
