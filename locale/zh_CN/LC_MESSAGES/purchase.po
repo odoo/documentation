@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-09 14:24+0200\n"
+"POT-Creation-Date: 2017-10-20 11:50+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Martin Trigaux <mat@odoo.com>, 2017\n"
+"Last-Translator: max_xu <wangzhanwh@163.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -161,6 +161,7 @@ msgstr "我通过采购招标建立了一个采购订单并和供应商确认了
 #: ../../purchase/overview/process/difference.rst:77
 #: ../../purchase/purchases/master/suppliers.rst:16
 #: ../../purchase/purchases/master/uom.rst:22
+#: ../../purchase/purchases/rfq/3_way_matching.rst:18
 #: ../../purchase/purchases/rfq/analyze.rst:24
 #: ../../purchase/purchases/rfq/bills.rst:31
 #: ../../purchase/purchases/rfq/create.rst:16
@@ -974,6 +975,69 @@ msgstr "现在可以在产品界面把 **平方米** 做为计量单位, 把 **�
 msgid "Request for Quotations"
 msgstr "询价单"
 
+#: ../../purchase/purchases/rfq/3_way_matching.rst:3
+msgid "How to determine if a vendor bill should be paid (3-way matching)"
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:5
+msgid ""
+"In some industries, you may receive a bill from a vendor before receiving "
+"the ordered products. However, the bill should maybe not be paid until the "
+"products have actually been received."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:9
+msgid ""
+"To define whether the vendor bill should be paid or not, you can use what is"
+" called the **3-way matching**. It refers to the comparison of the "
+"information appearing on the Purchase Order, the Vendor Bill and the "
+"Receipt."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:14
+msgid ""
+"The 3-way matching helps you to avoid paying incorrect or fraudulent vendor "
+"bills."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:20
+msgid ""
+"Go in :menuselection:`Purchase --> Configuration --> Settings` and activate "
+"the 3-way matching."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:30
+msgid "Should I pay this vendor bill?"
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:32
+msgid ""
+"Once this setting has been activated, a new information appears on the "
+"vendor bill, defining whether the bill should be paid or not. There are "
+"three possible values:"
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:36
+msgid "*Use case 1*: I have received the ordered products."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:43
+msgid "*Use case 2*: I have not received the ordered products."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:50
+msgid ""
+"*Use case 3*: the quantities do not match across the Purchase Order, Vendor "
+"Bill and Receipt."
+msgstr ""
+
+#: ../../purchase/purchases/rfq/3_way_matching.rst:59
+msgid ""
+"The status is defined automatically by Odoo. However, if you want to define "
+"this status manually, you can tick the box *Force Status* and then you will "
+"be able to set manually whether the vendor bill should be paid or not."
+msgstr ""
+
 #: ../../purchase/purchases/rfq/analyze.rst:3
 msgid "How to analyze the performance of my vendors?"
 msgstr "如何分析供应商的表现？"
@@ -1114,7 +1178,8 @@ msgstr ""
 
 #: ../../purchase/purchases/rfq/analyze.rst:103
 #: ../../purchase/purchases/rfq/create.rst:76
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:75
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:86
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:81
 #: ../../purchase/purchases/tender/partial_purchase.rst:77
 msgid ":doc:`../../overview/process/from_po_to_invoice`"
 msgstr ":doc:`../../overview/process/from_po_to_invoice` "
@@ -1693,11 +1758,11 @@ msgstr "送货"
 
 #: ../../purchase/purchases/rfq/create.rst:0
 msgid "Incoming Shipments"
-msgstr "入向送货"
+msgstr "入库"
 
 #: ../../purchase/purchases/rfq/create.rst:0
 msgid "Vendor Reference"
-msgstr "供应商单号"
+msgstr "供应商参照"
 
 #: ../../purchase/purchases/rfq/create.rst:0
 msgid ""
@@ -1731,8 +1796,8 @@ msgid "Deliver To"
 msgstr "交货到"
 
 #: ../../purchase/purchases/rfq/create.rst:0
-msgid "This will determine picking type of incoming shipment"
-msgstr "这将确定入向送货的拣货类型"
+msgid "This will determine operation type of incoming shipment"
+msgstr ""
 
 #: ../../purchase/purchases/rfq/create.rst:0
 msgid "Drop Ship Address"
@@ -1968,6 +2033,143 @@ msgstr ":doc:`cancel` "
 msgid "Purchase Tenders"
 msgstr "采购招标"
 
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:3
+msgid "How to manage Blanket Orders"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:5
+msgid ""
+"A **Blanket Order** is a contract between you (the customer) and your "
+"supplier. It is used to negotiate a discounted price. The supplier is "
+"benefited by the economies of scale inherent in a large order. You are "
+"benefited by being allowed to take multiple smaller deliveries over a period"
+" of time, at a lower price, without paying for the large order immediately. "
+"Each small periodic delivery is called a release or call-off."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:12
+msgid ""
+"As the blanket order is a contract, it will have some prearranged "
+"conditions. These usually include:"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:15
+msgid "Total quantity of each product to be delivered"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:17
+msgid ""
+"Completion deadline, by which you must take delivery of the total quantity"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:19
+msgid "Unit price for each product"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:21
+msgid "Delivery lead time in days for each release"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:24
+msgid "Activate the Purchase Agreements"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:26
+msgid ""
+"The Blanket Order function is provided by the Purchase Agreements feature. "
+"By default, the Purchase Agreements is not activated. To be able to use "
+"blanket orders, you must first activate the option."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:30
+msgid ""
+"In the Purchases module, open the Configuration menu and click on Settings. "
+"In the **Orders** section, locate the **Purchase Agreements** and tick the "
+"box, then click on **Save**."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:38
+msgid "Create a Blanket Order"
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:40
+msgid ""
+"To create a new blanket order, open :menuselection:`Purchase --> Purchase "
+"Agreements`."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:45
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:39
+msgid ""
+"In the Purchase Agreements window, click on **Create**. A new Purchase "
+"Agreement window opens."
+msgstr "在“采购协议”窗口中点击**创建**，开启一个新的“采购协议”窗口。"
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:48
+msgid "In the **Agreement Type** field, choose Blanket Order."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:50
+msgid "Choose the **Vendor** with whom you will make the agreement."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:52
+msgid "Set the **Agreement Deadline** as per the conditions of the agreement."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:54
+msgid "Set the **Ordering Date** to the starting date of the contract."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:56
+msgid ""
+"Leave the **Delivery Date** empty because we will have different delivery "
+"dates with each release."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:59
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:52
+msgid ""
+"In the **Products** section, click on **Add an item**. Select products in "
+"the Product list, then insert **Quantity**. You can add as many products as "
+"you wish."
+msgstr "在**产品**节点击**添加项目**，从产品列表中选择产品，然后输入**数量**。可以添加多个产品。"
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:66
+msgid "Click on **Confirm**."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:68
+msgid ""
+"Now click on the button **New Quotation**. A RfQ is created for this vendor,"
+" with the products chosen on the PT. Repeat this operation for each release."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:71
+msgid ""
+"Be careful to change the **Quantity** field on the RFQ.  By default, the RFQ"
+" quantity will be for the entire remaining quantity. Your individual "
+"releases should be for some smaller quantity."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:78
+msgid ""
+"When all of the releases (purchase orders) have been delivered and paid, you"
+" can click on **Validate** and **Done**."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:81
+msgid ""
+"View `Purchase Agreements "
+"<https://demo.odoo.com/?module=purchase_requisition.action_purchase_requisition>`__"
+" in our Online Demonstration."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_blanket_orders.rst:88
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:83
+msgid ":doc:`../../overview/process/difference`"
+msgstr ":doc:`../../overview/process/difference` "
+
 #: ../../purchase/purchases/tender/manage_multiple_offers.rst:3
 msgid "How to manage Purchase Tenders"
 msgstr "如何管理采购招标"
@@ -2007,32 +2209,37 @@ msgid ""
 "Agreements (PA)`."
 msgstr "要创建一个新的采购招标，请在选单中打开采购->采购协议(PA)。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:39
-msgid ""
-"In the Purchase Agreements window, click on **Create**. A new Purchase "
-"Agreement window opens."
-msgstr "在“采购协议”窗口中点击**创建**，开启一个新的“采购协议”窗口。"
-
 #: ../../purchase/purchases/tender/manage_multiple_offers.rst:42
 msgid "In the **Agreement Type** field, choose Purchase Tender."
 msgstr "在**协议类型**字段中选择“采购招标”。"
 
 #: ../../purchase/purchases/tender/manage_multiple_offers.rst:44
-msgid "You do not have to define a **Vendor**."
-msgstr "不需要定义**供应商**。"
+msgid ""
+"The **Agreement Deadline** field tells the vendors when to have their offers"
+" submitted."
+msgstr ""
 
 #: ../../purchase/purchases/tender/manage_multiple_offers.rst:46
 msgid ""
-"In the **Products** section, click on **Add an item**. Select products in "
-"the Product list, then insert **Quantity**. You can add as many products as "
-"you wish."
-msgstr "在**产品**节点击**添加项目**，从产品列表中选择产品，然后输入**数量**。可以添加多个产品。"
+"The **Ordering Date** field tells the vendors when we will submit a purchase"
+" order to the chosen vendor."
+msgstr ""
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:53
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:48
+msgid ""
+"The **Delivery Date** field tells the vendors when the product will have to "
+"be delivered."
+msgstr ""
+
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:50
+msgid "You do not have to define a **Vendor**."
+msgstr "不需要定义**供应商**。"
+
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:59
 msgid "Click on **Confirm Call**."
 msgstr "点击**确认邀请**。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:55
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:61
 msgid ""
 "Now click on the button **New Quotation**. A RfQ is created with the "
 "products chosen on the PT. Choose a **Vendor** and send the RfQ to the "
@@ -2040,32 +2247,28 @@ msgid ""
 msgstr ""
 "点击**新报价**按钮。会为采购招标上选择的产品创建一个询价单。选择一个**供应商**然后将询价单发给该供应商。每个供应商都要重复这一操作。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:62
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:68
 msgid "Once all the RfQs are sent, you can click on **Validate** on the PT."
 msgstr "全部询价单发送完毕后，在采购招标上点击**确认**。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:64
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:70
 msgid ""
 "The vendors will send their offers, you can update the RfQs accordingly. "
 "Then, choose the ones you want to accept by clicking on **Confirm Order** on"
 " the RfQs and **Cancel** the others."
 msgstr "供应商将发送报价，你可以相应地更新询价单。对于选中的供应商，你可以在询价单上点击“确认订单”并**取消**其他询价单。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:68
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:74
 msgid "You can now click on **Done** on the PT."
 msgstr "现在可以在采购招标上点击**完成**。"
 
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:70
+#: ../../purchase/purchases/tender/manage_multiple_offers.rst:76
 msgid ""
 "View `Purchase Tenders "
 "<https://demo.odoo.com/?module=purchase_requisition.action_purchase_requisition>`__"
 " in our Online Demonstration."
 msgstr ""
 "在https://demo.odoo.com/?module=purchase_requisition.action_purchase_requisition在线的演示系统中查看采购招标"
-
-#: ../../purchase/purchases/tender/manage_multiple_offers.rst:77
-msgid ":doc:`../../overview/process/difference`"
-msgstr ":doc:`../../overview/process/difference` "
 
 #: ../../purchase/purchases/tender/partial_purchase.rst:3
 msgid ""
