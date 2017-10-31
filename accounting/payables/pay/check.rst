@@ -64,7 +64,7 @@ Register a payment by check
 ---------------------------
 
 To register a payment on a bill, open any supplier bill from the menu
-:menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is
+:menuselection:`Purchases --> Vendor Bills`. Once the supplier bill is
 validated, you can register a payment. Set the **Payment Method** to **Check**
 and validate the payment dialog.
 

@@ -1,6 +1,6 @@
-==============
-Supplier Bills
-==============
+============
+Vendor Bills
+============
 
 .. toctree::
    :titlesonly:

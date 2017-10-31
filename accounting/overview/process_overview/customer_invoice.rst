@@ -1,6 +1,6 @@
-==================================
-From Invoice to Payment Collection
-==================================
+============================================
+From Customer Invoice to Payments Collection
+============================================
 
 Odoo supports multiple invoicing and payment workflows, so you can
 choose and use the ones that match your business needs. Whether you want

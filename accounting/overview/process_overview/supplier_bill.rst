@@ -1,6 +1,6 @@
-==================================
-From Vendor Bills to Payments
-==================================
+===========================
+From Vendor Bill to Payment
+===========================
 
 Once vendor bills are registered in Odoo, you can easily pay vendors for
 the correct amount and at the right time (not too late, not too early;

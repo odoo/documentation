@@ -1,6 +1,6 @@
-==================
-Pay supplier bills
-==================
+===============
+Vendor Payments
+===============
 
 .. toctree::
    :titlesonly:

@@ -1,6 +1,6 @@
-===================
-Mexico Localization
-===================
+==============================
+Mexico Accounting Localization
+==============================
 
 .. note::
    This documentation is written assuming that you follow and know the official
