@@ -22,7 +22,7 @@ Configuration
 Configure your usual installment plans from the application :menuselection:`Accounting -->
 Configuration > Payment Terms`.
 
-A payment term may have one line (ex: 21 days) or several lines (10%
+A payment term may have one line (eg: 21 days) or several lines (10%
 within 3 days and the balance within 21 days). If you create a payment
 term with several lines, make sure the latest one is the balance. (avoid
 doing 50% in 10 days and 50% in 21 days because, with the rounding, it
