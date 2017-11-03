@@ -76,6 +76,8 @@ replacing by another, just keep the *Tax to Apply* field empty.
 If, for some fiscal positions, you want to replace a tax by two other
 taxes, just create two lines having the same *Tax on Product*.
 
+.. note::
+  The fiscal positions are not applied on assets and deferred revenues.
 
 .. seealso::
 
