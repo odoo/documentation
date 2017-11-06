@@ -6,3 +6,4 @@ Odoo VOIP
    :titlesonly:
 
    voip/setup
+   voip/onsip
