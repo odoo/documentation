@@ -1,6 +1,6 @@
-=======================
-Why to use Odoo Discuss
-=======================
+====================
+Why use Odoo Discuss
+====================
 
 Odoo Discuss is an easy to use messaging app for teams that brings all
 your organization's communication into one place and seamlessly
