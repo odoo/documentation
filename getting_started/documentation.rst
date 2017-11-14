@@ -4,8 +4,8 @@
 Odoo Online Implementation
 ==========================
 
-This document summarizes **Odoo's Online services**, our Success Pack
-**implementation methodology**, and *best practices* to **get started**
+This document summarizes **Odoo Online's services**, our Success Pack
+**implementation methodology**, and best practices to get started
 with our product.
 
 *We recommend that new Odoo Online customers read this document before
@@ -24,12 +24,12 @@ The more exposure you have with Odoo, the more time you will save later
 during the implementation.
 
 Once you purchase an Odoo Online subscription, you will receive
-instructions by e-mail on how to activate or create your database. From
+instructions by email on how to activate or create your database. From
 this email, you can activate your existing Odoo database or create a new
 one from scratch.
 
 If you did not receive this email, e.g. because the payment was made by
-someone else in your company, contact our support using our 
+someone else in your company, contact our support team using our 
 `online support form <https://www.odoo.com/help>`__.
 
 .. image:: media/getting_started02.png
@@ -39,8 +39,8 @@ Fill in the sign-in or sign-up screens and you will get your first Odoo
 database ready to be used. 
 
 In order to familiarize yourself with the user interface, take a few
-minutes to create records: *products, customers, opportunities or
-projects / tasks*. Follow the blinking dots, they give you tips about
+minutes to create records: *products, customers, opportunities* or
+*projects/tasks*. Follow the blinking dots, they give you tips about
 the user interface as shown in the picture below.
 
 +----------------+----------------+
@@ -76,13 +76,13 @@ you through all the steps. But you can also:
 -   Read the documentation on our website:
     `https://www.odoo.com/documentation/user <https://www.odoo.com/documentation/user>`__
     
--   Watch the videos on our eLearning platform (Free with your first Success Pack):
+-   Watch the videos on our eLearning platform (free with your first Success Pack):
     `https://odoo.thinkific.com/courses/odoo-functional <https://odoo.thinkific.com/courses/odoo-functional>`__
     
 -   Watch the webinars on our 
     `Youtube channel <https://www.youtube.com/user/OpenERPonline>`__    
 
--   Or send your questions to our online support through our
+-   Or send your questions to our online support team through our
     `online support form <https://www.odoo.com/help>`__.
 
 What do we expect from you?
@@ -100,21 +100,21 @@ Your internal implementation manager
 ------------------------------------
 
 We ask that you maintain a single point of contact within your company to 
-work with our project manager on your Odoo Implementation. This is to ensure 
+work with our project manager on your Odoo implementation. This is to ensure 
 efficiency and a single knowledge base in your company. 
 Additionally, this person must:
 
--   **be available at least 2 full days a week** for the project,
+-   **Be available at least 2 full days a week** for the project,
     otherwise you risk slowing down your implementation. More is better with
     the fastest implementations having a full time project manager.
 
--   **have authority to take decisions** on their own. Odoo usually
+-   **Have authority to take decisions** on their own. Odoo usually
     transforms all departments within a company for the better. There 
-    can be many small details that need quick turn arounds for answers and
+    can be many small details that need quick turnarounds for answers and
     if there is too much back and forth between several internal decision 
     makers within your company it could potentially seriously slow everything down.
 
--   **have the leadership** to train and enforce policies internally with full support
+-   **Have the leadership** to train and enforce policies internally with full support
     from all departments and top management, or be part of top management.
 
 Integrate 90% of your business, not 100%
@@ -133,16 +133,16 @@ project price. One always underestimates the hidden costs of customization.
 
 -   **Do it the Odoo way, not yours.** Be flexible, use Odoo the way it
     was designed. Learn how it works and don't try to replicate the
-    way your old system(s) works.
+    way your old system(s) work.
 
 -   **The project first, customizations second.** If you really want to
     customize Odoo, phase it towards the end of the project, ideally
     after having been in production for several months. Once a customer 
     starts using Odoo, they usually drop about 60% of their customization
-    requests as they learn to perform their work flows out of the box, or 
+    requests as they learn to perform their workflows out of the box, or 
     the Odoo way. It is more important to have all your business processes 
     working than customizing a screen to add a few fields here and there 
-    or automating a few e-mails.
+    or automating a few emails.
 
 Our project managers are trained to help you make the right decisions and
 measure the tradeoffs involved but it is much easier if you are aligned
@@ -155,7 +155,7 @@ Invest time in learning Odoo
 ----------------------------
 
 Start your free trial and play with the system. The more comfortable you
-are with navigating Odoo, the better your decisions will be and the quicker
+are navigating Odoo, the better your decisions will be and the quicker
 and easier your training phases will be.
 
 Nothing replaces playing with the software, but here are some extra
@@ -225,11 +225,11 @@ Support
 
 Your Odoo Online subscription includes an **unlimited support service at
 no extra cost, 24/5, Monday to Friday**. To cover 24 hours, our teams
-are in San Francisco, Belgium and India. Questions could be about
-anything and everything from: specific questions on current Odoo features and where to configure them, bugfix requests,
-payments or subscription issues.
+are in San Francisco, Belgium, and India. Questions could be about
+anything and everything, like specific questions on current Odoo features and where to configure them, bugfix requests,
+payments, or subscription issues.
 
-Our support can be contacted through our
+Our support team can be contacted through our
 `online support form <https://www.odoo.com/help>`__.
 
 Note: The support team cannot develop new features, customize, import
@@ -245,64 +245,64 @@ database is at your own discretion, but allows you to benefit from new
 features.
 
 We provide the option to upgrade in a test environment so that you can
-evaluate a new version or train your team before the roll out. Simply
+evaluate a new version or train your team before the rollout. Simply
 fill our `online support form <https://www.odoo.com/help>`__ to make this request.
 
 Success Pack Services
 ---------------------
 
 The Success Pack is a package of premium hour-based services performed by
-a dedicated project manager and business analyst. The initial alloted hours
-you purchased is purely an estimate and we do not guarantee completion of 
+a dedicated project manager and business analyst. The initial allotted hours
+you purchased are purely an estimate and we do not guarantee completion of 
 your project within the first pack. We always strive to complete projects 
-within the initial allotement however any number of factors can contribute
-to us not being able to do so, for example a scope expansion or "Scope Creep"
-in the middle of your implementation, new detail descoveries, or an increase
+within the initial allotment however any number of factors can contribute
+to us not being able to do so; for example, a scope expansion (or "Scope Creep")
+in the middle of your implementation, new detail discoveries, or an increase
 in complexity that was not apparent from the beginning.
 
-The list of services according to your success pack is detailed online:
+The list of services according to your Success Pack is detailed online:
 `https://www.odoo.com/pricing-packs <https://www.odoo.com/pricing-packs>`__
 
 The goal of the project manager is to help you get to production within
 the defined time frame and budget, i.e. the initial number of hours
-defined in your success pack.
+defined in your Success Pack.
 
 His/her role includes:
 
--   **Project Management:** review of your objectives & expectations,
-    phasing of the implementation (road map), mapping of your
-    business needs and the Odoo features.
+-   **Project Management:** Review of your objectives & expectations,
+    phasing of the implementation (roadmap), mapping your
+    business needs to Odoo features.
 
--   **Customized Support:** by phone, e-mail or webinar.
+-   **Customized Support:** By phone, email or webinar.
 
--   **Training, Coaching, and Onsite Consulting:** remote trainings via
-    screen sharing or training on premises. For on premise training
+-   **Training, Coaching, and Onsite Consulting:** Remote trainings via
+    screen sharing or training on premises. For on-premise training
     sessions, you will be expected to pay extra for travel expenses
     and accommodations for your consultant.
 
--   **Configuration:** decisions about how to implement specific needs in
-    Odoo and advanced configuration. (e.g. logistic routes, advanced
+-   **Configuration:** Decisions about how to implement specific needs in
+    Odoo and advanced configuration (e.g. logistic routes, advanced
     pricing structures, etc.)
 
--   **Data Import**: we can do it or assist you on how to do it with a
+-   **Data Import**: We can do it or assist you on how to do it with a
     template prepared by the project manager.
 
-If you have subscribed to **Studio**, you benefit from following
+If you have subscribed to **Studio**, you benefit from the following
 extra services:
 
 -   **Customization of screens:** Studio takes the Drag and Drop approach to
     customize most screens in any way you see fit.
 
--   **Customization of reports (PDF):** Studio itself will not allow you
+-   **Customization of reports (PDF):** Studio will not allow you
     to customize the reports yourself, however our project managers have 
     access to developers for advanced customizations. 
 
--   **Website Design:** standard themes are provided to get started at
+-   **Website design:** Standard themes are provided to get started at
     no extra cost. However, our project manager can coach you on how to utilize
     the building blocks of the website designer. The time spent will consume
-    hours of your success pack.
+    hours of your Success Pack.
 
--   **Workflow automations:** e.g. setting values in fields based on
+-   **Workflow automations:** Some examples include setting values in fields based on
     triggers, sending reminders by emails, automating actions, etc.
     For very advanced automations, our project managers have access
     to Odoo developers.
@@ -317,17 +317,17 @@ deducted from your Success Pack.
 In case of customizations that would require a developer’s intervention, a 
 recurring maintenance fee will be charged on the customer subscription, 
 to cover maintenance and upgrade services. This cost will be based on 
-hours spent by the developer: 4€ or $5/month, per hour of development will 
-be added to the subscription fee.
+the developer hours spent on the customization: 4€ or $5 per hour of development will 
+be added to the subscription fee each month.
 
-**Example:** a customization that took 2 hours of development will cost:
+**Example:** A customization that took 2 hours of development will cost:
 2 hours deducted from the Success Pack for the customization development
-2 * $5 = $10/month as recurring fee for the maintenance of this customization
+2 * $5 = $10/month as a recurring fee for the maintenance of this customization
 
 Implementation Methodology
 ==========================
 
-We follow a **lean and hands-on methodology**, that is used to put
+We follow a **lean and hands-on methodology** that is used to put
 customers in production in a short period of time and at a low cost.
 
 After the kick-off meeting, we define a phasing plan to deploy Odoo
@@ -338,22 +338,22 @@ progressively, by groups of apps.
 
 The goal of the **Kick-off call** is for our project manager to come
 to an understanding of your business in order to propose an
-implementation plan (phasing). Each phase is the deployment of a set
+implementation plan (phasing). Each phase is the deployment of a set of
 applications that you will fully use in production at the end of the
 phase.
 
 For every phase, the steps are the following:
 
-1.  **On Boarding:** Odoo's project manager will review Odoo's business
+1.  **Onboarding:** Odoo's project manager will review Odoo's business
     flows with you, according to your business. The goal is to train
     you, validate the business process and configure according to
     your specific needs.
 
-2.  **Data:** created manually or imported from your existing system.
-    You are responsible to export the data from your existing system
+2.  **Data:** Created manually or imported from your existing system.
+    You are responsible for exporting the data from your existing system
     and Odoo's project manager will import them in Odoo.
 
-3.  **Training:** once your applications are set up, your data imported, and
+3.  **Training:** Once your applications are set up, your data imported, and
     the system is working smoothly, you will train your users. There will 
     be some back and forth with your Odoo project manager to answer questions 
     and process your feedback.
@@ -365,7 +365,7 @@ Once you are comfortable using Odoo, we will fine-tune the process and
 **automate** some tasks and do the remaining customizations (**extra
 screens and reports**).
 
-Once all applications are deployed and users are comfortable on Odoo,
+Once all applications are deployed and users are comfortable with Odoo,
 our project manager will not work on your project anymore (unless you
 have new needs) and you will use the support service if you have further
 questions.
@@ -383,8 +383,8 @@ Odoo gives you the opportunity to test the system before going live or
 before upgrading to a newer version. Do not mess up your working
 environment with test data!
 
-In that purpose, you can create as many free trials as you want
-(available for 15 days). Those instances can be instant copies of your
+For those purposes, you can create as many free trials as you want
+(each available for 15 days). Those instances can be instant copies of your
 working environment. To do so, go to the Odoo.com account in **My
 Organizations** page and click **Duplicate**.
 
