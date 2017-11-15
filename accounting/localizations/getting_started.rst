@@ -9,99 +9,25 @@ Making my Own Localization
 Building a localization module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A **Localization** module is an Odoo module containing all the necessary stuff to make Odoo suitable for a general purpose use in a particular country (e.g. charts of accounts, taxes, financial reports, etc).
+When installing the ``accounting`` module, the localization module corresponding to the country code of the company is installed automatically.
+In case of no country code set or no localization module found, the ``l10n_generic_coa`` (US) localization module is installed by default.
 
-The first step is to create a new Odoo module named **l10n_xx** where **xx** is the lower case country code, taken from https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2.
-Obviously, this newly created module must depends of the ``account`` module. This dependency must be added to the ``__manifest__.py`` file.
+For example, ``l10n_be`` will be installed if the company has ``Belgium`` as country.
 
-.. code-block:: py
+This behavior is allowed by the presence of a *.yml* file containing the following code:
 
-    ...
-    'depends' : ['account'],
-    ...
+.. code-block:: xml
 
-There are two ways to install a **l10n_xx** module.
+    -
+      !python {model: account.chart.template, id: pl_chart_template}: |
+        self[0].try_loading_for_current_company()
 
-The first way is to install accounting while being certain that the right country is set on your company.
-Then, the localization module corresponding to the country code of the company will be installed automatically.
-This behavior is allowed by the ``_auto_install_l10n()`` method defined on ``account.__init__.py``.
-In case of no country code set or no localization module found, the ``l10n_generic_coa`` (US) localization module will be installed by default.
+Usually located in the ``data`` folder, it must be loaded at the very last in the ``__manifest__.py`` file.
 
-For more details about how this trick is possible inside the ``account`` module, see the python code below.
+.. danger::
 
-*addons/account/__manifest__.py*
+    If the *.yml* file is missing, the right chart of accounts won't be loaded on time!
 
-.. code-block:: py
-
-   # -*- coding: utf-8 -*-
-   # Part of Odoo. See LICENSE file for full copyright and licensing details.
-   {
-       'name' : 'Invoicing',
-       'version' : '1.1',
-       'summary': 'Send Invoices and Track Payments',
-       'sequence': 30,
-       'description': """
-   Core mechanisms for the accounting modules. To display the menuitems, install the module account_invoicing.
-       """,
-       'category': 'Accounting',
-       'website': 'https://www.odoo.com/page/billing',
-       'images' : ['images/accounts.jpeg','images/bank_statement.jpeg','images/cash_register.jpeg','images/chart_of_accounts.jpeg','images/customer_invoice.jpeg','images/journal_entries.jpeg'],
-       'depends' : ['base_setup', 'product', 'analytic', 'web_planner', 'portal'],
-       'data': [
-           ...
-       ],
-       'demo': [
-           ...
-       ],
-       'qweb': [
-           ...
-       ],
-       'installable': True,
-       'application': False,
-       'auto_install': False,
-
-        # The localization module is installed thanks to the below line
-       'post_init_hook': '_auto_install_l10n',
-   }
-
-*addons/account/__init__.py*
-
-.. code-block:: py
-
-    # -*- coding: utf-8 -*-
-    # Part of Odoo. See LICENSE file for full copyright and licensing details.
-
-    def _auto_install_l10n(cr, registry):
-        # Search for a l10n_<country_code> localization module to install
-        ...
-        country_code = env.user.company_id.country_id.code
-        if country_code:
-            module_list = []
-            ...
-            if env['ir.module.module'].search([('name', '=', 'l10n_' + country_code.lower())]):
-                module_list.append('l10n_' + country_code.lower())
-            else:
-                module_list.append('l10n_generic_coa')
-            ...
-            module_ids = env['ir.module.module'].search([('name', 'in', module_list), ('state', '=', 'uninstalled')])
-            module_ids.sudo().button_install()
-
-An alternative of this trick is to install directly the localization module you want by searching it directly in the ``apps`` module:
-
-.. image:: media/getting_started01.png
-    :align: center
-
-.. warning::
-
-    To be effective in this way, your localization module must contains a *.yml* file containing the following code:
-
-    .. code-block:: xml
-
-        -
-          !python {model: account.chart.template, id: pl_chart_template}: |
-            self[0].try_loading_for_current_company()
-
-    This additional file, usually located in the ``data`` folder, must be loaded at the very last in the ``__manifest__.py`` file.
 
 Configuring my own Chart of Accounts?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -124,6 +50,12 @@ For this reason, we need to define an instance of the ``account.chart.template``
         <!-- [Required] Specify the currency. E.g. "base.USD". -->
         <field name="currency_id" ref="..."/>
 
+        <!-- [Required] Specify a prefix of the bank accounts. -->
+        <field name="bank_account_code_prefix">...</field>
+
+        <!-- [Required] Specify a prefix of the cash accounts. -->
+        <field name="cash_account_code_prefix">...</field>
+
         <!-- [Optional] Define a parent chart of accounts that will be installed just before this one. -->
         <field name="parent_id" ref="..."/>
 
@@ -141,12 +73,6 @@ For this reason, we need to define an instance of the ``account.chart.template``
         This boolean helps you to choose if you want to propose to the user to encode the sale and purchase rates or choose from list of taxes.
         This last choice assumes that the set of tax defined on this template is complete. -->
         <field name="complete_tax_set" eval="..."/>
-
-        <!-- [Optional] Specify a prefix of the bank accounts. -->
-        <field name="bank_account_code_prefix">...</field>
-
-        <!-- [Optional] Specify a prefix of the cash accounts. -->
-        <field name="cash_account_code_prefix">...</field>
 
         <!-- [Optional] Specify the spoken languages.
         /!\ This option is only available if your module depends of l10n_multilang.
@@ -212,8 +138,12 @@ The usage of these generic types ensures the generic reports working correctly i
 
 .. warning::
 
-    * Avoid the usage of liquidity ``account.account.type``.
-    * Only one account of type payable/receivable is enough.
+    Avoid the usage of liquidity ``account.account.type``!
+    Indeed, the bank & cash accounts are created directly at the installation of the localization module and then, are linked to an ``account.journal``.
+
+.. warning::
+
+    Only one account of type payable/receivable is enough.
 
 Although the ``tag_ids`` field is optional, this one remains a very powerful feature.
 Indeed, this one allows you to define some tags for your accounts to spread them correctly on your reports.
@@ -278,11 +208,9 @@ The only difference being that you must use the ``account.tax.template`` model.
 
         <!-- [Optional] Define the tax's type.
         'sale', 'purchase' or 'none' are the allowed values. 'sale' is the default value.
+        'adjustment' is also available to do some tax adjustments.
         Note: 'none' means a tax can't be used by itself, however it can still be used in a group. -->
         <field name="type_tax_use">...</field>
-
-        <!-- [Optional] . -->
-        <field name="tax_adjustment" eval="..."/>
 
         <!-- [Optional] Define the type of amount:
         'group' for a group of taxes, 'fixed' for a tax with a fixed amount or 'percent' for a classic percentage of price.
@@ -325,7 +253,7 @@ The only difference being that you must use the ``account.tax.template`` model.
         See the previous section for more details. -->
         <field name="tag_ids" eval="...">
 
-        <!-- [Optional] Define a tax group. -->
+        <!-- [Optional] Define a tax group used to display the sums of taxes in the invoices. -->
         <field name="tax_group_id" ref="..."/>
 
         <!-- [Optional] Define the tax exigibility either based on invoice ('on_invoice' value) or
