@@ -16,6 +16,7 @@ Applications
    manufacturing
    point_of_sale
    project
+   helpdesk/helpdesk
    expense/expense
    general
 ..   expenses
