@@ -1,7 +1,7 @@
 :banner: banners/helpdesk.jpg
 
 ========
-Expenses
+Helpdesk
 ========
 
 Overview
