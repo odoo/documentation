@@ -65,7 +65,7 @@ We Strive To
      commercial offers or discuss software other than Odoo. New modules and
      features can be announced on the “Announcements” mailing list only.
    * Don't use the list to report copyright or licenses infringements, report
-     issues to abus@odoo.com instead.
+     issues to abuse@odoo.com instead.
 
 6. Don't feed the trolls
 
