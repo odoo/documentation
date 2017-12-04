@@ -5,7 +5,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 6a - 2017-10-17
+.. note:: Version 6b - 2017-12-04
 
 .. v6: add "App" definition + update pricing per-App
 
@@ -79,7 +79,7 @@ Upon expiration or termination of this Agreement, this license is revoked immedi
 Customer agrees to stop using the Odoo Enterprise Edition software.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
-fee equal to 300% of the applicable list price for the actual number of Users.
+fee equal to 300% of the applicable list price for the actual number of Users and installed Apps.
 
 
 .. _services:
