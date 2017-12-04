@@ -5,7 +5,7 @@
 Odoo Partnership Agreement
 ==========================
 
-.. note:: Version 6 - 2017-10-17
+.. note:: Version 6 - 2017-12-04
 
 
 BETWEEN:
@@ -185,10 +185,8 @@ appointed by ODOO.
 PARTNER also has the option to purchase specific technical training by subscribing to an Odoo
 Success Pack, for an extra fee.
 
-
-
-4.5  Commission on Odoo Services sold by PARTNER
-------------------------------------------------
+4.5  Commissions on Odoo Services sold by PARTNER
+-------------------------------------------------
 For ODOO services directly purchased by a customer through PARTNER, PARTNER shall receive
 retribution as follows:
 
@@ -203,53 +201,7 @@ retribution as follows:
   directly, commission included (as a discount).
 
 
-5 Miscellaneous
-================
-
-5.1 Communications
-------------------
-No communications from either Party to the other shall have any validity under this Agreement
-unless made in writing by or on behalf of PARTNER or ODOO, as the case may be, in accordance with
-the provisions of this Agreement.
-Any notice whatsoever which either Party hereto is required or authorised by this Agreement to give
-or make to the other shall be given via registered mail.
-
-5.2 Brand Image
----------------
-Both Parties shall refrain from harming the brand image and reputation of the other Party, in any
-way whatsoever, in the performance of this Agreement. Non-compliance to this provision shall be a
-cause for termination of this Agreement.
-
-5.3 Publicity
--------------
-PARTNER grants ODOO the nonexclusive right to use PARTNER's name or trademarks in press releases,
-advertisements or other public announcements.
-In particular, PARTNER accepts to be mentioned, and that PARTNER's logo and trademark may used for
-this purpose only, in the official list of the ODOO partners.
-
-.. _no_soliciting:
-
-5.4 No Soliciting or Hiring
----------------------------
-
-Except where the other Party gives its consent in writing, each Party, its affiliates and
-representatives agree not to solicit or offer employment to any employee of the other Party who is
-involved in performing or using the Services under this Agreement, for the duration of the Agreement
-and for a period of 24 months from the date of termination or expiration of this Agreement.
-In case of any breach of the conditions of this section that leads to the termination of said
-employee toward that end, the breaching Party agrees to pay to the other Party an amount of
-EUR (€) 30 000.00 (thirty thousand euros).
-
-
-5.5  Independent Contractors
-----------------------------
-The Parties are independent contractors, and this Agreement shall not be construed as constituting
-either Party as partner, joint venture or fiduciary of the other, as creating any other form of
-legal association that would impose liability on one Party for the act or failure to act of the other
-or as providing either Party with the right, power or authority (express or implied) to create any
-duty or obligation of the other.
-
-6 Fees
+5 Fees
 ======
 PARTNER agrees to pay either the Partnership Entry fee or the Partnership Annual Renewal fee
 immediately upon receipt of the annual invoice sent by ODOO.
@@ -267,7 +219,7 @@ If, for any reason, PARTNER decides to terminate this agreement, and later appli
 the "Annual Partnership Renewal" fee will be applicable.
 
 
-7 Termination
+6 Termination
 =============
 In the event that either Party fails to fulfill any of its obligations arising herein, and if such
 breach has not been remedied within 30 calendar days from the written notice of such
@@ -277,7 +229,7 @@ Surviving Provisions:
   The sections ":ref:`restrictions`”, “:ref:`p_liability`”, and “:ref:`gov_law`” will survive
   any termination or expiration of this Agreement.
 
-7.1 Consequence of termination
+6.1 Consequence of termination
 ------------------------------
 On expiry or termination of this Agreement, PARTNER:
  - shall not use anymore the materials and/or the Odoo brand name or claim the existence of any
@@ -287,7 +239,7 @@ On expiry or termination of this Agreement, PARTNER:
 
 .. _p_liability:
 
-8 Liability and Indemnities
+7 Liability and Indemnities
 ===========================
 Both Parties are bound by a best endeavours obligation hereunder.
 
@@ -311,6 +263,54 @@ PARTNER waives any commitment whatsoever on behalf of ODOO regarding the evoluti
 According to the terms of the Software license, ODOO will not be liable for any bug or for the
 quality and the performance of the Software.
 
+
+8 Miscellaneous
+================
+
+8.1 Communications
+------------------
+No communications from either Party to the other shall have any validity under this Agreement
+unless made in writing by or on behalf of PARTNER or ODOO, as the case may be, in accordance with
+the provisions of this Agreement.
+Any notice whatsoever which either Party hereto is required or authorised by this Agreement to give
+or make to the other shall be given via registered mail.
+
+8.2 Brand Image
+---------------
+Both Parties shall refrain from harming the brand image and reputation of the other Party, in any
+way whatsoever, in the performance of this Agreement. Non-compliance to this provision shall be a
+cause for termination of this Agreement.
+
+8.3 Publicity
+-------------
+PARTNER grants ODOO the nonexclusive right to use PARTNER's name or trademarks in press releases,
+advertisements or other public announcements.
+In particular, PARTNER accepts to be mentioned, and that PARTNER's logo and trademark may used for
+this purpose only, in the official list of the ODOO partners.
+
+.. _no_soliciting:
+
+8.4 No Soliciting or Hiring
+---------------------------
+
+Except where the other Party gives its consent in writing, each Party, its affiliates and
+representatives agree not to solicit or offer employment to any employee of the other Party who is
+involved in performing or using the Services under this Agreement, for the duration of the Agreement
+and for a period of 24 months from the date of termination or expiration of this Agreement.
+In case of any breach of the conditions of this section that leads to the termination of said
+employee toward that end, the breaching Party agrees to pay to the other Party an amount of
+EUR (€) 30 000.00 (thirty thousand euros).
+
+
+8.5  Independent Contractors
+----------------------------
+The Parties are independent contractors, and this Agreement shall not be construed as constituting
+either Party as partner, joint venture or fiduciary of the other, as creating any other form of
+legal association that would impose liability on one Party for the act or failure to act of the other
+or as providing either Party with the right, power or authority (express or implied) to create any
+duty or obligation of the other.
+
+
 .. _gov_law:
 
 9  Governing Law and Jurisdiction
@@ -319,13 +319,13 @@ This Agreement will be governed by and construed in accordance with the laws of 
 All disputes arising in connection with the Agreement for which no amicable settlement can be
 found shall be finally settled by the Courts of Belgium in Nivelles.
 
-For Odoo SA,
-
-________________________________________
 
 
-For _____________,
+**Signatures**:
 
+==================================      ==================================
+For ODOO,                               For PARTNER,
+==================================      ==================================
 
 
 .. _appendix_p_a:
