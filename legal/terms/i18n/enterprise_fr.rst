@@ -18,7 +18,9 @@ Odoo Enterprise Subscription Agreement (FR)
     The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
     Agreement” is the :ref:`original english version <enterprise_agreement>`.
 
-.. note:: Version 5b - Dernière modification: 30 juin 2016.
+.. note:: Version 6b - Dernière modification: 4 décembre 2017.
+
+.. v6: add "App" definition + update pricing per-App
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -45,6 +47,11 @@ Utilisateur
     Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieur(e)s
     n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
     comptés comme Utilisateurs.
+
+App
+    Une "App" est un ensemble de fonctionnalités, disponible pour installation dans le Logiciel,
+    et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`, au moment
+    de la signature de ce Contrat.
 
 Bug
     Désigne toute défaillance du Logiciel qui se traduit par un arrêt complet, un message d'erreur
@@ -76,19 +83,19 @@ Odoo Enterprise Edition, conformément aux conditions énoncées à la section :
 Le Client accepte de prendre toutes les mesures nécessaires pour garantir l'exécution sans aucune
 modification de la partie du Logiciel qui vérifie la validité de l'utilisation d'Odoo Enterprise
 Edition et recueille des statistiques à cet effet, y compris mais sans s'y limiter, l'exécution
-du Logiciel et le nombre d'Utilisateurs.
+du Logiciel, le nombre d'Utilisateurs et les Apps installées.
 
 Odoo SA s'engage à ne pas divulguer à une tierce partie d'informations chiffrées personnelles ou
 spécifiques sans le consentement du Client, et à traiter toutes les données recueillies en
 respectant sa politique officielle de confidentialité, telle que publiée sur
-`le site web d'Odoo SA <https://www.odoo.com>`_.
+https://www.odoo.com/privacy.
 
 À l'expiration ou la résiliation de ce Contrat, cette licence est immédiatement révoquée et le
 Client accepte de cesser toute utilisation du logiciel Odoo Enterprise Edition.
 
 Si le Client devait enfreindre les dispositions de la présente section, il accepte de payer
 à Odoo SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
-correspondant au nombre réel d'Utilisateurs.
+correspondant au nombre réel d'Utilisateurs et aux Apps installées.
 
 
 .. _services_fr:
@@ -202,17 +209,17 @@ accompagnée de la base de données migrée.
 
 Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise, le service de correction de
 Bugs, le service d'alertes de sécurité et le service de migration sont basés sur le nombre
-d'Utilisateurs et la version du Logiciel utilisée par le Client, et précisés par écrit à la
-signature du contrat.
+d'Utilisateurs, les Apps installées, la version du Logiciel utilisée par le Client, et précisés par
+écrit à la signature du contrat.
 
-Pendant la durée du contrat, si le Client a plus d'Utilisateurs que spécifié au moment de la
-signature du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
+Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou d'Apps que spécifié au moment
+de la signature du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
 en vigueur applicable (au début du Contrat) pour les utilisateurs supplémentaires,
 pour le reste de la durée.
 
 Si, au moment de la signature du présent Contrat, le Client utilise une Version Couverte qui
-n'est pas l'une des plus récentes, les tarifs standards seront augmentés de 50% pour la
-première Durée du contrat.
+n'est pas la plus récente, les tarifs standards peuvent être augmentés de 50% pour la
+première Durée du contrat, à la discrétion d'Odoo SA, pour couvrir les coûts de maintenance.
 
 
 .. _charges_renewal_fr:
@@ -267,9 +274,9 @@ Le Client accepte de / d':
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées dans la facture correspondante ;
-- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs dépasse le nombre d'Utilisateurs
-  spécifiés à la signature du Contrat, et dans ce cas, de régler les frais supplémentaires
-  applicables telles que décrits à la section :ref:`charges_standard_fr`;
+- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou les Apps installées dépassent
+  les nombres spécifiés à la signature du Contrat, et dans ce cas, de régler les frais
+  supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
 - Prendre toutes les mesures nécessaires pour garantir l'exécution non modifiée de la partie du
   Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
   section :ref:`enterprise_access_fr`;
