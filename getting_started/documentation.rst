@@ -314,11 +314,13 @@ at no extra cost.
 All time spent to perform these customizations by our Business Analysts will be 
 deducted from your Success Pack.
 
-In case of customizations that would require a developer’s intervention, a 
-recurring maintenance fee will be charged on the customer subscription, 
-to cover maintenance and upgrade services. This cost will be based on 
-hours spent by the developer: 4€ or $5/month, per hour of development will 
-be added to the subscription fee.
+In case of customizations that cannot be done via Studio and would require a 
+developer’s intervention, this will require Odoo.sh, please speak to your 
+Account Manager for more information. Additionally, any work performed by a 
+developer will add a recurring maintenance fee to your subscription to cover 
+maintenance and upgrade services. This cost will be based on hours spent by 
+the developer: 4€ or $5/month, per hour of development will be added to the 
+subscription fee.
 
 **Example:** a customization that took 2 hours of development will cost:
 2 hours deducted from the Success Pack for the customization development
