@@ -18,9 +18,10 @@ Odoo Enterprise Subscription Agreement (FR)
     The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
     Agreement” is the :ref:`original english version <enterprise_agreement>`.
 
-.. note:: Version 6b - Dernière modification: 4 décembre 2017.
+.. note:: Version 7 - Dernière modification: 7 décembre 2017.
 
 .. v6: add "App" definition + update pricing per-App
+.. v7: remove possibility of price change at renewal after prior notice
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -229,9 +230,7 @@ première Durée du contrat, à la discrétion d'Odoo SA, pour couvrir les coût
 
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
 qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
-en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%,
-à moins qu'Odoo SA ne notifie par écrit un nouveau tarif au client, au moins 60 jours avant
-l’échéance du contrat.
+en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%.
 
 .. _charges_thirdparty_fr:
 
