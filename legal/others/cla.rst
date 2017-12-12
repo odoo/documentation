@@ -9,5 +9,5 @@ have to sign the Odoo Contributor License Agreement (CLA).
 
 More information about this requirement, the procedure to sign the agreement,
 and a FAQ can be found on our
-`GitHub project page <https://github.com/odoo/odoo/blob/8.0/doc/cla/sign-cla.md>`_.
+`GitHub project page <https://github.com/odoo/odoo/blob/11.0/doc/cla/sign-cla.md>`_.
 

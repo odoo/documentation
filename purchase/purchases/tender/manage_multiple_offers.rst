@@ -11,7 +11,7 @@ it usually leads to better offers.
 
 For more information on best uses, please read the chapter `Request for
 Quotation, Purchase Tender or Purchase
-Order? <https://www.odoo.com/documentation/user/10.0/purchase/overview/process/difference.html>`__
+Order? <https://www.odoo.com/documentation/user/11.0/purchase/overview/process/difference.html>`__
 
 Activate the Purchase Tender function
 -------------------------------------
