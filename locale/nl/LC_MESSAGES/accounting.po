@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-20 11:50+0200\n"
+"POT-Creation-Date: 2017-12-13 13:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: Stephan Van Dyck <stephan.vandyck@vanroey.be>, 2017\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
@@ -95,11 +95,12 @@ msgstr ""
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:24
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:20
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:31
 #: ../../accounting/receivables/customer_payments/check.rst:39
 #: ../../accounting/receivables/customer_payments/check.rst:103
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:40
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:113
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:31
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:19
 msgid "Configuration"
 msgstr "Instelling"
 
@@ -746,7 +747,7 @@ msgstr ""
 "Eenmaal u uw gegevens ingeeft zullen uw bankafschriften automatisch elke 4 "
 "uur gesynchroniseerd worden."
 
-#: ../../accounting/bank/misc.rst:3
+#: ../../accounting/bank/misc.rst:3 ../../accounting/payables/misc.rst:3
 #: ../../accounting/payables/misc/employee_expense.rst:187
 msgid "Miscellaneous"
 msgstr "Diversen"
@@ -1820,12 +1821,10 @@ msgid "Checks numbering sequence."
 msgstr "Cheques nummering reeks."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-#: ../../accounting/payables/pay/check.rst:0
 msgid "Manual Numbering"
 msgstr "Handmatige nummering"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-#: ../../accounting/payables/pay/check.rst:0
 msgid "Check this option if your pre-printed checks are not numbered."
 msgstr ""
 "Vink deze optie aan als uw her-afgedrukte cheques niet genummerd zijn."
@@ -1929,7 +1928,7 @@ msgid "Localizations"
 msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:3
-msgid "Mexico Localization"
+msgid "Mexico Accounting Localization"
 msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:6
@@ -5448,6 +5447,7 @@ msgid "Invoices"
 msgstr "Facturen"
 
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:64
+#: ../../accounting/payables/supplier_bills.rst:3
 msgid "Vendor Bills"
 msgstr "Facturen"
 
@@ -6351,24 +6351,28 @@ msgid ""
 " just create two lines having the same *Tax on Product*."
 msgstr ""
 
-#: ../../accounting/others/taxes/application.rst:82
+#: ../../accounting/others/taxes/application.rst:80
+msgid "The fiscal positions are not applied on assets and deferred revenues."
+msgstr ""
+
+#: ../../accounting/others/taxes/application.rst:84
 #: ../../accounting/others/taxes/default_taxes.rst:27
 #: ../../accounting/others/taxes/retention.rst:70
 msgid ":doc:`create`"
 msgstr ":doc:`create`"
 
-#: ../../accounting/others/taxes/application.rst:83
+#: ../../accounting/others/taxes/application.rst:85
 #: ../../accounting/others/taxes/default_taxes.rst:29
 msgid ":doc:`taxcloud`"
 msgstr ":doc:`taxcloud`"
 
-#: ../../accounting/others/taxes/application.rst:84
+#: ../../accounting/others/taxes/application.rst:86
 #: ../../accounting/others/taxes/create.rst:70
 #: ../../accounting/others/taxes/default_taxes.rst:31
 msgid ":doc:`tax_included`"
 msgstr ":doc:`tax_included`"
 
-#: ../../accounting/others/taxes/application.rst:85
+#: ../../accounting/others/taxes/application.rst:87
 #: ../../accounting/others/taxes/default_taxes.rst:30
 msgid ":doc:`B2B_B2C`"
 msgstr ":doc:`B2B_B2C`"
@@ -7884,8 +7888,8 @@ msgid "Process overview"
 msgstr "Proces overzicht"
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:3
-msgid "From Invoice to Payment Collection"
-msgstr "Van factuur naar betaling ontvangen"
+msgid "From Customer Invoice to Payments Collection"
+msgstr ""
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:5
 msgid ""
@@ -8215,8 +8219,9 @@ msgid ""
 msgstr ""
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:3
-msgid "From Vendor Bills to Payments"
-msgstr ""
+#: ../../accounting/overview/process_overview/supplier_bill.rst:15
+msgid "From Vendor Bill to Payment"
+msgstr "Van leveranciersrekening naar betaling"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:5
 msgid ""
@@ -8232,10 +8237,6 @@ msgid ""
 "the Odoo Purchase application that allows you to control and pre-complete "
 "them automatically based on past purchase orders."
 msgstr ""
-
-#: ../../accounting/overview/process_overview/supplier_bill.rst:15
-msgid "From Vendor Bill to Payment"
-msgstr "Van leveranciersrekening naar betaling"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:18
 msgid "Record a new vendor bill"
@@ -8409,10 +8410,6 @@ msgstr ":doc:`customer_invoice`"
 #: ../../accounting/payables.rst:3
 msgid "Account Payables"
 msgstr ""
-
-#: ../../accounting/payables/misc.rst:3
-msgid "Misc"
-msgstr "Overige"
 
 #: ../../accounting/payables/misc/employee_expense.rst:3
 msgid "How to keep track of employee expenses?"
@@ -8837,8 +8834,8 @@ msgid ""
 msgstr ""
 
 #: ../../accounting/payables/pay.rst:3
-msgid "Pay supplier bills"
-msgstr "Betaling leverancier rekeningen"
+msgid "Vendor Payments"
+msgstr ""
 
 #: ../../accounting/payables/pay/check.rst:3
 msgid "Pay by Checks"
@@ -8944,7 +8941,7 @@ msgstr "Registreer een betaling via cheque"
 #: ../../accounting/payables/pay/check.rst:66
 msgid ""
 "To register a payment on a bill, open any supplier bill from the menu "
-":menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is "
+":menuselection:`Purchases --> Vendor Bills`. Once the supplier bill is "
 "validated, you can register a payment. Set the **Payment Method** to "
 "**Check** and validate the payment dialog."
 msgstr ""
@@ -8952,51 +8949,6 @@ msgstr ""
 #: ../../accounting/payables/pay/check.rst:74
 msgid "Explanation of the fields of the payment screen:"
 msgstr ""
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Has Invoices"
-msgstr "Heeft facturen"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Technical field used for usability purposes"
-msgstr "Technisch veld gebruikt voor gebruiksvriendelijke doeleinden"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Hide Payment Method"
-msgstr "Verberg betaalmethode"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"Technical field used to hide the payment method if the selected journal has "
-"only one available which is 'manual'"
-msgstr ""
-"Technisch veld gebruikt om de betalingsmethode te verbergen als het "
-"geselecteerde dagboek maar één betaalmethode heeft die 'handmatig' is"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Code"
-msgstr "Code"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"Technical field used to adapt the interface to the payment type selected."
-msgstr ""
-"Technisch veld dat gebruikt wordt om de interface te wijzigen naar de "
-"geselecteerde betalingsmethode."
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Check Number"
-msgstr "Controleer numme"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"The selected journal is configured to print check numbers. If your pre-"
-"printed check paper already has numbers or if the current numbering is "
-"wrong, you can change it in the journal configuration page."
-msgstr ""
-"Het geselecteerde dagboek is geconfigureerd om cheque nummers te printen. "
-"Als uw voorgedrukt papier al nummers bevat of als het huidige nummer fout is"
-" kan u dit wijzigen op de dagboek configuratie pagina."
 
 #: ../../accounting/payables/pay/check.rst:80
 msgid "Try paying a supplier bill with a check"
@@ -9276,6 +9228,7 @@ msgid ""
 msgstr ""
 
 #: ../../accounting/payables/pay/sepa.rst:10
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:10
 msgid ""
 "SEPA is supported by the banks of the 28 EU member states as well as "
 "Iceland, Norway, Switzerland, Andorra, Monaco and San Marino."
@@ -9435,10 +9388,6 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments/recording.rst:129
 msgid ":doc:`check`"
 msgstr ":doc:`check`"
-
-#: ../../accounting/payables/supplier_bills.rst:3
-msgid "Supplier Bills"
-msgstr "Leverancier rekeningen"
 
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:3
 msgid "When should I use supplier bills or purchase receipts?"
@@ -9875,6 +9824,7 @@ msgid "Account Receivables"
 msgstr ""
 
 #: ../../accounting/receivables/customer_invoices.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:53
 msgid "Customer Invoices"
 msgstr "Klantfacturen"
 
@@ -10263,7 +10213,7 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:25
 msgid ""
-"A payment term may have one line (ex: 21 days) or several lines (10% within "
+"A payment term may have one line (eg: 21 days) or several lines (10% within "
 "3 days and the balance within 21 days). If you create a payment term with "
 "several lines, make sure the latest one is the balance. (avoid doing 50% in "
 "10 days and 50% in 21 days because, with the rounding, it may not compute "
@@ -10872,6 +10822,309 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments.rst:3
 msgid "Customer Payments"
 msgstr "Klantbetalingen"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:3
+msgid "How to automate customer follow-ups with plans?"
+msgstr "Hoe klantopvolgingen automatiseren via plannen?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:5
+msgid ""
+"With the Odoo Accounting application, you get a dynamic aged receivable "
+"report, customer statements and you can easily send them to customers."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:8
+msgid ""
+"If you want to go further in the automation of the credit collection "
+"process, you can use follow-up plans. They will help you automate all the "
+"steps to get paid, by triggering them at the right time: send customer "
+"statements by emails, send regular letter (through the Docsaway "
+"integration), create a task to manually call the customer, etc..."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:14
+msgid "Here is an example of a plan:"
+msgstr "Hier is een voorbeeld van een plan:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "When?"
+msgstr "Wanneer?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "What?"
+msgstr "Wat?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "Who?"
+msgstr "Wie?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "3 days before due date"
+msgstr "3 dagen voor vervaldatum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "Email"
+msgstr "E-mail"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "automated"
+msgstr "geautomatiseerd"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "1 day after due date"
+msgstr "1 dag na vervaldatum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "Email + Regular Letter"
+msgstr "E-mail + Brief"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "15 days after due date"
+msgstr "15 dagen na vervaldatum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "Call the customer"
+msgstr "Bel de klant"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "John Mac Gregor"
+msgstr "John Mac Gregor"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "35 days after due date"
+msgstr "35 dagen na vervaldatum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "Email + Letter + Call"
+msgstr "E-mail + Brief + Telefoon"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "60 days after due date"
+msgstr "60 dagen na vervaldatum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Formal notice"
+msgstr "Formele melding"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Bailiff"
+msgstr "Deurwaarder"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:34
+msgid "Install Reminder Module"
+msgstr "Installeer \"Herinnering\" module"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:36
+msgid ""
+"You must start by activating the feature, using the menu "
+":menuselection:`Configuration --> Settings` of the Accounting application. "
+"From the settings screen, activate the feature **Enable payment follow-up "
+"management**."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:44
+msgid "Define Payment Follow-ups Levels"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:46
+msgid ""
+"To automate customer follow ups, you must configure your follow–up levels "
+"using the menu :menuselection:`Accounting --> Configuration --> Payment "
+"Follow-ups`. You should define one and only one follow-up plan per company."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:50
+msgid ""
+"The levels of follow-up are relative to the due date; when no payment term "
+"is specified, the invoice date will be considered as the due date."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:53
+msgid ""
+"For each level, you should define the number of days and create a note which"
+" will automatically be added into the reminder letter."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:59
+msgid "Odoo defines several actions for every reminder:"
+msgstr "Odoo definieert meerdere acties voor elke herinnering:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:61
+msgid ""
+"**Manual Action:** assign a responsible that will have to call the customer"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:62
+msgid "**Send an Email:** send an email to customer using the provided text"
+msgstr ""
+"**Verzend een e-mail:** verzend een e-mail naar de klant met de voorziene "
+"tekst"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:63
+msgid ""
+"**Send a Letter:** send a letter by regular mail, using the provided note"
+msgstr ""
+"**Verzend een brief:** verzend een brief via reguliere e-mail, met de "
+"voorziene opmerking"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:69
+msgid ""
+"As you need to provide a number of days relative to the due date, you can "
+"use a negative number. As an example, if an invoice is issued the January "
+"1st but the due date is January 20, if you set a reminder 3 days before the "
+"due date, the customer may receive an email in January 17."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:76
+msgid "Doing your weekly follow-ups"
+msgstr "Uw wekelijkse opvolgingen doen"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:78
+msgid ""
+"Once everything is setup, Odoo will prepare follow-up letters and emails "
+"automatically for you. All you have to do is to the menu "
+":menuselection:`Sales --> Customers Statement` in the accounting "
+"application."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:85
+msgid ""
+"Odoo will automatically propose you actions based on the follow-up plan you "
+"defined, invoices to pay and payment received."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:88
+msgid ""
+"You can use this menu every day, once a week or once a month. You do not "
+"risk to send two times the same reminder to your customer. Odoo only "
+"proposes you the action you have to do. If you do it every day, you will "
+"have a few calls to do per day. If you do it once a month, you will have "
+"much more work once you do it."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:94
+msgid ""
+"It's up to you to organize the way you want to work. But it's a good "
+"practice to reconcile your bank statements before launching the follow-ups. "
+"That way, all paid invoices will be reconciled and you will not send a "
+"follow-up letter to a customer that already paid his invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:99
+msgid "From a customer follow-up proposition, you can:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:101
+msgid "Get the customer information to contact him"
+msgstr "Krijg de klant zijn informatie om hem te contacteren"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:103
+msgid "Drill down to the customer information form by clicking on its name"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:105
+msgid "Change the text (or the email or letter) and adapt to the customer"
+msgstr "Wijzig de tekst (op de e-mail of brief) en pas u aan naar de klant"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:107
+msgid ""
+"Change the colored dot to mark the customer as being a good, normal or bad "
+"debtor"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:110
+msgid "Log a note is you called the customer"
+msgstr "Log een opmerking wanneer u de klant heeft gebeld"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:112
+msgid "Exclude some invoices from the statement table (litigation)"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:114
+msgid "Send an email with the statement"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:116
+msgid ""
+"Print a letter, or send a regular mail (if you installed the Docsaway "
+"integration)"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:119
+msgid ""
+"Plan the next reminder (but it's better to keep in automatic mode so that "
+"Odoo will stick to the follow-up plan of the company)"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:122
+msgid "Drill down to an invoice"
+msgstr "Inzoomen op een factuur"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:124
+msgid ""
+"Change the expected payment date of an invoice (thus, impacting the next "
+"time Odoo will propose you to send a reminder)"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:128
+msgid ""
+"You can force a customer statement, even if Odoo do not proposes you to do "
+"it, because it's not the right date yet. To do this, you should go to the "
+"Aged Receivable report (in the report menu of the Accounting application). "
+"From this report, you can click on a customer to get to his customer "
+"statement."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:135
+msgid "How to exclude an invoice from auto follow up?"
+msgstr "Hoe een factuur uitsluiten van automatische opvolging?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:137
+msgid "To see all **overdue invoices** or **on need of action**,"
+msgstr ""
+"Om alle ** achterstallige facturen ** of ** wanneer er actie nodig is ** te "
+"zien,"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:139
+msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:145
+msgid "Exclude a specific invoice for a specific date"
+msgstr "Sluit een bepaalde factuur uit voor een bepaalde datum"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:147
+msgid ""
+"Odoo can exclude an invoice from follow-ups actions for specific date by "
+"clicking on **Log a Note**, then choose one of the ready options (*one "
+"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
+"required date according to the current date."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:155
+msgid ""
+"Another way to achieve it is the following: click on the required invoice, "
+"then choose **Change expected payment date/note**, then enter a new payment "
+"date and note."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:162
+msgid "Exclude a specific invoice forever"
+msgstr "Sluit een specifieke factuur permanent uit"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:164
+msgid ""
+"Odoo can exclude an invoice for a specific customer by clicking on the "
+"checkbox **Excluded**"
+msgstr ""
+"Odoo kan een factuur uitsluiten voor een specifieke klant door te klikken op"
+" het selectievakje ** Uitgesloten **"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:168
+msgid "If you click on **History**, you can see all follow ups actions."
+msgstr "Als u klikt op **Geschiedenis** kan u alle opvolg acties zien."
 
 #: ../../accounting/receivables/customer_payments/check.rst:3
 msgid "How to register customer payments by checks?"
@@ -11505,6 +11758,128 @@ msgid ""
 "Reporting (check the KPI average debtors days)."
 msgstr ""
 
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:29
+msgid "Get paid with SEPA"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:5
+msgid ""
+"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
+"the European Union for simplification of bank transfers denominated in EURO."
+" SEPA Direct Debit allows you to withdraw money from the bank accounts of "
+"your customers with their approval."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:13
+msgid ""
+"With Odoo, you can record customer mandates, generate an SDD XML file "
+"containing customer payments and upload it in your bank interface. The file "
+"follows the SEPA Direct Debit PAIN.008.001.02 specifications. This is a "
+"well-defined standard that makes consensus among banks."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:21
+msgid ""
+"Go in :menuselection:`Accounting --> Configuration --> Settings` and "
+"activate the SEPA Direct Debit (SDD) Feature. Enter the Creditor Identifier "
+"of your company. This number is provided by your bank."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
+msgid "Direct Debit Mandates"
+msgstr "Incasso mandaten"
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
+msgid ""
+"Before withdrawing money from a customer bank account, your customer has to "
+"sign a mandate. Go in :menuselection:`Accounting --> Sales --> Direct Debit "
+"Mandates` and create a new mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:41
+msgid "SEPA Direct Debit only works between IBAN Bank Accounts."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:43
+msgid ""
+"Once you have entered all the information in the customer mandate, you can "
+"print it and ask your customer to sign it. Once it is done, you can upload "
+"the mandate signed by your customer on the mandate in Odoo."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:50
+msgid "You can now validate the mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:55
+msgid "Let's create an invoice for that customer."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:57
+msgid ""
+"When you will validate this invoice, the payment will be automatically "
+"generated and your invoice will be directly marked as paid."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:61
+msgid ""
+"If you already had some invoices for that customer that could be paid using "
+"that mandate, it's still possible to do it. Go on the invoice, click on "
+"register payment and choose the Sepa Direct Debit as payment method."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:67
+msgid "Generate SDD Files"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:69
+msgid ""
+"You can generate the SDD File with all the customer payments to send to your"
+" bank directly from the accounting dashboard :"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:75
+msgid ""
+"You select the payments in the list that you want to include in your SDD "
+"File, click on action and select \"Generate Direct Debit XML\"."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:81
+msgid ""
+"You can now download the XML file generated by Odoo and upload it in your "
+"bank interface."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:85
+msgid ""
+"You can retrieve all the generated XML by activating the developer mode and "
+"going in :menuselection:`Accounting --> Configuration --> Payments --> SDD "
+"Payment File`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:89
+msgid "Close or revoke a mandate"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:91
+msgid ""
+"The Direct Debit mandate will be closed automatically once the end date "
+"defined on it is reached. However, you can **close** a mandate earlier than "
+"initially planned. To do that, simply go on the mandate and click on the "
+"\"Close\" button.The end date of the mandate will be updated to today's "
+"date. This means you will not be able to pay invoices with an invoice date "
+"superior to this end date. Be careful, once a mandate is closed, it cannot "
+"be reopened."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:99
+msgid ""
+"You can also **revoke** a mandate. In that case, you won't be able to pay "
+"any invoice using that mandate anymore, no matter the invoice date.To do "
+"that, simply go on the mandate and click on the \"Revoke\" button."
+msgstr ""
+
 #: ../../accounting/receivables/customer_payments/recording.rst:3
 msgid "What are the different ways to record a payment?"
 msgstr ""
@@ -11664,310 +12039,3 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments/recording.rst:127
 msgid ":doc:`credit_cards`"
 msgstr ":doc:`credit_cards`"
-
-#: ../../accounting/receivables/getting_paid.rst:3
-msgid "How to get paid?"
-msgstr "Hoe betaald worden?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:3
-msgid "How to automate customer follow-ups with plans?"
-msgstr "Hoe klantopvolgingen automatiseren via plannen?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:5
-msgid ""
-"With the Odoo Accounting application, you get a dynamic aged receivable "
-"report, customer statements and you can easily send them to customers."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:8
-msgid ""
-"If you want to go further in the automation of the credit collection "
-"process, you can use follow-up plans. They will help you automate all the "
-"steps to get paid, by triggering them at the right time: send customer "
-"statements by emails, send regular letter (through the Docsaway "
-"integration), create a task to manually call the customer, etc..."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:14
-msgid "Here is an example of a plan:"
-msgstr "Hier is een voorbeeld van een plan:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "When?"
-msgstr "Wanneer?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "What?"
-msgstr "Wat?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "Who?"
-msgstr "Wie?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "3 days before due date"
-msgstr "3 dagen voor vervaldatum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "Email"
-msgstr "E-mail"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "automated"
-msgstr "geautomatiseerd"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "1 day after due date"
-msgstr "1 dag na vervaldatum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "Email + Regular Letter"
-msgstr "E-mail + Brief"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "15 days after due date"
-msgstr "15 dagen na vervaldatum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "Call the customer"
-msgstr "Bel de klant"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "John Mac Gregor"
-msgstr "John Mac Gregor"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "35 days after due date"
-msgstr "35 dagen na vervaldatum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "Email + Letter + Call"
-msgstr "E-mail + Brief + Telefoon"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "60 days after due date"
-msgstr "60 dagen na vervaldatum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Formal notice"
-msgstr "Formele melding"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Bailiff"
-msgstr "Deurwaarder"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:34
-msgid "Install Reminder Module"
-msgstr "Installeer \"Herinnering\" module"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:36
-msgid ""
-"You must start by activating the feature, using the menu "
-":menuselection:`Configuration --> Settings` of the Accounting application. "
-"From the settings screen, activate the feature **Enable payment follow-up "
-"management**."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:44
-msgid "Define Payment Follow-ups Levels"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:46
-msgid ""
-"To automate customer follow ups, you must configure your follow–up levels "
-"using the menu :menuselection:`Accounting --> Configuration --> Payment "
-"Follow-ups`. You should define one and only one follow-up plan per company."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:50
-msgid ""
-"The levels of follow-up are relative to the due date; when no payment term "
-"is specified, the invoice date will be considered as the due date."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:53
-msgid ""
-"For each level, you should define the number of days and create a note which"
-" will automatically be added into the reminder letter."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:59
-msgid "Odoo defines several actions for every reminder:"
-msgstr "Odoo definieert meerdere acties voor elke herinnering:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:61
-msgid ""
-"**Manual Action:** assign a responsible that will have to call the customer"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:62
-msgid "**Send an Email:** send an email to customer using the provided text"
-msgstr ""
-"**Verzend een e-mail:** verzend een e-mail naar de klant met de voorziene "
-"tekst"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:63
-msgid ""
-"**Send a Letter:** send a letter by regular mail, using the provided note"
-msgstr ""
-"**Verzend een brief:** verzend een brief via reguliere e-mail, met de "
-"voorziene opmerking"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:69
-msgid ""
-"As you need to provide a number of days relative to the due date, you can "
-"use a negative number. As an example, if an invoice is issued the January "
-"1st but the due date is January 20, if you set a reminder 3 days before the "
-"due date, the customer may receive an email in January 17."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:76
-msgid "Doing your weekly follow-ups"
-msgstr "Uw wekelijkse opvolgingen doen"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:78
-msgid ""
-"Once everything is setup, Odoo will prepare follow-up letters and emails "
-"automatically for you. All you have to do is to the menu "
-":menuselection:`Sales --> Customers Statement` in the accounting "
-"application."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:85
-msgid ""
-"Odoo will automatically propose you actions based on the follow-up plan you "
-"defined, invoices to pay and payment received."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:88
-msgid ""
-"You can use this menu every day, once a week or once a month. You do not "
-"risk to send two times the same reminder to your customer. Odoo only "
-"proposes you the action you have to do. If you do it every day, you will "
-"have a few calls to do per day. If you do it once a month, you will have "
-"much more work once you do it."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:94
-msgid ""
-"It's up to you to organize the way you want to work. But it's a good "
-"practice to reconcile your bank statements before launching the follow-ups. "
-"That way, all paid invoices will be reconciled and you will not send a "
-"follow-up letter to a customer that already paid his invoice."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:99
-msgid "From a customer follow-up proposition, you can:"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:101
-msgid "Get the customer information to contact him"
-msgstr "Krijg de klant zijn informatie om hem te contacteren"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:103
-msgid "Drill down to the customer information form by clicking on its name"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:105
-msgid "Change the text (or the email or letter) and adapt to the customer"
-msgstr "Wijzig de tekst (op de e-mail of brief) en pas u aan naar de klant"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:107
-msgid ""
-"Change the colored dot to mark the customer as being a good, normal or bad "
-"debtor"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:110
-msgid "Log a note is you called the customer"
-msgstr "Log een opmerking wanneer u de klant heeft gebeld"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:112
-msgid "Exclude some invoices from the statement table (litigation)"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:114
-msgid "Send an email with the statement"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:116
-msgid ""
-"Print a letter, or send a regular mail (if you installed the Docsaway "
-"integration)"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:119
-msgid ""
-"Plan the next reminder (but it's better to keep in automatic mode so that "
-"Odoo will stick to the follow-up plan of the company)"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:122
-msgid "Drill down to an invoice"
-msgstr "Inzoomen op een factuur"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:124
-msgid ""
-"Change the expected payment date of an invoice (thus, impacting the next "
-"time Odoo will propose you to send a reminder)"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:128
-msgid ""
-"You can force a customer statement, even if Odoo do not proposes you to do "
-"it, because it's not the right date yet. To do this, you should go to the "
-"Aged Receivable report (in the report menu of the Accounting application). "
-"From this report, you can click on a customer to get to his customer "
-"statement."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:135
-msgid "How to exclude an invoice from auto follow up?"
-msgstr "Hoe een factuur uitsluiten van automatische opvolging?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:137
-msgid "To see all **overdue invoices** or **on need of action**,"
-msgstr ""
-"Om alle ** achterstallige facturen ** of ** wanneer er actie nodig is ** te "
-"zien,"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:139
-msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:145
-msgid "Exclude a specific invoice for a specific date"
-msgstr "Sluit een bepaalde factuur uit voor een bepaalde datum"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:147
-msgid ""
-"Odoo can exclude an invoice from follow-ups actions for specific date by "
-"clicking on **Log a Note**, then choose one of the ready options (*one "
-"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
-"required date according to the current date."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:155
-msgid ""
-"Another way to achieve it is the following: click on the required invoice, "
-"then choose **Change expected payment date/note**, then enter a new payment "
-"date and note."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:162
-msgid "Exclude a specific invoice forever"
-msgstr "Sluit een specifieke factuur permanent uit"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:164
-msgid ""
-"Odoo can exclude an invoice for a specific customer by clicking on the "
-"checkbox **Excluded**"
-msgstr ""
-"Odoo kan een factuur uitsluiten voor een specifieke klant door te klikken op"
-" het selectievakje ** Uitgesloten **"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:168
-msgid "If you click on **History**, you can see all follow ups actions."
-msgstr "Als u klikt op **Geschiedenis** kan u alle opvolg acties zien."

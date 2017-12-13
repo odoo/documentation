@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-20 11:50+0200\n"
+"POT-Creation-Date: 2017-12-13 13:31+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: 苏州远鼎 <tiexinliu@126.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -89,11 +89,12 @@ msgstr ""
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:24
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:20
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:31
 #: ../../accounting/receivables/customer_payments/check.rst:39
 #: ../../accounting/receivables/customer_payments/check.rst:103
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:40
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:113
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:31
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:19
 msgid "Configuration"
 msgstr "配置"
 
@@ -687,7 +688,7 @@ msgid ""
 "every 4 hours."
 msgstr "一旦你填写了你的凭证,你的银行订阅将会每4小时进行一次同步。"
 
-#: ../../accounting/bank/misc.rst:3
+#: ../../accounting/bank/misc.rst:3 ../../accounting/payables/misc.rst:3
 #: ../../accounting/payables/misc/employee_expense.rst:187
 msgid "Miscellaneous"
 msgstr "杂项"
@@ -1768,12 +1769,10 @@ msgid "Checks numbering sequence."
 msgstr "支票编号序列。"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-#: ../../accounting/payables/pay/check.rst:0
 msgid "Manual Numbering"
 msgstr "手动编号"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-#: ../../accounting/payables/pay/check.rst:0
 msgid "Check this option if your pre-printed checks are not numbered."
 msgstr "勾选此选项如果你的预先印制支票是没有编号的。"
 
@@ -1876,7 +1875,7 @@ msgid "Localizations"
 msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:3
-msgid "Mexico Localization"
+msgid "Mexico Accounting Localization"
 msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:6
@@ -5489,6 +5488,7 @@ msgid "Invoices"
 msgstr "发票"
 
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:64
+#: ../../accounting/payables/supplier_bills.rst:3
 msgid "Vendor Bills"
 msgstr "供应商帐单"
 
@@ -6326,24 +6326,28 @@ msgid ""
 " just create two lines having the same *Tax on Product*."
 msgstr "对于某些财务状况，有时需要用另外两种税替换一种税，只需用同一个*产品税率*创建两行。"
 
-#: ../../accounting/others/taxes/application.rst:82
+#: ../../accounting/others/taxes/application.rst:80
+msgid "The fiscal positions are not applied on assets and deferred revenues."
+msgstr ""
+
+#: ../../accounting/others/taxes/application.rst:84
 #: ../../accounting/others/taxes/default_taxes.rst:27
 #: ../../accounting/others/taxes/retention.rst:70
 msgid ":doc:`create`"
 msgstr ":doc:`create` "
 
-#: ../../accounting/others/taxes/application.rst:83
+#: ../../accounting/others/taxes/application.rst:85
 #: ../../accounting/others/taxes/default_taxes.rst:29
 msgid ":doc:`taxcloud`"
 msgstr ":doc:`taxcloud`"
 
-#: ../../accounting/others/taxes/application.rst:84
+#: ../../accounting/others/taxes/application.rst:86
 #: ../../accounting/others/taxes/create.rst:70
 #: ../../accounting/others/taxes/default_taxes.rst:31
 msgid ":doc:`tax_included`"
 msgstr ":doc:`tax_included`"
 
-#: ../../accounting/others/taxes/application.rst:85
+#: ../../accounting/others/taxes/application.rst:87
 #: ../../accounting/others/taxes/default_taxes.rst:30
 msgid ":doc:`B2B_B2C`"
 msgstr ":doc:`B2B_B2C`"
@@ -7870,8 +7874,8 @@ msgid "Process overview"
 msgstr "过程概述"
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:3
-msgid "From Invoice to Payment Collection"
-msgstr "从发票到付款收集"
+msgid "From Customer Invoice to Payments Collection"
+msgstr ""
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:5
 msgid ""
@@ -8206,7 +8210,8 @@ msgid ""
 msgstr "举个例子,如果你用永久的会计方法管理库存, 一旦材料发给客户, 应减少“流动资产”。"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:3
-msgid "From Vendor Bills to Payments"
+#: ../../accounting/overview/process_overview/supplier_bill.rst:15
+msgid "From Vendor Bill to Payment"
 msgstr "从供应商账单到付款"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:5
@@ -8223,10 +8228,6 @@ msgid ""
 "the Odoo Purchase application that allows you to control and pre-complete "
 "them automatically based on past purchase orders."
 msgstr "如果你想管理供应商发票, 可使用Odoo采购应用程序, 程序可基于过去的采购订单控制和自动完成发票管理。"
-
-#: ../../accounting/overview/process_overview/supplier_bill.rst:15
-msgid "From Vendor Bill to Payment"
-msgstr "从供应商账单到付款"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:18
 msgid "Record a new vendor bill"
@@ -8414,10 +8415,6 @@ msgstr ":doc:`customer_invoice` "
 #: ../../accounting/payables.rst:3
 msgid "Account Payables"
 msgstr "应付账款"
-
-#: ../../accounting/payables/misc.rst:3
-msgid "Misc"
-msgstr "杂项"
 
 #: ../../accounting/payables/misc/employee_expense.rst:3
 msgid "How to keep track of employee expenses?"
@@ -8850,8 +8847,8 @@ msgid ""
 msgstr "从这个页面上,使用汇总“到期日”功能, 通过数据透视表或图表视图可得到下个月的应付到期额。"
 
 #: ../../accounting/payables/pay.rst:3
-msgid "Pay supplier bills"
-msgstr "支付供应商帐单"
+msgid "Vendor Payments"
+msgstr ""
 
 #: ../../accounting/payables/pay/check.rst:3
 msgid "Pay by Checks"
@@ -8960,54 +8957,14 @@ msgstr "用支票登记付款"
 #: ../../accounting/payables/pay/check.rst:66
 msgid ""
 "To register a payment on a bill, open any supplier bill from the menu "
-":menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is "
+":menuselection:`Purchases --> Vendor Bills`. Once the supplier bill is "
 "validated, you can register a payment. Set the **Payment Method** to "
 "**Check** and validate the payment dialog."
 msgstr ""
-"如需在账单上登记付款,在此点开发票:menuselection:`Purchases --> Supplier Bills`.  "
-"一旦采购发票审核,可登记付款。在对话框内, 将* *支付方式* *设置为 * * 支票* *。"
 
 #: ../../accounting/payables/pay/check.rst:74
 msgid "Explanation of the fields of the payment screen:"
 msgstr "付款界面字段的解释 :"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Has Invoices"
-msgstr "有发票"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Technical field used for usability purposes"
-msgstr "技术字段可使用"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Hide Payment Method"
-msgstr "隐藏付款方式"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"Technical field used to hide the payment method if the selected journal has "
-"only one available which is 'manual'"
-msgstr "当所选的账设置为“手动”, 支付方式的字段被隐藏."
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Code"
-msgstr "代码"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"Technical field used to adapt the interface to the payment type selected."
-msgstr "技术字段根据付款类型来调整。"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid "Check Number"
-msgstr "支票号码"
-
-#: ../../accounting/payables/pay/check.rst:0
-msgid ""
-"The selected journal is configured to print check numbers. If your pre-"
-"printed check paper already has numbers or if the current numbering is "
-"wrong, you can change it in the journal configuration page."
-msgstr "所选的账簿已配置成打印支票编号。如果支票已有了编号或当前编号是错误的,你可在账簿界面去更改设置。"
 
 #: ../../accounting/payables/pay/check.rst:80
 msgid "Try paying a supplier bill with a check"
@@ -9288,6 +9245,7 @@ msgid ""
 msgstr "SEPA,是唯一欧元付款地, 是欧盟的付款倡议简化欧元转帐。SEPA将付款单发给银行以简化转账。"
 
 #: ../../accounting/payables/pay/sepa.rst:10
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:10
 msgid ""
 "SEPA is supported by the banks of the 28 EU member states as well as "
 "Iceland, Norway, Switzerland, Andorra, Monaco and San Marino."
@@ -9452,10 +9410,6 @@ msgstr "用SEPA支付,收款人必须有有效的IBAN和BIC。如果这个提示
 #: ../../accounting/receivables/customer_payments/recording.rst:129
 msgid ":doc:`check`"
 msgstr ":doc:`check` "
-
-#: ../../accounting/payables/supplier_bills.rst:3
-msgid "Supplier Bills"
-msgstr "供应商票据"
 
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:3
 msgid "When should I use supplier bills or purchase receipts?"
@@ -9900,6 +9854,7 @@ msgid "Account Receivables"
 msgstr "应收账款"
 
 #: ../../accounting/receivables/customer_invoices.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:53
 msgid "Customer Invoices"
 msgstr "客户发票"
 
@@ -10303,14 +10258,12 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:25
 msgid ""
-"A payment term may have one line (ex: 21 days) or several lines (10% within "
+"A payment term may have one line (eg: 21 days) or several lines (10% within "
 "3 days and the balance within 21 days). If you create a payment term with "
 "several lines, make sure the latest one is the balance. (avoid doing 50% in "
 "10 days and 50% in 21 days because, with the rounding, it may not compute "
 "exactly 100%)"
 msgstr ""
-"付款条款可能有一行(例如 :21天)或几行(3天内支付10％, 余款在21天内支付)。如果创建的付款条款有多行, 确保最后一行用余额。(避免: "
-"50％在10天内付清, 50％21天付清, 因为有时有小数点, 可能无法做完全100％)"
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:36
 msgid ""
@@ -10885,6 +10838,315 @@ msgstr "退票不同于退款。通常情况下，在客户未付款前可退票
 #: ../../accounting/receivables/customer_payments.rst:3
 msgid "Customer Payments"
 msgstr "客户付款"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:3
+msgid "How to automate customer follow-ups with plans?"
+msgstr "如何自动有计划地跟进客户？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:5
+msgid ""
+"With the Odoo Accounting application, you get a dynamic aged receivable "
+"report, customer statements and you can easily send them to customers."
+msgstr "在会计应用，你会得到一个动态的应收款报表，客户对账表，可发送给客户。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:8
+msgid ""
+"If you want to go further in the automation of the credit collection "
+"process, you can use follow-up plans. They will help you automate all the "
+"steps to get paid, by triggering them at the right time: send customer "
+"statements by emails, send regular letter (through the Docsaway "
+"integration), create a task to manually call the customer, etc..."
+msgstr ""
+"如果你想进一步自动化信用收集，可使用跟踪计划。他们会帮助你自动完成收款所有的步骤：将客户对账单电子邮件给客户，定期发封信(通过docsaway集成)，创建一个任务，手动打电话给客户，等等..."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:14
+msgid "Here is an example of a plan:"
+msgstr "这里是一项计划的例子 :"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "When?"
+msgstr "何时？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "What?"
+msgstr "什么？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "Who?"
+msgstr "谁？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "3 days before due date"
+msgstr "3天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "Email"
+msgstr "电子邮箱"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "automated"
+msgstr "自动的"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "1 day after due date"
+msgstr "1 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "Email + Regular Letter"
+msgstr "电子邮件 + 定期信件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "15 days after due date"
+msgstr "15 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "Call the customer"
+msgstr "致电客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "John Mac Gregor"
+msgstr "John Mac Gregor"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "35 days after due date"
+msgstr "35天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "Email + Letter + Call"
+msgstr "电子邮件 + 信件 + 电话"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "60 days after due date"
+msgstr "60 天后过期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Formal notice"
+msgstr "正式通知"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Bailiff"
+msgstr "Bailiff"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:34
+msgid "Install Reminder Module"
+msgstr "安装提醒模块"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:36
+msgid ""
+"You must start by activating the feature, using the menu "
+":menuselection:`Configuration --> Settings` of the Accounting application. "
+"From the settings screen, activate the feature **Enable payment follow-up "
+"management**."
+msgstr ""
+"你必须先激活功能，使用菜单 :menuselection:`Configuration --> Settings` .  "
+"从设置界面，激活功能**Enable payment follow-up management**."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:44
+msgid "Define Payment Follow-ups Levels"
+msgstr "定义付款追踪等级"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:46
+msgid ""
+"To automate customer follow ups, you must configure your follow–up levels "
+"using the menu :menuselection:`Accounting --> Configuration --> Payment "
+"Follow-ups`. You should define one and only one follow-up plan per company."
+msgstr ""
+"自动化的跟进客户，必须配置, 菜单:`Accounting --> Configuration --> Payment Follow-ups`. "
+"你应该定义一个公司，每个公司只有一个跟进计划。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:50
+msgid ""
+"The levels of follow-up are relative to the due date; when no payment term "
+"is specified, the invoice date will be considered as the due date."
+msgstr "跟进关联到期日；当没有付款条款时，发票日期将视为到期日。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:53
+msgid ""
+"For each level, you should define the number of days and create a note which"
+" will automatically be added into the reminder letter."
+msgstr "对于每一个级别，应定义天数，并创建一个将自动添加到提醒函中的说明。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:59
+msgid "Odoo defines several actions for every reminder:"
+msgstr "Odoo为每个提醒定义了几个行动 :"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:61
+msgid ""
+"**Manual Action:** assign a responsible that will have to call the customer"
+msgstr "* *手动操作：**指定一个电话给客户的负责人"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:62
+msgid "**Send an Email:** send an email to customer using the provided text"
+msgstr " **发送一个邮件 :** 使用所提供的文本发送一封电子邮件给客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:63
+msgid ""
+"**Send a Letter:** send a letter by regular mail, using the provided note"
+msgstr " **发送一个信件 :** 使用提供的备注, 通过定期邮件发送一个信件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:69
+msgid ""
+"As you need to provide a number of days relative to the due date, you can "
+"use a negative number. As an example, if an invoice is issued the January "
+"1st but the due date is January 20, if you set a reminder 3 days before the "
+"due date, the customer may receive an email in January 17."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:76
+msgid "Doing your weekly follow-ups"
+msgstr "每周做的跟进工作"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:78
+msgid ""
+"Once everything is setup, Odoo will prepare follow-up letters and emails "
+"automatically for you. All you have to do is to the menu "
+":menuselection:`Sales --> Customers Statement` in the accounting "
+"application."
+msgstr ""
+"一旦一切设置好，Odoo将自动发送跟进信件和邮件。必须的设置, 在菜单:menuselection:`Sales --> Customers "
+"Statement`."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:85
+msgid ""
+"Odoo will automatically propose you actions based on the follow-up plan you "
+"defined, invoices to pay and payment received."
+msgstr "Odoo会基于定义的跟踪计划自动建议后续行动，收支款项。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:88
+msgid ""
+"You can use this menu every day, once a week or once a month. You do not "
+"risk to send two times the same reminder to your customer. Odoo only "
+"proposes you the action you have to do. If you do it every day, you will "
+"have a few calls to do per day. If you do it once a month, you will have "
+"much more work once you do it."
+msgstr ""
+"你可每天，每周或每月一次使用这个菜单。你不用担心发送多次提醒给客户。Odoo只会提醒必做的工作。如果你每天都这样做，你每天都会有几个电话。如果你一个月做一次，工作会囤积得比较多。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:94
+msgid ""
+"It's up to you to organize the way you want to work. But it's a good "
+"practice to reconcile your bank statements before launching the follow-ups. "
+"That way, all paid invoices will be reconciled and you will not send a "
+"follow-up letter to a customer that already paid his invoice."
+msgstr "由你来决定工作的方式。但运行跟踪行动前, 请先将银行对账单核销。这样，所有的支付发票将被核销，以免给已付款的客户发送催款信。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:99
+msgid "From a customer follow-up proposition, you can:"
+msgstr "通过客户跟进提议, 你可以:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:101
+msgid "Get the customer information to contact him"
+msgstr "取得客户的联系方式并联系他"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:103
+msgid "Drill down to the customer information form by clicking on its name"
+msgstr "点击名字，下拉客户信息表"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:105
+msgid "Change the text (or the email or letter) and adapt to the customer"
+msgstr "更改文本(或电子邮件或信)使之适应客户"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:107
+msgid ""
+"Change the colored dot to mark the customer as being a good, normal or bad "
+"debtor"
+msgstr "更改彩色点标记客户为好、一般或差债务人"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:110
+msgid "Log a note is you called the customer"
+msgstr "将你联系过客户的相关信息记录一下"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:112
+msgid "Exclude some invoices from the statement table (litigation)"
+msgstr "对账单不含这些发票(诉讼)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:114
+msgid "Send an email with the statement"
+msgstr "发送一份账单邮件"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:116
+msgid ""
+"Print a letter, or send a regular mail (if you installed the Docsaway "
+"integration)"
+msgstr "打印一封信, 或发送定期邮件 (如果您安装了 Docsaway 集成)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:119
+msgid ""
+"Plan the next reminder (but it's better to keep in automatic mode so that "
+"Odoo will stick to the follow-up plan of the company)"
+msgstr "计划下次提醒(但最好在自动模式下，Odoo将自动进行公司的跟踪计划)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:122
+msgid "Drill down to an invoice"
+msgstr "深入一张发票"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:124
+msgid ""
+"Change the expected payment date of an invoice (thus, impacting the next "
+"time Odoo will propose you to send a reminder)"
+msgstr "更改发票的预期的付款日期 (因此, 影响下一次 Odoo 建议您发送提醒的时间)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:128
+msgid ""
+"You can force a customer statement, even if Odoo do not proposes you to do "
+"it, because it's not the right date yet. To do this, you should go to the "
+"Aged Receivable report (in the report menu of the Accounting application). "
+"From this report, you can click on a customer to get to his customer "
+"statement."
+msgstr ""
+"你可以查看客户对账单，即使Odoo因为未到日期没有建议你这样做。要做到这一点，去应收账龄表(在会计应用程序下的报表菜单)。从这份报告中，你可以点击一个客户,"
+" 可看到客户对账单。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:135
+msgid "How to exclude an invoice from auto follow up?"
+msgstr "如何从自动催款里面排除发票？"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:137
+msgid "To see all **overdue invoices** or **on need of action**,"
+msgstr "查看所有 **逾期发票** 或 **需要的行动** "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:139
+msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
+msgstr ""
+"转到 :menuselection:`会计(Accounting) -->销售(Sales) -->客户对账单(Customers "
+"Statement)` "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:145
+msgid "Exclude a specific invoice for a specific date"
+msgstr "排除特定日期的特定日期"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:147
+msgid ""
+"Odoo can exclude an invoice from follow-ups actions for specific date by "
+"clicking on **Log a Note**, then choose one of the ready options (*one "
+"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
+"required date according to the current date."
+msgstr ""
+"点击**Log a Note**, 在跟踪计划时可不含这些发票，然后选择一个选项(*一周*，* "
+"两周*，*一个月*，*两个月*)，所以Odoo会根据当前日期计算所需的时间。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:155
+msgid ""
+"Another way to achieve it is the following: click on the required invoice, "
+"then choose **Change expected payment date/note**, then enter a new payment "
+"date and note."
+msgstr "另一种方法也可以实现：点击所需的发票，然后选择**更改预期的付款日期/说明**，然后输入一个新的付款日期和说明。"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:162
+msgid "Exclude a specific invoice forever"
+msgstr "永久的排除特定的发票"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:164
+msgid ""
+"Odoo can exclude an invoice for a specific customer by clicking on the "
+"checkbox **Excluded**"
+msgstr "Odoo 可以为特定客户免开发票 , 通过点击复选框 **排除** "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:168
+msgid "If you click on **History**, you can see all follow ups actions."
+msgstr "如果你点击了 **历史记录** , 你可以看到所有的后续操作。"
 
 #: ../../accounting/receivables/customer_payments/check.rst:3
 msgid "How to register customer payments by checks?"
@@ -11533,6 +11795,128 @@ msgid ""
 "Reporting (check the KPI average debtors days)."
 msgstr "你可以从报告下的执行概要得到你公司的DSO (检查KPI平均债务人天数)"
 
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:29
+msgid "Get paid with SEPA"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:5
+msgid ""
+"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
+"the European Union for simplification of bank transfers denominated in EURO."
+" SEPA Direct Debit allows you to withdraw money from the bank accounts of "
+"your customers with their approval."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:13
+msgid ""
+"With Odoo, you can record customer mandates, generate an SDD XML file "
+"containing customer payments and upload it in your bank interface. The file "
+"follows the SEPA Direct Debit PAIN.008.001.02 specifications. This is a "
+"well-defined standard that makes consensus among banks."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:21
+msgid ""
+"Go in :menuselection:`Accounting --> Configuration --> Settings` and "
+"activate the SEPA Direct Debit (SDD) Feature. Enter the Creditor Identifier "
+"of your company. This number is provided by your bank."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
+msgid "Direct Debit Mandates"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
+msgid ""
+"Before withdrawing money from a customer bank account, your customer has to "
+"sign a mandate. Go in :menuselection:`Accounting --> Sales --> Direct Debit "
+"Mandates` and create a new mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:41
+msgid "SEPA Direct Debit only works between IBAN Bank Accounts."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:43
+msgid ""
+"Once you have entered all the information in the customer mandate, you can "
+"print it and ask your customer to sign it. Once it is done, you can upload "
+"the mandate signed by your customer on the mandate in Odoo."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:50
+msgid "You can now validate the mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:55
+msgid "Let's create an invoice for that customer."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:57
+msgid ""
+"When you will validate this invoice, the payment will be automatically "
+"generated and your invoice will be directly marked as paid."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:61
+msgid ""
+"If you already had some invoices for that customer that could be paid using "
+"that mandate, it's still possible to do it. Go on the invoice, click on "
+"register payment and choose the Sepa Direct Debit as payment method."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:67
+msgid "Generate SDD Files"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:69
+msgid ""
+"You can generate the SDD File with all the customer payments to send to your"
+" bank directly from the accounting dashboard :"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:75
+msgid ""
+"You select the payments in the list that you want to include in your SDD "
+"File, click on action and select \"Generate Direct Debit XML\"."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:81
+msgid ""
+"You can now download the XML file generated by Odoo and upload it in your "
+"bank interface."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:85
+msgid ""
+"You can retrieve all the generated XML by activating the developer mode and "
+"going in :menuselection:`Accounting --> Configuration --> Payments --> SDD "
+"Payment File`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:89
+msgid "Close or revoke a mandate"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:91
+msgid ""
+"The Direct Debit mandate will be closed automatically once the end date "
+"defined on it is reached. However, you can **close** a mandate earlier than "
+"initially planned. To do that, simply go on the mandate and click on the "
+"\"Close\" button.The end date of the mandate will be updated to today's "
+"date. This means you will not be able to pay invoices with an invoice date "
+"superior to this end date. Be careful, once a mandate is closed, it cannot "
+"be reopened."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:99
+msgid ""
+"You can also **revoke** a mandate. In that case, you won't be able to pay "
+"any invoice using that mandate anymore, no matter the invoice date.To do "
+"that, simply go on the mandate and click on the \"Revoke\" button."
+msgstr ""
+
 #: ../../accounting/receivables/customer_payments/recording.rst:3
 msgid "What are the different ways to record a payment?"
 msgstr "有哪些不同的方式来记录付款？"
@@ -11694,316 +12078,3 @@ msgstr "内部银行转款，在仪表板上选择转出的银行，并在付款
 #: ../../accounting/receivables/customer_payments/recording.rst:127
 msgid ":doc:`credit_cards`"
 msgstr ":doc:`credit_cards` "
-
-#: ../../accounting/receivables/getting_paid.rst:3
-msgid "How to get paid?"
-msgstr "如何收款？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:3
-msgid "How to automate customer follow-ups with plans?"
-msgstr "如何自动有计划地跟进客户？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:5
-msgid ""
-"With the Odoo Accounting application, you get a dynamic aged receivable "
-"report, customer statements and you can easily send them to customers."
-msgstr "在会计应用，你会得到一个动态的应收款报表，客户对账表，可发送给客户。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:8
-msgid ""
-"If you want to go further in the automation of the credit collection "
-"process, you can use follow-up plans. They will help you automate all the "
-"steps to get paid, by triggering them at the right time: send customer "
-"statements by emails, send regular letter (through the Docsaway "
-"integration), create a task to manually call the customer, etc..."
-msgstr ""
-"如果你想进一步自动化信用收集，可使用跟踪计划。他们会帮助你自动完成收款所有的步骤：将客户对账单电子邮件给客户，定期发封信(通过docsaway集成)，创建一个任务，手动打电话给客户，等等..."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:14
-msgid "Here is an example of a plan:"
-msgstr "这里是一项计划的例子 :"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "When?"
-msgstr "何时？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "What?"
-msgstr "什么？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "Who?"
-msgstr "谁？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "3 days before due date"
-msgstr "3天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "Email"
-msgstr "电子邮箱"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "automated"
-msgstr "自动的"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "1 day after due date"
-msgstr "1 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "Email + Regular Letter"
-msgstr "电子邮件 + 定期信件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "15 days after due date"
-msgstr "15 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "Call the customer"
-msgstr "致电客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "John Mac Gregor"
-msgstr "John Mac Gregor"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "35 days after due date"
-msgstr "35天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "Email + Letter + Call"
-msgstr "电子邮件 + 信件 + 电话"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "60 days after due date"
-msgstr "60 天后过期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Formal notice"
-msgstr "正式通知"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Bailiff"
-msgstr "Bailiff"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:34
-msgid "Install Reminder Module"
-msgstr "安装提醒模块"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:36
-msgid ""
-"You must start by activating the feature, using the menu "
-":menuselection:`Configuration --> Settings` of the Accounting application. "
-"From the settings screen, activate the feature **Enable payment follow-up "
-"management**."
-msgstr ""
-"你必须先激活功能，使用菜单 :menuselection:`Configuration --> Settings` .  "
-"从设置界面，激活功能**Enable payment follow-up management**."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:44
-msgid "Define Payment Follow-ups Levels"
-msgstr "定义付款追踪等级"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:46
-msgid ""
-"To automate customer follow ups, you must configure your follow–up levels "
-"using the menu :menuselection:`Accounting --> Configuration --> Payment "
-"Follow-ups`. You should define one and only one follow-up plan per company."
-msgstr ""
-"自动化的跟进客户，必须配置, 菜单:`Accounting --> Configuration --> Payment Follow-ups`. "
-"你应该定义一个公司，每个公司只有一个跟进计划。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:50
-msgid ""
-"The levels of follow-up are relative to the due date; when no payment term "
-"is specified, the invoice date will be considered as the due date."
-msgstr "跟进关联到期日；当没有付款条款时，发票日期将视为到期日。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:53
-msgid ""
-"For each level, you should define the number of days and create a note which"
-" will automatically be added into the reminder letter."
-msgstr "对于每一个级别，应定义天数，并创建一个将自动添加到提醒函中的说明。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:59
-msgid "Odoo defines several actions for every reminder:"
-msgstr "Odoo为每个提醒定义了几个行动 :"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:61
-msgid ""
-"**Manual Action:** assign a responsible that will have to call the customer"
-msgstr "* *手动操作：**指定一个电话给客户的负责人"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:62
-msgid "**Send an Email:** send an email to customer using the provided text"
-msgstr " **发送一个邮件 :** 使用所提供的文本发送一封电子邮件给客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:63
-msgid ""
-"**Send a Letter:** send a letter by regular mail, using the provided note"
-msgstr " **发送一个信件 :** 使用提供的备注, 通过定期邮件发送一个信件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:69
-msgid ""
-"As you need to provide a number of days relative to the due date, you can "
-"use a negative number. As an example, if an invoice is issued the January "
-"1st but the due date is January 20, if you set a reminder 3 days before the "
-"due date, the customer may receive an email in January 17."
-msgstr ""
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:76
-msgid "Doing your weekly follow-ups"
-msgstr "每周做的跟进工作"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:78
-msgid ""
-"Once everything is setup, Odoo will prepare follow-up letters and emails "
-"automatically for you. All you have to do is to the menu "
-":menuselection:`Sales --> Customers Statement` in the accounting "
-"application."
-msgstr ""
-"一旦一切设置好，Odoo将自动发送跟进信件和邮件。必须的设置, 在菜单:menuselection:`Sales --> Customers "
-"Statement`."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:85
-msgid ""
-"Odoo will automatically propose you actions based on the follow-up plan you "
-"defined, invoices to pay and payment received."
-msgstr "Odoo会基于定义的跟踪计划自动建议后续行动，收支款项。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:88
-msgid ""
-"You can use this menu every day, once a week or once a month. You do not "
-"risk to send two times the same reminder to your customer. Odoo only "
-"proposes you the action you have to do. If you do it every day, you will "
-"have a few calls to do per day. If you do it once a month, you will have "
-"much more work once you do it."
-msgstr ""
-"你可每天，每周或每月一次使用这个菜单。你不用担心发送多次提醒给客户。Odoo只会提醒必做的工作。如果你每天都这样做，你每天都会有几个电话。如果你一个月做一次，工作会囤积得比较多。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:94
-msgid ""
-"It's up to you to organize the way you want to work. But it's a good "
-"practice to reconcile your bank statements before launching the follow-ups. "
-"That way, all paid invoices will be reconciled and you will not send a "
-"follow-up letter to a customer that already paid his invoice."
-msgstr "由你来决定工作的方式。但运行跟踪行动前, 请先将银行对账单核销。这样，所有的支付发票将被核销，以免给已付款的客户发送催款信。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:99
-msgid "From a customer follow-up proposition, you can:"
-msgstr "通过客户跟进提议, 你可以:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:101
-msgid "Get the customer information to contact him"
-msgstr "取得客户的联系方式并联系他"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:103
-msgid "Drill down to the customer information form by clicking on its name"
-msgstr "点击名字，下拉客户信息表"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:105
-msgid "Change the text (or the email or letter) and adapt to the customer"
-msgstr "更改文本(或电子邮件或信)使之适应客户"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:107
-msgid ""
-"Change the colored dot to mark the customer as being a good, normal or bad "
-"debtor"
-msgstr "更改彩色点标记客户为好、一般或差债务人"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:110
-msgid "Log a note is you called the customer"
-msgstr "将你联系过客户的相关信息记录一下"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:112
-msgid "Exclude some invoices from the statement table (litigation)"
-msgstr "对账单不含这些发票(诉讼)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:114
-msgid "Send an email with the statement"
-msgstr "发送一份账单邮件"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:116
-msgid ""
-"Print a letter, or send a regular mail (if you installed the Docsaway "
-"integration)"
-msgstr "打印一封信, 或发送定期邮件 (如果您安装了 Docsaway 集成)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:119
-msgid ""
-"Plan the next reminder (but it's better to keep in automatic mode so that "
-"Odoo will stick to the follow-up plan of the company)"
-msgstr "计划下次提醒(但最好在自动模式下，Odoo将自动进行公司的跟踪计划)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:122
-msgid "Drill down to an invoice"
-msgstr "深入一张发票"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:124
-msgid ""
-"Change the expected payment date of an invoice (thus, impacting the next "
-"time Odoo will propose you to send a reminder)"
-msgstr "更改发票的预期的付款日期 (因此, 影响下一次 Odoo 建议您发送提醒的时间)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:128
-msgid ""
-"You can force a customer statement, even if Odoo do not proposes you to do "
-"it, because it's not the right date yet. To do this, you should go to the "
-"Aged Receivable report (in the report menu of the Accounting application). "
-"From this report, you can click on a customer to get to his customer "
-"statement."
-msgstr ""
-"你可以查看客户对账单，即使Odoo因为未到日期没有建议你这样做。要做到这一点，去应收账龄表(在会计应用程序下的报表菜单)。从这份报告中，你可以点击一个客户,"
-" 可看到客户对账单。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:135
-msgid "How to exclude an invoice from auto follow up?"
-msgstr "如何从自动催款里面排除发票？"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:137
-msgid "To see all **overdue invoices** or **on need of action**,"
-msgstr "查看所有 **逾期发票** 或 **需要的行动** "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:139
-msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
-msgstr ""
-"转到 :menuselection:`会计(Accounting) -->销售(Sales) -->客户对账单(Customers "
-"Statement)` "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:145
-msgid "Exclude a specific invoice for a specific date"
-msgstr "排除特定日期的特定日期"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:147
-msgid ""
-"Odoo can exclude an invoice from follow-ups actions for specific date by "
-"clicking on **Log a Note**, then choose one of the ready options (*one "
-"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
-"required date according to the current date."
-msgstr ""
-"点击**Log a Note**, 在跟踪计划时可不含这些发票，然后选择一个选项(*一周*，* "
-"两周*，*一个月*，*两个月*)，所以Odoo会根据当前日期计算所需的时间。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:155
-msgid ""
-"Another way to achieve it is the following: click on the required invoice, "
-"then choose **Change expected payment date/note**, then enter a new payment "
-"date and note."
-msgstr "另一种方法也可以实现：点击所需的发票，然后选择**更改预期的付款日期/说明**，然后输入一个新的付款日期和说明。"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:162
-msgid "Exclude a specific invoice forever"
-msgstr "永久的排除特定的发票"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:164
-msgid ""
-"Odoo can exclude an invoice for a specific customer by clicking on the "
-"checkbox **Excluded**"
-msgstr "Odoo 可以为特定客户免开发票 , 通过点击复选框 **排除** "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:168
-msgid "If you click on **History**, you can see all follow ups actions."
-msgstr "如果你点击了 **历史记录** , 你可以看到所有的后续操作。"
