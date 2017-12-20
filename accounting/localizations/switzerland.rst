@@ -1,6 +1,6 @@
-===================================
-Switzerland Accounting Localization
-===================================
+===========
+Switzerland
+===========
 
 ISR (In-payment Slip with Reference number)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
