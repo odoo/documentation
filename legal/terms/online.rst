@@ -310,7 +310,7 @@ services for third-party extension modules of the Software, in addition to the
 regular Upgrade Services.
 
 This optional service is subject to additional fees
-(as described in charges_) and includes the technical adaptation of third-party
+(as described in charges_online_) and includes the technical adaptation of third-party
 modules installed in the Customer's database and their corresponding data in
 order to be compatible with the Target Version. The Customer will receive an
 upgraded version of all installed third-party modules along with the upgraded

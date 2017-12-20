@@ -68,10 +68,11 @@ module "Switzerland - Accounting Reports". For this, you go in
 Once it has been done, you can work on creating new taxes for the
 updated rates.
 
-.. tip:: **Do not suppress or modify the existing taxes** (8.0% and 3.8%).
-You want to keep them since you may have to use both rates for a short
-period of time. Instead, remember to archive them once you have encoded
-all your 2017 transactions.
+.. tip::
+    **Do not suppress or modify the existing taxes** (8.0% and 3.8%).
+    You want to keep them since you may have to use both rates for a short
+    period of time. Instead, remember to archive them once you have encoded
+    all your 2017 transactions.
 
 The creation of such taxes should be done in the following manner:
 
