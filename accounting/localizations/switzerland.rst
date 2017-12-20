@@ -44,3 +44,61 @@ you want.
 
 .. image:: media/switzerland04.png
     :align: center
+
+New 2018 VAT Rates
+~~~~~~~~~~~~~~~~~~
+
+Starting from the 1st January 2018, new reduced VAT rates will be
+applied in Switzerland. The normal 8.0% rate will switch to 7.7% and the
+specific rate for the hotel sector will switch from 3.8% to 3.7%.
+
+How to update your taxes in Odoo Enterprise (SaaS or On Premise)?
+-----------------------------------------------------------------
+
+If you have the V11.1 version, all the work is already been done, you
+don't have to do anything.
+
+If you have started on an earlier version, you first have to update the
+module "Switzerland - Accounting Reports". For this, you go in
+:menuselection:`Apps --> remove the filter "Apps" --> search for "Switzerland - Accounting Reports" --> open the module --> click on "upgrade"`.
+
+.. image:: media/switzerland05.png
+    :align: center
+
+Here are the new taxes to create (you can create them by duplicating the
+existing taxes):
+
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| **Tax Name**                                    | **Rate**   | **Label on Invoice**   | **Tax Group (effective from V10)**   | **Tax Scope**   | **Tag**                                                                   |
++=================================================+============+========================+======================================+=================+===========================================================================+
+| TVA 7.7% sur achat B&S (TN)                     | 7.7%       | 7.7% achat             | TVA 7.7%                             | Purchases       | Switzerland VAT Form: grid 400                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 7.7% sur achat B&S (Incl. TN)               | 7.7%       | 7.7% achat Incl.       | TVA 7.7%                             | Purchases       | Switzerland VAT Form: grid 400                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 7.7% sur invest. et autres ch. (TN)         | 7.7%       | 7.7% invest.           | TVA 7.7%                             | Purchases       | Switzerland VAT Form: grid 405                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 7.7% sur invest. et autres ch. (Incl. TN)   | 7.7%       | 7.7% invest. Incl.     | TVA 7.7%                             | Purchases       | Switzerland VAT Form: grid 405                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 3.7% sur achat B&S (TS)                     | 3.7%       | 3.7% achat             | TVA 3.7%                             | Purchases       | Switzerland VAT Form: grid 400                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 3.7% sur achat B&S (Incl. TS)               | 3.7%       | 3.7% achat Incl.       | TVA 3.7%                             | Purchases       | Switzerland VAT Form: grid 400                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 3.7% sur invest. et autres ch. (TS)         | 3.7%       | 3.7% invest            | TVA 3.7%                             | Purchases       | Switzerland VAT Form: grid 405                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA 3.7% sur invest. et autres ch. (Incl. TS)   | 3.7%       | 3.7% invest Incl.      | TVA 3.7%                             | Purchases       | Switzerland VAT Form: grid 405                                            |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA due a 7.7% (TN)                             | 7.7%       | 7.7%                   | TVA 7.7%                             | Sales           | Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax   |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA due à 7.7% (Incl. TN)                       | 7.7%       | 7.7% Incl.             | TVA 7.7%                             | Sales           | Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax   |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA due à 3.7% (TS)                             | 3.7%       | 3.7%                   | TVA 3.7%                             | Sales           | Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax   |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+| TVA due a 3.7% (Incl. TS)                       | 3.7%       | 3.7% Incl.             | TVA 3.7%                             | Sales           | Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax   |
++-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
+
+.. tip:: **Do not suppress or modify the existing taxes** (8.0% and 3.8%).
+You just have to archive them once you have encoded all your 2017
+transactions.
+
+If you have questions or remarks, please contact our support using
+odoo.com/help.
