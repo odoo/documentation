@@ -45,8 +45,8 @@ you want.
 .. image:: media/switzerland04.png
     :align: center
 
-New 2018 VAT Rates
-~~~~~~~~~~~~~~~~~~
+Updated VAT for January 2018
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Starting from the 1st January 2018, new reduced VAT rates will be
 applied in Switzerland. The normal 8.0% rate will switch to 7.7% and the
@@ -65,8 +65,32 @@ module "Switzerland - Accounting Reports". For this, you go in
 .. image:: media/switzerland05.png
     :align: center
 
-Here are the new taxes to create (you can create them by duplicating the
-existing taxes):
+Once it has been done, you can work on creating new taxes for the
+updated rates.
+
+.. tip:: **Do not suppress or modify the existing taxes** (8.0% and 3.8%).
+You want to keep them since you may have to use both rates for a short
+period of time. Instead, remember to archive them once you have encoded
+all your 2017 transactions.
+
+The creation of such taxes should be done in the following manner:
+
+-  **Purchase taxes**: copy the origin tax, change its name, label on
+   invoice, rate and tax group (effective from v10 only)
+
+-  **Sale taxes**: copy the origin tax, change its name, label on
+   invoice, rate and tax group (effective from v10 only). Since the
+   vat report now shows the details for old and new rates, you
+   should also set the tags accordingly to
+
+   -  For 7.7% taxes: Switzerland VAT Form: grid 302 base, Switzerland
+      VAT Form: grid 302 tax
+
+   -  For 3.7% taxes: Switzerland VAT Form: grid 342 base, Switzerland
+      VAT Form: grid 342 tax
+
+You'll find below, as examples, the correct configuration for all taxes
+included in Odoo by default
 
 +-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
 | **Tax Name**                                    | **Rate**   | **Label on Invoice**   | **Tax Group (effective from V10)**   | **Tax Scope**   | **Tag**                                                                   |
@@ -95,10 +119,6 @@ existing taxes):
 +-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
 | TVA due a 3.7% (Incl. TS)                       | 3.7%       | 3.7% Incl.             | TVA 3.7%                             | Sales           | Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax   |
 +-------------------------------------------------+------------+------------------------+--------------------------------------+-----------------+---------------------------------------------------------------------------+
-
-.. tip:: **Do not suppress or modify the existing taxes** (8.0% and 3.8%).
-You just have to archive them once you have encoded all your 2017
-transactions.
 
 If you have questions or remarks, please contact our support using
 odoo.com/help.
