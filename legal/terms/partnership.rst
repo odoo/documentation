@@ -290,7 +290,7 @@ advertisements or other public announcements.
 In particular, PARTNER accepts to be mentioned, and that PARTNER's logo and trademark may used for
 this purpose only, in the official list of the ODOO partners.
 
-.. _no_soliciting:
+.. _no_soliciting_partnership:
 
 8.4 No Soliciting or Hiring
 ---------------------------
