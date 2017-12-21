@@ -1,10 +1,10 @@
-==========================
-Making my Own Localization
-==========================
+=================================
+Create an Accounting Localization
+=================================
 
 .. warning::
 
-    This tutorial requires knownledges about how to build a module in Odoo.
+    This tutorial requires technical knowledge about how to build a module in Odoo.
 
 Building a localization module
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -29,8 +29,8 @@ Usually located in the ``data`` folder, it must be loaded at the very last in th
     If the *.yml* file is missing, the right chart of accounts won't be loaded on time!
 
 
-Configuring my own Chart of Accounts?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuring my own Chart of Accounts
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 First of all, before I proceed, we need to talk about the templates. A template is a record that allows replica of itself.
 This mechanism is needed when working in multi-companies. For example, the creation of a new account is done using the ``account.account.template`` model.
