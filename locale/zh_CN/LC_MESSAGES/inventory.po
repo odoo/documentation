@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-21 09:44+0100\n"
+"POT-Creation-Date: 2017-12-22 15:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: 苏州远鼎 <tiexinliu@126.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -662,10 +662,12 @@ msgid ""
 msgstr " **最小库存规则** 和 **按订单补货** 有着同样的结果但是却有不同的规则。依赖于生产以及发货的策略, 我们可以选择使用它。"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:10
+#: ../../inventory/settings/products/strategies.rst:10
 msgid "Terminology"
 msgstr "术语"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:13
+#: ../../inventory/settings/products/strategies.rst:13
 msgid "Minimum stock rule"
 msgstr "最小库存规则"
 
@@ -682,6 +684,8 @@ msgstr ""
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:22
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:56
+#: ../../inventory/settings/products/strategies.rst:22
+#: ../../inventory/settings/products/strategies.rst:58
 msgid "Make to Order"
 msgstr "按单补货"
 
@@ -720,6 +724,7 @@ msgstr ""
 #: ../../inventory/routes/strategies/removal.rst:18
 #: ../../inventory/settings/products/packages.rst:17
 #: ../../inventory/settings/products/packages.rst:66
+#: ../../inventory/settings/products/strategies.rst:30
 #: ../../inventory/settings/products/uom.rst:17
 #: ../../inventory/settings/products/variants.rst:114
 #: ../../inventory/settings/warehouses/location_creation.rst:6
@@ -733,6 +738,7 @@ msgid "Configuration"
 msgstr "配置"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:33
+#: ../../inventory/settings/products/strategies.rst:33
 msgid "Minimum stock rules"
 msgstr "最小库存规则"
 
@@ -747,14 +753,26 @@ msgstr ""
 "再定点规则(Reordering Rule)` 的下拉菜单中。然后点击 **创建** 去设置给定产品最小和最大库存数值。"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Active"
+msgstr "有效"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
 "If the active field is set to False, it will allow you to hide the "
 "orderpoint without removing it."
 msgstr "如果没有选中“可用”字段，那么将隐藏需求单记录且不会删除它。"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Product Unit of Measure"
+msgstr "单位"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid "Default Unit of Measure used for all stock operation."
 msgstr "所有库存作业的默认计量单位"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Procurement Group"
+msgstr "补货组"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
@@ -764,11 +782,19 @@ msgid ""
 msgstr "通过此订购点创建的移动将放在此补货组中。如果没有被提供，由补货规则生成的移动将被组合到一个大拣货。"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Minimum Quantity"
+msgstr "最小数量"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
 "When the virtual stock goes below the Min Quantity specified for this field,"
 " Odoo generates a procurement to bring the forecasted quantity to the Max "
 "Quantity."
 msgstr "当虚拟库存小于指定的最小数量，Odoo生成补货将预测数量带到最大数量。"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Maximum Quantity"
+msgstr "最大数量"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
@@ -778,10 +804,18 @@ msgid ""
 msgstr "当虚拟库存低于最小数量， Odoo生成补货将预测数量带到最大数量。"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Quantity Multiple"
+msgstr "数量倍数"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
 "The procurement quantity will be rounded up to this multiple.  If it is 0, "
 "the exact quantity will be used."
 msgstr "补货数量会翻转到此倍数。如果它是0, 那么确切的数量会被使用。"
+
+#: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
+msgid "Lead Time"
+msgstr "前置时间"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:0
 msgid ""
@@ -814,10 +848,12 @@ msgid "On the product form, under **Inventory**, click on **Make To Order**."
 msgstr "在产品表单信息的 **库存** 页面, 点击 **按单补货** "
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:68
+#: ../../inventory/settings/products/strategies.rst:70
 msgid "Choice between the two options"
 msgstr "选择两个选项其中一个"
 
 #: ../../inventory/management/adjustment/min_stock_rule_vs_mto.rst:70
+#: ../../inventory/settings/products/strategies.rst:72
 msgid ""
 "The choice between the two options is thus dependent of your inventory "
 "strategy. If you prefer to have a buffer and always have at least a minimum "
@@ -6374,6 +6410,72 @@ msgstr ":doc:`usage` "
 #: ../../inventory/settings/products/usage.rst:71
 msgid ":doc:`uom`"
 msgstr ":doc:`uom` "
+
+#: ../../inventory/settings/products/strategies.rst:3
+msgid "How to select the right replenishment strategy"
+msgstr "如何选择正确的补货策略"
+
+#: ../../inventory/settings/products/strategies.rst:5
+msgid ""
+"Minimum Stock rules and Make to Order have similar consequences but "
+"different rules. They should be used depending on your manufacturing and "
+"delivery strategies."
+msgstr "最小库存规则和按单补货的结果相似，但规则不同，应根据你的制造和发货策略来选用。"
+
+#: ../../inventory/settings/products/strategies.rst:15
+msgid ""
+"Minimum Stock rules are used to ensure that you always have the minimum "
+"amount of a product in stock in order to manufacture your products and/or "
+"answer to your customer needs. When the stock level of a product reaches its"
+" minimum the system will automatically generate a procurement order with the"
+" quantity needed to reach the maximum stock level."
+msgstr ""
+"最小库存规则用于确保你已经有了制造和/或响应消费者需求的最小库存量。当某产品的库存水平到达最小量时，系统自动生成一个采购订单，该订单的数量能满足最小库存量。"
+
+#: ../../inventory/settings/products/strategies.rst:24
+msgid ""
+"The Make to Order function will trigger a Purchase Order of the amount of "
+"the Sales Order related to the product. The system will **not** check the "
+"current stock. This means that a draft purchase order will be generated "
+"regardless of the quantity on hand of the product."
+msgstr "按单补货功能将触发与产品相关的销售订单的采购单。系统**不会**检查现有库存。意味着无论现有产品的数量是多少，都会生成一个采购订单草稿。"
+
+#: ../../inventory/settings/products/strategies.rst:35
+msgid ""
+"The Minimum Stock Rules configuration is available through your Inventory "
+"module. In the Inventory Control menu select \"Reordering Rule\" in the drop"
+" down menu. There, click on \"Create\" to set minimum and maximum stock "
+"values for a given product."
+msgstr "最小库存规则可通过库存模块进行配置。在“库存控制”下拉菜单中选择\"再次订购规则\" ，然后点击\"创建\"设置某给定产品的最小与最大库存值。"
+
+#: ../../inventory/settings/products/strategies.rst:44
+msgid ""
+"Show tooltips for \"minimum quantity\", \"maximum quantity\" and \"quantity "
+"multiple\" fields"
+msgstr ""
+
+#: ../../inventory/settings/products/strategies.rst:47
+msgid ""
+"Then, click on your product to access the related product form and, on the "
+"\"Inventory submenu\", do not forget to select a supplier."
+msgstr "然后点击产品，在\"库存子菜单\"访问相关产品的表单。不要忘记选择一个供应商。"
+
+#: ../../inventory/settings/products/strategies.rst:54
+msgid ""
+"Don't forget to select the right product type. A consumable can not be "
+"stocked and will thus not be accounted for in the stock valuation."
+msgstr "别忘记选择正确的产品类别。消耗品无法贮存，不可计入库存盘点数。"
+
+#: ../../inventory/settings/products/strategies.rst:60
+msgid ""
+"The Make to Order configuration is available on your product form through "
+"your :menuselection:`Inventory --> Inventory control --> Products` (or any "
+"other module where products are available)."
+msgstr "可在产品表单中配置按单补货 :menuselection:`库存 --> 库存控制 --> 产品（或在产品可用的任一其他模块中配置）。"
+
+#: ../../inventory/settings/products/strategies.rst:64
+msgid "On the product form, under Inventory, click on \"Make To Order\"."
+msgstr "在产品表单的库存项下，点击\"按单补货\"。"
 
 #: ../../inventory/settings/products/uom.rst:3
 msgid "How to use different units of measure?"
