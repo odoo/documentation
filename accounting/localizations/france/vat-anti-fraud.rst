@@ -2,11 +2,11 @@
 Get the VAT anti-fraud certification with Odoo
 ==============================================
 
-As of January 1st 2018, a new anti-fraud legislation will come into effect 
+As of January 1st 2018, a new anti-fraud legislation comes into effect 
 in France and DOM-TOM. This new legislation stipulates certain criteria 
 concerning the inalterability, security, storage and archiving of sales data. 
 These legal requirements are implemented in Odoo, version 9 onward, 
-through an add-on.
+through an add-on and a certificate of conformity to download.
 
 Is my company required to use an anti-fraud software?
 =====================================================
@@ -23,9 +23,10 @@ Get certified with Odoo
 =======================
 Getting compliant with Odoo is vey easy.
 
-Your company is requested by the tax administration to deliver a Certificate 
-of Conformity testifying that your software complies with the anti-fraud 
-legislation. This certificate is granted by Odoo SA to Odoo Enterprise users. 
+Your company is requested by the tax administration to deliver a certificate 
+of conformity testifying that your software complies with the anti-fraud 
+legislation. This certificate is granted by Odoo SA to Odoo Enterprise users 
+`here <https://www.odoo.com/my/contract/french-certification/>`__. 
 If you use Odoo Community, you should 
 `upgrade to Odoo Enterprise <https://www.odoo.com/documentation/online/setup/enterprise.html>`__
 or contact your Odoo service provider. 
@@ -38,19 +39,28 @@ To get the certification just follow the following steps:
 * Install the anti-fraud add-on fitting your Odoo environment from the 
   *Apps* menu:
 
-  * France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis) (if you use Odoo Point of Sale)
+  * if you use Odoo Point of Sale: *l10n_fr_pos_cert*: France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)
 
-  * France - VAT Anti-Fraud Certification (CGI 286 I-3 bis) (in any other case)
+  * in any other case: *l10n_fr_certification*: France - VAT Anti-Fraud Certification (CGI 286 I-3 bis)
 * Make sure a country is set on your company, otherwise your entries won’t be 
   encrypted for the inalterability check. To edit your company’s data, 
   go to :menuselection:`Settings --> Users & Companies --> Companies`. 
   Select a country from the list; Do not create a new country.
-* Download the mandatory Certificate of Conformity delivered by Odoo SA from `here <https://www.odoo.com/my/home/french-certification>`__.
+* Download the mandatory certificate of conformity delivered by Odoo SA `here <https://www.odoo.com/my/contract/french-certification/>`__.
 
-.. note:: If case you run Odoo on-premise, you should update your 
-  installation and restart your server to get such new add-ons available 
-  in your Apps repository. For any issue you can still download the
-  modules from `Odoo's Apps store <https://www.odoo.com/apps>`__.
+.. note:: * To get the module available in any system created before 
+   December 18th 2017, you should update the modules list.
+   To do so, activate the developer mode from the *Settings* menu.
+   Then go to the *Apps* menu and press *Update Modules List* in the top-menu.
+ * In case you run Odoo on-premise, you need to update your installation 
+   and restart your server beforehand.
+ * If you have installed the initial version of the anti-fraud add-on
+   (prior to December 18th 2017), you need to update it.
+   The add-on's name was *France - Accounting - Certified CGI 286 I-3 bis*.
+   After an update of the modules list, search for 
+   the updated module in *Apps*, select it and click *Upgrade*. 
+   Finally, make sure the following add-on *l10n_fr_sale_closing* 
+   is installed.
 
 Anti-fraud features of Odoo
 ===========================
