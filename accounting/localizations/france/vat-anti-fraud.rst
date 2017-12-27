@@ -6,7 +6,7 @@ As of January 1st 2018, a new anti-fraud legislation comes into effect
 in France and DOM-TOM. This new legislation stipulates certain criteria 
 concerning the inalterability, security, storage and archiving of sales data. 
 These legal requirements are implemented in Odoo, version 9 onward, 
-through an add-on and a certificate of conformity to download.
+through a module and a certificate of conformity to download.
 
 Is my company required to use an anti-fraud software?
 =====================================================
@@ -21,7 +21,7 @@ VAT and therefore are not affected.
 
 Get certified with Odoo
 =======================
-Getting compliant with Odoo is vey easy.
+Getting compliant with Odoo is very easy.
 
 Your company is requested by the tax administration to deliver a certificate 
 of conformity testifying that your software complies with the anti-fraud 
@@ -30,13 +30,12 @@ legislation. This certificate is granted by Odoo SA to Odoo Enterprise users
 If you use Odoo Community, you should 
 `upgrade to Odoo Enterprise <https://www.odoo.com/documentation/online/setup/enterprise.html>`__
 or contact your Odoo service provider. 
-`Get the certificate here <https://www.odoo.com/my/home/french-certification>`__.
 
 In case of non-conformity, your company risks a fine of €7,500.
 
 To get the certification just follow the following steps:
 
-* Install the anti-fraud add-on fitting your Odoo environment from the 
+* Install the anti-fraud module fitting your Odoo environment from the 
   *Apps* menu:
 
   * if you use Odoo Point of Sale: *l10n_fr_pos_cert*: France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)
@@ -48,23 +47,23 @@ To get the certification just follow the following steps:
   Select a country from the list; Do not create a new country.
 * Download the mandatory certificate of conformity delivered by Odoo SA `here <https://www.odoo.com/my/contract/french-certification/>`__.
 
-.. note:: * To get the module available in any system created before 
+.. note:: * To install the module in any system created before 
    December 18th 2017, you should update the modules list.
    To do so, activate the developer mode from the *Settings* menu.
    Then go to the *Apps* menu and press *Update Modules List* in the top-menu.
  * In case you run Odoo on-premise, you need to update your installation 
    and restart your server beforehand.
- * If you have installed the initial version of the anti-fraud add-on
+ * If you have installed the initial version of the anti-fraud module
    (prior to December 18th 2017), you need to update it.
-   The add-on's name was *France - Accounting - Certified CGI 286 I-3 bis*.
+   The module's name was *France - Accounting - Certified CGI 286 I-3 bis*.
    After an update of the modules list, search for 
    the updated module in *Apps*, select it and click *Upgrade*. 
-   Finally, make sure the following add-on *l10n_fr_sale_closing* 
+   Finally, make sure the following module *l10n_fr_sale_closing* 
    is installed.
 
-Anti-fraud features of Odoo
-===========================
-The anti-fraud add-on introduces the following features:
+Anti-fraud features
+===================
+The anti-fraud module introduces the following features:
 
 * **Inalterability**: deactivation of all the ways to cancel or modify 
   key data of POS orders, invoices and journal entries;
@@ -88,7 +87,7 @@ upon validation.
 This number (or hash) is calculated from the key data of the document as 
 well as from the hash of the precedent documents.
 
-The add-on introduces an interface to test the data inalterability. 
+The module introduces an interface to test the data inalterability. 
 If any information is modified on a document after its validation, 
 the test will fail. The algorithm recomputes all the hashes and compares them 
 against the initial ones. In case of failure, the system points out the first 
@@ -118,7 +117,7 @@ Invoicing and Accounting apps.
 
  * POS orders are posted as journal entries at the closing of the POS session. 
    Closing a POS session can be done anytime. 
-   To prompt users to do it on a daily basis, the add-on prevents from resuming 
+   To prompt users to do it on a daily basis, the module prevents from resuming 
    a session opened more than 24 hours ago. 
    Such a session must be closed before selling again.
 
@@ -143,7 +142,7 @@ due diligence. It is not permitted to modify the source code which guarantees
 the inalterability of data.
  
 Odoo absolves itself of all and any responsibility in case of changes 
-in the add-on’s functions caused by 3rd party applications not certified by Odoo.
+in the module’s functions caused by 3rd party applications not certified by Odoo.
 
 
 More Information
