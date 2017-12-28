@@ -9,6 +9,5 @@ Products
    products/uom
    products/variants
    products/usage
-   products/packages
    products/strategies
 
