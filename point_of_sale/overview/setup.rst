@@ -177,9 +177,9 @@ Image building process
 ----------------------
 
 We generate the official POSBox images using the scripts in
-https://github.com/odoo/odoo/tree/8.0/addons/point_of_sale/tools/posbox. More
+https://github.com/odoo/odoo/tree/11.0/addons/point_of_sale/tools/posbox. More
 specifically, we run 
-`posbox_create_image.sh <https://github.com/odoo/odoo/blob/8.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
+`posbox_create_image.sh <https://github.com/odoo/odoo/blob/11.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
 This builds an image
 called ``posbox.img``, which we zip and upload to `nightly.odoo.com <https://nightly.odoo.com>`_
 for users to download.
@@ -330,7 +330,7 @@ hardware drivers are implemented as Odoo modules. Those modules are
 all prefixed with ``hw_*`` and they are the only modules that are
 running on the POSBox. Odoo is only used for the framework it
 provides. No business data is processed or stored on the POSBox. The
-Odoo instance is a shallow git clone of the ``8.0`` branch.
+Odoo instance is a shallow git clone of the ``11.0`` branch.
 
 The root partition on the POSBox is mounted read-only, ensuring that
 we don't wear out the SD card by writing to it too much. It also

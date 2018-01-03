@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-20 11:50+0200\n"
+"POT-Creation-Date: 2017-12-22 15:27+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: RGB Consulting <odoo@rgbconsulting.com>, 2017\n"
+"Last-Translator: Inigo Zuluaga <inigo_zuluaga@yahoo.es>, 2017\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -96,11 +96,12 @@ msgstr ""
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:24
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:20
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:31
 #: ../../accounting/receivables/customer_payments/check.rst:39
 #: ../../accounting/receivables/customer_payments/check.rst:103
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:40
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:113
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:31
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:19
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -813,7 +814,7 @@ msgstr ""
 "Una vez que usted llenó con sus tarjetas, sus entradas bancarias se "
 "sincronizarán cada 4 horas."
 
-#: ../../accounting/bank/misc.rst:3
+#: ../../accounting/bank/misc.rst:3 ../../accounting/payables/misc.rst:3
 #: ../../accounting/payables/misc/employee_expense.rst:187
 msgid "Miscellaneous"
 msgstr "Miscelánea"
@@ -1695,6 +1696,14 @@ msgstr ""
 "compañía en las preferencias de su usuario para poder agregar, editar o "
 "borrar cuentas bancarias de otra compañía."
 
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid "ABA/Routing"
+msgstr ""
+
+#: ../../accounting/bank/setup/create_bank_account.rst:0
+msgid "American Bankers Association Routing Number"
+msgstr ""
+
 #: ../../accounting/bank/setup/create_bank_account.rst:49
 msgid "View *Bank Account* in our Online Demonstration"
 msgstr "Vea **Cuenta Bancaria** en nuestra Demostración En Línea"
@@ -1977,6 +1986,14 @@ msgstr ""
 " puede ser configurada también como la moneda del diario"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Active"
+msgstr "Activo"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Set active to false to hide the Journal without removing it."
+msgstr "Establezca active a false para ocultar el diario sin eliminarlo."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Type"
 msgstr "Tipo"
@@ -2002,6 +2019,18 @@ msgid "Select 'General' for miscellaneous operations journals."
 msgstr "Seleccioina \"General\" para operaciones misceláneas de registros."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Use in Point of Sale"
+msgstr ""
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Check this box if this journal define a payment method that can be used in a"
+" point of sale."
+msgstr ""
+"Marca esta casilla de selección si este diario define un método de pago que "
+"puede ser utilizado en el punto de venta."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Company"
 msgstr "Compañía"
 
@@ -2018,16 +2047,12 @@ msgid "The journal entries of this journal will be named using this prefix."
 msgstr "Los asientos de este diario será nombrados usando este prefijo."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Dedicated Refund Sequence"
-msgstr "Secuencia de factura rectificativa dedicada"
+msgid "Next Number"
+msgstr "Próximo número"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Check this box if you don't want to share the same sequence for invoices and"
-" refunds made from this journal"
-msgstr ""
-"Marque esta casilla si no quiere compartir la misma secuencia para facturas "
-"y facturas rectificativas hechas desde este diario"
+msgid "The next sequence number will be used for the next invoice."
+msgstr "El siguiente número de secuencia se usará para la próxima factura."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Entry Sequence"
@@ -2042,16 +2067,37 @@ msgstr ""
 "asientos de este diario."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Refund Entry Sequence"
-msgstr "Secuencia de asiento rectificativo"
+msgid "Dedicated Credit Note Sequence"
+msgstr "Secuencia de notas de crédito dedicada"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid ""
-"This field contains the information related to the numbering of the refund "
-"entries of this journal."
+"Check this box if you don't want to share the same sequence for invoices and"
+" credit notes made from this journal"
 msgstr ""
-"Este campo contiene la información relativa a la numeración de los asientos "
-"rectificativos de este diario."
+"Marque esta casilla si no desea compartir la misma secuencia de facturas y "
+"notas de crédito de este diario"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Credit Notes: Next Number"
+msgstr "Notas de crédito: Número siguiente"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "The next sequence number will be used for the next credit note."
+msgstr ""
+"El siguiente número de secuencia se usará para la siguiente nota de crédito."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Credit Note Entry Sequence"
+msgstr "Secuencia de entradas de nota de crédito"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"This field contains the information related to the numbering of the credit "
+"note entries of this journal."
+msgstr ""
+"Este campo contiene la información relacionada con la numeración de las "
+"entradas de la nota de crédito de este diario."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Default Debit Account"
@@ -2082,28 +2128,43 @@ msgid "Debit Methods"
 msgstr "Métodos de débito"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Means of payment for collecting money. Odoo modules offer various payments "
-"handling facilities, but you can always use the 'Manual' payment method in "
-"order to manage payments outside of the software."
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Manual: Get paid by cash, check or any other method outside of Odoo."
 msgstr ""
-"Medios de pago para recolectar dinero. Los módulos de Odoo ofrecen varias "
-"facilidades de pago, pero usted siempre puede usar el método de pago "
-"'Manual' para gestionar pagos por fuera del software."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Electronic: Get paid automatically through a payment acquirer by requesting "
+"a transaction on a card saved by the customer when buying or subscribing "
+"online (payment token)."
+msgstr ""
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Batch Deposit: Encase several customer checks at once by generating a batch "
+"deposit to submit to your bank. When encoding the bank statement in Odoo,you"
+" are suggested to reconcile the transaction with the batch deposit. Enable "
+"this option from the settings."
+msgstr ""
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Payment Methods"
 msgstr "Métodos de pago"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Means of payment for sending money. Odoo modules offer various payments "
-"handling facilities, but you can always use the 'Manual' payment method in "
-"order to manage payments outside of the software."
+msgid "Manual:Pay bill by cash or any other method outside of Odoo."
 msgstr ""
-"Medios de pago para enviar dinero. Los módulos de Odoo ofrecen varias "
-"facilidades de pago, pero usted siempre puede usar el método de pago "
-"'Manual' para gestionar pagos por fuera del software."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Check:Pay bill by check and print it from Odoo."
+msgstr ""
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit "
+"to your bank. Enable this option from the settings."
+msgstr ""
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Group Invoice Lines"
@@ -2188,16 +2249,20 @@ msgid "Sequence number of the next printed check."
 msgstr "Número de secuencia del próximo cheque impreso."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Active in Point of Sale"
-msgstr "Activo en Punto de Venta"
+msgid "Creation of bank statement"
+msgstr "Creación de extracto bancario"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Check this box if this journal define a payment method that can be used in a"
-" point of sale."
+msgid "This field is used for the online synchronization:"
 msgstr ""
-"Marca esta casilla de selección si este diario define un método de pago que "
-"puede ser utilizado en el punto de venta."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "depending on the option selected, newly fetched transactions"
+msgstr ""
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "will be put inside previous statement or in a new one"
+msgstr ""
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Amount Authorized Difference"
@@ -2290,9 +2355,289 @@ msgstr ""
 msgid "Localizations"
 msgstr "Localizaciones"
 
+#: ../../accounting/localizations/france.rst:3
+msgid "France"
+msgstr "Francia"
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:3
+msgid "Get the VAT anti-fraud certification with Odoo"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:5
+msgid ""
+"As of January 1st 2018, a new anti-fraud legislation will come into effect "
+"in France and DOM-TOM. This new legislation stipulates certain criteria "
+"concerning the inalterability, security, storage and archiving of sales "
+"data. These legal requirements are implemented in Odoo, version 9 onward, "
+"through an add-on."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:12
+msgid "Is my company required to use an anti-fraud software?"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:13
+msgid ""
+"Your company is required to use an anti-fraud cash register software like "
+"Odoo (CGI art. 286, I. 3° bis) if:"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:16
+msgid "You are taxable (not VAT exempt) in France or any DOM-TOM,"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:17
+msgid "Some of your customers are private individuals (B2C)."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:19
+msgid ""
+"This rule applies to any company size. Auto-entrepreneurs are exempted from "
+"VAT and therefore are not affected."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:23
+msgid "Get certified with Odoo"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:24
+msgid "Getting compliant with Odoo is vey easy."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:26
+msgid ""
+"Your company is requested by the tax administration to deliver a Certificate"
+" of Conformity testifying that your software complies with the anti-fraud "
+"legislation. This certificate is granted by Odoo SA to Odoo Enterprise "
+"users. If you use Odoo Community, you should `upgrade to Odoo Enterprise "
+"<https://www.odoo.com/documentation/online/setup/enterprise.html>`__ or "
+"contact your Odoo service provider. `Get the certificate here "
+"<https://www.odoo.com/my/home/french-certification>`__."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:34
+msgid "In case of non-conformity, your company risks a fine of €7,500."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:36
+msgid "To get the certification just follow the following steps:"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:38
+msgid ""
+"Install the anti-fraud add-on fitting your Odoo environment from the *Apps* "
+"menu:"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:41
+msgid ""
+"France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis) "
+"(if you use Odoo Point of Sale)"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:43
+msgid ""
+"France - VAT Anti-Fraud Certification (CGI 286 I-3 bis) (in any other case)"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:44
+msgid ""
+"Make sure a country is set on your company, otherwise your entries won’t be "
+"encrypted for the inalterability check. To edit your company’s data, go to "
+":menuselection:`Settings --> Users & Companies --> Companies`. Select a "
+"country from the list; Do not create a new country."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:48
+msgid ""
+"Download the mandatory Certificate of Conformity delivered by Odoo SA from "
+"`here <https://www.odoo.com/my/home/french-certification>`__."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:50
+msgid ""
+"If case you run Odoo on-premise, you should update your installation and "
+"restart your server to get such new add-ons available in your Apps "
+"repository. For any issue you can still download the modules from `Odoo's "
+"Apps store <https://www.odoo.com/apps>`__."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:56
+msgid "Anti-fraud features of Odoo"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:57
+msgid "The anti-fraud add-on introduces the following features:"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:59
+msgid ""
+"**Inalterability**: deactivation of all the ways to cancel or modify key "
+"data of POS orders, invoices and journal entries;"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:61
+msgid "**Security**: chaining algorithm to verify the inalterability;"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:62
+msgid ""
+"**Storage**: automatic sales closings with computation of both period and "
+"cumulative totals (daily, monthly, annually)."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:66
+msgid "Inalterability"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:67
+msgid ""
+"All the possible ways to cancel and modify key data of paid POS orders, "
+"confirmed invoices and journal entries are deactivated, if the company is "
+"located in France or in any DOM-TOM."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:71
+msgid ""
+"If you run a multi-companies environment, only the documents of such "
+"companies are impacted."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:75
+msgid "Security"
+msgstr "Seguridad"
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:76
+msgid ""
+"To ensure the inalterability, every order or journal entry is encrypted upon"
+" validation. This number (or hash) is calculated from the key data of the "
+"document as well as from the hash of the precedent documents."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:81
+msgid ""
+"The add-on introduces an interface to test the data inalterability. If any "
+"information is modified on a document after its validation, the test will "
+"fail. The algorithm recomputes all the hashes and compares them against the "
+"initial ones. In case of failure, the system points out the first corrupted "
+"document recorded in the system."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:87
+msgid ""
+"Users with *Manager* access rights can launch the inalterability check. For "
+"POS orders, go to :menuselection:`Point of Sales --> Reporting --> French "
+"Statements`. For invoices or journal entries, go to "
+":menuselection:`Invoicing/Accounting --> Reporting --> French Statements`."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:94
+msgid "Storage"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:95
+msgid ""
+"The system also processes automatic sales closings on a daily, monthly and "
+"annual basis. Such closings distinctly compute the sales total of the period"
+" as well as the cumulative grand totals from the very first sales entry "
+"recorded in the system."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:101
+msgid ""
+"Closings can be found in the *French Statements* menu of Point of Sale, "
+"Invoicing and Accounting apps."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:105
+msgid ""
+"Closings compute the totals for journal entries of sales journals (Journal "
+"Type = Sales)."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:107
+msgid ""
+"For multi-companies environments, such closings are performed by company."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:109
+msgid ""
+"POS orders are posted as journal entries at the closing of the POS session. "
+"Closing a POS session can be done anytime. To prompt users to do it on a "
+"daily basis, the add-on prevents from resuming a session opened more than 24"
+" hours ago. Such a session must be closed before selling again."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:115
+msgid ""
+"A period’s total is computed from all the journal entries posted after the "
+"previous closing of the same type, regardless of their posting date. If you "
+"record a new sales transaction for a period already closed, it will be "
+"counted in the very next closing."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:120
+msgid ""
+"For test & audit purposes such closings can be manually generated in the "
+"developer mode. Go to :menuselection:`Settings --> Technical --> Automation "
+"--> Scheduled Actions` to do so."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:127
+msgid "Responsibilities"
+msgstr "Responsabilidades"
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:128
+msgid ""
+"Do not uninstall the module! If you do so, the hashes will be reset and none"
+" of your past data will be longer guaranteed as being inalterable."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:131
+msgid ""
+"Users remain responsible for their Odoo instance and must use it with due "
+"diligence. It is not permitted to modify the source code which guarantees "
+"the inalterability of data."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:135
+msgid ""
+"Odoo absolves itself of all and any responsibility in case of changes in the"
+" add-on’s functions caused by 3rd party applications not certified by Odoo."
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:140
+msgid "More Information"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:141
+msgid ""
+"You will find more information about this legislation in the official "
+"documents:"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:143
+msgid ""
+"`Frequently Asked Questions "
+"<https://www.economie.gouv.fr/files/files/directions_services/dgfip/controle_fiscal/actualites_reponses/logiciels_de_caisse.pdf>`__"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:144
+msgid ""
+"`Official Statement "
+"<http://bofip.impots.gouv.fr/bofip/10691-PGP.html?identifiant=BOI-TVA-"
+"DECLA-30-10-30-20160803>`__"
+msgstr ""
+
+#: ../../accounting/localizations/france/vat-anti-fraud.rst:145
+msgid ""
+"`Item 88 of Finance Law 2016 "
+"<https://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000031732968&categorieLien=id&cidTexte=JORFTEXT000031732865>`__"
+msgstr ""
+
 #: ../../accounting/localizations/mexico.rst:3
-msgid "Mexico Localization"
-msgstr "Localización Mexicana"
+msgid "Mexico"
+msgstr "México"
 
 #: ../../accounting/localizations/mexico.rst:6
 msgid ""
@@ -2428,12 +2773,17 @@ msgid ""
 " address inside Mexico with all fields for the company address and set the "
 "vat to **ACO560518KW7**."
 msgstr ""
+"Si desea utilizar la localización mexicana en el modo de prueba, puede poner"
+" cualquier dirección conocida dentro de México con todos los campos para la "
+"dirección de la empresa y establecer el IVA en ** ACO560518KW7 **."
 
 #: ../../accounting/localizations/mexico.rst:83
 msgid ""
 "4. Set the proper \"Fiscal Position\" on the partner that represent the "
 "company"
 msgstr ""
+"4. Establezca la \"Posición fiscal\" adecuada en el tipo de socio que "
+"representa la empresa"
 
 #: ../../accounting/localizations/mexico.rst:85
 msgid ""
@@ -2444,10 +2794,12 @@ msgid ""
 " Personas Morales*, just search it as a normal Odoo field if you can't see "
 "the option)."
 msgstr ""
+"Vaya a la carta de la información general de la compañía, y configure la Posición Fiscal correcta. \n"
+"(para el ** Entorno de prueba ** debe seleccionar * 601 - General de Ley Personas Morales *, simplemente búsquelo como un campo en la barra de búsqueda de Odoo si no encuentra la opción)."
 
 #: ../../accounting/localizations/mexico.rst:92
 msgid "5. Enabling CFDI Version 3.3"
-msgstr ""
+msgstr "5. Habilitación de la nueva localización mexicana 3.3 CFDI"
 
 #: ../../accounting/localizations/mexico.rst:95
 msgid ""
@@ -2456,10 +2808,14 @@ msgid ""
 "your SaaS instance please ask for an upgrade sending a ticket to support in "
 "https://www.odoo.com/help."
 msgstr ""
+"Estos pasos solo son necesarios cuando habilita la localización mexicana "
+"CFDI 3.3 (solo disponible para V11.0 y versiones superiores). Si no tiene la"
+" versión 11.0 en su instancia de SaaS, solicite una actualización. Para "
+"enviar un ticket a soporte, diríjase a https://www.odoo.com/help."
 
 #: ../../accounting/localizations/mexico.rst:100
 msgid "Enable debug mode:"
-msgstr ""
+msgstr "Habilite el modo desarrollador: "
 
 #: ../../accounting/localizations/mexico.rst:105
 msgid ""
@@ -3190,8 +3546,8 @@ msgid ""
 msgstr ""
 
 #: ../../accounting/localizations/switzerland.rst:3
-msgid "Switzerland Accounting Localization"
-msgstr ""
+msgid "Switzerland"
+msgstr "Suiza"
 
 #: ../../accounting/localizations/switzerland.rst:6
 msgid "ISR (In-payment Slip with Reference number)"
@@ -3234,6 +3590,287 @@ msgid ""
 "Administration from Switzerland. For this, go in :menuselection:`Accounting "
 "--> Settings`, activate the multi-currencies setting and choose the service "
 "you want."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:49
+msgid "Updated VAT for January 2018"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:51
+msgid ""
+"Starting from the 1st January 2018, new reduced VAT rates will be applied in"
+" Switzerland. The normal 8.0% rate will switch to 7.7% and the specific rate"
+" for the hotel sector will switch from 3.8% to 3.7%."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:56
+msgid "How to update your taxes in Odoo Enterprise (SaaS or On Premise)?"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:58
+msgid ""
+"If you have the V11.1 version, all the work is already been done, you don't "
+"have to do anything."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:61
+msgid ""
+"If you have started on an earlier version, you first have to update the "
+"module \"Switzerland - Accounting Reports\". For this, you go in "
+":menuselection:`Apps --> remove the filter \"Apps\" --> search for "
+"\"Switzerland - Accounting Reports\" --> open the module --> click on "
+"\"upgrade\"`."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:68
+msgid ""
+"Once it has been done, you can work on creating new taxes for the updated "
+"rates."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:72
+msgid ""
+"**Do not suppress or modify the existing taxes** (8.0% and 3.8%). You want "
+"to keep them since you may have to use both rates for a short period of "
+"time. Instead, remember to archive them once you have encoded all your 2017 "
+"transactions."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:77
+msgid "The creation of such taxes should be done in the following manner:"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:79
+msgid ""
+"**Purchase taxes**: copy the origin tax, change its name, label on invoice, "
+"rate and tax group (effective from v10 only)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:82
+msgid ""
+"**Sale taxes**: copy the origin tax, change its name, label on invoice, rate"
+" and tax group (effective from v10 only). Since the vat report now shows the"
+" details for old and new rates, you should also set the tags accordingly to"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:87
+msgid ""
+"For 7.7% taxes: Switzerland VAT Form: grid 302 base, Switzerland VAT Form: "
+"grid 302 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:90
+msgid ""
+"For 3.7% taxes: Switzerland VAT Form: grid 342 base, Switzerland VAT Form: "
+"grid 342 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:93
+msgid ""
+"You'll find below, as examples, the correct configuration for all taxes "
+"included in Odoo by default"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Name**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Rate**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Label on Invoice**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Group (effective from V10)**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tax Scope**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:97
+msgid "**Tag**"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+msgid "TVA 7.7% sur achat B&S (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "7.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+msgid "7.7% achat"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "TVA 7.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "Purchases"
+msgstr "Compras"
+
+#: ../../accounting/localizations/switzerland.rst:99
+#: ../../accounting/localizations/switzerland.rst:101
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "Switzerland VAT Form: grid 400"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:101
+msgid "TVA 7.7% sur achat B&S (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:101
+msgid "7.7% achat Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+msgid "TVA 7.7% sur invest. et autres ch. (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+msgid "7.7% invest."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:103
+#: ../../accounting/localizations/switzerland.rst:105
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "Switzerland VAT Form: grid 405"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:105
+msgid "TVA 7.7% sur invest. et autres ch. (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:105
+msgid "7.7% invest. Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+msgid "TVA 3.7% sur achat B&S (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "3.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+msgid "3.7% achat"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:107
+#: ../../accounting/localizations/switzerland.rst:109
+#: ../../accounting/localizations/switzerland.rst:111
+#: ../../accounting/localizations/switzerland.rst:113
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "TVA 3.7%"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "TVA 3.7% sur achat B&S (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:109
+msgid "3.7% achat Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:111
+msgid "TVA 3.7% sur invest. et autres ch. (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:111
+msgid "3.7% invest"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "TVA 3.7% sur invest. et autres ch. (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:113
+msgid "3.7% invest Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:115
+msgid "TVA due a 7.7% (TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+#: ../../accounting/overview/process_overview/customer_invoice.rst:113
+#: ../../accounting/receivables/customer_invoices/overview.rst:16
+msgid "Sales"
+msgstr "Ventas"
+
+#: ../../accounting/localizations/switzerland.rst:115
+#: ../../accounting/localizations/switzerland.rst:117
+msgid ""
+"Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "TVA due à 7.7% (Incl. TN)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:117
+msgid "7.7% Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:119
+msgid "TVA due à 3.7% (TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:119
+#: ../../accounting/localizations/switzerland.rst:121
+msgid ""
+"Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "TVA due a 3.7% (Incl. TS)"
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:121
+msgid "3.7% Incl."
+msgstr ""
+
+#: ../../accounting/localizations/switzerland.rst:124
+msgid ""
+"If you have questions or remarks, please contact our support using "
+"odoo.com/help."
 msgstr ""
 
 #: ../../accounting/others.rst:3
@@ -3483,23 +4120,17 @@ msgstr ""
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid "Time Method Based On"
-msgstr "Método de tiempo basado en"
+msgstr "Método temporal basado en"
+
+#: ../../accounting/others/adviser/assets.rst:0
+msgid "Choose the method to use to compute the dates and number of entries."
+msgstr ""
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid ""
-"Choose the method to use to compute the dates and number of depreciation "
-"lines."
+"* Number of Entries: Fix the number of entries and the time between 2 "
+"depreciations."
 msgstr ""
-"Elija el método a usar para calcular las fechas y números de las líneas de "
-"depreciación."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Number of Depreciations: Fix the number of depreciation lines and the time"
-" between 2 depreciations."
-msgstr ""
-"* Número de Depreciaciones: Fije el número de líneas de depreciación y el "
-"tiempo entre 2 depreciaciones."
 
 #: ../../accounting/others/adviser/assets.rst:0
 msgid ""
@@ -6463,6 +7094,7 @@ msgid "Invoices"
 msgstr "Facturas"
 
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:64
+#: ../../accounting/payables/supplier_bills.rst:3
 msgid "Vendor Bills"
 msgstr "Facturas de proveedor"
 
@@ -7509,24 +8141,28 @@ msgstr ""
 "otros dos impuestos, simplemente crea dos líneas que tengan el mismo "
 "*Impuesto sobre el producto*."
 
-#: ../../accounting/others/taxes/application.rst:82
+#: ../../accounting/others/taxes/application.rst:80
+msgid "The fiscal positions are not applied on assets and deferred revenues."
+msgstr ""
+
+#: ../../accounting/others/taxes/application.rst:84
 #: ../../accounting/others/taxes/default_taxes.rst:27
 #: ../../accounting/others/taxes/retention.rst:70
 msgid ":doc:`create`"
 msgstr ":doc:`crear`"
 
-#: ../../accounting/others/taxes/application.rst:83
+#: ../../accounting/others/taxes/application.rst:85
 #: ../../accounting/others/taxes/default_taxes.rst:29
 msgid ":doc:`taxcloud`"
 msgstr ":doc:`taxcloud`"
 
-#: ../../accounting/others/taxes/application.rst:84
+#: ../../accounting/others/taxes/application.rst:86
 #: ../../accounting/others/taxes/create.rst:70
 #: ../../accounting/others/taxes/default_taxes.rst:31
 msgid ":doc:`tax_included`"
 msgstr ":doc:`tax_included`"
 
-#: ../../accounting/others/taxes/application.rst:85
+#: ../../accounting/others/taxes/application.rst:87
 #: ../../accounting/others/taxes/default_taxes.rst:30
 msgid ":doc:`B2B_B2C`"
 msgstr ":doc:`B2B_B2C`"
@@ -9415,8 +10051,8 @@ msgid "Process overview"
 msgstr "Perspectiva general del proceso"
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:3
-msgid "From Invoice to Payment Collection"
-msgstr "Desde la Factura hasta el Cobro"
+msgid "From Customer Invoice to Payments Collection"
+msgstr ""
 
 #: ../../accounting/overview/process_overview/customer_invoice.rst:5
 msgid ""
@@ -9647,11 +10283,6 @@ msgstr "115"
 msgid "15"
 msgstr "15"
 
-#: ../../accounting/overview/process_overview/customer_invoice.rst:113
-#: ../../accounting/receivables/customer_invoices/overview.rst:16
-msgid "Sales"
-msgstr "Ventas"
-
 #: ../../accounting/overview/process_overview/customer_invoice.rst:117
 #: ../../accounting/receivables/customer_invoices/cash_discounts.rst:89
 msgid "Payment"
@@ -9829,7 +10460,8 @@ msgstr ""
 "una vez el material ha sido entregado al cliente."
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:3
-msgid "From Vendor Bills to Payments"
+#: ../../accounting/overview/process_overview/supplier_bill.rst:15
+msgid "From Vendor Bill to Payment"
 msgstr "Desde Facturas de Proveedor a Pagos"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:5
@@ -9853,10 +10485,6 @@ msgstr ""
 "Si quiere controlar las facturas de proveedor recibidas de sus proveedores, "
 "puede usar la aplicación Compras de Odoo que le permiten controlarlas y pre-"
 "completarlas automáticamente basado en las órdenes de compra pasadas."
-
-#: ../../accounting/overview/process_overview/supplier_bill.rst:15
-msgid "From Vendor Bill to Payment"
-msgstr "Desde Facturas de Proveedor a Pagos"
 
 #: ../../accounting/overview/process_overview/supplier_bill.rst:18
 msgid "Record a new vendor bill"
@@ -10093,10 +10721,6 @@ msgstr ":doc:`cliente_factura`"
 #: ../../accounting/payables.rst:3
 msgid "Account Payables"
 msgstr "Cuentas por Pagar"
-
-#: ../../accounting/payables/misc.rst:3
-msgid "Misc"
-msgstr "Misc."
 
 #: ../../accounting/payables/misc/employee_expense.rst:3
 msgid "How to keep track of employee expenses?"
@@ -10636,8 +11260,8 @@ msgstr ""
 "siguiente, usando la función agrupar por \"Fecha de Vencimiento\"."
 
 #: ../../accounting/payables/pay.rst:3
-msgid "Pay supplier bills"
-msgstr "Pagar facturas de proveedor"
+msgid "Vendor Payments"
+msgstr ""
 
 #: ../../accounting/payables/pay/check.rst:3
 msgid "Pay by Checks"
@@ -10767,14 +11391,10 @@ msgstr "Registrar un pago con cheque"
 #: ../../accounting/payables/pay/check.rst:66
 msgid ""
 "To register a payment on a bill, open any supplier bill from the menu "
-":menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is "
+":menuselection:`Purchases --> Vendor Bills`. Once the supplier bill is "
 "validated, you can register a payment. Set the **Payment Method** to "
 "**Check** and validate the payment dialog."
 msgstr ""
-"Para registrar un pago en una factura, abra cualquier factura de proveedor "
-"desde el menú :menuselection:`Compras--> Facturas de Proveedor`. Una vez la "
-"factura del proveedor es validada, puede registrar el pago. Configure el "
-"**Método de Pago** a **Revisar** y valide el diálogo de pago."
 
 #: ../../accounting/payables/pay/check.rst:74
 msgid "Explanation of the fields of the payment screen:"
@@ -10799,6 +11419,25 @@ msgid ""
 msgstr ""
 "Campo técnico utilizado para ocultar el método de pago si el diario "
 "seleccionado tiene únicamente como disponible el 'manual'"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Check: Pay bill by check and print it from Odoo."
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Batch Deposit: Encase several customer checks at once by generating a batch "
+"deposit to submit to your bank. When encoding the bank statement in Odoo, "
+"you are suggested to reconcile the transaction with the batch deposit.To "
+"enable batch deposit,module account_batch_deposit must be installed."
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"SEPA Credit Transfer: Pay bill from a SEPA Credit Transfer file you submit "
+"to your bank. To enable sepa credit transfer, module account_sepa must be "
+"installed"
+msgstr ""
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Code"
@@ -11188,6 +11827,7 @@ msgstr ""
 " las transferencias bancarias electrónicas."
 
 #: ../../accounting/payables/pay/sepa.rst:10
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:10
 msgid ""
 "SEPA is supported by the banks of the 28 EU member states as well as "
 "Iceland, Norway, Switzerland, Andorra, Monaco and San Marino."
@@ -11405,10 +12045,6 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments/recording.rst:129
 msgid ":doc:`check`"
 msgstr ":doc:`revisar`"
-
-#: ../../accounting/payables/supplier_bills.rst:3
-msgid "Supplier Bills"
-msgstr "Facturas de Proveedor"
 
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:3
 msgid "When should I use supplier bills or purchase receipts?"
@@ -11996,6 +12632,7 @@ msgid "Account Receivables"
 msgstr "Cuentas por Cobrar"
 
 #: ../../accounting/receivables/customer_invoices.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:53
 msgid "Customer Invoices"
 msgstr "Facturas de cliente"
 
@@ -12484,17 +13121,12 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:25
 msgid ""
-"A payment term may have one line (ex: 21 days) or several lines (10% within "
+"A payment term may have one line (eg: 21 days) or several lines (10% within "
 "3 days and the balance within 21 days). If you create a payment term with "
 "several lines, make sure the latest one is the balance. (avoid doing 50% in "
 "10 days and 50% in 21 days because, with the rounding, it may not compute "
 "exactly 100%)"
 msgstr ""
-"Un término de pago puede tener una línea (ej: 21 días) o varias líneas (10% "
-"dentro de 3 días y el saldo dentro de 21 días). Si crea un término de pago "
-"con varias líneas, asegúrese que la última es el saldo. (evite hacer 50% en "
-"10 días y 50% en 21 días porque, con el redondeo, puede no calcular "
-"exactamente el 100%)"
 
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:36
 msgid ""
@@ -13211,6 +13843,376 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments.rst:3
 msgid "Customer Payments"
 msgstr "Pagos de cliente"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:3
+msgid "How to automate customer follow-ups with plans?"
+msgstr "¿Cómo automatizar seguimientos a clientes con planes?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:5
+msgid ""
+"With the Odoo Accounting application, you get a dynamic aged receivable "
+"report, customer statements and you can easily send them to customers."
+msgstr ""
+"Con la aplicación de Contabilidad de Odoo, obtiene un reporte dinámico de "
+"cuentas por cobrar antiguas, estados de clientes y puede fácilmente "
+"enviarlos a clientes."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:8
+msgid ""
+"If you want to go further in the automation of the credit collection "
+"process, you can use follow-up plans. They will help you automate all the "
+"steps to get paid, by triggering them at the right time: send customer "
+"statements by emails, send regular letter (through the Docsaway "
+"integration), create a task to manually call the customer, etc..."
+msgstr ""
+"Si quiere ir más allá en la automatización del proceso de percepción de "
+"créditos, puede usar planes de seguimiento. Estos le ayudarán a automatizar "
+"todos los pasos para obtener pagos, generándolos en el momento adecuado: "
+"enviar estados de cliente por email, enviar cartas regulares (a través de la"
+" integración Docsaway), crear una tarea para manualmente llamar al cliente, "
+"etc..."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:14
+msgid "Here is an example of a plan:"
+msgstr "Aquí tenemos un ejemplo de un plan:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "When?"
+msgstr "¿Cuándo?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "What?"
+msgstr "¿Qué?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:17
+msgid "Who?"
+msgstr "¿Quién?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "3 days before due date"
+msgstr "3 días antes de la fecha de vencimiento"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+msgid "Email"
+msgstr "Correo electrónico"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:19
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "automated"
+msgstr "automatizado"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "1 day after due date"
+msgstr "1 día después de la fecha de vencimiento"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:21
+msgid "Email + Regular Letter"
+msgstr "Email + Carta Regular"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "15 days after due date"
+msgstr "15 días después de la fecha de vencimiento"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+msgid "Call the customer"
+msgstr "Llamar al cliente"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:23
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "John Mac Gregor"
+msgstr "John Mac Gregor"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "35 days after due date"
+msgstr "35 días después de la fecha de vencimiento"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:25
+msgid "Email + Letter + Call"
+msgstr "Email + Carta Regular + Llamada"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "60 days after due date"
+msgstr "60 días después de la fecha de vencimiento"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Formal notice"
+msgstr "Notificación Oficial"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:27
+msgid "Bailiff"
+msgstr "Alguacil"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:34
+msgid "Install Reminder Module"
+msgstr "Instalar el módulo de Recordatorio"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:36
+msgid ""
+"You must start by activating the feature, using the menu "
+":menuselection:`Configuration --> Settings` of the Accounting application. "
+"From the settings screen, activate the feature **Enable payment follow-up "
+"management**."
+msgstr ""
+"Debe empezar activando la función, usando el menú "
+":menuselection:`Configuración --> Ajustes` de la aplicación Contabilidad. "
+"Desde la pantalla de ajustes, active la función **Permitir la administración"
+" de seguimiento de pago**."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:44
+msgid "Define Payment Follow-ups Levels"
+msgstr "Definir Niveles de Seguimiento de Pagos"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:46
+msgid ""
+"To automate customer follow ups, you must configure your follow–up levels "
+"using the menu :menuselection:`Accounting --> Configuration --> Payment "
+"Follow-ups`. You should define one and only one follow-up plan per company."
+msgstr ""
+"Para automatizar los seguimientos a cliente, debe configurar los niveles de "
+"seguimiento usando el menú :menuselection:`Contabilidad --> Configuración "
+"--> Seguimientos de Pagos`. Debe definir un y solo un plan de seguimiento "
+"por compañía."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:50
+msgid ""
+"The levels of follow-up are relative to the due date; when no payment term "
+"is specified, the invoice date will be considered as the due date."
+msgstr ""
+"Los niveles de seguimiento son relativos a la fecha de vencimiento; cuando "
+"no hay un término de pago especifico, la fecha de la factura será "
+"considerada como la fecha de vencimiento."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:53
+msgid ""
+"For each level, you should define the number of days and create a note which"
+" will automatically be added into the reminder letter."
+msgstr ""
+"Para cada nivel, Ud. debe definir el número de días y crear una nota la cual"
+" será agregada automáticamente a la carta de recordatorio."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:59
+msgid "Odoo defines several actions for every reminder:"
+msgstr "Odoo define varias acciones para cada recordatorio:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:61
+msgid ""
+"**Manual Action:** assign a responsible that will have to call the customer"
+msgstr ""
+"**Acción Manual:** asignar un responsable que tendrá que llamar al cliente"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:62
+msgid "**Send an Email:** send an email to customer using the provided text"
+msgstr ""
+"**Enviar un Email:** enviar un email al cliente usando el texto entregado"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:63
+msgid ""
+"**Send a Letter:** send a letter by regular mail, using the provided note"
+msgstr ""
+"**Enviar una Carta:** enviar una carta por correo regular, usando la nota "
+"entregada"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:69
+msgid ""
+"As you need to provide a number of days relative to the due date, you can "
+"use a negative number. As an example, if an invoice is issued the January "
+"1st but the due date is January 20, if you set a reminder 3 days before the "
+"due date, the customer may receive an email in January 17."
+msgstr ""
+"Como tienes que proporcionar un número de días en relación con la fecha de "
+"vencimiento, puedes utilizar un número negativo. Por ejemplo, si se emite "
+"una factura el 1 de enero pero la fecha de vencimiento es el 20 de enero, si"
+" estableces un recordatorio 3 días antes de la fecha de vencimiento, el "
+"cliente puede recibir un correo electrónico el 17 de enero."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:76
+msgid "Doing your weekly follow-ups"
+msgstr "Haga sus seguimientos semanales"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:78
+msgid ""
+"Once everything is setup, Odoo will prepare follow-up letters and emails "
+"automatically for you. All you have to do is to the menu "
+":menuselection:`Sales --> Customers Statement` in the accounting "
+"application."
+msgstr ""
+"Una vez que todo esta ingresado, Odoo prepará las cartas y emails de "
+"seguimiento por Ud. automáticamente. Todo lo que tiene que hacer es ir al "
+"menú :menuselection:`Ventas --> Estado de Clientes` en la aplicación de "
+"contabilidad."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:85
+msgid ""
+"Odoo will automatically propose you actions based on the follow-up plan you "
+"defined, invoices to pay and payment received."
+msgstr ""
+"Odoo automáticamente le propondrá acciones basadas en el plan de seguimiento"
+" que definió, facturas a pagar y pagos recibidos."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:88
+msgid ""
+"You can use this menu every day, once a week or once a month. You do not "
+"risk to send two times the same reminder to your customer. Odoo only "
+"proposes you the action you have to do. If you do it every day, you will "
+"have a few calls to do per day. If you do it once a month, you will have "
+"much more work once you do it."
+msgstr ""
+"Puede usar este menú diariamente, una vez a la semana o una vez al mes. No "
+"se arriesgue a enviar dos veces el mismo recordatorio a su cliente. Odoo "
+"solamente le propone la acción que tiene que hacer. Si lo hace diariamente, "
+"solo tendrá algunas llamadas que hacer por día. Si lo hace una vez al mes, "
+"tendrá mucho más trabajo una vez lo haga."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:94
+msgid ""
+"It's up to you to organize the way you want to work. But it's a good "
+"practice to reconcile your bank statements before launching the follow-ups. "
+"That way, all paid invoices will be reconciled and you will not send a "
+"follow-up letter to a customer that already paid his invoice."
+msgstr ""
+"Es su decisión organizar la forma como quiere trabajar. Pero es una buena "
+"practiva conciliar sus extractos bancarios antes de la puesta en marcha de "
+"los recordatorios. De esta manera, todas las facturas pagadas serán "
+"conciliadas y no tendrá que enviar una carta de seguimiento a un cliente que"
+" ya ha pagado su factura."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:99
+msgid "From a customer follow-up proposition, you can:"
+msgstr "Desde la propuesta de seguimiento a un cliente, Ud. puede:"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:101
+msgid "Get the customer information to contact him"
+msgstr "Obtener la información del cliente para contactarlo"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:103
+msgid "Drill down to the customer information form by clicking on its name"
+msgstr ""
+"Examinar a fondo el formulario de información del cliente dando clic en su "
+"nombre"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:105
+msgid "Change the text (or the email or letter) and adapt to the customer"
+msgstr "Cambiar el texto (o el email o la carta) y adaptarlo al cliente"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:107
+msgid ""
+"Change the colored dot to mark the customer as being a good, normal or bad "
+"debtor"
+msgstr ""
+"Cambiar el punto coloreado para marcar el cliente como bueno, normal o mal "
+"deudor"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:110
+msgid "Log a note is you called the customer"
+msgstr "Registrar una nota es porque Ud. llamó al cliente"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:112
+msgid "Exclude some invoices from the statement table (litigation)"
+msgstr "Excluir algunas facturas de la tabla del estado (litigación)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:114
+msgid "Send an email with the statement"
+msgstr "Enviar un email con el estado"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:116
+msgid ""
+"Print a letter, or send a regular mail (if you installed the Docsaway "
+"integration)"
+msgstr ""
+"Para importar reportes QIF, debe activar la caracteristica en Odoo. En el aplicado de Contabilidad, ir al menu 'menuselection: Connfiguracion...>Parametros, de los parametros de contabilidad, testar los reportes de banco ''Importar en Formato QIF'' y aplicar.\n"
+"Una vez que ha instalado esta caracteristica, puede instalar su cuento bancario para permitir de importar a ficheros de reportes. Para hacer eso, ir a la Tabla de Contenidos (''Dashboard')y clicar al boton ''Menu'' del cuento bancario. Despues, clicar al ''Imporatr eporte' para cargar su primero fichero QIF.\n"
+"Cargar su fichero QIF "
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:119
+msgid ""
+"Plan the next reminder (but it's better to keep in automatic mode so that "
+"Odoo will stick to the follow-up plan of the company)"
+msgstr ""
+"Planear el siguiente recordatorio (pero es mejor mantener un modo automático"
+" para que Odoo se adhiera al plan de seguimiento de la compañía)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:122
+msgid "Drill down to an invoice"
+msgstr "Examinar a fondo una factura"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:124
+msgid ""
+"Change the expected payment date of an invoice (thus, impacting the next "
+"time Odoo will propose you to send a reminder)"
+msgstr ""
+"Cambiar la fecha de pago esperada de una factura (así, impactando la "
+"siguiente ocasión Odoo le propondrá enviar un recordatorio)"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:128
+msgid ""
+"You can force a customer statement, even if Odoo do not proposes you to do "
+"it, because it's not the right date yet. To do this, you should go to the "
+"Aged Receivable report (in the report menu of the Accounting application). "
+"From this report, you can click on a customer to get to his customer "
+"statement."
+msgstr ""
+"Puede generar el estado de un cliente, aún si Odoo no le propone hacerlo, "
+"porque no esta en la fecha correcta aún. Para hacerlo, debe ir al reporte de"
+" Antiguas Cuentas por Cobrar (en el menú de reportes de la aplicación de "
+"Contabilidad). Desde este reporte, puede dar clic en un cliente para obtener"
+" su estado de cliente."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:135
+msgid "How to exclude an invoice from auto follow up?"
+msgstr "¿Cómo excluir una factura de auto seguimiento?"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:137
+msgid "To see all **overdue invoices** or **on need of action**,"
+msgstr ""
+"Para ver todas las **facturas vencidas** o **en necesidad de acción**,"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:139
+msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
+msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Ventas --> Estado de Clientes`"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:145
+msgid "Exclude a specific invoice for a specific date"
+msgstr "Excluir una factura específica para una fecha determinada"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:147
+msgid ""
+"Odoo can exclude an invoice from follow-ups actions for specific date by "
+"clicking on **Log a Note**, then choose one of the ready options (*one "
+"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
+"required date according to the current date."
+msgstr ""
+"Odoo puede excluir una factura de las acciones de seguimiento para fechas "
+"específicas haciendo clic en **Registrar una Nota**, luego elija una de las "
+"opciones listas (*una semana*, *dos semanas*, *un mes*, *dos meses*), así "
+"Odoo calculará la fecha requerida de acuerdo a la fecha actual."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:155
+msgid ""
+"Another way to achieve it is the following: click on the required invoice, "
+"then choose **Change expected payment date/note**, then enter a new payment "
+"date and note."
+msgstr ""
+"Otra forma de alcanzarlo es la siguiente: de clic en la factura requerida, "
+"luego elija **Cambiar fecha esperada de pago/nota**, luego ingrese la nueva "
+"fecha de pago y nota."
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:162
+msgid "Exclude a specific invoice forever"
+msgstr "Excluir una factura específica para siempre"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:164
+msgid ""
+"Odoo can exclude an invoice for a specific customer by clicking on the "
+"checkbox **Excluded**"
+msgstr ""
+"Odoo puede excluir una factura para un cliente específico haciendo clic en "
+"la casilla **Excluidos**"
+
+#: ../../accounting/receivables/customer_payments/automated_followups.rst:168
+msgid "If you click on **History**, you can see all follow ups actions."
+msgstr ""
+"Si hace clic en **Historial**, puede ver todas las accionesde seguimiento."
 
 #: ../../accounting/receivables/customer_payments/check.rst:3
 msgid "How to register customer payments by checks?"
@@ -14035,6 +15037,128 @@ msgstr ""
 "Puede obtener el DDV de su compañía desde el reporte Resumen Ejecutivo bajo "
 "Reportes (revisar el KPI días promedio de deudores)."
 
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:3
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:29
+msgid "Get paid with SEPA"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:5
+msgid ""
+"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
+"the European Union for simplification of bank transfers denominated in EURO."
+" SEPA Direct Debit allows you to withdraw money from the bank accounts of "
+"your customers with their approval."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:13
+msgid ""
+"With Odoo, you can record customer mandates, generate an SDD XML file "
+"containing customer payments and upload it in your bank interface. The file "
+"follows the SEPA Direct Debit PAIN.008.001.02 specifications. This is a "
+"well-defined standard that makes consensus among banks."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:21
+msgid ""
+"Go in :menuselection:`Accounting --> Configuration --> Settings` and "
+"activate the SEPA Direct Debit (SDD) Feature. Enter the Creditor Identifier "
+"of your company. This number is provided by your bank."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
+msgid "Direct Debit Mandates"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
+msgid ""
+"Before withdrawing money from a customer bank account, your customer has to "
+"sign a mandate. Go in :menuselection:`Accounting --> Sales --> Direct Debit "
+"Mandates` and create a new mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:41
+msgid "SEPA Direct Debit only works between IBAN Bank Accounts."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:43
+msgid ""
+"Once you have entered all the information in the customer mandate, you can "
+"print it and ask your customer to sign it. Once it is done, you can upload "
+"the mandate signed by your customer on the mandate in Odoo."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:50
+msgid "You can now validate the mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:55
+msgid "Let's create an invoice for that customer."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:57
+msgid ""
+"When you will validate this invoice, the payment will be automatically "
+"generated and your invoice will be directly marked as paid."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:61
+msgid ""
+"If you already had some invoices for that customer that could be paid using "
+"that mandate, it's still possible to do it. Go on the invoice, click on "
+"register payment and choose the Sepa Direct Debit as payment method."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:67
+msgid "Generate SDD Files"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:69
+msgid ""
+"You can generate the SDD File with all the customer payments to send to your"
+" bank directly from the accounting dashboard :"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:75
+msgid ""
+"You select the payments in the list that you want to include in your SDD "
+"File, click on action and select \"Generate Direct Debit XML\"."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:81
+msgid ""
+"You can now download the XML file generated by Odoo and upload it in your "
+"bank interface."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:85
+msgid ""
+"You can retrieve all the generated XML by activating the developer mode and "
+"going in :menuselection:`Accounting --> Configuration --> Payments --> SDD "
+"Payment File`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:89
+msgid "Close or revoke a mandate"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:91
+msgid ""
+"The Direct Debit mandate will be closed automatically once the end date "
+"defined on it is reached. However, you can **close** a mandate earlier than "
+"initially planned. To do that, simply go on the mandate and click on the "
+"\"Close\" button.The end date of the mandate will be updated to today's "
+"date. This means you will not be able to pay invoices with an invoice date "
+"superior to this end date. Be careful, once a mandate is closed, it cannot "
+"be reopened."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/payment_sepa.rst:99
+msgid ""
+"You can also **revoke** a mandate. In that case, you won't be able to pay "
+"any invoice using that mandate anymore, no matter the invoice date.To do "
+"that, simply go on the mandate and click on the \"Revoke\" button."
+msgstr ""
+
 #: ../../accounting/receivables/customer_payments/recording.rst:3
 msgid "What are the different ways to record a payment?"
 msgstr "¿Cuáles son las diferentes formas de registrar un pago?"
@@ -14251,377 +15375,3 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments/recording.rst:127
 msgid ":doc:`credit_cards`"
 msgstr ":doc:`credit_cards`"
-
-#: ../../accounting/receivables/getting_paid.rst:3
-msgid "How to get paid?"
-msgstr "¿Cómo obtener pagos?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:3
-msgid "How to automate customer follow-ups with plans?"
-msgstr "¿Cómo automatizar seguimientos a clientes con planes?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:5
-msgid ""
-"With the Odoo Accounting application, you get a dynamic aged receivable "
-"report, customer statements and you can easily send them to customers."
-msgstr ""
-"Con la aplicación de Contabilidad de Odoo, obtiene un reporte dinámico de "
-"cuentas por cobrar antiguas, estados de clientes y puede fácilmente "
-"enviarlos a clientes."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:8
-msgid ""
-"If you want to go further in the automation of the credit collection "
-"process, you can use follow-up plans. They will help you automate all the "
-"steps to get paid, by triggering them at the right time: send customer "
-"statements by emails, send regular letter (through the Docsaway "
-"integration), create a task to manually call the customer, etc..."
-msgstr ""
-"Si quiere ir más allá en la automatización del proceso de percepción de "
-"créditos, puede usar planes de seguimiento. Estos le ayudarán a automatizar "
-"todos los pasos para obtener pagos, generándolos en el momento adecuado: "
-"enviar estados de cliente por email, enviar cartas regulares (a través de la"
-" integración Docsaway), crear una tarea para manualmente llamar al cliente, "
-"etc..."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:14
-msgid "Here is an example of a plan:"
-msgstr "Aquí tenemos un ejemplo de un plan:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "When?"
-msgstr "¿Cuándo?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "What?"
-msgstr "¿Qué?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:17
-msgid "Who?"
-msgstr "¿Quién?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "3 days before due date"
-msgstr "3 días antes de la fecha de vencimiento"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-msgid "Email"
-msgstr "Correo electrónico"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:19
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "automated"
-msgstr "automatizado"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "1 day after due date"
-msgstr "1 día después de la fecha de vencimiento"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:21
-msgid "Email + Regular Letter"
-msgstr "Email + Carta Regular"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "15 days after due date"
-msgstr "15 días después de la fecha de vencimiento"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-msgid "Call the customer"
-msgstr "Llamar al cliente"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:23
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "John Mac Gregor"
-msgstr "John Mac Gregor"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "35 days after due date"
-msgstr "35 días después de la fecha de vencimiento"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:25
-msgid "Email + Letter + Call"
-msgstr "Email + Carta Regular + Llamada"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "60 days after due date"
-msgstr "60 días después de la fecha de vencimiento"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Formal notice"
-msgstr "Notificación Oficial"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:27
-msgid "Bailiff"
-msgstr "Alguacil"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:34
-msgid "Install Reminder Module"
-msgstr "Instalar el módulo de Recordatorio"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:36
-msgid ""
-"You must start by activating the feature, using the menu "
-":menuselection:`Configuration --> Settings` of the Accounting application. "
-"From the settings screen, activate the feature **Enable payment follow-up "
-"management**."
-msgstr ""
-"Debe empezar activando la función, usando el menú "
-":menuselection:`Configuración --> Ajustes` de la aplicación Contabilidad. "
-"Desde la pantalla de ajustes, active la función **Permitir la administración"
-" de seguimiento de pago**."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:44
-msgid "Define Payment Follow-ups Levels"
-msgstr "Definir Niveles de Seguimiento de Pagos"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:46
-msgid ""
-"To automate customer follow ups, you must configure your follow–up levels "
-"using the menu :menuselection:`Accounting --> Configuration --> Payment "
-"Follow-ups`. You should define one and only one follow-up plan per company."
-msgstr ""
-"Para automatizar los seguimientos a cliente, debe configurar los niveles de "
-"seguimiento usando el menú :menuselection:`Contabilidad --> Configuración "
-"--> Seguimientos de Pagos`. Debe definir un y solo un plan de seguimiento "
-"por compañía."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:50
-msgid ""
-"The levels of follow-up are relative to the due date; when no payment term "
-"is specified, the invoice date will be considered as the due date."
-msgstr ""
-"Los niveles de seguimiento son relativos a la fecha de vencimiento; cuando "
-"no hay un término de pago especifico, la fecha de la factura será "
-"considerada como la fecha de vencimiento."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:53
-msgid ""
-"For each level, you should define the number of days and create a note which"
-" will automatically be added into the reminder letter."
-msgstr ""
-"Para cada nivel, Ud. debe definir el número de días y crear una nota la cual"
-" será agregada automáticamente a la carta de recordatorio."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:59
-msgid "Odoo defines several actions for every reminder:"
-msgstr "Odoo define varias acciones para cada recordatorio:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:61
-msgid ""
-"**Manual Action:** assign a responsible that will have to call the customer"
-msgstr ""
-"**Acción Manual:** asignar un responsable que tendrá que llamar al cliente"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:62
-msgid "**Send an Email:** send an email to customer using the provided text"
-msgstr ""
-"**Enviar un Email:** enviar un email al cliente usando el texto entregado"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:63
-msgid ""
-"**Send a Letter:** send a letter by regular mail, using the provided note"
-msgstr ""
-"**Enviar una Carta:** enviar una carta por correo regular, usando la nota "
-"entregada"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:69
-msgid ""
-"As you need to provide a number of days relative to the due date, you can "
-"use a negative number. As an example, if an invoice is issued the January "
-"1st but the due date is January 20, if you set a reminder 3 days before the "
-"due date, the customer may receive an email in January 17."
-msgstr ""
-"Como tienes que proporcionar un número de días en relación con la fecha de "
-"vencimiento, puedes utilizar un número negativo. Por ejemplo, si se emite "
-"una factura el 1 de enero pero la fecha de vencimiento es el 20 de enero, si"
-" estableces un recordatorio 3 días antes de la fecha de vencimiento, el "
-"cliente puede recibir un correo electrónico el 17 de enero."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:76
-msgid "Doing your weekly follow-ups"
-msgstr "Haga sus seguimientos semanales"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:78
-msgid ""
-"Once everything is setup, Odoo will prepare follow-up letters and emails "
-"automatically for you. All you have to do is to the menu "
-":menuselection:`Sales --> Customers Statement` in the accounting "
-"application."
-msgstr ""
-"Una vez que todo esta ingresado, Odoo prepará las cartas y emails de "
-"seguimiento por Ud. automáticamente. Todo lo que tiene que hacer es ir al "
-"menú :menuselection:`Ventas --> Estado de Clientes` en la aplicación de "
-"contabilidad."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:85
-msgid ""
-"Odoo will automatically propose you actions based on the follow-up plan you "
-"defined, invoices to pay and payment received."
-msgstr ""
-"Odoo automáticamente le propondrá acciones basadas en el plan de seguimiento"
-" que definió, facturas a pagar y pagos recibidos."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:88
-msgid ""
-"You can use this menu every day, once a week or once a month. You do not "
-"risk to send two times the same reminder to your customer. Odoo only "
-"proposes you the action you have to do. If you do it every day, you will "
-"have a few calls to do per day. If you do it once a month, you will have "
-"much more work once you do it."
-msgstr ""
-"Puede usar este menú diariamente, una vez a la semana o una vez al mes. No "
-"se arriesgue a enviar dos veces el mismo recordatorio a su cliente. Odoo "
-"solamente le propone la acción que tiene que hacer. Si lo hace diariamente, "
-"solo tendrá algunas llamadas que hacer por día. Si lo hace una vez al mes, "
-"tendrá mucho más trabajo una vez lo haga."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:94
-msgid ""
-"It's up to you to organize the way you want to work. But it's a good "
-"practice to reconcile your bank statements before launching the follow-ups. "
-"That way, all paid invoices will be reconciled and you will not send a "
-"follow-up letter to a customer that already paid his invoice."
-msgstr ""
-"Es su decisión organizar la forma como quiere trabajar. Pero es una buena "
-"practiva conciliar sus extractos bancarios antes de la puesta en marcha de "
-"los recordatorios. De esta manera, todas las facturas pagadas serán "
-"conciliadas y no tendrá que enviar una carta de seguimiento a un cliente que"
-" ya ha pagado su factura."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:99
-msgid "From a customer follow-up proposition, you can:"
-msgstr "Desde la propuesta de seguimiento a un cliente, Ud. puede:"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:101
-msgid "Get the customer information to contact him"
-msgstr "Obtener la información del cliente para contactarlo"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:103
-msgid "Drill down to the customer information form by clicking on its name"
-msgstr ""
-"Examinar a fondo el formulario de información del cliente dando clic en su "
-"nombre"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:105
-msgid "Change the text (or the email or letter) and adapt to the customer"
-msgstr "Cambiar el texto (o el email o la carta) y adaptarlo al cliente"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:107
-msgid ""
-"Change the colored dot to mark the customer as being a good, normal or bad "
-"debtor"
-msgstr ""
-"Cambiar el punto coloreado para marcar el cliente como bueno, normal o mal "
-"deudor"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:110
-msgid "Log a note is you called the customer"
-msgstr "Registrar una nota es porque Ud. llamó al cliente"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:112
-msgid "Exclude some invoices from the statement table (litigation)"
-msgstr "Excluir algunas facturas de la tabla del estado (litigación)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:114
-msgid "Send an email with the statement"
-msgstr "Enviar un email con el estado"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:116
-msgid ""
-"Print a letter, or send a regular mail (if you installed the Docsaway "
-"integration)"
-msgstr ""
-"Para importar reportes QIF, debe activar la caracteristica en Odoo. En el aplicado de Contabilidad, ir al menu 'menuselection: Connfiguracion...>Parametros, de los parametros de contabilidad, testar los reportes de banco ''Importar en Formato QIF'' y aplicar.\n"
-"Una vez que ha instalado esta caracteristica, puede instalar su cuento bancario para permitir de importar a ficheros de reportes. Para hacer eso, ir a la Tabla de Contenidos (''Dashboard')y clicar al boton ''Menu'' del cuento bancario. Despues, clicar al ''Imporatr eporte' para cargar su primero fichero QIF.\n"
-"Cargar su fichero QIF "
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:119
-msgid ""
-"Plan the next reminder (but it's better to keep in automatic mode so that "
-"Odoo will stick to the follow-up plan of the company)"
-msgstr ""
-"Planear el siguiente recordatorio (pero es mejor mantener un modo automático"
-" para que Odoo se adhiera al plan de seguimiento de la compañía)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:122
-msgid "Drill down to an invoice"
-msgstr "Examinar a fondo una factura"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:124
-msgid ""
-"Change the expected payment date of an invoice (thus, impacting the next "
-"time Odoo will propose you to send a reminder)"
-msgstr ""
-"Cambiar la fecha de pago esperada de una factura (así, impactando la "
-"siguiente ocasión Odoo le propondrá enviar un recordatorio)"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:128
-msgid ""
-"You can force a customer statement, even if Odoo do not proposes you to do "
-"it, because it's not the right date yet. To do this, you should go to the "
-"Aged Receivable report (in the report menu of the Accounting application). "
-"From this report, you can click on a customer to get to his customer "
-"statement."
-msgstr ""
-"Puede generar el estado de un cliente, aún si Odoo no le propone hacerlo, "
-"porque no esta en la fecha correcta aún. Para hacerlo, debe ir al reporte de"
-" Antiguas Cuentas por Cobrar (en el menú de reportes de la aplicación de "
-"Contabilidad). Desde este reporte, puede dar clic en un cliente para obtener"
-" su estado de cliente."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:135
-msgid "How to exclude an invoice from auto follow up?"
-msgstr "¿Cómo excluir una factura de auto seguimiento?"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:137
-msgid "To see all **overdue invoices** or **on need of action**,"
-msgstr ""
-"Para ver todas las **facturas vencidas** o **en necesidad de acción**,"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:139
-msgid "Go to :menuselection:`Accounting --> Sales --> Customers Statement`"
-msgstr ""
-"Vaya a :menuselection:`Contabilidad --> Ventas --> Estado de Clientes`"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:145
-msgid "Exclude a specific invoice for a specific date"
-msgstr "Excluir una factura específica para una fecha determinada"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:147
-msgid ""
-"Odoo can exclude an invoice from follow-ups actions for specific date by "
-"clicking on **Log a Note**, then choose one of the ready options (*one "
-"week*, *two weeks*, *one month*, *two months*), So Odoo will calculate the "
-"required date according to the current date."
-msgstr ""
-"Odoo puede excluir una factura de las acciones de seguimiento para fechas "
-"específicas haciendo clic en **Registrar una Nota**, luego elija una de las "
-"opciones listas (*una semana*, *dos semanas*, *un mes*, *dos meses*), así "
-"Odoo calculará la fecha requerida de acuerdo a la fecha actual."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:155
-msgid ""
-"Another way to achieve it is the following: click on the required invoice, "
-"then choose **Change expected payment date/note**, then enter a new payment "
-"date and note."
-msgstr ""
-"Otra forma de alcanzarlo es la siguiente: de clic en la factura requerida, "
-"luego elija **Cambiar fecha esperada de pago/nota**, luego ingrese la nueva "
-"fecha de pago y nota."
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:162
-msgid "Exclude a specific invoice forever"
-msgstr "Excluir una factura específica para siempre"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:164
-msgid ""
-"Odoo can exclude an invoice for a specific customer by clicking on the "
-"checkbox **Excluded**"
-msgstr ""
-"Odoo puede excluir una factura para un cliente específico haciendo clic en "
-"la casilla **Excluidos**"
-
-#: ../../accounting/receivables/getting_paid/automated_followups.rst:168
-msgid "If you click on **History**, you can see all follow ups actions."
-msgstr ""
-"Si hace clic en **Historial**, puede ver todas las accionesde seguimiento."

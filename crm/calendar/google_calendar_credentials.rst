@@ -11,13 +11,15 @@ Setup in Google
 - Go to `Google APIs platform <https://console.developers.google.com>`__ 
   to generate Google Calendar API credentials. Log in with your Google account. 
 
-- Choose *Calendar API*.
+- Go to the API & Services page.
+
+.. image:: media/google_calendar_credentials00.png
+    :align: center
+
+- Search for *Google Calendar API* and select it.
 
 .. image:: media/google_calendar_credentials01.png
     :align: center
-
-- Create a new project and give it a name (e.g. Odoo). This project is needed
-  to store your API credentials.
 
 .. image:: media/google_calendar_credentials02.png
     :align: center
@@ -27,7 +29,10 @@ Setup in Google
 .. image:: media/google_calendar_credentials03.png
     :align: center
 
-- Create credentials to use in Odoo.
+- Select or create an API project to store the credentials if not yet done 
+  before. Give it an explicit name (e.g. Odoo Sync).
+
+- Create credentials.
 
 .. image:: media/google_calendar_credentials04.png
     :align: center
@@ -39,7 +44,7 @@ Setup in Google
     :align: center
 
 - Then you can create a Client ID.
-  Enter the name of the application (e.g. Odoo) and the allowed pages on 
+  Enter the name of the application (e.g. Odoo Calendar) and the allowed pages on 
   which you will be redirected. The *Authorized JavaScript origin* is your 
   Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
   URL followed by '/google_account/authentication'.
@@ -48,12 +53,12 @@ Setup in Google
     :align: center
 
 - Go through the Consent Screen step by entering a product name 
-  (e.g. Odoo). Feel free to check the customizations options 
+  (e.g. Odoo Calendar). Feel free to check the customizations options 
   but this is not mandatory. The Consent Screen will only show up when you 
   enter the Client ID in Odoo for the first time.
 
 - Finally you are provided with your **Client ID**. Go to *Credentials* to 
-  get the **Client secret** as well. You will need both of them in Odoo.
+  get the **Client Secret** as well. Both of them are required in Odoo.
 
 .. image:: media/google_calendar_credentials07.png
     :align: center
@@ -61,13 +66,14 @@ Setup in Google
 Setup in Odoo
 =============
 
-- Install **Google Calendar** app.
+- Install the **Google Calendar** App from the *Apps* menu or by checking 
+  the option in :menuselection:`Settings --> General Settings`.
 
 .. image:: media/google_calendar_credentials08.png
     :align: center
 
 - Go to :menuselection:`Settings --> General Settings` and enter your 
-  credentials in Google Calendar option.
+  **Client ID** and **Client Secret** in Google Calendar option.
 
 .. image:: media/google_calendar_credentials09.png
     :align: center

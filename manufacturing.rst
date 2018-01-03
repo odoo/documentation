@@ -8,4 +8,4 @@ Manufacturing
    :titlesonly:
 
    manufacturing/overview
-   manufacturing/operations
+   manufacturing/management

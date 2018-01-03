@@ -5,7 +5,9 @@
 Odoo Partnership Agreement
 ==========================
 
-.. note:: Version 6 - 2017-12-04
+.. note:: Version 6a - 2017-12-11
+
+.. v6a: typo in section 4.4
 
 
 BETWEEN:
@@ -170,7 +172,7 @@ for any reason whatsoever and by any means whatsoever.
 
 4.4 Training Benefits
 ---------------------
-PARTNER has access to the ODOO knowledge base as soon as PARTNER for the duration of this Agreement.
+PARTNER has access to the ODOO knowledge base for the duration of this Agreement.
 The ODOO knowledge base is an online e-platform containing a set of commercial, marketing
 and function documents, to help PARTNER acquire and leverage Odoo knowledge, grow its business,
 attract more customers, and build brand awareness.
@@ -288,7 +290,7 @@ advertisements or other public announcements.
 In particular, PARTNER accepts to be mentioned, and that PARTNER's logo and trademark may used for
 this purpose only, in the official list of the ODOO partners.
 
-.. _no_soliciting:
+.. _no_soliciting_partnership:
 
 8.4 No Soliciting or Hiring
 ---------------------------

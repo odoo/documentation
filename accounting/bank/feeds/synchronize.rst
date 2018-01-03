@@ -68,3 +68,45 @@ and fill in your bank credentials.
 
 Once you filled in your credentials, your bank feeds will be
 synchronized every 4 hours.
+
+FAQ 
+===
+
+The synchronization is not working in real time, is it normal?
+--------------------------------------------------------------
+
+Yodlee tries to get the data from a bank account once a day. However, this doesn't
+always happen at the same time. And sometimes the process can fail. In that case,
+Yodlee retries one hour or two later. This is why in Odoo there is a cron that is
+running every 4 hours to fetch the information from Yodlee. 
+
+You can however force this synchronization by clicking on the button "Synchronize now"
+from the accounting dashboard. 
+
+Moreover, a transaction can be visible in your bank account but not being fetched
+by Yodlee. Indeed, the transaction in your bank account can have the status "pending"
+and not the status "posted". In that case, Yodlee won't import it, you will have to
+wait that the status changes. 
+
+What is important to remember is that Yodlee is not a service fetching transactions
+in real time. This is a service to facilitate the import of the bank statement in the database. 
+
+Is the Yodlee feature included in my contract? 
+----------------------------------------------
+
+- Enterprise Version: Yes, if you have a valid enterprise contract linked to your database.
+- Community Version: No, this feature is not included in the Community Version.
+- Online Version: Yes, even if you benefit from the One App Free contract. 
+
+Some banks have a status "Beta", what does it mean? 
+---------------------------------------------------
+
+This means that Yodlee is only currently working on developing the synchronization
+with this bank. The synchronization could already work or it may need a bit more time
+to have a 100% working synchronization. Unfortunately, there is not much to do about
+except being patient. 
+
+All my past transactions are not in Odoo, why?
+----------------------------------------------
+
+Yodlee only allows to fetch up transactions to 3 months in the past.

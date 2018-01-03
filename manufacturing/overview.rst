@@ -1,3 +1,5 @@
+:banner: banners/manufacturing.jpg
+
 ========
 Overview
 ========
@@ -5,6 +7,5 @@ Overview
 .. toctree::
    :titlesonly:
 
-   overview/main_concepts
-   overview/getting_started
-   overview/bill_of_materials
+   I want to use Odoo Manufacturing <https://www.odoo.com/page/mrp-cloud-software>
+

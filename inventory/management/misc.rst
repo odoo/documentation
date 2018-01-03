@@ -9,3 +9,4 @@ Miscellaneous Operations
    misc/scrap
    misc/owned_stock
    misc/schedulers
+   misc/immediate_planned_transfers

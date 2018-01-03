@@ -53,9 +53,9 @@ Odoo CRM Terminologies
 -  **Kanban view :** 
         In Odoo, the Kanban view is a workflow
         visualisation tool halfway between a `list
-        view <https://www.odoo.com/documentation/8.0/reference/views.html#reference-views-list>`__
+        view <https://www.odoo.com/documentation/11.0/reference/views.html#lists>`__
         and a non-editable `form
-        view <https://www.odoo.com/documentation/8.0/reference/views.html#reference-views-form>`__
+        view <https://www.odoo.com/documentation/11.0/reference/views.html#forms>`__
         and displaying records as "cards". Records may be grouped in
         columns for use in workflow visualisation or manipulation (e.g.
         tasks or work-progress management), or ungrouped (used simply to

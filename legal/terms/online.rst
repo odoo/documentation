@@ -11,7 +11,7 @@ affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
 Odoo Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
 following terms and conditions (the "Agreement").
 
-.. _term:
+.. _term_online:
 
 1 Term of the Agreement
 =======================
@@ -23,7 +23,7 @@ party provides a written notice of termination minimum 30 days before the end
 of the Term by registered mail to the other party.
 
 
-.. _definitions:
+.. _definitions_online:
 
 2 Definitions
 =============
@@ -42,14 +42,14 @@ Bug
     performance it was designed to produce, or when a country-specific feature does not meet legal
     accounting requirements anymore).
 
-.. _enterprise_access:
+.. _enterprise_access_online:
 
 3 Access to source code
 =======================
 
 For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive,
 non-transferable license to use (execute, modify, execute after modification)
-the Odoo software, under the terms set forth in :ref:`appendix_a`.
+the Odoo software, under the terms set forth in :ref:`appendix_a_online`.
 
 The Customer agrees to take all necessary measures to guarantee the unmodified
 execution of the part of the Software that verifies the validity of the usage
@@ -68,7 +68,7 @@ pay Odoo SA an extra fee equal to 300% of the applicable list price for the
 actual number of Users for one year.
 
 
-.. _services:
+.. _services_online:
 
 4 Service Level
 ===============
@@ -84,7 +84,7 @@ within 2 business days.
 The Customer understands that Bugs caused by a modification or extension that is not part of the
 official Software will not be covered by this service.
 
-Both parties acknowledge that as specified in the license of the Software and in the :ref:`liability`
+Both parties acknowledge that as specified in the license of the Software and in the :ref:`liability_online`
 section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software.
 
 4.2 Support Service
@@ -248,7 +248,7 @@ each Covered Version.
 
 The Customer understands that the Bug and the information in the Security
 Advisory must be treated are Confidential Information as described in
-:ref:`confidentiality` during the embargo period prior to the public
+:ref:`confidentiality_online` during the embargo period prior to the public
 disclosure.
 
 The Odoo R&D processes have code review steps that include security aspects,
@@ -271,12 +271,12 @@ continuously monitor the source code and work with us to improve and harden the
 security of Odoo. Our Security Program is described on our Responsible
 Disclosure page: https://www.odoo.com/page/responsible-disclosure.
 
-.. _upgrade:
+.. _upgrade_online:
 
 4.6 Upgrade Services
 --------------------
 
-.. _upgrade_odoo:
+.. _upgrade_odoo_online:
 
 Upgrade Service for the Software
 ++++++++++++++++++++++++++++++++
@@ -295,12 +295,12 @@ It is the sole responsibility of the Customer to verify and validate the upgrade
 to detect Bugs, to analyze the impact of changes and new features implemented in the Target Version,
 and to convert and adapt for the Target Version any third-party extensions of the Software that
 were installed in the database before the upgrade (except where applicable as foreseen in section
-:ref:`upgrade_extra`).
+:ref:`upgrade_extra_online`).
 
 The Customer may submit multiple upgrade requests for a database, until an
 acceptable result is achieved.
 
-.. _upgrade_extra:
+.. _upgrade_extra_online:
 
 Upgrade Service for customizations
 ++++++++++++++++++++++++++++++++++
@@ -310,18 +310,18 @@ services for third-party extension modules of the Software, in addition to the
 regular Upgrade Services.
 
 This optional service is subject to additional fees
-(as described in charges_) and includes the technical adaptation of third-party
+(as described in charges_online_) and includes the technical adaptation of third-party
 modules installed in the Customer's database and their corresponding data in
 order to be compatible with the Target Version. The Customer will receive an
 upgraded version of all installed third-party modules along with the upgraded
 database.
 
-.. _charges:
+.. _charges_online:
 
 5 Charges and Fees
 ==================
 
-.. _charges_standard:
+.. _charges_standard_online:
 
 5.1 Standard charges
 --------------------
@@ -336,17 +336,17 @@ pay an extra fee equivalent to the applicable list price (at the beginning of
 the Term) for the additional Users and applications, for the remainder of the
 Term.
 
-.. _charges_renewal:
+.. _charges_renewal_online:
 
 5.2 Renewal charges
 -------------------
 
-Upon renewal as covered in section :ref:`term`, if the per-User charges applied
+Upon renewal as covered in section :ref:`term_online`, if the per-User charges applied
 during the previous Term are lower than the most current applicable per-User
 list price, the per-User charges will increase by up to 7% per year.
 
 
-.. _charges_thirdparty:
+.. _charges_thirdparty_online:
 
 5.3 Charges for custom features or third-party modules
 ------------------------------------------------------
@@ -365,7 +365,7 @@ the quality of the source code of those modules is too low, or if these modules
 constitute an interface with third-party software or systems. The upgrade of
 such modules will subject to a separate offer, outside of this Agreement.
 
-.. _taxes:
+.. _taxes_online:
 
 5.4 Taxes
 ---------
@@ -378,7 +378,7 @@ all Taxes associated with purchases made by the Customer under this Agreement, e
 is legally obliged to pay or collect Taxes for which the Customer is responsible.
 
 
-.. _conditions:
+.. _conditions_online:
 
 6 Conditions of Services
 ========================
@@ -395,7 +395,7 @@ The Customer agrees to:
 - appoint 1 dedicated Customer contact person for the entire duration of the Agreement;
 
 
-.. _no_soliciting:
+.. _no_soliciting_online:
 
 6.2 No Soliciting or Hiring
 ---------------------------
@@ -409,7 +409,7 @@ employee toward that end, the breaching party agrees to pay to the other party a
 EUR (€) 30 000.00 (thirty thousand euros).
 
 
-.. _publicity:
+.. _publicity_online:
 
 6.3 Publicity
 -------------
@@ -420,7 +420,7 @@ logos and trademarks, solely for the purpose of referring to the other party as 
 supplier, on websites, press releases and other marketing materials.
 
 
-.. _confidentiality:
+.. _confidentiality_online:
 
 6.4 Confidentiality
 -------------------
@@ -441,7 +441,7 @@ The Receiving Party may disclose Confidential Information of the Disclosing Part
 compelled by law to do so, provided the Receiving Party gives the Disclosing Party prior notice of
 the compelled disclosure, to the extent permitted by law.
 
-.. _termination:
+.. _termination_online:
 
 6.5 Termination
 ---------------
@@ -454,17 +454,17 @@ Further, Odoo SA may terminate the Agreement immediately in the event the Custom
 the applicable fees for the Services within the due date specified on the corresponding invoice.
 
 Surviving Provisions:
-  The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
-  “:ref:`liability`”, and “:ref:`general_provisions`” will survive any termination or expiration of
+  The sections ":ref:`confidentiality_online`”, “:ref:`disclaimers_online`”,
+  “:ref:`liability_online`”, and “:ref:`general_provisions_online`” will survive any termination or expiration of
   this Agreement.
 
 
-.. _warranties_disclaimers:
+.. _warranties_disclaimers_online:
 
 7 Warranties, Disclaimers, Liability
 ====================================
 
-.. _warranties:
+.. _warranties_online:
 
 7.1 Warranties
 --------------
@@ -483,7 +483,7 @@ execute the Services in accordance with the generally accepted industry standard
 The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
 is for Odoo SA to resume the execution of the Services at no additional charge.
 
-.. _disclaimers:
+.. _disclaimers_online:
 
 7.2 Disclaimers
 ---------------
@@ -497,7 +497,7 @@ non-infringement, to the maximum extent permitted by applicable law.
 
 Odoo SA does not warrant that the Software complies with any local or international law or regulations.
 
-.. _liability:
+.. _liability_online:
 
 7.3 Limitation of Liability
 ---------------------------
@@ -515,7 +515,7 @@ action, whether in contract, tort (including strict negligence) or any other leg
 theory, even if a party or its affiliates have been advised of the possibility of such damages,
 or if a party or its affiliates' remedy otherwise fails of its essential purpose.
 
-.. _force_majeure:
+.. _force_majeure_online:
 
 7.4 Force Majeure
 -----------------
@@ -528,12 +528,12 @@ whether of like or different nature, beyond the reasonable control of such party
 cause or causes exist.
 
 
-.. _general_provisions:
+.. _general_provisions_online:
 
 8 General Provisions
 ====================
 
-.. _governing_law:
+.. _governing_law_online:
 
 8.1 Governing Law
 -----------------
@@ -544,7 +544,7 @@ To the extent that any lawsuit or court proceeding is permitted hereinabove, bot
 parties agree to submit to the sole jurisdiction of the Nivelles (Belgium) court for the purpose of
 litigating all disputes.
 
-.. _severability:
+.. _severability_online:
 
 8.2 Severability
 ----------------
@@ -557,7 +557,7 @@ unenforceable provision of this Agreement by a valid provision having the same e
 objectives.
 
 
-.. _appendix_a:
+.. _appendix_a_online:
 
 9 Appendix A: Odoo Enterprise Edition License
 =============================================
