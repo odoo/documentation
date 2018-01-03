@@ -12,4 +12,3 @@ Customer Invoices
    customer_invoices/installment_plans
    customer_invoices/deferred_revenues
    customer_invoices/refund
-   customer_invoices/modify_validated
