@@ -31,11 +31,6 @@ management** feature
 .. image:: media/budget02.png
    :align: center
 
-If we want to be precise and point specific invoices and vendors bills
-to our budget, you should enable the Analytic accounting as well. If we
-don't we will only be able to budget the total amount of general
-accounts.
-
 Budgetary Positions
 -------------------
 
@@ -73,8 +68,7 @@ case select the relevant income accounts.
 Analytical account
 ------------------
 
-If you wish to point specific invoices or vendor bills to your budget
-you need to use analytical accounting. Odoo needs to know which costs or
+Odoo needs to know which costs or
 expenses are relevant to a specified budget. To do so we need to link
 our invoices and expenses to a defined analytical account. Create an
 analytical account by entering the Accounting module and clicking
