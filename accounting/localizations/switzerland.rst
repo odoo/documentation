@@ -123,3 +123,8 @@ included in Odoo by default
 
 If you have questions or remarks, please contact our support using
 odoo.com/help.
+
+.. tip::
+    Don't forget to update your fiscal positions. If you have a version
+    11.1 (or higher), there is nothing to do. Otherwise, you will also
+    have to update your fiscal positions accordingly. 
