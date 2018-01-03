@@ -6,5 +6,6 @@ Localizations
    :titlesonly:
 
    localizations/france
-   localizations/switzerland
+   localizations/germany
    localizations/mexico
+   localizations/switzerland
