@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-22 15:27+0100\n"
+"POT-Creation-Date: 2018-01-08 17:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -506,8 +506,6 @@ msgstr ""
 #: ../../inventory/routes/costing/landed_costs.rst:18
 #: ../../inventory/routes/strategies/putaway.rst:23
 #: ../../inventory/routes/strategies/removal.rst:18
-#: ../../inventory/settings/products/packages.rst:17
-#: ../../inventory/settings/products/packages.rst:66
 #: ../../inventory/settings/products/strategies.rst:30
 #: ../../inventory/settings/products/uom.rst:17
 #: ../../inventory/settings/products/variants.rst:114
@@ -640,7 +638,6 @@ msgstr ""
 #: ../../inventory/routes/costing/landed_costs.rst:6
 #: ../../inventory/routes/strategies/putaway.rst:6
 #: ../../inventory/routes/strategies/removal.rst:6
-#: ../../inventory/settings/products/packages.rst:6
 #: ../../inventory/settings/products/uom.rst:6
 #: ../../inventory/shipping/operation/cancel.rst:6
 #: ../../inventory/shipping/operation/invoicing.rst:6
@@ -1911,6 +1908,46 @@ msgstr ""
 
 #: ../../inventory/management/misc.rst:3
 msgid "Miscellaneous Operations"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:2
+msgid "Immediate & Planned Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:4
+msgid "In Odoo, you can create two types of transfers: immediate or planned transfers."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:8
+msgid "Immediate Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:10
+msgid "When you create a transfer manually, it is by default an immediate transfer."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:13
+msgid "In the case of an immediate transfer, you directly encode the products and quantities you are processing, there is no reservation that applies. This is why the column \"Initial Demand\" is not editable. You only fill in the column \"Done\" for the quantities."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:18
+msgid "This is for example used when you are transferring goods from a location A to a location B and that this is not planned (you are processing the transfer right now)."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:23
+msgid "Planned Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:25
+msgid "When a transfer is generated automatically (from a sales order or purchase order for example), it is a planned transfer. This means that there is an initial demand and that reservation applies on this initial demand."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:30
+msgid "If you want to create a planned transfer manually, you can do it from the inventory dashboard."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:36
+msgid "In that case, you will have to enter the initial demand first (how many units are you supposed to proceed), then to mark your transfer as to do. Once this is done, you will be able to reserve the products and to process the transfer."
 msgstr ""
 
 #: ../../inventory/management/misc/owned_stock.rst:3
@@ -4565,126 +4602,6 @@ msgstr ""
 msgid "Products"
 msgstr ""
 
-#: ../../inventory/settings/products/packages.rst:3
-msgid "How to use packages?"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:8
-#: ../../inventory/settings/products/usage.rst:31
-msgid "The package is the physical container in which you put one or several product."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:11
-msgid "By default, Odoo does not take into account the use of it."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:13
-msgid "Once you activate the option, you will be able to manage one or several packages when doing your transfers."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:19
-msgid "To configure the use of packages, go to the menu :menuselection:`Inventory --> Configuration --> Settings`. µ Locate the **Packages** section and tick **Record packages used on packing: pallets, boxes,...**"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:27
-#: ../../inventory/shipping/operation/multipack.rst:23
-msgid "Click on **Apply** when you are done."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:30
-msgid "Pack products"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:32
-msgid "Putting products in packs is usually done when processing warehouses transfers (receipt, internals or deliveries)."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:35
-msgid "To be able to put products in pack, the status of your transfer has to be **Available**."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:41
-msgid "In the operation tab, you can put your products into one or multiple packages."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:44
-#: ../../inventory/shipping/operation/multipack.rst:50
-msgid "Choose the quantity you want to put in the first pack in the **Done** column, then click on the link **Put in Pack**."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:50
-#: ../../inventory/shipping/operation/multipack.rst:56
-msgid "It will automatically create a pack with the requested quantity."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:52
-#: ../../inventory/shipping/operation/multipack.rst:58
-msgid "Do the same steps for the other pieces you want to pack in."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:57
-#: ../../inventory/shipping/operation/multipack.rst:63
-msgid "Click on **Validate** when you are done."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:60
-msgid "Whole packages transfers"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:62
-msgid "If you are using several locations and/or warehouses, it is possible to transfer packages with its contents."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:68
-msgid "You need to configure the **Operation Type** to allow moving packages. Go to :menuselection:`Configuration --> Operations Types`. Tick **Allow moving packs**:"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:75
-msgid "Transfer packages"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:77
-msgid "Create a transfer order. Choose the source and the destination locations, then click on **Mark as todo**. Do not put anything under the **Initial Demand** tab."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:84
-msgid "In the Operation tab, click on **Add an item** under the **Package To Move** section."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:87
-msgid "Tick the **Done** checkbox to confirm the move of the package :"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:92
-msgid "When it is finished, click on **Validate**."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:95
-msgid "Packages traceability"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:97
-msgid "To trace a package or check its content, go to :menuselection:`Inventory Control --> Packages`."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:103
-msgid "Click on **Package Transfers** to see all its moves."
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:106
-#: ../../inventory/settings/products/usage.rst:70
-msgid ":doc:`../../overview/start/setup`"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:107
-msgid ":doc:`usage`"
-msgstr ""
-
-#: ../../inventory/settings/products/packages.rst:108
-#: ../../inventory/settings/products/usage.rst:71
-msgid ":doc:`uom`"
-msgstr ""
-
 #: ../../inventory/settings/products/strategies.rst:3
 msgid "How to select the right replenishment strategy"
 msgstr ""
@@ -4870,6 +4787,10 @@ msgstr ""
 msgid "Packages"
 msgstr ""
 
+#: ../../inventory/settings/products/usage.rst:31
+msgid "The package is the physical container in which you put one or several product."
+msgstr ""
+
 #: ../../inventory/settings/products/usage.rst:38
 msgid "Packaging"
 msgstr ""
@@ -4908,6 +4829,14 @@ msgstr ""
 
 #: ../../inventory/settings/products/usage.rst:66
 msgid "When you are selling several trays, you might wrap all the trays into a ``box`` or in a ``plastic`` wrapping. It is the **package**."
+msgstr ""
+
+#: ../../inventory/settings/products/usage.rst:70
+msgid ":doc:`../../overview/start/setup`"
+msgstr ""
+
+#: ../../inventory/settings/products/usage.rst:71
+msgid ":doc:`uom`"
 msgstr ""
 
 #: ../../inventory/settings/products/usage.rst:72
@@ -5529,6 +5458,10 @@ msgstr ""
 msgid "To configure the use of packages, go to the menu :menuselection:`Inventory --> Configuration --> Settings`. Locate the **Packages** section and tick **Record packages used on packing: pallets, boxes,...**"
 msgstr ""
 
+#: ../../inventory/shipping/operation/multipack.rst:23
+msgid "Click on **Apply** when you are done."
+msgstr ""
+
 #: ../../inventory/shipping/operation/multipack.rst:29
 #: ../../inventory/shipping/setup/delivery_method.rst:77
 #: ../../inventory/shipping/setup/third_party_shipper.rst:110
@@ -5549,6 +5482,22 @@ msgstr ""
 
 #: ../../inventory/shipping/operation/multipack.rst:48
 msgid "From here, you can split your delivery into multiple packages."
+msgstr ""
+
+#: ../../inventory/shipping/operation/multipack.rst:50
+msgid "Choose the quantity you want to put in the first pack in the **Done** column, then click on the link **Put in Pack**."
+msgstr ""
+
+#: ../../inventory/shipping/operation/multipack.rst:56
+msgid "It will automatically create a pack with the requested quantity."
+msgstr ""
+
+#: ../../inventory/shipping/operation/multipack.rst:58
+msgid "Do the same steps for the other pieces you want to pack in."
+msgstr ""
+
+#: ../../inventory/shipping/operation/multipack.rst:63
+msgid "Click on **Validate** when you are done."
 msgstr ""
 
 #: ../../inventory/shipping/operation/multipack.rst:66
