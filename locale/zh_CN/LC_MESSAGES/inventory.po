@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-22 15:27+0100\n"
+"POT-Creation-Date: 2018-01-08 17:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: 苏州远鼎 <tiexinliu@126.com>, 2017\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -722,8 +722,6 @@ msgstr ""
 #: ../../inventory/routes/costing/landed_costs.rst:18
 #: ../../inventory/routes/strategies/putaway.rst:23
 #: ../../inventory/routes/strategies/removal.rst:18
-#: ../../inventory/settings/products/packages.rst:17
-#: ../../inventory/settings/products/packages.rst:66
 #: ../../inventory/settings/products/strategies.rst:30
 #: ../../inventory/settings/products/uom.rst:17
 #: ../../inventory/settings/products/variants.rst:114
@@ -890,7 +888,6 @@ msgstr "如何取消交货单？"
 #: ../../inventory/routes/costing/landed_costs.rst:6
 #: ../../inventory/routes/strategies/putaway.rst:6
 #: ../../inventory/routes/strategies/removal.rst:6
-#: ../../inventory/settings/products/packages.rst:6
 #: ../../inventory/settings/products/uom.rst:6
 #: ../../inventory/shipping/operation/cancel.rst:6
 #: ../../inventory/shipping/operation/invoicing.rst:6
@@ -2820,6 +2817,65 @@ msgstr "要追踪一个产品, 打开 **库存** 模块, 在 :menuselection:`库
 #: ../../inventory/management/misc.rst:3
 msgid "Miscellaneous Operations"
 msgstr "杂项操作"
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:2
+msgid "Immediate & Planned Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:4
+msgid ""
+"In Odoo, you can create two types of transfers: immediate or planned "
+"transfers."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:8
+msgid "Immediate Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:10
+msgid ""
+"When you create a transfer manually, it is by default an immediate transfer."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:13
+msgid ""
+"In the case of an immediate transfer, you directly encode the products and "
+"quantities you are processing, there is no reservation that applies. This is"
+" why the column \"Initial Demand\" is not editable. You only fill in the "
+"column \"Done\" for the quantities."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:18
+msgid ""
+"This is for example used when you are transferring goods from a location A "
+"to a location B and that this is not planned (you are processing the "
+"transfer right now)."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:23
+msgid "Planned Transfers"
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:25
+msgid ""
+"When a transfer is generated automatically (from a sales order or purchase "
+"order for example), it is a planned transfer. This means that there is an "
+"initial demand and that reservation applies on this initial demand."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:30
+msgid ""
+"If you want to create a planned transfer manually, you can do it from the "
+"inventory dashboard."
+msgstr ""
+
+#: ../../inventory/management/misc/immediate_planned_transfers.rst:36
+msgid ""
+"In that case, you will have to enter the initial demand first (how many "
+"units are you supposed to proceed), then to mark your transfer as to do. "
+"Once this is done, you will be able to reserve the products and to process "
+"the transfer."
+msgstr ""
 
 #: ../../inventory/management/misc/owned_stock.rst:3
 msgid "How to manage stock that you don't own?"
@@ -6261,156 +6317,6 @@ msgstr "设置"
 msgid "Products"
 msgstr "产品"
 
-#: ../../inventory/settings/products/packages.rst:3
-msgid "How to use packages?"
-msgstr "如何使用包裹？"
-
-#: ../../inventory/settings/products/packages.rst:8
-#: ../../inventory/settings/products/usage.rst:31
-msgid ""
-"The package is the physical container in which you put one or several "
-"product."
-msgstr "包裹是一个你想在其中放置一个或者几个产品的实际的容器。"
-
-#: ../../inventory/settings/products/packages.rst:11
-msgid "By default, Odoo does not take into account the use of it."
-msgstr "默认状态下, Odoo不用该功能"
-
-#: ../../inventory/settings/products/packages.rst:13
-msgid ""
-"Once you activate the option, you will be able to manage one or several "
-"packages when doing your transfers."
-msgstr "一旦你激活了该选项, 你就可以在调拨的时候管理一个或者多个包裹。"
-
-#: ../../inventory/settings/products/packages.rst:19
-msgid ""
-"To configure the use of packages, go to the menu :menuselection:`Inventory "
-"--> Configuration --> Settings`. µ Locate the **Packages** section and tick "
-"**Record packages used on packing: pallets, boxes,...**"
-msgstr ""
-"要陪只如何使用包裹, 进入菜单 :menuselection:`库存 -->配置 -->设置` 。找到 **包裹** 的位置并选择 "
-"**记录产品包裹的包材 :栈板, 盒子, ……** "
-
-#: ../../inventory/settings/products/packages.rst:27
-#: ../../inventory/shipping/operation/multipack.rst:23
-msgid "Click on **Apply** when you are done."
-msgstr "一旦完成, 点击 **应用** 。"
-
-#: ../../inventory/settings/products/packages.rst:30
-msgid "Pack products"
-msgstr "打包产品"
-
-#: ../../inventory/settings/products/packages.rst:32
-msgid ""
-"Putting products in packs is usually done when processing warehouses "
-"transfers (receipt, internals or deliveries)."
-msgstr "把产品分包通常在处理仓库调拨时完成(收货, 内部调拨或者发货)。"
-
-#: ../../inventory/settings/products/packages.rst:35
-msgid ""
-"To be able to put products in pack, the status of your transfer has to be "
-"**Available**."
-msgstr "要把产品放进一个包裹, 调拨单的状态必须要是 **可用** 。"
-
-#: ../../inventory/settings/products/packages.rst:41
-msgid ""
-"In the operation tab, you can put your products into one or multiple "
-"packages."
-msgstr "在操作页面, 你可以把产品放进一个或者多个包裹中。"
-
-#: ../../inventory/settings/products/packages.rst:44
-#: ../../inventory/shipping/operation/multipack.rst:50
-msgid ""
-"Choose the quantity you want to put in the first pack in the **Done** "
-"column, then click on the link **Put in Pack**."
-msgstr "在 **完成** 栏位选择你想要放进该包裹的产品的数量, 然后点击 **放进一个包裹** 链接。"
-
-#: ../../inventory/settings/products/packages.rst:50
-#: ../../inventory/shipping/operation/multipack.rst:56
-msgid "It will automatically create a pack with the requested quantity."
-msgstr "它会总动的创建所需数量的包裹。"
-
-#: ../../inventory/settings/products/packages.rst:52
-#: ../../inventory/shipping/operation/multipack.rst:58
-msgid "Do the same steps for the other pieces you want to pack in."
-msgstr "其余的产品可以按照同样的步骤进行打包。"
-
-#: ../../inventory/settings/products/packages.rst:57
-#: ../../inventory/shipping/operation/multipack.rst:63
-msgid "Click on **Validate** when you are done."
-msgstr "一旦完成, 点击 **确认** 。"
-
-#: ../../inventory/settings/products/packages.rst:60
-msgid "Whole packages transfers"
-msgstr "整个包裹的转移"
-
-#: ../../inventory/settings/products/packages.rst:62
-msgid ""
-"If you are using several locations and/or warehouses, it is possible to "
-"transfer packages with its contents."
-msgstr "如果有不同的库位和／或仓库, 也有可能通过转移包裹来转移产品。"
-
-#: ../../inventory/settings/products/packages.rst:68
-msgid ""
-"You need to configure the **Operation Type** to allow moving packages. Go to"
-" :menuselection:`Configuration --> Operations Types`. Tick **Allow moving "
-"packs**:"
-msgstr ""
-"你需要设置 **作业类型** 为允许调拨包裹。进入 :menuselection:`配置 -->作业类型` 。勾选 **允许调拨包裹**: "
-
-#: ../../inventory/settings/products/packages.rst:75
-msgid "Transfer packages"
-msgstr "调拨包裹"
-
-#: ../../inventory/settings/products/packages.rst:77
-msgid ""
-"Create a transfer order. Choose the source and the destination locations, "
-"then click on **Mark as todo**. Do not put anything under the **Initial "
-"Demand** tab."
-msgstr "创建一个调拨单。选择源库位和目标库位, 然后点击 ***标记为代办* 。在** 原始需求 **页面不要放置任何内容。"
-
-#: ../../inventory/settings/products/packages.rst:84
-msgid ""
-"In the Operation tab, click on **Add an item** under the **Package To Move**"
-" section."
-msgstr "在操作页面, 在 **要移动的包裹** 下面点击 **添加新的条目** 。"
-
-#: ../../inventory/settings/products/packages.rst:87
-msgid "Tick the **Done** checkbox to confirm the move of the package :"
-msgstr "点击 **完成** 勾选框确认包裹的移动 :"
-
-#: ../../inventory/settings/products/packages.rst:92
-msgid "When it is finished, click on **Validate**."
-msgstr "一旦完成, 点击 **验证** 。"
-
-#: ../../inventory/settings/products/packages.rst:95
-msgid "Packages traceability"
-msgstr "包裹追踪"
-
-#: ../../inventory/settings/products/packages.rst:97
-msgid ""
-"To trace a package or check its content, go to :menuselection:`Inventory "
-"Control --> Packages`."
-msgstr "要追踪一个包裹或者包裹里面的明细, 进入 :menuselection:`库存控制 -->包裹` 。"
-
-#: ../../inventory/settings/products/packages.rst:103
-msgid "Click on **Package Transfers** to see all its moves."
-msgstr "点击 **包裹转移** 查看所有的调拨。"
-
-#: ../../inventory/settings/products/packages.rst:106
-#: ../../inventory/settings/products/usage.rst:70
-msgid ":doc:`../../overview/start/setup`"
-msgstr ":doc:`../../overview/start/setup` "
-
-#: ../../inventory/settings/products/packages.rst:107
-msgid ":doc:`usage`"
-msgstr ":doc:`usage` "
-
-#: ../../inventory/settings/products/packages.rst:108
-#: ../../inventory/settings/products/usage.rst:71
-msgid ":doc:`uom`"
-msgstr ":doc:`uom` "
-
 #: ../../inventory/settings/products/strategies.rst:3
 msgid "How to select the right replenishment strategy"
 msgstr "如何选择正确的补货策略"
@@ -6668,6 +6574,12 @@ msgstr "不同计量单位之间的转换是自动完成的。唯一的条件是
 msgid "Packages"
 msgstr "包裹"
 
+#: ../../inventory/settings/products/usage.rst:31
+msgid ""
+"The package is the physical container in which you put one or several "
+"product."
+msgstr "包裹是一个你想在其中放置一个或者几个产品的实际的容器。"
+
 #: ../../inventory/settings/products/usage.rst:38
 msgid "Packaging"
 msgstr "包装"
@@ -6721,6 +6633,14 @@ msgid ""
 "When you are selling several trays, you might wrap all the trays into a "
 "``box`` or in a ``plastic`` wrapping. It is the **package**."
 msgstr "当你销售几个托盘的鸡蛋时, 你可能会把不同的托盘放进一个\" 箱子 \\ \"或者一个\" 塑料 \\ \"包装中, 这就是 **包裹** 。"
+
+#: ../../inventory/settings/products/usage.rst:70
+msgid ":doc:`../../overview/start/setup`"
+msgstr ":doc:`../../overview/start/setup` "
+
+#: ../../inventory/settings/products/usage.rst:71
+msgid ":doc:`uom`"
+msgstr ":doc:`uom` "
 
 #: ../../inventory/settings/products/usage.rst:72
 msgid ":doc:`packages`"
@@ -7614,6 +7534,10 @@ msgstr ""
 "要配置包裹的使用, 进入 :menuselection:`库存 -->配置 -->设置` 。找到 **包裹** 的位置并选择 **在包装上记录包材 "
 ":栈板, 箱子, ……** "
 
+#: ../../inventory/shipping/operation/multipack.rst:23
+msgid "Click on **Apply** when you are done."
+msgstr "一旦完成, 点击 **应用** 。"
+
 #: ../../inventory/shipping/operation/multipack.rst:29
 #: ../../inventory/shipping/setup/delivery_method.rst:77
 #: ../../inventory/shipping/setup/third_party_shipper.rst:110
@@ -7637,6 +7561,24 @@ msgstr "从销售订单创建的发货单会带出发货信息。"
 #: ../../inventory/shipping/operation/multipack.rst:48
 msgid "From here, you can split your delivery into multiple packages."
 msgstr "在这里, 你可以把要发的货物分成不同的包"
+
+#: ../../inventory/shipping/operation/multipack.rst:50
+msgid ""
+"Choose the quantity you want to put in the first pack in the **Done** "
+"column, then click on the link **Put in Pack**."
+msgstr "在 **完成** 栏位选择你想要放进该包裹的产品的数量, 然后点击 **放进一个包裹** 链接。"
+
+#: ../../inventory/shipping/operation/multipack.rst:56
+msgid "It will automatically create a pack with the requested quantity."
+msgstr "它会总动的创建所需数量的包裹。"
+
+#: ../../inventory/shipping/operation/multipack.rst:58
+msgid "Do the same steps for the other pieces you want to pack in."
+msgstr "其余的产品可以按照同样的步骤进行打包。"
+
+#: ../../inventory/shipping/operation/multipack.rst:63
+msgid "Click on **Validate** when you are done."
+msgstr "一旦完成, 点击 **确认** 。"
 
 #: ../../inventory/shipping/operation/multipack.rst:66
 msgid "Multi-packages with a 3rd party-shipper"

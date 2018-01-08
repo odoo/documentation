@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-12-13 13:31+0100\n"
+"POT-Creation-Date: 2018-01-08 17:10+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Connie Xiao <connie.xiao@elico-corp.com>, 2017\n"
+"Last-Translator: fausthuang <faust_huang@hotmail.com>, 2018\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,263 +23,254 @@ msgid "Discuss"
 msgstr "讨论"
 
 #: ../../discuss/email_servers.rst:3
-msgid "How to use my own email servers to send and receive email in Odoo"
-msgstr "Odoo邮件收发服务器配置详解"
-
-#: ../../discuss/email_servers.rst:6
-msgid "When is it needed"
-msgstr "什么情况下需要在Odoo中收发邮件？"
-
-#: ../../discuss/email_servers.rst:7
-msgid ""
-"Using your own email servers is required to send and receive messages in "
-"Odoo Community or Enterprise. Odoo Online embeds an out-of-box email "
-"solution that works straight away. However you can still use your own email "
-"servers with the online edition. Some insights are provided here below."
+msgid "How to use my mail server to send and receive emails in Odoo"
 msgstr ""
-"当您在Odoo社区版或企业版中使用邮件服务器进行邮件收发来传递消息时您需要使用Odoo的这个功能。Odoo自带一个在线电子邮件管理系统。您可通过配置相关参数来在线收发电子邮件。以下操作仅供参考。"
 
-#: ../../discuss/email_servers.rst:14
-msgid "How to set it up"
-msgstr "如何设置"
+#: ../../discuss/email_servers.rst:5
+msgid ""
+"This document is mainly dedicated to Odoo on-premise users who don't benefit"
+" from an out-of-the-box solution to send and receive emails in Odoo, unlike "
+"in `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh "
+"<https://www.odoo.sh>`__."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:9
+msgid ""
+"If no one in your company is used to manage email servers, we strongly "
+"recommend that you opt for such convenient Odoo hosting solutions. Indeed "
+"their email system works instantly and is monitored by professionals. "
+"Nevertheless you can still use your own email servers if you want to manage "
+"your email server's reputation yourself."
+msgstr ""
 
 #: ../../discuss/email_servers.rst:15
 msgid ""
-"As a system admin, go to :menuselection:`Settings --> General Settings` and "
-"check *External Email Servers* (watch out: this checkbox only shows up after"
-" Odoo 10). Then, go through the following steps."
+"You will find here below some useful information to do so by integrating "
+"your own email solution with Odoo."
 msgstr ""
-"以系统管理员的身份登陆后点击菜单 :menuselection:`设置 --> "
-"通用设置，勾选*外部邮件服务器*（注意：只有Odoo10以上的版本才有这个复选框)。若是8.0版本请您以系统管理员的身份登陆后点击菜单 "
-":menuselection:`设置 --> 常规设置，看到电子邮件四个中国汉字，的边上对应两个配置项，点击进行相关参数配置。然后进入以下步骤。"
+
+#: ../../discuss/email_servers.rst:19
+msgid "How to manage outbound messages"
+msgstr ""
 
 #: ../../discuss/email_servers.rst:21
 msgid ""
-"Office 365 email servers don't allow to send external emails from hosts like"
-" Odoo. Consequently you can only use such email servers for incoming "
-"messages."
+"As a system admin, go to :menuselection:`Settings --> General Settings` and "
+"check *External Email Servers*. Then, click *Outgoing Mail Servers* to "
+"create one and reference the SMTP data of your email server. Once all the "
+"information has been filled out, click on *Test Connection*."
 msgstr ""
 
 #: ../../discuss/email_servers.rst:26
-msgid "Set an outgoing email server for outbound messages"
-msgstr "设置发件服务器相关参数"
-
-#: ../../discuss/email_servers.rst:27
-msgid ""
-"You need the SMTP data of your email provider (Gmail, Outlook, Yahoo, AOL, "
-"etc.) as well as your admin credentials. Once all the information has been "
-"filled out, click on *Test Connection*."
+msgid "Here is a typical configuration for a G Suite server."
 msgstr ""
-"你需要找到电子邮件服务商（例如Gmail, Outlook, Yahoo, "
-"AOL）的SMTP参数和管理证书。比如在中国大陆用QQ邮箱的话，SMTP你可以这样设置：smtp.qq.com——前提是你需要开启QQ邮箱的SMTP，实在没办法的也可加应用群212904求助。填写完邮箱配置信息后，点击*测试连接*。"
+
+#: ../../discuss/email_servers.rst:31
+msgid "Then set your email domain name in the General Settings."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:34
+msgid "Can I use an Office 365 server"
+msgstr ""
 
 #: ../../discuss/email_servers.rst:35
-msgid "Set an incoming email server for inbound messages"
-msgstr "设置收件服务器相关参数"
-
-#: ../../discuss/email_servers.rst:36
 msgid ""
-"Fill out the form according to your email provider’s settings. Leave the "
-"*Actions to Perform on Incoming Mails* blank. Once all the information has "
-"been filled out, click on *TEST & CONFIRM*."
+"You can use an Office 365 server if you run Odoo on-premise. Office 365 SMTP"
+" relays are not compatible with Odoo Online."
 msgstr ""
-"根据电子邮件服务商的具体参数进行填写配置。例如中国大陆QQ邮箱您可以填写imap.qq.com。不要填写*对接收到的邮件采取的行动*栏。如实在没办法可加群374626483求助。填写完毕后，点击*测试并确认*。"
+
+#: ../../discuss/email_servers.rst:38
+msgid ""
+"Please refer to `Microsoft's documentation <https://support.office.com/en-"
+"us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to configure"
+" a SMTP relay for your Odoo's IP address."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:42
+msgid "How to use a G Suite server"
+msgstr ""
 
 #: ../../discuss/email_servers.rst:43
 msgid ""
-"By default inbound messages are fetched every 5 minutes. You can change this"
-" value in developer mode. Go to :menuselection:`Settings --> Technical --> "
-"Automation --> Scheduled Actions` and look for *Mail: Fetchmail Service*."
+"You can use an G Suite server for any Odoo hosting type. To do so you need "
+"to enable a SMTP relay and to allow *Any addresses* in the *Allowed senders*"
+" section. The configuration steps are explained in `Google documentation "
+"<https://support.google.com/a/answer/2956491?hl=en>`__."
 msgstr ""
-"默认的设置是每隔5分钟接收一次邮件。可以在开发模式中更改这个间隔值。方法是进入 :menuselection:`设置 --> 技术 --> 自动 -->"
-" 设定动作，然后找到*邮件: 邮件收发服务*。"
 
 #: ../../discuss/email_servers.rst:49
-msgid "Set the domain name"
-msgstr "设定邮箱域名"
+msgid "Be SPF-compliant"
+msgstr ""
 
 #: ../../discuss/email_servers.rst:50
 msgid ""
-"Enter the domain name of your email servers (e.g. mycompany.com) in General "
-"Settings."
-msgstr "在通用设置里面输入邮件服务器域名（如duuge.com）注：在8.0叫别名域。"
-
-#: ../../discuss/email_servers.rst:57
-msgid "Create a catchall address"
-msgstr "创建一个分组收件地址（类似QQ域名邮箱中的分组管理功能）"
-
-#: ../../discuss/email_servers.rst:58
-msgid ""
-"When a contact replies to an email sent from Odoo, the *reply-to* address is"
-" a generic address used to route the reply to the right discussion thread in"
-" Odoo (opportunity, order, task, etc.) and to the inbox of all its "
-"followers. By default this address is \"catchall@\" but it can be changed."
-msgstr ""
-"当一个联系人回复Odoo发送的邮件时，*reply-to* "
-"地址是一个catchall地址，可将回复中继到Odoo（商机、订单、任务等）中正确的讨论话题，以及所有关注者的邮箱中。地址默认为\"catchall@\"，也可以更改。"
-
-#: ../../discuss/email_servers.rst:63
-msgid ""
-"Create a catchall address in your email server settings. We advise you to "
-"use \"catchall@\" so that everything works out straight away. If you want to"
-" use another alias, you have extra steps in Odoo:"
-msgstr ""
-"在你的邮件服务器设置中创建一个catchall地址。我们建议您使用\"catchall@\"地址，可直接运行。如想使用其他别名，需要在Odoo中多设置一些步骤。"
-
-#: ../../discuss/email_servers.rst:67
-msgid "Activate the developer mode from your Settings Dashboard."
-msgstr "从设置仪表板激活开发者模式。"
-
-#: ../../discuss/email_servers.rst:72
-msgid ""
-"Refresh your screen. Then go to :menuselection:`Settings --> Technical --> "
-"Parameters --> System Parameters` and enter your custom catchall alias in "
-"*mail.catchall.alias*."
-msgstr ""
-"刷新屏幕。然后进入 :menuselection:`设置 --> 技术 --> 参数 --> "
-"系统参数，在*mail.catchall.alias*中输入你自定的catchall别名。"
-
-#: ../../discuss/email_servers.rst:79
-msgid "You can edit the email alias used for bounced messages the same way."
-msgstr "可以用同样的方法编辑外发邮件的地址别名。"
-
-#: ../../discuss/email_servers.rst:82
-msgid "How to use my own email servers with Odoo Online"
-msgstr "如何通过Odoo在线使用我自己的邮件服务器"
-
-#: ../../discuss/email_servers.rst:83
-msgid ""
-"Odoo Online comes up with an embedded and ready-to-use email solution with "
-"*@yourcompany.odoo.com* as domain. We recommend to keep this default setup "
-"as it is really convenient."
+"In case you use SPF (Sender Policy Framework) to increase the deliverability"
+" of your outgoing emails, don't forget to authorize Odoo as a sending host "
+"in your domain name settings. Here is the configuration for Odoo Online:"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:87
+#: ../../discuss/email_servers.rst:54
 msgid ""
-"Nevertheless you can still use your own email servers if you want to manage "
-"your email server's reputation (blacklisting, etc). The configuration for "
-"both incoming and outgoing mail servers is given here above."
+"If no TXT record is set for SPF, create one with following definition: "
+"v=spf1 include:_spf.odoo.com ~all"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:92
+#: ../../discuss/email_servers.rst:56
 msgid ""
-"However when it comes to incoming messages, we don't recommend to "
-"exclusively use your own email server. Indeed, Odoo Online is fetching "
-"incoming messages from the email server once every hour only. To receive "
-"emails in real time, you should rather use a **catchall redirection** (your "
-"server -> Odoo server). To do so:"
+"In case a SPF TXT record is already set, add \"include:_spf.odoo.com\". e.g."
+" for a domain name that sends emails via Odoo Online and via G Suite it "
+"could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:98
-msgid ""
-"Create a catchall address in your email server settings (e.g. catchall)."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:99
-msgid ""
-"Still from such settings, set a redirection from this catchall address to "
-"Odoo's one: catchall@yourdomain.ext -> catchall@yourcompany.odoo.com."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:102
-msgid ""
-"In Odoo check *External Email Servers* in :menuselection:`Settings --> "
-"General Settings` and enter your email domain name (i.e. yourdomain.ext)."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:104
-msgid "No need to set up an incoming email server in such a case."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:108
-msgid "How to be SPF-compliant when using external email servers in Odoo"
-msgstr "在Odoo上使用外部邮件服务器时如何与SPF兼容"
-
-#: ../../discuss/email_servers.rst:109
-msgid ""
-"Sender Policy Framework (SPF) is an email-validation system that checks that"
-" incoming mail from a domain comes from a host authorized by that domain's "
-"administrator. Such a security system is used in most email servers. If you "
-"don't comply with it, your emails sent from Odoo will be likely flagged as "
-"spam."
-msgstr ""
-"发送者策略框架（SPF）是一种邮件确认系统，它可以检查某个域名发出的邮件是否经过域名管理者的授权。这种安全机制被用于多数邮件服务器。如果不兼容，则你从Odoo发出的邮件很可能被标记为垃圾邮件。"
-
-#: ../../discuss/email_servers.rst:115
-msgid ""
-"To be SPF-compliant, you need to authorize Odoo as a sending host in your "
-"domain name settings:"
-msgstr "为了与SPF兼容，你需要在域名设置中对Odoo授权。"
-
-#: ../../discuss/email_servers.rst:118
-msgid "Sign in to your domain’s account at your domain host."
-msgstr "在你的域名主机中登入你域名的帐户。"
-
-#: ../../discuss/email_servers.rst:119
-msgid "Locate the page for updating your domain’s DNS records."
-msgstr "找到域名DNS记录的更新页面。"
-
-#: ../../discuss/email_servers.rst:120
-msgid ""
-"If no TXT record is set, create one with following definition: v=spf1 "
-"include:_spf.odoo.com ~all"
-msgstr "如果未设置TXT格式的记录，用以下定义创建一个记录：v=spf1 include:_spf.odoo.com ~all "
-
-#: ../../discuss/email_servers.rst:122
-msgid "In case a TXT record is already set, add \"include:_spf.odoo.com\"."
-msgstr "如已经设置了TXT记录，添加\"include:_spf.odoo.com\""
-
-#: ../../discuss/email_servers.rst:124
-msgid "e.g. for a Gmail server it should be:"
-msgstr "例如，Gmail服务器可以这样设置："
-
-#: ../../discuss/email_servers.rst:126
-msgid "v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
-msgstr " v=spf1 include:_spf.odoo.com include:_spf.google.com ~all "
-
-#: ../../discuss/email_servers.rst:128
+#: ../../discuss/email_servers.rst:60
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
 msgstr "找到<https://www.mail-tester.com/spf/>，在你自己的域寄存器中以准确步骤创建或修改TXT记录。"
 
-#: ../../discuss/email_servers.rst:131
+#: ../../discuss/email_servers.rst:63
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
 msgstr "新的SPF记录48小时后生效，但通常用不了那么长时间。"
 
-#: ../../discuss/email_servers.rst:134
+#: ../../discuss/email_servers.rst:66
 msgid ""
 "Adding more than one SPF record for a domain can cause problems with mail "
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
 msgstr "为一个域添加多个SPF记录可能导致邮件被分类为垃圾。我们建议仅修改一个SPF记录以授权给Odoo。"
 
-#: ../../discuss/email_servers.rst:139
-msgid "How to choose between Odoo and my traditional email box"
-msgstr "如何在Odoo和传统的电子邮箱之间做出选择"
+#: ../../discuss/email_servers.rst:71
+msgid "Allow DKIM"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:72
+msgid ""
+"You should do the same thing if DKIM (Domain Keys Identified Mail) is "
+"enabled on your email server. In the case of Odoo Online & Odoo.sh, you "
+"should add a DNS \"odoo._domainkey\" CNAME record to "
+"\"odoo._domainkey.odoo.com\". For example, for \"foo.com\" they should have "
+"a record \"odoo._domainkey.foo.com\" that is a CNAME with the value "
+"\"odoo._domainkey.odoo.com\"."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:80
+msgid "How to manage inbound messages"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:82
+msgid "Odoo relies on generic email aliases to fetch incoming messages."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:84
+msgid ""
+"**Reply messages** of messages sent from Odoo are routed to their original "
+"discussion thread (and to the inbox of all its followers) by the catchall "
+"alias (**catchall@**)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:88
+msgid ""
+"**Bounced messages** are routed to **bounce@** in order to track them in "
+"Odoo. This is especially used in `Odoo Email Marketing "
+"<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
+"recipients."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:92
+msgid ""
+"**Original messages**: Several business objects have their own alias to "
+"create new records in Odoo from incoming emails:"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:95
+msgid ""
+"Sales Channel (to create Leads or Opportunities in `Odoo CRM "
+"<https://www.odoo.com/page/crm>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:97
+msgid ""
+"Support Channel (to create Tickets in `Odoo Helpdesk "
+"<https://www.odoo.com/page/helpdesk>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:99
+msgid ""
+"Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
+"/project-management>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:101
+msgid ""
+"Job Positions (to create Applicants in `Odoo Recruitment "
+"<https://www.odoo.com/page/recruitment>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:103
+msgid "etc."
+msgstr "等等"
+
+#: ../../discuss/email_servers.rst:105
+msgid ""
+"Depending on your mail server, there might be several methods to fetch "
+"emails. The easiest and most recommended method is to manage one email "
+"address per Odoo alias in your mail server."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:109
+msgid ""
+"Create the corresponding email addresses in your mail server (catcall@, "
+"bounce@, sales@, etc.)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:111
+msgid "Set your domain name in the General Settings."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:116
+msgid ""
+"If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for "
+"each alias. You can do it from the General Settings as well. Fill out the "
+"form according to your email provider’s settings. Leave the *Actions to "
+"Perform on Incoming Mails* blank. Once all the information has been filled "
+"out, click on *TEST & CONFIRM*."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:125
+msgid ""
+"If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming "
+"messages to Odoo's domain name rather than exclusively use your own email "
+"server. That way you will receive incoming messages without delay. Indeed, "
+"Odoo Online is fetching incoming messages of external servers once per hour "
+"only. You should set redirections for all the email addresses to Odoo's "
+"domain name in your email server (e.g. *catchall@mydomain.ext* to "
+"*catchall@mycompany.odoo.com*)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:132
+msgid ""
+"All the aliases are customizable in Odoo. Object aliases can be edited from "
+"their  respective configuration view. To edit catchall and bounce aliases, "
+"you first need to activate the developer mode from the Settings Dashboard."
+msgstr ""
 
 #: ../../discuss/email_servers.rst:140
 msgid ""
-"Odoo Discuss is a perfect tool to send and read messages related to business"
-" documents. However it doesn't aim to replace a full-featured email solution"
-" (Gmail, Outlook, Yahoo, AOL, etc.). We recommend to take the most out of "
-"both systems without mingling them: What is related to Odoo business objects"
-" or applications goes into Odoo; What is not can be managed into your "
-"external email box."
+"Then refresh your screen and go to :menuselection:`Settings --> Technical "
+"--> Parameters --> System Parameters` to customize the aliases "
+"(*mail.catchall.alias* & * mail.bounce.alias*)."
 msgstr ""
-"Odoo讨论是一种发送与读取业务相关信息的完美工具，但它不会替代功能完善的电邮解决方案（如Gmail, Outlook, Yahoo, "
-"AOL等）。我们建议采用两种方案的优势部分，而不是混用：与Odoo业务目标或应用相关的信息进入Odoo，无法管理的信息进入外部邮箱。"
 
 #: ../../discuss/email_servers.rst:147
 msgid ""
-"To do so, create specific email aliases to use in Odoo (to generate leads or"
-" opportunities, helpdesk tickets, etc.). If you take an email alias already "
-"used for messaging outside of Odoo, incoming messages will land into both "
-"systems. This will negatively impact your productivity."
+"By default inbound messages are fetched every 5 minutes in Odoo on-premise. "
+"You can change this value in developer mode. Go to :menuselection:`Settings "
+"--> Technical --> Automation --> Scheduled Actions` and look for *Mail: "
+"Fetchmail Service*."
 msgstr ""
-"为此需要创建特定的电邮别名在Odoo中使用（以生成话题、机会或helpdesk工作票等）。如你已经采用了Odoo以外的邮箱别名，接收的邮件将同时进入两个系统。这会影响到工作效率。"
 
 #: ../../discuss/mail_twitter.rst:3
 msgid "How to follow Twitter feed from Odoo"
