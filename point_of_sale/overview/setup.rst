@@ -18,12 +18,12 @@ You will need :
 * A computer or tablet with an up-to-date web browser
 * A running SaaS or Odoo instance with the Point of Sale installed
 * A local network set up with DHCP (this is the default setting)
-* An RJ45 Ethernet Cable or a Linux compatible USB Wi-Fi adapter
 * An Epson USB TM-T20 Printer or another ESC/POS compatible printer
   (officially supported printers are listed at the `POS Hardware page
   <https://www.odoo.com/page/pos-ipad-android-hardware>`_)
 * A Honeywell Eclipse USB Barcode Scanner or another compatible scanner
 * An Epson compatible cash drawer
+* An RJ45 Ethernet Cable (optional, Wi-Fi is built in)
 
 Step By Step Setup Guide
 ------------------------
@@ -57,12 +57,10 @@ hardware might work as well.
   cable. Make sure this will connect the POSBox to the same network as
   your POS device.
 
-* **Wi-Fi**: If you do not wish to use Ethernet, plug in a Linux
-  compatible USB Wi-Fi adapter. Most commercially available Wi-Fi
-  adapters are Linux compatible. Officially supported are Wi-Fi
-  adapters with a Ralink 5370 chipset. Make sure not to plug in an
-  Ethernet cable, because all Wi-Fi functionality will be bypassed
-  when a wired network connection is available.
+* **Wi-Fi**: The current version of the POSBox has Wi-Fi built
+  in. Make sure not to plug in an Ethernet cable, because all Wi-Fi
+  functionality will be bypassed when a wired network connection is
+  available.
 
 Power the POSBox
 ~~~~~~~~~~~~~~~~
@@ -110,10 +108,11 @@ should be ready to use.
 Wi-Fi configuration
 -------------------
 
-The POSBox is Wi-Fi-capable. In order to use it you'll need a Linux
-compatible USB Wi-Fi adapter. Most commercially available Wi-Fi
-adapters are Linux compatible. Officially supported are Wi-Fi adapters
-with a Ralink 5370 chipset.
+The most recent version of the POSBox has Wi-Fi built in. If you're
+using an older version you'll need a Linux compatible USB Wi-Fi
+adapter. Most commercially available Wi-Fi adapters are Linux
+compatible. Officially supported are Wi-Fi adapters with a Ralink 5370
+chipset.
 
 Make sure not to plug in an Ethernet cable, as all Wi-Fi related
 functionality will be disabled when a wired network connection is
