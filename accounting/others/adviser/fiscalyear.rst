@@ -88,3 +88,6 @@ the **Current Year Earnings**, you should set the **Lock Date** to the last day
 of the fiscal year. Making sure that before doing so, you confirm
 whether or not the current year earnings in the **Balance Sheet** is
 correctly reporting a 0 balance.
+
+.. seealso::
+  * :doc:`../configuration/fiscal_year`
