@@ -9,13 +9,15 @@ Online Database management
 
 .. _duplicate_online:
 
+Deleting a database
+===================
+
 Duplicating a database
 ======================
 
 .. note:: Database duplication, renaming, custom DNS, etc. is not available
     to free customers of our Online platform.
 
-Access the `database management page <https://www.odoo.com/my/databases>`__
 (you will have to sign in). Next, make sure you are connected as the
 administrator of the database you want to duplicate. After that, click
 on the **Manage Your Databases** button.
