@@ -38,6 +38,9 @@ Buy your domain name at a popular registrar:
    However don't buy any extra service to create or host your website. 
    This is Odoo's job!
 
+.. _custom_domain:
+
+
 How to apply my domain name to my Odoo instance
 ===============================================
 First let's authorize the redirection (yourcompany.com -> yourcompany.odoo.com):
