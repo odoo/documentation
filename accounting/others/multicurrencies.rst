@@ -1,6 +1,6 @@
-========
-Overview
-========
+=============
+Multicurrency
+=============
 
 .. toctree::
    :titlesonly:
