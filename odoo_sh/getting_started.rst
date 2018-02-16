@@ -1,0 +1,15 @@
+:banner: banners/odoo-sh.jpg
+
+=================
+Get started
+=================
+
+.. toctree::
+   :titlesonly:
+
+   getting_started/create
+   getting_started/branches
+   getting_started/builds
+   getting_started/status
+   getting_started/settings
+   getting_started/first_module
