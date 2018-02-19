@@ -22,14 +22,14 @@ entries are automatically balanced (sum of debits = sum of credits).
 Accrual and Cash Basis Methods
 ==============================
 
-Odoo support both accrual and cash basis reporting. This allows you to
+Odoo supports both accrual and cash basis reporting. This allows you to
 report income / expense at the time transactions occur (i.e., accrual basis), or when
 payment is made or received (i.e., cash basis).
 
 Multi-companies
 ===============
 
-Odoo allows to manage several companies within the same database. Each
+Odoo allows one to manage several companies within the same database. Each
 company has its own chart of accounts and rules. You can get
 consolidation reports following your consolidation rules.
 
@@ -51,9 +51,9 @@ web-service.
 International Standards
 =======================
 
-Odoo accounting support more than 50 countries. The Odoo core
-accounting implement accounting standards that is common to all
-countries and specific modules exists per country for the
+Odoo accounting supports more than 50 countries. The Odoo core
+accounting implements accounting standards that are common to all
+countries. Specific modules exist per country for the
 specificities of the country like the chart of accounts, taxes, or
 bank interfaces.
 
@@ -61,7 +61,7 @@ In particular, Odoo's core accounting engine supports:
 
 * Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
   countries including Ireland, Canada, Australia, and New Zealand)
-  where cost of good sold are reported when products are
+  where costs of good sold are reported when products are
   sold/delivered.
 * European accounting where expenses are accounted at the supplier
   bill.
@@ -115,8 +115,8 @@ bank statement lines to your accounting transactions. Odoo also
 remembers how you've treated other bank statement lines and provides
 suggested general ledger transactions.
 
-Calculates the tax you owe your tax authority
-=============================================
+Calculate the tax you owe your tax authority
+============================================
 
 Odoo totals all your accounting transactions for your tax period and
 uses these totals to calculate your tax obligation. You can then check
@@ -136,7 +136,7 @@ average price, LIFO (for countries allowing it) and FIFO.
 Easy retained earnings
 ======================
 
-Retained earnings is the portion of income retained by your
+Retained earnings are the portion of income retained by your
 business. Odoo automatically calculates your current year earnings in
 real time so no year-end journal or rollover is required.  This is
 calculated by reporting the profit and loss balance to your balance
