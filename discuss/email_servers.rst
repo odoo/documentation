@@ -1,128 +1,60 @@
-=================================================================
-How to use my own email servers to send and receive email in Odoo
-=================================================================
+============================================================
+How to use my mail server to send and receive emails in Odoo
+============================================================
 
-When is it needed
-=================
-Using your own email servers is required to send and receive messages
-in Odoo Community or Enterprise. Odoo Online embeds an out-of-box 
-email solution that works straight away. However you can still use
-your own email servers with the online edition. Some insights 
-are provided here below.
+This document is mainly dedicated to Odoo on-premise users who don't 
+benefit from an out-of-the-box solution to send and receive emails in Odoo,
+unlike in `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh <https://www.odoo.sh>`__.
 
-How to set it up 
-================
+If no one in your company is used to manage email servers, we strongly recommend that
+you opt for such convenient Odoo hosting solutions. Indeed their email system 
+works instantly and is monitored by professionals. 
+Nevertheless you can still use your own email servers if you want
+to manage your email server's reputation yourself.
+
+You will find here below some useful 
+information to do so by integrating your own email solution with Odoo.
+
+How to manage outbound messages
+===============================
+
 As a system admin, go to :menuselection:`Settings --> General Settings` 
-and check *External Email Servers* 
-(watch out: this checkbox only shows up after Odoo 10).
-Then, go through the following steps.
-
-.. note::
-    Office 365 email servers don't allow to send external emails 
-    from hosts like Odoo. 
-    Consequently you can only use such email servers for incoming messages.
-
-Set an outgoing email server for outbound messages
---------------------------------------------------
-You need the SMTP data of your email provider (Gmail, Outlook, 
-Yahoo, AOL, etc.) as well as your admin credentials. 
+and check *External Email Servers*. 
+Then, click *Outgoing Mail Servers* to create one and reference the SMTP data of your email server. 
 Once all the information has been filled out, click on *Test Connection*.
+
+Here is a typical configuration for a G Suite server.
 
 .. image:: media/outgoing_server.png
     :align: center
 
-Set an incoming email server for inbound messages
--------------------------------------------------
-Fill out the form according to your email provider’s settings. 
-Leave the *Actions to Perform on Incoming Mails* blank. Once all the 
-information has been filled out, click on *TEST & CONFIRM*.
+Then set your email domain name in the General Settings.
 
-.. image:: media/incoming_server.png
-    :align: center
+Can I use an Office 365 server
+------------------------------
+You can use an Office 365 server if you run Odoo on-premise.
+Office 365 SMTP relays are not compatible with Odoo Online.
 
-.. note:: By default inbound messages are fetched every 5 minutes. 
-   You can change this value in developer mode.
-   Go to :menuselection:`Settings --> Technical --> Automation --> 
-   Scheduled Actions` and look for *Mail: Fetchmail Service*.
+Please refer to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ 
+to configure a SMTP relay for your Odoo's IP address.
 
-Set the domain name
--------------------
-Enter the domain name of your email servers (e.g. mycompany.com)
-in General Settings.
+How to use a G Suite server
+---------------------------
+You can use an G Suite server for any Odoo hosting type.
+To do so you need to enable a SMTP relay and to allow *Any addresses* 
+in the *Allowed senders* section. The configuration steps are explained in 
+`Google documentation <https://support.google.com/a/answer/2956491?hl=en>`__.
 
-.. image:: media/alias_domain.png
-    :align: center
+Be SPF-compliant
+----------------
+In case you use SPF (Sender Policy Framework) to increase the deliverability 
+of your outgoing emails, don't forget to authorize Odoo as a sending host in your 
+domain name settings. Here is the configuration for Odoo Online:
 
-Create a catchall address
--------------------------
-When a contact replies to an email sent from Odoo, the *reply-to* address
-is a generic address used to route the reply to the right discussion thread
-in Odoo (opportunity, order, task, etc.) and to the inbox of all its followers.
-By default this address is "catchall@" but it can be changed. 
-
-Create a catchall address in your email server settings. We advise
-you to use "catchall@" so that everything works out straight away.
-If you want to use another alias, you have extra steps in Odoo:
-
-- Activate the developer mode from your Settings Dashboard.
-
-.. image:: media/developer_mode.png
-    :align: center
-
-- Refresh your screen. Then go to :menuselection:`Settings --> Technical
-  --> Parameters --> System Parameters` and enter your custom catchall alias
-  in *mail.catchall.alias*.
-
-.. image:: media/system_parameters.png
-    :align: center
-
-.. note:: You can edit the email alias used for bounced messages the same way.
-
-How to use my own email servers with Odoo Online
-================================================
-Odoo Online comes up with an embedded and ready-to-use email 
-solution with *@yourcompany.odoo.com* as domain.
-We recommend to keep this default setup as it is really convenient. 
-
-Nevertheless you can still use your own email servers if you want
-to manage your email server's reputation (blacklisting, etc).
-The configuration for both incoming and outgoing mail servers is
-given here above.
-
-However when it comes to incoming messages, we don't recommend
-to exclusively use your own email server. Indeed, Odoo Online is fetching
-incoming messages from the email server once every hour only. 
-To receive emails in real time, you should rather use
-a **catchall redirection** (your server -> Odoo server). To do so:
-
-* Create a catchall address in your email server settings (e.g. catchall).
-* Still from such settings, set a redirection
-  from this catchall address to Odoo's one:
-  catchall@yourdomain.ext -> catchall@yourcompany.odoo.com.
-* In Odoo check *External Email Servers* in :menuselection:`Settings --> General Settings`
-  and enter your email domain name (i.e. yourdomain.ext).
-* No need to set up an incoming email server in such a case.
-  
-
-How to be SPF-compliant when using external email servers in Odoo
-=================================================================
-Sender Policy Framework (SPF) is an email-validation system that checks that 
-incoming mail from a domain comes from a host authorized by that domain's 
-administrator. Such a security system is used in most email servers. 
-If you don't comply with it, your emails sent from Odoo will be likely
-flagged as spam.
-
-To be SPF-compliant, you need to authorize Odoo as a sending host 
-in your domain name settings:
-
-* Sign in to your domain’s account at your domain host.
-* Locate the page for updating your domain’s DNS records. 
-* If no TXT record is set, create one with following definition:
+* If no TXT record is set for SPF, create one with following definition:
   v=spf1 include:_spf.odoo.com ~all
-* In case a TXT record is already set, add "include:_spf.odoo.com".
-  
-  e.g. for a Gmail server it should be:
-
+* In case a SPF TXT record is already set, add "include:_spf.odoo.com".
+  e.g. for a domain name that sends emails via Odoo Online and via G Suite it could be:
   v=spf1 include:_spf.odoo.com include:_spf.google.com ~all
 
 Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to 
@@ -135,16 +67,84 @@ but this usually happens more quickly.
    with mail delivery and spam classification. Instead, we recommend using 
    only one SPF record by modifying it to authorize Odoo.
 
-How to choose between Odoo and my traditional email box
-=======================================================
-Odoo Discuss is a perfect tool to send and read messages related to 
-business documents. However it doesn't aim to replace a full-featured email 
-solution (Gmail, Outlook, Yahoo, AOL, etc.). 
-We recommend to take the most out of both systems without mingling them: 
-What is related to Odoo business objects or applications goes into Odoo; 
-What is not can be managed into your external email box. 
+Allow DKIM
+----------
+You should do the same thing if DKIM (Domain Keys Identified Mail) 
+is enabled on your email server. In the case of Odoo Online & Odoo.sh,
+you should add a DNS "odoo._domainkey" CNAME record to 
+"odoo._domainkey.odoo.com". 
+For example, for "foo.com" they should have a record "odoo._domainkey.foo.com" 
+that is a CNAME with the value "odoo._domainkey.odoo.com".
 
-To do so, create specific email aliases to use in Odoo (to generate leads 
-or opportunities, helpdesk tickets, etc.). If you take an email alias 
-already used for messaging outside of Odoo, incoming messages will land 
-into both systems. This will negatively impact your productivity.
+How to manage inbound messages
+==============================
+
+Odoo relies on generic email aliases to fetch incoming messages.
+
+* **Reply messages** of messages sent from Odoo are routed to their original 
+  discussion thread (and to the inbox of all its followers) by the
+  catchall alias (**catchall@**). 
+
+* **Bounced messages** are routed to **bounce@** in order to track them in Odoo.
+  This is especially used in `Odoo Email Marketing <https://www.odoo.com/page/email-marketing>`__ 
+  to opt-out invalid recipients.    
+
+* **Original messages**: Several business objects have their own alias to 
+  create new records in Odoo from incoming emails:
+
+  * Sales Channel (to create Leads or Opportunities in `Odoo CRM <https://www.odoo.com/page/crm>`__),
+  
+  * Support Channel (to create Tickets in `Odoo Helpdesk <https://www.odoo.com/page/helpdesk>`__),
+
+  * Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page/project-management>`__),
+
+  * Job Positions (to create Applicants in `Odoo Recruitment <https://www.odoo.com/page/recruitment>`__),
+
+  * etc.
+
+Depending on your mail server, there might be several methods to fetch emails.
+The easiest and most recommended method is to manage one email address per Odoo
+alias in your mail server.
+
+* Create the corresponding email addresses in your mail server 
+  (catcall@, bounce@, sales@, etc.).
+* Set your domain name in the General Settings.
+
+  .. image:: media/alias_domain.png
+      :align: center
+
+* If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for each alias. 
+  You can do it from the General Settings as well. Fill out the form according 
+  to your email provider’s settings. 
+  Leave the *Actions to Perform on Incoming Mails* blank. Once all the 
+  information has been filled out, click on *TEST & CONFIRM*.
+
+.. image:: media/incoming_server.png
+    :align: center
+
+* If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming messages 
+  to Odoo's domain name rather than exclusively use your own email server. 
+  That way you will receive incoming messages without delay. Indeed, Odoo Online is fetching
+  incoming messages of external servers once per hour only. 
+  You should set redirections for all the email addresses to Odoo's domain name in your 
+  email server (e.g. *catchall@mydomain.ext* to *catchall@mycompany.odoo.com*).
+
+.. tip:: All the aliases are customizable in Odoo. 
+ Object aliases can be edited from their  respective configuration view. 
+ To edit catchall and bounce aliases, you first need to activate the 
+ developer mode from the Settings Dashboard.
+
+ .. image:: media/developer_mode.png
+    :align: center
+
+ Then refresh your screen and go to 
+ :menuselection:`Settings --> Technical --> Parameters --> System Parameters` 
+ to customize the aliases (*mail.catchall.alias* & * mail.bounce.alias*).
+
+ .. image:: media/system_parameters.png
+    :align: center
+
+.. note:: By default inbound messages are fetched every 5 minutes in Odoo on-premise. 
+   You can change this value in developer mode.
+   Go to :menuselection:`Settings --> Technical --> Automation --> 
+   Scheduled Actions` and look for *Mail: Fetchmail Service*.
