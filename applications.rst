@@ -17,6 +17,7 @@ Applications
    point_of_sale
    project
    helpdesk/helpdesk
+   livechat/livechat
    expense/expense
    general
 ..   expenses
