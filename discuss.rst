@@ -1,4 +1,4 @@
-:banner: banners/crm.jpg
+:banner: banners/discuss.jpg
 
 =======
 Discuss
