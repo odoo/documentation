@@ -103,17 +103,17 @@ Commands are useful shortcuts for completing certain actions or to
 access information you might need. To use this feature, simply type the
 commands into the chat. The following actions are available :
 
-\*\*/help\*\* : show a helper message.
+**/help** : show a helper message.
 
-\*\*/helpdesk\*\* : create a helpdesk ticket.
+**/helpdesk** : create a helpdesk ticket.
 
-\*\*/helpdesk\_search\*\* : search for a helpdesk ticket.
+**/helpdesk\_search** : search for a helpdesk ticket.
 
-\*\*/history\*\* : see 15 last visited pages.
+**/history** : see 15 last visited pages.
 
-\*\*/lead\*\* : create a new lead.
+**/lead** : create a new lead.
 
-\*\*/leave\*\* : leave the channel.
+**/leave** : leave the channel.
 
 .. note::
    If a helpdesk ticket is created from the chat, then the
