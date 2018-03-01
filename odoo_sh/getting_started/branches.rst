@@ -270,8 +270,9 @@ Submodule
 Add a branch from another repository in your current branch as a *submodule*.
 
 *Submodules* allows you to use modules from other repositories in your project.
-The `git-scm documentation about submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ can help you to know
-more about *submodules*.
+
+The submodules feature is detailed in the chapter
+`Submodules <../advanced/submodules.html>`_ of this documentation.
 
 .. code-block:: bash
 
@@ -290,10 +291,6 @@ Commits all your current changes.
   $ git push -u origin master
 
 Uploads the changes you just added in the *master* branch on your remote repository.
-
-If you add private repositories as submodules in your branches,
-you need to configure a deploy key in your Odoo.sh project settings and in your repository settings.
-Otherwise Odoo.sh won't be allowed to download them.
 
 Delete
 ------

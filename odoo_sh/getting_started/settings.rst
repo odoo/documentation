@@ -148,10 +148,11 @@ HTTPS/SSL
 ---------
 
 You can use a third-party CDN such as *Cloudflare.com* to enable the *HTTPS* support for your custom domain:
-  * `Create a Cloudflare account <https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-Cloudflare-account-and-add-a-website>`_
-  * `Change your domain name servers to Cloudflare <https://support.cloudflare.com/hc/en-us/articles/205195708-Step-3-Change-your-domain-name-servers-to-Cloudflare>`_
-  * `Choose an SSL mode <https://support.cloudflare.com/hc/en-us/articles/201897700-Step-4-Recommended-First-Steps-for-all-Cloudflare-users#sslmode>`_
-  * `Redirect your visitors to HTTPS <https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL->`_
+
+* `Create a Cloudflare account <https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-Cloudflare-account-and-add-a-website>`_
+* `Change your domain name servers to Cloudflare <https://support.cloudflare.com/hc/en-us/articles/205195708-Step-3-Change-your-domain-name-servers-to-Cloudflare>`_
+* `Choose an SSL mode <https://support.cloudflare.com/hc/en-us/articles/201897700-Step-4-Recommended-First-Steps-for-all-Cloudflare-users#sslmode>`_
+* `Redirect your visitors to HTTPS <https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL->`_
 
 Submodules
 ==========
@@ -162,7 +163,7 @@ as submodules in your branches to allow Odoo.sh to download them.
 .. Warning::
   These settings are required for **private repositories** only.
   If you are looking on how to set up your submodules,
-  instructions are available in the `Advanced/Submodules <../advanced/submodules.html>`_ chapter of this documentation.
+  instructions are available in the chapter `Submodules <../advanced/submodules.html>`_ of this documentation.
 
 .. image:: ./media/interface-settings-submodules.png
    :align: center
