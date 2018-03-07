@@ -1,8 +1,6 @@
-:banner: banners/helpdesk.jpg
-
-========
-Helpdesk
-========
+==============================
+Get started with Odoo Helpdesk
+==============================
 
 Overview
 ========

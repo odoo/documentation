@@ -16,7 +16,7 @@ Applications
    manufacturing
    point_of_sale
    project
-   helpdesk/helpdesk
+   helpdesk
    livechat/livechat
    expense/expense
    general
