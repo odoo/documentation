@@ -1,10 +1,10 @@
-================
-Purchase Tenders
-================
+===================
+Purchase Agreements
+===================
 
 .. toctree::
    :titlesonly:
 
    tender/manage_multiple_offers
    tender/partial_purchase
-   tender/manage_blanket_orders
+   tender/blanket_orders
