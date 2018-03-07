@@ -12,5 +12,6 @@ Discuss
    discuss/monitoring
    discuss/mentions
    discuss/team_communication
+   discuss/plan_activities
    discuss/mail_twitter
    discuss/email_servers
