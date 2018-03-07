@@ -1,6 +1,6 @@
-======================
-Request for Quotations
-======================
+==========================================
+Request for Quotations and Purchase Orders
+==========================================
 
 .. toctree::
    :titlesonly:
@@ -8,6 +8,7 @@ Request for Quotations
    rfq/create
    rfq/bills
    rfq/reception
+   rfq/lock_orders
    rfq/cancel
    rfq/approvals
    rfq/analyze
