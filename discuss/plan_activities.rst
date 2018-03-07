@@ -36,3 +36,20 @@ will simply open to let you select a time slot.
     If you need to use other activity types with a calendar
     planning, make sure their *Category* is set as *Meeting*.
 
+Schedule a chain of activities to follow
+========================================
+
+Odoo helps you easily plan your usual flow of activities. Go to
+:menuselection:`Configuration --> Activity Types` and set the common
+following steps as *Recommended next activities*.
+
+.. image:: media/plan_activities03.png
+    :align: center
+
+Now, when an activity is completed, you can select *Done & schedule
+next*. The next steps will automatically be suggested to you.
+
+.. image:: media/plan_activities04.png
+    :align: center
+
+Have fun getting better organized by planning activities !
