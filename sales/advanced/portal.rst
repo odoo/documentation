@@ -9,9 +9,7 @@ A portal access is given to a user who has the necessity to have access
 to Odoo instance, to view certain documents or information in the
 system.
 
-For Example:
-1.  A long term client who needs to view online quotations.
-2.  Accounting consultant who needs to keep track of the company's financials.
+For Example, a long term client who needs to view online quotations.
 
 A portal user has only read/view access. He or she will not be able to
 edit any document in the system.
