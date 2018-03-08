@@ -7,4 +7,3 @@ Replenishment
 
    replenishment/flows
    replenishment/multicompany
-   replenishment/trouble_shooting
