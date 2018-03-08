@@ -1,6 +1,6 @@
-=======================================================
-How to control product received? (entirely & partially)
-=======================================================
+===============================================
+Control product received (entirely & partially)
+===============================================
 
 The **Purchase** app allows you to manage your purchase orders, to control
 products to receive and to control supplier bills.

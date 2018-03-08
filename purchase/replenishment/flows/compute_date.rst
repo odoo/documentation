@@ -1,6 +1,6 @@
-====================================================
-How are the order date and scheduled dates computed?
-====================================================
+===================================================
+How are the order date and scheduled dates computed
+===================================================
 
 Scheduled dates are computed in order to be able to plan deliveries,
 receptions and so on. Depending on the habits of your company, Odoo

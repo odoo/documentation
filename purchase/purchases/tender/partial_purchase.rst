@@ -1,6 +1,6 @@
-=======================================================================
-How to purchase partially at two vendors for the same purchase tenders?
-=======================================================================
+===============================================================
+Purchase partially at two vendors for the same purchase tenders
+===============================================================
 
 For some Purchase Tenders (PT), you might sometimes want to be able to
 select only a part of some of the offers you received. In Odoo, this is

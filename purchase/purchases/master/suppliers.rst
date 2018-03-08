@@ -1,6 +1,6 @@
-==========================================
-How to set several suppliers on a product?
-==========================================
+==================================
+Set several suppliers on a product
+==================================
 
 Keeping track of your vendors can be a real burden in day-to-day
 business life. Prices can change and you might have several suppliers

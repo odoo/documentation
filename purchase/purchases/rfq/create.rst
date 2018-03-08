@@ -1,6 +1,6 @@
-======================================
-How to create a Request for Quotation?
-======================================
+==============================
+Create a Request for Quotation
+==============================
 
 A Request for Quotation (RfQ) is used when you plan to purchase some
 products and you would like to receive a quote for those products. In

@@ -1,6 +1,6 @@
-==========================================
-Request for Quotations and Purchase Orders
-==========================================
+=========================================
+Request for Quotation and Purchase Orders
+=========================================
 
 .. toctree::
    :titlesonly:

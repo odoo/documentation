@@ -1,6 +1,6 @@
-=============================================
-How to analyze the performance of my vendors?
-=============================================
+=====================================
+Analyze the performance of my vendors
+=====================================
 
 If your company regularly buys products from several suppliers, it would
 be useful to get statistics on your purchases. There are several reasons

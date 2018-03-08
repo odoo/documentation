@@ -1,6 +1,6 @@
-=========================================================
-How to purchase in different unit of measures than sales?
-=========================================================
+=================================================
+Purchase in different unit of measures than sales
+=================================================
 
 In day-to-day business, it may happen that your supplier uses a
 different unit of measure than you do in sales. This can cause confusion

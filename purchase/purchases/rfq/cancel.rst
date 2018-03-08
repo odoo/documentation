@@ -1,6 +1,6 @@
-================================
-How to cancel a purchase order?
-================================
+=======================
+Cancel a purchase order
+=======================
 
 Due to misunderstandings, human errors or change of plans, it is
 sometimes necessary to cancel purchase orders sent to suppliers. Odoo

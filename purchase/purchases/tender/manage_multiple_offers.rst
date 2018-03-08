@@ -1,6 +1,6 @@
-==============================
-How to manage Purchase Tenders
-==============================
+=======================
+Manage Purchase Tenders
+=======================
 
 A **Purchase Tender** (PT), also known as Call for Bids, is used to
 drive competition between several suppliers in order to get the best

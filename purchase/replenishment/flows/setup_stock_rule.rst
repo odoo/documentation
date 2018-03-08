@@ -1,6 +1,6 @@
-==================================
-How to setup a minimum stock rule?
-==================================
+==========================
+Setup a minimum stock rule
+==========================
 
 For some items you hold in stock, it might be useful to have rules
 making sure you never run out of stocks (for example, products with a

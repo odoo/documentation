@@ -1,6 +1,6 @@
-=================================================================
-How to determine if a vendor bill should be paid (3-way matching)
-=================================================================
+==========================================================
+Determine if a vendor bill should be paid (3-way matching)
+==========================================================
 
 In some industries, you may receive a bill from a vendor before
 receiving the ordered products. However, the bill should maybe not be

@@ -1,6 +1,6 @@
-==============================
-How to control supplier bills?
-==============================
+======================
+Control supplier bills
+======================
 
 The **Purchase** application allows you to manage your purchase orders,
 incoming products, and vendor bills all seamlessly in one place.
