@@ -8,9 +8,9 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Business 10.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-01-08 17:10+0100\n"
+"POT-Creation-Date: 2018-03-08 14:28+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Inigo Zuluaga <inigo_zuluaga@yahoo.es>, 2017\n"
+"Last-Translator: e2f <projects@e2f.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -243,7 +243,6 @@ msgstr "Registrar estados de cuenta bancario manualmente"
 #: ../../accounting/bank/reconciliation/use_cases.rst:6
 #: ../../accounting/others/adviser/budget.rst:6
 #: ../../accounting/others/analytic/purchases_expenses.rst:6
-#: ../../accounting/others/multicurrencies.rst:3
 #: ../../accounting/others/multicurrencies/exchange.rst:6
 #: ../../accounting/others/multicurrencies/how_it_works.rst:6
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:6
@@ -822,7 +821,7 @@ msgstr ""
 
 #: ../../accounting/bank/feeds/synchronize.rst:76
 msgid "The synchronization is not working in real time, is it normal?"
-msgstr ""
+msgstr "La sincroniación no está funcionando en tiempo real, ¿es normal?"
 
 #: ../../accounting/bank/feeds/synchronize.rst:78
 msgid ""
@@ -832,12 +831,19 @@ msgid ""
 "there is a cron that is running every 4 hours to fetch the information from "
 "Yodlee."
 msgstr ""
+"Yodlee intenta obtener los datos desde la cuenta de banco una vez al día. "
+"Sin embargo, esto no ocurre siempre a la misma hora. Y a veces este proceso "
+"puede fallar. En ese caso, Yodlee reintenta una o dos horas despues. Esta es"
+" la razón por la cual en Odoo existe un proceso cron que se ejecuta cada 4 "
+"horas para obtener la informacion de Yodlee."
 
 #: ../../accounting/bank/feeds/synchronize.rst:83
 msgid ""
 "You can however force this synchronization by clicking on the button "
 "\"Synchronize now\" from the accounting dashboard."
 msgstr ""
+"Sin embargo puede forzar esta sincronización haciendo clic en el botón "
+"\"Sincronizar ahora\" desde el tablero de contabilidad."
 
 #: ../../accounting/bank/feeds/synchronize.rst:86
 msgid ""
@@ -846,6 +852,10 @@ msgid ""
 " status \"pending\" and not the status \"posted\". In that case, Yodlee "
 "won't import it, you will have to wait that the status changes."
 msgstr ""
+"Además, una transaccion puede ser visible en su cuenta de banco pero no ser "
+"obtenida por Yodlee. De hecho, la transacción en su cuenta de banco puede "
+"tener el estatus de \"pendiente\" y no el estatus \"lista\". En ese caso, "
+"Yodlee no la importará, tendrá que esperar que cambie el estatus."
 
 #: ../../accounting/bank/feeds/synchronize.rst:91
 msgid ""
@@ -853,31 +863,39 @@ msgid ""
 "transactions in real time. This is a service to facilitate the import of the"
 " bank statement in the database."
 msgstr ""
+"Lo que es importante recordar es que Yodlee no es un servicio que obtiene "
+"las transacciones en tiempo real. Este es un servicio para facilitar la "
+"importación de los asientos bancarios a la base de datos."
 
 #: ../../accounting/bank/feeds/synchronize.rst:95
 msgid "Is the Yodlee feature included in my contract?"
-msgstr ""
+msgstr "¿Yodlee está incluido en mi contrato?"
 
 #: ../../accounting/bank/feeds/synchronize.rst:97
 msgid ""
 "Enterprise Version: Yes, if you have a valid enterprise contract linked to "
 "your database."
 msgstr ""
+"Versión Enterprise: Si, si tiene un contrato enterprise valido enlazado a su"
+" base de datos."
 
 #: ../../accounting/bank/feeds/synchronize.rst:98
 msgid ""
 "Community Version: No, this feature is not included in the Community "
 "Version."
 msgstr ""
+"Versión COmmunity: No, esta característica no está incluida en la Versión "
+"Commnity."
 
 #: ../../accounting/bank/feeds/synchronize.rst:99
 msgid ""
 "Online Version: Yes, even if you benefit from the One App Free contract."
 msgstr ""
+"Version Online: Si, incluso si se beneficia del contrato One App Free."
 
 #: ../../accounting/bank/feeds/synchronize.rst:102
 msgid "Some banks have a status \"Beta\", what does it mean?"
-msgstr ""
+msgstr "Algunos bancos tienen el estatus \"Beta\", ¿qué significa esto?"
 
 #: ../../accounting/bank/feeds/synchronize.rst:104
 msgid ""
@@ -886,6 +904,10 @@ msgid ""
 " may need a bit more time to have a 100% working synchronization. "
 "Unfortunately, there is not much to do about except being patient."
 msgstr ""
+"Esto significa que actualmente Yodlee esta trabajando en el desarrollo de la"
+" sincronización con ese banco. La sincronización prodría funcionar o quizas "
+"necesita un poco mas de tiempo para estar al 100%. Desafortunadamente, no "
+"hay mucho que hacer al respecto excepto esperar."
 
 #: ../../accounting/bank/feeds/synchronize.rst:110
 msgid "All my past transactions are not in Odoo, why?"
@@ -1375,7 +1397,6 @@ msgstr ""
 #: ../../accounting/bank/reconciliation.rst:3
 #: ../../accounting/others/reporting/main_reports.rst:153
 #: ../../accounting/overview/main_concepts/memento.rst:177
-#: ../../accounting/overview/main_concepts/terminologies.rst:19
 msgid "Bank Reconciliation"
 msgstr "Conciliación Bancaria"
 
@@ -2670,7 +2691,7 @@ msgstr ""
 
 #: ../../accounting/localizations/france.rst:130
 msgid "Storage"
-msgstr ""
+msgstr "Almacenamiento"
 
 #: ../../accounting/localizations/france.rst:132
 msgid ""
@@ -2816,6 +2837,7 @@ msgid "Balance Sheet"
 msgstr "Balance de Situación"
 
 #: ../../accounting/localizations/germany.rst:24
+#: ../../accounting/localizations/nederlands.rst:19
 msgid "Profit & Loss"
 msgstr ""
 
@@ -3744,6 +3766,41 @@ msgstr ""
 msgid ""
 "**Solution:** Set the mexican name for the tax 0% and 16% in your system and"
 " used on the invoice."
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:2
+msgid "Netherlands"
+msgstr "Holanda"
+
+#: ../../accounting/localizations/nederlands.rst:5
+msgid "XAF Export"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:7
+msgid ""
+"With the Dutch accounting localization installed, you will be able to export"
+" all your accounting entries in XAF format. For this, you have to go in "
+":menuselection:`Accounting --> Reporting --> General Ledger`, you define the"
+" entries you want to export using the filters (period, journals, ...) and "
+"then you click on the button **EXPORT (XAF)**."
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:14
+msgid "Dutch Accounting Reports"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:16
+msgid ""
+"If you install the Dutch accounting localization, you will have access to "
+"some reports that are specific to the Netherlands such as :"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:21
+msgid "Tax Report (Aangifte omzetbelasting)"
+msgstr ""
+
+#: ../../accounting/localizations/nederlands.rst:23
+msgid "Intrastat Report (ICP)"
 msgstr ""
 
 #: ../../accounting/localizations/spain.rst:3
@@ -6244,7 +6301,6 @@ msgid "Prepayments"
 msgstr "Anticipos"
 
 #: ../../accounting/others/configuration/account_type.rst:39
-#: ../../accounting/overview/main_concepts/terminologies.rst:77
 msgid "Fixed Assets"
 msgstr "Activos fijos"
 
@@ -6852,6 +6908,10 @@ msgstr ""
 "original. La cuenta de diferencia de precio localizada en la categoría del "
 "producto es usada para registrar la diferencia entre el costo promedio y el "
 "precio original de compra."
+
+#: ../../accounting/others/multicurrencies.rst:3
+msgid "Multicurrency"
+msgstr ""
 
 #: ../../accounting/others/multicurrencies/exchange.rst:3
 msgid "Record exchange rates at payments"
@@ -9778,7 +9838,6 @@ msgstr "Cuenta Bancaria: definida en el diario bancario relacionado"
 #: ../../accounting/overview/main_concepts/memento.rst:216
 #: ../../accounting/overview/main_concepts/memento.rst:226
 #: ../../accounting/overview/main_concepts/memento.rst:242
-#: ../../accounting/overview/main_concepts/terminologies.rst:26
 msgid "Reconciliation"
 msgstr "Conciliación"
 
@@ -10089,207 +10148,6 @@ msgstr "Extracto bancario"
 #: ../../accounting/overview/main_concepts/memento.rst:246
 msgid "Statement XYZ"
 msgstr "Extracto XYZ"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:3
-msgid "Accounting Terminologies"
-msgstr "Terminología Contable"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:6
-msgid "Journal"
-msgstr "Diario"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:9
-msgid ""
-"A journal is like a folder in which you record all transactions of the same "
-"type: all the statements of a bank account, all customer invoices, all "
-"supplier bills. It's used to organize similar transactions together."
-msgstr ""
-"Un diario es como un folder en el cual registra todas las transacciones del "
-"mismo tipo: todos los extractos de una cuenta bancaria, todas las facturas "
-"de cliente, todas las facturas de proveedor. Es usado para organizar juntas "
-"transacciones similares."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:13
-msgid "Payment Terms"
-msgstr "Plazos de pago"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:16
-msgid ""
-"Payment terms describe how and when a customer invoice (or supplier bill) "
-"should be paid over the time. Example: 30% direct payment, balance due in "
-"two months."
-msgstr ""
-"Los términos de pago describen como y cuando una factura de cliente (o "
-"factura de proveedor) debe ser pagada durante el tiempo. Ejemplo: 30% pago "
-"directo, saldo pendiente en dos meses."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:22
-msgid ""
-"Bank reconciliation is the process of matching transactions from your bank "
-"records with existing journal items or creating new journal items on the "
-"fly. It is a process of verification to ensure that your bank and your "
-"records in Odoo say the same thing."
-msgstr ""
-"La conciliación bancaria es el proceso de corresponder transacciones desde "
-"sus registros bancarios con el diario existente o creando un nuevo diario al"
-" mismo tiempo. Es un proceso de verificación para asegurar que su banco y "
-"sus registros en Odoo dicen la misma cosa."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:29
-msgid ""
-"Journal items reconciliation is the process of linking several journal items"
-" together like an invoice and a payment. This allows you to mark invoices as"
-" paid. It is also useful when comparing values of 'goods received not "
-"invoiced' and 'goods shipped not billed' accounts."
-msgstr ""
-"La conciliación de ítems en el diario es el proceso de vincular varios ítems"
-" del diario juntos como una factura y un pago. Esto le permite marcar "
-"facturas como pagadas. También es útil cuando compare valores de bienes "
-"recibidos no facturados y bienes enviados no registrados en las cuentas."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:33
-msgid "Deposit Ticket"
-msgstr "Comprobante de Depósito"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:36
-msgid ""
-"Deposit tickets group several payment orders (usually checks) that are "
-"deposited together at the bank at the same time. This allows an easy "
-"reconciliation with the bank statement line if the line has one line per "
-"deposit."
-msgstr ""
-"Los comprobantes de depósito agrupan varias órdenes de pago (usualmente "
-"cheques) que son depositados juntos en el banco al mismo tiempo. Esto "
-"permite una conciliación fácil con la línea del extracto bancario si la "
-"línea tiene una línea por depósito."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:40
-msgid "Journal Entry"
-msgstr "Asiento contable"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:43
-msgid ""
-"A journal entry is an accounting transaction, usually related to a financial"
-" document: invoice, payment, receipt, etc. A journal entry always consists "
-"of at least two lines, described here as journal items, which credit or "
-"debit specific accounts. The sum of the credits of all journal items of a "
-"journal entry must be equal to the sum of their debits for the entry to be "
-"valid."
-msgstr ""
-"Una entrada del diario es una transacción contable, usualmente relacionada "
-"con un documento financiero: factura, pago, recibo, etc. Un asiento de "
-"entrada siempre consiste de por lo menos dos líneas, descritas aquí como "
-"ítems del diario, los cuales específican cuentas débito o crédito. La suma "
-"de los créditos de todos los ítems del diario de una entrada del diario "
-"deben ser iguales a la suma de sus débitos para que la entrada sea válida."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:50
-msgid "Journal Item"
-msgstr "Apunte contable"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:53
-msgid ""
-"A line of a journal entry, with a monetary debit or credit associated with a"
-" specific account."
-msgstr ""
-"Una línea de una entrada del diario, con un débito o crédito monetario "
-"asociado con una cuenta específica."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:55
-msgid "Analytic Accounts"
-msgstr "Cuentas analíticas"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:58
-msgid ""
-"Sometimes called **Cost Accounts**, are accounts that are not part of the "
-"chart of accounts and that allow you to track costs and revenues. Analytic "
-"accounts are usually grouped by projects, departments, etc. for analysis of "
-"a company's expenditures. Every journal item is posted in a regular account "
-"in the chart of account and can be posted to an analytic account for the "
-"purpose of reporting or analysis."
-msgstr ""
-"A veces llamadas **Cuentas de Costo**, son cuentas que no son parte del plan"
-" de cuentas y que permiten rastrear costos e ingresos. Las cuentas "
-"analíticas son usualmente agrupadas por proyectos, departamentos, etc., para"
-" el análisis de los gastos de la compañía. Cada ítem del diario es "
-"registrado en una cuenta regular en el plan de cuentas y puede ser "
-"registrado en una cuenta analítica con el propósito de reportar o analizar."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:65
-msgid "Analytic Entries"
-msgstr "Entradas analíticas"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:68
-msgid ""
-"Costs or revenues posted to analytic accounts, usually related to journal "
-"entries."
-msgstr ""
-"Costos o ingresos registrados en cuentas analíticas, usualmente relacionados"
-" con entradas del diario."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:70
-msgid "Sales Receipt"
-msgstr "Recibo de ventas"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:73
-msgid ""
-"A receipt or other slip of paper issued by a store or other vendor "
-"describing the details of a purchase (amount, date, department, etc.). Sales"
-" receipt are usually used instead of invoices if the sale is paid in cash in"
-" a store."
-msgstr ""
-"Un recibo u otro pedazo de papel emitido por una tienda u otro proveedor "
-"describiendo los detalles de una compra (monto, fecha, departamento, etc.). "
-"Los recibos de ventas son usados usualmente en lugar de facturas si la venta"
-" es pagada en efectivo en una tienda."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:80
-msgid ""
-"Property owned by the company, usually with a useful life greater than one "
-"reporting period. Odoo Asset management is used to manage the depreciation /"
-" amortization of the asset over the time. Typical examples would be capital "
-"equipment, vehicles, and real estate."
-msgstr ""
-"Bienes propiedad de la compañía, usualmente con una vida útil mayor que un "
-"período de reporte. La administración de activos es usada para administrar "
-"la depreciación / amortización de un activo conforme avanza el tiempo. "
-"Ejemplos típicos serían equipo de capital, vehículos y bienes raíces."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:84
-msgid "Deferred Revenues"
-msgstr "Ingresos diferidos"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:87
-msgid ""
-"Are used to recognize revenues for sales of services that are provided over "
-"a long period of time. If you sell a 3 year maintenance contract, you can "
-"use the deferred revenue mechanism to recognize 1/36 of the revenue every "
-"month until the contract expires, rather than taking it all initially or at "
-"the end."
-msgstr ""
-"Son usados para reconocer ingresos por ventas de servicios que son proveídos"
-" durante un largo período de tiempo. Si vende un contrato de mantenimiento "
-"de 3 años, puede usar el ingreso diferido como mecanismo para reconocer 1/36"
-" del ingreso cada mes hasta que el contrato expire, en lugar de tomarlo todo"
-" inicialmente o al final."
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:93
-msgid "Fiscal Position"
-msgstr "Posición fiscal"
-
-#: ../../accounting/overview/main_concepts/terminologies.rst:96
-msgid ""
-"Define the taxes that should be applied for a specific customer/vendor or "
-"invoice. Example: If some customers benefit from specific taxes (government,"
-" construction companies, EU companies that are VAT subjected,…), you can "
-"assign a fiscal position to them and the right tax will be selected "
-"according to the products they buy."
-msgstr ""
-"Defina los impuestos que deben ser aplicados a un cliente/proveedor o "
-"factura específica. Ejemplo: si algunos clientes se benefician de impuestos "
-"específicos (gobierno, compañías de construcción, compañías Europeas que son"
-" sujetas de IVA,...), puede asignarles una posición fiscal y el impuesto "
-"correcto será seleccionado de acuerdo a los productos que compran."
 
 #: ../../accounting/overview/process_overview.rst:3
 msgid "Process overview"
@@ -15281,7 +15139,7 @@ msgstr ""
 
 #: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
 msgid "Direct Debit Mandates"
-msgstr ""
+msgstr "Mandatos de adeudo directo"
 
 #: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
 msgid ""
