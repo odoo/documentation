@@ -177,6 +177,19 @@ and then enter your PAC username and PAC password.
    - `Certificate Key`_
    - **Password :** 12345678a
 
+7. Configure the tag in sales taxes
+-----------------------------------
+
+This tag is used to set the tax type code, transferred or withhold, applicable
+to the concept in the CFDI.
+So, if the tax is a sale tax the "Tag" field should be "IVA", "ISR" or "IEPS".
+
+.. image:: media/mexico33.png
+   :align: center
+
+Note that the default taxes already has a tag assigned, but when you create a new tax you
+should choose a tag.
+
 Usage and testing
 ~~~~~~~~~~~~~~~~~
 
@@ -488,7 +501,7 @@ debug mode enabled).
 - Click on button "Create Contextual Action"
 - Go to the company form :menuselection:`Settings --> Users&Companies --> Companies`
 - Open any company you have.
-- Click on "Action" and then on "Dowload XSD file to CFDI".
+- Click on "Action" and then on "Download XSD file to CFDI".
 
 .. image:: media/mexico18.png
    :align: center
@@ -496,6 +509,21 @@ debug mode enabled).
 Now you can make an invoice with any error (for example a product without
 code which is pretty common) and an explicit error will be shown instead a
 generic one with no explanation.
+
+.. note::
+   If you see an error like this:
+
+   The cfdi generated is not valid
+
+   attribute decl. 'TipoRelacion', attribute 'type': The QName value '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does not resolve to a(n) simple type definition., line 36
+
+   This can be caused because of a database backup restored in anothe server,
+   or when the XSD files are not correctly downloaded. Follow the same steps
+   as above but:
+
+   - Go to the company in which the error occurs.
+   - Click on "Action" and then on "Download XSD file to CFDI".
+
 
 FAQ
 ~~~
@@ -586,9 +614,8 @@ FAQ
 .. image:: media/mexico13.png
    :align: center
 
-
 .. _SAT: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
-.. _Finkok: https://facturacion.finkok.com/cuentas/registrar/
+.. _Finkok: https://www.finkok.com/contacto.html
 .. _`Solución Factible`: https://solucionfactible.com/sf/v3/timbrado.jsp
 .. _`SAT resolution`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
