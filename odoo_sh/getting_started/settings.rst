@@ -142,7 +142,7 @@ having the first redirecting to the second is amongst the
 `SEO best practices <https://support.google.com/webmasters/answer/7451184?hl=en>`_
 (See *Provide one version of a URL to reach a document*)
 in order to have one dominant URL. You can therefore just configure *mycompany.com* to redirect to *www.mycompany.com*.
-Most domains managers have the feature to configure this redirection. This is commonly called a web redirection.
+Most domain managers have the feature to configure this redirection. This is commonly called a web redirection.
 
 HTTPS/SSL
 ---------
