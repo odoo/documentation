@@ -64,14 +64,15 @@ OnSIP on Your Cell Phone
 
 In order to make and receive phone calls when you are not in front of your computer, you can use a softphone app on your cell phone in parallel of Odoo VoIP. This is useful for on-the-go calls, but also to make sure to hear incoming calls, or simply for convenience. Any SIP softphone will work.
 
-On Android, OnSIP has been successfully tested with `Zoiper <https://play.google.com/store/apps/details?id=com.zoiper.android.app>`_. You will have to configure it as follows:
+On Android and iOS, OnSIP has been successfully tested with `Grandstream Wave <https://play.google.com/store/apps/details?id=com.grandstream.wave>`_. When creating an account, select OnSIP in the list of carriers. You will then have to configure it as follows:
 
 - **Account name**: OnSIP
-- **Host**: the OnSIP 'Domain'
-- **Username**: the OnSIP 'Username'
+- **SIP Server**: the OnSIP 'Domain'
+- **SIP User ID**: the OnSIP 'Username'
+- **SIP Authentication ID**: the OnSIP 'Auth Username'
 - **Password**: the OnSIP 'SIP Password'
-- **Authentication user**: the OnSIP 'Auth Username'
-- **Outbound proxy**: sip.onsip.com
+
+Aside from initiating calls from Grandstream Wave on your phone, you can also initiate calls by clicking phone numbers in your browser on your PC. This will make Grandstream Wave ring and route the call via your phone to the other party. This approach is useful to avoid wasting time dialing phone numbers. In order to do so, you will need the Chrome extension `OnSIP Call Assistant <https://chrome.google.com/webstore/detail/onsip-call-assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en>`_.
 
 .. warning::
 
