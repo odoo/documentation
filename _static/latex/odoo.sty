@@ -82,12 +82,32 @@
 \renewcommand{\headrulewidth}{0.1pt}
 \renewcommand{\footrulewidth}{0.1pt}
 
+\renewcommand{\maketitle}{%
+  \noindent\rule{\textwidth}{1pt}\ifsphinxpdfoutput\newline\null\fi\par
+  \ifsphinxpdfoutput
+    \begingroup
+     %\pdfstringdefDisableCommands{\def\\{, }\def\endgraf{ }\def\and{, }}%
+     %\hypersetup{pdfauthor={\@author}, pdftitle={\@title}}%
+    \endgroup
+  \fi
+  \begin{flushright}
+    \sphinxlogo
+    \py@HeaderFamily
+    {\Huge \@title }\par
+  \end{flushright}
+  \@thanks
+  \setcounter{footnote}{0}
+  \let\thanks\relax\let\maketitle\relax
+  %\gdef\@thanks{}\gdef\@author{}\gdef\@title{}
+}
+
+
 \newcommand{\makeodootitleold}{%
   \begin{titlepage}
   \titlepagedecoration
   \begin{center}
   \vspace{3cm}
-  \includegraphics{_static/banners/odoo_logo}
+  \sphinxlogo
   \end{center}
 
   \vspace{2cm}
