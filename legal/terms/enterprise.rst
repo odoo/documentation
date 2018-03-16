@@ -435,11 +435,12 @@ objectives.
 
 .. only:: latex
 
-    Odoo 9 Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
+    Odoo Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
     defined as follows:
 
-    .. include:: ../licenses/enterprise_license.txt
-        :literal:
+    .. highlight:: none
+
+    .. literalinclude:: ../licenses/enterprise_license.txt
 
 .. only:: html
 

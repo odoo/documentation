@@ -174,7 +174,7 @@ for any reason whatsoever and by any means whatsoever.
 ---------------------
 PARTNER has access to the ODOO knowledge base for the duration of this Agreement.
 The ODOO knowledge base is an online e-platform containing a set of commercial, marketing
-and function documents, to help PARTNER acquire and leverage Odoo knowledge, grow its business,
+and functional documents, to help PARTNER acquire and leverage Odoo knowledge, grow its business,
 attract more customers, and build brand awareness.
 
 PARTNER also receives free access to the ODOO E-Learning platform (for unlimited users).

@@ -211,9 +211,6 @@ latex_elements = {
 
 # output manually in latex docs
 'releasename': '',
-'release': '',
-'date': '',
-
 }
 
 latex_additional_files = ['_static/latex/odoo.sty']
@@ -222,11 +219,23 @@ latex_additional_files = ['_static/latex/odoo.sty']
 # (source start file, target name, title,
 #  author, documentclass [howto, manual, or own class]).
 latex_documents = [
-  ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement_v5.tex', 'Odoo Enterprise Subscription Agreement', '', 'howto'),
-  ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_v5_fr.tex', 'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
-  ('legal/terms/partnership_tex', 'odoo_partnership_agreement_v5.tex', 'Odoo Partnership Agreement', '', 'howto'),
-  ('legal/terms/terms_of_sale', 'terms_of_sale_v1.tex', 'Odoo Terms of Sale', '', 'howto'),
-  ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_v1_fr.tex', u'Conditions Générales de Vente Odoo', '', 'howto'),
+  ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement.tex', 'Odoo Enterprise Subscription Agreement', '', 'howto'),
+  ('legal/terms/partnership_tex', 'odoo_partnership_agreement.tex', 'Odoo Partnership Agreement', '', 'howto'),
+  ('legal/terms/terms_of_sale', 'terms_of_sale.tex', 'Odoo Terms of Sale', '', 'howto'),
+
+  ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_fr.tex', 'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
+  ('legal/terms/i18n/partnership_tex_fr', 'odoo_partnership_agreement_fr.tex', 'Odoo Partnership Agreement (FR)', '', 'howto'),
+  ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_fr.tex', u'Conditions Générales de Vente Odoo', '', 'howto'),
+
+  #('legal/terms/i18n/enterprise_tex_nl', 'odoo_enterprise_agreement_nl.tex', 'Odoo Enterprise Subscription Agreement (NL)', '', 'howto'),
+  #('legal/terms/i18n/partnership_tex_nl', 'odoo_partnership_agreement_nl.tex', 'Odoo Partnership Agreement (NL)', '', 'howto'),
+
+  ('legal/terms/i18n/enterprise_tex_de', 'odoo_enterprise_agreement_de.tex', 'Odoo Enterprise Subscription Agreement (DE)', '', 'howto'),
+  #('legal/terms/i18n/partnership_tex_de', 'odoo_partnership_agreement_de.tex', 'Odoo Partnership Agreement (DE)', '', 'howto'),
+
+  #('legal/terms/i18n/enterprise_tex_es', 'odoo_enterprise_agreement_es.tex', 'Odoo Enterprise Subscription Agreement (ES)', '', 'howto'),
+  ('legal/terms/i18n/partnership_tex_es', 'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
+
   #('index', 'UnderstandingAccountingForEntrepreneurs.tex', u'Understanding Accounting For Entrepreneurs Documentation', u'fp, xmo', 'manual'),
 ]
 

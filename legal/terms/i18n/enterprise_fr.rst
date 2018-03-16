@@ -10,18 +10,14 @@ Odoo Enterprise Subscription Agreement (FR)
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
-    est la :ref:`version originale <enterprise_agreement>`.
+    est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-    This is a french translation of the "Odoo Enterprise Subscription Agreement”.
-    This translation is provided in the hope that it will facilitate understanding, but it
-    has no legal value.
-    The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
-    Agreement” is the :ref:`original english version <enterprise_agreement>`.
-
-.. note:: Version 7 - Dernière modification: 7 décembre 2017.
+.. note:: Version 7.1 - 2018-03-16
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
+.. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
+
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -288,8 +284,6 @@ Le Client accepte de / d':
   qu'Odoo SA ne peut être tenue responsable de toute perte de données ;
 
 
-.. _no_soliciting_fr:
-
 6.2 Non solicitation ou embauche
 --------------------------------
 
@@ -465,7 +459,7 @@ du présent contrat par une disposition valable ayant les mêmes effets et objec
 9 Appendice A: Odoo Enterprise Edition License
 ==============================================
 
-Odoo 9 Enterprise Edition est publié sous la licence Odoo Enterprise Edition License v1.0,
+Odoo Enterprise Edition est publié sous la licence Odoo Enterprise Edition License v1.0,
 définie ci-dessous.
 
 .. warning::
