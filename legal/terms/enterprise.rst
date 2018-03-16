@@ -5,10 +5,11 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 7 - 2017-12-07
+.. note:: Version 7.1 - 2018-03-16
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
+.. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
@@ -203,9 +204,8 @@ of the first Term, at the sole discretion of Odoo SA, to cover the extra mainten
 5.2 Renewal charges
 -------------------
 
-Upon renewal as covered in section :ref:`term`, if the per-User charges applied during the previous Term
-are lower than the most current applicable per-User list price, the per-User charges will increase
-by up to 7%.
+Upon renewal as covered in section :ref:`term`, if the charges applied during the previous Term
+are lower than the most current applicable list price, these charges will increase by up to 7%.
 
 
 .. _charges_thirdparty:
