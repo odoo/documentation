@@ -70,14 +70,14 @@ After that, they can be garbage collected automatically.
 If you make configuration changes or view changes in these branches, make sure to document them or write them directly
 in the modules of the branch, using XML data files overriding the default configuration or views.
 
-The unit tests are not performed as, in Odoo, they currently relies on the demo data, which are not loaded in the
+The unit tests are not performed as, in Odoo, they currently rely on the demo data, which is not loaded in the
 production database. In the future, if Odoo supports to run the unit tests without the demo data,
 Odoo.sh will then consider running the tests on staging databases.
 
 
 Development
 -----------
-Development branches creates new databases using the demo data and running the unit tests.
+Development branches create new databases using the demo data and to run the unit tests.
 The modules installed and tested by default are the ones included in your branches.
 You can change this list of modules to install in your projects settings.
 
@@ -119,7 +119,7 @@ It just means you skip the validation of your changes with the production data t
 You can merge your development branches into each other, and your staging branches into each other.
 
 Of course, you can also use :code:`git merge` directly to merge your branches.
-Odoo.sh will be notified new revisions have been pushed in your branches.
+Odoo.sh will be notified when new revisions have been pushed in your branches.
 
 Merging a staging branch in the production branch only merges the source code: Any configuration changes you made in the
 staging databases are not passed to the production database.
@@ -129,7 +129,7 @@ If you test configuration changes in staging branches, and want them to be appli
 overriding the default configuration or views in your branches,
 and then increase the version of your module in its manifest (*__manifest__.py*) to trigger the update of the module
 when you merge your staging branch in your production branch.
-This is the best practice for a better scalability of your developments as you will use the Git versionning features
+This is the best practice for a better scalability of your developments as you will use the Git versioning features
 for all your configuration changes, and therefore have a traceability for your changes.
 * Either, pass them manually from your staging to your production database, by copy/pasting them.
 
