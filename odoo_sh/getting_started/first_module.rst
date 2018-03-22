@@ -153,7 +153,8 @@ Your branch should appear in your development branches in your project.
 .. image:: ./media/firstmodule-test-branch.png
   :align: center
 
-You can click on the branch in the right panel to access its history.
+In the branches view of your project,
+you can click on your branch name in the left navigation panel to access its history.
 
 .. image:: ./media/firstmodule-test-branch-history.png
   :align: center
@@ -192,7 +193,7 @@ You can either:
 
 You can also use the :code:`git merge` command to merge your branches.
 
-This will create a new staging build, which will duplicate the production database and make it run with a server
+This will create a new staging build, which will duplicate the production database and make it run using a server
 updated with your latest changes of your branch.
 
 .. image:: ./media/firstmodule-test-mergedinstaging.png
@@ -222,7 +223,7 @@ Your module may not appear directly in your apps to install either, you need to 
   .. image:: ./media/firstmodule-test-updateappslist.png
     :align: center
 
-Your module will then appears in the list of available apps.
+Your module will then appear in the list of available apps.
 
 .. image:: ./media/firstmodule-test-mymoduleinapps.png
   :align: center

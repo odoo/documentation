@@ -170,7 +170,7 @@ In the above commands, the argument:
 * *--addons-path* is to specify the directories containing the modules,
   the part *~/src/user* can vary, according to your branch code structure,
 * *--workers=0* is to run your server using multi-threading instead of multiple workers,
-* *--max-cron-threads=0* is to prevent the scheduled tasks to run.
+* *--max-cron-threads=0* is to prevent the scheduled tasks to run,
 * *--stop-after-init* is to immediately shutdown the server instance after it completed the operations you asked.
 
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
