@@ -14,8 +14,8 @@ into your code, without the need to copy-paste all their code.
 
 Indeed, your custom modules can depend on modules from other repositories.
 Regarding Odoo, this feature allows you to add modules from other Git repositories into the branches of your repository.
-Adding these dependencies within your branch through submodules makes easier the deployment of your code and servers,
-as you can clone the repositories added as submodules in the same time you clone your own repository.
+Adding these dependencies in your branch through submodules makes the deployment of your code and servers easier,
+as you can clone the repositories added as submodules at the same time you clone your own repository.
 
 Besides, you can choose the branch of the repository added as submodule
 and you have the control of the revision you want.
@@ -23,8 +23,8 @@ It's up to you to decide wether you want to pin the submodule to a specific revi
 to a newer revision.
 
 In Odoo.sh, the submodules gives you the possibility to use and depends on modules available in other repositories.
-The platform will detect automatically that you added modules through submodules within your branches,
-and add them within your addons path so you can install them in your databases.
+The platform will detect that you added modules through submodules in your branches
+and add them to your addons path automatically so you can install them in your databases.
 
 If you add private repositories as submodules in your branches,
 you need to configure a deploy key in your Odoo.sh project settings and in your repository settings.
@@ -44,7 +44,7 @@ In the upper right corner, click on the *Submodule* button, and then on *Run*.
 .. image:: ./media/advanced-submodules-button.png
    :align: center
 
-A dialog with a form is shown. Fill the inputs as follow:
+A dialog with a form is shown. Fill the inputs as follows:
 
 * Repository URL: The SSH URL of the repository.
 * Branch: The branch you want to use.
@@ -58,7 +58,7 @@ On Github, you can get the repository URL with the *Clone or download* button of
 .. image:: ./media/advanced-submodules-github-sshurl.png
   :align: center
 
-At the moment, this is not possible to use this method to add private repositories.
+For now it is not possible to add **private** repositories with this method.
 You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
 
 .. _odoosh-advanced-submodules-withgit:
@@ -66,22 +66,22 @@ You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
 With Git (advanced)
 ---------------------
 
-In a terminal, in the folder where is cloned your Git repository,
+In a terminal, in the folder where your Git repository is cloned,
 checkout the branch in which you want to add a submodule:
 
 .. code-block:: bash
 
   $ git checkout <branch>
 
-Then, add the submodule using the below command:
+Then, add the submodule using the command below:
 
 .. code-block:: bash
 
-  $ git submodule add -b <branch> <git@yourprovider.com:<username/repository.git> <path>
+  $ git submodule add -b <branch> <git@yourprovider.com>:<username/repository.git> <path>
 
 Replace
 
-* *<git@yourprovider.com:<username/repository.git>* by the SSH URL of the repository you want to add as submodule,
+* *<git@yourprovider.com>:<username/repository.git>* by the SSH URL of the repository you want to add as submodule,
 * *<branch>* by the branch you want to use in the above repository,
 * *<path>* by the folder in which you want to add this submodule.
 
@@ -95,7 +95,7 @@ Replace
 
 * <remote> by the repository on which you want to push your changes. For a standard Git setup, this is *origin*.
 * <branch> by the branch on which you want to push your changes.
-  Most-likely the branch you checkouted in the above steps.
+  Most likely the branch you used :code:`git checkout` on in the first step.
 
 You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_
 for more details about the Git submodules.

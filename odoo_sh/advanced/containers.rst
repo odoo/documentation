@@ -9,23 +9,23 @@ Overview
 
 Each build is isolated within its own container (Linux namespaced container).
 
-The base is an Ubuntu 16.04 system, where are installed all required Odoo dependencies
-as well as common useful packages.
+The base is an Ubuntu 16.04 system, where all of Odoo's required dependencies,
+as well as common useful packages, are installed.
 
 The Odoo.sh team is open to install any system packages
-as long as they are distributed by the official Ubuntu repositories.
-`Leave us a feedback <https://www.odoo.sh/feedback>`_ if you would like a package which is not yet installed.
+as long as they are distributed in the official Ubuntu repositories.
+`Leave us a feedback <https://www.odoo.sh/feedback>`_ if you would like a package not yet installed.
 
-If your project requires Python dependencies not installed by default in the container, or more recent releases,
-you can define a *requirements.txt* file, listing your Python modules dependencies,
-in the root of your branches. The platform will take care to install these dependencies in your containers.
+If your project requires additional Python dependencies, or more recent releases,
+you can define a :file:`requirements.txt` file in the root of your branches listing them.
+The platform will take care to install these dependencies in your containers.
 `The pip requirements specifiers <https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_
-documentation can help you to know how to write a *requirements.txt* file.
+documentation can help you write a :file:`requirements.txt` file.
 To have a concrete example,
 check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/11.0/requirements.txt>`_.
 
-The *requirements.txt* files of submodules are taken into account as well. The platform
-looks for *requirements.txt* files in each folders containing Odoo modules: Not in the module folder itself,
+The :file:`requirements.txt` files of submodules are taken into account as well. The platform
+looks for :file:`requirements.txt` files in each folder containing Odoo modules: Not in the module folder itself,
 but in their parent folder.
 
 Directory structure
@@ -35,7 +35,7 @@ As the containers are Ubuntu based, their directory structure follows the linux 
 `Ubuntu's filesystem tree overview <https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_
 explains the main directories.
 
-The Odoo.sh pertinent directories are presented in the below list:
+Here are the Odoo.sh pertinent directories:
 
 ::
 
@@ -95,11 +95,12 @@ While accessing a container with the shell, you can access the database using *p
   odoo-addons-master-1=>
 
 **Be careful !**
-Use transactions (*BEGIN...COMMIT/ROLLBACK*) for every *sql* requests leading to changes
+`Use transactions <https://www.postgresql.org/docs/current/static/sql-begin.html>`_ (*BEGIN...COMMIT/ROLLBACK*)
+for every *sql* statements leading to changes
 (*UPDATE*, *DELETE*, *ALTER*, ...), especially for your production database.
 
-It happens to be distracted, and the transaction mechanism may save you.
-Indeed, it gives you the opportunity to rollback your changes in case you make a mistake.
+The transaction mechanism is your safety net in case of mistake.
+You simply have to rollback your changes to revert your database to its previous state.
 
 For example, it may happen that you forget to set your *WHERE* condition.
 
@@ -112,7 +113,7 @@ For example, it may happen that you forget to set your *WHERE* condition.
   odoo-addons-master-1=> ROLLBACK;
   ROLLBACK
 
-In such a case, you can rollback to revert the unwanted changes that you just mistakenly did, and rewrite the request:
+In such a case, you can rollback to revert the unwanted changes that you just mistakenly did, and rewrite the statement:
 
 .. code-block:: sql
 
@@ -123,11 +124,11 @@ In such a case, you can rollback to revert the unwanted changes that you just mi
   odoo-addons-master-1=> COMMIT;
   COMMIT
 
-However, do not forget to either commit or rollback your request after having done it.
-An opened transaction may have locked records in your tables,
-and your running database may wait for them to be released. It can cause a server to hang up indefinitely.
+However, do not forget to either commit or rollback your transaction after having done it.
+Open transactions may lock records in your tables
+and your running database may wait for them to be released. It can cause a server to hang indefinitely.
 
-In addition, when possible, use your staging databases to test your requests first. It gives you an extra safety ney.
+In addition, when possible, use your staging databases to test your statements first. It gives you an extra safety net.
 
 Run an Odoo server
 ==================
@@ -173,6 +174,9 @@ In the above commands, the argument:
 * *--max-cron-threads=0* is to prevent the scheduled tasks to run,
 * *--stop-after-init* is to immediately shutdown the server instance after it completed the operations you asked.
 
+More options are available and detailed in the
+`CLI documentation <https://www.odoo.com/documentation/11.0/reference/cmdline.html>`_.
+
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
 Look for "*odoo: addons paths*":
 
@@ -184,4 +188,4 @@ Look for "*odoo: addons paths*":
 
 **Be careful**, especially with your production database.
 Operations that you perform running this Odoo server instance are not isolated:
-Changes will be effective in the database. As much as possible, make your tests in your staging databases.
+Changes will be effective in the database. Always, make your tests in your staging databases.

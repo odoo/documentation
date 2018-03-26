@@ -32,16 +32,20 @@ There can be only one production branch.
 When you push a new commit in this branch,
 your production server is updated with the code of the new revision and is then restarted.
 
-If your changes require the update of a module, such as for a change in a form view,
+If your changes require the update of a module, such as a change in a form view,
 and you want it to be performed automatically,
 increase the version number of the module in its manifest (*__manifest__.py*).
 The platform will then take care to perform the update.
 
+This method is equivalent to perform an upgrade of the module through the Apps menu,
+or through the :code:`-u` switch of
+`the command line <https://www.odoo.com/documentation/11.0/reference/cmdline.html>`_.
+
 In the case the changes in the commit prevent the server to restart,
-or the modules update fails,
+or if the modules update fails,
 the server is automatically reverted to the previous successful code revision and
 the database is roll-backed as it was before the update.
-You nevertheless have access to the logs of the failed updates so you can analyze what happened.
+You still have access to the log of the failed update, so you can troubleshoot it.
 
 The demo data is not loaded, as it is not meant to be used in a production database.
 The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.
@@ -63,7 +67,7 @@ That way, you do not have to worry about sending test emails to your contacts.
 Scheduled actions are disabled. If you want to test them, you have to enable them or trigger their action manually.
 Be careful though: If these actions perform changes on third-party services (FTP servers, email servers, ...)
 used by your production database as well,
-you might make unwanted changes in your production.
+you might cause unwanted changes in your production.
 
 The databases created for staging branches are meant to live at least two weeks.
 After that, they can be garbage collected automatically.
@@ -84,11 +88,9 @@ You can change this list of modules to install in your projects settings.
 When you push a new commit in one of these branches,
 a new server is started, with a database created from scratch and the new revision of the branch.
 The demo data is loaded, and the unit tests are performed.
+This verifies your changes do not break any of the features tested by them.
 
-You can therefore verify your changes do not break any of the unit tests,
-and therefore any of the features tested thanks to them.
-
-As for staging branches, the emails are not sent: They are intercepted by the mailcatcher.
+Similar to staging branches, the emails are not sent: They are intercepted by the mailcatcher.
 
 The databases created for development branches are meant to live at least three days.
 After that, they can be garbage collected automatically.
@@ -110,7 +112,7 @@ you can either:
 
 When your latest changes are ready for production,
 you can drag and drop your staging branch onto your production branch
-to merge and deploy in production your newest revisions.
+to merge and deploy in production your newest features.
 
 If you are bold enough,
 you can merge your development branches into your production branch as well.
@@ -124,14 +126,15 @@ Odoo.sh will be notified when new revisions have been pushed in your branches.
 Merging a staging branch in the production branch only merges the source code: Any configuration changes you made in the
 staging databases are not passed to the production database.
 
-If you test configuration changes in staging branches, and want them to be applied in the production, you have to:
-* Either, write the configuration changes in XML data files
-overriding the default configuration or views in your branches,
-and then increase the version of your module in its manifest (*__manifest__.py*) to trigger the update of the module
-when you merge your staging branch in your production branch.
-This is the best practice for a better scalability of your developments as you will use the Git versioning features
-for all your configuration changes, and therefore have a traceability for your changes.
-* Either, pass them manually from your staging to your production database, by copy/pasting them.
+If you test configuration changes in staging branches, and want them to be applied in the production, you have to either:
+
+* write the configuration changes in XML data files
+  overriding the default configuration or views in your branches,
+  and then increase the version of your module in its manifest (*__manifest__.py*) to trigger the update of the module
+  when you merge your staging branch in your production branch.
+  This is the best practice for a better scalability of your developments as you will use the Git versioning features
+  for all your configuration changes, and therefore have a traceability for your changes.
+* pass them manually from your staging to your production database, by copy/pasting them.
 
 .. _odoosh-gettingstarted-branches-tabs:
 
@@ -148,16 +151,16 @@ An overview of your branch history:
 .. image:: ./media/interface-branches-history.png
    :align: center
 
-For each event, a status is displayed in the above right corner.
+For each event, a status is displayed in the top right-hand corner.
 It can provide information about the ongoing operation on the database (installation, update, backup import, ...),
 or its result (tests feedback, successful backup import, ...).
-When an operation is successful, you also got
-the possibility to access the database thanks to the *connect* button.
+When an operation is successful, you can access the database thanks to the *connect* button.
 
 Mails
 -----
-A preview of the emails sent by your database. This is available only for your development and staging branches,
-as the emails of your production database are really sent instead of being intercepted.
+This tab contains the mail catcher. It displays an overview of the emails sent by your database.
+The mail catcher is available for your development and
+staging branches as the emails of your production database are really sent instead of being intercepted.
 
 .. image:: ./media/interface-branches-mails.png
    :align: center
@@ -180,7 +183,7 @@ A viewer to have a look to your server logs.
 
 Different logs are available:
 
-* install.log: The logs of the database installation. In a development branch, the logs of the tests is included.
+* install.log: The logs of the database installation. In a development branch, the logs of the tests are included.
 * pip.log: The logs of the Python dependencies installation.
 * odoo.log: The logs of the running server.
 * update.log: The logs of the database updates. This is available only for the production database.
@@ -193,35 +196,41 @@ The fetching is automatically stopped after 5 minutes. You can restart it using 
 
 Backups
 -------
-A list of the backups available for download and restore, as well as the possibility to import a database.
+A list of the backups available for download and restore, as well as the ability to import a database.
 
 .. image:: ./media/interface-branches-backups.png
    :align: center
 
 Odoo.sh keeps backups for production databases: 7 daily, 4 weekly and 3 monthly.
-Staging databases and development databases are not backuped.
+Each backup includes the database dump, the filestore (attachments, binary fields), logs and sessions.
+
+Staging databases and development databases are not backed up..
 You nevertheless have the possibility to restore a backup of the production database on your staging databases, for
 testing purposes, or to manually recover data that has been deleted unexpectedly from the production database.
 
 The list contains the backups kept on the server your production database is hosted on.
 This server only keeps one month of backups: 7 daily and 4 weekly backups.
 
-Dedicated backups servers keep the same backups, as well as 3 additional monthly backups.
+Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
 To restore or download one of these monthly backups, please `contact us <https://www.odoo.com/help>`_.
 
-The *import database* feature accepts database archives in the format provided by the standard Odoo database manager
-(available for on-premise Odoo servers under :code:`/web/database/manager`)
-or by the Odoo.sh backup download feature.
+The *import database* feature accepts database archives in the format provided by:
+
+* the standard Odoo databases manager,
+  (available for on-premise Odoo servers under :code:`/web/database/manager`)
+* the Odoo online databases manager,
+* the Odoo.sh backup download button of this *Backups* tab,
+* the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
 
 Git commands
 ============
-In the above right of the view, different Git commands are available.
+In the top right-hand corner of the view, different Git commands are available.
 
 .. image:: ./media/interface-branches-gitcommands.png
    :align: center
 
-Each can be copied in the clipboard to be used in a terminal,
-and some can be used directly from Odoo.sh by clicking the *run* button.
+Each command be copied in the clipboard to be used in a terminal,
+and some of them can be used directly from Odoo.sh by clicking the *run* button.
 
 Clone
 -----
@@ -240,7 +249,7 @@ The *run* button is not available for this command, as it is meant to be used on
 
 Fork
 ----
-Creates a new branch based on the current branch.
+Create a new branch based on the current branch.
 
 .. code-block:: bash
 

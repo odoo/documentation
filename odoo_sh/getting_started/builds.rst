@@ -1,5 +1,7 @@
 :banner: banners/odoo-sh.jpg
 
+.. _odoosh-gettingstarted-builds:
+
 ==================================
 Builds
 ==================================
