@@ -9,7 +9,7 @@ Create your project
 Deploy your platform
 ====================
 
-Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the button *Deploy your platform*.
+Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the *Deploy your platform* button.
 
 .. image:: ./media/deploy.png
    :align: center
@@ -17,7 +17,7 @@ Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the button *Deploy your platform
 Sign in with Github
 ===================
 
-Sign in with your Github account. If you do not have an account yet, hit the link *Create an account*.
+Sign in with your Github account. If you do not have an account yet, hit the *Create an account* link.
 
 .. image:: ./media/github-signin.png
    :align: center
@@ -25,7 +25,7 @@ Sign in with your Github account. If you do not have an account yet, hit the lin
 Authorize Odoo.sh
 =================
 
-Grant Odoo.sh the required accesses to your account by clicking the button *Authorize*.
+Grant Odoo.sh the required accesses to your account by clicking the *Authorize* button.
 
 .. image:: ./media/github-authorize.png
    :align: center
@@ -52,13 +52,16 @@ Enter your *subscription code*. This is also called *subscription referral* or *
 For partners, Odoo.sh is free. If the free offer changes in the future, we guarantee that any project created under this offer will remain free for the same set of features.
 
 For customers, your Enterprise subscription needs to include Odoo.sh.
+Contact your sales representative or account manager in order to get it.
 
-After submitting the form, if you are notified your subscription is not valid, it either means:
+When submitting the form, if you are notified your subscription is not valid, it either means:
 
 * it is not an existing subscription,
 * it is not a partnership subscription,
 * it is an enterprise subscription, but which does not include Odoo.sh,
 * it is neither a partnership subscription or an enterprise subscription (e.g. an online subscription).
+
+In case of doubt with your subscription, please contact the `Odoo support <https://www.odoo.com/help>`_.
 
 .. image:: ./media/deploy-form.png
    :align: center
@@ -87,7 +90,7 @@ You can structure your modules as you wish, Odoo.sh will automatically detect th
 For instance, you can put all your modules folder in the root directory of your repository,
 or group the modules in folders by categories that you define (accounting, project, ...).
 
-For community modules availabe in public Git repositories,
+For community modules available in public Git repositories,
 you can also consider to add them using :ref:`Submodules <odoosh-advanced-submodules>`.
 
 Then, either :ref:`make this branch the production branch <odoosh-gettingstarted-branches-stages>`,
@@ -100,6 +103,12 @@ On-premise databases
 ~~~~~~~~~~~~~~~~~~~~
 
 Access the URL :file:`/web/database/manager` of your on-premise database and download a backup.
+
+.. Warning::
+
+  If you cannot access the database manager, it may have been disabled by your system administrator.
+  See the `database manager security documentation
+  <https://www.odoo.com/documentation/11.0/setup/deploy.html#database-manager-security>`_.
 
 You will need the master password of your database server. If you do not have it, contact your system administrator.
 
@@ -140,9 +149,37 @@ Check your outgoing email servers
 ---------------------------------
 
 There is a default mail server provided with Odoo.sh.
-If you want to use it, just delete or disable all your outgoing mail servers configured in your database in
+To use it, there must be no enabled outgoing mail server configured in your database in
 :menuselection:`Settings --> Technical --> Outgoing Mail Servers` (Developer mode must be activated).
+
+After the import of your database,
+all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.
 
 .. Warning::
 
   Ports 25, 465 and 587 are blocked. If you want to use your own email servers, they must be configured on other ports.
+
+Check your scheduled actions
+----------------------------
+
+All scheduled actions are disabled after the import.
+
+This is to prevent your newly imported database to perform actions that could impact your running production,
+such as sending the mails remaining in the queue, processing mass mailings, or third-party services synchronization
+(Calendars, files hosting, ...).
+
+If you plan to make the imported database your production, enable the scheduled actions you need.
+You can check what is enabled in the origin database and enable the same actions in the imported database.
+Scheduled actions are located under :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`.
+
+Register your subscription
+--------------------------
+
+Your subscription is unlinked after the import.
+
+The imported database is considered a duplicate by default and the enterprise subscription is therefore removed,
+as you can only have one database linked by subscription.
+
+If you plan to make it your production,
+unlink your former database from the subscription, and register the newly imported database.
+Read the :ref:`database registration documentation <db_premise>` for instructions.

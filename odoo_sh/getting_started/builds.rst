@@ -66,10 +66,12 @@ and try to load this duplicate with the revisions of the staging branches.
 
 Each time you push a new revision on a staging branch, the build created uses a new copy of the production database.
 The databases are not re-used between builds of the same branch. This ensures:
-* staging builds use databases that are closed to what the production looks like,
-so you do not make your tests with outdated data,
+
+* staging builds use databases that are close to what the production looks like,
+  so you do not make your tests with outdated data,
+
 * you can play around as much as you want in the same staging database,
-and you can then ask for a rebuild when you want to restart with a new copy of the production.
+  and you can then ask for a rebuild when you want to restart with a new copy of the production.
 
 Nevertheless, this means that if you make configuration changes in staging databases
 and do not apply them in the production,
@@ -97,7 +99,7 @@ and then the other branches are ordered by last build created. You can filter ou
 .. image:: ./media/interface-builds-branches.png
    :align: center
 
-For each branch, you can access the last build database using the *Connect* link and jump to the branch code using
+For each branch, you can access the last build's database using the *Connect* link and jump to the branch code using
 the *Github* link. For other branches than the production, you can create a new build which will use the latest revision
 of the branch using the link *rebuild*. This last link is not available when there is already a build in progress for
 the branch.
@@ -106,7 +108,7 @@ the branch.
    :align: center
 
 For each build, you can access the revision changes using the button with the Github icon.
-You can access the build database as the administrator using the *Connect* button.
+You can access the build's database as the administrator using the *Connect* button.
 Also, you can access the database with another user using the *Connect as* button,
 in the dropdown menu of the *Connect* button.
 
@@ -115,4 +117,4 @@ in the dropdown menu of the *Connect* button.
 
 In the dropdown menu of the build, you can access the same features than in :ref:`the branches view <odoosh-gettingstarted-branches-tabs>`:
 *Logs*, *Web Shell*, *Outgoing e-mails*.
-You also have the possibility to *Download a dump* of the build database.
+You also have the possibility to *Download a dump* of the build's database.

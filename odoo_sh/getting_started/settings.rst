@@ -20,9 +20,9 @@ The name of your project.
 .. image:: ./media/interface-settings-projectname.png
    :align: center
 
-This is the domain that will be used to access your production database.
+This defines the address that will be used to access your production database.
 
-The domain to access your staging and development builds will contain this name as well.
+Addresses of your staging and development builds are derived from this name and assigned automatically.
 However, when you change your project name, only future builds will use the new name.
 
 Collaborators
@@ -96,7 +96,7 @@ Choose the modules to install automatically for your development builds.
    :align: center
 
 * *Install only my modules* will install the modules of the branch only.
-  The ` submodules <https://git-scm.com/book/en/v2/Git-Tools-Submodules>`_ are excluded.
+  The :ref:`submodules <odoosh-advanced-submodules>` are excluded.
 * *Full installation (all modules)* will install the modules of the branch, the modules included in the submodules
   and all standard modules of Odoo.
 * *Install a list of modules* will install the modules specified in the input just below this option.
@@ -132,7 +132,7 @@ Bare domains (e.g. *mycompany.com*) are not accepted:
 
 * they can only be configured using A records,
 * A records only accept IP addresses as value,
-* the IP address of your database can change, following an upgrade, an hardware failure or
+* the IP address of your database can change, following an upgrade, a hardware failure or
   your wish to host your database in another country or continent.
 
 Therefore, bare domains could suddenly no longer work because of this change of IP address.
@@ -142,7 +142,7 @@ having the first redirecting to the second is amongst the
 `SEO best practices <https://support.google.com/webmasters/answer/7451184?hl=en>`_
 (See *Provide one version of a URL to reach a document*)
 in order to have one dominant URL. You can therefore just configure *mycompany.com* to redirect to *www.mycompany.com*.
-Most domains managers have the feature to configure this redirection. This is commonly called a web redirection.
+Most domain managers have the feature to configure this redirection. This is commonly called a web redirection.
 
 HTTPS/SSL
 ---------
