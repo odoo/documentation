@@ -424,7 +424,7 @@ Add
           values['name'] = unidecode(values['name'])
       return super(my_module, self).write(values)
 
-Adding a Python dependency requires a module version increase for the platform to install them.
+Adding a Python dependency requires a module version increase for the platform to install it.
 
 Edit the module manifest
 
