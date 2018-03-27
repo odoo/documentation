@@ -10,3 +10,6 @@ Introduction to Odoo.sh
     :height: 394
 
 The documentation will help you go live with your Odoo.sh project in no time.
+
+You can suggest new documentation topics
+or report typos and inaccuracies by `contacting us <https://www.odoo.sh/feedback>`_.
