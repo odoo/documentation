@@ -9,7 +9,7 @@ Overview
 
 This chapter helps you to create your first Odoo module and deploy it in your Odoo.sh project.
 
-This tutorial requires :ref:`you created a project on Odoo.sh <odoosh-gettingstarted-create>`, and to know your Github repository URL.
+This tutorial requires :ref:`you created a project on Odoo.sh <odoosh-gettingstarted-create>`, and you know your Github repository's URL.
 
 Basic use of Git and Github is explained.
 
@@ -54,7 +54,7 @@ It nevertheless requires *odoo-bin*, and therefore the
 `installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_ on your machine.
 
 If you do not want to bother installing Odoo on your machine,
-you can also :download:`download this module structure template <media/my_module.zip>` in which you replace every occurences of
+you can also :download:`download this module structure template <media/my_module.zip>` in which you replace every occurrences of
 *my_module* to the name of your choice.
 
 Use *odoo-bin scaffold* to generate the module structure in your repository:
@@ -120,7 +120,7 @@ the structure of a module and the content of each file.
 Push the development branch
 ===========================
 
-Stage the changes to be commited
+Stage the changes to be committed
 
 .. code-block:: bash
 
@@ -300,7 +300,7 @@ Add
 
     <field name="start_datetime"/>
 
-Stage your changes to be commited
+Stage your changes to be committed
 
 .. code-block:: bash
 
@@ -381,7 +381,7 @@ Add
 
   $ unidecode
 
-Then use the library in your module, for instance to remove any special charaters in the name field of your
+Then use the library in your module, for instance to remove any special characters in the name field of your
 model.
 
 Edit the file *models/models.py*
@@ -448,7 +448,7 @@ Then stage, commit and push your changes
 
 .. code-block:: bash
 
-  $ git add reqirements.txt
+  $ git add requirements.txt
   $ git add my_module
   $ git commit -m "[IMP] my_module: automatically remove special chars in my_module.my_module name field"
   $ git push

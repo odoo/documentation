@@ -140,7 +140,7 @@ with a browser, but you can for instance:
 
 .. code-block:: bash
 
-  $  ~/src/odoo/odoo-bin shell -d odoo-addons-master-1 --addons-path=~/src/user,~/src/enterprise,~/src/themes,~/src/odoo/addons,~/src/odoo/odoo/addons --workers=0 --max-cron-threads=0
+  $  odoo-bin shell
   >>> partner = env['res.partner'].search([('email', '=', 'asusteK@yourcompany.example.com')], limit=1)
   >>> partner.name
   'ASUSTeK'
@@ -152,27 +152,24 @@ with a browser, but you can for instance:
 
 .. code-block:: bash
 
-  $  ~/src/odoo/odoo-bin -d odoo-addons-master-1 --addons-path=~/src/user,~/src/enterprise,~/src/themes,~/src/odoo/addons,~/src/odoo/odoo/addons -i sale --workers=0 --max-cron-threads=0 --stop-after-init
+  $  odoo-bin -i sale --without-demo=all --stop-after-init
 
 * update a module,
 
 .. code-block:: bash
 
-  $  ~/src/odoo/odoo-bin -d odoo-addons-master-1 --addons-path=~/src/user,~/src/enterprise,~/src/themes,~/src/odoo/addons,~/src/odoo/odoo/addons -u sale --workers=0 --max-cron-threads=0 --stop-after-init
+  $  odoo-bin -u sale --stop-after-init
 
 * run the tests for a module,
 
 .. code-block:: bash
 
-  $  ~/src/odoo/odoo-bin -d odoo-addons-master-1 --addons-path=~/src/user,~/src/enterprise,~/src/themes,~/src/odoo/addons,~/src/odoo/odoo/addons -i sale --test-enable --log-level=test --workers=0 --max-cron-threads=0 --stop-after-init
+  $  odoo-bin -i sale --test-enable --log-level=test --stop-after-init
 
 In the above commands, the argument:
 
-* *--addons-path* is to specify the directories containing the modules,
-  the part *~/src/user* can vary, according to your branch code structure,
-* *--workers=0* is to run your server using multi-threading instead of multiple workers,
-* *--max-cron-threads=0* is to prevent the scheduled tasks to run,
-* *--stop-after-init* is to immediately shutdown the server instance after it completed the operations you asked.
+* ``--without-demo=all`` prevents demo data to be loaded for all modules
+* ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
 `CLI documentation <https://www.odoo.com/documentation/11.0/reference/cmdline.html>`_.

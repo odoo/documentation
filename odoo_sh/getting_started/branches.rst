@@ -35,7 +35,9 @@ your production server is updated with the code of the new revision and is then 
 If your changes require the update of a module, such as a change in a form view,
 and you want it to be performed automatically,
 increase the version number of the module in its manifest (*__manifest__.py*).
-The platform will then take care to perform the update.
+The platform will then take care to perform the update during which the
+instance will be held temporarily unavailable for maintenance reason.
+
 
 This method is equivalent to perform an upgrade of the module through the Apps menu,
 or through the :code:`-u` switch of
@@ -69,7 +71,7 @@ Be careful though: If these actions perform changes on third-party services (FTP
 used by your production database as well,
 you might cause unwanted changes in your production.
 
-The databases created for staging branches are meant to live at least two weeks.
+The databases created for staging branches are meant to live around two weeks.
 After that, they can be garbage collected automatically.
 If you make configuration changes or view changes in these branches, make sure to document them or write them directly
 in the modules of the branch, using XML data files overriding the default configuration or views.
@@ -81,7 +83,7 @@ Odoo.sh will then consider running the tests on staging databases.
 
 Development
 -----------
-Development branches create new databases using the demo data and to run the unit tests.
+Development branches create new databases using the demo data to run the unit tests.
 The modules installed and tested by default are the ones included in your branches.
 You can change this list of modules to install in your projects settings.
 
@@ -92,7 +94,7 @@ This verifies your changes do not break any of the features tested by them.
 
 Similar to staging branches, the emails are not sent: They are intercepted by the mailcatcher.
 
-The databases created for development branches are meant to live at least three days.
+The databases created for development branches are meant to live around three days.
 After that, they can be garbage collected automatically.
 
 .. _odoosh-gettingstarted-branches-mergingbranches:
@@ -120,7 +122,7 @@ It just means you skip the validation of your changes with the production data t
 
 You can merge your development branches into each other, and your staging branches into each other.
 
-Of course, you can also use :code:`git merge` directly to merge your branches.
+Of course, you can also use :code:`git merge` directly on your workstation to merge your branches.
 Odoo.sh will be notified when new revisions have been pushed in your branches.
 
 Merging a staging branch in the production branch only merges the source code: Any configuration changes you made in the
@@ -173,6 +175,11 @@ and open a shell on your database by typing :code:`psql`.
 
 .. image:: ./media/interface-branches-shell.png
    :align: center
+
+
+.. Note::
+  Long running shell instances are not guaranteed. Idle shells can be
+  disconnected at anytime in order to free up resources.
 
 Logs
 ----
@@ -229,8 +236,10 @@ In the top right-hand corner of the view, different Git commands are available.
 .. image:: ./media/interface-branches-gitcommands.png
    :align: center
 
-Each command be copied in the clipboard to be used in a terminal,
-and some of them can be used directly from Odoo.sh by clicking the *run* button.
+Each command can be copied in the clipboard to be used in a terminal,
+and some of them can be used directly from Odoo.sh by clicking the *run* button
+in such case a popup will prompt the user in order to define eventual placeholders
+such as ``<URL>``, ``<PATH>``, ...
 
 Clone
 -----
