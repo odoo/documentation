@@ -19,10 +19,10 @@ as you can clone the repositories added as submodules at the same time you clone
 
 Besides, you can choose the branch of the repository added as submodule
 and you have the control of the revision you want.
-It's up to you to decide wether you want to pin the submodule to a specific revision and when you want to update
+It's up to you to decide whether you want to pin the submodule to a specific revision and when you want to update
 to a newer revision.
 
-In Odoo.sh, the submodules gives you the possibility to use and depends on modules available in other repositories.
+In Odoo.sh, the submodules gives you the possibility to use and depend on modules available in other repositories.
 The platform will detect that you added modules through submodules in your branches
 and add them to your addons path automatically so you can install them in your databases.
 

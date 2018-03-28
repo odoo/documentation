@@ -11,7 +11,7 @@ Overview
 
 In Odoo.sh, a build is considered as a database loaded by an Odoo server
 (`odoo/odoo <https://github.com/odoo/odoo>`_ & `odoo/enterprise <https://github.com/odoo/enterprise>`_)
-running on a specific revision of your project repository.
+running on a specific revision of your project repository in a containerized environment.
 Its purpose is to test the well-behavior of the server, the database and the features with this revision.
 
 .. image:: ./media/interface-builds.png

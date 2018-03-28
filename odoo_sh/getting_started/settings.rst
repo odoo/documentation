@@ -7,7 +7,7 @@ Settings
 Overview
 ========
 
-The settings allow you to manage the configuration of your project.
+The settings allows you to manage the configuration of your project.
 
 .. image:: ./media/interface-settings.png
    :align: center
@@ -81,7 +81,7 @@ Allow public access to your development builds.
 .. image:: ./media/interface-settings-public.png
    :align: center
 
-Expose the Builds page publicly, allowing visitors to connect to your development builds.
+If activated, this option exposes the Builds page publicly, allowing visitors to connect to your development builds.
 
 In addition, visitors have access to the logs, shell and mails of your development builds.
 
@@ -119,19 +119,19 @@ If you would like to access your production database using your own domain name,
 
 * own or purchase the domain name,
 * add the domain name in this list,
-* in your domain name manager,
-  configure the domain name with a CNAME record set to your production database domain name.
+* in your registrar's domain name manager,
+  configure the domain name with a ``CNAME`` record set to your production database domain name.
 
 For instance, to associate *www.mycompany.com* to your database *mycompany.odoo.com*:
 
 * in Odoo.sh, add *www.mycompany.com* in the custom domains of your project settings,
 * in your domain name manager (e.g. *godaddy.com*, *gandi.net*, *ovh.com*),
-  configure *www.mycompany.com* with a CNAME record with as value *mycompany.odoo.com*.
+  configure *www.mycompany.com* with a ``CNAME`` record with as value *mycompany.odoo.com*.
 
 Bare domains (e.g. *mycompany.com*) are not accepted:
 
-* they can only be configured using A records,
-* A records only accept IP addresses as value,
+* they can only be configured using ``A`` records,
+* ``A`` records only accept IP addresses as value,
 * the IP address of your database can change, following an upgrade, a hardware failure or
   your wish to host your database in another country or continent.
 
@@ -172,7 +172,7 @@ as submodules in your branches to allow Odoo.sh to download them.
 
 When a repository is private, this is not possible to publicly download its branches and revisions.
 For that reason, you need to configure a deploy key for Odoo.sh,
-so the Git server allows our platform to download the revisions
+so the remote Git server allows our platform to download the revisions
 of this private repository.
 
 To configure the deploy key for a private repository, proceed as follow:
@@ -188,7 +188,7 @@ To configure the deploy key for a private repository, proceed as follow:
 
 * in the settings of the private sub-repository, add the public key amongst the deploy keys.
 
-  * Github.com: Settings > Deploy keys > Add deploy key
-  * Bitbucket.com: Settings > Access keys > Add key
-  * Gitlab.com: Settings > Repository > Deploy Keys
+  * Github.com: :menuselection:`Settings --> Deploy keys --> Add deploy key`
+  * Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`
+  * Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`
   * Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory
