@@ -18,9 +18,10 @@ and check *External Email Servers*
 Then, go through the following steps.
 
 .. note::
-    Office 365 email servers don't allow to send external emails 
+    Office 365 email servers don't allow easiliy to send external emails
     from hosts like Odoo. 
-    Consequently you can only use such email servers for incoming messages.
+    Refer to the `Office 365 documentation`_
+    to make it working.
 
 Set an outgoing email server for outbound messages
 --------------------------------------------------
@@ -148,3 +149,6 @@ To do so, create specific email aliases to use in Odoo (to generate leads
 or opportunities, helpdesk tickets, etc.). If you take an email alias 
 already used for messaging outside of Odoo, incoming messages will land 
 into both systems. This will negatively impact your productivity.
+
+.. _Office 365 documentation:
+    https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
