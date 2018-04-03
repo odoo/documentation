@@ -203,23 +203,27 @@ The fetching is automatically stopped after 5 minutes. You can restart it using 
 
 Backups
 -------
-A list of the backups available for download and restore, as well as the ability to import a database.
+A list of the backups available for download and restore, the ability to perform a manual backup and to import a
+database.
 
 .. image:: ./media/interface-branches-backups.png
    :align: center
 
-Odoo.sh keeps backups for production databases: 7 daily, 4 weekly and 3 monthly.
+Odoo.sh makes daily backups of the production database. It keeps 7 daily, 4 weekly and 3 monthly backups.
 Each backup includes the database dump, the filestore (attachments, binary fields), logs and sessions.
 
-Staging databases and development databases are not backed up..
-You nevertheless have the possibility to restore a backup of the production database on your staging databases, for
-testing purposes, or to manually recover data that has been deleted unexpectedly from the production database.
+Staging and development databases are not backed up.
+You nevertheless have the possibility to restore a backup of the production database in your staging branches, for
+testing purposes, or to manually recover data that has been deleted by accident from the production database.
 
 The list contains the backups kept on the server your production database is hosted on.
 This server only keeps one month of backups: 7 daily and 4 weekly backups.
 
 Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
 To restore or download one of these monthly backups, please `contact us <https://www.odoo.com/help>`_.
+
+You can make a backup manually before making big changes in your production database in case something goes wrong.
+To avoid abuse, we limit manual backups to 5 per day.
 
 The *import database* feature accepts database archives in the format provided by:
 
