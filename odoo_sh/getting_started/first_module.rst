@@ -300,13 +300,6 @@ Add
 
     <field name="start_datetime"/>
 
-Stage your changes to be committed
-
-.. code-block:: bash
-
-  $ cd ~/src/odoo-addons/
-  $ git add my_module
-
 These changes alter the database structure by adding a column in a table,
 and modify a view stored in database.
 
@@ -335,6 +328,13 @@ with
   'version': '0.2',
 
 The platform will detect the change of version and trigger the update of the module upon the new revision deployment.
+
+Stage your changes to be committed
+
+.. code-block:: bash
+
+  $ cd ~/src/odoo-addons/
+  $ git add my_module
 
 Commit your changes
 
