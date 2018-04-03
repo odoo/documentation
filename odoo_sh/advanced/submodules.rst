@@ -22,7 +22,7 @@ and you have the control of the revision you want.
 It's up to you to decide whether you want to pin the submodule to a specific revision and when you want to update
 to a newer revision.
 
-In Odoo.sh, the submodules gives you the possibility to use and depend on modules available in other repositories.
+In Odoo.sh, the submodules give you the possibility to use and depend on modules available in other repositories.
 The platform will detect that you added modules through submodules in your branches
 and add them to your addons path automatically so you can install them in your databases.
 
