@@ -7,8 +7,8 @@ CRM
 .. toctree::
    :titlesonly:
 
-   crm/overview
-   crm/salesteam
-   crm/leads
-   crm/reporting
-   crm/calendar
+   crm/pipeline
+   crm/acquire_leads
+   crm/track_leads
+   crm/performance
+   crm/optimize

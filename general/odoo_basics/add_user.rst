@@ -43,6 +43,5 @@ log-in.
 
 .. seealso::
     * `Deactivating Users <../../db_management/documentation.html#deactivating-users>`_
-    * :doc:`../../crm/salesteam/setup/create_team`
 
 .. todo:: Add link to How to add companies

@@ -107,7 +107,7 @@ The easiest and most recommended method is to manage one email address per Odoo
 alias in your mail server.
 
 * Create the corresponding email addresses in your mail server 
-  (catcall@, bounce@, sales@, etc.).
+  (catchall@, bounce@, sales@, etc.).
 * Set your domain name in the General Settings.
 
   .. image:: media/alias_domain.png
