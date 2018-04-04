@@ -8,5 +8,4 @@ Replenishment Flows
    flows/dropshipping
    flows/setup_stock_rule
    flows/purchase_triggering
-   flows/warning_triggering
    flows/compute_date

@@ -13,3 +13,4 @@ Request for Quotation and Purchase Orders
    rfq/approvals
    rfq/analyze
    rfq/3_way_matching
+   rfq/warning
