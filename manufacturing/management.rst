@@ -12,3 +12,4 @@ Manufacturing Management
    management/kit_shipping
    management/product_variants
    management/sub_assemblies
+   management/unbuild
