@@ -231,15 +231,8 @@ the Configuration menu. Here is an example of configuration you can use:
 HTML Pages
 ----------
 
-Odoo allows to minify HTML pages, from the **Website Admin** app, using
-the :menuselection:`Configuration` menu. This will automatically remove extra space and
-tabs in your HTML code, reduce some tags code, etc.
-
-.. image:: media/seo07.png
-  :align: center
-
-On top of that, the HTML pages can be compressed, but this is usually
-handled by your web server (NGINX or Apache).
+The HTML pages can be compressed, but this is usually handled by your web
+server (NGINX or Apache).
 
 The Odoo Website builder has been optimized to guarantee clean and short
 HTML code. Building blocks have been developed to produce clean HTML
