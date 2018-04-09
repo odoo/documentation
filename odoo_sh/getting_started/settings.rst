@@ -156,6 +156,16 @@ You can use a third-party CDN such as *Cloudflare.com* to enable the *HTTPS* sup
 
 .. _odoosh-gettingstarted-settings-submodules:
 
+SPF and DKIM compliance
+-----------------------
+In case the domain of your users email address uses SPF (Sender Policy Framework) or DKIM (DomainKeys Identified Mail)
+to increase the deliverability of your outgoing emails,
+don't forget to authorize Odoo as a sending host in your domain name settings.
+The configuration steps are explained in the :ref:`Discuss app documentation <discuss-email_servers-spf-compliant>`.
+
+.. Warning::
+  Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the delivery of your emails as spam in your contacts inbox.
+
 Submodules
 ==========
 

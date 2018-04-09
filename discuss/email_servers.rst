@@ -45,6 +45,8 @@ To do so you need to enable a SMTP relay and to allow *Any addresses*
 in the *Allowed senders* section. The configuration steps are explained in 
 `Google documentation <https://support.google.com/a/answer/2956491?hl=en>`__.
 
+.. _discuss-email_servers-spf-compliant:
+
 Be SPF-compliant
 ----------------
 In case you use SPF (Sender Policy Framework) to increase the deliverability 
