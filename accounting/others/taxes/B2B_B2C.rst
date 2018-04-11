@@ -88,15 +88,15 @@ must:
 
 For the purpose of this documentation, we will use the above use case:
 
--   your product default sale price is 8.26€ price excluded
+-   your product default sale price is 8.26€ tax excluded
 
--   but we want to sell it at 10€, price included, in our shops or
+-   but we want to sell it at 10€, tax included, in our shops or
     eCommerce website
 
 Setting your products
 ---------------------
 
-Your company must be configured with price excluded by default. This is
+Your company must be configured with tax excluded by default. This is
 usually the default configuration, but you can check your **Default Sale
 Tax** from the menu :menuselection:`Configuration --> Settings` 
 of the Accounting application.
@@ -155,8 +155,8 @@ This is the expected behavior for a customer of your shop.
 Avoid changing every sale order
 ===============================
 
-If you negotiate a contract with a customer, whether you negotiate price
-included or price excluded, you can set the pricelist and the fiscal
+If you negotiate a contract with a customer, whether you negotiate tax
+included or tax excluded, you can set the pricelist and the fiscal
 position on the customer form so that it will be applied automatically
 at every sale of this customer.
 
