@@ -69,4 +69,3 @@ When you are selling several trays, you might wrap all the trays into a
 .. seealso::
     * :doc:`../../overview/start/setup`
     * :doc:`uom`
-    * :doc:`packages`
