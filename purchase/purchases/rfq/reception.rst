@@ -63,10 +63,6 @@ will probably include the **Vendor Reference** of his sale order).
 .. image:: media/reception03.png
     :align: center
 
-.. note:: 
-    See the documentation page :doc:`../../overview/process/from_po_to_invoice` 
-    for a full overview of the purchase process.
-
 Receive Products
 ----------------
 

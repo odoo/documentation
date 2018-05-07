@@ -109,4 +109,3 @@ The status of the delivery changed from **Waiting Availability** to
 
 .. seealso::
     * :doc:`setup_stock_rule`
-    * :doc:`warning_triggering`

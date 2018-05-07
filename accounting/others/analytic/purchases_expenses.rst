@@ -102,8 +102,7 @@ Purchase Product
 ----------------
 
 We also need to buy a software for our customers. In the purchase app
-create a purchase order for the software product. (please
-refer to the following document: :doc:`../../../purchase/overview/process/from_po_to_invoice`).
+create a purchase order for the software product.
 Within the line we can link the product's cost with the analytical
 account. Specify the order line and select the correct analytical
 account. Confirm the sale.

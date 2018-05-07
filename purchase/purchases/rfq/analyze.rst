@@ -37,8 +37,7 @@ Issue some purchase orders
 
 Of course, in order to analyze your vendors' performance, you need to
 issue some **Request For Quotations** (RfQ) and confirm some **Purchase
-Orders**. If you want to know how to generate a purchase order, please
-read the documentation :doc:`../../overview/process/from_po_to_invoice`.
+Orders**.
 
 Analyzing your vendors
 ======================
@@ -98,6 +97,3 @@ powerful.
     on **Favorites** from the **Advanced search view** and 
     then on **Save current search**. The saved filter will 
     then be accessible from the **Favorites** menu.
-
-.. seealso::
-    * :doc:`../../overview/process/from_po_to_invoice`
