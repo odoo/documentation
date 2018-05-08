@@ -9,10 +9,6 @@ Tender is sent to multiple suppliers, stating each are competing with
 one another, and that the best offer will win. The main interest is that
 it usually leads to better offers.
 
-For more information on best uses, please read the chapter `Request for
-Quotation, Purchase Tender or Purchase
-Order? <https://www.odoo.com/documentation/user/11.0/purchase/overview/process/difference.html>`__
-
 Activate the Purchase Tender function
 -------------------------------------
 
@@ -75,9 +71,3 @@ You can now click on **Done** on the PT.
 
 View `Purchase Tenders <https://demo.odoo.com/?module=purchase_requisition.action_purchase_requisition>`__
 in our Online Demonstration.
-
-.. seealso:: 
-
-	:doc:`../../overview/process/from_po_to_invoice`
-
-	:doc:`../../overview/process/difference`

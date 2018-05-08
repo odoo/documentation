@@ -21,11 +21,6 @@ Quotation (RFQ)** from the menu
 :menuselection:`Purchases --> Purchase --> Requests for quotation`. 
 Confirm your RFQ to have a confirmed purchase order
 
-.. note:: 
-    To learn more about the purchase order process, 
-    read the documentation page 
-    :doc:`../../overview/process/from_po_to_invoice`
-
 Cancel your Purchase Order
 ==========================
 

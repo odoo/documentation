@@ -68,10 +68,5 @@ of **Purchase Order** or **Cancelled**.
 .. image:: media/partial_purchase03.png
     :align: center
 
-.. tip::
-    From there, follow the documentation :doc:`../../overview/process/from_po_to_invoice`
-    to proceed with the delivery and invoicing.
-
 .. seealso::
     * :doc:`manage_multiple_offers`
-    * :doc:`../../overview/process/from_po_to_invoice`
