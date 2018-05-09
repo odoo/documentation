@@ -14,3 +14,4 @@ Request for Quotation and Purchase Orders
    rfq/analyze
    rfq/3_way_matching
    rfq/warning
+   rfq/dropshipping
