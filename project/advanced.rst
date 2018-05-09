@@ -6,5 +6,4 @@ Advanced
    :titlesonly:
 
    advanced/so_to_task
-   advanced/claim_issue
    advanced/feedback
