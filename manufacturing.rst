@@ -9,3 +9,4 @@ Manufacturing
 
    manufacturing/overview
    manufacturing/management
+   manufacturing/repair
