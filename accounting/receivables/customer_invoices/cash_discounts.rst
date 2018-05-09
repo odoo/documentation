@@ -1,125 +1,68 @@
-============================
-How to setup cash discounts?
-============================
+====================
+Offer cash discounts
+====================
 
-Cash discounts are an incentive (usually a small percentage) that you
-offer to customers in return for paying a bill owed before the scheduled
-due date. If used properly, cash discounts improve the Days Sales
-Outstanding aspect of a business's cash conversion cycle.
+Cash discounts are incentives you can offer to customers to motivate
+them to pay within a specific time frame. For instance, you offer a 2%
+discount if the customer pays you within the first 5 days of the
+invoice, when it is due in 30 days. This approach can greatly improve
+your average collection period.
 
-For example, a typical cash discount would be: you offer a 2% discount
-on an invoice due in 30 days if the customer were to pay within the
-first 5 days of receiving the invoice.
+Set up a cash discount
+======================
 
-Configuration
-=============
+To set up a cash discount, go to :menuselection:`Accounting -->
+Configuration --> Management --> Payment Terms` and click on
+*Create*. Add a *Percent* type of term with a corresponding value
+(e.g. 98% of the total price for a 2% discount) and the number of days
+during which the offer is valid. You can also change the default balance
+term if needed.
 
-Payment terms
--------------
+.. image:: media/cash_discounts01.png
+  :align: center
 
-In order to manage cash discounts, we will use the payment terms
-concept of Odoo (From the Accounting module, go to :menuselection:`Configuration -->
-Management --> Payment terms --> Create`).
+Start offering the cash discount
+================================
 
-Let's start with the above example: a 2% discount on an invoice due in
-30 days if the customer were to pay within the first 5 days.
+Now, you can create a customer invoice and select the cash discount
+payment term you added. Once the invoice is validated, Odoo will
+automatically split the account receivables part of the journal entry
+into two installments having different due dates. Since the discounted
+price is already calculated, your payment controls will be simplified.
 
-A typical payment term of 30 days would have only one installment:
-balance in 30 days. But, in order to configure the cash discount, you
-can configure the payment term with two installments:
+.. image:: media/cash_discounts02.png
+  :align: center
 
--  98% within 5 days
--  balance within 30 days
+Grant the cash discount
+=======================
 
-.. image:: ./media/discount01.png
-   :align: center
+The customer fulfilled the payment terms and therefore benefits from the
+cash discount. When you process the bank statement, match the payment
+with the related journal entry. Then, select the remaining cash discount
+and click on *Create Write-off* to reconcile it.
 
-To make it clear that it's not a payment term but a cash discount, don't
-forget to set a clear description that will appear on the invoice:
-Invoice is due within 30 days, but you can benefit from a 2% cash
-discount if you pay within 5 days.
-
-Bank reconciliation model
--------------------------
-
-In order to speed up the bank reconciliation process, we can create a
-model of entry for all cash discounts. To do that, from the Accounting
-application dashboard, click on the "More" link on the bank and choose
-the option "Reconciliation Models".
-
-.. image:: ./media/discount02.png
-   :align: center
-
-Create a new model for cash discounts as follow:
-
--  **Button Label**: Cash Discount
--  **Account**: Cash Discount (according to your country)
--  **Amount Type**: Percentage
--  **Amount**: 100%
--  **Taxes**: depending on your country, you may put a tax on the cash
-       discount if taxes have to be deduced
-
-.. image:: ./media/discount03.png
-   :align: center
+.. image:: media/cash_discounts03.png
+  :align: center
 
 .. tip::
-	
-	Even if it's a 2% cash discount, set a 100% amount on the reconciliation model
-	as it means 100% of the remaining balance (the 2%). You can use the same
-	reconciliation model for all your cash discount. No need to create a model
-	per payment term.
+  You can also create a dedicated reconciliation model to make
+  the process easier. In this case, you should add a tax to the model
+  based on the taxes applied to your invoices. This means that if you
+  handle multiple tax rates, you need to create several reconciliation
+  models. Note that depending on your localisation, you might already have
+  a Cash Discount model available by default.
 
-Creating an invoice with a cash discount
-========================================
+Register the full payment
+=========================
 
-When you create a customer invoice, set the right payment term "30 days,
-2% cash discount" right after having selected the customer.
+In this case, the customer has not fulfilled the payment term and cannot
+benefit from the cash discount. When you process the bank statement,
+match the payment with the two related journal entries.
 
-.. image:: ./media/discount04.png
-   :align: center
+.. image:: media/cash_discounts04.png
+  :align: center
 
-Once the invoice is validated, Odoo will automatically split the account
-receivable part of the journal entry with two installments having a
-different due date: 98% within 5 days, 2% within 30 days.
-
-.. image:: ./media/discount05.png
-   :align: center
-
-Payment
-=======
-
-Paying the invoice with a cash discount
----------------------------------------
-
-If the customer pays with a cash discount, when processing the bank
-statement, you will match the payment (98%) with the related line in the
-journal entry.
-
-.. image:: ./media/discount06.png
-   :align: center
-
-As you can see in the above screenshot, when selecting the customer, you
-also see the 2% remaining of 3$. If you want to accept the cash discount
-(if the customer paid within the 5 days), you can click on this line
-with 2%, click on "Open Balance", and select your "Cash Discount"
-reconciliation model. That way, the invoice is marked as fully paid.
-
-.. note::
-
-	from now on, matching the remaining 2% has to be done manually. In the future,
-	we plan to automate the reconciliation of the 2% if the 98% are paid on time.
-
-Paying the invoice in full
---------------------------
-
-If the customer pays the invoice fully, without benefiting from the cash
-discount, you will reconcile the payment (in full) with the two lines
-from the invoice (98% and 2%). Just click on the two lines to match them
-with the payment.
-
-.. image:: ./media/discount07.png
-   :align: center
 
 .. seealso::
-
-  * :doc:`overview`
+  * :doc:`../../receivables/customer_invoices/payment_terms`
+  * :doc:`../../bank/reconciliation/configure`
