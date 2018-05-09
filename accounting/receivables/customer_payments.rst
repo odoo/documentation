@@ -10,4 +10,3 @@ Customer Payments
    customer_payments/check
    customer_payments/payment_sepa
    customer_payments/followup
-   customer_payments/automated_followups
