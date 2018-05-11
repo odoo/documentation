@@ -1,34 +1,40 @@
-================================================
-Setup two levels of approval for purchase orders
-================================================
+==============================================
+Request managers approval for expensive orders
+==============================================
 
-Two level approval setup
-========================
+In case of expensive purchases you may want a manager approval to
+validate the orders, Odoo let's you easily set that up.
 
-Double validation on purchases forces a validation when the purchased amount
-exceeds a certain limit.
+Configuration
+=============
 
-Install **Purchase Management** module and then go to **General Settings** to
-configure the company data.
+For this feature to work, go to :menuselection:`Purchases -->
+Configuration --> Settings` and activate the *Order Approval* feature.
+From there you can also set the minimum amount required to activate this
+feature.
 
 .. image:: media/approvals01.png
     :align: center
 
-Set here the amount limit for second approval and set approval from
-manager side.
+Create a new Request for Quotation
+==================================
 
-Process
-=======
-
-Logged as a purchase user, create a purchase order for more than the amount set
-above, and confirm it. The purchase order is set in a state **To Approve**
+While working on a new RfQ, if the order is made by a user and not a
+manager and the amount of the order is above the minimum amount you
+specified, a new *To Approve* status will be introduced in the
+process.
 
 .. image:: media/approvals02.png
     :align: center
 
-The manager gets the order to approve and validates the final order.
+Approve the order
+-----------------
+
+If you are a purchase manager, you can now go to the purchase order and
+approve the order if everything is alright with it. Giving you full
+control of what your users can or can't do.
+
+Once approved, the purchase order follows the normal process.
 
 .. image:: media/approvals03.png
     :align: center
-
-Once approved, the purchase order follows the normal process.
