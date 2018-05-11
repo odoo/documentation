@@ -1,5 +1,5 @@
 =============
-Acquire Leads
+Acquire leads
 =============
 
 .. toctree::
