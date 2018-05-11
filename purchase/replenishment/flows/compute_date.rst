@@ -1,156 +1,91 @@
-===================================================
-How are the order date and scheduled dates computed
-===================================================
+=====================================
+Schedule your receipts and deliveries
+=====================================
 
-Scheduled dates are computed in order to be able to plan deliveries,
-receptions and so on. Depending on the habits of your company, Odoo
-automatically generates scheduled dates via the scheduler. The Odoo
-scheduler computes everything per line, whether it's a manufacturing
-order, a delivery order, a sale order, etc. The dates that are computed
-are dependent on the different leads times configured in Odoo.
+To manage your supply chain scheduling, you will need to use Odoo *Lead
+Times*.
 
-Configuring lead times
-======================
+*Lead Times* are the expected times needed to receive, deliver or
+manufacture products.
 
-Configuring **lead times** is an essential move in order to compute
-scheduled dates. Lead times are the delays (in term of delivery,
-manufacturing, ...) promised to your different partners and/or clients.
-Configuration of the different lead times are made as follows:
+Configure Lead Times
+====================
 
-On a product level
-------------------
+Vendor Lead Time
+----------------
 
-Supplier lead time:
-~~~~~~~~~~~~~~~~~~~
+The vendor lead time is the time needed by your vendor to deliver the
+product to you.
 
-The supplier lead time is the time needed for the supplier to deliver
-your purchased product. To configure the Supplier lead time select a
-product (from the Purchase module, go to :menuselection:`Purchase --> Product`),
-and go in the **Inventory** tab. You will have to 
-add a **Vendor** to your product in order to select a supplier lead time.
+To configure your vendor lead times, go to a product page, under the
+purchase tab, click on a *Vendor* once there you can change the
+delivery lead time for that Vendor & Product.
 
 .. image:: media/compute_date01.png
-    :align: center
+  :align: center
 
-.. tip:: 
-    It is possible to add more than one vendor per product and thus 
-    different delivery lead times depending on the vendor.
-
-Once a vendor is selected, click on it to open its form and indicate its
-delivery lead time. 
-
-.. image:: media/compute_date02.png
-    :align: center
-
-.. note:: 
-    In this case security days have no influence, the scheduled 
-    delivery days will be equal to: Date of the purchase order + Delivery Lead Time.
-
-Customer lead time
-~~~~~~~~~~~~~~~~~~
-
-The customer lead time is the time needed to get your product from your
-store/warehouse to your customer. It can be configured for any
-product. Simply select a product (from the **Sales** module, go to 
-:menuselection:`Sales --> Product`), 
-and go into the **Sales** tab to indicate your customer lead time.
-
-.. image:: media/compute_date03.png
-    :align: center
-
-On the company level
---------------------
-
-On company level, it is possible to parameter **security days** in order
-to cope with eventual delays and to be sure to meet your engagements.
-The idea is to subtract **backup** days from the computed scheduled date
-in case of delays.
-
-Sales Safety days
-~~~~~~~~~~~~~~~~~
-
-Sales Safety days are **back-up** days to ensure you will be able to
-deliver your clients engagements on time. They are margins of errors for
-delivery lead times. Security days are the same logic as the early
-wristwatch, in order to arrive on time. The idea is to subtract the
-numbers of security days from the calculation and thus to compute a
-scheduled date earlier than the one you promised to your client. That
-way you are sure to be able to keep your commitment.
-
-To set up your security dates, go to the app 
-:menuselection:`Settings --> General settings`, 
-and click on **Configure your company data**.
-
-.. image:: media/compute_date04.png
-    :align: center
-
-Go the **Configuration** tab to indicate the number of safety days
-
-.. image:: media/compute_date05.png
-    :align: center
-
-.. tip::
-    Note that you can in this menu configure 
-    a default **Manufacturing** lead time.
-
-Purchase days
-~~~~~~~~~~~~~
-
-Purchase days response to the same logic than sales security days.
-
-They are margins of error for vendor lead times. When the system
-generates purchase orders for procuring products, they will be scheduled
-in order to cope with unexpected vendor delays. Purchase lead time can
-be found in the same menu as the sales safety days (see screenshot
-above).
-
-On route level
---------------
-
-The internal transfers due to the movement of stocks can also influence
-the computed date.
-
-The delays due to internal transfers can be specified in the **Inventory**
-module when creating a new push rule for a new route.
-
-.. note:: 
-    Read the documentation 
-    :doc:`../../../../inventory/routes/concepts/push_rule`
-    to learn more.
-
-.. image:: media/compute_date06.png
-    :align: center
-
-On document level:
+Customer Lead Time
 ------------------
 
-Requested date
-~~~~~~~~~~~~~~
+The customer lead time, on the other hand, is the time you need to
+deliver the product to your customer.
 
-Odoo offers the possibility to indicate a requested date by the client
-straight on the sale order, under the tab **Other information**. If
-this date is earlier than the theoretically computed date, Odoo will
-automatically display a warning.
+To configure your customer lead time open a product and go under the
+*Inventory* tab. You can then add how many days you need.
 
-.. image:: media/compute_date07.png
-    :align: center
+.. image:: media/compute_date02.png
+  :align: center
 
-Example
-=======
+Manufacturing lead time
+-----------------------
 
-As an example, you may sell a car today (January 1st), that is purchased
-on order, and you promise to deliver your customer within 20 days
-(January 20). In such a scenario, the scheduler may trigger the
-following events, based on your configuration:
+The manufacturing lead time is the time you need to manufacture the
+product.
 
--   January 19: actual scheduled delivery (1 day of Sales Safety days)
+To configure your manufacturing lead time open a product and go under
+the *Inventory* tab. You can then add how many days you need.
 
--   January 18: receive the product from your supplier (1 day of Purchase
-    days)
+.. image:: media/compute_date03.png
+  :align: center
 
--   January 10: deadline to order at your supplier (9 days of supplier
-    delivery lead time)
+Configure Security Lead Times
+=============================
 
--   January 8: trigger a purchase request to your purchase team, since
-    the team needs on average 2 days to find the right supplier and
-    order.
+Odoo also lets you configure *Security Days* allowing you to cope with
+potential delays along the supply chain and make sure you meet your
+engagements.
+
+The easiest way is to go to *Settings* from any module and type
+**Lead Time** in the search bar. From there, tick each box and
+configure your various *Security Lead Time* for your needs.
+
+.. image:: media/compute_date04.png
+  :align: center
+
+Alternatively, you can go in the settings of the *Inventory* module
+and *Manufacturing* module to configure those settings.
+
+Lead & security times in a use case
+===================================
+
+For example you sell a car today (January 1st), that is purchased on
+order, and you promise to deliver your customer within 20 days (January
+20). Here is your product’s configuration:
+
+- Security lead time for sales : 1 day
+
+- Security lead time for purchase : 1 day
+
+- Vendor delivery lead time : 9 days
+
+In such a scenario, the scheduler will trigger the following events
+based on your configuration.
+
+- January 19: scheduled delivery date (20th January - 1 day of security
+  lead time for Sales)
+
+- January 18: scheduled receipt date (19th January - 1 day of security
+  lead time for Purchase)
+
+- January 10: order date = deadline to order from your vendor (19th
+  January - 9 days of vendor lead time)
