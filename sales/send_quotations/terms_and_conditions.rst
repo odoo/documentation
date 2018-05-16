@@ -18,14 +18,16 @@ Go to :menuselection:`SALES --> Configuration --> Settings` and activate
 *Default Terms & Conditions*.
 
 .. image:: media/terms_and_conditions01.png 
-  :align: center 
+  :align: 
+  center 
  
 In that box you can add your default terms & conditions. They will then
 appear on every quotation, SO and invoice.
 
 .. image:: media/terms_and_conditions02.png 
   :align: center 
-
+.. image:: media/quote_template02.png
+  :align: center
 Set up more detailed terms & conditions
 ========================================
 
