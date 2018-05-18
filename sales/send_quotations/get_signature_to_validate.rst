@@ -1,13 +1,13 @@
 ===================================
 Get a signature to confirm an order
-====================================
+===================================
 
 You can use online signature to get orders automatically confirmed. Both
 you and your customer will save time by using this feature compared to a
 traditional process.
 
 Activate online signature
-==========================
+=========================
 
 Go to :menuselection:`SALES --> Configuration --> Settings` and activate
 the *Online Signature & Payment* feature.
