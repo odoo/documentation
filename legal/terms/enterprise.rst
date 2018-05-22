@@ -258,8 +258,9 @@ various offices, subject to local opening hours.
 5.1 Standard charges
 --------------------
 
-The standard charges for the Services are based on the number of Users, the installed
-Apps, the Software version used by the Customer, and specified in writing at the signature of the Agreement.
+The standard charges for the Odoo Enterprise subscription and the Services are based on the number
+of Users, the installed Apps, the Software version used by the Customer, and specified in writing
+at the signature of the Agreement.
 
 When during the Term, the Customer has more Users or more installed Apps than specified at the time
 of signature of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
