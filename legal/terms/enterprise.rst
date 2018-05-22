@@ -23,8 +23,8 @@ following terms and conditions (the "Agreement").
 1 Term of the Agreement
 =======================
 
-The duration of this Agreement (the “Term”) shall be specified in writing at the signature of this
-Agreement, beginning on the date of the signature.
+The duration of this Agreement (the “Term”) shall be specified in writing on conclusion of this
+Agreement, beginning on the date of conclusion.
 It is automatically renewed for an equal Term, unless either party provides a written notice of
 termination minimum 30 days before the end of the Term to the other party.
 
@@ -57,7 +57,7 @@ Covered Versions
     the Software, which include the 3 (three) most recently released major versions.
 
     To be covered by the current Agreement, the Customer has to run the most recent
-    Covered Version at the time of this Agreement’s signature. When this is not the case,
+    Covered Version at the time of conclusion of this Agreement. When this is not the case,
     additional costs are applicable, as described in :ref:`charges`.
 
 
@@ -260,13 +260,13 @@ various offices, subject to local opening hours.
 
 The standard charges for the Odoo Enterprise subscription and the Services are based on the number
 of Users, the installed Apps, the Software version used by the Customer, and specified in writing
-at the signature of the Agreement.
+at the conclusion of the Agreement.
 
 When during the Term, the Customer has more Users or more installed Apps than specified at the time
-of signature of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
+of conclusion of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
 list price (at the beginning of the Term) for the additional Users or Apps, for the remainder of the Term.
 
-If at the time of the signature of this Agreement, the Customer uses a Covered Version
+If at the time of the conclusion of this Agreement, the Customer uses a Covered Version
 that is not the most recent one, the standard charges may be increased by 50% for the duration
 of the first Term, at the sole discretion of Odoo SA, to cover the extra maintenance costs.
 
@@ -323,7 +323,7 @@ The Customer agrees to:
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
 - immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
-  numbers specified at the signature of the Agreement, and in this event, pay the applicable
+  numbers specified at the conclusion of the Agreement, and in this event, pay the applicable
   additional fee as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
