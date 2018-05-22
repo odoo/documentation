@@ -5,15 +5,17 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 7.1 - 2018-03-16
+.. note:: Version 8.0 - 2018-05-22
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
+.. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
-affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
-Odoo Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
+affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
+Edition (the "Software"), hosted on Odoo SA's Cloud platforms (the "Cloud Platform") or
+on-premises ("Self-Hosting"), you (the "Customer") are agreeing to be bound by the
 following terms and conditions (the "Agreement").
 
 .. _term:
@@ -21,10 +23,10 @@ following terms and conditions (the "Agreement").
 1 Term of the Agreement
 =======================
 
-The duration of this Agreement (the “Term”) shall be minimally one year and as specified in writing
-at the signature of this Agreement, beginning on the date of the signature.
+The duration of this Agreement (the “Term”) shall be specified in writing at the signature of this
+Agreement, beginning on the date of the signature.
 It is automatically renewed for an equal Term, unless either party provides a written notice of
-termination minimum 30 days before the end of the Term by registered mail to the other party.
+termination minimum 30 days before the end of the Term to the other party.
 
 .. _definitions:
 
@@ -39,8 +41,7 @@ User
 
 App
     An "App" is a specialized group of features available for installation in the Software,
-    and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_ at the
-    signature of this Agreement.
+    and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_.
 
 Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
@@ -51,18 +52,24 @@ Bug
     accounting requirements anymore).
 
 Covered Versions
-    All Services provided under this Agreement are applicable only to the Covered Versions of
+    Unless specified otherwise, the Services provided under this Agreement are applicable only
+    to the Covered Versions of
     the Software, which include the 3 (three) most recently released major versions.
 
-    To be covered by the current Agreement, Customer’s installations have to run the most recent
+    To be covered by the current Agreement, the Customer has to run the most recent
     Covered Version at the time of this Agreement’s signature. When this is not the case,
     additional costs are applicable, as described in :ref:`charges`.
 
 
 .. _enterprise_access:
 
-3 Access to Odoo Enterprise Edition
-===================================
+3 Access to the Software
+========================
+
+The Customer can use the Software hosted on the Cloud Platform, or choose the Self-Hosting option.
+The Cloud Platform is hosted and fully managed by Odoo SA, and accessed remotely by the Customer.
+With the Self-Hosting option, the Customer instead hosts the Software on computer systems of their
+choice, that are not under the control of Odoo SA.
 
 For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive, non-transferable
 license to use (execute, modify, execute after modification) the Odoo Enterprise Edition software,
@@ -78,7 +85,7 @@ of the Customer, and to deal with all collected data in compliance with its offi
 Policy, published at https://www.odoo.com/privacy.
 
 Upon expiration or termination of this Agreement, this license is revoked immediately and the
-Customer agrees to stop using the Odoo Enterprise Edition software.
+Customer agrees to stop using the Odoo Enterprise Edition software and the Cloud Platform.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
 fee equal to 300% of the applicable list price for the actual number of Users and installed Apps.
@@ -86,8 +93,8 @@ fee equal to 300% of the applicable list price for the actual number of Users an
 
 .. _services:
 
-4 Included Services
-===================
+4 Services
+==========
 
 4.1 Bug Fixing Service
 ----------------------
@@ -101,7 +108,8 @@ The Customer understands that Bugs caused by a modification or extension that is
 official Software will not be covered by this service.
 
 As soon as the Bug is fixed an appropriate remedy will be communicated to the Customer.
-If the bug has been addressed in a more recent revision of the Covered Version of the
+
+For Self-Hosting, if the bug has been addressed in a more recent revision of the Covered Version of the
 Software used by the Customer, the Customer agrees to update its systems to that revision in order
 to obtain the correction. The Customer will not be asked to upgrade to a more recent Covered
 Version of the Software as a remedy to a Bug.
@@ -113,11 +121,16 @@ Both parties acknowledge that as specified in the license of the Software and in
 section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software.
 
 
-4.2 Security Advisories Service
--------------------------------
+4.2 Security Updates Service
+----------------------------
+
+.. _secu_self_hosting:
+
+Self-Hosting
+++++++++++++
 
 For the duration of this Agreement, Odoo SA commits to sending a "Security Advisory" to the Customer
-for any security Bug that are discovered in the Covered Versions of the Software, at least 2 weeks
+for any security Bug that is discovered in the Covered Versions of the Software, at least 2 weeks
 before making the Security Advisory public, unless the Bug has already been disclosed publicly by a
 third party.
 Security Advisories include a complete description of the Bug, its cause, its possible impacts
@@ -126,6 +139,16 @@ on the Customer's systems, and the corresponding remedy for each Covered Version
 The Customer understands that the Bug and the information in the Security Advisory must be treated
 as Confidential Information as described in :ref:`confidentiality` during the embargo period prior to
 the public disclosure.
+
+.. _secu_cloud_platform:
+
+Cloud Platform
+++++++++++++++
+
+Odoo SA commits to apply the security remedies for any security Bug discovered in a version of
+the Software hosted on the Cloud Platform, on all systems under its control, as soon as
+the remedy is available, without requiring any manual action of the Customer.
+
 
 .. _upgrade:
 
@@ -141,7 +164,9 @@ For the duration of this Agreement, the Customer can submit upgrade requests thr
 channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
 from one Covered Version of the Software to a more recent Covered Version (the "Target Version").
 
-Upgrade requests must include a complete backup copy of the Customer's database and the
+For the Cloud Platform, upgrade requests are submitted directly from the control panel of the
+Cloud Platform, and do not require any data upload. For Self-Hosting,
+upgrade requests must include a complete backup copy of the Customer's database and the
 associated data (typically obtained from the Backup menu of the Software). Where necessary for data
 security or regulation reasons, the Upgrade Service includes an optional tool to anonymize
 identifiable data inside a database before submitting the upgrade request, and a tool to restore
@@ -177,6 +202,52 @@ technical adaptation of third-party modules installed in the Customer's database
 corresponding data in order to be compatible with the Target Version. The Customer will receive an
 upgraded version of all installed third-party modules along with the upgraded database.
 
+
+.. _cloud_hosting:
+
+4.4 Cloud Hosting Services
+--------------------------
+
+For the duration of this Agreement, when the Customer chooses to use the Cloud Platform,
+Odoo SA commits to providing at least the following services:
+
+- Choice of multiple hosting regions (minimum 3: Europe, America, Asia/Pacific)
+- Hosting in Tier-III data centers or equivalent, with 99.9% network uptime
+- Grade A SSL (HTTPS) Encryption of communication
+- Fully automated, verified backups, replicated in multiple regions
+- Disaster Recovery Plan, tested regularly
+
+The details of the Cloud Hosting Services are described on the Service Level Agreement page at
+https://www.odoo.com/cloud-sla.
+
+
+.. _support_service:
+
+4.4 Cloud Hosting Services
+--------------------------
+
+Scope
++++++
+
+For the duration of this Agreement, the Customer may open an unlimited number of support tickets
+free of charge, exclusively for questions regarding Bugs (see 4.1 Bug Fixing Service) or guidance
+with respect to the use of the standard features of the Software and Services
+(functionalities, intended use, configuration, troubleshooting).
+
+Other assistance requests, such as questions related to development, customizations,
+installation for Self-Hosting, or services requiring to access the Customer's database,
+may be covered through the purchase of a separate Service Pack.
+In case it’s not clear if a request is covered by this Agreement or a Service Pack,
+the decision is at the discretion of Odoo SA.
+
+Availability
+++++++++++++
+
+Tickets can be submitted online at https://www.odoo.com/help, or by phone directly to the
+various offices, subject to local opening hours.
+
+
+
 .. _charges:
 
 5 Charges and Fees
@@ -187,8 +258,7 @@ upgraded version of all installed third-party modules along with the upgraded da
 5.1 Standard charges
 --------------------
 
-The standard charges for the Odoo Enterprise subscription, the Bug Fixing Service, Security Advisories
-Service and the Upgrade Service are based on the number of Users, the installed
+The standard charges for the Services are based on the number of Users, the installed
 Apps, the Software version used by the Customer, and specified in writing at the signature of the Agreement.
 
 When during the Term, the Customer has more Users or more installed Apps than specified at the time
@@ -247,8 +317,6 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 6.1 Customer Obligations
 ------------------------
 
-.. FIXME: removed the clause about
-
 The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
@@ -259,11 +327,22 @@ The Customer agrees to:
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
   in :ref:`enterprise_access` ;
-- grant Odoo SA the necessary access to verify the validity of the Odoo Enterprise Edition usage
-  upon request (e.g. if the automatic validation is found to be inoperant for the Customer);
 - appoint 1 dedicated Customer contact person for the entire duration of the Agreement;
+
+When the Customer chooses to use the Cloud Platform, the Customer further agrees to:
+
+- take all reasonable measures to keep their user accounts secure, including by choosing
+  a strong password and not sharing it with anyone else;
+- make a reasonable use of the Hosting Services, to the exclusion of any illegal or abusive
+  activities, and strictly observe the rules outlined in the Acceptable Use Policy
+  published at https://www.odoo.com/acceptable-use.
+
+When the Customer chooses the Self-Hosting option, the Customer further agrees to:
+
 - take all reasonable measures to protect Customer’s files and databases and to ensure Customer’s
   data is safe and secure, acknowledging that Odoo SA cannot be held liable for any data loss;
+- grant Odoo SA the necessary access to verify the validity of the Odoo Enterprise Edition usage
+  upon request (e.g. if the automatic validation is found to be inoperant for the Customer);
 
 
 .. _no_soliciting:
@@ -312,9 +391,71 @@ The Receiving Party may disclose Confidential Information of the Disclosing Part
 compelled by law to do so, provided the Receiving Party gives the Disclosing Party prior notice of
 the compelled disclosure, to the extent permitted by law.
 
+
+.. _data_protection:
+
+6.5 Data Protection
+-------------------
+
+Definitions
+    "Personal Data", "Controller", "Processing" take the same meanings as in the
+    Regulation (EU) 2016/679 and the Directive 2002/58/EC,
+    and any regulation or legislation that amends or replaces them
+    (hereafter referred to as “Data Protection Legislation”)
+
+Processing of Personal Data
++++++++++++++++++++++++++++
+
+The parties acknowledge that the Customer's database may contain Personal Data, for which the
+Customer is the Controller. This data will be processed by Odoo SA when the Customer instructs so,
+by using any of the Services that require a database (e.g. the Cloud Hosting Services or
+the Database Upgrade Service), or if the Customer transfers their database or a part of
+their database to Odoo SA for any reason pertaining to this Agreement.
+
+This processing will be performed in conformance with Data Protection Legislation.
+In particular, Odoo SA commits to:
+
+- (a) only process the Personal Data when and as instructed by the Customer, and for the purpose of
+  performing one of the Services under this Agreement, unless required by law to do so,
+  in which case Odoo SA will provide prior notice to the Customer, unless the law
+  forbids it ;
+- (b) ensure that all persons within Odoo SA authorised to process the Personal Data have committed
+  themselves to confidentiality ;
+- (c) implement and maintain appropriate technical and organizational measures to protect
+  the Personal Data against unauthorized or unlawful processing and against accidental loss,
+  destruction, damage, theft, alteration or disclosure ;
+- (d) forward promptly to the Customer any Data Protection request that was submitted
+  to Odoo SA with regard to the Customer's database ;
+- (e) notify the Customer promptly upon becoming aware of and confirming any accidental,
+  unauthorized, or unlawful processing of, disclosure of, or access to the Personal Data ;
+- (f) notify the Customer if the processing instructions infringe applicable Data Protection
+  Legislation, in the opinion of Odoo SA;
+- (g) make available to the Customer all information necessary to demonstrate compliance with the
+  Data Protection Legislation, allow for and contribute reasonably to audits, including
+  inspections, conducted or mandated by the Customer;
+- (h) permanently delete all copies of the Customer's database in possession of Odoo SA,
+  or return such data, at the Customer’s choice, upon termination of this Agreement,
+  subject to the delays specified in Odoo SA's
+  `Privacy Policy <https://www.odoo.com/privacy>`_ ;
+
+With regard to points (d) to (f), the Customer agrees to provide Odoo SA with accurate contact
+information at all times, as necessary to notify the Customer's Data Protection responsible.
+
+Subprocessors
++++++++++++++
+
+The Customer acknowledges and agrees that in order to provide the Services, Odoo SA may use
+third-party service providers (Subprocessors) to process Personal Data. Odoo SA commits to only
+use Subprocessors in compliance with Data Protection Legislation. This use will be covered by a
+contract between Odoo SA and the Subprocessor that provides guarantees to that effect.
+Odoo SA's Privacy Policy, published at https://www.odoo.com/privacy provides up-to-date information
+regarding the names and purposes of Subprocessors currently in use by Odoo SA for the
+execution of the Services.
+
+
 .. _termination:
 
-6.5 Termination
+6.6 Termination
 ---------------
 
 In the event that either Party fails to fulfill any of its obligations arising herein, and if such
@@ -345,10 +486,10 @@ Surviving Provisions:
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
-- the Customer’s computing systems are in good operational order and the Software is installed in a
-  suitable operating environment;
-- the Customer provides adequate troubleshooting information and access so that Odoo SA can
-  identify, reproduce and address problems;
+- the Customer’s computing systems are in good operational order and, for Self-Hosting, that
+  the Software is installed in a suitable operating environment;
+- the Customer provides adequate troubleshooting information and, for Self-Hosting, any access
+  that Odoo SA may need to identify, reproduce and address problems;
 - all amounts due to Odoo SA have been paid.
 
 The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
