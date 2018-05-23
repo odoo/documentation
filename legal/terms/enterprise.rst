@@ -223,8 +223,8 @@ https://www.odoo.com/cloud-sla.
 
 .. _support_service:
 
-4.4 Cloud Hosting Services
---------------------------
+4.4 Support Services
+--------------------
 
 Scope
 +++++
@@ -244,7 +244,7 @@ Availability
 ++++++++++++
 
 Tickets can be submitted online at https://www.odoo.com/help, or by phone directly to the
-various offices, subject to local opening hours.
+various Odoo SA offices, subject to local opening hours.
 
 
 
