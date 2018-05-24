@@ -5,9 +5,10 @@
 Odoo Partnership Agreement
 ==========================
 
-.. note:: Version 6a - 2017-12-11
+.. note:: Version 7 - 2018-05-24
 
 .. v6a: typo in section 4.4
+.. v7: introduce "Learning Partners" and a few related changes
 
 
 BETWEEN:
@@ -76,32 +77,37 @@ Edition and to collect statistics that are needed for that purpose.
 
 4.1 Partnership levels
 ----------------------
-The Odoo partner program consists of three partnership levels; Ready, Silver and Gold with specific
-requirements and benefits for each level.
+The Odoo partner program consists of two types of partnerships and four levels;
+“Learning Partners” is for companies who want everything necessary to start implementing Odoo,
+without visibility as an official partner until they get the required experience;
+“Official Partners” is for companies who want the visibility as Ready, Silver and Gold,
+according to their experience with Odoo.
 Partnership level granted to PARTNER depends on the annual new Odoo Enterprise revenue generated
-for ODOO. Renewals of existing contracts do not account for the partnership level, but PARTNER
+for ODOO, the number of certified resources and the customer retention rate.
+Renewals of existing contracts do not account for the partnership level, but PARTNER
 still gets a commission on these contracts as stated in section :ref:`benefits`.
 
 The table below summarizes the requirements for each partnership level.
 
-+--------------------------------------------+----------+----------+----------+
-|                                            | Ready    | Silver   | Gold     |
-+============================================+==========+==========+==========+
-| Annual New Net Odoo Enterprise Users Sold  |   0      |  50      | 100      |
-+--------------------------------------------+----------+----------+----------+
-| Certified Active Internal Resources        |   1      |  2       |  4       |
-+--------------------------------------------+----------+----------+----------+
-| Minimum retention rate                     |   n/a    |  85%     |  85%     |
-+--------------------------------------------+----------+----------+----------+
++--------------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                            | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++============================================+==================+====================+====================+====================+
+| Annual New Net Odoo Enterprise Users Sold  |   0              |  10                | 50                 | 150                |
++--------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Certified Active Internal Resources        |   0              |  1                 |  2                 |  3                 |
++--------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Minimum retention rate                     |   n/a            |  n/a               | 70%                |  80%               |
++--------------------------------------------+------------------+--------------------+--------------------+--------------------+
 
 Certifications are personal, so when a certified staff member leaves the company,
 PARTNER must notify ODOO in order to update the number of certified resources active
 for the partnership contract.
 
 The level of partnerships will be reviewed quarterly by ODOO based on new Odoo Enterprise contracts
-sold by PARTNER over the previous 12 months.
+sold by PARTNER over the previous 12 months, official certifications granted to employees of the partner,
+and customer retention rate.
 
-Partners may be upgraded automatically to a higher level once they reach the requirements for that
+"Official Partners" may be upgraded automatically to a higher level once they reach the requirements for that
 higher partnership level. Silver and Gold partners that are not meeting their partnerships
 requirements at the end of annual period may be assigned to a lower partnership level.
 
@@ -112,54 +118,58 @@ requirements at the end of annual period may be assigned to a lower partnership 
 
 The details of the benefits for each level of partnership are described in the table below:
 
-+---------------------------------------+-----------------+------------------+----------------+
-|                                       |      Ready      |     Silver       |      Gold      |
-+=======================================+=================+==================+================+
-| **Recognition**                       |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Visibility on odoo.com                | "Ready Partner" | "Silver Partner" | "Gold Partner" |
-+---------------------------------------+-----------------+------------------+----------------+
-| Rights to use "Odoo" trademark        | Ready logo      | Silver logo      | Gold Logo      |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Training benefits**                 |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Yearly upgrade seminars               | Yes             | Yes              | Yes            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Sales Coaching                        | Yes             | Yes              | Yes            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Access to E-Learning Platform and     | Yes             | Yes              | Yes            |
-|                                       |                 |                  |                |
-| Odoo Knowledge Base                   |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Software benefits**                 |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Access to Odoo Enterprise source code | Yes             | Yes              | Yes            |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Sales benefits**                    |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Commission on Odoo SH platform [#f1]_ | 100%            | 100%             | 100%           |
-+---------------------------------------+-----------------+------------------+----------------+
-| Commission on Odoo Enterprise         | 10%             | 15%              | 20%            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Access to dedicated Account Manager   | Yes             | Yes              | Yes            |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Marketing benefits**                |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Access to marketing material          | Yes             | Yes              | Yes            |
-+---------------------------------------+-----------------+------------------+----------------+
-| PARTNER Event - ODOO support &        | Yes             | Yes              | Yes            |
-| Promotion                             |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
+.. only:: latex
 
-.. [#f1] The 100% commission rate on Odoo SH Platform is granted for all Odoo Enterprise
-         subscriptions signed during the first year of partnership, as long as those subscription
-         are renewed. After the first year, PARTNER gets the normal Odoo Enterprise commission,
-         according to the partnership level.
+    .. tabularcolumns:: |L|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|
+
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                       | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++=======================================+==================+====================+====================+====================+
+| **Recognition**                       |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Visibility on odoo.com                | No               | "Ready Partner"    | "Silver Partner"   | "Gold Partner"     |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Rights to use "Odoo" trademark        | Learning Logo    | Ready logo         | Silver logo        | Gold Logo          |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Training benefits**                 |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Yearly upgrade seminars               | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Sales Coaching                        | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Access to E-Learning Platform and     | Yes              | Yes                | Yes                | Yes                |
+|                                       |                  |                    |                    |                    |
+| Odoo Knowledge Base                   | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Software benefits**                 |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Access to Odoo Enterprise source code | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Odoo Enterprise trial extension codee | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Sales benefits**                    |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission on Odoo SH platform [#f1]_ | 10%              | 100%               | 100%               | 100%               |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission on Odoo Enterprise         | 10%              | 10%                | 15%                | 20%                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Access to dedicated Account Manager   | No               | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Marketing benefits**                |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Access to marketing material          | Yes              | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| PARTNER Event - ODOO support &        | No               | Yes                | Yes                | Yes                |
+| Promotion                             |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+
+.. [#f1] In case the 100% commission rate for Odoo SH is modified upon renewal by a future version
+         of this Agreement, the previous rate will continue to apply for existing subscriptions.
 
 
 4.3 Partner Recognition
 -----------------------
-ODOO will promote PARTNER as an official partner on the official website (odoo.com).
+ODOO will promote "Official Partners" on the list of Odoo Partners on the official website (odoo.com).
 
 ODOO grants PARTNER, on a non-exclusive basis, the right to use and reproduce the ODOO Partner logo
 of the corresponding partnership level, and the "Odoo" name in relation with this partnership
@@ -194,7 +204,7 @@ retribution as follows:
 
 - For “Odoo Enterprise” and "Odoo SH" subscriptions sold via PARTNER; ODOO will invoice directly
   the customer based on final pricing agreed between ODOO, PARTNER, and the customer. Then, PARTNER
-  will invoice his commission to ODOO based on the Odoo Enteprise Edition price, net of possible
+  will invoice his commission to ODOO based on the Odoo Enterprise Edition price, net of possible
   rebates, and based on PARTNER's current partnership level at the time of signature of the sale.
 - For “Odoo Enterprise” subscription renewals; PARTNER receives a commission for each renewal of
   a subscription sold via PARTNER, as long as PARTNER maintains a contractual relationship with the
@@ -209,7 +219,7 @@ PARTNER agrees to pay either the Partnership Entry fee or the Partnership Annual
 immediately upon receipt of the annual invoice sent by ODOO.
 The fees will be specified in writing at the time of signature of this agreement.
 
-PARTNER acknowledges that the abovementioned partnership fees are not refundable.
+PARTNER acknowledges that the above-mentioned partnership fees are not refundable.
 
 The "Partnership Entry" fee shall be paid before the activation of this Agreement, and applies
 for new partners only.
