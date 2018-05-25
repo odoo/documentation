@@ -130,7 +130,7 @@ Other legal references
 ======================
 
 - `Odoo Cloud Service Level Agreement (SLA) <https://www.odoo.com/cloud-sla>`_
-- `Odoo Cloud Acceptable Use Policy <https://www.odoo.com/acceptable-use-policy>`_
-- `Odoo SA's Privacy Policy <https://www.odoo.com/acceptable-use-policy>`_
+- `Odoo Cloud Acceptable Use Policy <https://www.odoo.com/acceptable-use>`_
+- `Odoo SA's Privacy Policy <https://www.odoo.com/privacy>`_
 - `Odoo SA's GDPR Compliance Guide <https://www.odoo.com/gdpr>`_
 - :ref:`cla`
