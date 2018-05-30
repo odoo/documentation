@@ -10,6 +10,12 @@ from sphinx.locale import admonitionlabels
 
 from . import pycompat
 
+try:
+    from urllib import url2pathname
+except ImportError:
+    # P3
+    from urllib.request import url2pathname
+
 
 def _parents(node):
     while node.parent:
@@ -652,7 +658,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
                     banner = '_static/' + cover
                     base, ext = os.path.splitext(banner)
                     small = "{}.small{}".format(base, ext)
-                    if os.path.isfile(urllib.url2pathname(small)):
+                    if os.path.isfile(url2pathname(small)):
                         banner = small
                     style = u"background-image: url('{}')".format(
                         util.relative_uri(baseuri, banner) or '#')
