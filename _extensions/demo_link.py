@@ -125,7 +125,7 @@ def _submit(result_queue, xid, view='form'):
 def _launcher():
     try:
         info = xmlrpclib.ServerProxy('https://demo.odoo.com/start').start()
-    except xmlrpclib.Fault, e:
+    except xmlrpclib.Fault as e:
         threading.Thread(
             target=_fault_requests,
             args=["Demo start() failed: %s" % e.faultString],
