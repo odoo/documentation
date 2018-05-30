@@ -1,8 +1,13 @@
-import Queue
 import collections
 import threading
 import urllib
 import xmlrpclib
+
+try:
+    import Queue
+except ImportError:
+    # P3
+    import queue as Queue
 
 from xml.etree import ElementTree as ET
 
