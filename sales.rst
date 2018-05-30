@@ -7,8 +7,7 @@ Sales
 .. toctree::
    :titlesonly:
 
-   sales/overview
-   sales/quotation
+   sales/send_quotations
    sales/invoicing
    sales/products_prices
    sales/sale_ebay

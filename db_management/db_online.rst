@@ -50,12 +50,18 @@ Several actions are available:
 Upgrade
 =======
 
-Make sure to be connected to the database you want to upgrade and access to the
+Make sure to be connected to the database you want to upgrade and access the
 database management page. On the line of the database you want to upgrade, click
 on the "Upgrade" button.
 
 .. image:: media/upgrade1.png
     :align: center
+
+You have the possibility to choose the target version of the upgrade. By default,
+we select the highest available version available for your database; if you were
+already in the process of testing a migration, we will automatically select the
+version you were already testing (even if we released a more recent version during
+your tests).
 
 By clicking on the "Test upgrade" button an upgrade request will be generated.
 If our automated system does not encounter any problem, you will receive a
@@ -68,13 +74,21 @@ If our automated system does not encounter any problem, you will receive a
     test database, our dedicated team will have to work on it. You will be
     notified by email and the process will take up to 4 weeks.
 
-You will have the possibility to test it for 1 month. When you will be ready,
-and be sure that there are no problem compared to your actual version, you can
-click again on the Upgrade button, and confirm by clicking on Upgrade (the button
-with the little rocket!) to definitely switch to the upgraded version of Odoo.
+You will have the possibility to test it for 1 month. Inspect your data (e.g.
+accounting reports, stock valuation, etc.), check that all your usual flows
+work correctly (CRM flow, Sales flow, etc.).
+
+Once you are ready and that everything is correct in your test migration, you
+can click again on the Upgrade button, and confirm by clicking on Upgrade
+(the button with the little rocket!) to switch your production database to
+the new version.
 
 .. image:: media/upgrade.png
     :align: center
+
+.. warning :: Your database will be taken offline during the upgrade
+    (usually between 30min up to several hours for big databases),
+    so make sure to plan your migration during non-business hours.
 
 .. _duplicate_online:
 
