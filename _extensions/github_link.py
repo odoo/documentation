@@ -99,7 +99,7 @@ def add_doc_link(app, pagename, templatename, context, doctree):
     # in Sphinx 1.3 it's possible to have mutliple source suffixes and that
     # may be useful in the future
     source_suffix = app.config.source_suffix
-    source_suffix = source_suffix if isinstance(source_suffix, basestring) else source_suffix[0]
+    source_suffix = source_suffix if isinstance(source_suffix, str) else source_suffix[0]
     # FIXME: odoo/odoo has a doc/ prefix which is incorrect for this
     # project, how to unify? Add new setting? 
     context['github_link'] = lambda mode='edit': make_github_link(
