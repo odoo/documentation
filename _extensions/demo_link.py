@@ -1,7 +1,12 @@
 import collections
 import threading
-import urllib
-import xmlrpclib
+import werkzeug
+
+try:
+    import xmlrpclib
+except ImportError:
+    # P3
+    import xmlrpc.client as xmlrpclib
 
 try:
     import Queue
@@ -94,7 +99,7 @@ class Action(Directive):
         external_id = self.arguments[0]
         text = "action button"
         node = nodes.reference(
-            refuri='https://demo.odoo.com?{}'.format(urllib.urlencode({
+            refuri='https://demo.odoo.com?{}'.format(werkzeug.urls.url_encode({
                 'module': external_id
             })),
             classes=['btn', 'btn-primary', 'btn-lg', 'btn-block', 'center-block']
