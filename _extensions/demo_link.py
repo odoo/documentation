@@ -77,7 +77,7 @@ class Fields(Directive):
                     ))
                 )
             )
-            for k, v in fields.iteritems()
+            for k, v in fields.items()
             # if there's a whitelist, only display whitelisted fields
             if not whitelist or k in whitelist
             # only display if there's a help text
