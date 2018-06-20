@@ -19,9 +19,16 @@ Odoo S.A., enregistrée au Registre de commerce de Nivelles sous le numéro RCN 
 social se situe Chaussée de Namur, 40, 1367 Grand-Rosière, Belgique, et ses filiales (désignées
 collectivement sous le terme « ODOO »)
 
-ET
-________________________________, une entreprise dont le siège social se situe à __________________
-(ci-après dénommée « PARTENAIRE »).
+ET:
+
+_____________________________________________________________________________________,
+
+une entreprise dont le siège social se situe à
+
+_____________________________________________________________________________________.
+
+(ci-après dénommée « PARTENAIRE »)
+
 
 ODOO et PARTENAIRE sont désignées individuellement par le terme « Partie » et collectivement par
 le terme « les Parties ».
@@ -322,11 +329,18 @@ en lien avec le Contrat et pour lequel aucun règlement à l’amiable ne peut �
 finalement réglé par les Tribunaux de Belgique à Nivelles.
 
 
-**Signatures**:
+.. rubric:: Signatures
 
-==================================      ==================================
-Pour ODOO,                              Pour le PARTENAIRE,
-==================================      ==================================
+.. only:: latex
+
+   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+
++---------------------------------------+------------------------------------------+
+| Pour ODOO,                            | Pour le PARTENAIRE,                      |
++=======================================+==========================================+
+|                                       |                                          |
+| |                                     |  |                                       |
++---------------------------------------+------------------------------------------+
 
 
 .. _appendix_p_a_fr:

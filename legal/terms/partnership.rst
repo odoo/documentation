@@ -17,9 +17,14 @@ Odoo S.A., registered at the Trade and Companies Register of Nivelles under numb
 having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière, Belgium,
 and its affiliates (collectively referred to as "ODOO")
 
-AND
-________________________________, a company having its registered office
-at _____________________
+AND:
+
+_____________________________________________________________________________________,
+
+a company having its registered office at
+
+_____________________________________________________________________________________.
+
 (Hereinafter referred to as “PARTNER”)
 
 ODOO and PARTNER are individually referred to as a "Party" and collectively referred to as
@@ -332,12 +337,18 @@ All disputes arising in connection with the Agreement for which no amicable sett
 found shall be finally settled by the Courts of Belgium in Nivelles.
 
 
+.. rubric:: Signatures
 
-**Signatures**:
+.. only:: latex
 
-==================================      ==================================
-For ODOO,                               For PARTNER,
-==================================      ==================================
+   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+
++---------------------------------------+------------------------------------------+
+| For ODOO,                             | For PARTNER,                             |
++=======================================+==========================================+
+|                                       |                                          |
+| |                                     |  |                                       |
++---------------------------------------+------------------------------------------+
 
 
 .. _appendix_p_a:
