@@ -96,6 +96,8 @@ fee equal to 300% of the applicable list price for the actual number of Users an
 4 Services
 ==========
 
+.. _bugfix:
+
 4.1 Bug Fixing Service
 ----------------------
 
@@ -223,14 +225,14 @@ https://www.odoo.com/cloud-sla.
 
 .. _support_service:
 
-4.4 Support Services
+4.5 Support Services
 --------------------
 
 Scope
 +++++
 
 For the duration of this Agreement, the Customer may open an unlimited number of support tickets
-free of charge, exclusively for questions regarding Bugs (see 4.1 Bug Fixing Service) or guidance
+free of charge, exclusively for questions regarding Bugs (see ref:`bugfix`) or guidance
 with respect to the use of the standard features of the Software and Services
 (functionalities, intended use, configuration, troubleshooting).
 

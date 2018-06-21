@@ -12,16 +12,18 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 7.1 - 2018-03-16
+.. note:: Version 8.0 - 2018-05-22
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
+.. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
-(le "Logiciel"), vous (le "Client") acceptez d'être lié par les conditions générales suivantes
+(le "Logiciel"), hébergé sur le plate-formes Cloud d'Odoo SA (la "Plate-forme Cloud") ou sur site
+("Auto-Hébergement"), vous (le "Client") acceptez d'être lié par les conditions générales suivantes
 (le "Contrat").
 
 .. _term_fr:
@@ -29,10 +31,10 @@ En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Od
 1 Durée du Contrat
 ==================
 
-La durée du présent contrat (la "Durée") doit être au minimum d'un an et telle que spécifiée par
-écrit à la signature du Contrat, à compter de la date de la signature. Celui-ci est automatiquement
+La durée du présent contrat (la "Durée") sera spécifiée par
+écrit à la conclusion du Contrat, à compter de la date de la conclusion. Celui-ci est automatiquement
 reconduit pour une même durée, à moins que l'une des parties n’envoie à l'autre partie un préavis
-écrit de résiliation, par lettre recommandée, et au moins 30 jours avant la date d'échéance du contrat .
+écrit de résiliation, et au moins 30 jours avant la date d'échéance du contrat.
 
 .. _definitions_fr:
 
@@ -48,7 +50,7 @@ Utilisateur
 App
     Une "App" est un ensemble de fonctionnalités, disponible pour installation dans le Logiciel,
     et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`, au moment
-    de la signature de ce Contrat.
+    de la conclusion de ce Contrat.
 
 Bug
     Désigne toute défaillance du Logiciel qui se traduit par un arrêt complet, un message d'erreur
@@ -59,19 +61,24 @@ Bug
     fonctionnalité spécifique à un pays ne répond plus aux exigences comptables légales de ce pays).
 
 Versions Couvertes
-    Tous les Services dans le cadre du présent contrat s'appliquent uniquement aux Versions
+    Sauf exception explicite, tous les Services dans le cadre du présent contrat s'appliquent uniquement aux Versions
     Couvertes du Logiciel, qui comprennent les trois (3) plus récentes versions majeures.
 
-    Afin d'être considérées comme couvertes par le Contrat, les installations du client doivent
-    utiliser la Version couverte  la plus récente au moment de la signature du Contrat. Dans le cas
+    Afin d'être considérées comme couvertes par le Contrat, le client doit
+    utiliser la Version couverte  la plus récente au moment de la conclusion du Contrat. Dans le cas
     contraire, des frais supplémentaires sont d'application, tels que décrit dans la section
     :ref:`charges_fr`
 
 
 .. _enterprise_access_fr:
 
-3 Accès à Odoo Enterprise Edition
-=================================
+3 Accès au Logiciel
+===================
+
+Le Client peut utiliser le Logiciel hébergé sur la Plate-forme Cloud, ou choisir l'option de l'Auto-Hébergement.
+La Plate-forme Cloud est hébergée et entièrement gérée par Odoo SA, and accédée à distance par le Client.
+En cas d'Auto-Hébergement, le Client héberge lui-même le Logiciel sur un système informatique de
+son choix, hors du contrôle d'Odoo SA.
 
 Pour toute la durée du présent Contrat, Odoo SA octroie au Client une licence non exclusive,
 non transférable d'utilisation (exécution, modification, exécution après modification) du logiciel
@@ -88,7 +95,8 @@ respectant sa politique officielle de confidentialité, telle que publiée sur
 https://www.odoo.com/privacy.
 
 À l'expiration ou la résiliation de ce Contrat, cette licence est immédiatement révoquée et le
-Client accepte de cesser toute utilisation du logiciel Odoo Enterprise Edition.
+Client accepte de cesser toute utilisation du logiciel Odoo Enterprise Edition et de la Plate-forme
+Cloud.
 
 Si le Client devait enfreindre les dispositions de la présente section, il accepte de payer
 à Odoo SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
@@ -99,6 +107,8 @@ correspondant au nombre réel d'Utilisateurs et aux Apps installées.
 
 4 Services inclus
 =================
+
+.. _bugfix_fr:
 
 4.1 Service de correction de Bugs
 ---------------------------------
@@ -112,7 +122,8 @@ du Client dans un délai de 2 jours ouvrables.
 Le Client accepte que les Bugs causés par toute modification ou extension qui ne fait pas partie
 de la version officielle du Logiciel ne seront pas couverts par ce service.
 
-Dès que le Bug est remédié, un correctif approprié sera communiqué au Client. Si le Bug a été
+Dès que le Bug est remédié, un correctif approprié sera communiqué au Client.
+En cas d'Auto-Hébergement, si le Bug a été
 résolu dans une nouvelle mise à jour de la Version Couverte du Logiciel utilisée par le Client,
 ce dernier s'engage à actualiser ses systèmes vers la nouvelle mise à jour, afin d'obtenir
 le correctif. Il ne sera jamais demandé au Client de passer à une Version Couverte
@@ -125,8 +136,13 @@ Les deux parties reconnaissent que comme spécifié dans la licence du Logiciel 
 :ref:`liability_fr` de ce Contrat, Odoo SA ne peut être tenue responsable des Bugs du Logiciel.
 
 
-4.2 Service d'alertes de sécurité
----------------------------------
+4.2 Mises à jour de sécurité
+----------------------------
+
+.. _secu_self_hosting_fr:
+
+Auto-Hébergement
+++++++++++++++++
 
 Pour la durée du Contrat, Odoo SA s'engage à envoyer une "alerte de sécurité"" au Client
 pour tout Bug présentant un risque de sécurité qui serait découvert dans les Versions Couvertes
@@ -138,6 +154,16 @@ possibles sur les systèmes du Client, et le correctif correspondant pour chaque
 Le Client s'engage à traiter le Bug de sécurité et les informations figurant dans l'alerte de
 sécurité comme des Informations Confidentielles telles que décrites à la section
 :ref:`confidentiality_fr` pendant toute la période d'embargo avant la divulgation publique.
+
+.. _secu_cloud_platform_fr:
+
+Plate-forme Cloud
++++++++++++++++++
+
+Odoo SA s'engage à appliquer les correctifs de sécurité pour tout Bug de sécurité découvert
+dans une version du Logiciel hébergé sur la Plate-forme Cloud, sur tous les systèmes sous son
+contrôle, dès que le correctif est disponible, et sans intervention manuelle du Client.
+
 
 .. _upgrade_fr:
 
@@ -154,7 +180,10 @@ les procédures appropriées (généralement, via le site du service de migratio
 afin de convertir une base de données du Logiciel d'une Version Couverte du Logiciel à une
 Version Couverte plus récente (la "Version Cible").
 
-Les demandes de migration doivent inclure une copie de sauvegarde complète de la
+Pour la Plate-forme Cloud, les demandes de migration sont envoyées directement depuis la panneau
+de contrôle de la Plate-forme Cloud, et ne requièrent pas d'envoi de données.
+Pour l'Auto-Hébergement,
+les demandes de migration doivent inclure une copie de sauvegarde complète de la
 base de données du Client et les données associées (généralement obtenues à partir du menu
 Backup du Logiciel). Lorsque cela est nécessaire pour des raisons de sécurité des données ou
 de réglementation, le Service de migration inclut un outil facultatif pour rendre anonymes
@@ -194,6 +223,52 @@ Client et de leurs données correspondantes afin qu'elles soient compatibles
 avec la Version Cible. Le Client recevra une version migrée de tous les modules tiers installés
 accompagnée de la base de données migrée.
 
+
+.. _cloud_hosting_fr:
+
+4.4 Service d'Hébergement Cloud
+-------------------------------
+
+Pour la durée du présent Contrat, lorsque le Client choisit d'utiliser la Plate-forme Cloud,
+Odoo SA s'engage à fournir au minimum le service suivant:
+
+- Choix de plusieurs régions d'hébergement (minimum 3: Europe, America, Asia/Pacific)
+- Hébergement en centre de données Tiers-III ou équivalent, avec 99.9% de disponibilité
+- Cryptage des communications SSL Grade A (HTTPS)
+- Sauvegardes automatisées et vérifiées, répliquées dans plusieurs régions
+- Plan de Reprise d'Activité, testé régulièrement
+
+Les détails du Service d'Hébergement Cloud sont décrits sur la page du Service Level Agreement:
+https://www.odoo.com/cloud-sla.
+
+
+.. _support_service_fr:
+
+4.5 Service d'Assistance
+------------------------
+
+Portée
+++++++
+
+Pour la durée du présent Contrat, le Client peut ouvrir un nombre non limité de demandes d'assistance
+sans frais, exclusivement pour des questions relatives à des Bugs (voir ref:`bugfix_fr`) ou des
+explications au sujet de l'utilisation des fonctions standard du Logiciel et des Services
+(fonctionnalités, utilisation prévue, configuration, résolution d'erreur).
+
+D'autres types de demandes, telles que celles relatives à des développements, des personnalisations,
+de l'installation en mode Auto-Hébergement, ou tout service requiérant l'accès à la base de données
+du Client pevent être couverts par l'achat séparé d'un Pack de Services.
+Au cas où il n'est pas clair qu'une demande est couverte par ce Contrat ou via l'achat d'un
+Pack de Services, la décision sera à la discrétion d'Odoo SA.
+
+Disponibilité
++++++++++++++
+
+Les demandes d'assistances peuvent être soumises à tout moment en ligne via https://www.odoo.com/help,
+ou par téléphone directement aux différents bureaux d'Odoo SA, pendant les heures de bureau
+correspondantes.
+
+
 .. _charges_fr:
 
 5 Tarifs et Frais
@@ -204,17 +279,16 @@ accompagnée de la base de données migrée.
 5.1 Tarifs standards
 --------------------
 
-Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise, le service de correction de
-Bugs, le service d'alertes de sécurité et le service de migration sont basés sur le nombre
+Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
 d'Utilisateurs, les Apps installées, la version du Logiciel utilisée par le Client, et précisés par
-écrit à la signature du contrat.
+écrit à la conclusion du contrat.
 
 Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou d'Apps que spécifié au moment
-de la signature du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
+de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
 en vigueur applicable (au début du Contrat) pour les utilisateurs supplémentaires,
 pour le reste de la durée.
 
-Si, au moment de la signature du présent Contrat, le Client utilise une Version Couverte qui
+Si, au moment de la conclusion du présent Contrat, le Client utilise une Version Couverte qui
 n'est pas la plus récente, les tarifs standards peuvent être augmentés de 50% pour la
 première Durée du contrat, à la discrétion d'Odoo SA, pour couvrir les coûts de maintenance.
 
@@ -270,15 +344,26 @@ Le Client accepte de / d':
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées dans la facture correspondante ;
 - Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou les Apps installées dépassent
-  les nombres spécifiés à la signature du Contrat, et dans ce cas, de régler les frais
+  les nombres spécifiés à la conclusion du Contrat, et dans ce cas, de régler les frais
   supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
 - Prendre toutes les mesures nécessaires pour garantir l'exécution non modifiée de la partie du
   Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
   section :ref:`enterprise_access_fr`;
+- Désigner 1 personne de contact représentant le Client pour toute la durée du contrat ;
+
+Lorsque le Client choisit d'utiliser la Plate-forme Cloud, il accepte aussi de:
+
+- Prendre toute mesure raisonnable pour garantir la sécurité de ses comptes utilisateur, y compris
+  en choisissant un mot de passe sûr et en ne le partageant avec personne;
+- Faire une utilisation raisonnable des Services d'Hébergement, à l'exclusion de toute activité
+  illégale ou abusive, et de respecter strictement les règles indiquées dans la Politique
+  d'Utilisation Acceptable: https://www.odoo.com/acceptable-use.
+
+Lorsque le Client choisit l'Auto-Hébergement, il accepte aussi de:
+
 - Fournir tout accès nécessaire à Odoo SA pour vérifier la validité de l'utilisation d'Odoo
   Enterprise Edition sur demande (par exemple, si la validation automatique ne fonctionne pas pour
   le Client) ;
-- Désigner 1 personne de contact représentant le Client pour toute la durée du contrat ;
 - Prendre toutes les mesures raisonnables pour protéger les fichiers et les bases de données
   du Client et s'assurer que les données du Client sont en sûreté et sécurisées, en reconnaissant
   qu'Odoo SA ne peut être tenue responsable de toute perte de données ;
@@ -333,9 +418,72 @@ dans la mesure où la loi l'y oblige, à condition que la Partie Bénéficiaire 
 par écrit la Partie Communicante de son obligation de divulgation, dans la mesure permise par la loi.
 
 
+.. _data_protection_fr:
+
+6.5 Protection de données
+-------------------------
+
+Définitions
+    "Données à Caractère Personnel", "Responsable de Traitement", "Traitement" prennent le même sens que dans
+    le Règlement (EU) 2016/679 et la Directive 2002/58/EC, et dans tout règlement ou législation
+    qui les amende ou les remplace (collectivement, la "Législation sur la Protection des Données")
+
+Traitement de Données à Caractère Personnel
++++++++++++++++++++++++++++++++++++++++++++
+
+Les parties conviennent que la base de données du Client peut contenir des Données à Caractère Personnel,
+pour lesquelles le Client est le Responsable de Traitement. Ces données seront traitées par Odoo SA
+quand le Client en donnera l'instruction, par son utilisation des Services qui requièrent une base
+de données (tels que le Service d'Hébergement ou le Service de migration), ou si le Client
+transfère sa base de données ou une partie de celle-ci à Odoo SA pour toute autre raison
+relative à l'exécution du présent Contrat.
+
+Ce traitement sera exécuté en conformité avec la Législation sur la Protection des Données.
+En particulier, Odoo SA s'engage à:
+
+- (a) Ne traiter les Données à Caractère Personnel que quand et comme demandé par le Client, et
+  pour la finalité de l'exécution de l'un des Services du Contrat, à moins que la loi ne l'exige,
+  auquel cas Odoo SA préviendra préalablement le Client, à moins que la loi ne l'interdise;
+- (b) S'assurer que tout le personnel d'Odoo SA autorisé à traiter les Données à Caractère Personnel
+  soit soumis à un devoir de confidentialité ;
+- (c) Mettre en oeuvre et maintenir des mesures de sécurité appropriées au niveau technique et
+  organisationnel, afin de protéger les Données à Caractère Personnel de tout traitement non
+  autorisé ou illégal, et de toute perte accidentelle, destruction, dégât, vol, altération ou
+  divulgation ;
+- (d) Transmettre promptement au Client toute demande relative à des Données à Caractère Personnel qui
+  aurait été soumise à Odoo SA au sujet de la base de données du Client ;
+- (e) Signaler au Client dès la prise de connaissance et la confirmation de tout traitement, accès
+  ou divulgation non autorisés, accidentels ou illégal des Données à Caractère Personnel ;
+- (f) Signaler au Client lorsque ses instructions de traitement vont à l'encontre de la Législation
+  sur la Protection des Données, d'après Odoo SA ;
+- (g) Fournir au Client toute information nécessaire à la démonstration de la conformité avec la
+  Législation sur la Protection des Données, autoriser et contribuer de façon raisonnable à des
+  audits, y compris des inspections, conduits ou mandatés par le Client dans ce but;
+- (h) Supprimer définitivement tout copie de la base de données du Client en possession d'Odoo SA,
+  ou retourner ces données, au choix du Client, lors de la résiliation de ce Contrat,
+  en respect des délais indiqués dans la `Politique de Protection des Données <https://www.odoo.com/privacy>`_
+  d'Odoo SA ;
+
+Concernant les points (d) à (f), le Client s'engage à fournir à Odoo SA des informations de
+contact valables, tel que nécessaire pour toute notification auprès du responsable de protection des
+données du Client.
+
+Sous-traitants
+++++++++++++++
+
+Le Client convient et accepte que pour fournir les Services, Odoo SA peut faire appel à des
+prestataires de service tiers (Sous-traitants) pour traiter les Données à Caractère Personnel.
+Odoo SA s'engage à n'utiliser de tels Sous-traitants qu'en conformité avec la Législation
+sur la Protection des Données. Cet usage sera couvert par un contrat entre Odoo SA et le Sous-traitant
+qui offrira toutes les garanties nécessaires à cet effet.
+La Politique de Protection des Données d'Odoo SA, publiée à l'adresse https://www.odoo.com/privacy
+fournit des informations actualisées sur les noms et les finalités des Sous-traitants utilisés par
+Odoo SA pour l'exécution des Services.
+
+
 .. _termination_fr:
 
-6.5 Résiliation
+6.6 Résiliation
 ---------------
 
 Dans le cas où l'une des parties ne remplit pas ses obligations découlant du
@@ -367,9 +515,10 @@ Pendant la durée du présent contrat, Odoo SA s'engage à déployer les efforts
 raisonnables sur le plan commercial pour exécuter les Services conformément aux
 normes du secteur généralement acceptées à condition que :
 
-- Les systèmes informatiques du Client soient en bon état de fonctionnement et que le Logiciel
-  soit installé dans un système d'exploitation approprié ;
-- Le Client fournisse les informations adéquates nécessaires au dépannage et à l'accès, de telle
+- Les systèmes informatiques du Client soient en bon état de fonctionnement et, pour l'Auto-Hébergement,
+  que le Logiciel soit installé dans un système d'exploitation approprié ;
+- Le Client fournisse les informations adéquates nécessaires au dépannage et, pour l'Auto-Hébergement,
+  tout accès utile, de telle
   sorte qu'Odoo SA puisse identifier, reproduire et gérer les problèmes ;
 - Tous les montants dus à Odoo SA aient été réglés.
 
