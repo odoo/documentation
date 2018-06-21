@@ -5,7 +5,7 @@
 Odoo Enterprise Subscription Agreement (NL)
 ===========================================
 
-.. note:: Version 6a - 2017-10-17
+.. note:: Version 7.1 - 2018-03-16
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -248,10 +248,9 @@ eerste Looptijd om de extra onderhoudskosten te dekken.
 ---------------------
 
 Indien, bij verlenging zoals beschreven in de sectie :ref:`term_nl`, de
-kosten per Gebruiker gedurende de vorige Looptijd lager zijn dan de meest
-actuele geldende catalogusprijs per Gebruiker, zullen de kosten per Gebruiker
-met maximaal 7% stijgen, tenzij Odoo NV ten minste 60 dagen vóór het einde van
-de Looptijd de nieuwe prijs schriftelijk meedeelt aan de Klant.
+kosten gedurende de vorige Looptijd lager zijn dan de meest
+actuele geldende catalogusprijs, zullen de kosten
+met maximaal 7% stijgen.
 
 
 .. _charges_thirdparty_nl:
