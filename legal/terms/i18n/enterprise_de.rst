@@ -227,7 +227,7 @@ abzudecken.
 
 Bei einer Verlängerung gemäß Abschnitt :ref:`term_de` erhöhen sich die Gebühren um bis
 zu 7 %, wenn die in der vorherigen Laufzeit erhobenen Gebühren niedriger als der dann
-gültige Listenpreis pro Benutzer waren.
+gültige Listenpreis waren.
 
 .. _charges_thirdparty_de:
 
