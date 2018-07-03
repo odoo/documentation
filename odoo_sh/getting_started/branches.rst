@@ -24,6 +24,8 @@ You can change the stage of a branch by drag and dropping it on the stage sectio
 .. image:: ./media/interface-branches-stagechange.png
    :align: center
 
+.. _stage_production:
+
 Production
 ----------
 This is the branch holding the code on which your production database run.
@@ -232,6 +234,34 @@ The *import database* feature accepts database archives in the format provided b
 * the Odoo online databases manager,
 * the Odoo.sh backup download button of this *Backups* tab,
 * the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
+
+Settings
+--------
+Here you can find a couple of settings that only apply to the currently selected branch.
+
+.. image:: ./media/interface-branches-settings.png
+   :align: center
+
+**Mute Branch**
+
+You have the possibility to mute a branch, so that new commits won't trigger builds on Odoo.sh. You can activate this
+should you have branches that are used for other purposes than on Odoo.sh. By default, when creating a project from an
+existing repository, all branches except the default branch are muted.
+
+**Push Behavior**
+
+You can change the branch's behavior upon receiving a new commit. By default, it will create a new build, but you can
+choose to have it update your previous build same as for your production branch (see the
+:ref:`Production Stage <stage_production>`). This is especially useful should the feature you're working on require a
+particular setup or configuration, to avoid having to manually set it up again on every commit.
+
+**Odoo Version**
+
+For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
+features while your production database is in the process of being upgraded to a newer version.
+
+The production branch has no settings. It can't be muted, will always update the existing production database and will
+run on the project's version of Odoo.
 
 Git commands
 ============
