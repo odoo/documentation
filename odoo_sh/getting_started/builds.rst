@@ -112,6 +112,8 @@ You can access the build's database as the administrator using the *Connect* but
 Also, you can access the database with another user using the *Connect as* button,
 in the dropdown menu of the *Connect* button.
 
+.. _odoosh-gettingstarted-builds-download-dump:
+
 .. image:: ./media/interface-builds-build-dropdown.png
    :align: center
 
