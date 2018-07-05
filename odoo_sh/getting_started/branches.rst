@@ -261,8 +261,7 @@ For development branches only, you can change the version of Odoo, should you wa
 features while your production database is in the process of being upgraded to a newer version.
 
 The production branch has no settings. It can't be muted, will always update the existing production database and will
-run on the project's version of Odoo. If you want to upgrade your production to a newer version please refer to the
-:ref:`Upgrade section <odoosh-advanced-upgrade_your_database>`.
+run on the project's version of Odoo.
 
 Git commands
 ============
