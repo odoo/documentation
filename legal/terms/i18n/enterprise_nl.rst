@@ -136,7 +136,7 @@ Wanneer een Bug verholpen is in een Gedekte Versie verbindt Odoo NV zich ertoe
 om de Bug in alle recentere Gedekte Versies van de software te verhelpen.
 
 Beide partijen erkennen dat, zoals gespecificeerd in de licentie van de
-Software en in de sectie `Aansprakelijkheid` van deze Overeenkomst, Odoo NV
+Software en in de sectie :ref:`liability_nl` van deze Overeenkomst, Odoo NV
 niet aansprakelijk kan worden gesteld voor Bugs in de Software.
 
 
@@ -209,7 +209,7 @@ Upgradedienst voor extensies van derden
 Gedurende de duur van deze Overeenkomst kan de Klant naast de gewone
 Upgradediensten optionele upgradediensten voor uitbreidingsmodules van derden
 van de Software aanvragen. Deze optionele dienst is onderworpen aan extra
-kosten (zoals beschreven in charges_nl_) en omvat de technische aanpassing van de
+kosten (zoals beschreven in :ref:`charges_nl`) en omvat de technische aanpassing van de
 modules van derden die geïnstalleerd zijn in de database van de Klant, en van
 de bijbehorende gegevens, om compatibel te zijn met de Doelversie. De Klant zal
 samen met de geüpgradede database een geüpgradede versie van alle

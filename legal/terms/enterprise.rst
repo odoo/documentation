@@ -199,7 +199,7 @@ Upgrade Service for third-party extensions
 
 For the duration of this Agreement, the Customer may request optional upgrade services for
 third-party extension modules of the Software, in addition to the regular Upgrade Services.
-This optional service is subject to additional fees (as described in charges_) and includes the
+This optional service is subject to additional fees (as described in :ref:`charges`) and includes the
 technical adaptation of third-party modules installed in the Customer's database and their
 corresponding data in order to be compatible with the Target Version. The Customer will receive an
 upgraded version of all installed third-party modules along with the upgraded database.
@@ -232,7 +232,7 @@ Scope
 +++++
 
 For the duration of this Agreement, the Customer may open an unlimited number of support tickets
-free of charge, exclusively for questions regarding Bugs (see ref:`bugfix`) or guidance
+free of charge, exclusively for questions regarding Bugs (see :ref:`bugfix`) or guidance
 with respect to the use of the standard features of the Software and Services
 (functionalities, intended use, configuration, troubleshooting).
 

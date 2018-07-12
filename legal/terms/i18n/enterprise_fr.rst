@@ -49,7 +49,7 @@ Utilisateur
 
 App
     Une "App" est un ensemble de fonctionnalités, disponible pour installation dans le Logiciel,
-    et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`, au moment
+    et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`_, au moment
     de la conclusion de ce Contrat.
 
 Bug
@@ -217,7 +217,7 @@ Service de migration des modules tiers
 
 Pour la durée du Contrat, le Client a la possibilité de faire une demande de migration
 pour des modules d'extension tiers, en plus de la migration normale du Logiciel.
-Ce service en option implique des frais supplémentaires (décrits dans la section charges_fr_)
+Ce service en option implique des frais supplémentaires (décrits dans la section :ref:`charges_fr`)
 et comprend l'adaptation technique des modules tiers installés dans la base de données du
 Client et de leurs données correspondantes afin qu'elles soient compatibles
 avec la Version Cible. Le Client recevra une version migrée de tous les modules tiers installés
@@ -251,7 +251,7 @@ Portée
 ++++++
 
 Pour la durée du présent Contrat, le Client peut ouvrir un nombre non limité de demandes d'assistance
-sans frais, exclusivement pour des questions relatives à des Bugs (voir ref:`bugfix_fr`) ou des
+sans frais, exclusivement pour des questions relatives à des Bugs (voir :ref:`bugfix_fr`) ou des
 explications au sujet de l'utilisation des fonctions standard du Logiciel et des Services
 (fonctionnalités, utilisation prévue, configuration, résolution d'erreur).
 
