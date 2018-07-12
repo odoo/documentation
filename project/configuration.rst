@@ -6,6 +6,6 @@ Configuration and basic usage
    :titlesonly:
 
    configuration/setup
-   configuration/visualization
+   configuration/visualize_projects_tasks
    configuration/collaboration
    configuration/time_record

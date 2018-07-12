@@ -97,6 +97,6 @@ or unfold your stages by using the **Setting** icon on your desired stage.
     :align: center
 
 .. seealso::
-    * :doc:`visualization`
+    * :doc:`visualize_projects_tasks`
     * :doc:`collaboration`
     * :doc:`time_record`
