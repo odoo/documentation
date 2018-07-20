@@ -26,7 +26,7 @@ Configuration
 
 To configure mercury, you need to activate the developer mode. To do so
 go to :menuselection:`Apps --> Settings` and select *Activate the
-developer mode.
+developer mode*.
 
 .. image:: media/mercury02.png
     :align: center
