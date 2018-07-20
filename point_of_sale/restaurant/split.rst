@@ -1,84 +1,34 @@
-==========================
-How to handle split bills?
-==========================
+=============================
+Offer a bill-splitting option
+=============================
+
+Offering an easy bill splitting solution to your customers will leave
+them with a positive experience. That's why this feature is available
+out-of-the-box in the Odoo Point of Sale application.
 
 Configuration
 =============
 
-Split bills only work for point of sales that are in **restaurant** mode.
+To activate the *Bill Splitting* feature, go to :menuselection:`Point
+of Sales --> Configuration --> Point of sale` and select your PoS
+interface.
 
-From the dashboard click on :menuselection:`More --> Settings`:
+Under the Bills & Receipts category, you will find the Bill Splitting
+option.
 
 .. image:: media/split01.png
     :align: center
 
-In the settings tick the option **Bill Splitting**.
+Split a bill
+============
+
+In your PoS interface, you now have a *Split* button.
 
 .. image:: media/split02.png
     :align: center
 
-Register an order
-=================
-
-From the dashboard, click on **New Session**.
+When you use it, you will be able to select what that guest should had
+and process the payment, repeating the process for each guest.
 
 .. image:: media/split03.png
     :align: center
-
-Choose a table and start registering an order.
-
-.. image:: media/split04.png
-    :align: center
-
-When customers want to pay and split the bill, there are two ways to
-achieve this:
-
--  based on the total
-
--  based on products
-
-.. image:: media/split05.png
-    :align: center
-
-Splitting based on the total
-----------------------------
-
-Just click on **Payment**. You only have to insert the money tendered by
-each customer.
-
-Click on the payment method (cash, credit card,...) and enter the
-amount. Repeat it for each customer.
-
-.. image:: media/split06.png
-    :align: center
-
-When it's done, click on validate. This is how to split the bill based
-on the total amount.
-
-Split the bill based on products
---------------------------------
-
-On the main view, click on **Split**
-
-.. image:: media/split07.png
-    :align: center
-
-Select the products the first customer wants to pay and click on **Payment**
-
-.. image:: media/split08.png
-    :align: center
-
-You get the total, process the payment and click on **Validate**
-
-.. image:: media/split09.png
-    :align: center
-
-Follow the same procedure for the next customer of the same table.
-
-When all the products have been paid you go back to the table map.
-
-.. seealso::
-    * :doc:`../shop/cash_control`
-    * :doc:`../shop/invoice`
-    * :doc:`../shop/refund`
-    * :doc:`../shop/seasonal_discount`
