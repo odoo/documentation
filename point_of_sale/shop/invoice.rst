@@ -1,117 +1,60 @@
-======================================
-How to invoice from the POS interface?
-======================================
+==============================
+Invoice from the PoS interface
+==============================
 
-Register an order
-=================
+Some of your customers might request an invoice when buying from your
+Point of Sale, you can easily manage it directly from the PoS interface.
 
-On the **Dashboard**, you can see your points of sales, click on **New
-session**:
+Activate invoicing
+==================
+
+Go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`
+and select your Point of Sale:
 
 .. image:: media/invoice01.png
     :align: center
 
-You are on the ``main`` point of sales view :
+Under the *Bills & Receipts* you will see the invoicing option, tick
+it. Don't forget to choose in which journal the invoices should be
+created.
 
 .. image:: media/invoice02.png
     :align: center
 
-On the right you can see the list of your products with the categories
-on the top. Switch categories by clicking on it.
+Select a customer
+=================
 
-If you click on a product, it will be added in your cart. You can
-directly set the correct **Quantity/Weight** by typing it on the keyboard.
-
-Add a customer
-==============
-
-By selecting in the customer list
----------------------------------
-
-On the main view, click on **Customer** (above **Payment**):
+From your session interface, use the customer button
 
 .. image:: media/invoice03.png
     :align: center
 
-You must set a customer in order to be able to issue an invoice.
+You can then either select an existing customer and set it as your
+customer or create a new one by using this button.
 
 .. image:: media/invoice04.png
     :align: center
 
-You can search in the list of your customers or create new ones by
-clicking on the icon.
+You will be invited to fill out the customer form with its information.
+
+Invoice your customer
+=====================
+
+From the payment screen, you now have an invoice option, use the button
+to select it and validate.
 
 .. image:: media/invoice05.png
     :align: center
 
-.. note::
-    For more explanation about adding a new customer. Please read the
-    document :doc:`../advanced/register`.
+You can then print the invoice and move on to your next order.
 
-By using a barcode for customer
--------------------------------
+Retrieve invoices
+-----------------
 
-On the main view, click on **Customer** (above **Payment**):
-
-.. image:: media/invoice03.png
-    :align: center
-
-Select a customer and click on the pencil to edit.
-
-.. image:: media/invoice09.png
-    :align: center
-
-Set a the barcode for customer by scanning it.
-
-.. image:: media/invoice10.png
-    :align: center
-
-Save modifications and now when you scan the customer's barcode, he is assigned
-to the order
-
-.. note::
-    Be careful with the **Barcode Nomenclature**. By default, customers' barcodes 
-    have to begin with 042. To check the default barcode nomenclature, go to
-    :menuselection:`Point of Sale --> Configuration --> Barcode Nomenclatures`.
-
-    .. image:: media/invoice11.png
-        :align: center
-
-
-Payment and invoicing
-=====================
-
-Once the cart is processed, click on **Payment**. You can choose the
-customer payment method. In this example, the customer owes you ``10.84 €``
-and pays with by a ``VISA``.
-
-Before clicking on **Validate**, you have to click on **Invoice** in order to
-create an invoice from this order.
+Once out of the PoS interface (:menuselection:`Close --> Confirm` on the top right corner)
+you will find all your orders in :menuselection:`Point of Sale -->
+Orders --> Orders` and under the status tab you will see which ones have
+been invoiced. When clicking on a order you can then access the invoice.
 
 .. image:: media/invoice06.png
     :align: center
-
-Your invoice is printed and you can continue to make orders.
-
-Retrieve invoices of a specific customer
-========================================
-
-To retrieve the customer's invoices, go to the **Sale** application, click
-on :menuselection:`Sales --> Customers`.
-
-On the customer information view, click on the **Invoiced** button :
-
-.. image:: media/invoice07.png
-    :align: center
-
-You will get the list all his invoices. Click on the invoice to get the
-details.
-
-.. image:: media/invoice08.png
-    :align: center
-
-.. seealso::
-    * :doc:`cash_control`
-    * :doc:`../advanced/register`
-    * :doc:`refund`
-    * :doc:`seasonal_discount`

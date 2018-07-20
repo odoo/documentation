@@ -16,7 +16,7 @@ You will need :
 * The POSBox
 * A 2A Power adapter
 * A computer or tablet with an up-to-date web browser
-* A running SaaS or Odoo instance with the Point of Sale installed
+* A running SaaS or Odoo database with the Point of Sale installed
 * A local network set up with DHCP (this is the default setting)
 * An Epson USB TM-T20 Printer or another ESC/POS compatible printer
   (officially supported printers are listed at the `POS Hardware page
@@ -80,8 +80,8 @@ Setup the Point of Sale
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 To setup the POSBox in the Point of Sale go to :menuselection:`Point
-of Sale --> Configuration --> Settings` and select your Point of
-Sale. Scroll down to the ``Hardware Proxy / POSBox`` section and
+of Sale --> Configuration --> Point of Sale` and select your Point of
+Sale. Scroll down to the ``PoSBox / Hardware Proxy`` section and
 activate the options for the hardware you want to use through the
 POSBox. Specifying the IP of the POSBox is recommended (it is printed
 on the receipt that gets printed after booting up the POSBox). When
@@ -176,9 +176,9 @@ Image building process
 ----------------------
 
 We generate the official POSBox images using the scripts in
-https://github.com/odoo/odoo/tree/8.0/addons/point_of_sale/tools/posbox. More
+https://github.com/odoo/odoo/tree/11.0/addons/point_of_sale/tools/posbox. More
 specifically, we run 
-`posbox_create_image.sh <https://github.com/odoo/odoo/blob/8.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
+`posbox_create_image.sh <https://github.com/odoo/odoo/blob/11.0/addons/point_of_sale/tools/posbox/posbox_create_image.sh>`_.
 This builds an image
 called ``posbox.img``, which we zip and upload to `nightly.odoo.com <https://nightly.odoo.com>`_
 for users to download.
