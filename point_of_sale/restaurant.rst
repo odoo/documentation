@@ -8,7 +8,7 @@ Advanced Restaurant Features
    restaurant/setup
    restaurant/table
    restaurant/split
-   restaurant/print
+   restaurant/bill_printing
    restaurant/tips
    restaurant/transfer
    restaurant/multi_orders
