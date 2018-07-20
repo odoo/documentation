@@ -5,6 +5,7 @@ Advanced topics
 .. toctree::
    :titlesonly:
 
+   advanced/barcode
    advanced/discount_tags
    advanced/multi_cashiers
    advanced/loyalty
