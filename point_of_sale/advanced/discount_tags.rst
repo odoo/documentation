@@ -7,7 +7,7 @@ close to its expiration date for example, you can use discount tags.
 They allow you to scan discount barcodes.
 
 .. note::
-   To use discount tags you will need to use barcode scanner, you
+   To use discount tags you will need to use a barcode scanner, you
    can see the documentation about it 
    `here <https://docs.google.com/document/d/1tg7yarr2hPKTddZ4iGbp9IJO-cp7u15eHNVnFoL40Q8/edit>`__
 
@@ -31,9 +31,9 @@ interface.
 .. image:: media/discount_tags03.png
    :align: center
 
-Let's say you want 50% discount on a product you have to start you
+Let's say you want 50% discount on a product you have to start your
 barcode with 22 (for the discount barcode nomenclature) and then 50 (for
-the %) before add the product barcode. In our example, the barcode would
+the %) before adding the product barcode. In our example, the barcode would
 be:
 
 .. image:: media/discount_tags04.png
