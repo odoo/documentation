@@ -2,7 +2,7 @@
 Reprint Receipts
 ================
 
-Use the *Reprint receipt* feature if you may have to reprint a ticket.
+Use the *Reprint receipt* feature if you have the need to reprint a ticket.
 
 Configuration
 =============
