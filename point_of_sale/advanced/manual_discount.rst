@@ -31,7 +31,7 @@ select it.
 .. image:: media/manual_discount02.png
     :align: center
 
-You know have a new *Discount* button in your PoS interface.
+You now have a new *Discount* button in your PoS interface.
 
 .. image:: media/manual_discount03.png
     :align: center
@@ -41,5 +41,5 @@ Once clicked you can then enter your desired discount (in percentages).
 .. image:: media/manual_discount04.png
     :align: center
 
-On this example you can see a global discount of 50% as well as a
+On this example, you can see a global discount of 50% as well as a
 specific product discount also at 50%.
