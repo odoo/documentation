@@ -1,43 +1,32 @@
-===================================
-How to visualize a project's tasks?
-===================================
+===========================
+Visualize a project's tasks
+===========================
 
-How to visualize a project's tasks
+In day to day business, your company might struggle due to the important
+amount of tasks to fulfill. Those tasks already are complex enough.
+Having to remember them all and follow up on them can be a burden.
+Luckily, Odoo enables you to efficiently visualize and organize the
+different tasks you have to cope with.
 
-Tasks are assignments that members of your organisations have to fulfill
-as part of a project. In day to day business, your company might
-struggle due to the important amount of tasks to fulfill. Those task are
-already complex enough. Having to remember them all and follow up on
-them can be a real burden. Luckily, Odoo enables you to efficiently
-visualize and organize the different tasks you have to cope with.
-
-Configuration
+Create a task
 =============
 
-The only configuration needed is to install the project module in the
-module application.
+While in the project app, select an existing project or create a new
+one.
+
+In the project, create a new task.
 
 .. image:: media/visualization01.png
     :align: center
 
-Creating Tasks
-==============
-
-Once you created a project, you can easily generate tasks for it. Simply
-open the project and click on create a task.
+In that task you can then assigned it to the right person, add tags, a
+deadline, descriptions… and anything else you might need for that task.
 
 .. image:: media/visualization02.png
     :align: center
 
-You then first give a name to your task, the related project will
-automatically be filled in, assign the project to someone, and select a
-deadline if there is one.
-
-.. image:: media/visualization03.png
-    :align: center
-
-Get an overview of activities with the kanban view
---------------------------------------------------
+View your tasks with the Kanban view
+====================================
 
 Once you created several tasks, they can be managed and followed up
 thanks to the Kanban view.
@@ -50,46 +39,49 @@ The Kanban view is the default view when accessing a project, but if you
 are on another view, you can go back to it any time by clicking the
 kanban view logo in the upper right corner
 
+.. image:: media/visualization03.png
+    :align: center
+
+You can also notify your colleagues about the status of a task right
+from the Kanban view by using the little dot, it will notify follower of
+the task and indicate if the task is ready.
+
 .. image:: media/visualization04.png
     :align: center
 
-How to nototify your collegues about the status of a task?
-----------------------------------------------------------
+Sort tasks in your Kanban view
+==============================
+
+Tasks are ordered by priority, which you can give by clicking on the
+star next to the clock and then by sequence, meaning if you manually
+move them using drag & drop, they will be in that order and finally by
+their ID linked to their creation date.
 
 .. image:: media/visualization05.png
     :align: center
 
-Sort tasks by priority
-~~~~~~~~~~~~~~~~~~~~~~
+Tasks that are past their deadline will appear in red in your Kanban
+view.
 
-On each one of your columns, you have the ability to sort your tasks by
-priority. Tasks with a higher priority will be automatically moved to
-the top of the column. From the Kanban view, click on the star in the
-bottom left of a task to tag it as **high priority**. For the tasks that
-are not tagged, Odoo will automatically classify them according to their
-deadlines.
+.. note::
+    If you put a low priority task on top, when you go back to your
+    dashboard the next time, it will have moved back below the high priority
+    tasks.
 
-Note that dates that passed their deadlines will appear in red (in the
-list view too) so you can easily follow up the progression of different
-tasks.
+Manage deadlines with the Calendar view
+=======================================
+
+You also have the option to switch from a Kanban view to a calendar
+view, allowing you to see every deadline for every task that has a
+deadline set easily in a single window.
+
+Tasks are color coded to the employee they are assigned to and you can
+filter deadlines by employees by selecting who's deadline you wish to
+see.
 
 .. image:: media/visualization06.png
     :align: center
 
-Keep an eye on deadlines with the Calendar view
------------------------------------------------
-
-If you add a deadline in your task, they will appear in the calendar
-view. As a manager, this view enables you to keep an eye on all deadline
-in a single window.
-
-.. image:: media/visualization07.png
-    :align: center
-
-All the tasks are tagged with a color corresponding to the employee
-assigned to them. You can easily filter the deadlines by employees by
-ticking the related boxes on the right of the calendar view.
-
 .. tip::
-    You can easily change the deadline from the Calendar view by 
+    You can easily change the deadline from the Calendar view by
     dragging and dropping the task to another case.
