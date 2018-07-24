@@ -23,7 +23,7 @@ Create a pricelist
 ==================
 
 By default, you have a *Public Pricelist* to create more, go to
-:menuselection:`Point of Sales --> Catalog --> Pricelists`
+:menuselection:`Point of Sale --> Catalog --> Pricelists`
 
 .. image:: media/seasonal_discount02.png
     :align: center

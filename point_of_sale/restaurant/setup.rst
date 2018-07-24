@@ -9,7 +9,7 @@ Configuration
 =============
 
 To activate the *Bar/Restaurant* features, go to
-:menuselection:`Point of Sales --> Configuration --> Point of sale` and
+:menuselection:`Point of Sale --> Configuration --> Point of sale` and
 select your PoS interface.
 
 Select *Is a Bar/Restaurant*

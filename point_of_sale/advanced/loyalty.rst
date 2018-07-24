@@ -9,7 +9,7 @@ Configuration
 =============
 
 To activate the *Loyalty Program* feature, go to
-:menuselection:`Point of Sales --> Configuration --> Point of sale` and
+:menuselection:`Point of Sale --> Configuration --> Point of sale` and
 select your PoS interface. Under the Pricing features, select *Loyalty
 Program*
 

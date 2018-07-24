@@ -7,7 +7,7 @@ Use the *Reprint receipt* feature if you have the need to reprint a ticket.
 Configuration
 =============
 
-To activate *Reprint Receipt*, go to :menuselection:`Point of Sales
+To activate *Reprint Receipt*, go to :menuselection:`Point of Sale
 --> Configuration --> Point of sale` and select your PoS interface.
 
 Under the Bills & Receipts category, you will find *Reprint Receipt*

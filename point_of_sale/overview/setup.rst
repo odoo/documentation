@@ -88,7 +88,7 @@ on the receipt that gets printed after booting up the POSBox). When
 the IP is not specified the Point of Sale will attempt to find it on
 the local network.
 
-If you are running multiple Point of Sales on the same POSBox, make sure
+If you are running multiple Point of Sale on the same POSBox, make sure
 that only one of them has Remote Scanning/Barcode Scanner activated.
 
 It might be a good idea to make sure the POSBox IP never changes in
@@ -205,7 +205,7 @@ Prerequisites
 -------------
 
 - A Debian-based Linux distribution (Debian, Ubuntu, Mint, etc.)
-- A running Odoo instance you connect to to load the Point of Sale
+- A running Odoo instance you connect to load the Point of Sale
 - You must uninstall any ESC/POS printer driver as it will conflict
   with Odoo's built-in driver
 

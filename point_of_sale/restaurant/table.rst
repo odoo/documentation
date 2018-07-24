@@ -3,7 +3,7 @@ Configure your table management
 ===============================
 
 Once your point of sale has been configured for bar/restaurant usage,
-select *Table Management* in :menuselection:`Point of Sales --> Configuration --> Point of sale`..
+select *Table Management* in :menuselection:`Point of Sale --> Configuration --> Point of sale`..
 
 Add a floor
 ===========

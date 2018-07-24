@@ -9,7 +9,7 @@ the definitive ticket.
 Configure Bill Printing
 =======================
 
-To activate *Bill Printing*, go to :menuselection:`Point of Sales -->
+To activate *Bill Printing*, go to :menuselection:`Point of Sale -->
 Configuration --> Point of sale` and select your PoS interface.
 
 Under the Bills & Receipts category, you will find *Bill Printing*

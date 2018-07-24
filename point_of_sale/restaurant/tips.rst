@@ -8,7 +8,7 @@ important to have the option in your PoS interface.
 Configure Tipping
 =================
 
-To activate the *Tips* feature, go to :menuselection:`Point of Sales
+To activate the *Tips* feature, go to :menuselection:`Point of Sale
 --> Configuration --> Point of sale` and select your PoS.
 
 Under the Bills & Receipts category, you will find *Tips*. Select it

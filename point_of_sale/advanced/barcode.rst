@@ -8,7 +8,7 @@ efficiency and helps you to save time for you and your customers.
 Configuration
 =============
 
-To use a barcode scanner, go to :menuselection:`Point of Sales -->
+To use a barcode scanner, go to :menuselection:`Point of Sale -->
 Configuration --> Point of sale` and select your PoS interface.
 
 Under the PosBox / Hardware category, you will find *Barcode Scanner*
@@ -24,7 +24,7 @@ select it.
 Add barcodes to product
 =======================
 
-Go to :menuselection:`Point of Sales --> Catalog --> Products` and
+Go to :menuselection:`Point of Sale --> Catalog --> Products` and
 select a product.
 
 Under the general information tab, you can find a barcode field where
