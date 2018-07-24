@@ -55,6 +55,9 @@ msgid ""
 "To use a barcode scanner, go to :menuselection:`Point of Sale --> "
 "Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour utiliser un lecteur de codes-barres, rendez-vous sur: menuselection: "
+"\"Point de Ventes -> Configuration -> Point de Ventes\" et sélectionnez "
+"votre interface PoS."
 
 #: ../../point_of_sale/advanced/barcode.rst:14
 msgid ""
@@ -79,6 +82,8 @@ msgid ""
 "Go to :menuselection:`Point of Sale --> Catalog --> Products` and select a "
 "product."
 msgstr ""
+"Allez à: menuselection: `Point de Ventes -> Catalogue -> Produits` et "
+"sélectionnez un produit."
 
 #: ../../point_of_sale/advanced/barcode.rst:30
 msgid ""
@@ -201,6 +206,10 @@ msgid ""
 "Sale --> Configuration --> Point of sale` and select your PoS interface. "
 "Under the Pricing features, select *Loyalty Program*"
 msgstr ""
+"Pour activer la fonction * Programme Fidélité *, allez à: menuselection: "
+"\"Point de Ventes -> Configuration -> Point de Ventes\" et sélectionnez "
+"votre interface PoS. Sous les fonctionnalités de tarification, sélectionnez "
+"* Programme de fidélisation *"
 
 #: ../../point_of_sale/advanced/loyalty.rst:19
 msgid "From there you can create and edit your loyalty programs."
@@ -536,6 +545,9 @@ msgid ""
 "To activate *Reprint Receipt*, go to :menuselection:`Point of Sale --> "
 "Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour activer la fonction *Réimpression de ticket*, allez à: menuelection: "
+"'Point de Ventes -> Configuration -> Point de Ventes` et sélectionnez votre "
+"interface PoS."
 
 #: ../../point_of_sale/advanced/reprint.rst:13
 msgid ""
@@ -565,7 +577,7 @@ msgstr "Analysez les ventes"
 
 #: ../../point_of_sale/analyze/statistics.rst:3
 msgid "View your Point of Sale statistics"
-msgstr ""
+msgstr "Affichez les statistiques de votre Point de Ventes"
 
 #: ../../point_of_sale/analyze/statistics.rst:5
 msgid ""
@@ -586,6 +598,8 @@ msgid ""
 "To access your statistics go to :menuselection:`Point of Sale --> Reporting "
 "--> Orders`"
 msgstr ""
+"Pour accéder à vos statistiques, allez à: menuselection: `Point de Ventes ->"
+" Reporting -> Commandes`"
 
 #: ../../point_of_sale/analyze/statistics.rst:15
 msgid "You can then see your various statistics in graph or pivot form."
@@ -1036,6 +1050,9 @@ msgid ""
 "If you are running multiple Point of Sale on the same POSBox, make sure that"
 " only one of them has Remote Scanning/Barcode Scanner activated."
 msgstr ""
+"Si vous exécutez plusieurs Points de Ventes sur la même borne POSBox, "
+"assurez-vous que l'un d'entre eux a activé la fonction de numérisation à "
+"distance / scanner de codes-barres."
 
 #: ../../point_of_sale/overview/setup.rst:94
 msgid ""
@@ -1256,6 +1273,18 @@ msgid ""
 "to initialize the image at boot and we copy over some extra configuration "
 "files. The resulting image is then ready to be tested and used."
 msgstr ""
+"Le processus de création d'image commence par télécharger la dernière image "
+"`Raspbian <https://www.raspbian.org/>` _. Il monte ensuite localement cette "
+"image Raspbian et copie sur certains fichiers et scripts qui feront que "
+"l'image Raspbian se transformera elle-même en une POSBox quand elle "
+"démarrera. Ces scripts mettront à jour Raspbian, supprimeront les paquets "
+"non essentiels et installeront les paquets requis. Afin de démarrer Raspbian"
+" nous utilisons qemu, qui est capable de fournir une émulation ARM. Après "
+"cela, le système d'exploitation Raspbian émulé se fermera. Nous montons à "
+"nouveau localement l'image, supprimons les scripts qui ont été utilisés pour"
+" initialiser l'image au démarrage et nous copions des fichiers de "
+"configuration supplémentaires. L'image résultante est alors prête à être "
+"testée et utilisée."
 
 #: ../../point_of_sale/overview/setup.rst:207
 msgid "A Debian-based Linux distribution (Debian, Ubuntu, Mint, etc.)"
@@ -1264,6 +1293,8 @@ msgstr "Une distribution Linux basée sur Debian (Debian, Ubuntu, Mint, etc.)"
 #: ../../point_of_sale/overview/setup.rst:208
 msgid "A running Odoo instance you connect to load the Point of Sale"
 msgstr ""
+"Une instance Odoo en cours d'exécution à laquelle vous vous connectez pour "
+"charger le Point de Ventes"
 
 #: ../../point_of_sale/overview/setup.rst:209
 msgid ""
@@ -1340,10 +1371,12 @@ msgstr "``# groupadd usbusers``"
 #: ../../point_of_sale/overview/setup.rst:252
 msgid "Then we add the user who will run the OpenERP server to ``usbusers``"
 msgstr ""
+"Ensuite, nous ajoutons l'utilisateur qui va lancer le serveur OpenERP à "
+"`usbusers``"
 
 #: ../../point_of_sale/overview/setup.rst:254
 msgid "``# usermod -a -G usbusers USERNAME``"
-msgstr ""
+msgstr "``# usermod -a -G usbusers USERNAME``"
 
 #: ../../point_of_sale/overview/setup.rst:256
 msgid ""
@@ -1352,28 +1385,34 @@ msgid ""
 "``99-usbusers.rules`` in the ``/etc/udev/rules.d/`` directory with the "
 "following content::"
 msgstr ""
+"Ensuite, nous devons créer une règle udev qui permettra automatiquement aux "
+"membres des «usbusers» d'accéder aux périphériques USB bruts. Pour ce faire,"
+" créez un fichier appelé `` 99-usbusers.rules`` dans le répertoire `` "
+"/etc/udev/rules.d/ `` avec le contenu suivant ::"
 
 #: ../../point_of_sale/overview/setup.rst:264
 msgid "Then you need to reboot your machine."
-msgstr ""
+msgstr "Ensuite, vous devez redémarrer votre machine."
 
 #: ../../point_of_sale/overview/setup.rst:267
 msgid "Start the local Odoo instance"
-msgstr ""
+msgstr "Démarrer l'instance locale Odoo"
 
 #: ../../point_of_sale/overview/setup.rst:269
 msgid "We must launch the Odoo server with the correct settings"
-msgstr ""
+msgstr "Nous devons lancer le serveur Odoo avec les paramètres corrects"
 
 #: ../../point_of_sale/overview/setup.rst:271
 msgid ""
 "``$ ./odoo.py "
 "--load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``"
 msgstr ""
+"``$ ./odoo.py "
+"--load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``"
 
 #: ../../point_of_sale/overview/setup.rst:274
 msgid "Test the instance"
-msgstr ""
+msgstr "Testez l'instance"
 
 #: ../../point_of_sale/overview/setup.rst:276
 msgid ""
@@ -1384,10 +1423,17 @@ msgid ""
 "the drivers, another process has grabbed exclusive access to the devices, "
 "the udev rules do not apply or a superseded by others."
 msgstr ""
+"Branchez tout votre matériel sur les ports USB de votre machine, et allez à "
+"``http://localhost:8069/hw_proxy/status`` , rafraîchissez la page plusieurs "
+"fois et voir si tous vos périphériques sont indiqués comme * Connectés *. "
+"Les sources possibles d'erreurs sont les suivantes: Les chemins de la "
+"distribution diffèrent des chemins attendus par les pilotes, un autre "
+"processus a obtenu un accès exclusif aux périphériques, les règles udev ne "
+"s'appliquent pas ou sont remplacées par d'autres."
 
 #: ../../point_of_sale/overview/setup.rst:284
 msgid "Automatically start Odoo"
-msgstr ""
+msgstr "Démarrez automatiquement Odoo"
 
 #: ../../point_of_sale/overview/setup.rst:286
 msgid ""
@@ -1396,6 +1442,11 @@ msgid ""
 "particular setup. Using the init system provided by your distribution is "
 "probably the easiest way to accomplish this."
 msgstr ""
+"Vous devez maintenant vous assurer que cette installation Odoo est "
+"automatiquement lancée après le démarrage. Il existe plusieurs façons de le "
+"faire en fonction de votre configuration particulière. L'utilisation du "
+"système init fourni par votre distribution est probablement le moyen le plus"
+" simple d'y parvenir."
 
 #: ../../point_of_sale/overview/setup.rst:294
 msgid ""
@@ -1403,18 +1454,22 @@ msgid ""
 "or ``localhost`` if you're running the created Odoo server on the machine "
 "that you'll use as the Point of Sale device. You can also leave it empty."
 msgstr ""
+"Le champ d'adresse IP dans la configuration POS doit être soit `` "
+"127.0.0.1`` ou `` localhost`` si vous exécutez le serveur Odoo créé sur la "
+"machine que vous utiliserez comme périphérique de Point de Vente. Vous "
+"pouvez également le laisser vide."
 
 #: ../../point_of_sale/overview/setup.rst:300
 msgid "POSBox Technical Documentation"
-msgstr ""
+msgstr "Documentation technique POSBox"
 
 #: ../../point_of_sale/overview/setup.rst:303
 msgid "Technical Overview"
-msgstr ""
+msgstr "Présentation technique"
 
 #: ../../point_of_sale/overview/setup.rst:306
 msgid "The POSBox Hardware"
-msgstr ""
+msgstr "Le matériel POSBox"
 
 #: ../../point_of_sale/overview/setup.rst:308
 msgid ""
@@ -1425,6 +1480,13 @@ msgid ""
 "The Software is installed on a 8Gb Class 10 or Higher SD Card. All this "
 "hardware is easily available worldwide from independent vendors."
 msgstr ""
+"Le matériel POSBox est basé sur un `Raspberry Pi 2 "
+"<https://www.raspberrypi.org/products/raspberry-pi-2-model-b/>`_, un "
+"ordinateur monocarte populaire. Le Raspberry Pi 2 est alimenté par un "
+"adaptateur secteur 2A micro-usb. 2A est nécessaire pour donner suffisamment "
+"de puissance aux scanners de codes-barres. Le logiciel est installé sur une "
+"carte SD 8 Go de classe 10 ou supérieure. Tout ce matériel est facilement "
+"disponible dans le monde entier auprès de fournisseurs indépendants."
 
 #: ../../point_of_sale/overview/setup.rst:317
 msgid "Compatible Peripherals"
@@ -1435,6 +1497,8 @@ msgid ""
 "Officially supported hardware is listed on the `POS Hardware page "
 "<https://www.odoo.com/page/pos-ipad-android-hardware>`_."
 msgstr ""
+"Le matériel officiellement pris en charge est répertorié sur la page "
+"`Matériel POS <https://www.odoo.com/page/pos-ipad-android-hardware>`_."
 
 #: ../../point_of_sale/overview/setup.rst:323
 msgid "The POSBox Software"
@@ -1451,6 +1515,14 @@ msgid ""
 "on the POSBox. The Odoo instance is a shallow git clone of the ``8.0`` "
 "branch."
 msgstr ""
+"Le POSBox exécute une installation Linux Raspbian fortement modifiée, un "
+"dérivé de Debian pour le Raspberry Pi. Il exécute également une installation"
+" barebones de Odoo qui fournit le serveur web et les pilotes. Les pilotes "
+"matériels sont implémentés en tant que modules Odoo. Ces modules ont tous le"
+" préfixe `` hw_* `` et sont les seuls modules qui s'exécutent sur la POSBox."
+" Odoo est seulement utilisé pour le framework qu'il fournit. Aucune donnée "
+"d'entreprise n'est traitée ou stockée sur la POSBox. L'instance d'Odoo est "
+"un clone git peu profond de la branche `` 8.0``."
 
 #: ../../point_of_sale/overview/setup.rst:334
 msgid ""
@@ -1469,14 +1541,31 @@ msgid ""
 "/etc_ram/foo/bar. We also bind mount / to /root_bypass_ramdisks to be able "
 "to get to the real /etc and /var during development."
 msgstr ""
+"La partition racine de la POSBox est montée en lecture seule, ce qui "
+"garantit que nous n'usons pas la carte SD en lui écrivant trop. Il garantit "
+"également que le système de fichiers ne peut pas être corrompu en coupant "
+"l'alimentation de la POSBox. Les applications Linux s'attendent cependant à "
+"pouvoir écrire dans certains répertoires. Nous fournissons donc un disque "
+"virtuel pour / etc et / var (Raspbian en fournit automatiquement un pour / "
+"tmp). Ces ramdisks sont configurés par `` setup_ramdisks.sh``, que nous "
+"exécutons avant tous les autres scripts init en l'exécutant dans `` "
+"/etc/init.d/rcS``. Les ramdisks sont nommés /etc_ram et /var_ram "
+"respectivement. La plupart des données de /etc et /var sont copiées dans ces"
+" ramdisks tmpfs. Afin de restreindre la taille des disques virtuels, nous ne"
+" leur copions pas certaines choses (par exemple, les données relatives à "
+"apt). Nous lions ensuite les monter sur les répertoires d'origine. Ainsi, "
+"lorsqu'une application écrit dans /etc/foo/bar, elle écrit dans "
+"/etc_ram/foo/bar. Nous lions aussi mount /to/root_bypass_ramdisks pour "
+"pouvoir accéder au réel /etc et /var pendant le développement."
 
 #: ../../point_of_sale/overview/setup.rst:350
 msgid "Logs of the running Odoo server can be found at:"
 msgstr ""
+"Les journaux du serveur Odoo en cours d'exécution peuvent être trouvés sur:"
 
 #: ../../point_of_sale/overview/setup.rst:352
 msgid "``/var/log/odoo/odoo.log``"
-msgstr ""
+msgstr "``/var/log/odoo/odoo.log``"
 
 #: ../../point_of_sale/overview/setup.rst:354
 msgid ""
@@ -1484,10 +1573,13 @@ msgid ""
 "POSBox will log to /var/log/syslog and those messages are tagged with "
 "``posbox_*``."
 msgstr ""
+"Divers scripts liés à la POSBox (par exemple, des scripts liés à la "
+"connexion Wi-Fi) s'exécutant sur la POSBox seront enregistrés dans "
+"/var/log/syslog et ces messages seront étiquetés avec \"posbox_*\"."
 
 #: ../../point_of_sale/overview/setup.rst:359
 msgid "Accessing the POSBox"
-msgstr ""
+msgstr "Accédez à la POSBox"
 
 #: ../../point_of_sale/overview/setup.rst:362
 msgid "Local Access"
@@ -1500,10 +1592,16 @@ msgid ""
 "use it as a small GNU/Linux computer and perform various administration "
 "tasks, like viewing some logs."
 msgstr ""
+"Si vous branchez un clavier USB QWERTY dans l'un des ports USB de la POSBox "
+"et si vous connectez un écran d'ordinateur au port *HDMI* de la POSBox, vous"
+" pouvez l'utiliser comme un petit ordinateur GNU/Linux et effectuer diverses"
+" tâches d'administration, comme Regarder quelques journaux."
 
 #: ../../point_of_sale/overview/setup.rst:369
 msgid "The POSBox will automatically log in as root on the default tty."
 msgstr ""
+"La POSBox se connecte automatiquement en tant que root sur le tty par "
+"défaut."
 
 #: ../../point_of_sale/overview/setup.rst:372
 msgid "Remote Access"
@@ -1514,16 +1612,21 @@ msgid ""
 "If you have the POSBox's IP address and an SSH client you can access the "
 "POSBox's system remotely. The login credentials are ``pi``/``raspberry``."
 msgstr ""
+"Si vous avez l'adresse IP de la POSBox et un client SSH, vous pouvez accéder"
+" au système de la POSBox à distance. Les informations de connexion sont "
+"``pi``/` raspberry``."
 
 #: ../../point_of_sale/overview/setup.rst:379
 msgid "Updating The POSBox Software"
-msgstr ""
+msgstr "Mise à jour du logiciel POSBox"
 
 #: ../../point_of_sale/overview/setup.rst:381
 msgid ""
 "Only upgrade the POSBox if you experience problems or want to use newly "
 "implemented features."
 msgstr ""
+"Ne mettez à niveau la POSBox que si vous rencontrez des problèmes ou "
+"souhaitez utiliser des fonctionnalités nouvellement implémentées."
 
 #: ../../point_of_sale/overview/setup.rst:384
 msgid ""
@@ -1535,6 +1638,14 @@ msgid ""
 "method of upgrading will ensure that you're running the latest version of "
 "the POSBox software."
 msgstr ""
+"La meilleure façon de mettre à jour le logiciel POSBox est de télécharger "
+"une nouvelle version de l'image et de la flasher avec la carte SD. Cette "
+"opération est décrite en détail dans `ce tutoriel "
+"<http://elinux.org/RPi_Easy_SD_Card_Setup>`_, il suffit de remplacer l'image"
+" Raspberry Pi standard par la plus récente trouvée sur `la page d'image "
+"POSBox officielle <http://nightly.odoo.com/master/posbox/>`_.  Cette méthode"
+" de mise à niveau garantit que vous exécutez la dernière version du logiciel"
+" POSBox."
 
 #: ../../point_of_sale/overview/setup.rst:393
 msgid ""
@@ -1544,20 +1655,30 @@ msgid ""
 "is limited to what it can do however. It can not eg. update installed "
 "configuration files (like eg. /etc/hostapd.conf). It can only upgrade:"
 msgstr ""
+"La deuxième méthode de mise à niveau est l'interface intégrée de mise à "
+"niveau accessible via la page d'accueil de POSBox. La bonne chose à propos "
+"de la mise à niveau comme ceci est que vous n'avez pas besoin de flasher une"
+" nouvelle image. Cette méthode de mise à niveau est limitée à ce qu'elle "
+"peut faire cependant. Il ne peut pas, par exemple mettre à jour les fichiers"
+" de configuration installés (par exemple, /etc/hostapd.conf). Il ne peut que"
+" mettre à jour:"
 
 #: ../../point_of_sale/overview/setup.rst:400
 msgid "The internal Odoo application"
-msgstr ""
+msgstr "L'application interne Odoo"
 
 #: ../../point_of_sale/overview/setup.rst:401
 msgid ""
 "Scripts in the folder "
 "``odoo/addons/point_of_sale/tools/posbox/configuration/``"
 msgstr ""
+"Scripts dans le dossier "
+"``odoo/addons/point_of_sale/tools/posbox/configuration/``"
 
 #: ../../point_of_sale/overview/setup.rst:403
 msgid "When in doubt, always use the first method of upgrading."
 msgstr ""
+"En cas de doute, utilisez toujours la première méthode de mise à niveau."
 
 #: ../../point_of_sale/overview/setup.rst:406
 msgid "Troubleshoot"
@@ -1685,17 +1806,19 @@ msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:453
 msgid "The Barcode Scanner is not working reliably"
-msgstr ""
+msgstr "Le scanner de codes-barres ne fonctionne pas de manière fiable"
 
 #: ../../point_of_sale/overview/setup.rst:455
 msgid ""
 "Make sure that no more than one device with 'Scan via Proxy'/'Barcode "
 "Scanner' enabled are connected to the POSBox at the same time."
 msgstr ""
+"Assurez-vous que pas plus d'un périphérique avec «Scan via Proxy» / «Scanner"
+" de Code-Barres» activé sont connectés à la POSBox en même temps."
 
 #: ../../point_of_sale/overview/setup.rst:460
 msgid "Printing the receipt takes too much time"
-msgstr ""
+msgstr "L'impression du reçu prend trop de temps"
 
 #: ../../point_of_sale/overview/setup.rst:462
 msgid ""
@@ -1704,20 +1827,27 @@ msgid ""
 "afterwards it is most likely due to poor network connection between the POS "
 "and the POSBox."
 msgstr ""
+"Un petit délai avant la première impression est normal, car la POSBox "
+"effectuera un pré-traitement pour accélérer les prochaines impressions. Si "
+"vous subissez des retards par la suite, cela est probablement dû à une "
+"mauvaise connexion réseau entre le POS et le POSBox."
 
 #: ../../point_of_sale/overview/setup.rst:468
 msgid "Some characters are not correctly printed on the receipt"
-msgstr ""
+msgstr "Certains caractères ne sont pas correctement imprimés sur le reçu"
 
 #: ../../point_of_sale/overview/setup.rst:470
 msgid ""
 "The POSBox does not support all languages and characters. It currently "
 "supports Latin and Cyrillic based scripts, with basic Japanese support."
 msgstr ""
+"La POSBox ne prend pas en charge tous les langages et caractères. Il "
+"supporte actuellement les scripts basés en latin et en cyrillique, avec un "
+"support japonais basique."
 
 #: ../../point_of_sale/overview/setup.rst:475
 msgid "The printer is offline"
-msgstr ""
+msgstr "L'imprimante est hors ligne"
 
 #: ../../point_of_sale/overview/setup.rst:477
 msgid ""
@@ -1725,16 +1855,21 @@ msgid ""
 "lid closed, and is not reporting an error. If the error persists, please "
 "contact support."
 msgstr ""
+"Assurez-vous que l'imprimante est connectée, sous tension, qu'elle contient "
+"suffisamment de papier, que son couvercle est fermé et qu'elle ne signale "
+"aucune erreur. Si l'erreur persiste, contactez le support technique."
 
 #: ../../point_of_sale/overview/setup.rst:482
 msgid "The cashdrawer does not open"
-msgstr ""
+msgstr "Le tiroir caisse n'ouvre pas"
 
 #: ../../point_of_sale/overview/setup.rst:484
 msgid ""
 "The cashdrawer should be connected to the printer and should be activated in"
 " the POS configuration."
 msgstr ""
+"Le tiroir-caisse doit être connecté à l'imprimante et doit être activé dans "
+"la configuration POS."
 
 #: ../../point_of_sale/overview/setup.rst:488
 msgid "Credits"
@@ -1813,6 +1948,8 @@ msgid ""
 "And also the partners who've backed the development with the Founding POSBox"
 " Bundle:"
 msgstr ""
+"Et aussi les partenaires qui ont soutenu le développement avec le bundle "
+"POSBox fondateur:"
 
 #: ../../point_of_sale/overview/setup.rst:513
 msgid "Willow IT"
@@ -2045,11 +2182,11 @@ msgstr "C'est fait, vous avez maintenant fermé votre première session de PoS."
 
 #: ../../point_of_sale/restaurant.rst:3
 msgid "Advanced Restaurant Features"
-msgstr ""
+msgstr "Caractéristiques avancées du restaurant"
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:3
 msgid "Print the Bill"
-msgstr ""
+msgstr "Imprimer la facture"
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:5
 msgid ""
@@ -2057,37 +2194,45 @@ msgid ""
 "is useful if the bill is still subject to evolve and is thus not the "
 "definitive ticket."
 msgstr ""
+"Utilisez la fonction * Impression de factures * pour imprimer la facture "
+"avant le paiement. Ceci est utile si la facture est encore sujette à "
+"évolution et n'est donc pas le ticket définitif."
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:10
 msgid "Configure Bill Printing"
-msgstr ""
+msgstr "Configurez l'impression de la facture"
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:12
 msgid ""
 "To activate *Bill Printing*, go to :menuselection:`Point of Sale --> "
 "Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour activer * Impression de factures *, allez à: menuselection: \"Point de "
+"Ventes -> Configuration -> Point de Ventes\" et sélectionnez votre interface"
+" PoS."
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:15
 msgid ""
 "Under the Bills & Receipts category, you will find *Bill Printing* option."
 msgstr ""
+"Sous la catégorie Factures & Reçus, vous trouverez l'option * Impression de "
+"factures *."
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:22
 msgid "Split a Bill"
-msgstr ""
+msgstr "Divisez la facture"
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:24
 msgid "On your PoS interface, you now have a *Bill* button."
-msgstr ""
+msgstr "Sur votre interface PoS, vous avez maintenant un bouton *Facture*."
 
 #: ../../point_of_sale/restaurant/bill_printing.rst:29
 msgid "When you use it, you can then print the bill."
-msgstr ""
+msgstr "Lorsque vous l'utilisez, vous pouvez ensuite imprimer la facture."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:3
 msgid "Print orders at the kitchen or bar"
-msgstr ""
+msgstr "Imprimer les commandes à la cuisine ou au bar"
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:5
 msgid ""
@@ -2095,24 +2240,31 @@ msgid ""
 "printing the orders taken on the PoS interface right in the kitchen or bar "
 "can be a tremendous help."
 msgstr ""
+"Pour faciliter le flux de travail entre la salle et la cuisine, imprimer les"
+" commandes prises sur l'interface PoS directement au bon endroit peut être "
+"d'une aide précieuse."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:10
 msgid "Activate the bar/kitchen printer"
-msgstr ""
+msgstr "Activer l'imprimante bar/cuisine"
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:12
 msgid ""
 "To activate the *Order printing* feature, go to :menuselection:`Point of "
 "Sales --> Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour activer la fonction *Impression de Commande*, accédez à: menuselection:"
+" \"Point de Ventes -> Configuration -> Point de Ventes\" et sélectionnez "
+"votre interface de paiement."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:16
 msgid "Under the Bills & Receipts category, you will find *Order Printers*."
 msgstr ""
+"Dans la catégorie Factures & Reçus, vous trouverez *Impression de Facture*."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:19
 msgid "Add a printer"
-msgstr ""
+msgstr "Ajoutez une imprimante"
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:21
 msgid ""
@@ -2122,85 +2274,102 @@ msgstr ""
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:28
 msgid "Print a kitchen/bar order"
-msgstr ""
+msgstr "Imprimer une commande de la cuisine/du bar"
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:33
 msgid "Select or create a printer."
-msgstr ""
+msgstr "Sélectionnez ou créez une imprimante."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:36
 msgid "Print the order in the kitchen/bar"
-msgstr ""
+msgstr "Imprimer la commande dans la cuisine /le bar"
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:38
 msgid "On your PoS interface, you now have a *Order* button."
-msgstr ""
+msgstr "Sur votre interface PoS, vous avez maintenant un bouton * Commande *."
 
 #: ../../point_of_sale/restaurant/kitchen_printing.rst:43
 msgid ""
 "When you press it, it will print the order on your kitchen/bar printer."
 msgstr ""
+"Lorsque vous appuyez dessus, il imprimera l'ordre sur votre imprimante de la"
+" cuisine /du bar."
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:3
 msgid "Register multiple orders"
-msgstr ""
+msgstr "Enregistrez plusieurs commandes"
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:5
 msgid ""
 "The Odoo Point of Sale App allows you to register multiple orders "
 "simultaneously giving you all the flexibility you need."
 msgstr ""
+"L' App Point de Ventes Odoo vous permet d'enregistrer plusieurs commandes "
+"simultanément, vous donnant toute la flexibilité dont vous avez besoin."
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:9
 msgid "Register an additional order"
-msgstr ""
+msgstr "Enregistrer une commande supplémentaire"
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:11
 msgid ""
 "When you are registering any order, you can use the *+* button to add a new "
 "order."
 msgstr ""
+"Lorsque vous enregistrez une commande, vous pouvez utiliser le bouton * + * "
+"afin d'en ajouter une nouvelle."
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:14
 msgid ""
 "You can then move between each of your orders and process the payment when "
 "needed."
 msgstr ""
+"Vous pouvez ensuite passer d'une commande à l'autre et traiter le paiement "
+"en cas de besoin."
 
 #: ../../point_of_sale/restaurant/multi_orders.rst:20
 msgid ""
 "By using the *-* button, you can remove the order you are currently on."
 msgstr ""
+"En utilisant le bouton * - *, vous pouvez supprimer la commande en cours."
 
 #: ../../point_of_sale/restaurant/setup.rst:3
 msgid "Setup PoS Restaurant/Bar"
-msgstr ""
+msgstr "Installation du PoS Restaurant / Bar"
 
 #: ../../point_of_sale/restaurant/setup.rst:5
 msgid ""
 "Food and drink businesses have very specific needs that the Odoo Point of "
 "Sale application can help you to fulfill."
 msgstr ""
+"Les entreprises agroalimentaires ont des besoins très spécifiques que "
+"l'application Odoo Point de Ventes peut vous aider à remplir."
 
 #: ../../point_of_sale/restaurant/setup.rst:11
 msgid ""
 "To activate the *Bar/Restaurant* features, go to :menuselection:`Point of "
 "Sale --> Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour activer les fonctionnalités * Bar / Restaurant *, allez à: "
+"menuselection: `Point de Ventes -> Configuration -> Point de Ventes` et "
+"sélectionnez votre interface PoS."
 
 #: ../../point_of_sale/restaurant/setup.rst:15
 msgid "Select *Is a Bar/Restaurant*"
-msgstr ""
+msgstr "Sélectionnez * Est un bar / restaurant *"
 
 #: ../../point_of_sale/restaurant/setup.rst:20
 msgid ""
 "You now have various specific options to help you setup your point of sale. "
 "You can see those options have a small knife and fork logo next to them."
 msgstr ""
+"Vous avez maintenant plusieurs options spécifiques pour vous aider à "
+"configurer votre Point de Vente. Vous pouvez voir que ces options ont un "
+"petit logo de couteau et de fourchette à côté d'eux."
 
 #: ../../point_of_sale/restaurant/split.rst:3
 msgid "Offer a bill-splitting option"
-msgstr ""
+msgstr "Offrir une option de Partage d'addition"
 
 #: ../../point_of_sale/restaurant/split.rst:5
 msgid ""
@@ -2208,36 +2377,48 @@ msgid ""
 "with a positive experience. That's why this feature is available out-of-the-"
 "box in the Odoo Point of Sale application."
 msgstr ""
+"Offrir une solution facile à vos clients leur permettra de vivre une "
+"expérience positive. C'est pourquoi cette fonctionnalité est prête à "
+"l'emploi dans l'application Odoo Point de Vente."
 
 #: ../../point_of_sale/restaurant/split.rst:12
 msgid ""
 "To activate the *Bill Splitting* feature, go to :menuselection:`Point of "
 "Sales --> Configuration --> Point of sale` and select your PoS interface."
 msgstr ""
+"Pour activer la fonctionnalité *Partage d'addition*, accédez à: "
+"menuselection: `Point de Vente -> Configuration -> Point de Vente` et "
+"sélectionnez votre interface PoS."
 
 #: ../../point_of_sale/restaurant/split.rst:16
 msgid ""
 "Under the Bills & Receipts category, you will find the Bill Splitting "
 "option."
 msgstr ""
+"Sous la catégorie Factures & Reçus, vous trouverez l'option de Partager "
+"l'addition."
 
 #: ../../point_of_sale/restaurant/split.rst:23
 msgid "Split a bill"
-msgstr ""
+msgstr "Partager l'addition"
 
 #: ../../point_of_sale/restaurant/split.rst:25
 msgid "In your PoS interface, you now have a *Split* button."
 msgstr ""
+"Dans votre interface PoS, vous avez maintenant un bouton * Partager *."
 
 #: ../../point_of_sale/restaurant/split.rst:30
 msgid ""
 "When you use it, you will be able to select what that guest should had and "
 "process the payment, repeating the process for each guest."
 msgstr ""
+"Lorsque vous l'utilisez, vous serez en mesure de sélectionner ce qu'un "
+"invité doit et de traiter le paiement, en répétant le processus pour chaque "
+"invité."
 
 #: ../../point_of_sale/restaurant/table.rst:3
 msgid "Configure your table management"
-msgstr ""
+msgstr "Configurez votre gestion de table"
 
 #: ../../point_of_sale/restaurant/table.rst:5
 msgid ""
@@ -2245,30 +2426,38 @@ msgid ""
 " *Table Management* in :menuselection:`Point of Sale --> Configuration --> "
 "Point of sale`.."
 msgstr ""
+"Une fois que votre Point de Vente a été configuré pour l'utilisation d'un "
+"bar / restaurant, sélectionnez * Gestion des tables * dans: menuselection: "
+"\"Point de Vente -> Configuration -> Point de Vente\"."
 
 #: ../../point_of_sale/restaurant/table.rst:9
 msgid "Add a floor"
-msgstr ""
+msgstr "Ajoutez un étage"
 
 #: ../../point_of_sale/restaurant/table.rst:11
 msgid ""
 "When you select *Table management* you can manage your floors by clicking on"
 " *Floors*"
 msgstr ""
+"Lorsque vous sélectionnez * Gestion des tables *, vous pouvez gérer vos "
+"étages en cliquant sur * Étages *"
 
 #: ../../point_of_sale/restaurant/table.rst:18
 msgid "Add tables"
-msgstr ""
+msgstr "Ajoutez des tables"
 
 #: ../../point_of_sale/restaurant/table.rst:20
 msgid "From your PoS interface, you will now see your floor(s)."
 msgstr ""
+"À partir de votre interface PoS, vous verrez maintenant votre/vos étage(s)."
 
 #: ../../point_of_sale/restaurant/table.rst:25
 msgid ""
 "When you click on the pencil you will enter into edit mode, which will allow"
 " you to create tables, move them, modify them, ..."
 msgstr ""
+"Lorsque vous cliquez sur le crayon, vous entrez en mode édition, ce qui vous"
+" permet de créer des tableaux, de les déplacer, de les modifier, ..."
 
 #: ../../point_of_sale/restaurant/table.rst:31
 msgid ""
