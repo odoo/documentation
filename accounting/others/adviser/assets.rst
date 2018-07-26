@@ -108,7 +108,7 @@ before posting them to your accounts.
          automatically be filled in the supplier bill.
 
 How to depreciate an asset?
-==========================
+===========================
 
 Odoo will create depreciation journal entries automatically at the right
 date for every confirmed asset. (not the draft ones). You can control in
