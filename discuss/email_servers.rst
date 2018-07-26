@@ -14,6 +14,11 @@ to manage your email server's reputation yourself.
 
 You will find here below some useful 
 information to do so by integrating your own email solution with Odoo.
+.. note::
+    Office 365 email servers don't allow easiliy to send external emails
+    from hosts like Odoo. 
+    Refer to the `Office 365 documentation`_
+    to make it working.
 
 How to manage outbound messages
 ===============================
@@ -150,3 +155,6 @@ alias in your mail server.
    You can change this value in developer mode.
    Go to :menuselection:`Settings --> Technical --> Automation --> 
    Scheduled Actions` and look for *Mail: Fetchmail Service*.
+   
+.. _Office 365 documentation:
+    https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
