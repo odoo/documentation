@@ -625,3 +625,12 @@ FAQ
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
 .. _`Certificate`: ../../_static/files/certificate.cer
 .. _`Certificate Key`: ../../_static/files/certificate.key
+
+.. tip::
+   **Solution:** CFDI Payment terms (método de pago) of PPD or PUE (PUE – Pago en una sola exhibición and PPD – 
+   Pago en parcialidades o diferido) are generated automatically in the invoice based on the payment terms that the
+   invoice creator selects when creating an invoice. They cannot be set manually separately.
+   
+   To create an a  PPD invoice  create a payment term with more than one line configured as credit (to set more than
+   one line as payment term). Otherwise the payment terms are by default PUE. Terms of payment as Immediate payment are
+   always displayed as PUE.
