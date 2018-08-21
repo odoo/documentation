@@ -7,7 +7,7 @@ Upgrade your database
 .. _odoosh-advanced-upgrade_your_database:
 
 1. Download and Upload your database
------------------------
+------------------------------------
 
 Download a dump of your database (from the :ref:`Builds view <odoosh-gettingstarted-builds-download-dump>`), choose the
 exact copy and without filestore options. Upload the .sql.gz dump on https://upgrade.odoo.com/database/upload and
