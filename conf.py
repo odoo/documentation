@@ -317,6 +317,7 @@ LANGUAGES = {
     'hr': 'Croatian',
     'nl': 'Dutch',
     'pt_BR': 'Portuguese (BR)',
+    'uk': 'Ukrainian',
     'zh_CN': 'Chinese',
 }
 
