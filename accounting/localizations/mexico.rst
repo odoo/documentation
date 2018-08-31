@@ -29,7 +29,7 @@ accounting and invoicing system due to all the set of normal requirements for
 this market, becoming your Odoo in the perfect solution to administer your
 company in Mexico.
 
-Configuration 
+Configuration
 ~~~~~~~~~~~~~
 
 .. tip::
@@ -61,6 +61,8 @@ integrate with the normal invoicing flow in Odoo.
 
 .. image:: media/mexico02.png
    :align: center
+
+.. _mx-legal-info:
 
 3. Set you legal information in the company
 -------------------------------------------
@@ -585,8 +587,8 @@ FAQ
    **Solution:** You must set the address on your company properly, this is a
    mandatory group of fields, you can go to your company configuration on
    :menuselection:`Settings --> Users & Companies --> Companies` and fill
-   all the required fields for your address following the step `3. Set you
-   legal information in the company`.
+   all the required fields for your address following the step
+   :ref:`mx-legal-info`.
 
 - **Error message**:
 
