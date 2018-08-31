@@ -153,7 +153,7 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 | **Ventajas de las ventas**   |                 |                  |                |
 +------------------------------+-----------------+------------------+----------------+
 | Comisión por la plataforma   | 100%            | 100%             | 100%           |
-| Odoo SH [#f1es]              |                 |                  |                |
+| Odoo SH [#f1es]_             |                 |                  |                |
 +------------------------------+-----------------+------------------+----------------+
 | Comisión por Odoo Enterprise | 10%             | 15%              | 20%            |
 +------------------------------+-----------------+------------------+----------------+

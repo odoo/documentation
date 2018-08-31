@@ -20,5 +20,3 @@ Applications
    livechat/livechat
    expense/expense
    general
-..   expenses
-..   recruitment
