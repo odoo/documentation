@@ -20,3 +20,4 @@ Applications
    livechat/livechat
    expense/expense
    general
+   mobile/firebase
