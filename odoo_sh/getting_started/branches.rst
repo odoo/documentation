@@ -54,12 +54,17 @@ You still have access to the log of the failed update, so you can troubleshoot i
 The demo data is not loaded, as it is not meant to be used in a production database.
 The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.
 
+Partners using trial projects should be aware their production branch, along with all the staging branches,
+will automatically be set back to the development stage after 15 days.
+
 Staging
 -------
 Staging branches are meant to test your new features using the production data.
 
-When you push a new commit in one of these branches,
-a new server is started, using a duplicate of the production database and the new revision of the branch.
+Pushing a new commit in one of these branches will either
+* start a new server, using a duplicate of the production database and the new revision of the branch
+* or update the previous database running on the branch,
+depending on the push behaviour configured in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-settings->`.
 
 You can therefore test your latest features using the production data without compromising the actual
 production database with test records.
@@ -70,11 +75,9 @@ That way, you do not have to worry about sending test emails to your contacts.
 
 Scheduled actions are disabled. If you want to test them, you have to enable them or trigger their action manually.
 Be careful though: If these actions perform changes on third-party services (FTP servers, email servers, ...)
-used by your production database as well,
-you might cause unwanted changes in your production.
+used by your production database as well, you might cause unwanted changes in your production.
 
-The databases created for staging branches are meant to live around two weeks.
-After that, they can be garbage collected automatically.
+The latest database will be kept alive indefinitely, older ones may get garbage collected automatically.
 If you make configuration changes or view changes in these branches, make sure to document them or write them directly
 in the modules of the branch, using XML data files overriding the default configuration or views.
 
@@ -234,6 +237,8 @@ The *import database* feature accepts database archives in the format provided b
 * the Odoo online databases manager,
 * the Odoo.sh backup download button of this *Backups* tab,
 * the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
+
+.. _odoosh-gettingstarted-branches-tabs-settings:
 
 Settings
 --------

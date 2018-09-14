@@ -58,6 +58,8 @@ In addition, they cannot use the webshell nor have access to the server logs.
 +---------------------+-----------------+-----------+-----------+
 |                     | Mails           |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
+|                     | Settings        |     X     |     X     |
++---------------------+-----------------+-----------+-----------+
 |Production & Staging | History         |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
 |                     | 1-click connect |           |     X     |
@@ -67,6 +69,10 @@ In addition, they cannot use the webshell nor have access to the server logs.
 |                     | Shell           |           |     X     |
 +---------------------+-----------------+-----------+-----------+
 |                     | Mails           |           |     X     |
++---------------------+-----------------+-----------+-----------+
+|                     | Backups         |           |     X     |
++---------------------+-----------------+-----------+-----------+
+|                     | Settings        |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
 |Status               |                 |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
@@ -202,3 +208,48 @@ To configure the deploy key for a private repository, proceed as follow:
   * Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`
   * Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`
   * Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory
+
+Storage Size
+============
+
+This section shows a small description of the storage size used by your project.
+
+.. image:: ./media/interface-settings-storage.png
+   :align: center
+
+If your production database exceeds 4 GB, you will automatically be billed on the subscription activating the project with the excess size.
+
+Database Workers
+================
+
+Additional database workers can be configured here. More workers help increase the load your production database is able to handle.
+
+.. image:: ./media/interface-settings-workers.png
+   :align: center
+
+.. Warning::
+  Adding more workers will not magically solve all performance issues. It mainly allows the server to handle more connections at the same time.
+
+Staging Branches
+================
+
+Additional staging branches allow you to develop and test more features at the same time.
+
+.. image:: ./media/interface-settings-staging-branches.png
+   :align: center
+
+Odoo Source Code
+================
+
+Lists the source code's revisions of your production database. Useful if you need to know if a recent bugfix has already been deployed or not.
+
+.. image:: ./media/interface-settings-source-code.png
+   :align: center
+
+Activation
+==========
+
+Shows the status of the project's activation. You can change the project's activation code if needed.
+
+.. image:: ./media/interface-settings-activation.png
+   :align: center
