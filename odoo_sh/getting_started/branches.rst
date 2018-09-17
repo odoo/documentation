@@ -64,7 +64,7 @@ Staging branches are meant to test your new features using the production data.
 Pushing a new commit in one of these branches will either
 * start a new server, using a duplicate of the production database and the new revision of the branch
 * or update the previous database running on the branch,
-depending on the push behaviour configured in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-settings->`.
+depending on the push behaviour configured in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-settings>`.
 
 You can therefore test your latest features using the production data without compromising the actual
 production database with test records.
