@@ -102,3 +102,10 @@ for more details about the Git submodules.
 For instance, if you would like to update your submodules to have their latest revision,
 you can follow the chapter
 `Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes>`_.
+
+Ignore modules
+==============
+
+If you're adding a repository that contains a lot of modules, you may want to ignore some of them in case there are any
+that are installed automatically. To do so, you can prefix your submodule folder with a :code:`.`. The platform will
+ignore this folder and you can hand pick your modules by creating symlinks to them from another folder.
