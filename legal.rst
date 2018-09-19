@@ -62,6 +62,10 @@ Terms and Conditions
     :alt: Download Odoo Partnership Agreement (FR)
     :target: odoo_partnership_agreement_fr.pdf
 
+.. |view_enterprise_nl| image:: _static/banners/txt.svg
+    :alt: View Odoo Enterprise Agreement (NL)
+    :target: legal/terms/i18n/enterprise_nl.html
+
 .. |view_partnership_fr| image:: _static/banners/txt.svg
     :alt: View Odoo Partnership Agreement (FR)
     :target: legal/terms/i18n/partnership_fr.html
@@ -118,7 +122,7 @@ Terms and Conditions
 +--------------------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+
 |                                                                    | **English**                                                           |  Français                                                              | Nederlands                                                            | Deutsch                                                               | Español                                                               |
 +====================================================================+=======================================================================+========================================================================+=======================================================================+=======================================================================+=======================================================================+
-| Odoo Enterprise Agreement (Also applies to Odoo Cloud and Odoo.sh) | |view_enterprise_en| |download_enterprise_en|                         | |view_enterprise_fr| |download_enterprise_fr|                          | (Coming soon)                                                         | |view_enterprise_de| |download_enterprise_de|                         | (Coming soon)                                                         |
+| Odoo Enterprise Agreement (Also applies to Odoo Cloud and Odoo.sh) | |view_enterprise_en| |download_enterprise_en|                         | |view_enterprise_fr| |download_enterprise_fr|                          | |view_enterprise_nl| |download_enterprise_nl|                         | |view_enterprise_de| |download_enterprise_de|                         | (Coming soon)                                                         |
 +--------------------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+
 | Odoo Partnership Agreement                                         | |view_partnership_en| |download_partnership_en|                       | |view_partnership_fr| |download_partnership_fr|                        | (Coming soon)                                                         | (Coming soon)                                                         | |view_partnership_es| |download_partnership_es|                       |
 +--------------------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+

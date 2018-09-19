@@ -21,5 +21,4 @@ Applications
    expense/expense
    general
    iot
-..   expenses
-..   recruitment
+   mobile/firebase

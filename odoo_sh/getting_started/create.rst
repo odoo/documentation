@@ -47,11 +47,11 @@ Then, choose a name or select the repository you want to use.
 
 Choose the Odoo version you want to use. If you plan to import an existing database or an existing set of applications, you might need to choose the according version. If you start from scratch, use the latest version.
 
-Enter your *subscription code*. This is also called *subscription referral* or *contract number*.
+Enter your *subscription code*. This is also called *subscription referral*, *contract number* or *activation code*.
 
-For partners, Odoo.sh is free. If the free offer changes in the future, we guarantee that any project created under this offer will remain free for the same set of features.
+It should be the code of your Enterprise subscription that includes Odoo.sh.
 
-For customers, your Enterprise subscription needs to include Odoo.sh.
+Partners can use their partnership codes to start a trial. Should their clients start a project, they ought to get an Enterprise subscription including Odoo.sh and use its subscription code. The partner will get the full amount as back commission.
 Contact your sales representative or account manager in order to get it.
 
 When submitting the form, if you are notified your subscription is not valid, it either means:
@@ -69,7 +69,7 @@ In case of doubt with your subscription, please contact the `Odoo support <https
 You're done !
 =============
 
-You can begin to use Odoo.sh. Your first build is about to be created. You will soon be able to connect to your first database.
+You can start using Odoo.sh. Your first build is about to be created. You will soon be able to connect to your first database.
 
 .. image:: ./media/deploy-done.png
    :align: center

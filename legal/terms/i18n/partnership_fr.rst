@@ -11,7 +11,7 @@ Odoo Partnership Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Partnership Agreement”
     est la :ref:`version originale en anglais <partnership_agreement>`.
 
-.. note:: Version 6 - 2017-12-04
+.. note:: Version 7 - 2018-05-24
 
 ENTRE :
 
@@ -19,9 +19,16 @@ Odoo S.A., enregistrée au Registre de commerce de Nivelles sous le numéro RCN 
 social se situe Chaussée de Namur, 40, 1367 Grand-Rosière, Belgique, et ses filiales (désignées
 collectivement sous le terme « ODOO »)
 
-ET
-________________________________, une entreprise dont le siège social se situe à __________________
-(ci-après dénommée « PARTENAIRE »).
+ET:
+
+_____________________________________________________________________________________,
+
+une entreprise dont le siège social se situe à
+
+_____________________________________________________________________________________.
+
+(ci-après dénommée « PARTENAIRE »)
+
 
 ODOO et PARTENAIRE sont désignées individuellement par le terme « Partie » et collectivement par
 le terme « les Parties ».
@@ -75,33 +82,38 @@ et recueillir les données statistiques nécessaires à cette fin.
 
 4.1 Niveaux de partenariat
 --------------------------
-Le programme partenaire d’Odoo consiste en trois niveaux de partenariat reprenant des exigences et
-avantages spécifiques pour chacun d’entre eux : Ready, Silver et Gold.
-Le niveau de partenariat accordé au PARTENAIRE dépend des nouvelles recettes annuelles
-Odoo Enterprise générées par le PARTENAIRE pour ODOO. Les renouvellements de contrats existants
+Le programme partenaire d’Odoo consiste en deux types de partenariat et quatre niveaux.
+“Learning Partners” est pour les sociétés qui veulent tout ce qui est nécessaire pour démarrer la
+mise en oeuvre d'Odoo, mais sans la visibilité d'un partenaire officiel, en attendant d'acquérir
+l'expérience requise; tandis que "Official Partners" est pour les sociétés qui veulent la visibilité
+en tant que partenaire Ready, Silver ou Gold, suivant leur niveau d'expérience.
+Le niveau de partenariat accordé au PARTENAIRE dépend des nouvelles recettes annuelles Odoo Enterprise
+générées par le PARTENAIRE pour ODOO, du nombre de ressources internes certifiées,
+et du taux de rétention de clients.  Les renouvellements de contrats existants
 n’entrent pas en ligne de compte pour le niveau de partenariat, mais le PARTENAIRE reçoit tout de
 même une commission sur ces contrats, comme indiqué dans la section :ref:`benefits_fr`.
 
 Le tableau ci-dessous résume les exigences pour chaque niveau de partenariat.
 
-+----------------------------------------------+----------+----------+----------+
-|                                              | Ready    | Silver   | Gold     |
-+==============================================+==========+==========+==========+
-| Nouveaux utilisateurs Odoo Enterprise vendus |   0      |  50      | 100      |
-+----------------------------------------------+----------+----------+----------+
-| Ressources internes actives certifiées       |   1      |  2       |  4       |
-+----------------------------------------------+----------+----------+----------+
-| Taux de rétention minimum                    |   n/a    |  85 %    |  85 %    |
-+----------------------------------------------+----------+----------+----------+
++----------------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                              | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++==============================================+==================+====================+====================+====================+
+| Nouveaux utilisateurs Odoo Enterprise vendus |   0              |  10                | 50                 | 150                |
++----------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Ressources internes actives certifiées       |   0              |  1                 |  2                 |  3                 |
++----------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Taux de rétention minimum                    |   n/a            |  n/a               | 70%                |  80%               |
++----------------------------------------------+------------------+--------------------+--------------------+--------------------+
 
 Les certifications sont personnelles, donc lorsqu’un membre du personnel quitte l’entreprise,
 le PARTENAIRE doit en informer ODOO afin que celle-ci puisse mettre à jour le nombre de ressources
 certifiées actives pour l’accord de partenariat.
 
 Le niveau des partenariats sera revu trimestriellement par ODOO sur la base des nouveaux contrats
-Odoo Enterprise vendus par le partenaire les 12 mois précédents.
+Odoo Enterprise vendus par le partenaire les 12 mois précédents, des certifications officielles
+obtenues par le partenaire, et du taux de rétention.
 
-Les partenaires peuvent monter de niveau une fois qu’ils répondent aux exigences pour ce niveau
+Les "Official Partners" peuvent monter de niveau une fois qu’ils répondent aux exigences pour ce niveau
 supérieur de partenariat. Les partenaires Silver et Gold qui ne répondent pas aux exigences de leur
 partenariat à la fin de la période annuelle peuvent retomber à niveau de partenariat inférieur.
 
@@ -112,54 +124,60 @@ partenariat à la fin de la période annuelle peuvent retomber à niveau de part
 
 Les avantages de chaque niveau de partenariat sont détaillés dans le tableau ci-dessous :
 
-+---------------------------------------+-----------------+------------------+----------------+
-|                                       |      Ready      |     Silver       |      Gold      |
-+=======================================+=================+==================+================+
-| **Reconnaissance**                    |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Visibilité sur odoo.com               | "Ready Partner" | "Silver Partner" |"Gold  Partner" |
-+---------------------------------------+-----------------+------------------+----------------+
-| Droit d’utiliser la marque déposée    | Logo Ready      | Logo Silver      | Logo Gold      |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Avantages formation**               |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Séminaires de mise à jour annuelle    | Oui             | Oui              | Oui            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Coaching Vente                        | Oui             | Oui              | Oui            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Accès à la plateforme d’E-Learning et | Oui             | Oui              | Oui            |
-|                                       |                 |                  |                |
-| à la base de connaissances d’Odoo     |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Avantages logiciel**                |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Accès au code source Odoo Enterprise  | Oui             | Oui              | Oui            |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Avantages Ventes**                  |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Commission sur la plateforme          | 100 %           | 100 %            | 100 %          |
-| Odoo SH [#f1fr]_                      |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Commission sur Odoo Enterprise        | 10 %            | 15 %             | 20 %           |
-+---------------------------------------+-----------------+------------------+----------------+
-| Accès à un Account Manager dédié      | Oui             | Oui              | Oui            |
-+---------------------------------------+-----------------+------------------+----------------+
-| **Avantages marketing**               |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
-| Accès au matériel de marketing        | Oui             | Oui              | Oui            |
-+---------------------------------------+-----------------+------------------+----------------+
-| Événement PARTENAIRE - ODOO support & | Oui             | Oui              | Oui            |
-| promotion                             |                 |                  |                |
-+---------------------------------------+-----------------+------------------+----------------+
+.. only:: latex
 
-.. [#f1fr] Le taux de commission de 100 % sur la plateforme Odoo SH est octroyé pour toutes les
-           souscriptions Odoo Enterprise signées pendant la première année du partenariat, tant
-           que ces souscriptions sont renouvelées. Après la première année, le PARTENAIRE bénéficie
-           de la commission Odoo Enterprise normale, selon le niveau de partenariat.
+    .. tabularcolumns:: |L|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|
+
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                       | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++=======================================+==================+====================+====================+====================+
+| **Reconnaissance**                    |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Visibilité sur odoo.com               | Non              | "Ready Partner"    | "Silver Partner"   | "Gold Partner"     |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Droit d’utiliser la marque déposée    | Logo Learning    | Logo Ready         | Logo Silver        | Logo Gold          |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Avantages formation**               |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Séminaires de mise à jour annuelle    | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Coaching Vente                        | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Accès à la plateforme d’E-Learning et | Oui              | Oui                | Oui                | Oui                |
+|                                       |                  |                    |                    |                    |
+| à la base de connaissances d’Odoo     | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Avantages logiciel**                |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Accès au code source Odoo Enterprise  | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Code extension essai Odoo Enterprise  | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Avantages Ventes**                  |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission sur la plateforme          | 10%              | 100%               | 100%               | 100%               |
+| Odoo SH [#f1]_                        |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission sur Odoo Enterprise        | 10%              | 10%                | 15%                | 20%                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Accès à un Account Manager dédié      | Non              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Avantages marketing**               |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Accès au matériel de marketing        | Oui              | Oui                | Oui                | Oui                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Événement PARTENAIRE - ODOO support & | Non              | Oui                | Oui                | Oui                |
+| promotion                             |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+
+.. [#f1] Dans l'éventualité où le taux de commission de 100% sur la plate-forme Odoo SH serait modifié
+         au renouvellement par une nouvelle version de ce Contrat, le taux précédent continuerait à être
+         appliqué aux souscriptions en cours.
+
 
 4.3 Reconnaissance du partenaire
 --------------------------------
-ODOO promouvra le PARTENAIRE comme partenaire officiel sur le site Internet officiel (odoo.com).
+ODOO promouvra les "Official Partners" dans la liste des partenaires Odoo sur le site Internet officiel (odoo.com).
 
 ODOO octroie au PARTENAIRE, sur une base non exclusive, le droit d’utiliser et de reproduire
 le logo partenaire d’ODOO du niveau de partenariat correspondant et le nom « Odoo » en relation
@@ -322,11 +340,18 @@ en lien avec le Contrat et pour lequel aucun règlement à l’amiable ne peut �
 finalement réglé par les Tribunaux de Belgique à Nivelles.
 
 
-**Signatures**:
+.. rubric:: Signatures
 
-==================================      ==================================
-Pour ODOO,                              Pour le PARTENAIRE,
-==================================      ==================================
+.. only:: latex
+
+   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+
++---------------------------------------+------------------------------------------+
+| Pour ODOO,                            | Pour le PARTENAIRE,                      |
++=======================================+==========================================+
+|                                       |                                          |
+| |                                     |  |                                       |
++---------------------------------------+------------------------------------------+
 
 
 .. _appendix_p_a_fr:

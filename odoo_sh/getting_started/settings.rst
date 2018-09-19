@@ -58,6 +58,8 @@ In addition, they cannot use the webshell nor have access to the server logs.
 +---------------------+-----------------+-----------+-----------+
 |                     | Mails           |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
+|                     | Settings        |     X     |     X     |
++---------------------+-----------------+-----------+-----------+
 |Production & Staging | History         |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
 |                     | 1-click connect |           |     X     |
@@ -67,6 +69,10 @@ In addition, they cannot use the webshell nor have access to the server logs.
 |                     | Shell           |           |     X     |
 +---------------------+-----------------+-----------+-----------+
 |                     | Mails           |           |     X     |
++---------------------+-----------------+-----------+-----------+
+|                     | Backups         |           |     X     |
++---------------------+-----------------+-----------+-----------+
+|                     | Settings        |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
 |Status               |                 |     X     |     X     |
 +---------------------+-----------------+-----------+-----------+
@@ -154,8 +160,6 @@ You can use a third-party CDN such as *Cloudflare.com* to enable the *HTTPS* sup
 * `Choose an SSL mode <https://support.cloudflare.com/hc/en-us/articles/201897700-Step-4-Recommended-First-Steps-for-all-Cloudflare-users#sslmode>`_
 * `Redirect your visitors to HTTPS <https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL->`_
 
-.. _odoosh-gettingstarted-settings-submodules:
-
 SPF and DKIM compliance
 -----------------------
 In case the domain of your users email address uses SPF (Sender Policy Framework) or DKIM (DomainKeys Identified Mail)
@@ -165,6 +169,8 @@ The configuration steps are explained in the :ref:`Discuss app documentation <di
 
 .. Warning::
   Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the delivery of your emails as spam in your contacts inbox.
+
+.. _odoosh-gettingstarted-settings-submodules:
 
 Submodules
 ==========
@@ -202,3 +208,48 @@ To configure the deploy key for a private repository, proceed as follow:
   * Bitbucket.com: :menuselection:`Settings --> Access keys --> Add key`
   * Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`
   * Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory
+
+Storage Size
+============
+
+This section shows a small description of the storage size used by your project.
+
+.. image:: ./media/interface-settings-storage.png
+   :align: center
+
+If your production database exceeds 4 GB, you will automatically be billed on the subscription activating the project with the excess size.
+
+Database Workers
+================
+
+Additional database workers can be configured here. More workers help increase the load your production database is able to handle.
+
+.. image:: ./media/interface-settings-workers.png
+   :align: center
+
+.. Warning::
+  Adding more workers will not magically solve all performance issues. It mainly allows the server to handle more connections at the same time.
+
+Staging Branches
+================
+
+Additional staging branches allow you to develop and test more features at the same time.
+
+.. image:: ./media/interface-settings-staging-branches.png
+   :align: center
+
+Odoo Source Code
+================
+
+Lists the source code's revisions of your production database. Useful if you need to know if a recent bugfix has already been deployed or not.
+
+.. image:: ./media/interface-settings-source-code.png
+   :align: center
+
+Activation
+==========
+
+Shows the status of the project's activation. You can change the project's activation code if needed.
+
+.. image:: ./media/interface-settings-activation.png
+   :align: center

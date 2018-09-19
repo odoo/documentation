@@ -18,7 +18,7 @@ How to gather feedbacks from customers
 ======================================
 
 Before getting started some configuration is necessary. First of all
-it's necessary to install the **Project** application. To do so simply 
+it's necessary to install the **Project** application. To do so simply
 go to the apps module and install it.
 
 .. image:: media/feedback01.png
@@ -49,7 +49,7 @@ First, you need to choose for which projects you want to get a feedback.
 Project configuration
 ---------------------
 
-Go to the **Project** application, in the project settings select the 
+Go to the **Project** application, in the project settings select the
 **Customer satisfaction** option.
 
 .. image:: media/feedback04.png
@@ -106,6 +106,3 @@ it in the front end of the website.
 
 .. image:: media/feedback10.png
     :align: center
-
-.. seealso::
-    * :doc:`claim_issue`

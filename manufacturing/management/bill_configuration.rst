@@ -15,9 +15,6 @@ Setting up a Basic BoM
 
 If you choose to manage your manufacturing operations using manufacturing
 orders only, you will define basic bills of materials without routings.
-For more information about which method of management to use, review the
-**Getting Started** section of the *Manufacturing* chapter of the
-documentation.
 
 Before creating your first bill of materials, you will need to create a
 product and at least one component (components are considered products

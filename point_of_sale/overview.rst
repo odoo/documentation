@@ -7,4 +7,4 @@ Overview
 
    overview/start
    overview/setup
-
+   overview/register

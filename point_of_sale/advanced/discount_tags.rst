@@ -1,64 +1,54 @@
-=====================================
-How to use discount tags on products?
-=====================================
+==========================================
+Using discount tags with a barcode scanner
+==========================================
 
-This tutorial will describe how to use discount tags on products.
+If you want to sell your products with a discount, for a product getting
+close to its expiration date for example, you can use discount tags.
+They allow you to scan discount barcodes.
+
+.. note::
+   To use discount tags you will need to use a barcode scanner, you
+   can see the documentation about it 
+   `here <https://docs.google.com/document/d/1tg7yarr2hPKTddZ4iGbp9IJO-cp7u15eHNVnFoL40Q8/edit>`__
 
 Barcode Nomenclature
 ====================
 
-To start using discounts tags, let's first have a look at the **barcode
-nomenclature** in order to print our correct discounts tags.
+To use discounts tags, we need to learn about barcode nomenclature.
 
-I want to have a discount for the product with the following barcode.
+Let's say you want to have a discount for the product with the following
+barcode:
 
 .. image:: media/discount_tags01.png
-    :align: center
+   :align: center
 
-Go to :menuselection:`Point of Sale --> Configuration --> Barcode Nomenclatures`. 
-In the default nomenclature, you can see that to set a discount, you have to
-start you barcode with ``22`` and the add the percentage you want to set for
-the product. 
+You can find the *Default Nomenclature* under the settings of your PoS
+interface.
 
 .. image:: media/discount_tags02.png
-    :align: center
-
-For instance if you want ``50%`` discount on a product you have to start you
-barcode with ``2250`` and then add the product barcode. In our example, the
-barcode will be:
+   :align: center
 
 .. image:: media/discount_tags03.png
-    :align: center
+   :align: center
 
-Scanning your products
-======================
-
-If you go back to the **dashboard** and start a **new session**
+Let's say you want 50% discount on a product you have to start your
+barcode with 22 (for the discount barcode nomenclature) and then 50 (for
+the %) before adding the product barcode. In our example, the barcode would
+be:
 
 .. image:: media/discount_tags04.png
-    :align: center
+   :align: center
 
-You have to scan:
+Scan the products & tags
+========================
 
-1. the product
-
-2. the discount tag
-
-When the product is scanned, it appears on the ticket
+You first have to scan the desired product (in our case, a lemon).
 
 .. image:: media/discount_tags05.png
-    :align: center
+   :align: center
 
-Then when you scan the discount tag, ``50%`` discount is applied on the
-product.
+And then scan the discount tag. The discount will be applied and you can
+finish the transaction.
 
 .. image:: media/discount_tags06.png
-    :align: center
-
-That's it, this how you can use discount tag on products with Odoo.
-
-.. seealso::
-    * :doc:`../shop/cash_control`
-    * :doc:`../shop/invoice`
-    * :doc:`../shop/refund`
-    * :doc:`../shop/seasonal_discount`
+   :align: center

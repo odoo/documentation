@@ -19,9 +19,16 @@ Odoo S.A., inscrita en el Registro mercantil y de sociedades de Nivelles con el 
 que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière, Bélgica,
 y sus filiales (denominados conjuntamente “ODOO”)
 
-Y
-________________________________, una empresa que tiene su domicilio social
-en _____________________(en adelante denominado “EL COLABORADOR”)
+Y:
+
+_____________________________________________________________________________________,
+
+una empresa que tiene su domicilio social en
+
+_____________________________________________________________________________________.
+
+(en adelante denominado “EL COLABORADOR”)
+
 
 ODOO y EL COLABORADOR se denominan individualmente “Parte” y conjuntamente “las Partes”.
 
@@ -146,7 +153,7 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 | **Ventajas de las ventas**   |                 |                  |                |
 +------------------------------+-----------------+------------------+----------------+
 | Comisión por la plataforma   | 100%            | 100%             | 100%           |
-| Odoo SH [#f1es]              |                 |                  |                |
+| Odoo SH [#f1es]_             |                 |                  |                |
 +------------------------------+-----------------+------------------+----------------+
 | Comisión por Odoo Enterprise | 10%             | 15%              | 20%            |
 +------------------------------+-----------------+------------------+----------------+
@@ -338,13 +345,18 @@ Este contrato se rige y se interpreta de acuerdo con las leyes de Bélgica.
 Todas las disputas que surjan en relación con este contrato para las que no se pueda encontrar una
 solución amistosa serán resueltas definitivamente en los Tribunales de Bélgica en Nivelles.
 
+.. rubric:: Firmas
 
+.. only:: latex
 
-**Firmas**:
+   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
 
-==================================      ==================================
-Por ODOO,                               Por EL COLABORADOR,
-==================================      ==================================
++---------------------------------------+------------------------------------------+
+| Por ODOO,                             | Por EL COLABORADOR,                      |
++=======================================+==========================================+
+|                                       |                                          |
+| |                                     |  |                                       |
++---------------------------------------+------------------------------------------+
 
 
 .. _appendix_p_a_es:

@@ -1,86 +1,45 @@
-==============================
-How to apply manual discounts?
-==============================
+======================
+Apply manual discounts
+======================
 
-Overview
-========
+If you seldom use discounts, applying manual discounts might be the
+easiest solution for your Point of Sale.
 
-You can apply manual discounts in two different ways. You can directly
-set a discount on the product or you can set a global discount on the
-whole cart.
+You can either apply a discount on the whole order or on specific
+products.
 
-Discount on the product
-=======================
+Apply a discount on a product
+=============================
 
-On the dashboard, click on **New Session**:
+From your session interface, use *Disc* button.
 
 .. image:: media/manual_discount01.png
     :align: center
 
-You will get into the main point of sale interface :
+You can then input a discount (in percentage) over the product that is
+currently selected and the discount will be applied.
+
+Apply a global discount
+=======================
+
+To apply a discount on the whole order, go to :menuselection:`Point of
+Sales --> Configuration --> Point of sale` and select your PoS interface.
+
+Under the *Pricing* category, you will find *Global Discounts*
+select it.
 
 .. image:: media/manual_discount02.png
     :align: center
 
-On the right you can see the list of your products with the categories
-on the top. If you click on a product, it will be added in the cart. You
-can directly set the correct quantity or weight by typing it on the
-keyboard.
-
-The same way you insert a quantity, Click on **Disc** and then type the
-discount (in percent). This is how you insert a manual discount on a
-specific product.
+You now have a new *Discount* button in your PoS interface.
 
 .. image:: media/manual_discount03.png
     :align: center
 
-Global discount
-===============
-
-Configuration
--------------
-
-If you want to set a global discount, you need to go to 
-:menuselection:`Configuration --> Settings` and 
-tick **Allow global discounts**
+Once clicked you can then enter your desired discount (in percentages).
 
 .. image:: media/manual_discount04.png
     :align: center
 
-Then from the dashboard, click on :menuselection:`More --> Settings`
-
-.. image:: media/manual_discount05.png
-    :align: center
-
-You have to activate **Order Discounts** and create a product that will be
-added as a product with a negative price to deduct the discount.
-
-.. image:: media/manual_discount06.png
-    :align: center
-
-On the product used to create the discount, set the price to ``0`` and do
-not forget to remove all the **taxes**, that can make the calculation wrong.
-
-.. image:: media/manual_discount07.png
-    :align: center
-
-Set a global discount
----------------------
-
-Now when you come back to the **dashboard** and start a **new session**, a
-**Discount** button appears and by clicking on it you can set a **discount**.
-
-.. image:: media/manual_discount08.png
-    :align: center
-
-When it's validated, the discount line appears on the order and you can
-now process to the payment.
-
-.. image:: media/manual_discount09.png
-    :align: center
-
-.. seealso::
-    * :doc:`../shop/cash_control`
-    * :doc:`../shop/invoice`
-    * :doc:`../shop/refund`
-    * :doc:`../shop/seasonal_discount`
+On this example, you can see a global discount of 50% as well as a
+specific product discount also at 50%.

@@ -1,36 +1,21 @@
-===============================================
-How to register multiple orders simultaneously?
-===============================================
+========================
+Register multiple orders
+========================
 
-Register simultaneous orders
+The Odoo Point of Sale App allows you to register multiple orders
+simultaneously giving you all the flexibility you need.
+
+Register an additional order
 ============================
 
-On the main screen, just tap on the **+** on the top of the screen to
-register another order. The current orders remain opened until the
-payment is done or the order is cancelled.
+When you are registering any order, you can use the *+* button to add
+a new order.
+
+You can then move between each of your orders and process the payment
+when needed.
 
 .. image:: media/multi_orders01.png
     :align: center
 
-Switch from one order to another
-================================
-
-Simply click on the number of the order.
-
-.. image:: media/multi_orders02.png
-    :align: center
-
-Cancel an order
-===============
-
-If you made a mistake or if the order is cancelled, just click on the **-**
-button. A message will appear to confirm the order deletion.
-
-.. image:: media/multi_orders03.png
-    :align: center
-
-
-.. seealso::
-    * :doc:`../advanced/register`
-    * :doc:`../advanced/reprint`
-    * :doc:`transfer`
+By using the *-* button, you can remove the order you are currently
+on.

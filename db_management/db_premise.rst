@@ -34,7 +34,7 @@ Solutions
 
   * Check if your subscription details get the tag "In Progress" on
     your `Odoo Account
-    <https://accounts.odoo.com/my/contract>`__ or with your Account Manager
+    <https://accounts.odoo.com/my/subscription>`__ or with your Account Manager
 
 * Have you already linked a database with your subscription reference?
 
@@ -43,7 +43,7 @@ Solutions
     <https://www.odoo.com/partners>`__)
 
   * You can unlink the old database yourself on your `Odoo Contract
-    <https://accounts.odoo.com/my/contract>`__ with the button "Unlink database"
+    <https://accounts.odoo.com/my/subscription>`__ with the button "Unlink database"
 
     .. image:: media/unlink_single_db.png
         :align: center
@@ -63,7 +63,7 @@ Solutions
 
   * If it's not the case, you may have multiple databases sharing the same
     UUID. Please check on your `Odoo Contract
-    <https://accounts.odoo.com/my/contract>`__, a short message will appear
+    <https://accounts.odoo.com/my/subscription>`__, a short message will appear
     specifying which database is problematic:
 
     .. image:: media/unlink_db_name_collision.png
