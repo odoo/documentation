@@ -20,5 +20,6 @@ Applications
    livechat/livechat
    expense/expense
    general
+   iot
 ..   expenses
 ..   recruitment
