@@ -7,4 +7,5 @@ Internet of Things (IoT)
 .. toctree::
    :titlesonly:
 
-   iot/setup
+   iot/connect
+   iot/pos
