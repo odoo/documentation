@@ -128,3 +128,7 @@ If everything is correct, you can validate the PoS session and post the
 closing entries.
 
 It's done, you have now closed your first PoS session.
+
+.. tip::
+   To connect the PoS to hardware with an Odoo IoT Box, please see the section
+   :doc:`../../../iot/connect` and :doc:`../../../iot/pos`
