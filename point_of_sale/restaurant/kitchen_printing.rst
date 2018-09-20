@@ -13,7 +13,7 @@ To activate the *Order printing* feature, go to :menuselection:`Point
 of Sales --> Configuration --> Point of sale` and select your PoS
 interface.
 
-Under the PosBox / Hardware Proxy category, you will find *Order Printers*.
+Under the IoT Box / Hardware Proxy category, you will find *Order Printers*.
 
 Add a printer
 =============

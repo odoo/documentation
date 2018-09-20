@@ -29,21 +29,21 @@ Required hardware
   * Serial-to-USB adapter per FDM (`example
     <http://trendnet.com/products/proddetail.asp?prod=265_TU-S9>`__)
 
-* A registered POSBox per POS configuration
+* A registered IoT Box per POS configuration
 
 Setup
 =====
 
-POSBox
-------
+IoT Box
+-------
 
 In order to use a Fiscal Data Module, you will need a registered
-POSBox. These POSBoxes are similar to the regular POSBoxes we sell,
+IoT Box. These IoT Boxes are similar to the regular IoT Boxes we sell,
 but they are registered with the Belgian government. This is required
 by law. Attempting to use a Fiscal Data Module on a non-registered
-POSBox will not work. You can verify that the Fiscal Data Module is
-recognized by the POSBox by going to the *Hardware status page* via
-the POSBox homepage.
+IoT Box will not work. You can verify that the Fiscal Data Module is
+recognized by the IoT Box by going to the *Hardware status page* via
+the IoT Box homepage.
 
 .. image:: media/posbox_fdm_hardware_status.png
     :align: center
@@ -55,10 +55,10 @@ An Odoo POS app can be given certified POS capabilities by installing
 the **Belgian Registered Cash Register** app (technical name:
 ``pos_blackbox_be``). Because of government restrictions imposed on
 us, this installation cannot be undone. After this, you will have to
-ensure that each POS configuration has a unique registered POSBox
+ensure that each POS configuration has a unique registered IoT Box
 associated with it (:menuselection:`Point of Sale --> Configuration
---> Point of Sale` and ensure Hardware Proxy / POSBox and the serial
-number of your POSBox is set). The first time you open the Point of
+--> Point of Sale` and ensure Hardware Proxy / IoT Box and the serial
+number of your IoT Box is set). The first time you open the Point of
 Sale and attempt to do a transaction, you will be asked to input the
 PIN that you received with your VAT signing card.
 
@@ -87,6 +87,6 @@ non-certified Odoo POS.
 * Modifying orderline prices
 * Creating/modifying/deleting POS orders
 * Selling products without a valid tax
-* Multiple Odoo POS configurations per POSBox are not allowed
-* Using the POS without a connection to the POSBox (and thus FDM)
+* Multiple Odoo POS configurations per IoT Box are not allowed
+* Using the POS without a connection to the IoT Box (and thus FDM)
 * Blacklisted modules: pos_discount, pos_reprint, pos_loyalty

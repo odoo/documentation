@@ -11,7 +11,7 @@ Configuration
 To use a barcode scanner, go to :menuselection:`Point of Sale -->
 Configuration --> Point of sale` and select your PoS interface.
 
-Under the PosBox / Hardware category, you will find *Barcode Scanner*
+Under the IoT Box / Hardware category, you will find *Barcode Scanner*
 select it.
 
 .. image:: media/barcode01.png
