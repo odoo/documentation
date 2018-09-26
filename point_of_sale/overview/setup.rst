@@ -329,7 +329,7 @@ hardware drivers are implemented as Odoo modules. Those modules are
 all prefixed with ``hw_*`` and they are the only modules that are
 running on the POSBox. Odoo is only used for the framework it
 provides. No business data is processed or stored on the POSBox. The
-Odoo instance is a shallow git clone of the ``8.0`` branch.
+Odoo instance is a shallow git clone of the ``11.0`` branch.
 
 The root partition on the POSBox is mounted read-only, ensuring that
 we don't wear out the SD card by writing to it too much. It also
