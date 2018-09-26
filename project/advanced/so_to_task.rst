@@ -111,5 +111,4 @@ invoice your customers based on your invoicing policy.
 
 .. seealso::
     * :doc:`../configuration/setup`
-    * :doc:`../../sales/invoicing/services/reinvoice`
-    * :doc:`../../sales/invoicing/services/support`
+    * :doc:`../../sales/invoicing/subscriptions`
