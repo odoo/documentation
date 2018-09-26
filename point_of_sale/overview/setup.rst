@@ -249,7 +249,7 @@ create a group that has access to USB devices
 
 ``# groupadd usbusers``
 
-Then we add the user who will run the OpenERP server to ``usbusers``
+Then we add the user who will run the Odoo server to ``usbusers``
 
 ``# usermod -a -G usbusers USERNAME``
 
