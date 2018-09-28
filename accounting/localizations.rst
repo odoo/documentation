@@ -11,3 +11,4 @@ Localizations
    localizations/nederlands
    localizations/spain
    localizations/switzerland
+   localizations/colombia
