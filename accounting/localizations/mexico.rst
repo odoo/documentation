@@ -76,7 +76,7 @@ company’s contact.
 .. tip::
    If you want use the Mexican localization on test mode, you can put any known
    address inside Mexico with all fields for the company address and
-   set the vat to **ACO560518KW7**.
+   set the vat to **TCM970625MB1**.
 
 .. image:: media/mexico03.png
    :align: center
