@@ -77,7 +77,7 @@ You can start using Odoo.sh. Your first build is about to be created. You will s
 Import your database
 ====================
 
-You can import your database in your Odoo.sh project as long as this is an Odoo 10.0 or 11.0 database.
+You can import your database in your Odoo.sh project as long as this is an Odoo 10.0, 11.0 or above database.
 
 Push your modules in production
 -------------------------------
@@ -108,7 +108,7 @@ Access the URL :file:`/web/database/manager` of your on-premise database and dow
 
   If you cannot access the database manager, it may have been disabled by your system administrator.
   See the `database manager security documentation
-  <https://www.odoo.com/documentation/11.0/setup/deploy.html#database-manager-security>`_.
+  <https://www.odoo.com/documentation/12.0/setup/deploy.html#database-manager-security>`_.
 
 You will need the master password of your database server. If you do not have it, contact your system administrator.
 

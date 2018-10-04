@@ -51,7 +51,7 @@ Scaffolding the module
 
 While not necessary, scaffolding avoids the tedium of setting the basic Odoo module structure.
 It nevertheless requires *odoo-bin*, and therefore the
-`installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_ on your machine.
+`installation of Odoo <https://www.odoo.com/documentation/12.0/setup/install.html#source-install>`_ on your machine.
 
 If you do not want to bother installing Odoo on your machine,
 you can also :download:`download this module structure template <media/my_module.zip>` in which you replace every occurrences of
@@ -114,7 +114,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow `Build an Odoo module <https://www.odoo.com/documentation/11.0/howtos/backend.html>`_ to understand
+you can follow `Build an Odoo module <https://www.odoo.com/documentation/12.0/howtos/backend.html>`_ to understand
 the structure of a module and the content of each file.
 
 Push the development branch
