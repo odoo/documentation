@@ -116,7 +116,7 @@ or
 
 * **Deactivate users** as explained in this `Documentation 
   <https://www.odoo.com
-  /documentation/user/11.0/db_management/documentation.html#deactivating-users>`__
+  /documentation/user/12.0/db_management/documentation.html#deactivating-users>`__
   and **Reject** the upsell quotation.
 
 Once your database has the correct number of users, the expiration message
