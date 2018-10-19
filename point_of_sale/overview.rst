@@ -6,5 +6,4 @@ Overview
    :titlesonly:
 
    overview/start
-   overview/setup
    overview/register
