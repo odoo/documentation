@@ -1,16 +1,16 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015-TODAY, Odoo S.A.
-# This file is distributed under the same license as the Odoo Business package.
+# This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 10.0\n"
+"Project-Id-Version: Odoo 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-10-10 09:08+0200\n"
+"POT-Creation-Date: 2018-10-19 10:03+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Pablo Rojas <rojaspablo88@gmail.com>, 2017\n"
+"Last-Translator: Jimmy Ramos <jimmybanegas93@gmail.com>, 2018\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -302,6 +302,12 @@ msgid ""
 "unique identifier. You can also find this record using its name but you will"
 " be stuck if at least 2 records have the same name."
 msgstr ""
+"Para re-crear las relaciones entre los distintos registros, deberías usar el"
+" identificador único de la aplicación original y mapearlo con la columna "
+"**ID** (ID Externo) en Odoo. Cuando importas otro registor que se relaciona "
+"con el primero, usa **XXX/ID** (XXX/ID Externo) para el identificador "
+"original. Puedes también encontrar este registro usando su nombre pero te "
+"vas a encontrar con al menos 2 registros con el mismo nombre."
 
 #: ../../general/base_import/import_faq.rst:54
 msgid ""
@@ -309,6 +315,9 @@ msgid ""
 "re-import modified data later, it's thus good practice to specify it "
 "whenever possible."
 msgstr ""
+"El **ID** será usado para actualizar la importacion original si necesitas "
+"re-importar los datos después, aunque es buena práctica especificarlo cuando"
+" sea posible."
 
 #: ../../general/base_import/import_faq.rst:60
 msgid "I cannot find the field I want to map my column to"
@@ -324,6 +333,13 @@ msgid ""
 "wrong or that you want to map your column to a field that is not proposed by"
 " default."
 msgstr ""
+"Odoo trata de buscar con algo de heurística, basado en las primeras diez "
+"líneas de los archivos, el tipo del campo por cada columna dentro de tu "
+"archivo. Por ejemplo si tienes una columna que solo contiene númetos, solo "
+"los campos que son de tipo *Entero* se mostrarán para que escojas. Miestras "
+"que este comportamiento puede resultar bueno y fácil para muchos casos, es "
+"también posible que no salga bien o que quieras mapear tu columna con un "
+"campo que no es propuesto por defecto."
 
 #: ../../general/base_import/import_faq.rst:71
 msgid ""
@@ -331,6 +347,9 @@ msgid ""
 "fields (advanced)** option, you will then be able to choose from the "
 "complete list of fields for each column."
 msgstr ""
+"Si eso pasa, solo tienes que seleccionar la opción **Mostrar campos de "
+"campos de relación (avanzado)**, despúes podrás elegir de la lista completa "
+"de cada columna."
 
 #: ../../general/base_import/import_faq.rst:79
 msgid "Where can I change the date import format?"
@@ -345,6 +364,13 @@ msgid ""
 "inverted as example) as it is difficult to guess correctly which part is the"
 " day and which one is the month in a date like '01-03-2016'."
 msgstr ""
+"Odoo puede detectar automáticamente si una columna es una fecha y tratar de "
+"inferir el formato de la fecha de un set de formatos de fechas más usuados. "
+"Mientras este proceso puede funcionar para muchos formatos de fecha simples,"
+" algunos más exóticos not podrán ser reconocidos y por lo tanto es posible "
+"tener algún tipo de confusión (día y mes invertido por ejemplo) ya que es "
+"difícil saber cual parte es el día y cual es el mes en fechas como "
+"'01-03-2016'."
 
 #: ../../general/base_import/import_faq.rst:83
 msgid ""
@@ -353,6 +379,11 @@ msgid ""
 "selector. If this format is incorrect you can change it to your liking using"
 " the *ISO 8601* to define the format."
 msgstr ""
+"Para ver cuáles formatos de fecha ha encontrado Odoo en tu archvico, puedes "
+"revisar **Formato de fecha** que es mostrado cuando haces clic en "
+"**Opciones** bajo el selector de archivos. Si el formato es incorrecto "
+"puedes cambiarlo a tu preferencia usando el **ISO 8601** para definir el "
+"formato."
 
 #: ../../general/base_import/import_faq.rst:86
 msgid ""
@@ -361,6 +392,10 @@ msgid ""
 " stored. That way you will be sure that the date format is correct in Odoo "
 "whatever your locale date format is."
 msgstr ""
+"Si estás importando un archivo de excel (.xls, .xlsx), puedes usar celdad "
+"tipo fecha ya que las fechas se muestran de manera distinta a como se "
+"almacenan. De esa forma te puedes asegurar que el formato de fecha está "
+"correcto independientemente del formato de fecha de la localización."
 
 #: ../../general/base_import/import_faq.rst:91
 msgid "Can I import numbers with currency sign (e.g.: $32.00)?"
@@ -375,11 +410,17 @@ msgid ""
 "known to Odoo, it might not be recognized as a number though and it will "
 "crash."
 msgstr ""
+"Sí, soportamos números con paréntesis que representan signos negativos así "
+"como números con el signo de moneda. Odoo detecta automáticamtte cual "
+"separador miles/decimal usas (puedes cambiar eso bajo **opciones**). Si usas"
+" un símbolo de moneda que no es conocido por Odoo, puede no ser reconocido "
+"como un número y podrá dar error."
 
 #: ../../general/base_import/import_faq.rst:95
 msgid ""
 "Examples of supported numbers (using thirty-two thousands as an example):"
 msgstr ""
+"Ejemplos de números soportados (usadndo treinta y dos mil como ejemplo):"
 
 #: ../../general/base_import/import_faq.rst:97
 msgid "32.000,00"
@@ -424,6 +465,8 @@ msgstr "$ (32.000,00)"
 #: ../../general/base_import/import_faq.rst:113
 msgid "What can I do when the Import preview table isn't displayed correctly?"
 msgstr ""
+"¿Qué puedo hacer cuando la tabla de vista previa de Importar no se muestra "
+"correctamente?"
 
 #: ../../general/base_import/import_faq.rst:115
 msgid ""
@@ -432,6 +475,11 @@ msgid ""
 "settings, you can modify the File Format Options (displayed under the Browse"
 " CSV file bar after you select your file)."
 msgstr ""
+"Por defecto, la previsualización de la importación se establece con comas "
+"como separadores de campo y comillas como delimitadores de texto. Si su "
+"archivo CSV no tiene estos parámetros, puede modificar las opciones de "
+"formato de archivo (mostradas bajo la barra de 'Seleccionar archivo CSV' "
+"después de seleccionar el archivo)."
 
 #: ../../general/base_import/import_faq.rst:117
 msgid ""
@@ -439,12 +487,18 @@ msgid ""
 "detect the separations. You will need to change the file format options in "
 "your spreadsheet application. See the following question."
 msgstr ""
+"Tenga en cuenta que si su archivo CSV tiene como separador el tabulador, "
+"Odoo no detectará las separaciones. Necesitará cambiar las opciones del "
+"formato de archivo en su aplicación de hoja de cálculo. Vea la siguiente "
+"pregunta."
 
 #: ../../general/base_import/import_faq.rst:122
 msgid ""
 "How can I change the CSV file format options when saving in my spreadsheet "
 "application?"
 msgstr ""
+"¿Cómo puede cambiar el formato del archivo CSV cuando se guarda en mi "
+"aplicación de hoja de cálculo?"
 
 #: ../../general/base_import/import_faq.rst:124
 msgid ""
@@ -454,16 +508,24 @@ msgid ""
 "modify all three options (in 'Save As' dialog box > Check the box 'Edit "
 "filter settings' > Save)."
 msgstr ""
+"Si edita y guarda archivos en las aplicaciones de hoja de cálculo, se "
+"aplicará la configuración regional del ordenador para el separador y el "
+"delimitador. Le sugerimos usar OpenOffice o LibreOffice Calc, que permiten "
+"modificar dichas opciones (en 'Guardar como...' > Marcar casilla 'Editar "
+"filtro' > Gurdar)."
 
 #: ../../general/base_import/import_faq.rst:126
 msgid ""
 "Microsoft Excel will allow you to modify only the encoding when saving (in "
 "'Save As' dialog box > click 'Tools' dropdown list > Encoding tab)."
 msgstr ""
+"Microsoft Excel permite modificar solamente la codificación cuando guarda un"
+" archivo CSV (en el cuadro de diálogo 'Guardar como' > pulsar la lista "
+"desplegable 'Herramientas' > pestaña 'Codificación')."
 
 #: ../../general/base_import/import_faq.rst:131
 msgid "What's the difference between Database ID and External ID?"
-msgstr ""
+msgstr "¿Cuál es la diferencia entre id. de la BD e ID Externo?"
 
 #: ../../general/base_import/import_faq.rst:133
 msgid ""
@@ -474,12 +536,19 @@ msgid ""
 "mechanisms. You must use one and only one mechanism per field you want to "
 "import."
 msgstr ""
+"Algunos campos definen una relación con otro objeto. Por ejemplo, el país de"
+" un contacto es un enlace a un objeto 'País'. Cuando quiere importar esos "
+"campos, Odoo tendrá que recrear los enlaces entre los correspondientes "
+"campos. Odoo provee 3 mecanismos. Debe usar uno y sólo uno de esos "
+"mecanismos por campo a importar."
 
 #: ../../general/base_import/import_faq.rst:135
 msgid ""
 "For example, to reference the country of a contact, Odoo proposes you 3 "
 "different fields to import:"
 msgstr ""
+"Por ejemplo, para referenciar el país de un contacto, Odoo propone 3 modos "
+"diferentes de importación:"
 
 #: ../../general/base_import/import_faq.rst:137
 msgid "Country: the name or code of the country"
@@ -490,16 +559,21 @@ msgid ""
 "Country/Database ID: the unique Odoo ID for a record, defined by the ID "
 "postgresql column"
 msgstr ""
+"País/ID de Base de datos: el ID único de Odoo para un registro, definido por"
+" la columna ID de PostgreSQL"
 
 #: ../../general/base_import/import_faq.rst:139
 msgid ""
 "Country/External ID: the ID of this record referenced in another application"
 " (or the .XML file that imported it)"
 msgstr ""
+"País/ID Externo: el ID de este registro referenciado en otra aplicación (o "
+"del archivo .XML que lo importó)"
 
 #: ../../general/base_import/import_faq.rst:141
 msgid "For the country Belgium, you can use one of these 3 ways to import:"
 msgstr ""
+"Para el país Bélgica, puede usar uno de estos3 métodos de importación:"
 
 #: ../../general/base_import/import_faq.rst:143
 msgid "Country: Belgium"
@@ -507,7 +581,7 @@ msgstr "País: Bélgica"
 
 #: ../../general/base_import/import_faq.rst:144
 msgid "Country/Database ID: 21"
-msgstr ""
+msgstr "País/Id. de la BD: 21"
 
 #: ../../general/base_import/import_faq.rst:145
 msgid "Country/External ID: base.be"
@@ -519,12 +593,17 @@ msgid ""
 "records in relations. Here is when you should use one or the other, "
 "according to your need:"
 msgstr ""
+"De acuerdo a sus necesidades, puede usar una de estas 3 formas de "
+"referenciar registros en las relaciones. Aquí es donde debe usar una u otra,"
+" conforme a sus necesidades:"
 
 #: ../../general/base_import/import_faq.rst:149
 msgid ""
 "Use Country: This is the easiest way when your data come from CSV files that"
 " have been created manually."
 msgstr ""
+"Usar País: Ésta es lo forma más sencilla cuando los datos provienen de "
+"archivos CSV que se han creado manualmente."
 
 #: ../../general/base_import/import_faq.rst:150
 msgid ""
@@ -533,12 +612,18 @@ msgid ""
 "may have several records with the same name, but they always have a unique "
 "Database ID)"
 msgstr ""
+"Usar País/Id. de la BD: Raramente debería usar esta notación. Se usa más a "
+"menudo por los desarrolladores puesto que su principal ventaja es la de no "
+"tener nunca conflictos (puede que tenga varios registros con el mismo "
+"nombre, pero sólo tendrán un único id. de base de datos)"
 
 #: ../../general/base_import/import_faq.rst:151
 msgid ""
 "Use Country/External ID: Use External ID when you import data from a third "
 "party application."
 msgstr ""
+"Usar País/Id. externo: Use id. externo cuando importa datos de una "
+"aplicación externa."
 
 #: ../../general/base_import/import_faq.rst:153
 msgid ""
@@ -548,18 +633,27 @@ msgid ""
 "\"Field/External ID\". The following two CSV files give you an example for "
 "Products and their Categories."
 msgstr ""
+"Cuando se usan identificadores externos, puede importar archivos CSV con la "
+"columna \"Id. externo\" para definir el id. externo de cada registro a "
+"importar. Entonces, podrá hacer referencia a ese registro con columnas del "
+"tipo \"Id. de campo/externo\". Los siguientes dos archivos son un ejemplo "
+"para los productos y sus categorías."
 
 #: ../../general/base_import/import_faq.rst:155
 msgid ""
 "`CSV file for categories "
 "<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`_."
 msgstr ""
+"`Archivo CSV para categorías "
+"<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:157
 msgid ""
 "`CSV file for Products "
 "<../../_static/example_files/External_id_3rd_party_application_products.csv>`_."
 msgstr ""
+"`Archivo CSV para Productos "
+"<../../_static/example_files/External_id_3rd_party_application_products.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:161
 msgid "What can I do if I have multiple matches for a field?"
@@ -575,6 +669,13 @@ msgid ""
 "Category list (\"Misc. Products/Sellable\"). We recommend you modify one of "
 "the duplicates' values or your product category hierarchy."
 msgstr ""
+"Si por ejemplo tiene dos categorías de producto con el nombre hijo de "
+"\"Vendibles\" (por ejemplo \"Productos miscelánea/Vendibles\" y \"Otros "
+"productos/Vendibles\"), la validación se para, pero aún podrá importar los "
+"datos. Sin embargo, recomendamos no importar los datos porque estarán "
+"vinculados todos a la primera categoría \"Vendibles\" encontrada en la lista"
+" de categorías de producto (\"Misc. Productos/Vendibles\"). Recomendamos "
+"modificar uno de los valores duplicados o la jerarquía de categorías."
 
 #: ../../general/base_import/import_faq.rst:165
 msgid ""
@@ -582,12 +683,17 @@ msgid ""
 "categories, we recommend you use make use of the external ID for this field "
 "'Category'."
 msgstr ""
+"Sin embargo, si no desea cambiar la configuración de las categorías de "
+"producto, le recomendamos que haga uso de id. externo para este campo "
+"'Categoría'."
 
 #: ../../general/base_import/import_faq.rst:170
 msgid ""
 "How can I import a many2many relationship field (e.g. a customer that has "
 "multiple tags)?"
 msgstr ""
+"¿Cómo puedo importar un campo de relación many2many (muchos a muchos; por "
+"ejemplo: un cliente que tiene múltiples etiquetas)?"
 
 #: ../../general/base_import/import_faq.rst:172
 msgid ""
@@ -596,18 +702,26 @@ msgid ""
 "'Retailer' then you will encode \"Manufacturer,Retailer\" in the same column"
 " of your CSV file."
 msgstr ""
+"Las etiquetas deben de ir separadas por comas sin espacios. Por ejemplo, si "
+"quieres que tu cliente sea vinculado con ambas etiquetas 'Fabricante' y "
+"'Mayorista', entonces debes codificar 'Fabricante,Mayorista\" en la misma "
+"columna del archivo CSV."
 
 #: ../../general/base_import/import_faq.rst:174
 msgid ""
 "`CSV file for Manufacturer, Retailer "
 "<../../_static/example_files/m2m_customers_tags.csv>`_."
 msgstr ""
+"`Archivo CSV para Fabricante, Minorista "
+"<../../_static/example_files/m2m_customers_tags.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:179
 msgid ""
 "How can I import a one2many relationship (e.g. several Order Lines of a "
 "Sales Order)?"
 msgstr ""
+"¿Cómo puedo importar una relación uno a muchos (one2many - por ejemplo: las "
+"líneas de pedido del pedido de venta)?"
 
 #: ../../general/base_import/import_faq.rst:181
 msgid ""
@@ -619,36 +733,51 @@ msgid ""
 "purchase.order_functional_error_line_cant_adpat.CSV file of some quotations "
 "you can import, based on demo data."
 msgstr ""
+"Si quiere importar los pedidos de venta teniendo varias líneas de pedido; "
+"para cada línea de pedido, necesita reservar una fila específica en el "
+"archivo CSV. La primera línea de pedido será importada en la misma fila que "
+"la información relativa al pedido. Cualquier línea adicional necesitará una "
+"fila adicional que no tenga información en los campos relativos al pedido."
 
 #: ../../general/base_import/import_faq.rst:184
 msgid ""
 "`File for some Quotations "
 "<../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv>`_."
 msgstr ""
+"`Archivo para algunas Cotizaciones "
+"<../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:186
 msgid ""
 "The following CSV file shows how to import purchase orders with their "
 "respective purchase order lines:"
 msgstr ""
+"El siguiente archivo CSV muestra como importar pedidos de compra con sus "
+"respectivas líneas de pedido de compra:"
 
 #: ../../general/base_import/import_faq.rst:188
 msgid ""
 "`Purchase orders with their respective purchase order lines "
 "<../../_static/example_files/o2m_purchase_order_lines.csv>`_."
 msgstr ""
+"`Pedidos de compra con sus respectivas líneas de pedido de compra "
+"<../../_static/example_files/o2m_purchase_order_lines.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:190
 msgid ""
 "The following CSV file shows how to import customers and their respective "
 "contacts:"
 msgstr ""
+"El siguiente archivo CSV muestra cómo importar clientes y sus respectivos "
+"contactos:"
 
 #: ../../general/base_import/import_faq.rst:192
 msgid ""
 "`Customers and their respective contacts "
 "<../../_static/example_files/o2m_customers_contacts.csv>`_."
 msgstr ""
+"`Clientes y sus respectivos contactos "
+"<../../_static/example_files/o2m_customers_contacts.csv>`_."
 
 #: ../../general/base_import/import_faq.rst:197
 msgid "Can I import several times the same record?"
@@ -663,16 +792,25 @@ msgid ""
 "two imports. Odoo will take care of creating or modifying each record "
 "depending if it's new or not."
 msgstr ""
+"Si importas un fichero que contiene uno de las siguientes columnas "
+"\"External ID\" o \"Database ID\", los registros que ya han sido importados "
+"serán modificados en lugar de ser creados de nuevo. Esto es bastante útil, "
+"ya que le permitirá importar varias veces el mismo CSV realizando cambios "
+"entre dos importaciones. Odoo tendrá cuidado de crear o modificar cada "
+"registro dependiendo de si es nuevo o no."
 
 #: ../../general/base_import/import_faq.rst:201
 msgid ""
 "This feature allows you to use the Import/Export tool of Odoo to modify a "
 "batch of records in your favorite spreadsheet application."
 msgstr ""
+"Esta características permite usar la herramienta de importación/exportación "
+"de Odoo para modificar un lote de registros en su aplicación de hoja de "
+"cálculo favorita."
 
 #: ../../general/base_import/import_faq.rst:206
 msgid "What happens if I do not provide a value for a specific field?"
-msgstr ""
+msgstr "¿Qué pasa si no proveo de un valor para un campo específico?"
 
 #: ../../general/base_import/import_faq.rst:208
 msgid ""
@@ -681,10 +819,15 @@ msgid ""
 "in your CSV file, Odoo will set the EMPTY value in the field, instead of "
 "assigning the default value."
 msgstr ""
+"Si no ha establecido todos los campos en su archivo CSV, Odoo asignará el "
+"valor por defecto para cada uno de los campos no definidos. Pero si "
+"establece campos con valores vacíos en su archivo CSV, Odoo establecerá el "
+"valor VACÍO en el campo, en lugar de asignar el valor por defecto."
 
 #: ../../general/base_import/import_faq.rst:213
 msgid "How to export/import different tables from an SQL application to Odoo?"
 msgstr ""
+"¿Cómo exportar/importar diferentes tablas de una aplicación SQL a Odoo?"
 
 #: ../../general/base_import/import_faq.rst:215
 msgid ""
@@ -693,6 +836,10 @@ msgid ""
 " companies and persons, you will have to recreate the link between each "
 "person and the company they work for)."
 msgstr ""
+"Si necesita importar datos de diversas tablas, puede recrear relaciones "
+"entre los registros pertenecientes a diferentes tablas (por ejemplo, si "
+"importa compañías y personas, tendrá que recrear el enlace entre cada "
+"persona y la compañía para la que trabaja)."
 
 #: ../../general/base_import/import_faq.rst:217
 msgid ""
@@ -703,6 +850,12 @@ msgid ""
 "this \"External ID\" with the name of the application or table. (like "
 "'company_1', 'person_1' instead of '1')"
 msgstr ""
+"Para gestionar relaciones entre tablas, puede utilizar el \"External ID\" "
+"facilitado por Odoo. El \"External ID\" de un registro es el identificador "
+"único de ese registro en otra aplicación. Este \"External ID\" debe ser "
+"único entre todos los registros de todos los objetos, así que es una buena "
+"practica para prefijar este \"External ID\" con el nombre de la aplicación o"
+" la tabla (como \"company _1\", \"contact_1\", en lugar de \"1\")."
 
 #: ../../general/base_import/import_faq.rst:219
 msgid ""
@@ -713,26 +866,36 @@ msgid ""
 "href=\"/base_import/static/csv/database_import_test.sql\">dump of such a "
 "PostgreSQL database</a>)"
 msgstr ""
+"Como ejemplo, supongo que tiene una base de datos SQL con dos tablas que "
+"quiere importar: compañías y personas. Cada persona pertenece a una "
+"compañía, por lo que tendrá que recrear el enlace entre la persona y la "
+"compañía en la que trabaja. (Si quiere comprobar este ejemplo, aquí hay un<a"
+" href=\"/base_import/static/csv/database_import_test.sql\">dump de dicha "
+"base de datos PostgreSQL</a>)"
 
 #: ../../general/base_import/import_faq.rst:221
 msgid ""
 "We will first export all companies and their \"External ID\". In PSQL, write"
 " the following command:"
 msgstr ""
+"Se exportará primero todas las compañías y sus id. externos. En PSQL, "
+"escriba el siguiente comando:"
 
 #: ../../general/base_import/import_faq.rst:227
 msgid "This SQL command will create the following CSV file::"
-msgstr ""
+msgstr "Este comando SQL creará el siguiente archivo CSV:"
 
 #: ../../general/base_import/import_faq.rst:234
 msgid ""
 "To create the CSV file for persons, linked to companies, we will use the "
 "following SQL command in PSQL:"
 msgstr ""
+"Para crear un archivo CSV para personas, enlazadas a compañías, usaremos el "
+"siguiente comando SQL en PSQL:"
 
 #: ../../general/base_import/import_faq.rst:240
 msgid "It will produce the following CSV file::"
-msgstr ""
+msgstr "Se creará el siguiente archivo CSV:"
 
 #: ../../general/base_import/import_faq.rst:248
 msgid ""
@@ -743,6 +906,13 @@ msgid ""
 "avoid a conflict of ID between persons and companies (person_1 and company_1"
 " who shared the same ID 1 in the orignial database)."
 msgstr ""
+"Como puede ver en este archivo, Fabien y Laurence están trabajando para la "
+"compañía Bigees (company_1) y Eric está trabajando para la compañía Organi. "
+"La relación entre las personas y las compañías se hace usando el id. externo"
+" de las compañías. Hemos tenido que prefijar el id. externo con el nombre de"
+" la tabla para evitar un conflicto de id. entre las personas y las compañías"
+" (person_1 y company_1 comparten el mismo ID 1 en la base de datos "
+"original)."
 
 #: ../../general/base_import/import_faq.rst:250
 msgid ""
@@ -751,10 +921,15 @@ msgid ""
 "contacts and 3 companies. (the firsts two contacts are linked to the first "
 "company). You must first import the companies and then the persons."
 msgstr ""
+"Los dos archivos producidos están listos para ser importados en Odoo sin "
+"ninguna modificación. Después de haber importado estos dos archivos CSV, "
+"tendrá 4 contactos y 3 compañías (los  dos primeros contactos están "
+"enlazados a la primer compañía). Debe importar primero las compañías y luego"
+" los contactos."
 
 #: ../../general/odoo_basics.rst:3
 msgid "Basics"
-msgstr ""
+msgstr "Básico"
 
 #: ../../general/odoo_basics/add_user.rst:3
 msgid "How to add a user"
@@ -765,6 +940,8 @@ msgid ""
 "Odoo provides you with the option to add additional users at any given "
 "point."
 msgstr ""
+"Odoo le provee la opción de agregar usuarios adicionales en cualquier "
+"momento."
 
 #: ../../general/odoo_basics/add_user.rst:9
 msgid "Add individual users"
@@ -777,12 +954,19 @@ msgid ""
 "professional email address - the one he will use to log into Odoo instance -"
 " and a picture."
 msgstr ""
+"Desde el módulo de Configuración, ingresa al submenú :menuselection:`Usuario"
+" --> Usuario` y hace clic en **Crear**. Se añade primero el nombre del nuevo"
+" vendedor y su correo electrónico profesional o de la empresa, el que usará "
+"para iniciar sesión en la instancia de Odoo, así como la imagen del perfil."
 
 #: ../../general/odoo_basics/add_user.rst:19
 msgid ""
 "Under Access Rights, you can choose which applications your user can access "
 "and use. Different levels of rights are available depending on the app."
 msgstr ""
+"En \"Derechos de Acceso\", se puede elegir las aplicaciones que el usuario "
+"tiene acceso y puede utilizar. Los diferentes niveles de derechos están "
+"disponibles dependiendo de la aplicación. "
 
 #: ../../general/odoo_basics/add_user.rst:23
 msgid ""
@@ -790,6 +974,10 @@ msgid ""
 "invitation email will automatically be sent to the user. The user must click"
 " on it to accept the invitation to your instance and create a log-in."
 msgstr ""
+"Cuando haya terminado de editar la página y haya hecho clic en **Guardar**, "
+"un correo electrónico de invitación se enviará automáticamente al usuario. "
+"El usuario deberá dar clic en aceptar la invitación para su instancia y "
+"deberá crear un ingreso."
 
 #: ../../general/odoo_basics/add_user.rst:32
 msgid ""
@@ -797,6 +985,9 @@ msgid ""
 "Refer to our `*Pricing page* <https://www.odoo.com/pricing>`__ for more "
 "information."
 msgstr ""
+"Recuerde que cada usuario adicional incrementará la cuota de suscripción. "
+"Refierase a nuestra `*Página de precios* <https://www.odoo.com/pricing>`__ "
+"para más información."
 
 #: ../../general/odoo_basics/add_user.rst:39
 msgid ""
@@ -806,36 +997,44 @@ msgid ""
 " to set his password. You will then be able to define his accesses rights "
 "under the :menuselection:`Settings --> Users menu`."
 msgstr ""
+"También se puede agregar un nuevo vendedor sobre la marcha del equipo de "
+"ventas, incluso antes de que se haya registrado como usuario Odoo. Desde la "
+"captura de pantalla anterior, haga clic en \"Crear\" para añadir a su "
+"vendedor y escriba su nombre y correo electrónico. Después de guardar, el "
+"vendedor recibirá una invitación que contiene un enlace a establecer su "
+"contraseña. A continuación, será capaz de definir sus derechos de acceso "
+"bajo el menú :menuselection:`Configuración --> Usuarios`."
 
 #: ../../general/odoo_basics/add_user.rst:45
 msgid ""
 "`Deactivating Users <../../db_management/documentation.html#deactivating-"
 "users>`_"
 msgstr ""
-
-#: ../../general/odoo_basics/add_user.rst:46
-msgid ":doc:`../../crm/salesteam/setup/create_team`"
-msgstr ""
+"`Desactivando Usuarios <../../db_management/documentation.html#deactivating-"
+"users>`_"
 
 #: ../../general/odoo_basics/choose_language.rst:3
 msgid "Manage Odoo in your own language"
-msgstr ""
+msgstr "Gestione Odoo en su propio lenguaje"
 
 #: ../../general/odoo_basics/choose_language.rst:5
 msgid ""
 "Odoo provides you with the option to manage Odoo in different languages, and"
 " each user can use Odoo in his own language ."
 msgstr ""
+"Odoo le provee la opción de gestrionar Odoo en diferentes lenguajes, y cada "
+"usuario puede usar Odoo en su propio lenguaje."
 
 #: ../../general/odoo_basics/choose_language.rst:9
 msgid "Load your desired language"
-msgstr ""
+msgstr "Cargue su lenguaje deseado"
 
 #: ../../general/odoo_basics/choose_language.rst:11
 msgid ""
 "The first thing to do is to load your desired language on your Odoo "
 "instance."
 msgstr ""
+"Lo primero por hacer es cargar su lenguaje deseado en la instancia Odoo."
 
 #: ../../general/odoo_basics/choose_language.rst:14
 msgid ""
@@ -843,12 +1042,18 @@ msgid ""
 " the page select :menuselection:`Translations --> Load a Translation`, "
 "select a language to install and click on **LOAD.**"
 msgstr ""
+"Desde el tablero general clic sobre la aplicación **Configuraciones**; en la"
+" esquina superior izquierda seleccione :menuselection:`Traducciones --> "
+"Cargar una Traducción`, seleccionar un lenguaje a instalar y clic en "
+"**CARGAR.**"
 
 #: ../../general/odoo_basics/choose_language.rst:23
 msgid ""
 "If you check the \"Websites to translate\" checkbox you will have the option"
 " to change the navigation language on your website."
 msgstr ""
+"Si selecciona los \"Sitios web a traducir\"  tendrá la opción de cambiar el "
+"lenguaje de navenagción en su sitio web."
 
 #: ../../general/odoo_basics/choose_language.rst:27
 msgid "Change your language"
@@ -859,26 +1064,32 @@ msgid ""
 "You can change the language to the installed language by going to the drop-"
 "down menu at the top right side of the screen, choose **Preferences**."
 msgstr ""
+"Puedes cambiar el lenguaje instalado yendo al menú desplegable en la esquina"
+" superior derecha de tu pantalla, elige **Preferencias**"
 
 #: ../../general/odoo_basics/choose_language.rst:36
 msgid ""
 "Then change the Language setting to your installed language and click "
 "**SAVE.**"
 msgstr ""
+"Después change la configuración Lenguaje a tu lenguaje instalado y haz clic "
+"en **GUARDAR.**"
 
 #: ../../general/odoo_basics/choose_language.rst:42
 msgid "Open a new menu to view the changes."
-msgstr ""
+msgstr "Abre un nuuevo menú para ver los cambios."
 
 #: ../../general/odoo_basics/choose_language.rst:45
 msgid "Change another user's language"
-msgstr ""
+msgstr "Cambiar el lenguaje de otro usuario"
 
 #: ../../general/odoo_basics/choose_language.rst:47
 msgid ""
 "Odoo also gives you the possibility for each user to choose his preferred "
 "language."
 msgstr ""
+"Odoo también le da la posibilidad de que cada usuario elija su lenguaje de "
+"preferencial."
 
 #: ../../general/odoo_basics/choose_language.rst:50
 msgid ""
@@ -889,7 +1100,13 @@ msgid ""
 " change the Language to any previously installed language and click "
 "**SAVE.**"
 msgstr ""
+"Para cambiar el lenguaje de un usuario diferente, seleccione "
+":menuselection:`Usuarios` desde la aplicación Configuraciones. Tnedrás la "
+"lista de todos los usuarios y podrás elegir el usuario al que quieres "
+"cambiar el lenguaje. Selecciona el usuario y haz clic en **Editar** en la "
+"ezquina superior izquierda. Bajo Preferencias puedes cambair el Lenguaje a "
+"cualquier lenguaje instalado previamenre y hacer clic en **SAVE.**"
 
 #: ../../general/odoo_basics/choose_language.rst:61
 msgid ":doc:`../../website/publish/translate`"
-msgstr ""
+msgstr ":doc:`../../website/publish/translate`"
