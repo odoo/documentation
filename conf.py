@@ -326,10 +326,27 @@ def setup(app):
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
 
+    app.connect('html-page-context', versionize)
+    app.add_config_value('versions', '', 'env')
+
     app.connect('html-page-context', localize)
     app.add_config_value('languages', '', 'env')
 
     app.connect('doctree-resolved', tag_toctrees)
+
+def versionize(app, pagename, templatename, context, doctree):
+    """ Adds a version switcher below the menu, requires ``canonical_root``
+    and ``versions`` (an ordered, space-separated lists of all possible
+    versions).
+    """
+    if not (app.config.canonical_root and app.config.versions):
+        return
+
+    context['versions'] = [
+        (vs, _build_url(app.config.canonical_root, vs, pagename))
+        for vs in app.config.versions.split(',')
+        if vs != app.config.version
+    ]
 
 def analytics(app, pagename, templatename, context, doctree):
     if not app.config.google_analytics_key:
