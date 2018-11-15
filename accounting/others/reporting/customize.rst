@@ -5,9 +5,10 @@ How to create a customized reports with your own formulas?
 Overview
 ========
 
-Odoo 9 comes with a powerful and easy-to-use reporting framework.
-Creating new reports (such as a tax report or a balance sheet for a
-specific country) to suit your needs is now easier than ever.
+Odoo 11 comes with a powerful and easy-to-use reporting framework.
+Creating new reports (such as a tax report or a balance sheet or 
+income statement with specific groupings and layout ) to suit your 
+needs is now easier than ever.
 
 Activate the developer mode
 ===========================
@@ -33,21 +34,21 @@ First, you need to create your financial report. To do that, go to
 .. image:: media/customize02.png
    :align: center
 
-Once the name is filled, there are two other parameters that need to be
+Once the name is entered, there are two other parameters that need to be
 configured:
 
 -  **Show Credit and Debit Columns**
 
 -  **Analysis Period** :
 
-   -  Based on date ranges (eg Profit and Loss)
+   -  Based on date ranges (e.g. Profit and Loss)
 
-   -  Based on a single date (eg Balance Sheet)
+   -  Based on a single date (e.g. Balance Sheet)
 
    -  Based on date ranges with 'older' and 'total' columns and last 3
-      months (eg. Aged Partner Balances)
+      months (e.g. Aged Partner Balances)
 
-   -  Bases on date ranges and cash basis method (eg Cash Flow
+   -  Bases on date ranges and cash basis method (e.g. Cash Flow
       Statement)
 
 Add lines in your custom reports
