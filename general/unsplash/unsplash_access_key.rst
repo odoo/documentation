@@ -2,6 +2,12 @@
 How to generate an Unsplash access key
 =======================================================
 
+.. tip::
+  **As a SaaS user**, Unsplash is ready to use. You won't need to follow this guide to set up Unsplash informations as you will use our own Odoo Unsplash key in a transparent way.
+
+Generate an Unsplash access key for **non-Saas** users
+======================================================
+
 - Create an account on `Unsplash.com <https://unsplash.com/join>`_.
 
 - Go to your `applications dashboard <https://unsplash.com/oauth/applications>`_ and click on **New Application**.
@@ -14,7 +20,7 @@ How to generate an Unsplash access key
 .. image:: media/accept_terms.png
     :align: center
 
-- You will be prompted to insert an **Application name** and a **Description**. Once done, click on **Create application**.
+- You will be prompted to insert an **Application name** and a **Description**. Please prefix your application name by "**Odoo: **" so it can be recognized as an Odoo instance by Unsplash. Once done, click on **Create application**.
 
 .. image:: media/app_infos.png
     :align: center
@@ -24,3 +30,5 @@ How to generate an Unsplash access key
 .. image:: media/access_key.png
     :align: center
 
+.. warning::
+  **As a non-SaaS user**, you won't be able to register for a production Unsplash key and will be limited to your test key that has a 50 Unsplash requests per hour restriction.
