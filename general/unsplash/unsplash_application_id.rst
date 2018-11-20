@@ -2,7 +2,8 @@
 How to generate an Unsplash application ID
 =======================================================
 
-- You should first create and set up your Unsplash application with this tutorial: `How to generate an Unsplash access key <https://www.odoo.com/documentation/user/unsplash_access_key.html>`_.
+.. tip::
+  You should first create and set up your Unsplash application with this tutorial: `How to generate an Unsplash access key <https://www.odoo.com/documentation/user/unsplash_access_key.html>`_.
 
 - Go to your `applications dashboard <https://unsplash.com/oauth/applications>`_ and click on your newly created Unsplash application under **Your applications**.
 
