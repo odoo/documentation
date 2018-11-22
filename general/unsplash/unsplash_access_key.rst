@@ -20,7 +20,7 @@ Generate an Unsplash access key for **non-Saas** users
 .. image:: media/accept_terms.png
     :align: center
 
-- You will be prompted to insert an **Application name** and a **Description**. Please prefix your application name by "**Odoo: **" so it can be recognized as an Odoo instance by Unsplash. Once done, click on **Create application**.
+- You will be prompted to insert an **Application name** and a **Description**. Please prefix your application name by "**Odoo:** " so it can be recognized as an Odoo instance by Unsplash. Once done, click on **Create application**.
 
 .. image:: media/app_infos.png
     :align: center
@@ -32,3 +32,6 @@ Generate an Unsplash access key for **non-Saas** users
 
 .. warning::
   **As a non-SaaS user**, you won't be able to register for a production Unsplash key and will be limited to your test key that has a 50 Unsplash requests per hour restriction.
+
+.. seealso::
+    * :doc:`unsplash_application_id`
