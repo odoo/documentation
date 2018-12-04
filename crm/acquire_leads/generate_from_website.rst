@@ -31,7 +31,7 @@ Contact Form info and where to change the *Sales Channel* or
 Create a custom contact form
 ============================
 
-You may want to know more from your visitor when they use they want to
+You may want to know more from your visitor when they use the form to
 contact you. You will then need to build a custom contact form on your
 website. Those contact forms can generate multiple types of records in
 the system (emails, leads/opportunities, project tasks, helpdesk
