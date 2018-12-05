@@ -138,7 +138,7 @@ für jede abgedeckte Version.
 
 Der Kunde versteht, dass der Fehler und die Informationen in der Sicherheitsmitteilung während
 der Sperrfrist vor der öffentlichen Bekanntgabe als vertrauliche Informationen behandelt
-werden müssen, die im Abschnitt :ref:'confidentiality_de' beschrieben werden.
+werden müssen, die im Abschnitt :ref:`confidentiality_de` beschrieben werden.
 
 .. _upgrade_de:
 
