@@ -227,7 +227,8 @@ This server only keeps one month of backups: 7 daily and 4 weekly backups.
 Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
 To restore or download one of these monthly backups, please `contact us <https://www.odoo.com/help>`_.
 
-You can make a backup manually before making big changes in your production database in case something goes wrong.
+You can make a backup manually before making big changes in your production database in case something goes wrong
+(those manual backups are available for around 20 hours).
 To avoid abuse, we limit manual backups to 5 per day.
 
 The *import database* feature accepts database archives in the format provided by:
