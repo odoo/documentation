@@ -262,14 +262,45 @@ If the invoice is not paid.
 Payments (Just available for CFDI 3.3)
 --------------------------------------
 
-To generate the payment complement you just must to follow the normal payment
+To generate the payment complement you only need to follow the normal payment
 process in Odoo, this considerations to understand the behavior are important.
 
-1. All payment done in the same day of the invoice will be considered as It
-   will not be signed, because It is the expected behavior legally required
-   for "Cash payment".
-2. To test a regular signed payment just create an invoice for the day before
-   today and then pay it today.
+1. To generate payment complement the payment term in the invoice must be
+   PPD, because It is the expected behavior legally required for
+   "Cash payment".
+
+   **1.1. How can I generate an invoice with payment term `PUE`?**
+
+   `According to the SAT documentation`_ a payment is classified as `PUE` if
+   the invoice was agreed to be fully payed before the 17th of the next
+   calendar month (the next month of the CFDI date), any other condition
+   will generate a `PPD` invoice.
+
+   **1.2. How can I get this with Odoo?**
+
+   In order to set the appropriate CFDI payment term (PPD or PUE), you can
+   easily set it by using the `Payment Terms` defined in the invoice.
+
+   - If an invoice is generated without `Payment Term` the attribute
+     `MetodoPago` will be `PUE`.
+
+   - Today, if is the first day of the month and is generated an invoice with
+     `Payment Term` `30 Net Days` the `Due Date` calculated is going to be
+     the first day of the following month, this means its before the 17th of
+     the next month, then the attribute `MetodoPago` will be `PUE`.
+
+   - Today, if an invoice is generated with `Payment Term` `30 Net Days` and
+     the `Due Date` is higher than the day 17 of the next month the
+     `MetodoPago` will be `PPD`.
+
+   - If having a `Payment Term` with 2 lines or more, for example
+     `30% Advance End of Following Month`, this is an installments term,
+     then the attribute `MetodoPago` will be `PPD`.
+
+2. To test a regular signed payment just create an invoice with payment term
+   `30% Advance End of Following Month` and then pay it.
+2. To test a normal signed payment just create an invoice with payment term
+   `30% Advance End of Following Month` and then register a payment to it.
 3. You must print the payment in order to retrieve the PDF properly.
 4. Regarding the "Payments in Advance" you must create a proper invoice with
    the payment in advance itself as a product line setting the proper SAT code
@@ -622,6 +653,7 @@ FAQ
 .. _Finkok: https://www.finkok.com/contacto.html
 .. _`Solución Factible`: https://solucionfactible.com/sf/v3/timbrado.jsp
 .. _`SAT resolution`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Paginas/Anexo_20_version3.3.aspx
+.. _`According to the SAT documentation`: https://www.sat.gob.mx/cs/Satellite?blobcol=urldata&blobkey=id&blobtable=MungoBlobs&blobwhere=1461173400586&ssbinary=true
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
 .. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
