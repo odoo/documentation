@@ -1,10 +1,10 @@
-=========================================================
-How to get correct tax rates in the US thanks to TaxCloud
-=========================================================
+================================================================
+How to get correct tax rates in the United States using TaxCloud
+================================================================
 
-The **TaxCloud** integration allows you to calculate the sales tax for every
-address in the United States and keeps track of which product types are
-exempt from sales tax and in which states each exemption applies.
+The **TaxCloud** integration allows you to correctly calculate the sales 
+tax for every address in the United States and keeps track of which products 
+are exempt from sales tax and in which states each exemption applies.
 TaxCloud calculates sales tax in real-time for every state, city, and
 special jurisdiction in the United States.
 
@@ -14,74 +14,66 @@ Configuration
 In Tax Cloud
 ------------
 * Create a free account on `*TaxCloud*
-  <https://taxcloud.net/#register>`__ website.
-* Register your website on TaxCloud to get an *API ID* and an *API Key*.
+  <https://taxcloud.com/#register>`__ website.
+* Register your Odoo website on TaxCloud to get an *API ID* and an *API Key*.
 
 .. image:: media/taxcloud01.png
   :align: center
 
+* In Settings on TaxCloud, click *Locations* to enter the location of your Office(s) & Warehouse(s). 
+* In Settings on TaxCloud, click *Manage Tax States* to verify the states where you collect sales tax.
+
 In Odoo
 -------
-* Go to :menuselection:`Invoicing/Accounting --> Configuration --> Settings`
-  and check *Compute sales tax automatically using TaxCloud*. Click *Apply*.
+* Go to :menuselection:`Invoicing / Accounting --> Configuration --> Settings`
+  and check *TaxCloud - Compute tax rates based on U.S. ZIP codes*.
+* Enter your TaxCloud credentials.
+* Click SAVE to store your credentials.
 
 .. image:: media/taxcloud02.png
   :align: center
 
-* Still in those settings, enter your TaxCloud credentials.
-* Hit *Sync TaxCloud Categories (TIC)* to import TIC product categories
-  from TaxCloud (Taxability Information Codes). Some categories may imply 
-  specific rates.
-
-.. image:: media/taxcloud03.png
-  :align: center
-
-* Set default *TIC Code* and taxe rates. This will apply to any new 
-  product created. A default sales tax is needed to trigger the 
-  tax computation.
-
-* For products under a specific category, select it in its detail form 
-  (in *Sales* tab).
-
-* Make sure your company address is well defined (especially the state 
-  and the zip code). Go to :menuselection:`Settings --> General Settings` 
-  and click *Configure your company data*.
+* Click the Refresh Icon next to *Default Category* to import the TIC product categories
+  from TaxCloud (Taxability Information Codes). Some categories may imply specific rates.
+* Select your default *TIC Code*. This will apply to any new 
+  product created. 
+* Set a specific TaxCloud Category on the *General Information* tab of the Product, 
+  or on the Product Category.
+* Make sure your company address is complete (including the state 
+  and the zip code). Go to :menuselection:`Settings --> Users & Companies --> Companies` 
+  to open and edit your Company record.
 
 How it works
 ============
 
-Automatic tax assignation works thanks to fiscal positions
+Salestax is calculated in Odoo based on fiscal positions
 (see :doc:`application`).
-A specific fiscal position is created when installing *TaxCloud*.
+A Fiscal Position for the United States is created when installing *TaxCloud*.
 Everything works out-of-the-box.
 
-This fiscal position is set on any sales order, web order, or invoice
-when the customer country is *United States*. This is triggering the 
+You can configure Odoo to automtically detect which Customers should use this fiscal
+position.  Go to :menuselection:`Accounting --> Configuration --> Fiscal Positions` 
+  to open and edit the record.
+  
+.. image:: media/taxcloud03.png
+  :align: center  
+  
+Now, this fiscal position is automatically set on any sales order, web order, or invoice
+when the customer country is *United States*. This triggers the 
 automated tax computation.
 
 .. image:: media/taxcloud04.png
   :align: center
 
-Add a product with a default sales tax. Odoo will automatically
-send a request to TaxCloud, get the correct tax percentage based on the
-customer location (state and zip code) and product TIC category, create
-a new tax rate if that tax percentage does not already exist in 
-your system and return it in the order item line (e.g. 7.0%).
+Add your product(s). You have two options to get Sales Tax on the Order.  You can confirm it, 
+or you can save it and from the *Action* Menu choose **Update Taxes with Tax Cloud**.
 
 .. image:: media/taxcloud05.png
   :align: center
 
-How to create specific tax mappings using TaxCloud
-==================================================
-
-You can create several fiscal positions using TaxCloud.
-Check *Use TaxCloud API* to do so. Such fiscal postions can be
-assigned to customers in their detail form in order to get them by default
-whenever they buy you something.
-
-.. image:: media/taxcloud06.png
-  :align: center
+Odoo shows only the amount of sales tax, not the percentage.  There are enough jurisdictions that no
+longer charge flat percentage rate sales taxes to make the display of percentages confusing for users
+and customers.
 
 .. seealso::
-  * :doc:`default_taxes`
   * :doc:`application`
