@@ -125,7 +125,7 @@ your sales tax by running Odoo's Tax Report.
 Inventory Valuation
 ===================
 
-Odoo support both periodic (manual) and perpetual (automated)
+Odoo supports both periodic (manual) and perpetual (automated)
 inventory valuations. The available methods are standard price,
 average price, LIFO (for countries allowing it) and FIFO.
 
