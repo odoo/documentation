@@ -78,7 +78,7 @@ you will then be able to choose from the complete list of fields for each column
 Where can I change the date import format?
 ------------------------------------------
 
-Odoo can automatically detect if a column is a date and it will try to guess the date format from a set of most used date format. While this process can work for a lot of simple date format, some exotic date format will not be recognize and it is also possible to have some confusion (day and month inverted as example) as it is difficult to guess correctly which part is the day and which one is the month in a date like '01-03-2016'.
+Odoo can automatically detect if a column is a date, and it will try to guess the date format from a set of most commonly used date formats. While this process can work for many date formats, some date formats will not be recognized. This can cause confusion due to day-month inversions; it is difficult to guess which part of a date format is the day and which part is the month in a date such as '01-03-2016'.
 
 To view which date format Odoo has found from your file you can check the **Date Format** that is shown when clicking on **Options** under the file selector. If this format is incorrect you can change it to your liking using the *ISO 8601* to define the format.
 
