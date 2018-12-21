@@ -36,8 +36,8 @@ the application module and install the following:
 .. image:: media/so_to_task02.png
     :align: center
 
-Moreover if you wish to be able to invoice your customers based on time
-spent on the task, it is also necessary to install the **Timesheet** module.
+And finally, the **Timesheet** app, Timesheet will not only let you create a task from a Sales order, but also invoice your customer based on the time spent on that task. 
+
 Simply go into the application module and install the following:
 
 .. image:: media/so_to_task03.png
