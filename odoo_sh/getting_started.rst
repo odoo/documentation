@@ -12,4 +12,5 @@ Get started
    getting_started/builds
    getting_started/status
    getting_started/settings
+   getting_started/online-editor
    getting_started/first_module

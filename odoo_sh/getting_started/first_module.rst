@@ -27,7 +27,38 @@ Replace these by the values of your choice.
 Create the development branch
 =============================
 
-Clone your Github repository on your machine:
+From Odoo.sh
+-------------
+
+In the branches view:
+
+* hit the :code:`+` button next to the development stage,
+* choose the branch *master* in the *Fork* selection,
+* type *feature-1* in the *To* input.
+
+  |pic1|  |pic2|
+
+.. |pic1| image:: ./media/firstmodule-development-+.png
+   :width: 45%
+
+.. |pic2| image:: ./media/firstmodule-development-fork.png
+   :width: 45%
+
+
+Once the build created, you can access the editor and browse to the folder *~/src/user* to access
+to the code of your development branch.
+
+.. image:: ./media/firstmodule-development-editor.png
+  :align: center
+
+.. image:: ./media/firstmodule-development-editor-interface.png
+  :align: center
+
+From your computer
+------------------
+
+
+Clone your Github repository on your computer:
 
 .. code-block:: bash
 
@@ -50,20 +81,25 @@ Scaffolding the module
 ----------------------
 
 While not necessary, scaffolding avoids the tedium of setting the basic Odoo module structure.
-It nevertheless requires *odoo-bin*, and therefore the
-`installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_ on your machine.
+You can scaffold a new module using the executable *odoo-bin*.
 
-If you do not want to bother installing Odoo on your machine,
-you can also :download:`download this module structure template <media/my_module.zip>` in which you replace every occurrences of
-*my_module* to the name of your choice.
+From the Odoo.sh editor, in a terminal:
 
-Use *odoo-bin scaffold* to generate the module structure in your repository:
+.. code-block:: bash
+
+  $ odoo-bin scaffold my_module ~/src/user/
+
+Or, from your computer, if you have an `installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_:
 
 .. code-block:: bash
 
   $ ./odoo-bin scaffold my_module ~/src/odoo-addons/
 
-This will generate the below structure:
+If you do not want to bother installing Odoo on your computer,
+you can also :download:`download this module structure template <media/my_module.zip>` in which you replace every occurrences of
+*my_module* to the name of your choice.
+
+The below structure will be generated:
 
 ::
 
@@ -134,12 +170,28 @@ Commit your changes
 
 Push your changes to your remote repository
 
+From an Odoo.sh editor terminal:
+
+.. code-block:: bash
+
+  $ git push https HEAD:feature-1
+
+The above command is explained in the section
+:ref:`Commit & Push your changes
+<odoosh-gettingstarted-online-editor>` of the
+:ref:`Online Editor <odoosh-gettingstarted-online-editor>`
+chapter.
+It includes the explanation regarding the fact you will be prompted to type your username and password,
+and what to do if you use the two-factor authentication.
+
+Or, from your computer terminal:
+
 .. code-block:: bash
 
   $ git push -u origin feature-1
 
 You need to specify *-u origin feature-1* for the first push only.
-From that point, to push your future changes, you can simply use
+From that point, to push your future changes from your computer, you can simply use
 
 .. code-block:: bash
 
@@ -262,13 +314,14 @@ Add a change
 
 This section explains how to add a change in your module by adding a new field in a model and deploy it.
 
-In your module, edit the file *models/models.py*
+From the Odoo.sh editor,
+ * browse to your module folder *~/src/user/my_module*,
+ * then, open the file *models/models.py*.
 
-.. code-block:: bash
-
-  $ nano ~/src/odoo-addons/my_module/models/models.py
-
-We encourage you to use the editor of your choice, such as *Atom*, *Sublime Text*, *PyCharm*, instead of *nano*.
+Or, from your computer,
+ * use the file browser of your choice to browse to your module folder *~/src/odoo-addons/my_module*,
+ * then, open the file *models/models.py* using the editor of your choice,
+   such as *Atom*, *Sublime Text*, *PyCharm*, *vim*, ...
 
 Then, after the description field
 
@@ -282,11 +335,7 @@ Add a datetime field
 
   start_datetime = fields.Datetime('Start time', default=lambda self: fields.Datetime.now())
 
-Then, edit the file *views/views.xml*
-
-.. code-block:: bash
-
-  $ nano ~/src/odoo-addons/my_module/views/views.xml
+Then, open the file *views/views.xml*.
 
 After
 
@@ -309,11 +358,7 @@ these changes requires the module to be updated.
 If you would like the update to be performed automatically by the Odoo.sh platform when you push your changes,
 increase your module version in its manifest.
 
-Edit the module manifest
-
-.. code-block:: bash
-
-  $ nano ~/src/odoo-addons/my_module/__manifest__.py
+Open the module manifest *__manifest__.py*.
 
 Replace
 
@@ -329,11 +374,24 @@ with
 
 The platform will detect the change of version and trigger the update of the module upon the new revision deployment.
 
-Stage your changes to be committed
+Browse to your Git folder.
+
+Then, from an Odoo.sh terminal:
+
+.. code-block:: bash
+
+  $ cd ~/src/user/
+
+Or, from your computer terminal:
 
 .. code-block:: bash
 
   $ cd ~/src/odoo-addons/
+
+Then, stage your changes to be committed
+
+.. code-block:: bash
+
   $ git add my_module
 
 Commit your changes
@@ -342,7 +400,15 @@ Commit your changes
 
   $ git commit -m "[ADD] my_module: add the start_datetime field to the model my_module.my_module"
 
-Push your changes
+Push your changes:
+
+From an Odoo.sh terminal:
+
+.. code-block:: bash
+
+  $ git push https HEAD:feature-1
+
+Or, from your computer terminal:
 
 .. code-block:: bash
 
@@ -371,9 +437,9 @@ your module.
 
 Create a file *requirements.txt* in the root folder of your repository
 
-.. code-block:: bash
+From the Odoo.sh editor, create and open the file ~/src/user/requirements.txt.
 
-  $ nano ~/src/odoo-addons/requirements.txt
+Or, from your computer, create and open the file ~/src/odoo-addons/requirements.txt.
 
 Add
 
@@ -384,11 +450,7 @@ Add
 Then use the library in your module, for instance to remove any special characters in the name field of your
 model.
 
-Edit the file *models/models.py*
-
-.. code-block:: bash
-
-  $ nano ~/src/odoo-addons/my_module/models/models.py
+Open the file *models/models.py*.
 
 Before
 
@@ -426,11 +488,7 @@ Add
 
 Adding a Python dependency requires a module version increase for the platform to install it.
 
-Edit the module manifest
-
-.. code-block:: bash
-
-  $ nano ~/src/odoo-addons/my_module/__manifest__.py
+Edit the module manifest *__manifest__.py*
 
 Replace
 
@@ -444,11 +502,24 @@ with
 
   'version': '0.3',
 
-Then stage, commit and push your changes
+Stage and commit your changes:
 
 .. code-block:: bash
 
   $ git add requirements.txt
   $ git add my_module
   $ git commit -m "[IMP] my_module: automatically remove special chars in my_module.my_module name field"
+
+Then, push your changes:
+
+In an Odoo.sh terminal:
+
+.. code-block:: bash
+
+  $ git push https HEAD:feature-1
+
+In your computer terminal:
+
+.. code-block:: bash
+
   $ git push
