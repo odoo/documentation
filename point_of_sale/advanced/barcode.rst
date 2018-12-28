@@ -17,10 +17,6 @@ select it.
 .. image:: media/barcode01.png
     :align: center
 
-.. note::
-    You can find more about Barcode Nomenclature here (ADD
-    HYPERLINK)
-
 Add barcodes to product
 =======================
 
