@@ -8,10 +8,13 @@ Configuration
 =============
 
 To activate *Reprint Receipt*, go to :menuselection:`Point of Sale
---> Configuration --> Point of sale` and select your PoS interface.
+--> Configuration --> Point of sale`. and select your PoS interface.
 
 Under the Bills & Receipts category, you will find *Reprint Receipt*
 option.
+
+.. note::
+In order to allow the option reprint receipt, you need to activate the receipt printer, you can see more information about that here: :doc:`BILL_PRINTING`. 
 
 .. image:: media/reprint01.png
     :align: center
