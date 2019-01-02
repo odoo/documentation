@@ -63,10 +63,10 @@ cost of the hotel.
 Be sure that all these products have the checkbox **Can be expensed**
 checked and the invoicing policy set to **Invoice Based on time and
 material**. This invoicing policy means that, if the expense is related
-to a customer project/sale order, Odoo will re-invoice this expense to
+to a customer project/sale order, Twenty20 will re-invoice this expense to
 the customer.
 
-Odoo support two types of expenses:
+Twenty20 support two types of expenses:
 
 -  expenses paid by employee with their own money
 

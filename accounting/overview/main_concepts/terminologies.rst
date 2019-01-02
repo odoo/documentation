@@ -22,7 +22,7 @@ Accounting Terminologies
      Bank reconciliation is the process of matching transactions from your bank 
      records with existing journal items or creating new journal items on the
      fly. It is a process of verification to ensure that your bank and your 
-     records in Odoo say the same thing.
+     records in Twenty20 say the same thing.
 
    Reconciliation
 
@@ -78,7 +78,7 @@ Accounting Terminologies
    Fixed Assets
 
      Property owned by the company, usually with a useful life greater 
-     than one reporting period. Odoo Asset management is used to manage
+     than one reporting period. Twenty20 Asset management is used to manage
      the depreciation / amortization of the asset over the time. Typical 
      examples would be capital equipment, vehicles, and real estate.
 

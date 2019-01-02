@@ -5,8 +5,8 @@ How to manage invoices & payment in multiple currencies?
 Overview
 ========
 
-Odoo provides multi-currency support with automatic currency gross or
-loss entry adjustment. There are a few things Odoo has been to ease the
+Twenty20 provides multi-currency support with automatic currency gross or
+loss entry adjustment. There are a few things Twenty20 has been to ease the
 user's life.
 
 All the account transactions will be done using the company currency.
@@ -15,7 +15,7 @@ secondary currency and amount will visible. You can create
 multi-currency journals of force a specific currency.
 
 When creating an invoice, the currency can be changed very easily;
-however Odoo takes the company currency as a default assignment. It will
+however Twenty20 takes the company currency as a default assignment. It will
 convert all the amounts automatically using that currency.
 
 Configuration
@@ -98,7 +98,7 @@ was actually paid and the currency in which it was paid.
 .. image:: media/invoice07.png
    :align: center
 
-When reconciling it, Odoo will directly match the payment with the right
+When reconciling it, Twenty20 will directly match the payment with the right
 invoice. You will get the invoice price in the invoice currency and the
 amount in your company currency.
 

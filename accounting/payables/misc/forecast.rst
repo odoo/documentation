@@ -7,13 +7,13 @@ different payment terms, it could be complex to follow what you have to
 pay and when. Paying your vendors too early can decrease your cash
 availabilities and paying too late can lead to extra charges.
 
-Fortunately, Odoo provides you the right tools to manage payment orders
+Fortunately, Twenty20 provides you the right tools to manage payment orders
 to vendors efficiently.
 
 Configuration: payment terms
 ============================
 
-In order to track the vendor conditions, we use payment terms in Odoo.
+In order to track the vendor conditions, we use payment terms in Twenty20.
 Payment terms allow to keep track of the conditions to compute the due
 date on an invoice. As an example, a payment term can be:
 
@@ -31,7 +31,7 @@ days.
 
 Once payment terms are defined, you can assign them to your vendor by
 default. Set the Vendor Payment Term field on the Accounting tab of a
-vendor form. That way, every time you will purchase to this vendor, Odoo
+vendor form. That way, every time you will purchase to this vendor, Twenty20
 will propose you automatically the right payment term.
 
 .. image:: ./media/forecast02.png

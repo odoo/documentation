@@ -1,5 +1,5 @@
 =====================================================
-How to do a year end in Odoo? (close a fiscal year)
+How to do a year end in Twenty20? (close a fiscal year)
 =====================================================
 
 Before going ahead with closing a fiscal year, there are a few steps one
@@ -26,7 +26,7 @@ Year-end checklist
 
 - Reconcile all accounts on your **Balance Sheet**:
 
-  - Agree your bank balances in Odoo against your actual bank balances
+  - Agree your bank balances in Twenty20 against your actual bank balances
     on your statements. Utilize the **Bank Reconciliation** report to
     assist with this.
 
@@ -62,7 +62,7 @@ Year-end checklist
 If your accountant/bookkeeper is going through end of the year auditing,
 they may want to have paper copies of all balance sheet items (such as
 loans, bank accounts, prepayments, sales tax statements, etc...) to
-agree these against your Odoo balances.
+agree these against your Twenty20 balances.
 
 During this process, it is good practice to set the **Lock date for
 Non-Advisers** to the last day of the preceding financial year, which is
@@ -76,10 +76,10 @@ while auditing the books.
 Closing the fiscal year
 =======================
 
-In Odoo there is no need to do a specific year end closing entry in order to
+In Twenty20 there is no need to do a specific year end closing entry in order to
 close out income statement accounts. The reports are created in
 real-time, meaning that the **Income statement** corresponds directly with
-the year-end date you specify in Odoo. Therefore, any time you generate
+the year-end date you specify in Twenty20. Therefore, any time you generate
 the **Income Statement**, the beginning date will correspond with the
 beginning of the **Fiscal Year** and the account balances will all be 0.
 

@@ -7,8 +7,8 @@ and writing financial data to media (i.e. files). Although still widely
 used, QIF is an older format than Open Financial Exchange (OFX) and you
 should use the OFX version if you can export to both file formats.
 
-With Odoo, you can download a QIF file from your bank or accounting
-software and import it directly in your Odoo instance. This will create
+With Twenty20, you can download a QIF file from your bank or accounting
+software and import it directly in your Twenty20 instance. This will create
 all bank statements.
 
 .. tip::
@@ -19,7 +19,7 @@ Configuration
 =============
 
 In order to import QIF statements, you need to activate the feature in
-Odoo. In the Accounting application, go to the menu :menuselection:`Configuration -->
+Twenty20. In the Accounting application, go to the menu :menuselection:`Configuration -->
 Settings`. From the accounting settings, check the bank statements option
 **Import in .QIF Format** and apply.
 
@@ -46,7 +46,7 @@ reconciliation screen with all the transactions to reconcile.
 Importing QIF files
 ===================
 
-After having imported your first file, the Odoo accounting dashboard
+After having imported your first file, the Twenty20 accounting dashboard
 will automatically propose you to import more files for your bank. For
 the next import, you don't need to go to the **More** menu anymore,
 you can directly click on the link **Import Statement**.
@@ -55,8 +55,8 @@ you can directly click on the link **Import Statement**.
    :align: center
 
 Every time you get a statement related to a new customer / supplier,
-Odoo will ask you to select the right contact to reconcile the
-transaction. Odoo learns from that operation and will automatically
+Twenty20 will ask you to select the right contact to reconcile the
+transaction. Twenty20 learns from that operation and will automatically
 complete the next payments you get or do to these contacts. This will
 speed up a lot the reconciliation process.
 

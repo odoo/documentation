@@ -2,7 +2,7 @@
 What are the different ways to record a payment?
 ================================================
 
-In Odoo, a payment can either be linked directly to an invoice or be a
+In Twenty20, a payment can either be linked directly to an invoice or be a
 stand alone record for use on a later date:
 
 - If a payment is linked to an invoice, it reduces the amount due of
@@ -32,7 +32,7 @@ reconcile the payment.
 
 	If you unreconcile a payment, it is still registered in your books but not
 	linked to the specific invoice any longer. If you unreconcile a payment in a
-	different currency, Odoo will create a journal entry to reverse the Currency
+	different currency, Twenty20 will create a journal entry to reverse the Currency
 	Exchange Loss/Gain posted at the time of reconciliation.
 
 Payments not tied to an invoice
@@ -64,7 +64,7 @@ Reconciling invoice payments
 The easiest way of reconciling a payment with an invoice is to do so on
 the invoice directly.
 
-When validating a new invoice, Odoo will warn you that an outstanding
+When validating a new invoice, Twenty20 will warn you that an outstanding
 payment for this customer or vendor is available. In this case, you can
 reconcile this payment to the invoice near the totals at the bottom,
 under "Outstanding Payments".
@@ -77,7 +77,7 @@ Reconciling all your outstanding payments and invoices
 
 If you want to reconcile all outstanding payments and invoices at once
 (instead of doing so one by one), you can use the batch reconciliation
-feature within Odoo.
+feature within Twenty20.
 
 The batch reconciliation feature is available from the dashboard on the
 Customer Invoices card and the Vendor Bills card for reconciling

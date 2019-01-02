@@ -15,7 +15,7 @@ Install the required module
 
 To record supplier payments by checks, you must install the **Check
 Writing** module. This module handle the process of recording checks in
-Odoo. Others modules are necessary to print checks, according to the
+Twenty20. Others modules are necessary to print checks, according to the
 country. As an example, the **U.S. Check Printing** module is required to
 print U.S. checks.
 
@@ -43,7 +43,7 @@ Compatible check stationery for printing checks
 United States
 -------------
 
-For the United States, Odoo supports by default the check formats of:
+For the United States, Twenty20 supports by default the check formats of:
 
 - **Quickbooks & Quicken**: check on top, stubs in the middle and bottom
 - **Peachtree**: check in the middle, stubs on top and bottom
@@ -107,7 +107,7 @@ Reconcile Bank Statements
 -------------------------
 
 Once you process your bank statement, when the check is credited from
-your bank account, Odoo will propose you automatically to match it with
+your bank account, Twenty20 will propose you automatically to match it with
 the payment. This will mark the payment as **Reconciled**.
 
 .. tip::

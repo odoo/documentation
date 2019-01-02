@@ -7,11 +7,11 @@ Overview
 
 Linking your bank statements with your accounting can be a lot of work.
 You need to find invoices back, relate payments and that amount of
-administration can cast a lot of time. Luckily, with Odoo you can very
+administration can cast a lot of time. Luckily, with Twenty20 you can very
 easily link your invoices or any other payment with your bank
 statements.
 
-Two reconciliation processes exist in Odoo.
+Two reconciliation processes exist in Twenty20.
 
 1. We can directly register a payment on the invoices
 2. We can reconcile open invoices with bank statements
@@ -46,7 +46,7 @@ payment and mark the invoice as paid.
 .. image:: media/use02.png
    :align: center
 
-By clicking on **register payment,** we are telling Odoo that our
+By clicking on **register payment,** we are telling Twenty20 that our
 customer paid the Invoice. We thus have to specify the amount and the
 payment method
 
@@ -85,7 +85,7 @@ On the dashboard, click on **Reconcile # Items**
 .. image:: media/use07.png
    :align: center
 
-If everything was right (correct partner name, right amount) odoo will
+If everything was right (correct partner name, right amount) Twenty20 will
 do the reconciliations **automatically**.
 
 .. image:: media/use08.png

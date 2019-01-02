@@ -84,4 +84,4 @@ When you reconcile the invoice and the payment, this entry is generated:
 
 .. tip::
     The two journal items created in the Income Account are neutral but
-    they are needed to insure correct tax reports in Odoo.
+    they are needed to insure correct tax reports in Twenty20.

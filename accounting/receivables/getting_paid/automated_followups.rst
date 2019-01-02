@@ -2,7 +2,7 @@
 How to automate customer follow-ups with plans?
 ==========================================================
 
-With the Odoo Accounting application, you get a dynamic aged receivable
+With the Twenty20 Accounting application, you get a dynamic aged receivable
 report, customer statements and you can easily send them to customers.
 
 If you want to go further in the automation of the credit collection
@@ -56,7 +56,7 @@ which will automatically be added into the reminder letter.
 .. image:: ./media/automated_followups04.png
   :align: center
 
-Odoo defines several actions for every reminder:
+Twenty20 defines several actions for every reminder:
 
 -  **Manual Action:** assign a responsible that will have to call the customer
 -  **Send an Email:** send an email to customer using the provided text
@@ -75,18 +75,18 @@ Odoo defines several actions for every reminder:
 Doing your weekly follow-ups
 ============================
 
-Once everything is setup, Odoo will prepare follow-up letters and emails
+Once everything is setup, Twenty20 will prepare follow-up letters and emails
 automatically for you. All you have to do is to the menu 
 :menuselection:`Sales --> Customers Statement` in the accounting application.
 
 .. image:: ./media/automated_followups09.png
   :align: center
 
-Odoo will automatically propose you actions based on the follow-up plan
+Twenty20 will automatically propose you actions based on the follow-up plan
 you defined, invoices to pay and payment received.
 
 You can use this menu every day, once a week or once a month. You do not
-risk to send two times the same reminder to your customer. Odoo only
+risk to send two times the same reminder to your customer. Twenty20 only
 proposes you the action you have to do. If you do it every day, you will
 have a few calls to do per day. If you do it once a month, you will have
 much more work once you do it.
@@ -116,16 +116,16 @@ From a customer follow-up proposition, you can:
 -  Print a letter, or send a regular mail (if you installed the Docsaway
    integration)
 
--  Plan the next reminder (but it's better to keep in automatic mode so that Odoo
+-  Plan the next reminder (but it's better to keep in automatic mode so that Twenty20
    will stick to the follow-up plan of the company)
 
 -  Drill down to an invoice
 
 -  Change the expected payment date of an invoice (thus, impacting the
-   next time Odoo will propose you to send a reminder)
+   next time Twenty20 will propose you to send a reminder)
 
 .. note::
-    You can force a customer statement, even if Odoo do not proposes
+    You can force a customer statement, even if Twenty20 do not proposes
     you to do it, because it's not the right date yet. To do this, you
     should go to the Aged Receivable report (in the report menu of the
     Accounting application). From this report, you can click on a customer
@@ -144,9 +144,9 @@ Go to :menuselection:`Accounting --> Sales --> Customers Statement`
 Exclude a specific invoice for a specific date
 ------------------------------------------------
 
-Odoo can exclude an invoice from follow-ups actions for specific date by
+Twenty20 can exclude an invoice from follow-ups actions for specific date by
 clicking on **Log a Note**, then choose one of the ready options (*one week*, 
-*two weeks*, *one month*, *two months*), So Odoo will calculate the
+*two weeks*, *one month*, *two months*), So Twenty20 will calculate the
 required date according to the current date.
 
 .. image:: ./media/automated_followups03.png
@@ -161,7 +161,7 @@ then choose **Change expected payment date/note**, then enter a new payment date
 Exclude a specific invoice forever
 -----------------------------------
 
-Odoo can exclude an invoice for a specific customer by clicking on
+Twenty20 can exclude an invoice for a specific customer by clicking on
 the checkbox **Excluded**
 
 .. note::

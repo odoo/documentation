@@ -18,7 +18,7 @@ Payment terms
 -------------
 
 In order to manage cash discounts, we will use the payment terms
-concept of Odoo (From the Accounting module, go to :menuselection:`Configuration -->
+concept of Twenty20 (From the Accounting module, go to :menuselection:`Configuration -->
 Management --> Payment terms --> Create`).
 
 Let's start with the above example: a 2% discount on an invoice due in
@@ -78,7 +78,7 @@ When you create a customer invoice, set the right payment term "30 days,
 .. image:: ./media/discount04.png
    :align: center
 
-Once the invoice is validated, Odoo will automatically split the account
+Once the invoice is validated, Twenty20 will automatically split the account
 receivable part of the journal entry with two installments having a
 different due date: 98% within 5 days, 2% within 30 days.
 

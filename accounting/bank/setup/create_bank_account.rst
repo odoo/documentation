@@ -2,7 +2,7 @@
 How to setup a new bank account?
 ================================
 
-In Odoo, you can manage multiple bank accounts. In this page, you will
+In Twenty20, you can manage multiple bank accounts. In this page, you will
 be guided in the creation, modification or deletion of a bank or a
 credit card account.
 
@@ -20,7 +20,7 @@ Accounts` and click on the **Bank** item. Edit it.
 
 .. note::
 
-    Odoo will detect the bank account type (e.g. IBAN) to allow some payment 
+    Twenty20 will detect the bank account type (e.g. IBAN) to allow some payment
     method like SEPA
 
 

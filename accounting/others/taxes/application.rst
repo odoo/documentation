@@ -3,7 +3,7 @@ How to adapt taxes to my customer status or localization
 ==========================================================
 
 Most often sales tax rates depend on your customer status or localization.
-To map taxes, Odoo brings the so-called *Fiscal Positions*. 
+To map taxes, Twenty20 brings the so-called *Fiscal Positions*.
 
 Create tax mapping
 ==================
@@ -21,7 +21,7 @@ To define fiscal positions, go to
 :menuselection:`Invoicing/Accounting --> Configuration --> Fiscal Positions`.
 
 .. note::
-    If you use Odoo Accounting, you can also map the Income/Expense accounts according to the fiscal
+    If you use Twenty20 Accounting, you can also map the Income/Expense accounts according to the fiscal
     position. For example, in some countries, revenues from sales are not posted in
     the same account than revenues from sales in foreign countries.
 
@@ -34,7 +34,7 @@ To do so, create a fiscal position and assign it to your customers.
 .. image:: media/application01.png
    :align: center
 
-Odoo will use this specific fiscal position for any order/invoice recorded for the customer.
+Twenty20 will use this specific fiscal position for any order/invoice recorded for the customer.
 
 .. note:: 
     If you set the fiscal position in the sales order or invoice manually, it will only
@@ -56,7 +56,7 @@ If you are under the destination-based rule, create one fiscal position per tax-
 .. image:: media/application04.png
    :align: center
 
-This way if no fiscal position is set on the customer, Odoo will choose the fiscal position matching the
+This way if no fiscal position is set on the customer, Twenty20 will choose the fiscal position matching the
 shipping address on creating an order.
 
 .. note::

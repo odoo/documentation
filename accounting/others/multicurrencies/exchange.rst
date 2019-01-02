@@ -10,7 +10,7 @@ are in a different currency.
 
 After receiving their payments, you have the option to convert the
 amount into your company currency. Multi currency payment implies rates
-fluctuations. The rate differences are automatically recorded by Odoo.
+fluctuations. The rate differences are automatically recorded by Twenty20.
 
 Configuration
 =============
@@ -86,7 +86,7 @@ which is the amount that was actually paid and the **Currency** in which it was 
 .. image:: media/exchange_rate07.png
    :align: center
 
-When reconciling it, Odoo will directly match the payment with the right
+When reconciling it, Twenty20 will directly match the payment with the right
 **Invoice**. You will get the invoice price in the invoice currency and the
 amount in your company currency.
 

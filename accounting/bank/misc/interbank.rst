@@ -3,7 +3,7 @@ How to do a bank wire transfer from one bank to another?
 ========================================================
 
 A company might have several bank accounts or cash registers. Within
-odoo it is possible to handle internal transfers of money with only a
+Twenty20 it is possible to handle internal transfers of money with only a
 couple of clicks.
 
 We will take the following example to illustrate. My company has two
@@ -17,7 +17,7 @@ Check your Chart of Accounts and default transfer account
 ---------------------------------------------------------
 
 To handle internal transfers you need a transfer account in your charts
-of account. Odoo will generate an account automatically based on the
+of account. Twenty20 will generate an account automatically based on the
 country of your chart of account. To parameter your chart of account and
 check the default transfer account go into your the accounting module,
 select :menuselection:`Configuration --> Settings`.
@@ -89,7 +89,7 @@ accounts.
 Import bank statements and reconcile
 ------------------------------------
 
-Note that the bank balance computed by Odoo is different that the last
+Note that the bank balance computed by Twenty20 is different that the last
 statement of your bank.
 
 .. image:: media/interbank11.png
@@ -104,7 +104,7 @@ button of the corresponding bank to import them.
 .. image:: media/interbank07.png
    :align: center
 
-Fill in your **Transactions line**. Once done, Odoo will display a **Computed
+Fill in your **Transactions line**. Once done, Twenty20 will display a **Computed
 Balance**. that computed balance is the theorical end balance of your
 bank account. If it's corresponding to the bank statement, it means that no errors were
 made. Fill in the **Ending balance** and click on the **Reconcile** button.

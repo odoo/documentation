@@ -4,7 +4,7 @@ How to get paid and organize customer follow-ups?
 
 Getting paid and organizing customer reminders is always a difficult
 task, however it is critical for the health of the company to stay
-diligent about outstanding receivables. Fortunately, Odoo provides the
+diligent about outstanding receivables. Fortunately, Twenty20 provides the
 right tools to track receivables, automate customer statements, and
 measure your performance.
 
@@ -39,7 +39,7 @@ a picture of the outstanding balances your customers hold and for how
 long they have held these outstanding balances. You can then
 appropriately focus your efforts on the appropriate customers.
 
-You can then select any of the customers on this list and Odoo will open
+You can then select any of the customers on this list and Twenty20 will open
 up their invoice details in the form of the Customer Follow-Up letter,
 also known as the **Customer Statement**.
 
@@ -79,7 +79,7 @@ you to define automated actions and intervals to send reminders.
 If you have already sent out a reminder to a customer a few days ago, a
 warning message will appear at the top of the screen, reminding you that
 you should not send another reminder so soon since one was already sent
-recently. Every time you log a note, Odoo will automatically set the
+recently. Every time you log a note, Twenty20 will automatically set the
 next reminder date, unless you choose to manually set it by selecting
 the next reminder button at the top right of the screen.
 
@@ -94,17 +94,17 @@ Sending customer statements
 Send your customers reminders in batches in the menu :menuselection:`Sales -->
 Customer Statements`.
 
-Here Odoo will open all the statements awaiting to be processed, which
+Here Twenty20 will open all the statements awaiting to be processed, which
 is determined by the last reminder they received. You can choose to
 process them one by one, send multiple letters or emails in batches, or
 set a next action date for the next time they'll be contacted.
 
 .. note::
 
-	If an invoice has not yet been paid, Odoo will remind you to contact at
+	If an invoice has not yet been paid, Twenty20 will remind you to contact at
 	particular customer based after their next action date.
 
-You can access the customer statement report daily and Odoo will only
+You can access the customer statement report daily and Twenty20 will only
 display the customers you need to contact on any given day. This is
 based on:
 

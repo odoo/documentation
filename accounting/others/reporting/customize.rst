@@ -5,7 +5,7 @@ How to create a customized reports with your own formulas?
 Overview
 ========
 
-Odoo 9 comes with a powerful and easy-to-use reporting framework.
+Twenty20 9 comes with a powerful and easy-to-use reporting framework.
 Creating new reports (such as a tax report or a balance sheet for a
 specific country) to suit your needs is now easier than ever.
 
@@ -74,7 +74,7 @@ You have several objects available in the formula :
    ``.amount_residual``)
 
 A line can also be based on the sum of account move lines on a selected
-domain. In which case you need to fill the domain field with an Odoo
+domain. In which case you need to fill the domain field with an Twenty20
 domain on the account move line object. Then an extra object is
 available in the formulas field, namely ``sum``, the sum of the account
 move lines in the domain. You can also use the group by field to group

@@ -1,7 +1,7 @@
 =================================
 How to edit or refund an invoice?
 =================================
-In Odoo, it's not possible to modify an invoice that has been validated
+In Twenty20, it's not possible to modify an invoice that has been validated
 and sent to the customer. If a mistake was made on a validated invoice,
 the legal way to handle that is to refund the invoice, reconcile it with
 the original invoice to close them and create a new invoice.
@@ -16,7 +16,7 @@ refund, reconcile, and create a new draft invoice".
 .. image:: ./media/image04.png
    :align: center
 
-Odoo will automatically:
+Twenty20 will automatically:
 
 -  Create a refund for your invoice
 -  Reconcile the refund invoice with the original invoice (marking both as Paid)
@@ -34,7 +34,7 @@ refund and reconcile".
 .. image:: ./media/image05.png
    :align: center
 
-Odoo will automatically:
+Twenty20 will automatically:
 
 -  Create a refund for your invoice
 -  Reconcile the refund invoice with the original invoice (marking both as Paid)
@@ -52,7 +52,7 @@ Invoice button on the invoice. In the refund method field, select
 .. image:: ./media/image03.png
    :align: center
 
-Odoo will automatically create a draft refund. You may modify the refund
+Twenty20 will automatically create a draft refund. You may modify the refund
 (example: remove the lines you do not want to refund) and validate it.
 Then, send the refund by regular mail or email to your customer.
 

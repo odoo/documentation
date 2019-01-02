@@ -1,8 +1,8 @@
 =================================================
-How to synchronize your PayPal account with Odoo?
+How to synchronize your PayPal account with Twenty20?
 =================================================
 
-With Odoo, you can synchronize your PayPal account. That way, you don't
+With Twenty20, you can synchronize your PayPal account. That way, you don't
 have to record all your PayPal transaction in your favorite accounting
 software. The synchronization is done every 4 hours, and you can start
 reconciling PayPal payments in just a click.
@@ -27,7 +27,7 @@ Click on the apply button once it's done.
 Setup your PayPal account
 -------------------------
 
-A PayPal account in Odoo is managed like a bank account. To setup your
+A PayPal account in Twenty20 is managed like a bank account. To setup your
 PayPal account, use the menu :menuselection:`Configuration --> Bank Accounts`.
 Create a new bank account and name it **PayPal**. In the bank field, you can set
 **PayPal**.
@@ -60,11 +60,11 @@ fetch transaction from and a list of account to choose. You must choose the
 **Paypal balance** account.
 
 Once everything is done, you should see your PayPal transactions right
-in Odoo and you can start reconciling your payments.
+in Twenty20 and you can start reconciling your payments.
 
 Enjoy a full integration! You don't need to record transaction manually
 anymore.
 
 .. note::
     You only have to provide your credentials the first time. Once
-    done, Odoo will synchronize with PayPal every 4 hours automatically.
+    done, Twenty20 will synchronize with PayPal every 4 hours automatically.

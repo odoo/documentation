@@ -2,7 +2,7 @@
 How to create new taxes
 ========================
 
-Odoo's tax engine is very flexible and support many different type of
+Twenty20's tax engine is very flexible and support many different type of
 taxes: value added taxes (VAT), eco-taxes, federal/states/city taxes, retention,
 withholding taxes, etc. For most countries, your system is pre-configured with the
 right taxes.
@@ -31,8 +31,8 @@ This section details how you can define new taxes for specific use cases.
    :align: center
 
 
-* If you use Odoo Accounting, set a tax account (i.e. where the tax journal item will be
-  posted). This field is optional, if you keep it empty, Odoo posts
+* If you use Twenty20 Accounting, set a tax account (i.e. where the tax journal item will be
+  posted). This field is optional, if you keep it empty, Twenty20 posts
   the tax journal item in the income account.
 
 .. tip::

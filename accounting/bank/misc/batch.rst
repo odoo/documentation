@@ -14,7 +14,7 @@ included in the transactions.
 The bank statement will reflect the total amount that was deposited and
 the reference to the deposit ticket, not the individual checks.
 
-Odoo assists you to prepare and print your deposit tickets, and later on
+Twenty20 assists you to prepare and print your deposit tickets, and later on
 reconcile them with your bank statement easily.
 
 Configuration
@@ -41,7 +41,7 @@ Check the feature: **Allow batch deposit**.
 Activate the feature on your bank accounts
 ------------------------------------------
 
-Once you have installed this feature, Odoo automatically activate bank
+Once you have installed this feature, Twenty20 automatically activate bank
 deposits on your main bank accounts.
 
 To control which bank account can do batch deposit and which can not, go
@@ -68,7 +68,7 @@ Receive customer checks
 
 Once your record checks received, record them on the bank account on
 which you plan to deposit them. Once you select the bank account (or
-check journal is you configured Odoo that way), Odoo proposes you to use
+check journal is you configured Twenty20 that way), Twenty20 proposes you to use
 a batch deposit. Select this option if you plan to deposit the check to
 your bank.
 
@@ -92,7 +92,7 @@ and create a new **Batch Deposit**.
    :align: center
 
 Select the bank, then select the payments (checks) you want to add in
-this deposit. By default, Odoo proposes you all the checks that have not
+this deposit. By default, Twenty20 proposes you all the checks that have not
 been deposit yet. That way, you can verify that you do not forget or
 lost a check.
 
@@ -113,7 +113,7 @@ matches with the bank statement line.
 .. image:: media/batch06.png
    :align: center
 
-If you select a batch deposit, Odoo will automatically fills all the
+If you select a batch deposit, Twenty20 will automatically fills all the
 checks contained in this deposit for the matching. (2 checks were in
 this batch deposit the example below)
 

@@ -20,7 +20,7 @@ In Tax Cloud
 .. image:: media/taxcloud01.png
   :align: center
 
-In Odoo
+In Twenty20
 -------
 * Go to :menuselection:`Invoicing/Accounting --> Configuration --> Settings`
   and check *Compute sales tax automatically using TaxCloud*. Click *Apply*.
@@ -62,7 +62,7 @@ automated tax computation.
 .. image:: media/taxcloud04.png
   :align: center
 
-Add a product with a default sales tax. Odoo will automatically
+Add a product with a default sales tax. Twenty20 will automatically
 send a request to TaxCloud, get the correct tax percentage based on the
 customer location (state and zip code) and product TIC category, create
 a new tax rate if that tax percentage does not already exist in 

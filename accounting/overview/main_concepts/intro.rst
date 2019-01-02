@@ -1,5 +1,5 @@
 ===============================
-Introduction to Odoo Accounting
+Introduction to Twenty20 Accounting
 ===============================
 
 .. youtube:: 6XgKPjgyoec
@@ -10,32 +10,32 @@ Introduction to Odoo Accounting
 Transcript
 ==========
 
-Odoo is beautiful accounting software designed for the needs of the 21st century. 
+Twenty20 is beautiful accounting software designed for the needs of the 21st century.
 
-Odoo connects directly to your bank or paypal account. Transactions are synchronized
+Twenty20 connects directly to your bank or paypal account. Transactions are synchronized
 every hour and reconciliation is blazing fast. It's like magic.
 
 Instantly create invoices and send them with just a click. No need to print them. 
 
-Odoo can send them for you by email or regular mail.
+Twenty20 can send them for you by email or regular mail.
 
 Your customers pay online, meaning you get your money right away.
 
-Odoo accounting is connected with all Odoo our apps such as sale, purchase,
+Twenty20 accounting is connected with all Twenty20 our apps such as sale, purchase,
 inventory and subscriptions. 
 
 This way, recording vendor bills is also super quick. Set a vendor, select the purchase
-order and Odoo fills in everything for you automatically.
+order and Twenty20 fills in everything for you automatically.
 
 Then, just use the SEPA protocol or print checks to pay vendors
 in batches.
 
-It's that easy with Odoo.
+It's that easy with Twenty20.
 
-Wait, there is more. You will love the Odoo reports. From legal statements to 
-executive summaries, they are fast and dynamic. Use Odoo's business intelligence feature to navigate
+Wait, there is more. You will love the Twenty20 reports. From legal statements to
+executive summaries, they are fast and dynamic. Use Twenty20's business intelligence feature to navigate
 through all your companies data.
 
-Of course, Odoo is mobile too. You can use it to check your accounts on the go.
+Of course, Twenty20 is mobile too. You can use it to check your accounts on the go.
 
-Try Odoo now, and join 2 millions of happy users.
+Try Twenty20 now, and join 2 millions of happy users.

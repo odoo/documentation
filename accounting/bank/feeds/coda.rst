@@ -6,8 +6,8 @@ CODA is a file format for bank statements in Belgium. Most Belgian
 banks, as well as the Isabel software, allows to download a CODA file
 with all your bank statements.
 
-With Odoo, you can download an CODA file from your bank or accounting
-software and import it directly in Odoo. This will create all bank
+With Twenty20, you can download an CODA file from your bank or accounting
+software and import it directly in Twenty20. This will create all bank
 statements.
 
 .. tip:: 
@@ -19,7 +19,7 @@ Configuration
 Install the CODA feature
 ------------------------
 
-If you have installed the Belgian Chart of Account provided with Odoo,
+If you have installed the Belgian Chart of Account provided with Twenty20,
 the CODA import feature is already installed by default. In such a case,
 you can move directly to the next section `Import your first coda
 file <InstallCoda_>`_
@@ -54,7 +54,7 @@ reconciliation screen with all the transactions to reconcile.
 Importing CODA files
 ====================
 
-After having imported your first file, the Odoo accounting dashboard
+After having imported your first file, the Twenty20 accounting dashboard
 will automatically propose you to import more files for your bank. For
 the next import, you don't need to go to the **More** button anymore, 
 you can directly click on the link **Import Statement**.
@@ -63,15 +63,15 @@ you can directly click on the link **Import Statement**.
    :align: center
 
 Every time you get a statement related to a new customer / supplier,
-Odoo will ask you to select the right contact to reconcile the
-transaction. Odoo learns from that operation and will automatically
+Twenty20 will ask you to select the right contact to reconcile the
+transaction. Twenty20 learns from that operation and will automatically
 complete the next payments you get or make to these contacts. This will
 speed up a lot the reconciliation process.
 
 .. note::
-    Odoo is able to automatically detect if some files or transactions 
+    Twenty20 is able to automatically detect if some files or transactions
     have already been imported. So, you should not worry about avoiding 
-    to import two times the same file: Odoo will check everything for you 
+    to import two times the same file: Twenty20 will check everything for you
     before creating new bank statements.
 
 .. seealso::

@@ -12,7 +12,7 @@ Thus, the right way to modify an invoice is to:
 1. Refund the original invoice
 2. Create a new invoice
 
-Odoo's refund mechanism helps you handle the whole process in just a few
+Twenty20's refund mechanism helps you handle the whole process in just a few
 clicks.
 
 Modify an invoice
@@ -27,7 +27,7 @@ you need to modify it, the right operations to do are:
 3. Create a new draft invoice, a copy of the original;
 4. Validate the new invoice.
 
-All those steps are automated by Odoo. All you have to do is to click on
+All those steps are automated by Twenty20. All you have to do is to click on
 the Refund button on an invoice.
 
 .. image:: ./media/modify01.png
@@ -35,7 +35,7 @@ the Refund button on an invoice.
 
 In the refund dialog, select the option "Modify: create a refund,
 reconcile and create a draft invoice". Once you click on the "Create
-Refund" button, Odoo will void your existing invoice and create a new
+Refund" button, Twenty20 will void your existing invoice and create a new
 draft invoice that is a duplicate of the original one.
 
 Edit this new draft invoice and validate it when it's correct.

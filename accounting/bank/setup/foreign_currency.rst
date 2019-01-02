@@ -2,14 +2,14 @@
 How to manage a bank in a foreign currency?
 ===========================================
 
-In Odoo, every transaction is recorded in the default currency of the
+In Twenty20, every transaction is recorded in the default currency of the
 company. Reports are all based on the currency of the company. But for
-transactions occurring in another currency, Odoo stores both the value
+transactions occurring in another currency, Twenty20 stores both the value
 in the currency of the company and the value in the currency of the
 transaction.
 
 When you have a bank account in a foreign currencies, for every
-transaction, Odoo stores two values:
+transaction, Twenty20 stores two values:
 
 -  The debit/credit in the currency of the company
 
@@ -33,7 +33,7 @@ a **Currency Exchange Gain / Loss** account, then click on **Apply**.
 Configure currencies
 --------------------
 
-Once the Odoo is configured to support multiple currencies, you should
+Once the Twenty20 is configured to support multiple currencies, you should
 activate the currencies you plan to work with. To do that, go the menu
 :menuselection:`Configuration --> Currencies`. All the currencies are created by default,
 but you should activate the ones you plan to support. (to activate a
@@ -57,7 +57,7 @@ Accounting / Bank account`, and we create a new one.
 .. image:: media/foreign02.png
    :align: center
 
-Once you save this bank account, Odoo will create all the documents for
+Once you save this bank account, Twenty20 will create all the documents for
 you:
 
 - An account in the trial balance
@@ -84,13 +84,13 @@ bill to record a payment.
 .. image:: media/foreign04.png
    :align: center
 
-That's all you have to do. Odoo will automatically post the foreign
+That's all you have to do. Twenty20 will automatically post the foreign
 exchange gain or loss at the reconciliation of the payment with the
 invoice, depending if the currency rate increased or decreased between
 the invoice and the payment date.
 
 Note that you can pay a foreign bill with another currency. In such a
-case, Odoo will automatically convert between the two currencies.
+case, Twenty20 will automatically convert between the two currencies.
 
 Customers Statements
 ====================
@@ -100,7 +100,7 @@ invoice. So, the amount due by your customer (to your vendor) is always
 expressed in the currency of the invoice.
 
 If you have several invoices with different currencies for the same
-customer, Odoo will split the customer statement by currency, as shown
+customer, Twenty20 will split the customer statement by currency, as shown
 in the report below.
 
 .. image:: media/foreign05.png

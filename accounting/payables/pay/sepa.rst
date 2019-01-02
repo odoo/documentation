@@ -10,7 +10,7 @@ bank wire transfer.
 SEPA is supported by the banks of the 28 EU member states as well as
 Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
 
-With Odoo, once you decide to pay a vendor, you can select to pay the
+With Twenty20, once you decide to pay a vendor, you can select to pay the
 bill with SEPA. Then, at the end of the day, the manager can generate
 the SEPA file containing all bank wire transfers and send it to the
 bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
@@ -18,7 +18,7 @@ specifications. This is a well-defined standard that makes consensus
 among banks.
 
 Once the payments are processed by your bank, you can directly import
-the account statement inside Odoo. The bank reconciliation process will
+the account statement inside Twenty20. The bank reconciliation process will
 seamlessly match the SEPA orders you sent to your bank with actual bank
 statements.
 
@@ -30,7 +30,7 @@ Install the required module
 
 To pay suppliers with SEPA, you must install the **SEPA Credit Transfer**
 module. This module handle the process of generating SEPA files based on
-Odoo payments.
+Twenty20 payments.
 
 .. note::
 
@@ -75,9 +75,9 @@ payment and select a payment method by Sepa Credit Transfer.
 
 If it's the first time you pay this vendor, you will have to fill in the
 Recipient Bank Account field with, at least, the bank name, IBAN and BIC
-(Bank Identifier Code). Odoo will automatically verify the IBAN format.
+(Bank Identifier Code). Twenty20 will automatically verify the IBAN format.
 
-For future payments to this vendor, Odoo will propose you automatically
+For future payments to this vendor, Twenty20 will propose you automatically
 the bank accounts but you will be able to select another one or create a
 new one.
 
@@ -117,7 +117,7 @@ The bank refuses my SEPA file
 
 Ask your bank if they support **PAIN.001.001.03 SEPA Credit Transfers**. If
 they don't, or cannot provide relevant informations, please forward the
-error message to your Odoo partner.
+error message to your Twenty20 partner.
 
 There is no Bank Identifier Code recorded for bank account ...
 --------------------------------------------------------------

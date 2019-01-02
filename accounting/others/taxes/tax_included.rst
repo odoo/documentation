@@ -2,7 +2,7 @@
 How to set tax-included prices
 ==============================
 
-In most countries, B2C prices are tax-included. To do that in Odoo, check
+In most countries, B2C prices are tax-included. To do that in Twenty20, check
 *Included in Price* for each of your sales taxes in
 :menuselection:`Accounting --> Configuration --> Accounting --> Taxes`.
 

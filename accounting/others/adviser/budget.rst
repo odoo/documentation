@@ -7,7 +7,7 @@ Overview
 
 Managing budgets is an essential part of running a business. It allows
 you to measure your actual financial performance against the planned
-one. Odoo manages its budgets using both General and Analytic Accounts.
+one. Twenty20 manages its budgets using both General and Analytic Accounts.
 
 We will use the following example to illustrate. We just started a
 project with Smith&Co and we would like to budget the incomes and
@@ -36,7 +36,7 @@ Budgetary Positions
 
 Budgetary positions are the general accounts for which you want to keep
 budgets (typically expense or income accounts). They need to be defined
-so Odoo can know it which accounts he needs to go get the budget
+so Twenty20 can know it which accounts he needs to go get the budget
 information. Some might be already installed with your chart of
 accounts.
 
@@ -68,7 +68,7 @@ case select the relevant income accounts.
 Analytical account
 ------------------
 
-Odoo needs to know which costs or
+Twenty20 needs to know which costs or
 expenses are relevant to a specified budget. To do so we need to link
 our invoices and expenses to a defined analytical account. Create an
 analytical account by entering the Accounting module and clicking
@@ -129,7 +129,7 @@ some Invoices and Vendors Bills.
 
 Go back in the budget list and find the Smith Project.
 
-Via the analytical account, Odoo can account the invoice lines and
+Via the analytical account, Twenty20 can account the invoice lines and
 purchase lines booked in the accounts and will display them in the
 **Practical Amount** column.
 

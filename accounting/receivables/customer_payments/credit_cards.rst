@@ -2,7 +2,7 @@
 How to register credit card payments on invoices?
 =================================================
 
-There are two ways to handle payments received by credit cards. Odoo
+There are two ways to handle payments received by credit cards. Twenty20
 support both approaches so that you can use the one that better fits
 your habits.
 
@@ -29,7 +29,7 @@ need to take care of the bank reconciliation part as paid invoice will
 be automatically recorded in the right journal. You will use the second
 approach.
 
-Even if the first method is cleaner, Odoo support the second approach
+Even if the first method is cleaner, Twenty20 support the second approach
 because some accountants are used to it (*QuickBooks* and *Peachtree*
 users).
 

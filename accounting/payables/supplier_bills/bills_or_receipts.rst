@@ -19,7 +19,7 @@ line, as vendors bills apply one tax amount over the entire bill.
 
 If my company's bank account is used to pay for goods where only a
 purchase receipt are issued I should use the purchase receipts function
-in Odoo to handle them in accounting.
+in Twenty20 to handle them in accounting.
 
 Let's take the following example: we need to buy tea for our
 customers from a local tea store that doesn't issue bills. We go every
@@ -29,7 +29,7 @@ the company's bank account.
 Configuration
 =============
 
-To handle purchase receipts in Odoo one module and one app has to be
+To handle purchase receipts in Twenty20 one module and one app has to be
 installed. Go into the app module and install the accounting app.
 
 .. image:: ./media/bill01.png

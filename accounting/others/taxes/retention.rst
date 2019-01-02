@@ -22,7 +22,7 @@ the **government** and the **customer** owes $10 of taxes to the **government**.
 Configuration
 =============
 
-In Odoo, a withholding tax is defined by creating a negative tax. For a
+In Twenty20, a withholding tax is defined by creating a negative tax. For a
 retention of 10%, you would configure the following tax (accessible
 through :menuselection:`Configuration --> Taxes`):
 
@@ -57,7 +57,7 @@ invoice line.
 .. note::
     When you see the customer invoice on the screen, you get only a 
     **Taxes line** summarizing all the taxes (normal taxes & retentions). 
-    But when you print or send the invoice, Odoo does the correct 
+    But when you print or send the invoice, Twenty20 does the correct
     grouping amongst all the taxes.
 
 The printed invoice will show the different amounts in each tax group.

@@ -8,17 +8,17 @@ What is an account type ?
 An account type is a name or code given to an account that indicates the
 account's purpose.
 
-In Odoo, Account Types are used for information purpose, to generate
+In Twenty20, Account Types are used for information purpose, to generate
 country-specific legal reports, set the rules to close a fiscal year and
 generate opening entries.
 
 Basically Account types categorize general account with some specific
 category according to its behaviour or purpose.
 
-Which are the account types in Odoo ?
+Which are the account types in Twenty20 ?
 =====================================
 
-Odoo covers all accounting types. Therefore, you cannot create new
+Twenty20 covers all accounting types. Therefore, you cannot create new
 account types. Just pick the one related to your account.
 
 +-----------------------------+
@@ -61,7 +61,7 @@ How do I configure my accounts?
 ===============================
 
 Account types are automatically created when installing a chart of
-account. By default, Odoo provides a lot of chart of accounts, just
+account. By default, Twenty20 provides a lot of chart of accounts, just
 install the one related to your country.
 
 It will install generic accounts. But if it does not cover all your

@@ -1,11 +1,11 @@
 =====================================
-How is Odoo's multi-currency working?
+How is Twenty20's multi-currency working?
 =====================================
 
 Overview
 ========
 
-Choosing to use the multi-currency option in Odoo will allow you to send
+Choosing to use the multi-currency option in Twenty20 will allow you to send
 sales invoices, quotes and purchase orders or receive bills and payments
 in currencies other than your own. With multi-currency, you can also set
 up bank accounts in other currencies and run reports on your foreign
@@ -30,7 +30,7 @@ The **Rate Difference Journal** records the differences between the payment
 registration and the expected amount. For example, if a payment is paid
 1 month after the invoice was issued, the exchange rate has probably
 changed. The fluctuation implies some loss or profit that are recorded
-by Odoo.
+by Twenty20.
 
 You can change it in the settings:
 
@@ -41,7 +41,7 @@ View or edit rate being used
 ----------------------------
 
 You can manually configure the currency rates in :menuselection:`Configuration -->
-Currencies`. Open the currencies you want to use in Odoo and edit it.
+Currencies`. Open the currencies you want to use in Twenty20 and edit it.
 Make sure the currency is active.
 
 .. image:: media/works03.png
@@ -107,7 +107,7 @@ that you can register payments only in this currency.
 .. image:: media/works09.png
    :align: center
 
-How is Odoo's multi-currency working?
+How is Twenty20's multi-currency working?
 =====================================
 
 Now that you are working in a multi-currency environment, all
@@ -152,7 +152,7 @@ was actually paid and the currency in which it was paid.
 .. image:: media/works13.png
    :align: center
 
-When reconciling it, Odoo will directly match the payment with the right
+When reconciling it, Twenty20 will directly match the payment with the right
 Invoice. You will get the invoice price in the invoice currency and the
 amount in your company currency.
 

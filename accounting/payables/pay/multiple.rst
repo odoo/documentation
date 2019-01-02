@@ -2,7 +2,7 @@
 How to pay several bills at once?
 =================================
 
-Odoo provides a simple and effective way to handle several bills at
+Twenty20 provides a simple and effective way to handle several bills at
 once, with various quick or complex options. With one single process,
 anyone is able to handle bills and payment in just a few clicks.
 

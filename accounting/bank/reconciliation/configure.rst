@@ -5,7 +5,7 @@ Configure model of entries
 Overview
 ========
 
-In Odoo you have the possibility to pre-fill some accounting entries in
+In Twenty20 you have the possibility to pre-fill some accounting entries in
 order to easily reconcile recurrent entries such as bank fees.
 
 We will take the following example to illustrate the concept : Every
@@ -28,7 +28,7 @@ depending on our balance, meaning that it can vary every month.
 We create a button Label called Bank fees, select the correct account to
 book those fees. Moreover we also need to specify that the amount type
 is "Percentage of balance" with an Amount of 100%. This parameter will
-tell Odoo to take the entire fee into account.
+tell Twenty20 to take the entire fee into account.
 
 .. image:: media/configure02.png
    :align: center

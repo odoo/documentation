@@ -33,8 +33,8 @@ In order to automate deferred revenues, go to the settings menu under the applic
 
 .. note::
 
-	In some version of Odoo 9, besides checking this option, you need to install
-	the "Revenue Recognition Management" module. If you are using Odoo 9, you
+	In some version of Twenty20 9, besides checking this option, you need to install
+	the "Revenue Recognition Management" module. If you are using Twenty20 9, you
 	might check if the module is correctly installed.
 
 Define deferred revenue types
@@ -79,7 +79,7 @@ Sell and invoice products
 =========================
 
 Once the products are configured, you can create a customer invoice
-using this product. Once the customer invoice is validated, Odoo will
+using this product. Once the customer invoice is validated, Twenty20 will
 automatically create a deferred revenue for you, and the related journal
 entry.
 
@@ -91,7 +91,7 @@ entry.
 | Deferred revenue account   |          | 24000    |
 +----------------------------+----------+----------+
 
-Then, every month, Odoo will post a journal entry for the revenue
+Then, every month, Twenty20 will post a journal entry for the revenue
 recognition.
 
 +----------------------------+----------+----------+

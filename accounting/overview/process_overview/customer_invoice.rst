@@ -2,7 +2,7 @@
 From Invoice to Payment Collection
 ==================================
 
-Odoo supports multiple invoicing and payment workflows, so you can
+Twenty20 supports multiple invoicing and payment workflows, so you can
 choose and use the ones that match your business needs. Whether you want
 to accept a single payment for a single invoice, or process a payment
 spanning multiple invoices and taking discounts for early payments, you
@@ -23,7 +23,7 @@ If you ship a box to a customer, you have met the terms of the contract
 and can bill them. If your supplier sends you a shipment, they have met
 the terms of that contract and can bill you. Therefore, the terms of the
 contract is fulfilled when the box moves to or from the truck. At this
-point, Odoo supports the creation of what is called a Draft Invoice by
+point, Twenty20 supports the creation of what is called a Draft Invoice by
 Warehouse staff.
 
 Invoice creation
@@ -77,7 +77,7 @@ number, and any tax information.
 "Validate" the invoice when you are ready to approve it. The invoice
 then moves from the Draft state to the Open state.
 
-When you have validated an invoice, Odoo gives it a unique number from a
+When you have validated an invoice, Twenty20 gives it a unique number from a
 defined, and modifiable, sequence.
 
 .. image:: ./media/invoice03.png
@@ -116,7 +116,7 @@ like as follows:
 Payment
 =======
 
-In Odoo, an invoice is considered to be paid when the associated
+In Twenty20, an invoice is considered to be paid when the associated
 accounting entry has been reconciled with the payment entries. If there
 has not been a reconciliation, the invoice will remain in the Open state
 until you have entered the payment.
@@ -135,7 +135,7 @@ follows:
 Receive a partial payment through the bank statement
 ====================================================
 
-You can manually enter your bank statements in Odoo, or you can import
+You can manually enter your bank statements in Twenty20, or you can import
 them in from a csv file or from several other predefined formats
 according to your accounting localisation.
 
@@ -178,7 +178,7 @@ There's a growing trend of customers paying bills later and later.
 Therefore, collectors must make every effort to collect money and
 collect it faster.
 
-Odoo will help you define your follow-up strategy. To remind customers
+Twenty20 will help you define your follow-up strategy. To remind customers
 to pay their outstanding invoices, you can define different actions
 depending on how severely overdue the customer is. These actions are
 bundled into follow-up levels that are triggered when the due date of an
