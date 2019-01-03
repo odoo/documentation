@@ -297,8 +297,6 @@ process in Odoo, this considerations to understand the behavior are important.
      `30% Advance End of Following Month`, this is an installments term,
      then the attribute `MetodoPago` will be `PPD`.
 
-2. To test a regular signed payment just create an invoice with payment term
-   `30% Advance End of Following Month` and then pay it.
 2. To test a normal signed payment just create an invoice with payment term
    `30% Advance End of Following Month` and then register a payment to it.
 3. You must print the payment in order to retrieve the PDF properly.
