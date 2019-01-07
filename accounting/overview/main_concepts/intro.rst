@@ -38,4 +38,4 @@ through all your companies data.
 
 Of course, Odoo is mobile too. You can use it to check your accounts on the go.
 
-Try Odoo now, and join 2 millions of happy users.
+Try Odoo now, and join 2 million happy users.
