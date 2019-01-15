@@ -148,6 +148,8 @@ The details of the benefits for each level of partnership are described in the t
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | **Software benefits**                 |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Free access to Odoo Enterprise*       | No               | Yes                | Yes                | Yes                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Access to Odoo Enterprise source code | Yes              | Yes                | Yes                | Yes                |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Odoo Enterprise trial extension codee | Yes              | Yes                | Yes                | Yes                |
@@ -167,6 +169,8 @@ The details of the benefits for each level of partnership are described in the t
 | PARTNER Event - ODOO support &        | No               | Yes                | Yes                | Yes                |
 | Promotion                             |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
+
+(*) up to €2000 / $2680 per year 
 
 .. [#f1] In case the 100% commission rate for Odoo SH is modified upon renewal by a future version
          of this Agreement, the previous rate will continue to apply for existing subscriptions.
@@ -216,6 +220,16 @@ retribution as follows:
   corresponding customer.
 - For other services; PARTNER invoices directly the customer, and ODOO will invoice PARTNER
   directly, commission included (as a discount).
+  
+4.6  Free subscription to Odoo Enterprise terms
+-----------------------------------------------
+The subscription discount is valid as long as:
+
+- the Partnership Subscription is running
+- the Partner uses it for his own Database
+- the Partner Database is hosted Online or on Odoo.sh (no on-premise allowed)
+
+The discount amount is also dependent on your region. 
 
 
 5 Fees
