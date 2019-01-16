@@ -5,11 +5,11 @@
 Odoo Partnership Agreement
 ==========================
 
-.. note:: Version 7 - 2018-05-24
+.. note:: Version 7a - 2019-01-15
 
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
-
+.. v7a: added information about subscription discounts 
 
 BETWEEN:
 
