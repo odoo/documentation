@@ -13,12 +13,6 @@ with the barcode scanner.
       :target: ../../../_static/files/barcodes_actions.pdf
 
 
-.. note::
-    Print this document to be able to use your barcode scanner to perform more actions.
-    
-    Document: |download_barcode|
-
-
 Set products barcodes
 =====================
 
