@@ -119,5 +119,4 @@ in the dropdown menu of the *Connect* button.
 
 In the dropdown menu of the build, you can access the same features than in :ref:`the branches view <odoosh-gettingstarted-branches-tabs>`:
 *Logs*, *Web Shell*, *Outgoing e-mails*.
-You also have the possibility to *Download a dump* of the build's database and for the production database only,
-you have the ability to *Make a test duplicate*.
+You also have the possibility to *Download a dump* of the build's database.
