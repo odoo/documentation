@@ -9,3 +9,4 @@ Internet of Things (IoT)
 
    iot/connect
    iot/pos
+   iot/iot_notfound
