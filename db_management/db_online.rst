@@ -50,40 +50,86 @@ Several actions are available:
 Upgrade
 =======
 
-Make sure to be connected to the database you want to upgrade and access the
-database management page. On the line of the database you want to upgrade, click
-on the "Upgrade" button.
+.. warning :: Upgrading your database to a newer version of Odoo is a complex operation
+    that require time and caution. It is extremely important that you
+    fully test the process before upgrading your production database.
+
+Odoo releases new versions regularly (at least once a year), and upgrading your
+database to enjoy new Odoo features is part of the Odoo Online experience.
+
+The upgrade process can take some time, especially if you use multiple apps or
+apps that manage sensitive data (e.g. Accounting, Inventory, etc.). In general,
+the 'smallest' the database, the quickest the upgrade. A single-user
+database that uses only CRM will be processed faster than a multi-company,
+multi-user database that uses Accounting, Sales, Purchase and Manufacturing.
+
+Unfortunately, it is impossible to give time estimates for every upgrade request,
+since Odoo.com will test manually every database upgrade at least once and will
+need to correct/adapt changes made to the standard Odoo Apps (e.g. through Studio
+or through a Success Pack) on a case-by-case basis. This can make the process
+slower, since requests are treated in the order they arrive. This is especially
+true in the months following the release of a new major version, which can lengthen
+the upgrade delay significantly.
+
+The upgrade process is quite simple from your point of view:
+
+1. You request a test upgrade
+2. Once all tests have been validated **by you**, you upgrade your actual database
+
+The process to request a test or a production (*actual*) upgrade is the same.
+
+First, make sure to be connected to the database you want to upgrade and access the
+`database management page <https://www.odoo.com/my/databases>`__.
+On the line of the database you want to upgrade, click
+on the "Cog" menu. If an newer version of Odoo is available, you will see an 'Upgrade'
+button.
 
 .. image:: media/upgrade1.png
     :align: center
 
 You have the possibility to choose the target version of the upgrade. By default,
 we select the highest available version available for your database; if you were
-already in the process of testing a migration, we will automatically select the
+already in the process of testing an upgrade, we will automatically select the
 version you were already testing (even if we released a more recent version during
 your tests).
 
-By clicking on the "Test upgrade" button an upgrade request will be generated.
-If our automated system does not encounter any problem, you will receive a
-"Test" version of your upgraded database.
-
-.. image:: media/test_upgrade.png
+.. image:: media/upgrade_test.png
     :align: center
 
-.. note :: If our automatic system detect an issue during the creation of your
-    test database, our dedicated team will have to work on it. You will be
-    notified by email and the process will take up to 4 weeks.
+By clicking on the "Test upgrade" button, an upgrade request will be generated.
+Only one request can be made at time for each database; if a request has already
+been made, you will see an 'Upgrade Queued' note instead and asking another
+request will not be possible.
 
-You will have the possibility to test it for 1 month. Inspect your data (e.g.
-accounting reports, stock valuation, etc.), check that all your usual flows
-work correctly (CRM flow, Sales flow, etc.).
+A test upgrade will create a copy of your database, upgrade it and make it
+available to you automatically once successful. If this is the first test you
+request for this particular database, a manual testing phase will be done by
+Odoo.com - this could take time (up to several weeks). Subsequent requests
+will not go through that manual testing step and will usually be made
+available in a few hours. Once the test database is available, you should
+receive an e-mail with the URL of the test database.
 
-Once you are ready and that everything is correct in your test migration, you
-can click again on the Upgrade button, and confirm by clicking on Upgrade
-(the button with the little rocket!) to switch your production database to
-the new version.
+**Testing your database is the most important step of the upgrade process!**
+Even though we test all upgrades manually, we do not know your work processes.
+A change in standard worfklows of Odoo in new versions might require you to
+change internal processes, or some of the customizations you made through Odoo
+Studio might now work properly. *It is up to you to make sure that everything
+works as it should!* You can report issues with your test database through our
+`Support page <https://www.odoo.com/help>`__.
 
-.. image:: media/upgrade.png
+Make sure to do one last test of your upgrade right before the final upgrade
+(e.g. the day before) to ensure everything will run smoothly. Downgrading is
+not possible and post-poning an upgrade is always easier than being prevented
+to work by an upgrade issue after the fact!
+
+Once you are ready and you have validated all your tests, you can click
+again on the Upgrade button and confirm by clicking on Upgrade (the button
+with the little rocket!) to switch your production database to the new version.
+Your database will then be taken offline within the next 10 minutes and will be
+upgraded automatically; you receive a confirmation
+e-mail once the process is completed.
+
+.. image:: media/upgrade_prod.png
     :align: center
 
 .. warning :: Your database will be taken offline during the upgrade
