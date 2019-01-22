@@ -5,11 +5,11 @@ Manage Multi Websites
 .. image:: media/multi_website01.png
   :align: center
 
-Odoo’s Multi-Websites opens up wide possibilities of diversification and
+Odoo’s Multi-Websites opens up broad possibilities of diversification and
 customer segmentation for your business. A multiplied audience and
 boosted revenue are now just a few clicks away!
 
-Each website can work in a fully independent way, with its own theme,
+Each website can work in a fully independent way, with its theme,
 branding, domain name, header & footer, pages, languages, products, blog
 posts, forum, slides, events, live chat channels, etc. Let’s go for a
 tour!
@@ -30,20 +30,19 @@ domain name. Leave empty to publish the new website under the default
 domain of your Odoo database. You can later set some country groups to
 redirect visitors to it using Geo IP.
 
-Then, select a theme. This new website might have a totally different
+Then, select a theme. This new website might have an entirely different
 purpose or audience than the first one. So feel free to go for a
 different theme!
 
 Once the theme is selected, you can start to build the homepage of your
-website. Follow the purple drops, they will help you in the first steps.
+website. Follow the purple drops; they will help you in the first steps.
 
 .. image:: media/multi_website03.png
   :align: center
 
 .. note::
-      If you run Odoo Online, don’t forget to redirect any new domain
-      name to your Odoo database (CNAME) and to authorize it Odoo-side. 
-      `Read <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__,
+      If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database (CNAME) and to authorize it Odoo-side. 
+      `Read <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__
 
 Create the menu
 ===============
@@ -67,18 +66,17 @@ requested to sign in.
 
 
 .. note::
-    When switching, you are taken to the same domain path in the
-    other website (e.g. /shop/myproduct). If this URL is not used there, you will be redirected to a 404 page but suggested to create a new page from there.
+    When switching, you are redirected to the same domain path on the other website (e.g.,/shop/myproduct). If this URL is not used, you will be redirected to a 404 page but suggested to create a new page from there.
 
 Add features
 ============
 
-The website apps you install (e.g. Slides, Blogs) are made available in
-all your websites. You can of course keep them hidden in one website by
+The website apps you install (e.g., Slides, Blogs) are made available on
+all your websites. You can, of course, keep them hidden in one website by
 removing the menu item.
 
 Each website comes with a high range of specific options in the
-settings. First select the website to configure.
+settings. First, select the website to configure.
 
 .. image:: media/multi_website05.png
   :align: center
@@ -89,7 +87,7 @@ they only impact the very website you are working on.
 .. image:: media/multi_website06.png
   :align: center
 
-You can for instance set specific :
+You can, for instance, set specific :
 
 -  languages,
 
@@ -119,7 +117,7 @@ be redirected to the right website using Geo IP.
 
 .. note:: 
 Geo IP is installed by default in Odoo Online. If you run Odoo
-on-premise, don’t forget to install \*geoip\* library.
+on-premise, don’t forget to install *Geoip* library.
 
 `Read the full documenation about domain names here <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__, 
 
@@ -127,10 +125,10 @@ Customize the visitor experience
 ================================
 
 
-The customer experience can be customized very deeply thanks to the menu
+The customer experience can be customized very profoundly thanks to the menu
 \*Customize\*. All the visual options available there are specific to
 each website. Go through the different pages to adapt them to this new
-audience. Focus on workflows and automatic pages (eCommerce checkout,
+audience. Focus on workflows, and automatic pages (eCommerce checkout,
 blogs, events, etc.) as the number of available options is higher there.
 
 .. image:: media/multi_website08.png
@@ -183,11 +181,11 @@ page and set the new website.
   :align: center
 
 When you edit the page again, the change only affects the current
-website. A new page is actually duplicated and tied up to the website.
+website. A new page is duplicated and tied up to the website.
 The original page still being linked to all websites.
 
 .. tip:: 
-      By grouping pages by URL in the page manager, you easily find
+      By grouping pages by URL in the page manager, you quickly find
       the original page behind each edited page.
 
 .. image:: media/multi_website11.png
@@ -211,9 +209,7 @@ have access to, typically the ones belonging to their current company
 is it for visitors.
 
 .. note::
-      If websites are multi-companies, you don’t change company when
-      switching websites. To change company and see the related content, use
-      the company selector in the menu.
+      If websites are multi-companies, you don’t change company when switching websites. To change the company and see the related content, use the company selector in the menu.
 
 .. image:: media/multi_website13.png
   :align: center
@@ -221,11 +217,11 @@ is it for visitors.
 Configure your eCommerce website
 ================================
 
-eCommerce is a key feature in the multi-websites environment. We made it
+eCommerce is a crucial feature in the multi-websites environment. We made it
 so that the entire flow can be customized to fit the very audience of
 each website.
 
-Products only available in one website
+Products only available on one website
 --------------------------------------
 
 We already saw earlier how to publish a specific record in only one
@@ -254,17 +250,17 @@ To manage specific prices by websites, you can activate *Multiple Sales
 Prices per Product* in Website settings.
 
 Then, go to :menuselection:`Website --> Products → Pricelists` to create additional
-pricelists. Read `Pricelists Documenation <https://www.odoo.com/documentation/user/online/ecommerce/maximizing_revenue/pricing.html>`__, 
+pricelists. Read `Pricelists Documentation <https://www.odoo.com/documentation/user/online/ecommerce/maximizing_revenue/pricing.html>`__, 
 
-if you need help. Select a website to make a pricelist only available on
+If you need help. Select a website to make a pricelist only available on
 this website.
 
 .. image:: media/multi_website15.png
   :align: center
 
-Leaving the field empty means you make it work in all websites if
-*Selectable* is checked. Otherwise, it makes it only available for
-sales backend operations of Sales and Point of Sale applications.
+Leaving the field empty means that you make it work in all websites if
+*Selectable* is selected. Otherwise, it makes it only available for
+backend operations of Sales and Point of Sale applications.
 
 Payment Methods
 ---------------
