@@ -12,3 +12,4 @@ Localizations
    localizations/spain
    localizations/switzerland
    localizations/colombia
+   localizations/colombia_ES
