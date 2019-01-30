@@ -276,7 +276,7 @@ What kind of support is not included?
 - Questions that require us to understand your business processes in order to
   help you implement your database
 - Training on how to use our software (we will direct you to our many resources)
-- Importation of documents into your database
+- Import of documents into your database
 - Guidance on which configurations to apply inside of an application or the database
 - How to set up configuration models (Examples include: Inventory Routes,
   Payment Terms, Warehouses, etc)
