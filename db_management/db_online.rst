@@ -50,7 +50,7 @@ Several actions are available:
 Upgrade
 =======
 
-.. warning :: Upgrading your database to a newer version of Odoo is a complex operation
+.. warning:: Upgrading your database to a newer version of Odoo is a complex operation
     that require time and caution. It is extremely important that you
     fully test the process before upgrading your production database.
 
@@ -59,7 +59,7 @@ database to enjoy new Odoo features is part of the Odoo Online experience.
 
 The upgrade process can take some time, especially if you use multiple apps or
 apps that manage sensitive data (e.g. Accounting, Inventory, etc.). In general,
-the 'smallest' the database, the quickest the upgrade. A single-user
+the 'smaller' the database, the quickest the upgrade. A single-user
 database that uses only CRM will be processed faster than a multi-company,
 multi-user database that uses Accounting, Sales, Purchase and Manufacturing.
 
@@ -80,6 +80,10 @@ The process to request a test or a production (*actual*) upgrade is the same.
 
 First, make sure to be connected to the database you want to upgrade and access the
 `database management page <https://www.odoo.com/my/databases>`__.
+
+.. note:: You have to have an active session with access to the Settings app
+    in the database you want to upgrade for the button to be visible.
+
 On the line of the database you want to upgrade, click
 on the "Cog" menu. If an newer version of Odoo is available, you will see an 'Upgrade'
 button.
