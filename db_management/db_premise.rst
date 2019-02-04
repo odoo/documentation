@@ -77,6 +77,19 @@ Solutions
     should have a distinct UUID to ensure that registration and invoicing proceed
     effortlessly for your and for us.
 
+* Check your network and firewall settings
+
+  * The Update notification must be able to reach Odoo's subscription
+    validation servers. In other words, make sure that the Odoo server is able
+    to open outgoing connections towards:
+
+      * `services.odoo.com` on port `443` (or `80`)
+      * `services.openerp.com` on port `443` (or `80`) for older deployments
+
+  * Once you activated your database, you must keep these ports open, as the
+    Update notification runs once a week.
+
+
 
 Error message due to too many users
 -----------------------------------
