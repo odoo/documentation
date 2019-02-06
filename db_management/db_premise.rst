@@ -83,8 +83,8 @@ Solutions
     validation servers. In other words, make sure that the Odoo server is able
     to open outgoing connections towards:
 
-      * `services.odoo.com` on port `443` (or `80`)
-      * `services.openerp.com` on port `443` (or `80`) for older deployments
+      * services.odoo.com on port 443 (or 80)
+      * services.openerp.com on port 443 (or 80) for older deployments
 
   * Once you activated your database, you must keep these ports open, as the
     Update notification runs once a week.
