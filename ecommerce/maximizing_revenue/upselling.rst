@@ -1,5 +1,5 @@
 ====================================================
-How to sell pricier product alternatives (upselling)
+How to sell pricier alternative products (upselling)
 ====================================================
 
 In order to maximize your revenue, suggesting pricier alternative products is
