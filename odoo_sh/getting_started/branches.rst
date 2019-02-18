@@ -181,10 +181,24 @@ and open a shell on your database by typing :code:`psql`.
 .. image:: ./media/interface-branches-shell.png
    :align: center
 
+You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
+for instance side by side.
+
 
 .. Note::
   Long running shell instances are not guaranteed. Idle shells can be
   disconnected at anytime in order to free up resources.
+
+Editor
+------
+An online integrated development environment (IDE) to edit the source code.
+You can also open terminals, Python consoles and even Odoo Shell consoles.
+
+.. image:: ./media/interface-branches-editor.png
+   :align: center
+
+You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
+for instance side by side.
 
 Logs
 ----
