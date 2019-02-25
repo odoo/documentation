@@ -1,6 +1,6 @@
 =====
-Oauth
+OAuth
 =====
 
-Due to specific requirements in Azure's Oauth implementation,
-Microsoft Azure Oauth identification is NOT compatible with Odoo at the moment.
+Due to specific requirements in Azure's OAuth implementation,
+Microsoft Azure OAuth identification is NOT compatible with Odoo at the moment.
