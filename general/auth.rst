@@ -6,3 +6,4 @@ Authentication
    :titlesonly:
 
    auth/google
+   auth/azure
