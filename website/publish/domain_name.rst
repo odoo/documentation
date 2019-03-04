@@ -88,6 +88,12 @@ To enable SSL, please use a third-party CDN service provider
 such as CloudFlare.com. 
 
 
+My website is indexed twice by Google
+=====================================
+
+If you set up a custom domain *mydomain.com* name for *mydatabase.odoo.com*,
+Google indexes your website under both names. This is a limitation of the Odoo cloud platforms/
+
 .. seealso::
 
   * :doc:`../../discuss/email_servers`
