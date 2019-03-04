@@ -78,7 +78,7 @@ Here are the Odoo.sh pertinent directories:
 Both Python 2.7 and 3.5 are installed in the containers. However:
 
 * If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7.
-* If your project is configured to use Odoo 11.0, the Odoo server runs with Python 3.5.
+* If your project is configured to use Odoo 11.0 or greater, the Odoo server runs with Python 3.5.
 
 Database shell
 ==============
