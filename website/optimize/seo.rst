@@ -13,22 +13,20 @@ Some examples of SEO rules: your web pages should load faster, your page
 should have one and only one title ``<h1>``, your website should have a
 ``/sitemap.xml`` file, etc.
 
-The Odoo Website Builder is probably the most SEO-ready CMS out there.
-We consider SEO a top priority. To guarantee Odoo Website and Odoo
+To guarantee Odoo Website and Odoo
 eCommerce users have a great SEO, Odoo abstracts all the technical
 complexities of SEO and handles everything for you, in the best possible
 way.
 
-Page speed
+Page Speed
 ==========
 
 Introduction
 ------------
 
-The time to load a page is an important criteria for Google. A faster
-website not only improves your visitor's experience, but Google gives
-you a better page ranking if your page loads faster than your
-competitors. Some studies have shown that, if you divide the time to
+The time to load a page is an important criteria for search engines. A faster
+website not only improves your visitor's experience, but gives
+you a better page ranking. Some studies have shown that, if you divide the time to
 load your pages by two (e.g. 2 seconds instead of 4 seconds), the
 visitor abandonment rate is also divided by two. (25% to 12.5%). One
 extra second to load a page could `cost $1.6b to Amazon in
@@ -45,11 +43,11 @@ your website ranks using these two tools:
 
 - `Pingdom Website Speed Test <http://tools.pingdom.com/fpt/>`__
 
-Static resources: CSS
+Static Resources: CSS
 ---------------------
 
 All CSS files are pre-processed, concatenated, minified, compressed and
-cached (server side and browser side). The result:
+cached (server-side and browser-side). The result:
 
 - only one CSS file request is needed to load a page
 
@@ -59,12 +57,28 @@ cached (server side and browser side). The result:
 
 - this CSS file is optimized to be small
 
-**Pre-processed:** The CSS framework used by Odoo 9 is bootstrap 3.
+**Pre-processed:** The CSS framework used by Odoo is Bootstrap.
 Although a theme might use another framework, most of `Odoo
 themes <https://www.odoo.com/apps/themes>`__ extend and customize
-bootstrap directly. Since Odoo supports Less and Sass, so you can modify
-CSS rules, instead of overwriting them through extra CSS lines,
+Bootstrap directly. Since Odoo supports Less and Sass, you can modify
+CSS rules instead of overwriting them through extra CSS lines,
 resulting in a smaller file.
+
+**Concatenated:** every module or library you might use in Odoo has its
+own set of CSS, Less or Sass files (eCommerce, blogs, themes, etc.). Having
+several CSS files is great for the modularity, but not good for the
+performance because most browsers can only perform 6 requests in
+parallel resulting in lots of files loaded in series. The
+latency time to transfer a file is usually much longer than the actual
+data transfer time, for small files like .JS and .CSS. Thus, the time to
+load CSS resources depends more on the number of requests to be done
+than the actual file size.
+
+To address this issue, all CSS / Less / Sass files are concatenated into
+a single .CSS file to send to the browser. So a visitor has **only one
+.CSS file to load** per page, which is particularly efficient. As the
+CSS is shared amongst all pages, when the visitor clicks on another
+page, the browser does not even have to load a new CSS file!
 
 ================================= =============================================
   **Both files in the <head>**     **What the visitor gets (only one file)**   
@@ -81,22 +95,6 @@ resulting in a smaller file.
  }                                                                             
 ================================= =============================================
 
-**Concatenated:** every module or library you might use in Odoo has its
-own set of CSS, Less or Sass files (eCommerce, blog, theme, etc.) Having
-several CSS files is great for the modularity, but not good for the
-performance because most browsers can only perform 6 requests in
-parallel resulting in lots of files that are loaded in series. The
-latency time to transfer a file is usually much longer than the actual
-data transfer time, for small files like .JS and .CSS. Thus, the time to
-load CSS resources depends more on the number of requests to be done
-than the actual file size.
-
-To address this issue, all CSS / Less / Sass files are concatenated into
-a single .CSS file to send to the browser. So a visitor has **only one
-.CSS file to load** per page, which is particularly efficient. As the
-CSS is shared amongst all pages, when the visitor clicks on another
-page, the browser does not even have to load a new CSS file!
-
 The CSS sent by Odoo includes all CSS / Less / Sass of all pages /
 modules. By doing this, additional page views from the same visitor will
 not have to load CSS files at all. But some modules might include huge
@@ -108,8 +106,8 @@ the visitor logs in and accesses the backend (/web).
 
 .. note:: 
   If the CSS file is very big, Odoo will split it into two smaller
-  files to avoid the 4095 selectors limit per sheet of Internet Explorer
-  8. But most themes fit below this limit.
+  files to avoid the 4095 selectors limit per sheet of Internet Explorer. 
+  But most themes fit below this limit.
 
 **Minified:** After being pre-processed and concatenated, the resulting
 CSS is minified to reduce its size.
@@ -126,40 +124,35 @@ CSS is minified to reduce its size.
 The final result is then compressed, before being delivered to the
 browser.
 
-Then, a cached version is stored on the server side (so we do not have
-to pre-process, concatenate, minify at every request) and the browser
-side (so the same visitor will load the CSS only once for all pages he
-will visit).
+Then, a cached version is stored server-side (so we do not have
+to pre-process, concatenate, minify at every request) and browser-side 
+(so the same visitor will load the CSS only once for all pages they
+visit).
 
-.. note::
-  If you are in debug mode, the CSS resources are neither
-  concatenated nor minified. That way, it's easier to debug (but it's much
-  slower)
-
-Static resources: Javascript
+Static Resources: Javascript
 ----------------------------
 
 As with CSS resources, Javascript resources are also concatenated,
-minified, compressed and cached (server side and browser side).
+minified, compressed and cached (server-side and browser-side).
 
 Odoo creates three Javascript bundles:
 
 - One for all pages of the website (including code for parallax
-  effects, form validation, …)
+  effects, form validation, etc.)
 
 - One for common Javascript code shared among frontend and backend
-  (bootstrap)
+  (Bootstrap)
 
 - One for backend specific Javascript code (Odoo Web Client interface
   for your employees using Odoo)
 
-Most visitors to your website will only need the first two bundles,
+Most visitors of your website will only need the first two bundles,
 resulting in a maximum of two Javascript files to load to render one
 page. As these files are shared across all pages, further clicks by the
 same visitor will not load any other Javascript resource.
 
 .. note::
-  If you work in debug mode, the CSS and javascript are neither
+  If you work in debug mode, the CSS and Javascript are neither
   concatenated, nor minified. Thus, it's much slower. But it allows you to
   easily debug with the Chrome debugger as CSS and Javascript resources
   are not transformed from their original versions.
@@ -167,9 +160,9 @@ same visitor will not load any other Javascript resource.
 Images
 ------
 
-When you upload new images using the website builder, Odoo automatically
-compresses them to reduce their sizes. (lossless compression for .PNG
-and .GIF and lossy compression for .JPG)
+When you upload new images, Odoo automatically
+compresses them to reduce their sizes (lossless compression for .PNG
+and .GIF and lossy compression for .JPG).
 
 From the upload button, you have the option to keep the original image
 unmodified if you prefer to optimize the quality of the image rather
@@ -236,7 +229,7 @@ server (NGINX or Apache).
 
 The Odoo Website builder has been optimized to guarantee clean and short
 HTML code. Building blocks have been developed to produce clean HTML
-code, usually using bootstrap and the HTML editor.
+code, usually using Bootstrap and the HTML editor.
 
 As an example, if you use the color picker to change the color of a
 paragraph to the primary color of your website, Odoo will produce the
@@ -252,21 +245,17 @@ code:
 Responsive Design
 -----------------
 
-As of 2015, websites that are not mobile-friendly are negatively
-impacted in Google Page ranking. All Odoo themes rely on Bootstrap 3 to
-render efficiently according to the device: desktop, tablet or mobile
-phone.
+Websites that are not mobile-friendly are negatively
+impacted in search engine rankings. All Odoo themes rely on Bootstrap to
+render efficiently according to the device: desktop, tablet or mobile.
 
 .. image:: media/seo08.png
   :align: center
 
 As all Odoo modules share the same technology, absolutely all pages in
-your website are mobile friendly. (as opposed to traditional CMS which
-have mobile friendly themes, but some specific modules or pages are not
-designed to be mobile friendly as they all have their own CSS
-frameworks)
+your website are mobile friendly.
 
-Browser caching
+Browser Caching
 ---------------
 
 Javascript, images and CSS resources have an URL that changes
@@ -287,19 +276,17 @@ Scalability
 -----------
 
 In addition to being fast, Odoo is also more scalable than traditional
-CMS' and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
+CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
 following link provides an analysis of the major open source CMS and
-eCommerce compared to Odoo when it comes to high query volumes.
+eCommerce compared to Odoo when it comes to high query volumes:
+`*https://www.odoo.com/slides/slide/197* <https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`__
 
-- `*https://www.odoo.com/slides/slide/197* <https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`__
-
-Here is the slide that summarizes the scalability of Odoo eCommerce and
-Odoo CMS. (based on Odoo version 8, Odoo 9 is even faster)
+Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
 .. image:: media/seo09.png
   :align: center
 
-URLs handling
+URLs Handling
 =============
 
 URLs Structure
@@ -315,23 +302,21 @@ With the following components:
 
 -  **www.mysite.com** = your domain name
 
--  **/fr\_FR** = the language of the page. This part of the URL is
+-  **/fr\_FR** = page language. This part of the URL is
    removed if the visitor browses the main language of the website
-   (english by default, but you can set another language as the main
-   one). Thus, the English version of this page is:
+   Thus, the main version of this page is:
    https://www.mysite.com/shop/product/my-great-product-31
 
 -  **/shop/product** = every module defines its own namespace (/shop is
    for the catalog of the eCommerce module, /shop/product is for a
-   product page). This name can not be customized to avoid conflicts
-   in different URLs.
+   product page).
 
 -  **my-great-product** = by default, this is the slugified title of the
    product this page refers to. But you can customize it for SEO
    purposes. A product named "Pain carré" will be slugified to
    "pain-carre". Depending on the namespace, this could be different
    objects (blog post, page title, forum post, forum comment,
-   product category, etc)
+   product category, etc.).
 
 -  **-31** = the unique ID of the product
 
