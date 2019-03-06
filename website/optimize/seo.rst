@@ -294,7 +294,7 @@ URLs Structure
 
 A typical Odoo URL will look like this:
 
-https://www.mysite.com/fr\_FR/shop/product/my-great-product-31
+- https://www.mysite.com/fr\_FR/shop/product/my-great-product-31
 
 With the following components:
 
@@ -330,31 +330,22 @@ an example, the following URLs all do a 301 redirect to the above URL:
 -  http://mysite.com/fr\_FR/shop/product/other-product-name-31 (old
    product name)
 
-This could be useful to easily get shorter version of an URL and handle
-efficiently 301 redirects when the name of your product changes over
-time.
-
 Some URLs have several dynamic parts, like this one (a blog category and
-a post):
+a post): 
 
 -  https://www.odoo.com/blog/company-news-5/post/the-odoo-story-56
 
 In the above example:
 
--  Company News: is the title of the blog
+-  *Company News* is the title of the blog
 
--  The Odoo Story: is the title of a specific blog post
+-  *The Odoo Story* is the title of a specific blog post
 
 When an Odoo page has a pager, the page number is set directly in the
 URL (does not have a GET argument). This allows every page to be indexed
-by search engines. Example:
+by search engines. Example: 
 
 -  https://www.odoo.com/blog/page/3
-
-.. note:: 
-  Having the language code as fr\_FR is not perfect in terms of SEO.
-  Although most search engines treat now "\_" as a word separator, it has
-  not always been the case. We plan to improve that for Odoo 10.
 
 Changes in URLs & Titles
 ------------------------
@@ -377,32 +368,30 @@ Will automatically redirect to :
 
 In short, just change the title of a blog post or the name of a product,
 and the changes will apply automatically everywhere in your website. The
-old link still works for links coming from external website. (with a 301
-redirect to not lose the SEO link juice)
+old link still works for links coming from external websites, with a 301
+redirect to not lose the SEO link juice.
 
 HTTPS
 -----
 
-As of August 2014, Google started to add a ranking boost to secure
-HTTPS/SSL websites. So, by default all Odoo Online instances are fully
+Search engines boost ranking of secure HTTPS/SSL websites. 
+So, by default all Odoo Online instances are fully
 based on HTTPS. If the visitor accesses your website through a non HTTPS
 url, it gets a 301 redirect to its HTTPS equivalent.
 
-Links: nofollow strategy
+Links: Nofollow Strategy
 ------------------------
 
-Having website that links to your own page plays an important role on
-how your page ranks in the different search engines. The more your page
-is linked from external and quality websites, the better is it for your
-SEO.
+The more a page is linked from external and quality websites, 
+the better it is for your SEO.
 
-Odoo follows the following strategies to manage links:
+Here are Odoo strategies to manage links:
 
-- Every link you create manually when creating page in Odoo is
+- Every link you add to your website is
   "dofollow", which means that this link will contribute to the SEO
   Juice for the linked page.
 
-- Every link created by a contributor (forum post, blog comment, ...)
+- Every link posted by a contributor (forum post, blog comment, etc.)
   that links to your own website is "dofollow" too.
 
 - But every link posted by a contributor that links to an external
@@ -411,19 +400,19 @@ Odoo follows the following strategies to manage links:
   which have a bad reputation.
 
 - Note that, when using the forum, contributors having a lot of Karma
-  can be trusted. In such case, their links will not have a
+  can be trusted. In such case, their links will not have any
   ``rel="nofollow"`` attribute.
 
-Multi-language support
+Multi-Language Support
 ======================
 
-Multi-language URLs
+Multi-Language URLs
 -------------------
 
 If you run a website in multiple languages, the same content will be
 available in different URLs, depending on the language used:
 
-- https://www.mywebsite.com/shop/product/my-product-1 (English version = default)
+- https://www.mywebsite.com/shop/product/my-product-1 (main language, English here)
 
 - https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1 (French version)
 
@@ -431,38 +420,36 @@ In this example, fr\_FR is the language of the page. You can even have
 several variations of the same language: pt\_BR (Portuguese from Brazil)
 , pt\_PT (Portuguese from Portugal).
 
-Language annotation
+Language Annotation
 -------------------
 
-To tell Google that the second URL is the French translation of the
+To let search engines know that the second URL is the French translation of the
 first URL, Odoo will add an HTML link element in the header. In the HTML
-<head> section of the English version, Odoo automatically adds a link
-element pointing to the other versions of that webpage;
+<head> section of the main version, Odoo automatically adds a link
+element pointing to the translated versions of that webpage;
 
 -  <link rel="alternate" hreflang="fr"
    href="https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1"/>
 
 With this approach:
 
-- Google knows the different translated versions of your page and will
-  propose the right one according to the language of the visitor
-  searching on Google
+- Search engines will redirect to th right language according to the 
+  visitor language.
 
-- You do not get penalized by Google if your page is not translated
-  yet, since it is not a duplicated content, but a different
+- You do not get penalized by search engines if your page is not translated
+  yet. Indeed, it's not a duplicated content, but a different
   version of the same content.
 
-Language detection
+Language Detection
 ------------------
 
-When a visitor lands for the first time at your website (e.g.
-yourwebsite.com/shop), his may automatically be redirected to a
-translated version according to his browser language preference: (e.g.
-yourwebsite.com/fr\_FR/shop).
+When a visitor lands for the first time on your website (e.g.
+yourwebsite.com/shop), they may automatically be redirected to a
+translated version according to their browser language preference: (e.g.
+yourwebsite.com/fr\_FR/shop). 
 
-Odoo redirects visitors to their prefered language only the first time
-visitors land at your website. After that, it keeps a cookie of the
-current language to avoid any redirection.
+Next time, it keeps a cookie of the current language to 
+avoid any redirection.
 
 To force a visitor to stick to the default language, you can use the
 code of the default language in your link, example:
@@ -479,13 +466,12 @@ Titles, Keywords and Description
 Every web page should define the ``<title>``, ``<description>`` and ``<keywords>``
 meta data. These information elements are used by search engines to rank
 and categorize your website according to a specific search query. So, it
-is important to have titles and keywords in line with what people search
-in Google.
+is important to have titles and keywords in line with what people seek.
 
-In order to write quality meta tags, that will boost traffic to your
-website, Odoo provides a **Promote** tool, in the top bar of the website
-builder. This tool will contact Google to give you information about
-your keywords and do the matching with titles and contents in your page.
+In order to write quality content and boost your traffic, Odoo provides
+a keyword finder. For each keyword, you see how it is used through the content
+(H1, H2, page title, page description, page content) and what are the related 
+searches in Google. The more keywords are used the better.
 
 .. image:: media/seo10.png
   :align: center
