@@ -263,10 +263,10 @@ Leaving the field empty means that you make it work in all websites if
 *Selectable* is selected. Otherwise, it makes it only available for
 backend operations of Sales and Point of Sale applications.
 
-Payment Methods
----------------
+Payment Acquirers and Delivery Methods
+--------------------------------------
 
-By default, activated payment acquirers are deployed in all websites.
+By default, published payment acquirers and delivery methods are deployed in all websites.
 You could already use specific payment acquirers per country using Geo
 IP by defining countries in their configuration. Now you can also do it
 per website by filling in the *Website* field.
