@@ -478,25 +478,13 @@ searches in Google. The more keywords are used the better.
 
 .. note:: 
   If your website is in multiple languages, you can use the Promote
-  tool for every language of a single page;
-
-In terms of SEO, content is king. Thus, blogs play an important role in
-your content strategy. In order to help you optimize all your blog post,
-Odoo provides a page that allows you to quickly scan the meta tags of
-all your blog posts.
-
-.. image:: media/seo11.png
-  :align: center
-
-.. note::
-  This /blog page renders differently for public visitors that are
-  not logged in as website administrator. They do not get the warnings and
-  keyword information.
+  tool for every language of a single page.
 
 Sitemap
 -------
 
-Odoo will generate a ``/sitemap.xml`` file automatically for you. For
+The sitemap points out pages to index to search engine robots.
+Odoo generates a ``/sitemap.xml`` file automatically for you. For
 performance reasons, this file is cached and updated every 12 hours.
 
 By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
@@ -512,20 +500,20 @@ Every sitemap entry has 4 attributes that are computed automatically:
 -  ``<lastmod>`` : last modification date of the resource, computed
    automatically based on related object. For a page related to a
    product, this could be the last modification date of the product
-   or the page
+   or the page.
 
 -  ``<priority>`` : modules may implement their own priority algorithm based
    on their content (example: a forum might assign a priority based
    on the number of votes on a specific post). The priority of a
    static page is defined by it's priority field, which is
-   normalized. (16 is the default)
+   normalized (16 is the default).
 
 Structured Data Markup
 ----------------------
 
 Structured Data Markup is used to generate Rich Snippets in search
 engine results. It is a way for website owners to send structured data
-to search engine robots; helping them to understand your content and
+to search engine robots; helping them understand your content and
 create well-presented search results.
 
 Google supports a number of rich snippets for content types, including:
@@ -543,18 +531,28 @@ and rating of a product:
 robots.txt
 ----------
 
-Odoo automatically creates a ``/robots.txt`` file for your website. Its
-content is:
+When indexing your website, search engines take a first look at the
+general indexing rules of the a``/robots.txt`` file (allowed robots,
+sitemap path, etc.). Odoo automatically creates it. Its content is:
 
 User-agent: \*
-
 Sitemap: https://www.odoo.com/sitemap.xml
 
-Content is king
+It means that all robots are allowed to index your website
+and there is no other indexing rule than specified in the sitemap
+to be found at following address.
+
+You can customize the file *robots* in developer mode from 
+*Settings --> Technical --> User Interface --> Views*
+(exclude robots, exclude some pages, redirect to a custom Sitemap). 
+Make the Model Data of the view *Non Updatable* to not reset the
+file after system upgrades.
+
+Content is King
 ===============
 
 When it comes to SEO, content is usually king. Odoo provides several
-modules to help you build your contents on your website:
+modules to help you build your website contents:
 
 - **Odoo Slides**: publish all your Powerpoint or PDF presentations.
   Their content is automatically indexed on the web page. Example:
@@ -574,23 +572,41 @@ modules to help you build your contents on your website:
 .. note::
   The 404 page is a regular page, that you can edit like any other
   page in Odoo. That way, you can build a great 404 page to redirect to
-  the top content of your website.
+  the top content of your website when visitors get lost in invalid URLs.
 
 Social Features
 ===============
 
-Twitter Cards
--------------
+Social media is built for mass sharing. If lots of people share your content 
+on social media, then it's likely more people will link to it, 
+and links are a huge factor for SEO ranking.
 
-Odoo does not implement twitter cards yet. It will be done for the next
-version.
+Odoo embeds several tools to share content through social media:
 
 Social Network
 --------------
 
-Odoo allows to link all your social network accounts in your website.
-All you have to do is to refer all your accounts in the **Settings** menu of
-the **Website Admin** application.
+Odoo allows to link all your social network accounts in your website footer.
+All you have to do is to refer all your accounts in your company settings.
+
+Social Share
+------------
+
+Drop the building block *Share* on any page you want your visitors to share.
+
+Facebook Page
+-------------
+
+Drop the building block *Facebook Page* to display a widget of your Facebook 
+business page and encourage visitors to follow it. 
+You can display the timeline, the next events and the messages.
+
+Twitter Scroller
+----------------
+
+Display the Twitter feeds with customer satifaction on your website.
+THis will increase the number of tweets and shares.
+
 
 Test Your Website
 =================
