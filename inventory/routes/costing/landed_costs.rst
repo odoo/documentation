@@ -26,7 +26,7 @@ First, you need to activate the landed costs feature in
 Add costs to products
 ======================
 
-Go in :menuselection:`Inventory --> Operations --> Landed Costs`and click on the
+Go in :menuselection:`Inventory --> Operations --> Landed Costs` and click on the
 **Create** button. You then have to select the transfers on which you want to
 attribute additional costs and the costs lines you want to add up. Once it's
 done, click on the **Compute** button to see how the costs lines will be split
