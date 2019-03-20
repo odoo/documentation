@@ -1,22 +1,367 @@
-============================================
-How to do Search Engine Optimisation in Odoo
-============================================
-
-How is SEO handled in Odoo?
-===========================
+==================================================
+How to do Search Engine Optimisation in Odoo (SEO)
+=================================================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
 your website so that you get a better ranking in search engines like
 Google. In short, a good SEO allows you to get more visitors.
 
-Some examples of SEO rules: your web pages should load faster, your page
-should have one and only one title ``<h1>``, your website should have a
+Some examples of SEO rules: your web pages should load fast, your page
+should have one and only one title ``<h1>``, meta tags
+(alt-tag, title-tag) should be
+consistent with the content, your website should have a
 ``/sitemap.xml`` file, etc.
 
 To guarantee Odoo Website and Odoo
 eCommerce users have a great SEO, Odoo abstracts all the technical
 complexities of SEO and handles everything for you, in the best possible
-way.
+way. This will be explained here below.
+
+But first, let see how you can easily boost your ranking
+by finetuning the content of your website.
+
+Meta Tags
+=========
+
+Title, Description
+------------------
+
+Every web page should define the ``<title>`` and ``<description>`` meta data.
+These information elements are used by search engines to promote your website.
+They are automatically generated based on page title & content, but you can
+finetune them. Make sure they fit the content of the page, otherwise you will 
+be downgraded by search engines.
+
+Keywords
+--------
+In order to write quality content and boost your traffic, Odoo provides
+a ``<keyword>`` finder. Those keywords are the searches you want to head
+towards your website. For each keyword, you see how it is used in the content
+(H1, H2, page title, page description, page content) and what are the related 
+searches in Google. The more keywords are used the better.
+
+.. image:: media/seo10.png
+  :align: center
+
+.. note:: 
+  If your website is in multiple languages, you can use the Promote
+  tool for every language of a single page and set specific title, 
+  description and search tags.
+
+Content is King
+===============
+
+When it comes to SEO, content is usually king. Odoo provides several
+modules to help you build your website content:
+
+- **Odoo Blogs**: write great contents.
+
+- **Odoo Slides**: publish all your Powerpoint or PDF presentations.
+  Their content is automatically indexed on the web page. Example:
+  `https://www.odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`__
+
+- **Odoo Forum**: let your community create contents for you. Example:
+  `https://odoo.com/forum/1 <https://odoo.com/forum/1>`__
+  (accounts for 30% of Odoo.com landing pages)
+
+- **Odoo Mailing List Archive**: publish mailing list archives on your
+  website. Example:
+  `https://www.odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`__
+  (1000 pages created per month)
+
+.. note::
+  The 404 page is a regular page, that you can edit like any other
+  page in Odoo. That way, you can build a great 404 page to redirect to
+  the top content of your website when visitors get lost in invalid URLs.
+
+Use Social Networks
+===================
+
+Social media is built for mass sharing. If lots of people share your content 
+on social media, then it's likely more people will link to it, 
+and links are a huge factor for SEO ranking.
+
+Odoo embeds several tools to share content through social media:
+
+Social Network
+--------------
+
+Odoo allows to link all your social network accounts in your website footer.
+All you have to do is to refer all your accounts in your company settings.
+
+Social Share
+------------
+
+Drop the building block *Share* on any page you want your visitors to share.
+By clicking the icon, they are prompted to share the page in their social media
+wall.
+
+Most social media use a picture of the picture to decorate the share post.
+Odoo uses the website logo by default but you can choose any other image 
+of your page in the Promote tool.
+
+Facebook Page
+-------------
+
+Drop the building block *Facebook Page* to display a widget of your Facebook 
+business page and encourage visitors to follow it. 
+You can display the timeline, the next events and the messages.
+
+Twitter Scroller
+----------------
+
+Display the Twitter feeds with customer satifaction on your website.
+THis will increase the number of tweets and shares.
+
+Test Your Website
+=================
+
+You can compare how your website rank, in terms of SEO, against Odoo
+using WooRank free services:
+`https://www.woorank.com <https://www.woorank.com>`__
+
+URLs Handling
+=============
+
+URLs Structure
+--------------
+
+A typical Odoo URL will look like this:
+
+- https://www.mysite.com/fr\_FR/shop/product/my-great-product-31
+
+With the following components:
+
+-  **https://** = Protocol
+
+-  **www.mysite.com** = your domain name
+
+-  **/fr\_FR** = page language. This part of the URL is
+   removed if the visitor browses the main language of the website
+   Thus, the main version of this page is:
+   https://www.mysite.com/shop/product/my-great-product-31
+
+-  **/shop/product** = every module defines its own namespace (/shop is
+   for the catalog of the eCommerce module, /shop/product is for a
+   product page).
+
+-  **my-great-product** = by default, this is the slugified title of the
+   product this page refers to. But you can customize it for SEO
+   purposes. A product named "Pain carré" will be slugified to
+   "pain-carre". Depending on the namespace, this could be different
+   objects (blog post, page title, forum post, forum comment,
+   product category, etc.).
+
+-  **-31** = the unique ID of the product
+
+Note that any dynamic component of an URL can be reduced to its ID. As
+an example, the following URLs all do a 301 redirect to the above URL:
+
+-  https://www.mysite.com/fr\_FR/shop/product/31 (short version)
+
+-  http://mysite.com/fr\_FR/shop/product/31 (even shorter version)
+
+-  http://mysite.com/fr\_FR/shop/product/other-product-name-31 (old
+   product name)
+
+Some URLs have several dynamic parts, like this one (a blog category and
+a post): 
+
+-  https://www.odoo.com/blog/company-news-5/post/the-odoo-story-56
+
+In the above example:
+
+-  *Company News* is the title of the blog
+
+-  *The Odoo Story* is the title of a specific blog post
+
+When an Odoo page has a pager, the page number is set directly in the
+URL (does not have a GET argument). This allows every page to be indexed
+by search engines. Example: 
+
+-  https://www.odoo.com/blog/page/3
+
+Changes in URLs & Titles
+------------------------
+
+When the URL of a page changes (e.g. a more SEO friendly version of your
+product name), you don't have to worry about updating all links:
+
+-  Odoo will automatically update all its links to the new URL
+
+- If external websites still points to the old URL, a 301 redirect will
+  be done to route visitors to the new website
+
+As an example, this URL:
+
+- http://mysite.com/shop/product/old-product-name-31
+
+Will automatically redirect to :
+
+- http://mysite.com/shop/product/new-and-better-product-name-31
+
+In short, just change the title of a blog post or the name of a product,
+and the changes will apply automatically everywhere in your website. The
+old link still works for links coming from external websites, with a 301
+redirect to not lose the SEO link juice.
+
+HTTPS
+-----
+
+Search engines boost ranking of secure HTTPS/SSL websites. 
+So, by default all Odoo Online instances are fully
+based on HTTPS. If the visitor accesses your website through a non HTTPS
+url, it gets a 301 redirect to its HTTPS equivalent.
+
+Links: Nofollow Strategy
+------------------------
+
+The more a page is linked from external and quality websites, 
+the better it is for your SEO.
+
+Here are Odoo strategies to manage links:
+
+- Every link you add to your website is
+  "dofollow", which means that this link will contribute to the SEO
+  Juice for the linked page.
+
+- Every link posted by a contributor (forum post, blog comment, etc.)
+  that links to your own website is "dofollow" too.
+
+- But every link posted by a contributor that links to an external
+  website is "nofollow". In that way, you do not run the risk of
+  people posting links on your website to third-party websites
+  which have a bad reputation.
+
+- Note that, when using the forum, contributors having a lot of Karma
+  can be trusted. In such case, their links will not have any
+  ``rel="nofollow"`` attribute.
+
+Multi-Language Support
+======================
+
+Multi-Language URLs
+-------------------
+
+If you run a website in multiple languages, the same content will be
+available in different URLs, depending on the language used:
+
+- https://www.mywebsite.com/shop/product/my-product-1 (main language, English here)
+
+- https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1 (French version)
+
+In this example, fr\_FR is the language of the page. You can even have
+several variations of the same language: pt\_BR (Portuguese from Brazil)
+, pt\_PT (Portuguese from Portugal).
+
+Language Annotation
+-------------------
+
+To let search engines know that the second URL is the French translation of the
+first URL, Odoo will add an HTML link element in the header. In the HTML
+<head> section of the main version, Odoo automatically adds a link
+element pointing to the translated versions of that webpage;
+
+-  <link rel="alternate" hreflang="fr"
+   href="https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1"/>
+
+With this approach:
+
+- Search engines will redirect to th right language according to the 
+  visitor language.
+
+- You do not get penalized by search engines if your page is not translated
+  yet. Indeed, it's not a duplicated content, but a different
+  version of the same content.
+
+Language Detection
+------------------
+
+When a visitor lands for the first time on your website (e.g.
+yourwebsite.com/shop), they may automatically be redirected to a
+translated version according to their browser language preference: (e.g.
+yourwebsite.com/fr\_FR/shop). 
+
+Next time, it keeps a cookie of the current language to 
+avoid any redirection.
+
+To force a visitor to stick to the default language, you can use the
+code of the default language in your link, example:
+yourwebsite.com/en\_US/shop. This will always land visitors to the
+English version of the page, without using the browser language
+preferences.
+
+
+How Odoo Handles Search Engines
+===============================
+
+Sitemap
+-------
+
+The sitemap points out pages to index to search engine robots.
+Odoo generates a ``/sitemap.xml`` file automatically for you. For
+performance reasons, this file is cached and updated every 12 hours.
+
+By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
+have a lot of pages, Odoo will automatically create a Sitemap Index
+file, respecting the `sitemaps.org
+protocol <http://www.sitemaps.org/protocol.html>`__ grouping sitemap
+URL's in 45000 chunks per file.
+
+Every sitemap entry has 4 attributes that are computed automatically:
+
+-  ``<loc>`` : the URL of a page
+
+-  ``<lastmod>`` : last modification date of the resource, computed
+   automatically based on related object. For a page related to a
+   product, this could be the last modification date of the product
+   or the page.
+
+-  ``<priority>`` : modules may implement their own priority algorithm based
+   on their content (example: a forum might assign a priority based
+   on the number of votes on a specific post). The priority of a
+   static page is defined by it's priority field, which is
+   normalized (16 is the default).
+
+Structured Data Markup
+----------------------
+
+Structured Data Markup is used to generate Rich Snippets in search
+engine results. It is a way for website owners to send structured data
+to search engine robots; helping them understand your content and
+create well-presented search results.
+
+Google supports a number of rich snippets for content types, including:
+Reviews, People, Products, Businesses, Events and Organizations.
+
+Odoo implements micro data as defined in the
+`schema.org <http://schema.org>`__ specification for events, eCommerce
+products, forum posts and contact addresses. This allows your product
+pages to be displayed in Google using extra information like the price
+and rating of a product:
+
+.. image:: media/seo12.png
+  :align: center
+
+robots.txt
+----------
+
+When indexing your website, search engines take a first look at the
+general indexing rules of the a``/robots.txt`` file (allowed robots,
+sitemap path, etc.). Odoo automatically creates it. Its content is:
+
+User-agent: \*
+Sitemap: https://www.odoo.com/sitemap.xml
+
+It means that all robots are allowed to index your website
+and there is no other indexing rule than specified in the sitemap
+to be found at following address.
+
+You can customize the file *robots* in developer mode from 
+*Settings --> Technical --> User Interface --> Views*
+(exclude robots, exclude some pages, redirect to a custom Sitemap). 
+Make the Model Data of the view *Non Updatable* to not reset the
+file after system upgrades.
 
 Page Speed
 ==========
@@ -286,331 +631,4 @@ Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 .. image:: media/seo09.png
   :align: center
 
-URLs Handling
-=============
 
-URLs Structure
---------------
-
-A typical Odoo URL will look like this:
-
-- https://www.mysite.com/fr\_FR/shop/product/my-great-product-31
-
-With the following components:
-
--  **https://** = Protocol
-
--  **www.mysite.com** = your domain name
-
--  **/fr\_FR** = page language. This part of the URL is
-   removed if the visitor browses the main language of the website
-   Thus, the main version of this page is:
-   https://www.mysite.com/shop/product/my-great-product-31
-
--  **/shop/product** = every module defines its own namespace (/shop is
-   for the catalog of the eCommerce module, /shop/product is for a
-   product page).
-
--  **my-great-product** = by default, this is the slugified title of the
-   product this page refers to. But you can customize it for SEO
-   purposes. A product named "Pain carré" will be slugified to
-   "pain-carre". Depending on the namespace, this could be different
-   objects (blog post, page title, forum post, forum comment,
-   product category, etc.).
-
--  **-31** = the unique ID of the product
-
-Note that any dynamic component of an URL can be reduced to its ID. As
-an example, the following URLs all do a 301 redirect to the above URL:
-
--  https://www.mysite.com/fr\_FR/shop/product/31 (short version)
-
--  http://mysite.com/fr\_FR/shop/product/31 (even shorter version)
-
--  http://mysite.com/fr\_FR/shop/product/other-product-name-31 (old
-   product name)
-
-Some URLs have several dynamic parts, like this one (a blog category and
-a post): 
-
--  https://www.odoo.com/blog/company-news-5/post/the-odoo-story-56
-
-In the above example:
-
--  *Company News* is the title of the blog
-
--  *The Odoo Story* is the title of a specific blog post
-
-When an Odoo page has a pager, the page number is set directly in the
-URL (does not have a GET argument). This allows every page to be indexed
-by search engines. Example: 
-
--  https://www.odoo.com/blog/page/3
-
-Changes in URLs & Titles
-------------------------
-
-When the URL of a page changes (e.g. a more SEO friendly version of your
-product name), you don't have to worry about updating all links:
-
--  Odoo will automatically update all its links to the new URL
-
-- If external websites still points to the old URL, a 301 redirect will
-  be done to route visitors to the new website
-
-As an example, this URL:
-
-- http://mysite.com/shop/product/old-product-name-31
-
-Will automatically redirect to :
-
-- http://mysite.com/shop/product/new-and-better-product-name-31
-
-In short, just change the title of a blog post or the name of a product,
-and the changes will apply automatically everywhere in your website. The
-old link still works for links coming from external websites, with a 301
-redirect to not lose the SEO link juice.
-
-HTTPS
------
-
-Search engines boost ranking of secure HTTPS/SSL websites. 
-So, by default all Odoo Online instances are fully
-based on HTTPS. If the visitor accesses your website through a non HTTPS
-url, it gets a 301 redirect to its HTTPS equivalent.
-
-Links: Nofollow Strategy
-------------------------
-
-The more a page is linked from external and quality websites, 
-the better it is for your SEO.
-
-Here are Odoo strategies to manage links:
-
-- Every link you add to your website is
-  "dofollow", which means that this link will contribute to the SEO
-  Juice for the linked page.
-
-- Every link posted by a contributor (forum post, blog comment, etc.)
-  that links to your own website is "dofollow" too.
-
-- But every link posted by a contributor that links to an external
-  website is "nofollow". In that way, you do not run the risk of
-  people posting links on your website to third-party websites
-  which have a bad reputation.
-
-- Note that, when using the forum, contributors having a lot of Karma
-  can be trusted. In such case, their links will not have any
-  ``rel="nofollow"`` attribute.
-
-Multi-Language Support
-======================
-
-Multi-Language URLs
--------------------
-
-If you run a website in multiple languages, the same content will be
-available in different URLs, depending on the language used:
-
-- https://www.mywebsite.com/shop/product/my-product-1 (main language, English here)
-
-- https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1 (French version)
-
-In this example, fr\_FR is the language of the page. You can even have
-several variations of the same language: pt\_BR (Portuguese from Brazil)
-, pt\_PT (Portuguese from Portugal).
-
-Language Annotation
--------------------
-
-To let search engines know that the second URL is the French translation of the
-first URL, Odoo will add an HTML link element in the header. In the HTML
-<head> section of the main version, Odoo automatically adds a link
-element pointing to the translated versions of that webpage;
-
--  <link rel="alternate" hreflang="fr"
-   href="https://www.mywebsite.com\/fr\_FR/shop/product/mon-produit-1"/>
-
-With this approach:
-
-- Search engines will redirect to th right language according to the 
-  visitor language.
-
-- You do not get penalized by search engines if your page is not translated
-  yet. Indeed, it's not a duplicated content, but a different
-  version of the same content.
-
-Language Detection
-------------------
-
-When a visitor lands for the first time on your website (e.g.
-yourwebsite.com/shop), they may automatically be redirected to a
-translated version according to their browser language preference: (e.g.
-yourwebsite.com/fr\_FR/shop). 
-
-Next time, it keeps a cookie of the current language to 
-avoid any redirection.
-
-To force a visitor to stick to the default language, you can use the
-code of the default language in your link, example:
-yourwebsite.com/en\_US/shop. This will always land visitors to the
-English version of the page, without using the browser language
-preferences.
-
-Meta Tags
-=========
-
-Titles, Keywords and Description
---------------------------------
-
-Every web page should define the ``<title>``, ``<description>`` and ``<keywords>``
-meta data. These information elements are used by search engines to rank
-and categorize your website according to a specific search query. So, it
-is important to have titles and keywords in line with what people seek.
-
-In order to write quality content and boost your traffic, Odoo provides
-a keyword finder. For each keyword, you see how it is used through the content
-(H1, H2, page title, page description, page content) and what are the related 
-searches in Google. The more keywords are used the better.
-
-.. image:: media/seo10.png
-  :align: center
-
-.. note:: 
-  If your website is in multiple languages, you can use the Promote
-  tool for every language of a single page.
-
-Sitemap
--------
-
-The sitemap points out pages to index to search engine robots.
-Odoo generates a ``/sitemap.xml`` file automatically for you. For
-performance reasons, this file is cached and updated every 12 hours.
-
-By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
-have a lot of pages, Odoo will automatically create a Sitemap Index
-file, respecting the `sitemaps.org
-protocol <http://www.sitemaps.org/protocol.html>`__ grouping sitemap
-URL's in 45000 chunks per file.
-
-Every sitemap entry has 4 attributes that are computed automatically:
-
--  ``<loc>`` : the URL of a page
-
--  ``<lastmod>`` : last modification date of the resource, computed
-   automatically based on related object. For a page related to a
-   product, this could be the last modification date of the product
-   or the page.
-
--  ``<priority>`` : modules may implement their own priority algorithm based
-   on their content (example: a forum might assign a priority based
-   on the number of votes on a specific post). The priority of a
-   static page is defined by it's priority field, which is
-   normalized (16 is the default).
-
-Structured Data Markup
-----------------------
-
-Structured Data Markup is used to generate Rich Snippets in search
-engine results. It is a way for website owners to send structured data
-to search engine robots; helping them understand your content and
-create well-presented search results.
-
-Google supports a number of rich snippets for content types, including:
-Reviews, People, Products, Businesses, Events and Organizations.
-
-Odoo implements micro data as defined in the
-`schema.org <http://schema.org>`__ specification for events, eCommerce
-products, forum posts and contact addresses. This allows your product
-pages to be displayed in Google using extra information like the price
-and rating of a product:
-
-.. image:: media/seo12.png
-  :align: center
-
-robots.txt
-----------
-
-When indexing your website, search engines take a first look at the
-general indexing rules of the a``/robots.txt`` file (allowed robots,
-sitemap path, etc.). Odoo automatically creates it. Its content is:
-
-User-agent: \*
-Sitemap: https://www.odoo.com/sitemap.xml
-
-It means that all robots are allowed to index your website
-and there is no other indexing rule than specified in the sitemap
-to be found at following address.
-
-You can customize the file *robots* in developer mode from 
-*Settings --> Technical --> User Interface --> Views*
-(exclude robots, exclude some pages, redirect to a custom Sitemap). 
-Make the Model Data of the view *Non Updatable* to not reset the
-file after system upgrades.
-
-Content is King
-===============
-
-When it comes to SEO, content is usually king. Odoo provides several
-modules to help you build your website contents:
-
-- **Odoo Slides**: publish all your Powerpoint or PDF presentations.
-  Their content is automatically indexed on the web page. Example:
-  `https://www.odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`__
-
-- **Odoo Forum**: let your community create contents for you. Example:
-  `https://odoo.com/forum/1 <https://odoo.com/forum/1>`__
-  (accounts for 30% of Odoo.com landing pages)
-
-- **Odoo Mailing List Archive**: publish mailing list archives on your
-  website. Example:
-  `https://www.odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`__
-  (1000 pages created per month)
-
-- **Odoo Blogs**: write great contents.
-
-.. note::
-  The 404 page is a regular page, that you can edit like any other
-  page in Odoo. That way, you can build a great 404 page to redirect to
-  the top content of your website when visitors get lost in invalid URLs.
-
-Social Features
-===============
-
-Social media is built for mass sharing. If lots of people share your content 
-on social media, then it's likely more people will link to it, 
-and links are a huge factor for SEO ranking.
-
-Odoo embeds several tools to share content through social media:
-
-Social Network
---------------
-
-Odoo allows to link all your social network accounts in your website footer.
-All you have to do is to refer all your accounts in your company settings.
-
-Social Share
-------------
-
-Drop the building block *Share* on any page you want your visitors to share.
-
-Facebook Page
--------------
-
-Drop the building block *Facebook Page* to display a widget of your Facebook 
-business page and encourage visitors to follow it. 
-You can display the timeline, the next events and the messages.
-
-Twitter Scroller
-----------------
-
-Display the Twitter feeds with customer satifaction on your website.
-THis will increase the number of tweets and shares.
-
-
-Test Your Website
-=================
-
-You can compare how your website rank, in terms of SEO, against Odoo
-using WooRank free services:
-`https://www.woorank.com <https://www.woorank.com>`__
