@@ -556,9 +556,6 @@ This allows Odoo to set a very long cache delay (XXX) on these
 resources: XXX secs, while being updated instantly if you update the
 resource.
 
-.. todo::
-  Describe how the cache strategy works for other resources...
-
 Scalability
 -----------
 
