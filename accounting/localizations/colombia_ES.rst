@@ -5,7 +5,7 @@ Colombia (ES)
 **Facturación Electrónica para Colombia**
 
 Introducción
-===========
+============
 
 La Facturación Electrónica para Colombia está disponible en Odoo V12 y
 requiere los siguientes Módulos:
@@ -36,8 +36,7 @@ Configuración
 Para esto ve a las aplicaciones y busca “Colombia”, luego da click en
 Instalar a los primeros dos módulos:
 
-.. image:: media/colombia_ES01.png
-  :align: center
+cz
 
 2. Configuración de las credenciales del Servicio Web de Carvajal T&S
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
