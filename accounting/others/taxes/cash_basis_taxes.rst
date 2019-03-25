@@ -26,13 +26,19 @@ You will be asked to define the Tax Cash Basis Journal.
 
 Once this is done, you can configure your taxes in
 :menuselection:`Accounting --> Configuration --> Taxes`.
-You can open a tax and in the *Advanced Options*
-tab you will see the checkbox *Use Cash Basis*. You will then have to
-define the *Tax Received Account*.
+At first set the proper transitional accounts to post taxes
+until you register the payment.
 
 .. image:: media/cash_basis_taxes02.png
-    :width: 6.50000in
-    :height: 1.81944in
+    :align: center
+
+In the *Advanced Options* tab you will turn *Tax Due* to
+*Based on Payment*. You will then have to
+define the *Tax Received* account in which to post the tax amount
+when the payment is received and the *Base Tax Received Account*
+to post the base tax amount for an accurate tax report.
+
+.. image:: media/cash_basis_taxes03.png
     :align: center
 
 What is the impact of cash basis taxes in my accounting ? 
@@ -42,17 +48,17 @@ Let’s take an example. You make a sale of $100 with a 15% cash basis
 tax. When you validate the customer invoice, the following entry is
 created in your accounting:
 
-+-----------------------------+-----------------------+
-| Customer Invoices Journal   |                       |
-+=============================+=======================+
-| **Debit**                   | **Credit**            |
-+-----------------------------+-----------------------+
-| Receivables $115            |                       |
-+-----------------------------+-----------------------+
-|                             | Tax Account $15       |
-+-----------------------------+-----------------------+
-|                             | Income Account $100   |
-+-----------------------------+-----------------------+
++-----------------------------+---------------------------+
+| Customer Invoices Journal   |                           |
++=============================+===========================+
+| **Debit**                   | **Credit**                |
++-----------------------------+---------------------------+
+| Receivables $115            |                           |
++-----------------------------+---------------------------+
+|                             | Temporary Tax Account $15 |
++-----------------------------+---------------------------+
+|                             | Income Account $100       |
++-----------------------------+---------------------------+
 
 A few days later, you receive the payment:
 
@@ -73,7 +79,7 @@ When you reconcile the invoice and the payment, this entry is generated:
 +==========================+============================+
 | **Debit**                | **Credit**                 |
 +--------------------------+----------------------------+
-| Tax Account $15          |                            |
+| Temporary Tax Account $15|                            |
 +--------------------------+----------------------------+
 |                          | Tax Received Account $15   |
 +--------------------------+----------------------------+
@@ -83,5 +89,7 @@ When you reconcile the invoice and the payment, this entry is generated:
 +--------------------------+----------------------------+
 
 .. tip::
-    The two journal items created in the Income Account are neutral but
-    they are needed to insure correct tax reports in Odoo.
+    The last two journal items are neutral but they are needed to insure 
+    correct tax reports in Odoo with accurate base tax amounts.
+    We advise to use a default revenue account.
+    The balance of this account will then always be at zero.
