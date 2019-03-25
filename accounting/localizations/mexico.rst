@@ -62,8 +62,6 @@ integrate with the normal invoicing flow in Odoo.
 .. image:: media/mexico02.png
    :align: center
 
-.. _mx-legal-info:
-
 3. Set you legal information in the company
 -------------------------------------------
 
@@ -177,7 +175,7 @@ and then enter your PAC username and PAC password.
 
    - `Certificate`_
    - `Certificate Key`_
-   - **Password :** 12345678a
+   - **Password:** 12345678a
 
 7. Configure the tag in sales taxes
 -----------------------------------
@@ -328,7 +326,7 @@ Electronic Accounting (Requires Accounting App)
 ===============================================
 
 Electronic Chart of account CoA
-+++++++++++++++++++++++++++++++
+-------------------------------
 
 The electronic accounting never has been easier, just go to
 :menuselection:`Accounting --> Reporting --> Mexico --> COA` and click on the
@@ -364,7 +362,7 @@ website on the section called **Código agrupador de cuentas del SAT**.
    is not created you can create one on the fly.
 
 Electronic Trial Balance
-++++++++++++++++++++++++
+------------------------
 
 Exactly as the COA but with Initial balance debit and credit, once you have
 your coa properly set you can go to :menuselection:`Accounting --> Reports --> Mexico --> Trial Balance`
