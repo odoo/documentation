@@ -1,6 +1,6 @@
 ==================================================
 How to do Search Engine Optimisation in Odoo (SEO)
-=================================================
+==================================================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
 your website so that you get a better ranking in search engines like
@@ -18,7 +18,7 @@ complexities of SEO and handles everything for you, in the best possible
 way. This will be explained here below.
 
 But first, let see how you can easily boost your ranking
-by finetuning the content of your website.
+by finetuning the content and the meta tags of your website.
 
 Meta Tags
 =========
@@ -32,6 +32,9 @@ They are automatically generated based on page title & content, but you can
 finetune them. Make sure they fit the content of the page, otherwise you will 
 be downgraded by search engines.
 
+.. image:: media/seo01.png
+  :align: center
+
 Keywords
 --------
 In order to write quality content and boost your traffic, Odoo provides
@@ -40,7 +43,7 @@ towards your website. For each keyword, you see how it is used in the content
 (H1, H2, page title, page description, page content) and what are the related 
 searches in Google. The more keywords are used the better.
 
-.. image:: media/seo10.png
+.. image:: media/seo02.png
   :align: center
 
 .. note:: 
@@ -89,6 +92,9 @@ Social Network
 Odoo allows to link all your social network accounts in your website footer.
 All you have to do is to refer all your accounts in your company settings.
 
+.. image:: media/seo03.png
+  :align: center
+  
 Social Share
 ------------
 
@@ -96,10 +102,16 @@ Drop the building block *Share* on any page you want your visitors to share.
 By clicking the icon, they are prompted to share the page in their social media
 wall.
 
+.. image:: media/seo04.png
+  :align: center
+
 Most social media use a picture of the picture to decorate the share post.
 Odoo uses the website logo by default but you can choose any other image 
 of your page in the Promote tool.
 
+.. image:: media/seo05.png
+  :align: center
+  
 Facebook Page
 -------------
 
@@ -122,6 +134,8 @@ using WooRank free services:
 
 URLs Handling
 =============
+
+This section sheds some light on how Odoo makes URLs SEO-friendly.
 
 URLs Structure
 --------------
@@ -187,16 +201,16 @@ Changes in URLs & Titles
 When the URL of a page changes (e.g. a more SEO friendly version of your
 product name), you don't have to worry about updating all links:
 
--  Odoo will automatically update all its links to the new URL
+-  Odoo will automatically update all its links to the new URL.
 
 - If external websites still points to the old URL, a 301 redirect will
-  be done to route visitors to the new website
+  be done to route visitors to the new website.
 
 As an example, this URL:
 
 - http://mysite.com/shop/product/old-product-name-31
 
-Will automatically redirect to :
+Will automatically redirect to:
 
 - http://mysite.com/shop/product/new-and-better-product-name-31
 
@@ -291,78 +305,6 @@ yourwebsite.com/en\_US/shop. This will always land visitors to the
 English version of the page, without using the browser language
 preferences.
 
-
-How Odoo Handles Search Engines
-===============================
-
-Sitemap
--------
-
-The sitemap points out pages to index to search engine robots.
-Odoo generates a ``/sitemap.xml`` file automatically for you. For
-performance reasons, this file is cached and updated every 12 hours.
-
-By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
-have a lot of pages, Odoo will automatically create a Sitemap Index
-file, respecting the `sitemaps.org
-protocol <http://www.sitemaps.org/protocol.html>`__ grouping sitemap
-URL's in 45000 chunks per file.
-
-Every sitemap entry has 4 attributes that are computed automatically:
-
--  ``<loc>`` : the URL of a page
-
--  ``<lastmod>`` : last modification date of the resource, computed
-   automatically based on related object. For a page related to a
-   product, this could be the last modification date of the product
-   or the page.
-
--  ``<priority>`` : modules may implement their own priority algorithm based
-   on their content (example: a forum might assign a priority based
-   on the number of votes on a specific post). The priority of a
-   static page is defined by it's priority field, which is
-   normalized (16 is the default).
-
-Structured Data Markup
-----------------------
-
-Structured Data Markup is used to generate Rich Snippets in search
-engine results. It is a way for website owners to send structured data
-to search engine robots; helping them understand your content and
-create well-presented search results.
-
-Google supports a number of rich snippets for content types, including:
-Reviews, People, Products, Businesses, Events and Organizations.
-
-Odoo implements micro data as defined in the
-`schema.org <http://schema.org>`__ specification for events, eCommerce
-products, forum posts and contact addresses. This allows your product
-pages to be displayed in Google using extra information like the price
-and rating of a product:
-
-.. image:: media/seo12.png
-  :align: center
-
-robots.txt
-----------
-
-When indexing your website, search engines take a first look at the
-general indexing rules of the a``/robots.txt`` file (allowed robots,
-sitemap path, etc.). Odoo automatically creates it. Its content is:
-
-User-agent: \*
-Sitemap: https://www.odoo.com/sitemap.xml
-
-It means that all robots are allowed to index your website
-and there is no other indexing rule than specified in the sitemap
-to be found at following address.
-
-You can customize the file *robots* in developer mode from 
-*Settings --> Technical --> User Interface --> Views*
-(exclude robots, exclude some pages, redirect to a custom Sitemap). 
-Make the Model Data of the view *Non Updatable* to not reset the
-file after system upgrades.
-
 Page Speed
 ==========
 
@@ -377,7 +319,7 @@ visitor abandonment rate is also divided by two. (25% to 12.5%). One
 extra second to load a page could `cost $1.6b to Amazon in
 sales <http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales>`__.
 
-.. image:: media/seo01.png
+.. image:: media/seo06.png
   :align: center
 
 Fortunately, Odoo does all the magic for you. Below, you will find the
@@ -387,6 +329,47 @@ your website ranks using these two tools:
 - `Google Page Speed <https://developers.google.com/speed/pagespeed/insights/>`__
 
 - `Pingdom Website Speed Test <http://tools.pingdom.com/fpt/>`__
+
+Images
+------
+
+When you upload new images, Odoo automatically
+compresses them to reduce their sizes (lossless compression for .PNG
+and .GIF and lossy compression for .JPG).
+
+From the upload button, you have the option to keep the original image
+unmodified if you prefer to optimize the quality of the image rather
+than performance.
+
+.. image:: media/seo07.png
+  :align: center
+
+.. note::
+  Odoo compresses images when they are uploaded to your website, not
+  when requested by the visitor. Thus, it's possible that, if you use a
+  third-party theme, it will provide images that are not compressed
+  efficiently. But all images used in Odoo official themes have been
+  compressed by default.
+
+When you click on an image, Odoo shows you the Alt and title attributes
+of the ``<img>`` tag. You can click on it to set your own title and Alt
+attributes for the image.
+
+.. image:: media/seo08.png
+  :align: center
+
+When you click on this link, the following window will appear:
+
+.. image:: media/seo09.png
+  :align: center
+
+Odoo's pictograms are implemented using a font (`Font
+Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ in most
+Odoo themes). Thus, you can use as many pictograms as you want in your
+page, they will not result in extra requests to load the page.
+
+.. image:: media/seo10.png
+  :align: center
 
 Static Resources: CSS
 ---------------------
@@ -502,47 +485,6 @@ same visitor will not load any other Javascript resource.
   easily debug with the Chrome debugger as CSS and Javascript resources
   are not transformed from their original versions.
 
-Images
-------
-
-When you upload new images, Odoo automatically
-compresses them to reduce their sizes (lossless compression for .PNG
-and .GIF and lossy compression for .JPG).
-
-From the upload button, you have the option to keep the original image
-unmodified if you prefer to optimize the quality of the image rather
-than performance.
-
-.. image:: media/seo02.png
-  :align: center
-
-.. note::
-  Odoo compresses images when they are uploaded to your website, not
-  when requested by the visitor. Thus, it's possible that, if you use a
-  third-party theme, it will provide images that are not compressed
-  efficiently. But all images used in Odoo official themes have been
-  compressed by default.
-
-When you click on an image, Odoo shows you the Alt and title attributes
-of the ``<img>`` tag. You can click on it to set your own title and Alt
-attributes for the image.
-
-.. image:: media/seo03.png
-  :align: center
-
-When you click on this link, the following window will appear:
-
-.. image:: media/seo04.png
-  :align: center
-
-Odoo's pictograms are implemented using a font (`Font
-Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ in most
-Odoo themes). Thus, you can use as many pictograms as you want in your
-page, they will not result in extra requests to load the page.
-
-.. image:: media/seo05.png
-  :align: center
-
 CDN
 ---
 
@@ -563,7 +505,7 @@ Delivery Network has three advantages:
 You can configure your CDN options from the **Website Admin** app, using
 the Configuration menu. Here is an example of configuration you can use:
 
-.. image:: media/seo06.png
+.. image:: media/seo11.png
   :align: center
 
 HTML Pages
@@ -594,7 +536,7 @@ Websites that are not mobile-friendly are negatively
 impacted in search engine rankings. All Odoo themes rely on Bootstrap to
 render efficiently according to the device: desktop, tablet or mobile.
 
-.. image:: media/seo08.png
+.. image:: media/seo12.png
   :align: center
 
 As all Odoo modules share the same technology, absolutely all pages in
@@ -628,7 +570,76 @@ eCommerce compared to Odoo when it comes to high query volumes:
 
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
-.. image:: media/seo09.png
+.. image:: media/seo13.png
   :align: center
 
+Search Engines Files
+====================
 
+Sitemap
+-------
+
+The sitemap points out pages to index to search engine robots.
+Odoo generates a ``/sitemap.xml`` file automatically for you. For
+performance reasons, this file is cached and updated every 12 hours.
+
+By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
+have a lot of pages, Odoo will automatically create a Sitemap Index
+file, respecting the `sitemaps.org
+protocol <http://www.sitemaps.org/protocol.html>`__ grouping sitemap
+URL's in 45000 chunks per file.
+
+Every sitemap entry has 4 attributes that are computed automatically:
+
+-  ``<loc>`` : the URL of a page
+
+-  ``<lastmod>`` : last modification date of the resource, computed
+   automatically based on related object. For a page related to a
+   product, this could be the last modification date of the product
+   or the page.
+
+-  ``<priority>`` : modules may implement their own priority algorithm based
+   on their content (example: a forum might assign a priority based
+   on the number of votes on a specific post). The priority of a
+   static page is defined by it's priority field, which is
+   normalized (16 is the default).
+
+Structured Data Markup
+----------------------
+
+Structured Data Markup is used to generate Rich Snippets in search
+engine results. It is a way for website owners to send structured data
+to search engine robots; helping them understand your content and
+create well-presented search results.
+
+Google supports a number of rich snippets for content types, including:
+Reviews, People, Products, Businesses, Events and Organizations.
+
+Odoo implements micro data as defined in the
+`schema.org <http://schema.org>`__ specification for events, eCommerce
+products, forum posts and contact addresses. This allows your product
+pages to be displayed in Google using extra information like the price
+and rating of a product:
+
+.. image:: media/seo12.png
+  :align: center
+
+robots.txt
+----------
+
+When indexing your website, search engines take a first look at the
+general indexing rules of the a``/robots.txt`` file (allowed robots,
+sitemap path, etc.). Odoo automatically creates it. Its content is:
+
+User-agent: \*
+Sitemap: https://www.odoo.com/sitemap.xml
+
+It means that all robots are allowed to index your website
+and there is no other indexing rule than specified in the sitemap
+to be found at following address.
+
+You can customize the file *robots* in developer mode from 
+*Settings --> Technical --> User Interface --> Views*
+(exclude robots, exclude some pages, redirect to a custom Sitemap). 
+Make the Model Data of the view *Non Updatable* to not reset the
+file after system upgrades.
