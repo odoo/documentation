@@ -621,7 +621,7 @@ products, forum posts and contact addresses. This allows your product
 pages to be displayed in Google using extra information like the price
 and rating of a product:
 
-.. image:: media/seo12.png
+.. image:: media/seo14.png
   :align: center
 
 robots.txt
