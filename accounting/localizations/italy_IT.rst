@@ -1,6 +1,6 @@
-==============
-Configurazione
-==============
+==========
+Italy (IT)
+==========
 
 Questa guida spiegherà come utilizzare la fattura elettronica in Odoo e
 come configurare correttamente i dati aziendali, i contatti e la
