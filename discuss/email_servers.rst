@@ -46,8 +46,7 @@ to configure a SMTP relay for your Odoo's IP address.
 How to use a G Suite server
 ---------------------------
 You can use an G Suite server for any Odoo hosting type.
-To do so you need to enable a SMTP relay and to allow *Any addresses* 
-in the *Allowed senders* section. The configuration steps are explained in 
+To do so you need to setup the SMTP relay service. The configuration steps are explained in 
 `Google documentation <https://support.google.com/a/answer/2956491?hl=en>`__.
 
 .. _discuss-email_servers-spf-compliant:
