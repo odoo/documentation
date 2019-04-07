@@ -1,64 +1,39 @@
-======================================
-How to Sell a Set of Products as a Kit
-======================================
+================================================
+Cómo vender un conjunto de productos como un kit
+================================================
 
-A *kit* is a set of components that are delivered without first being
-assembled or mixed. Kits are described in Odoo using *bills of
-materials*. There are two basic ways to configure kits, depending on
-how stock of the kit product is to be managed. In either case, both the
-Inventory and Manufacturing apps must be installed.
+Un *kit* es un conjunto de componentes que se entregan sin ser ensamblados o mezclados previamente. Los kits se describen en Odoo usando *lista de materiales*. Hay dos formas básicas de configurar kits, dependiendo de cómo se gestionará el stock del kit. En cualquier caso, las aplicaciones de inventario y fabricación deben ser instaladas.
 
-Manage Stock of Component Products
-==================================
+Gestión del Stock de los Componentes
+====================================
 
-If you would like to assemble kits as they are ordered, managing stock
-of the kit *components* only, you will use a Kit BoM without a
-manufacturing step.
+Si quiere ensamblar los kits a medida que se lo solicitan, gestionando el stok de los *componentes* solamente, debe utilizar una lista de materiales sin ningún paso de fabricación.
 
-A product using a Kit BoM will appear as a single line item on a
-quotation and sales order, but will generate a delivery order with one
-line item for each of the components of the kit. In the examples below,
-the image at left shows a sales order for the kit "Custom Computer Kit",
-while the image at right shows the corresponding delivery order.
+Un producto que use una lista de materiales tipo Kit, aparecerá como una sola línea en una oferta y pedido de venta, pero generará una orden de entrega con una línea de pedido para cada uno de los componentes del kit. Como puede observar en el ejemplo siguiente, la imagen de la izquierda muestra un pedido de venta para el kit "Custom Computer Kit", mientras que la imagen de la derecha muestra el pedido de entrega correspondiente.
 
 |image0|\ |image1|
 
-Configuration
+Configuración
 -------------
 
-From the **Products** menu in either the Inventory or Manufacturing
-app, create each component product as you would any other product, then
-create the top-level, or kit product. The kit product should have only
-the route **Manufacture** set. Because you cannot track the stock of
-kit products, the Product Type should be set to **Consumable**.
-Because a kit product cannot be purchased, **Can be Purchased**
-should be unchecked.
+Desde el menú **Productos** de la aplicación de Inventario o Fabricación, cree cada producto componente como lo haría con cualquier otro producto, luego cree el producto de nivel superior, o kit. El producto kit debe tener al menos la ruta **Fabricación**. Dado que no puedes rastrear el stock de en los productos de kit, el tipo de producto debe establecerse como **Consumible**. Además, ya que un producto de kit no se puede comprar, el check **se puede comprar** debe estar sin marcar.
 
-All other parameters on the kit product may be modified according to
-your preference. The component products require no special
-configuration.
+Todos los demás parámetros del producto del kit pueden modificarse como desee. Los componentes no requieren ninguna configuración especial.
 
 .. image:: media/kit_shipping03.png
     :align: center
 
-Once the products are configured, create a bill of materials for the kit
-product. Add each component and its quantity. Select the BoM Type
-**Ship this product as a set of components**. All other options may
-be left with their default values.
+Una vez que los productos estén configurados, cree una lista de materiales para el producto kit. Añada cada componente y su cantidad. Seleccione el tipo de lista de materiales **Kit**. Todas las demás opciones pueden quedarse con sus valores por defecto.
 
 .. image:: media/kit_shipping04.png
     :align: center
 
-Manage Stock of Kit Product and Component Products
-==================================================
+Gestión del Stock del producto Kit y sus Componentes
+====================================================
 
-If you would like to manage stock of the top-level kit product, you will
-use a standard BoM with a manufacturing step instead of a Kit BoM. When
-using a standard BoM to assemble kits, a manufacturing order will be
-created. The manufacturing order must be registered as completed before
-the kit product will appear in your stock.
+Si desea gestionar el stock del producto de kit de nivel superior, deberá usar una lista de materiales estándar con un paso de fabricación en lugar de una lista de materiales del producto kit. Cuando utilice una lista de materiales estándar para ensamblar kits, se creará una orden de fabricación. La orden de fabricación debe marcarse como completada antes de que el producto kit aparezca en su stock.
 
-Configuration
+Configuración
 -------------
 
 On the kit product, select the route **Manufacture**. You may also
@@ -69,9 +44,7 @@ whenever a sales order is confirmed. Select the product type
 .. image:: media/kit_shipping05.png
     :align: center
 
-When you create the bill of materials, select the BoM Type
-**Manufacture this product**. The assembly of the kit will be
-described by a manufacturing order rather than a packing operation.
+En el producto kit, seleccione la ruta **Fabricación**. Puede marcar la ruta **Bajo pedido**, si lo que desea es crear una órden de producción al confirmar un pedido de venta. Seleccione el tipo de producto **Producto almacenable** para habilitar la gestión de stock.
 
 .. image:: media/kit_shipping06.png
     :align: center
