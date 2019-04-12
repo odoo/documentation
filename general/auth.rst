@@ -7,3 +7,5 @@ Authentication
 
    auth/google
    auth/azure
+   auth/ldap
+
