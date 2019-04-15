@@ -7,8 +7,8 @@ Mobile
 Setup your Firebase Cloud Messaging
 ===================================
 
-In order to have mobile notifications in our Android app, you need an
-API key.
+Odoo is perfectly integrated with Google Notification so that you can see & manage 
+your notifications coming from your Odoo instance in your mobile.
 
 If it is not automatically configured (for instance for On-premise or
 Odoo.sh) please follow these steps below to get an API key for the
@@ -24,7 +24,7 @@ Firebase Settings
 Create a new project
 --------------------
 
-First, make sure you to sign in to your Google Account. Then, go to
+First, make sure you sign in with the Google Account linked to your Odoo instance. Then, go to
 `https://console.firebase.google.com <https://console.firebase.google.com/>`__
 and create a new project.
 
@@ -56,24 +56,11 @@ not work.
 No need to download the config file, you can click on **Next** twice and
 skip the fourth step.
 
-Get generated API key
----------------------
-
-On the overview page, go to Project settings:
-
-.. image:: media/firebase04.png
-   :align: center
-
-In **Cloud Messaging**, you will see the **API key** and the **Sender ID**
-that you need to set in Odoo General Settings.
-
-.. image:: media/firebase05.png
-   :align: center
 
 Settings in Odoo
 ================
 
-Simply paste the API key and the Sender ID from Cloud Messaging.
+Simply select the Odoo Cloud Notifications (OCN) in the General Settings.
 
 .. image:: media/firebase06.png
    :align: center
