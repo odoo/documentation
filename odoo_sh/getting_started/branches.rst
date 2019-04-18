@@ -284,11 +284,11 @@ The production branch has no settings. It can't be muted, will always update the
 run on the project's version of Odoo. If you want to upgrade your production to a newer version please refer to the
 :ref:`Upgrade section <odoosh-advanced-upgrade_your_database>`.
 
-Git commands
-============
-In the top right-hand corner of the view, different Git commands are available.
+Shell commands
+==============
+In the top right-hand corner of the view, different shell commands are available.
 
-.. image:: ./media/interface-branches-gitcommands.png
+.. image:: ./media/interface-branches-shellcommands.png
    :align: center
 
 Each command can be copied in the clipboard to be used in a terminal,
@@ -342,6 +342,24 @@ Merges the branch *staging-1* in the current branch.
   $ git push -u origin master
 
 Uploads the changes you just added in the *master* branch on your remote repository.
+
+SSH
+---
+Connect to your builds using ssh. 
+
+.. code-block:: bash
+
+  $ ssh <build_id>@<domain>
+
+You can configure your ssh keys in your profile settings in the top-right menu when clicking on your username.
+
+Provided you have the :ref:`correct access rights <odoosh-gettingstarted-settings-collaborators>` on the project,
+you'll be granted ssh access to the build.
+
+.. Note::
+  Long running ssh connections are not guaranteed. Idle connections will be
+  disconnected in order to free up resources.
+
 
 Submodule
 ---------

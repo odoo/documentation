@@ -25,6 +25,8 @@ This defines the address that will be used to access your production database.
 Addresses of your staging and development builds are derived from this name and assigned automatically.
 However, when you change your project name, only future builds will use the new name.
 
+.. _odoosh-gettingstarted-settings-collaborators:
+
 Collaborators
 =============
 
