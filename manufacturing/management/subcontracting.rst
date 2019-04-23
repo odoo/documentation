@@ -7,7 +7,7 @@ through subcontractors. This can be easily managed through Odoo.
 Configuration
 -------------
 
-Go in the :menuselection:'Manufacturing --> Configuration --> Settings' and tick the box *Subcontracting*.
+Go in the :menuselection:`Manufacturing --> Configuration --> Settings` and tick the box *Subcontracting*.
 
 .. image:: media/subcontracting01.png
     :align: center
