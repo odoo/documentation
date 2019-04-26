@@ -14,6 +14,7 @@ of Sales --> Configuration --> Point of sale` and select your PoS
 interface.
 
 Under the IoT Box / Hardware Proxy category, you will find *Order Printers*.
+Note that you need an IoT Box to connect your Printer to the PoS.
 
 Add a printer
 =============
