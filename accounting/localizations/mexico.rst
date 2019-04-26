@@ -15,7 +15,7 @@ Introduction
 
 The mexican localization is a group of 3 modules:
 
-1. **l10n_mx:** All the basic data to manage the accounting, taxes and the
+1. **l10n_mx:** All basic data to manage the accounting, taxes and the
    chart of account, this proposed chart of account installed is a intended
    copy of the list of group codes offered by the `SAT`_.
 2. **l10n_mx_edi**: All regarding to electronic transactions, CFDI 3.2 and 3.3,
