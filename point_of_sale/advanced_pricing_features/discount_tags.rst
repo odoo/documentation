@@ -7,9 +7,7 @@ close to its expiration date for example, you can use discount tags.
 They allow you to scan discount barcodes.
 
 .. note::
-   To use discount tags you will need to use a barcode scanner, you
-   can see the documentation about it 
-   here :doc:`barcode`.
+   To use discount tags you will need to use a barcode scanner.
 
 Barcode Nomenclature
 ====================
