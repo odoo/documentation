@@ -8,7 +8,7 @@ Odoo Partnership Agreement (FR)
     Ceci est une traduction en français du contrat “Odoo Enterprise Partnership Agreement”.
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes du contrat “Odoo Enterprise Partnership Agreement”
+    La seule référence officielle des termes du contrat “Odoo Partnership Agreement”
     est la :ref:`version originale en anglais <partnership_agreement>`.
 
 .. note:: Version 7 - 2018-05-24

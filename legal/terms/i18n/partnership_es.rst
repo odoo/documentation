@@ -8,7 +8,7 @@ Odoo Partnership Agreement (ES)
    This is a spanish translation of the "Odoo Enterprise Partnership Agreement”.
    This translation is provided in the hope that it will facilitate understanding, but it
    has no legal value.
-   The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
+   The only official reference of the terms and conditions of the “Odoo Partnership
    Agreement” is the :ref:`original english version <partnership_agreement>`.
 
 .. note:: Versión 6 - 2017-12-04
