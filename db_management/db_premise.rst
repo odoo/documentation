@@ -154,35 +154,6 @@ None of those solutions worked for you? Please contact our
 
 .. _force_ping:
 
-Force an Update Notification
-============================
-
-Update Notifications happen once every 7 days and keep your database up-to-date with
-your Odoo Enterprise subscription. If you modify your subscription (i.e. add more users,
-renew it for a year, etc.), your local database will only be made aware of the change
-once every 7 days - this can cause discrepancies between the state of your subscription
-and some notifications in your App Switcher. When doing such an operation on your
-subscription, you can force an Update using the following procedure:
-
-1. Connect to the database with the **Administrator** account
-2. Switch to the Developer mode by using the **About** option in the
-   top-right menu (in V9) /  in **Settings**  (in V10): click on
-   **Activate the developer mode**
-3. Navigate to the "Settings" menu, then "Technical" > "Automation" >
-   "Scheduled Actions"
-4. Find "Update Notification" in the list, click on it, and finally click on the
-   button "**RUN MANUALLY**"
-5. Refresh the page, the "Expiration" notification should be gone
-
-
-.. warning:: You may have kept the same UUID on different databases and we receive
-    information from those databases too. So please read :ref:`this documentation
-    <duplicate_premise>` to know how to change the UUID.
-    After the change you can force a ping to speed up the verification,
-    your production database will then be correctly identified.
-
-.. _duplicate_premise:
-
 Duplicate a database
 ====================
 
