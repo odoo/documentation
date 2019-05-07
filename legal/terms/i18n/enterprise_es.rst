@@ -11,7 +11,7 @@ Odoo Enterprise Subscription Agreement (ES)
     suscripción de Odoo Enterprise". Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene valor legal. 
     La única referencia oficial de los términos y condiciones del "Acuerdo de suscripción de Odoo Enterprise" es la :ref:`versión original en inglés <enterprise_agreement>`
 
-..note:: Version 8.0 - 2018-05-22
+.. note:: Version 8.0 - 2018-05-22
 
 Al suscribirse a los servicios de Odoo Enterprise proporcionados por
 Odoo SA y sus afiliados (colectivamente “Odoo SA”) en relación a Odoo Enterprise
@@ -43,7 +43,7 @@ Usuario
 
 Aplicación
     Una "Aplicación" es un grupo especializado de funciones
-    disponibles para la instalación en el Software, y listados en la sección de precios públicos del `***sitio web de Odoo SA*** <https://www.odoo.com/es_ES/>`__(`*https://www.odoo.com* <https://www.odoo.com>`__).
+    disponibles para la instalación en el Software, y listados en la sección de precios públicos del `sitio web de Odoo SA <https://www.odoo.com/es_ES/>`__
 
 Error/Bug 
     Se considera un error cualquier falla del Software que
@@ -71,7 +71,7 @@ licencia no exclusiva e intransferible para usar (ejecutar, modificar, ejecutar 
 
 El Cliente acuerda tomar todas las medidas necesarias para garantizar la ejecución y verificación de la parte del Software que se encuentra instalada o descargada tanto la verificación del uso de Odoo Enterprise Edition, incluyendo pero no limitado a la ejecución de su instancia, el número de usuarios activos/instalados y las aplicaciones instaladas.
 
-Odoo SA se compromete a no divulgar figuras individuales o nombradas a terceros sin el consentimiento del Cliente, y tratar con todos los datos recopilados de conformidad con su Política de Privacidad oficial, publicado en `*https://www.odoo.com/privacy* <https://www.odoo.com/privacy>`__.
+Odoo SA se compromete a no divulgar figuras individuales o nombradas a terceros sin el consentimiento del Cliente, y tratar con todos los datos recopilados de conformidad con su Política de Privacidad oficial, publicado en `Odoo Privacy <https://www.odoo.com/privacy/>`__
 
 Al vencimiento o terminación de este Acuerdo, esta licencia se revoca
 inmediatamente y el cliente acepta dejar de usar el software Odoo
@@ -92,7 +92,7 @@ instaladas.
 4.1 Servicio de corrección de errores
 -------------------------------------
 
-Durante la vigencia de este Acuerdo, Odoo SA se compromete a hacer todos los esfuerzos razonables para remediar cualquier error del software enviado por el cliente a través del canal apropiado (dirección de correo electrónico de la mesa de servicio de Odoo SA o el formulario del sitio web `*www.odoo.com/help* <http://www.odoo.com/help>`__) y comenzar a analizar la resolución del error dentro de un tiempo estimado de 2 días hábiles.
+Durante la vigencia de este Acuerdo, Odoo SA se compromete a hacer todos los esfuerzos razonables para remediar cualquier error del software enviado por el cliente a través del canal apropiado (dirección de correo electrónico de la mesa de servicio de Odoo SA o el formulario del sitio web `Odoo Help <https://www.odoo.com/help/>`__ y comenzar a analizar la resolución del error dentro de un tiempo estimado de 2 días hábiles.
 
 El cliente entiende que los errores causados ​​por una modificación o
 extensión que sea parte del software oficial no será cubierto por este servicio de soporte.
@@ -125,8 +125,6 @@ Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un "Aviso de
 El cliente entiende que el error y la información en el aviso de
 seguridad deben ser tratados como información confidencial como se
 describe en el apartado :ref:`confidentiality_es` durante el período de embargo anterior a la divulgación pública.
-
-:ref:`confidentiality_es`
 
 Plataforma en la nube/online hosting
 ++++++++++++++++++++++++++++++++++++
@@ -197,7 +195,7 @@ siguientes servicios:
 
 Los detalles de los servicios de alojamiento en la nube se describen en
 la página del Acuerdo de nivel de servicio:
-`*https://www.odoo.com/cloud-sla* <http://www.odoo.com/cloud-sla>`__.
+`Cloud SLA <http://www.odoo.com/cloud-sla>`__.
 
 .. _support_service_es:
 
@@ -208,7 +206,7 @@ Alcance
 +++++++
 
 Durante la vigencia de este Acuerdo, el Cliente puede abrir un número
-ilimitado de tickets de soporte en `*https://www.odoo.com/help* <https://www.odoo.com/help>`__,
+ilimitado de tickets de soporte en `Odoo SA <https://www.odoo.com/help>`__,
 exclusivamente para preguntas relacionadas con errores (:ref:`bugfix_es`) u orientación con respecto al uso de las características estándar del Software y los Servicios (funcionalidades, uso previsto, configuración, solución de problemas).
 
 Se pueden cubrir otras solicitudes de asistencia, como preguntas
@@ -285,31 +283,35 @@ cliente es responsable.
 
 El Cliente se compromete a:
 
-- Pagar a Odoo SA cualquier cargo aplicable por los Servicios del
+- 
+  Pagar a Odoo SA cualquier cargo aplicable por los Servicios del
   presente Acuerdo, según las condiciones de pago especificadas en la
   factura correspondiente;
 
-- Notificar inmediatamente a Odoo SA cuando su número real de usarios
+- 
+  Notificar inmediatamente a Odoo SA cuando su número real de usarios
   o aplicaciones instaladas exceda el número especificado al final
   del Acuerdo y, en este caso, el pago de la tarifa adicional
   aplicable como se describe en la sección :ref:`charges_standard_es`;
 
-- Tomar todas las medidas necesarias para garantizar la ejecución no
+- 
+  Tomar todas las medidas necesarias para garantizar la ejecución no
   modificada de la parte del Software que verifica la validez del uso
   de Odoo Enterprise Edition, como se describe en la sección :ref:`enterprise_access_es`;
 
-- Designar a 1 persona de contacto dedicada del Cliente durante toda la
-   duración del Acuerdo;
+- 
+  Designar a 1 persona de contacto dedicada del Cliente durante toda la duración del Acuerdo;
 
 Cuando el Cliente elige usar la Plataforma en la nube, el Cliente
 acuerda además:
 
-- Tomar todas las medidas razonables para mantener sus cuentas de
+- 
+  Tomar todas las medidas razonables para mantener sus cuentas de
   usuario seguras, incluso al elegir una contraseña segura y no
   compartirla con nadie más;
 
-- Hacer uso razonable de los servicios de alojamiento, cone xclusiónde cualquier actividad ilegal o actividades abusivas, y observar estrictamente las reglas descritas en la Política de uso aceptable publicada en
-   `*https://www.odoo.com/acceptable-use* <https://www.odoo.comacceptable-use>`__.
+- 
+  Hacer uso razonable de los servicios de alojamiento, cone xclusiónde cualquier actividad ilegal o actividades abusivas, y observar estrictamente las reglas descritas en la Política de uso aceptable publicada en `acceptable use <https://www.odoo.com/acceptable-use>`__.
 
 Cuando el Cliente elige la opción de Auto-alojamiento, el Cliente acepta
 además:
@@ -385,24 +387,24 @@ motivo relacionado con este Acuerdo.
 Este procesamiento se realizará de conformidad con la legislación de
 protección de datos. En particular, Odoo SA se compromete a:
 
-(a) solo procesar los datos personales cuando y como lo indique el
-Cliente, y para elp ropósito de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la ley, en cuyo caso, Odoo SA proporcionará un aviso previo al Cliente, a menos que la ley lo prohíba;
+(a) 
+      Solo procesar los datos personales cuando y como lo indique el
+      Cliente, y para elp ropósito de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la ley, en cuyo caso, Odoo SA proporcionará un aviso previo al Cliente, a menos que la ley lo prohíba;
+(b)
+      garantizar que todas las personas dentro de Odoo SA” autorizadas para procesar los Datos personales estén comprometidos con la confidencialidad;
+(c) 
+      implementar y mantener medidas técnicas y organizativas adecuadas para proteger los datos personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental, destrucción, daño, robo, alteración o divulgación;
+(d) 
+      enviará sin demora al Cliente cualquier solicitud de protección de datos que se haya enviado a Odoo SA con respecto a la base de datos del Cliente;
+(e) 
 
-(b) garantizar que todas las personas dentro de Odoo SA autorizadas para procesar los Datos personales estén comprometidos con la confidencialidad;
-
-(c) implementar y mantener medidas técnicas y organizativas adecuadas para proteger los datos personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental, destrucción, daño, robo, alteración o divulgación;
-
-(d) enviará sin demora al Cliente cualquier solicitud de protección de datos que se haya enviado a Odoo SA con respecto a la base de datos del Cliente;
-
-(e) notificar al Cliente inmediatamente al momento de conocer y confirmar cualquier accidente, el procesamiento no autorizado o ilegal de, la divulgación o el acceso a los datos personales;
-
-(f) notificar al Cliente si las instrucciones de procesamiento
-infringen la Protección de datos aplicables a la legislación, en opinión de Odoo SA;
-
-(g) poner a disposición del Cliente toda la información necesaria para demostrar el cumplimiento con la legislación de protección de datos, permitir y contribuir razonablemente a las auditorías, incluidas las inspecciones, realizadas o exigidas por el Cliente;
-
-(h) eliminar permanentemente todas las copias de la base de datos del Cliente en posesión de Odoo SA, o devolver dichos datos, a elección del Cliente, a la terminación de este Acuerdo, sujeto a
-los retrasos especificados en la Política de privacidad de Odoo SA (`*https://www.odoo.com/privacy* <https://www.odoo.com/privacy>`__).
+      notificar al Cliente inmediatamente al momento de conocer y confirmar cualquier accidente, el procesamiento no autorizado o ilegal de, la divulgación o el acceso a los datos personales;
+(f) 
+      notificar al Cliente si las instrucciones de procesamiento infringen la Protección de datos aplicables a la legislación, en opinión de Odoo SA;
+(g) 
+      poner a disposición del Cliente toda la información necesaria para demostrar el cumplimiento con la legislación de protección de datos, permitir y contribuir razonablemente a las auditorías, incluidas las inspecciones, realizadas o exigidas por el Cliente;
+(h) 
+      eliminar permanentemente todas las copias de la base de datos del Cliente en posesión de Odoo SA, o devolver dichos datos, a elección del Cliente, a la terminación de este Acuerdo, sujeto a los retrasos especificados en la Política de privacidad de Odoo SA (`Privacy <https://www.odoo.com/privacy>`__).
 
 Con respecto a los puntos (d) a (f), el Cliente acepta proporcionar a
 Odoo SA un contacto preciso para información en todo momento, según sea necesario para notificar al responsable de Protección de Datos del Cliente.
@@ -415,7 +417,7 @@ procesadores) para procesar datos personales. Odoo SA se compromete a
 utilizar únicamente sub procesadores de conformidad con la legislación de protección de datos. Este uso será cubierto por un contrato entre Odoo SA y el Sub procesador que proporciona garantías al efecto.
 
 La Política de privacidad de Odoo SA, publicada en
-`*https://www.odoo.com/privacy* <https://www.odoo.com/privacy>`__
+`Odoo Privacy <https://www.odoo.com/privacy>`__
 proporciona información actualizada sobre los nombres y propósitos de
 los Sub procesadores actualmente en uso por Odoo SA para la ejecución de los Servicios.
 
@@ -432,10 +434,9 @@ Además, Odoo SA puede rescindir el Contrato inmediatamente en caso de
 que el Cliente incumpla con pagos de las tarifas aplicables a los
 Servicios dentro de la fecha de vencimiento especificada en el factura.
 
-**Disposiciones supervivientes**: Las secciones ":ref:`confidentiality_es`", “:ref:`disclaimers_es`",   “:ref:`liability_es`",
-  et “:ref:`general_provisions_es`” sobrevivirán cualquier terminación o vencimiento de este Acuerdo.
+Disposiciones supervivientes: Las secciones ":ref:`confidentiality_es`",“:ref:`disclaimers_es`",“:ref:`liability_es`", y “:ref:`general_provisions_es`” sobrevivirán cualquier terminación o vencimiento de este Acuerdo.
 
-  .. _warranties_disclaimers_es:
+.. _warranties_disclaimers_es:
 
 7 Garantías, Renuncias, Responsabilidad Civil.
 ==============================================
