@@ -5,5 +5,5 @@ dpkg-reconfigure -f noninteractive tzdata
 apt-get install python-sphinx build-essential -y
 make html
 ls _build/html/
-cp -R devops/firebase-skeleton .
+cp -R devops/firebase-skeleton/* .
 cp -R _build/html/* public
