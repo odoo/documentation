@@ -1,5 +1,5 @@
 =======================
-Odoo User Documentation
+Twenty20 User Documentation
 =======================
 
 .. rst-class:: index-tree
