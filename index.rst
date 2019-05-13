@@ -9,5 +9,5 @@ Twenty20 User Documentation
 
     Index <self>
     applications
-    practical
-    business
+..    practical
+..   business

@@ -7,7 +7,7 @@ Introduction to Twenty20 Accounting
     :width: 700
     :height: 394
 
-Transcript
+Transcript of Video
 ==========
 
 Twenty20 is beautiful accounting software designed for the needs of the 21st century.
@@ -39,3 +39,6 @@ through all your companies data.
 Of course, Twenty20 is mobile too. You can use it to check your accounts on the go.
 
 Try Twenty20 now, and join 2 millions of happy users.
+
+Back
+==========
