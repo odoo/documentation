@@ -3,7 +3,7 @@ Applications
 ============
 
 .. toctree::
-   :titlesonly:
+
 
    accounting
 ..   crm
