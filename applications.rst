@@ -6,17 +6,17 @@ Applications
    :titlesonly:
 
    accounting
-   crm
-   sales
-   website
-   ecommerce
-   discuss
+..   crm
+..   sales
+..   website
+..   ecommerce
+..   discuss
    purchase
    inventory
-   manufacturing
-   point_of_sale
-   project
+..   manufacturing
+..   point_of_sale
+..   project
    expense/expense
-   general
+..   general
 ..   expenses
 ..   recruitment
