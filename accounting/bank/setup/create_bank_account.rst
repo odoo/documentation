@@ -3,7 +3,7 @@ How to setup a new bank account?
 ================================
 
 In Twenty20, you can manage multiple bank accounts. In this page, you will
-be guided in the creation, modification or deletion of a bank or a
+be guided in the creation, modification or deletion of a bank or
 credit card account.
 
 Edit a bank account
