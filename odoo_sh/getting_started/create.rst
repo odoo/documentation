@@ -157,7 +157,7 @@ all outgoing email servers are disabled so you use the Odoo.sh email server prov
 
 .. Warning::
 
-  Ports 25, 465 and 587 are blocked. If you want to use your own email servers, they must be configured on other ports.
+  Port 25 is (and will stay) closed. If you want to connect to an external SMTP server, you should use ports 465 and 587.
 
 Check your scheduled actions
 ----------------------------
