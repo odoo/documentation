@@ -1,4 +1,4 @@
-============================
+=./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos===========================
 Point of Sale Hardware Setup
 ============================
 
@@ -215,30 +215,26 @@ Step By Step Setup Guide
 Extra dependencies
 ~~~~~~~~~~~~~~~~~~
 
-Because Odoo runs on Python 2, you need to check which version of pip
+Because Odoo 11.0 runs on Python 3, you need to check which version of pip
 you need to use.
 
 ``# pip --version``
 
 If it returns something like::
 
-  pip 1.5.6 from /usr/local/lib/python3.3/dist-packages/pip-1.5.6-py3.3.egg (python 3.3)
+  pip 1.4.1 from /usr/lib/python2.7/dist-packages (python 2.7)
 
-You need to try pip2 instead.
+You need to try pip3 instead.
 
 If it returns something like::
 
-  pip 1.4.1 from /usr/lib/python2.7/dist-packages (python 2.7)
+  pip 1.5.6 from /usr/local/lib/python3.3/dist-packages/pip-1.5.6-py3.3.egg (python 3.3)
 
 You can use pip.
 
 The driver modules requires the installation of new python modules:
 
-``# pip install pyserial``
-
-``# pip install pyusb==1.0.0b1``
-
-``# pip install qrcode``
+``# pip install netifaces evdev pyusb==1.0.0b1``
 
 Access Rights
 ~~~~~~~~~~~~~
@@ -261,14 +257,16 @@ following content::
     SUBSYSTEM=="usb", GROUP="usbusers", MODE="0660"
     SUBSYSTEMS=="usb", GROUP="usbusers", MODE="0660"
 
-Then you need to reboot your machine.
+Then you need to reload the udev rules or reboot your machine if reloading the rules did not work.
+
+``# udevadm control --reload-rules && udevadm trigger``
 
 Start the local Odoo instance
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 We must launch the Odoo server with the correct settings
 
-``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``
+``$ ./odoo-bin --load=web,hw_proxy,hw_posbox_homepage,hw_scale,hw_scanner,hw_escpos``
 
 Test the instance
 ~~~~~~~~~~~~~~~~~
