@@ -2,9 +2,9 @@
 Accounts Payable FAQ
 ====================
 
-===========================
+=============================================
 How do I cancel a payment to an invoice?
-===========================
+=============================================
 
 The **Purchase** application allows you to manage your purchase orders,
 incoming products, and vendor invoices all seamlessly in one place.
