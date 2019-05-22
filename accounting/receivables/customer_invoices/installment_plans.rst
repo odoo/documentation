@@ -3,7 +3,7 @@ How to define an installment plan on customer invoices?
 =======================================================
 In order to manage installment plans related to an invoice, you should
 use payment terms in Twenty20. They apply on both customer invoices and
-supplier bills.
+vendor invoices.
 
 Example, for a specific invoice:
 

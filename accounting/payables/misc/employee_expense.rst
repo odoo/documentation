@@ -8,7 +8,7 @@ encountered most frequently are:
 
 - car travel, reimbursed per unit of distance (mile or kilometer),
 
-- subsistence expenses, reimbursed based on the bill,
+- subsistence expenses, reimbursed based on the invoice,
 
 - other purchases, such as stationery and books, destined for the
   company but carried out by the employee.
@@ -96,7 +96,7 @@ expenses work that way:
 
 For every expense, the employee should record at least:
 
--  a description: that should include the reference of the ticket / bill
+-  a description: that should include the reference of the ticket / invoice
 
 -  a product: the expense type
 
@@ -105,7 +105,7 @@ For every expense, the employee should record at least:
 
 Depending of the policy of the company, he might have to attach a scan
 or a photo of the expense. To do that, just a write a message in the
-bottom of the expense with the scan of the bill/ticket in attachment.
+bottom of the expense with the scan of the invoice/ticket in attachment.
 
 .. image:: ./media/expense02.png
   :align: center
@@ -135,7 +135,7 @@ validation.
 The manager can:
 
 - discuss on an expense to ask for more information (e.g., if a scan of
-  the bill is missing);
+  the invoice is missing);
 
 - reject an expense;
 

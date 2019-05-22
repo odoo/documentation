@@ -20,8 +20,8 @@ Assets on the Balance Sheet report.
 
 Invoicing in most countries occurs when a contractual obligation is met.
 If you ship a box to a customer, you have met the terms of the contract
-and can bill them. If your supplier sends you a shipment, they have met
-the terms of that contract and can bill you. Therefore, the terms of the
+and can invoice them. If your vendor sends you a shipment, they have met
+the terms of that contract and can invoice you. Therefore, the terms of the
 contract is fulfilled when the box moves to or from the truck. At this
 point, Twenty20 supports the creation of what is called a Draft Invoice by
 Warehouse staff.
@@ -172,7 +172,7 @@ the invoice.
 Payment Followup
 ================
 
-There's a growing trend of customers paying bills later and later.
+There's a growing trend of customers paying invoices later and later.
 Therefore, collectors must make every effort to collect money and
 collect it faster.
 

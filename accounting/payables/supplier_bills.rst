@@ -1,9 +1,9 @@
 ==============
-Supplier Bills
+vendor Invoices
 ==============
 
 .. toctree::
    :titlesonly:
 
-   supplier_bills/manage
-   supplier_bills/bills_or_receipts
+   vendor_invoices/manage
+   vendor_invoices/invoices_or_receipts

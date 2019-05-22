@@ -62,7 +62,7 @@ you can directly click on the link **Import Statement**.
 .. image:: media/coda03.png
    :align: center
 
-Every time you get a statement related to a new customer / supplier,
+Every time you get a statement related to a new customer / vendor,
 Twenty20 will ask you to select the right contact to reconcile the
 transaction. Twenty20 learns from that operation and will automatically
 complete the next payments you get or make to these contacts. This will

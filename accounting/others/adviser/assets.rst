@@ -46,7 +46,7 @@ Asset type are used to configure all information about an assets: asset
 and deprecation accounts, amortization method, etc. That way, advisers
 can configure asset types and users can further record assets without
 having to provide any complex accounting information. They just need to
-provide an asset type on the supplier bill.
+provide an asset type on the vendor invoice.
 
 You should create asset types for every group of assets you frequently
 buy like "Cars: 5 years", "Computer Hardware: 3 years". For all other
@@ -74,10 +74,10 @@ before confirming the asset.
 
 .. tip::
 
-   if you create asset manually, you still need to create the supplier
-   bill for this asset. The asset document will only produce the
-   depreciation journal entries, not those related to the supplier
-   bill.
+   if you create asset manually, you still need to create the vendor
+   invoice for this asset. The asset document will only produce the
+   depreciation journal entries, not those related to the vendor
+   invoice.
 
 Explanation of the fields:
 
@@ -87,13 +87,13 @@ Explanation of the fields:
 
    Try creating an *Asset* in our online demonstration
 
-Create assets automatically from a supplier bill
+Create assets automatically from a vendor invoice
 ================================================
 
-Assets can be automatically created from supplier bills. All you need to
-do is to set an asset category on your bill line. When the user will
-validate the bill, an asset will be automatically created, using the
-information of the supplier bill.
+Assets can be automatically created from vendor invoices. All you need to
+do is to set an asset category on your invoice line. When the user will
+validate the invoice, an asset will be automatically created, using the
+information of the vendor invoice.
 
 .. image:: media/image09.png
 
@@ -105,7 +105,7 @@ in draft only when you want your adviser to control all the assets
 before posting them to your accounts.
 
 .. tip:: if you put the asset on the product, the asset category will
-         automatically be filled in the supplier bill.
+         automatically be filled in the vendor invoice.
 
 How to depreciate an asset?
 ===========================

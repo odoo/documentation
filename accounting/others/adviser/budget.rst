@@ -114,7 +114,7 @@ Check your budget
 =================
 
 You can check your budget at any time. To see the evolution, let's book
-some Invoices and Vendors Bills.
+some Invoices and Vendors Invoices.
 
 .. tip::
 	

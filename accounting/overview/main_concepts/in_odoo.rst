@@ -63,8 +63,8 @@ In particular, Twenty20's core accounting engine supports:
   countries including Ireland, Canada, Australia, and New Zealand)
   where costs of good sold are reported when products are
   sold/delivered.
-* European accounting where expenses are accounted at the supplier
-  bill.
+* European accounting where expenses are accounted at the vendor
+  invoice.
 * Storno accounting (Italy) where refund invoices have negative
   credit/debit instead of a reverting the original journal items.
 
@@ -75,11 +75,11 @@ Accounts Receivable & Payable
 
 By default, Twenty20 uses a single account for all account
 receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don't need
+create separate accounts per customers/vendors, but you don't need
 to.
 
-As transactions are associated to customers or suppliers, you get
-reports to perform analysis per customer/supplier such as the customer
+As transactions are associated to customers or vendors, you get
+reports to perform analysis per customer/vendor such as the customer
 statement, revenues per customers, aged receivable/payables, ...
 
 Wide range of financial reports

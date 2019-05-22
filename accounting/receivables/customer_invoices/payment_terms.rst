@@ -3,7 +3,7 @@ How to setup and use payment terms
 ==================================
 
 Payment terms define the conditions to pay an invoice. They apply on
-both customer invoices and supplier bills.
+both customer invoices and vendor invoices.
 
 Example, for a specific invoice:
 
@@ -79,16 +79,16 @@ journal entry:
 In the customer statement, you will see two lines with different due
 dates.
 
-Payment terms for vendor bills
+Payment terms for vendor invoices
 ------------------------------
 
-The easiest way to manage payment terms for vendor bills is to record a
-due date on the bill. You don't need to assign a payment term, just the
+The easiest way to manage payment terms for vendor invoices is to record a
+due date on the invoice. You don't need to assign a payment term, just the
 due date is enough.
 
 But if you need to manage vendor terms with several installments, you
 can still use payment terms, exactly like in customer invoices. If you
-set a payment term on the vendor bill, you don't need to set a due date.
+set a payment term on the vendor invoice, you don't need to set a due date.
 The exact due date for all installments will be automatically created.
 
 .. seealso:: 

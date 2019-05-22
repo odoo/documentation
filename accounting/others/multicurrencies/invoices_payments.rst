@@ -44,7 +44,7 @@ that you can register payments only in this currency.
 .. image:: media/invoice02.png
    :align: center
 
-Multi-currency invoices & Vendor Bills
+Multi-currency invoices & Vendor Invoices
 ======================================
 
 Now that you are working in a multi-currency environment, all
@@ -60,11 +60,11 @@ document.
 .. image:: media/invoice03.png
    :align: center
 
-Vendor Bills
+Vendor Invoices
 ------------
 
 You are now able to set a different currency than the company one on
-your purchase orders and on your vendor bills. The currency is set for
+your purchase orders and on your vendor invoices. The currency is set for
 the whole document.
 
 .. image:: media/invoice04.png

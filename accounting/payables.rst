@@ -5,6 +5,6 @@ Account Payables
 .. toctree::
    :titlesonly:
 
-   payables/supplier_bills
+   payables/vendor_invoices
    payables/pay
    payables/misc

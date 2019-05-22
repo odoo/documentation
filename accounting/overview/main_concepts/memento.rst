@@ -36,7 +36,7 @@ Accounting Memento For Entrepreneurs (US GAAP)
    * .. rst-class:: intro-liabilities
 
      **Liabilities** are obligations from past events that the company will
-     have to pay in the future (utility bills, debts, unpaid suppliers).
+     have to pay in the future (utility invoices, debts, unpaid vendors).
 
    * .. rst-class:: intro-equity
 
@@ -177,7 +177,7 @@ Bank Reconciliation
 ===================
 
 Bank reconciliation is the matching of bank statement lines (provided by your
-bank) with transactions recorded internally (payments to suppliers or from
+bank) with transactions recorded internally (payments to vendors or from
 customers). For each line in a bank statement, it can be:
 
 matched with a previously recorded payment:

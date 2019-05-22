@@ -22,7 +22,7 @@ The implementation guide will help you through the following steps:
 4.  Confirming your usual tax rates
 5.  Setting up any foreign currencies
 6.  Importing your customers
-7.  Importing your suppliers
+7.  Importing your vendors
 8.  Importing your products
 9.  Importing your outstanding transactions
 10. Importing your starting balances

@@ -3,7 +3,7 @@ How to setup cash discounts?
 ============================
 
 Cash discounts are an incentive (usually a small percentage) that you
-offer to customers in return for paying a bill owed before the scheduled
+offer to customers in return for paying a invoice owed before the scheduled
 due date. If used properly, cash discounts improve the Days Sales
 Outstanding aspect of a business's cash conversion cycle.
 

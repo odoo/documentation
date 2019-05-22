@@ -12,12 +12,12 @@ stand alone record for use on a later date:
 - If a payment is not linked to an invoice, the customer has an
   outstanding credit with your company, or your company as an
   outstanding balance with a vendor. You can use this outstanding
-  credit/debit to pay future invoices or bills.
+  credit/debit to pay future invoices or invoices.
 
 Paying an invoice
 =================
 
-If you register a payment on a customer invoice or a vendor bill, the
+If you register a payment on a customer invoice or a vendor invoice, the
 payment is automatically reconciled with the invoice reducing the amount
 due.
 
@@ -80,7 +80,7 @@ If you want to reconcile all outstanding payments and invoices at once
 feature within Twenty20.
 
 The batch reconciliation feature is available from the dashboard on the
-Customer Invoices card and the Vendor Bills card for reconciling
+Customer Invoices card and the Vendor Invoices card for reconciling
 Accounts Receivable and Payable, respectively.
 
 .. image:: ./media/recording04.png

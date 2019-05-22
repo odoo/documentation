@@ -6,4 +6,4 @@ Process overview
    :titlesonly:
 
    process_overview/customer_invoice
-   process_overview/supplier_bill
+   process_overview/vendor_invoice

@@ -136,7 +136,7 @@ So a law firm will opt for an analytic representation which reflects the
 management of the time that employees work on the different customer
 cases.
 
-Billing for the different cases is a bit unusual. The cases do not match
+Invoiceing for the different cases is a bit unusual. The cases do not match
 any entry in the general account nor do they come from purchase or sales
 invoices. They are represented by the various analytic operations and do
 not have exact counterparts in the general accounts. They are calculated
@@ -144,7 +144,7 @@ on the basis of the hourly cost per employee.
 
 At the end of the month when you pay salaries and benefits, you
 integrate them into the general accounts but not in the analytic
-accounts, because they have already been accounted for in billing each
+accounts, because they have already been accounted for in invoiceing each
 account. A report that relates data from the analytic and general
 accounts then lets you compare the totals, so you can readjust your
 estimates of hourly cost per employee depending on the time actually
@@ -162,7 +162,7 @@ you can find for your analytic account:
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Consultation (4 h)             | Case 2.1         | -60          |    |                            |             |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
-| Service charges                | Case 1.1         | 280          |    | 705 – Billing services     |             | 280          |
+| Service charges                | Case 1.1         | 280          |    | 705 – Invoiceing services     |             | 280          |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Stationery purchase            | Administrative   | -42          |    | 601 – Furniture purchase   | 42          |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+

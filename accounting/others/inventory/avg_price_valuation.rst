@@ -9,7 +9,7 @@ valuation, is the average cost.
 
 This document answers to one recurrent question for companies using that
 method to make their stock valuation: how does a shipping returned to
-its supplier impact the average cost and the accounting entries? This
+its vendor impact the average cost and the accounting entries? This
 document is **only** for the specific use case of a perpetual valuation (as
 opposed to the periodic one) and in average price costing method (as
 opposed to standard of FIFO).
@@ -36,8 +36,8 @@ Defining the purchase price
 ---------------------------
 
 The purchase price is estimated at the reception of the products (you
-might not have received the vendor bill yet) and reevaluated at the
-reception of the vendor bill. The purchase price includes the cost you
+might not have received the vendor invoice yet) and reevaluated at the
+reception of the vendor invoice. The purchase price includes the cost you
 pay for the products, but it may also includes additional costs, like
 landed costs.
 
@@ -72,7 +72,7 @@ remaining of each ``$24 / 2 = $12``.
 Purchase return use case
 ========================
 
-In case of a product returned to its supplier after reception, the
+In case of a product returned to its vendor after reception, the
 inventory value is reduced using the average cost formulae (not at the
 initial price of these products!).
 
@@ -94,7 +94,7 @@ the average cost of a product leaving the inventory. If you break this
 rule, you may lead to inconsistencies in your inventory.
 
 As an example, here is the scenario when you deliver one piece to the
-customer and return the other one to your supplier (at the cost you
+customer and return the other one to your vendor (at the cost you
 purchased it). Here is the operation:
 
 +-----------------------------------------------+---------------+-------------------+---------------+------------+
@@ -131,10 +131,10 @@ Further thoughts on anglo saxon mode
 
 For people in using the **anglo saxon accounting** principles, there is
 another concept to take into account: the stock input account of the
-product, which is intended to hold at any time the value of vendor bills
+product, which is intended to hold at any time the value of vendor invoices
 to receive. So the stock input account will increase on reception of
 incoming shipments and will decrease when receiving the related vendor
-bills.
+invoices.
 
 Back to our example, we see that when the return is valued at the
 average price, the amount booked in the stock input account is the
@@ -147,11 +147,11 @@ original purchase price:
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
 | Receive 8 Products at $10                     | ($80)         |              | $80               | 8             | $10        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
-| Receive vendor bill $80                       | $0            |              | $80               | 8             | $10        |
+| Receive vendor invoice $80                       | $0            |              | $80               | 8             | $10        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
 | Receive 4 Products at $16                     | ($64)         |              | $144              | 12            | $12        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
-| Receive vendor bill $64                       | $0            |              | $144              | 12            | $12        |
+| Receive vendor invoice $64                       | $0            |              | $144              | 12            | $12        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+
 | Deliver 10 Products                           | $0            |              | $24               | 2             | $12        |
 +-----------------------------------------------+---------------+--------------+-------------------+---------------+------------+

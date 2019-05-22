@@ -67,19 +67,19 @@ you:
 - Information about the bank account in the footer of your invoices if
   checked the box **Show in Invoices Footer**
 
-Example: A vendor bill in a foreign currency
+Example: A vendor invoice in a foreign currency
 ============================================
 
-Based on the above example, let's assume we receive the following bill
-from a supplier in China.
+Based on the above example, let's assume we receive the following invoice
+from a vendor in China.
 
-In the :menuselection:`Purchase --> Vendor Bills` , this is what you could see:
+In the :menuselection:`Purchase --> Vendor Invoices` , this is what you could see:
 
 .. image:: media/foreign03.png
    :align: center
 
-Once you are ready to pay this bill, click on register payment on the
-bill to record a payment.
+Once you are ready to pay this invoice, click on register payment on the
+invoice to record a payment.
 
 .. image:: media/foreign04.png
    :align: center
@@ -89,7 +89,7 @@ exchange gain or loss at the reconciliation of the payment with the
 invoice, depending if the currency rate increased or decreased between
 the invoice and the payment date.
 
-Note that you can pay a foreign bill with another currency. In such a
+Note that you can pay a foreign invoice with another currency. In such a
 case, Twenty20 will automatically convert between the two currencies.
 
 Customers Statements

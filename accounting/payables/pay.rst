@@ -1,5 +1,5 @@
 ==================
-Pay supplier bills
+Pay vendor invoices
 ==================
 
 .. toctree::

@@ -6,7 +6,7 @@ Overview
 ========
 
 Choosing to use the multi-currency option in Twenty20 will allow you to send
-sales invoices, quotes and purchase orders or receive bills and payments
+sales invoices, quotes and purchase orders or receive invoices and payments
 in currencies other than your own. With multi-currency, you can also set
 up bank accounts in other currencies and run reports on your foreign
 currency activities.
@@ -123,11 +123,11 @@ document.
 .. image:: media/works10.png
    :align: center
 
-Purchases orders and Vendor Bills
+Purchases orders and Vendor Invoices
 ---------------------------------
 
 You are now able to set a different currency than the company one on
-your purchase orders and on your vendor bills. The currency is set for
+your purchase orders and on your vendor invoices. The currency is set for
 the whole document.
 
 .. image:: media/works11.png

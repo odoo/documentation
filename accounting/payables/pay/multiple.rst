@@ -1,26 +1,26 @@
 =================================
-How to pay several bills at once?
+How to pay several invoices at once?
 =================================
 
-Twenty20 provides a simple and effective way to handle several bills at
+Twenty20 provides a simple and effective way to handle several invoices at
 once, with various quick or complex options. With one single process,
-anyone is able to handle bills and payment in just a few clicks.
+anyone is able to handle invoices and payment in just a few clicks.
 
-Pay multiple bills with one payment
+Pay multiple invoices with one payment
 ===================================
 
 Record several payments
 -----------------------
 
-In the following example, we will generate some bills. You can control
+In the following example, we will generate some invoices. You can control
 the whole process from your accounting dashboard (first screen you get
 when you open the accounting application).
 
 .. image:: ./media/multiple01.png
   :align: center
 
-To create a bill, open the Dashboard menu and click on **Vendor Bills**.
-In the Vendor Bills window, click on **Create**.
+To create a invoice, open the Dashboard menu and click on **Vendor Invoices**.
+In the Vendor Invoices window, click on **Create**.
 
 .. image:: ./media/multiple02.png
   :align: center
@@ -29,13 +29,13 @@ Choose the vendor from which you wish to purchase the product, and click
 on Add an item to add one (or more) product(s). Click on **Save** and then
 **Validate**.
 
-Pay supplier bills, one after the other
+Pay vendor invoices, one after the other
 ---------------------------------------
 
 .. image:: ./media/multiple03.png
   :align: center
 
-We will now record a payment for one bill only. Open the bill, then
+We will now record a payment for one invoice only. Open the invoice, then
 click on **Register Payment**. Insert the Payment Method, Date and Amount,
 and click on **Validate**.
 
@@ -43,21 +43,21 @@ and click on **Validate**.
   :align: center
 
 Once you have validated the payment, the system will automatically
-reconcile the payment with the bill, and set the bill as **Paid**. The
+reconcile the payment with the invoice, and set the invoice as **Paid**. The
 system will also generate a move from the payment account and reconcile
 it with the expense transaction.
 
-Pay several bills altogether
+Pay several invoices altogether
 ----------------------------
 
 In order to illustrate the process thoroughly, create at least 2 more
-bills following the above standing guide. **Make sure all bills come
+invoices following the above standing guide. **Make sure all invoices come
 from the same vendor.**
 
 .. image:: ./media/multiple05.png
   :align: center
 
-In the Vendors Bills, select the new bills you have just created by
+In the Vendors Invoices, select the new invoices you have just created by
 checking the box next to each of them. In the Action menu located in the
 middle of the page, click on **Register Payment**.
 
@@ -65,12 +65,12 @@ middle of the page, click on **Register Payment**.
   :align: center
 
 Insert the details of the payment. The system calculated the total
-amount for both bills, but you can modify it freely. Click on **Validate**.
+amount for both invoices, but you can modify it freely. Click on **Validate**.
 
 Record the payment, reconcile afterwards
 ----------------------------------------
 
-You can also reconcile a payment with bills after the payment has been
+You can also reconcile a payment with invoices after the payment has been
 recorded.
 
 First, we need to create a payment
@@ -89,7 +89,7 @@ with the system.
 .. image:: ./media/multiple08.png
   :align: center
 
-As you can see, bill payment status show what is posted and what is
+As you can see, invoice payment status show what is posted and what is
 remaining to reconcile.
 
 After receiving bank statement from the bank with payment detail, you
@@ -102,17 +102,17 @@ map the transaction amount.
 
 	* :doc:`../../bank/reconciliation/use_cases`
 
-Partial payments of several supplier bills
+Partial payments of several vendor invoices
 ==========================================
 
-How to pay several supplier bills having cash discounts at once?
+How to pay several vendor invoices having cash discounts at once?
 ----------------------------------------------------------------
 
-You already learned how to pay bills in various way but what about
+You already learned how to pay invoices in various way but what about
 partial payment? We are taking another example where we will do partial
-payment for various bills.
+payment for various invoices.
 
-We are creating multiple bills and partially pay them through bank
+We are creating multiple invoices and partially pay them through bank
 statements.
 
 We are adding payment terms which allow some cash discount where vendor
@@ -121,13 +121,13 @@ offer us early payment discount.
 .. image:: ./media/multiple09.png
   :align: center
 
-We are creating the following bills with the assignment of the above
+We are creating the following invoices with the assignment of the above
 payment term.
 
 .. image:: ./media/multiple10.png
   :align: center
 
-We have created the following bills:
+We have created the following invoices:
 
 .. image:: ./media/multiple11.png
   :align: center

@@ -82,7 +82,7 @@ reporting :
         customers to pay you (fully), across all your customer invoices.
     - **Average creditor days:**
         The average number of days it takes you to
-        pay your suppliers (fully) across all your bills.
+        pay your vendors (fully) across all your invoices.
     - **Short term cash forecast:** 
         How much cash is expected in or out of
         your organisation in the next month i.e. balance of your **Sales
@@ -115,7 +115,7 @@ Aged Payable
 ------------
 
 Run the **Aged Payable Details** report to display information on individual
-bills, credit notes and overpayments owed by you, and how long these
+invoices, credit notes and overpayments owed by you, and how long these
 have gone unpaid.
 
 .. image:: media/main_reports02.png  

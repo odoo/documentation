@@ -1,8 +1,8 @@
 ====================================
-How to forecast future bills to pay?
+How to forecast future invoices to pay?
 ====================================
 
-When you get hundreds of vendor bills per month with each of them having
+When you get hundreds of vendor invoices per month with each of them having
 different payment terms, it could be complex to follow what you have to
 pay and when. Paying your vendors too early can decrease your cash
 availabilities and paying too late can lead to extra charges.
@@ -40,16 +40,16 @@ will propose you automatically the right payment term.
 .. note::
 
     If you do not set a specific payment term on a vendor, you will still be
-    able to set a specific payment term on the vendor bill.
+    able to set a specific payment term on the vendor invoice.
 
-Forecast bills to pay with the Aged Payables report
+Forecast invoices to pay with the Aged Payables report
 ===================================================
 
 In order to track amounts to be paid to the vendors, use the Aged
 Payable report. You can get it from the Reports menu of the Accounting
 application. This report gives you a summary per vendor of the amounts
 to pay, compared to their due date (the due date being computed on each
-bill using the payment term).
+invoice using the payment term).
 
 .. image:: ./media/forecast03.png
   :align: center
@@ -57,12 +57,12 @@ bill using the payment term).
 This reports tells you how much you will have to pay within the next
 months.
 
-Select bills to pay
+Select invoices to pay
 ===================
 
-Using the menu :menuselection:`Purchases --> Vendor Bills`, you can get a list of vendor
-bills. Using the advanced filters, you can list all the bills that you
-should pay or the bills that are overdue (you are late on the payment).
+Using the menu :menuselection:`Purchases --> Vendor Invoices`, you can get a list of vendor
+invoices. Using the advanced filters, you can list all the invoices that you
+should pay or the invoices that are overdue (you are late on the payment).
 
 .. image:: ./media/forecast04.png
   :align: center

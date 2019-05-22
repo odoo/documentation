@@ -1,11 +1,11 @@
 ===========================
-How to manage vendor Bills?
+How to manage vendor Invoices?
 ===========================
 
 The **Purchase** application allows you to manage your purchase orders,
-incoming products, and vendor bills all seamlessly in one place.
+incoming products, and vendor invoices all seamlessly in one place.
 
-If you want to set up a vendor bill control process, the first thing you
+If you want to set up a vendor invoice control process, the first thing you
 need to do is to have purchase data in Twenty20. Knowing what has been
 purchased and received is the first step towards understanding your
 purchase management processes.
@@ -21,7 +21,7 @@ Here is the standard work flow in Twenty20:
 3. Confirming the PO generates an **Incoming Shipment** if you purchased
    any stockable products.
 
-4. Upon receiving a **Vendor Bill** from your Vendor, validate the bill
+4. Upon receiving a **Vendor Invoice** from your Vendor, validate the invoice
    with products received in the previous step to ensure accuracy.
 
 This process may be done by three different people within the company,
@@ -66,7 +66,7 @@ as it is important:
 	that occur infrequently and do not require inventory valuation or management.
 	If you create such a product, it is recommend to set the product type to **Service**.
 
-Managing your Vendor Bills
+Managing your Vendor Invoices
 ==========================
 
 Purchasing products or services
@@ -76,7 +76,7 @@ From the purchase application, you can create a purchase order with as
 many products as you need. If the vendor sends you a confirmation or
 quotation for an order, you may record the order reference number in the
 **Vendor Reference** field. This will enable you to easily match the PO
-with the the vendor bill later (as the vendor bill will probably include
+with the the vendor invoice later (as the vendor invoice will probably include
 the Vendor Reference)
 
 .. image:: ./media/manage02.png
@@ -116,25 +116,25 @@ receive the products.
 
 Purchasing service products does not trigger a delivery order.
 
-Managing Vendor Bills
+Managing Vendor Invoices
 ---------------------
 
-When you receive a Vendor Bill for a previous purchase, be sure to
+When you receive a Vendor Invoice for a previous purchase, be sure to
 record it in the Purchases application under the **Control Menu**. You
-need to create a new vendor bill even if you already registered a
+need to create a new vendor invoice even if you already registered a
 purchase order.
 
 .. image:: ./media/manage06.png
   :align: center
 
-The first thing you will need to do upon creating a Vendor Bill is to
+The first thing you will need to do upon creating a Vendor Invoice is to
 select the appropriate Vendor as this will also pull up any associated
 accounting or pricelist information. From there, you can choose to
-specify any one or multiple Purchase Orders to populate the Vendor Bill
+specify any one or multiple Purchase Orders to populate the Vendor Invoice
 with. When you select a Purchase Order from the list, Twenty20 will pull any
 uninvoiced products associated to that Purchase Order and automatically
 populate that information below. If you are having a hard time finding
-the appropriate Vendor bill, you may search through the list by
+the appropriate Vendor invoice, you may search through the list by
 inputting the vendor reference number or your internal purchase order
 number.
 
@@ -147,43 +147,43 @@ prices).
 
 .. note::
 
-	Your vendor may send you several bills for the same Purchase Order if:
+	Your vendor may send you several invoices for the same Purchase Order if:
 	
 	1. Your vendor is in back-order and is sending you invoices as they ship the products.
-	2. Your vendor is sending you a partial bill or asking for a deposit.
+	2. Your vendor is sending you a partial invoice or asking for a deposit.
 
-Every time you record a new vendor bill, Twenty20 will automatically
+Every time you record a new vendor invoice, Twenty20 will automatically
 populate the product quantities based on what has been received from the
 vendor. If this value is showing a zero, this means that you have not
 yet received this product and simply serves as a reminder that the
 product is not in hand and you may need to inquire further into this. At
-any point in time, before you validate the Vendor Bill, you may override
+any point in time, before you validate the Vendor Invoice, you may override
 this zero quantity.
 
-Vendor Bill Matching
+Vendor Invoice Matching
 ====================
 
-What to do if your vendor bill does not match what you received
+What to do if your vendor invoice does not match what you received
 ---------------------------------------------------------------
 
-If the bill you receive from the vendor has different quantities than
+If the invoice you receive from the vendor has different quantities than
 what Twenty20 automatically populates as quantities, this could be due to
 several reasons:
 
 - the vendor is incorrectly charging you for products and/or services
   that you have not ordered,
 
-- the vendor is billing you for products that you might not have
+- the vendor is invoiceing you for products that you might not have
   received yet, as the invoicing control may be based on ordered or
   received quantities,
 
-- or the vendor did not bill you for previously purchased products.
+- or the vendor did not invoice you for previously purchased products.
 
-In these instances it is recommended that you verify that the bill, and
+In these instances it is recommended that you verify that the invoice, and
 any associated purchase order to the vendor, are accurate and that you
 understand what you have ordered and what you have already received.
 
-If you are unable to find a purchase order related to a vendor bill,
+If you are unable to find a purchase order related to a vendor invoice,
 this could be due to one of a few reasons:
 
 - the vendor has already invoiced you for this purchase order,
@@ -207,7 +207,7 @@ quantities, you will need to belong to the group **Purchase Manager**.
 Ask your system administrator to enable these access on :menuselection:`Settings
 --> Users --> Users --> Access Rights`. Once you belong to the correct group,
 select the product(s) you wish to modify, and you should see a new field appear,
-labeled **Control Purchase Bills**.
+labeled **Control Purchase Invoices**.
 
 .. image:: ./media/manage08.png
   :align: center
@@ -219,11 +219,11 @@ product to be based on either:
 
 - or Received quantities
 
-Batch Billing
+Batch Invoiceing
 -------------
 
-When creating a vendor bill and selecting the appropriate purchase
+When creating a vendor invoice and selecting the appropriate purchase
 order, you may continue to select additional purchase orders and Twenty20
 will add the additional line items from that purchase order.. If you
 have not deleted the previous line items from the first purchase order
-the bill will be linked to all the appropriate purchase orders.
+the invoice will be linked to all the appropriate purchase orders.

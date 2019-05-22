@@ -12,7 +12,7 @@ date, and accurate:
 
 -  Verify that all **customer invoices** have been entered and approved.
 
--  Confirm that you have entered and agreed all **vendor bills**.
+-  Confirm that you have entered and agreed all **vendor invoices**.
 
 -  Validate all **expenses**, ensuring their accuracy.
 
@@ -38,7 +38,7 @@ Year-end checklist
     transactions, making sure to include loans and fixed assets.
 
 - Run the optional **Payments Matching** feature, under the **More**
-  dropdown on the dashboard, validating any open **Vendor Bills** and
+  dropdown on the dashboard, validating any open **Vendor Invoices** and
   **Customer Invoices** with their payments. This step is optional,
   however it may assist the year-end process if all outstanding
   payments and invoices are reconciled, and could lead finding

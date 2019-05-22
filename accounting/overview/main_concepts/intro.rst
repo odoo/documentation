@@ -24,7 +24,7 @@ Your customers pay online, meaning you get your money right away.
 Twenty20 accounting is connected with all Twenty20 our apps such as sale, purchase,
 inventory and subscriptions. 
 
-This way, recording vendor bills is also super quick. Set a vendor, select the purchase
+This way, recording vendor invoices is also super quick. Set a vendor, select the purchase
 order and Twenty20 fills in everything for you automatically.
 
 Then, just use the SEPA protocol or print checks to pay vendors

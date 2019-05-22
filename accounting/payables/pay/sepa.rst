@@ -11,7 +11,7 @@ SEPA is supported by the banks of the 28 EU member states as well as
 Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
 
 With Twenty20, once you decide to pay a vendor, you can select to pay the
-bill with SEPA. Then, at the end of the day, the manager can generate
+invoice with SEPA. Then, at the end of the day, the manager can generate
 the SEPA file containing all bank wire transfers and send it to the
 bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
 specifications. This is a well-defined standard that makes consensus
@@ -28,7 +28,7 @@ Configuration
 Install the required module
 ---------------------------
 
-To pay suppliers with SEPA, you must install the **SEPA Credit Transfer**
+To pay vendors with SEPA, you must install the **SEPA Credit Transfer**
 module. This module handle the process of generating SEPA files based on
 Twenty20 payments.
 
@@ -69,7 +69,7 @@ Pay with SEPA
 Register your payments
 ----------------------
 
-You can register a payment that is not related to a supplier bill. To do
+You can register a payment that is not related to a vendor invoice. To do
 so, use the top menu :menuselection:`Purchases --> Payments`. Register your
 payment and select a payment method by Sepa Credit Transfer.
 
@@ -81,16 +81,16 @@ For future payments to this vendor, Twenty20 will propose you automatically
 the bank accounts but you will be able to select another one or create a
 new one.
 
-If you pay a specific supplier bill, put the reference of the bill in
+If you pay a specific vendor invoice, put the reference of the invoice in
 the **memo** field.
 
 .. image:: ./media/sepa02.png
   :align: center
 
 Once your payment is registered, don't forget to Confirm it. You can
-also pay vendor bills from the bill directly using the Register Payment
-button on top of a vendor bill. The form is the same, but the payment is
-directly linked to the bill and will be automatically reconciled to it.
+also pay vendor invoices from the invoice directly using the Register Payment
+button on top of a vendor invoice. The form is the same, but the payment is
+directly linked to the invoice and will be automatically reconciled to it.
 
 Generate SEPA files
 -------------------
