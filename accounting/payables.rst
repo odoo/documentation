@@ -8,3 +8,4 @@ Accounts Payable
    payables/vendor_invoices
    payables/pay
    payables/misc
+   payables/faq
