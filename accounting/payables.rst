@@ -1,5 +1,5 @@
 ================
-Account Payables
+Accounts Payable
 ================
 
 .. toctree::

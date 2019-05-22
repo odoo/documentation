@@ -1,5 +1,5 @@
 ==============
-vendor Invoices
+Vendor Invoices
 ==============
 
 .. toctree::
