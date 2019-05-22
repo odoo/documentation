@@ -42,9 +42,7 @@ Draft invoices
 ==============
 
 The system generates invoice which are initially set to the Draft state.
-While these invoices
-
-remain unvalidated, they have no accounting impact within the system.
+While these invoices remain unvalidated, they have no accounting impact within the system.
 There is nothing to stop users from creating their own draft invoices.
 
 Let's create a customer invoice with following information:

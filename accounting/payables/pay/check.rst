@@ -1,71 +1,33 @@
-=============
-Pay by Checks
-=============
+======================
+Paying Vendor Invoices
+======================
 
-Once you decide to pay a supplier bill, you can select to pay by check.
-Then, at the end of the day, the manager can print all checks by batch.
-Finally, the bank reconciliation process will match the checks you sent
-to suppliers with actual bank statements.
+Summary
+-------
 
-Configuration
-=============
+Once you have your vendor invoices entered into Twenty20 and in the "OPEN" state, 
+they are ready to be paid. Twenty20 has a variety of ways to pay invoices, but each of the ways
+results in a payment being made and entered into the system that can be printed on your check stock. 
+Checks can be printed either one at a time or in batch. During the bank reconciliation process 
+we will match the checks you sent with the transactions shwoing on the actual bank statements.
 
-Install the required module
----------------------------
 
-To record supplier payments by checks, you must install the **Check
-Writing** module. This module handle the process of recording checks in
-Twenty20. Others modules are necessary to print checks, according to the
-country. As an example, the **U.S. Check Printing** module is required to
-print U.S. checks.
 
-.. note::
-
-	According to your country and the chart of account you use, those
-	modules may be installed by default. (example: United States users have
-	nothing to install, it's configured by default).
-
-Activate checks payment methods
--------------------------------
-
-In order to allow payments by checks, you must activate the payment
-method on related bank journals. From the accounting dashboard (the
-screen you get when you enter the accounting application), click on your bank
-account on :menuselection:`More --> Settings` option. On the
-**Payment Method** field, set **Check**.
-
-.. image:: ./media/check01.png
-  :align: center
-
-Compatible check stationery for printing checks
-===============================================
-
-United States
--------------
-
-For the United States, Twenty20 supports by default the check formats of:
-
-- **Quickbooks & Quicken**: check on top, stubs in the middle and bottom
-- **Peachtree**: check in the middle, stubs on top and bottom
-- **ADP**: check in the bottom, and stubs on the top.
-
-It is also possible to customize your own check format through customizations.
-
-Pay a supplier bill with a check
+Pay a vendor invoice with a check
 ================================
 
-Paying a supplier with a check is done in three steps:
+Paying a vendor with a check is done in three steps:
 
-1. registering a payment you'd like to do on the bill
-2. printing checks in batch for all registered payments
-3. reconcile bank statements
+1. Registering a payment you'd like to do on the invoice
+2. Printing checks in batch for all registered payments
+3. Reconcile bank statements
 
 Register a payment by check
 ---------------------------
 
-To register a payment on a bill, open any supplier bill from the menu
-:menuselection:`Purchases --> Supplier Bills`. Once the supplier bill is
-validated, you can register a payment. Set the **Payment Method** to **Check**
+To register a payment on a invoice, open any vendor invoice from the menu
+:menuselection:`Accounting --> Payables --> Select Invoices for payment`. Once the vendor invoice is
+validated, you can register a payment. Set the **Pay Account** to the account that you would like to use to make the payment, Enter the amount to pay
 and validate the payment dialog.
 
 .. image:: ./media/check02.png
@@ -77,7 +39,7 @@ Explanation of the fields of the payment screen:
 
 .. demo:action:: account.action_account_payments
 	
-	Try paying a supplier bill with a check
+	Try paying a vendor invoice with a check
 
 .. _PrintChecks:
 
@@ -119,11 +81,11 @@ the payment. This will mark the payment as **Reconciled**.
 Pay anything with a check
 =========================
 
-You can register a payment that is not related to a supplier bill. To do
+You can register a payment that is not related to a vendor invoice. To do
 so, use the top menu :menuselection:`Purchases --> Payments`. Register your
 payment and select a payment method by check.
 
-If you pay a specific supplier bill, put the reference of the bill in
+If you pay a specific vendor invoice, put the reference of the invoice in
 the **Memo** field.
 
 .. image:: ./media/check04.png
