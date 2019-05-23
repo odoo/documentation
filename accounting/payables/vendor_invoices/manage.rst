@@ -1,8 +1,8 @@
 ===========================
-How to manage vendor Invoices?
+How to manage vendor invoices?
 ===========================
 
-The **Purchase** application allows you to manage your purchase orders,
+The **Purchasing** or **Project Management** applications allow you to manage your purchase orders,
 incoming products, and vendor invoices all seamlessly in one place.
 
 If you want to set up a vendor invoice control process, the first thing you

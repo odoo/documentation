@@ -1,6 +1,6 @@
-=============================
+======================================
 How to setup Twenty20 Accounting?
-=============================
+======================================
 
 The Twenty20 Accounting application has an implementation guide that you
 should follow to configure it. It's a step-by-step wizard with links to

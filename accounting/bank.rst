@@ -9,3 +9,4 @@ Bank & Cash
    bank/feeds
    bank/misc
    bank/reconciliation
+   bank/faq

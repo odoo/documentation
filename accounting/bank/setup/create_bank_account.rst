@@ -2,26 +2,12 @@
 How to setup a new bank account?
 ================================
 
-In Twenty20, you can manage multiple bank accounts. In this page, you will
+SUMMARY
+---------------------
+
+In Twenty20, you can manage multiple bank or credit card accounts. In this page, you will
 be guided in the creation, modification or deletion of a bank or
 credit card account.
-
-Edit a bank account
---------------------
-
-To ease the process, a bank account is already there. We suggest you to 
-edit it first before filling your own bank information. 
-
-Go to :menuselection:`Accounting --> Configuration --> Bank
-Accounts` and click on the **Bank** item. Edit it. 
-
-.. image:: media/image04.png
-   :align: center
-
-.. note::
-
-    Twenty20 will detect the bank account type (e.g. IBAN) to allow some payment
-    method like SEPA
 
 
 Create a bank account
@@ -58,6 +44,24 @@ support with this bank account.
     concerned
 
 The initial balance of a bank statement will be set to the closing balance of the previous one within the same journal automatically.
+
+Edit a bank account
+--------------------
+
+To ease the process, a bank account is already there. We suggest you to
+edit it first before filling your own bank information.
+
+Go to :menuselection:`Accounting --> Configuration --> Bank
+Accounts` and click on the **Bank** item. Edit it.
+
+.. image:: media/image04.png
+   :align: center
+
+.. note::
+
+    Twenty20 will detect the bank account type (e.g. IBAN) to allow some payment
+    method like SEPA
+
 
 Delete a bank account or credit card account
 --------------------------------------------
