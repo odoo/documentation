@@ -5,6 +5,6 @@ Internal Notes, Tips & tricks
 .. toctree::
    :titlesonly:
 
-   internal/database/tips
+   internal/overview
    internal/kubernetes/tips
    internal/development/tips

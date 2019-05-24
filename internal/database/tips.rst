@@ -1,6 +1,6 @@
-========
-Overview
-========
+========================
+Database Tips & Tricks
+========================
 
 .. toctree::
    :titlesonly:

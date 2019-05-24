@@ -1,6 +1,6 @@
-========
-Overview
-========
+========================
+Kubernetes Tips & Tricks
+========================
 
 .. toctree::
    :titlesonly:
