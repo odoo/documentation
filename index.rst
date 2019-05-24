@@ -1,6 +1,6 @@
-=======================
+===============================
 Twenty20 User Documentation
-=======================
+===============================
 
 .. rst-class:: index-tree
 
@@ -9,5 +9,6 @@ Twenty20 User Documentation
 
     Index <self>
     applications
+    internal
 ..    practical
 ..   business
