@@ -1,5 +1,5 @@
 ================================
-Internal Notes, Tips & tricks
+Internal
 ================================
 
 .. toctree::

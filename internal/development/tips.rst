@@ -1,5 +1,5 @@
 ========================
-Development Tips & Tricks
+Development
 ========================
 
 .. toctree::

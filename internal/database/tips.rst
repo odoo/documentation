@@ -1,5 +1,5 @@
 ========================
-Database Tips & Tricks
+Database
 ========================
 
 .. toctree::

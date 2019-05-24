@@ -1,5 +1,5 @@
 ========================
-Kubernetes Tips & Tricks
+Kubernetes
 ========================
 
 .. toctree::
