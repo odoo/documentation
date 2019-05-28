@@ -146,4 +146,3 @@ Both parties agree that any controversy or claim between the parties hereto rela
 ------------------------------------------------
 In case any one or more of the provisions of this Agreement or any application thereof shall be invalid, illegal or unenforceable in any respect, the validity, legality and enforceability of the remaining provisions of this Agreement and any application thereof shall be in no way thereby affected or impaired. Customer and Hindsight undertake to replace any invalid, illegal or unenforceable provision of this Agreement by a valid provision having the same effects and objectives.
 
-By signing this document, Customer acknowledges that he has read and accepts all the terms specified on this Agreement and its related documents.

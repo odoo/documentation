@@ -14,16 +14,20 @@ The duration of the Agreement (hereafter the “Term”) shall be minimally one 
 
 2. Definitions
 ================================================
-*2.1 SOFTWARE*
+2.1 SOFTWARE
+--------------------------------------------------
 Any Twenty20 product, application, or tool that is provided and accessed as a part of this subscription service.
 
 2.2 USER
+--------------------------------------------------
 Any active user account with access to the Software in create and/or edit mode. Deactivated user accounts and accounts used by external people (or systems) who only have limited access to the Software through the portal facilities (known as "Portal Users" or “Collaboration Users”) are not counted as Users
 
 2.3 BUG
+--------------------------------------------------
 A Bug is considered any failure of the Software that results in a complete stop, error traceback, or security breach, and is not directly caused by a defective installation or configuration. Non-compliance with specifications or requirements will be considered as Bugs at the discretion of Hindsight (typically, when the Software does not produce the results or performance it was designed to produce, or when a country-specific feature does not meet legal accounting requirements anymore).
 
 2.4 CONFIDENTIAL INFORMATION
+--------------------------------------------------
 "Confidential Information" means all information designated as such by either party in writing together with all other information which relates to the business, affairs, products, developments, trade secrets, know-how, personnel, customers and suppliers of either party, or information which may reasonably be regarded as the confidential information of the disclosing party.
 
 3. Access to Software
@@ -69,7 +73,7 @@ The standard charges for the Software Online Subscription and support services a
 WHEN DURING THE TERM, THE CUSTOMER HAS MORE USERS OR APPLICATIONS THAN SPECIFIED AT THE TIME OF SIGNATURE OF THIS AGREEMENT, THE CUSTOMER AGREES TO PAY AN EXTRA FEE EQUIVALENT TO THE APPLICABLE LIST PRICE (AT THE BEGINNING OF THE TERM) FOR THE ADDITIONAL USERS AND APPLICATIONS, FOR THE REMAINDER OF THE TERM. 
 5.2 RENEWAL CHARGES
 ------------------------------
-Upon renewal as covered in section 1 Term of the Agreement, the software subscription charges will not increase more than 10% of the previous signed contract amount, unless otherwise specified in writing and agreed by both parties.
+Upon renewal as covered in section 1 Term of the Agreement, the software subscription charges will not increase more than 15% of the previous signed contract amount, unless otherwise specified in writing and agreed by both parties.
 
 5.3 CHARGES FOR CUSTOMIZATIONS AND/OR CUSTOMIZATION UPGRADES
 ------------------------------
@@ -92,8 +96,7 @@ Customer shall be included in our customer referral program that can reduce your
 
 6.4 CONTRACT RENEWAL
 ------------------------------
-If no other agreement is in place, the Contract will automatically renew for a one (1) year period, and will automatically renew each year unless thirty (30) days prior written notice is provided.  If the current retail price of the Software has changed the subscription price will increase no more than 10% of the previous signed contract amount. Any new modules that are desired at the time of renewal and not included on this contract will be in addition to the Agreement and will be billed at the time of the Contract renewal.
-
+If no other agreement is in place, the Contract will automatically renew for a one (1) year period, and will automatically renew each year unless thirty (30) days prior written notice is provided.  If the current retail price of the Software has changed the subscription price will increase no more than 15% of the previous signed contract amount. Any new modules that are desired at the time of renewal and not included on this contract will be in addition to the Agreement and will be billed at the time of the Contract renewal.
 
 6.5 CHARGES AND OTHER FINANCIAL PROVISIONS
 ------------------------------
@@ -142,6 +145,4 @@ Both parties agree that any controversy or claim between the parties hereto rela
 7.2 SEVERABILITY
 ------------------------------
 In case any one or more of the provisions of this Agreement or any application thereof shall be invalid, illegal or unenforceable in any respect, the validity, legality and enforceability of the remaining provisions of this Agreement and any application thereof shall be in no way thereby affected or impaired. Customer and Hindsight undertake to replace any invalid, illegal or unenforceable provision of this Agreement by a valid provision having the same effects and objectives.
-
-By signing this document, Customer acknowledges that he has read and accepts all the terms specified on this Agreement and its related documents.
 
