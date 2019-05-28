@@ -18,7 +18,7 @@ and check *External Email Servers*
 Then, go through the following steps.
 
 .. note::
-    Office 365 email servers don't allow easiliy to send external emails
+    Office 365 email servers don't allow easily to send external emails
     from hosts like Odoo. 
     Refer to the `Office 365 documentation`_
     to make it working.
