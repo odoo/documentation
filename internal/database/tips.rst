@@ -14,6 +14,7 @@ Access postgress database on a specific customer deployment
 3. **psql**
 
 4. list all databases... **'\\l**
+5.
 
 
 SQl Scripts
