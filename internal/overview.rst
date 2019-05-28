@@ -1,10 +1,7 @@
-================================
-Tips and Tricks
-================================
 
 .. toctree::
    :titlesonly:
 
    database/tips
-   development/tips
-   kubernetes/tips
+   agreements/std_agreement
+   agreements/beta_agreement
