@@ -2,9 +2,10 @@
 Beta Customer Terms & Conditions
 ========================
 
+Introduction
+=======================
 
-
-By subscribing to Twenty20 Construction Cloud (the "Services") provided by Hindsight Technologies LLC and its affiliates (collectively, "Hindsight") in relation with all versions of Twenty20 Construction Cloud (the "Software"),  Almas (the "Customer") are agreeing to be bound by the following terms and conditions (the “Agreement”).
+By subscribing to Twenty20 Construction Cloud (the "Services") provided by Hindsight Technologies LLC and its affiliates (collectively, "Hindsight") in relation with all versions of Twenty20 Construction Cloud (the "Software"),  ____________ (the "Customer") are agreeing to be bound by the following terms and conditions (the “Agreement”).
 
 
 1. Term of the Agreement
@@ -33,7 +34,7 @@ It is forbidden to publish, distribute, sublicense, or sell copies of the Softwa
 
 4. Services
 ================================================
-4.1BUG FIXING SERVICE
+4.1 BUG FIXING SERVICE
 ------------------------------
 For the duration of this Agreement, Hindsight commits to making all reasonable efforts to remedy any Bug of the Software submitted by the Customer through the appropriate channel (typically, Hindsight service desk, email address, or website form), and to start handling such Customer submissions within 2 business days. 
 
