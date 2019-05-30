@@ -1,26 +1,4 @@
 
-
-
-   accounting
-   document_mgmt
-   project_mgmt
-..   crm
-..   sales
-..   website
-..   ecommerce
-..   discuss
-   purchase
-   inventory
-..   manufacturing
-..   point_of_sale
-..   project
-   expense/expense
-..   general
-..   expenses
-..   recruitment
-
-:banner: banners/sign.jpg
-
 ====================
 Applications
 ====================
@@ -33,7 +11,7 @@ Applications
     legal/others
 
 ACCOUNTING
-========
+================
 
 - :ref:`licenses`
 
