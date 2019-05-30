@@ -10,5 +10,5 @@ Twenty20 User Documentation
     Index <self>
     applications
     internal
-..    practical
-..    business
+    practical
+    business
