@@ -6,9 +6,9 @@ Applications
 .. toctree::
     :hidden:
 
-    legal/licenses
-    legal/terms
-    legal/others
+    accounting/overview
+    project_mgmt/overview
+    doc_mgmt/overview
 
 ACCOUNTING
 ================
