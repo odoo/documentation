@@ -7,6 +7,7 @@ Applications
 
    accounting
    document_mgmt
+   project_mgmt
 ..   crm
 ..   sales
 ..   website
