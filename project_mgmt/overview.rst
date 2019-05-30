@@ -1,6 +1,6 @@
-========================================
-Overview of Project Managment
-========================================
+========
+PROJECT MANAGEMENT
+========
 
 .. toctree::
    :titlesonly:
