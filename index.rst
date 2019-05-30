@@ -8,7 +8,7 @@ Twenty20 User Documentation
     :titlesonly:
 
     Index <self>
+    practical
     applications
     internal
-    practical
     business
