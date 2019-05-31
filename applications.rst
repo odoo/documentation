@@ -1,3 +1,4 @@
+:banner: banners/sign.jpg
 
 ====================
 Applications

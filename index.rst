@@ -1,5 +1,5 @@
 ===============================
-Twenty20 User Documentation
+Twenty20 Documentation
 ===============================
 
 .. rst-class:: index-tree
@@ -11,4 +11,5 @@ Twenty20 User Documentation
     practical
     applications
     internal
+    legal
 ..    business
