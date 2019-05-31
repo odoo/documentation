@@ -1,3 +1,5 @@
+:banner: banners/sign.jpg
+
 ===============================
 Twenty20 Documentation
 ===============================
@@ -8,8 +10,8 @@ Twenty20 Documentation
     :titlesonly:
 
     Index <self>
-    practical
     applications
+    practical
     internal
     legal
 ..    business
