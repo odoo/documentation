@@ -5,8 +5,6 @@ ACCOUNTING
 .. toctree::
    :titlesonly:
 
-    overview/main_concepts
-    payables
-    receivables
-    bank
-    others
+   overview/main_concepts
+   overview/getting_started
+   overview/process_overview
