@@ -4,8 +4,10 @@
 Applications
 ====================
 
+.. rst-class:: index-tree
+
 .. toctree::
-    :hidden:
+    :titlesonly:
 
     accounting/overview
     project_mgmt/overview
