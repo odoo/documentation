@@ -1,5 +1,5 @@
 ========================================
-Overview of Document Managment
+DOCUMENT MANAGEMENT
 ========================================
 
 .. toctree::
