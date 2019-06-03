@@ -1,6 +1,10 @@
+.. _licenses:
+
 ========================
 Beta Customer Terms & Conditions
 ========================
+
+.. _odoo_community_license:
 
 Introduction
 =======================

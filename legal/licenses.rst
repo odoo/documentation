@@ -5,4 +5,8 @@ Licenses
 ========
 
 .. toctree::
-    licenses/licenses
+
+    licenses/std_agreement
+    licenses/beta_agreement
+
+..    licenses/licenses
