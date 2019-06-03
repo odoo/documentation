@@ -1,5 +1,5 @@
 ========
-ACCOUNTING
+ACCOUNTING OVERVIEW
 ========
 
 .. toctree::
