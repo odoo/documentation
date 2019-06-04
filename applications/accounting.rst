@@ -6,7 +6,7 @@ ACCOUNTING
 
 .. toctree::
 
-    licenses/std_agreement
-    licenses/beta_agreement
+    accounting/payables
+    accoutning/receivables
 
 ..    licenses/licenses
