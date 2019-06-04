@@ -1,5 +1,5 @@
 ========
-Overview
+Training & Certification Management
 ========
 
 .. toctree::

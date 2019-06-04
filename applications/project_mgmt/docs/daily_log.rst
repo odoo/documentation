@@ -1,5 +1,5 @@
 ================
-Accounts Payable
+Daily Logs
 ================
 
 .. toctree::

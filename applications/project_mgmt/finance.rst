@@ -1,5 +1,5 @@
 ================
-Accounts Payable
+Project Finances
 ================
 
 .. toctree::

@@ -1,5 +1,5 @@
 ========
-Overview
+Leave & Vacation Management
 ========
 
 .. toctree::

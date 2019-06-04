@@ -6,7 +6,8 @@ ACCOUNTING
 
 .. toctree::
 
+    accounting/overview
     accounting/payables
-    accoutning/receivables
+    accounting/receivables
 
 ..    licenses/licenses

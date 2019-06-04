@@ -1,5 +1,5 @@
 ========
-Overview
+Time & Attendance
 ========
 
 .. toctree::

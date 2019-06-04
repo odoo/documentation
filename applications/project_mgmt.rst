@@ -9,3 +9,4 @@ PROJECT MANAGEMENT
     project_mgmt/overview
     project_mgmt/finance
     project_mgmt/docs
+    project_mgmt/portal

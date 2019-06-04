@@ -6,5 +6,10 @@ HUMAN RESOURCES
 
 .. toctree::
 
-    others/privacy
-    others/cla
+    hr/overview
+    hr/employees
+    hr/time
+    hr/leaves
+    hr/expense
+    hr/skills
+    hr/training

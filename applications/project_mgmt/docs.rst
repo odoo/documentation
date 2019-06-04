@@ -1,12 +1,14 @@
 ================
-Accounts Payable
+Collaborative Documents
 ================
 
 .. toctree::
    :titlesonly:
 
-   payables/vendor_invoices
-   payables/pay
-   payables/faq
-   payables/misc
+    docs/rfi
+    docs/submittal
+    docs/daily_log
+    docs/drawing
+    docs/specs
+    docs/submittal
 

@@ -1,5 +1,5 @@
 ========
-Overview
+Skills Management
 ========
 
 .. toctree::
