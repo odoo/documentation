@@ -15,46 +15,24 @@ APPLICATIONS
 Accounting
 ========
 
-- :ref:`licenses`
+
+- :ref:`payables`
+- :ref:`receivables`
+- :ref:`bank`
+- :ref:`accounting`
+- :ref:`reports`
+- :ref:`other`
 
 Project Management
 ====================
 
-.. |nbsp| raw:: html
-
-    &nbsp;
-
-.. |download_enterprise| image:: _static/banners/pdf-icon.png
-      :alt: Download Twenty20 Enterprise Agreement
-      :target: odoo_enterprise_agreement_v5.pdf
-
-.. |download_enterprise_fr| image:: _static/banners/pdf-icon.png
-      :alt: Download Twenty20 Enterprise Agreement (FR)
-      :target: odoo_enterprise_agreement_v5_fr.pdf
-
-.. |download_terms_of_sale| image:: _static/banners/pdf-icon.png
-    :alt: Download Twenty20 Terms of Sale
-    :target: terms_of_sale_v1.pdf
-
-.. |download_terms_of_sale_fr| image:: _static/banners/pdf-icon.png
-    :alt: Download Twenty20 Terms of Sale (FR)
-    :target: terms_of_sale_v1_fr.pdf
-
-.. |download_partnership| image:: _static/banners/pdf-icon.png
-      :alt: Download Twenty20 Partnership Agreement
-      :target: odoo_partnership_agreement_v5.pdf
-
-- :ref:`enterprise_agreement` |nbsp| |nbsp| |download_enterprise|
-
-- :ref:`enterprise_agreement_fr` |nbsp| |nbsp| |download_enterprise_fr|
-
-- :ref:`terms_of_sale` |nbsp| |nbsp| |download_terms_of_sale|
-- :ref:`terms_of_sale_fr` |nbsp| |nbsp| |download_terms_of_sale_fr|
-
-- :ref:`online_terms_of_sale`
-
-.. - :ref:`partnership_agreement` |nbsp| |nbsp| |download_partnership|
-
+- :ref:`rfi`
+- :ref:`submittal`
+- :ref:`daily_log`
+- :ref:`meeting`
+- :ref:`drawing`
+- :ref:`spec`
+- :ref:`other`
 
 
 Estimating
