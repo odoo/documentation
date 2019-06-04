@@ -4,7 +4,7 @@ How to motivate and reward my salespeople?
 
 Challenging your employees to reach specific targets with goals and
 rewards is an excellent way to reinforce good habits and improve your
-salespeople productivity. The **Gamification** app of Odoo gives you simple
+salespeople productivity. The **Gamification** app of Twenty20 gives you simple
 and creative ways to motivate and evaluate your employees with real-time
 recognition and badges inspired by game mechanics.
 

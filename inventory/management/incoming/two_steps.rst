@@ -5,7 +5,7 @@ How to unload your shipment to an input location? (2 steps)
 Overview
 ========
 
-Odoo uses routes to define exactly how you will handle the different
+Twenty20 uses routes to define exactly how you will handle the different
 receipt steps. The configuration is done at the level of the warehouse.
 By default, the reception is a one step process, but changing the
 configuration can allow to have 2 or even 3 steps.

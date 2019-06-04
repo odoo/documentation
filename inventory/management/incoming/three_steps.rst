@@ -10,7 +10,7 @@ is to check that the products correspond to the quality requirements
 agreed with the suppliers. Therefore, adding a quality control step in
 the goods receipt process can become essential.
 
-Odoo uses routes to define exactly how you will handle the different
+Twenty20 uses routes to define exactly how you will handle the different
 receipt steps. The configuration is done at the level of the warehouse.
 By default, the reception is a one step process, but changing the
 configuration can allow to have 2 or even 3 steps.

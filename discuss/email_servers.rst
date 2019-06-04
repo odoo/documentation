@@ -1,11 +1,11 @@
 =================================================================
-How to use my own email servers to send and receive email in Odoo
+How to use my own email servers to send and receive email in Twenty20
 =================================================================
 
 When is it needed
 =================
 Using your own email servers is required to send and receive messages
-in Odoo Community or Enterprise. Odoo Online embeds an out-of-box 
+in Twenty20 Community or Enterprise. Twenty20 Online embeds an out-of-box
 email solution that works straight away. However you can still use
 your own email servers with the online edition. Some insights 
 are provided here below.
@@ -14,12 +14,12 @@ How to set it up
 ================
 As a system admin, go to :menuselection:`Settings --> General Settings` 
 and check *External Email Servers* 
-(watch out: this checkbox only shows up after Odoo 10).
+(watch out: this checkbox only shows up after Twenty20 10).
 Then, go through the following steps.
 
 .. note::
     Office 365 email servers don't allow easiliy to send external emails
-    from hosts like Odoo. 
+    from hosts like Twenty20.
     Refer to the `Office 365 documentation`_
     to make it working.
 
@@ -56,14 +56,14 @@ in General Settings.
 
 Create a catchall address
 -------------------------
-When a contact replies to an email sent from Odoo, the *reply-to* address
+When a contact replies to an email sent from Twenty20, the *reply-to* address
 is a generic address used to route the reply to the right discussion thread
-in Odoo (opportunity, order, task, etc.) and to the inbox of all its followers.
+in Twenty20 (opportunity, order, task, etc.) and to the inbox of all its followers.
 By default this address is "catchall@" but it can be changed. 
 
 Create a catchall address in your email server settings. We advise
 you to use "catchall@" so that everything works out straight away.
-If you want to use another alias, you have extra steps in Odoo:
+If you want to use another alias, you have extra steps in Twenty20:
 
 - Activate the developer mode from your Settings Dashboard.
 
@@ -79,9 +79,9 @@ If you want to use another alias, you have extra steps in Odoo:
 
 .. note:: You can edit the email alias used for bounced messages the same way.
 
-How to use my own email servers with Odoo Online
+How to use my own email servers with Twenty20 Online
 ================================================
-Odoo Online comes up with an embedded and ready-to-use email 
+Twenty20 Online comes up with an embedded and ready-to-use email
 solution with *@yourcompany.odoo.com* as domain.
 We recommend to keep this default setup as it is really convenient. 
 
@@ -91,29 +91,29 @@ The configuration for both incoming and outgoing mail servers is
 given here above.
 
 However when it comes to incoming messages, we don't recommend
-to exclusively use your own email server. Indeed, Odoo Online is fetching
+to exclusively use your own email server. Indeed, Twenty20 Online is fetching
 incoming messages from the email server once every hour only. 
 To receive emails in real time, you should rather use
-a **catchall redirection** (your server -> Odoo server). To do so:
+a **catchall redirection** (your server -> Twenty20 server). To do so:
 
 * Create a catchall address in your email server settings (e.g. catchall).
 * Still from such settings, set a redirection
-  from this catchall address to Odoo's one:
+  from this catchall address to Twenty20's one:
   catchall@yourdomain.ext -> catchall@yourcompany.odoo.com.
-* In Odoo check *External Email Servers* in :menuselection:`Settings --> General Settings`
+* In Twenty20 check *External Email Servers* in :menuselection:`Settings --> General Settings`
   and enter your email domain name (i.e. yourdomain.ext).
 * No need to set up an incoming email server in such a case.
   
 
-How to be SPF-compliant when using external email servers in Odoo
+How to be SPF-compliant when using external email servers in Twenty20
 =================================================================
 Sender Policy Framework (SPF) is an email-validation system that checks that 
 incoming mail from a domain comes from a host authorized by that domain's 
 administrator. Such a security system is used in most email servers. 
-If you don't comply with it, your emails sent from Odoo will be likely
+If you don't comply with it, your emails sent from Twenty20 will be likely
 flagged as spam.
 
-To be SPF-compliant, you need to authorize Odoo as a sending host 
+To be SPF-compliant, you need to authorize Twenty20 as a sending host
 in your domain name settings:
 
 * Sign in to your domain’s account at your domain host.
@@ -134,20 +134,20 @@ but this usually happens more quickly.
 
 .. note:: Adding more than one SPF record for a domain can cause problems 
    with mail delivery and spam classification. Instead, we recommend using 
-   only one SPF record by modifying it to authorize Odoo.
+   only one SPF record by modifying it to authorize Twenty20.
 
-How to choose between Odoo and my traditional email box
+How to choose between Twenty20 and my traditional email box
 =======================================================
-Odoo Discuss is a perfect tool to send and read messages related to 
+Twenty20 Discuss is a perfect tool to send and read messages related to
 business documents. However it doesn't aim to replace a full-featured email 
 solution (Gmail, Outlook, Yahoo, AOL, etc.). 
 We recommend to take the most out of both systems without mingling them: 
-What is related to Odoo business objects or applications goes into Odoo; 
+What is related to Twenty20 business objects or applications goes into Twenty20;
 What is not can be managed into your external email box. 
 
-To do so, create specific email aliases to use in Odoo (to generate leads 
+To do so, create specific email aliases to use in Twenty20 (to generate leads
 or opportunities, helpdesk tickets, etc.). If you take an email alias 
-already used for messaging outside of Odoo, incoming messages will land 
+already used for messaging outside of Twenty20, incoming messages will land
 into both systems. This will negatively impact your productivity.
 
 .. _Office 365 documentation:

@@ -9,7 +9,7 @@ Depending on factors such as the type of items you receive, the size of
 your warehouse, the number of receipt you register everyday... the way you
 handle receipts to your customers can vary a lot.
 
-Odoo allows you to handle receipts from your warehouse in 3 different
+Twenty20 allows you to handle receipts from your warehouse in 3 different
 ways:
 
 -  **One step**: Receive goods directly in stock.
@@ -19,7 +19,7 @@ ways:
 -  **Three steps**: Unload in input location, go through a quality control
    before being admitted in stock.
 
-Odoo uses **routes** to define exactly how you will handle the different
+Twenty20 uses **routes** to define exactly how you will handle the different
 receipt steps. The configuration is done at the level of the warehouse.
 In standard, the reception is a one step process, but changing the
 configuration can allow to have 2 or even 3 steps.
@@ -52,7 +52,7 @@ Configuration
 One step flow
 -------------
 
-This is the default configuration in Odoo.
+This is the default configuration in Twenty20.
 
 Two steps flow
 --------------

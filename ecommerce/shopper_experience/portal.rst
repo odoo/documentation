@@ -4,7 +4,7 @@ How customers can access their customer account
 
 It has never been so easy for your customers to access their 
 customer account. Forget endless signup forms, 
-Odoo makes it as easy as ABC. 
+Twenty20 makes it as easy as ABC.
 They are suggested to sign up (name, email, password) when the order 
 is placed, and not before.
 Indeed, nothing is more annoying than going through a signup process

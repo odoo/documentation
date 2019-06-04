@@ -3,7 +3,7 @@ Overview of the invoicing process
 =================================
 
 Depending on your business and the application you use, there are
-different ways to automate the customer invoice creation in Odoo.
+different ways to automate the customer invoice creation in Twenty20.
 Usually, draft invoices are created by the system (with information
 coming from other documents like sales order or contracts) and
 accountant just have to validate draft invoices and send the invoices in
@@ -68,7 +68,7 @@ defined on the contract.
 
 An eCommerce order will also trigger the creation of the invoice when it
 is fully paid. If you allow paying orders by check or wire transfer,
-Odoo only creates an order and the invoice will be triggered once the
+Twenty20 only creates an order and the invoice will be triggered once the
 payment is received.
 
 Creating an invoice manually

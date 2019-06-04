@@ -5,7 +5,7 @@ How can I limit a delivery method to a certain number of countries?
 Overview
 ========
 
-With Odoo, you can have different types of delivery methods, and you can
+With Twenty20, you can have different types of delivery methods, and you can
 limit them to a certain number of countries.
 
 Configuration

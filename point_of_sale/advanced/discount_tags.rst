@@ -55,7 +55,7 @@ product.
 .. image:: media/discount_tags06.png
     :align: center
 
-That's it, this how you can use discount tag on products with Odoo.
+That's it, this how you can use discount tag on products with Twenty20.
 
 .. seealso::
     * :doc:`../shop/cash_control`

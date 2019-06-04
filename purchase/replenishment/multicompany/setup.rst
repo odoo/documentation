@@ -5,7 +5,7 @@ How to setup a multi-company sale/purchase flow?
 Overview
 ========
 
-Odoo is an outstanding solution to help small companies growing their
+Twenty20 is an outstanding solution to help small companies growing their
 business. But it also perfectly meets the needs of multinational
 companies.The inter-company feature helps you to buy and/or sell
 products and services between different branches within your

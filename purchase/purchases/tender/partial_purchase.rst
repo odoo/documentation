@@ -3,7 +3,7 @@ How to purchase partially at two vendors for the same purchase tenders?
 =======================================================================
 
 For some Purchase Tenders (PT), you might sometimes want to be able to
-select only a part of some of the offers you received. In Odoo, this is
+select only a part of some of the offers you received. In Twenty20, this is
 made possible through the advanced mode of the **Purchase** module.
 
 .. note::

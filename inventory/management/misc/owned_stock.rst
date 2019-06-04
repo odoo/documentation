@@ -15,7 +15,7 @@ they are not sure to be able to sell, consignee stock will allow them to
 propose an item to check its market without having to pay for it in the
 first place.
 
-Odoo has the ability to manage consignee stocks through the advanced
+Twenty20 has the ability to manage consignee stocks through the advanced
 settings.
 
 Configuration

@@ -5,7 +5,7 @@ How to use routes?
 Overview
 ========
 
-A route is a collection of procurement rules and push rules. Odoo can
+A route is a collection of procurement rules and push rules. Twenty20 can
 manage advanced push/pull routes configuration, for example:
 
 -   Manage product manufacturing chains
@@ -31,7 +31,7 @@ application, :menuselection:`Configuration --> Settings` and tick
 Pre-configured routes
 =====================
 
-Odoo has some pre-configured routes for your warehouses.
+Twenty20 has some pre-configured routes for your warehouses.
 
 In the Inventory application, go to 
 :menuselection:`Configuration --> Warehouses`.

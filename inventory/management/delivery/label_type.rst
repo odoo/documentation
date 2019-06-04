@@ -5,7 +5,7 @@ How can I change the label type?
 Overview
 ========
 
-With Odoo, you can choose among different types of labels for your
+With Twenty20, you can choose among different types of labels for your
 delivery orders. Follow the steps below and give an appropriate label
 type to your delivery.
 

@@ -76,7 +76,7 @@ Using variants has the following impacts:
 When should you avoid using variants?
 -------------------------------------
 
-Using variants may add a level of complexity on the way you use Odoo.
+Using variants may add a level of complexity on the way you use Twenty20.
 You should consider using variants only if you need it to reduce the
 complexity of managing lots of products that are similars.
 

@@ -3,11 +3,11 @@ How is the scheduled delivery date computed?
 ============================================
 
 Scheduled dates are computed in order to be able to plan deliveries,
-receptions and so on. Depending on the habits of your company Odoo
-automatically generates scheduled dates via the scheduler. The Odoo
+receptions and so on. Depending on the habits of your company Twenty20
+automatically generates scheduled dates via the scheduler. The Twenty20
 scheduler computes everything per line, whether it's a manufacturing
 order, a delivery order, a sale order, etc. The dates that are computed
-are dependent on the different leads times configured in Odoo.
+are dependent on the different leads times configured in Twenty20.
 
 Configuring lead times
 ======================
@@ -125,7 +125,7 @@ At sale order level:
 
 -  **Requested date**:
 
-Odoo offers the possibility to select a requested date by the client by
+Twenty20 offers the possibility to select a requested date by the client by
 indicating the date in the other information tab of the sales order.
 If this date is earlier than the theoreticaly computed date odoo will
 automatically display a warning.

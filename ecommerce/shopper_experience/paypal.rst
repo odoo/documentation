@@ -35,7 +35,7 @@ Set up your Paypal account
 
 * Turn on **Payment Data Transfer**. 
   When saving, an **Identity Token** is generated.
-  You will be later requested to enter it in Odoo.
+  You will be later requested to enter it in Twenty20.
 
   .. image:: media/paypal_data_transfer.png
     :align: center
@@ -48,7 +48,7 @@ Set up your Paypal account
   .. image:: media/paypal_ipn_setup.png
     :align: center
 
-* Now you must change the encoding format of the payment request sent by Odoo
+* Now you must change the encoding format of the payment request sent by Twenty20
   to Paypal. To do so, get back to *My selling tools* and click 
   **PayPal button language encoding** in *More Selling Tools* section.
 
@@ -70,7 +70,7 @@ Set up your Paypal account
      :align: center
 
 
-Set up Odoo
+Set up Twenty20
 ===========
 * Open Paypal setup form in :menuselection:`Website or Sales or Accounting 
   --> Settings --> Payment Acquirers+`. Enter both your **Email ID** 
@@ -82,7 +82,7 @@ Set up Odoo
   They are both provided in your Paypal profile,
   under :menuselection:`My business info`.
 
-* Enter your **Identity Token** in Odoo (from *Auto Return* option).
+* Enter your **Identity Token** in Twenty20 (from *Auto Return* option).
   To do so, open the *Settings* and activate the **Developer Mode**.
 
   .. image:: media/paypal_debug.png
@@ -114,7 +114,7 @@ Transaction fees
 You can charge an extra to the customer to cover the transaction fees Paypal charges you.
 Once redirected to Paypal, your customer sees an extra applied to the order amount. 
 
-To activate this, go to the *Configuration* tab of Paypal config form in Odoo
+To activate this, go to the *Configuration* tab of Paypal config form in Twenty20
 and check *Add Extra Fees*. Default fees for US can be seen here below.
 
 .. image:: media/paypal_fees.png
@@ -139,7 +139,7 @@ You can test the entire payment flow thanks to Paypal Sandbox accounts.
 * Log in to `Paypal Sandbox <https://www.sandbox.paypal.com>`__ 
   with the merchant account and follow the same configuration instructions.
 
-* Enter your sandbox credentials in Odoo and make sure Paypal is 
+* Enter your sandbox credentials in Twenty20 and make sure Paypal is
   still set on *Test* mode.
   Also, make sure the confirmation mode of Paypal is not
   *Authorize & capture the amount, confirm the SO and auto-validate 
@@ -147,7 +147,7 @@ You can test the entire payment flow thanks to Paypal Sandbox accounts.
   Otherwise a confirmed invoice will be automatically generated when
   the transaction is completed.
 
-* Run a test transaction from Odoo using the sandbox personal account.
+* Run a test transaction from Twenty20 using the sandbox personal account.
 
 .. seealso::
 

@@ -4,7 +4,7 @@ How to follow a discussion thread and define what I want to hear about
 
 How to follow a discussion thread
 =================================
-You can keep track of virtually any business object in Odoo
+You can keep track of virtually any business object in Twenty20
 (an opportunity, a quotation, a task, etc.), by **following** it. 
 
 .. image:: media/discuss07.png

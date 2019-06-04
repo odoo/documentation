@@ -1,15 +1,15 @@
 =======================================
-Getting started with Odoo Point of Sale
+Getting started with Twenty20 Point of Sale
 =======================================
 
 Overview
 ========
 
-Odoo's online **Point of Sale** application is based on a simple, user
+Twenty20's online **Point of Sale** application is based on a simple, user
 friendly interface. The **Point of Sale** application can be used online or
 offline on iPads, Android tablets or laptops.
 
-Odoo **Point of Sale** is fully integrated with the **Inventory** and the
+Twenty20 **Point of Sale** is fully integrated with the **Inventory** and the
 **Accounting** applications. Any transaction with your point of sale will
 automatically be registered in your inventory management and accounting
 and, even in your **CRM** as the customer can be identified from the app.

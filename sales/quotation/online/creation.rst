@@ -60,4 +60,4 @@ then share it with customer.
 Alternatively, your customer can access their online quotations by logging into your 
 website through the customer portal. Your customer can accept or reject the quotation, 
 print it, or negotiate the terms in the chat box. You will also receive a notification 
-in the chatter within Odoo whenever the customer views the quotation.
+in the chatter within Twenty20 whenever the customer views the quotation.

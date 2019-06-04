@@ -11,10 +11,10 @@ info. Lots will help identify a number of pieces having for instance a
 production fault. It can be useful for a batch production of clothes or
 food.
 
-Odoo has the capacity to manage lots ensuring compliance with the
+Twenty20 has the capacity to manage lots ensuring compliance with the
 traceability requirements imposed by the majority of industries.
 
-The double-entry management in Odoo enables you to run very advanced
+The double-entry management in Twenty20 enables you to run very advanced
 traceability.
 
 Setting up

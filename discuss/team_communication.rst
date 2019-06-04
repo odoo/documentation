@@ -76,7 +76,7 @@ Using filters to navigate within Discuss
 ========================================
 
 The topbar search provides access to the same comprehensive search
-function present in the rest of Odoo. You can apply multiple **filter
+function present in the rest of Twenty20. You can apply multiple **filter
 criteria** and **save filters** for later use. The search function
 accepts wildcards by using the underscore character "\ **\_**\ " to
 represent a **single character wildcard.**

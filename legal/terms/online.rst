@@ -1,14 +1,14 @@
 .. _online_terms_of_sale:
 
 ==============================
-Odoo Online Terms & Conditions
+Twenty20 Online Terms & Conditions
 ==============================
 
 .. note:: Version 1 - Last revision: July 12, 2017.
 
-By subscribing to the Odoo Online services (the "Services") provided by Odoo SA and its
-affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
-Odoo Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
+By subscribing to the Twenty20 Online services (the "Services") provided by Twenty20 SA and its
+affiliates (collectively, "Twenty20 SA") in relation with Twenty20 Enterprise Edition or
+Twenty20 Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
 following terms and conditions (the "Agreement").
 
 .. _term:
@@ -38,7 +38,7 @@ Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
     traceback or security breach, and is not directly caused by a defective installation or
     configuration. Non-compliance with specifications or requirements will be considered as Bugs at
-    the discretion of Odoo SA (typically, when the Software does not produce the results or
+    the discretion of Twenty20 SA (typically, when the Software does not produce the results or
     performance it was designed to produce, or when a country-specific feature does not meet legal
     accounting requirements anymore).
 
@@ -47,24 +47,24 @@ Bug
 3 Access to source code
 =======================
 
-For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive,
+For the duration of this Agreement, Twenty20 SA gives the Customer a non-exclusive,
 non-transferable license to use (execute, modify, execute after modification)
-the Odoo software, under the terms set forth in :ref:`appendix_a`.
+the Twenty20 software, under the terms set forth in :ref:`appendix_a`.
 
 The Customer agrees to take all necessary measures to guarantee the unmodified
 execution of the part of the Software that verifies the validity of the usage
 and collects statistics for that purpose, including but not limited to the
 running of an instance, the applications installed and the number of Users.
 
-Odoo SA commits not to disclose individual or named figures to third parties without the consent
+Twenty20 SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
-Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
+Policy, as published on `Twenty20 SA's website <https://www.odoo.com>`_.
 
 Upon expiration or termination of this Agreement, this license is revoked immediately and the
 Customer agrees to stop using the software.
 
 Should the Customer breach the terms of this section, the Customer agrees to
-pay Odoo SA an extra fee equal to 300% of the applicable list price for the
+pay Twenty20 SA an extra fee equal to 300% of the applicable list price for the
 actual number of Users for one year.
 
 
@@ -76,8 +76,8 @@ actual number of Users for one year.
 4.1 Bug Fixing Service
 ----------------------
 
-For the duration of this Agreement, Odoo SA commits to making all reasonable efforts to remedy any
-Bug of the Software submitted by the Customer through the appropriate channel (typically, Odoo SA's
+For the duration of this Agreement, Twenty20 SA commits to making all reasonable efforts to remedy any
+Bug of the Software submitted by the Customer through the appropriate channel (typically, Twenty20 SA's
 service desk email address or website form), and to start handling such Customer submissions
 within 2 business days.
 
@@ -85,7 +85,7 @@ The Customer understands that Bugs caused by a modification or extension that is
 official Software will not be covered by this service.
 
 Both parties acknowledge that as specified in the license of the Software and in the :ref:`liability`
-section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software.
+section of this Agreement, Twenty20 SA cannot be held liable for Bugs in the Software.
 
 4.2 Support Service
 -------------------
@@ -93,11 +93,11 @@ section of this Agreement, Odoo SA cannot be held liable for Bugs in the Softwar
 Support Scope
 +++++++++++++
 
-For the duration of this Agreement, Odoo SA offer a support service, with an
+For the duration of this Agreement, Twenty20 SA offer a support service, with an
 unlimited number of tickets for bugs and functional questions: how to use and
-configure Odoo for your specific needs.
+configure Twenty20 for your specific needs.
 
-This support service does not include support to customize Odoo, develop new
+This support service does not include support to customize Twenty20, develop new
 modules, or perform specific actions on your database on your behalf. (e.g.
 recording data, or configuring the system for you) Those services can be
 offered in extra through our Success Pack service offer.
@@ -118,13 +118,13 @@ it's based on our best efforts. But 95% of the tickets are qualified within 2
 open days, and 90% of the critical bugs (when a user can not work on the system
 anymore) are processed within 2 hours.
 
-The Odoo portal allows you to track you support tickets. 
+The Twenty20 portal allows you to track you support tickets.
 
 
 4.3 Service Availability
 ------------------------
 
-Customer databases are hosted in the closest Odoo data center (EMEA: France,
+Customer databases are hosted in the closest Twenty20 data center (EMEA: France,
 Americas: Canada, APAC: Hong Kong or Taiwan). Each customer instance is replicated
 in real-time on a hot-standby system located in the same data center.
 
@@ -173,7 +173,7 @@ Password Security
 Customer passwords are protected with industry-standard PBKDF2+SHA512
 encryption (salted + stretched for thousands of rounds).
 
-Odoo staff does not have access to your password, and cannot retrieve it for
+Twenty20 staff does not have access to your password, and cannot retrieve it for
 you, the only option if you lose it is to reset it Login credentials are always
 transmitted securely over HTTPS.
 
@@ -186,12 +186,12 @@ with full SHA-2 certificates chains. Our servers are kept under a strict
 security watch, and always patched against the latest SSL vulnerabilities,
 enjoying Grade A SSL ratings at all times.
 
-All Odoo online servers are running hardened Linux distributions with
+All Twenty20 online servers are running hardened Linux distributions with
 up-to-date security patches. Installations are ad-hoc and minimal to limit the
 number of services that could contain vulnerabilities (no PHP/MySQL stack for
 example)
 
-Only a few trusted Odoo engineers have clearance to remotely manage the servers
+Only a few trusted Twenty20 engineers have clearance to remotely manage the servers
 - and access is only possible using SSH key pairs (password authentication
 disallowed)
 
@@ -202,7 +202,7 @@ and US data centers, and coming soon in Asia.
 Staff Access
 ++++++++++++
 
-Odoo helpdesk staff may sign into your account to access settings related to
+Twenty20 helpdesk staff may sign into your account to access settings related to
 your support issue. For this they use their own special staff credentials, not
 your password (which they have no way to know).
 
@@ -216,15 +216,15 @@ only access files and settings needed to diagnose and resolve your issue
 Physical Security
 +++++++++++++++++
 
-The Odoo Online servers are hosted in several data centers worldwide, that must
+The Twenty20 Online servers are hosted in several data centers worldwide, that must
 all satisfy with our minimum physical security criterions:
-- Physical access to the data center area where Odoo servers are located is restricted to data center technicians only
+- Physical access to the data center area where Twenty20 servers are located is restricted to data center technicians only
 - Security cameras are monitoring the data center locations
 
 Credit Cards Safety
 +++++++++++++++++++
 
-When you sign up for a paid Odoo Online subscription, we do not store your
+When you sign up for a paid Twenty20 Online subscription, we do not store your
 credit card information. Your credit card information is only transmitted
 securely between you and our PCI-Compliant payment acquirers: Ingenico and
 Paypal (even for recurring subscriptions)
@@ -232,12 +232,12 @@ Paypal (even for recurring subscriptions)
 Software Security
 +++++++++++++++++
 
-The codebase of Odoo is laregely distributed and, thus, is continuously under
-examination by Odoo users and contributors worldwide. Community bug reports are
+The codebase of Twenty20 is laregely distributed and, thus, is continuously under
+examination by Twenty20 users and contributors worldwide. Community bug reports are
 therefore one important source of feedback regarding security. We encourage
 developers to audit the code and report security issues.
 
-Odoo SA commits to sending a "Security Advisory" to the Customer for any
+Twenty20 SA commits to sending a "Security Advisory" to the Customer for any
 security Bug that are discovered in the Software, at least 2 weeks before
 making the Security Advisory public, unless the Bug has already been disclosed
 publicly by a third party.
@@ -251,24 +251,24 @@ Advisory must be treated are Confidential Information as described in
 :ref:`confidentiality` during the embargo period prior to the public
 disclosure.
 
-The Odoo R&D processes have code review steps that include security aspects,
-for new and contributed pieces of code. Odoo is designed in a way that prevents
+The Twenty20 R&D processes have code review steps that include security aspects,
+for new and contributed pieces of code. Twenty20 is designed in a way that prevents
 introducing most common security vulnerabilities:
 
 - SQL injections are prevented by the use of a higher-level API that does not require manual SQL queries
 - XSS attacks are prevented by the use of a high-level templating system that automatically escapes injected data 
 - The framework prevents RPC access to private methods, making it harder to introduce exploitable vulnerabilities
-- See also the OWASP Top Vulnerabilities section to see how Odoo is designed from the ground up to prevent such vulnerabilities from appearing.
+- See also the OWASP Top Vulnerabilities section to see how Twenty20 is designed from the ground up to prevent such vulnerabilities from appearing.
 
-Odoo is regularly audited by independent companies that are hired by our
-customers and prospects to perform audits and penetration tests. The Odoo
+Twenty20 is regularly audited by independent companies that are hired by our
+customers and prospects to perform audits and penetration tests. The Twenty20
 Security Team receives the results and takes appropriate corrective measures
 whenever it is necessary. We can't however disclose any of those results,
 because they are confidential and belong to the commissioners.
 
-Odoo also has a very active community of independent security researchers, who
+Twenty20 also has a very active community of independent security researchers, who
 continuously monitor the source code and work with us to improve and harden the
-security of Odoo. Our Security Program is described on our Responsible
+security of Twenty20. Our Security Program is described on our Responsible
 Disclosure page: https://www.odoo.com/page/responsible-disclosure.
 
 .. _upgrade:
@@ -326,7 +326,7 @@ database.
 5.1 Standard charges
 --------------------
 
-The standard charges for the Odoo Online subscription, the Bug Fixing Service, Security Advisories
+The standard charges for the Twenty20 Online subscription, the Bug Fixing Service, Security Advisories
 Service and the Upgrade Service are based on the number of Users and applications used by
 the Customer, and specified in writing at the signature of the Agreement.
 
@@ -354,12 +354,12 @@ list price, the per-User charges will increase by up to 7% per year.
 .. FIXME: should we really fix the price in the contract?
 
 The additional charge for the Upgrade, Support and Bugfix Service for custom
-modules developed by Odoo SA is a recurring price depending on the number of
+modules developed by Twenty20 SA is a recurring price depending on the number of
 hours done to develop these custom features:
 - 4 EUR / month per hour of development in European contries
 - 5 USD / month per hour of development in other countries
 
-In case the modules are not developed by Odoo SA, Odoo SA reserves the right to
+In case the modules are not developed by Twenty20 SA, Twenty20 SA reserves the right to
 reject an upgrade request for third-party modules under the above conditions if
 the quality of the source code of those modules is too low, or if these modules
 constitute an interface with third-party software or systems. The upgrade of
@@ -374,7 +374,7 @@ such modules will subject to a separate offer, outside of this Agreement.
 
 All fees and charges are exclusive of all applicable federal, provincial, state, local or other
 governmental taxes, fees or charges (collectively, "Taxes"). The Customer is responsible for paying
-all Taxes associated with purchases made by the Customer under this Agreement, except when Odoo SA
+all Taxes associated with purchases made by the Customer under this Agreement, except when Twenty20 SA
 is legally obliged to pay or collect Taxes for which the Customer is responsible.
 
 
@@ -390,7 +390,7 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 
 The Customer agrees to:
 
-- pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
+- pay Twenty20 SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
 - appoint 1 dedicated Customer contact person for the entire duration of the Agreement;
 
@@ -450,7 +450,7 @@ In the event that either Party fails to fulfill any of its obligations arising h
 breach has not been remedied within 30 calendar days from the written notice of such
 breach, this Agreement may be terminated immediately by the non-breaching Party.
 
-Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
+Further, Twenty20 SA may terminate the Agreement immediately in the event the Customer fails to pay
 the applicable fees for the Services within the due date specified on the corresponding invoice.
 
 Surviving Provisions:
@@ -471,17 +471,17 @@ Surviving Provisions:
 
 .. industry-standard warranties regarding our Services while Agreement in effect
 
-For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
+For the duration of this Agreement, Twenty20 SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
 - the Customer’s computing systems are in good operational order and the Software is installed in a
   suitable operating environment;
-- the Customer provides adequate troubleshooting information and access so that Odoo SA can
+- the Customer provides adequate troubleshooting information and access so that Twenty20 SA can
   identify, reproduce and address problems;
-- all amounts due to Odoo SA have been paid.
+- all amounts due to Twenty20 SA have been paid.
 
-The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
-is for Odoo SA to resume the execution of the Services at no additional charge.
+The Customer's sole and exclusive remedy and Twenty20 SA's only obligation for any breach of this warranty
+is for Twenty20 SA to resume the execution of the Services at no additional charge.
 
 .. _disclaimers:
 
@@ -495,7 +495,7 @@ implied, statutory or otherwise, and each party specifically disclaims all impli
 including any implied warranty of merchantability, fitness for a particular purpose or
 non-infringement, to the maximum extent permitted by applicable law.
 
-Odoo SA does not warrant that the Software complies with any local or international law or regulations.
+Twenty20 SA does not warrant that the Software complies with any local or international law or regulations.
 
 .. _liability:
 
@@ -559,12 +559,12 @@ objectives.
 
 .. _appendix_a:
 
-9 Appendix A: Odoo Enterprise Edition License
+9 Appendix A: Twenty20 Enterprise Edition License
 =============================================
 
 .. only:: latex
 
-    Odoo Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
+    Twenty20 Enterprise Edition is licensed under the Twenty20 Enterprise Edition License v1.0,
     defined as follows:
 
     .. include:: ../licenses/enterprise_license.txt
@@ -595,7 +595,7 @@ objectives.
     Email:
     Phone:
 
-    Technical contact information (can be an Odoo partner):
+    Technical contact information (can be an Twenty20 partner):
     -------------------------------------------------------
     Company name:
     Contact name:

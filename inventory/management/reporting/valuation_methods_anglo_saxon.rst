@@ -110,7 +110,7 @@ Average Price
 
   From an accounting point of view, this method is mainly justified in 
   case of huge purchase price variations and is quite unusual due to its 
-  operational complexity. Your actually need a software like Odoo to 
+  operational complexity. Your actually need a software like Twenty20 to
   easily keep this cost up-to-date.
 
   This method is dedicated to advanced users. It requires well established 
@@ -167,7 +167,7 @@ FIFO
   This cost price is used to value any product not received from a 
   purchase order (e.g. inventory adjustments).
 
-  FIFO is advised if you manage all your workflow into Odoo (Sales, 
+  FIFO is advised if you manage all your workflow into Twenty20 (Sales,
   Purchases, Inventory). It suits any kind of users.
 
 LIFO (not accepted in IFRS)
@@ -222,13 +222,13 @@ LIFO (not accepted in IFRS)
 
   LIFO is not permitted outside the United States.
 
-Odoo allows any method. The default one is **Standard Price**. 
+Twenty20 allows any method. The default one is **Standard Price**.
 To change it, check **Use a 'Fixed', 'Real' or 'Average' price 
 costing method** in Purchase settings. Then set the costing 
 method from products' internal categories. Categories show up 
 in the Inventory tab of the product form.
 
-Whatever the method is, Odoo provides a full inventory valuation
+Whatever the method is, Twenty20 provides a full inventory valuation
 in :menuselection:`Inventory --> Reports --> Inventory Valuation` 
 (i.e. current quantity in stock * cost price).
 
@@ -240,9 +240,9 @@ outgoing shipments have no direct impact in the accounting.
 At the end of the month or year, the accountant posts one 
 journal entry representing the value of the physical inventory. 
 
-This is the default configuration in Odoo and it works 
+This is the default configuration in Twenty20 and it works
 out-of-the-box. Check following operations and find out how 
-Odoo is managing the accounting postings.
+Twenty20 is managing the accounting postings.
 
 .. rst-class:: alternatives doc-aside
 
@@ -293,7 +293,7 @@ Manufacturing Orders
    <hr style="float: none; visibility: hidden; margin: 0;">
 
 At the end of the month/year, your company does a physical inventory 
-or just relies on the inventory in Odoo to value the stock into your books.
+or just relies on the inventory in Twenty20 to value the stock into your books.
 
 Then you need to break down the purchase balance into both the inventory and 
 the cost of goods sold using the following formula:

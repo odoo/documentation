@@ -3,7 +3,7 @@ How to cancel a purchase order?
 ================================
 
 Due to misunderstandings, human errors or change of plans, it is
-sometimes necessary to cancel purchase orders sent to suppliers. Odoo
+sometimes necessary to cancel purchase orders sent to suppliers. Twenty20
 allows you to do it, even if some or even all of the ordered goods
 already arrived in your warehouse.
 
@@ -38,7 +38,7 @@ yet, you can simply cancel the PO it by clicking the cancel button.
 .. image:: media/cancel05.png
     :align: center
 
-Odoo will automatically cancel the outstanding shipments related to this
+Twenty20 will automatically cancel the outstanding shipments related to this
 PO and the status bar will switch from **Purchase order** to **Cancelled**.
 
 .. image:: media/cancel03.png
@@ -65,7 +65,7 @@ order line**, manually change the received quantities under the Column
 .. note::
     To learn more, see :doc:`reception`
 
-When clicking on **Validate**, Odoo will warn you that you have processed
+When clicking on **Validate**, Twenty20 will warn you that you have processed
 less products than the initial demand (2 instead of 3 in our case) and
 will ask you the permission to create a backorder.
 

@@ -17,7 +17,7 @@ How to customize the file
 .. image:: media/dragdown.gif
     :align: center
 
-* When you add a new column, Odoo might not be able to map it automatically if its 
+* When you add a new column, Twenty20 might not be able to map it automatically if its
   label doesn't fit any field of the system. 
   If so, find the corresponding field using the search.
 
@@ -31,7 +31,7 @@ Why an “ID” column
 ==================
 
 The **ID** (External ID) is an unique identifier for the line item.
-Feel free to use the one of your previous software to ease the transition to Odoo.
+Feel free to use the one of your previous software to ease the transition to Twenty20.
 
 Setting an ID is not mandatory when importing but it helps in many cases:
 
@@ -41,7 +41,7 @@ Setting an ID is not mandatory when importing but it helps in many cases:
 How to import relation fields
 =============================
 
-An Odoo object is always related to many other objects (e.g. a product is linked
+An Twenty20 object is always related to many other objects (e.g. a product is linked
 to product categories, attributes, vendors, etc.). To import those relations you need to
 import the records of the related object first from their own list menu.
 

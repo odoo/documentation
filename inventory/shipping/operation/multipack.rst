@@ -5,7 +5,7 @@ How to manage multiple packs for the same delivery order?
 Overview
 ========
 
-By default, Odoo considers that your delivery is composed of one
+By default, Twenty20 considers that your delivery is composed of one
 package. But you can easily ship your deliveries with more than one
 package. It is fully integrated with the third-party shippers.
 

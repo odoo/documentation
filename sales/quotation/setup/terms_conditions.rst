@@ -10,7 +10,7 @@ relationship between customers and sellers. Every seller has to declare
 all the formal information which include products and company policy so
 customer can read all those terms before committing to anything.
 
-Thanks to Odoo you can easily include your default terms and conditions
+Thanks to Twenty20 you can easily include your default terms and conditions
 on every quotation, sales order and invoice.
 
 Let's take the following example: Your company sells water bottles to

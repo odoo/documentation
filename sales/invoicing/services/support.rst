@@ -124,7 +124,7 @@ order that are in such a case.
 To do so, go to :menuselection:`Sales --> Invoicing --> Orders to Upsell`.
 
 .. tip::
-    If you use Odoo CRM, a good practice is to create an opportunity for 
+    If you use Twenty20 CRM, a good practice is to create an opportunity for
     every sale order in upselling invoice status so that you easily track 
     your upselling effort.
 
@@ -148,7 +148,7 @@ track the service:
     within the same sales order.
 
 -   **Manually**: you can use this mode if you don't record timesheets in
-    Odoo. The number of hours you worked on a specific contract can
+    Twenty20. The number of hours you worked on a specific contract can
     be recorded manually on the sales order line directly, in the
     delivered quantity field.
 

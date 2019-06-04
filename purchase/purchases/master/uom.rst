@@ -5,7 +5,7 @@ How to purchase in different unit of measures than sales?
 In day-to-day business, it may happen that your supplier uses a
 different unit of measure than you do in sales. This can cause confusion
 between sales and purchase representative and even make you lose a lot
-of time converting measures. Luckily in Odoo, you can handle different
+of time converting measures. Luckily in Twenty20, you can handle different
 units of measures between sales and purchase very easily.
 
 Let's take the following examples:
@@ -48,14 +48,14 @@ Specify sales and purchase unit of measures
 Standard units of measures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Let's take the classic units of measures existing in Odoo as first
+Let's take the classic units of measures existing in Twenty20 as first
 example. Please remember that differents units of measures between sales
 and purchase necessarily need to share the same category. Categories
 include: **Unit**, **weight**, **working time**, **volume**, etc.
 
 .. tip::
     It is possible to create your own category and unit of measure if 
-    it is not standard in Odoo (see next chapter).
+    it is not standard in Twenty20 (see next chapter).
 
 Let's assume we buy water from our vendors in **Gallons** and sell to our
 customers in **Liters**.

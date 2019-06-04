@@ -2,7 +2,7 @@
 How to manage orders paid with payment acquirers
 ===================================================
 
-Odoo confirms orders automatically as soon as the payment is authorized 
+Twenty20 confirms orders automatically as soon as the payment is authorized
 by a payment acquirer. This triggers the delivery.
 If you invoice based on ordered quantities,
 you are also requested to invoice the order.
@@ -21,8 +21,8 @@ At anytime, the salesman can check the transaction status from the order.
   need to authorize it from the acquirer interface.
 
 * *Authorized*: the payment has been authorized but not yet captured.
-  In Odoo, the order is already confirmed. Once the delivery done, you
-  can capture the amount from the acquirer interface (or from Odoo if you use
+  In Twenty20, the order is already confirmed. Once the delivery done, you
+  can capture the amount from the acquirer interface (or from Twenty20 if you use
   Authorize.net).
 
 * *Done*: the payment is authorized and captured. The order has been confirmed.
@@ -32,10 +32,10 @@ At anytime, the salesman can check the transaction status from the order.
   The order is still in draft.
 
 * *Cancelled*: when the customer cancels the payment in the payment acquirer form.
-  They are taken back to Odoo in order to modify the order.
+  They are taken back to Twenty20 in order to modify the order.
 
 .. note:: Specific messages are provided to your customers for every
-   payment status, when they are redirected to Odoo after the transaction.
+   payment status, when they are redirected to Twenty20 after the transaction.
    To edit such messages, go to the *Messages* tab of the payment
    method.
 
@@ -63,7 +63,7 @@ orders straight on.
 Capture the payment after the delivery
 ======================================
 With this mode, the order is confirmed but the amount is kept on hold. 
-Once the delivery processed, you can capture the payment from Odoo.
+Once the delivery processed, you can capture the payment from Twenty20.
 This mode is only available with Authorize.net.
 
 .. image:: media/payment_capture_mode.png
@@ -76,4 +76,4 @@ Then click *Capture Transaction*.
     :align: center
 
 With other payment acquirers, you can manage the capture in
-their own interfaces, not from Odoo.
+their own interfaces, not from Twenty20.

@@ -9,7 +9,7 @@ The use of suggested products is a marketing strategy that attempts
 to increase the amount a customer spends once they begin the buying 
 process. For instance, a customer purchasing a cell phone could be 
 shown accessories like a protective case, a screen cover, and headset. 
-In Odoo, a customer can be presented with additional products that are 
+In Twenty20, a customer can be presented with additional products that are
 relevant to their chosen purchase in one of several locations.
 
 Configuration

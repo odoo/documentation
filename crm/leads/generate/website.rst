@@ -20,24 +20,24 @@ This is how a typical online lead generation process work :
    address, his phone number)
 
 -  The visitor submits the form and automatically generates a lead into
-   Odoo CRM
+   Twenty20 CRM
 
 .. tip::
 
 	Your calls-to-action, landing pages and forms are the key pieces of the lead
-	generation process. With Odoo Website, you can easily create and optimize
+	generation process. With Twenty20 Website, you can easily create and optimize
 	those critical elements without having to code or to use third-party
 	applications. Learn more `here <https://www.odoo.com/page/website-builder>`__.
 
-In Odoo, the Website and CRM modules are fully integrated, meaning that
+In Twenty20, the Website and CRM modules are fully integrated, meaning that
 you can easily generate leads from various ways through your website.
 However, even if you are hosting your website on another CMS, it is
-still possible to fill Odoo CRM with leads generated from your website.
+still possible to fill Twenty20 CRM with leads generated from your website.
 
 Activate the lead stage
 =======================
 
-By default, the lead stage is not activated in Odoo CRM. Therefore, new
+By default, the lead stage is not activated in Twenty20 CRM. Therefore, new
 leads automatically become opportunities. You can easily activate the
 option of adding the lead step. If you want to import your contacts as
 leads rather than opportunities, from the Sales module go to
@@ -51,20 +51,20 @@ Note that even without activating this step, the information that
 follows is still applicable - the lead generated will land in the
 opportunities dashboard.
 
-From an Odoo Website
+From an Twenty20 Website
 ====================
 
 Let's assume that you want to get as much information as possible about
 your website visitors. But how could you make sure that every person who
 wants to know more about your company's products and services is
-actually leaving his information somewhere? Thanks to Odoo's integration
+actually leaving his information somewhere? Thanks to Twenty20's integration
 between its CRM and Website modules, you can easily automate your lead
 acquisition process thanks to the **contact form** and the **form builder**
 modules
 
 .. note::
 
-	another great way to generate leads from your Odoo Website is by collecting
+	another great way to generate leads from your Twenty20 Website is by collecting
 	your visitors email addresses thanks to the Newsletter or Newsletter Popup
 	CTAs. These snippets will create new contacts in your Email Marketing's
 	mailing list. Learn more `here <https://www.odoo.com/page/email-marketing>`__.
@@ -82,7 +82,7 @@ You will be automatically redirected to the web interface.
 .. tip::
 
 	A tutorial popup will appear on your screen if this is the first time you
-	use Odoo Website. It will help you get started with the tool and you'll be
+	use Twenty20 Website. It will help you get started with the tool and you'll be
 	able to use it in minutes. Therefore, we strongly recommend you to use it.
 
 Create a lead by using the Contact Form module
@@ -102,7 +102,7 @@ otherwise you will not see the module appearing) and click on **Install**.
    :align: center
 
 Once the module is installed, the below contact form will be integrated
-to your "Contact us" page. This form is linked to Odoo CRM, meaning that
+to your "Contact us" page. This form is linked to Twenty20 CRM, meaning that
 all data entered through the form will be captured by the CRM and will
 create a new lead.
 
@@ -140,7 +140,7 @@ the available snippets. The Form Builder snippet lays under the
 As soon as you have dropped the snippet where you want the form to
 appear on your page, a **Form Parameters** window will pop up. From the
 **Action** drop-down list, select **Create a lead** to automatically
-create a lead in Odoo CRM. On the **Thank You** field, select the URL of
+create a lead in Twenty20 CRM. On the **Thank You** field, select the URL of
 the page you want to redirect your visitor after the form being
 submitted (if you don't add any URL, the message "The form has been
 sent successfully" will confirm the submission).
@@ -159,13 +159,13 @@ options will appear:
   Parameters and change the configuration
 
 - **Add a model field**: allows you to add a field already existing in
-  Odoo CRM from a drop-down list. For example, if you select the
+  Twenty20 CRM from a drop-down list. For example, if you select the
   Field *Country*, the value entered by the lead will appear under
   the *Country* field in the CRM - even if you change the name of
   the field on the form.
 
 - **Add a custom field**: allows you to add extra fields that don't exist
-  by default in Odoo CRM. The values entered will be added under
+  by default in Twenty20 CRM. The values entered will be added under
   "Notes" within the CRM. You can create any field type : checkbox,
   radio button, text, decimal number, etc.
 
@@ -174,7 +174,7 @@ Any submitted form will create a lead in the backend.
 From another CMS 
 =================
 
-If you use Odoo CRM but not Odoo Website, you can still automate your
+If you use Twenty20 CRM but not Twenty20 Website, you can still automate your
 online lead generation process using email gateways by editing the
 "Submit" button of any form and replacing the hyperlink by a mailto
 corresponding to your email alias (learn how to create your sales alias
@@ -184,7 +184,7 @@ For example if the alias of your company is
 **salesEMEA@mycompany.com**, add
 ``mailto:salesEMEA@mycompany.com``
 into the regular hyperlink code (CTRL+K) to generate a lead into the
-related sales team in Odoo CRM.
+related sales team in Twenty20 CRM.
 
 .. image:: ./media/website09.png
    :align: center

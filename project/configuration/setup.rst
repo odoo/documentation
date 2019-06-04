@@ -5,7 +5,7 @@ How to set up & configure a project?
 Overview
 ========
 
-Odoo Project allows you to manage a project together with your whole
+Twenty20 Project allows you to manage a project together with your whole
 team, and to communicate with any member for each project and task.
 
 It works with projects containing tasks following customizable stages. 

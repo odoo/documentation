@@ -6,7 +6,7 @@ Introduction to forecast
 ========================
 
 Scheduling and forecasting tasks is another way to manage projects. In
-Odoo, the Forecast option gives you access to the Gantt chart.
+Twenty20, the Forecast option gives you access to the Gantt chart.
 
 So far, you've been working with the Kanban view, which shows you the
 progress of a project and its related tasks.
@@ -102,7 +102,7 @@ projects.
 By users : people management
 ----------------------------
 
-This option displays the Gantt chart with the people assigned. Odoo's
+This option displays the Gantt chart with the people assigned. Twenty20's
 Gantt chart shows you who's involved; it gives you the big picture of
 the project. It's very useful to allocate your resources effectively.
 
@@ -155,7 +155,7 @@ different elements at once. Also, you immediately know what has to be
 done next. This method helps you to better understand the relations
 between the tasks.
 
-The dynamic view of the Gantt in Odoo allows you to:
+The dynamic view of the Gantt in Twenty20 allows you to:
 
 -   change the time and date of a forecast by clicking and sliding the
     tasks in the future or in the past
@@ -171,7 +171,7 @@ By projects: project management
 
 The Gantt Chart is the perfect view of a project to better understand
 the interactions between the tasks. You can avoid overlapping tasks or
-starting one too early if another one isn't finished. Odoo Gantt chart
+starting one too early if another one isn't finished. Twenty20 Gantt chart
 is clear and helps you to coordinate tasks efficiently.
 
 This option displays the Gantt chart by showing the projects on the
@@ -190,7 +190,7 @@ Users** section)
 Gantt view advantages
 ~~~~~~~~~~~~~~~~~~~~~
 
-The dynamic view of the Gantt in Odoo allows you to:
+The dynamic view of the Gantt in Twenty20 allows you to:
 
 -   change the time and date of a forecast by clicking and sliding the
     tasks in the future or in the past

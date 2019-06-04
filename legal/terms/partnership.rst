@@ -2,7 +2,7 @@
 .. _partnership_agreement:
 
 ============================================
-Odoo Partnership Agreement - Under Revision!
+Twenty20 Partnership Agreement - Under Revision!
 ============================================
 
 .. note:: Version 5_work-in-progress - Last revision: March 02, 2016.
@@ -21,15 +21,15 @@ at _____________________
 1 Purpose
 =========
 The purpose of this agreement is to set forth the conditions under which ODOO provides services to
-PARTNER, and access to Odoo Enterprise Edition software, and PARTNER complies with the
+PARTNER, and access to Twenty20 Enterprise Edition software, and PARTNER complies with the
 obligations set out hereafter.
 
 ODOO hereby appoints PARTNER, and PARTNER hereby accepts appointment, to be a non-exclusive partner
-promoting and selling the Odoo Enterprise Subscriptions to clients.
-PARTNER commits to do its best effort to sell Odoo Enterprise Subscriptions to its clients.
-To support that, PARTNER will market in priority the ‘Odoo Enterprise Edition’ version to prospects
+promoting and selling the Twenty20 Enterprise Subscriptions to clients.
+PARTNER commits to do its best effort to sell Twenty20 Enterprise Subscriptions to its clients.
+To support that, PARTNER will market in priority the ‘Twenty20 Enterprise Edition’ version to prospects
 and clients. PARTNER still has the option to sell services on other versions of the software,
-like "Odoo Community Edition", should it be needed.
+like "Twenty20 Community Edition", should it be needed.
 
 2 Term of the Agreement
 =======================
@@ -38,18 +38,18 @@ It is automatically renewed for an equal Term, unless either party provides a wr
 termination minimum 30 days before the end of the Term to the other party.
 
 
-3 Access to Odoo Enterprise Edition
+3 Access to Twenty20 Enterprise Edition
 ===================================
 
 3.1 Project platform access
 ---------------------------
-To help PARTNER promoting Odoo Enterprise, ODOO grants access to its Github code repository to PARTNER for all ‘Enterprise Edition’ modules, under the terms set forth in Exhibit A and the conditions restricted under  this agreement. 
+To help PARTNER promoting Twenty20 Enterprise, ODOO grants access to its Github code repository to PARTNER for all ‘Enterprise Edition’ modules, under the terms set forth in Exhibit A and the conditions restricted under  this agreement.
 This access will be granted as of the signature of this agreement and be revoked should the partnership contract be revoked. 
 
 3.2 Restrictions
 ----------------
-PARTNER commits to keep confidentiality of the source code of Odoo Enterprise edition modules licensed under restricted rights (labelled as ‘Enterprise Edition’) within its staff. The access to clients is governed by the Odoo Enterprise Contract (version 4.0 and above). PARTNER agrees to NOT redistribute this code to 3rd parties without the explicit agreement of ODOO.
-Notwithstanding the above, PARTNER commits to wholly preserve the integrity of the Odoo Enterprise edition code that is required to verify the validity of usage of Odoo Enterprise edition, collects statistics that are needed for that purpose and enforce the payment of the subscription.
+PARTNER commits to keep confidentiality of the source code of Twenty20 Enterprise edition modules licensed under restricted rights (labelled as ‘Enterprise Edition’) within its staff. The access to clients is governed by the Twenty20 Enterprise Contract (version 4.0 and above). PARTNER agrees to NOT redistribute this code to 3rd parties without the explicit agreement of ODOO.
+Notwithstanding the above, PARTNER commits to wholly preserve the integrity of the Twenty20 Enterprise edition code that is required to verify the validity of usage of Twenty20 Enterprise edition, collects statistics that are needed for that purpose and enforce the payment of the subscription.
 
 
 4 Partnership Services
@@ -58,18 +58,18 @@ Notwithstanding the above, PARTNER commits to wholly preserve the integrity of t
 4.1 Partnership levels
 ----------------------
 The ODOO partner program consists of three partnership levels; Ready, Silver and Gold with specific requirements and benefits for each level. 
-Partnership level granted to PARTNER depends on the annual new Odoo Enterprise revenues generated for ODOO. Renewals of existing contracts does not account for the partnership level, but the partner still get his commission on these contracts as stated in 5.2
+Partnership level granted to PARTNER depends on the annual new Twenty20 Enterprise revenues generated for ODOO. Renewals of existing contracts does not account for the partnership level, but the partner still get his commission on these contracts as stated in 5.2
 The table below summarizes the requirement for each partnership level.
 
 Ready
 Silver
 Gold
-Annual New Net Odoo Enterprise Revenues
+Annual New Net Twenty20 Enterprise Revenues
 1.000 €
 12.000 €
 25.000 €
 
-The level of partnerships will be reviewed quarterly by ODOO based on Odoo Enterprise contracts sold by partners, over the preceeding 12 months.
+The level of partnerships will be reviewed quarterly by ODOO based on Twenty20 Enterprise contracts sold by partners, over the preceeding 12 months.
 Partners may be upgraded automatically to a higher level once they reach the requirements for a higher level. Silver and Gold partners which are not complying with their partnerships requirements will be assigned to a lower level of partnership if they have not met their requirement at the end of the annual period.
 For new partners, the initial partner level is granted for one year.
 
@@ -86,7 +86,7 @@ Visibility on odoo.com
 Ready Partner
 Silver Partner
 Gold Partner
-Rights to use the Odoo trademark
+Rights to use the Twenty20 trademark
 Ready logo
 Silver logo
 Gold logo
@@ -104,7 +104,7 @@ Yes
 Yes
 Yes
 Software Benefits
-Access to Odoo Enterprise source code
+Access to Twenty20 Enterprise source code
 Yes
 Yes
 Yes
@@ -134,20 +134,20 @@ Yes
 4.3 Partner Recognition
 -----------------------
 ODOO will promote PARTNER as an official partner on its website (odoo.com) for agreed countries.
-ODOO grants to PARTNER, on a non-exclusive basis, the right to use and reproduce only the ODOO Partner’s logo, and the Odoo name in connection with this Agreement. 
+ODOO grants to PARTNER, on a non-exclusive basis, the right to use and reproduce only the ODOO Partner’s logo, and the Twenty20 name in connection with this Agreement.
 Each Party undertakes to respect all the rights of the other Party in all the items referred to in the previous paragraph and, more particularly, each Party shall refrain from causing any analogy or creating any confusion between their respective company in the mind of the general public, for any reason whatsoever and by any means whatsoever.
 
 4.4 Learning Benefits
 ---------------------
-In order to train PARTNER, ODOO will organize online training sessions once a week. Sessions are organized into discovery and advanced topics. A session is usually 2 hours and cover an application of the Odoo Enterprise software: sales and CRM, inventory management, project management, eCommerce, human resources, manufacturing, advanced customizations, etc.
+In order to train PARTNER, ODOO will organize online training sessions once a week. Sessions are organized into discovery and advanced topics. A session is usually 2 hours and cover an application of the Twenty20 Enterprise software: sales and CRM, inventory management, project management, eCommerce, human resources, manufacturing, advanced customizations, etc.
 PARTNER can attend these training sessions at no additional cost and commit to attend at least 20 sessions per year.
 ODOO will organize at least four sales training session per year of a duration of one week. Each sales training session is organized in one of the ODOO office. PARTNER can send any employee to these training session.
-Once a new version of Odoo Enterprise is released, ODOO must organize upgrade training session for partners.
+Once a new version of Twenty20 Enterprise is released, ODOO must organize upgrade training session for partners.
 
-4.5  Commission on Odoo Services
+4.5  Commission on Twenty20 Services
 --------------------------------
 For every ODOO services directly purchased by a customer through PARTNER, PARTNER shall receive retribution as follows
-For “ODOO Enterprise” contracts sold to CUSTOMER: ODOO will invoice directly the CUSTOMER based on final pricing agreed between ODOO, the PARTNER & the CUSTOMER. Then, PARTNER will invoice his commission to ODOO based on Odoo Enteprise price, net of possible rebates, and based on his current partnership level at the time of signature.
+For “ODOO Enterprise” contracts sold to CUSTOMER: ODOO will invoice directly the CUSTOMER based on final pricing agreed between ODOO, the PARTNER & the CUSTOMER. Then, PARTNER will invoice his commission to ODOO based on Twenty20 Enteprise price, net of possible rebates, and based on his current partnership level at the time of signature.
 For Other Services; Partner invoice directly the CLIENT and ODOO will invoice the PARTNER directly commission included. (as a discount)
 For “ODOO Enterprise” contracts; PARTNER get a commission as long as the PARTNER maintains a contractual relationship with the CUSTOMER.
 
@@ -187,9 +187,9 @@ PARTNER shall automatically pay a late payment interest at the rate equivalent t
 In the event that either Party fails to fulfil one or more of its obligations arising hereunder, and if such breach has not been remedied within thirty (30) calendar days from the first presentation of a letter, sent by the injured Party by registered letter with advice of receipt, giving notice of the breaches, this Agreement may be terminated immediately as of right at the request of the injured Party, without prejudice to any damages that may be claimed from the defaulting Party. 
 
 On expiry or termination of this Agreement, PARTNER:
-shall not use anymore the materials and/or the Odoo brand name or claim the existence of any partnership or link with ODOO,
+shall not use anymore the materials and/or the Twenty20 brand name or claim the existence of any partnership or link with ODOO,
 shall during any notice period prior to such termination comply with its obligations.
-shall not use Odoo Enterprise anymore, for development, test or production purpose
+shall not use Twenty20 Enterprise anymore, for development, test or production purpose
 
 8 Liability AND Indemnities
 ===========================
@@ -205,7 +205,7 @@ According to the terms of the Software license, ODOO will not be liable for any 
 =================================
 This Agreement will be governed by and construed in accordance with the laws of Belgium. All disputes arising in connection with the Agreement for which no amicable settlement can be found shall be finally settled by the Courts of Belgium in Nivelles.
 
-For Odoo SA,
+For Twenty20 SA,
 
 ________________________________________
 
@@ -216,7 +216,7 @@ For _____________,
 
 .. _appendix_p_a:
 
-10 Appendix A: Odoo Enterprise Edition License
+10 Appendix A: Twenty20 Enterprise Edition License
 ==============================================
 
 .. only:: latex

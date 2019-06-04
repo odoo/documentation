@@ -5,7 +5,7 @@ How to record time spent?
 Overview
 ========
 
-Odoo allows you to record the time spent per employee and per project,
+Twenty20 allows you to record the time spent per employee and per project,
 for simple reports as well as for direct invoicing to the customer.
 
 Configuration

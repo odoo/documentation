@@ -46,7 +46,7 @@ a new scrap location in
 Different ways to scrap product
 ===============================
 
-Odoo provides several ways to scrap products.
+Twenty20 provides several ways to scrap products.
 
 1) Scrap from Receipt (Initial Demand tab).
 -----------------------------------------------

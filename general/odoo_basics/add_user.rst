@@ -2,7 +2,7 @@
 How to add a user
 =================
 
-Odoo provides you with the option to add additional users at any given
+Twenty20 provides you with the option to add additional users at any given
 point.
 
 Add individual users
@@ -10,7 +10,7 @@ Add individual users
 
 From the Settings module, go to the submenu :menuselection:`Users --> Users` and click on
 **CREATE.** First add the name of your new user and the professional
-email address - the one he will use to log into Odoo instance - and a
+email address - the one he will use to log into Twenty20 instance - and a
 picture.
 
 .. image:: media/add_user01.png

@@ -6,11 +6,11 @@ The **Purchase** application allows you to manage your purchase orders,
 incoming products, and vendor bills all seamlessly in one place.
 
 If you want to set up a vendor bill control process, the first thing you
-need to do is to have purchase data in Odoo. Knowing what has been
+need to do is to have purchase data in Twenty20. Knowing what has been
 purchased and received is the first step towards understanding your
 purchase management processes.
 
-Here is the standard work flow in Odoo:
+Here is the standard work flow in Twenty20:
 
 1.  You begin with a **Request for Quotation (RFQ)** to send out to your
     vendor(s).
@@ -40,8 +40,8 @@ automatically install the **Inventory** and **Accounting** applications.
 Creating products
 -----------------
 
-Creating products in Odoo is essential for quick and efficient
-purchasing within Odoo. Simply navigate to the **Products** submenu under
+Creating products in Twenty20 is essential for quick and efficient
+purchasing within Twenty20. Simply navigate to the **Products** submenu under
 **Purchase**, and click **Create**.
 
 .. image:: media/bills03.png
@@ -131,7 +131,7 @@ The first thing you will need to do upon creating a **Vendor Bill** is to
 select the appropriate **Vendor** as this will also pull up any associated
 accounting or pricelist information. From there, you can choose to
 specify any one or multiple purchase orders to populate the vendor bill
-with. When you select a purchase order from the list, Odoo will pull any
+with. When you select a purchase order from the list, Twenty20 will pull any
 uninvoiced products associated to that purchase order and automatically
 populate that information below. If you are having a hard time finding
 the appropriate vendor bill, you may search through the list by
@@ -153,7 +153,7 @@ prices).
 
     2. Your vendor is sending you a partial bill or asking for a deposit.
 
-Every time you record a new vendor bill, Odoo will automatically
+Every time you record a new vendor bill, Twenty20 will automatically
 populate the product quantities based on what has been received from the
 vendor. If this value is showing a zero, this means that you have not
 yet received this product and simply serves as a reminder that the
@@ -168,7 +168,7 @@ What to do if your vendor bill does not match what you received
 ---------------------------------------------------------------
 
 If the bill you receive from the vendor has different quantities than
-what Odoo automatically populates as quantities, this could be due to
+what Twenty20 automatically populates as quantities, this could be due to
 several reasons:
 
 -   The vendor is incorrectly charging you for products and/or services
@@ -202,7 +202,7 @@ By default, services are managed based on ordered quantities, while
 stockables and consumables are managed based on received quantities.
 
 If you need to manage products based on ordered quantities over received
-quantities, you will need to enable **Debug Mode** from the **About Odoo**
+quantities, you will need to enable **Debug Mode** from the **About Twenty20**
 information. Once debug mode is activated, select the product(s) you
 wish to modify, and you should see a new field appear, labeled **Control
 Purchase Bills**.
@@ -221,7 +221,7 @@ Batch Billing
 -------------
 
 When creating a vendor bill and selecting the appropriate purchase
-order, you may continue to select additional purchase orders and Odoo
+order, you may continue to select additional purchase orders and Twenty20
 will add the additional line items from that purchase order. If you
 have not deleted the previous line items from the first purchase order
 the bill will be linked to all the appropriate purchase orders.

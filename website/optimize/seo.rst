@@ -1,8 +1,8 @@
 ============================================
-How to do Search Engine Optimisation in Odoo
+How to do Search Engine Optimisation in Twenty20
 ============================================
 
-How is SEO handled in Odoo?
+How is SEO handled in Twenty20?
 ===========================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
@@ -13,9 +13,9 @@ Some examples of SEO rules: your web pages should load faster, your page
 should have one and only one title ``<h1>``, your website should have a
 ``/sitemap.xml`` file, etc.
 
-The Odoo Website Builder is probably the most SEO-ready CMS out there.
-We consider SEO a top priority. To guarantee Odoo Website and Odoo
-eCommerce users have a great SEO, Odoo abstracts all the technical
+The Twenty20 Website Builder is probably the most SEO-ready CMS out there.
+We consider SEO a top priority. To guarantee Twenty20 Website and Twenty20
+eCommerce users have a great SEO, Twenty20 abstracts all the technical
 complexities of SEO and handles everything for you, in the best possible
 way.
 
@@ -37,8 +37,8 @@ sales <http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-bi
 .. image:: media/seo01.png
   :align: center
 
-Fortunately, Odoo does all the magic for you. Below, you will find the
-tricks Odoo uses to speed up your page loading time. You can compare how
+Fortunately, Twenty20 does all the magic for you. Below, you will find the
+tricks Twenty20 uses to speed up your page loading time. You can compare how
 your website ranks using these two tools:
 
 - `Google Page Speed <https://developers.google.com/speed/pagespeed/insights/>`__
@@ -59,10 +59,10 @@ cached (server side and browser side). The result:
 
 - this CSS file is optimized to be small
 
-**Pre-processed:** The CSS framework used by Odoo 9 is bootstrap 3.
-Although a theme might use another framework, most of `Odoo
+**Pre-processed:** The CSS framework used by Twenty20 9 is bootstrap 3.
+Although a theme might use another framework, most of `Twenty20
 themes <https://www.odoo.com/apps/themes>`__ extend and customize
-bootstrap directly. Since Odoo supports Less and Sass, so you can modify
+bootstrap directly. Since Twenty20 supports Less and Sass, so you can modify
 CSS rules, instead of overwriting them through extra CSS lines,
 resulting in a smaller file.
 
@@ -81,7 +81,7 @@ resulting in a smaller file.
  }                                                                             
 ================================= =============================================
 
-**Concatenated:** every module or library you might use in Odoo has its
+**Concatenated:** every module or library you might use in Twenty20 has its
 own set of CSS, Less or Sass files (eCommerce, blog, theme, etc.) Having
 several CSS files is great for the modularity, but not good for the
 performance because most browsers can only perform 6 requests in
@@ -97,17 +97,17 @@ a single .CSS file to send to the browser. So a visitor has **only one
 CSS is shared amongst all pages, when the visitor clicks on another
 page, the browser does not even have to load a new CSS file!
 
-The CSS sent by Odoo includes all CSS / Less / Sass of all pages /
+The CSS sent by Twenty20 includes all CSS / Less / Sass of all pages /
 modules. By doing this, additional page views from the same visitor will
 not have to load CSS files at all. But some modules might include huge
 CSS/Javascript resources that you do not want to prefetch at the first
-page because they are too big. In this case, Odoo splits this resource
+page because they are too big. In this case, Twenty20 splits this resource
 into a second bundle that is loaded only when the page using it is
 requested. An example of this is the backend that is only loaded when
 the visitor logs in and accesses the backend (/web).
 
 .. note:: 
-  If the CSS file is very big, Odoo will split it into two smaller
+  If the CSS file is very big, Twenty20 will split it into two smaller
   files to avoid the 4095 selectors limit per sheet of Internet Explorer
   8. But most themes fit below this limit.
 
@@ -142,7 +142,7 @@ Static resources: Javascript
 As with CSS resources, Javascript resources are also concatenated,
 minified, compressed and cached (server side and browser side).
 
-Odoo creates three Javascript bundles:
+Twenty20 creates three Javascript bundles:
 
 - One for all pages of the website (including code for parallax
   effects, form validation, …)
@@ -150,8 +150,8 @@ Odoo creates three Javascript bundles:
 - One for common Javascript code shared among frontend and backend
   (bootstrap)
 
-- One for backend specific Javascript code (Odoo Web Client interface
-  for your employees using Odoo)
+- One for backend specific Javascript code (Twenty20 Web Client interface
+  for your employees using Twenty20)
 
 Most visitors to your website will only need the first two bundles,
 resulting in a maximum of two Javascript files to load to render one
@@ -167,7 +167,7 @@ same visitor will not load any other Javascript resource.
 Images
 ------
 
-When you upload new images using the website builder, Odoo automatically
+When you upload new images using the website builder, Twenty20 automatically
 compresses them to reduce their sizes. (lossless compression for .PNG
 and .GIF and lossy compression for .JPG)
 
@@ -179,13 +179,13 @@ than performance.
   :align: center
 
 .. note::
-  Odoo compresses images when they are uploaded to your website, not
+  Twenty20 compresses images when they are uploaded to your website, not
   when requested by the visitor. Thus, it's possible that, if you use a
   third-party theme, it will provide images that are not compressed
-  efficiently. But all images used in Odoo official themes have been
+  efficiently. But all images used in Twenty20 official themes have been
   compressed by default.
 
-When you click on an image, Odoo shows you the Alt and title attributes
+When you click on an image, Twenty20 shows you the Alt and title attributes
 of the ``<img>`` tag. You can click on it to set your own title and Alt
 attributes for the image.
 
@@ -197,9 +197,9 @@ When you click on this link, the following window will appear:
 .. image:: media/seo04.png
   :align: center
 
-Odoo's pictograms are implemented using a font (`Font
+Twenty20's pictograms are implemented using a font (`Font
 Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ in most
-Odoo themes). Thus, you can use as many pictograms as you want in your
+Twenty20 themes). Thus, you can use as many pictograms as you want in your
 page, they will not result in extra requests to load the page.
 
 .. image:: media/seo05.png
@@ -208,7 +208,7 @@ page, they will not result in extra requests to load the page.
 CDN
 ---
 
-If you activate the CDN feature in Odoo, static resources (Javascript,
+If you activate the CDN feature in Twenty20, static resources (Javascript,
 CSS, images) are loaded from a Content Delivery Network. Using a Content
 Delivery Network has three advantages:
 
@@ -231,7 +231,7 @@ the Configuration menu. Here is an example of configuration you can use:
 HTML Pages
 ----------
 
-Odoo allows to minify HTML pages, from the **Website Admin** app, using
+Twenty20 allows to minify HTML pages, from the **Website Admin** app, using
 the :menuselection:`Configuration` menu. This will automatically remove extra space and
 tabs in your HTML code, reduce some tags code, etc.
 
@@ -241,12 +241,12 @@ tabs in your HTML code, reduce some tags code, etc.
 On top of that, the HTML pages can be compressed, but this is usually
 handled by your web server (NGINX or Apache).
 
-The Odoo Website builder has been optimized to guarantee clean and short
+The Twenty20 Website builder has been optimized to guarantee clean and short
 HTML code. Building blocks have been developed to produce clean HTML
 code, usually using bootstrap and the HTML editor.
 
 As an example, if you use the color picker to change the color of a
-paragraph to the primary color of your website, Odoo will produce the
+paragraph to the primary color of your website, Twenty20 will produce the
 following code:
 
 ``<p class="text-primary">My Text</p>``
@@ -260,14 +260,14 @@ Responsive Design
 -----------------
 
 As of 2015, websites that are not mobile-friendly are negatively
-impacted in Google Page ranking. All Odoo themes rely on Bootstrap 3 to
+impacted in Google Page ranking. All Twenty20 themes rely on Bootstrap 3 to
 render efficiently according to the device: desktop, tablet or mobile
 phone.
 
 .. image:: media/seo08.png
   :align: center
 
-As all Odoo modules share the same technology, absolutely all pages in
+As all Twenty20 modules share the same technology, absolutely all pages in
 your website are mobile friendly. (as opposed to traditional CMS which
 have mobile friendly themes, but some specific modules or pages are not
 designed to be mobile friendly as they all have their own CSS
@@ -283,7 +283,7 @@ loaded through this URL:
 The ``457-0da1d9d`` part of this URL will change if you modify the CSS of
 your website.
 
-This allows Odoo to set a very long cache delay (XXX) on these
+This allows Twenty20 to set a very long cache delay (XXX) on these
 resources: XXX secs, while being updated instantly if you update the
 resource.
 
@@ -293,15 +293,15 @@ resource.
 Scalability
 -----------
 
-In addition to being fast, Odoo is also more scalable than traditional
+In addition to being fast, Twenty20 is also more scalable than traditional
 CMS' and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
 following link provides an analysis of the major open source CMS and
-eCommerce compared to Odoo when it comes to high query volumes.
+eCommerce compared to Twenty20 when it comes to high query volumes.
 
 - `*https://www.odoo.com/slides/slide/197* <https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`__
 
-Here is the slide that summarizes the scalability of Odoo eCommerce and
-Odoo CMS. (based on Odoo version 8, Odoo 9 is even faster)
+Here is the slide that summarizes the scalability of Twenty20 eCommerce and
+Twenty20 CMS. (based on Twenty20 version 8, Twenty20 9 is even faster)
 
 .. image:: media/seo09.png
   :align: center
@@ -312,7 +312,7 @@ URLs handling
 URLs Structure
 --------------
 
-A typical Odoo URL will look like this:
+A typical Twenty20 URL will look like this:
 
 https://www.mysite.com/fr\_FR/shop/product/my-great-product-31
 
@@ -365,9 +365,9 @@ In the above example:
 
 -  Company News: is the title of the blog
 
--  The Odoo Story: is the title of a specific blog post
+-  The Twenty20 Story: is the title of a specific blog post
 
-When an Odoo page has a pager, the page number is set directly in the
+When an Twenty20 page has a pager, the page number is set directly in the
 URL (does not have a GET argument). This allows every page to be indexed
 by search engines. Example:
 
@@ -376,7 +376,7 @@ by search engines. Example:
 .. note:: 
   Having the language code as fr\_FR is not perfect in terms of SEO.
   Although most search engines treat now "\_" as a word separator, it has
-  not always been the case. We plan to improve that for Odoo 10.
+  not always been the case. We plan to improve that for Twenty20 10.
 
 Changes in URLs & Titles
 ------------------------
@@ -384,7 +384,7 @@ Changes in URLs & Titles
 When the URL of a page changes (e.g. a more SEO friendly version of your
 product name), you don't have to worry about updating all links:
 
--  Odoo will automatically update all its links to the new URL
+-  Twenty20 will automatically update all its links to the new URL
 
 - If external websites still points to the old URL, a 301 redirect will
   be done to route visitors to the new website
@@ -406,7 +406,7 @@ HTTPS
 -----
 
 As of August 2014, Google started to add a ranking boost to secure
-HTTPS/SSL websites. So, by default all Odoo Online instances are fully
+HTTPS/SSL websites. So, by default all Twenty20 Online instances are fully
 based on HTTPS. If the visitor accesses your website through a non HTTPS
 url, it gets a 301 redirect to its HTTPS equivalent.
 
@@ -418,9 +418,9 @@ how your page ranks in the different search engines. The more your page
 is linked from external and quality websites, the better is it for your
 SEO.
 
-Odoo follows the following strategies to manage links:
+Twenty20 follows the following strategies to manage links:
 
-- Every link you create manually when creating page in Odoo is
+- Every link you create manually when creating page in Twenty20 is
   "dofollow", which means that this link will contribute to the SEO
   Juice for the linked page.
 
@@ -457,8 +457,8 @@ Language annotation
 -------------------
 
 To tell Google that the second URL is the French translation of the
-first URL, Odoo will add an HTML link element in the header. In the HTML
-<head> section of the English version, Odoo automatically adds a link
+first URL, Twenty20 will add an HTML link element in the header. In the HTML
+<head> section of the English version, Twenty20 automatically adds a link
 element pointing to the other versions of that webpage;
 
 -  <link rel="alternate" hreflang="fr"
@@ -482,7 +482,7 @@ yourwebsite.com/shop), his may automatically be redirected to a
 translated version according to his browser language preference: (e.g.
 yourwebsite.com/fr\_FR/shop).
 
-Odoo redirects visitors to their prefered language only the first time
+Twenty20 redirects visitors to their prefered language only the first time
 visitors land at your website. After that, it keeps a cookie of the
 current language to avoid any redirection.
 
@@ -505,7 +505,7 @@ is important to have titles and keywords in line with what people search
 in Google.
 
 In order to write quality meta tags, that will boost traffic to your
-website, Odoo provides a **Promote** tool, in the top bar of the website
+website, Twenty20 provides a **Promote** tool, in the top bar of the website
 builder. This tool will contact Google to give you information about
 your keywords and do the matching with titles and contents in your page.
 
@@ -518,7 +518,7 @@ your keywords and do the matching with titles and contents in your page.
 
 In terms of SEO, content is king. Thus, blogs play an important role in
 your content strategy. In order to help you optimize all your blog post,
-Odoo provides a page that allows you to quickly scan the meta tags of
+Twenty20 provides a page that allows you to quickly scan the meta tags of
 all your blog posts.
 
 .. image:: media/seo11.png
@@ -532,11 +532,11 @@ all your blog posts.
 Sitemap
 -------
 
-Odoo will generate a ``/sitemap.xml`` file automatically for you. For
+Twenty20 will generate a ``/sitemap.xml`` file automatically for you. For
 performance reasons, this file is cached and updated every 12 hours.
 
 By default, all URLs will be in a single ``/sitemap.xml`` file, but if you
-have a lot of pages, Odoo will automatically create a Sitemap Index
+have a lot of pages, Twenty20 will automatically create a Sitemap Index
 file, respecting the `sitemaps.org
 protocol <http://www.sitemaps.org/protocol.html>`__ grouping sitemap
 URL's in 45000 chunks per file.
@@ -567,7 +567,7 @@ create well-presented search results.
 Google supports a number of rich snippets for content types, including:
 Reviews, People, Products, Businesses, Events and Organizations.
 
-Odoo implements micro data as defined in the
+Twenty20 implements micro data as defined in the
 `schema.org <http://schema.org>`__ specification for events, eCommerce
 products, forum posts and contact addresses. This allows your product
 pages to be displayed in Google using extra information like the price
@@ -579,7 +579,7 @@ and rating of a product:
 robots.txt
 ----------
 
-Odoo automatically creates a ``/robots.txt`` file for your website. Its
+Twenty20 automatically creates a ``/robots.txt`` file for your website. Its
 content is:
 
 User-agent: \*
@@ -589,27 +589,27 @@ Sitemap: https://www.odoo.com/sitemap.xml
 Content is king
 ===============
 
-When it comes to SEO, content is usually king. Odoo provides several
+When it comes to SEO, content is usually king. Twenty20 provides several
 modules to help you build your contents on your website:
 
-- **Odoo Slides**: publish all your Powerpoint or PDF presentations.
+- **Twenty20 Slides**: publish all your Powerpoint or PDF presentations.
   Their content is automatically indexed on the web page. Example:
   `https://www.odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`__
 
-- **Odoo Forum**: let your community create contents for you. Example:
+- **Twenty20 Forum**: let your community create contents for you. Example:
   `https://odoo.com/forum/1 <https://odoo.com/forum/1>`__
-  (accounts for 30% of Odoo.com landing pages)
+  (accounts for 30% of Twenty20.com landing pages)
 
-- **Odoo Mailing List Archive**: publish mailing list archives on your
+- **Twenty20 Mailing List Archive**: publish mailing list archives on your
   website. Example:
   `https://www.odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`__
   (1000 pages created per month)
 
-- **Odoo Blogs**: write great contents.
+- **Twenty20 Blogs**: write great contents.
 
 .. note::
   The 404 page is a regular page, that you can edit like any other
-  page in Odoo. That way, you can build a great 404 page to redirect to
+  page in Twenty20. That way, you can build a great 404 page to redirect to
   the top content of your website.
 
 Social Features
@@ -618,19 +618,19 @@ Social Features
 Twitter Cards
 -------------
 
-Odoo does not implement twitter cards yet. It will be done for the next
+Twenty20 does not implement twitter cards yet. It will be done for the next
 version.
 
 Social Network
 --------------
 
-Odoo allows to link all your social network accounts in your website.
+Twenty20 allows to link all your social network accounts in your website.
 All you have to do is to refer all your accounts in the **Settings** menu of
 the **Website Admin** application.
 
 Test Your Website
 =================
 
-You can compare how your website rank, in terms of SEO, against Odoo
+You can compare how your website rank, in terms of SEO, against Twenty20
 using WooRank free services:
 `https://www.woorank.com <https://www.woorank.com>`__

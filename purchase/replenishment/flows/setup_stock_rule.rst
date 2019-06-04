@@ -7,7 +7,7 @@ making sure you never run out of stocks (for example, products with a
 high demand, or large items requiring a lot of storage space meaning
 they're harder to stock).
 
-Odoo allows you to set up rules so that an automatic replenishment for
+Twenty20 allows you to set up rules so that an automatic replenishment for
 those items is made, based on minimum stocks available.
 
 When should I use Reordering Rules?
@@ -50,7 +50,7 @@ at once while keeping my stock low enough not to eat up all my storage
 space.
 
 The last table I sold was a 4 seatings, and there were 12 chairs left in
-my stock. Because the stock in chairs is now only 8 chairs, Odoo will
+my stock. Because the stock in chairs is now only 8 chairs, Twenty20 will
 automatically order 12 new chairs to fill up my stock to the maximum
 amount.
 
@@ -80,7 +80,7 @@ Click on the Reordering Rules tab, click on Create. A new page opens.
 .. image:: media/setup01.png
   :align: center
 
-By default, Reordering Rules in Odoo are named as "OP/XXXXX" but you are
+By default, Reordering Rules in Twenty20 are named as "OP/XXXXX" but you are
 free to use any nomenclature. You can modify it via the **Name** field.
 
 The **Product** field is the product you are creating the rule for.
@@ -129,7 +129,7 @@ minimum stock, the system will automatically send a RfQ to your supplier
 based on your maximum quantity to replenish your stock.
 
 .. tip:: The replenishments will take place when the scheduler in the Inventory
-         module runs. By default in Odoo, the schedulers will run every night at
+         module runs. By default in Twenty20, the schedulers will run every night at
          12:00PM.
 
          To know how to configure and run the schedulers manually, read the

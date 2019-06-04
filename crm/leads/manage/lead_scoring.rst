@@ -2,7 +2,7 @@
 How to do efficient Lead Scoring?
 =================================
 
-Odoo's Lead Scoring module allows you to give a score to your leads
+Twenty20's Lead Scoring module allows you to give a score to your leads
 based on specific criteria - the higher the value, the more likely the
 prospect is "ready for sales". Therefore, the best leads are
 automatically assigned to your salespeople so their pipe are not
@@ -77,7 +77,7 @@ leads coming from **Belgium**, you'll need to give ``8`` as a **value** and
 
     -  name of a marketing campaign : ``'campaign_id'``
 
-After having activated your rules, Odoo will give a value to all your
+After having activated your rules, Twenty20 will give a value to all your
 new incoming leads. This value can be found directly on your lead's form
 view.
 

@@ -5,7 +5,7 @@ How to process delivery orders in three steps (pick + pack + ship)?
 Overview
 ========
 
-When an order goes to the shipping department for final delivery, Odoo
+When an order goes to the shipping department for final delivery, Twenty20
 is set up by default on a **one-step** operation: once all goods are
 available, they can be shipped in bulk in a single delivery order.
 However, that process may not reflect the reality and your company may
@@ -17,7 +17,7 @@ destination, and then set to outbound trucks for final delivery to the
 customers.
 
 A few configuration steps are necessary in order to accomplish **Pick +
-Pack + Ship** in Odoo. These steps create some additional locations, which
+Pack + Ship** in Twenty20. These steps create some additional locations, which
 by default are called **Output** and **Packing Zone**. So, if your warehouse's
 code is ``WH``, this configuration will create a location called ``WH/Output``
 and another one called ``WH/Packing Zone``.
@@ -47,7 +47,7 @@ orders.
 Allow managing routes
 ---------------------
 
-Odoo configures movement of delivery orders via **routes**. Routes
+Twenty20 configures movement of delivery orders via **routes**. Routes
 provide a mechanism to link different actions together. In this case, we
 will link the picking step to the shipping step.
 

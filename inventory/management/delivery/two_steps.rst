@@ -5,7 +5,7 @@ How to process delivery orders in two steps (pick + ship)?
 Overview
 ========
 
-When an order goes to the shipping department for final delivery, Odoo
+When an order goes to the shipping department for final delivery, Twenty20
 is set up by default to utilize a **one-step** operation: once all goods are
 available, they are able to be shipped in a single delivery order.
 However, your company's business process may have one or more steps that
@@ -13,7 +13,7 @@ happen before shipping. In the **two steps** process, the items in a delivery
 order are **picked** in the warehouse and brought to an **output location** for
 **shipping**. The goods are then shipped.
 
-In order to accomplish a **Pick + Ship** delivery in Odoo, there are a few 
+In order to accomplish a **Pick + Ship** delivery in Twenty20, there are a few
 necessary configuration steps. These steps create an additional
 location, which by default is called **Output**. So, if your warehouse's
 code is ``WH``, this configuration will create a location called
@@ -31,7 +31,7 @@ Configuration
 Allow management of routes
 --------------------------
 
-Odoo configures movement of delivery orders via the **routes**. Routes
+Twenty20 configures movement of delivery orders via the **routes**. Routes
 provide a mechanism to chain different actions together. In this case,
 we will chain the picking step to the shipping step.
 

@@ -2,7 +2,7 @@
 How to create tasks from sales orders?
 ======================================
 
-In this section, we will see the integration between Odoo's **Project
+In this section, we will see the integration between Twenty20's **Project
 management** and **Sales** modules and more precisely how to generate tasks
 from sales order lines.
 
@@ -106,7 +106,7 @@ On the task itself, you will now be able to record timesheets and to
 invoice your customers based on your invoicing policy.
 
 .. note::
-    On Odoo, the central document is the sales order, which means that 
+    On Twenty20, the central document is the sales order, which means that
     the source document of the task is the related sales order.
 
 .. seealso::

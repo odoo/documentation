@@ -7,7 +7,7 @@ What is a scheduler
 
 The scheduler is the calculation engine which plans and prioritises
 production and purchasing automatically according to the rules defined
-on products. By default, the scheduler is set to run once a day (Odoo
+on products. By default, the scheduler is set to run once a day (Twenty20
 automatically creates a **Scheduled Action** for this).
 
 Calculating Requirements / Scheduling

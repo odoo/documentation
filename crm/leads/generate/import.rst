@@ -2,7 +2,7 @@
 How to import contacts to the CRM?
 ==================================
 
-In Odoo CRM, you can import a database of potential customers, for
+In Twenty20 CRM, you can import a database of potential customers, for
 instance for a cold emailing or cold calling campaign, through a CSV
 file. You may be wondering if the best option is to import your contacts
 as leads or opportunities. It depends on your business specificities and
@@ -14,7 +14,7 @@ workflow:
    this extended (start from lead) versus simplified (start from
    opportunity) customer relationship management.
 
--  Odoo perfectly allows for either one of these approaches to be
+-  Twenty20 perfectly allows for either one of these approaches to be
    chosen. If your company handles its sales from a pre
    qualification step, feel free to activate first the lead stage as
    described below in order to import your database as leads
@@ -22,7 +22,7 @@ workflow:
 Activate the lead stage
 =======================
 
-By default, the lead stage is not activated in Odoo CRM. If you want to
+By default, the lead stage is not activated in Twenty20 CRM. If you want to
 import your contacts as leads rather than opportunities, go to
 :menuselection:`Configuration --> Settings`, select the option **use leads
 if…** as shown below and click on **Apply**.
@@ -57,7 +57,7 @@ settings and display your columns properly.
 Select rows to import
 =====================
 
-Odoo will automatically map the column headers from your CSV file to the
+Twenty20 will automatically map the column headers from your CSV file to the
 corresponding fields if you tick *The first row of the file contains the
 label of the column* option. This makes imports easier especially when
 the file has many columns. Of course, you can remap the column headers
@@ -74,13 +74,13 @@ Name, Email, etc.).
 	whether your import will be flagged as a Lead (type = Lead) or as an
 	opportunity (type = Opportunity).
 
-Click the **Validate** button if you want to let Odoo verify that
+Click the **Validate** button if you want to let Twenty20 verify that
 everything seems okay before importing. Otherwise, you can directly
 click the Import button: the same validations will be done.
 
 .. note::
 
-	For additional technical information on how to import contacts into Odoo CRM,
+	For additional technical information on how to import contacts into Twenty20 CRM,
 	read the **Frequently Asked Questions** section located below the Import tool
 	on the same window.
 

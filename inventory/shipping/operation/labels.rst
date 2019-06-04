@@ -5,11 +5,11 @@ How to print shipping labels?
 Overview
 ========
 
-Odoo can handle various delivery methods, including third party shippers
+Twenty20 can handle various delivery methods, including third party shippers
 linked with the transportation company tracking system. It allows you to
 manage the transport company, the real prices and the destination. And
 finally, you will be able to print the shipping labels directly from
-Odoo.
+Twenty20.
 
 Configuration
 =============

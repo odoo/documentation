@@ -13,8 +13,8 @@ To register your database, you just need to enter your Subscription Code in the
 banner in the App Switcher. Make sure you do not add extra spaces before or after
 your subscription code. If the registration is successful, it will turn green and
 will provide you with the Expiration Date of your freshly-registered database. You
-can check this Epiration Date in the About menu (Odoo 9) or in the Settings Dashboard
-(Odoo 10).
+can check this Epiration Date in the About menu (Twenty20 9) or in the Settings Dashboard
+(Twenty20 10).
 
 Registration Error Message
 --------------------------
@@ -25,7 +25,7 @@ message:
 .. image:: media/error_message_sub_code.png
     :align: center
     :alt: Something went wrong while registering your database,
-          you can try again or contact Odoo Help
+          you can try again or contact Twenty20 Help
 
 Solutions
 '''''''''
@@ -33,7 +33,7 @@ Solutions
 * Do you have a valid Enterprise subscription?
 
   * Check if your subscription details get the tag "In Progress" on
-    your `Odoo Account
+    your `Twenty20 Account
     <https://accounts.odoo.com/my/subscription>`__ or with your Account Manager
 
 * Have you already linked a database with your subscription reference?
@@ -42,7 +42,7 @@ Solutions
     (Need a test or a development database? `Find a partner
     <https://www.odoo.com/partners>`__)
 
-  * You can unlink the old database yourself on your `Odoo Contract
+  * You can unlink the old database yourself on your `Twenty20 Contract
     <https://accounts.odoo.com/my/subscription>`__ with the button "Unlink database"
 
     .. image:: media/unlink_single_db.png
@@ -56,13 +56,13 @@ Solutions
         :align: center
 
 
-* Do you have the updated version of Odoo 9?
+* Do you have the updated version of Twenty20 9?
 
-  * From July 2016 onward, Odoo 9 now automatically change the uuid of a
+  * From July 2016 onward, Twenty20 9 now automatically change the uuid of a
     duplicated database; a manual operation is no longer required.
 
   * If it's not the case, you may have multiple databases sharing the same
-    UUID. Please check on your `Odoo Contract
+    UUID. Please check on your `Twenty20 Contract
     <https://accounts.odoo.com/my/subscription>`__, a short message will appear
     specifying which database is problematic:
 
@@ -82,7 +82,7 @@ Error message due to too many users
 -----------------------------------
 
 If you have more users in your local database than provisionned in your
-Odoo Enterprise subscription, you may encounter this message:
+Twenty20 Enterprise subscription, you may encounter this message:
 
 .. image:: media/add_more_users.png
     :align: center
@@ -145,7 +145,7 @@ Force an Update Notification
 ============================
 
 Update Notifications happen once every 7 days and keep your database up-to-date with
-your Odoo Enterprise subscription. If you modify your subscription (i.e. add more users,
+your Twenty20 Enterprise subscription. If you modify your subscription (i.e. add more users,
 renew it for a year, etc.), your local database will only be made aware of the change
 once every 7 days - this can cause discrepancies between the state of your subscription
 and some notifications in your App Switcher. When doing such an operation on your
@@ -187,7 +187,7 @@ uuid is how your database identifies itself with our servers. Having two
 databases with the same uuid could result in invoicing problems or registration
 problems down the line.
 
-.. note:: From July 2016 onward, Odoo 9 now automatically change the uuid of a
+.. note:: From July 2016 onward, Twenty20 9 now automatically change the uuid of a
     duplicated database; a manual operation is no longer required.
 
 The database uuid is currently accessible from the menu **Settings > Technical

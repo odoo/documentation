@@ -20,7 +20,7 @@ salespeople. Here are a few example:
 
 As you can imagine, manually assigning new leads to specific individuals
 can be tedious and time consuming - especially if your company generates
-a high volume of leads every day. Fortunately, Odoo CRM allows you to
+a high volume of leads every day. Fortunately, Twenty20 CRM allows you to
 automate the process of lead assignation based on specific criteria such
 as location, interests, company size, etc. With specific workflows and
 precise rules, you will be able to distribute all your opportunities
@@ -29,7 +29,7 @@ automatically to the right sales teams and/or salesman.
 Configuration
 =============
 
-If you have just started with Odoo CRM and haven't set up your sales
+If you have just started with Twenty20 CRM and haven't set up your sales
 team nor registered your salespeople, :doc:`read this documentation first <../../overview/started/setup>`.
 
 .. note::
@@ -86,7 +86,7 @@ your rule in the *Domain* field.
 
 .. note::
 
-	In Odoo, a lead is always assigned to a sales team before to be assigned to
+	In Twenty20, a lead is always assigned to a sales team before to be assigned to
 	a salesperson. Therefore, you need to make sure that the assignment rule of
 	your salesperson is a child of the assignment rule of the sales team.
 

@@ -9,7 +9,7 @@ deliverability of the project and a positive customer satisfaction.
 
 For example, as an IT company offering the implementation of your
 software, you might have to deal with customers emails experiencing
-technical problems. Odoo offers the opportunity to create dedicated
+technical problems. Twenty20 offers the opportunity to create dedicated
 support projects which automatically generate tasks upon receiving an
 customer support email. This way, the issue can then be assigned
 directly to an employee and can be closed more quickly.

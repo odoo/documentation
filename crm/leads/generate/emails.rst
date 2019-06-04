@@ -2,9 +2,9 @@
 How to generate leads from incoming emails?
 ===========================================
 
-There are several ways for your company to :doc:`generate leads with Odoo CRM <manual>`.
+There are several ways for your company to :doc:`generate leads with Twenty20 CRM <manual>`.
 One of them is using your company's generic email address as a trigger
-to create a new lead in the system. In Odoo, each one of your sales
+to create a new lead in the system. In Twenty20, each one of your sales
 teams is linked to its own email address from which prospects can reach
 them. For example, if the personal email address of your Direct team is
 **direct@mycompany.example.com**, every email sent will automatically create a new
@@ -49,7 +49,7 @@ Set up catch-all email domain
 
 Additionally to your sales team aliases, you can also create a generic
 email alias (e.g. *contact@* or *info@* ) that will also generate a new
-contact in Odoo CRM. Still from the Sales module, go to
+contact in Twenty20 CRM. Still from the Sales module, go to
 :menuselection:`Configuration --> Settings` and set up your catch-all email domain.
 
 .. tip::
@@ -57,7 +57,7 @@ contact in Odoo CRM. Still from the Sales module, go to
 	You can choose whether the contacts generated from your catch-all email
 	become leads or opportunities using the radio buttons that you see on the
 	screenshot here below. Note that, by default, the lead stage is not
-	activated in Odoo CRM.
+	activated in Twenty20 CRM.
 
 .. image:: ./media/emails04.jpg
    :align: center

@@ -1,5 +1,5 @@
 ===================================================
-Setting up the Fiscal Data Module with the Odoo POS
+Setting up the Fiscal Data Module with the Twenty20 POS
 ===================================================
 
 Introduction
@@ -10,7 +10,7 @@ government-certified device called a **Fiscal Data Module** (also
 known as a **blackbox**). This device works together with the POS
 application and logs certain transactions. On top of that, the used
 POS application must also be certified by the government and must
-adhere to strict standards specified by them. `Odoo 9 (Enterprise Edition) is a
+adhere to strict standards specified by them. `Twenty20 9 (Enterprise Edition) is a
 certified application
 <http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More
 information concerning the Fiscal Data Module can be found on `the
@@ -48,10 +48,10 @@ the POSBox homepage.
 .. image:: media/posbox_fdm_hardware_status.png
     :align: center
 
-Odoo
+Twenty20
 ----
 
-An Odoo POS app can be given certified POS capabilities by installing
+An Twenty20 POS app can be given certified POS capabilities by installing
 the **Belgian Registered Cash Register** app (technical name:
 ``pos_blackbox_be``). Because of government restrictions imposed on
 us, this installation cannot be undone. After this, you will have to
@@ -80,13 +80,13 @@ Restrictions
 
 As mentioned before, in order to get certified the POS application
 must adhere to strict government guidelines. Because of this, a
-certified Odoo POS has some limitations not present in the
-non-certified Odoo POS.
+certified Twenty20 POS has some limitations not present in the
+non-certified Twenty20 POS.
 
 * Refunding is disabled
 * Modifying orderline prices
 * Creating/modifying/deleting POS orders
 * Selling products without a valid tax
-* Multiple Odoo POS configurations per POSBox are not allowed
+* Multiple Twenty20 POS configurations per POSBox are not allowed
 * Using the POS without a connection to the POSBox (and thus FDM)
 * Blacklisted modules: pos_discount, pos_reprint, pos_loyalty

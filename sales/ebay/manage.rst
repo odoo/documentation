@@ -12,7 +12,7 @@ form. The eBay tab will be available.
   :align: center
 
 When the **Use Stock Quantity** field is checked, the quantity sets on eBay will
-be the Odoo **Forecast Quantity**.
+be the Twenty20 **Forecast Quantity**.
 
 The **Description Template** allows you to use templates for your listings. The
 default template only use the **eBay Description** field of the product. You can

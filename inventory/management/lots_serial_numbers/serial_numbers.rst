@@ -12,7 +12,7 @@ another location, the system will automatically identify the current
 location of the product based on last movement of the product. So you
 can get the last location where the products are moved.
 
-The double-entry management in Odoo enables you to run very advanced
+The double-entry management in Twenty20 enables you to run very advanced
 traceability.
 
 Setting up

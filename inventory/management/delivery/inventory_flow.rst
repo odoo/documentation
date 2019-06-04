@@ -6,7 +6,7 @@ Depending on factors such as the type of items you sell, the size of
 your warehouse, the number of orders you register everyday... the way you
 handle deliveries to your customers can vary a lot.
 
-Odoo allows you to handle shipping from your warehouse in 3 different
+Twenty20 allows you to handle shipping from your warehouse in 3 different
 ways:
 
 -  **One step (shipping)**: Ship directly from stock

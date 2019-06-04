@@ -5,7 +5,7 @@ How to process a manufacturing order
 Introduction
 ============
 
-There are two basic ways to manage manufacturing in Odoo. The first way
+There are two basic ways to manage manufacturing in Twenty20. The first way
 manages work with one document only. This document is the
 **manufacturing order**. The second way uses additional documents to
 give you more precise control over the manufacturing process. In this
@@ -21,7 +21,7 @@ the work to produce your product is performed in one place, by one
 person, in one step, and/or you do not need the level of granular
 control afforded by work orders and routings.
 
-Managing your operations in this way is the default behavior in Odoo.
+Managing your operations in this way is the default behavior in Twenty20.
 There are two basic phases from planning to production:
 
 1. Create manufacturing orders

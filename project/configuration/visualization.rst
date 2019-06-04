@@ -8,7 +8,7 @@ Tasks are assignments that members of your organisations have to fulfill
 as part of a project. In day to day business, your company might
 struggle due to the important amount of tasks to fulfill. Those task are
 already complex enough. Having to remember them all and follow up on
-them can be a real burden. Luckily, Odoo enables you to efficiently
+them can be a real burden. Luckily, Twenty20 enables you to efficiently
 visualize and organize the different tasks you have to cope with.
 
 Configuration
@@ -66,7 +66,7 @@ On each one of your columns, you have the ability to sort your tasks by
 priority. Tasks with a higher priority will be automatically moved to
 the top of the column. From the Kanban view, click on the star in the
 bottom left of a task to tag it as **high priority**. For the tasks that
-are not tagged, Odoo will automatically classify them according to their
+are not tagged, Twenty20 will automatically classify them according to their
 deadlines.
 
 Note that dates that passed their deadlines will appear in red (in the

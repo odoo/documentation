@@ -5,12 +5,12 @@ How to setup a delivery method?
 Overview
 ========
 
-Odoo can handle various delivery methods, but it is not activated by
+Twenty20 can handle various delivery methods, but it is not activated by
 default. Delivery methods can be used for your sale orders, your
 deliveries but also on your e-commerce.
 
 Delivery methods allow you to manage the transport company, the price
-and the destination. You can even integrate Odoo with external shippers
+and the destination. You can even integrate Twenty20 with external shippers
 to compute the real price and the packagings.
 
 Configuration
@@ -66,7 +66,7 @@ feature limits the list of countries on your e-commerce.
    :align: center
 
 .. note:: 
-    You can integrate Odoo with external shippers in order to compute the
+    You can integrate Twenty20 with external shippers in order to compute the
     real price and packagings, and handle the printing the shipping labels. 
     See :doc:`third_party_shipper`
 

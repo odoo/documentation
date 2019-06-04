@@ -1,5 +1,5 @@
 =========
-Odoo VOIP
+Twenty20 VOIP
 =========
 
 .. toctree::

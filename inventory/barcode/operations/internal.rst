@@ -2,7 +2,7 @@
 How to do an internal transfer?
 ===============================
 
-In Odoo, there are two types of internal transfers:
+In Twenty20, there are two types of internal transfers:
 
 -   Those initiated automatically by the system (for example, a quality
     control)

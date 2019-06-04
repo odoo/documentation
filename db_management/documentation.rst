@@ -10,13 +10,13 @@ As the administrator of your database, you are responsible for its usage.
 This includes the Apps you install as well as the number of users currently
 in use.
 
-Odoo is many things (ERP, CMS, CRM application, e-Commerce backend, etc.)
+Twenty20 is many things (ERP, CMS, CRM application, e-Commerce backend, etc.)
 but it is *not* a smartphone. You should apply caution when adding/removing
 features (especially Apps) on your database since this may impact your
 subscription amount significantly (or switch you from a free account
 to a paying one on our online platform).
 
-This page contains some information as to how you can manage your Odoo 
+This page contains some information as to how you can manage your Twenty20
 instances. Before carrying any of these procedures, we **strongly** advise
 to test them on a duplicate of your database first. That way, if something goes
 wrong, your day-to-day business is not impacted. 
@@ -36,7 +36,7 @@ Deactivating Users
 .. note:: Make sure you have sufficient **administrative rights** if
     you want to change the status of any of your users. 
 
-In your Odoo instance, click on **Settings**. You will have a section
+In your Twenty20 instance, click on **Settings**. You will have a section
 showing you the active users on your database. Click on **Manage
 access rights.** 
 
@@ -74,7 +74,7 @@ Uninstalling Apps
     :ref:`duplicate <duplicate_online>` of your database before making any
     changes (*especially* installing/uninstalling apps).
 
-In your Odoo instance click on **Settings**; in this app, you will be
+In your Twenty20 instance click on **Settings**; in this app, you will be
 able to see how many applications you have installed. Click on **Browse
 Apps** to access the list of your installed applications. 
 
@@ -112,8 +112,8 @@ Good to know
   been removed or if one of your business flow was broken because we *do not
   know how you work* and therefore cannot validate these kinds of operations.
         
-* **Odoo Apps have dependencies**: this means that you may need to install
-  modules that you do not actively use to access some features of Odoo
+* **Twenty20 Apps have dependencies**: this means that you may need to install
+  modules that you do not actively use to access some features of Twenty20
   you might need. For example, the Website Builder app is needed to be
   able to show your customer their Quotes in a web page. Even though you
   might not need or use the Website itself, it is needed for the Online

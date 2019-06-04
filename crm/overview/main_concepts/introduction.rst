@@ -1,5 +1,5 @@
 ========================
-Introduction to Odoo CRM
+Introduction to Twenty20 CRM
 ========================
 
 .. youtube:: fgdz8MH2YHY
@@ -14,12 +14,12 @@ Hi, my name is Nicholas, I'm a business manager in the
 textile industry. I sell accessories to retailers. Do you 
 know the difference between a good salesperson and an 
 excellent salesperson? The key is to be productive and 
-organized to do the job. That's where Odoo comes in. Thanks 
+organized to do the job. That's where Twenty20 comes in. Thanks
 to a well structured organization you'll change a good 
 team into an exceptional team. 
 
-With Odoo CRM, the job is much easier for me and my entire 
-team. When I log in into Odoo CRM, I have a direct overview 
+With Twenty20 CRM, the job is much easier for me and my entire
+team. When I log in into Twenty20 CRM, I have a direct overview
 of my ongoing performance. But also the activity of the next 
 7 days and the performance of the last month. I see that I 
 overachieved last month when compared to my invoicing target 
@@ -52,14 +52,14 @@ an email straight from the opportunity form and the answer
 from the prospect will simply pop up in the system too. Now, 
 let's assume that the meeting took place, therefore I can 
 mark it as done. And the system automatically suggests a 
-next activity. Actually, we configured Odoo with a set of 
+next activity. Actually, we configured Twenty20 with a set of
 typical activities we follow for every opportunity, and it's 
 great to have a thorough followup. The next activity will 
 be a follow-up email. Browsing from one screen to the other 
 is really simple and adapting to the view too! I can see my 
 opportunitities as a to-do list of next activities for example.
 
-With Odoo CRM I have a sales management tool that is really 
+With Twenty20 CRM I have a sales management tool that is really
 efficient and me and my team can be well organized. I have 
 a clear overview of my sales pipeline, meetings, revenues, 
 and more.
@@ -70,24 +70,24 @@ dapt the expected revenue as discussed. Once I have performed
 the qualification process, I will create a new quotation 
 based on the feedback I received from my contact. For my 
 existing customers, I can as well quickly discover the activity 
-around them for any Odoo module I use, and continue to 
+around them for any Twenty20 module I use, and continue to
 discuss about them. It's that simple.
 
 We have seen how I can manage my daily job as business 
 manager or salesperson. At the end of the journey I would 
 like to have a concrete view of my customer relationships
-and expected revenues. If I go into the reports in Odoo 
+and expected revenues. If I go into the reports in Twenty20
 CRM, I have the possibility to know exactly what's the 
 evolution of the leads over the past months, or have a look 
 at the potential revenues and the performance of the 
 different teams in terms of conversions from leads to 
-opportunities for instance. So with Odoo I can have a 
+opportunities for instance. So with Twenty20 I can have a
 clear reporting of every activity based on predefined 
 metrics or favorites. I can search for other filters 
 too and adapt the view. If I want to go in the details, 
 I choose the list view and can click on any item
 
-Odoo CRM is not only a powerful tool to achieve our sales 
+Twenty20 CRM is not only a powerful tool to achieve our sales
 goals with structured activities, performance dashboard, 
 next acitivities and more, but also allows me to:
 
@@ -96,20 +96,20 @@ next acitivities and more, but also allows me to:
     a contact form on my website. Those leads can then be 
     converted into opportunities.
 
--   Manage phone calls from Odoo CRM by using the VoIP app. 
+-   Manage phone calls from Twenty20 CRM by using the VoIP app.
     Call customers, manage a call queue, log calls, schedule 
     calls and next actions to perform.
 
--   Integrate with Odoo Sales to create beautiful online or 
+-   Integrate with Twenty20 Sales to create beautiful online or
     PDF quotations and turn them into sales orders.
 
 -   Use email marketing for marketing campaigns to my customers 
     and prospects.
 
 -   Manage my business seamlessly, even on the go. Indeed, 
-    Odoo offers a mobile app that lets every business 
+    Twenty20 offers a mobile app that lets every business
     organize key sales activities from leads to quotes.
 
-Odoo CRM is a powerful, yet easy-to-use app. I firstly used 
+Twenty20 CRM is a powerful, yet easy-to-use app. I firstly used
 the sales planner to clearly state my objectives and set up 
 our CRM. It will help you getting started quickly too.

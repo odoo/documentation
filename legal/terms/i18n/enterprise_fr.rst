@@ -2,26 +2,26 @@
 .. _enterprise_agreement_fr:
 
 ===========================================
-Odoo Enterprise Subscription Agreement (FR)
+Twenty20 Enterprise Subscription Agreement (FR)
 ===========================================
 
 .. warning::
-    Ceci est une traduction en français du contrat “Odoo Enterprise Subscription Agreement”.
+    Ceci est une traduction en français du contrat “Twenty20 Enterprise Subscription Agreement”.
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
+    La seule référence officielle des termes du contrat “Twenty20 Enterprise Subscription Agreement”
     est la :ref:`version originale <enterprise_agreement>`.
 
-    This is a french translation of the "Odoo Enterprise Subscription Agreement”.
+    This is a french translation of the "Twenty20 Enterprise Subscription Agreement”.
     This translation is provided in the hope that it will facilitate understanding, but it
     has no legal value.
-    The only official reference of the terms and conditions of the “Odoo Enterprise Subscription
+    The only official reference of the terms and conditions of the “Twenty20 Enterprise Subscription
     Agreement” is the :ref:`original english version <enterprise_agreement>`.
 
 .. note:: Version 5b - Dernière modification: 30 juin 2016.
 
-En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
-(collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
+En vous abonnant aux services de Twenty20 Enterprise (les "Services") fournis par Twenty20 SA et ses filiales
+(collectivement, "Twenty20 SA") en relation avec Twenty20 Enterprise Edition ou Twenty20 Community Edition
 (le "Logiciel"), vous (le "Client") acceptez d'être lié par les conditions générales suivantes
 (le "Contrat").
 
@@ -50,7 +50,7 @@ Bug
     Désigne toute défaillance du Logiciel qui se traduit par un arrêt complet, un message d'erreur
     avec trace d'exécution, ou une brèche de sécurité, et n'est pas directement causé par un problème
     d'installation ou une configuration défectueuse. Un non-respect des spécifications ou des besoins
-    sera considéré comme un Bug à la discrétion d'Odoo SA (en général, lorsque le Logiciel
+    sera considéré comme un Bug à la discrétion d'Twenty20 SA (en général, lorsque le Logiciel
     ne produit pas les résultats ou la performance pour lesquels il a été conçu, ou lorsqu'une
     fonctionnalité spécifique à un pays ne répond plus aux exigences comptables légales de ce pays).
 
@@ -66,28 +66,28 @@ Versions Couvertes
 
 .. _enterprise_access_fr:
 
-3 Accès à Odoo Enterprise Edition
+3 Accès à Twenty20 Enterprise Edition
 =================================
 
-Pour toute la durée du présent Contrat, Odoo SA octroie au Client une licence non exclusive,
+Pour toute la durée du présent Contrat, Twenty20 SA octroie au Client une licence non exclusive,
 non transférable d'utilisation (exécution, modification, exécution après modification) du logiciel
-Odoo Enterprise Edition, conformément aux conditions énoncées à la section :ref:`appendix_a_fr`.
+Twenty20 Enterprise Edition, conformément aux conditions énoncées à la section :ref:`appendix_a_fr`.
 
 Le Client accepte de prendre toutes les mesures nécessaires pour garantir l'exécution sans aucune
-modification de la partie du Logiciel qui vérifie la validité de l'utilisation d'Odoo Enterprise
+modification de la partie du Logiciel qui vérifie la validité de l'utilisation d'Twenty20 Enterprise
 Edition et recueille des statistiques à cet effet, y compris mais sans s'y limiter, l'exécution
 du Logiciel et le nombre d'Utilisateurs.
 
-Odoo SA s'engage à ne pas divulguer à une tierce partie d'informations chiffrées personnelles ou
+Twenty20 SA s'engage à ne pas divulguer à une tierce partie d'informations chiffrées personnelles ou
 spécifiques sans le consentement du Client, et à traiter toutes les données recueillies en
 respectant sa politique officielle de confidentialité, telle que publiée sur
-`le site web d'Odoo SA <https://www.odoo.com>`_.
+`le site web d'Twenty20 SA <https://www.odoo.com>`_.
 
 À l'expiration ou la résiliation de ce Contrat, cette licence est immédiatement révoquée et le
-Client accepte de cesser toute utilisation du logiciel Odoo Enterprise Edition.
+Client accepte de cesser toute utilisation du logiciel Twenty20 Enterprise Edition.
 
 Si le Client devait enfreindre les dispositions de la présente section, il accepte de payer
-à Odoo SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
+à Twenty20 SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
 correspondant au nombre réel d'Utilisateurs.
 
 
@@ -99,9 +99,9 @@ correspondant au nombre réel d'Utilisateurs.
 4.1 Service de correction de Bugs
 ---------------------------------
 
-Pour la durée de ce Contrat, Odoo SA s'engage à déployer tous les efforts raisonnables pour
+Pour la durée de ce Contrat, Twenty20 SA s'engage à déployer tous les efforts raisonnables pour
 corriger tout Bug du Logiciel qui pourrait être signalé par le Client en suivant la procédure
-appropriée (généralement par le biais d'un e-mail adressé au service d'assistance d'Odoo SA ou
+appropriée (généralement par le biais d'un e-mail adressé au service d'assistance d'Twenty20 SA ou
 via le formulaire correspondant sur le site web), et de commencer à traiter ces signalements
 du Client dans un délai de 2 jours ouvrables.
 
@@ -114,17 +114,17 @@ ce dernier s'engage à actualiser ses systèmes vers la nouvelle mise à jour, a
 le correctif. Il ne sera jamais demandé au Client de passer à une Version Couverte
 plus récente pour obtenir un correctif.
 
-Lorsqu'un Bug est corrigé dans une Version Couverte, Odoo SA s'engage à le corriger dans toutes
+Lorsqu'un Bug est corrigé dans une Version Couverte, Twenty20 SA s'engage à le corriger dans toutes
 les Versions Couvertes plus récentes du Logiciel.
 
 Les deux parties reconnaissent que comme spécifié dans la licence du Logiciel et à la section
-:ref:`liability_fr` de ce Contrat, Odoo SA ne peut être tenue responsable des Bugs du Logiciel.
+:ref:`liability_fr` de ce Contrat, Twenty20 SA ne peut être tenue responsable des Bugs du Logiciel.
 
 
 4.2 Service d'alertes de sécurité
 ---------------------------------
 
-Pour la durée du Contrat, Odoo SA s'engage à envoyer une "alerte de sécurité"" au Client
+Pour la durée du Contrat, Twenty20 SA s'engage à envoyer une "alerte de sécurité"" au Client
 pour tout Bug présentant un risque de sécurité qui serait découvert dans les Versions Couvertes
 du Logiciel, au moins 2 semaines avant de rendre ladite alerte de sécurité publique, et ce à moins
 que le Bug ait déjà été rendu public par un tiers.
@@ -146,7 +146,7 @@ Service de migration du Logiciel
 ++++++++++++++++++++++++++++++++
 
 Pour la durée du présent Contrat, le Client peut soumettre des demandes de migration en suivant
-les procédures appropriées (généralement, via le site du service de migration d'Odoo SA),
+les procédures appropriées (généralement, via le site du service de migration d'Twenty20 SA),
 afin de convertir une base de données du Logiciel d'une Version Couverte du Logiciel à une
 Version Couverte plus récente (la "Version Cible").
 
@@ -200,7 +200,7 @@ accompagnée de la base de données migrée.
 5.1 Tarifs standards
 --------------------
 
-Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise, le service de correction de
+Les tarifs standards pour le contrat d'abonnement à Twenty20 Enterprise, le service de correction de
 Bugs, le service d'alertes de sécurité et le service de migration sont basés sur le nombre
 d'Utilisateurs et la version du Logiciel utilisée par le Client, et précisés par écrit à la
 signature du contrat.
@@ -223,7 +223,7 @@ première Durée du contrat.
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
 qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
 en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%,
-à moins qu'Odoo SA ne notifie par écrit un nouveau tarif au client, au moins 60 jours avant
+à moins qu'Twenty20 SA ne notifie par écrit un nouveau tarif au client, au moins 60 jours avant
 l’échéance du contrat.
 
 .. _charges_thirdparty_fr:
@@ -237,7 +237,7 @@ de lignes supérieur. Les lignes de code comprennent toutes les lignes de texte 
 ces modules, quel que soit le langage de programmation (Python, Javascript, etc.)
 ou format de données (XML, CSV, etc.), à l'exclusion des lignes vides et des lignes de commentaires.
 
-Odoo SA se réserve le droit de refuser une demande de migration pour des modules tiers conformément
+Twenty20 SA se réserve le droit de refuser une demande de migration pour des modules tiers conformément
 aux conditions décrites ci-dessus, si la qualité du code source de ces modules est trop faible,
 ou si ces modules font partie d'une interface d'intégration avec des logiciels ou systèmes tiers.
 La migration de ces modules sera soumise à une proposition distincte, non couverte par le présent
@@ -252,7 +252,7 @@ Contrat.
 Tous les frais et tarifs sont indiqués hors taxes et hors impôts, frais et charges fédérales,
 provinciales, locales ou autres taxes gouvernementales applicables (collectivement,
 les "Taxes"). Le Client est responsable du paiement de toutes les Taxes liées aux achats effectués
-par le Client en vertu du présent Contrat, sauf lorsque Odoo SA est légalement tenue de payer ou de
+par le Client en vertu du présent Contrat, sauf lorsque Twenty20 SA est légalement tenue de payer ou de
 percevoir les Taxes dont le client est responsable.
 
 .. _conditions_fr:
@@ -265,21 +265,21 @@ percevoir les Taxes dont le client est responsable.
 
 Le Client accepte de / d':
 
-- Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
+- Payer à Twenty20 SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées dans la facture correspondante ;
-- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs dépasse le nombre d'Utilisateurs
+- Aviser immédiatement Twenty20 SA si le nombre réel d'Utilisateurs dépasse le nombre d'Utilisateurs
   spécifiés à la signature du Contrat, et dans ce cas, de régler les frais supplémentaires
   applicables telles que décrits à la section :ref:`charges_standard_fr`;
 - Prendre toutes les mesures nécessaires pour garantir l'exécution non modifiée de la partie du
-  Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
+  Logiciel qui vérifie la validité de l'utilisation de Twenty20 Enterprise Edition, comme décrit à la
   section :ref:`enterprise_access_fr`;
-- Fournir tout accès nécessaire à Odoo SA pour vérifier la validité de l'utilisation d'Odoo
+- Fournir tout accès nécessaire à Twenty20 SA pour vérifier la validité de l'utilisation d'Twenty20
   Enterprise Edition sur demande (par exemple, si la validation automatique ne fonctionne pas pour
   le Client) ;
 - Désigner 1 personne de contact représentant le Client pour toute la durée du contrat ;
 - Prendre toutes les mesures raisonnables pour protéger les fichiers et les bases de données
   du Client et s'assurer que les données du Client sont en sûreté et sécurisées, en reconnaissant
-  qu'Odoo SA ne peut être tenue responsable de toute perte de données ;
+  qu'Twenty20 SA ne peut être tenue responsable de toute perte de données ;
 
 
 .. _no_soliciting_fr:
@@ -344,7 +344,7 @@ civils à compter de la notification écrite de cette violation, le présent
 contrat peut être résilié immédiatement par la partie qui n'a pas commis la
 violation.
 
-En outre, Odoo SA peut résilier le contrat immédiatement dans le cas où le
+En outre, Twenty20 SA peut résilier le contrat immédiatement dans le cas où le
 Client ne paie pas les frais applicables pour les services à la date d'échéance
 indiquée sur la facture correspondante.
 
@@ -363,18 +363,18 @@ Durée de l'applicabilité des dispositions:
 7.1 Garantie
 ------------
 
-Pendant la durée du présent contrat, Odoo SA s'engage à déployer les efforts
+Pendant la durée du présent contrat, Twenty20 SA s'engage à déployer les efforts
 raisonnables sur le plan commercial pour exécuter les Services conformément aux
 normes du secteur généralement acceptées à condition que :
 
 - Les systèmes informatiques du Client soient en bon état de fonctionnement et que le Logiciel
   soit installé dans un système d'exploitation approprié ;
 - Le Client fournisse les informations adéquates nécessaires au dépannage et à l'accès, de telle
-  sorte qu'Odoo SA puisse identifier, reproduire et gérer les problèmes ;
-- Tous les montants dus à Odoo SA aient été réglés.
+  sorte qu'Twenty20 SA puisse identifier, reproduire et gérer les problèmes ;
+- Tous les montants dus à Twenty20 SA aient été réglés.
 
-La reprise de l'exécution des Services par Odoo SA sans frais supplémentaires constitue la seule et
-unique réparation pour le Client et la seule obligation d'Odoo SA pour toute violation de cette
+La reprise de l'exécution des Services par Twenty20 SA sans frais supplémentaires constitue la seule et
+unique réparation pour le Client et la seule obligation d'Twenty20 SA pour toute violation de cette
 garantie.
 
 .. _disclaimers_fr:
@@ -388,7 +388,7 @@ décline expressément toutes garanties implicites, y compris toute garantie
 implicite de qualité marchande, d'adéquation à un usage particulier ou de non-
 contrefaçon, dans les limites autorisées par la loi en vigueur.
 
-Odoo SA ne garantit pas que le Logiciel soit conforme à toute loi ou réglementation locale ou
+Twenty20 SA ne garantit pas que le Logiciel soit conforme à toute loi ou réglementation locale ou
 internationale.
 
 
@@ -456,23 +456,23 @@ du présent contrat par une disposition valable ayant les mêmes effets et objec
 
 .. _appendix_a_fr:
 
-9 Appendice A: Odoo Enterprise Edition License
+9 Appendice A: Twenty20 Enterprise Edition License
 ==============================================
 
-Odoo 9 Enterprise Edition est publié sous la licence Odoo Enterprise Edition License v1.0,
+Twenty20 9 Enterprise Edition est publié sous la licence Twenty20 Enterprise Edition License v1.0,
 définie ci-dessous.
 
 .. warning::
-    Ceci est une traduction en français de la licence “Odoo Enterprise Edition License”.
+    Ceci est une traduction en français de la licence “Twenty20 Enterprise Edition License”.
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes de la licence “Odoo Enterprise Edition License”
+    La seule référence officielle des termes de la licence “Twenty20 Enterprise Edition License”
     est la :ref:`version originale <odoo_enterprise_license>`.
 
-    This is a french translation of the "Odoo Enterprise Edition License”.
+    This is a french translation of the "Twenty20 Enterprise Edition License”.
     This translation is provided in the hope that it will facilitate understanding, but it has
     no legal value.
-    The only official reference of the terms of the “Odoo Enterprise Edition
+    The only official reference of the terms of the “Twenty20 Enterprise Edition
     License” is the :ref:`original english version <odoo_enterprise_license>`.
 
 .. raw:: html
@@ -484,26 +484,26 @@ définie ci-dessous.
     {\tt
 
 
-Odoo Enterprise Edition License v1.0
+Twenty20 Enterprise Edition License v1.0
 
 Ce logiciel et les fichiers associés (le "Logiciel") ne peuvent être utilisés
 (c'est-à-dire exécutés, modifiés, ou exécutés avec des modifications) qu'avec
-un contrat Odoo Enterprise Subscription en ordre de validité, et pour le nombre
+un contrat Twenty20 Enterprise Subscription en ordre de validité, et pour le nombre
 d'utilisateurs prévus dans ce contrat.
 
-Un contrat de Partnariat avec Odoo S.A. en ordre de validité donne les mêmes
+Un contrat de Partnariat avec Twenty20 S.A. en ordre de validité donne les mêmes
 permissions que ci-dessus, mais uniquement pour un usage restreint à un
 environnement de test ou de développement.
 
-Vous êtes autorisé à développer des modules Odoo basés sur le Logiciel et
+Vous êtes autorisé à développer des modules Twenty20 basés sur le Logiciel et
 à les distribuer sous la license de votre choix, pour autant que cette licence
-soit compatible avec les conditions de la licence Odoo Enterprise Edition Licence
+soit compatible avec les conditions de la licence Twenty20 Enterprise Edition Licence
 (Par exemple: LGPL, MIT ou d'autres licenses propriétaires similaires à celle-ci).
 
-Vous êtes autorisé à utiliser des modules Odoo publiés sous n'importe quelle
+Vous êtes autorisé à utiliser des modules Twenty20 publiés sous n'importe quelle
 licence, pour autant que leur licence soit compatible avec les conditions
-de la licence Odoo Enterprise Edition License (Notamment tous les
-modules publiés sur l'Odoo Apps Store sur odoo.com/apps).
+de la licence Twenty20 Enterprise Edition License (Notamment tous les
+modules publiés sur l'Twenty20 Apps Store sur odoo.com/apps).
 
 Il est interdit de publier, distribuer, accorder des sous-licences, ou vendre
 tout copie du Logiciel ou toute copie modifiée du Logiciel.

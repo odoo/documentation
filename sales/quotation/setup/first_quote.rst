@@ -24,7 +24,7 @@ Install the Sales Management module
 -----------------------------------
 
 In order to be able to issue your first quotation, you'll need to
-install the **Sales Management** module from the app module in the Odoo
+install the **Sales Management** module from the app module in the Twenty20
 backend.
 
 .. image:: media/first_quote01.png
@@ -64,7 +64,7 @@ Quantity** and the discount if applicable.
 .. image:: media/first_quote03.png
     :align: center
 
-If you don't have any customer or product recorded on your Odoo
+If you don't have any customer or product recorded on your Twenty20
 environment yet, you can create them on the fly directly from your
 quotations :
 

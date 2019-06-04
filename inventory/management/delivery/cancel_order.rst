@@ -5,7 +5,7 @@ How do I cancel a delivery order?
 Overview
 ========
 
-Odoo gives you the possibility to cancel a delivery method whether it
+Twenty20 gives you the possibility to cancel a delivery method whether it
 has been validated to fast, it needs to be modified or for any other
 reason.
 

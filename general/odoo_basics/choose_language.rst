@@ -1,14 +1,14 @@
 ================================
-Manage Odoo in your own language
+Manage Twenty20 in your own language
 ================================
 
-Odoo provides you with the option to manage Odoo in different languages,
-and each user can use Odoo in his own language .
+Twenty20 provides you with the option to manage Twenty20 in different languages,
+and each user can use Twenty20 in his own language .
 
 Load your desired language
 ==========================
 
-The first thing to do is to load your desired language on your Odoo
+The first thing to do is to load your desired language on your Twenty20
 instance.
 
 From the general dashboard click on the **Settings** app; on the top
@@ -44,7 +44,7 @@ Open a new menu to view the changes.
 Change another user's language
 ==============================
 
-Odoo also gives you the possibility for each user to choose his
+Twenty20 also gives you the possibility for each user to choose his
 preferred language.
 
 To change the language for a different user, choose :menuselection:`Users --> Users`

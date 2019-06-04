@@ -6,7 +6,7 @@ What is Portal access/Who is a portal user?
 ============================================
 
 A portal access is given to a user who has the necessity to have access
-to Odoo instance, to view certain documents or information in the
+to Twenty20 instance, to view certain documents or information in the
 system.
 
 For Example, a long term client who needs to view online quotations.

@@ -8,7 +8,7 @@ Overview
 As a manager, it's not always simple to follow everything your teams do.
 Having a simple customer feedback can be very interesting to evaluate
 the performances of your teams. You can very easily gather feedbacks
-from your customers using Odoo.
+from your customers using Twenty20.
 
 An e-mail can be sent during the project to get the customer feedbacks.
 He just has to choose between 3 smileys to assess your work (Smile,

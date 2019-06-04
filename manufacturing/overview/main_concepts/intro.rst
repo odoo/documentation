@@ -1,5 +1,5 @@
 ==================================
-Introduction to Odoo Manufacturing
+Introduction to Twenty20 Manufacturing
 ==================================
 
 .. youtube:: QtIU0p8daAo

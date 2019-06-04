@@ -1,14 +1,14 @@
 ======================================
-How to create a contact into Odoo CRM?
+How to create a contact into Twenty20 CRM?
 ======================================
 
-Odoo CRM allows you to manually add contacts into your pipeline. It can
+Twenty20 CRM allows you to manually add contacts into your pipeline. It can
 be either a lead or an opportunity.
 
 Activate the lead stage
 =======================
 
-By default, the lead stage is not activated in Odoo CRM. To activate it,
+By default, the lead stage is not activated in Twenty20 CRM. To activate it,
 go to :menuselection:`Sales --> Configuration --> Settings`, select the option ""use leads
 if…** as shown below and click on **Apply**.
 

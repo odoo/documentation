@@ -8,7 +8,7 @@ Overview
 The package is the physical container in which you put one or several
 product.
 
-By default, Odoo does not take into account the use of it.
+By default, Twenty20 does not take into account the use of it.
 
 Once you activate the option, you will be able to manage one or several
 packages when doing your transfers.

@@ -28,7 +28,7 @@ In the purchases application, open the **Purchase** menu and click on
 on sales.
 
 Next to Routes, tick **Buy** and **Make to order** as a procurement method.
-When you are generating sales order, Odoo will automatically reorder the
+When you are generating sales order, Twenty20 will automatically reorder the
 same quantity through procurement.
 
 .. image:: media/purchase_triggering01.png

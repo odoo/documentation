@@ -2,16 +2,16 @@
 .. _enterprise_agreement:
 
 ======================================
-Odoo Enterprise Subscription Agreement
+Twenty20 Enterprise Subscription Agreement
 ======================================
 
 .. note:: Version 6 - Last revision: October 3, 2017.
 
 .. v6: add "App" definition + update pricing per-App
 
-By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
-affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or
-Odoo Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
+By subscribing to the Twenty20 Enterprise services (the "Services") provided by Twenty20 SA and its
+affiliates (collectively, "Twenty20 SA") in relation with Twenty20 Enterprise Edition or
+Twenty20 Community Edition (the "Software"), you (the "Customer") are agreeing to be bound by the
 following terms and conditions (the "Agreement").
 
 .. _term:
@@ -37,14 +37,14 @@ User
 
 App
     An "App" is a specialized group of features available for installation in the Software,
-    and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_ at the
+    and listed in the public Pricing section of `Twenty20 SA's website <https://www.odoo.com>`_ at the
     signature of this Agreement.
 
 Bug
     Is considered a Bug any failure of the Software that results in a complete stop, error
     traceback or security breach, and is not directly caused by a defective installation or
     configuration. Non-compliance with specifications or requirements will be considered as Bugs at
-    the discretion of Odoo SA (typically, when the Software does not produce the results or
+    the discretion of Twenty20 SA (typically, when the Software does not produce the results or
     performance it was designed to produce, or when a country-specific feature does not meet legal
     accounting requirements anymore).
 
@@ -59,26 +59,26 @@ Covered Versions
 
 .. _enterprise_access:
 
-3 Access to Odoo Enterprise Edition
+3 Access to Twenty20 Enterprise Edition
 ===================================
 
-For the duration of this Agreement, Odoo SA gives the Customer a non-exclusive, non-transferable
-license to use (execute, modify, execute after modification) the Odoo Enterprise Edition software,
+For the duration of this Agreement, Twenty20 SA gives the Customer a non-exclusive, non-transferable
+license to use (execute, modify, execute after modification) the Twenty20 Enterprise Edition software,
 under the terms set forth in :ref:`appendix_a`.
 
 The Customer agrees to take all necessary measures to guarantee the unmodified execution of
-the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
+the part of the Software that verifies the validity of the Twenty20 Enterprise Edition usage and
 collects statistics for that purpose, including but not limited to the running of an instance and
 the number of Users.
 
-Odoo SA commits not to disclose individual or named figures to third parties without the consent
+Twenty20 SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
-Policy, as published on `Odoo SA's website <https://www.odoo.com>`_.
+Policy, as published on `Twenty20 SA's website <https://www.odoo.com>`_.
 
 Upon expiration or termination of this Agreement, this license is revoked immediately and the
-Customer agrees to stop using the Odoo Enterprise Edition software.
+Customer agrees to stop using the Twenty20 Enterprise Edition software.
 
-Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
+Should the Customer breach the terms of this section, the Customer agrees to pay Twenty20 SA an extra
 fee equal to 300% of the applicable list price for the actual number of Users.
 
 
@@ -90,8 +90,8 @@ fee equal to 300% of the applicable list price for the actual number of Users.
 4.1 Bug Fixing Service
 ----------------------
 
-For the duration of this Agreement, Odoo SA commits to making all reasonable efforts to remedy any
-Bug of the Software submitted by the Customer through the appropriate channel (typically, Odoo SA's
+For the duration of this Agreement, Twenty20 SA commits to making all reasonable efforts to remedy any
+Bug of the Software submitted by the Customer through the appropriate channel (typically, Twenty20 SA's
 service desk email address or website form), and to start handling such Customer submissions
 within 2 business days.
 
@@ -104,17 +104,17 @@ Software used by the Customer, the Customer agrees to update its systems to that
 to obtain the correction. The Customer will not be asked to upgrade to a more recent Covered
 Version of the Software as a remedy to a Bug.
 
-When a Bug is fixed in any Covered Version, Odoo SA commits to fixing the Bug in all more recent
+When a Bug is fixed in any Covered Version, Twenty20 SA commits to fixing the Bug in all more recent
 Covered Versions of the Software.
 
 Both parties acknowledge that as specified in the license of the Software and in the :ref:`liability`
-section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software.
+section of this Agreement, Twenty20 SA cannot be held liable for Bugs in the Software.
 
 
 4.2 Security Advisories Service
 -------------------------------
 
-For the duration of this Agreement, Odoo SA commits to sending a "Security Advisory" to the Customer
+For the duration of this Agreement, Twenty20 SA commits to sending a "Security Advisory" to the Customer
 for any security Bug that are discovered in the Covered Versions of the Software, at least 2 weeks
 before making the Security Advisory public, unless the Bug has already been disclosed publicly by a
 third party.
@@ -136,7 +136,7 @@ Upgrade Service for the Software
 ++++++++++++++++++++++++++++++++
 
 For the duration of this Agreement, the Customer can submit upgrade requests through the appropriate
-channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
+channel (typically Twenty20 SA's upgrade service website), in order to convert a database of the Software
 from one Covered Version of the Software to a more recent Covered Version (the "Target Version").
 
 Upgrade requests must include a complete backup copy of the Customer's database and the
@@ -185,7 +185,7 @@ upgraded version of all installed third-party modules along with the upgraded da
 5.1 Standard charges
 --------------------
 
-The standard charges for the Odoo Enterprise subscription, the Bug Fixing Service, Security Advisories
+The standard charges for the Twenty20 Enterprise subscription, the Bug Fixing Service, Security Advisories
 Service and the Upgrade Service are based on the number of Users, the number of installed
 Apps, the Software version used by the Customer, and specified in writing at the signature of the Agreement.
 
@@ -195,7 +195,7 @@ list price (at the beginning of the Term) for the additional Users or Apps, for 
 
 If at the time of the signature of this Agreement, the Customer uses a Covered Version
 that is not the most recent one, the standard charges may be increased by 50% for the duration
-of the first Term, at the sole discretion of Odoo SA, to cover the extra maintenance costs.
+of the first Term, at the sole discretion of Twenty20 SA, to cover the extra maintenance costs.
 
 .. _charges_renewal:
 
@@ -204,7 +204,7 @@ of the first Term, at the sole discretion of Odoo SA, to cover the extra mainten
 
 Upon renewal as covered in section :ref:`term`, if the per-User charges applied during the previous Term
 are lower than the most current applicable per-User list price, the per-User charges will increase
-by up to 7%, unless Odoo SA provides written notice of a new price to the Customer at least 60 days
+by up to 7%, unless Twenty20 SA provides written notice of a new price to the Customer at least 60 days
 prior to the end of the Term.
 
 
@@ -221,7 +221,7 @@ lines. Lines of Code include all text lines in the source code of those modules,
 programming language (Python, Javascript, etc.) or data format (XML, CSV, etc.), excluding blank
 lines and comment lines.
 
-Odoo SA reserves the right to reject an upgrade request for third-party modules under the above
+Twenty20 SA reserves the right to reject an upgrade request for third-party modules under the above
 conditions if the quality of the source code of those modules is too low, or if these modules
 constitute an interface with third-party software or systems. The upgrade of such modules will
 subject to a separate offer, outside of this Agreement.
@@ -235,7 +235,7 @@ subject to a separate offer, outside of this Agreement.
 
 All fees and charges are exclusive of all applicable federal, provincial, state, local or other
 governmental taxes, fees or charges (collectively, "Taxes"). The Customer is responsible for paying
-all Taxes associated with purchases made by the Customer under this Agreement, except when Odoo SA
+all Taxes associated with purchases made by the Customer under this Agreement, except when Twenty20 SA
 is legally obliged to pay or collect Taxes for which the Customer is responsible.
 
 
@@ -251,19 +251,19 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 
 The Customer agrees to:
 
-- pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
+- pay Twenty20 SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
-- immediately notify Odoo SA when their actual number of Users or installed Apps exceeds the numbers
+- immediately notify Twenty20 SA when their actual number of Users or installed Apps exceeds the numbers
   specified at the signature of the Agreement, and in this event, pay the applicable additional fee
   as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
-  that verifies the validity of the Odoo Enterprise Edition usage, as described
+  that verifies the validity of the Twenty20 Enterprise Edition usage, as described
   in :ref:`enterprise_access` ;
-- grant Odoo SA the necessary access to verify the validity of the Odoo Enterprise Edition usage
+- grant Twenty20 SA the necessary access to verify the validity of the Twenty20 Enterprise Edition usage
   upon request (e.g. if the automatic validation is found to be inoperant for the Customer);
 - appoint 1 dedicated Customer contact person for the entire duration of the Agreement;
 - take all reasonable measures to protect Customer’s files and databases and to ensure Customer’s
-  data is safe and secure, acknowledging that Odoo SA cannot be held liable for any data loss;
+  data is safe and secure, acknowledging that Twenty20 SA cannot be held liable for any data loss;
 
 
 .. _no_soliciting:
@@ -321,7 +321,7 @@ In the event that either Party fails to fulfill any of its obligations arising h
 breach has not been remedied within 30 calendar days from the written notice of such
 breach, this Agreement may be terminated immediately by the non-breaching Party.
 
-Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
+Further, Twenty20 SA may terminate the Agreement immediately in the event the Customer fails to pay
 the applicable fees for the Services within the due date specified on the corresponding invoice.
 
 Surviving Provisions:
@@ -342,17 +342,17 @@ Surviving Provisions:
 
 .. industry-standard warranties regarding our Services while Agreement in effect
 
-For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
+For the duration of this Agreement, Twenty20 SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
 - the Customer’s computing systems are in good operational order and the Software is installed in a
   suitable operating environment;
-- the Customer provides adequate troubleshooting information and access so that Odoo SA can
+- the Customer provides adequate troubleshooting information and access so that Twenty20 SA can
   identify, reproduce and address problems;
-- all amounts due to Odoo SA have been paid.
+- all amounts due to Twenty20 SA have been paid.
 
-The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
-is for Odoo SA to resume the execution of the Services at no additional charge.
+The Customer's sole and exclusive remedy and Twenty20 SA's only obligation for any breach of this warranty
+is for Twenty20 SA to resume the execution of the Services at no additional charge.
 
 .. _disclaimers:
 
@@ -366,7 +366,7 @@ implied, statutory or otherwise, and each party specifically disclaims all impli
 including any implied warranty of merchantability, fitness for a particular purpose or
 non-infringement, to the maximum extent permitted by applicable law.
 
-Odoo SA does not warrant that the Software complies with any local or international law or regulations.
+Twenty20 SA does not warrant that the Software complies with any local or international law or regulations.
 
 .. _liability:
 
@@ -430,12 +430,12 @@ objectives.
 
 .. _appendix_a:
 
-9 Appendix A: Odoo Enterprise Edition License
+9 Appendix A: Twenty20 Enterprise Edition License
 =============================================
 
 .. only:: latex
 
-    Odoo 9 Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
+    Twenty20 9 Enterprise Edition is licensed under the Twenty20 Enterprise Edition License v1.0,
     defined as follows:
 
     .. include:: ../licenses/enterprise_license.txt
@@ -466,7 +466,7 @@ objectives.
     Email:
     Phone:
 
-    Technical contact information (can be an Odoo partner):
+    Technical contact information (can be an Twenty20 partner):
     -------------------------------------------------------
     Company name:
     Contact name:

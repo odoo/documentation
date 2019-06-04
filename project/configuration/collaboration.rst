@@ -5,7 +5,7 @@ How to manage & collaborate on tasks?
 Responsibilities 
 ================
 
-In Odoo, you can assign the person who is in charge of the task.
+In Twenty20, you can assign the person who is in charge of the task.
 
 When creating a task, by default you are responsible for it. You can
 change this by simply typing the username of someone else and choosing
@@ -64,13 +64,13 @@ Whether it helps you for estimation of future projects or data for
 billing or invoicing, time tracking in Project Management is a real
 plus.
 
-The Odoo Timesheet app is perfectly integrated with Odoo Project and can
+The Twenty20 Timesheet app is perfectly integrated with Twenty20 Project and can
 help you track time easily.
 
-Once Odoo Timesheet is installed, the timesheet option is automatically
+Once Twenty20 Timesheet is installed, the timesheet option is automatically
 available in projects and on tasks.
 
-To avoid any confusion, Odoo works with analytic accounts. An analytic
+To avoid any confusion, Twenty20 works with analytic accounts. An analytic
 account is the name that will always be the reference for a specific
 project or contract. Each time a project is created, an analytic account
 is automatically created under the same name.
@@ -88,7 +88,7 @@ Click on the Timesheet button in the top grey menu.
 .. image:: media/manage_collaborate03.png
     :align: center
 
-You get the Odoo Timesheet. Click on Create and a line will appear with
+You get the Twenty20 Timesheet. Click on Create and a line will appear with
 today's date and time. Your project name is automatically selected as
 the Analytic Account. No task is set, you can choose to add a specific
 task for it, or not.
@@ -96,7 +96,7 @@ task for it, or not.
 .. image:: media/manage_collaborate04.png
     :align: center
 
-If you go now to Odoo Timesheet, your line will be recorded among your
+If you go now to Twenty20 Timesheet, your line will be recorded among your
 other timesheets.
 
 Record a timesheet on a task: 
@@ -110,7 +110,7 @@ on Add an item.
 A line will appear with the name of the project already selected in the
 Analytic account.
 
-Again, you'll find back these timesheet lines in the Odoo Timesheet
+Again, you'll find back these timesheet lines in the Twenty20 Timesheet
 application.
 
 .. image:: media/manage_collaborate05.png
@@ -151,7 +151,7 @@ saved in the task.
 Collaborate on tasks
 ====================
 
-Tasks in Odoo Project are made to help you to work easily together with
+Tasks in Twenty20 Project are made to help you to work easily together with
 your colleagues. This helps you save time and energy.
 
 The idea is to stay up to date with what interests you. You can
@@ -165,7 +165,7 @@ You can configure an email address linked to your project. When an email
 is sent to that address, it automatically creates a task in the first
 step of the project, with all the recipients (To/Cc/Bcc) as followers.
 
-With Odoo Online, the mail gateway is already configured and so every
+With Twenty20 Online, the mail gateway is already configured and so every
 project gets an automatic email address.
 
 The email is always the name of the project (with "-" instead of the
@@ -213,7 +213,7 @@ saved on the entry.
 The description of the task, the Pad
 ------------------------------------
 
-Odoo allows you to replace the task description field by an Etherpad
+Twenty20 allows you to replace the task description field by an Etherpad
 collaborative note (http://etherpad.org). This means that you can
 collaborate on tasks in real time with several users contributing to the
 same content. Every user has their own color and you can replay the

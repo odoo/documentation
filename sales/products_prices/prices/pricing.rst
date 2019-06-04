@@ -2,8 +2,8 @@
 How to adapt your prices to your customers and apply discounts
 ==============================================================
 
-Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
-A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
+Twenty20 has a powerful pricelist feature to support a pricing strategy tailored to your business.
+A pricelist is a list of prices or price rules that Twenty20 searches to determine the suggested price.
 You can set several critarias to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
 As pricelists only suggest prices, they can be overridden by users completing sales orders.
 Choose your pricing strategy from :menuselection:`Sales --> Settings`.
@@ -81,7 +81,7 @@ Each pricelist item can be associated to either all products, to a product inter
 
 .. note::
 
-    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item. 
+    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Twenty20 will take the rule of the item.
 
     * Make sure at least one pricelist item covers all your products.
   
@@ -111,7 +111,7 @@ e.g. sale price = 2*cost (100% markup) with $5 of minimal margin.
 Prices per country
 ==================
 Pricelists can be set by countries group.
-Any new customer recorded in Odoo gets a default pricelist, i.e. the first one in the list matching the country. In case no country is set for the customer, Odoo takes the first pricelist without any country group.
+Any new customer recorded in Twenty20 gets a default pricelist, i.e. the first one in the list matching the country. In case no country is set for the customer, Twenty20 takes the first pricelist without any country group.
 
 The default pricelist can be replaced when creating a sales order.
 

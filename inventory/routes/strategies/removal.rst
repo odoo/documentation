@@ -9,8 +9,8 @@ Removal strategies are usually in picking operations to select the best
 products in order to optimize the distance for the worker, for quality
 control purpose or due to reason of product expiration.
 
-When a product movement needs to be done, Odoo will find available
-products that can be assigned to shipping. The way Odoo assign these
+When a product movement needs to be done, Twenty20 will find available
+products that can be assigned to shipping. The way Twenty20 assign these
 products depend on the **removal strategy** that is defined on the **product 
 category** or on the **location**.
 

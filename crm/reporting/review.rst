@@ -7,7 +7,7 @@ follow up on sales activities. They need to access anytime some
 important metrics in order to know how they are performing and better
 organize their daily work.
 
-Within the Odoo CRM module, every team member has access to a
+Within the Twenty20 CRM module, every team member has access to a
 personalized and individual dashboard with a real-time overview of:
 
 -   Top priorities: they instantly see their scheduled meetings and

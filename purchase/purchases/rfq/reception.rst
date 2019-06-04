@@ -6,7 +6,7 @@ The **Purchase** app allows you to manage your purchase orders, to control
 products to receive and to control supplier bills.
 
 If you want to get product forecasts and receptions under control, the
-first thing to do is to deploy the Odoo purchase process. Knowing what
+first thing to do is to deploy the Twenty20 purchase process. Knowing what
 have been purchased is the basis of forecasting and controlling
 receptions.
 
@@ -85,7 +85,7 @@ this warehouse.
     :align: center
 
 If you have a lot of awaiting orders, you can use the filter bar to
-search on the **Vendor** (also called **Partner** in Odoo), the product or the
+search on the **Vendor** (also called **Partner** in Twenty20), the product or the
 source document, which is the reference of your purchase order. You can
 open the document that matches with the received delivery order and
 process all the lines within it.
@@ -105,14 +105,14 @@ have been expected.
     lots or serial numbers to record the quantity received.
 
 When you validate the reception, if you have received less products than
-the initial demand, Odoo will ask youthe permission to create a
+the initial demand, Twenty20 will ask youthe permission to create a
 backorder.
 
 .. image:: media/reception06.png
     :align: center
 
 If you plan to receive the remaining product in the future, select
-**Create Backorder**. Odoo will create a new documents for the awaiting
+**Create Backorder**. Twenty20 will create a new documents for the awaiting
 products. If you choose **No Backorder**, the order is considered as
 fulfilled.
 

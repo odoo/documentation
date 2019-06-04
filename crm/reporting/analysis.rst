@@ -4,7 +4,7 @@ How to analyze the sales performance of your team and get customize reports
 
 As a manager, you need to constantly monitor your team's performance
 in order to help you take accurate and relevant decisions for the
-company. Therefore, the **Reporting** section of **Odoo Sales** represents a
+company. Therefore, the **Reporting** section of **Twenty20 Sales** represents a
 very important tool that helps you get a better understanding of where
 your company's strengths, weaknesses and opportunities are, showing
 you trends and forecasts for key metrics such as the number of
@@ -53,7 +53,7 @@ You can add a lot of extra data to your report by clicking on the
     on the **+** icon on the vertical axis then on **Sales Team**.
 
 Depending on the data you want to highlight, you may need to display
-your reports in a more visual view. Odoo **CRM** allows you to transform
+your reports in a more visual view. Twenty20 **CRM** allows you to transform
 your report in just a click thanks to 3 graph views : **Pie Chart**, **Bar
 Chart** and **Line Chart**. These views are accessible through the icons
 highlighted on the screenshot below.

@@ -4,7 +4,7 @@ How to do inter-warehouses transfers?
 
 If you own different warehouses you might want to transfer goods from
 one warehouse to the other. This is very easy thanks to the inventory
-application in Odoo.
+application in Twenty20.
 
 Configuration
 =============
@@ -54,7 +54,7 @@ Creating a new inventory
 
 If you create a new warehouse you might already have an existing
 physical inventory in it. In that case you should create an inventory in
-Odoo, if not you can skip this step.
+Twenty20, if not you can skip this step.
 
 Go into the inventory application, select :menuselection:`Inventory Control -->
 Inventory Adjustment`. You can then create a new inventory by clicking on
@@ -99,9 +99,9 @@ don't forget to **Validate** or **Mark as TODO** once you are done.
 .. image:: media/inter07.png
    :align: center
 
-If you select **Validate**, Odoo will process all quantities to transfer.
+If you select **Validate**, Twenty20 will process all quantities to transfer.
 
-If you select **Mark as TODO**, Odoo will put the transfer in **Waiting
+If you select **Mark as TODO**, Twenty20 will put the transfer in **Waiting
 Availability** status. Click on **Reserve** to reserve the amount of
 products in your source warehouse.
 
@@ -127,7 +127,7 @@ window you can manually indicate how much products you process
 .. tip::
 
 	If you decide to partially process the transfer order (e.g. a part of the
-	products can't be shipped yet due to an unexpected event), Odoo will
+	products can't be shipped yet due to an unexpected event), Twenty20 will
 	automatically ask if you wish to create a **backorder**.
 	Create a backorder if you expect to process the remaining products
 	later, do not create a backorder if you will not supply/receive the

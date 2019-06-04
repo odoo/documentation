@@ -5,8 +5,8 @@ How to integrate a third party shipper?
 Overview
 ========
 
-Odoo can handle various delivery methods, including third party
-shippers. Odoo can be linked with the transportation company tracking
+Twenty20 can handle various delivery methods, including third party
+shippers. Twenty20 can be linked with the transportation company tracking
 system. It will allow you to manage the transport company, the real
 prices and the destination.
 

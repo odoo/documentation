@@ -10,7 +10,7 @@ necessary. For example, if you buy products in a country where the
 metric system is of application and sell the in a country where the
 imperial system is used, you will need to convert the units.
 
-You can set up Odoo to work with different units of measure for one
+You can set up Twenty20 to work with different units of measure for one
 product.
 
 Configuration
@@ -46,7 +46,7 @@ Transfer from one unit to another
 =================================
 
 When doing inter-unit transfers, the rounding is automatically done by
-Odoo.
+Twenty20.
 
 The unit of measure can be changed throughout the whole process. The
 only condition is that the unit of measure is part of the same category.

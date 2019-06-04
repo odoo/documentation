@@ -2,7 +2,7 @@
 How to get paid with payment acquirers
 ======================================
 
-Odoo embeds several payment methods to get paid on eCommerce, Sales 
+Twenty20 embeds several payment methods to get paid on eCommerce, Sales
 and Invoicing apps.
 
 
@@ -22,7 +22,7 @@ Payment acquirers
 
 Redirect your customers to payment platforms to collect money effortless
 and track the payment status (call-back).
-Odoo supports more and more platforms over time: 
+Twenty20 supports more and more platforms over time:
 
 * `Paypal <paypal.html>`__
 * Ingenico
@@ -48,7 +48,7 @@ How to let customers save and reuse credit cards
 ================================================
 To ease the payment of returning customers, you can let them
 save and reuse a credit card if they want to.
-If so, a payment token will be saved in Odoo.
+If so, a payment token will be saved in Twenty20.
 This option is available with Ingenico and Authorize.net.
 
 You can turn this on from the acquirer configuration form.
@@ -59,7 +59,7 @@ You can turn this on from the acquirer configuration form.
 
 How to debit credit cards to pay subscriptions
 ==============================================
-`Odoo Subscription <https://www.odoo.com/page/subscriptions>`__ allows to
+`Twenty20 Subscription <https://www.odoo.com/page/subscriptions>`__ allows to
 bill services automatically on a recurring basis.
 Along with it, you can have an automatic debit of the customer's credit card.
 
@@ -78,8 +78,8 @@ whenever an invoice is issued from the subscription.
 How to use other acquirers (advanced)
 =====================================
 
-Odoo can submit single payment requests and redirect to any payment acquirer.
-But there is no call-back, i.e. Odoo doesn't track the transaction status.
+Twenty20 can submit single payment requests and redirect to any payment acquirer.
+But there is no call-back, i.e. Twenty20 doesn't track the transaction status.
 So you will confirm orders manually once you get paid.
 
 How to:
@@ -95,7 +95,7 @@ How to:
 Other configurations
 ====================
 
-Odoo can also be used for more advanced payment processes
+Twenty20 can also be used for more advanced payment processes
 like installment plans (e.g. 
 `Paypal Installment Plans <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/installment_buttons>`__).
 

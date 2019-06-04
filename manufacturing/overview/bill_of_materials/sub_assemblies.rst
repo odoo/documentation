@@ -9,7 +9,7 @@ your manufacturing flow, or to use the same subassembly in multiple
 BoMs. A BoM that employs subassemblies is often referred to as a
 multi-level BoM.
 
-Multi-level bills of materials in Odoo are accomplished by creating a
+Multi-level bills of materials in Twenty20 are accomplished by creating a
 top-level BoM and subassembly BoMs. Next, the procurement route of the
 subassembly product is defined. This ensures that every time a
 manufacturing order for the top-level product is created, a

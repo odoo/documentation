@@ -5,7 +5,7 @@ How can you change the packaging type for your sale order?
 Overview
 ========
 
-Odoo gives you the possibility to change the default packaging type and
+Twenty20 gives you the possibility to change the default packaging type and
 adapt the packaging the way you want it, depending on the weight of the
 order.
 

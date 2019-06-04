@@ -5,7 +5,7 @@ How to process delivery orders in one step (shipping)?
 Overview
 ========
 
-When an order goes to the shipping department for final delivery, Odoo
+When an order goes to the shipping department for final delivery, Twenty20
 is set up by default to utilize a one-step operation: once all goods are
 available, they are able to be shipped in a single delivery order.
 

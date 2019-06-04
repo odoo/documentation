@@ -2,7 +2,7 @@
 How to setup your teams, sales process and objectives?
 ======================================================
 
-This quick step-by-step guide will lead you through Odoo CRM and help
+This quick step-by-step guide will lead you through Twenty20 CRM and help
 you handle your sales funnel easily and constantly manage your sales
 funnel from lead to customer.
 
@@ -29,7 +29,7 @@ Introduction to the Sales Planner
 The Sales Planner is a useful step-by-step guide created to help you
 implement your sales funnel and define your sales objectives easier. We
 strongly recommend you to go through every step of the tool the first
-time you use Odoo CRM and to follow the requirements. Your input are
+time you use Twenty20 CRM and to follow the requirements. Your input are
 strictly personal and intended as a personal guide and mentor into your
 work. As it does not interact with the backend, you are free to adapt
 any detail whenever you feel it is needed.
@@ -62,7 +62,7 @@ company Tim is selling products and John is selling maintenance
 contracts, they will be assigned to different teams and will only
 receive opportunities that make sense to them.
 
-In Odoo CRM, you can create a new user on the fly and assign it directly
+In Twenty20 CRM, you can create a new user on the fly and assign it directly
 to a sales team. From the **Dashboard**, click on the button **More** of
 your selected sales team, then on **Settings**. Then, under the
 **Assignation** section, click on **Create** to add a new salesperson to
@@ -98,7 +98,7 @@ to define the stages of your pipeline.
 Set up incoming email to generate opportunities
 -----------------------------------------------
 
-In Odoo CRM, one way to generate opportunities into your sales team is
+In Twenty20 CRM, one way to generate opportunities into your sales team is
 to create a generic email address as a trigger. For example, if the
 personal email address of your Direct team is
 `direct@mycompany.example.com <mailto:direct@mycompany.example.com>`__\, 

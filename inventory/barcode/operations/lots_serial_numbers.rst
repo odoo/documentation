@@ -18,11 +18,11 @@ outgoing deliveries:
 What is the difference between **Lots** and **Serial Numbers**?
 
 -   **Lot** numbers are attributed to several identical products, so each
-    time you scan a lot number, Odoo will add one on the product
+    time you scan a lot number, Twenty20 will add one on the product
     count.
 
 -   On the opposite, a **serial number** is unique, and represented by only
-    one barcode, sticked on only one item. This means that Odoo won't
+    one barcode, sticked on only one item. This means that Twenty20 won't
     accept scanning the same serial number more than once per
     operation.
 

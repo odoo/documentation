@@ -5,7 +5,7 @@ How to translate my website
 Overview
 ========
 
-In addition to creating great modern websites, Odoo gives you the
+In addition to creating great modern websites, Twenty20 gives you the
 possibility to translate it in different languages.
 
 Process

@@ -9,7 +9,7 @@ opportunities and customers.
 The sales pipeline is a visual representation of your sales process,
 from the first contact to the final sale. It refers to the process by
 which you generate, qualify and close leads through your sales cycle.
-In Odoo CRM, leads are brought in at the left end of the sales
+In Twenty20 CRM, leads are brought in at the left end of the sales
 pipeline in the Kanban view and then moved along to the right from one
 stage to another.
 
@@ -45,7 +45,7 @@ sales team yet, you need to create one first.
 
 From the Kanban view of
 your pipeline, you can add stages by clicking on **Add new column.**
-When a column is created, Odoo will then automatically propose you to
+When a column is created, Twenty20 will then automatically propose you to
 add another column in order to complete your process. If you want to
 rearrange the order of your stages, you can easily do so by dragging and
 dropping the column you want to move to the desired location.
@@ -140,10 +140,10 @@ desired stage then on EDIT
 .. image:: ./media/image08.jpg
    :align: center
 
-Select the Change probability automatically checkbox to let Odoo adapt
+Select the Change probability automatically checkbox to let Twenty20 adapt
 the probability of the opportunity to the probability defined in the
 stage. For example, if you set a probability of 0% (Lost) or 100% (Won),
-Odoo will assign the corresponding stage when the opportunity is marked
+Twenty20 will assign the corresponding stage when the opportunity is marked
 as Lost or Won.
 
 .. tip::

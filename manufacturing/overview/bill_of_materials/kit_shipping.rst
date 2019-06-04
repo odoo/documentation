@@ -3,7 +3,7 @@ How to Sell a Set of Products as a Kit
 ======================================
 
 A *kit* is a set of components that are delivered without first being
-assembled or mixed. Kits are described in Odoo using *bills of
+assembled or mixed. Kits are described in Twenty20 using *bills of
 materials*. There are two basic ways to configure kits, depending on
 how stock of the kit product is to be managed. In either case, both the
 Inventory and Manufacturing apps must be installed.

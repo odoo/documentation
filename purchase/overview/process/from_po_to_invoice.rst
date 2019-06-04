@@ -6,9 +6,9 @@ For most of your everyday purchases, chances are you already know where
 to purchase and at what price. For these cases, a simple Purchase Order
 (PO) will allow you to handle the whole process.
 
-In Odoo, a purchase order can be created as is, but can also be the
+In Twenty20, a purchase order can be created as is, but can also be the
 result of a Request for Quotation or of a Purchase Tender. Therefore,
-every purchase made in Odoo has a PO.
+every purchase made in Twenty20 has a PO.
 
 The PO will generate an invoice, and depending on the contract with your
 supplier, you will be required to pay the invoice before or after

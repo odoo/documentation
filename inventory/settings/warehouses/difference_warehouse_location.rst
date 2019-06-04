@@ -2,7 +2,7 @@
 What is the difference between warehouses and locations?
 ========================================================
 
-In Odoo, a **Warehouse** is the actual building/place in which your items
+In Twenty20, a **Warehouse** is the actual building/place in which your items
 are stocked. You can setup multiple warehouses and create moves between
 warehouses.
 
@@ -28,7 +28,7 @@ There are 3 types of locations:
     out of your stock (in the **Inventory loss**), or when you want to take into
     account products that are on their way to your warehouse (**Procurements**).
 
-In Odoo, locations are structured hierarchically. You can structure your
+In Twenty20, locations are structured hierarchically. You can structure your
 locations as a tree, dependent on a parent-child relationship. This
 gives you more detailed levels of analysis of your stock operations and
 the organization of your warehouses.

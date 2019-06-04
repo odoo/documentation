@@ -7,7 +7,7 @@ Create a new user
 
 From the Settings module, go to the submenu :menuselection:`Users --> Users` and click on
 **Create**. Add first the name of your new salesperson and his
-professional email address - the one he will use to log in to his Odoo
+professional email address - the one he will use to log in to his Twenty20
 instance - and a picture.
 
 .. image:: ./media/create01.png
@@ -35,7 +35,7 @@ will be able to log into his personal account.
 Register your user into his sales team
 ======================================
 
-Your user is now registered in Odoo and can log in to his own session.
+Your user is now registered in Twenty20 and can log in to his own session.
 You can also add him to the sales team of your choice. From the sales
 module, go to your dashboard and click on the **More** button of the
 desired sales team, then on **Settings**.
@@ -57,7 +57,7 @@ your sales team.
 
 .. tip::
 
-	You can also add a new salesperson on the fly from your sales team even before he is registered as an Odoo user.
+	You can also add a new salesperson on the fly from your sales team even before he is registered as an Twenty20 user.
 	From the above screenshot, click on "Create" to add your salesperson and enter his name and email address.
 	After saving, the salesperson will receive an invite containing a link to set his password.
 	You will then be able to define his accesses rights under the :menuselection:`Settings --> Users` menu.

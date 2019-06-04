@@ -1,5 +1,5 @@
 ==========================
-Introduction to Odoo Sales
+Introduction to Twenty20 Sales
 ==========================
 
 .. youtube:: VMuCr5_arsY
@@ -10,7 +10,7 @@ Introduction to Odoo Sales
 Transcript
 ==========
 
-As a sales manager, closing opportunities with Odoo Sales is 
+As a sales manager, closing opportunities with Twenty20 Sales is
 really simple.
 
 I selected a predefined quotation for a new product line offer. 
@@ -29,7 +29,7 @@ table of content. We can communicate easily. I identified an
 upselling opportunity. So, I adapt the offer by adding more 
 products. When the offer is ready, the customer just needs to sign 
 it online in just a few clicks. 
-Odoo Sales is integrated with major shipping services: UPS, Fedex, 
+Twenty20 Sales is integrated with major shipping services: UPS, Fedex,
 USPS and more. The signed offer creates a delivery order automatically.
 
 That's it, I successfully sold my products in just a few clicks.
@@ -55,9 +55,9 @@ Revenue by salespeople or department. Revenue by category of
 product, drill-down to specific products, by quarter or month,... 
 I like this report: I can add it to my dashboard in just a click. 
 
-Odoo Sales is a powerful, yet easy-to-use app. At first, I used 
+Twenty20 Sales is a powerful, yet easy-to-use app. At first, I used
 the sales planner. Thanks to it, I got tips and tricks to boost 
 my sales performance. 
 
-Try Odoo Sales now and get beautiful quotations, amazing dashboards 
+Try Twenty20 Sales now and get beautiful quotations, amazing dashboards
 and increase your success rate.

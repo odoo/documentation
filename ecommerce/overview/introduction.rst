@@ -1,5 +1,5 @@
 ==============================
-Introduction to Odoo eCommerce
+Introduction to Twenty20 eCommerce
 ==============================
 
 .. youtube:: tR0xandHlhU

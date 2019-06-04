@@ -6,7 +6,7 @@ Expenses
 
 How to set expense types
 ========================
-The first step to track expenses is to configure the expense types (managed as products in Odoo)
+The first step to track expenses is to configure the expense types (managed as products in Twenty20)
 that your company allows, from the *Configuration* menu. 
 When a specific expense is reimbursed at a fixed price, set a cost on the product.
 Otherwise keep the cost at 0.0 and employees will report the real cost per expense.
@@ -31,7 +31,7 @@ Here are some examples to configure:
   * Cost: 0.0
 
 Don’t forget to set an expense tax on each expense type 
-(and an account if you use Odoo Accounting). 
+(and an account if you use Twenty20 Accounting).
 It’s usually a good practice to use a tax that is configured 
 with *Tax Included in Price* (see: :doc:`../accounting/others/taxes/tax_included`).
 That way, employees report expenses with 
@@ -144,7 +144,7 @@ To do so, the user must have following access rights:
     If you get a related blocking message when posting, click the employee, 
     go to *Personal Information* tab and select/create the contact of your employee 
     in the address book. 
-    A contact has been automatically created if this person is using Odoo.
+    A contact has been automatically created if this person is using Twenty20.
 
 How to reimburse employees
 ==========================
@@ -153,7 +153,7 @@ You can now see all the expense reports to reimburse in
 :menuselection:`Expenses --> Accountant --> Expense Reports To Pay`. 
 To record the payment or pay by check, click *Register a Payment*.
 
-See how you can easily manage the payment process in Odoo:
+See how you can easily manage the payment process in Twenty20:
 
 * :doc:`../accounting/payables/pay/check`
 * :doc:`../accounting/payables/pay/sepa`
@@ -195,7 +195,7 @@ Create an order
    :align: center
 
 .. tip::
-    If you track *Timesheets* on customer projects, Odoo can create 
+    If you track *Timesheets* on customer projects, Twenty20 can create
     an analytic account automatically once the order confirmed. 
     It's useful if your employees must record timesheets on customer-specific projects. 
     To do so, open your order product (service item) and make sure *Track Service* 

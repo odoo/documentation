@@ -1,5 +1,5 @@
 ==============================
-How to configure eBay in Odoo?
+How to configure eBay in Twenty20?
 ==============================
 
 Create eBay tokens
@@ -16,9 +16,9 @@ by clicking on the adequate buttons.
 After the creation of the keys, you can get the user token. To do so, click on
 the **Get a User Token** link in the bottom of the page. Go through the form,
 log in with you eBay account and you will get the keys and token needed to
-configure the module in Odoo.
+configure the module in Twenty20.
 
-Set up tokens in Odoo?
+Set up tokens in Twenty20?
 ======================
 
 To set up the eBay integration, go to :menuselection:`Sales --> Configuration --> Settings`.

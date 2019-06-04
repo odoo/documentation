@@ -1,8 +1,8 @@
 ==========================================================
-How to track your website traffic from your Odoo Dashboard
+How to track your website traffic from your Twenty20 Dashboard
 ==========================================================
 
-You can follow your traffic statistics straight from your Odoo Website 
+You can follow your traffic statistics straight from your Twenty20 Website
 Dashboard thanks to Google Analytics.
 
 - A preliminary step is creating a Google Analytics account and entering the 
@@ -16,7 +16,7 @@ Dashboard thanks to Google Analytics.
 .. image:: media/google_analytics_api.png
     :align: center
 
-- Create a new project and give it a name (e.g. Odoo).
+- Create a new project and give it a name (e.g. Twenty20).
   This project is needed to store your API credentials.
 
 .. image:: media/google_analytics_create_project.png
@@ -27,7 +27,7 @@ Dashboard thanks to Google Analytics.
 .. image:: media/google_analytics_enable.png
     :align: center
 
-- Create credentials to use in Odoo.
+- Create credentials to use in Twenty20.
 
 .. image:: media/google_analytics_create_credentials.png
     :align: center
@@ -39,9 +39,9 @@ Dashboard thanks to Google Analytics.
     :align: center
 
 - Then you can create a Client ID.
-  Enter the name of the application (e.g. Odoo) and the allowed pages on 
+  Enter the name of the application (e.g. Twenty20) and the allowed pages on
   which you will be redirected. The *Authorized JavaScript origin* is your 
-  Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
+  Twenty20's instance URL. The *Authorized redirect URI* is your Twenty20's instance
   URL followed by '/google_account/authentication'.
 
 .. image:: media/google_analytics_authorization.png
@@ -49,22 +49,22 @@ Dashboard thanks to Google Analytics.
 
 
 - Go through the Consent Screen step by entering a product name 
-  (e.g. Google Analytics in Odoo). Feel free to check the customizations options 
+  (e.g. Google Analytics in Twenty20). Feel free to check the customizations options
   but this is not mandatory. The Consent Screen will only show up when you enter 
-  the Client ID in Odoo for the first time.
+  the Client ID in Twenty20 for the first time.
 
-- Finally you are provided with your Client ID. Copy and paste it in Odoo.
+- Finally you are provided with your Client ID. Copy and paste it in Twenty20.
 
 .. image:: media/google_analytics_client_id.png
     :align: center
 
-- Open your Website Dashboard in Odoo and link your Analytics account. 
+- Open your Website Dashboard in Twenty20 and link your Analytics account.
   to past your Client ID.
 
 .. image:: media/google_analytics_start.png
     :align: center
 
-- As a last step, authorize Odoo to access Google API.
+- As a last step, authorize Twenty20 to access Google API.
 
 .. image:: media/google_analytics_login.png
     :align: center

@@ -42,7 +42,7 @@ Packaging is the physical container that protects your product.
 If you are selling computers, the packaging contains the computer with
 the notice and the power plug.
 
-In Odoo, packagings are just used for indicative purpose.
+In Twenty20, packagings are just used for indicative purpose.
 
 .. image:: media/usage03.png
     :align: center

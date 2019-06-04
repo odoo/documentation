@@ -1,5 +1,5 @@
 ======================
-Odoo CRM Terminologies
+Twenty20 CRM Terminologies
 ======================
 
 -  **CRM (Customer relationship management)**: 
@@ -20,7 +20,7 @@ Odoo CRM Terminologies
         cycle.
 
 -  **Sales stage** : 
-        In Odoo CRM, a stage defines where an opportunity
+        In Twenty20 CRM, a stage defines where an opportunity
         is in your sales cycle and its probability to close a sale.
 
 -  **Lead :** 
@@ -34,7 +34,7 @@ Odoo CRM Terminologies
         to a sales representative
 
 -  **Customer :** 
-        In Odoo CRM, a customer refers to any contact within
+        In Twenty20 CRM, a customer refers to any contact within
         your database, whether it is a lead, an opportunity, a client or
         a company.
 
@@ -51,7 +51,7 @@ Odoo CRM Terminologies
         sales" or not.
 
 -  **Kanban view :** 
-        In Odoo, the Kanban view is a workflow
+        In Twenty20, the Kanban view is a workflow
         visualisation tool halfway between a `list
         view <https://www.odoo.com/documentation/8.0/reference/views.html#reference-views-list>`__
         and a non-editable `form
@@ -72,6 +72,6 @@ Odoo CRM Terminologies
 
 -  **Campaign:** 
         Coordinated set of actions sent via various channels to
-        a target audience and whose goal is to generate leads. In Odoo
+        a target audience and whose goal is to generate leads. In Twenty20
         CRM, you can link a lead to the campaign which he comes from in
         order to measure its efficiency.

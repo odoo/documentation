@@ -50,7 +50,7 @@ In order to sell services and to send invoices, you need to install the
 Create products
 ---------------
 
-In Odoo, each milestone of your project is considered as a product. From
+In Twenty20, each milestone of your project is considered as a product. From
 the **Sales** application, use the menu :menuselection:`Sales --> Products`, 
 create a new product with the following setup:
 

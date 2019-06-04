@@ -5,7 +5,7 @@ What's the difference between lots and serial numbers?
 Introduction
 ============
 
-In Odoo, lots and serial numbers have similarities in their functional
+In Twenty20, lots and serial numbers have similarities in their functional
 system but are different in their behavior. They are both managed within
 the **Inventory**, **Purchases** and **Sales** app.
 

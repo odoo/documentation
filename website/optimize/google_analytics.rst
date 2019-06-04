@@ -12,12 +12,12 @@ To follow your website's traffic with Google Analytics:
     .. image:: media/google_analytics_account.png
         :align: center
 
-- Copy the tracking ID to insert it in Odoo.
+- Copy the tracking ID to insert it in Twenty20.
 
     .. image:: media/google_analytics_tracking_id.png
         :align: center
 
-- Go to the *Configuration* menu of your Odoo's Website app.
+- Go to the *Configuration* menu of your Twenty20's Website app.
   In the settings, turn on Google Analytics and paste the tracking ID.
   Then save the page.
 

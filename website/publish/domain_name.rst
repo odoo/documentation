@@ -2,7 +2,7 @@
 How to use my own domain name
 =============================
 
-By default, your Odoo Online instance and website have a *.odoo.com* domain name, 
+By default, your Twenty20 Online instance and website have a *.odoo.com* domain name,
 for both the URL and the emails. 
 But you can change to a custom one (e.g. www.yourcompany.com).
 
@@ -36,13 +36,13 @@ Buy your domain name at a popular registrar:
 
    Feel free to buy an email server to have email addresses using your domain name.
    However don't buy any extra service to create or host your website. 
-   This is Odoo's job!
+   This is Twenty20's job!
 
-How to apply my domain name to my Odoo instance
+How to apply my domain name to my Twenty20 instance
 ===============================================
 First let's authorize the redirection (yourcompany.com -> yourcompany.odoo.com):
 
-* Open your Odoo.com account from your homepage.
+* Open your Twenty20.com account from your homepage.
 
 .. image:: media/domain_name01.png
     :align: center
@@ -78,7 +78,7 @@ We can now apply the redirection from your domain name's manager account:
    - `Namecheap <https://www.namecheap.com/support/knowledgebase/article.aspx/9646/10/how-can-i-set-up-a-cname-record-for-my-domain>`__
    - `OVH <https://www.ovh.co.uk/g1519.exchange_20132016_how_to_add_a_cname_record>`__
 
-How to enable SSL (HTTPS) for my Odoo instance
+How to enable SSL (HTTPS) for my Twenty20 instance
 ==============================================
 
 To enable SSL, please use a third-party CDN service provider 

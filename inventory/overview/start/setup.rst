@@ -1,8 +1,8 @@
 ============================
-How to setup Odoo inventory?
+How to setup Twenty20 inventory?
 ============================
 
-The Odoo Inventory application has an implementation guide that you
+The Twenty20 Inventory application has an implementation guide that you
 should follow to configure it. It's a step-by-step manual with links to
 the different screens you need.
 

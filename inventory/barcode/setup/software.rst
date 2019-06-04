@@ -1,5 +1,5 @@
 =====================================
-How to activate the barcodes in Odoo?
+How to activate the barcodes in Twenty20?
 =====================================
 
 The barcode scanning features can save you a lot of the time usually
@@ -26,7 +26,7 @@ Set products barcodes
     :align: center
 
 In order to fill a picking or to perform an inventory, you need to make
-sure that your products are encoded in Odoo along with their barcodes.
+sure that your products are encoded in Twenty20 along with their barcodes.
 If this is not already done, you can fill in the products barcodes
 through a handy interface. Go to 
 :menuselection:`Inventory --> Configuration --> Settings`
@@ -69,5 +69,5 @@ proper authorization: you must pay the International Article Numbering
 Association a fee in exchange for an EAN code sequence (that's why no
 two products in a store will ever have the same EAN code).
 
-Still, as Odoo supports any string as a barcode, so you can always
+Still, as Twenty20 supports any string as a barcode, so you can always
 define your own barcode format for internal use.
