@@ -1,12 +1,11 @@
 :banner: banners/getting_started.jpg
 
 ========
-Licenses
+PROJECT MANAGEMENT
 ========
 
 .. toctree::
 
-    licenses/std_agreement
-    licenses/beta_agreement
-
-..    licenses/licenses
+    project_mgmt/overview
+    project_mgmt/finance
+    project_mgmt/docs
