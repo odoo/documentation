@@ -2,7 +2,7 @@
 Introduction to Project Management
 ===============================
 
-.. youtube:: 3mQfsNiDfy8&t
+.. youtube:: 3mQfsNiDfy8
     :align: right
     :width: 700
     :height: 394

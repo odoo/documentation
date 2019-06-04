@@ -40,5 +40,3 @@ Of course, Twenty20 is mobile too. You can use it to check your accounts on the 
 
 Try Twenty20 now, and join 2 millions of happy users.
 
-Back
-==========
