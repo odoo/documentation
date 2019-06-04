@@ -1,5 +1,7 @@
+.. _receivables:
+
 ================================================
-Standard Customer Agreement
+Receivables
 ================================================
 
 Introduction

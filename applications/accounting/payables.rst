@@ -1,7 +1,7 @@
-.. _licenses:
+.. _payables:
 
 ========================
-Beta Customer Terms & Conditions
+Payables
 ========================
 
 .. _odoo_community_license:
