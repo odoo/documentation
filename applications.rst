@@ -1,16 +1,16 @@
 :banner: banners/sign.jpg
 
 =====
-TWENTY20 CONSTRUCTION CLOUD
+APPLICATIONS
 =====
 
 .. toctree::
     :hidden:
 
-    applications/licenses
-    applications/terms
-    applications/others
-    applications/bank
+    applications/accounting
+    applications/project_mgmt
+    applications/hr
+    applications/estimating
 
 Accounting
 ========

@@ -1,7 +1,7 @@
 :banner: banners/sign.jpg
 
 ===============================
-Twenty20 Documentation
+Twenty20 CONSTRUCTION CLOUD
 ===============================
 
 .. rst-class:: index-tree
@@ -9,7 +9,6 @@ Twenty20 Documentation
 .. toctree::
     :titlesonly:
 
-    Index <self>
     applications
     practical
     internal
