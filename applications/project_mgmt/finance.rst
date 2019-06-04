@@ -5,8 +5,12 @@ Project Finances
 .. toctree::
    :titlesonly:
 
-   payables/vendor_invoices
-   payables/pay
-   payables/faq
-   payables/misc
+    finance/contract
+    finance/subcontract
+    finance/po
+    finance/pco
+    finance/sco
+    finance/change_request
+    finance/analysis
+
 
