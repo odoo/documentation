@@ -1,10 +1,8 @@
 ========
-Overview
+Project Portal
 ========
 
 .. toctree::
    :titlesonly:
 
-   overview/main_concepts
-   overview/getting_started
-   overview/process_overview
+   portal/overview
