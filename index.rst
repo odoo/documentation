@@ -1,7 +1,7 @@
 :banner: banners/sign.jpg
 
 =====
-TWENTY20
+TWENTY20 APPLILCATIONS
 =====
 
 .. rst-class:: index-tree

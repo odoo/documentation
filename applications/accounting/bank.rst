@@ -1,6 +1,8 @@
-===========
-Bank & Cash
-===========
+.. _bank:
+
+========================
+Banking & Cash Management
+========================
 
 .. toctree::
    :titlesonly:
@@ -10,3 +12,5 @@ Bank & Cash
    bank/misc
    bank/reconciliation
    bank/faq
+
+

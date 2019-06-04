@@ -1,4 +1,4 @@
-:banner: banners/getting_started.jpg
+:banner: banners/accounting.jpg
 
 ========
 ACCOUNTING
@@ -9,5 +9,8 @@ ACCOUNTING
     accounting/overview
     accounting/payables
     accounting/receivables
+    accounting/bank
+    accounting/advisor
+    accounting/reports
+    accounting/others
 
-..    licenses/licenses
