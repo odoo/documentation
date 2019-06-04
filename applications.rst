@@ -1,7 +1,7 @@
 :banner: banners/sign.jpg
 
 =====
-APPLICATIONS
+TWENTY20 CONSTRUCTION CLOUD
 =====
 
 .. toctree::
