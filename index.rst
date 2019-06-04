@@ -13,6 +13,5 @@ Twenty20 Documentation
     applications
     practical
     internal
-    legal
     accounting-new
 ..    business

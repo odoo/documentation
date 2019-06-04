@@ -1,22 +1,23 @@
 :banner: banners/sign.jpg
 
 =====
-Legal
+ACCOUNTING
 =====
 
 .. toctree::
     :hidden:
 
-    legal/licenses
-    legal/terms
-    legal/others
+    accounting-new/licenses
+    accounting-new/terms
+    accounting-new/others
+    accounting-new/bank
 
-Licenses
+Payables
 ========
 
 - :ref:`licenses`
 
-Terms and Conditions
+Receivables
 ====================
 
 .. |nbsp| raw:: html
@@ -56,7 +57,7 @@ Terms and Conditions
 
 
 
-Other legal references
+Banking
 ======================
 
 - `Twenty20 Online Service Level Agreement <https://www.odoo.com/page/odoo-online-sla>`_
