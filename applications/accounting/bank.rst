@@ -1,7 +1,7 @@
 .. _bank:
 
 ========================
-Banking & Cash Management
+Banking
 ========================
 
 .. toctree::

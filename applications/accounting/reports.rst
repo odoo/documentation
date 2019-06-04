@@ -1,6 +1,6 @@
 .. _reports:
 
 ========================
-Accounting Reports & Financial Statements
+Reports & Financials
 ========================
 
