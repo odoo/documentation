@@ -13,5 +13,4 @@ Twenty20 Documentation
     applications
     practical
     internal
-    accounting-new
 ..    business
