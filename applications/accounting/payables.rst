@@ -1,4 +1,4 @@
-.. _payables:
+.. _accounting:
 
 ========================
 Payables
