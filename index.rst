@@ -9,7 +9,7 @@ TWENTY20 APPLICATIONS
 .. toctree::
     :titlesonly:
 
-    applications
-    practical
-    internal
+    accounting
+    project_mgmt
+    sales
 
