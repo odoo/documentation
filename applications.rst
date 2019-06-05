@@ -1,8 +1,6 @@
 :banner: banners/sign.jpg
 
-=====
-APPLICATIONS
-=====
+
 
 .. toctree::
     :hidden:
