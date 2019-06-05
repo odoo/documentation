@@ -1,8 +1,8 @@
 :banner: banners/sign.jpg
 
-=====
-TWENTY20 APPLILCATIONS
-=====
+====================
+TWENTY20 APPLICATIONS
+====================
 
 .. rst-class:: index-tree
 
@@ -12,4 +12,4 @@ TWENTY20 APPLILCATIONS
     applications
     practical
     internal
-..    business
+
