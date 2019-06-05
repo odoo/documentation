@@ -1,4 +1,4 @@
-.. _accounting_overview:
+
 
 ========
 Overview
