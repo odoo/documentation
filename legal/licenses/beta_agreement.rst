@@ -14,9 +14,9 @@ By subscribing to Twenty20 Construction Cloud (the "Services") provided by Hinds
 
 1. Term of the Agreement
 ================================================
-The duration of the Agreement (hereafter the “Term”) shall be minimally one (1) year or as otherwise specified in the top of this Agreement starting on the date of the signature of the Agreement. It is automatically renewed for one year, or as otherwise specified and agreed to by both parties in writing. Either party may terminate the renewal by notifying the other party at least 30 days prior to the termination of the current agreement by registered mail to the other party.
+The duration of the Agreement (hereafter the “Term”) shall be minimally one (1) year or as otherwise specified in the sales proposal starting on the date of the signature of the Agreement. It is automatically renewed for one year, or as otherwise specified and agreed to by both parties in writing. Either party may terminate the renewal by notifying the other party at least 30 days prior to the termination of the current agreement by registered mail to the other party.
 
-2. Definitions
+2 Definitions
 ================================================
 2.1 SOFTWARE
 --------------------------------------------------
@@ -24,7 +24,7 @@ Any Twenty20 product, application, or tool that is provided and accessed as a pa
 
 2.2 USER
 --------------------------------------------------
-Any active user account with access to the Software in create and/or edit mode. Deactivated user accounts and accounts used by external people (or systems) who only have limited access to the Software through the portal facilities (known as "Portal Users" or “Collaboration Users”) are not counted as Users
+Any active user account with access to the Software in create and/or edit mode. Deactivated user accounts and accounts used by external people (or systems) who only have limited access to the Software through the portal facilities (known as "Portal Users" or “Collaboration Users”) are not counted as Users.
 
 2.3 BUG
 --------------------------------------------------
@@ -34,25 +34,25 @@ A Bug is considered any failure of the Software that results in a complete stop,
 --------------------------------------------------
 "Confidential Information" means all information designated as such by either party in writing together with all other information which relates to the business, affairs, products, developments, trade secrets, know-how, personnel, customers and suppliers of either party, or information which may reasonably be regarded as the confidential information of the disclosing party.
 
-3. Access to Software
+3 Access to Software
 ================================================
-This Software can only be used (executed, modified, executed after modifications) with a valid Software Subscription for the correct number of users.
+This Software can only be used (executed, modified, executed after modifications) with a valid Software Subscription for the correct number of contracted users.
 
 It is forbidden to publish, distribute, sublicense, or sell copies of the Software or modified copies of the Software, unless otherwise agreed to in writing by Hindsight.
 
-4. Services
+4 Services
 ================================================
 4.1 BUG FIXING SERVICE
 ------------------------------
-For the duration of this Agreement, Hindsight commits to making all reasonable efforts to remedy any Bug of the Software submitted by the Customer through the appropriate channel (typically, Hindsight service desk, email address, or website form), and to start handling such Customer submissions within 2 business days. 
+For the duration of this Agreement, Hindsight commits to making all reasonable efforts to remedy any Bug of the Software submitted by the Customer through the appropriate channel (typically, Hindsight service desk, email address, or website form), and to start handling such Customer submissions within 2 business days after verified receipt.
 
 4.2 SUPPORT SERVICE
 ------------------------------
-Support Scope. For the duration of this Agreement, Hindsight offers a support service, with an unlimited number of tickets for bugs. This support service does not include support to customize the Software, develop new modules, or perform specific actions on your database on your behalf. (e.g. recording data, or configuring the system for you). Those services may be included in the Investment Summary or offered as an extra through our professional services group and quoted independently of the Software Agreement.
+Support Scope: For the duration of this Agreement, Hindsight offers a support service, with an unlimited number of tickets for bugs. This support service does not include support to customize the Software, develop new modules, or perform specific actions on your database on your behalf. (e.g. recording data, reconciling accounting transactions, or configuring the system for you). Those services may be included in the Investment Summary or offered as an extra through our professional services group and quoted independently of the Software Agreement.
 
-Support Service Support issues should be submitted online on https://twenty20hindsight.com/help. In case of emergency, you can call our support teams directly for a real time answer.
+Support Service Support issues should be submitted online on https://twenty20hindsight.com/help or by email to support@twenty20hindsight.com. In case of emergency, you can call our support teams directly for a real time answer by calling 562-285-9991.
 
-Our support teams are split across 2 continents in India (Ahmedabad) and United States (Arizona and Pennsylvania). Support is offered during normal business hours 8am - 5pm Arizona time Monday - Friday excluding legal holidays in the respective countries.
+Our support teams are split across 3 continents in India (Ahmedabad), United States (Arizona and Pennsylvania) and Costa Rica. Support is offered during normal business hours 8am - 5pm Arizona time Monday - Friday excluding legal holidays in the respective countries.
 
 You will have a dedicated implementation specialist that will be based in the United States and will be your primary contact during the implementation and training phases. After that time, support may be handled by assignment in our help-desk que.
 
@@ -92,19 +92,19 @@ Customer shall receive unlimited support for all Customer’s employees by way o
 
 6.2 CUSTOMER MONEY BACK GUARANTEE
 ------------------------------
-Customer shall receive a 30 day money back guarantee from the time of the date of this signed agreement. Hindsight will return the funds to Customer within (30) days of receipt of a written request for money back. The money back guarantee does not include professional services; if any.
+Customer is entitled to receive a 30 day money back guarantee from the time of the date of this signed agreement. Hindsight will return the funds to Customer within (30) days of receipt of a written request for money back. The money back guarantee does not include professional services; if any.
 
 6.3 CUSTOMER PARTICIPATION IN REFERRAL PROGRAM
 ------------------------------
-Customer shall be included in our customer referral program that can reduce your annual price to $0. If Customer refers another customer (Referral) to Hindsight and Referral subscribes to the Software, Hindsight will credit 10% of the purchased price of the Software subscription to the next Customer contract renewal. Total discounts earned are based on a cash basis; they are not earned until payment has been received from the Referral. Credits will be applied to the next Customer contract signing. Credits earned will accumulate until next renewal.
+Customer is entitled to particiapte in our customer referral program. This program offers you a way to extend your Twenty20 Construction Cloud Subscription without additional payments. With this program, if you refer another company to us that ends up subscribing to Twenty20 Construction Cloud, Hindsight will extend your contract subscription term by 3 additional months per paid referral. We hope that you will take advanatge of this opportunity to receive additional free months.
 
 6.4 CONTRACT RENEWAL
 ------------------------------
-If no other agreement is in place, the Contract will automatically renew for a one (1) year period, and will automatically renew each year unless thirty (30) days prior written notice is provided.  If the current retail price of the Software has changed the subscription price will increase no more than 15% of the previous signed contract amount. Any new modules that are desired at the time of renewal and not included on this contract will be in addition to the Agreement and will be billed at the time of the Contract renewal.
+If no other agreement is in place, the Contract will automatically renew for a one (1) year period, and will automatically renew each year unless thirty (30) days prior written notice is provided.  If the current retail price of the Software has changed the beta customer subscription price will increase no more than 15% of the previous signed contract amount. Any new modules that are desired at the time of renewal and not included on this contract will be in addition to the Agreement and will be billed at the time of the contract renewal.
 
 6.5 CHARGES AND OTHER FINANCIAL PROVISIONS
 ------------------------------
-Customer shall pay Hindsight the applicable annual fees for the Software and Services in the present Agreement based on the number of Users and Apps as specified in the Investment Summary of this document. Services are invoiced at the beginning of the Agreement Term. Payments are due in full per the payment conditions specified on the corresponding invoice no later than 30 days after the new contract has begun. If payment has not been received within 30 days of a contract renewal, Hindsight will disable the Customer’s Software and Services, until payment has been made in full.
+Customer shall pay Hindsight the applicable annual fees for the Software and Services in the present Agreement based on the number of Users and Applications specified in the Investment Summary of the sales proposal. Services are invoiced at the beginning of the Agreement Term. Payments are due in full per the payment conditions specified on the corresponding invoice no later than 30 days after the new contract has begun. If payment has not been received within 30 days of a contract renewal, Hindsight will disable the Customer’s Software and Services, until payment has been made in full.
 
 6.6 NO SOLICITING
 ------------------------------
