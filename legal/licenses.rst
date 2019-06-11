@@ -1,7 +1,7 @@
 :banner: banners/getting_started.jpg
 
 ========
-Licenses
+Software Licenses
 ========
 
 .. toctree::
