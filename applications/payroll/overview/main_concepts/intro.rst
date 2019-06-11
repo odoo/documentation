@@ -1,5 +1,5 @@
 ===============================
-Introduction to Twenty20 Accounting
+Importing time
 ===============================
 
 .. youtube:: 6XgKPjgyoec
@@ -10,33 +10,28 @@ Introduction to Twenty20 Accounting
 Transcript of Video
 ==========
 
-Twenty20 is beautiful accounting software designed for the needs of the 21st century.
+To import time into Twenty20, there is a specific format that is required.
 
-Twenty20 connects directly to your bank or paypal account. Transactions are synchronized
-every hour and reconciliation is blazing fast. It's like magic.
+1. Simply go to Human Rousources | TimeCards | IMport time
+2. Select the file that you want to imoport
+3. Enter the start date
+4. Validate the time entries
 
-Instantly create invoices and send them with just a click. No need to print them. 
 
-Twenty20 can send them for you by email or regular mail.
+NOte:  If there are entries that do not meet thje criteria, they will be shown in the log details.
 
-Your customers pay online, meaning you get your money right away.
+5. Next you need to "validate defaults"  we need to make sure that the time entries have the appropriate details from the emaployye
+- Make sure that you are selecting all teh records that require default validation
+- Select all
+- Click Action | Validate defaults
 
-Twenty20 accounting is connected with all Twenty20 our apps such as sale, purchase,
-inventory and subscriptions. 
+Submit the time for approval
+==========
 
-This way, recording vendor invoices is also super quick. Set a vendor, select the purchase
-order and Twenty20 fills in everything for you automatically.
 
-Then, just use the SEPA protocol or print checks to pay vendors
-in batches.
+1. Select all the records that need to be approved
+2. Action | Approve
 
-It's that easy with Twenty20.
-
-Wait, there is more. You will love the Twenty20 reports. From legal statements to
-executive summaries, they are fast and dynamic. Use Twenty20's business intelligence feature to navigate
-through all your companies data.
-
-Of course, Twenty20 is mobile too. You can use it to check your accounts on the go.
-
-Try Twenty20 now, and join 2 millions of happy users.
+Create a payslip batch
+==========
 

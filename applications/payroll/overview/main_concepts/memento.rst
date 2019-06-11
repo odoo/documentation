@@ -1,7 +1,7 @@
 :code-column:
 
 ==============================================
-Accounting Memento For Entrepreneurs (US GAAP)
+Importing time
 ==============================================
 
 .. h:div:: intro-list
