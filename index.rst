@@ -12,4 +12,5 @@ TWENTY20 APPLICATIONS
     applications
     practical
     internal
+    legal
 ..    business
