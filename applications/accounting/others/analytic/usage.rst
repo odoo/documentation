@@ -4,11 +4,11 @@ Analytic account use cases
 
 The analytic accounting can be used for several purposes:
 
--  analyse costs of a company
+-  analyze costs of a company
 
 -  reinvoice time to a customer
 
--  analyse performance of a service or a project
+-  analyze performance of a service or a project
 
 To manage analytic accounting, you have to activate it in
 :menuselection:`Configuration --> Settings`:
@@ -91,7 +91,7 @@ accounts shows the distribution of the company's costs using the example above:
 .. image:: media/usage02.png
    :align: center
 
-In this example of a hierarchical structure in Twenty20, you can analyse not
+In this example of a hierarchical structure in Twenty20, you can analyze not
 only the costs of each product range, but also the costs of the whole
 production. A report that relates both general accounts and analytic
 accounts enables you to get a breakdown of costs within a given
@@ -136,7 +136,7 @@ So a law firm will opt for an analytic representation which reflects the
 management of the time that employees work on the different customer
 cases.
 
-Invoiceing for the different cases is a bit unusual. The cases do not match
+Invoicing for the different cases is a bit unusual. The cases do not match
 any entry in the general account nor do they come from purchase or sales
 invoices. They are represented by the various analytic operations and do
 not have exact counterparts in the general accounts. They are calculated
