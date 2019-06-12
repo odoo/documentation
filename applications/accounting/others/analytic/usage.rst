@@ -19,13 +19,13 @@ To manage analytic accounting, you have to activate it in
 To illustrate analytic accounts clearly, you will follow three use
 cases, each in one of three different types of company:
 
-1. Industrial company: Costs Analyse
+1. Industrial company: Cost Analysis
 
-2. Law Firm: reinvoice spent hours
+2. Law Firm: Reinvoice Spent Hours
 
-3. IT/Services Company: performance analysis
+3. IT/Services Company: Performance Analysis
 
-Case 1: Industrial company: Costs Analyse
+Case 1: Industrial company: Cost Analysis
 -----------------------------------------
 
 In industry, you will often find analytic charts of accounts structured
@@ -162,7 +162,7 @@ you can find for your analytic account:
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Consultation (4 h)             | Case 2.1         | -60          |    |                            |             |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
-| Service charges                | Case 1.1         | 280          |    | 705 – Invoiceing services     |             | 280          |
+| Service charges                | Case 1.1         | 280          |    | 705 – Invoiceing services  |             | 280          |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Stationery purchase            | Administrative   | -42          |    | 601 – Furniture purchase   | 42          |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
