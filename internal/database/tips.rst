@@ -82,3 +82,23 @@ delete from mail_messages;
 
 delete from res_partner where id>10;
 
+===========================
+KUBERNETES
+===========================
+Scale a K8 Workload to 1 replica
+========================================
+
+1. Log on to GCP
+2. Access the Kubernbetes Workloads
+3. Click the workload that you want to access
+4. Click actions - Scale and scale the workload to 1 replica
+
+Restore an existing  Twenty20 DB
+========================================
+
+1. Logon to the customer URL   branch.twenty20.io/web/database/manager
+2. click restore DB
+3. Enter the master password
+4. Select the backed up DB and give it a new name
+5. Wait to the new Db to upload and restore
+6.
