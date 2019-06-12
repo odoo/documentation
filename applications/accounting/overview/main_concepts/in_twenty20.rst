@@ -59,7 +59,7 @@ bank interfaces.
 
 In particular, Twenty20's core accounting engine supports:
 
-* Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
+* Anglo-Saxon Accounting (U.S., U.K., and other English-speaking
   countries including Ireland, Canada, Australia, and New Zealand)
   where costs of good sold are reported when products are
   sold/delivered.
