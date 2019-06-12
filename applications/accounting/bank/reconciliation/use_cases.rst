@@ -31,10 +31,10 @@ Use cases
 Case 1: Payments registration
 -----------------------------
 
-We received the payment proof for our invoice of 2100 euros issued to
+We received the payment proof for our invoice of 2100 dollars issued to
 Smith & Co.
 
-We start at our issued Invoice of 2100 euros for Smith & Co. Because the
+We start at our issued Invoice of 2100 dollars for Smith & Co. Because the
 sold product is a service we demand an immediate payment. Our accountant
 only handles the bank statements at the end of week, so we have to mark
 the invoice as paid so we can remember we can start the service with our
@@ -65,14 +65,14 @@ automatically.**
 Case 2: Bank statements reconciliations
 ---------------------------------------
 
-We start at our issued Invoice of 3000 euros for Smith & Co. Let's also
+We start at our issued Invoice of 3000 dollars for Smith & Co. Let's also
 assume that other Invoices are open for different customers.
 
 .. image:: media/use05.png
    :align: center
 
 We receive our bank statement and not only the invoice of Smith & Co has
-been paid, the one of Buzz of 92 euros as well.
+been paid, the one of Buzz of 92 dollars as well.
 
 **Import** or **Create** the bank statements. Please refer to the
 documents from the Bank Feeds section.

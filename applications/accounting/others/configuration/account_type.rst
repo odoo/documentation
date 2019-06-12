@@ -21,41 +21,47 @@ Which are the account types in Twenty20 ?
 Twenty20 covers all accounting types. Therefore, you cannot create new
 account types. Just pick the one related to your account.
 
-+-----------------------------+
-| **List of account types**   |
-+=============================+
-| Receivable                  |
-+-----------------------------+
-| Payable                     |
-+-----------------------------+
-| Bank and Cash               |
-+-----------------------------+
-| Current Assets              |
-+-----------------------------+
-| Non-current Assets          |
-+-----------------------------+
-| Prepayments                 |
-+-----------------------------+
-| Fixed Assets                |
-+-----------------------------+
-| Current Liabilities         |
-+-----------------------------+
-| Non-current Liabilities     |
-+-----------------------------+
-| Equity                      |
-+-----------------------------+
-| Current Year Earnings       |
-+-----------------------------+
-| Other Income                |
-+-----------------------------+
-| Income                      |
-+-----------------------------+
-| Depreciation                |
-+-----------------------------+
-| Expenses                    |
-+-----------------------------+
-| Direct Costs                |
-+-----------------------------+
++-------------------------------+
+| **List of account types**     |
++===============================+
+| Receivable                    |
++-------------------------------+
+| Payable                       |
++-------------------------------+
+| Bank and Cash                 |
++-------------------------------+
+| Credit Card                   |
++-------------------------------+
+| Current Assets                |
++-------------------------------+
+| Non-current Assets            |
++-------------------------------+
+| Prepayments                   |
++-------------------------------+
+| Fixed Assets                  |
++-------------------------------+
+| Current Liabilities           |
++-------------------------------+
+| Non-current Liabilities       |
++-------------------------------+
+| Equity                        |
++-------------------------------+
+| Current Year Earnings         |
++-------------------------------+
+| Other Income                  |
++-------------------------------+
+| Income                        |
++-------------------------------+
+| Depreciation                  |
++-------------------------------+
+| Expenses                      |
++-------------------------------+
+| Direct Costs (Cost of Revenue)|
++-------------------------------+
+| Retention Receivable          |
++-------------------------------+
+| Retention Payable             |
++-------------------------------+
 
 How do I configure my accounts?
 ===============================
@@ -73,7 +79,7 @@ cases, you can create your own accounts too.
 	automatically installed.
 
 To create a new accounts, go to the Accounting application. Open the
-menu :menuselection:`Adviser --> Chart of Accounts`, the click on the
+menu :menuselection:`Adviser --> Chart of Accounts`, then click on the
 **Create** button.
 
 .. image:: ./media/type01.png

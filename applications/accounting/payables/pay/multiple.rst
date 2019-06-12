@@ -19,7 +19,7 @@ when you open the accounting application).
 .. image:: ./media/multiple01.png
   :align: center
 
-To create a invoice, open the Dashboard menu and click on **Vendor Invoices**.
+To create an invoice, open the Dashboard menu and click on **Vendor Invoices**.
 In the Vendor Invoices window, click on **Create**.
 
 .. image:: ./media/multiple02.png

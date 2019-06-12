@@ -4,11 +4,11 @@ Analytic account use cases
 
 The analytic accounting can be used for several purposes:
 
--  analyse costs of a company
+-  analyze costs of a company
 
 -  reinvoice time to a customer
 
--  analyse performance of a service or a project
+-  analyze performance of a service or a project
 
 To manage analytic accounting, you have to activate it in
 :menuselection:`Configuration --> Settings`:
@@ -19,13 +19,13 @@ To manage analytic accounting, you have to activate it in
 To illustrate analytic accounts clearly, you will follow three use
 cases, each in one of three different types of company:
 
-1. Industrial company: Costs Analyse
+1. Industrial company: Cost Analysis
 
-2. Law Firm: reinvoice spent hours
+2. Law Firm: Reinvoice Spent Hours
 
-3. IT/Services Company: performance analysis
+3. IT/Services Company: Performance Analysis
 
-Case 1: Industrial company: Costs Analyse
+Case 1: Industrial company: Cost Analysis
 -----------------------------------------
 
 In industry, you will often find analytic charts of accounts structured
@@ -91,7 +91,7 @@ accounts shows the distribution of the company's costs using the example above:
 .. image:: media/usage02.png
    :align: center
 
-In this example of a hierarchical structure in Twenty20, you can analyse not
+In this example of a hierarchical structure in Twenty20, you can analyze not
 only the costs of each product range, but also the costs of the whole
 production. A report that relates both general accounts and analytic
 accounts enables you to get a breakdown of costs within a given
@@ -136,7 +136,7 @@ So a law firm will opt for an analytic representation which reflects the
 management of the time that employees work on the different customer
 cases.
 
-Invoiceing for the different cases is a bit unusual. The cases do not match
+Invoicing for the different cases is a bit unusual. The cases do not match
 any entry in the general account nor do they come from purchase or sales
 invoices. They are represented by the various analytic operations and do
 not have exact counterparts in the general accounts. They are calculated
@@ -162,7 +162,7 @@ you can find for your analytic account:
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Consultation (4 h)             | Case 2.1         | -60          |    |                            |             |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
-| Service charges                | Case 1.1         | 280          |    | 705 – Invoiceing services     |             | 280          |
+| Service charges                | Case 1.1         | 280          |    | 705 – Invoicing services  |             | 280          |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+
 | Stationery purchase            | Administrative   | -42          |    | 601 – Furniture purchase   | 42          |              |
 +--------------------------------+------------------+--------------+----+----------------------------+-------------+--------------+

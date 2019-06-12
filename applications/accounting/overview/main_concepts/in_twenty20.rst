@@ -2,7 +2,7 @@
 The Accounting behind Twenty20
 ==========================
 
-This page summarises the way Twenty20 deals with typical accounts and
+This page summarizes the way Twenty20 deals with typical accounts and
 transactions.
 
 Double-entry bookkeeping
@@ -59,14 +59,14 @@ bank interfaces.
 
 In particular, Twenty20's core accounting engine supports:
 
-* Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
+* Anglo-Saxon Accounting (U.S., U.K., and other English-speaking
   countries including Ireland, Canada, Australia, and New Zealand)
   where costs of good sold are reported when products are
   sold/delivered.
 * European accounting where expenses are accounted at the vendor
   invoice.
 * Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
+  credit/debit instead of a reversing entry for the original journal items.
 
 Twenty20 also have modules to comply with IFRS rules.
 
