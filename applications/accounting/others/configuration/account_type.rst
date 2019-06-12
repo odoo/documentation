@@ -79,7 +79,7 @@ cases, you can create your own accounts too.
 	automatically installed.
 
 To create a new accounts, go to the Accounting application. Open the
-menu :menuselection:`Adviser --> Chart of Accounts`, the click on the
+menu :menuselection:`Adviser --> Chart of Accounts`, then click on the
 **Create** button.
 
 .. image:: ./media/type01.png
