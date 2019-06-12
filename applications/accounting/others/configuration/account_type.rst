@@ -21,8 +21,8 @@ Which are the account types in Twenty20 ?
 Twenty20 covers all accounting types. Therefore, you cannot create new
 account types. Just pick the one related to your account.
 
-+-----------------------------+
-| **List of account types**   |
++-------------------------------+
+| **List of account types**     |
 +===============================+
 | Receivable                    |
 +-------------------------------+
