@@ -294,8 +294,8 @@ odoo_cover_external = {
     'https://odoo.com/documentation/user/inventory/management/reporting/valuation_methods_anglo_saxon.html'    : 'banners/m_2.jpg',
 }
 
-github_user = 'odoo'
-github_project = 'documentation-user'
+github_user = 'Hindsight-Technology'
+github_project = 'documentation'
 
 # Where are stored the localisations files
 locale_dirs = ['locale/']

@@ -35,3 +35,10 @@ Submit the time for approval
 Create a payslip batch
 ==========
 
+Payroll | Paysliup Batches
+1- Create a new payslip batch
+2- Give it a name
+3- Click add employees to the batch
+4- Select the employees that you would liek to add to the batch
+5- Generate payslips
+
