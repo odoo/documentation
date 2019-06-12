@@ -26,7 +26,7 @@ Year-end checklist
 
 - Reconcile all accounts on your **Balance Sheet**:
 
-  - Agree your bank balances in Twenty20 against your actual bank balances
+  - Verify your bank balances in Twenty20 against your actual bank balances
     on your statements. Utilize the **Bank Reconciliation** report to
     assist with this.
 
