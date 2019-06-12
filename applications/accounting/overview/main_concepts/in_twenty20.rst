@@ -2,7 +2,7 @@
 The Accounting behind Twenty20
 ==========================
 
-This page summarises the way Twenty20 deals with typical accounts and
+This page summarizes the way Twenty20 deals with typical accounts and
 transactions.
 
 Double-entry bookkeeping
