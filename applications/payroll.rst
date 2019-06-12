@@ -1,7 +1,7 @@
 :banner: banners/accounting.jpg
 
 ========
-PAYROLL
+PAYROLL.
 ========
 
 .. toctree::
