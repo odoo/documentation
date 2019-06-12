@@ -66,7 +66,7 @@ In particular, Twenty20's core accounting engine supports:
 * European accounting where expenses are accounted at the vendor
   invoice.
 * Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
+  credit/debit instead of a reversing entry for the original journal items.
 
 Twenty20 also have modules to comply with IFRS rules.
 
