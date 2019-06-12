@@ -1,6 +1,6 @@
-==========================
-Import OFX statement files
-==========================
+=================================
+Import OFX or QFX statement files
+=================================
 
 Open Financial Exchange (OFX) is a unified specification for the
 electronic exchange of financial data between financial institutions,
