@@ -2,11 +2,11 @@
 Import OFX or QFX statement files
 =================================
 
-Open Financial Exchange (OFX) is a unified specification for the
+Open Financial Exchange (OFX) and Quicken Financial Exchange (QFX) are unified specifications for the
 electronic exchange of financial data between financial institutions,
 businesses and consumers via the Internet.
 
-With Twenty20, you can download an OFX file from your bank or accounting
+With Twenty20, you can download an OFX or a QFX file from your bank or accounting
 software and import it directly in your Twenty20 instance. This will create
 all bank statements.
 
@@ -17,7 +17,7 @@ all bank statements.
 Configuration
 =============
 
-In order to import OFX statements, you need to activate the feature in
+In order to import OFX or QFX statements, you need to activate the feature in
 Twenty20. In the Accounting application, go to the menu :menuselection:`Configuration -->
 Settings`. From the accounting settings, check the bank statements option
 **Import in .OFX Format** and apply.
@@ -28,12 +28,12 @@ Settings`. From the accounting settings, check the bank statements option
 Once you have installed this feature, you can setup your bank account to
 allow importing bank statement files. To do this, go to the accounting
 Dashboard, and click on the **More** button of the bank account.
-Then, click on **Import Statement** to load your first OFX file.
+Then, click on **Import Statement** to load your first OFX or QFX file.
 
 .. image:: media/ofx02.png
    :align: center
 
-Load your OFX file in the following screen and click **Import** to
+Load your OFX or QFX file in the following screen and click **Import** to
 create all your bank statements.
 
 .. image:: media/ofx03.png
@@ -42,7 +42,7 @@ create all your bank statements.
 If the file is successfully loaded, you will get redirected to the bank
 reconciliation screen with all the transactions to reconcile.
 
-Importing OFX files
+Importing OFX or QFX files
 ===================
 
 After having imported your first file, the Twenty20 accounting dashboard
