@@ -6,5 +6,4 @@ Main Concepts
    :titlesonly:
 
    main_concepts/intro
-   main_concepts/in_twenty20
    main_concepts/terminologies

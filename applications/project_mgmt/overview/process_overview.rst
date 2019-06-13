@@ -1,5 +1,5 @@
 ================
-Process overview
+Workflows
 ================
 
 .. toctree::

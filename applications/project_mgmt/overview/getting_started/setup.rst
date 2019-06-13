@@ -1,5 +1,5 @@
 ======================================
-How to setup Twenty20 Accounting?
+How to setup project in Twenty20
 ======================================
 
 The Twenty20 Accounting application has an implementation guide that you
