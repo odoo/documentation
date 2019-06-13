@@ -2,6 +2,20 @@
 How to setup project in Twenty20
 ======================================
 
+Products and Analytic Acounts
+======================================
+
+Analytic Accounts
+-------------------
+Analytic accounts are used to organize and track the costs and revenue assocauited to your project.  There is a master list of Analytic Accounts that you can start with , or you can create your own.
+There are a few things to know before creating or adding analytic accounts.
+
+**Divisions**
+
+**Phases**
+
+**Tasks**
+
 The Twenty20 Accounting application has an implementation guide that you
 should follow to configure it. It's a step-by-step wizard with links to
 the different screens you will need.
@@ -34,3 +48,11 @@ The implementation guide will help you through the following steps:
 Once a step is done, you can click on the "Mark as Done" button, in the
 bottom of the screen. That way, you can track the progress of your
 overall configuration of Twenty20.
+
+Company and Project Defaults
+======================================
+Once a step is done, you can click on the "Mark as Done" button, in the
+bottom of the screen. That way, you can track the progress of your
+overall configuration of Twenty20.
+
+
