@@ -11,3 +11,4 @@ PROJECT MANAGEMENT
     project_mgmt/docs
     project_mgmt/finance
     project_mgmt/portal
+    project_mgmt/reports
