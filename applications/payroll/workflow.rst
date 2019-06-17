@@ -6,5 +6,5 @@ Workflows
 .. toctree::
    :titlesonly:
 
-   workflow/import_time
-   workflow/payslip
+   others/workflow/import_time
+   others/workflow/payslip

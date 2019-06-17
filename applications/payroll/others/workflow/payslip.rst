@@ -1,10 +1,40 @@
 ===========
-Creating Payslips
+Processing Payroll
 ===========
 
-Overview
+
+
+
+Video Demonstration
 ========
 
-Twenty20 9 comes with a powerful and easy-to-use reporting framework.
-Creating new reports (such as a tax report or a balance sheet for a
-specific country) to suit your needs is now easier than ever.
+.. youtube:: https://youtu.be/iE5UQ7Jx2gM
+    :align: right
+    :width: 700
+    :height: 394
+
+
+Step by Step
+========
+
+1-  Open the menu :menuselection:`Human Resources --> Payroll`, then click on the
+**Employee Payslips** button.
+
+.. note::
+
+	You will be taken to the payslip form. This is used to enter the details of
+	the individual and how their payroll will be calculated.
+
+
+.. image:: ./media/payslip.png
+   :align: center
+
+
+2-  Ent
+
+3-  Select the file to import
+
+4-  Cick **Validate**
+
+5-  If everything looks correct, click **Import** button at the bottom of the page
+our needs is now easier than ever.
