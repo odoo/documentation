@@ -20,21 +20,25 @@ Step by Step
 1-  Open the menu :menuselection:`Human Resources --> Payroll`, then click on the
 **Employee Payslips** button.
 
-.. note::
-
-	You will be taken to the payslip form. This is used to enter the details of
-	the individual and how their payroll will be calculated.
-
 
 .. image:: ./media/payslip.png
    :align: center
 
 
-2-  Ent
+2-  Enter the employee
 
-3-  Select the file to import
+3-  Enter in the period start and ending dates
+.. note::
 
-4-  Cick **Validate**
+	If there is approved time that has not been applied to a payslip and fit the criteria of the period referenced,
+	the time entries will show on the tab **Worked Days Inputs**
 
-5-  If everything looks correct, click **Import** button at the bottom of the page
-our needs is now easier than ever.
+4-  If you need to make any adjustments, you can do it now.
+
+5-  If everything looks correct, click **compute** button at the top of the page. This will compute the payslip.
+The calcualtions are visible on the next tab **Salary Computation**
+
+6-  Once you are satisfied with the calculations, you can click **Confirm** button in the top left corner of the page.
+This will create the necessary accounting entries.
+
+7- Print the paycheck, by clicking the **Print** drop down at the top of the page
