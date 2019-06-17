@@ -13,3 +13,4 @@ Manufacturing Management
    management/product_variants
    management/sub_assemblies
    management/unbuild
+   management/subcontracting
