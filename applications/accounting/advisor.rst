@@ -1,7 +1,7 @@
-.. _advisor:
+.. _accounting:
 
 ========================
-General Accounting
+G
 ========================
 
 .. toctree::

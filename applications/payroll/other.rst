@@ -5,6 +5,7 @@ Other
 .. toctree::
    :titlesonly:
 
+   others/workflow
    others/configuration
    others/analytic
    others/taxes

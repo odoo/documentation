@@ -8,3 +8,4 @@ PAYROLL
 
     payroll/overview
     payroll/other
+    payroll/workflow
