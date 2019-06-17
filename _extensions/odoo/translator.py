@@ -5,7 +5,7 @@ import re
 import urllib
 
 from docutils import nodes
-from sphinx import addnodes, util
+from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
 
 from . import pycompat
@@ -44,7 +44,12 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         '<meta name="viewport" content="width=device-width, initial-scale=1">'
     ]
 
-    def __init__(self, builder, document):
+    def __init__(self, document, builder):
+        # order of parameter swapped between Sphinx 1.x and 2.x, check if
+        # we're running 1.x and swap back
+        if not isinstance(builder, builders.Builder):
+            builder, document = document, builder
+
         super(BootstrapTranslator, self).__init__(document)
         self.builder = builder
         self.body = []
