@@ -6,6 +6,4 @@ PAYROLL
 
 .. toctree::
 
-    payroll/overview
-    payroll/other
     payroll/workflow

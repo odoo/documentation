@@ -4,11 +4,10 @@ Processing Payroll
 
 
 
-
 Video Demonstration
 ========
 
-.. youtube:: https://youtu.be/iE5UQ7Jx2gM
+.. youtube:: iE5UQ7Jx2gM
     :align: right
     :width: 700
     :height: 394
@@ -28,10 +27,14 @@ Step by Step
 2-  Enter the employee
 
 3-  Enter in the period start and ending dates
+
+
 .. note::
 
 	If there is approved time that has not been applied to a payslip and fit the criteria of the period referenced,
-	the time entries will show on the tab **Worked Days Inputs**
+	the time entries will show on the tab Worked Days Inputs.
+
+
 
 4-  If you need to make any adjustments, you can do it now.
 
