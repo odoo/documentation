@@ -9,3 +9,4 @@ Licenses and Agreements
     licenses/std_agreement
     licenses/beta_agreement
     licenses/privacy
+    licenses/disaster
