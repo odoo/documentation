@@ -6,7 +6,7 @@ Accounting Setup Basics
     :height: 394
 From your Twenty20 menu, open Accounting.
 
-Adding to and editing your Chart of Accounts
+**Adding to and editing your Chart of Accounts**
 
 Open your Chart of Accounts from Adviser > Chart of Accounts
 You can Create a new account by clicking "Create" and entering the details.  To alter an existing account, click on an account name or number to open it, then click "Edit", then make your changes.
@@ -22,7 +22,7 @@ The view changes to show the simple details of the fields related to how this ac
 
 
 
-Setting up Journals (or sub-ledgers)
+**Setting up Journals (or sub-ledgers)**
 
 Access your Journals from Configuration > Journals
 You can Create a new journal by clicking "Create" and entering the details.  To alter an existing journal, click on a journal name to open it, then click "Edit", then make your changes.
@@ -60,7 +60,7 @@ Go into the "Bank Account" tab (Only available when the journal "Type" = 'Bank'.
 
 
 
-Setting up your Bank Accounts (This can also be done within the setup of a Journal.)
+**Setting up your Bank Accounts (This can also be done within the setup of a Journal.)**
 
 Access your Journals from Configuration > Bank Accounts
 You can Create a new Bank Account AND Journal by clicking "Create" and entering the details.  To alter an existing Bank Account, click on a Bank Account name to open it, then click "Edit", then make your changes.
