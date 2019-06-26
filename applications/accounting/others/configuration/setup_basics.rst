@@ -30,8 +30,11 @@ The view changes to show the simple details of the fields related to how and whe
 •	"Journal Name": Enter a descriptive name.
 •	"Type": This determines when a journal can be used to record a transaction.  You may require several journals, but it is almost mandatory that certain journals exist, specifically one each for:
      o	Accounts Receivable - set the "Type" to 'Sale'
+     
      o	Accounts Payable - set the "Type" to 'Purchase'
+     
      o	One for each Bank or Credit Card account - set the "Type" to 'Bank'
+     
      o	Miscellaneous (for adjusting entries, etc.) - set the "Type" to 'Miscellaneous'
 (The names of the journals may be changed at your option.)
 •	"Credit Card": Mark this box when the journal will be used with Credit Card accounts.  If you do mark the box, you will be prompted to assign a credit card vendor as well.
