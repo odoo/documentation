@@ -21,6 +21,7 @@ The view changes to show the simple details of the fields related to how this ac
 "Save" to lock in the changes.
 
 
+
 Setting up Journals (or sub-ledgers)
 
 Access your Journals from Configuration > Journals
@@ -29,13 +30,13 @@ The view changes to show the simple details of the fields related to how and whe
 
 •	"Journal Name": Enter a descriptive name.
 •	"Type": This determines when a journal can be used to record a transaction.  You may require several journals, but it is almost mandatory that certain journals exist, specifically one each for:
-     o	Accounts Receivable - set the "Type" to 'Sale'
+    o	Accounts Receivable - set the "Type" to 'Sale'
      
-     o	Accounts Payable - set the "Type" to 'Purchase'
+    o	Accounts Payable - set the "Type" to 'Purchase'
      
-     o	One for each Bank or Credit Card account - set the "Type" to 'Bank'
+    o	One for each Bank or Credit Card account - set the "Type" to 'Bank'
      
-     o	Miscellaneous (for adjusting entries, etc.) - set the "Type" to 'Miscellaneous'
+    o	Miscellaneous (for adjusting entries, etc.) - set the "Type" to 'Miscellaneous'
 (The names of the journals may be changed at your option.)
 
 •	"Credit Card": Mark this box when the journal will be used with Credit Card accounts.  If you do mark the box, you will be prompted to assign a credit card vendor as well.
@@ -58,6 +59,7 @@ Go into the "Bank Account" tab (Only available when the journal "Type" = 'Bank'.
 "Save" to lock in the changes.
 
 
+
 Setting up your Bank Accounts (This can also be done within the setup of a Journal.)
 
 Access your Journals from Configuration > Bank Accounts
@@ -70,5 +72,6 @@ The view changes to show the simple details of the fields related to the Bank Ac
 •	"Payment Methods": Choose which options you'd like to be made available to users when entering payments from your company.
 
 "Save" to lock in the changes.
+
 
 (DUE TO SECURITY SETTINGS, NOT ALL VIEWS, FIELDS, AND FEATURES ARE AVAILABLE TO ALL USERS.  Contact your system administrator with questions.)
