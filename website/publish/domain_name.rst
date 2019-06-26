@@ -2,7 +2,7 @@
 How to use my own domain name
 =============================
 
-By default, your Odoo Online instance and website have a *.odoo.com* domain name, 
+By default, your Odoo Online instance and website have a *.odoo.com* `domain name <https://hosting.review/web-hosting-glossary/#26>`__, 
 for both the URL and the emails. 
 But you can change to a custom one (e.g. www.yourcompany.com).
 
