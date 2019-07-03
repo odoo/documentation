@@ -102,3 +102,60 @@ Restore an existing  Twenty20 DB
 4. Select the backed up DB and give it a new name
 5. Wait to the new Db to upload and restore
 6.
+
+Showing detailed error messages in payroll calculations
+=======================================================
+
+The code below shows the **after**. You need to comment out the **try, except, and the raise error**
+| This also can be applied to the condition method
+.. code-block:: python
+
+ @api.multi
+    def compute_rule(self, localdict):
+        """
+        :param localdict: dictionary containing the environement in which to compute the rule
+        :return: returns a tuple build as the base/amount computed, the quantity and the rate
+        :rtype: (float, float, float)
+        """
+        self.ensure_one()
+        if self.amount_select == 'fix':
+            try:
+                return self.amount_fix, float(safe_eval(self.quantity, localdict)), 100.0
+            except:
+                raise UserError(_('Wrong quantity defined for salary rule %s (%s).') % (self.name, self.code))
+        elif self.amount_select == 'percentage':
+            try:
+                return (float(safe_eval(self.amount_percentage_base, localdict)),
+                        float(safe_eval(self.quantity, localdict)),
+                        self.amount_percentage)
+            except:
+                raise UserError(_('Wrong percentage base or quantity defined for salary rule %s (%s).') % (self.name, self.code))
+        else:
+            # try:
+                safe_eval(self.amount_python_compute, localdict, mode='exec', nocopy=True)
+                return float(localdict['result']), 'result_qty' in localdict and localdict['result_qty'] or 1.0, 'result_rate' in localdict and localdict['result_rate'] or 100.0
+            # except:
+            #     raise UserError(_('Wrong python code defined for salary rule %s (%s).') % (self.name, self.code))
+
+    @api.multi
+    def satisfy_condition(self, localdict):
+        """
+        @param contract_id: id of hr.contract to be tested
+        @return: returns True if the given rule match the condition for the given contract. Return False otherwise.
+        """
+        self.ensure_one()
+
+        if self.condition_select == 'none':
+            return True
+        elif self.condition_select == 'range':
+            try:
+                result = safe_eval(self.condition_range, localdict)
+                return self.condition_range_min <= result and result <= self.condition_range_max or False
+            except:
+                raise UserError(_('Wrong range condition defined for salary rule %s (%s).') % (self.name, self.code))
+        else:  # python code
+            #try:
+                safe_eval(self.condition_python, localdict, mode='exec', nocopy=True)
+                return 'result' in localdict and localdict['result'] or False
+            #except:
+             #   raise UserError(_('Wrong python condition defined for salary rule %s (%s).') % (self.name, self.code))
