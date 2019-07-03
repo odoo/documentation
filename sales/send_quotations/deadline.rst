@@ -2,8 +2,8 @@
 Stimulate customers with quotations deadline
 ============================================
 
-As you send quotations, it is important to set a quotation deadline;
-Both to entice your customer into action with the fear of missing out on
+As you send quotations, it is important to set a quotation deadline,
+both to entice your customer into action with the fear of missing out on
 an offer and to protect yourself. You don't want to have to fulfill an
 order at a price that is no longer cost effective for you.
 
@@ -26,7 +26,7 @@ can find more info about quotation templates `here
 .. image:: media/quotationsdeadline02.png
   :align: center 
 
-On your customer side, they will see this.
+On your customer side, they will see this:
 
 .. image:: media/quotationsdeadline03.png
   :align: center 
