@@ -2,9 +2,8 @@
 Send quotations
 ===============
 
-When you qualified one of your lead into an opportunity you will most
-likely need to them send a quotation. You can directly do this in the
-CRM App with Odoo.
+When you qualify a lead into an opportunity you will most likely need to
+send them a quotation. You can directly do this in the CRM App with Odoo.
 
 .. image:: media/send_quotes01.png
     :align: center
