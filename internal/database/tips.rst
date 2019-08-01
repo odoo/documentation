@@ -1,6 +1,23 @@
 ===========================
 DATABASE TIPS & TRICKS
 ===========================
+
+delete a k3 deployment
+============================
+helm delete --purge rudickgrouptest
+
+
+Access Customer deployment
+========================================
+
+- cd /Users/brantwadz/twenty20/10/twenty20
+- ./connectToPod.sh branchname
+
+Run Manual Update
+====================
+
+- ./runUpdateOnDeployment.sh branchname
+
 Database Access
 ========================================
 
