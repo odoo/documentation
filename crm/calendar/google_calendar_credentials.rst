@@ -42,7 +42,7 @@ Setup in Google
   Enter the name of the application (e.g. Odoo) and the allowed pages on 
   which you will be redirected. The *Authorized JavaScript origin* is your 
   Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
-  URL followed by '/google_account/authentication'.
+  URL followed by '/google_account/authentification'.
 
 .. image:: media/google_calendar_credentials06.png
     :align: center
