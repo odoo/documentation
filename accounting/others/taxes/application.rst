@@ -15,8 +15,8 @@ one. (as an example, construction companies have 0% instead of 21% in
 Belgium for construction related work).
 
 As an example, in Belgium, for the VAT tax, there are 3 fiscal positions
-that depend on on the country of the customer and some companies (like
-construction companies) benefit from a specific fiscal treatments:
+that depend on the country of the customer and some companies (like
+construction companies) benefit from a specific fiscal treatment:
 
 -  **Belgian companies:** with 21% VAT (default, on product form)
 
