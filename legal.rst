@@ -108,7 +108,7 @@ Terms and Conditions
 
 .. |view_enterprise_es| image:: _static/banners/txt.svg
     :alt: View Odoo Partnership Agreement (ES)
-    :target: legal/terms/i18n/partnership_es.html
+    :target: legal/terms/i18n/enterprise_es.html
 
 .. |download_partnership_es| image:: _static/banners/pdf.svg
     :alt: Download Odoo Partnership Agreement (ES)
