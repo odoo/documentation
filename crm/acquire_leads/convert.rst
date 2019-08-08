@@ -18,7 +18,7 @@ and activate the *Leads* feature.
 .. image:: media/convert01.png
     :align: center
 
-You will now have a new submenu *Leads* under *Pipeline* where they
+You will now have a new submenu *Leads* under *Leads* where they
 will aggregate.
 
 .. image:: media/convert02.png
