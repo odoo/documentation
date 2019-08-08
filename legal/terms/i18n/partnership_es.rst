@@ -11,13 +11,19 @@ Odoo Partnership Agreement (ES)
    The only official reference of the terms and conditions of the “Odoo Partnership
    Agreement” is the :ref:`original english version <partnership_agreement>`.
 
-.. note:: Versión 6 - 2017-12-04
+.. note:: Versión 8 - 2019-08-09
+
+.. v6a: typo in section 4.4
+.. v7: introduce "Learning Partners" and a few related changes
+.. v8: simplified, clarified, added trademark use restrictions, updated benefits
+
+
 
 ENTRE:
 
-Odoo S.A., inscrita en el Registro mercantil y de sociedades de Nivelles con el número RCN 95656,
+Odoo S.A., una empresa
 que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière, Bélgica,
-y sus filiales (denominados conjuntamente “ODOO”)
+(en adelante denominados “ODOO”)
 
 Y:
 
@@ -62,8 +68,9 @@ Para ayudar a EL COLABORADOR a promover Odoo Enterprise Edition, ODOO otorga a E
 acceso a su repositorio de código del proyecto para todas las “Aplicaciones Odoo Enterprise Edition”,
 en los términos establecidos en :ref:`appendix_p_a_es` y las condiciones restringidas del presente
 Contrato.
-Este acceso se otorgará a partir de la firma de este contrato y se revocará cuando se rescinda este
-Contrato.
+
+Además, ODOO otorga a EL COLABORADOR acceso gratuito a la plataforma ODOO.SH con fines de prueba
+y desarrollo.
 
 
 .. _restrictions_es:
@@ -72,9 +79,12 @@ Contrato.
 -----------------
 EL COLABORADOR se compromete a mantener la confidencialidad del código fuente de las aplicaciones
 Odoo Enterprise Edition entre su personal. El acceso al código fuente de Odoo Enterprise Edition
-para los clientes se rige por el Contrato de suscripción de Odoo Enterprise (versión 4.0 y superior).
+para los clientes se rige por el Contrato de suscripción de Odoo Enterprise.
 EL COLABORADOR se compromete a NO redistribuir este código a terceros sin el permiso por escrito
 de ODOO.
+
+PARTNER se compromete a no ofrecer servicios en Odoo Enterprise Edition a clientes que no
+estén cubiertos por una suscripción de Odoo Enterprise, incluso durante la fase de implementación.
 
 A pesar de lo anterior, EL COLABORADOR se compromete a preservar por completo la integridad del
 código de Odoo Enterprise Edition necesario para verificar la validez del uso de Odoo Enterprise
@@ -86,36 +96,44 @@ Edition y para recopilar estadísticas necesarias para este fin.
 
 4.1 Niveles de colaboración
 ---------------------------
-El programa de socios de Odoo consta de tres niveles de colaboración (Ready, Silver y Gold), con
-requisitos y beneficios específicos.
+El programa de socios de Odoo consta de dos tipos de asociaciones y cuatro niveles;
+"Learning Partners" es para empresas que desean todo lo necesario para comenzar a implementar Odoo,
+sin visibilidad como socio oficial hasta que obtengan la experiencia requerida;
+"Official Partners" es para empresas que desean la visibilidad como Ready, Silver y Gold,
+según su experiencia con Odoo.
+
 El nivel de colaboración otorgado a EL COLABORADOR depende de los ingresos anuales de
-Odoo Enterprise generados para ODOO. Las renovaciones de los contratos existentes no tienen en
-cuenta el nivel de colaboración, pero EL COLABORADOR sigue recibiendo una comisión por estos
+Odoo Enterprise generados para ODOO (en términos de Usuarios de Odoo Enterprise vendidos).
+Las renovaciones de los contratos existentes no cuentan para el número de Usuarios vendidos,
+pero EL COLABORADOR sigue recibiendo una comisión por estos
 contratos, tal como se indica en la sección :ref:`benefits_es`..
 
 La tabla siguiente resume los requisitos para cada nivel de colaboración.
 
-+----------------------------------------------+----------+----------+--------+
-|                                              | Ready    | Silver   | Gold   |
-+==============================================+==========+==========+========+
-| Usuarios de Odoo Enterprise anuales vendidos |   0      |  50      | 100    |
-+----------------------------------------------+----------+----------+--------+
-| Recursos internos certificados activos       |   1      |  2       |  4     |
-+----------------------------------------------+----------+----------+--------+
-| Tasa de retención mínima                     |   n/a    |  85%     |  85%   |
-+----------------------------------------------+----------+----------+--------+
++--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                                  | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++==================================================+==================+====================+====================+====================+
+| Usuarios de Odoo Enterprise anuales vendidos     |   0              |  10                | 50                 | 150                |
++--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Número de empleados certificados en al menos uno |   0              |  1                 |  2                 |  3                 |
+| de las 3 últimas versiones de Odoo               |                  |                    |                    |                    |
++--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Tasa de retención mínima                         |   n/a            |  n/a               | 70%                |  80%               |
++--------------------------------------------------+------------------+--------------------+--------------------+--------------------+
+
+La Tasa de Retención se define como la relación entre el número de contratos de Odoo Enterprise que
+están actualmente activos y la cantidad de contratos de Odoo Enterprise que han estado activos en
+algún momento en los últimos 12 meses.
 
 Las certificaciones son personales, por lo que cuando un miembro certificado del personal deja
 la empresa, EL COLABORADOR debe notificarlo a ODOO para que actualice la cantidad de recursos
 certificados activos para el contrato de colaboración.
 
-ODOO revisará trimestralmente el nivel de las colaboraciones sobre la base de los nuevos
-contratos de Odoo Enterprise vendidos por EL COLABORADOR en los últimos 12 meses.
+ODOO revisará trimestralmente el nivel de colaboración de EL COLABORADOR y lo ajustará al nivel
+más alto para el cual se cumplan los 3 requisitos.
 
-El nivel de colaboración puede actualizarse automáticamente a un nivel superior una vez los
-socios alcanzan los requisitos específicos para este nivel de colaboración.
-Los socios Silver y Gold que no cumplan con sus requisitos de colaboración al final del período
-anual pueden ser asignados un nivel de colaboración inferior.
+Sin embargo, los "Official Partners" pueden actualizarse automáticamente a un nivel superior una
+vez que alcancen los 3 requisitos para ese nivel de colaboración.
 
 .. _benefits_es:
 
@@ -124,57 +142,56 @@ anual pueden ser asignados un nivel de colaboración inferior.
 
 En la tabla siguiente se describen los detalles de las ventajas para cada nivel de colaboración:
 
-+------------------------------+-----------------+------------------+----------------+
-|                              |      Ready      |     Silver       |      Gold      |
-+==============================+=================+==================+================+
-| **Reconocimiento**           |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Visibilidad en odoo.com      | “Ready Partner” | “Silver Partner” | “Gold Partner” |
-+------------------------------+-----------------+------------------+----------------+
-| Derechos de uso de la marca  | Logotipo Ready  | Logotipo Silver  | Logotipo Gold  |
-| registrada “Odoo”            |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| **Ventajas de la formación** |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Seminarios anuales de        | Sí              | Sí               | Sí             |
-| actualización                |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Coaching de ventas           | Sí              | Sí               | Sí             |
-+------------------------------+-----------------+------------------+----------------+
-| Acceso a la plataforma       | Sí              | Sí               | Sí             |
-| E-Learning y a la base de    |                 |                  |                |
-| conocimiento de Odoo         |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| **Ventajas del software**    |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Acceso al código fuente de   | Sí              | Sí               | Sí             |
-| Odoo Enterprise              |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| **Ventajas de las ventas**   |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Comisión por la plataforma   | 100%            | 100%             | 100%           |
-| Odoo SH [#f1es]_             |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Comisión por Odoo Enterprise | 10%             | 15%              | 20%            |
-+------------------------------+-----------------+------------------+----------------+
-| Acceso a un gestor de cuentas| Sí              | Sí               | Sí             |
-| especializado                |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| **Ventajas de marketing**    |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
-| Material de marketing        | Sí              | Sí               | Sí             |
-+------------------------------+-----------------+------------------+----------------+
-| Evento de EL COLABORADOR -   | Sí              | Sí               | Sí             |
-| Asistencia y promoción de    |                 |                  |                |
-| ODOO                         |                 |                  |                |
-+------------------------------+-----------------+------------------+----------------+
+.. only:: latex
 
-.. [#f1es] La tasa de comisión del 100% por la plataforma Odoo SH se concede a todas las
-           suscripciones de Odoo Enterprise firmadas durante el primer año de colaboración,
-           siempre que se renueve dicha suscripción. Después del primer año, EL COLABORADOR
-           obtiene la comisión habitual de Odoo Enterprise, de acuerdo con el nivel de
-           colaboración.
+    .. tabularcolumns:: |L|p{1.5cm}|p{1.5cm}|p{1.5cm}|p{1.5cm}|
 
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+|                                       | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
++=======================================+==================+====================+====================+====================+
+| **Reconocimiento**                    |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Visibilidad en odoo.com               | No               | "Ready Partner"    | "Silver Partner"   | "Gold Partner"     |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Derechos de uso de la marca registrada| Sí               | Sí                 | Sí                 | Sí                 |
+| “Odoo” y logotipos                    |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Ventajas de la formación**          |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Coaching de ventas y webinars         | Sí               | Sí                 | Sí                 | Sí                 |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Acceso a la base de conocimiento Odoo | Sí               | Sí                 | Sí                 | Sí                 |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Ventajas del software**             |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Acceso al código fuente de Odoo       | Sí               | Sí                 | Sí                 | Sí                 |
+| Enterprise y repositorio Github       |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Código de extensión de prueba de      | Sí               | Sí                 | Sí                 | Sí                 |
+| Odoo Enterprise                       |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Acceso a Odoo.sh con fines de prueba  | Sí               | Sí                 | Sí                 | Sí                 |
+| y desarrollo.                         |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Ventajas de las ventas**            |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Comisión por la plataforma Odoo SH    | 10%              | 100%               | 100%               | 100%               |
+| [#s1]_                                |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Comisión por Odoo Enterprise          | 10%              | 10%                | 15%                | 20%                |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Acceso a un gestor de cuentas         | No               | Sí                 | Sí                 | Sí                 |
+| especializado y Partner Dashboard     |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| **Ventajas de marketing**             |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Material de marketing                 | Sí               | Sí                 | Sí                 | Sí                 |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Evento de EL COLABORADOR - Asistencia | No               | Sí                 | Sí                 | Sí                 |
+| y promoción de ODOO                   |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
+
+.. [#s1] hasta un máximo de 150€ (o 180 $) de comisión mensual por suscripción
 
 4.3 Reconocimiento de socios
 ----------------------------
@@ -197,31 +214,18 @@ documentos comerciales, funcionales y de marketing para ayudar a EL COLABORADOR 
 y aprovechar el conocimiento de Odoo, hacer crecer su negocio, atraer más clientes y crear
 conciencia de marca.
 
-EL COLABORADOR también recibe acceso gratuito a la plataforma E-Learning de ODOO (para usuarios
-ilimitados). La plataforma E-Learning de ODOO ofrece en línea un conjunto de tutoriales y cursos
-en vídeo de alta calidad sobre las aplicaciones oficiales de Odoo.
-
 EL COLABORADOR podrá acceder al coaching comercial facilitado por su gestor de cuentas
 especializado, designado por ODOO.
 
-EL COLABORADOR también tiene la opción de comprar formación técnica específica suscribiéndose a un
-Pack de éxito de Odoo, por una tarifa adicional.
+EL COLABORADOR también tiene la opción de comprar servicios de soporte o de formación
+suscribiéndose a un Success Pack de Odoo, por una tarifa adicional.
 
 4.5  Comisiones por los servicios de Odoo vendidos por EL COLABORADOR
 ---------------------------------------------------------------------
-EL COLABORADOR recibe una retribución por los servicios de ODOO comprados directamente por un
-cliente a través de EL COLABORADOR, de la forma siguiente:
-
-- Por las suscripciones “Odoo Enterprise” y “Odoo SH” vendidas a través de EL COLABORADOR; ODOO
-  factura directamente al cliente en función del precio final acordado entre ODOO,
-  EL COLABORADOR y el cliente. A continuación, EL COLABORADOR factura su comisión a ODOO en función
-  del precio de Odoo Enterprise Edition, libre de posibles reducciones, y en función del nivel de
-  colaboración de EL COLABORADOR en el momento de la firma de la venta.
-- Por las renovaciones de las suscripciones “Odoo Enterprise”; EL COLABORADOR recibe una comisión
-  por cada renovación de una suscripción vendida a través de EL COLABORADOR, siempre y cuando
-  EL COLABORADOR mantenga una relación contractual con el cliente correspondiente.
-- Por otros servicios; EL COLABORADOR factura directamente al cliente, y ODOO factura a
-  EL COLABORADOR directamente, comisión incluida (como descuento).
+Para los servicios ODOO comprados por un cliente a través de EL COLABORADOR, y siempre que el
+PARTNER mantenga una relación contractual con el cliente correspondiente, EL COLABORADOR
+ecibirá una comisión de acuerdo con la tabla de la sección :ref:`benefits_es` y su nivel de
+asociación en la fecha de la factura del cliente.
 
 
 5 Tarifas
@@ -284,30 +288,31 @@ EL COLABORADOR reconoce que no tiene ninguna expectativa y que no ha recibido ga
 ninguna inversión realizada en la ejecución de este contrato y el programa de socios de Odoo o de
 obtener ninguna cantidad anticipada de ganancias en virtud de este contrato.
 
-EL COLABORADOR renuncia a cualquier compromiso en favor de ODOO respecto a la evolución del software.
-
-De acuerdo con los términos de la licencia del software, ODOO no se hace responsable de ningún
-error ni de la calidad y el rendimiento del software.
-
 
 8 Disposiciones diversas
 ========================
 
-8.1 Comunicaciones
-------------------
-Ninguna comunicación de una Parte a la otra tendrá validez en virtud del presente Contrato,
-a menos que se realice por escrito en nombre de ODOO o EL COLABORADOR, según sea el caso,
-de conformidad con las disposiciones de este Contrato.
-Cualquier tipo de aviso que cualquiera de las Partes de este documento tenga el derecho o la
-obligación de comunicara la otra, debe hacerse por correo certificado.
-
-8.2 Imagen de marca
+8.1 Imagen de marca
 -------------------
-Ambas Partes se abstendrán de dañar de ninguna manera la imagen de marca y la reputación de la otra
-Parte en el cumplimiento de este contrato. El incumplimiento de esta disposición será causa de
-resolución de este Contrato.
+La marca "Odoo" (incluida la marca denominativa y sus representaciones visuales y logotipos)
+es exclusiva propiedad de ODOO.
 
-8.3 Publicidad
+EL COLABORADOR se anunciará como un "Odoo Partner" para evitar cualquier confusión con ODOO, y
+use el "logotipo de Odoo Partner" apropiado en cualquier medio de comunicación.
+EL COLABORADOR puede usar el logotipo "Odoo" para presentar los productos y servicios de ODOO,
+pero no debe alterarlo ni utilizarlo como el logotipo principal de un sitio web.
+
+EL COLABORADOR no se registrará como marca comercial ni de ninguna otra forma como marca o signo que
+podría crear un riesgo de confusión con la marca "Odoo", en todo el mundo, excepto con el
+consentimiento previo por escrito de ODOO.
+
+EL COLABORADOR no deberá incorporar la marca "Odoo" en ningún nombre comercial, nombre de marca,
+nombre de dominio o en cualquier elemento de identificación de su empresa, excepto con el
+consentimiento previo por escrito de ODOO.
+
+Al término de este Acuerdo, el SOCIO debe suspender inmediatamente el uso de la marca "Odoo".
+
+8.2 Publicidad
 --------------
 EL COLABORADOR concede a ODOO el derecho no exclusivo de utilizar el nombre y las marcas
 comerciales de EL COLABORADOR en comunicados de prensa, promociones u otros anuncios públicos.
@@ -316,7 +321,7 @@ de EL COLABORADOR se use solo para este fin, en la lista oficial de socios de OD
 
 .. _no_soliciting_es:
 
-8.4 No captación o contratación
+8.3 No captación o contratación
 -------------------------------
 Excepto cuando la otra Parte dé su consentimiento por escrito, cada Parte, sus afiliados y
 representantes acuerdan no captar u ofrecer empleo a ningún empleado de la otra Parte
@@ -328,7 +333,7 @@ dicho empleado con este objetivo, la Parte incumplidora se compromete a pagar a 
 la cantidad de 30 000,00 EUR (€) (treinta mil euros).
 
 
-8.5  Contratistas independientes
+8.4  Contratistas independientes
 --------------------------------
 Las Partes son contratistas independientes, y este contrato no debe interpretarse como la
 configuración de cualquier Parte como socia, empresa conjunta o fiduciaria de la otra,

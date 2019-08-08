@@ -169,10 +169,7 @@ from one Covered Version of the Software to a more recent Covered Version (the "
 For the Cloud Platform, upgrade requests are submitted directly from the control panel of the
 Cloud Platform, and do not require any data upload. For Self-Hosting,
 upgrade requests must include a complete backup copy of the Customer's database and the
-associated data (typically obtained from the Backup menu of the Software). Where necessary for data
-security or regulation reasons, the Upgrade Service includes an optional tool to anonymize
-identifiable data inside a database before submitting the upgrade request, and a tool to restore
-the anonymized data after the upgrade.
+associated data (typically obtained from the Backup menu of the Software).
 
 This service provided through an automated platform in order to allow the Customer to perform
 unattended upgrades once a previous version of the Customer's database has been successfully
