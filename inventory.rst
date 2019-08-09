@@ -13,3 +13,4 @@ Inventory
    inventory/shipping
    inventory/routes
    inventory/barcode
+   inventory/technical_details
