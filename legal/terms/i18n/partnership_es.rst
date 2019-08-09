@@ -18,25 +18,17 @@ Odoo Partnership Agreement (ES)
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified, clarified, added trademark use restrictions, updated benefits
+.. v8a: minor clarifications and simplifications
 
-.. note:: Versión 8 - 2019-08-09
+.. note:: Versión 8a - 2019-08-09
 
-ENTRE:
-
-Odoo S.A., una empresa
-que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière, Bélgica,
-(en adelante denominados “ODOO”)
-
-Y:
-
-_____________________________________________________________________________________,
-
-una empresa que tiene su domicilio social en
-
-_____________________________________________________________________________________.
-
-(en adelante denominado “EL COLABORADOR”)
-
+| ENTRE:
+|  Odoo S.A., una empresa que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière,
+|  Bélgica, y sus filiales (en adelante denominados conjuntamente “ODOO”)
+| Y:
+|  _____________________________________________, una empresa que tiene su domicilio social en
+|  _____________________________________________________________________________________.
+|  (en adelante denominado “EL COLABORADOR”)
 
 ODOO y EL COLABORADOR se denominan individualmente “Parte” y conjuntamente “las Partes”.
 
@@ -232,22 +224,10 @@ asociación en la fecha de la factura del cliente.
 
 5 Tarifas
 =========
-EL COLABORADOR se compromete a pagar la tarifa de Inscripción de colaboración o la tarifa de
-Renovación anual de colaboración inmediatamente después de recibir la factura anual enviada por
-ODOO. Las tarifas se especificarán por escrito en el momento de la firma de este contrato.
+EL COLABORADOR se compromete a pagar la tarifa de la colaboración al recibir la factura anual
+enviada por ODOO. La tarifa se especificará por escrito al momento de la firma de este contracto.
 
-EL COLABORADOR reconoce que las tarifas de colaboración mencionadas anteriormente no son
-reembolsables.
-
-La tarifa de “Inscripción de colaboración” debe pagarse antes de la activación de este contrato,
-y solo se aplica a los nuevos socios.
-
-La tarifa de “Renovación anual de colaboración” debe pagarse cada año cuando se renueve la
-duración de este contrato.
-
-Si por algún motivo EL COLABORADOR decide rescindir este contrato, y más adelante solicita
-renovarlo, se aplicará la tarifa de “Renovación anual de colaboración”.
-
+EL COLABORADOR reconoce que la tarifa de colaboración mencionadas anteriormente no son reembolsables.
 
 6 Resolución
 ============
@@ -284,37 +264,32 @@ fecha del evento que dio lugar a dicha reclamación.
 En ningún caso ODOO será responsable de ningún daño indirecto o consecuente, incluyendo,
 entre otros, reclamaciones de clientes o terceros, pérdidas de ingresos, ganancias, ahorros,
 pérdidas de negocios y otras pérdidas financieras, costos de paralización y retraso, datos perdidos
-o dañados derivados o relacionados con el cumplimiento de sus obligaciones.
+o dañados derivados o relacionados con el cumplimiento de sus obligaciones en virtud de este contrato.
 
 EL COLABORADOR reconoce que no tiene ninguna expectativa y que no ha recibido garantías de recuperar
 ninguna inversión realizada en la ejecución de este contrato y el programa de socios de Odoo o de
 obtener ninguna cantidad anticipada de ganancias en virtud de este contrato.
 
 
-8 Disposiciones diversas
-========================
+8 Imagen de marca
+=================
+La marca "Odoo" (incluida la palabra y sus representaciones visuales y logotipos) es exclusiva
+propiedad de ODOO.
 
-8.1 Imagen de marca
--------------------
-La marca "Odoo" (incluida la marca denominativa y sus representaciones visuales y logotipos)
-es exclusiva propiedad de ODOO.
+ODOO autoriza a PARTNER a usar la marca "Odoo" para promocionar sus productos y servicios,
+solo por la Duración del Contrato, siempre que:
 
-EL COLABORADOR se anunciará como un "Odoo Partner" para evitar cualquier confusión con ODOO, y
-use el "logotipo de Odoo Partner" apropiado en cualquier medio de comunicación.
-EL COLABORADOR puede usar el logotipo "Odoo" para presentar los productos y servicios de ODOO,
-pero no debe alterarlo ni utilizarlo como el logotipo principal de un sitio web.
+- no hay confusión posible de que el servicio sea proporcionado por PARTNER, no por ODOO;
+- PARTNER no use la palabra "Odoo" en el nombre de su compañía, nombre de producto,
+  nombre de dominio y no registrar ninguna marca que la incluya.
 
-EL COLABORADOR no se registrará como marca comercial ni de ninguna otra forma como marca o signo que
-podría crear un riesgo de confusión con la marca "Odoo", en todo el mundo, excepto con el
-consentimiento previo por escrito de ODOO.
+Ambas Partes se abstendrán de dañar de ninguna manera la imagen de marca y la reputación de la otra
+Parte en el cumplimiento de este contrato.
 
-EL COLABORADOR no deberá incorporar la marca "Odoo" en ningún nombre comercial, nombre de marca,
-nombre de dominio o en cualquier elemento de identificación de su empresa, excepto con el
-consentimiento previo por escrito de ODOO.
+El incumplimiento de las disposiciones de esta sección será causa de resolución de este Contrato.
 
-Al término de este Acuerdo, el SOCIO debe suspender inmediatamente el uso de la marca "Odoo".
 
-8.2 Publicidad
+8.1 Publicidad
 --------------
 EL COLABORADOR concede a ODOO el derecho no exclusivo de utilizar el nombre y las marcas
 comerciales de EL COLABORADOR en comunicados de prensa, promociones u otros anuncios públicos.
@@ -323,7 +298,7 @@ de EL COLABORADOR se use solo para este fin, en la lista oficial de socios de OD
 
 .. _no_soliciting_es:
 
-8.3 No captación o contratación
+8.2 No captación o contratación
 -------------------------------
 Excepto cuando la otra Parte dé su consentimiento por escrito, cada Parte, sus afiliados y
 representantes acuerdan no captar u ofrecer empleo a ningún empleado de la otra Parte
@@ -335,7 +310,7 @@ dicho empleado con este objetivo, la Parte incumplidora se compromete a pagar a 
 la cantidad de 30 000,00 EUR (€) (treinta mil euros).
 
 
-8.4  Contratistas independientes
+8.3  Contratistas independientes
 --------------------------------
 Las Partes son contratistas independientes, y este contrato no debe interpretarse como la
 configuración de cualquier Parte como socia, empresa conjunta o fiduciaria de la otra,
@@ -352,18 +327,35 @@ Este contrato se rige y se interpreta de acuerdo con las leyes de Bélgica.
 Todas las disputas que surjan en relación con este contrato para las que no se pueda encontrar una
 solución amistosa serán resueltas definitivamente en los Tribunales de Bélgica en Nivelles.
 
-.. rubric:: Firmas
+
+.. |vnegspace| raw:: latex
+
+        \vspace{-.5cm}
+
+.. |vspace| raw:: latex
+
+        \vspace{.8cm}
+
+.. |hspace| raw:: latex
+
+        \hspace{4cm}
+
+.. only:: html
+
+    .. rubric:: Firmas
+
+    +---------------------------------------+------------------------------------------+
+    | Por ODOO,                             | Por EL COLABORADOR                       |
+    +---------------------------------------+------------------------------------------+
+
 
 .. only:: latex
 
-   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+    .. topic:: Firmas
 
-+---------------------------------------+------------------------------------------+
-| Por ODOO,                             | Por EL COLABORADOR,                      |
-+=======================================+==========================================+
-|                                       |                                          |
-| |                                     |  |                                       |
-+---------------------------------------+------------------------------------------+
+        |vnegspace|
+        |hspace| Por ODOO, |hspace| Por EL COLABORADOR,
+        |vspace|
 
 
 .. _appendix_p_a_es:
