@@ -6,10 +6,10 @@ Odoo Enterprise Subscription Agreement (FR)
 ===========================================
 
 .. warning::
-    Ceci est une traduction en français du contrat “Odoo Subscription Agreement”.
+    Ceci est une traduction en français du contrat “Odoo Enterprise Subscription Agreement”.
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes du contrat “Odoo Subscription Agreement”
+    La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
 .. note:: Version 8.0 - 2018-05-22

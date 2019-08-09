@@ -13,7 +13,7 @@ Odoo Enterprise Subscription Agreement (NL)
     is :ref:`de originele Engelse versie <enterprise_agreement>`
 
 .. warning::
-    DEZE VERSION IS NIET ACTUEEL. VOOR DE NIEUWSTE VERSIE ZIE DE
+    DEZE VERSIE IS NIET ACTUEEL. VOOR DE NIEUWSTE VERSIE ZIE DE
     :ref:`ORIGINELE ENGELSE VERSIE <enterprise_agreement>`
 
 .. v6: add "App" definition + update pricing per-App
