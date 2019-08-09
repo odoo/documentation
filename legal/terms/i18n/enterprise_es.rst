@@ -5,14 +5,18 @@
 Odoo Enterprise Subscription Agreement (ES)
 ===========================================
 
-.. note:: Version 8.0 - 2018-05-22
-
 .. warning::
-    Esta es una traducción al español del "Acuerdo de
-    suscripción de Odoo Enterprise". Esta traducción se proporciona con la esperanza de que
-    facilite la comprensión, pero no tiene valor legal.
+    Esta es una traducción al español del "Odoo Enterprise Subscription Agreement".
+    Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene valor legal.
     La única referencia oficial de los términos y condiciones del
-    "Acuerdo de suscripción de Odoo Enterprise" es la :ref:`versión original en inglés <enterprise_agreement>`
+    "Odoo Enterprise Subscription Agreement" es :ref:`la versión original en
+    inglés <enterprise_agreement>`
+
+..    -- Uncomment when needed --
+..    ESTA VERSIÓN NO ESTÁ ACTUALIZADA. PARA LA ÚLTIMA VERSIÓN POR FAVOR VEA
+..    :ref:`LA VERSIÓN ORIGINAL EN INGLÉS <enterprise_agreement>`
+
+.. note:: Version 8.0 - 2018-05-22
 
 Al suscribirse a los servicios de Odoo Enterprise proporcionados por
 Odoo SA y sus afiliados (colectivamente “Odoo SA”) en relación a Odoo Enterprise

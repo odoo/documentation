@@ -5,20 +5,23 @@
 Odoo Enterprise Subscription Agreement (NL)
 ===========================================
 
-.. note:: Version 7.1 - 2018-03-16
+.. warning::
+    Dit is een Nederlandse vertaling van de "Odoo Enterprise Subscription Agreement".
+    Deze vertaling wordt verstrekt in de hoop dat deze het begrip zal vergemakkelijken,
+    maar heeft geen juridische waarde.
+    De enige officiële referentie van de algemene voorwaarden van de "Odoo Enterprise Subscription Agreement"
+    is :ref:`de originele Engelse versie <enterprise_agreement>`
+
+.. warning::
+    DEZE VERSIE IS NIET ACTUEEL. VOOR DE NIEUWSTE VERSIE ZIE DE
+    :ref:`ORIGINELE ENGELSE VERSIE <enterprise_agreement>`
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 
-.. warning::
-    This is a dutch translation of the “Odoo Enterprise Subscription Agreement”.
-    This translation is provided in the hope that it will facilitate understanding, but it has
-    no legal value.
-    The only official reference of the terms of the “Odoo Enterprise Subscription Agreement”
-    is the :ref:`original english version <enterprise_agreement>`.
-
+.. note:: Version 7.1 - 2018-03-16
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
 Odoo NV en zijn dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend

@@ -6,17 +6,20 @@ Odoo Enterprise Subscription Agreement (DE)
 ===========================================
 
 .. warning::
-    This is a german translation of the “Odoo Enterprise Subscription Agreement”.
-    This translation is provided in the hope that it will facilitate understanding, but it has
-    no legal value.
-    The only official reference of the terms of the “Odoo Enterprise Subscription Agreement”
-    is the :ref:`original english version <enterprise_agreement>`.
+   Dies ist eine deutsche Übersetzung des "Odoo Enterprise Subscription Agreement".
+   Diese Übersetzung soll das Verständnis erleichtern, hat aber keinen rechtlichen Wert.
+   Der einzige offizielle Verweis auf die Geschäftsbedingungen des „Odoo Enterprise Subscription Agreement“
+   ist :ref:`die englische Originalversion <enterprise_agreement>`.
 
-.. note:: Version 7.1 - 2018-03-16
+.. warning::
+    DIESE VERSION IST NICHT AKTUELL, FÜR DIE AKTUELLE VERSION SIEHE
+    :ref:`original english version <enterprise_agreement>`
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
+
+.. note:: Version 7.1 - 2018-03-16
 
 Durch das Abonnieren der von der Odoo SA und ihren Tochtergesellschaften (zusammen „Odoo SA“)
 hinsichtlich der Odoo Enterprise Edition oder der Odoo Community Edition (der „Software“)

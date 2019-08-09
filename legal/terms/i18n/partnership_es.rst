@@ -5,19 +5,21 @@ Odoo Partnership Agreement (ES)
 ===============================
 
 .. warning::
-   This is a spanish translation of the "Odoo Enterprise Partnership Agreement”.
-   This translation is provided in the hope that it will facilitate understanding, but it
-   has no legal value.
-   The only official reference of the terms and conditions of the “Odoo Partnership
-   Agreement” is the :ref:`original english version <partnership_agreement>`.
+    Esta es una traducción al español del "Odoo Partnership Agreement".
+    Esta traducción se proporciona con la esperanza de que facilitará la comprensión,
+    pero no tiene valor legal.
+    La única referencia oficial de los términos y condiciones del "Odoo Partnership Agreement" es
+    :ref:`la versión original en inglés <partnership_agreement>`.
 
-.. note:: Versión 8 - 2019-08-09
+..    -- Uncomment when needed --
+..    ESTA VERSIÓN NO ESTÁ ACTUALIZADA. PARA LA ÚLTIMA VERSIÓN POR FAVOR VEA
+..    :ref:`LA VERSIÓN ORIGINAL EN INGLÉS <partnership_agreement>`
 
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified, clarified, added trademark use restrictions, updated benefits
 
-
+.. note:: Versión 8 - 2019-08-09
 
 ENTRE:
 
