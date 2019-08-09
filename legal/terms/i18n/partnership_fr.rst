@@ -11,26 +11,18 @@ Odoo Partnership Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Partnership Agreement”
     est la :ref:`version originale en anglais <partnership_agreement>`.
 
-.. note:: Version 8 - 2018-08-09
-
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
+.. v8a: minor clarifications and simplifications
 
+.. note:: Version 8a - 2018-08-09
 
-ENTRE :
-
-Odoo S.A., une entreprise dont le siège
-social se situe Chaussée de Namur, 40, 1367 Grand-Rosière, Belgique
-(ci-après dénommée "ODOO")
-
-ET:
-
-_____________________________________________________________________________________,
-
-une entreprise dont le siège social se situe à
-
-_____________________________________________________________________________________.
-
-(ci-après dénommée « PARTENAIRE »)
+| ENTRE:
+|  Odoo S.A., une entreprise dont le siège social se situe Chaussée de Namur, 40,
+|  1367 Grand-Rosière, Belgique, et ses filialies (désignées collectivement « ODOO »)
+| ET:
+|  _____________________________________________, une entreprise dont le siège social se situe à
+|  _____________________________________________________________________________________.
+|  (ci-après dénommée « PARTENAIRE »)
 
 
 ODOO et PARTENAIRE sont désignées individuellement par le terme « Partie » et collectivement par
@@ -218,25 +210,17 @@ souscrivant à un Odoo Success Pack, moyennant un supplément.
 --------------------------------------------------------------
 Pour les services ODOO achetés par un client par le biais du PARTENAIRE, et pour autant que
 le PARTENAIRE maintienne une relation contractuelle avec ce client, le PARTENAIRE recevra une
-commission en fonction de la table de la section :ref:`benefits` et du niveau de partenariat
+commission en fonction du tableau de la section :ref:`benefits_fr` et du niveau de partenariat
 à la date de la facture client correspondante.
 
 
 5 Frais
 =======
-Le PARTENAIRE s’engage à payer soit les frais de lancement du partenariat, soit les frais annuels
-de renouvellement du partenariat immédiatement à la réception de la facture annuelle envoyée par
-ODOO.
-
-Les frais seront spécifiés par écrit au moment de la signature de ce Contrat.
+Le PARTENAIRE s’engage à payer les frais annuels de Partenariat à la réception de la facture
+annuelle envoyée par ODOO. Ces frais seront spécifiés par écrit au moment de la signature de ce
+Contrat.
 
 Le PARTENAIRE accepte que les frais de partenariat susmentionnés ne soient pas remboursables.
-
-Les frais de lancement du partenariat seront payés avant l’activation de ce Contrat et ne
-concernent que les nouveaux partenaires.
-
-Les frais de renouvellement annuel du partenariat devront être payés chaque année lorsque la Durée
-de ce Contrat est renouvelée.
 
 
 6 Résiliation
@@ -282,32 +266,27 @@ effectué dans l’exécution de ce Contrat et du Programme de partenariat d’O
 recouvert ou qu’il obtiendra un quelconque montant de bénéfices anticipé en vertu de ce Contrat.
 
 
-8 Divers
-========
-
-8.1 Image de marque
--------------------
+8 Image de marque
+=================
 
 La marque "Odoo" (y compris le nom et ses représentations visuelles et logos) est la propriété
 exclusive d'ODOO.
 
-Le PARTENAIRE se présentera comme "Partenaire Odoo" pour éviter tout risque de confusion avec
-ODOO, et utilisera le logo "Odoo Partner" approprié dans toute communication. Le PARTENAIRE peut
-utiliser le logo "Odoo" pour présenter les produits et services d'ODOO, mais le logo ne peut être
-modifié ou utilisé comme logo principal pour un site internet.
+ODOO autorise le PARTENAIRE à utiliser la marque "Odoo" pour promouvoir ses produits et services,
+pour la Durée de ce Contrat seulement, et tant que les conditions suivantes sont remplies:
 
-Le PARTENAIRE ne déposera pas ou n'enregistrera pas de quelque façon que ce soit tout marque, nom
-ou signe qui créerait un risque de confusion avec la marque "Odoo", dans le monde entier, sauf en
-cas d'accord écrit préalable d'ODOO.
+- Aucune confusion n'est possible sur le fait que les services sont fournis par le PARTENAIRE,
+  et non par ODOO;
+- Le PARTENAIRE n'utilise pas la marque "Odoo" dans un nom d'entreprise, un nom de produit, ou un
+  nom de domaine, et ne dépose aucune marque qui la contienne.
 
-Le PARTENAIRE n'incorporera pas la marque "Odoo" dans tout nom d'enterprise, de marque, nom
-de domaine ou tout élément d'identification de sa société, sauf en cas d'accord écrit préalable
-d'ODOO.
+Les Parties s’abstiendront de nuire à l’image de marque et à la réputation de l’autre Partie
+de quelque façon que ce soit, dans l’exécution de ce Contrat.
 
-En cas de résiliation de ce Contrat le PARTENAIRE cessera immédiatement d'utiliser la marque "Odoo".
+Le non-respect des dispositions de cette section sera une cause de résiliation du Contrat.
 
 
-8.2 Publicité
+8.1 Publicité
 -------------
 Le PARTENAIRE octroie à ODOO un droit non exclusif d’utilisation du nom ou de la marque déposée
 du PARTENAIRE dans des communiqués de presse, annonces publicitaires ou autres annonces publiques.
@@ -315,7 +294,7 @@ du PARTENAIRE dans des communiqués de presse, annonces publicitaires ou autres 
 Le PARTENAIRE accepte en particulier d’être mentionné dans la liste officielle des
 partenaires ODOO et que son logo ou sa marque déposée soient utilisés à cette fin uniquement.
 
-8.3 Pas de candidature ou d’engagement
+8.2 Pas de candidature ou d’engagement
 --------------------------------------
 
 À moins que l’autre Partie ne donne son consentement écrit, chaque Partie, ses filiales et ses
@@ -326,7 +305,7 @@ d’expiration de ce Contrat. En cas de non-respect des conditions de cette sect
 résiliation dudit travailleur à cet effet, la Partie fautive accepte de payer à l’autre Partie
 la somme de 30 000,00 (trente mille) euros (€).
 
-8.4 Contracteurs indépendants
+8.3 Contracteurs indépendants
 -----------------------------
 Les Parties sont des contracteurs indépendants et ce Contrat ne sera pas interprété comme
 constituant une Partie comme partenaire, joint-venture ou fiduciaire de l’autre ni créant tout
@@ -343,18 +322,36 @@ en lien avec le Contrat et pour lequel aucun règlement à l’amiable ne peut �
 finalement réglé par les Tribunaux de Belgique à Nivelles.
 
 
-.. rubric:: Signatures
+.. |vnegspace| raw:: latex
+
+        \vspace{-.5cm}
+
+.. |vspace| raw:: latex
+
+        \vspace{.8cm}
+
+.. |hspace| raw:: latex
+
+        \hspace{4cm}
+
+.. only:: html
+
+    .. rubric:: Signatures
+
+    +---------------------------------------+------------------------------------------+
+    | Pour ODOO,                            | Pour le PARTENAIRE,                      |
+    +---------------------------------------+------------------------------------------+
+
 
 .. only:: latex
 
-   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+    .. topic:: Signatures
 
-+---------------------------------------+------------------------------------------+
-| Pour ODOO,                            | Pour le PARTENAIRE,                      |
-+=======================================+==========================================+
-|                                       |                                          |
-| |                                     |  |                                       |
-+---------------------------------------+------------------------------------------+
+        |vnegspace|
+        |hspace| Pour ODOO, |hspace| Pour le PARTENAIRE,
+        |vspace|
+
+
 
 
 .. _appendix_p_a_fr:
@@ -371,12 +368,6 @@ définie ci-dessous.
     n'a aucune valeur légale.
     La seule référence officielle des termes de la licence “Odoo Enterprise Edition License”
     est la :ref:`version originale <odoo_enterprise_license>`.
-
-    This is a french translation of the "Odoo Enterprise Edition License”.
-    This translation is provided in the hope that it will facilitate understanding, but it has
-    no legal value.
-    The only official reference of the terms of the “Odoo Enterprise Edition
-    License” is the :ref:`original english version <odoo_enterprise_license>`.
 
 .. raw:: html
 

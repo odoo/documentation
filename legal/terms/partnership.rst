@@ -5,28 +5,19 @@
 Odoo Partnership Agreement
 ==========================
 
-.. note:: Version 8 - 2019-08-09
-
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
 
+.. note:: Version 8a - 2019-08-09
 
-BETWEEN:
-
-Odoo S.A.,
-having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière, Belgium
-(Hereinafter referred to as "ODOO")
-
-AND:
-
-_____________________________________________________________________________________,
-
-a company having its registered office at
-
-_____________________________________________________________________________________.
-
-(Hereinafter referred to as “PARTNER”)
+| BETWEEN:
+|  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
+|  Belgium, and its affiliates (collectively referred to as “ODOO”)
+| AND:
+|  _____________________________________________, a company having its registered office at
+|  _____________________________________________________________________________________.
+|  (hereinafter referred to as “PARTNER”)
 
 ODOO and PARTNER are individually referred to as a "Party" and collectively referred to as
 "the Parties".
@@ -217,17 +208,11 @@ customer invoice.
 
 5 Fees
 ======
-PARTNER agrees to pay either the Partnership Entry fee or the Partnership Annual Renewal Fee
-immediately upon receipt of the annual invoice sent by ODOO.
-The fees will be specified in writing at the time of signature of this agreement.
+PARTNER agrees to pay either the Partnership Annual Fee upon receipt of the annual
+invoice sent by ODOO. The fee will be specified in writing at the time of signature of this
+agreement.
 
-PARTNER acknowledges that the above-mentioned partnership fees are not refundable.
-
-The "Partnership Entry" fee shall be paid before the activation of this Agreement, and applies
-for new partners only.
-
-The "Annual Partnership Renewal" fee shall be paid every year when the Term of this Agreement is
-renewed.
+PARTNER acknowledges that the above-mentioned Partnership fee is not refundable.
 
 
 6 Termination
@@ -270,31 +255,26 @@ made in execution of this Agreement and the Odoo Partnership Program will be rec
 or that he shall obtain any anticipated amount of profits by virtue of this Agreement.
 
 
-8 Miscellaneous
-================
-
-8.1 Brand Image
----------------
+8 Brand Image
+=============
 
 The "Odoo" mark (including the word mark and its visual representations and logos) is the exclusive
 property of ODOO.
 
-PARTNER shall advertise themselves as an "Odoo Partner" to avoid any confusion with ODOO, and
-use the appropriate "Odoo Partner logo" in any communication media. PARTNER may use the "Odoo" logo
-to present ODOO's products and services, but it must not be altered nor used by PARTNER as
-the main logo of a website.
+ODOO authorizes PARTNER to use the "Odoo" mark to promote its products and services,
+for the duration of this agreement only, as long as:
 
-PARTNER shall not register as a trademark or in any other way whatsoever any mark, brand or sign that
-could create a risk of confusion with the "Odoo" mark, worldwide, except with ODOO's prior
-written consent.
+- There is no possible confusion that the service is provided by PARTNER, not ODOO;
+- PARTNER does not use the word “Odoo” in their company name, product name, domain name,
+  and does not register any trademark that includes it.
 
-PARTNER shall not incorporate the "Odoo" mark in any trade name, brand name, domain name or in any
-element of identification of their company except with ODOO's prior written consent.
+Both Parties shall refrain from harming the brand image and reputation of the other Party,
+in any way whatsoever, in the performance of this Agreement.
 
-At the termination of this Agreement, PARTNER must immediately stop the use of the "Odoo" mark.
+Non-compliance with the provisions of this section shall be a cause for termination of this Agreement.
 
 
-8.2 Publicity
+8.1 Publicity
 -------------
 PARTNER grants ODOO the nonexclusive right to use PARTNER's name or trademarks in press releases,
 advertisements or other public announcements.
@@ -305,7 +285,7 @@ and that PARTNER's logo and trademarks may be used for this purpose only.
 
 .. _no_soliciting_partnership:
 
-8.3 No Soliciting or Hiring
+8.2 No Soliciting or Hiring
 ---------------------------
 
 Except where the other Party gives its consent in writing, each Party, its affiliates and
@@ -317,7 +297,7 @@ employee toward that end, the breaching Party agrees to pay the other Party an a
 EUR (€) 30 000.00 (thirty thousand euros).
 
 
-8.4  Independent Contractors
+8.3  Independent Contractors
 ----------------------------
 The Parties are independent contractors, and this Agreement shall not be construed as constituting
 either Party as a partner, joint venture or fiduciary of the other, as creating any other form of
@@ -335,18 +315,34 @@ All disputes arising in connection with the Agreement for which no amicable sett
 found shall be finally settled by the Courts of Belgium in Nivelles.
 
 
-.. rubric:: Signatures
+.. |vnegspace| raw:: latex
+
+        \vspace{-.5cm}
+
+.. |vspace| raw:: latex
+
+        \vspace{.8cm}
+
+.. |hspace| raw:: latex
+
+        \hspace{4cm}
+
+.. only:: html
+
+    .. rubric:: Signatures
+
+    +---------------------------------------+------------------------------------------+
+    | For ODOO,                             | For PARTNER                              |
+    +---------------------------------------+------------------------------------------+
+
 
 .. only:: latex
 
-   .. tabularcolumns:: |p{7.5cm}|p{7.5cm}|
+    .. topic:: Signatures
 
-+---------------------------------------+------------------------------------------+
-| For ODOO,                             | For PARTNER,                             |
-+=======================================+==========================================+
-|                                       |                                          |
-| |                                     |  |                                       |
-+---------------------------------------+------------------------------------------+
+        |vnegspace|
+        |hspace| For ODOO, |hspace| For PARTNER,
+        |vspace|
 
 
 .. _appendix_p_a:
