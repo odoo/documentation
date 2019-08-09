@@ -208,7 +208,7 @@ customer invoice.
 
 5 Fees
 ======
-PARTNER agrees to pay either the Partnership Annual Fee upon receipt of the annual
+PARTNER agrees to pay the Partnership Annual Fee upon receipt of the annual
 invoice sent by ODOO. The fee will be specified in writing at the time of signature of this
 agreement.
 
