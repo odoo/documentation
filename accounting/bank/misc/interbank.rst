@@ -18,8 +18,8 @@ Check your Chart of Accounts and default transfer account
 
 To handle internal transfers you need a transfer account in your charts
 of account. Odoo will generate an account automatically based on the
-country of your chart of account. To parameter your chart of account and
-check the default transfer account go into your the accounting module,
+country of your chart of account. To configure your chart of accounts and
+check the default transfer account go into the accounting module settings,
 select :menuselection:`Configuration --> Settings`.
 
 Your chart of accounts will be pre-installed depending on the country
@@ -61,8 +61,8 @@ We will now transfer 50.000 euros from our **Bank** to our **Bank BE57 0633
 Log an internal transfer
 ------------------------
 
-The first step is to register the internal paiement. To do so, go into
-your accounting dashboard. click on the **more** button of one of your banks
+The first step is to register the internal payment. To do so go into
+your accounting dashboard, click on the **more** button of one of your banks
 and select :menuselection:`New --> Internal transfer`. 
 
 .. image:: media/interbank01.png
@@ -96,7 +96,7 @@ statement of your bank.
    :align: center
 
 That is because we did not import the bank statement confirming the
-departure and arrival of the money. It's thus necessary to import your
+receiving and sending of the money. It's thus necessary to import your
 bank statement and reconcile the payment with the correct bank statement
 line. Once you receive your bank statements click the **new statement**
 button of the corresponding bank to import them.
@@ -117,16 +117,16 @@ The following window will open:
 .. image:: media/interbank09.png
    :align: center
 
-You need to choose counterparts for the paiement. Select the correct
-bank statement line corresponding to the paiement and click on the 
+You need to choose counterparts for the payment. Select the correct
+bank statement line corresponding to the payment and click on the 
 **reconcile** button. Close the statement to finish the transaction
 
 .. image:: media/interbank08.png
    :align: center
 
 The same steps will need to be repeated once you receive your second
-bank statement. Note that if you specify the correct amount, and the
-same memo in both bank statement and payment transaction then the
+bank statement. Note that if you specify the same amount and the
+same memo in both bank statements and payment transactions then the
 reconciliation will happen automatically.
 
 .. image:: media/interbank12.png
