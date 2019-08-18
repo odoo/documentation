@@ -1,0 +1,658 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-TODAY, Odoo S.A.
+# This file is distributed under the same license as the Odoo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 11.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2018-10-19 10:03+0200\n"
+"PO-Revision-Date: 2018-10-19 08:15+0000\n"
+"Language-Team: German (Germany) (https://www.transifex.com/odoo/teams/41243/de_DE/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: de_DE\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../discuss.rst:5
+msgid "Discuss"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:3
+msgid "How to use my mail server to send and receive emails in Odoo"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:5
+msgid ""
+"This document is mainly dedicated to Odoo on-premise users who don't benefit"
+" from an out-of-the-box solution to send and receive emails in Odoo, unlike "
+"`Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh "
+"<https://www.odoo.sh>`__."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:9
+msgid ""
+"If no one in your company is used to manage email servers, we strongly "
+"recommend that you opt for those Odoo hosting solutions. Their email system "
+"works instantly and is monitored by professionals. Nevertheless you can "
+"still use your own email servers if you want to manage your email server's "
+"reputation yourself."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:15
+msgid ""
+"You will find here below some useful information on how to integrate your "
+"own email solution with Odoo."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:18
+msgid ""
+"Office 365 email servers don't allow easiliy to send external emails from "
+"hosts like Odoo. Refer to the `Microsoft's documentation "
+"<https://support.office.com/en-us/article/How-to-set-up-a-multifunction-"
+"device-or-application-to-send-email-using-"
+"Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to make it work."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:24
+msgid "How to manage outbound messages"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:26
+msgid ""
+"As a system admin, go to :menuselection:`Settings --> General Settings` and "
+"check *External Email Servers*. Then, click *Outgoing Mail Servers* to "
+"create one and reference the SMTP data of your email server. Once all the "
+"information has been filled out, click on *Test Connection*."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:31
+msgid "Here is a typical configuration for a G Suite server."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:36
+msgid "Then set your email domain name in the General Settings."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:39
+msgid "Can I use an Office 365 server"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:40
+msgid ""
+"You can use an Office 365 server if you run Odoo on-premise. Office 365 SMTP"
+" relays are not compatible with Odoo Online."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:43
+msgid ""
+"Please refer to `Microsoft's documentation <https://support.office.com/en-"
+"us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to configure"
+" a SMTP relay for your Odoo's IP address."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:47
+msgid "How to use a G Suite server"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:48
+msgid ""
+"You can use an G Suite server for any Odoo hosting type. To do so you need "
+"to enable a SMTP relay and to allow *Any addresses* in the *Allowed senders*"
+" section. The configuration steps are explained in `Google documentation "
+"<https://support.google.com/a/answer/2956491?hl=en>`__."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:56
+msgid "Be SPF-compliant"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:57
+msgid ""
+"In case you use SPF (Sender Policy Framework) to increase the deliverability"
+" of your outgoing emails, don't forget to authorize Odoo as a sending host "
+"in your domain name settings. Here is the configuration for Odoo Online:"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:61
+msgid ""
+"If no TXT record is set for SPF, create one with following definition: "
+"v=spf1 include:_spf.odoo.com ~all"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:63
+msgid ""
+"In case a SPF TXT record is already set, add \"include:_spf.odoo.com\". e.g."
+" for a domain name that sends emails via Odoo Online and via G Suite it "
+"could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:67
+msgid ""
+"Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
+"create or modify TXT records in your own domain registrar."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:70
+msgid ""
+"Your new SPF record can take up to 48 hours to go into effect, but this "
+"usually happens more quickly."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:73
+msgid ""
+"Adding more than one SPF record for a domain can cause problems with mail "
+"delivery and spam classification. Instead, we recommend using only one SPF "
+"record by modifying it to authorize Odoo."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:78
+msgid "Allow DKIM"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:79
+msgid ""
+"You should do the same thing if DKIM (Domain Keys Identified Mail) is "
+"enabled on your email server. In the case of Odoo Online & Odoo.sh, you "
+"should add a DNS \"odoo._domainkey\" CNAME record to "
+"\"odoo._domainkey.odoo.com\". For example, for \"foo.com\" they should have "
+"a record \"odoo._domainkey.foo.com\" that is a CNAME with the value "
+"\"odoo._domainkey.odoo.com\"."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:87
+msgid "How to manage inbound messages"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:89
+msgid "Odoo relies on generic email aliases to fetch incoming messages."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:91
+msgid ""
+"**Reply messages** of messages sent from Odoo are routed to their original "
+"discussion thread (and to the inbox of all its followers) by the catchall "
+"alias (**catchall@**)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:95
+msgid ""
+"**Bounced messages** are routed to **bounce@** in order to track them in "
+"Odoo. This is especially used in `Odoo Email Marketing "
+"<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
+"recipients."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:99
+msgid ""
+"**Original messages**: Several business objects have their own alias to "
+"create new records in Odoo from incoming emails:"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:102
+msgid ""
+"Sales Channel (to create Leads or Opportunities in `Odoo CRM "
+"<https://www.odoo.com/page/crm>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:104
+msgid ""
+"Support Channel (to create Tickets in `Odoo Helpdesk "
+"<https://www.odoo.com/page/helpdesk>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:106
+msgid ""
+"Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
+"/project-management>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:108
+msgid ""
+"Job Positions (to create Applicants in `Odoo Recruitment "
+"<https://www.odoo.com/page/recruitment>`__),"
+msgstr ""
+
+#: ../../discuss/email_servers.rst:110
+msgid "etc."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:112
+msgid ""
+"Depending on your mail server, there might be several methods to fetch "
+"emails. The easiest and most recommended method is to manage one email "
+"address per Odoo alias in your mail server."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:116
+msgid ""
+"Create the corresponding email addresses in your mail server (catchall@, "
+"bounce@, sales@, etc.)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:118
+msgid "Set your domain name in the General Settings."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:123
+msgid ""
+"If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for "
+"each alias. You can do it from the General Settings as well. Fill out the "
+"form according to your email provider’s settings. Leave the *Actions to "
+"Perform on Incoming Mails* blank. Once all the information has been filled "
+"out, click on *TEST & CONFIRM*."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:132
+msgid ""
+"If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming "
+"messages to Odoo's domain name rather than exclusively use your own email "
+"server. That way you will receive incoming messages without delay. Indeed, "
+"Odoo Online is fetching incoming messages of external servers once per hour "
+"only. You should set redirections for all the email addresses to Odoo's "
+"domain name in your email server (e.g. *catchall@mydomain.ext* to "
+"*catchall@mycompany.odoo.com*)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:139
+msgid ""
+"All the aliases are customizable in Odoo. Object aliases can be edited from "
+"their  respective configuration view. To edit catchall and bounce aliases, "
+"you first need to activate the developer mode from the Settings Dashboard."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:147
+msgid ""
+"Then refresh your screen and go to :menuselection:`Settings --> Technical "
+"--> Parameters --> System Parameters` to customize the aliases "
+"(*mail.catchall.alias* & * mail.bounce.alias*)."
+msgstr ""
+
+#: ../../discuss/email_servers.rst:154
+msgid ""
+"By default inbound messages are fetched every 5 minutes in Odoo on-premise. "
+"You can change this value in developer mode. Go to :menuselection:`Settings "
+"--> Technical --> Automation --> Scheduled Actions` and look for *Mail: "
+"Fetchmail Service*."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:3
+msgid "How to follow Twitter feed from Odoo"
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:8
+msgid ""
+"You can follow specific hashtags on Twitter and see the tweets within the "
+"Odoo Discuss channels of your choice. The tweets are retrieved periodically "
+"from Twitter. An authenticated user can retweet the messages."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:13
+msgid "Setting up the App on Twitter's side"
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:15
+msgid ""
+"Twitter uses an \"App\" on its side which is opens a gate to which Odoo asks"
+" for tweets, and through which a user can retweet. To set up this app, go to"
+" http://apps.twitter.com/app/new and put in the values:"
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:19
+msgid "Name: this is the name of the application on Twitter"
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:21
+msgid ""
+"Website: this is the external url of your Odoo database, with \"/web\" "
+"added. For example, if your Odoo instance is hosted at "
+"\"http://www.example.com\", you should put \"http://www.example.com/web\" in"
+" this field."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:25
+msgid ""
+"Callback URL: this is the address on which Twitter will respond. Following "
+"the previous example you should write "
+"\"http://www.example.com/web/twitter/callback\"."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:28
+msgid ""
+"Do not forget to accept the terms **Developer agreement** of use and click "
+"on **Create your Twitter application** at the bottom of the page."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:33
+msgid "Getting the API key and secret"
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:35
+msgid ""
+"When on the App dashboard, switch to the **Keys and Access Tokens** tab."
+msgstr ""
+
+#: ../../discuss/mail_twitter.rst:40
+msgid ""
+"And copy those values in Odoo in :menuselection:`Settings--> General "
+"Settings--> Twitter discuss integration` and click on **Save** to save the "
+"settings."
+msgstr ""
+
+#: ../../discuss/mentions.rst:3
+msgid "How to grab attention of other users in my messages"
+msgstr ""
+
+#: ../../discuss/mentions.rst:5
+msgid ""
+"You can **mention** a user in a channel or chatter by typing **@user-name**."
+" Mentioning a user in the chatter will set them as a follower of the item "
+"(if they are not already) and send a message to their inbox. The item "
+"containing the mention will also be bolded in the list view. Mentioning a "
+"user in a channel will send a message to their inbox. You cannot mention a "
+"user in a channel who is not subscribed to the channel. Typing **#channel-"
+"name** will provide a link to the mentioned channel in either a chatter or "
+"another channel."
+msgstr ""
+
+#: ../../discuss/mentions.rst:15
+msgid "Direct messaging a user"
+msgstr ""
+
+#: ../../discuss/mentions.rst:17
+msgid ""
+"**Direct messages** are private messages viewable only by the sender and "
+"recipient. You can send direct messages to other users from within the "
+"Discuss module by creating a new conversation or selecting an existing one "
+"from the sidebar. Direct messages can be sent from anywhere in Odoo using "
+"the speech bubble icon in the top bar. The online status of other users is "
+"displayed to the left of their name. A **green dot** indicates that a user "
+"is Online, an **orange dot** that they are Idle, and a **grey dot** that "
+"they are offline."
+msgstr ""
+
+#: ../../discuss/mentions.rst:28
+msgid "Desktop notifications from Discuss"
+msgstr ""
+
+#: ../../discuss/mentions.rst:30
+msgid ""
+"You can choose to see **desktop notifications** when you receive a new "
+"direct message. The notification shows you the sender and a brief preview of"
+" the message contents. These can be configured or disabled by clicking on "
+"the gear icon in the corner of the notification.."
+msgstr ""
+
+#: ../../discuss/monitoring.rst:3
+msgid "How to be responsive at work thanks to my Odoo inbox"
+msgstr ""
+
+#: ../../discuss/monitoring.rst:5
+msgid ""
+"Use the **Inbox** in Discuss app to monitor updates and progress on "
+"everything you do in Odoo. Notifications and messages from everything you "
+"follow or in which you are mentioned appear in your inbox."
+msgstr ""
+
+#: ../../discuss/monitoring.rst:13
+msgid "You can keep an eye on your **Inbox** from any screen."
+msgstr ""
+
+#: ../../discuss/monitoring.rst:18
+msgid ""
+"Marking an item with a check marks the message as **read** and removes it "
+"from your inbox. If you would like to save an item for future reference or "
+"action, mark it with a star to add it to the **Starred** box. You can star "
+"any message or notification in Discuss or any of the item-specific chatters "
+"throughout Odoo to keep tabs on it here."
+msgstr ""
+
+#: ../../discuss/overview.rst:3
+msgid "Why use Odoo Discuss"
+msgstr ""
+
+#: ../../discuss/overview.rst:5
+msgid ""
+"Odoo Discuss is an easy to use messaging app for teams that brings all your "
+"organization's communication into one place and seamlessly integrates with "
+"the Odoo platform. Discuss lets you send and receive messages from wherever "
+"you are in Odoo as well as manage your messages and notifications easily "
+"from within the app. Discuss allows you to create **channels** for team "
+"chats, conversations about projects, meeting coordination, and more in one "
+"simple and searchable interface."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:3
+msgid "Get organized by planning activities"
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:5
+msgid ""
+"Planning activities is the perfect way to keep on track with your work. Get "
+"reminded of what needs to be done and schedule the next activities to "
+"undertake."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:9
+msgid ""
+"Your activities are available wherever you are in Odoo. It is easy to manage"
+" your priorities."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:15
+msgid ""
+"Activities can be planned and managed from the chatters or in the kanban "
+"views. Here is an example for opportunities :"
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:22
+msgid "Set your activity types"
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:24
+msgid ""
+"A number of generic activities types are available by default in Odoo (e.g. "
+"call, email, meeting, etc.). If you would like to set new ones, go to "
+":menuselection:`Settings --> General settings --> Activity types`."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:29
+msgid "Schedule meetings"
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:31
+msgid ""
+"Activities are planned for specific days. If you need to set hours, go with "
+"the *Meeting* activity type. When scheduling one, the calendar will simply "
+"open to let you select a time slot."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:36
+msgid ""
+"If you need to use other activity types with a calendar planning, make sure "
+"their *Category* is set as *Meeting*."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:40
+msgid "Schedule a chain of activities to follow"
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:42
+msgid ""
+"Odoo helps you easily plan your usual flow of activities. Go to "
+":menuselection:`Configuration --> Activity Types` and set the common "
+"following steps as *Recommended next activities*."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:49
+msgid ""
+"Now, when an activity is completed, you can select *Done & schedule next*. "
+"The next steps will automatically be suggested to you."
+msgstr ""
+
+#: ../../discuss/plan_activities.rst:55
+msgid "Have fun getting better organized by planning activities !"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:3
+msgid "How to efficiently communicate in team using channels"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:5
+msgid ""
+"You can use **channels** to organize discussions between individual teams, "
+"departments, projects, or any other group that requires regular "
+"communication. By having conversations that everyone in the channel can see,"
+" it's easy to keep the whole team in the loop with the latest developments."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:12
+msgid "Creating a channel"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:14
+msgid ""
+"In Discuss there are two types of channels - **public** and **private**."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:17
+msgid ""
+"A **public channel** can only be created by an administrator with write "
+"privileges and can be seen by everyone in the organization. By contrast, a "
+"**private channel** can be created by any user and by default is only "
+"visible to users who have been invited to this channel."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:24
+msgid ""
+"A public channel is best used when many employees need to access information"
+" (such as interdepartmental communication or company announcements), whereas"
+" a private channel should be used whenever information should be limited to "
+"specific users/employees (such as department specific or sensitive "
+"information)."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:31
+msgid "Configuring a channel"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:33
+msgid ""
+"You can configure a channel's name, description, access rights, automatic "
+"subscription, and emailing from :menuselection:`#channel-name --> Settings`."
+" Changing channel access rights allows you to control which groups can view "
+"each channel. You can make a channel visible by all users, invited users, or"
+" users within a selected user group. Note that allowing \"Everyone\" to "
+"follow a private channel will let other users view and join it as they would"
+" a public channel."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:47
+msgid "How to set up a mailing list"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:49
+msgid ""
+"A channel can be configured to behave as a mailing list. From within "
+":menuselection:`#channel-name --> Settings`, define the email you would like"
+" to use. Users can then post to the channel and choose to receive "
+"notifications using the defined email address. An envelope icon will appear "
+"next to the channel name in the list to indicate that a channel will send "
+"messages by email."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:57
+msgid "Locating a channel"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:59
+msgid ""
+"If you do not see a channel on your dashboard, you can search the list of "
+"**public channels** to locate the correct channel or create a new channel by"
+" clicking the plus icon."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:66
+msgid ""
+"You can also click the **CHANNELS** heading to browse a list of all public "
+"channels. This allows the user to manually **join** and **leave** public "
+"channels from a single screen."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:71
+msgid ""
+"It is always wise to search for a channel before creating a new one to "
+"ensure that duplicate entries are not created for the same topic."
+msgstr ""
+
+#: ../../discuss/team_communication.rst:76
+msgid "Using filters to navigate within Discuss"
+msgstr ""
+
+#: ../../discuss/team_communication.rst:78
+msgid ""
+"The topbar search provides access to the same comprehensive search function "
+"present in the rest of Odoo. You can apply multiple **filter criteria** and "
+"**save filters** for later use. The search function accepts wildcards by "
+"using the underscore character \"\\ **\\_**\\ \" to represent a **single "
+"character wildcard.**"
+msgstr ""
+
+#: ../../discuss/tracking.rst:3
+msgid "How to follow a discussion thread and define what I want to hear about"
+msgstr ""
+
+#: ../../discuss/tracking.rst:6
+msgid "How to follow a discussion thread"
+msgstr ""
+
+#: ../../discuss/tracking.rst:7
+msgid ""
+"You can keep track of virtually any business object in Odoo (an opportunity,"
+" a quotation, a task, etc.), by **following** it."
+msgstr ""
+
+#: ../../discuss/tracking.rst:14
+msgid "How to choose the events to follow"
+msgstr ""
+
+#: ../../discuss/tracking.rst:15
+msgid ""
+"You can choose which types of events you want to be notified about. The "
+"example below shows the options available when following a **task** in the "
+"**Project** app."
+msgstr ""
+
+#: ../../discuss/tracking.rst:23
+msgid "How to add other followers"
+msgstr ""
+
+#: ../../discuss/tracking.rst:24
+msgid ""
+"You can invite other users and add channels as followers. Adding a channel "
+"as a follower will send messages posted in the chatter to the channel with a"
+" link back to the original document."
+msgstr ""
+
+#: ../../discuss/tracking.rst:34
+msgid "How to be a default follower"
+msgstr ""
+
+#: ../../discuss/tracking.rst:35
+msgid ""
+"You are automatically set as a default follower of any item you create. In "
+"some applications like CRM and Project, you can be a default follower of any"
+" new record created to get notified of specific events (e.g. a new task "
+"created, an opportunity won)."
+msgstr ""
+
+#: ../../discuss/tracking.rst:40
+msgid ""
+"To do so, start following the parent business object (e.g. the sales channel"
+" in CRM, the project in Project). Then, choose the events you want to hear "
+"about."
+msgstr ""
