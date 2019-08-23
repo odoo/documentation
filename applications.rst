@@ -10,4 +10,5 @@
     applications/hr
     applications/estimating
     applications/payroll
+    internal/general
 
