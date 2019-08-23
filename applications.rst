@@ -8,7 +8,7 @@
     applications/accounting
     applications/project_mgmt
     applications/hr
-    applications/estimating
     applications/payroll
+    applications/legal
     internal/general
 

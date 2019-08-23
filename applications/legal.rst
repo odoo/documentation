@@ -1,7 +1,7 @@
 :banner: banners/sign.jpg
 
 ====================
-Terms & Conditions
+LEGAL
 ====================
 
 .. toctree::
