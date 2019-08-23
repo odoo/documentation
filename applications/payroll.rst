@@ -6,4 +6,4 @@ PAYROLL
 
 .. toctree::
 
-    payroll/workflow
+    payroll/toc
