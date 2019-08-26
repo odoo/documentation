@@ -7,7 +7,7 @@ Overview
 
 In some cases, handling products in different unit of measures is
 necessary. For example, if you buy products in a country where the
-metric system is of application and sell the in a country where the
+metric system is of application and sell them in a country where the
 imperial system is used, you will need to convert the units.
 
 You can set up Odoo to work with different units of measure for one
