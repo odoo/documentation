@@ -49,6 +49,12 @@ The working directory is composed of the following folders:
   │              └── pip.log             Python packages installation logs
 
 You can edit the source code (files under */src*) in development and staging builds.
+
+.. note::
+  Your changes won't be propagated to a new build, you must commit them in your
+  source code if you want to make them persist.
+
+
 For production builds, the source code is read-only, because applying local changes on a production
 server is not a good practice.
 

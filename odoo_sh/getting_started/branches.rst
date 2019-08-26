@@ -175,7 +175,7 @@ staging branches as the emails of your production database are really sent inste
 
 Shell
 -----
-A shell access to your container. You can perform basic linux command (:code:`ls`, :code:`top`)
+A shell access to your container. You can perform basic linux commands (:code:`ls`, :code:`top`)
 and open a shell on your database by typing :code:`psql`.
 
 .. image:: ./media/interface-branches-shell.png
