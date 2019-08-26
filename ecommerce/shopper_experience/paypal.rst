@@ -167,15 +167,9 @@ Log in to `Paypal Developer Site <https://developer.paypal.com/>`__ with your Pa
 
 This will create two sandbox accounts:
 
--  A business account 
-        (to use as merchant, e.g.
-       `pp.merch01-facilitator@example.com <mailto:pp.merch01-facilitator@example.com>`__).
+-  A business account (to use as merchant, e.g. `pp.merch01-facilitator@example.com <mailto:pp.merch01-facilitator@example.com>`__).
 
-       Log in to `Paypal Developer Site <https://developer.paypal.com/>`__ with your Paypal credentials.
-
--  A default personal account 
-        (to use as shopper, e.g.
-       `pp.merch01-buyer@example.com <mailto:pp.merch01-buyer@example.com>`__).
+-  A default personal account (to use as shopper, e.g. `pp.merch01-buyer@example.com <mailto:pp.merch01-buyer@example.com>`__).
 
 Log in to Paypal Sandbox with the merchant account and follow the same configuration instructions.
 Enter your sandbox credentials in Odoo and make sure Paypal is still
