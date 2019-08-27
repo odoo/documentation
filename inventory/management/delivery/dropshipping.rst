@@ -70,7 +70,7 @@ Configuring drop-shipping
 .. image:: media/dropshipping03.png
    :align: center
 
-How to send products from the customers directly to the suppliers
+How to send products from the suppliers directly to the customers
 =================================================================
 
 -  Create a **Sales Order** and specify on a sales order line for your
