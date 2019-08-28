@@ -11,4 +11,5 @@ Practical Information
    db_management/db_online
    db_management/db_premise
    portal/my_odoo_portal
+   support
    legal
