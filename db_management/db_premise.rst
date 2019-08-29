@@ -154,6 +154,8 @@ None of those solutions worked for you? Please contact our
 
 .. _force_ping:
 
+.. _duplicate_premise:
+
 Duplicate a database
 ====================
 
