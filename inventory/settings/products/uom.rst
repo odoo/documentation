@@ -26,7 +26,7 @@ different units of measure (advanced)**, then click on **Apply**.
 Setting up units on your products
 =================================
 
-In :menuselection:`Inventory Control --> Products`, open the product which you would like to
+In :menuselection:`Master Data --> Products`, open the product which you would like to
 change the purchase/sale unit of measure, and click on **Edit**.
 
 In the **Unit of Measure** section, select the unit in which the product
