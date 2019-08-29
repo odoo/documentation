@@ -62,6 +62,8 @@ integrate with the normal invoicing flow in Odoo.
 .. image:: media/mexico02.png
    :align: center
 
+.. _mx-legal-info:
+
 3. Set you legal information in the company
 -------------------------------------------
 
