@@ -86,10 +86,10 @@ from the accounting dashboard.
 Moreover, a transaction can be visible in your bank account but not being fetched
 by Yodlee. Indeed, the transaction in your bank account can have the status "pending"
 and not the status "posted". In that case, Yodlee won't import it, you will have to
-wait that the status changes. 
+wait till the status changes. 
 
 What is important to remember is that Yodlee is not a service fetching transactions
-in real time. This is a service to facilitate the import of the bank statement in the database. 
+in real time. This is a service to facilitate the import of the bank statements to the database. 
 
 Is the Yodlee feature included in my contract? 
 ----------------------------------------------
@@ -103,10 +103,10 @@ Some banks have a status "Beta", what does it mean?
 
 This means that Yodlee is only currently working on developing the synchronization
 with this bank. The synchronization could already work or it may need a bit more time
-to have a 100% working synchronization. Unfortunately, there is not much to do about
-except being patient. 
+to have a 100% working synchronization. Unfortunately, there is not much to do about it
+except for being patient. 
 
 All my past transactions are not in Odoo, why?
 ----------------------------------------------
 
-Yodlee only allows to fetch up transactions to 3 months in the past.
+Yodlee only allows to fetch transactions up to 3 months in the past.
