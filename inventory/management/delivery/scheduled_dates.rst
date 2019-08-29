@@ -81,7 +81,7 @@ numbers of security days from the calculation and thus to compute a
 scheduled date earlier than the one you promised to your client. In that
 way you are sure to be able to keep your commitment.
 
-To set ut your security dates, go to :menuselection:`Settings --> General settings` and
+To set up your security dates, go to :menuselection:`Settings --> General settings` and
 click on **Configure your company data**.
 
 .. image:: media/scheduled_dates04.png
