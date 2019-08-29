@@ -2,9 +2,9 @@
 
 .. _db_premise:
 
-==============================
-On-premise Database management
-==============================
+===============================
+On-premises Database management
+===============================
 
 Register a database
 ===================
