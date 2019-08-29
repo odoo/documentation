@@ -13,7 +13,7 @@ meet the forecast demand and sell, or push, the goods to the consumer.
 Disadvantages of the push inventory control system are that forecasts
 are often inaccurate as sales can be unpredictable and vary from one
 year to the next. Another problem with push inventory control systems is
-that if too much product is left in inventory. This increases the
+that if too much product is left in inventory, this increases the
 company's costs for storing these goods. An advantage to the push system
 is that the company is fairly assured it will have enough product on
 hand to complete customer orders, preventing the inability to meet
