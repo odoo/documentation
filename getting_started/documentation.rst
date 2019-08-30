@@ -115,7 +115,7 @@ into account from the beginning of the project:
    gap to be filled by developments/customizations or changes in
    business processes.
 
--  `The User Story <https://help.rallydev.com/writing-great-user-story>`__:
+-  **The User Story**:
    This technique clearly separates the responsibilities between the
    SPoC, responsible for explaining the WHAT, the WHY and the WHO,
    and the Consultant who will provide a response to the HOW.
