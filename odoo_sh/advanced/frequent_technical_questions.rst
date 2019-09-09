@@ -16,6 +16,21 @@ This is due to the fact that there might be multiple customers on the same serve
 .. warning::
     Do not expect any automated action to be run more often than every 5 min.
 
+Are there "best practices" regarding automated actions?
+-------------------------------------------------------
+
+**Odoo.sh always limits the execution time of automated actions (*aka* crons).**
+Therefore, you must keep this fact in mind when developing your own crons.
+
+We advise that:
+
+- Your automated actions should work on small batches of records.
+- Your automated actions should commit their work after processing each batch;
+  this way, if they get interrupted by the time-limit, there is no need to start over.
+- Your automated actions should be
+  `idempotent <https://stackoverflow.com/a/1077421/3332416>`_: they must not
+  cause side-effects if they are started more often than expected.
+
 
 Can you install pycups or some similar library linked to `CUPS <https://www.cups.org/>`_ ?
 ------------------------------------------------------------------------------------------
