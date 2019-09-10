@@ -11,7 +11,7 @@ insurance, customs duties, etc.) into the cost of the product.
 .. note::
     Landed costs can only be applied to products with a FIFO costing method and
     an automated inventory valuation (which requires the accounting application
-    to be instealled).
+    to be installed).
 
 Configuration
 =============
