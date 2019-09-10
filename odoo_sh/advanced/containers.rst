@@ -186,3 +186,57 @@ Look for "*odoo: addons paths*":
 **Be careful**, especially with your production database.
 Operations that you perform running this Odoo server instance are not isolated:
 Changes will be effective in the database. Always, make your tests in your staging databases.
+
+Debugging in Odoo.sh
+====================
+
+Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger.
+
+.. note:: If you don't know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet.
+
+You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh.
+As the server is run outside a shell, you cannot launch the debugger directly from your Odoo instance backend as the debugger needs a shell to operate.
+
+- `pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default in every container.
+
+- If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_ you have to install it before.
+
+  To do so, you have two options:
+
+    - temporary (only in the current build):
+
+      .. code-block:: bash
+
+        $  pip install pudb --user
+
+      or
+
+      .. code-block:: bash
+
+        $  pip install ipdb --user
+
+    - permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` file.
+
+
+Then edit the code where you want to trigger the debugger and add this:
+
+.. code-block:: python
+
+  import sys
+  if sys.__stdin__.isatty():
+      import pdb; pdb.set_trace()
+
+The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you run Odoo from a shell.
+
+Save the file and then run the Odoo Shell:
+
+.. code-block:: bash
+
+  $ odoo-bin shell
+
+Finally, *via* the Odoo Shell, you can trigger the piece of code/function/method
+you want to debug.
+
+.. image:: ./media/pdb_sh.png
+    :align: center
+    :alt: Console screenshot showing ``pdb`` running in an Odoo.sh shell.
