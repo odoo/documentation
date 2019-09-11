@@ -70,7 +70,7 @@ Set up your Paypal account
      :align: center
 
   .. tip:: For Encrypted Website Payments & EWP_SETTINGS error,
-     Please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
+     please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
 
 Set up Odoo
 ===========
