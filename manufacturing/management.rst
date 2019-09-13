@@ -14,3 +14,4 @@ Manufacturing Management
    management/sub_assemblies
    management/unbuild
    management/subcontracting
+   management/use_mps
