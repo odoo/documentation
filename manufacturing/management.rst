@@ -15,3 +15,4 @@ Manufacturing Management
    management/alternative_wc
    management/unbuild
    management/subcontracting
+   management/use_mps
