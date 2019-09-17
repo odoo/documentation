@@ -155,7 +155,7 @@ Most domain managers have the feature to configure this redirection. This is com
 HTTPS/SSL
 ---------
 
-If the redirection is correctly set up, the platform will automatically generate an SLL certificate with `Let's Encrypt <https://letsencrypt.org/about/>`_ within the hour and your domain will be accessible through HTTPS.
+If the redirection is correctly set up, the platform will automatically generate an SSL certificate with `Let's Encrypt <https://letsencrypt.org/about/>`_ within the hour and your domain will be accessible through HTTPS.
 
 While it is currently not possible to configure your own SSL certificates on the Odoo.sh platform we are considering the feature.
 
