@@ -1,15 +1,12 @@
 :banner: banners/sign.jpg
 
 ====================
-Terms & Conditions
+Estimating
 ====================
 
 .. toctree::
     :titlesonly:
 
-    terms/online
-    terms/enterprise
-    terms/partnership
-    terms/terms_of_sale
+    estimating/general
 
 

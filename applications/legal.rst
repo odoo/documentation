@@ -1,11 +1,10 @@
-:banner: banners/sign.jpg
+:banner: banners/getting_started.jpg
 
-====================
+======================
 LEGAL
-====================
+======================
 
 .. toctree::
-    :titlesonly:
 
     terms/online
     terms/enterprise
