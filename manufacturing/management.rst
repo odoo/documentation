@@ -12,6 +12,7 @@ Manufacturing Management
    management/kit_shipping
    management/product_variants
    management/sub_assemblies
+   management/plan_work_orders
    management/alternative_wc
    management/unbuild
    management/subcontracting

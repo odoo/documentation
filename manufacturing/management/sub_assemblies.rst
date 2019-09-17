@@ -1,42 +1,49 @@
-====================================
-How to manage semi-finished products
-====================================
+=============================
+Manage semi-finished products
+=============================
 
-A subassembly is a manufactured product which is intended to be used as
-a component of another manufactured product. You may wish to employ
-sub-assemblies to simplify a complex BoM, to more accurately represent
-your manufacturing flow, or to use the same subassembly in multiple
-BoMs. A BoM that employs subassemblies is often referred to as a
-multi-level BoM.
+In Odoo, you can use subassembly products to simplify a complex *Bill
+of Materials* or to represent your manufacturing flow more accurately.
+A *subassembly product* is a manufactured product that is used as a
+component to make another one.
 
-Multi-level bills of materials in Odoo are accomplished by creating a
-top-level BoM and subassembly BoMs. Next, the procurement route of the
-subassembly product is defined. This ensures that every time a
-manufacturing order for the top-level product is created, a
-manufacturing order for each subassembly is created as well.
+A *BoM* that employs *subassemblies* is referred to as a multi-level
+BoM. Those are accomplished by creating a *top-level BoM* and
+*subassembly ones*. This process requires a route that will ensure
+that every time a manufacturing order for the top-level product is
+created, another one will be for subassemblies.
 
-Configure the Top -Level Product BoM
-------------------------------------
+Configure the Subassembly Product
+=================================
 
-To configure a multi-level BoM, create the top-level product and its
-BoM. Include any subassemblies in the list of components. Create a BoM
-for each subassembly as you would for any product.
+To configure a *multi-level BoM*, you will need a top-level product
+but also its subassemblies. The first step is to create a product form
+for each of the subassemblies. Select the routes *Manufacture* and
+*Replenish on Order*. Now, hit save.
 
-.. image:: media/sub_assemblies01.png
+.. image:: media/semi-finished_products_01.png
     :align: center
 
-Configure the Subassembly Product Data
---------------------------------------
+In the *Bill of Materials* menu, under *Master Data*, create a new
+*Bill of Materials*. Choose the product you just created and add its
+components.
 
-On the product form of the subassembly, you must select the routes
-**Manufacture** and **Make To Order**. The **Manufacture**
-route takes precedence over the **Buy** route, so selecting the
-latter will have no effect.
-
-.. image:: media/sub_assemblies02.png
+.. image:: media/semi-finished_products_02.png
     :align: center
 
-If you would like to be able to purchase the subassembly in addition to
-manufacturing it, select **Can be Purchased**. All other fields on
-the subassembly product form may be configured according to your
-preference.
+Configure the Main BoM
+======================
+
+Now, you can configure the top-level product and its *BoM*. Include
+any subassemblies in the list of components.
+
+.. image:: media/semi-finished_products_03.png
+    :align: center
+
+Now, each time you will plan a manufacturing order for the top-level
+product, a manufacturing order will be created for the subassembly one.
+Then, you will have to manufacture the subassembly in order to make it
+available before manufacturing the finished product.
+
+.. image:: media/semi-finished_products_04.png
+    :align: center
