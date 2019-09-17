@@ -10,5 +10,5 @@
     applications/hr
     applications/payroll
     applications/legal
-    internal/general
+    applications/general
 

@@ -1,7 +1,6 @@
 .. _accounting:
-
 ========================
-G
+ADVISOR
 ========================
 
 .. toctree::
@@ -16,5 +15,4 @@ G
     advisor/journal_entry
     advisor/reconciliation
     advisor/close
-
 

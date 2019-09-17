@@ -7,3 +7,5 @@ PAYROLL
 .. toctree::
 
     payroll/toc
+    payroll/overview
+    payroll/other
