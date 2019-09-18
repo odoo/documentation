@@ -47,11 +47,11 @@ source_suffix = '.rst'
 #source_encoding = 'utf-8-sig'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'applications'
 
 # General information about the project.
-project = u'Odoo'
-copyright = u'2015-TODAY, Odoo S.A.'
+project = u'Twenty20'
+copyright = u'2015-2019, Hindsight Technologies Portions Odoo SA'
 
 # The version info for the project you're documenting, acts as replacement for
 # |version| and |release|, also used in various other places throughout the
