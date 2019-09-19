@@ -5,12 +5,19 @@ How to adapt your prices to your customers and apply discounts
 Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
 A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
 You can set several critarias to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
-As pricelists only suggest prices, they can be overridden by users completing sales orders.
+
+As pricelists only suggest prices, they can be overridden by vendors completing sales orders.
 Choose your pricing strategy from :menuselection:`Sales --> Settings`.
 
 
 .. image:: ./media/pricing_options.png
    :align: center
+
+.. note::
+
+    * *A single sale price per product :* doesn't let you adapt prices, it use default product price ;
+    * *Different prices per customer segment :* you will set several prices per products ;
+    * *Advanced pricing based on formula :* will let you apply discounts, margins and roundings.
 
 Several prices per product 
 ==========================
@@ -59,7 +66,7 @@ Prices per minimum quantity
 Discounts, margins, roundings
 =============================
 
-The third option allows to set price change rules. 
+*Advanced pricing based on formula* allows to set price change rules. 
 Changes can be relative to the product list/catalog price, the product cost price, 
 or to another pricelist. Changes are calculated via discounts or surcharges and can be 
 forced to fit within floor (minumum margin) and ceilings (maximum margins). 
