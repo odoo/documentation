@@ -1,56 +1,75 @@
-====================================
-How to process a manufacturing order
-====================================
+============================
+Process Manufacturing Orders
+============================
 
-Introduction
-============
+In Odoo, you can manage your manufacturing process in two different
+ways. You can work with one document, or decide to have more information
+and control over it.
 
-There are two basic ways to manage manufacturing in Odoo. The first way
-manages work with one document only. This document is the
-**manufacturing order**. The second way uses additional documents to
-give you more precise control over the manufacturing process. In this
-way, **Manufacturing orders** are divided into one or more steps
-defined by **work orders**, performed in an order defined by
-**routings**.
+In the first case, Odoo makes things easier and helps you manage work
+with one document only: the manufacturing order. No complex steps during
+the process, you just have to schedule the job and record the
+production.
 
-How to manage manufacturing without routings
-============================================
+But, if you need more control, you can use additional documents (steps)
+to your manufacturing process. This way, *Manufacturing Orders* are
+divided into one or more steps defined by *Work Orders* and performed
+in a sequence defined by *routings*.
 
-You will most likely use manufacturing orders without routings if all
-the work to produce your product is performed in one place, by one
-person, in one step, and/or you do not need the level of granular
-control afforded by work orders and routings.
+Using Odoo will allow you to precisely schedule the job, analyze your
+efficiency but also have ease when realizing each step of your
+manufacturing process.
 
-Managing your operations in this way is the default behavior in Odoo.
-There are two basic phases from planning to production:
+Manage Manufacturing Without Routings
+=====================================
 
-1. Create manufacturing orders
+If your manufacturing process is limited to one place, one person and
+one step, you will probably use manufacturing orders without routings.
 
-2. Record Production
+In Odoo, it is the default behavior. If work this way, there are two
+basic phases from planning to production:
 
-How to manage manufacturing with routings and work orders
-=========================================================
+-  Create a manufacturing order
 
-To use work orders and routings, you will need to enable the option
-**Manage production by work orders** From
-:menuselection:`Configuration --> Settings`. You will then be able to add
-routings to bills of materials, and configure some additional related
-fields. You will also be able to create **work centers**, the
+-  Record the production
+
+Manage Manufacturing with Routings and Work Centers
+===================================================
+
+To use *Work Centers* and *Routings*, you will need to enable the
+*Work Orders* feature. To do so, go to the *Manufacturing* app
+settings.
+
+.. image:: media/process_manufacturing_orders_01.png
+    :align: center
+
+Now, you can add routings to *BoMs* and configure your operations
+taking place at different *work centers*. The *Work Centers* are the
 locations at which work orders are performed.
 
-When manufacturing with routings and work orders, each work order is
-scheduled individually. You will also have access to time and capacity
-planning, and reports on costing and efficiency on a work center level.
+.. image:: media/process_manufacturing_orders_02.png
+    :align: center
 
-Manufacturing using routings can be broken down into several steps. When
-configuring your BoM, you will need to add a routing defining the
-component work orders. After planning the manufacturing order, you will
-have the added step of scheduling work orders.
+When manufacturing this way, each *Work Order* is scheduled
+individually. You will also have access to time and capacity planning,
+as well as reports on costing and efficiency for each *Work Center*.
 
-The workflow is thus divided into three basic phases, as follows:
+.. image:: media/process_manufacturing_orders_03.png
+    :align: center
 
-1. Create manufacturing orders
+Thus, the workflow is divided into three basic phases:
 
-2. Schedule the associated work orders.
+-  Create the manufacturing order
 
-3. Perform the scheduled work and record production.
+.. image:: media/process_manufacturing_orders_04.png
+    :align: center
+
+-  Schedule the associated work orders
+
+.. image:: media/process_manufacturing_orders_05.png
+    :align: center
+
+-  Perform the scheduled work and record production
+
+.. image:: media/process_manufacturing_orders_06.png
+    :align: center
