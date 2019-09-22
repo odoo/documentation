@@ -8,6 +8,7 @@
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2018
 # Vivian Montana <vmo@odoo.com>, 2019
 # Jon Perez <jop@odoo.com>, 2019
+# Fernando La Chica Mera <fernandolachica@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
@@ -16,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2018-10-19 10:03+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: Jon Perez <jop@odoo.com>, 2019\n"
+"Last-Translator: Fernando La Chica Mera <fernandolachica@gmail.com>, 2019\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -226,7 +227,7 @@ msgstr ""
 
 #: ../../manufacturing/management/kit_shipping.rst:3
 msgid "How to Sell a Set of Products as a Kit"
-msgstr ""
+msgstr "Cómo vender un conjunto de productos como un kit"
 
 #: ../../manufacturing/management/kit_shipping.rst:5
 msgid ""
@@ -236,10 +237,15 @@ msgid ""
 "kit product is to be managed. In either case, both the Inventory and "
 "Manufacturing apps must be installed."
 msgstr ""
+"Un *kit* es un conjunto de componentes que se entregan sin ser ensamblados o"
+" mezclados previamente. Los kits se describen en Odoo usando *lista de "
+"materiales*. Hay dos formas básicas de configurar kits, dependiendo de cómo "
+"se gestionará el stock del kit. En cualquier caso, las aplicaciones de "
+"inventario y fabricación deben ser instaladas."
 
 #: ../../manufacturing/management/kit_shipping.rst:12
 msgid "Manage Stock of Component Products"
-msgstr ""
+msgstr "Gestión del Stock de los Componentes"
 
 #: ../../manufacturing/management/kit_shipping.rst:14
 msgid ""
@@ -247,6 +253,9 @@ msgid ""
 "the kit *components* only, you will use a Kit BoM without a manufacturing "
 "step."
 msgstr ""
+"Si quiere ensamblar los kits a medida que se lo solicitan, gestionando el "
+"stok de los *componentes* solamente, debe utilizar una lista de materiales "
+"sin ningún paso de fabricación."
 
 #: ../../manufacturing/management/kit_shipping.rst:18
 msgid ""
@@ -256,6 +265,12 @@ msgid ""
 "shows a sales order for the kit \"Custom Computer Kit\", while the image at "
 "right shows the corresponding delivery order."
 msgstr ""
+"Un producto que use una lista de materiales tipo Kit, aparecerá como una "
+"sola línea en una oferta y pedido de venta, pero generará una orden de "
+"entrega con una línea de pedido para cada uno de los componentes del kit. "
+"Como puede observar en el ejemplo siguiente, la imagen de la izquierda "
+"muestra un pedido de venta para el kit \"Custom Computer Kit\", mientras que"
+" la imagen de la derecha muestra el pedido de entrega correspondiente."
 
 #: ../../manufacturing/management/kit_shipping.rst:24
 msgid "|image0|\\ |image1|"
@@ -275,12 +290,21 @@ msgid ""
 " Product Type should be set to **Consumable**. Because a kit product cannot "
 "be purchased, **Can be Purchased** should be unchecked."
 msgstr ""
+"Desde el menú **Productos** de la aplicación de Inventario o Fabricación, "
+"cree cada producto componente como lo haría con cualquier otro producto, "
+"luego cree el producto de nivel superior, o kit. El producto kit debe tener "
+"al menos la ruta **Fabricación**. Dado que no puedes rastrear el stock de en"
+" los productos de kit, el tipo de producto debe establecerse como "
+"**Consumible**. Además, ya que un producto de kit no se puede comprar, el "
+"check **se puede comprar** debe estar sin marcar."
 
 #: ../../manufacturing/management/kit_shipping.rst:37
 msgid ""
 "All other parameters on the kit product may be modified according to your "
 "preference. The component products require no special configuration."
 msgstr ""
+"Todos los demás parámetros del producto del kit pueden modificarse como "
+"desee. Los componentes no requieren ninguna configuración especial."
 
 #: ../../manufacturing/management/kit_shipping.rst:44
 msgid ""
@@ -289,10 +313,14 @@ msgid ""
 "this product as a set of components**. All other options may be left with "
 "their default values."
 msgstr ""
+"Una vez que los productos estén configurados, cree una lista de materiales "
+"para el producto kit. Añada cada componente y su cantidad. Seleccione el "
+"tipo de lista de materiales **Kit**. Todas las demás opciones pueden "
+"quedarse con sus valores por defecto."
 
 #: ../../manufacturing/management/kit_shipping.rst:53
 msgid "Manage Stock of Kit Product and Component Products"
-msgstr ""
+msgstr "Gestión del Stock de los productos Kit y sus componentes"
 
 #: ../../manufacturing/management/kit_shipping.rst:55
 msgid ""
@@ -302,6 +330,12 @@ msgid ""
 "manufacturing order must be registered as completed before the kit product "
 "will appear in your stock."
 msgstr ""
+"Si desea gestionar el stock del producto de kit de nivel superior, deberá "
+"usar una lista de materiales estándar con un paso de fabricación en lugar de"
+" una lista de materiales del producto kit. Cuando utilice una lista de "
+"materiales estándar para ensamblar kits, se creará una orden de fabricación."
+" La orden de fabricación debe marcarse como completada antes de que el "
+"producto kit aparezca en su stock."
 
 #: ../../manufacturing/management/kit_shipping.rst:64
 msgid ""
@@ -310,6 +344,10 @@ msgid ""
 "order is confirmed. Select the product type **Stockable Product** to enable "
 "stock management."
 msgstr ""
+"En el producto kit, seleccione la ruta **Fabricación**. Puede marcar la ruta"
+" **Bajo pedido**, si lo que desea es crear una órden de producción al "
+"confirmar un pedido de venta. Seleccione el tipo de producto **Producto "
+"almacenable** para habilitar la gestión de stock."
 
 #: ../../manufacturing/management/kit_shipping.rst:72
 msgid ""
@@ -317,6 +355,9 @@ msgid ""
 "this product**. The assembly of the kit will be described by a manufacturing"
 " order rather than a packing operation."
 msgstr ""
+"Cuando crees una lista de materiales, selecciona Tipo LdM **Fabricación**. "
+"El ensamblado del kit será descrito en la orden de producción en lugar de "
+"una operación de embalaje."
 
 #: ../../manufacturing/management/manufacturing_order.rst:3
 msgid "How to process a manufacturing order"
@@ -361,7 +402,7 @@ msgstr ""
 
 #: ../../manufacturing/management/manufacturing_order.rst:29
 msgid "Record Production"
-msgstr "registro de producción"
+msgstr "Registro de producción"
 
 #: ../../manufacturing/management/manufacturing_order.rst:32
 msgid "How to manage manufacturing with routings and work orders"
