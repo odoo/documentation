@@ -145,24 +145,6 @@ Once the backup imported, you can access the database using the *Connect* button
 .. image:: ./media/create-import-production-done.png
   :align: center
 
-If the backup is very large, the standard import may fail. In those cases, you will need to upload the backup via ssh.
-
-.. code-block:: bash
-
-  scp <path_to_your_backup> <build_id>@<domain>:~/tmp/
-
-The manpage for scp : `link <https://linux.die.net/man/1/scp>`_
-
-.. image:: ./media/create-import-get-build-id.png
-  :align: center
-
-Then, you will need to manually start the import (in the Odoo.sh shell)
-
-.. code-block:: bash
-
-  odoosh-import-database ~/tmp/<the_name_of_your_dump>
-
-
 Check your outgoing email servers
 ---------------------------------
 
