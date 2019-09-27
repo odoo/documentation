@@ -85,7 +85,7 @@ Ticket.
 
 The final option to submit tickets is thru an API connection. View the
 documentation
-`*here* <https://www.odoo.com/documentation/11.0/webservices/odoo.html>`__.
+`*here* <https://www.odoo.com/documentation/13.0/webservices/odoo.html>`__.
 
 Tickets have been created, now what?
 ------------------------------------

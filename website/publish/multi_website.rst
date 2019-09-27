@@ -116,9 +116,9 @@ be redirected to the right website using Geo IP.
 .. image:: media/multi_website18.png
   :align: center
 
-.. note:: 
-Geo IP is installed by default in Odoo Online. If you run Odoo
-on-premise, don’t forget to install *Geoip* library.
+.. note::
+  Geo IP is installed by default in Odoo Online. If you run Odoo
+  on-premise, don’t forget to install *Geoip* library.
 
 `Read the full documenation about domain names here <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__, 
 

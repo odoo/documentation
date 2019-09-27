@@ -15,7 +15,8 @@ select the Testing Purpose. If you have custom code, you can choose to have it u
 it's processed, you'll get a dump of the database in return.
 
 .. Warning::
-Do *not* upload *backups* of your production database (found in the Backups tab of the production branch) as these are incompatible with the Upgrade platform - they contain your complete sources, etc. that are not needed for the upgrade. Make sure to download a **Dump** instead - either through the Backups tab using the *Download Dump* button or through the Builds page by using the *Download Dump* entry of the contextual menu of your latest production build.
+
+    Do *not* upload *backups* of your production database (found in the Backups tab of the production branch) as these are incompatible with the Upgrade platform - they contain your complete sources, etc. that are not needed for the upgrade. Make sure to download a **Dump** instead - either through the Backups tab using the *Download Dump* button or through the Builds page by using the *Download Dump* entry of the contextual menu of your latest production build.
 
 2. Test your upgraded database
 ------------------------------

@@ -43,14 +43,14 @@ In the Procurement rules section, click on Add an item.
     :align: center
 
 Here you can set the conditions of your rule. There are 3 types of
-action possibles :
+action possible :
 
 -   Move from another location rules
 
 -   Manufacturing rules that will trigger the creation of manufacturing
-    orders.
+    orders
 
--   Buy rules that will trigger the creation of purchase orders.
+-   Buy rules that will trigger the creation of purchase orders
 
 .. note:: 
     The Manufacturing application has to be installed in order to

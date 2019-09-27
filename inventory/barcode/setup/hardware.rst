@@ -26,13 +26,13 @@ scanner** and the **mobile computer scanner**.
     is a good choice if you want to be mobile but don't need a big
     investment. An approach is to log in Odoo on you smartphone, pair
     the bluetooth scanner with the smartphone and work in the
-    warehouse with always the possibility to check your smartphone
+    warehouse with the possibility to check your smartphone
     from time to time and use the software 'manually'.
 
 -   For heavy use, the **mobile computer scanner** is the handiest solution.
-    It consists in a small computer with a built-in barcode scanner.
+    It consists of a small computer with a built-in barcode scanner.
     This one can turn out to be a very productive solution, however
-    you need to make sure that is is capable of running Odoo smoothy.
+    you need to make sure that is is capable of running Odoo smoothly.
     The most recent models using Android + Google Chrome or Windows +
     Internet Explorer Mobile should do the job. However, due to the
     variety of models and configurations on the market, it is

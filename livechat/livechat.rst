@@ -4,8 +4,8 @@
 Live Chat
 =========
 
-Chat in live with website visitors
-==================================
+Chat in real time with website visitors
+=======================================
 
 With Odoo Live Chat, you can establish a direct contact with your
 website visitors. A simple dialog box will be available on their screen
@@ -89,12 +89,12 @@ has joined the channel.
    unpublished on the website, then the live chat button will not appear to
    visitors.
 
-In practice, the conversations initiated by the visitors will appear in
-the Discuss module and will also pop up as a direct message. Therefore,
+Conversations initiated by visitors also appear in
+the Discuss module in addition to popping up as a direct message. Therefore,
 inquiries can be answered wherever you are in Odoo.
 
-If there several operators in charge of a channel, the system will
-dispatch sessions randomly between them.
+If there are several operators who have all joined a channel, the system will
+dispatch visitor sessions randomly between them.
 
 Use commands
 ============
