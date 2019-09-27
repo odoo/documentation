@@ -46,7 +46,7 @@ Costs**, such as freight, insurance or custom duties. Go to
 .. image:: media/landed_costs03.png
     :align: center
 
-.. note:: 
+.. note::
     Landed costs are only possible for products configured in real
     time valuation with real price costing method. The costing method is
     configured on the product category.
