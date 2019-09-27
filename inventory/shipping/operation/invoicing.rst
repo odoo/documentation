@@ -61,8 +61,8 @@ On your sale order, choose the carrier that will be used. Click on
 The price is computed when you **save** the sale order. Confirm the sale
 order and proceed to deliver the product.
 
-The real shipping cost are computed when the delivery order is
-validated.
+The real shipping cost is computed when the delivery order is
+validated, you can see the real cost in the chatter of the delivery order.
 
 .. image:: media/invoicing02.png
    :align: center

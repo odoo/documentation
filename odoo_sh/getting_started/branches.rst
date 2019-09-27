@@ -55,7 +55,7 @@ The demo data is not loaded, as it is not meant to be used in a production datab
 The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.
 
 Partners using trial projects should be aware their production branch, along with all the staging branches,
-will automatically be set back to the development stage after 15 days.
+will automatically be set back to the development stage after 30 days.
 
 Staging
 -------

@@ -97,6 +97,9 @@ Click *More Options* and set the two default encoding formats as
 
 Your Paypal account is ready!
 
+  .. tip:: For Encrypted Website Payments & EWP_SETTINGS error,
+     please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
+
 Settings in Odoo
 ================
 

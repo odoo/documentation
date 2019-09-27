@@ -7,7 +7,7 @@ Overview
 
 In some cases, handling products in different unit of measures is
 necessary. For example, if you buy products in a country where the
-metric system is of application and sell the in a country where the
+metric system is of application and sell them in a country where the
 imperial system is used, you will need to convert the units.
 
 You can set up Odoo to work with different units of measure for one
@@ -26,7 +26,7 @@ different units of measure (advanced)**, then click on **Apply**.
 Setting up units on your products
 =================================
 
-In :menuselection:`Inventory Control --> Products`, open the product which you would like to
+In :menuselection:`Master Data --> Products`, open the product which you would like to
 change the purchase/sale unit of measure, and click on **Edit**.
 
 In the **Unit of Measure** section, select the unit in which the product

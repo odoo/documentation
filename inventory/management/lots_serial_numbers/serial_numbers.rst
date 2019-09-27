@@ -66,7 +66,7 @@ numbers.
    :align: center
 
 If you move products that already have serial numbers assigned, those
-will appear in the list. Just click on the **+** icon to to confirm that you
+will appear in the list. Just click on the **+** icon to confirm that you
 are moving those serial numbers.
 
 .. image:: media/serial_numbers05.png
