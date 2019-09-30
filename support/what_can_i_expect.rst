@@ -46,6 +46,7 @@ What kind of support is not included?
 - How to set up configuration models (Examples include: Inventory Routes,
   Payment Terms, Warehouses, etc)
 - Any intervention on your own servers/deployments of Odoo
+- Any intervention on your own third party account (Ingenico, Authorize, UPS, etc)
 - Questions or issues related to specific developments or customizations done
   either by Odoo or a third party (this is specific only to your database or
   involving code)
