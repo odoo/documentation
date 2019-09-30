@@ -124,7 +124,7 @@ These dates can be set from :menuselection:`Inventory Control --> Serial Numbers
 
 -   **Removal Date:** This is the date on which the goods with this
     serial/lot number should be removed from the stock. Using the FEFO
-    removal strategym goods are picked for delivery orders using this date.
+    removal strategy goods are picked for delivery orders using this date.
 
 -   **Alert Date:** This is the date on which an alert should be sent
     about the goods with this serial/lot number.

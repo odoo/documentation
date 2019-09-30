@@ -150,7 +150,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow `Build an Odoo module <https://www.odoo.com/documentation/11.0/howtos/backend.html>`_ to understand
+you can follow `Build an Odoo module <https://www.odoo.com/documentation/13.0/howtos/backend.html>`_ to understand
 the structure of a module and the content of each file.
 
 Push the development branch

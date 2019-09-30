@@ -2,9 +2,9 @@
 
 .. _db_premise:
 
-==============================
-On-premise Database management
-==============================
+===============================
+On-premises Database management
+===============================
 
 Register a database
 ===================
@@ -116,7 +116,7 @@ or
 
 * **Deactivate users** as explained in this `Documentation 
   <https://www.odoo.com
-  /documentation/user/11.0/db_management/documentation.html#deactivating-users>`__
+  /documentation/user/13.0/db_management/documentation.html#deactivating-users>`__
   and **Reject** the upsell quotation.
 
 Once your database has the correct number of users, the expiration message
@@ -153,6 +153,8 @@ None of those solutions worked for you? Please contact our
 
 
 .. _force_ping:
+
+.. _duplicate_premise:
 
 Duplicate a database
 ====================

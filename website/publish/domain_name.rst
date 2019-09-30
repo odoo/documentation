@@ -84,9 +84,12 @@ We can now apply the redirection from your domain name's manager account:
 How to enable SSL (HTTPS) for my Odoo instance
 ==============================================
 
-To enable SSL, please use a third-party CDN service provider 
-such as CloudFlare.com. 
+Until recently, Odoo users needed to use a third-party CDN service provider such as CloudFlare to enable SSL.
 
+It is not required anymore: Odoo generates the certificate for you automatically, using integration with `Let's Encrypt Certificate Authority and ACME protocol <https://letsencrypt.org/how-it-works/>`__.
+In order to get this, simply add your domain name in your customer portal (a separate certificate is generated for each domain name specified).
+
+If you already use CloudFlare or a similar service, you can keep using it or simply change for Odoo. The choice is yours.
 
 My website is indexed twice by Google
 =====================================

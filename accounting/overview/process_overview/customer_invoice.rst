@@ -70,7 +70,7 @@ The document is composed of three parts:
 Open or Pro-forma invoices
 ==========================
 
-An invoice will usually include the quantity and price the of goods
+An invoice will usually include the quantity and the price of goods
 and/or services, the date, any parties involved, the unique invoice
 number, and any tax information.
 
@@ -222,7 +222,7 @@ Revenues and Expenses."
 Balance sheet
 =============
 
-The balance sheet summarizes the your company's liabilities,
+The balance sheet summarizes your company's liabilities,
 assets and equity at a specific moment in time.
 
 .. image:: ./media/invoice15.png

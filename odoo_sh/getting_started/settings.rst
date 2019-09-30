@@ -155,12 +155,9 @@ Most domain managers have the feature to configure this redirection. This is com
 HTTPS/SSL
 ---------
 
-You can use a third-party CDN such as *Cloudflare.com* to enable the *HTTPS* support for your custom domain:
+If the redirection is correctly set up, the platform will automatically generate an SSL certificate with `Let's Encrypt <https://letsencrypt.org/about/>`_ within the hour and your domain will be accessible through HTTPS.
 
-* `Create a Cloudflare account <https://support.cloudflare.com/hc/en-us/articles/201720164-Step-2-Create-a-Cloudflare-account-and-add-a-website>`_
-* `Change your domain name servers to Cloudflare <https://support.cloudflare.com/hc/en-us/articles/205195708-Step-3-Change-your-domain-name-servers-to-Cloudflare>`_
-* `Choose an SSL mode <https://support.cloudflare.com/hc/en-us/articles/201897700-Step-4-Recommended-First-Steps-for-all-Cloudflare-users#sslmode>`_
-* `Redirect your visitors to HTTPS <https://support.cloudflare.com/hc/en-us/articles/200170536-How-do-I-redirect-all-visitors-to-HTTPS-SSL->`_
+While it is currently not possible to configure your own SSL certificates on the Odoo.sh platform we are considering the feature.
 
 SPF and DKIM compliance
 -----------------------

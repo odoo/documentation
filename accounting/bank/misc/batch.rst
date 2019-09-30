@@ -66,9 +66,9 @@ From checks received to the bank
 Receive customer checks
 -----------------------
 
-Once your record checks received, record them on the bank account on
+Once your checks are received, record them on the bank account on
 which you plan to deposit them. Once you select the bank account (or
-check journal is you configured Odoo that way), Odoo proposes you to use
+check journal if you configured Odoo that way), Odoo proposes you to use
 a batch deposit. Select this option if you plan to deposit the check to
 your bank.
 
@@ -93,7 +93,7 @@ and create a new **Batch Deposit**.
 
 Select the bank, then select the payments (checks) you want to add in
 this deposit. By default, Odoo proposes you all the checks that have not
-been deposit yet. That way, you can verify that you do not forget or
+been deposited yet. That way you can verify that you do not forget or
 lost a check.
 
 .. image:: media/batch05.png
@@ -113,9 +113,9 @@ matches with the bank statement line.
 .. image:: media/batch06.png
    :align: center
 
-If you select a batch deposit, Odoo will automatically fills all the
+If you select a batch deposit, Odoo will automatically fill all the
 checks contained in this deposit for the matching. (2 checks were in
-this batch deposit the example below)
+the batch deposit in the example below)
 
 .. image:: media/batch07.png
    :align: center
@@ -129,7 +129,7 @@ I don't see the batch deposit link on bank statements?
 If you don't have a batch deposit link in your bank statement, there
 could be two reasons:
 
-- After having installed the batch deposit features, you need to reload
+- After having installed the batch deposit features you need to reload
   the page so that the browser is aware of this new feature. Just
   click the reload button of your browser.
 
@@ -142,5 +142,5 @@ If you have a smaller amount in your bank statement than the actual
 amount in your batch deposit, it probably means that one of your check
 has been refused.
 
-In this case, click on the line related to this check to remove it from
+In this case click on the line related to this check to remove it from
 the bank statement matching.

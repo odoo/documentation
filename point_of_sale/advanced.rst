@@ -6,6 +6,6 @@ Advanced topics
    :titlesonly:
 
    advanced/barcode
-   advanced/multi_cashiers
+   advanced/multicashiers
    advanced/reprint
    advanced/mercury
