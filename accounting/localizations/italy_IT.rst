@@ -25,7 +25,7 @@ elettronica sono i seguenti:
    Ministero. Lo stesso server deve essere configurato come server che
    gestisce tutta la corrispondenza mail in Odoo, per saperne di più si
    puo’ consultare la relativa
-   `guida <https://www.odoo.com/documentation/user/12.0/discuss/email_servers.html>`__.
+   `guida <https://www.odoo.com/documentation/user/13.0/discuss/email_servers.html>`__.
 
 -  Indirizzo PEC dell’ Azienda, tale indirizzo deve essere lo stesso
    registrato presso l’Agenzia delle Entrate per l’utilizzo dei servizi

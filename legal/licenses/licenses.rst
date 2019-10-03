@@ -7,10 +7,10 @@ Licenses
 
 .. _odoo_community_license:
 
-Odoo 12 Community Edition
+Odoo 13 Community Edition
 =========================
 
-Odoo 12 Community Edition is licensed under
+Odoo 13 Community Edition is licensed under
 `LGPL version 3 <http://www.gnu.org/licenses/lgpl-3.0.en.html>`_  (also known as LGPLv3).
 See also the `GPL FAQ <http://www.gnu.org/licenses/gpl-faq.en.html>`_ and the
 `compatibility matrix <http://www.gnu.org/licenses/gpl-faq.en.html#AllCompatibility>`_.
@@ -18,10 +18,10 @@ See also the `GPL FAQ <http://www.gnu.org/licenses/gpl-faq.en.html>`_ and the
 
 .. _odoo_enterprise_license:
 
-Odoo 12 Enterprise Edition
+Odoo 13 Enterprise Edition
 ==========================
 
-Odoo 12 Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
+Odoo 13 Enterprise Edition is licensed under the Odoo Enterprise Edition License v1.0,
 defined as follows:
 
 .. use <tt> to avoid default <pre> styling

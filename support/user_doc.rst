@@ -130,14 +130,14 @@ Technical Details for Nerds
 Advanced users may, of course, fork and clone `the GitHub repository <https://github.com/odoo/documentation-user>`_.
 Then submit a pull request with the canonical Git/GitHub workflow.
 
-See our `README <https://github.com/odoo/documentation-user/blob/12.0/README.rst>`_ file about building
+See our `README <https://github.com/odoo/documentation-user/blob/13.0/README.rst>`_ file about building
 the documentation.
 
 
 Developer documentation
 =======================
 
-Documentation that targets developers of Odoo apps is maintained alongside `the source code of Odoo <https://github.com/odoo/odoo/tree/12.0/doc>`_.
+Documentation that targets developers of Odoo apps is maintained alongside `the source code of Odoo <https://github.com/odoo/odoo/tree/13.0/doc>`_.
 
 .. note::
     User documentation might contain technicalities yet, when they are related to configuration and everyday use of Odoo.
