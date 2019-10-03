@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 11.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-09-26 16:07+0200\n"
+"POT-Creation-Date: 2019-10-03 11:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -506,8 +506,8 @@ msgstr ""
 msgid "Use the save button when you are done. You can then select that customer in any future transactions."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:3
-msgid "Point of Sale Hardware Setup"
+#: ../../point_of_sale/overview/setup.rst:1
+msgid "=./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos=========================== Point of Sale Hardware Setup ============================"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:6
@@ -617,7 +617,7 @@ msgid "Once powered, The POSBox needs a while to boot. Once the POSBox is ready,
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:80
-#: ../../point_of_sale/overview/setup.rst:292
+#: ../../point_of_sale/overview/setup.rst:290
 msgid "Setup the Point of Sale"
 msgstr ""
 
@@ -730,7 +730,7 @@ msgid "Extra dependencies"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:218
-msgid "Because Odoo runs on Python 2, you need to check which version of pip you need to use."
+msgid "Because Odoo 11.0 runs on Python 3, you need to check which version of pip you need to use."
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:221
@@ -743,7 +743,7 @@ msgid "If it returns something like::"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:227
-msgid "You need to try pip2 instead."
+msgid "You need to try pip3 instead."
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:233
@@ -755,362 +755,358 @@ msgid "The driver modules requires the installation of new python modules:"
 msgstr ""
 
 #: ../../point_of_sale/overview/setup.rst:237
-msgid "``# pip install pyserial``"
+msgid "``# pip install netifaces evdev pyusb==1.0.0b1``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:239
-msgid "``# pip install pyusb==1.0.0b1``"
-msgstr ""
-
-#: ../../point_of_sale/overview/setup.rst:241
-msgid "``# pip install qrcode``"
-msgstr ""
-
-#: ../../point_of_sale/overview/setup.rst:244
+#: ../../point_of_sale/overview/setup.rst:240
 msgid "Access Rights"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:246
+#: ../../point_of_sale/overview/setup.rst:242
 msgid "The drivers need raw access to the printer and barcode scanner devices. Doing so requires a bit system administration. First we are going to create a group that has access to USB devices"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:250
+#: ../../point_of_sale/overview/setup.rst:246
 msgid "``# groupadd usbusers``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:252
+#: ../../point_of_sale/overview/setup.rst:248
 msgid "Then we add the user who will run the Odoo server to ``usbusers``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:254
+#: ../../point_of_sale/overview/setup.rst:250
 msgid "``# usermod -a -G usbusers USERNAME``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:256
+#: ../../point_of_sale/overview/setup.rst:252
 msgid "Then we need to create a udev rule that will automatically allow members of ``usbusers`` to access raw USB devices. To do so create a file called ``99-usbusers.rules`` in the ``/etc/udev/rules.d/`` directory with the following content::"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:264
-msgid "Then you need to reboot your machine."
+#: ../../point_of_sale/overview/setup.rst:260
+msgid "Then you need to reload the udev rules or reboot your machine if reloading the rules did not work."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:267
+#: ../../point_of_sale/overview/setup.rst:262
+msgid "``# udevadm control --reload-rules && udevadm trigger``"
+msgstr ""
+
+#: ../../point_of_sale/overview/setup.rst:265
 msgid "Start the local Odoo instance"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:269
+#: ../../point_of_sale/overview/setup.rst:267
 msgid "We must launch the Odoo server with the correct settings"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:271
-msgid "``$ ./odoo.py --load=web,hw_proxy,hw_posbox_homepage,hw_posbox_upgrade,hw_scale,hw_scanner,hw_escpos``"
+#: ../../point_of_sale/overview/setup.rst:269
+msgid "``$ ./odoo-bin --load=web,hw_proxy,hw_posbox_homepage,hw_scale,hw_scanner,hw_escpos``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:274
+#: ../../point_of_sale/overview/setup.rst:272
 msgid "Test the instance"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:276
+#: ../../point_of_sale/overview/setup.rst:274
 msgid "Plug all your hardware to your machine's USB ports, and go to ``http://localhost:8069/hw_proxy/status`` refresh the page a few times and see if all your devices are indicated as *Connected*. Possible source of errors are: The paths on the distribution differ from the paths expected by the drivers, another process has grabbed exclusive access to the devices, the udev rules do not apply or a superseded by others."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:284
+#: ../../point_of_sale/overview/setup.rst:282
 msgid "Automatically start Odoo"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:286
+#: ../../point_of_sale/overview/setup.rst:284
 msgid "You must now make sure that this Odoo install is automatically started after boot. There are various ways to do so, and how to do it depends on your particular setup. Using the init system provided by your distribution is probably the easiest way to accomplish this."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:294
+#: ../../point_of_sale/overview/setup.rst:292
 msgid "The IP address field in the POS configuration must be either ``127.0.0.1`` or ``localhost`` if you're running the created Odoo server on the machine that you'll use as the Point of Sale device. You can also leave it empty."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:300
+#: ../../point_of_sale/overview/setup.rst:298
 msgid "POSBox Technical Documentation"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:303
+#: ../../point_of_sale/overview/setup.rst:301
 msgid "Technical Overview"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:306
+#: ../../point_of_sale/overview/setup.rst:304
 msgid "The POSBox Hardware"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:308
+#: ../../point_of_sale/overview/setup.rst:306
 msgid "The POSBox's Hardware is based on a `Raspberry Pi 2 <https://www.raspberrypi.org/products/raspberry-pi-2-model-b/>`_, a popular single-board computer. The Raspberry Pi 2 is powered with a 2A micro-usb power adapter. 2A is needed to give enough power to the barcode scanners. The Software is installed on a 8Gb Class 10 or Higher SD Card. All this hardware is easily available worldwide from independent vendors."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:317
+#: ../../point_of_sale/overview/setup.rst:315
 msgid "Compatible Peripherals"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:319
+#: ../../point_of_sale/overview/setup.rst:317
 msgid "Officially supported hardware is listed on the `POS Hardware page <https://www.odoo.com/page/pos-ipad-android-hardware>`_."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:323
+#: ../../point_of_sale/overview/setup.rst:321
 msgid "The POSBox Software"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:325
+#: ../../point_of_sale/overview/setup.rst:323
 msgid "The POSBox runs a heavily modified Raspbian Linux installation, a Debian derivative for the Raspberry Pi. It also runs a barebones installation of Odoo which provides the webserver and the drivers. The hardware drivers are implemented as Odoo modules. Those modules are all prefixed with ``hw_*`` and they are the only modules that are running on the POSBox. Odoo is only used for the framework it provides. No business data is processed or stored on the POSBox. The Odoo instance is a shallow git clone of the ``11.0`` branch."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:334
+#: ../../point_of_sale/overview/setup.rst:332
 msgid "The root partition on the POSBox is mounted read-only, ensuring that we don't wear out the SD card by writing to it too much. It also ensures that the filesystem cannot be corrupted by cutting the power to the POSBox. Linux applications expect to be able to write to certain directories though. So we provide a ramdisk for /etc and /var (Raspbian automatically provides one for /tmp). These ramdisks are setup by ``setup_ramdisks.sh``, which we run before all other init scripts by running it in ``/etc/init.d/rcS``. The ramdisks are named /etc_ram and /var_ram respectively. Most data from /etc and /var is copied to these tmpfs ramdisks. In order to restrict the size of the ramdisks, we do not copy over certain things to them (eg. apt related data). We then bind mount them over the original directories. So when an application writes to /etc/foo/bar it's actually writing to /etc_ram/foo/bar. We also bind mount / to /root_bypass_ramdisks to be able to get to the real /etc and /var during development."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:350
+#: ../../point_of_sale/overview/setup.rst:348
 msgid "Logs of the running Odoo server can be found at:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:352
+#: ../../point_of_sale/overview/setup.rst:350
 msgid "``/var/log/odoo/odoo.log``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:354
+#: ../../point_of_sale/overview/setup.rst:352
 msgid "Various POSBox related scripts (eg. wifi-related scripts) running on the POSBox will log to /var/log/syslog and those messages are tagged with ``posbox_*``."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:359
+#: ../../point_of_sale/overview/setup.rst:357
 msgid "Accessing the POSBox"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:362
+#: ../../point_of_sale/overview/setup.rst:360
 msgid "Local Access"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:364
+#: ../../point_of_sale/overview/setup.rst:362
 msgid "If you plug a QWERTY USB keyboard into one of the POSBox's USB ports, and if you connect a computer monitor to the *HDMI* port of the POSBox, you can use it as a small GNU/Linux computer and perform various administration tasks, like viewing some logs."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:369
+#: ../../point_of_sale/overview/setup.rst:367
 msgid "The POSBox will automatically log in as root on the default tty."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:372
+#: ../../point_of_sale/overview/setup.rst:370
 msgid "Remote Access"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:374
+#: ../../point_of_sale/overview/setup.rst:372
 msgid "If you have the POSBox's IP address and an SSH client you can access the POSBox's system remotely. The login credentials are ``pi``/``raspberry``."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:379
+#: ../../point_of_sale/overview/setup.rst:377
 msgid "Updating The POSBox Software"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:381
+#: ../../point_of_sale/overview/setup.rst:379
 msgid "Only upgrade the POSBox if you experience problems or want to use newly implemented features."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:384
+#: ../../point_of_sale/overview/setup.rst:382
 msgid "The best way to update the POSBox software is to download a new version of the image and flash the SD-Card with it. This operation is described in detail in `this tutorial <http://elinux.org/RPi_Easy_SD_Card_Setup>`_, just replace the standard Raspberry Pi image with the latest one found at `the official POSBox image page <http://nightly.odoo.com/master/posbox/>`_. This method of upgrading will ensure that you're running the latest version of the POSBox software."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:393
+#: ../../point_of_sale/overview/setup.rst:391
 msgid "The second way of upgrading is through the built in upgrade interface that can be reached through the POSBox homepage. The nice thing about upgrading like this is that you don't have to flash a new image. This upgrade method is limited to what it can do however. It can not eg. update installed configuration files (like eg. /etc/hostapd.conf). It can only upgrade:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:400
+#: ../../point_of_sale/overview/setup.rst:398
 msgid "The internal Odoo application"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:401
+#: ../../point_of_sale/overview/setup.rst:399
 msgid "Scripts in the folder ``odoo/addons/point_of_sale/tools/posbox/configuration/``"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:403
+#: ../../point_of_sale/overview/setup.rst:401
 msgid "When in doubt, always use the first method of upgrading."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:406
+#: ../../point_of_sale/overview/setup.rst:404
 msgid "Troubleshoot"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:409
+#: ../../point_of_sale/overview/setup.rst:407
 msgid "The POS cannot connect to the POSBox"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:411
+#: ../../point_of_sale/overview/setup.rst:409
 msgid "The easiest way to make sure the POSBox is properly set-up is to turn it on with the printer plugged in as it will print a receipt indicating any error if encountered or the POSBox's IP address in case of success. If no receipt is printed, check the following steps:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:415
+#: ../../point_of_sale/overview/setup.rst:413
 msgid "Make sure the POSBox is powered on, indicated by a brightly lit red status LED."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:417
+#: ../../point_of_sale/overview/setup.rst:415
 msgid "Make sure the POSBox is ready, this is indicated by a brightly lit green status LED just next to the red power status LED. The POSBox should be ready ~2 minutes after it is started."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:420
+#: ../../point_of_sale/overview/setup.rst:418
 msgid "Make sure the POSBox is connected to the same network as your POS device. Both the device and the POSBox should be visible in the list of connected devices on your network router."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:423
+#: ../../point_of_sale/overview/setup.rst:421
 msgid "Make sure that your LAN is set up with DHCP, and gives IP addresses in the range 192.168.0.X, 192.168.1.X, 10.0.0.X. If you cannot setup your LAN that way, you must manually set up your POSBox's IP address."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:427
+#: ../../point_of_sale/overview/setup.rst:425
 msgid "If you have specified the POSBox's IP address in the configuration, make sure it correspond to the printed on the POSBox's status receipt."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:430
+#: ../../point_of_sale/overview/setup.rst:428
 msgid "Make sure that the POS is not loaded over HTTPS."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:431
+#: ../../point_of_sale/overview/setup.rst:429
 msgid "A bug in Firefox's HTTP implementation prevents the autodiscovery from working reliably. When using Firefox you should manually set up the POSBox's IP address in the POS configuration."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:436
+#: ../../point_of_sale/overview/setup.rst:434
 msgid "The Barcode Scanner is not working"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:438
+#: ../../point_of_sale/overview/setup.rst:436
 msgid "The barcode scanner must be configured in US QWERTY and emit an Enter after each barcode. This is the default configuration of most barcode readers. Refer to the barcode reader documentation for more information."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:442
+#: ../../point_of_sale/overview/setup.rst:440
 msgid "The POSBox needs a 2A power supply to work with some barcode scanners. If you are not using the provided power supply, make sure the one you use has enough power."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:445
+#: ../../point_of_sale/overview/setup.rst:443
 msgid "Some barcode scanners will need more than 2A and will not work, or will work unreliably, even with the provided power supply. In those case you can plug the barcode scanner in a self-powered USB hub."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:448
+#: ../../point_of_sale/overview/setup.rst:446
 msgid "Some poorly built barcode scanners do not advertise themselves as barcode scanners but as a usb keyboard instead, and will not be recognized by the POSBox."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:453
+#: ../../point_of_sale/overview/setup.rst:451
 msgid "The Barcode Scanner is not working reliably"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:455
+#: ../../point_of_sale/overview/setup.rst:453
 msgid "Make sure that no more than one device with 'Scan via Proxy'/'Barcode Scanner' enabled are connected to the POSBox at the same time."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:460
+#: ../../point_of_sale/overview/setup.rst:458
 msgid "Printing the receipt takes too much time"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:462
+#: ../../point_of_sale/overview/setup.rst:460
 msgid "A small delay before the first print is expected, as the POSBox will do some preprocessing to speed up the next printings. If you suffer delays afterwards it is most likely due to poor network connection between the POS and the POSBox."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:468
+#: ../../point_of_sale/overview/setup.rst:466
 msgid "Some characters are not correctly printed on the receipt"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:470
+#: ../../point_of_sale/overview/setup.rst:468
 msgid "The POSBox does not support all languages and characters. It currently supports Latin and Cyrillic based scripts, with basic Japanese support."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:475
+#: ../../point_of_sale/overview/setup.rst:473
 msgid "The printer is offline"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:477
+#: ../../point_of_sale/overview/setup.rst:475
 msgid "Make sure the printer is connected, powered, has enough paper and has its lid closed, and is not reporting an error. If the error persists, please contact support."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:482
+#: ../../point_of_sale/overview/setup.rst:480
 msgid "The cashdrawer does not open"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:484
+#: ../../point_of_sale/overview/setup.rst:482
 msgid "The cashdrawer should be connected to the printer and should be activated in the POS configuration."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:488
+#: ../../point_of_sale/overview/setup.rst:486
 msgid "Credits"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:489
+#: ../../point_of_sale/overview/setup.rst:487
 msgid "The POSBox project was developed by Frédéric van der Essen with the kind help of Gary Malherbe, Fabien Meghazi, Nicolas Wisniewsky, Dimitri Del Marmol, Joren Van Onder and Antony Lesuisse."
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:493
+#: ../../point_of_sale/overview/setup.rst:491
 msgid "This development would not have been possible without the Indiegogo campaign and those who contributed to it. Special thanks goes to the partners who backed the campaign with founding partner bundles:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:497
+#: ../../point_of_sale/overview/setup.rst:495
 msgid "Camptocamp"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:498
+#: ../../point_of_sale/overview/setup.rst:496
 msgid "BHC"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:499
+#: ../../point_of_sale/overview/setup.rst:497
 msgid "openBig"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:500
+#: ../../point_of_sale/overview/setup.rst:498
 msgid "Eeezee-IT"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:501
+#: ../../point_of_sale/overview/setup.rst:499
 msgid "Solarsis LDA"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:502
+#: ../../point_of_sale/overview/setup.rst:500
 msgid "ACSONE"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:503
+#: ../../point_of_sale/overview/setup.rst:501
 msgid "Vauxoo"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:504
+#: ../../point_of_sale/overview/setup.rst:502
 msgid "Ekomurz"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:505
+#: ../../point_of_sale/overview/setup.rst:503
 msgid "Datalp"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:506
+#: ../../point_of_sale/overview/setup.rst:504
 msgid "Dao Systems"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:507
+#: ../../point_of_sale/overview/setup.rst:505
 msgid "Eggs Solutions"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:508
+#: ../../point_of_sale/overview/setup.rst:506
 msgid "OpusVL"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:510
+#: ../../point_of_sale/overview/setup.rst:508
 msgid "And also the partners who've backed the development with the Founding POSBox Bundle:"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:513
+#: ../../point_of_sale/overview/setup.rst:511
 msgid "Willow IT"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:514
+#: ../../point_of_sale/overview/setup.rst:512
 msgid "E\\. Akhalwaya & Sons"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:515
+#: ../../point_of_sale/overview/setup.rst:513
 msgid "Multibase"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:516
+#: ../../point_of_sale/overview/setup.rst:514
 msgid "Mindesa"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:517
+#: ../../point_of_sale/overview/setup.rst:515
 msgid "bpso.biz"
 msgstr ""
 
-#: ../../point_of_sale/overview/setup.rst:518
+#: ../../point_of_sale/overview/setup.rst:516
 msgid "Shine IT."
 msgstr ""
 
