@@ -77,7 +77,7 @@ You can start using Odoo.sh. Your first build is about to be created. You will s
 Import your database
 ====================
 
-You can import your database in your Odoo.sh project as long as this is an Odoo 10.0, 11.0 or 12.0 database.
+You can import your database in your Odoo.sh project as long as this is an Odoo 10.0, 11.0 or above database.
 
 Push your modules in production
 -------------------------------
