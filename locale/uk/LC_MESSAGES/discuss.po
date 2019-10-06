@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 11.0\n"
+"Project-Id-Version: Odoo 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-19 10:03+0200\n"
+"POT-Creation-Date: 2019-09-16 15:50+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
 "Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2018\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
@@ -139,20 +139,16 @@ msgstr "Як використовувати сервер G Suite"
 #: ../../discuss/email_servers.rst:48
 msgid ""
 "You can use an G Suite server for any Odoo hosting type. To do so you need "
-"to enable a SMTP relay and to allow *Any addresses* in the *Allowed senders*"
-" section. The configuration steps are explained in `Google documentation "
+"to setup the SMTP relay service. The configuration steps are explained in "
+"`Google documentation "
 "<https://support.google.com/a/answer/2956491?hl=en>`__."
 msgstr ""
-"Ви можете використовувати сервер G Suite для будь-якого типу хостингу Odoo. "
-"Для цього вам необхідно включити ретранслятор SMTP та дозволити будь-які "
-"адреси в розділі Дозволені відправники. Етапи налаштування пояснюються в "
-"`Документації Google <https://support.google.com/a/answer/2956491?hl=en>`__."
 
-#: ../../discuss/email_servers.rst:56
+#: ../../discuss/email_servers.rst:55
 msgid "Be SPF-compliant"
 msgstr "Будьте сумісними з SPF"
 
-#: ../../discuss/email_servers.rst:57
+#: ../../discuss/email_servers.rst:56
 msgid ""
 "In case you use SPF (Sender Policy Framework) to increase the deliverability"
 " of your outgoing emails, don't forget to authorize Odoo as a sending host "
@@ -163,7 +159,7 @@ msgstr ""
 "авторизувати Odoo як відправника у налаштуваннях вашого доменного імені. Ось"
 " налаштування для Odoo Online:"
 
-#: ../../discuss/email_servers.rst:61
+#: ../../discuss/email_servers.rst:60
 msgid ""
 "If no TXT record is set for SPF, create one with following definition: "
 "v=spf1 include:_spf.odoo.com ~all"
@@ -171,7 +167,7 @@ msgstr ""
 "Якщо для SPF немає запису TXT, створіть його з наступним визначенням: v=spf1"
 " include:_spf.odoo.com ~all"
 
-#: ../../discuss/email_servers.rst:63
+#: ../../discuss/email_servers.rst:62
 msgid ""
 "In case a SPF TXT record is already set, add \"include:_spf.odoo.com\". e.g."
 " for a domain name that sends emails via Odoo Online and via G Suite it "
@@ -182,7 +178,7 @@ msgstr ""
 "Online, і через G Suite це може бути: v=spf1 include: _spf.odoo.com include:"
 " _spf.google.com ~ all"
 
-#: ../../discuss/email_servers.rst:67
+#: ../../discuss/email_servers.rst:66
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
@@ -190,7 +186,7 @@ msgstr ""
 "Знайдіть `тут <https://www.mail-tester.com/spf/>`__ точну процедуру "
 "створення або зміни TXT-записи у власному реєстраторі доменів."
 
-#: ../../discuss/email_servers.rst:70
+#: ../../discuss/email_servers.rst:69
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
@@ -198,7 +194,7 @@ msgstr ""
 "Завершення вашого нового запису SPF може зайняти до 48 годин, але це, як "
 "правило, відбувається швидше."
 
-#: ../../discuss/email_servers.rst:73
+#: ../../discuss/email_servers.rst:72
 msgid ""
 "Adding more than one SPF record for a domain can cause problems with mail "
 "delivery and spam classification. Instead, we recommend using only one SPF "
@@ -208,11 +204,11 @@ msgstr ""
 "доставкою пошти та класифікацією спаму. Замість цього ми рекомендуємо "
 "використовувати лише один запис SPF, змінюючи його, щоб авторизувати Odoo."
 
-#: ../../discuss/email_servers.rst:78
+#: ../../discuss/email_servers.rst:77
 msgid "Allow DKIM"
 msgstr "Дозвольте DKIM"
 
-#: ../../discuss/email_servers.rst:79
+#: ../../discuss/email_servers.rst:78
 msgid ""
 "You should do the same thing if DKIM (Domain Keys Identified Mail) is "
 "enabled on your email server. In the case of Odoo Online & Odoo.sh, you "
@@ -228,17 +224,17 @@ msgstr ""
 "запис \"odoo._domainkey.foo.com\", тобто CNAME зі значенням "
 "\"odoo._domainkey.odoo.com\"."
 
-#: ../../discuss/email_servers.rst:87
+#: ../../discuss/email_servers.rst:86
 msgid "How to manage inbound messages"
 msgstr "Як керувати вхідними повідомленнями"
 
-#: ../../discuss/email_servers.rst:89
+#: ../../discuss/email_servers.rst:88
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
 msgstr ""
 "Odoo покладається на загальні псевдоніми електронної пошти, щоб отримувати "
 "вхідні повідомлення."
 
-#: ../../discuss/email_servers.rst:91
+#: ../../discuss/email_servers.rst:90
 msgid ""
 "**Reply messages** of messages sent from Odoo are routed to their original "
 "discussion thread (and to the inbox of all its followers) by the catchall "
@@ -248,7 +244,7 @@ msgstr ""
 "оригінальний дискусійний потік (і в папку \"Вхідні\" всіх його піписників) "
 "за допомогою псевдоніма catchall (**catchall@**)."
 
-#: ../../discuss/email_servers.rst:95
+#: ../../discuss/email_servers.rst:94
 msgid ""
 "**Bounced messages** are routed to **bounce@** in order to track them in "
 "Odoo. This is especially used in `Odoo Email Marketing "
@@ -260,7 +256,7 @@ msgstr ""
 "Marketing,<https://www.odoo.com/page/email-marketing>`__ щоб відмовитися від"
 " недійсних одержувачів."
 
-#: ../../discuss/email_servers.rst:99
+#: ../../discuss/email_servers.rst:98
 msgid ""
 "**Original messages**: Several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
@@ -269,7 +265,7 @@ msgstr ""
 " для створення нових записів у Odoo із вхідних повідомлень електронної "
 "пошти:"
 
-#: ../../discuss/email_servers.rst:102
+#: ../../discuss/email_servers.rst:101
 msgid ""
 "Sales Channel (to create Leads or Opportunities in `Odoo CRM "
 "<https://www.odoo.com/page/crm>`__),"
@@ -277,7 +273,7 @@ msgstr ""
 "Канал продажів (для створення потенційних клієнтів або нагод в `Odoo CRM "
 "<https://www.odoo.com/page/crm>`__),"
 
-#: ../../discuss/email_servers.rst:104
+#: ../../discuss/email_servers.rst:103
 msgid ""
 "Support Channel (to create Tickets in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`__),"
@@ -285,7 +281,7 @@ msgstr ""
 "Підтримка каналу (для створення квитків в `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`__),"
 
-#: ../../discuss/email_servers.rst:106
+#: ../../discuss/email_servers.rst:105
 msgid ""
 "Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
 "/project-management>`__),"
@@ -293,7 +289,7 @@ msgstr ""
 "Проекти (для створення нових завдань у `Odoo Project "
 "<https://www.odoo.com/page/project-management>`__),"
 
-#: ../../discuss/email_servers.rst:108
+#: ../../discuss/email_servers.rst:107
 msgid ""
 "Job Positions (to create Applicants in `Odoo Recruitment "
 "<https://www.odoo.com/page/recruitment>`__),"
@@ -301,11 +297,11 @@ msgstr ""
 "Вакансії (для створення Заявок в `Odoo Recruitment "
 "<https://www.odoo.com/page/recruitment>`__),"
 
-#: ../../discuss/email_servers.rst:110
+#: ../../discuss/email_servers.rst:109
 msgid "etc."
 msgstr "тощо."
 
-#: ../../discuss/email_servers.rst:112
+#: ../../discuss/email_servers.rst:111
 msgid ""
 "Depending on your mail server, there might be several methods to fetch "
 "emails. The easiest and most recommended method is to manage one email "
@@ -316,7 +312,7 @@ msgstr ""
 "рекомендований спосіб полягає в управлінні однією адресою електронної пошти "
 "на псевдоніми Odoo на вашому поштовому сервері."
 
-#: ../../discuss/email_servers.rst:116
+#: ../../discuss/email_servers.rst:115
 msgid ""
 "Create the corresponding email addresses in your mail server (catchall@, "
 "bounce@, sales@, etc.)."
@@ -324,11 +320,11 @@ msgstr ""
 "Створіть відповідні електронні адреси на своєму поштовому сервері "
 "(catchall@, bounce@, sales@ і т.д.)."
 
-#: ../../discuss/email_servers.rst:118
+#: ../../discuss/email_servers.rst:117
 msgid "Set your domain name in the General Settings."
 msgstr "Встановіть своє доменне ім'я у загальних налаштуваннях."
 
-#: ../../discuss/email_servers.rst:123
+#: ../../discuss/email_servers.rst:122
 msgid ""
 "If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for "
 "each alias. You can do it from the General Settings as well. Fill out the "
@@ -343,7 +339,7 @@ msgstr ""
 "листах, порожніми. Коли вся інформація буде заповнена, натисніть на "
 "*ПЕРЕВІРКА та ПІДТВЕРДЖЕННЯ*."
 
-#: ../../discuss/email_servers.rst:132
+#: ../../discuss/email_servers.rst:131
 msgid ""
 "If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming "
 "messages to Odoo's domain name rather than exclusively use your own email "
@@ -362,7 +358,7 @@ msgstr ""
 "імені Odoo на своєму сервері електронної пошти (наприклад, "
 "*catchall@mydomain.ext*, на *catchall@mycompany.odoo.com*)."
 
-#: ../../discuss/email_servers.rst:139
+#: ../../discuss/email_servers.rst:138
 msgid ""
 "All the aliases are customizable in Odoo. Object aliases can be edited from "
 "their  respective configuration view. To edit catchall and bounce aliases, "
@@ -373,7 +369,7 @@ msgstr ""
 "catchall і bounce, потрібно спочатку активувати режим розробника на панелі "
 "керування налаштувань."
 
-#: ../../discuss/email_servers.rst:147
+#: ../../discuss/email_servers.rst:146
 msgid ""
 "Then refresh your screen and go to :menuselection:`Settings --> Technical "
 "--> Parameters --> System Parameters` to customize the aliases "
@@ -383,7 +379,7 @@ msgstr ""
 "Технічні --> Параметри --> Параметри системи` для налаштування псевдоніму "
 "(*mail.catchall.alias* та *mail.bounce.alias*)."
 
-#: ../../discuss/email_servers.rst:154
+#: ../../discuss/email_servers.rst:153
 msgid ""
 "By default inbound messages are fetched every 5 minutes in Odoo on-premise. "
 "You can change this value in developer mode. Go to :menuselection:`Settings "

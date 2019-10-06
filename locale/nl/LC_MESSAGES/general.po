@@ -4,21 +4,21 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Martin Trigaux, 2018
 # Eric Geens <ericgeens@yahoo.com>, 2018
 # Pol Van Dingenen <pol.vandingenen@vanroey.be>, 2018
 # Gunther Clauwaert <gclauwae@hotmail.com>, 2018
 # Yenthe Van Ginneken <yenthespam@gmail.com>, 2018
 # Maxim Vandenbroucke <mxv@odoo.com>, 2018
+# Martin Trigaux, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 15:38+0100\n"
+"POT-Creation-Date: 2019-10-03 11:34+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: Maxim Vandenbroucke <mxv@odoo.com>, 2018\n"
+"Last-Translator: Martin Trigaux, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +33,16 @@ msgstr "Algemeen"
 #: ../../general/auth.rst:3
 msgid "Authentication"
 msgstr "Authenticatie"
+
+#: ../../general/auth/azure.rst:3
+msgid "OAuth"
+msgstr ""
+
+#: ../../general/auth/azure.rst:5
+msgid ""
+"Due to specific requirements in Azure's OAuth implementation, Microsoft "
+"Azure OAuth identification is NOT compatible with Odoo at the moment."
+msgstr ""
 
 #: ../../general/auth/google.rst:3
 msgid "How to allow users to sign in with their Google account"
@@ -105,6 +115,60 @@ msgid ""
 msgstr ""
 "Eenmaal dit klaar is ontvangt u twee stukken informatie (uw cliënt ID en uw "
 "cliënt secret). U moet uw cliënt id ingeven onder **Algemene instellingen**."
+
+#: ../../general/auth/ldap.rst:3
+msgid "How to allow users to sign in with LDAP"
+msgstr ""
+
+#: ../../general/auth/ldap.rst:5
+msgid "Install the LDAP module in General Settings."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:7
+msgid "Click on **Create** in Setup your LDAP Server."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:15
+msgid "Choose the company about to use the LDAP."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:20
+msgid ""
+"In **Server Information**, enter the IP address of your server and the port "
+"it listens to."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:22
+msgid "Tick **User TLS** if your server is compatible."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:27
+msgid ""
+"In **Login Information**, enter ID and password of the account used to query"
+" the server. If left empty, the server will be queried anonymously."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:32
+msgid ""
+"In **Process Parameter**, enter the domain name of your LDAP server in LDAP "
+"nomenclature (e.g. ``dc=example,dc=com``)."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:34
+msgid "In **LDAP filter**, enter ``uid=%s``"
+msgstr ""
+
+#: ../../general/auth/ldap.rst:39
+msgid ""
+"In **User Information**, tick *Create User* if you want Odoo to create a "
+"User profile the first time someone log in with LDAP."
+msgstr ""
+
+#: ../../general/auth/ldap.rst:41
+msgid ""
+"In **Template User**, indicate a template for the new profiles created. If "
+"left blanked, the admin profile will be used as template."
+msgstr ""
 
 #: ../../general/base_import.rst:3
 msgid "Data Import"
@@ -340,21 +404,13 @@ msgstr "Waar kan ik het datum invoerformaat wijzigen?"
 
 #: ../../general/base_import/import_faq.rst:81
 msgid ""
-"Odoo can automatically detect if a column is a date and it will try to guess"
-" the date format from a set of most used date format. While this process can"
-" work for a lot of simple date format, some exotic date format will not be "
-"recognize and it is also possible to have some confusion (day and month "
-"inverted as example) as it is difficult to guess correctly which part is the"
-" day and which one is the month in a date like '01-03-2016'."
+"Odoo can automatically detect if a column is a date, and it will try to "
+"guess the date format from a set of most commonly used date formats. While "
+"this process can work for many date formats, some date formats will not be "
+"recognized. This can cause confusion due to day-month inversions; it is "
+"difficult to guess which part of a date format is the day and which part is "
+"the month in a date such as '01-03-2016'."
 msgstr ""
-"Odoo kan automatisch detecteren of een kolom een datum is en zal vervolgens "
-"het datum formaat proberen te achterhalen op basis van een set van meest "
-"gebruikte datum formaten. Dit proces werkt voor veel simpele datum formaten,"
-" echter sommige buitengewone datum formaten zullen niet herkend worden; er "
-"is dus ook verwarring mogelijk (dag en maand kunnen worden omgedraaid "
-"bijvoorbeeld) omdat het moeilijk is om correct te raden welk deel van de "
-"datum de dag of maand betreft, hoofdzakelijk in een datum zoals bijvoorbeeld"
-" '01-03-2016'."
 
 #: ../../general/base_import/import_faq.rst:83
 msgid ""
@@ -932,6 +988,14 @@ msgstr ""
 "`Gebruikers deactiveren <../../db_management/documentation.html"
 "#deactivating-users>`_"
 
+#: ../../general/odoo_basics/add_user.rst:47
+msgid "Todo"
+msgstr "Te doen"
+
+#: ../../general/odoo_basics/add_user.rst:47
+msgid "Add link to How to add companies"
+msgstr ""
+
 #: ../../general/odoo_basics/choose_language.rst:3
 msgid "Manage Odoo in your own language"
 msgstr "Beheer Odoo in uw eigen taal"
@@ -1026,11 +1090,22 @@ msgstr "Unsplash"
 msgid "How to generate an Unsplash access key"
 msgstr "Hoe kan je een Unsplash toegangssleutel genereren"
 
-#: ../../general/unsplash/unsplash_access_key.rst:5
+#: ../../general/unsplash/unsplash_access_key.rst:6
+msgid ""
+"**As an SaaS user**, you are ready to use Unsplash. You won't need to follow"
+" this guide to set up Unsplash informations, since you will use our own Odoo"
+" Unsplash key in a transparent way."
+msgstr ""
+
+#: ../../general/unsplash/unsplash_access_key.rst:9
+msgid "Generate an Unsplash access key for **non-Saas** users"
+msgstr ""
+
+#: ../../general/unsplash/unsplash_access_key.rst:11
 msgid "Create an account on `Unsplash.com <https://unsplash.com/join>`_."
 msgstr "Creëer een account op Unsplash.com <https://unsplash.com/join>`_."
 
-#: ../../general/unsplash/unsplash_access_key.rst:7
+#: ../../general/unsplash/unsplash_access_key.rst:13
 msgid ""
 "Go to your `applications dashboard "
 "<https://unsplash.com/oauth/applications>`_ and click on **New "
@@ -1039,51 +1114,62 @@ msgstr ""
 "Ga naar je applicatie dashboard <https://unsplash.com/oauth/applications>`_"
 "  en klik op **Nieuwe Applicatie**."
 
-#: ../../general/unsplash/unsplash_access_key.rst:12
+#: ../../general/unsplash/unsplash_access_key.rst:18
 msgid "Accept the conditions and click on **Accept terms**."
 msgstr "Accepteer de condities en klik op **Accepteer voorwaarden**."
 
-#: ../../general/unsplash/unsplash_access_key.rst:17
+#: ../../general/unsplash/unsplash_access_key.rst:23
 msgid ""
 "You will be prompted to insert an **Application name** and a "
-"**Description**. Once done, click on **Create application**."
+"**Description**. Please prefix your application name by \"**Odoo:** \" so "
+"that Unsplash can recognize it as an Odoo instance. Once done, click on "
+"**Create application**."
 msgstr ""
 
-#: ../../general/unsplash/unsplash_access_key.rst:22
+#: ../../general/unsplash/unsplash_access_key.rst:28
 msgid ""
 "You should be redirected to your application details page. Scroll down a bit"
 " to find your **access key**."
+msgstr ""
+
+#: ../../general/unsplash/unsplash_access_key.rst:34
+msgid ""
+"**As a non-SaaS user**, you won't be able to register for a production "
+"Unsplash key and will be limited to your test key that has a restriction of "
+"50 Unsplash requests per hour."
+msgstr ""
+
+#: ../../general/unsplash/unsplash_access_key.rst:37
+msgid ":doc:`unsplash_application_id`"
 msgstr ""
 
 #: ../../general/unsplash/unsplash_application_id.rst:3
 msgid "How to generate an Unsplash application ID"
 msgstr "Hoe je een Unsplash applicatie ID kunt genereren"
 
-#: ../../general/unsplash/unsplash_application_id.rst:5
+#: ../../general/unsplash/unsplash_application_id.rst:6
 msgid ""
 "You should first create and set up your Unsplash application with this "
-"tutorial: `How to generate an Unsplash access key "
-"<https://www.odoo.com/documentation/user/unsplash_access_key.html>`_."
+"tutorial: :doc:`unsplash_access_key`."
 msgstr ""
 
-#: ../../general/unsplash/unsplash_application_id.rst:7
+#: ../../general/unsplash/unsplash_application_id.rst:8
 msgid ""
 "Go to your `applications dashboard "
 "<https://unsplash.com/oauth/applications>`_ and click on your newly created "
 "Unsplash application under **Your applications**."
 msgstr ""
 
-#: ../../general/unsplash/unsplash_application_id.rst:12
+#: ../../general/unsplash/unsplash_application_id.rst:13
 msgid ""
 "You will be redirected to your application details page. The **application "
 "ID** will be visible in your browser's URL. The URL should be something like"
-" ``https://unsplash.com/oauth/applications/application_id``"
+" ``https://unsplash.com/oauth/applications/<application_id>``"
 msgstr ""
 
-#: ../../general/unsplash/unsplash_application_id.rst:17
+#: ../../general/unsplash/unsplash_application_id.rst:19
 msgid ""
-"Note that if you `apply for a production account "
-"<https://unsplash.com/documentation#registering-your-application>`_ and it "
-"got approved, your will also find your application ID in the UI. It will be "
-"listed next to your **Access Key** on your application details page."
+"**As a non-SaaS user**, you won't be able to register for a production "
+"Unsplash key and will be limited to your test key that has a 50 Unsplash "
+"requests per hour restriction."
 msgstr ""

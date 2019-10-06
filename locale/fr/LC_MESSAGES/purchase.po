@@ -6,16 +6,16 @@
 # Translators:
 # Benjamin Frantzen, 2018
 # Jérôme Tanché <jerome.tanche@ouest-dsi.fr>, 2018
-# Martin Trigaux, 2018
+# Martin Trigaux, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 15:38+0100\n"
+"POT-Creation-Date: 2019-09-16 15:50+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: Martin Trigaux, 2018\n"
+"Last-Translator: Martin Trigaux, 2019\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -50,7 +50,7 @@ msgstr ""
 #: ../../purchase/purchases/rfq/3_way_matching.rst:18
 #: ../../purchase/purchases/rfq/analyze.rst:24
 #: ../../purchase/purchases/rfq/approvals.rst:9
-#: ../../purchase/purchases/rfq/bills.rst:31
+#: ../../purchase/purchases/rfq/bills.rst:10
 #: ../../purchase/purchases/rfq/create.rst:13
 #: ../../purchase/purchases/rfq/lock_orders.rst:9
 #: ../../purchase/purchases/rfq/reception.rst:14
@@ -652,457 +652,55 @@ msgid "Once approved, the purchase order follows the normal process."
 msgstr "Une fois approuvé, le bon de commande suit le processus normal."
 
 #: ../../purchase/purchases/rfq/bills.rst:3
-msgid "Control supplier bills"
-msgstr ""
+msgid "Bill Control"
+msgstr "Contrôle de facture"
 
 #: ../../purchase/purchases/rfq/bills.rst:5
 msgid ""
-"The **Purchase** application allows you to manage your purchase orders, "
-"incoming products, and vendor bills all seamlessly in one place."
+"With Odoo, you can define a setting to help the control of your bills. *Bill"
+" Control* lets you choose if the supplier sends you the bill before or after"
+" you receive the goods."
 msgstr ""
-"L'application **Achats** vous permet de gérer vos commandes fournisseurs, la"
-" réception des produits, et les factures fournisseurs, tout cela de façon "
-"transparente et à un seul endroit."
 
-#: ../../purchase/purchases/rfq/bills.rst:8
+#: ../../purchase/purchases/rfq/bills.rst:12
 msgid ""
-"If you want to set up a vendor bill control process, the first thing you "
-"need to do is to have purchase data in Odoo. Knowing what has been purchased"
-" and received is the first step towards understanding your purchase "
-"management processes."
+"For this feature to work, go to :menuselection:`Purchases --> Configuration "
+"--> Settings` and select which way you want to control your bills."
 msgstr ""
-"Si vous voulez mettre en place un processus de contrôle des factures "
-"fournisseurs, la première chose que vous devez faire est d'avoir des données"
-" d'achat dans Odoo. Savoir ce qui a été acheté et receptionné est la "
-"première étape vers la compréhension de vos processus de gestion des achats."
 
-#: ../../purchase/purchases/rfq/bills.rst:13
-msgid "Here is the standard work flow in Odoo:"
-msgstr "Voici le cheminement standard dans Odoo :"
+#: ../../purchase/purchases/rfq/bills.rst:20
+msgid "Change the control policy"
+msgstr ""
 
-#: ../../purchase/purchases/rfq/bills.rst:15
+#: ../../purchase/purchases/rfq/bills.rst:22
 msgid ""
-"You begin with a **Request for Quotation (RFQ)** to send out to your "
-"vendor(s)."
+"While the setting above will be your default method of bill control, you can"
+" always select which way you want to invoice your product on each product "
+"page under the *Purchase* tab."
 msgstr ""
-"Vous commencez avec une **Demande de Prix (DP)** à envoyer à vos "
-"fournisseur(s)."
 
-#: ../../purchase/purchases/rfq/bills.rst:18
+#: ../../purchase/purchases/rfq/bills.rst:26
 msgid ""
-"Once the vendor has accepted the RFQ, confirm the RFQ into a **Purchase "
-"Order (PO)**."
+"You might want to use different settings for different types of products."
 msgstr ""
-"Une fois que le vendeur a accepté la Demande de Prix, confirmez-la en **Bon "
-"de Commande (BC)**."
-
-#: ../../purchase/purchases/rfq/bills.rst:21
-msgid ""
-"Confirming the PO generates an **Incoming Shipment** if you purchased any "
-"stockable products."
-msgstr ""
-"La confirmation du BC génère une **Expédition** si vous avez acheté des "
-"produits stockables."
-
-#: ../../purchase/purchases/rfq/bills.rst:24
-msgid ""
-"Upon receiving a **Vendor Bill** from your Vendor, validate the bill with "
-"products received in the previous step to ensure accuracy."
-msgstr ""
-"Lors de la réception d'une **Facture Fournisseur**, validez-la avec les "
-"produits reçus à l'étape précédente pour en vérifier l'exactitude."
-
-#: ../../purchase/purchases/rfq/bills.rst:27
-msgid ""
-"This process may be done by three different people within the company, or "
-"only one."
-msgstr ""
-"Ce processus peut être réalisé par trois personnes différentes au sein de "
-"l'entreprise, ou une seule."
 
 #: ../../purchase/purchases/rfq/bills.rst:34
-msgid "Installing the Purchase and Inventory applications"
+msgid "Verify your Vendor Bill"
 msgstr ""
-"Installez les applications Gestion des achats et Gestion de l'inventaire"
 
 #: ../../purchase/purchases/rfq/bills.rst:36
 msgid ""
-"From the **Apps** application, search for the **Purchase** module and "
-"install it. Due to certain dependencies, installing purchase will "
-"automatically install the **Inventory** and **Accounting** applications."
+"If you didn’t receive any of your product yet on *Purchase Order* under the "
+"*Shipment* tab,"
 msgstr ""
-"À partir du module **Applications**, recherchez le module **Gestion des "
-"achats** et installez-le. En raison de certaines dépendances, cela "
-"installera aussi automatiquement les applications **Gestion de "
-"l'inventaire** et **Comptabilité et finance**."
-
-#: ../../purchase/purchases/rfq/bills.rst:41
-msgid "Creating products"
-msgstr "Création d'articles"
 
 #: ../../purchase/purchases/rfq/bills.rst:43
 msgid ""
-"Creating products in Odoo is essential for quick and efficient purchasing "
-"within Odoo. Simply navigate to the **Products** submenu under **Purchase**,"
-" and click **Create**."
+"Depending on the billing policy defined above. If you're supposed to be "
+"billed based on ordered quantity, Odoo will suggest a bill for the number of"
+" units ordered. If you're supposed to be billed based on the received "
+"quantities, Odoo will suggest a bill for 0 as shown above."
 msgstr ""
-"La création d'articles dans Odoo est essentielle pour des achats rapides et "
-"efficaces avec Odoo. Il suffit de naviguer vers :menuselection:`Achat --> "
-"Articles`, et de cliquer sur **Créer**."
-
-#: ../../purchase/purchases/rfq/bills.rst:50
-msgid ""
-"When creating the product, Pay attention to the **Product Type** field, as "
-"it is important:"
-msgstr ""
-"Lors de la création du produit, prêtez attention au champ **Type "
-"d'article**, car il est important:"
-
-#: ../../purchase/purchases/rfq/bills.rst:53
-msgid ""
-"Products that are set as **Stockable** or **Consumable** will allow you to "
-"keep track of their inventory levels. These options imply stock management "
-"and will allow for receiving these kinds of products."
-msgstr ""
-"Les articles qui sont définis comme **Stockable** ou **Consommable** peuvent"
-" être suivis en inventaire. Ces options impliquent la gestion des stocks et "
-"la réception sur ces types d'articles."
-
-#: ../../purchase/purchases/rfq/bills.rst:58
-msgid ""
-"Conversely, products that are set as a **Service** or **Digital Product** "
-"will not imply stock management, simply due to the fact that there is no "
-"inventory to manage. You will not be able to receive products under either "
-"of these designations."
-msgstr ""
-"A l'inverse, les articles qui sont définis comme **Service** ou **Produit "
-"numérique** n'impliquent pas la gestion des stocks, tout simplement en "
-"raison du fait qu'il n'y a pas d'inventaire à gérer. Vous ne pourrez pas non"
-" plus réceptionner des articles de l'un ou l'autre de ces types."
-
-#: ../../purchase/purchases/rfq/bills.rst:64
-msgid ""
-"It is recommended that you create a **Miscellaneous** product for all "
-"purchases that occur infrequently and do not require inventory valuation or "
-"management. If you create such a product, it is recommend to set the product"
-" type to **Service**."
-msgstr ""
-"Il est conseillé de créer un article **Divers** pour tous les achats qui se "
-"produisent rarement et ne nécessitent pas de valorisation ou de gestion des "
-"stocks. Si vous créez un tel article, il est recommandé de définir le type "
-"d'article à **Service**."
-
-#: ../../purchase/purchases/rfq/bills.rst:70
-msgid "Managing your Vendor Bills"
-msgstr "Gestion de vos Factures Fournisseurs"
-
-#: ../../purchase/purchases/rfq/bills.rst:73
-msgid "Purchasing products or services"
-msgstr "Achat de marchandises ou de services"
-
-#: ../../purchase/purchases/rfq/bills.rst:75
-msgid ""
-"From the purchase application, you can create a purchase order with as many "
-"products as you need. If the vendor sends you a confirmation or quotation "
-"for an order, you may record the order reference number in the **Vendor "
-"Reference** field. This will enable you to easily match the PO with the the "
-"vendor bill later (as the vendor bill will probably include the Vendor "
-"Reference)"
-msgstr ""
-"Depuis l'application Achats, vous pouvez créer un bon de commande avec "
-"autant d'articles que vous le désirez. Si le fournisseur vous envoie une "
-"confirmation ou un devis pour une commande, vous pouvez enregistrer le "
-"numéro de commande dans le champ **Référence Fournisseur**. Cela vous "
-"permettra de faciliter le rapprochement ultérieur du bon de commande avec la"
-" facture fournisseur (car la facture fournisseur contiendra probablement la "
-"référence fournisseur)"
-
-#: ../../purchase/purchases/rfq/bills.rst:85
-msgid ""
-"Validate the purchase order and receive the products from the **Inventory** "
-"application."
-msgstr ""
-"Validez la commande fournisseur et réceptionnez les produits avec "
-"l'application **Inventaire**."
-
-#: ../../purchase/purchases/rfq/bills.rst:89
-msgid "Receiving Products"
-msgstr "Réception des Produits"
-
-#: ../../purchase/purchases/rfq/bills.rst:91
-msgid ""
-"If you purchased any stockable products that you manage the inventory of, "
-"you will need to receive the products from the **Inventory** application "
-"after you confirm a purchase order. From the **Inventory** dashboard, you "
-"should see a button linking you directly to the transfer of products. This "
-"button is outlined in red below:"
-msgstr ""
-"Si vous avez acheté des articles stockables que vous gérez en inventaire, "
-"vous aurez besoin de réceptionner les articles dans l'application "
-"**Inventaire** après avoir confirmé la commande d'achat. Dans le tableau de "
-"bord de l'**Inventaire**, vous trouverez un bouton vous reliant directement "
-"au transfert des articles. Ce bouton est entouré en rouge dans "
-"l'illustration ci-dessous :"
-
-#: ../../purchase/purchases/rfq/bills.rst:100
-msgid ""
-"Navigating this route will take you to a list of all orders awaiting to be "
-"received."
-msgstr ""
-"Cliquer sur ce bouton vous amènera à une liste de toutes les commandes en "
-"attente de réception."
-
-#: ../../purchase/purchases/rfq/bills.rst:106
-msgid ""
-"If you have a lot of awaiting orders, apply a filter using the search bar in"
-" the upper right. With this search bar, you may filter based on the "
-"**Vendor** (or **Partner**), the product, or the source document, also known"
-" as the reference of your purchase order. You also have the capability to "
-"group the orders by different criteria under **Group By**. Selecting an item"
-" from this list will open the following screen where you then will receive "
-"the products."
-msgstr ""
-"Si vous avez beaucoup de commandes en attente, appliquer un filtre en "
-"utilisant la barre de recherche en haut à droite. Avec cette barre de "
-"recherche, vous pouvez filtrer en fonction du **Fournisseur** (ou "
-"**Partenaire*), de l'article ou du document source, c'est à dire la "
-"référence de votre commande d'achat. Vous avez également la possibilité de "
-"regrouper les commandes selon différents critères avec la fonctionnalité "
-"**Grouper Par**. La sélection d'un élément de cette liste va ouvrir l'écran "
-"suivant où vous effectuerez alors la réception des produits."
-
-#: ../../purchase/purchases/rfq/bills.rst:117
-msgid "Purchasing **Service** products does not trigger a delivery order."
-msgstr ""
-"L'achat d'articles de type **Service** ne déclenche pas de bon de livraison."
-
-#: ../../purchase/purchases/rfq/bills.rst:120
-msgid "Managing Vendor Bills"
-msgstr "Gestion des factures fournisseurs"
-
-#: ../../purchase/purchases/rfq/bills.rst:122
-msgid ""
-"When you receive a **Vendor Bill** for a previous purchase, be sure to "
-"record it in the **Purchases** application under the **Control Menu**. You "
-"need to create a new vendor bill even if you already registered a purchase "
-"order."
-msgstr ""
-"Lorsque vous recevez une **Facture Fournisseur** d'un achat précédent, "
-"assurez-vous de l'enregistrer dans l'application **Achats** par le menu "
-"**Contrôle**. Vous devez créer une nouvelle facture fournisseur, même si "
-"vous avez déjà enregistré un bon de commande."
-
-#: ../../purchase/purchases/rfq/bills.rst:130
-msgid ""
-"The first thing you will need to do upon creating a **Vendor Bill** is to "
-"select the appropriate **Vendor** as this will also pull up any associated "
-"accounting or pricelist information. From there, you can choose to specify "
-"any one or multiple purchase orders to populate the vendor bill with. When "
-"you select a purchase order from the list, Odoo will pull any uninvoiced "
-"products associated to that purchase order and automatically populate that "
-"information below. If you are having a hard time finding the appropriate "
-"vendor bill, you may search through the list by inputting the vendor "
-"reference number or your internal purchase order number."
-msgstr ""
-"La première chose que vous devez faire lors de la création d'une **Facture "
-"Fournisseur** est de sélectionner le **Fournisseur** concerné, car cela va "
-"ainsi récupérer toutes les informations de comptabilité ou de listes de prix"
-" qui lui sont associées. De là, vous pouvez choisir de spécifier un ou "
-"plusieurs bons de commande pour remplir la facture. Lorsque vous "
-"sélectionnez une bon de commande à partir de la liste, Odoo va récupérer "
-"tous les articles non facturés associés à cette commande et va remplir "
-"automatiquement les informations comme ci-dessous. Si vous avez des "
-"difficultés à trouver la facture du fournisseur concerné, vous pouvez "
-"effectuer une recherche dans la liste en saisissant la référence du "
-"fournisseur ou votre numéro interne de commande."
-
-#: ../../purchase/purchases/rfq/bills.rst:144
-msgid ""
-"While the invoice is in draft state, you can make any modifications you need"
-" (i.e. remove or add product lines, modify quantities, and change prices)."
-msgstr ""
-"Tant que la facture est à l'état brouillon, vous pouvez faire toutes les "
-"modifications que vous voulez (par ex. supprimer ou ajouter des lignes "
-"d'articles, modifier les quantités et les prix)."
-
-#: ../../purchase/purchases/rfq/bills.rst:149
-msgid "Your vendor may send you several bills for the same purchase order if:"
-msgstr ""
-"Votre fournisseur peut vous envoyer plusieurs factures pour le même Bon de "
-"Commande si :"
-
-#: ../../purchase/purchases/rfq/bills.rst:151
-msgid ""
-"Your vendor is in back-order and is sending you invoices as they ship the "
-"products."
-msgstr ""
-"Votre fournisseur est en reliquats et vous envoie les factures lorsqu'il "
-"expédie les articles."
-
-#: ../../purchase/purchases/rfq/bills.rst:154
-msgid "Your vendor is sending you a partial bill or asking for a deposit."
-msgstr ""
-"Votre fournisseur vous envoie une facture partielle ou vous demande un "
-"acompte."
-
-#: ../../purchase/purchases/rfq/bills.rst:156
-msgid ""
-"Every time you record a new vendor bill, Odoo will automatically populate "
-"the product quantities based on what has been received from the vendor. If "
-"this value is showing a zero, this means that you have not yet received this"
-" product and simply serves as a reminder that the product is not in hand and"
-" you may need to inquire further into this. At any point in time, before you"
-" validate the vendor bill, you may override this zero quantity."
-msgstr ""
-"Chaque fois que vous enregistrez une nouvelle facture fournisseur, Odoo "
-"remplit automatiquement les quantités en fonction de ce qui a été "
-"réceptionné. Si cette valeur affiche un zéro, cela signifie que vous n'avez "
-"pas encore reçu cet article et sert simplement à vous rappeler que l'article"
-" n'est pas en stock et que vous devriez vous renseigner davantage à ce "
-"sujet. A tout moment, avant de valider la facture fournisseur, vous pouvez "
-"modifier cette quantité qui est à zéro."
-
-#: ../../purchase/purchases/rfq/bills.rst:165
-msgid "Vendor Bill Matching"
-msgstr "Rapprochement de Facture Fournisseur"
-
-#: ../../purchase/purchases/rfq/bills.rst:168
-msgid "What to do if your vendor bill does not match what you received"
-msgstr ""
-"Que faire si votre facture fournisseur ne correspond pas à ce que vous avez "
-"reçu"
-
-#: ../../purchase/purchases/rfq/bills.rst:170
-msgid ""
-"If the bill you receive from the vendor has different quantities than what "
-"Odoo automatically populates as quantities, this could be due to several "
-"reasons:"
-msgstr ""
-"Si la facture que vous recevez du fournisseur a des quantités différentes de"
-" celles qu'Odoo a remplies automatiquement, cela peut être dû à plusieurs "
-"raisons :"
-
-#: ../../purchase/purchases/rfq/bills.rst:174
-msgid ""
-"The vendor is incorrectly charging you for products and/or services that you"
-" have not ordered."
-msgstr ""
-"Te fournisseur vous a facturé des articles et/ou des services que vous "
-"n'avez pas commandés."
-
-#: ../../purchase/purchases/rfq/bills.rst:177
-msgid ""
-"The vendor is billing you for products that you might not have received yet,"
-" as the invoicing control may be based on ordered or received quantities."
-msgstr ""
-"Te vendeur vous a facturé des articles que vous n'avez pas encore reçus, "
-"alors que le contrôle de facturation est basé sur les quantités commandées "
-"et reçues."
-
-#: ../../purchase/purchases/rfq/bills.rst:181
-msgid "Or the vendor did not bill you for previously purchased products."
-msgstr "Ou le vendeur ne vous a pas facturé des articles déjà achetés."
-
-#: ../../purchase/purchases/rfq/bills.rst:183
-msgid ""
-"In these instances it is recommended that you verify that the bill, and any "
-"associated purchase order to the vendor, are accurate and that you "
-"understand what you have ordered and what you have already received."
-msgstr ""
-"Dans ces situations, il est recommandé de vérifier que la facture, et toute "
-"commande associées au vendeur, sont exactes, et que vous comprenez ce que "
-"vous avez commandé et ce que vous avez déjà réceptionné."
-
-#: ../../purchase/purchases/rfq/bills.rst:187
-msgid ""
-"If you are unable to find a purchase order related to a vendor bill, this "
-"could be due to one of a few reasons:"
-msgstr ""
-"Si vous ne parvenez pas à trouver un commande relié à une facture "
-"fournisseur, cela peut être dû à l'une des raisons suivantes :"
-
-#: ../../purchase/purchases/rfq/bills.rst:190
-msgid ""
-"The vendor has already invoiced you for this purchase order, therefore it is"
-" not going to appear anywhere in the selection."
-msgstr ""
-"Le fournisseur vous a déjà facturé pour cette commande, donc elle ne va "
-"apparaître nulle part dans la sélection."
-
-#: ../../purchase/purchases/rfq/bills.rst:193
-msgid ""
-"Someone in the company forgot to record a purchase order for this vendor."
-msgstr ""
-"Quelqu'un dans votre entreprise a oublié d'enregistrer une commande pour ce "
-"fournisseur."
-
-#: ../../purchase/purchases/rfq/bills.rst:196
-msgid "Or the vendor is charging you for something you did not order."
-msgstr ""
-"Ou le fournisseur vous facture quelque chose que vous n'avez pas commandé."
-
-#: ../../purchase/purchases/rfq/bills.rst:199
-msgid "How product quantities are managed"
-msgstr "Comment les quantités d'articles sont gérées"
-
-#: ../../purchase/purchases/rfq/bills.rst:201
-msgid ""
-"By default, services are managed based on ordered quantities, while "
-"stockables and consumables are managed based on received quantities."
-msgstr ""
-"Par défaut, les services sont gérés en fonction des quantités commandées, "
-"alors que les articles stockables et les consommables sont gérés en fonction"
-" des quantités reçues."
-
-#: ../../purchase/purchases/rfq/bills.rst:204
-msgid ""
-"If you need to manage products based on ordered quantities over received "
-"quantities, you will need to enable **Debug Mode** from the **About Odoo** "
-"information. Once debug mode is activated, select the product(s) you wish to"
-" modify, and you should see a new field appear, labeled **Control Purchase "
-"Bills**."
-msgstr ""
-"Si vous avez besoin de gérer les produits en fonction des quantités "
-"commandées plutôt qu'en fonction des quantités reçues, vous devez activer le"
-" **Mode Développeur**, dans la fenêtre d'information **A propos de**. Une "
-"fois le mode développeur activé, sélectionnez les article(s) que vous "
-"souhaitez modifier, et vous devriez voir un nouveau champ, marqué **Contrôle"
-" des factures d'achats**."
-
-#: ../../purchase/purchases/rfq/bills.rst:213
-msgid ""
-"You can then change the default management method for the selected product "
-"to be based on either:"
-msgstr ""
-"Vous pouvez alors modifier la méthode de gestion par défaut pour l'article "
-"sélectionné, qui pour être basée sur :"
-
-#: ../../purchase/purchases/rfq/bills.rst:216
-msgid "Ordered quantities"
-msgstr "Quantités commandées"
-
-#: ../../purchase/purchases/rfq/bills.rst:218
-msgid "Received quantities"
-msgstr "Quantités reçues"
-
-#: ../../purchase/purchases/rfq/bills.rst:221
-msgid "Batch Billing"
-msgstr "Facturation par lots"
-
-#: ../../purchase/purchases/rfq/bills.rst:223
-msgid ""
-"When creating a vendor bill and selecting the appropriate purchase order, "
-"you may continue to select additional purchase orders and Odoo will add the "
-"additional line items from that purchase order. If you have not deleted the "
-"previous line items from the first purchase order the bill will be linked to"
-" all the appropriate purchase orders."
-msgstr ""
-"Lors de la création d'une facture fournisseur et après avoir sélectionné la "
-"commande concernée, vous pouvez continuer à sélectionner des bons de "
-"commande supplémentaires et Odoo va ajouter les lignes supplémentaires à "
-"partir de ces bons de commande .. Si vous n'avez pas supprimé les lignes "
-"précédentes du premier bon de commande, la facture sera liée à tous les bons"
-" de commande sélectionnés."
 
 #: ../../purchase/purchases/rfq/cancel.rst:3
 msgid "Cancel a purchase order"

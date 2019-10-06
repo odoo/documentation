@@ -3,13 +3,18 @@
 # This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Martin Trigaux, 2018
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2018
+# Cas Vissers <casvissers@brahoo.nl>, 2018
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 11.0\n"
+"Project-Id-Version: Odoo 12.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-19 10:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2019-09-16 15:50+0200\n"
+"PO-Revision-Date: 2018-10-19 08:15+0000\n"
 "Last-Translator: Cas Vissers <casvissers@brahoo.nl>, 2018\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
@@ -103,36 +108,36 @@ msgstr ""
 #: ../../discuss/email_servers.rst:48
 msgid ""
 "You can use an G Suite server for any Odoo hosting type. To do so you need "
-"to enable a SMTP relay and to allow *Any addresses* in the *Allowed senders*"
-" section. The configuration steps are explained in `Google documentation "
+"to setup the SMTP relay service. The configuration steps are explained in "
+"`Google documentation "
 "<https://support.google.com/a/answer/2956491?hl=en>`__."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:56
+#: ../../discuss/email_servers.rst:55
 msgid "Be SPF-compliant"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:57
+#: ../../discuss/email_servers.rst:56
 msgid ""
 "In case you use SPF (Sender Policy Framework) to increase the deliverability"
 " of your outgoing emails, don't forget to authorize Odoo as a sending host "
 "in your domain name settings. Here is the configuration for Odoo Online:"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:61
+#: ../../discuss/email_servers.rst:60
 msgid ""
 "If no TXT record is set for SPF, create one with following definition: "
 "v=spf1 include:_spf.odoo.com ~all"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:63
+#: ../../discuss/email_servers.rst:62
 msgid ""
 "In case a SPF TXT record is already set, add \"include:_spf.odoo.com\". e.g."
 " for a domain name that sends emails via Odoo Online and via G Suite it "
 "could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:67
+#: ../../discuss/email_servers.rst:66
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
@@ -140,7 +145,7 @@ msgstr ""
 "Vind `hier <https://www.mail-tester.com/spf/>`__ de exacte procedure om een "
 "TXT record aan te maken of te wijzigen bij uw eigen domein provider."
 
-#: ../../discuss/email_servers.rst:70
+#: ../../discuss/email_servers.rst:69
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
@@ -148,18 +153,18 @@ msgstr ""
 "Uw nieuwe SPF record kan tot 48 uur nodig hebben om actief te zijn, maar "
 "normaal gezien gebeurd dit al veel sneller."
 
-#: ../../discuss/email_servers.rst:73
+#: ../../discuss/email_servers.rst:72
 msgid ""
 "Adding more than one SPF record for a domain can cause problems with mail "
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:78
+#: ../../discuss/email_servers.rst:77
 msgid "Allow DKIM"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:79
+#: ../../discuss/email_servers.rst:78
 msgid ""
 "You should do the same thing if DKIM (Domain Keys Identified Mail) is "
 "enabled on your email server. In the case of Odoo Online & Odoo.sh, you "
@@ -169,22 +174,22 @@ msgid ""
 "\"odoo._domainkey.odoo.com\"."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:87
+#: ../../discuss/email_servers.rst:86
 msgid "How to manage inbound messages"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:89
+#: ../../discuss/email_servers.rst:88
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:91
+#: ../../discuss/email_servers.rst:90
 msgid ""
 "**Reply messages** of messages sent from Odoo are routed to their original "
 "discussion thread (and to the inbox of all its followers) by the catchall "
 "alias (**catchall@**)."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:95
+#: ../../discuss/email_servers.rst:94
 msgid ""
 "**Bounced messages** are routed to **bounce@** in order to track them in "
 "Odoo. This is especially used in `Odoo Email Marketing "
@@ -192,58 +197,58 @@ msgid ""
 "recipients."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:99
+#: ../../discuss/email_servers.rst:98
 msgid ""
 "**Original messages**: Several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:102
+#: ../../discuss/email_servers.rst:101
 msgid ""
 "Sales Channel (to create Leads or Opportunities in `Odoo CRM "
 "<https://www.odoo.com/page/crm>`__),"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:104
+#: ../../discuss/email_servers.rst:103
 msgid ""
 "Support Channel (to create Tickets in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`__),"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:106
+#: ../../discuss/email_servers.rst:105
 msgid ""
 "Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
 "/project-management>`__),"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:108
+#: ../../discuss/email_servers.rst:107
 msgid ""
 "Job Positions (to create Applicants in `Odoo Recruitment "
 "<https://www.odoo.com/page/recruitment>`__),"
 msgstr ""
 
-#: ../../discuss/email_servers.rst:110
+#: ../../discuss/email_servers.rst:109
 msgid "etc."
 msgstr "etc."
 
-#: ../../discuss/email_servers.rst:112
+#: ../../discuss/email_servers.rst:111
 msgid ""
 "Depending on your mail server, there might be several methods to fetch "
 "emails. The easiest and most recommended method is to manage one email "
 "address per Odoo alias in your mail server."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:116
+#: ../../discuss/email_servers.rst:115
 msgid ""
 "Create the corresponding email addresses in your mail server (catchall@, "
 "bounce@, sales@, etc.)."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:118
+#: ../../discuss/email_servers.rst:117
 msgid "Set your domain name in the General Settings."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:123
+#: ../../discuss/email_servers.rst:122
 msgid ""
 "If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for "
 "each alias. You can do it from the General Settings as well. Fill out the "
@@ -252,7 +257,7 @@ msgid ""
 "out, click on *TEST & CONFIRM*."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:132
+#: ../../discuss/email_servers.rst:131
 msgid ""
 "If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming "
 "messages to Odoo's domain name rather than exclusively use your own email "
@@ -263,21 +268,21 @@ msgid ""
 "*catchall@mycompany.odoo.com*)."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:139
+#: ../../discuss/email_servers.rst:138
 msgid ""
 "All the aliases are customizable in Odoo. Object aliases can be edited from "
 "their  respective configuration view. To edit catchall and bounce aliases, "
 "you first need to activate the developer mode from the Settings Dashboard."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:147
+#: ../../discuss/email_servers.rst:146
 msgid ""
 "Then refresh your screen and go to :menuselection:`Settings --> Technical "
 "--> Parameters --> System Parameters` to customize the aliases "
 "(*mail.catchall.alias* & * mail.bounce.alias*)."
 msgstr ""
 
-#: ../../discuss/email_servers.rst:154
+#: ../../discuss/email_servers.rst:153
 msgid ""
 "By default inbound messages are fetched every 5 minutes in Odoo on-premise. "
 "You can change this value in developer mode. Go to :menuselection:`Settings "
