@@ -7,3 +7,4 @@ Process Overview
    :glob:
 
    process/sale_to_delivery
+   process/receive_in_stock
