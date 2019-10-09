@@ -22,3 +22,4 @@ Applications
    general
    iot
    mobile/firebase
+   social_marketing
