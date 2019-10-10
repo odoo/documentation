@@ -18,7 +18,7 @@ forecasted number of units. If you want to include a product on
 receipts/deliveries but don’t need to track its stock, you can set it as
 *consumable*.
 
-.. image:: media/deliver_from_stock_02png
+.. image:: media/deliver_from_stock_02.png
     :align: center
 
 Deliver Products from Stock
