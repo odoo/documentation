@@ -1,44 +1,39 @@
-=============================
-How to create a new location?
-=============================
+=====================
+Create a New Location
+=====================
 
 Configuration
 =============
 
-Creating a new location
------------------------
+In order to be able to create different locations, you will need to
+activate *Multi-Locations* in the settings which can be done from the
+*Inventory application > Configuration > Settings*.
 
-In order to be able to create new locations, you must allow the system
-to manage multiple locations. In the **Inventory** module, open the
-menu :menuselection:`Configuration --> Settings`. In the **Location &
-Warehouse** section, tick the **Manage several locations per warehouse**
-box, then click on **Apply**.
-
-.. image:: media/location_creation02.png
+.. image:: media/location_creation_01.png
    :align: center
 
-In the **Inventory** module, open 
-:menuselection:`Configuration --> Warehouse Management --> Locations`
-In the Locations window, click on **Create**.
+In the *Inventory application*, you can now go to *Configuration >
+Locations* and hit *Create* in order to create a new location.
 
-Type the name of the location in the **Location Name** field, and select
-the **Parent Location** in the list. The parent location can be a
+.. image:: media/location_creation_02.png
+   :align: center
+
+Type the name of the location in the *Location Name* field, and select
+the *Parent Location* in the list. The parent location can be a
 physical, partner or virtual location, and you can add as many
 sub-locations as needed to a location.
 
-You can also fill in the **Additional Information** fields and add a
-note to describe your location.
-
-.. image:: media/location_creation01.png
+.. image:: media/location_creation_03.png
    :align: center
 
-When you are finished, click on **Save**.
+In case you want the location to be suggested when creating a Return or
+when Scrapping a product, you should check *Is a Scrap Location?* and
+*Is a Return Location?*.
+
+If you have the *Barcode* application installed, you can specify the
+barcode which will correspond to this location.
 
 .. note::
-    A warehouse also corresponds to a location. As the locations 
-    are hierarchical, Odoo will create the parent location of the 
-    warehouse, containing all the sublocations in it.
-
-.. seealso::
-    * :doc:`difference_warehouse_location`
-    * :doc:`warehouse_creation`
+		A warehouse also corresponds to a location. As the locations are
+		hierarchical, Odoo will create the parent location of the warehouse,
+		containing all the sublocations in it.
