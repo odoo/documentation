@@ -1,48 +1,41 @@
-==============================
-How to create a new warehouse?
-==============================
+======================
+Create a New Warehouse
+======================
 
 Configuration
 =============
 
-Creating a new warehouse
-------------------------
+In order to create a new warehouse, you should activate the
+*Multi-Warehouse* settings. Note that the *Multi-Locations* settings
+will be automatically activated at the same time.
 
-In order to be able to create a new warehouse, you must allow the system
-to manage multiple locations. In the **Inventory** module, open the menu
-:menuselection:`Settings --> Configuration`. In the **Location &
-Warehouse** section, tick the **Manage several locations per warehouse**
-box, then click on **apply**.
+In order to do so, go to the *Inventory app > Configuration >
+Settings*.
 
-.. image:: media/warehouse_creation02.png
+.. image:: media/warehouse_creation_01.png
    :align: center
 
-Open the menu :menuselection:`Configuration --> Warehouse Management --> Warehouses`
+You can then go to *Inventory > Configuration > Warehouses* and hit
+*Create* to add a new warehouse.
 
-In the warehouses screen, click on **Create**. A new screen appears, with
-3 fields :
-
--   In **Warehouse Name**, insert the full name of the warehouse.
-
--   In the **Short Name** field, insert a 5-characters code for your
-    warehouse. Keep in mind that this code is the one that will appear in
-    the lists, so make sure you choose a name that is easy to understand
-    and easy to enter.
-
--   In the **Address** field, you can select an existing company or create
-    one on-the-go. Therefore, the address of your warehouse will be the same
-    as the one of the company you selected. You can also leave this field
-    empty and edit it afterwards.
-
-.. image:: media/warehouse_creation01.png
+.. image:: media/warehouse_creation_02.png
    :align: center
 
-Click on **Save** to finish configuring your new warehouse.
+You will be able to enter your warehouse name. You should also choose a
+short name for your warehouse which is 5-characters long and is used on
+the different warehouse documents.
 
-.. note::
-    When you create a warehouse, the system will create the necessary 
-    picking types and main child locations for this main location in the background.
+In the Address field, you can select an existing company or create one
+on-the-go. Therefore, the address of your warehouse will be the same as
+the one of the company you selected. You can also leave this field empty
+and edit it afterward.
 
-.. seealso::
-    * :doc:`difference_warehouse_location`
-    * :doc:`location_creation`
+.. image:: media/warehouse_creation_03.png
+   :align: center
+
+After the creation of your new warehouse, you can go back to the
+*Dashboard* and you will see the new operation types automatically
+created by Odoo due to the creation of a new warehouse.
+
+.. image:: media/warehouse_creation_04.png
+   :align: center
