@@ -57,7 +57,7 @@ star next to the clock and then by sequence, meaning if you manually
 move them using drag & drop, they will be in that order and finally by
 their ID linked to their creation date.
 
-.. image:: media/visualization05.png
+.. image:: media/visualization06.png
     :align: center
 
 Tasks that are past their deadline will appear in red in your Kanban
@@ -79,7 +79,7 @@ Tasks are color coded to the employee they are assigned to and you can
 filter deadlines by employees by selecting who's deadline you wish to
 see.
 
-.. image:: media/visualization06.png
+.. image:: media/visualization05.png
     :align: center
 
 .. tip::
