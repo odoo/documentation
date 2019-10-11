@@ -1,70 +1,68 @@
 =======================================================
-When should you use packages, units of measure or kits?
+When Should you Use Packages, Units of Measure or Kits?
 =======================================================
 
-Unit of measures
+Units of Measure
 ================
 
-Units of measures are an indication about the unit used to handle a
-product. Products can be expressed in multiple units of measure at once.
+Units of measure specify the unit used to handle a product. In Odoo, you
+have the possibility to specify the unit of measure in which you manage
+your stock and the one which is used when purchasing the product to your
+supplier.
 
-Activate this option if you are working with several ones in your
-warehouse.
-
-The purchase unit of measure might be different that the one you use in
-your warehouse.
-
-The selling unit of measure is set on the sale order and can be
-different.
-
-.. image:: media/usage01.png
+.. image:: media/usage_01.png
     :align: center
 
-.. note::
-    The conversion between the different units of measures is done
-    automatically. The only condition is that all the units have to be in
-    the same category (Unit, Weight, Volume, Length,...)
+The *conversion* between the different units of measure is done
+automatically. The only condition is that all the units have to be in
+the *same category* (Unit, Weight, Volume, Length,...)
+
+For example, if I have the following reordering rule for the egg and I
+run the scheduler, the quantity added in the automatically generated
+purchase order will be in dozens but what will enter the stock will be
+units.
+
+.. image:: media/usage_02.png
+    :align: center
+
+.. image:: media/usage_03.png
+    :align: center
+
+.. image:: media/usage_04.png
+    :align: center
 
 Packages
 ========
 
 The package is the physical container in which you put one or several
-product.
+products from a picking. For example, when you deliver a product, you
+can decide to separate the quantity into two different packages. It then
+allows you to have a report with the quantity of products for each
+package.
 
-.. image:: media/usage02.png
+.. image:: media/usage_05.png
+    :align: center
+
+.. image:: media/usage_06.png
     :align: center
 
 Packaging
 =========
 
-Packaging is the physical container that protects your product.
+The packaging is the physical container that protects your product. If
+you are selling computers, the packaging contains the computer with the
+notice and the power plug.
 
-If you are selling computers, the packaging contains the computer with
-the notice and the power plug.
+In Odoo, packagings are used for indicative purposes on sale orders.
+They can be specified on the product form, in the inventory tab.
 
-In Odoo, packagings are just used for indicative purpose.
+.. image:: media/usage_07.png
+    :align: center
 
-.. image:: media/usage03.png
+.. image:: media/usage_08.png
     :align: center
 
 .. note::
-    You can define on the **Packages** which **Packaging** it uses. But it is
-    only for indicative purpose.
-
-When to use packages, packagings or unit of measures ? 
-=======================================================
-
-For example, you are sellings eggs. In your warehouse, you manage the
-eggs individually. Lots of eggs are scrapped and you do it egg by egg.
-The **unit of measure** is ``Unit(s)``.
-
-If you are selling eggs by the dozen, the selling **unit of measure** is
-the ``Dozen``. You will set it on your sale order.
-
-The ``cardboard trays`` that contains the dozen of eggs is the **packaging**.
-
-When you are selling several trays, you might wrap all the trays into a
-``box`` or in a ``plastic`` wrapping. It is the **package**.
-
-.. seealso::
-    * :doc:`uom`
+        Another useful use of the packaging is for product reception. By
+        scanning the barcode of the packaging, Odoo adds the number of units
+        contained in the packing on the picking.
