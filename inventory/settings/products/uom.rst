@@ -1,14 +1,13 @@
-======================================
-How to use different units of measure?
-======================================
+==============================
+Use Different Units of Measure
+==============================
 
-Overview
-========
-
-In some cases, handling products in different unit of measures is
+In some cases, handling products in different units of measure is
 necessary. For example, if you buy products in a country where the
-metric system is of application and sell them in a country where the
-imperial system is used, you will need to convert the units.
+metric system is of application and sell in a country where the imperial
+system is used, you will need to convert the units. Another common use
+case is buying products in bigger packs to your supplier and selling
+them in units to your customers.
 
 You can set up Odoo to work with different units of measure for one
 product.
@@ -16,114 +15,93 @@ product.
 Configuration
 =============
 
-In the **Inventory** application, go to :menuselection:`Configuration --> Settings`.
-In the **Products** section, select **Some products may be sold/purchased in
-different units of measure (advanced)**, then click on **Apply**.
+In the *Inventory* application, go to *Configuration > Settings*. In
+the *Products* section, activate *Units of Measure*, then *Save*.
 
-.. image:: media/uom09.png
-   :align: center
+.. image:: media/uom_01.png
+    :align: center
 
-Setting up units on your products
+Create New Units of Measure
+===========================
+
+In the *Inventory* application go to *Configuration > UoM*. There,
+hit *Create*. As an example, we will create a Box of 6 units that we
+will use for the Egg product.
+
+.. image:: media/uom_02.png
+    :align: center
+
+The category is important for unit conversion, you will be able to
+convert products from one unit to another only if those units belong to
+the same category. The box of 6 is 6 times bigger than the reference
+unit of measure for the category which is “Units” here.
+
+.. image:: media/uom_03.png
+    :align: center
+
+Specify Units of Measure on your Products
+=========================================
+
+In the *Inventory application > Master Data > Products*, open the
+product which you would like to change the purchase/sale unit of
+measure, and click on *Edit*.
+
+In the *General Information* tab, you can select the *Unit of
+Measure* in which the product will be sold, which is also the unit in
+which internal transfers will take place. You can also select the
+*Purchase Unit of Measure*, which is the unit in which you purchase
+the product.
+
+.. image:: media/uom_04.png
+    :align: center
+
+Transfer from One Unit to Another
 =================================
 
-In :menuselection:`Master Data --> Products`, open the product which you would like to
-change the purchase/sale unit of measure, and click on **Edit**.
+Buy in the Pruchase UoM
+-----------------------
 
-In the **Unit of Measure** section, select the unit in which the product
-will be sold and in which internal transfers will be done.
+In the *Purchase* application, *Create* a new request for quotation
+in which you include the product with the different *Units of Measure*
+and *Confirm* it.
 
-In the **Purchase Unit of Measure** section, select the unit in which
-you purchase the product. When you're done, click on **Save**.
+.. image:: media/uom_05.png
+    :align: center
 
-.. image:: media/uom10.png
-   :align: center
+On the automatically generated purchase orders, the UoM used is the Box
+of 6, meaning the Purchase UoM. You have of course the possibility to
+manually modify the UoM if necessary. When you enter the *Receipt*
+which is linked to the purchase order, you can observe that the 10 boxes
+of 6 units have been converted in 60 units. Indeed, the stock is managed
+in units.
 
-.. tip::
-    Click on the edit button |edit| to create new unit of measures.
+.. image:: media/uom_06.png
+    :align: center
 
+Replenishment
+-------------
 
-Transfer from one unit to another
-=================================
+When doing a replenishment via the *Replenish* button on the product
+form, you have the possibility to change the unit of measure.
 
-When doing inter-unit transfers, the rounding is automatically done by
-Odoo.
+.. image:: media/uom_07.png
+    :align: center
 
-The unit of measure can be changed throughout the whole process. The
-only condition is that the unit of measure is part of the same category.
+.. image:: media/uom_08.png
+    :align: center
 
-In this example, we are in the egg business :
+Sell in bigger UoM
+------------------
 
--  We buy eggs by trays (30 eggs)
+You can choose the unit of measure on the sale order document and decide
+to sell the eggs by the dozen. When doing so, the price is automatically
+computed from Units UoM to adapt to the selected *UoM*.
 
--  We check all eggs individually when receiving it (quality control)
+.. image:: media/uom_09.png
+    :align: center
 
--  We sell eggs by the dozen to the customers
+In the delivery order, the *UoM* used in the sale order is converted
+to the *UoM* used for stock management, in our use case, the Units.
 
-.. image:: media/uom01.png
-   :align: center
-
-.. note::
-    The **Sale price** is expressed in the **Product unit of measure**. The
-    **Cost price** is expressed in the **Purchase Unit of Measure**.
-
-.. note::
-    All internal transfers are expressed in the **Product Unit of
-    Measure**.
-
-Procurement
------------
-
-When doing your procurement request, you can still change the unit of
-measure.
-
-.. image:: media/uom06.png
-   :align: center
-
-The unit of measure can also be changed in the purchase order :
-
-.. image:: media/uom03.png
-   :align: center
-
-Quality Control
----------------
-
-The quality control is done by unit.
-
-The basic unit of measure of our product is **Unit**. Therefore the
-quality check is done by unit.
-
-.. image:: media/uom05.png
-   :align: center
-
-.. note::
-    The unit of measure can only be changed when the transfer status
-    is **Draft**.
-
-Delivery process
-----------------
-
-The eggs are sold by the dozen. You can choose the unit of measure on
-the sale order document. When doing it, the price is automatically
-computed from the unit to the dozen.
-
-.. image:: media/uom04.png
-   :align: center
-
-In the delivery order, the initial demand is done in the sales order unit
-of measure :
-
-.. image:: media/uom02.png
-   :align: center
-
-But the transfer is done in the product unit of measure. Everything is
-converted automatically :
-
-.. image:: media/uom08.png
-   :align: center
-
-.. todo::
-    Create a link when the document is available
-    -  When should you use packages, units of measure or kits?
-
-
-.. |edit| image:: ./media/uom07.png
+.. image:: media/uom_10.png
+    :align: center
