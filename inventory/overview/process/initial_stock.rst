@@ -1,6 +1,6 @@
-========================
-Create Storable Products
-========================
+======================
+Set your Initial Stock
+======================
 
 The first step to use the inventory application is to create products in
 your database via the menu *Master Data > Products*. Click the Create
