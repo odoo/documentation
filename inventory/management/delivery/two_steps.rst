@@ -1,133 +1,103 @@
-==========================================================
-How to process delivery orders in two steps (pick + ship)?
-==========================================================
-
-Overview
-========
-
-When an order goes to the shipping department for final delivery, Odoo
-is set up by default to utilize a **one-step** operation: once all goods are
-available, they are able to be shipped in a single delivery order.
-However, your company's business process may have one or more steps that
-happen before shipping. In the **two steps** process, the items in a delivery
-order are **picked** in the warehouse and brought to an **output location** for
-**shipping**. The goods are then shipped.
-
-In order to accomplish a **Pick + Ship** delivery in Odoo, there are a few 
-necessary configuration steps. These steps create an additional
-location, which by default is called **Output**. So, if your warehouse's
-code is ``WH``, this configuration will create a location called
-``WH/Output``. Goods will move from ``WH/Stock`` to ``WH/Output`` in the first
-step (picking). Then, they move from ``WH/Output`` to ``WH/Customers`` (in the
-case of sales orders) in the second step (shipping).
-
-.. note::
-    Check out :doc:`inventory_flow` to determine if this inventory flow is the
-    correct method for your needs.
+==============================================
+Process a Receipt in two steps (Input + Stock)
+==============================================
 
 Configuration
 =============
 
-Allow management of routes
---------------------------
+Odoo uses routes to define exactly how you will handle the different
+receipt steps. The configuration is done at the *Warehouse* level. By
+default, the reception is a one-step process, but changing the
+configuration can allow you to have 2 steps.
 
-Odoo configures movement of delivery orders via the **routes**. Routes
+The 2 steps flow is like this: you receive the goods in an input area,
+then transfer them to your stock. As long as the goods are not
+transferred in your stock, they will not be available for further
+processing.
+
+Activate Multi-Step Routes
+==========================
+
+The first step is to allow using *multi-step routes*. Indeed, routes
 provide a mechanism to chain different actions together. In this case,
-we will chain the picking step to the shipping step.
+we will chain the unload step in the input area to the step entering the
+products in stock.
 
-To allow management of routes, go to :menuselection:`Configuration --> Settings`.
+To allow *multi-step routes*, go to *Configuration > Settings* and
+activate the feature. By default, activating *multi-step routes* will
+also activate *Storage Locations*.
 
-Ensure that the radio button **Advanced routing of products using
-rules** is checked.
+.. image:: media/two_steps_01.png
+    :align: center
 
-.. image:: media/two_steps05.png
-   :align: center
+Configure warehouse for receipt in 2 steps
+==========================================
 
-Click on **Apply** at the top of the page to save changes (if you needed to
-check the radio button above).
+Once *multi-step routes* is activated, you can go to *Configuration >
+Warehouse* and enter the warehouse which will use receipt in 2 steps.
+Then, you can select the option *Receive goods in input and then stock
+(2 steps)* for *Incoming Shipments*.
 
-.. note::
-    If you checked option **Advanced routing of products using rules**
-    you may need to activate **Manage several locations per warehouse** if it
-    wasn't activated beforehand.
+.. image:: media/two_steps_02.png
+    :align: center
 
-Configure warehouse for Pick + Ship
-------------------------------------
 
-To configure a **Pick + Ship** move, go to 
-:menuselection:`Configuration --> Warehouses` and edit
-the warehouse that will be used.
+Activating this option will lead to the creation of a new *Input*
+location. If you want to rename it, you can go to *Configuration >
+Locations > Select Input* and update its name.
 
-For outgoing shippings, set the option to **Bring goods to output
-location before shipping (Pick + Ship)**
+.. image:: media/two_steps_03.png
+    :align: center
 
-.. image:: media/two_steps03.png
-   :align: center
 
-Create a Sales Order
-====================
+Create a purchase order
+=======================
 
-Install the **Sale** if it is not the case, and 
-create a sales order with some products to deliver.
+In the *Purchase* application, you can create a *Request for
+Quotation* with some storable products to receive from a supplier. Once
+the *RfQ* is confirmed, the receipt picking will be created and
+automatically linked to your purchase order.
 
-Notice that we now see ``2`` transfers associated with this sales order
-in the **Delivery** stat button above the sales order.
+.. image:: media/two_steps_04.png
+    :align: center
 
-.. image:: media/two_steps01.png
-   :align: center
 
-If you click on the **2 Transfers** stat button, you should now see two
-different pickings, one with a reference **PICK** to designate the
-picking process and another with a reference **OUT** to designate the
-shipping process.
+Now, by clicking on the *1 Receipt* button, you will see the first
+picking which will allow entering the product in the *input location*.
+Then, another picking, an internal transfer, has been created in order
+to move the products to *Stock*.
 
-.. image:: media/two_steps04.png
-   :align: center
+Process the picking and the delivery
+====================================
 
-Process a Delivery
-==================
+The receipt is the first one to be processed and has a *Ready* status
+while the internal transfer will only become *Ready* once the receipt
+has been marked as *Done*.
 
-How to Process the Picking Step?
---------------------------------
+You can enter the receipt operation from the purchase order, or access
+it through the inventory dashboard.
 
-Ensure that you have enough product in stock, and go to 
-**Inventory** and click on the **Waiting** link under the **Pick** kanban card.
+.. image:: media/two_steps_05.png
+    :align: center
 
-.. image:: media/two_steps06.png
-   :align: center
 
-Click on the picking that you want to process.
+By default, a receipt is always considered as ready to be processed.
+Then, you will be able to directly click on *Validate* to mark it as
+done.
 
-Click on **Reserve** to reserve the products if they are available.
+.. image:: media/two_steps_06.png
+    :align: center
 
-Click on **Validate** to complete the move from **WH/Stock** to **WH/Output**.
 
-This has completed the picking step and the **WH/PICK** move should now show
-**Done** in the status column at the top of the page. The product has
-been moved from **WH/Stock** to **WH/Output** location, which makes the product
-**available for the next step** (Shipping).
+Once the receipt has been validated, the internal transfer is ready to
+be processed. As documents are chained, the products which have been
+received are automatically reserved on the internal transfer. Once the
+transfer is validated, those products enter the stock and you will be
+able to use them to fulfill customer deliveries or manufacture products.
 
-How to Process the Shipping Step?
----------------------------------
+.. image:: media/two_steps_07.png
+    :align: center
 
-Go to **Inventory** and click on the **# TO DO** link under the
-**Delivery Orders** kanban card.
 
-.. image:: media/two_steps02.png
-   :align: center
-
-Click on the picking that you want to process.
-
-Click on **Validate** to complete the move from **WH/Output** to the
-customer (Click **Apply** to assign the quantities based on the
-quantities listed in the **To Do** column)
-
-This has completed the shipping step and the **WH/OUT** move should now show
-**Done** in the status column at the top of the page. The product has
-been shipped to the customer.
-
-.. todo::
-    link to these sections when they will be available
-    -  Process Overview: From sales orders to delivery orders
-
-    -  Process Overview: From purchase orders to receptions
+.. image:: media/two_steps_08.png
+    :align: center
