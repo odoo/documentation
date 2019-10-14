@@ -6,6 +6,5 @@ Inventory Adjustment
    :titlesonly:
    :glob:
 
-   adjustment/initial_inventory
-   adjustment/min_stock_rule_vs_mto
-   adjustment/virtual_warehouses
+   replenishment_strategies/min_stock_rule_vs_mto
+   replenishment_strategies/virtual_warehouses
