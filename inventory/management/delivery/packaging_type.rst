@@ -1,54 +1,57 @@
-==========================================================
-How can you change the packaging type for your sale order?
-==========================================================
+============================
+Deliver Products in Packages
+============================
 
-Overview
-========
-
-Odoo gives you the possibility to change the default packaging type and
-adapt the packaging the way you want it, depending on the weight of the
-order.
+In Odoo, you have the possibility to deliver your products in different
+packages, depending on the volume and or weight of your products.
 
 Configuration
 =============
 
-In the **Inventory** module, Go to **Configuration** and then click on
-**Settings**.
+First, you need to activate the *Delivery Packages* feature in the
+*Inventory app > Configuration > Settings*.
 
-In :menuselection:`Traceability --> Packages`, flag **Record packages used on
-packing : pallets, boxes,...**
-
-.. image:: media/packaging_type01.png
+.. image:: media/packaging_type_01.png
     :align: center
 
-*Sale process*
+Proceed to a Delivery
+=====================
 
-In the **Sales** module, go to **Sales** and click on **Sale Order**.
+Now, you can create a planned delivery with some products in it. You
+will have the possibility to create new packages and assign them to the
+stock move lines.
 
-Create your new Sale Order, and **Confirm the Sale**.
-
-.. image:: media/packaging_type02.png
+.. image:: media/packaging_type_02.png
     :align: center
 
-Once you've confirmed the Sale, you need to click on **Delivery**, to be
-redirected to the Delivery order.
+Then, you can define the package type from this window. Once the
+delivery order is validated, you can retrieve which products have been
+included in the package.
 
-Click on **Edit**, and you can now change the packaging.
-
-.. image:: media/packaging_type03.png
+.. image:: media/packaging_type_03.png
     :align: center
 
-In the **Operations** tab, in the last column, change the **0** and put
-the number of products that you want to pack together. Then click on
-**Put in Pack**.
+A button will appear at the delivery stage, allowing you to find all the
+packages which were part of the delivery order.
 
-.. image:: media/packaging_type04.png
+.. image:: media/packaging_type_04.png
     :align: center
 
-Choose the type of packaging that you want. You can also see that the
-weight has been adapted to your package, and you can change it manually
-if you want it to be more precise. Then click on **Save**.
+.. image:: media/packaging_type_05.png
+    :align: center
 
-Repeat the operation until all the products are put in pack.
+Use the Put in Pack button
+==========================
 
-Finally, click on **Validate** to confirm the delivery.
+Another way to put products in packs is to use the *Put in Pack*
+button. It will automatically assign a pack to the number of products
+which is set as *Done* and duplicate the stock move line if necessary.
+
+.. image:: media/packaging_type_06.png
+    :align: center
+
+Then, you will be able to update the different packages created this
+way, directly via the *Packages* button.
+
+.. image:: media/packaging_type_07.png
+    :align: center
