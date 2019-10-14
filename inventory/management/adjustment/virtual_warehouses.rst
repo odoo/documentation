@@ -1,52 +1,55 @@
-======================================
-TaKing stock from different warehouses
-======================================
+===============================
+Resupply from another Warehouse
+===============================
 
-When you plan to deliver a customer, you don’t know in advance if the
-products will come from Warehouse A or Warehouse B. You may, in some
-cases, need to take stock from different warehouses. With *Odoo*, you
-can configure this by using the concept of virtual warehouses. Let us
-show you how to set those virtual warehouses.
+Configuration
+=============
 
-Set up virtual warehouses
-=========================
+In order to be able to resupply from another warehouse, you need to
+activate \*multi-warehouses\* and \*multi-step routes\*. Storage
+locations will be automatically activated when activating
+multi-warehouses.
 
-Let’s say you have two warehouses: Warehouse A and Warehouse B. Create a
-new warehouse, that will be a virtual one. It will allow you to take the
-stock from A or B. To do so, go to your inventory app settings and
-enable the multi-warehouses feature. Then, go to the warehouses menu and
-click on create.
-
-.. image:: media/virtual_warehouse01.png
+.. image:: media/virtual_warehouses_01.png
    :align: center
 
-.. note::
-	The *Storage Location* feature will be automatically enabled. Good
-	news, because you will need it later in the process.
+You can then access your warehouses via \*Inventory > Configuration >
+Warehouses\*. Create the necessary warehouses following this
+`*documentation* <https://docs.google.com/document/d/14xNFdUOAbfzdloqXcjq67T8qjjlY7pu4Db6BbR4_fdA/edit>`__.
+Enter the warehouse which should be resupplied by another one. You will
+have the possibility to directly indicate through which warehouse it
+gets resupplied.
 
-Now, you have to make sure that the main stock locations of warehouse A
-and warehouse B are children locations of the main stock location of
-warehouse A + B. Go to the locations menu, and edit the main location of
-your two warehouses. Then, change their parent location to main location
-of warehouse A+B.
-
-.. image:: media/virtual_warehouse02.png
+.. image:: media/virtual_warehouses_02.png
    :align: center
 
-Sell a product from the virtual warehouse
-=========================================
+By activating this option, a new route will now be available on your
+products \*Supply Product from Second warehouse\*. It can now be
+selected, along with either a \*reordering rule\* or a \*make to
+order\*.
 
-Let’s say you have two products, one stored in warehouse A and one
-stored in warehouse B. Now, you can create a new quotation for one of
-each product. Go to other information and choose Warehouse A+B in the
-shipping information.
-
-.. image:: media/virtual_warehouse03.png
+.. image:: media/virtual_warehouses_03.png
    :align: center
 
-Once you have done it, you can convert it to a sales order. Then, a
-delivery order will be automatically generated, with a product reserved
-in warehouse A and one in warehouse B.
+For the demonstration, I set a reordering rule with a minimum of 5 units
+in stock and a maximum of 10 units in stock, having currently 0 units on
+hand. I will run the scheduler by going to \*Inventory > Operations >
+Run scheduler\*.
 
-.. image:: media/virtual_warehouse04.png
+.. image:: media/virtual_warehouses_04.png
+   :align: center
+
+The system automatically creates two pickings, one \*delivery order\*
+from my Second Warehouse which contains the necessary products, and a
+receipt in my main warehouse WH/Stock for the same products. The source
+document is the \*reordering rule\* which triggered the route \*Supply
+Product from Second warehouse\*.
+
+.. image:: media/virtual_warehouses_05.png
+   :align: center
+
+.. image:: media/virtual_warehouses_06.png
+   :align: center
+
+.. image:: media/virtual_warehouses_07.png
    :align: center
