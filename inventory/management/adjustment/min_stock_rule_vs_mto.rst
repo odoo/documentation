@@ -1,74 +1,86 @@
-===========================================================
-How to choose between minimum stock rule and make to order?
-===========================================================
+=================================================
+Choose Between Reordering Rules and Make to Order
+=================================================
 
-**Minimum Stock rules** and **Make to Order** have similar consequences but
-different rules. They should be used depending on your manufacturing and
-delivery strategies.
+*Reordering rules* and *make to order* do both allow to
+automatically replenish products when necessary. The difference between
+those tools is how they are triggered.
 
-Terminology
-===========
-
-Minimum stock rule 
--------------------
-
-**Minimum Stock** rules are used to ensure that you always have the minimum
+*Reordering rules* are used to ensure that you always have a minimum
 amount of a product in stock in order to manufacture your products
 and/or answer to your customer needs. When the stock level of a product
 reaches its minimum the system will automatically generate a procurement
-with the quantity needed to reach the maximum stock level.
+with the needed quantity to reach the maximum stock level.
 
-Make to Order
--------------
-
-The **Make to Order** function will trigger a **Purchase Order** of the amount
-of the **Sales Order** related to the product. The system will **not** check
-the current stock valuation. This means that a draft purchase order will
-be generated regardless of the quantity on hand of the product.
+The *Make to Order* route will trigger a procurement (purchase order
+or manufacturing order) with the necessary quantity to fulfill a product
+request (coming from a sale order or a manufacturing order). The system
+will check the quantity on hand for the corresponding product and if the
+available quantity is higher or equal to the necessary quantity, Odoo
+will use what is in stock to fulfill the request. In case you don’t have
+enough available stock to fully fulfill the product request, procurement
+will be generated for the total quantity requested.
 
 Configuration
 =============
 
-Minimum stock rules
--------------------
+Reordering Rules
+----------------
 
-The Minimum Stock Rules configuration is available through the menu 
-:menuselection:`Inventory --> Inventory Control --> Reordering Rule`
-in the drop down menu. There, click on **Create** to set minimum and
-maximum stock values for a given product.
+The *Reordering Rules* configuration is available through the menu
+*Inventory > Master Data > Reordering Rules*. There, click on
+*Create* to set minimum and maximum stock values for a given product.
 
-.. image:: media/min_stock_rule_vs_mto01.png
+.. image:: media/min_stock_rule_vs_mto_01.png
    :align: center
 
-.. demo:fields:: stock.action_orderpoint_form
+When the forecasted stock goes below the *Minimum Quantity* specified
+in this field, Odoo generates a procurement to bring the forecasted
+quantity to the *Maximum Quantity*. The *Quantity Multiple* is used
+to round the procurement quantity up to this multiple. If it is 0, the
+exact quantity will be used.
 
-Then, click on your product to access the related product form and, on
-the **Inventory submenu**, do not forget to select a supplier.
+.. image:: media/min_stock_rule_vs_mto_02.png
+   :align: center
 
-.. image:: media/min_stock_rule_vs_mto02.png
+The *Lead time* is the number of days after the order point is
+triggered to receive the products or to order them to the vendor.
+
+In case you work with multi-warehouses and/or multi-locations, you will
+be able to specify different reordering rules for the same product in
+each location.
+
+.. tip::
+      For the reordering rules to be triggered, on the corresponding product,
+      a route should be specified. In case you manufacture your products, make
+      sure to select the route *Manufacture* and create a *Bill of Material* for the product. In case you purchase your products, make
+      sure to select the route *Buy* and add a *Vendor Pricelist*.
+
+.. image:: media/min_stock_rule_vs_mto_03.png
+   :align: center
+
+.. image:: media/min_stock_rule_vs_mto_04.png
    :align: center
 
 .. tip::
-    Don't forget to select the right product type in the product form. 
-    A consumable can not be stocked and will thus not be accounted for in the stock valuation.
+      Don't forget to select the product type *storable* in the product
+      form. A consumable can not be stocked and won’t trigger reordering
+      rules.
 
-Make to Order 
---------------
+Make to Order
+-------------
 
-The Make to Order configuration is available on your product form
-through your :menuselection:`Inventory module --> Inventory control --> Products`
-(or any other module where products are available).
+The *Make To Order* configuration is available on your product form
+through your *Inventory module > Master Data > Products* (or in any
+other module where products are available).
 
-On the product form, under **Inventory**, click on **Make To Order**.
+On the product form, in the *Inventory tab*, you can set a route. You
+can choose *Make To Order* and another route, either *Buy* or
+*Manufacture*.
 
-.. image:: media/min_stock_rule_vs_mto03.png
+Again, if the *Buy* route is selected, make sure to set a *Vendor
+pricelist* in the *Purchase tab*. In case you have set a
+*Manufacture* route, male sure you have a *BoM* for this product.
+
+.. image:: media/min_stock_rule_vs_mto_05.png
    :align: center
-
-Choice between the two options
-------------------------------
-
-The choice between the two options is thus dependent of your inventory
-strategy. If you prefer to have a buffer and always have at least a
-minimum amount, the minimum stock rule should be used. If you want to
-reorder your stocks only if your sale is confirmed it is better to use
-the Make to Order.
