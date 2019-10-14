@@ -1,67 +1,57 @@
-======================================================
-How to process delivery orders in one step (shipping)?
-======================================================
+=======================================
+Process a Receipt in one step (Receipt)
+=======================================
 
-Overview
-========
+There is no configuration needed to receive in one step. The default
+incoming shipments are configured to be directly received from the
+vendors to the stock.
 
-When an order goes to the shipping department for final delivery, Odoo
-is set up by default to utilize a one-step operation: once all goods are
-available, they are able to be shipped in a single delivery order.
+However, if advanced routes have been activated and you set another
+incoming configuration on your warehouse, you can set it back to the
+one-step receipt configuration. To do so, go to *Configuration >
+Warehouses* and edit the warehouse in question.
 
-Configuration
-=============
+Set the *Incoming Shipments* option to *Receive goods directly (1
+step)*.
 
-There is no configuration needed. The default outgoing shipments are
-configured to be directly delivered from the stock.
+.. image:: media/one_step_01.png
+    :align: center
 
-However, if **advance routes** is activated and you set another shipping
-configuration on your warehouse, you can set it back to the one-step
-delivery configuration. Go to :menuselection:`Configuration --> Warehouses` 
-and edit the concerned warehouse.
+Create a Purchase Order
+=======================
 
-Set the outgoing shippings the option to **Ship directly from stock
-(Ship Only)**
+To create a *Request for Quotation*, go to the *Purchase*
+application and click on *Create*. Then, add some storable products to
+receive and confirm the *RfQ*.
 
-.. image:: media/one_step01.png
-   :align: center
+Notice that, now, we see 1 receipt associated with the purchase order
+you just created. If you click on the button, you will see your receipt
+order.
 
-Create a Sales Order
-====================
+.. image:: media/one_step_02.png
+    :align: center
 
-Create a sales order (From quotation to sales order) with some products
-to deliver.
+Process a Receipt
+=================
 
-Notice that we now see ``1`` delivery associated with this sales order
-in the **stat button** above the sales order.
+You can also fin the receipt directly from the *Inventory* app. When
+on the dashboard, you can click the *1 TO PROCESS* button under the
+*Receipts* Kanban card. Then, you will see your receipt.
 
-.. image:: media/one_step03.png
-   :align: center
+.. image:: media/one_step_03.png
+    :align: center
 
-If you click on the **1 Delivery** stat button, you should now see your
-picking.
+Now, enter the picking that you want to process. You will be able to
+click on *Validate* to complete the move directly as products coming
+from suppliers are considered as being always available.
 
-Process a Delivery
-==================
+.. image:: media/one_step_04.png
+    :align: center
 
-Go to **Inventory** and click on the **# TO DO** link under the
-**Delivery Orders** kanban card.
+Once you *Validate* the receipt, the products leave the *Supplier
+Location* to enter your *WH/Stock Location*. You can easily see that
+the receipt took place thanks to the status of the document, which is
+now *Done*.
 
-.. image:: media/one_step02.png
-   :align: center
-
-Click on the picking that you want to process.
-
-Click on **Validate** to complete the move from **WH/Output** to the
-**customer**.
-
-This has completed the **Shipping Step** and the WH/OUT should now show
-**Done** in the status column at the top of the page, which means the
-product has been shipped to the customer.
-
-
-.. todo::
-    Ajouter un lien vers ces pages quand elles existeront
-    -  Process Overview: From sales orders to delivery orders
-
-    -  Process Overview: From purchase orders to receptions
+.. image:: media/one_step_05.png
+    :align: center
