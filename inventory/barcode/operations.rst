@@ -9,3 +9,4 @@ Daily Operations
    operations/adjustments
    operations/internal
    operations/transfers_scratch
+   operations/barcode_nomenclature
