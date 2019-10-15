@@ -1,24 +1,48 @@
 ================================================
-How to do an inventory adjustment with barcodes?
+Process to an Inventory Adjustment with Barcodes
 ================================================
 
-From the Barcode application:
+To process an inventory adjustment by using barcodes, you first need to
+open the *Barcode* app. Then, from the application, click on
+*Inventory Adjustments*.
 
--   Click on **Inventory**
-
-.. image:: media/adjustments01.png
+.. image:: media/adjustments_01.png
     :align: center
 
--   Scan all the products (if you have 5 identical articles, scan it 5
-    times, or use the keyboard to set the quantity).
+.. note::
+         If you want to fully work with barcodes, you can download the sheet
+         *Commands for Inventory*.
+
+Once you have clicked on *Inventory Adjustments*, Odoo will
+automatically create one. Note that, if you work with multi-location,
+you first need to specify in which location the inventory adjustment
+takes place.
+
+.. image:: media/adjustments_02.png
+    :align: center
+
+If you don’t work with multi-location, you will be able to scan the
+different products you want to include in the inventory adjustment.
+
+.. image:: media/adjustments_03.png
+    :align: center
 
 .. note::
-    If you manage multiple locations, scan the location before scanning the
-    products. Eg. scan a shelf's barcode ; scan each product on the
-    shelf ; repeat for each shelf in the wharehouse.
+         If you have 5 identical articles, scan it 5 times or use the keyboard to
+         set the quantity.
 
--   When you've scanned all the items of the location, validate the
-    inventory manually or by scanning the **Validate** barcode.
+Besides using the barcode scanner, you can also manually add a product
+if necessary. To do so, click on *Add Product* and fill the
+information in manually.
 
-.. image:: media/adjustments02.png
+.. image:: media/adjustments_04.png
+    :align: center
+
+.. image:: media/adjustments_05.png
+    :align: center
+
+When you have scanned all the items of the location, validate the
+inventory manually or scan the *Validate* barcode.
+
+.. image:: media/adjustments_06.png
     :align: center
