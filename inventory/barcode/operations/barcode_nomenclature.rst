@@ -75,7 +75,7 @@ Rule Types
 
 -  **Priced Product**: it allows you to identify the product and specify its price, used in PoS;
 
--  **Discounted Product**: it allows you to identify the product and specify the applied discount product, used in PoS;
+-  **Discounted Product**: it allows you to create one barcode per applied discount. Then, you can scan your product in the PoS and apply discounts on the product by scanning the discount barcode;
 
 -  **Weighted Product**: it allows you to identify the product and specify its weight, used in both PoS and in Inventory;
 
