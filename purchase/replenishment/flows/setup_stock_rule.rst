@@ -30,7 +30,7 @@ quantity it will replenish your stock to your **maximum quantity**.
   *Inventory* module runs. By default in Odoo, the schedulers will run
   every night at 12:00PM.
 
-  See also: :doc:`../../../inventory/management/misc/schedulers`
+  See also: :doc:`../../../inventory/management/planning/schedulers`
 
 From now on, every time a product with a reordering rule reaches the
 minimum stock, the system will automatically see how to fulfill that
