@@ -1,106 +1,117 @@
-======================
-How to scrap products?
-======================
+==============
+Scrap Products
+==============
 
-Overview
-========
+In your warehouse, you sometimes find products that are damaged or that
+are unusable due to expiry or for some other reasons. You often notice
+this during picking or physical inventory. Since those products cannot
+be sold or stored, you have to scrap them.
 
-Scrap means waste that either has no economic value or only the value of
-its basic material
+When goods are scrapped, they are not reflected in the system as a part
+of the inventory. The scrapped material will be physically moved to the
+scrap area and not taken into account into inventory valuation.
 
-content recoverable through recycling.
-
-In your warehouse you sometimes find products that are damaged or that
-are unusable due to expiry or for some other reason. You often notice
-this during picking or physical inventory.
-
-Since you cannot normally sell or store these products, you have to
-scrap product.
-
-When goods are scrapped they are not reflected in the system as a part
-of the inventory. The scrapped material will be physically moved to
-scrap area.
+.. note::
+         Scrap means waste that either has no economic value or only the value of
+         its basic material content, recoverable through recycling.
 
 Configuration
 =============
 
-When you install inventory management, odoo automatically creates one
-default scrap location, namely **Virtual location/Scrapped**.
+When you install the *Inventory* app, Odoo automatically creates a
+scrap location. It’s named *Virtual Location/Scap*.
 
-To create an extra scrap location, Go to 
-:menuselection:`Inventory --> Configuration --> Settings`
-and check **Manage several locations per warehouse**,
-then click on **Apply**.
+Of course, you can create new scrap areas if needed. To do so, go to
+*Inventory > Configuration > Settings* and activate the *Storage
+Locations* feature.
 
-.. image:: media/scrap06.png
-   :align: center
+.. image:: media/scrap_01.png
+    :align: center
 
-After applying **Manage several location per warehouse**, you can create
-a new scrap location in 
-:menuselection:`Configuration --> Warehouse Management --> Locations.`
+Now, go to *Configuration > Locations* and create your scrap location.
 
 .. note::
-    To define a scrap location, you have to check **Is a Scrap Location?** 
-    on location form view.
+         You have to check *Is a Scrap Location?* on the location form. In
+         fact, scrap locations cannot be used as normal storage locations and
+         then, a virtual location will be created for scrapped products.
 
-Different ways to scrap product
-===============================
+Different ways to scrap products
+================================
 
-Odoo provides several ways to scrap products.
+With Odoo, you have several ways to scrap products: from receipts, from
+a delivery order, and from an internal transfer.
 
-1) Scrap from Receipt (Initial Demand tab).
------------------------------------------------
+Scrap from receipt
+------------------
 
-To scrap product from incoming shipment, Go to 
-:menuselection:`Inventory --> Dashboard --> Receipts`.
+Scrapping products from receipts is easy. Go to *Inventory > Dashboard
+> Receipts* or click on *1 TO PROCESS* under the receipts location.
 
-.. image:: media/scrap08.png
-   :align: center
+.. image:: media/scrap_01.png
+    :align: center
 
-Open the incoming shipment, and in the **Initial demand** tab, click on the
-scrap products button.
+Now, open the receipt and validate the picking. Once the products
+entered your stock, the Scrap button appears on the top left corner of
+your screen.
 
-.. image:: media/scrap01.png
-   :align: center
+You can scrap products that were part of the receipt from there. If you
+do so, it will move them from available stock to the virtual scrap
+location.
 
-2) Scrap from delivery order (Initial Demand tab) .
--------------------------------------------------------
+.. image:: media/scrap_02.png
+    :align: center
 
-To scrap product from outgoing shipment, Go to 
-:menuselection:`Inventory --> Dashboard --> Delivery Orders`
+.. image:: media/scrap_03.png
+    :align: center
 
-.. image:: media/scrap07.png
-   :align: center
+Scrap from delivery order
+-------------------------
 
-Open the outgoing shipment, and in the **Initial demand** tab, click on the
-scrap products button on stock move in initial demand tab.
+To scrap products from a delivery order, go to *Inventory > Dashboard >
+Delivery orders* or click on *1 TO PROCESS*.
 
-.. image:: media/scrap03.png
-   :align: center
+.. image:: media/scrap_04.png
+    :align: center
 
-3) Scrap from internal transfer (Initial Demand tab).
-----------------------------------------------------------
+Once done, open the delivery order. You can see the scrap button in the
+upper left of the document. If you scrap the product from there, it will
+be moved from your available stock to the virtual scrap location.
 
-To scrap product from internal transfer, Go to 
-:menuselection:`Inventory --> Dashboard --> Internal Transfers`
+You can find all the scrap orders made from the picking by clicking on
+the button on the top right corner of the document.
 
-.. image:: media/scrap05.png
-   :align: center
+.. image:: media/scrap_05.png
+    :align: center
 
-Open the internal transfer, and in the **Initial demand** tab, click on the
-scrap products button on stock move in initial demand tab.
+.. image:: media/scrap_06.png
+    :align: center
 
-.. image:: media/scrap02.png
-   :align: center
+.. image:: media/scrap_07.png
+    :align: center
 
-When you click on scrap button, a popup will open. You can enter the
-quantity of products, and specify the scrap location, then click on
-**Scrap**. 
+Scrap from an internal transfer
+-------------------------------
 
-.. image:: media/scrap04.png
-   :align: center
+To do this, the flow is almost the same. In fact, you just have to go to
+*Inventory > Dashboard > Internal Transfers*.
 
-.. note::
-    To allow change scrap location on wizard, you have to select 
-    **Manage several location per warehouse** in the settings at
-    :menuselection:`Inventory --> Configuration --> Settings`
+.. image:: media/scrap_08.png
+    :align: center
+
+There, open the internal transfer that interests you. Now, click on the
+scrap button that is on the top left of the document.
+
+When scrapping before validating the internal transfer, the product is,
+by default, moved from the source location to the virtual scrap
+location. But, if you scrap after validating the internal transfer, it
+will be moved from the destination location, as opposed to the source
+location, to the virtual scrap location.
+
+Of course, you can manually update the source location of the scrap
+order if necessary.
+
+.. image:: media/scrap_09.png
+    :align: center
+
+.. image:: media/scrap_10.png
+    :align: center
