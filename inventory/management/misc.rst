@@ -9,5 +9,4 @@ Miscellaneous Operations
    misc/scrap
    misc/owned_stock
    misc/email_delivery
-   misc/schedulers
-   misc/immediate_planned_transfers
+   misc/sms_delivery
