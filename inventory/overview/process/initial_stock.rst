@@ -15,12 +15,6 @@ product and be able to include it in an inventory adjustment.
 .. image:: media/initial_stock_02.png
     :align: center
 
-Set the product as *storable*, in order to track the stock for this
-product and be able to include it in an inventory adjustment.
-
-.. image:: media/initial_stock_02.png
-    :align: center
-
 Inventory Adjustment for Multiple Products
 ==========================================
 
