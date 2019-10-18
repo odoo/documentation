@@ -1,11 +1,10 @@
 ==========================
-Connect a measurement tool
+Connect a Measurement Tool
 ==========================
 
 With Odoo’s *IoT Box*, it is possible to connect measurement tools to
 your database. Find the list of supported devices here: `Supported
-devices
-<`*https://www.odoo.com/page/iot-hardware* <https://www.odoo.com/page/iot-hardware>`__>`__,.
+devices <https://www.odoo.com/page/iot-hardware>`__,.
 
 Connect in USB
 ==============
