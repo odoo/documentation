@@ -64,8 +64,8 @@ picking which will allow entering the product in the *input location*.
 Then, another picking, an internal transfer, has been created in order
 to move the products to *Stock*.
 
-Process the picking and the delivery
-====================================
+Process the receipt and the internal transfer
+=============================================
 
 The receipt is the first one to be processed and has a *Ready* status
 while the internal transfer will only become *Ready* once the receipt
