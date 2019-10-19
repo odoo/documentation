@@ -26,7 +26,7 @@ In TaxCloud
 In Odoo
 -------
 * Go to :menuselection:`Invoicing / Accounting --> Configuration --> Settings`
-  and check *TaxCloud - Compute tax rates based on U.S. ZIP codes*.
+  and check *TaxCloud - Compute tax rates based on U.S. ZIP codes* (note: actually uses complete street address).
 * Enter your TaxCloud credentials.
 * Click SAVE to store your credentials.
 
@@ -34,10 +34,10 @@ In Odoo
   :align: center
 
 * Click the Refresh Icon next to *Default Category* to import the TIC product categories
-  from TaxCloud (Taxability Information Codes). Some categories may imply specific rates.
+  from TaxCloud (Taxability Information Codes). Some categories may imply specific rates or attract product/service type exemptions.
 * Select your default *TIC Code*. This will apply to any new
   product created.
-* Set a specific TaxCloud Category on the *General Information* tab of the Product,
+* Set a specific TaxCloud TIC Category on the *General Information* tab of the Product,
   or on the Product Category.
 * Make sure your company address is complete (including the state
   and the zip code). Go to :menuselection:`Settings --> Users & Companies --> Companies`
