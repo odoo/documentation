@@ -53,7 +53,7 @@ Configure your Product
 
 3. The barcode should contain 0’s when you did defined D’s or N’s. In our case, we need to set 5 zeros because we condigures “21………{NNDDD}”;
 
-4. In EAN-13, the last number is a check number.
+4. In EAN-13, the last number is a check number. Use an EAN13 generator to know which digit it should be in your case.
 
 .. image:: media/barcode_nomenclature_03.png
     :align: center
