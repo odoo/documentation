@@ -47,7 +47,7 @@ Scrap from receipt
 Scrapping products from receipts is easy. Go to *Inventory > Dashboard
 > Receipts* or click on *1 TO PROCESS* under the receipts location.
 
-.. image:: media/scrap_01.png
+.. image:: media/scrap_02.png
     :align: center
 
 Now, open the receipt and validate the picking. Once the products
@@ -58,10 +58,10 @@ You can scrap products that were part of the receipt from there. If you
 do so, it will move them from available stock to the virtual scrap
 location.
 
-.. image:: media/scrap_02.png
+.. image:: media/scrap_03.png
     :align: center
 
-.. image:: media/scrap_03.png
+.. image:: media/scrap_04.png
     :align: center
 
 Scrap from delivery order
@@ -70,7 +70,7 @@ Scrap from delivery order
 To scrap products from a delivery order, go to *Inventory > Dashboard >
 Delivery orders* or click on *1 TO PROCESS*.
 
-.. image:: media/scrap_04.png
+.. image:: media/scrap_05.png
     :align: center
 
 Once done, open the delivery order. You can see the scrap button in the
@@ -80,13 +80,13 @@ be moved from your available stock to the virtual scrap location.
 You can find all the scrap orders made from the picking by clicking on
 the button on the top right corner of the document.
 
-.. image:: media/scrap_05.png
-    :align: center
-
 .. image:: media/scrap_06.png
     :align: center
 
 .. image:: media/scrap_07.png
+    :align: center
+
+.. image:: media/scrap_08.png
     :align: center
 
 Scrap from an internal transfer
@@ -95,7 +95,7 @@ Scrap from an internal transfer
 To do this, the flow is almost the same. In fact, you just have to go to
 *Inventory > Dashboard > Internal Transfers*.
 
-.. image:: media/scrap_08.png
+.. image:: media/scrap_09.png
     :align: center
 
 There, open the internal transfer that interests you. Now, click on the
@@ -110,8 +110,8 @@ location, to the virtual scrap location.
 Of course, you can manually update the source location of the scrap
 order if necessary.
 
-.. image:: media/scrap_09.png
+.. image:: media/scrap_10.png
     :align: center
 
-.. image:: media/scrap_10.png
+.. image:: media/scrap_11.png
     :align: center
