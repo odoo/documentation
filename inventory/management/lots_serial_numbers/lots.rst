@@ -37,10 +37,10 @@ Go to *Master Data > Products* and open the product of your choice.
 There, click on *Edit* and select *Tracking by Lots* in the
 inventory tab.
 
-.. image:: media/serial_numbers_02.png
+.. image:: media/lots_02.png
     :align: center
 
-.. image:: media/serial_numbers_03.png
+.. image:: media/lots_03.png
     :align: center
 
 Manage Lots
@@ -58,7 +58,7 @@ lot numbers. You have several ways of doing so:
 
 First, you need to open the detailed operations of your picking.
 
-.. image:: media/serial_numbers_04.png
+.. image:: media/lots_04.png
     :align: center
 
 Manually assign the different lot numbers
@@ -68,7 +68,7 @@ When opening the detailed operations, you can click on *Add a line*.
 Then, you will be able to fill the lot number in. Once done, you can
 click on *Add a line* again to register a new lot number.
 
-.. image:: media/serial_numbers_05.png
+.. image:: media/lots_05.png
     :align: center
 
 Copy/paste lot number from an Excel file
@@ -80,13 +80,13 @@ Number Name* column for Odoo to automatically create the necessary
 lines. After that, you will have to manually enter the number of
 products that are contained in each one of the lots.
 
-.. image:: media/serial_numbers_06.png
+.. image:: media/lots_06.png
     :align: center
 
-.. image:: media/serial_numbers_05.png
+.. image:: media/lots_05.png
     :align: center
 
-.. image:: media/serial_numbers_07.png
+.. image:: media/lots_07.png
     :align: center
 
 Operation Types
@@ -104,7 +104,7 @@ operation. If you have inter-warehouse transfers and track products by
 lots, it can be useful to allow using existing lot numbers in receipts
 too.
 
-.. image:: media/serial_numbers_08.png
+.. image:: media/lots_08.png
     :align: center
 
 Lots traceability
@@ -118,20 +118,20 @@ To track an item, open the *Inventory* module and, in *Master Data >
 Lots/Serial Numbers*, click on the lot number corresponding to your
 search.
 
-.. image:: media/serial_numbers_09.png
+.. image:: media/lots_09.png
     :align: center
 
 When you open the *Traceability* information, you see in which
 documents the lot number has been used.
 
-.. image:: media/serial_numbers_10.png
+.. image:: media/lots_10.png
     :align: center
 
 Now, if you want to locate the lot number, you can do so by clicking on
 the *Location* stat button.
 
-.. image:: media/serial_numbers_11.png
+.. image:: media/lots_11.png
     :align: center
 
-.. image:: media/serial_numbers_12.png
+.. image:: media/lots_12.png
     :align: center
