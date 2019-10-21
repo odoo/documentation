@@ -25,7 +25,7 @@ create your first rule.
 .. image:: media/barcode_nomenclature_01.png
     :align: center
 
-The first step is to specify the *rule name*, for example *Weight
+The first step is to specify the *rule name*, for example, *Weight
 Barcode* with 3 decimals. Then, you have to specify the type for
 barcode nomenclature, like the *Weighted Product*.
 
