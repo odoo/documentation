@@ -46,8 +46,7 @@ Receive or buy a subcontracted product
 
 You have two options to trigger the subcontracting of a product:
 
--  **Option A**: You can buy the subcontracted product from your
-       subcontractor
+-  **Option A**: You can buy the subcontracted product from your subcontractor
 
 -  **Option B**: You can directly receive the subcontracted product
 
