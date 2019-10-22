@@ -1,6 +1,6 @@
-=============
-Configuration
-=============
+=======
+Devices
+=======
 
 .. toctree::
    :titlesonly:
@@ -10,3 +10,4 @@ Configuration
    devices/camera
    devices/footswitch
    devices/printer
+   devices/payment_terminal
