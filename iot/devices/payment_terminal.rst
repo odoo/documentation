@@ -20,8 +20,8 @@ to your database, please refer to `this
 documentation <https://www.odoo.com/documentation/user/12.0/iot.html>`__.
 
 Once the IoT Box is up and running, you’ll need to link your payment
-terminal to your PoS. Open the Point of Sale app and go to Configuration
-> Point of Sale. Select a PoS, tick the IoT Box Device option and select
+terminal to your PoS. Open the Point of Sale app and go to *Configuration
+> Point of Sale*. Select a PoS, tick the IoT Box Device option and select
 your payment terminal.
 
 .. image:: media/payment_terminal_01.png
