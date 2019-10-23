@@ -10,4 +10,3 @@ Devices
    devices/camera
    devices/footswitch
    devices/printer
-   devices/payment_terminal
