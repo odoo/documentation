@@ -31,30 +31,34 @@ Set up Odoo
 * Activate Authorize.Net in Odoo from :menuselection:`Website or Sales or Accounting 
   --> Settings --> Payment Acquirers`.
 * Enter both your **Login ID** 
-  and your **API Transaction Key**. 
+  your **API Transaction Key** and your **API Signature Key**.
 
   .. image:: media/authorize02.png
     :align: center
 
-  To get those credentials in Authorize.Net, you can rely on
-  *API Login ID and Transaction Key* video of 
-  `Authorize.Net Video Tutorials <https://www.authorize.net/videos/>`__.
-  Such videos give meaningful insights about how to set up your
-  Authorize.Net account according to your needs.
+  To get those credentials from Authorize.Net, you can follow the direction
+  in the Authorize.net Help
+  `API Credentials and Keys <https://account.authorize.net/help/Account/Settings/Security_Settings/General_Settings/API_Login_ID_and_Transaction_Key.htm>`__
+  entry and access the menu :menuselection:`Account --> Settings --> API Credentials & Keys`
+  in the Authorize.net dashboard. Note that you need *both* a Transaction key and and Signature key.
+
+* Once both keys are set up, you can then generate a Client Key by clicking the
+  "Generate Client Key" button. Note that these 3 keys are necessary for the
+  setup to work correctly.
 
 
 Go live
 =======
 Your configuration is now ready! 
 You can make Authorize.Net visible on your merchant interface
-and activate the **Production** mode.
+and activate the **Enabled** state.
 
 .. image:: media/paypal_live.png
     :align: center
 
 .. note:: Credentials provided by Authorize.net are different for both
    test and production mode. Don't forget to update them in Odoo when you
-   turn on the production mode.
+   switch from testing to production or vice-versa.
 
 
 Assess Authorize.Net as payment solution
