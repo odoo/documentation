@@ -1,5 +1,5 @@
 ==================
-Business Mementoes
+Business Mementos
 ==================
 
 .. toctree::
