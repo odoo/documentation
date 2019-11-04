@@ -14,6 +14,7 @@ Applications
    purchase
    inventory
    manufacturing
+   quality
    point_of_sale
    project
    helpdesk
