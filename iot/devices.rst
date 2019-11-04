@@ -1,6 +1,6 @@
-=============
-Configuration
-=============
+=======
+Devices
+=======
 
 .. toctree::
    :titlesonly:
