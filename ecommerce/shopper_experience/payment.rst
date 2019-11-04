@@ -37,8 +37,8 @@ Odoo supports more and more platforms over time:
 How to go live
 ==============
 
-Once the payment method ready, make it visible in the payment interface 
-and activate the **Production** mode.
+Once the payment method is ready, make it visible in the payment interface 
+by switching the state to **Enabled**.
 
 .. image:: media/paypal_live.png
     :align: center
