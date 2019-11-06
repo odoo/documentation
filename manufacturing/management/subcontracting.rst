@@ -14,20 +14,7 @@ box *Subcontracting*.
 .. image:: media/subcontract_01.png
     :align: center
 
-You can now define subcontractors contacts. When you purchase or receive
-products from a contact of type subcontractor, the correct stock moves
-are created to represent the subcontracting of the production.
-
-.. image:: media/subcontract_02.png
-    :align: center
-
-.. tip::
-        You can set the subcontractor as a vendor in case you plan to buy him
-        the subcontracted products via purchase orders.
-
-The next step is to create a *Bill of Material* of type
-*subcontracted*. In this *BoM*, list the components you need to
-supply to the subcontractor.
+You can now define subcontracted *Bill of Materials*. Therefore, you need to go to *Manufacturing > Master Data > Bill of Materials* and hit *Create*. In this *BoM*, list the components which will be used by the subcontractor to manufacture the subcontracted finished product. Specify that the *BoM* type is *Subcontracting*.
 
 .. image:: media/subcontract_03.png
     :align: center
