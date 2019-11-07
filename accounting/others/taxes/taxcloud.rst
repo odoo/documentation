@@ -68,5 +68,26 @@ automated tax computation.
 Add your product(s). You have two options to get Sales Tax on the Order.  You can confirm it,
 or you can save it and from the *Action* Menu choose **Update Taxes with TaxCloud**.
 
+
+Coupons & Promotions
+====================
+
+If you use the Coupon or Promotion Programs, the integration with Taxcloud might seem a bit odd.
+
+The problem lies with the fact that Taxcloud does not accept lines with negative amounts as part of
+the tax computation. This means that the amount of the lines added by the promotion program must be
+deduced from the total of the lines it impacts. This means, amongst other complications, that orders
+that use coupons or promotions with a Taxcloud fiscal position **must** be invoiced completely -
+you cannot create invoices for partial deliveries, etc.
+
+Another specific oddity is possible in the UI: imagine that you sell a product from the Taxcloud
+category *[20110] Computers* and that you have a promotion program in place that provides a 50%
+discount on this product. If the tax rate for this particular product is 7%, the tax rate that will
+be computed from the Taxcloud integration will display 3.5%. This happens because the discount is
+included in the price that is sent to Taxcloud, but in Odoo this discount is in another line
+entirely. At the end of the day, your tax computation will be correct (since a 3.5% tax on the full
+price is the equivalent of a 7% tax on half the price), but this might be surprising from a user
+point of view.
+
 .. seealso::
-  * :doc:`application`
+   - :doc:`application`
