@@ -85,18 +85,13 @@ Cells color signification
 The cells, which are part of the *To replenish* line, can take
 different colors depending on the situation:
 
--  **Green**: quantity of products which should be replenished to
-       reach the expected safety stock considering the demand forecast
-       and the indirect demand forecast.
+-  **Green**: quantity of products which should be replenished to reach the expected safety stock considering the demand forecast and the indirect demand forecast.
 
--  **Grey**: replenishment order has already been generated, and its
-       quantity still matches current data.
+-  **Grey**: replenishment order has already been generated, and its quantity still matches current data.
 
--  **Red**: replenishment order has already been generated, and its
-       quantity was too high considering current data.
+-  **Red**: replenishment order has already been generated, and its quantity was too high considering current data.
 
--  **Orange**: replenishment order has already been generated, and
-       its quantity was too low considering current data.
+-  **Orange**: replenishment order has already been generated, and its quantity was too low considering current data.
 
 The *Forecasted stock* line can also contain red cells, which means
 the stock will be negative during the period in question.
