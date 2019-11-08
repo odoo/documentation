@@ -11,3 +11,4 @@ General
    general/unsplash
    general/base_import
    general/auth
+   general/in_app_purchase
