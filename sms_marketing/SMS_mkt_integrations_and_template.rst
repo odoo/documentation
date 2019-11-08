@@ -60,5 +60,5 @@ To set up *SMS Templates*, I’ll go to the *Settings* app and activate the *dev
    - *SEPA debit payment provider*: send a verification code to your customers.
    - *Studio*: send an SMS according to your needs by using automated actions.
 
-
+For more information about SMS integrations in Odoo and a list of frequently asked questions, go to `Pricing and FQA <fqapricing.html>`__.
 
