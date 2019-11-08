@@ -9,12 +9,13 @@ With Odoo’s SMS Marketing app you can plan, organize, schedule and keep track 
 
 
 Install the app
-==================================
+===============
+
 Go to *Apps*, search for *SMS Marketing* and click on *Install*.
 
-
 Build an SMS mailing
-==================================
+====================
+
 Go to *SMS Marketing > Create*.
 
 .. image:: ./media/sms_marketing1.png
@@ -48,29 +49,26 @@ On *Settings* I have the option *include opt-out link* available. If activated, 
 
 
 Sending my mailing
-==================================
-.. image:: ./media/sms_marketing6.png
+==================
 
+.. image:: ./media/sms_marketing6.png
 
 Once I have my mailing created, I must choose when I would like it to be delivered:
 
-- *Put in queue*: the mailing will be triggered with the next automatic run.
-   Interesting option if I don’t mind when the triggering will happen.
-- *Send now*: sends the message immediately.
-   Advised to use this option if there are not that many recipients.
-- *Schedule*: allows me to choose a day and time.
-   Best option for mailings that I would like to send during a specific event, to promote an offer while it is active or to simply plan my content strategy in advance.
-- *Test*: allows me to send an SMS to one or multiple numbers for test purposes.
-   Check, for example, if the link provided lands on the right page while making sure they are responsive. If sending it to multiple numbers, I must remember to use a comma between them.
+- *Put in queue*: the mailing will be triggered with the next automatic run. Interesting option if I don’t mind when the triggering will happen.
+- *Send now*: sends the message immediately. Advised to use this option if there are not that many recipients.
+- *Schedule*: allows me to choose a day and time. Best option for mailings that I would like to send during a specific event, to promote an offer while it is active or to simply plan my content strategy in advance.
+- *Test*: allows me to send an SMS to one or multiple numbers for test purposes. Check, for example, if the link provided lands on the right page while making sure they are responsive. If sending it to multiple numbers, I must remember to use a comma between them.
 
 
 Visualize reports
-==================================
+=================
 On the *Reporting* menu, with just a few clicks, I am capable of applying filters, measures and adopt different layouts to do an analysis of the performance of my SMS mailings.
 
 .. image:: ./media/sms_marketing7.png
    :align: center
 
 .. tip:: I can also check the price to send an SMS on your country when clicking on the *information* icon when creating a new SMS.
+
 .. image:: ./media/sms_marketing8.png
    :align: center
