@@ -9,3 +9,4 @@ Helpdesk
 
    helpdesk/getting_started
    helpdesk/invoice_time
+   helpdesk/after_sales
