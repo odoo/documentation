@@ -24,3 +24,4 @@ Applications
    iot
    mobile/firebase
    social_marketing
+   sms_marketing
