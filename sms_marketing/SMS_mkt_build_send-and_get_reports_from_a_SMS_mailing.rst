@@ -55,10 +55,10 @@ Sending my mailing
 
 Once I have my mailing created, I must choose when I would like it to be delivered:
 
-- *Put in queue*: the mailing will be triggered with the next automatic run. Interesting option if I don’t mind when the triggering will happen.
-- *Send now*: sends the message immediately. Advised to use this option if there are not that many recipients.
-- *Schedule*: allows me to choose a day and time. Best option for mailings that I would like to send during a specific event, to promote an offer while it is active or to simply plan my content strategy in advance.
-- *Test*: allows me to send an SMS to one or multiple numbers for test purposes. Check, for example, if the link provided lands on the right page while making sure they are responsive. If sending it to multiple numbers, I must remember to use a comma between them.
+- **Put in queue**: the mailing will be triggered with the next automatic run. Interesting option if I don’t mind when the triggering will happen.
+- **Send now**: sends the message immediately. Advised to use this option if there are not that many recipients.
+- **Schedule**: allows me to choose a day and time. Best option for mailings that I would like to send during a specific event, to promote an offer while it is active or to simply plan my content strategy in advance.
+- **Test**: allows me to send an SMS to one or multiple numbers for test purposes. Check, for example, if the link provided lands on the right page while making sure they are responsive. If sending it to multiple numbers, I must remember to use a comma between them.
 
 
 Visualize reports
