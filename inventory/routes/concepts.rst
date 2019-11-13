@@ -11,3 +11,4 @@ Concepts
    concepts/push_rule
    concepts/inter_warehouse
    concepts/cross_dock
+   concepts/stock_warehouses
