@@ -6,4 +6,3 @@ Analyze performance
    :titlesonly:
 
    performance/win_loss
-   performance/turnover
