@@ -1,70 +1,41 @@
-===========================
-What is a putaway strategy?
-===========================
+========================
+What is a Putaway Rule?
+========================
 
-Overview
-========
+A good warehouse implementation takes care that products automatically move to their appropriate destination location. To make that process easier, Odoo uses *Putaway rules*. But what is a putaway rule? Putaway is the process of taking products off the receiving shipments and directly putting them into the most appropriate location.
 
-A good warehouse implementation takes care that products automatically
-move to their appropriate destination location. Putaway is the process
-of taking products off the receiving shipment and putting them into the
-most appropriate location.
-
-If for instance a warehouse contains volatile substances, it is
-important to make sure that certain products are not stored close to
-each other because of a potential chemical reaction.
-
-A putaway strategy follows the same principle as removal strategies but
-affects the destination location. Putaway strategies are defined at
-the location level (unlike removal strategies which are defined at the
-product level).
+If, for example, a warehouse contains volatile substances, it is important to make sure that certain products are not stored close to each other because of a potential chemical reaction. That’s where putaway rules intervene, to avoid storing products wrongly.
 
 Configuration
-=============
+==============
 
-Go to :menuselection:`Inventory --> Configuration --> Settings` and check option 
-**Manage several location per warehouse & Advance routing of products using
-rules**, then click on **Apply**.
+In the *Inventory* app, go to *Configuration > Settings* and activate the *Multi-Step Routes*. By doing so, the *Storage Locations* will be automatically activated.
 
-.. image:: media/putaway01.png
-    :align: center
+.. image:: media/putaw1.png
+ 	:align: center
 
-Setting up a strategy
-=====================
+Setting up a Putaway Rule
+==========================
 
-Let's take as an example a retail shop where we store vegetables and
-fruits.
+In some cases, like for a retail shop storing vegetables and fruits, we have to store products in different locations to maintain product quality. 
 
-We have to store this type of product in different locations to maintain
-product quality.
+Let’s suppose there are one warehouse location *WH/Stock* and two sub-locations *WH/Stock/Vegatable* and *WH/Stock/Fruits*.
 
-Suppose there is one warehouse location **WH/Stock** and there is
-sub location **WH/Stock/Vegetables** & **WH/Stock/Fruits**.
+To manage those locations, we will create putaway rules. To do so, open the *Inventory* app and go to *Configuration > Putaway Rules*. Then, click on create and configure your first rule indicating the main location the product will enter before being redirected to the right location. 
 
-You can create a putaway strategy from 
-:menuselection:`Inventory --> Configuration --> Locations`. 
-Open any location where you want to set a putaway strategy,
-click on **Edit** and locate the option **Put Away Strategy**.
+.. note::
+	The putaway rules can be defined either per product or per product category.
 
-.. image:: media/putaway02.png
-    :align: center
+.. image:: media/putaw2.png
+ 	:align: center
+	
+Now, if I purchase apples and carrots to my supplier, they will be grouped in the same receipt but redirected to the right location automatically, thanks to putaway rules. This information is available from *Inventory Report*, under the reporting menu.
 
-Open the roll-down menu and click on **Create and Edit**. This will open a
-form view of put away strategy on which you have to set a name for the
-strategy, and set the method and fixed location for each category.
+.. image:: media/putaw3.png
+ 	:align: center	
 
-.. image:: media/putaway03.png
-    :align: center
+.. image:: media/putaw4.png
+ 	:align: center
 
-When you have entered all the necessary information, click on **Save**.
-
-Now, when you purchase products with those categories, they will
-automatically be transferred to the correct location.
-
-To check current inventory, Go to 
-:menuselection:`Inventory --> Inventory Control --> Current Inventory`
-
-There you can see current inventory by location.
-
-.. image:: media/putaway04.png
-    :align: center
+.. image:: media/putaw5.png
+ 	:align: center	
