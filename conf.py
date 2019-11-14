@@ -334,7 +334,6 @@ def setup(app):
     app.add_javascript('misc.js')
 
     app.add_javascript('inventory.js')
-    app.add_javascript('coa-valuation.js')
     app.add_javascript('coa-valuation-continental.js')
     app.add_javascript('coa-valuation-anglo-saxon.js')
 
