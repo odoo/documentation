@@ -72,3 +72,6 @@ On the *Reporting* menu, with just a few clicks, I am capable of applying filter
 
 .. image:: ./media/sms_marketing8.png
    :align: center
+
+.. note:: **Buy Credits!**
+    In order to take advantage of the app and its features, make sure you’ve purchased credits. For more information on that access: :doc:`../sms_marketing/fqapricing`
