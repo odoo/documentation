@@ -22,6 +22,8 @@ The mexican localization is a group of 3 modules:
    payment complement, invoice addendum.
 3. **l10n_mx_reports**: All mandatory electronic reports for electronic
    accounting are here (Accounting app required).
+4. **l10n_mx_reports**: All mandatory electronic reports for electronic
+   accounting are here (Accounting app required).
 
 With the Mexican localization in Odoo you will be able not just to comply
 with the required features by law in México but to use it as your
