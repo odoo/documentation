@@ -181,14 +181,17 @@ After the partners and journals are created and configured, when the invoices ar
 Once the partner is selected the document type will filled automatically, based on the AFIP document type:
 
 **Invoice for a customer IVA Responsable Inscripto, prefix A**
+
 .. image:: media/argentina11.png
    :align: center
 
 **Invoice for an end customer, prefix B**
+
 .. image:: media/argentina12.png
    :align: center
 
 **Exportation Invoice, prefix E**
+
 .. image:: media/argentina13.png
    :align: center
 
@@ -205,6 +208,7 @@ Based on the  AFIP Responsibility type,  the VAT tax can have a different behavi
 
 #. Tax excluded: In this case the taxed amount needs to be clearly identified in the report. This condition applies when the customer have the next AFIP Responsibility Type.
 **Responsable Inscripto**
+
 .. image:: media/argentina14.png
    :align: center
 
