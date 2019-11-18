@@ -19,7 +19,7 @@ Configuration
 
 For this, go to Apps and search for Argentina. Then click Install for the first two modules.
 
-.. image:: media/argetina01.png
+.. image:: media/argentina01.png
    :align: center
 
 1.1 Configure your company
@@ -86,7 +86,7 @@ As part of the localization module,  the taxes are created automatically with th
 
 #. **Tax Category**:
 - Regular VAT
-- Proffits
+- Profits
 - Gross Income
 - Otros
 
@@ -168,15 +168,13 @@ Credit Note: NC-A 0001-00000003
 Debit Note: ND-A 0001-00000004
 
 
-
-
 Usage and testing
 ~~~~~~~~~~~~~~~~~
 
 1. Invoice
 ----------
 
-After the partners and journals are created and configured, when the invoices are created the will have the next behaviour: 
+After the partners and journals are created and configured, when the invoices are created the will have the next behaviour:
 
 1.1 Document type assignation
 ++++++++++++++++++++
