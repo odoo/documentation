@@ -6,7 +6,7 @@ Introduction
 ~~~~~~~~~~~~
 The Argentinean localization has been improved and extended in Odoo V13, in this version the next modules are available:
 
-#. **l10n_ar**:  This module add accounting features for the Argentinian localization, which represent the minimal configuration needed for a company  to operate in Argentina and under the AFIP (Administraci�n Federal de Ingresos P�blicos) regulations and guidelines.
+#. **l10n_ar**:  This module add accounting features for the Argentinian localization, which represent the minimal configuration needed for a company  to operate in Argentina and under the AFIP (Administración Federal de Ingresos Públicos) regulations and guidelines.
 
 #. **l10n_ar_reports**: Add VAT Book report which is a legal requirement in Argentine and that holds the VAT detail info of sales or purchases recorded on the journal entries. This module includes as well the  VAT summary report that is used to analyze the invoice
 
@@ -34,7 +34,7 @@ Once that the modules are installed, the first step is to set up your company da
 1.2 Chart of Account
 -----------------------------
 
-In Accounting settings there are three available packages of Chart of accounts, which are related to the AFIP responsibility type of the Company, considering that if the base companies don�t require as many accounts as the companies that gave more complex fiscal requirements:
+In Accounting settings there are three available packages of Chart of accounts, which are related to the AFIP responsibility type of the Company, considering that if the base companies don't require as many accounts as the companies that gave more complex fiscal requirements:
 
 Monotributista  (149 accounts)
 IVA Exempto   (159 accounts)
@@ -100,7 +100,7 @@ As part of the localization module,  the taxes are created automatically with th
 
 2.2.3 Special Taxes
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Some argentine taxes are not commonly used  for all companies, these type of taxes are included as Inactive� by default, it�s important that before creating a new tax you confirm if they are not already included in the Inactive taxes:
+Some argentine taxes are not commonly used  for all companies, these type of taxes are included as Inactive by default, it's important that before creating a new tax you confirm if they are not already included in the Inactive taxes:
 
 .. image:: media/argentina07.png
    :align: center
@@ -114,7 +114,7 @@ The document type is an essential information that needs to be displayed in the 
 
 Each document type can have a unique sequence per journal where it is assigned. As part of the localization, the Document Type include the country on which the document is applicable and the data is created automatically when the localization module is installed.
 
-The information required for the document types is included by default so the user doesn�t need to fill anything on this view:
+The information required for the document types is included by default so the user doesn't need to fill anything on this view:
 
 .. image:: media/argentina08.png
    :align: center
@@ -126,10 +126,10 @@ Note:  There are several document types that inactive by default but they can be
 ^^^^^^^^^^^^^^^^^^^^
 For Argentina, the document types include a letter that helps that indicates the transaction/operation, example:
 
-When an invoice is related to a B2B transaction, a document type �A� must be used.
-When an invoice is related to a B2C transaction, a document type �B� must be used.
-When an invoice is related to exportation transaction, a document type �E� must be used.
-The documents included in the localization have the proper letter associated, the user doesn�t need to configure anything additional.
+When an invoice is related to a B2B transaction, a document type "A" must be used.
+When an invoice is related to a B2C transaction, a document type "B" must be used.
+When an invoice is related to exportation transaction, a document type "E" must be used.
+The documents included in the localization have the proper letter associated, the user doesn't need to configure anything additional.
 
 .. image:: media/argentina09.png
    :align: center
@@ -182,7 +182,7 @@ After the partners and journals are created and configured, when the invoices ar
 ++++++++++++++++++++
 Once the partner is selected the document type will filled automatically, based on the AFIP document type:
 
-**Invoice for a customer �IVA Responsable Inscripto�, prefix A**
+**Invoice for a customer IVA Responsable Inscripto, prefix A**
 .. image:: media/argentina11.png
    :align: center
 
@@ -267,12 +267,12 @@ As part of the localization the next Financial reports were added:
 2.  IIBB - Reports
 ----------
 
-2.1  IIBB - Ventas por Jurisdicci�n
+2.1  IIBB - Ventas por Jurisdicción
 ++++++++++++++++++++++
 .. image:: media/argentina22.png
    :align: center
 
-2.2  IIBB - Compras  por Jurisdicci�n
+2.2  IIBB - Compras  por Jurisdicción
 ++++++++++++++++++++++
 .. image:: media/argentina23.png
    :align: center
