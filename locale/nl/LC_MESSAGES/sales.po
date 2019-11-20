@@ -8,18 +8,18 @@
 # Erwin van der Ploeg <erwin@odooexperts.nl>, 2019
 # Pol Van Dingenen <pol.vandingenen@vanroey.be>, 2019
 # Maxim Vandenbroucke <mxv@odoo.com>, 2019
-# Yenthe Van Ginneken <yenthespam@gmail.com>, 2019
 # Vincent van Reenen <vincentvanreenen@gmail.com>, 2019
 # Gunther Clauwaert <gclauwae@hotmail.com>, 2019
+# Yenthe Van Ginneken <yenthespam@gmail.com>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-03 11:39+0200\n"
+"POT-Creation-Date: 2019-11-20 10:20+0100\n"
 "PO-Revision-Date: 2019-10-03 09:47+0000\n"
-"Last-Translator: Gunther Clauwaert <gclauwae@hotmail.com>, 2019\n"
+"Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1131,6 +1131,352 @@ msgid ""
 "Attributes / Attribute / ID)."
 msgstr ""
 
+#: ../../sales/products_prices/products/variants.rst:3
+msgid "Using product variants"
+msgstr "Product varianten gebruiken"
+
+#: ../../sales/products_prices/products/variants.rst:5
+msgid ""
+"Product variants are used to manage products having different variations, "
+"like size, color, etc. It allows managing the product at the template level "
+"(for all variations) and at the variant level (specific attributes)."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:10
+msgid ""
+"As an example, a company selling t-shirts may have the following product:"
+msgstr ""
+"Als een voorbeeld van een bedrijf dat t-shirts verkoopt kan het de volgende "
+"producten hebben:"
+
+#: ../../sales/products_prices/products/variants.rst:13
+msgid "B&C T-shirt"
+msgstr "B&C T-shirt"
+
+#: ../../sales/products_prices/products/variants.rst:15
+msgid "Sizes: S, M, L, XL, XXL"
+msgstr "Groottes: S, M, L, XL, XXL"
+
+#: ../../sales/products_prices/products/variants.rst:16
+msgid "Colors: Blue, Red, White, Black"
+msgstr "Kleuren: Blauw, Rood, Wit, Zwart"
+
+#: ../../sales/products_prices/products/variants.rst:18
+msgid ""
+"In this example, **B&C T-Shirt** is called the product template and **B&C "
+"T-Shirt, S, Blue** is a variant. Sizes and color are **attributes**."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:22
+msgid ""
+"The above example has a total of 20 different products (5 sizes x 4 colors)."
+" Each one of these products has its own inventory, sales, etc."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:26
+msgid "Impact of variants"
+msgstr "Impact van varianten"
+
+#: ../../sales/products_prices/products/variants.rst:28
+msgid ""
+"**Barcode**: the code and barcode is associated to a variant, not the "
+"template. Every variant may have its own barcode / SKU."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:31
+msgid ""
+"**Price**: every product variant has its own public price that is computed "
+"based on the template price ($20) with an optional extra for every variant "
+"(+$3 for color red). However, you can define pricelist rules that apply on "
+"the template or the variant."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:36
+msgid ""
+"**Inventory**: the inventory is managed by product variant. You don't own "
+"t-shirts, you only own \"T-shirts, S, Red\", or \"T-Shirts, M, Blue\". For "
+"information purpose, on the product template form, you get the inventory "
+"that is the sum of every variant. (but the actual inventory is computed by "
+"variant)"
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:42
+msgid ""
+"**Picture**: the picture is related to the variant, every variation of a "
+"product may have its own primary picture."
+msgstr ""
+"**Foto**: de foto is gerelateerd aan de variant, elke variatie van een "
+"product heeft mogelijk zijn eigen primaire foto."
+
+#: ../../sales/products_prices/products/variants.rst:45
+msgid ""
+"**Other fields**: most of the other fields belongs to the product template. "
+"If you update them, it updates automatically all the variants. (example: "
+"Income Account, Taxes)"
+msgstr ""
+"**Andere velden**: de meeste andere velden behoren tot het productsjabloon. "
+"Indien u ze update updaten automatisch alle varianten. (bijvoorbeeld: "
+"inkomende rekening, belastingen)"
+
+#: ../../sales/products_prices/products/variants.rst:50
+msgid "Should you use variants?"
+msgstr "Zou u varianten moeten gebruiken?"
+
+#: ../../sales/products_prices/products/variants.rst:53
+msgid "When should you use variants?"
+msgstr "Wanneer moet u varianten gebruiken?"
+
+#: ../../sales/products_prices/products/variants.rst:55
+msgid "Using variants has the following impacts:"
+msgstr "Varianten gebruiken heeft de volgende gevolgen:"
+
+#: ../../sales/products_prices/products/variants.rst:57
+msgid ""
+"**eCommerce**: in your online shop, the customer will only see product "
+"templates in the catalog page. Once the visitor click on such a product, he "
+"will have options to choose amongst the variants (colors, sizes, …)"
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:62
+msgid ""
+"**Manufacturing**: Using variants allows to define only one bill of material"
+" for a product template and slight variations for some of the variants. "
+"Example: instead of creating a Bill of Material for \"T-shirt, Red, S\", you"
+" create a bill of material for \"T-shirt\" and add some lines that are "
+"specific to the dimension S, and other lines specific to the color Red."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:69
+msgid ""
+"**Pricing**: The default price of a product is computed using the price of "
+"the product template and add the optional extra price on each dimension of "
+"the variant. This way, variant prices are easier to maintain since you don't"
+" have to set the price for every variant. However, it's possible to create "
+"pricelist rules to fix price per variants too."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:77
+msgid "When should you avoid using variants?"
+msgstr "Wanneer zou u varianten moeten vermijden?"
+
+#: ../../sales/products_prices/products/variants.rst:79
+msgid ""
+"Using variants may add a level of complexity on the way you use Odoo. You "
+"should consider using variants only if you need it to reduce the complexity "
+"of managing lots of products that are similars."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:83
+msgid ""
+"As an example, importing your initial product catalog is more complex if you"
+" use variants. You can't just import a list of products, you must import "
+"product templates and all their related variations."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:87
+msgid ""
+"In addition to that, you should also carefully select the dimensions that "
+"you manage as separate product templates and those as variants. As an "
+"example, a company having these products:"
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:91
+msgid "Quality: T-Shirts, Polos, Shirts"
+msgstr "Kwaliteit: T-Shirts, Polo's, Shirts"
+
+#: ../../sales/products_prices/products/variants.rst:93
+#: ../../sales/products_prices/products/variants.rst:105
+#: ../../sales/products_prices/products/variants.rst:110
+msgid "Color: Red, Blue"
+msgstr "Kleur: Rood, Blauw"
+
+#: ../../sales/products_prices/products/variants.rst:95
+#: ../../sales/products_prices/products/variants.rst:106
+#: ../../sales/products_prices/products/variants.rst:111
+msgid "Size: S, M, L, XL"
+msgstr "Grootte: S, M, L, XL"
+
+#: ../../sales/products_prices/products/variants.rst:97
+msgid ""
+"In such a use case, you could create 1 template with three dimensions of "
+"variants (Layout, T-Shirts, Polos). But, it's recommended to create two "
+"different product templates as T-shirts may highly differ from polos or "
+"shirts and customer expect to see these as two different products in the "
+"e-Commerce:"
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:103
+msgid "Product Template: T-shirt"
+msgstr "Productsjabloon: T-shirt"
+
+#: ../../sales/products_prices/products/variants.rst:108
+msgid "Product Template: Polos"
+msgstr "Productsjabloon: Polo's"
+
+#: ../../sales/products_prices/products/variants.rst:114
+#: ../../sales/send_quotations/quote_template.rst:10
+msgid "Configuration"
+msgstr "Configuratie"
+
+#: ../../sales/products_prices/products/variants.rst:117
+msgid "Activate the variant feature"
+msgstr "Activeer de varianten optie"
+
+#: ../../sales/products_prices/products/variants.rst:119
+msgid ""
+"Before you can use product variants, you must first activate the product "
+"variants in the settings. To do so, you must go to the Sales app. In the "
+"menu :menuselection:`Configuration --> Settings`, locate the **Products "
+"Variants** line, and tick the option **Products can have several "
+"attributes**, then click on **Apply**."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:129
+msgid "Creating products with variants"
+msgstr "Producten aanmaken met varianten"
+
+#: ../../sales/products_prices/products/variants.rst:131
+msgid ""
+"Once you have activated the variant option, you can add variants to your "
+"products. To do so, go to the Sales module, :menuselection:`Sales --> "
+"Products`. It is also accessible from the Purchase and inventory modules."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:135
+msgid "Now, click on the product you wish to add variants to."
+msgstr "Klik nu op het product als u er varianten aan wilt toevoegen."
+
+#: ../../sales/products_prices/products/variants.rst:137
+msgid ""
+"In the product page, a new tab called Variants has appeared. The number in "
+"purple written on top is the number of variants this product currently has. "
+"To add new variants, click on the tile. In the new window, click on "
+"**Create**."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:142
+msgid ""
+"In **Attributes**, click on the rolldown menu and select the type of "
+"variance you wish to add. If the variant does not yet exist, you can create "
+"it on the fly by clicking on Create and edit…"
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:149
+msgid ""
+"In the Attributes window, the **Value** field is the description of the "
+"attribute such as Green, Plastic or 32GB. The **Attribute** field is the "
+"type of variant such as Color, Material or Memory."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:156
+msgid ""
+"You can add a cost for the variant on the fly by adding it in the "
+"**Attribute Price Extra** field, or choose to modify it later. Click on "
+"**Save**."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:160
+msgid ""
+"You can also add a different barcode and internal reference to the variant."
+msgstr ""
+"U kan ook een verschillende barcode en interne referentie toevoegen aan de "
+"variant."
+
+#: ../../sales/products_prices/products/variants.rst:163
+msgid ""
+"When you have entered all the specifications of the variant, click on "
+"**Save**."
+msgstr ""
+"Wanneer u alle specificaties van de variant hebt ingesteld klikt u op "
+"**Opslaan**."
+
+#: ../../sales/products_prices/products/variants.rst:167
+msgid "Managing Product Variants"
+msgstr "Productvarianten beheren"
+
+#: ../../sales/products_prices/products/variants.rst:170
+msgid "Introduction"
+msgstr "Introductie"
+
+#: ../../sales/products_prices/products/variants.rst:172
+msgid ""
+"The examples below are all based on this product template that has two "
+"variant attributes :"
+msgstr ""
+"De onderstaande voorbeelden zijn allemaal gebaseerd op dit productsjabloon "
+"dat twee variant attributen heeft:"
+
+#: ../../sales/products_prices/products/variants.rst:175
+msgid "T-Shirt B&C"
+msgstr "T-Shirt B&C"
+
+#: ../../sales/products_prices/products/variants.rst:177
+msgid "Color: Red, Blue, White"
+msgstr "Kleur: Rood, Blauw, Wit"
+
+#: ../../sales/products_prices/products/variants.rst:179
+msgid "Size: S, M, L, XL, XXL"
+msgstr "Grootte: S, M, L, XL, XXL"
+
+#: ../../sales/products_prices/products/variants.rst:182
+msgid "Managing combination possibilities"
+msgstr "Combinatie mogelijkheden beheren"
+
+#: ../../sales/products_prices/products/variants.rst:184
+msgid ""
+"By default, with the above product template, you get 15 different products "
+"(3 colors, 5 sizes). If the XXL size only exists for red and blue t-shirts, "
+"you can deactivate the white product variant."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:188
+msgid ""
+"To do this, click on the **Variants** button, select the XXL, White T-shirt."
+" From the product form, uncheck the **Active** box of the T-shirt White, "
+"XXL."
+msgstr ""
+"Om dit te doen klikt u op de **Varianten** knop, selecteert u XXL, wit "
+"t-shirt. Vanuit het product scherm vinkt u de optie **Actief** uit voor het "
+"witte XXL t-shirt."
+
+#: ../../sales/products_prices/products/variants.rst:197
+msgid ""
+"That deactivating a product is different than having an inventory of 0."
+msgstr ""
+"Dat de-activering van een product anders is dan een voorraad van 0 te "
+"hebben."
+
+#: ../../sales/products_prices/products/variants.rst:200
+msgid "Setting a price per variant"
+msgstr "Een prijs instellen per variant"
+
+#: ../../sales/products_prices/products/variants.rst:202
+msgid ""
+"You can add a cost over the main price for some of the variants of a "
+"product."
+msgstr ""
+"U kan een kost toevoegen bovenop de standaard prijs voor sommige varianten "
+"van een product."
+
+#: ../../sales/products_prices/products/variants.rst:205
+msgid ""
+"Once you have activated the variant option, you can add variants to your "
+"products. To do so, go to the Sales module, open :menuselection:`Sales --> "
+"Products` and click on the product you want to modify. Click on the "
+"**Variant Prices** button to access the list of variant values."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:213
+msgid ""
+"Click on the variant name you wish to add a value to, to make the 3 fields "
+"editable. In the **Attribute Price Extra** field, add the cost of the "
+"variant that will be added to the original price."
+msgstr ""
+
+#: ../../sales/products_prices/products/variants.rst:220
+msgid "When you have entered all the extra values, click on **Save**."
+msgstr "Wanneer u alle extra waardes heeft ingegeven klikt u op **Opslaan**."
+
 #: ../../sales/products_prices/taxes.rst:3
 msgid "Set taxes"
 msgstr "Stel BTW in"
@@ -1697,10 +2043,6 @@ msgid ""
 "by creating custom quotation templates. By using a template you can send a "
 "complete quotation in no time."
 msgstr ""
-
-#: ../../sales/send_quotations/quote_template.rst:10
-msgid "Configuration"
-msgstr "Configuratie"
 
 #: ../../sales/send_quotations/quote_template.rst:12
 msgid ""

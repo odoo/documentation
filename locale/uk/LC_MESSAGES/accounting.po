@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-10-03 11:39+0200\n"
+"POT-Creation-Date: 2019-11-20 10:20+0100\n"
 "PO-Revision-Date: 2019-10-03 09:45+0000\n"
 "Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
@@ -103,11 +103,11 @@ msgstr ""
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:24
 #: ../../accounting/receivables/customer_invoices/installment_plans.rst:20
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:19
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:18
 #: ../../accounting/receivables/customer_payments/check.rst:39
 #: ../../accounting/receivables/customer_payments/check.rst:103
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:40
 #: ../../accounting/receivables/customer_payments/credit_cards.rst:113
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:19
 msgid "Configuration"
 msgstr "Налаштування"
 
@@ -1795,40 +1795,6 @@ msgstr ""
 msgid "View *Bank Account* in our Online Demonstration"
 msgstr "Перегляньте *банківський рахунок* у нашій демо онлайн"
 
-#: ../../accounting/bank/setup/create_bank_account.rst:51
-#: ../../accounting/others/adviser/assets.rst:146
-#: ../../accounting/others/analytic/timesheets.rst:78
-#: ../../accounting/payables/misc/employee_expense.rst:169
-#: ../../accounting/payables/pay/sepa.rst:134
-#: ../../accounting/payables/pay/sepa.rst:135
-#: ../../accounting/receivables/customer_invoices/overview.rst:44
-#: ../../accounting/receivables/customer_invoices/overview.rst:59
-#: ../../accounting/receivables/customer_invoices/overview.rst:94
-#: ../../accounting/receivables/customer_invoices/overview.rst:105
-#: ../../accounting/receivables/customer_invoices/payment_terms.rst:31
-msgid "Todo"
-msgstr "Зробити"
-
-#: ../../accounting/bank/setup/create_bank_account.rst:51
-msgid "add inherited field tooltip"
-msgstr "додайте підказку успадкованого поля"
-
-#: ../../accounting/bank/setup/create_bank_account.rst:53
-msgid ""
-"**Display on reports :** Display this bank account on the documents that "
-"will be printed or send to the customers"
-msgstr ""
-"**Відображати на звітах:** Відобразіть цей банківський рахунок на "
-"документах, які будуть надруковані або надіслані клієнтам"
-
-#: ../../accounting/bank/setup/create_bank_account.rst:56
-msgid ""
-"**Bank Identifier Code** = BIC : SWIFT Address assigned to a bank in order "
-"to send automated payments quickly and accurately to the banks concerned"
-msgstr ""
-"**Код ідентифікатора банку** = BIC : SWIFT Призначена адреса банку з метою "
-"швидкого та точного відправлення автоматизованих платежів у відповідні банки"
-
 #: ../../accounting/bank/setup/create_bank_account.rst:60
 msgid ""
 "The initial balance of a bank statement will be set to the closing balance "
@@ -1917,16 +1883,11 @@ msgstr "Налаштуйте валюту"
 #: ../../accounting/bank/setup/foreign_currency.rst:36
 msgid ""
 "Once the Odoo is configured to support multiple currencies, you should "
-"activate the currencies you plan to work with. To do that, go the menu "
+"activate the currencies you plan to work with. To do that, go to the menu "
 ":menuselection:`Configuration --> Currencies`. All the currencies are "
-"created by default, but you should activate the ones you plan to support. "
-"(to activate a currency, check his active field)"
+"created by default, but you should activate the ones you plan to support (to"
+" activate a currency, check its \"Active\" field)."
 msgstr ""
-"Після того, як Odoo налаштована на підтримку кількох валют, ви повинні "
-"активізувати валюти, з якими ви плануєте працювати. Для цього перейдіть у "
-"меню :menuselection:`Налаштування --> Валюти`. Всі валюти створені за "
-"замовчуванням, але ви повинні активувати ті, які ви плануєте підтримувати. "
-"(щоб активувати валюту, перевірте її активне поле) "
 
 #: ../../accounting/bank/setup/foreign_currency.rst:42
 msgid ""
@@ -2054,15 +2015,10 @@ msgstr ""
 msgid ""
 "In the above report, the account receivable associated to Camptocamp is not "
 "managed in a secondary currency, which means that it keeps every transaction"
-" in his own currency. If you prefer, you can set the account receivable of "
-"this customer with a secondary currency and all his debts will automatically"
-" be converted in this currency."
+" in its own currency. If you prefer, you can set the account receivable for "
+"this customer in a secondary currency and all its debts will automatically "
+"be converted to this currency."
 msgstr ""
-"У вищезгаданому звіті дебіторська заборгованість, пов'язана з Camptocamp, не"
-" керується в другорядній валюті, а це означає, що вона зберігає кожну "
-"транзакцію у власній валюті. Якщо хочете, ви можете встановити дебіторську "
-"заборгованість цього клієнта з додатковою валютою, і всі його борги "
-"автоматично конвертуються у цю валюту."
 
 #: ../../accounting/bank/setup/foreign_currency.rst:115
 msgid ""
@@ -2134,24 +2090,34 @@ msgid "Select 'General' for miscellaneous operations journals."
 msgstr "Виберіть 'Загальні' для журналів різних операцій."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Use in Point of Sale"
-msgstr "Використовуйте точку продаж"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Check this box if this journal define a payment method that can be used in a"
-" point of sale."
-msgstr ""
-"Позначте це, якщо цей журнал визначає спосіб оплати, який може бути "
-"використаний в точці продажу."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/payables/pay/check.rst:0
 msgid "Company"
 msgstr "Компанія"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
+#: ../../accounting/payables/pay/check.rst:0
 msgid "Company related to this journal"
 msgstr "Компанія-власник цього журналу"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Defines how the bank statements will be registered"
+msgstr "Визначає, як будуть зареєстровані банківські виписки"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Synchronization Frequency"
+msgstr "Частота синхронізації"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Defines when a new bank statement"
+msgstr "Визначає, коли з'явилася нова банківська виписка"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "will be created when fetching new transactions"
+msgstr "буде створено при завантаженні нових транзакцій"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "from your bank account."
+msgstr "з вашого банківського рахунку."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Short Code"
@@ -2193,8 +2159,8 @@ msgstr ""
 "рахунків-фактур та сторно, створених з цього журналу"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Credit Notes: Next Number"
-msgstr "Сторно: наступний номер"
+msgid "Credit Notes Next Number"
+msgstr "Наступний номер сторно"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "The next sequence number will be used for the next credit note."
@@ -2237,24 +2203,74 @@ msgid "The currency used to enter statement"
 msgstr "Валюта, використана для запису виписки"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Defines how the bank statements will be registered"
-msgstr "Визначає, як будуть зареєстровані банківські виписки"
+msgid "Communication Type"
+msgstr "Тип зв'язку"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Creation of Bank Statements"
-msgstr "Створення банківської виписки"
+msgid ""
+"You can set here the default communication that will appear on customer "
+"invoices, once validated, to help the customer to refer to that particular "
+"invoice when making the payment."
+msgstr ""
+"Тут ви можете встановити стандартну комунікацію, яка буде відображатися на "
+"рахунках-фактурах клієнтів, після перевірки, щоби допомогти клієнту "
+"звернутися до цього конкретного рахунку при здійсненні платежу."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Defines when a new bank statement"
-msgstr "Визначає, коли з'явилася нова банківська виписка"
+msgid "Communication Standard"
+msgstr "Стандарт зв'язку"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "will be created when fetching new transactions"
-msgstr "буде створено при завантаженні нових транзакцій"
+msgid ""
+"You can choose different models for each type of reference. The default one "
+"is the Odoo reference."
+msgstr ""
+"Ви можете обрати різні моделі для кожного типу референсу. Референс Odoo "
+"встановлюється за замовчуванням."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "from your bank account."
-msgstr "з вашого банківського рахунку."
+msgid "Alias Name"
+msgstr "Ім'я псевдоніма"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "It creates draft invoices and bills by sending an email."
+msgstr "Це створює чернетки рахунків через надсилання електронної пошти."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Profit Account"
+msgstr "Рахунок доходів"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Used to register a profit when the ending balance of a cash register differs"
+" from what the system computes"
+msgstr ""
+"Використовується для відображення доходу, коли наприкінці періоду баланс по "
+"касі не співпадає з тим, що обчислено системою."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Loss Account"
+msgstr "Рахунок для браку і втрат"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"Used to register a loss when the ending balance of a cash register differs "
+"from what the system computes"
+msgstr ""
+"Використовується для відображення витрат, коли наприкінці періоду баланс по "
+"касі не співпадає з тим, що обчислено системою."
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid "Lock Posted Entries with Hash"
+msgstr "Блокуйте опубліковані записи з гешем"
+
+#: ../../accounting/bank/setup/manage_cash_register.rst:0
+msgid ""
+"If ticked, the accounting entry or invoice receives a hash as soon as it is "
+"posted and cannot be modified anymore."
+msgstr ""
+"Якщо позначено, бухгалтерський запис або рахунок-фактура отримує геш, як "
+"тільки його буде опубліковано, і його більше не можна буде змінити."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "For Incoming Payments"
@@ -2313,65 +2329,6 @@ msgstr ""
 "ви передаєте в свій банк. Увімкніть цю опцію в налаштуваннях."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Profit Account"
-msgstr "Рахунок доходів"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Used to register a profit when the ending balance of a cash register differs"
-" from what the system computes"
-msgstr ""
-"Використовується для відображення доходу, коли наприкінці періоду баланс по "
-"касі не співпадає з тим, що обчислено системою."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Loss Account"
-msgstr "Рахунок для браку і втрат"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Used to register a loss when the ending balance of a cash register differs "
-"from what the system computes"
-msgstr ""
-"Використовується для відображення витрат, коли наприкінці періоду баланс по "
-"касі не співпадає з тим, що обчислено системою."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Group Invoice Lines"
-msgstr "Згрупувати рядки рахунків"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"If this box is checked, the system will try to group the accounting lines "
-"when generating them from invoices."
-msgstr ""
-"Якщо позначено, то система буде намагатися згрупувати рядки проведень, які "
-"створюватимуться на основі рахунків."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Post At Bank Reconciliation"
-msgstr "Публікувати на узгодженні з банком"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"Whether or not the payments made in this journal should be generated in "
-"draft state, so that the related journal entries are only posted when "
-"performing bank reconciliation."
-msgstr ""
-"Незалежно від того, чи потрібно здійснювати платежі, у цьому журналі мають "
-"генеруватися у стані чернетки, так що пов'язані записи журналу публікуються "
-"тільки при виконанні банківського узгодження."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Alias Name for Vendor Bills"
-msgstr "Ім'я псевдоніма для рахунків постачальника"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "It creates draft vendor bill by sending an email."
-msgstr ""
-"Він створює чернетку рахунка постачальника, відправивши електронний лист."
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Check Printing Payment Method Selected"
 msgstr "Метод оплати друкованим чеком вибрано"
 
@@ -2409,23 +2366,6 @@ msgstr "Наступний номер чеку"
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Sequence number of the next printed check."
 msgstr "Послідовність номера наступного друкованого чеку"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid "Amount Authorized Difference"
-msgstr "Різниця авторизованої суми"
-
-#: ../../accounting/bank/setup/manage_cash_register.rst:0
-msgid ""
-"This field depicts the maximum difference allowed between the ending balance"
-" and the theoretical cash when closing a session, for non-POS managers. If "
-"this maximum is reached, the user will have an error message at the closing "
-"of his session saying that he needs to contact his manager."
-msgstr ""
-"Це поле відображає максимальну різницю, дозволену між кінцевим балансом і "
-"теоретичною готівкою при закритті сеансу, для менеджерів, що не належать до "
-"точки продажу. Якщо цей максимум досягнуто, користувачеві з'явиться "
-"повідомлення про помилку під час закриття його сеансу, вказуючи, що йому "
-"потрібно звернутися до менеджера."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:25
 msgid "Usage"
@@ -6074,178 +6014,6 @@ msgstr ""
 msgid "Explanation of the fields:"
 msgstr "Пояснення полів: "
 
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Status"
-msgstr "Статус"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "When an asset is created, the status is 'Draft'."
-msgstr "Коли актив створено, статус є \"Чернеткою\"."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"If the asset is confirmed, the status goes in 'Running' and the depreciation"
-" lines can be posted in the accounting."
-msgstr ""
-"Якщо актив підтверджено, статус переходить у \"Запуск\", а рядки амортизації"
-" можуть бути опубліковані в бухгалтерському обліку."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"You can manually close an asset when the depreciation is over. If the last "
-"line of depreciation is posted, the asset automatically goes in that status."
-msgstr ""
-"Ви можете вручну закрити актив, коли амортизація закінчиться. Якщо "
-"опубліковано останній рядок амортизації, актив автоматично переходить у цей "
-"статус."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Asset Category"
-msgstr "Категорія активу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Category of asset"
-msgstr "Категорія активу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Date"
-msgstr "Дата"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Date of asset"
-msgstr "Дата активу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Depreciation Dates"
-msgstr "Дати амортизації"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "The way to compute the date of the first depreciation."
-msgstr "Спосіб обчислення дати першої амортизації."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Based on last day of purchase period: The depreciation dates will be based"
-" on the last day of the purchase month or the purchase year (depending on "
-"the periodicity of the depreciations)."
-msgstr ""
-"* На підставі останнього дня періоду придбання: Дати амортизації "
-"базуватимуться на останньому дні місяця купівлі або року купівлі (залежно "
-"від періодичності амортизації)."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Based on purchase date: The depreciation dates will be based on the "
-"purchase date."
-msgstr ""
-"* На підставі дати придбання: Дати амортизації базуватимуться на даті "
-"придбання."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "First Depreciation Date"
-msgstr "Перша дата амортизації"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"Note that this date does not alter the computation of the first journal "
-"entry in case of prorata temporis assets. It simply changes its accounting "
-"date"
-msgstr ""
-"Зверніть увагу, що ця дата не змінює обчислення першого запису журналу у "
-"випадку активів з дати експлуатації. Він просто змінює свою бухгалтерську "
-"дату"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Gross Value"
-msgstr "Початкове значення"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Gross value of asset"
-msgstr "Валова вартість активу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Salvage Value"
-msgstr "Кінцева сума"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "It is the amount you plan to have that you cannot depreciate."
-msgstr "Це сума, яку ви плануєте отримати, ви не можете знецінити."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Computation Method"
-msgstr "Спосіб розрахунку"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Choose the method to use to compute the amount of depreciation lines."
-msgstr "Виберіть метод для обчислення суми рядків амортизації."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Linear: Calculated on basis of: Gross Value / Number of Depreciations"
-msgstr ""
-"* Лінійний: Розраховується на основі: валової вартості/кількості амортизацій"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Degressive: Calculated on basis of: Residual Value * Degressive Factor"
-msgstr ""
-"* Регресивний: Розраховується на основі: залишкової вартості * Регресивного "
-"фактора"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Time Method Based On"
-msgstr "На основі методу часу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Choose the method to use to compute the dates and number of entries."
-msgstr "Виберіть метод для обчислення дати та кількості записів."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Number of Entries: Fix the number of entries and the time between 2 "
-"depreciations."
-msgstr ""
-"* Кількість записів: Виправлення кількості записів та часу між двома "
-"амортизаціями."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"* Ending Date: Choose the time between 2 depreciations and the date the "
-"depreciations won't go beyond."
-msgstr ""
-"* Дата закінчення: Виберіть час між двома амортизаціями та датою, коли "
-"амортизація не перевищуватиме."
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Prorata Temporis"
-msgstr "З дати експлуатації"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid ""
-"Indicates that the first depreciation entry for this asset have to be done "
-"from the asset date (purchase date) instead of the first January / Start "
-"date of fiscal year"
-msgstr ""
-"Вказує, що перший запис амортизації для цього активу має бути зроблений з "
-"дати активу (дата купівлі) замість першого січня / початкової дати звітного "
-"періоду"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Number of Depreciations"
-msgstr "Кількість амортизацій"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "The number of depreciations needed to depreciate your asset"
-msgstr "Кількість амортизацій, необхідна для списання вашого активу"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "Number of Months in a Period"
-msgstr "Кількість місяців у періоді"
-
-#: ../../accounting/others/adviser/assets.rst:0
-msgid "The amount of time between two depreciations, in months"
-msgstr "Час між двома амортизаціями в місяцях"
-
 #: ../../accounting/others/adviser/assets.rst:88
 msgid "Try creating an *Asset* in our online demonstration"
 msgstr "Спробуйте створити *Актив* в нашій демо-версії онлайн"
@@ -6356,18 +6124,6 @@ msgstr ""
 "дія буде публікувати повні витрати на ці активи, але не буде зареєстрована "
 "транзакція з продажу, яка повинна бути зареєстрована через рахунок-фактуру "
 "клієнта."
-
-#: ../../accounting/others/adviser/assets.rst:146
-msgid "→ This has to be changed in Odoo: selling an asset should:"
-msgstr "→ Це потрібно змінити в Odoo: продаж активу повинен:"
-
-#: ../../accounting/others/adviser/assets.rst:148
-msgid "remove all \"Red\" lines"
-msgstr "вилучіть усі \"Червоні\" рядки"
-
-#: ../../accounting/others/adviser/assets.rst:149
-msgid "create a new line that deprecate the whole residual value"
-msgstr "створіть новий рядок, який робить старими усі залишкові значення"
 
 #: ../../accounting/others/adviser/budget.rst:3
 msgid "How to manage a financial budget?"
@@ -7249,14 +7005,6 @@ msgstr ""
 "Для отримання додаткової інформації про те, як створити замовлення на "
 "продаж, в залежності від часу та матеріалу, перегляньте таку інформацію: *Як"
 " виставляти рахунки на основі часу та матеріалів* (робота в процесі)."
-
-#: ../../accounting/others/analytic/timesheets.rst:79
-msgid ""
-"Add a link, and the document is under Sales --> Invoicing Methods --> "
-"Services --> How to invoices blabla"
-msgstr ""
-"Додайте посилання, і документ під Продажі --> Методи виставлення рахунків "
-"--> Послуги --> Як виставляти рахунки blabla"
 
 #: ../../accounting/others/analytic/timesheets.rst:82
 msgid ""
@@ -8219,6 +7967,30 @@ msgstr ""
 "звітного періоду та створення відкритих записів."
 
 #: ../../accounting/others/configuration/account_type.rst:0
+msgid "Can Create Asset"
+msgstr "Може створити актив"
+
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid ""
+"Technical field specifying if the account can generate asset depending on "
+"it's type. It is used in the account form view."
+msgstr ""
+"Технічне поле із зазначенням, чи рахунок може генерувати актив залежно від "
+"його типу. Він використовується в режимі перегляду форми рахунку."
+
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid "Asset Model"
+msgstr "Модель активу"
+
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid ""
+"If this is selected, an asset will be created automatically when Journal "
+"Items on this account are posted."
+msgstr ""
+"Якщо цей параметр вибрано, об'єкт буде створено автоматично, коли буде "
+"опубліковано елементи журналу на цьому обліковому записі."
+
+#: ../../accounting/others/configuration/account_type.rst:0
 msgid "Tags"
 msgstr "Теги"
 
@@ -8248,6 +8020,18 @@ msgstr ""
 "рахунків: тип ліквідності - для готівкових або банківських рахунків, "
 "кредиторська/дебіторська заборгованість - для рахунків "
 "постачальників/клієнтів."
+
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid "Internal Group"
+msgstr "Внутрішня група"
+
+#: ../../accounting/others/configuration/account_type.rst:0
+msgid ""
+"The 'Internal Group' is used to filter accounts based on the internal group "
+"set on the account type."
+msgstr ""
+"\"Внутрішня група\" використовується для фільтрації рахунків на основі "
+"внутрішнього набору груп для типу рахунку."
 
 #: ../../accounting/others/configuration/account_type.rst:0
 msgid "Allow Reconciliation"
@@ -9264,6 +9048,7 @@ msgid "Multi-currency invoices & Vendor Bills"
 msgstr "Мультивалютні рахунки-фактури та рахунки постачальників"
 
 #: ../../accounting/others/multicurrencies/invoices_payments.rst:54
+#: ../../accounting/payables/pay/check.rst:0
 msgid "Invoices"
 msgstr "Рахунки"
 
@@ -10899,11 +10684,9 @@ msgstr "В Odoo"
 #: ../../accounting/others/taxes/taxcloud.rst:28
 msgid ""
 "Go to :menuselection:`Invoicing / Accounting --> Configuration --> Settings`"
-" and check *TaxCloud - Compute tax rates based on U.S. ZIP codes*."
+" and check *TaxCloud - Compute tax rates based on U.S. ZIP codes* (note: "
+"actually uses complete street address)."
 msgstr ""
-"Перейдіть до :menuselection:`Виставлення рахунку/Бухоблік --> Налаштування "
-"--> Налаштування` та перевірте *TaxCloud - Вирахувати ставки податку на "
-"основі індексу США*."
 
 #: ../../accounting/others/taxes/taxcloud.rst:30
 msgid "Enter your TaxCloud credentials."
@@ -10917,11 +10700,8 @@ msgstr "Натисніть ЗБЕРЕГТИ, щоби зберегти ваші 
 msgid ""
 "Click the Refresh Icon next to *Default Category* to import the TIC product "
 "categories from TaxCloud (Taxability Information Codes). Some categories may"
-" imply specific rates."
+" imply specific rates or attract product/service type exemptions."
 msgstr ""
-"Натисніть на іконку Оновити поруч із *Категорія за замовчуванням* для "
-"імпорту категорій товарів TIC з TaxCloud (Інформаційні коди оподаткування). "
-"Деякі категорії можуть передбачати конкретні ставки."
 
 #: ../../accounting/others/taxes/taxcloud.rst:38
 msgid ""
@@ -10932,11 +10712,9 @@ msgstr ""
 
 #: ../../accounting/others/taxes/taxcloud.rst:40
 msgid ""
-"Set a specific TaxCloud Category on the *General Information* tab of the "
-"Product, or on the Product Category."
+"Set a specific TaxCloud TIC Category on the *General Information* tab of the"
+" Product, or on the Product Category."
 msgstr ""
-"Встановіть конкретну категорію на вкладці Товару *Загальна інформація* або "
-"на Категорії товару."
 
 #: ../../accounting/others/taxes/taxcloud.rst:42
 msgid ""
@@ -11599,6 +11377,7 @@ msgid "Balance = Debit - Credit"
 msgstr "Баланс = Дебет - Кредит"
 
 #: ../../accounting/overview/main_concepts/memento.rst:84
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:83
 msgid "Journal Entries"
 msgstr "Записи в журналі"
 
@@ -13008,18 +12787,6 @@ msgstr ""
 "наприкінці тижня/місяця, якщо ви будете оплачувати всі ваші замовлення в "
 "пакетному режимі)."
 
-#: ../../accounting/payables/misc/employee_expense.rst:171
-msgid ""
-"tip If you want to learn more; check the documentation page :doc: "
-"../../../sale/invoicing/service/expense `*How to re-invoice expenses to your"
-" customers* "
-"<https://docs.google.com/document/d/1_6VclRWfESHfvNPZI32q5ANFi2C7cCTwkLXpbGTz6B8/edit?usp=sharing>`__"
-msgstr ""
-"занотуйте, якщо ви хочете дізнатися більше; перевірте сторінку документації "
-":doc: ../../../sale/invoicing/service/expense `*Як повторно виставити в "
-"рахунку витрати вашим клієнтам* "
-"<https://docs.google.com/document/d/1_6VclRWfESHfvNPZI32q5ANFi2C7cCTwkLXpbGTz6B8/edit?usp=sharing>`__"
-
 #: ../../accounting/payables/misc/employee_expense.rst:176
 msgid "Reimburse the employee"
 msgstr "Відшкодування працівнику"
@@ -13361,6 +13128,22 @@ msgid "Technical field used for usability purposes"
 msgstr "Технічне поле використовується для зручності використання"
 
 #: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Technical field containing the invoice for which the payment has been "
+"generated."
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"This does not especially correspond to the invoices reconciled with the "
+"payment,"
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "as it can have been generated first, and reconciled later"
+msgstr ""
+
+#: ../../accounting/payables/pay/check.rst:0
 msgid "Hide Payment Method"
 msgstr "Сховати метод оплати"
 
@@ -13371,6 +13154,10 @@ msgid ""
 msgstr ""
 "Технічне поле, яке використовується для приховання способу оплати, якщо у "
 "вибраному журналі є лише один доступний, який є \"ручним\""
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Payment Method"
+msgstr "Спосіб оплати"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Check: Pay bill by check and print it from Odoo."
@@ -13400,6 +13187,29 @@ msgstr ""
 "account_sepa повинен бути встановлений"
 
 #: ../../accounting/payables/pay/check.rst:0
+msgid "Code"
+msgstr "Код"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Technical field used to adapt the interface to the payment type selected."
+msgstr ""
+"Технічне поле, яке використовується для адаптації інтерфейсу до обраного "
+"типу платежу."
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Saved payment token"
+msgstr "Збережені токени оплати"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid ""
+"Note that tokens from acquirers set to only authorize transactions (instead "
+"of capturing the amount) are not available."
+msgstr ""
+"Зверніть увагу, що токени від покупців, призначені для авторизації "
+"транзакцій (замість отримання суми), недоступні."
+
+#: ../../accounting/payables/pay/check.rst:0
 msgid "Show Partner Bank Account"
 msgstr "Показати банківський рахунок партнера"
 
@@ -13412,15 +13222,16 @@ msgstr ""
 "поле `partner_bank_account_id` у вигляді форми платежів"
 
 #: ../../accounting/payables/pay/check.rst:0
-msgid "Code"
-msgstr "Код"
+msgid "Require Partner Bank Account"
+msgstr "Необхідний банківський рахунок партнера"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid ""
-"Technical field used to adapt the interface to the payment type selected."
+"Technical field used to know whether the field `partner_bank_account_id` "
+"needs to be required or not in the payments form views"
 msgstr ""
-"Технічне поле, яке використовується для адаптації інтерфейсу до обраного "
-"типу платежу."
+"Технічне поле використовується для того, аби дізнатися, чи поле "
+"`partner_bank_account_id` обов’язково вводити у формі платежів чи ні"
 
 #: ../../accounting/payables/pay/check.rst:0
 msgid "Check Number"
@@ -13435,6 +13246,15 @@ msgstr ""
 "Вибраний журнал налаштовано на друк номерів чеків. Якщо у вашому попередньо "
 "надрукованому чеку вже є цифри або якщо поточна нумерація неправильна, її "
 "можна змінити на сторінці налаштування журналу."
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Journal Item Label"
+msgstr "Мітка запису у журналі"
+
+#: ../../accounting/payables/pay/check.rst:0
+msgid "Change label of the counterpart that will hold the payment difference"
+msgstr ""
+"Змініть ярлик відповідного партнера, який буде містити різницю в оплаті"
 
 #: ../../accounting/payables/pay/check.rst:80
 msgid "Try paying a supplier bill with a check"
@@ -13800,7 +13620,6 @@ msgstr ""
 "банківського переказу."
 
 #: ../../accounting/payables/pay/sepa.rst:10
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:10
 msgid ""
 "SEPA is supported by the banks of the 28 EU member states as well as "
 "Iceland, Norway, Switzerland, Andorra, Monaco and San Marino."
@@ -14016,14 +13835,6 @@ msgstr ""
 #: ../../accounting/receivables/customer_payments/recording.rst:129
 msgid ":doc:`check`"
 msgstr ":doc:`check`"
-
-#: ../../accounting/payables/pay/sepa.rst:134
-msgid "How to define a new bank?"
-msgstr "Як визначити новий банк?"
-
-#: ../../accounting/payables/pay/sepa.rst:135
-msgid "How to reconcile bank statements?"
-msgstr "Як узгодити банківські виписки?"
 
 #: ../../accounting/payables/supplier_bills/bills_or_receipts.rst:3
 msgid "When should I use supplier bills or purchase receipts?"
@@ -14602,7 +14413,7 @@ msgid "Account Receivables"
 msgstr "Розрахунок з дебіторами"
 
 #: ../../accounting/receivables/customer_invoices.rst:3
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:53
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:77
 msgid "Customer Invoices"
 msgstr "Рахунки клієнта"
 
@@ -14802,6 +14613,162 @@ msgstr ""
 "клієнтів. На рахунках клієнта з'явиться нове поле **Метод округлення цін**, "
 "в якому ви можете просто вибрати один із методів округлення, створених "
 "раніше. Якщо потрібно, округлення буде застосовано до рахунку-фактури."
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:3
+msgid "Credit Notes and Refunds"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:4
+msgid ""
+"A **credit note**, or **credit memo**, is a document issued to a customer "
+"that notifies them that they have been credited a certain amount."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:11
+msgid "There are several reasons that can lead to a credit note, such as:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:9
+msgid "a mistake in the invoice"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:10
+msgid "a return of the goods, or a rejection of the services"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:11
+msgid "the goods delivered are damaged"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:14
+msgid ""
+"Issuing a credit note is the only legal way to cancel, refund or modify a "
+"validated invoice. Don’t forget to *register the payment* afterward if you "
+"need to send money back to your customer."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:20
+msgid "Issue a Credit Note"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:21
+msgid ""
+"You can create a credit note from scratch by going to "
+":menuselection:`Accounting --> Customers --> Credit Notes`, and by clicking "
+"on *Create*. Filling the Credit Note’s form works the same way as the "
+"Invoice’s form."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:26
+msgid ""
+"However, most of the time, credit notes are generated directly from the "
+"invoices they are related to."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:29
+msgid "To do so, open the *Customer Invoice*, and click on *Add Credit Note*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:37
+msgid "You can choose between three options:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:35
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:44
+msgid "Partial Refund"
+msgstr "Повернення частинами"
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:36
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:55
+msgid "Full Refund"
+msgstr "Повне повернення"
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:37
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:66
+msgid "Full refund and new draft invoice"
+msgstr "Повне повернення та нова чернетка рахунка"
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:40
+msgid ""
+"Credit Notes’ numbers start with “R” and are followed by the number of the "
+"document they are related to (e.g., RINV/2019/0004)."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:45
+msgid ""
+"Odoo creates a draft credit note already prefilled with all the necessary "
+"information from the original invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:48
+msgid ""
+"This is the option to choose to do a partial refund, or if you want to "
+"modify any detail on the credit note."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:52
+msgid ""
+"This is the only option available for invoices that are already marked as "
+"*Paid*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:56
+msgid ""
+"Odoo creates a credit note, automatically validates it, and reconciles the "
+"original invoice with it."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:62
+msgid ""
+"This is the option to choose to do a full refund or cancel a validated "
+"invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:67
+msgid ""
+"Odoo creates a credit note, automatically validates it, reconciles the "
+"original invoice with it, and open a new draft invoice prefilled with the "
+"same details from the original invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:71
+msgid ""
+"This is the option to choose to modify the content of a validated invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:74
+msgid "Record a Vendor Refund"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:75
+msgid ""
+"**Vendor Refunds** are recorded the same way you would do with invoices’ "
+"credit notes:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:77
+msgid ""
+"You can either create a credit note from scratch by going to "
+":menuselection:`Accounting --> Vendors --> Refund`, and by clicking on "
+"*Create*, or by opening the validated *Vendor Bill*, and clicking on *Add "
+"Credit Note*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:84
+msgid ""
+"Issuing a credit note from an invoice creates a **reverse entry** that "
+"zeroes out the journal items generated by the original invoice."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:87
+msgid "Here is an example of an invoice’s journal entry:"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/credit_notes.rst:92
+msgid ""
+"And here is the credit note’s journal entry generated to reverse the "
+"original invoice above:"
+msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:3
 msgid "Deferred revenues: how to automate them?"
@@ -15271,10 +15238,6 @@ msgstr ""
 msgid "This process is good for both services and physical products."
 msgstr "Цей процес корисний як для надання послуг, так і для продажу товарів."
 
-#: ../../accounting/receivables/customer_invoices/overview.rst:44
-msgid "Read more: *Invoice based on sales orders.*"
-msgstr "Читати більше: *Рахунок на основі замовлення на продаж.*"
-
 #: ../../accounting/receivables/customer_invoices/overview.rst:47
 msgid "Sales Order ‣ Delivery Order ‣ Invoice"
 msgstr "Замовлення на продаж ‣ Замовлення на доставку ‣ Рахунок-фактура"
@@ -15302,10 +15265,6 @@ msgstr ""
 "що ви дійсно доставили. Якщо ви повертаєте замовлення (частково доставте, а "
 "решта пізніше), клієнт отримає два рахунки-фактури, по одному для кожного "
 "замовлення на доставку."
-
-#: ../../accounting/receivables/customer_invoices/overview.rst:59
-msgid "Read more: *Invoice based on delivery orders.*"
-msgstr "Читати більше: *Рахунок на основі замовлення на доставку.*"
 
 #: ../../accounting/receivables/customer_invoices/overview.rst:62
 msgid "eCommerce Order ‣ Invoice"
@@ -15379,14 +15338,6 @@ msgstr ""
 "послуг компанії, які виставляють рахунки-фактури за встановлену ціну, вони "
 "використовують звичайний замовлення на продаж."
 
-#: ../../accounting/receivables/customer_invoices/overview.rst:94
-msgid ""
-"Read more: -  *How to invoice based on time and material?* -  *How to manage"
-" contracts and invoicing plans?*"
-msgstr ""
-"Читати більше: -  *Як виставити рахунок на основі часу та матеріалів?* -  "
-"*Як керувати планом контрактів та виставленням рахунків?*"
-
 #: ../../accounting/receivables/customer_invoices/overview.rst:99
 msgid "Recurring Contracts ‣ Invoices"
 msgstr "Повторювані контракти ‣ Рахунки-фактури"
@@ -15400,10 +15351,6 @@ msgstr ""
 "Для підписок рахунок-фактура виставляється періодично та автоматично. "
 "Частота виставлення рахунків та послуг/товарів, на які виставлено рахунок, "
 "визначаються на контракті."
-
-#: ../../accounting/receivables/customer_invoices/overview.rst:105
-msgid "Read more: *Subscription based invoicing.*"
-msgstr "Читати більше: *Виставлення рахунків на основі підписки.*"
 
 #: ../../accounting/receivables/customer_invoices/overview.rst:111
 msgid "Creating an invoice manually"
@@ -15512,14 +15459,6 @@ msgstr ""
 "(не робіть 50% через 10 днів, а 50% - за 21 день, тому що з округленням це "
 "може бути не рівно 100%)"
 
-#: ../../accounting/receivables/customer_invoices/payment_terms.rst:31
-msgid ""
-"screenshot payment term forms, after QDP have commited the change planned on"
-" this object"
-msgstr ""
-"зробіть скріншот форм терміну оплати, після того, як QDP здійснило "
-"заплановані зміни на цьому об'єкті"
-
 #: ../../accounting/receivables/customer_invoices/payment_terms.rst:35
 msgid "Using Payment Terms"
 msgstr "Використання умов оплати"
@@ -15599,131 +15538,192 @@ msgstr ""
 msgid ":doc:`cash_discounts`"
 msgstr ":doc:`cash_discounts`"
 
-#: ../../accounting/receivables/customer_invoices/refund.rst:3
-msgid "How to edit or refund an invoice?"
-msgstr "Як редагувати або робити повернення по рахунку-фактурі?"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:4
-msgid ""
-"In Odoo, it's not possible to modify an invoice that has been validated and "
-"sent to the customer. If a mistake was made on a validated invoice, the "
-"legal way to handle that is to refund the invoice, reconcile it with the "
-"original invoice to close them and create a new invoice."
-msgstr ""
-"В Odoo неможливо змінити рахунок-фактуру, який було перевірено та надіслано "
-"клієнту. Якщо помилка була зроблена на підтвердженому рахунку-фактурі, в "
-"юридичний спосіб це можна вирішити так: повернути рахунок-фактуру, узгодити "
-"його з оригінальним рахунком-фактурою, закрити його та створити новий "
-"рахунок-фактуру."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:10
-msgid "Modifying a validated invoice"
-msgstr "Змінення підтвердженого рахунка-фактури"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:12
-msgid ""
-"If you need to modify an existing invoice, use the Refund Invoice button on "
-"the invoice. In the refund method field, select \"Modify: create a refund, "
-"reconcile, and create a new draft invoice\"."
-msgstr ""
-"Якщо вам потрібно змінити існуючий рахунок-фактуру, скористайтеся кнопкою "
-"\"Рахунок-фактура\" у рахунку-фактурі. У полі методу повернення виберіть "
-"\"Змінити: створити повернення, узгодити та створити новий рахунок-"
-"фактуру\"."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:19
-#: ../../accounting/receivables/customer_invoices/refund.rst:37
-msgid "Odoo will automatically:"
-msgstr "Odoo буде автоматично:"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:21
-#: ../../accounting/receivables/customer_invoices/refund.rst:39
-msgid "Create a refund for your invoice"
-msgstr "Створювати повернення для вашого рахунка-фактури"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:22
-#: ../../accounting/receivables/customer_invoices/refund.rst:40
-msgid ""
-"Reconcile the refund invoice with the original invoice (marking both as "
-"Paid)"
-msgstr ""
-"Узгоджувати рахунок-фактуру з оригінальним рахунком-фактурою (позначаючи "
-"обидва як сплачено)"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:23
-msgid "Create a new draft invoice you can modify"
-msgstr "Створить новий рахунок-фактуру, який можна змінити"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:25
-msgid ""
-"Then, you can modify the draft invoice and validate it once it's correct."
-msgstr ""
-"Потім ви можете змінити проект рахунка-фактури та підтвердити його, коли він"
-" буде правильним."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:28
-msgid "Cancelling an invoice"
-msgstr "Скасування рахунка-фактури"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:30
-msgid ""
-"If you need to cancel an existing invoice, use the Refund Invoice button on "
-"the invoice. In the refund method field, select \"Cancel: create a refund "
-"and reconcile\"."
-msgstr ""
-"Якщо вам потрібно скасувати існуючий рахунок-фактуру, скористайтеся кнопкою "
-"\"Рахунок-фактура\" у рахунку-фактурі. У полі методу повернення виберіть "
-"\"Скасувати: створити повернення та узгодити\"."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:42
-msgid ""
-"Nothing else needs to be done. You can send the refund by regular mail or "
-"email to your customer, if you already sent the original invoice."
-msgstr ""
-"Нічого ще не потрібно робити. Ви можете відправити повернення звичайною "
-"поштою або електронною поштою своєму клієнту, якщо ви вже відправили "
-"оригінальний рахунок-фактуру."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:46
-msgid "Refunding part of an invoice"
-msgstr "Повернення по рахунку-фактурі"
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:48
-msgid ""
-"If you need to refund an existing invoice partially, use the Refund Invoice "
-"button on the invoice. In the refund method field, select \"Create a draft "
-"refund\"."
-msgstr ""
-"Якщо вам потрібно частково повернути наявний рахунок-фактуру, скористайтеся "
-"кнопкою \"Рахунок-фактура\" у рахунку-фактурі. У полі методу повернення "
-"виберіть \"Створити повернення\"."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:55
-msgid ""
-"Odoo will automatically create a draft refund. You may modify the refund "
-"(example: remove the lines you do not want to refund) and validate it. Then,"
-" send the refund by regular mail or email to your customer."
-msgstr ""
-"Odoo автоматично створить чернетку повернення. Ви можете змінити повернення "
-"(наприклад, видаліть рядки, які ви не хочете відшкодувати) та перевірити їх."
-" Потім відправте повернення звичайною поштою або електронною поштою своєму "
-"клієнту."
-
-#: ../../accounting/receivables/customer_invoices/refund.rst:61
-msgid ""
-"Refunding an invoice is different from refunding a payment. Usually, a "
-"refund invoice is sent before the customer has done a payment. If the "
-"customer has already paid, they should be reimbursed by doing a customer "
-"payment refund."
-msgstr ""
-"Повернення по рахунку-фактурі відрізняється від повернення платежу. Зазвичай"
-" повернення по рахунку-фактурі надсилається до того, як клієнт здійснив "
-"оплату. Якщо клієнт уже заплатив, кошти повинні бути відшкодовані, "
-"здійснивши оплату повернення клієнту."
-
 #: ../../accounting/receivables/customer_payments.rst:3
 msgid "Customer Payments"
 msgstr "Платежі клієнта"
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:3
+msgid "Batch Payments: SEPA Direct Debit (SDD)"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:4
+msgid ""
+"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
+"the European Union for simplification of bank transfers denominated in EURO."
+" With **SEPA Direct Debit**, your customers can sign a **mandate** that "
+"authorizes you to collect future payments from their bank accounts "
+"automatically."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:10
+msgid ""
+"You can record your customer mandates in Odoo, and generate XML files "
+"containing pending payments made with an SDD mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:0
+msgid ""
+"SDD is supported by all SEPA countries, which includes the 28 member states "
+"of the European Union as well as additional countries."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:0
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:123
+msgid ""
+"`List of all SEPA countries. <https://www.europeanpaymentscouncil.eu"
+"/document-library/other/epc-list-sepa-scheme-countries>`_"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:19
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Settings` nd activate"
+" the **SEPA Direct Debit (SDD)** feature. Enter the **Creditor Identifier** "
+"of your company. This number is provided by your bank, or the authority "
+"responsible for delivering them."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:28
+msgid "SEPA Direct Debit Mandates"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:30
+msgid "Create a mandate"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:31
+msgid ""
+"The SEPA Direct Debit Mandate is the document that your customers sign to "
+"authorize you to collect money directly from their bank accounts."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:34
+msgid ""
+"To create a new one, go to :menuselection:`Accounting --> Customers --> "
+"Direct Debit Mandates`, click on *Create*, and fill out the new mandate’s "
+"form."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:41
+msgid ""
+"First, export the PDF file by clicking on *Print*. It is then up to your "
+"customer to sign this document. Once done, upload the signed file in the "
+"**Original Document** field, and click on *Validate* to start running the "
+"mandate."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:47
+msgid ""
+"First, make sure, that the **IBAN bank accounts details** are correctly "
+"recorded on the debtor’s contact form, under the *Accounting* tab, and in "
+"your own *Bank Account* settings."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:52
+msgid "Close or revoke a mandate"
+msgstr "Закрийте чи скасуйте мандат"
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:53
+msgid ""
+"Direct Debit mandates are closed automatically after their *End Date*. If "
+"this field is left blank, then the mandate keeps being *Active* until it is "
+"*Closed* or *Revoked*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:60
+msgid ""
+"Clicking on **Close** updates the mandate’s end day to the current day. This"
+" means that invoices made after the present day won’t be processed "
+"automatically with an SDD payment."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:64
+msgid ""
+"Clicking on **Revoke** disables the mandate immediately. No SDD payment can "
+"be registered anymore, regardless of the invoice’s date. However, payments "
+"that have already been registered will still be included to the next SDD XML"
+" file."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:70
+msgid ""
+"Once a mandate has been *closed* or *revoked*, it cannot be reactivated. If "
+"a customer requires to pay with SDD payments again, you will have to create "
+"a new mandate from scratch."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:75
+msgid "Get paid with SDD Batch Payments"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:78
+msgid ""
+"All new posted invoice issued to customers with an active mandate will "
+"automatically register payment and have their status marked as *Paid*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:82
+msgid ""
+"If you have unpaid invoices that could be paid with a new mandate, it is "
+"still possible to do it. Go on the invoice, click on *Register Payment* and "
+"choose *SEPA Direct Debit* as payment method."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:87
+msgid "Generate SEPA Direct Debit XML files to submit payments"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:88
+msgid ""
+"To submit your SDD payments to your bank, you will first generate an **XML "
+"file** that can be uploaded directly to your bank interface."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:91
+msgid ""
+"The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02**"
+" specifications as required by the SEPA customer-to-bank Implementation "
+"Guidelines, which ensures compatibility with the banks."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:95
+msgid ""
+"To generate your XML file for the pending SDD payments, go to the related "
+"*bank journal* on your *Accounting dashboard*, then click on *Direct Debit "
+"Payments to Collect*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:102
+msgid ""
+"Select all the payments in the list that you want to include in your SDD XML"
+" file, then click on *Action* and select *Create Batch Payment*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:108
+msgid ""
+"Odoo then takes you to your *Batch Payment*’s form. Click on *Validate* and "
+"then download the SDD XML file."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:114
+msgid "Finally, upload this file to your bank to process the payments."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:117
+msgid ""
+"You can retrieve all the generated SDD XML files by going to "
+":menuselection:`Accounting --> Configuration --> Customers --> Batch "
+"Payments`."
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:121
+msgid ":doc:`../../bank/setup/create_bank_account`"
+msgstr ""
+
+#: ../../accounting/receivables/customer_payments/batch_sdd.rst:122
+msgid ""
+"`Odoo Academy: SEPA Direct Debit Mandates (SDD) "
+"<https://www.odoo.com/r/Zxs>`_"
+msgstr ""
 
 #: ../../accounting/receivables/customer_payments/check.rst:3
 msgid "How to register customer payments by checks?"
@@ -16370,172 +16370,6 @@ msgid ""
 msgstr ""
 "Якщо ви бажаєте отримати нагадування перед фактичною датою, встановіть "
 "від'ємне число днів."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:3
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:29
-msgid "Get paid with SEPA"
-msgstr "Отримайте оплату із SEPA"
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:5
-msgid ""
-"SEPA, the Single Euro Payments Area, is a payment-integration initiative of "
-"the European Union for simplification of bank transfers denominated in EURO."
-" SEPA Direct Debit allows you to withdraw money from the bank accounts of "
-"your customers with their approval."
-msgstr ""
-"SEPA, єдина зона євро платежів, є ініціативою Європейського Союзу з "
-"платіжної інтеграції для спрощення банківських переказів, виражених у євро. "
-"Прямий дебет SEPA дозволяє вам вилучати гроші з банківських рахунків ваших "
-"клієнтів із затвердженням."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:13
-msgid ""
-"With Odoo, you can record customer mandates, generate an SDD XML file "
-"containing customer payments and upload it in your bank interface. The file "
-"follows the SEPA Direct Debit PAIN.008.001.02 specifications. This is a "
-"well-defined standard that makes consensus among banks."
-msgstr ""
-"За допомогою Odoo ви можете записувати мандати клієнтів, створювати XML-файл"
-" SDD, що містить платежі клієнтів, і завантажити його у ваш банківський "
-"інтерфейс. Файл слідує специфікаціям SEPA Direct Debit PAIN.008.001.02. Це "
-"чітко визначений стандарт, який робить консенсус між банками."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:21
-msgid ""
-"Go in :menuselection:`Accounting --> Configuration --> Settings` and "
-"activate the SEPA Direct Debit (SDD) Feature. Enter the Creditor Identifier "
-"of your company. This number is provided by your bank."
-msgstr ""
-"Перейдіть до :menuselection:`Бухоблік --> Налаштування --> Налаштування` та "
-"активуйте функцію прямого дебету SEPA (SDD). Введіть ідентифікатор кредитора"
-" вашої компанії. Цей номер надається вашим банком."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:32
-msgid "Direct Debit Mandates"
-msgstr "Мандати прямого дебету"
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:34
-msgid ""
-"Before withdrawing money from a customer bank account, your customer has to "
-"sign a mandate. Go in :menuselection:`Accounting --> Sales --> Direct Debit "
-"Mandates` and create a new mandate."
-msgstr ""
-"Перш ніж вилучати гроші з рахунку клієнта, ваш клієнт повинен підписати "
-"мандат. Перейдіть до :menuselection:`Бухобліку --> Продажі --> Прямі "
-"дебетові мандати` та створіть новий мандат."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:41
-msgid "SEPA Direct Debit only works between IBAN Bank Accounts."
-msgstr "Прямий дебет SEPA працює лише між банківськими рахунками IBAN."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:43
-msgid ""
-"Once you have entered all the information in the customer mandate, you can "
-"print it and ask your customer to sign it. Once it is done, you can upload "
-"the mandate signed by your customer on the mandate in Odoo."
-msgstr ""
-"Після того, як ви введете всю інформацію в мандат замовника, ви можете "
-"роздрукувати його та попросити клієнта його підписати. Як тільки це буде "
-"зроблено, ви зможете завантажити мандат, підписаний вашим клієнтом в мандат "
-"в Odoo."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:50
-msgid "You can now validate the mandate."
-msgstr "Тепер ви можете перевірити мандат."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:55
-msgid "Let's create an invoice for that customer."
-msgstr "Давайте створимо рахунок для клієнта."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:57
-msgid ""
-"When you will validate this invoice, the payment will be automatically "
-"generated and your invoice will be directly marked as paid."
-msgstr ""
-"Коли ви підтвердите цей рахунок-фактуру, платіж буде автоматично створено, а"
-" ваш рахунок-фактура буде безпосередньо позначено як оплачений."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:61
-msgid ""
-"If you already had some invoices for that customer that could be paid using "
-"that mandate, it's still possible to do it. Go on the invoice, click on "
-"register payment and choose the Sepa Direct Debit as payment method."
-msgstr ""
-"Якщо у вас вже є рахунки-фактури для цього клієнта, які можуть бути "
-"виплачені за допомогою цього мандату, це все-таки можливо. Перейдіть на "
-"рахунок-фактуру, натисніть на реєстровий платіж і виберіть спосіб оплати "
-"прямого дебету Sepa."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:67
-msgid "Generate SDD Files"
-msgstr "Створення файлів SDD"
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:69
-msgid ""
-"You can generate the SDD File with all the customer payments to send to your"
-" bank directly from the accounting dashboard :"
-msgstr ""
-"Ви можете створити файл SDD з усіма платіжками клієнтів, щоби відправити їх "
-"у свій банк безпосередньо з інформаційної панелі бухобліку:"
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:75
-msgid ""
-"You select the payments in the list that you want to include in your SDD "
-"File, click on action and select \"Generate Direct Debit XML\"."
-msgstr ""
-"Ви вибираєте платежі у списку, який ви хочете включити до вашого файлу SDD, "
-"натисніть на дію та виберіть \"Генерувати прямий дебет XML\"."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:81
-msgid ""
-"You can now download the XML file generated by Odoo and upload it in your "
-"bank interface."
-msgstr ""
-"Тепер ви можете завантажити файл XML, створений Odoo, і завантажити його у "
-"свій банківський інтерфейс."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:85
-msgid ""
-"You can retrieve all the generated XML by activating the developer mode and "
-"going in :menuselection:`Accounting --> Configuration --> Payments --> SDD "
-"Payment File`."
-msgstr ""
-"Ви можете отримати весь згенерований XML, активуючи режим розробника та "
-"переходячи на :menuselection:`Бухоблік --> Налаштування --> Платежі --> Файл"
-" оплати SDD`."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:89
-msgid "Close or revoke a mandate"
-msgstr "Закрийте чи скасуйте мандат"
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:91
-msgid ""
-"The Direct Debit mandate will be closed automatically once the end date "
-"defined on it is reached. However, you can **close** a mandate earlier than "
-"initially planned. To do that, simply go on the mandate and click on the "
-"\"Close\" button.The end date of the mandate will be updated to today's "
-"date. This means you will not be able to pay invoices with an invoice date "
-"superior to this end date. Be careful, once a mandate is closed, it cannot "
-"be reopened."
-msgstr ""
-"Мандат \"Прямий дебет\" буде автоматично закритий, коли визначена дата "
-"закінчення буде досягнута. Тим не менш, ви можете **закрити** мандат раніше,"
-" ніж спочатку планувалося. Для цього просто пропустіть мандат і натисніть "
-"кнопку \"Закрити\". Дата завершення мандату буде оновлено до сьогоднішньої "
-"дати. Це означає, що ви не зможете сплатити рахунки з датою накладної, що "
-"перевищує цю дату закінчення. Будьте уважні, як тільки мандат буде закрито, "
-"його неможливо відновити."
-
-#: ../../accounting/receivables/customer_payments/payment_sepa.rst:99
-msgid ""
-"You can also **revoke** a mandate. In that case, you won't be able to pay "
-"any invoice using that mandate anymore, no matter the invoice date.To do "
-"that, simply go on the mandate and click on the \"Revoke\" button."
-msgstr ""
-"Ви також можете **відкликати** мандат. У такому випадку ви не зможете "
-"заплатити будь-який рахунок-фактуру за цим мандатом, незалежно від дати "
-"рахунку-фактури. Для цього просто перейдіть до мандату та натисніть кнопку "
-"\"Скасувати\"."
 
 #: ../../accounting/receivables/customer_payments/recording.rst:3
 msgid "What are the different ways to record a payment?"
