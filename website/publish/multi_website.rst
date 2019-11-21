@@ -17,7 +17,7 @@ tour!
 Setup
 =====
 
-To create a new website, go to :menuselection:`Website --> Configuration → Settings`.
+To create a new website, go to :menuselection:`Website --> Configuration --> Settings`.
 The button, *Create a new website*, lays in the first section.
 
 
@@ -173,7 +173,7 @@ Publish a page in all websites
 
 A new static page is created and only made available in the current
 website. You can duplicate it to other websites from 
-:menuselection:`Website --> Configuration → Pages`. To do so, leave the *Website* field empty.
+:menuselection:`Website --> Configuration --> Pages`. To do so, leave the *Website* field empty.
 
 If you want to duplicate it in just one other website, duplicate the
 page and set the new website.
@@ -250,7 +250,7 @@ Pricelists
 To manage specific prices by websites, you can activate *Multiple Sales
 Prices per Product* in Website settings.
 
-Then, go to :menuselection:`Website --> Products → Pricelists` to create additional
+Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional
 pricelists. Read `Pricelists Documentation <https://www.odoo.com/documentation/user/online/ecommerce/maximizing_revenue/pricing.html>`__, 
 
 If you need help. Select a website to make a pricelist only available on
