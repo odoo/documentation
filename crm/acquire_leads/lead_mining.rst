@@ -16,7 +16,9 @@ For this feature to work, go to :menuselection:`CRM --> Configuration --> Settin
 Start generating leads
 ==========================
 You will now have a new button **Generate Leads** available in your pipeline.
-You are also able to create lead mining requests from the **Configuration --> Lead Mining Requests** and trough **Leads --> Leads** where you have the **Generate Leads** button
+You are also able to create lead mining requests from the
+:menuselection:`Configuration --> Lead Mining Requests` and trough
+:menuselection:`Leads --> Leads` where you have the **Generate Leads** button.
 
 .. image:: media/LM2.png
    :align: center
