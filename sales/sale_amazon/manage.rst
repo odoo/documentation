@@ -7,10 +7,16 @@ Synchronization of orders
 
 Orders are automatically fetched from Amazon and synchronized in Odoo at regular intervals.
 The synchronization is based on the Amazon status: only orders whose status has changed since the
-last synchronization are fetched from Amazon. For **FBA** (Fulfilled by Amazon), only **Shipped**
-and **Canceled** orders are fetched. For **FBM** (Fulfilled by Merchant), the same is done for
-**Unshipped** and **Canceled** orders. For each synchronized order, a sales order and a customer are
-created in Odoo if they are not yet registered.
+last synchronization are fetched from Amazon.
+
+.. note :: To force the synchronization of an order whose status has not changed since the last
+           synchronization, activate the **Developer mode**, navigate to your Amazon account and
+           modify the date under :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a date
+           anterior to the last status change of the order that you wish to synchronize and save.
+
+For **FBA** (Fulfilled by Amazon), only **Shipped** and **Canceled** orders are fetched. For **FBM**
+(Fulfilled by Merchant), the same is done for **Unshipped** and **Canceled** orders. For each
+synchronized order, a sales order and a customer are created in Odoo if they are not yet registered.
 
 .. note :: If you did not request access to Personally Identifiable Information of your customers
            in the `Developer Registration and Assessment form <setup.html#developer-form>`_, the
@@ -18,19 +24,11 @@ created in Odoo if they are not yet registered.
            and named **Amazon Customer**.
 
 When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
-order is canceled in Odoo.
-When an order is canceled in Odoo, a notification is sent to Amazon who will mark it as such in
-Seller Central and notify the customer.
-
-.. note :: To force the synchronization of an order whose status has not changed since the last
-           synchronization, activate the **Developer mode**, navigate to your Amazon account and
-           modify the date under :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a date
-           anterior to the last status change of the order that you wish to synchronize and save.
+order is automatically canceled in Odoo.
 
 .. tip :: To synchronize immediately the orders of your Amazon account, open that later's form in
-          **Developer mode** and click the button **SYNC ORDERS**. The same can be done with order
-          cancellations and pickings by clicking the buttons **SYNC CANCELLATIONS** and **SYNC
-          PICKINGS**.
+          **Developer mode** and click the button **SYNC ORDERS**. The same can be done with
+          deliveries by clicking the button **SYNC PICKINGS**.
 
 Manage deliveries in FBM
 ========================
