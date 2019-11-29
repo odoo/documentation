@@ -9,3 +9,4 @@ Advanced topics
    advanced/multicashiers
    advanced/reprint
    advanced/mercury
+   advanced/cash_rounding
