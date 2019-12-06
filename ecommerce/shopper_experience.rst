@@ -6,6 +6,7 @@ Get paid
    :titlesonly:
 
    shopper_experience/payment
+   shopper_experience/payfort
    shopper_experience/paypal
    shopper_experience/authorize
    shopper_experience/wire_transfer
