@@ -82,7 +82,7 @@ Replenishment
 -------------
 
 When doing a replenishment via the *Replenish* button on the product
-form, you have the possibility to change the unit of measure.
+form, you have the possibility to use a different unit of measure.
 
 .. image:: media/uom_07.png
     :align: center
