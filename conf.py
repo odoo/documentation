@@ -337,7 +337,9 @@ def setup(app):
     app.add_javascript('coa-valuation-continental.js')
     app.add_javascript('coa-valuation-anglo-saxon.js')
 
+    app.connect('html-page-context', canonicalize)
     app.add_config_value('canonical_root', None, 'env')
+    app.add_config_value('canonical_branch', 'master', 'env')
 
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
@@ -408,6 +410,16 @@ def localize(app, pagename, templatename, context, doctree):
         for la in app.config.languages.split(',')
     ]
 
+def canonicalize(app, pagename, templatename, context, doctree):
+    """ Adds a 'canonical' URL for the current document in the rendering
+    context. Requires the ``canonical_root`` setting being set. The canonical
+    branch is ``master`` but can be overridden using ``canonical_branch``.
+    """
+    if not app.config.canonical_root:
+        return
+
+    context['canonical'] = _build_url(
+        app.config.canonical_root, app.config.canonical_branch, pagename)
 
 def _build_url(root, branch, pagename):
     if not branch:
