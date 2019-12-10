@@ -410,6 +410,8 @@ def localize(app, pagename, templatename, context, doctree):
 
 
 def _build_url(root, branch, pagename):
+    if not branch:
+        root = root.rstrip('/')
     return "{canonical_url}{canonical_branch}/{canonical_page}".format(
         canonical_url=root,
         canonical_branch=branch,
