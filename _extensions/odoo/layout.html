@@ -25,6 +25,13 @@
   {{ super() }}
 {%- endblock -%}
 
+{%- block linktags -%}
+  {% for code, url in language_codes %}
+    <link rel="alternate" hreflang="{{ code }}" href="{{ url }}" />
+  {%- endfor %}
+  {{ super() }}
+{%- endblock -%}
+
 {%- block sidebar1 -%}{%- endblock -%}
 {%- block sidebar2 -%}{%- endblock -%}
 {%- block relbar1 -%}{%- endblock -%}
