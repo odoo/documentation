@@ -5,6 +5,7 @@ Localizations
 .. toctree::
    :titlesonly:
 
+   localizations/argentina
    localizations/france
    localizations/germany
    localizations/mexico
