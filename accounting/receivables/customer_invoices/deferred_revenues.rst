@@ -1,116 +1,193 @@
-========================================
-Deferred revenues: how to automate them?
-========================================
+=================
+Deferred Revenues
+=================
+**Deferred revenues**, or **unearned revenue**, are payments made in advance
+by  customers for products yet to deliver or services yet to render.
 
-Deferred/unearned revenue is an advance payment recorded on the
-recipient's balance sheet as a liability account until either the
-services have been rendered or the products have been delivered.
-Deferred revenue is a liability account because it refers to revenue
-that has not yet been earned, but represents products or services that
-are owed to the customer. As the products or services are delivered over
-time, the revenue is recognized and posted on the income statement.
+Such payments are a **liability** for the company that receives 
+them since it still owes its customers these products or services.
+The company cannot report them on the current **Profit and Loss statement**, 
+or *Income Statement*, since the payments will be effectively 
+earned in the future.
 
-For example: let's say you sell a 2 year support contract for $24,000
-that begins next month for a period of 24 months. Once you validate the
-customer invoice, the $24.000 should be posted into a deferred revenues
-account. This is because the $24,000 you received has not yet been
-earned.
+These future revenues must be deferred on the company's balance sheet
+until the moment in time they can be **recognized**, at once or over a
+defined period, on the Profit and Loss statement. 
 
-Over the next 24 months, you will be reducing the deferred revenues
-account by $1,000 ($24,000/24) on a monthly basis and recognizing that
-amount as revenue.
+For example, let's say we sell a five-year extended warranty for $ 350.
+We already receive the money now but haven't earned it yet. Therefore, 
+we post this new income in a deferred revenue account and decide to
+recognize it on a yearly basis. Each year, for the next 5 years, $ 70 
+will be recognized as revenue.
 
-Configuration
+Odoo Accounting handles deferred revenues by spreading them in multiple
+entries that are automatically created periodically.
+
+
+Prerequisites
 =============
+Such transactions must be posted on a **Deferred Revenue Account** rather than
+on the default income account.
 
-Module installation
--------------------
+Configure a Deferred Revenue Account
+------------------------------------
+To configure your account in the **Chart of Accounts**,
+go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
+click on *Create*, and fill out the form.
 
-In order to automate deferred revenues, go to the settings menu under the application
-:menuselection:`Accounting --> Configuration` and activate the
-**Assets management & revenue recognition** option. This will install the
-**Revenue Recognition Management** module.
+.. image:: media/deferred_revenues01.png
+   :align: center
+   :alt: Configuration of a Deferred Revenue Account in Odoo Accounting
 
 .. note::
+   This account's type must be either *Current Liabilities* or *Non-current
+   Liabilities*
+   
+Post an income to the right account
+-----------------------------------
+Select the account on a draft invoice
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+On a draft invoice, select the right account for all the products of which the 
+incomes must be deferred.
 
-	In some version of Odoo 9, besides checking this option, you need to install
-	the "Revenue Recognition Management" module. If you are using Odoo 9, you
-	might check if the module is correctly installed.
+.. image:: media/deferred_revenues02.png
+   :align: center
+   :alt: Selection of a Deferred Revenue Account on a draft invoice in Odoo Accounting
 
-Define deferred revenue types
------------------------------
+Choose a different Income Account for specific products
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Start editing the product, go to the *Accounting* tab, select the right
+**Income Account**, and save. 
 
-Once the module is installed, you need to create deferred revenue types.
-From the Accounting application, go to the menu :menuselection:`Configuration --> Deferred
-Revenues Types`.
+.. image:: media/deferred_revenues03.png
+   :align: center
+   :alt: Change of the Income Account for a product in Odoo 
 
-.. figure:: ./media/deffered01.png
-  :figclass: figure
-  :align: center
+.. tip::
+   It is possible to automate the creation of revenue entries for these products
+   (see: `Automate the Deferred Revenues`_).
 
-  Example: 12 months maintenance contract
+Change the account of a posted journal item
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+To do so, open your Sales Journal by going to 
+:menuselection:`Accounting --> Accounting --> Sales`, select the journal item you
+want to modify, click on the account, and select the right one. 
 
-Some example of deferred revenues types:
+.. image:: media/deferred_revenues04.png
+   :align: center
+   :alt: Modification of a posted journal item's account in Odoo Accounting 
 
--  1 year service contract
--  3 years service contracts
 
-Set deferred revenues on products
----------------------------------
-
-Once deferred revenues types are defined, you can set them on the
-related products. On the product form, in the Accounting tab, you can
-set a deferred revenue type.
-
-Here are some examples of products and their related deferred revenue
-types:
-
-+---------------------------------+-----------------------------+
-| Product                         | Deferred Revenue Type       |
-+=================================+=============================+
-| Support Contract: 3 years       | 3 years service contracts   |
-+---------------------------------+-----------------------------+
-| Netflix subscription: 3 years   | 3 years service contracts   |
-+---------------------------------+-----------------------------+
-| Flowers every month             | 1 year product contract     |
-+---------------------------------+-----------------------------+
-
-Sell and invoice products
+Deferred Revenues entries
 =========================
+Create a new entry
+------------------
+A **Deferred Revenues entry** automatically generates journal entries at 
+the right time until the full amount of the income is recognized.
 
-Once the products are configured, you can create a customer invoice
-using this product. Once the customer invoice is validated, Odoo will
-automatically create a deferred revenue for you, and the related journal
-entry.
+To create a new entry, go to :menuselection:`Accounting --> Accounting --> Deferred
+Revenues`, click on *Create*, and fill out the form.
 
-+----------------------------+----------+----------+
-| **Account**                | **Dr**   | **Cr**   |
-+============================+==========+==========+
-| Accounts receivable        | 24000    |          |
-+----------------------------+----------+----------+
-| Deferred revenue account   |          | 24000    |
-+----------------------------+----------+----------+
+Click on **select related purchases** to link an existing journal item to
+this new entry. Some fields are then automatically filled out, and the 
+journal item is now listed under the **Related Sales** tab.
 
-Then, every month, Odoo will post a journal entry for the revenue
-recognition.
+.. image:: media/deferred_revenues05.png
+   :align: center
+   :alt: Deferred Revenue entry in Odoo Accounting
+	
+Once done, you can click on *Compute Revenue* (next to the *Confirm*
+button) to generate all the values of the **Revenue Board**. This board
+shows you all the entries that Odoo will post to recognize your
+revenue, and at which date.
 
-+----------------------------+----------+----------+
-| **Account**                | **Dr**   | **Cr**   |
-+============================+==========+==========+
-| Deferred revenue account   | 1000     |          |
-+----------------------------+----------+----------+
-| Service revenue account    |          | 1000     |
-+----------------------------+----------+----------+
+.. image:: media/deferred_revenues06.png
+   :align: center
+   :alt: Revenue Board in Odoo Accounting   
+   
+What does "Prorata Temporis" mean?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The **Prorata Temporis** feature is useful to recognize your revenue
+the most accurately possible. 
 
-Reporting
-=========
+With this feature, the first entry on the Revenue Board is computed based 
+on the time left between the *Prorata Date* and the *First Recognition Date* 
+rather than the default amount of time between recognitions.
 
-To analyze all your current contracts having a deferred revenue, you can
-use the menu Reporting > Deferred Revenue Analysis.
+For example, the Revenue Board above has its first revenue with an amount of 
+$ 4.22 rather than $ 70.00. Consequently, the last entry is also lower and
+has an amount of $ 65.78.
 
-.. image:: ./media/deffered02.png
-  :align: center
+
+Deferred Entry from the Sales Journal
+-------------------------------------
+You can create a deferred entry from a specific journal item in your **Sales Journal**. 
+
+To do so, open your Sales Journal by going to 
+:menuselection:`Accounting --> Accounting --> Sales`, and select the journal item you
+want to defer. Make sure that it is posted in the right account (see: `Change the
+account of a posted journal item`_).  
+
+Then, click on *Action*, select **Create Deferred Entry**, and fill out the form the
+same way you would do to `create a new entry`_.
+
+.. image:: media/deferred_revenues07.png
+   :align: center
+   :alt: Create Deferred Entry from a journal item in Odoo Accounting
+   
+
+Deferred Revenue Models
+=======================
+You can create **Deferred Revenue Models** to create your Deferred Revenue
+entries faster.
+
+To create a model, go to :menuselection:`Accounting --> Configuration --> Deferred
+Revenue Models`, click on *Create*, and fill out the form the same way you would
+do to create a new entry.
+
+.. tip::
+   You can also convert a *confirmed Deferred Revenue entry* into a model by
+   opening it from :menuselection:`Accounting --> Accounting --> Deferred
+   Revenues` and then, by clicking on the button **Save Model**.
+   
+Apply a Deferred Revenue Model to a new entry
+---------------------------------------------
+When you create a new Deferred Revenue entry,  fill out the **Deferred Revenue
+Account** with the right recognition account.
+
+New buttons with all the models linked to that account appear at the top of the form.
+Clicking on a model button fills out the form according to that model.
+
+.. image:: media/deferred_revenues08.png
+   :align: center
+   :alt: Deferred Revenue model button in Odoo Accounting
+
+Automate the Deferred Revenues
+==============================
+When you create or edit an account of which the type is either *Current Liabilities*
+or *Non-current Liabilities*, you can configure it to defer the revenues that
+are credited on it automatically.
+
+You have three choices for the **Automate Deferred Revenue** field:
+
+#. **No:** this is the default value. Nothing happens.
+#. **Create in draft:** whenever a transaction is posted on the account, a draft
+   *Deferred Revenues entry* is created, but not validated. You must first
+   fill out the form in :menuselection:`Accounting --> Accounting --> Deferred Revenues`.
+#. **Create and validate:** you must also select a Deferred Revenue Model
+   (see: `Deferred Revenue Models`_). Whenever a transaction is posted on
+   the account, a *Deferred Revenues entry* is created and immediately
+   validated.
+
+.. image:: media/deferred_revenues09.png
+   :align: center
+   :alt: Automate Deferred Revenue on an account in Odoo Accounting
+
+.. tip::
+   You can, for example, select this account as the default **Income Account** 
+   of a product to fully automate its sale completely. (see: `Choose a different
+   Income Account for specific products`_).
 
 .. seealso::
-
-	* :doc:`overview`
+   * :doc:`../../others/configuration/account_type`
+   * `Odoo Academy: Deferred Revenues (Recognition) <https://www.odoo.com/r/EWO>`_
