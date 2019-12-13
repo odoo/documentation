@@ -28,7 +28,7 @@ You can change the stage of a branch by drag and dropping it on the stage sectio
 
 Production
 ----------
-This is the branch holding the code on which your production database run.
+This is the branch holding the code on which your production database runs.
 There can be only one production branch.
 
 When you push a new commit in this branch,
@@ -59,26 +59,24 @@ will automatically be set back to the development stage after 30 days.
 
 Staging
 -------
-Staging branches are meant to test your new features using the production data.
+Staging branches are meant to test your new features using the production data without compromising
+the actual production database with test records. They will create databases that are neutralized
+duplicates of the production database.
 
-Pushing a new commit in one of these branches will either
-* start a new server, using a duplicate of the production database and the new revision of the branch
-* or update the previous database running on the branch,
-depending on the push behaviour configured in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-settings>`.
+The neutralization includes:
 
-You can therefore test your latest features using the production data without compromising the actual
-production database with test records.
+* Disabling scheduled actions. If you want to test them, you can trigger their action manually or
+  re-enable them. Be aware that the platform will trigger them less often if no one is using the
+  database in order to save up resources.
+* Disabling outgoing emails by intercepting them with a mailcatcher. An
+  :ref:`interface to view <odoosh-gettingstarted-branches-tabs-mails>` the emails sent by your
+  database is provided. That way, you do not have to worry about sending test emails to your contacts.
+* Setting payment acquirers and shipping providers in test mode.
+* Disabling IAP services
 
-The outgoing emails are not sent: They are intercepted by the mailcatcher,
-which provides an interface to preview the emails sent by your database.
-That way, you do not have to worry about sending test emails to your contacts.
-
-Scheduled actions are disabled. If you want to test them, you have to enable them or trigger their action manually.
-Be careful though: If these actions perform changes on third-party services (FTP servers, email servers, ...)
-used by your production database as well, you might cause unwanted changes in your production.
-
-The latest database will be kept alive indefinitely, older ones may get garbage collected automatically.
-If you make configuration changes or view changes in these branches, make sure to document them or write them directly
+The latest database will be kept alive indefinitely, older ones from the same branch may get garbage collected
+to make room for new ones. It will be valid for 3 months, after which you will be expected to rebuild the branch.
+If you make configuration or view changes in these databases, make sure to document them or write them directly
 in the modules of the branch, using XML data files overriding the default configuration or views.
 
 The unit tests are not performed as, in Odoo, they currently rely on the demo data, which is not loaded in the
@@ -89,18 +87,20 @@ Odoo.sh will then consider running the tests on staging databases.
 Development
 -----------
 Development branches create new databases using the demo data to run the unit tests.
-The modules installed and tested by default are the ones included in your branches.
-You can change this list of modules to install in your projects settings.
+The installed modules are the ones included in your branches. You can change this list of modules
+to install in your :ref:`project Settings <odoosh-gettingstarted-settings-modules-installation>`.
 
 When you push a new commit in one of these branches,
 a new server is started, with a database created from scratch and the new revision of the branch.
-The demo data is loaded, and the unit tests are performed.
-This verifies your changes do not break any of the features tested by them.
+The demo data is loaded, and the unit tests are performed by default.
+This verifies your changes do not break any of the features tested by them. If you wish, you can
+disable the tests in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-mails>`.
 
-Similar to staging branches, the emails are not sent: They are intercepted by the mailcatcher.
+Similar to staging branches, the emails are not sent but are intercepted by a mailcatcher and
+scheduled actions are not triggered as often is the database is not in use.
 
 The databases created for development branches are meant to live around three days.
-After that, they can be garbage collected automatically.
+After that, they can be garbage collected to make room for new databases.
 
 .. _odoosh-gettingstarted-branches-mergingbranches:
 
@@ -163,6 +163,8 @@ It can provide information about the ongoing operation on the database (installa
 or its result (tests feedback, successful backup import, ...).
 When an operation is successful, you can access the database thanks to the *connect* button.
 
+.. _odoosh-gettingstarted-branches-tabs-mails:
+
 Mails
 -----
 This tab contains the mail catcher. It displays an overview of the emails sent by your database.
@@ -212,7 +214,8 @@ Different logs are available:
 * install.log: The logs of the database installation. In a development branch, the logs of the tests are included.
 * pip.log: The logs of the Python dependencies installation.
 * odoo.log: The logs of the running server.
-* update.log: The logs of the database updates. This is available only for the production database.
+* update.log: The logs of the database updates.
+* pg_long_queries.log: The logs of psql queries that take an unusual amount of time.
 
 If new lines are added in the logs, they will be displayed automatically.
 If you scroll to the bottom, the browser will scroll automatically each time a new line is added.
@@ -259,30 +262,90 @@ Settings
 --------
 Here you can find a couple of settings that only apply to the currently selected branch.
 
-.. image:: ./media/interface-branches-settings.png
+.. image:: ./media/interface-branches-settings.jpg
    :align: center
 
-**Mute Branch**
+**Behaviour upon new commit**
 
-You have the possibility to mute a branch, so that new commits won't trigger builds on Odoo.sh. You can activate this
-should you have branches that are used for other purposes than on Odoo.sh. By default, when creating a project from an
-existing repository, all branches except the default branch are muted.
+For development and staging branches, you can change the branch's behavior upon receiving a new
+commit. By default, a development branch will create a new build and a staging branch will update
+the previous build (see the :ref:`Production Stage <stage_production>`). This is especially useful
+should the feature you're working on require a particular setup or configuration, to avoid having
+to manually set it up again on every commit. If you choose new build for a staging branch, it will
+make a fresh copy from the production build every time a commit is pushed. A branch that is put
+back from staging to development will automatically be set to 'Do nothing'.
 
-**Push Behavior**
+**Test suite**
 
-You can change the branch's behavior upon receiving a new commit. By default, it will create a new build, but you can
-choose to have it update your previous build same as for your production branch (see the
-:ref:`Production Stage <stage_production>`). This is especially useful should the feature you're working on require a
-particular setup or configuration, to avoid having to manually set it up again on every commit.
+For development branches, you can choose to enable or disable the test suite. It's enabled by default.
 
 **Odoo Version**
 
 For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
 features while your production database is in the process of being upgraded to a newer version.
 
-The production branch has no settings. It can't be muted, will always update the existing production database and will
-run on the project's version of Odoo. If you want to upgrade your production to a newer version please refer to the
-:ref:`Upgrade section <odoosh-advanced-upgrade_your_database>`.
+In addition, for each version you have two options regarding the code update. 
+
+* You can choose to benefit from the latest bug, security and performance fixes automatically. The
+  sources of your Odoo server will be updated weekly. This is the 'Latest' option.
+* You can choose to pin the Odoo sources to a specific revision by selecting them from a list of
+  dates. Revisions will expire after 3 months. You will be notified by mail when the expiration
+  date approaches and if you don't take action afterwards, you will automatically be set to the
+  latest revision.
+
+**Custom domains**
+
+Here you can configure additional domains for the selected branch. It's possible to add other
+*<name>.odoo.com* domains or your own custom domains. For the latter you have to:
+
+* own or purchase the domain name,
+* add the domain name in this list,
+* in your registrar's domain name manager,
+  configure the domain name with a ``CNAME`` record set to your production database domain name.
+
+For instance, to associate *www.mycompany.com* to your database *mycompany.odoo.com*:
+
+* in Odoo.sh, add *www.mycompany.com* in the custom domains of your project settings,
+* in your domain name manager (e.g. *godaddy.com*, *gandi.net*, *ovh.com*),
+  configure *www.mycompany.com* with a ``CNAME`` record with as value *mycompany.odoo.com*.
+
+Bare domains (e.g. *mycompany.com*) are not accepted:
+
+* they can only be configured using ``A`` records,
+* ``A`` records only accept IP addresses as value,
+* the IP address of your database can change, following an upgrade, a hardware failure or
+  your wish to host your database in another country or continent.
+
+Therefore, bare domains could suddenly no longer work because of this change of IP address.
+
+In addition, if you would like both *mycompany.com* and *www.mycompany.com* to work with your database,
+having the first redirecting to the second is amongst the
+`SEO best practices <https://support.google.com/webmasters/answer/7451184?hl=en>`_
+(See *Provide one version of a URL to reach a document*)
+in order to have one dominant URL. You can therefore just configure *mycompany.com* to redirect to *www.mycompany.com*.
+Most domain managers have the feature to configure this redirection. This is commonly called a web redirection.
+
+**HTTPS/SSL**
+
+If the redirection is correctly set up, the platform will automatically generate an SSL certificate
+with `Let's Encrypt <https://letsencrypt.org/about/>`_ within the hour and your domain will be
+accessible through HTTPS.
+
+While it is currently not possible to configure your own SSL certificates on the Odoo.sh platform
+we are considering the feature if there is enough demand.
+
+
+**SPF and DKIM compliance**
+
+In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
+(DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
+settings to increase the deliverability of your outgoing emails.
+The configuration steps are explained in the :ref:`Discuss app documentation <discuss-email_servers-spf-compliant>`.
+
+.. Warning::
+  Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the
+  delivery of your emails as spam in your contacts inbox.
+
 
 Shell commands
 ==============
