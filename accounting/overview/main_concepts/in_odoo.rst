@@ -65,8 +65,6 @@ In particular, Odoo's core accounting engine supports:
   sold/delivered.
 * European accounting where expenses are accounted at the supplier
   bill.
-* Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
 
 Odoo also have modules to comply with IFRS rules.
 
