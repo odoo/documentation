@@ -68,6 +68,8 @@ msgid ""
 "You will find here below some useful information on how to integrate your "
 "own email solution with Odoo."
 msgstr ""
+"Vous trouverez ci-dessous quelques informations utiles pour intégrer votre "
+"propre solution de messagerie avec Odoo. "
 
 #: ../../discuss/email_servers.rst:18
 msgid ""
@@ -148,7 +150,7 @@ msgstr ""
 
 #: ../../discuss/email_servers.rst:56
 msgid "Be SPF-compliant"
-msgstr ""
+msgstr "Être conforme au système SPF"
 
 #: ../../discuss/email_servers.rst:57
 msgid ""
@@ -156,6 +158,10 @@ msgid ""
 " of your outgoing emails, don't forget to authorize Odoo as a sending host "
 "in your domain name settings. Here is the configuration for Odoo Online:"
 msgstr ""
+"Si vous utilisez le système SPF (Sender Policy Framework) pour augmenter la "
+"délivrabilité de votre système sortant, n'oubliez pas d'autoriser Odoo comme"
+" hôte expéditeur dans les paramètres de votre nom de domaine. Voici la "
+"configuration pour Odoo en ligne."
 
 #: ../../discuss/email_servers.rst:61
 msgid ""
@@ -190,6 +196,8 @@ msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
 msgstr ""
+"Votre nouvel enregistrement SPF peut prendre jusqu'à 48 heures pour prendre "
+"effet, mais d'habitude cela se fait plus rapidement."
 
 #: ../../discuss/email_servers.rst:73
 msgid ""
@@ -197,10 +205,14 @@ msgid ""
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
 msgstr ""
+"Ajouter plus d'un enregistrement SPF à votre domaine peut générer des "
+"problèmes à la livraison des emails et à la classification en spams. Nous "
+"vous recommandons plutôt d'utiliser un seul enregistrement SPF en le "
+"modifiant pour autoriser Oddo."
 
 #: ../../discuss/email_servers.rst:78
 msgid "Allow DKIM"
-msgstr ""
+msgstr "Activer DKIM"
 
 #: ../../discuss/email_servers.rst:79
 msgid ""
@@ -225,7 +237,7 @@ msgstr "Comment gérer les messages entrants"
 
 #: ../../discuss/email_servers.rst:89
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
-msgstr ""
+msgstr "Oddo recourt à des alias email pour récupérer des messages entrants."
 
 #: ../../discuss/email_servers.rst:91
 msgid ""
@@ -233,6 +245,9 @@ msgid ""
 "discussion thread (and to the inbox of all its followers) by the catchall "
 "alias (**catchall@**)."
 msgstr ""
+"**Les emails de réponse automatiques** envoyés depuis Odoo sont acheminés "
+"vers leur fil de discussion original (ainsi que vers les boîtes de réception"
+" de tous les followers) via l'alias catch-all (**catchall@**)."
 
 #: ../../discuss/email_servers.rst:95
 msgid ""
@@ -241,12 +256,19 @@ msgid ""
 "<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
 "recipients."
 msgstr ""
+"**Les emails rejetés** sont acheminés vers **bounce@** pour qu'on puisse les"
+" tracer sur Odoo. Cela est surtout utilisé pour désinscrire les "
+"destinataires invalides dans le `Marketing par courrier électronique Odoo "
+"<https://www.odoo.com/page/email-marketing>`__ ."
 
 #: ../../discuss/email_servers.rst:99
 msgid ""
 "**Original messages**: Several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
 msgstr ""
+"**Les emails originaux**: Plusieurs objets de gestion ont leur propre alias "
+"pour créer des nouveaux enregistrements sur Oddo depuis les emails entrants "
+":"
 
 #: ../../discuss/email_servers.rst:102
 msgid ""
@@ -290,12 +312,18 @@ msgid ""
 "emails. The easiest and most recommended method is to manage one email "
 "address per Odoo alias in your mail server."
 msgstr ""
+"Selon votre serveur de messagerie, il peut y avoir plusieurs méthodes pour "
+"récupérer les emails. La méthode la plus facile et la plus recommandée, "
+"c'est gérer une adresse email par alias Odoo dans votre serveur de "
+"messagerie ."
 
 #: ../../discuss/email_servers.rst:116
 msgid ""
 "Create the corresponding email addresses in your mail server (catchall@, "
 "bounce@, sales@, etc.)."
 msgstr ""
+"Créez les adresses email correspondantes dans votre serveur de messagerie "
+"(catchall@, bounce@, sales@, etc.)."
 
 #: ../../discuss/email_servers.rst:118
 msgid "Set your domain name in the General Settings."
@@ -309,6 +337,12 @@ msgid ""
 "Perform on Incoming Mails* blank. Once all the information has been filled "
 "out, click on *TEST & CONFIRM*."
 msgstr ""
+"Si vous utilisez Odoo sur site, créez un *Serveur de messagerie entrant* "
+"pour chaque alias. Vous pouvez le faire également depuis les paramètres "
+"généraux. Remplissez le formulaire selon les paramètres de votre fournisseur"
+" de messagerie. Laissez vide le champ *Actions à effectuer sur les emails "
+"entrants*. Une fois toutes les informations renseignées, cliquez sur *TESTER"
+" & CONFIRMER*."
 
 #: ../../discuss/email_servers.rst:132
 msgid ""
@@ -335,6 +369,10 @@ msgid ""
 "their  respective configuration view. To edit catchall and bounce aliases, "
 "you first need to activate the developer mode from the Settings Dashboard."
 msgstr ""
+"Tous les alias sont personnalisables dans Odoo. Les objets alias peuvent "
+"être édités depuis leur écran de configuration respectifs. Pour éditer le "
+"catch-all et rejeter des alias, vous devez tout d'abord activer le mode "
+"développeur depuis les paramètres du tableau de bord."
 
 #: ../../discuss/email_servers.rst:147
 msgid ""
@@ -342,6 +380,9 @@ msgid ""
 "--> Parameters --> System Parameters` to customize the aliases "
 "(*mail.catchall.alias* & * mail.bounce.alias*)."
 msgstr ""
+"Actualisez ensuite votre écran et allez sur :menuselection:`Paramètres --> "
+"Technique --> Réglages --> Réglages du système` pour personnaliser les alias"
+" (*mail.catchall.alias* & * mail.bounce.alias*)."
 
 #: ../../discuss/email_servers.rst:154
 msgid ""
@@ -365,6 +406,10 @@ msgid ""
 "Odoo Discuss channels of your choice. The tweets are retrieved periodically "
 "from Twitter. An authenticated user can retweet the messages."
 msgstr ""
+"Vous pouvez suivre certains hashtags sur Twitter et voir les tweets dans les"
+" canaux de discussion Odoo de votre choix. Les tweets sont récupérés "
+"régulièrement depuis Twitter. Un utilisateur authentifié peut retweeter les "
+"messages."
 
 #: ../../discuss/mail_twitter.rst:13
 msgid "Setting up the App on Twitter's side"
@@ -376,6 +421,10 @@ msgid ""
 " for tweets, and through which a user can retweet. To set up this app, go to"
 " http://apps.twitter.com/app/new and put in the values:"
 msgstr ""
+"De son côté, Twitter utilise une \"App\" qui permet d'ouvrir une passerelle "
+"vers laquelle Odoo demande des tweets, et à travers laquelle un utilisateur "
+"peut retweeter. Pour configurer cette application, allez sur "
+"http://apps.twitter.com/app/new et insérer les valeurs :"
 
 #: ../../discuss/mail_twitter.rst:19
 msgid "Name: this is the name of the application on Twitter"
@@ -388,6 +437,10 @@ msgid ""
 "\"http://www.example.com\", you should put \"http://www.example.com/web\" in"
 " this field."
 msgstr ""
+"Site Web : c'est l'url externe de votre base de données Odoo suivi de "
+"\"/web\". Par exemple, si votre instance Oddo est hébergée sur "
+"\"http://www.example.com\", vous devez insérer dans ce champ "
+"\"http://www.example.com/web\"."
 
 #: ../../discuss/mail_twitter.rst:25
 msgid ""
@@ -395,21 +448,29 @@ msgid ""
 "the previous example you should write "
 "\"http://www.example.com/web/twitter/callback\"."
 msgstr ""
+"URL de rappel automatique : c'est l'adresse à laquelle Twitter va répondre. "
+"Comme dans les exemples précédents, vous devez écrire "
+"\"http://www.example.com/web/twitter/callback\"."
 
 #: ../../discuss/mail_twitter.rst:28
 msgid ""
 "Do not forget to accept the terms **Developer agreement** of use and click "
 "on **Create your Twitter application** at the bottom of the page."
 msgstr ""
+"N'oubliez pas d'accepter les conditions de la **Convention d'utilisation "
+"développeur** et de cliquer sur **Créer votre application Twitter** au bas "
+"de la page."
 
 #: ../../discuss/mail_twitter.rst:33
 msgid "Getting the API key and secret"
-msgstr ""
+msgstr "Obtenir la clé API et la confidentialité"
 
 #: ../../discuss/mail_twitter.rst:35
 msgid ""
 "When on the App dashboard, switch to the **Keys and Access Tokens** tab."
 msgstr ""
+"Une fois sur le tableau de bord de l'application, basculez ver l'onglet "
+"**Clés et jetons d'accès**."
 
 #: ../../discuss/mail_twitter.rst:40
 msgid ""
@@ -417,10 +478,13 @@ msgid ""
 "Settings--> Twitter discuss integration` and click on **Save** to save the "
 "settings."
 msgstr ""
+"Copiez ces valeurs dans Odoo à :menuselection:`Paramètres--> Paramètres "
+"généraux--> Intégration de discussion Twitter` et cliquez sur **Sauver** "
+"pour sauvegarder les paramètres."
 
 #: ../../discuss/mentions.rst:3
 msgid "How to grab attention of other users in my messages"
-msgstr ""
+msgstr "Comment attirer l'attention des autres utilisateurs vers mes messages"
 
 #: ../../discuss/mentions.rst:5
 msgid ""
@@ -445,7 +509,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:15
 msgid "Direct messaging a user"
-msgstr ""
+msgstr "Comment envoyer des messages ciblées à un utilisateur"
 
 #: ../../discuss/mentions.rst:17
 msgid ""
@@ -487,7 +551,7 @@ msgstr ""
 
 #: ../../discuss/monitoring.rst:3
 msgid "How to be responsive at work thanks to my Odoo inbox"
-msgstr ""
+msgstr "Comme être réactif au travail grâce à ma messagerie Odoo "
 
 #: ../../discuss/monitoring.rst:5
 msgid ""
@@ -495,6 +559,10 @@ msgid ""
 "everything you do in Odoo. Notifications and messages from everything you "
 "follow or in which you are mentioned appear in your inbox."
 msgstr ""
+"Utilisez la **messagerie** dans l'application Discuss pour surveiller les "
+"mises à jour et la progression de tout ce que vous faites dans Odoo. Les "
+"notifications et les messages des tweets que vous suivez ou dans lesquels on"
+" vous mentionne apparaissent dans votre boîte email."
 
 #: ../../discuss/monitoring.rst:13
 msgid "You can keep an eye on your **Inbox** from any screen."
@@ -510,6 +578,12 @@ msgid ""
 "any message or notification in Discuss or any of the item-specific chatters "
 "throughout Odoo to keep tabs on it here."
 msgstr ""
+"Lorsque vous cochez un élément, il est défini comme **lu** et il est "
+"supprimé de votre boîte de réception. Si vous souhaitez sauver un élément "
+"pour une référence ou une action future, marquez-le d'une étoile pour "
+"l'ajouter à la boîte **Étoilé**. Vous pouvez ajouter une étoile à n'importe "
+"quel message ou notification dans Discuss ou à n'importe lequel  des "
+"chatteurs spécifiques à un élément dans Odoo pour garder un œil sur eux. "
 
 #: ../../discuss/overview.rst:3
 msgid "Why use Odoo Discuss"
@@ -607,6 +681,8 @@ msgstr ""
 #: ../../discuss/team_communication.rst:3
 msgid "How to efficiently communicate in team using channels"
 msgstr ""
+"Comment communiquer de façon efficace dans une équipe en utilisant les "
+"canaux"
 
 #: ../../discuss/team_communication.rst:5
 msgid ""
@@ -623,7 +699,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:12
 msgid "Creating a channel"
-msgstr ""
+msgstr "Créer un canal"
 
 #: ../../discuss/team_communication.rst:14
 msgid ""
@@ -660,7 +736,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:31
 msgid "Configuring a channel"
-msgstr ""
+msgstr "Configurer un canal"
 
 #: ../../discuss/team_communication.rst:33
 msgid ""
@@ -684,7 +760,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:47
 msgid "How to set up a mailing list"
-msgstr ""
+msgstr "Comment configurer une liste de diffusion"
 
 #: ../../discuss/team_communication.rst:49
 msgid ""
@@ -704,7 +780,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:57
 msgid "Locating a channel"
-msgstr ""
+msgstr "Localiser un canal"
 
 #: ../../discuss/team_communication.rst:59
 msgid ""
@@ -737,7 +813,7 @@ msgstr ""
 
 #: ../../discuss/team_communication.rst:76
 msgid "Using filters to navigate within Discuss"
-msgstr ""
+msgstr "Utiliser des filtres pour naviguer dans l'application Discuss"
 
 #: ../../discuss/team_communication.rst:78
 msgid ""
@@ -756,7 +832,7 @@ msgstr ""
 
 #: ../../discuss/tracking.rst:3
 msgid "How to follow a discussion thread and define what I want to hear about"
-msgstr ""
+msgstr "Comment suivre un fil de discussion et définir ce que je veux voir"
 
 #: ../../discuss/tracking.rst:6
 msgid "How to follow a discussion thread"
@@ -767,6 +843,9 @@ msgid ""
 "You can keep track of virtually any business object in Odoo (an opportunity,"
 " a quotation, a task, etc.), by **following** it."
 msgstr ""
+"Dans Odoo, vous pouvez garder une trace de pratiquement n'importe quel objet"
+" de gestion (une occasion, une citation, une activité, etc.) en le "
+"**suivant**."
 
 #: ../../discuss/tracking.rst:14
 msgid "How to choose the events to follow"
@@ -807,6 +886,11 @@ msgid ""
 " new record created to get notified of specific events (e.g. a new task "
 "created, an opportunity won)."
 msgstr ""
+"Vous êtes automatiquement défini comme follower par défaut de tout élément "
+"que vous créez. Dans certaines applications comme CRM et Projet, vous pouvez"
+" être un follower par défaut de tout nouvel enregistrement créé pour "
+"recevoir des notifications d'événements spécifiques (par ex., une nouvelle "
+"tâche créée, une opportunité remportée)."
 
 #: ../../discuss/tracking.rst:40
 msgid ""
@@ -814,3 +898,6 @@ msgid ""
 " in CRM, the project in Project). Then, choose the events you want to hear "
 "about."
 msgstr ""
+"Pour cela, commencez à suivre l'objet de gestion principal (par ex. le canal"
+" de ventes dans CRM, le projet dans Projet). Puis, choisissez les événements"
+" que vous souhaitez suivre."
