@@ -125,3 +125,12 @@ will convert ``path/to/document.docx`` to ``new_doc.rst`` and export
 all images to ``./media`` (and link them from the document). While
 there are issues with the exported document, it's much more convenient
 than manually re-typing the original.
+
+
+Learn More
+==========
+
+To learn more about Odoo, in addition to the documentation, have a look at the official
+`eLearning
+     <https://odoo.com/slides>` and `Scale-up, The Business Game
+     <https://www.odoo.com/page/scale-up-business-game`
