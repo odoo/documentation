@@ -131,6 +131,4 @@ Learn More
 ==========
 
 To learn more about Odoo, in addition to the documentation, have a look at the official
-`eLearning
-     <https://odoo.com/slides>` and `Scale-up, The Business Game
-     <https://www.odoo.com/page/scale-up-business-game`
+`eLearning <https://odoo.com/slides>` and `Scale-up, The Business Game <https://www.odoo.com/page/scale-up-business-game`
