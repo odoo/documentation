@@ -80,14 +80,21 @@ is virtually guaranteed since IPN resends a confirmation until your site acknowl
 Payment Messages Format
 -----------------------
 
-Finally make sure the encoding format of payment messages is correctly
-set. Go to *PayPal button language encoding*.
+If you use accented characters (or anything else than basic Latin characters)
+for your customer names, addresses... you MUST configure the encoding format of
+the payment request sent by Odoo to Paypal.
 
-.. image:: media/paypal06.png
-    :align: center
+.. danger::
 
-Click *More Options* and set the two default encoding formats as
-*UTF-8*.
+    If you don't configure this setting, some transactions fail without notice.
+
+To do so, open:
+
+* `this page for a test account <https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+* `this page for a production account <https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+Then, click *More Options* and set the two default encoding formats as **UTF-8**.
 
 .. image:: media/paypal07.png
     :align: center
@@ -96,6 +103,12 @@ Click *More Options* and set the two default encoding formats as
     :align: center
 
 Your Paypal account is ready!
+
+  .. tip:: If you want your customers to pay without creating a Paypal account, 
+    **Paypal Account Optional** needs to be turned on.
+    
+    .. image:: media/paypal_account_optional.png
+     :align: center
 
   .. tip:: For Encrypted Website Payments & EWP_SETTINGS error,
      please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
