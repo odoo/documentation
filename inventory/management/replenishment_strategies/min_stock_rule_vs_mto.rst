@@ -15,11 +15,7 @@ with the needed quantity to reach the maximum stock level.
 The *Make to Order* route will trigger a procurement (purchase order
 or manufacturing order) with the necessary quantity to fulfill a product
 request (coming from a sale order or a manufacturing order). The system
-will check the quantity on hand for the corresponding product and if the
-available quantity is higher or equal to the necessary quantity, Odoo
-will use what is in stock to fulfill the request. In case you don’t have
-enough available stock to fully fulfill the product request, procurement
-will be generated for the total quantity requested.
+will not check the quantity on hand for the corresponding product.
 
 Configuration
 =============
@@ -80,7 +76,7 @@ can choose *Make To Order* and another route, either *Buy* or
 
 Again, if the *Buy* route is selected, make sure to set a *Vendor
 pricelist* in the *Purchase tab*. In case you have set a
-*Manufacture* route, male sure you have a *BoM* for this product.
+*Manufacture* route, make sure you have a *BoM* for this product.
 
 .. image:: media/min_stock_rule_vs_mto_05.png
    :align: center
