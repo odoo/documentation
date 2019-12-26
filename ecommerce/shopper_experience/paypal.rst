@@ -48,21 +48,6 @@ Set up your Paypal account
   .. image:: media/paypal_ipn_setup.png
     :align: center
 
-* Now you must change the encoding format of the payment request sent by Odoo
-  to Paypal. To do so, get back to *My selling tools* and click 
-  **PayPal button language encoding** in *More Selling Tools* section.
-
-  .. image:: media/paypal_button_encoding.png
-    :align: center
-
-  Then, click *More Options* and set the two default encoding formats as **UTF-8**.
-
-  .. image:: media/paypal_more_options.png
-    :align: center
-
-  .. image:: media/paypal_encoding_options.png
-    :align: center
-
   .. tip:: If you want your customers to pay without creating a Paypal account, 
     **Paypal Account Optional** needs to be turned on.
     
@@ -71,6 +56,35 @@ Set up your Paypal account
 
   .. tip:: For Encrypted Website Payments & EWP_SETTINGS error,
      please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
+
+
+
+Configure the encoding of the requests
+--------------------------------------
+
+If you use accented characters (or anything else than basic Latin characters)
+for your customer names, addresses... you MUST configure the encoding format of
+the payment request sent by Odoo to Paypal.
+
+.. danger::
+
+    If you don't configure this setting, some transactions fail without notice.
+
+To do so, open:
+
+* `this page for a test account <https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+* `this page for a production account <https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+Then, click *More Options* and set the two default encoding formats as **UTF-8**.
+
+.. image:: media/paypal_more_options.png
+  :align: center
+
+.. image:: media/paypal_encoding_options.png
+  :align: center
+
+
 
 Set up Odoo
 ===========
