@@ -1,15 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015-TODAY, Odoo S.A.
-# This file is distributed under the same license as the Odoo Business package.
+# This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Martin Trigaux, 2019
+# Viktor Pogrebniak <vp@aifil.ru>, 2019
+# Ivan Yelizariev <yelizariev@it-projects.info>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 10.0\n"
+"Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-09 14:24+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2019-11-20 10:20+0100\n"
+"PO-Revision-Date: 2019-10-03 09:46+0000\n"
+"Last-Translator: Ivan Yelizariev <yelizariev@it-projects.info>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,15 +25,27 @@ msgstr ""
 
 #: ../../general.rst:5
 msgid "General"
-msgstr ""
+msgstr "Общее"
 
 #: ../../general/auth.rst:3
 msgid "Authentication"
+msgstr "Авторизация"
+
+#: ../../general/auth/azure.rst:3
+msgid "OAuth"
+msgstr "OAuth"
+
+#: ../../general/auth/azure.rst:5
+msgid ""
+"Due to specific requirements in Azure's OAuth implementation, Microsoft "
+"Azure OAuth identification is NOT compatible with Odoo at the moment."
 msgstr ""
+"В соответствии со специальными требованиями по внедрению Azure OAuth, "
+"идентификация Microsoft Azure OAuth на данный момент НЕ совместима с Odoo."
 
 #: ../../general/auth/google.rst:3
 msgid "How to allow users to sign in with their Google account"
-msgstr ""
+msgstr "Как разрешить пользователям входить с помощью аккаунта Google"
 
 #: ../../general/auth/google.rst:5
 msgid ""
@@ -35,39 +53,51 @@ msgid ""
 "`https://console.developers.google.com/ "
 "<https://console.developers.google.com/>`_."
 msgstr ""
+"Подключитесь к учетной записи Google и перейдите на страницу "
+"`https://console.developers.google.com/ "
+"<https://console.developers.google.com/> `_."
 
 #: ../../general/auth/google.rst:7
 msgid ""
 "Click on **Create Project** and enter the project name and other details."
 msgstr ""
+"Нажмите ** Создать проект ** и введите название проекта и другие детали."
 
 #: ../../general/auth/google.rst:15
 msgid "Click on **Use Google APIs**"
-msgstr ""
+msgstr "Нажмите ** Использовать Google API **"
 
 #: ../../general/auth/google.rst:20
 msgid ""
 "On the left side menu, select the sub menu **Credentials** (from **API "
 "Manager**) then select **OAuth consent screen**."
 msgstr ""
+"В левой части меню выберите подменю ** Перечень ** (в ** Менеджер API **), "
+"затем выберите ** Экран согласия OAuth **."
 
 #: ../../general/auth/google.rst:25
 msgid ""
 "Fill in your address, email and the product name (for example odoo) and then"
 " save."
 msgstr ""
+"Введите адрес, электронную почту и название товара (например, odoo), а затем"
+" сохраните."
 
 #: ../../general/auth/google.rst:30
 msgid ""
 "Then click on **Add Credentials** and select the second option (OAuth 2.0 "
 "Client ID)."
 msgstr ""
+"Нажмите ** Добавить полномочия ** и выберите второй вариант (OAuth 2.0 "
+"Client ID)."
 
 #: ../../general/auth/google.rst:38
 msgid ""
 "Check that the application type is set on **Web Application**. Now configure"
 " the allowed pages on which you will be redirected."
 msgstr ""
+"Проверьте, установлен тип программы на ** Веб-приложение **. Теперь "
+"настройте разрешены страницы, на которые вас будет перенаправлен."
 
 #: ../../general/auth/google.rst:40
 msgid ""
@@ -75,20 +105,90 @@ msgid ""
 " the following link in the box: http://mydomain.odoo.com/auth_oauth/signin. "
 "Then click on **Create**"
 msgstr ""
+"Для этого заполните поле ** Авторизованные URI перенаправления **. "
+"Скопируйте и вставьте следующую ссылку в поле: "
+"http://mydomain.odoo.com/auth_oauth/signin. Нажмите ** Создать **."
 
 #: ../../general/auth/google.rst:48
 msgid ""
 "Once done, you receive two information (your Client ID and Client Secret). "
 "You have to insert your Client ID in the **General Settings**."
 msgstr ""
+"После этого вы получаете две информации (ваш ID клиента и Секретный ключ "
+"клиента). Вам нужно вставить свой ID клиента в ** Общих настройках **."
+
+#: ../../general/auth/ldap.rst:3
+msgid "How to allow users to sign in with LDAP"
+msgstr "Как разрешить пользователям входить через LDAP"
+
+#: ../../general/auth/ldap.rst:5
+msgid "Install the LDAP module in General Settings."
+msgstr "Установите модуль LDAP в Общем настройках."
+
+#: ../../general/auth/ldap.rst:7
+msgid "Click on **Create** in Setup your LDAP Server."
+msgstr "Нажмите ** Создать ** в настройках вашего сервера LDAP."
+
+#: ../../general/auth/ldap.rst:15
+msgid "Choose the company about to use the LDAP."
+msgstr "Выберите о компании для использования LDAP."
+
+#: ../../general/auth/ldap.rst:20
+msgid ""
+"In **Server Information**, enter the IP address of your server and the port "
+"it listens to."
+msgstr ""
+"В ** Информация сервера **, введите IP-адрес вашего сервера и его порт."
+
+#: ../../general/auth/ldap.rst:22
+msgid "Tick **User TLS** if your server is compatible."
+msgstr "Отметьте ** TLS пользователя **, если ваш сервер совместим."
+
+#: ../../general/auth/ldap.rst:27
+msgid ""
+"In **Login Information**, enter ID and password of the account used to query"
+" the server. If left empty, the server will be queried anonymously."
+msgstr ""
+"В ** информации входа **, введите ID и пароль учетной записи, который "
+"используется для запроса сервера. Если оставите пустым, сервер будет "
+"запрашиваться анонимно."
+
+#: ../../general/auth/ldap.rst:32
+msgid ""
+"In **Process Parameter**, enter the domain name of your LDAP server in LDAP "
+"nomenclature (e.g. ``dc=example,dc=com``)."
+msgstr ""
+"В ** Настройках оброки **, введите доменное имя вашего сервера LDAP в "
+"номенклатуре LDAP (например. `Dc = example, dc = com``)."
+
+#: ../../general/auth/ldap.rst:34
+msgid "In **LDAP filter**, enter ``uid=%s``"
+msgstr "В ** фильтре LDAP **, введите `uid =% s``"
+
+#: ../../general/auth/ldap.rst:39
+msgid ""
+"In **User Information**, tick *Create User* if you want Odoo to create a "
+"User profile the first time someone log in with LDAP."
+msgstr ""
+"В ** Информация пользователя ** обозначьте * Создать пользователя * если вы "
+"хотите, чтобы Odoo создала профиль, когда кто-то впервые войдет через LDAP."
+
+#: ../../general/auth/ldap.rst:41
+msgid ""
+"In **Template User**, indicate a template for the new profiles created. If "
+"left blanked, the admin profile will be used as template."
+msgstr ""
+"В ** шаблоне пользователя **, укажите шаблон для вновь профилей. Если "
+"оставить заблокированным, профиль администратора, будет использоваться в "
+"качестве шаблона."
 
 #: ../../general/base_import.rst:3
 msgid "Data Import"
-msgstr ""
+msgstr "импорт данных"
 
 #: ../../general/base_import/adapt_template.rst:3
 msgid "How to adapt an import template"
-msgstr ""
+msgstr "Как импортировать шаблон импорта"
 
 #: ../../general/base_import/adapt_template.rst:5
 msgid ""
@@ -97,22 +197,28 @@ msgid ""
 "any spreadsheets software (Microsoft Office, OpenOffice, Google Drive, "
 "etc.)."
 msgstr ""
+"Шаблоны импорта услуг в инструменте импорта распространенных данных для "
+"импорта (контакты, товары, банковские выписки и т.п.). Вы можете открыть их "
+"любым программным обеспечением электронных таблиц (Microsoft Office, "
+"OpenOffice, Google Диск и т.д.)."
 
 #: ../../general/base_import/adapt_template.rst:11
 msgid "How to customize the file"
-msgstr ""
+msgstr "Как настроить файл"
 
 #: ../../general/base_import/adapt_template.rst:13
 msgid ""
 "Remove columns you don't need. We advise to not remove the *ID* one (see why"
 " here below)."
-msgstr ""
+msgstr "Удалите столбцы, которые вам не нужны. Мы советуем не удалять ID."
 
 #: ../../general/base_import/adapt_template.rst:15
 #: ../../general/base_import/import_faq.rst:26
 msgid ""
 "Set a unique ID to every single record by dragging down the ID sequencing."
 msgstr ""
+"Установите уникальный ID для каждого отдельного записи, перетащив "
+"последовательность ID."
 
 #: ../../general/base_import/adapt_template.rst:20
 msgid ""
@@ -120,16 +226,21 @@ msgid ""
 " its label doesn't fit any field of the system. If so, find the "
 "corresponding field using the search."
 msgstr ""
+"Когда вы добавляете новый столбец, Odoo, возможно, не сможет его "
+"автоматически заметить, если его метка не подходит для любого поля системы. "
+"Если так, найдите соответствующее поле с помощью поиска."
 
 #: ../../general/base_import/adapt_template.rst:27
 msgid ""
 "Then, use the label you found in your import template in order to make it "
 "work straight away the very next time you try to import."
 msgstr ""
+"Затем используйте метку, которую вы нашли в своем шаблоне импорта, чтобы он "
+"работал сразу же во время следующей попытки импорта."
 
 #: ../../general/base_import/adapt_template.rst:31
 msgid "Why an “ID” column"
-msgstr ""
+msgstr "Почему столбец &quot;ID&quot;?"
 
 #: ../../general/base_import/adapt_template.rst:33
 msgid ""
@@ -137,25 +248,32 @@ msgid ""
 "free to use the one of your previous software to ease the transition to "
 "Odoo."
 msgstr ""
+"** ID ** (внешний идентификатор) - это уникальный идентификатор элемента. Не"
+" стесняйтесь использовать предварительное программное обеспечение для "
+"облегчения перехода на Odoo."
 
 #: ../../general/base_import/adapt_template.rst:36
 msgid ""
 "Setting an ID is not mandatory when importing but it helps in many cases:"
 msgstr ""
+"Установка ID не является обязательным при импорте, но это помогает во многих"
+" случаях:"
 
 #: ../../general/base_import/adapt_template.rst:38
 msgid ""
 "Update imports: you can import the same file several times without creating "
 "duplicates;"
 msgstr ""
+"Обновите импорт: вы можете импортировать один и тот же файл несколько раз "
+"без создания дубликатов;"
 
 #: ../../general/base_import/adapt_template.rst:39
 msgid "Import relation fields (see here below)."
-msgstr ""
+msgstr "Поле импорта отношений (см. Ниже)."
 
 #: ../../general/base_import/adapt_template.rst:42
 msgid "How to import relation fields"
-msgstr ""
+msgstr "Как импортировать поля ссылки"
 
 #: ../../general/base_import/adapt_template.rst:44
 msgid ""
@@ -164,6 +282,10 @@ msgid ""
 "relations you need to import the records of the related object first from "
 "their own list menu."
 msgstr ""
+"Объект Odoo всегда связан со многими другими объектами (например, товар "
+"связан с категориями товаров, атрибутами, поставщиками и т.д.). Чтобы "
+"импортировать эти отношения, вам нужно сначала импортировать записи "
+"соответствующего объекта из собственного меню списка."
 
 #: ../../general/base_import/adapt_template.rst:48
 msgid ""
@@ -172,14 +294,18 @@ msgid ""
 "ID\" at the end of the column title (e.g. for product attributes: Product "
 "Attributes / Attribute / ID)."
 msgstr ""
+"Вы можете сделать это, используя имя соответствующей записи или его ID. ID "
+"ожидается тогда, когда две записи имеют одинаковое имя. В таком случае "
+"добавьте &quot;/ ID&quot; в конце заголовка столбца (например, для атрибутов"
+" товара: атрибуты товара / атрибут / ID товара)."
 
 #: ../../general/base_import/import_faq.rst:3
 msgid "How to import data into Odoo"
-msgstr ""
+msgstr "Как импортировать данные в Odoo"
 
 #: ../../general/base_import/import_faq.rst:6
 msgid "How to start"
-msgstr ""
+msgstr "С чего начать?"
 
 #: ../../general/base_import/import_faq.rst:7
 msgid ""
@@ -187,10 +313,14 @@ msgid ""
 " or CSV (.csv) formats: contacts, products, bank statements, journal entries"
 " and even orders!"
 msgstr ""
+"Вы можете импортировать данные в систему Odoo, используя формат Excel "
+"(.xlsx) или CSV (.csv): контакты, товары, банковские выписки, записи в "
+"журнале и даже заказ!"
 
 #: ../../general/base_import/import_faq.rst:11
 msgid "Open the view of the object you want to populate and click *Import*."
 msgstr ""
+"Откройте просмотр объекта, который хотите заполнить и нажмите * Импорт *."
 
 #: ../../general/base_import/import_faq.rst:16
 msgid ""
@@ -198,18 +328,23 @@ msgid ""
 "data. Such templates can be imported in one click; The data mapping is "
 "already done."
 msgstr ""
+"Вам предоставляются шаблоны, которые можно легко заполнить собственными "
+"данными. Такие шаблоны можно импортировать одним кликом; Отображение данных "
+"уже выполнено."
 
 #: ../../general/base_import/import_faq.rst:22
 msgid "How to adapt the template"
-msgstr ""
+msgstr "Как адаптировать шаблон?"
 
 #: ../../general/base_import/import_faq.rst:24
 msgid "Add, remove and sort columns to fit at best your data structure."
 msgstr ""
+"Добавьте, удалите и отсортируйте столбцы, чтобы лучше соответствовать "
+"структуре данных."
 
 #: ../../general/base_import/import_faq.rst:25
 msgid "We advise to not remove the **ID** one (see why in the next section)."
-msgstr ""
+msgstr "Мы советуем не удалять ** ID ** (Почему? Смотрите в следующей главе)."
 
 #: ../../general/base_import/import_faq.rst:31
 msgid ""
@@ -218,16 +353,22 @@ msgid ""
 "columns manually when you test the import. Search the list for the "
 "corresponding field."
 msgstr ""
+"Когда вы добавите новый столбец, Odoo, возможно, не сможет его автоматически"
+" заметить, если его метка не подходит для любого поля в Odoo. Не волнуйтесь!"
+" Вы можете вставлять новые столбцы вручную при проверке импорта. Найдите "
+"список соответствующего поля."
 
 #: ../../general/base_import/import_faq.rst:39
 msgid ""
 "Then, use this field's label in your file in order to make it work straight "
 "on the very next time."
 msgstr ""
+"Затем используйте метку этого поля в вашем файле, чтобы он работал в "
+"следующий раз."
 
 #: ../../general/base_import/import_faq.rst:44
 msgid "How to import from another application"
-msgstr ""
+msgstr "Как импортировать из другой программы?"
 
 #: ../../general/base_import/import_faq.rst:46
 msgid ""
@@ -238,6 +379,13 @@ msgid ""
 "unique identifier. You can also find this record using its name but you will"
 " be stuck if at least 2 records have the same name."
 msgstr ""
+"Чтобы восстановить взаимосвязь между различными записями, вы должны "
+"использовать уникальный идентификатор с оригинальной программы и обозначить "
+"его на ** ID ** столбца (внешний идентификатор) в Odoo. При импорте другая "
+"запись, который ссылается на первый, используйте ** XXX / ID ** (XXX / "
+"Внешний идентификатор) к оригинальному уникального идентификатора. Вы также "
+"можете найти эту запись, используя его название, но вы остановитесь, если по"
+" крайней мере 2 записи имеют одинаковое название."
 
 #: ../../general/base_import/import_faq.rst:54
 msgid ""
@@ -245,10 +393,13 @@ msgid ""
 "re-import modified data later, it's thus good practice to specify it "
 "whenever possible."
 msgstr ""
+"** ID ** также будет использован для обновления оригинального импорта, если "
+"вам придется повторно импортировать измененные данные позже, поэтому, если "
+"возможно, вы сможете его указать."
 
 #: ../../general/base_import/import_faq.rst:60
 msgid "I cannot find the field I want to map my column to"
-msgstr ""
+msgstr "Я не могу найти поле, в котором я хочу обозначить столбец"
 
 #: ../../general/base_import/import_faq.rst:62
 msgid ""
@@ -260,6 +411,12 @@ msgid ""
 "wrong or that you want to map your column to a field that is not proposed by"
 " default."
 msgstr ""
+"Odoo пытается определить тип поля для каждого столбца внутри вашего файла на"
+" основе первых десяти строк файлов. Например, если у вас есть столбик, "
+"который содержит только цифры, для вас будет выбрано только те поля, которые"
+" имеют тип * целое число *. Несмотря на то, что в большинстве случаев это "
+"поведение может быть хорошей и легкой, возможно, что это случится не так, "
+"или вы хотите указать столбик на поле, не предлагается по умолчанию."
 
 #: ../../general/base_import/import_faq.rst:71
 msgid ""
@@ -267,20 +424,29 @@ msgid ""
 "fields (advanced)** option, you will then be able to choose from the "
 "complete list of fields for each column."
 msgstr ""
+"Если это произойдет, вам просто нужно проверить параметры ** Показать поля "
+"связанной модели (расширено) **, после чего вы сможете выбрать из полного "
+"списка полей для каждого столбца."
 
 #: ../../general/base_import/import_faq.rst:79
 msgid "Where can I change the date import format?"
-msgstr ""
+msgstr "Где я могу изменить формат импорта дать?"
 
 #: ../../general/base_import/import_faq.rst:81
 msgid ""
-"Odoo can automatically detect if a column is a date and it will try to guess"
-" the date format from a set of most used date format. While this process can"
-" work for a lot of simple date format, some exotic date format will not be "
-"recognize and it is also possible to have some confusion (day and month "
-"inverted as example) as it is difficult to guess correctly which part is the"
-" day and which one is the month in a date like '01-03-2016'."
+"Odoo can automatically detect if a column is a date, and it will try to "
+"guess the date format from a set of most commonly used date formats. While "
+"this process can work for many date formats, some date formats will not be "
+"recognized. This can cause confusion due to day-month inversions; it is "
+"difficult to guess which part of a date format is the day and which part is "
+"the month in a date such as '01-03-2016'."
 msgstr ""
+"Odoo может автоматически определить, колонка является датой, и попытается "
+"угадать формат даты из набора наиболее часто используемых форматов даты. "
+"Хотя этот процесс может работать для многих форматов дат, некоторые форматы "
+"дать не будут распознаны. Это может привести к путанице через превращение "
+"дня в месяц; трудно догадаться, какая часть формата даты - это день, а какая"
+" - месяц в такой дате, как &#39;01 -03-2016 &quot;."
 
 #: ../../general/base_import/import_faq.rst:83
 msgid ""
@@ -289,6 +455,10 @@ msgid ""
 "selector. If this format is incorrect you can change it to your liking using"
 " the *ISO 8601* to define the format."
 msgstr ""
+"Чтобы посмотреть, какой формат даты Odoo нашел в вашем файле, вы можете "
+"проверить ** Формат даты **, который отображается, когда вы нажимаете ** "
+"Параметры ** под списком файлов. Если этот формат неправильный, вы можете "
+"изменить его, используя * ISO 8601 *, чтобы определить формат."
 
 #: ../../general/base_import/import_faq.rst:86
 msgid ""
@@ -297,10 +467,14 @@ msgid ""
 " stored. That way you will be sure that the date format is correct in Odoo "
 "whatever your locale date format is."
 msgstr ""
+"При импорте файла Excel (.xls, .xlsx), вы можете использовать цифровые дать "
+"для хранения дат, поскольку отображение даты в формате excel отличается от "
+"способа его хранения. Таким образом, вы будете уверены, что формат даты в "
+"Odoo правильный, независимо от формата вашей локальной даты."
 
 #: ../../general/base_import/import_faq.rst:91
 msgid "Can I import numbers with currency sign (e.g.: $32.00)?"
-msgstr ""
+msgstr "Могу ли я импортировать номера с пометкой валюты (например, $ 32.00)?"
 
 #: ../../general/base_import/import_faq.rst:93
 msgid ""
@@ -311,55 +485,64 @@ msgid ""
 "known to Odoo, it might not be recognized as a number though and it will "
 "crash."
 msgstr ""
+"Да, мы полностью поддерживаем числа в круглых скобках, чтобы отобразить "
+"отрицательный знак, а также цифры с прикрепленным к ним знаком валюты. Odoo "
+"также автоматически определяет, какой тысячный / десятичный разделитель вы "
+"используете (вы можете изменить эти параметры под ** параметрами **). Если "
+"вы используете символ валюты, который не известен Odoo, он, возможно, не "
+"будет признан как номер, хотя и будет совпадать."
 
 #: ../../general/base_import/import_faq.rst:95
 msgid ""
 "Examples of supported numbers (using thirty-two thousands as an example):"
 msgstr ""
+"Примеры поддерживаемых чисел (например, с использованием тридцати двух "
+"тысяч):"
 
 #: ../../general/base_import/import_faq.rst:97
 msgid "32.000,00"
-msgstr ""
+msgstr "32.000,00"
 
 #: ../../general/base_import/import_faq.rst:98
 msgid "32000,00"
-msgstr ""
+msgstr "32000,00"
 
 #: ../../general/base_import/import_faq.rst:99
 msgid "32,000.00"
-msgstr ""
+msgstr "32,000.00"
 
 #: ../../general/base_import/import_faq.rst:100
 msgid "-32000.00"
-msgstr ""
+msgstr "-32000.00"
 
 #: ../../general/base_import/import_faq.rst:101
 msgid "(32000.00)"
-msgstr ""
+msgstr "(32000.00)"
 
 #: ../../general/base_import/import_faq.rst:102
 msgid "$ 32.000,00"
-msgstr ""
+msgstr "$ 32.000,00"
 
 #: ../../general/base_import/import_faq.rst:103
 msgid "(32000.00 €)"
-msgstr ""
+msgstr "(32000.00 €)"
 
 #: ../../general/base_import/import_faq.rst:105
 msgid "Example that will not work:"
-msgstr ""
+msgstr "Пример, который не будет работать:"
 
 #: ../../general/base_import/import_faq.rst:107
 msgid "ABC 32.000,00"
-msgstr ""
+msgstr "ABC 32.000,00"
 
 #: ../../general/base_import/import_faq.rst:108
 msgid "$ (32.000,00)"
-msgstr ""
+msgstr "$ (32.000,00)"
 
 #: ../../general/base_import/import_faq.rst:113
 msgid "What can I do when the Import preview table isn't displayed correctly?"
 msgstr ""
+"Что делать, когда таблицы предварительного просмотра импорта отображаемых?"
 
 #: ../../general/base_import/import_faq.rst:115
 msgid ""
@@ -368,6 +551,10 @@ msgid ""
 "settings, you can modify the File Format Options (displayed under the Browse"
 " CSV file bar after you select your file)."
 msgstr ""
+"По умолчанию предварительный просмотр импорта устанавливается запятыми в "
+"качестве разделителей разделов и лапки как разделители текста. Если ваш файл"
+" CSV не имеет этих настроек, вы можете изменить параметры формата файла "
+"(отображается панель просмотра файлов CSV после выбора файла)."
 
 #: ../../general/base_import/import_faq.rst:117
 msgid ""
@@ -375,12 +562,18 @@ msgid ""
 "detect the separations. You will need to change the file format options in "
 "your spreadsheet application. See the following question."
 msgstr ""
+"Обратите внимание, если файл CSV имеет табуляцию как разделитель, Odoo не "
+"будет выражать разделение. Вам нужно будет изменить параметры формата файла "
+"в вашей программе для работы с электронными таблицами. Смотрите следующий "
+"вопрос."
 
 #: ../../general/base_import/import_faq.rst:122
 msgid ""
 "How can I change the CSV file format options when saving in my spreadsheet "
 "application?"
 msgstr ""
+"Как изменить параметры формата файла CSV при сохранении электронной таблицы "
+"в моей программе?"
 
 #: ../../general/base_import/import_faq.rst:124
 msgid ""
@@ -390,16 +583,25 @@ msgid ""
 "modify all three options (in 'Save As' dialog box > Check the box 'Edit "
 "filter settings' > Save)."
 msgstr ""
+"При редактировании и храните файлы CSV в программах электронной таблицы, "
+"региональные параметры компьютера применяться к сепаратора и разделителя. Мы"
+" рекомендуем вам воспользоваться OpenOffice или LibreOffice Calc, поскольку "
+"они позволят вам изменить все три варианта (в диалоговом окне «Сохранить "
+"как»&gt; установите флажок «Редактировать параметры фильтра&quot;&gt; "
+"Сохранить)."
 
 #: ../../general/base_import/import_faq.rst:126
 msgid ""
 "Microsoft Excel will allow you to modify only the encoding when saving (in "
 "'Save As' dialog box > click 'Tools' dropdown list > Encoding tab)."
 msgstr ""
+"Microsoft Excel позволит вам изменять только кодирования при сохранении (в "
+"диалоговом окне «Сохранить как»&gt; нажмите «Инструменты» в выпадающем "
+"списке&gt; вкладка «Кодирование»)."
 
 #: ../../general/base_import/import_faq.rst:131
 msgid "What's the difference between Database ID and External ID?"
-msgstr ""
+msgstr "Какая разница между ID базы данных и внешним ID?"
 
 #: ../../general/base_import/import_faq.rst:133
 msgid ""
@@ -410,44 +612,57 @@ msgid ""
 "mechanisms. You must use one and only one mechanism per field you want to "
 "import."
 msgstr ""
+"Некоторые поля определяют связь с другим объектом. Например, страна контакта"
+" - это ссылка на запись объекта &quot;Страна&quot;. Если вы хотите "
+"импортировать такие поля, Odoo придется воспроизвести ссылки между "
+"различными записями. Чтобы помочь вам импортировать такие поля, Odoo "
+"предоставляет 3 механизмы. Для поля, которое нужно импортировать, нужно "
+"использовать единый механизм."
 
 #: ../../general/base_import/import_faq.rst:135
 msgid ""
 "For example, to reference the country of a contact, Odoo proposes you 3 "
 "different fields to import:"
 msgstr ""
+"Например, чтобы указать страну контакта, Odoo предлагает 3 различных поля "
+"для импорта:"
 
 #: ../../general/base_import/import_faq.rst:137
 msgid "Country: the name or code of the country"
-msgstr ""
+msgstr "Страна: название или код страны"
 
 #: ../../general/base_import/import_faq.rst:138
 msgid ""
 "Country/Database ID: the unique Odoo ID for a record, defined by the ID "
 "postgresql column"
 msgstr ""
+"Страна / ID базы данных: уникальный ID Odoo для записи, определенного "
+"столбцом ID postgresql"
 
 #: ../../general/base_import/import_faq.rst:139
 msgid ""
 "Country/External ID: the ID of this record referenced in another application"
 " (or the .XML file that imported it)"
 msgstr ""
+"Страна / Внешний ID: ID записи, указанного в другой программе (или .XML-"
+"файле, который импортировал его)"
 
 #: ../../general/base_import/import_faq.rst:141
 msgid "For the country Belgium, you can use one of these 3 ways to import:"
 msgstr ""
+"Для страны Бельгии можно использовать один из этих 3 способов импорта:"
 
 #: ../../general/base_import/import_faq.rst:143
 msgid "Country: Belgium"
-msgstr ""
+msgstr "Страна: Бельгия"
 
 #: ../../general/base_import/import_faq.rst:144
 msgid "Country/Database ID: 21"
-msgstr ""
+msgstr "Страна / ID базы данных: 21"
 
 #: ../../general/base_import/import_faq.rst:145
 msgid "Country/External ID: base.be"
-msgstr ""
+msgstr "Страна/Внешний ID: base.be"
 
 #: ../../general/base_import/import_faq.rst:147
 msgid ""
@@ -455,12 +670,17 @@ msgid ""
 "records in relations. Here is when you should use one or the other, "
 "according to your need:"
 msgstr ""
+"Согласно вашим потребностям, вы должны использовать один из этих трех "
+"способов отслеживать связанные записи. Вот когда вы должны использовать тот "
+"или иной способ, согласно вашей потребности:"
 
 #: ../../general/base_import/import_faq.rst:149
 msgid ""
 "Use Country: This is the easiest way when your data come from CSV files that"
 " have been created manually."
 msgstr ""
+"Используйте страну: это самый простой способ, когда ваши данные поступают из"
+" файлов CSV, которые были созданы вручную."
 
 #: ../../general/base_import/import_faq.rst:150
 msgid ""
@@ -469,12 +689,19 @@ msgid ""
 "may have several records with the same name, but they always have a unique "
 "Database ID)"
 msgstr ""
+"Используйте страну / ID базы данных: редко используйте эту отметку. В "
+"основном это используют разработчики, поскольку главное преимущество "
+"заключается в том, чтобы никогда не было конфликтов (у вас может быть "
+"несколько записей с одинаковым названием, но они всегда имеют уникальный ID "
+"базы данных)."
 
 #: ../../general/base_import/import_faq.rst:151
 msgid ""
 "Use Country/External ID: Use External ID when you import data from a third "
 "party application."
 msgstr ""
+"Используйте название страны / внешний ID: используйте внешний ID, при "
+"импорте данных из сторонней программы."
 
 #: ../../general/base_import/import_faq.rst:153
 msgid ""
@@ -484,22 +711,31 @@ msgid ""
 "\"Field/External ID\". The following two CSV files give you an example for "
 "Products and their Categories."
 msgstr ""
+"При использовании внешние ID, вы можете импортировать файлы CSV с помощью "
+"столбца &quot;Внешний ID&quot;, чтобы определить внешний ID каждого "
+"импортируемого записи. Затем вы сможете сделать ссылку на эту запись со "
+"столбиками типа &quot;Поле / Внешний ID». Следующие два файла CSV приводят "
+"пример для товаров и их категорий."
 
 #: ../../general/base_import/import_faq.rst:155
 msgid ""
 "`CSV file for categories "
 "<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`_."
 msgstr ""
+"`CSV файл для категорий &lt;../../_ static / example_files / "
+"External_id_3rd_party_application_product_categories.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:157
 msgid ""
 "`CSV file for Products "
 "<../../_static/example_files/External_id_3rd_party_application_products.csv>`_."
 msgstr ""
+"`CSV файл для товаров &lt;../../_ static / example_files / "
+"External_id_3rd_party_application_products.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:161
 msgid "What can I do if I have multiple matches for a field?"
-msgstr ""
+msgstr "Что делать, если у меня есть несколько совпадений для поля?"
 
 #: ../../general/base_import/import_faq.rst:163
 msgid ""
@@ -511,6 +747,14 @@ msgid ""
 "Category list (\"Misc. Products/Sellable\"). We recommend you modify one of "
 "the duplicates' values or your product category hierarchy."
 msgstr ""
+"Если, например, у вас есть две категории с дочерним именем "
+"&quot;Sellable&quot; (то есть &quot;. Различные Товары / Продаются&quot; и "
+"&quot;Другие товары / Продаются&quot;), ваша проверка приостанавливается, но"
+" вы все равно можете импортировать свои данные. Однако мы не рекомендуем "
+"импортировать данные, поскольку все они будут связаны с первой категорией "
+"&quot;Продаются&quot;, которая находится в списке &quot;Категории "
+"товаров&quot; ( &quot;Разные Товары / Продаются»). Мы рекомендуем изменить "
+"один из значений дубликатов или иерархию категории."
 
 #: ../../general/base_import/import_faq.rst:165
 msgid ""
@@ -518,12 +762,16 @@ msgid ""
 "categories, we recommend you use make use of the external ID for this field "
 "'Category'."
 msgstr ""
+"Если вы не хотите менять свою настройки категорий товаров, мы рекомендуем "
+"использовать внешний идентификатор для этого поля &quot;Категория&quot;."
 
 #: ../../general/base_import/import_faq.rst:170
 msgid ""
 "How can I import a many2many relationship field (e.g. a customer that has "
 "multiple tags)?"
 msgstr ""
+"Как я могу импортировать поле связи many2many (например, клиента с "
+"несколькими тегами)?"
 
 #: ../../general/base_import/import_faq.rst:172
 msgid ""
@@ -532,18 +780,26 @@ msgid ""
 "'Retailer' then you will encode \"Manufacturer,Retailer\" in the same column"
 " of your CSV file."
 msgstr ""
+"Теги следует разделить запятой без всякого интервала. Например, если вы "
+"хотите, чтобы ваш клиент был связан с обоими тегами "
+"&quot;Производитель&quot; и &quot;Розничный продавец&quot;, вы кодируете "
+"&quot;Производитель, розничный продавец&quot; в той же строке файла CSV."
 
 #: ../../general/base_import/import_faq.rst:174
 msgid ""
 "`CSV file for Manufacturer, Retailer "
 "<../../_static/example_files/m2m_customers_tags.csv>`_."
 msgstr ""
+"`CSV для производителя, розничного продавца &lt;../../_ static / "
+"example_files / m2m_customers_tags.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:179
 msgid ""
 "How can I import a one2many relationship (e.g. several Order Lines of a "
 "Sales Order)?"
 msgstr ""
+"Как импортировать связь one2many (например, несколько строк заказ от заказа "
+"на продажу)?"
 
 #: ../../general/base_import/import_faq.rst:181
 msgid ""
@@ -555,40 +811,58 @@ msgid ""
 "purchase.order_functional_error_line_cant_adpat.CSV file of some quotations "
 "you can import, based on demo data."
 msgstr ""
+"Если вы хотите импортировать заказ клиента, имеет несколько строк заказов; "
+"для каждой строки заказа вам нужно зарезервировать определенную строку в "
+"файле CSV. Строка первого заказа будет импортировано в той же строке, что и "
+"информация о заказе. Для любых дополнительных строк заказ потребуется "
+"дополнительная строка файла, который не содержит информации в полях по "
+"заказу. Например, здесь есть файл "
+"buy.order_functional_error_line_cant_adpat.CSV некоторых коммерческих "
+"предложений, которые вы можете импортировать, на основе демо-данных."
 
 #: ../../general/base_import/import_faq.rst:184
 msgid ""
 "`File for some Quotations "
 "<../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv>`_."
 msgstr ""
+"`Файл для некоторых коммерческих предложений &lt;../../_ static / "
+"example_files / purchase.order_functional_error_line_cant_adpat.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:186
 msgid ""
 "The following CSV file shows how to import purchase orders with their "
 "respective purchase order lines:"
 msgstr ""
+"В следующем файле CSV показано, как импортировать заказ на покупку с помощью"
+" соответствующих строк заказа."
 
 #: ../../general/base_import/import_faq.rst:188
 msgid ""
 "`Purchase orders with their respective purchase order lines "
 "<../../_static/example_files/o2m_purchase_order_lines.csv>`_."
 msgstr ""
+"`Заказ на покупку с соответствующими строками заказ на покупку &lt;../../_ "
+"static / example_files / o2m_purchase_order_lines.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:190
 msgid ""
 "The following CSV file shows how to import customers and their respective "
 "contacts:"
 msgstr ""
+"В следующем файле CSV показано, как импортировать клиентов и их "
+"соответствующие контакты:"
 
 #: ../../general/base_import/import_faq.rst:192
 msgid ""
 "`Customers and their respective contacts "
 "<../../_static/example_files/o2m_customers_contacts.csv>`_."
 msgstr ""
+"`Клиенты и их соответствующие контакты &lt;../../_ static / example_files / "
+"o2m_customers_contacts.csv&gt;` _."
 
 #: ../../general/base_import/import_faq.rst:197
 msgid "Can I import several times the same record?"
-msgstr ""
+msgstr "Возможно ли импортировать несколько раз одну и ту же запись?"
 
 #: ../../general/base_import/import_faq.rst:199
 msgid ""
@@ -599,16 +873,24 @@ msgid ""
 "two imports. Odoo will take care of creating or modifying each record "
 "depending if it's new or not."
 msgstr ""
+"При импорте файла, который содержит один из столбцов &quot;Внешний ID&quot; "
+"или &quot;ID базы данных&quot;, записи, которые уже были импортированы, "
+"будут изменены, а не созданы. Это очень удобно, поскольку система позволяет "
+"импортировать несколько раз один и тот же файл CSV при внесении некоторых "
+"изменений между двумя импорта. Odoo будет заботиться о создании или "
+"изменении каждой записи в зависимости от того, он новый или нет."
 
 #: ../../general/base_import/import_faq.rst:201
 msgid ""
 "This feature allows you to use the Import/Export tool of Odoo to modify a "
 "batch of records in your favorite spreadsheet application."
 msgstr ""
+"Эта функция позволяет использовать инструмент импорта / экспорта Odoo для "
+"изменения записей целый пакет в вашей программе электронной таблицы."
 
 #: ../../general/base_import/import_faq.rst:206
 msgid "What happens if I do not provide a value for a specific field?"
-msgstr ""
+msgstr "Что произойдет, если я не предоставлю значение для конкретного поля?"
 
 #: ../../general/base_import/import_faq.rst:208
 msgid ""
@@ -617,10 +899,16 @@ msgid ""
 "in your CSV file, Odoo will set the EMPTY value in the field, instead of "
 "assigning the default value."
 msgstr ""
+"Если вы не устанавливаете все поля в файле CSV, Odoo назначит значение по "
+"умолчанию для всех неопределенных полей. Но если вы устанавливаете поля с "
+"пустыми значениями в своем файле CSV, Odoo установит значение EMPTY в поле, "
+"вместо того, чтобы назначить значения по умолчанию."
 
 #: ../../general/base_import/import_faq.rst:213
 msgid "How to export/import different tables from an SQL application to Odoo?"
 msgstr ""
+"Как экспортировать / импортировать различные таблицы из приложения SQL к "
+"Odoo?"
 
 #: ../../general/base_import/import_faq.rst:215
 msgid ""
@@ -629,6 +917,10 @@ msgid ""
 " companies and persons, you will have to recreate the link between each "
 "person and the company they work for)."
 msgstr ""
+"Если вам нужно импортировать данные из разных таблиц, вам придется "
+"воссоздать связи между записями, принадлежащих к разным таблиц. (Например, "
+"если вы импортируете компании и людей, вам придется воссоздать связь между "
+"каждым лицом и компанией, в которой они работают)."
 
 #: ../../general/base_import/import_faq.rst:217
 msgid ""
@@ -639,6 +931,13 @@ msgid ""
 "this \"External ID\" with the name of the application or table. (like "
 "'company_1', 'person_1' instead of '1')"
 msgstr ""
+"Чтобы управлять связями между таблицами, вы можете использовать "
+"&quot;Внешний ID&quot; объектов Odoo. &quot;Внешний ID&quot; записи является"
+" уникальным идентификатором этой записи в другой программе. Этот "
+"&quot;Внешний ID&quot; должен быть уникальным для всех записей всех "
+"объектов, поэтому целесообразно присвоить &quot;Внешний ID&quot; с названием"
+" программы или таблицы. (Например, &quot;company_1&quot;, "
+"&quot;person_1&quot; вместо &quot;1&quot;)."
 
 #: ../../general/base_import/import_faq.rst:219
 msgid ""
@@ -649,26 +948,36 @@ msgid ""
 "href=\"/base_import/static/csv/database_import_test.sql\">dump of such a "
 "PostgreSQL database</a>)"
 msgstr ""
+"Допустим, у вас есть база данных SQL с двумя таблицами, которые вы хотите "
+"импортировать: компании и лица. Каждый человек принадлежит к одной компании,"
+" поэтому вам придется воссоздать связь между человеком и компанией, в "
+"которой он работает. (Если вы хотите проверить этот пример, вот <a "
+"href=\"/base_import/static/csv/database_import_test.sql\">копия такой базы "
+"данных PostgreSQL</a> )"
 
 #: ../../general/base_import/import_faq.rst:221
 msgid ""
 "We will first export all companies and their \"External ID\". In PSQL, write"
 " the following command:"
 msgstr ""
+"Сначала мы экспортируем все компании и их &quot;Внешний ID». В PSQL, "
+"напишите следующую команду:"
 
 #: ../../general/base_import/import_faq.rst:227
 msgid "This SQL command will create the following CSV file::"
-msgstr ""
+msgstr "Эта команда SQL создаст следующий файл CSV ::"
 
 #: ../../general/base_import/import_faq.rst:234
 msgid ""
 "To create the CSV file for persons, linked to companies, we will use the "
 "following SQL command in PSQL:"
 msgstr ""
+"Чтобы создать файл CSV для лиц, связанных с компаниями, мы используем "
+"следующую команду SQL в PSQL:"
 
 #: ../../general/base_import/import_faq.rst:240
 msgid "It will produce the following CSV file::"
-msgstr ""
+msgstr "Он будет создавать такой файл CSV ::"
 
 #: ../../general/base_import/import_faq.rst:248
 msgid ""
@@ -679,6 +988,12 @@ msgid ""
 "avoid a conflict of ID between persons and companies (person_1 and company_1"
 " who shared the same ID 1 in the orignial database)."
 msgstr ""
+"Как вы видите в этом файле, Фабьен и Лоуренс работают в компании Bigees "
+"(company_1), а Эрик работает в компании Organi. Связь между лицами и "
+"компаниями осуществляется с помощью внешнего идентификатора компаний. Нам "
+"пришлось присваивать &quot;Внешний ID&quot; под названием таблицы, чтобы "
+"избежать конфликта ID между лицами и компаниями (person_1 и company_1, "
+"которые поделились одинаковым ID 1 в оригинальной базе данных)."
 
 #: ../../general/base_import/import_faq.rst:250
 msgid ""
@@ -687,24 +1002,167 @@ msgid ""
 "contacts and 3 companies. (the firsts two contacts are linked to the first "
 "company). You must first import the companies and then the persons."
 msgstr ""
+"Оба файла готовы к импорту в Odoo без каких-либо изменений. После импорта "
+"этих двух файлов CSV у вас будет 4 контакта и 3 компании. (Первые два "
+"контакта связаны с первой компанией). Сначала нужно импортировать компании, "
+"а затем лица."
+
+#: ../../general/in_app_purchase.rst:3
+msgid "In-App Purchase"
+msgstr "Покупки в приложении"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:3
+msgid "General guide about In-App Purchase (IAP) Services"
+msgstr "Общий путеводитель о Услуги Покупки в приложении (IAP)"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:4
+msgid ""
+"In-App Purchases (IAP) gives access to additional services through Odoo. For"
+" instance, it allows me to send SMS Text Messages or to send Invoices by "
+"post directly from my database."
+msgstr ""
+"Покупки в приложении (IAP) дают доступ к дополнительным услугам через Odoo. "
+"Например, это позволяет отправлять SMS-сообщения или отправлять счета по "
+"почте непосредственно из своей базы данных."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:7
+msgid "Buying Credits"
+msgstr "Покупка кредитов"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:8
+msgid ""
+"Each IAP Service relies on prepaid credits to work and has its own pricing. "
+"To consult my current balance or to recharge my account, go to *Settings> "
+"Odoo IAP > View my Services*."
+msgstr ""
+"Каждая услуга IAP опирается на предоплаченные кредиты на работу и имеет свою"
+" цену. Чтобы ознакомиться с текущим балансом или пополнить счет, перейдите в"
+" * Настройка&gt; Odoo IAP&gt; Посмотреть мои услуги *."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:13
+msgid ""
+"If I am on Odoo Online (SAAS) and have the Enterprise version, I benefit "
+"from free credits to test our IAP features."
+msgstr ""
+"Если я на Odoo Online (SAAS) и у меня версия Enterprise, я пользуюсь "
+"бесплатными кредитами для тестирования функций IAP."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:16
+msgid "IAP accounts"
+msgstr "счета IAP"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:17
+msgid ""
+"Credits to use IAP services are stored on IAP accounts, which are specific "
+"to each service and database. By default, IAP accounts are common to all "
+"companies, but can be restricted to specific ones by going to *Settings app "
+"> Activate the Developer Mode > Technical Settings > IAP Accoun*."
+msgstr ""
+"Кредиты для использования услуг IAP хранятся на счетах IAP, определенных для"
+" каждой услуги и базы данных. По умолчанию счета IAP являются общими для "
+"всех компаний, но их можно ограничить на конкретные компании, перейдя в "
+"Модуль Настройка&gt; Включить режим разработчика&gt; Технические "
+"настройки&gt; Счет IAP *."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:23
+msgid "IAP Portal"
+msgstr "портал IAP"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:24
+msgid ""
+"The IAP Portal is a platform regrouping my IAP Services. It is accessible "
+"from *Settings app > Odoo IAP > View my Services*. From there, I can view my"
+" current balance, recharge my credits, review my consumption and set a "
+"reminder to when credits are low."
+msgstr ""
+"Портал IAP - это платформа, которая перегруппировывает услуги IAP. Она "
+"доступна с * модуля Настройка&gt; Odoo IAP&gt; посмотреть мои услуги *. "
+"Оттуда можно посмотреть свой текущий баланс, списать кредиты, пересмотреть "
+"свое потребление и установить напоминания о низких кредиты."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:30
+msgid "Get notified when credits are low"
+msgstr "Получайте уведомления, когда недостаточно кредитов"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:31
+msgid ""
+"To be notified when it’s time to recharge my credits, I’ll go to my IAP "
+"Portal through *Settings app> Odoo IAP > View my Services*, unfold a service"
+" and mark the Receive threshold warning option. Then, I’ll provide a minimum"
+" amount of credits and email addresses. Now, every time that the limit is "
+"reached, an automatic reminder will be sent to by email!"
+msgstr ""
+"Чтобы получать уведомления, когда наступает время пополнить свои кредиты, "
+"необходимо перейти в портал IAP через Модуль Настройка&gt; Odoo IAP&gt; "
+"Посмотреть мои услуги *, разверните услугу и отметьте опцию Получение "
+"предупреждения. Тогда необходимо предоставить минимальное количество "
+"кредитов и электронный адрес. Теперь, каждый раз, когда будет достигнуто "
+"ограничение, автоматически передается напоминание по электронной почте!"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:38
+msgid "IAP services available"
+msgstr "Доступные услуги IAP"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:39
+msgid ""
+"Different services are available depending on the hosting type of your "
+"Database:"
+msgstr ""
+"Различные услуги доступны в зависимости типа хостинга вашей базы данных:"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:41
+msgid ""
+"*Odoo Online (SAAS)*: only the IAP services provided by Odoo can be used "
+"(i.e. the SMS, Snailmail, Reveal and Partner Autocomplete features);"
+msgstr ""
+"* Odoo Online (SAAS) *: можно использовать только IAP, предоставляемых Odoo "
+"(напр., Такие функции, как SMS, Snailmail, Открытие и Автоматическое "
+"заполнение партнера);"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:43
+msgid ""
+"*Odoo.sh and Odoo Enterprise (on-premise)*: both the services provided by "
+"Odoo and by third-party apps can be used."
+msgstr ""
+"* Odoo.sh и Odoo Enterprise (на собственном сервере) *: можно использовать "
+"обе услуги, предоставляемые Odoo, и сторонние модули."
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:46
+msgid "Offering my own services"
+msgstr "Предложить собственные услуги"
+
+#: ../../general/in_app_purchase/in_app_purchase.rst:47
+msgid ""
+"I am more than welcome to offer my own IAP services through Odoo Apps! It is"
+" the perfect opportunity to get recurring revenue for an ongoing service use"
+" rather than — and possibly instead of — a sole initial purchase. Please, "
+"find more information at: `In-App Purchase "
+"<https://www.odoo.com/documentation/master/webservices/iap.html>`_"
+msgstr ""
+"Мне больше приятно предлагать собственные услуги IAP через Приложения Odoo! "
+"Это идеальная возможность получить постоянный доход за постоянное "
+"использование услуг вместо единого первоначального приобретения. "
+"Дополнительную информацию можно найти на: `Покупки в приложении "
+"<https://www.odoo.com/documentation/master/webservices/iap.html> `_"
 
 #: ../../general/odoo_basics.rst:3
-msgid "BASICS"
-msgstr ""
+msgid "Basics"
+msgstr "Основное"
 
 #: ../../general/odoo_basics/add_user.rst:3
 msgid "How to add a user"
-msgstr ""
+msgstr "Как добавить пользователя"
 
 #: ../../general/odoo_basics/add_user.rst:5
 msgid ""
 "Odoo provides you with the option to add additional users at any given "
 "point."
 msgstr ""
+"Odoo предоставляет вам возможность добавлять пользователей в любой момент."
 
 #: ../../general/odoo_basics/add_user.rst:9
 msgid "Add individual users"
-msgstr ""
+msgstr "Добавьте отдельных пользователей"
 
 #: ../../general/odoo_basics/add_user.rst:11
 msgid ""
@@ -713,12 +1171,19 @@ msgid ""
 "professional email address - the one he will use to log into Odoo instance -"
 " and a picture."
 msgstr ""
+"В модуле &quot;Настройка&quot; перейдите в подменю: menuselection: "
+"`Пользователи -&gt; Користувачи` и нажмите ** СОЗДАТЬ **. Сначала добавьте "
+"имя вашего нового пользователя и адрес электронной почты - ту, которую он "
+"будет использовать для входа в Odoo, и изображения."
 
 #: ../../general/odoo_basics/add_user.rst:19
 msgid ""
 "Under Access Rights, you can choose which applications your user can access "
 "and use. Different levels of rights are available depending on the app."
 msgstr ""
+"В разделе Права доступа вы можете выбрать, к аксессуарам ваш пользователь "
+"может получить доступ и какие использовать. Доступны различные уровни в "
+"зависимости от программы."
 
 #: ../../general/odoo_basics/add_user.rst:23
 msgid ""
@@ -726,6 +1191,10 @@ msgid ""
 "invitation email will automatically be sent to the user. The user must click"
 " on it to accept the invitation to your instance and create a log-in."
 msgstr ""
+"Когда вы закончите редактировать страницу и нажать кнопку ** СОХРАНИТЬ **, "
+"электронное письмо приглашение автоматически передается пользователю. "
+"Пользователь должен нажать на него, чтобы принять приглашение системы и "
+"создать вход."
 
 #: ../../general/odoo_basics/add_user.rst:32
 msgid ""
@@ -733,6 +1202,9 @@ msgid ""
 "Refer to our `*Pricing page* <https://www.odoo.com/pricing>`__ for more "
 "information."
 msgstr ""
+"Помните, что каждый дополнительный пользователь увеличит вашу плату за "
+"подписку. Для получения дополнительной информации обратитесь к нашей "
+"странице `* Цена * <https://www.odoo.com/pricing> `__."
 
 #: ../../general/odoo_basics/add_user.rst:39
 msgid ""
@@ -742,36 +1214,43 @@ msgid ""
 " to set his password. You will then be able to define his accesses rights "
 "under the :menuselection:`Settings --> Users menu`."
 msgstr ""
+"Вы также можете добавить нового пользователя &quot;на лету&quot; с "
+"информационной панели. Из приведенного выше снимка экрана введите адрес "
+"электронной почты пользователя, которого вы хотите добавить, и нажмите на **"
+" ПРИГЛАСИТЬ **. Пользователь получит приглашение по электронной почте, "
+"содержащее ссылку для установления его пароля. После этого вы сможете "
+"определить его права доступа в меню: menuselection: `Настройка -&gt; Меню "
+"користувача`."
 
 #: ../../general/odoo_basics/add_user.rst:45
 msgid ""
 "`Deactivating Users <../../db_management/documentation.html#deactivating-"
 "users>`_"
 msgstr ""
-
-#: ../../general/odoo_basics/add_user.rst:46
-msgid ":doc:`../../crm/salesteam/setup/create_team`"
-msgstr ""
+"`Деактивування пользователей &lt;../../ db_management / documentation.html #"
+" deactivating-users&gt;` _"
 
 #: ../../general/odoo_basics/choose_language.rst:3
 msgid "Manage Odoo in your own language"
-msgstr ""
+msgstr "Управляйте Odoo вашем родном языке"
 
 #: ../../general/odoo_basics/choose_language.rst:5
 msgid ""
 "Odoo provides you with the option to manage Odoo in different languages, and"
 " each user can use Odoo in his own language ."
 msgstr ""
+"Odoo предоставляет вам возможность управлять Odoo на разных языках, и каждый"
+" пользователь может использовать Odoo своим языком."
 
 #: ../../general/odoo_basics/choose_language.rst:9
 msgid "Load your desired language"
-msgstr ""
+msgstr "Загрузите нужный язык"
 
 #: ../../general/odoo_basics/choose_language.rst:11
 msgid ""
 "The first thing to do is to load your desired language on your Odoo "
 "instance."
-msgstr ""
+msgstr "Первое, что нужно сделать, это загрузить нужный язык в версию Odoo."
 
 #: ../../general/odoo_basics/choose_language.rst:14
 msgid ""
@@ -779,42 +1258,52 @@ msgid ""
 " the page select :menuselection:`Translations --> Load a Translation`, "
 "select a language to install and click on **LOAD.**"
 msgstr ""
+"На общей информационной панели нажмите на приложение ** Настройка **; в "
+"верхнем левом углу страницы выберите: menuselection: `Перевод -&gt; Скачать "
+"переклад`, выберите язык для установки и нажмите ** СКАЧАТЬ **."
 
 #: ../../general/odoo_basics/choose_language.rst:23
 msgid ""
 "If you check the \"Websites to translate\" checkbox you will have the option"
 " to change the navigation language on your website."
 msgstr ""
+"Если вы проверите обозначения &quot;Веб-сайты для перевода&quot;, вы сможете"
+" изменить язык навигации на своем сайте."
 
 #: ../../general/odoo_basics/choose_language.rst:27
 msgid "Change your language"
-msgstr ""
+msgstr "измените язык"
 
 #: ../../general/odoo_basics/choose_language.rst:29
 msgid ""
 "You can change the language to the installed language by going to the drop-"
 "down menu at the top right side of the screen, choose **Preferences**."
 msgstr ""
+"Вы можете изменить язык на установленную, перейдя к раскрывающегося меню в "
+"верхней правой части экрана и выбрав ** Параметры **."
 
 #: ../../general/odoo_basics/choose_language.rst:36
 msgid ""
 "Then change the Language setting to your installed language and click "
 "**SAVE.**"
 msgstr ""
+"Затем измените настройки языка на установленную и нажмите ** Сохранить **."
 
 #: ../../general/odoo_basics/choose_language.rst:42
 msgid "Open a new menu to view the changes."
-msgstr ""
+msgstr "Откройте новое меню, чтобы посмотреть изменения."
 
 #: ../../general/odoo_basics/choose_language.rst:45
 msgid "Change another user's language"
-msgstr ""
+msgstr "Измените язык другого пользователя"
 
 #: ../../general/odoo_basics/choose_language.rst:47
 msgid ""
 "Odoo also gives you the possibility for each user to choose his preferred "
 "language."
 msgstr ""
+"Odoo также дает вам возможность для каждого пользователя выбрать его "
+"желаемый язык."
 
 #: ../../general/odoo_basics/choose_language.rst:50
 msgid ""
@@ -825,7 +1314,131 @@ msgid ""
 " change the Language to any previously installed language and click "
 "**SAVE.**"
 msgstr ""
+"Чтобы изменить язык другого пользователя, выберите: menuselection: "
+"`Пользователи -&gt; Користувачи` в приложении Настройка. Здесь вы список "
+"всех пользователей, и вы можете выбрать пользователя, для которого вы хотите"
+" изменить язык. Выберите пользователя и нажмите ** Редактировать ** в "
+"верхнем левом углу. В разделе Параметры можно изменить язык на любую "
+"существующую и нажмите ** СОХРАНИТЬ **."
 
 #: ../../general/odoo_basics/choose_language.rst:61
 msgid ":doc:`../../website/publish/translate`"
+msgstr ":doc:`../../website/publish/translate`"
+
+#: ../../general/unsplash.rst:3
+msgid "Unsplash"
+msgstr "Unsplash"
+
+#: ../../general/unsplash/unsplash_access_key.rst:3
+msgid "How to generate an Unsplash access key"
+msgstr "Как создать ключ доступа Unsplash"
+
+#: ../../general/unsplash/unsplash_access_key.rst:6
+msgid ""
+"**As an SaaS user**, you are ready to use Unsplash. You won't need to follow"
+" this guide to set up Unsplash informations, since you will use our own Odoo"
+" Unsplash key in a transparent way."
 msgstr ""
+"** Как пользователь SaaS **, вы можете использовать Unsplash. Вас не нужно "
+"будет следить за этим пособием, чтобы установить информацию Unsplash, с тех "
+"пор, как вы будете использовать наш собственный ключ Odoo Unsplash "
+"прозрачным образом."
+
+#: ../../general/unsplash/unsplash_access_key.rst:9
+msgid "Generate an Unsplash access key for **non-Saas** users"
+msgstr "Создайте ключ доступа Unsplash для пользователя ** НЕ Saas **"
+
+#: ../../general/unsplash/unsplash_access_key.rst:11
+msgid "Create an account on `Unsplash.com <https://unsplash.com/join>`_."
+msgstr ""
+"Создайте учетную запись на `Unsplash.com <https://unsplash.com/join> `_."
+
+#: ../../general/unsplash/unsplash_access_key.rst:13
+msgid ""
+"Go to your `applications dashboard "
+"<https://unsplash.com/oauth/applications>`_ and click on **New "
+"Application**."
+msgstr ""
+"Перейдите к вашей `панели приборов приложений "
+"<https://unsplash.com/oauth/applications> `_ И нажмите ** Новое приложение "
+"**."
+
+#: ../../general/unsplash/unsplash_access_key.rst:18
+msgid "Accept the conditions and click on **Accept terms**."
+msgstr "Примите условия и нажмите ** Принять условия **."
+
+#: ../../general/unsplash/unsplash_access_key.rst:23
+msgid ""
+"You will be prompted to insert an **Application name** and a "
+"**Description**. Please prefix your application name by \"**Odoo:** \" so "
+"that Unsplash can recognize it as an Odoo instance. Once done, click on "
+"**Create application**."
+msgstr ""
+"Вам будет предложено вставить ** Название заявки ** и ** Описание **. "
+"Пожалуйста, префиксуйте название вашего модуля за &quot;** Odoo: **&quot;, "
+"чтобы Unsplash мог распознать его как экземпляр Odoo. После завершения "
+"нажмите ** Создать приложение **."
+
+#: ../../general/unsplash/unsplash_access_key.rst:28
+msgid ""
+"You should be redirected to your application details page. Scroll down a bit"
+" to find your **access key**."
+msgstr ""
+"Вы должны быть перенаправлены на страницу деталей приложения. Прокрутите "
+"вниз, чтобы найти ваш ** ключ доступа **."
+
+#: ../../general/unsplash/unsplash_access_key.rst:34
+msgid ""
+"**As a non-SaaS user**, you won't be able to register for a production "
+"Unsplash key and will be limited to your test key that has a restriction of "
+"50 Unsplash requests per hour."
+msgstr ""
+"** Как не пользователь SaaS **, вы не сможете зарегистрироваться для "
+"рабочего ключа Unsplash и будете ограничены в доступе к тестовому ключа, "
+"имеет ограничения в 50 запросов Unsplash в час."
+
+#: ../../general/unsplash/unsplash_access_key.rst:37
+msgid ":doc:`unsplash_application_id`"
+msgstr ":doc:`unsplash_application_id`"
+
+#: ../../general/unsplash/unsplash_application_id.rst:3
+msgid "How to generate an Unsplash application ID"
+msgstr "Как создать ID приложения Unsplash"
+
+#: ../../general/unsplash/unsplash_application_id.rst:6
+msgid ""
+"You should first create and set up your Unsplash application with this "
+"tutorial: :doc:`unsplash_access_key`."
+msgstr ""
+"Вам сначала нужно создать и установить ваше приложение Unsplash с этим "
+"пособием:: doc: `unsplash_access_key`."
+
+#: ../../general/unsplash/unsplash_application_id.rst:8
+msgid ""
+"Go to your `applications dashboard "
+"<https://unsplash.com/oauth/applications>`_ and click on your newly created "
+"Unsplash application under **Your applications**."
+msgstr ""
+"Перейдите к `панели приборов приложений "
+"<https://unsplash.com/oauth/applications> `_ И нажмите на только что "
+"созданный приложение Unsplash пид ** Вашими приложениями **."
+
+#: ../../general/unsplash/unsplash_application_id.rst:13
+msgid ""
+"You will be redirected to your application details page. The **application "
+"ID** will be visible in your browser's URL. The URL should be something like"
+" ``https://unsplash.com/oauth/applications/<application_id>``"
+msgstr ""
+"Вы будете перенаправлены на страницу деталей вашего модуля. ** ID модуля ** "
+"будет видимый в вашей URL-адресу браузера. URL-адрес должен быть похожа на "
+"`https://unsplash.com/oauth/applications/ <application_id> `"
+
+#: ../../general/unsplash/unsplash_application_id.rst:19
+msgid ""
+"**As a non-SaaS user**, you won't be able to register for a production "
+"Unsplash key and will be limited to your test key that has a 50 Unsplash "
+"requests per hour restriction."
+msgstr ""
+"** Как не пользователь SaaS **, вы не сможете зарегистрироваться для "
+"рабочего ключа Unsplash и будете ограничены в доступе к тестовому ключа, "
+"который имеет ограничения в 50 запросов Unsplash в час."

@@ -15,7 +15,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-11-20 10:20+0100\n"
+"POT-Creation-Date: 2019-12-26 09:17+0100\n"
 "PO-Revision-Date: 2019-10-03 09:46+0000\n"
 "Last-Translator: Yenthe Van Ginneken <yenthespam@gmail.com>, 2019\n"
 "Language-Team: Dutch (https://www.transifex.com/odoo/teams/41243/nl/)\n"
@@ -529,7 +529,7 @@ msgstr ""
 #: ../../inventory/management/misc/sms_delivery.rst:6
 #: ../../inventory/management/products/strategies.rst:30
 #: ../../inventory/management/products/uom.rst:16
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:25
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:21
 #: ../../inventory/management/replenishment_strategies/virtual_warehouses.rst:6
 #: ../../inventory/management/warehouses/location_creation.rst:6
 #: ../../inventory/management/warehouses/warehouse_creation.rst:6
@@ -2863,7 +2863,7 @@ msgstr ""
 
 #: ../../inventory/management/products/strategies.rst:22
 #: ../../inventory/management/products/strategies.rst:58
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:71
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:67
 msgid "Make to Order"
 msgstr "Maak op order"
 
@@ -3043,7 +3043,7 @@ msgstr "Heraanvulling"
 #: ../../inventory/management/products/uom.rst:84
 msgid ""
 "When doing a replenishment via the *Replenish* button on the product form, "
-"you have the possibility to change the unit of measure."
+"you have the possibility to use a different unit of measure."
 msgstr ""
 
 #: ../../inventory/management/products/uom.rst:94
@@ -3105,24 +3105,31 @@ msgid ""
 "you to have a report with the quantity of products for each package."
 msgstr ""
 
-#: ../../inventory/management/products/usage.rst:50
+#: ../../inventory/management/products/usage.rst:43
+msgid ""
+"To separate a delivery into different packages you will have to set the done"
+" qunatity to the desired package quantity then click on \"PUT IN PACK\", do "
+"this for each package."
+msgstr ""
+
+#: ../../inventory/management/products/usage.rst:54
 msgid "Packaging"
 msgstr "Verpakking"
 
-#: ../../inventory/management/products/usage.rst:52
+#: ../../inventory/management/products/usage.rst:56
 msgid ""
 "The packaging is the physical container that protects your product. If you "
 "are selling computers, the packaging contains the computer with the notice "
 "and the power plug."
 msgstr ""
 
-#: ../../inventory/management/products/usage.rst:56
+#: ../../inventory/management/products/usage.rst:60
 msgid ""
 "In Odoo, packagings are used for indicative purposes on sale orders. They "
 "can be specified on the product form, in the inventory tab."
 msgstr ""
 
-#: ../../inventory/management/products/usage.rst:66
+#: ../../inventory/management/products/usage.rst:70
 msgid ""
 "Another useful use of the packaging is for product reception. By scanning "
 "the barcode of the packaging, Odoo adds the number of units contained in the"
@@ -3158,25 +3165,21 @@ msgid ""
 "The *Make to Order* route will trigger a procurement (purchase order or "
 "manufacturing order) with the necessary quantity to fulfill a product "
 "request (coming from a sale order or a manufacturing order). The system will"
-" check the quantity on hand for the corresponding product and if the "
-"available quantity is higher or equal to the necessary quantity, Odoo will "
-"use what is in stock to fulfill the request. In case you don’t have enough "
-"available stock to fully fulfill the product request, procurement will be "
-"generated for the total quantity requested."
+" not check the quantity on hand for the corresponding product."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:28
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:24
 msgid "Reordering Rules"
 msgstr "Aanvulopdrachtregels"
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:30
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:26
 msgid ""
 "The *Reordering Rules* configuration is available through the menu "
 "*Inventory > Master Data > Reordering Rules*. There, click on *Create* to "
 "set minimum and maximum stock values for a given product."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:37
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:33
 msgid ""
 "When the forecasted stock goes below the *Minimum Quantity* specified in "
 "this field, Odoo generates a procurement to bring the forecasted quantity to"
@@ -3185,20 +3188,20 @@ msgid ""
 "will be used."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:46
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:42
 msgid ""
 "The *Lead time* is the number of days after the order point is triggered to "
 "receive the products or to order them to the vendor."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:49
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:45
 msgid ""
 "In case you work with multi-warehouses and/or multi-locations, you will be "
 "able to specify different reordering rules for the same product in each "
 "location."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:54
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:50
 msgid ""
 "For the reordering rules to be triggered, on the corresponding product, a "
 "route should be specified. In case you manufacture your products, make sure "
@@ -3207,29 +3210,29 @@ msgid ""
 "*Buy* and add a *Vendor Pricelist*."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:66
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:62
 msgid ""
 "Don't forget to select the product type *storable* in the product form. A "
 "consumable can not be stocked and won’t trigger reordering rules."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:73
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:69
 msgid ""
 "The *Make To Order* configuration is available on your product form through "
 "your *Inventory module > Master Data > Products* (or in any other module "
 "where products are available)."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:77
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:73
 msgid ""
 "On the product form, in the *Inventory tab*, you can set a route. You can "
 "choose *Make To Order* and another route, either *Buy* or *Manufacture*."
 msgstr ""
 
-#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:81
+#: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:77
 msgid ""
 "Again, if the *Buy* route is selected, make sure to set a *Vendor pricelist*"
-" in the *Purchase tab*. In case you have set a *Manufacture* route, male "
+" in the *Purchase tab*. In case you have set a *Manufacture* route, make "
 "sure you have a *BoM* for this product."
 msgstr ""
 
@@ -4439,11 +4442,17 @@ msgid ""
 "forecasts."
 msgstr ""
 
-#: ../../inventory/overview/process/deliver_from_stock.rst:56
+#: ../../inventory/overview/process/deliver_from_stock.rst:51
+msgid ""
+"The default setting is the immediate transfer where you do not need to “Mark"
+" as to do” and “Check availability” when delivering a product."
+msgstr ""
+
+#: ../../inventory/overview/process/deliver_from_stock.rst:54
 msgid "Deliver Products from Stock from a Sale Order"
 msgstr ""
 
-#: ../../inventory/overview/process/deliver_from_stock.rst:58
+#: ../../inventory/overview/process/deliver_from_stock.rst:56
 msgid ""
 "If you have the *Sales* application installed, delivery can be directly "
 "created by *validating a quotation*. You will be able to find the "

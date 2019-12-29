@@ -1,15 +1,21 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2015-TODAY, Odoo S.A.
-# This file is distributed under the same license as the Odoo Business package.
+# This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Martin Trigaux, 2019
+# Collex100, 2019
+# Ivan Yelizariev <yelizariev@it-projects.info>, 2019
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Business 10.0\n"
+"Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-05-09 14:24+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"POT-Creation-Date: 2019-10-03 11:39+0200\n"
+"PO-Revision-Date: 2019-10-03 09:46+0000\n"
+"Last-Translator: Ivan Yelizariev <yelizariev@it-projects.info>, 2019\n"
 "Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,246 +25,378 @@ msgstr ""
 
 #: ../../discuss.rst:5
 msgid "Discuss"
-msgstr ""
+msgstr "Общение"
 
 #: ../../discuss/email_servers.rst:3
-msgid "How to use my own email servers to send and receive email in Odoo"
+msgid "How to use my mail server to send and receive emails in Odoo"
 msgstr ""
+"Как использовать свой почтовый сервер для отправки и получения электронных "
+"писем в Odoo"
 
-#: ../../discuss/email_servers.rst:6
-msgid "When is it needed"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:7
+#: ../../discuss/email_servers.rst:5
 msgid ""
-"Using your own email servers is required to send and receive messages in "
-"Odoo Community or Enterprise. Odoo Online embeds an out-of-box email "
-"solution that works straight away. However you can still use your own email "
-"servers with the online edition. Some insights are provided here below."
+"This document is mainly dedicated to Odoo on-premise users who don't benefit"
+" from an out-of-the-box solution to send and receive emails in Odoo, unlike "
+"`Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh "
+"<https://www.odoo.sh>`__."
 msgstr ""
+"Этот документ, в основном, посвящен пользователям Odoo на собственном "
+"сервере, не пользуются нестандартные решения для передачи и приема "
+"электронных писем в Odoo, в отличие от `Odoo Online "
+"<https://www.odoo.com/trial> `__ &amp;` Odoo.sh <https://www.odoo.sh> `__."
 
-#: ../../discuss/email_servers.rst:14
-msgid "How to set it up"
+#: ../../discuss/email_servers.rst:9
+msgid ""
+"If no one in your company is used to manage email servers, we strongly "
+"recommend that you opt for those Odoo hosting solutions. Their email system "
+"works instantly and is monitored by professionals. Nevertheless you can "
+"still use your own email servers if you want to manage your email server's "
+"reputation yourself."
 msgstr ""
+"Если ни один из вашей компании не используется для управления почтовыми "
+"серверами, мы настоятельно рекомендуем вам выбрать эти решения для хостинга "
+"Odoo. Их система электронной почты работает мгновенно и контролируется "
+"профессионалами. Тем не менее, вы все еще можете использовать собственные "
+"почтовые серверы, если хотите самостоятельно управлять вашим сервером "
+"электронной почты."
 
 #: ../../discuss/email_servers.rst:15
 msgid ""
-"As a system admin, go to :menuselection:`Settings --> General Settings` and "
-"check *External Email Servers* (watch out: this checkbox only shows up after"
-" Odoo 10). Then, go through the following steps."
+"You will find here below some useful information on how to integrate your "
+"own email solution with Odoo."
 msgstr ""
+"Ниже вы найдете некоторую полезную информацию о том, как интегрировать "
+"собственное решение электронной почты с Odoo."
 
-#: ../../discuss/email_servers.rst:21
+#: ../../discuss/email_servers.rst:18
 msgid ""
-"Office 365 doesn't allow external hosts like Odoo. Consequently you can't "
-"use Office 365 email servers to send or receive messages in Odoo."
+"Office 365 email servers don't allow easiliy to send external emails from "
+"hosts like Odoo. Refer to the `Microsoft's documentation "
+"<https://support.office.com/en-us/article/How-to-set-up-a-multifunction-"
+"device-or-application-to-send-email-using-"
+"Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to make it work."
 msgstr ""
+"Серверы электронной почты Office 365 не позволяют просто отправлять "
+"сторонние электронные письма с хостов, таких как Odoo. Обратитесь к "
+"`документации Microsoft <https://support.office.com/en-us/article/How-to-"
+"set-up-a-multifunction-device-or-application-to-send-email-using-"
+"Office-365-69f58e99-c550-4274-ad18-c805d654b4c4> `__ чтобы это заработало."
+
+#: ../../discuss/email_servers.rst:24
+msgid "How to manage outbound messages"
+msgstr "Как управлять исходящими сообщениями"
 
 #: ../../discuss/email_servers.rst:26
-msgid "Set an outgoing email server for outbound messages"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:27
 msgid ""
-"You need the SMTP data of your email provider (Gmail, Outlook, Yahoo, AOL, "
-"etc.) as well as your admin credentials. Once all the information has been "
-"filled out, click on *Test Connection*."
+"As a system admin, go to :menuselection:`Settings --> General Settings` and "
+"check *External Email Servers*. Then, click *Outgoing Mail Servers* to "
+"create one and reference the SMTP data of your email server. Once all the "
+"information has been filled out, click on *Test Connection*."
 msgstr ""
+"Как администратор системы, перейдите к: menuselection: `Настройка -&gt; "
+"Общие налаштування` и проверьте * внешние серверы электронной почты *. "
+"Нажмите * Серверы исходящей почты *, чтобы создать и указать SMTP-данные "
+"вашего сервера электронной почты. Когда вся информация будет заполнена, "
+"нажмите кнопку * Проверить подключение *."
 
-#: ../../discuss/email_servers.rst:35
-msgid "Set an incoming email server for inbound messages"
-msgstr ""
+#: ../../discuss/email_servers.rst:31
+msgid "Here is a typical configuration for a G Suite server."
+msgstr "Вот типичное настройки сервера G Suite."
 
 #: ../../discuss/email_servers.rst:36
+msgid "Then set your email domain name in the General Settings."
+msgstr "Затем установите имя домена электронной почты в общих настройках."
+
+#: ../../discuss/email_servers.rst:39
+msgid "Can I use an Office 365 server"
+msgstr "Можете ли вы использовать сервер Office 365"
+
+#: ../../discuss/email_servers.rst:40
 msgid ""
-"Fill out the form according to your email provider’s settings. Leave the "
-"*Actions to Perform on Incoming Mails* blank. Once all the information has "
-"been filled out, click on *TEST & CONFIRM*."
+"You can use an Office 365 server if you run Odoo on-premise. Office 365 SMTP"
+" relays are not compatible with Odoo Online."
 msgstr ""
+"Вы можете использовать сервер Office 365, если вы запускаете Odoo на "
+"собственном сервере. Реестры SMTP Office 365 несовместимы с Odoo Online."
 
 #: ../../discuss/email_servers.rst:43
 msgid ""
-"By default inbound messages are fetched every 5 minutes. You can change this"
-" value in developer mode. Go to :menuselection:`Settings --> Technical --> "
-"Automation --> Scheduled Actions` and look for *Mail: Fetchmail Service*."
+"Please refer to `Microsoft's documentation <https://support.office.com/en-"
+"us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to configure"
+" a SMTP relay for your Odoo's IP address."
 msgstr ""
+"Пожалуйста, обратитесь к `документации Microsoft <https://support.office.com"
+"/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4> `__ для "
+"настройки ретранслятора SMTP для вашего IP-адреса Odoo."
 
-#: ../../discuss/email_servers.rst:49
-msgid "Set the domain name"
-msgstr ""
+#: ../../discuss/email_servers.rst:47
+msgid "How to use a G Suite server"
+msgstr "Как использовать сервер G Suite"
 
-#: ../../discuss/email_servers.rst:50
+#: ../../discuss/email_servers.rst:48
 msgid ""
-"Enter the domain name of your email servers (e.g. mycompany.com) in General "
-"Settings."
+"You can use an G Suite server for any Odoo hosting type. To do so you need "
+"to setup the SMTP relay service. The configuration steps are explained in "
+"`Google documentation "
+"<https://support.google.com/a/answer/2956491?hl=en>`__."
 msgstr ""
+"Вы можете использовать сервер G Suite для любого типа хостинга Odoo. Чтобы "
+"это сделать, вам необходимо установить обслуживания SMTP. Шаги настройки "
+"объясняются в документации `Google "
+"<https://support.google.com/a/answer/2956491?hl=en> `__."
 
-#: ../../discuss/email_servers.rst:57
-msgid "Create a catchall address"
-msgstr ""
+#: ../../discuss/email_servers.rst:55
+msgid "Be SPF-compliant"
+msgstr "Будьте совместимыми с SPF"
 
-#: ../../discuss/email_servers.rst:58
+#: ../../discuss/email_servers.rst:56
 msgid ""
-"When a contact replies to an email sent from Odoo, the *reply-to* address is"
-" a generic address used to route the reply to the right discussion thread in"
-" Odoo (opportunity, order, task, etc.) and to the inbox of all its "
-"followers. By default this address is \"catchall@\" but it can be changed."
+"In case you use SPF (Sender Policy Framework) to increase the deliverability"
+" of your outgoing emails, don't forget to authorize Odoo as a sending host "
+"in your domain name settings. Here is the configuration for Odoo Online:"
 msgstr ""
+"Если вы используете SPF (Policy Framework для отправителей), чтобы увеличить"
+" производительность выходных электронных писем, не забудьте авторизовать "
+"Odoo как отправителя в настройках вашего доменного имени. Вот настройки для "
+"Odoo Online:"
 
-#: ../../discuss/email_servers.rst:63
+#: ../../discuss/email_servers.rst:60
 msgid ""
-"Create a catchall address in your email server settings. We advise you to "
-"use \"catchall@\" so that everything works out straight away. If you want to"
-" use another alias, you have extra steps in Odoo:"
+"If no TXT record is set for SPF, create one with following definition: "
+"v=spf1 include:_spf.odoo.com ~all"
 msgstr ""
+"Если для SPF нет записи TXT, создайте его с последующим определением: v = "
+"spf1 include: _spf.odoo.com ~ all"
 
-#: ../../discuss/email_servers.rst:67
-msgid "Activate the developer mode from your Settings Dashboard."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:72
+#: ../../discuss/email_servers.rst:62
 msgid ""
-"Refresh your screen. Then go to :menuselection:`Settings --> Technical --> "
-"Parameters --> System Parameters` and enter your custom catchall alias in "
-"*mail.catchall.alias*."
+"In case a SPF TXT record is already set, add \"include:_spf.odoo.com\". e.g."
+" for a domain name that sends emails via Odoo Online and via G Suite it "
+"could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 msgstr ""
+"Если запрос SPF TXT уже установлено, добавьте &quot;include: "
+"_spf.odoo.com&quot;. например, для доменного имени, которое направляет "
+"электронные письма через Odoo Online, и через G Suite это может быть: v = "
+"spf1 include: _spf.odoo.com include: _spf.google.com ~ all"
 
-#: ../../discuss/email_servers.rst:79
-msgid "You can edit the email alias used for bounced messages the same way."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:82
-msgid "How to use my own email servers with Odoo Online"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:83
-msgid ""
-"Odoo Online comes up with an embedded and ready-to-use email server "
-"(*@yourcompany.odoo.com*). We recommend to keep this default setting as it "
-"is really convenient. Indeed, while it is Odoo-labelled, the visible source "
-"of any message sent from Odoo will be your personal email address (your Odoo"
-" login). Your contacts will therefore trust your messages."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:90
-msgid ""
-"You can still use your own email servers if you want your contacts to see "
-"your historic email address when they reply to your messages or if you want "
-"to manage the reputation of your email servers yourself."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:94
-msgid "There are 2 methods:"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:96
-msgid ""
-"[Recommended] **Use a catchall redirection** (your server -> Odoo server) to"
-" receive emails in Odoo in real time thanks to the Odoo email server. Create"
-" a catchall address in your email server settings. Then apply following "
-"redirection: catchall@yourdomain.ext -> catchall@yourcompany.odoo.com. "
-"That's it you're ready to go!"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:102
-msgid ""
-"**Use a catchall mailbox** to exclusively use your own email server. That "
-"way you can also manage your email server reputation (blacklisting, etc). "
-"However, incoming messages are fetched from the email server thanks to a "
-"cron running every hour. This is the shortest time lap for crons in Online "
-"instances. If you opt for this solution, simply follow the procedure of "
-"above section."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:111
-msgid "How to be SPF-compliant when using external email servers in Odoo"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:112
-msgid ""
-"Sender Policy Framework (SPF) is an email-validation system that checks that"
-" incoming mail from a domain comes from a host authorized by that domain's "
-"administrator. Such a security system is used in most email servers. If you "
-"don't comply with it, your emails sent from Odoo will be likely flagged as "
-"spam."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:118
-msgid ""
-"To be SPF-compliant, you need to authorize Odoo as a sending host in your "
-"domain name settings:"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:121
-msgid "Sign in to your domain’s account at your domain host."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:122
-msgid "Locate the page for updating your domain’s DNS records."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:123
-msgid ""
-"If no TXT record is set, create one with following definition: v=spf1 "
-"include:_spf.odoo.com ~all"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:125
-msgid "In case a TXT record is already set, add \"include:_spf.odoo.com\"."
-msgstr ""
-
-#: ../../discuss/email_servers.rst:127
-msgid "e.g. for a Gmail server it should be:"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:129
-msgid "v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
-msgstr ""
-
-#: ../../discuss/email_servers.rst:131
+#: ../../discuss/email_servers.rst:66
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
 msgstr ""
+"Найдите `здесь <https://www.mail-tester.com/spf/> `__ точную процедуру "
+"создания или изменения TXT-записи в собственном регистраторе доменов."
 
-#: ../../discuss/email_servers.rst:134
+#: ../../discuss/email_servers.rst:69
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
 msgstr ""
+"Завершение вашего нового записи SPF может занять до 48 часов, но это, как "
+"правило, происходит быстрее."
 
-#: ../../discuss/email_servers.rst:137
+#: ../../discuss/email_servers.rst:72
 msgid ""
 "Adding more than one SPF record for a domain can cause problems with mail "
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
 msgstr ""
+"Добавление нескольких записей SPF для домена может вызвать проблемы с "
+"доставкой почты и классификации спама. Вместо этого мы рекомендуем "
+"использовать только одна запись SPF, изменяя его, чтобы авторизовать Odoo."
 
-#: ../../discuss/email_servers.rst:142
-msgid "How to choose between Odoo and my traditional email box"
-msgstr ""
+#: ../../discuss/email_servers.rst:77
+msgid "Allow DKIM"
+msgstr "Позвольте DKIM"
 
-#: ../../discuss/email_servers.rst:143
+#: ../../discuss/email_servers.rst:78
 msgid ""
-"Odoo Discuss is a perfect tool to send and read messages related to business"
-" documents. However it doesn't aim to replace a full-featured email solution"
-" (Gmail, Outlook, Yahoo, AOL, etc.). We recommend to take the most out of "
-"both systems without mingling them: What is related to Odoo business objects"
-" or applications goes into Odoo; What is not can be managed into your "
-"external email box."
+"You should do the same thing if DKIM (Domain Keys Identified Mail) is "
+"enabled on your email server. In the case of Odoo Online & Odoo.sh, you "
+"should add a DNS \"odoo._domainkey\" CNAME record to "
+"\"odoo._domainkey.odoo.com\". For example, for \"foo.com\" they should have "
+"a record \"odoo._domainkey.foo.com\" that is a CNAME with the value "
+"\"odoo._domainkey.odoo.com\"."
 msgstr ""
+"Вы должны делать то же самое, если на вашем сервере электронной почты "
+"включены DKIM (Domain Keys Identified Mail). В случае с Odoo Online и "
+"Odoo.sh, вы должны добавить DNS &quot;odoo._domainkey&quot; запись CNAME на "
+"&quot;odoo._domainkey.odoo.com&quot;. Например, для &quot;foo.com&quot; они "
+"должны иметь запись &quot;odoo._domainkey.foo.com&quot;, то есть CNAME со "
+"значением &quot;odoo._domainkey.odoo.com&quot;."
 
-#: ../../discuss/email_servers.rst:150
-msgid ""
-"To do so, create specific email aliases to use in Odoo (to generate leads or"
-" opportunities, helpdesk tickets, etc.). If you take an email alias already "
-"used for messaging outside of Odoo, incoming messages will land into both "
-"systems. This will negatively impact your productivity."
+#: ../../discuss/email_servers.rst:86
+msgid "How to manage inbound messages"
+msgstr "Как управлять входящими сообщениями"
+
+#: ../../discuss/email_servers.rst:88
+msgid "Odoo relies on generic email aliases to fetch incoming messages."
 msgstr ""
+"Odoo возлагается на общие псевдонимы электронной почты, чтобы получать "
+"входящие сообщения."
+
+#: ../../discuss/email_servers.rst:90
+msgid ""
+"**Reply messages** of messages sent from Odoo are routed to their original "
+"discussion thread (and to the inbox of all its followers) by the catchall "
+"alias (**catchall@**)."
+msgstr ""
+"** Ответы сообщений **, отправленных с Odoo, направляются в их оригинальный "
+"дискуссионный поток (и в папку &quot;Входящие&quot; всех его пиписникив) с "
+"помощью псевдонима catchall (** catchall @ **)."
+
+#: ../../discuss/email_servers.rst:94
+msgid ""
+"**Bounced messages** are routed to **bounce@** in order to track them in "
+"Odoo. This is especially used in `Odoo Email Marketing "
+"<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
+"recipients."
+msgstr ""
+"** Отсканированные сообщение ** направляются на отказ @, чтобы отслеживать "
+"их в Odoo. Это особенно используется в `Odoo Email Marketing, "
+"<https://www.odoo.com/page/email-marketing> `__ чтобы отказаться от "
+"недействительных получателей."
+
+#: ../../discuss/email_servers.rst:98
+msgid ""
+"**Original messages**: Several business objects have their own alias to "
+"create new records in Odoo from incoming emails:"
+msgstr ""
+"** Оригинальные сообщение **: для некоторых бизнес-объектов является "
+"собственный псевдоним для создания новых записей в Odoo из входящих "
+"сообщений электронной почты:"
+
+#: ../../discuss/email_servers.rst:101
+msgid ""
+"Sales Channel (to create Leads or Opportunities in `Odoo CRM "
+"<https://www.odoo.com/page/crm>`__),"
+msgstr ""
+"Канал продаж (для создания лидов или возможностей в `Odoo CRM "
+"<https://www.odoo.com/page/crm> `__),"
+
+#: ../../discuss/email_servers.rst:103
+msgid ""
+"Support Channel (to create Tickets in `Odoo Helpdesk "
+"<https://www.odoo.com/page/helpdesk>`__),"
+msgstr ""
+"Поддержка канала (для создания заявок в `Службе поддержки Odoo "
+"<https://www.odoo.com/page/helpdesk> `__),"
+
+#: ../../discuss/email_servers.rst:105
+msgid ""
+"Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
+"/project-management>`__),"
+msgstr ""
+"Проекты (для создания новых задач в `Проекте Odoo <https://www.odoo.com/page"
+"/project-management> `__),"
+
+#: ../../discuss/email_servers.rst:107
+msgid ""
+"Job Positions (to create Applicants in `Odoo Recruitment "
+"<https://www.odoo.com/page/recruitment>`__),"
+msgstr ""
+"Вакансии (для создания заявок в `Рекрутинга Odoo "
+"<https://www.odoo.com/page/recruitment> `__),"
+
+#: ../../discuss/email_servers.rst:109
+msgid "etc."
+msgstr "и т.д."
+
+#: ../../discuss/email_servers.rst:111
+msgid ""
+"Depending on your mail server, there might be several methods to fetch "
+"emails. The easiest and most recommended method is to manage one email "
+"address per Odoo alias in your mail server."
+msgstr ""
+"В зависимости от вашего почтового сервера может существовать несколько "
+"способов получения сообщений электронной почты. Самый и наиболее "
+"рекомендуемый способ заключается в управлении одному адресу электронной "
+"почты на псевдонимы Odoo на вашем почтовом сервере."
+
+#: ../../discuss/email_servers.rst:115
+msgid ""
+"Create the corresponding email addresses in your mail server (catchall@, "
+"bounce@, sales@, etc.)."
+msgstr ""
+"Создайте соответствующие электронные адреса на своем почтовом сервере "
+"(catchall @, bounce @, sales @ и т.д.)."
+
+#: ../../discuss/email_servers.rst:117
+msgid "Set your domain name in the General Settings."
+msgstr "Установите свое доменное имя в общих настройках."
+
+#: ../../discuss/email_servers.rst:122
+msgid ""
+"If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for "
+"each alias. You can do it from the General Settings as well. Fill out the "
+"form according to your email provider’s settings. Leave the *Actions to "
+"Perform on Incoming Mails* blank. Once all the information has been filled "
+"out, click on *TEST & CONFIRM*."
+msgstr ""
+"Если вы используете Odoo на собственном сервере, создайте * входной почтовый"
+" сервер * в Odoo для каждого псевдонима. Вы также можете это сделать в общих"
+" настройках. Заполните форму в соответствии с вашими настроек поставщика "
+"услуг электронной почты. Оставьте * действия, которые нужно выполнить * на "
+"входных письмах, пустыми. Когда вся информация будет заполнена, нажмите на *"
+" Проверка и подтверждение *."
+
+#: ../../discuss/email_servers.rst:131
+msgid ""
+"If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming "
+"messages to Odoo's domain name rather than exclusively use your own email "
+"server. That way you will receive incoming messages without delay. Indeed, "
+"Odoo Online is fetching incoming messages of external servers once per hour "
+"only. You should set redirections for all the email addresses to Odoo's "
+"domain name in your email server (e.g. *catchall@mydomain.ext* to "
+"*catchall@mycompany.odoo.com*)."
+msgstr ""
+"Если вы используете Odoo Online или Odoo.sh, мы рекомендуем переадресовывать"
+" входящие сообщения на доменное имя Odoo, а не только использовать свой "
+"собственный сервер электронной почты. Таким образом вы получите входящие "
+"сообщения без задержки. Действительно, Odoo Online получает входящие "
+"сообщения внешних серверов только раз в час. Вы должны установить "
+"перенаправления для всех адресов электронной почты к доменному имени Odoo на"
+" своем сервере электронной почты (например, *catchall@mydomain.ext*, на "
+"*catchall@mycompany.odoo.com*)."
+
+#: ../../discuss/email_servers.rst:138
+msgid ""
+"All the aliases are customizable in Odoo. Object aliases can be edited from "
+"their  respective configuration view. To edit catchall and bounce aliases, "
+"you first need to activate the developer mode from the Settings Dashboard."
+msgstr ""
+"Все псевдонимы можно настроить в Odoo. Псевдонимы объектов можно "
+"редактировать по соответствующему виду настройки. Чтобы изменить атрибуты "
+"catchall и bounce, нужно сначала активировать режим разработчика на панели "
+"управления настроек."
+
+#: ../../discuss/email_servers.rst:146
+msgid ""
+"Then refresh your screen and go to :menuselection:`Settings --> Technical "
+"--> Parameters --> System Parameters` to customize the aliases "
+"(*mail.catchall.alias* & * mail.bounce.alias*)."
+msgstr ""
+"Затем обновите свой экран и перейдите к: menuselection: `Настройка -&gt; "
+"Технические -&gt; Параметры -&gt; Параметры системы` для настройки "
+"псевдонима (* mail.catchall.alias * и * mail.bounce.alias *)."
+
+#: ../../discuss/email_servers.rst:153
+msgid ""
+"By default inbound messages are fetched every 5 minutes in Odoo on-premise. "
+"You can change this value in developer mode. Go to :menuselection:`Settings "
+"--> Technical --> Automation --> Scheduled Actions` and look for *Mail: "
+"Fetchmail Service*."
+msgstr ""
+"По умолчанию входящие сообщения загружаются каждые 5 минут в режиме ожидания"
+" в Odoo. Вы можете изменить это значение в режиме разработчика. Перейдите к:"
+" menuselection: `Настройка -&gt; Технические -&gt; Автоматизация -&gt; "
+"Запланированные дии` и найдите * Mail: Fetchmail Service *."
 
 #: ../../discuss/mail_twitter.rst:3
 msgid "How to follow Twitter feed from Odoo"
-msgstr ""
+msgstr "Как следить за Twitter в Odoo"
 
 #: ../../discuss/mail_twitter.rst:8
 msgid ""
@@ -266,10 +404,13 @@ msgid ""
 "Odoo Discuss channels of your choice. The tweets are retrieved periodically "
 "from Twitter. An authenticated user can retweet the messages."
 msgstr ""
+"Вы можете следить за конкретными хэш-тегами в Twitter и просматривать твиты "
+"в пределах каналов Обсуждение Odoo по вашему выбору. Твиты периодически "
+"извлекаются из Twitter. Прошедшие проверку может ретвититы сообщения."
 
 #: ../../discuss/mail_twitter.rst:13
 msgid "Setting up the App on Twitter's side"
-msgstr ""
+msgstr "Настройка программы по стороны Twitter"
 
 #: ../../discuss/mail_twitter.rst:15
 msgid ""
@@ -277,10 +418,14 @@ msgid ""
 " for tweets, and through which a user can retweet. To set up this app, go to"
 " http://apps.twitter.com/app/new and put in the values:"
 msgstr ""
+"Twitter использует &quot;Программа&quot; со своей стороны, открывает путь, к"
+" которому Odoo требует твитов, и с помощью которого пользователь может "
+"восстановить ретвиты. Чтобы настроить эту программу, перейдите на страницу "
+"http://apps.twitter.com/app/new и введите значения:"
 
 #: ../../discuss/mail_twitter.rst:19
 msgid "Name: this is the name of the application on Twitter"
-msgstr ""
+msgstr "Название: это название программы на Twitter"
 
 #: ../../discuss/mail_twitter.rst:21
 msgid ""
@@ -289,6 +434,10 @@ msgid ""
 "\"http://www.example.com\", you should put \"http://www.example.com/web\" in"
 " this field."
 msgstr ""
+"Сайт: это внешняя URL-адрес базы данных Odoo, добавив &quot;/ web&quot;. "
+"Например, если ваша версия Odoo размещена на "
+"&quot;http://www.example.com&quot;, в этом поле следует добавить "
+"&quot;http://www.example.com/web&quot;."
 
 #: ../../discuss/mail_twitter.rst:25
 msgid ""
@@ -296,21 +445,29 @@ msgid ""
 "the previous example you should write "
 "\"http://www.example.com/web/twitter/callback\"."
 msgstr ""
+"Обратная URL-адрес: это адрес, по которому Twitter отвечает. После "
+"предыдущего примера следует написать "
+"&quot;http://www.example.com/web/twitter/callback&quot;."
 
 #: ../../discuss/mail_twitter.rst:28
 msgid ""
 "Do not forget to accept the terms **Developer agreement** of use and click "
 "on **Create your Twitter application** at the bottom of the page."
 msgstr ""
+"Не забудьте принять условия использования соглашения для разработчиков и "
+"нажмите кнопку ** Создать свое приложение Twitter ** в нижней части "
+"страницы."
 
 #: ../../discuss/mail_twitter.rst:33
 msgid "Getting the API key and secret"
-msgstr ""
+msgstr "Получение ключа API и секретности"
 
 #: ../../discuss/mail_twitter.rst:35
 msgid ""
 "When on the App dashboard, switch to the **Keys and Access Tokens** tab."
 msgstr ""
+"Когда вы на информационной панели программы, перейдите на вкладку ** Токены "
+"ключей и доступа **."
 
 #: ../../discuss/mail_twitter.rst:40
 msgid ""
@@ -318,10 +475,13 @@ msgid ""
 "Settings--> Twitter discuss integration` and click on **Save** to save the "
 "settings."
 msgstr ""
+"Скопируйте эти значения в Odoo в: menuselection: `Настройка -&gt; общие "
+"настройки -&gt; Настройка обсуждения Twitter` и нажмите кнопку ** Сохранить "
+"**, чтобы сохранить настройки."
 
 #: ../../discuss/mentions.rst:3
 msgid "How to grab attention of other users in my messages"
-msgstr ""
+msgstr "Как привлечь внимание других пользователей к вашим сообщениям"
 
 #: ../../discuss/mentions.rst:5
 msgid ""
@@ -334,10 +494,18 @@ msgid ""
 "name** will provide a link to the mentioned channel in either a chatter or "
 "another channel."
 msgstr ""
+"Вы можете ** вспомнить ** только в канале или в чате, набрав ** @ user-name "
+"**. Вспоминая пользователя в чате, он установит его как элемент подписки "
+"(если он еще не является им) и отправьте сообщение на почтовый ящик. "
+"Элемент, содержащий упоминание, также будет выделено жирным шрифтом в окне "
+"списка. Упоминание пользователя в канале отправлять сообщения в свой "
+"почтовый ящик. Вы не можете вспомнить пользователя в канале, который не "
+"подписался на канал. Нажатие ** # channel-name ** даст ссылку на упомянутый "
+"канал в чатах или на другом канале."
 
 #: ../../discuss/mentions.rst:15
 msgid "Direct messaging a user"
-msgstr ""
+msgstr "Прямой обмен сообщениями с пользователем"
 
 #: ../../discuss/mentions.rst:17
 msgid ""
@@ -350,10 +518,18 @@ msgid ""
 "is Online, an **orange dot** that they are Idle, and a **grey dot** that "
 "they are offline."
 msgstr ""
+"** Прямые сообщение ** - личные сообщения, доступные только отправителю и "
+"получателю. Вы можете присылать прямые сообщения другим пользователям из "
+"модуля Обсуждение, создав новую беседу или выбрав существующую с боковой "
+"панели. Прямые сообщения можно отправлять с любого места в Odoo с помощью "
+"значка всплывающей подсказки в верхней панели. Статус других пользователей "
+"отображается слева от имени. ** Зеленая точка ** указывает на то, что "
+"пользователь онлайн, ** оранжевая точка **, в которой они находятся в режиме"
+" ожидания, а ** серая точка ** - в автономном режиме."
 
 #: ../../discuss/mentions.rst:28
 msgid "Desktop notifications from Discuss"
-msgstr ""
+msgstr "Оповещения по обсуждению"
 
 #: ../../discuss/mentions.rst:30
 msgid ""
@@ -362,10 +538,14 @@ msgid ""
 " the message contents. These can be configured or disabled by clicking on "
 "the gear icon in the corner of the notification.."
 msgstr ""
+"Вы можете выбрать отображение ** настольного оповещения **, когда вы "
+"получаете новое прямое сообщение. В извещении отображается сообщение "
+"отправителя и короткий предварительный просмотр содержимого сообщения. Они "
+"могут быть настроены или выключены, нажав значок прибора в углу уведомления."
 
 #: ../../discuss/monitoring.rst:3
 msgid "How to be responsive at work thanks to my Odoo inbox"
-msgstr ""
+msgstr "Как быть отзывчивым на работе благодаря моим входным сообщению Odoo"
 
 #: ../../discuss/monitoring.rst:5
 msgid ""
@@ -373,10 +553,14 @@ msgid ""
 "everything you do in Odoo. Notifications and messages from everything you "
 "follow or in which you are mentioned appear in your inbox."
 msgstr ""
+"Используйте ** Входные ** в модуле обсуждения, чтобы контролировать "
+"обновления и прогресс во всем, что вы делаете в Odoo. Оповещения и "
+"уведомления от всего, на что вы подписаны или в чем вы упомянуты, появляются"
+" в папке Входящие."
 
 #: ../../discuss/monitoring.rst:13
 msgid "You can keep an eye on your **Inbox** from any screen."
-msgstr ""
+msgstr "Вы можете следить за папкой ** Входные ** с любого экрана."
 
 #: ../../discuss/monitoring.rst:18
 msgid ""
@@ -386,10 +570,16 @@ msgid ""
 "any message or notification in Discuss or any of the item-specific chatters "
 "throughout Odoo to keep tabs on it here."
 msgstr ""
+"Обозначение элемента обозначает сообщение как ** прочитанное ** и удаляет "
+"его из папки Входящие. Если вы хотите сохранить объект для дальнейшего "
+"ссылки или действия, отметьте его звездочкой, чтобы добавить в поле ** "
+"Обозначение **. Вы можете собрать любое сообщение или сообщение в Обсуждение"
+" или любого из участников, занимающихся конкретными товарами в Odoo, чтобы "
+"хранить здесь вкладки."
 
 #: ../../discuss/overview.rst:3
-msgid "Why to use Odoo Discuss"
-msgstr ""
+msgid "Why use Odoo Discuss"
+msgstr "Почему нужно использовать обсуждения"
 
 #: ../../discuss/overview.rst:5
 msgid ""
@@ -401,10 +591,111 @@ msgid ""
 "chats, conversations about projects, meeting coordination, and more in one "
 "simple and searchable interface."
 msgstr ""
+"Обсуждение Odoo - это простое в использовании приложение для обмена "
+"сообщениями для команд, которые объединяют всю вашу организацию в одном "
+"месте и без проблем интегрируется с системой Odoo. Обсуждение позволяет "
+"отправлять и получать сообщения везде, где вы находитесь в Odoo, а также "
+"легко управлять своими сообщениями и сообщениями в приложении. Обсуждение "
+"позволяет создавать ** каналы ** для командных чатов, бесед о проектах, "
+"координацию встреч и т.п. в одном простом и доступном для поиска интерфейсе."
+
+#: ../../discuss/plan_activities.rst:3
+msgid "Get organized by planning activities"
+msgstr "Становитесь еще более организованными с планированием действий"
+
+#: ../../discuss/plan_activities.rst:5
+msgid ""
+"Planning activities is the perfect way to keep on track with your work. Get "
+"reminded of what needs to be done and schedule the next activities to "
+"undertake."
+msgstr ""
+"Планирование действий - это идеальный способ продолжить работу. Получите "
+"напоминание о том, что нужно сделать, и запланируйте следующие мероприятия, "
+"которые нужно выполнить."
+
+#: ../../discuss/plan_activities.rst:9
+msgid ""
+"Your activities are available wherever you are in Odoo. It is easy to manage"
+" your priorities."
+msgstr ""
+"Ваша деятельность доступна в любом месте, где вы находитесь в Odoo. Вашими "
+"приоритетами легко управлять."
+
+#: ../../discuss/plan_activities.rst:15
+msgid ""
+"Activities can be planned and managed from the chatters or in the kanban "
+"views. Here is an example for opportunities :"
+msgstr ""
+"Деятельность может быть запланирована и управляемая участниками общения и "
+"просмотров канбан. Вот пример возможностей:"
+
+#: ../../discuss/plan_activities.rst:22
+msgid "Set your activity types"
+msgstr "Установите виды деятельности"
+
+#: ../../discuss/plan_activities.rst:24
+msgid ""
+"A number of generic activities types are available by default in Odoo (e.g. "
+"call, email, meeting, etc.). If you would like to set new ones, go to "
+":menuselection:`Settings --> General settings --> Activity types`."
+msgstr ""
+"По умолчанию в Odoo доступны различные типовые виды действий (например, "
+"звонок, электронная почта, встреча и т.д.). Если вы хотите установить новые,"
+" перейдите к: menuselection: `Настройка -&gt; Общие настройки -&gt; Типы "
+"дий`."
+
+#: ../../discuss/plan_activities.rst:29
+msgid "Schedule meetings"
+msgstr "Расписание встреч"
+
+#: ../../discuss/plan_activities.rst:31
+msgid ""
+"Activities are planned for specific days. If you need to set hours, go with "
+"the *Meeting* activity type. When scheduling one, the calendar will simply "
+"open to let you select a time slot."
+msgstr ""
+"Действия запланированы на определенные дни. Если вам нужно установить часы, "
+"перейдите по типу действия * Встреча *. При планировании действия, календарь"
+" будет просто открыт, чтобы позволить вам выбрать временной интервал."
+
+#: ../../discuss/plan_activities.rst:36
+msgid ""
+"If you need to use other activity types with a calendar planning, make sure "
+"their *Category* is set as *Meeting*."
+msgstr ""
+"Если вам нужно использовать другие типы действий посредством планирования "
+"календаря, убедитесь, что их * Категория * установлена как * Встреча *."
+
+#: ../../discuss/plan_activities.rst:40
+msgid "Schedule a chain of activities to follow"
+msgstr "Запланируйте последовательность действий для их отслеживания"
+
+#: ../../discuss/plan_activities.rst:42
+msgid ""
+"Odoo helps you easily plan your usual flow of activities. Go to "
+":menuselection:`Configuration --> Activity Types` and set the common "
+"following steps as *Recommended next activities*."
+msgstr ""
+"Odoo помогает вам легко спланировать свой обычный рабочий процесс. Перейдите"
+" к: menuselection: `Настройка -&gt; Типы деятельности` и установите "
+"следующие шаги, такие как Рекомендуемые следующие действия *."
+
+#: ../../discuss/plan_activities.rst:49
+msgid ""
+"Now, when an activity is completed, you can select *Done & schedule next*. "
+"The next steps will automatically be suggested to you."
+msgstr ""
+"Теперь, когда действие завершена, вы можете выбрать * Готово и запланировать"
+" следующую *. Следующие шаги будут автоматически предложены для вас."
+
+#: ../../discuss/plan_activities.rst:55
+msgid "Have fun getting better organized by planning activities !"
+msgstr ""
+"Развлекайтесь, становясь более организованными с планированием действий!"
 
 #: ../../discuss/team_communication.rst:3
 msgid "How to efficiently communicate in team using channels"
-msgstr ""
+msgstr "Как эффективно коммуницировать в команде, используя каналы"
 
 #: ../../discuss/team_communication.rst:5
 msgid ""
@@ -413,15 +704,19 @@ msgid ""
 "communication. By having conversations that everyone in the channel can see,"
 " it's easy to keep the whole team in the loop with the latest developments."
 msgstr ""
+"Вы можете использовать ** каналы ** для организации обсуждений между "
+"отдельными группами, департаментами, проектами или любой другой группой, "
+"которая требует регулярного общения. Найдя беседы, каждый, кто видит ее в "
+"канале, легко сохранит всю команду в цикле с последними новинками."
 
 #: ../../discuss/team_communication.rst:12
 msgid "Creating a channel"
-msgstr ""
+msgstr "создание канала"
 
 #: ../../discuss/team_communication.rst:14
 msgid ""
 "In Discuss there are two types of channels - **public** and **private**."
-msgstr ""
+msgstr "В обсуждении есть два типа каналов - ** публичный ** и ** частный **."
 
 #: ../../discuss/team_communication.rst:17
 msgid ""
@@ -430,6 +725,10 @@ msgid ""
 "**private channel** can be created by any user and by default is only "
 "visible to users who have been invited to this channel."
 msgstr ""
+"** Открытый канал ** может быть создан администратором только с правами на "
+"запись, и его могут видеть все, кто в организации. Напротив, ** частный "
+"канал ** может быть создан любым пользователем, и по умолчанию он "
+"отображается только пользователям, приглашенным на этот канал."
 
 #: ../../discuss/team_communication.rst:24
 msgid ""
@@ -439,10 +738,15 @@ msgid ""
 "specific users/employees (such as department specific or sensitive "
 "information)."
 msgstr ""
+"Открытый канал лучше используется, когда многие работники должны иметь "
+"доступ к информации (например, межведомственные коммуникации или компании), "
+"тогда частный канал должен использоваться, когда информация должна быть "
+"ограничена только определенными пользователями / работниками (например, "
+"департамент или конфиденциальная информация)."
 
 #: ../../discuss/team_communication.rst:31
 msgid "Configuring a channel"
-msgstr ""
+msgstr "Настройка канала"
 
 #: ../../discuss/team_communication.rst:33
 msgid ""
@@ -454,10 +758,18 @@ msgid ""
 "follow a private channel will let other users view and join it as they would"
 " a public channel."
 msgstr ""
+"Вы можете настраивать название канала, описание, права доступа, "
+"автоматическую подписку и отправлять электронные письма с: menuselection: `#"
+" channel-name -&gt; Налаштування`. Изменяя права доступа к каналу, вы можете"
+" контролировать, какие группы могут просматривать каждый канал. Вы можете "
+"сделать канал видимым для всех пользователей, приглашенных пользователей или"
+" пользователей выбранной группы пользователей. Заметьте, если позволить "
+"&quot;всем&quot; пользоваться частным каналом, другие пользователи смогут "
+"просматривать и присоединяться к ней, поскольку это будет открытым каналом."
 
 #: ../../discuss/team_communication.rst:47
 msgid "How to set up a mailing list"
-msgstr ""
+msgstr "Как настроить список рассылки"
 
 #: ../../discuss/team_communication.rst:49
 msgid ""
@@ -468,10 +780,16 @@ msgid ""
 "next to the channel name in the list to indicate that a channel will send "
 "messages by email."
 msgstr ""
+"Канал можно настроить так, чтобы он вел себя как список рассылки. Из списка:"
+" menuselection: `# channel-name -&gt; Налаштування`, определите электронное "
+"сообщение, которое вы хотите использовать. После этого пользователи смогут "
+"опубликовать в канале и выбрать получение уведомлений с помощью определенной"
+" электронной почты. У названия канала в списке появится значок конверта, "
+"который покажет, что канал будет посылать сообщение по электронной почте."
 
 #: ../../discuss/team_communication.rst:57
 msgid "Locating a channel"
-msgstr ""
+msgstr "Поиск канала"
 
 #: ../../discuss/team_communication.rst:59
 msgid ""
@@ -479,6 +797,9 @@ msgid ""
 "**public channels** to locate the correct channel or create a new channel by"
 " clicking the plus icon."
 msgstr ""
+"Если вы не видите канал на информационной панели, вы можете искать в списке "
+"** публичных каналов **, чтобы найти нужный канал или создать новый канал, "
+"нажав значок +."
 
 #: ../../discuss/team_communication.rst:66
 msgid ""
@@ -486,16 +807,21 @@ msgid ""
 "channels. This allows the user to manually **join** and **leave** public "
 "channels from a single screen."
 msgstr ""
+"Вы также можете нажать заголовок ** КАНАЛЫ **, чтобы просмотреть список всех"
+" публичных каналов. Это позволяет пользователю вручную ** присоединяться ** "
+"и ** оставлять ** публичные каналы с одной экрана."
 
 #: ../../discuss/team_communication.rst:71
 msgid ""
 "It is always wise to search for a channel before creating a new one to "
 "ensure that duplicate entries are not created for the same topic."
 msgstr ""
+"Всегда мудро искать канал, прежде чем создавать новый, чтобы не создавать "
+"дублированные записи для одной темы."
 
 #: ../../discuss/team_communication.rst:76
 msgid "Using filters to navigate within Discuss"
-msgstr ""
+msgstr "Использование фильтров для навигации в обсуждении"
 
 #: ../../discuss/team_communication.rst:78
 msgid ""
@@ -505,24 +831,32 @@ msgid ""
 "using the underscore character \"\\ **\\_**\\ \" to represent a **single "
 "character wildcard.**"
 msgstr ""
+"Поиск в верхней строке обеспечивает доступ к той же всеобъемлющей функции "
+"поиска, присутствует в остальной части Odoo. Вы можете применить несколько "
+"** критериев фильтрации ** и ** сохранять фильтры ** для дальнейшего "
+"использования. Функция поиска принимает подстановку символов, используя "
+"символ подчеркивания &quot;\\ ** \\ _ ** \\&quot;, чтобы представлять ** "
+"подстановку одного символа **."
 
 #: ../../discuss/tracking.rst:3
 msgid "How to follow a discussion thread and define what I want to hear about"
-msgstr ""
+msgstr "Как следить за дискуссионной темой и определять, что я хочу услышать"
 
 #: ../../discuss/tracking.rst:6
 msgid "How to follow a discussion thread"
-msgstr ""
+msgstr "Как следить за темой дискуссии"
 
 #: ../../discuss/tracking.rst:7
 msgid ""
 "You can keep track of virtually any business object in Odoo (an opportunity,"
 " a quotation, a task, etc.), by **following** it."
 msgstr ""
+"Вы можете отслеживать практически любой бизнес-объект в Odoo (возможность, "
+"коммерческое предложение, задачи и т.д.), ** добавив ** это."
 
 #: ../../discuss/tracking.rst:14
 msgid "How to choose the events to follow"
-msgstr ""
+msgstr "Как выбрать события, чтобы следить за ними"
 
 #: ../../discuss/tracking.rst:15
 msgid ""
@@ -530,10 +864,13 @@ msgid ""
 "example below shows the options available when following a **task** in the "
 "**Project** app."
 msgstr ""
+"Вы можете выбрать типы событий, о которых вы хотите получать сообщения. "
+"Приведенный ниже пример показывает параметры, доступные при выполнении ** "
+"задачи ** в приложении ** Проект **."
 
 #: ../../discuss/tracking.rst:23
 msgid "How to add other followers"
-msgstr ""
+msgstr "Как добавить других подписчиков"
 
 #: ../../discuss/tracking.rst:24
 msgid ""
@@ -541,10 +878,13 @@ msgid ""
 "as a follower will send messages posted in the chatter to the channel with a"
 " link back to the original document."
 msgstr ""
+"Вы можете пригласить других пользователей и добавлять каналы как подписки. "
+"Добавление канала как подписки отправит сообщения, опубликованные в чате, к "
+"каналу со ссылкой на исходный документ."
 
 #: ../../discuss/tracking.rst:34
 msgid "How to be a default follower"
-msgstr ""
+msgstr "Как быть подписчиком по умолчанию"
 
 #: ../../discuss/tracking.rst:35
 msgid ""
@@ -553,6 +893,11 @@ msgid ""
 " new record created to get notified of specific events (e.g. a new task "
 "created, an opportunity won)."
 msgstr ""
+"Вы автоматически устанавливаете себя как подписчик по умолчанию любого "
+"элемента, который вы создаете. В некоторых программах, таких как CRM и "
+"Проект, вы можете стать подписчиком по умолчанию любого новой записи, "
+"созданного для получения уведомлений о конкретных событиях (например, "
+"создано новое задание, выигранная возможность)."
 
 #: ../../discuss/tracking.rst:40
 msgid ""
@@ -560,3 +905,6 @@ msgid ""
 " in CRM, the project in Project). Then, choose the events you want to hear "
 "about."
 msgstr ""
+"Чтобы это сделать, начните следующий родительский бизнес-объект (например, "
+"канал сбыта в CRM проект в проекте). Выберите события, по которым вы хотите "
+"следить."
