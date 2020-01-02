@@ -299,8 +299,7 @@ texinfo_documents = [
 odoo_cover_external = {
     'https://odoo.com/documentation/user/accounting/overview/main_concepts/memento.html'   : 'banners/m_accounting.jpg',
     'https://odoo.com/documentation/user/inventory/overview/concepts/double-entry.html' : 'banners/m_1.jpg',
-    'https://odoo.com/documentation/user/inventory/management/reporting/valuation_methods_continental.html'    : 'banners/m_2.jpg',
-    'https://odoo.com/documentation/user/inventory/management/reporting/valuation_methods_anglo_saxon.html'    : 'banners/m_2.jpg',
+    'https://odoo.com/documentation/user/inventory/management/reporting/inventory_valuation_config.html'    : 'banners/m_2.jpg',
 }
 
 github_user = 'odoo'

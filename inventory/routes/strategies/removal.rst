@@ -189,5 +189,4 @@ removal dates.
 
 .. seealso::
 
-    * :doc:`../../management/reporting/valuation_methods_continental`
-    * :doc:`../../management/reporting/valuation_methods_anglo_saxon`
+    * :doc:`../../management/reporting/inventory_valuation_config`
