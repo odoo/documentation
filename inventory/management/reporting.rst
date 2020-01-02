@@ -11,3 +11,4 @@ Valuation Methods
    reporting/integrating_landed_costs
    reporting/valuation_methods_continental
    reporting/valuation_methods_anglo_saxon
+   ../../accounting/others/inventory/avg_price_valuation
