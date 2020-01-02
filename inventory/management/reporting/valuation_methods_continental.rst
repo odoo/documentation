@@ -355,4 +355,4 @@ Let's take the case of a reseller.
 
   * :doc:`../../routes/strategies/removal`
   * :doc:`../../../accounting/others/inventory/avg_price_valuation`
-  * :doc:`../../routes/costing/landed_costs`
+  * :doc:`integrating_landed_costs`
