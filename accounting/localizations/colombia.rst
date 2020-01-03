@@ -213,11 +213,9 @@ After this:
 - A ZIP containing the legal XML and the PDF is downloaded and
   displayed in the invoice chatter:
 
-.. image:: media/colombia15.png
-   :align: center
+  .. image:: media/colombia15.png
 
-.. image:: media/colombia16.png
-   :align: center
+  .. image:: media/colombia16.png
 
 - The Electronic Invoice status changes to "Accepted"
 
