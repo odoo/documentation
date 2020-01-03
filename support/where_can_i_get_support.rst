@@ -13,8 +13,8 @@ Users who have a valid Odoo Enterprise subscription may always contact our suppo
 
 Please include in your request:
 
-- your subscription number,
-- if your database is hosted by Odoo (Odoo Online or Odoo.sh), please also send the URL of your database.
+- your subscription number
+- the URL of your database if your database is hosted by Odoo (Odoo Online or Odoo.sh)
 
 Our agents will get back to you as soon as possible.
 

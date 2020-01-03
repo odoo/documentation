@@ -30,7 +30,7 @@ log-in.
 
 .. note::
     Remember that each additional user will increase your subscription fees.
-    Refer to our `*Pricing page* <https://www.odoo.com/pricing>`__ for more information.
+    Refer to our `Pricing page <https://www.odoo.com/pricing>`_ for more information.
 
 .. image:: media/add_user03.png
     :align: center

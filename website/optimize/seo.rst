@@ -61,15 +61,15 @@ modules to help you build your website content:
 
 - **Odoo Slides**: publish all your Powerpoint or PDF presentations.
   Their content is automatically indexed on the web page. Example:
-  `https://www.odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`__
+  `odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`_
 
 - **Odoo Forum**: let your community create contents for you. Example:
-  `https://odoo.com/forum/1 <https://odoo.com/forum/1>`__
+  `odoo.com/forum/1 <https://odoo.com/forum/1>`_
   (accounts for 30% of Odoo.com landing pages)
 
 - **Odoo Mailing List Archive**: publish mailing list archives on your
   website. Example:
-  `https://www.odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`__
+  `odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`_
   (1000 pages created per month)
 
 .. note::
@@ -130,7 +130,7 @@ Test Your Website
 
 You can compare how your website rank, in terms of SEO, against Odoo
 using WooRank free services:
-`https://www.woorank.com <https://www.woorank.com>`__
+`woorank.com <https://www.woorank.com>`_
 
 URLs Handling
 =============
@@ -548,7 +548,7 @@ Browser Caching
 Javascript, images and CSS resources have an URL that changes
 dynamically when their content change. As an example, all CSS files are
 loaded through this URL:
-`http://localhost:8069/web/content/457-0da1d9d/web.assets\_common.0.css <http://localhost:8069/web/content/457-0da1d9d/web.assets_common.0.css>`__.
+`localhost:8069/web/content/457-0da1d9d/web.assets\_common.0.css <http://localhost:8069/web/content/457-0da1d9d/web.assets_common.0.css>`__.
 The ``457-0da1d9d`` part of this URL will change if you modify the CSS of
 your website.
 
@@ -563,7 +563,10 @@ In addition to being fast, Odoo is also more scalable than traditional
 CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
 following link provides an analysis of the major open source CMS and
 eCommerce compared to Odoo when it comes to high query volumes:
-`*https://www.odoo.com/slides/slide/197* <https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`__
+`https://www.odoo.com/slides/slide/197
+<https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`_
+
+.. todo:: fix above link
 
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 

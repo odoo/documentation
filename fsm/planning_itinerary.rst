@@ -13,9 +13,9 @@ Go to *Settings* and under *Map view* click on *Get token*.
    :alt: Configure Mapbox for Odoo Field Service
 
 Click on :menuselection:`Start mapping for free --> fill the Username, email and password fields
---> agree with their Terms of Service and Privacy Policy --> Get started`.
-You will be redirected to your account. Scrolling the page down you will find *Access tokens*.
-Copy the *Default public token.
+--> agree with their Terms of Service and Privacy Policy --> Get started`. You will be redirected to
+your account. Scrolling the page down you will find *Access tokens*. Copy the *Default public
+token*.
 
 .. image:: media/plit2.png
    :align: center

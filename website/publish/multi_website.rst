@@ -68,7 +68,9 @@ requested to sign in.
   :align: center
 
 .. note::
-    When switching, you are redirected to the same domain path on the other website (e.g.,/shop/myproduct). If this URL is not used, you will be redirected to a 404 page but suggested to create a new page from there.
+   When switching, you are redirected to the same domain path on the other website
+   (e.g., ``/shop/myproduct``). If this URL is not used, you will be redirected to a 404 page but
+   prompted to create a new page from there.
 
 Add features
 ============
@@ -111,14 +113,14 @@ Manage domain names
 As said earlier, your websites can either share the same domain name or
 use a specific one. If you share it and want to adapt the content per
 region, set country groups in the setting of each website. Visitors will
-be redirected to the right website using Geo IP.
+be redirected to the right website using GeoIP.
 
 .. image:: media/multi_website18.png
   :align: center
 
 .. note::
   Geo IP is installed by default in Odoo Online. If you run Odoo
-  on-premise, don’t forget to install *Geoip* library.
+  on-premise, don’t forget to install *GeoIP* library.
 
 `Read the full documenation about domain names here <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__, 
 
