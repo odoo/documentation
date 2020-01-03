@@ -52,7 +52,8 @@ the database is roll-backed as it was before the update.
 You still have access to the log of the failed update, so you can troubleshoot it.
 
 The demo data is not loaded, as it is not meant to be used in a production database.
-The unit tests are not performed, as it would increase the unavailabity time of the production database during the updates.
+The unit tests are not performed, as it would increase the unavailability time of the production
+database during the updates.
 
 Partners using trial projects should be aware their production branch, along with all the staging branches,
 will automatically be set back to the development stage after 30 days.

@@ -30,7 +30,7 @@ expiration time for the quotation.
 
 On each template, you can also specify discounts if the option is
 activated in the *Sales* settings. The base price is set in the
-product configuration and can be alterated by customer pricelists.
+product configuration and can be changed by customer pricelists.
 
 .. TODO (TO LINK DOC LATER WHEN DONE based on this https://www.odoo.com/documentation/user/13.0/sales/products_prices/prices/pricing.html
 

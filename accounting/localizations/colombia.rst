@@ -8,7 +8,7 @@ Introduction
 Electronic invoicing for Colombia is available from Odoo 12 and
 requires the next modules:
 
-#. **l11n_co**: All the basic data to manage the accounting module,
+#. **l10n_co**: All the basic data to manage the accounting module,
    contains the default setup for: chart of accounts, taxes,
    retentions, identification document types
 #. **l10n_co_edi**: This module includes all the extra fields that are
@@ -213,11 +213,9 @@ After this:
 - A ZIP containing the legal XML and the PDF is downloaded and
   displayed in the invoice chatter:
 
-.. image:: media/colombia15.png
-   :align: center
+  .. image:: media/colombia15.png
 
-.. image:: media/colombia16.png
-   :align: center
+  .. image:: media/colombia16.png
 
 - The Electronic Invoice status changes to "Accepted"
 

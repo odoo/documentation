@@ -12,7 +12,7 @@ files containing pending payments made with an SDD mandate.
 
 .. note::
    | SDD is supported by all SEPA countries, which includes the 28 member states of the European Union as well as additional countries. 
-   | `List of all SEPA countries. <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_
+   | `List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_.
 
 Configuration
 =============
@@ -120,7 +120,7 @@ Finally, upload this file to your bank to process the payments.
 .. seealso::
    * :doc:`../../bank/setup/create_bank_account`
    * `Odoo Academy: SEPA Direct Debit Mandates (SDD) <https://www.odoo.com/r/Zxs>`_
-   * `List of all SEPA countries. <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_
+   * `List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_.
 
 
 

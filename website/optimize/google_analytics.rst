@@ -24,7 +24,8 @@ To follow your website's traffic with Google Analytics:
       .. image:: media/google_analytics_settings.png
         :align: center
 
-To make your first steps in Google Analytics, refer to `Google Documentation. <https://support.google.com/analytics/answer/1008015?hl=en/>`__
+To make your first steps in Google Analytics, refer to `Google Documentation
+<https://support.google.com/analytics/answer/1008015?hl=en/>`_.
 
 .. seealso::
 

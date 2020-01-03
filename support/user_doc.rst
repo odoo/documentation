@@ -54,6 +54,8 @@ Edit an existing page
 RST Cheat Sheet
 ---------------
 
+.. TODO merge with our internal tutorial : https://docs.google.com/document/d/19QkK9zDpoHJ57QtBgAs0sjInfO8zR_3mfCIr-CxS85Y/
+
 Here is a summary of the markup elements you may use while editing our documentation.
 
 +------------------------------+--------------------------+---------------------------------------+
@@ -120,14 +122,13 @@ Add images to your documents
 .. Add a page about a new topic
 .. ============================
 
-.. TODO
-
+.. TODO publish our internal tutorial : https://docs.google.com/document/d/1EP32VFjN08piZoGn1BXT6ZOVb5AKUTieeeuK10nxZz8/
 
 
 Technical Details for Nerds
 ===========================
 
-Advanced users may, of course, fork and clone `the GitHub repository <https://github.com/odoo/documentation-user>`_.
+Advanced users may, of course, fork and clone the `GitHub repository <https://github.com/odoo/documentation-user>`_.
 Then submit a pull request with the canonical Git/GitHub workflow.
 
 See our `README <https://github.com/odoo/documentation-user/blob/13.0/README.rst>`_ file about building

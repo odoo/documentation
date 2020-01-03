@@ -45,5 +45,5 @@ is confirmed. If however you selected delivered quantities, you will
 first have to validate the delivery.
 
 Once the products are delivered, you can invoice your customer. Odoo
-will automatically add the quantities to invoiced based on how many you
+will automatically add the quantities to invoice based on how many you
 delivered if you did a partial delivery.
