@@ -8,7 +8,7 @@ Localizations
    localizations/france
    localizations/germany
    localizations/mexico
-   localizations/nederlands
+   localizations/netherlands
    localizations/spain
    localizations/switzerland
    localizations/colombia
