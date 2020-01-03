@@ -20,9 +20,9 @@ to your database, please refer to `this
 documentation <https://www.odoo.com/documentation/user/12.0/iot.html>`__.
 
 Once the IoT Box is up and running, you’ll need to link your payment
-terminal to your PoS. Open the Point of Sale app and go to *Configuration
-> Point of Sale*. Select a PoS, tick the IoT Box Device option and select
-your payment terminal.
+terminal to your PoS. Open the *Point of Sale* app and go to
+:menuselection:`Configuration --> Point of Sale`. Select a PoS, tick the IoT
+Box Device option and select your payment terminal.
 
 .. image:: media/payment_terminal_01.png
    :align: center
@@ -30,8 +30,8 @@ your payment terminal.
 Configure the Lane/5000 for Ingenico BENELUX
 --------------------------------------------
 
-Click on the F button of the terminal, then go in the *PoS Menu* >
-settings menu and enter the settings password.
+Click on the F button of the terminal, then go in the
+:menuselection:`PoS Menu --> Settings` and enter the settings password.
 
 Now, click on connexion change and TCP/IP. Type the IP of your *IoT
 Box* (you can find it on the form view of your IoT Box). Then, enter
@@ -50,9 +50,9 @@ Ingenico setting.
 .. image:: media/payment_terminal_03.png
    :align: center
 
-Go back in *Point of Sale > Configuration > Point of Sale*, go in the
-payments section and access your payment methods. Create a new payment
-method for Ingenico, select the payment terminal option Ingenico, and
+Go back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`,
+go in the payments section and access your payment methods. Create a new
+payment method for Ingenico, select the payment terminal option Ingenico, and
 select your payment terminal device.
 
 .. image:: media/payment_terminal_04.png
@@ -79,8 +79,8 @@ order in Odoo even if the connexion between the terminal and Odoo has
 issues.
 
 .. note::
-         This option will only be available if you received an error message
-         telling you the connexion failed.
+   This option will only be available if you received an error message
+   telling you the connexion failed.
 
 Once your payment is processed, on the payment record, you’ll find the
 type of card that has been used and the transaction ID.

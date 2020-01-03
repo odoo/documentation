@@ -17,7 +17,7 @@ entries are automatically balanced (sum of debits = sum of credits).
 
 .. seealso::
 
-	`Understand Odoo's accounting transactions per document <https://odoo.com/documentation/functional/accounting.html>`__
+   `Understand Odoo's accounting transactions per document <https://odoo.com/documentation/functional/accounting.html>`__
 
 Accrual and Cash Basis Methods
 ==============================
@@ -129,7 +129,7 @@ average price, LIFO (for countries allowing it) and FIFO.
 
 .. seealso::
 
-	`View impact of the valuation method on your transactions <https://odoo.com/documentation/functional/valuation.html>`__
+   `View impact of the valuation method on your transactions <https://odoo.com/documentation/functional/valuation.html>`__
 
 Easy retained earnings
 ======================
