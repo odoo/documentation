@@ -15,8 +15,8 @@ Edit an existing page
 =====================
 
 #. As our documentation is maintained on GitHub, you'll need a free `GitHub account
-   <https://help.github.com/en/articles/signing-up-for-a-new-github-account>`_.
-#. Pick a page in our `user documentation <https://www.odoo.com/documentation/user>`_.
+   <https://github.com/join>`_.
+#. Pick a page in our :doc:`user documentation <../index>`.
    **Please take care of selecting the right version of Odoo.**
 #. Click on **Edit on Github** in the left menu.
 

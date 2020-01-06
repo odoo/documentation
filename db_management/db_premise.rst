@@ -109,14 +109,9 @@ The countdown is updated everyday.
 Solutions
 '''''''''
 
-* **Add more users** on your subscription: follow the link and Validate
+- **Add more users** on your subscription: follow the link and Validate
   the upsell quotation and pay for the extra users.
-
-or
-
-* **Deactivate users** as explained in this `Documentation 
-  <https://www.odoo.com
-  /documentation/user/13.0/db_management/documentation.html#deactivating-users>`__
+- **Deactivate users** as explained in this `documentation <documentation.html#deactivating-users>`_
   and **Reject** the upsell quotation.
 
 Once your database has the correct number of users, the expiration message

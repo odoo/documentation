@@ -128,8 +128,6 @@ account for the partner you are paying but forgot to fill in the BIC
 field.
 
 .. seealso::
-
-	* :doc:`check`
-
-	.. todo:: How to define a new bank?
-	.. todo:: How to reconcile bank statements?
+   - :doc:`check`
+   - :doc:`../../bank/setup/create_bank_account`
+   - :doc:`../../bank/reconciliation/use_cases`

@@ -68,4 +68,4 @@ Offering my own services
 I am more than welcome to offer my own IAP services through Odoo Apps! It is the perfect opportunity
 to get recurring revenue for an ongoing service use rather than — and possibly instead of — a sole
 initial purchase. Please, find more information at: `In-App Purchase
-<https://www.odoo.com/documentation/master/webservices/iap.html>`_
+<https://www.odoo.com/documentation/13.0/webservices/iap.html>`_

@@ -15,9 +15,9 @@ the *Online Signature & Payment* feature.
 .. image:: media/getsignaturetovalidate01.png
     :align: center 
 
-.. note:: 
- If you are using `quotation templates <https://drive.google.com/open?id=11UaYJ0k67dA2p-ExPAYqZkBNaRcpnItCyIdO6udgyOY>`_,
- you can also pick a default setting for each template.
+.. note::
+   If you are using :doc:`quotation templates <quote_template>`, you can also pick a default setting
+   for each template.
 
 Validate an order with a signature
 ==================================

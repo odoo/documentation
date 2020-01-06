@@ -10,8 +10,9 @@ With Odoo, you can download an CODA file from your bank or accounting
 software and import it directly in Odoo. This will create all bank
 statements.
 
-.. tip:: 
-    Test now the feature `with this sample CODA file <https://drive.google.com/file/d/0B5BDHVRYo-q5UVVMbGRxUmtpVDg/view?usp=sharing>`__
+.. tip::
+   Test now the feature :download:`with this sample CODA file
+   <../../../_static/example_files/Ontvangen_CODA.2013-01-11-18.59.15.txt>`
 
 Configuration
 =============

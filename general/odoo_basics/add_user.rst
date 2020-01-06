@@ -43,6 +43,4 @@ log-in.
     Users menu`.
 
 .. seealso::
-    * `Deactivating Users <../../db_management/documentation.html#deactivating-users>`_
-
-.. todo:: Add link to How to add companies
+   - `Deactivating Users <../../db_management/documentation.html#deactivating-users>`_
