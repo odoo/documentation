@@ -19,9 +19,8 @@ Use deadline in templates
 =========================
 
 You can also set a default deadline in a *Quotation Template*. Each
-time that template is used in a quotation, that deadline is applied. You
-can find more info about quotation templates `here 
-<https://docs.google.com/document/d/11UaYJ0k67dA2p-ExPAYqZkBNaRcpnItCyIdO6udgyOY/edit>`_.
+time that template is used in a quotation, that deadline is applied. See :doc:`quote_template` for
+more information about quotation templates.
 
 .. image:: media/quotationsdeadline02.png
   :align: center 

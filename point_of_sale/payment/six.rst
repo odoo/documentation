@@ -16,8 +16,8 @@ Connect a Payment Terminal
 
 Connecting a SIX/Worldline Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
-to your database, please refer to `this documentation
-<https://www.odoo.com/documentation/user/12.0/iot.html>`__.
+to your database, please refer to the :doc:`IoT documentation
+<../../iot/config/connect>`.
 
 Once the *IoT Box* is up and running, you’ll need to link it to your
 PoS. Open the Point of Sale app and go to :menuselection:`Configuration

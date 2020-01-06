@@ -10,9 +10,7 @@ headset.
 Add suggested products to your quotation templates
 ==================================================
 
-Suggested products can be set on *Quotation Templates*.
-
-.. TODO You can find documentation about it here https://docs.google.com/document/u/1/d/11UaYJ0k67dA2p-ExPAYqZkBNaRcpnItCyIdO6udgyOY/edit?usp=drive_web&ouid=104638657716670524342
+Suggested products can be set on *Quotation Templates*. See :doc:`quote_template`.
 
 Once on a template, you can see a *Suggested Products* tab where you
 can add related products or services.

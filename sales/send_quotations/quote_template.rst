@@ -32,7 +32,8 @@ On each template, you can also specify discounts if the option is
 activated in the *Sales* settings. The base price is set in the
 product configuration and can be changed by customer pricelists.
 
-.. TODO (TO LINK DOC LATER WHEN DONE based on this https://www.odoo.com/documentation/user/13.0/sales/products_prices/prices/pricing.html
+.. seealso::
+   - :doc:`../products_prices/prices/pricing`
 
 Edit your template
 ==================
@@ -88,6 +89,6 @@ Every quotation will now have this setting added to it.
 Of course you can still change it and make it specific for each
 quotation.
 
-.. todo  seealso
-..    `*https://docs.google.com/document/d/1OkC9MVvuDvzz2b9gZjfzMPzep7qdbOyZZxE0ZZj2K7E/edit* <https://docs.google.com/document/d/1OkC9MVvuDvzz2b9gZjfzMPzep7qdbOyZZxE0ZZj2K7E/edit>`__..
-..    `*https://docs.google.com/document/d/1LZC5C8dZY2gvP6QHx2w5BlakIxgcHIP6GeEuBBfsRNc/edit* <https://docs.google.com/document/d/1LZC5C8dZY2gvP6QHx2w5BlakIxgcHIP6GeEuBBfsRNc/edit>`__
+.. seealso::
+   - :doc:`get_signature_to_validate`
+   - :doc:`get_paid_to_validate`

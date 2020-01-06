@@ -12,8 +12,8 @@ software and import it directly in your Odoo instance. This will create
 all bank statements.
 
 .. tip::
-
-	Test now the feature `with this sample QIF file <https://drive.google.com/file/d/0B5BDHVRYo-q5X1ZkUWYzWmtCX0E/view>`__
+   Test now the feature :download:`with this sample QIF file
+   <../../../_static/example_files/test_qif.qif>`
 
 Configuration
 =============

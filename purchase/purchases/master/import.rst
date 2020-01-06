@@ -30,5 +30,5 @@ See below a template of the columns used.
 .. image:: media/import02.png
     :align: center
 
-`Template
-download <https://docs.google.com/spreadsheets/d/1N8c_eejLV_8NhYMGCfZau_oGCnRkUIT9nwdX7n0shhY/edit#gid=964193981>`__
+:download:`Click here to download the template
+<../../../_static/example_files/vendor_pricelists_template.csv>`
