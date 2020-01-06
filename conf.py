@@ -287,6 +287,13 @@ texinfo_documents = [
 # If true, do not generate a @detailmenu in the "Top" node's menu.
 #texinfo_no_detailmenu = False
 
+odoo_cover_external = {
+    'https://odoo.com/documentation/user/accounting/overview/main_concepts/memento.html'   : 'banners/m_accounting.jpg',
+    'https://odoo.com/documentation/user/inventory/overview/concepts/double-entry.html' : 'banners/m_1.jpg',
+    'https://odoo.com/documentation/user/inventory/management/reporting/valuation_methods_continental.html'    : 'banners/m_2.jpg',
+    'https://odoo.com/documentation/user/inventory/management/reporting/valuation_methods_anglo_saxon.html'    : 'banners/m_2.jpg',
+}
+
 github_user = 'odoo'
 github_project = 'documentation-user'
 
@@ -321,7 +328,9 @@ def setup(app):
     app.add_javascript('coa-valuation-continental.js')
     app.add_javascript('coa-valuation-anglo-saxon.js')
 
+    app.connect('html-page-context', canonicalize)
     app.add_config_value('canonical_root', None, 'env')
+    app.add_config_value('canonical_branch', 'master', 'env')
 
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')
@@ -342,8 +351,11 @@ def versionize(app, pagename, templatename, context, doctree):
     if not (app.config.canonical_root and app.config.versions):
         return
 
+    # remove last fragment containing the version
+    root = '/'.join(app.config.canonical_root.rstrip('/').split('/')[:-1])
+
     context['versions'] = [
-        (vs, _build_url(app.config.canonical_root, vs, pagename))
+        (vs, _build_url(root, vs, pagename))
         for vs in app.config.versions.split(',')
         if vs != app.config.version
     ]
@@ -387,9 +399,33 @@ def localize(app, pagename, templatename, context, doctree):
         for la in app.config.languages.split(',')
         if la != current_lang
     ]
+    context['language_codes'] = [
+        (la.split('_')[0] if la != 'en' else 'x-default', _build_url(app.config.canonical_root, (la != 'en' and la or ''), pagename))
+        for la in app.config.languages.split(',')
+    ]
 
+def canonicalize(app, pagename, templatename, context, doctree):
+    """ Adds a 'canonical' URL for the current document in the rendering
+    context. Requires the ``canonical_root`` setting being set. The canonical
+    branch is ``master`` but can be overridden using ``canonical_branch``.
+    /documentation/user/12.0/sale.html -> /documentation/user/13.0/sale.html
+    /documentation/user/11.0/fr/website.html -> /documentation/user/13.0/fr/website.html
+    """
+    if not app.config.canonical_root:
+        return
+
+    # remove last fragment containing the version
+    root = '/'.join(app.config.canonical_root.rstrip('/').split('/')[:-1])
+    root += '/' + app.config.canonical_branch
+    current_lang = app.config.language or 'en'
+
+    context['canonical'] = _build_url(
+        root, (current_lang != 'en' and current_lang or ''), pagename)
 
 def _build_url(root, branch, pagename):
+    root = root.rstrip('/')
+    if branch:
+        root += '/'
     return "{canonical_url}{canonical_branch}/{canonical_page}".format(
         canonical_url=root,
         canonical_branch=branch,
