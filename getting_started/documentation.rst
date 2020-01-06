@@ -41,7 +41,9 @@ authority** in terms of decision making.
    he can pass on this knowledge to his collaborators. In order for
    this approach to be successful, it is necessary that the SPoC is
    also involved in its own rise in skills through self-learning via
-   the `Odoo documentation <http://www.odoo.com/documentation/user/10.0/index.html>`__, `The elearning platform <https://odoo.thinkific.com/courses/odoo-functional>`__ and the testing of functionalities.
+   the :doc:`Odoo documentation <../index>`,
+   `The elearning platform <https://odoo.com/learn>`_
+   and the testing of functionalities.
 
 Project Scope
 =============

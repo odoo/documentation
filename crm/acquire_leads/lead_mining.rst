@@ -66,5 +66,6 @@ To buy credits you can either go to CRM > Configuration > Settings > Buy Credits
 .. tip::
    If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
-More information about `In-App Purchases <https://www.odoo.com/documentation/user/13.0/general/in_app_purchase/in_app_purchase.html?highlight=iap>`__,  (IAP).
+.. seealso::
+   * :doc:`In-App Purchases (IAP) <../../general/in_app_purchase/in_app_purchase>`
  
