@@ -25,3 +25,4 @@ Applications
    mobile/firebase
    social_marketing
    sms_marketing
+   fsm
