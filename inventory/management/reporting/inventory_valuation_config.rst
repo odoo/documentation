@@ -63,10 +63,10 @@ Standard Price
        - +2*€10
        - €40
 
-  **Standard Price** means you estimate the cost price based 
-  on direct materials, direct labor and manufacturing overhead 
-  at the end of a specific period (usually once a year). You 
-  enter this cost price in the product form.
+  In **Standard Price**, any product will be valued at the cost that you defined
+  manually on the product form. Usually, this cost is an estimation based
+  on the material and labor needed to obtain the product. This cost must
+  be reviewed periodically.
 
 Average Price
   .. rst-class:: values-table
@@ -108,20 +108,11 @@ Average Price
        - +2*€6
        - €36
 
-  The **Average Price** method recomputes the cost price as a receipt order 
-  has been processed, based on prices defined in tied purchase orders:
-  FORMULA (see here attached)
+  In **AVCO (Average Cost)**, each product has the same value and this 
+  value is the average purchase cost of the product. With this costing method, the
+  cost of the product is recomputed as each receipt.
 
   The average cost does not change when products leave the warehouse.
-
-  From an accounting point of view, this method is mainly justified in 
-  case of huge purchase price variations and is quite unusual due to its 
-  operational complexity. Your actually need a software like Odoo to 
-  easily keep this cost up-to-date.
-
-  This method is dedicated to advanced users. It requires well established 
-  business processes because the order in which you process receipt orders 
-  matters in the cost computation.
 
 FIFO
   .. rst-class:: values-table
@@ -163,50 +154,16 @@ FIFO
        - +2*€6
        - €44
 
-  For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further 
-  refined by the removal strategy set on the warehouse location 
-  or product's internal category. The default strategy is FIFO. With 
-  such method, your inventory value is computed from the real cost 
-  of your stored products (cfr. Quantitative Valuation) and not from 
-  the cost price shown in the product form. Whenever you ship items, 
-  the cost price is reset to the cost of the last item(s) shipped. 
-  This cost price is used to value any product not received from a 
-  purchase order (e.g. inventory adjustments).
+  In **FIFO (First In First Out)**, the products are valued at their
+  purchase cost. When a product leaves the stock, that’s the “First in, 
+  first out” rule that applies.
+  
+  Pay attention, that this is a financial FIFO. The first value “in” 
+  is the first value “out”, no matter the storage location, warehouse
+  or serial number.
 
-  FIFO is advised if you manage all your workflow into Odoo (Sales, 
+  FIFO is advised if you manage all your workflows into Odoo (Sales, 
   Purchases, Inventory). It suits any kind of users.
-
-Standard Price
---------------
-
-In Standard Price, any product will be valued at a cost that you defined
-manually on the product form. Usually, this cost is an estimation based
-on the material and labor needed to obtain the product. This cost must
-be reviewed periodically.
-
-First In First Out (FIFO)
--------------------------
-
-In FIFO, the products are valued at their purchase cost. When a product
-leaves the stock, that’s the “First in, first out” rule that applies.
-Let’s take an example: I first purchase a t-shirt for $10 and, later,
-one for $20. The first t-shirt that will go out of my stock will be
-valued at $10 and the next one at $20.
-
-.. tip::
-		Pay attention, that this is a financial FIFO. This means that the
-		locations where the products are stored don’t impact the valuation. The
-		first value “in” is the first value “out”, no matter the storage
-		location.
-
-Average Cost (AVCO)
--------------------
-
-In AVCO, each product has the same value and this value is the average
-purchase cost of the product. Let’s take an example: I first purchase a
-t-shirt for $10 and, later, one for $20. Each t-shirt will be valued at
-$15, the average weighted purchase cost. With this costing method, the
-cost of the product is recomputed as each receipt.
 
 Inventory Valuation: Manual or Automated
 ========================================
@@ -214,6 +171,18 @@ Inventory Valuation: Manual or Automated
 There are two ways to record your inventory valuation in your accounting
 books. As the costing method, this is defined in your product category.
 Those two methods are detailed below.
+
+It is important to also note that the accounting entries will depend on
+your accounting mode: it can be continental or anglo-saxon. In
+continental accounting, the cost of a good is taken into account as soon
+as the product is received in stock. In anglo-saxon accounting, the cost
+of a good is only recorded as an expense when this good is invoiced to a
+final customer. In the tables below, you can easily compare those two 
+accounting modes.
+
+Usually, based on your country, the correct accounting mode will be
+chosen by default. If you want to verify your accounting mode, activate
+the developer mode and open your accounting settings.
 
 Manual Inventory Valuation
 --------------------------
@@ -223,28 +192,12 @@ on your accounting books. Periodically, you create a manual journal
 entry representing the value of what you have in stock. To know that
 value, go in Inventory > Reporting > Inventory Valuation.
 
-+----------------------------------+---------+----------+
-|                                  | Debit   | Credit   |
-+==================================+=========+==========+
-| Assets: Inventory                | X       |          |
-+----------------------------------+---------+----------+
-| Expenses: Inventory Variations   |         | X        |
-+----------------------------------+---------+----------+
-
-.. tip::
-		If the stock value has decreased, the assets account will be credited.
-
-Continental Accounting
-~~~~~~~~~~~~~~~~~~~~~~
-
-In a periodic inventory valuation, goods reception and 
-outgoing shipments have no direct impact in the accounting. 
-At the end of the month or year, the accountant posts one 
-journal entry representing the value of the physical inventory. 
-
 This is the default configuration in Odoo and it works 
 out-of-the-box. Check following operations and find out how 
 Odoo is managing the accounting postings.
+
+Continental Accounting
+~~~~~~~~~~~~~~~~~~~~~~
 
 .. rst-class:: alternatives doc-aside
 
@@ -378,20 +331,6 @@ extra configuration & testing.
 
 First, you need to define the accounts that will be used for those
 accounting entries. This is done on the product category.
-
-.. image:: media/inventory_valuation_config_02.png
-    :align: center
-
-Note that the accounting entries that will be recorded will depend on
-your accounting mode: it can be continental or anglo-saxon. In
-continental accounting, the cost of a good is taken into account as soon
-as the product is received in stock. In anglo-saxon accounting, the cost
-of a good is only recorded as an expense when this good is invoiced to a
-final customer.
-
-Usually, based on your country, the correct accounting mode will be
-chosen by default. If you want to verify your accounting mode, activate
-the developer mode and open your accounting settings.
 
 Continental Accounting
 ~~~~~~~~~~~~~~~~~~~~~~
