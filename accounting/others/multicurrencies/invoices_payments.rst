@@ -115,6 +115,5 @@ Difference** journal entries. All the exchange rates differences are recorded in
    :align: center
 
 .. seealso::
-	
-	* :doc:`how_it_works`
-	* :doc:`exchange`
+   * :doc:`how_it_works`
+   * :doc:`exchange`

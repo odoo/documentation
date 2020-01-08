@@ -63,5 +63,5 @@ want to merge and the action button will appear. Then, you can select merge.
 .. image:: media/convert_05.png
     :align: center
 
-..note::
-		It is also possible to merge more than 2 opportunities or leads.
+.. note::
+   It is also possible to merge more than 2 opportunities or leads.

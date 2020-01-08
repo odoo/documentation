@@ -60,8 +60,7 @@ complete the next payments you get or do to these contacts. This will
 speed up a lot the reconciliation process.
 
 .. seealso::
-
-	* :doc:`qif`
-	* :doc:`coda`
-	* :doc:`synchronize`
-	* :doc:`manual`
+   * :doc:`qif`
+   * :doc:`coda`
+   * :doc:`synchronize`
+   * :doc:`manual`

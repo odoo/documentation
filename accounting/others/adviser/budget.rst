@@ -133,14 +133,12 @@ You can check your budget at any time. To see the evolution, let's book
 some Invoices and Vendors Bills.
 
 .. tip::
-	
-	if you use analytical accounts remember that you need to specify the account in the invoice and / or purchase line.
+   If you use analytical accounts remember that you need to specify the account in the invoice
+   and/or purchase line.
 
 .. seealso::
-
-	for more information about booking invoices and purchase orders see:
-
-	* :doc:`../../receivables/customer_invoices/overview`
+   For more information about booking invoices and purchase orders see
+   :doc:`../../receivables/customer_invoices/overview`
 
 Go back in the budget list and find the Smith Project.
 
@@ -152,10 +150,9 @@ purchase lines booked in the accounts and will display them in the
    :align: center
 
 .. note::
-
-	The theoretical amount represents the amount of money you theoretically could
-	have spend / should have received in function of the date. When your budget
-	is 1200 for 12 months (january to december), and today is 31 of january, the
-	theoretical amount will be 1000, since this is the actual amount that could
-	have been realised.
+   The theoretical amount represents the amount of money you theoretically could
+   have spend / should have received in function of the date. When your budget
+   is 1200 for 12 months (january to december), and today is 31 of january, the
+   theoretical amount will be 1000, since this is the actual amount that could
+   have been realised.
 

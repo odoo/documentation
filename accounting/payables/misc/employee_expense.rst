@@ -166,11 +166,8 @@ order. (or it will be done automatically at the end of the week/month if
 you invoice all your orders in batch)
 
 
-.. todo::
-
-	tip
-	If you want to learn more; check the documentation page :doc: ../../../sale/invoicing/service/expense
-	`*How to re-invoice expenses to your customers* <https://docs.google.com/document/d/1_6VclRWfESHfvNPZI32q5ANFi2C7cCTwkLXpbGTz6B8/edit?usp=sharing>`__
+.. seealso::
+   - :doc:`../../../sales/invoicing/expense`
 
 Reimburse the employee
 ----------------------
@@ -204,5 +201,4 @@ options:
    account for this invoice.
 
 .. seealso::
-
-	* :doc:`forecast`
+   - :doc:`forecast`

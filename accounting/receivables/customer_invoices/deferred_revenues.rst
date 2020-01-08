@@ -1,6 +1,7 @@
 =================
 Deferred Revenues
 =================
+
 **Deferred revenues**, or **unearned revenue**, are payments made in advance by customers for
 products yet to deliver or services yet to render.
 
@@ -32,9 +33,8 @@ account.
 Configure a Deferred Revenue Account
 ------------------------------------
 
-To configure your account in the **Chart of Accounts**, go to
-:menuselection:`Accounting --> Configuration --> Chart of Accounts`, click on *Create*, and fill out
-the form.
+To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
+Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 
 .. image:: media/deferred_revenues01.png
    :align: center
@@ -73,7 +73,7 @@ save.
 Change the account of a posted journal item
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-To do so, open your Sales Journal by going to 
+To do so, open your Sales Journal by going to
 :menuselection:`Accounting --> Accounting --> Sales`, select the journal item you
 want to modify, click on the account, and select the right one. 
 
@@ -100,7 +100,7 @@ Sales** tab.
 .. image:: media/deferred_revenues05.png
    :align: center
    :alt: Deferred Revenue entry in Odoo Accounting
-	
+
 Once done, you can click on *Compute Revenue* (next to the *Confirm* button) to generate all the
 values of the **Revenue Board**. This board shows you all the entries that Odoo will post to
 recognize your revenue, and at which date.
@@ -124,7 +124,7 @@ $ 70.00. Consequently, the last entry is also lower and has an amount of $ 65.78
 Deferred Entry from the Sales Journal
 -------------------------------------
 
-You can create a deferred entry from a specific journal item in your **Sales Journal**. 
+You can create a deferred entry from a specific journal item in your **Sales Journal**.
 
 To do so, open your Sales Journal by going to 
 :menuselection:`Accounting --> Accounting --> Sales`, and select the journal item you want to defer.

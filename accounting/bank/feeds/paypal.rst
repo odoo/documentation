@@ -45,14 +45,13 @@ the online institution and click on the configure button.
 Then, you will have to provide your credentials to connect to PayPal.
 
 .. note::
+   Your Paypal **must be in English** (if it is not the case you must change
+   the langage of your Paypal account) and if you use a Paypal business account
+   you must switch back to the old interface in order for it to work with
+   Online feeds (you can switch from new to old interface in your Paypal account).
 
-	Your Paypal **must be in English** (if it is not the case you must change
-	the langage of your Paypal account) and if you use a Paypal business account
-	you must switch back to the old interface in order for it to work with
-	Online feeds (you can switch from new to old interface in your Paypal account).
-
-	If you don't do this you will get a message either saying to put Paypal in
-	English or that the site is not supported.
+   If you don't do this you will get a message either saying to put Paypal in
+   English or that the site is not supported.
 
 If you configured your Paypal account correctly you should get to the next step
 of the Online feeds configuration. There you will have a screen with a date to

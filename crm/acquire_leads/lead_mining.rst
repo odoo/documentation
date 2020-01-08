@@ -28,7 +28,7 @@ From there, click on the **Generate Leads** button, a window where you will be a
 
 
 .. image:: media/LM5.png
- 	:align: center
+   :align: center
 
 
 When choosing to target Companied and their contacts you can choose the contacts you are getting based on Role or Seniority. 
@@ -65,7 +65,7 @@ Credits`; or go to `Settings --> In-App Purchases --> View my Services`.
     The blue box will automatically tell you how many credits are going to be consumed.
 
 .. tip::
- 	If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
+   If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
 .. seealso::
    * :doc:`In-App Purchases (IAP) <../../general/in_app_purchase/in_app_purchase>`

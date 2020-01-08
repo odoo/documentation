@@ -19,7 +19,7 @@ In the Purchases module, open :menuselection:`Purchase --> Requests for Quotatio
 and click on **Create**.
 
 .. image:: ./media/image04.png
-	:align: center
+   :align: center
 
 Select your supplier in the **Vendor** menu, or create it on-the-fly by
 clicking on **Create and Edit**. In the **Order Date** field, select
@@ -43,13 +43,13 @@ for this supplier or enter a new one).
 
 
 .. image:: ./media/image08.png
-	:align: center
+   :align: center
 
 After having clicked on **Send**, you will notice that the RFQ's status will
 switch from **Draft** to **RFQ Sent**.
 
 .. image:: ./media/image06.png
-	:align: center
+   :align: center
 
 Once your supplier has replied with an offer, update the RfQ by clicking
 on **Edit** to fit the quotation (prices, taxes, expected delivery lead
@@ -60,10 +60,10 @@ To proceed with the order, click on **Confirm Order** to send the order to
 the supplier. The RfQ's status will switch to **Purchase Order**.
 
 .. image:: ./media/image11.png
-	:align: center
+   :align: center
 
 The status of the RfQ will change to PURCHASE ORDER. Tabs in the upper
 right corner of the order will show 1 Shipment and 0 Invoice.
 
 .. image:: ./media/image10.png
-	:align: center
+   :align: center

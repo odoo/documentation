@@ -32,7 +32,7 @@ Kanban view as you like.
 -  Engagement: Number of times people have engaged with your posts
 
 -  Stories: Number of times people who have engaged with your channel
-	have created stories on their friend’s or follower’s feed (Shares, Retweet,..)
+   have created stories on their friend’s or follower’s feed (Shares, Retweet,..)
 
 You can access more information by clicking on the “Insights” link: this
 will lead you to statistics of the selected social medium.

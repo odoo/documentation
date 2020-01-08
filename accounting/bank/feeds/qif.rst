@@ -61,8 +61,7 @@ complete the next payments you get or do to these contacts. This will
 speed up a lot the reconciliation process.
 
 .. seealso::
-
-	* :doc:`ofx`
-	* :doc:`coda`
-	* :doc:`synchronize`
-	* :doc:`manual`
+   * :doc:`ofx`
+   * :doc:`coda`
+   * :doc:`synchronize`
+   * :doc:`manual`
