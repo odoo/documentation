@@ -16,7 +16,7 @@ Go to *Apps*, search for *SMS Marketing* and click on *Install*.
 Build an SMS mailing
 ====================
 
-Go to *SMS Marketing > Create*.
+Go to :menuselection:`SMS Marketing --> Create`.
 
 .. image:: ./media/sms_marketing1.png
    :align: center

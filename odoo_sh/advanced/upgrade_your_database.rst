@@ -6,20 +6,22 @@ Upgrade your database
 
 .. _odoosh-advanced-upgrade_your_database:
 
-1. Download and Upload your database
-------------------------------------
+Download and Upload your database
+=================================
 
 Download a dump of your database (from the :ref:`Builds view <odoosh-gettingstarted-builds-download-dump>`), choose the
 exact copy and without filestore options. Upload the .sql.gz dump on https://upgrade.odoo.com/database/upload and
 select the Testing Purpose. If you have custom code, you can choose to have it upgraded by us, or do it yourself. Once
 it's processed, you'll get a dump of the database in return.
 
-.. Warning::
+.. warning::
+   Do *not* upload *backups* of your production database (found in the Backups tab of the production branch) as these
+   are incompatible with the Upgrade platform - they contain your complete sources, etc. that are not needed for the
+   upgrade. Make sure to download a **Dump** instead - either through the Backups tab using the *Download Dump* button
+   or through the Builds page by using the *Download Dump* entry of the contextual menu of your latest production build.
 
-    Do *not* upload *backups* of your production database (found in the Backups tab of the production branch) as these are incompatible with the Upgrade platform - they contain your complete sources, etc. that are not needed for the upgrade. Make sure to download a **Dump** instead - either through the Backups tab using the *Download Dump* button or through the Builds page by using the *Download Dump* entry of the contextual menu of your latest production build.
-
-2. Test your upgraded database
-------------------------------
+Test your upgraded database
+===========================
 
 Create a staging branch that will run the upgraded database. Either make sure your production branch's code is
 compatible between the two Odoo versions and fork your production branch, or make a new staging branch containing
@@ -31,8 +33,8 @@ change the version of Odoo's source code to the corresponding version for the bu
 
 Test the upgraded database and make sure everything runs as it's supposed to.
 
-3. Replace your existing production database
---------------------------------------------
+Replace your existing production database
+=========================================
 
 Once you've tested everything and you're satisfied, start the process over to get an up-to-date upgraded dump:
 

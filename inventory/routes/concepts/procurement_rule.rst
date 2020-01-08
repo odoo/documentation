@@ -35,7 +35,7 @@ Procurement rules settings
 ==========================
 
 The procurement rules are set on the routes. In the inventory
-application, go to Configuration > Routes.
+application, go to :menuselection:`Configuration --> Routes`.
 
 In the Procurement rules section, click on Add an item.
 

@@ -20,7 +20,7 @@ Configuration
 =============
 
 Configure your usual installment plans from the application :menuselection:`Accounting -->
-Configuration > Payment Terms`.
+Configuration --> Payment Terms`.
 
 A payment term may have one line (eg: 21 days) or several lines (10%
 within 3 days and the balance within 21 days). If you create a payment
@@ -77,9 +77,8 @@ journal entry:
 | Income               |            |         | 100      |
 +----------------------+------------+---------+----------+
 
-On the customer statement, you will see two lines with different due
-dates. To get the customer statement, use the menu Sales > Customers
-Statement.
+On the customer statement, you will see two lines with different du dates. To get the customer
+statement, use the menu :menuselection:`Sales --> Customers Statement`.
 
 .. seealso::
 

@@ -24,7 +24,7 @@ Reordering Rules
 ----------------
 
 The *Reordering Rules* configuration is available through the menu
-*Inventory > Master Data > Reordering Rules*. There, click on
+:menuselection:`Inventory --> Master Data --> Reordering Rules`. There, click on
 *Create* to set minimum and maximum stock values for a given product.
 
 .. image:: media/min_stock_rule_vs_mto_01.png
@@ -67,7 +67,7 @@ Make to Order
 -------------
 
 The *Make To Order* configuration is available on your product form
-through your *Inventory module > Master Data > Products* (or in any
+through your :menuselection:`Inventory module --> Master Data --> Products` (or in any
 other module where products are available).
 
 On the product form, in the *Inventory tab*, you can set a route. You

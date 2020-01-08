@@ -39,7 +39,8 @@ log-in.
     You can also add a new user on the fly from your dashboard. From the above screenshot,
     enter the email address of the user you would like to add and click on **INVITE**.
     The user will receive an email invite containing a link to set his password. You
-    will then be able to define his accesses rights under the :menuselection:`Settings --> Users menu`.
+    will then be able to define his accesses rights under the :menuselection:`Settings -->
+    Users menu`.
 
 .. seealso::
     * `Deactivating Users <../../db_management/documentation.html#deactivating-users>`_

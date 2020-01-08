@@ -79,8 +79,6 @@ Explanation of the fields of the payment screen:
 	
 	Try paying a supplier bill with a check
 
-.. _PrintChecks:
-
 Print checks
 ------------
 
@@ -101,9 +99,7 @@ Print Check from the top "print" menu.
 .. image:: ./media/check03.png
   :align: center
 
-.. _ReconicleBankStatements:
-
-Reconcile Bank Statements
+Reconcile bank statements
 -------------------------
 
 Once you process your bank statement, when the check is credited from
@@ -133,6 +129,5 @@ Once your payment by check is registered, don't forget to **Confirm** it.
 Once confirmed, you can use **Print Check** directly or follow the preceding
 flow to print checks in batch:
 
--  `Print checks <PrintChecks_>`_
-
--  `Reconcile bank statements <ReconicleBankStatements_>`_
+-  `Print checks`_
+-  `Reconcile bank statements`_

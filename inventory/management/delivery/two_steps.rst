@@ -23,7 +23,7 @@ provide a mechanism to chain different actions together. In this case,
 we will chain the unload step in the input area to the step entering the
 products in stock.
 
-To allow *multi-step routes*, go to *Configuration > Settings* and
+To allow *multi-step routes*, go to :menuselection:`Configuration --> Settings` and
 activate the feature. By default, activating *multi-step routes* will
 also activate *Storage Locations*.
 
@@ -33,8 +33,8 @@ also activate *Storage Locations*.
 Configure warehouse for receipt in 2 steps
 ==========================================
 
-Once *multi-step routes* is activated, you can go to *Configuration >
-Warehouse* and enter the warehouse which will use receipt in 2 steps.
+Once *multi-step routes* is activated, you can go to :menuselection:`Configuration -->
+Warehouse` and enter the warehouse which will use receipt in 2 steps.
 Then, you can select the option *Receive goods in input and then stock
 (2 steps)* for *Incoming Shipments*.
 
@@ -43,8 +43,8 @@ Then, you can select the option *Receive goods in input and then stock
 
 
 Activating this option will lead to the creation of a new *Input*
-location. If you want to rename it, you can go to *Configuration >
-Locations > Select Input* and update its name.
+location. If you want to rename it, you can go to :menuselection:`Configuration -->
+Locations --> Select Input` and update its name.
 
 .. image:: media/two_steps_03.png
     :align: center

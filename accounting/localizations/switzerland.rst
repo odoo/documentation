@@ -3,7 +3,7 @@ Switzerland
 ===========
 
 ISR (In-payment Slip with Reference number)
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================
 
 The ISRs are payment slips used in Switzerland. You can print them
 directly from Odoo. On the customer invoices, there is a new button
@@ -35,7 +35,7 @@ and tick this box :
     :align: center
 
 Currency Rate Live Update
-~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================
 
 You can update automatically your currencies rates based on the Federal
 Tax Administration from Switzerland. For this, go in
@@ -46,7 +46,7 @@ you want.
     :align: center
 
 Updated VAT for January 2018
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+============================
 
 Starting from the 1st January 2018, new reduced VAT rates will be
 applied in Switzerland. The normal 8.0% rate will switch to 7.7% and the

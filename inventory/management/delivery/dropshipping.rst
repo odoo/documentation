@@ -51,13 +51,13 @@ Points to be Considered while Implementing Drop-Shipping
 Configure Drop-Shipping
 =======================
 
-Activate the functionality in the *Purchase* application by going to
-*Configuration > Settings*.
+Activate the functionality in the *Purchase* application by going to :menuselection:`Configuration
+--> Settings`.
 
 .. image:: media/dropshipping_01.png
     :align: center
 
-Then, go to the *Inventory* app, in *Configuration > Settings* to
+Then, go to the *Inventory* app, in :menuselection:`Configuration --> Settings` to
 activate the *Multi-Step Routes* feature. It will allow you to make
 the *Route* field appear on the sale order lines to specify you send a
 product via drop-shipping.
@@ -65,7 +65,7 @@ product via drop-shipping.
 .. image:: media/dropshipping_02.png
     :align: center
 
-Now, in the *Sales* app, go to *Products > Products*. Select the
+Now, in the *Sales* app, go to :menuselection:`Products --> Products`. Select the
 product you would like to drop-ship and add a vendor pricelist which
 contains the right supplier, via the purchase tab.
 

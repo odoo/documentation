@@ -7,7 +7,8 @@ With the SMS Marketing app isn’t different!
 
 Organize Email Marketing and SMS campaigns
 ===========================================
-First, make sure to have the necessary feature activated. Go to the *Email Marketing app > Configuration > Settings> activate the option Mailing Campaigns*.
+First, make sure to have the necessary feature activated. Go to the :menuselection:`Email Marketing
+app --> Configuration --> Settings --> activate the option Mailing Campaigns`.
 
 .. image:: ./media/sms_marketing12.png
    :align: center
@@ -30,14 +31,17 @@ For that, I’ll go to the *Contacts* app, select the contact and click on the *
 .. image:: ./media/sms_marketing15.png
    :align: center
 
-If I’d like to send a message in a batch here, I could go to *List View > select all the contacts > Action > Send SMS*.
+If I’d like to send a message in a batch here, I could go to :menuselection:`List View --> select
+all the contacts --> Action --> Send SMS`.
 
 .. image:: ./media/sms_marketing16.png
    :align: center
    
 Set up SMS Templates
 ==================================
-To set up *SMS Templates*, I’ll go to the *Settings* app and activate the *developer mode*. Now, back to *Settings* app, I’ll go to *Technical > Phone/SMS section > SMS Templates* and create the content I need.
+To set up *SMS Templates*, I’ll go to the *Settings* app and activate the *developer mode*. Now,
+back to *Settings* app, I’ll go to :menuselection:`Technical --> Phone/SMS section -->
+SMS Templates` and create the content I need.
 
 .. image:: ./media/sms_marketing17.png
    :align: center

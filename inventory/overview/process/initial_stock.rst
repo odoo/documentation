@@ -3,7 +3,7 @@ Set your Initial Stock
 ======================
 
 The first step to use the inventory application is to create products in
-your database via the menu *Master Data > Products*. Click the Create
+your database via the menu :menuselection:`Master Data --> Products`. Click the Create
 button and enter the name of your product.
 
 .. image:: media/initial_stock_01.png
@@ -20,7 +20,7 @@ Inventory Adjustment for Multiple Products
 
 Once you have created all your *storable products*, you can create an
 *inventory adjustment* to determine their current stock level in Odoo.
-You therefore need to go to *Operations > Inventory Adjustments* and
+You therefore need to go to :menuselection:`Operations --> Inventory Adjustments` and
 create a new one.
 
 .. image:: media/initial_stock_03.png

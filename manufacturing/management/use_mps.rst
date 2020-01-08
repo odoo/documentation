@@ -8,8 +8,8 @@ production based on your demand forecast.
 Configuration
 =============
 
-Go to the *Manufacturing app > Configuration > Settings* and activate
-the Master Production Schedule feature before hitting save.
+Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and activate the Master
+Production Schedule feature before hitting save.
 
 .. image:: media/use_mps_01.png
     :align: center
@@ -17,7 +17,7 @@ the Master Production Schedule feature before hitting save.
 .. tip::
         In the manufacturing settings, you can define the time range of your MPS (month/week/day) and the number of periods you want to display.
 
-Now, go in *Planning > Master Production Schedule* and click on add a
+Now, go in :menuselection:`Planning --> Master Production Schedule` and click on add a
 product. You can now define your safety stock target (= the stock you
 want to have on hand at the end of the period) and the minimum and
 maximum quantities to replenish.

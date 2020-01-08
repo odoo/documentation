@@ -19,12 +19,11 @@ synchronized marketplaces to disable their synchronization.
 Match database products in Amazon
 =================================
 
-.. Anchor should be one paragraph below but is placed here to fix wrongly adjusted display
-.. _amazon/matching:
-
 When an Amazon order is synchronized, up to three sales order items are created in Odoo for each
 product sold on Amazon: one for the marketplace product, one for the shipping charges (if any) and
 one for the gift wrapping charges (if any).
+
+.. _amazon/matching:
 
 The selection of a database product for a sales order item is done by matching its
 **internal reference** with the **SKU** for marketplace items, the **shipping code** for delivery

@@ -9,7 +9,9 @@ Where to find help?
 Odoo Enterprise
 ===============
 
-Users who have a valid Odoo Enterprise subscription may always contact our support teams through our `support form <https://www.odoo.com/help>`_, no matter the hosting type you chose (Odoo Online, Odoo.sh or on your own server).
+Users who have a valid Odoo Enterprise subscription may always contact our support teams through our
+`support form <https://www.odoo.com/help>`_, no matter the hosting type you chose (Odoo Online,
+Odoo.sh or on your own server).
 
 Please include in your request:
 

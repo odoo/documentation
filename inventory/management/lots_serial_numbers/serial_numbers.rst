@@ -18,7 +18,7 @@ Application configuration
 -------------------------
 
 First, you need to activate the serial numbers tracking. To do so, go to
-*Configuration > Settings* in the *Inventory* application. Then,
+:menuselection:`Configuration --> Settings` in the *Inventory* application. Then,
 enable the feature and hit save.
 
 .. image:: media/serial_numbers_01.png
@@ -28,7 +28,7 @@ Product configuration
 ---------------------
 
 Now, you have to configure the products you want to track by serial
-numbers. To do so, go to *Master Data > Products* and open the product
+numbers. To do so, go to :menuselection:`Master Data --> Products` and open the product
 of your choice. Edit it and select *Tracking By Unique Serial Number*
 in the *Inventory tab*. Then, click on save.
 
@@ -106,8 +106,8 @@ Operation types
 ===============
 
 You also have the possibility to define how you will manage lots for
-each operation type. To define it, go to *Configuration > Operation
-Types* in the *Inventory* app.
+each operation type. To define it, go to :menuselection:`Configuration --> Operation Types` in the
+*Inventory* app.
 
 For each type, you can decide if you allow the creation of new lot
 numbers or want to use existing ones. By default, the creation of new
@@ -127,11 +127,9 @@ Using serial numbers allows you to keep track of where the products were
 received, put in stock, to whom they were sold, and where they were
 shipped to.
 
-Tracking an item is easy: open the *Inventory* app, and go to *Master
-Data > Lots/Serial Numbers* and click on the serial number
-corresponding to your search. Then, open the *Traceability*
-information. There, you will see in which documents the serial number
-has been used.
+Tracking an item is easy: open the *Inventory* app, and go to :menuselection:`Master Data -->
+Lots/Serial Numbers` and click on the serial number corresponding to your search. Then, open the
+*Traceability* information. There, you will see in which documents the serial number has been used.
 
 .. image:: media/serial_numbers_12.png
     :align: center

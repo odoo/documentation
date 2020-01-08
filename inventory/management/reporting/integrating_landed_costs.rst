@@ -14,7 +14,7 @@ product.
 Configuration
 =============
 
-First, you need to go in *Inventory > Configuration > Settings* and
+First, you need to go in :menuselection:`Inventory --> Configuration --> Settings` and
 activate the landed costs feature. You can also determine the default
 journal in which the landed cost accounting entries will be recorded.
 
@@ -60,6 +60,5 @@ by clicking on the journal entry.
     :align: center
 
 .. note::
-         You are not forced to start from the vendor bill, you can also go in
-         *Inventory > Operations > Landed Costs* and directly create the landed
-         cost from there.
+   You are not forced to start from the vendor bill, you can also go in :menuselection:`Inventory
+   --> Operations --> Landed Costs` and directly create the landed cost from there.
