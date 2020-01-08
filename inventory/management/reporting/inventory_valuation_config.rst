@@ -319,6 +319,29 @@ Manufacturing Orders
 .. raw:: html
 
    <hr style="float: none; visibility: hidden; margin: 0;">
+   
+At the end of the month/year, your company does a physical inventory 
+or just relies on the inventory in Odoo to value the stock into your books.
+
+Then you need to break down the purchase balance into both the inventory and 
+the cost of goods sold using the following formula:
+
+Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing inventory value
+
+To update the stock valuation in your books, record such an entry:
+
+.. h:div:: doc-aside
+
+   .. rst-class:: values-table
+
+  ===================================== ===== ======
+  \                                     Debit Credit
+  ===================================== ===== ======
+  Assets: Inventory (closing value)         X     
+  Expenses: Cost of Good Sold               X
+  Expenses: Purchased Goods                        X
+  Assets: Inventory (starting value)               X            
+  ===================================== ===== ======
 
 Automated Inventory Valuation
 -----------------------------
