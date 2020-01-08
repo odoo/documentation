@@ -17,7 +17,7 @@ advanced settings.
 Configuration
 =============
 
-To use this feature, go to *Inventory > Configuration > Settings* in
+To use this feature, go to :menuselection:`Inventory --> Configuration --> Settings` in
 the inventory app. Then, enable the *Consignment* feature in the
 *Traceability* section. Now, hit save.
 

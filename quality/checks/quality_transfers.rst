@@ -6,7 +6,7 @@ Create the Quality Control Point
 ================================
 
 To create a *Quality Control Point*, open the *Quality* application.
-Then, go to *Quality Control > Control Points > Create*. Now, you can
+Then, go to :menuselection:`Quality Control --> Control Points --> Create`. Now, you can
 define the quality control point you want to apply to a specific
 product. Don’t forget to select a transfer operation type.
 

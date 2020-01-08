@@ -12,7 +12,8 @@ Cross-docking is the process of sending products that are received directly to t
 
 Configuration
 ==============
-In the *Inventory* app, open *Configuration > Settings* and activate the *Multi-Step Routes*.
+
+In the *Inventory* app, open :menuselection:`Configuration --> Settings` and activate the *Multi-Step Routes*.
 
 .. image:: media/cross2.png
  	:align: center
@@ -20,12 +21,15 @@ In the *Inventory* app, open *Configuration > Settings* and activate the *Multi-
 .. note::
 	Doing so will also enable the *Storage Locations* feature.
 
-Now, both *Incoming* and *Outgoing* shipments should be configured to work with 2 steps. To adapt the configuration, go to *Inventory > Configuration > Warehouses* and edit your warehouse.
+Now, both *Incoming* and *Outgoing* shipments should be configured to work with 2 steps. To adapt
+the configuration, go to :menuselection:`Inventory --> Configuration --> Warehouses` and edit your
+warehouse.
 
 .. image:: media/cross3.png
  	:align: center
 
-This modification will lead to the creation of a *Cross-Docking* route that can be found in *Inventory > Configuration > Routes*.
+This modification will lead to the creation of a *Cross-Docking* route that can be found in
+:menuselection:`Inventory --> Configuration --> Routes`.
 
 .. image:: media/cross4.png
  	:align: center

@@ -9,7 +9,8 @@ If, for example, a warehouse contains volatile substances, it is important to ma
 Configuration
 ==============
 
-In the *Inventory* app, go to *Configuration > Settings* and activate the *Multi-Step Routes*. By doing so, the *Storage Locations* will be automatically activated.
+In the *Inventory* app, go to :menuselection:`Configuration --> Settings` and activate the
+*Multi-Step Routes*. By doing so, the *Storage Locations* will be automatically activated.
 
 .. image:: media/putaw1.png
  	:align: center
@@ -21,7 +22,10 @@ In some cases, like for a retail shop storing vegetables and fruits, we have to 
 
 Let’s suppose there are one warehouse location *WH/Stock* and two sub-locations *WH/Stock/Vegatable* and *WH/Stock/Fruits*.
 
-To manage those locations, we will create putaway rules. To do so, open the *Inventory* app and go to *Configuration > Putaway Rules*. Then, click on create and configure your first rule indicating the main location the product will enter before being redirected to the right location. 
+To manage those locations, we will create putaway rules. To do so, open the *Inventory* app and go
+to :menuselection:`Configuration --> Putaway Rules`. Then, click on create and configure your first
+rule indicating the main location the product will enter before being redirected to the right
+location.
 
 .. note::
 	The putaway rules can be defined either per product or per product category.

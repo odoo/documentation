@@ -90,7 +90,7 @@ How to submit expenses to managers
 When you are ready to submit your expenses to your manager 
 (e.g. at the end of a business trip, or once a month), 
 go to the menu :menuselection:`My Expenses --> Expenses to Submit`. Select all expenses 
-from the list view and click on :menuselection:`Action > Submit to Manager`. 
+from the list view and click on :menuselection:`Action --> Submit to Manager`.
 Save the newly created expense report (i.e. set of expenses), 
 and wait for your manager to approve it.
 

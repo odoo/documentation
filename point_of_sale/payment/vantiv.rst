@@ -21,7 +21,7 @@ Vantiv setting.
 .. image:: media/vantiv_01.png
     :align: center
 
-Back in *Point of Sale > Configuration > Point of Sale*, go in the
+Back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`, go in the
 payments section and access your payment methods. Create a new payment
 method for Vantiv, select the payment terminal option Vantiv, and create
 new Vantiv credentials.

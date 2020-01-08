@@ -8,13 +8,16 @@ through subcontractors. This can be easily managed through Odoo.
 Configuration
 =============
 
-Go to the *Manufacturing app > Configuration > Settings* and tick the
+Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and tick the
 box *Subcontracting*.
 
 .. image:: media/subcontract_01.png
     :align: center
 
-You can now define subcontracted *Bill of Materials*. Therefore, you need to go to *Manufacturing > Master Data > Bill of Materials* and hit *Create*. In this *BoM*, list the components which will be used by the subcontractor to manufacture the subcontracted finished product. Specify that the *BoM* type is *Subcontracting*.
+You can now define subcontracted *Bill of Materials*. Therefore, you need to go to
+:menuselection:`Manufacturing --> Master Data --> Bill of Materials` and hit *Create*. In this
+*BoM*, list the components which will be used by the subcontractor to manufacture the subcontracted
+finished product. Specify that the *BoM* type is *Subcontracting*.
 
 .. image:: media/subcontract_03.png
     :align: center

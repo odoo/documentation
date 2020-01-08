@@ -15,7 +15,7 @@ Create a Barcode Nomenclature
 Odoo supports Barcode Nomenclatures, which determine the mapping and
 interpretation of the encoded information.
 You can configure your barcode nomenclature being in **debug** mode.
-To do so, go to *Inventory > Configuration > Barcode Nomenclature*.
+To do so, go to :menuselection:`Inventory --> Configuration --> Barcode Nomenclature`.
 
 You can create a barcode nomenclature from there, and then add a line to
 create your first rule.

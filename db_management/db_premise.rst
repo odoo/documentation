@@ -176,10 +176,9 @@ problems down the line.
 .. note:: From July 2016 onward, Odoo 9 now automatically change the uuid of a
     duplicated database; a manual operation is no longer required.
 
-The database uuid is currently accessible from the menu **Settings > Technical
-> System Parameters**, we advise you to use a
-`uuid generator <https://www.uuidgenerator.net>`__ or to use the unix command
-``uuidgen`` to generate a new uuid. You can then simply replace it like any
+The database uuid is currently accessible from the menu :menuselection:`Settings --> Technical -->
+System Parameters`, we advise you to use a `uuid generator <https://www.uuidgenerator.net>`_ or to
+use the unix command ``uuidgen`` to generate a new uuid. You can then simply replace it like any
 other record by clicking on it and using the edit button.
 
 .. image:: media/db_uuid.png

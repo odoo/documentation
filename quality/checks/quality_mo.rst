@@ -16,7 +16,7 @@ Create the Quality Control Point
 --------------------------------
 
 To create a quality control point, open the quality app and go to
-*Control > Control Points*. There, hit create. Make sure to select
+:menuselection:`Control --> Control Points`. There, hit create. Make sure to select
 *Manufacturing* as operation and choose the type of quality check you
 want to perform.
 
@@ -53,7 +53,7 @@ Create the Quality Control Point
 --------------------------------
 
 If you want to create a *Quality Control Point*, open the *Quality*
-app and go to *Control > Control Points*. Then, click on create. Make
+app and go to :menuselection:`Control --> Control Points`. Then, click on create. Make
 sure to select *Manufacturing* as operation and select the work order
 operation on which the quality check should be performed.
 

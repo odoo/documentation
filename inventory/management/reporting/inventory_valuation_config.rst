@@ -190,7 +190,7 @@ Manual Inventory Valuation
 In this case, goods receipts and deliveries won’t have any direct impact
 on your accounting books. Periodically, you create a manual journal
 entry representing the value of what you have in stock. To know that
-value, go in Inventory > Reporting > Inventory Valuation.
+value, go in :menuselection:`Inventory --> Reporting --> Inventory Valuation`.
 
 This is the default configuration in Odoo and it works 
 out-of-the-box. Check following operations and find out how 

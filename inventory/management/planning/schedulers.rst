@@ -33,8 +33,8 @@ Configure and run the scheduler
 Run the scheduler manually
 --------------------------
 
-To start the scheduler manually, go to *Inventory > Operations > Run
-Schedulers*. The scheduler uses all the relevant parameters defined for
+To start the scheduler manually, go to :menuselection:`Inventory --> Operations --> Run
+Schedulers`. The scheduler uses all the relevant parameters defined for
 products, suppliers and the company to prioritize the different
 production orders, deliveries and supplier purchases.
 
@@ -45,12 +45,12 @@ Configure and run the scheduler (for advanced users)
 ----------------------------------------------------
 
 To use this feature, you have to enable the debug mode. To do so, go to
-*Settings > Activate the developer mode*.
+:menuselection:`Settings --> Activate the developer mode`.
 
 .. image:: media/schedulers_02.png
     :align: center
 
-Then, go to *Settings > Technical > Automation > Scheduled Actions*
+Then, go to :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`
 and modify the *Run MRP Scheduler Configuration*. There, you can set
 the starting time of the scheduler.
 

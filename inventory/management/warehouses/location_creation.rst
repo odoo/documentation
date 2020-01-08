@@ -7,13 +7,13 @@ Configuration
 
 In order to be able to create different locations, you will need to
 activate *Multi-Locations* in the settings which can be done from the
-*Inventory application > Configuration > Settings*.
+:menuselection:`Inventory application --> Configuration --> Settings`.
 
 .. image:: media/location_creation_01.png
    :align: center
 
-In the *Inventory application*, you can now go to *Configuration >
-Locations* and hit *Create* in order to create a new location.
+In the *Inventory application*, you can now go to :menuselection:`Configuration -->
+Locations` and hit *Create* in order to create a new location.
 
 .. image:: media/location_creation_02.png
    :align: center

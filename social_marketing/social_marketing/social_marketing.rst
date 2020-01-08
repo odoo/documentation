@@ -92,7 +92,7 @@ Configure your own Facebook and Twitter developer accounts
 
 By default, the Social application is already configured with a Facebook
 and Twitter developer accounts but you can use your own if necessary.
-Activate the developer mode, go to Configuration > Settings and enter
+Activate the developer mode, go to :menuselection:`Configuration --> Settings` and enter
 your own API keys.
 
 .. image:: media/social_marketing05.png

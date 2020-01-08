@@ -21,8 +21,8 @@ Install the CODA feature
 
 If you have installed the Belgian Chart of Account provided with Odoo,
 the CODA import feature is already installed by default. In such a case,
-you can move directly to the next section `Import your first coda
-file <InstallCoda_>`_
+you can move directly to the next section :ref:`Import your first coda
+file <accounting/InstallCoda>`
 
 If CODA is not activated yet, you need to do it first. In the Accounting
 application, go to the menu :menuselection:`Configuration --> Settings`. From the
@@ -49,7 +49,7 @@ create all your bank statements.
 If the file is successfully loaded, you will get redirected to the bank
 reconciliation screen with all the transactions to reconcile.
 
-.. _InstallCoda:
+.. _accounting/InstallCoda:
 
 Importing CODA files
 ====================

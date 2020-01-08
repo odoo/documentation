@@ -6,8 +6,8 @@ Quality Control Points
 ======================
 
 If it is the first *Quality Control Point* that you create, know that
-you need to open the *Quality* app. Then, go to *Quality Control >
-Control Points*. Once there, you have to define the product on which
+you need to open the *Quality* app. Then, go to :menuselection:`Quality Control -->
+Control Points`. Once there, you have to define the product on which
 the quality control will take place, as well as the operation at which
 it should take place.
 

@@ -52,7 +52,7 @@ Create the menu
 ===============
 
 The new website has a default menu with all the installed applications.
-To edit it, click *Pages > Edit Menu*. Moving forward you only edit
+To edit it, click :menuselection:`Pages --> Edit Menu`. Moving forward you only edit
 the menu of the current website.
 
 Switch from one website to another

@@ -22,13 +22,13 @@ When you install the *Inventory* app, Odoo automatically creates a
 scrap location. It’s named *Virtual Location/Scap*.
 
 Of course, you can create new scrap areas if needed. To do so, go to
-*Inventory > Configuration > Settings* and activate the *Storage
+:menuselection:`Inventory --> Configuration --> Settings` and activate the *Storage
 Locations* feature.
 
 .. image:: media/scrap_01.png
     :align: center
 
-Now, go to *Configuration > Locations* and create your scrap location.
+Now, go to :menuselection:`Configuration --> Locations` and create your scrap location.
 
 .. note::
          You have to check *Is a Scrap Location?* on the location form. In
@@ -44,8 +44,8 @@ a delivery order, and from an internal transfer.
 Scrap from receipt
 ------------------
 
-Scrapping products from receipts is easy. Go to *Inventory > Dashboard
-> Receipts* or click on *1 TO PROCESS* under the receipts location.
+Scrapping products from receipts is easy. Go to :menuselection:`Inventory --> Dashboard -->
+Receipts` or click on *1 TO PROCESS* under the receipts location.
 
 .. image:: media/scrap_02.png
     :align: center
@@ -67,8 +67,8 @@ location.
 Scrap from delivery order
 -------------------------
 
-To scrap products from a delivery order, go to *Inventory > Dashboard >
-Delivery orders* or click on *1 TO PROCESS*.
+To scrap products from a delivery order, go to :menuselection:`Inventory --> Dashboard -->
+Delivery orders` or click on *1 TO PROCESS*.
 
 .. image:: media/scrap_05.png
     :align: center
@@ -93,7 +93,7 @@ Scrap from an internal transfer
 -------------------------------
 
 To do this, the flow is almost the same. In fact, you just have to go to
-*Inventory > Dashboard > Internal Transfers*.
+:menuselection:`Inventory --> Dashboard --> Internal Transfers`.
 
 .. image:: media/scrap_09.png
     :align: center

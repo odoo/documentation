@@ -50,14 +50,13 @@ orders straight on.
 .. image:: media/payment_invoice.png
     :align: center
 
-.. note:: If you choose this mode you are requested to select a payment journal
-  in order to record payments in your books. 
-  This payment is automatically reconcilied with the invoice, marking it as paid.
-  Select your **bank account** if you get paid immediately on your bank account. 
-  If you don't you can create a specific journal for the payment acquirer 
-  (type = Bank). That way, you can track online payments in an intermediary 
-  account of your books until you get paid into your bank account 
-  (see `How to register credit card payments <../../accounting/receivables/customer_payments/credit_cards.html>`__).
+.. note::
+   If you choose this mode you are requested to select a payment journal in order to record payments
+   in your books. This payment is automatically reconcilied with the invoice, marking it as paid.
+   Select your **bank account** if you get paid immediately on your bank account. If you don't you
+   can create a specific journal for the payment acquirer (type = Bank). That way, you can track
+   online payments in an intermediary account of your books until you get paid into your bank
+   account (see :doc:`../../accounting/receivables/customer_payments/credit_cards`).
 
 
 Capture the payment after the delivery

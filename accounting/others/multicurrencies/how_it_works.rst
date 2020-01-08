@@ -136,8 +136,8 @@ the whole document.
 Payment Registrations
 ---------------------
 
-In the accounting application, go to **Sales > Payments**. Register the
-payment and set the currency.
+In the accounting application, go to :menuselection:`Sales --> Payments`. Register the payment and
+set the currency.
 
 .. image:: media/works12.png
    :align: center

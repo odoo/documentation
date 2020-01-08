@@ -3,7 +3,7 @@ Colombia
 ========
 
 Introduction
-~~~~~~~~~~~~
+============
 
 Electronic invoicing for Colombia is available from Odoo 12 and
 requires the next modules:
@@ -15,17 +15,19 @@ requires the next modules:
    required for the Integration with Carvajal T&S and generate the
    electronic invoice, based on the DIAN legal requirements.
 
+
 Workflow
-~~~~~~~~
+========
 
 .. image:: media/colombia01.png
    :align: center
 
-Configuration
-~~~~~~~~~~~~~
 
-1. Install the Colombian localization modules
----------------------------------------------
+Configuration
+=============
+
+Install the Colombian localization modules
+------------------------------------------
 
 For this, go in Apps and search for Colombia. Then click Install for
 the first two modules.
@@ -33,8 +35,9 @@ the first two modules.
 .. image:: media/colombia02.png
    :align: center
 
-2. Configure credentials for Carvajal T&S web service
------------------------------------------------------
+
+Configure credentials for Carvajal T&S web service
+--------------------------------------------------
 
 Once that the modules are installed, in order to be able to connect
 with Carvajal T&S Web Service, it's necessary to configure the user
@@ -54,8 +57,9 @@ here: https://cenfinancierolab.cen.biz
 Once that Odoo and Carvajal T&S is fully configured and ready for
 production the testing environment can be disabled.
 
-3. Configure your report data
------------------------------
+
+Configure your report data
+--------------------------
 
 As part of the configurable information that is sent in the XML, you
 can define the data for the fiscal section and the bank information in
@@ -67,14 +71,15 @@ look for the *Colombian Electronic Invoice* section.
 .. image:: media/colombia04.png
    :align: center
 
-4. Configure data required in the XML
--------------------------------------
 
-4.1 Partner
-+++++++++++
+Configure data required in the XML
+----------------------------------
 
-4.1.1 Identification
-^^^^^^^^^^^^^^^^^^^^
+Partner
+~~~~~~~
+
+Identification
+^^^^^^^^^^^^^^
 
 As part of the Colombian Localization, the document types defined by
 the DIAN are now available on the Partner form. Colombian partners
@@ -88,8 +93,9 @@ have to have their identification number and document type set:
    will split this number when the data to the third party vendor is
    sent.
 
-4.1.2 Fiscal structure (RUT)
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Fiscal structure (RUT)
+^^^^^^^^^^^^^^^^^^^^^^
 
 The partner's responsibility codes (section 53 in the RUT document)
 are included as part of the electronic invoice module given that is
@@ -104,8 +110,9 @@ Purchase Tab --> Fiscal Information`
 Additionally two booleans fields were added in order to specify the
 fiscal regimen of the partner.
 
-4.2 Taxes
-+++++++++
+
+Taxes
+~~~~~
 
 If your sales transactions include products with taxes, it's important
 to consider that an extra field *Value Type* needs to be configured
@@ -121,8 +128,9 @@ to correctly display taxes in the invoice PDF.
 .. image:: media/colombia08.png
    :align: center
 
-4.3 Journals
-++++++++++++
+
+Journals
+~~~~~~~~
 
 Once the DIAN has assigned the official sequence and prefix for the
 electronic invoice resolution, the Sales journals related to your
@@ -139,8 +147,9 @@ should be configured and synchronized with the CEN Financiero.
 .. image:: media/colombia10.png
    :align: center
 
-4.4 Users
-+++++++++
+
+Users
+~~~~~
 
 The default template that is used by Odoo on the invoice PDF includes
 the job position of the salesperson, so these fields should be
@@ -149,17 +158,19 @@ configured:
 .. image:: media/colombia11.png
    :align: center
 
-Usage and testing
-~~~~~~~~~~~~~~~~~
 
-1. Invoice
-----------
+Usage and testing
+=================
+
+Invoice
+-------
 
 When all your master data and credentials has been configured, it's
 possible to start testing the electronic invoice workflow.
 
-1.1 Invoice creation
-++++++++++++++++++++
+
+Invoice creation
+~~~~~~~~~~~~~~~~
 
 The functional workflow that takes place before an invoice validation
 doesn't change. The main changes that are introduced with the
@@ -180,8 +191,9 @@ There are three types of documents:
   this invoice is added to the ERP, this invoice type should be
   selected.
 
-1.2 Invoice validation
-++++++++++++++++++++++
+
+Invoice validation
+~~~~~~~~~~~~~~~~~~
 
 After the invoice is validated an XML file is created and sent
 automatically to Carvajal, this file is displayed in the chatter.
@@ -197,8 +209,9 @@ displayed with the Electronic Invoice status, with the initial value
 .. image:: media/colombia14.png
    :align: center
 
-1.3 Reception of legal XML and PDF
-++++++++++++++++++++++++++++++++++
+
+Reception of legal XML and PDF
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The electronic invoice vendor receives the XML file and proceeds to
 validate the structure and the information in it, if everything is
@@ -219,8 +232,9 @@ After this:
 
 - The Electronic Invoice status changes to "Accepted"
 
-1.4 Common errors
-+++++++++++++++++
+
+Common errors
+~~~~~~~~~~~~~
 
 During the XML validation the most common errors are usually related
 to missing master data. In such cases, error messages are shown in the
@@ -239,8 +253,9 @@ button:
 .. image:: media/colombia19.png
    :align: center
 
-2. Additional use cases
------------------------
+
+Additional use cases
+--------------------
 
 The process for credit and debit notes is exactly the same as the
 invoice, the functional workflow remains the same as well.
