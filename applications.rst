@@ -26,3 +26,4 @@ Applications
    social_marketing
    sms_marketing
    fsm
+   planning
