@@ -23,9 +23,9 @@ account when starting reservations and procurements. Urgent requests
 will be started first.
 
 .. note::
-		In case there are not enough products in stock to satisfy all the
-		requests, you can be sure that the most urgent ones will be produced
-		first.
+   In case there are not enough products in stock to satisfy all the
+   requests, you can be sure that the most urgent ones will be produced
+   first.
 
 Configure and run the scheduler
 ===============================

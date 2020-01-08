@@ -6,8 +6,8 @@ Connecting a Vantiv payment terminal allows you to offer a fluid payment
 flow to your customers and ease the work of your cashiers.
 
 .. note::
-		Please note MercuryPay only operates with US and Canadian banks, making
-		this procedure only suitable for North American businesses.
+   Please note MercuryPay only operates with US and Canadian banks, making
+   this procedure only suitable for North American businesses.
 
 Configuration
 =============

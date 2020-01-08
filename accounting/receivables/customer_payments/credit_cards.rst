@@ -100,11 +100,10 @@ list of credit cards payments that have not been cashed in the "Credit
 card" account (accessible, for example, from the general ledger).
 
 .. note::
-
-	Both methods will produce the same data in your accounting at the end of the
-	process. But, if you have credit cards that have not been cashed, this one
-	is cleaner because those credit cards have not been reported yet on your bank
-	account.
+   Both methods will produce the same data in your accounting at the end of the
+   process. But, if you have credit cards that have not been cashed, this one
+   is cleaner because those credit cards have not been reported yet on your bank
+   account.
 
 Option 2: One journal entry only
 ================================
@@ -146,11 +145,10 @@ books:
 +----------------------+-------------------+----------+----------+
 
 .. tip::
-
-	You may also record the payment directly without going on the customer
-	invoice, using the top menu :menuselection:`Sales --> Payments`. This method may be more
-	convenient if you have a lot of credit cards to record in a batch but you
-	will have to reconcile entries afterwards (matching payments with invoices).
+   You may also record the payment directly without going on the customer
+   invoice, using the top menu :menuselection:`Sales --> Payments`. This method may be more
+   convenient if you have a lot of credit cards to record in a batch but you
+   will have to reconcile entries afterwards (matching payments with invoices).
 
 If you use this approach to manage received credit cards, you can use
 the report "Bank Reconciliation Report" to verify which credit cards

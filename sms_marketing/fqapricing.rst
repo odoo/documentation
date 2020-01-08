@@ -18,8 +18,10 @@ To buy credits I will go to :menuselection:`Settings -->  Buy Credits` (under *S
     :align: center
 .. image:: media/fqa2.png
     :align: center
-	
-.. tip:: If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
+
+.. tip::
+   If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial
+   credits to test the feature.
 
 FAQ
 ==================================

@@ -34,6 +34,6 @@ If you have the *Barcode* application installed, you can specify the
 barcode which will correspond to this location.
 
 .. note::
-		A warehouse also corresponds to a location. As the locations are
-		hierarchical, Odoo will create the parent location of the warehouse,
-		containing all the sublocations in it.
+   A warehouse also corresponds to a location. As the locations are
+   hierarchical, Odoo will create the parent location of the warehouse,
+   containing all the sublocations in it.

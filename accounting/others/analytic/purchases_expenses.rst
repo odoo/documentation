@@ -123,8 +123,7 @@ correct analytical account. We simply need to create the correct vendors
 product.
 
 .. note::
-
-	You can also track cost with timesheets, see: :doc:`timesheets`
+   You can also track cost with timesheets, see: :doc:`timesheets`
 
 Track costs in accounting
 =========================
@@ -142,7 +141,6 @@ button to have an overview of all cost linked to the account.
    :align: center
 
 .. note::
-
-	If you would like to have the revenue as well you should
-	invoice the Consulting Pack in the Invoice menu and link the invoice
-	line to this same analytical account.
+   If you would like to have the revenue as well you should
+   invoice the Consulting Pack in the Invoice menu and link the invoice
+   line to this same analytical account.

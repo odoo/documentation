@@ -33,9 +33,8 @@ module. This module handle the process of generating SEPA files based on
 Odoo payments.
 
 .. note::
-
-	According to your country and the chart of account you use, this module may
-	be installed by default.
+   According to your country and the chart of account you use, this module may
+   be installed by default.
 
 Activate SEPA payment methods on banks
 --------------------------------------
@@ -54,11 +53,10 @@ won't work with SEPA) and the BIC (bank identifier code) on your bank
 journal.
 
 .. note::
-
-	By default, the payments you send using SEPA will use your company name as
-	initiating party name. This is what appears on the recipient's bank statement
-	in the **payment from** field. You can customize it in your company settings,
-	in the tab **Configuration**, under the **SEPA** section.
+   By default, the payments you send using SEPA will use your company name as
+   initiating party name. This is what appears on the recipient's bank statement
+   in the **payment from** field. You can customize it in your company settings,
+   in the tab **Configuration**, under the **SEPA** section.
 
 .. image:: ./media/sepa01.png
   :align: center

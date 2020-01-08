@@ -74,8 +74,7 @@ are set !
    :align: center
 
 .. note::
-
-	Only the **active** currencies are updated
+   Only the **active** currencies are updated
 
 Configure your charts of account
 --------------------------------
@@ -166,6 +165,5 @@ journal entries. All the exchange rates differences are recorded in it.
    :align: center
 
 .. seealso::
-
-	* :doc:`invoices_payments`
-	* :doc:`exchange`
+   * :doc:`invoices_payments`
+   * :doc:`exchange`

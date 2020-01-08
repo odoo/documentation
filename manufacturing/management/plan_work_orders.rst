@@ -29,8 +29,8 @@ your product and add a *Planned Start Date*.
     :align: center
 
 .. note::
-		The “Deadline Start” field is informative. It shows you until when you
-		can launch the manufacturing order to fulfill the initial demand.
+   The “Deadline Start” field is informative. It shows you until when you
+   can launch the manufacturing order to fulfill the initial demand.
 
 Mark your *Manufacturing Order* as todo and plan it. By going to the
 *Planning* menu, you can access to the scheduled orders. Here is the
@@ -40,10 +40,10 @@ one we just created:
     :align: center
 
 .. note:: 
-		If you plan two work orders at the same hour, the second one will be
-		scheduled after the first one if the jobs need to be done at the same
-		work center. The start date will, then, be automatically updated
-		considering the first free slot on the work center.
+   If you plan two work orders at the same hour, the second one will be
+   scheduled after the first one if the jobs need to be done at the same
+   work center. The start date will, then, be automatically updated
+   considering the first free slot on the work center.
 
 If you overrun the planned date and begin the job later, you will have a
 track of it in the *Time Tracking* tab of your work order.

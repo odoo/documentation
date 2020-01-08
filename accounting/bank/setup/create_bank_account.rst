@@ -65,5 +65,5 @@ Delete a bank account or credit card account
 From the list of bank accounts, select items to delete and delete them from the action menu or go to the form and delete a single item from the action menu
 
 .. |image5| image:: media/image05.png
-	:class: btn-group
+   :class: btn-group
 

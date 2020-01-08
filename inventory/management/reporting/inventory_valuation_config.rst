@@ -209,7 +209,7 @@ Vendor Bill
   ============================= ===== ======
   Assets: Inventory                50
   Assets: Deferred Tax Assets    4.68
-  Liabilities: Accounts Payable	       54.68
+  Liabilities: Accounts Payable        54.68
   ============================= ===== ======
 
   Configuration:

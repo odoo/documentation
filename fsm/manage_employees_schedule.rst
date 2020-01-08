@@ -36,7 +36,7 @@ person he can be assigned.
    :alt: Unassigned tasks in Odoo Field Service
 
 .. tip::
-	Create projects per team, or per working site, and have a more accurate and dynamic database.
+   Create projects per team, or per working site, and have a more accurate and dynamic database.
 
 .. seealso::
- 	* :doc:`../project/configuration/setup`
+   * :doc:`../project/configuration/setup`

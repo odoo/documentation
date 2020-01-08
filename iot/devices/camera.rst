@@ -15,7 +15,7 @@ To connect the camera to the *IoT Box*, simply combine the two by
 cable.
 
 .. note::
-		In some cases, a serial to USB adapter could be needed.
+   In some cases, a serial to USB adapter could be needed.
 
 If your camera is a `*supported
 one* <https://www.odoo.com/page/iot-hardware>`__, there is no need to

@@ -68,9 +68,7 @@ It will install generic accounts. But if it does not cover all your
 cases, you can create your own accounts too.
 
 .. note::
-
-	If you are a Saas User, your country chart of account is
-	automatically installed.
+   If you are a Saas User, your country chart of account is automatically installed.
 
 To create a new accounts, go to the Accounting application. Open the
 menu :menuselection:`Adviser --> Chart of Accounts`, the click on the

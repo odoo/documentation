@@ -18,9 +18,8 @@ warehouse** option. Please don't forget to **apply** your changes.
    :align: center
 
 .. tip::
-
-	This option should also be ticked if you wish to manage different
-	locations and routes in your warehouse.
+   This option should also be ticked if you wish to manage different
+   locations and routes in your warehouse.
 
 Creating a new warehouse
 ========================
@@ -37,11 +36,10 @@ characters maximum.
    :align: center
 
 .. tip::
-
-	please note that the **Short Name** is very important as it will
-	appear on your transfer orders and other warehouse documents. It might
-	be smart to use an understandable one (e.g.: WH/[first letters of
-	location]).
+   Please note that the **Short Name** is very important as it will
+   appear on your transfer orders and other warehouse documents. It might
+   be smart to use an understandable one (e.g.: WH/[first letters of
+   location]).
 
 If you go back to your dashboard, new operations will automatically have
 been generated for your new warehouse.
@@ -110,7 +108,7 @@ It is also possible to manually transfer each product:
 1. Via your dashboard, select the transfer order in the source location.
 
    .. image:: media/inter08.png
-	  :align: center
+      :align: center
 
 2. Select the right transfer order
 
@@ -125,10 +123,9 @@ window you can manually indicate how much products you process
    :align: center
 
 .. tip::
-
-	If you decide to partially process the transfer order (e.g. a part of the
-	products can't be shipped yet due to an unexpected event), Odoo will
-	automatically ask if you wish to create a **backorder**.
-	Create a backorder if you expect to process the remaining products
-	later, do not create a backorder if you will not supply/receive the
-	remaining products.
+   If you decide to partially process the transfer order (e.g. a part of the
+   products can't be shipped yet due to an unexpected event), Odoo will
+   automatically ask if you wish to create a **backorder**.
+   Create a backorder if you expect to process the remaining products
+   later, do not create a backorder if you will not supply/receive the
+   remaining products.
