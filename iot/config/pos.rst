@@ -36,7 +36,7 @@ Set Up
 
 To connect hardware to the PoS, the first step is to connect an IoT Box
 to your database. For this, follow this
-`documentation <https://docs.google.com/document/d/1vhWrSSlSdJcRYe4tjPpXKYVMTD47lVK3ysyYc7tJDlA/edit#>`__.
+`documentation <connect>`__.
 
 .. image:: media/pos02.png
     :align: center
