@@ -89,6 +89,9 @@ Until recently, Odoo users needed to use a third-party CDN service provider such
 It is not required anymore: Odoo generates the certificate for you automatically, using integration with `Let's Encrypt Certificate Authority and ACME protocol <https://letsencrypt.org/how-it-works/>`__.
 In order to get this, simply add your domain name in your customer portal (a separate certificate is generated for each domain name specified).
 
+.. warning::
+  **Please note that the certificate generation may take up to 24h.**
+
 If you already use CloudFlare or a similar service, you can keep using it or simply change for Odoo. The choice is yours.
 
 .. seealso::
