@@ -48,7 +48,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-26 09:17+0100\n"
+"POT-Creation-Date: 2020-01-10 14:20+0100\n"
 "PO-Revision-Date: 2019-10-03 09:45+0000\n"
 "Last-Translator: 敬雲 林 <chingyun@yuanchih-consult.com>, 2019\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -11967,7 +11967,7 @@ msgstr "递延收入"
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:4
 msgid ""
 "**Deferred revenues**, or **unearned revenue**, are payments made in advance"
-" by  customers for products yet to deliver or services yet to render."
+" by customers for products yet to deliver or services yet to render."
 msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:7
@@ -11978,14 +11978,14 @@ msgid ""
 "Statement*, since the payments will be effectively earned in the future."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:13
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:11
 msgid ""
 "These future revenues must be deferred on the company's balance sheet until "
 "the moment in time they can be **recognized**, at once or over a defined "
 "period, on the Profit and Loss statement."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:17
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:14
 msgid ""
 "For example, let's say we sell a five-year extended warranty for $ 350. We "
 "already receive the money now but haven't earned it yet. Therefore, we post "
@@ -11994,13 +11994,20 @@ msgid ""
 "revenue."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:23
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:19
 msgid ""
 "Odoo Accounting handles deferred revenues by spreading them in multiple "
-"entries that are automatically created periodically."
+"entries that are automatically created in *draft mode* and then posted "
+"periodically."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:28
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:23
+msgid ""
+"The server checks once a day if an entry must be posted. It might then take "
+"up to 24 hours before you see a change from *draft* to *posted*."
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:27
 msgid "Prerequisites"
 msgstr "先决条件"
 
@@ -12014,14 +12021,14 @@ msgstr ""
 msgid "Configure a Deferred Revenue Account"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:34
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:35
 msgid ""
 "To configure your account in the **Chart of Accounts**, go to "
 ":menuselection:`Accounting --> Configuration --> Chart of Accounts`, click "
 "on *Create*, and fill out the form."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:43
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:44
 msgid ""
 "This account's type must be either *Current Liabilities* or *Non-current "
 "Liabilities*"
@@ -12031,71 +12038,72 @@ msgstr ""
 msgid "Post an income to the right account"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:49
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:50
 msgid "Select the account on a draft invoice"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:50
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:52
 msgid ""
 "On a draft invoice, select the right account for all the products of which "
 "the incomes must be deferred."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:58
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:60
 msgid "Choose a different Income Account for specific products"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:59
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:62
 msgid ""
 "Start editing the product, go to the *Accounting* tab, select the right "
 "**Income Account**, and save."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:67
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:70
 msgid ""
 "It is possible to automate the creation of revenue entries for these "
 "products (see: `Automate the Deferred Revenues`_)."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:71
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:74
 msgid "Change the account of a posted journal item"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:72
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:76
 msgid ""
 "To do so, open your Sales Journal by going to :menuselection:`Accounting -->"
 " Accounting --> Sales`, select the journal item you want to modify, click on"
 " the account, and select the right one."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:82
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:85
 msgid "Deferred Revenues entries"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:84
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:88
 msgid "Create a new entry"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:85
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:90
 msgid ""
-"A **Deferred Revenues entry** automatically generates journal entries at the"
-" right time until the full amount of the income is recognized."
+"A **Deferred Revenues entry** automatically generates all journal entries in"
+" *draft mode*. They are then posted one by one at the right time until the "
+"full amount of the income is recognized."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:88
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:93
 msgid ""
 "To create a new entry, go to :menuselection:`Accounting --> Accounting --> "
 "Deferred Revenues`, click on *Create*, and fill out the form."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:91
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:96
 msgid ""
 "Click on **select related purchases** to link an existing journal item to "
 "this new entry. Some fields are then automatically filled out, and the "
 "journal item is now listed under the **Related Sales** tab."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:99
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:104
 msgid ""
 "Once done, you can click on *Compute Revenue* (next to the *Confirm* button)"
 " to generate all the values of the **Revenue Board**. This board shows you "
@@ -12103,41 +12111,41 @@ msgid ""
 "date."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:109
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:113
 msgid "What does \"Prorata Temporis\" mean?"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:110
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:115
 msgid ""
 "The **Prorata Temporis** feature is useful to recognize your revenue the "
 "most accurately possible."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:113
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:117
 msgid ""
 "With this feature, the first entry on the Revenue Board is computed based on"
 " the time left between the *Prorata Date* and the *First Recognition Date* "
 "rather than the default amount of time between recognitions."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:117
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:121
 msgid ""
 "For example, the Revenue Board above has its first revenue with an amount of"
 " $ 4.22 rather than $ 70.00. Consequently, the last entry is also lower and "
 "has an amount of $ 65.78."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:123
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:125
 msgid "Deferred Entry from the Sales Journal"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:124
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:127
 msgid ""
 "You can create a deferred entry from a specific journal item in your **Sales"
 " Journal**."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:126
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:129
 msgid ""
 "To do so, open your Sales Journal by going to :menuselection:`Accounting -->"
 " Accounting --> Sales`, and select the journal item you want to defer. Make "
@@ -12145,73 +12153,73 @@ msgid ""
 "posted journal item`_)."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:131
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:134
 msgid ""
 "Then, click on *Action*, select **Create Deferred Entry**, and fill out the "
 "form the same way you would do to `create a new entry`_."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:140
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:142
 msgid "Deferred Revenue Models"
 msgstr "递延收入模型"
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:141
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:144
 msgid ""
 "You can create **Deferred Revenue Models** to create your Deferred Revenue "
 "entries faster."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:144
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:146
 msgid ""
 "To create a model, go to :menuselection:`Accounting --> Configuration --> "
 "Deferred Revenue Models`, click on *Create*, and fill out the form the same "
 "way you would do to create a new entry."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:149
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:150
 msgid ""
 "You can also convert a *confirmed Deferred Revenue entry* into a model by "
 "opening it from :menuselection:`Accounting --> Accounting --> Deferred "
-"Revenues` and then, by clicking on the button **Save Model**."
-msgstr ""
-
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:154
-msgid "Apply a Deferred Revenue Model to a new entry"
+"Revenues` and then, by clicking on the button *Save Model*."
 msgstr ""
 
 #: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:155
+msgid "Apply a Deferred Revenue Model to a new entry"
+msgstr ""
+
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:157
 msgid ""
 "When you create a new Deferred Revenue entry,  fill out the **Deferred "
 "Revenue Account** with the right recognition account."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:158
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:160
 msgid ""
 "New buttons with all the models linked to that account appear at the top of "
 "the form. Clicking on a model button fills out the form according to that "
 "model."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:166
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:168
 msgid "Automate the Deferred Revenues"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:167
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:170
 msgid ""
 "When you create or edit an account of which the type is either *Current "
 "Liabilities* or *Non-current Liabilities*, you can configure it to defer the"
 " revenues that are credited on it automatically."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:171
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:173
 msgid "You have three choices for the **Automate Deferred Revenue** field:"
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:173
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:175
 msgid "**No:** this is the default value. Nothing happens."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:174
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:176
 msgid ""
 "**Create in draft:** whenever a transaction is posted on the account, a "
 "draft *Deferred Revenues entry* is created, but not validated. You must "
@@ -12219,14 +12227,14 @@ msgid ""
 "Deferred Revenues`."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:177
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:179
 msgid ""
 "**Create and validate:** you must also select a Deferred Revenue Model (see:"
 " `Deferred Revenue Models`_). Whenever a transaction is posted on the "
 "account, a *Deferred Revenues entry* is created and immediately validated."
 msgstr ""
 
-#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:187
+#: ../../accounting/receivables/customer_invoices/deferred_revenues.rst:188
 msgid ""
 "You can, for example, select this account as the default **Income Account** "
 "of a product to fully automate its sale completely. (see: `Choose a "

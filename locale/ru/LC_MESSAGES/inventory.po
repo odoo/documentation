@@ -8,19 +8,19 @@
 # Sergey Vilizhanin, 2019
 # Максим Дронь <dronmax@gmail.com>, 2019
 # Gennady Marchenko <gennadym@gmail.com>, 2019
-# Martin Trigaux, 2019
 # Collex100, 2019
 # Viktor Pogrebniak <vp@aifil.ru>, 2019
-# Ivan Yelizariev <yelizariev@it-projects.info>, 2019
+# Martin Trigaux, 2020
+# Ivan Yelizariev <yelizariev@it-projects.info>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-12-26 09:17+0100\n"
+"POT-Creation-Date: 2020-01-10 14:20+0100\n"
 "PO-Revision-Date: 2019-10-03 09:46+0000\n"
-"Last-Translator: Ivan Yelizariev <yelizariev@it-projects.info>, 2019\n"
+"Last-Translator: Ivan Yelizariev <yelizariev@it-projects.info>, 2020\n"
 "Language-Team: Russian (https://www.transifex.com/odoo/teams/41243/ru/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -90,15 +90,30 @@ msgid ""
 msgstr ""
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:3
-msgid "Work with Barcode Nomenclature"
-msgstr ""
+#: ../../inventory/management/delivery/cancel_order.rst:6
+#: ../../inventory/management/delivery/delivery_countries.rst:6
+#: ../../inventory/management/delivery/label_type.rst:6
+#: ../../inventory/management/incoming/handle_receipts.rst:6
+#: ../../inventory/overview.rst:3
+#: ../../inventory/routes/concepts/procurement_rule.rst:6
+#: ../../inventory/routes/concepts/push_rule.rst:6
+#: ../../inventory/routes/concepts/use_routes.rst:6
+#: ../../inventory/routes/strategies/removal.rst:6
+#: ../../inventory/shipping/operation/cancel.rst:6
+#: ../../inventory/shipping/operation/invoicing.rst:6
+#: ../../inventory/shipping/operation/labels.rst:6
+#: ../../inventory/shipping/operation/multipack.rst:6
+#: ../../inventory/shipping/setup/delivery_method.rst:6
+#: ../../inventory/shipping/setup/third_party_shipper.rst:6
+msgid "Overview"
+msgstr "Общий обзор"
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:5
 msgid ""
 "There are different situations in which barcode nomenclatures can be useful."
-" A well-known use case is the one of a point of sales that sells products in"
-" bulk. The customers will scale their products themselves and get the "
-"printed barcode to stick on the product. This barcode will contain the "
+" A well-known use case is the one of a point of sale which sells products in"
+" bulk, in which the customers will scale their products themselves and get "
+"the printed barcode to stick on the product. This barcode will contain the "
 "weight of the product and help compute the price accordingly."
 msgstr ""
 
@@ -108,51 +123,52 @@ msgstr ""
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:15
 msgid ""
-"Odoo supports *Barcode Nomenclatures*, which determine the mapping and "
-"interpretation of the encoded information."
+"Odoo supports Barcode Nomenclatures, which determine the mapping and "
+"interpretation of the encoded information. You can configure your barcode "
+"nomenclature being in **debug** mode. To do so, go to *Inventory > "
+"Configuration > Barcode Nomenclature*."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:18
-msgid ""
-"To configure the *Barcode Nomenclature*, you need to activate the debug "
-"mode. To do so, go to *Inventory > Configuration > Barcode Nomenclature*."
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:22
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:20
 msgid ""
 "You can create a barcode nomenclature from there, and then add a line to "
 "create your first rule."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:28
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:26
 msgid ""
-"The first step is to specify the *rule name*, for example, *Weight Barcode* "
-"with 3 decimals. Then, you have to specify the type for barcode "
-"nomenclature, like the *Weighted Product*."
+"The first step is to specify the **rule name**, for example Weight Barcode "
+"with 3 Decimals. You then have to specify the type for barcode nomenclature,"
+" in our case it will be Weighted Product."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:35
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:33
 msgid ""
-"The *Barcode Pattern* is a regular expression that defines the structure of "
-"the barcode. In this example, 21 defines the products on which the rule will"
-" be applied. Those are the numbers by which the product barcode should "
-"start. The 5 “dots” are the following numbers of the product barcode and are"
-" there to identify the product in question. The “N” defines a number and the"
-" “D” defines the decimals."
+"The Barcode Pattern is a regular expression that defines the structure of "
+"the barcode. In this example 21 defines the products on which the rule will "
+"be applied, those are the numbers by which the product barcode should start."
+" The 5 “dots” are the following numbers of the product barcode and are there"
+" simply to identify the product in question. The “N” define a number and the"
+" “D” define the decimals."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:43
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:40
+msgid ""
+"The encoding allows to specify the barcode encoding on which the rule should"
+" be applied."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:44
 msgid ""
 "You can define different rules and order their priority thanks to the "
-"sequence. The first rule that matches the scanned barcode will then be "
-"applied."
+"sequence. The first rule which matches the scanned barcode will be applied."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:48
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:49
 msgid "Configure your Product"
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:50
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:51
 msgid "The barcode of the product should start by “21”;"
 msgstr ""
 
@@ -162,100 +178,95 @@ msgid ""
 "identify the product;"
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:54
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:53
 msgid ""
-"The barcode should contain 0’s when you did defined D’s or N’s. In our case,"
-" we need to set 5 zeros because we condigures “21………{NNDDD}”;"
+"The barcode should contain 0’s where you did defined D’s or N’s. In our case"
+" we need to set 5 zeros because we configured “21…..{NNDDD}”;"
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:56
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:54
 msgid ""
-"In EAN-13, the last number is a check number. Use an EAN13 generator to know"
+"In EAN-13, the last number is a check number, use an EAN13 generator to know"
 " which digit it should be in your case."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:61
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:59
 msgid ""
-"In case you weight 1,5kg of pasta, the balance will print you the following "
-"barcode: *2112345015001*. If you scan this barcode in your PoS, or when "
-"receiving the products in your barcode app, Odoo will automatically create a"
-" new line for the product, for a quantity of 1,5kg."
+"In case you weight 1,5 Kg of pasta, the balance will print you the following"
+" barcode 2112345015002. If you scan this barcode in your POS or when "
+"receiving products in your barcode application, Odoo will automatically "
+"create a new line for the Pasta product for a quantity of 1.5 Kg. For the "
+"point of sale, a price depending on the quantity will also be computed."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:67
-msgid ""
-"For the point of sale, a price depending on the quantity will also be "
-"computed."
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:74
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:70
 msgid "Rule Types"
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:76
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:72
 msgid ""
-"**Priced Product**: it allows you to identify the product and specify its "
-"price, used in PoS;"
+"**Priced Product**: allows you to identify the product and specify its "
+"price, used in POS."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:73
+msgid ""
+"**Discounted Product**: allows you to create one barcode per applied "
+"discount. You can then scan your product in the POS and then scan the "
+"discount barcode, discount will be applied on the normal price of the "
+"product."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:74
+msgid ""
+"**Weighted Product**: allows you to identify the product and specify its "
+"weight, used in both POS (in which the price is computed based on the "
+"weight) and in inventory."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:75
+msgid ""
+"**Client**: allows you to identify the customer, for example used with "
+"loyalty program."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:76
+msgid "**Cashier**: allows you to identify the cashier when entering the POS."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:77
+msgid ""
+"**Location**: allows you to identify the location on a transfer when multi-"
+"location is activated."
 msgstr ""
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:78
 msgid ""
-"**Discounted Product**: it allows you to create one barcode per applied "
-"discount. Then, you can scan your product in the PoS and apply discounts on "
-"the product by scanning the discount barcode;"
+"**Package**: allows you to identify packages on a transfer when packages are"
+" activated."
+msgstr ""
+
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:79
+msgid ""
+"**Lot**: allows you to identify the lot number of a product on a transfer."
 msgstr ""
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:80
 msgid ""
-"**Weighted Product**: it allows you to identify the product and specify its "
-"weight, used in both PoS and in Inventory;"
+"**Credit Card**: doesn’t need manual modification, exists for data from the "
+"Mercury module."
 msgstr ""
 
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:82
+#: ../../inventory/barcode/operations/barcode_nomenclature.rst:81
 msgid ""
-"**Client**: it allows you to identify the customer, for example used with "
-"loyalty program;"
+"**Unit Product**: allows you to identify a product for both POS and "
+"transfers."
 msgstr ""
 
 #: ../../inventory/barcode/operations/barcode_nomenclature.rst:84
 msgid ""
-"**Cashier**: it allows you to identify the cashier when entering the PoS;"
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:86
-msgid ""
-"**Location**: it allows you to identify the location on a transfer when "
-"multi-location is activated;"
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:88
-msgid ""
-"**Package**: it allows you to identify packages on a transfer when packages "
-"are activated;"
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:90
-msgid ""
-"**Lot**: it allows you to identify the lot number of a product on a "
-"transfer;"
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:92
-msgid ""
-"**Credit Card**: it doesn’t need manual modification, exists for data from "
-"the Mercury module;"
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:94
-msgid ""
-"**Unit Product**: it allows you to identify a product for both PoS and "
-"Transfers."
-msgstr ""
-
-#: ../../inventory/barcode/operations/barcode_nomenclature.rst:97
-msgid ""
 "When the barcode pattern contains .*, it means that it can contain any "
-"number of characters. Those characters can be any number."
+"number of characters, those characters being any number."
 msgstr ""
 
 #: ../../inventory/barcode/operations/internal.rst:3
@@ -534,6 +545,7 @@ msgstr ""
 #: ../../inventory/management/products/uom.rst:16
 #: ../../inventory/management/replenishment_strategies/min_stock_rule_vs_mto.rst:21
 #: ../../inventory/management/replenishment_strategies/virtual_warehouses.rst:6
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:15
 #: ../../inventory/management/warehouses/location_creation.rst:6
 #: ../../inventory/management/warehouses/warehouse_creation.rst:6
 #: ../../inventory/routes/concepts/cross_dock.rst:14
@@ -541,7 +553,6 @@ msgstr ""
 #: ../../inventory/routes/concepts/procurement_rule.rst:25
 #: ../../inventory/routes/concepts/push_rule.rst:29
 #: ../../inventory/routes/concepts/use_routes.rst:22
-#: ../../inventory/routes/costing/landed_costs.rst:17
 #: ../../inventory/routes/strategies/putaway.rst:10
 #: ../../inventory/routes/strategies/removal.rst:18
 #: ../../inventory/shipping/operation/invoicing.rst:16
@@ -622,25 +633,6 @@ msgstr "Управление складом"
 #: ../../inventory/management/delivery/cancel_order.rst:3
 msgid "How do I cancel a delivery order?"
 msgstr "Как отменить заказ на доставку?"
-
-#: ../../inventory/management/delivery/cancel_order.rst:6
-#: ../../inventory/management/delivery/delivery_countries.rst:6
-#: ../../inventory/management/delivery/label_type.rst:6
-#: ../../inventory/management/incoming/handle_receipts.rst:6
-#: ../../inventory/overview.rst:3
-#: ../../inventory/routes/concepts/procurement_rule.rst:6
-#: ../../inventory/routes/concepts/push_rule.rst:6
-#: ../../inventory/routes/concepts/use_routes.rst:6
-#: ../../inventory/routes/costing/landed_costs.rst:6
-#: ../../inventory/routes/strategies/removal.rst:6
-#: ../../inventory/shipping/operation/cancel.rst:6
-#: ../../inventory/shipping/operation/invoicing.rst:6
-#: ../../inventory/shipping/operation/labels.rst:6
-#: ../../inventory/shipping/operation/multipack.rst:6
-#: ../../inventory/shipping/setup/delivery_method.rst:6
-#: ../../inventory/shipping/setup/third_party_shipper.rst:6
-msgid "Overview"
-msgstr "Общий обзор"
 
 #: ../../inventory/management/delivery/cancel_order.rst:8
 msgid ""
@@ -3083,8 +3075,8 @@ msgid ""
 "your :menuselection:`Inventory --> Inventory control --> Products` (or any "
 "other module where products are available)."
 msgstr ""
-"Настройка Сделать на заказ доступно в вашей форме товара через ваш: "
-"menuselection: `Состав -&gt; Контроль состава -&gt; Товари` (или любой "
+"Настройка Сделать на заказ доступно в вашей форме товара через ваш "
+":menuselection:`Inventory --> Inventory control --> Products` (или любой "
 "другой модуль, где доступны товары)."
 
 #: ../../inventory/management/products/strategies.rst:64
@@ -3449,481 +3441,415 @@ msgstr ""
 msgid "Valuation Methods"
 msgstr "методы оценки"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:5
-msgid "How to do an inventory valuation? (Anglo-Saxon Accounting)"
-msgstr "Как провести оценку инвентаризации? (Древнеанглийский бухучет)"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:7
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:7
-msgid ""
-"Every year your inventory valuation has to be recorded in your balance "
-"sheet. This implies two main choices:"
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:3
+msgid "Integrating additional costs to products (landed costs)"
 msgstr ""
-"Ежегодно ваша оценка инвентаризации должна быть записана в вашем балансе. "
-"Это предполагает два основных варианта выбора:"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:10
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:10
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:5
 msgid ""
-"the way you compute the cost of your stored items (Standard vs. Average vs. "
-"Real Price);"
+"The landed cost feature in Odoo allows to include additional costs "
+"(shipment, insurance, customs duties, etc.) into the cost of the product."
 msgstr ""
-"способ, которым вы вычисляете стоимость ваших сохранившихся элементов "
-"(стандарт против среднего или реального)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:13
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:13
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:10
 msgid ""
-"the way you record the inventory value into your books (periodic vs. "
-"Perpetual)."
+"Landed costs can only be applied to products with a FIFO or AVCO costing "
+"method and an automated inventory valuation (which requires the accounting "
+"application to be installed)."
 msgstr ""
-"как вы фиксируете стоимость рекламных ресурсов в своих книгах (периодический"
-" или бессрочный)."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:17
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:17
-msgid "Costing Method"
-msgstr "Метод ценообразования"
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:17
+msgid ""
+"First, you need to go in *Inventory > Configuration > Settings* and activate"
+" the landed costs feature. You can also determine the default journal in "
+"which the landed cost accounting entries will be recorded."
+msgstr ""
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:63
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:64
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:25
+msgid "Add costs to products"
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:28
+msgid "Receive the vendor bill"
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:30
+msgid ""
+"Let’s imagine I receive a bill from custom duties for a shipment. I’ll tick "
+"the box *Landed Costs* on the vendor bill line."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:37
+msgid "The landed cost product must be of type service."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:39
+msgid ""
+"If this product is always a landed cost, you can also define it on the "
+"product and avoid having to tick the box on each vendor bill."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:45
+msgid ""
+"At the top of my vendor bill, I’ll see a button *create landed costs*. I "
+"click on this button and a landed cost is automatically created. I can now "
+"decide on which picking those additional costs should apply."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:52
+msgid ""
+"I can now click on *Compute* and go in the tab *Valuation Adjustments* to "
+"see the impact on my products costs. The last step is to validate the landed"
+" cost."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:56
+msgid ""
+"I can access the journal entry that has been created by the landed cost by "
+"clicking on the journal entry."
+msgstr ""
+
+#: ../../inventory/management/reporting/integrating_landed_costs.rst:63
+msgid ""
+"You are not forced to start from the vendor bill, you can also go in "
+"*Inventory > Operations > Landed Costs* and directly create the landed cost "
+"from there."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:5
+msgid "Inventory valuation configuration"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:7
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:5
+msgid ""
+"Inventory valuation refers to how you value your stock. It’s a very "
+"important aspect of a business as the inventory can be the biggest asset of "
+"a company."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:11
+msgid "Inventory valuation implies two main choices:"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:13
+msgid "The cost method you use to value your goods (standard, fifo, avco)"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:14
+msgid ""
+"The way you record this value into your accounting books (manually or "
+"automatically)"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:16
+msgid "Those two concepts are explained in the sections below."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:19
+msgid "Costing Methods: Standard, FIFO, AVCO"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:21
+msgid ""
+"The costing method is defined in the product category. There are three "
+"options available. Each of them is explained in detail below."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:69
 msgid "Standard Price"
 msgstr "Стандартная цена"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:28
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:73
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:128
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:181
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:29
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:74
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:129
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:182
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:34
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:79
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:125
 msgid "Operation"
 msgstr "Операция"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:29
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:74
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:129
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:182
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:30
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:75
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:130
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:183
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:35
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:80
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:126
 msgid "Unit Cost"
 msgstr "Себестоимость единицы"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:30
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:75
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:130
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:183
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:31
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:76
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:131
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:184
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:36
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:81
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:127
 msgid "Qty On Hand"
 msgstr "Количество в наличии"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:31
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:76
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:131
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:184
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:32
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:77
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:132
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:185
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:37
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:82
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:128
 msgid "Delta Value"
 msgstr "значение дельты"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:32
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:77
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:132
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:185
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:33
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:78
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:133
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:186
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:38
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:83
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:129
 msgid "Inventory Value"
 msgstr "Величина запасов"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:34
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:39
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:44
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:49
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:55
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:84
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:139
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:192
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:202
-msgid "$10"
-msgstr "$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:40
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:45
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:50
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:55
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:61
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:90
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:136
+msgid "€10"
+msgstr "€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:35
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:80
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:135
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:188
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:36
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:81
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:136
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:189
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:41
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:86
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:132
 msgid "0"
 msgstr "0"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:37
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:79
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:82
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:134
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:137
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:187
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:190
-msgid "$0"
-msgstr "$0"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:43
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:85
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:88
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:131
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:134
+msgid "€0"
+msgstr "€0"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:38
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:83
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:138
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:191
-msgid "Receive 8 Products at $10"
-msgstr "Получить 8 товаров на 10 долларов"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:44
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:89
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:135
+msgid "Receive 8 Products at €10"
+msgstr "Получить 8 товаров за 10 евро"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:40
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:85
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:140
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:193
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:41
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:86
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:141
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:194
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:46
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:91
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:137
 msgid "8"
 msgstr "8"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:41
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:86
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:141
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:194
-msgid "+8*$10"
-msgstr "+8*$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:47
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:92
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:138
+msgid "+8*€10"
+msgstr "+8*€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:42
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:87
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:142
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:195
-msgid "$80"
-msgstr "$80"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:48
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:93
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:139
+msgid "€80"
+msgstr "€80"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:43
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:88
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:143
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:196
-msgid "Receive 4 Products at $16"
-msgstr "Получить 4 товары на 16 долларов"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:49
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:94
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:140
+msgid "Receive 4 Products at €16"
+msgstr "Получить 4 товара за € 16"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:45
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:90
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:145
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:198
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:46
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:91
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:146
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:199
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:51
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:96
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:142
 msgid "12"
 msgstr "12"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:46
-msgid "+4*$10"
-msgstr "+4*$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:52
+msgid "+4*€10"
+msgstr "+4*€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:47
-msgid "$120"
-msgstr "$120"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:53
+msgid "€120"
+msgstr "€120"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:48
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:93
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:148
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:201
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:49
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:94
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:149
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:202
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:54
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:99
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:145
 msgid "Deliver 10 Products"
 msgstr "Доставить 10 товаров"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:50
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:95
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:150
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:203
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:51
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:96
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:151
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:204
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:56
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:101
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:147
 msgid "2"
 msgstr "2"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-10*$10"
-msgstr "-10*$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-10*€10"
+msgstr "-10*€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:53
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:206
-msgid "$20"
-msgstr "$20"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:59
+msgid "€20"
+msgstr "€20"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:54
-msgid "Receive 2 Products at $9"
-msgstr "Получить 2 товара за $ 9"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:60
+msgid "Receive 2 Products at €9"
+msgstr "Получить 2 товара за € 9"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:56
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:101
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:156
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:209
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:57
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:102
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:157
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:210
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:62
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:107
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:153
 msgid "4"
 msgstr "4"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:57
-msgid "+2*$10"
-msgstr "+2*$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:63
+msgid "+2*€10"
+msgstr "+2*€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:58
-msgid "$40"
-msgstr "$40"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:64
+msgid "€40"
+msgstr "€40"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:60
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:61
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:66
 msgid ""
-"**Standard Price** means you estimate the cost price based on direct "
-"materials, direct labor and manufacturing overhead at the end of a specific "
-"period (usually once a year). You enter this cost price in the product form."
+"In **Standard Price**, any product will be valued at the cost that you "
+"defined manually on the product form. Usually, this cost is an estimation "
+"based on the material and labor needed to obtain the product. This cost must"
+" be reviewed periodically."
 msgstr ""
-"** Стандартная цена ** означает, что вы оцениваете себестоимость, исходя из "
-"прямых материалов, прямых расходов и производственных накладных расходов в "
-"конце определенного периода (как правило, один раз в год). Вы вводите эту "
-"себестоимость в форме товара."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:118
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:119
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:115
 msgid "Average Price"
 msgstr "Средняя цена"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:89
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:94
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:144
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:197
-msgid "$12"
-msgstr "$12"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:95
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:100
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:141
+msgid "€12"
+msgstr "€12"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:91
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:146
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:199
-msgid "+4*$16"
-msgstr "+4*$16"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:97
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:143
+msgid "+4*€16"
+msgstr "+4*€16"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:92
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:147
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:200
-msgid "$144"
-msgstr "$144"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:98
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:144
+msgid "€144"
+msgstr "€144"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-10*$12"
-msgstr "-10*$12"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-10*€12"
+msgstr "-10*€12"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:98
-msgid "$24"
-msgstr "$24"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:104
+msgid "€24"
+msgstr "€24"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:99
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:154
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:207
-msgid "Receive 2 Products at $6"
-msgstr "Получить 2 товара за $ 6"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:105
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:151
+msgid "Receive 2 Products at €6"
+msgstr "Получить 2 товара за € 6"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:100
-msgid "$9"
-msgstr "$9"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:106
+msgid "€9"
+msgstr "€9"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:102
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:157
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:210
-msgid "+2*$6"
-msgstr "+2*$6"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:108
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:154
+msgid "+2*€6"
+msgstr "+2*€6"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:103
-msgid "$36"
-msgstr "$36"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:109
+msgid "€36"
+msgstr "€36"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:105
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:106
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:111
 msgid ""
-"The **Average Price** method recomputes the cost price as a receipt order "
-"has been processed, based on prices defined in tied purchase orders: FORMULA"
-" (see here attached)"
+"In **AVCO (Average Cost)**, each product has the same value and this value "
+"is the average purchase cost of the product. With this costing method, the "
+"cost of the product is recomputed as each receipt."
 msgstr ""
-"Метод ** Средняя цена ** перераспределяет себестоимость, поскольку обработка"
-" заказа на получение была обработана, исходя из цен, определенных в "
-"привязанных заказам на закупку: FORMULA (см. Здесь приложение)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:109
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:110
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:115
 msgid "The average cost does not change when products leave the warehouse."
 msgstr "Средняя стоимость не меняется, когда товары забирают со склада."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:111
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:112
-msgid ""
-"From an accounting point of view, this method is mainly justified in case of"
-" huge purchase price variations and is quite unusual due to its operational "
-"complexity. Your actually need a software like Odoo to easily keep this cost"
-" up-to-date."
-msgstr ""
-"С точки зрения бухгалтерского учета, этот метод в основном оправдан в случае"
-" больших колебаний цен на покупке и достаточно необычным из-за его "
-"операционную сложность. На самом деле вам нужно такое программное "
-"обеспечение, как Odoo, чтобы легко обновлять эти расходы."
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:116
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:117
-msgid ""
-"This method is dedicated to advanced users. It requires well established "
-"business processes because the order in which you process receipt orders "
-"matters in the cost computation."
-msgstr ""
-"Этот метод предназначен для опытных пользователей. Это требует хорошо "
-"сформированных бизнес-процессов, поскольку порядок, в котором вы "
-"обрабатываете заказ на обеспечение, имеет значение для расчета стоимости."
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:171
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:172
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:166
 msgid "FIFO"
 msgstr "FIFO"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:149
-msgid "$16"
-msgstr "$16"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:146
+msgid "€16"
+msgstr "€16"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-8*$10"
-msgstr "-8*$10"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-8*€10"
+msgstr "-8*€10"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-2*$16"
-msgstr "-2*$16"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:0
+msgid "-2*€16"
+msgstr "-2*€16"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:153
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:211
-msgid "$32"
-msgstr "$32"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:150
+msgid "€32"
+msgstr "€32"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:155
-msgid "$11"
-msgstr "$11"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:152
+msgid "€11"
+msgstr "€11"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:158
-msgid "$44"
-msgstr "$44"
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:155
+msgid "€44"
+msgstr "€44"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:160
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:213
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:161
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:214
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:157
 msgid ""
-"For **Real Price** (FIFO, LIFO, FEFO, etc), the costing is further refined "
-"by the removal strategy set on the warehouse location or product's internal "
-"category. The default strategy is FIFO. With such method, your inventory "
-"value is computed from the real cost of your stored products (cfr. "
-"Quantitative Valuation) and not from the cost price shown in the product "
-"form. Whenever you ship items, the cost price is reset to the cost of the "
-"last item(s) shipped. This cost price is used to value any product not "
-"received from a purchase order (e.g. inventory adjustments)."
+"In **FIFO (First In First Out)**, the products are valued at their purchase "
+"cost. When a product leaves the stock, that’s the “First in, first out” rule"
+" that applies."
 msgstr ""
-"По ** Реальной ценой ** (FIFO, LIFO, FEFO т.д.) цена далее совершенствуется "
-"стратегией удаления, установленной на месте склада или внутренний категории "
-"товара. Стратегия по умолчанию - это FIFO. С помощью такого метода стоимость"
-" вашего запаса исчисляется из реальной стоимости ваших товаров, хранящихся "
-"(с количественным оцениванием), а не от себестоимости, указанной в форме "
-"товара. Каждый раз, когда вы доставляете товары, стоимость восстанавливается"
-" в стоимость последнего товара (-ов), отправляемого. Эта себестоимость "
-"используется для оценки любого товара, не получено по заказу на покупку "
-"(например, инвентаризация)."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:170
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:171
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:161
 msgid ""
-"FIFO is advised if you manage all your workflow into Odoo (Sales, Purchases,"
-" Inventory). It suits any kind of users."
+"Pay attention, that this is a financial FIFO. The first value “in” is the "
+"first value “out”, no matter the storage location, warehouse or serial "
+"number."
 msgstr ""
-"FIFO рекомендуется, если вы управляете всем своим рабочим процессом в Odoo "
-"(продажи, покупки, склад). Это подходит любому пользователю."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:223
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:224
-msgid "LIFO (not accepted in IFRS)"
-msgstr "LIFO (не приемлем в IFRS)"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-4*$16"
-msgstr "-4*$16"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:0
-msgid "-6*$10"
-msgstr "-6*$10"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:208
-msgid "$8"
-msgstr "$8"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:223
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:224
-msgid "LIFO is not permitted outside the United States."
-msgstr "LIFO не допускается за пределами Соединенных Штатов."
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:225
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:226
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:165
 msgid ""
-"Odoo allows any method. The default one is **Standard Price**. To change it,"
-" check **Use a 'Fixed', 'Real' or 'Average' price costing method** in "
-"Purchase settings. Then set the costing method from products' internal "
-"categories. Categories show up in the Inventory tab of the product form."
+"FIFO is advised if you manage all your workflows into Odoo (Sales, "
+"Purchases, Inventory). It suits any kind of users."
 msgstr ""
-"Odoo позволяет любой метод. По умолчанию - ** Стандартная цена **. Чтобы "
-"изменить его, отметьте ** Используйте метод &quot;Исправлено&quot;, "
-"&quot;Реальный&quot; или &quot;Средний&quot; ** в настройках покупки. Затем "
-"установите метод калькулирования по внутренним категорий товаров. Категории "
-"появляются на вкладке Состав в форме товара."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:231
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:232
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:169
+msgid "Inventory Valuation: Manual or Automated"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:171
 msgid ""
-"Whatever the method is, Odoo provides a full inventory valuation in "
-":menuselection:`Inventory --> Reports --> Inventory Valuation` (i.e. current"
-" quantity in stock * cost price)."
+"There are two ways to record your inventory valuation in your accounting "
+"books. As the costing method, this is defined in your product category. "
+"Those two methods are detailed below."
 msgstr ""
-"Независимо от метода, Odoo обеспечивает полную оценку инвентаризации в: "
-"menuselection: `Состав -&gt; Отчеты -&gt; Значение инвентаризации` (ie "
-"текущее количество в наличии * себестоимость)."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:236
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:237
-msgid "Periodic Inventory Valuation"
-msgstr "Периодическое оценки запасов"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:238
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:239
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:175
 msgid ""
-"In a periodic inventory valuation, goods reception and outgoing shipments "
-"have no direct impact in the accounting. At the end of the month or year, "
-"the accountant posts one journal entry representing the value of the "
-"physical inventory."
+"It is important to also note that the accounting entries will depend on your"
+" accounting mode: it can be continental or anglo-saxon. In continental "
+"accounting, the cost of a good is taken into account as soon as the product "
+"is received in stock. In anglo-saxon accounting, the cost of a good is only "
+"recorded as an expense when this good is invoiced to a final customer. In "
+"the tables below, you can easily compare those two accounting modes."
 msgstr ""
-"При периодической оценке инвентаризации приемной и выходные отгрузки товаров"
-" не имеют прямого влияния на бухгалтерский учет. В конце месяца или года "
-"бухгалтер публикует одну запись журнала, отражающий стоимость физической "
-"инвентаризации."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:243
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:244
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:183
+msgid ""
+"Usually, based on your country, the correct accounting mode will be chosen "
+"by default. If you want to verify your accounting mode, activate the "
+"developer mode and open your accounting settings."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:188
+msgid "Manual Inventory Valuation"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:190
+msgid ""
+"In this case, goods receipts and deliveries won’t have any direct impact on "
+"your accounting books. Periodically, you create a manual journal entry "
+"representing the value of what you have in stock. To know that value, go in "
+"Inventory > Reporting > Inventory Valuation."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:195
 msgid ""
 "This is the default configuration in Odoo and it works out-of-the-box. Check"
 " following operations and find out how Odoo is managing the accounting "
@@ -3932,78 +3858,83 @@ msgstr ""
 "Это настройки по умолчанию в Odoo, и оно работает вне коробки. Проверьте "
 "следующие операции и узнайте, как Odoo руководит бухгалтерскими сообщениями."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:263
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:263
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:200
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:359
+msgid "Continental Accounting"
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:217
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:291
 msgid "Vendor Bill"
 msgstr "Счет от поставщика"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:253
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:271
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:310
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:254
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:271
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:305
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:208
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:225
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:259
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:281
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:299
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:338
 msgid "\\"
 msgstr "\\"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:253
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:271
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:310
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:254
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:271
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:305
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:208
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:225
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:259
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:281
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:299
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:338
 msgid "Debit"
 msgstr "Дебет"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:253
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:271
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:310
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:254
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:271
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:305
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:208
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:225
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:259
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:281
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:299
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:338
 msgid "Credit"
 msgstr "Кредит"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:255
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:256
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:307
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:210
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:261
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:283
 msgid "Assets: Inventory"
 msgstr "Активы состав"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:255
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:256
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:210
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:283
 msgid "50"
 msgstr "50"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:256
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:257
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:211
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:284
 msgid "Assets: Deferred Tax Assets"
 msgstr "Активы: отсроченные налоговые активы"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:256
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:257
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:211
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:284
 msgid "4.68"
 msgstr "4.68"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:257
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:258
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:212
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:285
 msgid "Liabilities: Accounts Payable"
 msgstr "Обязанности: кредиторская задолженность"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:257
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:258
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:212
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:285
 msgid "54.68"
 msgstr "54.68"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:263
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:282
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:263
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:281
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:217
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:235
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:291
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:310
 msgid "Configuration:"
 msgstr "настройки:"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:261
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:262
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:216
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:289
 msgid ""
 "Purchased Goods: defined on the product or on the internal category of "
 "related product (Expense Account field)"
@@ -4011,71 +3942,71 @@ msgstr ""
 "Приобретенные товары: определены на товаре или на внутренний категории "
 "соответствующего товара (поле счета расходов)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:263
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:263
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:217
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:291
 msgid ""
 "Deferred Tax Assets: defined on the tax used on the purchase order line"
 msgstr ""
 "Будущие налоговые активы: определяется налогом, используемого на строку "
 "заказа на приобретение"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:264
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:264
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:218
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:292
 msgid "Accounts Payable: defined on the vendor related to the bill"
 msgstr ""
 "Кредиторская задолженность: определяется поставщиком, связанным со счетом"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:265
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:265
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:219
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:293
 msgid "Goods Receptions"
 msgstr "прием товаров"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:266
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:287
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:289
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:266
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:286
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:288
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:220
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:240
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:242
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:294
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:315
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:317
 msgid "No Journal Entry"
 msgstr "Есть журнальных записей"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:284
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:283
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:237
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:312
 msgid "Customer Invoice"
 msgstr "Счет фактура"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:273
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:273
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:227
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:301
 msgid "Revenues: Sold Goods"
 msgstr "Доходы: проданные товары"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:273
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:273
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:227
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:301
 msgid "100"
 msgstr "100"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:274
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:274
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:228
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:302
 msgid "Liabilities: Deferred Tax Liabilities"
 msgstr "Обязанности: отсроченные налоговые обязательства"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:274
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:274
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:228
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:302
 msgid "9"
 msgstr "9"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:275
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:275
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:229
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:303
 msgid "Assets: Accounts Receivable"
 msgstr "Активы: дебиторская задолженность"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:275
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:275
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:229
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:303
 msgid "109"
 msgstr "109"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:279
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:279
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:233
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:307
 msgid ""
 "Revenues: defined on the product or on the internal category of related "
 "product (Income Account field)"
@@ -4083,21 +4014,21 @@ msgstr ""
 "Доходы: определяются по товару или по внутренней категорией соответствующего"
 " товара (поле Текущий счет)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:281
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:280
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:234
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:309
 msgid "Deferred Tax Liabilities: defined on the tax used on the invoice line"
 msgstr ""
 "Налоговые обязательства будущих периодов: определяется налогом, "
 "используемого на строке счета-фактуры"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:282
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:281
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:235
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:310
 msgid "Accounts Receivable: defined on the customer (Receivable Account)"
 msgstr ""
 "Дебиторская задолженность: определяется на клиента (счет на получение)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:284
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:283
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:237
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:312
 msgid ""
 "The fiscal position used on the invoice may have a rule that replaces the "
 "Income Account or the tax defined on the product by another one."
@@ -4105,18 +4036,18 @@ msgstr ""
 "Схема налогообложения, использованная в счете-фактуре, может иметь правило, "
 "заменяет учет доходов или налог, определенный на товаре другим."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:286
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:285
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:239
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:314
 msgid "Customer Shipping"
 msgstr "клиентская доставка"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:289
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:288
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:242
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:317
 msgid "Manufacturing Orders"
 msgstr "Производственные заявки"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:295
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:294
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:248
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:323
 msgid ""
 "At the end of the month/year, your company does a physical inventory or just"
 " relies on the inventory in Odoo to value the stock into your books."
@@ -4124,7 +4055,41 @@ msgstr ""
 "В конце месяца / года ваша компания осуществляет физическую инвентаризацию "
 "или просто опирается на склад в Odoo, чтобы оценить запас в ваши книги."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:298
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:251
+msgid ""
+"Create a journal entry to move the stock variation value from your "
+"Profit&Loss section to your assets."
+msgstr ""
+"Создайте запись журнала, чтобы переместить стоимость запасов в разделе Доход"
+" и потери в своих активов."
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:261
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:262
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:340
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:341
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:342
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:343
+msgid "X"
+msgstr "X"
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:262
+msgid "Expenses: Inventory Variations"
+msgstr "Расходы: варианты инвентаризации"
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:265
+msgid ""
+"If the stock value decreased, the **Inventory** account is credited and te "
+"**Inventory Variations** debited."
+msgstr ""
+"Если снизилась стоимость состава, ** Состав ** счет зачисляется и ** "
+"Варианты инвентаризации ** дебетуются."
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:273
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:386
+msgid "Anglo-Saxon Accounting"
+msgstr "Англо-саксонской учет"
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:326
 msgid ""
 "Then you need to break down the purchase balance into both the inventory and"
 " the cost of goods sold using the following formula:"
@@ -4132,7 +4097,7 @@ msgstr ""
 "Тогда вам нужно разбить баланс покупки как инвентаризацию, так и стоимость "
 "проданных товаров по следующей формуле:"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:301
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:329
 msgid ""
 "Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing "
 "inventory value"
@@ -4140,83 +4105,93 @@ msgstr ""
 "Стоимость проданных товаров (COGS) = Начальная стоимость запаса + Покупки - "
 "Завершение инвентаризации"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:303
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:331
 msgid "To update the stock valuation in your books, record such an entry:"
 msgstr ""
 "Чтобы обновить оценку состава в своих книгах, зарегистрируйте следующую "
 "запись:"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:312
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:340
 msgid "Assets: Inventory (closing value)"
 msgstr "Активы: Инвентаризация (конечная стоимость)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:312
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:313
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:314
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:315
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:307
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:308
-msgid "X"
-msgstr "X"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:313
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:341
 msgid "Expenses: Cost of Good Sold"
 msgstr "Расходы: стоимость проданных товаров"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:314
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:342
 msgid "Expenses: Purchased Goods"
 msgstr "Расходы: приобретенные товары"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:315
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:343
 msgid "Assets: Inventory (starting value)"
 msgstr "Активы: Инвентаризация (начальное значение)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:319
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:319
-msgid "Perpetual Inventory Valuation"
-msgstr "Бессрочное оценки запасов"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:321
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:321
-msgid ""
-"In a perpetual inventory valuation, goods receptions and outgoing shipments "
-"are posted in your books in real time. The books are therefore always up-to-"
-"date. This mode is dedicated to expert accountants and advanced users only. "
-"As opposed to periodic valuation, it requires some extra configuration & "
-"testing."
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:347
+msgid "Automated Inventory Valuation"
 msgstr ""
-"При бессрочной оценке инвентаризации, прием товаров и выходные отправления "
-"отражаются в книге в реальном времени. Поэтому книги всегда актуальны. Этот "
-"режим предназначен только экспертным бухгалтерам и опытным пользователям. В "
-"отличие от периодической оценки, это требует дополнительной настройки и "
-"тестирования."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:328
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:328
-msgid "Let's take the case of a reseller."
-msgstr "Давайте рассмотрим дело продавца."
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:349
+msgid ""
+"In that case, when a product enters or leaves your stock, an accounting "
+"entry will be automatically created. This means your accounting books are "
+"always up-to-date. This mode is dedicated to expert accountants and advanced"
+" users only. As opposed to periodic valuation, it requires some extra "
+"configuration & testing."
+msgstr ""
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:340
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:340
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:355
+msgid ""
+"First, you need to define the accounts that will be used for those "
+"accounting entries. This is done on the product category."
+msgstr ""
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:371
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:398
 msgid "**Configuration:**"
 msgstr "** Настройка: **"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:342
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:342
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:373
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:400
 msgid "Accounts Receivable/Payable: defined on the partner (Accounting tab)"
 msgstr ""
 "Дебиторская задолженность / кредиторская задолженность: определенная у "
 "партнера (вкладка Учет)"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:344
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:344
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:375
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:402
 msgid ""
 "Deferred Tax Assets/Liabilities: defined on the tax used on the invoice line"
 msgstr ""
 "Отсроченные налоговые активы / обязательства: определяется налогом, "
 "используемого на строке счета-фактуры"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:347
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:377
+msgid ""
+"Revenues/Expenses: defined by default on product's internal category; can be"
+" also set in product form (Accounting tab) as a replacement value."
+msgstr ""
+"Доходы / расходы: определяются по умолчанию на внутреннюю категорию товара; "
+"также может быть установлен в форме товара (вкладка Бухучет) как значение "
+"замены."
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:380
+msgid ""
+"Inventory Variations: to set as Stock Input/Output Account in product's "
+"internal category"
+msgstr ""
+"Варианты инвентаризации: устанавливать как входящий / исходящий аккаунт во "
+"внутренней категории товара"
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:383
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:418
+msgid ""
+"Inventory: to set as Stock Valuation Account in product's internal category"
+msgstr ""
+"Инвентаризация: назначать учет стоимости состава во внутренней категории "
+"товара"
+
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:405
 msgid ""
 "Revenues: defined on the product category as a default, or specifically to a"
 " specific product."
@@ -4224,7 +4199,7 @@ msgstr ""
 "Доходы: определяется как категория товара по умолчанию, или для конкретного "
 "товара."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:350
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:408
 msgid ""
 "Expenses: this is where you should set the \"Cost of Goods Sold\" account. "
 "Defined on the product category as a default value, or specifically on the "
@@ -4234,7 +4209,7 @@ msgstr ""
 "продаваемых&quot;. Определены категорию товара как значения по умолчанию или"
 " непосредственно на форме товара."
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:354
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:412
 msgid ""
 "Goods Received Not Purchased: to set as Stock Input Account in product's "
 "internal category"
@@ -4242,7 +4217,7 @@ msgstr ""
 "Полученные товары не были приобретены: чтобы установить входной учет во "
 "внутренней категории товара"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:357
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:415
 msgid ""
 "Goods Issued Not Invoiced: to set as Stock Output Account in product's "
 "internal category"
@@ -4250,15 +4225,7 @@ msgstr ""
 "Выпущенные товары не учитываются на счетах: для внутренней категории товара "
 "назначайте учет выходных расходов"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:360
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:352
-msgid ""
-"Inventory: to set as Stock Valuation Account in product's internal category"
-msgstr ""
-"Инвентаризация: назначать учет стоимости состава во внутренней категории "
-"товара"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:362
+#: ../../inventory/management/reporting/inventory_valuation_config.rst:420
 msgid ""
 "Price Difference: to set in product's internal category or in product form "
 "as a specific replacement value"
@@ -4266,224 +4233,93 @@ msgstr ""
 "Разница цен: установить во внутренней категории товара или в форме товара "
 "как определенное изменение стоимости"
 
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:367
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:356
-msgid ":doc:`../../routes/strategies/removal`"
-msgstr ":doc:`../../routes/strategies/removal`"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:368
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:357
-msgid ":doc:`../../../accounting/others/inventory/avg_price_valuation`"
-msgstr ":doc:`../../../accounting/others/inventory/avg_price_valuation`"
-
-#: ../../inventory/management/reporting/valuation_methods_anglo_saxon.rst:369
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:358
-msgid ":doc:`../../routes/costing/landed_costs`"
-msgstr ":doc:`../../routes/costing/landed_costs`"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:5
-msgid "How to do an inventory valuation? (Continental Accounting)"
-msgstr "Как провести оценку инвентаризации? (Континентальный учет)"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:35
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:40
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:45
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:50
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:56
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:85
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:140
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:193
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:203
-msgid "€10"
-msgstr "€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:38
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:80
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:83
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:135
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:138
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:188
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:191
-msgid "€0"
-msgstr "€0"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:39
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:84
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:139
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:192
-msgid "Receive 8 Products at €10"
-msgstr "Получить 8 товаров за 10 евро"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:42
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:87
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:142
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:195
-msgid "+8*€10"
-msgstr "+8*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:43
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:88
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:143
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:196
-msgid "€80"
-msgstr "€80"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:44
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:89
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:144
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:197
-msgid "Receive 4 Products at €16"
-msgstr "Получить 4 товара за € 16"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:47
-msgid "+4*€10"
-msgstr "+4*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:48
-msgid "€120"
-msgstr "€120"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-10*€10"
-msgstr "-10*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:54
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:207
-msgid "€20"
-msgstr "€20"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:55
-msgid "Receive 2 Products at €9"
-msgstr "Получить 2 товара за € 9"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:58
-msgid "+2*€10"
-msgstr "+2*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:59
-msgid "€40"
-msgstr "€40"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:90
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:95
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:145
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:198
-msgid "€12"
-msgstr "€12"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:92
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:147
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:200
-msgid "+4*€16"
-msgstr "+4*€16"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:93
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:148
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:201
-msgid "€144"
-msgstr "€144"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-10*€12"
-msgstr "-10*€12"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:99
-msgid "€24"
-msgstr "€24"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:100
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:155
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:208
-msgid "Receive 2 Products at €6"
-msgstr "Получить 2 товара за € 6"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:101
-msgid "€9"
-msgstr "€9"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:103
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:158
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:211
-msgid "+2*€6"
-msgstr "+2*€6"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:104
-msgid "€36"
-msgstr "€36"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:150
-msgid "€16"
-msgstr "€16"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-8*€10"
-msgstr "-8*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-2*€16"
-msgstr "-2*€16"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:154
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:212
-msgid "€32"
-msgstr "€32"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:156
-msgid "€11"
-msgstr "€11"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:159
-msgid "€44"
-msgstr "€44"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-4*€16"
-msgstr "-4*€16"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:0
-msgid "-6*€10"
-msgstr "-6*€10"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:209
-msgid "€8"
-msgstr "€8"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:297
-msgid ""
-"Create a journal entry to move the stock variation value from your "
-"Profit&Loss section to your assets."
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:3
+msgid "Using the inventory valuation"
 msgstr ""
-"Создайте запись журнала, чтобы переместить стоимость запасов в разделе Доход"
-" и потери в своих активов."
 
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:308
-msgid "Expenses: Inventory Variations"
-msgstr "Расходы: варианты инвентаризации"
-
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:311
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:9
 msgid ""
-"If the stock value decreased, the **Inventory** account is credited and te "
-"**Inventory Variations** debited."
+"In this documentation, we will explain how the inventory valuation works in "
+"Odoo."
 msgstr ""
-"Если снизилась стоимость состава, ** Состав ** счет зачисляется и ** "
-"Варианты инвентаризации ** дебетуются."
 
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:346
-msgid ""
-"Revenues/Expenses: defined by default on product's internal category; can be"
-" also set in product form (Accounting tab) as a replacement value."
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:13
+msgid "Inventory valuation: the basics"
 msgstr ""
-"Доходы / расходы: определяются по умолчанию на внутреннюю категорию товара; "
-"также может быть установлен в форме товара (вкладка Бухучет) как значение "
-"замены."
 
-#: ../../inventory/management/reporting/valuation_methods_continental.rst:349
-msgid ""
-"Inventory Variations: to set as Stock Input/Output Account in product's "
-"internal category"
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:16
+msgid "Receive a product"
 msgstr ""
-"Варианты инвентаризации: устанавливать как входящий / исходящий аккаунт во "
-"внутренней категории товара"
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:18
+msgid ""
+"Each time a product enters or leaves your stock, the value of your inventory"
+" is impacted. The way it is impacted depends on the configuration of your "
+"product (more info here)."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:22
+msgid ""
+"Let’s take an example with a product - a table - configured with a *FIFO "
+"costing method* and an automated inventory valuation."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:25
+msgid "I purchase 10 tables at a cost of $10."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:30
+msgid ""
+"When I’ll confirm the receipt of the products, the value of my inventory "
+"will be impacted. If I want to know what this impact is, I can click on the "
+"valuation stat button."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:35
+msgid ""
+"The consignment feature allows you to set owners on your stock (discover "
+"more about the consignment feature). When you receive products that are "
+"owned by another company, they are not taken into account in your inventory "
+"valuation."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:44
+msgid "You need access rights on the accounting module to see that button."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:46
+msgid ""
+"In this case, I can see that the 10 tables entered the stock for a total "
+"value of $100."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:52
+msgid ""
+"I can also easily access the accounting entry that has been generated (in "
+"case of automated inventory valuation)."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:59
+msgid "Deliver a product"
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:61
+msgid ""
+"In the same logic, when a table will be delivered, the stock valuation will "
+"be impacted and you will have access to a similar information."
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:68
+msgid "The inventory valuation report"
+msgstr ""
+
+#: ../../inventory/management/reporting/using_inventory_valuation.rst:70
+msgid ""
+"The summary of this is accessible via the inventory valuation report "
+"(accessible from *Inventory > Reporting > Inventory Valuation*). It gives "
+"you, product per product, the value of your stock. By clicking on the button"
+" *Inventory At Date*, you can have the same information for a past date."
+msgstr ""
 
 #: ../../inventory/management/warehouses.rst:3
 msgid "Warehouses"
@@ -4986,7 +4822,7 @@ msgid ""
 "option. Please don't forget to **apply** your changes."
 msgstr ""
 "Прежде всего вам нужно выбрать вариант нескольких местонахождений. Перейдите"
-" к: menuselection: `Настройка -&gt; Налаштування`в приложении ** Состав **. "
+" к :menuselection:`Configuration --> Settings`в приложении ** Состав **. "
 "Затем поставьте галочку на пункте ** Управление несколькими местонахождению "
 "на складе **. Пожалуйста, не забудьте ** применить ** свои изменения."
 
@@ -5010,8 +4846,9 @@ msgid ""
 "**Create**."
 msgstr ""
 "Следующим шагом является создание вашего нового состава. В программе Состав "
-"нажмите: menuselection: `Настройка -&gt; Управление складами -&gt; Склади`. "
-"Теперь вы можете создать свой состав, нажав кнопку ** Создать **."
+"нажмите :menuselection:`Configuration --> Warehouse Management --> "
+"Warehouses`. Теперь вы можете создать свой состав, нажав кнопку ** Создать "
+"**."
 
 #: ../../inventory/routes/concepts/inter_warehouse.rst:33
 msgid ""
@@ -5061,10 +4898,10 @@ msgid ""
 "on **Create**. Fill in the **Inventory Reference**, **Date** and be sure to "
 "select the right warehouse and location."
 msgstr ""
-"Выделите приложение Состав, выберите: menuselection: `Контроль "
-"инвентаризации -&gt; Настройка инвентаризации`. Затем можно создать новую "
-"инвентаризацию, нажав кнопку ** Создать **. Заполните ** реестр товара **, "
-"** дату ** и обязательно выберите правильный состав и местонахождения."
+"Выделите приложение Состав, выберите :menuselection:`Inventory Control --> "
+"Inventory Adjustment`. Затем можно создать новую инвентаризацию, нажав "
+"кнопку ** Создать **. Заполните ** реестр товара **, ** дату ** и "
+"обязательно выберите правильный состав и местонахождения."
 
 #: ../../inventory/routes/concepts/inter_warehouse.rst:67
 msgid ""
@@ -5108,7 +4945,7 @@ msgid ""
 "warehouses. To do so, click on :menuselection:`More  --> Transfer`."
 msgstr ""
 "На информационной панели выберите внутреннее перемещение одного из двух "
-"слогов. Для этого нажмите: menuselection: `Больше -&gt; Перемищення`."
+"слогов. Для этого нажмите :menuselection:`More  --> Transfer`."
 
 #: ../../inventory/routes/concepts/inter_warehouse.rst:92
 msgid ""
@@ -5354,8 +5191,8 @@ msgid ""
 "--> Configuration --> Settings` and tick **Advance routing of products using"
 " rules**."
 msgstr ""
-"Правила выталкивания является частью маршрутов. Откройте меню: "
-"menuselection: `Состав -&gt; Настройка -&gt; Налаштування` и отметьте пункт "
+"Правила выталкивания является частью маршрутов. Откройте меню "
+":menuselection:`Inventory --> Configuration --> Settings` и отметьте пункт "
 "** Предыдущая маршрутизация товаров с использованием правил **."
 
 #: ../../inventory/routes/concepts/push_rule.rst:39
@@ -5367,8 +5204,8 @@ msgid ""
 "The push rules are set on the routes. Go to :menuselection:`Configuration "
 "--> Routes`."
 msgstr ""
-"Правила выталкивания устанавливаются на маршрутах. Перейдите к: "
-"menuselection: `Настройка -&gt; Маршрути`."
+"Правила выталкивания устанавливаются на маршрутах. Перейдите к "
+":menuselection:`Configuration --> Routes`."
 
 #: ../../inventory/routes/concepts/push_rule.rst:44
 msgid "In the push rule section, click on **Add an item**."
@@ -5541,8 +5378,8 @@ msgid ""
 "application, :menuselection:`Configuration --> Settings` and tick **Advance "
 "routing of products using rules**."
 msgstr ""
-"Правила закупок является частью маршрутов. Выделите приложение ** Состав "
-"**,: menuselection: `Настройка -&gt; Налаштування` и выберите пункт ** "
+"Правила закупок является частью маршрутов. Выделите приложение ** Состав **,"
+" :menuselection:`Configuration --> Settings` и выберите пункт ** "
 "Дополнительные маршруты товаров, используют правила **."
 
 #: ../../inventory/routes/concepts/use_routes.rst:32
@@ -5558,8 +5395,8 @@ msgid ""
 "In the Inventory application, go to :menuselection:`Configuration --> "
 "Warehouses`."
 msgstr ""
-"В программе Состав перейдите к: menuselection: `Настройка -&gt; "
-"Налаштування`."
+"В программе Состав перейдите к :menuselection:`Configuration --> "
+"Warehouses`."
 
 #: ../../inventory/routes/concepts/use_routes.rst:39
 msgid ""
@@ -5579,8 +5416,8 @@ msgid ""
 "In the **Inventory** application, go to :menuselection:`Configuration --> "
 "Routes`."
 msgstr ""
-"В программе ** Состав ** перейдите к: menuselection: `Настройка -&gt; "
-"Маршрути`."
+"В программе ** Состав ** перейдите к :menuselection:`Configuration --> "
+"Routes`."
 
 #: ../../inventory/routes/concepts/use_routes.rst:54
 msgid ""
@@ -5622,8 +5459,9 @@ msgid ""
 "(:menuselection:`Inventory --> Control --> Products`). In the Inventory Tab,"
 " select the route(s):"
 msgstr ""
-"Откройте продукт, на котором вы хотите применить маршруты (: menuselection: "
-"`Состав -&gt; Контроль -&gt; Товари`). На вкладке Состав выберите маршруты:"
+"Откройте продукт, на котором вы хотите применить маршруты ( "
+":menuselection:`Inventory --> Control --> Products`). На вкладке Состав "
+"выберите маршруты:"
 
 #: ../../inventory/routes/concepts/use_routes.rst:84
 msgid "Routes applied on Product Category"
@@ -5643,9 +5481,9 @@ msgid ""
 "(:menuselection:`Configuration --> Product Categories`). Select the route(s)"
 " under the **Logistics** section :"
 msgstr ""
-"Откройте товар, на который вы хотите применить маршруты (: menuselection: "
-"`Настройка -&gt; Категории товару`). Выберите маршруты в разделе ** "
-"Логистики **:"
+"Откройте товар, на который вы хотите применить маршруты ( "
+":menuselection:`Configuration --> Product Categories`). Выберите маршруты в "
+"разделе ** Логистики **:"
 
 #: ../../inventory/routes/concepts/use_routes.rst:100
 msgid "Routes applied on Sales Order lines"
@@ -5672,9 +5510,9 @@ msgid ""
 "In the Sales application, go to :menuselection:`Configuration --> Settings` "
 "and tick **Choose specific routes on sales order lines (advanced)**."
 msgstr ""
-"В приложении Продажи перейдите к: menuselection: `Настройка -&gt; "
-"Налаштування` и отметьте пункт ** Выбрать конкретные маршруты по строкам "
-"заказа на продажу (расширенные) **."
+"В приложении Продажи перейдите к :menuselection:`Configuration --> Settings`"
+" и отметьте пункт ** Выбрать конкретные маршруты по строкам заказа на "
+"продажу (расширенные) **."
 
 #: ../../inventory/routes/concepts/use_routes.rst:118
 msgid "You can now choose the routes for each lines of your sales orders:"
@@ -5702,7 +5540,7 @@ msgid ""
 "**Preferred Routes**:"
 msgstr ""
 "Во время запроса на закупку можно применить маршрут, который вы хотите "
-"использовать. На товаре (: menuselection: `Контроль состава -&gt; Товари`), "
+"использовать. На товаре ( :menuselection:`Inventory Control --> Products`), "
 "нажмите на ** Запрос на закупку **. Выберите маршрут, который вы хотите "
 "использовать рядом с ** Рекомендованными маршрутами **:"
 
@@ -5721,51 +5559,6 @@ msgstr ""
 "воспользоваться маршруту ** на заказ **. Соедините его с маршрутом ** "
 "Покупка ** или ** Производство **, и он автоматически запускает заказа на "
 "закупку или заказ на производство, когда ваши товары недоступны."
-
-#: ../../inventory/routes/costing.rst:3
-msgid "Product Costing"
-msgstr "стоимость товара"
-
-#: ../../inventory/routes/costing/landed_costs.rst:3
-msgid ""
-"How to integrate additional costs in the cost of the product? (landed costs)"
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:8
-msgid ""
-"The landed cost feature in Odoo allows to include additional costs "
-"(shipment, insurance, customs duties, etc.) into the cost of the product."
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:12
-msgid ""
-"Landed costs can only be applied to products with a FIFO costing method and "
-"an automated inventory valuation (which requires the accounting application "
-"to be installed)."
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:20
-msgid ""
-"First, you need to activate the landed costs feature in "
-":menuselection:`Inventory --> Configuration --> Settings`."
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:27
-msgid "Add costs to products"
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:29
-msgid ""
-"Go in :menuselection:`Inventory --> Operations --> Landed Costs` and click "
-"on the **Create** button. You then have to select the transfers on which you"
-" want to attribute additional costs and the costs lines you want to add up. "
-"Once it's done, click on the **Compute** button to see how the costs lines "
-"will be split accross your transfers lines."
-msgstr ""
-
-#: ../../inventory/routes/costing/landed_costs.rst:38
-msgid "To confirm, click on the **Validate** button."
-msgstr ""
 
 #: ../../inventory/routes/strategies.rst:3
 msgid "Putaway & Removal Strategies"
@@ -5867,8 +5660,8 @@ msgid ""
 "In the **Inventory** application, go to :menuselection:`Configuration --> "
 "Settings`:"
 msgstr ""
-"В программе ** Состав ** перейдите к: menuselection: `Настройка -&gt; "
-"Налаштування`:"
+"В программе ** Состав ** перейдите к :menuselection:`Configuration --> "
+"Settings`:"
 
 #: ../../inventory/routes/strategies/removal.rst:29
 msgid ""
@@ -5885,8 +5678,8 @@ msgid ""
 "Then, open :menuselection:`Configuration --> Locations` and open the "
 "location on which you want to apply a removal strategy."
 msgstr ""
-"Затем откройте: menuselection: `Настройка -&gt; Мисцезнаходження` и откройте"
-" местонахождение, на котором вы хотите применить стратегию извлечения."
+"Затем откройте :menuselection:`Configuration --> Locations` и откройте "
+"местонахождение, на котором вы хотите применить стратегию извлечения."
 
 #: ../../inventory/routes/strategies/removal.rst:40
 msgid "Types of removal strategy"
@@ -5915,7 +5708,7 @@ msgid ""
 "Go to :menuselection:`Inventory --> Configuration --> Locations`, open the "
 "stock location and set **FIFO** removal strategy."
 msgstr ""
-"Перейдите к: menuselection: `Состав -&gt; Настройка -&gt; Мисцезнаходженя`, "
+"Перейдите к :menuselection:`Inventory --> Configuration --> Locations`, "
 "откройте местонахождение состава и установите стратегию удаления ** FIFO **."
 
 #: ../../inventory/routes/strategies/removal.rst:54
@@ -5966,9 +5759,8 @@ msgid ""
 "Go to :menuselection:`Inventory --> Configuration --> Locations`, open the "
 "stock location and set **LIFO** removal strategy."
 msgstr ""
-"Перейдите к: menuselection: `Состав -&gt; Настройка -&gt; Мисцезнаходження`,"
-" откройте местонахождение состава и установите стратегию удаления ** LIFO "
-"**."
+"Перейдите к :menuselection:`Inventory --> Configuration --> Locations`, "
+"откройте местонахождение состава и установите стратегию удаления ** LIFO **."
 
 #: ../../inventory/routes/strategies/removal.rst:84
 msgid ""
@@ -6008,7 +5800,7 @@ msgid ""
 "option **Define Expiration date on serial numbers**. Then click on **Apply**"
 " to save changes."
 msgstr ""
-"Перейдите к: menuselection: `Состав -&gt; Настройка -&gt; Налаштування`. "
+"Перейдите к :menuselection:`Inventory --> Configuration --> Setting`. "
 "Проверьте опцию ** Определить дату окончания на серийных номерах **. Нажмите"
 " ** Применить **, чтобы сохранить изменения."
 
@@ -6022,8 +5814,7 @@ msgstr ""
 "Это позволит вам установить четыре сроки окончания для каждой партии или "
 "серийного номера: ** лучше до даты окончания **, ** даты окончания срока **,"
 " ** дать предупреждение ** и ** даты изъятия **. Эти даты могут быть "
-"установлены с: menuselection: `Контроль состава -&gt; Серийные номера / "
-"Партии`."
+"установлены с :menuselection:`Inventory Control --> Serial Numbers/Lots`."
 
 #: ../../inventory/routes/strategies/removal.rst:119
 msgid ""
@@ -6134,7 +5925,7 @@ msgid ""
 " --> Locations` and choose FEFO."
 msgstr ""
 "Чтобы установить стратегию извлечения по месту нахождения, перейдите к "
-"разделу: menuselection: `Настройка -&gt; Мисцезнаходження` и выберите FEFO."
+"разделу :menuselection:`Configuration --> Locations` и выберите FEFO."
 
 #: ../../inventory/routes/strategies/removal.rst:165
 msgid ""
@@ -6209,12 +6000,8 @@ msgstr ""
 "изъятия."
 
 #: ../../inventory/routes/strategies/removal.rst:192
-msgid ":doc:`../../management/reporting/valuation_methods_continental`"
-msgstr ":doc:`../../management/reporting/valuation_methods_continental`"
-
-#: ../../inventory/routes/strategies/removal.rst:193
-msgid ":doc:`../../management/reporting/valuation_methods_anglo_saxon`"
-msgstr ":doc:`../../management/reporting/valuation_methods_anglo_saxon`"
+msgid ":doc:`../../management/reporting/inventory_valuation_config`"
+msgstr ""
 
 #: ../../inventory/shipping.rst:3
 msgid "Shipping"
@@ -6329,8 +6116,8 @@ msgid ""
 "Methods`."
 msgstr ""
 "Чтобы настроить цену ваших методов доставки, перейдите к приложению ** "
-"Состав **, нажмите на: menuselection: `Настройка -&gt; Доставка -&gt; Методы"
-" доставки`."
+"Состав **, нажмите на :menuselection:`Configuration --> Delivery --> "
+"Delivery Methods`."
 
 #: ../../inventory/shipping/operation/invoicing.rst:21
 msgid ""
@@ -6463,7 +6250,7 @@ msgid ""
 "Settings`. Under **Shipping Connectors**, flag the transportation companies "
 "you want to integrate :"
 msgstr ""
-"В модуле Состав нажмите: menuselection: `Настройка -&gt; Налаштування`. В "
+"В модуле Состав нажмите :menuselection:`Configuration --> Settings`. В "
 "разделе ** Интеграция с перевозчиком ** обозначьте транспортные компании, "
 "которые вы хотите интегрировать:"
 
@@ -6485,8 +6272,8 @@ msgid ""
 "To configure your delivery methods, go to the **Inventory** module, click on"
 " :menuselection:`Configuration --> Delivery Methods`."
 msgstr ""
-"Чтобы настроить способы доставки, перейдите к модулю ** Состав **, нажмите: "
-"menuselection: `Настройка -&gt; Методы доставки`."
+"Чтобы настроить способы доставки, перейдите к модулю ** Состав **, нажмите "
+":menuselection:`Configuration --> Delivery Methods`."
 
 #: ../../inventory/shipping/operation/labels.rst:35
 msgid ""
@@ -6567,9 +6354,9 @@ msgid ""
 "Go the **Sales** module, click on :menuselection:`Sales --> Products`. Open "
 "the products you want to ship and set a weight on it."
 msgstr ""
-"Зайдите к модулю ** Продажи **, нажмите на: menuselection: `Продажи -&gt; "
-"Товари`. Откройте товары, которые вы хотите отправить, и установите вес на "
-"нем."
+"Зайдите к модулю ** Продажи **, нажмите на :menuselection:`Sales --> "
+"Products`. Откройте товары, которые вы хотите отправить, и установите вес на"
+" нем."
 
 #: ../../inventory/shipping/operation/labels.rst:80
 msgid ""
@@ -6646,10 +6433,10 @@ msgid ""
 "--> Configuration --> Settings`. Locate the **Packages** section and tick "
 "**Record packages used on packing: pallets, boxes,...**"
 msgstr ""
-"Чтобы настроить использование пакетов, перейдите к меню: menuselection: "
-"`Состав -&gt; Настройка -&gt; Налаштування`. Найдите раздел ** Упаковка ** и"
-" обозначьте ** Записать пакеты, используемые на упаковке: поддоны, коробки "
-"... **"
+"Чтобы настроить использование пакетов, перейдите к меню "
+":menuselection:`Inventory --> Configuration --> Settings`. Найдите раздел **"
+" Упаковка ** и обозначьте ** Записать пакеты, используемые на упаковке: "
+"поддоны, коробки ... **"
 
 #: ../../inventory/shipping/operation/multipack.rst:23
 msgid "Click on **Apply** when you are done."
@@ -6961,7 +6748,7 @@ msgid ""
 "Settings`. Under **Shipping Connectors**, flag the transportation companies "
 "you want to integrate :"
 msgstr ""
-"В модуле Состав нажмите: menuselection: `Настройка -&gt; Налаштування`. В "
+"В модуле Состав нажмите :menuselection:`Configuration --> Settings`. В "
 "разделе ** Интеграция с перевозчиком ** поставьте флажки транспортных "
 "компаний, которые вы хотите интегрировать:"
 
@@ -7034,8 +6821,8 @@ msgid ""
 "Go the menu :menuselection:`Sales --> Sales --> Products`. Open the products"
 " you want to ship and set a weight on it."
 msgstr ""
-"Откройте меню: menuselection: `Продажи -&gt; Продажи -&gt; Товари`. Откройте"
-" товары, которые вы хотите отправить, и установите на них вес."
+"Откройте меню :menuselection:`Sales --> Sales --> Products`. Откройте "
+"товары, которые вы хотите отправить, и установите на них вес."
 
 #: ../../inventory/shipping/setup/third_party_shipper.rst:102
 msgid ""
