@@ -5,6 +5,6 @@ Amazon Connector
 .. toctree::
    :titlesonly:
 
-   sale_amazon/apply
-   sale_amazon/setup
-   sale_amazon/manage
+   amazon_connector/apply
+   amazon_connector/setup
+   amazon_connector/manage
