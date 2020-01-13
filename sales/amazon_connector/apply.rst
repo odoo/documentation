@@ -45,13 +45,17 @@ Odoo.
 Answer the Additional Form
 ==========================
 
+.. tip::
+   If you did not receive any additional form after your :ref:`initial application for Amazon MWS
+   keys <amazon/developer-form>`, you may disregard this section.
+
 This section lists all questions asked by Amazon in additional forms. The answers are tailored for
-*Odoo Online* and *Odoo.sh*. If you did not receive any additional form after your :ref:`initial
-application for Amazon MWS keys <amazon/developer-form>`, you may disregard this section.
+*Odoo Online* and *Odoo.sh*. Wherever the answer does not depend on Odoo, you are requested to
+provide it yourself at the place indicated by square brackets.
 
 .. warning::
-   If you are not hosted on Odoo.com (*online*) or on Odoo.sh, you should adapt the answers related
-   to hosting according to your own infrastructure and data protection policy.
+   If you are *not* hosted on Odoo.com (*online*) or on Odoo.sh, you should adapt the answers
+   related to hosting according to your own infrastructure and data protection policy.
 
 - **Describe all functionalities in your application where Personally Identifiable Information (e.g.
   customer name, street address, billing address) is required.**
@@ -67,27 +71,23 @@ application for Amazon MWS keys <amazon/developer-form>`, you may disregard this
   exposed by Amazon through Amazon MWS, Seller Central, or Amazon's public-facing websites) and
   describe how your organization shares this information.**
 
-  ► If you do not share Amazon Information with outside parties:
-    Odoo does not share any information with outside parties.
+  We share Amazon Information with Odoo SA, our cloud service provider, for the exclusive purpose of
+  hosting our enterprise management system (including the Amazon MWS integration). See also
+  Odoo SA's Privacy Policy for details at `odoo.com/privacy <https://www.odoo.com/privacy>`_.
 
   ► If you share Amazon Information with outside parties:
-    [Description of your organization's policy regarding Amazon Information]
+    [Answer with the above text and add a description of your organization's policy regarding the
+    sharing of Amazon Information with outside parties]
 
 - **List all non-Amazon MWS sources where you retrieve Amazon Information.**
 
-  Odoo only relies on MWS to retrieve Amazon Information.
+  Our enterprise software only relies on MWS to retrieve Amazon Information.
 
 - **Describe how your organization restricts public access to databases, file servers, and
   desktop/developer endpoints.**
 
-  | - Access to the postgreSQL database through the network is disabled and standard ports are
-  |   closed. The database is only accessible through a socket on the server itself.
-  | - The reverse proxy only serves whitelisted directories that are only from sources controlled by
-  |   Odoo S.A.
-  | - API endpoints are password protected (PBKDF2 & SHA512 encryption, salted, and stretched for
-  |   thousands of rounds).
-  | - Login credentials are always transmitted securely over HTTPS.
-  |
+  We rely on Odoo S.A., our cloud service provider for our database security management. Their
+  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
 
 - **Describe how your organization uniquely identifies employees and restricts access to Amazon
   Information on a need-to-know basis.**
@@ -103,44 +103,42 @@ application for Amazon MWS keys <amazon/developer-form>`, you may disregard this
     to be able to print the delivery label and pack the products.
 
   ► If your employees share users or if they are given more rights than needed:
-    [Description of your organization's policy for the assignation of users and access rights to
-    your employees]
+    [Answer with a description of your organization's policy for the assignation of users and access
+    rights to your employees]
 
 - **Describe how your organization prevents Amazon Information from being accessed from employee
   personal devices.**
 
-  Odoo does not prevent employees from accessing the organization's data from personal devices.
-  Role-based restrictions and access rights still apply.
+  Our enterprise software does not prevent employees from accessing the organization's data from
+  personal devices. Role-based restrictions and access rights still apply.
 
 - **Provide details on your organization's privacy and data handling policies (a link to your policy
   is also acceptable).**
 
-  [Description of your organization's privacy and data handling policies]
+  [Answer with a description of your organization's privacy and data handling policies]
 
 - **Describe where your organization stores Amazon Information and provide details on how you
   encrypt this information (e.g., algorithm).**
 
-  Amazon Information is stored in an unencrypted database. Direct access to the database is not
-  possible for the customer outside of UI interactions or API calls. Granular access rights control
-  ensures that access is not shared to all users of the database.
+  We rely on Odoo S.A., our cloud service provider for our database security management. Their
+  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
 
 - **Describe how your organization backups or archives Amazon Information and provide details on how
   you encrypt this information (e.g., algorithm).**
 
-  The entire database is backed up once a day and backups are kept for a minimum of three months
-  according to the `Odoo Online SLA <https://www.odoo.com/cloud-sla>`_. Backups are hosted on
-  several remote servers as unencrypted database dumps; these backups can only be retrieved by
-  Odoo S.A. employees through support requests.
+  We rely on Odoo S.A., our cloud service provider for our database backups management. Their
+  Service Level Agreement can be found at `odoo.com/cloud-sla <https://www.odoo.com/cloud-sla>`_.
 
 - **Describe where your organization monitors and detects malicious activity in your
   application(s).**
 
-  Odoo Online uses automated probes on our server that report their status in Munin, an opensource
-  monitoring tool. This tool automatically triggers alarms when probes detect values outside of
-  their pre-defined range. We monitor (among many other things) access rates, response times, ssh
-  connections, network activity.
+  We rely on Odoo S.A., our cloud service provider for our database security management. Their
+  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
 
 - **Describe how your organization's incident response plan addresses database hacks, unauthorized
   access, and data leaks (a link to your policy is also acceptable).**
 
-  [Description of your organization's incident response plan]
+  Our cloud service provider, Odoo S.A., will notify the customer in case of a data breach.
+
+  [Add a description of your organization's incident response plan or a link to your incident
+  response policy.]
