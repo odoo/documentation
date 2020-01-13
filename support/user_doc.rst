@@ -150,9 +150,3 @@ Documentation that targets developers of Odoo apps is maintained alongside `the 
 
 .. note::
     User documentation might contain technicalities yet, when they are related to configuration and everyday use of Odoo.
-
-
-
-.. |date| date::
-
-*Last revision of this page:* |date|
