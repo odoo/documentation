@@ -11,5 +11,5 @@ Sales
    sales/invoicing
    sales/products_prices
    sales/sale_amazon
-   sales/sale_ebay
+   sales/ebay_connector
    sales/advanced
