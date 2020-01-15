@@ -40,7 +40,7 @@ Odoo.
    If you need assistance for your application for Amazon MWS access keys, `submit a support ticket
    to Odoo <https://www.odoo.com/help>`_.
 
-.. image:: ./media/dev_form.png
+.. image:: media/dev_form.png
 
 Answer the Additional Form
 ==========================
@@ -61,11 +61,10 @@ provide it yourself at the place indicated by square brackets.
   customer name, street address, billing address) is required.**
 
   ► If you did not apply for the *Merchant Fulfilled Shipping* function:
-    | - Generation of customer invoices
+    Generation of customer invoices.
 
   ► If you applied for the *Merchant Fulfilled Shipping* function:
-    | - Generation of delivery orders
-    | - Generation of customer invoices
+    Generation of delivery orders and customer invoices.
 
 - **List all outside parties with whom your organization shares Amazon Information (e.g. information
   exposed by Amazon through Amazon MWS, Seller Central, or Amazon's public-facing websites) and
@@ -73,7 +72,7 @@ provide it yourself at the place indicated by square brackets.
 
   We share Amazon Information with Odoo SA, our cloud service provider, for the exclusive purpose of
   hosting our enterprise management system (including the Amazon MWS integration). See also
-  Odoo SA's Privacy Policy for details at `odoo.com/privacy <https://www.odoo.com/privacy>`_.
+  Odoo SA's Privacy Policy for details at https://www.odoo.com/privacy
 
   ► If you share Amazon Information with outside parties:
     [Answer with the above text and add a description of your organization's policy regarding the
@@ -87,7 +86,7 @@ provide it yourself at the place indicated by square brackets.
   desktop/developer endpoints.**
 
   We rely on Odoo S.A., our cloud service provider for our database security management. Their
-  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
+  Security Policy can be found at https://www.odoo.com/security
 
 - **Describe how your organization uniquely identifies employees and restricts access to Amazon
   Information on a need-to-know basis.**
@@ -121,19 +120,19 @@ provide it yourself at the place indicated by square brackets.
   encrypt this information (e.g., algorithm).**
 
   We rely on Odoo S.A., our cloud service provider for our database security management. Their
-  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
+  Security Policy can be found at https://www.odoo.com/security
 
 - **Describe how your organization backups or archives Amazon Information and provide details on how
   you encrypt this information (e.g., algorithm).**
 
   We rely on Odoo S.A., our cloud service provider for our database backups management. Their
-  Service Level Agreement can be found at `odoo.com/cloud-sla <https://www.odoo.com/cloud-sla>`_.
+  Service Level Agreement can be found at https://www.odoo.com/cloud-sla
 
 - **Describe where your organization monitors and detects malicious activity in your
   application(s).**
 
   We rely on Odoo S.A., our cloud service provider for our database security management. Their
-  Security Policy can be found at `odoo.com/security <https://www.odoo.com/security>`_.
+  Security Policy can be found at https://www.odoo.com/security
 
 - **Describe how your organization's incident response plan addresses database hacks, unauthorized
   access, and data leaks (a link to your policy is also acceptable).**
