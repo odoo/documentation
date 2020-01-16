@@ -5,12 +5,13 @@ Localizations
 .. toctree::
    :titlesonly:
 
-   localizations/france
-   localizations/germany
-   localizations/mexico
-   localizations/nederlands
-   localizations/spain
-   localizations/switzerland
+   localizations/argentina
    localizations/colombia
    localizations/colombia_ES
+   localizations/france
+   localizations/germany
    localizations/italy_IT
+   localizations/mexico
+   localizations/netherlands
+   localizations/spain
+   localizations/switzerland

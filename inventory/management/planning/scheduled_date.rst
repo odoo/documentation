@@ -94,8 +94,8 @@ calculation and, thus, to compute a scheduled date earlier than the one
 you promised to your client. In that way, you are sure to be able to
 keep your commitment.
 
-To set up your security dates, go to *Inventory > Configuration >
-Settings* and enable the feature.
+To set up your security dates, go to :menuselection:`Inventory --> Configuration -->
+Settings` and enable the feature.
 
 .. image:: media/scheduled_date_04.png
     :align: center
@@ -111,8 +111,8 @@ When the system generates purchase orders for procuring products, they
 will be scheduled that many days earlier to cope with unexpected vendor
 delays.
 
-To find purchase lead time, go to *Inventory > Configuration >
-Settings* and enable the feature.
+To find purchase lead time, go to :menuselection:`Inventory --> Configuration -->
+Settings` and enable the feature.
 
 .. image:: media/scheduled_date_05.png
     :align: center
@@ -124,7 +124,7 @@ The security lead time for manufacturing allows generating manufacturing
 orders which are scheduled that many days earlier to cope with
 unexpected manufacturing days.
 
-To configure it, go to *Manufacturing > Configuration > Settings* and
+To configure it, go to :menuselection:`Manufacturing --> Configuration --> Settings` and
 enable the *Security Lead Time* option. Then, hit save.
 
 .. image:: media/scheduled_date_06.png
@@ -138,7 +138,7 @@ influence the computed date. The delays due to internal transfers can be
 specified in the *Inventory* app when you create a new rule in a
 route.
 
-To specify them, go to *Inventory > Configuration > Routes* and add a
+To specify them, go to :menuselection:`Inventory --> Configuration --> Routes` and add a
 push rule to set a delay. Of course, you need to activate *Multi-step
 Routes* to use this feature.
 

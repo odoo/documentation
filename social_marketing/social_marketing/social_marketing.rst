@@ -32,7 +32,7 @@ Kanban view as you like.
 -  Engagement: Number of times people have engaged with your posts
 
 -  Stories: Number of times people who have engaged with your channel
-	have created stories on their friend’s or follower’s feed (Shares, Retweet,..)
+   have created stories on their friend’s or follower’s feed (Shares, Retweet,..)
 
 You can access more information by clicking on the “Insights” link: this
 will lead you to statistics of the selected social medium.
@@ -92,7 +92,7 @@ Configure your own Facebook and Twitter developer accounts
 
 By default, the Social application is already configured with a Facebook
 and Twitter developer accounts but you can use your own if necessary.
-Activate the developer mode, go to Configuration > Settings and enter
+Activate the developer mode, go to :menuselection:`Configuration --> Settings` and enter
 your own API keys.
 
 .. image:: media/social_marketing05.png

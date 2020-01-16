@@ -20,8 +20,10 @@ Applications
    helpdesk
    livechat/livechat
    expense/expense
-   general
    iot
    mobile/firebase
    social_marketing
    sms_marketing
+   fsm
+   planning
+   general

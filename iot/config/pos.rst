@@ -36,7 +36,7 @@ Set Up
 
 To connect hardware to the PoS, the first step is to connect an IoT Box
 to your database. For this, follow this
-`documentation <https://docs.google.com/document/d/1vhWrSSlSdJcRYe4tjPpXKYVMTD47lVK3ysyYc7tJDlA/edit#>`__.
+:doc:`documentation <connect>`.
 
 .. image:: media/pos02.png
     :align: center
@@ -71,7 +71,7 @@ other hardware might work as well.
    connection is available on boot.
 
 Once it's done, you can connect the IoT Box to your PoS. For this, go in
-Point of Sale > Configuration > PoS, tick the box "IoT Box" and select
+:menuselection:`Point of Sale --> Configuration --> PoS`, tick the box "IoT Box" and select
 the IoT Box you want to connect with. Save the changes.
 
 Set up is done, you can launch a new PoS Session.

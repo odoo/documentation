@@ -11,16 +11,15 @@ Example, for a specific invoice:
 -  Pay the remaining balance within 30 days
 
 .. note::
-
-	payment terms are not to be confused with a payment in several parts. If,
-	for a specific order, you invoice the customer in two parts, that's not a
-	payment term but an invoice policy.
+   Payment terms are not to be confused with a payment in several parts. If,
+   for a specific order, you invoice the customer in two parts, that's not a
+   payment term but an invoice policy.
 
 Configuration
 =============
 
 Configure your usual installment plans from the application :menuselection:`Accounting -->
-Configuration > Payment Terms`.
+Configuration --> Payment Terms`.
 
 A payment term may have one line (eg: 21 days) or several lines (10%
 within 3 days and the balance within 21 days). If you create a payment
@@ -32,8 +31,7 @@ may not compute exactly 100%)
   :align: center
 
 .. tip::
-
-	The description of the payment term will appear on the invoice or the sale order.
+   The description of the payment term will appear on the invoice or the sale order.
 
 Payment terms for customers
 ===========================
@@ -77,11 +75,9 @@ journal entry:
 | Income               |            |         | 100      |
 +----------------------+------------+---------+----------+
 
-On the customer statement, you will see two lines with different due
-dates. To get the customer statement, use the menu Sales > Customers
-Statement.
+On the customer statement, you will see two lines with different du dates. To get the customer
+statement, use the menu :menuselection:`Sales --> Customers Statement`.
 
 .. seealso::
-
-	* :doc:`overview`
-	* :doc:`payment_terms`
+   - :doc:`overview`
+   - :doc:`payment_terms`

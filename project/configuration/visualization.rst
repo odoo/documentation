@@ -37,7 +37,7 @@ which one have the higher priorities.
 
 The Kanban view is the default view when accessing a project, but if you
 are on another view, you can go back to it any time by clicking the
-kanban view logo in the upper right corner
+Kanban view logo in the upper right corner
 
 .. image:: media/visualization03.png
     :align: center

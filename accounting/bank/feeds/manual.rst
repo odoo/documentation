@@ -64,8 +64,7 @@ is missing, Odoo will ask you to **select a partner**.
    :align: center
 
 .. tip::
-
-		Hit CTRL-Enter to reconcile all the balanced items on the sheets.
+   Hit CTRL-Enter to reconcile all the balanced items on the sheets.
 
 Close Bank Statements from the reconciliation
 ---------------------------------------------
@@ -96,5 +95,5 @@ To close the bank statement, just click on **Validate**.
 
 .. seealso::
 
-	* :doc:`../reconciliation/use_cases`
-	* :doc:`../feeds/synchronize`
+   * :doc:`../reconciliation/use_cases`
+   * :doc:`../feeds/synchronize`

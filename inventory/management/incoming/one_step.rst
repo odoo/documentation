@@ -8,8 +8,8 @@ vendors to the stock.
 
 However, if advanced routes have been activated and you set another
 incoming configuration on your warehouse, you can set it back to the
-one-step receipt configuration. To do so, go to *Configuration >
-Warehouses* and edit the warehouse in question.
+one-step receipt configuration. To do so, go to :menuselection:`Configuration -->
+Warehouses` and edit the warehouse in question.
 
 Set the *Incoming Shipments* option to *Receive goods directly (1
 step)*.

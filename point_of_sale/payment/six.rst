@@ -6,7 +6,7 @@ Connecting a SIX/Worldline payment terminal allows you to offer a fluid
 payment flow to your customers and ease the work of your cashiers.
 
 .. note::
-         Please note SIX/Worldine is currently only available for UE customers.
+   Please note SIX/Worldine is currently only available for UE customers.
 
 Configuration
 =============
@@ -16,13 +16,13 @@ Connect a Payment Terminal
 
 Connecting a SIX/Worldline Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
-to your database, please refer to `this documentation
-<https://www.odoo.com/documentation/user/12.0/iot.html>`__.
+to your database, please refer to the :doc:`IoT documentation
+<../../iot/config/connect>`.
 
 Once the *IoT Box* is up and running, you’ll need to link it to your
-PoS. Open the Point of Sale app and go to *Configuration > Point of
-Sale*. Select a PoS, tick the IoT Box Device option and select your
-payment terminal.
+PoS. Open the Point of Sale app and go to :menuselection:`Configuration
+--> Point of Sale`. Select a PoS, tick the IoT Box Device option and select
+your payment terminal.
 
 .. image:: media/six_01.png
     :align: center
@@ -40,8 +40,8 @@ takes +/- 1 min).
     :align: center
 
 .. tip::
-      The terminal should only be connected to the network with the Ethernet.
-      Do not connect it to the IoT Box with a USB Cable.
+   The terminal should only be connected to the network with the Ethernet.
+   Do not connect it to the IoT Box with a USB Cable.
 
 Configure the Payment Method
 ----------------------------
@@ -52,10 +52,10 @@ setting.
 .. image:: media/six_04.png
     :align: center
 
-Back in *Point of Sale > Configuration > Point of Sale*, go in the
-payments section and access your payment methods. Create a new payment
-method for SIX, select the payment terminal option SIX, and select your
-payment terminal device.
+Back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`,
+go in the payments section and access your payment methods. Create a new
+payment method for SIX, select the payment terminal option SIX, and select
+your payment terminal device.
 
 .. image:: media/six_05.png
     :align: center

@@ -15,7 +15,7 @@ product.
 Configuration
 =============
 
-In the *Inventory* application, go to *Configuration > Settings*. In
+In the *Inventory* application, go to :menuselection:`Configuration --> Settings`. In
 the *Products* section, activate *Units of Measure*, then *Save*.
 
 .. image:: media/uom_01.png
@@ -24,7 +24,7 @@ the *Products* section, activate *Units of Measure*, then *Save*.
 Create New Units of Measure
 ===========================
 
-In the *Inventory* application go to *Configuration > UoM*. There,
+In the *Inventory* application go to :menuselection:`Configuration --> UoM`. There,
 hit *Create*. As an example, we will create a Box of 6 units that we
 will use for the Egg product.
 
@@ -42,7 +42,7 @@ unit of measure for the category which is “Units” here.
 Specify Units of Measure on your Products
 =========================================
 
-In the *Inventory application > Master Data > Products*, open the
+In the :menuselection:`Inventory application --> Master Data --> Products`, open the
 product which you would like to change the purchase/sale unit of
 measure, and click on *Edit*.
 
@@ -82,7 +82,7 @@ Replenishment
 -------------
 
 When doing a replenishment via the *Replenish* button on the product
-form, you have the possibility to change the unit of measure.
+form, you have the possibility to use a different unit of measure.
 
 .. image:: media/uom_07.png
     :align: center

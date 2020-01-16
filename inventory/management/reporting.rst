@@ -6,5 +6,7 @@ Valuation Methods
    :titlesonly:
    :glob:
 
-   reporting/valuation_methods_continental
-   reporting/valuation_methods_anglo_saxon
+   reporting/inventory_valuation_config
+   reporting/using_inventory_valuation
+   reporting/integrating_landed_costs
+   ../../accounting/others/inventory/avg_price_valuation

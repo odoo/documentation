@@ -6,7 +6,7 @@ Create Storable/Consumable Products
 ===================================
 
 The first step to use the inventory application is to create products in
-your database via the menu *Master Data > Products*. Click the Create
+your database via the menu :menuselection:`Master Data --> Products`. Click the Create
 button and enter the name of your product.
 
 .. image:: media/deliver_from_stock_01.png
@@ -42,15 +42,13 @@ the products will go out of your stock.
 .. image:: media/deliver_from_stock_05.png
     :align: center
 
-In case you have a delivery that is planned but shouldn’t be immediately
-validated, you can create a *planned delivery* with a scheduled date
-in the future. You can indicate the initial demand for each product,
-corresponding to what has been ordered by your customer. Once the
-document is filled in, you can hit “Mark as to do” in order to consider
-it in your product forecasts.
+In case you have a delivery that is planned but shouldn’t be immediately validated, you can create a *planned delivery* with a scheduled date in the future. You can indicate the initial demand for each product, corresponding to what has been ordered by your customer. Once the document is filled in, you can hit “Mark as to do” in order to consider it in your product forecasts.
 
 .. image:: media/deliver_from_stock_06.png
     :align: center
+    
+.. note::
+    The default setting is the immediate transfer where you do not need to “Mark as to do” and “Check availability” when delivering a product.
 
 Deliver Products from Stock from a Sale Order
 =============================================

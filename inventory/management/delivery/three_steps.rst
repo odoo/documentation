@@ -27,7 +27,7 @@ Indeed, routes provide a mechanism to chain different actions together.
 Here, we will chain the picking to the shipping.
 
 To activate *multi-step routes*, open the *inventory app*, and go to
-*Configuration > Settings* and activate the option. By default,
+:menuselection:`Configuration --> Settings` and activate the option. By default,
 activating *multi-step routes* will also activate *Storage
 Locations*.
 
@@ -37,8 +37,8 @@ Locations*.
 Warehouse configuration
 =======================
 
-Now that *Multi-Step Routes* is activated, go to *Configuration >
-Warehouse* and open the one you will use to deliver in 3 steps. Then,
+Now that *Multi-Step Routes* is activated, go to :menuselection:`Configuration -->
+Warehouse` and open the one you will use to deliver in 3 steps. Then,
 you can select the option *Pack good, send goods in output and then
 deliver (3 steps)* as *Outgoing Shipments*.
 
@@ -49,7 +49,7 @@ Activating this option will lead to the creation of two new locations,
 *Output* and *Packing Zone*.
 
 Of course, you can rename them if you want. To do so, go to
-*Configuration > Locations* and select the one you want to rename.
+:menuselection:`Configuration --> Locations` and select the one you want to rename.
 Change its name and hit save.
 
 Create a Sales Order

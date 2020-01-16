@@ -28,7 +28,7 @@ From there, click on the **Generate Leads** button, a window where you will be a
 
 
 .. image:: media/LM5.png
- 	:align: center
+   :align: center
 
 
 When choosing to target Companied and their contacts you can choose the contacts you are getting based on Role or Seniority. 
@@ -51,7 +51,8 @@ Pricing
 This is an In-App Purchase feature, each generated lead will cost you one credit.
 If you choose to get contact information each contact will also cost us one additional credit.
 Here is the pricing for this `feature <https://iap.odoo.com/iap/in-app-services/167?>`__, 
-To buy credits you can either go to CRM > Configuration > Settings > Buy Credits; or go to Settings > In-App Purchases>View my Services
+To buy credits you can either go to :menuselection:`CRM --> Configuration --> Settings --> Buy
+Credits`; or go to `Settings --> In-App Purchases --> View my Services`.
 
 .. image:: media/LM6.png
    :align: center
@@ -64,7 +65,8 @@ To buy credits you can either go to CRM > Configuration > Settings > Buy Credits
     The blue box will automatically tell you how many credits are going to be consumed.
 
 .. tip::
- 	If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
+   If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
-More information about `In-App Purchases <https://www.odoo.com/documentation/user/13.0/general/in_app_purchase/in_app_purchase.html?highlight=iap>`__,  (IAP).
+.. seealso::
+   * :doc:`In-App Purchases (IAP) <../../general/in_app_purchase/in_app_purchase>`
  

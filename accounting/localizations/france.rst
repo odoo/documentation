@@ -50,10 +50,10 @@ Getting compliant with Odoo is very easy.
 Your company is requested by the tax administration to deliver a certificate 
 of conformity testifying that your software complies with the anti-fraud 
 legislation. This certificate is granted by Odoo SA to Odoo Enterprise users 
-`here <https://www.odoo.com/my/contract/french-certification/>`__. 
+`here <https://www.odoo.com/my/contract/french-certification/>`_.
 If you use Odoo Community, you should 
-`upgrade to Odoo Enterprise <https://www.odoo.com/documentation/online/setup/enterprise.html>`__
-or contact your Odoo service provider. 
+`upgrade to Odoo Enterprise <https://www.odoo.com/documentation/13.0/setup/enterprise.html>`_
+or contact your Odoo service provider.
 
 In case of non-conformity, your company risks a fine of €7,500.
 
@@ -63,27 +63,28 @@ To get the certification just follow the following steps:
   *Apps* menu:
 
   * if you use Odoo Point of Sale: *l10n_fr_pos_cert*: France - VAT Anti-Fraud Certification for Point of Sale (CGI 286 I-3 bis)
-
   * in any other case: *l10n_fr_certification*: France - VAT Anti-Fraud Certification (CGI 286 I-3 bis)
+
 * Make sure a country is set on your company, otherwise your entries won’t be 
   encrypted for the inalterability check. To edit your company’s data, 
   go to :menuselection:`Settings --> Users & Companies --> Companies`. 
   Select a country from the list; Do not create a new country.
 * Download the mandatory certificate of conformity delivered by Odoo SA `here <https://www.odoo.com/my/contract/french-certification/>`__.
 
-.. note:: * To install the module in any system created before 
-   December 18th 2017, you should update the modules list.
-   To do so, activate the developer mode from the *Settings* menu.
-   Then go to the *Apps* menu and press *Update Modules List* in the top-menu.
- * In case you run Odoo on-premise, you need to update your installation 
-   and restart your server beforehand.
- * If you have installed the initial version of the anti-fraud module
-   (prior to December 18th 2017), you need to update it.
-   The module's name was *France - Accounting - Certified CGI 286 I-3 bis*.
-   After an update of the modules list, search for 
-   the updated module in *Apps*, select it and click *Upgrade*. 
-   Finally, make sure the following module *l10n_fr_sale_closing* 
-   is installed.
+.. note::
+   * To install the module in any system created before
+     December 18th 2017, you should update the modules list.
+     To do so, activate the developer mode from the *Settings* menu.
+     Then go to the *Apps* menu and press *Update Modules List* in the top-menu.
+   * In case you run Odoo on-premise, you need to update your installation
+     and restart your server beforehand.
+   * If you have installed the initial version of the anti-fraud module
+     (prior to December 18th 2017), you need to update it.
+     The module's name was *France - Accounting - Certified CGI 286 I-3 bis*.
+     After an update of the modules list, search for
+     the updated module in *Apps*, select it and click *Upgrade*.
+     Finally, make sure the following module *l10n_fr_sale_closing*
+     is installed.
 
 Anti-fraud features
 -------------------
@@ -179,17 +180,6 @@ More Information
 
 You will find more information about this legislation in the official documents:
 
-* `Frequently Asked Questions <https://www.economie.gouv.fr/files/files/directions_services/dgfip/controle_fiscal/actualites_reponses/logiciels_de_caisse.pdf>`__
-* `Official Statement <http://bofip.impots.gouv.fr/bofip/10691-PGP.html?identifiant=BOI-TVA-DECLA-30-10-30-20160803>`__
-* `Item 88 of Finance Law 2016 <https://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000031732968&categorieLien=id&cidTexte=JORFTEXT000031732865>`__
-
-
-
-
-
-
-
-
-
-
-
+* `Frequently Asked Questions <https://www.economie.gouv.fr/files/files/directions_services/dgfip/controle_fiscal/actualites_reponses/logiciels_de_caisse.pdf>`_
+* `Official Statement <http://bofip.impots.gouv.fr/bofip/10691-PGP.html?identifiant=BOI-TVA-DECLA-30-10-30-20160803>`_
+* `Item 88 of Finance Law 2016 <https://www.legifrance.gouv.fr/affichTexteArticle.do?idArticle=JORFARTI000031732968&categorieLien=id&cidTexte=JORFTEXT000031732865>`_

@@ -101,7 +101,7 @@ like installment plans (e.g.
 
 Such a customization service is made on-demand by our technical experts
 based on your own requirements. A business advisor can reach you out for
-such matter. `Contact us. <https://www.odoo.com/page/contactus>`__
+such matter. `Contact us <https://www.odoo.com/page/contactus>`_.
 
 
 .. seealso::

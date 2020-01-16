@@ -8,10 +8,10 @@ My Odoo Portal
 In this section of the portal, you will find all the communications between you
 and Odoo: documents such as quotations, sales orders, invoices and subscriptions.
 
-.. note :: To access this section, you have to log with your username and password
-    to `Odoo <https://www.odoo.com/my/home>`__ . If you are already logged in, just
-    click on your name on the top-right corner and select "My Account".
-
+.. note::
+   To access this section, you have to log with your username and password to `Odoo
+   <https://www.odoo.com/my/home>`_. If you are already logged in, just click on your name on the
+   top-right corner and select "My Account".
 
 .. image:: media/my_portal.png
     :align: center
@@ -98,11 +98,11 @@ delete the payment method.
 .. image:: media/managepayment.png
     :align: center
 
-.. warning :: At the date of the next invoice, if there is no payment
-    information provided or if your credit card has expired, the status of your
-    subscription will change to "To Renew".  You will then have 7 days to
-    provide a valid method of payment. After this delay, the subscription will
-    be closed, and you will no longer be able to access the database.
+.. warning::
+   At the date of the next invoice, if there is no payment information provided or if your credit
+   card has expired, the status of your subscription will change to "To Renew". You will then have 7
+   days to provide a valid method of payment. After this delay, the subscription will be closed, and
+   you will no longer be able to access the database.
 
 Success Packs
 =============
@@ -111,5 +111,5 @@ unique personalized assistance to help you customize your solution and optimize
 your workflows as part of your initial implementation. These hours never expire,
 allowing you to utilize them whenever you need support.
 
-.. seealso ::
-    If you need information about how to manage your database see :ref:`db_online`
+.. seealso::
+   If you need information about how to manage your database see :ref:`db_online`

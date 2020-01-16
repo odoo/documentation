@@ -21,7 +21,7 @@ Application Configuration
 -------------------------
 
 First, you need to activate the tracking of lot numbers. To do so, go to
-*Inventory > Configuration > Settings* and tick *Lots & Serial
+:menuselection:`Inventory --> Configuration --> Settings` and tick *Lots & Serial
 Numbers*. Then, click on save.
 
 .. image:: media/lots_01.png
@@ -33,7 +33,7 @@ Product Configuration
 Now, you have to configure which products you want to track by serial
 numbers.
 
-Go to *Master Data > Products* and open the product of your choice.
+Go to :menuselection:`Master Data --> Products` and open the product of your choice.
 There, click on *Edit* and select *Tracking by Lots* in the
 inventory tab.
 
@@ -94,7 +94,7 @@ Operation Types
 
 Of course, you also have the possibility to define how you will manage
 lots for each operation type. To do so, open the *Inventory* app and
-go to *Configuration > Operation Types*.
+go to :menuselection:`Configuration --> Operation Types`.
 
 For each type (receipts, internal transfers, deliveries, …), you can
 decide if you allow to create new lot numbers or only use existing ones.
@@ -114,8 +114,8 @@ The lot number given to the products allows you to keep track of where
 they were received, put in stock, to whom they were sold and where they
 were shipped to.
 
-To track an item, open the *Inventory* module and, in *Master Data >
-Lots/Serial Numbers*, click on the lot number corresponding to your
+To track an item, open the *Inventory* module and, in :menuselection:`Master Data -->
+Lots/Serial Numbers`, click on the lot number corresponding to your
 search.
 
 .. image:: media/lots_09.png

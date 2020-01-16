@@ -8,6 +8,7 @@ contabilità. Per testare la fattura elettronica i dati devono essere
 reali e non inventati, altrimenti il sistema dell’agenzia delle entrate
 non riconoscerà l’interscambio di informazioni.
 
+
 Configurare le informazioni sulla tua Azienda
 =============================================
 
@@ -24,8 +25,7 @@ elettronica sono i seguenti:
    di posta elettronica certificata sono fornite dal tuo fornitore o dal
    Ministero. Lo stesso server deve essere configurato come server che
    gestisce tutta la corrispondenza mail in Odoo, per saperne di più si
-   puo’ consultare la relativa
-   `guida <https://www.odoo.com/documentation/user/13.0/discuss/email_servers.html>`__.
+   puo’ consultare la relativa :doc:`guida <../../discuss/email_servers>`.
 
 -  Indirizzo PEC dell’ Azienda, tale indirizzo deve essere lo stesso
    registrato presso l’Agenzia delle Entrate per l’utilizzo dei servizi
@@ -50,8 +50,8 @@ elettronica sono i seguenti:
   :align: center
 
 
-1. Configurare le impostazioni per la Fatturazione Elettronica
---------------------------------------------------------------
+Configurare le impostazioni per la Fatturazione Elettronica
+-----------------------------------------------------------
 
 -  Numero di iscrizione nel registro Imprese tenuto presso la Camera di
    Commercio.
@@ -66,8 +66,8 @@ elettronica sono i seguenti:
   :align: center
 
 
-1. Configurare il profilo dei clienti
--------------------------------------
+Configurare il profilo dei clienti
+----------------------------------
 
 Per un corretto utilizzo dell’applicazione, il profilo di clienti e
 fornitori, nell’applicazione contatti, deve essere configurato con le
@@ -101,22 +101,22 @@ schermata della fattura.
 
 I messaggi che possono apparire sono i seguenti:
 
-1. Fattura invitata. In attesa di accettazione
+#. Fattura invitata. In attesa di accettazione
 
-2. Invio fallito. Puoi modificare la fattura ed inviarla di nuovo
+#. Invio fallito. Puoi modificare la fattura ed inviarla di nuovo
 
-3. La fattura è stata correttamente inviata ed accettata dal
+#. La fattura è stata correttamente inviata ed accettata dal
    destinatario.
 
 I vari stadi di spedizione e recezione della fattura sono visibili anche
 dall’elenco delle Fatture nella forma di icone, accanto alla colonna
 “Stato” dall’applicazione contabilità.
 
-*Icona Rossa:* Invio fallito
+*Icona Rossa*: Invio fallito
 
-*Icona Gialla:* Fattura invitata. In attesa di accettazione
+*Icona Gialla*: Fattura invitata. In attesa di accettazione
 
-*Icona Verde:* Fattura inviata e accettata dal destinatario
+*Icona Verde*: Fattura inviata e accettata dal destinatario
 
 Per inviare la fattura tramite PEC e generare il file XML, basterà
 cliccare su invia. Il documento verrà poi mostrato tra gli allegati.

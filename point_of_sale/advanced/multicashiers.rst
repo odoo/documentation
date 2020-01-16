@@ -10,7 +10,7 @@ There are three ways to switch cashiers in Odoo: by *selecting the
 cashier*, by *entering a PIN code* or by *scanning a barcode*.
 
 .. note::
-	To manage multiple cashiers, you need several employees (at least two). 
+   To manage multiple cashiers, you need several employees (at least two).
 
 Set up log in with employees
 ============================

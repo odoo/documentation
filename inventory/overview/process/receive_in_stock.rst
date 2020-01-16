@@ -3,7 +3,7 @@ Receive Products in Stock
 =========================
 
 The first step to use the inventory application is to create products in
-your database via the menu *Master Data > Products*. Click the Create
+your database via the menu :menuselection:`Master Data --> Products`. Click the Create
 button and enter the name of your product.
 
 .. image:: media/receive_in_stock_01.png

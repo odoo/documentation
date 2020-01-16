@@ -2,7 +2,8 @@
 How to allow users to sign in with their Google account
 =======================================================
 
-- Connect to your Google account and go to `https://console.developers.google.com/ <https://console.developers.google.com/>`_.
+- Connect to your Google account and go to the `Google API Dashboard
+  <https://console.developers.google.com/>`_.
 
 - Click on **Create Project** and enter the project name and other details.
 

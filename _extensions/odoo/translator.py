@@ -377,7 +377,11 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
                     "Unsupported alignment value \"%s\"" % node['align'],
                     location=doc
                 )
-        # todo: explicit width/height/scale?
+        attrs['style'] = '; '.join(
+            '%s:%s' % (name, node[name] + ('px' if re.match(r'^[0-9]+$', node[name]) else ''))
+            for name in ['width', 'height']
+            if name in node
+        )
         self.body.append(self.starttag(node, 'img', **attrs))
     def depart_image(self, node): pass
     def visit_figure(self, node):

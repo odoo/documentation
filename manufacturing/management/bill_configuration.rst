@@ -22,9 +22,8 @@ other words, you choose to realize your manufacturing process in one
 step and do not track the steps the product goes through.
 
 Before creating your *BoM*, you have to create the product using the
-*BoM* and, at least, one of the components. Go to the *Master Data*
-menu > *Products* and create both the finished product and the
-component.
+*BoM* and, at least, one of the components. Go to the :menuselection:`Master Data menu --> Products`
+and create both the finished product and the component.
 
 Once done, go to the *Bills of Materials* menu under *Master Data*.
 Now, create it. Choose the product from the dropdown menu and add your

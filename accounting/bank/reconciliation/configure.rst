@@ -36,14 +36,12 @@ tell Odoo to take the entire fee into account.
 Save your changes when you are done.
 
 .. note::
-
-	If the amount of your bank fee is fixed, you can as well select **Fixed**
-	under amount type and specify the amount in the amount tap.
+   If the amount of your bank fee is fixed, you can as well select **Fixed**
+   under amount type and specify the amount in the amount tap.
 
 .. seealso::
-
-	You can also use this functionality to handle discounts. Please refer to
-	:doc:`../../receivables/customer_invoices/cash_discounts`
+   You can also use this functionality to handle discounts. Please refer to
+   :doc:`../../receivables/customer_invoices/cash_discounts`
 
 Register your payments based on a reconciliation model
 ======================================================
@@ -61,7 +59,6 @@ the relevant data instantly.
 Finally, click on **Reconcile** to finish the process.
 
 .. seealso::
-
-	* :doc:`../feeds/manual`
-	* :doc:`../feeds/ofx`
-	* :doc:`use_cases`
+   * :doc:`../feeds/manual`
+   * :doc:`../feeds/ofx`
+   * :doc:`use_cases`

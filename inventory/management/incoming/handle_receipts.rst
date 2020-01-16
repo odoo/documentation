@@ -65,8 +65,5 @@ Three steps flow
 Please read documentation on :doc:`three_steps`
 
 .. seealso::
-    * :doc:`../delivery/inventory_flow`
-
-.. todo::
-    Add section when available
-    -  How to analyse the performance of my vendors?
+   - :doc:`../delivery/inventory_flow`
+   - :doc:`../../../purchase/purchases/rfq/analyze`

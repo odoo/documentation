@@ -61,10 +61,9 @@ since it is important:
   products under either of these designations.
 
 .. tip::
-
-	It is recommended that you create a **Miscellaneous** product for all purchases
-	that occur infrequently and do not require inventory valuation or management.
-	If you create such a product, it is recommended to set the product type to **Service**.
+   It is recommended that you create a **Miscellaneous** product for all purchases
+   that occur infrequently and do not require inventory valuation or management.
+   If you create such a product, it is recommended to set the product type to **Service**.
 
 Managing your Vendor Bills
 ==========================
@@ -146,11 +145,10 @@ need (i.e. remove or add product lines, modify quantities, and change
 prices).
 
 .. note::
+   Your vendor may send you several bills for the same Purchase Order if:
 
-	Your vendor may send you several bills for the same Purchase Order if:
-	
-	1. Your vendor is in back-order and is sending you invoices as they ship the products.
-	2. Your vendor is sending you a partial bill or asking for a deposit.
+   #. Your vendor is in back-order and is sending you invoices as they ship the products.
+   #. Your vendor is sending you a partial bill or asking for a deposit.
 
 Every time you record a new vendor bill, Odoo will automatically
 populate the product quantities based on what has been received from the

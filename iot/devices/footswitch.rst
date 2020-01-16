@@ -16,7 +16,7 @@ Connecting the footswitch to the *IoT Box* is easy, you just have to
 combine the two by cable.
 
 .. note::
-		In some cases, a serial to USB adapter may be needed.
+   In some cases, a serial to USB adapter may be needed.
 
 If your footswitch is a `supported
 one <https://www.odoo.com/page/iot-hardware>`__, there is no need to
@@ -49,5 +49,5 @@ order matters! In the picture above, using the footswitch will, for
 example, automatically skip the current part of the process you work on.
 
 .. note::
-		When you are on the work order screen, a status button indicates if you
-		are correctly connected to the footswitch.
+   When you are on the work order screen, a status button indicates if you
+   are correctly connected to the footswitch.

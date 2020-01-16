@@ -13,9 +13,9 @@ multi-warehouses.
 .. image:: media/virtual_warehouses_01.png
    :align: center
 
-You can then access your warehouses via \*Inventory > Configuration >
-Warehouses\*. Create the necessary warehouses following this
-`*documentation* <https://docs.google.com/document/d/14xNFdUOAbfzdloqXcjq67T8qjjlY7pu4Db6BbR4_fdA/edit>`__.
+You can then access your warehouses via :menuselection:`Inventory --> Configuration -->
+Warehouses`. Create the necessary warehouses following this :doc:`documentation
+<../warehouses/warehouse_creation>`.
 Enter the warehouse which should be resupplied by another one. You will
 have the possibility to directly indicate through which warehouse it
 gets resupplied.
@@ -33,8 +33,8 @@ order\*.
 
 For the demonstration, I set a reordering rule with a minimum of 5 units
 in stock and a maximum of 10 units in stock, having currently 0 units on
-hand. I will run the scheduler by going to \*Inventory > Operations >
-Run scheduler\*.
+hand. I will run the scheduler by going to :menuselection:`Inventory --> Operations -->
+Run scheduler`.
 
 .. image:: media/virtual_warehouses_04.png
    :align: center

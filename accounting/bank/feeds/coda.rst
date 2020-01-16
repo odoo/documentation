@@ -10,8 +10,9 @@ With Odoo, you can download an CODA file from your bank or accounting
 software and import it directly in Odoo. This will create all bank
 statements.
 
-.. tip:: 
-    Test now the feature `with this sample CODA file <https://drive.google.com/file/d/0B5BDHVRYo-q5UVVMbGRxUmtpVDg/view?usp=sharing>`__
+.. tip::
+   Test now the feature :download:`with this sample CODA file
+   <../../../_static/example_files/Ontvangen_CODA.2013-01-11-18.59.15.txt>`
 
 Configuration
 =============
@@ -21,8 +22,8 @@ Install the CODA feature
 
 If you have installed the Belgian Chart of Account provided with Odoo,
 the CODA import feature is already installed by default. In such a case,
-you can move directly to the next section `Import your first coda
-file <InstallCoda_>`_
+you can move directly to the next section :ref:`Import your first coda
+file <accounting/InstallCoda>`
 
 If CODA is not activated yet, you need to do it first. In the Accounting
 application, go to the menu :menuselection:`Configuration --> Settings`. From the
@@ -49,7 +50,7 @@ create all your bank statements.
 If the file is successfully loaded, you will get redirected to the bank
 reconciliation screen with all the transactions to reconcile.
 
-.. _InstallCoda:
+.. _accounting/InstallCoda:
 
 Importing CODA files
 ====================

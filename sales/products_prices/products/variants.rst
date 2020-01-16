@@ -219,9 +219,7 @@ the variant that will be added to the original price.
 
 When you have entered all the extra values, click on **Save**.
 
-.. todo::
-
-  .. seealso::
-
-      * Accounting Memento: Details of Journal Entries
-      * Process Overview: From Billing to Payment Orders
+.. seealso::
+   - `Accounting Memento: Details of Journal Entries
+     <../../../accounting/overview/main_concepts/memento.html#journal-entries>`_
+   - :doc:`../../../accounting/overview/process_overview/supplier_bill`

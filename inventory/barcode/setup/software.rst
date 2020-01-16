@@ -12,7 +12,7 @@ Configuration
 =============
 
 To use this feature, you first need to activate the *Barcode*
-functionality via *Inventory > Settings > Barcode Scanner*. Once you
+functionality via :menuselection:`Inventory --> Settings --> Barcode Scanner`. Once you
 have ticked the feature, you can hit save.
 
 .. image:: media/software_01.png
@@ -22,8 +22,7 @@ Set Product Barcodes
 ====================
 
 You can easily assign barcodes to your different products via the
-*Inventory* app. To do so, go to *Settings > Configure Products
-Barcodes*.
+*Inventory* app. To do so, go to :menuselection:`Settings --> Configure Products Barcodes`.
 
 .. image:: media/software_02.png
     :align: center
@@ -47,7 +46,7 @@ Set Locations Barcodes
 
 If you manage multiple locations, you will find useful to attribute a
 barcode to each location and stick it on the location. You can configure
-the locations barcodes in *Inventory > Configuration > Locations*.
+the locations barcodes in :menuselection:`Inventory --> Configuration --> Locations`.
 
 .. image:: media/software_05.png
     :align: center

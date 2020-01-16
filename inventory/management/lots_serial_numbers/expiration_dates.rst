@@ -17,7 +17,7 @@ Application configuration
 -------------------------
 
 To use expiration dates tracking, open the *Inventory* application and
-go to *Configuration > Settings* and activate the *Lots & Serial
+go to :menuselection:`Configuration --> Settings` and activate the *Lots & Serial
 Numbers* and *Expiration Dates* features.
 
 .. image:: media/expiration_dates_01.png
@@ -58,7 +58,7 @@ Expiration Alerts
 =================
 
 You can access all your expiration alerts from the *inventory* app. To
-do so, go to *Master Data > Lots/Serial Numbers*. There, you can use
+do so, go to :menuselection:`Master Data --> Lots/Serial Numbers`. There, you can use
 the pre-existing filter that shows all the lots/serial numbers that
 exceeded their alert date.
 

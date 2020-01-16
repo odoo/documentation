@@ -8,8 +8,8 @@ This document summarizes Odoo Online's services, our Success Pack
 implementation methodology, and best practices to get started with our
 product.
 
-1. The SPoC (*Single Point of Contact*) and the Consultant
-==========================================================
+The SPoC (*Single Point of Contact*) and the Consultant
+=======================================================
 
 Within the context of your project, it is highly recommended to
 designate and maintain on both sides (your side and ours) **one
@@ -41,10 +41,12 @@ authority** in terms of decision making.
    he can pass on this knowledge to his collaborators. In order for
    this approach to be successful, it is necessary that the SPoC is
    also involved in its own rise in skills through self-learning via
-   the `Odoo documentation <http://www.odoo.com/documentation/user/10.0/index.html>`__, `The elearning platform <https://odoo.thinkific.com/courses/odoo-functional>`__ and the testing of functionalities.
+   the :doc:`Odoo documentation <../index>`,
+   `The elearning platform <https://odoo.com/learn>`_
+   and the testing of functionalities.
 
-2. Project Scope
-================
+Project Scope
+=============
 
 To make sure all the stakeholders involved are always aligned, it is
 necessary to define and to make the project scope evolve as long as the
@@ -76,8 +78,8 @@ project implementation is pursuing.
 .. image:: media/basic_quickstart01.png
     :align: center
 
-3. Managing expectations
-========================
+Managing expectations
+=====================
 
 The gap between the reality of an implementation and the expectations of
 future users is a crucial factor. Three important aspects must be taken
@@ -139,8 +141,8 @@ without verifying its veracity beforehand.
 *This list can, of course, be completed by other tools that would more
 adequately meet the realities and needs of your project*
 
-4. Communication Strategy
-=========================
+Communication Strategy
+======================
 
 The purpose of the QuickStart methodology is to ensure quick ownership
 of the tool for end users. Effective communication is therefore crucial
@@ -171,8 +173,8 @@ us to follow those principles:
 -  Training sessions on the standard or customized solution will be
    organized.
 
-5. Customizations and Development
-=================================
+Customizations and Development
+==============================
 
 Odoo is a software known for its flexibility and its important evolution
 capacity. However, a significant amount of development contradicts a
@@ -198,8 +200,8 @@ recommended to:
    initiator both in terms of how the software will be used and at the
    level of the business processes of the company.
 
-6. Testing and Validation principles
-====================================
+Testing and Validation principles
+=================================
 
 Whether developments are made or not in the implementation, it is
 crucial to test and validate the correspondence of the solution with the
@@ -215,15 +217,16 @@ operational needs of the company.
    When a change needs to be made to the solution, the noted gap is
    caused by:
    
-   -  A difference between the specification and the delivered solution - This is a correction for which the Consultant is responsible
+   -  A difference between the specification and the delivered solution -
+      This is a correction for which the Consultant is responsible
    
       **or**
    
    -  A difference between the specification and the imperatives of
       operational reality - This is a change that is the responsibility of SPoC.
 
-7. Data Imports
-===============
+Data Imports
+============
 
 Importing the history of transactional data is an important issue and
 must be answered appropriately to allow the project running smoothly.
@@ -249,8 +252,8 @@ as possible, it will be decided :
    the software retrospectively. In this case, the production launch of
    the solution will precede the required imports.
 
-8. Support
-==========
+Support
+=======
 
 When your project is put in production, our support teams take care of your
 questions or technical issues.

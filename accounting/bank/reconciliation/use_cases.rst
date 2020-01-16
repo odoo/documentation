@@ -102,11 +102,9 @@ right and validate all related payments :
    :align: center
 
 .. tip::
-
-	Hit CTRL-Enter to reconcile all the balanced items in the sheet.
+   Hit CTRL-Enter to reconcile all the balanced items in the sheet.
 
 .. seealso::
-
-	* :doc:`../feeds/ofx`
-	* :doc:`../feeds/synchronize`
-	* :doc:`../feeds/manual`
+   * :doc:`../feeds/ofx`
+   * :doc:`../feeds/synchronize`
+   * :doc:`../feeds/manual`

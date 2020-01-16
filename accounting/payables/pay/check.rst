@@ -20,10 +20,9 @@ country. As an example, the **U.S. Check Printing** module is required to
 print U.S. checks.
 
 .. note::
-
-	According to your country and the chart of account you use, those
-	modules may be installed by default. (example: United States users have
-	nothing to install, it's configured by default).
+   According to your country and the chart of account you use, those
+   modules may be installed by default. (example: United States users have
+   nothing to install, it's configured by default).
 
 Activate checks payment methods
 -------------------------------
@@ -76,10 +75,8 @@ Explanation of the fields of the payment screen:
 .. demo:fields:: account.action_account_payments
 
 .. demo:action:: account.action_account_payments
-	
-	Try paying a supplier bill with a check
 
-.. _PrintChecks:
+   Try paying a supplier bill with a check
 
 Print checks
 ------------
@@ -101,9 +98,7 @@ Print Check from the top "print" menu.
 .. image:: ./media/check03.png
   :align: center
 
-.. _ReconicleBankStatements:
-
-Reconcile Bank Statements
+Reconcile bank statements
 -------------------------
 
 Once you process your bank statement, when the check is credited from
@@ -111,10 +106,9 @@ your bank account, Odoo will propose you automatically to match it with
 the payment. This will mark the payment as **Reconciled**.
 
 .. tip::
-
-	to review checks that have not been credited, open the list of
-	payments and filter on the Sent state. Review those payments that have a
-	date more than 2 weeks ago.
+   To review checks that have not been credited, open the list of
+   payments and filter on the Sent state. Review those payments that have a
+   date more than 2 weeks ago.
 
 Pay anything with a check
 =========================
@@ -133,6 +127,5 @@ Once your payment by check is registered, don't forget to **Confirm** it.
 Once confirmed, you can use **Print Check** directly or follow the preceding
 flow to print checks in batch:
 
--  `Print checks <PrintChecks_>`_
-
--  `Reconcile bank statements <ReconicleBankStatements_>`_
+-  `Print checks`_
+-  `Reconcile bank statements`_

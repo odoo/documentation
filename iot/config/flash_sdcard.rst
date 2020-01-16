@@ -9,7 +9,7 @@ Updating your SD Card with Etcher
 =================================
 
 Go to Balena’s website and download
-`Etcher <http://wwww.balena.org>`__, It’s a free and
+`Etcher <https://www.balena.io/>`__, It’s a free and
 open-source utility used for burning image files. Install and launch it.
 
 Now, download the latest image `here <http://nightly.odoo.com/master/posbox/iotbox/>`__, and extract it from the zip file. Then, open *Etcher* and select the image.

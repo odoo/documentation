@@ -17,7 +17,7 @@ advanced settings.
 Configuration
 =============
 
-To use this feature, go to *Inventory > Configuration > Settings* in
+To use this feature, go to :menuselection:`Inventory --> Configuration --> Settings` in
 the inventory app. Then, enable the *Consignment* feature in the
 *Traceability* section. Now, hit save.
 
@@ -36,7 +36,7 @@ owns the stock.
     :align: center
 
 .. note::
-		If you are the owner, you can leave the field blank.
+   If you are the owner, you can leave the field blank.
 
 Once the receipt is validated, the products enter your stock but still
 belong to the owner. They don’t impact your inventory valuation.

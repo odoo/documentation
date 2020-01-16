@@ -20,6 +20,5 @@ If your IoT Box image is from an earlier version, then you will have to
 reflash the SD card of your IoT Box to update the image (the latest
 image can be found `here <http://nightly/odoo.com>`__).
 
-You can find the documentation about SD card flashing here (`here <https://docs.google.com/document/d/1bqKsZhWqMqI4mhv4ltF61M_QPiBCHygYjjvkhsCTdaY/edit>`__).
-
-
+.. seealso::
+   - :doc:`flash_sdcard`

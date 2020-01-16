@@ -9,13 +9,13 @@ In order to create a new warehouse, you should activate the
 *Multi-Warehouse* settings. Note that the *Multi-Locations* settings
 will be automatically activated at the same time.
 
-In order to do so, go to the *Inventory app > Configuration >
-Settings*.
+In order to do so, go to the :menuselection:`Inventory app --> Configuration -->
+Settings`.
 
 .. image:: media/warehouse_creation_01.png
    :align: center
 
-You can then go to *Inventory > Configuration > Warehouses* and hit
+You can then go to :menuselection:`Inventory --> Configuration --> Warehouses` and hit
 *Create* to add a new warehouse.
 
 .. image:: media/warehouse_creation_02.png

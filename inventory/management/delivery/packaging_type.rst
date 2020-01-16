@@ -9,7 +9,7 @@ Configuration
 =============
 
 First, you need to activate the *Delivery Packages* feature in the
-*Inventory app > Configuration > Settings*.
+:menuselection:`Inventory app --> Configuration --> Settings`.
 
 .. image:: media/packaging_type_01.png
     :align: center

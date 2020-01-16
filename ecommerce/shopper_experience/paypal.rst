@@ -11,7 +11,12 @@ payment.
 Paypal account
 ==============
 
-A business account is needed to get paid with Paypal. Create a  `Paypayl Business Account <https://www.paypal.com/us/merchantsignup/applicationChecklist?signupType=CREATE_NEW_ACCOUNT&productIntentId=wp_standard>`__ or upgrade your Personal account to a Business account. Go to the Paypal settings and click on *Upgrade to a Business account*. Then follow the few configuration steps.
+A business account is needed to get paid with Paypal. Create a
+`Paypal Business Account <https://www.paypal.com/us/merchantsignup/
+applicationChecklist?signupType=CREATE_NEW_ACCOUNT&productIntentId=wp_standard>`_
+or upgrade your Personal account to a Business account. Go to the Paypal
+settings and click on *Upgrade to a Business account*.
+Then follow the few configuration steps.
 
 
 Settings in Paypal
@@ -19,8 +24,8 @@ Settings in Paypal
 
 | First, let’s see how to set up your Paypal account in order to build a
   seamless customer experience with Odoo.
-| Log in and open the settings. Go to *Products & Services > Website
-  payments* and click *Update* on *Website preferences*.
+| Log in and open the settings. Go to :menuselection:`Products & Services -->
+  Website payments` and click **Update** on **Website preferences**.
 
 .. image:: media/paypal01.png
     :align: center
@@ -30,8 +35,8 @@ Auto Return
 
 *Auto Return* automatically redirects your customers to Odoo once the
 payment is processed. Check *Auto Return* and enter your domain name
-"/shop/confirmation" as *Return URL* (e.g.
-https://yourcompany.odoo.com/shop/confirmation).
+with the suffix ``/shop/confirmation`` as *Return URL*
+(e.g. ``https://yourcompany.odoo.com/shop/confirmation``).
 
 This URL is requested in Paypal but not used in practice as Odoo
 transmits it at each transaction. Don’t worry if you manage several
@@ -71,8 +76,7 @@ is virtually guaranteed since IPN resends a confirmation until your site acknowl
 | To activate IPN, get back to *Website payments* menu and click
   *Update* in *Instant Payment Notification*.
 | The *Notification URL* to set is your domain name +
-  “payment/paypal/ipn” (e.g.
-  https://yourcompany.odoo.com/payment/paypal/ipn).
+  “payment/paypal/ipn” (e.g. ``https://yourcompany.odoo.com/payment/paypal/ipn``).
 
 .. image:: media/paypal05.png
     :align: center
@@ -80,14 +84,21 @@ is virtually guaranteed since IPN resends a confirmation until your site acknowl
 Payment Messages Format
 -----------------------
 
-Finally make sure the encoding format of payment messages is correctly
-set. Go to *PayPal button language encoding*.
+If you use accented characters (or anything else than basic Latin characters)
+for your customer names, addresses... you MUST configure the encoding format of
+the payment request sent by Odoo to Paypal.
 
-.. image:: media/paypal06.png
-    :align: center
+.. danger::
 
-Click *More Options* and set the two default encoding formats as
-*UTF-8*.
+    If you don't configure this setting, some transactions fail without notice.
+
+To do so, open:
+
+* `this page for a test account <https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+* `this page for a production account <https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
+
+Then, click *More Options* and set the two default encoding formats as **UTF-8**.
 
 .. image:: media/paypal07.png
     :align: center
@@ -97,8 +108,17 @@ Click *More Options* and set the two default encoding formats as
 
 Your Paypal account is ready!
 
-  .. tip:: For Encrypted Website Payments & EWP_SETTINGS error,
-     please check the `paypal documentation. <https://developer.paypal.com/docs/classic/paypal-payments-standard/integration-guide/encryptedwebpayments/#encrypted-website-payments-ewp>`__
+.. tip::
+   If you want your customers to pay without creating a Paypal account,
+   *Paypal Account Optional* needs to be turned on.
+    
+   .. image:: media/paypal_account_optional.png
+
+.. tip::
+   For Encrypted Website Payments & EWP_SETTINGS error,
+   please check the `Paypal documentation <https://developer.paypal.com/docs/
+   classic/paypal-payments-standard/integration-guide/encryptedwebpayments/
+   #encrypted-website-payments-ewp>`_.
 
 Settings in Odoo
 ================
@@ -114,11 +134,10 @@ Credentials
 
 Odoo requires three Paypal credentials:
 
--  *Email ID* is your login email address in Paypal.
-
--  *Merchant ID* can be found in the settings of your Paypal account, in *Profile > About the business*.
-
--  *Paypal PDT Token* is given in *Website payments* configuration as explained here above.
+- *Email ID* is your login email address in Paypal.
+- *Merchant ID* can be found in the settings of your Paypal account, in :menuselection:`Profile -->
+  About the business`.
+- *Paypal PDT Token* is given in *Website payments* configuration as explained here above.
 
 .. image:: media/paypal09.png
     :align: center
@@ -138,8 +157,9 @@ Odoo and check *Add Extra Fees*.
 You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`__ to set up
 fees.
 
-..note:: `Traders in the EU <https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/index_en.htm>`__ 
-are not allowed to charge extra fees for paying with credit cards.
+.. note::
+   `Traders in the EU <https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/
+   index_en.htm>`_ are not allowed to charge extra fees for paying with credit cards.
 
 Go live!
 ========
@@ -182,8 +202,6 @@ when a fictitious transaction is completed.
 
 Run a test transaction from Odoo using the sandbox personal account.
 
-See also 
-
-`How to manage orders paid with payment acquirers <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment.html>`__
-
-`How to manage orders paid with payment acquirers <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/payment_acquirer.html>`__
+.. seealso::
+   - :doc:`payment`
+   - :doc:`payment_acquirer`

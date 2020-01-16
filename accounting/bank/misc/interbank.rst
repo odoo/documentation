@@ -73,7 +73,8 @@ internal transfer. Select the **Bank** you want to transfer to, specify the
 **Amount** and add a **Memo** if you wish.
 
 .. note::
-    The memo is important if you wish to automatically reconcile (`see <Reconcile_>`_).
+   The memo is important if you wish to automatically reconcile (see `Import bank statements and
+   reconcile`_).
 
 .. image:: media/interbank02.png
    :align: center
@@ -83,8 +84,6 @@ Save and confirm the changes to register the payment.
 In terms of accounting the money is now booked in the transfer account.
 We'll need to import bank statements to book the money in the final
 accounts.
-
-.. _Reconcile:
 
 Import bank statements and reconcile
 ------------------------------------
