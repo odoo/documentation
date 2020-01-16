@@ -13,7 +13,8 @@ For this feature to work, go to :menuselection:`Sales --> Configuration
 --> Settings` and activate *Quotations Templates*.
 
 .. image:: media/quote_template01.png
-  :align: center
+   :align: center
+   :alt: Activation of Quotations Templates on Odoo
 
 Create your first template
 ==========================
@@ -26,7 +27,7 @@ able to select the product(s) and their quantity as well as the
 expiration time for the quotation.
 
 .. image:: media/quote_template02.png
-  :align: center
+   :align: center
 
 On each template, you can also specify discounts if the option is
 activated in the *Sales* settings. The base price is set in the
