@@ -1,6 +1,6 @@
-============================
-Advanced Restaurant Features
-============================
+===================
+Restaurant Features
+===================
 
 .. toctree::
    :titlesonly:

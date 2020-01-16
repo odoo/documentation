@@ -1,6 +1,6 @@
-==========================
-Belgian Fiscal Data Module
-==========================
+===================
+Fiscal Data Modules
+===================
 
 .. toctree::
    :titlesonly:
