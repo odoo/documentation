@@ -63,5 +63,5 @@ speed up a lot the reconciliation process.
 .. seealso::
    * :doc:`ofx`
    * :doc:`coda`
-   * :doc:`synchronize`
+   * :doc:`bank_synchronization`
    * :doc:`manual`
