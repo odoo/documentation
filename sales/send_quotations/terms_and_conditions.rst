@@ -26,7 +26,7 @@ appear on every quotation, SO and invoice.
 .. image:: media/terms_and_conditions02.png 
   :align: center 
 
-.. image:: media/quote_template02.png
+.. image:: media/terms_and_conditions03.png
   :align: center
   
 Set up more detailed terms & conditions
@@ -40,5 +40,5 @@ You can also attach an external document with more detailed and
 structured conditions to the email you send to the customer. You can
 even set a default attachment for all quotation emails sent.
 
-.. image:: media/terms_and_conditions03.png
+.. image:: media/terms_and_conditions04.png
   :align: center
