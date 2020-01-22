@@ -45,8 +45,6 @@ all the better.
    :class: img-thumbnail
    :alt: How to follow each movement made by your customers on Odoo Sales
 
-With Odoo Sales, it is now very easy to understand your customer's needs.
-
 Add optional products to your quotation templates
 =================================================
 
@@ -60,6 +58,8 @@ products or services.
    :align: center
    :class: img-thumbnail
    :alt: How to add optional products to your quotation templates on Odoo Sales
+
+With Odoo Sales, it is now very easy to understand your customer's needs.
 
 .. seealso::
    - :doc:`quote_template`
