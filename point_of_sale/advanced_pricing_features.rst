@@ -1,6 +1,6 @@
-=========================
-Advanced Pricing Features
-=========================
+================
+Pricing Features
+================
 
 .. toctree::
    :titlesonly:

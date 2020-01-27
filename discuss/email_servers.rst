@@ -2,7 +2,7 @@
 How to use my mail server to send and receive emails in Odoo
 ============================================================
 
-This document is mainly dedicated to Odoo on-premise users who don't 
+This document is mainly dedicated to Odoo on-premise users who don't
 benefit from an out-of-the-box solution to send and receive emails in Odoo,
 unlike `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh <https://www.odoo.sh>`__.
 
@@ -22,9 +22,8 @@ information on how to integrate your own email solution with Odoo.
 
 How to manage outbound messages
 ===============================
-
-As a system admin, go to :menuselection:`Settings --> General Settings` 
-and check *External Email Servers*. 
+As a system admin, go to :menuselection:`Settings --> General Settings`
+and check *External Email Servers*.
 Then, click *Outgoing Mail Servers* to create one and reference the SMTP data of your email server. 
 Once all the information has been filled out, click on *Test Connection*.
 
@@ -34,6 +33,14 @@ Here is a typical configuration for a G Suite server.
     :align: center
 
 Then set your email domain name in the General Settings.
+
+.. note::
+   If you get a ``[AUTHENTICATIONFAILED] Invalid credentials (Failure)`` warning when you *Test
+   Connection* on a Gmail address, activate the *Less secure app access* option. A direct link can
+   be `accessed here <https://myaccount.google.com/lesssecureapps?pli=1>`_.
+
+   In addition to that, enable the IMAP setting on your Gmail account.
+
 
 Can I use an Office 365 server
 ------------------------------

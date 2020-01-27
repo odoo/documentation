@@ -186,7 +186,7 @@ You have three choices for the **Automate Deferred Revenue** field:
 
 .. tip::
    You can, for example, select this account as the default **Income Account** of a product to fully
-   automate its sale completely. (see: `Choose a different Income Account for specific products`_).
+   automate its sale. (see: `Choose a different Income Account for specific products`_).
 
 .. seealso::
    * :doc:`../../others/configuration/account_type`

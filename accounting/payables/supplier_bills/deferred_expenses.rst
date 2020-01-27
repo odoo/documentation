@@ -186,7 +186,7 @@ You have three choices for the **Automate Deferred Expense** field:
 
 .. tip::
    You can, for example, select this account as the default **Expense Account** of a product to
-   fully automate its sale completely. (see: `Choose a different Expense Account for specific
+   fully automate its purchase. (see: `Choose a different Expense Account for specific
    products`_).
 
 .. seealso::
