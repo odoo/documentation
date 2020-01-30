@@ -10,7 +10,8 @@ To register your seller account in Odoo, navigate to :menuselection:`Sales --> C
 
 The **Seller ID** can be found in Seller Central under the link **Your Merchant Token** on the
 **Seller Account Information** page. The **Access Key** and the **Secret Key** can be found in
-Developer Central (where the Developer Registration and Assessment form was located).
+Developer Central (where the :ref:`Developer Registration and Assessment form
+<amazon/developer-form>` was located).
 
 Once the account is registered, the marketplaces available to this account are synchronized and
 listed under the **Marketplaces** tab. If you wish, you can remove some items from the list of
