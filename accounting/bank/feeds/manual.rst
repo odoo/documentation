@@ -96,4 +96,4 @@ To close the bank statement, just click on **Validate**.
 .. seealso::
 
    * :doc:`../reconciliation/use_cases`
-   * :doc:`../feeds/synchronize`
+   * :doc:`../feeds/bank_synchronization`
