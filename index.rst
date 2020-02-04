@@ -10,4 +10,3 @@ Odoo User Documentation
     Index <self>
     applications
     practical
-    business
