@@ -12,3 +12,4 @@ Practical Information
    db_management/db_premise
    portal/my_odoo_portal
    legal
+   contributing
