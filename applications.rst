@@ -24,6 +24,8 @@ Applications
    mobile/firebase
    social_marketing
    sms_marketing
+   marketing_automation
    fsm
    planning
    general
+
