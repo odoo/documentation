@@ -1,4 +1,4 @@
-:banner: banners/planning.jpg
+:banner: banners/planning.png
 
 =========
 Planning

@@ -1,4 +1,4 @@
-:banner: banners/project.jpg
+:banner: banners/project.png
 
 =======
 Project

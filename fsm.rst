@@ -1,4 +1,4 @@
-:banner: banners/fsm.jpg
+:banner: banners/fsm.png
 
 ==============
 Field Service

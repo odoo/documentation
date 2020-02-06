@@ -1,3 +1,5 @@
+:banner: banners/repair.png
+
 ===============
 Repair products
 ===============

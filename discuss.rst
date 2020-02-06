@@ -1,4 +1,4 @@
-:banner: banners/discuss.jpg
+:banner: banners/discuss.png
 
 =======
 Discuss

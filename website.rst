@@ -1,4 +1,4 @@
-:banner: banners/seo.jpg
+:banner: banners/seo.png
 
 =======
 Website

@@ -1,4 +1,4 @@
-:banner: banners/general.jpg
+:banner: banners/general.png
 
 =======
 General
