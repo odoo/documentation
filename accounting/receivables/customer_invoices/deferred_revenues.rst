@@ -164,6 +164,8 @@ model button fills out the form according to that model.
    :align: center
    :alt: Deferred Revenue model button in Odoo Accounting
 
+.. _deferred-revenues-automation:
+
 Automate the Deferred Revenues
 ==============================
 
@@ -189,5 +191,5 @@ You have three choices for the **Automate Deferred Revenue** field:
    automate its sale. (see: `Choose a different Income Account for specific products`_).
 
 .. seealso::
-   * :doc:`../../others/configuration/account_type`
+   * :doc:`../../overview/getting_started/chart_of_accounts`
    * `Odoo Academy: Deferred Revenues (Recognition) <https://www.odoo.com/r/EWO>`_
