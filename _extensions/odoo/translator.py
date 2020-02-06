@@ -2,13 +2,10 @@
 import os.path
 import posixpath
 import re
-import urllib
 
 from docutils import nodes
 from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
-
-from . import pycompat
 
 try:
     from urllib import url2pathname
@@ -63,6 +60,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.context = []
         self.section_level = 0
 
+        self.config = builder.config
         self.highlightlang = self.highlightlang_base = self.builder.config.highlight_language
         self.highlightopts = getattr(builder.config, 'highlight_options', {})
 
@@ -72,7 +70,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.param_separator = ','
 
     def encode(self, text):
-        return pycompat.to_text(text).translate({
+        return text.strip().translate({
             ord('&'): u'&amp;',
             ord('<'): u'&lt;',
             ord('"'): u'&quot;',
@@ -81,7 +79,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         })
 
     def starttag(self, node, tagname, **attributes):
-        tagname = pycompat.to_text(tagname).lower()
+        tagname = tagname.strip().lower()
 
         # extract generic attributes
         attrs = {name.lower(): value for name, value in attributes.items()}
@@ -116,7 +114,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     # only "space characters" SPACE, CHARACTER TABULATION, LINE FEED,
     # FORM FEED and CARRIAGE RETURN should be collapsed, not al White_Space
     def attval(self, value, whitespace=re.compile(u'[ \t\n\f\r]')):
-        return self.encode(whitespace.sub(u' ', pycompat.to_text(value)))
+        return self.encode(whitespace.sub(u' ', value.strip()))
 
     def astext(self):
         return u''.join(self.body)
