@@ -1,4 +1,4 @@
-:banner: banners/mobile.jpg
+:banner: banners/mobile.png
 
 ======
 Mobile

@@ -1,4 +1,4 @@
-.. :banner: banners/support.jpg
+.. :banner: banners/support.png
 
 
 ===================

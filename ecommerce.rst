@@ -1,4 +1,4 @@
-:banner: banners/ecommerce.jpg
+:banner: banners/ecommerce.png
 
 =========
 eCommerce
