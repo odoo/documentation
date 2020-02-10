@@ -29,6 +29,20 @@
     color: @gray-lighter;
   }
 
+  > .o_sub_nav #o_sub-menu #searchbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    > form {
+      display: flex;
+      flex-grow: 1;
+      > .form-control {
+        border-radius: 0;
+      }
+    }
+  }
+
   > .o_sub_nav #o_sub-menu .o_breadcrumb {
 
     @media screen and (min-width: @screen-sm-min) {
@@ -288,7 +302,7 @@ main.index {
     position: relative;
     overflow: hidden;
     margin-bottom: @card_margin-bottom;
-    min-height: @card_min-height;
+    padding-top: 56%;
     background-color: @doc_paper;
     will-change: transform;
     .deep-2;
@@ -319,12 +333,13 @@ main.index {
     figcaption {
       .opacity(1);
       display: block;
-      font-weight: @fw_regular;
+      font-weight: @fw_bold;
       font-family: @headings-font-family;
       color: @headings-color;
       margin: 0;
       background-color: white;
-      font-size: 1.2em;
+      font-size: 14px;
+      line-height: 1.2;
       width: 100%;
       padding: 8px 12px;
       .o-position-absolute(0);
@@ -369,30 +384,28 @@ main.index {
 }
 
 .card.top {
-  padding: 10% 0 8%;
   position: relative;
   overflow: hidden;
+
   margin: 0;
+  padding: 0 0 2%;
+
   .o-gradient();
   .animation(fadeIn 1s);
   .box-shadow(none);
   .transform-origin(50% 0px 0px);
 
-  @media screen and (min-width: @screen-sm-min) and (max-width: (@screen-md-min - 1)) {
-    padding-top: 12%;
+  @media screen and (min-width: @screen-sm-min) {
+    padding: 12% 0 5%;
   }
 
-  #wrap.index & {
-    padding: 0 0 4%;
-
-    @media screen and (min-width: @screen-sm-min) {
-      padding-top: 12%;
-    }
-
-    @media screen and (min-width: @screen-lg-min) {
-      padding-top: 8%;
-    }
+  @media screen and (min-width: @screen-md-min) {
+    padding: 10% 0 2%;
   }
+  @media screen and (min-width: @screen-lg-min) {
+    padding: 8% 0 4%;
+  }
+
 
   &.stacked{
     background:transparent;
