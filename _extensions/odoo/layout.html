@@ -201,16 +201,6 @@
             <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
           </div>
 
-          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
-            {% if pagename != master_doc %}
-              <li class="divider"></li>
-            {% endif%}
-
-            {% block switchers_desktop %}
-            {% include "switchers_list.html" %}
-            {% endblock %}
-          </ul>
-
           <ul class="nav navbar-nav navbar-right">
             {% if languages or versions %}
               <li class="divider"></li>
@@ -223,6 +213,16 @@
             {% if languages or versions %}
               <li class="divider"></li>
             {% endif %}
+          </ul>
+
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            {% if pagename != master_doc %}
+              <li class="divider"></li>
+            {% endif%}
+
+            {% block switchers_desktop %}
+            {% include "switchers_list.html" %}
+            {% endblock %}
           </ul>
         </div>
       </div>
@@ -247,10 +247,9 @@
     {% else %}
     {% set container = 'container' %}
     {% endif %}
-    <div class="{{ container}} {{ ' '.join(classes) }}">
-      <main class="container-fluid {{ ' '.join(classes) }}">
+      <main class="container {{ ' '.join(classes) }}">
         {% if pagename != master_doc %}
-        <div class="row">
+        <div class="o_content row">
           {% if 'has-toc' not in meta and not (pagename in toc) %}
           <aside>
             <div class="navbar-aside text-center">
@@ -263,7 +262,7 @@
             </div>
           </aside>
           {% endif %}
-          <article class="doc-body {% if 'has-toc' in meta %}doc-toc{% endif %} {% if pagename in toc%}index-category{% endif %}">
+          <article class="doc-body {% if 'has-toc' in meta %}doc-toc{% endif %}{% if pagename in toc%}index-category{% endif %}">
             {% endif %}
             {% block body %} {% endblock %}
           {% if pagename != master_doc %}</article>
@@ -271,7 +270,6 @@
         {% endif %}
         <div id="mask"></div>
       </main>
-    </div>
   </div>
 
   <div class="floating_action_container">
@@ -311,29 +309,33 @@
             <div class="col-xs-6 col-sm-4">
               <span class="menu_title">Services</span>
               <ul>
-                <li><a href="http://www.odoo.com/pricing">Editions</a></li>
-                <li><a href="http://www.odoo.com/pricing-online">Cloud Pricing</a></li>
-                <li><a href="http://www.odoo.com/page/upgrade">Upgrade</a></li>
+                <li><a href="https://www.odoo.sh">Odoo Cloud Platform</a></li>
+                <li class="divider"></li>
+                <li><a href="http://www.odoo.com/help">Support</a></li>
+                <li><a href="https://upgrade.odoo.com">Upgrade</a></li>
                 <li class="divider"></li>
                 <li><a href="http://www.odoo.com/partners">Find a partner</a></li>
                 <li><a href="http://www.odoo.com/page/become-a-partner">Become a partner</a></li>
                 <li class="divider"></li>
+                <li><a href="http://training.odoo.com/courses/odoo-functional">Training Center</a></li>
                 <li><a href="http://www.odoo.com/page/education-program">Education</a></li>
                 <li class="divider"></li>
                 <li><a href="http://www.odoo.com/page/security">Security</a></li>
               </ul>
             </div>
-            <div class="col-sm-4 mb64">
+            <div class="col-xs-12 col-sm-4 mb64">
               <span class="menu_title">About us</span>
               <ul>
                 <li><a href="http://www.odoo.com/page/about-us">Our company</a></li>
                 <li><a href="http://www.odoo.com/page/contactus">Contact</a></li>
                 <li class="divider" />
                 <li><a href="http://www.odoo.com/event">Events</a></li>
-                <li><a href="http://www.odoo.com/blog/">Blog</a></li>
+                <li><a href="http://www.odoo.com/blog">Blog</a></li>
                 <li><a href="http://www.odoo.com/blog/6">Customers</a></li>
                 <li class="divider" />
                 <li><a href="http://www.odoo.com/jobs">Jobs</a></li>
+                <li class="divider" />
+                <li><a href="http://www.odoo.com/page/legal">Legal</a> | <a href="http://www.odoo.com/privacy">Privacy</a></li>
               </ul>
             </div>
           </div>
@@ -362,3 +364,4 @@
     </div>
   </footer>
 {%- endblock -%}
+
