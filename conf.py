@@ -241,7 +241,7 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-latex_logo = '_static/banners/odoo_logo.png'
+latex_logo = '_static/icons/odoo_logo.png'
 
 # For "manual" documents, if this is true, then toplevel headings are parts,
 # not chapters.
