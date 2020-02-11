@@ -8,7 +8,7 @@
 # Olivier Lenoir <olivier.lenoir@free.fr>, 2017
 # Bertrand LATOUR <divoir@gmail.com>, 2017
 # Martin Trigaux, 2017
-# Fernanda Marques <fem@odoo.com>, 2019
+# Fernanda Marques <fem@odoo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +17,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2017-10-10 09:08+0200\n"
 "PO-Revision-Date: 2017-10-20 09:56+0000\n"
-"Last-Translator: Fernanda Marques <fem@odoo.com>, 2019\n"
+"Last-Translator: Fernanda Marques <fem@odoo.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -722,6 +722,10 @@ msgid ""
 "'Retailer' then you will encode \"Manufacturer,Retailer\" in the same column"
 " of your CSV file."
 msgstr ""
+"Les balises doivent être séparées par une virgule sans espacement. Par "
+"exemple, si vous souhaitez que votre client soit lié aux deux balises "
+"\"Fabricant\" et \"Détaillant\", vous devez encoder \"Fabricant, "
+"Détaillant\" dans la même colonne de votre fichier CSV."
 
 #: ../../general/base_import/import_faq.rst:174
 msgid ""
@@ -803,6 +807,12 @@ msgid ""
 "two imports. Odoo will take care of creating or modifying each record "
 "depending if it's new or not."
 msgstr ""
+"Si vous importez un fichier qui contient l'une des colonnes \"ID externe\" "
+"ou \"ID base de données\", les données qui ont déjà été importées seront "
+"modifiées au lieu d'être créées. Ceci est très utile car cela vous permet "
+"d'importer plusieurs fois le même fichier CSV tout en ayant effectué "
+"quelques modifications entre deux importations. Odoo se chargera de créer ou"
+" de modifier chaque enregistrement selon qu'il est nouveau ou non."
 
 #: ../../general/base_import/import_faq.rst:201
 msgid ""
@@ -824,6 +834,11 @@ msgid ""
 "in your CSV file, Odoo will set the EMPTY value in the field, instead of "
 "assigning the default value."
 msgstr ""
+"Si vous ne définissez pas tous les champs dans votre fichier CSV, Odoo "
+"attribuera la valeur par défaut pour chaque champ non défini. Mais si vous "
+"définissez des champs avec des valeurs vides dans votre fichier CSV, Odoo "
+"définira la valeur VIDE dans le champ, au lieu d'assigner la valeur par "
+"défaut."
 
 #: ../../general/base_import/import_faq.rst:213
 msgid "How to export/import different tables from an SQL application to Odoo?"
@@ -838,6 +853,11 @@ msgid ""
 " companies and persons, you will have to recreate the link between each "
 "person and the company they work for)."
 msgstr ""
+"Si vous devez importer des données de différentes tables, vous devrez "
+"recréer des relations entre les données appartenant à différentes tables. "
+"(par exemple, si vous importez des sociétés et des personnes, vous devrez "
+"recréer le lien entre chaque personne et la société pour laquelle elle "
+"travaille)."
 
 #: ../../general/base_import/import_faq.rst:217
 msgid ""
@@ -921,6 +941,11 @@ msgid ""
 "contacts and 3 companies. (the firsts two contacts are linked to the first "
 "company). You must first import the companies and then the persons."
 msgstr ""
+"Les deux fichiers créés sont prêts à être importés dans Odoo sans aucune "
+"modification. Après avoir importé ces deux fichiers CSV, vous aurez 4 "
+"contacts et 3 entreprises. (les deux premiers contacts sont liés à la "
+"première entreprise). Vous devez d'abord importer les entreprises et ensuite"
+" les personnes."
 
 #: ../../general/odoo_basics.rst:3
 msgid "Basics"
@@ -948,12 +973,19 @@ msgid ""
 "professional email address - the one he will use to log into Odoo instance -"
 " and a picture."
 msgstr ""
+"À partir du module Configuration, allez dans le sous-menu "
+":menuselection:`Utilisateurs --> Utilisateurs` et cliquez sur **CRÉER**. "
+"Ajoutez d'abord le nom de votre nouvel utilisateur, l'adresse email "
+"professionnelle qu'il utilisera pour se connecter à Odoo et une image."
 
 #: ../../general/odoo_basics/add_user.rst:19
 msgid ""
 "Under Access Rights, you can choose which applications your user can access "
 "and use. Different levels of rights are available depending on the app."
 msgstr ""
+"Dans la rubrique \"Droits d'accès\", vous pouvez choisir les applications "
+"que votre utilisateur peut accéder et utiliser. Différents niveaux de droits"
+" sont disponibles en fonction de l'application."
 
 #: ../../general/odoo_basics/add_user.rst:23
 msgid ""
@@ -961,6 +993,10 @@ msgid ""
 "invitation email will automatically be sent to the user. The user must click"
 " on it to accept the invitation to your instance and create a log-in."
 msgstr ""
+"Lorsque vous avez terminé de modifier la page et que vous avez cliqué sur "
+"**ENREGISTRER**, un courriel d'invitation sera automatiquement envoyé à "
+"l'utilisateur. Celui-ci doit cliquer dessus pour accepter l'invitation et se"
+" connecter à votre instance. "
 
 #: ../../general/odoo_basics/add_user.rst:32
 msgid ""
@@ -1036,6 +1072,8 @@ msgid ""
 "If you check the \"Websites to translate\" checkbox you will have the option"
 " to change the navigation language on your website."
 msgstr ""
+"Si vous cochez la case \"Sites Web à traduire\" vous aurez la possibilité de"
+" changer la langue de navigation sur votre site Web."
 
 #: ../../general/odoo_basics/choose_language.rst:27
 msgid "Change your language"
@@ -1046,6 +1084,8 @@ msgid ""
 "You can change the language to the installed language by going to the drop-"
 "down menu at the top right side of the screen, choose **Preferences**."
 msgstr ""
+"Pour modifier la langue installée, allez sur le menu déroulant situé dans le"
+" coin supérieur droit de l'écran et sélectionnez **Préférences**."
 
 #: ../../general/odoo_basics/choose_language.rst:36
 msgid ""
@@ -1080,6 +1120,13 @@ msgid ""
 " change the Language to any previously installed language and click "
 "**SAVE.**"
 msgstr ""
+"Pour changer la langue d'un autre utilisateur, choisissez "
+":menuselection:`Utilisateurs --> Utilisateurs` depuis l'application "
+"Paramètres. Là, vous avez la liste de tous les utilisateurs et vous pouvez "
+"choisir celui pour qui vous souhaitez changer la langue. Sélectionnez "
+"l'utilisateur et cliquez sur **Éditer** dans le coin supérieur gauche. Sous "
+"Préférences, vous pouvez changer la langue pour n'importe quelle autre "
+"langue précédemment installée et cliquer sur **Enregistrer.**"
 
 #: ../../general/odoo_basics/choose_language.rst:61
 msgid ":doc:`../../website/publish/translate`"
