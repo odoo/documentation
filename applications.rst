@@ -27,4 +27,3 @@ Applications
    fsm
    planning
    general
-   email_marketing
