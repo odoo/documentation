@@ -651,7 +651,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             self.body.append(title if title else util.nodes.clean_astext(env.titles[ref]))
             self.body.append(u'</h2>')
 
-            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in toc[0]['entries'])
+            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in list(toc)[0]['entries'])
             for subtitle, subref in entries:
                 baseuri = self.builder.get_target_uri(node['parent'])
 
