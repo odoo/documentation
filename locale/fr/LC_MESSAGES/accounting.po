@@ -36,6 +36,7 @@
 # Olivier ANDRE <frsw194@gmail.com>, 2019
 # Cécile Collart <cco@odoo.com>, 2019
 # Alexandra Jubert <aju@odoo.com>, 2020
+# Fernanda Marques <fem@odoo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -44,7 +45,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-03 11:34+0200\n"
 "PO-Revision-Date: 2018-10-19 08:14+0000\n"
-"Last-Translator: Alexandra Jubert <aju@odoo.com>, 2020\n"
+"Last-Translator: Fernanda Marques <fem@odoo.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -901,6 +902,10 @@ msgid ""
 " status \"pending\" and not the status \"posted\". In that case, Yodlee "
 "won't import it, you will have to wait till the status changes."
 msgstr ""
+"De plus, une transaction peut être visible sur votre compte en banque mais "
+"pas récupérée par Yodlee. En effet, cette transaction peut être en statut "
+"\"Attente\" et non en statut \"Publié\". Dans ce cas, Yodlee ne l'importera "
+"pas, vous devrez attendre le changement de statut."
 
 #: ../../accounting/bank/feeds/synchronize.rst:91
 msgid ""
@@ -908,6 +913,9 @@ msgid ""
 "transactions in real time. This is a service to facilitate the import of the"
 " bank statements to the database."
 msgstr ""
+"Il est important de rappeler que Yodlee n'est pas un service de récupération"
+" de transaction en temps réel mais un service qui facilite l'importation de "
+"relevés bancaire dans la base de données."
 
 #: ../../accounting/bank/feeds/synchronize.rst:95
 msgid "Is the Yodlee feature included in my contract?"
@@ -946,6 +954,11 @@ msgid ""
 " may need a bit more time to have a 100% working synchronization. "
 "Unfortunately, there is not much to do about it except for being patient."
 msgstr ""
+"Cela signifie que Yodlee n'a pas encore terminé le développement de la "
+"synchronisation pour cette banque. La synchronisation pourrait déjà "
+"fonctionner ou il pourrait falloir un peut plus de temps pour avoir une "
+"synchronisation qui fonctionne à 100%. Malheureusement, il n'y a pas grand "
+"chose à faire à ce sujet, si ce n'est d'être patient."
 
 #: ../../accounting/bank/feeds/synchronize.rst:110
 msgid "All my past transactions are not in Odoo, why?"
@@ -1097,6 +1110,12 @@ msgid ""
 "you configured Odoo that way), Odoo proposes you to use a batch deposit. "
 "Select this option if you plan to deposit the check to your bank."
 msgstr ""
+"Lorsque vous enregistrez les chèques reçus, faites-les sur le compte "
+"bancaire sur lequel vous prévoyez de les déposer. Une fois que vous "
+"sélectionnez le compte bancaire (ou le journal de chèques si vous avez "
+"configuré Odoo de cette façon), Odoo vous propose d'utiliser un dépôt par "
+"lot. Sélectionnez cette option si vous envisagez de déposer les chèques à "
+"votre banque."
 
 #: ../../accounting/bank/misc/batch.rst:78
 msgid "In the memo field, you can set the reference of the check."
@@ -1132,6 +1151,10 @@ msgid ""
 "deposited yet. That way you can verify that you do not forget or lost a "
 "check."
 msgstr ""
+"Choisissez la banque, puis sélectionnez les paiements (chèques) que vous "
+"souhaitez ajouter à ce dépôt. Par défaut, Odoo vous propose tous les chèques"
+" qui n'ont pas encore été déposés. Ainsi, vous pouvez vérifier que vous "
+"n'avez pas oublié ou perdu un chèque."
 
 #: ../../accounting/bank/misc/batch.rst:102
 msgid ""
@@ -1163,6 +1186,9 @@ msgid ""
 "contained in this deposit for the matching. (2 checks were in the batch "
 "deposit in the example below)"
 msgstr ""
+"Si vous sélectionnez un bordereau de dépôt, Odoo remplira automatiquement "
+"tous les chèques contenus dans ce dépôt pour la correspondance (2 chèques "
+"étaient dans le bordereau de dépôt de l'exemple ci-dessous)."
 
 #: ../../accounting/bank/misc/batch.rst:124
 #: ../../accounting/payables/pay/sepa.rst:113
@@ -1216,6 +1242,8 @@ msgid ""
 "In this case click on the line related to this check to remove it from the "
 "bank statement matching."
 msgstr ""
+"Dans ce cas, cliquez sur la ligne relative à ce chèque pour le supprimer de "
+"la correspondance du relevé bancaire."
 
 #: ../../accounting/bank/misc/interbank.rst:3
 msgid "How to do a bank wire transfer from one bank to another?"
@@ -1380,6 +1408,12 @@ msgid ""
 "Once you receive your bank statements click the **new statement** button of "
 "the corresponding bank to import them."
 msgstr ""
+"Cela est dû au fait que vous n'avez pas importé le relevé bancaire "
+"confirmant la réception et l'envoi de l'argent. Il est donc nécessaire "
+"d'importer votre relevé bancaire et de rapprocher le paiement avec la ligne "
+"correcte du relevé bancaire. Une fois que vous avez reçu vos relevés "
+"bancaires, cliquez sur le bouton **nouveau relevé** de la banque "
+"correspondante pour les importer."
 
 #: ../../accounting/bank/misc/interbank.rst:107
 msgid ""
@@ -1416,6 +1450,10 @@ msgid ""
 "both bank statements and payment transactions then the reconciliation will "
 "happen automatically."
 msgstr ""
+"Les mêmes étapes devront être répétées une fois que vous aurez reçu votre "
+"deuxième relevé bancaire. Notez que si vous indiquez le même montant et la "
+"même note dans le relevé bancaire et dans les opérations de paiement, le "
+"rapprochement se fera automatiquement."
 
 #: ../../accounting/bank/reconciliation.rst:3
 #: ../../accounting/others/reporting/main_reports.rst:153
@@ -1554,10 +1592,16 @@ msgid ""
 "lot of time. Luckily, with Odoo you can very easily match your invoices or "
 "any other payment document with your bank statements."
 msgstr ""
+"Faire correspondre vos relevés bancaires avec vos documents comptables peut "
+"être une tâche fastidieuse. Vous devez trouver les factures correspondantes,"
+" comparer les montants et les coordonnées des partenaires avec ceux du "
+"relevé bancaire. Ces étapes peuvent prendre beaucoup de temps. Heureusement,"
+" avec Odoo, vous pouvez très facilement faire correspondre vos factures ou "
+"tout autre document de paiement avec vos relevés bancaires."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:10
 msgid "Two options of the reconciliation process exist in Odoo."
-msgstr ""
+msgstr "Deux méthodes de rapprochement existent dans Odoo."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:12
 msgid "We can directly specify the payment on the invoice"
@@ -1573,6 +1617,8 @@ msgid ""
 "No special configuration is necessary to record invoices. All we need to do "
 "is to install the accounting app."
 msgstr ""
+"Aucune configuration particulière n'est nécessaire pour enregistrer les "
+"factures. Il suffit d'installer l'application de comptabilité."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:25
 msgid "Use cases"
@@ -1598,6 +1644,12 @@ msgid ""
 "invoice as paid immediately in order to indicate that we can start rendering"
 " services to our customer."
 msgstr ""
+"Nous commençons par la facture de 2 100 euros que nous avons émise pour "
+"Smith & Co. Comme le produit vendu est un service, nous demandons un "
+"paiement immédiat. Notre comptable ne traite les relevés bancaires qu'à la "
+"fin de la semaine, nous devons donc marquer cette facture comme payée "
+"immédiatement afin d'indiquer que nous pouvons commencer à fournir des "
+"services à notre client."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:39
 msgid ""
@@ -1613,12 +1665,18 @@ msgid ""
 "has paid the Invoice. We thus have to specify the amount and the payment "
 "method."
 msgstr ""
+"En cliquant sur **Enregistrer le paiement**, nous indiquons à Odoo que notre"
+" client a payé la facture. Nous devons donc préciser le montant et le mode "
+"de paiement."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:52
 msgid ""
 "Now we can always find the payment details in the Invoice by clicking on the"
 " :menuselection:`Info --> Open Payment`."
 msgstr ""
+"Désormais, nous pouvons retrouver à tout moment les détails du paiement dans"
+" la facture en cliquant sur le lien :menuselection:`Info --> Paiement "
+"ouvert`."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:58
 msgid ""
@@ -1643,6 +1701,9 @@ msgid ""
 "We receive our bank statement and find that not only the invoice issued to "
 "Smith & Co has been paid, but the one to Buzz of 92 euros as well."
 msgstr ""
+"Nous recevons notre relevé bancaire et constatons que non seulement la "
+"facture émise à Smith & Co a été payée, mais aussi celle de 92 euros "
+"adressée à Buzz."
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:73
 msgid ""
@@ -1780,11 +1841,11 @@ msgstr ""
 
 #: ../../accounting/bank/setup/create_bank_account.rst:0
 msgid "ABA/Routing"
-msgstr ""
+msgstr "Acheminement de l'ABA"
 
 #: ../../accounting/bank/setup/create_bank_account.rst:0
 msgid "American Bankers Association Routing Number"
-msgstr ""
+msgstr "Numéro d'acheminement de l'American Bankers Association"
 
 #: ../../accounting/bank/setup/create_bank_account.rst:0
 msgid "Account Holder Name"
@@ -2252,7 +2313,7 @@ msgstr "Création des relevés bancaires"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "Defines when a new bank statement"
-msgstr ""
+msgstr "Définissez quand un nouveau relevé bancaire"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "will be created when fetching new transactions"
@@ -2260,7 +2321,7 @@ msgstr "sera créé lors de l'extraction de nouvelles transactions"
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "from your bank account."
-msgstr ""
+msgstr "depuis votre compte bancaire."
 
 #: ../../accounting/bank/setup/manage_cash_register.rst:0
 msgid "For Incoming Payments"
@@ -2573,6 +2634,8 @@ msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings` and look "
 "for the *Colombian Electronic Invoice* section."
 msgstr ""
+"Allez à :menuselection:`Comptabilité --> Configuration --> Paramètres` et "
+"cherchez la section *Facture électronique colombienne*."
 
 #: ../../accounting/localizations/colombia.rst:49
 msgid ""
@@ -2643,6 +2706,8 @@ msgid ""
 "These fields can be found in :menuselection:`Partner --> Sales & Purchase "
 "Tab --> Fiscal Information`"
 msgstr ""
+"Ces champs se trouvent dans :menuselection:`Partenaire --> Onglet ventes et "
+"achat --> Information fiscale`"
 
 #: ../../accounting/localizations/colombia.rst:104
 msgid ""
@@ -2662,6 +2727,10 @@ msgid ""
 "consider that an extra field *Value Type* needs to be configured per tax. "
 "This option is located in the Advanced Options tab."
 msgstr ""
+"Si vos transactions de vente comprennent des produits avec taxes, il est "
+"important de considérer qu’un champ supplémentaire *Type de valeur* doit "
+"être configuré par taxe.Cette option se trouve dans l’onglet Options "
+"avancées."
 
 #: ../../accounting/localizations/colombia.rst:117
 msgid ""
@@ -2702,7 +2771,7 @@ msgstr ""
 #: ../../accounting/localizations/colombia.rst:153
 #: ../../accounting/localizations/mexico.rst:196
 msgid "Usage and testing"
-msgstr ""
+msgstr "Utilisation et test"
 
 #: ../../accounting/localizations/colombia.rst:156
 msgid "1. Invoice"
@@ -2734,6 +2803,8 @@ msgid ""
 "**Factura Electronica**: This is the regular type of document and its "
 "applicable for Invoices, Credit Notes and Debit Notes."
 msgstr ""
+"**Factura Electronica**: C'est le type de document standard et il est "
+"appliqué aux factures, aux notes de crédit et aux notes de débit."
 
 #: ../../accounting/localizations/colombia.rst:175
 msgid ""
@@ -2750,6 +2821,11 @@ msgid ""
 "necessary to generate the invoice manually, when this invoice is added to "
 "the ERP, this invoice type should be selected."
 msgstr ""
+"**Factura de contingencia**: C'est un type de document particulier qui est "
+"utilisé comme une sauvegarde manuelle dans le cas où l'entreprise ne peut "
+"pas utiliser l'ERP et qu'il est nécessaire de générer la facture "
+"manuellement. Lorsque cette facture est ajoutée à l'ERP, ce type de facture "
+"doit être sélectionné."
 
 #: ../../accounting/localizations/colombia.rst:184
 msgid "1.2 Invoice validation"
@@ -2760,6 +2836,8 @@ msgid ""
 "After the invoice is validated an XML file is created and sent automatically"
 " to Carvajal, this file is displayed in the chatter."
 msgstr ""
+"Une fois que facture est validée, un fichier XML est généré et envoyé "
+"automatiquement à Carvajal, ce fichier est affiché dans la conversation."
 
 #: ../../accounting/localizations/colombia.rst:192
 msgid ""
@@ -2891,7 +2969,7 @@ msgstr ""
 
 #: ../../accounting/localizations/colombia_ES.rst:28
 msgid "Flujo General"
-msgstr ""
+msgstr "Flujo General"
 
 #: ../../accounting/localizations/colombia_ES.rst:31
 msgid "Configuración"
@@ -3175,7 +3253,7 @@ msgstr ""
 
 #: ../../accounting/localizations/colombia_ES.rst:190
 msgid "Hay tres tipos de documentos"
-msgstr ""
+msgstr "Hay tres tipos de documentos"
 
 #: ../../accounting/localizations/colombia_ES.rst:193
 msgid "**Factura electrónica**. Este es el documento normal y aplica"
@@ -3329,7 +3407,7 @@ msgstr "France"
 
 #: ../../accounting/localizations/france.rst:6
 msgid "FEC"
-msgstr ""
+msgstr "FEC"
 
 #: ../../accounting/localizations/france.rst:8
 msgid ""
@@ -3337,6 +3415,9 @@ msgid ""
 "the FEC. For this, go in :menuselection:`Accounting --> Reporting --> France"
 " --> FEC`."
 msgstr ""
+"Si vous avez installé la comptabilité française, vous pourrez télécharger le"
+" FEC. Pour le faire, allez à :menuselection:`Comptabilité -->Déclaration -->"
+" France --> FEC`."
 
 #: ../../accounting/localizations/france.rst:12
 msgid ""
@@ -3358,7 +3439,7 @@ msgstr ""
 
 #: ../../accounting/localizations/france.rst:20
 msgid "Bilan comptable"
-msgstr ""
+msgstr "Bilan comptable"
 
 #: ../../accounting/localizations/france.rst:21
 msgid "Compte de résultats"
@@ -3784,7 +3865,7 @@ msgstr "Allemagne"
 
 #: ../../accounting/localizations/germany.rst:6
 msgid "German Chart of Accounts"
-msgstr ""
+msgstr "Plan comptable allemand"
 
 #: ../../accounting/localizations/germany.rst:8
 msgid ""
@@ -3805,10 +3886,12 @@ msgstr ""
 msgid ""
 "When you create a new SaaS database, the SKR03 is installed by default."
 msgstr ""
+"Lorsque vous créez une nouvelle base de données SaaS, le SKR03 est installé "
+"par défaut."
 
 #: ../../accounting/localizations/germany.rst:19
 msgid "German Accounting Reports"
-msgstr ""
+msgstr "Rapports comptables allemands"
 
 #: ../../accounting/localizations/germany.rst:21
 msgid ""
@@ -3828,7 +3911,7 @@ msgstr "Pertes et Profits"
 
 #: ../../accounting/localizations/germany.rst:25
 msgid "Tax Report (Umsatzsteuervoranmeldung)"
-msgstr ""
+msgstr "Déclaration d'impôt (Umsatzsteuervoranmeldung)"
 
 #: ../../accounting/localizations/germany.rst:26
 msgid "Partner VAT Intra"
@@ -3937,10 +4020,13 @@ msgid ""
 "selezionato scegliendo dalla lista precompilata fornita da Odoo. Chiedi al "
 "commercialista qual’è il corretto regime fiscale!"
 msgstr ""
+"Regime Fiscale. Il regime fiscale a cui è sottoposta l’Azienda deve essere "
+"selezionato scegliendo dalla lista precompilata fornita da Odoo. Chiedi al "
+"commercialista qual’è il corretto regime fiscale!"
 
 #: ../../accounting/localizations/italy_IT.rst:47
 msgid "Numero di Iscrizione nel registro delle Imprese."
-msgstr ""
+msgstr "Numero di Iscrizione nel registro delle Imprese."
 
 #: ../../accounting/localizations/italy_IT.rst:54
 msgid "1. Configurare le impostazioni per la Fatturazione Elettronica"
@@ -3976,6 +4062,9 @@ msgid ""
 "fornitori, nell’applicazione contatti, deve essere configurato con le "
 "necessarie informazioni legali."
 msgstr ""
+"Per un corretto utilizzo dell’applicazione, il profilo di clienti e "
+"fornitori, nell’applicazione contatti, deve essere configurato con le "
+"necessarie informazioni legali."
 
 #: ../../accounting/localizations/italy_IT.rst:76
 msgid ""
@@ -4121,6 +4210,8 @@ msgstr ""
 #: ../../accounting/localizations/mexico.rst:43
 msgid "For this, go in Apps and search for Mexico. Then click on *Install*."
 msgstr ""
+"Pour cela, allez dans Applications et recherchez le Mexique. Cliquez ensuite"
+" sur *Installer*."
 
 #: ../../accounting/localizations/mexico.rst:49
 msgid ""
@@ -4163,6 +4254,10 @@ msgid ""
 " address inside Mexico with all fields for the company address and set the "
 "vat to **TCM970625MB1**."
 msgstr ""
+"Si vous voulez utiliser la localisation mexicaine en mode test, vous pouvez "
+"mettre n'importe quelle adresse enregistrée au Mexique ainsi que tous les "
+"champs réservés à l'adresse de la société et régler la TVA sur "
+"**TCM970625MB1**."
 
 #: ../../accounting/localizations/mexico.rst:85
 msgid ""
@@ -4208,6 +4303,10 @@ msgid ""
 "called *l10n_mx_edi_cfdi_version* to 3.3 (Create it if the entry with this "
 "name does not exist)."
 msgstr ""
+"Allez consulter le paramètre technique suivant, sur "
+":menuselection:`Paramètres --> Technique --> Paramètres --> Paramètres du "
+"système` et configurez le paramètre *l10n_mx_edi_cfdi_version* sur 3.3 (Si "
+"l'entrée portant ce nom n'existe pas, créez-la)."
 
 #: ../../accounting/localizations/mexico.rst:113
 msgid ""
@@ -4328,6 +4427,8 @@ msgid ""
 "Once you validate your first invoice a correctly signed invoice should look "
 "like this:"
 msgstr ""
+"Voici à quoi doit ressembler une facture correctement signée une fois que "
+"vous avez validé votre première facture :"
 
 #: ../../accounting/localizations/mexico.rst:211
 msgid ""
@@ -4345,6 +4446,8 @@ msgid ""
 "Once you send the electronic invoice by email this is the way it should "
 "looks like."
 msgstr ""
+"Voici à quoi doit ressembler la facture électronique une fois que vous "
+"l'avez envoyée par email."
 
 #: ../../accounting/localizations/mexico.rst:225
 msgid "Cancelling invoices"
@@ -4505,11 +4608,11 @@ msgstr "La comptabilité pour Mexico est composée, dans Odoo, de 3 rapports:"
 
 #: ../../accounting/localizations/mexico.rst:315
 msgid "Chart of Account (Called and shown as COA)."
-msgstr ""
+msgstr "Plan comptable (appelé et indiqué comme COA)."
 
 #: ../../accounting/localizations/mexico.rst:316
 msgid "Electronic Trial Balance."
-msgstr ""
+msgstr "Balance générale électronique."
 
 #: ../../accounting/localizations/mexico.rst:317
 msgid "DIOT report."
@@ -4529,11 +4632,11 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:328
 msgid "Electronic Accounting (Requires Accounting App)"
-msgstr ""
+msgstr "Comptabilité électronique (application de comptabilité requise)"
 
 #: ../../accounting/localizations/mexico.rst:331
 msgid "Electronic Chart of account CoA"
-msgstr ""
+msgstr "Plan comptable électronique CoA"
 
 #: ../../accounting/localizations/mexico.rst:333
 msgid ""
@@ -4541,6 +4644,9 @@ msgid ""
 ":menuselection:`Accounting --> Reporting --> Mexico --> COA` and click on "
 "the button **Export for SAT (XML)**"
 msgstr ""
+"La comptabilité électronique n'a jamais été aussi simple, il suffit d'aller "
+"sur :menuselection:`Comptabilité --> Rapport --> Mexique --> COA` et cliquez"
+" sur le bouton **Exporter pour SAT (XML)**"
 
 #: ../../accounting/localizations/mexico.rst:340
 msgid "**How to add new accounts?**"
@@ -4582,7 +4688,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:367
 msgid "Electronic Trial Balance"
-msgstr ""
+msgstr "Balance générale électronique."
 
 #: ../../accounting/localizations/mexico.rst:369
 msgid ""
@@ -4705,7 +4811,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:442
 msgid "You can find the `official information here`_."
-msgstr ""
+msgstr "Vous pouvez trouver l'`information officielle ici`_."
 
 #: ../../accounting/localizations/mexico.rst:444
 msgid "**How Generate this report in odoo?**"
@@ -4725,7 +4831,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:457
 msgid "Click on \"Export (TXT)."
-msgstr ""
+msgstr "Cliquez sur \"Exporter (TXT)."
 
 #: ../../accounting/localizations/mexico.rst:462
 msgid ""
@@ -4792,7 +4898,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:501
 msgid "Contact Module (Free)"
-msgstr ""
+msgstr "Application Contacts (gratuite)"
 
 #: ../../accounting/localizations/mexico.rst:503
 msgid ""
@@ -4824,7 +4930,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:517
 msgid "Go to settings and enable the multi currency feature."
-msgstr ""
+msgstr "Allez sur paramètres et activez la fonctionnalité multidevise."
 
 #: ../../accounting/localizations/mexico.rst:523
 msgid ""
@@ -4849,7 +4955,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:531
 msgid "Look for the Action called \"Download XSD files to CFDI\""
-msgstr ""
+msgstr "Reherchez l'Action \"Télécharger le fichier XSD au format CFDI\"."
 
 #: ../../accounting/localizations/mexico.rst:532
 msgid "Click on button \"Create Contextual Action\""
@@ -4860,10 +4966,12 @@ msgid ""
 "Go to the company form :menuselection:`Settings --> Users&Companies --> "
 "Companies`"
 msgstr ""
+"Allez sur le formulaire de la société depuis :menuselection:`Paramètres --> "
+"Utilisateurs&Sociétés --> Sociétés`"
 
 #: ../../accounting/localizations/mexico.rst:534
 msgid "Open any company you have."
-msgstr ""
+msgstr "Ouvrez toutes les sociétés que vous avez."
 
 #: ../../accounting/localizations/mexico.rst:535
 #: ../../accounting/localizations/mexico.rst:558
@@ -4878,14 +4986,17 @@ msgid ""
 "code which is pretty common) and an explicit error will be shown instead a "
 "generic one with no explanation."
 msgstr ""
+"Vous pouvez désormais créer une facture avec n'importe quelle erreur (par "
+"exemple un produit sans code, ce qui est assez courant) et une erreur "
+"explicite sera affichée à la place d'une erreur générique sans explication."
 
 #: ../../accounting/localizations/mexico.rst:545
 msgid "If you see an error like this:"
-msgstr ""
+msgstr "Si vous voyez une erreur comme celle-ci :"
 
 #: ../../accounting/localizations/mexico.rst:547
 msgid "The cfdi generated is not valid"
-msgstr ""
+msgstr "Le CFDI généré n'est pas valide"
 
 #: ../../accounting/localizations/mexico.rst:549
 msgid ""
@@ -4893,6 +5004,9 @@ msgid ""
 "'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does "
 "not resolve to a(n) simple type definition., line 36"
 msgstr ""
+"attribute decl. 'TipoRelacion', attribut 'type': La valeur QName "
+"'{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' ne se "
+"résout pas à une définition de type simple., ligne 36"
 
 #: ../../accounting/localizations/mexico.rst:553
 msgid ""
@@ -4903,7 +5017,7 @@ msgstr ""
 
 #: ../../accounting/localizations/mexico.rst:557
 msgid "Go to the company in which the error occurs."
-msgstr ""
+msgstr "Allez à la société dans laquelle l'erreur s'est produite."
 
 #: ../../accounting/localizations/mexico.rst:564
 msgid "**Error message** (Only applicable on CFDI 3.3):"
@@ -5057,7 +5171,7 @@ msgstr "Pays-Bas"
 
 #: ../../accounting/localizations/nederlands.rst:5
 msgid "XAF Export"
-msgstr ""
+msgstr "Export XAF"
 
 #: ../../accounting/localizations/nederlands.rst:7
 msgid ""
@@ -5070,7 +5184,7 @@ msgstr ""
 
 #: ../../accounting/localizations/nederlands.rst:14
 msgid "Dutch Accounting Reports"
-msgstr ""
+msgstr "Rapports comptables néerlandais"
 
 #: ../../accounting/localizations/nederlands.rst:16
 msgid ""
@@ -5086,7 +5200,7 @@ msgstr "Rapport de taxes (Aangifte omzetbelasting)"
 
 #: ../../accounting/localizations/nederlands.rst:23
 msgid "Intrastat Report (ICP)"
-msgstr ""
+msgstr "Déclaration Intrastat (ICP)"
 
 #: ../../accounting/localizations/spain.rst:3
 msgid "Spain"
@@ -5094,13 +5208,15 @@ msgstr "Espagne"
 
 #: ../../accounting/localizations/spain.rst:6
 msgid "Spanish Chart of Accounts"
-msgstr ""
+msgstr "Plan comptable espagnol"
 
 #: ../../accounting/localizations/spain.rst:8
 msgid ""
 "In Odoo, there are several Spanish Chart of Accounts that are available by "
 "default:"
 msgstr ""
+"Par défaut , différents plans comptables espagnols sont disponibles dans "
+"Odoo :"
 
 #: ../../accounting/localizations/spain.rst:10
 msgid "PGCE PYMEs 2008"
@@ -5108,11 +5224,11 @@ msgstr "PGCE PYMEs 2008"
 
 #: ../../accounting/localizations/spain.rst:11
 msgid "PGCE Completo 2008"
-msgstr ""
+msgstr "PGCE Completo 2008"
 
 #: ../../accounting/localizations/spain.rst:12
 msgid "PGCE Entitades"
-msgstr ""
+msgstr "PGCE Entitades"
 
 #: ../../accounting/localizations/spain.rst:14
 msgid ""
@@ -5120,12 +5236,17 @@ msgid ""
 "Configuration` then choose the package you want in the **Fiscal "
 "Localization** section."
 msgstr ""
+"Choisissez lequel vous voulez utiliser sur :menuselection:`Comptabilité --> "
+"Configuration` puis, sélectionnez celui que vous voulez dans la section  "
+"**Localisation fiscale**."
 
 #: ../../accounting/localizations/spain.rst:20
 msgid ""
 "When you create a new SaaS database, the PGCE PYMEs 2008 is installed by "
 "default."
 msgstr ""
+"Lorsque vous créez une nouvelle base de données SaaS, le PGCE PYMEs 2008 est"
+" installé par défaut."
 
 #: ../../accounting/localizations/spain.rst:23
 msgid "Spanish Accounting Reports"
@@ -5141,11 +5262,11 @@ msgstr ""
 
 #: ../../accounting/localizations/spain.rst:28
 msgid "Tax Report (Modelo 111)"
-msgstr ""
+msgstr "Rapport de taxes (Modelo 111)"
 
 #: ../../accounting/localizations/spain.rst:29
 msgid "Tax Report (Modelo 115)"
-msgstr ""
+msgstr "Rapport de taxes (Modelo 115)"
 
 #: ../../accounting/localizations/spain.rst:30
 msgid "Tax Report (Modelo 303)"
@@ -5188,7 +5309,7 @@ msgstr ""
 
 #: ../../accounting/localizations/switzerland.rst:38
 msgid "Currency Rate Live Update"
-msgstr ""
+msgstr "Mise à jour du taux de change en direct"
 
 #: ../../accounting/localizations/switzerland.rst:40
 msgid ""
@@ -5231,6 +5352,11 @@ msgid ""
 "\"Switzerland - Accounting Reports\" --> open the module --> click on "
 "\"upgrade\"`."
 msgstr ""
+"Si vous avez démarré sur une version antérieure, vous devez d'abord mettre à"
+" jour le module \"Suisse - Rapports comptables\". Pour cela, allez à "
+":menuselection:`Apps --> supprimez le filtre \"Apps\" --> recherchez "
+"\"Suisse - Rapports comptables\" --> ouvrez le module --> et cliquez sur "
+"\"mettre à jour\"`."
 
 #: ../../accounting/localizations/switzerland.rst:68
 msgid ""
@@ -5251,6 +5377,7 @@ msgstr ""
 #: ../../accounting/localizations/switzerland.rst:77
 msgid "The creation of such taxes should be done in the following manner:"
 msgstr ""
+"La création de ce type de taxes devrait se faire de la manière suivante : "
 
 #: ../../accounting/localizations/switzerland.rst:79
 msgid ""
@@ -5270,12 +5397,16 @@ msgid ""
 "For 7.7% taxes: Switzerland VAT Form: grid 302 base, Switzerland VAT Form: "
 "grid 302 tax"
 msgstr ""
+"Pour des taxes de 7,7 % : Formulaire de TVA suisse : base de la grille 302, "
+"Formulaire de TVA suisse : taxe de la grille 302"
 
 #: ../../accounting/localizations/switzerland.rst:90
 msgid ""
 "For 3.7% taxes: Switzerland VAT Form: grid 342 base, Switzerland VAT Form: "
 "grid 342 tax"
 msgstr ""
+"Pour des taxes de 3,7 % : Formulaire de TVA suisse : base de la grille 342, "
+"Formulaire de TVA suisse : taxe de la grille 342"
 
 #: ../../accounting/localizations/switzerland.rst:93
 msgid ""
@@ -5285,7 +5416,7 @@ msgstr ""
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Tax Name**"
-msgstr ""
+msgstr "**Nom de la taxe**"
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Rate**"
@@ -5293,7 +5424,7 @@ msgstr "**Taux**"
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Label on Invoice**"
-msgstr ""
+msgstr "**Étiquette sur les factures**"
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Tax Group (effective from V10)**"
@@ -5301,15 +5432,15 @@ msgstr "**Groupe de taxes (à partir de V10)**"
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Tax Scope**"
-msgstr ""
+msgstr "**Portée de la taxe**"
 
 #: ../../accounting/localizations/switzerland.rst:97
 msgid "**Tag**"
-msgstr ""
+msgstr "**Balise**"
 
 #: ../../accounting/localizations/switzerland.rst:99
 msgid "TVA 7.7% sur achat B&S (TN)"
-msgstr ""
+msgstr "TVA 7,7 %  sur achat B&S (TN)"
 
 #: ../../accounting/localizations/switzerland.rst:99
 #: ../../accounting/localizations/switzerland.rst:101
@@ -5332,7 +5463,7 @@ msgstr "7.7% achat"
 #: ../../accounting/localizations/switzerland.rst:115
 #: ../../accounting/localizations/switzerland.rst:117
 msgid "TVA 7.7%"
-msgstr ""
+msgstr "TVA 7,7 %"
 
 #: ../../accounting/localizations/switzerland.rst:99
 #: ../../accounting/localizations/switzerland.rst:101
@@ -5350,11 +5481,11 @@ msgstr "Achats"
 #: ../../accounting/localizations/switzerland.rst:107
 #: ../../accounting/localizations/switzerland.rst:109
 msgid "Switzerland VAT Form: grid 400"
-msgstr ""
+msgstr "Formulaire TVA de la Suisse : grille 400"
 
 #: ../../accounting/localizations/switzerland.rst:101
 msgid "TVA 7.7% sur achat B&S (Incl. TN)"
-msgstr ""
+msgstr "TVA 7,7 %  sur achat B&S (Incl. TN)"
 
 #: ../../accounting/localizations/switzerland.rst:101
 msgid "7.7% achat Incl."
@@ -5373,7 +5504,7 @@ msgstr "7.7% invest."
 #: ../../accounting/localizations/switzerland.rst:111
 #: ../../accounting/localizations/switzerland.rst:113
 msgid "Switzerland VAT Form: grid 405"
-msgstr ""
+msgstr "Formulaire suisse pour la déclaration TVA : grille 405"
 
 #: ../../accounting/localizations/switzerland.rst:105
 msgid "TVA 7.7% sur invest. et autres ch. (Incl. TN)"
@@ -5381,7 +5512,7 @@ msgstr "TVA 7.7% sur invest. et autres ch. (Incl. TN)"
 
 #: ../../accounting/localizations/switzerland.rst:105
 msgid "7.7% invest. Incl."
-msgstr ""
+msgstr "7,7 % invest. Incl."
 
 #: ../../accounting/localizations/switzerland.rst:107
 msgid "TVA 3.7% sur achat B&S (TS)"
@@ -5420,11 +5551,11 @@ msgstr "3.7% achat Incl."
 
 #: ../../accounting/localizations/switzerland.rst:111
 msgid "TVA 3.7% sur invest. et autres ch. (TS)"
-msgstr ""
+msgstr "TVA 3,7 % sur invest. et autres ch. (TS)"
 
 #: ../../accounting/localizations/switzerland.rst:111
 msgid "3.7% invest"
-msgstr ""
+msgstr "3,7 % invest"
 
 #: ../../accounting/localizations/switzerland.rst:113
 msgid "TVA 3.7% sur invest. et autres ch. (Incl. TS)"
@@ -5432,11 +5563,11 @@ msgstr "TVA 3.7% sur invest. et autres ch. (Incl. TS)"
 
 #: ../../accounting/localizations/switzerland.rst:113
 msgid "3.7% invest Incl."
-msgstr ""
+msgstr "3,7 % invest Incl."
 
 #: ../../accounting/localizations/switzerland.rst:115
 msgid "TVA due a 7.7% (TN)"
-msgstr ""
+msgstr "TVA due à 7,7 % (TN)"
 
 #: ../../accounting/localizations/switzerland.rst:115
 #: ../../accounting/localizations/switzerland.rst:117
@@ -5452,6 +5583,8 @@ msgstr "Vente"
 msgid ""
 "Switzerland VAT Form: grid 302 base, Switzerland VAT Form: grid 302 tax"
 msgstr ""
+"Formulaire suisse pour la déclaration TVA : grille de base 302, Formulaire "
+"suisse pour la déclaration TVA : grille de d'impôt 302"
 
 #: ../../accounting/localizations/switzerland.rst:117
 msgid "TVA due à 7.7% (Incl. TN)"
@@ -5470,6 +5603,8 @@ msgstr "TVA due à 3.7% (TS)"
 msgid ""
 "Switzerland VAT Form: grid 342 base, Switzerland VAT Form: grid 342 tax"
 msgstr ""
+"Formulaire suisse pour la déclaration TVA : grille de base 342, Formulaire "
+"suisse pour la déclaration TVA : grille d'impôt 342"
 
 #: ../../accounting/localizations/switzerland.rst:121
 msgid "TVA due a 3.7% (Incl. TS)"
@@ -7876,18 +8011,24 @@ msgid ""
 "Go in :menuselection:`accounting --> configuration --> settings` and "
 "activate the fiscal years."
 msgstr ""
+"Allez à :menuselection:`comptabilité --> configuration --> paramètres` et "
+"activez les années fiscales."
 
 #: ../../accounting/others/configuration/fiscal_year.rst:22
 msgid ""
 "You can then configure your fiscal years in :menuselection:`accounting --> "
 "configuration --> fiscal years`."
 msgstr ""
+"Vous pouvez alors configurer vos exercices fiscaux dans "
+":menuselection:`comptabilité --> configuration --> exercice fiscal`."
 
 #: ../../accounting/others/configuration/fiscal_year.rst:29
 msgid ""
 "You only have to create fiscal years if they last more or less than 12 "
 "months."
 msgstr ""
+"Vous ne devez créer des exercices fiscaux que s'ils ont une durée de plus ou"
+" moins 12 mois."
 
 #: ../../accounting/others/configuration/fiscal_year.rst:34
 msgid ":doc:`../adviser/fiscalyear`"
@@ -9932,17 +10073,17 @@ msgstr ""
 
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:52
 msgid "Customer Invoices Journal"
-msgstr ""
+msgstr "Journal de facturation des clients"
 
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:56
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:72
 msgid "Receivables $115"
-msgstr ""
+msgstr "Créances 115 $"
 
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:58
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:82
 msgid "Temporary Tax Account $15"
-msgstr ""
+msgstr "Compte fiscal temporaire 15 $"
 
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:60
 #: ../../accounting/others/taxes/cash_basis_taxes.rst:86
@@ -10334,6 +10475,8 @@ msgid ""
 "Create a free account on `TaxCloud <https://taxcloud.com/#register>`__ "
 "website."
 msgstr ""
+"Créez un compte gratuit dans `TaxCloud <https://taxcloud.com/#register>`__ "
+"site Web."
 
 #: ../../accounting/others/taxes/taxcloud.rst:18
 msgid ""
