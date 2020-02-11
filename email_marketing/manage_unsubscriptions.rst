@@ -1,12 +1,12 @@
 ====================================
 Manage Unsubscriptions and Blacklist
 ====================================
-It is best practice and legally required to allow recipients to manage their state via the
-unsubscription page, as you do not want your audience to think that your company is using any
-tactics that are dishonest or spammy.
+It is best practice, and legally required, to allow recipients to unsubscribe from mailing lists
+as you do not want your audience to think that your company is using any tactics that are dishonest
+or spammy.
 
 Enable the Blacklist feature
-=============================
+============================
 Go to :menuselection:`Configuration --> Settings` and enable the option *Blacklist Option when
 unsubscribing*.
 
@@ -22,11 +22,12 @@ following page:
 
 .. image:: media/manage2.png
    :align: center
+   :class: img-thumbnail
    :alt: Blacklist in Odoo Email Marketing
 
 
 In addition to having the option of unsubscribing from specific mailing lists, the user can also
-blacklist himself, meaning that he will not receive *any* more emails.
+blacklist himself, meaning that he will not receive *any* more emails from you.
 
 
 .. note::
@@ -39,3 +40,9 @@ When opening the record, as a *Log note*, a description-history is kept.
 .. image:: media/manage3.png
    :align: center
    :alt: Blacklist in Odoo Email Marketing
+
+
+.. seealso::
+   :doc:`../email_marketing/send_emails`
+
+   :doc:`../email_marketing/mailing_lists`

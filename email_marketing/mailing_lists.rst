@@ -22,7 +22,7 @@ Once your mailing list is created, you can manually add contacts clicking on *Cr
 Linking a mailing list to my website
 -------------------------------------
 Create a mailing list called Newsletter, as you use this strategy to advertise and communicate new
-ideas and events to subscribers interested in listening.
+ideas to subscribers interested in listening.
 Go to your *Website*, add a *Newsletter* block and choose the respective mailing list.
 
 
@@ -48,3 +48,6 @@ Open a contact to see or add different mailing lists to which the contact is or 
 .. image:: media/mailing4.png
    :align: center
    :alt: Mailing lists in Odoo Email Marketing
+
+.. seealso::
+   :doc:`../email_marketing/send_emails`

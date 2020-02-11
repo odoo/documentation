@@ -1,12 +1,12 @@
-===========================================
+==========================================
 Send Emails Marketing and Manage Campaigns
-===========================================
+==========================================
 Emails allow you to effectively, and at a low cost, reach a large number of consumers while being
 able to customize your message in a way that resonates with them. It is measurable, and a
 call-to-action oriented channel.
 
 Choose the right target and create the message
-===============================================
+==============================================
 Go to :menuselection:`Mailings --> Create`.
 Choosing *Contacts*, for example, as *Recipients*, will allow you to add specifications to match
 just certain contacts, filtering your target.
@@ -18,13 +18,13 @@ just certain contacts, filtering your target.
 
 
 .. note::
-   Trial databases have the benefit of 50 emails to be sent per day; when on Odoo SH Cloud
+   With a trial databases, you have a limit of 50 emails per day; on Odoo SH Cloud
    Platform the limit is 200. There is a possibility to increase these numbers by contacting Odoo
    Support. To contact Support, `click here <https://www.odoo.com/help>`_.
 
 
-Under *Mail Body*, choose a layout and make the modifications needed dragging, dropping and
-double-clicking on content. Note that it is possible to start from scratch selecting the *blanc*
+Under *Mail Body*, choose a layout and make the modifications needed by dragging, dropping and
+double-clicking on content. Note that it is possible to start from scratch selecting the *blank*
 template option.
 
 
@@ -33,8 +33,8 @@ template option.
    :alt: Send mass mailing in Odoo Email Marketing
 
 
-Under *Settings*, you can designate someone else as the responsible sender if not you and change the
-email address used as the sender (*Send From*).
+Under *Settings*, you can assign someone else as the responsible sender if you do not want it to be
+you. To do so, change the email address used as the sender (*Send From*).
 With the *Reply To* radio button, you can also choose to gather answers either on the respective
 recipients’ records or on a specific email address. Note that this option is not available if you
 target mailing contacts, a mailing list or contacts as recipients.
@@ -46,7 +46,7 @@ target mailing contacts, a mailing list or contacts as recipients.
 
 
 Test, send or schedule a mailing
-=================================
+================================
 
 .. image:: media/sendemails4.png
    :align: center
@@ -67,12 +67,12 @@ kanban view.
 .. note::
    The daily limit is applied for *all emails* sent, in other words, throughout all applications.
    Therefore, if at the end of the day you have remaining ones to be sent, note that they *will not*
-   be sent automatically the next day. You will need to force that triggering opening the email and
+   be sent automatically the next day. You will need to force that by opening the email and
    clicking on *Retry*.
 
 
 Manage campaigns
-=================
+================
 Go to :menuselection:`Configuration --> Settings` and enable *Mailing Campaigns*.
 The campaign option is effective as it allows you to organize your marketing efforts and have a
 centralized view of its metrics.
