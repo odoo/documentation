@@ -105,6 +105,4 @@ right and validate all related payments :
    Hit CTRL-Enter to reconcile all the balanced items in the sheet.
 
 .. seealso::
-   * :doc:`../feeds/ofx`
    * :doc:`../feeds/bank_synchronization`
-   * :doc:`../feeds/manual`

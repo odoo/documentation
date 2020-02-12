@@ -59,6 +59,5 @@ the relevant data instantly.
 Finally, click on **Reconcile** to finish the process.
 
 .. seealso::
-   * :doc:`../feeds/manual`
-   * :doc:`../feeds/ofx`
+   * :doc:`../feeds/bank_synchronization`
    * :doc:`use_cases`
