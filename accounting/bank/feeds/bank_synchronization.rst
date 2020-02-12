@@ -121,8 +121,11 @@ database, please `submit a support ticket <https://www.odoo.com/help>`_.
 
 How can I update my bank credentials?
 -------------------------------------
-You can update your credentials on
+You can update your credentials in
 :doc:`Developer mode <../../../general/developer_mode/activate>`.
 
 Then go to :menuselection:`Accounting --> Configuration --> Online Synchronization`, and open the
 Institution you want to edit, and click on *Update Credentials*.
+
+.. seealso::
+   * :doc:`bank_statements`
