@@ -62,5 +62,5 @@ speed up a lot the reconciliation process.
 .. seealso::
    * :doc:`qif`
    * :doc:`coda`
-   * :doc:`synchronize`
+   * :doc:`bank_synchronization`
    * :doc:`manual`

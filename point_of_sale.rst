@@ -1,4 +1,4 @@
-:banner: banners/pos.jpg
+:banner: banners/pos.png
 
 =============
 Point of Sale

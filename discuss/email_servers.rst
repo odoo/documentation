@@ -2,22 +2,38 @@
 How to use my mail server to send and receive emails in Odoo
 ============================================================
 
-This document is mainly dedicated to Odoo on-premise users who don't
+If you are a user of Odoo Online or Odoo.sh...
+==============================================
+
+You have nothing to do! **Odoo sets up its own mail servers for your database.**
+Outgoing and incoming emails work out-of-the-box!
+
+Unless you plan to send large batches of mass mailing that could require the 
+use of an external mail server, simply enjoy your new Odoo database.
+
+
+Scope of this documentation
+===========================
+
+This document is **mainly dedicated to Odoo on-premise users** who don't
 benefit from an out-of-the-box solution to send and receive emails in Odoo,
 unlike `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh <https://www.odoo.sh>`__.
 
-If no one in your company is used to manage email servers, we strongly recommend that
-you opt for those Odoo hosting solutions. Their email system 
-works instantly and is monitored by professionals. 
-Nevertheless you can still use your own email servers if you want
-to manage your email server's reputation yourself.
 
-You will find here below some useful 
+.. warning::
+
+    If no one in your company is used to manage email servers, we strongly recommend that
+    you opt for those Odoo hosting solutions. Their email system
+    works instantly and is monitored by professionals.
+    Nevertheless you can still use your own email servers if you want
+    to manage your email server's reputation yourself.
+
+You will find here below some useful
 information on how to integrate your own email solution with Odoo.
 
-.. note:: Office 365 email servers don't allow easiliy to send external emails
-    from hosts like Odoo. 
-    Refer to the `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ 
+.. note:: Office 365 email servers don't allow easily to send external emails
+    from hosts like Odoo.
+    Refer to the `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__
     to make it work.
 
 How to manage outbound messages

@@ -1,4 +1,4 @@
-:banner: banners/db_premise.jpg
+:banner: banners/db_premise.png
 
 .. _db_premise:
 

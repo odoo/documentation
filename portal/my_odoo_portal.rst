@@ -1,5 +1,5 @@
 
-:banner: banners/my_odoo_portal.jpg
+:banner: banners/my_odoo_portal.png
 
 ==============
 My Odoo Portal

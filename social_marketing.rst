@@ -1,4 +1,4 @@
-:banner: banners/social_marketing.jpg
+:banner: banners/social_marketing.png
 
 ================
 Social Marketing

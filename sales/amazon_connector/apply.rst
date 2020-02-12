@@ -45,7 +45,7 @@ Odoo.
 Answer the Additional Form
 ==========================
 
-.. tip::
+.. note::
    If you did not receive any additional form after your :ref:`initial application for Amazon MWS
    keys <amazon/developer-form>`, you may disregard this section.
 
@@ -54,8 +54,12 @@ This section lists all questions asked by Amazon in additional forms. The answer
 provide it yourself at the place indicated by square brackets.
 
 .. warning::
-   If you are *not* hosted on Odoo.com (*online*) or on Odoo.sh, you should adapt the answers
-   related to hosting according to your own infrastructure and data protection policy.
+   If you are *not* hosted on Odoo, you should adapt the answers related to hosting according to
+   your own infrastructure and data protection policy.
+
+   If you *are* hosted on Odoo, take note that Amazon is the final decision maker concerning your
+   application. While Odoo can help you provide additional details to your application, it is not
+   guaranteed that Amazon will find them adequate.
 
 - **Describe all functionalities in your application where Personally Identifiable Information (e.g.
   customer name, street address, billing address) is required.**

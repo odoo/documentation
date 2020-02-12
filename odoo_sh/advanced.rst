@@ -1,4 +1,4 @@
-:banner: banners/odoo-sh.jpg
+:banner: banners/odoo_sh.png
 
 =================
 Advanced

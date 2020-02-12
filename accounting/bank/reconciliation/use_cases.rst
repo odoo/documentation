@@ -106,5 +106,5 @@ right and validate all related payments :
 
 .. seealso::
    * :doc:`../feeds/ofx`
-   * :doc:`../feeds/synchronize`
+   * :doc:`../feeds/bank_synchronization`
    * :doc:`../feeds/manual`

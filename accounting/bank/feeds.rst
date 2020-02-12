@@ -5,7 +5,7 @@ Bank Feeds
 .. toctree::
    :titlesonly:
 
-   feeds/synchronize
+   feeds/bank_synchronization
    feeds/ofx
    feeds/qif
    feeds/coda

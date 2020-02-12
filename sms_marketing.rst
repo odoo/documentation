@@ -1,4 +1,4 @@
-:banner: banners/sms.jpg
+:banner: banners/sms.png
 
 =============
 SMS Marketing
