@@ -2,10 +2,13 @@
 import os.path
 import posixpath
 import re
+import urllib
 
 from docutils import nodes
-from sphinx import addnodes, util, builders
+from sphinx import addnodes, util
 from sphinx.locale import admonitionlabels
+
+from . import pycompat
 
 try:
     from urllib import url2pathname
@@ -42,11 +45,6 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     ]
 
     def __init__(self, builder, document):
-        # order of parameter swapped between Sphinx 1.x and 2.x, check if
-        # we're running 1.x and swap back
-        if not isinstance(builder, builders.Builder):
-            builder, document = document, builder
-
         super(BootstrapTranslator, self).__init__(document)
         self.builder = builder
         self.body = []
@@ -60,7 +58,6 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.context = []
         self.section_level = 0
 
-        self.config = builder.config
         self.highlightlang = self.highlightlang_base = self.builder.config.highlight_language
         self.highlightopts = getattr(builder.config, 'highlight_options', {})
 
@@ -70,7 +67,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.param_separator = ','
 
     def encode(self, text):
-        return text.strip().translate({
+        return pycompat.to_text(text).translate({
             ord('&'): u'&amp;',
             ord('<'): u'&lt;',
             ord('"'): u'&quot;',
@@ -79,7 +76,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         })
 
     def starttag(self, node, tagname, **attributes):
-        tagname = tagname.strip().lower()
+        tagname = pycompat.to_text(tagname).lower()
 
         # extract generic attributes
         attrs = {name.lower(): value for name, value in attributes.items()}
@@ -114,7 +111,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     # only "space characters" SPACE, CHARACTER TABULATION, LINE FEED,
     # FORM FEED and CARRIAGE RETURN should be collapsed, not al White_Space
     def attval(self, value, whitespace=re.compile(u'[ \t\n\f\r]')):
-        return self.encode(whitespace.sub(u' ', value.strip()))
+        return self.encode(whitespace.sub(u' ', pycompat.to_text(value)))
 
     def astext(self):
         return u''.join(self.body)
@@ -650,7 +647,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             self.body.append(title if title else util.nodes.clean_astext(env.titles[ref]))
             self.body.append(u'</h2>')
 
-            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in list(toc)[0]['entries'])
+            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in toc[0]['entries'])
             for subtitle, subref in entries:
                 baseuri = self.builder.get_target_uri(node['parent'])
 
