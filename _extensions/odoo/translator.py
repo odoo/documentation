@@ -433,7 +433,12 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             tagname = 'th'
         else:
             tagname = 'td'
-        self.body.append(self.starttag(node, tagname))
+        attrs = {}
+        if 'morerows' in node:
+            attrs['rowspan'] = node['morerows']+1
+        if 'morecols' in node:
+            attrs['colspan'] = node['morecols']+1
+        self.body.append(self.starttag(node, tagname, **attrs))
         self.context.append(tagname)
     def depart_entry(self, node):
         self.body.append(u'</{}>'.format(self.context.pop()))
