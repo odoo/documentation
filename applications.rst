@@ -25,6 +25,7 @@ Applications
    social_marketing
    sms_marketing
    marketing_automation
+   survey
    fsm
    planning
    email_marketing
