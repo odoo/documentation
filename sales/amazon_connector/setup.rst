@@ -1,6 +1,4 @@
-==================================
-Configure Amazon Connector in Odoo
-==================================
+THIS IS A TEST, DO NOT MERGE
 
 Register your Amazon account in Odoo
 ====================================
