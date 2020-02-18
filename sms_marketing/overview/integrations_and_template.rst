@@ -71,5 +71,5 @@ go to :menuselection:`Technical --> Phone/SMS section --> SMS Templates`.
 
 .. tip::
    For more information about SMS integrations in Odoo and a list of frequently asked questions,
-   go to :doc:`pricing_and_faq`.
+   go to :doc:`../pricing/pricing_and_faq`.
 

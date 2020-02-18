@@ -96,4 +96,4 @@ adopt different layouts to do an analysis of the performance of your SMS mailing
 .. note::
    **Buy Credits!**
    In order to take advantage of the app and its features, make sure you have purchased credits.
-   For more information on that access: :doc:`pricing_and_faq`
+   For more information on that access: :doc:`../pricing/pricing_and_faq`
