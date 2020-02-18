@@ -1,5 +1,5 @@
 ============================================
-Create a schedule and make encoding easier
+Create a Schedule and Make Encoding Easier
 ============================================
 Organize regular schedules or forecast projects in a long term basis. Create shifts to manage your
 tasks, assign employees, and stay organized at a high level.
