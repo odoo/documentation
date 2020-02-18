@@ -95,5 +95,5 @@ Manage campaigns
 
 
 .. seealso::
-   - :doc:`../discuss/email_servers`
+   - :doc:`../../discuss/email_servers`
 
