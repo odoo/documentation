@@ -63,5 +63,5 @@ being on the *Field Service* app, clicking on *Plan Intervention*.
    :align: center
 
 .. seealso::
-   * `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
-   * :doc:`../manufacturing/repair/repair`
+   - `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
+   - :doc:`../../manufacturing/repair/repair`
