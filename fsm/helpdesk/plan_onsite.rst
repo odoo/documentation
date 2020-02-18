@@ -1,5 +1,5 @@
 ================================================
-Plan onsite interventions from Helpdesk Tickets
+Plan Onsite Interventions from Helpdesk Tickets
 ================================================
 The integration with the Helpdesk application lets your helpdesk team manage interventions requests
 directly. It speeds up processes as you can plan field services tasks from tickets.

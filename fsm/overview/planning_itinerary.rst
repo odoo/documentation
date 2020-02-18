@@ -1,12 +1,12 @@
-======================
-Planning an itinerary
-======================
+=====================
+Planning an Itinerary
+=====================
 
 Having an itinerary being shown based on the chronological order of the activities and on the best
 route to take, makes employees’ life easier and the workload more efficient.
 
 Have an itinerary displayed directly in Odoo
-=============================================
+============================================
 Go to *Settings* and under *Map view* click on *Get token*.
 
 .. image:: media/plit1.png

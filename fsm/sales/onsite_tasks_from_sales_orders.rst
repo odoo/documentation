@@ -1,12 +1,12 @@
-=====================================================
-Create onsite interventions tasks from Sales Orders
-=====================================================
+===================================================
+Create Onsite Interventions Tasks from Sales Orders
+===================================================
 By allowing your sales team to open onsite interventions tasks will create a seamless experience
 for your customers. It also allows them to first receive a quotation with the materials that will
 be used plus the service price to be approved before the work even starts.
 
 Enable the feature
-===================
+==================
 Go to :menuselection:`Sales --> Products --> Create` or edit an existing one.
 Select: under :menuselection:`General Information --> Product Type: Service`;
 under :menuselection:`Sales --> Service Invoicing Policy: Timesheet on task --> Service Tracking:

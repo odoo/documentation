@@ -1,12 +1,12 @@
-=========================================
-Invoicing time and material to customers
-=========================================
+========================================
+Invoicing Time and Material to Customers
+========================================
 Track the exact time spent on a task and give customers the ability to sign their worksheet
 report onsite. Invoice customers as soon as the work is complete, leaving you, and the customer,
 with the confidence that they will be charged for the exact right hours and material used.
 
 Get the exact time spent on a task
-===================================
+==================================
 Click on *Start* to launch the timer. You can *Pause* at any moment and *Resume* when you would like
 to continue.
 
@@ -21,7 +21,7 @@ Click on *Stop* once the work is done to confirm the total time spent and add a 
    :alt: Timesheet Timer in Odoo Field Service
 
 Sign and send reports & validate stock-picking
-===============================================
+==============================================
 Now, fill your *Worksheet* and add the used products clicking on *Products*.
 
 .. image:: media/im3.png
@@ -57,4 +57,4 @@ Convenient feature as it allows accountants to easily access all finished tasks 
    :alt: Invoice Task in Odoo Field Service
 
 .. seealso::
-   * :doc:`../project/advanced/feedback`
+   * :doc:`../../project/advanced/feedback`
