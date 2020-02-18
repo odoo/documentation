@@ -76,6 +76,6 @@ for the last 15 days.
    workflow, and, it will start the workflow from the beginning (parent action).
 
 .. seealso::
-   - :doc:`automate_actions`
-   - :doc:`segment`
-   - :doc:`test`
+   - :doc:`../overview/automate_actions`
+   - :doc:`../overview/segment`
+   - :doc:`../overview/test`
