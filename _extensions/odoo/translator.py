@@ -7,11 +7,7 @@ from docutils import nodes
 from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
 
-try:
-    from urllib import url2pathname
-except ImportError:
-    # P3
-    from urllib.request import url2pathname
+from urllib.request import url2pathname
 
 
 def _parents(node):
