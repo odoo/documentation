@@ -8,17 +8,17 @@ Build the documentation
 Requirements
 ------------
 
-- :ref:`Git <contributing/install-git>`
+- `Git <https://www.odoo.com/documentation/user/contributing/documentation/introduction_guide.html#install-git>`_
 
-- | :ref:`Python 3 <contributing/python>`
+- | `Python 3 <https://www.odoo.com/documentation/user/contributing/documentation/introduction_guide.html#python>`_
   | If you don't know which subversion to choose, pick the last one.
-  | Python dependencies are listed in the file :file:`requirements.txt` located in the root
+  | Python dependencies are listed in the file ``requirements.txt`` located in the root
     directory.
 
   - Sphinx 2.4.0 or above.
   - Werkzeug 0.14.1
 
-- :ref:`Make <contributing/make>`
+- `Make <https://www.odoo.com/documentation/user/contributing/documentation/introduction_guide.html#make>`_
 
 Instructions
 ------------
@@ -31,15 +31,17 @@ In a terminal, navigate to the root directory and execute the following command:
 
 This compiles the documentation to HTML.
 
-Open :file:`_build/html/index.html` in your web browser to display the render.
+Open ``documentation-user/_build/html/index.html`` in your web browser to display the render.
 
-See :ref:`contributing/prepare-version` for more detailed instructions.
+See `this guide
+<https://www.odoo.com/documentation/user/contributing/documentation/introduction_guide.html#prepare-your-version>`_
+for more detailed instructions.
 
 Contribute to the documentation
 ===============================
 
-For contributions to the content of the documentation, please refer to
-:doc:`contributing/documentation/introduction_guide`.
+For contributions to the content of the documentation, please refer to the `Introduction Guide
+<https://www.odoo.com/documentation/user/contributing/documentation/introduction_guide.html>`_.
 
 To **report a content issue**, **request new content** or **ask a question**, use the `repository's
 issue tracker <https://github.com/odoo/documentation-user/issues>`_ as usual.
