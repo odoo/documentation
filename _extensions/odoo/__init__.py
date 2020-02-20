@@ -28,9 +28,9 @@ def setup(app):
     app.connect('html-page-context', update_meta)
 
 def update_meta(app, pagename, templatename, context, doctree):
-    meta = context.get('meta')
-    if meta is None:
-        meta = context['meta'] = {}
+    if not context.get('meta'):  # context['meta'] can be None
+        context['meta'] = {}
+    meta = context.setdefault('meta', {})  # we want {} by default
     meta.setdefault('banner', app.config.odoo_cover_default)
 
 def navbarify(node, navbar=None):

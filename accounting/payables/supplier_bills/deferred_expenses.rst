@@ -164,6 +164,8 @@ model button fills out the form according to that model.
    :align: center
    :alt: Deferred Expense model button in Odoo Accounting
 
+.. _deferred-expenses-automation:
+
 Automate the Deferred Expenses
 ==============================
 
@@ -190,4 +192,4 @@ You have three choices for the **Automate Deferred Expense** field:
    products`_).
 
 .. seealso::
-   * :doc:`../../others/configuration/account_type`
+   * :doc:`../../overview/getting_started/chart_of_accounts`
