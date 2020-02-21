@@ -53,7 +53,7 @@ different from the number of *Participants*.
    | You can also have filters applied to activities individually, under *Domain*. A useful feature
      to specify an individual filter that will only be performed if the records satisfied both
      filters, the activity and its domain one.
-   | Example: for an activity sending an SMS, you could make sure people a phone number is set to
+   | Example: for an activity sending an SMS, you could make sure a phone number is set to
      avoid triggering a SMS that would never be sent and crash.
 
    .. image:: media/metrics4.png
