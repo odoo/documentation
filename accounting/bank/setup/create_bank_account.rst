@@ -42,12 +42,6 @@ support with this bank account.
     the company on your user preferences in order to add, edit or delete bank 
     accounts from another company.
 
-.. demo:fields:: base.action_res_partner_bank_account_form
-
-.. demo:action:: base.action_res_partner_bank_account_form
-
-   View *Bank Account* in our Online Demonstration
-
 .. todo:: add inherited field tooltip
 
     **Display on reports :** Display this bank account on the documents that
