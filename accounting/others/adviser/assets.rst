@@ -79,14 +79,6 @@ before confirming the asset.
    depreciation journal entries, not those related to the supplier
    bill.
 
-Explanation of the fields:
-
-.. demo:fields:: account_asset.action_account_asset_asset_form
-
-.. demo:action:: account_asset.action_account_asset_asset_form
-
-   Try creating an *Asset* in our online demonstration
-
 Create assets automatically from a supplier bill
 ================================================
 

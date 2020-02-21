@@ -17,10 +17,6 @@ Configuration
 2. In the tab Journal Entries, the Default Debit and Credit Account can be
    configured as well as the currency of the journal
 
-
-.. demo:fields:: account.action_account_journal_form
-
-
 Usage
 =====
 

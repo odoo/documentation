@@ -78,9 +78,3 @@ menu :menuselection:`Adviser --> Chart of Accounts`, the click on the
 
 .. image:: ./media/type01.png
    :align: center
-
-.. demo:fields:: account.action_account_form
-
-.. demo:action:: account.action_account_form
-
-   View *Create Account* in our Online Demonstration

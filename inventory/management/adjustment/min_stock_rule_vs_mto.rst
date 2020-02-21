@@ -40,8 +40,6 @@ maximum stock values for a given product.
 .. image:: media/min_stock_rule_vs_mto01.png
    :align: center
 
-.. demo:fields:: stock.action_orderpoint_form
-
 Then, click on your product to access the related product form and, on
 the **Inventory submenu**, do not forget to select a supplier.
 
