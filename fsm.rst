@@ -1,17 +1,13 @@
 :banner: banners/fsm.png
 
-==============
+=============
 Field Service
-==============
+=============
 
 .. toctree::
    :titlesonly:
 
-   fsm/planning_itinerary
-   fsm/keep_track
-   fsm/invoicing_time
-   fsm/create_quotations
-   fsm/onsite_tasks_from_sales_orders
-   fsm/manage_employees_schedule
-   fsm/customize_worksheets
-   fsm/plan_onsite
+   fsm/overview
+   fsm/worksheets
+   fsm/sales
+   fsm/helpdesk
