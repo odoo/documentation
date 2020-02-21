@@ -1,5 +1,5 @@
 ============================
-Create quotations from tasks
+Create Quotations from Tasks
 ============================
 Allowing quotations to be created from tasks delivers a more efficient service as it allows space
 for preventive actions, while making the flow easy for employees.

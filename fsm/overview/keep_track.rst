@@ -1,11 +1,11 @@
-========================
-Keeping track of stock
-========================
+======================
+Keeping Track of Stock
+======================
 The integration with the Inventory application makes possible to track the material used and
 automatically keep your stock up to date.
 
 Set up your Field Service project
-==================================
+=================================
 Go to :menuselection:`Field Service --> Configuration --> Projects` and make sure the option
 *Products on Tasks* is enabled.
 
