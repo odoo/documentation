@@ -27,5 +27,8 @@ Applications
    marketing_automation
    fsm
    planning
-   general
    email_marketing
+
+   general
+
+.. Leave general on the last line !
