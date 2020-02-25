@@ -31,4 +31,4 @@ You can then configure your fiscal years in
 
 .. seealso:: 
 
-    * :doc:`../adviser/fiscalyear`
+    * :doc:`close_fiscal_year`

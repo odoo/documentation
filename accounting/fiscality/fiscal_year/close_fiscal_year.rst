@@ -70,7 +70,7 @@ set under the accounting configuration. This way, the accountant can be
 confident that nobody is changing the previous year transactions
 while auditing the books.
 
-.. image:: media/fiscalyear01.png  
+.. image:: media/close_fiscal_year01.png
    :align: center
 
 Closing the fiscal year
@@ -90,4 +90,4 @@ whether or not the current year earnings in the **Balance Sheet** is
 correctly reporting a 0 balance.
 
 .. seealso::
-  * :doc:`../configuration/fiscal_year`
+  * :doc:`fiscal_year`
