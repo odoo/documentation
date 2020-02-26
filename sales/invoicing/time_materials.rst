@@ -67,7 +67,7 @@ To track & invoice expenses, you will need the expenses app. Go to
 :menuselection:`Apps --> Expenses` to install it.
 
 You should also activate the analytic accounts feature to link expenses
-to the sales order, to do so, go to :menuselection:`Invoicing -->
+to the sales order, to do so, go to :menuselection:`Accounting -->
 Configuration --> Settings` and activate *Analytic Accounting*.
 
 Add expenses to your sales order
