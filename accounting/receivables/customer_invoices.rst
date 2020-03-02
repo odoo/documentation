@@ -13,3 +13,4 @@ Customer Invoices
    customer_invoices/deferred_revenues
    customer_invoices/credit_notes
    customer_invoices/epc_qr_code
+   customer_invoices/snailmail
