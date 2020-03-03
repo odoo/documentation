@@ -48,7 +48,7 @@ parallel in existing installations.
 
 To switch to the new synchronization mechanism:
 
-#. Enable the Developper Mode by going to :menuselection:`Settings --> Activate the developer mode`
+#. Enable the :doc:`Developer mode <../../general/developer_mode/activate>`.
 #. Go to :menuselection:`Settings --> Technical --> Scheduled Actions`
 #. Archive the old synchronization actions (both are named *Ebay: update product status*)
 #. Activate the new synchronization actions (*Ebay: get new orders* which runs every 15min by default and *Ebay: synchronise stock (for 'get new orders' synchronisation)* which runs once a day per default)

@@ -25,14 +25,16 @@ Seller Central and notify the customer.
 
 .. note::
    To force the synchronization of an order whose status has not changed since the last
-   synchronization, activate the **Developer mode**, navigate to your Amazon account and modify the
-   date under :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a date anterior to the
-   last status change of the order that you wish to synchronize and save.
+   synchronization, activate the :doc:`Developer mode <../../general/developer_mode/activate>`,
+   navigate to your Amazon account and modify the date under
+   :menuselection:`Orders Follow-up --> Last Order Sync`. Pick a date anterior to the last status
+   change of the order that you wish to synchronize and save.
 
 .. tip::
-   To synchronize immediately the orders of your Amazon account switch to **Developer mode**, head
-   to your Amazon account and click the button **SYNC ORDERS**. The same can be done with order
-   cancellations and pickings by clicking the buttons **SYNC CANCELLATIONS** and **SYNC PICKINGS**.
+   To synchronize immediately the orders of your Amazon account switch to
+   :doc:`Developer mode <../../general/developer_mode/activate>`, head to your Amazon account and click on
+   **SYNC ORDERS**. The same can be done with order cancellations and pickings by clicking
+   on **SYNC CANCELLATIONS** and **SYNC PICKINGS**.
 
 Manage deliveries in FBM
 ========================

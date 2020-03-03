@@ -12,3 +12,4 @@ General
    general/base_import
    general/auth
    general/in_app_purchase
+   general/developer_mode
