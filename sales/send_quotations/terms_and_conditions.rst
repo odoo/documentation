@@ -14,8 +14,11 @@ quotation, sales order and invoice.
 Set up your default terms and conditions
 ========================================
 
-Go to :menuselection:`Accounting --> Configuration --> Settings` and activate
+Go to :menuselection:`Settings --> Invoicing` and activate
 *Default Terms & Conditions*.
+
+.. image:: media/terms_and_conditions00.png 
+      :align: center
 
 .. image:: media/terms_and_conditions01.png 
       :align: center 
