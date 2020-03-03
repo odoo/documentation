@@ -150,7 +150,8 @@ Check your outgoing email servers
 
 There is a default mail server provided with Odoo.sh.
 To use it, there must be no enabled outgoing mail server configured in your database in
-:menuselection:`Settings --> Technical --> Outgoing Mail Servers` (Developer mode must be activated).
+:menuselection:`Settings --> Technical --> Outgoing Mail Servers`
+(:doc:`Developer mode <../../general/developer_mode/activate>` must be activated).
 
 After the import of your database,
 all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.

@@ -45,8 +45,9 @@ If you would like to send a message in a batch here, you could go to
 
 Set up SMS Templates
 ====================
-To set up *SMS Templates*, go to the *Settings* app and activate the *developer mode*. Now,
-go to :menuselection:`Technical --> Phone/SMS section --> SMS Templates`.
+To set up *SMS Templates*, activate
+the :doc:`Developer mode <../../general/developer_mode/activate>`. Now, go to
+:menuselection:`Technical --> Phone/SMS section --> SMS Templates`.
 
 .. image:: ./media/sms_marketing17.png
    :align: center

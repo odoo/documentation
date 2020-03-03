@@ -44,11 +44,8 @@ production orders, deliveries and supplier purchases.
 Configure and run the scheduler (for advanced users)
 ----------------------------------------------------
 
-To use this feature, you have to enable the debug mode. To do so, go to
-:menuselection:`Settings --> Activate the developer mode`.
-
-.. image:: media/schedulers_02.png
-    :align: center
+To use this feature, you have to enable the
+:doc:`Developer mode <../../../general/developer_mode/activate>` mode.
 
 Then, go to :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`
 and modify the *Run MRP Scheduler Configuration*. There, you can set
