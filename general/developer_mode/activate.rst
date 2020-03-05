@@ -31,9 +31,6 @@ Through a browser extension
    :align: center
    :alt: View of odoo’s debug icon in a chrome’s toolbar
 
-.. tip::
-   Developers: type ``?debug=assets`` and activate the mode with assets.
-
 Through the URL
 ---------------
 
@@ -42,6 +39,9 @@ In the URL add ``?debug=1`` or ``?debug=true`` after *web*.
 .. image:: media/url.png
    :align: center
    :alt: Overview of an url with the debug mode command added in Odoo
+
+.. tip::
+   Developers: type ``?debug=assets`` and activate the mode with assets.
 
 Locate the mode tools
 ---------------------
