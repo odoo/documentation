@@ -431,7 +431,7 @@ To do so, follow these steps:
 Connection
 ~~~~~~~~~~
 
-In order to connect to your builds using ssh use the following command in a terminal:
+To connect to your builds using ssh use the following command in a terminal:
 
 .. code-block:: bash
 
