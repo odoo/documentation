@@ -410,7 +410,7 @@ SSH
 ---
 Setup
 ~~~~~
-In order to use SSH you will need to setup your profile SSH public key (if it is not already done).
+In order to use SSH, you have to set up your profile SSH public key (if it is not already done).
 In order to do this follow these steps :
 
 #. `Generate a new SSH key
