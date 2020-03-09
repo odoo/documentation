@@ -411,7 +411,7 @@ SSH
 Setup
 ~~~~~
 In order to use SSH, you have to set up your profile SSH public key (if it is not already done).
-In order to do this follow these steps :
+To do so, follow these steps:
 
 #. `Generate a new SSH key
    <https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>`_
