@@ -1,154 +1,144 @@
-==================
-How to use routes?
-==================
+==========
+Use Routes
+==========
 
-Overview
-========
+A route is a collection of :doc:`push and pull rules <pull_push_rules>`. In Odoo, you can manage
+advanced push/pull routes configurations, like:
 
-A route is a collection of procurement rules and push rules. Odoo can
-manage advanced push/pull routes configuration, for example:
+-  Manage product manufacturing chains; 
+-  Manage default locations per product; 
+-  Define routes within your warehouse according to the business needs, such as quality control, after-sales services or supplier returns; 
+-  Help rental management, by generating automated returning moves for rented products. 
 
--   Manage product manufacturing chains
-
--   Manage default locations per product
-
--   Define routes within your warehouse according to business needs, such
-    as quality control, after sales services or supplier returns
-
--   Help rental management, by generating automated return moves for
-    rented products
+.. note::
+      - You can find documentation about those subjects :doc:`../../inventory`
 
 Configuration
 =============
 
-Procurement rules are part of the routes. Go to the **Inventory**
-application, :menuselection:`Configuration --> Settings` and tick 
-**Advance routing of products using rules**.
+To configure routes, go to :menuselection:`Inventory --> Configuration --> Settings` and enable 
+the *Multi-Step Routes* feature.
 
-.. image:: media/use_routes01.png
-    :align: center
+.. note::
+   Enabling the *Multi-Step Routes* automatically enables the *Storage Location* feature too.
 
-Pre-configured routes
+.. image:: media/use_routes_01.png
+   :align: center
+   :alt: Enabling multi-step routes to work with routes
+
+Pre-Configured Routes
 =====================
 
-Odoo has some pre-configured routes for your warehouses.
+Of course, Odoo offers some pre-configured routes for your warehouses. To
+see them, open the *Warehouses* menu, under *Configuration*.
 
-In the Inventory application, go to 
-:menuselection:`Configuration --> Warehouses`.
+In the *Warehouse Configuration* tab, some routes are automatically
+created based on your choices for *Incoming Shipments* and *Outgoing
+Shipments*.
 
-In the **Warehouse Configuration** tab, **Incoming Shipments** and **Outgoing
-Shippings** options set some routes according to your choices.
-
-.. image:: media/use_routes02.png
-    :align: center
+.. image:: media/use_routes_02.png
+   :align: center
+   :alt: automatically generated routes for incoming and outgoing shipments
 
 Custom Routes
 =============
 
-In the **Inventory** application, go to 
-:menuselection:`Configuration --> Routes`.
-
-.. image:: media/use_routes03.png
-    :align: center
-
-First, you have to select the places where this route can be selected.
-You can combine several choices.
+In the *Inventory* application, open :menuselection:`Configuration --> Routes`. Then,
+you have to select the places where this route can be selected. You can
+combine several choices if needed.
 
 Routes applied on warehouses
 ----------------------------
 
-If you tick **Warehouses**, you have to choose on which warehouse it will
-be applied. The route will be set for all transfer in that warehouse
-that would meet the conditions of the procurement and push rules.
+If you tick *Warehouses*, you have to choose on which warehouse it
+will be applied. The route will be set for all transfers in that
+warehouse that would meet the conditions of the pull and push rules.
 
-.. image:: media/use_routes04.png
-    :align: center
+.. image:: media/use_routes_03.png
+   :align: center
+   :alt: Applicable routes on warehouse
 
-Routes applied on products 
----------------------------
+Routes applied to products
+--------------------------
 
-If you tick **Products**, you have to manually set on which product it
-will be applied.
+If you choose *Products*, you have to manually set on which product it
+is applied.
 
-.. image:: media/use_routes05.png
-    :align: center
+.. image:: media/use_routes_04.png
+   :align: center
+   :alt: Applicable routes on products
 
-Open the product on which you want to apply the routes 
-(:menuselection:`Inventory --> Control --> Products`). 
-In the Inventory Tab, select the route(s):
+To do so, open the product on which you want to apply the routes. Open
+the *Inventory tab* and select the route you’ve created.
 
-.. image:: media/use_routes06.png
-    :align: center
+.. image:: media/use_routes_05.png
+   :align: center
+   :alt: Choosing products the route is applicable on
 
 Routes applied on Product Category
 ----------------------------------
 
-If you tick **Product Categories**, you have to manually set on which
-categories it will be applied.
+Then, you can also choose to apply routes to *product categories*.
+Just like you did for products, you have to manually set on which
+categories it must be applied.
 
-.. image:: media/use_routes07.png
-    :align: center
+.. image:: media/use_routes_06.png
+   :align: center
+   :alt: Applicable routes on product categories
 
-Open the product on which you want to apply the routes
-(:menuselection:`Configuration --> Product Categories`). 
-Select the route(s) under the **Logistics** section :
+To do so, open the product category you want to apply the route to.
+Then, select the route under the *Logistic* section.
 
-.. image:: media/use_routes08.png
-    :align: center
+.. image:: media/use_routes_07.png
+   :align: center
+   :alt: Routes registration in the product category logistics field
 
-Routes applied on Sales Order lines
+Routes applied on Sales Order Lines
 -----------------------------------
 
-If you tick **Sales order lines**, you have to manually set the route
-every time you make a sale order.
+You can also apply routes on sales order lines. For that, tick *Sales
+Order Lines* on your route form.
 
-.. image:: media/use_routes09.png
-    :align: center
+.. image:: media/use_routes_08.png
+   :align: center
+   :alt: Applicable routes on sales order lines
 
-In order to make it work, you also have to activate the use of the
-routes on the sales order.
+Next, open a sale order. You can now add the *Route* in the view. Once
+done, you can choose the routes for each of your sales orders’ lines.
 
-In the Sales application, go to 
-:menuselection:`Configuration --> Settings` and tick
-**Choose specific routes on sales order lines (advanced)**.
+.. image:: media/use_routes_09.png
+   :align: center
+   :alt: Enabling the routes on sales order lines
 
-.. image:: media/use_routes10.png
-    :align: center
+.. image:: media/use_routes_10.png
+   :align: center
+   :alt: Sales orders showing the routes between the description and quantity
 
-You can now choose the routes for each lines of your sales orders:
+Pull and Push Rules
+-------------------
 
-.. image:: media/use_routes11.png
-    :align: center
+For detailed explanations about *Pull and Push Rules*, please refer to the following 
+documentation: :doc:`pull_push_rules`.
 
-Procurement and push rules
-==========================
+Pull Configuration
+------------------
 
-Please refer to the documents:
+When making a procurement request, you can force the route you want to
+use. On the product form, click on *Replenish*. Then, choose the route you
+want to use.
 
--  :doc:`procurement_rule`
+.. image:: media/use_routes_11.png
+   :align: center
+   :alt: Product replenishment
 
--  :doc:`push_rule`
+.. image:: media/use_routes_12.png
+   :align: center
+   :alt: Replenishment with preferred routes and chosen quantity
 
-Procurement configuration
-=========================
+Replenish on Order (MTO) Route
+------------------------------
 
-When doing a procurement request, you can force the route you want to
-use. On the product (:menuselection:`Inventory Control --> Products`), 
-click on **Procurement Request**. Choose the route you want to use next to
-**Preferred Routes**:
-
-.. image:: media/use_routes12.png
-    :align: center
-
-Make-to-Order Route
-===================
-
-If you work with no stock, or with minimum stock rules, it is better to
-use the **Make To Order** route. Combine it with the route **Buy** or
-**Manufacture** and it will trigger automatically the purchase order or
-the Manufacturing Order when your products are out-of-stock.
-
-.. seealso::
-    * :doc:`push_rule`
-    * :doc:`inter_warehouse`
-    * :doc:`cross_dock`
+If you do not work with stock, it is better to use the *Replenish on Order
+(MTO)* route. Combined with the *Buy* or *Manufacturing* routes, it
+automatically triggers the purchase order or manufacturing order
+when your products are out-of-stock.
