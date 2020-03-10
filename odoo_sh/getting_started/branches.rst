@@ -409,13 +409,39 @@ Uploads the changes you just added in the *master* branch on your remote reposit
 
 SSH
 ---
-Connect to your builds using ssh. 
+Setup
+~~~~~
+In order to use SSH, you have to set up your profile SSH public key (if it is not already done).
+To do so, follow these steps:
+
+#. `Generate a new SSH key
+   <https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key>`_
+#. `Copy the SSH key to your clipboard
+   <https://help.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account>`_
+   (only apply the step 1)
+#. Paste the copied content to your profile SSH keys and press "Add"
+
+   .. image:: ./media/SSH-key-pasting.png
+      :align: center
+
+#. The key should appear below
+
+   .. image:: ./media/SSH-key-appearing.png
+      :align: center
+
+Connection
+~~~~~~~~~~
+
+To connect to your builds using ssh use the following command in a terminal:
 
 .. code-block:: bash
 
   $ ssh <build_id>@<domain>
 
-You can configure your ssh keys in your profile settings in the top-right menu when clicking on your username.
+You will find a shortcut for this command into the SSH tab in the upper right corner.
+
+.. image:: ./media/SSH-panel.png
+   :align: center
 
 Provided you have the :ref:`correct access rights <odoosh-gettingstarted-settings-collaborators>` on the project,
 you'll be granted ssh access to the build.
