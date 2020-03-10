@@ -265,11 +265,7 @@ and on your production you would not like your module to be installed automatica
 
 Your module may not appear directly in your apps to install either, you need to update your apps list first:
 
-* activate the developer mode from the Settings,
-
-  .. image:: ./media/firstmodule-test-developermode.png
-    :align: center
-
+* activate the :doc:`Developer mode <../../general/developer_mode/activate>`
 * in the apps menu, click the *Update Apps List* button,
 * in the dialog that appears, click the *Update* button.
 

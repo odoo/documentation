@@ -159,22 +159,18 @@ alias in your mail server.
   email server (e.g. *catchall@mydomain.ext* to *catchall@mycompany.odoo.com*).
 
 .. tip:: All the aliases are customizable in Odoo. 
- Object aliases can be edited from their  respective configuration view. 
- To edit catchall and bounce aliases, you first need to activate the 
- developer mode from the Settings Dashboard.
+   Object aliases can be edited from their  respective configuration view.
+   To edit catchall and bounce aliases, you first need to activate the
+   :doc:`Developer mode <../../general/developer_mode/activate>`.
 
- .. image:: media/developer_mode.png
-    :align: center
-
- Then refresh your screen and go to 
- :menuselection:`Settings --> Technical --> Parameters --> System Parameters` 
+ Then go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
  to customize the aliases (*mail.catchall.alias* & * mail.bounce.alias*).
 
  .. image:: media/system_parameters.png
     :align: center
 
 .. note:: By default inbound messages are fetched every 5 minutes in Odoo on-premise. 
-   You can change this value in developer mode.
+   You can change this value in :doc:`Developer mode <../../general/developer_mode/activate>`.
    Go to :menuselection:`Settings --> Technical --> Automation --> 
    Scheduled Actions` and look for *Mail: Fetchmail Service*.
    

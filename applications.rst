@@ -24,6 +24,11 @@ Applications
    mobile/firebase
    social_marketing
    sms_marketing
+   marketing_automation
    fsm
    planning
+   email_marketing
+
    general
+
+.. Leave general on the last line !

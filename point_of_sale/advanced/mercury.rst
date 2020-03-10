@@ -24,15 +24,10 @@ To install Mercury go to :menuselection:`Apps` and search for the
 Configuration
 =============
 
-To configure mercury, you need to activate the developer mode. To do so
-go to :menuselection:`Apps --> Settings` and select *Activate the
-developer mode*.
+To configure mercury, you need to activate the
+:doc:`Developer mode <../../general/developer_mode/activate>`.
 
-.. image:: media/mercury02.png
-    :align: center
-
-While in developer mode, go to :menuselection:`Point of Sale -->
-Configuration --> Mercury Configurations`.
+Now, go to :menuselection:`Point of Sale --> Configuration --> Mercury Configurations`.
 
 Create a new configuration for credit cards and enter your Mercury
 credentials.

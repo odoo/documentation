@@ -203,7 +203,7 @@ Assets Models
 You can create **Assets Models** to create your Asset entries faster. It is particularly useful if
 you recurrently buy the same kind of assets.
 
-To create a model, go to :menuselection:`Accounting → Configuration --> Assets Models`, click on
+To create a model, go to :menuselection:`Accounting --> Configuration --> Assets Models`, click on
 *Create*, and fill out the form the same way you would do to create a new entry.
 
 .. tip::

@@ -54,10 +54,6 @@ in the quality control location move to the stock.
 .. image:: media/push_rule03.png
     :align: center
 
-.. demo:action:: stock.action_routes_form
-    
-    Try to create a push rule in our demo instance. 
-
 .. note::
     Some warehouse configuration creates routes with push rules
     already defined.
