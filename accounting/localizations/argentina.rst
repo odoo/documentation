@@ -90,7 +90,8 @@ if you don’t have one already.
 
 - Generate Certificate (AFIP). 
   Access the AFIO portal and follow the instructions described in the next document 
-  in order to get a certificate. `Get AFIP Certificate <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
+  in order to get a certificate. `Get AFIP Certificate
+  <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
 - Upload Certificate and Private Key  (Odoo).
   Once the certificate has been generated, it needs to be uploaded in Odoo, using the 
   pencil next in the field “Certificado” and selecting the corresponding file. 
