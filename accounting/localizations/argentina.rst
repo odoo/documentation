@@ -82,7 +82,7 @@ The electronic invoice and other afip services work with WebServices (WS) provid
 In order to enable communication with the AFIP, the first step is to request a Digital Certificate
 if you don’t have one already.   
 
-- Generate certificate Sign Request (Odoo).
+#. Generate certificate Sign Request (Odoo).
   When this option is selected a file with extension .csr  (certificate signing request)
   is generated to be used the AFIP portal to request the certificate. 
 
