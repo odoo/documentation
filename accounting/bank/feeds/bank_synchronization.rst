@@ -22,7 +22,7 @@ To connect to the banks, Odoo uses multiple web-services:
 
 - **Plaid**: Mainly for the U.S
 - **Yodlee**: Worldwide
-- **Ponto**: For a growing number of European Banks
+- **Ponto**: For a growing number of European Banks. (:doc:`Click here for more information <ponto>`)
 
 Configuration
 =============
