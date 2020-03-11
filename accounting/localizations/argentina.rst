@@ -240,8 +240,8 @@ Web Services
   to access the benefit of the Electronic Tax Bonds granted by the Ministry of Economy. For more 
   detail you can refer to the next link: `Fiscal Bond
   <https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_.
-- ``wsfexv1: Electronic Exportation Invoice.`` Used to generate invoices  for international customers and transactions 
-  that involve exportation process, the document type related is type “E”.
+- ``wsfexv1: Electronic Exportation Invoice.`` Used to generate invoices for international customers
+  and transactions that involve exportation process, the document type related is type “E”.
 
 .. image:: media/argentina_edi_04.png
    :align: center
