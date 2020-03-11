@@ -62,7 +62,7 @@ Configure Master data
 Electronic Invoice Credentials
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Enviromet
+Environment
 ^^^^^^^^^
 
 The AFIP infrastructure is replicated in two separate environments, Testing and Production. 
