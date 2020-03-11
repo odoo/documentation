@@ -96,8 +96,7 @@ if you don’t have one already.
   Once the certificate has been generated, it needs to be uploaded in Odoo, using the 
   pencil next in the field “Certificado” and selecting the corresponding file. 
 
-.. image:: media/argentina_edi_03.png
-   :align: center
+  .. image:: media/argentina_edi_03.png
 
 .. tip::
    In case you need to configure the Homologation Certificate, please refer to the AFIP official 
