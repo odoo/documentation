@@ -70,7 +70,7 @@ Testing is provided so that the Companies can test their developments until they
 into the Production environment. As these two environments are completely isolated from each other, 
 the digital certificates of one instance are not valid in the other one. 
 
-Access to Accounting -> Settings -> Argentinian  Localization to select the environment:  
+Go to :menuselection:`Accounting --> Settings --> Argentinian Localization` to select the environment:
 
 .. image:: media/argentina_edi_01.png
    :align: center
