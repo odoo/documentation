@@ -86,8 +86,7 @@ if you don’t have one already.
   When this option is selected a file with extension .csr  (certificate signing request)
   is generated to be used the AFIP portal to request the certificate. 
 
-.. image:: media/argentina_edi_02.png
-   :align: center
+  .. image:: media/argentina_edi_02.png
 
 - Generate Certificate (AFIP). 
   Access the AFIO portal and follow  the instructions described in the next document 
