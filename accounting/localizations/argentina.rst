@@ -238,7 +238,8 @@ Web Services
   is used to generated invoices for document types A, B, C, M  with no detail per item. 
 - ``wsbfev1: Electronic Fiscal Bond.``  For those who invoice capital goods and wish 
   to access the benefit of the Electronic Tax Bonds granted by the Ministry of Economy. For more 
-  detail you can refer to the next link: `Fiscal Bond <https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_.
+  detail you can refer to the next link: `Fiscal Bond
+  <https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_.
 - ``wsfexv1: Electronic Exportation Invoice.`` Used to generate invoices  for international customers and transactions 
   that involve exportation process, the document type related is type “E”.
 
