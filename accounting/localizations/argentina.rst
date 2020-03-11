@@ -88,7 +88,7 @@ if you don’t have one already.
 
   .. image:: media/argentina_edi_02.png
 
-- Generate Certificate (AFIP). 
+#. Generate Certificate (AFIP). 
   Access the AFIO portal and follow the instructions described in the next document 
   in order to get a certificate. `Get AFIP Certificate
   <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
