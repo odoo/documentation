@@ -400,7 +400,7 @@ Proveedor del Exterior” or “IVA Liberado – Ley Nº 19.640”, Odoo automat
    :align: center
 
 .. note::
-   The Exportation Documents required the Incoterm in  “Other Info” -> Accounting section:
+   The Exportation Documents required the Incoterm in :menuselection:`Other Info --> Accounting`:
    
 .. image:: media/argentina_edi_13.png
    :align: center
