@@ -323,7 +323,7 @@ in draft until the related data is corrected.
 Once the invoice is posted, the information related to the AFIP validation and status is displayed 
 in the AFIP Tab, including: 
 
-- AFIP Autoritation:  CAE number.
+- AFIP Autorisation:  CAE number.
 - Expiration date: Deadline to deliver the invoice to the customers. Normally 10 days after the 
   CAE is generated. 
 - Result:
