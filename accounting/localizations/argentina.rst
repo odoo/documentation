@@ -465,8 +465,8 @@ next points into consideration:
 
 In the workflow we can have two scenarios:
 
-1. The FCE is rejected so the Credit Note should have the field “FCE, is Cancellation?” as True. 
-2. The Credit Note, is created with the negative amount to annulate the FCE document, 
+#. The FCE is rejected so the Credit Note should have the field “FCE, is Cancellation?” as True. 
+#. The Credit Note, is created with the negative amount to annulate the FCE document, 
    in this case the field “FCE, is Cancellation?” must be empty (false). 
 
 .. image:: media/argentina_edi_12.png
