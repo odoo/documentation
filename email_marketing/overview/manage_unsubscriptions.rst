@@ -15,10 +15,13 @@ unsubscribing*.
    :align: center
    :alt: Blacklist in Odoo Email Marketing
 
-
 Now, once the user clicks on the *Unsubscribe* link on your email, he will be redirected to the
 following page:
 
+.. note::
+   After clicking the unsubscribe button when using the test feature, you will be sent to 
+   an error page (error 403 - Access Denied). If you want to be sure the link is working properly, 
+   you should create your mass mail and then send it only to a personal email.
 
 .. image:: media/manage2.png
    :align: center
@@ -28,7 +31,6 @@ following page:
 
 In addition to having the option of unsubscribing from specific mailing lists, the user can also
 blacklist himself, meaning that he will not receive *any* more emails from you.
-
 
 .. note::
    The mailing list has to be configured as *Public* in order to be visible for users.
