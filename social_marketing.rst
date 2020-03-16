@@ -7,5 +7,5 @@ Social Marketing
 .. toctree::
    :titlesonly:
 
-   social_marketing/social_marketing
+   social_marketing/overview
    
