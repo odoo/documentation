@@ -84,26 +84,26 @@ The electronic invoice and other afip services work with WebServices (WS) provid
 In order to enable communication with the AFIP, the first step is to request a Digital Certificate
 if you don’t have one already.   
 
-#.  Generate certificate Sign Request (Odoo).
-    When this option is selected a file with extension .csr  (certificate signing request)
-    is generated to be used the AFIP portal to request the certificate. 
+#. Generate certificate Sign Request (Odoo). When this option is selected a file with extension
+   ``.csr`` (certificate signing request) is generated to be used the AFIP portal to request the
+   certificate.
 
-    .. image:: media/argentina_edi_02.png
+   .. image:: media/argentina_edi_02.png
 
-#.  Generate Certificate (AFIP). 
-    Access the AFIP portal and follow the instructions described in the next document 
-    in order to get a certificate. `Get AFIP Certificate
-    <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
+#. Generate Certificate (AFIP). Access the AFIP portal and follow the instructions described in the
+   next document in order to get a certificate. `Get AFIP Certificate
+   <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
    
-#.  Upload Certificate and Private Key (Odoo).
-    Once the certificate has been generated, it needs to be uploaded in Odoo, using the 
-    pencil next in the field “Certificado” and selecting the corresponding file. 
+#. Upload Certificate and Private Key (Odoo). Once the certificate has been generated, it needs to
+   be uploaded in Odoo, using the pencil next in the field “Certificado” and selecting the
+   corresponding file.
 
-    .. image:: media/argentina_edi_03.png
+   .. image:: media/argentina_edi_03.png
 
 .. tip::
    In case you need to configure the Homologation Certificate, please refer to the AFIP official 
-   documentation: `Homologation Certificate <http://www.afip.gob.ar/ws/documentacion/certificados.asp>`_.
+   documentation: `Homologation Certificate
+   <http://www.afip.gob.ar/ws/documentacion/certificados.asp>`_.
 
 Partner
 ~~~~~~~
