@@ -1,6 +1,6 @@
-=======================================
-How to keep track of employee expenses?
-=======================================
+===============================
+Keep track of employee expenses
+===============================
 
 Employee expenses are charges incurred on behalf of the company. The
 company then reimburses these expenses to the employee. The receipts

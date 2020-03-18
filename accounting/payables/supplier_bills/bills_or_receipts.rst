@@ -1,6 +1,6 @@
-======================================================
-When should I use supplier bills or purchase receipts?
-======================================================
+====================================
+Supplier bills or purchase receipts?
+====================================
 
 Purchase receipts are different than vendor bills. Vendor bills are
 requests for payment. If I issue a Purchase Order my vendor will in most
