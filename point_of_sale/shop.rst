@@ -6,7 +6,6 @@ Shop Features
    :titlesonly:
 
    shop/invoice
-   shop/refund
    shop/cash_control
    shop/barcode
    shop/multicashiers
