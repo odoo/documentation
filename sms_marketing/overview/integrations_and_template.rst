@@ -74,3 +74,5 @@ the :doc:`Developer mode <../../general/developer_mode/activate>`. Now, go to
    For more information about SMS integrations in Odoo and a list of frequently asked questions,
    go to :doc:`../pricing/pricing_and_faq`.
 
+.. seealso::
+   - :doc:`../../social_marketing/overview/campaigns`
