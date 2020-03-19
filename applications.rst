@@ -18,7 +18,7 @@ Applications
    point_of_sale
    project
    helpdesk
-   livechat/livechat
+   live_chat
    expense/expense
    iot
    mobile/firebase
