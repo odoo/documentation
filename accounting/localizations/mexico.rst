@@ -165,6 +165,11 @@ import them to do it faster.
 Basic Usage and testing
 =======================
 
+Introduction
+------------
+
+All the tests on this documenttion will be following the `Anexo 20`_ provided by the SAT translating such workflow to Odoo itself.
+
 Invoicing
 ---------
 
@@ -624,3 +629,4 @@ FAQ
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
 .. _`Certificate`: ../../_static/files/certificate.cer
 .. _`Certificate Key`: ../../_static/files/certificate.key
+.. _`Anexo 20`: http://omawww.sat.gob.mx/tramitesyservicios/Paginas/documentos/GuiaAnexo20.pdf
