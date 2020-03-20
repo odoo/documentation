@@ -2,13 +2,6 @@
 Mexico
 ======
 
-.. note::
-   This documentation is written assuming that you follow and know the official documentation regarding Invoicing,
-   Sales and Accounting and that you have experience working with odoo on such areas, we are not intended to put here
-   procedures that are already explained on those documents, just the information necessary to allow you use odoo in
-   a Company with the country "Mexico" set.
-
-
 Introduction
 ============
 
@@ -19,29 +12,6 @@ relevant accounting reports (for example, the DIOT), and enable foreign trade, w
 With the Mexican localization in Odoo you will not only be able to comply with the legal requirements to invoice in Mexico, 
 but also use it as your accounting system, satisfying the normal needs of the market. This makes Odoo the perfect solution
 to manage your company in Mexico.
-
-Technical Structure
-===================
-
-1. **l10n_mx:** Basic data and configuration to manage the accounting.
-      a. Taxes necessary to work in mexican companies.
-      b. Proposed chart of account: which is an intended copy of the list of group codes offered by the `SAT`_ to do the
-         electronic accounting.
-      c. List of banks in Mexico with their codes to be used in the CFDI 3.3.
-2. **l10n_mx_edi:** All regarding to electronic transactions.
-      a. Invoice CFDI 3.3 for *local transactions* (with mexican customers).
-      b. Invoice CFDI 3.3 for *external transactions* (with international customers).
-      c. Payment complement CFDI 3.3.
-      d. Engine to generate invoice addendum based on qweb views.
-      e. Manually set the customs number (*pedimento*) in the invoice lines.
-3. **l10n_mx_edi_landing:** Automate the retrieve of customs numbers (*pedimento*) when you have stock installed along
-   with accounting and invoicing [Just required if module stock present].
-4. **l10n_mx_reports:** Tax and accounting reports
-      a. Export the electronic Chart of Account in xml to comply with the XML SAT format.
-      b. Export the electronic Trial Balance in xml to comply with the XML SAT format.
-5. **l10n_mx_reports_closing:** Trial Balance report is complemented to generate the closing entry (A.K.A Month 13th
-   move)
-
 
 Pre-requisites
 --------------
@@ -56,34 +26,80 @@ meet the following requirements:
   information necessary to enable the use of Odoo in a company based in Mexico. For information on how to use those 
   applications, see the user documentation page.
 
-Install the Required modules
-----------------------------
+Modules
+-------
 
-For this, go in Apps and search for Mexico. Then click on *Install*.
+The Mexican localization modules can be found and installed from the application called "Applications" on the home screen.
+Once you have entered this application, remove the default filter in the search bar that says "Applications", which will 
+show all available applications and modules. In the same search bar type "l10n_mx", which will show 11 modules.
 
-.. image:: media/mexico01.png
+If you created the database from www.odoo.com and chose "Mexico" as the country when creating your account, some of the 
+Mexican localization modules will have been installed automatically. In that case you will notice that some modules have a 
+button that says "Install", while others will have a label that says "Installed" instead.
+
+The following modules are necessary for all databases that need Mexican localization:
+
+1. Mexico - Accounting (**l10n_mx**): All the basic data to manage the accounting, taxes and the chart of accounts.
+   The installed chart of accounts is based on the SAT account grouping code.
+2. EDI for Mexico (**l10n_mx_edi**): Required for electronic transactions, CFDI 3.3, payment complement, and addenda on invoices.
+3. EDI Payment (**l10n_mx_edi_payment**): An extension to l10n_mx_edi that enables compliance with the SAT requirement that a 
+   payment supplement can be issued up to 10 days after receipt, within the same month.
+4. Reports of the Mexican location of Odoo (**l10n_mx_reports**): All the mandatory reports for electronic accounting.
+   (Requires accounting application).
+
+The following modules are optional, and should be installed only if they satisfy a specific organization requirement. We do not
+recommend installing these modules unless you are sure they are necessary, as they add fields that can unnecessarily complicate
+form filling.
+
+1. EDI External Trade Complement for Mexico (l10n_mx_edi_external_trade): For clients that export, add the foreign trade complement to the 
+   CFDI, and the logic for filling it.
+2. Odoo Mexico Localization for Invoice with customs Number (l10n_mx_edi_customs): this module allows you to add to the CFDI the request 
+   number with which the merchandise to be resold. When importing into Mexico, the invoice that comes from any foreign country needs to 
+   specify which was the import document; This is known as “pedimento” and is processed through customs.
+3. Odoo Mexico Localization for Stock / Landing (l10n_mx_edi_landing): Related to the import module (l10n_mx_edi_customs), this module 
+   allows you to manage the orders as part of the shipping costs.
+4. Bank account payment to Mexico (l10n_mx_edi_payment_bank): Adds optional attributes to the payment plugin, allowing the user to select the 
+   bank account that was used to pay the bills.
+5. Odoo Mexico Localization for Sale Coupon (l10n_mx_edi_sale_coupon): It complements the Odoo coupon module (sale_coupon) to avoid errors 
+   in the generation of CFDI.
+6. Tax Cash Basis Entries at Payment Date (l10n_mx_tax_cash_basis): Lets you create journal entries for taxes on the payment date (instead 
+   of the issue date).
+
+Configuration
+=============
+
+Enable electronic invoicing
+---------------------------
+
+From the home screen, go to :menuselection:`Settings --> General Options`. In the list of applications on the left, tap on 
+Accounting. On the resulting page, look for the Invoices section and activate the “Mexican Electronic Invoicing” option. Finally, press the 
+button that says Save, top left. With this you can generate the signed invoice and also generate the signed payment complement, all 
+automatically integrated into the normal billing flow in Odoo.
+
+.. image:: media/mexico53.png
    :align: center
-
-.. tip::
-   When creating a database from scratch if you choose Mexico as country when creating you install Accounting, the mexican
-   localization will be automatically installed, same for stock.
-
-.. _mx-legal-info:
-
 
 Set you legal information in the company
 ----------------------------------------
 
-First, make sure that your company is configured with the correct data. Go
-in :menuselection:`Settings --> Users --> Companies` and enter a valid address and VAT for your company.
+First, make sure that your company is configured with the correct data. Go to :menuselection:`Settings --> Companies --> Update Info` and enter a 
+valid address and VAT for your company.
 
-.. tip::
-   If you want use the Mexican localization on test mode, you can put any known address inside Mexico with all fields
-   for the company address and set the vat to **EKU9003173C9**, if you loaded demo data this will be done automatically.
+.. image:: media/mexico54.png
+   :align: center
+
+If you want use the Mexican localization on test mode, you can put any known address inside Mexico with all fields for the company address 
+and set the vat to **EKU9003173C9** for testing purposes or set your own, if you loaded demo data this will be done automatically.
 
 .. image:: media/mexico03.png
    :align: center
 
+In the form for the company set the proper information for your mexican company (Remember you must to set Mexico as country 
+in your company in order to allow all to work properly following mexican workflow), 
+**Please be sure to not add a new country Mexico by mistake, select the one from the list which is pre created**.
+
+.. image:: media/mexico55.png
+   :align: center
 
 Set the proper Fiscal Regime
 ----------------------------
@@ -92,6 +108,9 @@ Go in :menuselection:`Accounting --> Settings` and enter a valid Fiscal Regime.
 
 .. image:: media/mexico04.png
    :align: center
+
+.. tip::
+   For testing environment you must set **General de Ley Personas Morales**
 
 Configure the PAC in order to sign properly the invoices
 --------------------------------------------------------
@@ -560,24 +579,6 @@ FAQ
   The payment method is required on your invoice.
 
   .. image:: media/mexico31.png
-
-- **Error messages**:
-
-  - 2:0:ERROR:SCHEMASV:SCHEMAV_CVC_ENUMERATION_VALID: Element
-    '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion':
-    [facet 'enumeration'] The value '' is not an element of the set {'00
-  - 2:0:ERROR:SCHEMASV:SCHEMAV_CVC_DATATYPE_VALID_1_2_1: Element
-    '{http://www.sat.gob.mx/cfd/3}Comprobante', attribute 'LugarExpedicion':
-    '' is not a valid value of the atomic type '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_CodigoPostal'.
-  - 5:0:ERROR:SCHEMASV:SCHEMAV_CVC_COMPLEX_TYPE_4: Element
-    '{http://www.sat.gob.mx/cfd/3}Emisor': The attribute 'Rfc' is required but missing.
-
-  **Solution**:
-  You must set the address on your company properly, this is a
-  mandatory group of fields, you can go to your company configuration on
-  :menuselection:`Settings --> Users & Companies --> Companies` and fill
-  all the required fields for your address following the step
-  :ref:`mx-legal-info`.
 
 - **Error message**:
 
