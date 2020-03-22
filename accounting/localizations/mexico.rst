@@ -145,22 +145,16 @@ To configure the EDI with the **PACs**, you can go in
    - `Certificate Key`_
    - **Password:** 12345678a
 
-Configure taxes VAT
+Configure VAT taxes
 -------------------
 
 Your tax which represent the VAT 16%, 8% and 0% must have the "Factor Type" field set to "Tasa".
 
 .. image:: media/mexico05.png
    :align: center
-
-Configure your products
------------------------
-
-All products must have for CFDI  the "SAT code" and the field "Reference" properly set, you can export them and re
-import them to do it faster.
-
-.. image:: media/mexico07.png
-   :align: center
+.. |product form sat code| image:: media/mexico07.png
+  :alt: product form sat code
+  :width: 600
 
 Basic Usage and testing
 =======================
@@ -173,24 +167,101 @@ All the tests on this documenttion will be following the `Anexo 20`_ provided by
 Invoicing
 ---------
 
-To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour.
+*Introduction*
+~~~~~~~~~~~~~~
 
-Once you validate your first invoice a correctly signed invoice should look like this:
+When you create a Mexican invoice some legal considerations must be taken into account.
 
+**Customer**
+^^^^^^^^^^^^
 
-.. image:: media/mexico07.png
+To configure properly a customer you should considere the next information.
+
+.. |address form| image:: media/mexico63.png
+  :alt: Address form with special address fields form mexico
+  :width: 600
+.. |bank form| image:: media/mexico64.png
+  :alt: Bank form with special address fields form mexico
+  :width: 600
+
+1. **Address** In the customer form you must add (but not exclusively those) *VAT*, *Country == Mexico* and *ZIP code* fields, the 
+   address will be taken from the commercial partner related to the contact in the invoice, If those fields are not set the invoice will 
+   be considered as an invoice for *Publico General* and automatically assigning the RFC to *XAXX010101000* if country Mexico is set and 
+   **XEXX010101000** if no country at all or no *VAT* and other country. |address form|
+2. **Bank account** if you want to pre-fill the bank account which the invoice will be paid from (information necessary in the invoice
+   for Mexico), you will find all the mexican banks availables. |bank form|
+
+**Product**
+^^^^^^^^^^^
+   
+1. **SAT code** if not sat code set then you will receive an error just when you do a sale invoice (to do vendor bills this code is not 
+   necessary). |product form sat code|
+
+**Invoice**
+^^^^^^^^^^^
+   
+1. **SAT code** if not sat code set then you will receive an error just when you do a sale invoice (to do vendor bills this code is not
+   necessary).
+
+To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour. Once you validate your first 
+invoice a correctly signed invoice should look like this:
+
+.. image:: media/mexico56.png
    :align: center
 
-You can generate the PDF just clicking on the Print button on the invoice or sending it by email following the normal
-process on odoo to send your invoice by email.
+All the marked fields in the image represent the important fields that are only relevant for Mexico and we asume you understand their 
+meaning by checking and reading the `Anexo 20`_.
 
-.. image:: media/mexico08.png
+You can send the invoice inmediatly to your customer and automatically generate the PDF format and send it to your customer, for 
+that moment your invoice should look like this..
+
+.. image:: media/mexico57.png
    :align: center
 
-Once you send the electronic invoice by email this is the way it should looks like.
+Payment complement
+------------------
 
-.. image:: media/mexico09.png
+There are 3 ways to generate a payment complement (exactly as the original odoo process propose)
+
+a. From the invoice document.
+b. Create a payment and then reconcile with invoices.
+c. From the bank statements (Once you reconcile a bank statement line and this does not have a payment yet done from a or b).
+
+**a.** From the invoice document.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Create a payment from the invoices that are related, either going to the form view and clicking the **Register Payment** button and from 
+the wizard in tha list view of invoices.
+
+.. image:: media/mexico58.png
    :align: center
+
+
+.. image:: media/mexico59.png
+   :align: center
+
+It will open the wizard to set the proper values, in case of Mexico it is important you set the proper **Payment Way** you are 
+receiving the payment.
+
+.. image:: media/mexico60.png
+   :align: center
+
+Your payment will be automatically signed (you can look for the payment going to the invoice and opening the payment related).
+
+.. image:: media/mexico61.png
+   :align: center
+
+.. image:: media/mexico62.png
+   :align: center
+
+Cases when the payment is not automatically signed
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+There are cases when the payment do not require to be signed, on this cases the payment complement can be forced but the system 
+will decide to not sign it because is not required.
+
+a. The payment does not have yet invoices related.
+b. The payment method on the invoice is PUE.
 
 
 Cancelling invoices
