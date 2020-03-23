@@ -79,8 +79,8 @@ automatically integrated into the normal billing flow in Odoo.
 .. image:: media/mexico53.png
    :align: center
 
-Set you legal information in the company
-----------------------------------------
+Company Information
+-------------------
 
 First, make sure that your company is configured with the correct data. Go to :menuselection:`Settings --> Companies --> Update Info` and enter a 
 valid address and VAT for your company.
@@ -102,7 +102,7 @@ in your company in order to allow all to work properly following mexican workflo
    :align: center
 
 Set the proper Fiscal Regime
-----------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Go in :menuselection:`Accounting --> Settings` and enter a valid Fiscal Regime.
 
@@ -112,11 +112,11 @@ Go in :menuselection:`Accounting --> Settings` and enter a valid Fiscal Regime.
 .. tip::
    For testing environment you must set **General de Ley Personas Morales**
 
-Configure the PAC in order to sign properly the invoices
---------------------------------------------------------
+Configure the PAC
+-----------------
 
-To configure the EDI with the **PACs**, you can go in
-:menuselection:`Accounting --> Settings --> PAC MX`. You can choose a PAC within the
+The PAC configuration is in order to have the service working (which you must hire directly with the third party) in order to be able to 
+sign the EDI with the **PACs**, you can go in :menuselection:`Accounting --> Settings --> PAC MX`. You can choose a PAC within the
 **List of supported PACs** on the *PAC field* and then enter your PAC username and PAC password.
 
 .. warning::
@@ -148,7 +148,8 @@ To configure the EDI with the **PACs**, you can go in
 Configure VAT taxes
 -------------------
 
-Your tax which represent the VAT 16%, 8% and 0% must have the "Factor Type" field set to "Tasa".
+Your tax which represent the VAT 16%, 8% and 0% must have the "Factor Type" field set to "Tasa" you can go to 
+:menuselection:`Accounting --> Settings --> Taxes` and open the corresponding tax.
 
 .. image:: media/mexico05.png
    :align: center
@@ -167,8 +168,8 @@ All the tests on this documenttion will be following the `Anexo 20`_ provided by
 Invoicing
 ---------
 
-*Introduction*
-~~~~~~~~~~~~~~
+*Fields*
+~~~~~~~~
 
 When you create a Mexican invoice some legal considerations must be taken into account.
 
@@ -197,11 +198,55 @@ To configure properly a customer you should considere the next information.
 1. **SAT code** if not sat code set then you will receive an error just when you do a sale invoice (to do vendor bills this code is not 
    necessary). |product form sat code|
 
+**Journal**
+^^^^^^^^^^^
+
+.. |Journal address issued| image:: media/mexico67.png
+  :alt: Journal address issued
+  :width: 600
+
+1. **Address Issued** . If you have different offices (that exists declared in the SAT) then yopu can set them all creating different Journals
+   at least one per office and set the addresses in the journal themselves, 
+   **tip**: *It is not mandatory but for the sake of order try this partner are children of the main company address with the name as the internal Office name*
+   |Journal address issued|
+
 **Invoice**
 ^^^^^^^^^^^
-   
-1. **SAT code** if not sat code set then you will receive an error just when you do a sale invoice (to do vendor bills this code is not
-   necessary).
+
+You will find some fields on edit mode and other that will appear only when the invoice is in draft state due to the fact that they will be
+part of the signature process.
+
+.. image:: media/mexico65.png
+   :align: center
+.. |Payment term| image:: media/mexico66.png
+  :alt: Payment terms menu
+  :width: 600
+.. |CFDI Origin| image:: media/mexico67.png
+  :alt: Payment terms menu
+  :width: 600
+
+1. **Partner bank** Bank account which the payment will be wired from, if set in the partner (customer) then this will be set automatically by 
+   default.
+2. **Payment Term** This field is the one that will set the value PPD (Pago en parcialidades from its meaning in spanish) or PUE (Pago en una 
+   sola exibición from it meanin in spanish), if any payement term before last day of current month or with more than one line of payments
+   term then it will be PPD if only one line and imediate payment it will be PUE (*tip: rename the originals with text PPD or PUE to help 
+   functionally your users*). |Payment term|
+3. **Payment Way** This is required by mexican law, in order to clarify how you are expecting the invoice will be paid, the functional decision
+   to set this value is up to the user or the implementer using default values behavior, the table of possible values is an standard from 
+   `Anexo 20`_ page 6 this will be the one signed to the payment once it is set from the invoice.
+4. **Usage** This is a value that you must ask to the customer about which usage will be given to the invoice, look in the `Anexo 20`_ page 16.
+5. **CFDI Origin** The relation that this document have with other CFDI's, the format of this text is: *REL|UUID-RELATED-HERE* for example if
+   your are doing a debit note for the invoice with **UUID:** *73FF6E72-2505-4187-9D42-A243B2BC0C55* you should create a customer invoice with 
+   the next text  *02|73FF6E72-2505-4187-9D42-A243B2BC0C55*. for more information you can read the help in the field just setting the
+   mouse over the label of CFDI origin in the invoice ofrm and read the `Anexo 20` page 12 (*TipoRelacion*). |CFDI Origin|
+6. **Need external trade?** Set to true if this invoice will be used for **Exported** Items (it means to send items outside Mexico).
+
+You will find other fields on read only mode and other that will appear only when the invoice is open due to the fact that they will be part of
+the signature process.
+
+1. **PAC status**
+2. **SAT status**
+3. **Fiscal Folio**
 
 To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour. Once you validate your first 
 invoice a correctly signed invoice should look like this:
@@ -235,7 +280,6 @@ the wizard in tha list view of invoices.
 
 .. image:: media/mexico58.png
    :align: center
-
 
 .. image:: media/mexico59.png
    :align: center
@@ -530,7 +574,6 @@ partners are correctly set.
 
 .. image:: media/mexico26.png
    :align: center
-
 
 Extra Recommended features
 ==========================
