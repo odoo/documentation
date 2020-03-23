@@ -22,6 +22,7 @@ Applications
    expense/expense
    iot
    mobile/firebase
+   events
    social_marketing
    sms_marketing
    marketing_automation
