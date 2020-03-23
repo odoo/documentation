@@ -1,6 +1,6 @@
-==========================================================
-How to adapt taxes to my customer status or localization
-==========================================================
+=================================================
+Adapt taxes to my customer status or localization
+=================================================
 
 Most often sales tax rates depend on your customer status or localization.
 To map taxes, Odoo brings the so-called *Fiscal Positions*. 

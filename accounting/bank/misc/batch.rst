@@ -1,6 +1,6 @@
-=======================================
-How to manage batch deposits of checks?
-=======================================
+===============================
+Manage batch deposits of checks
+===============================
 
 When your company's collections group receives checks from customers
 they will often place this money into their bank account in batches. As

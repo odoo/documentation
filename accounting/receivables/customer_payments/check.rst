@@ -1,6 +1,6 @@
-============================================
-How to register customer payments by checks?
-============================================
+====================================
+Register customer payments by checks
+====================================
 
 There are two ways to handle payments received by checks. Odoo support
 both approaches so that you can use the one that better fits your

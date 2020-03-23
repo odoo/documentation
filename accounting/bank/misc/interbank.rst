@@ -1,6 +1,6 @@
-========================================================
-How to do a bank wire transfer from one bank to another?
-========================================================
+================================================
+Do a bank wire transfer from one bank to another
+================================================
 
 A company might have several bank accounts or cash registers. Within
 odoo it is possible to handle internal transfers of money with only a

@@ -1,6 +1,6 @@
-===========================================
-How to manage a bank in a foreign currency?
-===========================================
+===================================
+Manage a bank in a foreign currency
+===================================
 
 In Odoo, every transaction is recorded in the default currency of the
 company. Reports are all based on the currency of the company. But for

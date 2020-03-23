@@ -1,6 +1,6 @@
-================================
-How to manage withholding taxes?
-================================
+========================
+Manage withholding taxes
+========================
 
 A withholding tax, also called a retention tax, is a government
 requirement for the payer of a customer invoice to withhold or deduct

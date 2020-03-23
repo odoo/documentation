@@ -1,6 +1,6 @@
-========================
-How to create new taxes
-========================
+================
+Create new taxes
+================
 
 Odoo's tax engine is very flexible and support many different type of
 taxes: value added taxes (VAT), eco-taxes, federal/states/city taxes, retention,

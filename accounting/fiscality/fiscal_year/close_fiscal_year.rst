@@ -1,6 +1,6 @@
-=====================================================
-How to do a year end in Odoo? (close a fiscal year)
-=====================================================
+===========================================
+Do a year end in Odoo (close a fiscal year)
+===========================================
 
 Before going ahead with closing a fiscal year, there are a few steps one
 should typically take to ensure that your accounting is correct, up to

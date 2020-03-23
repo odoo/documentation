@@ -1,6 +1,6 @@
-========================
-How to set default taxes
-========================
+=================
+Set default taxes
+=================
 
 Taxes applied in your country are installed automatically for most localizations.
 

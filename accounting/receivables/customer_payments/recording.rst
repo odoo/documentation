@@ -1,6 +1,6 @@
-================================================
-What are the different ways to record a payment?
-================================================
+==================================
+Different ways to record a payment
+==================================
 
 In Odoo, a payment can either be linked directly to an invoice or be a
 stand alone record for use on a later date:

@@ -1,6 +1,6 @@
-==============================
-How to set tax-included prices
-==============================
+=======================
+Set tax-included prices
+=======================
 
 In most countries, B2C prices are tax-included. To do that in Odoo, check
 *Included in Price* for each of your sales taxes in
