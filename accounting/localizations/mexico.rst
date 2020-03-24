@@ -205,16 +205,16 @@ To configure properly a customer you should considere the next information.
   :alt: Journal address issued
   :width: 600
 
-1. **Address Issued** . If you have different offices (that exists declared in the SAT) then yopu can set them all creating different Journals
-   at least one per office and set the addresses in the journal themselves, 
-   **tip**: *It is not mandatory but for the sake of order try this partner are children of the main company address with the name as the internal Office name*
+1. **Address Issued** . If you have different offices (that exists declared in the SAT) then you can set them all creating one per journal per office and set the 
+   addresses in the journal itself, **tip**: 
+   *It is not mandatory but a good practice create this address as children of the main company partner with the name as the internal Office*
    |Journal address issued|
 
 **Invoice**
 ^^^^^^^^^^^
 
-You will find some fields on edit mode and other that will appear only when the invoice is in draft state due to the fact that they will be
-part of the signature process.
+You will find some fields on *edit mode* and in *draft state* because they must be filled in order to genereate the correct Invoice to be signed
+and be valid for Mexico.
 
 .. image:: media/mexico65.png
    :align: center
@@ -241,11 +241,30 @@ part of the signature process.
    mouse over the label of CFDI origin in the invoice ofrm and read the `Anexo 20` page 12 (*TipoRelacion*). |CFDI Origin|
 6. **Need external trade?** Set to true if this invoice will be used for **Exported** Items (it means to send items outside Mexico).
 
-You will find other fields on read only mode and other that will appear only when the invoice is open due to the fact that they will be part of
-the signature process.
+You will find other fields on *read only* mode and in *open state* due to the fact that they will be part of the signature process.
 
-1. **PAC status**
-2. **SAT status**
+.. image:: media/mexico69.png
+   :align: center
+
+1. **PAC status** Once the invoice is tried to sign, this field inform if the invoice was properlly signed in the PAC, states can be.
+
+   - **Retry** Something failed creating the invoice, but generally due to configuration, check the message in the chatter and fix the data
+     necessary and then click in the button retry.
+   - **To Sign** Technical state, generally set for technical purposes.
+   - **Signed** Normally signed (the status you are expecting always after you click post).
+   - **To Cancel** When it is not possible to cancel directly (because it requires approval in the SAT from the customer) this status is the 
+     one that will be set.
+   - **Cancelled** Properly cancelled in the SAT.
+
+2. **SAT status** Odoo will check by itself (or manually) if the invoice is valid in the SAT, this field is used to check and allow you to audit
+   the status in odoo vs the status in the SAT (there are few cron jobs that will du this for you) the states availables will be.
+   
+   - **State not defined** It does not apply.
+   - **Not synced yet** It was just signed and the state was not checked yet in the SAT.
+   - **Not found** It was not found in the SAT and probably this is because the PAC yet has not declared such document.
+   - **Cancelled** Simply it is cancelled in the SAT.
+   - **Valid** Expected state for a valid invoice.
+
 3. **Fiscal Folio**
 
 To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour. Once you validate your first 
@@ -263,13 +282,20 @@ that moment your invoice should look like this..
 .. image:: media/mexico57.png
    :align: center
 
+Create your Invoice
+~~~~~~~~~~~~~~~~~~~
+
+An invoice can be created from any application in odoo that requires an invoice, all the use cases are tested 
+(From POS, From Subscription, From a normal Sale Order, From a projects, etc.) this explanation is in order to show you
+how to create a proper invoice without any special process more than set the proper values explained before.
+
 Payment complement
 ------------------
 
 There are 3 ways to generate a payment complement (exactly as the original odoo process propose)
 
 a. From the invoice document.
-b. Create a payment and then reconcile with invoices.
+b. Payment first and then reconcile with invoices.
 c. From the bank statements (Once you reconcile a bank statement line and this does not have a payment yet done from a or b).
 
 **a.** From the invoice document.
@@ -290,13 +316,19 @@ receiving the payment.
 .. image:: media/mexico60.png
    :align: center
 
-Your payment will be automatically signed (you can look for the payment going to the invoice and opening the payment related).
+Your payment will be automatically signed (you can look for the payment going to the invoice and opening the payment related) if the invoice(s)
+are PUE the signature will not be done but it can be forced from the payment itself.
 
 .. image:: media/mexico61.png
    :align: center
 
 .. image:: media/mexico62.png
    :align: center
+
+**b.** Payment first and then reconcile with invoices.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+TODO: CONTINUE THIS
 
 Cases when the payment is not automatically signed
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -307,6 +339,10 @@ will decide to not sign it because is not required.
 a. The payment does not have yet invoices related.
 b. The payment method on the invoice is PUE.
 
+You can always force a payment to be signed (if conditions are Ok) clicking on the button for such purpose.
+
+.. image:: media/mexico70.png
+   :align: center
 
 Cancelling invoices
 -------------------
