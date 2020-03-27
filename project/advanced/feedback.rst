@@ -1,108 +1,63 @@
-======================================
-How to gather feedback from customers?
-======================================
+==============================
+Gather Feedback from Customers
+==============================
 
-Overview
-========
+Finding out what your clients think about the experience they have with your company, can inspire
+you to have insights on how to improve your product/service, adjusting your business to fit
+their needs. It shows that you value their opinions and provides a reliable source of information
+to other consumers.
 
-As a manager, it's not always simple to follow everything your teams do.
-Having a simple customer feedback can be very interesting to evaluate
-the performances of your teams. You can very easily gather feedbacks
-from your customers using Odoo.
+Set up
+======
 
-An e-mail can be sent during the project to get the customer feedbacks.
-He just has to choose between 3 smileys to assess your work (Smile,
-Neutral or Sad).
+Go to :menuselection:`Project --> Configuration --> Settings` and enable *Use Rating on Project*.
 
-How to gather feedbacks from customers
-======================================
+.. image:: media/rating_project.png
+   :align: center
+   :alt: Enable the feature on settings in Odoo Project
 
-Before getting started some configuration is necessary. First of all
-it's necessary to install the **Project** application. To do so simply
-go to the apps module and install it.
+| *Set Email Template to Stages* in order to define the template to be sent at a specific stage(s).
+| Choose an existing template or create one on the fly.
 
-.. image:: media/feedback01.png
-    :align: center
+.. image:: media/rating_template.png
+   :align: center
+   :alt: Click on set email template and choose one in Odoo Project
 
-Moreover, in the same menu, you have to install the **Project Rating**
-module.
+Choosing the projects I want feedback from
+==========================================
 
-.. image:: media/feedback02.png
-    :align: center
+| Go to :menuselection:`Project --> Configuration --> Projects --> Edit` and configure the wanted
+  projects to have the email template previously set sent, by the change of a stage or periodically.
+| Enable *Rating visible publicly* if you would like to publish the ratings in order to communicate
+  them to a customer, prospect or the rest of your team.
 
-Next, go back into the back-end and enter the project module. Select the
-**Configuration** button and click on **Settings** in the dropdown menu. Next
-select **Allow activating customer rating on projects, at issue
-completion**. Don't forget to apply your changes.
+.. image:: media/customer_rating.png
+   :align: center
+   :height: 370
+   :alt: View of a project's form to choose the customer rating in Odoo Project
 
-.. image:: media/feedback03.png
-    :align: center
+.. tip::
+   See the customer rating email sent under the *Log notes* of your task.
 
-How to get a Customer feedback?
-===============================
+   .. image:: media/rating_chatter.png
+      :align: center
+      :alt: View of the chatter and the rating email sent to the customer in Odoo Project
 
-A e-mail can be sent to the customers at each stage of the ongoing
-projects.
+Get reports
+===========
 
-First, you need to choose for which projects you want to get a feedback.
+Under :menuselection:`Project --> Reporting --> Customer Ratings` see ratings by task.
 
-Project configuration
----------------------
+.. image:: media/rating_report.png
+   :align: center
+   :alt: View fo the customer rating report in Odoo Project
 
-Go to the **Project** application, in the project settings select the
-**Customer satisfaction** option.
+Clicking on the percentage of happy ratings over the last 30 days in the *Projects* overview,
+redirects you to your website with more rating details.
 
-.. image:: media/feedback04.png
-    :align: center
+.. image:: media/percentage_happy.png
+   :align: center
+   :height: 300
+   :alt: Project overview shows the percentage of happy ratings in Odoo Project
 
-Email Template
---------------
 
-Go to the stage settings (click on the gear icon on the top of the stage
-column, then select **Edit**). Choose the e-mail template that will be used.
-You can directly edit it from there.
-
-.. image:: media/feedback05.png
-    :align: center
-
-Here is an email example that a customer can receive :
-
-.. image:: media/feedback06.png
-    :align: center
-
-.. note::
-    The customer just has to click on a smiley (Smile, Neutral or
-    Sad) to assess your work. The customer can reply to the email to add
-    more information. It will be added to the chatter of the task.
-
-Reporting
----------
-
-You have a brief summary on the satisfaction in the upper right corner
-of the project.
-
-.. image:: media/feedback07.png
-    :align: center
-
-How to display the ratings on your website?
-===========================================
-
-First of all it's necessary to install the **Website Builder** application.
-To do so simply go to the apps module and search for the website
-builder.
-
-.. image:: media/feedback08.png
-    :align: center
-
-Moreover, in the same menu, you have to install the **Website Rating
-Project Issue** module.
-
-.. image:: media/feedback09.png
-    :align: center
-
-Then, you will be able to publish your result on your website by
-clicking on the website button in the upper right corner and confirming
-it in the front end of the website.
-
-.. image:: media/feedback10.png
-    :align: center

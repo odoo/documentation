@@ -84,7 +84,7 @@ So you will confirm orders manually once you get paid.
 
 How to:
 
-* Switch to developer mode.
+* Switch to :doc:`Developer mode <../../../general/developer_mode/activate>`.
 
 * Take the **Custom** payment method.
 

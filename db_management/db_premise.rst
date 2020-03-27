@@ -172,7 +172,7 @@ problems down the line.
     duplicated database; a manual operation is no longer required.
 
 The database uuid is currently accessible from the menu :menuselection:`Settings --> Technical -->
-System Parameters`, we advise you to use a `uuid generator <https://www.uuidgenerator.net>`_ or to
+System Parameters`, we advise you to use a `uuid generator <https://www.uuidtools.com>`_ or to
 use the unix command ``uuidgen`` to generate a new uuid. You can then simply replace it like any
 other record by clicking on it and using the edit button.
 

@@ -63,10 +63,6 @@ action possible :
 .. image:: media/procurement_rule03.png
     :align: center
 
-.. demo:action:: stock.action_routes_form
-    
-    Try to create a procurement rule in our demo instance. 
-
 .. note:: 
     Some Warehouse Configuration creates routes with procurement
     rules already defined.

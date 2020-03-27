@@ -1,6 +1,6 @@
-==========================================================
-How to create a customized reports with your own formulas?
-==========================================================
+==================================================
+Create a customized reports with your own formulas
+==================================================
 
 Overview
 ========
@@ -14,16 +14,7 @@ Activate the developer mode
 ===========================
 
 In order to have access to the financial report creation interface, the
-**developer mode** needs to be activated. To do that, first click on the
-user profile in the top right menu, then **About**.
-
-.. image:: media/customize01.png
-   :align: center
-
-Click on : **Activate the developer mode**.
-
-.. image:: media/customize03.png
-   :align: center
+:doc:`Developer mode <../../../general/developer_mode/activate>` needs to be activated.
 
 Create your financial report
 ============================

@@ -1,96 +1,109 @@
-==================================
-How to setup and use payment terms
-==================================
+===================================
+Payment Terms and Installment Plans
+===================================
 
-Payment terms define the conditions to pay an invoice. They apply on
-both customer invoices and supplier bills.
+**Payment Terms** regroup all the conditions under which a sale is completed and paid. They can be
+applied to sales orders, customer invoices, and supplier bills, mostly to ensure that they will be
+correctly paid, and on time. These conditions cover:
 
-Example, for a specific invoice:
+- The due date
+- Some discounts
+- Any other condition on the payment
 
--  Pay 50% within 10 days
+Defining Payment Terms automates the computation of payments due dates, both for invoices and bills.
+This is particularly helpful in managing installment plans.
 
--  Pay the remaining balance within 30 days
+An **installment plan** allows the customers to pay an invoice in parts, with the amounts and
+payment dates defined beforehand by the seller.
 
-.. note::   Payment terms are different from invoicing in several areas. If,
-            for a specific order, you invoice the customer in two parts, that's not
-            a payment term but invoice conditions.
+**Examples of Payment Terms:**
+
+- | **Immediate Payment**
+  | The full payment is due on the day of the invoice's issuance.
+- | **15 Days** (or **Net 15**)
+  | The full payment is due 15 days after the invoice date.
+- | **21 MFI**
+  | The full payment is due by the 21st of the month following the invoice date.
+- | **2% 10, Net 30 EOM**
+  | 2% :doc:`cash discount <cash_discounts>` if the payment is received within ten days. Otherwise,
+    the full payment is due at the end of the month following the invoice date.
+
+.. note::
+   Payment terms are not to be confused with payment in several parts. If, for a specific order, you
+   invoice the customer in two parts, that is nor a payment term nor an installment plan, but an
+   invoicing policy.
 
 Configuration
 =============
 
-Configure your usual payment terms from the Configuration menu of the
-Account application. The description of the payment term is the one that
-appear on the invoice or the sale order.
+Go to :menuselection:`Accounting --> Configuration --> Payment Terms` and click on *Create*.
 
-A payment term may have one line (ex: 21 days) or several lines (10%
-within 3 days and the balance within 21 days). If you create a payment
-term with several lines, be sure the latest one is the balance. (avoid
-doing 50% in 10 days and 50% in 21 days because, with the rounding, it
-may not do exactly 100%)
+The **Description on the Invoice** is the displayed text on a sale order, invoice, or bill.
 
-.. todo:: screenshot payment term forms, after QDP have commited the change
-          planned on this object
+In the **Terms** section, you can add a set of rules, that we call *terms*, to define what needs to
+be paid, and by which due date.
+
+To add a term, click on *Add a line*, and define its *Type*, *Value*, and *Due Date Computation*.
+
+.. important::
+   - Terms are computed in the order they are set up.
+   - The **balance** should always be used for the last line.
+
+In the following example, 30% of the invoice is due on the day of issuance of the invoice, and the
+balance is due at the end of the following month.
+
+.. image:: media/payment_terms_configuration.png
+   :align: center
+   :alt: Example of payment terms. The last line is the balance due the 31st of the following month.
 
 Using Payment Terms
 ===================
 
-Payment terms for customers
----------------------------
+Payment Terms can be defined with the **Payment Terms** field on:
 
-Payment terms can be set on:
+- | **Contacts**
+  | To set specific payment terms automatically on new sales orders, invoices, and bills of a
+    contact. This can be modified in the contact’s *Form View*, under the *Sales & Purchase* tab.
+- | **Quotations**
+  | To set specific payment terms automatically on all invoices generated from a quotation.
+- | **Customer Invoices**
+  | To set specific payment terms on an invoice.
+- | **Vendor Bills**
+  | To set specific payment terms on a bill. This is mostly useful when you need to manage vendor
+    terms with several installments. Otherwise, setting the *Due Date* is enough.
 
-- **a customer**: to apply this payment term automatically on new
-  sale orders or invoices for this customer. Set payment terms on
-  customers if you grant this payment term for all future orders of
-  this customer.
+Journal Entries
+===============
+Invoices with specific Payment Terms generate different *Journal Entries*, with one *Journal Item*
+for each different *Due Date* computed.
 
-- **a quotation**: to apply this payment term on all invoices
-  created from this quotation or sale order, but not on other
-  quotations
+This makes for easier *Follow-ups* and *Reconciliation* since Odoo takes each due date into account,
+rather than just the balance due date.
 
-- **an invoice**: to apply the payment term on this invoice only
+In the following example, an invoice of $1000 has been issued with the following payment terms:
+30% of the invoice is due on the day of issuance of the invoice, and the balance is due at the end
+of the following month.
 
-If an invoice has a payment term, the journal entry related to the
-invoice is different. Without payment term or tax, an invoice of $100
-will produce this journal entry:
+.. image:: media/payment_terms_journal_entry.png
+   :align: center
+   :alt: Example of an invoice with specific Payment Terms. The amount debited on the Account
+         Receivable is split in several Journal Items.
 
-+----------------------+------------+---------+----------+
-| Account              | Due date   | Debit   | Credit   |
-+======================+============+=========+==========+
-| Account Receivable   |            | 100     |          |
-+----------------------+------------+---------+----------+
-| Income               |            |         | 100      |
-+----------------------+------------+---------+----------+
+The $1000 debited on the Account Receivable is split into two distinct *Journal Items*. Both of
+them have their own **Due Date**.
 
-If you do an invoice the 1st of January with a payment term of 10%
-within 3 days and the balance within 30 days, you get the following
-journal entry:
++----------------------+-------------+---------+---------+
+| Account              | Due date    | Debit   | Credit  |
++======================+=============+=========+=========+
+| Account Receivable   | February 21 | 300     |         |
++----------------------+-------------+---------+---------+
+| Account Receivable   | March 31    | 700     |         |
++----------------------+-------------+---------+---------+
+| Product Sales        |             |         | 1000    |
++----------------------+-------------+---------+---------+
 
-+----------------------+------------+---------+----------+
-| Account              | Due date   | Debit   | Credit   |
-+======================+============+=========+==========+
-| Account Receivable   | Jan 03     | 10      |          |
-+----------------------+------------+---------+----------+
-| Account Receivable   | Jan 30     | 90      |          |
-+----------------------+------------+---------+----------+
-| Income               |            |         | 100      |
-+----------------------+------------+---------+----------+
-
-In the customer statement, you will see two lines with different due
-dates.
-
-Payment terms for vendor bills
-------------------------------
-
-The easiest way to manage payment terms for vendor bills is to record a
-due date on the bill. You don't need to assign a payment term, just the
-due date is enough.
-
-But if you need to manage vendor terms with several installments, you
-can still use payment terms, exactly like in customer invoices. If you
-set a payment term on the vendor bill, you don't need to set a due date.
-The exact due date for all installments will be automatically created.
+This allows for easier reconciliation and to accurately follow up late payments.
 
 .. seealso:: 
-
-    :doc:`cash_discounts`
+   - :doc:`cash_discounts`
+   - `Odoo Learn: Terms and Conditions (T&C) and Payment Terms <https://www.odoo.com/r/fpv>`_

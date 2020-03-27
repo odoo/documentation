@@ -5,9 +5,7 @@ Bank Feeds
 .. toctree::
    :titlesonly:
 
+   feeds/bank_statements
    feeds/bank_synchronization
-   feeds/ofx
-   feeds/qif
-   feeds/coda
+   feeds/ponto
    feeds/paypal
-   feeds/manual

@@ -7,3 +7,4 @@ Advanced
 
    advanced/so_to_task
    advanced/feedback
+   advanced/profitability

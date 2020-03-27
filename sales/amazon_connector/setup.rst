@@ -46,7 +46,8 @@ code, a default database product **Amazon Sale** is used. The same is done with 
 **Amazon Shipping** and the shipping code.
 
 .. note::
-   To modify the default products, activate the **Developer mode** and navigate to
+   To modify the default products, activate the
+   :doc:`Developer mode <../../general/developer_mode/activate>` and navigate to
    :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
    Default Products`.
 

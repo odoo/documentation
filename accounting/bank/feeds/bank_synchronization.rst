@@ -22,7 +22,7 @@ To connect to the banks, Odoo uses multiple web-services:
 
 - **Plaid**: Mainly for the U.S
 - **Yodlee**: Worldwide
-- **Ponto**: For a growing number of European Banks
+- **Ponto**: For a growing number of European Banks. (:doc:`Click here for more information <ponto>`)
 
 Configuration
 =============
@@ -121,8 +121,11 @@ database, please `submit a support ticket <https://www.odoo.com/help>`_.
 
 How can I update my bank credentials?
 -------------------------------------
-You can update your credentials in the *Developer Mode*.
+You can update your credentials in
+:doc:`Developer mode <../../../general/developer_mode/activate>`.
 
-To do so, go to :menuselection:`General Settings`, click on *Activate developer mode*, then go to
-:menuselection:`Accounting --> Configuration --> Online Synchronization`, then open the Institution
-you want to edit, and click on *Update Credentials*.
+Then go to :menuselection:`Accounting --> Configuration --> Online Synchronization`, and open the
+Institution you want to edit, and click on *Update Credentials*.
+
+.. seealso::
+   * :doc:`bank_statements`

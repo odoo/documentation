@@ -143,7 +143,7 @@ Deferred Expense Models
 
 You can create **Deferred Expense Models** to create your Deferred Expense entries faster.
 
-To create a model, go to :menuselection:`Accounting → Configuration --> Deferred Expense Models`,
+To create a model, go to :menuselection:`Accounting --> Configuration --> Deferred Expense Models`,
 click on *Create*, and fill out the form the same way you would do to create a new entry.
 
 .. tip::

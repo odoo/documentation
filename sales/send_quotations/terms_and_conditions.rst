@@ -15,8 +15,8 @@ Default Terms & Conditions
 Configuration
 -------------
 
-Go to :menuselection:`Invoicing --> Configuration --> Settings` and activate **Default Terms &
-Conditions** under the **Customer Invoices** category.
+Go to :menuselection:`Accounting --> Configuration --> Settings` and activate
+*Default Terms & Conditions*.
 
 .. image:: media/terms_conditions_1.png
    :align: center

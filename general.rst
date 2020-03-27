@@ -11,4 +11,6 @@ General
    general/unsplash
    general/base_import
    general/auth
+   general/tags
    general/in_app_purchase
+   general/developer_mode

@@ -1,6 +1,6 @@
-======================================================
-How to track costs of human resources with timesheets?
-======================================================
+==============================================
+Track costs of human resources with timesheets
+==============================================
 
 Human resource of course has a cost. It is interesting to see how much a
 particular contract costs the company in term of human power in relation

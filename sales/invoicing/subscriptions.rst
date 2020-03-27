@@ -9,7 +9,7 @@ Make a subscription from a sales order
 ======================================
 
 From the sales app, create a quotation to the desired customer, and
-select the subscription product your previously created.
+select the subscription product your previously created from the Subscriptions App.
 
 When you confirm the sale the subscription will be created
 automatically. You will see a direct link from the sales order to the

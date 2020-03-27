@@ -37,12 +37,7 @@ randomly, balanced, or manually.
 How to set up different stages for each team
 --------------------------------------------
 
-First you will need to activate the developer mode. To do this go to
-your settings module, and select the link for "Activate the developer
-mode" on the lower right-hand side.
-
-.. image:: media/helpdesk04.png
-   :align: center
+First you will need to activate the :doc:`Developer mode <../../general/developer_mode/activate>`.
 
 Now, when you return to your Helpdesk module and select "Configuration"
 in the purple bar you will find additional options, like "Stages". Here
