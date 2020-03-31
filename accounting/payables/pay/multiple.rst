@@ -144,5 +144,4 @@ model for cash discount.
 Now we are going back to bank statement and opening reconcile view.
 
 .. seealso::
-   - :doc:`../../bank/reconciliation/configure`
-
+   - :doc:`../../bank/reconciliation/reconciliation_models`
