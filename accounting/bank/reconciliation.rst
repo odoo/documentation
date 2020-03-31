@@ -6,4 +6,4 @@ Bank Reconciliation
    :titlesonly:
 
    reconciliation/use_cases
-   reconciliation/configure
+   reconciliation/reconciliation_models
