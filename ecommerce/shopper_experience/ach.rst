@@ -34,7 +34,7 @@ Set up ACH
 .. image:: media/ach02.png
 	:align: center
 
-* Click on the ***External Link***
+* Click on the **External Link**
 
 .. image:: media/ach03.png
 	:align: center
@@ -42,9 +42,10 @@ Set up ACH
 *Add this code between the <div> field
 
 .. code-block:: XML
+
 	<input type="hidden" name="x_method" t-att-value="x_method"/>
 
-This will allow ***both*** the options of ***credit card payment*** or ***ACH payment***
+This will allow **both** the options of **credit card payment** or **ACH payment**
 .. image:: media/ach03.png
 	:align: center
 
