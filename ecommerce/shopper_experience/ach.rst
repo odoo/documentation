@@ -3,9 +3,9 @@
 How to get paid through ACH
 ==================================
 
-Yes, it's possible ***(US only)*** with the standard ‘Authorize.net integration <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html>’ __.
+Yes, it's possible ***(US only)*** with the standard `Authorize.net integration <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html>`__.
 
-First, you need to have an ‘Authorize.net account <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html#create-an-authorize-net-account>’__ that is set up with a processor and your Authorize.net account must have the eCheck.Net feature activated.
+First, you need to have an `Authorize.net account <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html#create-an-authorize-net-account>`__ that is set up with a processor and your Authorize.net account must have the eCheck.Net feature activated.
 
 .. image:: media/ach01.png
 	:align: center
