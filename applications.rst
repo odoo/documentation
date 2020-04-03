@@ -57,6 +57,7 @@ Applications
    sales
    purchase
    accounting
+   subscriptions
    project
    timesheets
    planning
