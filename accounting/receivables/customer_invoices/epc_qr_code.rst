@@ -61,5 +61,5 @@ the EPC QR Code.
    under the *Other Info* tab of the invoice.
 
 .. seealso::
-   * :doc:`../../bank/setup/create_bank_account`
+   * :doc:`../../bank/setup/bank_accounts`
    * `Odoo Academy: QR Code on Invoices for European Customers <https://www.odoo.com/r/VuU>`_

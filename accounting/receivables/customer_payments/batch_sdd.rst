@@ -118,7 +118,7 @@ Finally, upload this file to your bank to process the payments.
    :menuselection:`Accounting --> Configuration --> Customers --> Batch Payments`.
 
 .. seealso::
-   * :doc:`../../bank/setup/create_bank_account`
+   * :doc:`../../bank/setup/bank_accounts`
    * `Odoo Academy: SEPA Direct Debit Mandates (SDD) <https://www.odoo.com/r/Zxs>`_
    * `List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_.
 
