@@ -3,7 +3,7 @@
 How to get paid through ACH
 ==================================
 
-Yes, it's possible ***(US only)*** with the standard `Authorize.net integration <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html>`__.
+This is possible(**US only**) with the standard `Authorize.net integration <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html>`__.
 
 First, you need to have an `Authorize.net account <https://www.odoo.com/documentation/user/13.0/ecommerce/shopper_experience/authorize.html#create-an-authorize-net-account>`__ that is set up with a processor and your Authorize.net account must have the eCheck.Net feature activated.
 
@@ -13,22 +13,22 @@ First, you need to have an `Authorize.net account <https://www.odoo.com/document
 Set up Authorize.net
 ===============================
 * Activate Authroize.net in Odoo (::menuselection: ‘Accounting --> Configuration --> Payments --> Payment Acquires’)
-* Enter your ***API Login ID, API Transaction Key, API Signature Key ***
-* This will generate an ***API Client Key***
+* Enter your **API Login ID,**  **API Transaction Key,**  **API Signature Key**
+* This will generate an **API Client Key**
 
 .. image:: media/authorize02.png
 	:align: center
 
-* Your configuration is now ready! You can make Authorize.Net visible on your merchant interface and activate the ***Enabled*** state.
+* Your configuration is now ready! You can make Authorize.Net visible on your merchant interface and activate the **Enabled** state.
 
 .. image:: media/paypal_live.png
 	:align: center
 
-… notes:: Credentials provided by Authorize.net are different for both test and production mode. Don’t forget to update them in Odoo when you switch from testing to production or vice-versa
+.. notes:: Credentials provided by Authorize.net are different for both test and production mode. Don’t forget to update them in Odoo when you switch from testing to production or vice-versa
 
 Set up ACH
 ===============================
-Depending on your Odoo version, you also might have to remove the following line in
+ You will need to remove the following line in
 * :menuselection: ‘Accounting --> Configuration --> Payment Acquirer --> Authorize.net --> Configuration tab --> Form Button Template’
 
 .. image:: media/ach02.png
