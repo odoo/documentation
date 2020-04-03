@@ -8,6 +8,7 @@ Applications
    accounting
    crm
    sales
+   subscriptions
    website
    ecommerce
    discuss
