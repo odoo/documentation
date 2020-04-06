@@ -1,57 +1,55 @@
-=======================================
-Process a Receipt in one step (Receipt)
-=======================================
+==============================================
+Process Delivery Orders in one Step (Shipping)
+==============================================
 
-There is no configuration needed to receive in one step. The default
-incoming shipments are configured to be directly received from the
-vendors to the stock.
+There is no configuration needed to deliver in one step. The default
+outgoing shipments are configured to be directly delivered from the
+stock to the customers.
 
 However, if advanced routes have been activated and you set another
-incoming configuration on your warehouse, you can set it back to the
-one-step receipt configuration. To do so, go to :menuselection:`Configuration -->
-Warehouses` and edit the warehouse in question.
+shipping configuration on your warehouse, you can set it back to the
+one-step delivery configuration. Go to :menuselection:`Inventory --> Configuration --> Warehouses`
+and edit the warehouse in question.
 
-Set the *Incoming Shipments* option to *Receive goods directly (1
-step)*.
+Then, choose *Deliver goods directly* as your *Outgoing Shipments*
+strategy.
 
 .. image:: media/one_step_01.png
     :align: center
 
-Create a Purchase Order
-=======================
+Create a Sales Order
+====================
 
-To create a *Request for Quotation*, go to the *Purchase*
-application and click on *Create*. Then, add some storable products to
-receive and confirm the *RfQ*.
+In the *Sales* application, create a quotation with some storable
+products to deliver and confirm it.
 
-Notice that, now, we see 1 receipt associated with the purchase order
-you just created. If you click on the button, you will see your receipt
-order.
+Notice that we now see 1 delivery associated with this *sales order*
+in the stat button above the sales order. If you click on the 1 Delivery
+stat button, you should now see your delivery order.
 
 .. image:: media/one_step_02.png
     :align: center
 
-Process a Receipt
-=================
+Process a Delivery
+==================
 
-You can also fin the receipt directly from the *Inventory* app. When
-on the dashboard, you can click the *1 TO PROCESS* button under the
-*Receipts* Kanban card. Then, you will see your receipt.
+You can also find the *delivery order* directly from the *Inventory*
+application. In the dashboard, you can click the *1 TO PROCESS* button
+under the Delivery Orders Kanban card.
 
 .. image:: media/one_step_03.png
     :align: center
 
-Now, enter the picking that you want to process. You will be able to
-click on *Validate* to complete the move directly as products coming
-from suppliers are considered as being always available.
+Enter the picking that you want to process. You will be able to click on
+*Validate* to complete the move if you have products in stock.
 
 .. image:: media/one_step_04.png
     :align: center
 
-Once you *Validate* the receipt, the products leave the *Supplier
-Location* to enter your *WH/Stock Location*. You can easily see that
-the receipt took place thanks to the status of the document, which is
-now *Done*.
+Once you *Validate* the delivery order, the products leave your
+*WH/Stock location* and are moved to the *Customer location*. You
+can easily see that the delivery took place thanks to the status of the
+document which is now *Done*.
 
 .. image:: media/one_step_05.png
     :align: center
