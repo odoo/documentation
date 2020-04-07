@@ -1,6 +1,6 @@
-=================================
-How to pay several bills at once?
-=================================
+=========================
+Pay several bills at once
+=========================
 
 Odoo provides a simple and effective way to handle several bills at
 once, with various quick or complex options. With one single process,

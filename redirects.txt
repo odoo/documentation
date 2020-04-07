@@ -1,0 +1,48 @@
+# REDIRECT RULES #
+
+# Each line in this file specifies a redirect rule that redirects users from one URL to another.
+#
+# Redirect rules must follow this pattern: old_file.rst new_file.rst  # optional comment
+# Both parts are file paths and must thus include the full path of the file starting from the root
+# of the documentation to the file name, including the .rst extension.
+# If you consider it necessary, add a comment after the symbol '#' to explain why the redirection is
+# needed.
+#
+# A redirect rule must be added to this file in the following cases:
+#
+#   1. An RST file is moved from one location to another.
+#      Example: The documentation of the Sales app is moved from sale_app/ to sales/ .
+#      Rules: sale_app/send_quotations.rst sales/send_quotations.rst
+#             sale_app/send_quotations/quote_template.rst sales/send_quotations/quote_template.rst
+#             sale_app/invoicing.rst sales/invoicing.rst  # ...and so on.
+#
+#   2. An RST file is renamed.
+#      Example: The file create_quotations.rst in sales/ is renamed to quotations.rst.
+#      Rule: sales/create_quotations.rst sales/quotations.rst # no longer limited to creating quotes
+#
+# Write your rules in the section below corresponding to your target version. All rules are active
+# no matter the version. The section's only purpose is to help with the triage.
+# Consider indicating the reference of the PR (#123) that made a rule necessary, if any.
+
+# Redirections introduced in 11.0 :
+
+
+
+# Redirections introduced in 12.0 :
+
+support/user_doc.rst contributing/documentation/introduction_guide.rst  # removed in forward-port of #544 (b109c3af)
+
+# Redirections introduced in 13.0 :
+
+sales/sale_amazon.rst sales/amazon_connector.rst                # sale_amazon -> amazon_connector (#524)
+sales/sale_amazon/apply.rst sales/amazon_connector/apply.rst    # sale_amazon/* -> amazon_connector/* (#524)
+sales/sale_amazon/setup.rst sales/amazon_connector/setup.rst    # sale_amazon/* -> amazon_connector/* (#524)
+sales/sale_amazon/manage.rst sales/amazon_connector/manage.rst  # sale_amazon/* -> amazon_connector/* (#524)
+sales/sale_ebay.rst sales/ebay_connector.rst                    # sale_ebay -> ebay_connector (#524)
+sales/ebay/setup.rst sales/ebay_connector/setup.rst             # ebay/* moved to ebay_connector/* (#524)
+sales/ebay/manage.rst sales/ebay_connector/manage.rst           # ebay/* moved to ebay_connector/* (#524)
+
+accounting/localizations/nederlands.rst accounting/localizations/netherlands.rst  # (#514)
+
+# Redirections introduced in 13.2 :
+

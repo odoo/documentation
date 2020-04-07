@@ -1,6 +1,6 @@
-=================================================
-How to synchronize your PayPal account with Odoo?
-=================================================
+=========================================
+Synchronize your PayPal account with Odoo
+=========================================
 
 With Odoo, you can synchronize your PayPal account. That way, you don't
 have to record all your PayPal transaction in your favorite accounting

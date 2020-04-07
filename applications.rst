@@ -18,13 +18,15 @@ Applications
    point_of_sale
    project
    helpdesk
-   livechat/livechat
+   live_chat
    expense/expense
    iot
    mobile/firebase
+   events
    social_marketing
    sms_marketing
    marketing_automation
+   survey
    fsm
    planning
    email_marketing

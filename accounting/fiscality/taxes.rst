@@ -1,6 +1,6 @@
-===========
+=====
 Taxes
-===========
+=====
 
 .. toctree::
    :titlesonly:
@@ -13,3 +13,4 @@ Taxes
    taxes/retention
    taxes/B2B_B2C
    taxes/cash_basis_taxes
+   taxes/tax_returns

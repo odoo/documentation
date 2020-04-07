@@ -13,3 +13,4 @@ Restaurant Features
    restaurant/tips
    restaurant/transfer
    restaurant/multi_orders
+   restaurant/fiscal_position

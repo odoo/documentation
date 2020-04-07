@@ -1,6 +1,6 @@
-===================================================================
-How to manage prices for B2B (tax excluded) and B2C (tax included)?
-===================================================================
+===========================================================
+Manage prices for B2B (tax excluded) and B2C (tax included)
+===========================================================
 
 When working with consumers, prices are usually expressed with taxes
 included in the price (e.g., in most eCommerce). But, when you work in a

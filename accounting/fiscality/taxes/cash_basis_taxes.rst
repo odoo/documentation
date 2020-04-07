@@ -1,6 +1,6 @@
-==============================
-How to manage cash basis taxes
-==============================
+=======================
+Manage cash basis taxes
+=======================
 
 The cash basis taxes are due when the payment has been done and not at
 the validation of the invoice (as it is the case with standard taxes).

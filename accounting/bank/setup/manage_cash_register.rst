@@ -1,6 +1,6 @@
-==============================
-How to manage a cash register?
-==============================
+======================
+Manage a cash register
+======================
 
 The cash register is a journal to register receivings and payments transactions.
 It calculates the total money in and out, computing the total balance.
