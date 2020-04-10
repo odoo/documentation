@@ -39,76 +39,75 @@ Warehouse configuration
 
 Now that *Multi-Step Routes* is activated, go to :menuselection:`Configuration -->
 Warehouse` and open the one you will use to deliver in 3 steps. Then,
-you can select the option *Pack good, send goods in output and then
-deliver (3 steps)* as *Outgoing Shipments*.
+you can select the option *Receive goods in input, then quality and then stock (3 steps)* as *Incoming Shipments*.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_02.png
    :align: center
 
 Activating this option will lead to the creation of two new locations,
-*Output* and *Packing Zone*. 
+*Input* and *Quality Control*. 
 
 Of course, you can rename them if you want. To do so, go to
 :menuselection:`Configuration --> Locations` and select the one you want to rename.
 Change its name and hit save.
 
-Create a Sales Order
+Create a Purchase Order
 ====================
 
-In the *Sales* app, create a quotation with storable products to
-deliver. Then, confirm it and three pickings will be created and linked
-to your sale order.
+In the *Purchase* app, create a Requests for Quotation for storable products. Then, confirm it and one Receipt and two Internal Transfers will be created and linked to your purchase order.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_03.png
    :align: center
 
-Now, click on the button. You should see three different pickings:
+Now, click on the smart button Receipt. You will be redirected to the receipt order. The receipt order will be used to receive the goods in your input area.
 
--  The first one, with a reference PICK, designates the picking process;
+The two Internal Transfers are accessible throught the inventory overview or, still in the inventory app, inside the Operations > Transfers menu. 
 
--  The second one, with a reference PACK, is for the packing process;
+-  The first one is to transfer your goods into a quality area for quality control.
 
--  The third one, with a reference OUT, designates the shipping process.
+-  The second one will move the goods from quality control to stock after the quality check has been processed.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_04.png
    :align: center
 
-Process the picking, packing, and delivery
+Process the reception, the transfer to quality area and the final move to stock
 ==========================================
 
-The first operation to be processed is the picking and has a *Ready*
-status, while the others are *Waiting Another Operation*. The packing
-will become *Ready* as soon as the picking is marked as *Done*.
+The first operation to be processed is the reception. The Internal Transfers are *Waiting Another Operation*. The Internal Tranfers to quality area will become *Ready* as soon as the reception is marked as *Done*.
 
-You can enter the picking operation from here, or access it through the
+You can enter the reception operation from here, or access it through the
 inventory app.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_05.png
    :align: center
 
-Note that, if you have the product in stock, it will be automatically
-reserved and you can validate the picking document.
-
+[UPDATE IMAGE]
 .. image:: media/three_steps_06.png
    :align: center
 
-Now that the picking has been validated, the packing order is ready to
+Now that the reception has been validated, the first internal transfer is ready to
 be processed. Since the documents are chained, the products that have
-been picked are automatically reserved on the packing order so you can
+been received are automatically reserved on the internal transfer so you can
 directly validate it.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_07.png
    :align: center
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_08.png
    :align: center
 
-Then, you can validate your packing. In doing so, the delivery order can
-be processed. Once again, it will be ready to be validated so you can
-transfer the products to the customer location.
+Then, you can validate your internal transfert after you move your goods to the quality area. In doing so, the second internal transfert can now be processed. Once again, it will be ready to be validated after you've your quality check so you can finaly transfer the products into your stock.
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_09.png
    :align: center
 
+[UPDATE IMAGE]
 .. image:: media/three_steps_10.png
    :align: center
