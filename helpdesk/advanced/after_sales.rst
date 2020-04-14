@@ -1,67 +1,69 @@
-==========================================================================
-After sales features: refund, coupon, return, repair, onsite interventions
-==========================================================================
+====================
+After Sales Features
+====================
 
-As my business grows, having the tools to allow my helpdesk team to record, track and manage issues
-raised easy and efficiently, is key. Odoo’s Helpdesk app allows me to generate credit notes, return
-products, grant coupons, do repairs and plan onsite interventions from a ticket’s page.
+As your business grows, having the right tool to support your helpdesk team on recording, tracking
+and managing issues raised easy and efficiently, is key. Odoo’s Helpdesk application allows you to
+generate credit notes, manage returns, products, repairs, grant coupons, and even plan onsite
+interventions from a ticket’s page.
 
-Set up the After Sales services
+Set up the after sales services
 ===============================
 
-Go to :menuselection:`Configuration --> Helpdesk Teams` and enable the After Sales options:
-*Refunds, Returns, Coupons, Repairs and Onsite Interventions*.
+Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams` and enable the after sales
+options: *Refunds, Returns, Coupons, Repairs and Onsite Interventions*.
 
 .. image:: ./media/aftersales1.png
    :align: center
 
 Generate credit notes from tickets
-=========================================
+----------------------------------
 
-I can use a credit note to refund a customer or adjust the amount due. For that, I’ll simply go to
-my ticket page, click on *Refund* and select the corresponding *Invoice*. Clicking on *Reverse* the
-credit note will be generated, and I can *Post* it while still being in the *Helpdesk* app.
+You can use a credit note to refund a customer or adjust the amount due. For that, simply go to
+your ticket page, click on *Refund* and select the corresponding *Invoice*. Clicking on *Reverse*
+generates a credit note, and you can *Post* it while still being in the *Helpdesk* app.
 
 .. image:: ./media/aftersales2.png
    :align: center
 
 Allow product returns from tickets
-==================================
+----------------------------------
 
-The process of a product return from my customer back to my warehouse will be taken into action
-when, at the ticket page, I choose the option *Return*.
+The process of a product return from your customer back to your warehouse is taken into action when,
+at the ticket page, you choose the option *Return*.
 
 .. image:: ./media/aftersales3.png
    :align: center
 
 Grant coupons from tickets
-==========================
+--------------------------
 
-First, be sure to have your *Coupon Program* planned at the *Sales or Website* app. At the
-*Helpdesk* app, I will open my ticket and click on *Coupon*, choose the
-:menuselection:`Coupon Program --> Generate`.
+First, be sure to have your *Coupon Program* planned in the *Sales* or *Website* application. Then,
+in *Helpdesk*, open your ticket, click on *Coupon*, and choose the respective one.
 
 .. image:: ./media/aftersales4.png
    :align: center
 
 Repairs from tickets
-====================
+--------------------
 
-Clicking on *Repair* option, on my ticket page, a new repair order form will be shown. Fill up the
-rest of the fields as needed and choose the next step.
+Clicking on *Repair* option, on your ticket page, a new repair order form is shown. Fill in the
+information as needed and choose the next step.
 
 .. image:: ./media/aftersales5.png
    :align: center
 
 Plan onsite interventions from tickets
-======================================
+--------------------------------------
 
-At the ticket page, I can now configure my onsite interventions exactly the same way I would do
-being on the *Field Service* app, clicking on *Plan Intervention*.
+At the ticket's page click on *Plan Intervention*, and set up your onsite intervention exactly the
+same way as if you were on the *Field Service* application.
 
 .. image:: ./media/aftersales6.png
    :align: center
+   :height: 300
 
 .. seealso::
+   - :doc:`../../fsm/overview/invoicing_time`
    - `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
    - :doc:`../../manufacturing/repair/repair`
