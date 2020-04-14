@@ -1,5 +1,5 @@
 ===================================
-Record and invoice time for tickets
+Record and Invoice Time for Tickets
 ===================================
 
 You may have service contracts with your clients to provide them
