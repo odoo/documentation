@@ -118,5 +118,5 @@ with the amount you have to pay or be refunded.
    above.
 
 .. seealso::
-   * :doc:`create`
+   * :doc:`../../fiscality/taxes/create`
    * :doc:`../../overview/getting_started/setup`

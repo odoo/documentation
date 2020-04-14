@@ -12,6 +12,6 @@ Accounting
    accounting/payables
    accounting/bank
    accounting/fiscality
+   accounting/reporting
    accounting/others
    accounting/localizations
-

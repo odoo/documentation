@@ -5,5 +5,5 @@ Reporting
 .. toctree::
    :titlesonly:
 
-   reporting/main_reports
-   reporting/customize
+   reporting/overview
+   reporting/declarations
