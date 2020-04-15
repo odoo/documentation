@@ -98,9 +98,9 @@ planning view of your interventions. Open the external link to adjust the daily 
 Share stages across projects
 ============================
 
-| In order to have a clean Kanban view that works across projects, and even to avoid duplicates,
+| In order to have a clean Kanban view that works across projects, and to avoid duplicates,
   delineate specific stages for different projects.
-| Go to :menuselection:`Settings --> Activate the developer mode`. Now, go to
+| :doc:`Activate the Developer mode <../../general/developer_mode/activate>` then go to
   :menuselection:`Project --> Configuration --> Stages`. Choose the respective one and add
   the projects among which you would like to share stages.
 
