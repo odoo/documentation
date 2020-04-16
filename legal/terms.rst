@@ -11,3 +11,4 @@ Terms and Conditions
     terms/enterprise
     terms/partnership
     terms/terms_of_sale
+test
