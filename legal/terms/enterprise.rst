@@ -319,7 +319,7 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 
 The Customer agrees to:
 
-- pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
+- comply and pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified in the corresponding invoice ;
 - immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
   numbers specified at the conclusion of the Agreement, and in this event, pay the applicable
@@ -463,7 +463,7 @@ breach has not been remedied within 30 calendar days from the written notice of 
 breach, this Agreement may be terminated immediately by the non-breaching Party.
 
 Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
-the applicable fees for the Services within the due date specified on the corresponding invoice.
+the applicable fees for the Services or comply with any applicable fee provision within the due date specified on the corresponding invoice. In the event that the agreement is terminated, Odoo retain any fees previously paid by Customer.
 
 Surviving Provisions:
   The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
