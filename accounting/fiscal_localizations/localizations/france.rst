@@ -74,7 +74,7 @@ To get the certification just follow the following steps:
 .. note::
    * To install the module in any system created before
      December 18th 2017, you should update the modules list.
-     To do so, activate the :doc:`Developer mode <../../general/developer_mode/activate>`.
+     To do so, activate the :doc:`Developer mode <../../../general/developer_mode/activate>`.
      Then go to the *Apps* menu and press *Update Modules List* in the top-menu.
    * In case you run Odoo on-premise, you need to update your installation
      and restart your server beforehand.
@@ -156,7 +156,7 @@ Invoicing and Accounting apps.
    it will be counted in the very next closing.
 
 .. tip:: For test & audit purposes such closings can be manually generated in the
-   :doc:`Developer mode <../../general/developer_mode/activate>`. Then go to
+   :doc:`Developer mode <../../../general/developer_mode/activate>`. Then go to
    :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`.
 
 
