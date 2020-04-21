@@ -1,6 +1,6 @@
-==============================================================
-Turn Helpdesk Hours into Invoices Directly from a Project Task
-==============================================================
+=========================================================
+Invoice Time Spent on Tickets (Postpaid Support Services)
+=========================================================
 
 Directly pull the billable time you have tracked on your helpdesk tickets into sales orders and
 invoices through a project task. It gives you more control over what you charge your client, and it
