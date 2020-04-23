@@ -24,7 +24,7 @@ Reordering Rules
 ----------------
 
 The *Reordering Rules* configuration is available through the menu
-:menuselection:`Inventory --> Master Data --> Reordering Rules`. There, click on
+:menuselection:`Inventory --> Configuration --> Products --> Reordering Rules`. There, click on
 *Create* to set minimum and maximum stock values for a given product.
 
 .. image:: media/min_stock_rule_vs_mto_01.png
