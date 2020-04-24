@@ -157,24 +157,13 @@ Your tax which represent the VAT 16%, 8% and 0% must have the "Factor Type" fiel
   :alt: product form sat code
   :width: 600
 
-Basic Usage and testing
+Prepare you master data
 =======================
 
-Introduction
-------------
-
-All the tests on this documenttion will be following the `Anexo 20`_ provided by the SAT translating such workflow to Odoo itself.
-
-Invoicing
----------
-
-*Fields*
-~~~~~~~~
-
-When you create a Mexican invoice some legal considerations must be taken into account.
+All the tests on this documentation will be following the `Anexo 20`_ provided by the SAT translating such workflow to Odoo itself.
 
 **Customer**
-^^^^^^^^^^^^
+------------
 
 To configure properly a customer you should considere the next information.
 
@@ -185,21 +174,22 @@ To configure properly a customer you should considere the next information.
   :alt: Bank form with special address fields form mexico
   :width: 600
 
-1. **Address** In the customer form you must add (but not exclusively those) *VAT*, *Country == Mexico* and *ZIP code* fields, the 
-   address will be taken from the commercial partner related to the contact in the invoice, If those fields are not set the invoice will 
-   be considered as an invoice for *Publico General* and automatically assigning the RFC to *XAXX010101000* if country Mexico is set and 
-   **XEXX010101000** if no country at all or no *VAT* and other country. |address form|
+1. **Address** In the customer form you must add (but not exclusively those) *VAT*, *Country which should be Mexico* and
+   *ZIP code* fields, the address will be taken from the commercial partner related to the contact in the invoice, If
+   those fields are not set the invoice will be considered as an invoice for *Publico General* and automatically
+   assigning the RFC to *XAXX010101000* if country Mexico is set and **XEXX010101000** if no country at all or no *VAT*
+   and other country. |address form|
 2. **Bank account** if you want to pre-fill the bank account which the invoice will be paid from (information necessary in the invoice
    for Mexico), you will find all the mexican banks availables. |bank form|
 
 **Product**
-^^^^^^^^^^^
+-----------
    
 1. **SAT code** if not sat code set then you will receive an error just when you do a sale invoice (to do vendor bills this code is not 
    necessary). |product form sat code|
 
 **Journal**
-^^^^^^^^^^^
+-----------
 
 .. |Journal address issued| image:: media/mexico67.png
   :alt: Journal address issued
@@ -210,11 +200,19 @@ To configure properly a customer you should considere the next information.
    *It is not mandatory but a good practice create this address as children of the main company partner with the name as the internal Office*
    |Journal address issued|
 
-**Invoice**
-^^^^^^^^^^^
 
-You will find some fields on *edit mode* and in *draft state* because they must be filled in order to genereate the correct Invoice to be signed
-and be valid for Mexico.
+Usage and testing
+=================
+
+*Fields*
+--------
+
+When you create a Mexican invoice some legal considerations must be taken into account.
+
+**Invoice**
+~~~~~~~~~~~
+
+The following five fields must be filled before attempting to validate (some of them are mandatory and other optionals).
 
 .. image:: media/mexico65.png
    :align: center
@@ -228,7 +226,7 @@ and be valid for Mexico.
 1. **Partner bank** Bank account which the payment will be wired from, if set in the partner (customer) then this will be set automatically by 
    default.
 2. **Payment Term** This field is the one that will set the value PPD (Pago en parcialidades from its meaning in spanish) or PUE (Pago en una 
-   sola exibición from it meanin in spanish), if any payement term before last day of current month or with more than one line of payments
+   sola exibición from it meaning in spanish), if any payment term before last day of current month or with more than one line of payments
    term then it will be PPD if only one line and imediate payment it will be PUE (*tip: rename the originals with text PPD or PUE to help 
    functionally your users*). |Payment term|
 3. **Payment Way** This is required by mexican law, in order to clarify how you are expecting the invoice will be paid, the functional decision
@@ -267,32 +265,32 @@ You will find other fields on *read only* mode and in *open state* due to the fa
 
 3. **Fiscal Folio**
 
-To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour. Once you validate your first 
-invoice a correctly signed invoice should look like this:
-
-.. image:: media/mexico56.png
-   :align: center
-
-All the marked fields in the image represent the important fields that are only relevant for Mexico and we asume you understand their 
-meaning by checking and reading the `Anexo 20`_.
-
-You can send the invoice inmediatly to your customer and automatically generate the PDF format and send it to your customer, for 
-that moment your invoice should look like this..
-
-.. image:: media/mexico57.png
-   :align: center
-
 Create your Invoice
-~~~~~~~~~~~~~~~~~~~
+-------------------
 
 An invoice can be created from any application in odoo that requires an invoice, all the use cases are tested 
 (From POS, From Subscription, From a normal Sale Order, From a projects, etc.) this explanation is in order to show you
 how to create a proper invoice without any special process more than set the proper values explained before.
 
-Payment complement
-------------------
+To use the mexican invoicing you just need to do a normal invoice following the normal Odoo's behaviour. Once you validate your first
+invoice a correctly signed invoice should look like this:
 
-There are 3 ways to generate a payment complement (exactly as the original odoo process propose)
+.. image:: media/mexico56.png
+   :align: center
+
+All the marked fields in the image represent the important fields that are only relevant for Mexico and we asume you understand their
+meaning by checking and reading the `Anexo 20`_.
+
+You can send the invoice inmediatly to your customer and automatically generate the PDF format and send it to your customer, for
+that moment your invoice should look like this..
+
+.. image:: media/mexico57.png
+   :align: center
+
+Pay your invoice
+----------------
+
+There are 3 ways to generate a payment complement, using the same payment workflow in odoo standard.
 
 a. From the invoice document.
 b. Payment first and then reconcile with invoices.
@@ -330,8 +328,11 @@ are PUE the signature will not be done but it can be forced from the payment its
 
 TODO: CONTINUE THIS
 
-Cases when the payment is not automatically signed
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+**c.** From the bank statements
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Cases when the payment is not automatically signed.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 There are cases when the payment do not require to be signed, on this cases the payment complement can be forced but the system 
 will decide to not sign it because is not required.
@@ -376,51 +377,29 @@ If the invoice is not paid.
 - You must unlink all related payment done to an invoice on odoo before cancel such document, this payments must be
   cancelled to following the same approach but setting the "Allow Cancel Entries" in the payment itself.
 
+Credit Notes
+------------
 
-Payments (Just available for CFDI 3.3)
---------------------------------------
+# todo
 
-To generate the payment complement you only need to follow the normal payment process in Odoo, this considerations to
-understand the behavior are important.
+Debit Notes
+------------
 
-#. To generate payment complement the payment term in the invoice must be PPD, because It is the expected behavior
-   legally required for "Cash payment".
+# todo
 
-   **1.1. How can I generate an invoice with payment term `PUE`?**
+Payment in advance
+-------------------
 
-   `According to the SAT documentation`_ a payment is classified as ``PUE`` if the invoice was agreed to be fully
-   payed before the 17th of the next calendar month (the next month of the CFDI date), any other condition will
-   generate a ``PPD`` invoice.
-
-   **1.2. How can I get this with Odoo?**
-
-   In order to set the appropriate CFDI payment term (PPD or PUE), you can easily set it by using the ``Payment Terms``
-   defined in the invoice.
-
-   - If an invoice is generated without ``Payment Term`` the attribute ``MetodoPago`` will be ``PUE``.
-
-   - Today, if is the first day of the month and is generated an invoice with ``Payment Term`` ``30 Net Days`` the
-     ``Due Date`` calculated is going to be the first day of the following month, this means its before the 17th of the
-     next month, then the attribute ``MetodoPago`` will be ``PUE``.
-
-   - Today, if an invoice is generated with ``Payment Term`` ``30 Net Days`` and the ``Due Date`` is higher than the
-     day 17 of the next month the ``MetodoPago`` will be ``PPD``.
-
-   - If having a ``Payment Term`` with 2 lines or more, for example ``30% Advance End of Following Month``, this is an
-     installments term, then the attribute ``MetodoPago`` will be ``PPD``.
-
-#. To test a normal signed payment just create an invoice with payment term ``30% Advance End of Following Month`` and
-   then register a payment to it.
-#. You must print the payment in order to retrieve the PDF properly.
-#. Regarding the "Payments in Advance" you must create a proper invoice with the payment in advance itself as a product
-   line setting the proper SAT code following the procedure on the official documentation `given by the SAT`_ in the
-   section **Apéndice 2 Procedimiento para la emisión de los CFDI en el caso de anticipos recibidos**.
-#. Related to topic 4 it is blocked the possibility to create a Customer Payment without a proper invoice.
-
+# todo
 
 Accounting
-----------
+==========
+
+Introduction
+------------
+
 The accounting for Mexico in odoo is composed by 3 reports:
+
 
 #. Chart of Account (Called and shown as COA).
 #. Electronic Trial Balance.
@@ -620,7 +599,6 @@ Contact Module (Free)
 If you want to administer properly your customers, suppliers and addresses
 this module even if it is not a technical need, it is highly recommended to
 install.
-
 
 Multi currency (Requires Accounting App)
 ----------------------------------------
