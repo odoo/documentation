@@ -82,6 +82,6 @@ Manage campaigns
    menu within those applications. All of this is possible because the applications work integrated.
 
 .. seealso::
-   - :doc:`../../discuss/email_servers`
+   - :doc:`../../discuss/advanced/email_servers`
    - :doc:`../../social_marketing/overview/campaigns`
 

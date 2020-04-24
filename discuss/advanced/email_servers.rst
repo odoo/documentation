@@ -1,5 +1,5 @@
 ============================================================
-How to use my mail server to send and receive emails in Odoo
+How to Use my Mail Server to Send and Receive Emails in Odoo
 ============================================================
 
 If you are a user of Odoo Online or Odoo.sh...
