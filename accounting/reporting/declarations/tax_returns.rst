@@ -60,7 +60,9 @@ grids that are used to record invoices or credit notes.
 
 .. note::
    Taxes and reports are usually already pre-configured: a *Fiscal Localization Package* is
-   installed according to the country you select at the creation of your database.
+   installed according to the country you select at the creation of your database. :doc:`Click here
+   <../../fiscal_localizations/overview/fiscal_localization_packages>` for more information about
+   Fiscal Localization Packages.
 
 .. _tax_return_lock:
 
@@ -120,3 +122,4 @@ with the amount you have to pay or be refunded.
 .. seealso::
    * :doc:`../../fiscality/taxes/create`
    * :doc:`../../overview/getting_started/setup`
+   * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`

@@ -268,7 +268,7 @@ Sequences
 ~~~~~~~~~
 In case that you want to synchronize the next number in the sequence in Odoo based on the next
 number in the AFIP POS, the next button that is visible under :doc:`developer mode
-<../../general/developer_mode/activate>` can be used: 
+<../../../general/developer_mode/activate>` can be used:
 
 .. image:: media/argentina_edi_05.png
    :align: center

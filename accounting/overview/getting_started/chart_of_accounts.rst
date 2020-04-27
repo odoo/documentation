@@ -171,3 +171,4 @@ To do so, check the **Deprecated** box and save.
    * :doc:`../../payables/supplier_bills/assets`
    * :doc:`../../payables/supplier_bills/deferred_expenses`
    * :doc:`../../receivables/customer_invoices/deferred_revenues`
+   * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`

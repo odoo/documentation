@@ -14,4 +14,4 @@ Accounting
    accounting/fiscality
    accounting/reporting
    accounting/others
-   accounting/localizations
+   accounting/fiscal_localizations
