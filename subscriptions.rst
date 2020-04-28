@@ -8,4 +8,5 @@ Subscriptions
    :titlesonly:
 
    subscriptions/configuration
+   subscriptions/sales_flow
 
