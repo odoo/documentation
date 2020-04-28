@@ -6,30 +6,31 @@ Applications
    :titlesonly:
 
    accounting
+   expense/expense
    crm
    sales
    website
+   live_chat
    ecommerce
-   discuss
    purchase
    inventory
    manufacturing
    quality
    point_of_sale
-   project
+   discuss
    helpdesk
-   live_chat
-   expense/expense
+   project
+   fsm
+   planning
+   timesheets
    iot
    mobile/firebase
    events
+   email_marketing
    social_marketing
    sms_marketing
    marketing_automation
    survey
-   fsm
-   planning
-   email_marketing
 
    general
 
