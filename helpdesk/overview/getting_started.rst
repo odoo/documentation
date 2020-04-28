@@ -1,171 +1,65 @@
-==============================
-Get started with Odoo Helpdesk
-==============================
+===============
+Getting Started
+===============
 
-Overview
-========
+Helpdesk teams provide your customers with support to queries or errors they might encounter while
+using your product/service. Therefore, a successful scheme where you can organize multiple teams
+with their customized pipeline, visibilities settings, and ticket traceability is essential.
 
-Getting started with Odoo Helpdesk
+Set up teams
+============
+
+| To modify or create teams, go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`.
+| Setting up multiple teams allows you to group tickets by your channels (example: BE/US), or by
+  your support services' types (example: IT, accounting, admin, etc.).
+
+.. image:: media/helpdesk_teams_view.png
+   :align: center
+   :alt: View of the helpdesk teams page in Odoo Helpdesk
+
+Team’s productivity and visibility
 ----------------------------------
 
-Installing Odoo Helpdesk:
+Teams can have individual *Assignment Methods* to ensure that tickets get redirected to the right
+person:
 
-Open the Apps module, search for "Helpdesk", and click install
+- *Manually*: tickets are manually assigned, allowing employees to manage their own workload and
+  target tickets they are experts at;
+- *Random*: tickets are randomly assigned and everyone gets the same amount. This method ensures
+  that all tickets are handled as the assignment happens automatically;
+- *Balanced*: tickets are assigned to the person with the least amount of tickets so that everyone
+  fairly gets the same amount. Thereby, you ensure that all tickets get to be taken care of.
 
-.. image:: media/helpdesk01.png
+.. image:: media/productivity_visibility.png
    :align: center
+   :alt: View of a helpdesk team settings page emphasizing the productivity and visibility features
+         in Odoo Helpdesk
 
-Set up Helpdesk teams
----------------------
+| For the *Random* and *Balanced* assignment methods, you can set the *Team Members* among
+  whom tickets are assigned. Leave the field empty to include all employees (with the proper
+  access rights).
+| The *Team Visibility* feature allows you to specify who can see and access the team’s tickets.
+  Therefore, ticket’s with sensible information are only seen by the right people.
+  Leave the field empty to include all employees (with the proper access rights).
 
-By default, Odoo Helpdesk comes with a team installed called "Support"
+Set up stages and share it among teams
+======================================
 
-.. image:: media/helpdesk02.png
+To set up stages, go to :menuselection:`Helpdesk --> Configuration --> Stages`. Then, create and/or
+edit stages as you need and set specific teams to use certain stages under *Team*.
+
+.. image:: media/stages_teams.png
    :align: center
+   :alt: View of a stage’s setting page emphasizing the option to add teams in Odoo Helpdesk
 
-To modify this team, or create additional teams, select "Configuration"
-in the purple bar and select "Settings"
+Stages can be shared between one or multiple teams, allowing you to adapt the pipeline to your
+individual needs. They also apply a visibility and access rule, as other teams are not able to see
+or use the stage.
 
-.. image:: media/helpdesk03.png
+.. image:: media/helpdesk_kanbanview.png
    :align: center
+   :alt: View of a team’s kanban view in Odoo Helpdesk
 
-Here you can create new teams, decide what team members to add to this
-team, how your customers can submit tickets and set up SLA policies and
-ratings. For the assignation method you can have tickets assigned
-randomly, balanced, or manually.
+.. seealso::
+   - :doc:`../../general/odoo_basics/add_user`
 
-How to set up different stages for each team
---------------------------------------------
-
-First you will need to activate the :doc:`Developer mode <../../general/developer_mode/activate>`.
-
-Now, when you return to your Helpdesk module and select "Configuration"
-in the purple bar you will find additional options, like "Stages". Here
-you can create new stages and assign those stages to 1 or multiple teams
-allowing for customizable stages for each team!
-
-Start receiving tickets
-=======================
-
-How can my customers submit tickets?
-------------------------------------
-
-Select "Configuration" in the purple bar and select "Settings", select
-your Helpdesk team. Under "Channels you will find 4 options:
-
-.. image:: media/helpdesk05.png
-   :align: center
-
-Email Alias allows for customers to email the alias you choose to create
-a ticket. The subject line of the email with become the Subject on the
-ticket.
-
-.. image:: media/helpdesk06.png
-   :align: center
-
-Website Form allows your customer to go to
-yourwebsite.com/helpdesk/support-1/submit and submit a ticket via a
-website form - much like odoo.com/help!
-
-.. image:: media/helpdesk07.png
-   :align: center
-
-Live Chat allows your customers to submit a ticket via Live Chat on your
-website. Your customer will begin the live chat and your Live Chat
-Operator can create the ticket by using the command /helpdesk Subject of
-Ticket.
-
-.. image:: media/helpdesk08.png
-   :align: center
-
-The final option to submit tickets is through an API connection. View the
-documentation `here <https://www.odoo.com/documentation/13.0/webservices/odoo.html>`_.
-
-Tickets have been created, now what?
-------------------------------------
-
-Now your employees can start working on them! If you have selecting a
-manual assignation method then your employees will need to assign
-themselves to tickets using the "Assign To Me" button on the top left of
-a ticket or by adding themselves to the "Assigned to" field.
-
-.. image:: media/helpdesk09.png
-   :align: center
-
-If you have selected "Random" or "Balanced" assignation method, your
-tickets will be assigned to a member of that Helpdesk team.
-
-From there they will begin working on resolving the tickets! When they
-are completed, they will move the ticket to the solved stage.
-
-How do I mark this ticket as urgent?
-------------------------------------
-
-On your tickets you will see stars. You can determine how urgent a
-ticket is but selecting one or more stars on the ticket. You can do this
-in the Kanban view or on the ticket form.
-
-.. image:: media/helpdesk10.png
-   :align: center
-
-To set up a Service Level Agreement Policy for your employees, first
-activate the setting under "Settings"
-
-.. image:: media/helpdesk11.png
-   :align: center
-
-From here, select "Configure SLA Policies" and click "Create".
-
-You will fill in information like the Helpdesk team, what the minimum
-priority is on the ticket (the stars) and the targets for the ticket.
-
-.. image:: media/helpdesk12.png
-   :align: center
-
-What if a ticket is blocked or is ready to be worked on?
---------------------------------------------------------
-
-If a ticket cannot be resolved or is blocked, you can adjust the "Kanban
-State" on the ticket. You have 3 options:
-
-- Grey - Normal State
-
-- Red - Blocked
-
-- Green - Ready for next stage
-
-Like the urgency stars you can adjust the state in the Kanban or on the
-Ticket form.
-
-.. image:: media/helpdesk13.png
-   :align: center
-
-How can my employees log time against a ticket?
------------------------------------------------
-
-First, head over to "Settings" and select the option for "Timesheet on
-Ticket". You will see a field appear where you can select the project
-the timesheets will log against.
-
-.. image:: media/helpdesk14.png
-   :align: center
-
-Now that you have selected a project, you can save. If you move back to
-your tickets, you will see a new tab called "Timesheets"
-
-.. image:: media/helpdesk15.png
-   :align: center
-
-Here you employees can add a line to add work they have done for this
-ticket.
-
-How to allow your customers to rate the service they received
--------------------------------------------------------------
-
-First, you will need to activate the ratings setting under "Settings"
-
-.. image:: media/helpdesk16.png
-   :align: center
-
-Now, when a ticket is moved to its solved or completed stage, it will
-send an email to the customer asking how their service went.
