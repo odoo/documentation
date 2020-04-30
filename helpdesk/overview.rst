@@ -7,4 +7,4 @@ Overview
 
    overview/getting_started
    overview/sla
-   overview/receiving_ticketsgit
+   overview/receiving_tickets
