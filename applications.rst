@@ -77,4 +77,5 @@ Applications
    events
    survey
    expense/expense
+   studio
    mobile/firebase
