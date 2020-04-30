@@ -6,3 +6,4 @@ Sales flow
    :titlesonly:
 
    sales_flow/create_a_quotation
+   sales_flow/renewals
