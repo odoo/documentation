@@ -76,6 +76,7 @@ Applications
    marketing_automation
    events
    survey
+   employees
    expense/expense
    studio
    mobile/firebase
