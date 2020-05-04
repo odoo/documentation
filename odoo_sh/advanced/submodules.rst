@@ -37,6 +37,10 @@ Adding a submodule
 With Odoo.sh (simple)
 ---------------------
 
+.. warning::
+   For now it is not possible to add **private** repositories with this method. You can nevertheless
+   do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
+
 On Odoo.sh, in the branches view of your project, choose the branch in which you want to add a submodule.
 
 In the upper right corner, click on the *Submodule* button, and then on *Run*.
@@ -57,9 +61,6 @@ On Github, you can get the repository URL with the *Clone or download* button of
 
 .. image:: ./media/advanced-submodules-github-sshurl.png
   :align: center
-
-For now it is not possible to add **private** repositories with this method.
-You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
 
 .. _odoosh-advanced-submodules-withgit:
 
