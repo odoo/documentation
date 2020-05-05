@@ -42,3 +42,6 @@ Go to :menuselection:`Helpdesk --> Reporting --> SLA Status Analysis`. Apply *Fi
 .. image:: media/sla_analysis.png
    :align: center
    :alt: View of the SLA status analysis page emphasizing the group by option in Odoo Helpdesk
+
+.. seealso::
+   - :doc:`../advanced/close_tickets`
