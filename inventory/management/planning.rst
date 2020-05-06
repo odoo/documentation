@@ -6,5 +6,5 @@ Planning
    :titlesonly:
    :glob:
 
-   planning/scheduled_date
+   planning/scheduled_dates
    planning/schedulers
