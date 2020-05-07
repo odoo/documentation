@@ -692,5 +692,5 @@ FAQ
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
 .. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
-.. _`Certificate`: ../../_static/files/certificate.cer
-.. _`Certificate Key`: ../../_static/files/certificate.key
+.. _`Certificate`: ../../../_static/files/certificate.cer
+.. _`Certificate Key`: ../../../_static/files/certificate.key
