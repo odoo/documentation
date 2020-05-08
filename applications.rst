@@ -68,6 +68,7 @@ Applications
    iot
    website
    ecommerce
+   elearning
    helpdesk
    live_chat
    email_marketing
