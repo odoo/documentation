@@ -15,8 +15,8 @@ Odoo Partnership Agreement
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
 |  Belgium, and its affiliates (collectively referred to as “ODOO”)
 | AND:
-|  _____________________________________________, a company having its registered office at
-|  _____________________________________________________________________________________.
+|  Dot Future Company for Information Technology, a company having its registered office at
+|  Office# 7, Floor# 18, Bldg# T3, Empire Business Towers, Erbil, Kurdistan Region, Iraq.
 |  (hereinafter referred to as “PARTNER”)
 
 ODOO and PARTNER are individually referred to as a "Party" and collectively referred to as
