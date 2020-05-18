@@ -16,6 +16,8 @@ First, go to :menuselection:`Field Service --> Configuration --> Settings` and e
 Second, go to :menuselection:`Configuration --> Projects` and enable *Extra Quotations*.
 
 .. image:: media/cq2.png
+   :align: center
+   :height: 400
    :alt: Create quotations in Odoo Field Service
 
 You can now create *New Quotations* directly from your tasks.
