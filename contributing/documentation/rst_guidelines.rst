@@ -1,8 +1,8 @@
 :banner: banners/contributing.png
 
-==========
-Guidelines
-==========
+==============
+RST guidelines
+==============
 
 .. _contributing/relative-links:
 
