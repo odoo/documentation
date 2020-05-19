@@ -32,13 +32,15 @@ If you need to learn about a specific markup, head over to :doc:`our cheat sheet
 documentation of Odoo.
 
 .. important::
-   We kindly ask you to observe a set of :doc:`guidelines <guidelines>` as you write :abbr:`RST
-   (reStructuredText)`. This ensures that you stay consistent with the rest of the documentation and
-   facilitates the approval of your content changes as they are reviewed by a redactor at Odoo.
+   We kindly ask you to observe a set of :doc:`content <content_guidelines>` and :doc:`RST
+   <rst_guidelines>` guidelines as you write documentation. This ensures that you stay consistent
+   with the rest of the documentation and facilitates the approval of your content changes as they
+   are reviewed by a redactor at Odoo.
 
 .. seealso::
    - :doc:`rst_cheat_sheet`
-   - :doc:`guidelines`
+   - :doc:`rst_guidelines`
+   - :doc:`content_guidelines`
 
 .. _contributing/getting-started:
 
@@ -81,7 +83,8 @@ Use the GitHub interface
 
    .. image:: media/fork-repository.png
 
-#. Make the appropriate changes while taking care of following the :doc:`guidelines <guidelines>`.
+#. Make the appropriate changes while taking care of following the :doc:`guidelines
+   <rst_guidelines>`.
 
 #. Click on the **Preview changes** button to review your contribution in a more human-readable
    format. Be aware that the preview is not able to handle all markups correctly. Notes and tips,
@@ -307,7 +310,7 @@ Perform your changes
 
 You can now perform any change you want to the documentation files. These changes must be compliant
 with :abbr:`RST (reStructuredText)` syntax (see :doc:`rst_cheat_sheet`) and with our
-:doc:`guidelines <guidelines>`.
+:doc:`guidelines <rst_guidelines>`.
 
 .. important::
    If your changes include the addition of a new image, for instance :file:`my_image.png`, proceed
