@@ -12,7 +12,9 @@ The settings visible in the onboarding banner can still be modified later by goi
 .. note::
    Odoo Accounting automatically installs the appropriate **Fiscal Localization Package** for your
    company, according to the country selected at the creation of the database. This way, the right
-   accounts, reports, and taxes are ready-to-go.
+   accounts, reports, and taxes are ready-to-go. :doc:`Click here
+   <../../fiscal_localizations/overview/fiscal_localization_packages>` for more information about
+   Fiscal Localization Packages.
 
 Accounting onboarding banner
 ============================
@@ -50,30 +52,31 @@ such as on invoices.
 Bank Account
 ------------
 
-Connect your bank account database to your database, and have your bank statements synced
-automatically. To do so, find your bank on the list, click on *Connect*, and follow the instructions
-on-screen.
+Connect your bank account to your database and have your bank statements synced automatically. To do
+so, find your bank in the list, click on *Connect*, and follow the instructions on-screen.
 
 .. note::
    :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this feature.
 
-If your bank can’t be synchronized automatically, or if you prefer not to sync your bank account
-with your database, you may also configure your bank account manually by clicking on *Create it*,
-and filling out the form.
+If your Bank Institution can’t be synchronized automatically, or if you prefer not to sync it with
+your database, you may also configure your bank account manually by clicking on *Create it*, and
+filling out the form.
 
 - **Name**: the bank account's name, as displayed on Odoo.
 - **Account Number**: your bank account number (IBAN in Europe).
-- **Bank**: click on *Create and Edit* to configure the bank's details. Add the real bank's name
-  and its Identifier Code (BIC or SWIFT).
+- **Bank**: click on *Create and Edit* to configure the bank's details. Add the bank institution's
+  name and its Identifier Code (BIC or SWIFT).
 - **Code**: this code is your Journal's *Short Code*, as displayed on Odoo. By default, Odoo creates
   a new Journal with this Short Code.
-- **Journal**: if this field is displayed, then select the *Journal* you want to use to record the
-  financial transactions linked to this bank account, or create a new one by clicking on *Create and
-  Edit*.
+- **Journal**: This field is displayed if you have an existing Bank Journal that is not linked yet
+  to a bank account. If so, then select the *Journal* you want to use to record the financial
+  transactions linked to this bank account or create a new one by clicking on *Create and Edit*.
 
 .. note::
-   You can add as many bank accounts as needed with this tool by going to :menuselection:`Accounting
-   --> Configuration`, and clicking on *Add a Bank Account*.
+   - You can add as many bank accounts as needed with this tool by going to :menuselection:`Accounting
+     --> Configuration`, and clicking on *Add a Bank Account*.
+   - :doc:`Click here <../../bank/setup/bank_accounts>` for more information about Bank
+     Accounts.
 
 .. _accounting-setup-periods:
 
@@ -184,6 +187,8 @@ Sample Invoice
 Send yourself a sample invoice by email to make sure everything is correctly configured.
 
 .. seealso::
+   * :doc:`../../bank/setup/bank_accounts`
    * :doc:`chart_of_accounts`
    * :doc:`../../bank/feeds/bank_synchronization`
+   * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
    * `Odoo Learn: Accounting Basics <https://www.odoo.com/r/lsZ>`_

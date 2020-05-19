@@ -84,6 +84,14 @@ DEALINGS IN THE SOFTWARE.
 
     </tt>
 
+.. _odoo_12_license:
+
+Odoo 12
+=======
+
+The licenses for both editions of Odoo 12 were respectively the same as for
+:ref:`odoo_community_license` and :ref:`odoo_enterprise_license`.
+
 .. _odoo_11_license:
 
 Odoo 11

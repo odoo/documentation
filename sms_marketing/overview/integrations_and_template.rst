@@ -1,26 +1,27 @@
 ==========================
 Integrations and Templates
 ==========================
-Using SMS to reach people can be a strategy not just used for advertisement purposes but also as a
+
+Using SMS to reach people can be a strategy not just used for advertisement purposes, but also as a
 reminder of events or issued invoices to your costumers, for example.
 
+Campaigns
+=========
 
-Organize Email Marketing and SMS Campaigns
-==========================================
 First, make sure to have the necessary feature activated. Go to the :menuselection:`Email Marketing
-app --> Configuration --> Settings --> activate the option Mailing Campaigns`.
+app --> Configuration --> Settings` and enable *Mailing Campaigns*.
 
 .. image:: ./media/sms_marketing12.png
    :align: center
 
-Now, you will also have the menu *Campaigns* included in your *SMS Marketing* page, allowing you
-to have an overview of your SMS mailings and your email marketing ones.
+Now, the menu *Campaigns* is also available on the *SMS Marketing* app, allowing you to manage and
+have an overview of your SMS mailings under campaigns.
 
 .. image:: ./media/sms_marketing13.png
    :align: center
 
 This feature is especially useful if you have aggregated campaigns, as you have a global reporting
-view. In addition to that, you can create stages in your kanban view to better organize the work
+view. In addition to that, you can create stages in your Kanban view to better organize the work
 being done.
 
 .. image:: ./media/sms_marketing14.png
@@ -28,6 +29,7 @@ being done.
 
 Sending SMSs through the Contacts app
 =====================================
+
 | Sending SMSs through the contact’s form is available by default in Odoo. It makes your work easier
   if you need to send an SMS to a specific contact, for example.
 | For that, go to the *Contacts* app, select the contact and click on the *SMS* icon next to the
@@ -36,18 +38,17 @@ Sending SMSs through the Contacts app
 .. image:: ./media/sms_marketing15.png
    :align: center
 
-If you would like to send a message in a batch here, you could go to
-:menuselection:`List View --> select all the contacts --> Action --> Send SMS`.
+If you would like to send a message to multiple contacts at once, choose the *List View*, select
+all the contacts needed, and under *Action* select *Send SMS*.
 
 .. image:: ./media/sms_marketing16.png
    :align: center
 
-
-Set up SMS Templates
+Set up SMS templates
 ====================
-To set up *SMS Templates*, activate
-the :doc:`Developer mode <../../general/developer_mode/activate>`. Now, go to
-:menuselection:`Technical --> Phone/SMS section --> SMS Templates`.
+
+To set up *SMS Templates*, activate the :doc:`Developer mode <../../general/developer_mode/activate>`,
+then go to :menuselection:`Technical --> SMS Templates`.
 
 .. image:: ./media/sms_marketing17.png
    :align: center
@@ -59,7 +60,7 @@ the :doc:`Developer mode <../../general/developer_mode/activate>`. Now, go to
    Use *Dynamic Placeholders* to adapt automatically the content of the SMS to the context.
 
 .. note::
-   SMS Text Messaging is available throughout Odoo! Here are some of our extra notable integrations: 
+   SMS Text Messaging is available throughout Odoo:
    
    - *CRM*: send SMSs to your leads and opportunities.
    - *Subscription*: alert customers about their subscription.
@@ -70,7 +71,10 @@ the :doc:`Developer mode <../../general/developer_mode/activate>`. Now, go to
    - *SEPA debit payment provider*: send a verification code to your customers.
    - *Studio*: send an SMS according to your needs by using automated actions.
 
-.. tip::
+.. important::
    For more information about SMS integrations in Odoo and a list of frequently asked questions,
    go to :doc:`../pricing/pricing_and_faq`.
 
+.. seealso::
+   - :doc:`../../social_marketing/overview/campaigns`
+   - :doc:`../../discuss/advanced/emailtemplate`

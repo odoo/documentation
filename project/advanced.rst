@@ -5,6 +5,7 @@ Advanced
 .. toctree::
    :titlesonly:
 
-   advanced/so_to_task
+   advanced/advanced_projects
    advanced/feedback
+   advanced/so_to_task
    advanced/profitability

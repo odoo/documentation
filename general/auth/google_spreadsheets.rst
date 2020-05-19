@@ -51,6 +51,13 @@ Applications
 You have 2 different formulas of using Google Spreadsheet in Odoo: retrieve data and retrieve
 grouped sums.
 
+.. warning::
+   Google Drive limits the execution time of scripts; if the data you requested takes
+   too long to be delivered, you might get an error. There is no specific size limit, since the
+   time for Odoo to respond depends on several factors - although reading data regarding several
+   thousand records is usually fine.
+
+
 Retrieve Data
 -------------
 

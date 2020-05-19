@@ -15,3 +15,4 @@ Discuss
    discuss/plan_activities
    discuss/mail_twitter
    discuss/email_servers
+   discuss/advanced

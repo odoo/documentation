@@ -9,4 +9,5 @@ Contributing to the documentation
 
    documentation/introduction_guide
    documentation/rst_cheat_sheet
-   documentation/guidelines
+   documentation/rst_guidelines
+   documentation/content_guidelines

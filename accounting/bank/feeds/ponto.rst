@@ -12,7 +12,7 @@ continuously expanding the number of bank institutions that can be synchronized 
 
 **Odoo Accounting** can synchronize directly with your bank to get all bank statements imported
 automatically into your database. This allows for easier **bank reconciliation**. When :doc:`adding
-a bank account on Odoo <../setup/create_bank_account>`, you can see if your bank requires a
+a bank account on Odoo <../setup/bank_accounts>`, you can see if your bank requires a
 connection through Ponto by searching for your bank institution, and clicking on it.
 
 .. image:: media/ponto_add_bank.png
@@ -112,5 +112,5 @@ token instead of the current synchronization system with a *Client ID* and a *Se
 .. seealso::
 
    * :doc:`bank_synchronization`
-   * :doc:`../setup/create_bank_account`
+   * :doc:`../setup/bank_accounts`
    * :doc:`bank_statements`

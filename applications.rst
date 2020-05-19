@@ -2,35 +2,79 @@
 Applications
 ============
 
-.. toctree::
-   :titlesonly:
-
-   accounting
+.. ORDER (new apps / sections included):
+   general
+   discuss
    crm
    sales
-   website
-   ecommerce
-   discuss
    purchase
+   rental
+   accounting
+   consolidation
+   subscription
+   project
+   timesheets
+   planning
+   bi
+   documents
+   fsm
+   point_of_sale
    inventory
    manufacturing
    quality
-   point_of_sale
-   project
+   barcode
+   iot
+   website
+   ecommerce
+   elearning
    helpdesk
    live_chat
-   expense/expense
-   iot
-   mobile/firebase
-   events
+   email_marketing
    social_marketing
    sms_marketing
    marketing_automation
+   events
    survey
-   fsm
-   planning
-   email_marketing
+   employees
+   recruitment
+   referrals
+   leaves
+   expenses
+   appraisals
+   fleet
+   approvals
+   lunch
+   studio
+   mobile
+   misc
+
+.. toctree::
+   :titlesonly:
 
    general
-
-.. Leave general on the last line !
+   discuss
+   crm
+   sales
+   purchase
+   accounting
+   project
+   timesheets
+   planning
+   fsm
+   point_of_sale
+   inventory
+   manufacturing
+   quality
+   iot
+   website
+   ecommerce
+   helpdesk
+   live_chat
+   email_marketing
+   social_marketing
+   sms_marketing
+   marketing_automation
+   events
+   survey
+   expense/expense
+   mobile/firebase

@@ -1,6 +1,6 @@
-=====================
-Planning your project
-=====================
+========
+Planning
+========
 
 .. toctree::
    :titlesonly:

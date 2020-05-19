@@ -127,5 +127,5 @@ field.
 
 .. seealso::
    - :doc:`check`
-   - :doc:`../../bank/setup/create_bank_account`
+   - :doc:`../../bank/setup/bank_accounts`
    - :doc:`../../bank/reconciliation/use_cases`

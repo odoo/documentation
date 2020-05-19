@@ -135,8 +135,8 @@ Credentials
 Odoo requires three Paypal credentials:
 
 - *Email ID* is your login email address in Paypal.
-- *Merchant ID* can be found in the settings of your Paypal account, in :menuselection:`Profile -->
-  About the business`.
+- *Merchant ID* can be found in the settings of your Paypal account, in
+  :menuselection:`Account Settings --> Business information`.
 - *Paypal PDT Token* is given in *Website payments* configuration as explained here above.
 
 .. image:: media/paypal09.png

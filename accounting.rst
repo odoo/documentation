@@ -1,8 +1,8 @@
 :banner: banners/accounting.png
 
-==========
-Accounting
-==========
+========================
+Invoicing and Accounting
+========================
 
 .. toctree::
    :titlesonly:
@@ -12,6 +12,6 @@ Accounting
    accounting/payables
    accounting/bank
    accounting/fiscality
+   accounting/reporting
    accounting/others
-   accounting/localizations
-
+   accounting/fiscal_localizations
