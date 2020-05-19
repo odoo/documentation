@@ -32,4 +32,5 @@ access the task clicking on its name.
 
 .. image:: media/reinvoice_time3.png
    :align: center
+   :height: 300
    :alt: Sales Order from a task in Odoo Helpdesk
