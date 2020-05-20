@@ -7,7 +7,7 @@ Taxes
 
    taxes/create
    taxes/default_taxes
-   taxes/application
+   taxes/fiscal_positions
    taxes/taxcloud
    taxes/tax_included
    taxes/retention
