@@ -77,5 +77,5 @@ provided in the `Authorize.Net Testing Guide <https://developer.authorize.net/he
 
 .. seealso::
 
-  * :doc:`payment`
-  * :doc:`payment_acquirer`
+  * :doc:`payment_acquirers`
+  * :doc:`../../ecommerce/shopper_experience/payment_acquirer`
