@@ -179,7 +179,17 @@ alias in your mail server.
 
 Set up different dedicated servers for transactional and mass mails
 -------------------------------------------------------------------------
-In Odoo it is possible to use two separate e-mail mail transfer agent (MTA) servers for transactional e-mails and mailing list uses. For example, it would be possible to use Odoo's own e-mail servers for transactional e-mails and Sendgrid / Amazon SES / Mailgun for mass mailings. This actually would be a good idea since Odoo's e-mail servers have a limit of sending maximum 200 e-mails per day. Alternative is to use Postmark for transactional e-mails and Amazon SES or Sendgrid for mass mailings.
+| Odoo's e-mail server has the capability of :doc:`sending 200 e-mails per day on Odoo SH Cloud Platform 
+  <../../email_marketing/overview/send_emails>`. However, if needed, you can use separate Mail Transfer Agent 
+  (MTA) servers for transactional e-mails and mass mailings. 
+| Example: use Odoo's own mail server for transactional e-mails, and Sendgrid, Amazon SES, or Mailgun for 
+  mass mailings. Another alternative is to use Postmark for transactional e-mails, and Amazon SES or Sendgrid 
+  for mass mailings.
+
+.. note::
+   A default outgoing email server is already configured. You should not create an alternative one unless you 
+   want to use a specific external outgoing email server for technical reasons.
+
 
 To do this, one should first enable developer mode and then enter Settings -> Technical -> Outgoing e-mail servers. There you have to create two e-mail MTA server settings. One for transactional e-mails and one for mass mail servers. Be sure to mark the priority of transactional e-mail servers as lower number as the mass email servers.
 
