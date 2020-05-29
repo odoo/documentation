@@ -101,7 +101,7 @@ Similar to staging branches, the emails are not sent but are intercepted by a ma
 scheduled actions are not triggered as often is the database is not in use.
 
 The databases created for development branches are meant to live around three days.
-After that, they can be garbage collected to make room for new databases.
+After that, they can be automatically garbage collected to make room for new databases without prior notice.
 
 .. _odoosh-gettingstarted-branches-mergingbranches:
 
