@@ -1,81 +1,117 @@
-==================================
-How to get paid with Authorize.Net
-==================================
+=============
+Authorize.Net
+=============
 
-Authorize.Net is one of the most popular eCommerce payment platforms in North America.
-Unlike most of the other payment acquirers compatible with Odoo, 
-Authorize.Net can be used as `payment gateway <https://www.authorize.net/solutions/merchantsolutions/pricing/?p=gwo>`__ only.
-That way you can use the `payment processor or merchant <https://www.authorize.net/partners/resellerprogram/processorlist/>`__ that you like.
+`Authorize.Net <https://www.authorize.net>`__ is a United States-based online payment solution
+provider, allowing businesses to accept **credit cards**.
 
+.. image:: media/authorize-net.png
+   :align: center
+   :alt: Authorize.Net logo
 
-Create an Authorize.Net account
-===============================
+This Payment Acquirer offers additional options that are not available for other :doc:`Payment
+Acquirers <payment_acquirers>`, such as the ability to process your customer's payment after
+delivery.
 
-* Create an `Authorize.Net account <https://www.authorize.net>`__ 
-  by clicking 'Get Started'.
-* In the pricing page, press *Sign up now* if you want to use Authorize.net as
-  both payment gateway and merchant. If you want to use your own merchant, press
-  the related option.
+Authorize.Net account
+=====================
 
-  .. image:: media/authorize01.png
-    :align: center
+If not done yet, choose a plan and `Sign Up for an Authorize.Net account
+<https://www.authorize.net/sign-up.html>`__.
 
-* Go through the registration steps. 
-* The account is set as a test account by default. You can use this test
-  account to process a test transaction from Odoo.
-* Once ready, switch to **Production** mode. 
+Odoo needs your **API Credentials & Keys** to connect with your Authorize.Net account, which
+comprise:
 
+- API Login ID
+- Transaction Key
+- Signature Key
 
-Set up Odoo
-===========
-* Activate Authorize.Net in Odoo from :menuselection:`Website or Sales or Accounting 
-  --> Settings --> Payment Acquirers`.
-* Enter both your **Login ID** 
-  your **API Transaction Key** and your **API Signature Key**.
+To retrieve them, log into your Authorize.Net account, go to :menuselection:`Account --> Security
+Settings --> General Security Settings --> API Credentials & Keys`, and generate your **Transaction
+Key** and **Signature Key**.
 
-  .. image:: media/authorize02.png
-    :align: center
-
-  To get those credentials from Authorize.Net, you can follow the direction
-  in the Authorize.net Help
-  `API Credentials and Keys <https://account.authorize.net/help/Account/Settings/Security_Settings/General_Settings/API_Login_ID_and_Transaction_Key.htm>`__
-  entry and access the menu :menuselection:`Account --> Settings --> API Credentials & Keys`
-  in the Authorize.net dashboard. Note that you need *both* a Transaction key and and Signature key.
-
-* Once both keys are set up, you can then generate a Client Key by clicking the
-  "Generate Client Key" button. Note that these 3 keys are necessary for the
-  setup to work correctly.
-
-
-Go live
-=======
-Your configuration is now ready! 
-You can make Authorize.Net visible on your merchant interface
-and activate the **Enabled** state.
-
-.. image:: media/paypal_live.png
-    :align: center
-
-.. note:: Credentials provided by Authorize.net are different for both
-   test and production mode. Don't forget to update them in Odoo when you
-   switch from testing to production or vice-versa.
-
-
-Assess Authorize.Net as payment solution
-========================================
-You can test and assess Authorize.Net for free by creating a `developer account <https://developer.authorize.net>`__.
-
-Once the account created you receive sandbox credentials.
-Enter them in Odoo as explained here above and make sure 
-you are still in *Test* mode.
-
-You can also log in to `Authorize.Net sandbox platform <https://sandbox.authorize.net/>`__
-to configure your sandbox account.
-
-To perform ficticious transactions you can use fake card numbers
-provided in the `Authorize.Net Testing Guide <https://developer.authorize.net/hello_world/testing_guide/>`__. 
+.. image:: media/authorize-api-keys.png
+   :align: center
+   :alt: Generate your Transaction Key and Signature Key on your Authorize.Net account
 
 .. seealso::
 
-  * :doc:`payment_acquirers`
-  * :doc:`../../ecommerce/shopper_experience/payment_acquirer`
+   - `Authorize.Net: Getting Started Guide
+     <https://support.authorize.net/s/article/Authorize-Net-Getting-Started-Guide>`__
+
+Payment Acquirer Configuration
+==============================
+
+To configure Authorize.Net as Payment Acquirer in Odoo, go to :menuselection:`Accounting -->
+Configuration --> Payment Acquirers`, open **Authorize.Net**, and change the **State** to *Enabled*.
+Don't forget to click on *Save* once you've set everything up.
+
+.. note::
+   Please refer to the :doc:`Payment Acquirers documentation <payment_acquirers>` to read how to
+   configure this payment acquirer.
+
+Credentials
+-----------
+
+Copy your credentials from your Authorize.Net account (API Login Id, API Transaction Key, and API
+Signature Key), paste them in the related fields under the **Credentials** tab, then click on
+**Generate Client Key**.
+
+.. note::
+   The **API Client Key** is necessary only if you select *Payment from Odoo* option as
+   :ref:`Payment Flow <payment_acquirers/payment_flow>`.
+
+.. important::
+   If you are trying Authorize.Net as a test, with a *sandbox account*, change the **State** to
+   *Test Mode*. We recommend doing this on a test Odoo database, rather than on your main database.
+
+Payment Flow
+------------
+
+The **Payment Flow** lets you decide if to redirect the user to the payment acquirer's portal to
+authenticate the payment, or if to stay on the current page and authenticate the payment from Odoo.
+This field is under the **Configuration** tab.
+
+If you select *Redirection to the acquirer website*, make sure you add a **Default Receipt URL** and
+a **Default Relay Response URL** to your Authorize.net account.
+
+To do so, log into your Authorize.Net account, go to :menuselection:`Account --> Transaction Format
+Settings --> Transaction Response Settings --> Response/Receipt URLs`, and set the default links:
+
+- | Default Receipt URL:
+  | *https://[yourcompany.odoo.com]*/**payment/authorize/return**
+- | Default Relay Response URL:
+  | *https://[yourcompany.odoo.com]*/**payment/authorize/return**
+
+.. note::
+   | Failing to complete this step results in the following error:
+   | *The referrer, relay response or receipt link URL is invalid.*
+
+Capture the payment after the delivery
+--------------------------------------
+
+The **Capture Amount Manually** field is under the **Configuration** tab. If enabled, the funds are
+reserved for 30 days on the customer's card, but not charged yet.
+
+.. image:: media/authorize-configuration.png
+   :align: center
+   :alt: Authorize.Net Configuration tab on Odoo
+
+To capture the payment, go to the related Sales Order and click on *Capture Transaction*. If the
+order is canceled, you can click on *Void Transaction* to unlock the funds from the customer's card.
+
+.. image:: media/authorize-capture.png
+   :align: center
+   :alt: Hold the credit card payment until you capture or revoke it on Odoo
+
+.. warning::
+   After **30 days**, the transaction is **voided automatically** by Authorize.net.
+
+.. note::
+   With other payment acquirers, you can manage the capture in their own interfaces, not from Odoo.
+
+.. seealso::
+   - `Authorize.Net: Getting Started Guide
+     <https://support.authorize.net/s/article/Authorize-Net-Getting-Started-Guide>`__
+   - :doc:`payment_acquirers`
+   - :doc:`../../ecommerce/shopper_experience/payment_acquirer`
