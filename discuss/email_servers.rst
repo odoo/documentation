@@ -105,6 +105,10 @@ you should add a DNS "odoo._domainkey" CNAME record to
 For example, for "foo.com" they should have a record "odoo._domainkey.foo.com" 
 that is a CNAME with the value "odoo._domainkey.odoo.com".
 
+Restriction
+-----------
+Please note that the port 25 is blocked for security reasons. Try using 587, 465 or 2525.
+
 How to manage inbound messages
 ==============================
 
