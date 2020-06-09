@@ -1,3 +1,5 @@
+:classes: text-justify
+
 .. _partnership_agreement_fr:
 
 ===============================
@@ -13,8 +15,9 @@ Odoo Partnership Agreement (FR)
 
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
 .. v8a: minor clarifications and simplifications
+.. v9: added maintenance commission + obligations
 
-.. note:: Version 8a - 2018-08-09
+.. note:: Version 9 - 2020-06-08
 
 | ENTRE:
 |  Odoo S.A., une entreprise dont le siège social se situe Chaussée de Namur, 40,
@@ -165,6 +168,9 @@ Les avantages de chaque niveau de partenariat sont détaillés dans le tableau c
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Commission sur Odoo Enterprise        | 10%              | 10%                | 15%                | 20%                |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission sur la Maintenance de      | 82%              | 82%                | 82%                | 82%                |
+| Modules Supplémentaires               |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Accès à un Account Manager dédié et   | Non              | Oui                | Oui                | Oui                |
 | au Tableau de Bord Partenaire         |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
@@ -209,9 +215,22 @@ souscrivant à un Odoo Success Pack, moyennant un supplément.
 4.5 Commissions sur les Services Odoo vendus par le PARTENAIRE
 --------------------------------------------------------------
 Pour les services ODOO achetés par un client par le biais du PARTENAIRE, et pour autant que
-le PARTENAIRE maintienne une relation contractuelle avec ce client, le PARTENAIRE recevra une
-commission en fonction du tableau de la section :ref:`benefits_fr` et du niveau de partenariat
-à la date de la facture client correspondante.
+le PARTENAIRE maintienne une relation contractuelle avec ce client, et tant que le client ne
+signale pas à ODOO sa volonté de cesser d'utiliser les service du PARTENAIRE, le PARTENAIRE
+recevra une commission en fonction du tableau de la section :ref:`benefits_fr` et du niveau de
+partenariat à la date de la facture client correspondante.
+
+Une fois pas mois, le PARTENAIRE recevra un bon de commande pour la commission due pour le mois
+précédent. Sur base de ce bon de commande, le PARTENAIRE facturera ODOO, et sera payé dans un
+délai de 15 jours suivant la réception de cette facture.
+
+Le PARTENAIRE comprend et accepte que lorsqu'un client choisit de Collaborer avec le PARTENAIRE,
+ODOO lui déléguera la mise en oeuvre des services liés aux Modules Supplémentaires Couverts [#pcom_fr1]_,
+et il deviendra le point de contact principal du client. Le PARTENAIRE pourra contacter ODOO pour
+le compte du client pour une assistance de deuxième niveau.
+
+.. [#pcom_fr1] “Collaborer avec un Partenaire Odoo” et “Modules Supplémentaires Couverts” sont
+   définis dans le contrat "Odoo Enterprise Subscription Agreement" entre ODOO et le client
 
 
 5 Frais
