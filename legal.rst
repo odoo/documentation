@@ -118,10 +118,10 @@ Terms and Conditions
     :alt: View Odoo Partnership Agreement (ES)
     :target: legal/terms/i18n/partnership_es.html
 
-.. |missing_pdf| image:: _static/icons/pdf_missing.svg
+.. |missing_pdf| image:: _static/banners/pdf_missing.svg
     :alt: Document not available yet
 
-.. |missing_txt| image:: _static/icons/txt_missing.svg
+.. |missing_txt| image:: _static/banners/txt_missing.svg
     :alt: Document not available yet
 
 +--------------------------------------------------------------------+-----------------------------------------------------------------------+------------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+-----------------------------------------------------------------------+
