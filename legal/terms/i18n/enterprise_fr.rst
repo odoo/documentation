@@ -1,3 +1,4 @@
+:classes: text-justify
 
 .. _enterprise_agreement_fr:
 
@@ -12,13 +13,14 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 8.0 - 2018-05-22
+.. note:: Version 9.0 - 2020-06-08
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
-
+.. v8a: minor wording changes, tuned User definition, + copyright guarantee
+.. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -52,22 +54,35 @@ App
     et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`_, au moment
     de la conclusion de ce Contrat.
 
+Partenaire Odoo
+    Un Partenaire Odoo est un individu ou société tierce, choisi par le Client et qui collabore
+    avec celui-ci pour les services liés à Odoo. Le Client peut choisir à tout moment de travailler
+    avec un autre Partenaire Odoo, ou avec Odoo SA directement (moyennant préavis).
+
+Module Supplémentaire
+    Un Module Supplémentaire est un répertoire de fichiers de code source, ou un ensemble de
+    personnalisations nécessitant du code Python créées dans une base de données (par ex. avec Odoo Studio),
+    pour ajouter des fonctionnalités ou changer des comportements du Logiciel. Il peut avoir été
+    développé par le Client, par Odoo SA, par un Partenaire Odoo pour le compte du Client, ou
+    par des tiers.
+
+Module Supplémentaire Couvert
+    Un Module Supplémentaire pour lequel le Client paie un abonnement de maintenance pour obtenir
+    de l'assistance, des corrections de bug ou des migrations, à condition que le Client travaille
+    avec un Partenaire Odoo ou soit hébergé sur la Plate-forme Cloud.
+
 Bug
-    Désigne toute défaillance du Logiciel qui se traduit par un arrêt complet, un message d'erreur
-    avec trace d'exécution, ou une brèche de sécurité, et n'est pas directement causé par un problème
-    d'installation ou une configuration défectueuse. Un non-respect des spécifications ou des besoins
+    Désigne toute défaillance du Logiciel ou d'un Module Supplémentaire Couvert, qui se traduit par
+    un arrêt complet, un message d'erreur avec trace d'exécution, ou une brèche de sécurité, et
+    n'est pas directement causé par un problème d'installation ou une configuration défectueuse.
+    Un non-respect des spécifications ou des besoins
     sera considéré comme un Bug à la discrétion d'Odoo SA (en général, lorsque le Logiciel
     ne produit pas les résultats ou la performance pour lesquels il a été conçu, ou lorsqu'une
     fonctionnalité spécifique à un pays ne répond plus aux exigences comptables légales de ce pays).
 
 Versions Couvertes
     Sauf exception explicite, tous les Services dans le cadre du présent contrat s'appliquent uniquement aux Versions
-    Couvertes du Logiciel, qui comprennent les trois (3) plus récentes versions majeures.
-
-    Afin d'être considérées comme couvertes par le Contrat, le client doit
-    utiliser la Version couverte  la plus récente au moment de la conclusion du Contrat. Dans le cas
-    contraire, des frais supplémentaires sont d'application, tels que décrit dans la section
-    :ref:`charges_fr`
+    Couvertes du Logiciel, qui comprennent les 3 plus récentes versions majeures.
 
 
 .. _enterprise_access_fr:
@@ -87,7 +102,8 @@ Odoo Enterprise Edition, conformément aux conditions énoncées à la section :
 Le Client accepte de prendre toutes les mesures nécessaires pour garantir l'exécution sans aucune
 modification de la partie du Logiciel qui vérifie la validité de l'utilisation d'Odoo Enterprise
 Edition et recueille des statistiques à cet effet, y compris mais sans s'y limiter, l'exécution
-du Logiciel, le nombre d'Utilisateurs et les Apps installées.
+du Logiciel, le nombre d'Utilisateurs, les Apps installées et le nombre de lignes de code des
+Modules Supplémentaires Couverts.
 
 Odoo SA s'engage à ne pas divulguer à une tierce partie d'informations chiffrées personnelles ou
 spécifiques sans le consentement du Client, et à traiter toutes les données recueillies en
@@ -114,26 +130,22 @@ correspondant au nombre réel d'Utilisateurs et aux Apps installées.
 ---------------------------------
 
 Pour la durée de ce Contrat, Odoo SA s'engage à déployer tous les efforts raisonnables pour
-corriger tout Bug du Logiciel qui pourrait être signalé par le Client en suivant la procédure
-appropriée (généralement par le biais d'un e-mail adressé au service d'assistance d'Odoo SA ou
-via le formulaire correspondant sur le site web), et de commencer à traiter ces signalements
+corriger tout Bug du Logiciel ou des Modules Supplémentaires Couverts qui pourrait être signalé
+par le Client en suivant la procédure appropriée (généralement par le biais du formulaire en ligne
+ou des numéros de téléphone indiqués sur Module Supplémentaire Couvert, ou en cas de travail avec
+un Partenaire Odoo, le canal prévu par le partenaire), et de commencer à traiter ces signalements
 du Client dans un délai de 2 jours ouvrables.
 
-Le Client accepte que les Bugs causés par toute modification ou extension qui ne fait pas partie
-de la version officielle du Logiciel ne seront pas couverts par ce service.
-
 Dès que le Bug est remédié, un correctif approprié sera communiqué au Client.
-En cas d'Auto-Hébergement, si le Bug a été
-résolu dans une nouvelle mise à jour de la Version Couverte du Logiciel utilisée par le Client,
-ce dernier s'engage à actualiser ses systèmes vers la nouvelle mise à jour, afin d'obtenir
-le correctif. Il ne sera jamais demandé au Client de passer à une Version Couverte
+Si le Client utilise une Version Couverte, il ne lui sera jamais demandé de passer à une Version Couverte
 plus récente pour obtenir un correctif.
 
 Lorsqu'un Bug est corrigé dans une Version Couverte, Odoo SA s'engage à le corriger dans toutes
 les Versions Couvertes plus récentes du Logiciel.
 
 Les deux parties reconnaissent que comme spécifié dans la licence du Logiciel et à la section
-:ref:`liability_fr` de ce Contrat, Odoo SA ne peut être tenue responsable des Bugs du Logiciel.
+:ref:`liability_fr` de ce Contrat, Odoo SA ne peut être tenue responsable des Bugs du Logiciel ou
+des Modules Supplémentaires Couverts.
 
 
 4.2 Mises à jour de sécurité
@@ -146,8 +158,8 @@ Auto-Hébergement
 
 Pour la durée du Contrat, Odoo SA s'engage à envoyer une "alerte de sécurité"" au Client
 pour tout Bug présentant un risque de sécurité qui serait découvert dans les Versions Couvertes
-du Logiciel, au moins 2 semaines avant de rendre ladite alerte de sécurité publique, et ce à moins
-que le Bug ait déjà été rendu public par un tiers.
+du Logiciel (à l'exclusion des Modules Supplémentaires), au moins 2 semaines avant de
+rendre ladite alerte de sécurité publique, et ce à moins que le Bug ait déjà été rendu public par un tiers.
 Les alertes de sécurité comprennent une description complète du Bug, de sa cause, ses conséquences
 possibles sur les systèmes du Client, et le correctif correspondant pour chaque Version Couverte.
 
@@ -177,52 +189,33 @@ Service de migration du Logiciel
 
 Pour la durée du présent Contrat, le Client peut soumettre des demandes de migration en suivant
 les procédures appropriées (généralement, via le site du service de migration d'Odoo SA),
-afin de convertir une base de données du Logiciel d'une Version Couverte du Logiciel à une
-Version Couverte plus récente (la "Version Cible").
+afin de convertir une base de données du Logiciel depuis n'importe quelle version du Logiciel vers
+une Version Couverte plus récente (la "Version Cible").
 
 Pour la Plate-forme Cloud, les demandes de migration sont envoyées directement depuis la panneau
 de contrôle de la Plate-forme Cloud, et ne requièrent pas d'envoi de données.
 Pour l'Auto-Hébergement,
-les demandes de migration doivent inclure une copie de sauvegarde complète de la
+les demandes de migration doivent inclure une copie complète de la
 base de données du Client et les données associées (généralement obtenues à partir du menu
-Backup du Logiciel). Lorsque cela est nécessaire pour des raisons de sécurité des données ou
-de réglementation, le Service de migration inclut un outil facultatif pour rendre anonymes
-les données identifiables figurant dans la base de données, avant de soumettre la demande
-de migration, et un outil pour restaurer les données rendues anonymes après la migration.
+Backup du Logiciel).
 
 Ce service est fourni par le biais d'une plateforme automatisée, afin de permettre au Client
 d'effectuer des migration sans intervention humain, dès lors qu’une version précédente de la
 base de données du Client a été migrée avec succès pour une Version Couverte donnée.
-Le client peut soumettre des demandes de migration successives pour une base de données,
-et accepte de soumettre au moins 1 demande de migration de test avant de soumettre la demande de
-migration finale.
 
 Le service de migration est limité à la conversion et à l'adaptation techniques de la base
 de données du Client pour la rendre compatible avec la Version Cible, et à la correction de tout
 Bug directement causé par l'opération de migration, et ne se produisant normalement pas dans
+la Version Cible, et la conversion du code et des données des Modules Supplémentaires Couverts vers
 la Version Cible.
 
 Il incombe au Client de vérifier et valider la base de données migrée afin de détecter tout Bug,
 d'analyser l'impact des changements et des nouvelles fonctionnalités ajoutées
 dans la Version Cible, de convertir et d'adapter pour la Version Cible les modules tiers
 du Logiciel qui auraient été installées dans la base de données avant la migration
-(sauf le cas échéant, comme prévu à la section :ref:`upgrade_extra_fr`).
+(par ex. des Modules Supplémentaires non-couverts).
 Le client peut soumettre plusieurs demandes de migration pour une base de données, jusqu'à ce
 qu'un résultat satisfaisant soit obtenu.
-
-.. _upgrade_extra_fr:
-
-Service de migration des modules tiers
-++++++++++++++++++++++++++++++++++++++
-
-Pour la durée du Contrat, le Client a la possibilité de faire une demande de migration
-pour des modules d'extension tiers, en plus de la migration normale du Logiciel.
-Ce service en option implique des frais supplémentaires (décrits dans la section :ref:`charges_fr`)
-et comprend l'adaptation technique des modules tiers installés dans la base de données du
-Client et de leurs données correspondantes afin qu'elles soient compatibles
-avec la Version Cible. Le Client recevra une version migrée de tous les modules tiers installés
-accompagnée de la base de données migrée.
-
 
 .. _cloud_hosting_fr:
 
@@ -239,7 +232,7 @@ Odoo SA s'engage à fournir au minimum le service suivant:
 - Plan de Reprise d'Activité, testé régulièrement
 
 Les détails du Service d'Hébergement Cloud sont décrits sur la page du Service Level Agreement:
-https://www.odoo.com/cloud-sla.
+ https://www.odoo.com/cloud-sla.
 
 
 .. _support_service_fr:
@@ -252,21 +245,40 @@ Portée
 
 Pour la durée du présent Contrat, le Client peut ouvrir un nombre non limité de demandes d'assistance
 sans frais, exclusivement pour des questions relatives à des Bugs (voir :ref:`bugfix_fr`) ou des
-explications au sujet de l'utilisation des fonctions standard du Logiciel et des Services
-(fonctionnalités, utilisation prévue, configuration, résolution d'erreur).
+explications au sujet de l'utilisation des fonctions standard du Logiciel et des Modules
+Supplémentaires Couverts
 
-D'autres types de demandes, telles que celles relatives à des développements, des personnalisations,
-de l'installation en mode Auto-Hébergement, ou tout service requiérant l'accès à la base de données
-du Client pevent être couverts par l'achat séparé d'un Pack de Services.
-Au cas où il n'est pas clair qu'une demande est couverte par ce Contrat ou via l'achat d'un
-Pack de Services, la décision sera à la discrétion d'Odoo SA.
+D'autres types de demandes, telles que celles relatives à des développements ou des personnalisations,
+peuvent être couvertes par l'achat d'un contrat de service séparé.
+Au cas où il n'est pas clair qu'une demande est couverte par ce Contrat, la décision sera à la
+discrétion d'Odoo SA.
 
 Disponibilité
 +++++++++++++
 
 Les demandes d'assistances peuvent être soumises à tout moment en ligne via https://www.odoo.com/help,
-ou par téléphone directement aux différents bureaux d'Odoo SA, pendant les heures de bureau
+ou par téléphone directement aux différents bureaux d'Odoo SA, ou en cas de travail avec un 
+Partenaire Odoo, le canal préconisé par ce partenaire, pendant les heures de bureau
 correspondantes.
+
+
+.. _maintenance_partner_fr:
+
+Collaboration avec un Partenaire Odoo
+-------------------------------------
+
+Pour les services de correction de Bug, d'assistance et de migration, le Client peut choisir
+de collaborer avec un Partenaire Odoo comme point de contact principal, ou directement avec
+Odoo SA.
+
+Si le Client choisit un Partenaire Odoo, Odoo SA sous-traitera les services liés au Modules
+Supplémentaires Couverts à ce partenaire, qui deviendra le point de contact principal du client.
+Le Partenaire Odoo peut obtenir de l'assistance de second niveau auprès d'Odoo SA pour le compte
+du Client.
+
+Si le Client décide de collaborer directement avec Odoo SA, les services liés aux Modules
+Supplémentaires Couverts ne seront fournis que *si et seulement si* le Client est hébergé sur
+la Plate-forme Cloud d'Odoo.
 
 
 .. _charges_fr:
@@ -280,7 +292,7 @@ correspondantes.
 --------------------
 
 Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
-d'Utilisateurs, les Apps installées, la version du Logiciel utilisée par le Client, et précisés par
+d'Utilisateurs et les Apps installées, et précisés par
 écrit à la conclusion du contrat.
 
 Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou d'Apps que spécifié au moment
@@ -299,33 +311,17 @@ première Durée du contrat, à la discrétion d'Odoo SA, pour couvrir les coût
 --------------------------
 
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
+(à l'exclusion des “Initial User Discounts”)
 qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
-en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%.
-
-.. _charges_thirdparty_fr:
-
-5.3 Tarifs de migration des modules tiers
------------------------------------------
-
-Les frais supplémentaires pour le service de migration des modules tiers sont de 1000,00- euros (€)
-(mille euros) pour 1000 lignes de code de modules tiers, le nombre de lignes étant arrondi au millier
-de lignes supérieur. Les lignes de code comprennent toutes les lignes de texte dans le code source de
-ces modules, quel que soit le langage de programmation (Python, Javascript, etc.)
-ou format de données (XML, CSV, etc.), à l'exclusion des lignes vides et des lignes de commentaires.
-
-Odoo SA se réserve le droit de refuser une demande de migration pour des modules tiers conformément
-aux conditions décrites ci-dessus, si la qualité du code source de ces modules est trop faible,
-ou si ces modules font partie d'une interface d'intégration avec des logiciels ou systèmes tiers.
-La migration de ces modules sera soumise à une proposition distincte, non couverte par le présent
-Contrat.
-
+en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%
+par reconduction, sans dépasser les tarifs en vigueur les plus récents.
 
 .. _taxes_fr:
 
-5.4 Taxes et impôts
+5.3 Taxes et impôts
 -------------------
 
-Tous les frais et tarifs sont indiqués hors taxes et hors impôts, frais et charges fédérales,
+Tous les frais et tarifs sont indiqués hors taxes, frais et charges fédérales,
 provinciales, locales ou autres taxes gouvernementales applicables (collectivement,
 les "Taxes"). Le Client est responsable du paiement de toutes les Taxes liées aux achats effectués
 par le Client en vertu du présent Contrat, sauf lorsque Odoo SA est légalement tenue de payer ou de
@@ -342,7 +338,7 @@ percevoir les Taxes dont le client est responsable.
 Le Client accepte de / d':
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
-  conformément aux conditions de paiement spécifiées dans la facture correspondante ;
+  conformément aux conditions de paiement spécifiées à la souscription du présent Contrat ;
 - Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou les Apps installées dépassent
   les nombres spécifiés à la conclusion du Contrat, et dans ce cas, de régler les frais
   supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
@@ -350,6 +346,8 @@ Le Client accepte de / d':
   Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
   section :ref:`enterprise_access_fr`;
 - Désigner 1 personne de contact représentant le Client pour toute la durée du contrat ;
+- Signaler par écrit à Odoo SA avec un préavis de 30 jours en cas de changement de point de contact
+  principal, pour collaborer avec un autre Partenaire Odoo, ou directement avec Odoo SA.
 
 Lorsque le Client choisit d'utiliser la Plate-forme Cloud, il accepte aussi de:
 
@@ -493,8 +491,8 @@ contrat peut être résilié immédiatement par la partie qui n'a pas commis la
 violation.
 
 En outre, Odoo SA peut résilier le contrat immédiatement dans le cas où le
-Client ne paie pas les frais applicables pour les services à la date d'échéance
-indiquée sur la facture correspondante.
+Client ne paie pas les frais applicables pour les services dans les 21 jours suivant la date d'échéance
+indiquée sur la facture correspondante, après minimum 3 rappels.
 
 Durée de l'applicabilité des dispositions:
   Les sections ":ref:`confidentiality_fr`", “:ref:`disclaimers_fr`",   “:ref:`liability_fr`",
@@ -511,20 +509,28 @@ Durée de l'applicabilité des dispositions:
 7.1 Garantie
 ------------
 
+Odoo SA détient le copyright ou équivalent[#g1]_ sur 100% du code du Logiciel, et confirme que
+toutes les librairies nécessaires au fonctionnement du Logiciel sont disponibles sous une
+licence compatible avec la licence du Logiciel.
+
 Pendant la durée du présent contrat, Odoo SA s'engage à déployer les efforts
 raisonnables sur le plan commercial pour exécuter les Services conformément aux
 normes du secteur généralement acceptées à condition que :
 
 - Les systèmes informatiques du Client soient en bon état de fonctionnement et, pour l'Auto-Hébergement,
-  que le Logiciel soit installé dans un système d'exploitation approprié ;
+  que le Logiciel soit installé selon les bonnes pratiques en vigueur;
 - Le Client fournisse les informations adéquates nécessaires au dépannage et, pour l'Auto-Hébergement,
   tout accès utile, de telle
   sorte qu'Odoo SA puisse identifier, reproduire et gérer les problèmes ;
-- Tous les montants dus à Odoo SA aient été réglés.
+- Tous les montants dus à Odoo SA, qui sont échus, aient été réglés.
 
 La reprise de l'exécution des Services par Odoo SA sans frais supplémentaires constitue la seule et
-unique réparation pour le Client et la seule obligation d'Odoo SA pour toute violation de cette
+unique réparation pour le Client et la seule obligation d'Odoo SA pour tout manquement à cette
 garantie.
+
+.. [#f1] Les contributions externes sont couvertes par un `CLA <https://www.odoo.com/cla`_
+         fournissant une licence de copyright et de brevet permanente, gratuite et irrévocable.
+
 
 .. _disclaimers_fr:
 
@@ -532,7 +538,7 @@ garantie.
 --------------------------
 
 Mis à part les dispositions expresses du présent Contrat, aucune des parties ne donne de
-garantie d'aucune sorte, expresse, implicite, légale ou autre, et chaque partie
+garantie d'aucune sorte, expresse, implicite ou autre, et chaque partie
 décline expressément toutes garanties implicites, y compris toute garantie
 implicite de qualité marchande, d'adéquation à un usage particulier ou de non-
 contrefaçon, dans les limites autorisées par la loi en vigueur.
@@ -567,7 +573,8 @@ recours proposé par la partie ou ses filiales n'atteint pas son but essentiel.
 -----------------
 
 Aucune des parties ne sera tenue pour responsable envers l'autre partie de tout retard ou manquement
-d'exécution en vertu du présent Contrat, si ce manquement ou retard est causé par
+d'exécution en vertu du présent Contrat, si ce manquement ou retard trouve sa cause dans un cas de
+*force majeure*, comme
 une règlementation gouvernementale, un incendie, une grève, une guerre, une inondation,
 un accident, une épidémie, un embargo, la saisie d'une usine ou d'un produit dans son intégralité
 ou en partie par un gouvernement ou une autorité publique, ou toute (s) autre (s) cause (s),
@@ -584,12 +591,9 @@ hors du contrôle raisonnable de la partie concernée, et tant qu'une telle caus
 8.1 Droit applicable
 --------------------
 
-Les parties conviennent que les lois de Belgique seront applicables en cas de litige découlant
-ou en relation avec le présent Contrat, sans tenir compte des règles ou dispositions en matière de
-compétence législative ou de conflit de lois.
-Dans la mesure où une poursuite ou procédure judiciaire ou administrative serait autorisée ci-avant,
-les parties conviennent de se soumettre à la compétence exclusive du tribunal de Nivelles (Belgique)
-aux fins de la procédure de tout litige.
+Le présent contrat et les commandes passées par le client sont exclusivement régis par le droit belge.
+Tout différend relatif au présent contrat ou à une commande passée par le Client relève de la
+compétence exclusive du tribunal de l’entreprise de Nivelles.
 
 .. _severability_fr:
 

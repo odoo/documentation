@@ -9,6 +9,10 @@
   {% set classes = classes + ['has_code_col'] %}
 {% endif %}
 
+{% if 'classes' in meta %}
+  {% set classes = classes + meta['classes'].split() %}
+{% endif %}
+
 {%- block doctype -%}
   <!doctype html>
 {%- endblock -%}

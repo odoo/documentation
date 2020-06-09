@@ -95,6 +95,20 @@
 }
 
 
+% For sphinx 1.8.3+, the command is \sphinxmaketitle and the
+% layout is slightly different on the titlepage
+\renewcommand{\sphinxmaketitle}{%
+  \noindent\rule{\textwidth}{1pt}\par
+  \begin{flushright}
+    \sphinxlogo
+    \py@HeaderFamily
+    {\hspace{-0.5cm} \huge \@title }\par
+  \end{flushright}
+  \@thanks
+  \setcounter{footnote}{0}
+  \let\thanks\relax\let\maketitle\relax
+}
+
 \newcommand{\makeodootitleold}{%
   \begin{titlepage}
   \titlepagedecoration

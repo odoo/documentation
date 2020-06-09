@@ -327,6 +327,7 @@ LANGUAGES = {
 
 def setup(app):
     app.add_stylesheet('accounting.css')
+    app.add_stylesheet('legal.css')
     app.add_javascript('prefixfree.min.js')
     app.add_javascript('atom.js')
     app.add_javascript('immutable.js')
