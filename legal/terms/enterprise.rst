@@ -1,3 +1,4 @@
+:classes: text-justify
 
 .. _enterprise_agreement:
 
@@ -5,12 +6,13 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 8.0 - 2018-05-22
+.. note:: Version 9.0 - 2020-06-08
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
+.. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -43,22 +45,35 @@ App
     An "App" is a specialized group of features available for installation in the Software,
     and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_.
 
+Odoo Partner
+    An Odoo Partner is a third-party company or individual, chosen by the Customer, and working
+    with the Customer for their Odoo related services. The Customer can decide at any time to work
+    with a different Odoo Partner, or to work with Odoo SA directly (subject to prior notice).
+
+Extra Module
+    An extra module is a directory of source code files, or a set of Python-based customizations
+    created in a database (e.g. with Odoo Studio), that adds features or changes the standard
+    behavior of the Software. It may have been developed by the Customer, by Odoo SA, by an Odoo
+    Partner on behalf of the Customer, or by third parties.
+
+Covered Extra Module
+    A Covered Extra Module is an Extra Module for which the Customer pays a maintenance fee
+    in order to get support, upgrade and bug fixing services, provided that the Customer works
+    with an Odoo Partner or is hosted on the Odoo Cloud Platform.
+
 Bug
-    Is considered a Bug any failure of the Software that results in a complete stop, error
-    traceback or security breach, and is not directly caused by a defective installation or
-    configuration. Non-compliance with specifications or requirements will be considered as Bugs at
+    Is considered a Bug any failure of the Software or of a Covered Extra Module that results in
+    a complete stop, error traceback or security breach, and is not directly caused by a defective
+    installation or configuration.
+    Non-compliance with specifications or requirements will be considered as Bugs at
     the discretion of Odoo SA (typically, when the Software does not produce the results or
     performance it was designed to produce, or when a country-specific feature does not meet legal
     accounting requirements anymore).
 
 Covered Versions
     Unless specified otherwise, the Services provided under this Agreement are applicable only
-    to the Covered Versions of
-    the Software, which include the 3 (three) most recently released major versions.
-
-    To be covered by the current Agreement, the Customer has to run the most recent
-    Covered Version at the time of conclusion of this Agreement. When this is not the case,
-    additional costs are applicable, as described in :ref:`charges`.
+    to the Covered Versions of the Software, which include the 3 most recently released major
+    versions.
 
 
 .. _enterprise_access:
@@ -78,7 +93,7 @@ under the terms set forth in :ref:`appendix_a`.
 The Customer agrees to take all necessary measures to guarantee the unmodified execution of
 the part of the Software that verifies the validity of the Odoo Enterprise Edition usage and
 collects statistics for that purpose, including but not limited to the running of an instance,
-the number of Users and installed Apps.
+the number of Users, the installed Apps, and the number of lines of code of Covered Extra Modules.
 
 Odoo SA commits not to disclose individual or named figures to third parties without the consent
 of the Customer, and to deal with all collected data in compliance with its official Privacy
@@ -102,25 +117,21 @@ fee equal to 300% of the applicable list price for the actual number of Users an
 ----------------------
 
 For the duration of this Agreement, Odoo SA commits to making all reasonable efforts to remedy any
-Bug of the Software submitted by the Customer through the appropriate channel (typically, Odoo SA's
-service desk email address or website form), and to start handling such Customer submissions
-within 2 business days.
-
-The Customer understands that Bugs caused by a modification or extension that is not part of the
-official Software will not be covered by this service.
+Bug of the Software and Covered Extra Modules submitted by the Customer through the appropriate
+channel (typically, the web form or phone numbers listed on `odoo.com/help <https://www.odoo.com/help>`_,
+or when working with an Odoo Partner, the channel provided by the partner), and to start handling
+such Customer submissions within 2 business days.
 
 As soon as the Bug is fixed an appropriate remedy will be communicated to the Customer.
-
-For Self-Hosting, if the bug has been addressed in a more recent revision of the Covered Version of the
-Software used by the Customer, the Customer agrees to update its systems to that revision in order
-to obtain the correction. The Customer will not be asked to upgrade to a more recent Covered
-Version of the Software as a remedy to a Bug.
+If the Customer is using a Covered Version, they will not be asked to upgrade to a more recent
+Covered Version of the Software as a remedy to a Bug.
 
 When a Bug is fixed in any Covered Version, Odoo SA commits to fixing the Bug in all more recent
 Covered Versions of the Software.
 
 Both parties acknowledge that as specified in the license of the Software and in the :ref:`liability`
-section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software.
+section of this Agreement, Odoo SA cannot be held liable for Bugs in the Software
+or in Covered Extra Modules.
 
 
 4.2 Security Updates Service
@@ -132,9 +143,9 @@ Self-Hosting
 ++++++++++++
 
 For the duration of this Agreement, Odoo SA commits to sending a "Security Advisory" to the Customer
-for any security Bug that is discovered in the Covered Versions of the Software, at least 2 weeks
-before making the Security Advisory public, unless the Bug has already been disclosed publicly by a
-third party.
+for any security Bug that is discovered in the Covered Versions of the Software (this excludes Extra
+Modules), at least 2 weeks before making the Security Advisory public, unless the Bug has already
+been disclosed publicly by a third party.
 Security Advisories include a complete description of the Bug, its cause, its possible impacts
 on the Customer's systems, and the corresponding remedy for each Covered Version.
 
@@ -164,43 +175,28 @@ Upgrade Service for the Software
 
 For the duration of this Agreement, the Customer can submit upgrade requests through the appropriate
 channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
-from one Covered Version of the Software to a more recent Covered Version (the "Target Version").
+from any version of the Software to a more recent Covered Version (the "Target Version").
 
 For the Cloud Platform, upgrade requests are submitted directly from the control panel of the
 Cloud Platform, and do not require any data upload. For Self-Hosting,
-upgrade requests must include a complete backup copy of the Customer's database and the
+upgrade requests must include a copy of the Customer's database and the
 associated data (typically obtained from the Backup menu of the Software).
 
 This service provided through an automated platform in order to allow the Customer to perform
 unattended upgrades once a previous version of the Customer's database has been successfully
 upgraded for a Covered Version.
-The Customer may submit successive upgrade requests for a database, and agrees to submit at least
-1 upgrade request for testing purposes before submitting the final upgrade request.
 
 The Upgrade Service is limited to the technical conversion and adaptation of the Customer's database
-to make it compatible with the Target Version, and the correction of any Bug directly caused by the
-upgrade operation and not normally occurring in the Target Version.
+to make it compatible with the Target Version, the correction of any Bug directly caused by the
+upgrade operation and not normally occurring in the Target Version, and the conversion of the source
+code and data of Covered Extra Modules for the Target Version.
 
-It is the sole responsibility of the Customer to verify and validate the upgraded database in order
+It is the responsibility of the Customer to verify and validate the upgraded database in order
 to detect Bugs, to analyze the impact of changes and new features implemented in the Target Version,
 and to convert and adapt for the Target Version any third-party extensions of the Software that
-were installed in the database before the upgrade (except where applicable as foreseen in section
-:ref:`upgrade_extra`).
+were installed in the database before the upgrade (e.g. non-convered Extra Modules).
 The Customer may submit multiple upgrade requests for a database, until an acceptable result is
 achieved.
-
-.. _upgrade_extra:
-
-Upgrade Service for third-party extensions
-++++++++++++++++++++++++++++++++++++++++++
-
-For the duration of this Agreement, the Customer may request optional upgrade services for
-third-party extension modules of the Software, in addition to the regular Upgrade Services.
-This optional service is subject to additional fees (as described in :ref:`charges`) and includes the
-technical adaptation of third-party modules installed in the Customer's database and their
-corresponding data in order to be compatible with the Target Version. The Customer will receive an
-upgraded version of all installed third-party modules along with the upgraded database.
-
 
 .. _cloud_hosting:
 
@@ -230,20 +226,35 @@ Scope
 
 For the duration of this Agreement, the Customer may open an unlimited number of support tickets
 free of charge, exclusively for questions regarding Bugs (see :ref:`bugfix`) or guidance
-with respect to the use of the standard features of the Software and Services
-(functionalities, intended use, configuration, troubleshooting).
+with respect to the use of the standard features of the Software and Covered Extra Modules.
 
-Other assistance requests, such as questions related to development, customizations,
-installation for Self-Hosting, or services requiring to access the Customer's database,
-may be covered through the purchase of a separate Service Pack.
-In case it’s not clear if a request is covered by this Agreement or a Service Pack,
+Other assistance requests, such as questions related to development or customizations
+may be covered through the purchase of a separate service agreement.
+In case it’s not clear if a request is covered by this Agreement,
 the decision is at the discretion of Odoo SA.
 
 Availability
 ++++++++++++
 
-Tickets can be submitted online at https://www.odoo.com/help, or by phone directly to the
-various Odoo SA offices, subject to local opening hours.
+Tickets can be submitted via the web form or phone numbers listed on `odoo.com/help <https://www.odoo.com/help>`_,
+or when working with an Odoo Partner, the channel provided by the partner, subject to local
+opening hours.
+
+
+.. _maintenance_partner:
+
+4.6 Working with an Odoo Partner
+--------------------------------
+
+For bug fixes, support and upgrade services, the Customer may either work with an Odoo Partner
+as the main point of contact, or work with Odoo SA directly.
+
+If the Customer decides to work with an Odoo Partner, Odoo SA will subcontract services related
+to the Covered Extra Modules to the Odoo Partner, who becomes the main point of contact of the
+customer. The Odoo Partner may contact Odoo SA on behalf of the customer for second level assistance.
+
+If the Customer decides to work with Odoo SA directly, services related to Covered Extra Modules
+are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
 
 
 
@@ -258,16 +269,24 @@ various Odoo SA offices, subject to local opening hours.
 --------------------
 
 The standard charges for the Odoo Enterprise subscription and the Services are based on the number
-of Users, the installed Apps, the Software version used by the Customer, and specified in writing
+of Users and the installed Apps used by the Customer, and specified in writing
 at the conclusion of the Agreement.
 
 When during the Term, the Customer has more Users or more installed Apps than specified at the time
 of conclusion of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
 list price (at the beginning of the Term) for the additional Users or Apps, for the remainder of the Term.
 
-If at the time of the conclusion of this Agreement, the Customer uses a Covered Version
-that is not the most recent one, the standard charges may be increased by 50% for the duration
-of the first Term, at the sole discretion of Odoo SA, to cover the extra maintenance costs.
+In addition, services for Covered Extra Modules are charged based on the number of lines of code
+in these Covered Extra Modules. Unless otherwise specified in writing at the conclusion of the
+Agreement, the charge is a monthly fee of 16€ per 100 lines of code (rounded up to the next hundred).
+Lines of code will be counted with the tool provided by Odoo SA, and include all text lines in the
+source code of those modules, regardless of the programming language (Python, Javascript, XML, etc.),
+excluding blank lines, comment lines and files that are not loaded when installing or executing
+the Software.
+
+When the Customer requests an upgrade, for each Covered Extra Module that has not been covered by
+a maintenance fee for the last 12 months, Odoo SA may charge a one-time extra fee of 16€ per 100
+lines of code, for each missing month of coverage.
 
 .. _charges_renewal:
 
@@ -275,30 +294,12 @@ of the first Term, at the sole discretion of Odoo SA, to cover the extra mainten
 -------------------
 
 Upon renewal as covered in section :ref:`term`, if the charges applied during the previous Term
+(excluding any “Initial User Discounts”)
 are lower than the most current applicable list price, these charges will increase by up to 7%.
-
-
-.. _charges_thirdparty:
-
-5.3 Charges for Upgrade Services of third-party modules
--------------------------------------------------------
-
-.. FIXME: should we really fix the price in the contract?
-
-The additional charge for the Upgrade Service for third-party modules is EUR (€) 1000.00 (one
-thousand euros) per 1000 Lines of Code in the third-party modules, rounded up to the next thousand
-lines. Lines of Code include all text lines in the source code of those modules, regardless of the
-programming language (Python, Javascript, etc.) or data format (XML, CSV, etc.), excluding blank
-lines and comment lines.
-
-Odoo SA reserves the right to reject an upgrade request for third-party modules under the above
-conditions if the quality of the source code of those modules is too low, or if these modules
-constitute an interface with third-party software or systems. The upgrade of such modules will
-subject to a separate offer, outside of this Agreement.
 
 .. _taxes:
 
-5.4 Taxes
+5.3 Taxes
 ---------
 
 .. FIXME : extra section, not sure we need it?
@@ -328,6 +329,8 @@ The Customer agrees to:
   that verifies the validity of the Odoo Enterprise Edition usage, as described
   in :ref:`enterprise_access` ;
 - appoint 1 dedicated Customer contact person for the entire duration of the Agreement;
+- provide written notice to Odoo SA 30 days before changing their main point of contact to work
+  with another Odoo Partner, or to work with Odoo SA directly.
 
 When the Customer chooses to use the Cloud Platform, the Customer further agrees to:
 
@@ -463,7 +466,8 @@ breach has not been remedied within 30 calendar days from the written notice of 
 breach, this Agreement may be terminated immediately by the non-breaching Party.
 
 Further, Odoo SA may terminate the Agreement immediately in the event the Customer fails to pay
-the applicable fees for the Services within the due date specified on the corresponding invoice.
+the applicable fees for the Services within 21 days following the due date specified on the
+corresponding invoice, and after minimum 3 reminders.
 
 Surviving Provisions:
   The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
