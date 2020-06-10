@@ -220,7 +220,7 @@ le PARTENAIRE maintienne une relation contractuelle avec ce client, le PARTENAIR
 recevra une commission en fonction du tableau de la section :ref:`benefits_fr` et du niveau de
 partenariat à la date de la facture client correspondante.
 
-Une fois pas mois, le PARTENAIRE recevra un bon de commande pour la commission due pour le mois
+Une fois par mois, le PARTENAIRE recevra un bon de commande pour la commission due pour le mois
 précédent. Sur base de ce bon de commande, le PARTENAIRE facturera ODOO, et sera payé dans un
 délai de 15 jours suivant la réception de cette facture.
 
