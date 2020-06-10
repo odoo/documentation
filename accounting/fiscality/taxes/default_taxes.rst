@@ -1,31 +1,40 @@
-=================
-Set default taxes
-=================
+=============
+Default Taxes
+=============
 
-Taxes applied in your country are installed automatically for most localizations.
+**Default Taxes** define which :doc:`taxes <create>` are automatically selected when there is no
+other indication about which tax to use. For example, Odoo prefills the **Taxes** field with the
+Default Taxes when you create a new product or add a new line on an invoice.
 
-Default taxes set in orders and invoices come from each product's Invoicing tab.
-Such taxes are used when you sell to companies that are in the same country/state than you.
-
-.. image:: media/application05.png
+.. image:: media/default-taxes-invoice-line.png
    :align: center
+   :alt: Odoo fills out the Tax field automatically according to the Default Taxes
 
-To change the default taxes set for any new product created go to
-:menuselection:`Invoicing/Accounting --> Configuration --> Settings`.
+.. important::
+   :doc:`Fiscal Positions <fiscal_positions>` take the Default Tax into account. Therefore, if a
+   Fiscal Position is applied to an invoice, Odoo applies the related tax instead of the Default
+   Taxes, as mapped in the Fiscal Position.
 
-.. image:: media/create04.png
+Configuration
+=============
+
+**Default Taxes** are automatically set up according to the country selected at the creation of your
+database, or when you set up a :doc:`Fiscal Localization Package
+<../../fiscal_localizations/overview/fiscal_localization_packages>` for your company.
+
+To change your **Default Taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
+--> Taxes --> Default Taxes`, select the appropriate taxes for your default **Sales Tax** and
+**Purchase Tax**, and click on *Save*.
+
+.. image:: media/default-taxes-configuration.png
    :align: center
+   :alt: Define which taxes to use by default on Odoo
 
-.. tip::
-    If you work in a multi-companies environment, the sales and 
-    purchase taxes may have a different value according to the 
-    company you work for. You can login into two different companies 
-    and change this field for each company.
+.. note::
+   Databases with multiple companies: the Default Taxes values are company-specific.
 
 .. seealso::
 
-  * :doc:`create`
-  * :doc:`fiscal_positions`
-  * :doc:`taxcloud`
-  * :doc:`B2B_B2C`
-  * :doc:`tax_included`
+  - :doc:`create`
+  - :doc:`fiscal_positions`
+  - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
