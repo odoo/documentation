@@ -11,8 +11,9 @@ Odoo Partnership Agreement
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
 .. v8a: minor clarifications and simplifications
 .. v9: added maintenance commission + obligations
+.. v9a: minor clarification to allow OE commission even without maintenance
 
-.. note:: Version 9 - 2020-06-08
+.. note:: Version 9a - 2020-06-10
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -207,8 +208,7 @@ Success Pack, for an extra fee.
 4.5  Commissions on Odoo Services sold by PARTNER
 -------------------------------------------------
 For ODOO services purchased by a customer through PARTNER, and as long as PARTNER maintains a
-contractual relationship with the corresponding customer, and as long as the Customer does not
-notify ODOO that they want to stop using PARTNER’s services, PARTNER shall receive a commission
+contractual relationship with the corresponding customer, PARTNER shall receive a commission
 according to the table of section :ref:`benefits` and their Partnership level at the date of the
 customer invoice.
 
@@ -216,13 +216,17 @@ Once a month, PARTNER will receive a purchase order with the commission due for 
 Based on this purchase order, PARTNER shall invoice ODOO, and will be paid within 15 days upon
 receipt of the invoice.
 
-PARTNER acknowledges and agrees that when a customer decides to Work with PARTNER, ODOO will
-delegate services related to Covered Extra Modules [#pcom1]_ to PARTNER, who becomes the main point
-of contact of the customer. PARTNER may contact ODOO on behalf of the customer for second level
-assistance.
+**Maintenance of Covered Extra Modules**
+
+PARTNER acknowledges and agrees that when a customer decides to Work with PARTNER [#pcom1]_ ,
+ODOO will delegate the Maintenance of Covered Extra Modules to PARTNER, who becomes the main point
+of contact of the customer.
+
+PARTNER shall only receive the commission for the Maintenance of Covered Extra Modules
+as long as the customer does not notify ODOO that they want to stop Working with PARTNER.
 
 .. [#pcom1] “Working with an Odoo Partner” and “Covered Extra Modules” are defined in the Odoo
-   Enterprise Subscription Agreement between ODOO and customers
+   Enterprise Subscription Agreement between ODOO and customers.
 
 5 Fees
 ======

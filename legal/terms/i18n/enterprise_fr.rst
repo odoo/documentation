@@ -13,13 +13,14 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 9.0 - 2020-06-08
+.. note:: Version 9a - 2020-06-10
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
+.. v9a: clarification wrt second-level assistance for standard features
 
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
@@ -274,7 +275,7 @@ Odoo SA.
 Si le Client choisit un Partenaire Odoo, Odoo SA sous-traitera les services liés au Modules
 Supplémentaires Couverts à ce partenaire, qui deviendra le point de contact principal du client.
 Le Partenaire Odoo peut obtenir de l'assistance de second niveau auprès d'Odoo SA pour le compte
-du Client.
+du Client, concernant les fonctions standard du Logiciel.
 
 Si le Client décide de collaborer directement avec Odoo SA, les services liés aux Modules
 Supplémentaires Couverts ne seront fournis que *si et seulement si* le Client est hébergé sur

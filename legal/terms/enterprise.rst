@@ -6,13 +6,14 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 9.0 - 2020-06-08
+.. note:: Version 9a - 2020-06-10
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
+.. v9a: clarification wrt second-level assistance for standard features
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -251,7 +252,8 @@ as the main point of contact, or work with Odoo SA directly.
 
 If the Customer decides to work with an Odoo Partner, Odoo SA will subcontract services related
 to the Covered Extra Modules to the Odoo Partner, who becomes the main point of contact of the
-customer. The Odoo Partner may contact Odoo SA on behalf of the customer for second level assistance.
+customer. The Odoo Partner may contact Odoo SA on behalf of the customer for second-level assistance
+with regard to standard features of the Software.
 
 If the Customer decides to work with Odoo SA directly, services related to Covered Extra Modules
 are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
