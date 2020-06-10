@@ -28,11 +28,26 @@ Then you open a pdf with the ISR.
 There exists two layouts for ISR: one with, and one without the bank
 coordinates. To choose which one to use, there is an option to print the
 bank information on the ISR. To activate it, go in
-:menuselection:`Accounting --> Configuration --> Settings --> Accounting Reports`
-and tick this box :
+:menuselection:`Accounting --> Configuration --> Settings --> Customer Invoices`
+and enable **Print bank on ISR**:
 
 .. image:: media/switzerland03.png
     :align: center
+
+ISR reference on invoices
+-------------------------
+
+To ease the reconciliation process, you can add your ISR reference as **Payment Reference** on your
+invoices.
+
+To do so, you need to configure the Journal you usually use to issue invoices. Go to
+:menuselection:`Accounting --> Configuration --> Journals`, open the Journal you want to modify (By
+default, the Journal is named *Customer Invoices*), click en *Edit*, and open the *Advanced
+Settings* tab. In the **Communication Standard** field, select *Switzerland*, and click on *Save*.
+
+.. image:: media/switzerland-isr-reference.png
+   :align: center
+   :alt: Configure your Journal to display your ISR as payment reference on your invoices in Odoo
 
 Currency Rate Live Update
 =========================
