@@ -81,8 +81,8 @@ For security purposes, only authenticated employee emails
 
 .. tip::
     The expense product is set automatically if the mail subject contains 
-    the product's internal reference between brackets (e.g. [Food]). 
-    Type the expense amount in the mail subject to set it on the expense too.
+    the product's internal reference in first position.
+    Type the expense amount in the mail subject to set it on the expense too (e.g. Ref001 Food 100€).
 
 How to submit expenses to managers
 ==================================
