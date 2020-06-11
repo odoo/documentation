@@ -8,3 +8,4 @@ Optimize your Day-to-Day work
    optimize/google_calendar_credentials
    optimize/onsip
    optimize/setup
+   optimize/gamification
