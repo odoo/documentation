@@ -106,6 +106,6 @@ To manually select which Fiscal Position to use for a new Sales Order, Invoice, 
 
 .. seealso::
 
-  * :doc:`create`
+  * :doc:`taxes`
   * :doc:`taxcloud`
   * :doc:`B2B_B2C`
