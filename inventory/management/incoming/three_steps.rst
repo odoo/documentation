@@ -2,113 +2,108 @@
 Process a Receipt in three steps (Input + Quality + Stock)
 ==========================================================
 
-In many companies, it is necessary to assess the received good. The goal
-is to check that the products correspond to the quality requirements
-agreed with the suppliers. Therefore, adding a *quality control step*
-in the goods receipt process can become essential.
+Quality is essential for most companies. To make sure we maintain quality throughout the supply
+chain, it only makes sense that we assess the quality of the products received from suppliers.
+To do so, we will add a quality control step.
 
-Odoo uses routes to define exactly how you will handle the different
-receipt steps. The configuration is done at the level of the warehouse.
-By default, the reception is a one-step process, but changing the
-configuration can allow having 3 steps.
+Odoo uses routes to define how to handle the different receipt steps.
+Configuration of those routes is done at the warehouse level. By default, the reception is a 
+one-step process, but it can also be configured to have two-steps or three-steps processes.
 
-The 3-steps flow is as follows: You receive the goods in an input area,
-then transfer them into a quality area for *quality control*. When the
-quality check has been processed, you can move the goods from QC to
-stock. Of course, you may change the quantity and only transfer to stock
-the quantity that is valid and decide that you will return the quantity
-that is not good.
+The three-steps flow works as follows: you receive the goods in your receiving area, then transfer 
+them into a quality area for quality control (QC). When the quality check is completed, the goods 
+that match the QC requirements are moved to stock
 
-Multi-Step Routes
-=================
+Activate Multi-Step Routes
+==========================
 
-First, you will need to activate the *multi-step routes* option.
-Indeed, routes provide a mechanism to chain different actions together.
-Here, we will chain the picking to the shipping.
+The first step is to allow the use of *Multi-Step Routes*. Routes provide a mechanism to chain different 
+actions together. In this case, we will chain the picking step to the shipping step.
 
-To activate *multi-step routes*, open the *inventory app*, and go to
-:menuselection:`Configuration --> Settings` and activate the option. By default,
-activating *multi-step routes* will also activate *Storage
-Locations*.
+To enable *Multi-Step Routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and 
+activate the option.
 
 .. image:: media/three_steps_01.png
    :align: center
+   :alt: View of the features to enable in order to use multi-step routes for goods reception
 
-Warehouse configuration
-=======================
+.. note::
+         By default, activating *Multi-Step Routes* also activates *Storage
+         Locations*.
 
-Now that *Multi-Step Routes* is activated, go to :menuselection:`Configuration -->
-Warehouse` and open the one you will use to deliver in 3 steps. Then,
-you can select the option *Pack good, send goods in output and then
-deliver (3 steps)* as *Outgoing Shipments*.
+Configure warehouse for receipt in 3-steps
+==========================================
+
+Once *Multi-Step Routes* has been activated, go to :menuselection:`Inventory --> Configuration --> 
+Warehouse` and enter the warehouse which should work with the 3-steps reception. Then, select 
+*Receive goods in input, then quality and then stock (3 steps)* for *Incoming Shipments*.
 
 .. image:: media/three_steps_02.png
    :align: center
+   :alt: View of the incoming shipment strategy to choose to receive goods in three steps
 
-Activating this option will lead to the creation of two new locations,
-*Output* and *Packing Zone*. 
+Activating this option leads to the creation of two new locations: *Input* and *Quality Control*. 
+To rename them, go to :menuselection:`Inventory --> Configuration --> Locations` and select
+the one you want to rename.
 
-Of course, you can rename them if you want. To do so, go to
-:menuselection:`Configuration --> Locations` and select the one you want to rename.
-Change its name and hit save.
+Create a Purchase Order
+=======================
 
-Create a Sales Order
-====================
+To start the 3-steps reception process, create a *Request for Quotation* from the *Purchase* app, 
+add some storable products to it and confirm. Then, three pickings are created with your *Purchase
+Order* as the source document:
 
-In the *Sales* app, create a quotation with storable products to
-deliver. Then, confirm it and three pickings will be created and linked
-to your sale order.
+1. The first one with a reference *IN* to designate the receipt
+   process;
+
+2. The second one with a reference *INT*, which is the move to the
+   quality control zone;
+
+3. The last one with a reference *INT* to designate the move to stock.
 
 .. image:: media/three_steps_03.png
    :align: center
+   :alt: View of the three moves created by the purchase of products in three steps strategy
 
-Now, click on the button. You should see three different pickings:
+Process the receipt, quality control and entry in stock
+=======================================================
 
--  The first one, with a reference PICK, designates the picking process;
+As the receipt operation is the first one to be processed, it has a *Ready* status while the others 
+are *Waiting Another Operation*.
 
--  The second one, with a reference PACK, is for the packing process;
-
--  The third one, with a reference OUT, designates the shipping process.
+To access the receipt operation, click on the button from the *Purchase Order* or go back to the 
+*Inventory* app dashboard and click on *Receipts*.
 
 .. image:: media/three_steps_04.png
    :align: center
+   :alt: View of the button to click to see the receipts that need to be processed
 
-Process the picking, packing, and delivery
-==========================================
-
-The first operation to be processed is the picking and has a *Ready*
-status, while the others are *Waiting Another Operation*. The packing
-will become *Ready* as soon as the picking is marked as *Done*.
-
-You can enter the picking operation from here, or access it through the
-inventory app.
+In the receipt order, products are always considered available because they come from the supplier. 
+Then, the receipt can be validated.
 
 .. image:: media/three_steps_05.png
    :align: center
+   :alt: View of the move (internal transfer) from the reception area to the warehouse input area
 
-Note that, if you have the product in stock, it will be automatically
-reserved and you can validate the picking document.
+Once the receipt has been validated, the transfer to quality becomes *Ready*. And, because the documents 
+are chained to each other, products previously received are automatically reserved on the 
+transfer. Then, the transfer can be directly validated.
 
 .. image:: media/three_steps_06.png
    :align: center
-
-Now that the picking has been validated, the packing order is ready to
-be processed. Since the documents are chained, the products that have
-been picked are automatically reserved on the packing order so you can
-directly validate it.
+   :alt: View of the button to click to see the internal transfers that need to be processed
 
 .. image:: media/three_steps_07.png
    :align: center
+   :alt: View of the move (internal transfer) from the input area to the quality control area
+
+Now, the transfer that enters the products to stock is *Ready*. Here, it is again ready to be 
+validated in order to transfer the products to your stock location.
 
 .. image:: media/three_steps_08.png
    :align: center
-
-Then, you can validate your packing. In doing so, the delivery order can
-be processed. Once again, it will be ready to be validated so you can
-transfer the products to the customer location.
+   :alt: View of the button to click to see the internal transfers that need to be processed
 
 .. image:: media/three_steps_09.png
    :align: center
-
-.. image:: media/three_steps_10.png
-   :align: center
+   :alt: View of the move (internal transfer) from the quality control area to the stock
