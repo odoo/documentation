@@ -59,7 +59,8 @@ Token* is generated. You will be later requested to enter it in Odoo.
 Paypal Account Optional
 
 We advise you to not prompt customers to log in with a Paypal account
-when they get to pay. Let them pay with debit/credit cards as well, or you might lose some deals. Make sure this setting is turned on.
+when they get to pay. Let them pay with debit/credit cards as well, or you might lose some deals. Make sure this setting
+is turned on.
 
 .. image:: media/paypal04.png
     :align: center
@@ -84,41 +85,17 @@ is virtually guaranteed since IPN resends a confirmation until your site acknowl
 Payment Messages Format
 -----------------------
 
-If you use accented characters (or anything else than basic Latin characters)
-for your customer names, addresses... you MUST configure the encoding format of
-the payment request sent by Odoo to Paypal.
+Finally make sure the `encoding <https://www.paypal.com/cgi-bin/webscr?cmd=_profile-language-encoding>`__ format of
+payment messages is correctly set.
+Click *More Options* and set the two default encoding formats as *UTF-8*.
 
-.. danger::
-
-    If you don't configure this setting, some transactions fail without notice.
-
-To do so, open:
-
-* `this page for a test account <https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
-
-* `this page for a production account <https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-encoding>`__
-
-Then, click *More Options* and set the two default encoding formats as **UTF-8**.
-
-.. image:: media/paypal07.png
+.. image:: media/payment-format.png
     :align: center
 
-.. image:: media/paypal08.png
+.. image:: media/UTF8-encoding.png
     :align: center
 
 Your Paypal account is ready!
-
-.. tip::
-   If you want your customers to pay without creating a Paypal account,
-   *Paypal Account Optional* needs to be turned on.
-    
-   .. image:: media/paypal_account_optional.png
-
-.. tip::
-   For Encrypted Website Payments & EWP_SETTINGS error,
-   please check the `Paypal documentation <https://developer.paypal.com/docs/
-   classic/paypal-payments-standard/integration-guide/encryptedwebpayments/
-   #encrypted-website-payments-ewp>`_.
 
 Settings in Odoo
 ================
@@ -146,7 +123,8 @@ Transaction fees
 ----------------
 
 You can charge extra fees to your customers for paying with Paypal;
-This to cover the transaction fees Paypal charges you. Once redirected to Paypal, your customer sees an extra applied to the order amount.
+This to cover the transaction fees Paypal charges you. Once redirected to Paypal, your customer sees an extra applied to
+the order amount.
 
 To activate this, go to the Configuration tab of Paypal configuration in
 Odoo and check *Add Extra Fees*.
