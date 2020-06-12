@@ -13,7 +13,7 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 9a - 2020-06-10
+.. note:: Version 9b - 2020-06-12
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -21,6 +21,7 @@ Odoo Enterprise Subscription Agreement (FR)
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
+.. v9b: clarification that maintenance is opt-out + name of `cloc` command (+ paragraph 5.1 was partially outdated in FR)
 
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
@@ -68,9 +69,9 @@ Module Supplémentaire
     par des tiers.
 
 Module Supplémentaire Couvert
-    Un Module Supplémentaire pour lequel le Client paie un abonnement de maintenance pour obtenir
-    de l'assistance, des corrections de bug ou des migrations, à condition que le Client travaille
-    avec un Partenaire Odoo ou soit hébergé sur la Plate-forme Cloud.
+    Un Module Supplémentaire Couvert est un Module Supplémentaire pour lequel le Client choisit de
+    payer un abonnement de maintenance afin d'obtenir de l'assistance, des corrections de bug et
+    des migrations.
 
 Bug
     Désigne toute défaillance du Logiciel ou d'un Module Supplémentaire Couvert, qui se traduit par
@@ -293,17 +294,25 @@ la Plate-forme Cloud d'Odoo.
 --------------------
 
 Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
-d'Utilisateurs et les Apps installées, et précisés par
-écrit à la conclusion du contrat.
+d'Utilisateurs et les Apps installées, et précisés par écrit à la conclusion du contrat.
 
 Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou d'Apps que spécifié au moment
 de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
 en vigueur applicable (au début du Contrat) pour les utilisateurs supplémentaires,
 pour le reste de la durée.
 
-Si, au moment de la conclusion du présent Contrat, le Client utilise une Version Couverte qui
-n'est pas la plus récente, les tarifs standards peuvent être augmentés de 50% pour la
-première Durée du contrat, à la discrétion d'Odoo SA, pour couvrir les coûts de maintenance.
+Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
+du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
+des Modules Supplémentaires Couverts, le coût mensuel est de 16€ par 100 lignes de code (arrondi à la
+centaine supérieure), sauf si spécifié par écrit à la conclusion du Contrat. Les lignes de code
+sont comptées avec la commande `cloc` du Logiciel, et comprennent toutes les lignes de texte du code
+source de ces modules, peu importe le langage de programmation (Python, Javascript, XML, etc.),
+à l'exclusion des lignes vides, des lignes de commentaires et des fichiers qui ne sont pas chargés
+à l'installation ou à l'exécution du Logiciel.
+
+Lorsque le Client demande une migration, pour chaque Module Supplémentaire Couvert qui n'a pas fait
+l'objet de frais de maintenance pour les 12 derniers mois, Odoo SA peut facturer des frais
+supplémentaires unique de 16€ par 100 lignes de code, pour chaque mois de maintenance manquant.
 
 
 .. _charges_renewal_fr:
