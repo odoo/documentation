@@ -41,7 +41,7 @@ company only. To do so, on their forms, choose between:
 
 - *A blank field*: the record is shared within all companies.
 - *Adding a company*: the record is visible to users logged in to that specific company and its
-   child companies.
+  child companies.
 
 .. image:: media/product_form_company.png
    :align: center
@@ -86,11 +86,11 @@ First, make sure each one of your companies is properly set in relation to:
 
 - :doc:`Chart of Accounts <../../accounting/overview/getting_started/chart_of_accounts>`
 - :doc:`Taxes <../../accounting/fiscality/taxes/default_taxes>`
+- :doc:`Fiscal Positions <../../accounting/fiscality/taxes/fiscal_positions>`
+- :doc:`Journals <../../accounting/bank/setup/bank_accounts>`
 - :doc:`Fiscal Localizations <../../accounting/fiscal_localizations/overview/fiscal_localization_packages>`
 - :doc:`Pricelists <../../sales/products_prices/prices/pricing>`
 - :doc:`Warehouses <../../inventory/management/warehouses/warehouse_creation>`
-
-.. LINK JOURNAL AND FISCAL POSITIONS DOCS ONCE AVAILABLE + DELETE NOTE.
 
 Now, activate the *Inter-Company Transactions* option under *Settings*. With the respective company
 *activated* and *selected*, choose if you would like operations between companies to be synchronized
@@ -109,9 +109,6 @@ at an invoice/bills level or at a sales/purchase orders level.
 .. image:: media/invoice_inter_company.png
    :align: center
    :alt: View of an invoice for JS Store US created on JS Store Belgium in Odoo
-
-.. note::
-   On both environments *Fiscal Positions* and *Journal Entries* need to be set.
 
 - **Synchronize sales/purchase order**: generates a drafted purchase/sales order using the selected
   company warehouse when a sales/purchase order is confirmed for the selected company. If instead of
@@ -132,4 +129,5 @@ at an invoice/bills level or at a sales/purchase orders level.
    Remember to test all workflows as an user other than the administrator.
 
 .. seealso::
+   - `Multi-company Guidelines <https://www.odoo.com/documentation/13.0/howtos/company.html>`_
    - :doc:`../../accounting/others/multicurrencies/how_it_works`
