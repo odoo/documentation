@@ -6,7 +6,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 9a - 2020-06-10
+.. note:: Version 9b - 2020-06-12
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -14,6 +14,7 @@ Odoo Enterprise Subscription Agreement
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
+.. v9b: clarification that maintenance is opt-out + name of `cloc` command
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -58,9 +59,8 @@ Extra Module
     Partner on behalf of the Customer, or by third parties.
 
 Covered Extra Module
-    A Covered Extra Module is an Extra Module for which the Customer pays a maintenance fee
-    in order to get support, upgrade and bug fixing services, provided that the Customer works
-    with an Odoo Partner or is hosted on the Odoo Cloud Platform.
+    A Covered Extra Module is an Extra Module for which the Customer chooses to pay a maintenance
+    fee in order to get support, upgrade and bug fixing services.
 
 Bug
     Is considered a Bug any failure of the Software or of a Covered Extra Module that results in
@@ -259,7 +259,6 @@ If the Customer decides to work with Odoo SA directly, services related to Cover
 are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
 
 
-
 .. _charges:
 
 5 Charges and Fees
@@ -279,12 +278,12 @@ of conclusion of this Agreement, the Customer agrees to pay an extra fee equival
 list price (at the beginning of the Term) for the additional Users or Apps, for the remainder of the Term.
 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
-in these Covered Extra Modules. Unless otherwise specified in writing at the conclusion of the
-Agreement, the charge is a monthly fee of 16€ per 100 lines of code (rounded up to the next hundred).
-Lines of code will be counted with the tool provided by Odoo SA, and include all text lines in the
-source code of those modules, regardless of the programming language (Python, Javascript, XML, etc.),
-excluding blank lines, comment lines and files that are not loaded when installing or executing
-the Software.
+in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
+is a monthly fee of 16€ per 100 lines of code (rounded up to the next hundred), unless otherwise
+specified in writing at the conclusion of the Agreement. Lines of code will be counted with `cloc`
+command of the Software, and include all text lines in the source code of those modules, regardless
+of the programming language (Python, Javascript, XML, etc.), excluding blank lines, comment lines
+and files that are not loaded when installing or executing the Software.
 
 When the Customer requests an upgrade, for each Covered Extra Module that has not been covered by
 a maintenance fee for the last 12 months, Odoo SA may charge a one-time extra fee of 16€ per 100
