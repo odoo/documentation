@@ -13,16 +13,18 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 9b - 2020-06-12
+.. note:: Version 9c - 2020-06-15
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
+.. v8a: minor wording changes, tuned User definition, + copyright guarantee
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command (+ paragraph 5.1 was partially outdated in FR)
-
+.. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
+        on all branches)
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -46,7 +48,7 @@ reconduit pour une même durée, à moins que l'une des parties n’envoie à l'
 =============
 
 Utilisateur
-    Tout compte utilisateur actif donnant accès au Logiciel en mode création et/ou édition.
+    Tout compte utilisateur indiqué comme actif dans le Logiciel et donnant accès au mode création et/ou édition.
     Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieur(e)s
     n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
     comptés comme Utilisateurs.
@@ -323,14 +325,15 @@ supplémentaires unique de 16€ par 100 lignes de code, pour chaque mois de mai
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
 (à l'exclusion des “Initial User Discounts”)
 qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
-en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%.
+en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%
+par reconduction, sans dépasser les tarifs en vigueur les plus récents.
 
 .. _taxes_fr:
 
 5.3 Taxes et impôts
 -------------------
 
-Tous les frais et tarifs sont indiqués hors taxes et hors impôts, frais et charges fédérales,
+Tous les frais et tarifs sont indiqués hors taxes, frais et charges fédérales,
 provinciales, locales ou autres taxes gouvernementales applicables (collectivement,
 les "Taxes"). Le Client est responsable du paiement de toutes les Taxes liées aux achats effectués
 par le Client en vertu du présent Contrat, sauf lorsque Odoo SA est légalement tenue de payer ou de
@@ -347,7 +350,7 @@ percevoir les Taxes dont le client est responsable.
 Le Client accepte de / d':
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
-  conformément aux conditions de paiement spécifiées dans la facture correspondante ;
+  conformément aux conditions de paiement spécifiées à la souscription du présent Contrat ;
 - Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou les Apps installées dépassent
   les nombres spécifiés à la conclusion du Contrat, et dans ce cas, de régler les frais
   supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
@@ -518,20 +521,28 @@ Durée de l'applicabilité des dispositions:
 7.1 Garantie
 ------------
 
+Odoo SA détient le copyright ou un équivalent [#cla_fr1]_ sur 100% du code du Logiciel, et confirme que
+toutes les librairies logicielles nécessaires au fonctionnement du Logiciel sont disponibles sous une
+licence compatible avec la licence du Logiciel.
+
 Pendant la durée du présent contrat, Odoo SA s'engage à déployer les efforts
 raisonnables sur le plan commercial pour exécuter les Services conformément aux
 normes du secteur généralement acceptées à condition que :
 
 - Les systèmes informatiques du Client soient en bon état de fonctionnement et, pour l'Auto-Hébergement,
-  que le Logiciel soit installé dans un système d'exploitation approprié ;
+  que le Logiciel soit installé selon les bonnes pratiques en vigueur;
 - Le Client fournisse les informations adéquates nécessaires au dépannage et, pour l'Auto-Hébergement,
   tout accès utile, de telle
   sorte qu'Odoo SA puisse identifier, reproduire et gérer les problèmes ;
-- Tous les montants dus à Odoo SA aient été réglés.
+- Tous les montants dus à Odoo SA, qui sont échus, aient été réglés.
 
 La reprise de l'exécution des Services par Odoo SA sans frais supplémentaires constitue la seule et
 unique réparation pour le Client et la seule obligation d'Odoo SA pour tout manquement à cette
 garantie.
+
+.. [#cla_fr1] Les contributions externes sont couvertes par un `Copyright License Agreement <https://www.odoo.com/cla>`_
+              fournissant une licence de copyright et de brevet permanente, gratuite et irrévocable à Odoo SA.
+
 
 .. _disclaimers_fr:
 
@@ -539,7 +550,7 @@ garantie.
 --------------------------
 
 Mis à part les dispositions expresses du présent Contrat, aucune des parties ne donne de
-garantie d'aucune sorte, expresse, implicite, légale ou autre, et chaque partie
+garantie d'aucune sorte, expresse, implicite ou autre, et chaque partie
 décline expressément toutes garanties implicites, y compris toute garantie
 implicite de qualité marchande, d'adéquation à un usage particulier ou de non-
 contrefaçon, dans les limites autorisées par la loi en vigueur.
@@ -574,7 +585,8 @@ recours proposé par la partie ou ses filiales n'atteint pas son but essentiel.
 -----------------
 
 Aucune des parties ne sera tenue pour responsable envers l'autre partie de tout retard ou manquement
-d'exécution en vertu du présent Contrat, si ce manquement ou retard est causé par
+d'exécution en vertu du présent Contrat, si ce manquement ou retard trouve sa cause dans un cas de
+*force majeure*, comme
 une règlementation gouvernementale, un incendie, une grève, une guerre, une inondation,
 un accident, une épidémie, un embargo, la saisie d'une usine ou d'un produit dans son intégralité
 ou en partie par un gouvernement ou une autorité publique, ou toute (s) autre (s) cause (s),
@@ -591,12 +603,9 @@ hors du contrôle raisonnable de la partie concernée, et tant qu'une telle caus
 8.1 Droit applicable
 --------------------
 
-Les parties conviennent que les lois de Belgique seront applicables en cas de litige découlant
-ou en relation avec le présent Contrat, sans tenir compte des règles ou dispositions en matière de
-compétence législative ou de conflit de lois.
-Dans la mesure où une poursuite ou procédure judiciaire ou administrative serait autorisée ci-avant,
-les parties conviennent de se soumettre à la compétence exclusive du tribunal de Nivelles (Belgique)
-aux fins de la procédure de tout litige.
+Le présent contrat et les commandes passées par le client sont exclusivement régis par le droit belge.
+Tout différend relatif au présent contrat ou à une commande passée par le Client relève de la
+compétence exclusive du tribunal de l’entreprise de Nivelles.
 
 .. _severability_fr:
 

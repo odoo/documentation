@@ -6,15 +6,18 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 9b - 2020-06-12
+.. note:: Version 9c - 2020-06-15
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
+.. v8a: minor wording changes, tuned User definition, + copyright guarantee
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command
+.. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
+        on all branches)
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -38,7 +41,7 @@ termination minimum 30 days before the end of the Term to the other party.
 =============
 
 User
-    Any active user account with access to the Software in creation and/or edition mode.
+    Any user account indicated as active in the Software, with access to creation and/or edition mode.
     Deactivated user accounts and accounts used by external people (or systems) who only have
     limited access to the Software through the portal facilities (known as "portal Users") are not
     counted as Users.
@@ -322,7 +325,7 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
-  the payment conditions specified in the corresponding invoice ;
+  the payment conditions specified at the signature of this contract ;
 - immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
   numbers specified at the conclusion of the Agreement, and in this event, pay the applicable
   additional fee as described in section :ref:`charges_standard`;
@@ -488,6 +491,10 @@ Surviving Provisions:
 
 .. industry-standard warranties regarding our Services while Agreement in effect
 
+Odoo SA owns the copyright or an equivalent [#cla1]_ on 100% of the code of the Software, and confirms
+that all the software libraries required to use the Software are available under a licence compatible
+with the licence of the Software.
+
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
@@ -499,6 +506,10 @@ execute the Services in accordance with the generally accepted industry standard
 
 The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
 is for Odoo SA to resume the execution of the Services at no additional charge.
+
+
+.. [#cla1] External contributions are covered by a `Copyright License Agreement <https://www.odoo.com/cla>`_
+           that provides a permanent, free and irrevocable, copyright and patent licence to Odoo SA.
 
 .. _disclaimers:
 
@@ -538,7 +549,8 @@ or if a party or its affiliates' remedy otherwise fails of its essential purpose
 -----------------
 
 Neither party shall be liable to the other party for the delay in any performance or failure to
-render any performance under this Agreement when such failure or delay is caused by governmental
+render any performance under this Agreement when such failure or delay finds its cause in a
+case of *force majeure*, such as governmental
 regulations, fire, strike, war, flood, accident, epidemic, embargo, appropriation of plant or
 product in whole or in part by any government or public authority, or any other cause or causes,
 whether of like or different nature, beyond the reasonable control of such party as long as such
@@ -555,11 +567,10 @@ cause or causes exist.
 8.1 Governing Law
 -----------------
 
-Both parties agree that the laws of Belgium will apply, should any dispute arise out of or
-in connection with this Agreement, without regard to choice or conflict of law principles.
-To the extent that any lawsuit or court proceeding is permitted hereinabove, both
-parties agree to submit to the sole jurisdiction of the Nivelles (Belgium) court for the purpose of
-litigating all disputes.
+This Agreement and all Customer orders will be subject to Belgian law. Any dispute
+arising out of or in connection with this Agreement or any Customer order will be subject to the
+exclusive jurisdiction of the Nivelles Business Court.
+
 
 .. _severability:
 
