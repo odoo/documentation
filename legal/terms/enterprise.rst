@@ -12,6 +12,7 @@ Odoo Enterprise Subscription Agreement
 .. v7: remove possibility of price change at renewal after prior notice
 .. 7.1: specify that 7% renewal increase applies to all charges, not just per-User.
 .. v8.0: adapt for "Self-Hosting" + "Data Protection" for GDPR
+.. v8a: minor wording changes, tuned User definition, + copyright guarantee
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command
@@ -38,7 +39,7 @@ termination minimum 30 days before the end of the Term to the other party.
 =============
 
 User
-    Any active user account with access to the Software in creation and/or edition mode.
+    Any user account indicated as active in the Software, with access to creation and/or edition mode.
     Deactivated user accounts and accounts used by external people (or systems) who only have
     limited access to the Software through the portal facilities (known as "portal Users") are not
     counted as Users.
@@ -214,7 +215,7 @@ Odoo SA commits to providing at least the following services:
 - Disaster Recovery Plan, tested regularly
 
 The details of the Cloud Hosting Services are described on the Service Level Agreement page at
-https://www.odoo.com/cloud-sla.
+ https://www.odoo.com/cloud-sla.
 
 
 .. _support_service:
@@ -241,6 +242,22 @@ Tickets can be submitted via the web form or phone numbers listed on `odoo.com/h
 or when working with an Odoo Partner, the channel provided by the partner, subject to local
 opening hours.
 
+
+.. _maintenance_partner:
+
+4.6 Working with an Odoo Partner
+--------------------------------
+
+For bug fixes, support and upgrade services, the Customer may either work with an Odoo Partner
+as the main point of contact, or work with Odoo SA directly.
+
+If the Customer decides to work with an Odoo Partner, Odoo SA will subcontract services related
+to the Covered Extra Modules to the Odoo Partner, who becomes the main point of contact of the
+customer. The Odoo Partner may contact Odoo SA on behalf of the customer for second-level assistance
+with regard to standard features of the Software.
+
+If the Customer decides to work with Odoo SA directly, services related to Covered Extra Modules
+are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
 
 .. _maintenance_partner:
 
@@ -322,7 +339,7 @@ is legally obliged to pay or collect Taxes for which the Customer is responsible
 The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
-  the payment conditions specified in the corresponding invoice ;
+  the payment conditions specified at the signature of this contract ;
 - immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
   numbers specified at the conclusion of the Agreement, and in this event, pay the applicable
   additional fee as described in section :ref:`charges_standard`;
@@ -488,6 +505,10 @@ Surviving Provisions:
 
 .. industry-standard warranties regarding our Services while Agreement in effect
 
+Odoo SA owns the copyright or an equivalent[#g1]_ on 100% of the code of the Software, and confirms
+that all the librairies required to use the Software are available under a licence compatible with
+the licence of the Software.
+
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
@@ -499,6 +520,10 @@ execute the Services in accordance with the generally accepted industry standard
 
 The Customer's sole and exclusive remedy and Odoo SA's only obligation for any breach of this warranty
 is for Odoo SA to resume the execution of the Services at no additional charge.
+
+
+.. [#f1] External contributions are covered by a `CLA <https://www.odoo.com/cla`_ that provides
+         a permanent copyright and patent licence, free and irrevocable.
 
 .. _disclaimers:
 
@@ -538,7 +563,8 @@ or if a party or its affiliates' remedy otherwise fails of its essential purpose
 -----------------
 
 Neither party shall be liable to the other party for the delay in any performance or failure to
-render any performance under this Agreement when such failure or delay is caused by governmental
+render any performance under this Agreement when such failure or delay finds its cause in a
+case of *force majeure*, such as governmental
 regulations, fire, strike, war, flood, accident, epidemic, embargo, appropriation of plant or
 product in whole or in part by any government or public authority, or any other cause or causes,
 whether of like or different nature, beyond the reasonable control of such party as long as such
@@ -555,11 +581,10 @@ cause or causes exist.
 8.1 Governing Law
 -----------------
 
-Both parties agree that the laws of Belgium will apply, should any dispute arise out of or
-in connection with this Agreement, without regard to choice or conflict of law principles.
-To the extent that any lawsuit or court proceeding is permitted hereinabove, both
-parties agree to submit to the sole jurisdiction of the Nivelles (Belgium) court for the purpose of
-litigating all disputes.
+This Agreement and all Customer orders will be subject to Belgian law. Any dispute
+arising out of or in connection with this Agreement or any Customer order will be subject to the
+exclusive jurisdiction of the Nivelles Business Court.
+
 
 .. _severability:
 
