@@ -13,7 +13,7 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 9b - 2020-06-12
+.. note:: Version 9c - 2020-06-15
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -23,6 +23,8 @@ Odoo Enterprise Subscription Agreement (FR)
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command (+ paragraph 5.1 was partially outdated in FR)
+.. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
+        on all branches)
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -46,7 +48,7 @@ reconduit pour une même durée, à moins que l'une des parties n’envoie à l'
 =============
 
 Utilisateur
-    Tout compte utilisateur actif donnant accès au Logiciel en mode création et/ou édition.
+    Tout compte utilisateur indiqué comme actif dans le Logiciel et donnant accès au mode création et/ou édition.
     Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieur(e)s
     n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
     comptés comme Utilisateurs.
@@ -234,7 +236,7 @@ Odoo SA s'engage à fournir au minimum le service suivant:
 - Plan de Reprise d'Activité, testé régulièrement
 
 Les détails du Service d'Hébergement Cloud sont décrits sur la page du Service Level Agreement:
- https://www.odoo.com/cloud-sla.
+https://www.odoo.com/cloud-sla.
 
 
 .. _support_service_fr:
@@ -519,8 +521,8 @@ Durée de l'applicabilité des dispositions:
 7.1 Garantie
 ------------
 
-Odoo SA détient le copyright ou équivalent[#g1]_ sur 100% du code du Logiciel, et confirme que
-toutes les librairies nécessaires au fonctionnement du Logiciel sont disponibles sous une
+Odoo SA détient le copyright ou un équivalent [#cla_fr1]_ sur 100% du code du Logiciel, et confirme que
+toutes les librairies logicielles nécessaires au fonctionnement du Logiciel sont disponibles sous une
 licence compatible avec la licence du Logiciel.
 
 Pendant la durée du présent contrat, Odoo SA s'engage à déployer les efforts
@@ -538,8 +540,8 @@ La reprise de l'exécution des Services par Odoo SA sans frais supplémentaires 
 unique réparation pour le Client et la seule obligation d'Odoo SA pour tout manquement à cette
 garantie.
 
-.. [#f1] Les contributions externes sont couvertes par un `CLA <https://www.odoo.com/cla`_
-         fournissant une licence de copyright et de brevet permanente, gratuite et irrévocable.
+.. [#cla_fr1] Les contributions externes sont couvertes par un `Copyright License Agreement <https://www.odoo.com/cla>`_
+              fournissant une licence de copyright et de brevet permanente, gratuite et irrévocable à Odoo SA.
 
 
 .. _disclaimers_fr:

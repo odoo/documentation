@@ -6,7 +6,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 9b - 2020-06-12
+.. note:: Version 9c - 2020-06-15
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -16,6 +16,8 @@ Odoo Enterprise Subscription Agreement
 .. v9.0: add "Working with an Odoo Partner" + Maintenance of [Covered] Extra Modules + simplifications
 .. v9a: clarification wrt second-level assistance for standard features
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command
+.. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
+        on all branches)
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -215,7 +217,7 @@ Odoo SA commits to providing at least the following services:
 - Disaster Recovery Plan, tested regularly
 
 The details of the Cloud Hosting Services are described on the Service Level Agreement page at
- https://www.odoo.com/cloud-sla.
+https://www.odoo.com/cloud-sla.
 
 
 .. _support_service:
@@ -489,9 +491,9 @@ Surviving Provisions:
 
 .. industry-standard warranties regarding our Services while Agreement in effect
 
-Odoo SA owns the copyright or an equivalent[#g1]_ on 100% of the code of the Software, and confirms
-that all the librairies required to use the Software are available under a licence compatible with
-the licence of the Software.
+Odoo SA owns the copyright or an equivalent [#cla1]_ on 100% of the code of the Software, and confirms
+that all the software libraries required to use the Software are available under a licence compatible
+with the licence of the Software.
 
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
@@ -506,8 +508,8 @@ The Customer's sole and exclusive remedy and Odoo SA's only obligation for any b
 is for Odoo SA to resume the execution of the Services at no additional charge.
 
 
-.. [#f1] External contributions are covered by a `CLA <https://www.odoo.com/cla`_ that provides
-         a permanent copyright and patent licence, free and irrevocable.
+.. [#cla1] External contributions are covered by a `Copyright License Agreement <https://www.odoo.com/cla>`_
+           that provides a permanent, free and irrevocable, copyright and patent licence to Odoo SA.
 
 .. _disclaimers:
 
