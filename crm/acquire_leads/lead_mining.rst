@@ -52,7 +52,7 @@ This is an In-App Purchase feature, each generated lead will cost you one credit
 If you choose to get contact information each contact will also cost us one additional credit.
 Here is the pricing for this `feature <https://iap.odoo.com/iap/in-app-services/167?>`__, 
 To buy credits you can either go to :menuselection:`CRM --> Configuration --> Settings --> Buy
-Credits`; or go to `Settings --> In-App Purchases --> View my Services`.
+Credits`; or go to :menuselection: `Settings --> In-App Purchases --> View my Services`; .
 
 .. image:: media/LM6.png
    :align: center
