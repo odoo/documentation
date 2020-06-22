@@ -147,6 +147,7 @@ Finally, upload this file to your online banking interface to process the paymen
    :menuselection:`Accounting --> Configuration --> Customers --> Batch Payments`.
 
 .. seealso::
+   * :doc:`batch`
    * :doc:`../../bank/setup/bank_accounts`
    * `Odoo Academy: SEPA Direct Debit Mandates (SDD) <https://www.odoo.com/r/Zxs>`_
    * `List of all SEPA countries
