@@ -8,5 +8,6 @@ Advanced
    :titlesonly:
 
    advanced/containers
+   advanced/storage
    advanced/submodules
    advanced/upgrade_your_database

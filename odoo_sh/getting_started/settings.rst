@@ -160,6 +160,8 @@ To configure the deploy key for a private repository, proceed as follows:
   * Gitlab.com: :menuselection:`Settings --> Repository --> Deploy Keys`
   * Self-hosted: append the key to the git user’s authorized_keys file in its .ssh directory
 
+.. _odoosh-gettingstarted-settings-storage-size:
+
 Storage Size
 ============
 
