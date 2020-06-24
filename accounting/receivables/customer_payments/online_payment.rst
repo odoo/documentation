@@ -20,8 +20,8 @@ Make sure your :ref:`Payment Acquirers are correctly configured <payment_acquire
    By default, ":doc:`Wire Transfer <../../../general/payment_acquirers/wire_transfer>`" is the only
    Payment Acquirer activated, but you still have to fill out the payment details.
 
-To activate the Invoice Online Payment, go to :menuselection:`Accounting --> Configuration -->
-Customer Payments`, enable **Invoice Online Payment**, and click on *Save*.
+To activate the Invoice Online Payment, go to :menuselection:`Accounting --> Configuration --> 
+Settings --> Customer Payments`, enable **Invoice Online Payment**, and click on *Save*.
 
 Customer Portal
 ===============
