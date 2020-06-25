@@ -66,5 +66,5 @@ Advanced configuration
 
 .. seealso::
 
-  * :doc:`application`
+  * :doc:`fiscal_positions`
   * :doc:`tax_included`

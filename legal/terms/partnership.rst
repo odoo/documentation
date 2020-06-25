@@ -1,3 +1,4 @@
+:classes: text-justify
 
 .. _partnership_agreement:
 
@@ -8,8 +9,11 @@ Odoo Partnership Agreement
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
+.. v8a: minor clarifications and simplifications
+.. v9: added maintenance commission + obligations
+.. v9a: minor clarification to allow OE commission even without maintenance
 
-.. note:: Version 8a - 2019-08-09
+.. note:: Version 9a - 2020-06-10
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -159,6 +163,9 @@ The details of the benefits for each level of the partnership are described in t
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Commission on Odoo Enterprise         | 10%              | 10%                | 15%                | 20%                |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
+| Commission on Maintenance of          | 82%              | 82%                | 82%                | 82%                |
+| Extra Modules                         |                  |                    |                    |                    |
++---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Dedicated Account Manager & Partner   | No               | Yes                | Yes                | Yes                |
 | Dashboard                             |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
@@ -205,6 +212,21 @@ contractual relationship with the corresponding customer, PARTNER shall receive 
 according to the table of section :ref:`benefits` and their Partnership level at the date of the
 customer invoice.
 
+Once a month, PARTNER will receive a purchase order with the commission due for the preceding month.
+Based on this purchase order, PARTNER shall invoice ODOO, and will be paid within 15 days upon
+receipt of the invoice.
+
+**Maintenance of Covered Extra Modules**
+
+PARTNER acknowledges and agrees that when a customer decides to Work with PARTNER [#pcom1]_ ,
+ODOO will delegate the Maintenance of Covered Extra Modules to PARTNER, who becomes the main point
+of contact of the customer.
+
+PARTNER shall only receive the commission for the Maintenance of Covered Extra Modules
+as long as the customer does not notify ODOO that they want to stop Working with PARTNER.
+
+.. [#pcom1] “Working with an Odoo Partner” and “Covered Extra Modules” are defined in the Odoo
+   Enterprise Subscription Agreement between ODOO and customers.
 
 5 Fees
 ======

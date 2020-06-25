@@ -1,4 +1,6 @@
 {% extends "basic/layout.html" %}
+{% set html5_doctype = True %}
+
 {%- block scripts %}
  {{ super() }}
 <script type="text/javascript" src="{{ pathto('_static/jquery.min.js', 1) }}"></script>
@@ -16,14 +18,9 @@
   {% set classes = classes + ['has_code_col'] %}
 {% endif %}
 
-{%- block doctype -%}
-  <!doctype html>
-{%- endblock -%}
-{%- block htmltitle -%}
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ super() }}
-{%- endblock -%}
+{% if 'classes' in meta %}
+  {% set classes = classes + meta['classes'].split() %}
+{% endif %}
 
 {%- block linktags -%}
   {% for code, url in language_codes %}

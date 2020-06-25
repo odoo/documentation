@@ -11,20 +11,12 @@ Benelux.
 Configuration
 =============
 
-Connect a Payment Terminal
---------------------------
+Connect an IoT Box
+------------------
 
 Connecting an Ingenico Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
 to your database, please refer to the :doc:`IoT documentation <../../iot/config/connect>`.
-
-Once the IoT Box is up and running, you’ll need to link your payment
-terminal to your PoS. Open the *Point of Sale* app and go to
-:menuselection:`Configuration --> Point of Sale`. Select a PoS, tick the IoT
-Box Device option and select your payment terminal.
-
-.. image:: media/payment_terminal_01.png
-   :align: center
 
 Configure the Lane/5000 for Ingenico BENELUX
 --------------------------------------------

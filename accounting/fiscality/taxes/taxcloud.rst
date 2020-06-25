@@ -47,7 +47,7 @@ How it works
 ============
 
 Salestax is calculated in Odoo based on fiscal positions
-(see :doc:`application`).
+(see :doc:`fiscal_positions`).
 A Fiscal Position for the United States is created when installing *TaxCloud*.
 Everything works out-of-the-box.
 
@@ -90,4 +90,4 @@ price is the equivalent of a 7% tax on half the price), but this might be surpri
 point of view.
 
 .. seealso::
-   - :doc:`application`
+   - :doc:`fiscal_positions`

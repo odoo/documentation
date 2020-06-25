@@ -6,4 +6,5 @@ Advanced
    :titlesonly:
    :glob:
 
-   advanced/emailtemplate
+   advanced/email_servers
+   advanced/email_template
