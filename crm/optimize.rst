@@ -9,3 +9,4 @@ Optimize your Day-to-Day work
    optimize/onsip
    optimize/setup
    optimize/partner_autocomplete
+   optimize/gamification
