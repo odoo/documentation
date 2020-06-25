@@ -120,6 +120,6 @@ with the amount you have to pay or be refunded.
    above.
 
 .. seealso::
-   * :doc:`../../fiscality/taxes/create`
+   * :doc:`../../fiscality/taxes/taxes`
    * :doc:`../../overview/getting_started/setup`
    * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
