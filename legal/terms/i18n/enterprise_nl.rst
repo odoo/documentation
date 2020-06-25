@@ -24,7 +24,7 @@ Odoo Enterprise Subscription Agreement (NL)
 .. note:: Version 7.1 - 2018-03-16
 
 Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
-Odoo NV en zijn dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
+Odoo NV/SA en zijn dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
 met betrekking tot de Odoo Enterprise Edition of de Odoo Community Edition (de
 “Software”), gaat u (de "Klant") ermee akkoord om gebonden te zijn door de
 volgende algemene voorwaarden (de “Overeenkomst”).
@@ -509,7 +509,7 @@ een geldige bepaling met dezelfde effecten en doelstellingen.
 
 .. only:: latex
 
-    De Odoo 9 Enterprise Edition wordt in licentie gegeven onder de
+    De Odoo Enterprise Edition wordt in licentie gegeven onder de
     Odoo Enterprise Edition License v1.0, die als volgt wordt gedefinieerd:
 
     .. highlight:: none
