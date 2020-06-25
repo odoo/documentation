@@ -1,4 +1,5 @@
 {% extends "basic/layout.html" %}
+{% set html5_doctype = True %}
 
 {% set classes = [] %}
 {% if pagename == master_doc %}
@@ -12,15 +13,6 @@
 {% if 'classes' in meta %}
   {% set classes = classes + meta['classes'].split() %}
 {% endif %}
-
-{%- block doctype -%}
-  <!doctype html>
-{%- endblock -%}
-{%- block htmltitle -%}
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  {{ super() }}
-{%- endblock -%}
 
 {%- block linktags -%}
   {% for code, url in language_codes %}
