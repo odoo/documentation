@@ -9,3 +9,4 @@ Use Cases
    use_cases/filters_status_bar
    use_cases/automated_actions
    use_cases/views
+   use_cases/rainbow_man
