@@ -9,3 +9,4 @@ Subscriptions
 
    subscriptions/configuration
    subscriptions/sales_flow
+   subscriptions/reporting
