@@ -10,3 +10,4 @@ Use Cases
    use_cases/automated_actions
    use_cases/views
    use_cases/rainbow_man
+   use_cases/reports
