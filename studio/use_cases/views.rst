@@ -2,7 +2,7 @@
 Advanced Use Cases: Views
 =========================
 
-- **Case Scenario 1: in Sales, show orders in a Kanban View instead of a List View.**
+- **Case scenario 1: in Sales, show orders in a Kanban View instead of a List View.**
 
 From the Sales page, access Studio and, under *Views*, set the *Kanban* option as the default one.
 
