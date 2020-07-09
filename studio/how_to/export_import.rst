@@ -8,7 +8,7 @@ to use Studio for prototyping.
 To export these customizations, activate Studio on the main dashboard and, under the menu
 *Customizations*, click on *Export*. The default filename is *customizations.zip*.
 
-.. image:: media//export_import/customizations_menu.png
+.. image:: media/export_import/customizations_menu.png
    :align: center
    :alt: View of the menu customizations in Odoo Studio
 
