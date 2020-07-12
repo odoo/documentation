@@ -57,6 +57,7 @@ Applications
    sales
    purchase
    accounting
+   subscriptions
    project
    timesheets
    planning
@@ -77,4 +78,5 @@ Applications
    events
    survey
    expense/expense
+   studio
    mobile/firebase

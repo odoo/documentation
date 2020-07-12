@@ -36,3 +36,17 @@ respective tag (available in *Edit* mode), and selecting the right information i
 
 .. note::
    The more bills you scan, the better the system gets at identifying the correct data.
+
+Pricing
+=======
+
+| The *Bill Digitalization* is an *In-App Purchase (IAP)* service which requires prepaid credits to
+  work. Digitalizing one document consumes one credit.
+| To buy credits, go to :menuselection:`Accounting --> Configuration --> Settings --> Bill
+  Digitalization` and click on *Buy credits*, or go to :menuselection:`Settings --> Odoo IAP` and
+  click on *View My Services*.
+
+.. important::
+   - If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial
+     credits to test the feature.
+   - Click `here <https://iap.odoo.com/privacy#header_4>`_ to know about our *Privacy Policy*.

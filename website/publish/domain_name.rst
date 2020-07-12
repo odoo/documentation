@@ -117,7 +117,7 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`../../discuss/email_servers`
+  * :doc:`../../discuss/advanced/email_servers`
 
 
 

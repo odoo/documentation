@@ -22,9 +22,9 @@ feature.
 There, you will have direct access to the **Payment Acquirers** page. It will allow you to select
 and configure your acquirers of choice. Before creating or modifying a payment acquirer, be sure to
 check out our documentation about how to be paid with payment acquirers such as
-:doc:`../../ecommerce/shopper_experience/paypal`,
-:doc:`../../ecommerce/shopper_experience/authorize`, and others in the :doc:`../../ecommerce`
-documentation.
+:doc:`../../general/payment_acquirers/paypal`,
+:doc:`../../general/payment_acquirers/authorize`, and others in the
+:doc:`../../general/payment_acquirers` documentation.
 
 .. note::
    If you are familiar with this documentation: :doc:`quote_template`; you
@@ -48,8 +48,8 @@ possibilities to make their online payments. For example:
 
 .. seealso::
    - :doc:`quote_template`
-   - :doc:`../../ecommerce`
-   - :doc:`../../ecommerce/shopper_experience/paypal`
-   - :doc:`../../ecommerce/shopper_experience/authorize`
+   - :doc:`../../general/payment_acquirers`
+   - :doc:`../../general/payment_acquirers/paypal`
+   - :doc:`../../general/payment_acquirers/authorize`
 
 

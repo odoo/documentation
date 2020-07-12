@@ -12,7 +12,7 @@ Set up an incoming email server
 
 | On the *Settings* application, enable *External Email Servers* and define the incoming email
   alias you would like to use.
-| **For more information**: :doc:`../../discuss/email_servers`
+| **For more information**: :doc:`../../discuss/advanced/email_servers`
 
 Configure the email alias in your project
 -----------------------------------------
@@ -22,7 +22,7 @@ Configure the email alias in your project
   the wanted email alias and choose the policy to receive a message.
 | In addition, you can now directly set it when creating a new project.
 
-.. image:: media/email_alias.png
+.. image:: media/email_project.png
    :align: center
    :alt: In the settings of your project, define the emails alias under the tab email in Odoo Project
 
@@ -31,7 +31,7 @@ Configure the email alias in your project
 
 The email can be seen under the name of your project on the dashboard.
 
-.. image:: media/email_test.png
+.. image:: media/email_dashboard_project.png
    :align: center
    :height: 300
    :alt: View of the email alias chosen on the dashboard view in Odoo Project

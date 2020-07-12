@@ -6,9 +6,7 @@ Concepts
    :titlesonly:
    :glob:
 
-   concepts/use_routes
-   concepts/procurement_rule
-   concepts/push_rule
+   concepts/use-routes
    concepts/inter_warehouse
    concepts/cross_dock
    concepts/stock_warehouses

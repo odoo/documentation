@@ -102,7 +102,7 @@ You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/Git-
 for more details about the Git submodules.
 For instance, if you would like to update your submodules to have their latest revision,
 you can follow the chapter
-`Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes>`_.
+`Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_.
 
 Ignore modules
 ==============

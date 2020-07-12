@@ -10,6 +10,7 @@ Localizations
    localizations/colombia_ES
    localizations/france
    localizations/germany
+   localizations/indonesia
    localizations/italy_IT
    localizations/mexico
    localizations/netherlands
