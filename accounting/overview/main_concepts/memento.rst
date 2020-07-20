@@ -75,9 +75,9 @@ account (debit).
 
    .. highlights:: Balance = Debit - Credit
 
-   .. h:div:: chart-of-accounts
+.. h:div:: chart-of-accounts control-section
 
-      .. placeholder
+  .. placeholder
 
 
 Journal Entries

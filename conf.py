@@ -321,21 +321,18 @@ LANGUAGES = {
 }
 
 def setup(app):
-    app.add_stylesheet('accounting.css')
-    app.add_stylesheet('legal.css')
-    app.add_javascript('prefixfree.min.js')
-    app.add_javascript('atom.js')
-    app.add_javascript('immutable.js')
-    app.add_javascript('react.min.js')
-    app.add_javascript('accounts.js')
-    app.add_javascript('chart-of-accounts.js')
-    app.add_javascript('entries.js')
-    app.add_javascript('reconciliation.js')
-    app.add_javascript('misc.js')
+    app.add_css_file('accounting.css')
+    app.add_css_file('legal.css')
+    app.add_js_file('prefixfree.min.js')
+    app.add_js_file('owl.js')
+    app.add_js_file('accounts.js')
+    app.add_js_file('chart-of-accounts.js')
+    app.add_js_file('entries.js')
+    app.add_js_file('reconciliation.js')
+    app.add_js_file('misc.js')
 
-    app.add_javascript('inventory.js')
-    app.add_javascript('coa-valuation-continental.js')
-    app.add_javascript('coa-valuation-anglo-saxon.js')
+    app.add_js_file('coa-valuation-continental.js')
+    app.add_js_file('coa-valuation-anglo-saxon.js')
 
     app.connect('html-page-context', canonicalize)
     app.add_config_value('canonical_root', None, 'env')

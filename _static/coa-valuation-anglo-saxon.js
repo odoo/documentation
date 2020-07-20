@@ -1,206 +1,56 @@
-(function () {
+(() => {
     'use strict';
 
-    var data = createAtom();
+    const {Component, useState} = owl;
+    const {xml} = owl.tags;
 
-    function toKey(s, postfix) {
-        if (postfix) {
-            s += ' ' + postfix;
-        }
-        return s.replace(/[^0-9a-z ]/gi, '').toLowerCase().split(/\s+/).join('-');
-
-    }
-    var Controls = React.createClass({
-        render: function () {
-            var state = this.props.p;
-            return React.DOM.div(null, operations.map(function (op) {
-                var label = op.get('label'), operations = op.get('operations');
-                return React.DOM.label(
-                    {
-                        key: toKey(label),
-                        style: {display: 'block'},
-                        className: (operations === state.get('active') ? 'highlight-op' : void 0)
-                    },
-                    React.DOM.input({
-                        type: 'checkbox',
-                        checked: state.get('operations').contains(operations),
-                        onChange: function (e) {
-                            if (e.target.checked) {
-                                data.swap(function (d) {
-                                    return d.set('active', operations)
-                                        .update('operations', function (ops) {
-                                            return ops.add(operations)
-                                        });
-                                });
-                            } else {
-                                data.swap(function (d) {
-                                    return d.set('active', null) // keep visible in state map
-                                        .update('operations', function (ops) {
-                                            return ops.remove(operations);
-                                        })
-                                });
-                            }
-                        }
-                    }),
-                    " ",
-                    label
-                );
-            }));
-        }
-    });
-
-    var Chart = React.createClass({
-        render: function () {
-            var lastop = Immutable.Map(
-                (this.props.p.get('active') || Immutable.List()).map(function (op) {
-                    return [op.get('account'), op.has('credit') ? 'credit' : 'debit'];
-                })
-            );
-            return React.DOM.div(
-                null,
-                React.DOM.table(
-                    {className: 'table table-condensed'},
-                    React.DOM.thead(
-                        null,
-                        React.DOM.tr(
-                            null,
-                            React.DOM.th(),
-                            React.DOM.th({className: 'text-right'}, "Debit"),
-                            React.DOM.th({className: 'text-right'}, "Credit"),
-                            React.DOM.th({className: 'text-right'}, "Balance"))
-                    ),
-                    React.DOM.tbody(
-                        null,
-                        this.accounts().map(function (data) {
-                            var highlight = lastop.get(data.get('code'));
-                            return React.DOM.tr(
-                                {key: data.get('code')},
-                                React.DOM.th(null,
-                                             data.get('level') ? '\u2001 ' : '',
-                                             data.get('code'), ' ', data.get('label')),
-                                React.DOM.td({className: React.addons.classSet({
-                                    'text-right': true,
-                                    'highlight-op': highlight === 'debit'
-                                })}, format(data.get('debit'))),
-                                React.DOM.td({className: React.addons.classSet({
-                                    'text-right': true,
-                                    'highlight-op': highlight === 'credit'
-                                })}, format(data.get('credit'))),
-                                React.DOM.td(
-                                    {className: 'text-right'},
-                                    ((data.get('debit') || data.get('credit'))
-                                     ? format(data.get('debit') - data.get('credit'), 0)
-                                     : '')
-                                )
-                            );
-                        })
-                    )
-                )
-            );
-        },
-        accounts: function() {
-            var data = this.props.p.get('operations');
-
-            var totals = data.toIndexedSeq().flatten(true).reduce(function (acc, op) {
-                return acc
-                    .updateIn([op.get('account'), 'debit'], function (d) {
-                        return (d || 0) + op.get('debit', zero)(data);
-                    })
-                    .updateIn([op.get('account'), 'credit'], function (c) {
-                        return (c || 0) + op.get('credit', zero)(data);
-                    });
-            }, Immutable.Map());
-
-            return accounts.map(function (account) {
-                // for each account, add sum
-                return account.merge(
-                    account.get('accounts').map(function (code) {
-                        return totals.get(code, NULL);
-                    }).reduce(function (acc, it) {
-                        return acc.mergeWith(function (a, b) { return a + b; }, it, NULL);
-                    })
-                );
-            });
-        }
-    });
-    data.addWatch('chart', function (k, m, prev, next) {
-        React.render(
-            React.createElement(Controls, {p: next}),
-            document.getElementById('chart-controls-anglo-saxon'));
-        React.render(
-            React.createElement(Chart, {p: next}),
-            document.querySelector('.valuation-chart-anglo-saxon'));
-    });
-
-    document.addEventListener('DOMContentLoaded', function () {
-        var chart = document.querySelector('.valuation-chart-anglo-saxon');
-        if (!chart) { return; }
-
-        var controls = document.createElement('div');
-        controls.setAttribute('id', 'chart-controls-anglo-saxon');
-        chart.parentNode.insertBefore(controls, chart);
-
-        data.reset(Immutable.Map({
-            // last-selected operation
-            active: null,
-            // set of all currently enabled operations
-            operations: Immutable.OrderedSet()
-        }));
-    });
-
-    var NULL = Immutable.Map({debit: 0, credit: 0});
-    var ASSETS = {
+    const ASSETS = {
         code: 1,
         label: "Assets",
-        BANK: { code: 11000, label: "Cash" },
-        ACCOUNTS_RECEIVABLE: { code: 13100, label: "Accounts Receivable" },
-        STOCK: { code: 14000, label: "Inventory" },
-        RAW_MATERIALS: { code: 14100, label: "Raw Materials Inventory" },
-        STOCK_OUT: { code: 14600, label: "Goods Issued Not Invoiced" },
-        TAXES_PAID: { code: 19000, label: "Deferred Tax Assets" }
+        BANK: {code: 11000, label: "Cash"},
+        ACCOUNTS_RECEIVABLE: {code: 13100, label: "Accounts Receivable"},
+        STOCK: {code: 14000, label: "Inventory"},
+        RAW_MATERIALS: {code: 14100, label: "Raw Materials Inventory"},
+        STOCK_OUT: {code: 14600, label: "Goods Issued Not Invoiced"},
+        TAXES_PAID: {code: 19000, label: "Deferred Tax Assets"}
     };
-    var LIABILITIES = {
+    const LIABILITIES = {
         code: 2,
         label: "Liabilities",
-        ACCOUNTS_PAYABLE: { code: 21000, label: "Accounts Payable" },
-        STOCK_IN: { code: 23000, label: "Goods Received Not Purchased" },
-        TAXES_PAYABLE: { code: 26200, label: "Deferred Tax Liabilities" }
+        ACCOUNTS_PAYABLE: {code: 21000, label: "Accounts Payable"},
+        STOCK_IN: {code: 23000, label: "Goods Received Not Purchased"},
+        TAXES_PAYABLE: {code: 26200, label: "Deferred Tax Liabilities"}
     };
-    var EQUITY = {
+    const EQUITY = {
         code: 3,
         label: "Equity",
-        CAPITAL: { code: 31000, label: "Common Stock" }
+        CAPITAL: {code: 31000, label: "Common Stock"}
     };
-    var REVENUE = {
+    const REVENUE = {
         code: 4,
         label: "Revenue",
-        SALES: { code: 41000, label: "Goods" },
+        SALES: {code: 41000, label: "Goods"},
     };
-    var EXPENSES = {
+    const EXPENSES = {
         code: 5,
         label: "Expenses",
-        GOODS_SOLD: { code: 51100, label: "Cost of Goods Sold" },
-        MANUFACTURING_OVERHEAD: { code: 52000, label: "Manufacturing Overhead" },
-        PRICE_DIFFERENCE: { code: 53000, label: "Price Difference" }
+        GOODS_SOLD: {code: 51100, label: "Cost of Goods Sold"},
+        MANUFACTURING_OVERHEAD: {code: 52000, label: "Manufacturing Overhead"},
+        PRICE_DIFFERENCE: {code: 53000, label: "Price Difference"}
     };
-    var categories = Immutable.fromJS([ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES], function (k, v) {
-        return Immutable.Iterable.isIndexed(v)
-            ? v.toList()
-            : v.toOrderedMap();
-    });
-    var accounts = categories.toSeq().flatMap(function (cat) {
-        return Immutable.Seq.of(cat.set('level', 0)).concat(cat.filter(function (v, k) {
-            return k.toUpperCase() === k;
-        }).toIndexedSeq().map(function (acc) { return acc.set('level', 1) }));
-    }).map(function (account) { // add accounts: Seq<AccountCode> to each account
-        return account.set(
-            'accounts',
-            Immutable.Seq.of(account.get('code')).concat(
-                account.toIndexedSeq().map(function (val) {
-                    return Immutable.Map.isMap(val) && val.get('code');
-                }).filter(function (val) { return !!val; })
-            )
-        );
+
+    const categories = [ASSETS, LIABILITIES, EQUITY, REVENUE, EXPENSES].map(v => {
+        v['rows'] = {};
+        v['debit_total'] = 0;
+        v['credit_total'] = 0;
+        for (const [key, category] of Object.entries(v)) {
+            if (!["rows", "debit_total", "credit_total"].includes(key) && category instanceof Object) {
+                v['rows'][category.code] = category;
+                v['rows'][category.code]['debit_total'] = 0;
+                v['rows'][category.code]['credit_total'] = 0;
+            }
+        }
+        return v;
     });
 
     var sale = 100,
@@ -210,7 +60,7 @@
         total = sale + tax,
         purchase = 52,
         purchase_tax = 52 * 0.09;
-    var operations = Immutable.fromJS([{
+    var operations = [{
         label: "Vendor Bill (PO $50, Invoice $50)",
         operations: [
             {account: LIABILITIES.STOCK_IN.code, debit: constant(50)},
@@ -259,12 +109,141 @@
             {account: EXPENSES.MANUFACTURING_OVERHEAD.code, debit: constant(2)},
             {account: ASSETS.RAW_MATERIALS.code, credit: constant(52)}
         ]
-    }]);
-    function constant(val) {return function () { return val; };}
-    var zero = constant(0);
-    function format(val, def) {
-        if (!val) { return def === undefined ? '' : def; }
-        if (val % 1 === 0) { return val; }
-        return val.toFixed(2);
+    }];
+
+    function constant(val) {
+        return () => val;
     }
+
+    class CoaValuationContinental extends Component {
+
+        constructor() {
+            super(...arguments);
+            this.state = useState({ categories: categories, active: "", lastOps: {} });
+            this.operations = operations;
+        }
+
+        format(val, def) {
+            if (!val) { return def === undefined ? '' : def; }
+            if (val % 1 === 0) { return val; }
+            return val.toFixed(2);
+        }
+
+        onChangeControl(event) {
+            this.state.active = event.target.checked ? event.target.value : "";
+            this.state.lastOps = {};
+            this.currentOp = this.getOperationByLabel(event.target.value);
+            this.currentOp.operations.forEach(op => {
+                this.setCategoryValue(op, event.target.checked);
+            });
+        }
+
+        getOperationByLabel(name) {
+            const operation = this.operations.filter(operation => operation.label === name);
+            return operation && operation[0] || [];
+        }
+
+        setCategoryValue(operation, isChecked = true) {
+            this.state.categories.forEach(category => {
+                const account = category.rows[operation.account];
+                if (account) {
+                    if (operation.debit) {
+                        if (isChecked) {
+                            account.debit_total += operation.debit();
+                            category.debit_total += operation.debit();
+                            this.state.lastOps[operation.account] = "debit";
+                        } else {
+                            account.debit_total -= operation.debit();
+                            category.debit_total -= operation.debit();
+                        }
+                    } else if (operation.credit) {
+                        if (isChecked) {
+                            account.credit_total += operation.credit();
+                            category.credit_total += operation.credit();
+                            this.state.lastOps[operation.account] = "credit";
+                        } else {
+                            account.credit_total -= operation.credit();
+                            category.credit_total -= operation.credit();
+                        }
+                    }
+                }
+            });
+        }
+
+        static template = xml`
+            <div class="control-section">
+                <div id="chart-controls-continental" class="controls">
+                    <t t-foreach="operations" t-as="operation">
+                        <label t-key="operation.label" t-att-class="state.active == operation.label ? 'highlight-op' : ''">
+                            <input type="checkbox" t-att-value="operation.label" t-on-change="onChangeControl"/>
+                            <span><t t-esc="operation.label" /></span>
+                        </label>
+                    </t>
+                </div>
+                <div class="doc-aside">
+                    <table class="table table-condensed">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-right">Debit</th>
+                                <th class="text-right">Credit</th>
+                                <th class="text-right">Balance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.categories" t-as="category">
+                                <tr t-key="category.code">
+                                    <th>
+                                        <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
+                                    </th>
+                                    <td class="text-right">
+                                        <t t-esc="format(category.debit_total)"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-esc="format(category.credit_total)"/>
+                                    </td>
+                                    <td class="text-right">
+                                        <t t-esc="(category.debit_total || category.credit_total)
+                                        ? format(category.debit_total - category.credit_total, 0)
+                                        : '' "/>
+                                    </td>
+                                </tr>
+                                <t t-foreach="category.rows" t-as="row">
+                                    <tr t-key="row.code">
+                                        <t t-set="account" t-value="category.rows[row]"/>
+                                        <th> 
+                                            <span class="pl15"></span>
+                                            <span><t t-esc="account.code"/> <t t-esc="account.label"/></span>
+                                        </th>
+                                        <td t-att-class="state.lastOps[account.code] == 'debit' 
+                                                        ? 'text-right highlight-op' 
+                                                        : 'text-right'"> 
+                                            <t t-esc="format(account.debit_total)"/>
+                                        </td>
+                                        <td t-att-class="state.lastOps[account.code] == 'credit' 
+                                                        ? 'text-right highlight-op' 
+                                                        : 'text-right'"> 
+                                            <t t-esc="format(account.credit_total)"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <t t-esc="(account.debit_total || account.credit_total)
+                                            ? format(account.debit_total - account.credit_total, 0)
+                                            : '' "/>
+                                        </td>
+                                    </tr>
+                                </t>
+                            </t>
+                        </tbody>
+                    </table>
+                </div>
+            </div>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        var chart = document.querySelector('.valuation-chart-anglo-saxon');
+        if (!chart) { return; }
+        const controls = new CoaValuationContinental();
+        controls.mount(chart);
+    });
+
 })();

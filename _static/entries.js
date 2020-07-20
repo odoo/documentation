@@ -1,130 +1,10 @@
 (function () {
     'use strict';
 
-    var data = createAtom();
-    data.addWatch('chart', function (k, m, prev, next) {
-        React.render(
-            React.createElement(Controls, {entry: next}),
-            document.getElementById('entries-control'));
-        React.render(
-            React.createElement(FormatEntry, {entry: next}),
-            document.querySelector('.journal-entries'));
-    });
-    document.addEventListener('DOMContentLoaded', function () {
-        var entries_section = findAncestor(document.querySelector('.journal-entries'), 'section');
-        if (!entries_section) { return; }
+    const {Component, useState} = owl;
+    const {xml} = owl.tags;
 
-        var controls = document.createElement('div');
-        controls.setAttribute('id', 'entries-control');
-        entries_section.insertBefore(controls, entries_section.lastElementChild);
-
-        data.reset(entries.first());
-    });
-
-    var Controls = React.createClass({
-        render: function () {
-            var _this = this;
-            return React.DOM.div(
-                null,
-                entries.map(function (entry, index) {
-                    return React.DOM.label(
-                        {
-                            key: index,
-                            style: { display: 'block' },
-                        },
-                        React.DOM.input({
-                            type: 'radio',
-                            checked: Immutable.is(entry, this.props.entry),
-                            onChange: function (e) {
-                                data.reset(entry);
-                            }
-                        }),
-                        ' ',
-                        entry.get('title')
-                    );
-                }, this),
-                this.props.entry && React.DOM.p(null, this.props.entry.get('help'))
-            );
-        }
-    });
-    var FormatEntry = React.createClass({
-        render: function () {
-            var entry = this.props.entry;
-            return React.DOM.div(
-                null,
-                React.DOM.table(
-                    {className: 'table table-condensed d-c-table'},
-                    React.DOM.thead(
-                        null,
-                        React.DOM.tr(
-                            null,
-                            React.DOM.th(),
-                            React.DOM.th(null, "Debit"),
-                            React.DOM.th(null, "Credit")
-                        )
-                    ),
-                    React.DOM.tbody(
-                        null,
-                        this.render_rows()
-                    )
-                ),
-                React.createElement(Listing, {
-                    heading: "Explanation",
-                    items: entry && entry.get('explanation')
-                }),
-                React.createElement(Listing, {
-                    heading: "Configuration",
-                    items: entry && entry.get('configuration')
-                })
-            );
-        },
-        render_rows: function () {
-            if (!this.props.entry) { return; }
-            return this.props.entry.get('operations').map(this.render_row);
-        },
-        render_row: function (entry, index) {
-            if (!entry) {
-                return React.DOM.tr(
-                    {key: 'spacer-' + index},
-                    React.DOM.td({colSpan: 3}, "\u00A0")
-                );
-            }
-            return React.DOM.tr(
-                {key: index},
-                React.DOM.td(null, entry.get('account')),
-                React.DOM.td(null, entry.get('debit')),
-                React.DOM.td(null, entry.get('credit'))
-            );
-        }
-    });
-    var Listing = React.createClass({
-        render: function () {
-            if (!this.props.items || this.props.items.isEmpty()) {
-                return React.DOM.div();
-            }
-            var items = this.props.items, epilog = Immutable.List();
-            var idx = items.indexOf(null);
-            if (idx !== -1) {
-                epilog = items.slice(idx+1);
-                items = items.take(idx);
-            }
-            return React.DOM.div(
-                {className: 'entries-listing'},
-                React.DOM.h4(null, this.props.heading, ':'),
-                React.DOM.ul(
-                    null,
-                    items.map(function (item, index) {
-                        return React.DOM.li({key: index}, item);
-                    })
-                ),
-                epilog.map(function (item, index) {
-                    return React.DOM.p({key: index}, item);
-                })
-            );
-        }
-    });
-
-    var entries = Immutable.fromJS([
+    var entries = [
         {
             title: "Company Incorporation",
             operations: [
@@ -290,5 +170,116 @@
                 "This transaction is recorded by the advisor before closing the fiscal year, depending on how the company uses its net profit."
             ]
         }
-    ]);
+    ];
+
+    class EntryControls extends Component {
+        constructor() {
+            super(...arguments);
+            this.state = useState({entry: { 
+                                        title: "", 
+                                        operations: [],
+                                        explanation_list: [],
+                                        explanation_epilog: [],
+                                        configuration_list: [],
+                                        configuration_epilog: []
+                                        }});
+            this.entries = entries;
+        }
+
+        mounted() {
+            var entry = document.querySelector('#entries-control input[type="radio"]');
+            entry.checked = true;
+            this.onChangeEntry(entry.value);
+        }
+
+        getItemAndEpilog(value) {
+            var items = value;
+            var epilog = [];
+            const idx = items.indexOf(null);
+            if (idx !== -1) {
+                epilog = items.slice(idx + 1);
+                items = items.slice(0, idx);
+            }
+            return [items, epilog];
+        }
+
+        onChangeEntry(entry) {
+            const entryVal = this.entries.find(o => o.title === entry);
+            this.state.entry.title = entryVal.title;
+            this.state.entry.operations = entryVal.operations;
+            [this.state.entry.explanation_list, this.state.entry.explanation_epilog] = this.getItemAndEpilog(entryVal.explanation);
+            [this.state.entry.configuration_list, this.state.entry.configuration_epilog] = this.getItemAndEpilog(entryVal.configuration);
+            this.state.operations = entryVal.operations;
+        }
+
+        static template = xml`
+                <div class="control-section">
+                    <div id="entries-control" class="controls">
+                        <div>
+                            <t t-foreach="entries" t-as="entry">
+                                <label t-key="entry.title">
+                                    <input type="radio" name="entries" t-att-value="entry.title" t-on-change="onChangeEntry(entry.title)"/>
+                                    <span><t t-esc="entry.title" /></span>
+                                </label>
+                            </t>
+                        </div>
+                    </div>
+                    <div class="journal-entries doc-aside">
+                        <div>
+                            <table class="table table-condensed d-c-table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Debit</th>
+                                        <th>Credit</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <t t-foreach="state.entry.operations" t-as="operation">
+                                        <tr t-key="operation.account">
+                                            <td><t t-esc="operation.account"/></td>
+                                            <td><t t-esc="operation.debit"/></td>
+                                            <td><t t-esc="operation.credit"/></td>
+                                        </tr>
+                                    </t>
+                                </tbody>
+                            </table>
+                            <div class="entries-listing" 
+                                t-if="state.entry.explanation_list.length || state.entry.explanation_epilog.length">
+                                <h4>Explanation : </h4>
+                                <ul t-if="state.entry.explanation_list.length">
+                                    <t t-foreach="state.entry.explanation_list" t-as="explanation">
+                                        <li t-key="explanation"><t t-esc="explanation" /></li>
+                                    </t>
+                                </ul>
+                                <t t-foreach="state.entry.explanation_epilog" t-as="explanation_epilog">
+                                    <p t-key="explanation_epilog"><t t-esc="explanation_epilog" /></p>
+                                </t>
+                            </div>
+                            <div class="entries-listing" 
+                                t-if="state.entry.configuration_list.length || state.entry.configuration_epilog.length">
+                                <h4>Configuration : </h4>
+                                <ul t-if="state.entry.configuration_list.length">
+                                    <t t-foreach="state.entry.configuration_list" t-as="configuration">
+                                        <li t-key="configuration"><t t-esc="configuration" /></li>
+                                    </t>
+                                </ul>
+                                <t t-foreach="state.entry.configuration_epilog" t-as="configuration_epilog">
+                                    <p t-key="configuration_epilog"><t t-esc="configuration_epilog" /></p>
+                                </t>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        if (document.querySelector('.journal-entries')) {
+            document.querySelector('.journal-entries').remove();
+        }
+        var entrySection = document.getElementById('journal-entries');
+        if (!entrySection) { return; }
+        const controls = new EntryControls();
+        controls.mount(entrySection);
+    });
 }());

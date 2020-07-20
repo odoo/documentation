@@ -359,7 +359,7 @@ accounting entries. This is done on the product category.
 Continental Accounting
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. h:div:: valuation-chart-continental doc-aside
+.. h:div:: valuation-chart-continental control-section
 
    .. placeholder
 
@@ -386,7 +386,7 @@ Continental Accounting
 Anglo-Saxon Accounting
 ~~~~~~~~~~~~~~~~~~~~~~
 
-.. h:div:: valuation-chart-anglo-saxon doc-aside
+.. h:div:: valuation-chart-anglo-saxon control-section
 
    .. placeholder
 
