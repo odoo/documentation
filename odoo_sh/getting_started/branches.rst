@@ -19,7 +19,7 @@ Stages
 
 Odoo.sh offers three different stages for your branches: production, staging and development.
 
-You can change the stage of a branch by drag and dropping it on the stage section title.
+You can change the stage of a branch by drag and dropping it into the stage section title.
 
 .. image:: ./media/interface-branches-stagechange.png
    :align: center
@@ -107,7 +107,7 @@ After that, they can be automatically garbage collected to make room for new dat
 
 Merging your branches
 ---------------------
-You can merge your branches easily by drag and dropping them on each other.
+You can merge your branches easily by drag and dropping them into each other.
 
 .. image:: ./media/interface-branches-merge.png
    :align: center
