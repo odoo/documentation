@@ -1,6 +1,6 @@
-================
-Create a  Survey
-================
+========================
+Get Started with Surveys
+========================
 
 Surveys can be used for a range of purposes that can go from collecting customer feedback, evaluate
 the success of an event, measure how pleased customers are with your products/services, gauge
@@ -10,33 +10,79 @@ your market is thinking.
 Get started
 ===========
 
-Choose the type of answer you would like your question to have, and under *Options* find the
-feature *Mandatory Answer*.
+When creating your survey, choose a *Title* and *Category*. The *Category* field is used to know in
+which context the survey is being conducted, as different applications might use it for different
+purposes such as recruitment, certification, or employee appraisal.
 
-.. image:: media/sur1.png
+.. image:: media/new_survey.png
    :align: center
-   :alt: Create surveys with Odoo Survey application
+   :alt: Form view of a survey with a title and category being chosen in Odoo Surveys
 
-| Write a *Description* to be displayed on the homepage of the survey, and under *Options*, find
-  features such as *Time Limit* and *Scoring*.
-| *Test* to go through the survey before sharing it, avoiding errors.
-| Once done, click on *Start Survey* to be able to *Share* it with your recipients (respondents).
+Tab: Questions
+--------------
 
-Getting responses and analysing results
-=======================================
+| Add sections and questions by clicking on the respective links.
+| On the *Sections and Questions* form, once the question type is chosen and the answer added,
+  under the tab *Options*, enable *Mandatory Answer*, and set an *Error message* to be shown
+  when the user tries to submit the survey without answering the respective question.
+| Depending on the *Question Type*, the tab *Options* aggregates extra and different
+  possibilities. Examples:
 
-| As your recipients respond to it, the answers can be seen under the status button *Answers*, or
-  under :menuselection:`Survey --> Participations --> Participations`.
-| If checking the answers under *Participations*, more details such as the number of attempts and
-  skipped answers a respondent took are shown.
+- *Single Line Text Box* - can choose a minimum and maximum text length (number of characters -
+  spaces do not count), and its error message.
+- *Multiple choice: multiple answers allowed*: choose between radio buttons or a dropdown menu
+  list, and if you would like to have a comment field. If the user select an answer and type a
+  comment, the values are separately recorded. Or, enable the comment field to be
+  displayed as an answer choice, with which a text type field is displayed.
+- *Matrix Type*: choose if you would like to have one or multiple choices per row.
 
-.. image:: media/sur2.png
+.. image:: media/sections_questions.png
    :align: center
-   :alt: Create surveys with Odoo Survey application
+   :alt: Sections and questions view of a survey in Odoo Surveys
 
-Click on *See results* to see an analysis of the responses, and if you chose to have a scoring
-system and certificate available, a *Certified* status menu becomes available.
+Tab: Description
+----------------
 
-.. image:: media/sur3.png
+Write a *Description* to be displayed under the title of the survey's homepage.
+
+.. image:: media/frontend_description.png
    :align: center
-   :alt: Create surveys with Odoo Survey application
+   :alt: Frontend of a survey showing the title and description of a survey for Odoo Surveys
+
+.. tip::
+   Click on *Edit* to personalize your pages with the website builder.
+
+Tab: Options
+------------
+
+Under the tab *Options*, choose the *Layout* of your questions. If choosing *One page per section* or
+*One page per question*, an option *Back Button* becomes available, which allows the user to go back
+pages.
+
+.. image:: media/tab_options_layout.png
+   :align: center
+   :alt: Form view of a survey emphasizing the layout feature under options in Odoo Surveys
+
+Test and share the survey
+=========================
+
+| Once your Survey is ready, *Test* it to avoid *Sharing* it with potential errors. As answers get
+  collected, click on *Answers* to access all the details of the respondent and his answers.
+| By default, a filter *Except Test Entries* is applied to keep the list of entries clean with only
+  real participants.
+
+.. image:: media/user_feedback.png
+   :align: center
+   :alt: View list of the participations of a survey in Odoo Surveys
+
+| Another way to access detailed answers is by going to :menuselection:`Participations -->
+  Participations`.
+| Click on *See results* to be redirected to an analytical page.
+
+.. image:: media/analytical_page.png
+   :align: center
+   :alt: View of an analytical page for Odoo Surveys
+
+.. seealso::
+   - :doc:`scoring`
+   - :doc:`time_random`

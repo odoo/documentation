@@ -6,3 +6,5 @@ Overview
    :titlesonly:
 
    overview/create
+   overview/scoring
+   overview/time_random
