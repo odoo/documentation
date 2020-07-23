@@ -23,8 +23,8 @@ Selection
 | When you randomize a survey, you allow for the questions to be shuffled in a random order every
   time someone opens the questionnaire. This can be useful to avoid having respondents looking at
   each others' answers.
-| To do so, under the tab *Options*, enable *Randomized per section*. Now, on the tab *Options*, set
-  how many of the questions in that section should be taken into account during the shuffling.
+| To do so, under the tab *Options*, enable *Randomized per section*. Now, under the tab *Questions*,
+  set how many of the questions in that section should be taken into account during the shuffling.
 
 .. image:: media/random_question.png
    :align: center
