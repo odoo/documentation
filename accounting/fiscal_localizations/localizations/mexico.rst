@@ -69,7 +69,7 @@ integrate with the normal invoicing flow in Odoo.
 .. _mx-legal-info:
 
 
-Set you legal information in the company
+Set your legal information in the company
 ----------------------------------------
 
 First, make sure that your company is configured with the correct data.
