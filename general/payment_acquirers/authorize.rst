@@ -81,7 +81,7 @@ Settings --> Transaction Response Settings --> Response/Receipt URLs`, and set t
 - | Default Receipt URL:
   | *https://[yourcompany.odoo.com]*/**payment/authorize/return**
 - | Default Relay Response URL:
-  | *https://[yourcompany.odoo.com]*/**payment/authorize/return**
+  | *https://[yourcompany.odoo.com]*/**shop/confirmation**
 
 .. note::
    | Failing to complete this step results in the following error:
