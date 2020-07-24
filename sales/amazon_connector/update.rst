@@ -68,3 +68,8 @@ page.
 Once the module is installed, you will need to generate an Authorization Token in Amazon
 Seller Central and set it up on your Amazon Account in Odoo; this process is detailed
 in the :doc:`setup <setup>` page.
+
+.. seealso::
+   - :doc:`features`
+   - :doc:`setup`
+   - :doc:`manage`
