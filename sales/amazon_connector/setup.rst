@@ -156,3 +156,7 @@ on **Update available marketplaces** (an animation should confirm the success of
 edit the Amazon Account to add the new marketplace in the list of synchronized marketplaces - if the new
 marketplace is not available in the list, it means it is either incompatible with the account's region or
 simply that it is not supported by the Amazon Connector.
+
+.. seealso::
+   - :doc:`features`
+   - :doc:`manage`

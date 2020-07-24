@@ -101,3 +101,7 @@ reporting for the sales of this account.
    Then, create another registration for this account and remove all marketplaces, except the one to
    isolate from the others. Finally, assign another sales team to one of the two registrations of
    your account.
+
+.. seealso::
+   - :doc:`features`
+   - :doc:`setup`
