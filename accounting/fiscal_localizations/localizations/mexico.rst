@@ -70,7 +70,7 @@ integrate with the normal invoicing flow in Odoo.
 
 
 Set your legal information in the company
-----------------------------------------
+-----------------------------------------
 
 First, make sure that your company is configured with the correct data.
 Go in :menuselection:`Settings --> Users --> Companies`

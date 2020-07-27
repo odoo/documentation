@@ -12,12 +12,6 @@ and **Canceled** orders are fetched. For **FBM** (Fulfilled by Merchant), the sa
 **Unshipped** and **Canceled** orders. For each synchronized order, a sales order and a customer are
 created in Odoo if they are not yet registered.
 
-.. note::
-   If you did not request access to Personally Identifiable Information of your customers in the
-   :ref:`Developer Registration and Assessment form <amazon/developer-form>`, the customers are
-   created anonymously (the name, postal address and phone number are omitted) and named
-   **Amazon Customer**.
-
 When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
 order is canceled in Odoo.
 When an order is canceled in Odoo, a notification is sent to Amazon who will mark it as such in
