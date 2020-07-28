@@ -31,7 +31,7 @@ What kind of support is included?
   misconfiguration or customization)
 - Issues that might occur in a test database after upgrading to a newer version
 
-*Odoo Support does not make changes to your production database, but gives you
+*Odoo Support does not make changes to your production database without your agreement and gives you
 the material and knowledge to do it yourself!*
 
 
