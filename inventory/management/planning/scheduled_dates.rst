@@ -18,9 +18,11 @@ suppliers, into account.
 How are Lead Times Calculated?
 ==============================
 
-.. image:: media/scheduled_dates_01.png
-    :align: center
-    :alt: Visual representation of various lead times such as customer lead time or delivery LT
+.. raw:: html
+
+   <iframe src="https://docs.google.com/presentation/d/e/2PACX-1vQbjAf6_Py7n3bLLO0w8X7HA51ndQDn8fCWIEndg5Mt_AK9WtcaTuRM24FQ7AvIX-WS6FFQYyfjgiCI/embed?start=true&loop=false&delayms=30000" frameborder="0" width="100%" height="509px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
+.. link to the Google Slides: https://docs.google.com/presentation/d/1nVM5PyD5OYM4jB13HqHpmBHn40NSDqbLEUUMxivsJeo
 
 As said above, there are several types of lead times. Each is calculated
 based on various indicators. Before going through the configuration,
