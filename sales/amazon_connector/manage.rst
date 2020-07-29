@@ -12,12 +12,6 @@ and **Canceled** orders are fetched. For **FBM** (Fulfilled by Merchant), the sa
 **Unshipped** and **Canceled** orders. For each synchronized order, a sales order and a customer are
 created in Odoo if they are not yet registered.
 
-.. note::
-   If you did not request access to Personally Identifiable Information of your customers in the
-   :ref:`Developer Registration and Assessment form <amazon/developer-form>`, the customers are
-   created anonymously (the name, postal address and phone number are omitted) and named
-   **Amazon Customer**.
-
 When an order is canceled in Amazon and was already synchronized in Odoo, the corresponding sales
 order is automatically canceled in Odoo.
 
@@ -31,8 +25,7 @@ order is automatically canceled in Odoo.
 .. tip::
    To synchronize immediately the orders of your Amazon account switch to
    :doc:`Developer mode <../../general/developer_mode/activate>`, head to your Amazon account and
-   click on **SYNC ORDERS**. The same can be done with order cancellations and pickings by clicking
-   on **SYNC CANCELLATIONS** and **SYNC PICKINGS**.
+   click on **SYNC ORDERS**. The same can be done with pickings by clicking on **SYNC PICKINGS**.
 
 Manage deliveries in FBM
 ========================
@@ -99,3 +92,7 @@ reporting for the sales of this account.
    Then, create another registration for this account and remove all marketplaces, except the one to
    isolate from the others. Finally, assign another sales team to one of the two registrations of
    your account.
+
+.. seealso::
+   - :doc:`features`
+   - :doc:`setup`

@@ -9,3 +9,4 @@ Studio
 
    studio/concepts
    studio/use_cases
+   studio/how_to

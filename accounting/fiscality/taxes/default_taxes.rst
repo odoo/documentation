@@ -2,7 +2,7 @@
 Default Taxes
 =============
 
-**Default Taxes** define which :doc:`taxes <create>` are automatically selected when there is no
+**Default Taxes** define which :doc:`taxes <taxes>` are automatically selected when there is no
 other indication about which tax to use. For example, Odoo prefills the **Taxes** field with the
 Default Taxes when you create a new product or add a new line on an invoice.
 
@@ -35,6 +35,6 @@ To change your **Default Taxes**, go to :menuselection:`Accounting --> Configura
 
 .. seealso::
 
-  - :doc:`create`
+  - :doc:`taxes`
   - :doc:`fiscal_positions`
   - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`

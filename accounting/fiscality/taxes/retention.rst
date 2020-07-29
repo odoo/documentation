@@ -67,4 +67,4 @@ The printed invoice will show the different amounts in each tax group.
 
 .. seealso::
 
-  * :doc:`create`
+  * :doc:`taxes`

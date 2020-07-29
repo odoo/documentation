@@ -33,7 +33,7 @@ Here are some examples to configure:
 Don't forget to set an expense tax on each expense type 
 (and an account if you use Odoo Accounting). 
 It's usually a good practice to use a tax that is configured 
-with *Tax Included in Price* (see: :doc:`../accounting/fiscality/taxes/tax_included`).
+with :ref:`Tax Included in Price <taxes/included-in-price>`.
 That way, employees report expenses with 
 prices including taxes, which is usually the expected behaviour.
 

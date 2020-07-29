@@ -42,6 +42,6 @@ Please refer to the documentation listed below for more information.
 
 .. seealso::
    - :doc:`../../overview/getting_started/chart_of_accounts`
-   - :doc:`../../fiscality/taxes/create`
+   - :doc:`../../fiscality/taxes/taxes`
 
 .. todo:: update list of linked docs, and link with the future one about country-specific statements.
