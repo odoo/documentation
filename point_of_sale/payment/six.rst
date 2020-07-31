@@ -1,12 +1,15 @@
 ====================================================
-Connect a SIX/Worldline Payment Terminal to your PoS
+Connect a SIX Payment Terminal to your PoS
 ====================================================
 
-Connecting a SIX/Worldline payment terminal allows you to offer a fluid
+Connecting a SIX payment terminal allows you to offer a fluid
 payment flow to your customers and ease the work of your cashiers.
 
-.. note::
-   Please note SIX/Worldine is currently only available for UE customers.
+.. warning::
+   Even though Worldline has recently acquired SIX Payment Services and both
+   companies use Yomani payment terminals, the firmware they run is different.
+   Terminals received from Worldline are therefore not compatible with this
+   integration.
 
 Configuration
 =============
