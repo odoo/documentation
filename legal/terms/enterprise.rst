@@ -283,7 +283,7 @@ list price (at the beginning of the Term) for the additional Users or Apps, for 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
 in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
 is a monthly fee of 16€ per 100 lines of code (rounded up to the next hundred), unless otherwise
-specified in writing at the conclusion of the Agreement. Lines of code will be counted with `cloc`
+specified in writing at the conclusion of the Agreement. Lines of code will be counted with the ``cloc``
 command of the Software, and include all text lines in the source code of those modules, regardless
 of the programming language (Python, Javascript, XML, etc.), excluding blank lines, comment lines
 and files that are not loaded when installing or executing the Software.
