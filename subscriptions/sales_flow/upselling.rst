@@ -28,7 +28,7 @@ As previously explained, to upsell a subscription to new customers, it is recomm
 *Discounts*. To activate this option, go to :menuselection:`Sales --> Configuration --> Settings` and,
 under the *Pricing* category, you have the possibility to grant discounts on sales order lines.
 
-.. image:: media/upsell_1.png
+.. image:: media/configuration-to-upsell-a-subscription.png
   :align: center
   :alt: Activation of the discount option in Odoo Sales
 
@@ -41,14 +41,14 @@ products. Indeed, once confirmed, a quotation becomes a sales order and a new su
 automatically created. Therefore, this subscription has the status *In progress*. From there, you
 have the possibility to upsell your subscription.
 
-.. image:: media/upsell_2.png
+.. image:: media/upsell-your-subscription.png
   :align: center
   :alt: Upsell your subscription with Odoo Subscriptions
 
 By using the smart button *Upsell*, you are able to create a new quotation with new subscription
 products and send it to your customers for approval.
 
-.. image:: media/upsell_3.png
+.. image:: media/use-of-the-upsell-button-in-odoo-sales.png
   :align: center
   :alt: Add products to your subscription via the upsell option in Odoo Subscriptions
 
@@ -65,14 +65,14 @@ click on the smart button *Subscriptions* to visualize all updates. From there, 
 additional line has been added to the subscription with the new extra service the customer wanted to
 purchase.
 
-.. image:: media/upsell_4.png
+.. image:: media/subscriptions-updates.png
   :align: center
   :alt: Visualize all your subscriptions updates with Odoo Subscriptions
 
 In addition, by clicking on the *Sales* button, you have a summary of your sales orders in a list
 view.
 
-.. image:: media/upsell_5.png
+.. image:: media/sales-order-updates.png
   :align: center
   :alt: List view of all sales orders created for a subscription
 
