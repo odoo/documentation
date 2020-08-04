@@ -307,7 +307,7 @@ Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont
 du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
 des Modules Supplémentaires Couverts, le coût mensuel est de 16€ par 100 lignes de code (arrondi à la
 centaine supérieure), sauf si spécifié par écrit à la conclusion du Contrat. Les lignes de code
-sont comptées avec la commande `cloc` du Logiciel, et comprennent toutes les lignes de texte du code
+sont comptées avec la commande ``cloc`` du Logiciel, et comprennent toutes les lignes de texte du code
 source de ces modules, peu importe le langage de programmation (Python, Javascript, XML, etc.),
 à l'exclusion des lignes vides, des lignes de commentaires et des fichiers qui ne sont pas chargés
 à l'installation ou à l'exécution du Logiciel.
