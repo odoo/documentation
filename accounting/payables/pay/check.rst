@@ -48,6 +48,7 @@ For the United States, Odoo supports by default the check formats of:
 - **Peachtree**: check in the middle, stubs on top and bottom
 - **ADP**: check in the bottom, and stubs on the top.
 
+You can purchase checks that are compatible with the standard Odoo format (v12.0 and up) at `<https://www.checkdepot.net/checks/laser/Odoo.htm>`_
 It is also possible to customize your own check format through customizations.
 
 Pay a supplier bill with a check
