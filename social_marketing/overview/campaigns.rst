@@ -13,8 +13,8 @@ Go to :menuselection:`Social Marketing --> Campaigns --> Create`.
    :align: center
    :alt: Click on create to start a campaign in Odoo Social Marketing
 
-As you create content, tabs for that specific channel will be shown. The overview of the campaign
-shows you global metric such as:
+As you create content, tabs for that specific channel are shown. The overview of the campaign
+displays global metrics such as:
 
 - *Revenue*: number of users who, from a link in your content, finished a transaction (paid).
 - *Quotations*: number of users who, from a link in your content, have started but not finished a
