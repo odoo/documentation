@@ -41,6 +41,7 @@ taxes you use, and configure your country-specific statements and certifications
 Please refer to the documentation listed below for more information.
 
 .. seealso::
+   - :doc:`localizations_list`
    - :doc:`../../overview/getting_started/chart_of_accounts`
    - :doc:`../../fiscality/taxes/taxes`
 
