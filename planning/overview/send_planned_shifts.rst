@@ -2,7 +2,7 @@
 Send Planned Shifts and Give Employees Autonomy Over Shifts
 ===========================================================
 
-If you are not on top of your tasks and shifts you might fall behind, loosing productivity.
+If you are not on top of your tasks and shifts you might fall behind, losing productivity.
 Allowing your employees to have a say over shifts helps you to be on top of your workload, and
 gives them flexibility.
 
