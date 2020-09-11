@@ -215,7 +215,7 @@ Different logs are available:
 * pip.log: The logs of the Python dependencies installation.
 * odoo.log: The logs of the running server.
 * update.log: The logs of the database updates.
-* pg_long_queries.log: The logs of psql queries that take an unusual amount of time.
+* pg_slow_queries.log: The logs of psql queries that take an unusual amount of time.
 
 If new lines are added in the logs, they will be displayed automatically.
 If you scroll to the bottom, the browser will scroll automatically each time a new line is added.
