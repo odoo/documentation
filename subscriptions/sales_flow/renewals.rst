@@ -30,7 +30,7 @@ have the possibility to renew the subscription. In the Other Info tab, underneat
 section, you can activate the *To renew* option. When activated, a yellow tag automatically appears
 in the upper right corner of the subscription.
 
-.. image:: media/renewals_1.png
+.. image:: media/renew-your-subscription.png
   :align: center
   :alt: Renew your subscription with Odoo Subscriptions
 
@@ -39,7 +39,7 @@ in the upper right corner of the subscription.
    on the customer portal. To visualize that, you just have to click on the *Customer preview*
    button. The tag *To renew* appears on the top right corner.
 
-   .. image:: media/renewals_2.png
+   .. image:: media/customer-preview-of-a-renewal.png
      :align: center
      :alt: Customer preview of a renewal with Odoo Subscriptions
 
@@ -54,7 +54,7 @@ first *Send by email* the quotation to your customers in order to have their con
    from the previous subscription". Once confirmed by your customers, this quotation becomes a
    sales order and a new sale is mentioned in the upper right corner of the subscription.
 
-   .. image:: media/renewals_3.png
+   .. image:: media/renew-a-quotation.png
      :align: center
      :alt: Renew a quotation with Odoo Subscriptions
 
@@ -62,7 +62,7 @@ first *Send by email* the quotation to your customers in order to have their con
    The only difference between your two quotations is the description underneath the
    *Subscription Management* category. There, you can easily visualize which one is your renewal.
 
-   .. image:: media/renewals_4.png
+   .. image:: media/subscription-management-category.png
      :align: center
      :alt: Renewal as Subscription Management form in Odoo Subscriptions
 
@@ -72,7 +72,7 @@ Visualize your subscriptions to renew
 Finally, if you want to visualize all your subscriptions and easily find those to renew, you can go
 to your *Subscriptions dashboard* and use the filter *To renew*.
 
-.. image:: media/renewals_5.png
+.. image:: media/subscriptions-dashboard-with-the-to-renew-filter.png
   :align: center
   :alt: List view of all subscriptions and use of the filter to renew in Odoo Subscriptions
 
