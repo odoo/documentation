@@ -32,7 +32,7 @@ to your templates.
 Go to **Odoo Sales** and create a new quotation. Then, choose a customer and add a product.
 Be careful to select a product that you previously configured as a *Subscription product*.
 
-.. image:: media/quotations_1.png
+.. image:: media/create-a-quotation-using-subscription-products.png
   :align: center
   :alt: View of a quotation form in Odoo Sales
 
@@ -41,7 +41,7 @@ it. It is better to first *Send by email* the quotation to your customers to hav
 and, then, *Confirm* it in **Odoo Sales**. By clicking on *Customer preview*, you have an idea of
 what your customers will see when receiving your quotation.
 
-.. image:: media/quotations_2.png
+.. image:: media/customer-preview-of-a-quotation-using-subscription-products.png
   :align: center
   :alt: Customer preview of a quotation form in Odoo Sales
 
@@ -56,7 +56,7 @@ Manage your subscriptions from your SO
 Once confirmed, the quotation becomes a sales order and a new button appears, *Subscriptions*.
 Indeed, a subscription is automatically created.
 
-.. image:: media/quotations_3.png
+.. image:: media/manage-your-subscriptions-from-your-sales-order.png
   :align: center
   :alt: Quotation form in Odoo Sales with a button "Subscriptions"
 
@@ -66,7 +66,7 @@ By clicking on the *Subscriptions* button, you can see that the status of the su
 :doc:`Close <../../subscriptions/sales_flow/closing>` or
 :doc:`Upsell <../../subscriptions/sales_flow/upselling>` your subscription.
 
-.. image:: media/quotations_4.png
+.. image:: media/use-of-the-subscriptions-button-in-odoo-sales.png
   :align: center
   :alt: Use of the intelligent button "Subscriptions" in Odoo Sales
 
