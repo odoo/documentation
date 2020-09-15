@@ -170,7 +170,7 @@ Taxes Types
 Chile has several tax types, the most common ones are:
 
 - VAT. Is the regular VAT and it can have several rates. 
-- ILA (Impuesto a la Ley de Alcholes). Taxes for alcoholic drinks, it has a different rate.
+- ILA (Impuesto a la Ley de Alcholes). Taxes for alcoholic drinks. It has a different rate.
 
 
 Fiscal Positions
