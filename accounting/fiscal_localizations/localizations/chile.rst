@@ -113,7 +113,7 @@ In order to configure your token, you need to enable developer mode and access t
 Chart of accounts
 ~~~~~~~~~~~~~~~~~
 The chart of accounts is installed by default as part of the set of data included in
-the localization module, the accounts are mapped automatically in: 
+the localization module. The accounts are mapped automatically in: 
 
 - Taxes.
 - Default Account Payable.
