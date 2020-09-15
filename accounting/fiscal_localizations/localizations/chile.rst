@@ -248,9 +248,9 @@ When creating sales journals the next information must be filled in:
 Online must be selected. Otherwise, if the journal is used for invoices imported from a previous
 system or if you are using the SII portal “Facturación MiPyme“ you can use the option Manual. 
 
-**Use Documents**: This field is used to define if the journal will use Document Types, it’s only
-applicable on Purchase and Sales journals which are the ones that can be related to the
-differentset of document types available in Chile. By default all the sales journals created will
+**Use Documents**: This field is used to define if the journal will use Document Types. It is only
+applicable to Purchase and Sales journals that can be related to the
+different sets of document types available in Chile. By default, all the sales journals created will
 use documents. 
   
 .. image:: media/Chile10.png
@@ -283,7 +283,7 @@ with different ranges of folios. In this way, you could order folios per the dif
 segmentations you have in your journals (example per office) thus avoiding distributing a range
 of folios. In this way, each branch would have its private key of the respective CAF.
 
-Please refer to the SII documentation to check the detail how to acquire the CAF:
+Please refer to the SII documentation to check the detail on how to acquire the CAF:
 `SII Timbraje <https://palena.sii.cl/dte/mn_timbraje.html>`_.
 
 	
@@ -308,7 +308,7 @@ In order to add a CAF, just follow these steps:
    :align: center
 
 
-As a result the sequence color changes to black an the column Next number and quantity
+As a result, the sequence color changes to black and the column Next number and quantity
 available are updated:
 
 .. image:: media/Chile13.png
@@ -350,7 +350,7 @@ from a sales order, proceed to validate the invoice.  After the invoice is poste
   .. image:: media/Chile16.png
      :align: center
 
-The DTE Status is updated automatically by Odoo with an scheduled action that runs every day
+The DTE Status is updated automatically by Odoo with a scheduled action that runs every day
 at night, if you need to get the response from the SII immediately you can do it manually as well.
 The DTE status workflow is as follows: 
 
@@ -409,8 +409,8 @@ Crossed references
 ~~~~~~~~~~~~~~~~~~
 When the Invoice is created as a result of another fiscal document, the information related to the
 originator document must be registered in the Tab Cross Reference, which is commonly used for 
-credit or debit notes, but in some cases can be used on Customer Invoices as well. In case of the
-credit and debit notes it is set automatically by Odoo:
+credit or debit notes, but in some cases can be used on Customer Invoices as well. In the case of the
+credit and debit notes, they are set automatically by Odoo:
 
 .. image:: media/Chile21.png
    :align: center
@@ -447,7 +447,7 @@ the Invoice or correct it. Please refer to the Credit Notes section for more det
 
 Common Errors
 ~~~~~~~~~~~~~
-There are multiple reasons behind a rejection from the SII, but these are some of the common erros
+There are multiple reasons behind a rejection from the SII, but these are some of the common errors
 you might have and which is the related solution. 
 
 - Error: RECHAZO- DTE Sin Comuna Origen.
