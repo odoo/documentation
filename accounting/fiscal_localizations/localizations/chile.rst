@@ -473,7 +473,7 @@ you might have and which is the related solution.
 Credit Notes
 ------------
 When a cancellation or correction is needed over a validated invoice, a credit note must be
-generated, it’s important to consider that a CAF file is required for the Credit Note sequence,
+generated. It is important to consider that a CAF file is required for the Credit Note sequence,
 which is identified as document 64 in the SII.  
 
 .. image:: media/Chile25.png
