@@ -22,8 +22,8 @@ Configuration
 
 Install the Chilean localization modules
 ----------------------------------------
-For this, go to *Apps* and search for Chile. Then click *Install* in the module Chile 
-E-invoicing, this module has a dependency with Chile - Accounting in case this last
+For this, go to *Apps* and search for Chile. Then click *Install* in the module **Chile 
+E-invoicing**. This module has a dependency with **Chile - Accounting**. In case this last
 one is not installed, Odoo installs it automatically with E-invoicing.
 
 .. image:: media/Chile01.png
@@ -622,6 +622,5 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 
 .. image:: media/Chile38.png
    :align: center
-
 
 
