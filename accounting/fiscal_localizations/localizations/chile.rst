@@ -72,7 +72,7 @@ crucial to define the DTE incoming email server, considering this configuration:
    
 Certificate
 ~~~~~~~~~~~
-In order to generate the electronic invoice signature, a digital certificate with extension(.pfx)
+In order to generate the electronic invoice signature, a digital certificate with the extension ``.pfx``
 is required, proceed to this section and load your file and password. 
 
 .. image:: media/Chile03_3.png
