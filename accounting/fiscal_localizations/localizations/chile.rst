@@ -39,7 +39,7 @@ Company Settings
 Once the modules are installed, the first step is to set up your company data. Additional
 to the basic information, you need to add all the data and elements required for Electronic 
 Invoice, the easiest way to configure it is in 
-:menuselection:`Accounting --> Settings --> Chilean Localization`
+:menuselection:`Accounting --> Settings --> Chilean Localization`.
 
 Fiscal Information
 ~~~~~~~~~~~~~~~~~~
@@ -622,4 +622,3 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 
 .. image:: media/Chile38.png
    :align: center
-
