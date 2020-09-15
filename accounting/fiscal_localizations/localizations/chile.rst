@@ -234,7 +234,7 @@ Purchases
 *********
 The transactions purchase can be managed with a single journal, but sometimes companies use
 more than one in order to handle some accounting transactions that are not related to vendor
-bills but can be easily register using this model, for example:
+bills but can be easily registered using this model, for example:
 
 - Tax Payments to government.
 - Employees payments.
