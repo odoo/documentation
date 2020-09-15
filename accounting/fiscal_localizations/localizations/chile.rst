@@ -81,7 +81,7 @@ is required, proceed to this section and load your file and password.
 .. image:: media/Chile04.png
    :align: center
 
-A certificate can be shared between several users, if this is the case leave the user field empty,
+A certificate can be shared between several users. If this is the case leave the user field empty,
 so all your billing users can use the same one. On the other hand,  if you need to restrict the
 certificate for a particular user, just define the users in the certificate. 
 
