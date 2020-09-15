@@ -185,8 +185,8 @@ In some Latin American countries, including Chile, some accounting transactions 
 vendor bills are classified by document types defined by the government fiscal authorities (In
 Chile case: SII).
 
-The document type is an essential information that needs to be displayed in the printed reports and
-that needs to be easily identified, within the set of invoices as well of account moves.
+The document type is essential information that needs to be displayed in the printed reports and
+that needs to be easily identified within the set of invoices as well of account moves.
 
 Each document type can have a unique sequence per journal where it is assigned. As part of the
 localization, the Document Type include the country on which the document is applicable and the data
