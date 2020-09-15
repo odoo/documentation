@@ -139,8 +139,8 @@ are now available on the Partner form. This information is essential for most tr
  
 TaxpayerType
 ************
-In Chile the document type associated with customers and vendors transactions is defined
-based on the Taxpayer Type, this field should be defined in the partner form, when creating
+In Chile, the document type associated with customers and vendors transactions is defined
+based on the Taxpayer Type. This field should be defined in the partner form, when creating
 a customer is important you make sure this value is set:
 
 .. image:: media/Chile07.png
