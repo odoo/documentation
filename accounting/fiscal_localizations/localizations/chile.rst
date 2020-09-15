@@ -487,7 +487,7 @@ Use Cases
 
 Cancel Referenced document
 **************************
-In case you need  to cancel or invalid a Invoice, use the button Add Credit note and select Full
+In case you need  to cancel or invalid an Invoice, use the button Add Credit note and select Full
 Refund, in this case the SII reference Code is automatically set to: Anula Documento de referencia.
 
 .. image:: media/Chile26.png
