@@ -28,6 +28,7 @@ one is not installed, Odoo installs it automatically with E-invoicing.
 
 .. image:: media/Chile01.png
    :align: center
+   :alt: Chilean module to install on Odoo.
 
 .. note::
    When you install a database from scratch selecting Chile as country, Odoo will automatically
