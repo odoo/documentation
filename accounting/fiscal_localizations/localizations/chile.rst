@@ -244,8 +244,8 @@ Configuration
 ~~~~~~~~~~~~~
 When creating sales journals the next information must be filled in: 
 
-**Point of sale type**: If the Sales journal will be used for electronic documents the option
-Online must be selected, otherwise if the journal is used for invoices imported from a previous
+**Point of sale type**: If the Sales journal will be used for electronic documents, the option
+Online must be selected. Otherwise, if the journal is used for invoices imported from a previous
 system or if you are using the SII portal “Facturación MiPyme“ you can use the option Manual. 
 
 **Use Documents**: This field is used to define if the journal will use Document Types, it’s only
