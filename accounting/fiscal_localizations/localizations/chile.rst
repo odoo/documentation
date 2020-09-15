@@ -159,7 +159,7 @@ the Industry description.
 
 Taxes
 ~~~~~
-As part of the localization module the taxes are created automatically with their related
+As part of the localization module, the taxes are created automatically with their related
 financial account and configuration.
 
 .. image:: media/Chile08.png
