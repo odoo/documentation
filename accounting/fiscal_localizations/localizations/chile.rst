@@ -130,7 +130,7 @@ Partner
 Identification Type and VAT
 ***************************
 As part of the Chilean localization, the identification types defined by the SII
-are now available on the Partner form, this information is essential for most transactions.
+are now available on the Partner form. This information is essential for most transactions.
 
 .. image:: media/Chile06.png
    :align: center
