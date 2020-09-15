@@ -181,8 +181,8 @@ in Odoo using the default purchase fiscal positions.
 
 Document Types
 ~~~~~~~~~~~~~~
-In some Latin America countries, including Chile, some accounting transactions like invoices and
-vendor bills are classified by  document types defined by the government fiscal authorities (In
+In some Latin American countries, including Chile, some accounting transactions like invoices and
+vendor bills are classified by document types defined by the government fiscal authorities (In
 Chile case: SII).
 
 The document type is an essential information that needs to be displayed in the printed reports and
