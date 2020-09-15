@@ -189,7 +189,7 @@ The document type is essential information that needs to be displayed in the pri
 that needs to be easily identified within the set of invoices as well of account moves.
 
 Each document type can have a unique sequence per journal where it is assigned. As part of the
-localization, the Document Type include the country on which the document is applicable and the data
+localization, the Document Type includes the country on which the document is applicable and the data
 is created automatically when the localization module is installed.
 
 The information required for the document types is included by default so the user doesn't need to
