@@ -60,7 +60,7 @@ from your vendors and the alias you use to send invoices to your customers.
 
 Configure DTE Incoming email server
 ***********************************
-In order to receive you the claim and acceptance emails from your customers it is
+In order to receive you the claim and acceptance emails from your customers, it is
 crucial to define the DTE incoming email server, considering this configuration: 
 
 .. image:: media/Chile03_2.png
