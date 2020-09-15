@@ -5,7 +5,7 @@ Chile
 Introduction
 ============
 
-The Chilean localization has been improved and extended in Odoo v13,in this version the next 
+The Chilean localization has been improved and extended in Odoo v13. In this version, the next 
 modules are available:
 
 - **l10n_cl:** Adds accounting features for the Chilean localization, which represent the minimal 
@@ -622,5 +622,4 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 
 .. image:: media/Chile38.png
    :align: center
-
 
