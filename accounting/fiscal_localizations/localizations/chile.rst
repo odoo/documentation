@@ -591,8 +591,8 @@ Acceptation Status  change to: Claim  and an email of acceptance is sent to the 
 .. image:: media/Chile36.png
    :align: center
 
-If you claim a vendor bill the status changes from draft to cancel automatically, considering this
-as best practice, all the Claim documents should be cancelled as they won’t be valid for your
+If you claim a vendor bill, the status changes from draft to cancel automatically. Considering this
+as best practice, all the Claim documents should be canceled as they won’t be valid for your
 accounting records. 
 
 Financial Reports
