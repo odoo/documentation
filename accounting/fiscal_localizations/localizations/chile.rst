@@ -175,7 +175,7 @@ Chile has several tax types, the most common ones are:
 
 Fiscal Positions
 ~~~~~~~~~~~~~~~~
-Based on the purchase transactions the VAT can have different affections, this will be done
+Based on the purchase transactions, the VAT can have different affections. This will be done
 in Odoo using the default purchase fiscal positions. 
 
 
