@@ -10,6 +10,7 @@
 # fausthuang, 2018
 # Kate Lee <kateleelpk@gmail.com>, 2018
 # 演奏王 <wangwhai@qq.com>, 2020
+# Datasource International <Hennessy@datasourcegroup.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -18,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:50+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: 演奏王 <wangwhai@qq.com>, 2020\n"
+"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -157,6 +158,8 @@ msgid ""
 " for a domain name that sends emails via Odoo Online and via G Suite it "
 "could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 msgstr ""
+"如果已经为SPF设置TXT记录，在通过Odoo Online发送邮件的余名中添加“include:_spf.odoo.com”，通过G "
+"Suite发送的则可为：v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 
 #: ../../discuss/email_servers.rst:66
 msgid ""
@@ -179,7 +182,7 @@ msgstr "为一个域添加多个SPF记录可能导致邮件被分类为垃圾。
 
 #: ../../discuss/email_servers.rst:77
 msgid "Allow DKIM"
-msgstr ""
+msgstr "允许DKIM"
 
 #: ../../discuss/email_servers.rst:78
 msgid ""
@@ -190,14 +193,16 @@ msgid ""
 "a record \"odoo._domainkey.foo.com\" that is a CNAME with the value "
 "\"odoo._domainkey.odoo.com\"."
 msgstr ""
+"如果你的邮件服务器启用了DKIM（域密钥标识邮件），你也需要进行同样的操作。对于Odoo "
+"Online和Odoo.sh，你需要向“odoo._domainkey.odoo.com”添加DNS“odoo._domainkey”CNAME记录。例如，对于“foo.com”，它们应有一条“odoo._domainkey.foo.com”记录，这是值为“odoo._domainkey.odoo.com”的CNAME。"
 
 #: ../../discuss/email_servers.rst:86
 msgid "How to manage inbound messages"
-msgstr ""
+msgstr "如何管理入站消息"
 
 #: ../../discuss/email_servers.rst:88
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
-msgstr ""
+msgstr "Odoo依靠通用的电子邮件别名来获取入站消息。"
 
 #: ../../discuss/email_servers.rst:90
 msgid ""
@@ -205,6 +210,7 @@ msgid ""
 "discussion thread (and to the inbox of all its followers) by the catchall "
 "alias (**catchall@**)."
 msgstr ""
+"从Odoo所发邮件对应的**回复邮件**通过catchall别名（**catchall@**）接入原来的讨论线程（以及所有关注者的收件箱）。"
 
 #: ../../discuss/email_servers.rst:94
 msgid ""
@@ -213,36 +219,38 @@ msgid ""
 "<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
 "recipients."
 msgstr ""
+"**退回的邮件**接入**bounce@**，以便在Odoo上追踪。这项功能特别用于`Odoo邮件营销 "
+"<https://www.odoo.com/page/email-marketing>`__，可取消选择无效的收件人。"
 
 #: ../../discuss/email_servers.rst:98
 msgid ""
 "**Original messages**: Several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
-msgstr ""
+msgstr "**原始邮件**：几个业务对象有自己的别名，从入站邮件中创建Odoo新纪录："
 
 #: ../../discuss/email_servers.rst:101
 msgid ""
 "Sales Channel (to create Leads or Opportunities in `Odoo CRM "
 "<https://www.odoo.com/page/crm>`__),"
-msgstr ""
+msgstr "销售渠道（在`Odoo CRM <https://www.odoo.com/page/crm>`__中创建潜在商机或机会），"
 
 #: ../../discuss/email_servers.rst:103
 msgid ""
 "Support Channel (to create Tickets in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`__),"
-msgstr ""
+msgstr "支持渠道（在`Odoo服务台 <https://www.odoo.com/page/helpdesk>`__创建工单），"
 
 #: ../../discuss/email_servers.rst:105
 msgid ""
 "Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
 "/project-management>`__),"
-msgstr ""
+msgstr "项目（在`Odoo项目 <https://www.odoo.com/page/project-management>`__中创建新任务），"
 
 #: ../../discuss/email_servers.rst:107
 msgid ""
 "Job Positions (to create Applicants in `Odoo Recruitment "
 "<https://www.odoo.com/page/recruitment>`__),"
-msgstr ""
+msgstr "职位（在`Odoo招聘 <https://www.odoo.com/page/recruitment>`__中创建求职者），"
 
 #: ../../discuss/email_servers.rst:109
 msgid "etc."
@@ -253,17 +261,17 @@ msgid ""
 "Depending on your mail server, there might be several methods to fetch "
 "emails. The easiest and most recommended method is to manage one email "
 "address per Odoo alias in your mail server."
-msgstr ""
+msgstr "根据你的邮件服务器，可能有几种方法来获取邮件。最简单也最推荐的方法是在邮件服务器中按Odoo别名管理邮件地址。"
 
 #: ../../discuss/email_servers.rst:115
 msgid ""
 "Create the corresponding email addresses in your mail server (catchall@, "
 "bounce@, sales@, etc.)."
-msgstr ""
+msgstr "在你的邮件服务器中创建相应的电子邮件地址（catchall@、bounce@、sales@等）。"
 
 #: ../../discuss/email_servers.rst:117
 msgid "Set your domain name in the General Settings."
-msgstr ""
+msgstr "在一般设置中设置你的域名。"
 
 #: ../../discuss/email_servers.rst:122
 msgid ""
@@ -273,6 +281,7 @@ msgid ""
 "Perform on Incoming Mails* blank. Once all the information has been filled "
 "out, click on *TEST & CONFIRM*."
 msgstr ""
+"如果你使用本地部署的Odoo，请在Odoo中为每个别名创建一个*入站邮件服务器*。你也可以在一般设置中进行操作。根据你的电子邮件提供商的设置填写表单。将*对入站邮件执行的操作*留空。在填写完毕所有信息后，点击*测试和确认*。"
 
 #: ../../discuss/email_servers.rst:131
 msgid ""
@@ -284,6 +293,10 @@ msgid ""
 "domain name in your email server (e.g. *catchall@mydomain.ext* to "
 "*catchall@mycompany.odoo.com*)."
 msgstr ""
+"如果你使用Odoo "
+"Online或Odoo.sh，我们建议将入站邮件重定向到Odoo的域名，而不是仅使用你自己的邮件服务器。这样，你将不会延迟接收入站邮件。实际上，Odoo"
+" "
+"Online每小时仅收取一次外部服务器的入站邮件。你应在电子邮件服务器中将所有电子邮件地址的重定向设置为Odoo的域名（例如，*catchall@mydomain.ext*设为*catchall@mycompany.odoo.com*）。"
 
 #: ../../discuss/email_servers.rst:138
 msgid ""
@@ -372,6 +385,7 @@ msgid ""
 "Settings--> Twitter discuss integration` and click on **Save** to save the "
 "settings."
 msgstr ""
+"并在Odoo的:menuselection:`设置--> 一般设置--> Twitter讨论集成`中复制这些值，然后点击**保存**，保存相应设置。"
 
 #: ../../discuss/mentions.rst:3
 msgid "How to grab attention of other users in my messages"
@@ -449,10 +463,11 @@ msgid ""
 "any message or notification in Discuss or any of the item-specific chatters "
 "throughout Odoo to keep tabs on it here."
 msgstr ""
+"打勾标记一封邮件，即代表将该项目标记为**已读**，并从收件箱中删除。如需将一个项目保存并供将来参考或操作，用星标标记并将它加入到**已加星标**文件夹中。你可在讨论中添加任何邮件或通知，或者在整个Odoo中添加任何特定项目的聊天，以便在这里跟踪它。"
 
 #: ../../discuss/overview.rst:3
 msgid "Why use Odoo Discuss"
-msgstr ""
+msgstr "为何使用Odoo讨论"
 
 #: ../../discuss/overview.rst:5
 msgid ""
@@ -469,30 +484,30 @@ msgstr ""
 
 #: ../../discuss/plan_activities.rst:3
 msgid "Get organized by planning activities"
-msgstr ""
+msgstr "通过计划活动来提高条理性"
 
 #: ../../discuss/plan_activities.rst:5
 msgid ""
 "Planning activities is the perfect way to keep on track with your work. Get "
 "reminded of what needs to be done and schedule the next activities to "
 "undertake."
-msgstr ""
+msgstr "制定活动计划是跟踪工作情况的最佳方式。它可以提醒你需要完成的工作，安排后续活动的时间。"
 
 #: ../../discuss/plan_activities.rst:9
 msgid ""
 "Your activities are available wherever you are in Odoo. It is easy to manage"
 " your priorities."
-msgstr ""
+msgstr "你可在Odoo中随时随地查看自己的活动。方便管理所有优先事项。"
 
 #: ../../discuss/plan_activities.rst:15
 msgid ""
 "Activities can be planned and managed from the chatters or in the kanban "
 "views. Here is an example for opportunities :"
-msgstr ""
+msgstr "你可通过聊天或在看板视图中计划和管理活动。请看下面的例子："
 
 #: ../../discuss/plan_activities.rst:22
 msgid "Set your activity types"
-msgstr ""
+msgstr "设置你的活动类型"
 
 #: ../../discuss/plan_activities.rst:24
 msgid ""
@@ -500,27 +515,29 @@ msgid ""
 "call, email, meeting, etc.). If you would like to set new ones, go to "
 ":menuselection:`Settings --> General settings --> Activity types`."
 msgstr ""
+"Odoo中包括了一些默认的活动类型（通话、邮件、会议等）。但你也可以在:menuselection:`设置 --> 一般设置 --> "
+"活动类型`中，设置新类型。"
 
 #: ../../discuss/plan_activities.rst:29
 msgid "Schedule meetings"
-msgstr ""
+msgstr "安排会议"
 
 #: ../../discuss/plan_activities.rst:31
 msgid ""
 "Activities are planned for specific days. If you need to set hours, go with "
 "the *Meeting* activity type. When scheduling one, the calendar will simply "
 "open to let you select a time slot."
-msgstr ""
+msgstr "活动计划具体到某一天。如需设置小时，选择*会议*活动类型。在安排会议时，你可打开日历并选择一个时间段。"
 
 #: ../../discuss/plan_activities.rst:36
 msgid ""
 "If you need to use other activity types with a calendar planning, make sure "
 "their *Category* is set as *Meeting*."
-msgstr ""
+msgstr "如果需要在其他活动类型中使用日历计划，请将其*类别*设定为*会议*。"
 
 #: ../../discuss/plan_activities.rst:40
 msgid "Schedule a chain of activities to follow"
-msgstr ""
+msgstr "安排一系列活动"
 
 #: ../../discuss/plan_activities.rst:42
 msgid ""
@@ -528,16 +545,17 @@ msgid ""
 ":menuselection:`Configuration --> Activity Types` and set the common "
 "following steps as *Recommended next activities*."
 msgstr ""
+"Odoo可帮助你轻松安排一系列常规活动。前往:menuselection:`配置 --> 活动类型`并将以下常见步骤设置为*推荐的后续活动*。"
 
 #: ../../discuss/plan_activities.rst:49
 msgid ""
 "Now, when an activity is completed, you can select *Done & schedule next*. "
 "The next steps will automatically be suggested to you."
-msgstr ""
+msgstr "现在，当一项活动完成后，你可选择*完成并安排下一项*。系统将自动向你提供下一项活动。"
 
 #: ../../discuss/plan_activities.rst:55
 msgid "Have fun getting better organized by planning activities !"
-msgstr ""
+msgstr "希望你通过制定活动计划变得更有条理！"
 
 #: ../../discuss/team_communication.rst:3
 msgid "How to efficiently communicate in team using channels"
