@@ -612,8 +612,8 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 Propuesta F29
 -------------
 The form F29 is a new system that the SII enabled to taxpayers, and that replaces the Purchase and
-Sales Books. This report is integrated by Purchase Register (CR) and the Sales Register (RV)
-its purpose is to support the transactions realted to VAT improving its control and declaration. 
+Sales Books. This report is integrated by Purchase Register (CR) and the Sales Register (RV).
+Its purpose is to support the transactions related to VAT, improving its control and declaration. 
 
 This record is supplied by the electronic tax documents (DTE’s) that have been received by the
 SII.
