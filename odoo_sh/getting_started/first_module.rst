@@ -447,7 +447,7 @@ Add
 
   unidecode
 
-Then use the library in your module, for instance to remove any special characters in the name field of your
+Then use the library in your module, for instance to remove accents from characters in the name field of your
 model.
 
 Open the file *models/models.py*.
