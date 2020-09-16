@@ -477,7 +477,6 @@ Add
           values['name'] = unidecode(values['name'])
       return super(my_module, self).create(values)
 
-  @api.multi
   def write(self, values):
       if 'name' in values:
           values['name'] = unidecode(values['name'])
