@@ -22,6 +22,7 @@ Configuration
 
 Install the Chilean localization modules
 ----------------------------------------
+
 For this, go to *Apps* and search for Chile. Then click *Install* in the module **Chile 
 E-invoicing**. This module has a dependency with **Chile - Accounting**. In case this last
 one is not installed, Odoo installs it automatically with E-invoicing.
@@ -37,6 +38,7 @@ one is not installed, Odoo installs it automatically with E-invoicing.
    
 Company Settings
 ----------------
+
 Once the modules are installed, the first step is to set up your company data. Additional
 to the basic information, you need to add all the data and elements required for Electronic 
 Invoice, the easiest way to configure it is in 
@@ -44,28 +46,34 @@ Invoice, the easiest way to configure it is in
 
 Fiscal Information
 ~~~~~~~~~~~~~~~~~~
+
 Fill in the fiscal information for your company according to the SII register, follow the
 instructions on each section.
 
 .. image:: media/Chile02.png
    :align: center
+   :alt: Chilean company fiscal data.
    
 Electronic Invoice Data
 ~~~~~~~~~~~~~~~~~~~~~~~
+
 This is part of the main information required to generate electronic Invoice, select your
 environment and the legal information, as well as the email address to receive invoices
 from your vendors and the alias you use to send invoices to your customers.
 
 .. image:: media/Chile03.png
    :align: center
+   :alt: Chilean edi environment settings.
 
 Configure DTE Incoming email server
 ***********************************
+
 In order to receive you the claim and acceptance emails from your customers, it is
 crucial to define the DTE incoming email server, considering this configuration: 
 
 .. image:: media/Chile03_2.png
    :align: center
+   :alt: Incoming email server configuration for Chilean DTE.
 
 .. tip::
    For your Go-live make sure you archive/remove from your inbox all the emails
@@ -73,14 +81,17 @@ crucial to define the DTE incoming email server, considering this configuration:
    
 Certificate
 ~~~~~~~~~~~
+
 In order to generate the electronic invoice signature, a digital certificate with the extension ``.pfx``
 is required, proceed to this section and load your file and password. 
 
 .. image:: media/Chile03_3.png
    :align: center
+   :alt: Digital certificate access.
 
 .. image:: media/Chile04.png
    :align: center
+   :alt: Digital certificate configuration.   
 
 A certificate can be shared between several users. If this is the case leave the user field empty,
 so all your billing users can use the same one. On the other hand,  if you need to restrict the
@@ -88,14 +99,17 @@ certificate for a particular user, just define the users in the certificate.
 
 Financial Reports
 ~~~~~~~~~~~~~~~~~
+
 The report Propuesta F29 requires two values that need to be defined as part of the company
 configuration: 
 
 .. image:: media/Chile05.png
    :align: center
+   :alt: Fiscal reports parameters.
 
 Multicurrency
 ~~~~~~~~~~~~~
+
 The official currency rate in Chile is provided by the SBIF, you can find the SBIF
 synchronization service in the currency rate configuration and you can set a predefined interval
 for the rate updates.  
@@ -103,6 +117,7 @@ for the rate updates.
 .. image:: media/Chile05_2.png
    :align: center
    :scale: 25
+   :alt: Currency reate service for Chile.
 
 In order to configure your token, you need to enable developer mode and access to
 :menuselection:`Settings --> Technical --> System parameters` and search the parameter
@@ -110,9 +125,11 @@ In order to configure your token, you need to enable developer mode and access t
 
 .. image:: media/Chile05_3.png
    :align: center
+   :alt: Token configuration for currency rate service.
    
 Chart of accounts
 ~~~~~~~~~~~~~~~~~
+
 The chart of accounts is installed by default as part of the set of data included in
 the localization module. The accounts are mapped automatically in: 
 
@@ -128,45 +145,55 @@ Master Data
 
 Partner
 ~~~~~~~
+
 Identification Type and VAT
 ***************************
+
 As part of the Chilean localization, the identification types defined by the SII
 are now available on the Partner form. This information is essential for most transactions.
 
 .. image:: media/Chile06.png
    :align: center
    :scale: 25
+   :alt: Chilean identification types for partners.
  
 TaxpayerType
 ************
+
 In Chile, the document type associated with customers and vendors transactions is defined
 based on the Taxpayer Type. This field should be defined in the partner form, when creating
 a customer is important you make sure this value is set:
 
 .. image:: media/Chile07.png
    :align: center
+   :alt: Chilean taxpayer types for partners.   
  
 
 Electronic Invoice Data
 ***********************
+
 As part of the information that is sent in the electronic Invoice, you need to define the
 email that is going to appear as the sender of the electronic invoice to your customer, and
 the Industry description. 
 
 .. image:: media/Chile07_2.png
    :align: center
- 
+   :alt: Chilean electronic invoice data for partners.
+   
 
 Taxes
 ~~~~~
+
 As part of the localization module, the taxes are created automatically with their related
 financial account and configuration.
 
 .. image:: media/Chile08.png
    :align: center
+   :alt: Chilean taxes list.
 
 Taxes Types
 ***********
+
 Chile has several tax types, the most common ones are:
 
 - VAT. Is the regular VAT and it can have several rates. 
@@ -175,12 +202,14 @@ Chile has several tax types, the most common ones are:
 
 Fiscal Positions
 ~~~~~~~~~~~~~~~~
+
 Based on the purchase transactions, the VAT can have different affections. This will be done
 in Odoo using the default purchase fiscal positions. 
 
 
 Document Types
 ~~~~~~~~~~~~~~
+
 In some Latin American countries, including Chile, some accounting transactions like invoices and
 vendor bills are classified by document types defined by the government fiscal authorities (In
 Chile case: SII).
@@ -197,6 +226,7 @@ fill anything on this view:
 
 .. image:: media/Chile09.png
    :align: center
+   :alt: Chilean fiscal document types list. 
 
 .. note::
    There are several document types that are inactive by default but can be activated if needed.
@@ -204,6 +234,7 @@ fill anything on this view:
 
 Use on Invoices
 ***************
+
 The document type on each transaction will be determined by:
 
 - The Journal related to the Invoice, identifying if the journal uses documents.
@@ -219,6 +250,7 @@ Usage
 
 Sales
 *****
+
 Sales Journals in Odoo usually represent a business unit or location, example:
 
 - Ventas Santiago.
@@ -232,6 +264,7 @@ For the retail stores is common to have one journal per POS:
 
 Purchases
 *********
+
 The transactions purchase can be managed with a single journal, but sometimes companies use
 more than one in order to handle some accounting transactions that are not related to vendor
 bills but can be easily registered using this model, for example:
@@ -242,6 +275,7 @@ bills but can be easily registered using this model, for example:
 
 Configuration
 ~~~~~~~~~~~~~
+
 When creating sales journals the next information must be filled in: 
 
 **Point of sale type**: If the Sales journal will be used for electronic documents, the option
@@ -255,9 +289,11 @@ use documents.
   
 .. image:: media/Chile10.png
    :align: center
+   :alt: Document type configuration on Journal.
 
 Sequences
 *********
+
 When a Journal is created we have two options with document types sequences. 
 
 1. Create new sequences: In this case, Odoo will create new sequences for the most common document
@@ -267,6 +303,7 @@ When a Journal is created we have two options with document types sequences.
 
 .. image:: media/Chile11.png
    :align: center
+   :alt: Steps to add new sequences on journals.
    
 .. important::
    For the Chilean localization it’s important to define the default Debt and Credit accounts 
@@ -274,6 +311,7 @@ When a Journal is created we have two options with document types sequences.
    
 CAF
 ***
+
 For each sequence related to the documents type, a CAF (Folio Authorization Code) is required,
 the CAF is a file the SII provides to the Emisor with the folio/sequence authorized for the 
 electronic invoice documents.
@@ -289,12 +327,14 @@ Please refer to the SII documentation to check the detail on how to acquire the 
 	
 Configuration
 ^^^^^^^^^^^^^
+
 Once you have the CAF files you need to associate them with journal sequence in Odoo,
 after you create the sequence for the first time the will be in red, which indicates
 that no CAF has been configured for that particular sequence:
 
 .. image:: media/Chile12.png
    :align: center
+   :alt: Sequences per document type on journals.
 
 In order to add a CAF, just follow these steps:
 
@@ -306,6 +346,7 @@ In order to add a CAF, just follow these steps:
 
 .. image:: media/Chile13.gif
    :align: center
+   :alt: Steps to add a new CAF on sequences.
 
 
 As a result, the sequence color changes to black and the column Next number and quantity
@@ -313,6 +354,7 @@ available are updated:
 
 .. image:: media/Chile13.png
    :align: center
+   :alt: Sequences per document type on journals.   
 
 
 Usage and Testing
@@ -320,15 +362,19 @@ Usage and Testing
 
 Electronic Invoice Workflow
 ---------------------------
+
 In the Chilean localization the electronic Invoice workflow covers the Emission of
 Customer Invoices and the reception of Vendor Bills, in the next diagram we explain how
 the information transmitted to the SII and between the customers and Vendors. 
 
 .. image:: media/Chile14.png
    :align: center
+   :alt: Diagram with Electronic invoice transactions.
+   
 
 Customer invoice Emission
 -------------------------
+
 After the partners and journals are created and configured, the invoices are created in
 the standard way, for Chile one of the differentiators is the document type which is selected
 automatically based on the Taxpayer. 
@@ -337,10 +383,12 @@ You can manually change the document type if needed.
 
 .. image:: media/Chile15.png
    :align: center
+   :alt: Document type selection on invoices.
 
 
 Validation and DTE Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~
+
 When all the invoice information is filled, either manually or automatically when it’s created
 from a sales order, proceed to validate the invoice.  After the invoice is posted:
 
@@ -349,6 +397,7 @@ from a sales order, proceed to validate the invoice.  After the invoice is poste
 
   .. image:: media/Chile16.png
      :align: center
+	 :alt: DTE XML File displayed in chatter.
 
 The DTE Status is updated automatically by Odoo with a scheduled action that runs every day
 at night, if you need to get the response from the SII immediately you can do it manually as well.
@@ -356,6 +405,8 @@ The DTE status workflow is as follows:
 
 .. image:: media/Chile17.png
    :align: center
+   :alt: Transition of DTE statuses.
+   
 
 1. In the first step the DTE is sent to the SII, you can manually send it using the button: Enviar
    Ahora, a SII Tack number is generated and assigned to the invoice, you can use this number to 
@@ -368,6 +419,7 @@ The DTE status workflow is as follows:
    
    .. image:: media/Chile18.png
       :align: center
+	  :alt: Identification transaction for invoice and Status update.
 
 
    There are several internal status in the SII before you get Acceptance or Rejection, in
@@ -376,6 +428,7 @@ The DTE status workflow is as follows:
    
    .. image:: media/Chile18_2.png
       :align: center
+	  :alt: Descprtion of each DTE status in the chatter.
 
 3. The final response from the SII, can take on of these values:
 
@@ -389,6 +442,7 @@ The DTE status workflow is as follows:
 
    .. image:: media/Chile19.png
       :align: center
+	  :alt: Email track once it is sent to the customer.
 
    **Rejected:** Indicates the information in the invoice is incorrect and needs to be
    corrected, the detail of the issue is received in the emails you registered in the
@@ -403,10 +457,12 @@ The DTE status workflow is as follows:
 	 
    .. image:: media/Chile20.png
       :align: center
+	  :alt: Message when an invoice is rejected.
 
 
 Crossed references
 ~~~~~~~~~~~~~~~~~~
+
 When the Invoice is created as a result of another fiscal document, the information related to the
 originator document must be registered in the Tab Cross Reference, which is commonly used for 
 credit or debit notes, but in some cases can be used on Customer Invoices as well. In the case of the
@@ -414,17 +470,22 @@ credit and debit notes, they are set automatically by Odoo:
 
 .. image:: media/Chile21.png
    :align: center
+   :alt: Invoice tab with origin document number and data.
 
 Invoice PDF Report
 ~~~~~~~~~~~~~~~~~~
+
 After the invoice is Accepted and valdiated by the SII and the PDF is printed it includes the
 fiscal elements that indicates out document is fiscally valid:
 
 .. image:: media/Chile22.png
    :align: center
+   :alt: Barcode and fiscal elements in the invice report.
+
 
 Commercial Validation
 ~~~~~~~~~~~~~~~~~~~~~
+
 Once the invoice has been sent to the customer:
 
 1. DTE partner status changes to “Sent”.
@@ -435,18 +496,23 @@ Once the invoice has been sent to the customer:
 
 .. image:: media/Chile23.png
    :align: center
+   :alt: Message with the commercial acceptance from the customer.
+   
 
 Processed for Claimed invoices
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 Once the invoice has been Accepted by the SII **it can not be cancelled in Odoo**.  In case you
 get a Claim for your customer the correct way to proceed is with a Credit Note to either cancel
 the Invoice or correct it. Please refer to the Credit Notes section for more details. 
 
 .. image:: media/Chile24.png
    :align: center
+   :alt: Invoice Comercial status updated to Claimed.
 
 Common Errors
 ~~~~~~~~~~~~~
+
 There are multiple reasons behind a rejection from the SII, but these are some of the common errors
 you might have and which is the related solution. 
 
@@ -472,12 +538,14 @@ you might have and which is the related solution.
 
 Credit Notes
 ------------
+
 When a cancellation or correction is needed over a validated invoice, a credit note must be
 generated. It is important to consider that a CAF file is required for the Credit Note sequence,
 which is identified as document 64 in the SII.  
 
 .. image:: media/Chile25.png
    :align: center
+   :alt: Creation of CAF for Credit notes sequences.
 
 
 .. tip:: Refer to the journal section where we described the process to load the CAF on each 
@@ -488,25 +556,30 @@ Use Cases
 
 Cancel Referenced document
 **************************
+
 In case you need  to cancel or invalid an Invoice, use the button Add Credit note and select Full
 Refund, in this case the SII reference Code is automatically set to: Anula Documento de referencia.
 
 .. image:: media/Chile26.png
    :align: center 
+   :alt: Full invoice refund with SII reference code 1. 
 
 Corrects Referenced Document Text
 *********************************
+
 If a correction in the invoice information is required, for example the Street Name, use the button
 Add Credit note,select Partial Refund and select the option “Solo corregir Texto”. In this case
 the SII reference Code is automatically set to: Corrige el monto del Documento de Referencia. 
 
 .. image:: media/Chile27.png
    :align: center
+   :alt: Partial refund to correct text including the corrected value.
    
 Odoo creates a Credit Note with the corrected text in an invoice and price 0.
 
 .. image:: media/Chile28.png
    :align: center
+   :alt: Credit note with the corrected value on the invoice lines.
 
 .. important::
    It’s important to define the default credit account in the Sales journal as it
@@ -514,15 +587,18 @@ Odoo creates a Credit Note with the corrected text in an invoice and price 0.
 
 Corrects Referenced Document Amount
 ***********************************
+
 When a correction on the amounts is required, use the button Add Credit note
 and select Partial Refund. In this case the SII reference Code is automatically
 set to: Corrige el monto del Documento de Referencia.
 
 .. image:: media/Chile30.png
    :align: center
+   :alt: Credit note for partial refund to correct amounts, using the SII reference code 3.
 
 Debit Notes
 -----------
+
 As part of the Chilean localization, besides creating credit notes from an existing document you
 can also create debit Notes. For this just use the button “Add Debit Note”.  The two main use
 cases for debit notes are detailed below. 
@@ -532,29 +608,36 @@ Use Cases
 
 Add debt on Invoices
 ********************
+
 The most common use case for debit notes is to increase the value of an existing invoice, you
 need to select option 3 in the field Reference code SII:
 
 .. image:: media/Chile31.png
    :align: center
+   :alt: Debit note for partial refund to crrect amounts, using the SII reference code 3.
+   
    
 In this case Odoo automatically includes the source invoice in the cross reference section:
 
 .. image:: media/Chile32.png
    :align: center
+   :alt: Invoice data on crossed reference section for debit notes.
 
 Cancel Credit Notes
 *******************
+
 In Chile the debits notes are used to cancel a validated Credit Note, in this case just
 select the button Add debit note and select the first option in the wizard: *1: Anula 
 Documentos de referencia.*
 
 .. image:: media/Chile33.png
    :align: center
+   :alt: Creating a debit note to cancel a credit note with the SII code reference 1.
 
 
 Vendor Bills
 ------------
+
 As part of the Chilean localization, you can configure your Incoming email server as the same you
 have register in the SII in order to:
 
@@ -565,6 +648,7 @@ have register in the SII in order to:
 
 Reception
 ~~~~~~~~~
+
 As soon as the vendor email with the attached DTE is received:
 1. The vendor Bill mapping all the information included in the xml.
 2. An email is sent to the vendor with the Reception acknowledgement. 
@@ -572,35 +656,42 @@ As soon as the vendor email with the attached DTE is received:
 
 .. image:: media/Chile34.png
    :align: center
-
+   :alt: Messages recorded in the chatter with the reception notification for the vendor. 
 
 Acceptation
 ~~~~~~~~~~~
+
 If all the commercial information is correct on your vendor bill, you can accept the document using
 the button: Aceptar Documento, once this is done the DTE Acceptation Status  changes to: Accepted and
 an email of acceptance is sent to the vendor. 
 
 .. image:: media/Chile35.png
    :align: center
+   :alt: Acceptance button in vendor bills to inform the vendor all the document is comercially accepted.
+   
 
 Claim
 ~~~~~
+
 In case there is a commercial issue or the information is not correct on your vendor bill, you can
 Claim the document before validating it,  using the button: Claim, once this is done the DTE
 Acceptation Status  change to: Claim  and an email of acceptance is sent to the vendor. 
 
 .. image:: media/Chile36.png
    :align: center
-
+   :alt: Claim button in vendor bills to inform the vendor all the document is comercially rejected.
+   
 If you claim a vendor bill, the status changes from draft to cancel automatically. Considering this
 as best practice, all the Claim documents should be canceled as they won’t be valid for your
 accounting records. 
+
 
 Financial Reports
 =================
 
 Balance Tributario de 8 Columnas
 --------------------------------
+
 This report presents the accounts in detail (with their respective balances), classifying them
 according to their origin and determining the level of profit or loss that the business had within
 the evaluated period of time, so that a real and complete knowledge of the status of a company. 
@@ -609,9 +700,11 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 
 .. image:: media/Chile37.png
    :align: center
+   :alt: Columns and data displayed in the report Balance Tributario 8 Columnas.
 
 Propuesta F29
 -------------
+
 The form F29 is a new system that the SII enabled to taxpayers, and that replaces the Purchase and
 Sales Books. This report is integrated by Purchase Register (CR) and the Sales Register (RV).
 Its purpose is to support the transactions related to VAT, improving its control and declaration. 
@@ -623,3 +716,4 @@ You can find this report in :menuselection:`Accounting --> Accounting --> Report
 
 .. image:: media/Chile38.png
    :align: center
+   :alt: Parameters to required to generate the Report Propuesta F29
