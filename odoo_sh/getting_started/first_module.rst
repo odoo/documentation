@@ -178,7 +178,7 @@ From an Odoo.sh editor terminal:
 
 The above command is explained in the section
 :ref:`Commit & Push your changes
-<odoosh-gettingstarted-online-editor>` of the
+<odoosh-gettingstarted-online-editor-push>` of the
 :ref:`Online Editor <odoosh-gettingstarted-online-editor>`
 chapter.
 It includes the explanation regarding the fact you will be prompted to type your username and password,
