@@ -31,11 +31,6 @@ unlike `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh <https://www.odoo
 You will find here below some useful
 information on how to integrate your own email solution with Odoo.
 
-.. note:: Office 365 email servers don't allow easily to send external emails
-    from hosts like Odoo.
-    Refer to the `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__
-    to make it work.
-
 How to manage outbound messages
 ===============================
 As a system admin, go to :menuselection:`Settings --> General Settings`

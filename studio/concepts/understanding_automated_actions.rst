@@ -47,7 +47,7 @@ For every Trigger option, **conditions** can be applied, such as:
 - *Create New Record*: a new record with new values is created.
 - *Update a Record*: updates the record that triggered the action.
 - *Execute several actions*: defines an action that triggers other server actions.
-- *Send Email*: an automatic :doc:`email <../../discuss/advanced/email_template>` is sent.
+- *Send Email*: an automatic :doc:`email <../../email_communication/advanced/email_template>` is sent.
 - *Add Followers*: :doc:`followers <../../project/tasks/collaborate>` are notified of changes in
   the task.
 - *Create Next Activity*: creates an activity such as: *Call*, *Email*, *Reminder*.

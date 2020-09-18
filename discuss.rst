@@ -8,4 +8,3 @@ Discuss
    :titlesonly:
 
    discuss/overview
-   discuss/advanced

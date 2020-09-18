@@ -19,7 +19,7 @@ Choose the right target and create the message
 
 .. note::
    With a trial databases, you have a limit of 50 emails per day; on Odoo SH Cloud
-   Platform the limit is 200. There is a possibility to increase these numbers by contacting Odoo
+   Platform and SaaS the limit is 200. There is a possibility to increase these numbers by contacting Odoo
    Support. To contact Support, `click here <https://www.odoo.com/help>`_.
 
 Under *Mail Body*, choose a layout and make the modifications needed by dragging, dropping and
@@ -62,6 +62,7 @@ Test, send or schedule a mailing
    Therefore, if at the end of the day you have remaining ones to be sent, note that they *will not*
    be sent automatically the next day. You need to force that by opening the email and
    clicking on *Retry*.
+   A solution can be to use an outgoing email servers, see :doc:`../../email_communication/advanced/email_servers`
 
 Manage campaigns
 ================
@@ -82,6 +83,6 @@ Manage campaigns
    menu within those applications. All of this is possible because the applications work integrated.
 
 .. seealso::
-   - :doc:`../../discuss/advanced/email_servers`
+   - :doc:`../../email_communication/advanced/email_servers`
    - :doc:`../../social_marketing/overview/campaigns`
 

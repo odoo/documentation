@@ -77,4 +77,4 @@ then go to :menuselection:`Technical --> SMS Templates`.
 
 .. seealso::
    - :doc:`../../social_marketing/overview/campaigns`
-   - :doc:`../../discuss/advanced/email_template`
+   - :doc:`../../email_communication/advanced/email_template`
