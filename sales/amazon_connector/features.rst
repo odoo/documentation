@@ -1,10 +1,13 @@
-====================================
-Amazon Connector: supported features
-====================================
+=========================
+Amazon Connector Features
+=========================
 
 The **Amazon Connector** synchronizes the orders between Amazon and your Odoo database, which
 reduces considerably the amount of time spent on your Amazon Seller Central dashboard, making your
 daily routine a lot easier.
+
+Supported Features
+==================
 
 The connector is able to:
 
@@ -49,8 +52,43 @@ The connector is able to:
 
 .. note::
    The connector is designed to synchronize orders' data as detailed above. Other actions, such as
-   downloading monthly fees report, handling disputes, or issuing refunds must be managed from
+   downloading monthly fees reports, handling disputes, or issuing refunds must be managed from
    Amazon Seller Central, as usual.
+
+.. _amazon/supported-marketplaces:
+
+Supported Marketplaces
+======================
+
+The Amazon Connector currently supports 9 marketplaces.
+If a marketplace is not listed below, it may be possible for you to :ref:`add it as an unsupported
+marketplace <amazon/add-unsupported-marketplace>`.
+
++-------------------------------+
+| **North America region**      |
++===============+===============+
+| Canada        | Amazon.ca     |
++---------------+---------------+
+| Mexico        | Amazon.com.mx |
++---------------+---------------+
+| US            | Amazon.com    |
++---------------+---------------+
+
++-------------------------------+
+| **Europe region**             |
++===============+===============+
+| Germany       | Amazon.de     |
++---------------+---------------+
+| Spain         | Amazon.es     |
++---------------+---------------+
+| France        | Amazon.fr     |
++---------------+---------------+
+| UK            | Amazon.co.uk  |
++---------------+---------------+
+| Italy         | Amazon.it     |
++---------------+---------------+
+| Netherlands   | Amazon.nl     |
++---------------+---------------+
 
 .. seealso::
    - :doc:`setup`

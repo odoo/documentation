@@ -115,47 +115,47 @@ the subtotals between Seller Central and Odoo.
    that order totals differ by a few cents from that on Seller Central. Those differences can be
    resolved with a write-off when reconciling the payments in Odoo.
 
-Add an unsupported marketplace to the Amazon Connector
-======================================================
+.. _amazon/add-unsupported-marketplace:
 
-Some Amazon Marketplaces, such as Amazon Brazil or Amazon Netherlands, are
-not included by default in the Amazon Connector list of possible marketplaces.
+Add an unsupported marketplace
+==============================
 
-These marketplaces can be added manually should you wish to use them.
+Some Amazon Marketplaces, such as Amazon Brazil, are not officially supported by Odoo but might be
+compatible with your seller account. These marketplaces can be added manually should you wish to use
+them. See :ref:`here <amazon/supported-marketplaces>` for the exhaustive list of natively supported
+marketplaces.
 
-.. important::
-    These marketplaces are not officially supported by Odoo - there is no guarantee
-    that adding a new marketplace as described here will work, nor can this be considered
-    as a bug when contacting Odoo Support.
+.. tip::
+   To find out if a marketplace is eventually compatible, check the `Amazon Documentation
+   <https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_. The marketplace
+   must belong to the same region as that of your seller account.
 
-.. note::
-    Amazon marketplaces are only supported in the European and North American region;
-    though Amazon includes Brazil with the North American region and India in the
-    European region, so your mileage may vary; check the `Amazon Documentation
-    <https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_
-    to know to which region your marketplace belongs.
+To add a new marketplace, you must first enable :doc:`Developer mode
+<../../general/developer_mode/activate>`.
 
-To add a new marketplace, you must first enable 
-:doc:`Developer mode <../../general/developer_mode/activate>`.
+Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors -->
+Amazon Sync --> Amazon Marketplaces`.
 
-Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
-Amazon Marketplaces`.
+From there, you can create a new marketplace record. You will need the Marketplace ID and Endpoint
+for your marketplace as described in the `Amazon Documentation
+<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_.
 
-From there, you can create a new marketplace record. You will need the Marketplace ID and Endpoint for your
-marketplace as described in the
-`Amazon Documentation <https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_.
-
-Set the name of the record to ``Amazon.<domain>`` to easily retrieve it. The **Code**, **Domain** and
-**API Identifier** fields should contain the *Country Code*, *Amazon MWS Endpoint* and *MarkteplaceId*
-values from the Amazon Documentation respectively.
+Set the name of the record to ``Amazon.<domain>`` to easily retrieve it (for instance:
+``Amazon.se``). The **Code**, **Domain** and **API Identifier** fields should respectively hold
+the *Country Code*, *Amazon MWS Endpoint* and *MarketplaceId* values from the Amazon Documentation.
 
 Once the marketplace is saved, you should then update the Amazon Account configuration by going to 
-:menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync --> Amazon Accounts`,
-open the account on which you wish to use the new marketplace, go to the **Marketplaces** tab and click
-on **Update available marketplaces** (an animation should confirm the success of the operation). You can then
-edit the Amazon Account to add the new marketplace in the list of synchronized marketplaces - if the new
-marketplace is not available in the list, it means it is either incompatible with the account's region or
-simply that it is not supported by the Amazon Connector.
+:menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
+Amazon Accounts`, open the account on which you wish to use the new marketplace, go to the
+**Marketplaces** tab and click on **Update available marketplaces** (an animation should confirm the
+success of the operation). Newly added marketplaces are automatically added to the list of
+synchronized marketplaces. If the new marketplace is not added to the list, it means that it is
+either incompatible or unavailable for your seller account.
+
+.. important::
+   As manually added marketplaces are not officially supported by Odoo, there is no guarantee that
+   adding one as described above will work, nor can this be considered as a bug when contacting Odoo
+   Support.
 
 .. seealso::
    - :doc:`features`
