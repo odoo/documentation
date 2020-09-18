@@ -1,0 +1,63 @@
+diff --git a/email_communication/overview/get_helped.rst b/email_communication/overview/get_helped.rst
+index aa274ec2..92f5d81e 100644
+--- a/email_communication/overview/get_helped.rst
++++ b/email_communication/overview/get_helped.rst
+@@ -13,15 +13,13 @@ You reached your daily limit
+ .. warning:
+     Applies to Odoo Online and Odoo.sh platforms only.
+ 
+-Odoo caps the number of emails that can be sent every day, for security and
+-stability reasons.
++Odoo caps the number of emails that can be sent every day, to keep the database and mail servers safe and to prevent the spam.
+ 
+ Here are the default limits for new databases:
+ 
+-- 200 emails/day for Odoo Online and Odoo.sh databases,
+-- 50 emails/day for Odoo Online "2 weeks free trial" database.
++- 200 emails/day for Odoo Online and Odoo.sh databases with an active subscription,
++- 50 emails/day for one-app free and trial databases.
+ 
+-// TODO RIM One app free?
+ // TODO RIM pas clair
+ 
+ In case you hit the limit, you can:
+@@ -29,7 +27,8 @@ In case you hit the limit, you can:
+ 
+ // TODO RIM lien vers le support form
+ - either ask our support team to increase your daily limit (we will analyze your
+-  situation: how many users in your database, which apps, how much traffic...)
++  situation: how many users in your database, which apps, how much traffic...).
++  You can contact the support by the following `link <https://www.odoo.com/help>`
+ 
+ - either use your own outgoing email server: you can do (nearly) whatever you want, it's your server!
+   In that case, here is our documentation about how to configure it:
+@@ -70,7 +69,7 @@ Click on an email marked in red and select the tab `Failure Reason`.
+ If Odoo was not able of providing you with an error message, you should ask the administrator
+ of the email server to have a look at the log files of the Odoo server and the SMTP server
+ (or contact the Odoo Support if you are hosted on one of our cloud platforms).
+-s
++
+ .. note::
+    The "Technical" menu is visible in Deveoper mode only, see
+    :doc:`../../../general/developer_mode/activate`
+@@ -102,7 +101,7 @@ If you use a well-known email provider like Gmail or Office 365, you have to com
+    :doc: `../advanced/email_servers`
+ 
+ 
+-Emails went out of Odoo but you still see ared envelop
++Emails went out of Odoo but you still see a red envelop
+ ======================================================
+ 
+ // TODO RIM merge with section "envelop is red"
+@@ -110,7 +109,7 @@ Emails went out of Odoo but you still see ared envelop
+ It might happen that some emails are not going out properly and Odoo has no power on this.
+ For diverses reason, during the transit of the email, an error occurs and a bounce email is sent back to the sender to letting him know that it didn't reach its destination.
+ 
+-In case the email is sent using Odoo, the bounce email should reach the Odoo database and display a red envelop. To be able to investigate, please refer to the subsection `The envelop is red in the chatter`
++In case the email is sent using the Odoo, the bounce email should reach the Odoo database and display a red envelop. To be able to investigate, please refer to the subsection `The envelop is red in the chatter`
+ 
+ For now, Odoo is not always capable of providing the information on the reason it failed.
+-The technology of the mails is old and extensible, the different providers implement a personalized policy of the mails.
+\ No newline at end of file
++The technology of the mails is old and extensible, the different providers implement a personalized policy of the mails.   
+\ No newline at end of file

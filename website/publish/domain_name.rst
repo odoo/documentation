@@ -81,6 +81,15 @@ We can now apply the redirection from your domain name's manager account:
    - `Namecheap <https://www.namecheap.com/support/knowledgebase/article.aspx/9646/10/how-can-i-set-up-a-cname-record-for-my-domain>`__
    - `OVH <https://www.ovh.co.uk/g1519.exchange_20132016_how_to_add_a_cname_record>`__
 
+Impact on email deliverability
+==============================
+
+If your domain is configurable and you are using email addresses associate with it, you might need to configure it to avoid your email to be received in spam.
+
+Consider reading our documentation regarding SPF, DKIM and DMARC
+  * :doc:`../../email_communication/advanced/email_servers`
+
+
 How to enable SSL (HTTPS) for my Odoo instance
 ==============================================
 
@@ -117,7 +126,7 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`../../discuss/advanced/email_servers`
+  * :doc:`../../email_communication/advanced/email_servers`
 
 
 
