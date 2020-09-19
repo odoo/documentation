@@ -130,6 +130,9 @@ msgid ""
 "recognized by Amazon as a developer (i.e. you make use of an application "
 "connecting to MWS), you will be granted Amazon MWS access keys."
 msgstr ""
+"为了将你的Amazon订单与Odoo同步，需要Amazon MWS访问密钥。通过提交**Amazon "
+"MWS开发人员登记和评估表**，可登记成为开发人员，获取该密钥。在被Amazon认可成为开发人员后（即你使用与MWS连接的应用程序），你将获得Amazon"
+" MWS访问密钥。"
 
 #: ../../sales/amazon_connector/apply.rst:15
 msgid ""
@@ -661,6 +664,8 @@ msgid ""
 "subsequent orders to lookup SKUs. If no offer with a matching SKU is found, "
 ":ref:`the internal reference is used instead <amazon/matching>`."
 msgstr ""
+"对于电商平台产品，所有产品配对保存为**Amazon产品方案**，列在账户表单**产品方案**统计按钮下。当确定产品配对后自动创建产品方案，并用于之后的订单查找SKU。如果未找到匹配SKU的产品方案，则:ref:`使用内部参考编号"
+" <amazon/matching>`。"
 
 #: ../../sales/amazon_connector/setup.rst:39
 msgid ""
@@ -670,6 +675,7 @@ msgid ""
 " you do not use the internal reference as the SKU or if you sell the product"
 " under different conditions."
 msgstr ""
+"通过更改产品方案的产品或SKU，可强制将电商平台商品与特定产品配对。如为自动完成，则可手动创建产品方案。如你不使用内部参考编号作为SKU或用不同条件销售产品，这项功能非常有用。"
 
 #: ../../sales/amazon_connector/setup.rst:44
 msgid ""
@@ -678,6 +684,7 @@ msgid ""
 "is used. The same is done with the default product **Amazon Shipping** and "
 "the shipping code."
 msgstr ""
+"如特定KSU或礼品包装代码未找到内部参考编号匹配的数据库产品，则使用默认数据库产品**Amazon销售**。它将使用默认产品**Amazon发货**和发货代码。"
 
 #: ../../sales/amazon_connector/setup.rst:49
 msgid ""
@@ -686,10 +693,13 @@ msgid ""
 ":menuselection:`Sales --> Configuration --> Settings --> Connectors --> "
 "Amazon Sync --> Default Products`."
 msgstr ""
+"如要修改默认产品，启用:doc:`开发人员模式 "
+"<../../general/developer_mode/activate>`并前往:menuselection:`销售 --> 配置 --> 设置 "
+"--> 连接器 --> Amazon同步 --> 默认产品`。"
 
 #: ../../sales/amazon_connector/setup.rst:55
 msgid "Configure taxes of products"
-msgstr ""
+msgstr "配置产品税"
 
 #: ../../sales/amazon_connector/setup.rst:57
 msgid ""
@@ -699,6 +709,7 @@ msgid ""
 " Odoo or to have it done by a fiscal position, to avoid discrepancies in the"
 " subtotals between Seller Central and Odoo."
 msgstr ""
+"如要允许在Odoo中对Amazon销售产品进行税务报告，则销售订单项目适用的税收设置在产品上或由财政状况决定。确保在Odoo的产品页面或按财政状况设置正确的税收，以免卖家中心和Odoo中的小计金额存在差异。"
 
 #: ../../sales/amazon_connector/setup.rst:63
 msgid ""
@@ -707,6 +718,7 @@ msgid ""
 "Seller Central. Those differences can be resolved with a write-off when "
 "reconciling the payments in Odoo."
 msgstr ""
+"由于Amazon适用的税收不一样与Odoo的配置完全相同，某些订单的金额可能与卖家中心有细微差异。在与Odoo付款情况对账时，可冲销并解决这些差异。"
 
 #: ../../sales/ebay_connector.rst:3
 msgid "eBay Connector"
@@ -856,25 +868,25 @@ msgstr "当所有的字段被填写后, 你可以通过点击按钮同步种类�
 
 #: ../../sales/ebay_connector/setup.rst:40
 msgid "Using the updated synchronisation method"
-msgstr ""
+msgstr "使用更新同步方法"
 
 #: ../../sales/ebay_connector/setup.rst:42
 msgid ""
 "If you have a lot of products, the eBay API can sometimes refuse some "
 "synchronization calls due to a time-based limit on the number of requests "
 "that eBay enforces."
-msgstr ""
+msgstr "如有你有大量产品，由于eBay强制规定的一定时间内请求数量限制，eBay API有时可能拒绝某些同步调用。"
 
 #: ../../sales/ebay_connector/setup.rst:45
 msgid ""
 "To fix this issue, a new implementation mechanism has been developped; "
 "however this updated mechanism is disabled by default to avoid having the 2 "
 "systems running in parallel in existing installations."
-msgstr ""
+msgstr "为了解决这一问题，我们开发了一种新的实施机制；但是，为了避免现有安装中这两个系统同时运行，默认情况下这种更新方法被禁用。"
 
 #: ../../sales/ebay_connector/setup.rst:49
 msgid "To switch to the new synchronization mechanism:"
-msgstr ""
+msgstr "如要切换为新同步机制："
 
 #: ../../sales/ebay_connector/setup.rst:51
 msgid ""
@@ -884,13 +896,13 @@ msgstr ""
 
 #: ../../sales/ebay_connector/setup.rst:52
 msgid "Go to :menuselection:`Settings --> Technical --> Scheduled Actions`"
-msgstr ""
+msgstr "前往:menuselection:`设置 --> 技术 --> 预定操作`"
 
 #: ../../sales/ebay_connector/setup.rst:53
 msgid ""
 "Archive the old synchronization actions (both are named *Ebay: update "
 "product status*)"
-msgstr ""
+msgstr "存档旧的同步操作（二者名称都是*Ebay：更新产品状态*）"
 
 #: ../../sales/ebay_connector/setup.rst:54
 msgid ""
@@ -898,18 +910,19 @@ msgid ""
 "every 15min by default and *Ebay: synchronise stock (for 'get new orders' "
 "synchronisation)* which runs once a day per default)"
 msgstr ""
+"启用新的同步操作（*Ebay：获取新订单*，默认每15分钟运行一次，及*Ebay：同步库存（以便与“获取新订单”同步）*，默认每天运行一次）"
 
 #: ../../sales/ebay_connector/setup.rst:55
 msgid ""
 "Ensure that the **Next Execution Date** for both these actions are in the "
 "near future"
-msgstr ""
+msgstr "确保两种操作的**下次执行日期**均为最近"
 
 #: ../../sales/ebay_connector/setup.rst:57
 msgid ""
 "Starting with the next execution date, the new method will be used instead "
 "of the old one."
-msgstr ""
+msgstr "从下次执行日期开始，将使用新方法进行同步。"
 
 #: ../../sales/invoicing.rst:3
 msgid "Invoicing Method"
@@ -1126,7 +1139,7 @@ msgid ""
 "Once the products are delivered, you can invoice your customer. Odoo will "
 "automatically add the quantities to invoice based on how many you delivered "
 "if you did a partial delivery."
-msgstr ""
+msgstr "产品发货后，你可向客户开具发票。如果你是部分发货，Odoo将根据发货数量，自动向发票添加数量。"
 
 #: ../../sales/invoicing/milestone.rst:3
 msgid "Invoice project milestones"
@@ -1229,7 +1242,7 @@ msgstr "从销售订单进行订阅"
 msgid ""
 "From the sales app, create a quotation to the desired customer, and select "
 "the subscription product your previously created from the Subscriptions App."
-msgstr ""
+msgstr "从销售应用程序中，为所需客户创建报价，然后选择你以前在订阅应用程序中创建的订阅产品。"
 
 #: ../../sales/invoicing/subscriptions.rst:14
 msgid ""
@@ -1322,6 +1335,7 @@ msgid ""
 "the sales order, to do so, go to :menuselection:`Accounting --> "
 "Configuration --> Settings` and activate *Analytic Accounting*."
 msgstr ""
+"你还应启用分析科目功能以将支出关联到销售订单，为此，请前往:menuselection:`会计 --> 配置 --> 设置`并启用*分析科目*。"
 
 #: ../../sales/invoicing/time_materials.rst:90
 msgid ""
@@ -1445,31 +1459,33 @@ msgid ""
 "use a specific price: periods, min. sold quantity (meet a minimum order "
 "quantity and get a price break), etc."
 msgstr ""
+"Odoo拥有强大的价格表功能，支持适合你公司的定价策略。价格表是指Odoo搜索并确定建议价格的定价或定价规则列表。你可设置使用特定价格的多项条件：期限、最小销售数量（满足最低订购量并获得价格折扣"
+" ）等。"
 
 #: ../../sales/products_prices/prices/pricing.rst:9
 msgid ""
 "As pricelists only suggest prices, they can be overridden by vendors "
 "completing sales orders. Choose your pricing strategy from "
 ":menuselection:`Sales --> Settings`."
-msgstr ""
+msgstr "由于价格表仅提供价格建议，它们可能被供应商填写的销售订单覆盖。从:menuselection:`销售 --> 设置`选择你的定价策略。"
 
 #: ../../sales/products_prices/prices/pricing.rst:18
 msgid ""
 "*A single sale price per product :* doesn't let you adapt prices, it use "
 "default product price ;"
-msgstr ""
+msgstr "*每种产品的单一销售价格 ：* 不允许调整价格，使用默认产品价格 ；"
 
 #: ../../sales/products_prices/prices/pricing.rst:19
 msgid ""
 "*Different prices per customer segment :* you will set several prices per "
 "products ;"
-msgstr ""
+msgstr "*每个客户群使用不同价格 ：* 为每种产品设定多个价格 ；"
 
 #: ../../sales/products_prices/prices/pricing.rst:20
 msgid ""
 "*Advanced pricing based on formula :* will let you apply discounts, margins "
 "and roundings."
-msgstr ""
+msgstr "*根据公式的高级定价规则 ：* 可应用折扣、利润率和舍入等规则。"
 
 #: ../../sales/products_prices/prices/pricing.rst:23
 msgid "Several prices per product"
@@ -1537,6 +1553,7 @@ msgid ""
 "ceilings (maximum margins). Prices can be rounded to the nearest cent/dollar"
 " or multiple of either (nearest 5 cents, nearest 10 dollars)."
 msgstr ""
+"*根据公式的高级定价规则*允许设置价格更改规则。更改可以相对于产品列表/目录价格、产品成本价或其他价格表。更改通过折扣或附加费计算，并可能强制在下限（最低利润率）和上限（最高利润率）内进行计算。价格可以四舍五入到最接近的美分/美元或任意一个（最近5美分，最近的10美元）的倍数。"
 
 #: ../../sales/products_prices/prices/pricing.rst:76
 msgid ""
@@ -2087,10 +2104,12 @@ msgid ""
 "`Accounting Memento: Details of Journal Entries "
 "<../../../accounting/overview/main_concepts/memento.html#journal-entries>`_"
 msgstr ""
+"`会计备忘录：会计分录详情 <../../../accounting/overview/main_concepts/memento.html"
+"#journal-entries>`_"
 
 #: ../../sales/products_prices/products/variants.rst:225
 msgid ":doc:`../../../accounting/overview/process_overview/supplier_bill`"
-msgstr ""
+msgstr ":doc:`../../../accounting/overview/process_overview/supplier_bill`"
 
 #: ../../sales/products_prices/taxes.rst:3
 msgid "Set taxes"
@@ -2102,7 +2121,7 @@ msgstr "发送报价"
 
 #: ../../sales/send_quotations/deadline.rst:3
 msgid "Use quotations deadline to stimulate your customers"
-msgstr ""
+msgstr "通过报价截止日期激励客户"
 
 #: ../../sales/send_quotations/deadline.rst:5
 msgid ""
@@ -2111,7 +2130,7 @@ msgid ""
 "afraid of missing a good deal and it will also allow you to protect yourself"
 " in case you have to fulfill an order at a price that is no longer "
 "profitable for you."
-msgstr ""
+msgstr "在发送报价时，建议设置截止日期来激励客户行动。实际上，客户由于担心错过一笔好买卖而受到激励，它也可保护你避免按已经无利可图的价格履行订单。"
 
 #: ../../sales/send_quotations/deadline.rst:11
 msgid "Set a deadline"
@@ -2121,11 +2140,11 @@ msgstr "设置截止日期"
 msgid ""
 "With Odoo Sales, it is possible to instantly add an **Expiration Date** from"
 " the quotation or the sales order."
-msgstr ""
+msgstr "通过Odoo销售应用程序，你可从报价或销售订单即刻添加**到期日**。"
 
 #: ../../sales/send_quotations/deadline.rst:22
 msgid "Use deadline in your quotation templates"
-msgstr ""
+msgstr "在报价模板中使用截止日期"
 
 #: ../../sales/send_quotations/deadline.rst:24
 msgid ""
@@ -2134,20 +2153,21 @@ msgid ""
 "deadline will be automatically applied. Be sure to check out our "
 "documentation about :doc:`quote_template` to excel in their use."
 msgstr ""
+"你还可向已创建的每个报价模板添加截止日期。在报价中使用特定的报价模板时，模板关联的截止日期将自动应用到报价中。请阅读文档:doc:`quote_template`，进一步了解其使用方法。"
 
 #: ../../sales/send_quotations/deadline.rst:34
 msgid ""
 "By clicking on the **Customer Preview** button, you will be able to see when"
 " the offer expires. For your information, the number of days will be the "
 "same as those mentioned in the quotation template."
-msgstr ""
+msgstr "点击**客户预览**按钮，你可查看优惠到期时间。有效期天数与报价模板中设置的天数相同。"
 
 #: ../../sales/send_quotations/deadline.rst:44
 #: ../../sales/send_quotations/get_paid_to_validate.rst:50
 #: ../../sales/send_quotations/get_signature_to_validate.rst:51
 #: ../../sales/send_quotations/optional_products.rst:65
 msgid ":doc:`quote_template`"
-msgstr ""
+msgstr ":doc:`quote_template`"
 
 #: ../../sales/send_quotations/different_addresses.rst:3
 msgid "Deliver and invoice to different addresses"
@@ -2160,16 +2180,17 @@ msgid ""
 "billing and shipping addresses. Indeed, not everyone will have the same "
 "delivery location as the invoicing location."
 msgstr ""
+"在Odoo销售应用程序中，你可配置不同的发货和发票地址。对于某些客户，定义具体的账单和发货地址非常实用。实际上，某些客户的发货地点和账单地点不相同。"
 
 #: ../../sales/send_quotations/different_addresses.rst:12
 msgid ""
 "Go to :menuselection:`Sales --> Configuration --> Settings` and activate the"
 " **Customer Addresses** feature."
-msgstr ""
+msgstr "前往:menuselection:`销售 --> 配置 --> 设置`并启用**客户地址**功能。"
 
 #: ../../sales/send_quotations/different_addresses.rst:21
 msgid "Add addresses from a quotation"
-msgstr ""
+msgstr "从报价添加地址"
 
 #: ../../sales/send_quotations/different_addresses.rst:23
 msgid ""
@@ -2180,6 +2201,8 @@ msgid ""
 " and link it, if necessary, to a company. In this contact form, you will be "
 "able to add, delete and modify invoice and delivery addresses."
 msgstr ""
+"在创建报价时，必须添加客户。客户可以是系统中已经定义和登记具体账单和发货地址的公司或个人，也可以是新客户。在这种情况下，你必须为新客户**创建并编辑**联系人表单，并将它与一家公司关联。在这份联系人表单中，你可添加、"
+" 删除和修改账单和发货地址。"
 
 #: ../../sales/send_quotations/different_addresses.rst:35
 msgid ""
@@ -2187,11 +2210,11 @@ msgid ""
 "will automatically use them to fill in the fields. Now, if you want to "
 "change it instantly, it is possible to do so directly from the quotation or "
 "the sales order."
-msgstr ""
+msgstr "如你选择已定义账单和发货地址的客户，Odoo将自动填入相关字段。如你想要即可修改，从报价或销售订单中修改即可。"
 
 #: ../../sales/send_quotations/different_addresses.rst:40
 msgid "Add addresses from a contact form"
-msgstr ""
+msgstr "从联系人表单添加地址"
 
 #: ../../sales/send_quotations/different_addresses.rst:42
 msgid ""
@@ -2202,10 +2225,12 @@ msgid ""
 " or modify invoice and delivery addresses instantly there, before creating a"
 " quotation."
 msgstr ""
+"之前，我们谈到你可以直接从报价或销售订单填写联系人表单，以向客户添加账单和发货地址。但是，如果前往:menuselection:`销售 --> 订单 "
+"--> 客户`，你可在创建报价之前，立即在此创建或修改每个客户，并添加、删除或修改账单和发货地址。"
 
 #: ../../sales/send_quotations/different_addresses.rst:54
 msgid "Deal with different addresses"
-msgstr ""
+msgstr "处理不同地址"
 
 #: ../../sales/send_quotations/different_addresses.rst:56
 msgid ""
@@ -2214,6 +2239,8 @@ msgid ""
 " but, more importantly, you can enter billing and shipping addresses under "
 "the **Contacts & Addresses** tab."
 msgstr ""
+"与前面的例子一样，前往:menuselection:`销售 --> 订单 --> "
+"客户`并创建一个新客户。你可在此添加公司信息，或在**联系人和地址**选项卡下键入账单和发货地址。"
 
 #: ../../sales/send_quotations/different_addresses.rst:65
 msgid ""
@@ -2221,13 +2248,13 @@ msgid ""
 "quotation. Now, if you enter your new customer, you will see that the other "
 "fields will fill in by themself with the information previously saved for "
 "billing and shipping addresses."
-msgstr ""
+msgstr "完成后，你可返回销售仪表板并创建新报价。现在，如你输入新客户，你会发现其他字段都已按照之前保存的账单和发货地址信息自动填写。"
 
 #: ../../sales/send_quotations/different_addresses.rst:74
 msgid ""
 "With Odoo Sales, it is now very convenient to play with various addresses in"
 " terms of invoice and delivery features."
-msgstr ""
+msgstr "现在在Odoo销售应用程序中，我们可以很方便地处理发票和发货功能中的各种地址。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:3
 msgid "Get paid to confirm an order"
@@ -2242,16 +2269,17 @@ msgid ""
 "get automatic orders confirmation. Online payments are made instantly, so "
 "it's very convenient and saves lots of time in a basic sales process."
 msgstr ""
+"一般来说，网上支付被认为是比传统支付方式更快、更安全的替代方式。它通常比其他支付方式更便宜、简单、快速。它对于国际交易尤其有用、高效。在Odoo销售应用程序中，你可利用网上支付完成自动订单确认。网上支付即可完成，因此非常方便，在基本销售流程中节省了大量时间。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:12
 msgid "Enable online payment"
-msgstr ""
+msgstr "启用网上支付"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:14
 msgid ""
 "Go to :menuselection:`Sales --> Configuration --> Settings` and activate the"
 " **Online Payment** feature."
-msgstr ""
+msgstr "前往:menuselection:`销售 --> 配置 --> 设置`并启用**网上支付**功能。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:22
 msgid ""
@@ -2263,13 +2291,14 @@ msgid ""
 ":doc:`../../ecommerce/shopper_experience/authorize`, and others in the "
 ":doc:`../../ecommerce` documentation."
 msgstr ""
+"你可在此直接访问**支付收单机构**页面。你可选择并配置收单机构。在创建或修改支付收单机构之前，注意了解我们关于如何通过收单机构支付的文档，例如:doc:`../../ecommerce/shopper_experience/paypal`、:doc:`../../ecommerce/shopper_experience/authorize`以及:doc:`../../ecommerce`等文档。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:30
 msgid ""
 "If you are familiar with this documentation: :doc:`quote_template`; you can "
 "activate or not the **Online Payment** feature for each template you use, "
 "under their confirmation tab."
-msgstr ""
+msgstr "如你对本文档:doc:`quote_template`非常熟悉；你可在确认选项卡下，为使用的每个模板启用或禁用**网上支付**功能。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:35
 msgid "Register a payment"
@@ -2279,25 +2308,25 @@ msgstr "登记付款"
 msgid ""
 "After opening quotations from their received email, your customers will have"
 " different possibilities to make their online payments. For example:"
-msgstr ""
+msgstr "客户从收件箱中打开报价后，可用多种途径完成网上支付。例如："
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:46
 msgid ""
 "By clicking on the **Customer Preview** button, you will be able to see what"
 " your customers will have to choose when it comes to payment."
-msgstr ""
+msgstr "点击**客户预览**按钮，你可看到客户在支付时看到的选项。"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:51
 msgid ":doc:`../../ecommerce`"
-msgstr ""
+msgstr ":doc:`../../ecommerce`"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:52
 msgid ":doc:`../../ecommerce/shopper_experience/paypal`"
-msgstr ""
+msgstr ":doc:`../../ecommerce/shopper_experience/paypal`"
 
 #: ../../sales/send_quotations/get_paid_to_validate.rst:53
 msgid ":doc:`../../ecommerce/shopper_experience/authorize`"
-msgstr ""
+msgstr ":doc:`../../ecommerce/shopper_experience/authorize`"
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:3
 msgid "Get a signature to confirm an order"
@@ -2309,7 +2338,7 @@ msgid ""
 "Odoo, you will get automatic orders confirmation. You and your customers "
 "will save a lot of time by using this feature compared to a traditional "
 "process."
-msgstr ""
+msgstr "在线签名就像电子“指纹”一样。在Odoo中使用在线签名功能，你将获得自动订单确认。与传统流程相比，使用这项功能可为你和客户节约大量时间。"
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:10
 msgid "Activate online signature"
@@ -2319,18 +2348,18 @@ msgstr "激活在线签名"
 msgid ""
 "Go to :menuselection:`Sales --> Configuration --> Settings` and activate the"
 " **Online Signature** feature."
-msgstr ""
+msgstr "前往:menuselection:`销售 --> 配置 --> 设置`并启用**在线签名**功能。"
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:21
 msgid ""
 "If you are familiar with this documentation: :doc:`quote_template`, you can "
 "activate or not the **Online Signature** feature for each quotation template"
 " you use, under their confirmation tab. Example:"
-msgstr ""
+msgstr "如你熟悉本文档:doc:`quote_template`，你可在确认选项卡下，为使用的每个报价模板启用或禁用**在线签名**功能。例如："
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:31
 msgid "Confirm an order with a signature"
-msgstr ""
+msgstr "使用签名确认订单"
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:33
 msgid ""
@@ -2340,23 +2369,24 @@ msgid ""
 "signature or load a file from their computer. Here below, it is an example "
 "of an automated signature:"
 msgstr ""
+"当你向客户发送报价时，他们可立即接受并在线签署订单。当他们点击**签名并支付**时，他们可选择立即签名、用自动签名填写该字段或从电脑中加载文件。下面是自动签名的例子："
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:43
 msgid ""
 "Once signed, you will have the possibility to choose your payment methods. "
 "Then, when the quotation will be paid and confirmed, a delivery order will "
 "be created automatically by Odoo."
-msgstr ""
+msgstr "签名后， 你可选择支付方式。然后，当支付和确认报价时，Odoo将自动创建发货单。"
 
 #: ../../sales/send_quotations/get_signature_to_validate.rst:47
 msgid ""
 "Be careful that delivery orders are only generated for storable products and"
 " if the **Inventory app** is already installed."
-msgstr ""
+msgstr "注意，只有安装**库存应用程序**后，Odoo才会为可储存产品生成发货单。"
 
 #: ../../sales/send_quotations/optional_products.rst:3
 msgid "Add optional products"
-msgstr ""
+msgstr "添加可选产品"
 
 #: ../../sales/send_quotations/optional_products.rst:5
 msgid ""
@@ -2366,23 +2396,24 @@ msgid ""
 "he has the choice to order an automatic opening trunk and massaging seats, "
 "or not to order such high-quality products and simply buy his car."
 msgstr ""
+"使用可选产品是在核心产品之外交叉销售其他产品的营销策略。其目的是向客户提供有用且相关的产品。例如，如果客户想要买辆车，他可以选择配置自动开启的后备箱和按摩座椅，但也可选择不配置这些高档产品，而仅仅只是买车。"
 
 #: ../../sales/send_quotations/optional_products.rst:11
 msgid "Add optional products to your quotations"
-msgstr ""
+msgstr "在报价中添加可选产品"
 
 #: ../../sales/send_quotations/optional_products.rst:13
 msgid ""
 "With Odoo Sales, it is possible to add or modify optional products directly "
 "on quotations (under the **Optional Products** tab, as you can see below)."
-msgstr ""
+msgstr "通过Odoo销售应用程序，你可直接在报价中（如下所示，在**可选产品**选项卡下）添加或修改可选产品。"
 
 #: ../../sales/send_quotations/optional_products.rst:22
 msgid ""
 "By clicking on the **Customer Preview** button, you will be able to see what"
 " your customers will have as possibilities after opening a quotation from "
 "their received email."
-msgstr ""
+msgstr "点击**客户预览**按钮，你可查看客户从收件箱中打开报价后看到的内容。"
 
 #: ../../sales/send_quotations/optional_products.rst:30
 msgid ""
@@ -2392,34 +2423,35 @@ msgid ""
 "additional items will automatically fill in the quotation managed by the "
 "salesman."
 msgstr ""
+"在实际使用时，客户通过关联购物车可向订单添加不同的可选产品，其页面布局非常简单易用。此外，如客户选择所有建议的可选产品，这些额外项目将自动填入销售人员管理的报价中。"
 
 #: ../../sales/send_quotations/optional_products.rst:40
 msgid ""
 "Like this, salespeople will see each movement made by the customer and "
 "tracking the order will be all the better."
-msgstr ""
+msgstr "因此，销售人员可看到客户的每一步举动，更方便追踪整个订单。"
 
 #: ../../sales/send_quotations/optional_products.rst:49
 msgid "Add optional products to your quotation templates"
-msgstr ""
+msgstr "向报价模板添加可选产品"
 
 #: ../../sales/send_quotations/optional_products.rst:51
 msgid ""
 "Be sure to check out our documentation about :doc:`quote_template` to "
 "understand how you can enable, create, design and manage your own quotation "
 "templates before reading this part."
-msgstr ""
+msgstr "在阅读本部分之前，请务必查看我们的文档:doc:`quote_template`，了解如何启用、创建、设计和管理你的报价模板。"
 
 #: ../../sales/send_quotations/optional_products.rst:54
 msgid ""
 "For quotation templates, you also have an **Optional Products** tab where "
 "you can add related products or services."
-msgstr ""
+msgstr "在报价模板中也有**可选产品**选项卡，你可在此添加相关产品或服务。"
 
 #: ../../sales/send_quotations/optional_products.rst:62
 msgid ""
 "With Odoo Sales, it is now very easy to understand your customer's needs."
-msgstr ""
+msgstr "通过Odoo销售应用程序，你可方便地了解客户需求。"
 
 #: ../../sales/send_quotations/quote_template.rst:3
 msgid "Use quotation templates"
@@ -2430,20 +2462,20 @@ msgid ""
 "By creating custom quotation templates, you will save a lot of time. Indeed,"
 " with the use of templates, you will be able to send complete quotations at "
 "a fast pace."
-msgstr ""
+msgstr "创建自定义报价模板可节约大量时间。实际上，通过模板，你可更快地发送完整报价。"
 
 #: ../../sales/send_quotations/quote_template.rst:11
 msgid ""
 "To enable this feature, go to :menuselection:`Sales --> Configuration --> "
 "Settings` and activate **Quotation Templates**."
-msgstr ""
+msgstr "如要启用此功能，前往:menuselection:`销售 --> 配置 --> 设置`并启用**报价模板**。"
 
 #: ../../sales/send_quotations/quote_template.rst:19
 msgid ""
 "For even more convenience, it is also recommended to add the **Quotation "
 "Builder** feature which will help you design your quotation templates very "
 "easily. This option will automatically install the Odoo Website App."
-msgstr ""
+msgstr "更方便的是，我们还建议你添加**报价创建器**功能，它将帮助你轻松设计报价模板。该选项将自动安装Odoo网站应用程序。"
 
 #: ../../sales/send_quotations/quote_template.rst:29
 msgid "Create your first template"
@@ -2452,24 +2484,24 @@ msgstr "创建第一个模板"
 #: ../../sales/send_quotations/quote_template.rst:31
 msgid ""
 "Quotation templates are under :menuselection:`Sales --> Configuration`."
-msgstr ""
+msgstr "报价模板在:menuselection:`销售 --> 配置`下。"
 
 #: ../../sales/send_quotations/quote_template.rst:33
 msgid ""
 "You can create a new template or edit an existing one. Once named, you will "
 "be able to select products and quantities as well as the expiration time of "
 "the quotation."
-msgstr ""
+msgstr "你可创建新模板或编辑现有模板。命名后，你可选择产品和数据以及报价的有效期。"
 
 #: ../../sales/send_quotations/quote_template.rst:42
 msgid ""
 "On each template, you can also specify discounts if the option is activated "
 "in the **Sales** settings."
-msgstr ""
+msgstr "在每个模板上，如在**销售**设置中启用折扣选项，你还可指定折扣。"
 
 #: ../../sales/send_quotations/quote_template.rst:46
 msgid "Design your template"
-msgstr ""
+msgstr "设计模板"
 
 #: ../../sales/send_quotations/quote_template.rst:48
 msgid ""
@@ -2479,13 +2511,14 @@ msgid ""
 "company, your services and your products. To do so, you can click on "
 "**Edit** and you will be brought to the quotation builder."
 msgstr ""
+"你可设计模板并编辑客户界面，以管理客户在接受和支付报价之前看到的内容。例如，你可以介绍你的公司、服务和产品。为此，你可点击**编辑**，然后将转向报价创建器。"
 
 #: ../../sales/send_quotations/quote_template.rst:58
 msgid ""
 "You can easily edit the content of your template by dragging & dropping "
 "different building blocks to organize your quotation. For example, you can "
 "add a content block to describe your products."
-msgstr ""
+msgstr "你可拖放不同的创建块，轻松编辑模板内容，组织报价。例如，你可添加一个介绍产品的内容块。"
 
 #: ../../sales/send_quotations/quote_template.rst:67
 msgid "Use a quotation template"
@@ -2493,13 +2526,13 @@ msgstr "使用报价单模板"
 
 #: ../../sales/send_quotations/quote_template.rst:69
 msgid "When creating a quotation, you can choose a specific template."
-msgstr ""
+msgstr "在创建报价时，你可选择特定模板。"
 
 #: ../../sales/send_quotations/quote_template.rst:77
 msgid ""
 "You can select any template of your choice and suggest it as the default "
 "template in the **Sales** settings."
-msgstr ""
+msgstr "在**销售**设置中，你可选择任意模板并将其设为默认模板。"
 
 #: ../../sales/send_quotations/quote_template.rst:81
 msgid "Confirm the quotation"
@@ -2510,21 +2543,21 @@ msgid ""
 "Templates facilitate the confirmation process by allowing customers to sign "
 "electronically or to pay online. You can activate these two options directly"
 " in the quotation template itself."
-msgstr ""
+msgstr "模板可允许客户填写电子签名并在线付款，加速确认流程。你可在报价模板中直接启用这两个选项。"
 
 #: ../../sales/send_quotations/quote_template.rst:92
 msgid ""
 "Every quotation will now have this setting. Of course you can always change "
 "it and make it specific for each quotation."
-msgstr ""
+msgstr "现在，每个报价都有了这项设置。当然，你可随时更改并将它仅限于特定报价。"
 
 #: ../../sales/send_quotations/quote_template.rst:96
 msgid ":doc:`get_signature_to_validate`"
-msgstr ""
+msgstr ":doc:`get_signature_to_validate`"
 
 #: ../../sales/send_quotations/quote_template.rst:97
 msgid ":doc:`get_paid_to_validate`"
-msgstr ""
+msgstr ":doc:`get_paid_to_validate`"
 
 #: ../../sales/send_quotations/terms_and_conditions.rst:3
 msgid "Add terms & conditions on orders"
@@ -2553,7 +2586,7 @@ msgstr "设置默认条款和条件"
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Settings` and "
 "activate *Default Terms & Conditions*."
-msgstr ""
+msgstr "前往:menuselection:`会计 --> 配置 --> 设置`并启用*默认条款和条件*。"
 
 #: ../../sales/send_quotations/terms_and_conditions.rst:23
 msgid ""
