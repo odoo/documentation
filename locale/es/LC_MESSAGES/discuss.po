@@ -9,6 +9,8 @@
 # Pablo Rojas <rojaspablo88@gmail.com>, 2018
 # Fairuoz Hussein Naranjo <l92hunaf@gmail.com>, 2018
 # Vivian Montana <vmo@odoo.com>, 2019
+# Alonso Muñoz <Alonso.munoz.91@outlook.com>, 2020
+# Althay Ramallo Fuentes <arf@odoo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -17,7 +19,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:50+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: Vivian Montana <vmo@odoo.com>, 2019\n"
+"Last-Translator: Althay Ramallo Fuentes <arf@odoo.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -51,12 +53,19 @@ msgid ""
 "still use your own email servers if you want to manage your email server's "
 "reputation yourself."
 msgstr ""
+"Si nadie en tu compañía esta acostumbrado a administrar servidores de "
+"correo, te recomendamos fuertemente optes por las soluciones de alojamiento "
+"de Odoo. Su sistema de correo funciona instantáneamente y es monitoreada por"
+" profesionales. Sin embargo aun puedes utilizar tu propio servidor de correo"
+" si quieres administrar su reputación tu mismo."
 
 #: ../../discuss/email_servers.rst:15
 msgid ""
 "You will find here below some useful information on how to integrate your "
 "own email solution with Odoo."
 msgstr ""
+"Abajo encontraras información útil en como integrar tu propia solución de "
+"correo con Odoo."
 
 #: ../../discuss/email_servers.rst:18
 msgid ""
@@ -78,6 +87,11 @@ msgid ""
 "create one and reference the SMTP data of your email server. Once all the "
 "information has been filled out, click on *Test Connection*."
 msgstr ""
+"Como administrador de sistema , ve a :menuselection:`Settings --> Ajustes "
+"Generales` y marca *Servidor externo de correo*. Después, has clic en "
+"*Servidor de correo saliente* para crear uno e ingresa la información SMTP "
+"de tu servidor de correo. Una vez que toda la información sea llenada has "
+"clic en \"Probar conexión\"."
 
 #: ../../discuss/email_servers.rst:31
 msgid "Here is a typical configuration for a G Suite server."
@@ -85,7 +99,7 @@ msgstr "Esta es una configuración típica del servidor G Suite."
 
 #: ../../discuss/email_servers.rst:36
 msgid "Then set your email domain name in the General Settings."
-msgstr ""
+msgstr "Después establece tu nombre de dominio en Ajustes Generales."
 
 #: ../../discuss/email_servers.rst:39
 msgid "Can I use an Office 365 server"
@@ -96,6 +110,8 @@ msgid ""
 "You can use an Office 365 server if you run Odoo on-premise. Office 365 SMTP"
 " relays are not compatible with Odoo Online."
 msgstr ""
+"Puedes utilizar un servidor Office 365 si usas Odoo Local. Los repetidores "
+"SMTP de Office 365 no son compatibles con Odoo en linea."
 
 #: ../../discuss/email_servers.rst:43
 msgid ""
@@ -104,6 +120,10 @@ msgid ""
 "email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to configure"
 " a SMTP relay for your Odoo's IP address."
 msgstr ""
+"Favor de acudir a la documentación de Microsoft,<https://support.office.com"
+"/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__  para "
+"configurar un repetidor SMTP para tu dirección IP de Odoo."
 
 #: ../../discuss/email_servers.rst:47
 msgid "How to use a G Suite server"
@@ -116,10 +136,14 @@ msgid ""
 "`Google documentation "
 "<https://support.google.com/a/answer/2956491?hl=en>`__."
 msgstr ""
+"Puedes utilizar un servidor G Suite para cualquier tipo de alojamiento de "
+"Odoo. Para hacerlo necesitas configurar un servicio de repetidor SMTP. Los "
+"pasos para configurarlo estas explicados en la documentación de Google, "
+"<https://support.google.com/a/answer/2956491?hl=en>`__."
 
 #: ../../discuss/email_servers.rst:55
 msgid "Be SPF-compliant"
-msgstr ""
+msgstr "Cumplir con SPF"
 
 #: ../../discuss/email_servers.rst:56
 msgid ""
@@ -127,12 +151,18 @@ msgid ""
 " of your outgoing emails, don't forget to authorize Odoo as a sending host "
 "in your domain name settings. Here is the configuration for Odoo Online:"
 msgstr ""
+"En caso de que uses SPF (Sender Policy Framework) para incrementar la "
+"entrega de tus correos salientes, no olvides autorizar a Odoo como un emisor"
+" en la configuración de tu  nombre de dominio. Aqui esta la configuracion "
+"para Odoo Online:"
 
 #: ../../discuss/email_servers.rst:60
 msgid ""
 "If no TXT record is set for SPF, create one with following definition: "
 "v=spf1 include:_spf.odoo.com ~all"
 msgstr ""
+"Si ningún registro TXT es establecido para el SPF , crea uno con la "
+"siguiente definición v=spf1 include:_spf.odoo.com ~all"
 
 #: ../../discuss/email_servers.rst:62
 msgid ""
@@ -140,18 +170,26 @@ msgid ""
 " for a domain name that sends emails via Odoo Online and via G Suite it "
 "could be: v=spf1 include:_spf.odoo.com include:_spf.google.com ~all"
 msgstr ""
+"En caso de que un registro TXT de SPF ya este en uso, agregar "
+"\"include:_spf.odoo.com\". e.g. para un nombre de dominio que envia correos "
+"vía Odoo Online y vía G Suite podría ser: v=spf1 include:_spf.odoo.com "
+"include:_spf.google.com ~all"
 
 #: ../../discuss/email_servers.rst:66
 msgid ""
 "Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to "
 "create or modify TXT records in your own domain registrar."
 msgstr ""
+"Encuentra aquí <https://www.mail-tester.com/spf/>`__  el procedimiento "
+"exacto para crear o modificar un registro TXT en tu propio dominio."
 
 #: ../../discuss/email_servers.rst:69
 msgid ""
 "Your new SPF record can take up to 48 hours to go into effect, but this "
 "usually happens more quickly."
 msgstr ""
+"Tu nuevo registro SPF puede tomar hasta 84 horas para entrar en efecto, pero"
+" usualmente pasa más rápido. "
 
 #: ../../discuss/email_servers.rst:72
 msgid ""
@@ -159,6 +197,10 @@ msgid ""
 "delivery and spam classification. Instead, we recommend using only one SPF "
 "record by modifying it to authorize Odoo."
 msgstr ""
+"Agregar mas de un registro SPF en tu dominio puede causar problemas en la "
+"entrega de tus correos o en la clasificación del spam. En lugar de eso "
+"recomendamos que se utiliza solo un registro modificandolo para autorizar "
+"Odoo."
 
 #: ../../discuss/email_servers.rst:77
 msgid "Allow DKIM"
@@ -181,6 +223,8 @@ msgstr "¿Cómo administrar los mensajes de correo entrantes?"
 #: ../../discuss/email_servers.rst:88
 msgid "Odoo relies on generic email aliases to fetch incoming messages."
 msgstr ""
+"Odoo se basa en pseudónimos de correo electrónico genéricos para recuperar "
+"los mensajes entrantes."
 
 #: ../../discuss/email_servers.rst:90
 msgid ""
@@ -292,7 +336,7 @@ msgstr ""
 
 #: ../../discuss/mail_twitter.rst:3
 msgid "How to follow Twitter feed from Odoo"
-msgstr ""
+msgstr "Cómo seguir el feed de Twitter desde Odoo"
 
 #: ../../discuss/mail_twitter.rst:8
 msgid ""
@@ -300,10 +344,14 @@ msgid ""
 "Odoo Discuss channels of your choice. The tweets are retrieved periodically "
 "from Twitter. An authenticated user can retweet the messages."
 msgstr ""
+"Puede seguir hashtags específicos en Twitter y ver los tweets dentro de los "
+"canales de discusión de Odoo de su elección. Los tweets se recuperan "
+"periódicamente de Twitter. Un usuario autenticado puede retuitear los "
+"mensajes."
 
 #: ../../discuss/mail_twitter.rst:13
 msgid "Setting up the App on Twitter's side"
-msgstr ""
+msgstr "Configurar la aplicación desde Twitter"
 
 #: ../../discuss/mail_twitter.rst:15
 msgid ""
@@ -336,10 +384,12 @@ msgid ""
 "Do not forget to accept the terms **Developer agreement** of use and click "
 "on **Create your Twitter application** at the bottom of the page."
 msgstr ""
+"No olvide aceptar los términos **Acuerdo de desarrollador* de uso y haga "
+"clic en **Crea tu aplicación de Twitter** al final de la página."
 
 #: ../../discuss/mail_twitter.rst:33
 msgid "Getting the API key and secret"
-msgstr ""
+msgstr "Obtener la clave secreta de la API"
 
 #: ../../discuss/mail_twitter.rst:35
 msgid ""
@@ -381,7 +431,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:15
 msgid "Direct messaging a user"
-msgstr ""
+msgstr "Enviar mensajes directamente a un usuario"
 
 #: ../../discuss/mentions.rst:17
 msgid ""
@@ -405,7 +455,7 @@ msgstr ""
 
 #: ../../discuss/mentions.rst:28
 msgid "Desktop notifications from Discuss"
-msgstr ""
+msgstr "Notificaciones de escritorio desde Discusión"
 
 #: ../../discuss/mentions.rst:30
 msgid ""
@@ -422,7 +472,7 @@ msgstr ""
 
 #: ../../discuss/monitoring.rst:3
 msgid "How to be responsive at work thanks to my Odoo inbox"
-msgstr ""
+msgstr "Cómo responder en el trabajo gracias a mi bandeja de entrada de Odoo"
 
 #: ../../discuss/monitoring.rst:5
 msgid ""
@@ -477,12 +527,17 @@ msgid ""
 "reminded of what needs to be done and schedule the next activities to "
 "undertake."
 msgstr ""
+"La planificación de actividades es la manera perfecta de mantenerse al día "
+"con su trabajo. Recuerde lo que debe hacer y programe sus próximas "
+"actividades."
 
 #: ../../discuss/plan_activities.rst:9
 msgid ""
 "Your activities are available wherever you are in Odoo. It is easy to manage"
 " your priorities."
 msgstr ""
+"Tus actividades están disponibles en cualquier lugar de Odoo. Es fácil "
+"administrar sus prioridades."
 
 #: ../../discuss/plan_activities.rst:15
 msgid ""
