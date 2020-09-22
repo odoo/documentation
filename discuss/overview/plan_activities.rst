@@ -39,7 +39,7 @@ you can set new ones going to :menuselection:`Settings --> Activity types`.
    :alt: View of the settings page emphasizing the menu activity types for Odoo Discuss
 
 .. tip::
-   If you need to create an activity type with n available calendar available, make sure to create
+   If you need to create an activity type with an available calendar, make sure to create
    it with an *Action to Perform* set as *Meeting*.
 
 Recommend next activities
