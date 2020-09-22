@@ -38,7 +38,7 @@ When getting contact information make sure to be aware of the latest EU regulati
 
 You can decide to filter the leads you are getting depending on the size (number of employees) of the companies.
 You can pick the countries your leads are coming from. It is possible to pick multiple countries.
-You can pick the industries your leads are coming from. It is possible to pick multiple countries.
+You can pick the industries your leads are coming from. It is possible to pick multiple industries.
 
 You can choose the salesperson and the Salesteam the lead will be assigned to. 
 You can also add tags to track your generated leads.
@@ -52,7 +52,7 @@ This is an In-App Purchase feature, each generated lead will cost you one credit
 If you choose to get contact information each contact will also cost us one additional credit.
 Here is the pricing for this `feature <https://iap.odoo.com/iap/in-app-services/167?>`__, 
 To buy credits you can either go to :menuselection:`CRM --> Configuration --> Settings --> Buy
-Credits`; or go to :menuselection: `Settings --> In-App Purchases --> View my Services`.
+Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my Services`.
 
 .. image:: media/LM6.png
    :align: center
