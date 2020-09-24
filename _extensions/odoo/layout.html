@@ -1,13 +1,4 @@
 {% extends "basic/layout.html" %}
-{% set html5_doctype = True %}
-
-{%- block scripts %}
- {{ super() }}
-<script type="text/javascript" src="{{ pathto('_static/jquery.min.js', 1) }}"></script>
-<script type="text/javascript" src="{{ pathto('_static/bootstrap.js', 1) }}"></script>
-<script type="text/javascript" src="{{ pathto('_static/doc.js', 1) }}"></script>
-<script type="text/javascript" src="{{ pathto('_static/jquery.noconflict.js', 1) }}"></script>
-{%- endblock %}
 
 {% set classes = [] %}
 {% if pagename == master_doc %}
@@ -18,17 +9,15 @@
   {% set classes = classes + ['has_code_col'] %}
 {% endif %}
 
-{% if 'classes' in meta %}
-  {% set classes = classes + meta['classes'].split() %}
-{% endif %}
-
-{%- block linktags -%}
-  {% for code, url in language_codes %}
-    <link rel="alternate" hreflang="{{ code }}" href="{{ url }}" />
-  {%- endfor %}
-    <link rel="canonical" href="{{ canonical }}" />
-  {{ super() }}
+{%- block doctype -%}
+  <!doctype html>
 {%- endblock -%}
+
+{%- block linktags %}
+    <link href="https://fonts.googleapis.com/css?family=Work+Sans:500,600" rel="stylesheet">
+    <link rel="canonical" href="{{ canonical }}" />
+    {{- super() }}
+{%- endblock %}
 
 {%- block sidebar1 -%}{%- endblock -%}
 {%- block sidebar2 -%}{%- endblock -%}
@@ -44,7 +33,6 @@
     })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
     ga('create', '{{ google_analytics_key }}', 'auto');
-    ga('set', 'anonymizeIp', true);
     ga('send','pageview');
     </script>
   {%- endif -%}
@@ -77,8 +65,8 @@
                     <li><a href="https://www.odoo.com/page/e-commerce">eCommerce</a></li>
                     <li><a href="https://www.odoo.com/page/blog-engine">Blogs</a></li>
                     <li><a href="https://www.odoo.com/page/community-builder">Forums</a></li>
-                    <li><a href="https://www.odoo.com/page/learning-management-system">eLearning</a></li>
-                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
+                    <li><a href="https://www.odoo.com/page/slides">Slides</a></li>
+                    <li><a href="https://adspike.odoo.com">SEA</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3 o_sale_apps">
@@ -95,12 +83,10 @@
                       <ul>
                         <li><a href="https://www.odoo.com/page/point-of-sale">Shops</a></li>
                         <li><a href="https://www.odoo.com/page/pos-restaurant">Restaurants</a></li>
-                        <li><a href="https://www.odoo.com/page/point-of-sale-hardware">Hardware</a></li>
                       </ul>
                     </li>
                     <li><a href="https://www.odoo.com/page/subscriptions">Subscriptions</a></li>
                     <li><a href="https://www.odoo.com/page/sign">Sign</a></li>
-                    <li><a href="https://www.odoo.com/page/rental">Rental</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3 o_operation_apps">
@@ -109,17 +95,17 @@
                     <div>It's all about efficiency</div>
                   </div>
                   <ul>
-                    <li><a href="https://www.odoo.com/page/accounting/">Accounting</a></li>
-                    <li><a href="https://www.odoo.com/page/project-management/">Project</a></li>
+                    <li><a href="https://www.odoo.com/page/accounting">Accounting</a></li>
+                    <li><a href="https://www.odoo.com/page/project-management">Project</a></li>
                     <li class="dropdown">
                       <a href="#0" class="dropdown-toggle">Human Resources</a>
                       <ul>
-                        <li><a href="https://www.odoo.com/page/referral">Referral</a></li>
+                        <li><a href="https://www.odoo.com/page/recruitment">Recruitment</a></li>
                         <li><a href="https://www.odoo.com/page/employees">Employees</a></li>
                         <li><a href="https://www.odoo.com/page/expenses">Expenses</a></li>
                         <li><a href="https://www.odoo.com/page/appraisal">Appraisal</a></li>
                         <li><a href="https://www.odoo.com/page/fleet">Fleet</a></li>
-                        <li><a href="https://www.odoo.com/page/leaves">Time Off</a></li>
+                        <li><a href="https://www.odoo.com/page/leaves">Leaves</a></li>
                       </ul>
                     </li>
                     <li><a href="https://www.odoo.com/page/warehouse">Inventory</a></li>
@@ -133,8 +119,6 @@
                         <li><a href="https://www.odoo.com/page/quality">Quality</a></li>
                       </ul>
                     </li>
-                    <li><a href="https://www.odoo.com/page/helpdesk">Helpdesk</a></li>
-                    <li><a href="https://www.odoo.com/page/field-service-management">Field Service</a></li>
                   </ul>
                 </div>
                 <div class="col-sm-3 o_productivity_apps">
@@ -149,23 +133,15 @@
                         <li><a href="https://www.odoo.com/page/discuss">Discuss</a></li>
                         <li><a href="https://www.odoo.com/page/discuss-groups">Mailing Lists</a></li>
                         <li><a href="https://www.odoo.com/page/notes">Notes</a></li>
+                        <li><a href="#">Help desk</a></li>
+                        <li><a href="#">Appointment</a></li>
                       </ul>
                     </li>
                     <li><a href="https://www.odoo.com/page/timesheet">Timesheet</a></li>
+                    <li><a href="https://www.odoo.com/page/email-marketing">Email Marketing</a></li>
                     <li><a href="https://www.odoo.com/page/events">Events</a></li>
-                    <li class="dropdown">
-                      <a href="#0" class="dropdown-toggle">Marketing</a>
-                      <ul>
-                        <li><a href="https://www.odoo.com/page/marketing-automation">Automation</a></li>
-                        <li><a href="https://www.odoo.com/page/email-marketing">Email</a></li>
-                        <li><a href="https://www.odoo.com/page/social-marketing">Social</a></li>
-                        <li><a href="https://www.odoo.com/page/sms-marketing">SMS</a></li>
-                      </ul>
-                    </li>
                     <li><a href="https://www.odoo.com/page/survey">Survey</a></li>
-                    <li><a href="https://www.odoo.com/page/approval-workflow">Approvals</a></li>
-                    <li><a href="https://www.odoo.com/page/appointments">Appointments</a></li>
-                    <li><a href="https://www.odoo.com/page/documents">Documents</a></li>
+                    <li><a href="https://www.odoo.com/page/live-chat">Live Chat</a></li>
                   </ul>
                 </div>
               </div>
@@ -198,6 +174,16 @@
             <a href="http://www.odoo.com/trial" class="btn btn-primary">Start Now</a>
           </div>
 
+          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
+            {% if pagename != master_doc %}
+              <li class="divider"></li>
+            {% endif%}
+
+            {% block switchers_desktop %}
+            {% include "switchers_list.html" %}
+            {% endblock %}
+          </ul>
+
           <ul class="nav navbar-nav navbar-right">
             {% if languages or versions %}
               <li class="divider"></li>
@@ -210,16 +196,6 @@
             {% if languages or versions %}
               <li class="divider"></li>
             {% endif %}
-          </ul>
-
-          <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
-            {% if pagename != master_doc %}
-              <li class="divider"></li>
-            {% endif%}
-
-            {% block switchers_desktop %}
-            {% include "switchers_list.html" %}
-            {% endblock %}
           </ul>
         </div>
       </div>
@@ -361,4 +337,3 @@
     </div>
   </footer>
 {%- endblock -%}
-

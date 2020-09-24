@@ -21,6 +21,10 @@ def setup(app):
                      location="odoo extension")
         app.config.html_translator_class = 'odoo.translator.BootstrapTranslator'
 
+    add_js_file = getattr(app, 'add_js_file', None) or app.add_javascript
+    for f in ['jquery.min.js', 'bootstrap.js', 'doc.js', 'jquery.noconflict.js']:
+        add_js_file(f)
+
     switcher.setup(app)
     app.add_config_value('odoo_cover_default', None, 'env')
     app.add_config_value('odoo_cover_external', {}, 'env')
@@ -28,9 +32,9 @@ def setup(app):
     app.connect('html-page-context', update_meta)
 
 def update_meta(app, pagename, templatename, context, doctree):
-    if not context.get('meta'):  # context['meta'] can be None
-        context['meta'] = {}
-    meta = context.setdefault('meta', {})  # we want {} by default
+    meta = context.get('meta')
+    if meta is None:
+        meta = context['meta'] = {}
     meta.setdefault('banner', app.config.odoo_cover_default)
 
 def navbarify(node, navbar=None):
@@ -107,13 +111,7 @@ if toctree:
     def resolve(old_resolve, tree, docname, *args, **kwargs):
         if docname == tree.env.config.master_doc:
             return resolve_content_toctree(tree.env, docname, *args, **kwargs)
-        toc = old_resolve(tree, docname, *args, **kwargs)
-        if toc is None:
-            return None
-
-        navbarify(toc[0], navbar=kwargs.pop('navbar', None))
-        return toc
-
+        return old_resolve(tree, docname, *args, **kwargs)
 
 @monkey(sphinx.environment.BuildEnvironment)
 def resolve_toctree(old_resolve, self, docname, *args, **kwargs):
