@@ -1,4 +1,5 @@
 :banner: banners/index.jpg
+:orphan:
 
 ============================
 Odoo Developer Documentation
