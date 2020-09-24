@@ -111,7 +111,13 @@ if toctree:
     def resolve(old_resolve, tree, docname, *args, **kwargs):
         if docname == tree.env.config.master_doc:
             return resolve_content_toctree(tree.env, docname, *args, **kwargs)
-        return old_resolve(tree, docname, *args, **kwargs)
+        toc = old_resolve(tree, docname, *args, **kwargs)
+        if toc is None:
+            return None
+
+        navbarify(toc[0], navbar=kwargs.pop('navbar', None))
+        return toc
+
 
 @monkey(sphinx.environment.BuildEnvironment)
 def resolve_toctree(old_resolve, self, docname, *args, **kwargs):
