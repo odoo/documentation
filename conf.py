@@ -295,6 +295,7 @@ def setup(app):
     app.connect('html-page-context', canonicalize)
     app.add_config_value('canonical_root', None, 'env')
     app.add_config_value('canonical_branch', 'master', 'env')
+    app.add_config_value('banners_doc', ['user/index'], 'env')
 
     app.connect('html-page-context', analytics)
     app.add_config_value('google_analytics_key', '', 'env')

@@ -109,7 +109,7 @@ if toctree:
     # than functions on the BuildEnv & al
     @monkey(toctree.TocTree)
     def resolve(old_resolve, tree, docname, *args, **kwargs):
-        if docname == tree.env.config.master_doc:
+        if docname == tree.env.config.master_doc or docname in tree.env.config.banners_doc:
             return resolve_content_toctree(tree.env, docname, *args, **kwargs)
         toc = old_resolve(tree, docname, *args, **kwargs)
         if toc is None:
@@ -124,6 +124,8 @@ def resolve_toctree(old_resolve, self, docname, *args, **kwargs):
     """ If navbar, bootstrapify TOC to yield a navbar
 
     """
+    # VFE NOTE not called since sphinx 1.6
+    # bump the version and remove ?
     navbar = kwargs.pop('navbar', None)
     if docname == self.config.master_doc and not navbar:
         return resolve_content_toctree(self, docname, *args, **kwargs)

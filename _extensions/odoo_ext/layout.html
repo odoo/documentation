@@ -1,8 +1,11 @@
 {% extends "basic/layout.html" %}
 {% set html5_doctype = True %}
 
+{# =====  VARIABLES  ====== #}
+{% set banners_doc = 'user/index' %}
+
 {% set classes = [] %}
-{% if pagename == master_doc %}
+{% if pagename == master_doc or pagename == banners_doc %}
   {% set classes = classes + ['index'] %}
 {% endif %}
 
@@ -179,7 +182,7 @@
           </div>
 
           <ul class="navbar-nav navbar-right nav o_sub_nav_actions">
-            {% if pagename != master_doc %}
+            {% if pagename != master_doc and pagename != banners_doc %}
               <li class="divider"></li>
             {% endif%}
 
@@ -225,7 +228,7 @@
     {% set container = 'container' %}
     {% endif %}
       <main class="container {{ ' '.join(classes) }}">
-        {% if pagename != master_doc %}
+        {% if pagename != master_doc and pagename != banners_doc %}
         <div class="o_content row">
           {% if 'has-toc' not in meta and not (pagename in toc) %}
           <aside>
@@ -240,9 +243,10 @@
           </aside>
           {% endif %}
           <article class="doc-body {% if 'has-toc' in meta %}doc-toc{% endif %}{% if pagename in toc%}index-category{% endif %}">
-            {% endif %}
-            {% block body %} {% endblock %}
-          {% if pagename != master_doc %}</article>
+        {% endif %}
+          {% block body %} {% endblock %}
+        {% if pagename != master_doc and pagename != banners_doc %}
+          </article>
         </div>
         {% endif %}
         <div id="mask"></div>
