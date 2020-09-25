@@ -41,9 +41,11 @@ authority** in terms of decision making.
    he can pass on this knowledge to his collaborators. In order for
    this approach to be successful, it is necessary that the SPoC is
    also involved in its own rise in skills through self-learning via
-   the :doc:`Odoo documentation <../index>`,
+   the :doc:`Odoo documentation <../../user/index>`,
    `The elearning platform <https://odoo.com/learn>`_
    and the testing of functionalities.
+
+.. VFE TODO replace those :doc: reference by true :ref: without ../.. in paths.
 
 Project Scope
 =============

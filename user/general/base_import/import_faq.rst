@@ -174,10 +174,10 @@ with columns like "Field/External ID". The following two CSV files give you an e
 and their Categories.
 
 :download:`CSV file for categories
-<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`.
+<../../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`.
 
 :download:`CSV file for Products
-<../../_static/example_files/External_id_3rd_party_application_products.csv>`.
+<../../../_static/example_files/External_id_3rd_party_application_products.csv>`.
 
 What can I do if I have multiple matches for a field?
 -----------------------------------------------------

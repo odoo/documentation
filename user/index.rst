@@ -2,14 +2,12 @@
 Odoo User Documentation
 =======================
 
+.. VFE FIXME what is the logic behind index-tree ?
+
 .. rst-class:: index-tree
 
 .. toctree::
     :titlesonly:
 
-    user/index
-    developer/index
-    contributing
-
-.. todo:: legal
-.. todo:: Odoo sh ?
+    applications
+    practical
