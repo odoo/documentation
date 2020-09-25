@@ -1,30 +1,49 @@
-==============================
-How to solve issue with emails
-==============================
+=================================================
+Troubleshooting issues related to outgoing emails
+=================================================
 
-Here is a list of non exhaustive reason that can explain why your emails have not been sent:
+*"Why wasn't my email sent?"*
+
+Here is a list of the most common reasons that can explain it.
+
 
 You reached your daily limit
 ============================
 
-Odoo is limitating the number of emails that can be sent daily, by default:
+.. warning:
+    Applies to Odoo Online and Odoo.sh platforms only.
 
-- 200 for the SaaS database and our Cloud Platform Odoo.sh,
-- 50 for the trials. 
+Odoo caps the number of emails that can be sent every day, for security and
+stability reasons.
 
-As a solution, you can either ask the support to increase your daily limit (depending on few parameters it will or not be accepted).
-Or use your own outgoing email server which has less restrictions and will be more configurable according to your needs. 
+Here are the default limits for new databases:
+
+- 200 emails/day for Odoo Online and Odoo.sh databases,
+- 50 emails/day for Odoo Online "2 weeks free trial" database.
+
+// TODO RIM One app free?
+// TODO RIM pas clair
+
+In case you hit the limit, you can:
 
 
-Consider reading our documentation regarding the configuration of the outgoing email servers:
-    * :doc:`../../email_communication/advanced/email_servers`
+// TODO RIM lien vers le support form
+- either ask our support team to increase your daily limit (we will analyze your
+  situation: how many users in your database, which apps, how much traffic...)
 
-It's interesting to note that the counter is the same for all the database and it can increase very quickly.
-For example, if a customer responds on an invoice to which 10 people are followers (internal users, other employees of the same customer, etc.), 
-a copy of his message is automatically redirected to 10 people, generating 10 outgoing emails. 
+- either use your own outgoing email server: you can do (nearly) whatever you want, it's your server!
+  In that case, here is our documentation about how to configure it:
+      * :doc:`../../email_communication/advanced/email_servers`
 
-If you wish to receive your emails in Odoo, there is a setting that can be set on your profile:
-go in your profile (by clicking on your user on the top right of the screen) and click on preferences and choose to handle notifications within Odoo and not by emails.
+
+**Beware: the counter is global to your database and can rise quite fast!**
+For example: if a customer replies to an invoice followed by 10 people (internal users, other contacts for the same customer, etc.),
+a copy of their message is automatically sent to these 10 people,
+generating 10 outgoing emails.
+
+You can mitigate this by **receiving your notifications in Odoo Discuss**.
+Go to "My Profile" (click on your user on the top right corner of the screen),
+then pick the "Preferences" tab and choose "Handle notifications within Odoo" (not by email).
 
 
 .. image:: media/user_pref_handle_notifications.png
@@ -35,7 +54,7 @@ go in your profile (by clicking on your user on the top right of the screen) and
 The envelop is red in the chatter
 =================================
 
-As a first step of investigation it might be interesting to check if you have no SMTP error message. 
+As a first step of investigation it might be interesting to check if you have no SMTP error message.
 To do so, you can go to :menuselection:`Settings --> Technical --> Emails`.
 
 Click on a red email and select the tab `Failure Reason`.
@@ -80,7 +99,7 @@ My email is not going out and there is a red envelop
 It might happen that some emails are not going out properly and Odoo has no power on this.
 For diverses reason, during the transit of the email, an error occurs and a bounce email is sent back to the sender to letting him know that it didn't reach its destination.
 
-In case the email is sent using Odoo, the bounce email should reach the Odoo database and display a red envelop. To be able to investigate, please refer to the subsection `The envelop is red in the chatter` 
+In case the email is sent using Odoo, the bounce email should reach the Odoo database and display a red envelop. To be able to investigate, please refer to the subsection `The envelop is red in the chatter`
 
 For now, Odoo is not always capable of providing the information on the reason it failed.
-The technology of the mails is old and extensible, the different providers implement a personalized policy of the mails. 
+The technology of the mails is old and extensible, the different providers implement a personalized policy of the mails.
