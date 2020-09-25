@@ -143,8 +143,7 @@ html_theme_path = ['_extensions']
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# VFE TODO merge _static folders
-html_static_path = ['_static', 'developer/_static']
+html_static_path = ['_static']
 html_add_permalinks = ''
 
 # Add any extra paths that contain custom files (such as robots.txt or
@@ -244,15 +243,14 @@ latex_documents = [
 
 # The name of an image file (relative to this directory) to place at the top of
 # the title page.
-# VFE TODO _static folder shared by two docs for some generic files ?
-latex_logo = 'user/_static/banners/odoo_logo.png'
+latex_logo = '_static/banners/odoo_logo.png'
 
 # default must be set otherwise ifconfig blows up
 todo_include_todos = False
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'werkzeug': ('http://werkzeug.pocoo.org/docs/', None),
+    'werkzeug': ('http://werkzeug.pocoo.org/docs/', None), # VFE TODO https url for werkzeug
 }
 
 github_user = 'odoo'
