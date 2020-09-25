@@ -31,4 +31,4 @@ See below a template of the columns used.
     :align: center
 
 :download:`Click here to download the template
-<../../../_static/example_files/vendor_pricelists_template.csv>`
+<../../../../_static/example_files/vendor_pricelists_template.csv>`

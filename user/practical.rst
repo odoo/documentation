@@ -13,4 +13,6 @@ Practical Information
    portal/my_odoo_portal
    support
    legal
-   contributing
+
+.. contributing
+   Moved to the main doc page.

@@ -250,7 +250,7 @@ todo_include_todos = False
 
 intersphinx_mapping = {
     'python': ('https://docs.python.org/3/', None),
-    'werkzeug': ('http://werkzeug.pocoo.org/docs/', None), # VFE TODO https url for werkzeug
+    'werkzeug': ('https://werkzeug.palletsprojects.com/en/1.0.x/', None), # VFE TODO https url for werkzeug
 }
 
 github_user = 'odoo'
