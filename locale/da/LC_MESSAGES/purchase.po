@@ -4,22 +4,20 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Jesper Carstensen <info@danodoo.dk>, 2018
-# Ejner Sønniksen <ejner@vkdata.dk>, 2018
-# peso <peer.sommerlund@gmail.com>, 2019
-# Martin Trigaux, 2019
-# Morten Schou <ms@msteknik.dk>, 2019
-# Sanne Kristensen <sanne@vkdata.dk>, 2019
-# lhmflexerp <lhm@flexerp.dk>, 2019
+# peso <peer.sommerlund@gmail.com>, 2020
+# Martin Trigaux, 2020
+# Morten Schou <ms@msteknik.dk>, 2020
+# Sanne Kristensen <sanne@vkdata.dk>, 2020
+# lhmflexerp <lhm@flexerp.dk>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 12.0\n"
+"Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-11-07 15:38+0100\n"
-"PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: lhmflexerp <lhm@flexerp.dk>, 2019\n"
+"POT-Creation-Date: 2020-09-22 16:26+0200\n"
+"PO-Revision-Date: 2020-09-22 14:41+0000\n"
+"Last-Translator: lhmflexerp <lhm@flexerp.dk>, 2020\n"
 "Language-Team: Danish (https://www.transifex.com/odoo/teams/41243/da/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -54,7 +52,7 @@ msgstr ""
 #: ../../purchase/purchases/rfq/3_way_matching.rst:18
 #: ../../purchase/purchases/rfq/analyze.rst:24
 #: ../../purchase/purchases/rfq/approvals.rst:9
-#: ../../purchase/purchases/rfq/bills.rst:31
+#: ../../purchase/purchases/rfq/bills.rst:10
 #: ../../purchase/purchases/rfq/create.rst:13
 #: ../../purchase/purchases/rfq/lock_orders.rst:9
 #: ../../purchase/purchases/rfq/reception.rst:14
@@ -95,8 +93,8 @@ msgstr ""
 
 #: ../../purchase/purchases/master/import.rst:33
 msgid ""
-"`Template download "
-"<https://docs.google.com/spreadsheets/d/1N8c_eejLV_8NhYMGCfZau_oGCnRkUIT9nwdX7n0shhY/edit#gid=964193981>`__"
+":download:`Click here to download the template "
+"<../../../_static/example_files/vendor_pricelists_template.csv>`"
 msgstr ""
 
 #: ../../purchase/purchases/master/suppliers.rst:3
@@ -342,7 +340,7 @@ msgstr ""
 #: ../../purchase/purchases/rfq/3_way_matching.rst:9
 msgid ""
 "To define whether the vendor bill should be paid or not, you can use what we"
-" call *3-way matching*. It refers to the comparaison of the information "
+" call *3-way matching*. It refers to the comparison of the information "
 "appearing on the *Purchase Order*, the *Vendor Bill* and the *Receipt*."
 msgstr ""
 
@@ -546,324 +544,54 @@ msgid "Once approved, the purchase order follows the normal process."
 msgstr ""
 
 #: ../../purchase/purchases/rfq/bills.rst:3
-msgid "Control supplier bills"
-msgstr ""
+msgid "Bill Control"
+msgstr "Fakturakontrol"
 
 #: ../../purchase/purchases/rfq/bills.rst:5
 msgid ""
-"The **Purchase** application allows you to manage your purchase orders, "
-"incoming products, and vendor bills all seamlessly in one place."
+"With Odoo, you can define a setting to help the control of your bills. *Bill"
+" Control* lets you choose if the supplier sends you the bill before or after"
+" you receive the goods."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/bills.rst:8
+#: ../../purchase/purchases/rfq/bills.rst:12
 msgid ""
-"If you want to set up a vendor bill control process, the first thing you "
-"need to do is to have purchase data in Odoo. Knowing what has been purchased"
-" and received is the first step towards understanding your purchase "
-"management processes."
+"For this feature to work, go to :menuselection:`Purchases --> Configuration "
+"--> Settings` and select which way you want to control your bills."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/bills.rst:13
-msgid "Here is the standard work flow in Odoo:"
+#: ../../purchase/purchases/rfq/bills.rst:20
+msgid "Change the control policy"
 msgstr ""
 
-#: ../../purchase/purchases/rfq/bills.rst:15
+#: ../../purchase/purchases/rfq/bills.rst:22
 msgid ""
-"You begin with a **Request for Quotation (RFQ)** to send out to your "
-"vendor(s)."
+"While the setting above will be your default method of bill control, you can"
+" always select which way you want to invoice your product on each product "
+"page under the *Purchase* tab."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/bills.rst:18
+#: ../../purchase/purchases/rfq/bills.rst:26
 msgid ""
-"Once the vendor has accepted the RFQ, confirm the RFQ into a **Purchase "
-"Order (PO)**."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:21
-msgid ""
-"Confirming the PO generates an **Incoming Shipment** if you purchased any "
-"stockable products."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:24
-msgid ""
-"Upon receiving a **Vendor Bill** from your Vendor, validate the bill with "
-"products received in the previous step to ensure accuracy."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:27
-msgid ""
-"This process may be done by three different people within the company, or "
-"only one."
+"You might want to use different settings for different types of products."
 msgstr ""
 
 #: ../../purchase/purchases/rfq/bills.rst:34
-msgid "Installing the Purchase and Inventory applications"
+msgid "Verify your Vendor Bill"
 msgstr ""
 
 #: ../../purchase/purchases/rfq/bills.rst:36
 msgid ""
-"From the **Apps** application, search for the **Purchase** module and "
-"install it. Due to certain dependencies, installing purchase will "
-"automatically install the **Inventory** and **Accounting** applications."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:41
-msgid "Creating products"
+"If you didn’t receive any of your product yet on *Purchase Order* under the "
+"*Shipment* tab,"
 msgstr ""
 
 #: ../../purchase/purchases/rfq/bills.rst:43
 msgid ""
-"Creating products in Odoo is essential for quick and efficient purchasing "
-"within Odoo. Simply navigate to the **Products** submenu under **Purchase**,"
-" and click **Create**."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:50
-msgid ""
-"When creating the product, Pay attention to the **Product Type** field, as "
-"it is important:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:53
-msgid ""
-"Products that are set as **Stockable** or **Consumable** will allow you to "
-"keep track of their inventory levels. These options imply stock management "
-"and will allow for receiving these kinds of products."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:58
-msgid ""
-"Conversely, products that are set as a **Service** or **Digital Product** "
-"will not imply stock management, simply due to the fact that there is no "
-"inventory to manage. You will not be able to receive products under either "
-"of these designations."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:64
-msgid ""
-"It is recommended that you create a **Miscellaneous** product for all "
-"purchases that occur infrequently and do not require inventory valuation or "
-"management. If you create such a product, it is recommend to set the product"
-" type to **Service**."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:70
-msgid "Managing your Vendor Bills"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:73
-msgid "Purchasing products or services"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:75
-msgid ""
-"From the purchase application, you can create a purchase order with as many "
-"products as you need. If the vendor sends you a confirmation or quotation "
-"for an order, you may record the order reference number in the **Vendor "
-"Reference** field. This will enable you to easily match the PO with the the "
-"vendor bill later (as the vendor bill will probably include the Vendor "
-"Reference)"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:85
-msgid ""
-"Validate the purchase order and receive the products from the **Inventory** "
-"application."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:89
-msgid "Receiving Products"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:91
-msgid ""
-"If you purchased any stockable products that you manage the inventory of, "
-"you will need to receive the products from the **Inventory** application "
-"after you confirm a purchase order. From the **Inventory** dashboard, you "
-"should see a button linking you directly to the transfer of products. This "
-"button is outlined in red below:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:100
-msgid ""
-"Navigating this route will take you to a list of all orders awaiting to be "
-"received."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:106
-msgid ""
-"If you have a lot of awaiting orders, apply a filter using the search bar in"
-" the upper right. With this search bar, you may filter based on the "
-"**Vendor** (or **Partner**), the product, or the source document, also known"
-" as the reference of your purchase order. You also have the capability to "
-"group the orders by different criteria under **Group By**. Selecting an item"
-" from this list will open the following screen where you then will receive "
-"the products."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:117
-msgid "Purchasing **Service** products does not trigger a delivery order."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:120
-msgid "Managing Vendor Bills"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:122
-msgid ""
-"When you receive a **Vendor Bill** for a previous purchase, be sure to "
-"record it in the **Purchases** application under the **Control Menu**. You "
-"need to create a new vendor bill even if you already registered a purchase "
-"order."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:130
-msgid ""
-"The first thing you will need to do upon creating a **Vendor Bill** is to "
-"select the appropriate **Vendor** as this will also pull up any associated "
-"accounting or pricelist information. From there, you can choose to specify "
-"any one or multiple purchase orders to populate the vendor bill with. When "
-"you select a purchase order from the list, Odoo will pull any uninvoiced "
-"products associated to that purchase order and automatically populate that "
-"information below. If you are having a hard time finding the appropriate "
-"vendor bill, you may search through the list by inputting the vendor "
-"reference number or your internal purchase order number."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:144
-msgid ""
-"While the invoice is in draft state, you can make any modifications you need"
-" (i.e. remove or add product lines, modify quantities, and change prices)."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:149
-msgid "Your vendor may send you several bills for the same purchase order if:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:151
-msgid ""
-"Your vendor is in back-order and is sending you invoices as they ship the "
-"products."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:154
-msgid "Your vendor is sending you a partial bill or asking for a deposit."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:156
-msgid ""
-"Every time you record a new vendor bill, Odoo will automatically populate "
-"the product quantities based on what has been received from the vendor. If "
-"this value is showing a zero, this means that you have not yet received this"
-" product and simply serves as a reminder that the product is not in hand and"
-" you may need to inquire further into this. At any point in time, before you"
-" validate the vendor bill, you may override this zero quantity."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:165
-msgid "Vendor Bill Matching"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:168
-msgid "What to do if your vendor bill does not match what you received"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:170
-msgid ""
-"If the bill you receive from the vendor has different quantities than what "
-"Odoo automatically populates as quantities, this could be due to several "
-"reasons:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:174
-msgid ""
-"The vendor is incorrectly charging you for products and/or services that you"
-" have not ordered."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:177
-msgid ""
-"The vendor is billing you for products that you might not have received yet,"
-" as the invoicing control may be based on ordered or received quantities."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:181
-msgid "Or the vendor did not bill you for previously purchased products."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:183
-msgid ""
-"In these instances it is recommended that you verify that the bill, and any "
-"associated purchase order to the vendor, are accurate and that you "
-"understand what you have ordered and what you have already received."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:187
-msgid ""
-"If you are unable to find a purchase order related to a vendor bill, this "
-"could be due to one of a few reasons:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:190
-msgid ""
-"The vendor has already invoiced you for this purchase order, therefore it is"
-" not going to appear anywhere in the selection."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:193
-msgid ""
-"Someone in the company forgot to record a purchase order for this vendor."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:196
-msgid "Or the vendor is charging you for something you did not order."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:199
-msgid "How product quantities are managed"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:201
-msgid ""
-"By default, services are managed based on ordered quantities, while "
-"stockables and consumables are managed based on received quantities."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:204
-msgid ""
-"If you need to manage products based on ordered quantities over received "
-"quantities, you will need to enable **Debug Mode** from the **About Odoo** "
-"information. Once debug mode is activated, select the product(s) you wish to"
-" modify, and you should see a new field appear, labeled **Control Purchase "
-"Bills**."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:213
-msgid ""
-"You can then change the default management method for the selected product "
-"to be based on either:"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:216
-msgid "Ordered quantities"
-msgstr "Bestilt antal"
-
-#: ../../purchase/purchases/rfq/bills.rst:218
-msgid "Received quantities"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:221
-msgid "Batch Billing"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/bills.rst:223
-msgid ""
-"When creating a vendor bill and selecting the appropriate purchase order, "
-"you may continue to select additional purchase orders and Odoo will add the "
-"additional line items from that purchase order. If you have not deleted the "
-"previous line items from the first purchase order the bill will be linked to"
-" all the appropriate purchase orders."
+"Depending on the billing policy defined above. If you're supposed to be "
+"billed based on ordered quantity, Odoo will suggest a bill for the number of"
+" units ordered. If you're supposed to be billed based on the received "
+"quantities, Odoo will suggest a bill for 0 as shown above."
 msgstr ""
 
 #: ../../purchase/purchases/rfq/cancel.rst:3
@@ -1022,100 +750,7 @@ msgid ""
 "date to which you wish to proceed to the actual order."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Receipt"
-msgstr "Modtagelse"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Incoming Shipments"
-msgstr "Indkommende leverancer"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Vendor"
-msgstr "Leverandør"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "You can find a vendor by its Name, TIN, Email or Internal Reference."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Vendor Reference"
-msgstr "Leverandør reference/fakturanr."
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid ""
-"Reference of the sales order or bid sent by the vendor. It's used to do the "
-"matching when you receive the products as this reference is usually written "
-"on the delivery order sent by your vendor."
-msgstr ""
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Order Date"
-msgstr "Ordredato"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid ""
-"Depicts the date where the Quotation should be validated and converted into "
-"a purchase order."
-msgstr "Datoen hvor tilbuddet skal være konverteret til en indkøbsordre."
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Source Document"
-msgstr "Kildedokument"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid ""
-"Reference of the document that generated this purchase order request (e.g. a"
-" sales order)"
-msgstr ""
-"Reference fra det dokument, som genererede denne indkøbsordreanmodning (fx "
-"en salgsordre)"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Deliver To"
-msgstr "Levere til"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "This will determine operation type of incoming shipment"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Drop Ship Address"
-msgstr "Dropship adresse"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid ""
-"Put an address if you want to deliver directly from the vendor to the "
-"customer. Otherwise, keep empty to deliver to your own company."
-msgstr ""
-"Indsæt en adresse hvis du ønsker at levere direkte fra leverandøren til "
-"kunden. Hold den ellers tom hvis du ønsker levering til din egen virksomhed."
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Destination Location Type"
-msgstr "Lokationstypen for destinationen"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Technical field used to display the Drop Ship Address"
-msgstr "Teknisk felt til visning af dropshipping adressen"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid "Incoterm"
-msgstr "Incoterm"
-
-#: ../../purchase/purchases/rfq/create.rst:0
-msgid ""
-"International Commercial Terms are a series of predefined commercial terms "
-"used in international transactions."
-msgstr ""
-"Internationale leveringsbetingelser er en serie af foruddefinerede "
-"kommercielle vilkår, der anvendes i internationale transaktioner."
-
-#: ../../purchase/purchases/rfq/create.rst:32
-msgid "View *Request for Quotation* in our Online Demonstration"
-msgstr ""
-
-#: ../../purchase/purchases/rfq/create.rst:34
+#: ../../purchase/purchases/rfq/create.rst:28
 msgid ""
 "In **Products**, click on Add an item. Select the product you wish to order "
 "in the **Product** menu. Specify the **Quantity** by inserting the number "
@@ -1127,26 +762,26 @@ msgid ""
 "supplier or enter a new one)."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/create.rst:48
+#: ../../purchase/purchases/rfq/create.rst:40
 msgid ""
 "After having clicked on **Send**, you will notice that the RFQ's status will"
 " switch from **Draft** to **RFQ Sent**."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/create.rst:54
+#: ../../purchase/purchases/rfq/create.rst:46
 msgid ""
 "Once your supplier has replied with an offer, update the RfQ by clicking on "
 "**Edit** to fit the quotation (prices, taxes, expected delivery lead time, "
 "payment terms, etc.), then click on **Save** to issue a Purchase Order."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/create.rst:59
+#: ../../purchase/purchases/rfq/create.rst:51
 msgid ""
 "To proceed with the order, click on **Confirm Order** to send the order to "
 "the supplier. The RfQ's status will switch to **Purchase Order**."
 msgstr ""
 
-#: ../../purchase/purchases/rfq/create.rst:65
+#: ../../purchase/purchases/rfq/create.rst:57
 msgid ""
 "The status of the RfQ will change to PURCHASE ORDER. Tabs in the upper right"
 " corner of the order will show 1 Shipment and 0 Invoice."
@@ -1909,7 +1544,7 @@ msgid ""
 msgstr ""
 
 #: ../../purchase/replenishment/flows/setup_stock_rule.rst:33
-msgid "See also: :doc:`../../../inventory/management/misc/schedulers`"
+msgid "See also: :doc:`../../../inventory/management/planning/schedulers`"
 msgstr ""
 
 #: ../../purchase/replenishment/flows/setup_stock_rule.rst:35
