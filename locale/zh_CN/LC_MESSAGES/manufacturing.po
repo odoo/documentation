@@ -5,20 +5,20 @@
 # 
 # Translators:
 # r <263737@qq.com>, 2019
-# Martin Trigaux, 2019
-# Jeffery CHEN Fan <jeffery9@gmail.com>, 2019
-# liAnGjiA <liangjia@qq.com>, 2019
 # Shane Tsoi <sso@odoo.com>, 2019
 # Datasource International <Hennessy@datasourcegroup.com>, 2020
+# Mandy Choy <mnc@odoo.com>, 2020
+# Martin Trigaux, 2020
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-02-11 14:56+0100\n"
+"POT-Creation-Date: 2020-09-24 12:02+0200\n"
 "PO-Revision-Date: 2019-10-03 09:46+0000\n"
-"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2020\n"
+"Last-Translator: Jeffery CHEN Fan <jeffery9@gmail.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -158,7 +158,7 @@ msgid ""
 "and, at least, one of the components. Go to the :menuselection:`Master Data "
 "menu --> Products` and create both the finished product and the component."
 msgstr ""
-"在创建*物料清单*之前，你必须创建使用*物料清单*的产品以及至少一种部件。前往:menuselection:`主数据菜单 --> "
+"在创建*物料清单*之前，你必须创建使用*物料清单*的产品以及至少一种部件。前往 :menuselection:`主数据菜单 --> "
 "产品`并创建成品和部件。"
 
 #: ../../manufacturing/management/bill_configuration.rst:28
@@ -258,7 +258,7 @@ msgstr "如果出现这种情况，Odoo提供*灵活部件消耗*功能。启用
 #: ../../manufacturing/management/flexible_components_consumption.rst:16
 #: ../../manufacturing/management/kit_shipping.rst:31
 #: ../../manufacturing/management/kit_shipping.rst:66
-#: ../../manufacturing/management/subcontracting.rst:9
+#: ../../manufacturing/management/subcontracting.rst:26
 #: ../../manufacturing/management/use_mps.rst:9
 msgid "Configuration"
 msgstr "设置"
@@ -569,7 +569,8 @@ msgid ""
 "Odoo allows you to use one bill of materials for multiple variants of the "
 "same product. Simply enable variants from :menuselection:`Configuration --> "
 "Settings`."
-msgstr "Odoo允许你为同一产品的多个变量使用物料清单。启用变量的方式很简单，只需从 :menuselection:`配置->设置中选择。"
+msgstr ""
+"Odoo允许你为同一产品的多个变量使用物料清单。启用变量的方式很简单，只需从 :menuselection:`配置 --> 设置` 中选择。"
 
 #: ../../manufacturing/management/product_variants.rst:12
 msgid ""
@@ -584,7 +585,7 @@ msgid ""
 "When defining variant BoMs on a line-item-basis, the **Product Variant** "
 "field in the main section of the BoM should be left blank. This field is "
 "used when creating a BoM for one variant of a product only."
-msgstr "在行与项目对应的基础上定义变量BoM时，BoM主区域的**产品变量**字段应不填内容。这一字段只在为产品的一个变量创建BoM时有用。"
+msgstr "在行与项目对应的基础上定义变量BoM时，BoM主区域的 **产品变量** 字段应不填内容。这一字段只在为产品的一个变量创建BoM时有用。"
 
 #: ../../manufacturing/management/routing_kit_bom.rst:3
 msgid "Set routings on kit Bills of materials"
@@ -768,171 +769,319 @@ msgid ""
 msgstr "现在，你每次为顶级产品规划制造订单时，系统将为分组件创建制造订单。然后，你必须制造分组件，确保其在制造成品前可用。"
 
 #: ../../manufacturing/management/subcontracting.rst:3
-msgid "Subcontract the manufacturing"
-msgstr "制造分包"
+msgid "Subcontract your Manufacturing"
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:5
 msgid ""
-"Some businesses subcontract the production of finished products through "
-"subcontractors. This can be easily managed through Odoo."
-msgstr "某些公司通过分包商将成品生产进行分包。这可通过Odoo轻松管理。"
+"Outsourcing a portion of some or all your company’s manufacturing needs is "
+"not easy. To make it work right, you have to:"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:8
+msgid "Manage the inventory of raw materials at your subcontractor;"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:9
+msgid ""
+"Ship new materials to your subcontractors based on your forecasted demand;"
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:11
 msgid ""
-"Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` "
-"and tick the box *Subcontracting*."
-msgstr "前往:menuselection:`制造应用程序 --> 配置 --> 设置`并勾选*分包*。"
-
-#: ../../manufacturing/management/subcontracting.rst:17
-msgid ""
-"You can now define subcontracted *Bill of Materials*. Therefore, you need to"
-" go to :menuselection:`Manufacturing --> Master Data --> Bill of Materials` "
-"and hit *Create*. In this *BoM*, list the components which will be used by "
-"the subcontractor to manufacture the subcontracted finished product. Specify"
-" that the *BoM* type is *Subcontracting* and define one or several "
-"subcontractors who will provide you the product."
+"Keep track of manufacturing operations done at the subcontractor location;"
 msgstr ""
-"现在，你可定义分包*物料清单*。因此，你需要前往:menuselection:`制造 --> 主数据 --> "
-"物料清单`并点击*创建*。在该*物料清单*中，列出分包商将用于制造分包成品的部件。指定*物料清单*类型为*分包*，并定义将为你提供产品的一家或多家分包商。"
 
-#: ../../manufacturing/management/subcontracting.rst:29
-msgid "And... the configuration part is already done!"
-msgstr "现在，配置部分均已完成！"
+#: ../../manufacturing/management/subcontracting.rst:13
+msgid "Control incoming goods quality;"
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:32
-msgid "Receive or buy a subcontracted product"
-msgstr "接收或购买分包产品"
+#: ../../manufacturing/management/subcontracting.rst:14
+msgid "Control subcontractors bills."
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:34
-msgid "You have two options to trigger the subcontracting of a product:"
-msgstr "你有两种方案触发产品分包："
-
-#: ../../manufacturing/management/subcontracting.rst:36
+#: ../../manufacturing/management/subcontracting.rst:16
 msgid ""
-"**Option A**: You can buy the subcontracted product from your subcontractor"
-msgstr "**方案A**：你可向分包商购买分包产品"
+"Here is an example of subcontracting the manufacturing of “C”, which is "
+"produced out of raw materials “A” and “B”."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:23
+msgid ""
+"With its subcontracting feature, Odoo helps you handle this flow easily."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:28
+msgid ""
+"To use the subcontracting feature, go to :menuselection:`Manufacturing --> "
+"Configuration --> Settings` and tick the box *Subcontracting*."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:35
+msgid ""
+"To define if a product must be subcontracted, use a *Bill of Materials "
+"(BoM)* of type *Subcontracting*."
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:38
-msgid "**Option B**: You can directly receive the subcontracted product"
-msgstr "**方案B**：你可直接接收分包产品"
-
-#: ../../manufacturing/management/subcontracting.rst:40
-msgid "Let’s start with option A (option B is just a simpler version of it)."
-msgstr "我们从方案A开始（方案B是方案A的简化版）。"
-
-#: ../../manufacturing/management/subcontracting.rst:42
 msgid ""
-"Create a new purchase order. The vendor must be a subcontractor. The unit "
-"price should be the cost you are paying to the subcontractor for the "
-"subcontracting (thus, it’s not necessarily the total cost of the "
-"subcontracted product)."
-msgstr "创建新的采购订单。供应商必须为分包商。单价应为向分包商支付的费用（因此，它不一定是分包产品的总成本）。"
+"To create a new *BoM*, go to :menuselection:`Manufacturing --> Master Data "
+"--> Bill of Materials` and hit create. Then, list the components your "
+"subcontractor needs to manufacture the product. For costing purposes, you "
+"might want to register all the components, even the ones that are sourced "
+"directly from the subcontractor."
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:50
+#: ../../manufacturing/management/subcontracting.rst:44
 msgid ""
-"The validation of the purchase order automatically creates the receipt. "
-"Whenever you receive the product, you can validate the receipt. The "
-"following stock moves are created:"
-msgstr "确认采购订单后将自动创建收货。你在收到产品后，可确认收货。系统创建以下库存移动："
+"Once you have set the *BoM Type* to *Subcontracting*, specify one or several"
+" subcontractors."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:52
+msgid "Basic Subcontracting Flow"
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:54
-msgid "For the components"
-msgstr "对于部件"
-
-#: ../../manufacturing/management/subcontracting.rst:56
-msgid "From Subcontracting To Production"
-msgstr "从分包到生产"
-
-#: ../../manufacturing/management/subcontracting.rst:58
-msgid "For the subcontracted product"
-msgstr "对于分包产品"
-
-#: ../../manufacturing/management/subcontracting.rst:60
-msgid "From Production to Subcontracting"
-msgstr "从生产到分包"
-
-#: ../../manufacturing/management/subcontracting.rst:62
-msgid "From Subcontracting to Stock"
-msgstr "从分包到库存"
-
-#: ../../manufacturing/management/subcontracting.rst:64
 msgid ""
-"The *Subcontracting Location* represents the place where the products are at"
-" your subcontractor’s warehouse. It is configured as an internal location, "
-"the components that are sent to the subcontractor are still valued in your "
-"stock."
-msgstr "*分包库位*代表产品在分包商仓库中的位置。如果它被配置为内部库位，则发往分包商的部件仍在你的库存中计价。"
-
-#: ../../manufacturing/management/subcontracting.rst:69
-msgid ""
-"For option B, you can simply create the receipt manually with a partner of "
-"type subcontractor defined on it."
-msgstr "对于方案B，你可直接手动创建收货，将合作伙伴类型定义为分包商。"
-
-#: ../../manufacturing/management/subcontracting.rst:73
-msgid "Receive or buy a subcontracted product with tracked components"
-msgstr "接收或购买包含已追踪部件的的分包产品"
-
-#: ../../manufacturing/management/subcontracting.rst:75
-msgid ""
-"In case the subcontracted product you receive from your subcontractor "
-"contains tracked components, you will need to specify the *serial/lot "
-"numbers* of the components in question for traceability. This operation is "
-"included in the receipt of the subcontracted product."
-msgstr "如果你从分包商接收的分包产品含有已追踪部件，你必须指明部件的*序列号/批号*，以确保可追踪性。这个操作环节包含在接收分包产品中。"
-
-#: ../../manufacturing/management/subcontracting.rst:80
-msgid ""
-"On the receipt, you see a *Record Components* button appearing when "
-"necessary. If you click on it, a *Produce* wizard opens in which you will "
-"have to enter the *serial/lot numbers* of the components, and the finished "
-"product if it is also tracked, like in the below example."
+"To let your subcontractor know how many products you need, create and send "
+"them purchase orders (PO). To do so, open the *Purchase* app and create a "
+"new one. Be sure to send the PO to a vendor that is defined as a "
+"subcontractor on the *BoM*."
 msgstr ""
-"收货时，你会看到页面出现*记录部件*按钮。点击该按钮，页面出现*生产*向导，你可输入部件及成品（如也被追踪）的*序列号/批号*，如下例所示。"
+
+#: ../../manufacturing/management/subcontracting.rst:63
+msgid ""
+"Once the *PO* is validated (1), a pending receipt is created. When the "
+"products are received, validate the receipt (2), with the actual quantity "
+"received. Then Odoo automatically created several inventory moves:"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:68
+msgid ""
+"Consume the components at the subcontractor’s location, based on the *BoM* "
+"(3);"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:70
+msgid "Produce finished goods at the subcontractor’s location (4);"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:71
+msgid ""
+"Move products from the subcontractor’s location to YourCompany through the "
+"validated receipt (5)."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:74
+msgid ""
+"Of course, Odoo does all the transactions for you, automatically. Simply "
+"control the vendor bill with the usual matching process with the purchase "
+"order."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:79
+msgid ""
+"The *PO* is optional. If you create a receipt manually, with the right "
+"subcontractor, Odoo still performs all the moves. Useful if the "
+"subcontractor does not bill a fixed price per item, but rather the time and "
+"materials used."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:85
+msgid "Inventory Valuation"
+msgstr "库存计价"
+
+#: ../../manufacturing/management/subcontracting.rst:87
+msgid "The cost of the manufactured product “C” is defined as:"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:89
+msgid "**C = A + B + s**"
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:91
-msgid ""
-"Once this information has been entered, you will see a new icon on the "
-"receipt stock move, which will allow you to find back the components which "
-"are part of the finished product."
-msgstr "在输入此信息后，你在收货库存移动上可以看到一个新图标，用于找到作为成品组成部分的部件。"
+msgid "With:"
+msgstr "与："
 
-#: ../../manufacturing/management/subcontracting.rst:99
-msgid "Resupply the subcontractor with the components"
-msgstr "向分包商补给部件"
+#: ../../manufacturing/management/subcontracting.rst:93
+msgid "**A**: Cost of raw materials coming from YourCompany;"
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:101
-msgid ""
-"There are 3 ways to manage the resupply of your subcontractor with the "
-"components:"
-msgstr "管理向分包商补给部件的过程有3种方法："
+#: ../../manufacturing/management/subcontracting.rst:96
+msgid "**B**: Cost of raw materials sourced directly from the"
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:104
-msgid ""
-"**Manually**: You create a delivery order in which you set the subcontractor"
-" as a partner and you choose the components to deliver."
-msgstr "**手动**：创建交货单，将分包商设为合作伙伴，选择待交付的部件。"
+#: ../../manufacturing/management/subcontracting.rst:96
+msgid "subcontractor;"
+msgstr ""
 
-#: ../../manufacturing/management/subcontracting.rst:110
+#: ../../manufacturing/management/subcontracting.rst:98
+msgid "**s**: Cost of the subcontracted service."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:100
 msgid ""
-"You therefore need to activate *Multi-locations* in the inventory settings."
-msgstr "因此，你需要在库存设置中启用*多库位*。"
+"Sending raw materials to your subcontractors (**A**) does not impact the "
+"inventory valuation, the components still belonging to your company. To "
+"manage this, the *Subcontracting Location* is configured as an *Internal "
+"Location* so that the components are still valued in the inventory."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:106
+msgid ""
+"Then, the vendor price set on the product C form has to be what has to be "
+"paid to the subcontractor for his parts and service time: **B + s**. The "
+"product cost has to be: **A + B + s**, how much the product is valued in the"
+" accounting."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:111
+msgid ""
+"Finally, the subcontractor bill matches the purchase order, with the "
+"proposed price coming from the finished products C."
+msgstr ""
 
 #: ../../manufacturing/management/subcontracting.rst:115
 msgid ""
-"**With reordering rules**: You can define a *reordering rule* on the "
-"*Subcontracting location* to ensure that they are always enough components "
-"sent to your subcontractors. When the reordering rule is triggered, a "
-"delivery order is created for the product is automatically created."
+"If managing the replenishment of raw materials **B** at your subcontractor’s"
+" location is not needed, simply include the cost of **B** in the "
+"subcontractor’s price **s** and remove the products *B* from the *BoM*."
 msgstr ""
-"**含重订货规则**：你可对*分包库位*定义*重订货规则*，以确保总有充足部件送完分包商工厂。在触发重订货规则后，系统将自动为产品创建交货单。"
 
-#: ../../manufacturing/management/subcontracting.rst:120
+#: ../../manufacturing/management/subcontracting.rst:121
+msgid "Traceability"
+msgstr "追溯"
+
+#: ../../manufacturing/management/subcontracting.rst:123
 msgid ""
-"**On order**: You can also deliver the components to your subcontractors "
-"each time you order a subcontracted product. For this, you need to tick the "
-"route *Resupply Subcontractor on Order* on the wanted components."
-msgstr "**在订单**：你也可以在每次订购分包产品时向分包商交付部件。为此，你需要在部件上勾选*在订单供应分包商*路线。"
+"In case the products received from the subcontractor contain tracked "
+"components, their serial or lot numbers need to be specified during the "
+"receipt."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:127
+msgid ""
+"On the receipt of the subcontracted product, a *Record Components* button "
+"appears when necessary. Click on it to open a dialog and record the "
+"serial/lot numbers of the components. If the finished product is also "
+"tracked, its serial/lot number can be registered here too."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:136
+msgid ""
+"For audit purposes, it is possible to check the lot numbers recorded on a "
+"receipt by using the icon on the right of the finished products:"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:144
+msgid "Automate Replenishment of Subcontractors"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:146
+msgid ""
+"To manage the resupply of your subcontractor, activate *Multi-locations* in "
+":menuselection:`Inventory --> Configuration --> Configuration`. Then, the "
+"inventory at the subcontractor location can be tracked."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:151
+msgid ""
+"It is possible to resupply subcontractors by sending products from the "
+"company locations, or by sending products from another supplier to the "
+"subcontractors."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:156
+msgid "Replenishment from the warehouse"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:158
+msgid ""
+"Resupplying subcontractors manually is the simplest approach. To do so, "
+"create delivery orders in which the subcontractor is set as a delivery "
+"address and fill the components to deliver."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:162
+msgid ""
+"To automate the subcontractors’ replenishment propositions, there are two "
+"approaches:"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:165
+msgid "Reordering rules;"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:166
+msgid "Replenish on order flow."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:168
+msgid ""
+"For the first one, just define a reordering rule on the subcontracting "
+"location, with a minimum and maximum inventory level. When the reordering "
+"rule is triggered, a delivery order is created to ship the components to the"
+" subcontractor."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:177
+msgid ""
+"The second approach is to use a “pull” flow. Here, the demand in the "
+"finished product (real demand or forecasted one through the Master "
+"Production Schedule) triggers the replenishment of the subcontractor. To do "
+"so, select the route *Resupply Subcontractor on Order* on the wanted "
+"components."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:188
+msgid "Replenishment from another supplier"
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:190
+msgid ""
+"When purchasing items to another supplier, it is possible to ask him to "
+"deliver the subcontractor directly. To do so, activate the *Drop Shipping* "
+"feature in :menuselection:`Purchase --> Configuration --> Configuration`."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:195
+msgid ""
+"Now, set the *Dropship* option in the *Deliver To* field of the *Other "
+"Information* tab. Then, provide the address of the subcontractor for the "
+"shipping."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:203
+msgid ""
+"That way, the supplier can ship items directly and you simply receive and "
+"pay the bill. However, it is still required to validate receipts for the "
+"subcontractor."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:212
+msgid "Quality Control"
+msgstr "质量管理"
+
+#: ../../manufacturing/management/subcontracting.rst:214
+msgid ""
+"Controlling the quality of the products manufactured by subcontractors is "
+"possible thanks to the Odoo Quality app. Quality checks can be made on a "
+"manufacturing step but, because the manufacturing process is handled by an "
+"external party, it can be defined on the product reception."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:224
+msgid ""
+"To create a quality check at the receipt, open the *Quality* app and create "
+"a new *Control Point* on the reception."
+msgstr ""
+
+#: ../../manufacturing/management/subcontracting.rst:231
+msgid ""
+"By doing so, a quality check is automatically created each time a finished "
+"product is received."
+msgstr ""
 
 #: ../../manufacturing/management/unbuild.rst:3
 msgid "Unbuild a product"
@@ -1006,7 +1155,7 @@ msgstr "主生产排程(MPS)是根据你的需求预测计划生产的有用工�
 msgid ""
 "Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` "
 "and activate the Master Production Schedule feature before hitting save."
-msgstr "前往:menuselection:`制造应用程序 --> 配置 --> 设置`并启用主生产排程功能，然后点击保存。"
+msgstr "前往 :menuselection:`制造应用程序 --> 配置 --> 设置`并启用主生产排程功能，然后点击保存。"
 
 #: ../../manufacturing/management/use_mps.rst:18
 msgid ""
@@ -1021,7 +1170,7 @@ msgid ""
 "stock you want to have on hand at the end of the period) and the minimum and"
 " maximum quantities to replenish."
 msgstr ""
-"现在，进入:menuselection:`规划 --> "
+"现在，进入 :menuselection:`规划 --> "
 "主生产排程`并点击添加产品。你可定义你的安全库存目标（=在周期结束时希望保有的库存量）和补货的最小及最大数量。"
 
 #: ../../manufacturing/management/use_mps.rst:29
@@ -1143,7 +1292,7 @@ msgid ""
 "You can decrease the demand forecast. The cell will become red to inform you"
 " that you’ve ordered more than planned. If you’re still able to do it, you "
 "can cancel some RFQ or MO manually."
-msgstr "你可减少需求预测。单元格将变为红色，表明你订购的数量超过了计划数量。如果允许，你可手动取消一些报价请求或制造订单。"
+msgstr "你可减少需求预测。单元格将变为红色，表明你订购的数量超过了计划数量。如果允许，你可手动取消一些询价单或制造订单。"
 
 #: ../../manufacturing/management/use_mps.rst:114
 msgid "What if I wrongly added a product to the MPS?"
