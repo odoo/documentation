@@ -34,11 +34,10 @@
 # Massiel Acuna <mac@odoo.com>, 2018
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2018
 # cc53a0412107de288f77ae97a300f6b0, 2018
-# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2018
 # Edilianny Sanchez - https://www.vauxoo.com/ <esanchez@vauxoo.com>, 2019
 # Luis Marin <marin.guadarrama@gmail.com>, 2019
 # John Guardado <jgu@odoo.com>, 2019
-# Gabriel Umana <gabriel.umana@delfixcr.com>, 2019
+# gabriumaa <gabriel.umana@delfixcr.com>, 2019
 # Angel Moya - PESOL <angel.moya@pesol.es>, 2019
 # Vivian Montana <vmo@odoo.com>, 2019
 # Rick Hunter <rick_hunter_ec@yahoo.com>, 2019
@@ -50,6 +49,9 @@
 # Pablo Rojas <rojaspablo88@gmail.com>, 2019
 # Jesse Garza <jga@odoo.com>, 2019
 # Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020
+# Paulina Rodriguez <pauli.rodriguez.c@gmail.com>, 2020
+# Jorge Obiols <jorge.obiols@gmail.com>, 2020
+# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -58,7 +60,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-10-03 11:34+0200\n"
 "PO-Revision-Date: 2018-10-19 08:14+0000\n"
-"Last-Translator: Osiris Román <osiris.roman@yachaytech.edu.ec>, 2020\n"
+"Last-Translator: Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1576,7 +1578,7 @@ msgstr ""
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:12
 msgid "We can directly specify the payment on the invoice"
-msgstr ""
+msgstr "Podemos especificar directamente el pago en la factura"
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:13
 msgid "We can reconcile open invoices with bank statements"
@@ -1601,6 +1603,8 @@ msgid ""
 "We received the proof of payment of our invoice in the amount of 2100 euros "
 "issued to Smith & Co."
 msgstr ""
+"Recibimos el comprobante de pago para nuestra factura de 2100 euros emitida "
+"a Smith & Co. "
 
 #: ../../accounting/bank/reconciliation/use_cases.rst:33
 msgid ""
@@ -4318,16 +4322,23 @@ msgid ""
 "payment process in Odoo, this considerations to understand the behavior are "
 "important."
 msgstr ""
+"Para generar el complemento de pago solo necesitas seguir el proceso de pago"
+" normal en Odoo, estas consideraciones para entender el comportamiento son "
+"importantes."
 
 #: ../../accounting/localizations/mexico.rst:268
 msgid ""
 "To generate payment complement the payment term in the invoice must be PPD, "
 "because It is the expected behavior legally required for \"Cash payment\"."
 msgstr ""
+"Para generar complemento de pago el plazo de pago en la factura debe ser "
+"PPD, ya que es el comportamiento esperado legalmente requerido para el "
+"\"Pago en efectivo\"."
 
 #: ../../accounting/localizations/mexico.rst:272
 msgid "**1.1. How can I generate an invoice with payment term `PUE`?**"
 msgstr ""
+"**1.1. ¿Cómo puedo generar una factura con un término de pago `PUE`?**"
 
 #: ../../accounting/localizations/mexico.rst:274
 msgid ""
@@ -4336,22 +4347,31 @@ msgid ""
 "calendar month (the next month of the CFDI date), any other condition will "
 "generate a ``PPD`` invoice."
 msgstr ""
+"`De acuerdo con la ducumentación del SAT`_ un pago es clasiifiicado como "
+"``PUE`` si se acordó pagar completamente una factura antes dl día 17 del "
+"siguiente mes calendario (el próximo mes de la fecha del CFDI), cualquier "
+"otra condición va a generar una factura ``PPD``."
 
 #: ../../accounting/localizations/mexico.rst:279
 msgid "**1.2. How can I get this with Odoo?**"
-msgstr ""
+msgstr "**1.2. ¿Cómo puedo conseguir esto con Odoo?**"
 
 #: ../../accounting/localizations/mexico.rst:281
 msgid ""
 "In order to set the appropriate CFDI payment term (PPD or PUE), you can "
 "easily set it by using the ``Payment Terms`` defined in the invoice."
 msgstr ""
+"Para establecer el plazo de pago CFDI adecuado (PPD o PUE), puede "
+"establecerse fácilmente utilizando los ``Términos de pago`` definidos en la "
+"factura."
 
 #: ../../accounting/localizations/mexico.rst:284
 msgid ""
 "If an invoice is generated without ``Payment Term`` the attribute "
 "``MetodoPago`` will be ``PUE``."
 msgstr ""
+"Si se genera una factura sin ``Plazo de pago`` el atributo ``MetodoPago`` "
+"será ``PUE``."
 
 #: ../../accounting/localizations/mexico.rst:287
 msgid ""
@@ -4360,6 +4380,10 @@ msgid ""
 "the first day of the following month, this means its before the 17th of the "
 "next month, then the attribute ``MetodoPago`` will be ``PUE``."
 msgstr ""
+"Hoy, si es el primer día del mes y se genera una factura con ``Plazo de "
+"Pago``  ``30 Días Netos``', la ``Fecha de Vencimiento`` calculada será el "
+"primer día del mes siguiente, este significa que es antes del día 17 del mes"
+" siguiente, entonces el atributo ``MetodoPago`` será `` PUE ''."
 
 #: ../../accounting/localizations/mexico.rst:292
 msgid ""
@@ -4367,6 +4391,9 @@ msgid ""
 "the ``Due Date`` is higher than the day 17 of the next month the "
 "``MetodoPago`` will be ``PPD``."
 msgstr ""
+"Hoy, si se genera una factura con ``Plazo de Pago`` ``30 Días Netos`` y la "
+"``Fecha de Vencimiento`` es mayor que el día 17 del mes siguiente, el "
+"``MetodoPago`` será ``PPD``."
 
 #: ../../accounting/localizations/mexico.rst:296
 msgid ""
@@ -7789,7 +7816,7 @@ msgstr "Vea **Crear una Cuenta** en nuestra Demostración en Línea"
 
 #: ../../accounting/others/configuration/fiscal_year.rst:3
 msgid "Manage Fiscal Years"
-msgstr ""
+msgstr "Administrar Años Fiscales"
 
 #: ../../accounting/others/configuration/fiscal_year.rst:5
 msgid ""
@@ -10355,13 +10382,15 @@ msgstr ""
 
 #: ../../accounting/others/taxes/taxcloud.rst:15
 msgid "In TaxCloud"
-msgstr ""
+msgstr "En TaxCloud"
 
 #: ../../accounting/others/taxes/taxcloud.rst:16
 msgid ""
 "Create a free account on `TaxCloud <https://taxcloud.com/#register>`__ "
 "website."
 msgstr ""
+"Crea una cuenta gratuita en el sitio de `TaxCloud "
+"<https://taxcloud.com/#register>`__ "
 
 #: ../../accounting/others/taxes/taxcloud.rst:18
 msgid ""
