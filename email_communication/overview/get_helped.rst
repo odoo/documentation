@@ -51,50 +51,61 @@ then pick the "Preferences" tab and choose "Handle notifications within Odoo" (n
    :alt: user preferences handle notifications.
 
 
-The envelop is red in the chatter
-=================================
+"The envelop is red"
+====================
 
-As a first step of investigation it might be interesting to check if you have no SMTP error message.
-To do so, you can go to :menuselection:`Settings --> Technical --> Emails`.
+// TODO RIM screenshot red envelop + click on it
 
-Click on a red email and select the tab `Failure Reason`.
+
+If your email wasn't delivered, Odoo might have recorded the SMTP error explaining why.
+The menu :menuselection:`Settings --> Technical --> Emails` displays the whole email queue,
+including emails that could not be sent..
+
+Click on an email marked in red and select the tab `Failure Reason`.
 
 .. image:: media/failure_reason.png
    :align: center
    :alt: failure reason email tab and explanations.
 
-Sometimes, Odoo is not capable of providing the error message. To get more information, you should check with the administrator of the email server or contact the Odoo Support.
-
+If Odoo was not able of providing you with an error message, you should ask the administrator
+of the email server to have a look at the log files of the Odoo server and the SMTP server
+(or contact the Odoo Support if you are hosted on one of our cloud platforms).
+s
 .. note::
-   To enable the developper mode and see the Technical menu, please see the following explanation
+   The "Technical" menu is visible in Deveoper mode only, see
    :doc:`../../../general/developer_mode/activate`
 
 
-My outgoing email server is not properly configured
-===================================================
+Your outgoing email server is not properly configured
+=====================================================
 
-If you choose to use your own email server, you will have to set it up.
-It may happen that some errors occur in the setup. To check it, go in :menuselection:`Settings --> Technical --> Outgoing Mail Server`.
+If made the choice to to use your own email server, you have to set it up.
+An incorrect setup may prevent the delivery of your emails.
+
+
+In order to check your outgoing mail settings, go to :menuselection:`Settings --> Technical --> Outgoing Mail Server`.
 
 .. image:: media/setting_outgoing_mail_server.png
    :align: center
    :alt: setting up an outgoing email server.
 
-Emails providers might have their own limitation, here is a few example of existing ones:
+If you use a well-known email provider like Gmail or Office 365, you have to comply to its limitations, e.g:
 
-- Gmail accounts have a limitation of 500 mails per day.
-- Yahoo is not working properly with Odoo as they defined a blocking DMARC policy few years ago that is not compatible with the way Odoo is working.
-- Office 365 email servers don't allow easily to send external emails from hosts like Odoo.
-    Refer to the `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`
+- **Gmail** accounts cannot send more than 500 emails a day. // TODO RIM ref?
+- **Office 365** email servers don't allow easily to send external emails from hosts like Odoo.
+    Refer to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`
     to make it work.
+- Yahoo is not working properly with Odoo as they enforce a strict DMARC policy that is not compatible with Odoo at the moment.
 
 .. note::
-   Please find more information on our page regarding outgoing emails servers:
+   For more advanced information regarding outgoing emails servers, see:
    :doc: `../advanced/email_servers`
 
 
-My email is not going out and there is a red envelop
-====================================================
+Emails went out of Odoo but you still see ared envelop
+======================================================
+
+// TODO RIM merge with section "envelop is red"
 
 It might happen that some emails are not going out properly and Odoo has no power on this.
 For diverses reason, during the transit of the email, an error occurs and a bounce email is sent back to the sender to letting him know that it didn't reach its destination.
