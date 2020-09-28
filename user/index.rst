@@ -1,3 +1,5 @@
+:banners-display:
+
 =======================
 Odoo User Documentation
 =======================
