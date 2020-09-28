@@ -2,6 +2,7 @@
 
 {# =====  VARIABLES  ====== #}
 {% set master_doc_short_name = 'Odoo Doc' %}
+<!-- VFE TODO use value from config ? -->
 
 {% if pagename == master_doc %}
     <li><a href="{{ pathto(master_doc) }}" class="active">{{ master_doc_short_name }}</a></li>
@@ -11,10 +12,7 @@
             {% if loop.first %}
                 <li><a href="{{ pathto(master_doc) }}">{{ master_doc_short_name }}</a></li>
             {% else %}
-                <!-- VFE there is no elif ? -->
-                {% if loop.index == 2 %}
-                    <li><a href="{{ parent.link|e }}">{{parent.title}}</a></li>
-                {% endif %}
+                <li><a href="{{ parent.link|e }}">{{parent.title}}</a></li>
             {% endif %}
         {% else %}
             <li><a href="{{ pathto(master_doc) }}">{{ master_doc_short_name }}</a></li>
