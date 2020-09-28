@@ -5,6 +5,9 @@
 My Odoo Portal
 ==============
 
+My Odoo Portal
+==============
+
 In this section of the portal, you will find all the communications between you
 and Odoo: documents such as quotations, sales orders, invoices and subscriptions.
 
@@ -17,7 +20,7 @@ and Odoo: documents such as quotations, sales orders, invoices and subscriptions
     :align: center
 
 Quotations
-==========
+-------
 
 Here you will find all the quotations sent to you by Odoo. For example, a
 quotation can be generated for you after adding an application or a user to your
@@ -38,7 +41,7 @@ will get confirmed. If you don't want to accept it, or you need to ask for some
 modifications, click on "Ask Changes Reject."
 
 Sales Orders
-============
+-------
 
 All your purchases within Odoo (Upsells, Themes, Applications, etc.)
 will be registered under this section.
@@ -50,7 +53,7 @@ By clicking on the sale order, you can review the details of the products purcha
 and process the payment.
 
 Invoices
-========
+-------
 
 All the invoices of your subscriptions and/or sales orders will be
 shown in this section. The tag before the Amount Due will indicate if the
@@ -63,7 +66,7 @@ Just click on the invoice if you wish to see more information, pay the invoice,
 or download a PDF version of the document.
 
 Tickets
-=======
+-------
 
 When you submit a ticket through `Odoo Support <https://www.odoo.com/help>`,
 a ticket will be created. Here you can find all the tickets that you have opened,
@@ -73,7 +76,7 @@ the conversations between you and our Agents, and the statuses and IDs (# Ref) o
     :align: center
 
 Subscriptions
-=============
+-------
 
 You can access your subscriptions with Odoo from this section. The first page
 shows you the subscriptions that you have and their status.
@@ -105,7 +108,7 @@ delete the payment method.
    you will no longer be able to access the database.
 
 Success Packs
-=============
+-------
 With a Success Pack/Partner Success Pack, you are assigned an expert to provide
 unique personalized assistance to help you customize your solution and optimize
 your workflows as part of your initial implementation. These hours never expire,
@@ -113,3 +116,12 @@ allowing you to utilize them whenever you need support.
 
 .. seealso::
    If you need information about how to manage your database see :ref:`db_online`
+   
+Delete your Odoo.com account
+==========
+
+In order to delete your Odoo.com account, you have to reach out to our `Support Services <https://www.odoo.com/help>`_. 
+
+.. seealso::
+If you wish instead to formally request the deletion of all the information connected to your email address as per the European Union General Data Protection Regulation (GDPR), please send an email to privacy@odoo.com. 
+
