@@ -9,8 +9,11 @@ sys.path.insert(0,
     os.path.abspath(
         os.path.join(DIR, '_extensions')))
 
-# put current odoo's source on PYTHONPATH for autodoc
-sys.path.insert(0, os.path.abspath(os.path.join(DIR, '../odoo')))
+build_dev_doc = False
+if os.path.exists('../odoo/odoo-bin'):
+    build_dev_doc = True
+    # put current odoo's source on PYTHONPATH for autodoc
+    sys.path.insert(0, os.path.abspath(os.path.join(DIR, '../odoo')))
 
 # -- General configuration ------------------------------------------------
 
@@ -72,11 +75,14 @@ today_fmt = '%B %d, %Y'
 # directories to ignore when looking for source files.
 exclude_patterns = [
     # translations
-    'locale',
+    'user/locale',
     'README.*',
     # virtualenv
     'bin', 'include', 'lib',
 ]
+
+if not build_dev_doc:
+    exclude_patterns += ["developer"]
 
 # The specifications of redirect rules used by the redirects extension.
 redirects_file = 'redirects.txt'
