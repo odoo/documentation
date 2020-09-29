@@ -1,8 +1,9 @@
 :banner: banners/index.jpg
+:show_main_toc_link:
 
-============================
-Odoo Developer Documentation
-============================
+=======================
+Developer Documentation
+=======================
 
 .. todo:: what's the documentation's license?
 

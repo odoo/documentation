@@ -1,8 +1,9 @@
 :banners-display:
+:show_main_toc_link:
 
-=======================
-Odoo User Documentation
-=======================
+==================
+User Documentation
+==================
 
 .. VFE FIXME what is the logic behind index-tree ?
 
