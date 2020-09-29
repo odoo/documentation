@@ -222,7 +222,7 @@
         if (a instanceof _) a = a._wrapped;
         if (b instanceof _) b = b._wrapped;
         // Compare `[[Class]]` names.
-        var className = toString.call(a);
+        const className = toString.call(a);
         if (className !== toString.call(b)) return false;
         switch (className) {
             // Strings, numbers, regular expressions, dates, and booleans are compared by value.
@@ -247,13 +247,13 @@
                 return +a === +b;
         }
 
-        var areArrays = className === '[object Array]';
+        const areArrays = className === '[object Array]';
         if (!areArrays) {
             if (typeof a != 'object' || typeof b != 'object') return false;
 
             // Objects with different constructors are not equivalent, but `Object`s or `Array`s
             // from different frames are.
-            var aCtor = a.constructor, bCtor = b.constructor;
+            const aCtor = a.constructor, bCtor = b.constructor;
             if (aCtor !== bCtor && !(_.isFunction(aCtor) && aCtor instanceof aCtor &&
                 _.isFunction(bCtor) && bCtor instanceof bCtor)
                 && ('constructor' in a && 'constructor' in b)) {
@@ -267,7 +267,7 @@
         // It's done here since we only need them for objects and arrays comparison.
         aStack = aStack || [];
         bStack = bStack || [];
-        var length = aStack.length;
+        let length = aStack.length;
         while (length--) {
             // Linear search. Performance is inversely proportional to the number of
             // unique nested structures.
@@ -289,7 +289,8 @@
             }
         } else {
             // Deep compare objects.
-            var keys = Object.keys(a), key;
+            const keys = Object.keys(a);
+            let key;
             length = keys.length;
             // Ensure that both objects contain the same number of properties before comparing deep equality.
             if (Object.keys(b).length !== length) return false;
@@ -368,75 +369,75 @@
                 }
             });
         }
+    }
 
-        static template = xml`
-            <div class="control-section">
-                <div id="chart-controls" class="controls">
-                    <t t-foreach="operations" t-as="operation">
-                        <label t-key="operation.label" t-att-class="state.active == operation.label ? 'highlight-op' : ''">
-                            <input type="checkbox" t-att-value="operation.label" t-on-change="onChangeControl"/>
-                            <span><t t-esc="operation.label" /></span>
-                        </label>
-                    </t>
-                </div>
-                <div class="doc-aside chart-of-accounts">
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-right">Debit</th>
-                                <th class="text-right">Credit</th>
-                                <th class="text-right">Balance</th>
+    COA.template = xml`
+        <div class="control-section">
+            <div id="chart-controls" class="controls">
+                <t t-foreach="operations" t-as="operation">
+                    <label t-key="operation.label" t-att-class="state.active == operation.label ? 'highlight-op' : ''">
+                        <input type="checkbox" t-att-value="operation.label" t-on-change="onChangeControl"/>
+                        <span><t t-esc="operation.label" /></span>
+                    </label>
+                </t>
+            </div>
+            <div class="doc-aside chart-of-accounts">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="text-right">Debit</th>
+                            <th class="text-right">Credit</th>
+                            <th class="text-right">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="state.categories" t-as="category">
+                            <tr t-key="category.code">
+                                <th>
+                                    <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
+                                </th>
+                                <td class="text-right">
+                                    <t t-esc="format(category.debit_total)"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="format(category.credit_total)"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="(category.debit_total || category.credit_total)
+                                    ? format(category.debit_total - category.credit_total, 0)
+                                    : '' "/>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="state.categories" t-as="category">
-                                <tr t-key="category.code">
+                            <t t-foreach="category.rows" t-as="row">
+                                <tr t-key="row.code">
+                                    <t t-set="account" t-value="category.rows[row]"/>
                                     <th>
-                                        <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
+                                        <span class="pl15"></span>
+                                        <span><t t-esc="account.code"/> <t t-esc="account.label"/></span>
                                     </th>
-                                    <td class="text-right">
-                                        <t t-esc="format(category.debit_total)"/>
+                                    <td t-att-class="state.lastOps[account.code] == 'debit'
+                                                    ? 'text-right highlight-op'
+                                                    : 'text-right'">
+                                        <t t-esc="format(account.debit_total)"/>
+                                    </td>
+                                    <td t-att-class="state.lastOps[account.code] == 'credit'
+                                                    ? 'text-right highlight-op'
+                                                    : 'text-right'">
+                                        <t t-esc="format(account.credit_total)"/>
                                     </td>
                                     <td class="text-right">
-                                        <t t-esc="format(category.credit_total)"/>
-                                    </td>
-                                    <td class="text-right">
-                                        <t t-esc="(category.debit_total || category.credit_total)
-                                        ? format(category.debit_total - category.credit_total, 0)
+                                        <t t-esc="(account.debit_total || account.credit_total)
+                                        ? format(account.debit_total - account.credit_total, 0)
                                         : '' "/>
                                     </td>
                                 </tr>
-                                <t t-foreach="category.rows" t-as="row">
-                                    <tr t-key="row.code">
-                                        <t t-set="account" t-value="category.rows[row]"/>
-                                        <th> 
-                                            <span class="pl15"></span>
-                                            <span><t t-esc="account.code"/> <t t-esc="account.label"/></span>
-                                        </th>
-                                        <td t-att-class="state.lastOps[account.code] == 'debit' 
-                                                        ? 'text-right highlight-op' 
-                                                        : 'text-right'"> 
-                                            <t t-esc="format(account.debit_total)"/>
-                                        </td>
-                                        <td t-att-class="state.lastOps[account.code] == 'credit' 
-                                                        ? 'text-right highlight-op' 
-                                                        : 'text-right'"> 
-                                            <t t-esc="format(account.credit_total)"/>
-                                        </td>
-                                        <td class="text-right">
-                                            <t t-esc="(account.debit_total || account.credit_total)
-                                            ? format(account.debit_total - account.credit_total, 0)
-                                            : '' "/>
-                                        </td>
-                                    </tr>
-                                </t>
                             </t>
-                        </tbody>
-                    </table>
-                </div>
-            </div>`;
-    }
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>`;
 
     document.addEventListener('DOMContentLoaded', () => {
         const chart = document.querySelector('.chart-of-accounts');

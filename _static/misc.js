@@ -33,65 +33,89 @@
      *  - automatically select first control on startup
      */
     function alternatives() {
-        $('dl.alternatives').each(function (index) {
-            var $list = $(this),
-                $contents = $list.children('dd');
-            var $controls = $('<div class="alternatives-controls">').append(
-                $list.children('dt').map(function () {
-                    var label = document.createElement('label'),
-                        input = document.createElement('input');
-                    input.setAttribute('type', 'radio');
-                    input.setAttribute('name', 'alternatives-' + index);
+        [...document.querySelectorAll('dl.alternatives')].forEach((list, index) => {
+            const contents = [...list.children].filter((el) => el.matches("dd"));
+            const controls = document.createElement("div");
+            controls.classList.add("alternatives-controls");
+            const dts = [...list.children].filter((el) => el.matches("dt"));
+            [...dts].map((el) => {
+                const label = document.createElement('label'),
+                    input = document.createElement('input');
+                input.setAttribute('type', 'radio');
+                input.setAttribute('name', 'alternatives-' + index);
 
-                    var sibling = this;
-                    while ((sibling = sibling.nextSibling) && sibling.nodeType !== 1);
-                    input.content = sibling;
+                let sibling = el;
+                while ((sibling = sibling.nextSibling) && sibling.nodeType !== 1);
+                input.content = sibling;
 
-                    label.appendChild(input);
-                    label.appendChild(document.createTextNode(' '));
-                    label.appendChild(document.createTextNode(this.textContent));
+                label.appendChild(input);
+                label.appendChild(document.createTextNode(' '));
+                label.appendChild(document.createTextNode(el.textContent));
 
-                    return label;
-                }))
-                .insertBefore($list)
-                .on('change', 'input', function (e) {
-                    // change event triggers only on newly selected input, not
-                    // on the one being deselected
-                    $contents.css('display', '');
-                    var content = e.target.content;
+                controls.appendChild(label);
+            });
+            list.parentNode.insertBefore(controls, list);
+            [...controls.querySelectorAll("input")].forEach((input) => {
+                input.addEventListener("change", (ev) => {
+                    [...contents].forEach(el => el.style.display = "");
+                    const content = ev.target.content;
                     content && (content.style.display = 'block');
-                })
-                .find('input:first').click();
+                });
+            });
+            controls.querySelector("input").click();
         });
     }
     function checks_handling() {
-        var $section = $('.checks-handling');
-        if (!$section.length) { return; }
+        debugger;
+        const section = document.querySelectorAll(".checks-handling");
+        if (!section.length) { return; }
 
-        var $ul = $section.find('ul')
-            .find('li').each(function () {
-                var txt = this.textContent;
-                while (this.firstChild) {
-                    this.removeChild(this.firstChild)
-                }
+        const ul = [...section.querySelectorAll("ul li")].forEach((li) => {
+            const txt = li.textContent;
+            while (li.firstChild) {
+                li.removeChild(li.firstChild);
+            }
 
-                $('<label style="display: block;">')
-                    .append('<input type="radio" name="checks-handling">')
-                    .append(' ')
-                    .append(txt)
-                    .appendTo(this);
-            }).end()
-            .on('change', 'input', update);
-        update();
+            const label = document.createElement("label");
+            label.style.display = "block";
+            const input = document.createElement("input");
+            input.setAttribute("type", "radio");
+            input.setAttribute("name", "checks-handling");
+            input.appendChild(document.createTextNode(" "));
+            input.appendChild(document.createTextNode(txt));
+            label.appendChild(input);
+            li.appendChild(label);
+        });
+        ul.querySelector("li input").addEventListener("change", update);
+
+        // var $section = $('.checks-handling');
+        // if (!$section.length) { return; }
+
+        // var $ul = $section.find('ul')
+        //     .find('li').each(function () {
+        //         var txt = this.textContent;
+        //         while (this.firstChild) {
+        //             this.removeChild(this.firstChild)
+        //         }
+
+        //         $('<label style="display: block;">')
+        //             .append('<input type="radio" name="checks-handling">')
+        //             .append(' ')
+        //             .append(txt)
+        //             .appendTo(this);
+        //     }).end()
+        //     .on('change', 'input', update);
+        // update();
         function update() {
-            var $inputs = $ul.find('input');
-            var idx = 0;
-            $inputs.each(function (index) {
-                if (this.checked) {
+            const inputs = ul.querySelectorAll('input');
+            let idx = 0;
+            [...inputs].forEach((el, index) => {
+                if (el.checked) {
                     idx = index;
                 }
-            }).eq(idx).prop('checked', true);
-            $ul.nextAll('div').hide().eq(idx).show();
+            });
+            inputs[idx].checked = true;
+            $(ul).nextAll('div').hide().eq(idx).show();
         }
 
     }

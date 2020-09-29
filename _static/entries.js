@@ -1,15 +1,15 @@
 (function () {
     'use strict';
 
-    const {Component, useState} = owl;
-    const {xml} = owl.tags;
+    const { Component, useState } = owl;
+    const { xml } = owl.tags;
 
-    var entries = [
+    const entries = [
         {
             title: "Company Incorporation",
             operations: [
-                {account: 'Assets: Cash', debit: 1000},
-                {account: 'Equity: Common Stock', credit: 1000}
+                { account: 'Assets: Cash', debit: 1000 },
+                { account: 'Equity: Common Stock', credit: 1000 }
             ],
             explanation: [
                 "The company receives $1,000 in cash",
@@ -22,11 +22,11 @@
         }, {
             title: "Customer Invoice ($100 + 9% tax)",
             operations: [
-                {account: 'Revenue: Goods', credit: 100},
-                {account: 'Liabilities: Deferred Tax Liabilities', credit: 9},
-                {account: 'Assets: Accounts Receivable', debit: 109},
-                {account: 'Assets: Inventory', credit: 50},
-                {account: 'Expenses: Cost of Goods Sold', debit: 50}
+                { account: 'Revenue: Goods', credit: 100 },
+                { account: 'Liabilities: Deferred Tax Liabilities', credit: 9 },
+                { account: 'Assets: Accounts Receivable', debit: 109 },
+                { account: 'Assets: Inventory', credit: 50 },
+                { account: 'Expenses: Cost of Goods Sold', debit: 50 }
             ],
             explanation: [
                 "Revenues increase by $100",
@@ -47,8 +47,8 @@
         }, {
             title: "Customer payment",
             operations: [
-                {account: 'Assets: Cash', debit: 109},
-                {account: 'Assets: Accounts Receivable', credit: 109}
+                { account: 'Assets: Cash', debit: 109 },
+                { account: 'Assets: Accounts Receivable', credit: 109 }
             ],
             explanation: [
                 "The company receives $109 in cash",
@@ -61,10 +61,10 @@
         }, {
             title: "Supplier Bill (Purchase Order $50 but Invoice $52)",
             operations: [
-                {account: 'Assets: Uninvoiced Inventory', debit: 50},
-                {account: 'Assets: Deferred Tax Assets', debit: 4.68},
-                {account: 'Expenses: Price Difference', debit: 2},
-                {account: 'Liabilities: Accounts Payable', credit: 56.68}
+                { account: 'Assets: Uninvoiced Inventory', debit: 50 },
+                { account: 'Assets: Deferred Tax Assets', debit: 4.68 },
+                { account: 'Expenses: Price Difference', debit: 2 },
+                { account: 'Liabilities: Accounts Payable', credit: 56.68 }
             ],
             explanation: [
                 "A temporary account is used to note goods to receive",
@@ -81,8 +81,8 @@
         }, {
             title: "Supplier Goods Received (Purchase Order: $50)",
             operations: [
-                {account: 'Assets: Inventory', debit: 50},
-                {account: 'Assets: Uninvoiced Inventory', credit: 50},
+                { account: 'Assets: Inventory', debit: 50 },
+                { account: 'Assets: Uninvoiced Inventory', credit: 50 },
             ],
             explanation: [
                 "Inventory is increased by $50, the expected amount coming from the purchase order",
@@ -95,8 +95,8 @@
         }, {
             title: "Buy an asset ($300,000 - no tax)",
             operations: [
-                {account: 'Assets: Buildings', debit: 300000},
-                {account: 'Liabilities: Accounts Payable', credit: 300000}
+                { account: 'Assets: Buildings', debit: 300000 },
+                { account: 'Liabilities: Accounts Payable', credit: 300000 }
             ],
             explanation: [
                 "The company gets an asset worth of $300,000",
@@ -109,8 +109,8 @@
         }, {
             title: "Pay supplier invoice",
             operations: [
-                {account: 'Liabilities: Accounts Payable', debit: 300000},
-                {account: 'Assets: Cash', credit: 300000}
+                { account: 'Liabilities: Accounts Payable', debit: 300000 },
+                { account: 'Assets: Cash', credit: 300000 }
             ],
             explanation: [
                 "The company owns $300,000 less to the supplier (liabilities are settled)",
@@ -123,9 +123,9 @@
         }, {
             title: "Cash sale (Sales Receipt)",
             operations: [
-                {account: 'Assets: Cash', debit: 109},
-                {account: 'Revenue: Goods', credit: 100},
-                {account: 'Liabilities: Deferred Tax Liabilities', credit: 9}
+                { account: 'Assets: Cash', debit: 109 },
+                { account: 'Revenue: Goods', credit: 100 },
+                { account: 'Liabilities: Deferred Tax Liabilities', credit: 9 }
             ],
             explanation: [
                 "Company's cash is increased by $109",
@@ -140,9 +140,9 @@
         }, {
             title: "Customer pays invoice, 5% early payment rebate",
             operations: [
-                {account: 'Assets: Cash', debit: 950},
-                {account: 'Revenue: Sales Discount', debit: 50},
-                {account: 'Assets: Accounts Receivable', credit: 1000}
+                { account: 'Assets: Cash', debit: 950 },
+                { account: 'Revenue: Sales Discount', debit: 50 },
+                { account: 'Assets: Accounts Receivable', credit: 1000 }
             ],
             explanation: [
                 "Company's cash is increased by $950",
@@ -157,9 +157,9 @@
         }, {
             title: "Fiscal year closing — positive earnings and 50% dividends",
             operations: [
-                {account: 'Net Profit', debit: 1000},
-                {account: 'Equity: Retained Earnings', credit: 500},
-                {account: 'Liabilities: Dividend Payable', credit: 500}
+                { account: 'Net Profit', debit: 1000 },
+                { account: 'Equity: Retained Earnings', credit: 500 },
+                { account: 'Liabilities: Dividend Payable', credit: 500 }
             ],
             explanation: [
                 "The P&L is cleared (net profit)",
@@ -175,26 +175,28 @@
     class EntryControls extends Component {
         constructor() {
             super(...arguments);
-            this.state = useState({entry: { 
-                                        title: "", 
-                                        operations: [],
-                                        explanation_list: [],
-                                        explanation_epilog: [],
-                                        configuration_list: [],
-                                        configuration_epilog: []
-                                        }});
+            this.state = useState({
+                entry: {
+                    title: "",
+                    operations: [],
+                    explanation_list: [],
+                    explanation_epilog: [],
+                    configuration_list: [],
+                    configuration_epilog: []
+                }
+            });
             this.entries = entries;
         }
 
         mounted() {
-            var entry = document.querySelector('#entries-control input[type="radio"]');
+            const entry = document.querySelector('#entries-control input[type="radio"]');
             entry.checked = true;
             this.onChangeEntry(entry.value);
         }
 
         getItemAndEpilog(value) {
-            var items = value;
-            var epilog = [];
+            let items = value;
+            let epilog = [];
             const idx = items.indexOf(null);
             if (idx !== -1) {
                 epilog = items.slice(idx + 1);
@@ -211,73 +213,73 @@
             [this.state.entry.configuration_list, this.state.entry.configuration_epilog] = this.getItemAndEpilog(entryVal.configuration);
             this.state.operations = entryVal.operations;
         }
-
-        static template = xml`
-                <div class="control-section">
-                    <div id="entries-control" class="controls">
-                        <div>
-                            <t t-foreach="entries" t-as="entry">
-                                <label t-key="entry.title">
-                                    <input type="radio" name="entries" t-att-value="entry.title" t-on-change="onChangeEntry(entry.title)"/>
-                                    <span><t t-esc="entry.title" /></span>
-                                </label>
-                            </t>
-                        </div>
-                    </div>
-                    <div class="journal-entries doc-aside">
-                        <div>
-                            <table class="table table-condensed d-c-table">
-                                <thead>
-                                    <tr>
-                                        <th></th>
-                                        <th>Debit</th>
-                                        <th>Credit</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <t t-foreach="state.entry.operations" t-as="operation">
-                                        <tr t-key="operation.account">
-                                            <td><t t-esc="operation.account"/></td>
-                                            <td><t t-esc="operation.debit"/></td>
-                                            <td><t t-esc="operation.credit"/></td>
-                                        </tr>
-                                    </t>
-                                </tbody>
-                            </table>
-                            <div class="entries-listing" 
-                                t-if="state.entry.explanation_list.length || state.entry.explanation_epilog.length">
-                                <h4>Explanation : </h4>
-                                <ul t-if="state.entry.explanation_list.length">
-                                    <t t-foreach="state.entry.explanation_list" t-as="explanation">
-                                        <li t-key="explanation"><t t-esc="explanation" /></li>
-                                    </t>
-                                </ul>
-                                <t t-foreach="state.entry.explanation_epilog" t-as="explanation_epilog">
-                                    <p t-key="explanation_epilog"><t t-esc="explanation_epilog" /></p>
-                                </t>
-                            </div>
-                            <div class="entries-listing" 
-                                t-if="state.entry.configuration_list.length || state.entry.configuration_epilog.length">
-                                <h4>Configuration : </h4>
-                                <ul t-if="state.entry.configuration_list.length">
-                                    <t t-foreach="state.entry.configuration_list" t-as="configuration">
-                                        <li t-key="configuration"><t t-esc="configuration" /></li>
-                                    </t>
-                                </ul>
-                                <t t-foreach="state.entry.configuration_epilog" t-as="configuration_epilog">
-                                    <p t-key="configuration_epilog"><t t-esc="configuration_epilog" /></p>
-                                </t>
-                            </div>
-                        </div>
-                    </div>
-                </div>`;
     }
 
-    document.addEventListener('DOMContentLoaded', function () {
+    EntryControls.template = xml`
+        <div class="control-section">
+            <div id="entries-control" class="controls">
+                <div>
+                    <t t-foreach="entries" t-as="entry">
+                        <label t-key="entry.title">
+                            <input type="radio" name="entries" t-att-value="entry.title" t-on-change="onChangeEntry(entry.title)"/>
+                            <span><t t-esc="entry.title" /></span>
+                        </label>
+                    </t>
+                </div>
+            </div>
+            <div class="journal-entries doc-aside">
+                <div>
+                    <table class="table table-condensed d-c-table">
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th>Debit</th>
+                                <th>Credit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <t t-foreach="state.entry.operations" t-as="operation">
+                                <tr t-key="operation.account">
+                                    <td><t t-esc="operation.account"/></td>
+                                    <td><t t-esc="operation.debit"/></td>
+                                    <td><t t-esc="operation.credit"/></td>
+                                </tr>
+                            </t>
+                        </tbody>
+                    </table>
+                    <div class="entries-listing"
+                        t-if="state.entry.explanation_list.length || state.entry.explanation_epilog.length">
+                        <h4>Explanation : </h4>
+                        <ul t-if="state.entry.explanation_list.length">
+                            <t t-foreach="state.entry.explanation_list" t-as="explanation">
+                                <li t-key="explanation"><t t-esc="explanation" /></li>
+                            </t>
+                        </ul>
+                        <t t-foreach="state.entry.explanation_epilog" t-as="explanation_epilog">
+                            <p t-key="explanation_epilog"><t t-esc="explanation_epilog" /></p>
+                        </t>
+                    </div>
+                    <div class="entries-listing"
+                        t-if="state.entry.configuration_list.length || state.entry.configuration_epilog.length">
+                        <h4>Configuration : </h4>
+                        <ul t-if="state.entry.configuration_list.length">
+                            <t t-foreach="state.entry.configuration_list" t-as="configuration">
+                                <li t-key="configuration"><t t-esc="configuration" /></li>
+                            </t>
+                        </ul>
+                        <t t-foreach="state.entry.configuration_epilog" t-as="configuration_epilog">
+                            <p t-key="configuration_epilog"><t t-esc="configuration_epilog" /></p>
+                        </t>
+                    </div>
+                </div>
+            </div>
+        </div>`;
+
+    document.addEventListener('DOMContentLoaded', () => {
         if (document.querySelector('.journal-entries')) {
             document.querySelector('.journal-entries').remove();
         }
-        var entrySection = document.getElementById('journal-entries');
+        const entrySection = document.getElementById('journal-entries');
         if (!entrySection) { return; }
         const controls = new EntryControls();
         controls.mount(entrySection);

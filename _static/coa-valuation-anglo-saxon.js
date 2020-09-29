@@ -53,14 +53,14 @@
         return v;
     });
 
-    var sale = 100,
+    const sale = 100,
         cor = 50,
         cor_tax = cor * 0.09,
         tax = sale * 0.09,
         total = sale + tax,
         purchase = 52,
         purchase_tax = 52 * 0.09;
-    var operations = [{
+    const operations = [{
         label: "Vendor Bill (PO $50, Invoice $50)",
         operations: [
             {account: LIABILITIES.STOCK_IN.code, debit: constant(50)},
@@ -115,7 +115,7 @@
         return () => val;
     }
 
-    class CoaValuationContinental extends Component {
+    class CoaValuationAngloSaxon extends Component {
 
         constructor() {
             super(...arguments);
@@ -169,80 +169,80 @@
                 }
             });
         }
+    }
 
-        static template = xml`
-            <div class="control-section">
-                <div id="chart-controls-continental" class="controls">
-                    <t t-foreach="operations" t-as="operation">
-                        <label t-key="operation.label" t-att-class="state.active == operation.label ? 'highlight-op' : ''">
-                            <input type="checkbox" t-att-value="operation.label" t-on-change="onChangeControl"/>
-                            <span><t t-esc="operation.label" /></span>
-                        </label>
-                    </t>
-                </div>
-                <div class="doc-aside">
-                    <table class="table table-condensed">
-                        <thead>
-                            <tr>
-                                <th></th>
-                                <th class="text-right">Debit</th>
-                                <th class="text-right">Credit</th>
-                                <th class="text-right">Balance</th>
+    CoaValuationAngloSaxon.template = xml`
+        <div class="control-section">
+            <div id="chart-controls-continental" class="controls">
+                <t t-foreach="operations" t-as="operation">
+                    <label t-key="operation.label" t-att-class="state.active == operation.label ? 'highlight-op' : ''">
+                        <input type="checkbox" t-att-value="operation.label" t-on-change="onChangeControl"/>
+                        <span><t t-esc="operation.label" /></span>
+                    </label>
+                </t>
+            </div>
+            <div class="doc-aside">
+                <table class="table table-condensed">
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th class="text-right">Debit</th>
+                            <th class="text-right">Credit</th>
+                            <th class="text-right">Balance</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <t t-foreach="state.categories" t-as="category">
+                            <tr t-key="category.code">
+                                <th>
+                                    <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
+                                </th>
+                                <td class="text-right">
+                                    <t t-esc="format(category.debit_total)"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="format(category.credit_total)"/>
+                                </td>
+                                <td class="text-right">
+                                    <t t-esc="(category.debit_total || category.credit_total)
+                                    ? format(category.debit_total - category.credit_total, 0)
+                                    : '' "/>
+                                </td>
                             </tr>
-                        </thead>
-                        <tbody>
-                            <t t-foreach="state.categories" t-as="category">
-                                <tr t-key="category.code">
+                            <t t-foreach="category.rows" t-as="row">
+                                <tr t-key="row.code">
+                                    <t t-set="account" t-value="category.rows[row]"/>
                                     <th>
-                                        <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
+                                        <span class="pl15"></span>
+                                        <span><t t-esc="account.code"/> <t t-esc="account.label"/></span>
                                     </th>
-                                    <td class="text-right">
-                                        <t t-esc="format(category.debit_total)"/>
+                                    <td t-att-class="state.lastOps[account.code] == 'debit'
+                                                    ? 'text-right highlight-op'
+                                                    : 'text-right'">
+                                        <t t-esc="format(account.debit_total)"/>
+                                    </td>
+                                    <td t-att-class="state.lastOps[account.code] == 'credit'
+                                                    ? 'text-right highlight-op'
+                                                    : 'text-right'">
+                                        <t t-esc="format(account.credit_total)"/>
                                     </td>
                                     <td class="text-right">
-                                        <t t-esc="format(category.credit_total)"/>
-                                    </td>
-                                    <td class="text-right">
-                                        <t t-esc="(category.debit_total || category.credit_total)
-                                        ? format(category.debit_total - category.credit_total, 0)
+                                        <t t-esc="(account.debit_total || account.credit_total)
+                                        ? format(account.debit_total - account.credit_total, 0)
                                         : '' "/>
                                     </td>
                                 </tr>
-                                <t t-foreach="category.rows" t-as="row">
-                                    <tr t-key="row.code">
-                                        <t t-set="account" t-value="category.rows[row]"/>
-                                        <th> 
-                                            <span class="pl15"></span>
-                                            <span><t t-esc="account.code"/> <t t-esc="account.label"/></span>
-                                        </th>
-                                        <td t-att-class="state.lastOps[account.code] == 'debit' 
-                                                        ? 'text-right highlight-op' 
-                                                        : 'text-right'"> 
-                                            <t t-esc="format(account.debit_total)"/>
-                                        </td>
-                                        <td t-att-class="state.lastOps[account.code] == 'credit' 
-                                                        ? 'text-right highlight-op' 
-                                                        : 'text-right'"> 
-                                            <t t-esc="format(account.credit_total)"/>
-                                        </td>
-                                        <td class="text-right">
-                                            <t t-esc="(account.debit_total || account.credit_total)
-                                            ? format(account.debit_total - account.credit_total, 0)
-                                            : '' "/>
-                                        </td>
-                                    </tr>
-                                </t>
                             </t>
-                        </tbody>
-                    </table>
-                </div>
-            </div>`;
-    }
+                        </t>
+                    </tbody>
+                </table>
+            </div>
+        </div>`;
 
     document.addEventListener('DOMContentLoaded', () => {
-        var chart = document.querySelector('.valuation-chart-anglo-saxon');
+        const chart = document.querySelector('.valuation-chart-anglo-saxon');
         if (!chart) { return; }
-        const controls = new CoaValuationContinental();
+        const controls = new CoaValuationAngloSaxon();
         controls.mount(chart);
     });
 
