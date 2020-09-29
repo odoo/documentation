@@ -276,12 +276,12 @@ Prepare your version
 --------------------
 
 Now that your machine is all set up, it is time to do the same for your version of the documentation
-files. As it would not be convenient to have several people working on the version 13.0 in parallel
+files. As it would not be convenient to have several people working on the version 14.0 in parallel
 (conflicts of content would occur all the time), and in order to be able to create a :abbr:`PR
 (Pull Request)`, you must `create a new branch
-<https://www.atlassian.com/git/tutorials/using-branches>`_ starting from the branch 13.0. In other
+<https://www.atlassian.com/git/tutorials/using-branches>`_ starting from the branch 14.0. In other
 words, you copy the entirety of this version’s files and give it another name. For this example, we
-will go with ``13.0-my_contribution``.
+will go with ``14.0-my_contribution``.
 
 Execute the following commands in a terminal to...
 
@@ -291,17 +291,17 @@ Execute the following commands in a terminal to...
 
       $ cd documentation-user/
 
-#. Switch to the version 13.0:
+#. Switch to the version 14.0:
 
    .. code-block:: console
 
-      $ git checkout 13.0
+      $ git checkout 14.0
 
-#. Create your own branch which will be a copy of 13.0:
+#. Create your own branch which will be a copy of 14.0:
 
    .. code-block:: console
 
-      $ git checkout -b 13.0-my_contribution
+      $ git checkout -b 14.0-my_contribution
 
 .. _contributing/perform-changes:
 
@@ -371,7 +371,7 @@ Submit your changes
 
       $ git add *
       $ git commit
-      $ git push -u origin 13.0-my_contribution
+      $ git push -u origin 14.0-my_contribution
 
 #. Go to `github.com/odoo/documentation-user/pulls
    <https://github.com/odoo/documentation-user/pulls>`_ and click on the **New pull request**
@@ -385,7 +385,7 @@ Submit your changes
    .. image:: media/compare-across-forks.png
 
 #. In the dropdown for the selection of the base branch (i.e., the version of the documentation that
-   your changes concern), make sure to select the version that your changes target (here **13.0**).
+   your changes concern), make sure to select the version that your changes target (here **14.0**).
 
    .. image:: media/select-branches-fork.png
 

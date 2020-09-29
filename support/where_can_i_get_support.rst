@@ -30,5 +30,5 @@ Here are some resources that might help you:
 
 - Our `documentation pages <https://www.odoo.com/page/docs>`_.
 - Ask your question on the `community forum <https://www.odoo.com/forum/help-1>`_.
-- `Buy Odoo Enterprise <https://www.odoo.com/documentation/13.0/setup/enterprise.html>`_ to get the
+- `Buy Odoo Enterprise <https://www.odoo.com/documentation/14.0/setup/enterprise.html>`_ to get the
   support and bugfix services.

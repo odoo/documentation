@@ -29,7 +29,7 @@ Installation
         ./odoo-bin --geoip-db= ~/Downloads/GeoLite2-City.mmdb
 
     .. seealso::
-        - `CLI documentation <https://www.odoo.com/documentation/13.0/reference/cmdline.html>`_.
+        - `CLI documentation <https://www.odoo.com/documentation/14.0/reference/cmdline.html>`_.
 
 .. warning:: ``GeoIP`` Python library can also be used. However this version is discontinued since January 2019. See `GeoLite Legacy databases are now discontinued <https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_
 
@@ -51,7 +51,7 @@ You should end up with a dictionary indicating the location of the ip address.
 .. note:: If the curly braces are empty ``{}``, it can be for any of the following reason :
 
    - The browsing IP address is the localhost (``127.0.0.1``) or a local area network one (``192.168.*.*``)
-   - If a reversed proxy is used, make sure to configure it correctly. See `--proxy-mode <https://www.odoo.com/documentation/13.0/reference/cmdline.html#cmdoption-odoo-bin-proxy-mode>`__
+   - If a reversed proxy is used, make sure to configure it correctly. See `--proxy-mode <https://www.odoo.com/documentation/14.0/reference/cmdline.html#cmdoption-odoo-bin-proxy-mode>`__
    - ``geoip2`` is not installed or the GeoIP database file wasn't found
    - The GeoIP database was unable to resolve the given IP address
 

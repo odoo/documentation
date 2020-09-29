@@ -110,7 +110,7 @@ Access the URL :file:`/web/database/manager` of your on-premise database and dow
 
   If you cannot access the database manager, it may have been disabled by your system administrator.
   See the `database manager security documentation
-  <https://www.odoo.com/documentation/13.0/setup/deploy.html#database-manager-security>`_.
+  <https://www.odoo.com/documentation/14.0/setup/deploy.html#database-manager-security>`_.
 
 You will need the master password of your database server. If you do not have it, contact your system administrator.
 
