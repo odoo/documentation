@@ -129,7 +129,7 @@ the user can have access.
 .. note::
    Note that if not handled correctly, it may be the source of a lot of inconsistent multi-company
    behaviors. Therefore, a good knowledge of Odoo is required. For technical explanations refer
-   to `this <https://www.odoo.com/documentation/13.0/howtos/company.html>`_ documentation.
+   to `this <https://www.odoo.com/documentation/14.0/howtos/company.html>`_ documentation.
 
 .. image:: media/multi_companies.png
    :align: center

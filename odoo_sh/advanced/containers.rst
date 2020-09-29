@@ -22,7 +22,7 @@ The platform will take care to install these dependencies in your containers.
 `The pip requirements specifiers <https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_
 documentation can help you write a :file:`requirements.txt` file.
 To have a concrete example,
-check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/13.0/requirements.txt>`_.
+check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/14.0/requirements.txt>`_.
 
 The :file:`requirements.txt` files of submodules are taken into account as well. The platform
 looks for :file:`requirements.txt` files in each folder containing Odoo modules: Not in the module folder itself,
@@ -172,7 +172,7 @@ In the above commands, the argument:
 * ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
-`CLI documentation <https://www.odoo.com/documentation/13.0/reference/cmdline.html>`_.
+`CLI documentation <https://www.odoo.com/documentation/14.0/reference/cmdline.html>`_.
 
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
 Look for "*odoo: addons paths*":
