@@ -1,5 +1,7 @@
 :banner: banners/odoo_sh.png
 
+.. todo:: VFE full width for youtube video or at least larger
+
 ==============================
 Introduction to Odoo.sh
 ==============================
