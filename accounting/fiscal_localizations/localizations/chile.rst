@@ -397,7 +397,7 @@ from a sales order, proceed to validate the invoice.  After the invoice is poste
 
   .. image:: media/Chile16.png
      :align: center
-	 :alt: DTE XML File displayed in chatter.
+     :alt: DTE XML File displayed in chatter.
 
 The DTE Status is updated automatically by Odoo with a scheduled action that runs every day
 at night, if you need to get the response from the SII immediately you can do it manually as well.
@@ -419,7 +419,7 @@ The DTE status workflow is as follows:
    
    .. image:: media/Chile18.png
       :align: center
-	  :alt: Identification transaction for invoice and Status update.
+      :alt: Identification transaction for invoice and Status update.
 
 
    There are several internal status in the SII before you get Acceptance or Rejection, in
@@ -428,7 +428,7 @@ The DTE status workflow is as follows:
    
    .. image:: media/Chile18_2.png
       :align: center
-	  :alt: Descprtion of each DTE status in the chatter.
+      :alt: Descprtion of each DTE status in the chatter.
 
 3. The final response from the SII, can take on of these values:
 
@@ -442,7 +442,7 @@ The DTE status workflow is as follows:
 
    .. image:: media/Chile19.png
       :align: center
-	  :alt: Email track once it is sent to the customer.
+      :alt: Email track once it is sent to the customer.
 
    **Rejected:** Indicates the information in the invoice is incorrect and needs to be
    corrected, the detail of the issue is received in the emails you registered in the
@@ -457,7 +457,7 @@ The DTE status workflow is as follows:
 	 
    .. image:: media/Chile20.png
       :align: center
-	  :alt: Message when an invoice is rejected.
+      :alt: Message when an invoice is rejected.
 
 
 Crossed references
