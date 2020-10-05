@@ -1,17 +1,19 @@
-============================
-How to import data into Odoo
-============================
+===========
+Import data
+===========
 
 How to start
 ------------
+
 You can import data on any Odoo's business object using either Excel 
 (.xlsx) or CSV (.csv) formats:
 contacts, products, bank statements, journal entries and even orders!
 
-Open the view of the object you want to populate and click *Import*.
+Open the view of the object you want to populate and click on :menuselection:`Favorites --> Import
+records`.
 
 .. image:: media/import_button.png
-    :align: center
+   :align: center
 
 There you are provided with templates you can easily populate
 with your own data. Such templates can be imported in one click; 
@@ -24,16 +26,16 @@ How to adapt the template
 * We advise to not remove the **ID** one (see why in the next section).
 * Set a unique ID to every single record by dragging down the ID sequencing.
 
-.. image:: media/dragdown.gif
-    :align: center
+  .. image:: media/dragdown.gif
+     :align: center
 
 * When you add a new column, Odoo might not be able to map it automatically if its 
   label doesn't fit any field in Odoo. Don't worry! You can map
   new columns manually when you test the import. Search the list for the
   corresponding field.
 
-    .. image:: media/field_list.png
-        :align: center
+  .. image:: media/field_list.png
+     :align: center
 
   Then, use this field's label in your file in order to make it work
   straight on the very next time.
