@@ -66,11 +66,11 @@
         });
     }
     function checks_handling() {
-        debugger;
-        const section = document.querySelectorAll(".checks-handling");
-        if (!section.length) { return; }
+        const section = document.querySelector(".checks-handling");
+        if (!section) { return; }
 
-        const ul = [...section.querySelectorAll("ul li")].forEach((li) => {
+        const ul = section.querySelector("ul");
+        ul.querySelectorAll("li").forEach((li) => {
             const txt = li.textContent;
             while (li.firstChild) {
                 li.removeChild(li.firstChild);
@@ -81,41 +81,39 @@
             const input = document.createElement("input");
             input.setAttribute("type", "radio");
             input.setAttribute("name", "checks-handling");
-            input.appendChild(document.createTextNode(" "));
-            input.appendChild(document.createTextNode(txt));
             label.appendChild(input);
+            label.appendChild(document.createTextNode(" "));
+            label.appendChild(document.createTextNode(txt));
             li.appendChild(label);
+            li.querySelector("input").addEventListener("change", update);
         });
-        ul.querySelector("li input").addEventListener("change", update);
+        update();
 
-        // var $section = $('.checks-handling');
-        // if (!$section.length) { return; }
-
-        // var $ul = $section.find('ul')
-        //     .find('li').each(function () {
-        //         var txt = this.textContent;
-        //         while (this.firstChild) {
-        //             this.removeChild(this.firstChild)
-        //         }
-
-        //         $('<label style="display: block;">')
-        //             .append('<input type="radio" name="checks-handling">')
-        //             .append(' ')
-        //             .append(txt)
-        //             .appendTo(this);
-        //     }).end()
-        //     .on('change', 'input', update);
-        // update();
+        function nextAll(node, selector) {
+            let list = [];
+            let nextSibling = node.nextElementSibling;
+            while (nextSibling) {
+                if (nextSibling.matches(selector)) {
+                    list.push(nextSibling);
+                }
+                nextSibling = nextSibling.nextElementSibling;
+            }
+            return list;
+        }
         function update() {
             const inputs = ul.querySelectorAll('input');
             let idx = 0;
-            [...inputs].forEach((el, index) => {
+            inputs.forEach((el, index) => {
                 if (el.checked) {
                     idx = index;
                 }
             });
             inputs[idx].checked = true;
-            $(ul).nextAll('div').hide().eq(idx).show();
+            const nextElements = nextAll(ul, 'div');
+            nextElements.forEach((div) => {
+                div.style.display = "none";
+            });
+            nextElements[idx].style.display = "";
         }
 
     }
