@@ -12,9 +12,11 @@ Each build is isolated within its own container (Linux namespaced container).
 The base is an Ubuntu 16.04 system, where all of Odoo's required dependencies,
 as well as common useful packages, are installed.
 
-The Odoo.sh team is open to install any system packages
-as long as they are distributed in the official Ubuntu repositories.
-`Leave us a feedback <https://www.odoo.sh/feedback>`_ if you would like a package not yet installed.
+The Odoo.sh team is open to install system packages as long as they are
+distributed in the official Ubuntu repositories and meets the platform's
+`dependency requirements <https://www.odoo.sh/faq#install_dependencies>`_.
+You can use `the feedback form <https://www.odoo.sh/feedback>`_ in order to
+submit a package request to the Odoo.sh team.
 
 If your project requires additional Python dependencies, or more recent releases,
 you can define a :file:`requirements.txt` file in the root of your branches listing them.
