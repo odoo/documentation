@@ -81,8 +81,8 @@ You can install the Outlook Extension as a **Custom Add-in**. To do so, follow t
    installation.
 
 .. note::
-   The *Odoo for Outlook* add-in is not listed in Outlook yet on Outlook's add-ins list. This is
-   why it is currently necessary to install it as a *custom add-in*.
+   The *Odoo for Outlook* add-in is not listed yet on Outlook's add-ins list. This is why it is
+   currently necessary to install it as a *custom add-in*.
 
 .. _outlook_extension/connection:
 
