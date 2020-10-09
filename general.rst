@@ -14,5 +14,6 @@ General
    general/auth
    general/tags
    general/payment_acquirers
+   general/calendars
    general/in_app_purchase
    general/developer_mode
