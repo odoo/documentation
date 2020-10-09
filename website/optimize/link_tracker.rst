@@ -37,9 +37,9 @@ Follow-up on tracked links
 ==========================
 
 To look at statistics of your links, go to :menuselection:`Website --> Go to website --> Promote
---> Track this page`. Besides being able to see the *Most Clicked* and *Recently Used* links, click
-on *Stats* to see complete statistics about the number of clicks and the country of origin of those
-clicks.
+--> Track this page`. Besides being able to see the *Most Clicked* and *Recently Used* links, you
+can also see complete statistics by clicking on *Stats*, including the number of clicks, and the
+country of origin for those clicks.
 
 .. image:: media/links_statistics.png
    :align: center
@@ -47,7 +47,7 @@ clicks.
 
 .. tip::
 
-   #. You can also access the link tracker by typing *odoo.com/r* on your browser.
+   #. You can also access the link tracker on *odoo.com/r* via your browser.
    #. Activate the developer mode (:menuselection:`Settings --> Activate the developer mode`) and
       get access to the *Link Tracker* module and its back-end functionalities.
    #. Integrated with :doc:`Google Analytics <google_analytics>`, those trackers allow you to see

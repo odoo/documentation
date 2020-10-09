@@ -1,5 +1,5 @@
 ==================================================
-How to do Search Engine Optimisation in Odoo (SEO)
+How to do Search Engine Optimisation (SEO) in Odoo
 ==================================================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
@@ -123,7 +123,7 @@ Twitter Scroller
 ----------------
 
 Display the Twitter feeds with customer satifaction on your website.
-THis will increase the number of tweets and shares.
+This will increase the number of tweets and shares.
 
 Test Your Website
 =================
@@ -204,7 +204,7 @@ product name), you don't have to worry about updating all links:
 -  Odoo will automatically update all its links to the new URL.
 
 - If external websites still points to the old URL, a 301 redirect will
-  be done to route visitors to the new website.
+  be done to route visitors to the new address of the page.
 
 As an example, this URL:
 
@@ -216,8 +216,8 @@ Will automatically redirect to:
 
 In short, just change the title of a blog post or the name of a product,
 and the changes will apply automatically everywhere in your website. The
-old link still works for links coming from external websites, with a 301
-redirect to not lose the SEO link juice.
+old link still functions when used by external websites, via a 301 redirect,
+maintaining the SEO link juice.
 
 HTTPS
 -----
@@ -281,7 +281,7 @@ element pointing to the translated versions of that webpage;
 
 With this approach:
 
-- Search engines will redirect to th right language according to the 
+- Search engines will redirect to the right language according to the
   visitor language.
 
 - You do not get penalized by search engines if your page is not translated
@@ -293,8 +293,8 @@ Language Detection
 
 When a visitor lands for the first time on your website (e.g.
 yourwebsite.com/shop), they may automatically be redirected to a
-translated version according to their browser language preference: (e.g.
-yourwebsite.com/fr\_FR/shop). 
+translated version according to their browser language preference (e.g.
+yourwebsite.com/fr\_FR/shop).
 
 Next time, it keeps a cookie of the current language to 
 avoid any redirection.

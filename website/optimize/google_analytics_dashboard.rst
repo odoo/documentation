@@ -58,8 +58,8 @@ Dashboard thanks to Google Analytics.
 .. image:: media/google_analytics_client_id.png
     :align: center
 
-- Open your Website Dashboard in Odoo and link your Analytics account. 
-  to past your Client ID.
+- Open your Website Dashboard in Odoo and link your Analytics account to past
+  your Client ID.
 
 .. image:: media/google_analytics_start.png
     :align: center
