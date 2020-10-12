@@ -97,24 +97,6 @@ Production and staging builds are excluded, visitors can only see their status.
 
 .. _odoosh-gettingstarted-settings-modules-installation:
 
-Modules installation
-====================
-
-Choose the modules to install automatically for your development builds.
-
-.. image:: ./media/interface-settings-modulesinstallation.png
-   :align: center
-
-* *Install only my modules* will install the modules of the branch only.
-  The :ref:`submodules <odoosh-advanced-submodules>` are excluded.
-* *Full installation (all modules)* will install the modules of the branch, the modules included in the submodules
-  and all standard modules of Odoo.
-* *Install a list of modules* will install the modules specified in the input just below this option.
-  The names are the technical name of the modules, and they must be comma-separated.
-
-If the tests are enabled, the standard Odoo modules suite can take up to 1 hour.
-This setting applies to development builds only.
-Staging builds duplicate the production build and the production build only installs base.
 
 Custom domains
 ==============

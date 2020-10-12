@@ -153,6 +153,6 @@ purchase lines booked in the accounts and will display them in the
    The theoretical amount represents the amount of money you theoretically could
    have spend / should have received in function of the date. When your budget
    is 1200 for 12 months (january to december), and today is 31 of january, the
-   theoretical amount will be 1000, since this is the actual amount that could
+   theoretical amount will be 100, since this is the actual amount that could
    have been realised.
 

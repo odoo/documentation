@@ -95,7 +95,8 @@ When you push a new commit in one of these branches,
 a new server is started, with a database created from scratch and the new revision of the branch.
 The demo data is loaded, and the unit tests are performed by default.
 This verifies your changes do not break any of the features tested by them. If you wish, you can
-disable the tests in the :ref:`branch's settings <odoosh-gettingstarted-branches-tabs-mails>`.
+disable the tests or allow specific tests to be run with custom tags in the :ref:`branch's settings
+<odoosh-gettingstarted-branches-tabs-settings>`.
 
 Similar to staging branches, the emails are not sent but are intercepted by a mailcatcher and
 scheduled actions are not triggered as often is the database is not in use.
@@ -276,9 +277,30 @@ to manually set it up again on every commit. If you choose new build for a stagi
 make a fresh copy from the production build every time a commit is pushed. A branch that is put
 back from staging to development will automatically be set to 'Do nothing'.
 
+**Modules installation**
+
+Choose the modules to install automatically for your development builds.
+
+.. image:: ./media/interface-settings-modulesinstallation.png
+   :align: center
+
+* *Install only my modules* will install the modules of the branch only. This is the default option.
+  The :ref:`submodules <odoosh-advanced-submodules>` are excluded.
+* *Full installation (all modules)* will install the modules of the branch, the modules included in the submodules
+  and all standard modules of Odoo. When running the full installation, the test suite is disabled.
+* *Install a list of modules* will install the modules specified in the input just below this option.
+  The names are the technical name of the modules, and they must be comma-separated.
+
+If the tests are enabled, the standard Odoo modules suite can take up to 1 hour.
+This setting applies to development builds only.
+Staging builds duplicate the production build and the production build only installs base.
+
+
 **Test suite**
 
 For development branches, you can choose to enable or disable the test suite. It's enabled by default.
+When the test suite is enabled, you can restrict them by specifying test tags `test tags
+<https://www.odoo.com/documentation/12.0/reference/testing.html#test-selection>`_.
 
 **Odoo Version**
 
