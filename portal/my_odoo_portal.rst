@@ -123,7 +123,7 @@ Delete your Odoo.com account
 In order to delete your Odoo.com account, you have to reach out to our `Support Services <https://www.odoo.com/help>`_. 
 
 .. seealso::
-    If you want to delete one of your databases, see:ref:`db_online`
+    If you want to delete one of your databases, see :ref:`db_online`
 
 .. warning::
     If you wish instead to formally request the deletion of all the information connected to your email address as per the European Union General Data Protection Regulation (GDPR), please send an email to privacy@odoo.com. 
