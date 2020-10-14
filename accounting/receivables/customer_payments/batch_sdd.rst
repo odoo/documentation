@@ -103,11 +103,6 @@ You can register SDD payments for invoices issued to customers who have an activ
 To do so, open the invoice, click on *Register Payment*, and choose *SEPA Direct Debit* as payment
 method.
 
-.. note::
-   In previous versions, Odoo used SDD payment as the default payment for all customers with an
-   active mandate. Your customers can still activate automatic SDD for their subscriptions with a
-   recurring payment.
-
 Generate SEPA Direct Debit XML files to submit payments
 -------------------------------------------------------
 
