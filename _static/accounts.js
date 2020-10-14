@@ -1,14 +1,14 @@
 (function () {
     'use strict';
 
-    const {Component, useState} = owl;
-    const {xml} = owl.tags;
+    const { Component, useState } = owl;
+    const { xml } = owl.tags;
 
     class AccountsTable extends Component {
 
         constructor() {
             super(...arguments);
-            this.state = useState({current: ''});
+            this.state = useState({ current: '' });
         }
 
         mounted() {
@@ -34,8 +34,8 @@
                 });
             });
         }
-
-        static template = xml`
+    }
+    AccountsTable.template = xml`
             <div style="margin-top:1em;">
                 <div t-att-class="state.current === 'p-l' ? 'related' : ''">
                     <h4>Profit &amp; Loss</h4>
@@ -95,7 +95,6 @@
                     </div>
                 </div>
             </div>`;
-    }
 
     document.addEventListener('DOMContentLoaded', function () {
         const target = document.querySelector('.accounts-table');

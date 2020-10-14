@@ -236,7 +236,7 @@
                 const index = this.selectedOps.findIndex((op) => { return op.label === currentOp.label; });
                 this.selectedOps.splice(index, 1);
             }
-            this.setCategoryValue(currentOp, event.target.checked)
+            this.setCategoryValue(currentOp, event.target.checked);
         }
 
         getOperationByLabel(name) {
@@ -308,8 +308,8 @@
                             </tr>
                         </thead>
                         <tbody>
-                            <t t-foreach="state.categories" t-as="category">
-                                <tr t-key="category.code">
+                            <t t-foreach="state.categories" t-as="category" t-key="category.code">
+                                <tr>
                                     <th>
                                         <span><t t-esc="category.code"/> <t t-esc="category.label"/></span>
                                     </th>
