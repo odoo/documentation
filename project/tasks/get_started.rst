@@ -79,9 +79,6 @@ Drag and drop tasks to change their stage and define colors to help you identify
    :height: 340
    :alt: Choose a color to identify your task in Odoo Project
 
-.. seealso::
-   - :doc:`../../general/tags/take_tags`
-
 
 
 
