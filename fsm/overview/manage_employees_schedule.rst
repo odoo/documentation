@@ -37,6 +37,3 @@ person he can be assigned.
 
 .. tip::
    Create projects per team, or per working site, and have a more accurate and dynamic database.
-
-.. seealso::
-   * :doc:`../../project/overview/setup`
