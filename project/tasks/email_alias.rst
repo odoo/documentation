@@ -37,6 +37,5 @@ The email can be seen under the name of your project on the dashboard.
    :alt: View of the email alias chosen on the dashboard view in Odoo Project
 
 .. seealso::
-   - :doc:`./get_started`
    - :doc:`./collaborate`
 
