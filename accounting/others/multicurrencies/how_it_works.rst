@@ -165,6 +165,8 @@ journal entries. All the exchange rates differences are recorded in it.
 .. image:: media/works14.png
    :align: center
 
+.. include:: full_reconcile_warning.rst
+
 .. seealso::
 
 	* :doc:`invoices_payments`
