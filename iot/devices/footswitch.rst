@@ -5,32 +5,21 @@ Connect a Footswitch
 When working, it is always better to have your two hands available.
 Using Odoo’s *IoT Box* and a footswitch will allow it.
 
-In fact, you will be able to go from one screen to another by using your
-foot and the footswitch. Really convenient, it can be configured in a
-few steps.
+In fact, you will be able to go from one screen to another and perform
+actions by using your foot and the footswitch. Really convenient, it
+can be configured in a few steps.
 
 Connection
 ==========
 
 Connecting the footswitch to the *IoT Box* is easy, you just have to
-combine the two by cable.
-
-.. note::
-   In some cases, a serial to USB adapter may be needed.
+connect the two by cable.
 
 If your footswitch is a `supported
 one <https://www.odoo.com/page/iot-hardware>`__, there is no need to
 set up anything since it will be automatically detected when connected.
 
 .. image:: media/footswitch_01.png
-   :align: center
-
-If it is not a supported one, you may need to restart the box and
-download your footswitch’s drivers from the box. To do so, go to the
-*IoT Box Home Page* and click on *drivers list*. Then, click on load
-drivers.
-
-.. image:: media/footswitch_02.png
    :align: center
 
 Link a Footswitch to a Workcenter

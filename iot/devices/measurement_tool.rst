@@ -10,17 +10,9 @@ Connect in USB
 ==============
 
 To add a device connected by USB, just plug the USB cable in the *IoT
-Box*, restart the Box and the device should appear in your Odoo
-database.
+Box*, and the device should appear in your Odoo database.
 
 .. image:: media/measurement_tool_01.png
-   :align: center
-
-If the device is not found, make sure the drivers have well been loaded
-on your IoT Box. For this, connect to the *IoT Box Homepage* and click
-on load drivers.
-
-.. image:: media/measurement_tool_02.png
    :align: center
 
 Connect in Bluetooth
