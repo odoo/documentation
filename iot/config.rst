@@ -7,6 +7,6 @@ Configuration
    :glob:
 
    config/connect
-   config/flash_sdcard
-   config/iot_notfound
    config/pos
+   config/flash_sdcard
+   config/troubleshooting
