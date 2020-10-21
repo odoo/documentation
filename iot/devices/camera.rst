@@ -11,24 +11,14 @@ the chosen quality control point.
 Connection
 ==========
 
-To connect the camera to the *IoT Box*, simply combine the two by
+To connect the camera to the *IoT Box*, simply connect the two by
 cable.
-
-.. note::
-   In some cases, a serial to USB adapter could be needed.
 
 If your camera is a `*supported
 one* <https://www.odoo.com/page/iot-hardware>`__, there is no need to
 set up anything as it will be detected as soon as it is connected.
 
 .. image:: media/camera_01.png
-   :align: center
-
-In some cases, you could need to restart the box and download your
-camera’s drivers from the box. To do so, go to your *IoT Box Home
-Page* and click on *drivers list*. Then, click on load drivers.
-
-.. image:: media/camera_02.png
    :align: center
 
 Link a Camera to a Quality Control Point
