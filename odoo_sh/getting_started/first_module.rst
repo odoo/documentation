@@ -179,7 +179,7 @@ From an Odoo.sh editor terminal:
 
 The above command is explained in the section
 :ref:`Commit & Push your changes
-<odoosh-gettingstarted-online-editor>` of the
+<odoosh-gettingstarted-online-editor-push>` of the
 :ref:`Online Editor <odoosh-gettingstarted-online-editor>`
 chapter.
 It includes the explanation regarding the fact you will be prompted to type your username and password,
@@ -444,7 +444,7 @@ Add
 
   unidecode
 
-Then use the library in your module, for instance to remove any special characters in the name field of your
+Then use the library in your module, for instance to remove accents from characters in the name field of your
 model.
 
 Open the file *models/models.py*.

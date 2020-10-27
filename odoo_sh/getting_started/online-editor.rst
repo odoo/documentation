@@ -133,7 +133,7 @@ In this last command,
   If you activated the two-factor authentication on Github,
   you can create a
   `personal access token <https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>`_
-  and use it as password.
+  and use it as password. Granting the `repo` permission suffices.
 
 
 .. Note::
