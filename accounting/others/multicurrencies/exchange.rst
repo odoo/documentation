@@ -105,6 +105,8 @@ journal entries. All the exchange rates differences are recorded in it.
 .. tip::
     The Exchange difference journal can be changed in your accounting settings.
 
+.. include:: full_reconcile_warning.rst
+
 .. seealso::
     * :doc:`../../bank/reconciliation/reconciliation_models`
     * :doc:`../../bank/reconciliation/use_cases`
