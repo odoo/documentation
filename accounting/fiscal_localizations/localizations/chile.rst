@@ -217,8 +217,8 @@ Chile case: SII).
 The document type is essential information that needs to be displayed in the printed reports and
 that needs to be easily identified within the set of invoices as well of account moves.
 
-Each document type can have a unique sequence per journal where it is assigned. As part of the
-localization, the Document Type includes the country on which the document is applicable and the data
+Each document type can have a unique sequence per company.  As part of the localization,
+the Document Type includes the country on which the document is applicable and the data
 is created automatically when the localization module is installed.
 
 The information required for the document types is included by default so the user doesn't need to
@@ -287,74 +287,50 @@ applicable to Purchase and Sales journals that can be related to the
 different sets of document types available in Chile. By default, all the sales journals created will
 use documents. 
   
-.. image:: media/Chile10.png
+.. image:: media/Chile41.png
    :align: center
    :alt: Document type configuration on Journal.
-
-Sequences
-*********
-
-When a Journal is created we have two options with document types sequences. 
-
-1. Create new sequences: In this case, Odoo will create new sequences for the most common document
-   types. 
-2. Use existent sequence: If the sequence should be shared between several journals, the user can
-   add manually sequences previously created.  
-
-.. image:: media/Chile11.png
-   :align: center
-   :alt: Steps to add new sequences on journals.
    
 .. important::
    For the Chilean localization it’s important to define the default Debt and Credit accounts 
    as they are required for one of the debit notes use cases.
    
 CAF
-***
+---
 
-For each sequence related to the documents type, a CAF (Folio Authorization Code) is required,
-the CAF is a file the SII provides to the Emisor with the folio/sequence authorized for the 
-electronic invoice documents.
+A CAF (Folio Authorization Code) is required, for each document type that is issued to your
+customers, the CAF is a file the SII provides to the Emisor with the folio/sequence authorized 
+for the electronic invoice documents.
 
 Your company can make several requests for folios and obtain several CAFs, each one associated
-with different ranges of folios. In this way, you could order folios per the different
-segmentations you have in your journals (example per office) thus avoiding distributing a range
-of folios. In this way, each branch would have its private key of the respective CAF.
+with different ranges of folios. The CAFs are shared within all the journals, this means
+that you only need one active CAF per document type and it will be applied on all journals.
 
 Please refer to the SII documentation to check the detail on how to acquire the CAF:
 `SII Timbraje <https://palena.sii.cl/dte/mn_timbraje.html>`_.
 
 	
 Configuration
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
-Once you have the CAF files you need to associate them with journal sequence in Odoo,
-after you create the sequence for the first time the will be in red, which indicates
-that no CAF has been configured for that particular sequence:
+Once you have the CAF files you need to associate them with a document type in Odoo,
+in order to add a CAF, just follow these steps:
+ 
+1. Access to :menuselection:`Accounting --> Settings --> CAF`
+2. Upload the file.
+3. Save the CAF.
 
-.. image:: media/Chile12.png
+.. image:: media/Chile39.png
    :align: center
-   :alt: Sequences per document type on journals.
+   :alt: Steps to add a new CAF.
 
-In order to add a CAF, just follow these steps:
+Once loaded, the status changes to *In Use*. At this moment, when a transaction is used
+for this document type, the invoice number takes the first folio in the sequence. 
 
-1. Open the sequence. 
-2. Go the the Tab “CAF”.
-3. Upload the file.
-4. Save the CAF.
-5. Save the sequence. 
+.. important::
+   In case you have used some folios in your previous system, make sure you set the next valid
+   folio when the first transation is created. 
 
-.. image:: media/Chile13.gif
-   :align: center
-   :alt: Steps to add a new CAF on sequences.
-
-
-As a result, the sequence color changes to black and the column Next number and quantity
-available are updated:
-
-.. image:: media/Chile13.png
-   :align: center
-   :alt: Sequences per document type on journals.   
 
 
 Usage and Testing
@@ -531,8 +507,7 @@ you might have and which is the related solution.
 - Error: Fecha/Número Resolucion Invalido RECHAZO- CAF Vencido : (Firma_DTE[AAAA-MM-DD] - 
   CAF[AAAA-MM-DD]) &gt; 6 meses.
   
-  *Hint:* Try to add a new CAF in the journal sequence related to this document as the one you’re 
-  using is expired. 
+  *Hint:* Try to add a new CAF related to this document as the one you’re using is expired.
 
 
 
@@ -540,16 +515,16 @@ Credit Notes
 ------------
 
 When a cancellation or correction is needed over a validated invoice, a credit note must be
-generated. It is important to consider that a CAF file is required for the Credit Note sequence,
+generated. It is important to consider that a CAF file is required for the Credit Note,
 which is identified as document 64 in the SII.  
 
-.. image:: media/Chile25.png
+.. image:: media/Chile40.png
    :align: center
-   :alt: Creation of CAF for Credit notes sequences.
+   :alt: Creation of CAF for Credit notes.
 
 
-.. tip:: Refer to the journal section where we described the process to load the CAF on each 
-   sequence.
+.. tip:: Refer to the CAF section where we described the process to load the CAF on each 
+   document type.
 
 Use Cases
 ~~~~~~~~~
