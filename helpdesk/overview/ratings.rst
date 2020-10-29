@@ -32,8 +32,8 @@ customer.
    :align: center
    :alt: View of a standard helpdesk customer review email template for Odoo Helpdesk
 
-Ratings can be seen on the :doc:`chatter <../../project/tasks/collaborate>` of each ticket, under
-the *See Customer Satisfaction* link on the main dashboard, and through *Reporting*.
+Ratings can be seen on the chatter of each ticket, under the *See Customer Satisfaction* link on the
+main dashboard, and through *Reporting*.
 
 Ratings visible on the customer portal
 --------------------------------------
