@@ -12,10 +12,10 @@ Choose an encoding unit
 
 | Under :menuselection:`Timesheets --> Configuration --> Settings`, choose the unit of measure to
   register your timesheet. This provides tools and widgets to help you encoding.
-| *Minimal duration* is the minimum time at which a task is recorded.
-| *Rounding up* allows you to time up or down to the nearest minutes or hours. For example: if the
-  interval is set to 30min, a 14min entry will show up in reports as 0min, and a 29min entry
-  as 30min.
+| *Minimal duration* is the minimum time at which a task is recorded, when using the timer.
+| *Rounding up* times up or down to the nearest minutes or hours, when using the timer.
+   For example: if the interval is set to 30min, a 14min entry shows up in reports as 0min, and
+   a 29min entry as 30min.
 
 .. image:: media/get1.png
    :align: center
