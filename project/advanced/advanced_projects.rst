@@ -22,7 +22,7 @@ Choose who can access a project
 To create a project for specific teams, under *Visibility*, choose who can have access to the
 project:
 
-- *Invited employees*: the ones who are followers (see :doc:`../tasks/collaborate`)
+- *Invited employees*: the ones who are followers.
 - *All employees*.
 - *Portal users and all employees*: it enables the option *Share*. Recipients receive an
   email with an invitation to access the document (project).

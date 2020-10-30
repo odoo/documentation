@@ -10,8 +10,7 @@ transparency by promoting a convenient way of communicating.
 Choose your notifications preference
 ====================================
 
-Access your *Preferences* and choose how you would like your
-:doc:`Chatter <../../project/tasks/collaborate>` notifications to be handled.
+Access your *Preferences* and choose how you would like your notifications to be handled.
 
 .. image:: media/change_preferences.png
    :align: center
@@ -61,8 +60,8 @@ You can also create :doc:`public and private channels <team_communication>`.
 Mentions in the chat and on the Chatter
 ---------------------------------------
 
-| To mention a user within a chat or the :doc:`chatter <../../project/tasks/collaborate>` type
-  *@user-name*; to refer to a channel, type *#channel-name*.
+| To mention a user within a chat or the chatter type *@user-name*; to refer to a channel, type
+  *#channel-name*.
 | A notification is sent to the user mentioned either to his *Inbox* or through email, depending
   on his settings.
 
@@ -72,9 +71,8 @@ Mentions in the chat and on the Chatter
 
 .. tip::
    When a user is mentioned, the search list (list of names) suggests values first based on the
-   task’s :doc:`followers <../../project/tasks/collaborate>`, and secondly on *Employees*. If the
-   record being searched does not match with either a follower or employee, the scope of the search
-   becomes all partners.
+   task’s followers, and secondly on *Employees*. If the record being searched does not match with
+   either a follower or employee, the scope of the search becomes all partners.
 
 Chat status
 -----------
@@ -94,6 +92,5 @@ sidebar and on the *Messaging menu*.
    :alt: View of the contacts’ status for Odoo Discuss
 
 .. seealso::
-   - :doc:`../../project/tasks/collaborate`
    - :doc:`team_communication`
    - :doc:`../advanced/email_servers`
