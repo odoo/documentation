@@ -43,3 +43,12 @@ Several community apps for Odoo list ``pycups`` as required dependency.
 We consider adding new system packages as long as they are indeed used.
 Regarding ``pycups``, you won't be able to configure a printer in the local network of your Odoo.sh server.
 
+
+The online editor is loading indefinitely
+-----------------------------------------
+
+If you can't access the online editor (either a white page, or a frozen loading screen), 
+you can restart it by opening a shell on the affected branch and running these two commands:
+
+- rm ~/.jupyter
+- pkill -9 jupyter
