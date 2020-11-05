@@ -74,6 +74,8 @@ You can start using Odoo.sh. Your first build is about to be created. You will s
 .. image:: ./media/deploy-done.png
    :align: center
 
+.. _odoo_sh_import_your_database:
+
 Import your database
 ====================
 

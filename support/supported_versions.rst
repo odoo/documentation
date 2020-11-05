@@ -1,5 +1,6 @@
 .. :banner: banners/support.jpg
 
+.. _supported_versions:
 
 ==================
 Supported versions

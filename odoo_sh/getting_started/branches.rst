@@ -224,6 +224,8 @@ If you scroll to the bottom, the browser will scroll automatically each time a n
 You can pause the logs fetching by clicking on the according button in the upper right corner of the view.
 The fetching is automatically stopped after 5 minutes. You can restart it using the play button.
 
+.. _odoo_sh_branches_backups:
+
 Backups
 -------
 A list of the backups available for download and restore, the ability to perform a manual backup and to import a
