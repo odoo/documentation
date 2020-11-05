@@ -14,3 +14,4 @@ Practical Information
    support
    legal
    contributing
+   email_communication
