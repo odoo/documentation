@@ -7,4 +7,4 @@ VoIP (Voice over Internet Protocol)
 
    voip/asterisk
    voip/onsip
-   voip/asterisk
+   voip/axivox
