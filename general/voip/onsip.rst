@@ -1,5 +1,5 @@
 ====================================
-Use VOIP services in Odoo with OnSIP
+Use VoIP services in Odoo with OnSIP
 ====================================
 
 Introduction
