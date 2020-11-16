@@ -66,7 +66,7 @@ In particular, Odoo's core accounting engine supports:
 * European accounting where expenses are accounted at the supplier
   bill.
 
-Odoo also have modules to comply with IFRS rules.
+Odoo has modules to comply with IFRS rules.
 
 Accounts Receivable & Payable
 =============================
