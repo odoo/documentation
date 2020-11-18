@@ -283,41 +283,41 @@ process in Odoo, this considerations to understand the behavior are important.
    **1.1. How can I generate an invoice with payment term `PUE`?**
 
    `According to the SAT documentation`_ a payment is classified as ``PUE`` if
-   the invoice was agreed to be fully payed before the 17th of the next
-   calendar month (the next month of the CFDI date), any other condition
-   will generate a ``PPD`` invoice.
+   it was agreed that the invoice would be fully payed before the 1st of the
+   next calendar month (the month after the one in the CFDI date); any other
+   condition will generate a ``PPD`` invoice.
 
-   **1.2. How can I get this with Odoo?**
+   **1.2. How is this done in Odoo?**
 
-   In order to set the appropriate CFDI payment term (PPD or PUE), you can
-   easily set it by using the ``Payment Terms`` defined in the invoice.
+   The appropriate CFDI payment term (PPD or PUE) is determined by the dates
+   and the ``Payment Terms`` that are selected in the invoice.
 
    - If an invoice is generated without ``Payment Term`` the attribute
-     ``MetodoPago`` will be ``PUE``.
+     ``MetodoPago`` will always be ``PUE``.
 
-   - Today, if is the first day of the month and is generated an invoice with
-     ``Payment Term`` ``30 Net Days`` the ``Due Date`` calculated is going to
-     be the first day of the following month, this means its before the 17th
-     of the next month, then the attribute ``MetodoPago`` will be ``PUE``.
+   - If this is the first week of the month and an invoice is generated
+     with ``Payment Term`` ``15 Net Days`` the calculated ``Due Date`` will
+     be before the 1st of the next month, which will result in the
+     attribute ``MetodoPago`` being ``PUE``.
 
-   - Today, if an invoice is generated with ``Payment Term`` ``30 Net Days``
-     and the ``Due Date`` is higher than the day 17 of the next month the
-     ``MetodoPago`` will be ``PPD``.
+   - If this is not the first week of the month and an invoice is generated 
+     with ``Payment Term`` ``30 Net Days``, the ``Due Date`` will be later higher 
+     than the 1st day of the next month and the ``MetodoPago`` will be ``PPD``.
 
-   - If having a ``Payment Term`` with 2 lines or more, for example
-     ``30% Advance End of Following Month``, this is an installments term,
-     then the attribute ``MetodoPago`` will be ``PPD``.
+   - If the ``Payment Term`` are defined with 2 or more lines (for example
+     ``30% Advance`` and ``End of Following Month``), this is an installments
+     term, and the attribute ``MetodoPago`` will always be ``PPD``.
 
-#. To test a normal signed payment just create an invoice with payment term
-   ``30% Advance End of Following Month`` and then register a payment to it.
+#. To test a normal signed payment just create an invoice with the payment term
+   ``30% Advance, End of Following Month`` and register a payment to it.
 #. You must print the payment in order to retrieve the PDF properly.
-#. Regarding the "Payments in Advance" you must create a proper invoice with
-   the payment in advance itself as a product line setting the proper SAT code
-   following the procedure on the official documentation `given by the SAT`_
+#. Regarding "Payments in Advance" you must create a proper invoice with
+   the advance payment itself as a product line setting the proper SAT code
+   following the procedure in the official documentation `given by the SAT`_
    in the section **Apéndice 2 Procedimiento para la emisión de los CFDI en el
    caso de anticipos recibidos**.
-#. Related to topic 4 it is blocked the possibility to create a Customer
-   Payment without a proper invoice.
+#. Related to topic 4, creating a Customer Payment without a proper invoice
+   is not allowed.
 
 
 Accounting
