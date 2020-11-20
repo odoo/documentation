@@ -137,7 +137,28 @@ Connect to your database
 Pricing
 =======
 
-| *Partner Autocomplete* is an *In-App Purchase (IAP)* service, which requires prepaid credits to be
+The extension is **free** and doesn't require any purchase to be installed and used.
+
+However, this extension provides you with *Lead Enrichment* in the **Company Insights** section.
+This service is part of a paid service known as **Lead Generation**.
+
+The extension allows you to test this service for free, whether you connect the extension to a
+database or not. After a while, the extension asks you to buy credits to keep using this additional
+service.
+
+.. image:: media/outlook-extension-credits-message.png
+   :align: center
+   :alt: "Could not auto-complete the company: not enough credits!" warning message in the Outlook
+         extension
+
+.. tip::
+   You can buy more *Lead Generation* credits to keep using this service or disregard this message
+   and keep using the extension for free without *Lead Enrichment*.
+
+In-App Purchase
+---------------
+
+| *Lead Generation* is an *In-App Purchase (IAP)* service, which requires prepaid credits to be
   used. Each request consumes one credit.
 | To buy credits, go to :menuselection:`Settings --> Contacts --> Partner Autocomplete or Odoo IAP -->
   View My Services` and select a package.
@@ -150,5 +171,5 @@ Pricing
    - Learn about our *Privacy Policy* `here <https://iap.odoo.com/privacy#header_2>`_.
 
 .. seealso::
-   - :doc:`partner_autocomplete`
    - :doc:`../../general/in_app_purchase/in_app_purchase`
+   - `Odoo Learn: Lead Enrichment <https://www.odoo.com/r/p73>`_
