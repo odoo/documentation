@@ -1,21 +1,21 @@
 ================================================
-Plan Onsite Interventions from Helpdesk Tickets
+Plan onsite interventions from helpdesk tickets
 ================================================
-The integration with the Helpdesk application lets your helpdesk team manage interventions requests
-directly. It speeds up processes as you can plan field services tasks from tickets.
+The integration with the Helpdesk app lets your helpdesk team manage interventions requests directly.
+Planning field service tasks from tickets speeds up your processes.
 
-Enable the feature
-===================
-Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams --> Edit` and enable
-:menuselection:`Onsite Interventions --> Save`.
+Configure the helpdesk team
+===========================
+Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`. Select a team and enable
+*Onsite Interventions*.
 
-.. image:: media/po1.png
+.. image:: media/onsite-interventions-helpdesk-setting.png
    :align: center
-   :height: 400
-   :alt: Tasks from tickets in Odoo Field Service
+   :alt: Onsite interventions setting in Odoo Helpdesk
 
-Now once your helpdesk team needs, they have the option to *Plan Intervention* from tickets.
+The helpdesk tickets of the team now display the *Plan Intervention* button. Click on it to create a
+new task under your field service project.
 
-.. image:: media/po2.png
+.. image:: media/plan-intervention-from-ticket.png
    :align: center
-   :alt: Tasks from tickets in Odoo Field Service
+   :alt: Plan intervention from helpdesk ticket in Odoo Helpdesk
