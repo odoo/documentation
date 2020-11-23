@@ -64,6 +64,5 @@ same way as if you were on the *Field Service* application.
    :height: 300
 
 .. seealso::
-   - :doc:`../../fsm/overview/invoicing_time`
    - `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
    - :doc:`../../manufacturing/repair/repair`
