@@ -44,6 +44,3 @@ on that cell (day), and see details regarding the project/task.
 .. image:: media/timesheet_description.png
    :align: center
    :alt: View of the details of a project/task in Odoo Timeheets
-
-.. seealso::
-   - :doc:`compare`
