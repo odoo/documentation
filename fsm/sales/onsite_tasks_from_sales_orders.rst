@@ -1,29 +1,30 @@
-===================================================
-Create Onsite Interventions Tasks from Sales Orders
-===================================================
-By allowing your sales team to open onsite interventions tasks will create a seamless experience
-for your customers. It also allows them to first receive a quotation with the materials that will
-be used plus the service price to be approved before the work even starts.
+=============================================
+Create onsite interventions from sales orders
+=============================================
+Allowing your sales team to open onsite interventions creates a seamless experience for your
+customers. They can receive a quotation they first have to approve before the work even starts.
 
-Enable the feature
-==================
-Go to :menuselection:`Sales --> Products --> Create` or edit an existing one.
-Select: under :menuselection:`General Information --> Product Type: Service`;
-under :menuselection:`Sales --> Service Invoicing Policy: Timesheet on task --> Service Tracking:
-Create a task in an existing project --> Project --> Worksheet Template --> Save`.
+Configure a product
+===================
+Go to :menuselection:`Field Service --> Configuration --> Products` and create or edit a product.
 
-.. image:: media/onsite1.png
+#. Under the *General Information* tab, select *Service* as *Product Type*.
+
+#. Under the *Sales* tab, select *Timesheets on tasks* as *Service Invoicing Policy*.
+
+#. Select *Create a task in an existing project* as *Service Tracking*.
+
+#. Select your *Project*.
+
+#. If you use them, select your *Worksheet Template* and then click on *Save*.
+
+.. image:: media/product-configuration-tasks-from-sales-orders.png
    :align: center
-   :alt: Onsite Interventions from Sales Order in Odoo Field Service
+   :alt: Product configuration to create tasks from sales orders in Odoo Field Service
 
-Now, once you have *Confirmed* a *quotation*, a task will be created in the respective
-project you have chosen.
+From the *Sales* app, create a quotation with the product and confirm it. A task is automatically
+set up under your Field Service project. It is directly accessible from the sales order.
 
-.. image:: media/onsite2.png
+.. image:: media/field-service-task-on-sales-order.png
    :align: center
-   :alt: Onsite Interventions from Sales Order in Odoo Field Service
-
-
-.. tip::
-   One of the greatest benefits here is that you can have different *Worksheets Templates* under the
-   same project and product, for example.
+   :alt: Field Service task on a sales order in Odoo Sales
