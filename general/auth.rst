@@ -9,5 +9,4 @@ Authentication
    auth/google_spreadsheets
    auth/azure
    auth/ldap
-
-
+   auth/2fa
