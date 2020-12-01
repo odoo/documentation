@@ -17,7 +17,7 @@ Register your application with the Microsoft identity platform
   choosing the appropriate supported account type.
 
 .. note::
-   When configuring your platform settings, choose *Web* as the appropriate one.
+   When configuring your platform settings, choose *Web*.
 
    .. image:: media/platform_configurations.png
       :align: center
@@ -34,7 +34,7 @@ Register your application with the Microsoft identity platform
    | For more information on the restrictions and limitations of URIs, `check this page <https://docs.microsoft.com/en-us/azure/active-directory/develop/reply-url>`_.
 
 .. note::
-   Regarding credentials, you must **Add a client secret**, called *Client Secret* in Odoo, which
+   Regarding credentials, you *must* **Add a client secret**, called *Client Secret* in Odoo, which
    allows Odoo to authenticate itself, requiring no interaction from your side. *Certificates* are
    optional.
 
@@ -66,8 +66,21 @@ and paste it to *Client Secret* in Odoo.
 Sync with Outlook
 =================
 
+.. important::
+   | Odoo Calendar sends a confirmation email at the creation of an event to its attendees. But, on
+     the **first** sync, Outlook will also send confirmation emails of all scheduled events
+     (including past ones).
+   | To avoid this situation, we recommend *archiving all past events, and removing yourself from
+     future ones in Odoo Calendar before the first sync*. This will prevent events from being
+     created in Outlook, and therefore, no redundant emails will be sent during the first
+     synchronization. After the sync, events will only send one confirmation email.
+
+      .. image:: media/archive_odoocalendar.png
+         :align: center
+         :alt: Archive events in Odoo Calendar
+
 Go to the *Calendar* application and *Sync with Outlook*. You are asked to log in to
-your account, if you are not already, and to grant the required permissions.
+your account, if you are not already, and grant the required permissions.
 
 .. image:: media/sync_with_outlook.png
    :align: center
