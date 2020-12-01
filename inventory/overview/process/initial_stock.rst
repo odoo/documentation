@@ -1,8 +1,10 @@
-======================
-Set your Initial Stock
-======================
+MERB RESOURCES INT'L LTD.- INVENTORY MANAGEMENT
 
-The first step to use the inventory application is to create products in
+=============================
+How to Set your Initial Stock
+=============================
+
+The first step for you to use the "inventory application" is to create products in
 your database via the menu :menuselection:`Master Data --> Products`. Click the Create
 button and enter the name of your product.
 
@@ -19,7 +21,7 @@ Inventory Adjustment for Multiple Products
 ==========================================
 
 Once you have created all your *storable products*, you can create an
-*inventory adjustment* to determine their current stock level in Odoo.
+*inventory adjustment* to determine their current stock level in the software "Odoo".
 You therefore need to go to :menuselection:`Operations --> Inventory Adjustments` and
 create a new one.
 
@@ -28,14 +30,14 @@ create a new one.
 
 You have to enter a title for your *inventory adjustment* and you can
 then decide if you want to proceed to the *inventory adjustment* of
-all products or only some of them. For a first *inventory adjustment*,
-I suggest you to keep the *Products* field empty. You can then *Start
+all products or only some of them. For your first *inventory adjustment*,
+We suggest that you should keep the *Products* field empty. You can then *Start
 Inventory*.
 
 .. image:: media/initial_stock_04.png
     :align: center
 
-If you already have some products in stock, Odoo will add the lines with
+If you already have some products in stock, the software "Odoo" will add the lines with
 the theoretical quantity currently in stock. You can also add new lines
 with your other products.
 
@@ -47,7 +49,7 @@ with your other products.
          additional column allowing you to specify those for the different units
          added to the inventory adjustment.
 
-Odoo will highlight in red the lines for which there is a difference
+The software "Odoo" will highlight in red the lines for which there is a difference
 between the theoretical quantity on hand, which is automatically
 computed by the system, and the counted quantity you manually entered.
 Once all the necessary products have been entered, you can hit
@@ -63,7 +65,7 @@ button.
 .. image:: media/initial_stock_06.png
     :align: center
 
-When clicking this button, you see the current stock you have for this
+When clicking this button, you will see the current stock you have for this
 product. You can edit the existing lines or create new ones to add stock
 of your product in different locations and/or add new serial/lot
 numbers.
@@ -71,7 +73,7 @@ numbers.
 .. image:: media/initial_stock_07.png
     :align: center
 
-Once you come back to your product, you see that the quantity on hand as
+Once you come back to your product, you will see that the quantity on hand has
 been updated taking your modification into account.
 
 .. image:: media/initial_stock_08.png
@@ -83,11 +85,11 @@ been updated taking your modification into account.
          different variants into account.
 
 By default, the quantity on hand of the product form will show you the
-number of products that are part of your warehouse view location,
-meaning which are part of an internal type sub-location of this
+number of products that are part of your current warehouse view location,
+i.e which are part of an internal type sub-location of this
 warehouse. It means that if you have any product in a location that
 isn’t under the main warehouse location, they won’t appear in the stock
-on hand stat button.
+on hand status button.
 
 .. image:: media/initial_stock_09.png
     :align: center
