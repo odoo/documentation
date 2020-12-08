@@ -18,6 +18,7 @@ Applications
    bi
    documents
    fsm
+   sign
    point_of_sale
    inventory
    manufacturing
@@ -62,6 +63,7 @@ Applications
    timesheets
    planning
    fsm
+   sign
    point_of_sale
    inventory
    manufacturing
