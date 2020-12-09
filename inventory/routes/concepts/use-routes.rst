@@ -271,7 +271,7 @@ all of them:
    that need. Then, a need is created in the previous location and a rule is triggered to fulfill 
    it. Once the second need fulfilled, the products are pushed to the first location and all the
    needs are fulfilled.
--  **Buy**: when products are needed at the source location, a
+-  **Buy**: when products are needed at the destination location, a
    request for quotation is created to fulfill the need.
 -  **Manufacture**: when products are needed in the source location,
    a manufacturing order is created to fulfill the need.
