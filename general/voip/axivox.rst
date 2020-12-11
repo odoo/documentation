@@ -32,6 +32,8 @@ Go to :menuselection:`Settings --> General Settings --> Integrations`, and fill 
 .. image:: media/axivox-voip-configuration.png
    :align: center
    :alt: Integration of Axivox as VoIP provider in an Odoo database
+   
+**Configure the VOIP user in the Odoo's user :**
 
 Go to :menuselection:`Settings --> Users & Companies --> Users`, then open the user's form you want
 to configure. Under the **Preferences** tab, fill out the section **PBX Configuration**:
@@ -39,6 +41,10 @@ to configure. Under the **Preferences** tab, fill out the section **PBX Configur
 - **SIP Login / Browser's Extension**: the Axivox *username*
 - **SIP Password**: the Axivox *SIP Password*
 
+.. image:: media/axivox-odoo-user.png
+   :align: center
+   :alt: Integration of Axivox user in the Odoo user preference
+   
 .. note::
    You can find all this information by logging in at https://manage.axivox.com/, selecting the user
    you want to configure, and referring to the fields as pictured below.
