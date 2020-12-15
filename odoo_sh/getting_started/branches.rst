@@ -203,6 +203,16 @@ You can also open terminals, Python consoles and even Odoo Shell consoles.
 You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
 for instance side by side.
 
+Monitoring
+----------
+This link contains various monitoring metrics of the current build.
+
+.. image:: ./media/interface-branches-monitoring.png
+   :align: center
+
+You can zoom, change the time range or select a specific metric on each graph.
+On the graphs, annotations help you relate to changes on the build (database import, git push, etc...).
+
 Logs
 ----
 A viewer to have a look to your server logs.
