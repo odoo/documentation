@@ -7,4 +7,3 @@ Advanced
 
    advanced/advanced_projects
    advanced/feedback
-   advanced/profitability
