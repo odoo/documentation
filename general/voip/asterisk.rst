@@ -1,5 +1,5 @@
 ============================================
-Configure your VOIP Asterisk server for Odoo
+Configure your VoIP Asterisk server for Odoo
 ============================================
 
 Installing Asterisk server

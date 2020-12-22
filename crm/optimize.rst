@@ -7,6 +7,4 @@ Optimize your Day-to-Day work
 
    optimize/partner_autocomplete
    optimize/outlook_extension
-   optimize/onsip
-   optimize/setup
    optimize/gamification
