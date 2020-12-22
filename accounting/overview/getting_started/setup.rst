@@ -6,10 +6,8 @@ The Odoo Accounting application has an implementation guide that you
 should follow to configure it. It's a step-by-step wizard with links to
 the different screens you will need.
 
-Once you have `installed the Accounting
-application <https://www.odoo.com/apps/modules/online/account_accountant/>`__,
-you should click on the top-right progressbar to get access to the
-implementation guide.
+Once you have installed the Accounting application, you should click on the top-right progressbar to
+get access to the implementation guide.
 
 .. image:: ./media/setup01.png
    :align: center
