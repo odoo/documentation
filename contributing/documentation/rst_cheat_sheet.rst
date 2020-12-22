@@ -524,8 +524,8 @@ build your tables. Then, copy-paste the generated formatting into your document.
 
 .. _contributing/specialized-directives:
 
-Spice your writing with specialized directives
-----------------------------------------------
+Spice up your writing with specialized directives
+-------------------------------------------------
 
 Use these additional directives to fine-tune your content:
 

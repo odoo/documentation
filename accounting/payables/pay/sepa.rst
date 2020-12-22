@@ -13,9 +13,13 @@ Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
 With Odoo, once you decide to pay a vendor, you can select to pay the
 bill with SEPA. Then, at the end of the day, the manager can generate
 the SEPA file containing all bank wire transfers and send it to the
-bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
+bank. 
+
+By default,the file follows the SEPA Credit Transfer **'pain.001.001.03'**
 specifications. This is a well-defined standard that makes consensus
-among banks.
+among banks. However, according to the country set on your company, 
+another format can be used : **'pain.001.001.03.ch.02'** for Switzerland
+and **'pain.001.003.03'** for Germany.
 
 Once the payments are processed by your bank, you can directly import
 the account statement inside Odoo. The bank reconciliation process will
@@ -113,7 +117,8 @@ Troubleshooting
 The bank refuses my SEPA file
 -----------------------------
 
-Ask your bank if they support **PAIN.001.001.03 SEPA Credit Transfers**. If
+Ask your bank if they support the **SEPA Credit Transfer specification** 
+(the SEPA pain version depends on the country set on your company). If
 they don't, or cannot provide relevant informations, please forward the
 error message to your Odoo partner.
 
