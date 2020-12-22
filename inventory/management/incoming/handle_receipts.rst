@@ -66,4 +66,4 @@ Please read documentation on :doc:`three_steps`
 
 .. seealso::
    - :doc:`../delivery/inventory_flow`
-   - :doc:`../../../purchase/purchases/rfq/analyze`
+   - :doc:`../../../purchase/advanced/analyze`
