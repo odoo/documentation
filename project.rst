@@ -9,4 +9,3 @@ Project
 
    project/tasks
    project/planning
-   project/advanced
