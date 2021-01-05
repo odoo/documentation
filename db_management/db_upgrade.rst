@@ -263,12 +263,11 @@ Select *Production* purpose.
 Assistance
 ~~~~~~~~~~
 
-If you encounter issues or problems in the **production database**, please contact the Odoo Upgrade
-Support:
+If you encounter issues or problems in the **production database**, please contact the **Odoo
+Support**:
 
 #. Connect to our `Odoo Support page <https://www.odoo.com/help>`_.
-#. Under the *Ticket Description* section, select *An issue related to my upgrade* ticket type.
-   Under the *Ticket Description* section, select the appropriate type related to your issue but
+#. Under the *Ticket Description* section, select the appropriate type related to your issue but
    **do not select** the option *An issue related to my upgrade*.
 
    .. note::
@@ -284,8 +283,8 @@ Support:
       :alt: "Detailed Description" field in the support form on Odoo
 
    .. warning::
-      If you choose another *Ticket Description* type, the request will be redirected to another
-      team than the upgrade one and will slow down the processing and response time.
+      If you choose *An issue related to my upgrade* as ticket type, the request will be redirected
+      to another team than the support one and will slow down the processing and response time.
 
 .. _db-upgrade/faq:
 
