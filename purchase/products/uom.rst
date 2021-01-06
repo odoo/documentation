@@ -1,133 +1,110 @@
 =================================================
-Purchase in different unit of measures than sales
+Purchase in different units of measure than sales
 =================================================
 
-In day-to-day business, it may happen that your supplier uses a
-different unit of measure than you do in sales. This can cause confusion
-between sales and purchase representative and even make you lose a lot
-of time converting measures. Luckily in Odoo, you can handle different
-units of measures between sales and purchase very easily.
+When you purchase a product, it may happen that your vendor uses a different unit of measure than
+you do when you sell it. This can cause confusion between sales and purchase representatives. It is
+also time-consuming to convert measures manually every time. With Odoo, you can configure your
+product once and let Odoo handle the conversion.
 
-Let's take the following examples:
+Consider the following examples:
 
-1)  You buy water from a supplier. The supplier is american and sells his
-    water in **Gallons**. Your customers however are European. You would
-    thus like to see your purchases quantities expressed in **Gallons**
-    and the sold quantities in **Liters**.
+#. You purchase orange juice from an American vendor, and they use **gallons**. However, your
+   customers are European and use **liters**.
 
-2)  You buy curtains from a supplier. The supplier sells you the curtains
-    in the unit **roll** and you sell the curtains in **square meters**.
+#. You buy curtains from a vendor in the form of **rolls** and you sell pieces of the rolls to your
+   customers using **square meters**.
 
-Configuration
-=============
+Enable units of measure
+=======================
 
-Install purchase and sales modules
-----------------------------------
+Open your Sales app and go to :menuselection:`Configuration --> Settings`. Under Product Catalog,
+enable *Units of Measure*.
 
-The first step is to make sure that the apps **Sales** and **Purchase** are
-correctly installed.
+.. image:: media/uom-enableoption.png
+   :align: center
 
-+------------+------------+
-|  |uom01|   |  |uom02|   |
-+============+============+
-+------------+------------+
+Specify sales and purchase units of measure
+===========================================
 
-Enable the Unit of Measures option
-----------------------------------
+Standard units of measure
+-------------------------
 
-Enter the purchase module, select :menuselection:`Configuration --> Settings` 
-and tick the **Some products may be sold/purchased in different unit of measures
-(advanced)** box.
-
-.. image:: media/uom08.png
-    :align: center
-
-Specify sales and purchase unit of measures
--------------------------------------------
-
-Standard units of measures
-~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-Let's take the classic units of measures existing in Odoo as first
-example. Please remember that differents units of measures between sales
-and purchase necessarily need to share the same category. Categories
-include: **Unit**, **weight**, **working time**, **volume**, etc.
+A variety of units of measure are available by default in your database. Each belongs to one of the
+five pre-configured units of measure categories: *Length / Distance*, *Unit*, *Volume*, *Weight* and
+*Working Time*.
 
 .. tip::
-    It is possible to create your own category and unit of measure if 
-    it is not standard in Odoo (see next chapter).
+   You can create your new units of measure and units of measure categories (see next section).
 
-Let's assume we buy water from our vendors in **Gallons** and sell to our
-customers in **Liters**.
+To specify different units of measures for sales and purchases, open the Purchase app and go to
+:menuselection:`Products --> Products`. Create a product or select an existing one. Under the
+product's *General Information* tab, first select the *Unit of Measure* to be used for sales (as
+well as for other apps such as inventory). Then, select the *Purchase Unit of Measure* to be used
+for purchases.
 
-We go into the purchase module select :menuselection:`Purchase --> Products`.
+Back to the first example, if you purchase orange juice from your vendor in **gallons** and sell it
+to your customers in **liters**, first select *L* (liters) as the *Unit of Measure*, and *gal (US)*
+(gallons) as the *Purchase Unit of Measure*, then click on *Save*.
 
-Create your own product or select an existing one. In the products
-general information you have the possibility to select the **Unit of
-measure** (will be used in sales, inventory,...) and the **Purchase Unit
-of Measure** (for purchase).
+.. image:: media/uom-productconfiguration.png
+   :align: center
 
-In this case select **Liters** for **Unit of Measure** and **Gallons** for
-**Purchase Unit of Measure**.
+Create ynew units of measure and units of measure categories
+------------------------------------------------------------
 
-.. image:: media/uom05.png
-    :align: center
+Sometimes you need to create your own units and categories, either because the measure is not
+pre-configured in Odoo or because the units do not relate with each other (e.g. kilos and
+centimeters).
 
-Create your own unit of measure and unit of measure category
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+If you take the second example where you buy curtains from a vendor in the form of **rolls** and you
+sell pieces of the rolls using **square meters**, you need to create a new *Units of Measure
+Category* in order to relate both units of measure.
 
-Let's take now our second example (you buy curtains from a supplier, the
-supplier sells you the curtains in the unit **roll** and you sell the
-curtains in **square meters**).
+To do so, go to :menuselection:`Configuration --> Units of Measure Categories`. Click on *Create*
+and name the category.
 
-The two measures are part of two different categories. Remember, you
-cannot relate an existing measure from one category with an existing
-measure of another category. We thus first have to create a shared
-**Measure Category** where both units have a conversion relationship.
+.. image:: media/uom-newcategory.png
+   :align: center
 
-To do so, go into your sales module select 
-:menuselection:`Configuration --> Products --> Unit of Measure`. 
-Create a new unit of **Measure Category** by selecting
-the dropdown list and clicking on create and edit (see picture below).
+The next step is to create the two units of measures. To do so, go to :menuselection:`Configuration
+--> Units of Measure`.
 
-.. image:: media/uom03.png
-    :align: center
+First, create the unit of measure used as the reference point for converting to other units of
+measure inside the category by clicking on *Create*. Name the unit and select the units of measure
+category you just created. For the *Type*, select *Reference Unit of Measure for this category
+type*. Enter the *Rounding Precision* you would like to use. The quantity computed by Odoo is always
+a multiple of this value.
 
-Create a new unit of measure. In this case our category will be called
-**Inter-Category-Computation**.
+In the example, as you cannot purchase less than 1 roll and won't use fractions of a roll as a unit
+of measure, you can enter 1.
 
-.. image:: media/uom06.png
-    :align: center
+.. image:: media/uom-newreferenceunit.png
+   :align: center
 
-The next step is to create the **Rolls** and **Square meter** units of
-measure and to link them to the new category. To do so, go into your
-purchase module select :menuselection:`Configuration --> Products --> Units of Measure`.
+.. note:: If you use a *Rounding Precision* inferior to 0.01, a warning message might appear stating
+   that it is higher than the *Decimal Accuracy* and that it might cause inconsistencies. If you
+   wish to use a *Rounding Precision* lower than 0.01, first :doc:`activate the Developer Mode
+   <../../general/developer_mode/activate>`, then go to :menuselection:`Settings --> Technical -->
+   Database Structure --> Decimal Accuracy`, select *Product Unit of Measure* and edit *Digits*
+   accordingly. For example, if you want to use a rounding precision of 0.00001, set *Digits* to 5.
 
-Create two new units:
+Next, create a second unit of measure, name it, and select the same units of measure category as
+your reference unit. As *Type*, select *Smaller* or *Bigger than the reference Unit of Measure*,
+depending on your situation.
 
--   The **Roll** unit who is part of the Inter-Category-Computation
-    category and is the **Reference Unit type** (see picture below). The
-    Reference Unit type is the measure set as a reference within the
-    category. Meaning that other measures will be converted depending
-    on this measure (ex: 1 roll = 10 square meters, 2 rolls = 20
-    square meters, etc.).
+As the curtain roll equals to 100 square meters, you should select *Smaller*.
 
-.. image:: media/uom04.png
-    :align: center
+Next, you need to enter the *Ratio* between your reference unit and the second one. If the second
+unit is smaller, the *Ratio* should be greater than 1. If the second unit is larger, the ratio
+should be smaller than 1.
 
--   For the **Square Meter**, we will specify that ``1 Roll = 10 square meters``
-    of curtain. It will thus be necessary to specify that as type,
-    the square meter is bigger than the reference unit. The **Bigger
-    Ratio** is ``10`` as ``one Roll = 10 square meters``.
+For your curtain roll, the ratio should be set to 100.
 
-.. image:: media/uom09.png
-    :align: center
+.. image:: media/uom-secondunit.png
+   :align: center
 
-It is now possible to input **square meters** as Unit of measure and a
-**Roll** as Purchase Unit of Measure in the product form.
+You can now configure your product just as you would using Odoo's standard units of measure.
 
-.. image:: media/uom07.png
-    :align: center
-
-.. |uom01| image:: ./media/uom01.png
-.. |uom02| image:: ./media/uom02.png
+.. image:: media/uom-productconfigurationnewunit.png
+   :align: center
