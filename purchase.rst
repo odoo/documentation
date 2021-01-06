@@ -8,5 +8,5 @@ Purchase
    :titlesonly:
 
    purchase/products
-   purchase/agreements
+   purchase/manage_deals
    purchase/advanced
