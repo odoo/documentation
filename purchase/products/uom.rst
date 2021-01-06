@@ -21,8 +21,9 @@ Enable units of measure
 Open your Sales app and go to :menuselection:`Configuration --> Settings`. Under Product Catalog,
 enable *Units of Measure*.
 
-.. image:: media/uom-enableoption.png
+.. image:: media/uom-enable-option.png
    :align: center
+   :alt: Enable the units of measure option in Odoo Sales
 
 Specify sales and purchase units of measure
 ===========================================
@@ -47,11 +48,12 @@ Back to the first example, if you purchase orange juice from your vendor in **ga
 to your customers in **liters**, first select *L* (liters) as the *Unit of Measure*, and *gal (US)*
 (gallons) as the *Purchase Unit of Measure*, then click on *Save*.
 
-.. image:: media/uom-productconfiguration.png
+.. image:: media/uom-product-configuration.png
    :align: center
+   :alt: Configure a product's units of measure in Odoo
 
-Create ynew units of measure and units of measure categories
-------------------------------------------------------------
+Create new units of measure and units of measure categories
+-----------------------------------------------------------
 
 Sometimes you need to create your own units and categories, either because the measure is not
 pre-configured in Odoo or because the units do not relate with each other (e.g. kilos and
@@ -64,8 +66,9 @@ Category* in order to relate both units of measure.
 To do so, go to :menuselection:`Configuration --> Units of Measure Categories`. Click on *Create*
 and name the category.
 
-.. image:: media/uom-newcategory.png
+.. image:: media/uom-new-category.png
    :align: center
+   :alt: Create a new units of measure category in Odoo Purchase
 
 The next step is to create the two units of measures. To do so, go to :menuselection:`Configuration
 --> Units of Measure`.
@@ -79,8 +82,9 @@ a multiple of this value.
 In the example, as you cannot purchase less than 1 roll and won't use fractions of a roll as a unit
 of measure, you can enter 1.
 
-.. image:: media/uom-newreferenceunit.png
+.. image:: media/uom-new-reference-unit.png
    :align: center
+   :alt: Create a new reference unit of measure in Odoo Purchase
 
 .. note:: If you use a *Rounding Precision* inferior to 0.01, a warning message might appear stating
    that it is higher than the *Decimal Accuracy* and that it might cause inconsistencies. If you
@@ -101,10 +105,12 @@ should be smaller than 1.
 
 For your curtain roll, the ratio should be set to 100.
 
-.. image:: media/uom-secondunit.png
+.. image:: media/uom-second-unit.png
    :align: center
+   :alt: Create a second unit of measure in Odoo Purchase
 
 You can now configure your product just as you would using Odoo's standard units of measure.
 
-.. image:: media/uom-productconfigurationnewunit.png
+.. image:: media/uom-product-configuration-new-units.png
    :align: center
+   :alt: Set a product's units of measure using your own units in Odoo Purchase
