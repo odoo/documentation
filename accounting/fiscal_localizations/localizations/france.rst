@@ -171,6 +171,18 @@ Odoo absolves itself of all and any responsibility in case of changes
 in the module’s functions caused by 3rd party applications not certified by Odoo.
 
 
+Re sequencing of the invoices
+-----------------------------
+
+It remains possible to re sequence the invoices but with some restrictions:
+
+1. The feature will not work when entries are previous to a lock date.
+2. The feature will not work if the sequence is inconsistent with the month of the entry.
+3. It will not work if the sequence leads to a duplicate.
+4. The order of the invoice will remain unchanged.
+5. It is useful for people who use a numbering from another software and who want to continue the current year without starting over from the beginning.
+
+
 More Information
 ----------------
 
