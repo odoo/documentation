@@ -36,7 +36,7 @@ must order to benefit from that price.
 .. tip::
    By default, a draft purchase order is created. However, if you have enabled *Purchase
    Agreements*, you can *Propose a call for tenders* instead as shown in the image above. For more
-   information, see :doc:`../agreements/call_for_tender`
+   information, see :doc:`../manage_deals/agreements`
 
 Next, make sure the correct route is selected under the Inventory tab of your product. If you
 created your product within the Purchase app, the *Buy* route is selected by default. If you are
