@@ -12,8 +12,9 @@ Odoo Partnership Agreement
 .. v8a: minor clarifications and simplifications
 .. v9: added maintenance commission + obligations
 .. v9a: minor clarification to allow OE commission even without maintenance
+.. v9b: 2021-01-12 - update requirements for Partnership levels
 
-.. note:: Version 9a - 2020-06-10
+.. note:: Version 9b - 2021-01-12
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -98,7 +99,7 @@ The table below summarizes the requirements that have to be met for each partner
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
 |                                            | Learning Partner | Official: Ready    | Official: Silver   | Official: Gold     |
 +============================================+==================+====================+====================+====================+
-| Annual New Odoo Enterprise Users Sold      |   0              |  10                | 50                 | 150                |
+| Annual New Odoo Enterprise Users Sold      |   0              |  10                | 75                 | 200                |
 +--------------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Number of Certified Employees on at least  |   0              |  1                 |  2                 |  3                 |
 | one of the 3 last Odoo versions            |                  |                    |                    |                    |
