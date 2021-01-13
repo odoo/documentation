@@ -1,99 +1,122 @@
-=======================================
-Analyze the performance of your vendors
-=======================================
+=========================================
+Analyze the performance of your purchases
+=========================================
 
-If your company regularly buys products from several suppliers, it would
-be useful to get statistics on your purchases. There are several reasons
-to track and analyze your vendor's performance :
+If your company regularly purchases products, you have several reasons to track and analyze your
+performance. The insights gathered can help you to better forecast and plan your future orders. For
+example, you can assess if your business is dependent on particular vendors, and the data can help
+you negotiate discounts on prices.
 
--  You can see how dependant from a supplier your company is;
+Generate customized reports
+===========================
 
--  you can negotiate discounts on prices;
+Go to *Reporting* to access the purchase analysis. Simply by accessing the reporting dashboard, you
+can get a quick overview of your actual performance. By default, the reporting dashboard displays a
+line chart presenting the untaxed amount of your purchase orders per day, and below it, key metrics
+and a pivot table.
 
--  You can check the average delivery time per supplier;
+.. image:: media/analyze-reporting-dashboard.png
+   :align: center
+   :alt: Reporting dashboard in Odoo Purchase
 
--  Etc.
+While the data initially presented is useful, there are several tools and features you can use to
+get even more insights on your purchases.
 
-For example, an IT products reseller that issues dozens of purchase
-orders to several suppliers each week may want to measure for each
-product the total price paid for each vendor and the delivery delay. The
-insights gathered by the company will help it to better analyze,
-forecast and plan their future orders.
+Use filters to select the data you need
+---------------------------------------
 
-Configuration
-=============
+Odoo offers several default filters you can use and combine by clicking on *Filters*. When you
+select one or several filters, Odoo looks for all the orders that match at least one of the filters
+you have chosen and populates the chart, key metrics, and pivot table with the data. The
+pre-configured filters are:
 
-Install the Purchase Management module
---------------------------------------
+#. All *Requests for Quotation*
 
-From the **Apps** menu, search and install the **Purchase Management**
-module.
+#. All *Purchase Orders*, except canceled ones
 
-.. image:: media/analyze03.png
-    :align: center
+#. *Confirmation Date Last Year* includes all orders that were confirmed the previous year,
+   canceled purchase orders included
 
-Issue some purchase orders
---------------------------
+#. *Order Date* includes all orders - request for quotations and purchases orders (canceled ones
+   included) - depending on their date of creation
 
-Of course, in order to analyze your vendors' performance, you need to
-issue some **Request For Quotations** (RfQ) and confirm some **Purchase
-Orders**.
+#. *Confirmation Date* includes all confirmed orders, canceled ones included, depending on their
+   date of confirmation
 
-Analyzing your vendors
-======================
-
-Generate flexible reports
--------------------------
-
-You have access to your vendors' performances on the Reports menu.
-By default, the report groups all your purchase orders on a pivot table
-by **total price**, **product quantity** and **average price** for the **each month**
-and for **each supplier**. Simply by accessing this basic report, you can
-get a quick overview of your actual performance. You can add a lot of
-extra data to your report by clicking on the **Measures** icon.
-
-.. image:: media/analyze04.png
-    :align: center
+.. note::
+   When you have to select a period, you can use multiple years, and, with at least one year
+   selected, multiple quarters and the three most recent months.
 
 .. tip::
-    By clicking on the **+** and **-** icons, you can drill up and down 
-    your report in order to change the way your information is displayed. 
-    For example, if I want to see all the products bought for the current 
-    month, I need to click on the **+** icon on the vertical axis and 
-    then on "Products".
+   If you use the *Order Date* or *Confirmation Date* filters, the *Comparison* feature appears next
+   to *Filters*. It enables you to compare the period you filtered with the previous one.
 
+.. image:: media/analyze-filters.png
+   :align: center
+   :alt: Reporting filters in Odoo Purchase
 
-Depending on the data you want to highlight, you may need to display
-your reports in a more visual view. You can transform your report in
-just a click in 3 graph views : a **Pie Chart**, a **Bar Chart** and a **Line
-Chart**: These views are accessible through the icons highlighted on the
-screenshot below.
+Add custom filters
+~~~~~~~~~~~~~~~~~~
 
-.. image:: media/analyze02.png
-    :align: center
+Thanks to the 31 filtering options to choose from, the possibilities of your customizing your
+dataset are almost limitless. Go to :menuselection:`Filters --> Add Custom Filter`, specify the
+condition the filtering option should meet (e.g. *is equal to*, *contains*, etc.), and click on
+*Apply*. If you want to select orders matching several conditions simultaneously (*and* operator),
+repeat the process to add another custom filter. If you want to use the *or* operator, don't
+click on *Apply*, and click on *Add a condition* instead. Once you have added all the desired
+filtering options, click on *Apply*.
 
-.. note:: 
-    On the contrary to the pivot table, a graph can only 
-    be computed with one dependent and one independent measure.
+.. image:: media/analyze-custom-filter.png
+   :align: center
+   :alt: Custom reporting filter in Odoo Purchase
 
-Customize reports
-=================
+.. tip::
+   To avoid having to recreate custom filters every time, save them by clicking on
+   :menuselection:`Favorites --> Save current search --> Save`. The customized search filter can
+   then be accessed by clicking on *Favorites* or can even be set as the default filter when you
+   open the reporting dashboard.
 
-You can easily customize your purchase reports depending on your needs.
-To do so, use the **Advanced search view** located in the right hand side
-of your screen, by clicking on the magnifying glass icon at the end of
-the search bar button. This function allows you to highlight only
-selected data on your report. The **filters** option is very useful in
-order to display some categories of datas, while the **Group by** option
-improves the readability of your reports. Note that you can filter and
-group by any existing field, making your customization very flexible and
-powerful.
+Measure exactly what you need
+-----------------------------
 
-.. image:: media/analyze01.png
-    :align: center
+Before selecting what you want to measure, you need to decide whether you prefer using the graph
+view or the pivot view. By default, the dashboard presents both views. However, the measures you
+select won't be applied to both views. You can access each view separately by clicking on the icons
+at the top right of the dashboard.
 
-.. tip:: 
-    You can save and reuse any customized filter by clicking 
-    on **Favorites** from the **Advanced search view** and 
-    then on **Save current search**. The saved filter will 
-    then be accessible from the **Favorites** menu.
+.. image:: media/analyze-switch-view.png
+   :align: center
+   :alt: Switch reporting view in Odoo Purchase
+
+Visualize your data
+~~~~~~~~~~~~~~~~~~~
+
+You can transform the main graph in just a click by selecting one of the three charts: bar, line or
+pie. Fourteen different measures are available, but you can only use one at a time. However, you can
+group the measure using one or several of the 19 *Groups*.
+
+.. image:: media/analyze-graph-view.png
+   :align: center
+   :alt: Reporting graph view in Odoo Purchase
+
+For bar and line charts, the selected measure is your y-axis, and the first group you select is used
+to create the x-axis. Adding more group adds additional lines (line chart) or transforms your bar
+chart into a stacked bar chart. For pie charts, the more groups you select, the more slices are
+displayed.
+
+Explore your data
+~~~~~~~~~~~~~~~~~
+
+The pivot table view enables you to explore your data in great detail. Unlike the graph view, the
+pivot table enables you to add several measures at the same time. By clicking on *Measures* or on
+the **+** sign in the *Total* column, you can add as many as you want, each assigned to a new
+column. By clicking on the **+** sign in the *Total* row, you can add *Groups*. If you click on a
+group's **+** sign, you can add a sub-group, and so on.
+
+.. image:: media/analyze-pivot-view.png
+   :align: center
+   :alt: Pivot table view in Odoo Purchase
+
+.. tip::
+   You can insert your pivot table's data directly in the Spreadsheet app or export it as an Excel
+   file.
