@@ -122,6 +122,5 @@ payments.
 
 .. seealso::
    - :doc:`online_payment`
-   - :doc:`../../bank/feeds/paypal`
    - :doc:`check`
    - :doc:`followup`
