@@ -18,6 +18,7 @@ To connect to the banks, Odoo uses multiple web-services:
 
 - **Plaid**: United States of America and Canada
 - **Yodlee**: Worldwide
+- **Salt Edge**: Europe (:doc:`more information <saltedge>`)
 - **Ponto**: Europe (:doc:`more information <ponto>`)
 
 Configuration
@@ -202,3 +203,4 @@ Credentials* button.
 .. seealso::
    * :doc:`bank_statements`
    * :doc:`ponto`
+   * :doc:`saltedge`

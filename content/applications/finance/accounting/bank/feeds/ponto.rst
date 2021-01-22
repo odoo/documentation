@@ -120,4 +120,5 @@ and we advise you to contact Ponto directly.
 .. seealso::
 
    * :doc:`bank_synchronization`
+   * :doc:`saltedge`
    * :doc:`bank_statements`
