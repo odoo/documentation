@@ -1,24 +1,20 @@
 ======================================
-Ponto as Bank Synchronization provider
+Ponto as bank synchronization provider
 ======================================
 
 **Ponto** is a service that allows companies and professionals to aggregate their accounts in one
 place and directly see all their transactions within one app. It is a third-party solution that is
 continuously expanding the number of bank institutions that can be synchronized with Odoo.
 
-.. image:: media/ponto_logo.png
+.. image:: media/ponto-logo.png
    :align: center
    :alt: Logo of the Ponto brand
 
-**Odoo Accounting** can synchronize directly with your bank to get all bank statements imported
-automatically into your database. This allows for easier **bank reconciliation**. When :doc:`adding
-a bank account on Odoo <../setup/bank_accounts>`, you can see if your bank requires a
-connection through Ponto by searching for your bank institution, and clicking on it.
+**Odoo** can synchronize directly with your bank to get all bank statements imported automatically
+into your database.
 
-.. image:: media/ponto_add_bank.png
-   :align: center
-   :alt: Click on a bank institution to see which third party service is required to synchronize
-         your bank with Odoo Accounting
+Ponto is a paid third-party provider that can handle the synchronization between your bank accounts
+and Odoo. `Its pricing is 4€/month per account/integration <https://myponto.com/en#pricing>`_.
 
 .. note::
    You can find more information about bank synchronization :doc:`on this page
@@ -31,86 +27,97 @@ Link your bank accounts with Ponto
 ----------------------------------
 
 #. Go to `Ponto's website (https://myponto.com) <https://myponto.com>`_.
-#. Create an account if you don’t have one yet.
+#. Create an account if you don't have one yet.
 #. Once you are logged in, create an *organization*.
 
-   .. image:: media/ponto_organization.png
-      :alt: Fill out the form to add an organization in Ponto
+   .. image:: media/ponto-organization.png
+      :align: center
+      :alt: Fill out the form to add an organization in Ponto.
 
 #. | Go to :menuselection:`Accounts --> Live`, and click on *Add account*.
    | You might have to add your **Billing Information** first.
-#. Select your bank institution and follow the steps on-screen to link your bank account with your
-   Ponto account.
-#. Make sure to add  all the bank accounts you want to synchronize with your Odoo database before
-   moving on to the next steps.
+#. Select your country, your bank institutions, give your consent to Ponto, and follow the steps
+   on-screen to link your bank account with your Ponto account.
 
-.. _ponto-link-odoo:
+   .. image:: media/ponto-add-account.png
+      :align: center
+      :alt: Add bank accounts to your Ponto account.
+
+#. Make sure to add all bank accounts you want to synchronize with your Odoo database before moving
+   on to the next steps.
 
 Link your Ponto account with your Odoo database
 -----------------------------------------------
 
-Odoo requires you to insert your Ponto's **Client ID** and **Secret ID** to synchronize both
-platforms.
+#. Go to :menuselection:`Accounting --> Configuration --> Add a Bank Account`.
+#. Search your institution, make sure to select the right institution. By selecting the institution,
+   you can verify that the third party provider is Ponto.
+#. Click on *Connect* and follow the steps.
+#. At some point, you will have to authorize the accounts you want to access in Odoo. Please select
+   **all the accounts** you want to synchronize. Even the ones coming from other banking
+   institutions.
 
-.. image:: media/ponto_link_odoo.png
-   :align: center
-   :alt: Logo of the Ponto brand
+   .. image:: media/ponto-select-accounts.png
+      :align: center
+      :alt: Selection of the accounts you wish to synchronize with Odoo.
 
-#. To generate these IDs, go to :menuselection:`Ponto Dashboard --> Integration --> Live`, click on
-   *Add Integration*, fill out the form, and select which accounts you want to synchronize.
-#. Copy the Client ID and Secret ID generated and paste them in Odoo.
-#. Configure the synchronization options:
+#. Finish the flow.
 
-   - **Action**: define if Odoo must create a new *Journal* for this bank account, link to an
-     existing Journal, or create no link.
-   - **Journal**: select the appropriate *Journal*.
-   - **Synchronization Frequency**: define how often Odoo should fetch the bank statements.
-
-.. image:: media/ponto_synchronization.png
-   :align: center
-   :alt: Configure the bank synchronization through Ponto on your Odoo database
-
-.. tip::
-   It is good practice to have one Journal per bank account. If you synchronize a single bank
-   account, link it to the existing *Bank* journal. If you have multiple accounts, it is recommended
-   to pick the *Create new journal* option for all additional accounts.
-
-.. _ponto-update-credentials:
+.. note::
+   You have to authorize all the accounts you want to access in Odoo but, Odoo will filter the
+   accounts based on the institution you selected at the second step.
 
 Update your synchronization credentials
 ---------------------------------------
 
 You might have to update your Ponto credentials or modify the synchronization settings.
 
-To do so, activate the :doc:`Developer Mode <../../../general/developer_mode/activate>`, and go to
-:menuselection:`Accounting --> Configuration --> Online Synchronization`.
+To do so, go to :menuselection:`Accounting --> Configuration --> Online Synchronization` and select
+the institution you want to fetch the other accounts. Click on *Fetch Accounts* button to start the
+flow.
 
-Click on *Update Accounts* to enter your new Client ID and Secret ID, or click on *Edit* to modify
-the synchronization settings.
+During the update, select **all the accounts** you want to synchronize, even the ones coming
+from other banking institutions.
 
-Deprecated API tokens
-=====================
+Fetch new accounts
+------------------
 
-Ponto's previous synchronization system using API tokens is now deprecated.
+You might want to add new online accounts to your connection.
 
-This section is only relevant for users who had previously linked Ponto with Odoo using a single API
-token instead of the current synchronization system with a *Client ID* and a *Secret ID*.
+To do so, go to :menuselection:`Accounting --> Configuration --> Online Synchronization` and select
+the institution you want to fetch the other accounts. Click on *Fetch Accounts* button to start the
+flow.
 
-#. **Update** your database.
+Don't forget to keep authorization for existing accounts (for all institutions that you
+have synchronized with Ponto).
 
-   - | *SaaS* and *Odoo.sh* users:
-     | you can skip this step, as your database is automatically updated.
-   - | *Community* and *Enterprise* users:
-     | download the latest Odoo source code for your version (you can download it from `this link
-       <https://odoo.com/download>`_ or from GitHub), install it, and restart your server.
+FAQ
+===
 
-#. | Do a **hard refresh** of your Odoo page by pressing *CTRL + F5*.
-   | A hard refresh clears the cache and the javascript code for the current page.
-#. To **generate your access key**, follow :ref:`the steps above <ponto-link-odoo>`.
-#. To **update your credentials**, follow :ref:`the steps above <ponto-update-credentials>`.
+After my synchronization, no account appears
+--------------------------------------------
+
+You selected an institution from the list and did not authorize any accounts from this institution.
+
+I have an error about that my authorization has expired
+-------------------------------------------------------
+
+Every **3 months** (90 days) you must re-authorize the connection between your bank account
+and Ponto. This must be done from the `Ponto website <https://myponto.com>`_. If you do not
+do this, the synchronization will stop for these accounts.
+
+I have some errors with my beta institution
+-------------------------------------------
+
+Ponto provides institutions in *beta*, these institutions are not directly supported by Odoo
+and we advise you to contact Ponto directly.
+
+.. important::
+   Using an institution in beta is beneficial for Ponto, it allows them to have real
+   feedback on the connection with the institution.
+
 
 .. seealso::
 
    * :doc:`bank_synchronization`
-   * :doc:`../setup/bank_accounts`
    * :doc:`bank_statements`
