@@ -131,8 +131,7 @@ There are two possibilities:
 #. Via the interface of our `website form <https://upgrade.odoo.com>`_
 #. | For technically-advanced users and partners, via the following command line (to be used on the
      machine where your database is hosted):
-   | ``python <(curl -s beta.upgrade.odoo.com/upgrade) test -d <your db name> -t 14.0 -c <your
-     subscription code>``
+   | ``python <(curl -s beta.upgrade.odoo.com/upgrade) test -d <your db name> -t 14.0``
 
 What does it do?
 ~~~~~~~~~~~~~~~~
