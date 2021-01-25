@@ -15,5 +15,6 @@ Localizations
    localizations/italy_IT
    localizations/mexico
    localizations/netherlands
+   localizations/peru
    localizations/spain
    localizations/switzerland
