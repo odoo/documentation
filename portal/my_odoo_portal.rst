@@ -111,8 +111,8 @@ Success Packs
 -------------
 With a Success Pack/Partner Success Pack, you are assigned an expert to provide
 unique personalized assistance to help you customize your solution and optimize
-your workflows as part of your initial implementation. These hours never expire,
-allowing you to utilize them whenever you need support.
+your workflows as part of your initial implementation. These hours expire one 
+year after purchase.
 
 .. seealso::
    If you need information about how to manage your database see :ref:`db_online`
