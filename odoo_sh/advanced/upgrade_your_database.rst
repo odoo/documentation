@@ -10,7 +10,7 @@ Download and Upload your database
 =================================
 
 Download a dump of your database (from the :ref:`Builds view <odoosh-gettingstarted-builds-download-dump>`), choose the
-exact copy and without filestore options. Upload the .sql.gz dump on https://upgrade.odoo.com/database/upload and
+exact copy and without filestore options. Upload the .sql.gz dump on https://upgrade.odoo.com/upload and
 select the Testing Purpose. If you have custom code, you can choose to have it upgraded by us, or do it yourself. Once
 it's processed, you'll get a dump of the database in return.
 

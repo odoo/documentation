@@ -128,3 +128,8 @@ More common questions
 #. **How does the GDPR regulation affect this service?**
 
    Please find our `Privacy Policy here <https://iap.odoo.com/privacy#sms>`__.
+
+#. **Can I use my own SMS provider?**
+
+   Yes, but it is not possible out of the box. Our experts can help you customize your database
+   to make it happen. Please, check our success packs `here <https://www.odoo.com/pricing-packs>`_.

@@ -2,6 +2,13 @@
 Argentina
 =========
 
+Webinars
+========
+
+Below you can find videos with a general description of the localization, and how to configure it.
+
+- `VIDEO WEBINAR OF A COMPLETE DEMO <https://youtu.be/c41-8cVaYAI>`_.
+
 Introduction
 ============
 
