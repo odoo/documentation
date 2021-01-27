@@ -86,6 +86,11 @@ company’s contact.
 .. image:: media/mexico03.png
    :align: center
 
+.. warning::
+   From a legal point of view, a Mexican company must use the local currency (MXN).
+   Therefore, Odoo does not provide features to manage an alternative configuration.
+   If you want to manage another currency, let MXN be the default currency and use
+   price list instead.
 
 Set the proper "Fiscal Position" on the partner that represent the company
 --------------------------------------------------------------------------
