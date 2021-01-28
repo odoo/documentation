@@ -1,0 +1,103 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+@font-face {
+  font-family: '#{$icomoon-font-family}';
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6i2y1w');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?6i2y1w#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?6i2y1w') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?6i2y1w') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?6i2y1w##{$icomoon-font-family}') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+@font-face {
+        font-family: Inter;
+        src: url('fonts/Inter-VariableFont_slnt,wght.ttf') format("truetype-variations");
+        font-weight: 1 999;
+}
+
+//------------------------------------------------------------------------------
+// Font rendering
+//------------------------------------------------------------------------------
+html body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: Inter, Helvetica, sans-serif;
+    font-weight: 400;
+}
+
+//------------------------------------------------------------------------------
+// Headings
+//------------------------------------------------------------------------------
+// Increase Inter's readability when used for huge titles.
+@for $i from 1 through 4 {
+    .display-#{$i}, h#{$i}, .h#{$i} {
+        letter-spacing: (3 - $i) * -0.01em; // eg: display-1 -> -0.02em;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Font weight
+//------------------------------------------------------------------------------
+// "fw_extralight and  fw_medium" classes
+// are kept for backward compatibility
+b, strong{
+    font-weight: $fw_extrabold;
+}
+
+a {
+    font-weight: $fw_semibold;
+}
+
+.fw_extralight {
+    font-weight: $fw_extralight;
+}
+
+.fw_light {
+    font-weight: $fw_light;
+}
+
+.fw_extralight, .fw_light{
+    label, b, strong, a {
+        font-weight: $fw_regular;
+    }
+}
+
+.fw_regular {
+    font-weight: $fw_regular;
+}
+
+.fw_medium {
+    font-weight: $fw_medium;
+}
+
+.fw_semibold {
+    font-weight: $fw_semibold;
+}
+
+.fw_bold {
+    font-weight: $fw_bold;
+}
+
+.fw_extrabold {
+    font-weight: $fw_extrabold;
+}
+
+.fw_black {
+    font-weight: $fw_black;
+}
+
+//------------------------------------------------------------------------------
+// Text colors
+//------------------------------------------------------------------------------
+.text-heading { color: o-color('o-cc1-headings'); }
+// .text-default { color: $body-color; }
+
+// Overwrite bootstrap_review.scss rule.
+// .card-body .text-muted {
+//     color: $text-muted !important;
+// }

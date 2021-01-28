@@ -1,0 +1,13 @@
+<div class="o_versions row me-2">
+	<div class="col-4 col-form-label">
+    	<label class="fw_bold small mr-2">Version</label>
+    </div>
+    <div class="col-8">
+	    <select class="form-select">
+			<option>{{ version }}</option> {# Current version #}
+			{% for name, url in versions %}
+				<option><a href="{{ url }}">{{ name }}</a></option>
+			{% endfor %}
+	    </select>
+    </div>
+</div>

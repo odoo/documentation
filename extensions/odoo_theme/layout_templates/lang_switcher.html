@@ -1,0 +1,17 @@
+{% if languages %}
+<div class="o_languages me-2">
+	<select class="languages form-select">
+	    <!-- <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+	        English
+	    </a>
+	    <ul class="dropdown-menu" role="menu">
+	            <li><a href="{{ url }}">English</a></li>
+	            <li><a href="{{ url }}">French</a></li>
+		</ul> -->
+		<option>{{ language }}</option> {# Current language #}
+        {% for name, url in languages %}
+			<option><a href="{{ url }}">{{ name }}</a></option>
+        {% endfor %}
+	</select>
+</div>
+{% endif %}

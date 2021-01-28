@@ -1,0 +1,120 @@
+{% extends "basic/layout.html" %}
+{% set html5_doctype = True %}
+
+{% block css %}
+    {{ super() }}
+    {# Allow custom css style import for specific pages #}
+    {% if 'custom-css' in meta %}
+        {% set link = '_static/css/' + meta['custom-css'] %}
+        <link rel="stylesheet" href="{{ pathto(link, 1) }}" type="text/css"/>
+    {% endif %}
+{% endblock %}
+
+{% block scripts %}
+    {# Before the super call to be loaded before custom files using React & Immutable #}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"
+        integrity="sha512-myCdDiGJRYrvRb/VuJ67ljifYTJdc1jdEvL4c4ftX9o3N6EAnmD83c/7l2/91RCINZ7c8w21tiXDT7RDFjdc3g=="
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prefixfree@1.0.0/prefixfree.min.js"
+        integrity="sha256-a1jYldRqTzpGqk63nmXXjh/zPYp7Sjxp9iUYhNbYPXI="
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react-with-addons.min.js"
+        integrity="sha512-wsnDgOxfyn4lhblRMHPMuJh+9CnLcwcisda1zLRGNWKh6OiQynebYTyRZYgH+eWLEdNTKak0OD2GAd/S51UhTw=="
+        crossorigin="anonymous"></script>
+    {{ super() }}
+    {# NOTE: Sphinx basic theme already imports JQuery, underscore and doctools by default.
+       For some reason JQuery is not found for the custom code below if we do not reimport it... #}
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+        crossorigin="anonymous"></script>
+    {# TODO EDI boostrap beta cdn ??? Isn't there a stable CDN ? It looks like this cdn won't exist forever :D #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript">$.noConflict(true);</script>
+    <script type="text/javascript" src="{{ pathto('_static/js/layout.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/js/menu.js', 1) }}"></script>
+    <script type="text/javascript" src="{{ pathto('_static/js/page_toc.js', 1) }}"></script>
+{% endblock %}
+
+{% block linktags %}
+    {% for code, url in language_codes %}
+        <link rel="alternate" hreflang="{{ code }}" href="{{ url }}" />
+    {%- endfor %}
+    <link rel="canonical" href="{{ canonical }}" />
+    {{ super() }}
+{% endblock %}
+
+{#
+    Google analytics key logic.
+    We do not want to call super here since our custom footer logic is defined in the content block.
+#}
+{% block footer %}
+    {%- if google_analytics_key -%}
+        <script type="text/javascript"
+                src="{{ pathto('_static/js/google_analytics.js', 1) }}"></script>
+    {%- endif -%}
+{% endblock %}
+
+{% block header %}
+    <nav id="o_main_toctree" class="o_side_nav border-end">
+        {% include "layout_templates/menu.html" %}
+    </nav>
+    <header class="o_main_header border-bottom">
+        {% include "layout_templates/header.html" %}
+    </header>
+{% endblock %}
+
+{% block content %}
+    <div id="wrap">
+
+        {% set main_classes = [] %}
+        {% if pagename == master_doc %}  {# The current page is the homepage #}
+            {% set main_classes = main_classes + ['index'] %}
+        {% endif %}
+
+        {% if 'code-column' in meta %}  {# The page contains a 'memento' (side dynamic block) #}
+            {% set main_classes = main_classes + ['has_code_col'] %}
+        {% endif %}
+
+        {% if 'classes' in meta %}  {# The page source defines custom classes #}
+            {% set main_classes = main_classes + meta['classes'].split() %}
+        {% endif %}
+
+        {% if 'has_only_toc' in meta %}  {# The page only contains a toctree #}
+            {% set main_classes = main_classes + ['doc-toc'] %}  {# TODO EDI do you use this ?#}
+        {% endif %}
+
+        <main class="{{ ' '.join(main_classes) }}">
+            <div id="o_content">
+                {% if pagename == master_doc %}
+                    {# Custom landing page on the root of the documentation #}
+                    {% include "layout_templates/homepage.html" %}
+                {% else %}
+                    <div class="row">
+                        <article class="doc-body mb-5">
+                            <!-- Beacon used by the Sphinx search to know where to look for a string -->
+                            <div role="main">
+                                {% block body %} {% endblock %}
+                            </div>
+                            {# Do not show the edition link for pages without content #}
+                            {% if github_link and not 'has_only_toc' in meta %}
+                                <a href="{{ github_link(mode='edit') }}" class="o_git_link">Edit on GitHub</a>
+                            {% endif %}
+                        </article>
+                    </div>
+                {% endif %}
+            </div>
+            <div id="mask"></div>
+        </main>
+        {# VFE TODO Check if this condition is still needed ??? #}
+        {% if pagename not in toc %}
+            <aside id="o_page_toc" class="o_page_toc">
+                {% include "layout_templates/page_toc.html" %}
+            </aside>
+        {% endif %}
+    </div>
+    <footer>
+        {% include "layout_templates/footer.html" %}
+    </footer>
+{% endblock %}
