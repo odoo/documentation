@@ -135,7 +135,8 @@ html_theme_path = ['extensions']
 # directory. They are copied after the builtin static files, so a file named "default.css" will
 # overwrite the builtin "default.css".
 html_static_path = ['static']
-html_add_permalinks = ''
+html_add_permalinks = '¶'  # Sphinx < 3.5
+html_permalinks = True  # Sphinx >= 3.5
 html_js_files = [
     'js/atom.js',
     'js/accounts.js',
@@ -147,6 +148,10 @@ html_js_files = [
     'js/coa-valuation.js',
     'js/coa-valuation-continental.js',
     'js/coa-valuation-anglo-saxon.js',
+]
+html_css_files = [
+    'css/accounting.css',
+    'css/legal.css',
 ]
 
 #=== Options for LaTeX output ===#
@@ -227,10 +232,6 @@ LANGUAGES = {
 }
 
 def setup(app):
-    # VFE TODO: use html_js_files & html_css_files conf attributes instead.
-    # app.add_stylesheet('css/accounting.css')
-    # app.add_stylesheet('css/legal.css')
-
     app.connect('html-page-context', canonicalize)
     # VFE TODO remove default before merge
     app.add_config_value('canonical_root', os.path.dirname(os.path.realpath(__file__)), 'env')
