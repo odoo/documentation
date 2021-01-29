@@ -250,10 +250,6 @@ def setup(app):
     app.connect('doctree-resolved', tag_toctrees)  # TODO ANVFE not used + typo
 
 
-def export_collapse_menu_option(app, pagename, templatename, context, doctree):
-    context['collapse_menu'] = app.config.collapse_menu
-
-
 def versionize(app, pagename, templatename, context, doctree):
     """ Adds a version switcher below the menu, requires ``canonical_root``
     and ``versions`` (an ordered, space-separated lists of all possible
