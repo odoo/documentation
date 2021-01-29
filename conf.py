@@ -99,6 +99,12 @@ extensions = [
 
     # Redirection generator
     'redirects',
+
+    # Code switcher (switcher and case directives)
+    'switcher',
+
+    # Strange html domain logic used in memento pages
+    'html_domain',
 ]
 
 todo_include_todos = False
