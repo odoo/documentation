@@ -19,6 +19,7 @@ all: html
 help:
 	@echo "Please use 'make <target>' where <target> is one of"
 	@echo "  html         to build the documentation to HTML"
+	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
 	@echo "  clean        to delete the build files"
 
 clean:
@@ -34,6 +35,9 @@ html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/html
 	@echo "Build finished."
+
+fast: SPHINXOPTS += -A collapse_menu=True
+fast: html
 
 extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/*.scss
 	@echo "Compiling stylesheets..."
