@@ -11,11 +11,10 @@ _logger = logging.getLogger(__name__)
 
 #=== General configuration ===#
 
-# The version info for the project being documented, acts as replacement for |version|, also used in
-# various other places throughout the built documents.
-version = '12.0'
-# The full version, including alpha/beta/rc tags. Acts as replacement for |release|.
-release = '12.0'
+# `version` if the version info for the project being documented, acts as replacement for |version|,
+# also used in various other places throughout the built documents.
+# `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
+version = release = '12.0'
 
 # The minimal Sphinx version required to build the documentation.
 needs_sphinx = '3.0.0'
@@ -47,7 +46,7 @@ exclude_patterns = [
 # See https://docutils.sourceforge.io/docs/ref/rst/roles.html#standard-roles for other roles.
 default_role = 'literal'
 
-# If true, '()' will be appended to :func: etc. cross-reference text.
+# If true, '()' will be appended to :func: etc. cross-reference text
 add_function_parentheses = True
 
 #=== Extensions configuration ===#
@@ -58,17 +57,28 @@ sys.path.insert(0, str(extension_dir.absolute()))
 
 # Search for the directory of odoo sources to know whether autodoc should be used on the dev doc
 odoo_dir = Path('odoo')
-if odoo_dir.exists() and odoo_dir.is_dir():
-    sys.path.insert(0, str(odoo_dir.absolute()))
-    odoo_dir_in_path = True
-else:
+odoo_dir_in_path = False
+if not odoo_dir.is_dir():
     _logger.warning(
         f"Could not find Odoo sources directory at {odoo_dir.absolute()}.\n"
-        "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
-        "In order to fully build the 'Developer' documentation, clone the repository with "
-        "`git clone https://github.com/odoo/odoo`."
+        f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
+        f"In order to fully build the 'Developer' documentation, clone the repository with "
+        f"`git clone https://github.com/odoo/odoo` or create a symbolink link."
     )
-    odoo_dir_in_path = False
+else:
+    sys.path.insert(0, str(odoo_dir.absolute()))
+    from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
+    if release != odoo_release.version:
+        _logger.warning(
+            f"Found Odoo sources directory but with version {odoo_release.version} incompatible "
+            f"with documentation version {version}.\n"
+            f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
+            f"In order to fully build the 'Developer' documentation, checkout the matching branch"
+            f" with `cd odoo && git checkout {version}`."
+        )
+    else:
+        _logger.info(f"Found Odoo sources directory matching documentation version {release}.")
+        odoo_dir_in_path = True
 
 # The Sphinx extensions to use, as module names.
 # They can be extensions coming with Sphinx (named 'sphinx.ext.*') or custom ones.
@@ -254,10 +264,6 @@ def setup(app):
     app.add_config_value('languages', ",".join(test_languages), 'env')
 
     app.connect('doctree-resolved', tag_toctrees)  # TODO ANVFE not used + typo
-
-
-def export_collapse_menu_option(app, pagename, templatename, context, doctree):
-    context['collapse_menu'] = app.config.collapse_menu
 
 
 def versionize(app, pagename, templatename, context, doctree):

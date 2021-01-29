@@ -10,6 +10,7 @@ rendered more or less directly to HTML.
 
 NOTE: this extension is only used by special accounting pages (memento, valuation, ...)
 for directives likes .. h:div::
+TO REMOVE AS SOON AS WE DROP MEMENTOES
 """
 
 from docutils import nodes, utils
