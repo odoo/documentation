@@ -1,13 +1,13 @@
-from docutils import nodes, utils
+from docutils import nodes
 from docutils.parsers.rst import Directive
 
 from pygments.lexers import get_lexer_by_name
+
 
 def setup(app):
     app.add_directive('switcher', SwitcherDirective)
     app.add_directive('case', CaseDirective)
 
-# VFE FIXME separate this extension from odoo_theme (and clean?)
 
 class SwitcherDirective(Directive):
     has_content = True
@@ -23,8 +23,9 @@ class SwitcherDirective(Directive):
             if isinstance(child, nodes.literal_block):
                 titles.append(get_lexer_by_name(child['language']).name)
             else:
-                assert child['names'], ("A switcher case must be either a "\
-                                        "code block or a compound with a name")
+                assert child['names'], (
+                    "A switcher case must be either a code block or a compound with a name"
+                )
                 titles.append(' '.join(child['names']))
         tabs = nodes.bullet_list('', *[
             nodes.list_item('', nodes.Text(title))
@@ -33,6 +34,7 @@ class SwitcherDirective(Directive):
         node = nodes.compound('', tabs, body, classes=['content-switcher'])
         return [node]
 
+
 class CaseDirective(Directive):
     required_arguments = 1
     final_argument_whitespace = True
@@ -40,7 +42,6 @@ class CaseDirective(Directive):
 
     def run(self):
         self.assert_has_content()
-
         node = nodes.compound('\n'.join(self.content), names=[self.arguments[0]])
         self.state.nested_parse(self.content, self.content_offset, node)
         return [node]

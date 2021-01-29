@@ -1,5 +1,4 @@
 from . import pygments_override
-from . import switcher
 from . import translator
 
 import sphinx.builders.html
@@ -11,8 +10,6 @@ from docutils import nodes
 def setup(app):
     app.set_translator('html', translator.BootstrapTranslator)
 
-    # FIXME ANVFE Separate extensions and clean import in conf.py ???
-    switcher.setup(app)
     # VFE TODO check if default meta initialization is necessary.
     # If not, remove update_meta method
     app.connect('html-page-context', update_meta)
@@ -22,6 +19,8 @@ def update_meta(app, pagename, templatename, context, doctree):
     meta = context.get('meta')
     if meta is None:
         meta = context['meta'] = {}
+
+# TODO VFE detailed explanation of the patch logic and use.
 
 class monkey(object):
     def __init__(self, obj):
