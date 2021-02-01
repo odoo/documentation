@@ -2,7 +2,9 @@
 
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
-SPHINXOPTS     = -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY)
+SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
+                 -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
+                 -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY)
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
@@ -29,6 +31,10 @@ clean:
 	@echo "Cleaning finished."
 
 edi: SPHINXOPTS += -A collapse_menu=True
+edi: VERSIONS += 12.0,13.0,14.0
+edi: CANONICAL_VERSION += 14.0
+edi: LANGUAGES += en,fr,es
+edi: CURRENT_LANG += fr
 edi: clean html
 
 html: extensions/odoo_theme/static/style.css

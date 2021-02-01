@@ -22,16 +22,15 @@ def update_meta(app, pagename, templatename, context, doctree):
 
 # TODO VFE detailed explanation of the patch logic and use.
 
-class monkey(object):
+class Monkey(object):
     def __init__(self, obj):
         self.obj = obj
     def __call__(self, fn):
         name = fn.__name__
         old = getattr(self.obj, name)
-        setattr(self.obj, name, lambda self_, *args, **kwargs: \
-                fn(old, self_, *args, **kwargs))
+        setattr(self.obj, name, lambda self_, *args, **kwargs: fn(old, self_, *args, **kwargs))
 
-@monkey(toctree.TocTree)
+@Monkey(toctree.TocTree)
 def resolve(old_resolve, tree, docname, *args, **kwargs):
     resolved_toc = old_resolve(tree, docname, *args, **kwargs)
     if resolved_toc:

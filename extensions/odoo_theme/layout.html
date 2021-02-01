@@ -38,8 +38,8 @@
 {% endblock %}
 
 {% block linktags %}
-    {% for code, url in language_codes %}
-        <link rel="alternate" hreflang="{{ code }}" href="{{ url }}" />
+    {% for alternate_language, language_code, url in alternate_languages %}
+        <link rel="alternate" hreflang="{{ language_code }}" href="{{ url }}" />
     {%- endfor %}
     <link rel="canonical" href="{{ canonical }}" />
     {{ super() }}

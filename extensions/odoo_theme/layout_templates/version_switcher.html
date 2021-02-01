@@ -3,11 +3,18 @@
     	<label class="fw_bold small mr-2">Version</label>
     </div>
     <div class="col-8">
+        {# <!-- TODO EDI <a> inside <option> is illegal
 	    <select class="form-select">
-			<option>{{ version }}</option> {# Current version #}
-			{% for name, url in versions %}
-				<option><a href="{{ url }}">{{ name }}</a></option>
-			{% endfor %}
-	    </select>
+			<option>{{ version }}</option> {# The current version #}
+			{% for alternate_version, url in versions %}
+            	<option><a href="{{ url }}">{{ alternate_version }}</a></option>
+        	{% endfor %}
+    	</select> -->  #}
+        <div>
+            <a>{{ version }}</a> {# The current version #}
+            {% for alternate_version, url in alternate_versions %}
+                <a href="{{ url }}">{{ alternate_version }}</a>
+            {% endfor %}
+        </div>
     </div>
 </div>
