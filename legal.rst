@@ -146,3 +146,4 @@ Other legal references
 - `Odoo SA's Privacy Policy <https://www.odoo.com/privacy>`_
 - `Odoo SA's GDPR Compliance Guide <https://www.odoo.com/gdpr>`_
 - :ref:`cla`
+- :ref:`germany/gobd`
