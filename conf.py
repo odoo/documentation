@@ -278,7 +278,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         - /documentation/11.0/fr/website.html -> canonical = /documentation/14.0/fr/website.html
         """
         # If the canonical version is not set, assume that the project has a single version
-        _canonical_version = app.config.canonical_version or version
+        _canonical_version = app.config.canonical_version or app.config.version
         _canonical_lang = 'en'  # Always 'en'. Don't take the value of the config option.
         context['canonical'] = _build_url(_version=_canonical_version, _lang=_canonical_lang)
 
@@ -318,7 +318,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
     def _build_url(_version=None, _lang=None):
         _root = app.config.project_root or str(Path(__file__).parent)
-        _version = _version or version
+        _version = _version or app.config.version
         _lang = _lang or app.config.language or 'en'
         _canonical_page = (pagename + '.html').replace('index.html', '').replace('index/', '')
         return f'{_root}/{_version}{f"/{_lang}" if _lang != "en" else ""}/{_canonical_page}'
