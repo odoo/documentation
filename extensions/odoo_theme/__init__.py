@@ -14,6 +14,10 @@ def setup(app):
     # If not, remove update_meta method
     app.connect('html-page-context', update_meta)
 
+    app.add_js_file('js/layout.js')
+    app.add_js_file('js/menu.js')
+    app.add_js_file('js/page_toc.js')
+
 
 def update_meta(app, pagename, templatename, context, doctree):
     meta = context.get('meta')
