@@ -1,3 +1,5 @@
+# TODO VFE licensing ?
+
 import collections
 import io
 import itertools

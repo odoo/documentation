@@ -1,3 +1,5 @@
+import os.path
+
 from docutils import nodes
 from docutils.parsers.rst import Directive
 
@@ -8,6 +10,15 @@ def setup(app):
     app.add_directive('switcher', SwitcherDirective)
     app.add_directive('case', CaseDirective)
 
+    app.connect('env-updated', add_statics)
+
+def add_statics(app, env):
+    app.add_js_file('js/switcher.js')
+    env.config.html_static_path.append(statics())
+
+statics = lambda *p: os.path.join(
+    os.path.abspath(os.path.dirname(__file__)),
+    'static', *p)
 
 class SwitcherDirective(Directive):
     has_content = True
