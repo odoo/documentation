@@ -100,7 +100,7 @@ How to make sure that all my URLs use my custom domain?
 
 To set up the root URL of your website and of all the links sent in emails, you can ask an administrator of your database (any user in the *Settings* group) to perform a login from the login screen. It's as simple as that!
 
-If you want to do it manually, you can go to :menuselection:`Settings --> Technical --> System Parameters` .
+If you want to do it manually, go to :menuselection:`Settings --> Technical --> System Parameters`.
 Find the entry called ``web.base.url`` (you can create it if it does not exist) and enter the full URL of your website, like ``https://www.myodoowebsite.com``.
 
 .. warning::
