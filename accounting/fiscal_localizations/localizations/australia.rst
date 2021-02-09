@@ -11,9 +11,6 @@ The KeyPay Module synchronizes payslip accounting entries (e.g., expenses, socia
 liabilities, taxes) from KeyPay to Odoo automatically. Payroll administration is still done in
 KeyPay. We only record the journal entries in Odoo.
 
-.. note::
-   The KeyPay Module is installed by default with the Australian localization module.
-
 Configuration Steps
 -------------------
 
