@@ -2,7 +2,7 @@
 ওডু ব্যবহারকারীদের ডকুমেন্টেশন - বাংলা
 ===========================
 
-ওডু ব্যবহারকারীদের ডকুমেন্টেশন - বাংলা অনুবাদ করার জন্য অবদান রাখতে যোগাযোগ করুন [Media Jockey]<https://mediajockey.org>, [Abu Zafar]<https://github.com/mjabuz>
+ওডু ব্যবহারকারীদের ডকুমেন্টেশন - বাংলা অনুবাদ করার জন্য অবদান রাখতে যোগাযোগ করুন _Media Jockey<https://mediajockey.org>, _Abu Zafar<https://github.com/mjabuz>
 
 
 ডকুমেন্টেশন তৈরি করুন
