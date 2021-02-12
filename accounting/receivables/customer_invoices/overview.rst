@@ -41,7 +41,8 @@ lines, invoice a fixed advance.
 
 This process is good for both services and physical products.
 
-.. todo:: Read more: *Invoice based on sales orders.*
+.. seealso::
+   - :doc:`../../../sales/invoicing/proforma`
 
 Sales Order ‣ Delivery Order ‣ Invoice
 --------------------------------------
@@ -56,7 +57,8 @@ really delivered. If you do back orders (deliver partially and the rest
 later), the customer will receive two invoices, one for each delivery
 order.
 
-.. todo:: Read more: *Invoice based on delivery orders.*
+.. seealso::
+   - :doc:`../../../sales/invoicing/invoicing_policy`
 
 eCommerce Order ‣ Invoice
 -------------------------
@@ -79,11 +81,8 @@ salesperson will trigger invoice based on activities on the contract.
 Activities can be:
 
 -  fixed products/services, coming from a sale order linked to this contract
-
--  materials purchased (that you will re-invoiced)
-
+-  materials purchased (that you will re-invoice)
 -  time and material based on timesheets or purchases (subcontracting)
-
 -  expenses like travel and accommodation that you re-invoice to the customer
 
 You can invoice at the end of the contract or trigger intermediate
@@ -91,9 +90,10 @@ invoices. This approach is used by services companies that invoice
 mostly based on time and material. For services companies that invoice
 on fix price, they use a regular sales order.
 
-.. todo:: Read more:
-	-  *How to invoice based on time and material?*
-	-  *How to manage contracts and invoicing plans?*
+.. seealso::
+   - :doc:`../../../sales/invoicing/time_materials`
+   - :doc:`../../../sales/invoicing/expense`
+   - :doc:`../../../sales/invoicing/milestone`
 
 Recurring Contracts ‣ Invoices
 ------------------------------
@@ -102,7 +102,8 @@ For subscriptions, an invoice is triggered periodically, automatically.
 The frequency of the invoicing and the services/products invoiced are
 defined on the contract.
 
-.. todo:: Read more: *Subscription based invoicing.*
+.. seealso::
+   - :doc:`../../../sales/invoicing/subscriptions`
 
 Others
 ======

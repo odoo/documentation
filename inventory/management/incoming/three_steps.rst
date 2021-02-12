@@ -1,127 +1,109 @@
-=============================================================
-How to add a quality control step in goods receipt? (3 steps)
-=============================================================
+==========================================================
+Process a Receipt in three steps (Input + Quality + Stock)
+==========================================================
 
-Overview
-========
+Quality is essential for most companies. To make sure we maintain quality throughout the supply
+chain, it only makes sense that we assess the quality of the products received from suppliers.
+To do so, we will add a quality control step.
 
-In many companies, it is necessary to assess the received good. The goal
-is to check that the products correspond to the quality requirements
-agreed with the suppliers. Therefore, adding a quality control step in
-the goods receipt process can become essential.
+Odoo uses routes to define how to handle the different receipt steps.
+Configuration of those routes is done at the warehouse level. By default, the reception is a 
+one-step process, but it can also be configured to have two-steps or three-steps processes.
 
-Odoo uses routes to define exactly how you will handle the different
-receipt steps. The configuration is done at the level of the warehouse.
-By default, the reception is a one step process, but changing the
-configuration can allow to have 2 or even 3 steps.
+The three-steps flow works as follows: you receive the goods in your receiving area, then transfer 
+them into a quality area for quality control (QC). When the quality check is completed, the goods 
+that match the QC requirements are moved to stock
 
-The 3 steps flow is as follows: You receive the goods in an input
-area, then transfer them into quality area for quality control. When
-the quality check has been processed, you can move the goods from QC
-to stock. Of course, you may change the quantity and only transfer to
-stock the quantity that is valid and decide that you will return the
-quantity that is not good.
+Activate Multi-Step Routes
+==========================
 
-This is the case that will be explained in this document.
+The first step is to allow the use of *Multi-Step Routes*. Routes provide a mechanism to chain different 
+actions together. In this case, we will chain the picking step to the shipping step.
 
-Configuration
-=============
+To enable *Multi-Step Routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and 
+activate the option.
 
-Use advanced routes
--------------------
-
-To allow management of routes, go to the menu
-:menuselection:`Inventory --> Configuration --> Settings`.
-
-.. image:: media/three_steps06.png
+.. image:: media/three_steps_01.png
    :align: center
+   :alt: View of the features to enable in order to use multi-step routes for goods reception
 
-Ensure that the routes option **Advance routing of product using
-rules** is checked, then click on **Apply** to save changes.
+.. note::
+         By default, activating *Multi-Step Routes* also activates *Storage
+         Locations*.
 
-Make sure that **Manage several locations per warehouse** is also
-ticked.
+Configure warehouse for receipt in 3-steps
+==========================================
 
-How to add a quality control step in goods receipt?
----------------------------------------------------
+Once *Multi-Step Routes* has been activated, go to :menuselection:`Inventory --> Configuration --> 
+Warehouse` and enter the warehouse which should work with the 3-steps reception. Then, select 
+*Receive goods in input, then quality and then stock (3 steps)* for *Incoming Shipments*.
 
-Go to the menu :menuselection:`Inventory --> Configuration --> Warehouse` and
-choose the warehouse where you want to change reception methods.
-
-By default, warehouses are configured with one step reception (**Receive
-goods directly into stock**).
-
-To add quality control before transfer goods into stock location, tick
-**Unload in input location, go through a quality control before being
-admitted in stock (3 steps)**.
-
-.. image:: media/three_steps01.png
+.. image:: media/three_steps_02.png
    :align: center
+   :alt: View of the incoming shipment strategy to choose to receive goods in three steps
 
-How to control a receipt?
-=========================
+Activating this option leads to the creation of two new locations: *Input* and *Quality Control*. 
+To rename them, go to :menuselection:`Inventory --> Configuration --> Locations` and select
+the one you want to rename.
 
-How to process the receipt step ?
----------------------------------
+Create a Purchase Order
+=======================
 
--  In the **Purchase** app, create a **Request for Quotation**. Click on the
-   **Confirm order** button. You can see that there is one **Shipment**
-   related to purchase order in the stat button above the
-   purchase order form view. This is the receipt step.
+To start the 3-steps reception process, create a *Request for Quotation* from the *Purchase* app, 
+add some storable products to it and confirm. Then, three pickings are created with your *Purchase
+Order* as the source document:
 
-.. image:: media/three_steps04.png
+1. The first one with a reference *IN* to designate the receipt
+   process;
+
+2. The second one with a reference *INT*, which is the move to the
+   quality control zone;
+
+3. The last one with a reference *INT* to designate the move to stock.
+
+.. image:: media/three_steps_03.png
    :align: center
+   :alt: View of the three moves created by the purchase of products in three steps strategy
 
--  Go to **Inventory** and click on the link **# TO RECEIVE** in the **Receipts** card.
+Process the receipt, quality control and entry in stock
+=======================================================
 
-.. image:: media/three_steps02.png
+As the receipt operation is the first one to be processed, it has a *Ready* status while the others 
+are *Waiting Another Operation*.
+
+To access the receipt operation, click on the button from the *Purchase Order* or go back to the 
+*Inventory* app dashboard and click on *Receipts*.
+
+.. image:: media/three_steps_04.png
    :align: center
+   :alt: View of the button to click to see the receipts that need to be processed
 
-- Click on the receipt that you want to process. Click on **Validate** to
-  complete the move from the **Vendor** location to **WH/Input**.
+In the receipt order, products are always considered available because they come from the supplier. 
+Then, the receipt can be validated.
 
-This has completed the receipt step and the status column at the top of
-the page for **WH/IN** should now show **Done**. The product has been moved
-from the **Vendor** to the **WH/Input** location, which makes the product
-available for the next step (Move to the quality control zone)
-
-How to move your product from the receipt zone to the quality control zone ?
-----------------------------------------------------------------------------
-
-Go to the **Inventory** dashboard. You will see that there is one
-transfer ready (the move to the quality control zone) and one waiting
-(the move to the stock after the control). Click on the link **# TRANSFERS** in
-the **Internal Transfers** to process the quality control.
-
-.. image:: media/three_steps03.png
+.. image:: media/three_steps_05.png
    :align: center
+   :alt: View of the move (internal transfer) from the reception area to the warehouse input area
 
-Click on the picking that you want to process.
+Once the receipt has been validated, the transfer to quality becomes *Ready*. And, because the documents 
+are chained to each other, products previously received are automatically reserved on the 
+transfer. Then, the transfer can be directly validated.
 
-Click on **Validate** to complete the move from **WH/Input** to **WH/Quality
-Control**.
-
-This has completed the internal transfer step and the status column at
-the top of the page for **WH/INT** should now show **Done**. The receipt is
-now ready to be controlled.
-
-How to to process the quality control ? 
-----------------------------------------
-
-Go back to the **Inventory** dashboard. The waiting transfer is now
-ready. Click on the link **# TRANSFERS** in the **Internal Transfers** card to process
-the quality control.
-
-.. image:: media/three_steps05.png
+.. image:: media/three_steps_06.png
    :align: center
+   :alt: View of the button to click to see the internal transfers that need to be processed
 
-Click on the last picking to process. Click on **Validate** to complete
-the move from **WH/Quality Control** to **WH/Stock**.
+.. image:: media/three_steps_07.png
+   :align: center
+   :alt: View of the move (internal transfer) from the input area to the quality control area
 
-This has completed the quality control step and the status column at the
-top of the page for **WH/INT** should now show **Done**. The receipt has
-been controlled and has moved to your stock.
+Now, the transfer that enters the products to stock is *Ready*. Here, it is again ready to be 
+validated in order to transfer the products to your stock location.
 
-.. seealso::
-    * :doc:`../delivery/inventory_flow`
-    * :doc:`two_steps`
+.. image:: media/three_steps_08.png
+   :align: center
+   :alt: View of the button to click to see the internal transfers that need to be processed
+
+.. image:: media/three_steps_09.png
+   :align: center
+   :alt: View of the move (internal transfer) from the quality control area to the stock

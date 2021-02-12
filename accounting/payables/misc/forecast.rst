@@ -1,6 +1,6 @@
-====================================
-How to forecast future bills to pay?
-====================================
+============================
+Forecast future bills to pay
+============================
 
 When you get hundreds of vendor bills per month with each of them having
 different payment terms, it could be complex to follow what you have to

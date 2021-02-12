@@ -133,7 +133,7 @@
     });
 
     document.addEventListener('DOMContentLoaded', function () {
-        var chart = document.getElementById('chart-of-accounts');
+        var chart = findAncestor(document.querySelector('.chart-of-accounts'), 'section');
         if (!chart) { return; }
 
         var controls = document.createElement('div');

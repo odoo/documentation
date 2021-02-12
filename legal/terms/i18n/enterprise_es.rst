@@ -12,9 +12,9 @@ Odoo Enterprise Subscription Agreement (ES)
     "Odoo Enterprise Subscription Agreement" es :ref:`la versión original en
     inglés <enterprise_agreement>`
 
-..    -- Uncomment when needed --
-..    ESTA VERSIÓN NO ESTÁ ACTUALIZADA. PARA LA ÚLTIMA VERSIÓN POR FAVOR VEA
-..    :ref:`LA VERSIÓN ORIGINAL EN INGLÉS <enterprise_agreement>`
+.. warning::
+    ESTA VERSIÓN NO ESTÁ ACTUALIZADA. PARA LA ÚLTIMA VERSIÓN POR FAVOR VEA
+    :ref:`LA VERSIÓN ORIGINAL EN INGLÉS <enterprise_agreement>`
 
 .. note:: Version 8.0 - 2018-05-22
 

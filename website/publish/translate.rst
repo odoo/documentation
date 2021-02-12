@@ -45,8 +45,8 @@ To translate the content of the website, click on **Translate** (here
 There, if you have installed the Gengo Translator, You will see that
 next to the **Translate** button you also have a button **Translate
 automatically**. Once you click on that button, you will be asked some
-information on your account. If you don't have an account yet, go to
-`*https://gengo.com/auth/form/login/* <https://gengo.com/auth/form/login/>`__
+information on your account. If you don't have an account yet, follow
+`this link <https://gengo.com/auth/form/login/>`_
 in order to create one. You need to ask for a public key and a private
 key.
 

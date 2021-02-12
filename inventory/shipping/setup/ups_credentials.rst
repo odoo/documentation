@@ -36,9 +36,7 @@ complete the registration process.
 
 If you already have a UPS account, you can add it to your online profile as follows: 
 
-1. Log in to the UPS.com site
-(`http://www.ups.com <http://www.ups.com/>`__) using your UPS.com User
-ID and Password.
+1. Log in to the `UPS.com website <http://www.ups.com/>`_) using your UPS.com User ID and Password.
 
 2. Click the **My UPS** tab.
 
@@ -59,16 +57,11 @@ Get an Access Key
 After you have added your UPS account number to your user profile you
 can request an Access Key from UPS using the steps below:
 
-1. Go to the **UPS Developer Kit** web page
-`https://www.ups.com/upsdeveloperkit?loc=en\_US <https://www.ups.com/upsdeveloperkit?loc=en_US>`__
-
-2. Log into UPS.com with your user ID and password
-
-3. Click on the link **Request an access key**.
-
-4. Verify your contact information
-
-6. Click the **Request Access Key** button.
+#. Go to the `UPS Developer Kit web page <https://www.ups.com/upsdeveloperkit?loc=en_US>`_
+#. Log into UPS.com with your user ID and password
+#. Click on the link **Request an access key**.
+#. Verify your contact information
+#. Click the **Request Access Key** button.
 
 The **Access Key** will be provided to you on the web page,
 and an email with the Access Key will be sent to the email address of

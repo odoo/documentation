@@ -84,8 +84,29 @@ We can now apply the redirection from your domain name's manager account:
 How to enable SSL (HTTPS) for my Odoo instance
 ==============================================
 
-To enable SSL, please use a third-party CDN service provider 
-such as CloudFlare.com. 
+Until recently, Odoo users needed to use a third-party CDN service provider such as CloudFlare to enable SSL.
+
+It is not required anymore: Odoo generates the certificate for you automatically, using integration with `Let's Encrypt Certificate Authority and ACME protocol <https://letsencrypt.org/how-it-works/>`__.
+In order to get this, simply add your domain name in your customer portal (a separate certificate is generated for each domain name specified).
+
+.. warning::
+  **Please note that the certificate generation may take up to 24h.**
+
+If you already use CloudFlare or a similar service, you can keep using it or simply change for Odoo. The choice is yours.
+
+
+How to make sure that all my URLs use my custom domain?
+=======================================================
+
+To set up the root URL of your website and of all the links sent in emails, you can ask an administrator of your database (any user in the *Settings* group) to perform a login from the login screen. It's as simple as that!
+
+If you want to do it manually, you can go to :menuselection:`Settings --> Technical --> System Parameters` . 
+Find the entry called ``web.base.url`` (you can create it if it does not exist) and enter the full URL of your website, like ``https://www.myodoowebsite.com``.
+
+.. warning::
+  The URL must include the protocol (``https://`` or ``http://``) and must not end by a slash (``/``).
+
+If you want to block the root URL update when an administrator logs in, you can add a System Parameter called  ``web.base.url.freeze`` with its value set to  ``True``.
 
 
 My website is indexed twice by Google
@@ -96,7 +117,7 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`../../discuss/email_servers`
+  * :doc:`../../discuss/advanced/email_servers`
 
 
 

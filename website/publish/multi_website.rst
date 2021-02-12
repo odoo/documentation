@@ -17,7 +17,7 @@ tour!
 Setup
 =====
 
-To create a new website, go to :menuselection:`Website --> Configuration → Settings`.
+To create a new website, go to :menuselection:`Website --> Configuration --> Settings`.
 The button, *Create a new website*, lays in the first section.
 
 
@@ -45,14 +45,14 @@ website. Follow the purple drops; they will help you in the first steps.
 
 
 .. note::
-      If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database (CNAME) and to authorize it Odoo-side. 
-      `Read <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__
+   If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database
+   (``CNAME``) and to authorize it Odoo-side. See :doc:`domain_name`.
 
 Create the menu
 ===============
 
 The new website has a default menu with all the installed applications.
-To edit it, click *Pages > Edit Menu*. Moving forward you only edit
+To edit it, click :menuselection:`Pages --> Edit Menu`. Moving forward you only edit
 the menu of the current website.
 
 Switch from one website to another
@@ -68,7 +68,9 @@ requested to sign in.
   :align: center
 
 .. note::
-    When switching, you are redirected to the same domain path on the other website (e.g.,/shop/myproduct). If this URL is not used, you will be redirected to a 404 page but suggested to create a new page from there.
+   When switching, you are redirected to the same domain path on the other website
+   (e.g., ``/shop/myproduct``). If this URL is not used, you will be redirected to a 404 page but
+   prompted to create a new page from there.
 
 Add features
 ============
@@ -111,16 +113,18 @@ Manage domain names
 As said earlier, your websites can either share the same domain name or
 use a specific one. If you share it and want to adapt the content per
 region, set country groups in the setting of each website. Visitors will
-be redirected to the right website using Geo IP.
+be redirected to the right website using GeoIP.
 
 .. image:: media/multi_website18.png
   :align: center
 
-.. note:: 
-Geo IP is installed by default in Odoo Online. If you run Odoo
-on-premise, don’t forget to install *Geoip* library.
+.. note::
+  Geo IP is installed by default in Odoo Online. If you run Odoo
+  on-premise, don’t forget to install *GeoIP* library.
+  See :doc:`on-premise_geo-ip-installation`
 
-`Read the full documenation about domain names here <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__, 
+.. seealso::
+   - :doc:`domain_name`
 
 Customize the visitor experience
 ================================
@@ -173,7 +177,7 @@ Publish a page in all websites
 
 A new static page is created and only made available in the current
 website. You can duplicate it to other websites from 
-:menuselection:`Website --> Configuration → Pages`. To do so, leave the *Website* field empty.
+:menuselection:`Website --> Configuration --> Pages`. To do so, leave the *Website* field empty.
 
 If you want to duplicate it in just one other website, duplicate the
 page and set the new website.
@@ -250,8 +254,8 @@ Pricelists
 To manage specific prices by websites, you can activate *Multiple Sales
 Prices per Product* in Website settings.
 
-Then, go to :menuselection:`Website --> Products → Pricelists` to create additional
-pricelists. Read `Pricelists Documentation <https://www.odoo.com/documentation/user/online/ecommerce/maximizing_revenue/pricing.html>`__, 
+Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional
+pricelists. See :doc:`../../ecommerce/maximizing_revenue/pricing`.
 
 If you need help. Select a website to make a pricelist only available on
 this website.

@@ -2,31 +2,52 @@
 Get a signature to confirm an order
 ===================================
 
-You can use online signature to get orders automatically confirmed. Both
-you and your customer will save time by using this feature compared to a
-traditional process.
+Online signatures are like electronic "fingerprints". By using them on Odoo, you will get
+automatic orders confirmation. You and your customers will save a lot of time by using this
+feature compared to a traditional process.
 
 Activate online signature
 =========================
 
-Go to :menuselection:`SALES --> Configuration --> Settings` and activate
-the *Online Signature & Payment* feature.
+Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Online Signature**
+feature.
 
-.. image:: media/getsignaturetovalidate01.png
-    :align: center 
+.. image:: media/signature_1.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to enable online signature on Odoo Sales?
 
-.. note:: 
- If you are using `quotation templates <https://drive.google.com/open?id=11UaYJ0k67dA2p-ExPAYqZkBNaRcpnItCyIdO6udgyOY>`_,
- you can also pick a default setting for each template.
+.. note::
+   If you are familiar with this documentation: :doc:`quote_template`, you can activate or not the
+   **Online Signature** feature for each quotation template you use, under their confirmation tab.
+   Example:
 
-Validate an order with a signature
-==================================
+   .. image:: media/signature_2.png
+      :align: center
+      :class: img-thumbnail
+      :alt: How to enable online signature on Odoo Sales?
 
-When you sent a quotation to your client, they can accept it and sign online instantly.
+Confirm an order with a signature
+=================================
 
-.. image:: media/getsignaturetovalidate02.png
-   :align: center 
+When you send quotations to clients, they can instantly accept and sign it online. When they
+click on **Sign & Pay**, they have the choice to draw their own signature, automatically fill in the
+field with an automated signature or load a file from their computer. Here below, it is an example
+of an automated signature:
 
-Once signed the quotation will be confirmed and delivery will start.
+.. image:: media/signature_3.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to confirm an order with a signature on Odoo Sales?
+
+Once signed, you will have the possibility to choose your payment methods. Then, when the quotation
+will be paid and confirmed, a delivery order will be created automatically by Odoo.
+
+.. tip::
+   Be careful that delivery orders are only generated for storable products and if the
+   **Inventory app** is already installed.
+
+.. seealso::
+   - :doc:`quote_template`
 
 

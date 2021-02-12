@@ -1,96 +1,78 @@
-===============================================
-How to organize a cross-dock in your warehouse?
-===============================================
+=====================================
+Organize a cross-dock in a warehouse
+=====================================
 
-Cross dock area is temporarily area where we are not storing any product
-instead just managing place according to delivery for further customer.
-This will save lot of time for inter warehouse transfer and storing
-process. We are managing our products with docking area where product
-directly place from supplier location and transfer this to gate pass for
-customer delivery.
+Cross-docking is the process of sending products that are received directly to the customers, without making them enter the stock. The trucks are simply unloaded in a *Cross-Dock* area in order to reorganize products and load another truck.
 
-.. image:: media/cross01.jpg
+.. image:: media/cross1.png
    :align: center
 
 .. note::
-
-   For more information on how to organise your warehouse, read
-   `What is cross docking and is it for me? <https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_
+   For more information on how to organize your warehouse, read our blog: `What is cross-docking and is it for me? <https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`__
 
 Configuration
-=============
+==============
 
-Warehouse and routes
---------------------
+In the *Inventory* app, open :menuselection:`Configuration --> Settings` and activate the *Multi-Step Routes*.
 
-In the **Inventory** module, open :menuselection:`Configuration --> Settings -->
-Location & Warehouse`, then in **Routes**, select **Advanced routing of
-products using rules**, then click on **Apply**.
-
-.. image:: media/cross02.png
+.. image:: media/cross2.png
    :align: center
 
-Open :menuselection:`Configuration --> Warehouse Management --> Warehouses`,
-then open the warehouse you want to cross-dock from and click on **Edit**.
+.. note::
+   Doing so will also enable the *Storage Locations* feature.
 
-In the **Warehouse Configuration** tab, select:
+Now, both *Incoming* and *Outgoing* shipments should be configured to work with 2 steps. To adapt
+the configuration, go to :menuselection:`Inventory --> Configuration --> Warehouses` and edit your
+warehouse.
 
-- **Incoming Shipments**: Unload in input location then go to stock (2
-  steps)
-
-- **Outgoing Shipments**: Ship directly from stock (Ship only)
-
-then click on **Save**.
-
-.. image:: media/cross03.png
+.. image:: media/cross3.png
    :align: center
 
-This steps has generated a cross-docking route that you can see in
-:menuselection:`Inventory --> Configurations --> Routes --> Routes`.
+This modification will lead to the creation of a *Cross-Docking* route that can be found in
+:menuselection:`Inventory --> Configuration --> Routes`.
 
-Cross Docking Route
--------------------
-
-We will use the route **Buy** for first part of the flow and create a route for
-the remaining part:
-
-.. image:: media/cross04.png
+.. image:: media/cross4.png
    :align: center
 
-Each of the procurement rule will now be configured. Cross Dock location is
-created as an internal physical location.
+Configure products with Cross-Dock Route
+=========================================
 
-.. figure:: media/cross05.png
-   :figclass: figure
+Create the product that uses the *Cross-Dock Route* and then, in the inventory tab, select the routes *Buy* and *Cross-Dock*. Now, in the purchase tab, specify the vendor to who you buy the product and set a price for it.
+
+.. image:: media/cross5.png
    :align: center
 
-   :menuselection:`Input --> Cross Dock`
-
-.. figure:: media/cross06.png
-   :figclass: figure
+.. image:: media/cross6.png
    :align: center
 
-   :menuselection:`Cross Dock --> Output`
+Once done, create a sale order for the product and confirm it. Odoo will automatically create two transfers which will be linked to the sale order. The first one is the transfer from the *Input Location* to the *Output Location*, corresponding to the move of the product in the *Cross-Dock* area. The second one is the delivery order from the *Output Location* to your *Customer Location. Both are in state *Waiting Another Operation* because we still need to order the product to our supplier.
 
-.. figure:: media/cross07.png
-   :figclass: figure
+.. image:: media/cross7.png
    :align: center
 
-   :menuselection:`Output --> Customer`
-
-Product with cross dock
------------------------
-
-We have created the Vegetable Fennel product and assigned the routes created above
-as well as the **Buy** route.
-
-We have also specified a supplier and a minimum order rule which is needed for
-replenishment of a stockable product.
-
-.. image:: media/cross08.png
+.. image:: media/cross8.png
    :align: center
 
-.. seealso::
+Now, go to the *Purchase* app. There, you will find the purchase order that has been automatically triggered by the system. Validate it and receive the products in the *Input Location*.
 
-   * :doc:`use_routes`
-   * :doc:`../../management/incoming/two_steps`
+.. image:: media/cross9.png
+   :align: center
+
+.. image:: media/cross10.png
+   :align: center
+
+When the products have been received from the supplier, you can go back to your initial sale order and validate the internal transfer from *Input* to *Output*.
+
+.. image:: media/cross11.png
+   :align: center
+
+.. image:: media/cross12.png
+   :align: center
+
+The delivery order is now ready to be processed and can be validated too.
+
+.. image:: media/cross13.png
+   :align: center
+
+.. image:: media/cross14.png
+   :align: center

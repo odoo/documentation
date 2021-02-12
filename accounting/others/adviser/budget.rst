@@ -1,13 +1,16 @@
-=================================
-How to manage a financial budget?
-=================================
+=========================
+Manage a financial budget
+=========================
 
 Overview
 ========
 
-Managing budgets is an essential part of running a business. It allows
-you to measure your actual financial performance against the planned
-one. Odoo manages its budgets using both General and Analytic Accounts.
+Managing budgets is an essential part of running a business. Budgets help
+people become more intentional with the way money is spent and direct people
+to organize and prioritize their work to meet financial goals. They allows 
+you to plan your desired financial outcome and then measure your actual 
+performance against the plan. Odoo manages budgets using both General and Analytic 
+Accounts.
 
 We will use the following example to illustrate. We just started a
 project with Smith&Co and we would like to budget the incomes and
@@ -34,10 +37,23 @@ management** feature
 Budgetary Positions
 -------------------
 
-Budgetary positions are the general accounts for which you want to keep
+Budgetary positions are lists of accounts for which you want to keep
 budgets (typically expense or income accounts). They need to be defined
 so Odoo can know it which accounts he needs to go get the budget
-information. Some might be already installed with your chart of
+information. 
+
+The budgetary positions act as a type of restriction on what can be recorded
+in the 'practical amount' column in a budget.
+
+Each budgetary position can have any number of accounts from the general 
+ledger (the main chart of accounts) assigned to it, though it must have at least one.  
+
+If you record a transaction that has an analytic account assigned to it that *is* 
+included in a budget line but one of the general ledger accounts *is not* included 
+in the budgetary position for that same budget line, it will not appear within the 
+'practical amount' column of that budget line.
+
+Some budgetary positions might be already installed with your chart of
 accounts.
 
 To define the positions enter the :menuselection:`Accounting module --> Configuration -->
@@ -117,14 +133,12 @@ You can check your budget at any time. To see the evolution, let's book
 some Invoices and Vendors Bills.
 
 .. tip::
-	
-	if you use analytical accounts remember that you need to specify the account in the invoice and / or purchase line.
+   If you use analytical accounts remember that you need to specify the account in the invoice
+   and/or purchase line.
 
 .. seealso::
-
-	for more information about booking invoices and purchase orders see:
-
-	* :doc:`../../receivables/customer_invoices/overview`
+   For more information about booking invoices and purchase orders see
+   :doc:`../../receivables/customer_invoices/overview`
 
 Go back in the budget list and find the Smith Project.
 
@@ -136,10 +150,9 @@ purchase lines booked in the accounts and will display them in the
    :align: center
 
 .. note::
-
-	The theoretical amount represents the amount of money you theoretically could
-	have spend / should have received in function of the date. When your budget
-	is 1200 for 12 months (january to december), and today is 31 of january, the
-	theoretical amount will be 1000, since this is the actual amount that could
-	have been realised.
+   The theoretical amount represents the amount of money you theoretically could
+   have spend / should have received in function of the date. When your budget
+   is 1200 for 12 months (january to december), and today is 31 of january, the
+   theoretical amount will be 100, since this is the actual amount that could
+   have been realised.
 

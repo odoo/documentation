@@ -1,4 +1,4 @@
-:banner: banners/db_online.jpg
+:banner: banners/db_online.png
 
 
 .. _db_online:
@@ -117,7 +117,7 @@ receive an e-mail with the URL of the test database.
 Even though we test all upgrades manually, we do not know your work processes.
 A change in standard worfklows of Odoo in new versions might require you to
 change internal processes, or some of the customizations you made through Odoo
-Studio might now work properly. *It is up to you to make sure that everything
+Studio might not work properly. *It is up to you to make sure that everything
 works as it should!* You can report issues with your test database through our
 `Support page <https://www.odoo.com/help>`__.
 
@@ -136,9 +136,9 @@ e-mail once the process is completed.
 .. image:: media/upgrade_prod.png
     :align: center
 
-.. warning :: Your database will be taken offline during the upgrade
-    (usually between 30min up to several hours for big databases),
-    so make sure to plan your migration during non-business hours.
+.. warning::
+   Your database will be taken offline during the upgrade (usually between 30min up to several hours
+   for big databases), so make sure to plan your migration during non-business hours.
 
 .. _duplicate_online:
 
@@ -176,10 +176,11 @@ After a few seconds, you will be logged in your duplicated database.
 Notice that the url uses the name you chose for your duplicated
 database.
 
-.. note :: Duplicate databases expire automatically after 15 days.
+.. note::
+   Duplicate databases expire automatically after 15 days.
 
-    .. image:: media/dup_expires.png
-        :align: center
+   .. image:: media/dup_expires.png
+      :align: center
 
 .. _rename_online_database:
 

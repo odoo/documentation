@@ -126,7 +126,7 @@
     data.addWatch('chart', function (k, m, prev, next) {
         React.render(
             React.createElement(Controls, {p: next}),
-            document.getElementById('chart-controls'));
+            document.getElementById('chart-controls-continental'));
         React.render(
             React.createElement(Chart, {p: next}),
             document.querySelector('.valuation-chart-continental'));
@@ -137,7 +137,7 @@
         if (!chart) { return; }
 
         var controls = document.createElement('div');
-        controls.setAttribute('id', 'chart-controls');
+        controls.setAttribute('id', 'chart-controls-continental');
         chart.parentNode.insertBefore(controls, chart);
 
         data.reset(Immutable.Map({
@@ -225,7 +225,7 @@
     }, {
         label: "Vendor Invoice (PO €48, Invoice €50)",
         operations: [
-            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(48)},
+            {account: EXPENSES.PURCHASED_GOODS.code, debit: constant(50)},
             {account: ASSETS.TAXES_PAID.code, debit: constant(50 * 0.09)},
             {account: LIABILITIES.ACCOUNTS_PAYABLE.code, credit: constant(50 * 1.09)},
         ]

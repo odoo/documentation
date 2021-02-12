@@ -1,4 +1,4 @@
-:banner: banners/users.jpg
+:banner: banners/users.png
 
 .. _db_management/documentation:
 
@@ -37,8 +37,7 @@ Deactivating Users
     you want to change the status of any of your users. 
 
 In your Odoo instance, click on **Settings**. You will have a section
-showing you the active users on your database. Click on **Manage
-access rights.** 
+showing you the active users on your database. Click on **Manage Users.** 
 
 +----------------+----------------+
 |   |settings|   | |browse_users| |
@@ -55,11 +54,10 @@ You'll then see the list of your users.
     and the portal ones)
 
 In your list of users, click on the user you want to deactivate. As soon
-as you are on the userform, go with your mouse cursor on the status
-**Active** (top right). Click on Active and you will notice that the
-status will change to **Inactive** immediately. 
+as you are on the userform, click on the Action drop down menu, and
+then click on Archive.
 
-.. image:: media/deactivate_user.gif
+.. image:: media/deactivate_user.png
     :align: center
 
 

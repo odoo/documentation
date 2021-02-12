@@ -1,4 +1,4 @@
-:banner: banners/iot.jpeg
+:banner: banners/iot.png
 
 ========================
 Internet of Things (IoT)
@@ -7,7 +7,6 @@ Internet of Things (IoT)
 .. toctree::
    :titlesonly:
 
-   iot/connect
-   iot/pos
-   iot/iot_notfound
-   iot/flash_sdcard
+   iot/config
+   iot/devices
+   point_of_sale/payment

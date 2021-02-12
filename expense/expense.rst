@@ -1,4 +1,4 @@
-:banner: banners/expense.jpg
+:banner: banners/expense.png
 
 ========
 Expenses
@@ -33,7 +33,7 @@ Here are some examples to configure:
 Don't forget to set an expense tax on each expense type 
 (and an account if you use Odoo Accounting). 
 It's usually a good practice to use a tax that is configured 
-with *Tax Included in Price* (see: :doc:`../accounting/others/taxes/tax_included`).
+with :ref:`Tax Included in Price <taxes/included-in-price>`.
 That way, employees report expenses with 
 prices including taxes, which is usually the expected behaviour.
 
@@ -81,8 +81,8 @@ For security purposes, only authenticated employee emails
 
 .. tip::
     The expense product is set automatically if the mail subject contains 
-    the product's internal reference between brackets (e.g. [Food]). 
-    Type the expense amount in the mail subject to set it on the expense too.
+    the product's internal reference in first position.
+    Type the expense amount in the mail subject to set it on the expense too (e.g. Ref001 Food 100€).
 
 How to submit expenses to managers
 ==================================
@@ -90,7 +90,7 @@ How to submit expenses to managers
 When you are ready to submit your expenses to your manager 
 (e.g. at the end of a business trip, or once a month), 
 go to the menu :menuselection:`My Expenses --> Expenses to Submit`. Select all expenses 
-from the list view and click on :menuselection:`Action > Submit to Manager`. 
+from the list view and click on :menuselection:`Action --> Submit to Manager`.
 Save the newly created expense report (i.e. set of expenses), 
 and wait for your manager to approve it.
 

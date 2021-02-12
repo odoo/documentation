@@ -1,4 +1,4 @@
-:banner: banners/odoo-sh.jpg
+:banner: banners/odoo_sh.png
 
 ==================================
 Containers
@@ -12,9 +12,11 @@ Each build is isolated within its own container (Linux namespaced container).
 The base is an Ubuntu 16.04 system, where all of Odoo's required dependencies,
 as well as common useful packages, are installed.
 
-The Odoo.sh team is open to install any system packages
-as long as they are distributed in the official Ubuntu repositories.
-`Leave us a feedback <https://www.odoo.sh/feedback>`_ if you would like a package not yet installed.
+The Odoo.sh team is open to install system packages as long as they are
+distributed in the official Ubuntu repositories and meets the platform's
+`dependency requirements <https://www.odoo.sh/faq#install_dependencies>`_.
+You can use `the feedback form <https://www.odoo.sh/feedback>`_ in order to
+submit a package request to the Odoo.sh team.
 
 If your project requires additional Python dependencies, or more recent releases,
 you can define a :file:`requirements.txt` file in the root of your branches listing them.
@@ -22,7 +24,7 @@ The platform will take care to install these dependencies in your containers.
 `The pip requirements specifiers <https://pip.pypa.io/en/stable/reference/pip_install/#requirement-specifiers>`_
 documentation can help you write a :file:`requirements.txt` file.
 To have a concrete example,
-check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/11.0/requirements.txt>`_.
+check out the `requirements.txt file of Odoo <https://github.com/odoo/odoo/blob/14.0/requirements.txt>`_.
 
 The :file:`requirements.txt` files of submodules are taken into account as well. The platform
 looks for :file:`requirements.txt` files in each folder containing Odoo modules: Not in the module folder itself,
@@ -78,7 +80,7 @@ Here are the Odoo.sh pertinent directories:
 Both Python 2.7 and 3.5 are installed in the containers. However:
 
 * If your project is configured to use Odoo 10.0, the Odoo server runs with Python 2.7.
-* If your project is configured to use Odoo 11.0 or greater, the Odoo server runs with Python 3.5.
+* If your project is configured to use Odoo 11.0 or above, the Odoo server runs with Python 3.5.
 
 Database shell
 ==============
@@ -172,17 +174,71 @@ In the above commands, the argument:
 * ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
-`CLI documentation <https://www.odoo.com/documentation/11.0/reference/cmdline.html>`_.
+`CLI documentation <https://www.odoo.com/documentation/14.0/reference/cmdline.html>`_.
 
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
 Look for "*odoo: addons paths*":
 
 ::
 
-  2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 11.0
+  2018-02-19 10:51:39,267 4 INFO ? odoo: Odoo version 13.0
   2018-02-19 10:51:39,268 4 INFO ? odoo: Using configuration file at /home/odoo/.config/odoo/odoo.conf
-  2018-02-19 10:51:39,268 4 INFO ? odoo: addons paths: ['/home/odoo/data/addons/11.0', '/home/odoo/src/user', '/home/odoo/src/enterprise', '/home/odoo/src/themes', '/home/odoo/src/odoo/addons', '/home/odoo/src/odoo/odoo/addons']
+  2018-02-19 10:51:39,268 4 INFO ? odoo: addons paths: ['/home/odoo/data/addons/13.0', '/home/odoo/src/user', '/home/odoo/src/enterprise', '/home/odoo/src/themes', '/home/odoo/src/odoo/addons', '/home/odoo/src/odoo/odoo/addons']
 
 **Be careful**, especially with your production database.
 Operations that you perform running this Odoo server instance are not isolated:
 Changes will be effective in the database. Always, make your tests in your staging databases.
+
+Debugging in Odoo.sh
+====================
+
+Debugging an Odoo.sh build is not really different than another Python app. This article only explains the specificities and limitations of the Odoo.sh platform, and assumes that you already know how to use a debugger.
+
+.. note:: If you don't know how to debug a Python application yet, there are multiple introductory courses that can be easily found on the Internet.
+
+You can use ``pdb``, ``pudb`` or ``ipdb`` to debug your code on Odoo.sh.
+As the server is run outside a shell, you cannot launch the debugger directly from your Odoo instance backend as the debugger needs a shell to operate.
+
+- `pdb <https://docs.python.org/3/library/pdb.html>`_ is installed by default in every container.
+
+- If you want to use `pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_ you have to install it before.
+
+  To do so, you have two options:
+
+    - temporary (only in the current build):
+
+      .. code-block:: bash
+
+        $  pip install pudb --user
+
+      or
+
+      .. code-block:: bash
+
+        $  pip install ipdb --user
+
+    - permanent: add ``pudb`` or ``ipdb`` to your project ``requirements.txt`` file.
+
+
+Then edit the code where you want to trigger the debugger and add this:
+
+.. code-block:: python
+
+  import sys
+  if sys.__stdin__.isatty():
+      import pdb; pdb.set_trace()
+
+The condition :code:`sys.__stdin__.isatty()` is a hack that detects if you run Odoo from a shell.
+
+Save the file and then run the Odoo Shell:
+
+.. code-block:: bash
+
+  $ odoo-bin shell
+
+Finally, *via* the Odoo Shell, you can trigger the piece of code/function/method
+you want to debug.
+
+.. image:: ./media/pdb_sh.png
+    :align: center
+    :alt: Console screenshot showing ``pdb`` running in an Odoo.sh shell.

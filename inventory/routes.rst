@@ -7,5 +7,4 @@ Advanced Routes
    :glob:
 
    routes/concepts
-   routes/costing
    routes/strategies

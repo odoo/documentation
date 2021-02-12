@@ -16,8 +16,8 @@ Odoo uses the rules of double-entry bookkeeping system: all journal
 entries are automatically balanced (sum of debits = sum of credits).
 
 .. seealso::
-
-	`Understand Odoo's accounting transactions per document <https://odoo.com/documentation/functional/accounting.html>`__
+   - `Understand Odoo's accounting transactions per document
+     <https://odoo.com/documentation/functional/accounting.html>`_
 
 Accrual and Cash Basis Methods
 ==============================
@@ -65,10 +65,8 @@ In particular, Odoo's core accounting engine supports:
   sold/delivered.
 * European accounting where expenses are accounted at the supplier
   bill.
-* Storno accounting (Italy) where refund invoices have negative
-  credit/debit instead of a reverting the original journal items.
 
-Odoo also have modules to comply with IFRS rules.
+Odoo has modules to comply with IFRS rules.
 
 Accounts Receivable & Payable
 =============================
@@ -130,8 +128,8 @@ inventory valuations. The available methods are standard price,
 average price, LIFO (for countries allowing it) and FIFO.
 
 .. seealso::
-
-	`View impact of the valuation method on your transactions <https://odoo.com/documentation/functional/valuation.html>`__
+   - `View impact of the valuation method on your transactions
+     <https://odoo.com/documentation/functional/valuation.html>`_
 
 Easy retained earnings
 ======================

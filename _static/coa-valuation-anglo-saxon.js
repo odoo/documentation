@@ -126,7 +126,7 @@
     data.addWatch('chart', function (k, m, prev, next) {
         React.render(
             React.createElement(Controls, {p: next}),
-            document.getElementById('chart-controls'));
+            document.getElementById('chart-controls-anglo-saxon'));
         React.render(
             React.createElement(Chart, {p: next}),
             document.querySelector('.valuation-chart-anglo-saxon'));
@@ -137,7 +137,7 @@
         if (!chart) { return; }
 
         var controls = document.createElement('div');
-        controls.setAttribute('id', 'chart-controls');
+        controls.setAttribute('id', 'chart-controls-anglo-saxon');
         chart.parentNode.insertBefore(controls, chart);
 
         data.reset(Immutable.Map({

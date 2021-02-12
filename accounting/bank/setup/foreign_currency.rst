@@ -1,6 +1,6 @@
-===========================================
-How to manage a bank in a foreign currency?
-===========================================
+===================================
+Manage a bank in a foreign currency
+===================================
 
 In Odoo, every transaction is recorded in the default currency of the
 company. Reports are all based on the currency of the company. But for
@@ -34,10 +34,10 @@ Configure currencies
 --------------------
 
 Once the Odoo is configured to support multiple currencies, you should
-activate the currencies you plan to work with. To do that, go the menu
+activate the currencies you plan to work with. To do that, go to the menu
 :menuselection:`Configuration --> Currencies`. All the currencies are created by default,
-but you should activate the ones you plan to support. (to activate a
-currency, check his active field)
+but you should activate the ones you plan to support (to activate a
+currency, check its "Active" field).
 
 After having activated the currencies, you can configure the parameters
 to automate the currency rate update. These options are also in the
@@ -108,9 +108,9 @@ in the report below.
 
 In the above report, the account receivable associated to Camptocamp is
 not managed in a secondary currency, which means that it keeps every
-transaction in his own currency. If you prefer, you can set the account
-receivable of this customer with a secondary currency and all his debts
-will automatically be converted in this currency.
+transaction in its own currency. If you prefer, you can set the account
+receivable for this customer in a secondary currency and all its debts
+will automatically be converted to this currency.
 
 In such a case, the customer statement always has only one currency. In
 general, this is not what the customer expect as he prefers to see the

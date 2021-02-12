@@ -1,4 +1,4 @@
-:banner: banners/sales.jpg
+:banner: banners/sales.png
 
 =====
 Sales
@@ -10,6 +10,6 @@ Sales
    sales/send_quotations
    sales/invoicing
    sales/products_prices
-   sales/sale_amazon
-   sales/sale_ebay
+   sales/amazon_connector
+   sales/ebay_connector
    sales/advanced

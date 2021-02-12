@@ -3,14 +3,21 @@
 # This file is distributed under the same license as the Odoo package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Martin Trigaux, 2020
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2020
+# Shane Tsoi <sso@odoo.com>, 2020
+# Datasource International <Hennessy@datasourcegroup.com>, 2020
+# Mandy Choy <mnc@odoo.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 11.0\n"
+"Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2018-10-19 10:03+0200\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: Shane Tsoi <sso@odoo.com>, 2018\n"
+"POT-Creation-Date: 2021-02-04 11:02+0100\n"
+"PO-Revision-Date: 2020-09-22 14:41+0000\n"
+"Last-Translator: Mandy Choy <mnc@odoo.com>, 2020\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,187 +33,544 @@ msgstr "制造"
 msgid "Manufacturing Management"
 msgstr "制造管理"
 
+#: ../../manufacturing/management/alternative_wc.rst:3
+msgid "Using an alternative Work Center"
+msgstr "使用替代工作中心"
+
+#: ../../manufacturing/management/alternative_wc.rst:5
+msgid ""
+"For many manufacturing companies, a common issue is to have to manufacture, "
+"at the same time, several products usually produced at the same work center."
+" If in practice, employees can manufacture the goods at another work center,"
+" it is not that simple."
+msgstr "对于许多制造企业而言，常见的问题是必须在同一工作中心同时制造多种产品。如果在实践中，员工可以在另一个工作中心制造货物，那么问题就更复杂了。"
+
+#: ../../manufacturing/management/alternative_wc.rst:10
+msgid ""
+"You need to keep track of the job: which work center has been used and when,"
+" so you can schedule maintenance efficiently. With Odoo, you can configure "
+"it so you can keep tracking manufacturing orders and your employees have an "
+"alternative work center to use."
+msgstr ""
+"你必须追踪员工的工作，知晓何时使用了哪个工作中心，以便有效安排维护。你现在可以利用Odoo配置以上事务，以便追踪制造订单，让员工也有可使用的替代工作中心。"
+
+#: ../../manufacturing/management/alternative_wc.rst:15
+msgid ""
+"This way, your process becomes more efficient, and less non-productive time "
+"will be noticed."
+msgstr "这样，你的流程效率提高，非生产时间也将显露出来。"
+
+#: ../../manufacturing/management/alternative_wc.rst:20
+msgid "Configure your Work Centers"
+msgstr "配置你的工作中心"
+
+#: ../../manufacturing/management/alternative_wc.rst:22
+msgid ""
+"The first thing to do is to go to the *Manufacturing* app settings. Then, "
+"enable the *Work Orders* feature and hit save."
+msgstr "首先是进入*制造*应用程序设置。然后，启用*工单*功能并点击保存。"
+
+#: ../../manufacturing/management/alternative_wc.rst:30
+msgid ""
+"Now, go to the *Work Centers* menu under *Master Data* and create two new "
+"work centers. Add the second work centers as an alternative to the first and"
+" vice versa."
+msgstr "现在，进入*主数据*下面的*工作中心*菜单，并创建两个新的工作中心。将第二个工作中心添加为第一个工作中心的替代品，反之亦然。"
+
+#: ../../manufacturing/management/alternative_wc.rst:39
+msgid ""
+"The next step is to create your *routing*. Add your work center and an "
+"operation to it before saving."
+msgstr "下一步是创建你的*路线*。添加工作中心和操作，然后保存。"
+
+#: ../../manufacturing/management/alternative_wc.rst:47
+msgid ""
+"Then, you can create your *Bill of Materials* and add components and routing"
+" to it."
+msgstr "然后，你可创建*物料清单*并为它添加部件和路线。"
+
+#: ../../manufacturing/management/alternative_wc.rst:56
+msgid "Create your Work Orders"
+msgstr "创建工单"
+
+#: ../../manufacturing/management/alternative_wc.rst:58
+msgid ""
+"Now that everything is configured, you can create your *Work Orders*. Go to "
+"the *Manufacturing Orders* menu and hit *Create*. There, add your product "
+"and plan it. In the *Work Orders* list, you can find it ready to be "
+"assembled."
+msgstr "现在，一切配置妥当，你可创建*工单*。进入*制造订单*菜单并点击*创建*。然后添加产品和计划。在*工单*列表中，它已组合完毕。"
+
+#: ../../manufacturing/management/alternative_wc.rst:68
+msgid ""
+"Each new *Work Order*, which will be created before the end of the first "
+"one, will be scheduled at the alternative work center you configured."
+msgstr "每个新的*工单*都在前一个工单结束前创建，并安排到你配置的替代工作中心。"
+
+#: ../../manufacturing/management/alternative_wc.rst:78
+msgid ""
+"Keep in mind that, if you add time after production to your work center, you"
+" may have work orders scheduled for your alternative work center even if the"
+" usual one is free."
+msgstr "请记住，如果在生产开始后向工作中心增加时间，即使常用的工作中心空闲，工单也可能会安排到替代工作中心。"
+
 #: ../../manufacturing/management/bill_configuration.rst:3
-msgid "How to create a Bill of Materials"
-msgstr "如何创建物料清单"
+msgid "Create Bills of Materials"
+msgstr "创建物料清单"
 
 #: ../../manufacturing/management/bill_configuration.rst:5
 msgid ""
-"A bill of materials (BoM) is a document that describes the component "
-"products, the quantity of each component, and the process required to "
-"manufacture a product, including a routing and individual steps."
-msgstr "物料清单 (BoM) 是描述部件产品、每个部件的数量，以及制造产品（包括路由和每个步骤）过程的文件。"
+"A *Bill of Materials* is a document defining the quantity of each component "
+"required to manufacture a finished product. It also includes the routing and"
+" individual steps of the manufacturing process."
+msgstr "*物料清单*是指规定制造成品所需的每种部件数量的文件。它还包括制造过程的路线和各个步骤。"
 
 #: ../../manufacturing/management/bill_configuration.rst:9
 msgid ""
-"In Odoo, each product may have multiple BoMs associated with it, but a BoM "
-"can only be associated with a single product. A single BoM can, however, "
-"describe multiple variants of the same product."
-msgstr "在Odoo中，每个产品可能有多个BoM与其关联，但一个BoM只能与单个产品相关联。而单个BoM可以描述同一产品的多个变量。"
+"With Odoo, you can link multiple BoMs to each product and use it to describe"
+" multiple variants of them. Each BoM will, yet, be associated with one "
+"product only."
+msgstr "在Odoo中，你可将多个物料清单与一种产品关联，用于描述产品的多种变体。但每个物料清单仅与一种产品挂钩。"
 
-#: ../../manufacturing/management/bill_configuration.rst:14
-msgid "Setting up a Basic BoM"
-msgstr "设置基本的BoM"
-
-#: ../../manufacturing/management/bill_configuration.rst:16
+#: ../../manufacturing/management/bill_configuration.rst:13
 msgid ""
-"If you choose to manage your manufacturing operations using manufacturing "
-"orders only, you will define basic bills of materials without routings."
-msgstr ""
+"This feature will help optimize your manufacturing process while saving you "
+"time."
+msgstr "这项功能有助于优化制造过程并节约时间。"
+
+#: ../../manufacturing/management/bill_configuration.rst:17
+msgid "Setting up a BoM"
+msgstr "设置物料清单"
 
 #: ../../manufacturing/management/bill_configuration.rst:19
 msgid ""
-"Before creating your first bill of materials, you will need to create a "
-"product and at least one component (components are considered products in "
-"Odoo). You can do so from :menuselection:`Master Data --> Products`, or on "
-"the fly from the relevant fields on the BoM form. Review the Inventory "
-"chapter for more information about configuring products. Once you have "
-"created a product and at least one component, select them from the relevant "
-"dropdown menus to add them to your bill of materials. A new bill of "
-"materials can be created from :menuselection:`Master Data --> Bills of "
-"Materials`, or using the button on the top of the product form."
+"You can use BoMs without routings. You will use this if you choose to manage"
+" your manufacturing operations using manufacturing orders only. In other "
+"words, you choose to realize your manufacturing process in one step and do "
+"not track the steps the product goes through."
 msgstr ""
-"创建你的第一份物料清单前，你需要创建至少一个部件（在Odoo中也被认为是产品），方法是从 "
-":menuselection:`主数据->产品，中选择或在系统运行时从BoM表格的相关字段中选择。一旦创建好一个产品和至少一个部件后，从相关的下拉菜单中选择它们并添加到你的物料清单。新的物料单可从menuselection中创建，选择主数据->物料清单，或使用产品表单之上的按钮进行创建。"
+"你在使用物料清单时可以不设路线。如果你选择只使用制造订单来管理制造操作，则可使用本功能。换句话说，你选择一个步骤实现制造过程，而不追踪产品经过的所有步骤。"
 
-#: ../../manufacturing/management/bill_configuration.rst:29
+#: ../../manufacturing/management/bill_configuration.rst:24
 msgid ""
-"Under the **Miscellaneous** tab, you can fill additional fields. "
-"**Sequence** defines the order in which your BoMs will be selected for "
-"production orders, with lower numbers having higher priority. **Version** "
-"allows you to track changes to your BoM over time."
+"Before creating your *BoM*, you have to create the product using the *BoM* "
+"and, at least, one of the components. Go to the :menuselection:`Master Data "
+"menu --> Products` and create both the finished product and the component."
 msgstr ""
-"在**杂项**页签下填写额外的字段。**顺序**定义了BoM被选择为生产订单的顺序，数字越小优先级越高。**版本**允许你跟踪BoM在不同时间的版本号变化。"
+"在创建*物料清单*之前，你必须创建使用*物料清单*的产品以及至少一种部件。前往 :menuselection:`主数据菜单 --> "
+"产品`并创建成品和部件。"
 
-#: ../../manufacturing/management/bill_configuration.rst:35
-msgid "Adding a Routing to a BoM"
-msgstr "在BoM中添加路由"
+#: ../../manufacturing/management/bill_configuration.rst:28
+msgid ""
+"Once done, go to the *Bills of Materials* menu under *Master Data*. Now, "
+"create it. Choose the product from the dropdown menu and add your components"
+" and the quantity. In this case, keep the default *BoM* type, which is "
+"*Manufacture this Product*."
+msgstr ""
+"完成后，前往*主数据*下的*物料清单*。现在，创建物料清单。从下拉菜单中选择产品并添加你的部件和数量。在本例中，保留默认的*物料清单*类型，即*制造此产品*。"
 
 #: ../../manufacturing/management/bill_configuration.rst:37
-msgid ""
-"A routing defines a series of operations required to manufacture a product "
-"and the work center at which each operation is performed. A routing may be "
-"added to multiple BoMs, though a BoM may only have one routing. For more "
-"information about configuring routings, review the chapter on routings."
-msgstr ""
-"路由定义制造一个产品所需的一系列操作，以及每个操作执行的工作中心。一个路由可以添加到多个BoM中，而后者每个只能有一个路由。路由配置的更多信息，请参阅路由一章。"
+msgid "Using the same BoM to describe Variants"
+msgstr "使用同一个物料清单描述产品变体"
 
-#: ../../manufacturing/management/bill_configuration.rst:43
+#: ../../manufacturing/management/bill_configuration.rst:39
 msgid ""
-"After enabling routings from :menuselection:`Configuration --> Settings`, "
-"you will be able to add a routing to a bill of materials by selecting a "
-"routing from the dropdown list or creating one on the fly."
-msgstr "启用路由的方法 :menuselection:`配置 -->设置，然后当系统运行时从下拉清单中选择一个路由，即可将路由添加到物料清单。"
+"As said above, you can use *BoM* for *Product Variants*. It is basically the"
+" same as for the standard product."
+msgstr "如上所述，你可将*物料清单*用于*产品变体*。它基本与标准产品的操作相同。"
 
-#: ../../manufacturing/management/bill_configuration.rst:47
+#: ../../manufacturing/management/bill_configuration.rst:42
 msgid ""
-"You may define the work operation or step in which each component is "
-"consumed using the field, **Consumed in Operation** under the **Components**"
-" tab. Similarly, you can define the operation at which the product will be "
-"produced under the **Miscellaneous** tab using the field **Produced at "
-"Operation**. If this field is left blank, the products will be "
-"consumed/produced at the final operation in the routing."
-msgstr ""
-"通过**组件**下方的**在工序中消费**字段定义工序或步骤。同样，也可以用**在操作中生产**字段（位于**杂项**页签下）定义产品被生产的操作。如果不填这个字段，产品将在路由的最后操作中被消耗/生产。"
+"If your *BoM* is for one variant only, then specify which one in the "
+"*Product Variant* field. If not, specify the variant it is consumed for on "
+"each component line. You can add several variants for each component."
+msgstr "如果你的*物料清单*仅针对一种变体，那么在*产品变体*字段具体指明。否则，在每条部件线上指明相应的变体。你可为每种部件添加多种变体。"
 
-#: ../../manufacturing/management/bill_configuration.rst:58
-msgid "Adding Byproducts to a BoM"
-msgstr "添加副产品到BoM"
+#: ../../manufacturing/management/bill_configuration.rst:51
+msgid "Adding a routing"
+msgstr "添加路线"
 
-#: ../../manufacturing/management/bill_configuration.rst:60
+#: ../../manufacturing/management/bill_configuration.rst:53
 msgid ""
-"In Odoo, a byproduct is any product produced by a BoM in addition to the "
-"primary product."
-msgstr "副产品指在Odoo中，BoM生产的任何主产品之外的产品。"
+"You can add routing to your *BoM*. You will do this if you need to define a "
+"series of operations required by your manufacturing process. To use it, "
+"enable the *Work Orders* feature in the *Manufacturing* app settings."
+msgstr "你可为*物料清单*添加路线。这项功能适用于定义制造过程需要的一系列操作。为此，在*制造*应用程序设置中启用*工单*功能。"
 
-#: ../../manufacturing/management/bill_configuration.rst:63
+#: ../../manufacturing/management/bill_configuration.rst:62
 msgid ""
-"To add byproducts to a BoM, you will first need to enable them from "
-":menuselection:`Configuration --> Settings`."
-msgstr "如需将副产品添加到BoM，首先要在 :menuselection:`配置->设置，中选择启用它们。"
+"Each *BoM* can have only one routing while each routing can be used multiple"
+" times."
+msgstr "每个*物料清单*只能有一条路线，而每条路线可使用多次。"
 
-#: ../../manufacturing/management/bill_configuration.rst:69
+#: ../../manufacturing/management/bill_configuration.rst:65
 msgid ""
-"Once byproducts are enabled, you can add them to your bills of materials "
-"under the **Byproducts** tab of the bill of materials. You can add any "
-"product or products as byproducts. Byproducts are produced in the same step "
-"of the routing as the primary product of the BoM."
-msgstr ""
-"副产品启用后，即可被添加到物料清单**副产品**页签下的物料清单了。你可将任何产品（一个或多个）作为副产品添加。副产品的生产过程与BoM中主产品的路由一致。"
+"Now that you have created your routing, add it to your *BoM*. You can select"
+" when, in the work operations, your components are consumed with the "
+"dropdown menu."
+msgstr "现在，你已创建路线，将它添加到你的*物料清单*。你可通过下拉菜单选择在工作操作中何时使用各项部件。"
+
+#: ../../manufacturing/management/bill_configuration.rst:73
+msgid "Adding By-Products"
+msgstr "添加副产品"
+
+#: ../../manufacturing/management/bill_configuration.rst:75
+msgid ""
+"In Odoo, a *by-product* is any product produced by a *BoM* in addition to "
+"the primary product."
+msgstr "在Odoo中，*副产品*是指*物料清单*产出主产品之外的其他产品。"
 
 #: ../../manufacturing/management/bill_configuration.rst:78
-msgid "Setting up a BoM for a Product With Sub-Assemblies"
-msgstr "为产品设置一个带分组件的BoM"
-
-#: ../../manufacturing/management/bill_configuration.rst:80
-#: ../../manufacturing/management/sub_assemblies.rst:5
 msgid ""
-"A subassembly is a manufactured product which is intended to be used as a "
-"component of another manufactured product. You may wish to employ sub-"
-"assemblies to simplify a complex BoM, to more accurately represent your "
-"manufacturing flow, or to use the same subassembly in multiple BoMs. A BoM "
-"that employs subassemblies is often referred to as a multi-level BoM."
+"To add *by-products* to a *BoM*, you will first need to enable them from the"
+" *Manufacturing* app settings."
+msgstr "如要向*物料清单*添加*副产品*，首先需要从*制造*应用程序设置启用这项功能。"
+
+#: ../../manufacturing/management/bill_configuration.rst:84
+msgid ""
+"Once the feature is enabled, you can add your *By-Products* to your *BoMs*. "
+"You can add as many *By-Products* as you want. Just keep in mind that you "
+"need to register during which operation your by-product is produced."
+msgstr "启用该功能后，你可向*物料清单*添加*副产品*。你可添加多种*副产品*。只需记住，你需要登记产生副产品的操作环节。"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:3
+msgid "Use flexible components consumption"
+msgstr "使用灵活部件消耗功能"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:5
+msgid ""
+"Sometimes, you might need more components than usual to manufacture a "
+"product. Let’s say that you produce a desk combination of 4 desks and two "
+"chairs but your customer asks you one more desk. Alright, you can do that. "
+"But you will need to register it!"
 msgstr ""
-"分组件是一种用于另一制成品部件的制成品。你可能想用分组件来简化一个复杂的BoM、更精确地表示你的制造流，或在多个BoM中使用相同的分组件。BoM使用分组件通常指多级BoM。"
+"有时，你在制造一件产品时可能需要更多部件。举例来说，你生产的桌椅组合包含4张桌子和两把椅子，但客户要求你增加一把椅子。没问题，完全可以做到。但你必须登记！"
 
-#: ../../manufacturing/management/bill_configuration.rst:87
-#: ../../manufacturing/management/sub_assemblies.rst:12
+#: ../../manufacturing/management/flexible_components_consumption.rst:10
 msgid ""
-"Multi-level bills of materials in Odoo are accomplished by creating a top-"
-"level BoM and subassembly BoMs. Next, the procurement route of the "
-"subassembly product is defined. This ensures that every time a manufacturing"
-" order for the top-level product is created, a manufacturing order for each "
-"subassembly is created as well."
+"In case this happens, Odoo has the *flexible components consumption* feature"
+" available. If you enable it, you will be able to consume as many components"
+" as needed and it will make you save time in the registration of your items "
+"consumption."
+msgstr "如果出现这种情况，Odoo提供*灵活部件消耗*功能。启用此功能，你可消耗尽可能多的部件，节约了登记物品消耗情况的时间。"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:16
+#: ../../manufacturing/management/kit_shipping.rst:31
+#: ../../manufacturing/management/kit_shipping.rst:66
+#: ../../manufacturing/management/subcontracting.rst:26
+#: ../../manufacturing/management/use_mps.rst:9
+msgid "Configuration"
+msgstr "基础配置"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:18
+msgid ""
+"Using flexible component consumption is easy and can be done in a few steps."
+" All you need is a *BoM* and a *Quality Control Point*. Therefore, you will "
+"need to activate the feature *Quality* in the *MRP* app settings."
+msgstr "使用灵活部件消耗功能非常简单，只需要几步。你只需要*物料清单*和*质量控制点*。因此，你需要在*MRP*应用程序设置下启用*质量*功能。"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:23
+msgid ""
+"First, open the *BoM* you want to use for flexible component consumption and"
+" edit it. In the *Miscellaneous* tab, choose *Flexible* as the consumption "
+"type. Then, save."
+msgstr "首先，打开你想要用于灵活部件消耗的*物料清单*并编辑。在*杂项*选项卡中，选择*灵活*的消耗类型。然后保存。"
+
+#: ../../manufacturing/management/flexible_components_consumption.rst:30
+msgid ""
+"Now, in the *Quality* app, open the *Control Point* menu, under *Quality "
+"Control* and create a new *Quality Control Point*. Choose your product, your"
+" operation and work order operation. Then, choose *Register Consumed "
+"Materials* as type."
 msgstr ""
-"Odoo中的多级物料清单可通过创建顶级BoM和分组件BoM完成。下一步定义分组件产品的采购路线，以确保每次创建了顶级产品的制造订单时，能同时创建每个分组件的制造订单。"
+"现在，在*质量*应用程序中，在*质量控制*下打开*控制点*菜单，并创建新的*质量控制点*。选择你的产品、操作和工单操作。然后，选择*登记已消耗物料*类型。"
 
-#: ../../manufacturing/management/bill_configuration.rst:94
-msgid "Configure the Top-Level Product BoM"
-msgstr "配置顶级产品BoM"
-
-#: ../../manufacturing/management/bill_configuration.rst:96
-#: ../../manufacturing/management/sub_assemblies.rst:21
+#: ../../manufacturing/management/flexible_components_consumption.rst:38
 msgid ""
-"To configure a multi-level BoM, create the top-level product and its BoM. "
-"Include any subassemblies in the list of components. Create a BoM for each "
-"subassembly as you would for any product."
-msgstr "为配置多级BoM，请创建顶极产品及其BoM。将所有分组件包括到部件清单中。为每个分组件创建一个BoM（类似为每个产品创建BoM）。"
+"Next, go back to your *Manufacturing* app and create a *Manufacturing "
+"order*. Choose the product for which you have created the flexible *BoM*."
+msgstr "然后，返回*制造*应用程序并创建*制造订单*。选择你为之创建灵活*物料清单*的产品。"
 
-#: ../../manufacturing/management/bill_configuration.rst:104
-#: ../../manufacturing/management/sub_assemblies.rst:29
-msgid "Configure the Subassembly Product Data"
-msgstr "配置分组件产品数据"
-
-#: ../../manufacturing/management/bill_configuration.rst:106
-#: ../../manufacturing/management/sub_assemblies.rst:31
+#: ../../manufacturing/management/flexible_components_consumption.rst:42
 msgid ""
-"On the product form of the subassembly, you must select the routes "
-"**Manufacture** and **Make To Order**. The **Manufacture** route takes "
-"precedence over the **Buy** route, so selecting the latter will have no "
-"effect."
-msgstr "在分组件的产品表中，必须选择**制造**和**按需补货**路由。**制造**路由的优先级高于**购买**路由，因此选后者是无效的。"
+"Then, confirm it and launch the process step. While processing, you will "
+"have the possibility to consume more components than expected in the *BoM*. "
+"To do so, click on *Continue Consumption*."
+msgstr "然后，确认并启动处理步骤。在处理时，你有可能消耗比*物料清单*中预期更多的部件。为此，点击*继续消耗*。"
 
-#: ../../manufacturing/management/bill_configuration.rst:114
-#: ../../manufacturing/management/sub_assemblies.rst:39
+#: ../../manufacturing/management/flexible_components_consumption.rst:49
 msgid ""
-"If you would like to be able to purchase the subassembly in addition to "
-"manufacturing it, select **Can be Purchased**. All other fields on the "
-"subassembly product form may be configured according to your preference."
-msgstr "如需在制造之外采购一些组件，选择**可以购买**。分组件产品表单中的所有其他字段都可根据你的偏好配置。"
+"When the job is over, you will find a summary of your component consumption "
+"in the *Finished Steps* tab of your work order."
+msgstr "工作结束后，在工单的*完成步骤*选项卡可查看部件消耗的摘要。"
 
-#: ../../manufacturing/management/bill_configuration.rst:120
-msgid "Using a Single BoM to Describe Several Variants of a Single Product"
-msgstr "使用单个的BoM描述单一产品的多个变体"
+#: ../../manufacturing/management/kit_shipping.rst:3
+msgid "Sell sets of products as kits"
+msgstr "将一组产品作为套件销售"
 
-#: ../../manufacturing/management/bill_configuration.rst:122
+#: ../../manufacturing/management/kit_shipping.rst:5
+msgid ""
+"A *kit* is a set of components that are delivered without first being "
+"assembled or mixed. *Kits* are described in Odoo using *Bills of Materials*."
+" There are two basic ways to configure *kits*, depending on how the stock of"
+" the kit product is to be managed. In either case, both the *Inventory* and "
+"*Manufacturing* apps must be installed."
+msgstr ""
+"*套件*是指交货前未组装或混合的一组部件。它们在Odoo中被称为*物料清单*。根据套件产品的管理形式，有两种基本的*套件*配置方法。每种方法中，都必须安装“库存”和“制造”应用程序。"
+
+#: ../../manufacturing/management/kit_shipping.rst:12
+msgid "Manage Stock of Component Products"
+msgstr "管理部件产品库存"
+
+#: ../../manufacturing/management/kit_shipping.rst:14
+msgid ""
+"If you want to assemble kits as they are ordered, managing stock of the kit "
+"components only, you will use a *Kit BoM* without a manufacturing step."
+msgstr "如你想按订单组装套件，只需对套件部件库存进行管理，则可跳过制造步骤使用*套件物料清单*。"
+
+#: ../../manufacturing/management/kit_shipping.rst:18
+msgid ""
+"A product using a *Kit BoM* will appear as a single line item on a quotation"
+" and sales order, but will generate a delivery order with one line item for "
+"each of the components of the kit. In the examples below, the first image "
+"shows a sales order for the kit *Custom Computer Kit*, while the second "
+"image shows the corresponding delivery order."
+msgstr ""
+"使用*套件物料清单*的产品将作为单行项目在报价和销售订单中显示，但它会为套件中的每个部件都生成一个单行交货单。在以下例子中，左图显示\"自定义电脑套件\"的销售订单，右图显示对应的交货单。"
+
+#: ../../manufacturing/management/kit_shipping.rst:33
+msgid ""
+"From the *Products menu* in either the *Inventory* or *Manufacturing* app, "
+"create each component product as you would with any other product, then "
+"create the top-level, or kit product. The kit product should have only the "
+"*route Manufacture* set, in the *Inventory tab*. Because you cannot track "
+"the stock of kit products, the *Product Type* should be set to Consumable. "
+"Because a kit product cannot be purchased, then, *Can be Purchased* should "
+"be unchecked."
+msgstr ""
+"从*库存*或*制造*应用程序的*产品菜单*，创建每个部件产品，操作方法与所有其他产品一样，然后创建顶级产品或套件产品。套件产品在*库存选项卡*下应该只有*制造路线*组。由于你无法追踪套件产品的库存，*产品类型*应设置为消耗品。由于套件产品是无法购买的，所以应取消*采购*前面的勾号。"
+
+#: ../../manufacturing/management/kit_shipping.rst:41
+msgid ""
+"All other parameters on the kit product may be modified according to your "
+"preference. The component products require no particular configuration."
+msgstr "套件产品的所有其他参数都可按照你的偏好进行修改。套件产品无需特别的配置。"
+
+#: ../../manufacturing/management/kit_shipping.rst:48
+msgid ""
+"Once the products are configured, create a *bill of materials* for the kit "
+"product. Add each component and its quantity. Select the *BoM Type Ship this"
+" product as a set of components*. All other options may be left with their "
+"default values."
+msgstr ""
+"完成产品配置后，为套件产品创建*物料清单*。添加每种部件及其数量。选择*物料清单类型*下的*将本产品作为一套部件发货*。所有其他选项可保留默认值。"
+
+#: ../../manufacturing/management/kit_shipping.rst:57
+msgid "Manage Stock of Kit Product and Component Products"
+msgstr "管理套件及部件产品的库存"
+
+#: ../../manufacturing/management/kit_shipping.rst:59
+msgid ""
+"If you want to manage stock of the *top-level kit product*, you will use a "
+"standard *BoM* with a manufacturing step instead of a *Kit BoM*. When using "
+"a standard BoM to assemble kits, a *manufacturing order* will be created. "
+"The *manufacturing order* must be registered as completed before the kit "
+"product will appear in your stock."
+msgstr ""
+"如需管理*顶级套件产品*的库存，需要采用有制造步骤的标准*物料清单*而不用*套件物料清单*。使用标准物料清单组装套件时将创建一个*制造订单*。该*制造订单*必须登记后才能在库存中显示套件产品。"
+
+#: ../../manufacturing/management/kit_shipping.rst:68
+msgid ""
+"On the kit product, select the *route Manufacture*. You may also select "
+"*Make to Order*, which will create a *manufacturing order* whenever a sales "
+"order is confirmed. Select the product type *Storable Product* to enable "
+"stock management."
+msgstr ""
+"在套件产品中选择*制造路线*。也可选择*按订单生产*，这会在每次确认销售订单时创建一个*制造订单*。请选择产品类别为*可库存产品*启用库存管理。"
+
+#: ../../manufacturing/management/kit_shipping.rst:76
+msgid ""
+"When you create the *bill of materials*, select the BoM Type *Manufacture "
+"this product*. The assembly of the kit will be described by a *manufacturing"
+" order* rather than a packing operation."
+msgstr "当你创建*物料清单*时，将物料清单类别选择为*制造此产品*。套件的组装由*制造订单*而非包装操作来定义。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:3
+msgid "Process Manufacturing Orders"
+msgstr "处理制造订单"
+
+#: ../../manufacturing/management/manufacturing_order.rst:5
+msgid ""
+"In Odoo, you can manage your manufacturing process in two different ways. "
+"You can work with one document, or decide to have more information and "
+"control over it."
+msgstr "在Odoo中，你可用两种不同方式管理制造过程。你可使用一个文件进行管理，也可选择获取更多信息和控制力的方式进行管理。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:9
+msgid ""
+"In the first case, Odoo makes things easier and helps you manage work with "
+"one document only: the manufacturing order. No complex steps during the "
+"process, you just have to schedule the job and record the production."
+msgstr "在第一种情况中，Odoo让事情变简单，帮助你仅用一个文件 - 即制造订单来管理工作。整个过程没有复杂的步骤，你只需要安排工作并记录生产。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:14
+msgid ""
+"But, if you need more control, you can use additional documents (steps) to "
+"your manufacturing process. This way, *Manufacturing Orders* are divided "
+"into one or more steps defined by *Work Orders* and performed in a sequence "
+"defined by *routings*."
+msgstr ""
+"但是，如果你想要更多控制力， 在制造过程中可使用其他文件（步骤）。这样，*制造订单*被分为一个或多个步骤（即*工单*），并按*路线*的规定按顺序执行。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:19
+msgid ""
+"Using Odoo will allow you to precisely schedule the job, analyze your "
+"efficiency but also have ease when realizing each step of your manufacturing"
+" process."
+msgstr "通过Odoo，你可精准安排工作，分析效率并轻松实现制造过程的每个步骤。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:24
+msgid "Manage Manufacturing Without Routings"
+msgstr "在不设路线的情况下管理制造过程"
+
+#: ../../manufacturing/management/manufacturing_order.rst:26
+msgid ""
+"If your manufacturing process is limited to one place, one person and one "
+"step, you will probably use manufacturing orders without routings."
+msgstr "如果你的制造过程局限在一个地方、一名人员和一个步骤，你可在不设路线的情况下使用制造订单。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:29
+msgid ""
+"In Odoo, it is the default behavior. If work this way, there are two basic "
+"phases from planning to production:"
+msgstr "这种方式的操作管理是Odoo的默认动作。从规划到生产有两个基本阶段："
+
+#: ../../manufacturing/management/manufacturing_order.rst:32
+msgid "Create a manufacturing order"
+msgstr "创建制造订单"
+
+#: ../../manufacturing/management/manufacturing_order.rst:34
+msgid "Record the production"
+msgstr "记录生产"
+
+#: ../../manufacturing/management/manufacturing_order.rst:37
+msgid "Manage Manufacturing with Routings and Work Centers"
+msgstr "管理包含路线和工作中心的制造过程"
+
+#: ../../manufacturing/management/manufacturing_order.rst:39
+msgid ""
+"To use *Work Centers* and *Routings*, you will need to enable the *Work "
+"Orders* feature. To do so, go to the *Manufacturing* app settings."
+msgstr "如要使用*工作中心*和*路线*，你需启用*工单*功能。为此，前往*制造*应用程序设置。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:46
+msgid ""
+"Now, you can add routings to *BoMs* and configure your operations taking "
+"place at different *work centers*. The *Work Centers* are the locations at "
+"which work orders are performed."
+msgstr "现在，你可向*物料清单*添加路线并配置不同*工作中心*的操作。*工作中心*指执行工单的场所。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:53
+msgid ""
+"When manufacturing this way, each *Work Order* is scheduled individually. "
+"You will also have access to time and capacity planning, as well as reports "
+"on costing and efficiency for each *Work Center*."
+msgstr "按这种方式进行制造时，每个*工单*都是独立排定的。你还可以进行时间和工作量规划，以及*工作中心*级别的成本与效率报告。"
+
+#: ../../manufacturing/management/manufacturing_order.rst:60
+msgid "Thus, the workflow is divided into three basic phases:"
+msgstr "工作流程由此被分解到三个基本阶段中："
+
+#: ../../manufacturing/management/manufacturing_order.rst:62
+msgid "Create the manufacturing order"
+msgstr "创建制造订单"
+
+#: ../../manufacturing/management/manufacturing_order.rst:67
+msgid "Schedule the associated work orders"
+msgstr "计划相关工单的日程"
+
+#: ../../manufacturing/management/manufacturing_order.rst:72
+msgid "Perform the scheduled work and record production"
+msgstr "执行排定的工作并记录生产"
+
+#: ../../manufacturing/management/plan_work_orders.rst:3
+msgid "Plan Work Orders"
+msgstr "计划工单"
+
+#: ../../manufacturing/management/plan_work_orders.rst:5
+msgid ""
+"In some cases, companies need to schedule their work orders. Doing so, they "
+"can organize the work for the whole day and be sure everything goes well. It"
+" helps to avoid scheduling multiple work orders at the same time when you "
+"don’t have the capacity to do so."
+msgstr "在某些情况下，公司需要安排工单时间表。他们可安排一整天的工作并确保一切顺畅运行。避免在产能不足时安排多个工单。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:10
+msgid ""
+"With Odoo, companies can schedule the planned start date for their "
+"manufacturing orders. No possible duplication, no potential issues with the "
+"planning. And, if you plan two work orders at the same work center, at the "
+"same hour, the second one will be scheduled right after the first one, "
+"avoiding work superposition."
+msgstr ""
+"通过Odoo，公司可为制造订单安排计划开始日期。不可能重复， "
+"计划过程也不会出现潜在问题。并且，如果为同一个工作中心同一时段计划两个工单，第二个将直接安排在第一个后面，避免工作叠加。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:17
+msgid "Create the Work Orders"
+msgstr "创建工单"
+
+#: ../../manufacturing/management/plan_work_orders.rst:19
+msgid ""
+"The first thing you need to do is to open the *Manufacturing* app. Then, Go "
+"to the settings and enable the *Work Orders* feature."
+msgstr "首先需要打开*制造*应用程序。然后，前往设置并启用*工单*功能。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:25
+msgid ""
+"Now, go to the *Manufacturing Orders* menu and hit *Create*. Choose your "
+"product and add a *Planned Start Date*."
+msgstr "现在，进入*制造订单*菜单并点击*创建*。选择你的产品并添加*计划开始日期*。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:32
+msgid ""
+"The “Deadline Start” field is informative. It shows you until when you can "
+"launch the manufacturing order to fulfill the initial demand."
+msgstr "*截止日期开始*字段仅供参考。它显示何时可以开始制造订单以满足初步需求。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:35
+msgid ""
+"Mark your *Manufacturing Order* as todo and plan it. By going to the "
+"*Planning* menu, you can access to the scheduled orders. Here is the one we "
+"just created:"
+msgstr "将*制造订单*标记为待办事项并计划它。进入*规划*菜单，你可访问已排期的订单。这是我们刚刚创建的："
+
+#: ../../manufacturing/management/plan_work_orders.rst:43
+msgid ""
+"If you plan two work orders at the same hour, the second one will be "
+"scheduled after the first one if the jobs need to be done at the same work "
+"center. The start date will, then, be automatically updated considering the "
+"first free slot on the work center."
+msgstr "如果在同一个工作中心同一时段安排了两个工单，第二个将安排在第一个之后。其开始日期将自动更新到该工作中心首个空闲的时间档。"
+
+#: ../../manufacturing/management/plan_work_orders.rst:48
+msgid ""
+"If you overrun the planned date and begin the job later, you will have a "
+"track of it in the *Time Tracking* tab of your work order."
+msgstr "如果你超出了计划日期并在稍后开始工作，将在工单的*时间跟踪*选项卡中追踪它。"
+
+#: ../../manufacturing/management/product_variants.rst:3
+msgid "How to manage BoMs for product variants"
+msgstr "如何管理产品变体的BoM"
+
 #: ../../manufacturing/management/product_variants.rst:5
 msgid ""
 "Odoo allows you to use one bill of materials for multiple variants of the "
 "same product. Simply enable variants from :menuselection:`Configuration --> "
 "Settings`."
-msgstr "Odoo允许你为同一产品的多个变量使用物料清单。启用变量的方式很简单，只需从 :menuselection:`配置->设置中选择。"
+msgstr ""
+"Odoo允许你为同一产品的多个变量使用物料清单。启用变量的方式很简单，只需从 :menuselection:`配置 --> 设置` 中选择。"
 
-#: ../../manufacturing/management/bill_configuration.rst:129
 #: ../../manufacturing/management/product_variants.rst:12
 msgid ""
 "You will then be able to specify which component lines are to be used in the"
@@ -215,7 +579,6 @@ msgid ""
 "variants."
 msgstr "然后就可以指定每个产品变量的制造中需要用哪些部件行。可以为每个行指定多个变量。如果没有指定变量，这一行可以用于所有的变量。"
 
-#: ../../manufacturing/management/bill_configuration.rst:134
 #: ../../manufacturing/management/product_variants.rst:17
 msgid ""
 "When defining variant BoMs on a line-item-basis, the **Product Variant** "
@@ -223,219 +586,529 @@ msgid ""
 "used when creating a BoM for one variant of a product only."
 msgstr "在行与项目对应的基础上定义变量BoM时，BoM主区域的**产品变量**字段应不填内容。这一字段只在为产品的一个变量创建BoM时有用。"
 
-#: ../../manufacturing/management/kit_shipping.rst:3
-msgid "How to Sell a Set of Products as a Kit"
-msgstr "如何将将一套产品作为一个套件销售"
+#: ../../manufacturing/management/routing_kit_bom.rst:3
+msgid "Set routings on kit Bills of materials"
+msgstr "在套件物料清单上设置路线"
 
-#: ../../manufacturing/management/kit_shipping.rst:5
+#: ../../manufacturing/management/routing_kit_bom.rst:5
 msgid ""
-"A *kit* is a set of components that are delivered without first being "
-"assembled or mixed. Kits are described in Odoo using *bills of materials*. "
-"There are two basic ways to configure kits, depending on how stock of the "
-"kit product is to be managed. In either case, both the Inventory and "
-"Manufacturing apps must be installed."
+"It often happens that you want to use kit BoM’s within manufactured product "
+"BoM’s in order to lighten the list of components for this manufactured "
+"product. When doing so, you would like to have the possibility to specify, "
+"for each kit component, in which operation they are consumed."
+msgstr "你经常希望使用已制产品物料清单内的套件物料清单，以缩减该产品的部件清单长度。在此过程中，你希望能够指明消耗每个套件部件的操作环节。"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:11
+msgid ""
+"We will see the three use cases that you can face in these kinds of "
+"configurations."
+msgstr "我们来看你在这类配置中可能面临的三种用例。"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:15
+msgid "Finished Product & Kit Component have the same Routing"
+msgstr "成品和套件部件路线相同"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:18
+#: ../../manufacturing/management/routing_kit_bom.rst:63
+#: ../../manufacturing/management/routing_kit_bom.rst:107
+msgid "Create BoM for the Finished Product"
+msgstr "为成品创建物料清单"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:20
+#: ../../manufacturing/management/routing_kit_bom.rst:65
+msgid ""
+"Create a manufactured BoM for the finished product which includes a kit "
+"component. Set a routing on your BoM, for example, *Assemble Furniture*."
+msgstr "为包含套件部件的成品创建物料清单。为该物料清单设置路线，例如*组装家具*。"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:28
+#: ../../manufacturing/management/routing_kit_bom.rst:73
+#: ../../manufacturing/management/routing_kit_bom.rst:117
+msgid "Create a Kit BoM for the Kit Component"
+msgstr "为套件部件创建套件物料清单"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:30
+msgid ""
+"Update the kit component to define its BoM. Make sure that the routing which"
+" is set on this BoM is the same one than on the Finished Product."
+msgstr "更新套件部件，以定义其物料清单。确保该物料清单设定的路线与成品相同。"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:36
+msgid ""
+"You can define the operations in which the kit components are used directly "
+"in the BoM of the kit."
+msgstr "你可直接在套件物料清单中定义使用该套件部件的操作环节。"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:40
+#: ../../manufacturing/management/routing_kit_bom.rst:84
+#: ../../manufacturing/management/routing_kit_bom.rst:127
+msgid "Manufacturing Order"
+msgstr "制造订单"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:42
+msgid ""
+"In the list of components, the kit is split. Two work orders are created as "
+"we have two operations defined in the *Assemble Furniture* routing. The "
+"components of the kits are well consumed in the operations defined in the "
+"kit BoM."
 msgstr ""
-"**套件**是一套送货前未组装或混合的部件，它们在Odoo中用*物料票（bills of "
-"materials）*描述。根据套件产品的管理形式，有两种基本的配置方法。每种方法中，都必须安装“库存”和“制造”App。"
+"在部件清单中，套件被分拆。由于我们在*组装家具*路线中定义了两个操作环节，因此已创建两个工单。套件部件在套件物料清单中定义的操作环节被消耗。"
 
-#: ../../manufacturing/management/kit_shipping.rst:12
-msgid "Manage Stock of Component Products"
-msgstr "管理部件产品库存"
+#: ../../manufacturing/management/routing_kit_bom.rst:57
+msgid "Finished Product & Kit Component haven’t the same Routing"
+msgstr "成品和套件部件路线不同"
 
-#: ../../manufacturing/management/kit_shipping.rst:14
+#: ../../manufacturing/management/routing_kit_bom.rst:60
+msgid "Kit Consumption set on Finished Product BoM"
+msgstr "在成品物料清单中设置套件消耗"
+
+#: ../../manufacturing/management/routing_kit_bom.rst:75
 msgid ""
-"If you would like to assemble kits as they are ordered, managing stock of "
-"the kit *components* only, you will use a Kit BoM without a manufacturing "
-"step."
-msgstr "如你希望订货时组装这些套件，只对套件*部件*库存进行管理，则应跳过制造步骤使用Kit BoM。"
+"Update the kit component to define its BoM. In this use case, the routing "
+"which is set on this Kit BoM is different than the one of the Finished "
+"Product. Specify the operations at which the kit components are consumed in "
+"this BoM."
+msgstr "更新套件部件，以定义其物料清单。在本用例中，套件物料清单中设置的路线与成品不同。这次物料清单中指明消耗套件部件的操作环节。"
 
-#: ../../manufacturing/management/kit_shipping.rst:18
+#: ../../manufacturing/management/routing_kit_bom.rst:86
+#: ../../manufacturing/management/routing_kit_bom.rst:129
 msgid ""
-"A product using a Kit BoM will appear as a single line item on a quotation "
-"and sales order, but will generate a delivery order with one line item for "
-"each of the components of the kit. In the examples below, the image at left "
-"shows a sales order for the kit \"Custom Computer Kit\", while the image at "
-"right shows the corresponding delivery order."
+"When the manufacturing order is created for the Manufactured product, the "
+"kit is split among its components. When the manufacturing order is planned, "
+"three work orders are created in our case, one coming from the routing of "
+"the manufactured products, the two other ones coming from the routing of the"
+" kit BoM."
 msgstr ""
-"使用Kit "
-"BoM的产品将作为单行项目在报价和销售订单中显示，但它会为套件中的每个部件都生成一个单行送货单。在以下例子中，左边的图片显示\"自定义电脑套件\"的销售订单，右边的图片显示对应的送货订单。"
+"当为制造产品创建制造订单时，套件分拆在各个部件中。在计划制造订单时，在本例中需创建三个工单，一个来自于制造产品的路线，另两个来自于套件物料清单的路线。"
 
-#: ../../manufacturing/management/kit_shipping.rst:24
-msgid "|image0|\\ |image1|"
-msgstr "|image0|\\ |image1|"
+#: ../../manufacturing/management/routing_kit_bom.rst:95
+msgid "The components are all consumed during their respective operations."
+msgstr "这些部件在其各自的操作环节中被消耗。"
 
-#: ../../manufacturing/management/kit_shipping.rst:27
-#: ../../manufacturing/management/kit_shipping.rst:62
-msgid "Configuration"
-msgstr "配置"
+#: ../../manufacturing/management/routing_kit_bom.rst:104
+msgid "Kit Consumption set on Kit BoM"
+msgstr "在套件物料清单中设置套件消耗"
 
-#: ../../manufacturing/management/kit_shipping.rst:29
+#: ../../manufacturing/management/routing_kit_bom.rst:109
 msgid ""
-"From the **Products** menu in either the Inventory or Manufacturing app, "
-"create each component product as you would any other product, then create "
-"the top-level, or kit product. The kit product should have only the route "
-"**Manufacture** set. Because you cannot track the stock of kit products, the"
-" Product Type should be set to **Consumable**. Because a kit product cannot "
-"be purchased, **Can be Purchased** should be unchecked."
-msgstr ""
-"从“库存”或“制造”App的**产品**菜单中为每个需要的部件创建产品，然后创建顶级或套件产品。套件产品应该只有**制造**路由，因为你无法跟踪套件产品的库存，产品类型可设为**消耗品**。由于套件产品是无法购买的，所以应取消“可购买”前面的勾号。"
+"Create a manufactured BoM for the finished product which includes a kit "
+"component. Set a routing on your BoM, for example, *Assemble Furniture*. "
+"Precise the consumption of the components on this BoM."
+msgstr "为包含套件部件的成品创建制造物料清单。为该物料清单设置路线，例如*组装家具*。在该物料清单上指明部件的消耗情况。"
 
-#: ../../manufacturing/management/kit_shipping.rst:37
+#: ../../manufacturing/management/routing_kit_bom.rst:119
 msgid ""
-"All other parameters on the kit product may be modified according to your "
-"preference. The component products require no special configuration."
-msgstr "套件产品的所有其他参数都可按照你的偏好进行修改。套件产品无需特别的配置。"
+"Update the kit component to define its BoM. In this use case, the routing "
+"which is set on this Kit BoM is different than the one of the Finished "
+"Product."
+msgstr "更新套件部件，以定义其物料清单。在本用例中，套件物料清单设置的路线与成品不同。"
 
-#: ../../manufacturing/management/kit_shipping.rst:44
+#: ../../manufacturing/management/routing_kit_bom.rst:138
 msgid ""
-"Once the products are configured, create a bill of materials for the kit "
-"product. Add each component and its quantity. Select the BoM Type **Ship "
-"this product as a set of components**. All other options may be left with "
-"their default values."
-msgstr "产品配置完成后，为套件产品创建一个物料清单。添加每个部件及数量。为BoM类别选择**将本产品作为部件发货**。其他选择可以保持默认值不变。"
-
-#: ../../manufacturing/management/kit_shipping.rst:53
-msgid "Manage Stock of Kit Product and Component Products"
-msgstr "管理套件及部件产品的库存"
-
-#: ../../manufacturing/management/kit_shipping.rst:55
-msgid ""
-"If you would like to manage stock of the top-level kit product, you will use"
-" a standard BoM with a manufacturing step instead of a Kit BoM. When using a"
-" standard BoM to assemble kits, a manufacturing order will be created. The "
-"manufacturing order must be registered as completed before the kit product "
-"will appear in your stock."
-msgstr ""
-"如需管理最高等级套件产品的存货，需要采用有制造步骤的标准BoM而不用Kit "
-"BoM。使用标准BoM组装套件时将创建一个制造订单。该制造订单必须注册方能在存货中显示套件产品。"
-
-#: ../../manufacturing/management/kit_shipping.rst:64
-msgid ""
-"On the kit product, select the route **Manufacture**. You may also select "
-"**Make to Order**, which will create a manufacturing order whenever a sales "
-"order is confirmed. Select the product type **Stockable Product** to enable "
-"stock management."
-msgstr ""
-"在套件产品中选择**制造**路由。也可选择**按单补货**，这会在每次确认销售订单时创建一个制造订单。请选择产品类别为**可贮存品**启用库存管理。"
-
-#: ../../manufacturing/management/kit_shipping.rst:72
-msgid ""
-"When you create the bill of materials, select the BoM Type **Manufacture "
-"this product**. The assembly of the kit will be described by a manufacturing"
-" order rather than a packing operation."
-msgstr "当你创建物料清单时，将BoM类别选择为**制造此产品**。套件的组装由制造订单而非包装操作来定义。"
-
-#: ../../manufacturing/management/manufacturing_order.rst:3
-msgid "How to process a manufacturing order"
-msgstr "如何处理一个制造订单"
-
-#: ../../manufacturing/management/manufacturing_order.rst:6
-msgid "Introduction"
-msgstr "介绍"
-
-#: ../../manufacturing/management/manufacturing_order.rst:8
-msgid ""
-"There are two basic ways to manage manufacturing in Odoo. The first way "
-"manages work with one document only. This document is the **manufacturing "
-"order**. The second way uses additional documents to give you more precise "
-"control over the manufacturing process. In this way, **Manufacturing "
-"orders** are divided into one or more steps defined by **work orders**, "
-"performed in an order defined by **routings**."
-msgstr ""
-"Odoo中有两种管理制造的基本方式。第一种方式只管理唯一的文件，即**制造订单**。第二种方式使用额外的文件，对制造过程进行精确控制。这种方式下，**制造订单**被分割到一个或多个步骤（通过**路由**定义的订单中的**工单**执行）"
-
-#: ../../manufacturing/management/manufacturing_order.rst:17
-msgid "How to manage manufacturing without routings"
-msgstr "如何在没有路由的情况下管理制造"
-
-#: ../../manufacturing/management/manufacturing_order.rst:19
-msgid ""
-"You will most likely use manufacturing orders without routings if all the "
-"work to produce your product is performed in one place, by one person, in "
-"one step, and/or you do not need the level of granular control afforded by "
-"work orders and routings."
-msgstr ""
-"如果所有制造产品的工作都在一个地方、由一人以一个步骤执行，以及/或者你不需要工单和路由提供的粒度控制级别，那么你很有可能在没有路由的情况下使用制造订单。"
-
-#: ../../manufacturing/management/manufacturing_order.rst:24
-msgid ""
-"Managing your operations in this way is the default behavior in Odoo. There "
-"are two basic phases from planning to production:"
-msgstr "这种方式的操作管理是Odoo的默认动作。从规划到制造有两个基本阶段："
-
-#: ../../manufacturing/management/manufacturing_order.rst:27
-#: ../../manufacturing/management/manufacturing_order.rst:52
-msgid "Create manufacturing orders"
-msgstr "创建制造订单"
-
-#: ../../manufacturing/management/manufacturing_order.rst:29
-msgid "Record Production"
-msgstr "记录生产"
-
-#: ../../manufacturing/management/manufacturing_order.rst:32
-msgid "How to manage manufacturing with routings and work orders"
-msgstr "如何以路由和工单管理制造"
-
-#: ../../manufacturing/management/manufacturing_order.rst:34
-msgid ""
-"To use work orders and routings, you will need to enable the option **Manage"
-" production by work orders** From :menuselection:`Configuration --> "
-"Settings`. You will then be able to add routings to bills of materials, and "
-"configure some additional related fields. You will also be able to create "
-"**work centers**, the locations at which work orders are performed."
-msgstr ""
-"为使用工单和路由，你需要从 "
-":menuselection:`配置->设置选择并启用**用工单管理生产**，然后将路由添加到物料清单，再配置一些额外的关联字段。你还可以创建**工作中心**，即工单被执行的地点。"
-
-#: ../../manufacturing/management/manufacturing_order.rst:41
-msgid ""
-"When manufacturing with routings and work orders, each work order is "
-"scheduled individually. You will also have access to time and capacity "
-"planning, and reports on costing and efficiency on a work center level."
-msgstr "用路由和工单进行制造时，每个工单都是独立排定的。你还可以进行时间和工作量规划，以及工作中心级别的开销与效率报告。"
-
-#: ../../manufacturing/management/manufacturing_order.rst:45
-msgid ""
-"Manufacturing using routings can be broken down into several steps. When "
-"configuring your BoM, you will need to add a routing defining the component "
-"work orders. After planning the manufacturing order, you will have the added"
-" step of scheduling work orders."
-msgstr "使用路由制造也可分解为多个步骤。配置BoM时，你需要添加路由来定义组件的工单。完成制造订单的规划之后，你就在工单排定中添加了额外的步骤。"
-
-#: ../../manufacturing/management/manufacturing_order.rst:50
-msgid "The workflow is thus divided into three basic phases, as follows:"
-msgstr "工作流由此被分解到三个基本阶段中，如下所示："
-
-#: ../../manufacturing/management/manufacturing_order.rst:54
-msgid "Schedule the associated work orders."
-msgstr "计划相关工单的日程"
-
-#: ../../manufacturing/management/manufacturing_order.rst:56
-msgid "Perform the scheduled work and record production."
-msgstr "执行排定的工作并记录产出"
-
-#: ../../manufacturing/management/product_variants.rst:3
-msgid "How to manage BoMs for product variants"
-msgstr "如何管理产品变体的BoM"
+"All the components of the kits are consumed during the first operation. The "
+"last component is consumed during the second operation."
+msgstr "本套件的所有部件都在首个操作环节中被消耗。最后一个部件在第二个操作环节中被消耗。"
 
 #: ../../manufacturing/management/sub_assemblies.rst:3
-msgid "How to manage semi-finished products"
-msgstr "如何管理半成品。"
+msgid "Manage semi-finished products"
+msgstr "管理半成品"
+
+#: ../../manufacturing/management/sub_assemblies.rst:5
+msgid ""
+"In Odoo, you can use subassembly products to simplify a complex *Bill of "
+"Materials* or to represent your manufacturing flow more accurately. A "
+"*subassembly product* is a manufactured product that is used as a component "
+"to make another one."
+msgstr "在Odoo中，你可用分组件产品简化复杂的*物料清单*，或更准确地代表制造过程。*分组件产品*是指用作另一个产品部件的已制产品。"
+
+#: ../../manufacturing/management/sub_assemblies.rst:10
+msgid ""
+"A *BoM* that employs *subassemblies* is referred to as a multi-level BoM. "
+"Those are accomplished by creating a *top-level BoM* and *subassembly ones*."
+" This process requires a route that will ensure that every time a "
+"manufacturing order for the top-level product is created, another one will "
+"be for subassemblies."
+msgstr ""
+"包含*分组件*的*物料清单*被称为多级物料清单。这需要创建*顶级物料清单*和*分组件物料清单*。这一流程将确保每次为顶级产品创建制造订单时，同时创建分组件制造订单。"
+
+#: ../../manufacturing/management/sub_assemblies.rst:17
+msgid "Configure the Subassembly Product"
+msgstr "配置分组件产品"
 
 #: ../../manufacturing/management/sub_assemblies.rst:19
-msgid "Configure the Top -Level Product BoM"
-msgstr "配置顶级产品BoM"
+msgid ""
+"To configure a *multi-level BoM*, you will need a top-level product but also"
+" its subassemblies. The first step is to create a product form for each of "
+"the subassemblies. Select the routes *Manufacture* and *Replenish on Order*."
+" Now, hit save."
+msgstr "如要配置*多级物料清单*，你需要顶级产品及其分组件。第一步是为每个分组件创建产品表单。选择*制造*和*按订单补给*路线。然后，点击保存。"
+
+#: ../../manufacturing/management/sub_assemblies.rst:27
+msgid ""
+"In the *Bill of Materials* menu, under *Master Data*, create a new *Bill of "
+"Materials*. Choose the product you just created and add its components."
+msgstr "在*主数据*下的*物料清单*菜单中，创建新的*物料清单*。选择你刚创建的产品并添加其部件。"
+
+#: ../../manufacturing/management/sub_assemblies.rst:35
+msgid "Configure the Main BoM"
+msgstr "配置主物料清单"
+
+#: ../../manufacturing/management/sub_assemblies.rst:37
+msgid ""
+"Now, you can configure the top-level product and its *BoM*. Include any "
+"subassemblies in the list of components."
+msgstr "现在，你可配置顶级产品及其*物料清单*。在部件列表中可加入任何分组件。"
+
+#: ../../manufacturing/management/sub_assemblies.rst:43
+msgid ""
+"Now, each time you will plan a manufacturing order for the top-level "
+"product, a manufacturing order will be created for the subassembly one. "
+"Then, you will have to manufacture the subassembly in order to make it "
+"available before manufacturing the finished product."
+msgstr "现在，你每次为顶级产品规划制造订单时，系统将为分组件创建制造订单。然后，你必须制造分组件，确保其在制造成品前可用。"
+
+#: ../../manufacturing/management/subcontracting.rst:3
+msgid "Subcontract your Manufacturing"
+msgstr "外包制造"
+
+#: ../../manufacturing/management/subcontracting.rst:5
+msgid ""
+"Outsourcing a portion of some or all your company’s manufacturing needs is "
+"not easy. To make it work right, you have to:"
+msgstr "将公司的部分或全部制造程序需求外包出去并不容易。为了让它正常工作，你必须:"
+
+#: ../../manufacturing/management/subcontracting.rst:8
+msgid "Manage the inventory of raw materials at your subcontractor;"
+msgstr "管理分包商的原材料库存;"
+
+#: ../../manufacturing/management/subcontracting.rst:9
+msgid ""
+"Ship new materials to your subcontractors based on your forecasted demand;"
+msgstr "根据您的预期需求将新材料发送给您的分包商;"
+
+#: ../../manufacturing/management/subcontracting.rst:11
+msgid ""
+"Keep track of manufacturing operations done at the subcontractor location;"
+msgstr "跟踪在分包商进行的制造操作；"
+
+#: ../../manufacturing/management/subcontracting.rst:13
+msgid "Control incoming goods quality;"
+msgstr "控制进货质量;"
+
+#: ../../manufacturing/management/subcontracting.rst:14
+msgid "Control subcontractors bills."
+msgstr "控制分包商账单。"
+
+#: ../../manufacturing/management/subcontracting.rst:16
+msgid ""
+"Here is an example of subcontracting the manufacturing of “C”, which is "
+"produced out of raw materials “A” and “B”."
+msgstr "这是分包由原材料“ A”和“ B”生产的“ C”制造的示例。"
+
+#: ../../manufacturing/management/subcontracting.rst:23
+msgid ""
+"With its subcontracting feature, Odoo helps you handle this flow easily."
+msgstr "凭借其分包功能，Odoo帮助您轻松处理这一流程。"
+
+#: ../../manufacturing/management/subcontracting.rst:28
+msgid ""
+"To use the subcontracting feature, go to :menuselection:`Manufacturing --> "
+"Configuration --> Settings` and tick the box *Subcontracting*."
+msgstr "要使用转包功能，请转到 :menuselection:`制造 --> 配置 --> 设置并勾选 *转包* 。"
+
+#: ../../manufacturing/management/subcontracting.rst:35
+msgid ""
+"To define if a product must be subcontracted, use a *Bill of Materials "
+"(BoM)* of type *Subcontracting*."
+msgstr "要定义一个产品是否必须分包，使用类型 *分包* 的 *物料清单(BoM)* 。"
+
+#: ../../manufacturing/management/subcontracting.rst:38
+msgid ""
+"To create a new *BoM*, go to :menuselection:`Manufacturing --> Master Data "
+"--> Bill of Materials` and hit create. Then, list the components your "
+"subcontractor needs to manufacture the product. For costing purposes, you "
+"might want to register all the components, even the ones that are sourced "
+"directly from the subcontractor."
+msgstr ""
+"要创建一个新的 *BoM* ，请转到 :menuselection:`制造 --> 主数据 --> 物料清单(BoM) 并点击创建。 "
+"然后，列出分包商制造产品所需的组件。 出于成本目的，您可能想要注册所有组件，甚至包括直接从分包商处采购的组件。"
+
+#: ../../manufacturing/management/subcontracting.rst:44
+msgid ""
+"Once you have set the *BoM Type* to *Subcontracting*, specify one or several"
+" subcontractors."
+msgstr "将 *BoM类型* 设置为 *转包* 后，指定一个或多个转包商。"
+
+#: ../../manufacturing/management/subcontracting.rst:52
+msgid "Basic Subcontracting Flow"
+msgstr "基本分包流程"
+
+#: ../../manufacturing/management/subcontracting.rst:54
+msgid ""
+"To let your subcontractor know how many products you need, create and send "
+"them purchase orders (PO). To do so, open the *Purchase* app and create a "
+"new one. Be sure to send the PO to a vendor that is defined as a "
+"subcontractor on the *BoM*."
+msgstr ""
+"为了让你的分包商知道你需要多少产品，创建并发送采购订单(PO)给他们。为此，打开 *采购* "
+"应用程序并创建一个新的采购订单。确保将采购订单发送给供应商，该供应商在 *BoM* 中被定义为分包商。"
+
+#: ../../manufacturing/management/subcontracting.rst:63
+msgid ""
+"Once the *PO* is validated (1), a pending receipt is created. When the "
+"products are received, validate the receipt (2), with the actual quantity "
+"received. Then Odoo automatically created several inventory moves:"
+msgstr "一旦*PO*被验证(1)，将创建一个等待的收据。当收到产品时，验证收据(2)，与实际收到的数量。然后Odoo将自动创建了几个库存移动:"
+
+#: ../../manufacturing/management/subcontracting.rst:68
+msgid ""
+"Consume the components at the subcontractor’s location, based on the *BoM* "
+"(3);"
+msgstr "根据* BoM *（3）在分包商的位置使用组件；"
+
+#: ../../manufacturing/management/subcontracting.rst:70
+msgid "Produce finished goods at the subcontractor’s location (4);"
+msgstr "在分包商的位置生产成品（4）；"
+
+#: ../../manufacturing/management/subcontracting.rst:71
+msgid ""
+"Move products from the subcontractor’s location to YourCompany through the "
+"validated receipt (5)."
+msgstr "通过有效的收据将产品从分包商所在地转移到\"YourCompany\"(5)。"
+
+#: ../../manufacturing/management/subcontracting.rst:74
+msgid ""
+"Of course, Odoo does all the transactions for you, automatically. Simply "
+"control the vendor bill with the usual matching process with the purchase "
+"order."
+msgstr "当然，Odoo会自动为你做所有的交易。只需通过与采购订单的常规匹配过程控制供应商账单。"
+
+#: ../../manufacturing/management/subcontracting.rst:79
+msgid ""
+"The *PO* is optional. If you create a receipt manually, with the right "
+"subcontractor, Odoo still performs all the moves. Useful if the "
+"subcontractor does not bill a fixed price per item, but rather the time and "
+"materials used."
+msgstr ""
+"*采购订单* "
+"是可选的。如果您想与正确的分包商手动创建收据，Odoo仍然可以执行所有的行动。如果转包商没有对每一件物品给出固定的价格，而是对所使用的时间和材料给出固定的价格，那么这种方法是有用的。"
+
+#: ../../manufacturing/management/subcontracting.rst:85
+msgid "Inventory Valuation"
+msgstr "库存计价"
+
+#: ../../manufacturing/management/subcontracting.rst:87
+msgid "The cost of the manufactured product “C” is defined as:"
+msgstr "制成品“C”的成本定义为:"
+
+#: ../../manufacturing/management/subcontracting.rst:89
+msgid "**C = A + B + s**"
+msgstr "**C = A + B + s**"
+
+#: ../../manufacturing/management/subcontracting.rst:91
+msgid "With:"
+msgstr "与："
+
+#: ../../manufacturing/management/subcontracting.rst:93
+msgid "**A**: Cost of raw materials coming from YourCompany;"
+msgstr "**A** :来自贵公司的原材料成本;"
+
+#: ../../manufacturing/management/subcontracting.rst:96
+msgid "**B**: Cost of raw materials sourced directly from the"
+msgstr "**B**:直接从采购的原材料成本"
+
+#: ../../manufacturing/management/subcontracting.rst:96
+msgid "subcontractor;"
+msgstr "分包商;"
+
+#: ../../manufacturing/management/subcontracting.rst:98
+msgid "**s**: Cost of the subcontracted service."
+msgstr "**s** :分包服务的成本。"
+
+#: ../../manufacturing/management/subcontracting.rst:100
+msgid ""
+"Sending raw materials to your subcontractors (**A**) does not impact the "
+"inventory valuation, the components still belonging to your company. To "
+"manage this, the *Subcontracting Location* is configured as an *Internal "
+"Location* so that the components are still valued in the inventory."
+msgstr ""
+"将原材料发送给分包商（ **A** ）不会影响库存评估，这些组件仍然属于您的公司。 为了管理此问题，将 *转包地点* 配置为 *内部地点* "
+"，以便仍在清单中对组件进行估价。"
+
+#: ../../manufacturing/management/subcontracting.rst:106
+msgid ""
+"Then, the vendor price set on the product C form has to be what has to be "
+"paid to the subcontractor for his parts and service time: **B + s**. The "
+"product cost has to be: **A + B + s**, how much the product is valued in the"
+" accounting."
+msgstr ""
+"然后，在产品C表格上设置的卖方价格必须是分包商为其零件和服务时间所必须支付的价格： ** B + s ** 。 产品成本必须为：**A + B + "
+"s** ，该产品在会计中的价值是多少。"
+
+#: ../../manufacturing/management/subcontracting.rst:111
+msgid ""
+"Finally, the subcontractor bill matches the purchase order, with the "
+"proposed price coming from the finished products C."
+msgstr "最后，分包商账单与采购订单相匹配，建议价格来自成品C。"
+
+#: ../../manufacturing/management/subcontracting.rst:115
+msgid ""
+"If managing the replenishment of raw materials **B** at your subcontractor’s"
+" location is not needed, simply include the cost of **B** in the "
+"subcontractor’s price **s** and remove the products *B* from the *BoM*."
+msgstr "如果不需要在你的分包商所在地管理原材料的补充，只需在分包商的价格中包括 **B** 的成本，并将产品从 *BoM* 中删除。"
+
+#: ../../manufacturing/management/subcontracting.rst:121
+msgid "Traceability"
+msgstr "追溯"
+
+#: ../../manufacturing/management/subcontracting.rst:123
+msgid ""
+"In case the products received from the subcontractor contain tracked "
+"components, their serial or lot numbers need to be specified during the "
+"receipt."
+msgstr "如果从分包商收到的产品包被跟踪的组件，则在收货期间需要指定其序列号或批号。"
+
+#: ../../manufacturing/management/subcontracting.rst:127
+msgid ""
+"On the receipt of the subcontracted product, a *Record Components* button "
+"appears when necessary. Click on it to open a dialog and record the "
+"serial/lot numbers of the components. If the finished product is also "
+"tracked, its serial/lot number can be registered here too."
+msgstr ""
+"在接收分包产品时，必要时将出现 *记录组件* 按钮。点击打开对话框，记录组件的序列号/批号。如果成品也被跟踪，它的序列号/批号也可以在这里登记。"
+
+#: ../../manufacturing/management/subcontracting.rst:136
+msgid ""
+"For audit purposes, it is possible to check the lot numbers recorded on a "
+"receipt by using the icon on the right of the finished products:"
+msgstr "出于审计目的，可以使用成品右侧的图标检查收据上记录的批号:"
+
+#: ../../manufacturing/management/subcontracting.rst:144
+msgid "Automate Replenishment of Subcontractors"
+msgstr "分包商的自动化补货"
+
+#: ../../manufacturing/management/subcontracting.rst:146
+msgid ""
+"To manage the resupply of your subcontractor, activate *Multi-locations* in "
+":menuselection:`Inventory --> Configuration --> Configuration`. Then, the "
+"inventory at the subcontractor location can be tracked."
+msgstr ""
+"要管理您的分包商的补货，请在:menuselection:`库存 --> 配置 --> 配置中 激活 *多地点*。 然后，可以跟踪在分包商位置的库存。"
+
+#: ../../manufacturing/management/subcontracting.rst:151
+msgid ""
+"It is possible to resupply subcontractors by sending products from the "
+"company locations, or by sending products from another supplier to the "
+"subcontractors."
+msgstr "可以通过从公司地点发送产品或从其他供应商发送产品给分包商进行补给。"
+
+#: ../../manufacturing/management/subcontracting.rst:156
+msgid "Replenishment from the warehouse"
+msgstr "从仓库补货"
+
+#: ../../manufacturing/management/subcontracting.rst:158
+msgid ""
+"Resupplying subcontractors manually is the simplest approach. To do so, "
+"create delivery orders in which the subcontractor is set as a delivery "
+"address and fill the components to deliver."
+msgstr "手动重新供应分包商是最简单的方法。 为此，创建将转包商设置为交货地址的交货订单，并填写要交货的组件。"
+
+#: ../../manufacturing/management/subcontracting.rst:162
+msgid ""
+"To automate the subcontractors’ replenishment propositions, there are two "
+"approaches:"
+msgstr "为了使分包商的补给自动化，有两种方法:"
+
+#: ../../manufacturing/management/subcontracting.rst:165
+msgid "Reordering rules;"
+msgstr "重新订购规则;"
+
+#: ../../manufacturing/management/subcontracting.rst:166
+msgid "Replenish on order flow."
+msgstr "补充订单流程。"
+
+#: ../../manufacturing/management/subcontracting.rst:168
+msgid ""
+"For the first one, just define a reordering rule on the subcontracting "
+"location, with a minimum and maximum inventory level. When the reordering "
+"rule is triggered, a delivery order is created to ship the components to the"
+" subcontractor."
+msgstr "对于第一类型，只需在转包地点定义最小和最大库存水平的重新订购规则。 触发重新订购规则后，将创建交货订单，以将组件运送到分包商。"
+
+#: ../../manufacturing/management/subcontracting.rst:177
+msgid ""
+"The second approach is to use a “pull” flow. Here, the demand in the "
+"finished product (real demand or forecasted one through the Master "
+"Production Schedule) triggers the replenishment of the subcontractor. To do "
+"so, select the route *Resupply Subcontractor on Order* on the wanted "
+"components."
+msgstr ""
+"第二种方法是使用“拉动式”流程。在这里，成品中的需求(实际需求或通过主生产计划预测的需求)触发了分包商的补给。要做到这一点，选择路线 "
+"*再供应分包商的订单* 所需的组件。"
+
+#: ../../manufacturing/management/subcontracting.rst:188
+msgid "Replenishment from another supplier"
+msgstr "从其他供应商进货"
+
+#: ../../manufacturing/management/subcontracting.rst:190
+msgid ""
+"When purchasing items to another supplier, it is possible to ask him to "
+"deliver the subcontractor directly. To do so, activate the *Drop Shipping* "
+"feature in :menuselection:`Purchase --> Configuration --> Configuration`."
+msgstr ""
+"当向另一个供应商采购产品时，可以要求他直接从分包商交付。要做到这一点，在:menuselection: '采购 --> 设置 --> 设置中激活 "
+"*转运配送* 功能'。"
+
+#: ../../manufacturing/management/subcontracting.rst:195
+msgid ""
+"Now, set the *Dropship* option in the *Deliver To* field of the *Other "
+"Information* tab. Then, provide the address of the subcontractor for the "
+"shipping."
+msgstr "现在，在 *其他信息* 标签的 *交付* 字段中设置 *转运配送* 选项。然后，提供运输的分包商的地址。"
+
+#: ../../manufacturing/management/subcontracting.rst:203
+msgid ""
+"That way, the supplier can ship items directly and you simply receive and "
+"pay the bill. However, it is still required to validate receipts for the "
+"subcontractor."
+msgstr "通过这种方式，供应商可以直接发货，而您只需接收和支付账单。但是，仍然需要对分包商的收据进行验证。"
+
+#: ../../manufacturing/management/subcontracting.rst:212
+msgid "Quality Control"
+msgstr "质量管理"
+
+#: ../../manufacturing/management/subcontracting.rst:214
+msgid ""
+"Controlling the quality of the products manufactured by subcontractors is "
+"possible thanks to the Odoo Quality app. Quality checks can be made on a "
+"manufacturing step but, because the manufacturing process is handled by an "
+"external party, it can be defined on the product reception."
+msgstr ""
+"Odoo品控应用程序可以控制分包商生产产品的质量。品控检查可以在生产过程中进行，但由于生产过程是由外部方处理的，所以可以在产品接收过程中进行定义。"
+
+#: ../../manufacturing/management/subcontracting.rst:224
+msgid ""
+"To create a quality check at the receipt, open the *Quality* app and create "
+"a new *Control Point* on the reception."
+msgstr "要在收货时创建质量检查，请打开 *品控* 应用程序并在收货处创建一个新的 *控制点* 。"
+
+#: ../../manufacturing/management/subcontracting.rst:231
+msgid ""
+"By doing so, a quality check is automatically created each time a finished "
+"product is received."
+msgstr "通过这样做，每次收到成品时都会自动创建品控检查。"
 
 #: ../../manufacturing/management/unbuild.rst:3
 msgid "Unbuild a product"
-msgstr ""
+msgstr "拆解产品"
 
 #: ../../manufacturing/management/unbuild.rst:5
 msgid ""
 "In Odoo Manufacturing App, you can *Unbuild* products. Two use cases can be "
 "managed: (1) you can unbuild products you have built yourself or (2) you can"
 " unbuild products you have received."
-msgstr ""
+msgstr "在Odoo制造应用程序中，你可*拆解*产品。你可管理两种用例：(1)你可拆解自己创建的产品或(2)你可拆解接收的产品。"
 
 #: ../../manufacturing/management/unbuild.rst:9
 msgid ""
@@ -443,13 +1116,13 @@ msgid ""
 "of your product presents some defect, you might want to unbuild it instead "
 "of scrapping it completely, allowing you to reuse some components of the "
 "product."
-msgstr ""
+msgstr "我们先看第一种情况，你自行制造产品。如果你的某件产品存在缺陷，你可能希望将它拆解而不是完全报废，以便重新利用产品中的某些部件。"
 
 #: ../../manufacturing/management/unbuild.rst:14
 msgid ""
 "In the second case, you are buying products for the sole purpose of "
 "unbuilding them and recycling them."
-msgstr ""
+msgstr "在第二种情况中，你购买产品的唯一目的就是将其拆解并回收。"
 
 #: ../../manufacturing/management/unbuild.rst:18
 msgid "Unbuild Order"
@@ -459,79 +1132,246 @@ msgstr "拆解单"
 msgid ""
 "While in the Manufacturing App, under the *Operations* tab you will find the"
 " menu *Unbuild Orders*."
-msgstr ""
+msgstr "在制造应用程序中，在*操作*选项卡下，你可找到*拆解单*菜单。"
 
 #: ../../manufacturing/management/unbuild.rst:26
 msgid ""
 "When creating a new one, you can either select a MO if you are unbuilding "
 "something you manufactured or only select a product if you are unbuilding "
 "something you received."
-msgstr ""
+msgstr "在创建新拆解单时，如果是拆解你自行制造的产品，可选择制造订单，如果是拆解你收到的产品，只需选择该产品。"
 
 #: ../../manufacturing/management/unbuild.rst:33
 msgid "When you are done, just click unbuild and the process will be over."
-msgstr ""
+msgstr "完成后，只需点击拆解，流程结束。"
 
 #: ../../manufacturing/management/unbuild.rst:35
 msgid ""
 "If you unbuild a product that you manufactured before, you will get the "
 "components from the MO back in stock."
-msgstr ""
+msgstr "如你拆解的是之前制造的产品，制造订单中的部件将返回库存。"
 
 #: ../../manufacturing/management/unbuild.rst:38
 msgid ""
 "If you unbuild a product you bought, you will get the components from the "
 "BoM back in stock."
+msgstr "如果你拆解的是购买的产品，物料清单中的部件将返回库存。"
+
+#: ../../manufacturing/management/use_mps.rst:3
+msgid "Use the Master Production Schedule"
+msgstr "使用主生产排程"
+
+#: ../../manufacturing/management/use_mps.rst:5
+msgid ""
+"The Master Production Schedule (MPS) is a valuable tool to plan your "
+"production based on your demand forecast."
+msgstr "主生产排程(MPS)是根据你的需求预测计划生产的有用工具。"
+
+#: ../../manufacturing/management/use_mps.rst:11
+msgid ""
+"Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` "
+"and activate the Master Production Schedule feature before hitting save."
+msgstr "前往 :menuselection:`制造应用程序 --> 配置 --> 设置`并启用主生产排程功能，然后点击保存。"
+
+#: ../../manufacturing/management/use_mps.rst:18
+msgid ""
+"In the manufacturing settings, you can define the time range of your MPS "
+"(month/week/day) and the number of periods you want to display."
+msgstr "在制造设置中，你可定义MPS（月/周/日）的时间范围和希望显示的周期数。"
+
+#: ../../manufacturing/management/use_mps.rst:20
+msgid ""
+"Now, go in :menuselection:`Planning --> Master Production Schedule` and "
+"click on add a product. You can now define your safety stock target (= the "
+"stock you want to have on hand at the end of the period) and the minimum and"
+" maximum quantities to replenish."
+msgstr ""
+"现在，进入 :menuselection:`规划 --> "
+"主生产排程`并点击添加产品。你可定义你的安全库存目标（=在周期结束时希望保有的库存量）和补货的最小及最大数量。"
+
+#: ../../manufacturing/management/use_mps.rst:29
+msgid ""
+"The products are ordered in the MPS based on their sequence. You can "
+"rearrange that sequence by going on the list of your products and reorganize"
+" them with drag and drop."
+msgstr "在MPS中根据产品顺序进行订购。你可进入产品列表，拖放并重新排列，即可重新安排产品顺序。"
+
+#: ../../manufacturing/management/use_mps.rst:36
+msgid ""
+"In the MPS view, you can decide which information you would like to show by "
+"clicking on *rows*. Some fields can be added to the view, such as *Actual "
+"demand*, which will show which quantity of products has already been ordered"
+" for the period, or *Available to Promise*, which allows you to know what "
+"can still be sold during the period (what you plan to replenish - what is "
+"already sold during the period). You can also decide to hide some "
+"information if it isn’t necessary."
+msgstr ""
+"在MPS视图中，你可点击*行*，决定显示的信息。你可向该视图添加其他字段，如*实际需求*显示该产品在本周期内已经订购的数量，或*最小数量保证*显示你在本周期内仍可销售的产品（你计划的补货量"
+" - 本周期内已经售出的量）。你还可隐藏一些无关紧要的信息。"
+
+#: ../../manufacturing/management/use_mps.rst:48
+msgid "Estimate your demand and launch replenishment"
+msgstr "估计需求并发起补货"
+
+#: ../../manufacturing/management/use_mps.rst:50
+msgid ""
+"The next step is to estimate the demand for the period. This estimation "
+"should be entered in the row *Demand Forecast*. You can easily, at any time,"
+" compare the demand forecast with the actual demand (= confirmed sales). The"
+" demand forecast for a finished product will impact the indirect demand for "
+"its components."
+msgstr ""
+"下一步是估计本周期内的需求。你应在*需求预测*行输入估计结果。你可随时比较需求预测与实际需求（=已确认的销售量）。成品的需求预测将影响其部件的间接需求。"
+
+#: ../../manufacturing/management/use_mps.rst:59
+msgid ""
+"Then, the quantity to replenish for the different periods will be "
+"automatically computed. The replenishments you are supposed to launch based "
+"on your lead times (vendor lead time or manufacturing lead time) are "
+"displayed in green. You can now launch the replenishment by clicking on the "
+"replenish button."
+msgstr ""
+"然后，系统将自动计算不同周期的补货量。基于你的前置时间（供应商前置时间或制造前置时间）应发起的补货显示为绿色。现在，你可点击补货按钮，发起补货。"
+
+#: ../../manufacturing/management/use_mps.rst:65
+msgid ""
+"Depending on the configuration of the product (buy vs. manufacture), "
+"requests for quotations or manufacturing orders will be created. You can "
+"easily access those by clicking on the *Actual Replenishment* cell."
+msgstr "根据产品的配置（采购或制造），系统将创建报价请求或制造订单。只需点击*实际补货*单元格，即可轻松访问这些信息。"
+
+#: ../../manufacturing/management/use_mps.rst:75
+msgid ""
+"In case you manually edit the *To replenish* quantity, a small cross will "
+"appear on the left. In case you want to go back to the automatically "
+"computed value given by Odoo, you can click the cross."
+msgstr "如你手动编辑*待补货*数量，左侧将出现一个小十字。如你想要返回Odoo提供的自动计算值，你可点击十字图标。"
+
+#: ../../manufacturing/management/use_mps.rst:83
+msgid "Cells color signification"
+msgstr "单元格颜色的含义"
+
+#: ../../manufacturing/management/use_mps.rst:85
+msgid ""
+"The cells, which are part of the *To replenish* line, can take different "
+"colors depending on the situation:"
+msgstr "*待补货*行上的单元格根据不同情况有不同颜色："
+
+#: ../../manufacturing/management/use_mps.rst:88
+msgid ""
+"**Green**: quantity of products which should be replenished to reach the "
+"expected safety stock considering the demand forecast and the indirect "
+"demand forecast."
+msgstr "**绿色**：考虑到需求预测和间接需求预测，为达到预期安全库存量需要补货的产品数量。"
+
+#: ../../manufacturing/management/use_mps.rst:90
+msgid ""
+"**Grey**: replenishment order has already been generated, and its quantity "
+"still matches current data."
+msgstr "**灰色**：已生成补货订单，其数量仍匹配当前数据。"
+
+#: ../../manufacturing/management/use_mps.rst:92
+msgid ""
+"**Red**: replenishment order has already been generated, and its quantity "
+"was too high considering current data."
+msgstr "**红色**：已生成补货订单，其数量与当前数据相比过高。"
+
+#: ../../manufacturing/management/use_mps.rst:94
+msgid ""
+"**Orange**: replenishment order has already been generated, and its quantity"
+" was too low considering current data."
+msgstr "**橙色**：已生成补货订单，其数量与当前数据相比过低。"
+
+#: ../../manufacturing/management/use_mps.rst:96
+msgid ""
+"The *Forecasted stock* line can also contain red cells, which means the "
+"stock will be negative during the period in question."
+msgstr "*已预测库存*行也可包含红色单元格，意思是该周期内的库存将为负值。"
+
+#: ../../manufacturing/management/use_mps.rst:100
+msgid "What if I have underestimated the demand?"
+msgstr "如果我低估了需求怎么办？"
+
+#: ../../manufacturing/management/use_mps.rst:102
+msgid ""
+"You can still increase the demand forecast. It will impact the quantity to "
+"replenish. The cell will become orange, and you’ll be able to launch a new "
+"replenishment."
+msgstr "你仍可增加需求预测。它将影响补货数量。单元格将变为橙色，你可发起新补货。"
+
+#: ../../manufacturing/management/use_mps.rst:107
+msgid "What if I have overestimated the demand?"
+msgstr "如果我高估了需求怎么办？"
+
+#: ../../manufacturing/management/use_mps.rst:109
+msgid ""
+"You can decrease the demand forecast. The cell will become red to inform you"
+" that you’ve ordered more than planned. If you’re still able to do it, you "
+"can cancel some RFQ or MO manually."
+msgstr "你可减少需求预测。单元格将变为红色，表明你订购的数量超过了计划数量。如果允许，你可手动取消一些报价请求或制造订单。"
+
+#: ../../manufacturing/management/use_mps.rst:114
+msgid "What if I wrongly added a product to the MPS?"
+msgstr "如果我在MPS中错误添加了产品怎么办？"
+
+#: ../../manufacturing/management/use_mps.rst:116
+msgid ""
+"You can easily remove a product from the MPS by clicking the small bin on "
+"the right of its name."
+msgstr "你可点击产品名称右侧的小垃圾箱，即可从MPS中删除该产品。"
+
+#: ../../manufacturing/overview.rst:7
+msgid "I want to use Odoo Manufacturing"
 msgstr ""
 
 #: ../../manufacturing/overview.rst:5
 msgid "Overview"
-msgstr "概览"
+msgstr "概述"
 
 #: ../../manufacturing/repair.rst:5
 msgid "Repair Management"
-msgstr ""
-
-#: ../../manufacturing/repair/repair.rst:3
-msgid "Repair products"
-msgstr ""
+msgstr "维修管理"
 
 #: ../../manufacturing/repair/repair.rst:5
+msgid "Repair products"
+msgstr "维修产品"
+
+#: ../../manufacturing/repair/repair.rst:7
 msgid ""
 "The Odoo *Repair* app allows you to manage a complete after sales process "
 "but also to simply repair products you have manufactured, if they present a "
 "defect."
-msgstr ""
-
-#: ../../manufacturing/repair/repair.rst:10
-msgid "Create a Repair Order"
-msgstr ""
+msgstr "Odoo*维修*应用程序不仅可管理完整的售后流程，还可轻松维修存在缺陷的已制造产品。"
 
 #: ../../manufacturing/repair/repair.rst:12
+msgid "Create a Repair Order"
+msgstr "创建维修单"
+
+#: ../../manufacturing/repair/repair.rst:14
 msgid ""
 "Once in the app, you can access your existing *Repair Orders* and create a "
 "new one."
-msgstr ""
-
-#: ../../manufacturing/repair/repair.rst:19
-msgid "Manage a repair"
-msgstr ""
+msgstr "在应用程序中，你可访问现有*维修单*或创建新维修单。"
 
 #: ../../manufacturing/repair/repair.rst:21
+msgid "Manage a repair"
+msgstr "管理维修"
+
+#: ../../manufacturing/repair/repair.rst:23
 msgid ""
 "When a customer sends you a product for repair, create a new *Repair Order*."
 " Fill it in with all the information you may need such as the product, the "
 "customer, if it has to be invoiced after or before the repair, the parts you"
 " might need, etc."
-msgstr ""
+msgstr "当客户发给你需要维修的产品时，创建新的*维修单*，填写所有相关信息，如产品、客户、维修之前或之后是否需要开单、可能需要的零部件等。"
 
-#: ../../manufacturing/repair/repair.rst:29
+#: ../../manufacturing/repair/repair.rst:31
 msgid ""
 "Once everything is done, you can then send the repair quotation to your "
 "customer. If it is approved, you can confirm the repair. You will then be "
 "able to start & end the repair when it is completed."
-msgstr ""
+msgstr "完成后，你可将维修报价发送给客户。如批准，你可确认维修。然后，你可开始维修并在完成后结束维修。"
 
-#: ../../manufacturing/repair/repair.rst:36
+#: ../../manufacturing/repair/repair.rst:38
 msgid "You can now invoice the repair."
-msgstr ""
+msgstr "现在，你可就维修开单。"

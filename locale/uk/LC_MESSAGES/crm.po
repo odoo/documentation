@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Martin Trigaux, 2018
-# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019
+# Martin Trigaux, 2021
+# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo 12.0\n"
+"Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2019-07-03 08:44+0200\n"
-"PO-Revision-Date: 2018-10-19 08:14+0000\n"
-"Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2019\n"
+"POT-Creation-Date: 2021-02-04 11:02+0100\n"
+"PO-Revision-Date: 2020-09-22 14:40+0000\n"
+"Last-Translator: Alina Lisnenko <alinasemeniuk1@gmail.com>, 2021\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,25 +38,33 @@ msgstr "Перетворення лідів у нагоди"
 msgid ""
 "The system can generate leads instead of opportunities, in order to add a "
 "qualification step before converting a *Lead* into an *Opportunity* and "
-"assigning to the right sales people. You can activate this mode from the CRM"
-" Settings. It applies to all your sales channels by default. But you can "
-"make it specific for specific channels from their configuration form."
+"assigning to the right sales people."
 msgstr ""
-"Система може генерувати ліди, а не нагоди, для того, щоб додати "
-"кваліфікаційний крок перед перетворенням *Ліда* в *Нагоду* і присвоєння "
-"потрібним продавцям. Ви можете активувати цей режим із налаштувань CRM. Він "
-"застосовується до всіх ваших каналів продажів за замовчуванням. Але ви "
-"можете зробити його специфічним для певних каналів за формою їх "
-"налаштування."
+"Система може генерувати ліди замість нагод, щоб додати крок кваліфікації "
+"перед конвертацією *Ліда* в *Нагоду* та призначення його продавцю."
 
-#: ../../crm/acquire_leads/convert.rst:13
+#: ../../crm/acquire_leads/convert.rst:9
+msgid ""
+"You can activate this mode from the CRM Settings. It applies to all your "
+"sales channels by default. But you can make it specific for specific "
+"channels from their configuration form."
+msgstr ""
+"Ви можете активувати цей режим із Налаштувань CRM. Він застосовується до "
+"всіх каналів продажу за замовчуванням. Але ви можете застосувати його для "
+"конкретних каналів із їхньої форми налаштування."
+
+#: ../../crm/acquire_leads/convert.rst:14
 #: ../../crm/acquire_leads/generate_from_website.rst:41
-#: ../../crm/optimize/onsip.rst:13 ../../crm/track_leads/lead_scoring.rst:12
+#: ../../crm/acquire_leads/lead_mining.rst:8
+#: ../../crm/optimize/gamification.rst:11
+#: ../../crm/optimize/outlook_extension.rst:27
+#: ../../crm/optimize/partner_autocomplete.rst:9
+#: ../../crm/track_leads/lead_scoring.rst:12
 #: ../../crm/track_leads/prospect_visits.rst:12
 msgid "Configuration"
 msgstr "Налаштування"
 
-#: ../../crm/acquire_leads/convert.rst:15
+#: ../../crm/acquire_leads/convert.rst:16
 msgid ""
 "For this feature to work, go to :menuselection:`CRM --> Configuration --> "
 "Settings` and activate the *Leads* feature."
@@ -64,7 +72,7 @@ msgstr ""
 "Щоб ця функція працювала, перейдіть на :menuselection:`CRM --> Налаштування "
 "--> Налаштування` та активуйте функцію *Ліди*."
 
-#: ../../crm/acquire_leads/convert.rst:21
+#: ../../crm/acquire_leads/convert.rst:22
 msgid ""
 "You will now have a new submenu *Leads* under *Leads* where they will "
 "aggregate."
@@ -72,11 +80,11 @@ msgstr ""
 "Тепер у вас з'явиться нове підменю *Ліди* у розділі *Ліди*, де вони "
 "накопичуються."
 
-#: ../../crm/acquire_leads/convert.rst:28
+#: ../../crm/acquire_leads/convert.rst:29
 msgid "Convert a lead into an opportunity"
 msgstr "Конвертуйте лід у нагоду"
 
-#: ../../crm/acquire_leads/convert.rst:30
+#: ../../crm/acquire_leads/convert.rst:31
 msgid ""
 "When you click on a *Lead* you will have the option to convert it to an "
 "opportunity and decide if it should still be assigned to the same "
@@ -86,7 +94,7 @@ msgstr ""
 "нагоду і вирішити, чи слід його ще призначити тому ж каналу/продавцю, і якщо"
 " вам потрібно створити нового клієнта."
 
-#: ../../crm/acquire_leads/convert.rst:37
+#: ../../crm/acquire_leads/convert.rst:38
 msgid ""
 "If you already have an opportunity with that customer Odoo will "
 "automatically offer you to merge with that opportunity. In the same manner, "
@@ -97,9 +105,52 @@ msgstr ""
 "об'єднати цю нагоду. Точно так само Odoo автоматично запропонує вам зв'язати"
 " з існуючим клієнтом, якщо цей клієнт вже існує."
 
+#: ../../crm/acquire_leads/convert.rst:44
+msgid "Merge opportunities"
+msgstr "Об'єднайте нагоди"
+
+#: ../../crm/acquire_leads/convert.rst:46
+msgid ""
+"Odoo will also automatically propose to merge opportunities if they have the"
+" same email address. When merging opportunities, Odoo merges the information"
+" into the opportunity which was created first, giving priority to the "
+"information present on the first opportunity."
+msgstr ""
+"Odoo також автоматично запропонує об'єднати нагоди, якщо в них однакова "
+"електронна адреса. Під час об'єднання нагод Odoo об'єднує й інформацію "
+"нагод, яка була спершу створена, надаючи пріоритет інформації першої нагоди."
+
+#: ../../crm/acquire_leads/convert.rst:51
+msgid ""
+"No information is lost: data from the other opportunity is logged in the "
+"chatter and the information fields for easy access."
+msgstr ""
+"Жодна інформація не втрачаться: дані з інших нагод записується у чаттері та "
+"інформаційних полях для легкого доступу."
+
+#: ../../crm/acquire_leads/convert.rst:57
+msgid ""
+"Would you find a duplicate yourself, ...you can also merge opportunities or "
+"leads even if the system doesn't propose it."
+msgstr ""
+"Якщо ви знайдете дублікат самостійно, ... ви також можете об'єднати нагоди "
+"або ліди, навіть якщо система цього не пропонує."
+
+#: ../../crm/acquire_leads/convert.rst:60
+msgid ""
+"Here’s how, from the list view. Select the opportunities or leads you want "
+"to merge and the action button will appear. Then, you can select merge."
+msgstr ""
+"Тут є як це зробити зі списку. Оберіть нагоди або ліди, які ви хочете "
+"об'єднати, тоді з'явиться кнопка дії. Потім ви можете обрати об'єднання."
+
+#: ../../crm/acquire_leads/convert.rst:67
+msgid "It is also possible to merge more than 2 opportunities or leads."
+msgstr "Можливо також об'єднати більше, ніж дві нагоди або ліда."
+
 #: ../../crm/acquire_leads/generate_from_email.rst:3
 msgid "Generate leads/opportunities from emails"
-msgstr "Генеруйте лід/нагоди з електронної пошти"
+msgstr "Генеруйте ліди/нагоди з електронної пошти"
 
 #: ../../crm/acquire_leads/generate_from_email.rst:5
 msgid ""
@@ -107,7 +158,7 @@ msgid ""
 "efficiency. By default, any email sent to *sales@database\\_domain.ext* will"
 " create an opportunity in the pipeline of the default sales channel."
 msgstr ""
-"Автоматизація генерації ліду/нагоди значно покращить вашу ефективність. За "
+"Автоматизація генерації ліда/нагоди значно покращить вашу ефективність. За "
 "замовчуванням будь-який електронний лист, надісланий на *sales@database\\ "
 "_domain.ext*, створить нагоду в рамках каналу продажів за замовчуванням."
 
@@ -117,17 +168,17 @@ msgstr "Налаштуйте псевдоніми електронної пош�
 
 #: ../../crm/acquire_leads/generate_from_email.rst:13
 msgid ""
-"Each sales channel can have its own email alias, to generate "
+"Each sales teams can have its own email alias, to generate "
 "leads/opportunities automatically assigned to it. It is useful if you manage"
 " several sales teams with specific business processes. You will find the "
-"configuration of sales channels under :menuselection:`Configuration --> "
-"Sales Channels`."
+"configuration of sales teams under :menuselection:`Configuration --> Sales "
+"Teams`."
 msgstr ""
 "Кожен канал продажу може мати власний псевдонім електронної пошти, щоб "
 "генерувати ліди/нагоди, автоматично призначені для нього. Це корисно, якщо "
 "ви керуєте кількома командами продажів з певними бізнес-процесами. Ви "
-"знайдете налаштування каналів продажу під :menuselection:`Налаштування --> "
-"Канали продажів`."
+"знайдете налаштування команд продажу під :menuselection:`Налаштування --> "
+"Команди продажів`."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:3
 msgid "Generate leads/opportunities from your website contact page"
@@ -157,11 +208,12 @@ msgstr "|image0|\\ |image1|"
 
 #: ../../crm/acquire_leads/generate_from_website.rst:16
 msgid ""
-"With the CRM app installed, you benefit from ready-to-use contact form on "
+"With the CRM app installed, you benefit from a ready-to-use contact form on "
 "your Odoo website that will generate leads/opportunities automatically."
 msgstr ""
-"За допомогою додатку CRM ви скористаєтесь готовою до використання контактною"
-" формою на своєму веб-сайті Odoo, яка автоматично створить ліди/нагоди."
+"Зі встановленням модуля CRM, ви користуєтесь готовою до використання "
+"контактною формою на своєму веб-сайті Odoo, яка автоматично генерує "
+"ліди/нагоди."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:23
 msgid ""
@@ -182,50 +234,49 @@ msgstr "Створіть власну контактну форму"
 #: ../../crm/acquire_leads/generate_from_website.rst:34
 msgid ""
 "You may want to know more from your visitor when they use the contact form "
-"to contact you. You will then need to build a custom contact form on your "
-"website. Those contact forms can generate multiple types of records in the "
-"system (emails, leads/opportunities, project tasks, helpdesk tickets, "
-"etc...)"
+"to you will need to build a custom contact form on your website. These "
+"contact forms can generate multiple types of records in the system (emails, "
+"leads/opportunities, project tasks, helpdesk tickets, etc.)"
 msgstr ""
-"Ви можете дізнатися більше від свого відвідувача, коли вони використовують "
-"контактну форму для контакту з вами. Після цього на веб-сайті потрібно "
-"створити спеціальну контактну форму. Ці форми можуть генерувати декілька "
-"типів записів у системі (електронні листи, ліди/нагоди, завдання проекту, "
-"заявки служб підтримки, тощо ...)"
+"Ви можете дізнатися більше про свого відвідувача, коли він використовує "
+"контактну форму, вам потрібно буде створити на вашому веб-сайті спеціальну "
+"контактну форму. Ці контактні форми можуть генерувати кілька типів записів у"
+" системі (електронні листи, ліди/нагоди, завдання проекту, заявки служби "
+"підтримки тощо)."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:43
 msgid ""
-"You will need to install the free *Form Builder* module. Only available in "
+"You will need to install the free *Form Builder* module, only available in "
 "Odoo Enterprise."
 msgstr ""
-"Вам буде потрібно встановити безкоштовний модуль *Конструктор форми*. "
-"Доступно лише в Odoo Enterprise."
+"Вам потрібно буде встановити безкоштовний модуль *Конструктор форм*, який "
+"доступний в лише Odoo Enterprise."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:52
 msgid ""
-"From any page you want your contact form to be in, in edit mode, drag the "
-"form builder in the page and you will be able to add all the fields you "
-"wish."
+"First, go to the page where you want to put your contact form. In edit mode,"
+" drag the form builder onto the page, and you will be able to add all the "
+"fields you wish."
 msgstr ""
-"З будь-якої сторінки, в якій ви хочете, щоб ваша контактна форма опинилась в"
-" режимі редагування, перетягніть конструктор форм на сторінці, і ви зможете "
-"додати всі потрібні поля."
+"Спершу перейдіть до сторінки, де в хочете вставити вашу контактну форму. В "
+"режимі редагування перетягніть конструктор форм на сторінку, і тоді ви "
+"зможете додати всі поля, які ви хочете."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:59
 msgid ""
-"By default any new contact form will send an email, you can switch to "
+"By default, any new contact form will send an email. You can switch to "
 "lead/opportunity generation in *Change Form Parameters*."
 msgstr ""
-"За замовчуванням будь-яка нова контактна форма надсилатиме електронний лист,"
-" ви зможете перейти до створення ліду/нагоди у *Змінити параметри форми*."
+"За замовчуванням усі нові форми контакту будуть надсилати електронний лист. "
+"Ви можете перемкнути на створення ліда/нагоди у *Змінити параметри форми*."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:63
 msgid ""
-"If the same visitor uses the contact form twice, the second information will"
-" be added to the first lead/opportunity in the chatter."
+"If the same visitor uses the contact form twice, the second entry will be "
+"added to the first lead/opportunity in the chatter."
 msgstr ""
-"Якщо один і той же відвідувач заповнює контактну форму двічі, друга "
-"інформація буде додана до першого ліда/нагоди у чатері."
+"Якщо той же відвідувач використовує контактну форму двічі, другий запис буде"
+" додано до першого ліда/нагоди у чаті."
 
 #: ../../crm/acquire_leads/generate_from_website.rst:67
 msgid "Generate leads instead of opportunities"
@@ -233,13 +284,140 @@ msgstr "Генеруйте ліди, а не нагоди"
 
 #: ../../crm/acquire_leads/generate_from_website.rst:69
 msgid ""
-"When using a contact form, it is advised to use a qualification step before "
-"assigning to the right sales people. To do so, activate *Leads* in CRM "
-"settings and refer to :doc:`convert`."
+"When using a contact form, you should use a qualification step before "
+"assigning the form to the right sales people. To do so, activate *Leads* in "
+"CRM settings and refer to :doc:`convert`."
 msgstr ""
-"Використовуючи контактну форму, рекомендується скористатись етапом "
-"кваліфікації, перш ніж призначити потрібних продавців. Для цього активуйте "
-"*Ліди* у налаштуваннях CRM та зверніться до :doc:`convert`."
+"Під час використання контактної форми, вам слід використовувати крок "
+"кваліфікації перед призначенням форми правильному продавцю. Зробивши це, "
+"активуйте *Ліди* у налаштуваннях CRM та перейдіть на :doc:`convert`."
+
+#: ../../crm/acquire_leads/lead_mining.rst:3
+msgid "Lead mining"
+msgstr "Отримання лідів"
+
+#: ../../crm/acquire_leads/lead_mining.rst:4
+msgid ""
+"In any business, getting quality leads is essential to keep the business "
+"growing. Lead mining allows you to generate leads from scratch directly from"
+" your database. Target your leads based on a set of criteria such as the "
+"country, the size of the company, the industry your leads are coming from to"
+" make them relevant to your business."
+msgstr ""
+"У будь-якому бізнесі, отримання якісних лідів має важливе значення для "
+"зростання бізнесу. Отримання лідів дозволяє генерувати ліди з нуля "
+"безпосередньо з бази даних. Націлюйте свої ліди на основі набору таких "
+"критеріїв, як країна, розмір компанії, галузь, з відки походить ваш лід, "
+"щоби зробити їх відповідними до вашого бізнесу."
+
+#: ../../crm/acquire_leads/lead_mining.rst:10
+msgid ""
+"For this feature to work, go to :menuselection:`CRM --> Configuration --> "
+"Settings` and activate the **Lead Mining** feature."
+msgstr ""
+"Щоб запустити цю функцію, перейдіть в :menuselection:`CRM --> Налаштування "
+"--> Налаштування`  та активуйте функцію **Отримання лідів**."
+
+#: ../../crm/acquire_leads/lead_mining.rst:17
+msgid "Start generating leads"
+msgstr "Почніть створення лідів"
+
+#: ../../crm/acquire_leads/lead_mining.rst:18
+msgid ""
+"You will now have a new button **Generate Leads** available in your "
+"pipeline. You are also able to create lead mining requests from the "
+":menuselection:`Configuration --> Lead Mining Requests` and trough "
+":menuselection:`Leads --> Leads` where you have the **Generate Leads** "
+"button."
+msgstr ""
+"Тепер у вас буде кнопка **Створити ліди**, доступна у вашому конвеєрі. Ви "
+"також можете створювати запити на отримання лідів з "
+":menuselection:`Налаштування --> Запити на отримання лідів` та через "
+":menuselection:`Ліди --> Ліди`, де у вас є кнопка **Створити ліди**."
+
+#: ../../crm/acquire_leads/lead_mining.rst:27
+msgid ""
+"From there, click on the **Generate Leads** button, a window where you will "
+"be able to pick your criteria will pop up."
+msgstr ""
+"Там натисніть на кнопку **Створити ліди**, з'явиться вікно, де ви зможете "
+"обрати критерії."
+
+#: ../../crm/acquire_leads/lead_mining.rst:34
+msgid ""
+"When choosing to target Companied and their contacts you can choose the "
+"contacts you are getting based on Role or Seniority. When getting contact "
+"information make sure to be aware of the latest EU regulation, get more "
+"information about General Data Protection Regulation on `Odoo GDPR "
+"<http://odoo.com/gdpr>`__,"
+msgstr ""
+"Під час обрання цілі компнаій та їхні контакти, ви можете обрати окнтакти, "
+"які ви отримуєте на основі Ролі або Стажу. Отримавши інформацію про "
+"контакти, переконайтеся, що ви в курсі останніх норм ЄС, більше інформації "
+"про Загальні положення про захист даних отримайте на `Odoo GDPR "
+"<http://odoo.com/gdpr>`__,"
+
+#: ../../crm/acquire_leads/lead_mining.rst:39
+msgid ""
+"You can decide to filter the leads you are getting depending on the size "
+"(number of employees) of the companies. You can pick the countries your "
+"leads are coming from. It is possible to pick multiple countries. You can "
+"pick the industries your leads are coming from. It is possible to pick "
+"multiple industries."
+msgstr ""
+
+#: ../../crm/acquire_leads/lead_mining.rst:43
+msgid ""
+"You can choose the salesperson and the Salesteam the lead will be assigned "
+"to. You can also add tags to track your generated leads."
+msgstr ""
+"Ви можете обрати кілька продавців та команду продажу, до якої буде "
+"призначено ліда. Ви можете також додати теги для відстеження створених "
+"лідів."
+
+#: ../../crm/acquire_leads/lead_mining.rst:47
+msgid "The generated leads will have the name of the company."
+msgstr "Створені ліди матимуть назву компанії."
+
+#: ../../crm/acquire_leads/lead_mining.rst:50
+#: ../../crm/optimize/outlook_extension.rst:138
+#: ../../crm/optimize/partner_autocomplete.rst:36
+msgid "Pricing"
+msgstr "Ціноутворення"
+
+#: ../../crm/acquire_leads/lead_mining.rst:51
+msgid ""
+"This is an In-App Purchase feature, each generated lead will cost you one "
+"credit. If you choose to get contact information each contact will also cost"
+" us one additional credit. Here is the pricing for this `feature "
+"<https://iap.odoo.com/iap/in-app-services/167?>`__, To buy credits you can "
+"either go to :menuselection:`CRM --> Configuration --> Settings --> Buy "
+"Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my"
+" Services`."
+msgstr ""
+
+#: ../../crm/acquire_leads/lead_mining.rst:65
+msgid ""
+"The blue box will automatically tell you how many credits are going to be "
+"consumed."
+msgstr "Синє поле автоматично підкаже, скільки кредитів буде використано."
+
+#: ../../crm/acquire_leads/lead_mining.rst:68
+#: ../../crm/optimize/outlook_extension.rst:169
+msgid ""
+"If you are on Odoo Online (SAAS) and have the Enterprise version, you "
+"benefit from free trial credits to test the feature."
+msgstr ""
+"Якщо ви на Odoo Online (SAAS) і у вас версія Enterprise, для тестування "
+"функції ви користуєтесь безкоштовними пробними кредитами."
+
+#: ../../crm/acquire_leads/lead_mining.rst:71
+msgid ""
+":doc:`In-App Purchases (IAP) "
+"<../../general/in_app_purchase/in_app_purchase>`"
+msgstr ""
+":doc:`Купівлі в додатку (IAP) "
+"<../../general/in_app_purchase/in_app_purchase>`"
 
 #: ../../crm/acquire_leads/send_quotes.rst:3
 msgid "Send quotations"
@@ -300,707 +478,455 @@ msgstr ""
 msgid "Optimize your Day-to-Day work"
 msgstr "Оптимізуйте свою щоденну роботу"
 
-#: ../../crm/optimize/google_calendar_credentials.rst:3
-msgid "Synchronize Google Calendar with Odoo"
-msgstr "Синхронізація Google Календаря з Odoo"
+#: ../../crm/optimize/gamification.rst:3
+msgid "How to motivate and reward my salespeople?"
+msgstr ""
 
-#: ../../crm/optimize/google_calendar_credentials.rst:5
+#: ../../crm/optimize/gamification.rst:5
 msgid ""
-"Odoo is perfectly integrated with Google Calendar so that you can see & "
-"manage your meetings from both platforms (updates go through both "
-"directions)."
+"Challenging your employees to reach specific targets with goals and rewards "
+"is an excellent way to reinforce good habits and improve your salespeople "
+"productivity. The Gamification module gives you simple and creative ways to "
+"motivate and evaluate your employees with real-time recognition and badges "
+"inspired by game mechanics."
 msgstr ""
-"Odoo ідеально інтегрований з Google Calendar, щоб ви могли бачити і керувати"
-" своїми зустрічами з обох платформ (оновлення відбуваються в обох "
-"напрямках)."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:10
-msgid "Setup in Google"
-msgstr "Встановлення в Google"
-
-#: ../../crm/optimize/google_calendar_credentials.rst:11
+#: ../../crm/optimize/gamification.rst:13
 msgid ""
-"Go to `Google APIs platform <https://console.developers.google.com>`__ to "
-"generate Google Calendar API credentials. Log in with your Google account."
+"Install the *Gamification* module, or the *CRM gamification* one, which adds"
+" some useful data (goals and challenges) that can be used on *CRM/Sale*."
 msgstr ""
-"Перейдіть до `Платформи Google API "
-"<https://console.developers.google.com>`__, щоб створити повноваження Google"
-" Календар API. Зайдіть через ваш акаунт Google."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:14
-msgid "Go to the API & Services page."
-msgstr "Перейдіть до сторінки API та Послуги."
+#: ../../crm/optimize/gamification.rst:21
+msgid "Create a challenge"
+msgstr ""
 
-#: ../../crm/optimize/google_calendar_credentials.rst:19
-msgid "Search for *Google Calendar API* and select it."
-msgstr "Знайдіть*Google Calendar API* і виберіть його."
-
-#: ../../crm/optimize/google_calendar_credentials.rst:27
-msgid "Enable the API."
-msgstr "Увімкніть API."
-
-#: ../../crm/optimize/google_calendar_credentials.rst:32
+#: ../../crm/optimize/gamification.rst:23
 msgid ""
-"Select or create an API project to store the credentials if not yet done "
-"before. Give it an explicit name (e.g. Odoo Sync)."
+"Now, create your first challenge by going to :menuselection:`Settings --> "
+"Gamification Tools --> Challenges`."
 msgstr ""
-"Виберіть або створіть проект API для зберігання облікових даних, якщо це ще "
-"не було зроблено раніше. Дайте їй конкретне ім'я (наприклад, Odoo Sync)."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:35
-msgid "Create credentials."
-msgstr "Створіть облікові дані."
-
-#: ../../crm/optimize/google_calendar_credentials.rst:40
+#: ../../crm/optimize/gamification.rst:27
 msgid ""
-"Select *Web browser (Javascript)* as calling source and *User data* as kind "
-"of data."
+"As the gamification tool is a one-time technical setup, you need to activate"
+" the technical features in order to access the configuration. To do so, go "
+"to *Settings* and *Activate the developer mode*."
 msgstr ""
-"Виберіть *веб-браузер (Javascript)* як джерело дзвінків та *дані "
-"користувача* як види даних."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:46
+#: ../../crm/optimize/gamification.rst:35
 msgid ""
-"Then you can create a Client ID. Enter the name of the application (e.g. "
-"Odoo Calendar) and the allowed pages on which you will be redirected. The "
-"*Authorized JavaScript origin* is your Odoo's instance URL. The *Authorized "
-"redirect URI* is your Odoo's instance URL followed by "
-"'/google_account/authentication'."
+"A challenge is a mission that you send to your sales team. It can include "
+"one or several goals, set for a specific period of time. Configure your "
+"challenge as follows:"
 msgstr ""
-"Тоді ви можете створити ідентифікатор клієнта. Введіть назву програми "
-"(наприклад, Odoo Calendar) і дозволені сторінки, на які буде "
-"переадресування. *Авторизоване джерело JavaScript* - це ваш приклад URL-"
-"адреси Odoo. *Авторизована URI перенаправлення* - це ваш приклад URL-адреси "
-"Odoo, а потім -'/google_account/authentication'."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:55
+#: ../../crm/optimize/gamification.rst:38
+msgid "Assign the salespeople to be challenged;"
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:39
+msgid "Assign a responsible;"
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:40
+msgid "Set up the periodicity along with the start and the end date;"
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:41
+msgid "Select your goals;"
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:42
+msgid "Set up your rewards (badges)."
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:45
 msgid ""
-"Go through the Consent Screen step by entering a product name (e.g. Odoo "
-"Calendar). Feel free to check the customizations options but this is not "
-"mandatory. The Consent Screen will only show up when you enter the Client ID"
-" in Odoo for the first time."
+"Badges are granted when a challenge is finished. This is either at the end "
+"of a running period (eg: end of the month for a monthly challenge), at the "
+"end date of a challenge (if no periodicity is set), or when the challenge is"
+" manually closed."
 msgstr ""
-"Перейдіть до пункту \"Зразок згоди\", введіть назву продукту (наприклад, "
-"Odoo Calendar). Не соромтеся перевіряти параметри налаштування, але це не "
-"обов'язково. Екран згоди відображатиметься лише тоді, коли ви вперше введете"
-" ідентифікатор клієнта в Odoo."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:60
+#: ../../crm/optimize/gamification.rst:49
 msgid ""
-"Finally you are provided with your **Client ID**. Go to *Credentials* to get"
-" the **Client Secret** as well. Both of them are required in Odoo."
+"In the example below, 2 employees are being challenged with a *Monthly Sales"
+" Target*. The challenge is based on 2 goals: the total amount invoiced and "
+"number of new leads generated. At the end of the month, the winner will be "
+"granted with a badge."
 msgstr ""
-"Нарешті, вам надається **ідентифікатор клієнта**. Перейдіть до *Облікові "
-"дані*, щоб отримати **Секретний ключ клієнта**. Обидва вони потрібні в Odoo."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:67
-msgid "Setup in Odoo"
-msgstr "Налаштування в Odoo"
+#: ../../crm/optimize/gamification.rst:58
+msgid "Set up goals"
+msgstr ""
 
-#: ../../crm/optimize/google_calendar_credentials.rst:69
+#: ../../crm/optimize/gamification.rst:60
 msgid ""
-"Install the **Google Calendar** App from the *Apps* menu or by checking the "
-"option in :menuselection:`Settings --> General Settings`."
+"The users can be evaluated using goals and numerical objectives to reach."
 msgstr ""
-"Встановіть додаток **Google Каленар** з меню *Програми* або встановіть "
-"прапорець у полі :menuselection:`Налаштування --> Загальні налаштування`."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:75
+#: ../../crm/optimize/gamification.rst:62
 msgid ""
-"Go to :menuselection:`Settings --> General Settings` and enter your **Client"
-" ID** and **Client Secret** in Google Calendar option."
+"**Goals** are assigned through *challenges* that evaluate (see image above) "
+"and compare members of a team throughout time."
 msgstr ""
-"Перейдіть до :menuselection:`Налаштування --> Загальні налаштування` та "
-"введіть ваш **ID клієнта** та **Секретний ключ клієнта** в налаштуванні "
-"Google Календаря."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:81
+#: ../../crm/optimize/gamification.rst:66
 msgid ""
-"The setup is now ready. Open your Odoo Calendar and sync with Google. The "
-"first time you do it you are redirected to Google to authorize the "
-"connection. Once back in Odoo, click the sync button again. You can click it"
-" whenever you want to synchronize your calendar."
+"You can create a new goal on the fly from a *Challenge* by clicking on *Add "
+"new item*, under *Goals*. Select the business object according to your "
+"company's needs. Examples: number of new leads, time to qualify a lead, "
+"total amount invoiced in a specific week, month or any other time frame "
+"based on your management preferences, etc."
 msgstr ""
-"Налаштування готово. Відкрийте Календар Odoo та синхронізуйте його з Google."
-" Якщо ви робите це вперше, ви переадресовуєтеся на Google, щоб авторизувати "
-"з'єднання. Повернувшись в Odoo, знову натисніть кнопку синхронізації. Ви "
-"можете натискати її, коли хочете синхронізувати свій календар."
 
-#: ../../crm/optimize/google_calendar_credentials.rst:89
-msgid "As of now you no longer have excuses to miss a meeting!"
-msgstr "Тепер ви більше не маєте виправдання, щоби пропустити зустріч!"
-
-#: ../../crm/optimize/onsip.rst:3
-msgid "Use VOIP services in Odoo with OnSIP"
-msgstr "Використовуйте послугу VOIP в Odoo з OnSIP"
-
-#: ../../crm/optimize/onsip.rst:6
-msgid "Introduction"
-msgstr "Загальний огляд"
-
-#: ../../crm/optimize/onsip.rst:8
+#: ../../crm/optimize/gamification.rst:73
 msgid ""
-"Odoo VoIP can be set up to work together with OnSIP (www.onsip.com). In that"
-" case, the installation and setup of an Asterisk server is not necessary as "
-"the whole infrastructure is hosted and managed by OnSIP."
+"Goals may include your database setup as well (e.g. set your company data "
+"and a timezone, create new users, etc.)."
 msgstr ""
-"Odoo VoIP може бути налаштований для роботи разом з OnSIP (www.onsip.com). У"
-" цьому випадку інсталяція та налаштування сервера Asterisk не потрібні, "
-"оскільки вся інфраструктура розміщена та керована OnSIP."
 
-#: ../../crm/optimize/onsip.rst:10
+#: ../../crm/optimize/gamification.rst:77
+msgid "Set up rewards"
+msgstr ""
+
+#: ../../crm/optimize/gamification.rst:79
 msgid ""
-"You will need to open an account with OnSIP to use this service. Before "
-"doing so, make sure that your area and the areas you wish to call are "
-"covered by the service. After opening an OnSIP account, follow the "
-"configuration procedure below."
+"For non-numerical achievements, **Badges** can be granted to users. From a "
+"simple thank you to an exceptional achievement, a badge is an easy way to "
+"express gratitude to a user for their good work. To create and grant badges "
+"to your employees based on their performance, go to :menuselection:`Settings"
+" --> Gamification Tools --> Badges`."
 msgstr ""
-"Для використання цієї послуги вам потрібно буде відкрити обліковий запис на "
-"OnSIP. Перш ніж це зробити, переконайтеся, що ця послуга охоплює вашу "
-"територію та області, в які ви хочете зателефонувати. Після відкриття обліку"
-" OnSIP виконайте процедуру налаштування нижче."
 
-#: ../../crm/optimize/onsip.rst:15
-msgid "Go to Apps and install the module **VoIP OnSIP**."
-msgstr "Перейдіть до додатків та встановіть модуль **VoIP OnSIP**."
+#: ../../crm/optimize/outlook_extension.rst:3
+msgid "Outlook Extension"
+msgstr ""
 
-#: ../../crm/optimize/onsip.rst:20
+#: ../../crm/optimize/outlook_extension.rst:5
 msgid ""
-"Go to Settings/General Settings. In the section Integrations/Asterisk "
-"(VoIP), fill in the 3 fields:"
+"The **Odoo CRM Extension** is a connector that bridges your Outlook mailbox "
+"with your Odoo database. This extension allows you to:"
 msgstr ""
-"Перейдіть до Налаштування/Загальні налаштування. У розділі "
-"Інтеграція/Asterisk (VoIP) заповніть 3 поля:"
 
-#: ../../crm/optimize/onsip.rst:22
+#: ../../crm/optimize/outlook_extension.rst:8
+msgid "Create leads from emails sent to your mailbox."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:9
+msgid "Centralize Prospects' emails into a CRM."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:10
+msgid "Search and store insights on your contacts."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:17
 msgid ""
-"**OnSIP Domain** is the domain you chose when creating an account on "
-"www.onsip.com. If you don't know it, log in to https://admin.onsip.com/ and "
-"you will see it in the top right corner of the screen."
+"This extension is compatible with the Web version of Outlook as well as the "
+"desktop apps."
 msgstr ""
-"**Домен OnSIP** - це домен, який ви обрали під час створення облікового "
-"запису на www.onsip.com. Якщо ви не знаєте цього, увійдіть до "
-"https://admin.onsip.com/, і ви побачите його у верхньому правому куті "
-"екрана."
 
-#: ../../crm/optimize/onsip.rst:23
-msgid "**WebSocket** should contain wss://edge.sip.onsip.com"
-msgstr "**WebSocket** повинен містити wss: //edge.sip.onsip.com"
-
-#: ../../crm/optimize/onsip.rst:24
-msgid "**Mode** should be Production"
-msgstr "**Режим** повинен бути Виробництво"
-
-#: ../../crm/optimize/onsip.rst:29
+#: ../../crm/optimize/outlook_extension.rst:20
 msgid ""
-"Go to **Settings/Users**. In the form view of each VoIP user, in the "
-"Preferences tab, fill in the section **PBX Configuration**:"
+"The Outlook Extension uses *Partner Autocomplete IAP credits* to search and "
+"store insights on your contacts. See the :ref:`Pricing section "
+"<outlook_extension/pricing>` below for more information."
 msgstr ""
-"Перейдіть до **Налаштування/Користувачі**. У формі перегляду кожного "
-"користувача VoIP на вкладці Налаштування введіть розділ **Налаштування "
-"PBX**:"
 
-#: ../../crm/optimize/onsip.rst:31
-msgid "**SIP Login / Browser's Extension**: the OnSIP 'Username'"
-msgstr "**Логін SIP/Розширення браузера**: OnSIP 'Ім'я користувача'"
-
-#: ../../crm/optimize/onsip.rst:32
-msgid "**OnSIP authorization User**: the OnSIP 'Auth Username'"
-msgstr "**Авторизація користувача OnSIP**: the OnSIP 'Ім'я користувача авт'"
-
-#: ../../crm/optimize/onsip.rst:33
-msgid "**SIP Password**: the OnSIP 'SIP Password'"
-msgstr "**Пароль SIP**: OnSIP 'Пароль SIP'"
-
-#: ../../crm/optimize/onsip.rst:34
-msgid "**Handset Extension**: the OnSIP 'Extension'"
-msgstr "**Розширення для телефонів**: 'Розширення' OnSIP"
-
-#: ../../crm/optimize/onsip.rst:36
+#: ../../crm/optimize/outlook_extension.rst:29
 msgid ""
-"You can find all this information by logging in at "
-"https://admin.onsip.com/users, then select the user you want to configure "
-"and refer to the fields as pictured below."
+"The Outlook Extension requires to be configured both in Odoo and in Outlook."
 msgstr ""
-"Ви можете знайти всю цю інформацію, увійшовши за адресою "
-"https://admin.onsip.com/users, а потім виберіть користувача, якого ви хочете"
-" налаштувати, і послайтеся на поля, як це показано нижче."
 
-#: ../../crm/optimize/onsip.rst:41
+#: ../../crm/optimize/outlook_extension.rst:34
+msgid "Enable the feature on your database"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:36
 msgid ""
-"You can now make phone calls by clicking the phone icon in the top right "
-"corner of Odoo (make sure you are logged in as a user properly configured in"
-" Odoo and in OnSIP)."
+"To enable this feature on your Odoo database, go to :menuselection:`CRM --> "
+"Configuration --> Lead Generation`, enable **Outlook CRM Extension**, and "
+"click on *Save*."
 msgstr ""
-"Тепер ви можете телефонувати, натиснувши значок телефону у верхньому правому"
-" куті Odoo (переконайтеся, що ви ввійшли як користувач, який належним чином "
-"налаштований у Odoo та OnSIP)."
 
-#: ../../crm/optimize/onsip.rst:45
+#: ../../crm/optimize/outlook_extension.rst:42
+msgid "Install the add-in on Outlook"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:44
 msgid ""
-"If you see a *Missing Parameters* message in the Odoo softphone, make sure "
-"to refresh your Odoo window and try again."
+"You can install the Outlook Extension as a **Custom Add-in**. To do so, "
+"follow these steps:"
 msgstr ""
-"Якщо ви бачите повідомлення про *відсутність параметрів* на софтводі Odoo, "
-"обов'язково оновіть вікно Odoo та повторіть спробу."
 
-#: ../../crm/optimize/onsip.rst:52
+#: ../../crm/optimize/outlook_extension.rst:0
+msgid "URL of the **Odoo for Outlook** add-in's manifest file:"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:0
+#: ../../crm/optimize/outlook_extension.rst:0
+msgid "``https://download.odoo.com/plugins/outlook/manifest.xml``"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:50
+msgid "Todo"
+msgstr "Зробити"
+
+#: ../../crm/optimize/outlook_extension.rst:50
+msgid "add copy button when the feature is added to the doc"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:52
 msgid ""
-"If you see an *Incorrect Number* message in the Odoo softphone, make sure to"
-" use the international format, leading with the plus (+) sign followed by "
-"the international country code. E.g.: +16506913277 (where +1 is the "
-"international prefix for the United States)."
+"Connect to your Outlook mailbox, open any email, and click on the *More "
+"actions* button, displayed as three little dots."
 msgstr ""
-"Якщо в Odoo softphone з'являється повідомлення *Неправильне число*, "
-"обов'язково використовуйте міжнародний формат, який містить знак плюс (+), а"
-" потім міжнародний код країни. Наприклад: +16506913277 (де +1 - міжнародний "
-"префікс для США)."
 
-#: ../../crm/optimize/onsip.rst:57
+#: ../../crm/optimize/outlook_extension.rst:59
+msgid "Click on *Get add-ins*."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:65
 msgid ""
-"You can now also receive phone calls. Your number is the one provided by "
-"OnSIP. Odoo will ring and display a notification."
+"In the new window, select the tab named *My add-ins*, click on *+ Add a "
+"custom add-in*, and then on *Add from URL...*"
 msgstr ""
-"Тепер також можна телефонувати. Ваш номер - це той, який надається OnSIP. "
-"Odoo зателефонує і покаже повідомлення."
 
-#: ../../crm/optimize/onsip.rst:63
-msgid "OnSIP on Your Cell Phone"
-msgstr "OnSIP на вашому мобільному телефон"
-
-#: ../../crm/optimize/onsip.rst:65
+#: ../../crm/optimize/outlook_extension.rst:0
 msgid ""
-"In order to make and receive phone calls when you are not in front of your "
-"computer, you can use a softphone app on your cell phone in parallel of Odoo"
-" VoIP. This is useful for on-the-go calls, but also to make sure to hear "
-"incoming calls, or simply for convenience. Any SIP softphone will work."
+"Outlook prompts you to **enter the URL of the add-in's manifest file**. To "
+"do so, copy the following URL, paste it in the box, and click on *OK*."
 msgstr ""
-"Щоб робити та отримувати телефонні дзвінки, коли ви не перебуваєте перед "
-"вашим комп'ютером, ви можете використовувати прикладну програму для "
-"мобільних телефонів паралельно з Odoo VoIP. Це корисно для викликів на ходу,"
-" але також для того, щоб переконатися, що ви чуєте вхідні дзвінки, або "
-"просто для зручності. Будь-який SIP-софтфон буде працювати."
 
-#: ../../crm/optimize/onsip.rst:67
+#: ../../crm/optimize/outlook_extension.rst:80
 msgid ""
-"On Android and iOS, OnSIP has been successfully tested with `Grandstream "
-"Wave <https://play.google.com/store/apps/details?id=com.grandstream.wave>`_."
-" When creating an account, select OnSIP in the list of carriers. You will "
-"then have to configure it as follows:"
+"Outlook warns you that Microsoft hasn’t verified the add-in. Click on "
+"*Install* to complete the installation."
 msgstr ""
-"На Android та iOS, OnSIP успішно протестовано за допомогою `Grandstream Wave"
-" <https://play.google.com/store/apps/details?id=com.grandstream.wave> _ _. "
-"Під час створення облікового запису виберіть OnSIP у списку постачальників. "
-"Вам потрібно буде налаштувати його таким чином:"
 
-#: ../../crm/optimize/onsip.rst:69
-msgid "**Account name**: OnSIP"
-msgstr "**Назва обліку**: OnSIP"
-
-#: ../../crm/optimize/onsip.rst:70
-msgid "**SIP Server**: the OnSIP 'Domain'"
-msgstr "**SIP сервер**: OnSIP 'Домен'"
-
-#: ../../crm/optimize/onsip.rst:71
-msgid "**SIP User ID**: the OnSIP 'Username'"
-msgstr "**SIP ID користувача**: OnSIP 'Ім'я користувача'"
-
-#: ../../crm/optimize/onsip.rst:72
-msgid "**SIP Authentication ID**: the OnSIP 'Auth Username'"
-msgstr "**SIP Аутентифікація ID**: OnSIP 'Аут Ім'я користувача'"
-
-#: ../../crm/optimize/onsip.rst:73
-msgid "**Password**: the OnSIP 'SIP Password'"
-msgstr "**Пароль**: OnSIP 'Пароль SIP'"
-
-#: ../../crm/optimize/onsip.rst:75
+#: ../../crm/optimize/outlook_extension.rst:84
 msgid ""
-"Aside from initiating calls from Grandstream Wave on your phone, you can "
-"also initiate calls by clicking phone numbers in your browser on your PC. "
-"This will make Grandstream Wave ring and route the call via your phone to "
-"the other party. This approach is useful to avoid wasting time dialing phone"
-" numbers. In order to do so, you will need the Chrome extension `OnSIP Call "
-"Assistant <https://chrome.google.com/webstore/detail/onsip-call-"
-"assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en>`_."
+"The *Odoo for Outlook* add-in is not listed yet on Outlook's add-ins list. "
+"This is why it is currently necessary to install it as a *custom add-in*."
 msgstr ""
-"Окрім ініціювання дзвінків з Grandstream Wave на свій телефон, ви також "
-"можете ініціювати дзвінки, натиснувши номери телефонів у вашому браузері на "
-"своєму ПК. Це зробить дзвінок Grandstream Wave і маршрут дзвінка через "
-"телефон на іншу сторону. Цей підхід корисний, щоб не витрачати час на набір "
-"телефонних номерів. Для цього вам знадобиться розширення Chrome  `Помічник "
-"дзвінків OnSIP <https://chrome.google.com/webstore/detail/onsip-call-"
-"assistant/pceelmncccldedfkcgjkpemakjbapnpg?hl=en> _ _."
 
-#: ../../crm/optimize/onsip.rst:79
+#: ../../crm/optimize/outlook_extension.rst:90
+msgid "Add a shortcut to open the extension"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:92
 msgid ""
-"The downside of using a softphone on your cell phone is that your calls will"
-" not be logged in Odoo as the softphone acts as an independent separate app."
+"By default, you can open the **Odoo for Outlook** extension from the *More "
+"actions* menu. This section explains how to move the launcher next to the "
+"other default actions."
 msgstr ""
-"Недоліком використання софтфону на вашому мобільному телефоні є те, що ваші "
-"виклики не будуть входити в систему Odoo, оскільки софтфон виступає в ролі "
-"незалежного окремого додатка."
 
-#: ../../crm/optimize/setup.rst:3
-msgid "Configure your VOIP Asterisk server for Odoo"
-msgstr "Налаштуйте ваш сервер VOIP Asterisk для Odoo"
-
-#: ../../crm/optimize/setup.rst:6
-msgid "Installing Asterisk server"
-msgstr "Встановлення сервера Asterisk"
-
-#: ../../crm/optimize/setup.rst:9
-msgid "Dependencies"
-msgstr "Залежності"
-
-#: ../../crm/optimize/setup.rst:11
+#: ../../crm/optimize/outlook_extension.rst:99
 msgid ""
-"Before installing Asterisk you need to install the following dependencies:"
+"In your Outlook mailbox, click on *Settings*, then on *View all Outlook "
+"settings*."
 msgstr ""
-"Перед встановленням Asterisk вам потрібно встановити наступні залежності:"
 
-#: ../../crm/optimize/setup.rst:13
-msgid "wget"
-msgstr "wget"
-
-#: ../../crm/optimize/setup.rst:14
-msgid "gcc"
-msgstr "gcc"
-
-#: ../../crm/optimize/setup.rst:15
-msgid "g++"
-msgstr "g++"
-
-#: ../../crm/optimize/setup.rst:16
-msgid "ncurses-devel"
-msgstr "ncurses-devel"
-
-#: ../../crm/optimize/setup.rst:17
-msgid "libxml2-devel"
-msgstr "libxml2-devel"
-
-#: ../../crm/optimize/setup.rst:18
-msgid "sqlite-devel"
-msgstr "sqlite-devel"
-
-#: ../../crm/optimize/setup.rst:19
-msgid "libsrtp-devel"
-msgstr "libsrtp-devel"
-
-#: ../../crm/optimize/setup.rst:20
-msgid "libuuid-devel"
-msgstr "libuuid-devel"
-
-#: ../../crm/optimize/setup.rst:21
-msgid "openssl-devel"
-msgstr "openssl-devel"
-
-#: ../../crm/optimize/setup.rst:22
-msgid "pkg-config"
-msgstr "pkg-config"
-
-#: ../../crm/optimize/setup.rst:24
-msgid "In order to install libsrtp, follow the instructions below:"
-msgstr "Для встановлення libsrtp виконайте наведені нижче інструкції:"
-
-#: ../../crm/optimize/setup.rst:35
+#: ../../crm/optimize/outlook_extension.rst:100
 msgid ""
-"You also need to install PJSIP, you can download the source `here "
-"<http://www.pjsip.org/download.htm>`_. Once the source directory is "
-"extracted:"
+"Go to :menuselection:`Settings --> Mail --> Customize actions --> Message "
+"surface`, select *Odoo for Outlook*, and click on *Save*."
 msgstr ""
-"Вам також потрібно встановити PJSIP, ви можете завантажити джерело `тут "
-"<http://www.pjsip.org/download.htm>` _. Після вилучення вихідного каталогу:"
 
-#: ../../crm/optimize/setup.rst:37
-msgid "**Change to the pjproject source directory:**"
-msgstr "**Перейдіть у вихідний каталог pjproject:**"
+#: ../../crm/optimize/outlook_extension.rst:109
+msgid "Connect to your database"
+msgstr ""
 
-#: ../../crm/optimize/setup.rst:43
-msgid "**run:**"
-msgstr "**запустіть:**"
-
-#: ../../crm/optimize/setup.rst:49
-msgid "**Build and install pjproject:**"
-msgstr "**Побудуйте та встановіть pjproject:**"
-
-#: ../../crm/optimize/setup.rst:57
-msgid "**Update shared library links:**"
-msgstr "**Оновіть посилання на спільну бібліотеку:**"
-
-#: ../../crm/optimize/setup.rst:63
-msgid "**Verify that pjproject is installed:**"
-msgstr "**Перевірте, чи встановлено pjproject:**"
-
-#: ../../crm/optimize/setup.rst:69
-msgid "**The result should be:**"
-msgstr "**Результат повинен бути:**"
-
-#: ../../crm/optimize/setup.rst:86
-msgid "Asterisk"
-msgstr "Asterisk"
-
-#: ../../crm/optimize/setup.rst:88
+#: ../../crm/optimize/outlook_extension.rst:111
 msgid ""
-"In order to install Asterisk 13.7.0, you can download the source directly "
-"`there <http://downloads.asterisk.org/pub/telephony/asterisk/old-"
-"releases/asterisk-13.7.0.tar.gz>`_."
+"Open **Odoo for Outlook** from any email. This opens the extension as a "
+"panel on the right side of your screen."
 msgstr ""
-"Щоб встановити Asterisk 13.7.0, ви можете завантажити джерело безпосередньо "
-"`там <http://downloads.asterisk.org/pub/telephony/asterisk/old-"
-"releases/asterisk-13.7.0.tar.gz>`_."
 
-#: ../../crm/optimize/setup.rst:90
-msgid "Extract Asterisk:"
-msgstr "Вилучіть Asterisk:"
+#: ../../crm/optimize/outlook_extension.rst:113
+msgid "Click on *login* at the bottom of the extension."
+msgstr ""
 
-#: ../../crm/optimize/setup.rst:96
-msgid "Enter the Asterisk directory:"
-msgstr "Введіть каталог Asterisk:"
+#: ../../crm/optimize/outlook_extension.rst:114
+msgid "Insert your database's URL then click on *Login*."
+msgstr ""
 
-#: ../../crm/optimize/setup.rst:102
-msgid "Run the Asterisk configure script:"
-msgstr "Запустіть налаштування скрипта Asterisk:"
-
-#: ../../crm/optimize/setup.rst:108
-msgid "Run the Asterisk menuselect tool:"
-msgstr "Запустіть інструмент вибору меню Asterisk:"
-
-#: ../../crm/optimize/setup.rst:114
+#: ../../crm/optimize/outlook_extension.rst:120
 msgid ""
-"In the menuselect, go to the resources option and ensure that res_srtp is "
-"enabled. If there are 3 x’s next to res_srtp, there is a problem with the "
-"srtp library and you must reinstall it. Save the configuration (press x). "
-"You should also see stars in front of the res_pjsip lines."
+"Log into your database by entering your credentials. Skip this step if you "
+"are already logged in with this browser."
 msgstr ""
-"У меню вибору перейдіть до опції ресурсів і переконайтесь, що res_srtp "
-"увімкнено. Якщо біля res_srtp є 3 х, виникають проблеми з бібліотекою srtp, "
-"і ви повинні перевстановити його. Збережіть налаштування (натисніть x). Ви "
-"також повинні побачити зірки перед рядками res_pjsip."
 
-#: ../../crm/optimize/setup.rst:116
-msgid "Compile and install Asterisk:"
-msgstr "Скомпілюйте та встановіть Asterisk:"
-
-#: ../../crm/optimize/setup.rst:122
+#: ../../crm/optimize/outlook_extension.rst:122
 msgid ""
-"If you need the sample configs you can run 'make samples' to install the "
-"sample configs. If you need to install the Asterisk startup script you can "
-"run 'make config'."
+"A message asks you if you want to let Outlook access your Odoo database. "
+"Click on *Allow* to complete the connection."
 msgstr ""
-"Якщо вам потрібні зразки налаштування, ви можете запустити 'зробити зразки' "
-"для встановлення зразків налаштування. Якщо вам потрібно встановити сценарій"
-" запуску Asterisk, ви можете запустити 'зробити налашт'."
 
-#: ../../crm/optimize/setup.rst:125
-msgid "DTLS Certificates"
-msgstr "Сертифікати DTLS"
-
-#: ../../crm/optimize/setup.rst:127
-msgid "After you need to setup the DTLS certificates."
-msgstr "Після цього вам потрібно встановити сертифікати DTLS."
-
-#: ../../crm/optimize/setup.rst:133
-msgid "Enter the Asterisk scripts directory:"
-msgstr "Введіть каталог скриптів Asterisk:"
-
-#: ../../crm/optimize/setup.rst:139
+#: ../../crm/optimize/outlook_extension.rst:126
 msgid ""
-"Create the DTLS certificates (replace pbx.mycompany.com with your ip address"
-" or dns name, replace My Super Company with your company name):"
+"Make sure first to :ref:`enable the feature on your database "
+"<outlook_extension/enable-feature>`. Failing to do so would result in an "
+"*error 404 message*."
 msgstr ""
-"Створіть сертифікати DTLS (замініть pbx.mycompany.com на свою IP-адресу чи "
-"ім'я dns, замініть My Super Company на назву вашої компанії):"
 
-#: ../../crm/optimize/setup.rst:146
-msgid "Configure Asterisk server"
-msgstr "Налаштуйте сервер Asterisk"
-
-#: ../../crm/optimize/setup.rst:148
+#: ../../crm/optimize/outlook_extension.rst:130
 msgid ""
-"For WebRTC, a lot of the settings that are needed MUST be in the peer "
-"settings. The global settings do not flow down into the peer settings very "
-"well. By default, Asterisk config files are located in /etc/asterisk/. Start"
-" by editing http.conf and make sure that the following lines are "
-"uncommented:"
+"The extension displays some information, even if you do not connect it to "
+"any Odoo database. Note that only a limited amount of contact enrichment "
+"requests are available as a trial, as this feature requires prepaid credits."
+" See the :ref:`Pricing section <outlook_extension/pricing>` below for more "
+"information."
 msgstr ""
-"Для WebRTC велика кількість необхідних параметрів ПОВИННА бути в показаних "
-"налаштуваннях. Глобальні параметри не дуже добре попадають в налаштування "
-"показаних рівнів. За замовчуванням конфігураційні файли Asterisk розташовані"
-" в /etc/asterisk/. Почніть з редагування http.conf і переконайтеся, що "
-"наступні рядки не коментуються:"
 
-#: ../../crm/optimize/setup.rst:158
+#: ../../crm/optimize/outlook_extension.rst:140
 msgid ""
-"Next, edit sip.conf. The WebRTC peer requires encryption, avpf, and "
-"icesupport to be enabled. In most cases, directmedia should be disabled. "
-"Also under the WebRTC client, the transport needs to be listed as ‘ws’ to "
-"allow websocket connections. All of these config lines should be under the "
-"peer itself; setting these config lines globally might not work:"
+"The extension is **free** and doesn't require any purchase to be installed "
+"and used."
 msgstr ""
-"Далі змініть файл sip.conf. WebRTC потребує розшифрування, avpf та "
-"iicesupport. У більшості випадків, Directmedia повинен бути відключений. "
-"Також під клієнтом WebRTC транспорт потрібно вказати як \"ws\", щоб "
-"дозволити з'єднання веб-вузлів. Всі ці конфігураційні лінії мають бути під "
-"одним рівнем; установка цих конфігураційних ліній глобально може не "
-"працювати:"
 
-#: ../../crm/optimize/setup.rst:186
+#: ../../crm/optimize/outlook_extension.rst:142
 msgid ""
-"In the sip.conf and rtp.conf files you also need to add or uncomment the "
-"lines:"
+"However, this extension provides you with *Lead Enrichment* in the **Company"
+" Insights** section. This service is part of a paid service known as **Lead "
+"Generation**."
 msgstr ""
-"У sip.conf та rtp.conf файлах вам також потрібно додати чи відключити рядки:"
 
-#: ../../crm/optimize/setup.rst:193
-msgid "Lastly, set up extensions.conf:"
-msgstr "Нарешті, встановіть extensions.conf:"
-
-#: ../../crm/optimize/setup.rst:202
-msgid "Configure Odoo VOIP"
-msgstr "Налаштуйте Odoo VOIP"
-
-#: ../../crm/optimize/setup.rst:204
-msgid "In Odoo, the configuration should be done in the user's preferences."
-msgstr ""
-"В Odoo, конфігурація повинна виконуватися в налаштуваннях користувача."
-
-#: ../../crm/optimize/setup.rst:206
+#: ../../crm/optimize/outlook_extension.rst:145
 msgid ""
-"The SIP Login/Browser's Extension is the number you configured previously in"
-" the sip.conf file. In our example, 1060. The SIP Password is the secret you"
-" chose in the sip.conf file. The extension of your office's phone is not a "
-"required field but it is used if you want to transfer your call from Odoo to"
-" an external phone also configured in the sip.conf file."
+"The extension allows you to test this service for free, whether you connect "
+"the extension to a database or not. After a while, the extension asks you to"
+" buy credits to keep using this additional service."
 msgstr ""
-"Розширення SIP Логін/Браузер - це номер, який ви вже налаштували у файлі "
-"sip.conf. У нашому прикладі 1060. Пароль SIP - секрет, який ви обрали у "
-"файлі sip.conf. Розширення телефону вашого офісу не є обов'язковим полем, "
-"але воно використовується, якщо ви хочете передати свій дзвінок з Odoo на "
-"зовнішній телефон, також налаштований у файлі sip.conf."
 
-#: ../../crm/optimize/setup.rst:212
+#: ../../crm/optimize/outlook_extension.rst:155
 msgid ""
-"The configuration should also be done in the sale settings under the title "
-"\"PBX Configuration\". You need to put the IP you define in the http.conf "
-"file and the WebSocket should be: ws://127.0.0.1:8088/ws. The part "
-"\"127.0.0.1\" needs to be the same as the IP defined previously and the "
-"\"8088\" is the port you defined in the http.conf file."
+"You can buy more *Lead Generation* credits to keep using this service or "
+"disregard this message and keep using the extension for free without *Lead "
+"Enrichment*."
 msgstr ""
-"Налаштування також повинно бути зроблене в налаштуваннях продажу під назвою "
-"\"Конфігурація PBX\". Ви повинні вказати IP, який ви визначите у файлі "
-"http.conf, і WebSocket має бути: ws://127.0.0.1:8088/ws. Частина "
-"\"127.0.0.1\" повинна бути такою ж, як IP, визначений раніше, і \"8088\" - "
-"це порт, визначений у файлі http.conf."
+
+#: ../../crm/optimize/outlook_extension.rst:159
+msgid "In-App Purchase"
+msgstr "Купівлі в додатку"
+
+#: ../../crm/optimize/outlook_extension.rst:162
+msgid ""
+"*Lead Generation* is an *In-App Purchase (IAP)* service, which requires "
+"prepaid credits to be used. Each request consumes one credit."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:164
+#: ../../crm/optimize/partner_autocomplete.rst:41
+msgid ""
+"To buy credits, go to :menuselection:`Settings --> Contacts --> Partner "
+"Autocomplete or Odoo IAP --> View My Services` and select a package."
+msgstr ""
+"Щоб купити кредити, перейдіть у :menuselection:`Налаштування --> Контакти "
+"--> Автозаповнення партнера або Odoo IAP --> Переглянути мої послуги` та "
+"оберіть пакет."
+
+#: ../../crm/optimize/outlook_extension.rst:167
+msgid ""
+"If you run out of credits, the only information populated when clicking on "
+"the suggested company is the website link and logo."
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:171
+#: ../../crm/optimize/partner_autocomplete.rst:48
+msgid ""
+"Learn about our *Privacy Policy* `here "
+"<https://iap.odoo.com/privacy#header_2>`_."
+msgstr ""
+"Дізнайтеся про нашу *Політику приватності* `тут "
+"<https://iap.odoo.com/privacy#header_2>`_."
+
+#: ../../crm/optimize/outlook_extension.rst:174
+msgid ":doc:`../../general/in_app_purchase/in_app_purchase`"
+msgstr ""
+
+#: ../../crm/optimize/outlook_extension.rst:175
+msgid "`Odoo Learn: Lead Enrichment <https://www.odoo.com/r/p73>`_"
+msgstr ""
+
+#: ../../crm/optimize/partner_autocomplete.rst:3
+msgid "Enrich your contacts base with Partner Autocomplete"
+msgstr "Збільшуйте вашу базу контактів із Автоматичним заповненням партнера"
+
+#: ../../crm/optimize/partner_autocomplete.rst:5
+msgid ""
+"Parter Autocomplete helps you to enrich your contacts database with "
+"corporate data. Select one of the companies suggested in the dropdown, and "
+"quickly get all the information you need."
+msgstr ""
+"Автозаповнення партнера допомагає вам збільшити базу даних контактів із "
+"корпоративними даними. Оберіть одну з компаній, запропоновану у випадаючому "
+"списку, та швидко отримайте усю необхідну вам інформацію."
+
+#: ../../crm/optimize/partner_autocomplete.rst:11
+msgid ""
+"Go to :menuselection:`Settings --> Contacts` and activate the *Partner "
+"Autocomplete* feature."
+msgstr ""
+"Перейдіть у :menuselection:`Налаштування --> Контакти` та активуйте функцію "
+"*Автозаповнення партнера*."
+
+#: ../../crm/optimize/partner_autocomplete.rst:18
+msgid "Enrich your contacts with corporate data"
+msgstr "Збільшуйте ваші контакти з корпоративними даними"
+
+#: ../../crm/optimize/partner_autocomplete.rst:22
+msgid ""
+"From any module, once you start to create a new contact typing the name of "
+"it, the system will suggest a potential match. If you select it, the contact"
+" will be populated with corporate data."
+msgstr ""
+"З будь-якого модуля, після того, як ви починаєте створювати новий контакт, "
+"набираючи його назву, система запропонує потенційне співставлення. Якщо ви "
+"оберете його, контакт буде заповнено корпоративними даними."
+
+#: ../../crm/optimize/partner_autocomplete.rst:23
+msgid ""
+"For example, after typing *Odoo*, you will get the following information:"
+msgstr "Наприклад, після набирання *Odoo*, ви отримаєте наступну інформацію:"
+
+#: ../../crm/optimize/partner_autocomplete.rst:33
+msgid ""
+"Partner Autocomplete also works if you enter a VAT number instead of a "
+"company name."
+msgstr ""
+"Автозаповнення партнера також працює, якщо ви вводите номер платника ПДВ "
+"компанії."
+
+#: ../../crm/optimize/partner_autocomplete.rst:39
+msgid ""
+"*Partner Autocomplete* is an *In-App Purchase (IAP)* service, which requires"
+" prepaid credits to be used. Each request will consume one credit."
+msgstr ""
+"*Автозаповнення компанії* - це послуга *Купівлі в модулі (IAP)*, що вимагає "
+"використання передплачених кредитів. Кожен запит вартуватиме одному кредиту."
+
+#: ../../crm/optimize/partner_autocomplete.rst:44
+msgid ""
+"If you run out of credits, the only information that will be populated when "
+"clicking on the suggested company will be the website link and the logo."
+msgstr ""
+"Якщо у вас закінчилися кредити, єдина інформація, яка буде заповнюватися під"
+" час вибору компанії, це посилання на веб-сайт та логотип."
+
+#: ../../crm/optimize/partner_autocomplete.rst:46
+msgid ""
+"If you are on Odoo Online (SAAS) and you have the Enterprise version, you "
+"benefit from free trial credits to test the feature."
+msgstr ""
+"Якщо ви на Odoo Online (SAAS) і у вас версія Enterprise, ви можете "
+"скористатися безкоштовними пробними кредитами для тестування функції."
 
 #: ../../crm/performance.rst:3
 msgid "Analyze performance"
 msgstr "Проаналізуйте ефективність"
-
-#: ../../crm/performance/turnover.rst:3
-msgid "Get an accurate probable turnover"
-msgstr "Отримайте точний ймовірний оборот"
-
-#: ../../crm/performance/turnover.rst:5
-msgid ""
-"As you progress in your sales cycle, and move from one stage to another, you"
-" can expect to have more precise information about a given opportunity "
-"giving you an better idea of the probability of closing it, this is "
-"important to see your expected turnover in your various reports."
-msgstr ""
-"Коли ви розвиваєте свій цикл продажів і переходите з одного етапу до іншого,"
-" ви можете сподіватися отримати більш точні дані про дану нагоду, що дасть "
-"вам краще уявлення про ймовірність її закриття, це важливо, щоб побачити ваш"
-" очікуваний оборот у ваших варіантах звітів."
-
-#: ../../crm/performance/turnover.rst:11
-msgid "Configure your kanban stages"
-msgstr "Налаштуйте етапи вашого канбану"
-
-#: ../../crm/performance/turnover.rst:13
-msgid ""
-"By default, Odoo Kanban view has four stages: New, Qualified, Proposition, "
-"Won. Respectively with a 10, 30, 70 and 100% probability of success. You can"
-" add stages as well as edit them. By refining default probability of success"
-" for your business on stages, you can make your probable turnover more and "
-"more accurate."
-msgstr ""
-"За замовчуванням Канбан Odoo має чотири етапи: Новий, Кваліфікований, "
-"Пропозиція, Впіймано. Відповідно до 10, 30, 70 та 100% ймовірності успіху. "
-"Ви можете додавати етапи, а також редагувати їх. Редагуючи імовірність "
-"успіху для вашого бізнесу за фазами, ви можете зробити свій вірогідний "
-"оборот більш точнішим."
-
-#: ../../crm/performance/turnover.rst:25
-msgid ""
-"Every one of your opportunities will have the probability set by default but"
-" you can modify them manually of course."
-msgstr ""
-"Кожна з ваших нагод матиме імовірність, встановлену за умовчанням, але, "
-"звичайно, ви можете змінити її вручну."
-
-#: ../../crm/performance/turnover.rst:29
-msgid "Set your opportunity expected revenue & closing date"
-msgstr "Встановіть очікуваний прибуток та дату закриття"
-
-#: ../../crm/performance/turnover.rst:31
-msgid ""
-"When you get information on a prospect, it is important to set an expected "
-"revenue and expected closing date. This will let you see your total expected"
-" revenue by stage as well as give a more accurate probable turnover."
-msgstr ""
-"Коли ви отримуєте інформацію про потенційного клієнта, важливо встановити "
-"очікуваний дохід та очікувану дату закриття. Це дозволить вам побачити ваш "
-"загальний очікуваний дохід на етапі, а також дати більш точний можливий "
-"оборот."
-
-#: ../../crm/performance/turnover.rst:40
-msgid "See the overdue or closing soon opportunities"
-msgstr "Подивіться про прострочені нагоди або на закриття незабаром"
-
-#: ../../crm/performance/turnover.rst:42
-msgid ""
-"In your pipeline, you can filter opportunities by how soon they will be "
-"closing, letting you prioritize."
-msgstr ""
-"У вашому конвеєрі можна фільтрувати нагоди, як скоро вони будуть закриті, "
-"дозволяючи визначити пріоритет."
-
-#: ../../crm/performance/turnover.rst:48
-msgid ""
-"As a sales manager, this tool can also help you see potential ways to "
-"improve your sale process, for example a lot of opportunities in early "
-"stages but with near closing date might indicate an issue."
-msgstr ""
-"Як менеджеру з продажуів, цей інструмент також може допомогти вам з'ясувати "
-"потенційні способи покращити процес продажу, наприклад, багато нагод на "
-"ранніх стадіях, але з близькою датою закриття можуть вказувати на проблему."
-
-#: ../../crm/performance/turnover.rst:53
-msgid "View your total expected revenue and probable turnover"
-msgstr "Перегляньте загальний очікуваний дохід та можливий оборот"
-
-#: ../../crm/performance/turnover.rst:55
-msgid ""
-"While in your Kanban view you can see the expected revenue for each of your "
-"stages. This is based on each opportunity expected revenue that you set."
-msgstr ""
-"Хоча у вашому конвеєрі Канбану ви можете побачити очікуваний прибуток для "
-"кожного з ваших етапів. Це базується на кожному з очікуваних прибутків, які "
-"ви встановили."
-
-#: ../../crm/performance/turnover.rst:62
-msgid ""
-"As a manager you can go to :menuselection:`CRM --> Reporting --> Pipeline "
-"Analysis` by default *Probable Turnover* is set as a measure. This report "
-"will take into account the revenue you set on each opportunity but also the "
-"probability they will close. This gives you a much better idea of your "
-"expected revenue allowing you to make plans and set targets."
-msgstr ""
-"Як менеджер ви можете перейти до :menuselection:`CRM --> Звітування --> "
-"Аналіз конвеєру` за замовчуванням *Імовірний оборот* встановлений як міра. У"
-" цьому звіті буде враховано дохід, встановлений за кожною нагодою, а також "
-"вірогідність її закриття. Це дає вам набагато краще уявлення про очікуваний "
-"дохід, який дозволяє вам скласти плани та встановити цілі."
 
 #: ../../crm/performance/win_loss.rst:3
 msgid "Check your Win/Loss Ratio"
@@ -1067,7 +993,7 @@ msgid ""
 "*Mark Lost* button."
 msgstr ""
 "У вашому конвеєрі виберіть будь-яку нагоду, і ви побачите кнопку *Позначити "
-"як втрачений*."
+"як втрачено*."
 
 #: ../../crm/pipeline/lost_opportunities.rst:15
 msgid ""
@@ -1079,7 +1005,7 @@ msgstr ""
 
 #: ../../crm/pipeline/lost_opportunities.rst:22
 msgid "Manage & create lost reasons"
-msgstr "Керуте та створюйте причини втрат"
+msgstr "Керуйте та створюйте причини втрат"
 
 #: ../../crm/pipeline/lost_opportunities.rst:24
 msgid ""
@@ -1157,8 +1083,8 @@ msgid ""
 "Then you can select as many or all opportunities and select the actions you "
 "want to take."
 msgstr ""
-"Тоді ви можете вибрати як багато нагод чи всі, так і вибрати дії, які ви "
-"хочете зробити."
+"Тоді ви можете вибрати як багато, так і всі нагоди, а також вибрати дії, які"
+" ви хочете зробити."
 
 #: ../../crm/pipeline/lost_opportunities.rst:78
 msgid ":doc:`../performance/win_loss`"
@@ -1437,7 +1363,7 @@ msgid ""
 msgstr ""
 "Тепер кожного разу, коли в контактній формі створюється лід, він буде "
 "відстежувати сторінки, відвідані цим відвідувачем. У вас є два способи, щоб "
-"побачити ці сторінки, у верхньому правому кутку вашого ліду/нагоди, ви "
+"побачити ці сторінки, у верхньому правому кутку вашого ліда/нагоди, ви "
 "можете бачити кнопку *Перегляди сторінок*, а також внизу ви побачите їх у "
 "чаті."
 

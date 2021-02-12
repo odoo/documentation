@@ -28,7 +28,9 @@ def setup(app):
     app.connect('html-page-context', update_meta)
 
 def update_meta(app, pagename, templatename, context, doctree):
-    meta = context.setdefault('meta', {})
+    if not context.get('meta'):  # context['meta'] can be None
+        context['meta'] = {}
+    meta = context.setdefault('meta', {})  # we want {} by default
     meta.setdefault('banner', app.config.odoo_cover_default)
 
 def navbarify(node, navbar=None):
@@ -105,7 +107,13 @@ if toctree:
     def resolve(old_resolve, tree, docname, *args, **kwargs):
         if docname == tree.env.config.master_doc:
             return resolve_content_toctree(tree.env, docname, *args, **kwargs)
-        return old_resolve(tree, docname, *args, **kwargs)
+        toc = old_resolve(tree, docname, *args, **kwargs)
+        if toc is None:
+            return None
+
+        navbarify(toc[0], navbar=kwargs.pop('navbar', None))
+        return toc
+
 
 @monkey(sphinx.environment.BuildEnvironment)
 def resolve_toctree(old_resolve, self, docname, *args, **kwargs):

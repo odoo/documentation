@@ -1,9 +1,8 @@
-=====================
-Planning your project
-=====================
+========
+Planning
+========
 
 .. toctree::
    :titlesonly:
 
-   planning/assignments
    planning/forecast

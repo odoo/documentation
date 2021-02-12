@@ -1,133 +1,92 @@
-==========================================================
-How to process delivery orders in two steps (pick + ship)?
-==========================================================
-
-Overview
-========
+==================================================
+Process Delivery Orders in two Steps (Pick + Ship)
+==================================================
 
 When an order goes to the shipping department for final delivery, Odoo
-is set up by default to utilize a **one-step** operation: once all goods are
+is set up by default to utilize a one-step operation: once all goods are
 available, they are able to be shipped in a single delivery order.
+
 However, your company's business process may have one or more steps that
-happen before shipping. In the **two steps** process, the items in a delivery
-order are **picked** in the warehouse and brought to an **output location** for
-**shipping**. The goods are then shipped.
+happen before shipping. In the two steps process, the products which are
+part of the delivery order are picked in the warehouse and brought to an
+output location before being effectively shipped.
 
-In order to accomplish a **Pick + Ship** delivery in Odoo, there are a few 
-necessary configuration steps. These steps create an additional
-location, which by default is called **Output**. So, if your warehouse's
-code is ``WH``, this configuration will create a location called
-``WH/Output``. Goods will move from ``WH/Stock`` to ``WH/Output`` in the first
-step (picking). Then, they move from ``WH/Output`` to ``WH/Customers`` (in the
-case of sales orders) in the second step (shipping).
+Activate Multi-Step Routes
+==========================
 
-.. note::
-    Check out :doc:`inventory_flow` to determine if this inventory flow is the
-    correct method for your needs.
-
-Configuration
-=============
-
-Allow management of routes
---------------------------
-
-Odoo configures movement of delivery orders via the **routes**. Routes
+The first step is to allow using *multi-step routes*. Indeed, routes
 provide a mechanism to chain different actions together. In this case,
 we will chain the picking step to the shipping step.
 
-To allow management of routes, go to :menuselection:`Configuration --> Settings`.
+To allow *multi-step routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and
+activate the option. Note that activating *Multi-Step Routes* will also 
+activate *Storage Locations*.
 
-Ensure that the radio button **Advanced routing of products using
-rules** is checked.
+.. image:: media/two_steps_01.png
+    :align: center
 
-.. image:: media/two_steps05.png
-   :align: center
+Warehouse configuration
+=======================
 
-Click on **Apply** at the top of the page to save changes (if you needed to
-check the radio button above).
+Once *Multi-Step Routes* has been activated, you can go to :menuselection:`Inventory --> 
+Configuration --> Warehouse` and enter the warehouse which will use
+delivery in 2 steps. You can then select the option *Send goods in
+output and then deliver (2 steps)* for Outgoing Shipments.
 
-.. note::
-    If you checked option **Advanced routing of products using rules**
-    you may need to activate **Manage several locations per warehouse** if it
-    wasn't activated beforehand.
+.. image:: media/two_steps_02.png
+    :align: center
 
-Configure warehouse for Pick + Ship
-------------------------------------
+Activating this option will lead to the creation of a new *Output*
+location. If you want to rename it go to :menuselection:`Inventory --> Configuration -->
+Locations`, Select Output and update its name.
 
-To configure a **Pick + Ship** move, go to 
-:menuselection:`Configuration --> Warehouses` and edit
-the warehouse that will be used.
-
-For outgoing shippings, set the option to **Bring goods to output
-location before shipping (Pick + Ship)**
-
-.. image:: media/two_steps03.png
-   :align: center
+.. image:: media/two_steps_03.png
+    :align: center
 
 Create a Sales Order
 ====================
 
-Install the **Sale** if it is not the case, and 
-create a sales order with some products to deliver.
+In the *Sales* application, you can create a quotation with some
+storable products to deliver. Once you confirm the quotation, two
+pickings will be created and automatically linked to your sale order.
 
-Notice that we now see ``2`` transfers associated with this sales order
-in the **Delivery** stat button above the sales order.
+.. image:: media/two_steps_04.png
+    :align: center
 
-.. image:: media/two_steps01.png
-   :align: center
+If you click on the *2 Delivery* button, you should now see two
+different pickings, one with a reference *PICK* to designate the
+picking process and another one with a reference *OUT* to designate
+the shipping process.
 
-If you click on the **2 Transfers** stat button, you should now see two
-different pickings, one with a reference **PICK** to designate the
-picking process and another with a reference **OUT** to designate the
-shipping process.
+.. image:: media/two_steps_05.png
+    :align: center
 
-.. image:: media/two_steps04.png
-   :align: center
+Process the Picking and the Delivery
+====================================
 
-Process a Delivery
-==================
+The picking operation is the first one to be processed and has a
+*Ready* status while the delivery operation will only become *Ready*
+once the picking operation has been marked as done.
 
-How to Process the Picking Step?
---------------------------------
+You can enter the picking operation from here, or access it through the
+inventory dashboard.
 
-Ensure that you have enough product in stock, and go to 
-**Inventory** and click on the **Waiting** link under the **Pick** kanban card.
+.. image:: media/two_steps_06.png
+    :align: center
 
-.. image:: media/two_steps06.png
-   :align: center
+In case you have the product in stock, it has automatically been
+reserved and you can simply validate the picking document.
 
-Click on the picking that you want to process.
+.. image:: media/two_steps_07.png
+    :align: center
 
-Click on **Reserve** to reserve the products if they are available.
+Once the picking has been validated, the delivery order is ready to be
+processed. Thanks to the fact that the documents are chained, the
+products which have been previously picked are automatically reserved on
+the delivery order.
 
-Click on **Validate** to complete the move from **WH/Stock** to **WH/Output**.
+.. image:: media/two_steps_08.png
+    :align: center
 
-This has completed the picking step and the **WH/PICK** move should now show
-**Done** in the status column at the top of the page. The product has
-been moved from **WH/Stock** to **WH/Output** location, which makes the product
-**available for the next step** (Shipping).
-
-How to Process the Shipping Step?
----------------------------------
-
-Go to **Inventory** and click on the **# TO DO** link under the
-**Delivery Orders** kanban card.
-
-.. image:: media/two_steps02.png
-   :align: center
-
-Click on the picking that you want to process.
-
-Click on **Validate** to complete the move from **WH/Output** to the
-customer (Click **Apply** to assign the quantities based on the
-quantities listed in the **To Do** column)
-
-This has completed the shipping step and the **WH/OUT** move should now show
-**Done** in the status column at the top of the page. The product has
-been shipped to the customer.
-
-.. todo::
-    link to these sections when they will be available
-    -  Process Overview: From sales orders to delivery orders
-
-    -  Process Overview: From purchase orders to receptions
+.. image:: media/two_steps_09.png
+    :align: center

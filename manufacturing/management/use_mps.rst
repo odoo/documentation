@@ -8,8 +8,8 @@ production based on your demand forecast.
 Configuration
 =============
 
-Go to the *Manufacturing app > Configuration > Settings* and activate
-the Master Production Schedule feature before hitting save.
+Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and activate the Master
+Production Schedule feature before hitting save.
 
 .. image:: media/use_mps_01.png
     :align: center
@@ -17,7 +17,7 @@ the Master Production Schedule feature before hitting save.
 .. tip::
         In the manufacturing settings, you can define the time range of your MPS (month/week/day) and the number of periods you want to display.
 
-Now, go in *Planning > Master Production Schedule* and click on add a
+Now, go in :menuselection:`Planning --> Master Production Schedule` and click on add a
 product. You can now define your safety stock target (= the stock you
 want to have on hand at the end of the period) and the minimum and
 maximum quantities to replenish.
@@ -85,18 +85,13 @@ Cells color signification
 The cells, which are part of the *To replenish* line, can take
 different colors depending on the situation:
 
--  **Green**: quantity of products which should be replenished to
-       reach the expected safety stock considering the demand forecast
-       and the indirect demand forecast.
+-  **Green**: quantity of products which should be replenished to reach the expected safety stock considering the demand forecast and the indirect demand forecast.
 
--  **Grey**: replenishment order has already been generated, and its
-       quantity still matches current data.
+-  **Grey**: replenishment order has already been generated, and its quantity still matches current data.
 
--  **Red**: replenishment order has already been generated, and its
-       quantity was too high considering current data.
+-  **Red**: replenishment order has already been generated, and its quantity was too high considering current data.
 
--  **Orange**: replenishment order has already been generated, and
-       its quantity was too low considering current data.
+-  **Orange**: replenishment order has already been generated, and its quantity was too low considering current data.
 
 The *Forecasted stock* line can also contain red cells, which means
 the stock will be negative during the period in question.

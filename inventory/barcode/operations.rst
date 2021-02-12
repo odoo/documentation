@@ -8,6 +8,5 @@ Daily Operations
 
    operations/adjustments
    operations/internal
-   operations/delivery
-   operations/receipts
-   operations/lots_serial_numbers
+   operations/transfers_scratch
+   operations/barcode_nomenclature

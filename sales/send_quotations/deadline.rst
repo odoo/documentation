@@ -1,33 +1,44 @@
-============================================
-Stimulate customers with quotations deadline
-============================================
+===================================================
+Use quotations deadline to stimulate your customers
+===================================================
 
-As you send quotations, it is important to set a quotation deadline;
-Both to entice your customer into action with the fear of missing out on
-an offer and to protect yourself. You don't want to have to fulfill an
-order at a price that is no longer cost effective for you.
+When sending quotations, it is important to set a deadline to encourage your customers to act.
+Indeed, this will stimulate them because they will be afraid of missing a good deal and it will also
+allow you to protect yourself in case you have to fulfill an order at a price that is no longer
+profitable for you.
 
 Set a deadline
 ==============
 
-On every quotation or sales order you can add an *Expiration Date*.
+With Odoo Sales, it is possible to instantly add an **Expiration Date** from the quotation or the
+sales order.
 
-.. image:: media/quotationsdeadline01.png
-  :align: center
+.. image:: media/quotation_deadlines_1.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to configure deadlines on Odoo Sales?
 
-Use deadline in templates
-=========================
+Use deadline in your quotation templates
+========================================
 
-You can also set a default deadline in a *Quotation Template*. Each
-time that template is used in a quotation, that deadline is applied. You
-can find more info about quotation templates `here 
-<https://docs.google.com/document/d/11UaYJ0k67dA2p-ExPAYqZkBNaRcpnItCyIdO6udgyOY/edit>`_.
+It is also possible to add a deadline to every quotation template created. Whenever a specific
+quotation template is used in a quote, its associated deadline will be automatically applied. Be
+sure to check out our documentation about :doc:`quote_template` to excel in their use.
 
-.. image:: media/quotationsdeadline02.png
-  :align: center 
+.. image:: media/quotation_deadlines_2.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to use deadline in a quotation template on Odoo Sales?
 
-On your customer side, they will see this.
+.. tip::
+   By clicking on the **Customer Preview** button, you will be able to see when the offer expires.
+   For your information, the number of days will be the same as those mentioned in the quotation
+   template.
 
-.. image:: media/quotationsdeadline03.png
-  :align: center 
+   .. image:: media/quotation_deadlines_3.png
+      :align: center
+      :class: img-thumbnail
+      :alt: How customers will see deadlines on Odoo Sales?
 
+.. seealso::
+   - :doc:`quote_template`

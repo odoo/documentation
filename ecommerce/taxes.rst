@@ -5,8 +5,8 @@ Collect taxes
 .. toctree::
    :titlesonly:
 
-   ../../accounting/others/taxes/default_taxes
-   ../../accounting/others/taxes/application
-   ../../accounting/others/taxes/tax_included
-   ../../accounting/others/taxes/taxcloud
+   ../../accounting/fiscality/taxes/default_taxes
+   ../../accounting/fiscality/taxes/fiscal_positions
+   ../../accounting/fiscality/taxes/taxes
+   ../../accounting/fiscality/taxes/taxcloud
 

@@ -1,4 +1,4 @@
-:banner: banners/inventory.jpg
+:banner: banners/inventory.png
 
 =========
 Inventory
@@ -8,7 +8,6 @@ Inventory
    :titlesonly:
 
    inventory/overview
-   inventory/settings
    inventory/management
    inventory/shipping
    inventory/routes

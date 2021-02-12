@@ -1,4 +1,4 @@
-:banner: banners/odoo-sh.jpg
+:banner: banners/odoo_sh.png
 
 ==================================
 Your first module
@@ -89,7 +89,8 @@ From the Odoo.sh editor, in a terminal:
 
   $ odoo-bin scaffold my_module ~/src/user/
 
-Or, from your computer, if you have an `installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_:
+Or, from your computer, if you have an `installation of Odoo
+<https://www.odoo.com/documentation/14.0/setup/install.html#source-install>`_:
 
 .. code-block:: bash
 
@@ -150,7 +151,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow `Build an Odoo module <https://www.odoo.com/documentation/11.0/howtos/backend.html>`_ to understand
+you can follow `Build an Odoo module <https://www.odoo.com/documentation/14.0/howtos/backend.html>`_ to understand
 the structure of a module and the content of each file.
 
 Push the development branch
@@ -178,7 +179,7 @@ From an Odoo.sh editor terminal:
 
 The above command is explained in the section
 :ref:`Commit & Push your changes
-<odoosh-gettingstarted-online-editor>` of the
+<odoosh-gettingstarted-online-editor-push>` of the
 :ref:`Online Editor <odoosh-gettingstarted-online-editor>`
 chapter.
 It includes the explanation regarding the fact you will be prompted to type your username and password,
@@ -264,11 +265,7 @@ and on your production you would not like your module to be installed automatica
 
 Your module may not appear directly in your apps to install either, you need to update your apps list first:
 
-* activate the developer mode from the Settings,
-
-  .. image:: ./media/firstmodule-test-developermode.png
-    :align: center
-
+* activate the :doc:`Developer mode <../../general/developer_mode/activate>`
 * in the apps menu, click the *Update Apps List* button,
 * in the dialog that appears, click the *Update* button.
 
@@ -447,7 +444,7 @@ Add
 
   unidecode
 
-Then use the library in your module, for instance to remove any special characters in the name field of your
+Then use the library in your module, for instance to remove accents from characters in the name field of your
 model.
 
 Open the file *models/models.py*.
@@ -480,7 +477,6 @@ Add
           values['name'] = unidecode(values['name'])
       return super(my_module, self).create(values)
 
-  @api.multi
   def write(self, values):
       if 'name' in values:
           values['name'] = unidecode(values['name'])

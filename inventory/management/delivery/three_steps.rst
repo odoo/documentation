@@ -1,163 +1,104 @@
-===================================================================
-How to process delivery orders in three steps (pick + pack + ship)?
-===================================================================
-
-Overview
-========
+===========================================================
+Process Delivery Orders in three Steps (Pick + Pack + Ship)
+===========================================================
 
 When an order goes to the shipping department for final delivery, Odoo
-is set up by default on a **one-step** operation: once all goods are
-available, they can be shipped in bulk in a single delivery order.
-However, that process may not reflect the reality and your company may
+is set up by default to utilize a one-step operation: once all goods are
+available, they are able to be shipped in a single delivery order.
+However, that process may not reflect reality and your company could
 require more steps before shipping.
 
-With the **three steps** process (**Pick + Pack + Ship**), the items are
-transferred to a packing area, where they will be assembled by area of
-destination, and then set to outbound trucks for final delivery to the
-customers.
+With the delivery in 3 steps (Pick + Pack + Ship), the items will be
+picked to be transferred to a packing area. Then, they will be moved to
+an output location before being effectively shipped to the customers.
 
-A few configuration steps are necessary in order to accomplish **Pick +
-Pack + Ship** in Odoo. These steps create some additional locations, which
-by default are called **Output** and **Packing Zone**. So, if your warehouse's
-code is ``WH``, this configuration will create a location called ``WH/Output``
-and another one called ``WH/Packing Zone``.
+Activate Multi-Step Routes
+==========================
 
-Goods will move from **WH/Stock** to **WH/Packing Zone** in the first step.
-Then move from **WH/Packing Zone** to **WH/Output**. Then finally it will be
-delivered from **WH/Output** to its **final destination**.
+The first step is to allow using *multi-step routes*. Indeed, routes
+provide a mechanism to chain different actions together. In this case,
+we will chain the picking step to the shipping step.
 
-.. note::
-    Check out :doc:`inventory_flow` to determine if this inventory flow is 
-    the correct method for your needs.
+To allow *multi-step routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and
+activate the option. Note that activating *Multi-Step
+Routes* will also activate *Storage Locations*.
 
-Configuration
-=============
+.. image:: media/three_steps_01.png
+    :align: center
 
-Install the Inventory module
-----------------------------
+Configure Warehouse for Delivery in 3 Steps
+===========================================
 
-From the **App** menu, search and install the **Inventory** module.
+Once *Multi-Step Routes* has been activated, you can go to
+:menuselection:`Inventory --> Configuration --> Warehouse` and enter the warehouse which will use
+delivery in 3 steps. You can then select the option *Pack goods, send
+goods in output and then deliver (3 steps)* for *Outgoing Shipments*.
 
-.. image:: media/three_steps07.png
-   :align: center
+.. image:: media/three_steps_02.png
+    :align: center
 
-You will also need to install the **Sales** module to be able to issue sales
-orders.
+Activating this option will lead to the creation of two new locations,
+*Output* and *Packing Zone*. If you want to rename it go to :menuselection:`Inventory --> 
+Configuration --> Locations`, *Select* the one you want to rename and update its name.
 
-Allow managing routes
----------------------
+Create a Sales Order
+====================
 
-Odoo configures movement of delivery orders via **routes**. Routes
-provide a mechanism to link different actions together. In this case, we
-will link the picking step to the shipping step.
+In the *Sales* application, you can create a quotation with some
+storable products to deliver. Once you confirm the quotation, three
+pickings will be created and automatically linked to your sale order.
 
-To allow management of routes, go to :menuselection:`Configuration --> Settings`
-
-Under :menuselection:`Location & Warehouse --> Routes`, activate the radio button
-**Advanced routing of products using rules**. Make sure that the option
-**Manage several locations per warehouse** is activated as well.
-
-.. image:: media/three_steps05.png
-   :align: center
-
-Configure the warehouse for Pick + Pack + Ship
------------------------------------------------
-
-Go to :menuselection:`Configuration --> Warehouses` and edit the warehouse that will be
-used.
-
-For outgoing shippings, set the option to **Make packages into a
-dedicated location, bring them to the output location for shipping (Pick
-+ Pack + Ship).**
-
-.. image:: media/three_steps01.png
-   :align: center
-
-Create a Sale Order
-===================
-
-From the **Sale** module, create a sales order with some products to deliver.
-
-Notice that we now see ``3`` transfers associated with this sales order
-in the **stat button** above the sales order.
-
-.. image:: media/three_steps06.png
-   :align: center
+.. image:: media/three_steps_03.png
+    :align: center
 
 If you click the button, you should now see three different pickings:
 
-1.  The first with a reference **PICK** to designate the picking process,
+1. The first one with a reference PICK to designate the picking process,
 
-2.  The second one with the reference **PACK** that is the packing process,
+2. The second one with the reference PACK that is the packing process,
 
-3.  The last with a reference **OUT** to designate the shipping process.
+3. The last one with a reference OUT to designate the shipping process.
 
-.. image:: media/three_steps04.png
-   :align: center
+.. image:: media/three_steps_04.png
+    :align: center
 
-Process a Delivery
-==================
+Process the Picking, Packing, and Delivery
+==========================================
 
-How to Process the Picking Step?
---------------------------------
+The picking operation is the first one to be processed and has a
+*Ready* status while the other ones are *Waiting Another Operation*.
+The Packing operation will become *Ready* as soon as the picking one
+is marked as done.
 
-Ensure that you have enough product in stock and Go to **Inventory** 
-and click on the **Waiting** link under the **Pick** kanban card.
+You can enter the picking operation from here, or access it through the
+inventory dashboard.
 
-.. image:: media/three_steps08.png
-   :align: center
+.. image:: media/three_steps_05.png
+    :align: center
 
-Click on the picking that you want to process.
+In case you have the product in stock, it has automatically been
+reserved and you can simply validate the picking document.
 
-Click on **Reserve** to reserve the products if they are available.
+.. image:: media/three_steps_06.png
+    :align: center
 
-Click on **Validate** to complete the move from **WH/Stock** to **WH/Packing Zone**.
+Once the picking has been validated, the packing order is ready to be
+processed. Thanks to the fact that the documents are chained, the
+products which have been previously picked are automatically reserved on
+the packing order which can be directly validated.
 
-This has completed the picking Step and the **WH/PICK** should now show
-**Done** in the status column at the top of the page. The product has
-been moved from **WH/Stock** to **WH/Packing Zone** location, which makes the
-product available for the next step (Packing).
+.. image:: media/three_steps_07.png
+    :align: center
 
-How to Process the Packing Step?
---------------------------------
+.. image:: media/three_steps_08.png
+    :align: center
 
-Go to **Inventory** and click on the **# TRANSFERS** link under the
-**Pack** kanban card.
+Once the packing has been validated, the delivery order is ready to be
+processed. Here again, it is directly ready to be validated in order to
+transfer the products to the customer location.
 
-.. image:: media/three_steps03.png
-   :align: center
+.. image:: media/three_steps_09.png
+    :align: center
 
-Click on the picking that you want to process.
-
-Click on **Validate** to complete the move from **WH/Packing Zone** to
-**WH/Output**.
-
-This has completed the packing step and the **WH/PACK** should now show
-**Done** in the status column at the top of the page. The product has
-been moved from **WH/Packing Zone** to **WH/Output location**, which makes the
-product available for the next step (Shipping).
-
-How to Process the Shipping Step?
----------------------------------
-
-Go to **Inventory** and click on the **# TO DO** link under the
-**Delivery Orders** kanban card.
-
-.. image:: media/three_steps02.png
-   :align: center
-
-Click on the picking that you want to process.
-
-Click on **Validate** to complete the move from **WH/Output** to the
-**customer** (Click **Apply** to assign the quantities based on the
-quantities listed in the **To Do** column).
-
-This has completed the shipping step and the **WH/OUT** should now show
-**Done** in the status column at the top of the page. The product has
-been shipped to the customer.
-
-.. todo::
-    Link to these sections when available
-    -  Process Overview: From sales orders to delivery orders
-
-    -  Process Overview: From purchase orders to receptions
+.. image:: media/three_steps_10.png
+    :align: center

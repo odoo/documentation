@@ -13,9 +13,13 @@ Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
 With Odoo, once you decide to pay a vendor, you can select to pay the
 bill with SEPA. Then, at the end of the day, the manager can generate
 the SEPA file containing all bank wire transfers and send it to the
-bank. The file follows the SEPA Credit Transfer 'PAIN.001.001.03'
+bank. 
+
+By default,the file follows the SEPA Credit Transfer **'pain.001.001.03'**
 specifications. This is a well-defined standard that makes consensus
-among banks.
+among banks. However, according to the country set on your company, 
+another format can be used : **'pain.001.001.03.ch.02'** for Switzerland
+and **'pain.001.003.03'** for Germany.
 
 Once the payments are processed by your bank, you can directly import
 the account statement inside Odoo. The bank reconciliation process will
@@ -33,9 +37,8 @@ module. This module handle the process of generating SEPA files based on
 Odoo payments.
 
 .. note::
-
-	According to your country and the chart of account you use, this module may
-	be installed by default.
+   According to your country and the chart of account you use, this module may
+   be installed by default.
 
 Activate SEPA payment methods on banks
 --------------------------------------
@@ -54,11 +57,10 @@ won't work with SEPA) and the BIC (bank identifier code) on your bank
 journal.
 
 .. note::
-
-	By default, the payments you send using SEPA will use your company name as
-	initiating party name. This is what appears on the recipient's bank statement
-	in the **payment from** field. You can customize it in your company settings,
-	in the tab **Configuration**, under the **SEPA** section.
+   By default, the payments you send using SEPA will use your company name as
+   initiating party name. This is what appears on the recipient's bank statement
+   in the **payment from** field. You can customize it in your company settings,
+   in the tab **Configuration**, under the **SEPA** section.
 
 .. image:: ./media/sepa01.png
   :align: center
@@ -115,7 +117,8 @@ Troubleshooting
 The bank refuses my SEPA file
 -----------------------------
 
-Ask your bank if they support **PAIN.001.001.03 SEPA Credit Transfers**. If
+Ask your bank if they support the **SEPA Credit Transfer specification** 
+(the SEPA pain version depends on the country set on your company). If
 they don't, or cannot provide relevant informations, please forward the
 error message to your Odoo partner.
 
@@ -128,8 +131,6 @@ account for the partner you are paying but forgot to fill in the BIC
 field.
 
 .. seealso::
-
-	* :doc:`check`
-
-	.. todo:: How to define a new bank?
-	.. todo:: How to reconcile bank statements?
+   - :doc:`check`
+   - :doc:`../../bank/setup/bank_accounts`
+   - :doc:`../../bank/reconciliation/use_cases`

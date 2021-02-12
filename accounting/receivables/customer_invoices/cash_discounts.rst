@@ -65,4 +65,4 @@ match the payment with the two related journal entries.
 
 .. seealso::
   * :doc:`../../receivables/customer_invoices/payment_terms`
-  * :doc:`../../bank/reconciliation/configure`
+  * :doc:`../../bank/reconciliation/reconciliation_models`

@@ -1,4 +1,4 @@
-:banner: banners/helpdesk.jpg
+:banner: banners/helpdesk.png
 
 ========
 Helpdesk
@@ -7,5 +7,6 @@ Helpdesk
 .. toctree::
    :titlesonly:
 
-   helpdesk/getting_started
-   helpdesk/invoice_time
+   helpdesk/overview
+   helpdesk/timesheet_and_invoice
+   helpdesk/advanced

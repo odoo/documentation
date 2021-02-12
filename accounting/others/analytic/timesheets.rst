@@ -1,6 +1,6 @@
-======================================================
-How to track costs of human resources with timesheets?
-======================================================
+==============================================
+Track costs of human resources with timesheets
+==============================================
 
 Human resource of course has a cost. It is interesting to see how much a
 particular contract costs the company in term of human power in relation
@@ -73,11 +73,7 @@ of measures.
    :align: center
 
 For more information on how to create a sales order based on time and
-material please see: *How to invoice based on time and material* (Work in Progress).
-
-.. todo::
-    Add a link, and the document is under 
-    Sales --> Invoicing Methods --> Services --> How to invoices blabla
+material please see :doc:`../../../sales/invoicing/time_materials`.
 
 We save a Sales Order with the service product **External Consulting**. An
 analytical account will automatically be generated once the **Sales Order**

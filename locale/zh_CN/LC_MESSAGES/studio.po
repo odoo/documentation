@@ -1,0 +1,1047 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2015-TODAY, Odoo S.A.
+# This file is distributed under the same license as the Odoo package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Martin Trigaux, 2020
+# Jeffery CHEN Fan <jeffery9@gmail.com>, 2020
+# Gary Wei <Gary.wei@elico-corp.com>, 2020
+# fausthuang, 2020
+# 稀饭~~ <wangwhai@qq.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-02 12:05+0100\n"
+"PO-Revision-Date: 2020-09-22 14:42+0000\n"
+"Last-Translator: 稀饭~~ <wangwhai@qq.com>, 2020\n"
+"Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: zh_CN\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../studio.rst:5
+msgid "Studio"
+msgstr "在线开发工具"
+
+#: ../../studio/concepts.rst:3
+msgid "Concepts"
+msgstr "概念"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:3
+msgid "Understanding Automated Actions"
+msgstr "了解自动操作"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:6
+msgid ""
+"Automated actions are used to trigger actions. They are based on conditions "
+"and happen on top of Odoo’s default business logic."
+msgstr "自动操作用于触发操作。它们基于条件，并且发生在 Odoo 的默认业务逻辑上。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:9
+msgid ""
+"Examples of automated actions include: creating a next activity upon a "
+"quote's confirmation; adding a user as a follower of a confirmed invoice if "
+"its total is higher than a certain amount; or preventing a lead from "
+"changing stage if a field is not filled in."
+msgstr ""
+"自动操作的示例包括：在报价确认后创建下一个活动;如果用户的总数高于一定金额，则将其添加为已确认发票的追随者;或在未填写字段时阻止潜在顾客更改阶段。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:16
+msgid ""
+"Let's understand how to properly define *when* an automated action runs and "
+"*how* to create one:"
+msgstr "让我们了解如何正确定义*when* 自动操作运行和*how* 创建一个："
+
+#: ../../studio/concepts/understanding_automated_actions.rst:18
+msgid ""
+"The first step is to choose the :doc:`Model <understanding_general>` on "
+"which the action is applied."
+msgstr "第一步是选择:doc:`Model <understanding_general>` 应用操作。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:19
+msgid ""
+"The **Trigger** field defines the event that causes the automated action to "
+"happen:"
+msgstr "**Trigger**字段定义导致自动操作发生的事件："
+
+#: ../../studio/concepts/understanding_automated_actions.rst:21
+msgid ""
+"*On Creation*: when a new record is created. Note that the record is created"
+" once saved for the first time."
+msgstr "*On Creation*: 创建新记录时。请注意，记录是首次保存一次时创建的。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:23
+msgid ""
+"*On Update*: when the record is updated. Note that the update happens once "
+"the record is saved."
+msgstr "*On Update*:更新记录时。请注意，更新在保存记录后发生。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:24
+msgid ""
+"*On Creation & Update*: on the creation and/or on the update of a record "
+"once the form is saved."
+msgstr "*On Creation & Update*：在创建和/或更新记录后，窗体保存。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:25
+msgid "*On Deletion*: on the removal of a record under the condition set."
+msgstr "*On Deletion*：在设置的条件下删除记录。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:26
+msgid ""
+"*Based on Form Modification*: when the value of the specified *Trigger* "
+"field is changed in the interface (user sees the changes before saving the "
+"record). Note that this action can only be used with the *Execute Python "
+"Code* action type."
+msgstr ""
+"*Based on Form Modification*：当指定 *Trigger* "
+"字段的值在界面中更改时（用户在保存记录之前看到更改）。请注意，此操作只能与 *Execute Python Code* 操作类型一起使用。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:29
+msgid ""
+"*Based on Timed Condition*: a delay happens after a specific date/time. Set "
+"a *Delay after trigger date* if you need a delay to happen before the "
+"*Trigger Date*. Example: to send a reminder 15min before a meeting. If the "
+"date/time is not set on the form of the model chosen, the date/time "
+"considered is the one of the creation/update of the record."
+msgstr ""
+"*Based on Timed Condition*：特定日期/时间之后发生延迟。如果需要在*Delay after trigger date* "
+"触发日期后设置 *Trigger Date*。示例：在会议前 15 "
+"分钟发送提醒。如果未在所选模型的形式上设置日期/时间，则所考虑的日期/时间是创建/更新记录的日期/时间。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:34
+msgid "For every Trigger option, **conditions** can be applied, such as:"
+msgstr "对于每个触发器选项，**conditions**可以应用，例如："
+
+#: ../../studio/concepts/understanding_automated_actions.rst:36
+msgid ""
+"*Before Update Domain*: if designated, this condition must be satisfied "
+"before the record is updated."
+msgstr "*Before Update Domain*：如果指定，在更新记录之前必须满足此条件。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:38
+msgid ""
+"*Apply on*: if designated, this condition must be satisfied before executing"
+" the action rule (*Action To Do*), and after the update."
+msgstr "*Apply on*：如果指定，在执行操作规则 (*Action To Do*)之前和更新之后，必须满足此条件。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:41
+msgid ""
+"The **Active** option is to be turned off when the rule should be hidden and"
+" not executed."
+msgstr "**Active** 选项将在应隐藏且不执行规则时关闭。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:43
+msgid ""
+"Under **Action To Do** choose the type of server action that must be "
+"executed once records meet the *Trigger* conditions:"
+msgstr "在 **Action To Do**下，选择记录满足 *Trigger* 条件后必须执行的服务器操作类型："
+
+#: ../../studio/concepts/understanding_automated_actions.rst:45
+msgid ""
+"*Execute Python Code*: a block of code is executed. A *Help* tab with the "
+"variables that can be used is available."
+msgstr "*Execute Python Code*:执行代码块。可用 *Help* 选项卡，包含可以使用的变量。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:47
+msgid "*Create New Record*: a new record with new values is created."
+msgstr "*Create New Record*:将创建具有新值的新记录。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:48
+msgid "*Update a Record*: updates the record that triggered the action."
+msgstr "*Update a Record*:更新触发操作的记录。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:49
+msgid ""
+"*Execute several actions*: defines an action that triggers other server "
+"actions."
+msgstr "*Execute several actions*:定义触发其他服务器操作的操作。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:50
+msgid ""
+"*Send Email*: an automatic :doc:`email "
+"<../../discuss/advanced/email_template>` is sent."
+msgstr ""
+"*Send Email*:自动 :doc:`email <../../discuss/advanced/email_template>`发送。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:51
+msgid "*Add Followers*: followers are notified of changes in the task."
+msgstr ""
+
+#: ../../studio/concepts/understanding_automated_actions.rst:52
+msgid ""
+"*Create Next Activity*: creates an activity such as: *Call*, *Email*, "
+"*Reminder*."
+msgstr "*Create Next Activity*: 创建活动，例如：*Call*, *Email*, *Reminder*."
+
+#: ../../studio/concepts/understanding_automated_actions.rst:53
+msgid ""
+"*Send SMS Text Message*: sends an :doc:`SMS "
+"<../../sms_marketing/pricing/pricing_and_faq>`."
+msgstr ""
+"*Send SMS Text Message*: 发送 :doc:`SMS "
+"<../../sms_marketing/pricing/pricing_and_faq>`."
+
+#: ../../studio/concepts/understanding_automated_actions.rst:56
+msgid "Example"
+msgstr "例子"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:58
+msgid ""
+"This is the process of which the update of the *Email* field on the "
+"Lead/Opportunity *Model*, with a *Trigger Condition* set to *On Update*, "
+"goes through:"
+msgstr ""
+"这是潜在顾客/商机模型 *Model*上的*Email* 字段的更新过程，将*Trigger Condition* 设置为 *On "
+"Update*，将经历："
+
+#: ../../studio/concepts/understanding_automated_actions.rst:65
+msgid "The user creates the record without an email address set."
+msgstr "用户创建记录时没有设置电子邮件地址。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:66
+msgid "The user updates the record defining an email address."
+msgstr "用户更新定义电子邮件地址的记录。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:67
+msgid ""
+"Once the change is saved, the automation checks if any of the *Watched "
+"Fields* are being updated (for the example: field name *email_from* (Email)."
+msgstr "保存更改后，自动化将检查是否更新了任何 *Watched Fields* （例如：字段名称 *email_from* (Email)。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:69
+msgid ""
+"If true, it checks if the record matches the *Before Update Domain* (for the"
+" example: *email is not set*)."
+msgstr "如果为 true，它将检查记录是否与 *Before Update Domain* 匹配（例如： *email is not set*）。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:71
+msgid ""
+"If true, it checks (*after the update*) whether the record matches the "
+"*Apply on* domain (for the example: *email is set*)."
+msgstr ""
+"如果为 true，它将检查 (*after the update*)记录是否与*Apply on*域匹配（例如： *email is set*）。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:73
+msgid "If true, the chosen *Action To Do* is performed on the record."
+msgstr "如果为 true，则对记录执行所选的 *Action To Do*。"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:76
+msgid ":doc:`understanding_general`"
+msgstr ":doc:`understanding_general`"
+
+#: ../../studio/concepts/understanding_automated_actions.rst:77
+msgid ":doc:`../use_cases/automated_actions`"
+msgstr ":doc:`../use_cases/automated_actions`"
+
+#: ../../studio/concepts/understanding_general.rst:3
+msgid "Understanding General Concepts"
+msgstr "了解一般概念"
+
+#: ../../studio/concepts/understanding_general.rst:7
+msgid ""
+"Odoo Studio is a toolbox that allows you to add models or adapt "
+"functionalities on top of Odoo’s standard behavior without coding knowledge."
+" You can also create custom views and modify existing ones without having to"
+" get into the XML code."
+msgstr ""
+"Odoo Studio 是一个工具箱，允许您在 Odoo "
+"的标准行为上添加模型或调整功能，而无需编码知识。您还可以创建自定义视图并修改现有视图，而无需进入 XML 代码。"
+
+#: ../../studio/concepts/understanding_general.rst:11
+msgid ""
+"Even for experienced developers, typing out code requires time. By using "
+"Odoo Studio, you can quickly get your models up and going and focus on the "
+"crucial parts of your application. The result is a user-friendly solution "
+"that makes customizations and designing new applications easy with or "
+"without programming skills."
+msgstr ""
+"即使对于有经验的开发人员，键入代码也需要时间。通过使用 Odoo "
+"Studio，您可以快速启动模型并专注于应用程序的关键部分。结果是用户友好的解决方案，使自定义和设计新应用程序容易有或没有编程技能。"
+
+#: ../../studio/concepts/understanding_general.rst:15
+msgid "Getting started"
+msgstr "开始"
+
+#: ../../studio/concepts/understanding_general.rst:17
+msgid ""
+"One you start using Odoo Studio, you automatically create a new *module* "
+"that contains all your modifications. These modifications can be done on "
+"existing screens (*views*), by adding new *fields* in existing applications,"
+" or by creating an entirely new *model*."
+msgstr ""
+"一个您开始使用 Odoo Studio，您会自动创建一个新的*module* ，其中包含您的所有修改。这些修改可以在现有屏幕上 "
+"(*views*)完成，在现有应用程序中添加新的*fields* ，或者通过创建全新的*model*。"
+
+#: ../../studio/concepts/understanding_general.rst:22
+msgid "What is a Module?"
+msgstr "什么是模块？"
+
+#: ../../studio/concepts/understanding_general.rst:25
+msgid ""
+"An Odoo **Module** can contain a number of elements, such as: business "
+"objects (models), object views, data files, web controllers, and static web "
+"data. An application is a collection of modules."
+msgstr ""
+"Odoo **Module** 可以包含许多元素，例如：业务对象(models)、对象视图、数据文件、Web 控制器和静态 Web "
+"数据。应用程序是模块的集合。"
+
+#: ../../studio/concepts/understanding_general.rst:29
+msgid ""
+"In object-oriented programming, models usually represent a concept from the "
+"real world. Example: Odoo has models for Sales Orders, Users, Countries, "
+"etc. If you were to build an application to manage Real Estate sales, a "
+"model that represents the Properties for sale would probably be your first "
+"step."
+msgstr ""
+"在面向对象的编程中，模型通常表示来自现实世界的概念。示例：Odoo "
+"具有销售订单、用户、国家/地区等的模型。如果要构建一个应用程序来管理房地产销售，则表示要出售的房产的模型可能是您的第一步。"
+
+#: ../../studio/concepts/understanding_general.rst:38
+msgid "What is a Model (also called Object)?"
+msgstr "什么是模型（也称为对象）？"
+
+#: ../../studio/concepts/understanding_general.rst:40
+msgid ""
+"A **Model** determines the logical structure of a database and fundamentally"
+" determines in which manner data can be stored, organized, and manipulated. "
+"In other words, a model is a table of information that can be bridged with "
+"other tables."
+msgstr "**Model**确定数据库的逻辑结构，从根本上确定数据的存储、组织和操作方式。换句话说，模型是可与其他表桥接的信息表。"
+
+#: ../../studio/concepts/understanding_general.rst:45
+msgid "What are Fields?"
+msgstr "什么是字段？"
+
+#: ../../studio/concepts/understanding_general.rst:47
+msgid ""
+"**Fields** compose models. It is where a record (a piece of data) is "
+"registered."
+msgstr "**Fields**组成模型。这是记录（一段数据）的注册地。"
+
+#: ../../studio/concepts/understanding_general.rst:49
+msgid ""
+"Example: on the Real Estate application, fields on the Properties model "
+"would include the price, address, a picture, a link to the current owner, "
+"etc."
+msgstr "示例：像在建房子的过程中一样，属性模型上的字段将包括价格、地址、图片、指向当前所有者的链接等。"
+
+#: ../../studio/concepts/understanding_general.rst:50
+msgid ""
+"There are 2 main types of fields in Odoo: *basic (or scalar) fields* and "
+"*relational fields*."
+msgstr "Odoo 有 2 种主要类型的字段： *basic (or scalar) fields* 和 *relational fields*。"
+
+#: ../../studio/concepts/understanding_general.rst:53
+msgid ""
+"Basic fields represent simple values, like numbers or text. Relational "
+"fields represent relations between models. So, if you have a model for "
+"*Customers* and another one for *Properties*, you would use a relational "
+"field to link each Property to its Customer."
+msgstr ""
+"基本字段表示简单值，如数字或文本。关系字段表示模型之间的关系。因此，如果您有 *Customers* 的模型，以及 *Properties* "
+"的模型，则将使用关系字段将每个属性链接到其客户。"
+
+#: ../../studio/concepts/understanding_general.rst:56
+msgid "Relational Fields in detail"
+msgstr "详细关系字段"
+
+#: ../../studio/concepts/understanding_general.rst:59
+msgid ""
+"**Relational Fields** provide the option to link the data of one model with "
+"the data of another model."
+msgstr "**Relational Fields** 提供将一个模型的数据与另一个模型的数据链接的选项。"
+
+#: ../../studio/concepts/understanding_general.rst:60
+msgid ""
+"In Odoo, relational field types are: *One2many*, *Many2one*, *Many2many*."
+msgstr "在 Odoo 中，关系字段类型包括：*One2many*, *Many2one*, *Many2many*."
+
+#: ../../studio/concepts/understanding_general.rst:66
+msgid ""
+"An **One2many** field is a *one-way* direction of selecting *multiple* "
+"records from a table."
+msgstr "**One2many**字段是从表中选择 *multiple* 记录 *one-way* 方向。"
+
+#: ../../studio/concepts/understanding_general.rst:68
+msgid ""
+"Example: a Sales Order can contain multiple Sales Order Lines, which also "
+"contain multiple fields of information."
+msgstr "示例：销售订单可以包含多个销售订单行，其中也包含多个信息字段。"
+
+#: ../../studio/concepts/understanding_general.rst:69
+msgid ""
+"A **Many2one** field is a *one-way* direction of selecting *one* record from"
+" a table."
+msgstr "**Many2one** 字段是从表中选择 *one* 记录 *one-way* 方向。"
+
+#: ../../studio/concepts/understanding_general.rst:70
+msgid ""
+"Example: you can have many product categories, but each product can only "
+"belong to one category."
+msgstr "示例：您可以有许多产品类别，但每个产品只能属于一个类别。"
+
+#: ../../studio/concepts/understanding_general.rst:71
+msgid ""
+"A **Many2many** field is a *two-way* direction of selecting records from a "
+"table."
+msgstr "**Many2many** 字段是从表中选择记录的 *two-way* 方向。"
+
+#: ../../studio/concepts/understanding_general.rst:72
+msgid "Example: multiple tags can be added to a lead’s form."
+msgstr "示例：可以向潜在顾客的窗体添加多个标记。"
+
+#: ../../studio/concepts/understanding_general.rst:75
+msgid "An *One2many* field must have a *Many2one* related to it."
+msgstr "*One2many* 字段必须具有与它相关的*Many2one*。"
+
+#: ../../studio/concepts/understanding_general.rst:78
+msgid "What are Views?"
+msgstr "什么是视图？"
+
+#: ../../studio/concepts/understanding_general.rst:80
+msgid ""
+"**Views** define how records are displayed. They are specified in XML which "
+"means that they can be edited independently from the models that they "
+"represent. There are various types of views in Odoo, and each of them "
+"represents a mode of visualization. Some examples are: *form*, *list*, "
+"*kanban*."
+msgstr ""
+"**Views**定义记录的显示方式。它们在 XML 中指定，这意味着它们可以独立于它们表示的模型进行编辑。Odoo "
+"中有各种类型的视图，每种视图都表示可视化模式。一些例子是：*form*, *list*, *kanban*。"
+
+#: ../../studio/concepts/understanding_general.rst:85
+msgid "What is a Menu?"
+msgstr "什么是菜单？"
+
+#: ../../studio/concepts/understanding_general.rst:87
+msgid ""
+"A **Menu** is a button that executes and action. In Odoo Studio, to create "
+"menus (models) and rearrange their hierarchy, click on *Edit Menu*."
+msgstr ""
+"**Menu** 是执行和操作的按钮。在 Odoo Studio 中，要创建菜单（模型）并重新排列其层次结构，请单击*Edit Menu*。"
+
+#: ../../studio/concepts/understanding_general.rst:95
+msgid "`Studio Basics <https://www.odoo.com/fr_FR/slides/studio-31>`_"
+msgstr "`Studio Basics <https://www.odoo.com/fr_FR/slides/studio-31>`_"
+
+#: ../../studio/how_to.rst:3
+msgid "How To"
+msgstr "如何"
+
+#: ../../studio/how_to/export_import.rst:3
+msgid "Export and Import Modules"
+msgstr "导出和导入模块"
+
+#: ../../studio/how_to/export_import.rst:5
+msgid ""
+"When you do customizations in Odoo Studio, a new module is created in your "
+"database, making it easy to use Studio for prototyping."
+msgstr "在 Odoo Studio 中进行自定义时，在数据库中创建一个新模块，以便于使用 Studio 进行原型设计。"
+
+#: ../../studio/how_to/export_import.rst:8
+msgid ""
+"To export these customizations, activate Studio on the main dashboard and, "
+"under the menu *Customizations*, click on *Export*. The default filename is "
+"*customizations.zip*."
+msgstr ""
+"要导出这些自定义项，请激活主仪表板上的 "
+"Studio，并在菜单*Customizations*下单击*Export*。默认文件名为*customizations.zip*。"
+
+#: ../../studio/how_to/export_import.rst:16
+msgid ""
+"The module created contains the definition of custom models and fields, as "
+"well as the UI elements of any customization in an XML format."
+msgstr "创建的模块包含自定义模型和字段的定义，以及 XML 格式的任何自定义的 UI 元素。"
+
+#: ../../studio/how_to/export_import.rst:18
+msgid ""
+"To import and install the customizations in another instance, connect to the"
+" destination database, activate Studio and, under *Customizations*, click on"
+" *Import*."
+msgstr "若要在另一实例中导入和安装自定义项，请连接到目标数据库，激活 Studio，并在 *Customizations*下单击*Import*。"
+
+#: ../../studio/how_to/export_import.rst:25
+msgid ""
+"Studio does not know which apps are customized (because the same view can be"
+" modified on different apps), therefore, it *does not* add the underlying "
+"modules as dependencies of the exported module. In other words, the "
+"applications installed on the source database should be installed on the "
+"destination database."
+msgstr ""
+"Studio 不知道自定义了哪些应用（因为可以在不同应用中修改相同的视图），因此，它*does not* "
+"将基础模块添加为导出模块的依赖项。换句话说，源数据库上安装的应用程序应安装在目标数据库上。"
+
+#: ../../studio/how_to/rainbow_man.rst:3
+msgid "Customizing the Rainbow Man"
+msgstr "定制彩虹人"
+
+#: ../../studio/how_to/rainbow_man.rst:5
+msgid ""
+"The Rainbow Man in Odoo is an animation shown once the user completes "
+"certain tasks and clicks on certain buttons. It is a way to make the "
+"software fun to use, and rewarding, for employees."
+msgstr "Odoo 中的彩虹人是一个动画显示一旦用户完成某些任务并点击某些按钮。这是一种让软件变得有趣的方式，为员工带来回报。"
+
+#: ../../studio/how_to/rainbow_man.rst:13
+msgid ""
+"On most buttons in Odoo, such as *Send by Email*, *Confirm* or *Cancel*, "
+"once they are selected in Studio, under their *Properties*, the *Rainbow "
+"Man* effect can be applied."
+msgstr ""
+"在 Odoo 中的大多数按钮上，例如 *Send by Email*、*Confirm* 或 *Cancel*，一旦在 Studio "
+"中选择了它们，在它们 *Properties* 下，就可以应用*Rainbow Man*效果。"
+
+#: ../../studio/how_to/rainbow_man.rst:14
+msgid "By default, the feature is active:"
+msgstr "默认情况下，该功能处于活动状态："
+
+#: ../../studio/how_to/rainbow_man.rst:16
+msgid "when opportunities are marked as won;"
+msgstr "当机会被标记为获胜时;"
+
+#: ../../studio/how_to/rainbow_man.rst:17
+msgid "when users empty their inboxes;"
+msgstr "当用户清空收件箱时;"
+
+#: ../../studio/how_to/rainbow_man.rst:18
+msgid "when the user finishes a tour;"
+msgstr "当用户完成游览时;"
+
+#: ../../studio/how_to/rainbow_man.rst:19
+msgid "when the user finishes doing reconciliations."
+msgstr "当用户完成对帐时。"
+
+#: ../../studio/how_to/reports.rst:3
+msgid "Customizing Reports"
+msgstr "自定义报表"
+
+#: ../../studio/how_to/reports.rst:9
+msgid ""
+"Odoo uses HTML and CSS technologies to create reports. HTML is a markup "
+"language that uses tags, also called elements. It is the core of any webpage"
+" because it provides its basic structure. CSS interacts with HTML elements "
+"to add style to the page, establishing how the HTML is shown to the user. "
+"Odoo’s reports also use Bootstrap’s grid layout, which is the containers, "
+"rows, and columns to align content, and support Odoo's website themes."
+msgstr ""
+"Odoo 使用 HTML 和 CSS 技术创建报表。HTML 是一种使用标记（也称为元素）的标记语言。它是任何网页的核心，因为它提供了其基本结构。CSS"
+" 与 HTML 元素交互，以向页面添加样式，从而确定向用户显示 HTML 的方式。Odoo 的报告还使用 Bootstrap "
+"的网格布局，即容器、行和列来对齐内容，并支持 Odoo 的网站主题。"
+
+#: ../../studio/how_to/reports.rst:11
+msgid ""
+"When creating a new report, choose the purpose of it and if you would like "
+"the report to include header and footer (company logo, name, address, phone,"
+" email address, etc.)."
+msgstr "创建新报表时，请选择其用途，如果希望报表包含页眉和页脚（公司徽标、名称、地址、电话、电子邮件地址等）。"
+
+#: ../../studio/how_to/reports.rst:17
+msgid ""
+"Under the tab **Add**, you find the fields to be dragged and dropped to the "
+"view. *Fields*, *Data tables*, *Subtotal & Total*, and *Address Book* are "
+"dynamic elements (meaning that they need a :doc:`one2many or a many2many "
+"<../concepts/understanding_general>` related object). *Text*, *Title Block*,"
+" *Image*, and *Text in Cell* are static elements."
+msgstr ""
+"在选项卡**Add**下，您可以找到要拖动的字段并将其拖到视图中。*Fields*, *Data tables*, *Subtotal & "
+"Total*, 和 *Address Book*是动态元素 (这意味着他们需要一个 :doc:`one2many or a many2many "
+"<../concepts/understanding_general>`相关对象)。 *Text*, *Title Block*, "
+"*Image*,和*Text in Cell*是静态元素。"
+
+#: ../../studio/how_to/reports.rst:26
+msgid ""
+"Once the element is added to the view, select it to see its **Options**. The"
+" first section shows the hierarchy of the selected object and its "
+"properties, allowing you to individually edit them. Fields with related "
+"objects have their directives shown on *Field Expression*."
+msgstr ""
+"将元素添加到视图中后，选择它以查看其**Options**。第一部分显示所选对象的层次结构及其属性，允许您单独编辑它们。具有相关对象的字段的指令显示在*Field"
+" Expression*。"
+
+#: ../../studio/how_to/reports.rst:34
+msgid ""
+"Under **Visible if**, define the rule(s) to set visibility conditions to "
+"fields."
+msgstr "在 **Visible if**下，定义规则以将可见性条件设置为字段。"
+
+#: ../../studio/how_to/reports.rst:36
+msgid ""
+"Example: if choosing to display a product image, you could set a visibility "
+"rule to only display the ones that are *set* in the product form, avoiding "
+"having a plain icon when they are not set."
+msgstr "示例：如果选择显示产品图像，可以设置可见性规则，以便仅在产品窗体中显示*set* 的图标，避免在未设置时具有纯图标。"
+
+#: ../../studio/how_to/reports.rst:40
+msgid ""
+"**Visible for** is used to set which :doc:`groups "
+"<../../general/odoo_basics/add_user>` can have access to specific elements "
+"in the report. **Limit visibility to groups**, under *Report*, sets the "
+"visibility of the report to specifics groups, meaning that users belonging "
+"to other groups do not see the same final document."
+msgstr ""
+"**Visible for**用于设置 :doc:`groups "
+"<../../general/odoo_basics/add_user>`可以访问报表中的特定元素。**Limit visibility to "
+"groups**,下 *Report*, 将报表的可见性设置到特定组，这意味着属于其他组的用户看不到相同的最终文档。"
+
+#: ../../studio/how_to/reports.rst:46
+msgid ""
+"Under the **Report** tab, name your report, choose the paper format, and if "
+"the report should be added to the *Print* menu list on its respective "
+"document form."
+msgstr "在 **Report**选项卡下，命名报表，选择纸张格式，以及报告是否应添加到相应文档窗体上的 *Print* 菜单列表中。"
+
+#: ../../studio/how_to/reports.rst:53
+msgid ""
+"If activating the :doc:`Developer mode "
+"<../../general/developer_mode/activate>`, additional fields such as *Class* "
+"under *Options*, and *Reload from attachment* under *Report*, become "
+"visible."
+msgstr ""
+"如果激活 :doc:`Developer mode <../../general/developer_mode/activate>`, 其他字段，如 "
+"*Class*下 *Options*, 和*Reload from attachment* 下 *Report*, 变得可见。"
+
+#: ../../studio/how_to/reports.rst:56
+msgid ""
+"*Class*: add custom CSS classes to the selected element (e.g. Bootstrap "
+"classes such as *text-danger*)."
+msgstr ""
+"*Class*: 将自定义 CSS 类添加到所选元素 (e.g. Bootstrap classes such as *text-danger*)."
+
+#: ../../studio/how_to/reports.rst:59
+msgid ""
+"*Reload from attachment*: saves the report as an attachment of the document "
+"when printed. When the report is reprinted, it re-downloads that attachment "
+"instead of re-printing it. This means that if the underlying record (e.g. "
+"Invoice) changes when compared to the first impression, the report does not "
+"reflect the changes because they were done after the attachment was created."
+" This is typically useful for reports linked to documents that should not "
+"change, such as Invoices."
+msgstr ""
+"*Reload from attachment*: "
+"打印时将报表保存为文档的附件。重印报表时，它会重新下载该附件，而不是重新打印。这意味着，如果基础记录（例如发票）与第一次展示结果相比发生更改，则报表不会反映更改，因为它们是在创建附件后完成的。这通常适用于链接到不应更改的文档（如发票）的报表。"
+
+#: ../../studio/how_to/reports.rst:67
+msgid ""
+"Actions in Odoo Studio can be undone until you *Close* the toolbox. Once you"
+" have closed Studio, changes can not be undone anymore."
+msgstr "在您关闭工具箱之前，可以撤消 Odoo 工作室中的操作。 *Close* Studio 后，不能再撤消更改。"
+
+#: ../../studio/use_cases.rst:3
+msgid "Use Cases"
+msgstr "案例"
+
+#: ../../studio/use_cases/automated_actions.rst:3
+msgid "Advanced Use Cases: Automated Actions"
+msgstr "高级用例：自动操作"
+
+#: ../../studio/use_cases/automated_actions.rst:5
+msgid ""
+"**Case scenario 1: when a Belgian lead is created, a 3-stars priority should"
+" be automatically applied.**"
+msgstr ""
+"**Case scenario 1: when a Belgian lead is created, a 3-stars priority should"
+" be automatically applied.**"
+
+#: ../../studio/use_cases/automated_actions.rst:8
+msgid "Under *Automations*,  click on *Create* and set the following rules:"
+msgstr "在 *Automations*下，单击 *Create* 并设置以下规则："
+
+#: ../../studio/use_cases/automated_actions.rst:10
+msgid "*Model*: Lead/Opportunity"
+msgstr "*Model*: 潜在顾客/机会"
+
+#: ../../studio/use_cases/automated_actions.rst:11
+msgid "*Active*: On"
+msgstr "*Active*: On"
+
+#: ../../studio/use_cases/automated_actions.rst:12
+msgid "*Trigger*: On Creation & Update"
+msgstr "*Trigger*: 在创建和更新"
+
+#: ../../studio/use_cases/automated_actions.rst:13
+msgid "*Apply on*: Country > Country Name = Belgium"
+msgstr "*Apply on*: 国家 > 国家名称 = 比利时"
+
+#: ../../studio/use_cases/automated_actions.rst:14
+#: ../../studio/use_cases/filters_status_bar.rst:53
+msgid "*Action To Do*: Update the Record"
+msgstr "*Action To Do*: 更新记录"
+
+#: ../../studio/use_cases/automated_actions.rst:15
+msgid "*Data to Write*: Lead/Opportunity > Value > 3"
+msgstr "*Data to Write*:潜在顾客/机会 > 价值 > 3"
+
+#: ../../studio/use_cases/automated_actions.rst:22
+msgid ""
+"Check :doc:`this doc <filters_status_bar>` in order to have another "
+"automated action example."
+msgstr "检查 :doc:`this doc <filters_status_bar>` 以便有另一个自动操作示例。"
+
+#: ../../studio/use_cases/automated_actions.rst:25
+msgid ":doc:`../concepts/understanding_automated_actions`"
+msgstr ":doc:`../concepts/understanding_automated_actions`"
+
+#: ../../studio/use_cases/automated_actions.rst:26
+#: ../../studio/use_cases/filters_status_bar.rst:61
+#: ../../studio/use_cases/models_fields.rst:138
+#: ../../studio/use_cases/views.rst:28
+msgid ":doc:`../concepts/understanding_general`"
+msgstr ":doc:`../concepts/understanding_general`"
+
+#: ../../studio/use_cases/filters_status_bar.rst:3
+msgid "Advanced Use Cases: Filters and Status Bar"
+msgstr "高级用例：筛选器和状态栏"
+
+#: ../../studio/use_cases/filters_status_bar.rst:5
+msgid ""
+"**Case scenario 1: on Sales, set a filter on Belgian customers and define it"
+" as the default one (the user should still be able to unset the filter).**"
+msgstr ""
+"**Case scenario 1: on Sales, set a filter on Belgian customers and define it"
+" as the default one (the user should still be able to unset the filter).**"
+
+#: ../../studio/use_cases/filters_status_bar.rst:8
+msgid ""
+"On your customer’s page, use *Filters* > *Add Custom Filter* to group "
+"customers by country. Now, under *Favorites*, *Save Current Search* enabling"
+" *Use by default* and *Save*."
+msgstr ""
+"在客户页面上，使用*Filters* > *Add Custom Filter*按国家/地区对客户进行分组。现在，*Favorites*下， *Save"
+" Current Search*使 *Use by default* 和 *Save*."
+
+#: ../../studio/use_cases/filters_status_bar.rst:15
+msgid ""
+"On *Filter Rules* in Studio mode, select the respective filter and enable "
+"*Default Filter*."
+msgstr "在 在 Studio 模式下的 *Filter Rules*上，选择相应的筛选器并启用 *Default Filter*。"
+
+#: ../../studio/use_cases/filters_status_bar.rst:21
+msgid ""
+"**Case scenario 2: add a status bar on the product form to manage its life "
+"cycle. Set the values: ‘Prototype’, ‘In use’ and ‘Deprecated’. By default, "
+"the Kanban view must be grouped by status.**"
+msgstr ""
+"**Case scenario 2: add a status bar on the product form to manage its life "
+"cycle. Set the values: ‘Prototype’, ‘In use’ and ‘Deprecated’. By default, "
+"the Kanban view must be grouped by status.**"
+
+#: ../../studio/use_cases/filters_status_bar.rst:26
+msgid ""
+"On your product form, *Add a pipeline status bar* and name its values. "
+"Status bars are *selection* fields that give you the ability to follow a "
+"specific flow. They are useful to show you the progress that has been made."
+msgstr ""
+"在产品窗体上，*Add a pipeline status bar*并命名其值。状态栏是 *selection* "
+"字段，使您可以跟踪特定流。它们有助于向您展示已取得的进展。"
+
+#: ../../studio/use_cases/filters_status_bar.rst:28
+msgid ""
+"On the *Views* menu, access *Kanban* and, under its *View* options, set the "
+"*Default Group by* as *Pipeline status bar*."
+msgstr ""
+"在 *Views*  菜单上，访问 *Kanban*，并在其 *View*  选项下将 *Default Group by*  设置为 "
+"*Pipeline status bar*。"
+
+#: ../../studio/use_cases/filters_status_bar.rst:34
+msgid ""
+"Now, open your product form and set the right status for that product. As "
+"you move products throughout stages (also through the product’s form), "
+"stages are shown in the Kanban view."
+msgstr "现在，打开您的产品表单，并设置该产品正确的状态。当您在整个阶段（也通过产品的形式）移动产品时，看板视图中将显示阶段。"
+
+#: ../../studio/use_cases/filters_status_bar.rst:38
+msgid ""
+"To make modifications in the pipeline status bar, for example, remember to "
+"go back to *Form View*."
+msgstr "例如，若要修改管道状态栏，请记住返回*Form View*。"
+
+#: ../../studio/use_cases/filters_status_bar.rst:44
+msgid ""
+"**Case scenario 2.a: when a product goes from ‘In use’ to ‘Deprecate’, set "
+"its cost to 0€.**"
+msgstr ""
+"**Case scenario 2.a: when a product goes from ‘In use’ to ‘Deprecate’, set "
+"its cost to 0€.**"
+
+#: ../../studio/use_cases/filters_status_bar.rst:46
+msgid ""
+"Create an :doc:`automated action "
+"<../concepts/understanding_automated_actions>` with the selected values:"
+msgstr ""
+"创建 :doc:`automated action <../concepts/understanding_automated_actions>` "
+"与所选值："
+
+#: ../../studio/use_cases/filters_status_bar.rst:49
+msgid "*Model*: Product Template"
+msgstr "*Model*: 产品模板"
+
+#: ../../studio/use_cases/filters_status_bar.rst:50
+msgid "*Trigger*: On Update"
+msgstr "*Trigger*: 更新时"
+
+#: ../../studio/use_cases/filters_status_bar.rst:51
+msgid "*First Domain*: Pipeline status bar = In use"
+msgstr "*First Domain*:管道状态栏 = 正在使用中"
+
+#: ../../studio/use_cases/filters_status_bar.rst:52
+msgid "*Second Domain*: Pipeline status bar = Deprecated"
+msgstr "*Second Domain*: 管道状态栏 = 已弃用"
+
+#: ../../studio/use_cases/filters_status_bar.rst:54
+msgid "*Data to Write*: Cost (Product Template) > Value > 0"
+msgstr "*Data to Write*: 成本（产品模板） >价值 > 0"
+
+#: ../../studio/use_cases/models_fields.rst:3
+msgid "Advanced Use Cases: Creating Models and Adding Fields"
+msgstr "高级用例：创建模型和添加字段"
+
+#: ../../studio/use_cases/models_fields.rst:5
+msgid ""
+"**Case scenario 1: on the leads’ form, if the chosen country is France, show"
+" a field 'Pay by check?'**"
+msgstr "高级用例：创建模型和添加字段"
+
+#: ../../studio/use_cases/models_fields.rst:8
+msgid ""
+"On your leads’ form, add a *Related Field* to *Country > Country Name*."
+msgstr "在你的线索的表格上，添加 *Related Field* 到 *Country > Country Name*."
+
+#: ../../studio/use_cases/models_fields.rst:10
+msgid ""
+"Now, add a *Checkbox* field and define its invisibility options as *Country*"
+" (carefully select the one just created) *> is not = > France.*"
+msgstr ""
+"现在，添加一个 *Checkbox* 字段并将其隐身选项定义为 *Country* （仔细选择刚刚创建的字段）*> is not = > "
+"France.*"
+
+#: ../../studio/use_cases/models_fields.rst:11
+msgid "You can now hide the related field created (*Country*) if you wish."
+msgstr "如果您愿意，现在可以隐藏创建的相关字段 (*Country*)。"
+
+#: ../../studio/use_cases/models_fields.rst:19
+msgid ""
+"Another approach is to use the country’s ID. To do so, go to "
+":menuselection:`Contacts --> Configuration --> Countries`, select France "
+"(for example), and on the URL check its *ID*."
+msgstr ""
+"另一种方法就是使用该国的 ID。为此，请转到 ：菜单选择：`Contacts --> Configuration --> "
+"Countries`,选择法国（例如），并在 URL 上检查其 *ID*。"
+
+#: ../../studio/use_cases/models_fields.rst:21
+msgid ""
+"The related field invisibility path should now be *Country* (carefully "
+"select the one just created) *> is not = > 75*."
+msgstr "相关的字段隐身路径现在应为 *Country*（仔细选择刚刚创建的字段）*> is not = > 75*."
+
+#: ../../studio/use_cases/models_fields.rst:22
+msgid "Again, hide the related field with the country’s ID if you prefer."
+msgstr "同样，如果您愿意，请使用国家/地区 ID 隐藏相关字段。"
+
+#: ../../studio/use_cases/models_fields.rst:28
+msgid ""
+"**Case scenario 2: create a model called 'Properties' and add fields called:"
+" company, value, name, address, active, image.**"
+msgstr ""
+"**Case scenario 2: create a model called 'Properties' and add fields called:"
+" company, value, name, address, active, image.**"
+
+#: ../../studio/use_cases/models_fields.rst:31
+msgid ""
+"From the dashboard, (optionally) start a new module. Then, click on *Edit "
+"Menu* and start a *New Menu* (model). Set your menu name and *Confirm*. Now,"
+" on its form, drag & drop the necessary fields."
+msgstr ""
+"从仪表板（可选）启动新模块。然后，单击 *Edit Menu* and start a *New Menu* (model). 设置菜单名称和 "
+"*Confirm*.现在，在其窗体上，拖放必要的字段。"
+
+#: ../../studio/use_cases/models_fields.rst:39
+msgid ""
+"**Case scenario 2.a: now, you would like to have a model called 'Regions' to"
+" which each property must be linked. And, on 'Regions', you would like to "
+"see the properties for each region.**"
+msgstr ""
+"**Case scenario 2.a: now, you would like to have a model called 'Regions' to"
+" which each property must be linked. And, on 'Regions', you would like to "
+"see the properties for each region.**"
+
+#: ../../studio/use_cases/models_fields.rst:43
+msgid ""
+"Go to *Edit Menu > New Menu* and create your menu, calling it *Regions*. Add"
+" the necessary fields on its form by dragging & dropping them."
+msgstr "转到*Edit Menu > New Menu*并创建菜单，称之为 *Regions*。通过拖放和删除窗体上添加必要的字段。"
+
+#: ../../studio/use_cases/models_fields.rst:45
+msgid ""
+"Now, in the form view of *Properties*, add a *Many2one* field with a "
+"relation to your model *Region*."
+msgstr "现在，在 *Properties* 窗体视图中，添加一个*Many2one* 字段，该字段与模型 *Region*相关。"
+
+#: ../../studio/use_cases/models_fields.rst:48
+msgid ""
+"The *Existing Fields* are the ones that are on the current model but not yet"
+" in the view."
+msgstr "*Existing Fields* 是当前模型上但尚未在视图中的字段。"
+
+#: ../../studio/use_cases/models_fields.rst:60
+msgid ""
+"Now, go to the model *Regions*, select the form view, and add a status "
+"button selecting *Regions (Properties)* as your relational field."
+msgstr "现在，转到模型  *Regions*，选择窗体视图，并添加一个状态按钮，选择 *Regions (Properties)*作为关系字段。"
+
+#: ../../studio/use_cases/models_fields.rst:62
+msgid ""
+"*Status buttons* are computed fields, meaning that they count the numbers of"
+" records on the related model, and allow you to access them."
+msgstr "*Status buttons* 是计算字段，这意味着它们计算相关模型上的记录数，并允许您访问它们。"
+
+#: ../../studio/use_cases/models_fields.rst:69
+msgid ""
+"When searching for relations, click on *Search more* and filter it by "
+"*Custom*. This way you avoid creating duplicates."
+msgstr "搜索关系时，单击 *Search more*并按*Custom* 筛选它。这样，您就避免了创建重复项。"
+
+#: ../../studio/use_cases/models_fields.rst:76
+msgid ""
+"**Case scenario 2.b: in the model 'Properties', show all the tags as "
+"checkboxes instead of tags.**"
+msgstr ""
+"**Case scenario 2.b: in the model 'Properties', show all the tags as "
+"checkboxes instead of tags.**"
+
+#: ../../studio/use_cases/models_fields.rst:78
+msgid ""
+"Once the field *Tags* is added to the form, select it and, under its "
+"*Properties > Widgets*, choose *Checkboxes*."
+msgstr "将字段 *Tags* 添加到窗体后，选择它，下其 *Properties > Widgets*，选择*Checkboxes*。"
+
+#: ../../studio/use_cases/models_fields.rst:85
+msgid ""
+"**Case scenario 3: on the leads’ form, add a selection field with the "
+"values:'Tags' & 'List' & 'Checkboxes'. According to the value of the field, "
+"show tags as many2many_tags, many2many_radio, or many2many(_list).**"
+msgstr ""
+"**Case scenario 3: on the leads’ form, add a selection field with the "
+"values:'Tags' & 'List' & 'Checkboxes'. According to the value of the field, "
+"show tags as many2many_tags, many2many_radio, or many2many(_list).**"
+
+#: ../../studio/use_cases/models_fields.rst:89
+msgid ""
+"In your form view, add a *Tags* field and relate it to *Partners Tag*. Under"
+" *Properties*, define its *Widget* as *Many2many*. Do the same process "
+"another 2 times for *Checkboxes* and *Tags*."
+msgstr ""
+"在表单视图中，添加*Tags* 字段并将其与 *Partners Tag*.关联。在 *Properties* 下，将其*Widget* 定义为 "
+"*Many2many* 。对*Checkboxes* 和 *Tags*再执行 2 次相同的过程。"
+
+#: ../../studio/use_cases/models_fields.rst:96
+msgid "Now, add a *Selection* field and the necessary values."
+msgstr "现在，添加 *Selection* 字段和必要的值。"
+
+#: ../../studio/use_cases/models_fields.rst:99
+msgid ""
+"Continue by selecting your *Tags* fields, one by one, to set their "
+"*Invisible* options according to their *Widget*. In the example below, the "
+"invisibility rule for the *Partner Tags* is set as: *Select Tag type > is "
+"not = > Tags.*"
+msgstr ""
+"继续选择您的 *Tags* 字段，一个一个，以设置其*Invisible* 选项根据其 *Widget*。在下面的示例中， *Partner Tags*"
+" 的隐身规则设置为： *Select Tag type > is not = > Tags.*"
+
+#: ../../studio/use_cases/models_fields.rst:105
+msgid ""
+"**Case scenario 4: on a quotation’s form, add a selection field called "
+"'Manager Validation' with the values: ‘Accepted’ and ‘Refused’. Only a sales"
+" manager can see it, and the field should be set as mandatory if the untaxed"
+" amount is higher than 500€.**"
+msgstr ""
+"**Case scenario 4: on a quotation’s form, add a selection field called "
+"'Manager Validation' with the values: ‘Accepted’ and ‘Refused’. Only a sales"
+" manager can see it, and the field should be set as mandatory if the untaxed"
+" amount is higher than 500€.**"
+
+#: ../../studio/use_cases/models_fields.rst:109
+msgid ""
+"On your quotation form, add a *Selection* field with the values *Accepted* "
+"and *Refused*. Set its *Required* condition as *Untaxed Amount > 500* and "
+"the *Limit visibility to groups* as *Sales / Administrator* or managers."
+msgstr ""
+"在报价单上添加一个*Selection* 字段，该字段的值为*Accepted*和*Refused*。将其 *Required*条件设置为 "
+"*Untaxed Amount > 500*和 *Limit visibility to groups*作为 *Sales / "
+"Administrator*或经理的可见性。"
+
+#: ../../studio/use_cases/models_fields.rst:117
+msgid "**Case scenario 5: change the tooltip of a field for all views.**"
+msgstr "**Case scenario 5: change the tooltip of a field for all views.**"
+
+#: ../../studio/use_cases/models_fields.rst:119
+msgid ""
+"Activate the :doc:`Developer mode <../../general/developer_mode/activate>` "
+"and open Studio."
+msgstr ""
+"激活 :doc:`Developer mode <../../general/developer_mode/activate>` 和打开工作室。"
+
+#: ../../studio/use_cases/models_fields.rst:122
+msgid ""
+"Select the necessary field and, under *Properties*, click on *More* to write"
+" your tooltip message on *Field Help*. The tooltip message is the "
+"explanatory message shown when the user hovers the field. The message here "
+"written is displayed on all views forms where the field is added."
+msgstr ""
+"选择必要的字段，并在*Properties* 下单击*More*在 *Field "
+"Help*上书写工具提示消息。工具提示消息是用户悬停字段时显示的解释性消息。此处写入的消息将显示在添加字段的所有视图窗体上。"
+
+#: ../../studio/use_cases/models_fields.rst:129
+msgid ""
+"The *Field Help* message can only be applied to *new* fields. If you would "
+"like to change/apply a tooltip for a specific field, use the *Help Tooltip* "
+"option under *Properties*."
+msgstr ""
+"*Field Help* 消息只能应用于 *new* 字段。如果要更改/应用特定字段的工具提示，请使用 *Properties*下的 *Help "
+"Tooltip* 选项。"
+
+#: ../../studio/use_cases/views.rst:3
+msgid "Advanced Use Cases: Views"
+msgstr "高级用例：视图"
+
+#: ../../studio/use_cases/views.rst:5
+msgid ""
+"**Case scenario 1: in Sales, show orders in a Kanban View instead of a List "
+"View.**"
+msgstr ""
+"**Case scenario 1: in Sales, show orders in a Kanban View instead of a List "
+"View.**"
+
+#: ../../studio/use_cases/views.rst:7
+msgid ""
+"From the Sales page, access Studio and, under *Views*, set the *Kanban* "
+"option as the default one."
+msgstr "在销售页中，访问 Studio，并在 *Views*下将*Kanban* 选项设置为默认选项。"
+
+#: ../../studio/use_cases/views.rst:14
+msgid ""
+"**Case scenario 2: allow for the list of leads to be edited inline without "
+"having to switch to the form view.**"
+msgstr ""
+"**Case scenario 2: allow for the list of leads to be edited inline without "
+"having to switch to the form view.**"
+
+#: ../../studio/use_cases/views.rst:19
+msgid ""
+"On the *List View*, under *View* > *Editable*, choose between *New record on"
+" top* or *New record at the bottom*. This way, besides defining the order in"
+" which new records are displayed in the view, you are able to edit them."
+msgstr ""
+"在*List View*下 *View*> *Editable*，在 *New record on top*或 *New record at the "
+"bottom*之间进行选择。这样，除了定义新记录的显示顺序外，您还可以编辑它们。"
+
+#: ../../studio/use_cases/views.rst:21
+msgid ""
+"If the field is left blank, no editing is possible and records are shown "
+"based on your column preferences on the lead's page (front-end)."
+msgstr "如果该字段留空，则无法进行编辑，并且根据潜在顾客页面上的列首选项（前端）显示记录。"

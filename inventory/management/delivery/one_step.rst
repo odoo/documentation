@@ -1,67 +1,55 @@
-======================================================
-How to process delivery orders in one step (shipping)?
-======================================================
+==============================================
+Process Delivery Orders in one Step (Shipping)
+==============================================
 
-Overview
-========
+There is no configuration needed to deliver in one step. The default
+outgoing shipments are configured to be directly delivered from the
+stock to the customers.
 
-When an order goes to the shipping department for final delivery, Odoo
-is set up by default to utilize a one-step operation: once all goods are
-available, they are able to be shipped in a single delivery order.
+However, if advanced routes have been activated and you set another
+shipping configuration on your warehouse, you can set it back to the
+one-step delivery configuration. Go to :menuselection:`Inventory --> Configuration --> Warehouses`
+and edit the warehouse in question.
 
-Configuration
-=============
+Then, choose *Deliver goods directly* as your *Outgoing Shipments*
+strategy.
 
-There is no configuration needed. The default outgoing shipments are
-configured to be directly delivered from the stock.
-
-However, if **advance routes** is activated and you set another shipping
-configuration on your warehouse, you can set it back to the one-step
-delivery configuration. Go to :menuselection:`Configuration --> Warehouses` 
-and edit the concerned warehouse.
-
-Set the outgoing shippings the option to **Ship directly from stock
-(Ship Only)**
-
-.. image:: media/one_step01.png
-   :align: center
+.. image:: media/one_step_01.png
+    :align: center
 
 Create a Sales Order
 ====================
 
-Create a sales order (From quotation to sales order) with some products
-to deliver.
+In the *Sales* application, create a quotation with some storable
+products to deliver and confirm it.
 
-Notice that we now see ``1`` delivery associated with this sales order
-in the **stat button** above the sales order.
+Notice that we now see 1 delivery associated with this *sales order*
+in the stat button above the sales order. If you click on the 1 Delivery
+stat button, you should now see your delivery order.
 
-.. image:: media/one_step03.png
-   :align: center
-
-If you click on the **1 Delivery** stat button, you should now see your
-picking.
+.. image:: media/one_step_02.png
+    :align: center
 
 Process a Delivery
 ==================
 
-Go to **Inventory** and click on the **# TO DO** link under the
-**Delivery Orders** kanban card.
+You can also find the *delivery order* directly from the *Inventory*
+application. In the dashboard, you can click the *1 TO PROCESS* button
+under the Delivery Orders Kanban card.
 
-.. image:: media/one_step02.png
-   :align: center
+.. image:: media/one_step_03.png
+    :align: center
 
-Click on the picking that you want to process.
+Enter the picking that you want to process. You will be able to click on
+*Validate* to complete the move if you have products in stock.
 
-Click on **Validate** to complete the move from **WH/Output** to the
-**customer**.
+.. image:: media/one_step_04.png
+    :align: center
 
-This has completed the **Shipping Step** and the WH/OUT should now show
-**Done** in the status column at the top of the page, which means the
-product has been shipped to the customer.
+Once you *Validate* the delivery order, the products leave your
+*WH/Stock location* and are moved to the *Customer location*. You
+can easily see that the delivery took place thanks to the status of the
+document which is now *Done*.
 
-
-.. todo::
-    Ajouter un lien vers ces pages quand elles existeront
-    -  Process Overview: From sales orders to delivery orders
-
-    -  Process Overview: From purchase orders to receptions
+.. image:: media/one_step_05.png
+    :align: center

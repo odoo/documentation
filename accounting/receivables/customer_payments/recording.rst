@@ -1,6 +1,6 @@
-================================================
-What are the different ways to record a payment?
-================================================
+==================================
+Different ways to record a payment
+==================================
 
 In Odoo, a payment can either be linked directly to an invoice or be a
 stand alone record for use on a later date:
@@ -29,11 +29,10 @@ the payment. From there you can choose to open the journal entry or
 reconcile the payment.
 
 .. note::
-
-	If you unreconcile a payment, it is still registered in your books but not
-	linked to the specific invoice any longer. If you unreconcile a payment in a
-	different currency, Odoo will create a journal entry to reverse the Currency
-	Exchange Loss/Gain posted at the time of reconciliation.
+   If you unreconcile a payment, it is still registered in your books but not
+   linked to the specific invoice any longer. If you unreconcile a payment in a
+   different currency, Odoo will create a journal entry to reverse the Currency
+   Exchange Loss/Gain posted at the time of reconciliation.
 
 Payments not tied to an invoice
 ===============================
@@ -114,17 +113,14 @@ payments.
   :align: center
 
 .. note::
-
-	When making an internal transfer from one bank account to another, select
-	the bank you want to apply the transfer from in the dashboard, and in the
-	register payments screen, you select the transfer to account. Do not go
-	through this process again in the other bank account or else you will end up
-	with two journal entries for the same transaction.
+   When making an internal transfer from one bank account to another, select
+   the bank you want to apply the transfer from in the dashboard, and in the
+   register payments screen, you select the transfer to account. Do not go
+   through this process again in the other bank account or else you will end up
+   with two journal entries for the same transaction.
 
 
 .. seealso::
-
-	* :doc:`credit_cards`
-	* :doc:`../../bank/feeds/paypal`
-	* :doc:`check`
-	* :doc:`followup`
+   - :doc:`online_payment`
+   - :doc:`check`
+   - :doc:`followup`

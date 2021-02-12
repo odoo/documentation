@@ -1,4 +1,4 @@
-:banner: banners/project.jpg
+:banner: banners/project.png
 
 =======
 Project
@@ -7,8 +7,5 @@ Project
 .. toctree::
    :titlesonly:
 
-   project/overview
-   project/configuration
+   project/tasks
    project/planning
-   project/advanced
-   project/application

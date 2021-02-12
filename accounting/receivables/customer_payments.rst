@@ -6,7 +6,8 @@ Customer Payments
    :titlesonly:
 
    customer_payments/recording
-   customer_payments/credit_cards
+   customer_payments/online_payment
    customer_payments/check
-   customer_payments/payment_sepa
+   customer_payments/batch
+   customer_payments/batch_sdd
    customer_payments/followup

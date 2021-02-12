@@ -1,5 +1,5 @@
 ==================================================
-How to do Search Engine Optimisation in Odoo (SEO)
+How to do Search Engine Optimisation (SEO) in Odoo
 ==================================================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
@@ -61,15 +61,15 @@ modules to help you build your website content:
 
 - **Odoo Slides**: publish all your Powerpoint or PDF presentations.
   Their content is automatically indexed on the web page. Example:
-  `https://www.odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`__
+  `odoo.com/slides/public-channel-1 <https://www.odoo.com/slides/public-channel-1>`_
 
 - **Odoo Forum**: let your community create contents for you. Example:
-  `https://odoo.com/forum/1 <https://odoo.com/forum/1>`__
+  `odoo.com/forum/1 <https://odoo.com/forum/1>`_
   (accounts for 30% of Odoo.com landing pages)
 
 - **Odoo Mailing List Archive**: publish mailing list archives on your
   website. Example:
-  `https://www.odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`__
+  `odoo.com/groups/community-59 <https://www.odoo.com/groups/community-59>`_
   (1000 pages created per month)
 
 .. note::
@@ -123,14 +123,14 @@ Twitter Scroller
 ----------------
 
 Display the Twitter feeds with customer satifaction on your website.
-THis will increase the number of tweets and shares.
+This will increase the number of tweets and shares.
 
 Test Your Website
 =================
 
 You can compare how your website rank, in terms of SEO, against Odoo
 using WooRank free services:
-`https://www.woorank.com <https://www.woorank.com>`__
+`woorank.com <https://www.woorank.com>`_
 
 URLs Handling
 =============
@@ -204,7 +204,7 @@ product name), you don't have to worry about updating all links:
 -  Odoo will automatically update all its links to the new URL.
 
 - If external websites still points to the old URL, a 301 redirect will
-  be done to route visitors to the new website.
+  be done to route visitors to the new address of the page.
 
 As an example, this URL:
 
@@ -216,8 +216,8 @@ Will automatically redirect to:
 
 In short, just change the title of a blog post or the name of a product,
 and the changes will apply automatically everywhere in your website. The
-old link still works for links coming from external websites, with a 301
-redirect to not lose the SEO link juice.
+old link still functions when used by external websites, via a 301 redirect,
+maintaining the SEO link juice.
 
 HTTPS
 -----
@@ -281,7 +281,7 @@ element pointing to the translated versions of that webpage;
 
 With this approach:
 
-- Search engines will redirect to th right language according to the 
+- Search engines will redirect to the right language according to the
   visitor language.
 
 - You do not get penalized by search engines if your page is not translated
@@ -293,8 +293,8 @@ Language Detection
 
 When a visitor lands for the first time on your website (e.g.
 yourwebsite.com/shop), they may automatically be redirected to a
-translated version according to their browser language preference: (e.g.
-yourwebsite.com/fr\_FR/shop). 
+translated version according to their browser language preference (e.g.
+yourwebsite.com/fr\_FR/shop).
 
 Next time, it keeps a cookie of the current language to 
 avoid any redirection.
@@ -480,10 +480,10 @@ page. As these files are shared across all pages, further clicks by the
 same visitor will not load any other Javascript resource.
 
 .. note::
-  If you work in debug mode, the CSS and Javascript are neither
-  concatenated, nor minified. Thus, it's much slower. But it allows you to
-  easily debug with the Chrome debugger as CSS and Javascript resources
-  are not transformed from their original versions.
+   If you work on :doc:`Developer mode <../../general/developer_mode/activate>`, the CSS and
+   Javascript are neither concatenated, nor minified. Thus, it's much slower. But it allows you to
+   easily debug with the Chrome debugger as CSS and Javascript resources are not transformed from
+   their original versions.
 
 CDN
 ---
@@ -548,7 +548,7 @@ Browser Caching
 Javascript, images and CSS resources have an URL that changes
 dynamically when their content change. As an example, all CSS files are
 loaded through this URL:
-`http://localhost:8069/web/content/457-0da1d9d/web.assets\_common.0.css <http://localhost:8069/web/content/457-0da1d9d/web.assets_common.0.css>`__.
+`localhost:8069/web/content/457-0da1d9d/web.assets\_common.0.css <http://localhost:8069/web/content/457-0da1d9d/web.assets_common.0.css>`__.
 The ``457-0da1d9d`` part of this URL will change if you modify the CSS of
 your website.
 
@@ -563,7 +563,10 @@ In addition to being fast, Odoo is also more scalable than traditional
 CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
 following link provides an analysis of the major open source CMS and
 eCommerce compared to Odoo when it comes to high query volumes:
-`*https://www.odoo.com/slides/slide/197* <https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`__
+`https://www.odoo.com/slides/slide/197
+<https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`_
+
+.. todo:: fix above link
 
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
@@ -635,8 +638,7 @@ It means that all robots are allowed to index your website
 and there is no other indexing rule than specified in the sitemap
 to be found at following address.
 
-You can customize the file *robots* in developer mode from 
-*Settings --> Technical --> User Interface --> Views*
-(exclude robots, exclude some pages, redirect to a custom Sitemap). 
-Make the Model Data of the view *Non Updatable* to not reset the
-file after system upgrades.
+You can customize the file *robots* in
+:doc:`Developer mode <../../general/developer_mode/activate>` from *Settings --> Technical -->
+User Interface --> Views* (exclude robots, exclude some pages, redirect to a custom Sitemap).
+Make the Model Data of the view *Non Updatable* to not reset the file after system upgrades.

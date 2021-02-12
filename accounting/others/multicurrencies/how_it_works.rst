@@ -1,6 +1,6 @@
-=====================================
-How is Odoo's multi-currency working?
-=====================================
+============================
+Odoo's multi-currency system
+============================
 
 Overview
 ========
@@ -74,8 +74,7 @@ are set !
    :align: center
 
 .. note::
-
-	Only the **active** currencies are updated
+   Only the **active** currencies are updated
 
 Configure your charts of account
 --------------------------------
@@ -136,8 +135,8 @@ the whole document.
 Payment Registrations
 ---------------------
 
-In the accounting application, go to **Sales > Payments**. Register the
-payment and set the currency.
+In the accounting application, go to :menuselection:`Sales --> Payments`. Register the payment and
+set the currency.
 
 .. image:: media/works12.png
    :align: center
@@ -165,7 +164,8 @@ journal entries. All the exchange rates differences are recorded in it.
 .. image:: media/works14.png
    :align: center
 
-.. seealso::
+.. include:: full_reconcile_warning.rst
 
-	* :doc:`invoices_payments`
-	* :doc:`exchange`
+.. seealso::
+   * :doc:`invoices_payments`
+   * :doc:`exchange`

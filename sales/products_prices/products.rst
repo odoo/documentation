@@ -6,4 +6,4 @@ Manage your products
    :titlesonly:
 
    products/import
-
+   products/variants

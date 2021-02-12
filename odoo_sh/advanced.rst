@@ -1,4 +1,4 @@
-:banner: banners/odoo-sh.jpg
+:banner: banners/odoo_sh.png
 
 =================
 Advanced
@@ -10,3 +10,4 @@ Advanced
    advanced/containers
    advanced/submodules
    advanced/upgrade_your_database
+   advanced/frequent_technical_questions

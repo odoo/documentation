@@ -1,4 +1,4 @@
-:banner: banners/getting_started.jpg
+:banner: banners/getting_started.png
 
 ========
 Licenses

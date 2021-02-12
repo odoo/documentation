@@ -1,135 +1,137 @@
-=========================================
-How to manage lots of identical products?
-=========================================
-
-Overview
-========
+=================================
+Manage lots of identical products
+=================================
 
 Lots are useful for products you receive in great quantity and for which
-a lot number can help in reportings, quality controls, or any other
-info. Lots will help identify a number of pieces having for instance a
+a lot number can help in reporting, quality controls, or any other info.
+Lots will help identify a number of pieces having, for instance, a
 production fault. It can be useful for a batch production of clothes or
 food.
 
-Odoo has the capacity to manage lots ensuring compliance with the
+Odoo has the capacity to manage lots, ensuring compliance with the
 traceability requirements imposed by the majority of industries.
 
 The double-entry management in Odoo enables you to run very advanced
 traceability.
 
-Setting up
+Setting Up
 ==========
 
-Application configuration
+Application Configuration
 -------------------------
 
-You need activate the tracking of lots in the settings. In the **Inventory**
-application, go to :menuselection:`Configuration --> Settings`, 
-select **Track lots or serial numbers**
+First, you need to activate the tracking of lot numbers. To do so, go to
+:menuselection:`Inventory --> Configuration --> Settings` and tick *Lots & Serial
+Numbers*. Then, click on save.
 
-.. image:: media/lots01.png
-    :align: center
-
-In order to have an advanced management of the lots, you should also
-select **Manage several locations per warehouse**.
-
-.. image:: media/lots02.png
-    :align: center
-
-Then click on **Apply**.
-
-Operation types configuration
------------------------------
-
-You also need to set up how you will manage lots for each operations.
-In the **Inventory** application, go to 
-:menuselection:`Configuration --> Operation Types`.
-
-For each type (receipts, internal transfers, deliveries,...), you can
-set if you can create new lot numbers or only use existing lot numbers.
-
-.. image:: media/lots03.png
+.. image:: media/lots_01.png
     :align: center
 
 Product Configuration
 ---------------------
 
-Finally, you have to configure which products you want to track in lots.
+Now, you have to configure which products you want to track by serial
+numbers.
 
-Go into :menuselection:`Inventory Control --> Products`, and open the product of your
-choice. Click on **Edit**, and in the **Inventory** tab, select **Tracking by
-Lots**, then click on **Save**.
+Go to :menuselection:`Master Data --> Products` and open the product of your choice.
+There, click on *Edit* and select *Tracking by Lots* in the
+inventory tab.
 
-.. image:: media/lots04.png
+.. image:: media/lots_02.png
     :align: center
 
-Manage lots
+.. image:: media/lots_03.png
+    :align: center
+
+Manage Lots
 ===========
 
-Transfers
----------
+Receipts
+--------
 
-In order to process a transfer of a product tracked by lot, you have to
-input the lot number(s).
+In order to receive a product tracked by lots, you have to specify its
+lot numbers. You have several ways of doing so:
 
-Click on the lot icon :
+1. Manually assign the different lot numbers
 
-.. image:: media/lots05.png
+2. Copy/paste lot numbers from an Excel file
+
+First, you need to open the detailed operations of your picking.
+
+.. image:: media/lots_04.png
     :align: center
 
-A window will pop-up. Click on **Add an item** and fill in the lot
-number and the quantity.
+Manually assign the different lot numbers
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/lots06.png
+When opening the detailed operations, you can click on *Add a line*.
+Then, you will be able to fill the lot number in. Once done, you can
+click on *Add a line* again to register a new lot number.
+
+.. image:: media/lots_05.png
     :align: center
 
-Depending on your operation type configuration, you will be able to fill
-in new lot numbers, or only use existing ones.
+Copy/paste lot number from an Excel file
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. note::
-    In the scanner interface, you just have to scan the lot numbers.
+Once the spreadsheet containing the lot numbers you received from your
+supplier and copy the list. Then, you can paste them in the *Lot/Serial
+Number Name* column for Odoo to automatically create the necessary
+lines. After that, you will have to manually enter the number of
+products that are contained in each one of the lots.
 
-Inventory adjustment
---------------------
-
-Inventory of a product tracked by lot can be done in 2 ways:
-
--  Classic inventory by products
-
--  Inventory of a lot
-
-When doing a classic inventory, there is a **Serial Number** column. If the
-product has already been assigned with a number, it is already
-pre-filled.
-
-Click on **Add an item** if the product has not been inventoried yet. You
-can easily create lots, just type in a new lot number in the column.
-
-.. image:: media/lots07.png
+.. image:: media/lots_06.png
     :align: center
 
-You can also just do the inventory of a lot. In this case, you will have
-to fill in the **Lot number**. You can also create a new lot from here. Just
-type in the number, a window will pop out to link the number to a
-product.
+.. image:: media/lots_05.png
+    :align: center
 
-.. image:: media/lots08.png
+.. image:: media/lots_07.png
+    :align: center
+
+Operation Types
+---------------
+
+Of course, you also have the possibility to define how you will manage
+lots for each operation type. To do so, open the *Inventory* app and
+go to :menuselection:`Configuration --> Operation Types`.
+
+For each type (receipts, internal transfers, deliveries, …), you can
+decide if you allow to create new lot numbers or only use existing ones.
+By default, the creation of new lots is only allowed at product
+reception, and using existing lot numbers isn’t allowed in this
+operation. If you have inter-warehouse transfers and track products by
+lots, it can be useful to allow using existing lot numbers in receipts
+too.
+
+.. image:: media/lots_08.png
     :align: center
 
 Lots traceability
 =================
 
-You can check the lot traceability from 
-:menuselection:`Inventory --> Inventory Control --> Serial Numbers/Lots`
+The lot number given to the products allows you to keep track of where
+they were received, put in stock, to whom they were sold and where they
+were shipped to.
 
-.. image:: media/lots09.png
+To track an item, open the *Inventory* module and, in :menuselection:`Master Data -->
+Lots/Serial Numbers`, click on the lot number corresponding to your
+search.
+
+.. image:: media/lots_09.png
     :align: center
 
-You can have more details by clicking on the **Traceability** button :
+When you open the *Traceability* information, you see in which
+documents the lot number has been used.
 
-.. image:: media/lots10.png
+.. image:: media/lots_10.png
     :align: center
 
-.. seealso::
-    * :doc:`differences`
-    * :doc:`serial_numbers`
+Now, if you want to locate the lot number, you can do so by clicking on
+the *Location* stat button.
+
+.. image:: media/lots_11.png
+    :align: center
+
+.. image:: media/lots_12.png
+    :align: center

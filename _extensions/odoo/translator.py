@@ -2,19 +2,12 @@
 import os.path
 import posixpath
 import re
-import urllib
 
 from docutils import nodes
-from sphinx import addnodes, util
+from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
 
-from . import pycompat
-
-try:
-    from urllib import url2pathname
-except ImportError:
-    # P3
-    from urllib.request import url2pathname
+from urllib.request import url2pathname
 
 
 def _parents(node):
@@ -39,14 +32,20 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     html_subtitle = 'html_subtitle'
 
     # <meta> tags
-    meta = [
-        '<meta http-equiv="X-UA-Compatible" content="IE=edge">',
-        '<meta name="viewport" content="width=device-width, initial-scale=1">'
-    ]
 
     def __init__(self, builder, document):
+        # order of parameter swapped between Sphinx 1.x and 2.x, check if
+        # we're running 1.x and swap back
+        if not isinstance(builder, builders.Builder):
+            builder, document = document, builder
+
         super(BootstrapTranslator, self).__init__(document)
         self.builder = builder
+        self.meta = [
+            '', '',
+            '\n    <meta http-equiv="X-UA-Compatible" content="IE=edge">',
+            '\n    <meta name="viewport" content="width=device-width, initial-scale=1">'
+        ]
         self.body = []
         self.fragment = self.body
         self.html_body = self.body
@@ -58,6 +57,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.context = []
         self.section_level = 0
 
+        self.config = builder.config
         self.highlightlang = self.highlightlang_base = self.builder.config.highlight_language
         self.highlightopts = getattr(builder.config, 'highlight_options', {})
 
@@ -67,7 +67,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
         self.param_separator = ','
 
     def encode(self, text):
-        return pycompat.to_text(text).translate({
+        return text.translate({
             ord('&'): u'&amp;',
             ord('<'): u'&lt;',
             ord('"'): u'&quot;',
@@ -75,8 +75,11 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             0xa0: u'&nbsp;'
         })
 
+    def add_meta(self, meta):
+        self.meta.append('\n    ' + meta)
+
     def starttag(self, node, tagname, **attributes):
-        tagname = pycompat.to_text(tagname).lower()
+        tagname = tagname.lower()
 
         # extract generic attributes
         attrs = {name.lower(): value for name, value in attributes.items()}
@@ -111,7 +114,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     # only "space characters" SPACE, CHARACTER TABULATION, LINE FEED,
     # FORM FEED and CARRIAGE RETURN should be collapsed, not al White_Space
     def attval(self, value, whitespace=re.compile(u'[ \t\n\f\r]')):
-        return self.encode(whitespace.sub(u' ', pycompat.to_text(value)))
+        return self.encode(whitespace.sub(u' ', str(value)))
 
     def astext(self):
         return u''.join(self.body)
@@ -129,6 +132,14 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
     def visit_document(self, node):
         self.first_title = True
     def depart_document(self, node):
+        pass
+
+    def visit_meta(self, node):
+        if node.hasattr('lang'):
+            node['xml:lang'] = node['lang']
+        meta = self.starttag(node, 'meta', **node.non_default_attributes())
+        self.add_meta(meta)
+    def depart_meta(self, node):
         pass
 
     def visit_section(self, node):
@@ -377,7 +388,11 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
                     "Unsupported alignment value \"%s\"" % node['align'],
                     location=doc
                 )
-        # todo: explicit width/height/scale?
+        attrs['style'] = '; '.join(
+            '%s:%s' % (name, node[name] + ('px' if re.match(r'^[0-9]+$', node[name]) else ''))
+            for name in ['width', 'height']
+            if name in node
+        )
         self.body.append(self.starttag(node, 'img', **attrs))
     def depart_image(self, node): pass
     def visit_figure(self, node):
@@ -428,7 +443,12 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             tagname = 'th'
         else:
             tagname = 'td'
-        self.body.append(self.starttag(node, tagname))
+        attrs = {}
+        if 'morerows' in node:
+            attrs['rowspan'] = node['morerows']+1
+        if 'morecols' in node:
+            attrs['colspan'] = node['morecols']+1
+        self.body.append(self.starttag(node, tagname, **attrs))
         self.context.append(tagname)
     def depart_entry(self, node):
         self.body.append(u'</{}>'.format(self.context.pop()))
@@ -643,7 +663,7 @@ class BootstrapTranslator(nodes.NodeVisitor, object):
             self.body.append(title if title else util.nodes.clean_astext(env.titles[ref]))
             self.body.append(u'</h2>')
 
-            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in toc[0]['entries'])
+            entries = [(title, ref)] if not toc else ((e[0], e[1]) for e in list(toc)[0]['entries'])
             for subtitle, subref in entries:
                 baseuri = self.builder.get_target_uri(node['parent'])
 

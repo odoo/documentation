@@ -1,4 +1,4 @@
-:banner: banners/odoo-sh.jpg
+:banner: banners/odoo_sh.png
 
 .. _odoosh-advanced-submodules:
 
@@ -37,6 +37,10 @@ Adding a submodule
 With Odoo.sh (simple)
 ---------------------
 
+.. warning::
+   For now it is not possible to add **private** repositories with this method. You can nevertheless
+   do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
+
 On Odoo.sh, in the branches view of your project, choose the branch in which you want to add a submodule.
 
 In the upper right corner, click on the *Submodule* button, and then on *Run*.
@@ -57,9 +61,6 @@ On Github, you can get the repository URL with the *Clone or download* button of
 
 .. image:: ./media/advanced-submodules-github-sshurl.png
   :align: center
-
-For now it is not possible to add **private** repositories with this method.
-You can nevertheless do so :ref:`with Git <odoosh-advanced-submodules-withgit>`.
 
 .. _odoosh-advanced-submodules-withgit:
 
@@ -101,7 +102,7 @@ You can read the `git-scm.com documentation <https://git-scm.com/book/en/v2/Git-
 for more details about the Git submodules.
 For instance, if you would like to update your submodules to have their latest revision,
 you can follow the chapter
-`Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes>`_.
+`Pulling in Upstream changes <https://git-scm.com/book/en/v2/Git-Tools-Submodules#_pulling_in_upstream_changes_from_the_submodule_remote>`_.
 
 Ignore modules
 ==============

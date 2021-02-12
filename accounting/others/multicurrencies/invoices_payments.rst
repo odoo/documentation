@@ -1,6 +1,6 @@
-========================================================
-How to manage invoices & payment in multiple currencies?
-========================================================
+==================================================
+Manage invoices and payment in multiple currencies
+==================================================
 
 Overview
 ========
@@ -114,7 +114,8 @@ Difference** journal entries. All the exchange rates differences are recorded in
 .. image:: media/invoice09.png
    :align: center
 
+.. include:: full_reconcile_warning.rst
+
 .. seealso::
-	
-	* :doc:`how_it_works`
-	* :doc:`exchange`
+   * :doc:`how_it_works`
+   * :doc:`exchange`

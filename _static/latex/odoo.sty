@@ -82,7 +82,7 @@
 \renewcommand{\footrulewidth}{0.1pt}
 
 \renewcommand{\maketitle}{%
-  \noindent\rule{\textwidth}{1pt}\par
+  \vspace*{-2.5cm}
   \begin{flushright}
     \sphinxlogo
     \py@HeaderFamily
@@ -94,6 +94,21 @@
   %\gdef\@thanks{}\gdef\@author{}\gdef\@title{}
 }
 
+
+% For sphinx 1.8.3+, the command is \sphinxmaketitle and the
+% layout is slightly different on the titlepage
+\providecommand\sphinxmaketitle{}
+\renewcommand{\sphinxmaketitle}{%
+  \vspace*{-2.5cm}
+  \begin{flushright}
+    \sphinxlogo
+    \py@HeaderFamily
+    {\hspace{-0.5cm} \huge \@title }\par
+  \end{flushright}
+  \@thanks
+  \setcounter{footnote}{0}
+  \let\thanks\relax\let\maketitle\relax
+}
 
 \newcommand{\makeodootitleold}{%
   \begin{titlepage}

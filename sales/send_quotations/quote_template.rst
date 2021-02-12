@@ -2,92 +2,96 @@
 Use quotation templates
 =======================
 
-If you often sell the same products or services, you can save a lot of
-time by creating custom quotation templates. By using a template you can
-send a complete quotation in no time.
+By creating custom quotation templates, you will save a lot of time. Indeed, with the use of
+templates, you will be able to send complete quotations at a fast pace.
 
 Configuration
 =============
 
-For this feature to work, go to :menuselection:`Sales --> Configuration
---> Settings` and activate *Quotations Templates*.
+To enable this feature, go to :menuselection:`Sales --> Configuration --> Settings` and activate
+**Quotation Templates**.
 
-.. image:: media/quote_template01.png
-  :align: center
+.. image:: media/quotations_templates_1.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to enable quotation templates on Odoo Sales?
+
+For even more convenience, it is also recommended to add the **Quotation Builder** feature which
+will help you design your quotation templates very easily. This option will automatically install
+the Odoo Website App.
+
+.. image:: media/quotations_templates_2.png
+   :align: center
+   :class: img-thumbnail
+   :alt: How to enable quotation builder on Odoo Sales?
 
 Create your first template
 ==========================
 
-You will find the templates menu under :menuselection:`Sales -->
-Configuration`.
+Quotation templates are under :menuselection:`Sales --> Configuration`.
 
-You can then create or edit an existing one. Once named, you will be
-able to select the product(s) and their quantity as well as the
-expiration time for the quotation.
+You can create a new template or edit an existing one. Once named, you will be able to select
+products and quantities as well as the expiration time of the quotation.
 
-.. image:: media/quote_template02.png
-  :align: center
-
-On each template, you can also specify discounts if the option is
-activated in the *Sales* settings. The base price is set in the
-product configuration and can be alterated by customer pricelists.
-
-.. TODO (TO LINK DOC LATER WHEN DONE based on this https://www.odoo.com/documentation/user/11.0/sales/products_prices/prices/pricing.html
-
-Edit your template
-==================
-
-You can edit the customer interface of the template that they see to
-accept or pay the quotation. This lets you describe your company,
-services and products. When you click on *Edit Template* you will be
-brought to the quotation editor.
-
-.. image:: media/quote_template03.png
-  :align: center
-
-.. image:: media/quote_template04.png
-  :align: center
-
-This lets you edit the description content thanks to drag & drop of
-building blocks. To describe your products add a content block in the
-zone dedicated to each product.
-
-.. image:: media/quote_template05.png
-  :align: center
+.. image:: media/quotations_templates_3.png
+   :align: center
+   :class: img-thumbnail
+   :alt: Create a new quotation template on Odoo Sales
 
 .. note::
-  The description set for the products will be used in all
-  quotations templates containing those products.
+   On each template, you can also specify discounts if the option is activated in the **Sales**
+   settings.
+
+Design your template
+====================
+
+You will have the possibility to design your template and edit the customer interface in order
+to manage what clients will see before accepting and paying the quotation. For example, you will
+be able to describe your company, your services and your products. To do so, you can click on
+**Edit** and you will be brought to the quotation builder.
+
+.. image:: media/quotations_templates_4.png
+   :align: center
+   :class: img-thumbnail
+   :alt: Design your quotation template on Odoo Sales
+
+You can easily edit the content of your template by dragging & dropping different building blocks
+to organize your quotation. For example, you can add a content block to describe your products.
+
+.. image:: media/quotations_templates_5.png
+   :align: center
+   :class: img-thumbnail
+   :alt: Drag & drop building blocks to create your quotation template on Odoo Sales
 
 Use a quotation template
 ========================
 
-When creating a quotation, you can select a template.
+When creating a quotation, you can choose a specific template.
 
-.. image:: media/quote_template06.png
-  :align: center
-
-Each product in that template will be added to your quotation.
+.. image:: media/quotations_templates_6.png
+   :align: center
+   :class: img-thumbnail
+   :alt: Select a specific template on Odoo Sales
 
 .. tip::
-  You can select a template to be suggested by default in the
-  *Sales* settings.
+   You can select any template of your choice and suggest it as the default template in
+   the **Sales** settings.
 
 Confirm the quotation
 =====================
 
-Templates also ease the confirmation process for customers with a
-digital signature or online payment. You can select that in the template
-itself.
+Templates facilitate the confirmation process by allowing customers to sign electronically or to
+pay online. You can activate these two options directly in the quotation template itself.
 
-.. image:: media/quote_template07.png
-  :align: center
+.. image:: media/quotations_templates_7.png
+   :align: center
+   :class: img-thumbnail
+   :alt: Allow your customers to sign electronically or to pay online on Odoo Sales
 
-Every quotation will now have this setting added to it.
+.. note::
+   Every quotation will now have this setting. Of course you can always change it and make it
+   specific for each quotation.
 
-Of course you can still change it and make it specific for each
-quotation.
-
-.. todo  seealso
-..    `*https://docs.google.com/document/d/1OkC9MVvuDvzz2b9gZjfzMPzep7qdbOyZZxE0ZZj2K7E/edit* <https://docs.google.com/document/d/1OkC9MVvuDvzz2b9gZjfzMPzep7qdbOyZZxE0ZZj2K7E/edit>`__..
-..    `*https://docs.google.com/document/d/1LZC5C8dZY2gvP6QHx2w5BlakIxgcHIP6GeEuBBfsRNc/edit* <https://docs.google.com/document/d/1LZC5C8dZY2gvP6QHx2w5BlakIxgcHIP6GeEuBBfsRNc/edit>`__
+.. seealso::
+   - :doc:`get_signature_to_validate`
+   - :doc:`get_paid_to_validate`
