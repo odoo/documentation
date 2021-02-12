@@ -1,14 +1,14 @@
 :banner: banners/seo.png
 
 =======
-ওয়েবসাইট
+Website
 =======
 
 .. toctree::
    :titlesonly:
 
-   ওয়েবসাইট/প্রকাশ
-   ওয়েবসাইট/অনুকূলিতকরণ
+   website/publish
+   website/optimize
    
 
 
