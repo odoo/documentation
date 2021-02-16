@@ -1,3 +1,4 @@
+@import "scss/_sphinx_basic";
 @import "scss/_variables";
 @import "scss/bootstrap_overridden";
 @import "scss/bootstrap_scss/bootstrap";
@@ -167,7 +168,7 @@ dt {
 // TODO EDI this makes permalinks only visible on hover. Please re-write and sort
 
 a.headerlink {
-    visibility: hidden;
+    visibility: hidden !important;
     &:after {
         @include inline-icomoon($i-link, 0 1rem 0 0);
         visibility: hidden;
@@ -195,14 +196,6 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             left: $o-side-nav-width;
             width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
             padding: 3rem;
-        }
-
-        h1, h2{
-            font-size: 24px;
-            font-weight: $fw_semibold;
-        }
-        h1 {
-            color: $secondary;
         }
 
         &.index, &.doc-toc, &.has_code_col {
@@ -379,23 +372,24 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             }
 
             h1 {
+                color: $o-violet-dark;
                 margin-bottom: 2rem;
                 max-width: calc(100% - 120px);
             }
 
-            h2 {
+           h2 {
                 color: $gray-darker;
                 padding-bottom: .5rem;
                 border-bottom: 1px solid $gray-light;
-                margin-bottom: 2rem;
-                margin-top: 2rem;
+                 /* margin-bottom: 2rem;
+                margin-top: 2rem; */
             }
 
-            h3 {
+            /* h3 {
                 font-size: 20px;
                 font-weight: $fw_regular;
                 color: $gray-darker;
-            }
+            } */
 
             .img-fluid {
                 @include box-shadow(0 3px 6px rgba(0, 0, 0, .16));
@@ -497,7 +491,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 color: darken($brand-warning, 35%);
 
                 > .alert-title, > h3 {
-                    color: $warning;
+                    color: $brand-warning;
                 }
 
                 > .alert-title:before, > h3:before {
@@ -515,7 +509,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 }
 
                 > .alert-title:before, > h3:before {
-                    content: '#{$i-warning}';
+                    content: '#{$i-danger}';
                 }
             }
 
@@ -549,7 +543,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 }
 
                 > .alert-title:before, > h3:before {
-                    content: '#{$i-overview}';
+                    content: '#{$i-view-more}';
                 }
             }
         }
@@ -572,20 +566,12 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             height: calc(100% - #{$o-header-height});
             padding: 3rem 3rem 3rem 1rem;
             font-size: .9rem;
-
-            /* &.affix {
-                z-index            : 2;
-                position           : fixed;
-                backface-visibility: hidden;
-
-                // @media (max-width:$screen-md-min) {
-                //     display: none;
-                // }
-            } */
         }
+
         .o_page_toc_nav > ul {
             padding-left: 0;
         }
+
         h3 {
             text-transform: uppercase;
             font-weight: $fw_bold;
@@ -616,7 +602,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
     }
 }
 
-.highlight {
+/* .highlight {
   background: $doc_code-bg;
   color: $gray-light;
   border-radius: $border-radius;
@@ -626,7 +612,8 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
   pre {
     margin-bottom:  0;
   }
-}
+} */
+/*
 
 pre {
     font-size: 0.8em;
@@ -640,6 +627,7 @@ pre {
     margin: 0;
     margin-bottom: ($line-height-base / 2)rem;
 }
+ */
 
 //------------------------------------------------------------------------------
 // Footer
