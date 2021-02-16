@@ -128,6 +128,10 @@
             relatedHeadingRef.setAttribute('data-bs-target', `#${tocEntryList.id}`);
             relatedHeadingRef.setAttribute('data-bs-toggle', 'collapse');
         });
+        // TODO [ANV]
+        // current output: <a class="reference internal collapsed" href="#text" data-bs-target="#o_target_text" data-bs-toggle="collapse" aria-expanded="false">Text</a>
+        // desired output: <a class="reference internal" href="#text"><i class="i-chevron-right collapsed" data-bs-target="#o_target_text" data-bs-toggle="collapse" aria-expanded="false"></i> Text</a>
+
     };
 
 })();

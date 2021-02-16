@@ -1,22 +1,10 @@
 <div class="o_languages me-2">
-	{# <!-- TODO EDI <a> inside <option> is illegal
-	<select class="languages form-select">
-	    <a class="dropdown-toggle" href="#" data-toggle="dropdown">
-	        English
-	    </a>
-	    <ul class="dropdown-menu" role="menu">
-	            <li><a href="{{ url }}">English</a></li>
-	            <li><a href="{{ url }}">French</a></li>
-		</ul>
-		<option>{{ language }}</option> {# The current language #}
-		{% for alternate_language, language_code, url in alternate_languages %}
-			<option><a href="{{ url }}">{{ alternate_language }}</a></option>
-        {% endfor %}
-	</select> --> #}
-	<div>
-		<a>{{ language }}</a> {# The current language #}
-		{% for alternate_language, language_code, url in alternate_languages %}
-			<a href="{{ url }}">{{ alternate_language }}</a>
-		{% endfor %}
+	<div class="languages dropdown">
+        <button class="btn border dropdown-toggle" id="languages">{{ language }}</button>
+        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languages">
+            {% for alternate_language, language_code, url in alternate_languages %}
+            <li><a class="dropdown-item" href="{{ url }}">{{ alternate_language }}</a></li>
+            {% endfor %}
+        </ul>
 	</div>
 </div>

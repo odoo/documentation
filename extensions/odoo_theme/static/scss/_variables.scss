@@ -161,24 +161,9 @@ $fw_black:                                  900;
 // Colors
 //------------------------------------------------------------------------------
 
-$o-color-palettes: (
-    (
-        'o-color-1':                        #00a09d,
-        'o-color-2':                        #875a7b,
-        'o-color-3':                        #9ba6b0,
-        'o-color-4':                        #ffffff,
-        'o-color-5':                        #000000,
-
-        'o-cc1-text':                       '800',
-        'o-cc1-headings':                   '900',
-        'o-cc1-link':                       'o-color-2',
-
-        'footer':                           '900',
-    ),
-);
-
-$o-violet-dark:                             #875a7b;
-$o-violet-darker:                           #603c5e;
+$o-violet:                                  #875a7b;
+$o-violet-dark:                             #7A436B;
+$o-violet-darkest:                          #64305E;
 
 $o-inverse-lightest:                        #98a6b0;
 $o-inverse-light:                           #8b979f;
@@ -187,7 +172,7 @@ $o-inverse-dark:                            #5b7687;
 $o-inverse-darker:                          #485761;
 
 $color-alpha:                               #00A19B;
-$color-alpha-dark:                          #00615F;
+$color-alpha-dark:                          #00807D;
 $color-alpha-light:                         #26d1af;
 $color-alpha-lightest:                      #2aebc4;
 
@@ -222,10 +207,10 @@ $gray-darker:                               #282F33;
 $gray-darkest:                              shade-color($gray-darker, 30%);
 
 
-$primary:                                   #00A19B;
-$secondary:                                 #603c5e;
+$primary:                                   $color-alpha-dark;
+$secondary:                                 $o-violet-dark;
 
-$brand-primary :                            $o-violet-dark;
+$brand-primary :                            $o-violet;
 $brand-success :                            #50AF51;
 $brand-info:                                #4B9EB6;
 $brand-warning :                            #F0AD4E;
@@ -237,47 +222,7 @@ $doc_exercise:                              #938E94;
 $doc_code-bg:                               $gray-darker;
 $doc_lime:                                  #CDDC39;
 $doc_orange:                                #FF5722;
-$doc_cyan:                                  #00A19B;
-
-$o-theme-color-palettes: (
-    (
-        'default':                          #adb5bd, // 500
-
-        'violet-dark':                      $o-violet-dark,
-        'violet-darker':                    $o-violet-darker,
-
-        'inverse-lightest':                 $o-inverse-lightest,
-        'inverse-light':                    $o-inverse-light,
-        'inverse':                          $o-inverse,
-        'inverse-dark':                     $o-inverse-dark,
-        'inverse-darker':                   $o-inverse-darker,
-
-        'alpha':                            $color-alpha,
-        'alpha-dark':                       $color-alpha-dark,
-        'alpha-light':                      $color-alpha-light,
-        'alpha-lightest':                   $color-alpha-lightest,
-
-        'beta':                             $color-beta,
-        'beta-dark':                        $color-beta-dark,
-        'beta-light':                       $color-beta-light,
-        'beta-lightest':                    $color-beta-lightest,
-
-        'gamma':                            $color-gamma,
-        'gamma-dark':                       $color-gamma-dark,
-        'gamma-light':                      $color-gamma-light,
-        'gamma-lightest':                   $color-gamma-lightest,
-
-        'delta':                            $color-delta,
-        'delta-dark':                       $color-delta-dark,
-        'delta-light':                      $color-delta-light,
-        'delta-lightest':                   $color-delta-lightest,
-
-        'epsilon':                          $color-epsilon,
-        'epsilon-dark':                     $color-epsilon-dark,
-        'epsilon-light':                    $color-epsilon-light,
-        'epsilon-lightest':                 $color-epsilon-lightest,
-    ),
-);
+$doc_cyan:                                  $color-alpha;
 
 //------------------------------------------------------------------------------
 // Misc
@@ -303,73 +248,86 @@ $o-ease:                                    cubic-bezier(.55,0,.1,1);
 $icomoon-font-family: "icomoon" !default;
 $icomoon-font-path: "fonts" !default;
 
-$i-accountant: "\e900";
-$i-advanced: "\e901";
-$i-app_features: "\e902";
-$i-app-favorites: "\e903";
+$i-arrow-up: "\e948";
+$i-arrow-down: "\e945";
+$i-arrow-left: "\e946";
+$i-arrow-right: "\e947";
+$i-chevron-up: "\e94c";
+$i-chevron-down: "\e949";
+$i-chevron-left: "\e94a";
+$i-chevron-right: "\e94b";
+$i-link: "\e94f";
+$i-websites: "\e944";
+$i-sales: "\e953";
+$i-sales_2: "\e931";
+$i-marketing: "\e922";
 $i-apps_1: "\e904";
 $i-apps_2: "\e905";
+$i-app_features: "\e902";
+$i-app-favorites: "\e903";
 $i-basics: "\e906";
 $i-cart: "\e907";
-$i-certifications: "\e908";
-$i-check: "\e909";
-$i-collaborating: "\e90a";
-$i-compare: "\e90b";
-$i-contact: "\e90c";
+$i-shop: "\e937";
+$i-accountant: "\e900";
 $i-customer-reviews: "\e90d";
+$i-hr: "\e91c";
 $i-developer: "\e90e";
+$i-users: "\e93f";
 $i-doc-admin: "\e90f";
 $i-doc-apps: "\e910";
 $i-doc-contribute: "\e911";
 $i-doc-dev: "\e912";
 $i-doc-services: "\e913";
 $i-documentation: "\e914";
+$i-scaleup: "\e934";
+$i-knowledge: "\e920";
+$i-tutorial: "\e93e";
 $i-elearning_1: "\e915";
 $i-elearning_2: "\e916";
-$i-events: "\e917";
-$i-exercise: "\e918";
-$i-finances: "\e919";
-$i-forums: "\e91a";
-$i-github: "\e91b";
-$i-hr: "\e91c";
-$i-info: "\e91d";
 $i-install: "\e91e";
+$i-o-edu: "\e926";
+$i-certifications: "\e908";
+$i-events: "\e917";
+$i-showcase: "\e938";
 $i-jobs: "\e91f";
-$i-knowledge: "\e920";
-$i-lightbulb: "\e921";
-$i-marketing: "\e922";
+$i-finances: "\e919";
 $i-money-bag: "\e923";
 $i-money-plant: "\e924";
-$i-note: "\e925";
-$i-o-edu: "\e926";
 $i-o-help: "\e927";
 $i-o-logo: "\e928";
 $i-o-services: "\e929";
 $i-o-tour: "\e92a";
+$i-services: "\e936";
 $i-operations_1: "\e92b";
 $i-operations_2: "\e92c";
-$i-overview: "\e92d";
-$i-partners: "\e92e";
 $i-performance: "\e92f";
-$i-release: "\e930";
-$i-sales_2: "\e931";
-$i-sales_3: "\e932";
-$i-sales_1: "\e933";
-$i-scaleup: "\e934";
-$i-search: "\e935";
-$i-services: "\e936";
-$i-shop: "\e937";
-$i-showcase: "\e938";
-$i-support: "\e939";
-$i-themes: "\e93a";
 $i-time-management_2: "\e93b";
 $i-time-management: "\e93c";
+$i-advanced: "\e901";
+$i-search: "\e935";
+$i-overview: "\e92d";
+$i-view: "\e952";
+$i-view-more: "\e950";
+$i-view-next: "\e951";
+$i-partners: "\e92e";
+$i-contact: "\e90c";
+$i-forums: "\e91a";
+$i-github: "\e91b";
+$i-support: "\e939";
+$i-collaborating: "\e90a";
+$i-compare: "\e90b";
+$i-themes: "\e93a";
 $i-translate: "\e93d";
-$i-tutorial: "\e93e";
-$i-users: "\e93f";
+$i-release: "\e930";
 $i-v12: "\e940";
 $i-v13: "\e941";
 $i-v14: "\e942";
+$i-info: "\e91d";
 $i-warning: "\e943";
-$i-websites: "\e944";
+$i-danger: "\e94d";
+$i-note: "\e925";
+$i-exercise: "\e918";
+$i-lightbulb: "\e921";
+$i-check: "\e909";
+$i-edit: "\e932";
 
