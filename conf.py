@@ -147,7 +147,7 @@ redirects_file = '../redirects.txt'
 html_theme = 'odoo_theme'
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'odoo'
+# pygments_style = 'odoo'
 
 # Add any paths that contain custom themes here, relative to this directory.
 html_theme_path = ['extensions']

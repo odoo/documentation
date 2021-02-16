@@ -1,4 +1,4 @@
-from . import pygments_override
+# from . import pygments_override
 from . import translator
 
 import sphinx.builders.html
