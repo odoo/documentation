@@ -6,6 +6,7 @@ Localizations
    :titlesonly:
 
    localizations/argentina
+   localizations/australia
    localizations/chile
    localizations/colombia
    localizations/colombia_ES

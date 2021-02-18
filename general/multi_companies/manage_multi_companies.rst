@@ -40,8 +40,7 @@ Data such as Products, Contacts, and Equipment can be shared or set to be shown 
 company only. To do so, on their forms, choose between:
 
 - *A blank field*: the record is shared within all companies.
-- *Adding a company*: the record is visible to users logged in to that specific company and its
-  child companies.
+- *Adding a company*: the record is visible to users logged in to that specific company.
 
 .. image:: media/product_form_company.png
    :align: center
