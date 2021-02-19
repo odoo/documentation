@@ -75,7 +75,7 @@
 
         const _unflagAll = () => {
             this.pageToc.querySelectorAll('li,ul').forEach(element => {
-                element.classList.remove('active', 'show');
+                element.classList.remove('o_active_toc_entry', 'show');
             });
         };
 
@@ -116,6 +116,8 @@
     /**
      * Add the class `o_page_toc_title` on the first heading reference.
      */
-    const _flagFirstHeadingRef = () => this.headingRefs[0].classList.add('o_page_toc_title');
+    const _flagFirstHeadingRef = () => {
+        this.headingRefs[0].parentNode.classList.add('o_page_toc_title');
+    }
 
 })();
