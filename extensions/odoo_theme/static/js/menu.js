@@ -6,9 +6,31 @@
         // Allow to automatically collapse and expand TOC entries
         _prepareAccordion(this.navigationMenu);
 
+        // Allow to respectively highlight and expand the TOC entries and their related TOC
+        // entry list whose page is displayed.
+        _flagActiveTocEntriesAndLists();
+
         // Add a class with the name of the file to each corresponding menu item
         _flagMenuItemsWithFileName();
     });
+
+    /**
+     * Add the relevant classes on the TOC entries (and lists) whose page is displayed.
+     *
+     * TOC entries whose page is displayed (<li> elements) receive the `o_active_toc_entry` class
+     * and their related TOC entry list (<ul> elements) receive the `show` (Bootstrap) class.
+     */
+    const _flagActiveTocEntriesAndLists = () => {
+        this.navigationMenu.querySelectorAll('.current').forEach(element => {
+            if (element.tagName === 'LI') {
+                // Highlight all <li> in the active hierarchy
+                element.classList.add('o_active_toc_entry');
+            } else if (element.tagName === 'UL') {
+                // Expand all related <ul>
+                element.classList.add('show');
+            }
+        })
+    };
 
     /**
      * Add the name of the file as class of the corresponding menu item.

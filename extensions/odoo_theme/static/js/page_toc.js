@@ -12,23 +12,28 @@
                 return;
             }
 
-            // Allow to hide the TOC entry referring the title (<h1> heading)
-            _flagFirstHeadingRef();
-
             // Allow to automatically collapse and expand TOC entries
             _prepareAccordion(this.pageToc);
 
             // Allow to respectively highlight and expand the TOC entries and their related TOC
             // entry list whose section is focused.
             _flagActiveTocEntriesAndLists();
+
+            // Allow to hide the TOC entry referring the title (<h1> heading)
+            _flagFirstHeadingRef();
         }
     });
 
     /**
+     * Entirely hide the local tree of contents.
+     */
+    const _hidePageToc = () => this.pageToc.style.visibility = 'hidden';
+
+    /**
      * Add the relevant classes on the TOC entries (and lists) whose section is focused.
      *
-     * TOC entries whose section is focused (<li> elements) receive the `active` class and their
-     * related TOC entry list (<ul> elements) receive the `show` class.
+     * TOC entries whose section is focused (<li> elements) receive the `o_active_toc_entry` class
+     * and their related TOC entry list (<ul> elements) receive the `show` (Bootstrap) class.
      */
     const _flagActiveTocEntriesAndLists = () => {
 
@@ -78,10 +83,13 @@
             let tocEntry = headingRef.parentElement;
             while (tocEntry !== this.pageToc) {
                 if (tocEntry.tagName === 'LI') {
-                    tocEntry.classList.add('active'); // Highlight all <li> in the active hierarchy
+                    // Highlight all <li> in the active hierarchy
+                    tocEntry.classList.add('o_active_toc_entry');
+
+                    // Expand all related <ul>
                     const relatedTocEntryList = tocEntry.querySelector('ul');
                     if (relatedTocEntryList) {
-                        relatedTocEntryList.classList.add('show'); // Expand all related <ul>
+                        relatedTocEntryList.classList.add('show');
                     }
                 }
                 tocEntry = tocEntry.parentElement;
@@ -109,10 +117,5 @@
      * Add the class `o_page_toc_title` on the first heading reference.
      */
     const _flagFirstHeadingRef = () => this.headingRefs[0].classList.add('o_page_toc_title');
-
-    /**
-     * Entirely hide the local tree of contents.
-     */
-    const _hidePageToc = () => this.pageToc.style.visibility = 'hidden';
 
 })();

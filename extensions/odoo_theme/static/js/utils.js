@@ -1,3 +1,4 @@
+let tocEntryListId = 0;  // Used to generate IDs of toc entry lists for both the menu and page TOC
 /**
  * Update the provided TOC to allow collapsing its entries with Bootstrap's accordion.
  *
@@ -31,13 +32,10 @@ const _prepareAccordion = (tocElement) => {
     // Start at the second TOC entry list (<ul>) to avoid collapsing the entire TOC
     const tocRoot = tocElement.querySelector('ul');
     tocRoot.querySelectorAll('ul').forEach(tocEntryList => {
-        const relatedHeadingRef = tocEntryList.previousSibling; // The preceding <a> element
-        const temp = relatedHeadingRef.getAttribute('href').replace('#', '').replaceAll('.', '_dot_').replaceAll('/', '_slash_')
         // Modify the <ul> element
-        // tocEntryList.id = `o_target_${relatedHeadingRef.getAttribute('href').replace('#', '')}` TODO ANV
-        tocEntryList.id = `o_target_${temp}`
+        tocEntryList.id = `o_target_${tocEntryListId++}`
         tocEntryList.classList.add('collapse');
-        // Create and configure an <li> element
+        // Create and configure an <i> element
         const arrowButton = document.createElement('I');
         arrowButton.setAttribute('data-bs-target', `#${tocEntryList.id}`);
         arrowButton.setAttribute('data-bs-toggle', 'collapse');
@@ -46,7 +44,7 @@ const _prepareAccordion = (tocElement) => {
         const tocEntryWrapper = document.createElement('DIV');
         tocEntryWrapper.classList.add('o_toc_entry_wrapper');
         // Insert the <i> and <a> elements inside the <div> and prepend the <div> to the <ul>
-        tocEntryWrapper.append(arrowButton, relatedHeadingRef);
+        tocEntryWrapper.append(arrowButton, tocEntryList.previousSibling);
         tocEntryList.parentNode.insertBefore(tocEntryWrapper, tocEntryList);
     });
 };
