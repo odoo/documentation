@@ -10,7 +10,8 @@
 
             tabs.forEach(tab => {
                 tab.classList.add('tab-pane');
-            })
+            });
+
             function select(index) {
                 links.forEach(link => {
                     link.classList.remove('active');
