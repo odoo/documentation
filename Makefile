@@ -37,6 +37,9 @@ edi: LANGUAGES += en,fr,es
 edi: CURRENT_LANG += fr
 edi: clean html
 
+static: extensions/odoo_theme/static extensions/odoo_theme/static/style.css
+	cp -r extensions/odoo_theme/static/* _build/html/_static/
+
 html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/html
