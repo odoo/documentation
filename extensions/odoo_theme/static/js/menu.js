@@ -17,19 +17,29 @@
     /**
      * Add the relevant classes on the TOC entries (and lists) whose page is displayed.
      *
-     * TOC entries whose page is displayed (<li> elements) receive the `o_active_toc_entry` class
-     * and their related TOC entry list (<ul> elements) receive the `show` (Bootstrap) class.
+     * TOC entries (<li> elements) that are on the path of the displayed page receive the
+     * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
+     * the `show` (Bootstrap) class. The child TOC entry list of the deepest TOC entry also
+     * receives the `show` class.
      */
     const _flagActiveTocEntriesAndLists = () => {
+        let deepestTocEntry = undefined;
         this.navigationMenu.querySelectorAll('.current').forEach(element => {
-            if (element.tagName === 'LI') {
-                // Highlight all <li> in the active hierarchy
-                element.classList.add('o_active_toc_entry');
-            } else if (element.tagName === 'UL') {
+            if (element.tagName === 'UL') {
                 // Expand all related <ul>
                 element.classList.add('show');
+            } else if (element.tagName === 'LI') {
+                // Highlight all <li> in the active hierarchy
+                element.classList.add('o_active_toc_entry');
+                deepestTocEntry = element;
             }
         })
+        if (deepestTocEntry) {
+            const childTocEntryList = deepestTocEntry.querySelector('ul');
+            if (childTocEntryList) {
+                childTocEntryList.classList.add('show');
+            }
+        }
     };
 
     /**

@@ -39,9 +39,7 @@ class Monkey(object):
 def resolve(old_resolve, tree, docname, *args, **kwargs):
     resolved_toc = old_resolve(tree, docname, *args, **kwargs)
     if resolved_toc:
-        # Not sure set_class really does what we want.
         _toctree_add_empty_class(tree, resolved_toc, docname)
-        resolved_toc['classes'].append('testtesttest')
     return resolved_toc
 
 def _toctree_add_empty_class(tree, node, docname) -> None:
@@ -57,6 +55,7 @@ def _toctree_add_empty_class(tree, node, docname) -> None:
             toc_ref = get_reference(subnode, docname)
             if toc_ref and 'empty_page' in tree.env.metadata[toc_ref]:
                 subnode['classes'].append('o_empty_page')
+                subnode['refuri'] = '#'  # The link must not be clickable
 
 def get_reference(node, docname):
     ref = node['refuri'].replace('.html', '') # applications.html
