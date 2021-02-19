@@ -102,10 +102,10 @@
         });
         let timeoutId = undefined;
         document.addEventListener('scroll', () => {
+            clearTimeout(timeoutId); // For each scroll event, cancel the previous timeout callback
             timeoutId = setTimeout(() => {
                 clickedHeadingRef = undefined; // Go back to highlighting the heading ref in view
             }, 100);
-            clearTimeout(timeoutId); // For each scroll event, cancel the previous timeout callback
             _updateFlags();
         });
 
