@@ -115,25 +115,42 @@ header.o_main_header{
         }
 
         > .toctree-l1 {
-            > a:before {
+            &[class^="o_menu_"] > .o_toc_entry_wrapper > i:before {
                 @include inline-icomoon($i-doc-apps, 0 1rem 0 -30px);
             }
-            &.o_menu_applications > a:before{
+            &.o_menu_applications > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-apps}';
             }
-            &.o_menu_administration > a:before{
+            &.o_menu_administration > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-admin}';
             }
-            &.o_menu_developer > a:before{
+            &.o_menu_developer > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-dev}';
             }
-            &.o_menu_services > a:before{
+            &.o_menu_services > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-services}';
             }
-            &.o_menu_contributing > a:before{
+            &.o_menu_contributing > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-contribute}';
             }
 
+            .o_toc_entry_wrapper {
+                display: flex;
+                align-items: center;
+            }
+
+        }
+        > .toctree-l2 {
+            .o_toc_entry_wrapper {
+                > i[class^="i-"] {
+                    transition: rotate .3s;
+
+                    &[aria-expanded="true"]{
+                        transform: rotate(90deg);
+                    }
+
+                }
+            }
         }
 
     }
@@ -620,7 +637,7 @@ header.o_main_header{
                 }
             }
         }
-        .active > a{
+        .o_active_toc_entry > a {
             font-weight: $fw_bold;
         }
     }
