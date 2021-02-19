@@ -14,6 +14,7 @@ def setup(app):
     # If not, remove update_meta method
     app.connect('html-page-context', update_meta)
 
+    app.add_js_file('js/utils.js')  # Keep in first position
     app.add_js_file('js/layout.js')
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
