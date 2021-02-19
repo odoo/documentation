@@ -65,7 +65,7 @@ or download a PDF version of the document.
 Tickets
 =======
 
-When you submit a ticket through `Odoo Support <https://www.odoo.com/help>`,
+When you submit a ticket through `Odoo Support <https://www.odoo.com/help>`_,
 a ticket will be created. Here you can find all the tickets that you have opened,
 the conversations between you and our Agents, and the statuses and IDs (# Ref) of the tickets.
 
