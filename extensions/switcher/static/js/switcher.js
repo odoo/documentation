@@ -6,8 +6,11 @@
         document.querySelectorAll('.content-switcher').forEach(switcher => {
             const links = switcher.querySelectorAll('ul li');
             const linksArray = Array.from(links);
-            const tabs = switcher.querySelectorAll('.tabs > div');
+            const tabs = switcher.querySelectorAll('.tab-content > div');
 
+            tabs.forEach(tab => {
+                tab.classList.add('tab-pane');
+            })
             function select(index) {
                 links.forEach(link => {
                     link.classList.remove('active');

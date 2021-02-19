@@ -26,7 +26,7 @@ class SwitcherDirective(Directive):
     def run(self):
         self.assert_has_content()
 
-        body = nodes.compound('\n'.join(self.content), classes=['tabs'])
+        body = nodes.compound('\n'.join(self.content), classes=['tab-content'])
         self.state.nested_parse(self.content, self.content_offset, body)
 
         titles = []
@@ -39,9 +39,9 @@ class SwitcherDirective(Directive):
                 )
                 titles.append(' '.join(child['names']))
         tabs = nodes.bullet_list('', *[
-            nodes.list_item('', nodes.Text(title))
+            nodes.list_item('', nodes.Text(title), classes=['nav-link'])
             for title in titles
-        ])
+        ], classes=['nav nav-tabs'] )
         node = nodes.compound('', tabs, body, classes=['content-switcher'])
         return [node]
 
