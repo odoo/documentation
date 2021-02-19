@@ -4,10 +4,12 @@
     </div>
     <div class="col-8">
         <div class="dropdown">
-            <button class="btn border dropdown-toggle" id="versions">{{ version }}</button>
-            <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versions">
+            <button class="btn border dropdown-toggle" id="versions" data-bs-toggle="dropdown">
+                {{ version }} {# The current version #}
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="versions">
                 {% for alternate_version, url in alternate_versions %}
-                <li><a class="dropdown-item" href="{{ url }}">{{ alternate_version }}</a></li>
+                    <li><a class="dropdown-item" href="{{ url }}">{{ alternate_version }}</a></li>
                 {% endfor %}
             </ul>
         </div>

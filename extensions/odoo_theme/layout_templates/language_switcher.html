@@ -1,9 +1,11 @@
 <div class="o_languages me-2">
-	<div class="languages dropdown">
-        <button class="btn border dropdown-toggle" id="languages">{{ language }}</button>
+	<div class="dropdown">
+        <button class="btn border dropdown-toggle" id="languages" data-bs-toggle="dropdown">
+            {{ language }} {# The current language #}
+        </button>
         <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languages">
             {% for alternate_language, language_code, url in alternate_languages %}
-            <li><a class="dropdown-item" href="{{ url }}">{{ alternate_language }}</a></li>
+                <li><a class="dropdown-item" href="{{ url }}">{{ alternate_language }}</a></li>
             {% endfor %}
         </ul>
 	</div>
