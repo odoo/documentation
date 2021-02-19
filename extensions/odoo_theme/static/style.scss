@@ -155,43 +155,15 @@ header.o_main_header{
 // Main page content
 //------------------------------------------------------------------------------
 
-// TODO EDI this fixes the scroll height issue but surely needs to be re-written
-section {
-  padding-top: $o-header-height;
-  margin-top: -$o-header-height;
-}
-dt {
-  padding-top: $o-header-height;
-  margin-top: -$o-header-height;
-}
-
-// TODO EDI this makes permalinks only visible on hover. Please re-write and sort
-
-a.headerlink {
-    visibility: hidden !important;
-    &:after {
-        @include inline-icomoon($i-link, 0 1rem 0 0);
-        visibility: hidden;
-        color: $gray-light;
-        opacity: 0;
-        transition: .1s
-    }
-}
-
-h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
-    &:hover > a.headerlink:after{
-        visibility: visible;
-        opacity: 1;
-    }
-}
-
 #wrap {
     margin-top: $o-header-height;
     display: flex;
     justify-content: space-between;
-    main{
+
+    main {
         position: relative;
         padding-top: 3rem;
+
         @include media-breakpoint-up(lg) {
             left: $o-side-nav-width;
             width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
@@ -200,17 +172,19 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
 
         &.index, &.doc-toc, &.has_code_col {
             @include media-breakpoint-up(lg) {
-                width: calc(100vw - #{$o-side-nav-width});
+                width: calc(100vw - #{$o-side-nav-width} );
             }
         }
 
         // Homepage
 
-        &.index{
+        &.index {
+
             h2[class*="o_title_"] {
                 color: $o-violet-dark;
                 font-weight: $fw_bold;
                 margin-bottom: 1rem;
+
                 &:before {
                     @include inline-icomoon($i-o-services , 0 1rem 0 0);
                     display: block;
@@ -233,6 +207,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                     content: '#{$i-advanced}';
                 }
             }
+
             ul {
                 padding: 1rem;
                 > li {
@@ -246,6 +221,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 }
             }
         }
+
         &.doc-toc {
             .toctree-wrapper {
                 > ul {
@@ -275,6 +251,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 margin-bottom: 1rem;
             }
         }
+
         &.has_code_col {
 
             article.doc-body {
@@ -371,31 +348,78 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
                 }
             }
 
-            h1 {
-                color: $o-violet-dark;
-                margin-bottom: 2rem;
-                max-width: calc(100% - 120px);
+            dt {
+                padding-top: $o-header-height;
+                margin-top: -$o-header-height;
             }
 
-           h2 {
-                color: $gray-darker;
-                padding-bottom: .5rem;
-                border-bottom: 1px solid $gray-light;
-                 /* margin-bottom: 2rem;
-                margin-top: 2rem; */
-            }
+            section {
+            // This fixes the scroll position
+                padding-top: $o-header-height;
+                margin-top: -$o-header-height;
 
-            /* h3 {
-                font-size: 20px;
-                font-weight: $fw_regular;
-                color: $gray-darker;
-            } */
+                > h1 {
+                    color: $o-violet-dark;
+                    font-weight: $fw_semibold;
+                    max-width: calc(100% - 120px);
+                }
+
+                > h2 {
+                    color: $gray-darker;
+                    padding-bottom: .5rem;
+                    border-bottom: 1px solid $gray-light;
+                }
+
+                a.headerlink {
+                    visibility: hidden !important;
+                    &:after {
+                        @include inline-icomoon($i-link, 0 1rem 0 0);
+                        visibility: hidden;
+                        font-size: 1rem;
+                        color: $gray-light;
+                        opacity: 0;
+                        transition: .1s
+                    }
+                }
+                // This makes permalinks only visible on hover.
+                h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
+                    &:hover > a.headerlink:after{
+                        visibility: visible;
+                        opacity: 1;
+                    }
+                }
+            }
 
             .img-fluid {
                 @include box-shadow(0 3px 6px rgba(0, 0, 0, .16));
                 margin-bottom: 2rem;
             }
 
+        }
+
+        &:not(.has_code_col) {
+            div[class^="highlight"] {
+                border: 1px solid $gray-light;
+            }
+        }
+
+        div[class^="highlight"] {
+            // This styles the consoles like read-the-doc's consoles
+            overflow-x: auto;
+            margin: 1px 0 24px 0;
+
+            div[class^="highlight"] {
+                padding: 0px;
+                border: none;
+                margin: 0;
+            }
+            pre {
+                white-space: pre;
+                margin: 0;
+                padding: 1rem;
+                display: block;
+                overflow: auto;
+            }
         }
 
 //------------------------------------------------------------------------------
@@ -413,6 +437,10 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             display: block;
             border-radius: 0;
             border-width: 0 0 0 3px;
+
+            > p {
+                margin-bottom: 0;
+            }
 
             > h3, > .alert-title {
                 font-size: 1.642857143em;
@@ -486,9 +514,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             }
 
             &.alert-warning, &.warning {
-                border-color: lighten($brand-warning, 30%);
-                background-color: lighten($brand-warning, 35%);
-                color: darken($brand-warning, 35%);
+                border-color: $warning;
 
                 > .alert-title, > h3 {
                     color: $brand-warning;
@@ -500,9 +526,7 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
             }
 
             &.alert-danger {
-                border-color: lighten($brand-danger, 30%);
-                background-color: lighten($brand-danger, 40%);
-                color: darken($brand-danger, 35%);
+                border-color: $danger;
 
                 > .alert-title, > h3 {
                     color: $brand-danger
@@ -601,33 +625,6 @@ h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
         }
     }
 }
-
-/* .highlight {
-  background: $doc_code-bg;
-  color: $gray-light;
-  border-radius: $border-radius;
-  padding: 1rem;
-  margin-bottom: ($line-height-base/2)*1rem;
-
-  pre {
-    margin-bottom:  0;
-  }
-} */
-/*
-
-pre {
-    font-size: 0.8em;
-    color: $gray-light;
-    font-family: $font-family-monospace;
-    font-weight:  $fw_semibold;
-    position: relative;
-    border: none;
-    max-width: 100%;
-    overflow: auto;
-    margin: 0;
-    margin-bottom: ($line-height-base / 2)rem;
-}
- */
 
 //------------------------------------------------------------------------------
 // Footer
