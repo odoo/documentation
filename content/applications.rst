@@ -1,3 +1,5 @@
+:show_content:
+
 ============
 Applications
 ============

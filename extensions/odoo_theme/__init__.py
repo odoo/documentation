@@ -32,14 +32,10 @@ class Monkey(object):
 @Monkey(toctree.TocTree)
 def resolve(old_resolve, tree, docname, *args, **kwargs):
 
-    def _clear_empty_pages_reference(_node) -> None:
-        """ Disable references to 'empty' toctree pages.
+    def _update_toctree_nodes(_node) -> None:
+        """ Make necessary changes to Docutils' nodes of the toc.
 
-        Inspect node's children to determine whether the page is a toc and, if so, clear its
-        reference URL. (<a href="#"/>)
-        If the page has the `show_content` metadata, don't clear the reference.
-
-        Internal structure of nodes:
+        Internal structure of toc nodes:
         <ul>
             <li>
                 <p><a/></p>
@@ -51,16 +47,12 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
         <ul/>
         """
         if isinstance(_node, nodes.reference):  # The node is a reference (<a/>)
-            _subnode_docname = _get_docname(_node)
-            if _subnode_docname and any(
-                isinstance(_subnode, nodes.bullet_list)
-                for _subnode in _node.parent.parent.children
-            ):  # The node references a toc
-                if 'show_content' not in tree.env.metadata[_subnode_docname]:
-                    _node['refuri'] = '#'  # The page must not be accessible
+            _node_docname = _get_docname(_node)
+            _clear_reference_if_empty_page(_node, _node_docname)
+            _set_docname_as_class(_node, _node_docname)
         elif isinstance(_node, (addnodes.compact_paragraph, nodes.bullet_list, nodes.list_item)):
             for _subnode in _node.children:
-                _clear_empty_pages_reference(_subnode)
+                _update_toctree_nodes(_subnode)
 
     def _get_docname(_node):
         """
@@ -81,7 +73,25 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
             _docname = '/'.join(_res)
         return _docname
 
+    def _clear_reference_if_empty_page(_reference_node, _node_docname):
+        """ Clear reference of 'empty' toctree pages.
+
+        Inspect parent node's siblings to determine whether the node references a toc and, if so,
+        clear its reference URL. (<a href="#"/>)
+        If the page has the `show_content` metadata, don't clear the reference.
+        """
+        if _node_docname and any(
+            isinstance(_subnode, nodes.bullet_list)
+            for _subnode in _reference_node.parent.parent.children
+        ):  # The node references a toc
+            if 'show_content' not in tree.env.metadata[_node_docname]:
+                _reference_node['refuri'] = '#'  # The page must not be accessible
+
+    def _set_docname_as_class(_reference_node, _node_docname):
+        _node_docname = _node_docname or docname  # refuri==None <-> href="#"
+        _reference_node.parent.parent['classes'].append(f'o_menu_{_node_docname.replace("/", "_")}')
+
     resolved_toc = old_resolve(tree, docname, *args, **kwargs)
     if resolved_toc:  # `resolve` returns None if the depth of the TOC to resolve is too high
-        _clear_empty_pages_reference(resolved_toc)
+        _update_toctree_nodes(resolved_toc)
     return resolved_toc
