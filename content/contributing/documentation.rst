@@ -1,5 +1,5 @@
 
-:empty_page:
+:show_content:
 
 =================================
 Contributing to the documentation
