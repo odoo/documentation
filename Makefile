@@ -30,12 +30,15 @@ clean:
 	$(RM_CMD) extensions/odoo_theme/static/style.css
 	@echo "Cleaning finished."
 
-edi: SPHINXOPTS += -A collapse_menu=True
+#edi: SPHINXOPTS += -A collapse_menu=True  # If needed, comment rather than setting False
 edi: VERSIONS += 12.0,13.0,14.0
 edi: CANONICAL_VERSION += 14.0
 edi: LANGUAGES += en,fr,es
 edi: CURRENT_LANG += fr
 edi: clean html
+
+static: extensions/odoo_theme/static extensions/odoo_theme/static/style.css
+	cp -r extensions/odoo_theme/static/* _build/html/_static/
 
 html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."

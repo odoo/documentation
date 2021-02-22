@@ -1,26 +1,42 @@
 (function ($) {
 
     document.addEventListener('DOMContentLoaded', () => {
-        const navigationMenu = document.getElementById('o_main_toctree');
+        this.navigationMenu = document.getElementById('o_main_toctree');
 
-        // Add a class with the name of the file to each corresponding menu item
-        _flagMenuItemsWithFileName(navigationMenu);
+        // Allow to automatically collapse and expand TOC entries
+        _prepareAccordion(this.navigationMenu);
+
+        // Allow to respectively highlight and expand the TOC entries and their related TOC
+        // entry list whose page is displayed.
+        _flagActiveTocEntriesAndLists();
     });
 
     /**
-     * Add the name of the file as class of the corresponding menu item.
+     * Add the relevant classes on the TOC entries (and lists) whose page is displayed.
      *
-     * @param {HTMLElement} navigationMenu - The navigation menu containing the global TOC
+     * TOC entries (<li> elements) that are on the path of the displayed page receive the
+     * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
+     * the `show` (Bootstrap) class. The child TOC entry list of the deepest TOC entry also
+     * receives the `show` class.
      */
-    const _flagMenuItemsWithFileName = (navigationMenu) => {
-        navigationMenu.querySelectorAll('li').forEach(menuItem => {
-            let href = menuItem.querySelector('a').href;
-            if (href === '#') { // Selected nodes don't have their file name in the href
-                href = window.location.href; // Get it from the current window location
+    const _flagActiveTocEntriesAndLists = () => {
+        let deepestTocEntry = undefined;
+        this.navigationMenu.querySelectorAll('.current').forEach(element => {
+            if (element.tagName === 'UL') {
+                // Expand all related <ul>
+                element.classList.add('show');
+            } else if (element.tagName === 'LI') {
+                // Highlight all <li> in the active hierarchy
+                element.classList.add('o_active_toc_entry');
+                deepestTocEntry = element;
             }
-            const fileName = href.substring(href.lastIndexOf('/') + 1, href.lastIndexOf('.html'));
-            menuItem.classList.add(`o_menu_${fileName}`);
-        });
+        })
+        if (deepestTocEntry) {
+            const childTocEntryList = deepestTocEntry.querySelector('ul');
+            if (childTocEntryList) {
+                childTocEntryList.classList.add('show');
+            }
+        }
     };
 
 })();

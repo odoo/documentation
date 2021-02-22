@@ -12,23 +12,28 @@
                 return;
             }
 
-            // Allow to hide the TOC entry referring the title (<h1> heading)
-            _flagFirstHeadingRef();
-
             // Allow to automatically collapse and expand TOC entries
-            _prepareAccordion();
+            _prepareAccordion(this.pageToc);
 
             // Allow to respectively highlight and expand the TOC entries and their related TOC
             // entry list whose section is focused.
             _flagActiveTocEntriesAndLists();
+
+            // Allow to hide the TOC entry referring the title (<h1> heading)
+            _flagFirstHeadingRef();
         }
     });
 
     /**
+     * Entirely hide the local tree of contents.
+     */
+    const _hidePageToc = () => this.pageToc.style.visibility = 'hidden';
+
+    /**
      * Add the relevant classes on the TOC entries (and lists) whose section is focused.
      *
-     * TOC entries whose section is focused (<li> elements) receive the `active` class and their
-     * related TOC entry list (<ul> elements) receive the `show` class.
+     * TOC entries whose section is focused (<li> elements) receive the `o_active_toc_entry` class
+     * and their related TOC entry list (<ul> elements) receive the `show` (Bootstrap) class.
      */
     const _flagActiveTocEntriesAndLists = () => {
 
@@ -70,7 +75,7 @@
 
         const _unflagAll = () => {
             this.pageToc.querySelectorAll('li,ul').forEach(element => {
-                element.classList.remove('active', 'show');
+                element.classList.remove('o_active_toc_entry', 'show');
             });
         };
 
@@ -78,10 +83,13 @@
             let tocEntry = headingRef.parentElement;
             while (tocEntry !== this.pageToc) {
                 if (tocEntry.tagName === 'LI') {
-                    tocEntry.classList.add('active'); // Highlight all <li> in the active hierarchy
+                    // Highlight all <li> in the active hierarchy
+                    tocEntry.classList.add('o_active_toc_entry');
+
+                    // Expand all related <ul>
                     const relatedTocEntryList = tocEntry.querySelector('ul');
                     if (relatedTocEntryList) {
-                        relatedTocEntryList.classList.add('show'); // Expand all related <ul>
+                        relatedTocEntryList.classList.add('show');
                     }
                 }
                 tocEntry = tocEntry.parentElement;
@@ -94,10 +102,10 @@
         });
         let timeoutId = undefined;
         document.addEventListener('scroll', () => {
+            clearTimeout(timeoutId); // For each scroll event, cancel the previous timeout callback
             timeoutId = setTimeout(() => {
                 clickedHeadingRef = undefined; // Go back to highlighting the heading ref in view
             }, 100);
-            clearTimeout(timeoutId); // For each scroll event, cancel the previous timeout callback
             _updateFlags();
         });
 
@@ -108,30 +116,8 @@
     /**
      * Add the class `o_page_toc_title` on the first heading reference.
      */
-    const _flagFirstHeadingRef = () => this.headingRefs[0].classList.add('o_page_toc_title');
-
-    /**
-     * Entirely hide the local tree of contents.
-     */
-    const _hidePageToc = () => this.pageToc.style.visibility = 'hidden';
-
-    /**
-     * Update the page TOC entries and heading references to allow collapsing them.
-     */
-    const _prepareAccordion = () => {
-        // Start at the second TOC entry list (<ul>) to avoid collapsing the entire TOC
-        const pageTocRoot = this.pageToc.querySelectorAll('ul')[1];
-        pageTocRoot.querySelectorAll('ul').forEach(tocEntryList => {
-            const relatedHeadingRef = tocEntryList.previousSibling; // The preceding <a> element
-            tocEntryList.id = `o_target_${relatedHeadingRef.getAttribute('href').replace('#', '')}`
-            tocEntryList.classList.add('collapse');
-            relatedHeadingRef.setAttribute('data-bs-target', `#${tocEntryList.id}`);
-            relatedHeadingRef.setAttribute('data-bs-toggle', 'collapse');
-        });
-        // TODO [ANV]
-        // current output: <a class="reference internal collapsed" href="#text" data-bs-target="#o_target_text" data-bs-toggle="collapse" aria-expanded="false">Text</a>
-        // desired output: <a class="reference internal" href="#text"><i class="i-chevron-right collapsed" data-bs-target="#o_target_text" data-bs-toggle="collapse" aria-expanded="false"></i> Text</a>
-
-    };
+    const _flagFirstHeadingRef = () => {
+        this.headingRefs[0].parentNode.classList.add('o_page_toc_title');
+    }
 
 })();

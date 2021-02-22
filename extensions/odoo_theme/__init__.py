@@ -1,32 +1,27 @@
-from . import pygments_override
-from . import translator
-
-import sphinx.builders.html
+from docutils import nodes
 from sphinx import addnodes
 from sphinx.environment.adapters import toctree
-from docutils import nodes
+
+from . import pygments_override, translator
 
 
 def setup(app):
     app.set_translator('html', translator.BootstrapTranslator)
 
-    # VFE TODO check if default meta initialization is necessary.
-    # If not, remove update_meta method
-    app.connect('html-page-context', update_meta)
+    app.connect('html-page-context', set_missing_meta)
 
+    app.add_js_file('js/utils.js')  # Keep in first position
     app.add_js_file('js/layout.js')
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
 
 
-def update_meta(app, pagename, templatename, context, doctree):
-    meta = context.get('meta')
-    if meta is None:
-        meta = context['meta'] = {}
-
-# TODO VFE detailed explanation of the patch logic and use.
+def set_missing_meta(app, pagename, templatename, context, doctree):
+    if context.get('meta') is None:  # Pages without title (used with `include::`) have no meta
+        context['meta'] = {}
 
 class Monkey(object):
+    """ Replace patched method of an object by a new method receiving the old one in argument. """
     def __init__(self, obj):
         self.obj = obj
     def __call__(self, fn):
@@ -36,41 +31,67 @@ class Monkey(object):
 
 @Monkey(toctree.TocTree)
 def resolve(old_resolve, tree, docname, *args, **kwargs):
+
+    def _update_toctree_nodes(_node) -> None:
+        """ Make necessary changes to Docutils' nodes of the toc.
+
+        Internal structure of toc nodes:
+        <ul>
+            <li>
+                <p><a/></p>
+                <ul>
+                    ...
+                </ul>
+            </li>
+            <li/>
+        <ul/>
+        """
+        if isinstance(_node, nodes.reference):  # The node is a reference (<a/>)
+            _node_docname = _get_docname(_node)
+            _clear_reference_if_empty_page(_node, _node_docname)
+            _set_docname_as_class(_node, _node_docname)
+        elif isinstance(_node, (addnodes.compact_paragraph, nodes.bullet_list, nodes.list_item)):
+            for _subnode in _node.children:
+                _update_toctree_nodes(_subnode)
+
+    def _get_docname(_node):
+        """
+        docname = a/b/c/the_page_being_rendered
+        _ref = ../../contributing/documentation
+        _path_parts = ['..', '..', 'contributing', 'documentation']
+        _res = ['a', 'contributing', 'documentation']
+        _docname = a/contributing/documentation
+        """
+        _ref = _node['refuri'].replace('.html', '')
+        _parent_directory_occurrences = _ref.count('..')
+        if not _parent_directory_occurrences:  # The ref is already the docname
+            _docname = _ref
+        else:
+            _path_parts = _ref.split('/')
+            _res = docname.split('/')[:-(_parent_directory_occurrences+1)] \
+                   + _path_parts[_parent_directory_occurrences:]
+            _docname = '/'.join(_res)
+        return _docname
+
+    def _clear_reference_if_empty_page(_reference_node, _node_docname):
+        """ Clear reference of 'empty' toctree pages.
+
+        Inspect parent node's siblings to determine whether the node references a toc and, if so,
+        clear its reference URL. (<a href="#"/>)
+        If the page has the `show_content` metadata, don't clear the reference.
+        """
+        if _node_docname and any(
+            isinstance(_subnode, nodes.bullet_list)
+            for _subnode in _reference_node.parent.parent.children
+        ):  # The node references a toc
+            if 'show_content' not in tree.env.metadata[_node_docname]:
+                _reference_node['refuri'] = '#'  # The page must not be accessible
+
+    def _set_docname_as_class(_reference_node, _node_docname):
+        _node_docname = _node_docname or docname  # refuri==None <-> href="#"
+        _reference_node.parent.parent['classes'].append(f'o_menu_{_node_docname.replace("/", "_")}')
+
     resolved_toc = old_resolve(tree, docname, *args, **kwargs)
-    if resolved_toc:
-        # Not sure set_class really does what we want.
-        _toctree_add_empty_class(tree, resolved_toc, docname)
-        resolved_toc['classes'].append('testtesttest')
+    if resolved_toc:  # `resolve` returns None if the depth of the TOC to resolve is too high
+        _update_toctree_nodes(resolved_toc)
     return resolved_toc
-
-def _toctree_add_empty_class(tree, node, docname) -> None:
-    for subnode in node.children:
-        if isinstance(subnode, (
-            addnodes.compact_paragraph,
-            nodes.list_item,
-            nodes.bullet_list
-        )):
-            # for <p>, <li> and <ul> just recurse
-            _toctree_add_empty_class(tree, subnode, docname)
-        elif isinstance(subnode, nodes.reference):
-            toc_ref = get_reference(subnode, docname)
-            if toc_ref and 'empty_page' in tree.env.metadata[toc_ref]:
-                subnode['classes'].append('o_empty_page')
-
-def get_reference(node, docname):
-    ref = node['refuri'].replace('.html', '') # applications.html
-    if ref.find('..') < 0:
-        # direct reference
-        return ref
-    splitted_refuri = ref.split('/')
-    count = 0 # Number of ../ in refuri
-    for split in splitted_refuri:
-        if split == "..":
-            count += 1
-    # ref = ../../../contributing/documentation
-    # docname = services/legal/terms/enterprise
-    # res = contributing/documentation
-    res = docname.split('/')[:-(count+1)] + splitted_refuri[count:]
-    return "/".join(
-        res
-    )
