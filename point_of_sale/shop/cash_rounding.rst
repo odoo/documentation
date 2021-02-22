@@ -1,6 +1,7 @@
 =============
 Cash Rounding
 =============
+
 **Cash rounding** is required when the lowest physical denomination 
 of currency, or the smallest coin, is higher than the minimum unit 
 of account.
@@ -10,14 +11,11 @@ down the total amount of an invoice to the nearest five cents, when
 the payment is made in cash.
 
 Each point of sale in Odoo can be configured to apply cash rounding
-to the totals of its bills or receipts. 
-
-.. note::
-   This feature will soon be added to Odoo. We are currently working
-   to make it available for all supported versions as soon as possible.
+to the totals of its bills or receipts.
 
 Configuration
 =============
+
 Go to :menuselection:`Point of Sale --> Configuration --> Settings` 
 and enable *Cash Rounding*, then click on *Save*.
 
@@ -46,5 +44,4 @@ rounding according to your settings.
 
 .. note::
    Odoo Point of Sale only support the *Add a rounding line* 
-   rounding strategies and *Half-up* rounding methods. 
-
+   rounding strategies and *Half-up* rounding methods.
