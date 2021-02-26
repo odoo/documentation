@@ -175,6 +175,49 @@ header.o_main_header{
 }
 
 //------------------------------------------------------------------------------
+// On this page local toctree
+//------------------------------------------------------------------------------
+
+    aside.o_page_toc {
+        display: none;
+        @include font-size($font-size-secondary);
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+            top: $o-header-height;
+            right: 0;
+            width: $o-on-page-width;
+            height: calc(100% - #{$o-header-height});
+            padding: 3rem 3rem 3rem 0;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: $fw_bold;
+            color: $gray-darker;
+            padding-left: .5rem;
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: $fw_regular;
+            color: $gray-darkest;
+        }
+
+        .o_page_toc_title {
+            display:none;
+            + ul {
+                padding-left: 0;
+            }
+        }
+
+        .o_active_toc_entry > a {
+            font-weight: $fw_bold;
+        }
+    }
+
+//------------------------------------------------------------------------------
 // Main page content
 //------------------------------------------------------------------------------
 
@@ -268,7 +311,7 @@ header.o_main_header{
             .toctree-l1 > a {
                 display: block;
                 color: $gray-darker;
-                font-size: 1.2rem;
+                @include font-size($h2-font-size);
                 padding-bottom: .5rem;
                 border-bottom: 1px solid $gray-light;
                 margin-bottom: 1rem;
@@ -418,13 +461,15 @@ header.o_main_header{
                 a.headerlink {
                     visibility: hidden !important;
                     &:after {
-                        @include inline-icomoon($i-link, 0 1rem 0 0);
+                        content: '#{$i-link}';
+                        font-family: $icomoon-font-family !important;
                         @include font-size($font-size-base);
+                        vertical-align: middle;
+                        margin: 0 1rem 0 0;
                         visibility: hidden;
-                        font-size: 1rem;
                         color: $gray-light;
                         opacity: 0;
-                        transition: .1s
+                        @include o-transition(all, .1s)
                     }
                 }
                 // This makes permalinks only visible on hover.
@@ -612,70 +657,16 @@ header.o_main_header{
             }
         }
     }
-
-//------------------------------------------------------------------------------
-// On this page toc
-//------------------------------------------------------------------------------
-
-    aside.o_page_toc {
-        display: none;
-
-        @include media-breakpoint-up(lg) {
-            display: block;
-            position: -webkit-sticky;
-            position: sticky;
-            top: $o-header-height;
-            right: 0;
-            width: $o-on-page-width;
-            height: calc(100% - #{$o-header-height});
-            padding: 3rem 3rem 3rem 1rem;
-            font-size: .9rem;
-        }
-
-        .o_page_toc_nav > ul {
-            padding-left: 0;
-        }
-
-        h3 {
-            text-transform: uppercase;
-            font-weight: $fw_bold;
-            font-size: 1rem;
-            color: $gray-darker;
-        }
-
-        ul {
-            list-style: none;
-
-            a {
-                display: block;
-                padding: .5rem 0;
-                font-weight: $fw_regular;
-                color: $gray-darker;
-
-                &.o_page_toc_title {
-                    display:none;
-                    + ul {
-                        padding-left: 0;
-                    }
-                }
-            }
-        }
-        .o_active_toc_entry > a {
-            font-weight: $fw_bold;
-        }
-    }
 }
-
 //------------------------------------------------------------------------------
 // Footer
 //------------------------------------------------------------------------------
-footer{
+footer {
 
     > div {
         padding: 3rem;
 
         @include media-breakpoint-up(lg) {
-
             padding-left: calc(#{$o-side-nav-width} + 3rem)
         }
     }
@@ -690,36 +681,5 @@ footer{
             margin-bottom: 1.5rem;
         }
 
-    }
-
-    .o_footer_nav {
-        display: flex;
-
-        .o_footer_nav_title {
-            font-weight: $fw_regular;
-            text-transform: uppercase;
-            padding: 0 1rem;
-        }
-
-        .accordion {
-
-            .accordion-collapse {
-                border: none;
-            }
-
-            .accordion-body {
-                background: $gray-100;
-                > li > a {
-                    font-weight: $fw-regular;
-                }
-
-            }
-
-            .accordion-button::after {
-                background-size: .8rem;
-                width: .8rem;
-                height: .8rem;
-            }
-        }
     }
 }
