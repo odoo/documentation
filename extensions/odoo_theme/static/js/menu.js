@@ -33,11 +33,13 @@
             }
         })
         if (deepestTocEntry) {
-            deepestTocEntry.classList.add('o_deepest_active_toc_entry');
             const childTocEntryList = deepestTocEntry.querySelector('ul');
             if (childTocEntryList) {
                 childTocEntryList.classList.add('show');
+            } else { // If the toc entry is not a TOC, add the class to its closest ancestor entry
+                deepestTocEntry = deepestTocEntry.parentElement.parentElement;
             }
+            deepestTocEntry.classList.add('o_deepest_active_toc_entry');
         }
     };
 
