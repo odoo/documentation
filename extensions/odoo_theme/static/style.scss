@@ -463,27 +463,17 @@ header.o_main_header{
 
             dt {
                 &:before {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    height: 0;
-                    padding-top:  $o-header-height + 10px;
-                    margin-top:  -$o-header-height - 10px;
+                    @include scroll-padding()
                 }
             }
 
             section {
             // This fixes the scroll position // BUT creates issues when buttons or links from the previous section are behind it
-                /* padding-top: $o-header-height;
-                margin-top: -$o-header-height; */
+            // padding-top: $o-header-height;
+            // margin-top: -$o-header-height; */
             // adding a :before works better;
                 &:before {
-                    content: '';
-                    display: block;
-                    width: 0;
-                    height: 0;
-                    padding-top:  $o-header-height + 10px;
-                    margin-top:  -$o-header-height - 10px;
+                    @include scroll-padding()
                 }
 
                 > h1 {

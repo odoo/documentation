@@ -96,6 +96,18 @@
     margin: $margin;
 }
 
+//-- fix scroll issue
+
+@mixin scroll-padding() {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    padding-top:  $o-header-height + 10px;
+    margin-top:  -$o-header-height - 10px;
+}
+
+
 //-- has_col
 
 @mixin pseudo-col(){
