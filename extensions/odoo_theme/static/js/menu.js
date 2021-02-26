@@ -16,8 +16,9 @@
      *
      * TOC entries (<li> elements) that are on the path of the displayed page receive the
      * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
-     * the `show` (Bootstrap) class. The child TOC entry list of the deepest TOC entry also
-     * receives the `show` class.
+     * the `show` (Bootstrap) class.
+     * Also, the deepest TOC entry receives the `o_deepest_active_toc_entry` class, and its child
+     * TOC entry list receives the `show` class.
      */
     const _flagActiveTocEntriesAndLists = () => {
         let deepestTocEntry = undefined;
@@ -32,6 +33,7 @@
             }
         })
         if (deepestTocEntry) {
+            deepestTocEntry.classList.add('o_deepest_active_toc_entry');
             const childTocEntryList = deepestTocEntry.querySelector('ul');
             if (childTocEntryList) {
                 childTocEntryList.classList.add('show');
