@@ -331,16 +331,24 @@ header.o_main_header{
                             pre {
                                 font-size: 12px;
                             }
+                        }
 
-                            .content-switcher {
-                                margin-top:0;
+                        .content-switcher {
 
-                                > ul {
-                                  margin-bottom: 0;
-                                }
+                            .nav-tabs .nav-link.active {
+                                background-color: #f8f8f8;
+                                border-color: #dee2e6 #dee2e6 #f8f8f8;
+                                font-weight: $fw_semibold;
+                            }
 
-                                > ul > li {
-                                   color: $gray-lightest;
+                            .tab-content {
+                                display:flex;
+                                background: $doc_code-bg;
+                                border: 1px $gray-300 solid;
+                                border-top: 0;
+
+                                div[class^="highlight"] {
+                                    margin: 0;
                                 }
                             }
                         }
@@ -357,28 +365,41 @@ header.o_main_header{
             position: relative;
 
             .o_git_link {
-                color: $gray;
-                @include o-position-absolute($top: 0, $right: 1rem);
                 @include font-size($font-size-secondary);
+                @include o-position-absolute($top: 1rem, $right: 1rem);
                 i {
-                    font-size: 1.2rem;
                     margin-right: .2rem;
                 }
             }
 
             dt {
-                padding-top: $o-header-height;
-                margin-top: -$o-header-height;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    padding-top:  $o-header-height + 10px;
+                    margin-top:  -$o-header-height - 10px;
+                }
             }
 
             section {
-            // This fixes the scroll position
-                padding-top: $o-header-height;
-                margin-top: -$o-header-height;
+            // This fixes the scroll position // BUT creates issues when buttons or links from the previous section are behind it
+                /* padding-top: $o-header-height;
+                margin-top: -$o-header-height; */
+            // adding a :before works better;
+                &:before {
+                    content: '';
+                    display: block;
+                    width: 0;
+                    height: 0;
+                    padding-top:  $o-header-height + 10px;
+                    margin-top:  -$o-header-height - 10px;
+                }
 
                 > h1 {
                     color: $o-violet-dark;
-                    font-weight: $fw_semibold;
+                    font-weight: $fw_bold;
                     max-width: calc(100% - 120px);
                 }
 
@@ -416,15 +437,10 @@ header.o_main_header{
 
         }
 
-        &:not(.has_code_col) {
-            div[class^="highlight"] {
-                border: 1px solid $gray-light;
-            }
-        }
-
         div[class^="highlight"] {
             // This styles the consoles like read-the-doc's consoles
             overflow-x: auto;
+            border: 1px solid $gray-light;
             margin: 1px 0 24px 0;
 
             div[class^="highlight"] {
