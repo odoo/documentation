@@ -87,42 +87,52 @@ header.o_main_header{
         left:0;
     }
     @include o-transition($duration:.3s);
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-left: 3rem;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
     @include font-size($font-size-secondary);
 
-    > ul {
-        padding-left: 30px !important;
-         > li {
-            padding: .5rem 0;
-         }
+    color: $o-violet-dark;
+
+    .toctree-l1 {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    .toctree-l1 > ul {
+        padding-left: 1.5rem;
     }
 
     ul {
-        padding-left: 1rem;
-        list-style: none;
-        li {
-            a{
-                display: block;
-                padding: .5rem 0;
-                color: $o-violet-dark;
-                text-decoration: none;
-                opacity: .75;
-                &.current, &:hover {
+
+        li.o_active_toc_entry{
+            &:not(.toctree-l1) > .o_toc_entry_wrapper {
+                i[class^="i-"]:not(.collapsed) {
+                    @include transform(rotate(90deg));
+                }
+            }
+            > .o_toc_entry_wrapper {
+                i[class^="i-"]:not(.collapsed), a.reference {
+                    font-weight: $fw_bold;
                     opacity: 1;
                 }
             }
         }
-        li.current > a {
-            font-weight: $fw_bold;
-            opacity: 1;
+
+        .o_deepest_active_toc_entry {
+            background-color: $gray-lightest;
         }
 
         > .toctree-l1 {
-            &[class^="o_menu_"] > .o_toc_entry_wrapper > i:before {
-                @include inline-icomoon($i-doc-apps, 0 1rem 0 -30px);
+
+            &[class*="o_menu_"] > .o_toc_entry_wrapper > i {
+                opacity: .75;
+                &:before {
+                    @include inline-icomoon($i-doc-apps, 0 1rem 0 0);
+                    color: $o-violet-dark;
+                    margin-right: 0.5rem;
+                }
             }
             &.o_menu_applications > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-apps}';
@@ -140,25 +150,7 @@ header.o_main_header{
                 content:'#{$i-doc-contribute}';
             }
 
-            .o_toc_entry_wrapper {
-                display: flex;
-                align-items: center;
-            }
-
         }
-        > .toctree-l2 {
-            .o_toc_entry_wrapper {
-                > i[class^="i-"] {
-                    transition: rotate .3s;
-
-                    &[aria-expanded="true"]{
-                        transform: rotate(90deg);
-                    }
-
-                }
-            }
-        }
-
     }
     scrollbar-width: thin;
     scrollbar-color: $o-violet-darker transparent;
@@ -174,6 +166,54 @@ header.o_main_header{
     }
 }
 
+.o_side_nav, .o_page_toc_nav {
+    ul { // all uls in toc
+        list-style: none;
+        padding-left: 1rem;
+
+        li {
+            padding-left: .2rem;
+            > a.reference {
+                padding-left: 1.2rem;
+            }
+
+            a {
+                display: inline-block;
+                padding: .5rem 0;
+                color: inherit;
+                opacity: .75;
+                &.current, &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &:not(.toctree-l1) {
+                .o_toc_entry_wrapper {
+                    > i[class^="i-"] {
+                        display: inline-block;
+                        margin-right: .2rem;
+                        @include o-transition(rotate, .3s);
+                        font-weight: $fw_bold;
+                        color: inherit;
+
+                        &[aria-expanded="true"] {
+                            @include transform(rotate(90deg));
+                        }
+                    }
+                }
+            }
+            .o_active_toc_entry {
+                > a , > .o_toc_entry_wrapper a{
+                    font-weight: $fw_bold;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    > ul { //is first ul in toc
+        padding-left: 0;
+    }
+}
 //------------------------------------------------------------------------------
 // On this page local toctree
 //------------------------------------------------------------------------------
