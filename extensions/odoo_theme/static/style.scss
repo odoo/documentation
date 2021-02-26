@@ -328,8 +328,11 @@ header.o_main_header{
             }
         }
 
+        // "in between" pages (Applications / Contributing)
+
         &.doc-toc {
             .toctree-wrapper {
+                margin-top: 1.5rem;
                 > ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -385,7 +388,7 @@ header.o_main_header{
 
                         > * {
                             width: 54.633333%;
-                            max-width: 600px;
+                            /* max-width: 600px; */
                             float: left;
                             clear: left;
                         }
@@ -402,12 +405,7 @@ header.o_main_header{
                             margin-left: 57%;
                             padding: 1rem;
 
-                            p, blockquote, tr, th, li {
-                                color: $gray-light;
-                            }
-
                             blockquote {
-                                color: $gray-light;
                                 font-family: $font-family-serif;
                                 font-weight: $fw_semibold;
                                 font-style: italic;
@@ -488,6 +486,11 @@ header.o_main_header{
                     border-bottom: 1px solid $gray-light;
                 }
 
+                > h3 {
+                    color: $gray-darkest;
+                    font-weight: $fw_extrabold;
+                }
+
                 a.headerlink {
                     visibility: hidden !important;
                     &:after {
@@ -512,8 +515,7 @@ header.o_main_header{
             }
 
             .img-fluid {
-                @include box-shadow(0 3px 6px rgba(0, 0, 0, .16));
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
 
         }
