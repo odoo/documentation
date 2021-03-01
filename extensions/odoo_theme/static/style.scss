@@ -539,6 +539,32 @@ header.o_main_header{
                 overflow: auto;
             }
         }
+        ul, ol {
+            text-align: left;
+        }
+        // restyle numbers on lists
+        ol {
+            list-style: none;
+            counter-reset: a;
+            > li {
+                position: relative;
+                counter-increment: a;
+                &:before {
+                    content: counter(a);
+                    color: $o-violet;
+                    border: 2px solid $o-violet;
+                    @include font-size($font-size-secondary);
+                    font-weight: bold;
+                    line-height: 1;
+                    text-align: center;
+                    padding: 1px 0;
+                    width: 20px;
+                    height: 20px;
+                    border-radius: 10px;
+                    @include o-position-absolute(2px, auto, auto, -2rem);
+                }
+            }
+        }
 
 //------------------------------------------------------------------------------
 // Alerts
