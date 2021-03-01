@@ -588,21 +588,21 @@ header.o_main_header{
 // alert-go_to
 // alert-exercise
 // alert-success
-
         .alert {
             position: relative;
             display: block;
             border-radius: 0;
             border-width: 0 0 0 3px;
+            @include font-size($font-size-secondary);
 
-            > p {
+            > p , > ul{
                 margin-bottom: 0;
             }
 
             > h3, > .alert-title {
                 line-height: 1em;
                 margin: 0 0 10px 0;
-                font-size: 1rem;
+                @include font-size($font-size-base);
                 font-weight: $fw_bold;
 
                 &:before {
@@ -656,16 +656,30 @@ header.o_main_header{
             }
 
             &.alert-tip, &.tip {
-                border-color: tint-color($brand-info, 30%);
-                background-color: tint-color($brand-info, 85%);
-                color: shade-color($brand-info, 35%);
+                border: none;
+                background-color: tint-color($info, 85%);
+                color: shade-color($info, 65%);
+                padding-left:3rem;
+                padding-right: 2rem;
+                margin-left: -3rem;
+                margin-right: -2rem;
 
                 > .alert-title, > h3 {
-                    color: $brand-info
+                    color: shade-color($info, 50%);
+                    display: inline-block;
+                    margin-bottom: 0;
+                    margin-right: .5rem;
+                    &:before {
+                        content: '#{$i-lightbulb}';
+                        vertical-align: text-top;
+                    }
+                    &:after {
+                        content: ':';
+                    }
                 }
 
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-lightbulb}';
+                > p {
+                   display: inline-block;
                 }
             }
 
@@ -712,8 +726,7 @@ header.o_main_header{
                 border-color: tint-color($secondary, 60%);
                 background-color: tint-color($secondary, 80%);
                 border-width: 2px;
-                margin: 2em auto;
-
+                width: calc(50% - 1rem);
                 a {
                     color: shade-color($secondary, 35%);
                 }
