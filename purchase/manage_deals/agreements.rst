@@ -59,12 +59,11 @@ Set up a blanket order
 ======================
 
 Go to :menuselection:`Orders --> Purchase Agreements` and click on *Create*. Select *Blanket Order*
-as your *Agreement Type*. Next, select the vendor. The other fields aren't mandatory, but you
-usually want to define an *Agreement Deadline* after which the blanket order won't be valid anymore.
+as your *Agreement Type*. Next, select the vendor. The other fields aren't mandatory.
 
 Next, add the products you want to order and their price. Note that you can also add a *Quantity*
 for each product, for example, if you have agreed with your vendor to order a specific minimum
-quantity each time or in total. If you have configured your blanked order to *Set quantities
+quantity each time or in total. If you have configured your blanket order to *Set quantities
 manually*, this is only used for informational purposes.
 
 .. image:: media/agreements-set-blanket-order.png
