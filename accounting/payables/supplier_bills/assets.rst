@@ -20,9 +20,9 @@ mode*. They are then posted periodically.
 
 Odoo supports the following **Depreciation Methods**:
 
-- Linear
-- Degressive
-- Accelerated Degressive
+- Straight Line
+- Declining
+- Declining Then Straight Line
 
 .. note::
    The server checks once a day if an entry must be posted. It might then take up to 24 hours before
@@ -133,15 +133,17 @@ rather than $ 4,000.00. Consequently, the last entry is also lower and has an am
 What are the different Depreciation Methods
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-The **Linear Depreciation Method** divides the initial Depreciable Value by the number of
+The **Straight Line Depreciation Method** divides the initial Depreciable Value by the number of
 depreciations planned. All depreciation entries have the same amount.
 
-The **Degressive Depreciation Method** multiplies the Depreciable Value by the **Degressive Factor**
-for each entry. Each depreciation entry has a lower amount than the previous entry.
+The **Declining Depreciation Method** multiplies the Depreciable Value by the **Declining Factor**
+for each entry. Each depreciation entry has a lower amount than the previous entry. The last
+depreciation entry doesn't use the declining factor but instead has an amount corresponding to the
+balance of the depreciable value so that it reaches $0 by the end of the specified duration.
 
-The **Accelerated Degressive Depreciation Method** uses the Degressive Method, but with a minimum
-Depreciation equal to the Linear Method. This method ensures a fast depreciation at the beginning,
-followed by a constant one afterward.
+The **Declining Then Straight Line Depreciation Method** uses the Declining Method, but with a
+minimum Depreciation equal to the Straight Line Method. This method ensures a fast depreciation
+at the beginning, followed by a constant one afterward.
 
 Assets from the Purchases Journal
 ---------------------------------
