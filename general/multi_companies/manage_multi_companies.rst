@@ -89,7 +89,6 @@ First, make sure each one of your companies is properly set in relation to:
 - :doc:`Journals <../../accounting/bank/setup/bank_accounts>`
 - :doc:`Fiscal Localizations <../../accounting/fiscal_localizations/overview/fiscal_localization_packages>`
 - :doc:`Pricelists <../../sales/products_prices/prices/pricing>`
-- :doc:`Warehouses <../../inventory/management/warehouses/warehouse_creation>`
 
 Now, activate the *Inter-Company Transactions* option under *Settings*. With the respective company
 *activated* and *selected*, choose if you would like operations between companies to be synchronized
