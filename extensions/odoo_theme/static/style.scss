@@ -11,13 +11,18 @@ div[aria-label="related navigation"] {
 }
 
 body {
-    font-size: $font-size-base;
     a {
         text-decoration: none !important;
     }
     dd {
         margin-left: 1rem;
     }
+}
+
+.hidden {
+    visibility: hidden !important;
+    display: none !important;
+    opacity: 0 !important;
 }
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
@@ -82,41 +87,52 @@ header.o_main_header{
         left:0;
     }
     @include o-transition($duration:.3s);
-    padding-top: 3rem;
+    padding-top: 2rem;
     padding-left: 3rem;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
+    @include font-size($font-size-secondary);
 
-    > ul {
-        padding-left: 30px !important;
-         > li {
-            padding: .5rem 0;
-         }
+    color: $o-violet-dark;
+
+    .toctree-l1 {
+        padding-top: .5rem;
+        padding-bottom: .5rem;
+    }
+
+    .toctree-l1 > ul {
+        padding-left: 1.5rem;
     }
 
     ul {
-        padding-left: 1rem;
-        list-style: none;
-        li {
-            a{
-                display: block;
-                padding: .5rem 0;
-                color: $o-violet-dark;
-                text-decoration: none;
-                opacity: .75;
-                &.current, &:hover {
+
+        li.o_active_toc_entry{
+            &:not(.toctree-l1) > .o_toc_entry_wrapper {
+                i[class^="i-"]:not(.collapsed) {
+                    @include transform(rotate(90deg));
+                }
+            }
+            > .o_toc_entry_wrapper {
+                i[class^="i-"]:not(.collapsed), a.reference {
+                    font-weight: $fw_bold;
                     opacity: 1;
                 }
             }
         }
-        li.current > a {
-            font-weight: $fw_bold;
-            opacity: 1;
+
+        .o_deepest_active_toc_entry {
+            background-color: $gray-lightest;
         }
 
         > .toctree-l1 {
-            &[class^="o_menu_"] > .o_toc_entry_wrapper > i:before {
-                @include inline-icomoon($i-doc-apps, 0 1rem 0 -30px);
+
+            &[class*="o_menu_"] > .o_toc_entry_wrapper > i {
+                opacity: .75;
+                &:before {
+                    @include inline-icomoon($i-doc-apps, 0 1rem 0 0);
+                    color: $o-violet-dark;
+                    margin-right: 0.5rem;
+                }
             }
             &.o_menu_applications > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-apps}';
@@ -134,25 +150,7 @@ header.o_main_header{
                 content:'#{$i-doc-contribute}';
             }
 
-            .o_toc_entry_wrapper {
-                display: flex;
-                align-items: center;
-            }
-
         }
-        > .toctree-l2 {
-            .o_toc_entry_wrapper {
-                > i[class^="i-"] {
-                    transition: rotate .3s;
-
-                    &[aria-expanded="true"]{
-                        transform: rotate(90deg);
-                    }
-
-                }
-            }
-        }
-
     }
     scrollbar-width: thin;
     scrollbar-color: $o-violet-darker transparent;
@@ -167,6 +165,97 @@ header.o_main_header{
         border-radius: 0;
     }
 }
+
+.o_side_nav, .o_page_toc_nav {
+    ul { // all uls in toc
+        list-style: none;
+        padding-left: 1rem;
+
+        li {
+            padding-left: .2rem;
+            > a.reference {
+                padding-left: 1.2rem;
+            }
+
+            a {
+                display: inline-block;
+                padding: .5rem 0;
+                color: inherit;
+                opacity: .75;
+                &.current, &:hover {
+                    opacity: 1;
+                }
+            }
+
+            &:not(.toctree-l1) {
+                .o_toc_entry_wrapper {
+                    > i[class^="i-"] {
+                        display: inline-block;
+                        margin-right: .2rem;
+                        @include o-transition(rotate, .3s);
+                        font-weight: $fw_bold;
+                        color: inherit;
+
+                        &[aria-expanded="true"] {
+                            @include transform(rotate(90deg));
+                        }
+                    }
+                }
+            }
+            .o_active_toc_entry {
+                > a , > .o_toc_entry_wrapper a{
+                    font-weight: $fw_bold;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    > ul { //is first ul in toc
+        padding-left: 0;
+    }
+}
+//------------------------------------------------------------------------------
+// On this page local toctree
+//------------------------------------------------------------------------------
+
+    aside.o_page_toc {
+        display: none;
+        @include font-size($font-size-secondary);
+        @include media-breakpoint-up(lg) {
+            display: block;
+            position: -webkit-sticky;
+            position: sticky;
+            top: $o-header-height;
+            right: 0;
+            width: $o-on-page-width;
+            height: calc(100% - #{$o-header-height});
+            padding: 3rem 3rem 3rem 0;
+        }
+
+        h3 {
+            text-transform: uppercase;
+            font-weight: $fw_bold;
+            color: $gray-darker;
+            padding-left: .5rem;
+            margin-bottom: 0;
+        }
+
+        a {
+            font-weight: $fw_regular;
+            color: $gray-darkest;
+        }
+
+        .o_page_toc_title {
+            display:none;
+            + ul {
+                padding-left: 0;
+            }
+        }
+
+        .o_active_toc_entry > a {
+            font-weight: $fw_bold;
+        }
+    }
 
 //------------------------------------------------------------------------------
 // Main page content
@@ -205,7 +294,7 @@ header.o_main_header{
                 &:before {
                     @include inline-icomoon($i-o-services , 0 1rem 0 0);
                     display: block;
-                    font-size: 50px;
+                    @include font-size(50px);
                     margin: 0 auto 20px;
                 }
                 &.o_title_start:before {
@@ -239,8 +328,11 @@ header.o_main_header{
             }
         }
 
+        // "in between" pages (Applications / Contributing)
+
         &.doc-toc {
             .toctree-wrapper {
+                margin-top: 1.5rem;
                 > ul {
                     display: flex;
                     flex-wrap: wrap;
@@ -262,7 +354,7 @@ header.o_main_header{
             .toctree-l1 > a {
                 display: block;
                 color: $gray-darker;
-                font-size: 1.2rem;
+                @include font-size($h2-font-size);
                 padding-bottom: .5rem;
                 border-bottom: 1px solid $gray-light;
                 margin-bottom: 1rem;
@@ -296,7 +388,7 @@ header.o_main_header{
 
                         > * {
                             width: 54.633333%;
-                            max-width: 600px;
+                            /* max-width: 600px; */
                             float: left;
                             clear: left;
                         }
@@ -313,12 +405,7 @@ header.o_main_header{
                             margin-left: 57%;
                             padding: 1rem;
 
-                            p, blockquote, tr, th, li {
-                                color: $gray-light;
-                            }
-
                             blockquote {
-                                color: $gray-light;
                                 font-family: $font-family-serif;
                                 font-weight: $fw_semibold;
                                 font-style: italic;
@@ -331,16 +418,24 @@ header.o_main_header{
                             pre {
                                 font-size: 12px;
                             }
+                        }
 
-                            .content-switcher {
-                                margin-top:0;
+                        .content-switcher {
 
-                                > ul {
-                                  margin-bottom: 0;
-                                }
+                            .nav-tabs .nav-link.active {
+                                background-color: #f8f8f8;
+                                border-color: #dee2e6 #dee2e6 #f8f8f8;
+                                font-weight: $fw_semibold;
+                            }
 
-                                > ul > li {
-                                   color: $gray-lightest;
+                            .tab-content {
+                                display:flex;
+                                background: $doc_code-bg;
+                                border: 1px $gray-300 solid;
+                                border-top: 0;
+
+                                div[class^="highlight"] {
+                                    margin: 0;
                                 }
                             }
                         }
@@ -357,27 +452,31 @@ header.o_main_header{
             position: relative;
 
             .o_git_link {
-                color: $gray;
-                @include o-position-absolute($top: 0, $right: 1rem);
+                @include font-size($font-size-secondary);
+                @include o-position-absolute($top: 1rem, $right: 1rem);
                 i {
-                    font-size: 1.2rem;
                     margin-right: .2rem;
                 }
             }
 
             dt {
-                padding-top: $o-header-height;
-                margin-top: -$o-header-height;
+                &:before {
+                    @include scroll-padding()
+                }
             }
 
             section {
-            // This fixes the scroll position
-                padding-top: $o-header-height;
-                margin-top: -$o-header-height;
+            // This fixes the scroll position // BUT creates issues when buttons or links from the previous section are behind it
+            // padding-top: $o-header-height;
+            // margin-top: -$o-header-height; */
+            // adding a :before works better;
+                &:before {
+                    @include scroll-padding()
+                }
 
                 > h1 {
                     color: $o-violet-dark;
-                    font-weight: $fw_semibold;
+                    font-weight: $fw_bold;
                     max-width: calc(100% - 120px);
                 }
 
@@ -387,15 +486,23 @@ header.o_main_header{
                     border-bottom: 1px solid $gray-light;
                 }
 
+                > h3 {
+                    color: $gray-darkest;
+                    font-weight: $fw_extrabold;
+                }
+
                 a.headerlink {
                     visibility: hidden !important;
                     &:after {
-                        @include inline-icomoon($i-link, 0 1rem 0 0);
+                        content: '#{$i-link}';
+                        font-family: $icomoon-font-family !important;
+                        @include font-size($font-size-base);
+                        vertical-align: middle;
+                        margin: 0 1rem 0 0;
                         visibility: hidden;
-                        font-size: 1rem;
                         color: $gray-light;
                         opacity: 0;
-                        transition: .1s
+                        @include o-transition(all, .1s)
                     }
                 }
                 // This makes permalinks only visible on hover.
@@ -408,21 +515,15 @@ header.o_main_header{
             }
 
             .img-fluid {
-                @include box-shadow(0 3px 6px rgba(0, 0, 0, .16));
-                margin-bottom: 2rem;
+                margin-bottom: 1rem;
             }
 
-        }
-
-        &:not(.has_code_col) {
-            div[class^="highlight"] {
-                border: 1px solid $gray-light;
-            }
         }
 
         div[class^="highlight"] {
             // This styles the consoles like read-the-doc's consoles
             overflow-x: auto;
+            border: 1px solid $gray-light;
             margin: 1px 0 24px 0;
 
             div[class^="highlight"] {
@@ -460,7 +561,6 @@ header.o_main_header{
             }
 
             > h3, > .alert-title {
-                font-size: 1.642857143em;
                 line-height: 1em;
                 margin: 0 0 10px 0;
                 font-size: 1rem;
@@ -589,70 +689,16 @@ header.o_main_header{
             }
         }
     }
-
-//------------------------------------------------------------------------------
-// On this page toc
-//------------------------------------------------------------------------------
-
-    aside.o_page_toc {
-        display: none;
-
-        @include media-breakpoint-up(lg) {
-            display: block;
-            position: -webkit-sticky;
-            position: sticky;
-            top: $o-header-height;
-            right: 0;
-            width: $o-on-page-width;
-            height: calc(100% - #{$o-header-height});
-            padding: 3rem 3rem 3rem 1rem;
-            font-size: .9rem;
-        }
-
-        .o_page_toc_nav > ul {
-            padding-left: 0;
-        }
-
-        h3 {
-            text-transform: uppercase;
-            font-weight: $fw_bold;
-            font-size: 1rem;
-            color: $gray-darker;
-        }
-
-        ul {
-            list-style: none;
-
-            a {
-                display: block;
-                padding: .5rem 0;
-                font-weight: $fw_regular;
-                color: $gray-darker;
-
-                &.o_page_toc_title {
-                    display:none;
-                    + ul {
-                        padding-left: 0;
-                    }
-                }
-            }
-        }
-        .o_active_toc_entry > a {
-            font-weight: $fw_bold;
-        }
-    }
 }
-
 //------------------------------------------------------------------------------
 // Footer
 //------------------------------------------------------------------------------
-footer{
+footer {
 
     > div {
         padding: 3rem;
 
         @include media-breakpoint-up(lg) {
-
             padding-left: calc(#{$o-side-nav-width} + 3rem)
         }
     }
@@ -667,36 +713,5 @@ footer{
             margin-bottom: 1.5rem;
         }
 
-    }
-
-    .o_footer_nav {
-        display: flex;
-
-        .o_footer_nav_title {
-            font-weight: $fw_regular;
-            text-transform: uppercase;
-            padding: 0 1rem;
-        }
-
-        .accordion {
-
-            .accordion-collapse {
-                border: none;
-            }
-
-            .accordion-body {
-                background: $gray-100;
-                > li > a {
-                    font-weight: $fw-regular;
-                }
-
-            }
-
-            .accordion-button::after {
-                background-size: .8rem;
-                width: .8rem;
-                height: .8rem;
-            }
-        }
     }
 }
