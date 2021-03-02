@@ -24,10 +24,6 @@ Create a sales order and an invoice
 Now, once you have recorded the time you spent on the helpdesk ticket, under the *Timesheets* tab,
 access the task clicking on its name.
 
-.. image:: media/reinvoice_time2.png
-   :align: center
-   :alt: Sales Order from a task in Odoo Helpdesk
-
 *Create Sales Order* and proceed to create the invoice.
 
 .. image:: media/reinvoice_time3.png
