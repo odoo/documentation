@@ -20,11 +20,3 @@ Getting SiteID and Password for  United States
 ==============================================
 
 You need to write to xmlrequests@dhl.com along with your full Account details like account number, region, address, etc. to get API Access.
-
-In meantime, for testing the solution, you can use the tests credentials as given in the demo data:
-
-- **SiteID**: CustomerTest
-
-- **Password**: alkd89nBV
-
-- **DHL Account Number**: 803921577
