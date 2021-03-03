@@ -37,7 +37,7 @@ edi: LANGUAGES += en,fr,es
 edi: CURRENT_LANG += fr
 edi: clean html
 
-static: extensions/odoo_theme/static extensions/odoo_theme/static/style.css
+static: extensions/odoo_theme/static/style.css
 	cp -r extensions/odoo_theme/static/* _build/html/_static/
 
 html: extensions/odoo_theme/static/style.css
@@ -48,7 +48,7 @@ html: extensions/odoo_theme/static/style.css
 fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
 
-extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/*.scss
+extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."
 	pysassc $(subst .css,.scss,$@) $@
 	@echo "Compilation finished."
