@@ -67,6 +67,36 @@ header.o_main_header{
             color: $gray;
         }
     }
+
+    .highlight-link {
+        cursor: pointer;
+        margin-bottom: 0;
+        display: inline-flex;
+        align-items: center;
+        a {
+            color: transparent;
+            text-decoration: none;
+            transition: .3s;
+            transition-delay: .5s;
+
+            &:before {
+                content:'\00d7';
+                display: inline-block;
+                font-weight: $fw_bold;
+                @include font-size($font-size-base);
+                width: 21px;
+                border-radius: 30px;
+                line-height: 21px;
+                background: $gray-light;
+                color: $white;
+                text-align: center;
+                margin: auto .5rem;
+            }
+        }
+        a:hover {
+            color: $gray
+        }
+    }
     .o_languages {
         width: 120px;
     }
