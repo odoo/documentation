@@ -12,6 +12,3 @@ Delivery Orders
    delivery/three_steps
    delivery/dropshipping
    delivery/label_type
-   delivery/packaging_type
-   delivery/delivery_countries
-   delivery/cancel_order
