@@ -76,7 +76,6 @@ Rule Types
 - **Cashier**: allows you to identify the cashier when entering the POS.
 - **Location**: allows you to identify the location on a transfer when multi-location is activated.
 - **Package**: allows you to identify packages on a transfer when packages are activated.
-- **Lot**: allows you to identify the lot number of a product on a transfer.
 - **Credit Card**: doesn’t need manual modification, exists for data from the Mercury module.
 - **Unit Product**: allows you to identify a product for both POS and transfers.
 

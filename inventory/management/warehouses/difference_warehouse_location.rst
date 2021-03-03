@@ -32,7 +32,3 @@ In Odoo, locations are structured hierarchically. You can structure your
 locations as a tree, dependent on a parent-child relationship. This
 gives you more detailed levels of analysis of your stock operations and
 the organization of your warehouses.
-
-.. seealso::
-    * :doc:`warehouse_creation`
-    * :doc:`location_creation`

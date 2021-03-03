@@ -47,9 +47,6 @@ been reserved from.
     :align: center
     :alt: View of a batch transfer list. Products to pick with their source and target locations
 
-.. note::
-   For more info about *Multi-Locations*, please refer to this doc: :doc:`../warehouses/location_creation`.
-
 Create a Batch Transfer from the Transfers List View
 ====================================================
 

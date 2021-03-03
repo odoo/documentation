@@ -14,8 +14,7 @@ multi-warehouses.
    :align: center
 
 You can then access your warehouses via :menuselection:`Inventory --> Configuration -->
-Warehouses`. Create the necessary warehouses following this :doc:`documentation
-<../warehouses/warehouse_creation>`.
+Warehouses`.
 Enter the warehouse which should be resupplied by another one. You will
 have the possibility to directly indicate through which warehouse it
 gets resupplied.
