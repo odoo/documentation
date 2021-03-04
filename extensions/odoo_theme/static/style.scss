@@ -11,7 +11,7 @@ div[aria-label="related navigation"] {
 }
 
 body {
-    a:not(:hover) {
+    a:not(:hover), a.o_logo {
         text-decoration: none !important;
     }
     dd {
@@ -46,11 +46,12 @@ header.o_main_header{
             margin-right: 3rem;
             > .o_logo {
                 img {
-                    margin-right: 0.2rem;
-                    vertical-align: text-bottom;
+                    margin-bottom: -2px;
+                    vertical-align: baseline;
                 }
                 span {
-                    font-size: 2rem;
+                    @include font-size($font-size-base);
+                    color: $o-violet;
                 }
             }
         }
