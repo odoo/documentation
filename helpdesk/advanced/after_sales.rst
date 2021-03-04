@@ -65,4 +65,3 @@ same way as if you were on the *Field Service* application.
 
 .. seealso::
    - `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
-   - :doc:`../../manufacturing/repair/repair`
