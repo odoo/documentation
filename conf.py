@@ -188,7 +188,7 @@ html_js_files = [
     'js/coa-valuation-anglo-saxon.js',
 ]
 html_css_files = [
-    'css/accounting.css',
+    #'css/accounting.css',
     'css/legal.css',
 ]
 
