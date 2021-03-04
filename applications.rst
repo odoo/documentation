@@ -22,7 +22,6 @@ Applications
    point_of_sale
    inventory
    manufacturing
-   quality
    barcode
    iot
    website
@@ -67,7 +66,6 @@ Applications
    point_of_sale
    inventory
    manufacturing
-   quality
    iot
    website
    ecommerce
