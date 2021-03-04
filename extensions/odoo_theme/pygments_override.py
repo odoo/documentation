@@ -15,12 +15,13 @@ class OdooStyle(Style):
     default_style = ''
 
     background_color = '#F8F8F8'
+    highlight_color = '#EAEAEA'
 
     styles = {
         Whitespace: '#bbbbbb',
         Comment: 'italic #008800',
         String: '#800080',
-        Number: 'bold #2e8b57',
+        Number: 'bold',
         Other: 'bg:#ffffe0',
         Keyword: '#2c2cff',
         Keyword.Reserved: 'bold #353580',
@@ -36,7 +37,7 @@ class OdooStyle(Style):
         Generic: '#2c2cff',
         Generic.Emph: '#008800',
         Generic.Error: '#d30202',
-        Error: 'bg:#e3d2d2 #a61717'
+        Error: 'bg:#ffe2e2 #a61717'
     }
 
 import types
