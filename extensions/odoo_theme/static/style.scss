@@ -563,6 +563,36 @@ header.o_main_header{
                     font-weight: $fw_semibold;
                 }
 
+                img:not([alt="green"]):not([alt="orange"]):not([alt="red"]) {
+                    border: 1px solid $gray-lighter;
+                    background: $white;
+                    padding: .5rem;
+                }
+
+                img:not([alt="green"]):not([alt="orange"]):not([alt="red"]), iframe {
+                    margin-bottom: 1rem;
+                }
+
+                p > img {
+                    border: none;
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+
+                .figure {
+                    .caption, .caption-text {
+                        font-weight: $fw_semibold;
+                        color: $gray;
+                    }
+                    .caption, .caption-text, .legend, .legend p{
+                        font-style: italic;
+                        margin: 0 auto;
+                    }
+                    &:not([class^="col"]) .legend {
+                        max-width: 60%;
+                    }
+                }
+
                 a.headerlink {
                     text-decoration: none;
                     visibility: hidden !important;
@@ -643,13 +673,6 @@ header.o_main_header{
             font-weight: 600;
         }
 
-        img.img-fluid:not([alt="green"]):not([alt="orange"]):not([alt="red"]) {
-            border: 1px solid $gray-lighter;
-            background: $white;
-            margin-bottom: 1rem;
-            padding: .5rem;
-        }
-
         .container .container:not([class^="col"]) {
             padding: 0;
             margin: 0;
@@ -657,20 +680,6 @@ header.o_main_header{
 
         ul, ol {
             text-align: left;
-        }
-
-        .figure {
-            .caption, .caption-text {
-                font-weight: $fw_semibold;
-                color: $gray;
-            }
-            .caption, .caption-text, .legend, .legend p{
-                font-style: italic;
-                margin: 0 auto;
-            }
-            &:not([class^="col"]) .legend {
-                max-width: 60%;
-            }
         }
 
         // restyle numbers on lists
