@@ -85,18 +85,16 @@
                     {# Custom landing page on the root of the documentation #}
                     {% include "layout_templates/homepage.html" %}
                 {% else %}
-                    <div class="row">
-                        <article class="doc-body mb-5">
-                            <!-- Beacon used by the Sphinx search to know where to look for a string -->
-                            <div role="main">
-                                {% block body %} {% endblock %}
-                            </div>
-                            {# Do not show the edition link for pages without content #}
-                            {% if github_link and not 'has_only_toc' in meta %}
-                                <a href="{{ github_link(mode='edit') }}" class="o_git_link"><i class="i-edit"></i> Edit on GitHub</a>
-                            {% endif %}
-                        </article>
-                    </div>
+                    <article class="doc-body">
+                        <!-- Beacon used by the Sphinx search to know where to look for a string -->
+                        <div role="main">
+                            {% block body %} {% endblock %}
+                        </div>
+                        {# Do not show the edition link for pages without content #}
+                        {% if github_link and 'has_only_toc' not in meta and pagename != 'search' %}
+                            <a href="{{ github_link(mode='edit') }}" class="o_git_link"><i class="i-edit"></i> Edit on GitHub</a>
+                        {% endif %}
+                    </article>
                 {% endif %}
             </div>
             <div id="mask"></div>

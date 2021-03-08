@@ -39,6 +39,7 @@ edi: clean html
 
 static: extensions/odoo_theme/static/style.css
 	cp -r extensions/odoo_theme/static/* _build/html/_static/
+	cp -r static/* _build/html/_static/
 
 html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."

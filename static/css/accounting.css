@@ -2,7 +2,15 @@
 main.index .toctree-wrapper > .row:first-child > .col-md-3 {
     margin: 0 !important;
 }
-
+.doc-aside {
+    border: 1px solid #d5d5d5;
+    background-color: #f8f8f8;
+    padding: 0 !important;
+    font-size: 14px;
+}
+.doc-aside p{
+    padding: .5rem;
+}
 .intro-list {
     margin-top: 1em;
 }
@@ -12,13 +20,16 @@ main.index .toctree-wrapper > .row:first-child > .col-md-3 {
 }
 
 .related {
-    background-color: hsl(219, 76%, 88%) !important;
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
 }
 .secondary {
-    background-color: hsl(219, 67%, 94%) !important;
+    background-color: hsl(180deg 67% 94%) !important;
+    transition: .3s;
 }
 .highlight-op {
-    background-color: hsl(219, 67%, 94%);
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
 }
 
 label:hover,
@@ -28,16 +39,20 @@ label:hover,
     cursor: pointer;
 }
 
-.accounts-table {
+/*.accounts-table {
     font-size: 90%;
-}
+}*/
 
 .accounts-table dl {
     margin: 0;
+    padding: .5rem 0;
 }
 
 .accounts-table h4, .accounts-table h5 {
-    font-weight: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem;
+
 }
 
 .accounts-table h4 {
@@ -50,10 +65,11 @@ label:hover,
 /* P&L & Balance Sheet columns */
 .accounts-table > div > div {
     flex: 1;
-    padding: 5px;
-    margin: 0 .5rem;
-    border: 2px solid #666;
-    border-radius: 3px;
+    padding: .5rem;
+}
+
+.accounts-table > div > div:first-child {
+    border-right: 1px solid #d5d5d5
 }
 
 /* sections */
@@ -64,19 +80,20 @@ label:hover,
 
 .accounts-table > div > div div > h5 {
     order: 99;
-
-    text-transform: uppercase;
-
-    padding: 0.3em 0;
-    border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 10 / 3px 0 3px;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    /*text-transform: uppercase;*/
+    /*padding: 0.3em 0;*/
+    /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 10 / 3px 0 3px;*/
 }
 .accounts-table > div > div div div > h5 {
     /* slightly smaller than normal 14px h5 size */
     font-size: 12.5px;
-    border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 5;
+    /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 5;*/
 }
 .accounts-table dt {
-    font-weight: normal;
+    font-weight: 700;
+    padding: 0 .5rem;
 }
 .accounts-table dt span {
     font-style: italic;
@@ -102,20 +119,21 @@ label:hover,
 
 @media (min-width: 992px) {
     .accounts-table, .doc-aside .highlighter-target {
-        font-size: 90%;
-        color: #888 !important;
+        /*font-size: 90%;*/
+        /*color: #8d8d8d !important;*/
     }
     .doc-aside .highlighter-target th {
-        font-weight: normal;
-        font-size: 110%;
+        font-weight: 400;
+        /*font-size: 110%;*/
     }
     .accounts-table .related, .doc-aside .highlighter-target .related {
-        background-color: transparent !important;
-        color: #eee !important;
+        /*background-color: #eee !important;*/
+        color: #7A436B !important;
+
     }
     .accounts-table .secondary, .doc-aside .highlighter-target .secondary {
-        background-color: transparent !important;
-        color: #aaa !important;
+        background-color: #eee !important;
+        color: #7A436B !important;
     }
 
     .chart-of-accounts .highlight-op,
@@ -133,7 +151,9 @@ label:hover,
         background-color: #030035;
     }
 }
-
+.entries-listing {
+    padding: .5rem;
+}
 .journal-entries .entries-listing p {
     font-style: italic;
 }
@@ -141,6 +161,7 @@ label:hover,
 #reconciliation .reconciliation-example div.buttons {
     display: flex;
     justify-content: center;
+    margin-bottom: 1rem;
 }
 #reconciliation .reconciliation-example div.buttons button {
     margin: 0 0.5em;
@@ -148,40 +169,41 @@ label:hover,
 
 @keyframes reconcile {
     0% {
-        font-size: 100%;
+        opacity: 1;
         padding-top: 5px;
         padding-bottom: 5px;
-        background-color: rgba(2, 0, 31, 0);
+        background-color: transparent;
     }
     60% {
-        background-color: rgba(2, 0, 31, 1);
+        background-color: hsl(317deg 16% 90%);
     }
     80% {
-        font-size: 100%;
+        opacity: 1;
         padding-top: 5px;
         padding-bottom: 5px;
     }
     100% {
-        font-size: 0%;
+        opacity: 0;
         padding-top: 0;
         padding-bottom: 0;
         display: none;
     }
 }
 .reconcile1 .invoice1, .reconcile1 .invoice1 td {
-    animation: reconcile 5s ease-in forwards;
+    animation: reconcile 2s;
 }
 .reconcile2 .invoice2, .reconcile2 .invoice2 td {
-    animation: reconcile 5s ease-in forwards;
+    animation: reconcile 2s;
 }
 
 .invoice1.reconciled, .invoice2.reconciled {
     display: none;
 }
 
-blockquote.highlights {
+blockquote.highlights, blockquote.highlights p{
     border: none;
-    margin-bottom: 0;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 

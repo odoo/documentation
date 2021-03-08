@@ -87,12 +87,12 @@
 
 //-- add icon
 
-@mixin inline-icomoon($icon-content, $margin) {
+@mixin inline-icomoon($icon-content, $margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $fw_regular) {
     content: '#{$icon-content}';
     font-family: '#{$icomoon-font-family}' !important;
-    @include font-size(1.5rem);
-    font-weight: $fw_regular;
-    vertical-align: middle;
+    @include font-size($font-size);
+    font-weight: $font-weight;
+    vertical-align: $v-align;
     margin: $margin;
 }
 

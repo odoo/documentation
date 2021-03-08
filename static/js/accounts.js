@@ -13,7 +13,7 @@
     var AccountsTable = React.createClass({
         render: function () {
             return React.DOM.div(
-                { style: { marginTop: '1em' } },
+                { style: { marginTop: '0' } },
                 React.DOM.div(// P&L
                     highlight(this.props.current === 'p-l'),
                     React.DOM.h4(null, "Profit & Loss"),
