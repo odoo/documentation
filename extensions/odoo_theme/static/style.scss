@@ -63,8 +63,10 @@ header.o_main_header{
     }
     .o_search {
         position: relative;
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            max-width: 500px;
+        }
         .btn{
             @include o-position-absolute($top: 50%, $right: 1rem);
             @include transform (translateY(-50%)) ;
@@ -82,9 +84,6 @@ header.o_main_header{
             padding: 0 1rem;
             @include font-size($font-size-secondary);
         }
-    }
-    .o_languages {
-        width: 120px;
     }
 }
 
