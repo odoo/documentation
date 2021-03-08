@@ -38,22 +38,27 @@ header.o_main_header{
     right: 0;
     background-color: $o-header-white;
     z-index: 10;
-    padding-right: 3rem;
+    @include media-breakpoint-up(lg) {
+        padding-right: 3rem;
+    }
     .o_logo_wrapper {
-        @include media-breakpoint-up(lg) {
+        padding: 0 1rem;
+        > .o_logo {
+            img {
+                margin-bottom: -2px;
+                vertical-align: baseline;
+            }
+            span {
+                @include font-size($font-size-base);
+                color: $o-violet;
+            }
+        }
+        @include media-breakpoint-up(xl) {
             width: $o-side-nav-width;
+        }
+        @include media-breakpoint-up(lg) {
             padding-left: 3rem;
             margin-right: 3rem;
-            > .o_logo {
-                img {
-                    margin-bottom: -2px;
-                    vertical-align: baseline;
-                }
-                span {
-                    @include font-size($font-size-base);
-                    color: $o-violet;
-                }
-            }
         }
     }
     .o_search {
@@ -283,6 +288,11 @@ header.o_main_header{
     margin-top: $o-header-height;
     display: flex;
     justify-content: space-between;
+    padding: 0 1rem;
+
+    @include media-breakpoint-up(lg) {
+        padding: 0;
+    }
 
     main {
         position: relative;
