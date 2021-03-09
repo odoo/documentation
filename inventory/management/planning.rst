@@ -7,4 +7,3 @@ Planning
    :glob:
 
    planning/scheduled_dates
-   planning/schedulers
