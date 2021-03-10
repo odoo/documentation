@@ -8,12 +8,20 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
+ifeq ($(CURRENT_LANG),en)
+  L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html
+else
+  L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html/$(CURRENT_LANG)
+endif
+
 # Rely on COMSPEC, which is a variable present in all Windows platforms, to determine the OS
 ifdef COMSPEC
   RM_CMD ?= del
 else
   RM_CMD ?= rm -rf
 endif
+
+#=== Standard rules ===#
 
 # In first position to build the documentation from scratch by default
 all: html
@@ -30,26 +38,40 @@ clean:
 	$(RM_CMD) extensions/odoo_theme/static/style.css
 	@echo "Cleaning finished."
 
-# edi: SPHINXOPTS += -A collapse_menu=True  # If needed, comment rather than setting False
-edi: VERSIONS += 12.0,13.0,14.0,master
-edi: CANONICAL_VERSION += 14.0
-edi: LANGUAGES += en,fr,es
-edi: CURRENT_LANG += fr
-edi: clean html
-
-static: extensions/odoo_theme/static/style.css
-	cp -r extensions/odoo_theme/static/* _build/html/_static/
-	cp -r static/* _build/html/_static/
-
 html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/html
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(L10N_HTML_BUILD_DIR)
 	@echo "Build finished."
 
-fast: SPHINXOPTS += -A collapse_menu=True
-fast: html
+# TODO update sphinx-intl command to take args
+l10n:
+	@echo "Generating translatable files..."
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) $(BUILD_DIR)/gettext
+	@echo "Generation finished."
+	@echo "Localizing translation strings..."
+	sphinx-intl update -p $(BUILD_DIR)/gettext -l es_AR -l pt_BR
+	@echo "Localization finished."
 
 extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."
 	pysassc $(subst .css,.scss,$@) $@
 	@echo "Compilation finished."
+
+#=== Development and debug rules ===#
+
+fast: SPHINXOPTS += -A collapse_menu=True
+fast: html
+
+static: extensions/odoo_theme/static/style.css
+	cp -r extensions/odoo_theme/static/* _build/html/_static/
+	cp -r static/* _build/html/_static/
+
+# TODO REMOVE ME BEFORE MERGE
+edi:
+	make clean html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
+lang:
+	make clean
+	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
+	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=fr
+	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=es
+
