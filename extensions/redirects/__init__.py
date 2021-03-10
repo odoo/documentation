@@ -12,7 +12,7 @@ TEMPLATE = '<html><head><meta http-equiv="refresh" content="0; url=%s"/></head><
 logger = logging.getLogger(__name__)
 
 def generate_redirects(app):
-    path = os.path.join(app.srcdir, app.config.redirects_file)
+    path = os.path.join(app.confdir, app.config.redirects_file)
     if not os.path.exists(path):
         logger.warning("Could not find redirects file at '%s'", path)
         return

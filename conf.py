@@ -142,7 +142,7 @@ supported_languages = {
 }
 
 # The specifications of redirect rules used by the redirects extension.
-redirects_file = '../redirects.txt'
+redirects_file = 'redirects.txt'
 
 #=== Options for HTML output ===#
 
