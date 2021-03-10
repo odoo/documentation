@@ -31,7 +31,7 @@ language = None
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'index'
+master_doc = 'content/index'
 
 # List of patterns, relative to source directory, that match files and directories to ignore when
 # looking for source files.
@@ -39,6 +39,7 @@ exclude_patterns = [
     'locale',
     'README.*',
     'bin', 'include', 'lib',
+    'odoo',
 ]
 
 # The RST text role to use when the role is not specified. E.g.: `example`.
