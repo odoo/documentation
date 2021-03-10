@@ -130,13 +130,12 @@ github_project = 'documentation-user'
 
 locale_dirs = ['locale/']
 supported_languages = {
-    'de': 'German',
+    'de': 'Deutsch',
     'en': 'English',
-    'es': 'Spanish',
-    'fr': 'French',
-    'hr': 'Croatian',
-    'nl': 'Dutch',
-    'pt_BR': 'Portuguese (BR)',
+    'es': 'Espanol',
+    'fr': 'Français',
+    'nl': 'Nederlands',
+    'pt_BR': 'Português (BR)',
     'uk': 'Ukrainian',
     'zh_CN': 'Chinese',
 }
