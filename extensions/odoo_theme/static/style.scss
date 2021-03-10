@@ -38,28 +38,35 @@ header.o_main_header{
     right: 0;
     background-color: $o-header-white;
     z-index: 10;
-    padding-right: 3rem;
+    @include media-breakpoint-up(lg) {
+        padding-right: 3rem;
+    }
     .o_logo_wrapper {
-        @include media-breakpoint-up(lg) {
+        padding: 0 1rem;
+        > .o_logo {
+            img {
+                margin-bottom: -2px;
+                vertical-align: baseline;
+            }
+            span {
+                @include font-size($font-size-base);
+                color: $o-violet;
+            }
+        }
+        @include media-breakpoint-up(xl) {
             width: $o-side-nav-width;
+        }
+        @include media-breakpoint-up(lg) {
             padding-left: 3rem;
             margin-right: 3rem;
-            > .o_logo {
-                img {
-                    margin-bottom: -2px;
-                    vertical-align: baseline;
-                }
-                span {
-                    @include font-size($font-size-base);
-                    color: $o-violet;
-                }
-            }
         }
     }
     .o_search {
         position: relative;
-        width: 90%;
-        max-width: 500px;
+        width: 100%;
+        @include media-breakpoint-up(lg) {
+            max-width: 500px;
+        }
         .btn{
             @include o-position-absolute($top: 50%, $right: 1rem);
             @include transform (translateY(-50%)) ;
@@ -78,9 +85,6 @@ header.o_main_header{
             @include font-size($font-size-secondary);
         }
     }
-    .o_languages {
-        width: 120px;
-    }
 }
 
 //------------------------------------------------------------------------------
@@ -94,6 +98,10 @@ header.o_main_header{
     position: fixed;
     top:$o-header-height;
     left:-100%;
+    &.o-mobile-show {
+        left:0;
+        width: 100%;
+    }
     @include media-breakpoint-up(lg) {
         left:0;
     }
@@ -244,8 +252,10 @@ header.o_main_header{
             top: $o-header-height;
             right: 0;
             width: $o-on-page-width;
-            height: calc(100% - #{$o-header-height});
+            height: 100%;
+            max-height: calc(100vh - #{$o-header-height});
             padding: 3rem 3rem 3rem 0;
+            overflow-y: auto;
         }
 
         h3 {
@@ -279,8 +289,25 @@ header.o_main_header{
 
 #wrap {
     margin-top: $o-header-height;
-    display: flex;
-    justify-content: space-between;
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    code {
+        display: inline-block;
+        color: inherit;
+        background: $doc_code-bg;
+        padding: 0 .3rem;
+        margin: 0.1rem;
+        border: 1px solid $gray-light;
+        overflow-wrap: anywhere;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
 
     main {
         position: relative;
@@ -288,13 +315,14 @@ header.o_main_header{
 
         @include media-breakpoint-up(lg) {
             left: $o-side-nav-width;
-            width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
+            max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1.5rem)) - #{$o-on-page-width});
             padding: 3rem;
+            margin: 0;
         }
 
         &.index, &.doc-toc, &.has_code_col {
             @include media-breakpoint-up(lg) {
-                width: calc(100vw - #{$o-side-nav-width} );
+                max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1.5rem)) );
             }
         }
 
@@ -380,18 +408,8 @@ header.o_main_header{
         &.has_code_col {
 
             article.doc-body {
-                padding-left: 1rem;
-                padding-right: 1rem;
-
                 > *{
                   max-width: 100%;
-                }
-
-                section {
-                    position: relative;
-                    display:block;
-                    float: left;
-                    width: 100%;
                 }
 
                 @include media-breakpoint-up(lg) {
@@ -405,20 +423,18 @@ header.o_main_header{
 
 
                     .o_git_link {
-                        top: .5rem;
-                        right: calc(43% + 1rem);
+                        right: calc(#{$o-codecol-width} + 2rem);
                     }
                     section {
 
                         > * {
-                            width: 54.633333%;
-                            /* max-width: 600px; */
+                            width: $o-halfpage-width;
                             float: left;
                             clear: left;
                         }
 
                         > h1 {
-                            max-width: calc(54% - 120px);
+                            max-width: calc(#{$o-halfpage-width} - 120px);
                         }
 
                         > h1, > h2, > h3, > h4, > h5, > h6 {
@@ -427,7 +443,7 @@ header.o_main_header{
                         }
 
                         .doc-aside {
-                            width: 43%;
+                            width: $o-codecol-width;
                             float: none;
                             clear: none;
                             margin-left: 57%;
@@ -493,16 +509,12 @@ header.o_main_header{
 
                 ul {
                     list-style: none;
-                }
-            }
+                    padding-left: 0;
 
-            code {
-                display: inline-block;
-                color: inherit;
-                background: $doc_code-bg;
-                padding: 0 .3rem;
-                margin: 0.1rem;
-                border: 1px solid $gray-light;
+                    li {
+                        padding-bottom: .5rem;
+                    }
+                }
             }
 
             /* dt {
@@ -512,7 +524,7 @@ header.o_main_header{
             } */
             // Search items highlighted
             dt:target, span.highlighted {
-                background-color: lighten($color-alpha, 50%);
+                background-color: lighten($warning, 15%);
             }
 
             section {
@@ -528,7 +540,7 @@ header.o_main_header{
                     color: $o-violet-dark;
                     font-weight: $fw_bold;
                     max-width: calc(100% - 120px);
-                    + p {
+                    + *:not(h2) {
                         margin-top: 1rem;
                     }
                 }
@@ -551,12 +563,42 @@ header.o_main_header{
                     font-weight: $fw_semibold;
                 }
 
+                img:not([alt="green"]):not([alt="orange"]):not([alt="red"]) {
+                    border: 1px solid $gray-lighter;
+                    background: $white;
+                    padding: .5rem;
+                }
+
+                img:not([alt="green"]):not([alt="orange"]):not([alt="red"]), iframe {
+                    margin-bottom: 1rem;
+                }
+
+                p > img {
+                    border: none;
+                    padding: 0;
+                    margin-bottom: 0;
+                }
+
+                .figure {
+                    .caption, .caption-text {
+                        font-weight: $fw_semibold;
+                        color: $gray;
+                    }
+                    .caption, .caption-text, .legend, .legend p{
+                        font-style: italic;
+                        margin: 0 auto;
+                    }
+                    &:not([class^="col"]) .legend {
+                        max-width: 60%;
+                    }
+                }
+
                 a.headerlink {
                     text-decoration: none;
                     visibility: hidden !important;
                     &:after {
                         content: '#{$i-link}';
-                        font-family: $icomoon-font-family !important;
+                        font-family: icomoon !important;
                         @include font-size($font-size-base);
                         vertical-align: middle;
                         margin: 0 1rem 0 0;
@@ -631,13 +673,6 @@ header.o_main_header{
             font-weight: 600;
         }
 
-        img.img-fluid:not([alt="green"]):not([alt="orange"]):not([alt="red"]) {
-            border: 1px solid $gray-lighter;
-            background: $white;
-            margin-bottom: 1rem;
-            padding: .5rem;
-        }
-
         .container .container:not([class^="col"]) {
             padding: 0;
             margin: 0;
@@ -645,20 +680,6 @@ header.o_main_header{
 
         ul, ol {
             text-align: left;
-        }
-
-        .figure {
-            .caption, .caption-text {
-                font-weight: $fw_semibold;
-                color: $gray;
-            }
-            .caption, .caption-text, .legend, .legend p{
-                font-style: italic;
-                margin: 0 auto;
-            }
-            &:not([class^="col"]) .legend {
-                max-width: 60%;
-            }
         }
 
         // restyle numbers on lists

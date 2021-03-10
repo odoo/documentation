@@ -61,7 +61,11 @@
 
 {% block content %}
     <div id="wrap">
-
+        <nav class="navbar navbar-expand-lg navbar-light d-lg-none" aria-label="Toggle OffCanvas">
+            <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </nav>
         {% set main_classes = [] %}
         {% if pagename == master_doc %}  {# The current page is the homepage #}
             {% set main_classes = main_classes + ['index'] %} {# TODO ANVFE should be 'o_index' #}
@@ -79,7 +83,7 @@
             {% set main_classes = main_classes + ['doc-toc'] %}  {# TODO EDI do you use this ?#}
         {% endif %}
 
-        <main class="{{ ' '.join(main_classes) }}">
+        <main class="container-fluid {{ ' '.join(main_classes) }}">
             <div id="o_content">
                 {% if pagename == master_doc %}
                     {# Custom landing page on the root of the documentation #}

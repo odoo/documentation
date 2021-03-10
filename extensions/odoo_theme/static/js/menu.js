@@ -43,4 +43,14 @@
         }
     };
 
+    /**
+     * Mobile: Toggle open/close sidebar on click of nav button (&& on swipe left to right?).
+     *
+     *
+     * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
+     * the `show` (Bootstrap) class.
+     * Also, the deepest TOC entry receives the `o_deepest_active_toc_entry` class, and its child
+     * Sidebar receives the `o-mobile-show` class.
+     */
+
 })();
