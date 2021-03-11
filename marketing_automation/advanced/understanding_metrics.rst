@@ -74,8 +74,3 @@ for the last 15 days.
 .. note::
    Every time a new record is added to the *Target* model, it will be automatically added to the
    workflow, and, it will start the workflow from the beginning (parent action).
-
-.. seealso::
-   - :doc:`../overview/automate_actions`
-   - :doc:`../overview/segment`
-   - :doc:`../overview/test`
