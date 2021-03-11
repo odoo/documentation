@@ -75,7 +75,6 @@ Applications
    social_marketing
    sms_marketing
    marketing_automation
-   events
    survey
    expense/expense
    studio
