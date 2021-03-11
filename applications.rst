@@ -60,7 +60,6 @@ Applications
    subscriptions
    project
    timesheets
-   planning
    fsm
    sign
    point_of_sale
