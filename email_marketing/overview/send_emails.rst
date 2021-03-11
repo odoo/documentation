@@ -83,5 +83,4 @@ Manage campaigns
 
 .. seealso::
    - :doc:`../../discuss/advanced/email_servers`
-   - :doc:`../../social_marketing/overview/campaigns`
 

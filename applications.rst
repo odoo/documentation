@@ -72,7 +72,6 @@ Applications
    helpdesk
    live_chat
    email_marketing
-   social_marketing
    sms_marketing
    marketing_automation
    survey
