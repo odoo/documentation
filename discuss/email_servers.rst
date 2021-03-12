@@ -194,12 +194,6 @@ Set up different dedicated servers for transactional and mass mails
 To do this, one should first enable developer mode and then enter Settings -> Technical -> Outgoing e-mail servers. There you have to create two e-mail MTA server settings. One for transactional e-mails and one for mass mail servers. Be sure to mark the priority of transactional e-mail servers as lower number as the mass email servers.
 
 Now, go to :menuselection:`Email Marketing --> Settings` and enable *Dedicated Server*.
-
-[image below]
-.. image:: media/IMAGE_NAME.png
-   :align: center
-   :alt: Email Marketing settings page emphasizing the option dedicated server in Odoo Email Marketing
-
 | With these settings, Odoo uses the server with the lower priority for transactional emails, and the server here 
   selected for mass mails.
 | Note that in this case, you have to set your domain's Sender Policy Framework (SPF) records to include both 
