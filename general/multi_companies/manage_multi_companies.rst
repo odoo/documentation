@@ -122,7 +122,7 @@ at an invoice/bills level or at a sales/purchase orders level.
    :alt: View of the purchase created on JS Store US from JS Store Belgium in Odoo
 
 .. note::
-   Products have to be configured as *Can be sold*.
+   Products have to be configured as *Can be sold* and must be shared between the companies.
 
 .. tip::
    Remember to test all workflows as an user other than the administrator.
