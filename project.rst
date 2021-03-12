@@ -8,4 +8,3 @@ Project
    :titlesonly:
 
    project/tasks
-   project/planning
