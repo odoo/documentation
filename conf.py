@@ -333,7 +333,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
 
 def tag_toctrees(app, doctree, docname):
-    """Add a 'is-toc-page' metadata entry to all documents containing only a toctree node"""
+    """Add a 'has_only_toc' metadata entry to all documents containing only a toctree node"""
     # document
     #   section
     #     title
@@ -348,4 +348,6 @@ def tag_toctrees(app, doctree, docname):
     if 'toctree-wrapper' not in compound['classes']:
         return
 
-    app.env.metadata[docname]['has_only_toc'] = True
+    if 'show_content' not in app.env.metadata[docname]:
+        # If page contains custom content: we have to show github link and local toc
+        app.env.metadata[docname]['has_only_toc'] = True

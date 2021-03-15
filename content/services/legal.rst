@@ -1,7 +1,10 @@
 
 :custom-css: legal.css
+:show_content:
+:hide_page_toc:
 
-.. ^^: cheat to have a full-width table as if this was a real toc page
+.. show_content makes Legal clickable on the global ToC
+.. hide_page_toc hides the local page toc and widens the body place on the page
 
 =====
 Legal

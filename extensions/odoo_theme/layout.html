@@ -79,8 +79,10 @@
             {% set main_classes = main_classes + meta['classes'].split() %}
         {% endif %}
 
-        {% if 'has_only_toc' in meta %}  {# The page only contains a toctree #}
-            {% set main_classes = main_classes + ['doc-toc'] %}  {# TODO EDI do you use this ?#}
+        {% if 'has_only_toc' in meta or 'hide_page_toc' in meta %}
+            {# The page only contains a toctree or the page toc is hidden #}
+            {# TODO EDI rename doc-toc class to sthg more meaningful explaining the result (body taking full page) #}
+            {% set main_classes = main_classes + ['doc-toc'] %}  {# Increase body width, taking the place of the page toc #}
         {% endif %}
 
         <main class="container-fluid {{ ' '.join(main_classes) }}">
@@ -104,7 +106,7 @@
             <div id="mask"></div>
         </main>
         {# VFE TODO Check if this condition is still needed ??? #}
-        {% if pagename not in toc %}
+        {% if pagename not in toc and 'hide_page_toc' not in meta %}
             <aside id="o_page_toc" class="o_page_toc">
                 {% include "layout_templates/page_toc.html" %}
             </aside>
