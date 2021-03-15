@@ -1,15 +1,15 @@
 =====================
-Manage Multi Websites
+Manage Multi-Websites
 =====================
 
 .. image:: media/multi_website04.png
   :align: center
 
-Odoo’s Multi-Websites opens up broad possibilities of diversification and
-customer segmentation for your business. A multiplied audience and
+Odoo’s Multi-Website feature provides a ton of diversification and customer segmentation 
+possibilities for your business. A multiplied audience and
 boosted revenue are now just a few clicks away!
 
-Each website can work in a fully independent way, with its theme,
+Each website can work in a fully-independent fashion, with its very own theme,
 branding, domain name, header & footer, pages, languages, products, blog
 posts, forum, slides, events, live chat channels, etc. Let’s go for a
 tour!
@@ -18,17 +18,17 @@ Setup
 =====
 
 To create a new website, go to :menuselection:`Website --> Configuration --> Settings`.
-The button, *Create a new website*, lays in the first section.
+The button, *Create A New Website*, can be found in the first section.
 
 
 
 .. image:: media/multi_website05.png
   :align: center
 
-In the upcoming prompt, set a name for your new website and a specific
-domain name. Leave empty to publish the new website under the default
-domain of your Odoo database. You can later set some country groups to
-redirect visitors to it using Geo IP.
+In the upcoming prompt, you'll need to set a name for your new website and specific
+domain. Leave the field empty to publish the new website under the default
+domain of your Odoo database. You can set some country groups to
+redirect visitors to it using Geo IP whenever you'd like.
 
 .. image:: media/multi_website01.png
   :align: center
@@ -37,10 +37,10 @@ Then, select a theme. This new website might have an entirely different
 purpose or audience than the first one. So feel free to go for a
 different theme!
 
-Once the theme is selected, you can start to build the homepage of your
+Once the theme is selected, you can start to build the homepage for your
 website. Follow the purple drops; they will help you in the first steps.
 
-.. image:: media/multi_website08.png
+.. image:: media/updated-website-builder.png
   :align: center
 
 
@@ -48,14 +48,14 @@ website. Follow the purple drops; they will help you in the first steps.
    If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database
    (``CNAME``) and to authorize it Odoo-side. See :doc:`domain_name`.
 
-Create the menu
+Create the Menu
 ===============
 
 The new website has a default menu with all the installed applications.
 To edit it, click :menuselection:`Pages --> Edit Menu`. Moving forward you only edit
 the menu of the current website.
 
-Switch from one website to another
+Switch From One Website to Another
 ==================================
 
 
@@ -72,21 +72,21 @@ requested to sign in.
    (e.g., ``/shop/myproduct``). If this URL is not used, you will be redirected to a 404 page but
    prompted to create a new page from there.
 
-Add features
+Add Features
 ============
 
 The website apps you install (e.g., Slides, Blogs) are made available on
-all your websites. You can, of course, keep them hidden in one website by
+all your websites. Of course, you can keep them hidden in one website by
 removing the menu item.
 
-Each website comes with a high range of specific options in the
+Each website comes with a plethora of specific options in the
 settings. First, select the website to configure.
 
 .. image:: media/multi_website15.png
   :align: center
 
-Then, take a look at the options flagged with the earth icon. It means
-they only impact the very website you are working on.
+Then, take a look at the options flagged with the Earth icon. That means
+they only impact the website you are currently working on.
 
 .. image:: media/multi_website12.png
   :align: center
@@ -107,10 +107,10 @@ You can, for instance, set specific :
 
 The other options are global and apply to all your websites.
 
-Manage domain names
+Manage Domain Names
 ===================
 
-As said earlier, your websites can either share the same domain name or
+As mentioned earlier, your websites can either share the same domain name or
 use a specific one. If you share it and want to adapt the content per
 region, set country groups in the setting of each website. Visitors will
 be redirected to the right website using GeoIP.
@@ -126,7 +126,7 @@ be redirected to the right website using GeoIP.
 .. seealso::
    - :doc:`domain_name`
 
-Customize the visitor experience
+Customize the Visitor Experience
 ================================
 
 
@@ -139,14 +139,14 @@ blogs, events, etc.) as the number of available options is higher there.
 .. image:: media/multi_website14.png
   :align: center
 
-Publish specific content per website
+Publish Specific Content per Website
 ------------------------------------
 
 
 Like static pages, any content created from the front-end (product, blog
-post, etc.) is always only published in the current website. You can
+post, etc.) is always published on the current website only. You can
 change that from the edit form view in the backend and leave the
-*Website* field blank. This will publish it in all the websites.
+*Website* field blank. This will publish it on all your websites.
 
 .. image:: media/multi_website06.png
   :align: center
@@ -170,80 +170,80 @@ websites*:
 
 .. note::
     When you create the record from the backend and publish it,
-    typically a product or an event, it is made available in all websites.
+    typically a product or an event, it is made available on all websites.
 
-Publish a page in all websites
+Publish a Page on All Websites
 ------------------------------
 
-A new static page is created and only made available in the current
+A new static page is created and only made available on the current
 website. You can duplicate it to other websites from 
 :menuselection:`Website --> Configuration --> Pages`. To do so, leave the *Website* field empty.
 
-If you want to duplicate it in just one other website, duplicate the
+If you want to duplicate it on just one other website, duplicate the
 page and set the new website.
 
 .. image:: media/multi_website09.png
   :align: center
 
 When you edit the page again, the change only affects the current
-website. A new page is duplicated and tied up to the website.
-The original page still being linked to all websites.
+website. A new page is duplicated and tied to the website.
+The original page is still linked to all websites.
 
 .. tip:: 
-      By grouping pages by URL in the page manager, you quickly find
+      Grouping pages by URL in the page manager, you quickly find
       the original page behind each edited page.
 
 .. image:: media/multi_website10.png
   :align: center
 
-Multi-companies
+Multi-Companies
 ===============
 
 Each website can be linked to a specific company of your system, in a
-multi-companies environment.
+multi-company environment.
 
 .. image:: media/multi_website16.png
   :align: center
 
-With such a configuration, only company-related data appear on the
+With such a configuration, only company-related data appears on the
 website (products, jobs, events, etc.).
 
 Website editors can only view and edit the pages of the records they
-have access to, typically the ones belonging to their current company
-(and to their subsidiaries, or child companies in Odoo language). And so
-is it for visitors.
+have access to, which are typically the ones belonging to their current company
+(and to their subsidiaries, or child companies in Odoo language). And the same
+goes for visitors, as well.
 
 .. note::
-      If websites are multi-companies, you don’t change company when switching websites. To change the company and see the related content, use the company selector in the menu.
+      If websites are multi-companies, you don’t change the company when switching websites. To change the company and see the related content, use the company selector in the menu.
 
 .. image:: media/multi_website02.png
   :align: center
 
-Configure your eCommerce website
+Configure Your eCommerce Website
 ================================
 
-eCommerce is a crucial feature in the multi-websites environment. We made it
-so that the entire flow can be customized to fit the very audience of
+eCommerce is a crucial feature in the multi-website environment. We made it
+so the entire flow can be customized to fit the audience of
 each website.
 
-Products only available on one website
+Products Only Available on One Website
 --------------------------------------
 
-We already saw earlier how to publish a specific record in only one
+We already saw how to publish a specific record on only one
 website. You will find the \*Website\* field in the eCommerce tab of the
-product edit form. Empty means available in all websites.
+product edit form. Empty means available on all websites.
 
 .. image:: media/multi_website13.png
   :align: center
 
-Products available on *some* websites
+Products Available on *Some* Websites
 -------------------------------------
 
-To make a product available on some websites, but not all of them, you
+To make a product available on some websites (but not all of them), you
 should duplicate the product for each website.
 
 If you need a unique reference to manage in your inventory, you should
-install *Manufacturing\ and create *Kits* BoMs (bills of materials).
+install *Manufacturing* and create *Kits* BoMs (bills of materials).
 Each kit will link each published “virtual” product to the main
 reference managed in your inventory. That way, any item sold from your
 website will be converted into the storable item in the delivery order.
@@ -257,52 +257,52 @@ Prices per Product* in Website settings.
 Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional
 pricelists. See :doc:`../../ecommerce/maximizing_revenue/pricing`.
 
-If you need help. Select a website to make a pricelist only available on
-this website.
+If you need help, select a website to make a pricelist only available on
+that website.
 
 .. image:: media/multi_website07.png
   :align: center
 
-Leaving the field empty means that you make it work in all websites if
-*Selectable* is selected. Otherwise, it makes it only available for
+Leaving the field empty means you want it on all websites, if
+*Selectable* is selected. Otherwise, it's only available for
 backend operations of Sales and Point of Sale applications.
 
-Payment Acquirers and Delivery Methods
---------------------------------------
+Payment Acquirers & Delivery Methods
+-------------------------------------
 
-By default, published payment acquirers and delivery methods are deployed in all websites.
-You could already use specific payment acquirers per country using Geo
+By default, published payment acquirers and delivery methods are deployed on all websites.
+You can use specific payment acquirers per country using Geo
 IP by defining countries in their configuration. Now you can also do it
 per website by filling in the *Website* field.
 
-Customer accounts
+Customer Accounts
 -----------------
 
-There is a setting to choose how to manage customer accounts in Website
+There is an option to choose how to manage customer accounts in Website
 settings. You can either allow customers to use one account through all
 the websites or compel them to create one account for each website. This
 last option is convenient if your websites shouldn’t be related to each
-other in the visitor mind.
+other in the visitor's mind.
 
 .. image:: media/multi_website17.png
   :align: center
 
-Technical hints for customization
+Technical Hints for Customization
 =================================
 
-If you want to publish custom objects on the website, here are a few
-tips to make it work with multi websites:
+If you want to publish custom objects on your website, here are a few
+tips to make it work with multi-websites:
 
--  Sitemap: don’t forget the domain in the route to only publish
-       available records in each website’s sitemap.
+*Sitemap*:
+Don’t forget the domain in the route to only publish available records in each website’s sitemap.
 
--  Access: you should call the method
-       *can_access_from_current_website* in the controller to make
-       sure the visitor can see a record in the current website.
+*Access*:
+You should call the method *can_access_from_current_website* in the controller to make
+sure the visitor can see a record in the current website.
 
--  Search: when a list of records is displayed, don’t forget to specify
-       the domain to only display records available for the current
-       website.
+*Search*:
+When a list of records is displayed, don’t forget to specify the domain to only display records 
+available for the current website.
 
 .. image:: media/multi_website11.png
   :align: center
