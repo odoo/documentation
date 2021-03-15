@@ -112,5 +112,7 @@ def add_doc_link(app, pagename, templatename, context, doctree):
     source_suffix = next(iter(source_suffix))
     # FIXME: odoo/odoo has a doc/ prefix which is incorrect for this
     # project, how to unify? Add new setting?
+    # FIXME ANVFE: use a config directive to specify the content folder
+    # instead of hardcoding it here ?
     context['github_link'] = lambda mode='edit': make_github_link(
-        app, '%s%s' % (pagename, source_suffix), mode=mode)
+        app, 'content/%s%s' % (pagename, source_suffix), mode=mode)
