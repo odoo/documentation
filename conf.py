@@ -292,9 +292,10 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         _alternate_versions = app.config.versions and app.config.versions.split(',') or []
         context['alternate_versions'] = [
             (_alternate_version, _build_url(_version=_alternate_version))
-            for _alternate_version in _alternate_versions
-            if _alternate_version != version
-            and (_alternate_version != 'master' or pagename.startswith('developer'))
+            for _alternate_version in sorted(_alternate_versions, reverse=True)
+            if _alternate_version != version and (
+                _alternate_version != 'master' or pagename.startswith('developer')
+            )
         ]
 
     def _localize():

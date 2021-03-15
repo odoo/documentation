@@ -1,8 +1,8 @@
 
 
-=======================
-Developer Documentation
-=======================
+=========
+Developer
+=========
 
 
 .. toctree::
