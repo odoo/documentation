@@ -43,6 +43,18 @@ html: extensions/odoo_theme/static/style.css
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(L10N_HTML_BUILD_DIR)
 	@echo "Build finished."
 
+# NOTE: latexmk needed for latex build
+# NOTE: on linux MINT:
+# installed texlive-fonts-recommended texlive-latex-extra texlive-generic-recommended texlive-fonts-extra
+# FIXME ANVFE: the cp command is needed if we want the pdf files to be available in local
+# NOTE VFE: should be done after the make html
+latexpdf:
+	@echo "Starting build..."
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b latex $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/latex
+	$(MAKE) -C $(BUILD_DIR)/latex
+	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/services
+	@echo "Build finished."
+
 # TODO update sphinx-intl command to take args
 l10n:
 	@echo "Generating translatable files..."
