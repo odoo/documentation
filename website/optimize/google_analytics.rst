@@ -1,25 +1,25 @@
 =======================================================
-How to track your website's traffic in Google Analytics
+How to Track Your Website's Traffic in Google Analytics
 =======================================================
 
 To follow your website's traffic with Google Analytics:
 
 - `Create a Google Analytics account <https://www.google.com/analytics/>`__ if 
-  you don't have any.
+  you don't have one.
 
 - Go through the creation form and accept the conditions to get the tracking ID.  
 
     .. image:: media/google_analytics_account.png
         :align: center
 
-- Copy the tracking ID to insert it in Odoo.
+- Copy the tracking ID and insert it in Odoo.
 
     .. image:: media/google_analytics_tracking_id.png
         :align: center
 
-- Go to the *Configuration* menu of your Odoo's Website app.
-  In the settings, turn on Google Analytics and paste the tracking ID.
-  Then save the page.
+- Go to the *Configuration* menu of Odoo's Website app.
+  In the settings, turn on Google Analytics, and paste the tracking ID.
+  Then, save the page.
 
       .. image:: media/google_analytics_settings.png
         :align: center
