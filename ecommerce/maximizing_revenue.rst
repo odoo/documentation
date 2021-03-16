@@ -1,6 +1,6 @@
-===================
-Maximize my revenue
-===================
+==================
+Maximizing revenue
+==================
 
 .. toctree::
    :titlesonly:
@@ -10,7 +10,3 @@ Maximize my revenue
    maximizing_revenue/reviews
    maximizing_revenue/pricing
    maximizing_revenue/promo_code
-
-
-
-

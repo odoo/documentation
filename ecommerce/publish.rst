@@ -1,6 +1,6 @@
-===================
-Launch my website
-===================
+=======
+Website
+=======
 
 .. toctree::
    :titlesonly:

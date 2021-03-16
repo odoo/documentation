@@ -1,6 +1,6 @@
-=================
-Get started
-=================
+===============
+Getting started
+===============
 
 .. toctree::
    :titlesonly:
