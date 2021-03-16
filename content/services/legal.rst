@@ -2,6 +2,7 @@
 :custom-css: legal.css
 :show_content:
 :hide_page_toc:
+:orphan:
 
 .. show_content makes Legal clickable on the global ToC
 .. hide_page_toc hides the local page toc and widens the body place on the page
