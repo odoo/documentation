@@ -183,7 +183,6 @@ html_js_files = [
     'js/reconciliation.js',
     'js/misc.js',
     'js/inventory.js',
-    'js/coa-valuation.js',
     'js/coa-valuation-continental.js',
     'js/coa-valuation-anglo-saxon.js',
 ]

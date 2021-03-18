@@ -1,3 +1,11 @@
+function findAncestor(element, name) {
+    name = name.toUpperCase();
+    while(element && element.nodeName.toUpperCase() !== name) {
+        element = element.parentElement;
+    };
+    return element;
+}
+
 function createAtom(val, options) {
     var watchers = {};
     var validator = options && options.validator || function () { return true; };

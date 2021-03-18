@@ -13,12 +13,12 @@
             document.querySelector('.journal-entries'));
     });
     document.addEventListener('DOMContentLoaded', function () {
-        var entries_node = document.getElementById('journal-entries');
-        if (!entries_node) { return; }
+        var entries_section = findAncestor(document.querySelector('.journal-entries'), 'section');
+        if (!entries_section) { return; }
 
         var controls = document.createElement('div');
         controls.setAttribute('id', 'entries-control');
-        entries_node.insertBefore(controls, entries_node.lastElementChild);
+        entries_section.insertBefore(controls, entries_section.lastElementChild);
 
         data.reset(entries.first());
     });
@@ -153,7 +153,7 @@
             explanation: [
                 "Revenues increase by $100",
                 "A tax to pay at the end of the month of $9",
-                "The customer owns you $109",
+                "The customer owes $109",
                 "The inventory is decreased by $50 (shipping of the goods)",
                 "The cost of goods sold decreases the gross profit by $50"
             ],
@@ -174,7 +174,7 @@
             ],
             explanation: [
                 "The company receives $109 in cash",
-                "The customer owns you $109 less"
+                "The customer owes $109 less"
             ],
             configuration: [
                 "Cash: defined on the journal used when registering the payment, fields Default Credit Account and Default Debit Account",
