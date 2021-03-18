@@ -175,21 +175,11 @@ html_favicon = os.path.join(html_theme_path[0], html_theme, 'static', 'img', 'fa
 html_static_path = ['static']
 html_add_permalinks = '¶'  # Sphinx < 3.5
 html_permalinks = True  # Sphinx >= 3.5
-html_js_files = [
-    'js/atom.js',
-    'js/accounts.js',
-    'js/chart-of-accounts.js',
-    'js/entries.js',
-    'js/reconciliation.js',
-    'js/misc.js',
-    'js/inventory.js',
-    'js/coa-valuation-continental.js',
-    'js/coa-valuation-anglo-saxon.js',
-]
-html_css_files = [
-    #'css/accounting.css',
-    'css/legal.css',
-]
+# NOTE: only use for global files
+# Page-specific css/js files can be defined with
+# custom-js/custom-css metadata directives.
+html_js_files = []
+html_css_files = []
 
 # Monkeypatch PHP lexer to not require <?php
 lexers['php'] = PhpLexer(startinline=True)

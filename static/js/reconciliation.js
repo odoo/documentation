@@ -1,4 +1,5 @@
 (function () {
+    // NOTE VFE: memento.rst
     document.addEventListener('DOMContentLoaded', function () {
         var $rec = $('#reconciliation .reconciliation-example');
         if (!$rec.length) { return; }

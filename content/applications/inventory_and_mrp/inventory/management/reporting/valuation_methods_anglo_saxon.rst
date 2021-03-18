@@ -1,4 +1,6 @@
 :code-column:
+:custom-css: accounting.css
+:custom-js: coa-valuation-anglo-saxon.js;misc.js
 
 ==========================================================
 How to do an inventory valuation? (Anglo-Saxon Accounting)

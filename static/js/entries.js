@@ -1,7 +1,8 @@
 /* global Immutable, React */
-/* global createAtom */
+/* global createAtom, findAncestor */
 (function () {
     'use strict';
+    // NOTE VFE: memento.rst
 
     var data = createAtom();
     data.addWatch('chart', function (k, m, prev, next) {

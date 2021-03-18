@@ -11,16 +11,25 @@
 {% endblock %}
 
 {% block scripts %}
-    {# Before the super call to be loaded before custom files using React & Immutable #}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"
-        integrity="sha512-myCdDiGJRYrvRb/VuJ67ljifYTJdc1jdEvL4c4ftX9o3N6EAnmD83c/7l2/91RCINZ7c8w21tiXDT7RDFjdc3g=="
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/prefixfree@1.0.0/prefixfree.min.js"
+    {% if 'custom-js' in meta %}
+        {# Before the custom files using React & Immutable #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"
+            integrity="sha512-myCdDiGJRYrvRb/VuJ67ljifYTJdc1jdEvL4c4ftX9o3N6EAnmD83c/7l2/91RCINZ7c8w21tiXDT7RDFjdc3g=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react-with-addons.min.js"
+            integrity="sha512-wsnDgOxfyn4lhblRMHPMuJh+9CnLcwcisda1zLRGNWKh6OiQynebYTyRZYgH+eWLEdNTKak0OD2GAd/S51UhTw=="
+            crossorigin="anonymous"></script>
+        <script src="{{ pathto('_static/js/atom.js', 1) }}"></script>
+        {% set js_files = meta['custom-js'].split(';') %}
+        {% for js_file in js_files %}
+            {% set link = '_static/js/' + js_file %}
+            <script src="{{ pathto(link, 1) }}"></script>
+        {% endfor %}
+    {% endif %}
+    {# FIXME ANVFEDI Do we really need prefixfree ? It triggers a reload of css files two more times/page #}
+    <!-- <script src="https://cdn.jsdelivr.net/npm/prefixfree@1.0.0/prefixfree.min.js"
         integrity="sha256-a1jYldRqTzpGqk63nmXXjh/zPYp7Sjxp9iUYhNbYPXI="
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react-with-addons.min.js"
-        integrity="sha512-wsnDgOxfyn4lhblRMHPMuJh+9CnLcwcisda1zLRGNWKh6OiQynebYTyRZYgH+eWLEdNTKak0OD2GAd/S51UhTw=="
-        crossorigin="anonymous"></script>
+        crossorigin="anonymous"></script> -->
     {{ super() }}
     {# TODO EDI boostrap beta cdn ??? Isn't there a stable CDN ? It looks like this cdn won't exist forever :D #}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
