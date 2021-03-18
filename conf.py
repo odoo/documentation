@@ -213,29 +213,29 @@ latex_additional_files = ['static/latex/odoo.sty']
 # Grouping the document tree into LaTeX files. List of tuples
 # (source start file, target name, title, author, documentclass [howto, manual, or own class]).
 latex_documents = [
-    ('services/legal/terms/enterprise_tex', 'odoo_enterprise_agreement.tex',
+    ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement.tex',
      'Odoo Enterprise Subscription Agreement', '', 'howto'),
-    ('services/legal/terms/partnership_tex',
+    ('legal/terms/partnership_tex',
      'odoo_partnership_agreement.tex', 'Odoo Partnership Agreement', '', 'howto'),
-    ('services/legal/terms/terms_of_sale',
+    ('legal/terms/terms_of_sale',
      'terms_of_sale.tex', 'Odoo Terms of Sale', '', 'howto'),
 
-    ('services/legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_fr.tex',
+    ('legal/terms/i18n/enterprise_tex_fr', 'odoo_enterprise_agreement_fr.tex',
      'Odoo Enterprise Subscription Agreement (FR)', '', 'howto'),
-    ('services/legal/terms/i18n/partnership_tex_fr',
+    ('legal/terms/i18n/partnership_tex_fr',
      'odoo_partnership_agreement_fr.tex', 'Odoo Partnership Agreement (FR)', '', 'howto'),
-    ('services/legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_fr.tex',
+    ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_fr.tex',
      u'Conditions Générales de Vente Odoo', '', 'howto'),
 
-    ('services/legal/terms/i18n/enterprise_tex_nl', 'odoo_enterprise_agreement_nl.tex',
+    ('legal/terms/i18n/enterprise_tex_nl', 'odoo_enterprise_agreement_nl.tex',
      'Odoo Enterprise Subscription Agreement (NL)', '', 'howto'),
 
-    ('services/legal/terms/i18n/enterprise_tex_de', 'odoo_enterprise_agreement_de.tex',
+    ('legal/terms/i18n/enterprise_tex_de', 'odoo_enterprise_agreement_de.tex',
      'Odoo Enterprise Subscription Agreement (DE)', '', 'howto'),
 
-    ('services/legal/terms/i18n/enterprise_tex_es', 'odoo_enterprise_agreement_es.tex',
+    ('legal/terms/i18n/enterprise_tex_es', 'odoo_enterprise_agreement_es.tex',
      'Odoo Enterprise Subscription Agreement (ES)', '', 'howto'),
-    ('services/legal/terms/i18n/partnership_tex_es',
+    ('legal/terms/i18n/partnership_tex_es',
      'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
 ]
 

@@ -52,7 +52,7 @@ latexpdf:
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b latex $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/latex
 	$(MAKE) -C $(BUILD_DIR)/latex
-	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/services
+	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/
 	@echo "Build finished."
 
 # TODO update sphinx-intl command to take args

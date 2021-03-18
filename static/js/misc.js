@@ -6,6 +6,7 @@
     });
 
     function highlight() {
+        // NOTE VFE: used by double-entry.rst
         $('.highlighter-list').each(function () {
             var $this = $(this),
                 $target = $($this.data('target'));
@@ -33,6 +34,7 @@
      *  - automatically select first control on startup
      */
     function alternatives() {
+        // NOTE VFE: used by double-entry.rst & valuation_methods pages
         $('dl.alternatives').each(function (index) {
             var $list = $(this),
                 $contents = $list.children('dd');
@@ -65,6 +67,7 @@
         });
     }
     function checks_handling() {
+        // NOTE VFE: used by memento.rst
         var $section = $('.checks-handling');
         if (!$section.length) { return; }
 

@@ -1,6 +1,7 @@
 /* global Immutable, React */
 /* global createAtom */
 (function () {
+    // NOTE VFE: used for double_entry.rst file
     'use strict';
 
     var data = createAtom();
