@@ -160,6 +160,38 @@ A few tips to improve your screenshots:
    Resizing the window's width is the most important step to do as Odoo's responsive design
    automatically resizes all fields to match the window's width.
 
+.. _contributing/media-files:
+
+Media files
+-----------
+
+A **media filename**:
+
+- is written in **lower-case letters**
+- is **relevant** to the media's content. (E.g., :file:`screenshot-tips.gif`.)
+- separates its words with a **hyphen** ``-`` (E.g., :file:`awesome-filename.png`.)
+
+Each document has its own folder in which the media files are located. The folder's name must be the
+same as the document's filename.
+
+For example, the document :file:`doc_filename.rst` refers to two images that are placed in the
+folder ``doc_filename``.
+
+::
+
+  ├── section
+  │   └── doc_filename
+  │   │   └── screenshot-tips.gif
+  │   │   └── awesome-filename.png
+  │   └── doc_filename.rst
+
+.. note::
+   Previously, image filenames would mostly be named with numbers (e.g., :file:`feature01.png`) and
+   placed in a single ``media`` folder. While it is advised not to name your *new* images in that
+   fashion, it is also essential **not to rename unchanged files**, as doing this would double the
+   weight of renamed image files on the repository. They will eventually all be replaced as the
+   content referencing those images is updated.
+
 .. _contributing/alt-tags:
 
 ALT tags
