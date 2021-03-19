@@ -1,3 +1,4 @@
+/* global _prepareAccordion */ //see utils.js
 (function ($) {
 
     document.addEventListener('DOMContentLoaded', () => {
@@ -9,6 +10,9 @@
         // Allow to respectively highlight and expand the TOC entries and their related TOC
         // entry list whose page is displayed.
         _flagActiveTocEntriesAndLists();
+
+        // Show hidden menu when the css classes have been properly specified
+        this.navigationMenu.removeAttribute('hidden');
     });
 
     /**

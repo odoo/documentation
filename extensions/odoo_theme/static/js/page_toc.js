@@ -1,3 +1,4 @@
+/* global _prepareAccordion */ //see utils.js
 (function ($) {
 
     // Customize the page TOC
