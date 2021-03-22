@@ -132,12 +132,12 @@ locale_dirs = ['locale/']
 supported_languages = {
     'de': 'Deutsch',
     'en': 'English',
-    'es': 'Espanol',
+    'es': 'Español',
     'fr': 'Français',
     'nl': 'Nederlands',
     'pt_BR': 'Português (BR)',
-    'uk': 'Ukrainian',
-    'zh_CN': 'Chinese',
+    'uk': 'українська',
+    'zh_CN': '简体中文',
 }
 
 # The specifications of redirect rules used by the redirects extension.
