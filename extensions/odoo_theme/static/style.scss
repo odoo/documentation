@@ -17,6 +17,12 @@ body {
     dd {
         margin-left: 1rem;
     }
+    // This fixes the scroll position on all elements, including refs
+    :target {
+        &:before {
+            @include scroll-padding()
+        }
+    }
 }
 
 .hidden {
@@ -528,14 +534,6 @@ header.o_main_header{
             }
 
             section {
-            // This fixes the scroll position // BUT creates issues when buttons or links from the previous section are behind it
-            // padding-top: $o-header-height;
-            // margin-top: -$o-header-height; */
-            // adding a :before works better;
-                &:before {
-                    @include scroll-padding()
-                }
-
                 > h1 {
                     color: $o-violet-dark;
                     font-weight: $fw_bold;
