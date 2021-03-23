@@ -1,78 +1,62 @@
-===================================================
-How to manage orders paid with payment acquirers
-===================================================
+=========================================
+Manage orders paid with Payment Acquirers
+=========================================
 
-Odoo confirms orders automatically as soon as the payment is authorized 
-by a payment acquirer. This triggers the delivery.
-If you invoice based on ordered quantities,
-you are also requested to invoice the order.
+The moment a payment is officially authorized by a Payment Acquirer, Odoo *automatically* confirms
+the order, which triggers the delivery. And, if you invoice based on ordered quantities, you are
+requested to invoice the order, as well.
 
+Let’s take a closer look at how to manage orders paid with Payment Acquirers.
 
-What are the payment status
-===========================
-At anytime, the salesman can check the transaction status from the order.
+Checking the status of a payment
+================================
 
-.. image:: media/payment_transaction.png
-    :align: center
+To check the status of a payment, go to :menuselection:`Website --> Orders --> Orders`. Then, simply
+click on the order you wish to check on.
 
-* *Draft*: transaction under processing.
+Once you are on the Sales Order page, you will find the payment is confirmed with an automatic note
+in the *Chatter*.
 
-* *Pending*: the payment acquirer keeps the transaction on hold and you 
-  need to authorize it from the acquirer interface.
+.. image:: payment_acquirer/chatter-transaction.png
+   :align: center
+   :alt: payment is confirmed in the chatter of sales order
 
-* *Authorized*: the payment has been authorized but not yet captured.
-  In Odoo, the order is already confirmed. Once the delivery done, you
-  can capture the amount from the acquirer interface (or from Odoo if you use
-  Authorize.net).
+If the user decides to create an invoice, the payment is directly reconciled. This note in
+the *Chatter* includes a link to the Payment entry, which contains various details about the
+transaction, along with a link to the related Journal Entry.
 
-* *Done*: the payment is authorized and captured. The order has been confirmed.
-
-* *Error*: an error has occured during the transaction. 
-  The customer needs to retry the payment.
-  The order is still in draft.
-
-* *Cancelled*: when the customer cancels the payment in the payment acquirer form.
-  They are taken back to Odoo in order to modify the order.
+.. image:: payment_acquirer/transaction-info.png
+   :align: center
+   :alt: page with details surrounding the specific transaction
 
 .. note:: Specific messages are provided to your customers for every
-   payment status, when they are redirected to Odoo after the transaction.
-   To edit such messages, go to the *Messages* tab of the payment
+   payment status whenever they are redirected to Odoo after the transaction.
+   To edit these messages, go to the *Messages* tab of the payment
    method.
 
+Automatically generate invoices at order
+========================================
 
-Auto-validate invoices at order
-===============================
+When the order is confirmed, you can also choose to have an invoice automatically issued
+and paid. This fully-automated feature is designed for businesses that invoice
+orders right away.
 
-When the order is confirmed you can also have an invoice automatically issued
-and paid. This fully-automated made for businesses that invoice 
-orders straight on.
+To do automatically generate invoices at order:
+  - Go to :menuselection:`Website --> Configuration --> Settings --> Invoicing`.
+  - Then, under the **Invoicing Policy** option, select *Invoice what is ordered*.
+  - Then activate *Automatic Invoices* and *Save*.
 
-.. image:: media/payment_invoice.png
-    :align: center
+.. image:: payment_acquirer/automatic-invoice.png
+   :align: center
+   :alt: example of automatic invoice
 
-.. note::
-   If you choose this mode you are requested to select a payment journal in order to record payments
-   in your books. This payment is automatically reconcilied with the invoice, marking it as paid.
-   Select your **bank account** if you get paid immediately on your bank account. If you don't you
-   can create a specific journal for the payment acquirer (type = Bank). That way, you can track
-   online payments in an intermediary account of your books until you get paid into your bank
-   account (see :doc:`../../../general/payment_acquirers/payment_acquirers`).
+Capture payment after the delivery
+==================================
 
+If the acquirer handling the payment is configured to capture amounts manually, the order is
+confirmed, but the amount is kept on hold. Once the delivery is processed, you can capture the
+payment from the related Sales Order.
 
-Capture the payment after the delivery
-======================================
-With this mode, the order is confirmed but the amount is kept on hold. 
-Once the delivery processed, you can capture the payment from Odoo.
-This mode is only available with Authorize.net.
-
-.. image:: media/payment_capture_mode.png
-    :align: center
-
-To capture the payment, open the transaction from the order.
-Then click *Capture Transaction*.
-
-.. image:: media/payment_capture.png
-    :align: center
-
-With other payment acquirers, you can manage the capture in
-their own interfaces, not from Odoo.
+.. seealso::
+   - :doc:`../../../general/payment_acquirers/payment_acquirers`
+   - :ref:`Payment Acquirers: Place a hold on a card <payment_acquirers/capture_amount>`
