@@ -181,8 +181,8 @@ and then enter your PAC username and PAC password.
    Here is a SAT certificate you can use if you want to use the *Test
    Environment* for the Mexican Accounting Localization.
 
-   - `Certificate`_
-   - `Certificate Key`_
+   :download:` Certificate <files/certificate.cer>`
+   :download:` Certificate Key <files/certificate.key>`
    - **Password:** 12345678a
 
 7. Configure the tag in sales taxes
@@ -661,5 +661,3 @@ FAQ
 .. _`given by the SAT`: http://sat.gob.mx/informacion_fiscal/factura_electronica/Documents/GuiaAnexo20DPA.pdf
 .. _`Anexo 24`: http://www.sat.gob.mx/fichas_tematicas/buzon_tributario/Documents/Anexo24_05012015.pdf
 .. _`official information here`: http://www.sat.gob.mx/fichas_tematicas/declaraciones_informativas/Paginas/declaracion_informativa_terceros.aspx
-.. _`Certificate`: ../../_static/files/certificate.cer
-.. _`Certificate Key`: ../../_static/files/certificate.key
