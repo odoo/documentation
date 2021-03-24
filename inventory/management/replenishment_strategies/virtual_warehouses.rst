@@ -6,12 +6,11 @@ Configuration
 =============
 
 In order to be able to resupply from another warehouse, you need to
-activate \*multi-warehouses\* and \*multi-step routes\*. Storage
-locations will be automatically activated when activating
-multi-warehouses.
+activate \*multi-step routes\*.
 
-.. image:: media/virtual_warehouses_01.png
+.. image:: media/virtual-warehouses-settings.png
    :align: center
+   :alt: Enable Multi-Step Routes in an Odoo database's settings
 
 You can then access your warehouses via :menuselection:`Inventory --> Configuration -->
 Warehouses`.
