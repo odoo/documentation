@@ -88,10 +88,12 @@
         {% endif %}
 
         <main class="container-fluid {{ ' '.join(main_classes) }}">
-            <div id="o_content">
+
                 {% if pagename == master_doc %}
+                <div id="o_content">
                     {# Custom landing page on the root of the documentation #}
                     {% include "layout_templates/homepage.html" %}
+                </div>
                 {% else %}
                     <article class="doc-body">
                         <!-- Beacon used by the Sphinx search to know where to look for a string -->
@@ -104,8 +106,6 @@
                         {% endif %}
                     </article>
                 {% endif %}
-            </div>
-            <div id="mask"></div>
         </main>
         {# VFE TODO Check if this condition is still needed ??? #}
         {% if pagename not in toc and 'hide_page_toc' not in meta %}
