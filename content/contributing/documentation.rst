@@ -1,5 +1,5 @@
-
 :show_content:
+:hide_page_toc:
 
 =================================
 Contributing to the documentation

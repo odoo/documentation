@@ -1,4 +1,5 @@
 :show_content:
+:hide_page_toc:
 
 ============
 Applications

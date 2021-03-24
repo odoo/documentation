@@ -83,7 +83,7 @@
             {% set main_classes = main_classes + meta['classes'].split() %}
         {% endif %}
 
-        {% if 'has_only_toc' in meta or 'hide_page_toc' in meta %}
+        {% if 'hide_page_toc' in meta %}
             {% set main_classes = main_classes + ['o_fullwidth_page'] %}
         {% endif %}
 
@@ -101,7 +101,7 @@
                             {% block body %} {% endblock %}
                         </div>
                         {# Do not show the edition link for pages without content #}
-                        {% if github_link and 'has_only_toc' not in meta and pagename != 'search' %}
+                        {% if github_link and pagename != 'search' %}
                             <a href="{{ github_link(mode='edit') }}" class="o_git_link"><i class="i-edit"></i> Edit on GitHub</a>
                         {% endif %}
                     </article>
