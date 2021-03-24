@@ -28,7 +28,7 @@
     /**
      * Entirely hide the local tree of contents.
      */
-    const _hidePageToc = () => this.pageToc.style.visibility = 'hidden';
+    const _hidePageToc = () => this.pageToc.style.display = 'none';
 
     /**
      * Add the relevant classes on the TOC entries (and lists) whose section is focused.
