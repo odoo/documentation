@@ -84,9 +84,7 @@
         {% endif %}
 
         {% if 'has_only_toc' in meta or 'hide_page_toc' in meta %}
-            {# The page only contains a toctree or the page toc is hidden #}
-            {# TODO EDI rename doc-toc class to sthg more meaningful explaining the result (body taking full page) #}
-            {% set main_classes = main_classes + ['doc-toc'] %}  {# Increase body width, taking the place of the page toc #}
+            {% set main_classes = main_classes + ['o_fullwidth_page'] %}
         {% endif %}
 
         <main class="container-fluid {{ ' '.join(main_classes) }}">
