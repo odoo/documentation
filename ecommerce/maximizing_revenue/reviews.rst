@@ -1,10 +1,10 @@
 ===============================
-How to enable comments & rating
+How To Enable Comments & Ratings
 ===============================
 
-Publishing and monitoring customer experience will help you gain the trust
-of new customers and better engage with your community. In 2 clicks, allow
-your customer to share their feedback!
+Publishing and monitoring the customer experience will help you gain the trust
+of new customers *and* engage better with your community. In just 2 clicks, you can allow
+your customers to share their feedback!
 
 .. image:: ./media/comment_post.png
    :align: center
@@ -12,48 +12,38 @@ your customer to share their feedback!
 Setup
 =====
 
-Activate comments & rating from the *Customize* menu of the product web page.
+Activate comments & ratings from the *Customize* menu of the product web page.
 
-.. image:: ./media/comment_setup.png
+.. image:: ./media/customize-discussion.png
    :align: center
 
 .. note::
     Visitors must log in to share their comments. Make sure they are able to
     do so (see Portal documentation).
 
-Review the posts in real time
+Review The Posts In Real-Time
 =============================
 
-Whenever a post is published, the product manager and all the product followers
-get notified in their Inbox (*Discuss* menu).
-
-.. image:: ./media/comment_new.png
-   :align: center
+Whenever a post is published, the product manager (and all the product followers)
+get notified in their email inbox.
 
 .. note::
-    By default the user who created the product is automatically set as follower.
+    By default, the user who created the product is automatically set as a follower.
 
-Click the product name to open the detail form and review the comment (in the
-product discussion thread).
+To review the comment, you can find it in the *Chatter* of the product detail form *and* and in
+the *Discuss* application.
 
 .. image:: ./media/comment_inbox.png
    :align: center
 
-Moderate & unpublish
-====================
+Moderate Comments
+=================
 
-You can easily moderate by using the chatter, either in the product detail form
-or on the web page.
+You can easily view comments by using the *Chatter*, either in the product detail form
+or on the web page, itself.
 
-To unpublish the post, open the product web page and click the *Published* button
-to turn it red (*Unpublished*). 
+To change the visibility of the post, open the product web page and click the *Visible* button
+to turn it red (*Employees Only*).
 
-.. image:: ./media/comment_unpublish.png
-   :align: center
-
-..tip::
-    You can access the web page from the detail form by clicking the *Published*
-    smart button (and vice versa).
-
-.. image:: ./media/comment_webpage.png
+.. image:: ./media/employees-only.png
    :align: center
