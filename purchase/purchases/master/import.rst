@@ -30,5 +30,4 @@ See below a template of the columns used.
 .. image:: media/import02.png
     :align: center
 
-:download:`Click here to download the template
-<../../../_static/example_files/vendor_pricelists_template.csv>`
+:download:`Click here to download the template <files/vendor_pricelists_template.csv>`

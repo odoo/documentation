@@ -186,8 +186,8 @@ and then enter your PAC username and PAC password.
    Here is a SAT certificate you can use if you want to use the *Test
    Environment* for the Mexican Accounting Localization.
 
-   - :download:`Certificate <../../../_static/files/certificate.cer>`
-   - :download:`Certificate Key <../../../_static/files/certificate.key>`
+   - :download:`Certificate <files/certificate.cer>`
+   - :download:`Certificate Key <files/certificate.key>`
    - **Password:** ``12345678a``
 
 

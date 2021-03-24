@@ -174,10 +174,10 @@ with columns like "Field/External ID". The following two CSV files give you an e
 and their Categories.
 
 :download:`CSV file for categories
-<../../_static/example_files/External_id_3rd_party_application_product_categories.csv>`.
+<files/External_id_3rd_party_application_product_categories.csv>`.
 
 :download:`CSV file for Products
-<../../_static/example_files/External_id_3rd_party_application_products.csv>`.
+<files/External_id_3rd_party_application_products.csv>`.
 
 What can I do if I have multiple matches for a field?
 -----------------------------------------------------
@@ -198,7 +198,7 @@ The tags should be separated by a comma without any spacing. For example, if you
 to be linked to both tags 'Manufacturer' and 'Retailer' then you will encode "Manufacturer,Retailer"
 in the same column of your CSV file.
 
-:download:`CSV file for Manufacturer, Retailer <../../_static/example_files/m2m_customers_tags.csv>`
+:download:`CSV file for Manufacturer, Retailer <files/m2m_customers_tags.csv>`
 
 
 How can I import a one2many relationship (e.g. several Order Lines of a Sales Order)?
@@ -211,19 +211,16 @@ any information in the fields relative to the order. As an example, here is
 ``purchase.order_functional_error_line_cant_adpat.CSV`` file of some quotations you can import,
 based on demo data.
 
-:download:`File for some Quotations
-<../../_static/example_files/purchase.order_functional_error_line_cant_adpat.csv>`.
+:download:`File for some Quotations <files/purchase.order_functional_error_line_cant_adpat.csv>`.
 
 The following CSV file shows how to import purchase orders with their respective purchase order
 lines:
 
-:download:`Purchase orders with their respective purchase order lines
-<../../_static/example_files/o2m_purchase_order_lines.csv>`.
+:download:`Purchase orders with their respective purchase order lines <files/o2m_purchase_order_lines.csv>`.
 
 The following CSV file shows how to import customers and their respective contacts:
 
-:download:`Customers and their respective contacts
-<../../_static/example_files/o2m_customers_contacts.csv>`.
+:download:`Customers and their respective contacts <files/o2m_customers_contacts.csv>`.
 
 Can I import several times the same record?
 -------------------------------------------
@@ -259,7 +256,7 @@ must be unique across all the records of all objects, so it's a good practice to
 As an example, suppose you have a SQL database with two tables you want to import: companies and
 persons. Each person belong to one company, so you will have to recreate the link between a person
 and the company he work for. (If you want to test this example, here is a :download:`dump of such a
-PostgreSQL database <../../_static/example_files/database_import_test.sql>`)
+PostgreSQL database <files/database_import_test.sql>`)
 
 We will first export all companies and their "External ID". In PSQL, write the following command:
 
