@@ -13,3 +13,4 @@ Taxes
    taxes/B2B_B2C
    taxes/cash_basis_taxes
    taxes/vat_validation
+   taxes/temporary_taxes
