@@ -58,7 +58,7 @@ the product.
 Transfer from One Unit to Another
 =================================
 
-Buy in the Pruchase UoM
+Buy in the Purchase UoM
 -----------------------
 
 In the *Purchase* application, *Create* a new request for quotation

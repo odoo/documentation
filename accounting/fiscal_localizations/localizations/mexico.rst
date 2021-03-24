@@ -249,8 +249,8 @@ digital certificate, your key and your password. To finish, click on *Save and C
    If you still do not have one of the contracted PACs and you want to test electronic invoicing you
    can use the following SAT test certificates:
 
-   - :download:`Certificate <../../../_static/files/certificate.cer>`
-   - :download:`Certificate Key <../../../_static/files/certificate.key>`
+   - :download:`Certificate <files/certificate.cer>`
+   - :download:`Certificate Key <files/certificate.key>`
    - **Password:** ``12345678a``
 
    You must also configure the company with a real address within Mexico (including all fields) and
