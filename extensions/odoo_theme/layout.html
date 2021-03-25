@@ -55,6 +55,11 @@
 
 {% block header %}
     {# shown when js has properly set all the classes on the toc elements #}
+    <noscript>
+        <nav class="o_side_nav border-end">
+            {% include "layout_templates/menu.html" %}
+        </nav>
+    </noscript>
     <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
         {% include "layout_templates/menu.html" %}
     </nav>
@@ -72,7 +77,7 @@
         </nav>
         {% set main_classes = [] %}
         {% if pagename == master_doc %}  {# The current page is the homepage #}
-            {% set main_classes = main_classes + ['index'] %} {# TODO ANVFE should be 'o_index' #}
+            {% set main_classes = main_classes + ['index'] %} {# TODO EDI should be 'o_index' #}
         {% endif %}
 
         {% if 'code-column' in meta %}  {# The page contains a 'memento' (side dynamic block) #}
@@ -83,31 +88,26 @@
             {% set main_classes = main_classes + meta['classes'].split() %}
         {% endif %}
 
-        {% if 'has_only_toc' in meta or 'hide_page_toc' in meta %}
-            {# The page only contains a toctree or the page toc is hidden #}
-            {# TODO EDI rename doc-toc class to sthg more meaningful explaining the result (body taking full page) #}
-            {% set main_classes = main_classes + ['doc-toc'] %}  {# Increase body width, taking the place of the page toc #}
+        {% if 'hide_page_toc' in meta %}
+            {% set main_classes = main_classes + ['o_fullwidth_page'] %}
         {% endif %}
 
         <main class="container-fluid {{ ' '.join(main_classes) }}">
-            <div id="o_content">
-                {% if pagename == master_doc %}
-                    {# Custom landing page on the root of the documentation #}
-                    {% include "layout_templates/homepage.html" %}
-                {% else %}
-                    <article class="doc-body">
-                        <!-- Beacon used by the Sphinx search to know where to look for a string -->
-                        <div role="main">
-                            {% block body %} {% endblock %}
-                        </div>
-                        {# Do not show the edition link for pages without content #}
-                        {% if github_link and 'has_only_toc' not in meta and pagename != 'search' %}
-                            <a href="{{ github_link(mode='edit') }}" class="o_git_link"><i class="i-edit"></i> Edit on GitHub</a>
-                        {% endif %}
-                    </article>
-                {% endif %}
-            </div>
-            <div id="mask"></div>
+            {% if pagename == master_doc %}
+                {# Custom landing page on the root of the documentation #}
+                {% include "layout_templates/homepage.html" %}
+            {% else %}
+                <article id="o_content" class="doc-body">
+                    <!-- Beacon used by the Sphinx search to know where to look for a string -->
+                    <div role="main">
+                        {% block body %} {% endblock %}
+                    </div>
+                    {# Do not show the edition link for pages without content #}
+                    {% if github_link and pagename != 'search' %}
+                        <a href="{{ github_link(mode='edit') }}" class="o_git_link"><i class="i-edit"></i> Edit on GitHub</a>
+                    {% endif %}
+                </article>
+            {% endif %}
         </main>
         {# VFE TODO Check if this condition is still needed ??? #}
         {% if pagename not in toc and 'hide_page_toc' not in meta %}

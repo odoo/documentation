@@ -17,6 +17,12 @@ body {
     dd {
         margin-left: 1rem;
     }
+    // This fixes the scroll position on all elements, including refs
+    :target {
+        &:before {
+            @include scroll-padding()
+        }
+    }
 }
 
 .hidden {
@@ -320,7 +326,7 @@ header.o_main_header{
             margin: 0;
         }
 
-        &.index, &.doc-toc, &.has_code_col {
+        &.index, &.o_fullwidth_page, &.has_code_col {
             @include media-breakpoint-up(lg) {
                 max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1.5rem)) );
             }
@@ -374,7 +380,7 @@ header.o_main_header{
 
         // "in between" pages (Applications / Contributing)
 
-        &.doc-toc {
+        &.o_fullwidth_page {
             .toctree-wrapper {
                 margin-top: 1.5rem;
                 > ul {
@@ -493,7 +499,7 @@ header.o_main_header{
 
             .o_git_link {
                 @include font-size($font-size-secondary);
-                @include o-position-absolute($top: calc(#{$o-header-height} + 1rem), $right: 1rem);
+                @include o-position-absolute($top: 10px, $right: 1rem);
                 i {
                     margin-right: .2rem;
                 }
@@ -528,19 +534,11 @@ header.o_main_header{
             }
 
             section {
-            // This fixes the scroll position // BUT creates issues when buttons or links from the previous section are behind it
-            // padding-top: $o-header-height;
-            // margin-top: -$o-header-height; */
-            // adding a :before works better;
-                &:before {
-                    @include scroll-padding()
-                }
-
                 > h1 {
                     color: $o-violet-dark;
                     font-weight: $fw_bold;
                     max-width: calc(100% - 120px);
-                    + *:not(h2) {
+                    + * {
                         margin-top: 1rem;
                     }
                 }
@@ -548,15 +546,19 @@ header.o_main_header{
                 > h2 {
                     font-family: $font-family-serif;
                     color: $gray-darker;
-                    margin-top: .5rem;
-                    margin-bottom: 1.5rem;
+                    margin-top: 3rem;
+                    margin-bottom: 1rem;
                     padding-bottom: .3rem;
                     border-bottom: 1px solid $gray-light;
                 }
 
                 > h3 {
-                    color: $gray-darkest;
+                    margin-top: 2rem;
                     font-weight: $fw_bold;
+                }
+
+                > h4 {
+                    margin-top: 2rem;
                 }
 
                 > h4, > h5, > h6 {
@@ -608,12 +610,10 @@ header.o_main_header{
                         @include o-transition(all, .1s)
                     }
                 }
-                h1, h2, h3, h4, h5, h6, dt, caption, p.caption, div.code-block-caption {
-                    &:hover > a.headerlink:after{
+                *:hover > a.headerlink:after{
                     // This makes permalinks only visible on hover.
                         visibility: visible;
                         opacity: 1;
-                    }
                 }
             }
 
@@ -660,6 +660,7 @@ header.o_main_header{
                 text-align: center;
                 color: $white;
                 font-weight: $fw_extrabold;
+                font-style: normal;
                 margin: 0 .2rem;
             }
         }

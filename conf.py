@@ -132,12 +132,12 @@ locale_dirs = ['locale/']
 supported_languages = {
     'de': 'Deutsch',
     'en': 'English',
-    'es': 'Espanol',
+    'es': 'Español',
     'fr': 'Français',
     'nl': 'Nederlands',
     'pt_BR': 'Português (BR)',
-    'uk': 'Ukrainian',
-    'zh_CN': 'Chinese',
+    'uk': 'українська',
+    'zh_CN': '简体中文',
 }
 
 # The specifications of redirect rules used by the redirects extension.
@@ -250,8 +250,6 @@ def setup(app):
 
     app.connect('html-page-context', _generate_alternate_urls)
 
-    app.connect('doctree-resolved', tag_toctrees)  # TODO ANVFE review + typo
-
 
 def _generate_alternate_urls(app, pagename, templatename, context, doctree):
     """ Add keys of required alternate URLs for the current document in the rendering context.
@@ -325,24 +323,3 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
     _canonicalize()
     _versionize()
     _localize()
-
-
-def tag_toctrees(app, doctree, docname):
-    """Add a 'has_only_toc' metadata entry to all documents containing only a toctree node"""
-    # document
-    #   section
-    #     title
-    #     compound@toctree-wrapper
-    #     ....
-    if not len(doctree.children) <= 1:
-        return
-    section = doctree.children[0]
-    if len(section.children) < 2:
-        return
-    compound = section.children[1]
-    if 'toctree-wrapper' not in compound['classes']:
-        return
-
-    if 'show_content' not in app.env.metadata[docname]:
-        # If page contains custom content: we have to show github link and local toc
-        app.env.metadata[docname]['has_only_toc'] = True
