@@ -2,8 +2,8 @@ import os
 import sys
 from pathlib import Path
 
-from pygments.lexers.web import PhpLexer
-from sphinx.highlighting import lexers
+from pygments.lexers import JsonLexer, XmlLexer
+
 from sphinx.util import logging
 
 _logger = logging.getLogger(__name__)
@@ -181,8 +181,10 @@ html_permalinks = True  # Sphinx >= 3.5
 html_js_files = []
 html_css_files = []
 
-# Monkeypatch PHP lexer to not require <?php
-lexers['php'] = PhpLexer(startinline=True)
+# PHP lexer option to not require <?php
+highlight_options = {
+  'php': {'startinline': True},
+}
 
 #=== Options for LaTeX output ===#
 
@@ -242,6 +244,10 @@ def setup(app):
     app.add_config_value('canonical_version', None, 'env')
     app.add_config_value('versions', None, 'env')
     app.add_config_value('languages', None, 'env')
+
+    app.add_lexer('json', JsonLexer())
+    app.add_lexer('xml', XmlLexer())
+
     app.connect('html-page-context', _generate_alternate_urls)
 
 
