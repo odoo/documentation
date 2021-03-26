@@ -19,7 +19,7 @@ class OdooStyle(Style):
 
     styles = {
         Whitespace: '#bbbbbb',
-        Comment: 'italic #008800',
+        Comment: 'italic #8c8c8c',
         String: '#800080',
         Number: 'bold',
         Other: 'bg:#ffffe0',
