@@ -11,7 +11,7 @@ Invoicing and Accounting
    accounting/receivables
    accounting/payables
    accounting/bank
-   accounting/fiscality
+   accounting/taxation
    accounting/reporting
    accounting/others
    accounting/fiscal_localizations
