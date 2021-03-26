@@ -78,6 +78,9 @@
             this.pageToc.querySelectorAll('li,ul').forEach(element => {
                 element.classList.remove('o_active_toc_entry', 'show');
             });
+            this.pageToc.querySelectorAll('i').forEach(element => {
+                element.setAttribute('aria-expanded', 'false');;
+            });
         };
 
         const _flagActiveHierarchy = (headingRef) => {
