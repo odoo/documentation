@@ -1,13 +1,13 @@
----------------------------------
-How to show product availability
----------------------------------
+-------------------------
+Show product availability
+-------------------------
 
 The availability of your products can be shown on the website to reassure your customers.
 
 .. image:: ./media/stock_web.png
    :align: center
 
-To display this, open the *Sales* tab in the product detail form and select an option in 
+To display this, open the *eCommerce* tab in the product detail form and select an option in
 *Availability*.
 
 .. image:: ./media/stock.png
@@ -19,7 +19,7 @@ A custom warning message can be anything related to a stock out, delivery delay,
    :align: center
 
 .. note::
-    This tool does not require the Inventory app to be installed.
+    This tool requires the Inventory app to be installed.
 
 .. tip::
     If one item is no longer sellable, unpublish it from your website. If it comes to
