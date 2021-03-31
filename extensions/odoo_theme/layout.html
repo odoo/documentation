@@ -63,18 +63,16 @@
     <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
         {% include "layout_templates/menu.html" %}
     </nav>
-    <header class="o_main_header border-bottom">
+    <header class="o_main_header border-bottom navbar navbar-light navbar-expand-lg">
         {% include "layout_templates/header.html" %}
+        <button class="navbar-toggler pe-3 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_main_toctree" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
     </header>
 {% endblock %}
 
 {% block content %}
     <div id="wrap">
-        <nav class="navbar navbar-expand-lg navbar-light d-lg-none" aria-label="Toggle OffCanvas">
-            <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="offcanvas" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-        </nav>
         {% set main_classes = [] %}
         {% if pagename == master_doc %}  {# The current page is the homepage #}
             {% set main_classes = main_classes + ['index'] %} {# TODO EDI should be 'o_index' #}
@@ -91,7 +89,9 @@
         {% if 'hide_page_toc' in meta %}
             {% set main_classes = main_classes + ['o_fullwidth_page'] %}
         {% endif %}
-
+        <div class="px-3 pt-4 d-lg-none">
+            {% include "layout_templates/searchbox.html" %}
+        </div>
         <main class="container-fluid {{ ' '.join(main_classes) }}">
             {% if pagename == master_doc %}
                 {# Custom landing page on the root of the documentation #}

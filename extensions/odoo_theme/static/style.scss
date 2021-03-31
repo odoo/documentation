@@ -6,6 +6,13 @@
 @import "scss/_typography";
 @import "scss/_iconfont";
 
+:root {
+    --o-header-height:                           50px;
+    @include media-breakpoint-up(lg) {
+        --o-header-height:                           90px;
+    }
+}
+
 div[aria-label="related navigation"] {
     display: none;
 }
@@ -35,9 +42,7 @@ body {
 //------------------------------------------------------------------------------
 
 header.o_main_header{
-    display: flex;
-    align-items: center;
-    height: $o-header-height;
+    height: var(--o-header-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -67,6 +72,30 @@ header.o_main_header{
             margin-right: 3rem;
         }
     }
+    .o_search_wrapper {
+        @include media-breakpoint-down(lg) {
+           display: none !important;
+       }
+    }
+
+    .highlight-link {
+        margin-bottom: 0;
+        display: flex;
+        align-items: center;
+        a {
+            padding: 0 1rem;
+            @include font-size($font-size-secondary);
+        }
+    }
+}
+
+.o_logo img {
+    @include media-breakpoint-up(lg) {
+        height: 30px
+    }
+}
+
+.o_search_wrapper {
     .o_search {
         position: relative;
         width: 100%;
@@ -81,16 +110,6 @@ header.o_main_header{
             color: $gray;
         }
     }
-
-    .highlight-link {
-        margin-bottom: 0;
-        display: flex;
-        align-items: center;
-        a {
-            padding: 0 1rem;
-            @include font-size($font-size-secondary);
-        }
-    }
 }
 
 //------------------------------------------------------------------------------
@@ -99,12 +118,12 @@ header.o_main_header{
 
 .o_side_nav {
     width: $o-side-nav-width;
-    height: calc(100vh - #{$o-header-height});
+    height: calc(100vh - var(--o-header-height));
     overflow-y: auto;
     position: fixed;
-    top:$o-header-height;
-    left:-100%;
-    &.o-mobile-show {
+    top: var(--o-header-height);
+    left: -100%;
+    &.show {
         left:0;
         width: 100%;
     }
@@ -245,11 +264,11 @@ header.o_main_header{
             display: block;
             position: -webkit-sticky;
             position: sticky;
-            top: $o-header-height;
+            top: var(--o-header-height);
             right: 0;
             width: $o-on-page-width;
             height: 100%;
-            max-height: calc(100vh - #{$o-header-height});
+            max-height: calc(100vh - var(--o-header-height));
             padding: 3rem 3rem 3rem 0;
             overflow-y: auto;
         }
@@ -280,7 +299,7 @@ header.o_main_header{
 //------------------------------------------------------------------------------
 
 #wrap {
-    margin-top: $o-header-height;
+    margin-top: var(--o-header-height);
 
     @include media-breakpoint-up(lg) {
         display: flex;
@@ -304,6 +323,7 @@ header.o_main_header{
     main {
         position: relative;
         padding-top: 3rem;
+        padding-bottom: 3rem;
 
         @include media-breakpoint-up(lg) {
             left: $o-side-nav-width;
@@ -485,7 +505,10 @@ header.o_main_header{
 
             .o_git_link {
                 @include font-size($font-size-secondary);
-                @include o-position-absolute($top: 10px, $right: 1rem);
+                @include o-position-absolute($top: 0px, $right: 1rem);
+                @include media-breakpoint-up(lg) {
+                    @include o-position-absolute($top: 10px, $right: 1rem);
+                }
                 i {
                     margin-right: .2rem;
                 }
@@ -576,8 +599,10 @@ header.o_main_header{
                         font-style: italic;
                         margin: 0 auto;
                     }
-                    &:not([class^="col"]) .legend {
-                        max-width: 60%;
+                    @include media-breakpoint-up(md) {
+                        &:not([class^="col"]) .legend {
+                            max-width: 60%;
+                        }
                     }
                 }
 
@@ -810,10 +835,12 @@ header.o_main_header{
             }
 
             &.alert-go_to {
-                display: inline-block;
                 border-color: $o-violet;
                 background-color: $gray-lightest;
-                width: calc(50% - 1rem);
+                @include media-breakpoint-up(lg){
+                    display: inline-block;
+                    width: calc(50% - 1rem);
+                }s
                 a {
                     color: $o-violet-dark;
                 }
@@ -833,17 +860,13 @@ header.o_main_header{
 // Footer
 //------------------------------------------------------------------------------
 footer {
-
-    > div {
-        padding: 3rem;
-
+    .o_get_help {
+        padding-top: 3rem;
+        padding-bottom: 3rem;
+        background: $gray-100;
         @include media-breakpoint-up(lg) {
             padding-left: calc(#{$o-side-nav-width} + 3rem)
         }
-    }
-
-    .o_get_help {
-        background: $gray-100;
 
         h5 {
             color: $secondary;
