@@ -6,13 +6,6 @@
 @import "scss/_typography";
 @import "scss/_iconfont";
 
-:root {
-    --o-header-height:                           50px;
-    @include media-breakpoint-up(lg) {
-        --o-header-height:                           90px;
-    }
-}
-
 div[aria-label="related navigation"] {
     display: none;
 }
@@ -42,7 +35,7 @@ body {
 //------------------------------------------------------------------------------
 
 header.o_main_header{
-    height: var(--o-header-height);
+    height: $o-header-mobile-height;
     position: fixed;
     top: 0;
     left: 0;
@@ -50,6 +43,7 @@ header.o_main_header{
     background-color: $o-header-white;
     z-index: 10;
     @include media-breakpoint-up(lg) {
+        height: $o-header-height;
         padding-right: 3rem;
     }
     .o_logo_wrapper {
@@ -118,16 +112,18 @@ header.o_main_header{
 
 .o_side_nav {
     width: $o-side-nav-width;
-    height: calc(100vh - var(--o-header-height));
+    height: calc(100vh - #{$o-header-mobile-height});
     overflow-y: auto;
     position: fixed;
-    top: var(--o-header-height);
+    top: $o-header-mobile-height;
     left: -100%;
     &.show {
         left:0;
         width: 100%;
     }
     @include media-breakpoint-up(lg) {
+        height: calc(100vh - #{$o-header-height});
+        top: $o-header-height;
         left:0;
     }
     @include o-transition($duration:.3s);
@@ -264,11 +260,11 @@ header.o_main_header{
             display: block;
             position: -webkit-sticky;
             position: sticky;
-            top: var(--o-header-height);
+            top: $o-header-height;
             right: 0;
             width: $o-on-page-width;
             height: 100%;
-            max-height: calc(100vh - var(--o-header-height));
+            max-height: calc(100vh - #{$o-header-height});
             padding: 3rem 3rem 3rem 0;
             overflow-y: auto;
         }
@@ -299,11 +295,12 @@ header.o_main_header{
 //------------------------------------------------------------------------------
 
 #wrap {
-    margin-top: var(--o-header-height);
+    margin-top: $o-header-mobile-height;
 
     @include media-breakpoint-up(lg) {
         display: flex;
         justify-content: space-between;
+        margin-top: $o-header-height;
     }
 
     code {
@@ -532,11 +529,6 @@ header.o_main_header{
                 }
             }
 
-            /* dt {
-                &:before {
-                    @include scroll-padding()
-                }
-            } */
             // Search items highlighted
             dt:target, span.highlighted {
                 background-color: lighten($warning, 15%);
