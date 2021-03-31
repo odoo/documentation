@@ -79,7 +79,7 @@
                 element.classList.remove('o_active_toc_entry', 'show');
             });
             this.pageToc.querySelectorAll('i').forEach(element => {
-                element.setAttribute('aria-expanded', 'false');;
+                element.setAttribute('aria-expanded', false);
             });
         };
 
