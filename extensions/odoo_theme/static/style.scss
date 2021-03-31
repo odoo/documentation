@@ -600,13 +600,16 @@ header.o_main_header{
 
                 a.headerlink {
                     text-decoration: none;
+                    font-size: 0;
                     visibility: hidden !important;
+                    &:before {
+                        content: "\a0";
+                    }
                     &:after {
                         content: '#{$i-link}';
                         font-family: icomoon !important;
                         @include font-size($font-size-base);
-                        vertical-align: middle;
-                        margin: 0 1rem 0 0;
+                        margin: 0 0 0 .3rem;
                         visibility: hidden;
                         color: $gray-light;
                         opacity: 0;
