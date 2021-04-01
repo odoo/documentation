@@ -68,10 +68,11 @@ if not odoo_dir.is_dir():
 else:
     sys.path.insert(0, str(odoo_dir.absolute()))
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
-    if release != odoo_release.version:
+    odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
+    if release != odoo_version:
         _logger.warning(
-            f"Found Odoo sources directory but with version {odoo_release.version} incompatible "
-            f"with documentation version {version}.\n"
+            f"Found Odoo sources directory but with version '{odoo_version}' incompatible with "
+            f"documentation version '{version}'.\n"
             f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
             f"In order to fully build the 'Developer' documentation, checkout the matching branch"
             f" with `cd odoo && git checkout {version}`."
