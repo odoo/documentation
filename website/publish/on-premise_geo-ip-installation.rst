@@ -5,8 +5,9 @@ Geo IP Installation (On-Premises Database)
 Installation
 ============
 
-.. warning:: Please note that the installation depends on your computer's operating system and
-             distribution. We will assume that a Linux operating system is being used.
+.. warning::
+   Please note that the installation depends on your computer's operating system and distribution.
+   We will assume that a Linux operating system is being used.
 
 #. Install `geoip2 <https://pypi.org/project/geoip2/>`__ Python library
     .. code-block:: bash
@@ -22,22 +23,22 @@ Installation
 
 #. Restart the server
 
-.. note:: If you can't/don't want to locate the geoip database in ``/usr/share/GeoIP/``, you can
-    use the ``--geoip-db`` option of the Odoo command line interface.
-    This option takes the absolute path to the GeoIP database file and uses it as the GeoIP
-    database.
-    For example:
+.. note::
+   If you can't/don't want to locate the geoip database in ``/usr/share/GeoIP/``, you can use the
+   ``--geoip-db`` option of the Odoo command line interface. This option takes the absolute path to
+   the GeoIP database file and uses it as the GeoIP database. For example:
 
-    .. code-block:: bash
+   .. code-block:: bash
 
-        ./odoo-bin --geoip-db= ~/Downloads/GeoLite2-City.mmdb
+      ./odoo-bin --geoip-db= ~/Downloads/GeoLite2-City.mmdb
 
-    .. seealso::
-        - `CLI documentation <https://www.odoo.com/documentation/13.0/reference/cmdline.html>`_.
+   .. seealso::
+      - `CLI documentation <https://www.odoo.com/documentation/13.0/reference/cmdline.html>`_.
 
-.. warning:: ``GeoIP`` Python library can also be used. However this version is discontinued since
-   January 2019. See `GeoLite Legacy databases are now discontinued <https://support.maxmind
- .com/geolite-legacy-discontinuation-notice/>`_
+.. warning::
+   ``GeoIP`` Python library can also be used. However this version is discontinued since January
+   2019. See `GeoLite Legacy databases are now discontinued
+   <https://support.maxmind.com/geolite-legacy-discontinuation-notice/>`_
 
 How To Test GeoIP Geolocation In Your Odoo Website
 ==================================================
@@ -54,7 +55,8 @@ You should end up with a dictionary indicating the location of the IP address.
 .. image:: media/on-premise_geo-ip-installation01.png
     :align: center
 
-.. note:: If the curly braces are empty ``{}``, it can be for any of the following reasons :
+.. note::
+   If the curly braces are empty ``{}``, it can be for any of the following reasons :
 
    - The browsing IP address is the localhost (``127.0.0.1``) or a local area network one (``192.168.*.*``)
    - If a reversed proxy is used, make sure to configure it correctly. See `--proxy-mode <https://www.odoo.com/documentation/13.0/reference/cmdline.html#cmdoption-odoo-bin-proxy-mode>`__
