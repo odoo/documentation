@@ -3,7 +3,6 @@ import sys
 from pathlib import Path
 
 from pygments.lexers import JsonLexer, XmlLexer
-
 from sphinx.util import logging
 
 _logger = logging.getLogger(__name__)
@@ -12,7 +11,7 @@ _logger = logging.getLogger(__name__)
 #=== General configuration ===#
 
 # General information about the project.
-project = 'odoo'
+project = 'Odoo'
 copyright = 'Odoo S.A.'
 
 # `version` if the version info for the project being documented, acts as replacement for |version|,
@@ -23,7 +22,7 @@ version = release = '12.0'
 # The minimal Sphinx version required to build the documentation.
 needs_sphinx = '3.0.0'
 
-# The default language in which the documentation is written. It is set as `None` because Sphinx
+# The default language in which the documentation is written. It is set to `None` because Sphinx
 # considers that no language means 'en'.
 language = None
 
@@ -126,7 +125,7 @@ intersphinx_mapping = {
 }
 
 github_user = 'odoo'
-github_project = 'documentation-user'
+github_project = 'documentation'
 
 locale_dirs = ['locale/']
 supported_languages = {
@@ -150,35 +149,22 @@ html_theme = 'odoo_theme'
 # The name of the Pygments (syntax highlighting) style to use.
 pygments_style = 'odoo'
 
-# Add any paths that contain custom themes here, relative to this directory.
+# The paths that contain custom themes, relative to this directory.
 html_theme_path = ['extensions']
 
-# The name for this set of Sphinx documents.  If None, it defaults to
-# "<project> v<release> documentation".
-#html_title = None  TODO ANVFE remove?
-
-# A shorter title for the navigation bar.  Default is the same as html_title.
-#html_short_title = None  TODO ANVFE remove?
-
-# The name of an image file (relative to this directory) to place at the top
-# of the sidebar.
-#html_logo = None  TODO ANVFE remove?
-
-# The name of an image file (within the static path) to use as favicon of the
-# docs.  This file should be a Windows icon file (.ico) being 16x16 or 32x32
-# pixels large.
+# The name of an image file (within the static path) to use as favicon of the docs.
+# This file should be a Windows icon file (.ico) being 16x16 or 32x32 pixels large.
 html_favicon = os.path.join(html_theme_path[0], html_theme, 'static', 'img', 'favicon.ico')
 
-# Add any paths that contain custom static files (such as style sheets) here, relative to this
-# directory. They are copied after the builtin static files, so a file named "default.css" will
-# overwrite the builtin "default.css".
+# The paths that contain custom static files, relative to this directory.
+# They are copied after the builtin static files, so a file named "default.css" will overwrite the
+# builtin "default.css".
 html_static_path = ['static']
 html_add_permalinks = '¶'  # Sphinx < 3.5
 html_permalinks = True  # Sphinx >= 3.5
-# NOTE: only use for global files
-# Page-specific css/js files can be defined with
-# custom-js/custom-css metadata directives.
+# The page-specific js files that can be imported with the 'custom-js' metadata directive.
 html_js_files = []
+# The page-specific css files that can be imported with the 'custom-css' metadata directive.
 html_css_files = []
 
 # PHP lexer option to not require <?php
@@ -196,13 +182,13 @@ latex_elements = {
     'preamble': r'\usepackage{odoo}',
     'tableofcontents': '',  # no TOC
 
-    # output manually in latex docs
+    # Output manually in latex docs
     'releasename': '14.0',
 }
 
 latex_additional_files = ['static/latex/odoo.sty']
 
-# Grouping the document tree into LaTeX files. List of tuples
+# Grouping the document tree into LaTeX files. List of tuples:
 # (source start file, target name, title, author, documentclass [howto, manual, or own class]).
 latex_documents = [
     ('legal/terms/enterprise_tex', 'odoo_enterprise_agreement.tex',
@@ -292,10 +278,11 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         ]
 
     def _localize():
-        """
+        """ Add the pairs of (lang, code, url) for the current document in the rendering context.
+
+        E.g.: ('French', 'fr', 'https://.../fr_BE/...')
 
         The entry 'language' is added by Sphinx in the rendering context.
-
         """
         _current_lang = app.config.language or 'en'
         # Replace the context value by its translated description ("Français" instead of "french")
