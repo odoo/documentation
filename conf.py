@@ -231,8 +231,8 @@ def setup(app):
     app.add_config_value('versions', None, 'env')
     app.add_config_value('languages', None, 'env')
 
-    app.add_lexer('json', JsonLexer())
-    app.add_lexer('xml', XmlLexer())
+    app.add_lexer('json', JsonLexer)
+    app.add_lexer('xml', XmlLexer)
 
     app.connect('html-page-context', _generate_alternate_urls)
 
