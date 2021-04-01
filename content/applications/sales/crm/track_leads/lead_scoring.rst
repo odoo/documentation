@@ -2,77 +2,72 @@
 Assign leads based on scoring
 =============================
 
-With *Leads Scoring* you can automatically rank your leads based on
-selected criteria.
+*Lead Scoring* lets you rank and prioritize leads based on selected criteria. A higher score
+indicates that a lead is more likely to bring value to your company.
 
-For example you could score customers from your country higher or the
-ones that visited specific pages on your website.
+For example, if customers from Canada tend to be more likely to purchase your products, you can
+assign them a higher score than customers from other countries.
 
 Configuration
 =============
 
-To use scoring, install the free module *Lead Scoring* under your
-*Apps* page (only available in Odoo Enterprise).
+To use scoring, go to :menuselection:`Apps`, remove the :guilabel:`Apps` filter, search for
+:guilabel:`Lead Scoring` and then install the module.
 
-.. image:: media/lead_scoring01.png
+.. image:: lead_scoring/lead-scoring-module.png
    :align: center
+   :alt: Lead Scoring module installation
 
 Create scoring rules
 ====================
 
-You now have a new tab in your *CRM* app called *Leads Management*
-where you can manage your scoring rules.
+To manage scoring rules, go to :menuselection:`CRM --> Leads --> Scoring Rules`.
 
-Here's an example for a Canadian lead, you can modify for whatever
-criteria you wish to score your leads on. You can add as many criteria
-as you wish.
+Customize your rules to fit the needs of your business, and add as many criteria as you want.
 
-.. image:: media/lead_scoring02.png
+.. image:: lead_scoring/scoring-example.png
    :align: center
+   :alt: Score Rule example
 
-Every hour every lead without a score will be automatically scanned and
-assigned their right score according to your scoring rules.
+Every hour, Odoo automatically assigns scores to new leads according to your configured rules.
 
-.. image:: media/lead_scoring03.png
+.. image:: lead_scoring/scoring-section-on-lead.png
    :align: center
+   :alt: Scoring section on a lead
 
 Assign leads
 ============
 
-Once the scores computed, leads can be assigned to specific teams using
-the same domain mechanism. To do so go to :menuselection:`CRM --> Leads Management --> Team Assignation`
-and apply a specific domain on each team. This domain can include scores.
+Odoo can also assign leads to specific teams based on configured rules. To configure assignment
+rules, go to the individual Sales Team's configuration page via :menuselection:`CRM --> Leads -->
+Team Assignment` or :menuselection:`CRM --> Configuration --> Sales Teams`, and apply a specific
+Domain to each team. The Domain can include lead scores.
 
-.. image:: media/lead_scoring04.png
+.. image:: lead_scoring/team-assignation.png
    :align: center
+   :alt: Team Assignments using domains
 
-Further on, you can assign to a specific vendor in the team with an even
-more refined domain.
+Assign leads to specific salespeople using further refined Domains at :menuselection:`CRM --> Leads
+--> Leads Assignment`.
 
-To do so go to :menuselection:`CRM --> Leads Management --> Leads Assignation`.
-
-.. image:: media/lead_scoring05.png
+.. image:: lead_scoring/lead-assignment-filters.png
    :align: center
+   :alt: Lead Assignments
+
+Odoo automatically assigns new leads to teams/salespeople once per day.
+
+Evaluate and use the unassigned leads
+=====================================
+
+Not all leads will fall into your set Domains and get assigned automatically by Odoo.
+
+To view your unassigned leads, go to :menuselection:`CRM --> Leads --> Leads` and select the
+Unassigned filter.
+
+.. image:: lead_scoring/unassigned-filter.png
+   :align: center
+   :alt: Filtering for unassigned leads
 
 .. note::
-   The team & leads assignation will assign the unassigned leads
-   once a day.
-
-Evaluate & use the unassigned leads
-===================================
-
-Once your scoring rules are in place you will most likely still have
-some unassigned leads. Some of them could still lead to an opportunity
-so it is useful to do something with them.
-
-In your leads page you can place a filter to find your unassigned leads.
-
-.. image:: media/lead_scoring06.png
-   :align: center
-
-Why not using :menuselection:`Email Marketing` or
-:menuselection:`Marketing Automation` apps to send a mass email to
-them? You can also easily find such unassigned leads from there.
-
-.. image:: media/lead_scoring07.png
-   :align: center
+   You can also find unassigned leads and create re-engagement campaigns using the :guilabel:`Email
+   Marketing` or :guilabel:`Marketing Automation` apps.
