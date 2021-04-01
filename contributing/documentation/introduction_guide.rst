@@ -13,7 +13,7 @@ scratch.
 .. note::
    This tutorial only concerns the `user documentation
    <https://www.odoo.com/documentation/user/index.html>`_ of Odoo. The documentation for `developing
-   in Odoo <https://www.odoo.com/documentation/master/index.html>`_ in maintained alongside the
+   in Odoo <https://www.odoo.com/documentation/master/index.html>`_ is maintained alongside the
    source code of Odoo at `github.com/odoo/odoo <https://github.com/odoo/odoo/tree/master/doc>`_.
 
 .. _contributing/rst-intro:
