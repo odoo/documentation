@@ -163,9 +163,9 @@ html_favicon = os.path.join(html_theme_path[0], html_theme, 'static', 'img', 'fa
 html_static_path = ['static']
 html_add_permalinks = '¶'  # Sphinx < 3.5
 html_permalinks = True  # Sphinx >= 3.5
-# The page-specific js files that can be imported with the 'custom-js' metadata directive.
+# The page-specific js files that can be imported with the 'custom-js' metadata directive. TODO VFE does it act as a filter? Why are there already some imports not listed here?
 html_js_files = []
-# The page-specific css files that can be imported with the 'custom-css' metadata directive.
+# The page-specific css files that can be imported with the 'custom-css' metadata directive. TODO VFE does it act as a filter? Why are there already some imports not listed here?
 html_css_files = []
 
 # PHP lexer option to not require <?php

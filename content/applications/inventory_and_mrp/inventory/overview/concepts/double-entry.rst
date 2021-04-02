@@ -1,6 +1,6 @@
 :code-column:
 :custom-css: accounting.css
-:custom-js: inventory.js;misc.js
+:custom-js: inventory.js,misc.js
 
 ====================================
 Introduction to Inventory Management

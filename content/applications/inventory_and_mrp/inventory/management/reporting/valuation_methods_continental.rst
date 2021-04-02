@@ -1,6 +1,6 @@
 :code-column:
 :custom-css: accounting.css
-:custom-js: coa-valuation-continental.js;misc.js
+:custom-js: coa-valuation-continental.js,misc.js
 
 ==========================================================
 How to do an inventory valuation? (Continental Accounting)

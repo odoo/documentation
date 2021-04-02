@@ -5,6 +5,7 @@
     {{ super() }}
     {# Allow custom css style import for specific pages #}
     {% if 'custom-css' in meta %}
+        {# TODO VFE this should be wrapped in a loop as custom-css is a comma(, not ;)-separated list #}
         {% set link = '_static/css/' + meta['custom-css'] %}
         <link rel="stylesheet" href="{{ pathto(link, 1) }}" type="text/css"/>
     {% endif %}
@@ -20,7 +21,7 @@
             integrity="sha512-wsnDgOxfyn4lhblRMHPMuJh+9CnLcwcisda1zLRGNWKh6OiQynebYTyRZYgH+eWLEdNTKak0OD2GAd/S51UhTw=="
             crossorigin="anonymous"></script>
         <script src="{{ pathto('_static/js/atom.js', 1) }}"></script>
-        {% set js_files = meta['custom-js'].split(';') %}
+        {% set js_files = meta['custom-js'].split(',') %}
         {% for js_file in js_files %}
             {% set link = '_static/js/' + js_file %}
             <script src="{{ pathto(link, 1) }}"></script>
