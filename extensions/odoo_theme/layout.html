@@ -87,7 +87,7 @@
             {% set main_classes = main_classes + meta['classes'].split() %}
         {% endif %}
 
-        {% if 'hide_page_toc' in meta %}
+        {% if 'hide-page-toc' in meta %}
             {% set main_classes = main_classes + ['o_fullwidth_page'] %}
         {% endif %}
 
@@ -113,7 +113,7 @@
             {% endif %}
         </main>
         {# VFE TODO Check if this condition is still needed ??? #}
-        {% if pagename not in toc and 'hide_page_toc' not in meta %}
+        {% if pagename not in toc and 'hide-page-toc' not in meta %}
             <aside id="o_page_toc" class="o_page_toc">
                 {% include "layout_templates/page_toc.html" %}
             </aside>

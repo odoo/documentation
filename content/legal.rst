@@ -1,8 +1,6 @@
 :custom-css: legal.css
-:hide_page_toc:
+:hide-page-toc:
 :orphan:
-
-.. hide_page_toc hides the local page toc
 
 =====
 Legal
