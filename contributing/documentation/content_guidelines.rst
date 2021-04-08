@@ -68,14 +68,48 @@ grammatical way of separating ideas.
 
 .. _contributing/titles:
 
-Titles
-------
+Titles and headings
+-------------------
 
-To write a good title :
+To write good titles and headings:
 
 - **Be concise.**
 - **Avoid sentences**, questions, and titles starting with "how to."
 - **Don't use pronouns** in your titles, especially 2nd person (*your*)
+- Use **sentence case**. This means you capitalize only:
+
+  - the first word of the title or heading
+  - the first word after a colon
+  - proper nouns (brands, product and service names, etc.)
+  - app features, as written in the apps
+
+  .. important::
+     Do not capitalize common nouns when they are not referred to as features. This is more likely
+     to happen in headings rather than in titles.
+
+  +------------------+-----------------------------------+--------------------------------------------------------+
+  |                  | Examples                          | Explanations                                           |
+  +==================+===================================+========================================================+
+  | | **Titles**     | *Quotation Templates*             | "Quotation Templates" is a feature in Odoo.            |
+  | | (h1)           +-----------------------------------+--------------------------------------------------------+
+  |                  | *Lead Mining*                     | "Lead Mining" is a feature in Odoo.                    |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Resupply from another Warehouse* | "Warehouse" is capitalized as we refer to the feature  |
+  |                  |                                   | in the app rather than to a real warehouse.            |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Synchronize Google Calendar      | "Google Calendar" is a product and "Odoo" is a brand.  |
+  |                  | with Odoo*                        |                                                        |
+  +------------------+-----------------------------------+--------------------------------------------------------+
+  | | **Headings**   | *Confirm the quotation*           | "The quotation" is a common noun not referring to a    |
+  | | (h2, h3, etc.) |                                   | feature in Odoo.                                       |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Test environment*                | "Environment" is a common noun.                        |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Add a new Payment Acquirer*      | "Payment Acquirers" is a feature in Odoo.              |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Generate SEPA Direct Debit XML   | "SEPA Direct Debit" and "XML" are considered as proper |
+  |                  | files to submit payments*         | nouns.                                                 |
+  +------------------+-----------------------------------+--------------------------------------------------------+
 
 .. _contributing/document-structure:
 
@@ -86,7 +120,7 @@ Use different **headings levels** to organize your text by sections and sub-sect
 are also displayed in a dynamic *navigation bar* on the side.
 
 +---------------------------------------------------------------------------------------+
-| | **H1: Page Title**                                                                  |
+| | **H1: Page title**                                                                  |
 | | Your *page title* gives your reader a quick and clear understanding of what your    |
 |   content is about. It is also referenced in the section's *table of contents*.       |
 |                                                                                       |
@@ -94,11 +128,11 @@ are also displayed in a dynamic *navigation bar* on the side.
 | of view**, and shouldn't put the emphasis on Odoo, as this is documentation and not   |
 | marketing.                                                                            |
 |                                                                                       |
-| Start first with a **Lead Paragraph**, which helps the reader make sure that they've  |
+| Start first with a **lead paragraph**, which helps the reader make sure that they've  |
 | found the right page, then explain the **business aspects of this topic** in the      |
 | following paragraphs.                                                                 |
 +-----+---------------------------------------------------------------------------------+
-|     | | **H2: Section Title (configuration)**                                         |
+|     | | **H2: Section title (configuration)**                                         |
 |     | | This first H2 section is about the configuration of the feature, or the       |
 |     |   prerequisites to achieve a specific goal. To add a path, make sure you        |
 |     |   use the ``:menuselection:`` specialized directive (see link below).           |
@@ -107,7 +141,7 @@ are also displayed in a dynamic *navigation bar* on the side.
 |     | | To do so, go to ``:menuselection:`App name --> Menu --> Sub-menu```, and      |
 |     |   enable the XYZ feature.                                                       |
 +-----+---------------------------------------------------------------------------------+
-|     | | **H2: Section Title (main sections)**                                         |
+|     | | **H2: Section title (main sections)**                                         |
 |     | | Create as many main sections as you have actions or features to distinguish.  |
 |     |   The title can start with a verb, but try to avoid using "Create ...".         |
 +-----+-----+---------------------------------------------------------------------------+
