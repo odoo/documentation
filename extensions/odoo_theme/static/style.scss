@@ -542,7 +542,7 @@ header.o_main_header{
             }
 
             // Search items highlighted
-            dt:target, span.highlighted {
+            span.highlighted {
                 background-color: lighten($warning, 15%);
             }
 
@@ -632,6 +632,16 @@ header.o_main_header{
                     // This makes permalinks only visible on hover.
                         visibility: visible;
                         opacity: 1;
+                }
+                table.table {
+                    @include media-breakpoint-down(lg){
+                    display: block;
+                    overflow-x: auto;
+                        code {
+                            overflow-wrap: break-word;
+                        }
+                    }
+
                 }
             }
 
