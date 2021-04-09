@@ -35,6 +35,7 @@ body {
 //------------------------------------------------------------------------------
 
 header.o_main_header{
+    width: 100vw;
     height: $o-header-mobile-height;
     position: fixed;
     top: 0;
@@ -111,7 +112,7 @@ header.o_main_header{
 //------------------------------------------------------------------------------
 
 .o_side_nav {
-    width: $o-side-nav-width;
+    width: 100vw;
     height: calc(100vh - #{$o-header-mobile-height});
     overflow-y: auto;
     position: fixed;
@@ -122,17 +123,19 @@ header.o_main_header{
         width: 100%;
     }
     @include media-breakpoint-up(lg) {
+        width: $o-side-nav-width;
         height: calc(100vh - #{$o-header-height});
         top: $o-header-height;
         left:0;
+        padding-top: 2rem;
+        padding-left: 3rem;
     }
     @include o-transition($duration:.3s);
-    padding-top: 2rem;
-    padding-left: 3rem;
+    padding-top: 1rem;
+    padding-left: 1rem;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
     @include font-size($font-size-secondary);
-
     color: $o-violet-dark;
 
     .toctree-l1 {
@@ -639,7 +642,7 @@ header.o_main_header{
             overflow-x: auto;
             border: 1px solid $gray-light;
             margin: 1px 0 24px 0;
-            max-width: 90vw;
+            /* max-width: 90vw; */
 
             div[class^="highlight"] {
                 padding: 0px;
