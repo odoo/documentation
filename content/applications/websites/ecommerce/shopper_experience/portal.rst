@@ -1,38 +1,39 @@
-=================================================
-How customers can access their customer account
-=================================================
+=======================
+Access customer account
+=======================
 
-It has never been so easy for your customers to access their 
-customer account. Forget endless signup forms, 
-Odoo makes it as easy as ABC. 
-They are suggested to sign up (name, email, password) when the order 
-is placed, and not before.
-Indeed, nothing is more annoying than going through a signup process
-before buying something.
+Odoo makes it easier than ever before for customers to access their customer account.
+
+Customers are suggested to sign up (name, email, password) only when an order has been placed -
+*not* before.
 
 Sign up
 =======
 
-The invitation to sign up shows up when the customer wants to visualize
-the order from order confirmation email.
+The invitation to sign up appears when the customer wants to visualize the order from the order
+confirmation email.
 
-.. image:: ./media/portal_odoo_signup.png
+.. image:: portal/portal_odoo_signup.png
    :align: center
+   :alt: odoo portal signup screen
 
 Customer account
 ================
 
-Once logged in the customer will access the account by clicking *My Account*
-in the login dropdown menu.
+Once logged in, the customer will access the account by clicking *My Account* in the login
+dropdown menu.
 
-.. image:: ./media/portal_link.png
+.. image:: portal/portal_link.png
    :align: center
+   :alt: odoo customer portal link
 
-THere they find all their history. The main address (billing) can also be modified.
+This is where they will find their history. Their main address (billing) can also be modified here,
+as well.
 
-.. image:: ./media/portal_menu.png
+.. image:: portal/portal_menu.png
    :align: center
+   :alt: odoo customer portal menu
 
 .. note::
-    If the customer is set as a contact of a company in your address book,
-    they will see all the documents whose the customer belongs to this company.
+   If the customer is set as a contact of a company in your address book, they will see all their
+   pertinent documents related to that company.
