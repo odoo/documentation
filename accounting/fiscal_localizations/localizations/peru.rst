@@ -162,7 +162,10 @@ What do you need to do?
   company on the SUNAT website. This is a simple process. For more information, please check
   `OSE Affiliation guide 
   <https://drive.google.com/file/d/1BkrMTZIiJyi5XI0lGMi3rbMzHddOL1pa/view?usp=sharing>`_.
-   
+- Register Digiflow as the authorized PSE, please check
+  `PSE Affiliation guide 
+  <https://drive.google.com/file/d/1QZoqWvtQERpS0pqp6LcKmw7EBlm9EroU/view?usp=sharing>`_.
+
 Digiflow
 ********
 
