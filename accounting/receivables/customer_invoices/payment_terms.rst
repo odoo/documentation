@@ -106,4 +106,4 @@ This allows for easier reconciliation and to accurately follow up late payments.
 
 .. seealso:: 
    - :doc:`cash_discounts`
-   - `Odoo Learn: Terms and Conditions (T&C) and Payment Terms <https://www.odoo.com/r/fpv>`_
+   - `Odoo Tutorials: Terms and Conditions (T&C) and Payment Terms <https://www.odoo.com/r/fpv>`_

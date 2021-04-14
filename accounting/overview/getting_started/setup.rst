@@ -191,4 +191,4 @@ Send yourself a sample invoice by email to make sure everything is correctly con
    * :doc:`chart_of_accounts`
    * :doc:`../../bank/feeds/bank_synchronization`
    * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
-   * `Odoo Learn: Accounting Basics <https://www.odoo.com/r/lsZ>`_
+   * `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_
