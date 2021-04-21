@@ -174,21 +174,19 @@ header.o_main_header{
 //------------------------------------------------------------------------------
 
 .o_side_nav {
-    width: 100vw;
+    width: 100%;
     height: calc(100vh - #{$o-header-mobile-height});
     overflow-y: auto;
     position: fixed;
-    top: $o-header-mobile-height;
-    left: -100%;
+    top: -100%;
+    left:0;
     &.show {
-        left:0;
-        width: 100%;
+        top: $o-header-mobile-height;
     }
     @include media-breakpoint-up(lg) {
         width: $o-side-nav-width;
         height: calc(100vh - #{$o-header-height});
         top: $o-header-height;
-        left:0;
         padding-top: 2rem;
         padding-left: 3rem;
     }
