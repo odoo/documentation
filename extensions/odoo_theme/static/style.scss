@@ -404,52 +404,61 @@ header.o_main_header{
         // Homepage
 
         &.index {
-            .row:first-of-type {
-                margin: -3rem -3rem 3rem;
-                padding: 0 3rem;
+            .o_content_fw_banner {
+                margin: -3rem -0.75rem 3rem;
+                padding: 2rem 1rem;
                 align-items: center;
-                background: url('/_static/img/geometric_gradient.png');
-                background-size: cover;
+                @include o-gradient();
+                @include media-breakpoint-up(lg) {
+                    margin: -3rem -3rem 3rem;
+                    padding: 2rem 3rem;
+                }
+                .btn-primary {
+                    background-color: #00A09D;
+                    border-color: #00A09D;
+                }
             }
 
-            h2[class*="o_title_"] {
-                color: $o-violet-dark;
-                font-weight: $fw_bold;
-                margin-bottom: 1rem;
 
-                &:before {
-                    @include inline-icomoon($i-o-services , 0 1rem 0 0);
-                    display: block;
-                    @include font-size(50px);
-                    margin: 0 auto 20px;
-                }
-                &.o_title_start:before {
-                    content: '#{$i-o-services}';
-                }
-                &.o_title_install:before {
-                    content: '#{$i-install}';
-                }
-                &.o_title_basic:before {
-                    content: '#{$i-basics}';
-                }
-                &.o_title_tutorial:before {
-                    content: '#{$i-elearning_1}';
-                }
-                &.o_title_advanced:before {
-                    content: '#{$i-advanced}';
-                }
+            p, h5 {
+                color: $gray;
+            }
+
+            h5 {
+                font-size: 12px;
             }
 
             ul {
-                padding: 1rem;
                 > li {
                     position: relative;
-                    padding-bottom: 1rem;
-                    a {
-                        display: block;
-                        font-weight: $fw_bold;
-                        padding-bottom: .5rem;
+                    padding-bottom: .5rem;
+                    display: flex;
+                    align-items: center;
+                    &:before {
+                        @include o-inline-icon($i-article, 0 .2rem 0 0);
+                        color: $gray-light;
                     }
+                }
+            }
+            .o_cat_banner {
+                background-color: $o-violet;
+                border-radius: 5px;
+                text-align: center;
+                background-repeat: no-repeat;
+                background-size: 90%;
+                background-position: center;
+                i {
+                    font-size: 100px;
+                    color: $white;
+                }
+                &.o-bg-violet-light {
+                    background-color: lighten($o-violet, 20%);
+                }
+                &:not(.shadow){
+                    background-image: url('/_static/img/bg-cat.svg');
+                }
+                &.shadow {
+                    box-shadow: 0px 2px 25px rgba(19, 28, 40, .08) !important;
                 }
             }
             .o_changelog {
