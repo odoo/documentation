@@ -35,7 +35,7 @@ body {
 //------------------------------------------------------------------------------
 
 header.o_main_header{
-    width: 100vw;
+    width: 100%;
     height: $o-header-mobile-height;
     position: fixed;
     top: 0;
@@ -509,7 +509,26 @@ header.o_main_header{
                   max-width: 100%;
                 }
 
-                @include media-breakpoint-up(lg) {
+                .content-switcher {
+                    .nav-tabs .nav-link.active {
+                        background-color: #f8f8f8;
+                        border-color: #dee2e6 #dee2e6 #f8f8f8;
+                        font-weight: $fw_semibold;
+                    }
+
+                    .tab-content {
+                        background: $doc_code-bg;
+                        border: 1px $gray-300 solid;
+                        border-top: 0;
+
+                        div[class^="highlight"] {
+                            border: 0;
+                            margin: 0;
+                        }
+                    }
+                }
+
+                @include media-breakpoint-up(xl) {
                     width: 100%;
                     padding-right: 0;
 
@@ -553,27 +572,6 @@ header.o_main_header{
 
                             pre {
                                 font-size: 12px;
-                            }
-                        }
-
-                        .content-switcher {
-
-                            .nav-tabs .nav-link.active {
-                                background-color: #f8f8f8;
-                                border-color: #dee2e6 #dee2e6 #f8f8f8;
-                                font-weight: $fw_semibold;
-                            }
-
-                            .tab-content {
-                                display:flex;
-                                background: $doc_code-bg;
-                                border: 1px $gray-300 solid;
-                                border-top: 0;
-
-                                div[class^="highlight"] {
-                                    border: 0;
-                                    margin: 0;
-                                }
                             }
                         }
                     }
@@ -626,7 +624,9 @@ header.o_main_header{
                 > h1 {
                     color: $o-violet-dark;
                     font-weight: $fw_bold;
-                    max-width: calc(100% - 120px);
+                    @include media-breakpoint-up(lg) {
+                        max-width: calc(100% - 120px);
+                    }
                     + * {
                         margin-top: 1rem;
                     }
