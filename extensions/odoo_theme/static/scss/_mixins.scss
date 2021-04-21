@@ -77,7 +77,7 @@
     background: linear-gradient($deg, $startColor $startOffset, $endColor $endOffset);
 }
 
-@mixin transform($args){
+@mixin o-transform($args){
   -webkit-transform : $args;
   -moz-transform    : $args;
   -ms-transform     : $args;
@@ -87,7 +87,7 @@
 
 //-- add icon
 
-@mixin inline-icomoon($icon-content, $margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $fw_regular) {
+@mixin o-inline-icon($icon-content, $margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $fw_regular) {
     content: '#{$icon-content}';
     font-family: 'icomoon' !important;
     @include font-size($font-size);
@@ -98,7 +98,7 @@
 
 //-- fix scroll issue
 
-@mixin scroll-padding() {
+@mixin o-scroll-padding() {
     content: '';
     display: block;
     width: 0;
@@ -110,7 +110,7 @@
 
 //-- has_col
 
-@mixin pseudo-col(){
+@mixin o-pseudo-col(){
   position: relative;
   min-height: 1px;
   padding-right: 15px;
@@ -119,7 +119,7 @@
   width: 100%;
 }
 
-@mixin code-col(){
+@mixin o-code-col(){
   /* content: ""; Deactivating o_has_code_column background */
   background: $doc_code-bg;
   /* @include box-shadow(inset 40px 0 40px -18px rgba(22, 24, 29, 0.3)); */

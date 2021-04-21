@@ -20,7 +20,7 @@ body {
     // This fixes the scroll position on all elements, including refs
     :target {
         &:before {
-            @include scroll-padding()
+            @include o-scroll-padding()
         }
     }
 }
@@ -142,7 +142,7 @@ header.o_main_header{
         }
         .btn{
             @include o-position-absolute($top: 50%, $right: 1rem);
-            @include transform (translateY(-50%)) ;
+            @include o-transform (translateY(-50%)) ;
             padding: 0;
             font-size: 1.2rem;
             color: $gray;
@@ -173,7 +173,7 @@ header.o_main_header{
         padding-top: 2rem;
         padding-left: 3rem;
     }
-    @include o-transition($duration:.3s);
+    @include o-transition(all, .3s);
     padding-top: 1rem;
     padding-left: 1rem;
     background-color: lighten($o-violet-dark, 70%) ;
@@ -200,7 +200,7 @@ header.o_main_header{
             &[class*="o_menu_"] > .o_toc_entry_wrapper > i {
                 opacity: .75;
                 &:before {
-                    @include inline-icomoon($i-doc-apps, 0 1rem 0 0);
+                    @include o-inline-icon($i-doc-apps, 0 1rem 0 0);
                     color: $o-violet-dark;
                     margin-right: 0.5rem;
                 }
@@ -273,7 +273,7 @@ header.o_main_header{
                         color: inherit;
 
                         &[aria-expanded="true"] {
-                            @include transform(rotate(90deg));
+                            @include o-transform(rotate(90deg));
                         }
                     }
                 }
@@ -281,7 +281,7 @@ header.o_main_header{
             &.o_active_toc_entry {
                 &:not(.toctree-l1) > .o_toc_entry_wrapper {
                     i[class^="i-"]:not(.collapsed) {
-                        @include transform(rotate(90deg));
+                        @include o-transform(rotate(90deg));
                     }
                 }
                 > a , > .o_toc_entry_wrapper a {
@@ -481,7 +481,7 @@ header.o_main_header{
                     padding-right: 0;
 
                     &:before {
-                        @include code-col();
+                        @include o-code-col();
                     }
 
 
@@ -809,7 +809,7 @@ header.o_main_header{
                 font-weight: $fw_bold;
 
                 &:before {
-                    @include inline-icomoon($i-info, 0 .2rem 0 0, baseline, $font-size-base, inherit);
+                    @include o-inline-icon($i-info, 0 .2rem 0 0, baseline, $font-size-base, inherit);
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
