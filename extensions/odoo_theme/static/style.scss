@@ -82,6 +82,49 @@ header.o_main_header{
             @include font-size($font-size-secondary);
         }
     }
+    .navbar-toggler {
+        border: none;
+        &[aria-expanded="true"] {
+            .icon-bar {
+                &:nth-of-type(1) {
+                    @include o-transform(rotate(45deg));;
+                    @include o-transform-origin(10%, 10%)
+                }
+                &:nth-of-type(2) {
+                    opacity: 0;
+                    filter: alpha(opacity=0);
+                }
+                &:nth-of-type(3) {
+                    @include o-transform(rotate(-45deg));
+                    @include o-transform-origin(10%, 90%)
+                }
+            }
+        }
+        .icon-bar {
+            display: block;
+            width: 22px;
+            height: 2px;
+            background-color: $gray-dark;
+            @include o-transition(all, .2s);
+            &+ .icon-bar {
+                margin-top: 4px;
+            }
+            &:nth-of-type(1) {
+                @include o-transform(rotate(0));
+            }
+            &:nth-of-type(2) {
+                opacity: 1;
+                filter: alpha(opacity=100);
+            }
+            &:nth-of-type(3) {
+                @include o-transform(rotate(0));
+            }
+        }
+        &:focus {
+            box-shadow: none;
+            outline:none;
+        }
+    }
 }
 
 .o_logo img {
