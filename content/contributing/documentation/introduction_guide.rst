@@ -115,6 +115,7 @@ Use the GitHub interface
    request** button to submit your changes for review by a redactor at Odoo.
 
    .. image:: media/create-pull-request.png
+      :alt: Create pull request button
 
 #. You're done! If your changes are approved straight away they will appear in the documentation the
    very next day. It may also be the case that the reviewer has a question or a remark, so make sure
