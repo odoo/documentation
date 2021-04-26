@@ -8,6 +8,7 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
+# TODO ANVFE consider current_version==canonical_version to include (or not) in URL?
 ifeq ($(CURRENT_LANG),en)
   L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html
 else
@@ -43,11 +44,9 @@ html: extensions/odoo_theme/static/style.css
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(L10N_HTML_BUILD_DIR)
 	@echo "Build finished."
 
-# NOTE: latexmk needed for latex build
-# NOTE: on linux MINT:
-# installed texlive-fonts-recommended texlive-latex-extra texlive-generic-recommended texlive-fonts-extra
-# FIXME ANVFE: the cp command is needed if we want the pdf files to be available in local
-# NOTE VFE: should be done after the make html
+# To call *after* `make html`
+# Binary dependencies (Debian): texlive-fonts-recommended texlive-latex-extra
+# texlive-generic-recommended texlive-fonts-extra
 latexpdf:
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b latex $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/latex
@@ -55,7 +54,7 @@ latexpdf:
 	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/
 	@echo "Build finished."
 
-# TODO update sphinx-intl command to take args
+# TODO ANVFE update sphinx-intl command to take args
 l10n:
 	@echo "Generating translatable files..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) $(BUILD_DIR)/gettext
@@ -69,7 +68,7 @@ extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss 
 	pysassc $(subst .css,.scss,$@) $@
 	@echo "Compilation finished."
 
-#=== Development and debug rules ===#
+#=== Development and debugging rules ===#
 
 fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
@@ -78,12 +77,9 @@ static: extensions/odoo_theme/static/style.css
 	cp -r extensions/odoo_theme/static/* _build/html/_static/
 	cp -r static/* _build/html/_static/
 
-# TODO REMOVE ME BEFORE MERGE
-edi:
-	make clean html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
 lang:
 	make clean
-	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
-	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=fr
-	make html CANONICAL_VERSION=14.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=es
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=fr
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=es
 
