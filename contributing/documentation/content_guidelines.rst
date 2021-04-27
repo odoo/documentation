@@ -68,14 +68,48 @@ grammatical way of separating ideas.
 
 .. _contributing/titles:
 
-Titles
-------
+Titles and headings
+-------------------
 
-To write a good title :
+To write good titles and headings:
 
 - **Be concise.**
 - **Avoid sentences**, questions, and titles starting with "how to."
 - **Don't use pronouns** in your titles, especially 2nd person (*your*)
+- Use **sentence case**. This means you capitalize only:
+
+  - the first word of the title or heading
+  - the first word after a colon
+  - proper nouns (brands, product and service names, etc.)
+  - app features, as written in the apps
+
+  .. important::
+     Do not capitalize common nouns when they are not referred to as features. This is more likely
+     to happen in headings rather than in titles.
+
+  +------------------+-----------------------------------+--------------------------------------------------------+
+  |                  | Examples                          | Explanations                                           |
+  +==================+===================================+========================================================+
+  | | **Titles**     | *Quotation Templates*             | "Quotation Templates" is a feature in Odoo.            |
+  | | (h1)           +-----------------------------------+--------------------------------------------------------+
+  |                  | *Lead Mining*                     | "Lead Mining" is a feature in Odoo.                    |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Resupply from another Warehouse* | "Warehouse" is capitalized as we refer to the feature  |
+  |                  |                                   | in the app rather than to a real warehouse.            |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Synchronize Google Calendar      | "Google Calendar" is a product and "Odoo" is a brand.  |
+  |                  | with Odoo*                        |                                                        |
+  +------------------+-----------------------------------+--------------------------------------------------------+
+  | | **Headings**   | *Confirm the quotation*           | "The quotation" is a common noun not referring to a    |
+  | | (h2, h3, etc.) |                                   | feature in Odoo.                                       |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Test environment*                | "Environment" is a common noun.                        |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Add a new Payment Acquirer*      | "Payment Acquirers" is a feature in Odoo.              |
+  |                  +-----------------------------------+--------------------------------------------------------+
+  |                  | *Generate SEPA Direct Debit XML   | "SEPA Direct Debit" and "XML" are considered as proper |
+  |                  | files to submit payments*         | nouns.                                                 |
+  +------------------+-----------------------------------+--------------------------------------------------------+
 
 .. _contributing/document-structure:
 
@@ -86,7 +120,7 @@ Use different **headings levels** to organize your text by sections and sub-sect
 are also displayed in a dynamic *navigation bar* on the side.
 
 +---------------------------------------------------------------------------------------+
-| | **H1: Page Title**                                                                  |
+| | **H1: Page title**                                                                  |
 | | Your *page title* gives your reader a quick and clear understanding of what your    |
 |   content is about. It is also referenced in the section's *table of contents*.       |
 |                                                                                       |
@@ -94,11 +128,11 @@ are also displayed in a dynamic *navigation bar* on the side.
 | of view**, and shouldn't put the emphasis on Odoo, as this is documentation and not   |
 | marketing.                                                                            |
 |                                                                                       |
-| Start first with a **Lead Paragraph**, which helps the reader make sure that they've  |
+| Start first with a **lead paragraph**, which helps the reader make sure that they've  |
 | found the right page, then explain the **business aspects of this topic** in the      |
 | following paragraphs.                                                                 |
 +-----+---------------------------------------------------------------------------------+
-|     | | **H2: Section Title (configuration)**                                         |
+|     | | **H2: Section title (configuration)**                                         |
 |     | | This first H2 section is about the configuration of the feature, or the       |
 |     |   prerequisites to achieve a specific goal. To add a path, make sure you        |
 |     |   use the ``:menuselection:`` specialized directive (see link below).           |
@@ -107,7 +141,7 @@ are also displayed in a dynamic *navigation bar* on the side.
 |     | | To do so, go to ``:menuselection:`App name --> Menu --> Sub-menu```, and      |
 |     |   enable the XYZ feature.                                                       |
 +-----+---------------------------------------------------------------------------------+
-|     | | **H2: Section Title (main sections)**                                         |
+|     | | **H2: Section title (main sections)**                                         |
 |     | | Create as many main sections as you have actions or features to distinguish.  |
 |     |   The title can start with a verb, but try to avoid using "Create ...".         |
 +-----+-----+---------------------------------------------------------------------------+
@@ -159,6 +193,38 @@ A few tips to improve your screenshots:
 .. note::
    Resizing the window's width is the most important step to do as Odoo's responsive design
    automatically resizes all fields to match the window's width.
+
+.. _contributing/media-files:
+
+Media files
+-----------
+
+A **media filename**:
+
+- is written in **lower-case letters**
+- is **relevant** to the media's content. (E.g., :file:`screenshot-tips.gif`.)
+- separates its words with a **hyphen** ``-`` (E.g., :file:`awesome-filename.png`.)
+
+Each document has its own folder in which the media files are located. The folder's name must be the
+same as the document's filename.
+
+For example, the document :file:`doc_filename.rst` refers to two images that are placed in the
+folder ``doc_filename``.
+
+::
+
+  ├── section
+  │   └── doc_filename
+  │   │   └── screenshot-tips.gif
+  │   │   └── awesome-filename.png
+  │   └── doc_filename.rst
+
+.. note::
+   Previously, image filenames would mostly be named with numbers (e.g., :file:`feature01.png`) and
+   placed in a single ``media`` folder. While it is advised not to name your *new* images in that
+   fashion, it is also essential **not to rename unchanged files**, as doing this would double the
+   weight of renamed image files on the repository. They will eventually all be replaced as the
+   content referencing those images is updated.
 
 .. _contributing/alt-tags:
 

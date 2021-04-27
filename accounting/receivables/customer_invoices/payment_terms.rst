@@ -2,16 +2,18 @@
 Payment Terms and Installment Plans
 ===================================
 
-**Payment Terms** regroup all the conditions under which a sale is completed and paid. They can be
-applied to sales orders, customer invoices, and supplier bills, mostly to ensure that they will be
-correctly paid, and on time. These conditions cover:
+**Payment Terms** specify all the conditions under which a sale is paid, mostly to ensure customers
+pay their invoices correctly and on time.
+
+Payment Terms can be applied to sales orders, customer invoices, supplier bills, and contacts. These
+conditions cover:
 
 - The due date
 - Some discounts
 - Any other condition on the payment
 
-Defining Payment Terms automates the computation of payments due dates, both for invoices and bills.
-This is particularly helpful in managing installment plans.
+Defining Payment Terms automatically calculates the payments' due dates. This is particularly
+helpful for managing installment plans.
 
 An **installment plan** allows the customers to pay an invoice in parts, with the amounts and
 payment dates defined beforehand by the seller.
@@ -29,19 +31,23 @@ payment dates defined beforehand by the seller.
     the full payment is due at the end of the month following the invoice date.
 
 .. note::
-   Payment terms are not to be confused with payment in several parts. If, for a specific order, you
-   invoice the customer in two parts, that is nor a payment term nor an installment plan, but an
-   invoicing policy.
+   Payment terms are not to be confused with down payment invoices. If, for a specific order, you
+   issue several invoices to your customer, that is neither a payment term nor an installment plan,
+   but an invoicing policy.
+
+.. note::
+   This document is about the *Payment Terms* feature, not *Terms & Conditions*.
 
 Configuration
 =============
 
 Go to :menuselection:`Accounting --> Configuration --> Payment Terms` and click on *Create*.
 
-The **Description on the Invoice** is the displayed text on a sale order, invoice, or bill.
+The **Description on the Invoice** is the text displayed on the document (sale order, invoice,
+etc.).
 
-In the **Terms** section, you can add a set of rules, that we call *terms*, to define what needs to
-be paid, and by which due date.
+In the **Terms** section, you can add a set of rules, called *terms*, to define what needs to be
+paid and by which due date.
 
 To add a term, click on *Add a line*, and define its *Type*, *Value*, and *Due Date Computation*.
 
@@ -49,12 +55,13 @@ To add a term, click on *Add a line*, and define its *Type*, *Value*, and *Due D
    - Terms are computed in the order they are set up.
    - The **balance** should always be used for the last line.
 
-In the following example, 30% of the invoice is due on the day of issuance of the invoice, and the
-balance is due at the end of the following month.
+In the following example, 30% is due on the day of issuance, and the balance is due at the end of
+the following month.
 
-.. image:: media/payment_terms_configuration.png
+.. image:: payment_terms/configuration.png
    :align: center
-   :alt: Example of payment terms. The last line is the balance due the 31st of the following month.
+   :alt: Example of Payment Terms. The last line is the balance due on the 31st of the following
+         month.
 
 Using Payment Terms
 ===================
@@ -72,25 +79,26 @@ Payment Terms can be defined with the **Payment Terms** field on:
   | To set specific payment terms on a bill. This is mostly useful when you need to manage vendor
     terms with several installments. Otherwise, setting the *Due Date* is enough.
 
+.. tip::
+   You can also define a **Due Date** manually. If Payment Terms are already defined, empty the
+   field so you can select a date.
+
 Journal Entries
 ===============
+
 Invoices with specific Payment Terms generate different *Journal Entries*, with one *Journal Item*
-for each different *Due Date* computed.
+for every computed *Due Date*.
 
 This makes for easier *Follow-ups* and *Reconciliation* since Odoo takes each due date into account,
-rather than just the balance due date.
+rather than just the balance due date. It also helps to get an accurate *Aged Receivable report*.
 
-In the following example, an invoice of $1000 has been issued with the following payment terms:
-30% of the invoice is due on the day of issuance of the invoice, and the balance is due at the end
-of the following month.
-
-.. image:: media/payment_terms_journal_entry.png
+.. image:: payment_terms/journal-entry.png
    :align: center
-   :alt: Example of an invoice with specific Payment Terms. The amount debited on the Account
-         Receivable is split in several Journal Items.
+   :alt: The amount debited on the Account Receivable is split into two Journal Items with distinct
+         Due Dates
 
-The $1000 debited on the Account Receivable is split into two distinct *Journal Items*. Both of
-them have their own **Due Date**.
+In this example, an invoice of $1000 has been issued with the following payment terms: *30% is due
+on the day of issuance, and the balance is due at the end of the following month.*
 
 +----------------------+-------------+---------+---------+
 | Account              | Due date    | Debit   | Credit  |
@@ -102,7 +110,8 @@ them have their own **Due Date**.
 | Product Sales        |             |         | 1000    |
 +----------------------+-------------+---------+---------+
 
-This allows for easier reconciliation and to accurately follow up late payments.
+The $1000 debited on the Account Receivable is split into two distinct *Journal Items*. Both of
+them have their own **Due Date**.
 
 .. seealso:: 
    - :doc:`cash_discounts`
