@@ -15,13 +15,6 @@ else
   L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html/$(CURRENT_LANG)
 endif
 
-# Rely on COMSPEC, which is a variable present in all Windows platforms, to determine the OS
-ifdef COMSPEC
-  RM_CMD ?= del
-else
-  RM_CMD ?= rm -rf
-endif
-
 #=== Standard rules ===#
 
 # In first position to build the documentation from scratch by default
