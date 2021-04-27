@@ -92,4 +92,4 @@ how the bank statements are recorded and posted in the **Bank Statements** secti
 .. seealso::
    * :doc:`../../bank/feeds/bank_synchronization`
    * :doc:`../feeds/bank_statements`
-   * `Odoo Learn: Accounting Basics <https://www.odoo.com/r/lsZ>`_
+   * `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_

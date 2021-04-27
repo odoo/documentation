@@ -172,4 +172,4 @@ In-App Purchase
 
 .. seealso::
    - :doc:`../../general/in_app_purchase/in_app_purchase`
-   - `Odoo Learn: Lead Enrichment <https://www.odoo.com/r/p73>`_
+   - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_
