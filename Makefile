@@ -4,15 +4,17 @@ SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
                  -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
+                 -D is_remote_build=$(IS_REMOTE_BUILD) \
                  -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY)
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
-# TODO ANVFE consider current_version==canonical_version to include (or not) in URL?
-ifeq ($(CURRENT_LANG),en)
-  L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html
-else
-  L10N_HTML_BUILD_DIR = $(BUILD_DIR)/html/$(CURRENT_LANG)
+HTML_BUILD_DIR = $(BUILD_DIR)/html
+ifdef VERSIONS
+  HTML_BUILD_DIR := $(HTML_BUILD_DIR)/12.0
+endif
+ifneq ($(CURRENT_LANG),en)
+  HTML_BUILD_DIR := $(HTML_BUILD_DIR)/$(CURRENT_LANG)
 endif
 
 #=== Standard rules ===#
@@ -28,13 +30,13 @@ help:
 
 clean:
 	@echo "Cleaning build files..."
-	$(RM_CMD) $(BUILD_DIR)/*
-	$(RM_CMD) extensions/odoo_theme/static/style.css
+	rm -rf $(BUILD_DIR)/*
+	rm extensions/odoo_theme/static/style.css
 	@echo "Cleaning finished."
 
 html: extensions/odoo_theme/static/style.css
 	@echo "Starting build..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(L10N_HTML_BUILD_DIR)
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@echo "Build finished."
 
 # To call *after* `make html`
@@ -71,7 +73,6 @@ static: extensions/odoo_theme/static/style.css
 
 lang:
 	make clean
-	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=en
-	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=fr
-	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr,es CURRENT_LANG=es
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr CURRENT_LANG=en
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr CURRENT_LANG=fr
 

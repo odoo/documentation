@@ -1,3 +1,4 @@
+import re
 import os
 import sys
 from pathlib import Path
@@ -231,6 +232,7 @@ def setup(app):
     app.add_config_value('canonical_version', None, 'env')
     app.add_config_value('versions', None, 'env')
     app.add_config_value('languages', None, 'env')
+    app.add_config_value('is_remote_build', None, 'env')  # Whether the build is remotely deployed
 
     app.add_lexer('json', JsonLexer)
     app.add_lexer('xml', XmlLexer)
@@ -302,11 +304,23 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         ]
 
     def _build_url(_version=None, _lang=None):
-        _root = app.config.project_root or str(Path(__file__).parent)
+        if app.config.is_remote_build:
+            # Project root like https://odoo.com/documentation/14.0/fr
+            _root = app.config.project_root
+        else:
+            # Project root like .../documentation/_build/html/14.0/fr
+            _root = re.sub(rf'(/{app.config.version})?(/{app.config.language})?$', '', app.outdir)
+        # If the canonical version is not set, assume that the project has a single version
+        _canonical_version = app.config.canonical_version or app.config.version
         _version = _version or app.config.version
         _lang = _lang or app.config.language or 'en'
-        _canonical_page = (pagename + '.html').replace('index.html', '').replace('index/', '')
-        return f'{_root}/{_version}{f"/{_lang}" if _lang != "en" else ""}/{_canonical_page}'
+        _canonical_page = f'{pagename}.html'
+        if app.config.is_remote_build:
+            _canonical_page = _canonical_page.replace('index.html', '')
+        return f'{_root}' \
+               f'{f"/{_version}" if app.config.versions else ""}' \
+               f'{f"/{_lang}" if _lang != "en" else ""}' \
+               f'/{_canonical_page}'
 
     _canonicalize()
     _versionize()
