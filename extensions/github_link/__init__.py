@@ -74,6 +74,10 @@ def setup(app):
             odoo_repository=True)
     app.config.linkcode_resolve = linkcode_resolve
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
 
 def make_github_link(app, path, line=None, mode="blob", odoo_repository=False):
     config = app.config

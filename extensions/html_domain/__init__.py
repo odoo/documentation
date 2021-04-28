@@ -39,6 +39,10 @@ def setup(app):
                        ('kbd', kbd), ('var', var), ('samp', samp)]:
         addnode(app, node, name)
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
 
 class div(nodes.General, nodes.Element):
     pass

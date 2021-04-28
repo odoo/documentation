@@ -12,6 +12,11 @@ def setup(app):
 
     app.connect('env-updated', add_statics)
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
+
 def add_statics(app, env):
     app.add_js_file('js/switcher.js')
     env.config.html_static_path.append(statics())

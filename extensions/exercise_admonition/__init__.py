@@ -20,5 +20,9 @@ def setup(app):
         lambda self, node: self.depart_admonition(node),
     ))
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
 
 admonitionlabels['exercise'] = 'Exercise'

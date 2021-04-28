@@ -5,7 +5,8 @@ CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
                  -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
                  -D is_remote_build=$(IS_REMOTE_BUILD) \
-                 -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY)
+                 -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY) \
+				 -j auto
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
