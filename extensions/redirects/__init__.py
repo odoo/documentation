@@ -62,3 +62,8 @@ def generate_redirects(app):
 def setup(app):
     app.add_config_value('redirects_file', 'redirects', 'env')
     app.connect('builder-inited', generate_redirects)
+
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }

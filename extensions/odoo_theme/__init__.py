@@ -15,6 +15,10 @@ def setup(app):
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
 
 def set_missing_meta(app, pagename, templatename, context, doctree):
     if context.get('meta') is None:  # Pages without title (used with `include::`) have no meta

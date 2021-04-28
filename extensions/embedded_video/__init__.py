@@ -61,6 +61,11 @@ class Vimeo(IframeVideo):
     class="align-%(align)s"></iframe>'
 
 
-def setup(builder):
+def setup(app):
     directives.register_directive('youtube', Youtube)
     directives.register_directive('vimeo', Vimeo)
+
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }

@@ -1,4 +1,4 @@
-let tocEntryListId = 0;  // Used to generate IDs of toc entry lists for both the menu and page TOC
+let tocEntryListId = 0; // Used to generate IDs of toc entry lists for both the menu and page TOC
 
 /**
  * Update the provided TOC to allow collapsing its entries with Bootstrap's accordion.
@@ -42,7 +42,7 @@ const _prepareAccordion = (tocElement) => {
     const tocRoot = tocElement.querySelector('ul');
     tocRoot.querySelectorAll('ul').forEach(tocEntryList => {
         // Modify the <ul> element
-        tocEntryList.id = `o_target_${tocEntryListId++}`
+        tocEntryList.id = `o_target_${tocEntryListId++}`;
         tocEntryList.classList.add('collapse');
         // Create and configure an <i> element
         const arrowButton = document.createElement('I');

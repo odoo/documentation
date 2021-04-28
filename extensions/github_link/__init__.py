@@ -74,6 +74,10 @@ def setup(app):
             odoo_repository=True)
     app.config.linkcode_resolve = linkcode_resolve
 
+    return {
+        'parallel_read_safe': True,
+        'parallel_write_safe': True
+    }
 
 def make_github_link(app, path, line=None, mode="blob", odoo_repository=False):
     config = app.config
@@ -110,9 +114,5 @@ def add_doc_link(app, pagename, templatename, context, doctree):
     # may be useful in the future
     source_suffix = app.config.source_suffix
     source_suffix = next(iter(source_suffix))
-    # FIXME: odoo/odoo has a doc/ prefix which is incorrect for this
-    # project, how to unify? Add new setting?
-    # FIXME ANVFE: use a config directive to specify the content folder
-    # instead of hardcoding it here ?
     context['github_link'] = lambda mode='edit': make_github_link(
         app, 'content/%s%s' % (pagename, source_suffix), mode=mode)
