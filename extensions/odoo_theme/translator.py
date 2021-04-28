@@ -93,7 +93,7 @@ class BootstrapTranslator(HTML5Translator):
         self.body.append(u'[UNKNOWN NODE {}]'.format(node.__class__.__name__))
         raise nodes.SkipNode
 
-    # VFE NOTE: seems that when we remove/comment this, we get the titles 5 timesin the global toc :D
+    # NOTE: seems that when we remove/comment this, we get the titles 5 times in the global toc
     def visit_document(self, node):
         self.first_title = True
     def depart_document(self, node):

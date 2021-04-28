@@ -3,7 +3,7 @@
 
 {% block css %}
     {{ super() }}
-    {% if 'custom-css' in meta %}{# Allow custom css style import for specific pages #}
+    {% if 'custom-css' in meta %} {# Allow custom css style import for specific pages #}
         {% set css_files = meta['custom-css'].split(',') %}
         {% for css_file in css_files %}
             {% set link = '_static/css/' + css_file %}
@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block scripts %}
-    {% if 'custom-js' in meta %}{# Allow custom js import for specific pages #}
+    {% if 'custom-js' in meta %} {# Allow custom js import for specific pages #}
         {# Before the custom files using React & Immutable (accounting mementos) #}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"
             integrity="sha512-myCdDiGJRYrvRb/VuJ67ljifYTJdc1jdEvL4c4ftX9o3N6EAnmD83c/7l2/91RCINZ7c8w21tiXDT7RDFjdc3g=="
@@ -58,7 +58,7 @@
             {% include "layout_templates/menu.html" %}
         </nav>
     </noscript>
-    {# shown when js has properly set all the classes on the toc elements #}
+    {# Shown when the JS has properly set all the classes on the TOC elements #}
     <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
         {% include "layout_templates/menu.html" %}
     </nav>
@@ -101,11 +101,14 @@
                 {% include "layout_templates/homepage.html" %}
             {% else %}
                 <article id="o_content" class="doc-body">
-                    <div role="main">{# Beacon used by the Sphinx search to know where to look for a string #}
+                    <div role="main"> {# Beacon used by the Sphinx search to know where to look for a string #}
                         {% block body %} {% endblock %}
                     </div>
                     {% if github_link and pagename != 'search' %}
-                        <a href="{{ github_link(mode='edit') }}" class="o_git_link d-none d-lg-inline-block"><i class="i-edit"></i> Edit on GitHub</a>
+                        <a href="{{ github_link(mode='edit') }}"
+                           class="o_git_link d-none d-lg-inline-block">
+                            <i class="i-edit"></i> Edit on GitHub
+                        </a>
                     {% endif %}
                 </article>
             {% endif %}

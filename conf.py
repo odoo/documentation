@@ -164,9 +164,8 @@ html_favicon = os.path.join(html_theme_path[0], html_theme, 'static', 'img', 'fa
 html_static_path = ['static']
 html_add_permalinks = '¶'  # Sphinx < 3.5
 html_permalinks = True  # Sphinx >= 3.5
-# Additional css & js files:
-# Empty because the js & css files are specified in the extensions/theme
-# or specified for a given page only through the custom-js & custom-css metadata directives
+# Additional JS & CSS files that can be imported with the 'custom-js' and 'custom-css' metadata.
+# Lists are empty because the files are specified in extensions/themes.
 html_js_files = []
 html_css_files = []
 
