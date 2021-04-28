@@ -1,4 +1,5 @@
 let tocEntryListId = 0;  // Used to generate IDs of toc entry lists for both the menu and page TOC
+
 /**
  * Update the provided TOC to allow collapsing its entries with Bootstrap's accordion.
  *

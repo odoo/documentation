@@ -72,7 +72,12 @@ static: extensions/odoo_theme/static/style.css
 	cp -r static/* _build/html/_static/
 
 lang:
-	make clean
+	make fast LANGUAGES=en,fr CURRENT_LANG=en
+	make fast LANGUAGES=en,fr CURRENT_LANG=fr
+
+version:
+	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master
+
+both:
 	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr CURRENT_LANG=en
 	make fast CANONICAL_VERSION=12.0 VERSIONS=12.0,13.0,14.0,master LANGUAGES=en,fr CURRENT_LANG=fr
-
