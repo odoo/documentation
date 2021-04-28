@@ -1272,7 +1272,7 @@ access), and a set of permissions: read, write, create, unlink. Such access
 rights are usually created by a CSV file named after its model:
 ``ir.model.access.csv``.
 
-.. code-block:: text
+.. code-block:: csv
 
     id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
     access_idea_idea,idea.idea,model_idea_idea,base.group_user,1,1,1,0
