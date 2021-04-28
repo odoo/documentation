@@ -4,23 +4,23 @@
     </div>
     <div class="col">
         <div class="dropdown">
-            {% if alternate_versions|length > 0 %}
+            {%- if alternate_versions|length > 0 %}
                 <button class="btn border dropdown-toggle"
                         id="versions"
                         data-bs-toggle="dropdown">
                     {{ version }} {# The current version #}
                 </button>
-            {% else %}
+            {%- else %}
                 <button class="btn border"
                         id="versions"
                         disabled="">
                     {{ version }} {# The current version #}
                 </button>
-            {% endif %}
+            {%- endif %}
             <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="versions">
-                {% for alternate_version, url in alternate_versions %}
+                {%- for alternate_version, url in alternate_versions %}
                     <li><a class="dropdown-item" href="{{ url }}">{{ alternate_version }}</a></li>
-                {% endfor %}
+                {%- endfor %}
             </ul>
         </div>
     </div>

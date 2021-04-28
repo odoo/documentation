@@ -1,22 +1,22 @@
 <div class="o_languages me-3">
 	<div class="dropdown">
-        {% if alternate_languages|length > 0 %}
+        {%- if alternate_languages|length > 0 %}
             <button class="btn border dropdown-toggle"
                     id="languages"
                     data-bs-toggle="dropdown">
                 {{ language }} {# The current language #}
             </button>
-        {% else %}
+        {%- else %}
             <button class="btn border"
                     id="languages"
                     disabled="">
                 {{ language }} {# The current language #}
             </button>
-        {% endif %}
+        {%- endif %}
         <ul class="dropdown-menu" aria-labelledby="languages">
-            {% for alternate_language, language_code, url in alternate_languages %}
+            {%- for alternate_language, language_code, url in alternate_languages %}
                 <li><a class="dropdown-item" href="{{ url }}">{{ alternate_language }}</a></li>
-            {% endfor %}
+            {%- endfor %}
         </ul>
 	</div>
 </div>
