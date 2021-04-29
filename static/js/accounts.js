@@ -1,6 +1,6 @@
 /* global Immutable, React */
 (function () {
-    // NOTE VFE: used by memento.rst
+    // NOTE: used by memento.rst
     'use strict';
 
     function highlight(primary, secondary) {

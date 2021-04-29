@@ -1,7 +1,7 @@
 /* global Immutable, React */
 /* global createAtom */
 (function () {
-    // NOTE VFE: used by memento.rst
+    // NOTE: used by memento.rst
     'use strict';
 
     var data = createAtom();
