@@ -1456,7 +1456,7 @@ Possible children elements of the search view are:
 
         .. code-block:: xml
 
-          <filter name="groupby_category" string="Category" context = {'group_by': 'category_id'}/>
+          <filter name="groupby_category" string="Category" context="{'group_by': 'category_id'}"/>
 
         The groupby defined above allows to group data by category.
 
@@ -1471,7 +1471,7 @@ Possible children elements of the search view are:
 
         .. code-block:: xml
 
-          <filter name="groupby_create_date" string="Creation Date" context = {'group_by': 'create_date:week'}/>
+          <filter name="groupby_create_date" string="Creation Date" context="{'group_by': 'create_date:week'}"/>
 
     ``name``
         logical name for the filter, can be used to :ref:`enable it by default
