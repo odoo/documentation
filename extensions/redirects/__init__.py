@@ -64,6 +64,6 @@ def setup(app):
     app.connect('builder-inited', generate_redirects)
 
     return {
-        'parallel_read_safe': True,
+        'parallel_read_safe': False,
         'parallel_write_safe': True
     }

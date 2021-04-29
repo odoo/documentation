@@ -13,7 +13,7 @@ def setup(app):
     app.connect('env-updated', add_statics)
 
     return {
-        'parallel_read_safe': True,
+        'parallel_read_safe': False,
         'parallel_write_safe': True
     }
 
@@ -21,9 +21,11 @@ def add_statics(app, env):
     app.add_js_file('js/switcher.js')
     env.config.html_static_path.append(statics())
 
+
 statics = lambda *p: os.path.join(
     os.path.abspath(os.path.dirname(__file__)),
     'static', *p)
+
 
 class SwitcherDirective(Directive):
     has_content = True

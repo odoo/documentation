@@ -21,8 +21,9 @@ def setup(app):
     ))
 
     return {
-        'parallel_read_safe': True,
+        'parallel_read_safe': False,
         'parallel_write_safe': True
     }
+
 
 admonitionlabels['exercise'] = 'Exercise'

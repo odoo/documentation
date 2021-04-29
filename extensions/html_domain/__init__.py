@@ -40,7 +40,7 @@ def setup(app):
         addnode(app, node, name)
 
     return {
-        'parallel_read_safe': True,
+        'parallel_read_safe': False,
         'parallel_write_safe': True
     }
 
