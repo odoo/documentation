@@ -34,4 +34,4 @@ can be found in *Pricelists* under the *Products* menu, located in the Website a
 
   * :doc:`/applications/sales/sales/products_prices/prices/pricing`
   * :doc:`/applications/sales/sales/products_prices/prices/currencies`
-  * :doc:`promo_code`
+  * :doc:`cross-selling-upselling-promo`

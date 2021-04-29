@@ -24,8 +24,10 @@ See how to configure your products from links here below.
 .. seealso::
 
   * :doc:`../managing_products/variants`
-  * :doc:`/applications/sales/sales/products_prices/taxes`
+  * :doc:`../../sales/products_prices/taxes`
+  * :doc:`../managing_products/stock`
   * :doc:`../maximizing_revenue/cross-selling-upselling-promo`
   * :doc:`../maximizing_revenue/reviews`
   * :doc:`../maximizing_revenue/pricing`
   * :doc:`../../website/optimize/seo`
+
