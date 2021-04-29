@@ -1,5 +1,3 @@
-:classes: text-justify
-
 .. _enterprise_agreement:
 
 ======================================
