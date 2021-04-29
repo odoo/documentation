@@ -1,6 +1,6 @@
-==================================
-Add Users and Manage Access Rights
-==================================
+=======================
+Users and Access Rights
+=======================
 
 Odoo defines a *user* as someone who has access to a database to perform daily tasks. You can add as
 many users as you need and, in order to restrict the type of information each user can access, rules
@@ -51,6 +51,71 @@ The *Portal* and *Public* options do not allow you to choose access rights. Memb
 ones (such as record rules and restricted menus) and usually do not belong to the usual Odoo
 groups.
 
+.. _users/passwords-management:
+
+Passwords management
+====================
+
+.. _users/reset-password:
+
+Reset passwords
+---------------
+
+.. _users/reset-password-login:
+
+Enable password resets from login page
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+It is possible to enable password resets directly from the login page.
+
+To do so, go to :menuselection:`Settings --> Permissions`, activate **Password Reset** and *Save*.
+
+.. image:: add_user/password-reset-login.png
+   :align: center
+   :alt: Enabling Password Reset in Odoo Settings
+
+.. _users/reset-password-email:
+
+Send reset instructions to users
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Go to :menuselection:`Settings --> Users & Companies --> Users`, select the user out of the list and
+click on *Send Password Reset Instructions* on its user form. An email is automatically sent to
+them.
+
+.. note::
+   The *Send Password Reset Instructions* button only appears if the Odoo invitation email has
+   already been confirmed by the user.
+
+This email contains all the instructions needed to reset the password, along with a link redirecting
+the user to an Odoo login page.
+
+.. image:: add_user/password-email.png
+   :align: center
+   :alt: Example of an email with a password reset link for an Odoo account
+
+.. _users/change-password:
+
+Change users’ passwords
+-----------------------
+
+Go to :menuselection:`Settings --> Users  & Companies --> Users` and select a user to access its
+form. Click on the *Action* button and select *Change Password*.
+
+.. image:: add_user/change-password.png
+   :align: center
+   :alt: Change another user's password on Odoo
+
+Enter a new password and confirm by clicking on *Change Password*.
+
+.. note::
+   This operation only modifies the password of the users locally and does not affect their odoo.com
+   account. If you want to change the odoo.com password, you can :ref:`send the password reset
+   instructions <users/reset-password-email>`.
+
+Click on *Change Password* one more time. You are then redirected to an Odoo login page where you
+can reaccess your database using your new password.
+
 .. _general/odoo_basics/add_user/access_rights:
 
 Access Rights in detail
@@ -60,7 +125,7 @@ Activate the :doc:`Developer mode <../../general/developer_mode/activate>`, then
 :menuselection:`Settings --> Users & Companies --> Groups`.
 
 Groups
-~~~~~~
+------
 
 | When choosing the groups the user can have access under
   :ref:`Access Rights <general/odoo_basics/add_individual_user>`, details of the rules and
