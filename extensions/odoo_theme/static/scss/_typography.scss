@@ -1,0 +1,81 @@
+// =============================================================================
+// Typography
+// =============================================================================
+
+//------------------------------------------------------------------------------
+// Fonts
+//------------------------------------------------------------------------------
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+  font-family: 'icomoon';
+  src: url('fonts/icomoon.woff2') format('woff2'),
+    url('fonts/icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+html body{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+//------------------------------------------------------------------------------
+// Headings
+//------------------------------------------------------------------------------
+// Increase Inter's readability when used for huge titles.
+@for $i from 1 through 4 {
+    .display-#{$i}, h#{$i}, .h#{$i} {
+        letter-spacing: (3 - $i) * -0.01em; // eg: display-1 -> -0.02em;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Font weight
+//------------------------------------------------------------------------------
+b, strong{
+    font-weight: $fw_bold;
+}
+
+a {
+    font-weight: $fw_semibold;
+}
+
+.fw_extralight {
+    font-weight: $fw_extralight;
+}
+
+.fw_light {
+    font-weight: $fw_light;
+}
+
+.fw_extralight, .fw_light{
+    label, b, strong, a {
+        font-weight: $fw_regular;
+    }
+}
+
+.fw_regular {
+    font-weight: $fw_regular;
+}
+
+.fw_medium {
+    font-weight: $fw_medium;
+}
+
+.fw_semibold {
+    font-weight: $fw_semibold;
+}
+
+.fw_bold {
+    font-weight: $fw_bold;
+}
+
+.fw_extrabold {
+    font-weight: $fw_extrabold;
+}
+
+.fw_black {
+    font-weight: $fw_black;
+}
