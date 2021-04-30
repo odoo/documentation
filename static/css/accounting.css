@@ -1,0 +1,222 @@
+/* FIXME: hack to reverse hack in theme CSS */
+main.index .toctree-wrapper > .row:first-child > .col-md-3 {
+    margin: 0 !important;
+}
+.doc-aside {
+    border: 1px solid #d5d5d5;
+    background-color: #f8f8f8;
+    padding: 0 !important;
+    font-size: 14px;
+}
+.doc-aside p{
+    padding: .5rem;
+}
+.intro-list {
+    margin-top: 1em;
+}
+.intro-list p {
+    margin: 0;
+    cursor: pointer;
+}
+
+.related {
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
+}
+.secondary {
+    background-color: hsl(180deg 67% 94%) !important;
+    transition: .3s;
+}
+.highlight-op {
+    background-color: hsl(317deg 16% 90%) !important;
+    transition: .3s;
+}
+
+label:hover,
+label:hover,
+.highlighter-list li:hover {
+    background-color: hsl(0, 0%, 94%);
+    cursor: pointer;
+}
+
+/*.accounts-table {
+    font-size: 90%;
+}*/
+
+.accounts-table dl {
+    margin: 0;
+    padding: .5rem 0;
+}
+
+.accounts-table h4, .accounts-table h5 {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: .5rem;
+
+}
+
+.accounts-table h4 {
+    text-align: center;
+}
+/* table root */
+.accounts-table > div {
+    display: flex;
+}
+/* P&L & Balance Sheet columns */
+.accounts-table > div > div {
+    flex: 1;
+    padding: .5rem;
+}
+
+.accounts-table > div > div:first-child {
+    border-right: 1px solid #d5d5d5
+}
+
+/* sections */
+.accounts-table > div > div div {
+    display: flex;
+    flex-direction: column;
+}
+
+.accounts-table > div > div div > h5 {
+    order: 99;
+    border-top: 1px solid #d5d5d5;
+    border-bottom: 1px solid #d5d5d5;
+    /*text-transform: uppercase;*/
+    /*padding: 0.3em 0;*/
+    /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 10 / 3px 0 3px;*/
+}
+.accounts-table > div > div div div > h5 {
+    /* slightly smaller than normal 14px h5 size */
+    font-size: 12.5px;
+    /*border-image: linear-gradient(to bottom, transparent, rgb(221, 225, 231), transparent, rgb(221, 225, 231), transparent) 5 0 5;*/
+}
+.accounts-table dt {
+    font-weight: 700;
+    padding: 0 .5rem;
+}
+.accounts-table dt span {
+    font-style: italic;
+}
+.accounts-table dt span:last-child {
+    font-style: normal;
+}
+
+.values-table tr > * {
+    text-align: right;
+}
+.values-table tr > :first-child {
+    text-align: left;
+}
+
+/* 3-column (thing, debit, credit) tables */
+/* 2nd and 3rd th & td of each row right-aligned and 1/4th width */
+.d-c-table tr > :nth-child(2),
+.d-c-table tr > :nth-child(3) {
+    width: 25%;
+    text-align: right;
+}
+
+@media (min-width: 992px) {
+    .accounts-table, .doc-aside .highlighter-target {
+        /*font-size: 90%;*/
+        /*color: #8d8d8d !important;*/
+    }
+    .doc-aside .highlighter-target th {
+        font-weight: 400;
+        /*font-size: 110%;*/
+    }
+    .accounts-table .related, .doc-aside .highlighter-target .related {
+        /*background-color: #eee !important;*/
+        color: #7A436B !important;
+
+    }
+    .accounts-table .secondary, .doc-aside .highlighter-target .secondary {
+        background-color: #eee !important;
+        color: #7A436B !important;
+    }
+
+    .chart-of-accounts .highlight-op,
+    .valuation-chart .highlight-op {
+        background-color: #030035;
+    }
+
+    .chart-of-accounts .highlight-op,
+    .valuation-chart-continental .highlight-op {
+        background-color: #030035;
+    }
+
+    .chart-of-accounts .highlight-op,
+    .valuation-chart-anglo-saxon .highlight-op {
+        background-color: #030035;
+    }
+}
+.entries-listing {
+    padding: .5rem;
+}
+.journal-entries .entries-listing p {
+    font-style: italic;
+}
+
+#reconciliation .reconciliation-example div.buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+#reconciliation .reconciliation-example div.buttons button {
+    margin: 0 0.5em;
+}
+
+@keyframes reconcile {
+    0% {
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+        background-color: transparent;
+    }
+    60% {
+        background-color: hsl(317deg 16% 90%);
+    }
+    80% {
+        opacity: 1;
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    100% {
+        opacity: 0;
+        padding-top: 0;
+        padding-bottom: 0;
+        display: none;
+    }
+}
+.reconcile1 .invoice1, .reconcile1 .invoice1 td {
+    animation: reconcile 2s;
+}
+.reconcile2 .invoice2, .reconcile2 .invoice2 td {
+    animation: reconcile 2s;
+}
+
+.invoice1.reconciled, .invoice2.reconciled {
+    display: none;
+}
+
+blockquote.highlights, blockquote.highlights p{
+    border: none;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/*
+  lists of alternatives
+*/
+.alternatives-controls label {
+    display: block;
+}
+dl.alternatives > dt,
+dl.alternatives > dd {
+    display: none;
+}
+dl.alternatives > dd {
+    margin-left: 0;
+}
