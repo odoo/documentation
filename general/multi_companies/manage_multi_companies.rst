@@ -49,7 +49,7 @@ company only. To do so, on their forms, choose between:
 Employees' access
 -----------------
 
-Once companies are created, manage your employees' :doc:`Access Rights <../odoo_basics/add_user>`
+Once companies are created, manage your employees' :doc:`Access Rights <../odoo_basics/users>`
 for *Multi Companies*.
 
 .. image:: media/access_rights_multi_companies.png

@@ -13,13 +13,13 @@ Add individual users
 
 Go to :menuselection:`Settings --> Manage Users` and click on *Create*.
 
-.. image:: media/manage_users.png
+.. image:: users/manage-users.png
    :align: center
    :height: 280
    :alt: View of the settings page emphasizing the manage users field in Odoo
 
 | Fill in the form with the needed information. Under the tab
-  :ref:`Access Rights <general/odoo_basics/add_user/access_rights>` choose the group within
+  :ref:`Access Rights <general/odoo_basics/users/access_rights>` choose the group within
   each application the user can have access to.
 | The list of applications shown is based on the applications installed on the database.
 
@@ -30,7 +30,7 @@ Go to :menuselection:`Settings --> Manage Users` and click on *Create*.
 When you are done editing the page and have *Saved* it, an invitation email is automatically sent to
 the user. The user must click on it to accept the invitation and create a login.
 
-.. image:: media/invitation_email.png
+.. image:: users/invitation-email.png
    :align: center
    :alt: View of a user’s form with a notification that the invitation email has been sent in Odoo
 
@@ -42,7 +42,7 @@ the user. The user must click on it to accept the invitation and create a login.
 With the :doc:`Developer mode <../../general/developer_mode/activate>` activated, *User Types* can
 be selected.
 
-.. image:: media/user_type.png
+.. image:: users/user-type.png
    :align: center
    :height: 300
    :alt: View of a user’s form in developer mode emphasizing the user type field in Odoo
@@ -70,7 +70,7 @@ It is possible to enable password resets directly from the login page.
 
 To do so, go to :menuselection:`Settings --> Permissions`, activate **Password Reset** and *Save*.
 
-.. image:: add_user/password-reset-login.png
+.. image:: users/password-reset-login.png
    :align: center
    :alt: Enabling Password Reset in Odoo Settings
 
@@ -90,7 +90,7 @@ them.
 This email contains all the instructions needed to reset the password, along with a link redirecting
 the user to an Odoo login page.
 
-.. image:: add_user/password-email.png
+.. image:: users/password-email.png
    :align: center
    :alt: Example of an email with a password reset link for an Odoo account
 
@@ -102,7 +102,7 @@ Change users’ passwords
 Go to :menuselection:`Settings --> Users  & Companies --> Users` and select a user to access its
 form. Click on the *Action* button and select *Change Password*.
 
-.. image:: add_user/change-password.png
+.. image:: users/change-password.png
    :align: center
    :alt: Change another user's password on Odoo
 
@@ -116,7 +116,7 @@ Enter a new password and confirm by clicking on *Change Password*.
 Click on *Change Password* one more time. You are then redirected to an Odoo login page where you
 can reaccess your database using your new password.
 
-.. _general/odoo_basics/add_user/access_rights:
+.. _general/odoo_basics/users/access_rights:
 
 Access Rights in detail
 =======================
@@ -134,7 +134,7 @@ Groups
 | Under *Users*, have a list of the current ones. The ones with administrative rights are shown
   in black.
 
-.. image:: media/groups_users.png
+.. image:: users/groups-users.png
    :align: center
    :alt: View of a group’s form emphasizing the tab users in Odoo
 
@@ -142,7 +142,7 @@ Groups
 following ones. In the example below, users who have access to the group *Administrator* of *Sales*
 also have access to *Website/Restricted Editor* and *Sales/User: All Documents*.
 
-.. image:: media/groups_inherited.png
+.. image:: users/groups-inherited.png
    :align: center
    :height: 330
    :alt: View of a group’s form emphasizing the tab inherited in Odoo
@@ -153,7 +153,7 @@ also have access to *Website/Restricted Editor* and *Sales/User: All Documents*.
 
 The *Menus* tab is where you define which menus (models) the user can have access to.
 
-.. image:: media/groups_menus.png
+.. image:: users/groups-menus.png
    :align: center
    :height: 330
    :alt: View of a group’s form emphasizing the tab menus in Odoo
@@ -166,7 +166,7 @@ is the technical name given to a model. For each model, enable the following opt
 - *Create*: values for that object can be created by the user.
 - *Delete*: the values of that object can be deleted by the user.
 
-.. image:: media/groups_access_rights.png
+.. image:: users/groups-access-rights.png
    :align: center
    :alt: View of a group’s form emphasizing the tab access rights in Odoo
 
@@ -176,7 +176,7 @@ is the technical name given to a model. For each model, enable the following opt
   data. Therefore, a domain expression is a list of conditions. For each rule, choose among the
   following options: *Read*, *Write*, *Create* and *Delete* values.
 
-.. image:: media/groups_record_rules.png
+.. image:: users/groups-record-rules.png
    :align: center
    :alt: View of a group’s form emphasizing the tab record rules in Odoo
 
@@ -196,7 +196,7 @@ the user can have access.
    behaviors. Therefore, a good knowledge of Odoo is required. For technical explanations refer
    to `this <https://www.odoo.com/documentation/13.0/howtos/company.html>`_ documentation.
 
-.. image:: media/multi_companies.png
+.. image:: users/multi-companies.png
    :align: center
    :height: 300
    :alt: View of a user’s form emphasizing the multi companies field in Odoo
