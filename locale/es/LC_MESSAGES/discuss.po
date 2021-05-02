@@ -11,6 +11,7 @@
 # Vivian Montana <vmo@odoo.com>, 2019
 # Alonso Muñoz <Alonso.munoz.91@outlook.com>, 2020
 # Althay Ramallo Fuentes <arf@odoo.com>, 2020
+# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -19,7 +20,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2019-09-16 15:50+0200\n"
 "PO-Revision-Date: 2018-10-19 08:15+0000\n"
-"Last-Translator: Althay Ramallo Fuentes <arf@odoo.com>, 2020\n"
+"Last-Translator: Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -215,6 +216,12 @@ msgid ""
 "a record \"odoo._domainkey.foo.com\" that is a CNAME with the value "
 "\"odoo._domainkey.odoo.com\"."
 msgstr ""
+"Debe hacer lo mismo si DKIM (Correo identificado con claves de dominio) está"
+" habilitado en su servidor de correo electrónico. En el caso de Odoo Online "
+"& Odoo.sh, debe agregar un registro CNAME DNS \"odoo._domainkey\" a "
+"\"odoo._domainkey.odoo.com\". Por ejemplo, para \"foo.com\" deben tener un "
+"registro \"odoo._domainkey.foo.com\" que sea un CNAME con el valor "
+"\"odoo._domainkey.odoo.com\"."
 
 #: ../../discuss/email_servers.rst:86
 msgid "How to manage inbound messages"
@@ -232,6 +239,9 @@ msgid ""
 "discussion thread (and to the inbox of all its followers) by the catchall "
 "alias (**catchall@**)."
 msgstr ""
+"**Los mensajes de respuesta** de los mensajes enviados desde Odoo se enrutan"
+" a su hilo de discusión original (y a la bandeja de entrada de todos sus "
+"seguidores) mediante el alias de catchall (**catchall @**)."
 
 #: ../../discuss/email_servers.rst:94
 msgid ""
@@ -240,36 +250,51 @@ msgid ""
 "<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
 "recipients."
 msgstr ""
+"**Los mensajes rebotados * se enrutan a **bounce@** para rastrearlos en "
+"Odoo. Esto se utiliza especialmente en `Odoo Email Marketing "
+"<https://www.odoo.com/page/email-marketing>`__ para excluir a los "
+"destinatarios no válidos."
 
 #: ../../discuss/email_servers.rst:98
 msgid ""
 "**Original messages**: Several business objects have their own alias to "
 "create new records in Odoo from incoming emails:"
 msgstr ""
+"**Mensajes originales**: varios objetos comerciales tienen su propio alias "
+"para crear nuevos registros en Odoo a partir de correos electrónicos "
+"entrantes:"
 
 #: ../../discuss/email_servers.rst:101
 msgid ""
 "Sales Channel (to create Leads or Opportunities in `Odoo CRM "
 "<https://www.odoo.com/page/crm>`__),"
 msgstr ""
+"Canal de ventas (para crear prospectos u oportunidades en `Odoo CRM "
+"<https://www.odoo.com/page/crm>`__),"
 
 #: ../../discuss/email_servers.rst:103
 msgid ""
 "Support Channel (to create Tickets in `Odoo Helpdesk "
 "<https://www.odoo.com/page/helpdesk>`__),"
 msgstr ""
+"Canal de soporte (para crear Tickets en `Odoo Helpdesk "
+"<https://www.odoo.com/page/helpdesk>`__),"
 
 #: ../../discuss/email_servers.rst:105
 msgid ""
 "Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page"
 "/project-management>`__),"
 msgstr ""
+"Proyectos (para crear nuevas Tareas en `Odoo Project "
+"<https://www.odoo.com/page/project-management>`__),"
 
 #: ../../discuss/email_servers.rst:107
 msgid ""
 "Job Positions (to create Applicants in `Odoo Recruitment "
 "<https://www.odoo.com/page/recruitment>`__),"
 msgstr ""
+"Puestos de trabajo (para crear candidatos en `Odoo Reclutamiento "
+"<https://www.odoo.com/page/recruitment>`__),"
 
 #: ../../discuss/email_servers.rst:109
 msgid "etc."
@@ -281,16 +306,21 @@ msgid ""
 "emails. The easiest and most recommended method is to manage one email "
 "address per Odoo alias in your mail server."
 msgstr ""
+"Dependiendo de su servidor de correo, puede haber varios métodos para buscar"
+" correos electrónicos. El método más fácil y recomendado es administrar una "
+"dirección de correo electrónico por alias de Odoo en su servidor de correo."
 
 #: ../../discuss/email_servers.rst:115
 msgid ""
 "Create the corresponding email addresses in your mail server (catchall@, "
 "bounce@, sales@, etc.)."
 msgstr ""
+"Cree las direcciones de correo electrónico correspondientes en su servidor "
+"de correo (catchall@, bounce@, sales@, etc.)."
 
 #: ../../discuss/email_servers.rst:117
 msgid "Set your domain name in the General Settings."
-msgstr ""
+msgstr "Establezca su nombre de dominio en la Configuración general."
 
 #: ../../discuss/email_servers.rst:122
 msgid ""
@@ -300,6 +330,12 @@ msgid ""
 "Perform on Incoming Mails* blank. Once all the information has been filled "
 "out, click on *TEST & CONFIRM*."
 msgstr ""
+"Si usa Odoo en las instalaciones, cree un *Servidor de correo entrante* en "
+"Odoo para cada alias. También puede hacerlo desde la Configuración general. "
+"Complete el formulario de acuerdo con la configuración de su proveedor de "
+"correo electrónico. Deje *Acciones para realizar en correos entrantes* en "
+"blanco. Una vez completada toda la información, haga clic en *PROBAR Y "
+"CONFIRMAR*."
 
 #: ../../discuss/email_servers.rst:131
 msgid ""
@@ -311,6 +347,14 @@ msgid ""
 "domain name in your email server (e.g. *catchall@mydomain.ext* to "
 "*catchall@mycompany.odoo.com*)."
 msgstr ""
+"Si usa Odoo Online u Odoo.sh, recomendamos redirigir los mensajes entrantes "
+"al nombre de dominio de Odoo en lugar de usar exclusivamente su propio "
+"servidor de correo electrónico. De esa forma, recibirá los mensajes "
+"entrantes sin demora. De hecho, Odoo Online está obteniendo mensajes "
+"entrantes de servidores externos solo una vez por hora. Debe establecer "
+"redirecciones para todas las direcciones de correo electrónico al nombre de "
+"dominio de Odoo en su servidor de correo electrónico (por ejemplo, "
+"*catchall@mydomain.ext* a *catchall@mycompany.odoo.com*)."
 
 #: ../../discuss/email_servers.rst:138
 msgid ""
