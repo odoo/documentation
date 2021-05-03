@@ -1,0 +1,14 @@
+{%- extends "basic/search.html" %}
+
+<!-- This is an override of the search page of the basic theme.
+     The original page included a static "Search Result" section that would always be replaced by
+     the JS, so it's not reproduced here. -->
+{%- block body %}
+<div id="fallback" class="alert alert-warning">
+    <script>$('#fallback').hide();</script>
+    <p>
+        {%- trans %}Please activate JavaScript to enable the search functionality.{%- endtrans %}
+    </p>
+</div>
+<div id="search-results"></div>
+{%- endblock %}
