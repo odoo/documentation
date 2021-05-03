@@ -1,0 +1,12 @@
+{# Global TOC of the doc #}
+{#
+    See: https://www.sphinx-doc.org/en/master/templating.html#toctree
+    collapse: Whether only menu items included in the breadcrumb should be rendered
+    title_only: Whether menu items for content pages (without toctree) should be hidden
+    includehidden: Whether menu items of pages inside a hidden toctree should be rendered
+#}
+{#
+    `collapse_menu` is passed directly to Jinja with sphinx-build's option `-A collapse_menu=True`.
+    It it evaluated as a string, so what we're really evaluating here is `collapse_menu != None`.
+#}
+{{ toctree(collapse=collapse_menu, titles_only=True, includehidden=False)}}

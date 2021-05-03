@@ -1,0 +1,125 @@
+{%- extends "basic/layout.html" %}
+{%- set html5_doctype = True %}
+
+{%- block css %}
+    {{ super() }}
+    {%- if 'custom-css' in meta %} {# Allow custom css style import for specific pages #}
+        {%- set css_files = meta['custom-css'].split(',') %}
+        {%- for css_file in css_files %}
+            {%- set link = '_static/css/' + css_file %}
+            <link rel="stylesheet" href="{{ pathto(link, 1) }}" type="text/css"/>
+        {%- endfor %}
+    {%- endif %}
+{%- endblock %}
+
+{%- block scripts %}
+    {%- if 'custom-js' in meta %} {# Allow custom js import for specific pages #}
+        {# Before the custom files using React & Immutable (accounting mementos) #}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/immutable/3.8.2/immutable.min.js"
+            integrity="sha512-myCdDiGJRYrvRb/VuJ67ljifYTJdc1jdEvL4c4ftX9o3N6EAnmD83c/7l2/91RCINZ7c8w21tiXDT7RDFjdc3g=="
+            crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.0/react-with-addons.min.js"
+            integrity="sha512-wsnDgOxfyn4lhblRMHPMuJh+9CnLcwcisda1zLRGNWKh6OiQynebYTyRZYgH+eWLEdNTKak0OD2GAd/S51UhTw=="
+            crossorigin="anonymous"></script>
+        <script src="{{ pathto('_static/js/atom.js', 1) }}"></script>
+        {%- set js_files = meta['custom-js'].split(',') %}
+        {%- for js_file in js_files %}
+            {%- set link = '_static/js/' + js_file %}
+            <script src="{{ pathto(link, 1) }}"></script>
+        {%- endfor %}
+    {%- endif %}
+    {{ super() }} {# Load the scripts specified in the extensions/themes #}
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+        crossorigin="anonymous"></script>
+{%- endblock %}
+
+{%- block linktags %}
+    {%- for alternate_language, language_code, url in alternate_languages %}
+        <link rel="alternate" hreflang="{{ language_code }}" href="{{ url }}" />
+    {%- endfor %}
+    <link rel="canonical" href="{{ canonical }}" />
+    {{ super() }}
+{%- endblock %}
+
+{#
+    Google analytics key logic.
+    We do not want to call super here since our custom footer logic is defined in the content block.
+#}
+{%- block footer %}
+    {%- if google_analytics_key -%}
+        {%- include "layout_templates/google_analytics.html" %}
+    {%- endif -%}
+{%- endblock %}
+
+{%- block header %}
+    <noscript>
+        <nav class="o_side_nav border-end">
+            {%- include "layout_templates/menu.html" %}
+        </nav>
+    </noscript>
+    {# Shown when the JS has properly set all the classes on the TOC elements #}
+    <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
+        {%- include "layout_templates/menu.html" %}
+    </nav>
+    <header class="o_main_header border-bottom navbar navbar-light navbar-expand-lg">
+        {%- include "layout_templates/header.html" %}
+        <button class="navbar-toggler pe-3 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_main_toctree" aria-label="Toggle navigation">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+        </button>
+    </header>
+{%- endblock %}
+
+{%- block content %}
+    <div id="wrap">
+        {%- set main_classes = [] %}
+        {%- if pagename == master_doc %}  {# The current page is the homepage #}
+            {%- set main_classes = main_classes + ['o_index'] %}
+        {%- endif %}
+
+        {%- if 'code-column' in meta %}  {# The page contains a 'memento' (dynamic side block) #}
+            {%- set main_classes = main_classes + ['o_has_code_column'] %}
+        {%- endif %}
+
+        {%- if 'classes' in meta %}  {# The page source defines custom classes #}
+            {%- set main_classes = main_classes + meta['classes'].split() %}
+        {%- endif %}
+
+        {%- if 'hide-page-toc' in meta %}
+            {%- set main_classes = main_classes + ['o_fullwidth_page'] %}
+        {%- endif %}
+
+        <div class="px-3 py-4 d-lg-none">
+            <!-- Searchbox only visible in mobile -->
+            {%- include "layout_templates/searchbox.html" %}
+        </div>
+        <main class="container-fluid {{ ' '.join(main_classes) }}">
+            {%- if pagename == master_doc %}
+                {# Custom landing page on the root of the documentation #}
+                {%- include "layout_templates/homepage.html" %}
+            {%- else %}
+                <article id="o_content" class="doc-body">
+                    <div role="main">{# Beacon used by the Sphinx search to know where to look for a string #}
+                        {%- block body %} {%- endblock %}
+                    </div>
+                    {%- if github_link and pagename != 'search' %}
+                        <a href="{{ github_link(mode='edit') }}"
+                           class="o_git_link d-none d-lg-inline-block">
+                            <i class="i-edit"></i> Edit on GitHub
+                        </a>
+                    {%- endif %}
+                </article>
+            {%- endif %}
+        </main>
+        {%- if 'hide-page-toc' not in meta %}
+            <aside id="o_page_toc" class="o_page_toc">
+                {%- include "layout_templates/page_toc.html" %}
+            </aside>
+        {%- endif %}
+    </div>
+    <footer>
+        {%- include "layout_templates/footer.html" %}
+    </footer>
+{%- endblock %}

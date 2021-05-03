@@ -1,0 +1,7 @@
+
+========
+Licenses
+========
+
+.. toctree::
+    licenses/licenses
