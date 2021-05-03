@@ -1,6 +1,6 @@
 :code-column:
 :custom-css: accounting.css
-:custom-js: accounts.js;chart-of-accounts.js;entries.js;misc.js;reconciliation.js
+:custom-js: accounts.js,chart-of-accounts.js,entries.js,misc.js,reconciliation.js
 
 ==============================================
 Accounting Memento For Entrepreneurs (US GAAP)
