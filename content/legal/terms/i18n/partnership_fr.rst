@@ -1,5 +1,3 @@
-:classes: text-justify
-
 .. _partnership_agreement_fr:
 
 ===============================
