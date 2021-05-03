@@ -33,6 +33,10 @@ type, which is *Manufacture this Product*.
 .. image:: media/bills_of_materials_01.png
     :align: center
 
+.. warning::
+   The destination location should **not** be a scrap location.
+   A scrap location is where you put products that you don't need. 
+
 Using the same BoM to describe Variants
 ---------------------------------------
 
