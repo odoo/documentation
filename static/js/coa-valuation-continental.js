@@ -132,7 +132,7 @@
     data.addWatch('chart', function (k, m, prev, next) {
         React.render(
             React.createElement(Controls, { p: next }),
-            document.getElementById('chart-controls'));
+            document.getElementById('chart-controls-continental'));
         React.render(
             React.createElement(Chart, { p: next }),
             document.querySelector('.valuation-chart-continental'));
@@ -143,7 +143,7 @@
         if (!chart) { return; }
 
         var controls = document.createElement('div');
-        controls.setAttribute('id', 'chart-controls');
+        controls.setAttribute('id', 'chart-controls-continental');
         chart.parentNode.insertBefore(controls, chart);
 
         data.reset(Immutable.Map({
