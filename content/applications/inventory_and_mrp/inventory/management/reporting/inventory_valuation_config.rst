@@ -1,6 +1,6 @@
 :code-column:
 :custom-css: accounting.css
-:custom-js: coa-valuation-continental.js;coa-valuation-anglo-saxon.js;misc.js
+:custom-js: coa-valuation-continental.js,coa-valuation-anglo-saxon.js,misc.js
 
 =================================
 Inventory valuation configuration
