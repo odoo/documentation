@@ -79,7 +79,7 @@ Request Body
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
             {
                 "jsonrpc": string,
@@ -130,7 +130,7 @@ Response
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {
             "jsonrpc": string,
@@ -171,7 +171,7 @@ Request Body
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {
             "jsonrpc": string,
@@ -216,7 +216,7 @@ Response
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {
             "jsonrpc": string,
@@ -260,7 +260,7 @@ For each feature, we return a list of candidates and we spotlight the candidate 
 
     .. switcher::
 
-        .. code-block:: json
+        .. code-block:: text
 
             {
                 "selected_value": candidate_12,
@@ -285,7 +285,7 @@ For each candidate we give its representation and position in the document. Cand
 
     .. switcher::
 
-        .. code-block:: json
+        .. code-block:: text
 
             {
                 "content": string|float,
@@ -355,7 +355,7 @@ a :ref:`webservices/extract_api/invoice_get_results/feature_result` structure.
 
     .. switcher::
 
-        .. code-block:: json
+        .. code-block:: text
 
             [
                 {
@@ -403,7 +403,7 @@ Request Body
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {
             "jsonrpc": string,
@@ -430,7 +430,7 @@ This format apply for all the features except for ``global_taxes`` and ``invoice
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         { "content": string|float }
 
@@ -452,7 +452,7 @@ validation for ``global_taxes``
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {"content": [
             {
@@ -473,7 +473,7 @@ validation for ``invoice_lines``
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {"lines": [
             {
@@ -520,7 +520,7 @@ Response
 
 .. switcher::
 
-    .. code-block:: json
+    .. code-block:: text
 
         {
             "jsonrpc": string,
