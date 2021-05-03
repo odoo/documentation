@@ -61,5 +61,5 @@ or use the stage.
    :alt: View of a team’s kanban view in Odoo Helpdesk
 
 .. seealso::
-   - :doc:`../../general/odoo_basics/add_user`
+   - :doc:`../../general/odoo_basics/users`
 
