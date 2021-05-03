@@ -1,12 +1,17 @@
 # Makefile for Sphinx documentation
 
+# Pass WORKERS=auto for parallel build
+ifndef WORKERS
+  WORKERS = 1
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
                  -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
                  -D is_remote_build=$(IS_REMOTE_BUILD) \
                  -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY) \
-				 -j auto
+				 -j $(WORKERS)
 SOURCE_DIR     = content
 BUILD_DIR      = _build
 
@@ -65,7 +70,7 @@ extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss 
 
 #=== Development and debugging rules ===#
 
-fast: SPHINXOPTS += -A collapse_menu=True
+fast: SPHINXOPTS += -A collapse_menu=True -j auto
 fast: html
 
 static: extensions/odoo_theme/static/style.css
