@@ -2949,7 +2949,7 @@ this behaviour: ``this._super``:
   This means that if you use an asynchronous function in the patch then you
   cannot call ``this._super`` after an ``await``, because it may or may not be
   the function that you expect.  The correct way to do that is to keep a reference
-  to the initial ``_super` method:
+  to the initial ``_super`` method:
 
   .. code-block:: javascript
 

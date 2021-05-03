@@ -68,7 +68,7 @@ Running the server
     path to an alternate :ref:`configuration file <reference/cmdline/config>`.
     If not defined, Odoo checks ``ODOO_RC`` environmental variable
     and default location :file:`{$HOME}/.odoorc`.
-    See configuration file section :ref:`below <reference/cmdline/server/config>`.
+    See configuration file section :ref:`below <reference/cmdline/config>`.
 
 .. option:: -D <data-dir-path>, --data-dir <data-dir-path>
 
@@ -360,7 +360,8 @@ HTTP
     TCP/IP address on which the HTTP server listens, defaults to ``0.0.0.0``
     (all addresses)
 
-.. option:: -p <port> --http-port <port>
+.. option:: -p <port>
+.. option:: --http-port <port>
 
     Port on which the HTTP server listens, defaults to 8069.
 
