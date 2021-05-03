@@ -66,11 +66,8 @@ the following month.
 Using Payment Terms
 ===================
 
-Payment Terms can be defined with the **Payment Terms** field on:
+Payment Terms can be defined in the **Due Date** field, with the **Terms** drop-down list, on:
 
-- | **Contacts**
-  | To set specific payment terms automatically on new sales orders, invoices, and bills of a
-    contact. This can be modified in the contact’s *Form View*, under the *Sales & Purchase* tab.
 - | **Quotations**
   | To set specific payment terms automatically on all invoices generated from a quotation.
 - | **Customer Invoices**
@@ -82,6 +79,12 @@ Payment Terms can be defined with the **Payment Terms** field on:
 .. tip::
    You can also define a **Due Date** manually. If Payment Terms are already defined, empty the
    field so you can select a date.
+
+Payment Terms can be defined with the **Payment Terms** field on:
+
+- | **Contacts**
+  | To set specific payment terms automatically on new sales orders, invoices, and bills of a
+    contact. This can be modified in the contact’s *Form View*, under the *Sales & Purchase* tab.
 
 Journal Entries
 ===============
