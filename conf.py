@@ -94,10 +94,6 @@ extensions = [
     # Support the specialized to-do directives
     'sphinx.ext.todo',
 
-    # GitHub links generation
-    'sphinx.ext.linkcode',
-    'github_link',
-
     # Custom Odoo theme
     'odoo_theme',
 
@@ -118,6 +114,12 @@ extensions = [
     # Strange html domain logic used in memento pages
     'html_domain',
 ]
+if odoo_dir_in_path:
+    # GitHub links generation
+    extensions += [
+        'sphinx.ext.linkcode',
+        'github_link',
+    ]
 
 todo_include_todos = False
 
