@@ -1,131 +1,129 @@
-=====================================
-How to do inter-warehouses transfers?
-=====================================
+=========================
+Inter-warehouse transfers
+=========================
 
-If you own different warehouses you might want to transfer goods from
-one warehouse to the other. This is very easy thanks to the inventory
-application in Odoo.
+When owning several warehouses, you might need to transfer goods from one warehouse to another.
+Proceeding to such behavior is called *inter-warehouse transfers*. If this action is physically
+easy to perform, the administrative part can be arduous. Fortunately, Odoo comes with an intuitive
+flow that helps save time when registering those transfers.
 
 Configuration
 =============
 
-First of all you have to select the multi locations option. Go to
-:menuselection:`Configuration --> Settings` in the **Inventory application**.
-Then tick the **Manage several locations per
-warehouse** option. Please don't forget to **apply** your changes.
+First of all, go to :menuselection:`Configuration --> Settings` and enable **Storage Locations**.
+Then, hit save.
 
-.. image:: media/inter01.png
+.. image:: inter_warehouse/feature-storage-location.png
    :align: center
+   :alt: Enabling the storage location feature in Odoo Inventory.
 
-.. tip::
-   This option should also be ticked if you wish to manage different
-   locations and routes in your warehouse.
+.. important::
+   If you want to manage several routes within your warehouses, then enable **Multi-Step Routes**
+   and check :doc:`use-routes`.
 
 Creating a new warehouse
 ========================
 
-The next step is to create your new warehouse. In the Inventory application
-click on :menuselection:`Configuration --> Warehouse Management --> 
-Warehouses`. You are now able to create your warehouse by clicking on
-**Create**.
+The next step is to create your new warehouse. To do so, go to :menuselection:`Configuration -->
+Warehouse Management --> Warehouses` and click on **Create**.
 
-Fill in a **Warehouse Name** and a **Short Name**. The short name is 5
-characters maximum.
+Fill out a **Warehouse Name** and a **Short Name**. The short name is five characters maximum.
 
-.. image:: media/inter02.png
+.. image:: inter_warehouse/create-new-warehouse.png
    :align: center
+   :alt: Short name field of a warehouse on Odoo Inventory.
 
-.. tip::
-   Please note that the **Short Name** is very important as it will
-   appear on your transfer orders and other warehouse documents. It might
-   be smart to use an understandable one (e.g.: WH/[first letters of
-   location]).
+.. important::
+   The **Short Name** appears on your transfer orders and other warehouse documents. We recommend
+   using an understandable one (e.g.: WH/[first letters of location]).
 
-If you go back to your dashboard, new operations will automatically have
-been generated for your new warehouse.
+Now, go back to your dashboard. There, new operations related to your warehouse have been
+automatically generated.
 
-.. image:: media/inter03.png
+.. image:: inter_warehouse/new-transfer-types.png
    :align: center
+   :alt: Inventory app dashboard displaying new transfer type for the recently created warehouse.
 
 Creating a new inventory
 ========================
 
-If you create a new warehouse you might already have an existing
-physical inventory in it. In that case you should create an inventory in
-Odoo, if not you can skip this step.
+If you create a new warehouse, you might already have an existing inventory in it. In that case, you
+should create an inventory in Odoo. If this is not the case, you can skip this step.
 
-Go into the inventory application, select :menuselection:`Inventory Control -->
-Inventory Adjustment`. You can then create a new inventory by clicking on
-**Create**. Fill in the **Inventory Reference**, **Date**
-and be sure to select the right warehouse and location.
+Into the inventory application, select :menuselection:`Operations --> Inventory Adjustment`.
+Then, create a new inventory by clicking on **Create**. Fill in the **Inventory Reference**,
+**Date** and make sure to select the right warehouse and location.
 
-.. image:: media/inter04.png
+.. image:: inter_warehouse/annual-inventory.png
    :align: center
+   :alt: View of the inventory adjustment form before hitting the start button.
 
-Next, click on **Start Inventory**. A new window will open where you will
-be able to input your existing products. Select add an item and indicate
-the **Real Quantity** available in the warehouse. The theoretical quantity
-can not be changed as it represents a computed quantity from purchase
-and sales orders.
+Next, click on **Start Inventory**. You will be able to input your existing products in the new
+window. Select add an item and indicate the **Real Quantity** available in the warehouse.
+The theoretical quantity can not be changed as it represents a computed one from purchase and sales
+orders.
 
-.. image:: media/inter05.png
+.. image:: inter_warehouse/in-progress-annual-inventory.png
    :align: center
+   :alt: View of the actual physical inventory of the new warehouse.
 
-Don't forget to validate your inventory once you have recorder the state of
-all yours product.
+.. tip::
+   Don't forget to validate your inventory once you have recorded the state of all your products.
 
 Create an internal transfer
 ===========================
 
-The final step is to create your internal transfer. If you want to
-tranfer 2 units of a product from your first warehouse to another one in
-Brussels, proceed as follows:
+The final step is to create your internal transfer. If you want to transfer eight units of a product
+from your first warehouse to another one, proceed as follows:
 
-From your dashboard, select a internal movement of one of the two
-warehouses. To do so, click on :menuselection:`More  --> Transfer`.
+From your dashboard, select an internal movement of one of the two warehouses. To do so, click on
+:menuselection:`Manage  --> Planned Transfer`.
 
-.. image:: media/inter06.png
+.. image:: inter_warehouse/internal-transfer-choice.png
    :align: center
+   :alt: View of the choice between planned transfer and immediate transfer.
 
-A new window will open where you will be able to select the source
-location zone (in this case our "old warehouse") and the destination
-location zone (in this case our "new" warehouse located in Brussels).
+On the new window, select the source location zone (in this case, your "old" warehouse) and the
+destination location zone (in this case, your "new" warehouse).
 
-Add the products you want to transfer by clicking on **Add an Item** and
-don't forget to **Validate** or **Mark as TODO** once you are done.
+Add the products you want to transfer by clicking on **Add an Item**, then click on **Save** and
+**Mark as TODO** once you are done.
 
-.. image:: media/inter07.png
+.. image:: inter_warehouse/planned-internal-transfer.png
    :align: center
+   :alt: View of the internal transfer form.
 
-If you select **Validate**, Odoo will process all quantities to transfer.
+If you selected **Immediate Transfer**, Odoo processes the transfer automatically after you clicked
+on **Validate**.
 
-If you select **Mark as TODO**, Odoo will put the transfer in **Waiting
-Availability** status. Click on **Reserve** to reserve the amount of
-products in your source warehouse.
+If you select **Mark as TODO**, Odoo puts the transfer in **Waiting Availability** status.
+Click on **Reserve** to reserve the number of products in your source warehouse.
 
 It is also possible to manually transfer each product:
 
-1. Via your dashboard, select the transfer order in the source location.
+- Via your dashboard, select the transfer order in the source location.
 
-   .. image:: media/inter08.png
-      :align: center
-
-2. Select the right transfer order
-
-   .. image:: media/inter09.png
-      :align: center
-
-3. Click on the little pencil logo in the lower right
-corner in order to open the operation details window. In this new
-window you can manually indicate how much products you process
-
-.. image:: media/inter10.png
+.. image:: inter_warehouse/in-progress-internal-transfer.png
    :align: center
+   :alt: View of the dashboard with a zoom of the pending internal transfer.
 
-.. tip::
-   If you decide to partially process the transfer order (e.g. a part of the
-   products can't be shipped yet due to an unexpected event), Odoo will
-   automatically ask if you wish to create a **backorder**.
-   Create a backorder if you expect to process the remaining products
-   later, do not create a backorder if you will not supply/receive the
-   remaining products.
+- Select the right transfer order.
+
+.. image:: inter_warehouse/internal-transfers-list.png
+   :align: center
+   :alt: View of the pending internal transfers list.
+
+- Click on the little pencil logo in the lower right corner to open the operation details window.
+  In this new window you can manually indicate how many products you process.
+
+.. image:: inter_warehouse/backorder.png
+   :align: center
+   :alt: View of a backorder pop-up window because all products are not moved at the same time.
+
+.. note::
+   If you decide to process the transfer order partially (e.g., a part of the products can't be
+   shipped yet due to an unexpected event), Odoo automatically asks if you wish to create a
+   **backorder**.
+
+   - Create a backorder if you expect to process the remaining products later.
+   - Do not create a backorder if you will not supply/receive the remaining products.
