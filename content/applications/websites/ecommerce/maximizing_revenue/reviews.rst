@@ -1,59 +1,65 @@
-===============================
-How to enable comments & rating
-===============================
+=====================
+Discussion and Rating
+=====================
 
-Publishing and monitoring customer experience will help you gain the trust
-of new customers and better engage with your community. In 2 clicks, allow
-your customer to share their feedback!
+One of the best ways to make more informed business decisions is gather honest, genuine feedback
+from your customers.
 
-.. image:: ./media/comment_post.png
+With Odoo, you can let customers share their thoughts, feelings, and opinions about your products,
+website, and the overall shopping experience with just a couple of clicks.
+
+.. image:: reviews/discussion-rating.png
    :align: center
+   :alt: sample comment on product page
 
-Setup
-=====
+Getting started
+===============
 
-Activate comments & rating from the *Customize* menu of the product web page.
+In order for customers to leave ratings and feedback on products, you first need to activate the
+*Discussion and Rating* setting.
 
-.. image:: ./media/comment_setup.png
+To do that, go to a product page on the front-end of your website, and select
+:menuselection:`Customize --> Discussion and Rating`.
+
+.. image:: reviews/discussion-setup.png
    :align: center
+   :alt: customize discussion and rating setting
 
 .. note::
-    Visitors must log in to share their comments. Make sure they are able to
-    do so (see Portal documentation).
+    Customers need to log in in order to share their comments. (see
+    :doc:`../../../websites/ecommerce/shopper_experience/portal`).
 
-Review the posts in real time
-=============================
+Review posts
+============
 
-Whenever a post is published, the product manager and all the product followers
-get notified in their Inbox (*Discuss* menu).
+Whenever a comment on a product page is published, the user who created the product (and all the
+product followers) get notified about it. The comment also shows up in the *Chatter* section on
+that product's detail page in the back-end.
 
-.. image:: ./media/comment_new.png
+.. image:: reviews/chatter-comment.png
    :align: center
+   :alt: comment in chatter of the product detail form
+
+In the upper-right corner of the *Chatter*, you are able to follow the product (if you aren't
+already). You can also see how many followers this product has in this section, as well.
 
 .. note::
-    By default the user who created the product is automatically set as follower.
+   By default, the user who created the product is set as a follower.
 
-Click the product name to open the detail form and review the comment (in the
-product discussion thread).
+Moderate and unpublish
+======================
 
-.. image:: ./media/comment_inbox.png
+You can view and moderate reviews and comments on the product page located on the front-end of
+your website. You can also view comments in the *Chatter* of the product detail form in the
+back-end of the website, but you can only moderate them on the front-end.
+
+To unpublish a post, open the product page on the front-end of your website, and click the
+*Visible* button to turn it red (*Employees Only*). You can change it back the same way.
+
+.. image:: reviews/visible.png
    :align: center
+   :alt: comment on product page is visible
 
-Moderate & unpublish
-====================
-
-You can easily moderate by using the chatter, either in the product detail form
-or on the web page.
-
-To unpublish the post, open the product web page and click the *Published* button
-to turn it red (*Unpublished*). 
-
-.. image:: ./media/comment_unpublish.png
+.. image:: reviews/employees-only.png
    :align: center
-
-..tip::
-    You can access the web page from the detail form by clicking the *Published*
-    smart button (and vice versa).
-
-.. image:: ./media/comment_webpage.png
-   :align: center
+   :alt: comment on product page is only visible to employees
