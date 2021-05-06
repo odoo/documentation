@@ -91,8 +91,8 @@ Here are some terms that are essential on the Peruvian localization:
 - **OSE**: Electronic Service Operator, `OSE SUNAT's definition 
   <https://cpe.sunat.gob.pe/aliados/ose#:~:text=El%20Operador%20de%20Servicios%20Electr%C3%B3nicos%20(OSE)%20es%20qui%C3%A9n%20se%20encarga,otro%20documento%20que%20se%20emita>`_.
 - **CDR**: Receipt certificate (Constancia de Recepción). 
-- **SOL Credentials**: User and password provided by the SUNAT and grants access to Online 
-  Operations systems. 
+- **SOL Credentials**: Sunat Operaciones en Línea. User and password are provided by the SUNAT and
+  grant access to Online Operations systems.
 
 
 Signature Provider
@@ -195,6 +195,9 @@ in your configuration. In this case you need to consider:
   
 - Provide you SOL credentials.
 
+.. important::
+   When using direct connection with the SUNAT, the SOL User must be set with the Company RUT + User
+   Id. Example: ``20121888549JOHNSMITH``
 
 Testing environment
 ~~~~~~~~~~~~~~~~~~~
