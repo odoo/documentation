@@ -55,13 +55,10 @@ latexpdf:
 	cp $(BUILD_DIR)/latex/*.pdf $(BUILD_DIR)/html/
 	@echo "Build finished."
 
-l10n:
+gettext:
 	@echo "Generating translatable files..."
-	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) $(BUILD_DIR)/gettext
+	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
 	@echo "Generation finished."
-	@echo "Localizing translation strings..."
-	sphinx-intl update -p $(BUILD_DIR)/gettext -l $(L10N_LANGUAGES)
-	@echo "Localization finished."
 
 extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."

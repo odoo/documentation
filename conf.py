@@ -5,6 +5,7 @@ from pathlib import Path
 
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.util import logging
+import sphinx
 
 _logger = logging.getLogger(__name__)
 
@@ -128,7 +129,13 @@ intersphinx_mapping = {
 github_user = 'odoo'
 github_project = 'documentation'
 
-locale_dirs = ['locale/']
+locale_dirs = ['../locale/']
+
+# custom docname_to_domain to devide the translations of applications in subdirectories
+sphinx.transforms.i18n.docname_to_domain = (
+    sphinx.util.i18n.docname_to_domain
+) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
+
 supported_languages = {
     'de': 'Deutsch',
     'en': 'English',
