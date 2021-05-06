@@ -1,37 +1,63 @@
-================================
-Adapt prices to website visitors
-================================
+=================================
+Adapt prices for online customers
+=================================
 
-This section sheds light on pricing features found in the eCommerce app:
+With Odoo eCommerce, you can have prices automatically adapt to specific customers that visit
+your online store.
 
-* force a price by geo-localization,
+Users can enforce a specific pricelist based on the geo-localization of the customer, and they can
+even allow their customers to choose the currency they want to pay with. Having prices adapt to
+specific customers enhances the overall shopping experience in numerous ways.
 
-* let the customer choose the currency.
+.. seealso::
+   As a pre-requisite, check out how to manage product pricing:
+   :doc:`../../../sales/sales/products_prices/prices/pricing`).
 
-As a pre-requisite, check out how to managing product pricing:
-:doc:`../../../sales/sales/products_prices/prices/pricing`).
+Apply price based on GEO-IP
+===========================
 
-Geo-IP automatically applies the right price
-============================================
+To assign country groups to your pricelists, go to
+:menuselection:`Website --> Products --> Pricelists`.
 
-Assign country groups to your pricelists. That way, visitors who aren't
-logged in yet will get their own currency when landing on your website.
+Then, create (or select) a pricelist to modify the configuration (and currency) to fit your
+specific needs.
 
-Once logged in, they get the pricelist matching their country.
+.. image:: pricing/pricelists-currency-field.png
+   :align: center
+   :alt: pricelists currency field on the detail form
+
+Clicking the box next to the currency field reveals a currency-related pop-up, in which you enter
+in all the pertinent information related to that specific form of currency.
+
+.. image:: pricing/currency-pop-up.png
+   :align: center
+   :alt: pricelists currency pop-up window
+
+.. note::
+   Visitors who aren't logged in, still get to pay with their own currency when landing on your
+   website. Or, they can choose from any pricelists from the drop-down menu on the product
+   catalog page. Customers who are logged in get the pricelist that matches their country.
 
 Currency selector
 =================
 
-In the case that you sell in several currencies, you can let your customers choose
-their own. Check the *Selectable* box to add the pricelist to the website drop-down menu, which
-can be found in *Pricelists* under the *Products* menu, located in the Website application.
+If you work with several currencies, you can let your customers choose which one they want to use.
 
-.. image:: ./media/website_pricelist_select.png
+To enable that, go to
+:menuselection:`Pricelist detail form --> Edit --> Configuration --> Check the "Selectable" box`
+
+.. image:: pricing/selectable-pricelist-currency.png
    :align: center
-   :width: 50 %
+   :alt: pricelist currency selectable configuration tab
+
+This adds that pricelist to the price drop-down menu, which can be found atop your product
+catalog on the front-end of your website.
+
+.. image:: pricing/pricelist-select-menu-currency.png
+   :align: center
+   :alt: pricelist select menu currency type
 
 .. seealso::
 
   * :doc:`../../../sales/sales/products_prices/prices/pricing`
   * :doc:`../../../sales/sales/products_prices/prices/currencies`
-  * :doc:`promo_code`
