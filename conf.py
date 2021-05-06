@@ -308,7 +308,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
     def _build_url(_version=None, _lang=None):
         if app.config.is_remote_build:
-            # Project root like https://odoo.com/documentation/14.0/fr
+            # Project root like https://www.odoo.com/documentation
             _root = app.config.project_root
         else:
             # Project root like .../documentation/_build/html/14.0/fr
