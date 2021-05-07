@@ -10,3 +10,4 @@ Devices
    devices/camera
    devices/footswitch
    devices/printer
+   devices/scale
