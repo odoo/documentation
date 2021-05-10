@@ -102,9 +102,6 @@ extensions = [
 
     'exercise_admonition',
 
-    # Build code from git patches
-    'patchqueue',
-
     # Redirection generator
     'redirects',
 

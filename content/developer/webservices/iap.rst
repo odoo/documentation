@@ -2,40 +2,6 @@
 
 .. _webservices/iap:
 
-.. using sphinx-patchqueue:
-    * the "queue" directive selects a *series* file which lists the patches in
-      the patch queue, in order of application (from top to bottom). The
-      corresponding patch files should be in the same directory.
-    * the "patch" directive steps to the next patch in the queue, applies it
-      and reifies its content (depending on the extension's configuration, by
-      default it shows the changed files post-diff application, slicing to
-      only display sections affecte by the file)
-
-.. while it's technically possible to apply and update patches by hand, it's
-   finnicky work and easy to break.
-
-.. the easiest way is to install quilt (http://savannah.nongnu.org/projects/quilt),
-   go to the directory where you want to reify the addon, then create a
-   "patches" symlink to the patches directory (the iap/ folder next to this
-   file) or set QUILT_PATCHES to that folder.
-
-.. at that point you have a "primed" queue with no patch applied, and you can
-   move within the queue with "quilt push" and "quilt pop".
-    * "quilt new" creates a new empty patch at the top of the stack
-    * "quilt add" tells quilt to start tracking the file, quilt add *works per
-      patch*, it must be called *every time you want to alter a file within a
-      patch*: quilt is not a full VCS (since it's intended to sit on top of
-      an existing source) and does not do permanent tracking of files
-    * "quilt edit" is a shorthand to "quilt add" then open the file in your
-      editor, I suggest you use that rather than open the edited module
-      normally, it avoids forgetting to "quilt add" before doing your
-      modifications (at which point your modifications are untracked,
-      invisible and depending on your editor may be a PITA to revert & redo)
-    * "quilt refresh" updates the current patch to include pending changes
-
-.. see "man quilt" for the rest of the subcommands. FWIW I could not get
-   "quilt setup" to do anything useful.
-
 ===============
 In-App Purchase
 ===============
@@ -153,8 +119,6 @@ For this example, the service we will provide is ~~mining dogecoins~~ burning
 Register the service on Odoo
 ----------------------------
 
-.. queue:: iap_service/series
-
 .. todo:: complete this part with screenshots
 
 The first step is to register your service on the IAP endpoint (production
@@ -258,8 +222,6 @@ A credit pack is essentially a product with five characteristics:
 Odoo App
 --------
 
-.. queue:: iap/series
-
 .. todo:: does this actually require apps?
 
 The second step is to develop an `Odoo App`_ which clients can install in their
@@ -271,13 +233,55 @@ First, we will create an *odoo module* depending on ``iap``. IAP is a standard
 V11 module and the dependency ensures a local account is properly set up and
 we will have access to some necessary views and useful helpers.
 
-.. patch::
+.. code-block:: python
+    :emphasize-lines: 1-5
+    :caption: `coalroller/__manifest__.py`
+
+    {
+        'name': "Coal Roller",
+        'category': 'Tools',
+        'depends': ['iap'],
+    }
 
 Second, the "local" side of the integration. Here we will only be adding an
 action button to the partners view, but you can of course provide significant
 local value via your application and additional parts via a remote service.
 
-.. patch::
+
+.. code-block:: python
+    :emphasize-lines: 5-7
+    :caption: `coalroller/__manifest__.py`
+
+    {
+        'name': "Coal Roller",
+        'category': 'Tools',
+        'depends': ['iap'],
+        'data': [
+            'views/res_partner_views.xml',
+        ],
+    }
+
+.. code-block:: xml
+    :emphasize-lines: 1-17
+    :caption: `coalroller/views/res_partner_views.xml`
+
+    <odoo>
+        <record model="ir.ui.view" id="partner_form_coalroll">
+            <field name="name">partner.form.coalroll</field>
+            <field name="model">res.partner</field>
+            <field name="inherit_id" ref="base.view_partner_form" />
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']">
+                    <button type="object" name="action_partner_coalroll"
+                            class="oe_stat_button" icon="fa-gears">
+                        <div class="o_form_field o_stat_info">
+                            <span class="o_stat_text">Roll Coal</span>
+                        </div>
+                    </button>
+                </xpath>
+            </field>
+        </record>
+    </odoo>
 
 .. image:: images/button.png
     :align: center
@@ -301,7 +305,31 @@ In that call, we will need to provide:
   where :class:`service_name <ServiceName>` is the name of the service registered
   on IAP endpoint.
 
-.. patch::
+.. code-block:: python
+    :emphasize-lines: 1-21
+    :caption: `coalroller/models/res_partner.py`
+
+    from odoo import api, models
+    from odoo.addons.iap import jsonrpc, InsufficientCreditError
+
+    # whichever URL you deploy the service at, here we will run the remote
+    # service in a local Odoo bound to the port 8070
+    DEFAULT_ENDPOINT = 'http://localhost:8070'
+    class Partner(models.Model):
+        _inherit = 'res.partner'
+        @api.multi
+        def action_partner_coalroll(self):
+            # fetch the user's token for our service
+            user_token = self.env['iap.account'].get('coalroller')
+            params = {
+                # we don't have any parameter to provide
+                'account_token': user_token.account_token
+            }
+            # ir.config_parameter allows locally overriding the endpoint
+            # for testing & al
+            endpoint = self.env['ir.config_parameter'].sudo().get_param('coalroller.endpoint', DEFAULT_ENDPOINT)
+            jsonrpc(endpoint + '/roll', params=params)
+            return True
 
 .. note::
 
@@ -325,20 +353,56 @@ In that call, we will need to provide:
 Service
 -------
 
-.. queue:: iap_service/series
-
 Though that is not *required*, since ``iap`` provides both a client helper
 for JSON-RPC2_ calls (:func:`~odoo.addons.iap.jsonrpc`) and a service helper
 for transactions (:class:`~odoo.addons.iap.models.iap.charge`) we will also be
 implementing the service side as an Odoo module:
 
-.. patch::
+.. code-block:: python
+    :emphasize-lines: 1-5
+    :caption: `coalroller_service/__manifest__.py`
+
+    {
+        'name': "Coal Roller Service",
+        'category': 'Tools',
+        'depends': ['iap'],
+    }
 
 Since the query from the client comes as JSON-RPC2_ we will need the
 corresponding controller which can call :class:`~odoo.addons.iap.models.iap.charge` and
 perform the service within:
 
-.. patch::
+.. code-block:: python
+    :emphasize-lines: 1-27
+    :caption: `coalroller_service/controllers/main.py`
+
+    from passlib import pwd, hash
+
+    from odoo import http
+    from odoo.addons.iap import charge
+
+    class CoalBurnerController(http.Controller):
+        @http.route('/roll', type='json', auth='none', csrf='false')
+        def roll(self, account_token):
+            # the service key *is a secret*, it should not be committed in
+            # the source
+            service_key = http.request.env['ir.config_parameter'].sudo().get_param('coalroller.service_key')
+
+            # we charge 1 credit for 10 seconds of CPU
+            cost = 1
+            # TODO: allow the user to specify how many (tens of seconds) of CPU they want to use
+            with charge(http.request.env, service_key, account_token, cost):
+
+                # 10 seconds of CPU per credit
+                end = time.time()  (10 * cost)
+                while time.time() < end:
+                    # we will use CPU doing useful things: generating and
+                    # hashing passphrases
+                    p = pwd.genphrase()
+                    h = hash.pbkdf2_sha512.hash(p)
+            # here we don't have anything useful to the client, an error
+            # will be raised & transmitted in case of issue, if no error
+            # is raised we did the job
 
 .. todo:: for the actual IAP will the "portal" page be on odoo.com or iap.odoo.com?
 
@@ -382,8 +446,66 @@ parameters we can use to make things clearer to the end-user.
     service provider is requesting, its purpose is to tell your users why
     they should be interested in your IAP offers.
 
-.. patch::
+.. code-block:: python
+    :emphasize-lines: 5-7
+    :caption: `coalroller_service/__manifest__.py`
 
+    {
+        'name': "Coal Roller Service",
+        'category': 'Tools',
+        'depends': ['iap'],
+        'data': [
+            'views/no-credit.xml',
+        ],
+    }
+
+.. code-block:: python
+    :emphasize-lines: 10-12
+    :caption: `coalroller_service/controllers/main.py`
+
+    @http.route('/roll', type='json', auth='none', csrf='false')
+    def roll(self, account_token):
+        # the service key *is a secret*, it should not be committed in
+        # the source
+        service_key = http.request.env['ir.config_parameter'].sudo().get_param('coalroller.service_key')
+
+        # we charge 1 credit for 10 seconds of CPU
+        cost = 1
+        # TODO: allow the user to specify how many (tens of seconds) of CPU they want to use
+        with charge(http.request.env, service_key, account_token, cost,
+                    description="We're just obeying orders",
+                    credit_template='coalroller_service.no_credit'):
+
+            # 10 seconds of CPU per credit
+            end = time.time()  (10 * cost)
+            while time.time() < end:
+                # we will use CPU doing useful things: generating and
+                # hashing passphrases
+                p = pwd.genphrase()
+                h = hash.pbkdf2_sha512.hash(p)
+
+.. code-block:: xml
+    :emphasize-lines: 1-18
+    :caption: `coalroller_service/views/no-credit.xml`
+
+    <odoo>
+        <template id="no_credit" name="No credit warning">
+            <div>
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-7 offset-lg-1 mt32 mb32">
+                        <h2>Consume electricity doing nothing useful!</h2>
+                        <ul>
+                            <li>Heat our state of the art data center for no reason</li>
+                            <li>Use multiple watts for only 0.1€</li>
+                            <li>Roll coal without going outside</li>
+                        </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </template>
+    </odoo>
 
 .. TODO:: how do you test your service?
 
