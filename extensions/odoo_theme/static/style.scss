@@ -402,7 +402,6 @@ header.o_main_header{
                 }
             }
 
-
             p, h5 {
                 color: $gray;
             }
@@ -451,30 +450,9 @@ header.o_main_header{
             }
         }
 
-        // "in between" pages (Applications / Contributing)
+        // pages with full width: Legal
 
         &.o_fullwidth_page {
-            .toctree-wrapper {
-                display: none;
-                /* margin-top: 1.5rem;
-                > ul {
-                    display: flex;
-                    flex-wrap: wrap;
-
-                    > li.toctree-l1 {
-                        @include media-breakpoint-up(lg) {
-                            width: 33.3%;
-                        }
-                        padding-bottom: 3rem;
-                        padding-right: 3rem;
-                    }
-                }
-                ul {
-                    list-style: none;
-                    padding-left:0;
-                } */
-            }
-
             .toctree-l1 > a {
                 display: block;
                 color: $gray-darker;
@@ -484,6 +462,8 @@ header.o_main_header{
                 margin-bottom: 1rem;
             }
         }
+
+        // pages with column for code on the right
 
         &.o_has_code_column {
 
@@ -568,6 +548,11 @@ header.o_main_header{
 
         article.doc-body {
             position: relative;
+
+            // hide ugly toctree on "in between" pages (e.g.: /applications.html, /administration.html, ...)
+            .toctree-wrapper {
+                display: none;
+            }
 
             .o_git_link {
                 @include font-size($font-size-secondary);
