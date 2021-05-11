@@ -730,7 +730,7 @@ official Odoo `docker image <https://registry.hub.docker.com/_/odoo/>`_ page.
 .. _demo: https://demo.odoo.com
 .. _docker: https://www.docker.com
 .. _download: https://www.odoo.com/page/download
-.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
+.. _Ubuntu 20.04: http://releases.ubuntu.com/20.04/
 .. _EPEL: https://fedoraproject.org/wiki/EPEL
 .. _PostgreSQL: http://www.postgresql.org
 .. _the official installer:
