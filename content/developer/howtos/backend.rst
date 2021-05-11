@@ -1,6 +1,4 @@
 
-.. queue:: backend/series
-
 .. _howto/base:
 .. _howto/module:
 
@@ -114,14 +112,6 @@ or XML. The usage of most of those files will be explained along this tutorial.
     Use the command line above to  create an empty module Open Academy, and
     install it in Odoo.
 
-    .. only:: solutions
-
-        #. Invoke the command ``odoo-bin scaffold openacademy addons``.
-        #. Adapt the manifest file to your module.
-        #. Don't bother about the other files.
-
-        .. patch::
-
 Object-Relational Mapping
 -------------------------
 
@@ -216,12 +206,6 @@ overridden by setting :attr:`~odoo.models.Model._rec_name`.
     Define a new data model *Course* in the *openacademy* module. A course
     has a title and a description. Courses must have a title.
 
-    .. only:: solutions
-
-        Edit the file ``openacademy/models/models.py`` to include a *Course* class.
-
-        .. patch::
-
 Data files
 ----------
 
@@ -259,12 +243,6 @@ be declared in the ``'data'`` list (always loaded) or in the ``'demo'`` list
 
     Create demonstration data filling the *Courses* model with a few
     demonstration courses.
-
-    .. only:: solutions
-
-        Edit the file ``openacademy/demo/demo.xml`` to include some data.
-
-        .. patch::
 
 .. tip:: The content of the data files is only loaded when a module is
     installed or updated.
@@ -314,14 +292,6 @@ action more easily.
 
     - display a list of all the courses
     - create/modify courses
-
-    .. only:: solutions
-
-        #. Create ``openacademy/views/openacademy.xml`` with an action and
-           the menus triggering the action
-        #. Add it to the ``data`` list of ``openacademy/__manifest__.py``
-
-        .. patch::
 
 Basic views
 ===========
@@ -417,21 +387,11 @@ elements (groups, notebooks) and interactive elements (buttons and fields):
     Create your own form view for the Course object. Data displayed should be:
     the name and the description of the course.
 
-    .. only:: solutions
-
-        .. patch::
-
 .. exercise:: Notebooks
 
     In the Course form view, put the description field under a tab, such that
     it will be easier to add other tabs later, containing additional
     information.
-
-    .. only:: solutions
-
-        Modify the Course form view as follows:
-
-        .. patch::
 
 Form views can also use plain HTML for more flexible layouts:
 
@@ -480,10 +440,6 @@ searching on the ``name`` field.
 
     Allow searching for courses based on their title or their description.
 
-    .. only:: solutions
-
-        .. patch::
-
 Relations between models
 ========================
 
@@ -499,18 +455,6 @@ client data; it is also related to its sale order line records.
     Create a model for *sessions*. A session has a name, a start date, a
     duration and a number of seats. Add an action and a menu item to display
     them. Make the new model visible via a menu item.
-
-    .. only:: solutions
-
-        #. Create the class *Session* in ``openacademy/models/models.py``.
-        #. Add access to the session object in ``openacademy/view/openacademy.xml``.
-
-        .. patch::
-
-        .. note:: ``digits=(6, 2)`` specifies the precision of a float number:
-                  6 is the total number of digits, while 2 is the number of
-                  digits after the comma. Note that it results in the number
-                  digits before the comma is a maximum 4
 
 Relational fields
 -----------------
@@ -562,24 +506,10 @@ Relational field types are:
       of the model ``openacademy.course`` and is required.
     - Adapt the views.
 
-    .. only:: solutions
-
-        #. Add the relevant ``Many2one`` fields to the models, and
-        #. add them in the views.
-
-        .. patch::
-
 .. exercise:: Inverse one2many relations
 
     Using the inverse relational field one2many, modify the models to reflect
     the relation between courses and sessions.
-
-    .. only:: solutions
-
-        #. Modify the ``Course`` class, and
-        #. add the field in the course form view.
-
-        .. patch::
 
 .. exercise:: Multiple many2many relations
 
@@ -587,13 +517,6 @@ Relational field types are:
     every session to a set of *attendees*. Attendees will be represented by
     partner records, so we will relate to the built-in model ``res.partner``.
     Adapt the views accordingly.
-
-    .. only:: solutions
-
-        #. Modify the ``Session`` class, and
-        #. add the field in the form view.
-
-        .. patch::
 
 Inheritance
 ===========
@@ -694,21 +617,6 @@ instead of a single view its ``arch`` field is composed of any number of
       the session-partner relation
     * Using view inheritance, display this fields in the partner form view
 
-    .. only:: solutions
-
-       .. note::
-
-           This is the opportunity to introduce the developer mode to
-           inspect the view, find its external ID and the place to put the
-           new field.
-
-       #. Create a file ``openacademy/models/partner.py`` and import it in
-          ``__init__.py``
-       #. Create a file ``openacademy/views/partner.xml`` and add it to
-          ``__manifest__.py``
-
-       .. patch::
-
 Domains
 #######
 
@@ -741,30 +649,11 @@ records for the relation when trying to select records in the client interface.
     When selecting the instructor for a *Session*, only instructors (partners
     with ``instructor`` set to ``True``) should be visible.
 
-    .. only:: solutions
-
-        .. patch::
-
-        .. note::
-
-            A domain declared as a literal list is evaluated server-side and
-            can't refer to dynamic values on the right-hand side, a domain
-            declared as a string is evaluated client-side and allows
-            field names on the right-hand side
-
 .. exercise:: More complex domains
 
     Create new partner categories *Teacher / Level 1* and *Teacher / Level 2*.
     The instructor for a session can be either an instructor or a teacher
     (of any level).
-
-    .. only:: solutions
-
-        #. Modify the *Session* model's domain
-        #. Modify ``openacademy/view/partner.xml`` to get access to
-           *Partner categories*:
-
-        .. patch::
 
 Computed fields and default values
 ==================================
@@ -834,13 +723,6 @@ field whenever some of its dependencies have been modified::
     * Display that field in the tree and form views
     * Display the field as a progress bar
 
-    .. only:: solutions
-
-        #. Add a computed field to *Session*
-        #. Show the field in the *Session* view:
-
-        .. patch::
-
 Default values
 --------------
 
@@ -870,15 +752,6 @@ float, string), or a function taking a recordset and returning a value::
       :class:`~odoo.fields.Date`).
     * Add a field ``active`` in the class Session, and set sessions as active by
       default.
-
-    .. only:: solutions
-
-        .. patch::
-
-        .. note::
-
-            Odoo has built-in rules making records with an ``active`` field set
-            to ``False`` invisible.
 
 Onchange
 ========
@@ -925,10 +798,6 @@ the ``taken_seats`` progressbar is automatically updated.
     Add an explicit onchange to warn about invalid values, like a negative
     number of seats, or more participants than seats.
 
-    .. only:: solutions
-
-        .. patch::
-
 Model constraints
 =================
 
@@ -956,10 +825,6 @@ raise an exception if its invariant is not satisfied::
     Add a constraint that checks that the instructor is not present in the
     attendees of his/her own session.
 
-    .. only:: solutions
-
-        .. patch::
-
 SQL constraints are defined through the model attribute
 :attr:`~odoo.models.Model._sql_constraints`. The latter is assigned to a list
 of triples of strings ``(name, sql_definition, message)``, where ``name`` is a
@@ -974,10 +839,6 @@ and ``message`` is the error message.
     #. CHECK that the course description and the course title are different
     #. Make the Course's name UNIQUE
 
-    .. only:: solutions
-
-        .. patch::
-
 .. exercise:: Exercise 6 - Add a duplicate option
 
     Since we added a constraint for the Course name uniqueness, it is not
@@ -986,10 +847,6 @@ and ``message`` is the error message.
 
     Re-implement your own "copy" method which allows to duplicate the Course
     object, changing the original name into "Copy of [original name]".
-
-    .. only:: solutions
-
-        .. patch::
 
 Advanced Views
 ==============
@@ -1038,12 +895,6 @@ behavior:
     5 days are colored blue, and the ones lasting more than 15 days are
     colored red.
 
-    .. only:: solutions
-
-        Modify the session tree view:
-
-        .. patch::
-
 Calendars
 ---------
 
@@ -1072,19 +923,6 @@ their most common attributes are:
 
     Add a Calendar view to the *Session* model enabling the user to view the
     events associated to the Open Academy.
-
-    .. only:: solutions
-
-        #. Add an ``end_date`` field computed from ``start_date`` and
-           ``duration``
-
-           .. tip:: the inverse function makes the field writable, and allows
-                    moving the sessions (via drag and drop) in the calendar view
-
-        #. Add a calendar view to the *Session* model
-        #. And add the calendar view to the *Session* model's actions
-
-        .. patch::
 
 Search views
 ------------
@@ -1135,10 +973,6 @@ default and behave as booleans (they can only be enabled by default).
        responsible in the course search view. Make it selected by default.
     #. Add a button to group courses by responsible user.
 
-    .. only:: solutions
-
-        .. patch::
-
 Gantt
 -----
 
@@ -1162,13 +996,6 @@ their root element is ``<gantt>``.
 
     Add a Gantt Chart enabling the user to view the sessions scheduling linked
     to the Open Academy module. The sessions should be grouped by instructor.
-
-    .. only:: solutions
-
-        #. Add the gantt view's definition, and add the gantt view to the
-           *Session* model's action
-
-        .. patch::
 
 Graph views
 -----------
@@ -1221,13 +1048,6 @@ the values:
     Add a Graph view in the Session object that displays, for each course, the
     number of attendees under the form of a bar chart.
 
-    .. only:: solutions
-
-        #. Add the number of attendees as a stored computed field
-        #. Then add the relevant view
-
-        .. patch::
-
 Kanban
 ------
 
@@ -1247,13 +1067,6 @@ Kanban views define the structure of each card as a mix of form elements
 
     Add a Kanban view that displays sessions grouped by course (columns are
     thus courses).
-
-    .. only:: solutions
-
-        #. Add an integer ``color`` field to the *Session* model
-        #. Add the kanban view and update the action
-
-        .. patch::
 
 Security
 ========
@@ -1291,16 +1104,6 @@ rights are usually created by a CSV file named after its model:
     Create a new user "John Smith". Then create a group
     "OpenAcademy / Session Read" with read access to the *Session* model.
 
-    .. only:: solutions
-
-        #. Create a new user *John Smith* through
-           :menuselection:`Settings --> Users --> Users`
-        #. Create a new group ``session_read`` through
-           :menuselection:`Settings --> Users --> Groups`, it should have
-           read access on the *Session* model
-        #. Edit *John Smith* to make them a member of ``session_read``
-        #. Log in as *John Smith* to check the access rights are correct
-
 .. exercise:: Add access control through data files in your module
 
     Using data files,
@@ -1308,17 +1111,6 @@ rights are usually created by a CSV file named after its model:
     * Create a group *OpenAcademy / Manager* with full access to all
       OpenAcademy models
     * Make *Session* and *Course* readable by all users
-
-    .. only:: solutions
-
-        #. Create a new file ``openacademy/security/security.xml`` to
-           hold the OpenAcademy Manager group
-        #. Edit the file ``openacademy/security/ir.model.access.csv`` with
-           the access rights to the models
-        #. Finally update ``openacademy/__manifest__.py`` to add the new data
-           files to it
-
-        .. patch::
 
 Record rules
 ------------
@@ -1353,14 +1145,6 @@ the same convention as the method :meth:`~odoo.models.Model.write` of the ORM.
     to the responsible of a course. If a course has no responsible, all users
     of the group must be able to modify it.
 
-    .. only:: solutions
-
-        Create a new rule in ``openacademy/security/security.xml``:
-
-        .. patch::
-
-.. _howto/module/wizard:
-
 Wizards
 =======
 
@@ -1385,12 +1169,6 @@ session, or for a list of sessions at once.
 
     Create a wizard model with a many2one relationship with the *Session*
     model and a many2many relationship with the *Partner* model.
-
-    .. only:: solutions
-
-        Add a new file ``openacademy/wizard.py``:
-
-        .. patch::
 
 Launching wizards
 -----------------
@@ -1430,27 +1208,15 @@ the action is "bound" to.
     #. Define a default value for the session field in the wizard; use the
        context parameter ``self._context`` to retrieve the current session.
 
-    .. only:: solutions
-
-        .. patch::
-
 .. exercise:: Register attendees
 
     Add buttons to the wizard, and implement the corresponding method for adding
     the attendees to the given session.
 
-    .. only:: solutions
-
-        .. patch::
-
 .. exercise:: Register attendees to multiple sessions
 
     Modify the wizard model so that attendees can be registered to multiple
     sessions.
-
-    .. only:: solutions
-
-        .. patch::
 
 Internationalization
 ====================
@@ -1490,39 +1256,6 @@ for editing and merging PO/POT files.
 
    Choose a second language for your Odoo installation. Translate your
    module using the facilities provided by Odoo.
-
-   .. only:: solutions
-
-        #. Create a directory ``openacademy/i18n/``
-        #. You will need to activate the developer mode
-           to access the menus mentioned below (
-           :menuselection:`Settings --> Activate the developer mode`
-           )
-        #. Install whichever language you want (
-           :menuselection:`Settings --> Translations --> Languages`)
-        #. Generate the missing terms (:menuselection:`Settings -->
-           Translations --> Application Terms --> Generate Missing Terms`)
-        #. Create a template translation file by exporting (
-           :menuselection:`Settings --> Translations --> Import/Export
-           --> Export Translation`) without specifying a language, save in
-           ``openacademy/i18n/``
-        #. Create a translation file by exporting (
-           :menuselection:`Settings --> Translations --> Import/Export
-           --> Export Translation`) and specifying a language. Save it in
-           ``openacademy/i18n/``
-        #. Open the exported translation file (with a basic text editor or a
-           dedicated PO-file editor e.g. POEdit_ and translate the missing
-           terms
-
-        #. In ``models.py``, add an import statement for the function
-           ``odoo._`` and mark missing strings as translatable
-
-        #. Repeat steps 3-6
-
-        .. patch::
-
-        .. todo:: do we never reload translations?
-
 
 Reporting
 =========
@@ -1623,10 +1356,6 @@ http://localhost:8069/report/pdf/account.report_invoice/1.
    For each session, it should display session's name, its start and end,
    and list the session's attendees.
 
-   .. only:: solutions
-
-        .. patch::
-
 Dashboards
 ----------
 
@@ -1637,21 +1366,6 @@ Dashboards
    view). This dashboard should be available through a menuitem in the menu,
    and automatically displayed in the web client when the OpenAcademy main
    menu is selected.
-
-   .. only:: solutions
-
-        #. Create a file ``openacademy/views/session_board.xml``. It should contain
-           the board view, the actions referenced in that view, an action to
-           open the dashboard and a re-definition of the main menu item to add
-           the dashboard action
-
-           .. note:: Available dashboard styles are ``1``, ``1-1``, ``1-2``,
-                     ``2-1`` and ``1-1-1``
-
-        #. Update ``openacademy/__manifest__.py`` to reference the new data
-           file
-
-        .. patch::
 
 WebServices
 ===========

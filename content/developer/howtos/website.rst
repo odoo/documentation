@@ -1,6 +1,3 @@
-
-.. queue:: website/series
-
 ==================
 Building a Website
 ==================
@@ -31,9 +28,6 @@ This will automatically create a ``my-modules`` *module directory* with an
 ``academy`` module inside. The directory can be an existing module directory
 if you want, but the module name must be unique within the directory.
 
-.. patch::
-    :hidden:
-
 A demonstration module
 ======================
 
@@ -63,7 +57,17 @@ send data back.
 Add a simple controller and ensure it is imported by ``__init__.py`` (so
 Odoo can find it):
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    # -*- coding: utf-8 -*-
+    from odoo import http
+
+    class Academy(http.Controller):
+
+        @http.route('/academy/academy/', auth='public')
+        def index(self, **kw):
+            return "Hello, world"
 
 Shut down your server (:kbd:`^C`) then restart it:
 
@@ -89,7 +93,30 @@ features.
 Create a template and ensure the template file is registered in the
 ``__manifest__.py`` manifest, and alter the controller to use our template:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    class Academy(http.Controller):
+
+        @http.route('/academy/academy/', auth='public')
+        def index(self, **kw):
+            return http.request.render('academy.index', {
+                'teachers': ["Diana Padilla", "Jody Caroll", "Lester Vaughn"],
+            })
+
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <odoo>
+
+        <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+                <p><t t-esc="teacher"/></p>
+            </t>
+        </template>
+
+    </odoo>
 
 The templates iterates (``t-foreach``) on all the teachers (passed through the
 *template context*), and prints each teacher in its own paragraph.
@@ -126,12 +153,33 @@ Defining the data model
 Define a teacher model, and ensure it is imported from ``__init__.py`` so it
 is correctly loaded:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    from odoo import models, fields, api
+
+    class Teachers(models.Model):
+        _name = 'academy.teachers'
+
+        name = fields.Char()
 
 Then setup :ref:`basic access control <reference/security/acl>` for the model
 and add them to the manifest:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+    # always loaded
+    'data': [
+        'security/ir.model.access.csv',
+        'templates.xml',
+    ],
+
+.. code-block:: csv
+    :caption: ``academy/security/ir.model.access.csv``
+
+    id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+    access_academy_teachers,access_academy_teachers,model_academy_teachers,,1,0,0,0
 
 this simply gives read access (``perm_read``) to all users (``group_id:id``
 left empty).
@@ -154,7 +202,22 @@ The second step is to add some demonstration data to the system so it's
 possible to test it easily. This is done by adding a ``demo``
 :ref:`data file <reference/data>`, which must be linked from the manifest:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/demo.xml``
+
+    <odoo>
+
+        <record id="padilla" model="academy.teachers">
+            <field name="name">Diana Padilla</field>
+        </record>
+        <record id="carroll" model="academy.teachers">
+            <field name="name">Jody Carroll</field>
+        </record>
+        <record id="vaughn" model="academy.teachers">
+            <field name="name">Lester Vaughn</field>
+        </record>
+
+    </odoo>
 
 .. tip::
 
@@ -177,7 +240,31 @@ The last step is to alter model and template to use our demonstration data:
    matching the filter ("all records" here), alter the template to print each
    teacher's ``name``
 
-.. patch::
+.. code-block:: python
+   :caption: ``academy/controllers.py``
+
+   class Academy(http.Controller):
+
+        @http.route('/academy/academy/', auth='public')
+        def index(self, **kw):
+            Teachers = http.request.env['academy.teachers']
+            return http.request.render('academy.index', {
+                'teachers': Teachers.search([])
+            })
+
+.. code-block:: xml
+   :caption: ``academy/templates.xml``
+
+   <odoo>
+
+       <template id="index">
+            <title>Academy</title>
+            <t t-foreach="teachers" t-as="teacher">
+                <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+            </t>
+       </template>
+
+   </odoo>
 
 Restart the server and update the module (in order to update the manifest
 and templates and load the demo file) then navigate to
@@ -200,7 +287,48 @@ integration and a few other services (e.g. default styling, theming) via the
    allows using the website layout in our template
 #. use the website layout in the template
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['website'],
+
+    # always loaded
+    'data': [
+
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    class Academy(http.Controller):
+
+         @http.route('/academy/academy/', auth='public', website=True)
+         def index(self, **kw):
+             Teachers = http.request.env['academy.teachers']
+             return http.request.render('academy.index', {
+                 'teachers': Teachers.search([])
+             })
+
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <odoo>
+
+        <template id="index">
+            <t t-call="website.layout">
+                <t t-set="title">Academy</t>
+                <div class="oe_structure">
+                    <div class="container">
+                        <t t-foreach="teachers" t-as="teacher">
+                            <p><t t-esc="teacher.id"/> <t t-esc="teacher.name"/></p>
+                        </t>
+                    </div>
+                </div>
+            </t>
+        </template>
+
+    </odoo>
 
 After restarting the server while updating the module (in order to update the
 manifest and template) access http://localhost:8069/academy/academy/ should
@@ -238,7 +366,13 @@ but routing strings can also use `converter patterns`_ which match bits
 of URLs and make those available as local variables. For instance we can
 create a new controller method which takes a bit of URL and prints it out:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    # New route
+    @http.route('/academy/<name>/', auth='public', website=True)
+    def teacher(self, name):
+        return '<h1>{}</h1>'.format(name)
 
 restart Odoo, access http://localhost:8069/academy/Alice/ and
 http://localhost:8069/academy/Bob/ and see the difference.
@@ -247,7 +381,12 @@ As the name indicates, `converter patterns`_ don't just do extraction, they
 also do *validation* and *conversion*, so we can change the new controller
 to only accept integers:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    @http.route('/academy/<int:id>/', auth='public', website=True)
+    def teacher(self, id):
+        return '<h1>{} ({})</h1>'.format(id, type(id).__name__)
 
 Restart Odoo, access http://localhost:8069/academy/2, note how the old value
 was a string, but the new one was converted to an integers. Try accessing
@@ -259,11 +398,52 @@ Odoo provides an additional converter called ``model`` which provides records
 directly when given their id. Let's use this to create a generic page for
 teacher biographies:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/controllers.py``
+
+    @http.route('/academy/<model("academy.teachers"):teacher>/', auth='public', website=True)
+    def teacher(self, teacher):
+        return http.request.render('academy.biography', {
+            'person': teacher
+        })
+
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <template id="biography">
+        <t t-call="website.layout">
+            <t t-set="title">Academy</t>
+            <div class="oe_structure"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <h3><t t-esc="person.name"/></h3>
+                </div>
+            </div>
+            <div class="oe_structure"/>
+        </t>
+    </template>
 
 then change the list of model to link to our new controller:
 
-.. patch::
+
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <template id="index">
+        <t t-call="website.layout">
+            <t t-set="title">Academy</t>
+            <div class="oe_structure">
+                <div class="container">
+                    <t t-foreach="teachers" t-as="teacher">
+                        <p>
+                            <a t-attf-href="/academy/{{ slug(teacher) }}">
+                            <t t-esc="teacher.name"/></a>
+                        </p>
+                    </t>
+                </div>
+            </div>
+        </t>
+    </template>
 
 Restart Odoo and upgrade the module, then you can visit each teacher's page.
 As an exercise, try adding blocks to a teacher's page to write a biography,
@@ -278,7 +458,31 @@ Field editing
 Data which is specific to a record should be saved on that record, so let us
 add a new biography field to our teachers:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    class Teachers(models.Model):
+        _name = 'academy.teachers'
+
+        name = fields.Char()
+        biography = fields.Html()
+
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <template id="biography">
+        <t t-call="website.layout">
+            <t t-set="title">Academy</t>
+            <div class="oe_structure"/>
+            <div class="oe_structure">
+                <div class="container">
+                    <h3><t t-esc="person.name"/></h3>
+                    <div><t t-esc="person.biography"/></div>
+                </div>
+            </div>
+            <div class="oe_structure"/>
+        </t>
+    </template>
 
 Restart Odoo and update the views, reload the teacher's page and… the field
 is invisible since it contains nothing.
@@ -290,7 +494,15 @@ For record fields, templates can use a special ``t-field`` directive which
 allows editing the field content from the website using field-specific
 interfaces. Change the *person* template to use ``t-field``:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <div class="oe_structure">
+        <div class="container">
+            <h3 t-field="person.name"/>
+            <div t-field="person.biography"/>
+        </div>
+    </div>
 
 Restart Odoo and upgrade the module, there is now a placeholder under the
 teacher's name and a new zone for blocks in :guilabel:`Edit` mode. Content
@@ -303,16 +515,43 @@ the index page.
 ``t-field`` can also take formatting options which depend on the exact field.
 For instance if we display the modification date for a teacher's record:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <div class="oe_structure">
+        <div class="container">
+            <h3 t-field="person.name"/>
+            <p>Last modified: <i t-field="person.write_date"/></p>
+            <div t-field="person.biography"/>
+        </div>
+    </div>
 
 it is displayed in a very "computery" manner and hard to read, but we could
 ask for a human-readable version:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <div class="oe_structure">
+        <div class="container">
+            <h3 t-field="person.name"/>
+            <p>Last modified: <i t-field="person.write_date" t-options='{"format": "long"}'/></p>
+            <div t-field="person.biography"/>
+        </div>
+    </div>
 
 or a relative display:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <div class="oe_structure">
+        <div class="container">
+            <h3 t-field="person.name"/>
+            <p>Last modified: <i t-field="person.write_date" t-options='{"widget": "relative"}'/></p>
+            <div t-field="person.biography"/>
+        </div>
+    </div>
 
 Administration and ERP integration
 ==================================
@@ -344,7 +583,32 @@ reachable, generally through a menu.
 
 Let's create a menu for our model:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+    # always loaded
+    'data': [
+        'security/ir.model.access.csv',
+        'templates.xml',
+        'views.xml',
+    ],
+
+.. code-block:: xml
+    :caption: ``academy/views.xml``
+
+    <odoo>
+        <record id="action_academy_teachers" model="ir.actions.act_window">
+            <field name="name">Academy teachers</field>
+            <field name="res_model">academy.teachers</field>
+        </record>
+
+        <menuitem sequence="0" id="menu_academy" name="Academy"/>
+        <menuitem id="menu_academy_content" parent="menu_academy"
+                    name="Academy Content"/>
+        <menuitem id="menu_academy_content_teachers"
+                    parent="menu_academy_content"
+                    action="action_academy_teachers"/>
+    </odoo>
 
 then accessing http://localhost:8069/web/ in the top left should be a menu
 :guilabel:`Academy`, which is selected by default, as it is the first menu,
@@ -360,7 +624,21 @@ displayed side-by-side with the ``name`` field and not given enough space.
 Let's define a custom form view to make viewing and editing teacher records
 a better experience:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/views.xml``
+
+    <record id="academy_teacher_form" model="ir.ui.view">
+        <field name="name">Academy teachers: form</field>
+        <field name="model">academy.teachers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="biography"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
 Relations between models
 ------------------------
@@ -375,18 +653,117 @@ For demonstration, let's create a *courses* model. Each course should have a
 ``teacher`` field, linking to a single teacher record, but each teacher can
 teach many courses:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    class Courses(models.Model):
+        _name = 'academy.courses'
+
+        name = fields.Char()
+        teacher_id = fields.Many2one('academy.teachers', string="Teacher")
+
+.. code-block:: csv
+    :caption: ``academy/security/ir.model.access.csv``
+
+    id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+    access_academy_teachers,access_academy_teachers,model_academy_teachers,,1,0,0,0
+    access_academy_courses,access_academy_courses,model_academy_courses,,1,0,0,0
 
 let's also add views so we can see and edit a course's teacher:
 
-.. patch::
+
+.. code-block:: xml
+    :caption: ``academy/views.xml``
+
+    <record id="action_academy_courses" model="ir.actions.act_window">
+        <field name="name">Academy courses</field>
+        <field name="res_model">academy.courses</field>
+    </record>
+    <record id="academy_course_search" model="ir.ui.view">
+        <field name="name">Academy courses: search</field>
+        <field name="model">academy.courses</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="name"/>
+                <field name="teacher_id"/>
+            </search>
+        </field>
+    </record>
+    <record id="academy_course_list" model="ir.ui.view">
+        <field name="name">Academy courses: list</field>
+        <field name="model">academy.courses</field>
+        <field name="arch" type="xml">
+            <tree string="Courses">
+                <field name="name"/>
+                <field name="teacher_id"/>
+            </tree>
+        </field>
+    </record>
+    <record id="academy_course_form" model="ir.ui.view">
+        <field name="name">Academy courses: form</field>
+        <field name="model">academy.courses</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="teacher_id"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <menuitem sequence="0" id="menu_academy" name="Academy"/>
+    <menuitem id="menu_academy_content" parent="menu_academy"
+                name="Academy Content"/>
+    <menuitem id="menu_academy_content_courses"
+                parent="menu_academy_content"
+                action="action_academy_courses"/>
+    <menuitem id="menu_academy_content_teachers"
+                parent="menu_academy_content"
+                action="action_academy_teachers"/>
 
 It should also be possible to create new courses directly from a teacher's
 page, or to see all the courses they teach, so add
 :class:`the inverse relationship <odoo.fields.One2many>` to the *teachers*
 model:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    class Teachers(models.Model):
+        _name = 'academy.teachers'
+
+        name = fields.Char()
+        biography = fields.Html()
+
+        course_ids = fields.One2many('academy.courses', 'teacher_id', string="Courses")
+
+    class Courses(models.Model):
+        _name = 'academy.courses'
+
+        name = fields.Char()
+        teacher_id = fields.Many2one('academy.teachers', string="Teacher")
+
+.. code-block:: xml
+    :caption: ``academy/views.xml``
+
+    <record id="academy_teacher_form" model="ir.ui.view">
+        <field name="name">Academy teachers: form</field>
+        <field name="model">academy.teachers</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="biography"/>
+                    <field name="course_ids">
+                        <tree Sstring="Courses" editable="bottom">
+                            <field name="name"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
 
 Discussions and notifications
 -----------------------------
@@ -404,7 +781,47 @@ the discussion thread. Discussion threads are per-record.
 For our academy, it makes sense to allow discussing courses to handle e.g.
 scheduling changes or discussions between teachers and assistants:
 
-.. patch::
+
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['website', 'mail'],
+
+    # always loaded
+    'data': [
+
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    class Courses(models.Model):
+        _name = 'academy.courses'
+        _inherit = 'mail.thread'
+
+        name = fields.Char()
+        teacher_id = fields.Many2one('academy.teachers', string="Teacher")
+
+.. code-block:: xml
+    :caption: ``academy/views.xml``
+
+    <record id="academy_course_form" model="ir.ui.view">
+        <field name="name">Academy courses: form</field>
+        <field name="model">academy.courses</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <field name="name"/>
+                    <field name="teacher_id"/>
+                </sheet>
+                <div class="oe_chatter">
+                    <field name="message_follower_ids" widget="mail_followers"/>
+                    <field name="message_ids" widget="mail_thread"/>
+                </div>
+            </form>
+        </field>
+    </record>
 
 At the bottom of each course form, there is now a discussion thread and the
 possibility for users of the system to leave messages and follow or unfollow
@@ -426,7 +843,16 @@ add anything we need to it).
 First of all we need to add a dependency on ``website_sale`` so we get both
 products (via ``sale``) and the ecommerce interface:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+    'version': '0.1',
+
+    # any module necessary for this one to work correctly
+    'depends': ['mail', 'website_sale'],
+
+    # always loaded
+    'data': [
 
 restart Odoo, update your module, there is now a :guilabel:`Shop` section in
 the website, listing a number of pre-filled (via demonstration data) products.
@@ -434,7 +860,65 @@ the website, listing a number of pre-filled (via demonstration data) products.
 The second step is to replace the *courses* model by ``product.template``,
 and add a new category of product for courses:
 
-.. patch::
+.. code-block:: python
+    :caption: ``academy/__manifest__.py``
+
+        'security/ir.model.access.csv',
+        'templates.xml',
+        'views.xml',
+        'data.xml',
+    ],
+    # only loaded in demonstration mode
+    'demo': [
+
+.. code-block:: xml
+    :caption: ``academy/data.xml``
+
+    <odoo>
+        <record model="product.public.category" id="category_courses">
+            <field name="name">Courses</field>
+            <field name="parent_id" ref="website_sale.categ_others"/>
+        </record>
+    </odoo>
+
+.. code-block:: xml
+    :caption: ``academy/demo.xml``
+
+    <record id="course0" model="product.template">
+        <field name="name">Course 0</field>
+        <field name="teacher_id" ref="padilla"/>
+        <field name="public_categ_ids" eval="[(4, ref('academy.category_courses'), False)]"/>
+        <field name="website_published">True</field>
+        <field name="list_price" type="float">0</field>
+        <field name="type">service</field>
+    </record>
+    <record id="course1" model="product.template">
+        <field name="name">Course 1</field>
+        <field name="teacher_id" ref="padilla"/>
+        <field name="public_categ_ids" eval="[(4, ref('academy.category_courses'), False)]"/>
+        <field name="website_published">True</field>
+        <field name="list_price" type="float">0</field>
+        <field name="type">service</field>
+    </record>
+    <record id="course2" model="product.template">
+        <field name="name">Course 2</field>
+        <field name="teacher_id" ref="vaughn"/>
+        <field name="public_categ_ids" eval="[(4, ref('academy.category_courses'), False)]"/>
+        <field name="website_published">True</field>
+        <field name="list_price" type="float">0</field>
+        <field name="type">service</field>
+    </record>
+
+
+.. code-block:: python
+    :caption: ``academy/models.py``
+
+    class Courses(models.Model):
+        _name = 'academy.courses'
+        _inherit = ['mail.thread', 'product.template']
+
+        name = fields.Char()
+        teacher_id = fields.Many2one('academy.teachers', string="Teacher")
 
 With this installed, a few courses are now available in the :guilabel:`Shop`,
 though they may have to be looked for.
@@ -482,7 +966,14 @@ Altering view architectures is done in 3 steps:
 #. In the architecture, use the ``xpath`` tag to select and alter elements
    from the modified view
 
-.. patch::
+.. code-block:: xml
+   :caption: ``academy/templates.xml``
+
+    <template id="product_item_hide_no_price" inherit_id="website_sale.products_item">
+        <xpath expr="//div[hasclass('product_price')]/b" position="attributes">
+            <attribute name="t-if">product.price &gt; 0</attribute>
+        </xpath>
+    </template>
 
 The second thing we will change is making the product categories sidebar
 visible by default: :menuselection:`Customize --> Product Categories` lets
@@ -498,7 +989,12 @@ menu with a check box, allowing administrators to activate or disable them
 We simply need to modify the *Product Categories* record and set its default
 to *active="True"*:
 
-.. patch::
+.. code-block:: xml
+    :caption: ``academy/templates.xml``
+
+    <record id="website_sale.products_categories" model="ir.ui.view">
+        <field name="active" eval="True"/>
+    </record>
 
 With this, the *Product Categories* sidebar will automatically be enabled when
 the *Academy* module is installed.

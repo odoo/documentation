@@ -107,18 +107,7 @@ Linux
 Debian/Ubuntu
 '''''''''''''
 
-Odoo 13.0 'deb' package currently supports `Debian Buster`_, `Ubuntu 18.04`_ or above.
-
-Prepare
-^^^^^^^
-
-Odoo needs a `PostgreSQL`_ server to run properly. The default configuration for
-the Odoo 'deb' package is to use the PostgreSQL server on the same host as your
-Odoo instance. Execute the following command in order to install the PostgreSQL server:
-
-.. code-block:: console
-
-  $ sudo apt install postgresql -y
+Odoo 14.0 'deb' package currently supports `Debian Buster`_, `Ubuntu 20.04`_ or above.
 
 .. warning:: `wkhtmltopdf` is not installed through **pip** and must be installed manually in
              version `0.12.5 <the wkhtmltopdf download page_>`_ for it to support headers and
@@ -129,13 +118,13 @@ Repository
 ^^^^^^^^^^
 
 Odoo S.A. provides a repository that can be used with  Debian and Ubuntu distributions. It can be
-used to install *Odoo Community Edition* by executing the following commands **as root**:
+used to install *Odoo Community Edition* by executing the following commands:
 
 .. code-block:: console
 
-    # wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-    # echo "deb http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
-    # apt-get update && apt-get install odoo
+    $ wget -O - https://nightly.odoo.com/odoo.key | sudo apt-key add -
+    $ sudo sh -c 'echo "deb http://nightly.odoo.com/14.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list'
+    $ sudo apt-get update && sudo apt-get install odoo
 
 You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
 
@@ -147,40 +136,25 @@ Deb Package
 Instead of using the repository as described above, the 'deb' packages for both the *Community* and
 *Enterprise* editions can be downloaded from the `official download page <download_>`_.
 
-Next, execute the following commands **as root**:
+Next, execute the following commands:
 
 .. code-block:: console
 
-    # dpkg -i <path_to_installation_package> # this probably fails with missing dependencies
-    # apt-get install -f # should install the missing dependencies
-    # dpkg -i <path_to_installation_package>
+    $ sudo apt-get install <path_to_installation_package>
 
 This will install Odoo as a service, create the necessary PostgreSQL_ user
 and automatically start the server.
 
-.. warning:: The `python3-xlwt` Debian package does not exists in Debian Buster nor Ubuntu 18.04.
-             This python module is needed to export into xls format.
-
-             If you need the feature, you can install it manually with:
-
-             .. code-block:: console
-
-                $ sudo pip3 install xlwt
-
-.. warning:: The `num2words` python package does not exists in Debian Buster nor Ubuntu 18.04.
-             Textual amounts will not be rendered by Odoo and this could cause problems with the
-             `l10n_mx_edi` module.
-
-             If you need this feature, you can install manually with:
-
-             .. code-block:: console
-
-                $ sudo pip3 install num2words
+.. note:: The recommended `postgresql-server` package will be installed by the Debian Odoo package.
+          The `--no-install-recommends` argument of the `apt-get` tool should be used if you plan
+          to install the Postgresql server on another machine.
 
 Fedora
 ''''''
 
-Odoo 13.0 'rpm' package supports Fedora 30.
+Odoo 14.0 'rpm' package supports Fedora 32.
+
+.. warning:: The Odoo 14.0 rpm package does not support Fedora 33 or above.
 
 Prepare
 ^^^^^^^
@@ -224,7 +198,7 @@ Once downloaded, the package can be installed using the 'dnf' package manager:
 
 .. code-block:: console
 
-    $ sudo dnf localinstall odoo_13.0.latest.noarch.rpm
+    $ sudo dnf localinstall odoo_14.0.latest.noarch.rpm
     $ sudo systemctl enable odoo
     $ sudo systemctl start odoo
 
@@ -756,7 +730,7 @@ official Odoo `docker image <https://registry.hub.docker.com/_/odoo/>`_ page.
 .. _demo: https://demo.odoo.com
 .. _docker: https://www.docker.com
 .. _download: https://www.odoo.com/page/download
-.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
+.. _Ubuntu 20.04: http://releases.ubuntu.com/20.04/
 .. _EPEL: https://fedoraproject.org/wiki/EPEL
 .. _PostgreSQL: http://www.postgresql.org
 .. _the official installer:
