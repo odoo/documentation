@@ -1145,6 +1145,8 @@ the same convention as the method :meth:`~odoo.models.Model.write` of the ORM.
     to the responsible of a course. If a course has no responsible, all users
     of the group must be able to modify it.
 
+.. _howto/module/wizard:
+
 Wizards
 =======
 
