@@ -149,7 +149,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow :doc:`Build an Odoo module <../../../developer/howtos/backend>` to understand
+you can follow :doc:`Build an Odoo module </developer/howtos/backend>` to understand
 the structure of a module and the content of each file.
 
 Push the development branch

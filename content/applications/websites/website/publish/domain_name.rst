@@ -102,4 +102,4 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`../../../productivity/discuss/email_servers`
+  * :doc:`/applications/productivity/discuss/email_servers`

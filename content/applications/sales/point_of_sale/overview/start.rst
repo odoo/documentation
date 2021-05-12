@@ -131,4 +131,4 @@ It's done, you have now closed your first PoS session.
 
 .. tip::
    To connect the PoS to hardware with an Odoo IoT Box, please see the section
-   :doc:`../../../productivity/iot/config/connect` and :doc:`../../../productivity/iot/config/pos`
+   :doc:`/applications/productivity/iot/config/connect` and :doc:`/applications/productivity/iot/config/pos`

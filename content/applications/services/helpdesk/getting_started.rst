@@ -84,7 +84,7 @@ Ticket.
    :align: center
 
 The final option to submit tickets is through an API connection. View the
-documentation :doc:`*here* <../../../developer/webservices/odoo>`.
+documentation :doc:`*here* </developer/webservices/odoo>`.
 
 Tickets have been created, now what?
 ------------------------------------
