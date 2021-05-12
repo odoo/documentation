@@ -49,7 +49,7 @@ Create and set up a product
 You need to configure your service on the product form itself in order
 to generate a task every time it will be sold. From the **Sales** module,
 use the menu :menuselection:`Sales --> Products` and create a new 
-product with the`following setup:
+product with the following setup:
 
 -   **Name**: Technical Support
 
@@ -111,4 +111,4 @@ invoice your customers based on your invoicing policy.
 
 .. seealso::
     * :doc:`../configuration/setup`
-    * :doc:`../../../sales/sales/invoicing/subscriptions`
+    * :doc:`/applications/sales/sales/invoicing/subscriptions`
