@@ -16,7 +16,7 @@ def setup(app):
     app.add_js_file('js/page_toc.js')
 
     return {
-        'parallel_read_safe': False,
+        'parallel_read_safe': True,
         'parallel_write_safe': True
     }
 
