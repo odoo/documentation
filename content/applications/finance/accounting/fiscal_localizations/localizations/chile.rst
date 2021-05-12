@@ -7,7 +7,8 @@ Webinars
 
 Below you can find videos with a general description of the localization, and how to configure it.
 
-- `VIDEO WEBINAR OF A COMPLETE DEMO <https://youtu.be/BHnByZiyYcM>`_.
+- `VIDEO WEBINAR OF CHILEAN LOCALIZATION: INTRO AND DEMO <https://youtu.be/BHnByZiyYcM>`_.
+- `VIDEO WEBINAR OF DELIVERY GUIDE <https://youtu.be/X7i4PftnEdU>`_.
 
 Introduction
 ============
@@ -50,6 +51,16 @@ Once the modules are installed, the first step is to set up your company data. A
 to the basic information, you need to add all the data and elements required for Electronic 
 Invoice, the easiest way to configure it is in 
 :menuselection:`Accounting --> Settings --> Chilean Localization`.
+
+.. important::
+   All the following configuration and functionality is only available in Odoo if your 
+   company already passed the `Certification process <https://www.sii.cl/factura_electronica/
+   factura_mercado/proceso_certificacion.htm>`_ 
+   in the SII - Sistema de Facturación de Mercado, this certification enables you to 
+   generate electronic invoices from your ERP and send them automatically to the SII. 
+   If your company has not passed this certification yet, make sure you communicate this 
+   to your Account Manager as a special process outside Odoo is required in order to complete 
+   this certification.
 
 Fiscal Information
 ~~~~~~~~~~~~~~~~~~
@@ -102,7 +113,12 @@ is required, proceed to this section and load your file and password.
 
 A certificate can be shared between several users. If this is the case leave the user field empty,
 so all your billing users can use the same one. On the other hand,  if you need to restrict the
-certificate for a particular user, just define the users in the certificate. 
+certificate for a particular user, just define the users in the certificate.
+
+.. note::
+   In some cases, depending on the certificate format, it is possible that the field Subject Serial
+   Number is not loaded automatically. If this is the case, you can manually edit this field by
+   filling it with the Certificate’s legal representative RUT.
 
 Financial Reports
 ~~~~~~~~~~~~~~~~~
@@ -117,22 +133,13 @@ configuration:
 Multicurrency
 ~~~~~~~~~~~~~
 
-The official currency rate in Chile is provided by the SBIF, you can find the SBIF
-synchronization service in the currency rate configuration and you can set a predefined interval
-for the rate updates.  
+The official currency rate in Chile is provided by the Chilean service `mindicador.cl
+<https://mindicador.cl>`_. You can find this service in the currency rate configuration, and you can
+set a predefined interval for the rate updates.
 
 .. image:: media/Chile05_2.png
    :align: center
-   :scale: 25
    :alt: Currency reate service for Chile.
-
-In order to configure your token, you need to enable developer mode and access to
-:menuselection:`Settings --> Technical --> System parameters` and search the parameter
-``sbif_api_key`` and in the field Value introduce your token provided by the SBIF:
-
-.. image:: media/Chile05_3.png
-   :align: center
-   :alt: Token configuration for currency rate service.
    
 Chart of accounts
 ~~~~~~~~~~~~~~~~~
@@ -161,7 +168,6 @@ are now available on the Partner form. This information is essential for most tr
 
 .. image:: media/Chile06.png
    :align: center
-   :scale: 25
    :alt: Chilean identification types for partners.
  
 TaxpayerType
@@ -299,7 +305,7 @@ use documents.
    :alt: Document type configuration on Journal.
    
 .. important::
-   For the Chilean localization it’s important to define the default Debt and Credit accounts 
+   For the Chilean localization, it is important to define the default Debit and Credit accounts
    as they are required for one of the debit notes use cases.
    
 CAF
@@ -315,6 +321,10 @@ that you only need one active CAF per document type and it will be applied on al
 
 Please refer to the SII documentation to check the detail on how to acquire the CAF:
 `SII Timbraje <https://palena.sii.cl/dte/mn_timbraje.html>`_.
+
+.. important::
+   The CAFs required by the SII are different from Production to Test (Certification mode). Make
+   sure you have the correct CAF set depending on your environment.
 
 	
 Configuration
@@ -499,22 +509,36 @@ Common Errors
 There are multiple reasons behind a rejection from the SII, but these are some of the common errors
 you might have and which is the related solution. 
 
-- Error: RECHAZO- DTE Sin Comuna Origen.
+- Error: ``RECHAZO- DTE Sin Comuna Origen.``
   
   *Hint:* Make sure the Company Address is properly filled including the State and City. 
 
-- Error en Monto :  - IVA debe declararse.
+- Error en Monto: ``- IVA debe declararse.``
   
   *Hint:* The invoice lines should include one VAT tax, make sure you add one on each invoice line. 
 
-- Error: Rut No Autorizado a Firmar.
+- Error: ``Rut No Autorizado a Firmar.``
   
   *Hint:* The invoice lines should include one VAT tax, make sure you add one on each invoice line. 
 
-- Error: Fecha/Número Resolucion Invalido RECHAZO- CAF Vencido : (Firma_DTE[AAAA-MM-DD] - 
-  CAF[AAAA-MM-DD]) &gt; 6 meses.
+- Error: ``Fecha/Número Resolucion Invalido RECHAZO- CAF Vencido : (Firma_DTE[AAAA-MM-DD] -
+  CAF[AAAA-MM-DD]) &gt; 6 meses.``
   
   *Hint:* Try to add a new CAF related to this document as the one you’re using is expired.
+  
+- Error: ``Element '{http://www.sii.cl/SiiDte%7DRutReceptor': This element is not expected. Expected
+  is ( {http://www.sii.cl/SiiDte%7DRutEnvia ).``
+  
+  *Hint:* Make sure the field Document Type and VAT are set either in the Customer and in the main
+  company.
+   
+- GLOSA: ``Usuario sin permiso de envio.``
+  
+  *Hint:* This error indicates that most likely, your company has not passed the `Certification
+  process <https://www.sii.cl/factura_electronica/factura_mercado/proceso_certificacion.htm>`_ in 
+  the SII - Sistema de Facturación de Mercado. If this is the case, please contact your Account 
+  Manager or Customer Support as this certification is not part of the the Odoo services,
+  but we can give you some alternatives.
 
 
 

@@ -9,12 +9,6 @@ This introductory guide will help you acquire the tools and knowledge you need t
 documentation, whether you plan to make a minor content change or document an application from
 scratch.
 
-.. note::
-   This tutorial only concerns the `user documentation
-   <https://www.odoo.com/documentation/user/index.html>`_ of Odoo. The documentation for `developing
-   in Odoo <https://www.odoo.com/documentation/master/index.html>`_ is maintained alongside the
-   source code of Odoo at `github.com/odoo/odoo <https://github.com/odoo/odoo/tree/master/doc>`_.
-
 .. _contributing/rst-intro:
 
 reStructuredText
@@ -75,10 +69,10 @@ Use the GitHub interface
 
    .. image:: media/edit-on-github.png
 
-#. If you do not have edit rights on the repository (`odoo/documentation-user
-   <https://github.com/odoo/documentation-user>`_), you need to fork it by clicking on the
-   appropriate button. In other terms, you create a copy of the entire repository on your own
-   account. If you do have the edit rights, skip this step.
+#. If you do not have edit rights on the repository (`odoo/documentation
+   <https://github.com/odoo/documentation>`_), you need to fork it by clicking on the appropriate
+   button. In other terms, you create a copy of the entire repository on your own account. If you do
+   have the edit rights, skip this step.
 
    .. image:: media/fork-repository.png
 
@@ -111,7 +105,7 @@ Use the GitHub interface
    .. image:: media/select-branches-base.png
 
 #. Double-check your :abbr:`PR (Pull Request)` and, when ready, click again on the **Create pull
-   request** button to submit your changes for review by a redactor at Odoo.
+   request** button to submit your changes for review by a content writer at Odoo.
 
    .. image:: media/create-pull-request.png
 
@@ -158,15 +152,15 @@ Fetch the sources
 ~~~~~~~~~~~~~~~~~
 
 As stated earlier, our documentation (in all its versions) is maintained on GitHub at
-`github.com/odoo/documentation-user <https://github.com/odoo/documentation-user>`_. A modification
-is made by the mean of a :abbr:`PR (Pull Request)` (:dfn:`proposal of content changes`) to allow for
-a review of the changes before updating the sources of the documentation.
+`github.com/odoo/documentation <https://github.com/odoo/documentation>`_. A modification is made by
+the mean of a :abbr:`PR (Pull Request)` (:dfn:`proposal of content changes`) to allow for a review
+of the changes before updating the sources of the documentation.
 
 Prior to submitting a modification, you need to make a copy of the sources and download that copy on
 your machine.
 
-#. Go to `github.com/odoo/documentation-user <https://github.com/odoo/documentation-user>`_ and
-   click on the **Fork** button in the top right corner.
+#. Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
+   **Fork** button in the top right corner.
 
    .. image:: media/fork-button.png
 
@@ -174,8 +168,8 @@ your machine.
 
    .. code-block:: console
 
-      $ git clone https://github.com/odoo/documentation-user
-      $ cd documentation-user/
+      $ git clone https://github.com/odoo/documentation
+      $ cd documentation/
 
    .. important::
       If you do not have edit rights on the repository owned by Odoo, replace "odoo" with your
@@ -190,7 +184,7 @@ your machine.
 
      .. code-block:: doscon
 
-        $ cd documentation-user/
+        $ cd documentation/
         $ git config --global core.autocrlf true
         $ git config commit.template %CD%\commit_template.txt
 
@@ -198,7 +192,7 @@ your machine.
 
      .. code-block:: console
 
-        $ cd documentation-user/
+        $ cd documentation/
         $ git config --global core.autocrlf input
         $ git config commit.template `pwd`/commit_template.txt
 
@@ -221,7 +215,8 @@ Python comes with its own package manager: `pip
 <https://en.wikipedia.org/wiki/Pip_(package_manager)>`_. It allows installing Python dependencies in
 a single command.
 
-#. Download and install the latest release of **Python 3** on your machine.
+#. Download and install the recommended release (`see README file
+   <https://github.com/odoo/documentation/tree/master/README.md>`_) of **Python 3** on your machine.
 #. Make sure to have **pip** installed on your machine (on Windows, you can install pip alongside
    Python).
 #. Execute the following commands in a terminal to verify that both installations finished
@@ -237,7 +232,7 @@ a single command.
 
    .. code-block:: console
 
-      $ cd documentation-user/
+      $ cd documentation/
       $ pip3 install -r requirements.txt
 
 .. note::
@@ -288,7 +283,7 @@ Execute the following commands in a terminal to...
 
    .. code-block:: console
 
-      $ cd documentation-user/
+      $ cd documentation/
 
 #. Switch to the version 14.0:
 
@@ -337,7 +332,7 @@ To preview your changes in a generated documentation, proceed as follows:
 
    .. code-block:: console
 
-      $ cd documentation-user/
+      $ cd documentation/
       $ make clean
       $ make html
 
@@ -346,7 +341,7 @@ To preview your changes in a generated documentation, proceed as follows:
       hierarchy of documentation files.
 
 #. Fix any error or warning shown in the logs of the build.
-#. Open the file :file:`documentation-user/_build/html/index.html` with your default web browser.
+#. Open the file :file:`documentation/_build/html/index.html` with your default web browser.
 
 .. note::
    These steps have for only purpose to show you the final results of your changes. They have no
@@ -372,9 +367,8 @@ Submit your changes
       $ git commit
       $ git push -u origin 14.0-my_contribution
 
-#. Go to `github.com/odoo/documentation-user/pulls
-   <https://github.com/odoo/documentation-user/pulls>`_ and click on the **New pull request**
-   button.
+#. Go to `github.com/odoo/documentation/pulls
+   <https://github.com/odoo/documentation/pulls>`_ and click on the **New pull request** button.
 
    .. image:: media/new-pull-request.png
 

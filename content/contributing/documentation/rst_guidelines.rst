@@ -21,21 +21,24 @@ Given the following source file tree:
 
 ::
 
-  documentation-user
-  ├── sales
-  │   └── products_prices
-  │   │   └── products
-  │   │   │   └── import.rst
-  │   │   │   └── variants.rst
-  │   │   └── prices.rst
+  documentation
+  ├── content
+  │   └── applications
+  │   │   └── sales
+  │   │   │   └── sales
+  │   │   │   │   └── products_prices
+  │   │   │   │   │   └── products
+  │   │   │   │   │   │   └── import.rst
+  │   │   │   │   │   │   └── variants.rst
+  │   │   │   │   │   └── prices.rst
 
 A reference to the rendered :file:`prices.html` and :file:`variants.html` could be made from
 :file:`import.rst` as follows:
 
 #. Absolute:
 
-   - ``https://odoo.com/documentation/user/14.0/sales/products_prices/prices.html``
-   - ``https://odoo.com/documentation/user/14.0/sales/products_prices/products/variants.html``
+   - ``https://odoo.com/documentation/master/applications/sales/sales/products_prices/prices.html``
+   - ``https://odoo.com/documentation/master/applications/sales/sales/products_prices/products/variants.html``
 
 #. Relative:
 
