@@ -51,9 +51,9 @@ Your company is requested by the tax administration to deliver a certificate
 of conformity testifying that your software complies with the anti-fraud 
 legislation. This certificate is granted by Odoo SA to Odoo Enterprise users 
 `here <https://www.odoo.com/my/contract/french-certification/>`__. 
-If you use Odoo Community, you should 
-`upgrade to Odoo Enterprise <https://www.odoo.com/documentation/online/setup/enterprise.html>`__
-or contact your Odoo service provider. 
+If you use Odoo Community, you should
+:doc:`upgrade to Odoo Enterprise <../../../../administration/enterprise>`
+or contact your Odoo service provider.
 
 In case of non-conformity, your company risks a fine of €7,500.
 

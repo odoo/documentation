@@ -82,6 +82,8 @@ you should add a DNS "odoo._domainkey" CNAME record to
 For example, for "foo.com" they should have a record "odoo._domainkey.foo.com" 
 that is a CNAME with the value "odoo._domainkey.odoo.com".
 
+.. _discuss/email_servers/inbound_messages:
+
 How to manage inbound messages
 ==============================
 

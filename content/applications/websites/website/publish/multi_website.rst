@@ -43,10 +43,9 @@ website. Follow the purple drops; they will help you in the first steps.
 .. image:: media/multi_website08.png
   :align: center
 
-
 .. note::
       If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database (CNAME) and to authorize it Odoo-side. 
-      `Read <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__
+      More information can be found :doc:`here <domain_name>`.
 
 Create the menu
 ===============
@@ -120,7 +119,7 @@ be redirected to the right website using Geo IP.
   Geo IP is installed by default in Odoo Online. If you run Odoo
   on-premise, don’t forget to install *Geoip* library.
 
-`Read the full documenation about domain names here <https://www.odoo.com/documentation/user/online/website/publish/domain_name.html>`__, 
+`Read the full documenation about domain names here <domain_name>`__, 
 
 Customize the visitor experience
 ================================
@@ -251,7 +250,7 @@ To manage specific prices by websites, you can activate *Multiple Sales
 Prices per Product* in Website settings.
 
 Then, go to :menuselection:`Website --> Products → Pricelists` to create additional
-pricelists. Read `Pricelists Documentation <https://www.odoo.com/documentation/user/online/ecommerce/maximizing_revenue/pricing.html>`__, 
+pricelists. Read :doc:`Pricelists Documentation <../../ecommerce/maximizing_revenue/pricing>`,
 
 If you need help. Select a website to make a pricelist only available on
 this website.

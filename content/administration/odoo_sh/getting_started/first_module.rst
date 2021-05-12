@@ -88,7 +88,7 @@ From the Odoo.sh editor, in a terminal:
 
   $ odoo-bin scaffold my_module ~/src/user/
 
-Or, from your computer, if you have an `installation of Odoo <https://www.odoo.com/documentation/11.0/setup/install.html#source-install>`_:
+Or, from your computer, if you have an :ref:`installation of Odoo <setup/install/source>`:
 
 .. code-block:: bash
 
@@ -149,7 +149,7 @@ Manually
 --------
 
 If you want to create your module structure manually,
-you can follow `Build an Odoo module <https://www.odoo.com/documentation/12.0/howtos/backend.html>`_ to understand
+you can follow :doc:`Build an Odoo module <../../../developer/howtos/backend>` to understand
 the structure of a module and the content of each file.
 
 Push the development branch

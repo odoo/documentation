@@ -42,7 +42,7 @@ instance will be held temporarily unavailable for maintenance reason.
 
 This method is equivalent to perform an upgrade of the module through the Apps menu,
 or through the :code:`-u` switch of
-`the command line <https://www.odoo.com/documentation/12.0/reference/cmdline.html>`_.
+:doc:`the command line <../../../developer/reference/cmdline>`.
 
 In the case the changes in the commit prevent the server to restart,
 or if the modules update fails,
@@ -317,8 +317,8 @@ Staging builds duplicate the production build and the production build only inst
 **Test suite**
 
 For development branches, you can choose to enable or disable the test suite. It's enabled by default.
-When the test suite is enabled, you can restrict them by specifying test tags `test tags
-<https://www.odoo.com/documentation/12.0/reference/testing.html#test-selection>`_.
+When the test suite is enabled, you can restrict them by specifying test tags :ref:`test tags
+<developer/reference/testing/selection>`.
 
 **Odoo Version**
 
