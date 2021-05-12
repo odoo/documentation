@@ -195,8 +195,7 @@ when a fictitious transaction is completed.
 
 Run a test transaction from Odoo using the sandbox personal account.
 
-See also 
+.. seealso::
 
-`How to manage orders paid with payment acquirers <https://www.odoo.com/documentation/user/12.0/ecommerce/shopper_experience/payment.html>`__
-
-`How to manage orders paid with payment acquirers <https://www.odoo.com/documentation/user/12.0/ecommerce/shopper_experience/payment_acquirer.html>`__
+    :doc:`payment`
+    :doc:`payment_acquirer`
