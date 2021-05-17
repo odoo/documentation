@@ -57,4 +57,4 @@ Convenient feature as it allows accountants to easily access all finished tasks 
    :alt: Invoice Task in Odoo Field Service
 
 .. seealso::
-   * :doc:`../../../services/project/advanced/feedback`
+   * :doc:`/applications/services/project/advanced/feedback`

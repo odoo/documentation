@@ -48,10 +48,10 @@ For every Trigger option, **conditions** can be applied, such as:
 - *Update a Record*: updates the record that triggered the action.
 - *Execute several actions*: defines an action that triggers other server actions.
 - *Send Email*: an automatic :doc:`email <../../discuss/advanced/email_template>` is sent.
-- *Add Followers*: :doc:`followers <../../../services/project/tasks/collaborate>` are notified of changes in
+- *Add Followers*: :doc:`followers </applications/services/project/tasks/collaborate>` are notified of changes in
   the task.
 - *Create Next Activity*: creates an activity such as: *Call*, *Email*, *Reminder*.
-- *Send SMS Text Message*: sends an :doc:`SMS <../../../marketing/sms_marketing/pricing/pricing_and_faq>`.
+- *Send SMS Text Message*: sends an :doc:`SMS </applications/marketing/sms_marketing/pricing/pricing_and_faq>`.
 
 Example
 ~~~~~~~

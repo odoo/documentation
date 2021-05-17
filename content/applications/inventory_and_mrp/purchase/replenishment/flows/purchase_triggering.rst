@@ -54,4 +54,4 @@ shipped.
 
 .. seealso::
 
-    * :doc:`../../../purchase/replenishment/flows/setup_stock_rule`
+    * :doc:`/applications/inventory_and_mrp/purchase/replenishment/flows/setup_stock_rule`

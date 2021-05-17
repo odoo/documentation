@@ -58,7 +58,7 @@ Live Chat
 | Through live interactions with your website visitors, helpdesk tickets can be instantly created
   and redirected to the right person.
 | Click on your helpdesk team's name - for the example below: *Customer Care* -
-  and :doc:`set up your channel <../../../websites/livechat/overview/get_started>`.
+  and :doc:`set up your channel </applications/websites/livechat/overview/get_started>`.
 
 .. image:: media/live_chat.png
    :align: center
@@ -66,7 +66,7 @@ Live Chat
          in Odoo Helpdesk
 
 Now, your operators can create tickets by using the
-:doc:`command <../../../websites/livechat/overview/responses>` */helpdesk (subject_of_ticket)*.
+:doc:`command </applications/websites/livechat/overview/responses>` */helpdesk (subject_of_ticket)*.
 
 Prioritize tickets
 ==================
@@ -86,4 +86,4 @@ the Kanban view.
 .. seealso::
    - :doc:`sla`
    - :doc:`../advanced/close_tickets`
-   - :doc:`../../../productivity/discuss/advanced/email_servers`
+   - :doc:`/applications/productivity/discuss/advanced/email_servers`

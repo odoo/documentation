@@ -480,7 +480,7 @@ page. As these files are shared across all pages, further clicks by the
 same visitor will not load any other Javascript resource.
 
 .. note::
-   If you work on :doc:`Developer mode <../../../../applications/general/developer_mode>`, the CSS and
+   If you work on :doc:`Developer mode </applications/general/developer_mode>`, the CSS and
    Javascript are neither concatenated, nor minified. Thus, it's much slower. But it allows you to
    easily debug with the Chrome debugger as CSS and Javascript resources are not transformed from
    their original versions.
@@ -639,6 +639,6 @@ and there is no other indexing rule than specified in the sitemap
 to be found at following address.
 
 You can customize the file *robots* in
-:doc:`Developer mode <../../../../applications/general/developer_mode>` from *Settings --> Technical -->
+:doc:`Developer mode </applications/general/developer_mode>` from *Settings --> Technical -->
 User Interface --> Views* (exclude robots, exclude some pages, redirect to a custom Sitemap).
 Make the Model Data of the view *Non Updatable* to not reset the file after system upgrades.

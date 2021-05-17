@@ -39,4 +39,4 @@ person he can be assigned.
    Create projects per team, or per working site, and have a more accurate and dynamic database.
 
 .. seealso::
-   * :doc:`../../../services/project/overview/setup`
+   * :doc:`/applications/services/project/overview/setup`

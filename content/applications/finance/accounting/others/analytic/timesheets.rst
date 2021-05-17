@@ -73,7 +73,7 @@ of measures.
    :align: center
 
 For more information on how to create a sales order based on time and
-material please see :doc:`../../../../sales/sales/invoicing/time_materials`.
+material please see :doc:`/applications/sales/sales/invoicing/time_materials`.
 
 We save a Sales Order with the service product **External Consulting**. An
 analytical account will automatically be generated once the **Sales Order**

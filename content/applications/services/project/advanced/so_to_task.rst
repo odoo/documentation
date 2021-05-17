@@ -67,5 +67,5 @@ Once the task is complete, click on *Sales Order* and *Create Invoice*.
    Settings`, and enable *Approved timesheets only*.
 
 .. seealso::
-    - :doc:`../overview/setup`
-    - :doc:`../../../sales/sales/invoicing/subscriptions`
+    * :doc:`../overview/setup`
+    * :doc:`/applications/sales/sales/invoicing/subscriptions`

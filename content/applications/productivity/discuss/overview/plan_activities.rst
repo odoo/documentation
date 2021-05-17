@@ -19,7 +19,7 @@ Access and manage your activities wherever you are in Odoo by the *Activities* m
 Plan activities
 ===============
 
-Activities can be planned and managed from the :doc:`Chatter <../../../services/project/tasks/collaborate>`
+Activities can be planned and managed from the :doc:`Chatter </applications/services/project/tasks/collaborate>`
 by clicking on *Schedule activity*, or through Kanban views.
 
 .. image:: media/schedule_activity.png

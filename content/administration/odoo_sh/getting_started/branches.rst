@@ -42,7 +42,7 @@ instance will be held temporarily unavailable for maintenance reason.
 
 This method is equivalent to perform an upgrade of the module through the Apps menu,
 or through the :code:`-u` switch of
-`the command line <https://www.odoo.com/documentation/13.0/reference/cmdline.html>`_.
+:doc:`the command line </developer/reference/cmdline>`.
 
 In the case the changes in the commit prevent the server to restart,
 or if the modules update fails,
@@ -257,16 +257,16 @@ This server only keeps one month of backups: 7 daily and 4 weekly backups.
 Dedicated backup servers keep the same backups, as well as 3 additional monthly backups.
 To restore or download one of these monthly backups, please `contact us <https://www.odoo.com/help>`_.
 
-If you merge a commit updating the version of one or several modules (in :file:`__manifest__.py`), or their linked python 
-dependencies (in :file:`requirements.txt`), then Odoo.sh performs a backup automatically (flagged with type Update in the list), 
-as either the container will be changed by the installation of new pip packages, either the database itself will be 
-changed with the module update triggered afterwards. In these two cases, we are doing a backup as it may potentially 
+If you merge a commit updating the version of one or several modules (in :file:`__manifest__.py`), or their linked python
+dependencies (in :file:`requirements.txt`), then Odoo.sh performs a backup automatically (flagged with type Update in the list),
+as either the container will be changed by the installation of new pip packages, either the database itself will be
+changed with the module update triggered afterwards. In these two cases, we are doing a backup as it may potentially
 break things.
 
-If you merge a commit that only changes some code without the above-mentioned modifications, then no backup is done 
-by Odoo.sh, as neither the container nor the database is modified so the platform considers this safe enough. Of course, 
-as an extra precaution, you can make a backup manually before making big changes in your production sources in case 
-something goes wrong (those manual backups are available for about one week). To avoid abuse, we limit manual backups 
+If you merge a commit that only changes some code without the above-mentioned modifications, then no backup is done
+by Odoo.sh, as neither the container nor the database is modified so the platform considers this safe enough. Of course,
+as an extra precaution, you can make a backup manually before making big changes in your production sources in case
+something goes wrong (those manual backups are available for about one week). To avoid abuse, we limit manual backups
 to 5 per day.
 
 The *import database* feature accepts database archives in the format provided by:
@@ -318,15 +318,15 @@ Staging builds duplicate the production build and the production build only inst
 **Test suite**
 
 For development branches, you can choose to enable or disable the test suite. It's enabled by default.
-When the test suite is enabled, you can restrict them by specifying test tags `test tags
-<https://www.odoo.com/documentation/12.0/reference/testing.html#test-selection>`_.
+When the test suite is enabled, you can restrict them by specifying test tags :ref:`test tags
+<developer/reference/testing/selection>`.
 
 **Odoo Version**
 
 For development branches only, you can change the version of Odoo, should you want to test upgraded code or develop
 features while your production database is in the process of being upgraded to a newer version.
 
-In addition, for each version you have two options regarding the code update. 
+In addition, for each version you have two options regarding the code update.
 
 * You can choose to benefit from the latest bug, security and performance fixes automatically. The
   sources of your Odoo server will be updated weekly. This is the 'Latest' option.

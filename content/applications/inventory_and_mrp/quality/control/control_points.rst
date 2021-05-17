@@ -96,7 +96,7 @@ a transfer or when manufacturing it.
 
 .. tip::
       This process can be simplified by using a connected :doc:`camera
-      <../../../productivity/iot/devices/measurement_tool>`.
+      </applications/productivity/iot/devices/measurement_tool>`.
 
 Pass-Fail
 ---------
@@ -153,7 +153,7 @@ gives instructions to the worker.
    :alt: 
 
 .. tip::
-      This process can be simplified by using connected :doc:`measurement tools <../../../productivity/iot/devices/camera>`.
+      This process can be simplified by using connected :doc:`measurement tools </applications/productivity/iot/devices/camera>`.
 
 Register Consumed Materials
 ---------------------------
@@ -204,4 +204,4 @@ to the product during the manufacturing process.
    :alt: 
 
 .. tip::
-      This process can be simplified by using a connected :doc:`printer <../../../productivity/iot/devices/printer>`.
+      This process can be simplified by using a connected :doc:`printer </applications/productivity/iot/devices/printer>`.

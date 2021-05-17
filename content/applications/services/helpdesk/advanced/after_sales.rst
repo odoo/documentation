@@ -66,4 +66,4 @@ same way as if you were on the *Field Service* application.
 .. seealso::
    - :doc:`../../fsm/overview/invoicing_time`
    - `Coupons <https://www.odoo.com/slides/slide/coupon-programs-640?fullscreen=1>`_
-   - :doc:`../../../inventory_and_mrp/manufacturing/repair/repair`
+   - :doc:`/applications/inventory_and_mrp/manufacturing/repair/repair`

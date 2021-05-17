@@ -57,4 +57,4 @@ on the respective pages.
    :alt: Choose the pages to be tracked in the website application for Odoo Social Marketing
 
 .. seealso::
-   - :doc:`../../../websites/livechat/overview/get_started`
+   - :doc:`/applications/websites/livechat/overview/get_started`

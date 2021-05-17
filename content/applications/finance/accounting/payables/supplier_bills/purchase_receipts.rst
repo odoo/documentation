@@ -12,7 +12,7 @@ amount is first credited on a debt account before a later payment reconciliation
 .. note::
    Expenses paid by employees can be managed with **Odoo Expenses**, an app dedicated to the
    approval of such expenses and the payments management. Click :doc:`here
-   <../../../expense/expense>` for more information on how to use Odoo Expenses.
+   </applications/finance/expense/expense>` for more information on how to use Odoo Expenses.
 
 Register a receipt
 ==================
@@ -42,4 +42,4 @@ needs, and click on *Post*.
 
 .. seealso::
    - :doc:`manage`
-   - :doc:`../../../expense/expense`
+   - :doc:`/applications/finance/expense/expense`

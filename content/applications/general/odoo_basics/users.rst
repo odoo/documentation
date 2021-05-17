@@ -39,7 +39,7 @@ the user. The user must click on it to accept the invitation and create a login.
    `pricing page <https://www.odoo.com/pricing>`_
    for more information.
 
-With the :doc:`Developer mode <../../../../applications/general/developer_mode>` activated, *User Types* can
+With the :doc:`Developer mode </applications/general/developer_mode>` activated, *User Types* can
 be selected.
 
 .. image:: users/user-type.png
@@ -121,7 +121,7 @@ can reaccess your database using your new password.
 Access Rights in detail
 =======================
 
-Activate the :doc:`Developer mode <../../../../applications/general/developer_mode>`, then go to
+Activate the :doc:`Developer mode </applications/general/developer_mode>`, then go to
 :menuselection:`Settings --> Users & Companies --> Groups`.
 
 Groups
@@ -194,7 +194,7 @@ the user can have access.
 .. note::
    Note that if not handled correctly, it may be the source of a lot of inconsistent multi-company
    behaviors. Therefore, a good knowledge of Odoo is required. For technical explanations refer
-   to `this <https://www.odoo.com/documentation/13.0/howtos/company.html>`_ documentation.
+   to :doc:`this </developer/howtos/company>` documentation.
 
 .. image:: users/multi-companies.png
    :align: center
