@@ -38,7 +38,7 @@ The principles are the following:
    correspond to the quality requirements agreed with the
    suppliers. Adding a quality control step in the goods receipt
    process can become essential.
-   
+
    You receive the goods in an input area, then transfer them into
    quality area for quality control. When your quality check
    process finishes then you can move the goods from QC to stock.
@@ -66,4 +66,4 @@ Please read documentation on :doc:`three_steps`
 
 .. seealso::
    - :doc:`../delivery/inventory_flow`
-   - :doc:`../../../purchase/advanced/analyze`
+   - :doc:`/applications/inventory_and_mrp/purchase/advanced/analyze`

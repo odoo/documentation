@@ -50,7 +50,7 @@ For every Trigger option, **conditions** can be applied, such as:
 - *Send Email*: an automatic :doc:`email <../../discuss/advanced/email_template>` is sent.
 - *Add Followers*: followers are notified of changes in the task.
 - *Create Next Activity*: creates an activity such as: *Call*, *Email*, *Reminder*.
-- *Send SMS Text Message*: sends an :doc:`SMS <../../../marketing/sms_marketing/pricing/pricing_and_faq>`.
+- *Send SMS Text Message*: sends an :doc:`SMS </applications/marketing/sms_marketing/pricing/pricing_and_faq>`.
 
 Example
 ~~~~~~~

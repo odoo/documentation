@@ -34,7 +34,7 @@ them. Fields with related objects have their directives shown on *Field Expressi
 | Under **Visible if**, define the rule(s) to set visibility conditions to fields.
 | Example: if choosing to display a product image, you could set a visibility rule to only display
   the ones that are *set* in the product form, avoiding having a plain icon when they are not set.
-| **Visible for** is used to set which :doc:`groups <../../../general/odoo_basics/users>`
+| **Visible for** is used to set which :doc:`groups </applications/general/odoo_basics/users>`
   can have access to specific elements in the report. **Limit visibility to groups**, under
   *Report*, sets the visibility of the report to specifics groups, meaning that users belonging to
   other groups do not see the same final document.
@@ -50,7 +50,7 @@ added to the *Print* menu list on its respective document form.
    :align: center
    :alt: View of an invoice form emphasizing the menu print for Odoo Studio
 
-If activating the :doc:`Developer mode <../../../general/developer_mode/activate>`, additional fields
+If activating the :doc:`Developer mode </applications/general/developer_mode/activate>`, additional fields
 such as *Class* under *Options*, and *Reload from attachment* under *Report*, become visible.
 
 - *Class*: add custom CSS classes to the selected element (e.g. Bootstrap classes such as

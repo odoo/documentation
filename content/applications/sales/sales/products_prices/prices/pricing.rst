@@ -138,4 +138,4 @@ In case of discount, you can show the public price and the computed discount % o
 .. seealso::
 
     * :doc:`currencies`
-    * :doc:`../../../../websites/ecommerce/maximizing_revenue/pricing`
+    * :doc:`/applications/websites/ecommerce/maximizing_revenue/pricing`

@@ -108,8 +108,7 @@ Access the URL :file:`/web/database/manager` of your on-premise database and dow
 .. Warning::
 
   If you cannot access the database manager, it may have been disabled by your system administrator.
-  See the `database manager security documentation
-  <https://www.odoo.com/documentation/14.0/setup/deploy.html#database-manager-security>`_.
+  See the :ref:`database manager security documentation <db_manager_security>`.
 
 You will need the master password of your database server. If you do not have it, contact your system administrator.
 
@@ -152,7 +151,7 @@ Check your outgoing email servers
 There is a default mail server provided with Odoo.sh.
 To use it, there must be no enabled outgoing mail server configured in your database in
 :menuselection:`Settings --> Technical --> Outgoing Mail Servers`
-(:doc:`Developer mode <../../../../applications/general/developer_mode/activate>` must be activated).
+(:doc:`Developer mode </applications/general/developer_mode/activate>` must be activated).
 
 After the import of your database,
 all outgoing email servers are disabled so you use the Odoo.sh email server provided by default.

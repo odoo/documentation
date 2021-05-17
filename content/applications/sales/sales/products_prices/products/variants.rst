@@ -221,5 +221,5 @@ When you have entered all the extra values, click on **Save**.
 
 .. seealso::
    - `Accounting Memento: Details of Journal Entries
-     <../../../accounting/overview/main_concepts/memento.html#journal-entries>`_
-   - :doc:`../../../../finance/accounting/overview/process_overview/supplier_bill`
+     </applications/finance/accounting/overview/main_concepts/memento.html#journal-entries>`_
+   - :doc:`/applications/finance/accounting/overview/process_overview/supplier_bill`

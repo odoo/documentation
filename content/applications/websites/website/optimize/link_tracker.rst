@@ -52,5 +52,5 @@ country of origin for those clicks.
       get access to the *Link Tracker* module and its back-end functionalities.
    #. Integrated with :doc:`Google Analytics <google_analytics>`, those trackers allow you to see
       the number of clicks and visitors to keep you on top of your marketing campaigns.
-   #. The integration with the :doc:`CRM <../../../sales/crm/track_leads/prospect_visits>` application allows
+   #. The integration with the :doc:`CRM </applications/sales/crm/track_leads/prospect_visits>` application allows
       you to understand where your leads and opportunities are coming from.

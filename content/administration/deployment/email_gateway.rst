@@ -44,5 +44,5 @@ For Exim
    - `Exim <https://www.exim.org/docs.html>`_
 
 .. tip::
-   If you don't have access/manage your email server, use `inbound messages
-   <https://www.odoo.com/documentation/user/14.0/discuss/advanced/email_servers.html#how-to-manage-outbound-messages>`_.
+   If you don't have access/manage your email server, use :ref:`inbound messages
+   <discuss/email_servers/inbound_messages>`.

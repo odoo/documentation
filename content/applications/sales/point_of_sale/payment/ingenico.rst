@@ -16,7 +16,7 @@ Connect an IoT Box
 
 Connecting an Ingenico Payment Terminal to Odoo is a feature that
 requires an IoT Box. For more information on how to connect an IoT Box
-to your database, please refer to the :doc:`IoT documentation <../../../productivity/iot/config/connect>`.
+to your database, please refer to the :doc:`IoT documentation </applications/productivity/iot/config/connect>`.
 
 Configure the Lane/5000 for Ingenico BENELUX
 --------------------------------------------
