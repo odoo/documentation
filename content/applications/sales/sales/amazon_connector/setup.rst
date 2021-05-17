@@ -98,7 +98,7 @@ code, a default database product **Amazon Sale** is used. The same is done with 
 
 .. note::
    To modify the default products, activate the
-   :doc:`Developer mode <../../../../applications/general/developer_mode>` and navigate to
+   :doc:`Developer mode </applications/general/developer_mode>` and navigate to
    :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
    Default Products`.
 
@@ -131,7 +131,7 @@ marketplaces.
    must belong to the same region as that of your seller account.
 
 To add a new marketplace, you must first enable :doc:`Developer mode
-<../../../../applications/general/developer_mode>`.
+</applications/general/developer_mode>`.
 
 Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors -->
 Amazon Sync --> Amazon Marketplaces`.

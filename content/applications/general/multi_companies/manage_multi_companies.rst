@@ -127,5 +127,5 @@ at an invoice/bills level or at a sales/purchase orders level.
    Remember to test all workflows as an user other than the administrator.
 
 .. seealso::
-   - `Multi-company Guidelines <https://www.odoo.com/documentation/14.0/howtos/company.html>`_
+   - :doc:`Multi-company Guidelines </developer/howtos/company>`
    - :doc:`../../finance/accounting/others/multicurrencies/how_it_works`

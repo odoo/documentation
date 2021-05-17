@@ -24,12 +24,12 @@ IAP accounts
 
 Credits to use IAP services are stored on IAP accounts, which are specific to each service and
 database. By default, IAP accounts are common to all companies, but can be restricted to specific
-ones. Activate the :doc:`Developer mode <../../../../applications/general/developer_mode>`, then go to
+ones. Activate the :doc:`Developer mode </applications/general/developer_mode>`, then go to
 :menuselection:`Technical Settings --> IAP Account`.
 
 .. image:: media/image2.png
    :align: center
-   
+
 IAP Portal
 ==========
 
@@ -62,10 +62,10 @@ Different services are available depending on the hosting type of your Database:
 - *Odoo.sh and Odoo Enterprise (on-premise)*: both the services provided by Odoo and by third-party
   apps can be used.
 
-Offering my own services 
+Offering my own services
 ========================
 
 I am more than welcome to offer my own IAP services through Odoo Apps! It is the perfect opportunity
 to get recurring revenue for an ongoing service use rather than — and possibly instead of — a sole
-initial purchase. Please, find more information at: `In-App Purchase
-<https://www.odoo.com/documentation/14.0/webservices/iap.html>`_
+initial purchase. Please, find more information at: :doc:`In-App Purchase
+</developer/webservices/iap>`.

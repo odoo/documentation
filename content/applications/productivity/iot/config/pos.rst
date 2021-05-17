@@ -55,7 +55,7 @@ Then, you have to connect the peripheral devices to your IoT Box.
 
 -  **Payment terminal**: The connection process depends on the terminal,
    please refer to the :doc:`payment terminals documentation
-   <../../../sales/point_of_sale/payment>`.
+   </applications/sales/point_of_sale/payment>`.
 
 Once it's done, you can connect the IoT Box to your PoS. For this, go in
 :menuselection:`Point of Sale --> Configuration --> PoS`, tick *IoT Box*

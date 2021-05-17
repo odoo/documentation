@@ -108,6 +108,8 @@ Restriction
 -----------
 Please note that the port 25 is blocked for security reasons. Try using 587, 465 or 2525.
 
+.. _discuss/email_servers/inbound_messages:
+
 How to manage inbound messages
 ==============================
 
@@ -161,10 +163,10 @@ alias in your mail server.
   You should set redirections for all the email addresses to Odoo's domain name in your 
   email server (e.g. *catchall@mydomain.ext* to *catchall@mycompany.odoo.com*).
 
-.. tip:: All the aliases are customizable in Odoo. 
+.. tip:: All the aliases are customizable in Odoo.
    Object aliases can be edited from their  respective configuration view.
    To edit catchall and bounce aliases, you first need to activate the
-   :doc:`Developer mode <../../../../applications/general/developer_mode>`.
+   :doc:`Developer mode </applications/general/developer_mode>`.
 
  Then go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
  to customize the aliases (*mail.catchall.alias* & * mail.bounce.alias*).
@@ -172,11 +174,11 @@ alias in your mail server.
  .. image:: media/system_parameters.png
     :align: center
 
-.. note:: By default inbound messages are fetched every 5 minutes in Odoo on-premise. 
-   You can change this value in :doc:`Developer mode <../../../../applications/general/developer_mode>`.
-   Go to :menuselection:`Settings --> Technical --> Automation --> 
+.. note:: By default inbound messages are fetched every 5 minutes in Odoo on-premise.
+   You can change this value in :doc:`Developer mode </applications/general/developer_mode>`.
+   Go to :menuselection:`Settings --> Technical --> Automation -->
    Scheduled Actions` and look for *Mail: Fetchmail Service*.
-   
+
 .. _Office 365 documentation:
     https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
 
@@ -195,7 +197,7 @@ or Sendgrid for mass mailings.
    unless you want to use a specific external outgoing email server for technical reasons.
 
 To do this, you should first enable the :doc:`Developer mode
-<../../../../applications/general/developer_mode>` and then go to :menuselection:`Settings --> Technical
+</applications/general/developer_mode>` and then go to :menuselection:`Settings --> Technical
 --> Outgoing` e-mail servers. There you have to create two e-mail MTA server settings. One for
 transactional e-mails and one for mass mail servers. Be sure to mark the priority of transactional
 e-mail servers as low as the mass email servers.

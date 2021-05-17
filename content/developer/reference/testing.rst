@@ -108,6 +108,8 @@ Odoo server.
 
 .. _unittest documentation: https://docs.python.org/3/library/unittest.html
 
+.. _developer/reference/testing/selection:
+
 Test selection
 --------------
 

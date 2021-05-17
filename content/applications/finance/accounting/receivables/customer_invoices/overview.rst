@@ -42,7 +42,7 @@ lines, invoice a fixed advance.
 This process is good for both services and physical products.
 
 .. seealso::
-   - :doc:`../../../../sales/sales/invoicing/proforma`
+   - :doc:`/applications/sales/sales/invoicing/proforma`
 
 Sales Order ‣ Delivery Order ‣ Invoice
 --------------------------------------
@@ -58,7 +58,7 @@ later), the customer will receive two invoices, one for each delivery
 order.
 
 .. seealso::
-   - :doc:`../../../../sales/sales/invoicing/invoicing_policy`
+   - :doc:`/applications/sales/sales/invoicing/invoicing_policy`
 
 eCommerce Order ‣ Invoice
 -------------------------
@@ -91,9 +91,9 @@ mostly based on time and material. For services companies that invoice
 on fix price, they use a regular sales order.
 
 .. seealso::
-   - :doc:`../../../../sales/sales/invoicing/time_materials`
-   - :doc:`../../../../sales/sales/invoicing/expense`
-   - :doc:`../../../../sales/sales/invoicing/milestone`
+   - :doc:`/applications/sales/sales/invoicing/time_materials`
+   - :doc:`/applications/sales/sales/invoicing/expense`
+   - :doc:`/applications/sales/sales/invoicing/milestone`
 
 Recurring Contracts ‣ Invoices
 ------------------------------
@@ -103,7 +103,7 @@ The frequency of the invoicing and the services/products invoiced are
 defined on the contract.
 
 .. seealso::
-   - :doc:`../../../../sales/sales/invoicing/subscriptions`
+   - :doc:`/applications/sales/sales/invoicing/subscriptions`
 
 Others
 ======

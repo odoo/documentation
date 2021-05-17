@@ -469,7 +469,7 @@ Landed Costs`. There you will find the option to attach the Pedimentos number.
    with the transfer(s).
 
    .. seealso::
-      :doc:`../../../../inventory_and_mrp/inventory/management/reporting/integrating_landed_costs`.
+      :doc:`/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs`.
 
 Payment Terms
 ~~~~~~~~~~~~~
@@ -1333,7 +1333,7 @@ Enabling Explicit errors on the CFDI using the XSD local validator (CFDI 3.3)
 Frequently you want receive explicit errors from the fields incorrectly set
 on the xml, those errors are better informed to the user if the check is
 enable, to enable the Check with xsd feature follow the next steps (with the
-:doc:`Developer mode <../../../../general/developer_mode/activate>` enabled).
+:doc:`Developer mode </applications/general/developer_mode>` enabled).
 
 - Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`
 - Look for the Action called "Download XSD files to CFDI"

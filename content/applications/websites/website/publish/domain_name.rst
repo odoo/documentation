@@ -2,14 +2,14 @@
 How to use my own domain name
 =============================
 
-By default, your Odoo Online instance and website have a *.odoo.com* domain name, 
-for both the URL and the emails. 
+By default, your Odoo Online instance and website have a *.odoo.com* domain name,
+for both the URL and the emails.
 But you can change to a custom one (e.g. www.yourcompany.com).
 
 What is a good domain name
 ==========================
-Your website address is as important to your branding as the name of your 
-business or organization, so put some thought into changing it for a proper 
+Your website address is as important to your branding as the name of your
+business or organization, so put some thought into changing it for a proper
 domain. Here are some tips:
 
 - Simple and obvious
@@ -24,18 +24,18 @@ How to buy a domain name
 ========================
 Buy your domain name at a popular registrar:
 
-- `GoDaddy <https://www.godaddy.com>`__  
-- `Namecheap <https://www.namecheap.com>`__  
-- `OVH <https://www.ovh.com>`__ 
+- `GoDaddy <https://www.godaddy.com>`__
+- `Namecheap <https://www.namecheap.com>`__
+- `OVH <https://www.ovh.com>`__
 
-.. note:: Steps to buy a domain name are pretty much straight forward. 
+.. note:: Steps to buy a domain name are pretty much straight forward.
    In case of issue, check out those easy tutorials:
 
    - `GoDaddy <https://roadtoblogging.com/buy-domain-name-from-godaddy>`__
    - `Namecheap <https://www.loudtips.com/buy-domain-name-hosting-namecheap//>`__
 
    Feel free to buy an email server to have email addresses using your domain name.
-   However don't buy any extra service to create or host your website. 
+   However don't buy any extra service to create or host your website.
    This is Odoo's job!
 
 .. _custom_domain:
@@ -60,7 +60,7 @@ First let's authorize the redirection (yourcompany.com -> yourcompany.odoo.com):
 .. image:: media/domain_name03.png
     :align: center
 
-* A database domain prompt will appear. Enter your custom domain 
+* A database domain prompt will appear. Enter your custom domain
   (e.g. www.yourcompany.com).
 
 
@@ -72,7 +72,7 @@ We can now apply the redirection from your domain name's manager account:
 * Log in to your account and search for the DNS Zones management page.
 
 * Create a CNAME record *www.yourdomain.com* pointing to *mywebsite.odoo.com*.
-  If you want to use the naked domain (e.g. yourdomain.com), you need to redirect 
+  If you want to use the naked domain (e.g. yourdomain.com), you need to redirect
   *yourdomain.com* to *www.yourdomain.com*.
 
 .. note:: Here are some specific guidelines to create a CNAME record:
@@ -100,7 +100,7 @@ How to make sure that all my URLs use my custom domain?
 
 To set up the root URL of your website and of all the links sent in emails, you can ask an administrator of your database (any user in the *Settings* group) to perform a login from the login screen. It's as simple as that!
 
-If you want to do it manually, you can go to :menuselection:`Settings --> Technical --> System Parameters` . 
+If you want to do it manually, you can go to :menuselection:`Settings --> Technical --> System Parameters` .
 Find the entry called ``web.base.url`` (you can create it if it does not exist) and enter the full URL of your website, like ``https://www.myodoowebsite.com``.
 
 .. warning::
@@ -117,4 +117,4 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`../../../productivity/discuss/advanced/email_servers`
+  * :doc:`/applications/productivity/discuss/advanced/email_servers`

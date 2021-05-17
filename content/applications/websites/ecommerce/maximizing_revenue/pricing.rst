@@ -9,7 +9,7 @@ This section sheds light on pricing features found in the eCommerce app:
 * let the customer choose the currency.
 
 As a pre-requisite, check out how to managing product pricing:
-:doc:`../../../sales/sales/products_prices/prices/pricing`).
+:doc:`/applications/sales/sales/products_prices/prices/pricing`).
 
 Geo-IP automatically applies the right price
 ============================================
@@ -32,6 +32,6 @@ can be found in *Pricelists* under the *Products* menu, located in the Website a
 
 .. seealso::
 
-  * :doc:`../../../sales/sales/products_prices/prices/pricing`
-  * :doc:`../../../sales/sales/products_prices/prices/currencies`
+  * :doc:`/applications/sales/sales/products_prices/prices/pricing`
+  * :doc:`/applications/sales/sales/products_prices/prices/currencies`
   * :doc:`promo_code`

@@ -100,7 +100,7 @@ More common questions
 
    Yes, the SMS is logged as a note under the chatter of the corresponding record, and a complete
    history of the SMSs sent is available on
-   :doc:`Developer mode <../../../general/developer_mode/activate>` under
+   :doc:`Developer mode </applications/general/developer_mode/activate>` under
    :menuselection:`Technical --> SMS`.
 
 
