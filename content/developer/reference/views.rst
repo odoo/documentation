@@ -979,6 +979,8 @@ take the following attributes:
     ``info``, ``secondary``, ``success`` or ``warning``).
 ``default_group_by``
   name of a field to group tasks by
+``disable_drag_drop``
+  if set to true, the gantt view will not have any drag&drop support
 ``consolidation``
   field name to display consolidation value in record cell
 ``consolidation_max``
