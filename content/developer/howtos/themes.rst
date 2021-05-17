@@ -845,7 +845,7 @@ We start by adding a new file in our views folder - name it **options.xml** and 
 
     <template id="snippet_testimonial_opt" name="Snippet Testimonial Options" inherit_id="website.snippet_options">
         <xpath expr="//div[@data-js='Box']" position="after">
-            <div data-selector=".snippet_testimonial"> <!-- Options group -->
+            <div data-selector=".s_testimonial"> <!-- Options group -->
                 <div class="dropdown-submenu">
                     <a href="#" class="dropdown-item">Your Option</a>
                     <div class="dropdown-menu"><!-- Options list -->
