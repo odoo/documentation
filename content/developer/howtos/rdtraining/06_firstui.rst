@@ -252,7 +252,7 @@ Reserved Fields
 ---------------
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`reference/orm/fields/reserved`.
+:ref:`reference/fields/reserved`.
 
 A few field names are reserved for pre-defined behaviors. They should be defined on a
 model when the related behavior is desired.

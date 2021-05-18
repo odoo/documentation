@@ -431,7 +431,7 @@ as :attr:`~odoo.models.BaseModel._auto`
 .. warning:: :attr:`~odoo.models.BaseModel._log_access` *must* be enabled on
              :class:`~odoo.models.TransientModel`.
 
-.. _reference/orm/fields/reserved:
+.. _reference/fields/reserved:
 
 Reserved Field names
 --------------------
