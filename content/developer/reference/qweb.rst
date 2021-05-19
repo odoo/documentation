@@ -272,6 +272,8 @@ to create. The value to set can be provided in two ways:
 
 .. _reference/qweb/call:
 
+.. _reference/qweb/sub-templates:
+
 calling sub-templates
 =====================
 

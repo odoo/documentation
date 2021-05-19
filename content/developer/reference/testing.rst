@@ -194,6 +194,8 @@ they're not going to get run:
     class SmallTest(unittest.TestCase):
         ...
 
+.. _reference/testing/tags:
+
 Special tags
 ^^^^^^^^^^^^
 
