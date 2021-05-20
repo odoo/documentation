@@ -251,4 +251,4 @@ You have three choices for the **Automate Assets** field:
    fully automate its purchase. (see: :ref:`product-assets-account`).
 
 .. seealso::
-  * :doc:`../../overview/getting_started/chart_of_accounts`
+  * :doc:`../../getting_started/initial_configuration/chart_of_accounts`

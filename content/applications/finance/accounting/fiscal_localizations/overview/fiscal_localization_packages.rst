@@ -42,7 +42,7 @@ Please refer to the documentation listed below for more information.
 
 .. seealso::
    - :doc:`localizations_list`
-   - :doc:`../../overview/getting_started/chart_of_accounts`
+   - :doc:`../../getting_started/initial_configuration/chart_of_accounts`
    - :doc:`../../taxation/taxes/taxes`
 
 .. todo:: update list of linked docs, and link with the future one about country-specific statements.
