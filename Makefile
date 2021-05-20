@@ -2,7 +2,7 @@
 
 # Pass WORKERS=auto for parallel build
 ifndef WORKERS
-  WORKERS = 1
+  WORKERS = auto
 endif
 
 SPHINX_BUILD   = sphinx-build
@@ -67,7 +67,7 @@ extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss 
 
 #=== Development and debugging rules ===#
 
-fast: SPHINXOPTS += -A collapse_menu=True -j auto
+fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
 
 static: extensions/odoo_theme/static/style.css

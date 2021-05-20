@@ -40,7 +40,7 @@ def setup(app):
         addnode(app, node, name)
 
     return {
-        'parallel_read_safe': False,
+        'parallel_read_safe': True,
         'parallel_write_safe': True
     }
 
@@ -183,3 +183,11 @@ class HtmlDomain(Domain):
         'var': makerole(var),
         'samp': makerole(samp),
     }
+
+    def merge_domaindata(self, docnames, otherdata) -> None:
+        """Merge in data regarding *docnames* from a different domaindata
+        inventory (coming from a subprocess in parallel builds).
+        """
+        # This extension doesn't store any data on the env
+        # and therefore doesn't need to support this method.
+        pass
