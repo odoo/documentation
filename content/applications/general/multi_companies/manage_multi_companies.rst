@@ -83,7 +83,7 @@ Inter-Company Transactions
 
 First, make sure each one of your companies is properly set in relation to:
 
-- :doc:`Chart of Accounts <../../finance/accounting/overview/getting_started/chart_of_accounts>`
+- :doc:`Chart of Accounts <../../finance/accounting/getting_started/initial_configuration/chart_of_accounts>`
 - :doc:`Taxes <../../finance/accounting/taxation/taxes/default_taxes>`
 - :doc:`Fiscal Positions <../../finance/accounting/taxation/taxes/fiscal_positions>`
 - :doc:`Journals <../../finance/accounting/bank/setup/bank_accounts>`

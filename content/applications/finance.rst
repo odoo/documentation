@@ -6,5 +6,5 @@ Finance
 .. toctree::
 
     finance/accounting
-    finance/expense/expense
+    finance/expenses
     finance/sign
