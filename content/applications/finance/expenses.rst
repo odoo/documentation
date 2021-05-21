@@ -1,16 +1,24 @@
+:show-content:
 
 ========
 Expenses
 ========
 
+**Odoo Expenses** streamlines the management of expenses. Employees can submit their expenses;
+managers can approve them; accountants can record them and process the payments.
+
+.. seealso::
+   - `Odoo Expenses: product page <https://www.odoo.com/app/expenses>`_
+
 How to set expense types
 ========================
+
 The first step to track expenses is to configure the expense types (managed as products in Odoo)
 that your company allows, from the *Configuration* menu. 
 When a specific expense is reimbursed at a fixed price, set a cost on the product.
 Otherwise keep the cost at 0.0 and employees will report the real cost per expense.
 
-.. image:: ./media/expense_product.png
+.. image:: expenses/product.png
    :align: center
 
 Here are some examples to configure:
@@ -52,7 +60,7 @@ Manually
 As an employee (Employee in user access rights), you can record 
 expenses from :menuselection:`My Expenses --> Expenses to Submit`.
 
-.. image:: ./media/expense_submit_01.png
+.. image:: expenses/submit_01.png
    :align: center
 
 1. Select the related product and enter either the total amount 
@@ -65,11 +73,12 @@ expenses from :menuselection:`My Expenses --> Expenses to Submit`.
    photo/scan of the receipt from the discussion thread. 
    That will help the manager and the accountant validate it.
 
-.. image:: ./media/expense_submit_02.png
+.. image:: expenses/submit_02.png
    :align: center
 
 In one click from emails
 ------------------------
+
 Let your employees record their expenses from a simple email. 
 Make a snapshot of the receipt and send it by email, or simply forward a bill!
 
@@ -93,7 +102,7 @@ from the list view and click on :menuselection:`Action --> Submit to Manager`.
 Save the newly created expense report (i.e. set of expenses), 
 and wait for your manager to approve it.
 
-.. image:: ./media/expense_submit_03.png
+.. image:: expenses/submit_03.png
    :align: center
 
 You can also submit expenses one by one from the *Submit to Manager* 
@@ -110,19 +119,19 @@ HR and team managers get an overview of all expense reports to
 validate from the top menu :menuselection:`To Approve --> Expense Reports to Approve`. 
 Such users must have at least *Officers* access rights for *Expenses*.
 
-.. image:: ./media/expense_approval_01.png
+.. image:: expenses/approval_01.png
    :align: center
 
 They can review expense reports, approve or reject them, as well as providing 
 feedback thanks to the integrated communication tool.
 
-.. image:: ./media/expense_approval_02.png
+.. image:: expenses/approval_02.png
    :align: center
 
 As a team manager you can easily find the expense reports of your team members. 
 You need to be set as manager in the detail form of those employees.
 
-.. image:: ./media/expense_approval_03.png
+.. image:: expenses/approval_03.png
    :align: center
 
 
@@ -154,8 +163,8 @@ To record the payment or pay by check, click *Register a Payment*.
 
 See how you can easily manage the payment process in Odoo:
 
-* :doc:`../accounting/payables/pay/check`
-* :doc:`../accounting/payables/pay/sepa`
+* :doc:`accounting/payables/pay/check`
+* :doc:`accounting/payables/pay/sepa`
 
 
 How to re-invoice expenses to your customers
@@ -183,7 +192,7 @@ Setup
    -  At sales price: will invoice based on a fixed sales price set on
       the sale order.
 
-.. image:: media/expense_invoicing_01.png
+.. image:: expenses/invoicing_01.png
   :align: center
 
 Create an order
@@ -196,7 +205,7 @@ Create an order
 
 -  Link the expense to the Sale Order.
 
-.. image:: media/expense_invoicing_02.png
+.. image:: expenses/invoicing_02.png
   :align: center
 
 Submit, validate and post expenses
@@ -206,7 +215,7 @@ Submit, validate and post expenses
    line on approving expenses reports. Click the line to add one if
    missing. Employees are already able to set one when submitting.
 
-.. image:: media/expense_invoicing_03.png
+.. image:: expenses/invoicing_03.png
   :align: center
 
 -  As an accountant, post journal entries.
@@ -219,7 +228,7 @@ Now you can invoice the order. It shows up in
 to Invoice. The expenses have been added automatically in the order
 lines. Such items show up in blue (i.e. to invoice).
 
-.. image:: media/expense_invoicing_04.png
+.. image:: expenses/invoicing_04.png
   :align: center
 
 e (i.e. to invoice). 
