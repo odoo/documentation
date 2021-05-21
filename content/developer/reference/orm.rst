@@ -334,18 +334,22 @@ relational fields and reading a field on the reached model. The complete
 sequence of fields to traverse is specified by the ``related`` attribute.
 
 Some field attributes are automatically copied from the source field if
-they are not redefined: ``string``, ``help``, ``readonly``, ``required`` (only
+they are not redefined: ``string``, ``help``, ``required`` (only
 if all fields in the sequence are required), ``groups``, ``digits``, ``size``,
 ``translate``, ``sanitize``, ``selection``, ``comodel_name``, ``domain``,
 ``context``. All semantic-free attributes are copied from the source
 field.
 
-By default, the values of related fields are not stored to the database.
+By default, related fields are:
+
+* not stored
+* not copied
+* readonly
+* computed in superuser mode
+
 Add the attribute ``store=True`` to make it stored, just like computed
 fields. Related fields are automatically recomputed when their
 dependencies are modified.
-
-.. note:: The related fields are computed in sudo mode.
 
 .. warning::
 
