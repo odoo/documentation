@@ -37,7 +37,7 @@ and go to the **Tax Return Periodicity** section.
 
 .. note::
    This is usually configured during the :doc:`app's initial set up
-   <../../overview/getting_started/setup>`.
+   <../../getting_started/initial_configuration/setup>`.
 
 Tax Grids
 ---------
@@ -121,5 +121,5 @@ with the amount you have to pay or be refunded.
 
 .. seealso::
    * :doc:`../../taxation/taxes/taxes`
-   * :doc:`../../overview/getting_started/setup`
+   * :doc:`../../getting_started/initial_configuration/setup`
    * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
