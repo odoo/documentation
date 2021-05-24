@@ -1,20 +1,22 @@
-========================================
-Generate leads/opportunities from emails
-========================================
+=======================================
+Generating leads/opportunities by email
+=======================================
 
-Automating the lead/opportunity generation will considerably improve
-your efficiency. By default, any email sent to
-*sales@database\_domain.ext* will create an opportunity in the
-pipeline of the default sales channel.
+Automating the lead/opportunity generation will considerably improve your team's efficiency.
+Utilizing email aliases and a contact form in your database can aid in that improvement.
+
+
+By default, any email sent to *sales@database\_domain.ext* will create an opportunity in the
+default sales channel's pipeline associated with that particular email.
 
 Configure email aliases
 =======================
 
-Each sales teams can have its own email alias, to generate
-leads/opportunities automatically assigned to it. It is useful if you
-manage several sales teams with specific business processes. You will
-find the configuration of sales teams under
+Each sales team can use its own email alias to filter generated leads/opportunities automatically
+to their pipeline. This functionality can be  useful if you manage several sales teams with
+specific individual business processes. You will find Sales Team configurations under
 :menuselection:`Configuration --> Sales Teams`.
 
-.. image:: media/generate_from_email01.png
+.. image:: generate_from_email/sales-teams-configuration.png
     :align: center
+    :alt: Configuring Sales Teams
