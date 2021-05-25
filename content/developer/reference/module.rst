@@ -79,6 +79,11 @@ Available manifest fields are:
 
     When a module is installed, all of its dependencies are installed before
     it. Likewise dependencies are loaded before a module is loaded.
+
+.. note::
+    Module `base` is always installed in any Odoo instance.
+    But you still need to specify it as dependency to make sure your module is updated when `base` is updated.
+
 ``data`` (``list(str)``)
     List of data files which must always be installed or updated with the
     module. A list of paths from the module root directory
