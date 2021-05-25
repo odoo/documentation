@@ -38,7 +38,8 @@ Then set your email domain name in the General Settings.
 Can I use an Office 365 server
 ------------------------------
 You can use an Office 365 server if you run Odoo on-premise.
-Office 365 SMTP relays are not compatible with Odoo Online.
+Office 365 SMTP relays are not compatible with Odoo Online unless you configure
+Odoo to force the outgoing "From" address (see below).
 
 Please refer to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ 
 to configure a SMTP relay for your Odoo's IP address.
@@ -83,6 +84,48 @@ For example, for "foo.com" they should have a record "odoo._domainkey.foo.com"
 that is a CNAME with the value "odoo._domainkey.odoo.com".
 
 .. _discuss/email_servers/inbound_messages:
+
+Choose allowed "From" email addresses
+-------------------------------------
+
+Sometimes, an email's "From" (outgoing) address can belong to a different
+domain, and that can be a problem.
+
+For example, if a customer with address *mary@customer.example.com* responds to
+a message, Odoo will try to redistribute that same email to other subscribers
+in the thread. But if the domain *customer.example.com* forbids that kind of
+usage for security (kudos for that), the Odoo's redistributed email would get
+rejected by some recipients' mail servers.
+
+To avoid those kind of problems, you should make sure all emails use a "From"
+address from your authorized domain.
+
+If your MTA supports `SRS (Sender Rewriting Scheme)
+<https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme>`__, you can enable it
+to handle these situations. However, that is more complex and requires more
+technical knowledge that is not meant to be covered by this documentation.
+
+Instead, you can also configure Odoo to do something similar by itself:
+
+#.  Set your domain name in the General Settings.
+
+    .. image:: media/alias_domain.png
+      :align: center
+
+#.  In developer mode, go to :menuselection:`Settings --> Technical -->
+    Parameters --> System Parameters`.
+
+#.  Add one system parameter from these:
+
+    * If you want *all* your outgoing messages to use the same "From" address,
+      use the key ``mail.force.smtp.from`` and set that address as value
+      (such as ``outgoing@mycompany.example.com``).
+
+    * If you want to keep the original "From" address for emails that use your
+      same domain, but change it for emails that use a different domain, use
+      the key ``mail.dynamic.smtp.from`` and set as value the email address
+      that should be used in those cases (such as
+      ``outgoing@mycompany.example.com``).
 
 How to manage inbound messages
 ==============================
