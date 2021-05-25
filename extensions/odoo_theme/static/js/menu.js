@@ -47,14 +47,21 @@
         }
     };
 
+     document.addEventListener('scroll', () => {
+         // Allow to hide the searchbar when the page is scrolled in mobile.
+         _flagHeaderWithScrollPosition();
+     });
+
     /**
-     * Mobile: Toggle open/close sidebar on click of nav button (&& on swipe left to right?).
-     *
-     *
-     * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
-     * the `show` (Bootstrap) class.
-     * Also, the deepest TOC entry receives the `o_deepest_active_toc_entry` class, and its child
-     * Sidebar receives the `o-mobile-show` class.
+     * Add/Remove the class `o_header_scrolled` on the header according to the scroll position.
      */
+     const _flagHeaderWithScrollPosition = () => {
+         const header = document.querySelector('.o_main_header');
+         if (this.scrollY > 0) {
+             header.classList.add('o_header_scrolled');
+         } else {
+             header.classList.remove('o_header_scrolled');
+         }
+     };
 
 })();
