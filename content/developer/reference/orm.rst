@@ -221,6 +221,8 @@ Relational Fields
 
 .. autoclass:: Command()
    :members:
+   :undoc-members:
+   :member-order: bysource
 
 Pseudo-relational fields
 ''''''''''''''''''''''''
