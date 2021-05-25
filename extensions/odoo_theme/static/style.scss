@@ -73,14 +73,26 @@ header.o_main_header{
     }
     .o_search_wrapper {
         display: flex;
+        opacity: 1;
+        @include transition(opacity .3s);
+
         @include media-breakpoint-down(lg) {
             display: block;
             position: absolute;
             width: 100%;
             padding: 0 10px;
-            top: calc(100% + 30px);
+            top: calc(100% + 15px);
        }
     }
+
+    &.o_header_scrolled {
+        .o_search_wrapper {
+            @include media-breakpoint-down(lg) {
+                opacity: 0;
+            }
+        }
+    }
+
 
     .highlight-link {
         margin-bottom: 0;
