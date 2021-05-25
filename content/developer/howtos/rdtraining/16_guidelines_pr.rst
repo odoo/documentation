@@ -52,7 +52,7 @@ folder to be able to commit your work.
     $ git remote add training git@github.com:odoo/technical-training-sandbox.git
     $ git remote add training-dev git@github.com:xyz-odoo/technical-training-sandbox.git #Don't forget to change xyz-odoo to your own GitHub account
     $ git remote set-url --push training no_push #Avoid pushing directly into the main repository
-    $ git fetch --all --prune
+    $ git fetch training master
     $ git branch master training/master
     $ git checkout master #Two new files will be downloaded README.md and .gitignore
 
@@ -95,7 +95,7 @@ Push your new branch to your development repository:
 
 .. code-block:: console
 
-    $ git push -u master-my_first_branch-xyz
+    $ git push -u training-dev master-my_first_branch-xyz
 
 .. warning:: NEVER use `git push --force` (or `git push -f`) with a branch that does not belong to you
              or in a stable branch. Never, never, never!
