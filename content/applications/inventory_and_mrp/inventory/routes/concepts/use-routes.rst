@@ -257,19 +257,19 @@ The available rules trigger various actions. If Odoo offers *Push* and
 all of them:
 
 -  **Pull From**: this rule is triggered by a need for the product
-   in a specific stock location. The need can come from a sale order
-   which has been validated or for a manufacturing order which
+   in a specific location. The need can come from a sale order
+   which has been validated or from a manufacturing order which
    requires a specific component. When the need appears in the
-   source location, Odoo generates a picking to fulfill this need.
+   destination location, Odoo generates a picking to fulfill this need.
 -  **Push To**: this rule is triggered by the arrival of some
-   products in the defined source location. In case you move
+   products in the defined source location. In the case you move
    products to the source location, Odoo generates a picking to move
    those products to the destination location.
--  **Push & Pull**: it allows to generate pickings in the two
-   different situations explained above. It means that when products are
+-  **Pull & Push**: this rule allows generating pickings in the two
+   situations explained above. This means that when products are
    required at a specific location, a transfer is created from the previous location to fulfill 
-   that need. Then, a need is created in the previous location and a rule is triggered to fulfill 
-   it. Once the second need fulfilled, the products are pushed to the first location and all the
+   that need. This creates a need in the previous location and a rule is triggered to fulfill 
+   it. Once the second need is fulfilled, the products are pushed to the destination location and all the
    needs are fulfilled.
 -  **Buy**: when products are needed at the source location, a
    request for quotation is created to fulfill the need.
