@@ -351,6 +351,17 @@ Add the attribute ``store=True`` to make it stored, just like computed
 fields. Related fields are automatically recomputed when their
 dependencies are modified.
 
+.. tip::
+
+    You can specify precise field dependencies if you don't want
+    the related field to be recomputed on any dependency change::
+
+        nickname = fields.Char(
+            related='partner_id.name', store=True,
+            depends=['partner_id'])
+        # The nickname will only be recomputed when the partner_id
+        # is modified, not when the name is modified on the partner.
+
 .. warning::
 
     You cannot chain :class:`~odoo.fields.Many2many` or :class:`~odoo.fields.One2many` fields in ``related`` fields dependencies.
