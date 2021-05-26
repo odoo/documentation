@@ -101,7 +101,7 @@ To avoid those kind of problems, you should make sure all emails use a "From"
 address from your authorized domain.
 
 If your MTA supports `SRS (Sender Rewriting Scheme)
-<https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme>`__, you can enable it
+<https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme>`_, you can enable it
 to handle these situations. However, that is more complex and requires more
 technical knowledge that is not meant to be covered by this documentation.
 
@@ -110,7 +110,7 @@ Instead, you can also configure Odoo to do something similar by itself:
 #.  Set your domain name in the General Settings.
 
     .. image:: media/alias_domain.png
-      :align: center
+       :align: center
 
 #.  In developer mode, go to :menuselection:`Settings --> Technical -->
     Parameters --> System Parameters`.
