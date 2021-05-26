@@ -79,6 +79,10 @@
             {%- set main_classes = main_classes + ['o_index'] %}
         {%- endif %}
 
+        {%- if 'show-content' in meta %}  {# The page is an accessible toctree #}
+            {%- set main_classes = main_classes + ['o_hide_toc'] %}
+        {%- endif %}
+
         {%- if 'code-column' in meta %}  {# The page contains a 'memento' (dynamic side block) #}
             {%- set main_classes = main_classes + ['o_has_code_column'] %}
         {%- endif %}
@@ -110,7 +114,8 @@
             {%- endif %}
         </main>
         {%- if 'hide-page-toc' not in meta %}
-            <aside id="o_page_toc" class="o_page_toc">
+            {# Shown when the JS has properly set all the classes on the TOC elements #}
+            <aside id="o_page_toc" class="o_page_toc" hidden>
                 {%- include "layout_templates/page_toc.html" %}
             </aside>
         {%- endif %}
