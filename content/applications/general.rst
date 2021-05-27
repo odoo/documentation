@@ -6,7 +6,6 @@ General
 .. toctree::
 
     general/odoo_basics
-    general/unsplash
     general/base_import
     general/multi_companies
     general/auth
@@ -15,4 +14,5 @@ General
     general/voip
     general/in_app_purchase
     general/developer_mode
+    general/unsplash
     general/mobile
