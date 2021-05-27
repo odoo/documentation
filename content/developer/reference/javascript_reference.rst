@@ -1660,52 +1660,54 @@ The notification system in Odoo is designed with the following components:
   of a notification from python (e.g. in the method called when the user
   clicked on a button of type object).
 
-- two helper functions in *ServiceMixin*: *do_notify* and *do_warn*
+- an helper function in *ServiceMixin*: *displayNotification*
 
 
 Displaying a notification
 -------------------------
-The most common way to display a notification is by using two methods that come
+The most common way to display a notification is by using the method that come
 from the *ServiceMixin*:
 
-- *do_notify(title, message, sticky, className)*:
-    Display a notification of type *notification*.
+- *displayNotification(options)*:
+    Display a notification with the following *options*:
 
-    - *title*: string. This will be displayed on the top as a title
+    - *title*: string, optional. This will be displayed on the top as a title.
 
-    - *message*: string, the content of the notification
+    - *subtitle*: string, optional. This will be displayed on the top as a
+      subtitle.
 
-    - *sticky*: boolean, optional. If true, the notification will stay until the
-      user dismisses it.  Otherwise, the notification will be automatically
-      closed after a short delay.
+    - *message*: string, optional. The content of the notification.
 
-    - *className*: string, optional.  This is a css class name that will be
-      automatically added to the notification.  This could be useful for styling
-      purpose, even though its use is discouraged.
+    - *sticky*: boolean, optional (default false). If true, the notification
+      will stay until the user dismisses it.  Otherwise, the notification will
+      be automatically closed after a short delay.
 
-- *do_warn(title, message, sticky, className)*:
-    Display a notification of type *warning*.
-
-    - *title*: string. This will be displayed on the top as a title
-
-    - *message*: string, the content of the notification
-
-    - *sticky*: boolean, optional. If true, the notification will stay until the
-      user dismisses it.  Otherwise, the notification will be automatically
-      closed after a short delay.
+    - *type*: string, optional (default 'warning'). Determines the style of the
+      notification. Possible values: 'info', 'success', 'warning', 'danger', ''.
 
     - *className*: string, optional.  This is a css class name that will be
       automatically added to the notification.  This could be useful for styling
       purpose, even though its use is discouraged.
+
+    - *messageIsHtml*: boolean, optional (default false). Allows passing an html
+      message. Strongly discouraged: other options should be considered before
+      enabling this option. The responsibility is on the caller to properly
+      escape the message if this option is enabled.
 
 Here are two examples on how to use these methods:
 
 .. code-block:: javascript
 
     // note that we call _t on the text to make sure it is properly translated.
-    this.do_notify(_t("Success"), _t("Your signature request has been sent."));
-
-    this.do_warn(_t("Error"), _t("Filter name is required."));
+    this.displayNotification({
+        title: _t("Success"),
+        message: _t("Your signature request has been sent.")
+    });
+    this.displayNotification({
+        title: _t("Error"),
+        message: _t("Filter name is required."),
+        type: 'danger',
+    });
 
 Here an example in python:
 
