@@ -1,17 +1,78 @@
-============================
-How to import data into Odoo
-============================
+======================
+Export and import data
+======================
+
+.. _export-data:
+
+Export data from Odoo
+=====================
+
+When working with a database, it sometimes is necessary to export your data in a distinct file.
+Doing so can help to do reporting over your activities (even if Odoo offers a precise and easy
+reporting tool with each available application).
+
+With Odoo, you can export the values from any field in any record. To do so,
+activate the list view on the items that need to be exported, click on *Action*, and, then,
+on *Export*.
+
+.. image:: export_import_data/list-view-export.png
+   :align: center
+   :alt: view of the different things to enable/click to export data
+
+Pretty simple, this action still comes with some specificities. In fact,
+when clicking on *Export*, a pop-up window appears with several
+options for the data to export:
+
+.. image:: export_import_data/export-data-overview.png
+   :align: center
+   :alt: overview of all the options to take into account when exporting data in Odoo
+
+#. With the *I want to update data* option ticked, the system only
+   shows the fields which can be imported. This is very helpful in
+   case you want to update existing records. Basically, this works
+   like a filter. Leaving the box unticked gives way more field
+   options because it shows all the fields, not just the ones which
+   can be imported.
+#. When exporting, you can choose between two formats: .csv and .xls.
+   With .csv, items are separated with a comma, while .xls holds information about all the
+   worksheets in a file, including both content and formatting.
+#. Those are the items you may want to export. Use the arrows to display
+   more sub-field options. Of course, you can use the search bar to
+   find specific fields more easily. To use the search option more
+   efficiently, display all the fields by clicking on all the
+   arrows!
+#. The + button is there to add fields to the "to export" list.
+#. The "handles" next to the selected fields allow you to move the fields up and down to
+   change the order in which they must be displayed in the exported
+   file.
+#. The trashcan is there if you need to remove fields.
+#. For recurring reports, it might be interesting to save export presets.
+   Select all the needed ones and click on the template bar.
+   There, click on *New template* and give a name to yours. The
+   next time you need to export the same list, simply select the
+   related template.
+
+.. tip::
+   It’s good to keep the field’s external identifier in mind. For example,
+   *Related Company* is equal to *parent_id*. Doing so helps export
+   only what you would like to import next.
+
+.. _import-data:
+
+Import data into Odoo
+=====================
 
 How to start
 ------------
+
 You can import data on any Odoo's business object using either Excel
 (.xlsx) or CSV (.csv) formats:
 contacts, products, bank statements, journal entries and even orders!
 
 Open the view of the object you want to populate and click *Import*.
 
-.. image:: media/import_button.png
-    :align: center
+.. image:: export_import_data/import_button.png
+   :align: center
 
 There you are provided with templates you can easily populate
 with your own data. Such templates can be imported in one click;
@@ -24,20 +85,19 @@ How to adapt the template
 * We advise to not remove the **ID** one (see why in the next section).
 * Set a unique ID to every single record by dragging down the ID sequencing.
 
-.. image:: media/dragdown.gif
-    :align: center
+.. image:: export_import_data/dragdown.gif
+   :align: center
 
 * When you add a new column, Odoo might not be able to map it automatically if its
   label doesn't fit any field in Odoo. Don't worry! You can map
   new columns manually when you test the import. Search the list for the
   corresponding field.
 
-    .. image:: media/field_list.png
-        :align: center
+    .. image:: export_import_data/field_list.png
+       :align: center
 
   Then, use this field's label in your file in order to make it work
   straight on the very next time.
-
 
 How to import from another application
 --------------------------------------
@@ -71,8 +131,8 @@ If that happens, you just have to check the
 ** Show fields of relation fields (advanced)** option,
 you will then be able to choose from the complete list of fields for each column.
 
-.. image:: media/field_list.png
-  :align: center
+.. image:: export_import_data/field_list.png
+   :align: center
 
 Where can I change the date import format?
 ------------------------------------------
@@ -174,10 +234,10 @@ with columns like "Field/External ID". The following two CSV files give you an e
 and their Categories.
 
 :download:`CSV file for categories
-<files/External_id_3rd_party_application_product_categories.csv>`.
+<export_import_data/External_id_3rd_party_application_product_categories.csv>`.
 
 :download:`CSV file for Products
-<files/External_id_3rd_party_application_products.csv>`.
+<export_import_data/External_id_3rd_party_application_products.csv>`.
 
 What can I do if I have multiple matches for a field?
 -----------------------------------------------------
@@ -198,7 +258,7 @@ The tags should be separated by a comma without any spacing. For example, if you
 to be linked to both tags 'Manufacturer' and 'Retailer' then you will encode "Manufacturer,Retailer"
 in the same column of your CSV file.
 
-:download:`CSV file for Manufacturer, Retailer <files/m2m_customers_tags.csv>`
+:download:`CSV file for Manufacturer, Retailer <export_import_data/m2m_customers_tags.csv>`
 
 
 How can I import a one2many relationship (e.g. several Order Lines of a Sales Order)?
@@ -211,16 +271,16 @@ any information in the fields relative to the order. As an example, here is
 ``purchase.order_functional_error_line_cant_adpat.CSV`` file of some quotations you can import,
 based on demo data.
 
-:download:`File for some Quotations <files/purchase.order_functional_error_line_cant_adpat.csv>`.
+:download:`File for some Quotations <export_import_data/purchase.order_functional_error_line_cant_adpat.csv>`.
 
 The following CSV file shows how to import purchase orders with their respective purchase order
 lines:
 
-:download:`Purchase orders with their respective purchase order lines <files/o2m_purchase_order_lines.csv>`.
+:download:`Purchase orders with their respective purchase order lines <export_import_data/o2m_purchase_order_lines.csv>`.
 
 The following CSV file shows how to import customers and their respective contacts:
 
-:download:`Customers and their respective contacts <files/o2m_customers_contacts.csv>`.
+:download:`Customers and their respective contacts <export_import_data/o2m_customers_contacts.csv>`.
 
 Can I import several times the same record?
 -------------------------------------------
@@ -256,7 +316,7 @@ must be unique across all the records of all objects, so it's a good practice to
 As an example, suppose you have a SQL database with two tables you want to import: companies and
 persons. Each person belong to one company, so you will have to recreate the link between a person
 and the company he work for. (If you want to test this example, here is a :download:`dump of such a
-PostgreSQL database <files/database_import_test.sql>`)
+PostgreSQL database <export_import_data/database_import_test.sql>`)
 
 We will first export all companies and their "External ID". In PSQL, write the following command:
 
@@ -298,3 +358,53 @@ original database).
 The two files produced are ready to be imported in Odoo without any modifications. After having
 imported these two CSV files, you will have 4 contacts and 3 companies. (the firsts two contacts are
 linked to the first company). You must first import the companies and then the persons.
+
+How to adapt an import template
+===============================
+
+Import templates are provided in the import tool of the most common data to
+import (contacts, products, bank statements, etc.).
+You can open them with any spreadsheets software (Microsoft Office,
+OpenOffice, Google Drive, etc.).
+
+How to customize the file
+-------------------------
+
+* Remove columns you don't need. We advise to not remove the *ID* one (see
+  why here below).
+* Set a unique ID to every single record by dragging down the ID sequencing.
+
+  .. image:: export_import_data/dragdown.gif
+     :align: center
+
+* When you add a new column, Odoo might not be able to map it automatically if its
+  label doesn't fit any field of the system.
+  If so, find the corresponding field using the search.
+
+    .. image:: export_import_data/field_list.png
+       :align: center
+
+  Then, use the label you found in your import template in order to make it work
+  straight away the very next time you try to import.
+
+Why an "ID" column
+------------------
+
+The **ID** (External ID) is an unique identifier for the line item.
+Feel free to use the one of your previous software to ease the transition to Odoo.
+
+Setting an ID is not mandatory when importing but it helps in many cases:
+
+* Update imports: you can import the same file several times without creating duplicates;
+* Import relation fields (see here below).
+
+How to import relation fields
+-----------------------------
+
+An Odoo object is always related to many other objects (e.g. a product is linked
+to product categories, attributes, vendors, etc.). To import those relations you need to
+import the records of the related object first from their own list menu.
+
+You can do it using either the name of the related record or its ID. The ID is expected when
+two records have the same name. In such a case add " / ID" at the end of the column title
+(e.g. for product attributes: Product Attributes / Attribute / ID).
