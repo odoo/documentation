@@ -10,7 +10,7 @@ provider, allowing businesses to accept **credit cards**.
    :alt: Authorize.Net logo
 
 This Payment Acquirer offers additional options that are not available for other :doc:`Payment
-Acquirers <payment_acquirers>`, such as the ability to process your customer's payment after
+Acquirers <../payment_acquirers>`, such as the ability to process your customer's payment after
 delivery.
 
 Authorize.Net account
@@ -47,7 +47,7 @@ Configuration --> Payment Acquirers`, open **Authorize.Net**, and change the **S
 Don't forget to click on *Save* once you've set everything up.
 
 .. note::
-   Please refer to the :doc:`Payment Acquirers documentation <payment_acquirers>` to read how to
+   Please refer to the :doc:`Payment Acquirers documentation <../payment_acquirers>` to read how to
    configure this payment acquirer.
 
 Credentials
@@ -113,5 +113,5 @@ order is canceled, you can click on *Void Transaction* to unlock the funds from 
 .. seealso::
    - `Authorize.Net: Getting Started Guide
      <https://support.authorize.net/s/article/Authorize-Net-Getting-Started-Guide>`__
-   - :doc:`payment_acquirers`
+   - :doc:`../payment_acquirers`
    - :doc:`../../websites/ecommerce/shopper_experience/payment_acquirer`

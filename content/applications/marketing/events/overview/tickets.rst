@@ -50,4 +50,4 @@ among the payment methods you chose to have available.
    :alt: View of website transaction for Odoo Events
 
 .. seealso::
-   - :doc:`/applications/general/payment_acquirers/payment_acquirers`
+   - :doc:`/applications/general/payment_acquirers`
