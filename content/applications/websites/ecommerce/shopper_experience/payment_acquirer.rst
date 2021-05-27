@@ -56,7 +56,7 @@ orders straight on.
    Select your **bank account** if you get paid immediately on your bank account. If you don't you
    can create a specific journal for the payment acquirer (type = Bank). That way, you can track
    online payments in an intermediary account of your books until you get paid into your bank
-   account (see :doc:`/applications/general/payment_acquirers/payment_acquirers`).
+   account (see :doc:`/applications/general/payment_acquirers`).
 
 
 Capture the payment after the delivery
