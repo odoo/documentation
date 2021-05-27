@@ -6,7 +6,7 @@ General
 .. toctree::
 
     general/odoo_basics
-    general/base_import
+    general/export_import_data
     general/multi_companies
     general/auth
     general/tags
