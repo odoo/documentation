@@ -6,7 +6,7 @@ General
 
 .. toctree::
 
-    general/odoo_basics
+    general/users
     general/export_import_data
     general/multi_companies
     general/auth

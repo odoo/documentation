@@ -34,10 +34,10 @@ them. Fields with related objects have their directives shown on *Field Expressi
 | Under **Visible if**, define the rule(s) to set visibility conditions to fields.
 | Example: if choosing to display a product image, you could set a visibility rule to only display
   the ones that are *set* in the product form, avoiding having a plain icon when they are not set.
-| **Visible for** is used to set which :doc:`groups </applications/general/odoo_basics/users>`
-  can have access to specific elements in the report. **Limit visibility to groups**, under
-  *Report*, sets the visibility of the report to specifics groups, meaning that users belonging to
-  other groups do not see the same final document.
+| **Visible for** is used to set which :doc:`groups </applications/general/users>` can have access
+  to specific elements in the report. **Limit visibility to groups**, under *Report*, sets the
+  visibility of the report to specifics groups, meaning that users belonging to other groups do not
+  see the same final document.
 
 .. image:: media/reports/limit_visibility.png
    :align: center

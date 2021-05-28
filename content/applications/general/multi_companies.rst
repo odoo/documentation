@@ -50,7 +50,7 @@ company only. To do so, on their forms, choose between:
 Employees' access
 =================
 
-Once companies are created, manage your employees' :doc:`Access Rights <odoo_basics/users>`
+Once companies are created, manage your employees' :doc:`Access Rights <users/access_rights>`
 for *Multi Companies*.
 
 .. image:: multi_companies/access_rights_multi_companies.png
