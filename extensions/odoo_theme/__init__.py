@@ -59,16 +59,23 @@ def resolve(old_resolve, tree, docname, *args, **kwargs):
                 _update_toctree_nodes(_subnode)
 
     def _get_docname(_node):
-        """
-        docname = a/b/c/the_page_being_rendered
+        """ Return the docname of the targeted document.
+
+        docname = some_common_root/foo/bar/the_page_being_rendered
         _ref = ../../contributing/documentation
         _path_parts = ['..', '..', 'contributing', 'documentation']
-        _res = ['a', 'contributing', 'documentation']
-        _docname = a/contributing/documentation
+        _res = ['some_common_root', 'contributing', 'documentation']
+        _docname = some_common_root/contributing/documentation
+
+        :return: The docname of the document targeted by `_node`, i.e. the relative path from the
+                 documentation source directory (the `content/` directory)
+        :rtype: str
         """
         _ref = _node['refuri'].replace('.html', '')
         _parent_directory_occurrences = _ref.count('..')
-        if not _parent_directory_occurrences:  # The ref is already the docname
+        if not _parent_directory_occurrences and '/' not in docname:
+            # The current document is at the root of the documentation source directory
+            # (e.g. docname == 'index'|'applications'|...). i.e., the ref is already the docname.
             _docname = _ref
         else:
             _path_parts = _ref.split('/')

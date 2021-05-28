@@ -7,4 +7,5 @@ Finance
 
     finance/accounting
     finance/expenses
+    finance/documents
     finance/sign

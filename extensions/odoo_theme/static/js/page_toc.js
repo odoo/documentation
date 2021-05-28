@@ -22,6 +22,9 @@
 
             // Allow to hide the TOC entry referring the title (<h1> heading)
             _flagFirstHeadingRef();
+
+            // Show hidden menu when the css classes have been properly specified
+            this.pageToc.removeAttribute('hidden');
         }
     });
 

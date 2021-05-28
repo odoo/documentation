@@ -438,7 +438,6 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
 Idiomatics of Programming (Python)
 ----------------------------------
 
-- Each python file should have ``# -*- coding: utf-8 -*-`` as first line.
 - Always favor *readability* over *conciseness* or using the language features or idioms.
 - Don't use ``.clone()``
 
