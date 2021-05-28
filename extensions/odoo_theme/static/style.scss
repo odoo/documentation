@@ -14,15 +14,18 @@ body {
     a:not(:hover), a.o_logo {
         text-decoration: none !important;
     }
+
     dd {
         margin-left: 1rem;
     }
+
     // This fixes the scroll position on all elements, including refs
     :target {
         &:before {
             @include o-scroll-padding()
         }
     }
+
     abbr[title="Pull Request"] {
         @include o-easter-egg();
     }
@@ -37,7 +40,7 @@ body {
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
 
-header.o_main_header{
+header.o_main_header {
     width: 100%;
     height: $o-header-mobile-height;
     position: fixed;
@@ -50,13 +53,16 @@ header.o_main_header{
         height: $o-header-height;
         padding-right: 3rem;
     }
+
     .o_logo_wrapper {
         padding: 0 1rem;
+
         > .o_logo {
             img {
                 margin-bottom: -2px;
                 vertical-align: baseline;
             }
+
             span {
                 @include font-size($font-size-base);
                 color: $o-violet;
@@ -73,36 +79,56 @@ header.o_main_header{
     }
     .o_search_wrapper {
         display: flex;
+        opacity: 1;
+        @include transition(opacity .3s);
+
         @include media-breakpoint-down(lg) {
             display: block;
             position: absolute;
             width: 100%;
             padding: 0 10px;
-            top: calc(100% + 30px);
+            top: calc(100% + 15px);
        }
     }
 
+    &.o_header_scrolled {
+        .o_search_wrapper {
+            @include media-breakpoint-down(lg) {
+                opacity: 0;
+            }
+        }
+    }
+
+
     .highlight-link {
+        @media only screen and (max-width: 1242px) and (min-width: 992px){
+            position: absolute;
+            bottom: 0;
+        }
         margin-bottom: 0;
         padding: 0 1rem;
         text-align: center;
         align-self: center;
+
         a {
             @include font-size($font-size-secondary);
         }
     }
     .navbar-toggler {
         border: none;
+
         &[aria-expanded="true"] {
             .icon-bar {
                 &:nth-of-type(1) {
                     @include o-transform(rotate(45deg));;
                     @include o-transform-origin(10%, 10%)
                 }
+
                 &:nth-of-type(2) {
                     opacity: 0;
                     filter: alpha(opacity=0);
                 }
+
                 &:nth-of-type(3) {
                     @include o-transform(rotate(-45deg));
                     @include o-transform-origin(10%, 90%)
@@ -115,20 +141,25 @@ header.o_main_header{
             height: 2px;
             background-color: $gray-dark;
             @include o-transition(all, .2s);
+
             &+ .icon-bar {
                 margin-top: 4px;
             }
+
             &:nth-of-type(1) {
                 @include o-transform(rotate(0));
             }
+
             &:nth-of-type(2) {
                 opacity: 1;
                 filter: alpha(opacity=100);
             }
+
             &:nth-of-type(3) {
                 @include o-transform(rotate(0));
             }
         }
+
         &:focus {
             box-shadow: none;
             outline:none;
@@ -149,7 +180,8 @@ header.o_main_header{
         @include media-breakpoint-up(lg) {
             max-width: 500px;
         }
-        .btn{
+
+        .btn {
             @include o-position-absolute($top: 50%, $right: 1rem);
             @include o-transform (translateY(-50%)) ;
             padding: 0;
@@ -170,6 +202,7 @@ header.o_main_header{
     position: fixed;
     top: -100%;
     left:0;
+
     &.show {
         top: $o-header-mobile-height;
     }
@@ -181,7 +214,7 @@ header.o_main_header{
         padding-left: 3rem;
     }
     @include o-transition(all, .3s);
-    padding-top: 1rem;
+    padding-top: 4rem;
     padding-left: 1rem;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
@@ -193,37 +226,35 @@ header.o_main_header{
         padding-bottom: .5rem;
     }
 
-    .toctree-l1 > ul {
-        padding-left: 1.5rem;
-    }
-
     ul {
         .o_deepest_active_toc_entry {
-            background-color: $gray-lightest;
+            background-color: $gray-lighter;
+            border-left: 3px solid $gray-lighter;
+            margin-left: -3px;
         }
 
         > .toctree-l1 {
-
-            &[class*="o_menu_"] > .o_toc_entry_wrapper > i {
-                opacity: .75;
-                &:before {
-                    @include o-inline-icon($i-doc-apps, 0 1rem 0 0);
-                    color: $o-violet-dark;
-                    margin-right: 0.5rem;
-                }
+            &[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
+                @include o-inline-icon($i-doc-apps, 0 5px 0 0);
+                color: $o-violet-dark;
             }
+
             &.o_menu_applications > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-apps}';
             }
+
             &.o_menu_administration > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-admin}';
             }
+
             &.o_menu_developer > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-dev}';
             }
+
             &.o_menu_services > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-services}';
             }
+
             &.o_menu_contributing > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-contribute}';
             }
@@ -232,12 +263,15 @@ header.o_main_header{
     }
     scrollbar-width: thin;
     scrollbar-color: $o-violet-darker transparent;
+
     &::-webkit-scrollbar {
         width: 5px;
     }
+
     &::-webkit-scrollbar-track {
         background: $white;
     }
+
     &::-webkit-scrollbar-thumb {
         background-color: $o-violet-darker ;
         border-radius: 0;
@@ -250,19 +284,26 @@ header.o_main_header{
         padding-left: 1rem;
 
         li {
-            padding-left: .2rem;
+            &.toctree_l2 {
+                padding-left: .2rem;
+            }
             > a.reference {
-                padding-left: 1.2rem;
+                padding-left: .8rem;
             }
 
             a {
                 display: inline-block;
-                padding: .5rem 0;
+                padding: .4rem 0;
                 color: inherit;
                 opacity: .75;
+
                 &.current, &:hover {
                     opacity: 1;
                 }
+            }
+
+            > .o_toc_entry_wrapper i {
+                opacity: .75;
             }
 
             &:not(.toctree-l1) {
@@ -276,6 +317,7 @@ header.o_main_header{
                         display: inline-block;
                         margin-right: .2rem;
                         @include o-transition(rotate, .3s);
+                        font-size: .75rem;
                         font-weight: $fw_bold;
                         color: inherit;
 
@@ -285,19 +327,21 @@ header.o_main_header{
                     }
                 }
             }
+
             &.o_active_toc_entry {
                 &:not(.toctree-l1) > .o_toc_entry_wrapper {
                     i[class^="i-"]:not(.collapsed) {
                         @include o-transform(rotate(90deg));
                     }
                 }
-                > a , > .o_toc_entry_wrapper a {
+                > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
                     font-weight: $fw_bold;
                     opacity: 1;
                 }
             }
         }
     }
+
     > ul { //is first ul in toc
         padding-left: 0;
     }
@@ -332,11 +376,12 @@ header.o_main_header{
 
         a {
             font-weight: $fw_regular;
-            color: $gray-darkest;
+            color: $gray-darker;
         }
 
         .o_page_toc_title {
             display:none;
+
             + ul {
                 padding-left: 0;
             }
@@ -349,7 +394,6 @@ header.o_main_header{
 
 #wrap {
     margin-top: $o-header-mobile-height;
-
     @include media-breakpoint-up(lg) {
         display: flex;
         justify-content: space-between;
@@ -378,7 +422,6 @@ header.o_main_header{
             padding-top: 7rem;
         }
         padding-bottom: 3rem;
-
         @include media-breakpoint-up(lg) {
             left: $o-side-nav-width;
             max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1.5rem)) - #{$o-on-page-width});
@@ -404,14 +447,16 @@ header.o_main_header{
                     margin: -3rem -3rem 3rem;
                     padding: 2rem 3rem;
                 }
+
                 .btn-primary {
                     background-color: #00A09D;
                     border-color: #00A09D;
                 }
             }
-
-            p, h5 {
-                color: $gray;
+            .row:first-of-type h2.border-top {
+                @include media-breakpoint-up(lg) {
+                    border-top: 0 solid transparent !important;
+                }
             }
 
             h5 {
@@ -424,33 +469,14 @@ header.o_main_header{
                     padding-bottom: .5rem;
                     display: flex;
                     align-items: center;
+
                     &:before {
                         @include o-inline-icon($i-article, 0 .2rem 0 0);
                         color: $gray-light;
                     }
                 }
             }
-            .o_cat_banner {
-                background-color: $o-violet;
-                border-radius: 5px;
-                text-align: center;
-                background-repeat: no-repeat;
-                background-size: 90%;
-                background-position: center;
-                i {
-                    font-size: 100px;
-                    color: $white;
-                }
-                &.o-bg-violet-light {
-                    background-color: lighten($o-violet, 20%);
-                }
-                &:not(.shadow){
-                    background-image: url('img/bg-cat.svg');
-                }
-                &.shadow {
-                    box-shadow: 0px 2px 25px rgba(19, 28, 40, .08) !important;
-                }
-            }
+
             .o_changelog {
                 .row:last-of-type > .border-bottom {
                     border: none !important;
@@ -459,7 +485,6 @@ header.o_main_header{
         }
 
         // pages with full width: Legal
-
         &.o_fullwidth_page {
             .toctree-l1 > a {
                 display: block;
@@ -472,11 +497,9 @@ header.o_main_header{
         }
 
         // pages with column for code on the right
-
         &.o_has_code_column {
-
             article.doc-body {
-                > *{
+                > * {
                   max-width: 100%;
                 }
 
@@ -507,13 +530,11 @@ header.o_main_header{
                         @include o-code-col();
                     }
 
-
-
                     .o_git_link {
                         right: calc(#{$o-codecol-width} + 2rem);
                     }
-                    section {
 
+                    section {
                         > * {
                             width: $o-halfpage-width;
                             float: left;
@@ -554,13 +575,34 @@ header.o_main_header{
             }
         }
 
-        article.doc-body {
-            position: relative;
-
-            // hide ugly toctree on "in between" pages (e.g.: /applications.html, /administration.html, ...)
+        &.o_hide_toc {
             .toctree-wrapper {
                 display: none;
             }
+        }
+
+        .toctree-wrapper {
+            > ul {
+                padding-left: 0;
+                list-style: none;
+            }
+
+            .toctree-l1 > a[href="#"] {
+                font-size: 1.2rem;
+                font-weight: 600;
+                border-bottom: 2px solid $gray-darker;
+            }
+
+            a[href="#"] {
+                pointer-events: none;
+                cursor: default;
+                color: $gray-darker;
+                font-weight: $fw_regular;
+            }
+        }
+
+        article.doc-body {
+            position: relative;
 
             .o_git_link {
                 @include font-size($font-size-secondary);
@@ -572,6 +614,7 @@ header.o_main_header{
                     margin-right: .2rem;
                 }
             }
+
             .command {
                 font-family: var(--bs-font-monospace);
             }
@@ -611,7 +654,7 @@ header.o_main_header{
                 > h2 {
                     font-family: $font-family-serif;
                     color: $gray-darker;
-                    margin-top: 3rem;
+                    margin-top: 2rem;
                     margin-bottom: 1rem;
                     padding-bottom: .3rem;
                     border-bottom: 1px solid $gray-light;
@@ -647,14 +690,17 @@ header.o_main_header{
                 }
 
                 .figure {
+
                     .caption, .caption-text {
                         font-weight: $fw_semibold;
                         color: $gray;
                     }
-                    .caption, .caption-text, .legend, .legend p{
+
+                    .caption, .caption-text, .legend, .legend p {
                         font-style: italic;
                         margin: 0 auto;
                     }
+
                     @include media-breakpoint-up(md) {
                         &:not([class^="col"]) .legend {
                             max-width: 60%;
@@ -666,9 +712,11 @@ header.o_main_header{
                     text-decoration: none;
                     font-size: 0;
                     visibility: hidden !important;
+
                     &:before {
                         content: "\a0";
                     }
+
                     &:after {
                         content: '#{$i-link}';
                         font-family: icomoon !important;
@@ -680,11 +728,13 @@ header.o_main_header{
                         @include o-transition(all, .1s)
                     }
                 }
-                *:hover > a.headerlink:after{
+
+                *:hover > a.headerlink:after {
                     // This makes permalinks only visible on hover.
                         visibility: visible;
                         opacity: 1;
                 }
+
                 table.table {
                     @include media-breakpoint-down(lg){
                     display: block;
@@ -693,10 +743,8 @@ header.o_main_header{
                             overflow-wrap: break-word;
                         }
                     }
-
                 }
             }
-
         }
 
         div[class^="highlight"] {
@@ -704,7 +752,6 @@ header.o_main_header{
             overflow-x: auto;
             border: 1px solid $gray-light;
             margin: 1px 0 24px 0;
-            /* max-width: 90vw; */
 
             div[class^="highlight"] {
                 padding: 0px;
@@ -719,7 +766,7 @@ header.o_main_header{
                 overflow: auto;
             }
         }
-        // fixes on pages
+
         .guilabel, .menuselection {
             font-weight: $fw_semibold;
         }
@@ -763,19 +810,7 @@ header.o_main_header{
             text-align: left;
         }
 
-        // restyle numbers on lists
         ol {
-            /* list-style: none;
-            counter-reset: a;
-            > li {
-                position: relative;
-                counter-increment: a;
-                &:before {
-                    content: counter(a) '.';
-                    font-weight: $fw_semibold;
-                    @include o-position-absolute(auto, auto, auto, -1.8rem);
-                }
-            } */
             ol {
                 list-style: lower-alpha;
                 > li:before {
@@ -804,7 +839,7 @@ header.o_main_header{
                 background-color: $white !important;
             }
 
-            > p , > ul{
+            > p , > ul {
                 margin-bottom: .5rem;
             }
             > *:last-child {
@@ -849,8 +884,6 @@ header.o_main_header{
                         content: '#{$i-note}';
                     }
                 }
-
-
             }
 
             &.alert-tip, &.tip {
@@ -909,7 +942,8 @@ header.o_main_header{
                 @include media-breakpoint-up(lg){
                     display: inline-block;
                     width: calc(50% - 1rem);
-                }s
+                }
+
                 a {
                     color: $o-violet-dark;
                 }
@@ -932,7 +966,7 @@ footer {
     .o_get_help {
         padding-top: 3rem;
         padding-bottom: 3rem;
-        background: $gray-100;
+        background: $gray-lighter;
         @include media-breakpoint-up(lg) {
             padding-left: calc(#{$o-side-nav-width} + 3rem)
         }
