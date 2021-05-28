@@ -64,7 +64,7 @@ Speakers*.
 .. note::
    Credits are required to be able to send SMSs. For more information about Pricing :doc:`click here
    <../../sms_marketing/pricing/pricing_and_faq>`, and, about IAP Services :doc:`here
-   </applications/general/in_app_purchase/in_app_purchase>`.
+   </applications/general/in_app_purchase>`.
 
 
 

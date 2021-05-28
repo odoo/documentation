@@ -202,5 +202,5 @@ the user can have access.
    :alt: View of a user’s form emphasizing the multi companies field in Odoo
 
 .. seealso::
-   - :doc:`../multi_companies/manage_multi_companies`
+   - :doc:`../multi_companies`
    - :doc:`../../settings/users_and_features`
