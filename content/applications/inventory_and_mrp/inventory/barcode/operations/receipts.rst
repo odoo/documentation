@@ -51,7 +51,7 @@ Scan.
 .. image:: media/receipts02.png
     :align: center
 
-The picking appears. Scan items and/or fill in informations using the
+The picking appears. Scan items and/or fill in information using the
 mouse and keyboard.
 
 .. image:: media/receipts03.png

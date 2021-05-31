@@ -73,7 +73,7 @@ How to process the Receipt step ?
 Click on the receipt that you want to process, then click on **Validate** to
 complete the move from the **Vendor** to **WH/Input**.
 
-This has completed the Receipt Step and the move refered with **WH/IN**. 
+This has completed the Receipt Step and the move referred with **WH/IN**. 
 The product has been moved from the **Vendor** to the **WH/Input** location, 
 which makes the product available for the next step.
 
@@ -90,7 +90,7 @@ the quality control.
 Click on the picking you want to process. Click on **Validate** to
 complete the move from **WH/Input** to **WH/Stock**.
 
-This has completed the internal transfer step and the move refered with **WH/INT**. 
+This has completed the internal transfer step and the move referred with **WH/INT**. 
 The receipt has been moved to your stock.
 
 .. seealso::

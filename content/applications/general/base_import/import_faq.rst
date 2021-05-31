@@ -178,7 +178,9 @@ The tags should be separated by a comma without any spacing. For example, if you
 How can I import a one2many relationship (e.g. several Order Lines of a Sales Order)?
 -------------------------------------------------------------------------------------
 
-If you want to import sales order having several order lines; for each order line, you need to reserve a specific row in the CSV file. The first order line will be imported on the same row as the information relative to order. Any additional lines will need an addtional row that does not have any information in the fields relative to the order.
+If you want to import sales order having several order lines; for each order line, you need to reserve a specific row in the CSV file.
+The first order line will be imported on the same row as the information relative to order.
+Any additional lines will need an additional row that does not have any information in the fields relative to the order.
 As an example, here is purchase.order_functional_error_line_cant_adpat.CSV file of some quotations you can import, based on demo data.
 
 :download:`File for some Quotations <files/purchase.order_functional_error_line_cant_adpat.csv>`.
@@ -194,7 +196,9 @@ The following CSV file shows how to import customers and their respective contac
 Can I import several times the same record?
 -------------------------------------------
 
-If you import a file that contains one of the column "External ID" or "Database ID", records that have already been imported will be modified instead of being created. This is very usefull as it allows you to import several times the same CSV file while having made some changes in between two imports. Odoo will take care of creating or modifying each record depending if it's new or not.
+If you import a file that contains one of the column "External ID" or "Database ID", records that have already been imported will be modified instead of being created.
+This is very useful as it allows you to import several times the same CSV file while having made some changes in between two imports.
+Odoo will take care of creating or modifying each record depending if it's new or not.
 
 This feature allows you to use the Import/Export tool of Odoo to modify a batch of records in your favorite spreadsheet application.
 
@@ -246,6 +250,9 @@ It will produce the following CSV file::
     person_3,Eric,False,company_2
     person_4,Ramsy,False,company_3
 
-As you can see in this file, Fabien and Laurence are working for the Bigees company (company_1) and Eric is working for the Organi company. The relation between persons and companies is done using the External ID of the companies. We had to prefix the "External ID" by the name of the table to avoid a conflict of ID between persons and companies (person_1 and company_1 who shared the same ID 1 in the orignial database).
+As you can see in this file, Fabien and Laurence are working for the Bigees company (company_1) and Eric is working for the Organi company. The relation between persons and companies is done using the External ID of the companies.
+We had to prefix the "External ID" by the name of the table to avoid a conflict of ID between persons and companies (person_1 and company_1 who shared the same ID 1 in the original database).
 
-The two files produced are ready to be imported in Odoo without any modifications. After having imported these two CSV files, you will have 4 contacts and 3 companies. (the firsts two contacts are linked to the first company). You must first import the companies and then the persons.
+The two files produced are ready to be imported in Odoo without any modifications.
+After having imported these two CSV files, you will have 4 contacts and 3 companies. (the firsts two contacts are linked to the first company).
+You must first import the companies and then the persons.

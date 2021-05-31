@@ -28,7 +28,7 @@ By default, you have a *Public Pricelist* to create more, go to
 .. image:: media/seasonal_discount02.png
     :align: center
 
-You can set several criterias to use a specific price: periods, min.
+You can set several criteria to use a specific price: periods, min.
 quantity (meet a minimum ordered quantity and get a price break), etc.
 You can also chose to only apply that pricelist on specific products or
 on the whole range.

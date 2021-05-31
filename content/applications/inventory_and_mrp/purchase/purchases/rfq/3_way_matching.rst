@@ -7,7 +7,7 @@ receiving the ordered products. However, you might not want to pay it
 until the products have been received.
 
 To define whether the vendor bill should be paid or not, you can use
-what we call *3-way matching*. It refers to the comparaison of the
+what we call *3-way matching*. It refers to the comparison of the
 information appearing on the *Purchase Order*, the *Vendor Bill*
 and the *Receipt*.
 

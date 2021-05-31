@@ -47,7 +47,7 @@ Then, you will have to provide your credentials to connect to PayPal.
 .. note::
 
 	Your Paypal **must be in English** (if it is not the case you must change
-	the langage of your Paypal account) and if you use a Paypal business account
+	the language of your Paypal account) and if you use a Paypal business account
 	you must switch back to the old interface in order for it to work with
 	Online feeds (you can switch from new to old interface in your Paypal account).
 

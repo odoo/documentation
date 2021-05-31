@@ -129,7 +129,7 @@ Odoo will automatically recompute a new depreciation board.
 How to record the sale or disposal of an asset?
 ===============================================
 
-If you sell or dispose an asset, you need to deprecate completly this
+If you sell or dispose an asset, you need to deprecate completely this
 asset. Click on the button :guilabel:`Sell or Dispose`. This action
 will post the full costs of this assets but it will not record the
 sales transaction that should be registered through a customer

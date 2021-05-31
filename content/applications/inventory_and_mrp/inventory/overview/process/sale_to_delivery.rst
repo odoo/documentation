@@ -111,7 +111,7 @@ team.
 You will get the list of all your quotations. Click on the **Create**
 button.
 
-Fill in the **Customer informations** and click on **Add an Item** to add
+Fill in the **Customer information** and click on **Add an Item** to add
 some products to your quotation.
 
 .. image:: media/sale_to_delivery09.png
