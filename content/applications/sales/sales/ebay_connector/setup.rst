@@ -42,7 +42,7 @@ Using the updated synchronisation method
 If you have a lot of products, the eBay API can sometimes refuse some synchronization
 calls due to a time-based limit on the number of requests that eBay enforces.
 
-To fix this issue, a new implementation mechanism has been developped; however this
+To fix this issue, a new implementation mechanism has been developed; however this
 updated mechanism is disabled by default to avoid having the 2 systems running in
 parallel in existing installations.
 

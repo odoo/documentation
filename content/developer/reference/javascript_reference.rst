@@ -357,7 +357,7 @@ manifest counterparts.
     directives `replace`, `before` and `after`.
 
 ``active`` (default= `True`)
-    Wether the record is active
+    Whether the record is active
 
 ``sequence`` (default= `16`)
     Loading order of the asset records (ascending). A sequence lower than 16 means

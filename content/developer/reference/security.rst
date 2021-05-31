@@ -32,7 +32,7 @@ thus applying security mechanisms to users.
 
         Other groups to set on the user alongside this one. This is a
         convenience pseudo-inheritance relationship: it's possible to
-        explicitely remove implied groups from a user without removing the
+        explicitly remove implied groups from a user without removing the
         implier.
 
     .. attribute:: comment

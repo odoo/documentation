@@ -266,7 +266,7 @@ Profit&Loss section to your assets.
   ===================================== ===== ======
 
   If the stock value decreased, the **Inventory** account is credited
-  and te **Inventory Variations** debited.
+  and the **Inventory Variations** debited.
    
 .. raw:: html
 

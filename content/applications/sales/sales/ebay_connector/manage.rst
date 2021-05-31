@@ -24,7 +24,7 @@ Listing with variations
 =======================
 
 When the **use eBay** on a product with variations is checked and with **Fixed
-Price** as **Listing Type**, the eBay form is sligthly different. In the
+Price** as **Listing Type**, the eBay form is slightly different. In the
 variants array, you can choose which variant will be listed on eBay as well as
 set the price and the quantity for each variant.
 
@@ -47,4 +47,4 @@ Products identifiers such as EAN, UPC, Brand or MPN are required in most of the 
 The module manages the EAN and UPC identifiers with the **Barcode** field of the product variant.
 If the **Barcode** field is empty or is value is not valid, the EAN and UPC values will be set as 'Does not apply' as recommended by eBay.
 The Brand and MPN values are working as item specifics and should be define in the **Variants** tab on the product form.
-If theses values are not set, 'Does not apply' will be used for the eBay listing.
+If these values are not set, 'Does not apply' will be used for the eBay listing.

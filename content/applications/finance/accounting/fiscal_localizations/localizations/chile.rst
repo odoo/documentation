@@ -346,7 +346,7 @@ for this document type, the invoice number takes the first folio in the sequence
 
 .. important::
    In case you have used some folios in your previous system, make sure you set the next valid
-   folio when the first transation is created. 
+   folio when the first transaction is created. 
 
 
 

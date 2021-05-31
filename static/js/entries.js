@@ -160,7 +160,7 @@
             ],
             configuration: [
                 "Revenue: defined on the product, or the product category if not on the product, field Income Account",
-                "Defered Tax Liabilities: defined on the tax used on the invoice line",
+                "Deferred Tax Liabilities: defined on the tax used on the invoice line",
                 "Accounts Receivable: defined on the customer (property)",
                 "Inventory: defined on the category of the related product (property)",
                 "Expenses: defined on the product, or the category of product (property)",

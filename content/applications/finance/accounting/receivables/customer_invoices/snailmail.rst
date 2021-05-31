@@ -15,7 +15,7 @@ Set up Snailmail
 
 .. image:: media/setup_snailmail.png
    :align: center
-   :alt: Under settings enable the snailmail feauture in Odoo Accounting
+   :alt: Under settings enable the snailmail feature in Odoo Accounting
 
 Send your invoices by post
 --------------------------

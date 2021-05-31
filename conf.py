@@ -131,7 +131,7 @@ github_project = 'documentation'
 
 locale_dirs = ['../locale/']
 
-# custom docname_to_domain to devide the translations of applications in subdirectories
+# custom docname_to_domain to divide the translations of applications in subdirectories
 sphinx.transforms.i18n.docname_to_domain = (
     sphinx.util.i18n.docname_to_domain
 ) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]

@@ -228,7 +228,7 @@ Can I import several times the same record?
 -------------------------------------------
 
 If you import a file that contains one of the column "External ID" or "Database ID", records that
-have already been imported will be modified instead of being created. This is very usefull as it
+have already been imported will be modified instead of being created. This is very useful as it
 allows you to import several times the same CSV file while having made some changes in between two
 imports. Odoo will take care of creating or modifying each record depending if it's new or not.
 

@@ -76,7 +76,7 @@ Integration Bots
   `github.com/odoo`. We highly recommend having your own CI if it is not the case.
 
 When a test is written, it is important to make sure it always passes when modifications are
-applied to the source code. To automatize this task, we use a development practice called
+applied to the source code. To automate this task, we use a development practice called
 Continuous Integration (CI). This is why we have some bots running all the tests at different
 moments.
 Whether you are working at Odoo or not, if you are trying to merge something inside `odoo/odoo`,

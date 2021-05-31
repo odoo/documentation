@@ -40,7 +40,7 @@ Configuration
 
 -  Create a journal **Checks**
 
--  Set **Undeposited Checks** as a defaut credit/debit account
+-  Set **Undeposited Checks** as a default credit/debit account
 
 -  Set the bank account related to this journal as **Allow Reconciliation**
 
