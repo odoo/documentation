@@ -4,7 +4,7 @@ How to import data into Odoo
 
 How to start
 ------------
-You can import data on any Odoo's business object using either Excel 
+You can import data on any Odoo's business object using either Excel
 (.xlsx) or CSV (.csv) formats:
 contacts, products, bank statements, journal entries and even orders!
 
@@ -14,7 +14,7 @@ Open the view of the object you want to populate and click *Import*.
     :align: center
 
 There you are provided with templates you can easily populate
-with your own data. Such templates can be imported in one click; 
+with your own data. Such templates can be imported in one click;
 The data mapping is already done.
 
 How to adapt the template
@@ -27,7 +27,7 @@ How to adapt the template
 .. image:: media/dragdown.gif
     :align: center
 
-* When you add a new column, Odoo might not be able to map it automatically if its 
+* When you add a new column, Odoo might not be able to map it automatically if its
   label doesn't fit any field in Odoo. Don't worry! You can map
   new columns manually when you test the import. Search the list for the
   corresponding field.
@@ -42,33 +42,33 @@ How to adapt the template
 How to import from another application
 --------------------------------------
 
-In order to re-create relationships between different records, 
-you should use the unique identifier from the original application 
-and map it to the **ID** (External ID) column in Odoo. 
-When you import another record that links to the first one, 
+In order to re-create relationships between different records,
+you should use the unique identifier from the original application
+and map it to the **ID** (External ID) column in Odoo.
+When you import another record that links to the first one,
 use **XXX/ID** (XXX/External ID) to the original unique identifier.
-You can also find this record using its name but you will be stuck 
+You can also find this record using its name but you will be stuck
 if at least 2 records have the same name.
 
-The **ID** will also be used to update the original import 
-if you need to re-import modified data later, 
+The **ID** will also be used to update the original import
+if you need to re-import modified data later,
 it's thus good practice to specify it whenever possible.
 
 
 I cannot find the field I want to map my column to
 --------------------------------------------------
 
-Odoo tries to find with some heuristic, based on the first ten lines of 
-the files, the type of field for each column inside your file. 
-For example if you have a column only containing numbers, 
-only the fields that are of type *Integer* will be displayed for you 
-to choose from. 
-While this behavior might be good and easy for most cases, 
-it is also possible that it goes wrong or that you want to 
+Odoo tries to find with some heuristic, based on the first ten lines of
+the files, the type of field for each column inside your file.
+For example if you have a column only containing numbers,
+only the fields that are of type *Integer* will be displayed for you
+to choose from.
+While this behavior might be good and easy for most cases,
+it is also possible that it goes wrong or that you want to
 map your column to a field that is not proposed by default.
 
-If that happens, you just have to check the 
-** Show fields of relation fields (advanced)** option, 
+If that happens, you just have to check the
+** Show fields of relation fields (advanced)** option,
 you will then be able to choose from the complete list of fields for each column.
 
 .. image:: media/field_list.png
@@ -145,14 +145,14 @@ link to a record of the 'Country' object. When you want to import such fields, O
 recreate links between the different records. To help you import such fields, Odoo provides three
 mechanisms. You must use one and only one mechanism per field you want to import.
 
-For example, to reference the country of a contact, Odoo proposes you 3 different fields to import: 
+For example, to reference the country of a contact, Odoo proposes you 3 different fields to import:
 
 - Country: the name or code of the country
 - Country/Database ID: the unique Odoo ID for a record, defined by the ID postgresql column
 - Country/External ID: the ID of this record referenced in another application (or the .XML file
   that imported it)
 
-For the country Belgium, you can use one of these 3 ways to import: 
+For the country Belgium, you can use one of these 3 ways to import:
 
 - Country: Belgium
 - Country/Database ID: 21
@@ -226,7 +226,7 @@ Can I import several times the same record?
 -------------------------------------------
 
 If you import a file that contains one of the column "External ID" or "Database ID", records that
-have already been imported will be modified instead of being created. This is very usefull as it
+have already been imported will be modified instead of being created. This is very useful as it
 allows you to import several times the same CSV file while having made some changes in between two
 imports. Odoo will take care of creating or modifying each record depending if it's new or not.
 

@@ -23,7 +23,7 @@ to get a specific tracked URL based on the campaign, medium, and source being us
 
 .. image:: media/link_tracker_fields.png
    :align: center
-   :alt: View of the link traker fields for Odoo Website
+   :alt: View of the link tracker fields for Odoo Website
 
 - **URL**: url of the page you want to track (e.g. the home page or a product's page).
 - **Campaign**: context of your link (e.g. a special promotion).

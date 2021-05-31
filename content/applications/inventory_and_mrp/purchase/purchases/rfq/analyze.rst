@@ -6,7 +6,7 @@ If your company regularly buys products from several suppliers, it would
 be useful to get statistics on your purchases. There are several reasons
 to track and analyze your vendor's performance :
 
--  You can see how dependant from a supplier your company is;
+-  You can see how dependent from a supplier your company is;
 
 -  you can negotiate discounts on prices;
 
@@ -84,7 +84,7 @@ To do so, use the **Advanced search view** located in the right hand side
 of your screen, by clicking on the magnifying glass icon at the end of
 the search bar button. This function allows you to highlight only
 selected data on your report. The **filters** option is very useful in
-order to display some categories of datas, while the **Group by** option
+order to display some categories of data, while the **Group by** option
 improves the readability of your reports. Note that you can filter and
 group by any existing field, making your customization very flexible and
 powerful.

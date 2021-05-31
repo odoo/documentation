@@ -17,7 +17,7 @@ Start generating leads
 ==========================
 You will now have a new button **Generate Leads** available in your pipeline.
 You are also able to create lead mining requests from the
-:menuselection:`Configuration --> Lead Mining Requests` and trough
+:menuselection:`Configuration --> Lead Mining Requests` and through
 :menuselection:`Leads --> Leads` where you have the **Generate Leads** button.
 
 .. image:: media/LM2.png

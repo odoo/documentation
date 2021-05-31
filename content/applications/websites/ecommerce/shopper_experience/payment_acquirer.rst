@@ -27,7 +27,7 @@ At anytime, the salesman can check the transaction status from the order.
 
 * *Done*: the payment is authorized and captured. The order has been confirmed.
 
-* *Error*: an error has occured during the transaction. 
+* *Error*: an error has occurred during the transaction.
   The customer needs to retry the payment.
   The order is still in draft.
 

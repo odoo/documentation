@@ -330,7 +330,7 @@ should have a real naming as it is used as display name.
     </record>
 
     <record id="model_name_action_child_list" model="ir.actions.act_window">
-        <field name="name">Model Access Childs</field>
+        <field name="name">Model Access Children</field>
     </record>
 
     <!-- menus and sub-menus -->

@@ -56,7 +56,7 @@ can take the following attributes:
     for example)
 ``attachment``
     python expression that defines the name of the report; the record is
-    acessible as the variable ``object``
+    accessible as the variable ``object``
 ``paperformat``
     external id of the paperformat you wish to use (defaults to the company's
     paperformat if not specified)

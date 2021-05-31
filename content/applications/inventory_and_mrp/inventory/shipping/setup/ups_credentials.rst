@@ -10,7 +10,7 @@ In order to use the Odoo UPS API, you will need:
 
 - An Access Key
 
-An Access Key is a 16 character alpha-numeric code that allows access to
+An Access Key is a 16 character alphanumeric code that allows access to
 the UPS Developer Kit API Development and Production servers.
 
 Create a UPS Account

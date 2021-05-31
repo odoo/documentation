@@ -78,7 +78,7 @@ Create an internal transfer
 ===========================
 
 The final step is to create your internal transfer. If you want to
-tranfer 2 units of a product from your first warehouse to another one in
+transfer 2 units of a product from your first warehouse to another one in
 Brussels, proceed as follows:
 
 From your dashboard, select a internal movement of one of the two

@@ -49,7 +49,7 @@ Standard units of measures
 ~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Let's take the classic units of measures existing in Odoo as first
-example. Please remember that differents units of measures between sales
+example. Please remember that different units of measures between sales
 and purchase necessarily need to share the same category. Categories
 include: **Unit**, **weight**, **working time**, **volume**, etc.
 

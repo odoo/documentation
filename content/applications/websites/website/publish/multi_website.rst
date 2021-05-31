@@ -176,7 +176,7 @@ Publish a page in all websites
 ------------------------------
 
 A new static page is created and only made available in the current
-website. You can duplicate it to other websites from 
+website. You can duplicate it to other websites from
 :menuselection:`Website --> Configuration --> Pages`. To do so, leave the *Website* field empty.
 
 If you want to duplicate it in just one other website, duplicate the
@@ -189,7 +189,7 @@ When you edit the page again, the change only affects the current
 website. A new page is duplicated and tied up to the website.
 The original page still being linked to all websites.
 
-.. tip:: 
+.. tip::
       By grouping pages by URL in the page manager, you quickly find
       the original page behind each edited page.
 

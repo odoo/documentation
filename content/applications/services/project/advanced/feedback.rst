@@ -50,7 +50,7 @@ Under :menuselection:`Project --> Reporting --> Customer Ratings` see ratings by
 
 .. image:: media/rating_report.png
    :align: center
-   :alt: View fo the customer rating report in Odoo Project
+   :alt: View of the customer rating report in Odoo Project
 
 Clicking on the percentage of happy ratings over the last 30 days in the *Projects* overview,
 redirects you to your website with more rating details.

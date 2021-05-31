@@ -147,7 +147,7 @@ This form is the same as :ref:`the one presented in the Accounting onboarding ba
 Invoice Layout
 --------------
 
-With this tool, you can design the appearance of your documents by selecting which layout tamplate,
+With this tool, you can design the appearance of your documents by selecting which layout template,
 paper format, colors, font, and logo you want to use.
 
 You can also add your *Company Tagline* and the content of the documents’ *footer*. Note that Odoo

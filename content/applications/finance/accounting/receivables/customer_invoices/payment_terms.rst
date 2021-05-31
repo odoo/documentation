@@ -113,6 +113,6 @@ on the day of issuance, and the balance is due at the end of the following month
 The $1000 debited on the Account Receivable is split into two distinct *Journal Items*. Both of
 them have their own **Due Date**.
 
-.. seealso:: 
+.. seealso::
    - :doc:`cash_discounts`
    - `Odoo Learn: Terms and Conditions (T&C) and Payment Terms <https://www.odoo.com/r/fpv>`_

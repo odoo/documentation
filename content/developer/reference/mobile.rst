@@ -60,7 +60,7 @@ Check if the method is available and then execute it.
 Methods
 -------
 
-.. note:: Each of the methods returns a JQuery Deffered object which returns
+.. note:: Each of the methods returns a JQuery Deferred object which returns
    a data JSON dictionary
 
 Show Toast in device

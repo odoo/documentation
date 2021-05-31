@@ -24,7 +24,7 @@ Configure the Lane/5000 for Ingenico BENELUX
 Click on the F button of the terminal, then go in the
 :menuselection:`PoS Menu --> Settings` and enter the settings password.
 
-Now, click on connexion change and TCP/IP. Type the IP of your *IoT
+Now, click on connection change and TCP/IP. Type the IP of your *IoT
 Box* (you can find it on the form view of your IoT Box). Then, enter
 9000 as port. The terminal will restart. Once it is done, go on your
 *IoT Box* form in Odoo and verify that the terminal has been found.
@@ -66,12 +66,12 @@ still retry to send the payment request.
 
 If there is any issue with the payment terminal, you can still force the
 payment using the *Force Done*. This will allow you to validate the
-order in Odoo even if the connexion between the terminal and Odoo has
+order in Odoo even if the connection between the terminal and Odoo has
 issues.
 
 .. note::
    This option will only be available if you received an error message
-   telling you the connexion failed.
+   telling you the connection failed.
 
 Once your payment is processed, on the payment record, you’ll find the
 type of card that has been used and the transaction ID.

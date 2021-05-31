@@ -283,7 +283,7 @@ process in Odoo, this considerations to understand the behavior are important.
    **1.1. How can I generate an invoice with payment term `PUE`?**
 
    `According to the SAT documentation`_ a payment is classified as ``PUE`` if
-   it was agreed that the invoice would be fully payed before the 1st of the
+   it was agreed that the invoice would be fully paid before the 1st of the
    next calendar month (the month after the one in the CFDI date); any other
    condition will generate a ``PPD`` invoice.
 
@@ -655,7 +655,7 @@ generic one with no explanation.
       '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does
       not resolve to a(n) simple type definition., line 36``
 
-   This can be caused by a database backup restored in anothe server,
+   This can be caused by a database backup restored in another server,
    or when the XSD files are not correctly downloaded. Follow the same steps
    as above but:
 
