@@ -135,7 +135,7 @@ on Odoo (https://iap.odoo.com/my/home) and select *In-App Services*.
     on sandbox to ease the tests.
 
 Log in then go to :menuselection:`My Account --> Your In-App Services`, click
-Create and provide the informations of your service.
+Create and provide the information of your service.
 
 
 The service has *seven* important fields:
@@ -415,7 +415,7 @@ The :class:`~odoo.addons.iap.models.iap.charge` helper will:
    if the account does not have enough credits it will raise the relevant
    error
 2. execute the body of the ``with`` statement
-3. if the body of the ``with`` executes succesfully, update the price
+3. if the body of the ``with`` executes successfully, update the price
    of the transaction if needed
 4. capture (confirm) the transaction
 5. otherwise, if an error is raised from the body of the ``with``, cancel the
@@ -688,7 +688,7 @@ care how they are implemented.
 Test the API
 ------------
 
-In order to test the developped app, we propose a sandbox platform that allows you to:
+In order to test the developed app, we propose a sandbox platform that allows you to:
 
 1. Test the whole flow from the client's point of view - Actual services and transactions
    that can be consulted. (again this requires to change the endpoint, see the danger note
@@ -702,7 +702,7 @@ The latter consists in specific tokens that will work on **IAP-Sandbox only**.
 * Token ``000111``: Represents an account without sufficient credits to perform any service.
   Returns an :class:`~odoo.addons.iap.models.iap.InsufficientCreditError` on authorize attempt.
 * Token ``111111``: Represents an account with enough credits to perform any service.
-  An authorize attempt will return a dummy transacion token that is processed by the capture
+  An authorize attempt will return a dummy transaction token that is processed by the capture
   and cancel routes.
 
 .. note::
