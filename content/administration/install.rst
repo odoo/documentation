@@ -233,7 +233,7 @@ found in our `wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_.
 Repository
 ^^^^^^^^^^
 
-Odoo S.A. provides a repository that can be used with the Fedora distibutions.
+Odoo S.A. provides a repository that can be used with the Fedora distributions.
 It can be used to install Odoo Community Edition by executing the following
 commands:
 
