@@ -3,7 +3,7 @@ How to generate an Unsplash access key
 =======================================================
 
 .. tip::
-  **As an SaaS user**, you are ready to use Unsplash. You won't need to follow this guide to set up Unsplash informations, since you will use our own Odoo Unsplash key in a transparent way.
+  **As an SaaS user**, you are ready to use Unsplash. You won't need to follow this guide to set up Unsplash information, since you will use our own Odoo Unsplash key in a transparent way.
 
 Generate an Unsplash access key for **non-Saas** users
 ======================================================

@@ -15,8 +15,8 @@ to manage your email server's reputation yourself.
 You will find here below some useful 
 information on how to integrate your own email solution with Odoo.
 
-.. note:: Office 365 email servers don't allow easiliy to send external emails
-    from hosts like Odoo. 
+.. note:: Office 365 email servers don't allow easily to send external emails
+    from hosts like Odoo.
     Refer to the `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ 
     to make it work.
 

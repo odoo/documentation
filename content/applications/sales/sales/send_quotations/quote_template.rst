@@ -30,7 +30,7 @@ expiration time for the quotation.
 
 On each template, you can also specify discounts if the option is
 activated in the *Sales* settings. The base price is set in the
-product configuration and can be alterated by customer pricelists.
+product configuration and can be altered by customer pricelists.
 
 Edit your template
 ==================

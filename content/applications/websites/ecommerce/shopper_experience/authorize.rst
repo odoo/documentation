@@ -68,7 +68,7 @@ you are still in *Test* mode.
 You can also log in to `Authorize.Net sandbox platform <https://sandbox.authorize.net/>`__
 to configure your sandbox account.
 
-To perform ficticious transactions you can use fake card numbers
+To perform fictitious transactions you can use fake card numbers
 provided in the `Authorize.Net Testing Guide <https://developer.authorize.net/hello_world/testing_guide/>`__. 
 
 .. seealso::

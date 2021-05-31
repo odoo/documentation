@@ -30,7 +30,7 @@ Go in :menuselection:`Inventory --> Operations --> Landed Costs` and click on th
 **Create** button. You then have to select the transfers on which you want to
 attribute additional costs and the costs lines you want to add up. Once it's
 done, click on the **Compute** button to see how the costs lines will be split
-accross your transfers lines.
+across your transfers lines.
 
 .. image:: media/landed_costs_v12_02.png
     :align: center

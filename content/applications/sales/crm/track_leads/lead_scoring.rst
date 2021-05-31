@@ -3,7 +3,7 @@ Assign leads based on scoring
 =============================
 
 With *Leads Scoring* you can automatically rank your leads based on
-selected criterias.
+selected criteria.
 
 For example you could score customers from your country higher or the
 ones that visited specific pages on your website.
@@ -24,7 +24,7 @@ You now have a new tab in your *CRM* app called *Leads Management*
 where you can manage your scoring rules.
 
 Here's an example for a Canadian lead, you can modify for whatever
-criteria you wish to score your leads on. You can add as many criterias
+criteria you wish to score your leads on. You can add as many criteria
 as you wish.
 
 .. image:: media/lead_scoring02.png

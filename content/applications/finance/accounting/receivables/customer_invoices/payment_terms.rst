@@ -28,7 +28,7 @@ term with several lines, be sure the latest one is the balance. (avoid
 doing 50% in 10 days and 50% in 21 days because, with the rounding, it
 may not do exactly 100%)
 
-.. todo:: screenshot payment term forms, after QDP have commited the change
+.. todo:: screenshot payment term forms, after QDP have committed the change
           planned on this object
 
 Using Payment Terms

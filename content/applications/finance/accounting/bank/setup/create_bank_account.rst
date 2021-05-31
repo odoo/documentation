@@ -38,8 +38,8 @@ support with this bank account.
 
 .. note::
 
-    If you are working in a multi-company environnement, you'll have to switch 
-    the company on your user preferences in order to add, edit or delete bank 
+    If you are working in a multi-company environment, you'll have to switch
+    the company on your user preferences in order to add, edit or delete bank
     accounts from another company.
 
 .. todo:: add inherited field tooltip

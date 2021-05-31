@@ -51,7 +51,7 @@ Salestax is calculated in Odoo based on fiscal positions
 A Fiscal Position for the United States is created when installing *TaxCloud*.
 Everything works out-of-the-box.
 
-You can configure Odoo to automtically detect which Customers should use this fiscal
+You can configure Odoo to automatically detect which Customers should use this fiscal
 position.  Go to :menuselection:`Accounting --> Configuration --> Fiscal Positions`
 to open and edit the record.
 
