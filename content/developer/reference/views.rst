@@ -966,7 +966,7 @@ take the following attributes:
   if set to true it displays a striped zone in the consolidation line
 
   .. warning::
-      The dictionnary definition must use double-quotes, ``{'user_id': 100}`` is
+      The dictionary definition must use double-quotes, ``{'user_id': 100}`` is
       not a valid value
 ``create``, ``edit``
     allows *dis*\ abling the corresponding action in the view by setting the

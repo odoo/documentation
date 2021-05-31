@@ -974,7 +974,7 @@ Date / Datetime comparison best practices:
                  date string, therefore this practice is **heavily**
                  discouraged.
 
-Common operations with dates and datetimes such as addition, substraction or
+Common operations with dates and datetimes such as addition, subtraction or
 fetching the start/end of a period are exposed through both
 :class:`~odoo.fields.Date` and :class:`~odoo.fields.Datetime`.
 These helpers are also available by importing `odoo.tools.date_utils`.
@@ -1395,7 +1395,7 @@ decorating the old-style method:
      will automatically prepend the current cursor to explicitly provided
      parameters, positionally
   :func:`~odoo.api.cr_uid`
-     will automatically prepend the current cursor and user's id to explictly
+     will automatically prepend the current cursor and user's id to explicitly
      provided parameters
   :func:`~odoo.api.cr_uid_ids`
      will automatically prepend the current cursor, user's id and recordset's

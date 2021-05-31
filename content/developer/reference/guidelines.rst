@@ -280,7 +280,7 @@ Odoo supports custom tags acting as syntactic sugar:
 - report: use to declare a :ref:`report action <reference/actions/report>`
 - act_window: use it if the record notation can't do what you want
 
-The 4 first tags are prefered over the *record* notation.
+The 4 first tags are preferred over the *record* notation.
 
 
 XML IDs and naming
@@ -330,7 +330,7 @@ should have a real naming as it is used as display name.
     </record>
 
     <record id="model_name_action_child_list" model="ir.actions.act_window">
-        <field name="name">Model Access Childs</field>
+        <field name="name">Model Access Children</field>
     </record>
 
     <!-- menus and sub-menus -->
@@ -572,7 +572,7 @@ So, you can write ``if some_collection:`` instead of ``if len(some_collection):`
     for element in iterable:
         values.setdefault(element, []).append(other_value)
 
-- As a good developper, document your code (docstring on methods, simple
+- As a good developer, document your code (docstring on methods, simple
   comments for tricky part of code)
 - In additions to these guidelines, you may also find the following link
   interesting: http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html
