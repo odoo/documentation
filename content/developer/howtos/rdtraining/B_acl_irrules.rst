@@ -172,12 +172,12 @@ while one with B and C will be able to read or update, but not search or read.
 
 .. note::
 
-    * The group of an access right can be ommitted, this means the ACL applies
+    * The group of an access right can be omitted, this means the ACL applies
       to *every user*, this is a useful but risky fallback as depending on the
       applications installed it can grant even non-users access to the model.
     * If no access right applies to a user, they are not granted access
       (default-deny).
-    * If a menu item points to a model to which a user doesn't have acces and
+    * If a menu item points to a model to which a user doesn't have access and
       has no submenus which the user can see, the menu will not be displayed.
 
 .. exercise:: Update the access rights file to:
@@ -412,7 +412,7 @@ another.
 Odoo can be used to manage multiple companies inside the same system, however
 the actual handling is up to individual modules: Odoo itself provides the tools
 to manage the issue like company-dependent fields and *multi-company rules*,
-which is what we're going to concern outselves with.
+which is what we're going to concern ourselves with.
 
 We want different agencies to be "siloed" from one another, with properties
 belonging to a given agency and users (whether agents or managers) only able to

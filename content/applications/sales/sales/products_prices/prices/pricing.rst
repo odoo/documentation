@@ -66,12 +66,12 @@ Prices per minimum quantity
 Discounts, margins, roundings
 =============================
 
-*Advanced pricing based on formula* allows to set price change rules. 
-Changes can be relative to the product list/catalog price, the product cost price, 
-or to another pricelist. Changes are calculated via discounts or surcharges and can be 
-forced to fit within floor (minumum margin) and ceilings (maximum margins). 
-Prices can be rounded to the nearest cent/dollar or multiple of either 
-(nearest 5 cents, nearest 10 dollars). 
+*Advanced pricing based on formula* allows to set price change rules.
+Changes can be relative to the product list/catalog price, the product cost price,
+or to another pricelist. Changes are calculated via discounts or surcharges and can be
+forced to fit within floor (minimum margin) and ceilings (maximum margins).
+Prices can be rounded to the nearest cent/dollar or multiple of either
+(nearest 5 cents, nearest 10 dollars).
 
 Once installed go to
 :menuselection:`Sales --> Configuration --> Pricelists`

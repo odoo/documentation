@@ -117,9 +117,9 @@ Troubleshooting
 The bank refuses my SEPA file
 -----------------------------
 
-Ask your bank if they support the **SEPA Credit Transfer specification** 
+Ask your bank if they support the **SEPA Credit Transfer specification**
 (the SEPA pain version depends on the country set on your company). If
-they don't, or cannot provide relevant informations, please forward the
+they don't, or cannot provide relevant information, please forward the
 error message to your Odoo partner.
 
 There is no Bank Identifier Code recorded for bank account ...

@@ -72,7 +72,7 @@ Create your working branch:
 
     $ git checkout -b master-my_first_branch-xyz
 
-Your branch name must follow the following name strucutre : <targetVersion>-<feature>-<trigram>
+Your branch name must follow the following name structure : <targetVersion>-<feature>-<trigram>
 
 Example: The branch master-sale-fixes-abc on odoo-dev/odoo is a branch containing fixes for the
 sales app in the odoo/odoo repository, to be deployed in master and done by ABC.

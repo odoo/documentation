@@ -84,7 +84,7 @@ Dump stack
 
 Sending the SIGQUIT signal to an Odoo process (only available on POSIX) makes
 this process output the current stack trace to log, with info level. When an
-odoo process seems stucked, sending this signal to the process permit to know
+odoo process seems stuck, sending this signal to the process permit to know
 what the process is doing, and letting the process continue his job.
 
 Tracing code execution

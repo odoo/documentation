@@ -1358,7 +1358,7 @@ generic one with no explanation.
       '{http://www.sat.gob.mx/sitio_internet/cfd/catalogos}c_TipoRelacion' does
       not resolve to a(n) simple type definition., line 36``
 
-   This can be caused by a database backup restored in anothe server,
+   This can be caused by a database backup restored in another server,
    or when the XSD files are not correctly downloaded. Follow the same steps
    as above but:
 

@@ -183,8 +183,8 @@ automatic recharging of the services to the customer at the end of the
 month. To invoice customers, just link the analytic account to a sale
 order and sell products that manage timesheet or expenses .
 
-Case 3: IT Services Company: perfomance analysis
-------------------------------------------------
+Case 3: IT Services Company: performance analysis
+-------------------------------------------------
 
 Most IT service companies face the following problems:
 

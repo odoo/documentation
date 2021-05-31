@@ -74,8 +74,8 @@ The chart of accounts for Peru is based on the most updated version of the :abbr
 Contable General Empresarial)`, which is grouped in several categories and is compatible with NIIF
 accounting.
 
-Accouting Seetings
-------------------
+Accounting Settings
+-------------------
 
 Once the modules are installed and the basic information of your company is set, you need to 
 configure the elements required for Electronic Invoice. For this, go to :menuselection:`Accounting 
@@ -476,8 +476,8 @@ The price list in the IAP is always displayed in EUR.
 Special Use cases
 ~~~~~~~~~~~~~~~~~
 
-Cancelation process
-*******************
+Cancellation process
+********************
 
 Some scenarios require an invoice cancellation, for example, when an invoice was created by mistake. 
 If the invoice was already sent and validated by the SUNAT, the correct way to proceed is by 
@@ -512,8 +512,8 @@ chatter indicating the correct Government validation.
 .. warning::
    One credit is consumed on each cancellation request.
    
-Cancelation process
-*******************
+Cancellation process
+********************
 
 When creating exportation invoices, take into account the next considerations:
 

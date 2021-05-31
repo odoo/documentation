@@ -50,5 +50,5 @@ Successful*. You can always reverse the last transaction by clicking on
 
 If there is any issue with the payment terminal, you can still force the
 payment using the *Force Done*. This will allow you to validate the
-order in Odoo even if the connexion between the terminal and Odoo
+order in Odoo even if the connection between the terminal and Odoo
 encounters issues.

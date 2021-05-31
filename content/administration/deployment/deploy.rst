@@ -69,7 +69,7 @@ in ``/etc/odoo.conf`` set:
   of securing your deployment.
   Once it is correctly working and only matching a single database per hostname, it
   is strongly recommended to block access to the database manager screens,
-  and to use the ``--no-database-list`` startup paramater to prevent listing
+  and to use the ``--no-database-list`` startup parameter to prevent listing
   your databases, and to block access to the database management screens.
   See also security_.
 
@@ -171,7 +171,7 @@ SSL Between Odoo and PostgreSQL
 
 Since Odoo 11.0, you can enforce ssl connection between Odoo and PostgreSQL.
 in Odoo the db_sslmode control the ssl security of the connection
-with value choosed out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
+with value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
 or 'verify-full'
 
 `PostgreSQL Doc <https://www.postgresql.org/docs/current/static/libpq-ssl.html>`_
@@ -386,7 +386,7 @@ notifications.
 
 The solutions to support livechat/motifications in a WSGI application are:
 
-* Deploy a threaded version of Odoo (instread of a process-based preforking
+* Deploy a threaded version of Odoo (instead of a process-based preforking
   one) and redirect only requests to URLs starting with ``/longpolling/`` to
   that Odoo, this is the simplest and the longpolling URL can double up as
   the cron instance.

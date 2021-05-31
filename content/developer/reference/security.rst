@@ -10,7 +10,7 @@ data-driven mechanisms to manage or restrict access to data.
 
 Both mechanisms are linked to specific users through *groups*: a user belongs
 to any number of groups, and security mechanisms are associated to groups,
-thus applying security mechamisms to users.
+thus applying security mechanisms to users.
 
 .. class:: res.groups
 
@@ -32,7 +32,7 @@ thus applying security mechamisms to users.
 
         Other groups to set on the user alongside this one. This is a
         convenience pseudo-inheritance relationship: it's possible to
-        explicitely remove implied groups from a user without removing the
+        explicitly remove implied groups from a user without removing the
         implier.
 
     .. attribute:: comment
