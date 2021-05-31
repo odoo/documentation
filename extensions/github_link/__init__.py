@@ -110,7 +110,7 @@ def add_doc_link(app, pagename, templatename, context, doctree):
         return
 
     # FIXME: find other way to recover current document's source suffix
-    # in Sphinx 1.3 it's possible to have mutliple source suffixes and that
+    # in Sphinx 1.3 it's possible to have multiple source suffixes and that
     # may be useful in the future
     source_suffix = app.config.source_suffix
     source_suffix = next(iter(source_suffix))
