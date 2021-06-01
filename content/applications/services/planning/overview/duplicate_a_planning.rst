@@ -28,7 +28,7 @@ of re-planning it.
 
 .. note::
    Repeated shifts are generated for the next six months. A modification is possible in
-   :doc:`Developer mode </applications/general/developer_mode>`, from *Settings*.
+   :ref:`developer mode <developer-mode>`, from *Settings*.
 
       .. image:: media/rate_shift_generation.png
          :align: center

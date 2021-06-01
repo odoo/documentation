@@ -24,8 +24,8 @@ IAP accounts
 
 Credits to use IAP services are stored on IAP accounts, which are specific to each service and
 database. By default, IAP accounts are common to all companies, but can be restricted to specific
-ones. Activate the :doc:`Developer mode </applications/general/developer_mode>`, then go to
-:menuselection:`Technical Settings --> IAP Account`.
+ones. Activate the :ref:`developer mode <developer-mode>`, then go to :menuselection:`Technical
+Settings --> IAP Account`.
 
 .. image:: in_app_purchase/image2.png
    :align: center

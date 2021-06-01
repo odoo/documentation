@@ -97,9 +97,8 @@ code, a default database product **Amazon Sale** is used. The same is done with 
 **Amazon Shipping** and the shipping code.
 
 .. note::
-   To modify the default products, activate the
-   :doc:`Developer mode </applications/general/developer_mode>` and navigate to
-   :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
+   To modify the default products, activate the :ref:`developer mode <developer-mode>` and navigate
+   to :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
    Default Products`.
 
 Configure taxes of products
@@ -130,8 +129,7 @@ marketplaces.
    <https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_. The marketplace
    must belong to the same region as that of your seller account.
 
-To add a new marketplace, you must first enable :doc:`Developer mode
-</applications/general/developer_mode>`.
+To add a new marketplace, you must first activate the :ref:`developer mode <developer-mode>`.
 
 Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors -->
 Amazon Sync --> Amazon Marketplaces`.
