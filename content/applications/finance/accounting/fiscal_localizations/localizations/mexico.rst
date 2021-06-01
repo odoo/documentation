@@ -111,7 +111,7 @@ Enabling CFDI Version 3.3
    SaaS instance please ask for an upgrade by submitting a ticket to support in
    https://www.odoo.com/help.
 
-Enable the :doc:`Developer mode </applications/general/developer_mode>`.
+Activate the :ref:`developer mode <developer-mode>`.
 
 Go and look the following technical parameter, on
 :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
@@ -630,7 +630,7 @@ Enabling Explicit errors on the CFDI using the XSD local validator (CFDI 3.3)
 Frequently you want receive explicit errors from the fields incorrectly set
 on the xml, those errors are better informed to the user if the check is
 enable, to enable the Check with xsd feature follow the next steps (with the
-:doc:`Developer mode </applications/general/developer_mode>` enabled).
+:ref:`developer mode <developer-mode>` enabled).
 
 - Go to :menuselection:`Settings --> Technical --> Actions --> Server Actions`
 - Look for the Action called "Download XSD files to CFDI"

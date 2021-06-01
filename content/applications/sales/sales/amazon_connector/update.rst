@@ -41,8 +41,8 @@ Update the list of available modules
 New modules must be *discovered* by your Odoo instance to be available in the **Apps**
 menu.
 
-To do so, activate the :doc:`Developer Mode </applications/general/developer_mode>`, and go to
-:menuselection:`Apps --> Update Apps List`. A wizard will ask for confirmation.
+To do so, activate the :ref:`developer mode <developer-mode>`, and go to :menuselection:`Apps -->
+Update Apps List`. A wizard will ask for confirmation.
 
 Install the Amazon/Authentication Patch
 =======================================

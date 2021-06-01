@@ -82,8 +82,8 @@ Update your synchronization credentials
 
 You might have to update your Ponto credentials or modify the synchronization settings.
 
-To do so, activate the :doc:`Developer Mode </applications/general/developer_mode>`, and go to
-:menuselection:`Accounting --> Configuration --> Online Synchronization`.
+To do so, activate the :ref:`developer mode <developer-mode>`, and go to :menuselection:`Accounting
+--> Configuration --> Online Synchronization`.
 
 Click on *Update Accounts* to enter your new Client ID and Secret ID, or click on *Edit* to modify
 the synchronization settings.

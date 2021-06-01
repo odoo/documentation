@@ -47,8 +47,8 @@ all the contacts needed, and under *Action* select *Send SMS*.
 Set up SMS templates
 ====================
 
-To set up *SMS Templates*, activate the :doc:`Developer mode </applications/general/developer_mode/activate>`,
-then go to :menuselection:`Technical --> SMS Templates`.
+To set up *SMS Templates*, activate the :ref:`developer mode <developer-mode>`, then go to
+:menuselection:`Technical --> SMS Templates`.
 
 .. image:: ./media/sms_marketing17.png
    :align: center

@@ -100,9 +100,9 @@ Share stages across projects
 
 | In order to have a clean Kanban view that works across projects, and to avoid duplicates,
   delineate specific stages for different projects.
-| :doc:`Activate the Developer mode </applications/general/developer_mode>` then go to
-  :menuselection:`Project --> Configuration --> Stages`. Choose the respective one and add
-  the projects among which you would like to share stages.
+| Activate the :ref:`developer mode <developer-mode>` then go to :menuselection:`Project -->
+  Configuration --> Stages`. Choose the respective one and add the projects among which you would
+  like to share stages.
 
 .. image:: media/share_stages.png
    :align: center

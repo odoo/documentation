@@ -50,8 +50,8 @@ added to the *Print* menu list on its respective document form.
    :align: center
    :alt: View of an invoice form emphasizing the menu print for Odoo Studio
 
-If activating the :doc:`Developer mode </applications/general/developer_mode/activate>`, additional fields
-such as *Class* under *Options*, and *Reload from attachment* under *Report*, become visible.
+If activating the :ref:`developer mode <developer-mode>`, additional fields such as *Class* under
+*Options*, and *Reload from attachment* under *Report*, become visible.
 
 - *Class*: add custom CSS classes to the selected element (e.g. Bootstrap classes such as
   *text-danger*).

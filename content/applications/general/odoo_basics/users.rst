@@ -39,8 +39,7 @@ the user. The user must click on it to accept the invitation and create a login.
    `pricing page <https://www.odoo.com/pricing>`_
    for more information.
 
-With the :doc:`Developer mode </applications/general/developer_mode>` activated, *User Types* can
-be selected.
+With the :ref:`developer mode <developer-mode>` activated, *User Types* can be selected.
 
 .. image:: users/user-type.png
    :align: center
@@ -121,8 +120,8 @@ can reaccess your database using your new password.
 Access Rights in detail
 =======================
 
-Activate the :doc:`Developer mode </applications/general/developer_mode>`, then go to
-:menuselection:`Settings --> Users & Companies --> Groups`.
+Activate the :ref:`developer mode  <developer-mode>`, then go to :menuselection:`Settings --> Users
+& Companies --> Groups`.
 
 Groups
 ------
@@ -203,4 +202,4 @@ the user can have access.
 
 .. seealso::
    - :doc:`../multi_companies`
-   - :doc:`../../settings/users_and_features`
+   - :doc:`../../general`

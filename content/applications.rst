@@ -12,5 +12,4 @@ Applications
     applications/marketing
     applications/services
     applications/productivity
-    applications/settings
     applications/general

@@ -11,8 +11,8 @@ improving their overall experience with the company.
 Enable it and understand a few concepts
 =======================================
 
-The :doc:`Developer mode </applications/general/developer_mode>` must be activated. Then, go to
-:menuselection:`Settings --> Technical --> Templates`. A view of the existing templates is shown.
+The :ref:`developer mode <developer-mode>` must be activated. Then, go to :menuselection:`Settings
+--> Technical --> Templates`. A view of the existing templates is shown.
 
 .. warning::
    **It is highly recommended not to change the content in existing templates unless the user has

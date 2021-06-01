@@ -19,9 +19,9 @@ long as both environments are active).
    :alt: Overview of a new company's form in Odoo
 
 .. tip::
-   Activate the :doc:`Developer mode <developer_mode/activate>` to choose a *Favicon*
-   for each of your companies, and easily identify them by the browser tabs. Set your
-   favicons’ files size to 16x16 or 32x32 pixels. JPG, PNG, GIF, and ICO are extensions accepted.
+   Activate the :ref:`developer mode <developer-mode>` to choose a *Favicon* for each of your
+   companies, and easily identify them by the browser tabs. Set your favicons’ files size to 16x16
+   or 32x32 pixels. JPG, PNG, GIF, and ICO are extensions accepted.
 
    .. image:: multi_companies/favicon.png
       :align: center
