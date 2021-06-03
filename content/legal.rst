@@ -31,7 +31,7 @@ Terms and Conditions
 
 .. |download_enterprise_en| image:: legal/img/pdf.svg
     :alt: Download Odoo Enterprise Agreement
-    :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement.pdf
 
 .. |view_partnership_en| image:: legal/img/txt.svg
     :alt: View Odoo Partnership Agreement
@@ -39,7 +39,7 @@ Terms and Conditions
 
 .. |download_partnership_en| image:: legal/img/pdf.svg
     :alt: Download Odoo Partnership Agreement
-    :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement.pdf
 
 .. |view_terms_of_sale_en| image:: legal/img/txt.svg
     :alt: View Terms of Sale
@@ -51,7 +51,7 @@ Terms and Conditions
 
 .. |download_enterprise_fr| image:: legal/img/pdf.svg
     :alt: Download Odoo Enterprise Agreement (FR)
-    :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement_fr.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_fr.pdf
 
 .. |view_enterprise_fr| image:: legal/img/txt.svg
     :alt: View Odoo Enterprise Agreement (FR)
@@ -59,7 +59,7 @@ Terms and Conditions
 
 .. |download_partnership_fr| image:: legal/img/pdf.svg
     :alt: Download Odoo Partnership Agreement (FR)
-    :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement_fr.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement_fr.pdf
 
 .. |view_enterprise_nl| image:: legal/img/txt.svg
     :alt: View Odoo Enterprise Agreement (NL)
@@ -71,7 +71,7 @@ Terms and Conditions
 
 .. |download_terms_of_sale_fr| image:: legal/img/pdf.svg
     :alt: Download Odoo Terms of Sale (FR)
-    :target: https://www.odoo.com/documentation/12.0/terms_of_sale_fr.pdf
+    :target: https://www.odoo.com/documentation/14.0/terms_of_sale_fr.pdf
 
 .. |view_terms_of_sale_fr| image:: legal/img/txt.svg
     :alt: View Terms of Sale (FR)
@@ -79,7 +79,7 @@ Terms and Conditions
 
 .. |download_enterprise_nl| image:: legal/img/pdf.svg
     :alt: Download Odoo Enterprise Agreement (NL)
-    :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement_nl.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_nl.pdf
 
 .. |download_partnership_nl| image:: legal/img/pdf.svg
     :alt: Download Odoo Partnership Agreement (NL)
@@ -87,7 +87,7 @@ Terms and Conditions
 
 .. |download_enterprise_de| image:: legal/img/pdf.svg
     :alt: Download Odoo Enterprise Agreement (DE)
-    :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement_de.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_de.pdf
 
 .. |view_enterprise_de| image:: legal/img/txt.svg
     :alt: View Odoo Enterprise Agreement (DE)
@@ -95,7 +95,7 @@ Terms and Conditions
 
 .. |download_partnership_de| image:: legal/img/pdf.svg
     :alt: Download Odoo Partnership Agreement (DE)
-    :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement_de.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement_de.pdf
 
 .. |view_partnership_de| image:: legal/img/txt.svg
     :alt: View Odoo Partnership Agreement (DE)
@@ -103,7 +103,7 @@ Terms and Conditions
 
 .. |download_enterprise_es| image:: legal/img/pdf.svg
     :alt: Download Odoo Enterprise Agreement (ES)
-    :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement_es.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_es.pdf
 
 .. |view_enterprise_es| image:: legal/img/txt.svg
     :alt: View Odoo Partnership Agreement (ES)
@@ -111,7 +111,7 @@ Terms and Conditions
 
 .. |download_partnership_es| image:: legal/img/pdf.svg
     :alt: Download Odoo Partnership Agreement (ES)
-    :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement_es.pdf
+    :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement_es.pdf
 
 .. |view_partnership_es| image:: legal/img/txt.svg
     :alt: View Odoo Partnership Agreement (ES)
