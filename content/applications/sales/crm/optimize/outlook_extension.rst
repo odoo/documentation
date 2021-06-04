@@ -171,5 +171,5 @@ In-App Purchase
    - Learn about our *Privacy Policy* `here <https://iap.odoo.com/privacy#header_2>`_.
 
 .. seealso::
-   - :doc:`../../../general/in_app_purchase/in_app_purchase`
+   - :doc:`../../../general/in_app_purchase`
    - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_

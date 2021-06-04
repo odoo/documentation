@@ -58,5 +58,5 @@ confirmed, but the amount is kept on hold. Once the delivery is processed, you c
 payment from the related Sales Order.
 
 .. seealso::
-   - :doc:`../../../general/payment_acquirers/payment_acquirers`
+   - :doc:`../../../general/payment_acquirers`
    - :ref:`Payment Acquirers: Place a hold on a card <payment_acquirers/capture_amount>`

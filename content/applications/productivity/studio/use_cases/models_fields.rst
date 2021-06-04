@@ -116,7 +116,7 @@ Administrator* or managers.
 
 - **Case scenario 5: change the tooltip of a field for all views.**
 
-| Activate the :doc:`Developer mode </applications/general/developer_mode/activate>` and open Studio.
+| Activate the :ref:`developer mode <developer-mode>` and open Studio.
 | Select the necessary field and, under *Properties*, click on *More* to write your tooltip message
   on *Field Help*. The tooltip message is the explanatory message shown when the user hovers the
   field. The message here written is displayed on all views forms where the field is added.

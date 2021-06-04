@@ -68,5 +68,5 @@ Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my Ser
    If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
 .. seealso::
-   * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase/in_app_purchase>`
+   * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase>`
  

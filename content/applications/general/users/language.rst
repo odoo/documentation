@@ -1,6 +1,6 @@
-================================
-Manage Odoo in your own language
-================================
+===============
+Change language
+===============
 
 Odoo provides you with the option to manage Odoo in different languages,
 and each user can use Odoo in his own language .
@@ -15,7 +15,7 @@ From the general dashboard click on the **Settings** app; on the top
 left of the page select :menuselection:`Translations --> Load a Translation`,
 select a language to install and click on **LOAD.**
 
-.. image:: media/choose_language01.png
+.. image:: language/choose_language01.png
     :align: center
 
 .. note::
@@ -30,13 +30,13 @@ You can change the language to the installed language by going to the
 drop-down menu at the top right side of the screen, choose
 **Preferences**.
 
-.. image:: media/choose_language02.png
+.. image:: language/choose_language02.png
     :align: center
 
 Then change the Language setting to your installed language and click
 **SAVE.**
 
-.. image:: media/choose_language03.png
+.. image:: language/choose_language03.png
     :align: center
 
 Open a new menu to view the changes.
@@ -54,7 +54,7 @@ user and click on **Edit** in the top left corner. Under Preferences you
 can change the Language to any previously installed language and click
 **SAVE.**
 
-.. image:: media/choose_language04.png
+.. image:: language/choose_language04.png
     :align: center
 
 .. seealso::
