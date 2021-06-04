@@ -49,14 +49,17 @@ header.o_main_header {
     right: 0;
     background-color: $o-header-white;
     z-index: 10;
+    padding: 0 $padding-s;
     @include media-breakpoint-up(lg) {
         height: $o-header-height;
-        padding-right: 3rem;
+        padding: 0 $padding-m;
+    }
+    @include media-breakpoint-up(xl) {
+        padding: 0 $padding-l;
     }
 
-    .o_logo_wrapper {
-        padding: 0 1rem;
 
+    .o_logo_wrapper {
         > .o_logo {
             img {
                 margin-bottom: -2px;
@@ -70,25 +73,45 @@ header.o_main_header {
             }
         }
         @include media-breakpoint-up(xl) {
-            width: $o-side-nav-width;
+            width: calc(#{$o-side-nav-width} - #{$padding-l});
         }
         @include media-breakpoint-up(lg) {
-            padding-left: 3rem;
-            margin-right: 3rem;
+            margin-right: $margin-l;
         }
     }
+
+    .o_logo img {
+        @include media-breakpoint-up(lg) {
+            height: 30px
+        }
+    }
+
     .o_search_wrapper {
         display: flex;
         opacity: 1;
         @include transition(opacity .3s);
-
         @include media-breakpoint-down(lg) {
             display: block;
             position: absolute;
-            width: 100%;
-            padding: 0 10px;
-            top: calc(100% + 15px);
+            width: calc(100% - (#{$padding-s} * 2));
+            top: calc(100% + #{$padding-s});
        }
+
+        .o_search {
+            position: relative;
+            width: 100%;
+            @include media-breakpoint-up(lg) {
+                max-width: 500px;
+            }
+
+            .btn {
+                @include o-position-absolute($top: 50%, $right: 1rem);
+                @include o-transform (translateY(-50%)) ;
+                padding: 0;
+                font-size: 1.2rem;
+                color: $gray;
+            }
+        }
     }
 
     &.o_header_scrolled {
@@ -98,7 +121,6 @@ header.o_main_header {
             }
         }
     }
-
 
     .highlight-link {
         @media only screen and (max-width: 1242px) and (min-width: 992px){
@@ -114,9 +136,8 @@ header.o_main_header {
             @include font-size($font-size-secondary);
         }
     }
-    .navbar-toggler {
-        border: none;
 
+    .navbar-toggler {
         &[aria-expanded="true"] {
             .icon-bar {
                 &:nth-of-type(1) {
@@ -135,6 +156,7 @@ header.o_main_header {
                 }
             }
         }
+
         .icon-bar {
             display: block;
             width: 22px;
@@ -167,63 +189,44 @@ header.o_main_header {
     }
 }
 
-.o_logo img {
-    @include media-breakpoint-up(lg) {
-        height: 30px
-    }
-}
-
-.o_search_wrapper {
-    .o_search {
-        position: relative;
-        width: 100%;
-        @include media-breakpoint-up(lg) {
-            max-width: 500px;
-        }
-
-        .btn {
-            @include o-position-absolute($top: 50%, $right: 1rem);
-            @include o-transform (translateY(-50%)) ;
-            padding: 0;
-            font-size: 1.2rem;
-            color: $gray;
-        }
-    }
-}
-
 //------------------------------------------------------------------------------
 // Left side nav toctree
 //------------------------------------------------------------------------------
 
 .o_side_nav {
     width: 100%;
-    height: calc(100vh - #{$o-header-mobile-height});
+    height: 100%;
     overflow-y: auto;
     position: fixed;
     top: -100%;
     left:0;
-
-    &.show {
-        top: $o-header-mobile-height;
-    }
-    @include media-breakpoint-up(lg) {
-        width: $o-side-nav-width;
-        height: calc(100vh - #{$o-header-height});
-        top: $o-header-height;
-        padding-top: 2rem;
-        padding-left: 3rem;
-    }
     @include o-transition(all, .3s);
     padding-top: 4rem;
-    padding-left: 1rem;
+    padding-left: $padding-s;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
     @include font-size($font-size-secondary);
     color: $o-violet-dark;
+    @include media-breakpoint-up(lg) {
+        width: calc(#{$o-side-nav-width} - 1rem);
+        height: calc(100vh - #{$o-header-height});
+        top: $o-header-height;
+        padding-top: $padding-m;
+        padding-left: $padding-m;
+    }
+    @include media-breakpoint-up(xl) {
+        width: $o-side-nav-width;
+        padding-top: $padding-l;
+        padding-left: $padding-l;
+    }
+
+    &.show {
+        top: $o-header-mobile-height;
+    }
 
     .toctree-l1 {
-        padding-top: .5rem;
-        padding-bottom: .5rem;
+        padding-top: $padding-xs;
+        padding-bottom: $padding-xs;
     }
 
     ul {
@@ -281,7 +284,7 @@ header.o_main_header {
 .o_side_nav, .o_page_toc_nav {
     ul { // all uls in toc
         list-style: none;
-        padding-left: 1rem;
+        padding-left: $padding-s;
 
         li {
             > a.reference {
@@ -350,7 +353,7 @@ header.o_main_header {
     aside.o_page_toc {
         display: none;
         @include font-size($font-size-secondary);
-        @include media-breakpoint-up(lg) {
+        @include media-breakpoint-up(xl) {
             display: block;
             position: -webkit-sticky;
             position: sticky;
@@ -359,7 +362,7 @@ header.o_main_header {
             width: $o-on-page-width;
             height: 100%;
             max-height: calc(100vh - #{$o-header-height});
-            padding: 3rem 3rem 3rem 0;
+            padding: $padding-l $padding-s $padding-l 0;
             overflow-y: auto;
         }
 
@@ -367,8 +370,8 @@ header.o_main_header {
             text-transform: uppercase;
             font-weight: $fw_bold;
             color: $gray-darker;
-            padding-left: .5rem;
-            margin-bottom: .5rem;
+            padding-left: $padding-xs;
+            margin-bottom: $padding-xs;
         }
 
         a {
@@ -414,21 +417,22 @@ header.o_main_header {
 
     main {
         position: relative;
-        padding-top: 3rem;
-        @include media-breakpoint-down(lg) {
-            padding-top: 7rem;
-        }
-        padding-bottom: 3rem;
+        padding-top: 5rem;
+        padding-bottom: $padding-l;
         @include media-breakpoint-up(lg) {
-            left: $o-side-nav-width;
-            max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1.5rem)) - #{$o-on-page-width});
-            padding: 3rem;
+            left: calc(#{$o-side-nav-width} - #{$padding-s});
+            max-width: calc(100vw - #{$o-side-nav-width});
+            padding: $padding-l;
             margin: 0;
+        }
+        @include media-breakpoint-up(xl) {
+            left: $o-side-nav-width;
+            max-width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
         }
 
         &.o_index, &.o_fullwidth_page, &.o_has_code_column {
-            @include media-breakpoint-up(lg) {
-                max-width: calc(100vw - (#{$o-side-nav-width} + var(--bs-gutter-x, 1rem)) );
+            @include media-breakpoint-up(xl) {
+                max-width: calc(100vw - #{$o-side-nav-width});
             }
         }
 
@@ -436,13 +440,17 @@ header.o_main_header {
 
         &.o_index {
             .o_content_fw_banner {
-                margin: -3rem -0.75rem 3rem;
-                padding: 2rem 1rem;
+                margin: 0 -0.75rem $margin-m;
+                padding: $padding-m $padding-s;
                 align-items: center;
                 @include o-gradient();
                 @include media-breakpoint-up(lg) {
-                    margin: -3rem -3rem 3rem;
-                    padding: 2rem 3rem;
+                    margin: -#{$margin-m} -#{$margin-m} $margin-m;
+                    padding: $padding-m $padding-m;
+                }
+                @include media-breakpoint-up(xl) {
+                    margin: -#{$margin-l} -#{$margin-l} $margin-l;
+                    padding: $padding-l $padding-l;
                 }
 
                 .btn-primary {
@@ -463,7 +471,7 @@ header.o_main_header {
             ul {
                 > li {
                     position: relative;
-                    padding-bottom: .5rem;
+                    padding-bottom: $padding-xs;
                     display: flex;
                     align-items: center;
 
@@ -487,9 +495,9 @@ header.o_main_header {
                 display: block;
                 color: $gray-darker;
                 @include font-size($h2-font-size);
-                padding-bottom: .5rem;
+                padding-bottom: $padding-xs;
                 border-bottom: 1px solid $gray-light;
-                margin-bottom: 1rem;
+                margin-bottom: $margin-s;
             }
         }
 
@@ -528,7 +536,7 @@ header.o_main_header {
                     }
 
                     .o_git_link {
-                        right: calc(#{$o-codecol-width} + 2rem);
+                        right: calc(#{$o-codecol-width} + $padding-l);
                     }
 
                     section {
@@ -552,7 +560,7 @@ header.o_main_header {
                             float: none;
                             clear: none;
                             margin-left: 57%;
-                            padding: 1rem;
+                            padding: $padding-s;
 
                             blockquote {
                                 font-weight: $fw_semibold;
@@ -603,9 +611,9 @@ header.o_main_header {
 
             .o_git_link {
                 @include font-size($font-size-secondary);
-                @include o-position-absolute($top: 0px, $right: 1rem);
+                @include o-position-absolute($top: 0px, $right: $margin-s);
                 @include media-breakpoint-up(lg) {
-                    @include o-position-absolute($top: 10px, $right: 1rem);
+                    @include o-position-absolute($top: 10px, $right: $margin-s);
                 }
                 i {
                     margin-right: .2rem;
@@ -626,7 +634,7 @@ header.o_main_header {
                     padding-left: 0;
 
                     li {
-                        padding-bottom: .5rem;
+                        padding-bottom: $padding-xs;
                     }
                 }
             }
@@ -644,26 +652,26 @@ header.o_main_header {
                         max-width: calc(100% - 120px);
                     }
                     + * {
-                        margin-top: 1rem;
+                        margin-top: $margin-s;
                     }
                 }
 
                 > h2 {
                     font-family: $font-family-serif;
                     color: $gray-darker;
-                    margin-top: 2rem;
-                    margin-bottom: 1rem;
+                    margin-top: $margin-m;
+                    margin-bottom: $margin-s;
                     padding-bottom: .3rem;
                     border-bottom: 1px solid $gray-light;
                 }
 
                 > h3 {
-                    margin-top: 2rem;
+                    margin-top: $margin-m;
                     font-weight: $fw_bold;
                 }
 
                 > h4 {
-                    margin-top: 2rem;
+                    margin-top: $margin-l;
                 }
 
                 > h4, > h5, > h6 {
@@ -961,11 +969,11 @@ header.o_main_header {
 //------------------------------------------------------------------------------
 footer {
     .o_get_help {
-        padding-top: 3rem;
-        padding-bottom: 3rem;
+        padding-top: $padding-l;
+        padding-bottom: $padding-l;
         background: $gray-lighter;
         @include media-breakpoint-up(lg) {
-            padding-left: calc(#{$o-side-nav-width} + 3rem)
+            padding-left: calc(#{$o-side-nav-width} + #{$padding-l})
         }
 
         h5 {
