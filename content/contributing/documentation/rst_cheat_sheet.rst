@@ -1,4 +1,3 @@
-
 ===============
 RST cheat sheet
 ===============
@@ -328,7 +327,7 @@ RST
 Render
 ******
 
-.. image:: media/create-invoice.png
+.. image:: rst_cheat_sheet/create-invoice.png
    :align: center
    :alt: Create an invoice
    :height: 100
