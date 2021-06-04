@@ -43,7 +43,9 @@
                 lastTocEntry = element;
             }
         })
-        deepestTocEntries.push(lastTocEntry); // The last TOC entry is the deepest of its branch
+        if (lastTocEntry) {
+            deepestTocEntries.push(lastTocEntry); // The last TOC entry is the deepest of its branch
+        }
         deepestTocEntries.forEach(deepestTocEntry => {
             const childTocEntryList = deepestTocEntry.querySelector('ul');
             if (childTocEntryList) {
