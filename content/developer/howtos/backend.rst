@@ -1190,9 +1190,9 @@ the action is "bound" to.
 
     <record id="launch_the_wizard" model="ir.actions.act_window">
         <field name="name">Launch the Wizard</field>
-        <field name="model">wizard.model.name</field>
+        <field name="res_model">wizard.model.name</field>
         <field name="view_mode">form</field>
-        <field name="target">new<field>
+        <field name="target">new</field>
         <field name="binding_model_id" ref="model_context_model_ref"/>
     </record>
 
