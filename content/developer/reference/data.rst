@@ -276,7 +276,7 @@ For this case, data files can also use csv_, this is often the case for
   for :term:`external identifiers` (used for creation or update)
 * each row thereafter creates a new record
 
-Here's the first lines of the data file defining US states
+Here's the first lines of the data file defining country states
 ``res.country.state.csv``
 
 .. literalinclude:: static/res.country.state.csv

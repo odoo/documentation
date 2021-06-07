@@ -1,4 +1,3 @@
-
 ==================
 Content guidelines
 ==================
@@ -12,7 +11,7 @@ writing style, some rules still apply to give the reader more clarity and compre
    section of the documentation. Good knowledge of the ins and outs of **RST writing** is required
    to write and submit your contribution. Note that it also affects your writing style itself.
 
-   - :doc:`introduction_guide`
+   - :doc:`../documentation`
    - :doc:`rst_cheat_sheet`
    - :doc:`rst_guidelines`
 
@@ -82,33 +81,33 @@ To write good titles and headings:
   - proper nouns (brands, product and service names, etc.)
   - app features, as written in the apps
 
-  .. important::
-     Do not capitalize common nouns when they are not referred to as features. This is more likely
-     to happen in headings rather than in titles.
+.. important::
+   Do not capitalize common nouns when they are not referred to as features. This is more likely
+   to happen in headings rather than in titles.
 
-  +------------------+-----------------------------------+--------------------------------------------------------+
-  |                  | Examples                          | Explanations                                           |
-  +==================+===================================+========================================================+
-  | | **Titles**     | *Quotation Templates*             | "Quotation Templates" is a feature in Odoo.            |
-  | | (h1)           +-----------------------------------+--------------------------------------------------------+
-  |                  | *Lead Mining*                     | "Lead Mining" is a feature in Odoo.                    |
-  |                  +-----------------------------------+--------------------------------------------------------+
-  |                  | *Resupply from another Warehouse* | "Warehouse" is capitalized as we refer to the feature  |
-  |                  |                                   | in the app rather than to a real warehouse.            |
-  |                  +-----------------------------------+--------------------------------------------------------+
-  |                  | *Synchronize Google Calendar      | "Google Calendar" is a product and "Odoo" is a brand.  |
-  |                  | with Odoo*                        |                                                        |
-  +------------------+-----------------------------------+--------------------------------------------------------+
-  | | **Headings**   | *Confirm the quotation*           | "The quotation" is a common noun not referring to a    |
-  | | (h2, h3, etc.) |                                   | feature in Odoo.                                       |
-  |                  +-----------------------------------+--------------------------------------------------------+
-  |                  | *Test environment*                | "Environment" is a common noun.                        |
-  |                  +-----------------------------------+--------------------------------------------------------+
-  |                  | *Add a new Payment Acquirer*      | "Payment Acquirers" is a feature in Odoo.              |
-  |                  +-----------------------------------+--------------------------------------------------------+
-  |                  | *Generate SEPA Direct Debit XML   | "SEPA Direct Debit" and "XML" are considered as proper |
-  |                  | files to submit payments*         | nouns.                                                 |
-  +------------------+-----------------------------------+--------------------------------------------------------+
++------------------+-----------------------------------+--------------------------------------------------------+
+|                  | Examples                          | Explanations                                           |
++==================+===================================+========================================================+
+| | **Titles**     | *Quotation Templates*             | "Quotation Templates" is a feature in Odoo.            |
+| | (h1)           +-----------------------------------+--------------------------------------------------------+
+|                  | *Lead Mining*                     | "Lead Mining" is a feature in Odoo.                    |
+|                  +-----------------------------------+--------------------------------------------------------+
+|                  | *Resupply from another Warehouse* | "Warehouse" is capitalized as we refer to the feature  |
+|                  |                                   | in the app rather than to a real warehouse.            |
+|                  +-----------------------------------+--------------------------------------------------------+
+|                  | *Synchronize Google Calendar      | "Google Calendar" is a product and "Odoo" is a brand.  |
+|                  | with Odoo*                        |                                                        |
++------------------+-----------------------------------+--------------------------------------------------------+
+| | **Headings**   | *Confirm the quotation*           | "The quotation" is a common noun not referring to a    |
+| | (h2, h3, etc.) |                                   | feature in Odoo.                                       |
+|                  +-----------------------------------+--------------------------------------------------------+
+|                  | *Test environment*                | "Environment" is a common noun.                        |
+|                  +-----------------------------------+--------------------------------------------------------+
+|                  | *Add a new Payment Acquirer*      | "Payment Acquirers" is a feature in Odoo.              |
+|                  +-----------------------------------+--------------------------------------------------------+
+|                  | *Generate SEPA Direct Debit XML   | "SEPA Direct Debit" and "XML" are considered as proper |
+|                  | files to submit payments*         | nouns.                                                 |
++------------------+-----------------------------------+--------------------------------------------------------+
 
 .. _contributing/document-structure:
 
@@ -185,7 +184,7 @@ A few tips to improve your screenshots:
 #. If necessary, you can **edit** the screenshot to remove unnecessary fields and to narrow even
    more Odoo's display.
 
-.. image:: media/screenshot-tips.gif
+.. image:: content_guidelines/screenshot-tips.gif
    :align: center
    :alt: Three tips to take good screenshots for the Odoo documentation.
 

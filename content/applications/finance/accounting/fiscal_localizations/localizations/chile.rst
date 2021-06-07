@@ -377,7 +377,10 @@ You can manually change the document type if needed.
 .. image:: media/Chile15.png
    :align: center
    :alt: Document type selection on invoices.
-
+   
+.. important::
+   Documents type 33: Electronic Invoice must have at least one item with tax, otherwise the SII
+   rejects the document validation.
 
 Validation and DTE Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~

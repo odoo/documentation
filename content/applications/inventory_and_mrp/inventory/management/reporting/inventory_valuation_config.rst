@@ -184,7 +184,7 @@ accounting modes.
 
 Usually, based on your country, the correct accounting mode will be
 chosen by default. If you want to verify your accounting mode, activate
-the :doc:`Developer mode </applications/general/developer_mode>` and open your accounting
+the :ref:`developer mode <developer-mode>` and open your accounting
 settings.
 
 Manual Inventory Valuation

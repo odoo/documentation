@@ -42,4 +42,4 @@ They can choose which Payment Acquirer to use by clicking on *Pay Now*.
 
 .. seealso::
 
-   - :doc:`/applications/general/payment_acquirers/payment_acquirers`
+   - :doc:`/applications/general/payment_acquirers`

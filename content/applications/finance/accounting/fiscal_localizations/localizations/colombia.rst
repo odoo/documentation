@@ -142,7 +142,7 @@ Journals
 Once the DIAN has assigned the official sequence and prefix for the
 electronic invoice resolution, the Sales journals related to your
 invoice documents need to be updated in Odoo.  The sequence can be
-accessed using the :doc:`Developer mode </applications/general/developer_mode>`: :menuselection:`Accounting -->
+accessed using the :ref:`developer mode <developer-mode>`: :menuselection:`Accounting -->
 Settings --> Configuration Setting --> Journals`.
 
 .. image:: media/colombia09.png

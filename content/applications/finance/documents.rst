@@ -33,8 +33,8 @@ on *Create*.
    An action applies to all *Child Workspaces* under the *Parent Workspace* you selected.
 
 .. tip::
-   If you use the :doc:`developer mode <../general/developer_mode/activate>`, you can directly
-   access all your actions by going to :menuselection:`Documents --> Configuration --> Actions`.
+   If you use the :ref:`developer mode <developer-mode>`, you can directly access all your actions
+   by going to :menuselection:`Documents --> Configuration --> Actions`.
 
 Set the conditions
 ------------------
@@ -66,9 +66,8 @@ Advanced condition type: domain
    It is recommended to have some knowledge of Odoo development to properly configure *Domain*
    filters.
 
-To access the *Domain* condition, the :doc:`developer mode <../general/developer_mode/activate>`
-needs to be activated. Once that's done, select the *Domain* condition type, and click on *Add
-Filter*.
+To access the *Domain* condition, the :ref:`developer mode <developer-mode>` needs to be activated.
+Once that's done, select the *Domain* condition type, and click on *Add Filter*.
 
 .. image:: documents/activate-domain-condition.png
    :align: center

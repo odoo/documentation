@@ -14,7 +14,7 @@ Activate the developer mode
 ===========================
 
 In order to have access to the financial report creation interface, the
-:doc:`Developer mode </applications/general/developer_mode>` needs to be activated.
+:ref:`developer mode <developer-mode>` needs to be activated.
 
 Create your financial report
 ============================
