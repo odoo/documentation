@@ -21,22 +21,32 @@
      * TOC entries (<li> elements) that are on the path of the displayed page receive the
      * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
      * the `show` (Bootstrap) class.
-     * Also, the deepest TOC entry receives the `o_deepest_active_toc_entry` class, and its child
-     * TOC entry list receives the `show` class.
+     * Also, the deepest TOC entries of their respective branch receive the
+     * `o_deepest_active_toc_entry` class, and their child TOC entry lists receive the `show` class.
      */
     const _flagActiveTocEntriesAndLists = () => {
-        let deepestTocEntry = undefined;
+        const regexLayer = /\btoctree-l(?<layer>\d+)\b/;
+        let lastLayer = undefined;
+        let lastTocEntry = undefined;
+        const deepestTocEntries = [];
         this.navigationMenu.querySelectorAll('.current').forEach(element => {
             if (element.tagName === 'UL') {
-                // Expand all related <ul>
-                element.classList.add('show');
+                element.classList.add('show'); // Expand all related <ul>
             } else if (element.tagName === 'LI') {
-                // Highlight all <li> in the active hierarchy
-                element.classList.add('o_active_toc_entry');
-                deepestTocEntry = element;
+                element.classList.add('o_active_toc_entry'); // Highlight all active <li>
+                let match = regexLayer.exec(element.className);
+                let currentLayer = parseInt(match.groups.layer, 10);
+                if (lastLayer && currentLayer <= lastLayer) { // We just moved to another branch
+                    deepestTocEntries.push(lastTocEntry);
+                }
+                lastLayer = currentLayer;
+                lastTocEntry = element;
             }
         })
-        if (deepestTocEntry) {
+        if (lastTocEntry) {
+            deepestTocEntries.push(lastTocEntry); // The last TOC entry is the deepest of its branch
+        }
+        deepestTocEntries.forEach(deepestTocEntry => {
             const childTocEntryList = deepestTocEntry.querySelector('ul');
             if (childTocEntryList) {
                 childTocEntryList.classList.add('show');
@@ -44,7 +54,7 @@
                 deepestTocEntry = deepestTocEntry.parentElement.parentElement;
             }
             deepestTocEntry.classList.add('o_deepest_active_toc_entry');
-        }
+        });
     };
 
      document.addEventListener('scroll', () => {
