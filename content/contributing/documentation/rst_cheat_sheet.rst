@@ -14,28 +14,31 @@ Headings
   encounter different heading formatting and in a different order, in which case you should follow
   the formatting in place in the document. In any other case, use the formatting shown below.
 
-+--------------+---------------+-------------------------------+
-| Heading size | Formatting    | Min/Max number of occurrences |
-+==============+===============+===============================+
-| H1           | | ``=======`` | 1/1                           |
-|              | | ``Heading`` |                               |
-|              | | ``=======`` |                               |
-+--------------+---------------+-------------------------------+
-| H2           | | ``Heading`` | 0/∞                           |
-|              | | ``=======`` |                               |
-+--------------+---------------+-------------------------------+
-| H3           | | ``Heading`` | 0/∞                           |
-|              | | ``-------`` |                               |
-+--------------+---------------+-------------------------------+
-| H4           | | ``Heading`` | 0/∞                           |
-|              | | ``~~~~~~~`` |                               |
-+--------------+---------------+-------------------------------+
-| H5           | | ``Heading`` | 0/∞                           |
-|              | | ``*******`` |                               |
-+--------------+---------------+-------------------------------+
-| H6           | | ``Heading`` | 0/∞                           |
-|              | | ``^^^^^^^`` |                               |
-+--------------+---------------+-------------------------------+
++--------------+---------------+
+| Heading size | Formatting    |
++==============+===============+
+| H1           | | ``=======`` |
+|              | | ``Heading`` |
+|              | | ``=======`` |
++--------------+---------------+
+| H2           | | ``Heading`` |
+|              | | ``=======`` |
++--------------+---------------+
+| H3           | | ``Heading`` |
+|              | | ``-------`` |
++--------------+---------------+
+| H4           | | ``Heading`` |
+|              | | ``~~~~~~~`` |
++--------------+---------------+
+| H5           | | ``Heading`` |
+|              | | ``*******`` |
++--------------+---------------+
+| H6           | | ``Heading`` |
+|              | | ``^^^^^^^`` |
++--------------+---------------+
+
+.. important::
+   Each document must have **exactly one H1 heading**. No less, no more.
 
 .. _contributing/markup:
 
@@ -373,13 +376,13 @@ RST
 .. code-block:: rst
 
    .. note::
-      Use this to get the attention of the reader about additional information.
+      Use this admonition to grab the reader's attention about additional information.
 
 Render
 ~~~~~~
 
 .. note::
-   Use this to get the attention of the reader about additional information.
+   Use this admonition to grab the reader's attention about additional information.
 
 .. _contributing/tip:
 
@@ -392,15 +395,32 @@ RST
 .. code-block:: rst
 
    .. tip::
-      Use this to inform the reader about a useful trick that requires an
-      action.
+      Use this admonition to inform the reader about a useful trick that requires an action.
 
 Render
 ~~~~~~
 
 .. tip::
-   Use this to inform the reader about a useful trick that requires an
-   action.
+   Use this admonition to inform the reader about a useful trick that requires an action.
+
+.. _contributing/exercise:
+
+Exercise
+--------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. exercise::
+   Use this admonition to suggest an exercise to the reader.
+
+Render
+~~~~~~
+
+.. exercise::
+   Use this admonition to suggest an exercise to the reader.
 
 .. _contributing/important:
 
@@ -413,13 +433,13 @@ RST
 .. code-block:: rst
 
    .. important::
-      Use this to notify the reader about an important information.
+      Use this admonition to notify the reader about an important information.
 
 Render
 ~~~~~~
 
 .. important::
-   Use this to notify the reader about an important information.
+   Use this admonition to notify the reader about an important information.
 
 .. _contributing/warning:
 
@@ -432,15 +452,15 @@ RST
 .. code-block:: rst
 
    .. warning::
-      Use this to require the reader to proceed with caution with what is
-      described in the warning.
+      Use this admonition to require the reader to proceed with caution with what is described in
+      the warning.
 
 Render
 ~~~~~~
 
 .. warning::
-   Use this to require the reader to proceed with caution with what is
-   described in the warning.
+   Use this admonition to require the reader to proceed with caution with what is described in the
+   warning.
 
 .. _contributing/danger:
 
@@ -453,13 +473,65 @@ RST
 .. code-block:: rst
 
    .. danger::
-      Use this to alarm the reader about a serious threat.
+      Use this admonition to bring the reader's attention to a serious threat.
 
 Render
 ~~~~~~
 
 .. danger::
-   Use this to alarm the reader about a serious threat.
+   Use this admonition to bring the reader's attention to a serious threat.
+
+.. _contributing/custom-admonition:
+
+Custom
+------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. admonition:: Title
+
+   Customize this admonition with a **Title** of your choice.
+
+Render
+~~~~~~
+
+.. admonition:: Title
+
+   Customize this admonition with a **Title** of your choice.
+
+.. _contributing/document-metadata:
+
+Document metadata
+=================
+
+| Sphinx supports document-wide metadata directives that specify a behavior for the entire page.
+| They must be placed between colons (`:`) at the top of the source file.
+
++-----------------+--------------------------------------------------------------------------------+
+| **Metadata**    | **Purpose**                                                                    |
++-----------------+--------------------------------------------------------------------------------+
+| `show-content`  |  Make a toctree page accessible from the navigation menu.                      |
++-----------------+--------------------------------------------------------------------------------+
+| `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
+|                 |    tutorials or code excerpts.                                                 |
+|                 |  | For example, see :doc:`/developer/webservices/upgrade` or                   |
+|                 |    :doc:`/applications/finance/accounting/overview/main_concepts/memento`.     |
++-----------------+--------------------------------------------------------------------------------+
+| `hide-page-toc` | Hide the "On this page" sidebar and use full page width for the content.       |
++-----------------+--------------------------------------------------------------------------------+
+| `custom-css`    | Link CSS files (comma-separated) to the document.                              |
++-----------------+--------------------------------------------------------------------------------+
+| `custom-js`     | Link JS files (comma-separated) to the document.                               |
++-----------------+--------------------------------------------------------------------------------+
+| `classes`       | Assign the specified classes to the `<main/>` element of the document.         |
++-----------------+--------------------------------------------------------------------------------+
+| `orphan`        | Suppress the need to include the document in a toctree.                        |
++-----------------+--------------------------------------------------------------------------------+
+| `nosearch`      | Exclude the document from search results.                                      |
++-----------------+--------------------------------------------------------------------------------+
 
 .. _contributing/formatting-tips:
 
