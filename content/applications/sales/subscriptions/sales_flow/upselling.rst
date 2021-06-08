@@ -80,6 +80,5 @@ The only difference between your two sales orders is the description underneath 
 *Subscription Management* category. There, you can easily visualize which one is your upselling.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
+  - :doc:`../../subscriptions`
   - :doc:`../../subscriptions/sales_flow/create_a_quotation`

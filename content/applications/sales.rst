@@ -10,4 +10,4 @@ Sales
     sales/odoo_crm
     sales/odoo_sales
     sales/point_of_sale
-    sales/odoo_subscriptions
+    sales/subscriptions

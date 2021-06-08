@@ -80,7 +80,6 @@ retention rates very high.
    adapt them to your own needs.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
+  - :doc:`../../subscriptions`
   - :doc:`../../subscriptions/sales_flow/create_a_quotation`
   - :doc:`../../subscriptions/reporting/subscription_reports`

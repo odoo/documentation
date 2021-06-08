@@ -117,6 +117,5 @@ apply and the salesperson you want to analyze.
   :alt: Salesperson dashboard report in Odoo Subscriptions
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
+  - :doc:`../../subscriptions`
   - :doc:`../../subscriptions/sales_flow/create_a_quotation`

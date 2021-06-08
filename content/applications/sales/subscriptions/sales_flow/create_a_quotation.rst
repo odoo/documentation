@@ -19,11 +19,7 @@ Create your first quotation
 ===========================
 
 Before creating your first quotation, be sure to check out our documentation on how to create and
-manage your own
-:doc:`Subscription templates <../../subscriptions/configuration/subscription_templates>`
-and on how to add
-:doc:`Subscription products <../../subscriptions/configuration/subscription_products>`
-to your templates.
+manage your own :doc:`Subscription Templates and Subscription Products <../../subscriptions>`
 
 .. important::
 
@@ -76,8 +72,7 @@ the status is *In progress*. Finally, when a customer decides to close his subsc
 becomes *Closed*.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
+  - :doc:`../../subscriptions`
   - :doc:`../../subscriptions/sales_flow/renewals`
   - :doc:`../../subscriptions/sales_flow/closing`
   - :doc:`../../subscriptions/sales_flow/upselling`

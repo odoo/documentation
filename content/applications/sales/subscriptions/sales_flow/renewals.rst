@@ -77,6 +77,5 @@ to your *Subscriptions dashboard* and use the filter *To renew*.
   :alt: List view of all subscriptions and use of the filter to renew in Odoo Subscriptions
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
+  - :doc:`../../subscriptions`
   - :doc:`../../subscriptions/sales_flow/create_a_quotation`
