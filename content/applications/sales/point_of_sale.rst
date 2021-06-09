@@ -1,3 +1,4 @@
+:nosearch:
 
 =============
 Point of Sale

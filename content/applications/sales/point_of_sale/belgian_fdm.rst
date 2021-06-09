@@ -1,3 +1,5 @@
+:nosearch:
+
 ==========================
 Belgian Fiscal Data Module
 ==========================

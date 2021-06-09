@@ -1,3 +1,5 @@
+:nosearch:
+
 ====================
 Manage your products
 ====================

@@ -1,3 +1,5 @@
+:nosearch:
+
 =====================
 Awesome Timesheet App
 =====================
