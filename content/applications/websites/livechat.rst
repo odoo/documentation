@@ -1,3 +1,4 @@
+:nosearch:
 
 =========
 Live Chat

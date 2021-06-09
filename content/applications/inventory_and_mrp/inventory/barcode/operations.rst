@@ -1,3 +1,5 @@
+:nosearch:
+
 ================
 Daily Operations
 ================

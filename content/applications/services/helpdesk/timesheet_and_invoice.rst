@@ -1,3 +1,5 @@
+:nosearch:
+
 =====================
 Timesheet and Invoice
 =====================

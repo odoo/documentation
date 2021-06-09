@@ -1,3 +1,4 @@
+:nosearch:
 
 ======================
 Other legal references

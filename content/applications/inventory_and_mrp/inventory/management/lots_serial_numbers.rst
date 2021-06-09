@@ -1,3 +1,5 @@
+:nosearch:
+
 =======================
 Lots and Serial Numbers
 =======================
