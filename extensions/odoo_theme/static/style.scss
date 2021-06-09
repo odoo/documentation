@@ -88,6 +88,7 @@ header.o_main_header {
 
     .o_search_wrapper {
         display: flex;
+        position: relative;
         opacity: 1;
         @include transition(opacity .3s);
         @include media-breakpoint-down(lg) {
@@ -95,14 +96,16 @@ header.o_main_header {
             position: absolute;
             width: calc(100% - (#{$padding-s} * 2));
             top: calc(100% + #{$padding-s});
-       }
+        }
+        @include media-breakpoint-up(lg) {
+            flex-grow: 1;
+            max-width: 500px;
+        }
 
         .o_search {
             position: relative;
             width: 100%;
-            @include media-breakpoint-up(lg) {
-                max-width: 500px;
-            }
+
 
             .btn {
                 @include o-position-absolute($top: 50%, $right: 1rem);
@@ -123,17 +126,10 @@ header.o_main_header {
     }
 
     .highlight-link {
-        @media only screen and (max-width: 1242px) and (min-width: 992px){
-            position: absolute;
-            bottom: 0;
-        }
+        @include o-position-absolute($bottom: -1.5rem, $right: 1rem);
         margin-bottom: 0;
-        padding: 0 1rem;
-        text-align: center;
-        align-self: center;
-
         a {
-            @include font-size($font-size-secondary);
+            @include font-size(12px);
         }
     }
 
