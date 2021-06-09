@@ -1,3 +1,4 @@
+:nosearch:
 
 ========================
 Internet of Things (IoT)

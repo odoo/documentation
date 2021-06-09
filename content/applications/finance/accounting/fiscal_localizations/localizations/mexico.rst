@@ -1289,6 +1289,10 @@ The accountant should create a Journal Entry to recognize the result of the year
 Earnings from previous years on the account "previous years results" account (304.01.01 in
 Mexico) - that is an equity account.
 
+After posting the Journal Entry, click on *Mark as Closing Entry for the Fiscal Year*. This step is
+important because it is linked to the Trial Balance report. If this Journal Entry is not marked as a
+Closing Entry, the Trial Balance won't be correct.
+
 The simplified accounting entry would look like this:
 
 .. image:: media/mx_cc_03.png

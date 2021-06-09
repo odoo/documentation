@@ -1,3 +1,5 @@
+:nosearch:
+
 ============================
 Putaway & Removal Strategies
 ============================

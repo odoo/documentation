@@ -1,3 +1,5 @@
+:nosearch:
+
 =================
 Customer Invoices
 =================

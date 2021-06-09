@@ -1,3 +1,5 @@
+:nosearch:
+
 ===================
 Maximize my revenue
 ===================
