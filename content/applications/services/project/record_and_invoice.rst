@@ -1,3 +1,5 @@
+:nosearch:
+
 =======================
 Record Time and Invoice
 =======================
