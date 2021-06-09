@@ -1,3 +1,5 @@
+:nosearch:
+
 ===================
 Database Management
 ===================

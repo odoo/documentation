@@ -1,3 +1,5 @@
+:nosearch:
+
 =========================================
 Request for Quotation and Purchase Orders
 =========================================

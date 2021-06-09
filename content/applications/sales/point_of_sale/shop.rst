@@ -1,3 +1,5 @@
+:nosearch:
+
 ======================
 Advanced Shop Features
 ======================

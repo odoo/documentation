@@ -1,3 +1,5 @@
+:nosearch:
+
 =============================
 Configuration and basic usage
 =============================

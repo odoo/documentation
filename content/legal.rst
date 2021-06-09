@@ -1,6 +1,7 @@
-:orphan:
-:custom-css: legal.css
+:show-content:
 :hide-page-toc:
+:custom-css: legal.css
+:orphan:
 
 =====
 Legal

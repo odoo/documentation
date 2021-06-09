@@ -1,3 +1,5 @@
+:nosearch:
+
 ============================
 Advanced Restaurant Features
 ============================

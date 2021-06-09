@@ -1,3 +1,4 @@
+:nosearch:
 :types: api
 
 ============
