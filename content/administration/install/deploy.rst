@@ -9,7 +9,6 @@ internet.
 
 .. warning:: If you are setting up a public server, be sure to check our :ref:`security` recommandations!
 
-
 .. _db_filter:
 
 dbfilter
@@ -64,6 +63,7 @@ in ``/etc/odoo.conf`` set:
   dbfilter = ^%d$
 
 .. note::
+
   Setting a proper :option:`--db-filter <odoo-bin --db-filter>` is an important part
   of securing your deployment.
   Once it is correctly working and only matching a single database per hostname, it
@@ -71,7 +71,6 @@ in ``/etc/odoo.conf`` set:
   and to use the ``--no-database-list`` startup parameter to prevent listing
   your databases, and to block access to the database management screens.
   See also security_.
-
 
 PostgreSQL
 ==========
@@ -196,7 +195,6 @@ be better monitored and resource-restricted.
 
 .. warning:: multiprocessing mode currently isn't available on Windows
 
-
 Worker number calculation
 -------------------------
 
@@ -228,8 +226,6 @@ To achieve such a thing, you'll need to deploy a reverse proxy in front of Odoo,
 like nginx or apache. When doing so, you'll need to forward some more http Headers
 to Odoo, and activate the proxy_mode in Odoo configuration to have Odoo read those
 headers.
-
-
 
 Configuration sample
 --------------------
@@ -289,59 +285,59 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
 
   #odoo server
   upstream odoo {
-   server 127.0.0.1:8069;
+    server 127.0.0.1:8069;
   }
   upstream odoochat {
-   server 127.0.0.1:8072;
+    server 127.0.0.1:8072;
   }
 
   # http -> https
   server {
-     listen 80;
-     server_name odoo.mycompany.com;
-     rewrite ^(.*) https://$host$1 permanent;
+    listen 80;
+    server_name odoo.mycompany.com;
+    rewrite ^(.*) https://$host$1 permanent;
   }
 
   server {
-   listen 443;
-   server_name odoo.mycompany.com;
-   proxy_read_timeout 720s;
-   proxy_connect_timeout 720s;
-   proxy_send_timeout 720s;
+    listen 443;
+    server_name odoo.mycompany.com;
+    proxy_read_timeout 720s;
+    proxy_connect_timeout 720s;
+    proxy_send_timeout 720s;
 
-   # Add Headers for odoo proxy mode
-   proxy_set_header X-Forwarded-Host $host;
-   proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-   proxy_set_header X-Forwarded-Proto $scheme;
-   proxy_set_header X-Real-IP $remote_addr;
+    # Add Headers for odoo proxy mode
+    proxy_set_header X-Forwarded-Host $host;
+    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto $scheme;
+    proxy_set_header X-Real-IP $remote_addr;
 
-   # SSL parameters
-   ssl on;
-   ssl_certificate /etc/ssl/nginx/server.crt;
-   ssl_certificate_key /etc/ssl/nginx/server.key;
-   ssl_session_timeout 30m;
-   ssl_protocols TLSv1.2;
-   ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
-   ssl_prefer_server_ciphers off;
+    # SSL parameters
+    ssl on;
+    ssl_certificate /etc/ssl/nginx/server.crt;
+    ssl_certificate_key /etc/ssl/nginx/server.key;
+    ssl_session_timeout 30m;
+    ssl_protocols TLSv1.2;
+    ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
+    ssl_prefer_server_ciphers off;
 
-   # log
-   access_log /var/log/nginx/odoo.access.log;
-   error_log /var/log/nginx/odoo.error.log;
+    # log
+    access_log /var/log/nginx/odoo.access.log;
+    error_log /var/log/nginx/odoo.error.log;
 
-   # Redirect longpoll requests to odoo longpolling port
-   location /longpolling {
-   proxy_pass http://odoochat;
-   }
+    # Redirect longpoll requests to odoo longpolling port
+    location /longpolling {
+      proxy_pass http://odoochat;
+    }
 
-   # Redirect requests to odoo backend server
-   location / {
-     proxy_redirect off;
-     proxy_pass http://odoo;
-   }
+    # Redirect requests to odoo backend server
+    location / {
+      proxy_redirect off;
+      proxy_pass http://odoo;
+    }
 
-   # common gzip
-   gzip_types text/css text/scss text/plain text/xml application/xml application/json application/javascript;
-   gzip on;
+    # common gzip
+    gzip_types text/css text/scss text/plain text/xml application/xml application/json application/javascript;
+    gzip on;
   }
 
 Odoo as a WSGI Application
@@ -558,9 +554,6 @@ Here is what it could look like for blocking the IP for 15 minutes when
     findtime = 60  ; within 1 min  /!\ Should be adjusted with the TZ offset
     logpath = /var/log/odoo.log  ;  set the actual odoo log path here
 
-
-
-
 .. _db_manager_security:
 
 Database Manager Security
@@ -623,11 +616,9 @@ Here are the supported browsers:
 .. warning:: Please make sure your browser is up-to-date and still supported by
     its publisher before filing a bug report.
 
-
 .. note::
 
     Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped.
-
 
 .. [#different-machines]
     to have multiple Odoo installations use the same PostgreSQL database,
