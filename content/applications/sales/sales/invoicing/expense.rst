@@ -3,8 +3,8 @@ Re-invoice expenses to customers
 ================================
 
 It often happens that your employees have to spend their personal money
-while working on a project for your client. Let's take the example of an
-consultant paying an hotel to work on the site of your client. As a
+while working on a project for your client. Let's take the example of a
+consultant paying for a hotel to work on the site of your client. As a
 company, you would like to be able to invoice that expense to your
 client.
 
