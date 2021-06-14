@@ -518,7 +518,7 @@ Document metadata
 | `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
 |                 |    tutorials or code excerpts.                                                 |
 |                 |  | For example, see :doc:`/developer/webservices/upgrade` or                   |
-|                 |    :doc:`/applications/finance/accounting/overview/main_concepts/memento`.     |
+|                 |    :doc:`/applications/finance/accounting/getting_started/memento`.            |
 +-----------------+--------------------------------------------------------------------------------+
 | `hide-page-toc` | Hide the "On this page" sidebar and use full page width for the content.       |
 +-----------------+--------------------------------------------------------------------------------+
