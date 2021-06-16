@@ -1,225 +1,187 @@
-======================
-Using product variants
-======================
+================
+Product variants
+================
 
-Product variants are used to manage products having different
-variations, like size, color, etc. It allows managing the product at the
-template level (for all variations) and at the variant level (specific
-attributes).
+Product variants are used to give single products a variety of different characteristics, such as
+size and color. Products using variants can be managed at the product template level (for all
+attributes and variants of that product), and/or at the variant level (for individual variants).
 
-As an example, a company selling t-shirts may have the following
-product:
+As an example, a company selling t-shirts may have the following product:
 
-- B&C T-shirt
+- T-shirt
 
-  - Sizes: S, M, L, XL, XXL
-  - Colors: Blue, Red, White, Black
+  - Color: Blue, Red, White, Black
+  - Size: S, M, L, XL, XXL
 
-In this example, **B&C T-Shirt** is called the product template and
-**B&C T-Shirt, S, Blue** is a variant. Sizes and color are
-**attributes**.
+In this example, the **T-Shirt** is the product template, and **T-Shirt, S, Blue** is a product
+variant. **Color** and **size** are the attributes. **S** and **Blue** are values.
 
-The above example has a total of 20 different products (5 sizes x 4
-colors). Each one of these products has its own inventory, sales, etc.
-
-Impact of variants
-==================
-
-- **Barcode**: the code and barcode is associated to a variant, not the
-  template. Every variant may have its own barcode / SKU.
-
-- **Price**: every product variant has its own public price that is
-  computed based on the template price ($20) with an optional extra
-  for every variant (+$3 for color red). However, you can define
-  pricelist rules that apply on the template or the variant.
-
-- **Inventory**: the inventory is managed by product variant. You don't
-  own t-shirts, you only own "T-shirts, S, Red", or "T-Shirts, M,
-  Blue". For information purpose, on the product template form, you
-  get the inventory that is the sum of every variant. (but the
-  actual inventory is computed by variant)
-
-- **Picture**: the picture is related to the variant, every variation
-  of a product may have its own primary picture.
-
-- **Other fields**: most of the other fields belongs to the product
-  template. If you update them, it updates automatically all the
-  variants. (example: Income Account, Taxes)
-
-Should you use variants?
-========================
-
-When should you use variants?
------------------------------
-
-Using variants has the following impacts:
-
-- **eCommerce**: in your online shop, the customer will only see
-  product templates in the catalog page. Once the visitor click on
-  such a product, he will have options to choose amongst the
-  variants (colors, sizes, …)
-
-- **Manufacturing**: Using variants allows to define only one bill of
-  material for a product template and slight variations for some of
-  the variants. Example: instead of creating a Bill of Material for
-  "T-shirt, Red, S", you create a bill of material for "T-shirt"
-  and add some lines that are specific to the dimension S, and
-  other lines specific to the color Red.
-
-- **Pricing**: The default price of a product is computed using the
-  price of the product template and add the optional extra price on
-  each dimension of the variant. This way, variant prices are
-  easier to maintain since you don't have to set the price for
-  every variant. However, it's possible to create pricelist rules
-  to fix price per variants too.
-
-When should you avoid using variants?
--------------------------------------
-
-Using variants may add a level of complexity on the way you use Odoo.
-You should consider using variants only if you need it to reduce the
-complexity of managing lots of products that are similars.
-
-As an example, importing your initial product catalog is more complex if
-you use variants. You can't just import a list of products, you must
-import product templates and all their related variations.
-
-In addition to that, you should also carefully select the dimensions
-that you manage as separate product templates and those as variants. As
-an example, a company having these products:
-
-- Quality: T-Shirts, Polos, Shirts
-
-- Color: Red, Blue
-
-- Size: S, M, L, XL
-
-In such a use case, you could create 1 template with three dimensions of
-variants (Layout, T-Shirts, Polos). But, it's recommended to create two
-different product templates as T-shirts may highly differ from polos or
-shirts and customer expect to see these as two different products in the
-e-Commerce:
-
-- Product Template: T-shirt
-
-  - Color: Red, Blue
-  - Size: S, M, L, XL
-
-- Product Template: Polos
-
-  - Color: Red, Blue
-  - Size: S, M, L, XL
+The above example has a total of 20 different product variants (5 sizes x 4 colors). Each one of
+these has its own inventory, sales, etc.
 
 Configuration
 =============
 
-Activate the variant feature
-----------------------------
+Activating product variants
+---------------------------
 
-Before you can use product variants, you must first activate the product
-variants in the settings. To do so, you must go to the Sales app. In the
-menu :menuselection:`Configuration --> Settings`, locate the **Products Variants** line,
-and tick the option **Products can have several attributes**, then click
-on **Apply**.
+To use product variants, go to :menuselection:`Sales --> Configuration --> Settings -->
+Product Catalog`, and enable the :guilabel:`Variants` feature. Finally, click :guilabel:`Save` to
+apply the setting.
 
-.. image:: variants/variant01.png
+.. image:: variants/activating-variants-setting.png
    :align: center
+   :alt: Activating product variants.
 
-Creating products with variants
--------------------------------
+Creating attributes
+-------------------
 
-Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, :menuselection:`Sales --> Products`.
-It is also accessible from the Purchase and inventory modules.
+Attributes need to be created before product variants can be set up. Attributes can be accessed
+via :menuselection:`Sales --> Configuration --> Products --> Attributes`.
 
-Now, click on the product you wish to add variants to.
+.. note::
+   The order of attributes on the :guilabel:`Attributes` page dictates how they appear on the
+   :guilabel:`Product Configurator`, :guilabel:`Point of Sale` dashboard, and :guilabel:`eCommerce`
+   pages.
 
-In the product page, a new tab called Variants has appeared. The number
-in purple written on top is the number of variants this product
-currently has. To add new variants, click on the tile. In the new
-window, click on **Create**.
+To create a new attribute, click :guilabel:`Create`. First, choose an attribute name, such as
+"Color" or "Size."
 
-In **Attributes**, click on the rolldown menu and select the type of
-variance you wish to add. If the variant does not yet exist, you can
-create it on the fly by clicking on Create and edit…
-
-.. image:: variants/variant02.png
+.. image:: variants/attribute-creation.png
    :align: center
+   :alt: Attribute creation window.
 
-In the Attributes window, the **Value** field is the description of the
-attribute such as Green, Plastic or 32GB. The **Attribute** field is the
-type of variant such as Color, Material or Memory.
+Then, select a :guilabel:`Display Type`, which determines how this product will be shown on the
+:guilabel:`eCommerce` page, :guilabel:`Point of Sale` dashboard, and :guilabel:`Product
+Configurator`.
 
-.. image:: variants/variant03.png
+- :guilabel:`Radio`: options appear in a bullet style list.
+- :guilabel:`Select`: options appear in a dropdown menu.
+- :guilabel:`Color`: options appear as small colored squares, which reflect any HTML color codes
+  set.
+
+.. image:: variants/display-types.png
    :align: center
+   :alt: Display Types on Product Configurator.
 
-You can add a cost for the variant on the fly by adding it in the
-**Attribute Price Extra** field, or choose to modify it later. Click on
-**Save**.
+The :guilabel:`Variants Creation Mode` informs Odoo when to automatically create a new variant once
+an attribute is added to a product.
 
-You can also add a different barcode and internal reference to the
-variant.
+- :guilabel:`Instantly`: creates all possible variants as soon as attributes and values are added
+  to a product template.
+- :guilabel:`Dynamically`: creates variants only when corresponding attributes and values are added
+  to a sales order.
+- :guilabel:`Never`: never automatically creates variants.
 
-When you have entered all the specifications of the variant, click on
-**Save**.
+.. note::
+   Once added to a product, an attribute's :guilabel:`Variants Creation Mode` cannot be edited.
 
-Managing Product Variants
-=========================
+Values should be added to an attribute before saving, but more values can be added at any time,
+if needed. To add a value, click :guilabel:`Add a line`. From there, you can:
 
-Introduction
-------------
+#. Type in the value's name.
+#. Check a box to indicate whether or not the value is custom (i.e. the customer provides unique
+   specifications).
+#. Specifically for colors, add an HTML color code to make it even easier for salespeople and
+   customers to know what they're selecting.
 
-The examples below are all based on this product template that has two
-variant attributes :
+A color code can be selected either by dragging the slider around or by entering a specific HTML
+color code (e.g. #FF0077).
 
--  T-Shirt B&C
-
-   -  Color: Red, Blue, White
-
-   -  Size: S, M, L, XL, XXL
-
-Managing combination possibilities
-----------------------------------
-
-By default, with the above product template, you get 15 different
-products (3 colors, 5 sizes). If the XXL size only exists for red and
-blue t-shirts, you can deactivate the white product variant.
-
-To do this, click on the **Variants** button, select the XXL, White
-T-shirt. From the product form, uncheck the **Active** box of the T-shirt
-White, XXL.
-
-.. image:: variants/variant04.png
+.. image:: variants/picking-a-color.png
    :align: center
+   :alt: Selecting a color.
+
+Finally, click :guilabel:`Save` to finish creating the attribute.
 
 .. tip::
+   Attributes can also be created directly from the product template by adding a new line and
+   typing the name into the :guilabel:`Variants` tab.
 
-  That deactivating a product is different than having an inventory of 0.
+After an attribute is added to a product, a new tab appears on the attribute's page called
+:guilabel:`Related Products`. This tab lists every product in the database that is currently using
+the attribute.
+
+Creating product variants
+-------------------------
+
+After creating an attribute, use the attribute to create a product variant by going to
+:menuselection:`Sales --> Products --> Products`. Then, select an existing product and click
+:guilabel:`Edit`, or create a new product by clicking :guilabel:`Create`.
+
+The :guilabel:`Variants` smart button at the top of the product template indicates the number of
+currently configured variants on the product.
+
+To add a new variant, click on the :guilabel:`Variants` tab, then click on :guilabel:`Add a line`
+to add any attributes and values. When all the attributes and values have been added, click
+:guilabel:`Save`.
+
+.. tip::
+   Similar product variant creation processes are accessible through the Purchase, Inventory, and
+   eCommerce applications.
+
+Managing product exclusions
+---------------------------
+
+The following examples are all based on a product template that has two attributes:
+
+- T-Shirt
+
+  - Color: Blue, Red, White
+  - Size: S, M, L, XL, XXL
+
+With the above product template, there are 15 different t-shirt variants in three different colors
+and five different sizes. If the white t-shirts are not available in the XXL size, then that
+variant can be deactivated.
+
+To deactivate a particular product variant, go to :menuselection:`Sales --> Products --> Products`
+and select the relevant product. Next, click on the :guilabel:`Configure Variants` button, open the
+relevant product variant attribute value form (in this example, the :guilabel:`White Color`
+attribute), and then click on :guilabel:`Edit`.
+
+In the :guilabel:`Exclude for` section, click :guilabel:`Add a line` and select any product(s)
+and/or specific attribute values that are currently unavailable. Finally, click :guilabel:`Save` to
+apply the setting, and Odoo will automatically show the product variant as unavailable on the
+eCommerce page.
+
+.. image:: variants/attributes-exclusions.png
+   :align: center
+   :alt: Excluding attributes.
 
 Setting a price per variant
 ---------------------------
 
-You can add a cost over the main price for some of the variants of a
-product.
+Extra costs can be added to a product's standard price for specific product variants.
 
-Once you have activated the variant option, you can add variants to your
-products. To do so, go to the Sales module, open :menuselection:`Sales --> Products`
-and click on the product you want to modify. Click on the **Variant Prices**
-button to access the list of variant values.
+To do this, open :menuselection:`Sales --> Products --> Products`, and click on the relevant
+product. Next, click on :guilabel:`Configure Variants` to access the list of product variant
+values.
 
-.. image:: variants/variant05.png
+Then, click on a variant value, and :guilabel:`Edit`. In the :guilabel:`Value Price Extra` field,
+type in the additional cost for this particular value. This amount is added to the standard price.
+Finally, click :guilabel:`Save` to apply the extra price to the value.
+
+.. image:: variants/value-price-extra.png
    :align: center
+   :alt: Value Price Extra setting.
 
-Click on the variant name you wish to add a value to, to make the 3
-fields editable. In the **Attribute Price Extra** field, add the cost of
-the variant that will be added to the original price.
+Impact of variants
+==================
 
-.. image:: variants/variant06.png
-   :align: center
+- :guilabel:`Barcode`: barcodes are associated with each variant instead of the product template.
+  Each individual variant can have its own unique barcode/SKU.
 
-When you have entered all the extra values, click on **Save**.
+- :guilabel:`Price`: every product variant has its own public price, which is the sum of the
+  product template price and any extra charges for particular attributes. For example, a red
+  shirt's cost is $23 because the shirt's template price is $20, plus an additional $3 for the red
+  color variant. Pricelist rules can be configured to apply to the product template or to the
+  variant.
 
-.. seealso::
-   - `Accounting Memento: Details of Journal Entries
-     </applications/finance/accounting/overview/main_concepts/memento.html#journal-entries>`_
-   - :doc:`/applications/finance/accounting/getting_started/process_overview/supplier_bill`
+- :guilabel:`Inventory`: inventory is counted for each individual product variant. On the product
+  template form, the inventory reflects the sum of all variants, but the actual inventory is
+  computed by individual variants.
+
+- :guilabel:`Picture`: each product variant can have its own specific picture.
+
+.. note::
+   Changes to the product template automatically apply to every variant of that product.
