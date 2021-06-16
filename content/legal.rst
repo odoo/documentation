@@ -10,9 +10,9 @@ Legal
 .. toctree::
     :hidden:
 
+    legal/cla
     legal/licenses
     legal/terms
-    legal/others
 
 Licenses
 ========
