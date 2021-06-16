@@ -1308,6 +1308,179 @@ reporting a balance 0.
    :align: center
    :alt: Check BS closing
 
+XML Polizas Export
+------------------
+
+The Polizas XML export is a legal requirement in Mexico whenever:
+
+- The SAT (`Servicios de Administracion Tributaria (es) <https://www.sat.gob.mx/home>`_)
+  requires a compulsory audit to check the Journal Entries of the company.
+  Every company has a chance to be asked for it - the bigger the company, the higher the chances are.
+  For example, our MX office could be a case that will need this in the future.
+- The company itself asks for a Compensation or Return from the SAT
+
+XML files need to be produced with all the Journal Entries posted in a specific timeframe chosen by the user.
+These XML files need then to be uploaded to the SAT website.
+
+The nested structure of the XML file contains:
+
+- a header tag ``<PLZ:Polizas/>``
+- that contains a group of Journal Entries tags ``<PLZ:Poliza/>``
+- and each Journal Entry tag contains a list of Journal Items tags ``<PLZ:Transaccion/>``
+
+Workflow
+~~~~~~~~
+
+A "EXPORT XML (POLIZAS)" button has been added to the header of the General Ledger.
+
+.. tip::
+    | You can find the item filed under:
+    |
+    | :menuselection:`Accounting --> Reporting --> Audit Reports --> General Ledger`
+
+.. image:: media/mx_mo_??.png
+   :align: center
+   :alt: Menu selection for the General Ledger
+
+.. image:: media/mx_mo_??.png
+   :align: center
+   :alt: Filtered General Ledger, with the XML Export (Polizas) button
+
+The user can now filter the General Ledger to select the period that has to be exported.
+
+Once the button is clicked, a wizard appears, where the user can fill out the required fields.
+
+If the **Export Type** is ``AF`` (*Tax Audit*) or ``FC`` (*Audit Certification*),
+then the field **Order Number** is made visibile and required.
+
+Otherwise, if the Export Type is ``DE`` (*Return of goods*) or ``CO`` (*Compensation*),
+then the field **Process Number** field is made visible and required.
+
+When all the fields are set up, the **Export** button leads to the XML files generation.
+
+Each XML contains all the moves posted in a specific Year and month.
+If the user selects a period larger than a single month, a ZIP file is downloaded with the XML files inside, divided by period (Year and Month).
+
+.. warning::
+    When the period extends on part of a month (also if the current month is selected
+    and today it's not the last day of the month), then a warning is shown.
+
+    Warnings are also shown if the Ledger is filtered by Journal or if Unposted Entries are shown.
+    The SAT requires all the entries for each month, and only Posted Entries to be included,
+    but the user is allowed to anyway export the XML file as it is, if he sees fit, for other purposes.
+
+.. image:: media/mx_mo_??.png
+   :align: center
+   :alt: All the warnings that can appear.
+
+File format
+~~~~~~~~~~~
+
+**Filename**: ``{VAT code}{yyyyMM}.xml``
+Every Year/Month needs to be in a separate XML file, with a defined filename.
+
+**XSD Schema**: ``http://www.sat.gob.mx/esquemas/ContabilidadE/{version}/PolizasPeriodo/PolizasPeriodo_{version}.xsd``
+We use version 1_3 (1.3) at the moment, as required by the test tool
+
+`SAT Test Tool <https://ceportalvalidacionprod.clouda.sat.gob.mx>`_
+
+Fields Description
+~~~~~~~~~~~~~~~~~~
+
+Header fields
+*************
+
+**TipoEnvio** (Sending Type):
+A Selection that needs to be selected prior to export the info
+
+- **AF**: Tax Audit
+- **FC**: Audit Certification
+- **DE**: Return of Goods
+- **CO**: Compensation
+
+Required: Yes
+
+**NumOrden** (Order number):
+
+Attribute to express the order number assigned to the tax audit to which the Journal Entry application refers.
+
+Pattern: ``[A-Z]{3}[0-6][0-9][0-9]{5}(/)[0-9]{2}``
+Required: only when TipoEnvio is ``AF`` or ``FC``
+
+**NumTramite** (Application Number)
+Attribute to express the process number assigned to the request for refund or compensation to which the request for the Journal Entry refers.
+
+Pattern: ``[0-9]{10}``
+Required: only when TipoEnvio is ``DE`` or ``CO``
+
+**Anio** (Year)
+
+Year part of the filter that has been used to select the Journal Entries.
+Valid years go from ``2015`` to ``2099``.
+
+Pattern: ``[0-9]{4}``
+Required: Yes
+
+**Month** (Month)
+
+Year part of the filter that has been used to select the Journal Entries.
+The numeric value must be 2 digits long, preceded by zero if it's less than ten.
+
+Pattern: ``[0-1][0-9]``
+Required: Yes
+
+**RFC**
+The company's VAT number.
+
+Required: Yes
+Pattern: ``[A-ZÑ&]{3,4}[0-9]{2}[0-1][0-9][0-3][0-9][A-Z0-9]?[A-Z0-9]?[0-9A-Z]?``
+
+**Version**
+Hardcoded value of the XSD schema
+Pattern: 1.3
+
+Journal Entries fields
+**********************
+
+**Fecha** (Date)
+Date of the Journal Entry
+Required: Yes
+
+**Concepto**
+Name of the Journal Entry
+Max length: 300
+Required: Yes
+
+**NumUnIdenPol** (Poliza Identifier)
+Name/Number of the Journal Entry
+Max length: 50
+Required: Yes
+
+Journal Items fields
+********************
+
+**Concepto**
+Concatenation of the Journal Name and the Journal Item's label
+Max length: 200
+
+**Haber** (Credit)
+Credit of the Journal Item
+Required: Yes
+
+**Debe** (Debit)
+Debit of the Journal Item
+Required: Yes
+
+**DesCta** (Account description)
+Name of the Account linked in the Journal Item
+Max Length: 100
+Required: Yes
+
+**NumCta** (Account name)
+Code of the Account linked in the Journal Item
+Max Length: 100
+Required: Yes
+
 Extra Recommended features
 ==========================
 
