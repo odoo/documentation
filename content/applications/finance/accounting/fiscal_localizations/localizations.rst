@@ -15,6 +15,7 @@ Localizations
    localizations/france
    localizations/germany
    localizations/indonesia
+   localizations/italy
    localizations/italy_IT
    localizations/mexico
    localizations/netherlands
