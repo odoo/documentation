@@ -119,9 +119,10 @@ In the resulting form, put your full address (including zip code), RFC (VAT numb
 the data.
 
 .. important::
-   From a legal point of view, a Mexican company must use the local currency (MXN). Therefore,
-   Odoo does not provide features to manage an alternative configuration. If you want
-   to manage another currency, let MXN be the default currency and use price list instead.
+   From a legal point of view, a Mexican company must use the local currency (MXN). Therefore, Odoo
+   does not provide features to manage an alternative configuration. If you want to manage another
+   currency, let MXN be the default currency and use a :doc:`pricelist
+   </applications/sales/sales/products_prices/prices/pricing>` instead.
 
 .. warning::
    Make sure that in the address, for the Country field, "Mexico" is chosen from the list of
