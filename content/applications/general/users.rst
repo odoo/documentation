@@ -67,12 +67,11 @@ groups.
 Deactivate Users
 ================
 
-Go to :menuselection:`Settings --> Users & Companies --> Users`, open the user you want to deactivate, click on
-*Action*, and then on *Archive*.
+Go to :menuselection:`Settings --> Users & Companies --> Users`, open the user you want to
+deactivate, click on *Action*, and then on *Archive*.
 
 .. danger::
    **Never** deactivate the main user (*admin*).
-
 
 .. _users/passwords-management:
 
