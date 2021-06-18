@@ -118,6 +118,12 @@ click on *Update information* under your company name.
 In the resulting form, put your full address (including zip code), RFC (VAT number), and the rest of
 the data.
 
+.. important::
+   From a legal point of view, a Mexican company must use the local currency (MXN). Therefore, Odoo
+   does not provide features to manage an alternative configuration. If you want to manage another
+   currency, let MXN be the default currency and use a :doc:`pricelist
+   </applications/sales/sales/products_prices/prices/pricing>` instead.
+
 .. warning::
    Make sure that in the address, for the Country field, "Mexico" is chosen from the list of
    countries that Odoo shows, because if it is entered manually there is a risk of creating a "new
