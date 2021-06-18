@@ -16,94 +16,70 @@ General
     general/in_app_purchase
     general/unsplash
 
-.. _general/users-features:
+**Odoo** is a suite of open source business apps that cover all your company needs: :doc:`CRM
+<sales/crm>`, :doc:`eCommerce <websites/ecommerce>`, :doc:`accounting <finance/accounting>`,
+:doc:`inventory <inventory_and_mrp/inventory>`, :doc:`point of sale <sales/point_of_sale>`,
+:doc:`project management <services/project>`, etc. Its unique value proposition is to be at the same
+time *very easy* to use and *fully integrated*.
 
-Users and Features
-==================
+This section of the documentation covers all functional aspects that aren't app-specific. You can
+find, for example, information about:
 
-As the administrator of your database, you are responsible for its usage.
-This includes the Apps you install as well as the number of users currently
-in use.
+- :doc:`general/users` and :doc:`general/users/access_rights`, to configure each user correctly.
+- :doc:`general/export_import_data`, to transfer data from and to other environments than Odoo or
+  update data.
+- :doc:`general/payment_acquirers`, to allow your customers to pay with their favorite payment
+  method.
+- :doc:`general/auth/google`, as an authentication method.
 
-Odoo is many things (ERP, CMS, CRM application, e-Commerce backend, etc.)
-but it is *not* a smartphone. You should apply caution when adding/removing
-features (especially Apps) on your database since this may impact your
-subscription amount significantly (or switch you from a free account
-to a paying one on our online platform).
+.. important::
+   - | **Installing or uninstalling apps, managing users, etc., is up to you.**
+     | As the administrator of your database, you are responsible for its usage, as you know best
+       how your organization works. This includes the installation or uninstallation of :ref:`apps
+       <general/apps-modules>` as well as the number of :doc:`users <general/users>` currently in
+       use.
+   - | **Odoo apps have dependencies.**
+     | Installing some apps and features with dependencies may also install additional apps and
+       modules that are technically required, even if you won't actively use them.
+   - | **Always test app installation/removal on a duplicate of your database.**
+     | This way, you can know what app dependencies may be required or what data may be erased.
 
-This section contains some information as to how you can manage your Odoo
-instances. Before carrying any of these procedures, we **strongly** advise
-to test them on a duplicate of your database first. That way, if something goes
-wrong, your day-to-day business is not impacted.
+.. seealso::
+   - :ref:`Online Database management: Duplicate a database <duplicate_online>`
+   - :ref:`On-premises Database management: Duplicate a database <duplicate_premise>`
+   - `Submit a Support Ticket <https://www.odoo.com/help>`_
 
-.. note:: You can find guides on how to duplicate your databases both for
-    :ref:`online <duplicate_online>` and :ref:`on premise <duplicate_premise>`
-    installations.
+.. _general/apps-modules:
 
-.. note:: If you have questions about the content of this section or if you
-    encounter an issue while carrying out these procedures, please contact
-    us through our `support form <https://www.odoo.com/help>`__.
+Apps and modules
+================
 
+Odoo is *not a smartphone*, and its apps shouldn't be installed or uninstalled carelessly. Apply
+caution when adding or removing apps and modules on your database since this may impact your
+subscription costs.
 
-Uninstalling Apps
------------------
+.. _general/uninstall:
 
-.. warning:: Make sure you first test what you are about to do on a
-    :ref:`duplicate <duplicate_online>` of your database before making any
-    changes (*especially* installing/uninstalling apps).
+Uninstall apps and modules
+--------------------------
 
-In your Odoo instance click on **Settings**; in this app, you will be
-able to see how many applications you have installed. Click on **Browse
-Apps** to access the list of your installed applications.
-
-+----------------+----------------+
-|   |settings|   | |browse_apps|  |
-+----------------+----------------+
-
-In your applications' dashboard, you will see all the icons of your
-applications. Click on the application you want to uninstall. Then, on
-the form of the application, click on **Uninstall**.
+Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to uninstall, then on
+*Uninstall*.
 
 .. image:: general/uninstall.png
-    :align: center
+   :align: center
 
-.. danger:: Some applications have dependencies, like Invoicing, eCommerce,
-    etc. Therefore, the system will give you a warning message to advise
-    you of what is about to be removed. If you uninstall your application,
-    all its dependencies will be uninstalled as well (and the data in them
-    will permanently disappear). If you are sure you still want to uninstall
-    it, then click **Confirm**.
-
-Last, after having checked the warning message (if any), click **Confirm**.
+Some apps have dependencies, meaning that one app requires another. Therefore, uninstalling one app
+may uninstall multiple apps and modules. Odoo warns you which dependant apps and modules are
+affected by it.
 
 .. image:: general/uninstall_deps.png
-    :align: center
+   :align: center
 
-You have finished uninstalling your application.
+To complete the uninstallation, click on *Confirm*.
 
-Good to know
-------------
-
-* **Uninstalling apps, managing users, etc. is up to you**: no one else can
-  know if your business flow is broken better than you. If we were to uninstall
-  applications for you, we would never be able to tell if relevant data had
-  been removed or if one of your business flow was broken because we *do not
-  know how you work* and therefore cannot validate these kinds of operations.
-
-* **Odoo Apps have dependencies**: this means that you may need to install
-  modules that you do not actively use to access some features of Odoo
-  you might need. For example, the Website Builder app is needed to be
-  able to show your customer their Quotes in a web page. Even though you
-  might not need or use the Website itself, it is needed for the Online
-  Quotes feature to work properly.
-
-* **Always test app installation/removal on a duplicate** (or on a
-  free trial database): that way you can know what other apps may
-  be required, etc. This will avoid surprises when uninstalling
-  or when receiving your invoices.
-
-.. |settings| image:: general/settings_app.png
-.. |browse_apps| image:: general/browse_apps.png
+.. danger::
+   Uninstalling an app also uninstalls all its dependencies and permanently erases their data.
 
 .. _developer-mode:
 
@@ -112,8 +88,8 @@ Activate the developer mode (debug mode)
 
 The developer mode (or debug mode) gives you access to extra and advanced tools.
 
-Through the Settings application
---------------------------------
+Through the Settings
+--------------------
 
 Go to :menuselection:`Settings --> Activate the developer mode`.
 
