@@ -45,41 +45,6 @@ wrong, your day-to-day business is not impacted.
     us through our `support form <https://www.odoo.com/help>`__.
 
 
-Deactivating Users
-------------------
-
-.. note:: Make sure you have sufficient **administrative rights** if
-    you want to change the status of any of your users.
-
-In your Odoo instance, click on **Settings**. You will have a section
-showing you the active users on your database. Click on **Manage Users.**
-
-+----------------+----------------+
-|   |settings|   | |browse_users| |
-+----------------+----------------+
-
-You'll then see the list of your users.
-
-.. image:: general/list_users.png
-    :align: center
-
-.. note:: The pre-selected filter *Internal Users* shows your paying
-    users (different from the *Portal Users* which are free). If you
-    remove this filter, you'll get all your users (the ones you pay for
-    and the portal ones)
-
-In your list of users, click on the user you want to deactivate. As soon
-as you are on the userform, click on the Action drop down menu, and
-then click on Archive.
-
-.. image:: general/deactivate_user.png
-    :align: center
-
-
-The user is now deactivated.
-
-.. danger:: **Never** deactivate the main user (*admin*)
-
 Uninstalling Apps
 -----------------
 
@@ -139,7 +104,6 @@ Good to know
 
 .. |settings| image:: general/settings_app.png
 .. |browse_apps| image:: general/browse_apps.png
-.. |browse_users| image:: general/browse_users.png
 
 .. _developer-mode:
 
