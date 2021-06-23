@@ -77,4 +77,4 @@ To set up *SMS Templates*, activate the :ref:`developer mode <developer-mode>`, 
 
 .. seealso::
    - :doc:`../../social_marketing/overview/campaigns`
-   - :doc:`/applications/productivity/discuss/advanced/email_template`
+   - :doc:`/applications/general/email_communication/email_servers`

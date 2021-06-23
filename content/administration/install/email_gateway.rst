@@ -44,4 +44,4 @@ For Exim
 
 .. tip::
    If you don't have access/manage your email server, use :ref:`inbound messages
-   <discuss/email_servers/inbound_messages>`.
+   <email_communication/inbound_messages>`.

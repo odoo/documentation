@@ -12,7 +12,7 @@ Set up an incoming email server
 
 | On the *Settings* application, enable *External Email Servers* and define the incoming email
   alias you would like to use.
-| **For more information**: :doc:`/applications/productivity/discuss/advanced/email_servers`
+| **For more information**: :doc:`/applications/general/email_communication/email_servers`
 
 Configure the email alias in your project
 -----------------------------------------
