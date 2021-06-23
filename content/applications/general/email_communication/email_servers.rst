@@ -1,6 +1,6 @@
-============================================================
-How to Use my Mail Server to Send and Receive Emails in Odoo
-============================================================
+====================================================
+Send and Receive Emails in Odoo with an Email Server
+====================================================
 
 If you are a user of Odoo Online or Odoo.sh...
 ==============================================
@@ -17,34 +17,34 @@ Scope of this documentation
 
 This document is **mainly dedicated to Odoo on-premise users** who don't
 benefit from an out-of-the-box solution to send and receive emails in Odoo,
-unlike `Odoo Online <https://www.odoo.com/trial>`__ & `Odoo.sh <https://www.odoo.sh>`__.
+unlike `Odoo Online <https://www.odoo.com/trial>`_ & `Odoo.sh <https://www.odoo.sh>`_.
 
 
 .. warning::
-
     If no one in your company is used to manage email servers, we strongly recommend that
     you opt for those Odoo hosting solutions. Their email system
     works instantly and is monitored by professionals.
     Nevertheless you can still use your own email servers if you want
     to manage your email server's reputation yourself.
 
-You will find here below some useful
+You will find here some useful
 information on how to integrate your own email solution with Odoo.
 
-.. note:: Office 365 email servers don't easily allow to send external emails from hosts like Odoo.
-    Refer to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__
-    to make it work.
+.. note:: 
+   Office 365 email servers don't easily allow to send external emails from hosts like Odoo. Refer
+   to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`_ 
+   to make it work.
 
 How to manage outbound messages
 ===============================
 As a system admin, go to :menuselection:`Settings --> General Settings`
-and check *External Email Servers*.
-Then, click *Outgoing Mail Servers* to create one and reference the SMTP data of your email server. 
-Once all the information has been filled out, click on *Test Connection*.
+and check *External Email Servers*. Then, click *Outgoing Mail Servers* to create one and reference 
+the SMTP data of your email server. Once all the information has been filled out, click on 
+*Test Connection*.
 
 Here is a typical configuration for a G Suite server.
 
-.. image:: media/outgoing_server.png
+.. image:: email_servers/outgoing-server.png
     :align: center
 
 Then set your email domain name in the General Settings.
@@ -61,9 +61,10 @@ Can I use an Office 365 server
 ------------------------------
 You can use an Office 365 server if you run Odoo on-premise.
 Office 365 SMTP relays are not compatible with Odoo Online unless you configure
-Odoo to force the outgoing "From" address (see below).
+Odoo to :ref:`force the outgoing "From" address <email_communication/default_from>` .
 
-Please refer to `Microsoft's documentation <https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ 
+Please refer to `Microsoft's documentation
+<https://support.office.com/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`_
 to configure a SMTP relay for your Odoo's IP address.
 
 How to use a G Suite server
@@ -72,53 +73,23 @@ You can use an G Suite server for any Odoo hosting type.
 To do so you need to setup the SMTP relay service. The configuration steps are explained in 
 `Google documentation <https://support.google.com/a/answer/2956491?hl=en>`__.
 
-.. _discuss-email_servers-spf-compliant:
-
-Be SPF-compliant
-----------------
-In case you use SPF (Sender Policy Framework) to increase the deliverability 
-of your outgoing emails, don't forget to authorize Odoo as a sending host in your 
-domain name settings. Here is the configuration for Odoo Online:
-
-* If no TXT record is set for SPF, create one with following definition:
-  v=spf1 include:_spf.odoo.com ~all
-* In case a SPF TXT record is already set, add "include:_spf.odoo.com".
-  e.g. for a domain name that sends emails via Odoo Online and via G Suite it could be:
-  v=spf1 include:_spf.odoo.com include:_spf.google.com ~all
-
-Find `here <https://www.mail-tester.com/spf/>`__ the exact procedure to 
-create or modify TXT records in your own domain registrar.
-
-Your new SPF record can take up to 48 hours to go into effect, 
-but this usually happens more quickly.
-
-.. note:: Adding more than one SPF record for a domain can cause problems 
-   with mail delivery and spam classification. Instead, we recommend using 
-   only one SPF record by modifying it to authorize Odoo.
-
-Allow DKIM
-----------
-You should do the same thing if DKIM (Domain Keys Identified Mail) 
-is enabled on your email server. In the case of Odoo Online & Odoo.sh,
-you should add a DNS "odoo._domainkey" CNAME record to 
-"odoo._domainkey.odoo.com". 
-For example, for "foo.com" they should have a record "odoo._domainkey.foo.com" 
-that is a CNAME with the value "odoo._domainkey.odoo.com".
-
 Restriction
 -----------
-Please note that the port 25 is blocked for security reasons. Try using 587, 465 or 2525.
+Please note that port 25 is blocked for security reasons on our SaaS and Odoo.sh platform. Try using
+465, 587, or 2525.
 
-Choose allowed "From" email addresses
--------------------------------------
+.. _email_communication/default_from:
 
-Sometimes, an email's "From" (outgoing) address can belong to a different
-domain, and that can be a problem.
+Use a default "From" email address
+----------------------------------
+
+Sometimes, an email's "From" (outgoing) address can belong to a 
+different domain, and that can be a problem.
 
 For example, if a customer with address *mary@customer.example.com* responds to
 a message, Odoo will try to redistribute that same email to other subscribers
 in the thread. But if the domain *customer.example.com* forbids that kind of
-usage for security (kudos for that), the Odoo's redistributed email would get
+usage for security, the Odoo's redistributed email would get
 rejected by some recipients' mail servers.
 
 To avoid those kind of problems, you should make sure all emails use a "From"
@@ -133,7 +104,7 @@ Instead, you can also configure Odoo to do something similar by itself:
 
 #.  Set your domain name in the General Settings.
 
-    .. image:: media/alias_domain.png
+    .. image:: email_servers/alias-domain.png
        :align: center
 
 #.  In developer mode, go to :menuselection:`Settings --> Technical -->
@@ -151,7 +122,7 @@ Instead, you can also configure Odoo to do something similar by itself:
       that should be used in those cases (such as
       ``outgoing@mycompany.example.com``).
 
-.. _discuss/email_servers/inbound_messages:
+.. _email_communication/inbound_messages:
 
 How to manage inbound messages
 ==============================
@@ -187,7 +158,7 @@ alias in your mail server.
   (catchall@, bounce@, sales@, etc.).
 * Set your domain name in the General Settings.
 
-  .. image:: media/alias_domain.png
+  .. image:: email_servers/alias-domain.png
       :align: center
 
 * If you use Odoo on-premise, create an *Incoming Mail Server* in Odoo for each alias. 
@@ -196,7 +167,7 @@ alias in your mail server.
   Leave the *Actions to Perform on Incoming Mails* blank. Once all the 
   information has been filled out, click on *TEST & CONFIRM*.
 
-.. image:: media/incoming_server.png
+.. image:: email_servers/incoming-server.png
     :align: center
 
 * If you use Odoo Online or Odoo.sh, We do recommend to redirect incoming messages 
@@ -214,21 +185,19 @@ alias in your mail server.
  Then go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
  to customize the aliases (*mail.catchall.alias* & * mail.bounce.alias*).
 
- .. image:: media/system_parameters.png
+ .. image:: email_servers/system-parameters.png
     :align: center
 
 .. note:: By default inbound messages are fetched every 5 minutes in Odoo on-premise.
    You can change this value in :ref:`developer mode <developer-mode>`.
    Go to :menuselection:`Settings --> Technical --> Automation -->
    Scheduled Actions` and look for *Mail: Fetchmail Service*.
-
-.. _Office 365 documentation:
-    https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
+    
 
 Set up different dedicated servers for transactional and mass mails
 ===================================================================
 
-Odoo's e-mail server has the capability of sending 200 e-mails per day on Odoo SH Cloud Platform.
+Odoo is subject to a :ref:`daily email limit <email_communication/daily_limit_mail>` to prevent abuse. 
 However, if needed, you can use a separate Mail Transfer Agent (MTA) servers for transactional
 e-mails and mass mailings.
 Example: use Odoo's own mail server for transactional e-mails, and Sendgrid, Amazon SES, or Mailgun
