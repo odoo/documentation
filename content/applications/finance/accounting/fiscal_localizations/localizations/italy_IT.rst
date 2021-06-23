@@ -25,8 +25,7 @@ elettronica sono i seguenti:
    di posta elettronica certificata sono fornite dal tuo fornitore o dal
    Ministero. Lo stesso server deve essere configurato come server che
    gestisce tutta la corrispondenza mail in Odoo, per saperne di più si
-   può consultare la relativa :doc:`guida
-   </applications/productivity/discuss/advanced/email_servers>`.
+   può consultare la relativa :doc:`guida </applications/general/email_communication/email_servers>`.
 
 -  Indirizzo PEC dell’Azienda, tale indirizzo deve essere lo stesso
    registrato presso l’Agenzia delle Entrate per l’utilizzo dei servizi

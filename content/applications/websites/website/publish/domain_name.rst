@@ -94,6 +94,7 @@ In order to get this, simply add your domain name in your customer portal (a sep
 
 If you already use CloudFlare or a similar service, you can keep using it or simply change for Odoo. The choice is yours.
 
+.. _app-website/web_base_url:
 
 How to make sure that all my URLs use my custom domain?
 =======================================================
@@ -117,4 +118,4 @@ Google indexes your website under both names. This is a limitation of the Odoo c
 
 .. seealso::
 
-  * :doc:`/applications/productivity/discuss/advanced/email_servers`
+  * :doc:`/applications/general/email_communication/email_servers`
