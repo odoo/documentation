@@ -86,4 +86,4 @@ the Kanban view.
 .. seealso::
    - :doc:`sla`
    - :doc:`../advanced/close_tickets`
-   - :doc:`/applications/productivity/discuss/advanced/email_servers`
+   - :doc:`/applications/general/email_communication/email_servers`
