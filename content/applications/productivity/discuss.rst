@@ -1,5 +1,3 @@
-:nosearch:
-
 =======
 Discuss
 =======
@@ -8,4 +6,3 @@ Discuss
    :titlesonly:
 
    discuss/overview
-   discuss/advanced
