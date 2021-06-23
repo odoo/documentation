@@ -7,6 +7,8 @@ and chat. Share information, projects, files, prioritize tasks, and stay connect
 and partners throughout applications. Forge better relationships, increase productivity and
 transparency by promoting a convenient way of communicating.
 
+.. _discuss_app/notification_preferences:
+
 Choose your notifications preference
 ====================================
 
@@ -93,4 +95,4 @@ sidebar and on the *Messaging menu*.
 
 .. seealso::
    - :doc:`team_communication`
-   - :doc:`../advanced/email_servers`
+   - :doc:`/applications/general/email_communication/email_servers`
