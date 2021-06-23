@@ -96,4 +96,4 @@ sidebar and on the *Messaging menu*.
 .. seealso::
    - :doc:`/applications/services/project/tasks/collaborate`
    - :doc:`team_communication`
-   - :doc:`../advanced/email_servers`
+   - :doc:`/applications/general/email_communication/email_servers`
