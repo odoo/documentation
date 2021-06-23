@@ -213,6 +213,8 @@ This link contains various monitoring metrics of the current build.
 You can zoom, change the time range or select a specific metric on each graph.
 On the graphs, annotations help you relate to changes on the build (database import, git push, etc...).
 
+.. _odoosh/logs:
+
 Logs
 ----
 A viewer to have a look to your server logs.
@@ -382,7 +384,9 @@ we are considering the feature if there is enough demand.
 In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
 (DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
 settings to increase the deliverability of your outgoing emails.
-The configuration steps are explained in the :ref:`Discuss app documentation <discuss-email_servers-spf-compliant>`.
+The configuration steps are explained in the documentation about :ref:`SPF 
+<email_communication/spf_compliant>` and :ref:`DKIM <email_communication/dkim_compliant>`.
+
 
 .. Warning::
   Forgetting to configure your SPF or DKIM to authorize Odoo as a sending host can lead to the
