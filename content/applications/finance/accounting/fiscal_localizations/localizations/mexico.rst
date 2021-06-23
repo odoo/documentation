@@ -43,7 +43,8 @@ Configuration
 Install the Mexican Accounting Localization
 -------------------------------------------
 
-For this, go in Apps and search for Mexico. Then click on *Install*.
+To :ref:`install <general/install>` the module, go to :menuselection:`Apps`, remove the *Apps*
+filter and search for "Mexico". Then click on *Install*.
 
 .. image:: media/mexico01.png
    :align: center
