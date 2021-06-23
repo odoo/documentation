@@ -36,8 +36,8 @@ Configuration
 Install the Colombian localization modules
 ------------------------------------------
 
-For this, go in Apps and search for Colombia. Then click Install for
-the first two modules.
+To :ref:`install <general/install>` the modules, go to :menuselection:`Apps`, remove the *Apps*
+filter and search for "Colombia". Then click on *Install* for the first two modules.
 
 .. image:: media/colombia02.png
    :align: center
