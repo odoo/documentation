@@ -30,7 +30,7 @@ defined as follows:
 
     <tt>
 
-.. include:: enterprise_license.txt
+.. include:: licenses/enterprise_license.txt
 
 .. raw:: html
 
