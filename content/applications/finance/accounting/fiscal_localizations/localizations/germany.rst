@@ -77,7 +77,7 @@ Register your company at the financial authority
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To register your company, go to :menuselection:`Settings --> General Settings --> Companies -->
-Update Info` and fill out the following fields:
+Update Info`, fill out the following fields and *Save*.
 
 - **Company name**
 - Valid **address**
@@ -93,6 +93,10 @@ the *fiskaly Registration* button.
 .. image:: germany/fiskaly-registration.png
    :align: center
    :alt: Button to register a company through fiskaly in Odoo
+
+.. tip::
+   If you do not see the *fiskaly Registration* button, make sure that you *saved* your company
+   details and are not in *editing mode* anymore.
 
 Once the registration has been finalized, new fields appear:
 
