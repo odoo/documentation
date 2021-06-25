@@ -1,49 +1,136 @@
-=======================================================
-How to allow users to sign in with their Google account
-=======================================================
+=============================
+Google Sign-In Authentication
+=============================
 
-- Connect to your Google account and go to the `Google API Dashboard
-  <https://console.developers.google.com/>`_.
+The **Google Sign-In Authentication** is a useful function that allows your users to sign in to Odoo
+with their Google account.
 
-- Click on **Create Project** and enter the project name and other details.
+This is particularly helpful if your organization uses Google Workforce and you want the employees
+within your organization to connect to Odoo with their Google Accounts.
 
-.. image:: media/google01.png
-    :align: center
+.. _google-sign-in/configuration:
 
-.. image:: media/google02.png
-    :align: center
+Configuration
+=============
 
-- Click on **Use Google APIs**
+The integration of the Google sign-in function requires configuration both on Google and on Odoo.
 
-.. image:: media/google03.png
-    :align: center
+.. _google-sign-in/api:
 
-- On the left side menu, select the sub menu **Credentials** (from **API Manager**) then select **OAuth consent screen**.
+Google API Dashboard
+--------------------
 
-.. image:: media/google04.png
-    :align: center
+#. Go to the `Google API Dashboard <https://console.developers.google.com/>`_.
+#. Make sure the right project is opened. If you don't have a project yet, click on *Create
+   Project*, fill out the project name and other details of your company, and click on *Create*.
 
-- Fill in your address, email and the product name (for example odoo) and then save.
+   .. image:: google/new-project-details.png
+      :align: center
+      :alt: Filling out the details of a new project
 
-.. image:: media/google05.png
-    :align: center
+   .. tip::
+      Choose the name of your own company from the drop-down menu.
 
-- Then click on **Add Credentials** and select the second option (OAuth 2.0 Client ID).
+.. _google-sign-in/oauth:
 
-.. image:: media/google06.png
-    :align: center
+OAuth consent screen
+~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/google07.png
-    :align: center
+#. On the left side menu, click on :menuselection:`OAuth consent screen`.
 
-- Check that the application type is set on **Web Application**. Now configure the allowed pages on which you will be redirected.
+   .. image:: google/consent-selection.png
+      :align: center
+      :alt: Google oauth consent selection menu
 
-- To achieve this, complete the field **Authorized redirect URIs**. Copy paste the following link in the box: http://mydomain.odoo.com/auth_oauth/signin. Then click on **Create**
+#. Choose one of the options **(Internal / External)** as instructed, and click on *Create*.
 
-.. image:: media/google08.png
-    :align: center
+   .. image:: google/consent.png
+      :align: center
+      :alt: Choice of a user type in oauth consent
 
-.. image:: media/google09.png
-    :align: center
+#. Fill out your details and domain info, then click on *Save and Continue*.
+#. On the **Scopes** page, leave all fields as is, and click on *Save and Continue*.
 
-- Once done, you receive two information (your Client ID and Client Secret). You have to insert your Client ID in the **General Settings**.
+.. _google-sign-in/credentials:
+
+Credentials
+~~~~~~~~~~~
+
+#. On the left side menu, click on :menuselection:`Credentials`.
+
+   .. image:: google/credentials-button.png
+      :align: center
+      :alt: Credentials button menu
+
+#. Click on *Create Credentials* and select **OAuth client ID**.
+
+   .. image:: google/client-id.png
+      :align: center
+      :alt: Oauth client id selection
+
+#. Select **Web Application** as the Application type. Now configure the allowed pages on which you
+   will be redirected.
+   
+   In order to achieve this, in the **Authorized redirect URIs** field, enter your database's domain
+   immediately followed by ``/auth_oauth/signin``. For example:
+   ``https://mydomain.odoo.com/auth_oauth/signin``, then click on *Create*.
+
+   .. image:: google/create-client-id.png
+      :align: center
+      :alt: Creating oauth client id
+
+.. _google-sign-in/auth-odoo:
+
+Google Authentication on Odoo
+-----------------------------
+
+.. _google-sign-in/client-id:
+
+Retrieve the Client ID
+~~~~~~~~~~~~~~~~~~~~~~
+
+Once you have done the previous steps, two keys are generated on the Google API Dashboard: *Client
+ID* and *Client Secret*. Copy the *Client ID*.
+
+.. image:: google/secret-ids.png
+   :align: center
+   :alt: Google OAuth Client ID generated
+
+.. _google-sign-in/odoo-activation:
+
+Odoo activation
+~~~~~~~~~~~~~~~
+
+#. Go to :menuselection:`Odoo General Settings --> Integrations` and activate **OAuth
+   Authentication**.
+
+   .. note::
+      You may have to log in again after this step.
+   
+#. Go back to :menuselection:`General Settings --> Integrations`, activate **Google
+   Authentication**, then fill out the *Client ID* with the key from the Google API Dashboard, and
+   *Save*.
+
+   .. image:: google/odoo-client-id.png
+      :align: center
+      :alt: Filling out the client id in Odoo settings
+
+.. _google-sign-in/log-in:
+
+Log in to Odoo with Google
+==========================
+
+To link your Google account to your Odoo profile, click on *Log in with Google* when you are asked
+to choose a new password.
+
+   .. image:: google/first-login.png
+      :align: center
+      :alt: Reset password screen with "Log in with Google" button
+
+Existing users must :ref:`reset their password <users/reset-password>` to access the *reset
+password* page, while new users can directly click on *Log in with Google* instead of choosing a new
+password.
+
+.. seealso::
+   - `Google Cloud Platform Console Help - Setting up OAuth 2.0
+     <https://support.google.com/cloud/answer/6158849>`_
