@@ -82,7 +82,7 @@ be uninstalled**. Think about your favorite Linux distribution package manager
     - ``/home/$USER/src/custom/estate/__manifest__.py``
 
     The ``__manifest__.py`` file should only define the name and the dependencies of our modules.
-    Two framework modules are necessary: ``base`` and ``web``.
+    The only necessary framework module for now is ``base``.
 
 
 Restart the Odoo server and add the ``custom`` folder to the ``addons-path``:

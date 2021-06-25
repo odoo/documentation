@@ -471,12 +471,12 @@ credit and debit notes, they are set automatically by Odoo:
 Invoice PDF Report
 ~~~~~~~~~~~~~~~~~~
 
-After the invoice is Accepted and valdiated by the SII and the PDF is printed it includes the
-fiscal elements that indicates out document is fiscally valid:
+Once the invoice is accepted and validated by the SII and the PDF is printed, it includes the
+fiscal elements that indicate that the document is fiscally valid:
 
 .. image:: media/Chile22.png
    :align: center
-   :alt: Barcode and fiscal elements in the invice report.
+   :alt: Barcode and fiscal elements in the invoice report.
 
 
 Commercial Validation

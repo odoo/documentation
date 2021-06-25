@@ -62,6 +62,17 @@ The *Portal* and *Public* options do not allow you to choose access rights. Memb
 ones (such as record rules and restricted menus) and usually do not belong to the usual Odoo
 groups.
 
+.. _users/deactivate:
+
+Deactivate Users
+================
+
+Go to :menuselection:`Settings --> Users & Companies --> Users`, open the user you want to
+deactivate, click on *Action*, and then on *Archive*.
+
+.. danger::
+   **Never** deactivate the main user (*admin*).
+
 .. _users/passwords-management:
 
 Passwords management

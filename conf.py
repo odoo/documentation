@@ -130,6 +130,7 @@ github_user = 'odoo'
 github_project = 'documentation'
 
 locale_dirs = ['../locale/']
+templates_path = ['../extensions']
 
 # custom docname_to_domain to divide the translations of applications in subdirectories
 sphinx.transforms.i18n.docname_to_domain = (

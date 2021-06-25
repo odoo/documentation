@@ -59,9 +59,9 @@ In case of non-conformity, your company risks a fine of €7,500.
 
 To get the certification just follow the following steps:
 
-* If you use **Odoo Point of Sale**, install the **France - VAT Anti-Fraud Certification for Point
-  of Sale (CGI 286 I-3 bis)** module by going to :menuselection:`Apps`, removing the *Apps* filter,
-  then searching for *l10n_fr_pos_cert*, and installing the module.
+* If you use **Odoo Point of Sale**, :ref:`install <general/install>` the **France - VAT Anti-Fraud
+  Certification for Point of Sale (CGI 286 I-3 bis)** module by going to :menuselection:`Apps`,
+  removing the *Apps* filter, then searching for *l10n_fr_pos_cert*, and installing the module.
 
 * Make sure a country is set on your company, otherwise your entries won’t be
   encrypted for the inalterability check. To edit your company’s data,
