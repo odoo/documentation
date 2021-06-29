@@ -1,5 +1,3 @@
-:show-content:
-
 ====
 Sign
 ====
@@ -11,6 +9,9 @@ filled out with the user's detail if they are logged in.
 
 .. seealso::
    - `Odoo Sign: product page <https://www.odoo.com/app/sign>`_
+   - `Odoo Tutorials: Sign <https://www.odoo.com/slides/sign-61>`_
+
+.. _sign/validity:
 
 Validity of electronic signatures
 =================================
@@ -68,6 +69,53 @@ Overall, to be recognized as valid, electronic signatures have to meet five crit
 
 .. note::
    The information provided here does not constitute legal advice; it is provided for general
-   informational purposes only. As laws governing electronic signatures evolve rapidly, we cannot
-   guarantee that the information is up to date. We advise you to should contact a local attorney to
-   obtain legal advice.
+   informational purposes only. As laws governing electronic signatures rapidly evolve, we cannot
+   guarantee whether all information is up to date or not. We advise contacting a local attorney for
+   legal advice regarding electronic signature compliance and validity.
+
+.. _sign/field-types:
+
+Field Types
+===========
+
+By configuring your own *Field Types*, also known as *Signature Item Types*, you can make the
+signing process even faster for your customers, partners, and employees.
+
+To create and customize fields, activate the :ref:`developer mode <developer-mode>`. Then head to
+:menuselection:`Documents --> Configuration --> Field Types` and click on *Create*.
+
+After giving your new field a name, select one of the six *Types* available:
+
+- **Signature**: users are prompted to enter their signature either by drawing it, automatically
+  generating one based on their name, or uploading a local file (usually an image). Each subsequent
+  *Signature* field then reuses the data entered in the first field.
+- **Initial**: users are prompted to enter their initials, in a similar way to the *Signature*
+  field.
+- **Text**: users enter text on a single line.
+- **Multiline Text**: users enter text on multiple lines.
+- **Checkbox**: users can tick a box (e.g.,to mark their approval or consent).
+- **Selection**: users choose a single option from a variety of options.
+
+Next, you have the option to auto-complete fields for users based on their Odoo profile information
+by using *Automatic Partner Field*. To this end, the *Name*, *Email*, *Phone*, and *Company* fields
+are preconfigured in your database.
+
+.. note::
+   Users can freely edit auto-completed fields.
+
+.. image:: sign/field-example.png
+   :align: center
+   :alt: Company field example in Odoo Sign
+
+You can then change the size of the field by editing the *Default Width* and *Default Height*. Both
+sizes are defined as a percentage of the full-page expressed as a decimal, with 1 equalling the
+full-page's width or height. By default, the width of new fields you create is set to 15% (0.150)
+of a full-page's width, while their height is set to 1.5% (0.015) of a full-page's height.
+
+Next, write a *Tip*. Tips are displayed inside arrows on the left-hand side of the user's screen
+during the signing process. You can also use a *Placeholder* text to be displayed inside the field
+before it is completed.
+
+.. image:: sign/tip-placeholder.png
+   :align: center
+   :alt: Tip and placeholder example in Odoo Sign
