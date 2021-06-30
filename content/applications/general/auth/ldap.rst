@@ -1,6 +1,6 @@
-=======================================
-How to allow users to sign in with LDAP
-=======================================
+=================
+Sign in with LDAP
+=================
 
 - Install the LDAP module in General Settings.
 

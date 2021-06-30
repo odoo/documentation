@@ -32,7 +32,7 @@ you can proceed to the next step.
 
 If you use Odoo with an on-premise setup or through a partner, then you must update
 your installation as detailed in
-:doc:`this documentation page </administration/update>`
+:doc:`this documentation page </administration/maintain/update>`
 or by contacting your integrating partner.
 
 Update the list of available modules
@@ -50,8 +50,7 @@ Install the Amazon/Authentication Patch
 .. warning::
     You should never install new modules in your production database without testing
     them in a duplicate or staging environment. For Odoo.com customers, a duplicate database
-    can be created from the database management page as explained in 
-    :doc:`this documentation page </administration/db_management/db_online>`. For
+    can be created from the database management page. For
     Odoo.sh users, you should use a staging or duplicate database. For on-premise users,
     you should use a staging environment - you should contact your integrating partner for
     more information regarding how to test a new module in your particular setup.

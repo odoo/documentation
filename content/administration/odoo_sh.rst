@@ -1,7 +1,7 @@
 :nosearch:
 
 =======
-Odoo sh
+Odoo.sh
 =======
 
 

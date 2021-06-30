@@ -1,6 +1,6 @@
-=================================
-Overview of the invoicing process
-=================================
+===================
+Invoicing processes
+===================
 
 Depending on your business and the application you use, there are
 different ways to automate the customer invoice creation in Odoo.
