@@ -12,4 +12,4 @@ Marketing
     marketing/email_marketing
     marketing/sms_marketing
     marketing/social_marketing
-    marketing/survey
+    marketing/surveys

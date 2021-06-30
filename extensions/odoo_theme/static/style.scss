@@ -55,9 +55,8 @@ header.o_main_header {
         padding: 0 $padding-m;
     }
     @include media-breakpoint-up(xl) {
-        padding: 0 $padding-l;
+        padding: 0 $padding-l 0 $padding-m;
     }
-
 
     .o_logo_wrapper {
         > .o_logo {
@@ -203,6 +202,7 @@ header.o_main_header {
     z-index: 10;
     @include font-size($font-size-secondary);
     color: $o-violet-dark;
+    font-weight: $fw_regular;
     @include media-breakpoint-up(lg) {
         width: calc(#{$o-side-nav-width} - 1rem);
         height: calc(100vh - #{$o-header-height});
@@ -212,8 +212,6 @@ header.o_main_header {
     }
     @include media-breakpoint-up(xl) {
         width: $o-side-nav-width;
-        padding-top: $padding-l;
-        padding-left: $padding-l;
     }
 
     &.show {
@@ -223,6 +221,11 @@ header.o_main_header {
     .toctree-l1 {
         padding-top: $padding-xs;
         padding-bottom: $padding-xs;
+
+        > .o_toc_entry_wrapper a {
+            color: $o-violet-dark;
+            font-weight: 600;
+        }
     }
 
     ul {
@@ -230,6 +233,20 @@ header.o_main_header {
             background-color: $gray-lighter;
             border-left: 3px solid $gray-lighter;
             margin-left: -3px;
+        }
+
+        li {
+            &.o_active_toc_entry {
+                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+                    color: $o-violet-dark;
+                }
+            }
+
+            a {
+                &.current {
+                    color: $o-violet-dark;
+                }
+            }
         }
 
         > .toctree-l1 {
@@ -290,16 +307,8 @@ header.o_main_header {
             a {
                 display: inline-block;
                 padding: .4rem 0;
-                color: inherit;
-                opacity: .75;
-
-                &.current, &:hover {
-                    opacity: 1;
-                }
-            }
-
-            > .o_toc_entry_wrapper i {
-                opacity: .75;
+                color: $gray-darker;
+                font-weight: $fw_regular;
             }
 
             &:not(.toctree-l1) {
@@ -314,9 +323,6 @@ header.o_main_header {
                         margin-right: .125rem;
                         @include o-transition(rotate, .3s);
                         font-size: .75rem;
-                        font-weight: $fw_bold;
-                        color: inherit;
-
                         &[aria-expanded="true"] {
                             @include o-transform(rotate(90deg));
                         }
@@ -332,7 +338,6 @@ header.o_main_header {
                 }
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
                     font-weight: $fw_bold;
-                    opacity: 1;
                 }
             }
         }
@@ -448,11 +453,6 @@ header.o_main_header {
                     margin: -#{$margin-l} -#{$margin-l} $margin-l;
                     padding: $padding-l $padding-l;
                 }
-
-                .btn-primary {
-                    background-color: #00A09D;
-                    border-color: #00A09D;
-                }
             }
             .row:first-of-type h2.border-top {
                 @include media-breakpoint-up(lg) {
@@ -485,17 +485,25 @@ header.o_main_header {
             }
         }
 
-        // pages with full width: Legal
+        // First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
         &.o_fullwidth_page {
-            .toctree-l1 > a {
-                display: block;
-                color: $gray-darker;
-                @include font-size($h2-font-size);
-                padding-bottom: $padding-xs;
-                border-bottom: 1px solid $gray-light;
-                margin-bottom: $margin-s;
+                div.toctree-wrapper > ul {
+                    display: flex;
+                    flex-wrap: wrap;
+                    > li {
+                        @include media-breakpoint-down(lg) {
+                            width: 100%;
+                        }
+                        @include media-breakpoint-up(lg) {
+                            width: 33%;
+                            &:not(:nth-of-type(3n)){
+                                padding-right: $padding-m;
+                            }
+                        }
+
+                    }
+                }
             }
-        }
 
         // pages with column for code on the right
         &.o_has_code_column {
@@ -583,22 +591,36 @@ header.o_main_header {
         }
 
         .toctree-wrapper {
-            > ul {
+            > ul, .toctree-l1 > ul {
                 padding-left: 0;
                 list-style: none;
             }
 
-            .toctree-l1 > a[href="#"] {
+            .toctree-l1 > a {
+                display: block;
+                @include font-size($h2-font-size);
+                margin-top: $padding-m;
+                padding-bottom: $padding-xs;
+                border-bottom: 1px solid $gray-light;
+                margin-bottom: $margin-s;
                 font-size: 1.2rem;
                 font-weight: 600;
-                border-bottom: 2px solid $gray-darker;
+            }
+
+            .toctree-l1 {
+                margin-bottom: 2rem;
+            }
+
+            .toctree-l2 > a[href="#"] {
+                margin-top: 0.7rem;
+                display: inline-block;
             }
 
             a[href="#"] {
                 pointer-events: none;
                 cursor: default;
                 color: $gray-darker;
-                font-weight: $fw_regular;
+                font-weight: $fw_semibold;
             }
         }
 

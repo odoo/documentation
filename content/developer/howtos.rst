@@ -7,9 +7,9 @@ Tutorials
 .. toctree::
     :titlesonly:
 
-    howtos/themes
-    howtos/website
     howtos/backend
+    howtos/website
+    howtos/themes
     howtos/web
     howtos/profilecode
     howtos/company

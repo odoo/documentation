@@ -64,4 +64,3 @@ Use cases
 
 .. seealso::
    - :doc:`automate_actions`
-   - :doc:`/applications/general/tags`

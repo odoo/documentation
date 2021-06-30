@@ -33,7 +33,7 @@ Installation
       ./odoo-bin --geoip-db= ~/Downloads/GeoLite2-City.mmdb
 
    .. seealso::
-      - :doc:`CLI documentation </developer/reference/cmdline>`.
+      - :doc:`CLI documentation </developer/misc/other/cmdline>`.
 
 .. warning::
    ``GeoIP`` Python library can also be used. However this version is discontinued since January
