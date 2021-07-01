@@ -1,5 +1,5 @@
 ===================================
-EU intra-community distance selling
+EU intra-community Distance Selling
 ===================================
 
 **Distance sales within the European Union** include cross-border sales of goods and services to a
@@ -14,13 +14,11 @@ While this regulation mainly applies to :doc:`eCommerce <../../../../websites/ec
 private EU consumers, it is also valid for mail order sales and telesales.
 
 The Union **One-Stop Shop (OSS)** is an online portal where businesses can register for the OSS and
-declare their intra-community distance sales.
+declare their intra-community distance sales. Each EU member states integrates an online OSS portal.
 
-Each EU member states integrates an online OSS portal
-
-The **EU intra-community distance selling** feature helps your organization comply with this
-regulation by creating and configuring new :doc:`fiscal positions <fiscal_positions>` and :doc:`taxes <taxes>` based on
-your company's country.
+The **EU intra-community Distance Selling** feature helps your organization comply with this
+regulation by creating and configuring new :doc:`fiscal positions <fiscal_positions>` and
+:doc:`taxes <taxes>` based on your company's country.
 
 .. seealso::
    - `European Commission: OSS | Taxation and Customs Union
@@ -31,18 +29,21 @@ your company's country.
 Configuration
 =============
 
-.. image:: eu_distance_selling/enable-feature.png
-   :align: right
-   :alt: EU intra-community distance selling feature in Odoo Accounting settings
-
 Go to :menuselection:`Accounting/Invoicing --> Settings --> Taxes`, then enable **EU intra-community
-distance selling** (or **EU Digital Goods VAT** if you created your database before July 1, 2021),
+Distance Selling** (or **EU Digital Goods VAT** if you created your database before July 1, 2021),
 and *Save*.
+
+.. image:: eu_distance_selling/enable-feature.png
+   :align: center
+   :alt: EU intra-community Distance Selling feature in Odoo Accounting settings
 
 .. important::
    Please :ref:`upgrade the module <general/upgrade>` `l10n_eu_service` if you already installed it
    before **July 1, 2021**, or if you activated the feature **EU Digital Goods VAT** in the
-   Accounting settings.
+   Accounting settings. Then, make sure to :ref:`refresh the tax mapping
+   <eu_distance_selling/refresh-mapping>`.
+
+.. _eu_distance_selling/taxes:
 
 Fiscal Positions and Taxes
 ==========================
@@ -52,6 +53,16 @@ for each EU member state, based on your company's country.
 
 We highly recommend checking that the proposed mapping is suitable for the products and services you
 sell before using it.
+
+.. _eu_distance_selling/refresh-mapping:
+
+Refresh tax mapping
+-------------------
+
+Whenever you add or modify taxes, you can update automatically your fiscal positions.
+
+To do so, go to :menuselection:`Accounting/Invoicing --> Settings --> Taxes --> EU intra-community
+Distance Selling` and click on the *Refresh tax mapping* button.
 
 .. seealso::
    - :doc:`fiscal_positions`
