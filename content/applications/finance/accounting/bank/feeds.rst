@@ -10,5 +10,4 @@ Bank Feeds
    feeds/bank_statements
    feeds/bank_synchronization
    feeds/ponto
-   feeds/paypal
    feeds/saltedge
