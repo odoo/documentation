@@ -51,26 +51,48 @@ component.
 .. image:: media/bills_of_materials_02.png
     :align: center
 
-Adding a routing
-================
+Adding work centers
+===================
 
-You can add routing to your *BoM*. You will do this if you need to
-define a series of operations required by your manufacturing process. To
-use it, enable the *Work Orders* feature in the *Manufacturing* app
-settings.
+You can add work centers to your *BoM* in the *Operations* tab. You will
+do this if you need to define a series of operations required by your
+manufacturing process. To use them, enable the *Work Orders* feature in
+the *Manufacturing* app settings.
 
 .. image:: media/bills_of_materials_03.png
     :align: center
 
-.. note::
-         Each *BoM* can have only one routing while each routing can be used
-         multiple times.
-
-Now that you have created your routing, add it to your *BoM*. You can
-select when, in the work operations, your components are consumed with
-the dropdown menu.
+Now that you have created some work centers, add operations to your *BoM*,
+defining a work center for each of them. You can select when, in the work
+operations, your components are consumed with the dropdown menu.
 
 .. image:: media/bills_of_materials_04.png
+    :align: center
+
+Adding the timer to work orders
+===============================
+
+You can add a timer to your work orders. This consists of tree buttons that
+will allow you tu start, pause, block or get each operation done, thus registering
+the real duration of each operation.
+
+.. image:: media/bills_of_materials_07.png
+    :align: center
+
+You will also see the timer, in the manufacturing orders, when clicking the
+Work Orders tab.
+
+.. image:: media/bills_of_materials_08.png
+    :align: center
+
+Locking quantities consumed
+===========================
+
+Enabling this option, you can define that manufacturing orders are locked by
+default. If locked, will prevent that manufacturing users modified quantities
+to consume.
+
+.. image:: media/bills_of_materials_09.png
     :align: center
 
 Adding By-Products
