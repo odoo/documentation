@@ -2,44 +2,44 @@
 France
 ======
 
-FEC
+FEC 
 ===
 
 If you have installed the French Accounting, you will be able to download the FEC.
-For this, go in :menuselection:`Accounting --> Reporting --> France --> FEC`.
+For this, go in :menuselection:`Accounting --> Reporting --> France --> FEC`. 
 
 .. tip::
     If you do not see the submenu **FEC**, go in **Apps** and search for the module
-    called **France-FEC** and verify if it is well installed.
+    called **France-FEC** and verify if it is well installed. 
 
 French Accounting Reports
 =========================
 
-If you have installed the French Accounting, you will have access to some accounting reports specific to France:
+If you have installed the French Accounting, you will have access to some accounting reports specific to France: 
 
 - Bilan comptable
 - Compte de résultats
-- Plan de Taxes France
+- Plan de Taxes France 
 
 Get the VAT anti-fraud certification with Odoo
 ==============================================
 
-As of January 1st 2018, a new anti-fraud legislation comes into effect
-in France and DOM-TOM. This new legislation stipulates certain criteria
-concerning the inalterability, security, storage and archiving of sales data.
-These legal requirements are implemented in Odoo, version 9 onward,
+As of January 1st 2018, a new anti-fraud legislation comes into effect 
+in France and DOM-TOM. This new legislation stipulates certain criteria 
+concerning the inalterability, security, storage and archiving of sales data. 
+These legal requirements are implemented in Odoo, version 9 onward, 
 through a module and a certificate of conformity to download.
 
 Is my company required to use an anti-fraud software?
 -----------------------------------------------------
 
-Your company is required to use an anti-fraud cash register software like
+Your company is required to use an anti-fraud cash register software like 
 Odoo (CGI art. 286, I. 3° bis) if:
 
 * You are taxable (not VAT exempt) in France or any DOM-TOM,
 * Some of your customers are private individuals (B2C).
 
-This rule applies to any company size. Auto-entrepreneurs are exempted from
+This rule applies to any company size. Auto-entrepreneurs are exempted from 
 VAT and therefore are not affected.
 
 Get certified with Odoo
@@ -47,13 +47,12 @@ Get certified with Odoo
 
 Getting compliant with Odoo is very easy.
 
-Your company is requested by the tax administration to deliver a certificate
+Your company is requested by the tax administration to deliver a certificate 
 of conformity testifying that your software complies with the anti-fraud 
-legislation. This certificate is granted by Odoo SA to Odoo Enterprise users
+legislation. This certificate is granted by Odoo SA to Odoo Enterprise users 
 `here <https://www.odoo.com/my/contract/french-certification/>`_.
-If you use Odoo Community, you should
-:doc:`upgrade to Odoo Enterprise </administration/enterprise>`
-or contact your Odoo service provider.
+If you use Odoo Community, you should :doc:`upgrade to Odoo Enterprise
+</administration/maintain/enterprise>` or contact your Odoo service provider.
 
 In case of non-conformity, your company risks a fine of €7,500.
 
@@ -89,52 +88,52 @@ Anti-fraud features
 
 The anti-fraud module introduces the following features:
 
-* **Inalterability**: deactivation of all the ways to cancel or modify
+* **Inalterability**: deactivation of all the ways to cancel or modify 
   key data of POS orders, invoices and journal entries;
 * **Security**: chaining algorithm to verify the inalterability;
-* **Storage**: automatic sales closings with computation of both period
+* **Storage**: automatic sales closings with computation of both period 
   and cumulative totals (daily, monthly, annually).
 
 Inalterability
 ~~~~~~~~~~~~~~
 
-All the possible ways to cancel and modify key data of paid POS orders,
-confirmed invoices and journal entries are deactivated,
-if the company is located in France or in any DOM-TOM.
+All the possible ways to cancel and modify key data of paid POS orders, 
+confirmed invoices and journal entries are deactivated, 
+if the company is located in France or in any DOM-TOM. 
 
-.. note:: If you run a multi-companies environment, only the documents of
+.. note:: If you run a multi-companies environment, only the documents of 
  such companies are impacted.
 
 Security
 ~~~~~~~~
 
-To ensure the inalterability, every order or journal entry is encrypted
-upon validation.
-This number (or hash) is calculated from the key data of the document as
+To ensure the inalterability, every order or journal entry is encrypted 
+upon validation. 
+This number (or hash) is calculated from the key data of the document as 
 well as from the hash of the precedent documents.
 
-The module introduces an interface to test the data inalterability.
-If any information is modified on a document after its validation,
-the test will fail. The algorithm recomputes all the hashes and compares them
-against the initial ones. In case of failure, the system points out the first
+The module introduces an interface to test the data inalterability. 
+If any information is modified on a document after its validation, 
+the test will fail. The algorithm recomputes all the hashes and compares them 
+against the initial ones. In case of failure, the system points out the first 
 corrupted document recorded in the system.
 
-Users with *Manager* access rights can launch the inalterability check.
-For POS orders, go to
-:menuselection:`Point of Sales --> Reporting --> French Statements`.
-For invoices or journal entries,
+Users with *Manager* access rights can launch the inalterability check. 
+For POS orders, go to 
+:menuselection:`Point of Sales --> Reporting --> French Statements`. 
+For invoices or journal entries, 
 go to :menuselection:`Invoicing/Accounting --> Reporting --> French Statements`.
 
 Storage
 ~~~~~~~
 
-The system also processes automatic sales closings on a daily, monthly
+The system also processes automatic sales closings on a daily, monthly 
 and annual basis.
-Such closings distinctly compute the sales total of the period as well as
-the cumulative grand totals from the very first sales entry recorded
+Such closings distinctly compute the sales total of the period as well as 
+the cumulative grand totals from the very first sales entry recorded 
 in the system.
 
-Closings can be found in the *French Statements* menu of Point of Sale,
+Closings can be found in the *French Statements* menu of Point of Sale, 
 Invoicing and Accounting apps.
 
 .. note::
@@ -142,15 +141,15 @@ Invoicing and Accounting apps.
 
  * For multi-companies environments, such closings are performed by company.
 
- * POS orders are posted as journal entries at the closing of the POS session.
-   Closing a POS session can be done anytime.
-   To prompt users to do it on a daily basis, the module prevents from resuming
-   a session opened more than 24 hours ago.
+ * POS orders are posted as journal entries at the closing of the POS session. 
+   Closing a POS session can be done anytime. 
+   To prompt users to do it on a daily basis, the module prevents from resuming 
+   a session opened more than 24 hours ago. 
    Such a session must be closed before selling again.
 
- * A period’s total is computed from all the journal entries posted after the
-   previous closing of the same type, regardless of their posting date.
-   If you record a new sales transaction for a period already closed,
+ * A period’s total is computed from all the journal entries posted after the 
+   previous closing of the same type, regardless of their posting date. 
+   If you record a new sales transaction for a period already closed, 
    it will be counted in the very next closing.
 
 .. tip:: For test & audit purposes such closings can be manually generated in the
@@ -161,14 +160,14 @@ Invoicing and Accounting apps.
 Responsibilities
 ----------------
 
-Do not uninstall the module! If you do so, the hashes will be reset and none
+Do not uninstall the module! If you do so, the hashes will be reset and none 
 of your past data will be longer guaranteed as being inalterable.
 
-Users remain responsible for their Odoo instance and must use it with
-due diligence. It is not permitted to modify the source code which guarantees
+Users remain responsible for their Odoo instance and must use it with 
+due diligence. It is not permitted to modify the source code which guarantees 
 the inalterability of data.
-
-Odoo absolves itself of all and any responsibility in case of changes
+ 
+Odoo absolves itself of all and any responsibility in case of changes 
 in the module’s functions caused by 3rd party applications not certified by Odoo.
 
 

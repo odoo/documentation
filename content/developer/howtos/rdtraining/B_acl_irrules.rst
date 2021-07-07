@@ -481,7 +481,7 @@ or a *visibility* feature before using it:
 
 * *Visibility* features mean a user can still access the model or record
   otherwise, either through an other part of the interface or by :doc:`perform
-  operations remotely using RPC <../../webservices/odoo>`, things might just not be
+  operations remotely using RPC <../../misc/api/odoo>`, things might just not be
   visible in the web interface in some contexts.
 * *Security* features mean a user can not access records, fields or operations.
 

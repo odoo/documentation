@@ -167,7 +167,7 @@ In the above commands, the argument:
 * ``--stop-after-init`` will immediately shutdown the server instance after it completed the operations you asked.
 
 More options are available and detailed in the
-:doc:`CLI documentation </developer/reference/cmdline>`.
+:doc:`CLI documentation </developer/misc/other/cmdline>`.
 
 You can find in the logs (*~/logs/odoo.log*) the addons path used by Odoo.sh to run your server.
 Look for "*odoo: addons paths*":
