@@ -79,7 +79,7 @@
             {%- set main_classes = main_classes + ['o_index'] %}
         {%- endif %}
 
-        {%- if 'show-content' in meta %}  {# The page is an accessible toctree #}
+        {%- if ('show-content' in meta) and ('show-toc' not in meta) %}  {# The page is an accessible toctree #}
             {%- set main_classes = main_classes + ['o_hide_toc'] %}
         {%- endif %}
 

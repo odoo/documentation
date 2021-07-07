@@ -1,65 +1,59 @@
 <div id="o_content">
-    <section class="o_content_fw_banner row">
-        <div class="col-lg-6">
-            <h1 class="text-white">{{ _("Odoo Documentation") }}</h1>
-            <p class="text-white">{{ _("The comprehensive guide for Odoo users. Easily find the tutorial and helpful tips that suit your needs.") }}</p>
-            <div class="mt-3">
-                <a href="https://odoo.com/trial" class="btn btn-primary mb-2 o-hidden-ios">{{ _("Try Odoo for FREE") }}</a>
-            </div>
-        </div>
+    <section class="o_content_fw_banner">
+        <h1 class="text-white">{{ _("Odoo Documentation") }}</h1>
     </section>
     <section>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
-                <h2><i class="i-doc-apps d-lg-none me-2"></i>{{ _("Applications") }}</h2>
-                <p class="text-muted">{{ _("Master any app thanks to their end-user guides. Our wide array of functional workflows and processes are designed to help you unleash Odoo's potential.") }}</p>
-                <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Links") }}</h5>
+                <h2><a href="{{ pathto('applications') }}">{{ _("User Docs") }}</a></h2>
+                <p class="text-muted">{{ _("Discover our guide to help you use and configure the platform, by applications.") }}</p>
+                <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Apps") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="{{ pathto('applications/finance/accounting/overview/main_concepts/in_odoo') }}" class="stretched-link">
-                            {{ _("The Accounting behind Odoo") }}
+                        <a href="{{ pathto('applications/finance/accounting') }}" class="stretched-link">
+                            {{ _("Accounting") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('applications/inventory_and_mrp/inventory/management/replenishment_strategies/virtual_warehouses') }}" class="stretched-link">
-                            {{ _("Resupply from another Warehouse") }}
+                        <a href="{{ pathto('applications/inventory_and_mrp/inventory') }}" class="stretched-link">
+                            {{ _("Inventory") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('applications/general/base_import/import_faq') }}" class="stretched-link">
-                            {{ _("Import data into Odoo") }}
+                        <a href="{{ pathto('applications/inventory_and_mrp/manufacturing') }}" class="stretched-link">
+                            {{ _("Manufacturing") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('applications/productivity/discuss/overview/get_started') }}" class="stretched-link">
-                            {{ _("Get Started with Discuss") }}
+                        <a href="{{ pathto('applications/sales/point_of_sale') }}" class="stretched-link">
+                            {{ _("Point of Sale") }}
                         </a>
                     </li>
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2 class="border-top pt-4 pt-lg-0"><i class="i-doc-admin d-lg-none me-2"></i>{{ _("Administration") }}</h2>
-                <p class="text-muted">{{ _("Easily setup your first Odoo installation. From downloads to day-to-day database administration, the dedicated tutorials have got you covered.") }}</p>
+                <h2 class="border-top pt-4 pt-lg-0"><a href="{{ pathto('administration') }}">{{ _("Install and Maintain") }}</a></h2>
+                <p class="text-muted">{{ _("Learn how to install, deploy and upgrade Odoo on premise or on Odoo.sh.") }}</p>
                 <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href=" {{ pathto('administration/install') }} " class="stretched-link">
+                        <a href=" {{ pathto('administration/deployment/install') }} " class="stretched-link">
                             {{ _("Installing Odoo") }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ pathto('administration/deployment/deploy') }}" class="stretched-link">
-                            {{ _("Deploying Odoo") }}
+                            {{ _("System configuration") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('administration/update') }}" class="stretched-link">
-                            {{ _("Updating Odoo") }}
+                        <a href="{{ pathto('administration/maintain/update') }}" class="stretched-link">
+                            {{ _("Bugfix updates") }}
                         </a>
                     </li>
                     <li>
                         <a href="{{ pathto('administration/odoo_sh/overview/introduction') }}" class="stretched-link">
-                            {{ _("Introduction to Odoo.sh") }}
+                            {{ _("Odoo.sh: The Odoo Cloud Platform") }}
                         </a>
                     </li>
                 </ul>
@@ -67,58 +61,39 @@
         </div>
         <div class="row gx-lg-5">
             <div class="col-lg-6">
-                <h2 class="border-top pt-4"><i class="i-doc-dev d-lg-none me-2"></i>{{ _("Developer") }}</h2>
+                <h2 class="border-top pt-4"><a href="{{ pathto('developer') }}">{{ _("Developer") }}</a></h2>
                 <p class="text-muted">{{ _("Learn to develop in Odoo by reading the framework references and programmer tutorials.") }}</p>
                 <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">
                     <li>
-                        <a href="{{ pathto('developer/reference/orm') }}" class="stretched-link">
-                            {{ _("ORM API") }}
+                        <a href="{{ pathto('developer/howtos/rdtraining') }}" class="stretched-link">
+                            {{ _("Tutorial: Getting started") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('developer/howtos/backend') }}" class="stretched-link">
-                            {{ _("Building a Module") }}
+                        <a href="{{ pathto('developer/reference/addons/orm') }}" class="stretched-link">
+                            {{ _("ORM") }}
                         </a>
                     </li>
                     <li>
-                        <a href="{{ pathto('developer/webservices/odoo') }}" class="stretched-link">
+                        <a href="{{ pathto('developer/reference/addons/views') }}" class="stretched-link">
+                            {{ _("Regular Views") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('developer/reference/javascript/qweb') }}" class="stretched-link">
+                            {{ _("QWeb Views") }}
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ pathto('developer/misc/api/odoo') }}" class="stretched-link">
                             {{ _("External API") }}
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ pathto('developer/reference/cmdline') }}" class="stretched-link">
-                            {{ _("Command-line interface") }}
-                        </a>
-                    </li>
                 </ul>
             </div>
             <div class="col-lg-6">
-                <h2 class="border-top pt-4"><i class="i-doc-services d-lg-none me-2"></i>{{ _("Services") }}</h2>
-                <p class="text-muted">{{ _("Find out how to open a support ticket should you need to contact a Customer Service Representative.") }}</p>
-                <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Links") }}</h5>
-                <ul class="list-unstyled">
-                    <li>
-                        <a href="{{ pathto('services/support/where_can_i_get_support') }}" class="stretched-link">
-                            {{ _("Where to find help?") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('services/support/supported_versions') }}" class="stretched-link">
-                            {{ _("Supported versions") }}
-                        </a>
-                    </li>
-                    <li>
-                        <a href="{{ pathto('legal') }}" class="stretched-link">
-                            {{ _("Legal") }}
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        <div class="row gx-lg-5">
-            <div class="col-lg-6">
-                <h2 class="border-top pt-4"><i class="i-doc-contribute d-lg-none me-2"></i>{{ _("Contributing") }}</h2>
+                <h2 class="border-top pt-4"><a href="{{ pathto('contributing') }}">{{ _("Contributing") }}</a></h2>
                 <p class="text-muted">{{ _("You want to contribute to Odoo but don't know where to start? The tutorials and guidelines are there to help you make Odoo even better.") }}</p>
                 <h5 class="text-muted pt-3 text-uppercase fw_semibold">{{ _("Top Links") }}</h5>
                 <ul class="list-unstyled">

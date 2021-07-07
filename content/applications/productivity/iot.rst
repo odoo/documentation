@@ -1,4 +1,7 @@
 :nosearch:
+:show-content:
+:hide-page-toc:
+:show-toc:
 
 ========================
 Internet of Things (IoT)
