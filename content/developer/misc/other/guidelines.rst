@@ -951,8 +951,8 @@ Symbols and Conventions
 
 .. _reference/guidelines/js:
 
-Javascript and CSS
-==================
+Javascript and Components
+=========================
 
 Static files organization
 --------------------------
@@ -999,17 +999,153 @@ More precise JS guidelines are detailed in the `github wiki  <https://github.com
 You may also have a look at existing API in Javascript by looking Javascript
 References.
 
-CSS coding guidelines
----------------------
+Template
+--------
 
-- Prefix all your classes with *o_<module_name>* where *module_name* is the
-  technical name of the module ('sale', 'im_chat', ...) or the main route
-  reserved by the module (for website module mainly, i.e. : 'o_forum' for
-  *website_forum* module). The only exception for this rule is the
-  webclient: it simply uses *o_* prefix.
-- Avoid using *id* tag
-- Use Bootstrap native classes
-- Use underscore lowercase notation to name class
+Structure
+~~~~~~~~~
+
+- The `t-name` that defines the template is on its own `<t>` tag. Its format is
+  `module_name.ComponentName`.
+- Each block element is on its own line.
+- Small inline/style/text elements are either on the same line as their parent or on their own line
+  (depending on their importance and size).
+- Indentation of 4 spaces is applied between a parent element and its children elements.
+- The closing tag of a parent element is at the same indentation level as its opening tag.
+
+.. code-block:: xml
+
+    <!---
+        Example of template including the `t-name` node, some children and their indentation,
+        and text either inline or on a new line.
+    --->
+    <t t-name="web.FormView">
+        <div>
+            <h1>Document</h1>
+            <button title="A long title to see when it might be good to have text on its own line">
+                Create
+            </button>
+        </div>
+    </t>
+
+Attributes
+~~~~~~~~~~
+
+Attributes of an element are either on the same line as the element or on multiple lines.
+There is no character limit per line.
+
+If multiple lines are used, each new attribute line has an indentation of 4 spaces relative to the
+element. The closing of the element (either `>` or `/>`) is alone on its own line, with the same
+indentation as the element itself (and *not* with the indentation of the attributes).
+
+.. code-block:: xml
+
+    <!--- Example of element with multi-line attributes. --->
+    <div>
+        <button
+            class="btn btn-primary"
+            title="A long title to see when it might be good to have an inline text be on its own line"
+            data-imagine-this-button-has-very-long-attributes=""
+        >
+            Create
+        </button>
+    </div>
+
+The following order is suggested for attributes:
+
+ #. `t-if`, `t-elif`, `t-else`
+ #. `t-foreach`, `t-as`
+ #. attributes specific to this type of element (eg. `type` for `<input>`, `src` for `<img>`)
+ #. `t-on-`
+ #. `class`
+ #. other generic attributes (eg. `title`, `aria-`)
+ #. `id`
+ #. OWL technical attributes (eg. `t-key`, `t-ref`)
+
+`t-att-` and `t-attf-` variations are ordered just after their static counter-part, in this order
+respectively.
+
+.. note::
+   `id` is not used unless absolutely necessary (such as for making an anchor, or as the `for`
+   target of a `label`). When it is used, it is uniquely generated.
+
+Style
+~~~~~
+
+Bootstrap components and utilities are used before anything else, by applying their classes on the
+template. Custom style is only used if absolutely necessary.
+
+.. code-block:: xml
+
+    <!--- Example of template with Bootstrap. --->
+    <t t-name="web.FormView">
+        <div class="mx-3 bg-light">
+            <div class="btn-group my-2">
+                <button class="btn btn-primary">Create</button>
+                <button class="btn btn-secondary">Edit</button>
+            </div>
+        </div>
+    </t>
+
+Inside the `class` attribute itself, the following order is suggested:
+
+ #. Custom template class (only if necessary for adding custom style).
+ #. Bootstrap component classes (eg. `btn`, `card`).
+ #. Bootstrap layout classes (anything that changes the size or position of the element or its
+    children, eg. `d-flex`, `container`, `mt-2`).
+ #. Bootstrap style classes (eg. `text-muted`, `bg-primary`).
+
+.. warning::
+   Before writing custom style you are expected to know all existing Bootstrap components,
+   utilities, mixin and variables, as well as all of Odoo's extra components, utilities, mixin and
+   variables.
+
+If necessary a `css` or `scss` file is used, one per component/template. Inside that file, the style
+rules are as flat as possible and target specific parts of the component/template.
+
+The naming guideline for targeting parts of the template with CSS classes is to use lowercase
+characters for words and hyphens to separate words. The general format is
+`o-component-name--style-name` where:
+
+- `o-` is a must have Odoo prefix.
+- `component-name` is the name of the current component/template.
+- `--` is a mandatory separator between the component name and the style name.
+- `style-name` is the name of the style to be applied on this element.
+
+.. code-block:: xml
+
+    <!---
+        Example of template with Bootstrap and custom style.
+        Keep in mind having custom style is not recommended.
+    --->
+    <t t-name="web.FormView">
+        <div class="o-form-view mx-3">
+            <div class="o-form-view--control-panel my-2">
+                <button class="o-form-view--control-panel-btn btn">Create</button>
+                <button class="o-form-view--control-panel-btn btn">Edit</button>
+            </div>
+        </div>
+    </t>
+
+.. code-block:: scss
+
+    // Example of SCSS file with custom style.
+    // Keep in mind having custom style is not recommended.
+
+    .o-form-view {
+        // here some style rules that are not possible with Bootstrap
+    }
+
+    .o-form-view--control-panel-btn {
+        // here very specific button style
+    }
+
+Rules in `scss` files use existing mixin and variables whenever available. A lot of values
+(eg. color, size, ...) already have a corresponding variable either in Bootstrap or in Odoo.
+
+.. note::
+   Avoid sharing custom component/template classes between different templates/components. If there
+   is a need for generic style, it should probably be added at the framework level instead.
 
 .. _reference/guidelines/git:
 
