@@ -39,6 +39,17 @@ at once or ship products partially by using backorders.
 When a picking related to the order is confirmed, a notification is sent to Amazon who will, in
 turn, notify the customer that the order (or a part of it) is on its way.
 
+.. important::
+   Starting from July 2021, Amazon requires that deliveries be provided with a tracking
+   reference. This concerns all marketplaces.
+   
+   If this is not already done, you need to :ref:`install <general/install>` the **Delivery Costs**
+   module in order to provide the tracking reference. There is unfortunately no workaround to comply
+   with this new Amazon policy.
+
+.. seealso::
+   - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
+
 Follow deliveries in FBA
 ========================
 
