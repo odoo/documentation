@@ -1,19 +1,25 @@
 :show-content:
 
-================================================
-Payment Acquirers (Credit Cards, Online Payment)
-================================================
+=================================================
+Payment acquirers (credit cards, online payments)
+=================================================
 
 .. toctree::
    :titlesonly:
 
    payment_acquirers/wire_transfer
+   payment_acquirers/adyen
+   payment_acquirers/alipay
    payment_acquirers/authorize
+   payment_acquirers/buckaroo
+   payment_acquirers/mollie
+   payment_acquirers/ogone
    payment_acquirers/paypal
+   payment_acquirers/sips
    payment_acquirers/stripe
 
 Odoo embeds several **payment acquirers** that allow your customers to pay on their *Customer
-Portals* or your *eCommerce website*. They can pay Sales Orders, invoices, or subscriptions with
+Portals* or your *eCommerce website*. They can pay sales orders, invoices, or subscriptions with
 recurring payments with their favorite payment methods such as **Credit Cards**.
 
 Offering several payment methods increases the chances of getting paid in time, or even immediately,
@@ -28,13 +34,13 @@ trust.
    Odoo apps delegate the handling of sensitive information to the certified payment acquirer so
    that you don't ever have to worry about PCI compliance.
 
-   This means that no sensitive information (such as credit card numbers or credentials) is stored
-   on Odoo servers or Odoo databases hosted elsewhere. Instead, Odoo apps use a unique reference
-   number to the data stored safely in the payment acquirers' systems.
+   This means that no sensitive information (such as credit card numbers) is stored on Odoo servers
+   or Odoo databases hosted elsewhere. Instead, Odoo apps use a unique reference number to the data
+   stored safely in the payment acquirers' systems.
 
 .. _payment_acquirers/acquirers:
 
-Payment Acquirers
+Payment acquirers
 =================
 
 From an accounting perspective, we can distinguish two types of payment acquirers: the payments that
@@ -43,7 +49,7 @@ acquirers that are third-party services and require you to follow another accoun
 
 .. _payment_acquirers/bank_payments:
 
-Bank Payments
+Bank payments
 -------------
 
 - | :doc:`Wire Transfer <payment_acquirers/wire_transfer>`
@@ -51,43 +57,58 @@ Bank Payments
     approve the payment manually once you have received it on your bank account.
 - | SEPA Direct Debit
   | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for more
-    information about this payment method.
+    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for
+    more information about this payment method.
 
 .. _payment_acquirers/online_providers:
 
-Online Payment Providers
+Online payment providers
 ------------------------
 
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-|                                     | Redirection to       | Payment   | Save Cards | Capture Amount  |
-|                                     | the acquirer website | from Odoo |            | Manually        |
-+=====================================+======================+===========+============+=================+
-| Adyen                               | ✔                    |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| Alipay                              | ✔                    |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| :doc:`Authorize.Net                 | ✔                    | ✔         | ✔          | ✔               |
-| <payment_acquirers/authorize>`      |                      |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| Buckaroo                            | ✔                    |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| Ingenico                            | ✔                    | ✔         | ✔          |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| :doc:`PayPal                        | ✔                    |           |            |                 |
-| <payment_acquirers/paypal>`         |                      |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| PayUMoney                           | ✔                    |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| SIPS                                | ✔                    |           |            |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
-| Stripe                              | ✔                    | ✔         | ✔          |                 |
-+-------------------------------------+----------------------+-----------+------------+-----------------+
++-------------------------------+----------------------+------------+-----------------+-----------+
+|                               | Payment flow         | Save cards | Capture amount  | Refund    |
+|                               |                      |            | manually        | from Odoo |
++===============================+======================+============+=================+===========+
+| :doc:`Adyen                   | Payment from Odoo    | |V|        |                 | |V|       |
+| <payment_acquirers/adyen>`    |                      |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Alipay                  | Redirection to the   |            |                 |           |
+| <payment_acquirers/alipay>`   | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Authorize.Net           | Payment from Odoo    | |V|        | |V|             |           |
+| <payment_acquirers/authorize>`|                      |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Buckaroo                | Redirection to the   |            |                 |           |
+| <payment_acquirers/buckaroo>` | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Mollie                  | Redirection to the   |            |                 |           |
+| <payment_acquirers/mollie>`   | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Ogone                   | Redirection to the   | |V|        |                 |           |
+| <payment_acquirers/ogone>`    | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`PayPal                  | Redirection to the   |            |                 |           |
+| <payment_acquirers/paypal>`   | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| PayU Latam                    | Redirection to the   |            |                 |           |
+|                               | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| PayUMoney                     | Redirection to the   |            |                 |           |
+|                               | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`SIPS                    | Redirection to the   |            |                 |           |
+| <payment_acquirers/sips>`     | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+| :doc:`Stripe                  | Redirection to the   | |V|        |                 |           |
+| <payment_acquirers/stripe>`   | acquirer website     |            |                 |           |
++-------------------------------+----------------------+------------+-----------------+-----------+
+
+.. |V| replace:: ✔
 
 .. note::
-   Some of these Online Payment Providers can also be added as :doc:`Bank Accounts
-   <../finance/accounting/bank/setup/bank_accounts>`, but this is **not** the same process as adding them
-   as Payment Acquirers. Payment Acquirers allow customers to pay online, and Bank Accounts are
+   Some of these online payment providers can also be added as :doc:`bank accounts
+   <../finance/accounting/bank/setup/bank_accounts>`, but this is **not** the same process as adding
+   them as payment acquirers. Payment acquirers allow customers to pay online, and bank accounts are
    added and configured on your Accounting app to do a bank reconciliation, which is an accounting
    control process.
 
@@ -96,15 +117,15 @@ Online Payment Providers
 Configuration
 =============
 
-Some of the features described in this section are available only with some Payment Acquirers. Refer
+Some of the features described in this section are available only with some payment acquirers. Refer
 to :ref:`the table above <payment_acquirers/online_providers>` for more details.
 
 .. _payment_acquirers/add_new:
 
-Add a new Payment Acquirer
+Add a new payment acquirer
 --------------------------
 
-To add a new Payment acquirer and make it available to your customers, go to
+To add a new payment acquirer and make it available to your customers, go to
 :menuselection:`Accounting --> Configuration --> Payment Acquirers`, look for your payment acquirer,
 install the related module, and activate it. To do so, open the payment acquirer and change its
 state from *Disabled* to *Enabled*.
@@ -124,11 +145,11 @@ state from *Disabled* to *Enabled*.
 Credentials tab
 ~~~~~~~~~~~~~~~
 
-If not done yet, go to the **Online Payment Provider**'s website, create an account, and make sure
-to have the credentials required for third-party use. Odoo requires these credentials to communicate
-with the Payment Acquirer and get the confirmation of the *payment authentication*.
+If not done yet, go to the online payment provider website, create an account, and make sure to have
+the credentials required for third-party use. Odoo requires these credentials to communicate with
+the payment acquirer.
 
-The form in this section is specific to the Payment Acquirer you are configuring. Please refer to
+The form in this section is specific to the payment acquirer you are configuring. Please refer to
 the related documentation for more information.
 
 .. _payment_acquirers/configuration_tab:
@@ -136,66 +157,66 @@ the related documentation for more information.
 Configuration tab
 ~~~~~~~~~~~~~~~~~
 
-You can change the Payment Acquirer front-end appearance by modifying its name under the **Displayed
-as** field and which credit card icons to display under the **Supported Payment Icons** field.
+You can change the payment acquirer's front-end appearance by modifying its name under the
+**Displayed as** field and which credit card icons to display under the **Supported Payment Icons**
+field.
 
 .. _payment_acquirers/save_cards:
 
-Save and reuse Credit Cards
+Save and reuse credit cards
 ***************************
 
 With the **Save Cards** feature, Odoo can store **Payment Tokens** in your database, which can be
 used for subsequent payments, without having to reenter the payment details. This is particularly
-useful for subscriptions' recurring payments.
+useful for the eCommerce conversion rate and subscriptions' recurring payments.
 
 .. _payment_acquirers/capture_amount:
 
 Place a hold on a card
 **********************
 
-If the **Capture Amount Manually** field is enabled, the funds are reserved for a few days on the
-customer's card, but not charged yet. You must then go to the related Sales Order and manually
+If you wish to manually capture an amount instead of having an immediate capture, you can enable the
+manual capture. Capturing payments manually has many advantages:
+
+  - Receive the payment confirmation and wait until the order is shipped to capture the payment.
+  - Review and verify that orders are legitimate before the payment is completed and the fulfillment
+    process starts.
+  - Avoid potentially high credit card fees in the event of overselling or cancelled orders.
+
+The **Capture Amount Manually** field is under the **Configuration** tab. If enabled, the funds are
+reserved for a few days on the customer's card, but not charged yet. Please refer to your acquirer's
+documentation for the exact reservation duration.
+
+.. image:: payment_acquirers/media/capture_manually.png
+   :align: center
+   :alt: Configuration tab on Odoo
+
+To capture the payment, you must then go to the related sales order or invoice and manually
 *capture* the funds before its automatic cancellation, or *void the transaction* to unlock the funds
 from the customer's card.
 
-.. _payment_acquirers/payment_flow:
-
-Payment Flow
-************
-
-Choose in the **Payment Flow** field if to redirect the user to the payment acquirer's portal to
-authenticate the payment, or if to stay on the current page and authenticate the payment from Odoo.
+.. image:: payment_acquirers/media/capture.png
+   :align: center
+   :alt: Hold the credit card payment until you capture or revoke it on Odoo
 
 .. note::
-   Some features are available only if you select *Redirection to the acquirer website*.
+   Odoo may not yet support the manual capture for all acquirers, but some acquirers allow managing
+   the capture from their interfaces.
 
 .. _payment_acquirers/countries:
 
 Countries
 *********
 
-Restrict the use of the Payment Acquirer to a selection of countries. Leave this field blank to make
-the Payment Acquirer available to all countries.
+Restrict the use of the payment acquirer to a selection of countries. Leave this field blank to make
+the payment acquirer available to all countries.
 
 .. _payment_acquirers/journal:
 
-Payment Journal
+Payment journal
 ***************
 
-The **Payment Journal** selected for your Payment Acquirer must be a *Bank* journal.
-
-.. important::
-   In many cases, Odoo automatically creates a new **Journal** and a new **Account** when you
-   activate a new Payment Acquirer. Both of them are preset to work out-of-the-box, but we strongly
-   recommend you to make sure these fields are correctly set according to your accounting needs, and
-   adapt them if necessary.
-
-.. _payment_acquirers/messages:
-
-Messages tab
-~~~~~~~~~~~~
-
-Change here the messages displayed by Odoo after a payment's confirmation or failure.
+The **Payment journal** selected for your payment acquirer must be a *Bank* journal.
 
 .. _payment_acquirers/accounting:
 
@@ -207,33 +228,30 @@ reconciliation workflows. However, payments recorded with **Online Payment Provi
 to consider how you want to record your payments' journal entries. We recommend you to ask your
 accountant for advice.
 
-Odoo default method is to record the payments on a *Current Assets Account*, on a dedicated *Bank
-Journal*, once the *Payment Authentication* is confirmed. At some point, you transfer the funds from
-the *Payment Acquirer* to your *Bank Account*.
+You need to select a *Payment Journal* on your acquirer configuration to record the payments,
+on a **Outstanding Account**. The Journal's **type** must be *Bank Journal*.
 
-Here are the requirements for this to work:
+You can use a single journal for many payment methods. And for each payment method, you can either:
 
-- Bank Journal
+- Define an **Accounting Account** to separate these payments from another payment method.
+- Leave blank to fallback on the default account, which you can see or change in the settings.
 
-  - The Journal's **type** must be *Bank Journal*.
-  - Select the right **Default Debit Account** and **Default Credit Account**.
-  - | Under the *Advanced Settings* tab, make sure that **Posting** is set as *Post At Payment
-      Validation*.
-    | This implies that the Journal Entry is recorded directly when your Odoo database receives the
-      confirmation of the *Payment Authentication* from the Online Payment Provider.
+.. image:: payment_acquirers/media/bank_journal.png
+   :align: center
+   :alt: A bank journal in the "Incoming Payments Tab".
 
-- Current Asset Account
-
-  - The Account's **type** is *Current Assets*
-  - The Account must **Allow Reconciliation**
-
-.. note::
-   In many cases, Odoo automatically creates a new **Journal** and a new **Current Asset Account**
-   when you activate a new Payment Acquirer. You can modify them if necessary.
+You can have the same bank account for the whole company, or for some journals only, or a single
+payment method... What best suit your needs.
 
 .. seealso::
-
-   - :doc:`../finance/accounting/receivables/customer_payments/recording`
    - :doc:`payment_acquirers/wire_transfer`
+   - :doc:`payment_acquirers/adyen`
+   - :doc:`payment_acquirers/alipay`
    - :doc:`payment_acquirers/authorize`
+   - :doc:`payment_acquirers/buckaroo`
+   - :doc:`payment_acquirers/mollie`
+   - :doc:`payment_acquirers/ogone`
    - :doc:`payment_acquirers/paypal`
+   - :doc:`payment_acquirers/sips`
+   - :doc:`payment_acquirers/stripe`
+   - :doc:`../websites/ecommerce/shopper_experience/payment_acquirer`
