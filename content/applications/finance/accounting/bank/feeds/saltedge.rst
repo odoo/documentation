@@ -2,8 +2,8 @@
 Salt Edge as bank synchronization provider
 ==========================================
 
-**Salt Edge** is a third-party provider that aggregates banking information
-from your bank accounts. It supports ~5000 institutions in more than 50
+**Salt Edge** is a third-party provider that fetches account transactions
+from your bank accounts. It supports ~5000 institutions in more than 60
 countries.
 
 .. image:: media/saltedge-logo.png
