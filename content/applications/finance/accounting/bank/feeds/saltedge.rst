@@ -108,4 +108,5 @@ and this synchronization was created with Odoo, you will normally be able to fin
 
    * :doc:`bank_synchronization`
    * :doc:`ponto`
+   * :doc:`enablebanking`
    * :doc:`bank_statements`

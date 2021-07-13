@@ -11,3 +11,4 @@ Bank Feeds
    feeds/bank_synchronization
    feeds/ponto
    feeds/saltedge
+   feeds/enablebanking
