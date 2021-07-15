@@ -478,6 +478,9 @@ fiscal elements that indicate that the document is fiscally valid:
    :align: center
    :alt: Barcode and fiscal elements in the invoice report.
 
+.. important::
+   If you are hosted in Odoo SH or On-Premise, you should manually install the ``pdf417gen``
+   library. Use the following command to install it: ``pip install pdf417gen``.
 
 Commercial Validation
 ~~~~~~~~~~~~~~~~~~~~~
@@ -488,7 +491,7 @@ Once the invoice has been sent to the customer:
 2. The customer must send a reception confirmation email.
 3. Subsequently, if all the commercial terms and invoice data are correct, they will send the
    Acceptance confirmation, otherwise they send a Claim.
-4. The field DTE acceptation status is updated automatically. 
+4. The field DTE acceptation status is updated automatically.
 
 .. image:: media/Chile23.png
    :align: center
