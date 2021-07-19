@@ -267,7 +267,8 @@ Developer features
 
     * ``xml``: read template qweb from xml file directly instead of database.
       Once a template has been modified in database, it will be not be read from
-      the xml file until the next update/init.
+      the xml file until the next update/init. Particularly, templates are not
+      translated on using this option.
 
     * ``reload``: restart server when python file are updated (may not be detected
       depending on the text editor used)
