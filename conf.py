@@ -61,6 +61,11 @@ sys.path.insert(0, str(extension_dir.absolute()))
 odoo_dir = Path('odoo')
 odoo_dir_in_path = False
 if not odoo_dir.is_dir():
+    parent_odoo_dir = Path('../odoo')
+    if parent_odoo_dir.is_dir():
+        _logger.info('Using parent dir to find odoo sources')
+        odoo_dir = parent_odoo_dir
+if not odoo_dir.is_dir():
     _logger.warning(
         f"Could not find Odoo sources directory at {odoo_dir.absolute()}.\n"
         f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
