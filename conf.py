@@ -111,6 +111,9 @@ extensions = [
 
     # Strange html domain logic used in memento pages
     'html_domain',
+
+    # Sitemap generation
+    'sphinx_sitemap',
 ]
 if odoo_dir_in_path:
     # GitHub links generation
@@ -246,6 +249,11 @@ def setup(app):
     app.add_lexer('xml', XmlLexer)
 
     app.connect('html-page-context', _generate_alternate_urls)
+
+    if app.config.language == "en":
+        app.config.sitemap_url_scheme = "{version}{link}"
+    else:
+        app.config.sitemap_url_scheme = "{version}{lang}{link}"
 
 
 def _generate_alternate_urls(app, pagename, templatename, context, doctree):
