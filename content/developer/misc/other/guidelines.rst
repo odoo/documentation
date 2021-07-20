@@ -911,10 +911,10 @@ Symbols and Conventions
 
         # Fields declaration
         name = fields.Char(string='Name', default=_default_name)
-        seats_reserved = fields.Integer(oldname='register_current', string='Reserved Seats',
-            store=True, readonly=True, compute='_compute_seats')
-        seats_available = fields.Integer(oldname='register_avail', string='Available Seats',
-            store=True, readonly=True, compute='_compute_seats')
+        seats_reserved = fields.Integer(string='Reserved Seats', store=True
+            readonly=True, compute='_compute_seats')
+        seats_available = fields.Integer(string='Available Seats', store=True
+            readonly=True, compute='_compute_seats')
         price = fields.Integer(string='Price')
         event_type = fields.Selection(string="Type", selection='_selection_type')
 

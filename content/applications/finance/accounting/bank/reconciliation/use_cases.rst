@@ -101,8 +101,5 @@ right and validate all related payments :
 .. image:: media/use10.png
    :align: center
 
-.. tip::
-   Hit CTRL-Enter to reconcile all the balanced items in the sheet.
-
 .. seealso::
    * :doc:`../feeds/bank_synchronization`

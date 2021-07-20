@@ -5,6 +5,10 @@ ifndef WORKERS
   WORKERS = auto
 endif
 
+ifndef BUILD_DIR
+  BUILD_DIR    = _build
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
@@ -13,7 +17,7 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
                  -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY) \
 				 -j $(WORKERS)
 SOURCE_DIR     = content
-BUILD_DIR      = _build
+
 
 HTML_BUILD_DIR = $(BUILD_DIR)/html
 ifdef VERSIONS
@@ -37,10 +41,9 @@ help:
 clean:
 	@echo "Cleaning build files..."
 	rm -rf $(BUILD_DIR)/*
-	rm extensions/odoo_theme/static/style.css
 	@echo "Cleaning finished."
 
-html: extensions/odoo_theme/static/style.css
+html: $(BUILD_DIR)/html/_static/style.css
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b html $(SPHINXOPTS) $(SOURCE_DIR) $(HTML_BUILD_DIR)
 	@echo "Build finished."
@@ -60,9 +63,10 @@ gettext:
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b gettext $(SOURCE_DIR) locale/sources
 	@echo "Generation finished."
 
-extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
+$(BUILD_DIR)/html/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."
-	pysassc $(subst .css,.scss,$@) $@
+	mkdir -p $(BUILD_DIR)/html/_static
+	pysassc extensions/odoo_theme/static/style.scss $(BUILD_DIR)/html/_static/style.css
 	@echo "Compilation finished."
 
 #=== Development and debugging rules ===#
@@ -70,6 +74,6 @@ extensions/odoo_theme/static/style.css: extensions/odoo_theme/static/style.scss 
 fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
 
-static: extensions/odoo_theme/static/style.css
-	cp -r extensions/odoo_theme/static/* _build/html/_static/
-	cp -r static/* _build/html/_static/
+static: $(BUILD_DIR)/static/style.css
+	cp -r extensions/odoo_theme/static/* $(BUILD_DIR)/html/_static/
+	cp -r static/* $(BUILD_DIR)/html/_static/
