@@ -2,6 +2,11 @@
 Italy (IT)
 ==========
 
+.. _italy/pec:
+
+PEC mail
+========
+
 Questa guida spiegherà come utilizzare la fattura elettronica in Odoo e
 come configurare correttamente i dati aziendali, i contatti e la
 contabilità. Per testare la fattura elettronica i dati devono essere
@@ -10,7 +15,7 @@ non riconoscerà l’interscambio di informazioni.
 
 
 Configurare le informazioni sulla tua Azienda
-=============================================
+---------------------------------------------
 
 Il passo successivo è la configurazione delle informazioni necessarie al
 funzionamento della fatturazione elettronica. Si può accedere alla
@@ -52,7 +57,7 @@ elettronica sono i seguenti:
 
 
 Configurare le impostazioni per la Fatturazione Elettronica
------------------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 -  Numero di iscrizione nel registro Imprese tenuto presso la Camera di
    Commercio.
@@ -68,7 +73,7 @@ Configurare le impostazioni per la Fatturazione Elettronica
 
 
 Configurare il profilo dei clienti
-----------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Per un corretto utilizzo dell’applicazione, il profilo di clienti e
 fornitori, nell’applicazione contatti, deve essere configurato con le
@@ -85,7 +90,7 @@ fattura elettronica*.
 
 
 Il processo di fatturazione
-===========================
+---------------------------
 
 Si può procedere ad emettere una fattura seguendo le indicazioni
 dell’applicazione. Il momento che determina il formale invio della
