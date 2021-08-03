@@ -379,7 +379,7 @@ perform the service within:
     from passlib import pwd, hash
 
     from odoo import http
-    from odoo.addons.iap import charge
+    from odoo.addons.iap.tools.iap_tools import iap_charge
 
     class CoalBurnerController(http.Controller):
         @http.route('/roll', type='json', auth='none', csrf='false')
@@ -390,8 +390,10 @@ perform the service within:
 
             # we charge 1 credit for 10 seconds of CPU
             cost = 1
+            # we set the transaction to expire after 1 hour
+            ttl = 1
             # TODO: allow the user to specify how many (tens of seconds) of CPU they want to use
-            with charge(http.request.env, service_key, account_token, cost):
+            with iap_charge(http.request.env, service_key, account_token, cost, ttl=ttl):
 
                 # 10 seconds of CPU per credit
                 end = time.time()  (10 * cost)
@@ -471,8 +473,10 @@ parameters we can use to make things clearer to the end-user.
 
         # we charge 1 credit for 10 seconds of CPU
         cost = 1
+        # we set the transaction to expire after 1 hour
+        ttl = 1
         # TODO: allow the user to specify how many (tens of seconds) of CPU they want to use
-        with charge(http.request.env, service_key, account_token, cost,
+        with charge(http.request.env, service_key, account_token, cost, ttl=ttl
                     description="We're just obeying orders",
                     credit_template='coalroller_service.no_credit'):
 
@@ -545,6 +549,8 @@ Authorize
                             charges on their account
     :param str dbuuid: optional, allows the user to benefit from trial
                        credits if his database is eligible (see :ref:`Service registration <register-service>`)
+    :param int ttl: optional, transaction time to live in hours. If the credit are not captured when the transaction expires,
+                    the transaction is cancelled. The default value is set to 4320 hours (= 180 days).
     :returns: :class:`TransactionToken` if the authorization succeeded
     :raises: :class:`~odoo.exceptions.AccessError` if the service token is invalid
     :raises: :class:`~odoo.addons.iap.models.iap.InsufficientCreditError` if the account does not have enough credits
@@ -561,6 +567,7 @@ Authorize
             'key': SERVICE_KEY,
             'credit': 25,
             'description': "Why this is being charged",
+            'ttl': 1
         }
     }).json()
     if 'error' in r:
@@ -722,7 +729,7 @@ module provides a few helpers to make IAP flow even simpler.
 Charging
 --------
 
-.. class:: odoo.addons.iap.tools.iap_tools.iap_charge(env, key, account_token, credit[, dbuuid, description, credit_template])
+.. class:: odoo.addons.iap.tools.iap_tools.iap_charge(env, key, account_token, credit, [dbuuid, description, credit_template, ttl])
 
     A *context manager* for authorizing and automatically capturing or
     cancelling transactions for use in the backend/proxy.
@@ -741,6 +748,7 @@ Charging
     :param float credit:
     :param str description:
     :param Qweb template credit_template:
+    :param int ttl:
 
 .. code-block:: python
   :emphasize-lines: 11,13,14,15
@@ -769,7 +777,7 @@ Charging
 Authorize
 ---------
 
-.. class:: odoo.addons.iap.tools.iap_tools.iap_authorize(env, key, account_token, credit[, dbuuid, description, credit_template])
+.. class:: odoo.addons.iap.tools.iap_tools.iap_authorize(env, key, account_token, credit, [dbuuid, description, credit_template, ttl])
 
     Will authorize everything.
 
@@ -780,6 +788,7 @@ Authorize
     :param float credit:
     :param str description:
     :param Qweb template credit_template:
+    :param int ttl:
 
 .. code-block:: python
   :emphasize-lines: 12
