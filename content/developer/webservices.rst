@@ -10,5 +10,4 @@ Web Services
 
     webservices/odoo
     webservices/iap
-    webservices/upgrade
     webservices/localization
