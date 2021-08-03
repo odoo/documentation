@@ -9,4 +9,3 @@ API
 
     api/odoo
     api/iap
-    api/upgrade
