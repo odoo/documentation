@@ -4,7 +4,7 @@ Use flexible components consumption
 
 Sometimes, you might need more components than usual to manufacture a
 product. Let’s say that you produce a desk combination of 4 desks and
-two chairs but your customer asks you one more desk. Alright, you can do
+two chairs but your customer asks you for one more desk. Alright, you can do
 that. But you will need to register it!
 
 In case this happens, Odoo has the *flexible components consumption*
