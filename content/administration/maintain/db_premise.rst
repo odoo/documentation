@@ -12,7 +12,7 @@ To register your database, you just need to enter your Subscription Code in the
 banner in the App Switcher. Make sure you do not add extra spaces before or after
 your subscription code. If the registration is successful, it will turn green and
 will provide you with the Expiration Date of your freshly-registered database. You
-can check this Epiration Date in the About menu (Odoo 9) or in the Settings Dashboard
+can check this Expiration Date in the About menu (Odoo 9) or in the Settings Dashboard
 (Odoo 10).
 
 Registration Error Message
