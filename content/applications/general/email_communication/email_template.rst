@@ -11,7 +11,7 @@ improving their overall experience with the company.
 Enable it and understand a few concepts
 =======================================
 
-The :doc:`Developer mode </applications/general/developer_mode>` must be activated. Then, go to
+The :ref:`developer mode <developer-mode>` must be activated. Then, go to
 :menuselection:`Settings --> Technical --> Templates`. A view of the existing templates is shown.
 
 .. warning::
@@ -42,7 +42,7 @@ A common use is to use it to indicate the name of the recipient in the newslette
 
 Placeholders and more specifically fields that are available for a template will depend on the template you modify, one way to see the fields that are available is to check the Dynamic Placeholder Generator tab.
 
-:: _dynamic_placeholder_generator:
+.. _dynamic_placeholder_generator:
 
 Under the tab *Dynamic Placeholder Generator*, look for the *Field* you would like to use.
 
@@ -124,6 +124,7 @@ Here is the result once the function is adapted in the template.
    :align: center
    :alt: Adapted rendering of the format_date 
 
+.. _usable_functions:
 
 Functions used by default within email templates
 ************************************************
@@ -167,7 +168,7 @@ The result will look like this:
 
 **format_time()** - Similar to the format_datetime function except It's used only for the time, not a date.
 
-**format_amount()** - Formats a number, an amount to display the currency depending on the display setting that has been defined on the currency (the debug mode must be activate to see this feature) :menuselection: `Accounting --> Configuration --> Currencies`(before or after the amount depending on the convention).
+**format_amount()** - Formats a number, an amount to display the currency depending on the display setting that has been defined on the currency (the debug mode must be activate to see this feature) :menuselection:`Accounting --> Configuration --> Currencies` (before or after the amount depending on the convention).
 
 .. image:: email_template/so_template_format_amount.jpg
    :align: center
@@ -183,7 +184,7 @@ Which will look like this:
 Defining a default reply to on your mail template
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Although the field *reply to* is available within the mail templates, **this field is only used for mass mailing**mode, this means when sending templates on what we call bulk emailing. You can send emails in bulk in almost every app that has a list view, select the records you want and click on the action button. If you have an option to send an email, you will see a mail composer with possible values to define:
+Although the field *reply to* is available within the mail templates, **this field is only used for mass mailing** mode, this means when sending templates on what we call bulk emailing. You can send emails in bulk in almost every app that has a list view, select the records you want and click on the action button. If you have an option to send an email, you will see a mail composer with possible values to define:
 
 .. image:: email_template/composer_mass_mailing_quotations.png
    :align: center

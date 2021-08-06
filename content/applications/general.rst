@@ -85,6 +85,22 @@ On some occasions, new improvements or app features are added to :doc:`supported
 
 Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to upgrade, then on
 *Upgrade*.
+
+Deactivating Users
+------------------
+
+.. note:: Make sure you have sufficient **administrative rights** if
+    you want to change the status of any of your users.
+
+In your Odoo instance, click on **Settings**. You will have a section
+showing you the active users on your database. Click on **Manage Users.**
+
++----------------+----------------+
+|   |settings|   | |browse_users| |
++----------------+----------------+
+
+You'll then see the list of your users.
+
 =======
 
 Deactivating Users

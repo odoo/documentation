@@ -22,6 +22,8 @@ If you click on it, you will see why the message was not sent.
 Common error messages
 ~~~~~~~~~~~~~~~~~~~~~
 
+.. _daily_limit_mail:
+
 You reached your daily limit: 
 *****************************
 
