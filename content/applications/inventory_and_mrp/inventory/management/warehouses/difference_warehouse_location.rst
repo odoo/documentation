@@ -10,7 +10,7 @@ A **Location**, is a specific space within your warehouse. It can be
 considered as a sublocation of your warehouse, as a shelf, a floor, an
 aisle, etc. Therefore, a location is part of one warehouse only and it
 is not possible to link one location to multiple warehouses. You can
-configure as much locations as you need under one warehouse.
+configure as many locations as you need under one warehouse.
 
 There are 3 types of locations:
 
