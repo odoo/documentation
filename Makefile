@@ -9,6 +9,10 @@ ifndef BUILD_DIR
   BUILD_DIR    = _build
 endif
 
+ifndef CURRENT_LANG
+  CURRENT_LANG = en
+endif
+
 SPHINX_BUILD   = sphinx-build
 CONFIG_DIR     = .
 SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSION) \
