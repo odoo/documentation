@@ -62,8 +62,13 @@ Signature Key), paste them in the related fields under the **Credentials** tab, 
    :ref:`Payment Flow <payment_acquirers/payment_flow>`.
 
 .. important::
-   If you are trying Authorize.Net as a test, with a *sandbox account*, change the **State** to
-   *Test Mode*. We recommend doing this on a test Odoo database, rather than on your main database.
+   If you are trying Authorize.Net as a test, with a *sandbox account*, change the :guilabel:`State`
+   to :guilabel:`Test Mode`. We recommend doing this on a test Odoo database, rather than on your
+   main database.
+
+   If you set :guilabel:`Test Mode` on Odoo and use an authorize.net account instead of a
+   sandbox.authorize.net account, it results in the following error: *The merchant login ID or
+   password is invalid or the account is inactive*.
 
 Payment Flow
 ------------
