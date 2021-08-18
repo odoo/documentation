@@ -20,6 +20,12 @@ to the **App** module and Install **Automated translations through Gengo
 Api** and **Website Gengo Translator**. If you want to do it manually,
 don't install anything, and follow the next step.
 
+.. warning::
+    Gengo won't work on Odoo Online and not by default on Odoo.sh. The required
+    Python library `gengo` isn't installed on those platforms. It can be used
+    either on-premise or by adding `gengo` to `requirements.txt` in your
+    Odoo.sh git project.
+
 Now go to your website. On the bottom right corner of the page, click on
 **Add a language**.
 
