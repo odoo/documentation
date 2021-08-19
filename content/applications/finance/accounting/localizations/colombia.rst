@@ -49,7 +49,7 @@ look for the *Colombian Electronic Invoice* section.
 Using the Testing mode it is possible to connect with a Carvajal T&S
 testing environment. This allows users to test the complete workflow
 and integration with the CEN Financiero portal, which is accessible
-here: https://cenfinancierolab.cen.biz
+here: https://cenflab.cen.biz/site/
 
 Once that Odoo and Carvajal T&S is fully configured and ready for
 production the testing environment can be disabled.
