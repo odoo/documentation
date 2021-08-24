@@ -90,7 +90,7 @@ Available manifest fields are:
 ``demo`` (``list(str)``)
     List of data files which are only installed or updated in *demonstration
     mode*
-``auto_install`` (``bool``, default: ``False``)
+``auto_install`` (``bool`` or ``list(str)``, default: ``False``)
     If ``True``, this module will automatically be installed if all of its
     dependencies are installed.
 
@@ -100,7 +100,12 @@ Available manifest fields are:
     For instance ``sale_crm`` depends on both ``sale`` and ``crm`` and is set
     to ``auto_install``. When both ``sale`` and ``crm`` are installed, it
     automatically adds CRM campaigns tracking to sale orders without either
-    ``sale`` or ``crm`` being aware of one another
+    ``sale`` or ``crm`` being aware of one another.
+
+    If it is a list, it must contain a subset of the ``dependencies``, to
+    instruct Odoo to auto-install this one in case just those are installed.
+
+    An empty list indicates to auto-install always.
 ``external_dependencies`` (``dict(key=list(str))``)
     A dictionary containing python and/or binary dependencies.
 
@@ -145,7 +150,7 @@ Available manifest fields are:
     These hooks should only be used when setup/cleanup required for this module
     is either extremely difficult or impossible through the api.
 ``active`` (``bool``)
-    This indicates whether this module must install automatically or not.
+    Deprecated. Renamed to ``auto_install``.
 
 .. _semantic versioning: https://semver.org
 .. _existing categories:
