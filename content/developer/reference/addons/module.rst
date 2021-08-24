@@ -90,17 +90,24 @@ Available manifest fields are:
 ``demo`` (``list(str)``)
     List of data files which are only installed or updated in *demonstration
     mode*
-``auto_install`` (``bool``, default: ``False``)
+``auto_install`` (``bool`` or ``list(str)``, default: ``False``)
     If ``True``, this module will automatically be installed if all of its
     dependencies are installed.
 
-    It is generally used for "link modules" implementing synergic integration
+    It is generally used for "link modules" implementing synergetic integration
     between two otherwise independent modules.
 
     For instance ``sale_crm`` depends on both ``sale`` and ``crm`` and is set
     to ``auto_install``. When both ``sale`` and ``crm`` are installed, it
     automatically adds CRM campaigns tracking to sale orders without either
-    ``sale`` or ``crm`` being aware of one another
+    ``sale`` or ``crm`` being aware of one another.
+
+    If it is a list, it must contain a subset of the dependencies. This module will automatically be
+    installed as soon as all the dependencies in the subset are installed. The remaining
+    dependencies will be automatically installed as well. If the list is empty, this module will
+    always be automatically installed regardless of its dependencies and these will be installed as
+    well.
+
 ``external_dependencies`` (``dict(key=list(str))``)
     A dictionary containing python and/or binary dependencies.
 
@@ -145,7 +152,7 @@ Available manifest fields are:
     These hooks should only be used when setup/cleanup required for this module
     is either extremely difficult or impossible through the api.
 ``active`` (``bool``)
-    This indicates whether this module must install automatically or not.
+    Deprecated. Replaced by ``auto_install``.
 
 .. _semantic versioning: https://semver.org
 .. _existing categories:
