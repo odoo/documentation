@@ -36,6 +36,73 @@ on **Sync countries and currencies**, then you can fill in all the other fields.
 When all the fields are filled in, you can synchronize the categories and the
 policies by clicking on the adequate buttons.
 
+Accept account deletion notifications
+=====================================
+
+Since September 2021, **eBay requires supporting customer account deletion/closure notifications**.
+As such, when eBay receives an account request for deletion, all eBay partners must confirm the
+reception of the request and take further action if necessary.
+
+Odoo has a notification endpoint to receive those notifications, confirm the reception of the
+request, and handle the first set of actions to anonymize the account details in **Contacts** and
+remove the customer's access to the portal.
+
+.. important::
+   Make sure to correctly :ref:`set up your subscription to the marketplace account deletion
+   notifications <ebay/subscribe-account-deletion-notifications>` as eBay may temporarily disable
+   the related eBay account until the subscription is completed.
+
+.. _ebay/retrieve-endpoint-details:
+
+Retrieve endpoint details from Odoo
+-----------------------------------
+
+The endpoint details can be found in :menuselection:`Sales --> Configuration --> Settings --> eBay`.
+Click on *Generate Token* to retrieve your **Verification Token**.
+
+.. image:: media/verification-token.png
+   :align: center
+   :alt: Button to generate an eBay verification token in Odoo
+
+.. _ebay/subscribe-account-deletion-notifications:
+
+Subscribe to account deletion notifications
+-------------------------------------------
+
+Log in on the `developer portal of eBay <https://go.developer.ebay.com/>`_ and go to **Alerts &
+Notifications**.
+
+.. image:: media/ebay-your-account.png
+   :align: center
+   :alt: Overview of the Alerts & Notifications dashboard of eBay
+
+To subscribe to deletion/closure notifications, eBay needs a few details:
+
+- An **email address** to send notifications to if the endpoint is unreachable.
+- The **endpoint details**:
+
+  - The URL to Odoo's account deletion notification endpoint
+  - A verification token
+
+.. image:: media/ebay-notification-endpoint.png
+   :align: center
+   :alt: Dedicated fields to enter the endpoint details
+
+.. tip::
+   You can edit the last two fields once the email address field is filled out.
+
+Verify the connectivity with the endpoint
+-----------------------------------------
+
+After setting the retrieved endpoint details in eBay's dashboard, consider testing the connectivity
+with the **Send Test Notification** button.
+
+You should get the following confirmation message: "A test notification was sent successfully!"
+
+.. image:: media/test-notification.png
+   :align: center
+   :alt: Button to send test notification
+
 Using the updated synchronisation method
 ========================================
 
@@ -51,7 +118,9 @@ To switch to the new synchronization mechanism:
 #. Activate the :ref:`developer mode <developer-mode>`.
 #. Go to :menuselection:`Settings --> Technical --> Scheduled Actions`
 #. Archive the old synchronization actions (both are named *Ebay: update product status*)
-#. Activate the new synchronization actions (*Ebay: get new orders* which runs every 15min by default and *Ebay: synchronise stock (for 'get new orders' synchronisation)* which runs once a day per default)
+#. Activate the new synchronization actions (*Ebay: get new orders* which runs every 15min by
+   default and *Ebay: synchronise stock (for 'get new orders' synchronisation)* which runs once a
+   day per default)
 #. Ensure that the **Next Execution Date** for both these actions are in the near future
 
 Starting with the next execution date, the new method will be used instead of the old one.
