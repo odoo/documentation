@@ -37,12 +37,9 @@ When a picking related to the order is confirmed, a notification is sent to Amaz
 turn, notify the customer that the order (or a part of it) is on its way.
 
 .. important::
-   Starting from July 2021, Amazon requires that deliveries be provided with a tracking
-   reference. This concerns all marketplaces.
-   
-   If this is not already done, you need to :ref:`install <general/install>` the **Delivery Costs**
-   module in order to provide the tracking reference. There is unfortunately no workaround to comply
-   with this new Amazon policy.
+   Amazon requires to provide a tracking reference with each delivery. You'll need to assign a
+   carrier. If the carrier doesn't automatically provide a tracking reference, you'll need to set
+   one manually. This concerns all marketplaces.
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
