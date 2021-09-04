@@ -79,7 +79,7 @@ will have all three of create, read, and update.
 
 .. _reference/security/rules:
 
-Access Rules
+Record Rules
 ============
 
 Record rules are *conditions* which must be satisfied in order for an operation
