@@ -529,7 +529,7 @@ attributes:
   allows to specify a particular field in order to manage it from the available measures, it's
   main use is for hiding a field from the selectable measures:
 
-- ``name`` (required)
+- ``name`` (mandatory)
     the name of the field to use in the view.
 - ``string`` (optional)
     the name that would be used to display the field in the cohort view, overrides the
@@ -1131,48 +1131,51 @@ The graph view is used to visualize aggregations over a number of records or
 record groups. Its root element is ``<graph>`` which can take the following
 attributes:
 
-``type``
+``type`` (optional)
   one of ``bar`` (default), ``pie`` and ``line``, the type of graph to use
-``stacked``
-  only used for ``bar`` charts. If present and set to ``True``, stacks bars
-  within a group
-``disable_linking``
-  set to ``True`` to prevent from redirecting clicks on graph to list view
-``order``
+
+``stacked`` (optional)
+  only used for ``bar`` charts. Set to ``0`` to prevent the bars within a group
+  to be stacked initially.
+
+``disable_linking`` (optional)
+  set to ``1`` to prevent from redirecting clicks on graph to list view
+
+``order`` (optional)
   if set, x-axis values will be sorted by default according their measure with
   respect to the given order (``asc`` or ``desc``). Only used for ``bar`` and
   ``pie`` charts.
 
+``string`` (optional)
+  string displayed in the breadcrumbs when redirecting to list view.
+
 The only allowed element within a graph view is ``field`` which can have the
 following attributes:
 
-``name`` (required)
+``name`` (mandatory)
   the name of a field to use in the view. If used for grouping (rather
   than aggregating)
-
-``title`` (optional)
-  string displayed on the top of the graph.
 
 ``invisible`` (optional)
   if true, the field will not appear either in the active measures nor in the
   selectable measures.
 
-``type``
-  indicates whether the field should be used as a grouping criteria or as an
-  aggregated value within a group. Possible values are:
+``type`` (optional)
+  if set to ``measure``, the field will be used as an aggregated value within a
+  group instead of a grouping criteria. It only works for the last field
+  with that attribute but it is useful for other fields with string attribute
+  (see below).
 
-  ``row`` (default)
-    groups by the specified field. All graph types support at least one level
-    of grouping, some may support more.
-  ``col``
-    authorized in graph views but only used by pivot tables
-  ``measure``
-    field to aggregate within a group
-
-``interval``
+``interval`` (optional)
   on date and datetime fields, groups by the specified interval (``day``,
   ``week``, ``month``, ``quarter`` or ``year``) instead of grouping on the
   specific datetime (fixed second resolution) or date (fixed day resolution).
+  Default is ``month``.
+
+``string`` (optional)
+  only used for field with ``type="measure"``. The name that will be used to
+  display the field in the graph view, overrides the default python String
+  attribute of the field.
 
 The measures are automatically generated from the model fields; only the
 aggregatable fields are used. Those measures are also alphabetically
@@ -1981,11 +1984,11 @@ Pivot
 The pivot view is used to visualize aggregations as a `pivot table`_. Its root
 element is ``<pivot>`` which can take the following attributes:
 
-``disable_linking``
-  Set to ``True`` to remove table cell's links to list view.
-``display_quantity``
-  Set to ``true`` to display the Quantity column by default.
-``default_order``
+``disable_linking`` (optional)
+  Set to ``1`` to remove table cell's links to list view.
+``display_quantity`` (optional)
+  Set to ``1`` to display the Quantity column by default.
+``default_order`` (optional)
   The name of the measure and the order (asc or desc) to use as default order
   in the view.
 
@@ -1998,15 +2001,15 @@ element is ``<pivot>`` which can take the following attributes:
 The only allowed element within a pivot view is ``field`` which can have the
 following attributes:
 
-``name`` (required)
+``name`` (mandatory)
   the name of a field to use in the view. If used for grouping (rather
   than aggregating)
 
-``string``
+``string`` (optional)
   the name that will be used to display the field in the pivot view,
   overrides the default python String attribute of the field.
 
-``type``
+``type`` (optional)
   indicates whether the field should be used as a grouping criteria or as an
   aggregated value within a group. Possible values are:
 
@@ -2021,9 +2024,9 @@ following attributes:
     ``week``, ``month``, ``quarter`` or ``year``) instead of grouping on the
     specific datetime (fixed second resolution) or date (fixed day resolution).
 
-``invisible``
-  if true, the field will not appear either in the active measures nor in the
-  selectable measures (useful for fields that do not make sense aggregated,
+``invisible`` (optional)
+  if true, the field will not appear either in the active measures nor
+  in the selectable measures (useful for fields that do not make sense aggregated,
   such as fields in different units, e.g. € and $).
 
 The measures are automatically generated from the model fields; only the
