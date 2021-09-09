@@ -18,7 +18,7 @@ requiere los siguientes Módulos:
    - Tipos de Documentos de Identificación
 
 #. **l10n_co_edi**: Este módulo incluye todos los campos adicionales que son
-   requeridos para la Integración entre Carvajal T&S y la generación de la
+   requeridos para la Integración entre Carvajal y la generación de la
    Factura Electrónica, basado en los requisitos legales de la DIAN.
 
 
@@ -42,12 +42,12 @@ Instalar a los primeros dos módulos:
    :align: center
 
 
-Configuración de las credenciales del Servicio Web de Carvajal T&S
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Configuración de las credenciales del Servicio Web de Carvajal
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 | Una vez que los módulos están instalados, para poderte conectar con el
-  Servicio Web de Carvajal T&S, es necesario configurar el Usuario y las
-  Credenciales. Esta información será provista por Carvajal T&S.
+  Servicio Web de Carvajal, es necesario configurar el Usuario y las
+  Credenciales. Esta información será provista por Carvajal.
 | Ve a :menuselection:`Facturación --> Configuración --> Configuración` y busca la sección
   **Facturación Electrónica Colombiana**
 
@@ -55,14 +55,21 @@ Configuración de las credenciales del Servicio Web de Carvajal T&S
   :align: center
 
 La funcionalidad de pruebas le permite conectarse e interactuar con el
-ambiente piloto de Carvajal T&S, esto permite a los usuarios probar el
+ambiente piloto de Carvajal, esto permite a los usuarios probar el
 flujo completo y la integración con el Portal Financiero CEN, al cual
-se accede a través de la siguiente liga: `Cenfinanciero <https://cenfinancierolab.cen.biz>`_.
+se accede a través de la siguiente liga:
+
+CTS (Carvajal T&S)
+   https://cenflab.cen.biz/site/
+
+CSC (Carvajal Servicios de Comunicación)
+   https://web-stage.facturacarvajal.com/
+
+CSC es el predeterminado para nuevas bases de datos.
 
 Una vez que el ambiente de producción está listo en Odoo y en Carvajal
-T&S el ambiente de pruebas debe ser deshabilitado para poder enviar la
-información al ambiente de producción de Carvajal, para el cual es
-utilizada la siguiente URL: `Cenfinanciero <https://cenfinancierolab.cen.biz>`_.
+el ambiente de pruebas debe ser deshabilitado para poder enviar la
+información al ambiente de producción de Carvajal.
 
 
 Configuración de Información para PDF
