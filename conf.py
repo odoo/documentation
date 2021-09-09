@@ -291,7 +291,7 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
             for _alternate_version in sorted(_alternate_versions, reverse=True)
             if _alternate_version != version and (
                 _alternate_version != 'master' or pagename.startswith('developer')
-            )
+            ) and not _alternate_version.startswith('saas')
         ]
 
     def _localize():
