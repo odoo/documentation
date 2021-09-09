@@ -19,7 +19,7 @@ requires the next modules:
    contains the default setup for: chart of accounts, taxes,
    retentions, identification document types
 #. **l10n_co_edi**: This module includes all the extra fields that are
-   required for the Integration with Carvajal T&S and generate the
+   required for the Integration with Carvajal and generate the
    electronic invoice, based on the DIAN legal requirements.
 
 
@@ -43,12 +43,12 @@ filter and search for "Colombia". Then click on *Install* for the first two modu
    :align: center
 
 
-Configure credentials for Carvajal T&S web service
---------------------------------------------------
+Configure credentials for Carvajal web service
+----------------------------------------------
 
 Once that the modules are installed, in order to be able to connect
-with Carvajal T&S Web Service, it's necessary to configure the user
-and credentials, this information will be provided by Carvajal T&S.
+with Carvajal Web Service, it's necessary to configure the user
+and credentials, this information will be provided by Carvajal.
 
 Go to :menuselection:`Accounting --> Configuration --> Settings` and
 look for the *Colombian Electronic Invoice* section.
@@ -56,12 +56,20 @@ look for the *Colombian Electronic Invoice* section.
 .. image:: media/colombia03.png
    :align: center
 
-Using the Testing mode it is possible to connect with a Carvajal T&S
+Using the Testing mode it is possible to connect with a Carvajal
 testing environment. This allows users to test the complete workflow
 and integration with the CEN Financiero portal, which is accessible
-here: https://cenfinancierolab.cen.biz
+here:
 
-Once that Odoo and Carvajal T&S is fully configured and ready for
+CTS (Carvajal T&S)
+  https://cenflab.cen.biz/site/
+
+CSC (Carvajal Servicios de Comunicación)
+  https://web-stage.facturacarvajal.com/
+
+CSC is the default for new databases.
+
+Once that Odoo and Carvajal are fully configured and ready for
 production the testing environment can be disabled.
 
 
