@@ -19,7 +19,7 @@ copyright = 'Odoo S.A.'
 # `version` if the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
 # `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
-version = release = 'master'
+version = release = 'saas-14.5'
 
 # The minimal Sphinx version required to build the documentation.
 needs_sphinx = '3.0.0'
@@ -70,19 +70,20 @@ if not odoo_dir.is_dir():
         f"Could not find Odoo sources directory at {odoo_dir.absolute()}.\n"
         f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
         f"In order to fully build the 'Developer' documentation, clone the repository with "
-        f"`git clone https://github.com/odoo/odoo` or create a symbolink link."
+        f"`git clone https://github.com/odoo/odoo` or create a symbolic link."
     )
 else:
     sys.path.insert(0, str(odoo_dir.absolute()))
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
-    odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
+    odoo_version = odoo_release.version.replace('~', '-') \
+        if 'alpha' not in odoo_release.version else 'master'
     if release != odoo_version:
         _logger.warning(
             f"Found Odoo sources directory but with version '{odoo_version}' incompatible with "
             f"documentation version '{version}'.\n"
             f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
-            f"In order to fully build the 'Developer' documentation, checkout the matching branch"
-            f" with `cd odoo && git checkout {version}`."
+            f"In order to fully build the 'Developer' documentation, checkout the matching branch "
+            f"with `cd odoo && git checkout {version}`."
         )
     else:
         _logger.info(f"Found Odoo sources directory matching documentation version {release}.")
