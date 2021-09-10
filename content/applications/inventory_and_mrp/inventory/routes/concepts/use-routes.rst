@@ -260,7 +260,7 @@ all of them:
    in a specific stock location. The need can come from a sale order
    which has been validated or for a manufacturing order which
    requires a specific component. When the need appears in the
-   source location, Odoo generates a picking to fulfill this need.
+   destination location, Odoo generates a picking to fulfill this need.
 -  **Push To**: this rule is triggered by the arrival of some
    products in the defined source location. In case you move
    products to the source location, Odoo generates a picking to move
