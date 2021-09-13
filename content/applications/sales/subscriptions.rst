@@ -12,7 +12,7 @@ keep the churn under control and have reporting on the main KPIs: MRR, ARR, rete
 upselling, etc.
 
 .. seealso::
-   - `Odoo Tutorials: Subscriptions <https://www.odoo.com/slides/subscription-28>`_
+   - `Odoo Tutorials: Subscriptions <https://www.odoo.com/slides/subscription-20>`_
 
 .. toctree::
    :titlesonly:
