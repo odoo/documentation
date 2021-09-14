@@ -190,8 +190,8 @@ Test guidance
 
 Every business and organization has its own operational needs and will have to test its specific
 Odoo instance respectively. However, we recommend you look at `the test scenario
-<https://drive.google.com/open?id=1Lm4JqbsHBirB1wMi14UChoz_YHLjx5ec>`_ we created, a high-level idea
-of what you should test and look out for.
+<https://docs.google.com/document/d/1ypNs7JKPOsjNbKpdiKFH7Al6g6whZ9jr7f7duAQ5E1w/>`_ we created, a
+high-level idea of what you should test and look out for.
 
 .. todo:: change link "test scenario" once the related doc is published
 
