@@ -337,6 +337,18 @@ For Python, we use PEP8 with these options ignored:
 
 For JavaScript, we use ESLint and you can find a `configuration file example here`_.
 
+If you do not know how to set up a linter:
+
+- `Here is an explanation of how to set up a Python linter in VSCode <https://code.visualstudio.com/docs/python/linting>`_. There are multiple
+  linter options you are free to choose from, but `Flake8 <https://pypi.org/project/flake8/>`_ is a popular choice.
+- To setup ESLint in VSCode, you must download the `ESLint extension`_ and follow its instructions
+  for installing ESLint. Don't forget to create and set up the `.eslintrc` file to follow the
+  configuration file mentioned above.
+- Another useful VSCode plugin is `Trailing Spaces`_ to quickly notice trailing spaces while
+  you're working.
+
+.. _Trailing Spaces: https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
+.. _ESLint extension: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
 .. _configuration file example here: https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter
 .. _VSCode: https://code.visualstudio.com/
 .. _VSCodium: https://vscodium.com/
