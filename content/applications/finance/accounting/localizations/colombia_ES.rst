@@ -53,12 +53,11 @@ cz
 | La funcionalidad de pruebas le permite conectarse e interactuar con el
   ambiente piloto de Carvajal T&S, esto permite a los usuarios probar el
   flujo completo y la integración con el Portal Financiero CEN, al cual
-  se accede a través de la siguiente liga: `Cenfinanciero <https://cenfinancierolab.cen.biz>`__, 
+  se accede a través de la siguiente liga: `Cenfinanciero <https://cenflab.cen.biz/site/>`__.
 
 Una vez que el ambiente de producción está listo en Odoo y en Carvajal
 T&S el ambiente de pruebas debe ser deshabilitado para poder enviar la
-información al ambiente de producción de Carvajal, para el cual es
-utilizada la siguiente URL: `Cenfinanciero <https://cenfinancierolab.cen.biz>`__, 
+información al ambiente de producción de Carvajal.
 
 3. Configuración de Información para PDF
 ----------------------------------------
