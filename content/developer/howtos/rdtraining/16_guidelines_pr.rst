@@ -18,9 +18,9 @@ to improve the quality of the Odoo Apps code.
 
 .. exercise:: Polish your code.
 
-    Refactor your code to respect the coding guidelines. Don't forget to respect the module
-    structure, the variable names, the method name convention, the model attribute order and the
-    xml ids.
+    Refactor your code to respect the coding guidelines. Don't forget to run your linter and
+    respect the module structure, the variable names, the method name convention, the model
+    attribute order and the xml ids.
 
 Your first Pull Request (PR)
 ============================
