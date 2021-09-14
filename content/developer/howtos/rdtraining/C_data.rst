@@ -23,23 +23,23 @@ We already met technical data previously since we have defined
 :ref:`security rules<howto/rdtraining/N_security>`, :ref:`views<reference/views>` and
 :ref:`actions<reference/actions>`. Those are one kind of master data.
 
-On top of technical data, business data can be defined: countries, currencies, units of measure but
-also complete country localization (legal reports, tax definitions, chart of account), and much
+On top of technical data, business data can be defined, e.g. countries, currencies, units of measure,
+as well as complete country localization (legal reports, tax definitions, chart of account), and much
 more...
 
 Demo Data
 ---------
 
-Next to master data which are requirements for the modules to work properly, we also like having
-data for demonstration purpose setups:
+In additional to master data, which are requirements for a module to work properly, we also like
+having data for demonstration purposes:
 
-* Help the sales representatives to make their demos quickly.
-* Have a set of working data for developers to test the new features and see what it looks like
-  with something they might not have created without it.
+* Help the sales representatives make their demos quickly.
+* Have a set of working data for developers to test new features and see how these new features look
+  with data they might not have added themselves.
 * Test that the data is loaded correctly, without raising an error.
-* Be ready to use most of the features quickly when creating a new database.
+* Setup most of the features to be used quickly when creating a new database.
 
-Demo data is automatically loaded when you start the server if you didn't say explicitly you don't
+Demo data is automatically loaded when you start the server if you don't explicitly say you don't
 want it. This can be done in the database manager or with the command line.
 
 .. code-block:: console
@@ -70,15 +70,15 @@ Manifest
 **Reference**: the documentation related to this topic can be found in
 :ref:`Module Manifests<reference/module/manifest>`.
 
-The data is declared either in CSV either in XML.
+Data is declared either in CSV or in XML.
 Each file containing data must be added in the manifest for them to be loaded.
 
 The keys to use in the manifest to add new data are ``data`` for the master data and ``demo`` for
-the demo data. Both values should be a list of strings representing the relative path to the files
+the demo data. Both values should be a list of strings representing the relative paths to the files
 declaring the data.
 
-Usually, the demo data is set in a ``demo`` folder, the views and actions are put in a ``views``
-folder, the security related data is put in a ``security`` folder, and the other data is set in a
+Usually, demo data is in a ``demo`` folder, views and actions are in a ``views``
+folder, security related data is in a ``security`` folder, and other data is in a
 ``data`` folder.
 
 If your work tree looks like this:
@@ -129,7 +129,7 @@ CSV
 :ref:`CSV data files<reference/data/csvdatafiles>`.
 
 The easiest way to declare simple data is by using the CSV format. This is however limited in terms
-of features: use it for long lists of simple models, but prefer XML in the other cases.
+of features: use it for long lists of simple models, but prefer XML otherwise.
 
 .. code-block:: text
 
@@ -153,7 +153,7 @@ XML
 **Reference**: the documentation related to this topic can be found in
 :ref:`Data Files<reference/data>`.
 
-When the data to create is a bit more complex it can be useful, or even needed, to do it in XML.
+When the data to create is more complex it can be useful, or even necessary, to do it in XML.
 
 .. code-block:: xml
 
@@ -243,7 +243,7 @@ works too if you are in the module declaring it).
   Deco Addict    Big Villa 1500001 14
   ============== ========= ======= ========
 
-.. exercise:: Both properties should be Residential properties.
+.. exercise:: Ensure both of your demo properties are created with their Property Type set to Residential.
 
 ``eval``
 ~~~~~~~~
@@ -279,13 +279,13 @@ Sometimes, you need to call the ORM to do a ``search``. This is not feasible wit
       </record>
     </odoo>
 
-In this code snippet, it is needed because the master data actually depends on the localization
+In this code snippet, it is needed because the master data depends on the localization
 installed.
 
 ``function``
 ~~~~~~~~~~~~
 
-You might also need to execute python code when loading the data.
+You might also need to execute python code when loading data.
 
 .. code-block:: xml
 
@@ -324,15 +324,8 @@ common ORM methods.
       </record>
     </odoo>
 
-.. code-block:: text
-
-  id,parent_id:id,name
-  "child1","module.parent","Name1"
-  "child2","module.parent","Name2"
-  "child3","module.parent","Name3"
-
 .. exercise:: Create one new Property, but this time with some offers created directly inside the
-  One2many field linking to the Offers.
+  One2many field linked to the Offers.
 
 Accessing the data
 ==================
