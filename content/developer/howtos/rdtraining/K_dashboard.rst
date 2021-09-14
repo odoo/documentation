@@ -319,7 +319,7 @@ View
 Now that we have our model, we can make its dashboard view. There is no difference to how its made
 except that its file is located in the ``report`` folder. Since it is a new model not linked to
 any other model, we will also have to add a new menuitem to view our dashboard. Typically SQL views
-are added under a first level menu called ``Reporting` (because it's a report, surprise!). Do you
+are added under a first level menu called *Reporting* (because it's a report, surprise!). Do you
 remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_firstui`) again.
 
 .. exercise:: Create report view.
@@ -352,3 +352,17 @@ from this report.
 
 **Tip 2** If you have a field that you do not want as a measure (i.e. in your pivot or
 graph views), then you can add ``store=False`` to it and it will not show.
+
+**Tip 3** If you have a SQL View that depends on context then instead of overriding
+``BaseModel.init()`` set the ``_table_query`` property::
+
+    @property
+    def _table_query(self):
+        return 'SELECT %s FROM %s' % (self._select(), self._from())
+
+The *select* and *from* methods remain the same.
+
+`Here is an example <https://github.com/odoo/odoo/blob/14.0/addons/account/report/account_invoice_report.py>`__
+of a report that depends on the currently selected companies (in a multi-company environment) context to
+determine the currency exchange rates to use for accurately displaying amounts when the selected companies
+have different currencies.
