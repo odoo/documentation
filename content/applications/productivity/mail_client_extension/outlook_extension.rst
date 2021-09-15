@@ -2,11 +2,14 @@
 Outlook Extension
 =================
 
-The **Odoo CRM Extension** is a connector that bridges your Outlook mailbox with your Odoo database.
+The **Odoo Outlook Extension** is a connector that bridges your Outlook mailbox with your Odoo database.
+
 This extension allows you to:
 
 - Create leads from emails sent to your mailbox.
+- Create tickets from emails sent to your email address.
 - Centralize Prospects' emails into a CRM.
+- Generate Tasks from emails sent to your email address in any Odoo project.
 - Search and store insights on your contacts.
 
 .. image:: media/outlook-extension-overview.png
@@ -18,8 +21,7 @@ This extension allows you to:
 
 .. important::
    The Outlook Extension uses *Partner Autocomplete IAP credits* to search and store insights on
-   your contacts. See the :ref:`Pricing section <outlook_extension/pricing>` below for more
-   information.
+   your contacts. See the :doc:`Pricing section <./pricing>` for more information.
 
 .. _outlook_extension/configuration:
 
@@ -33,8 +35,8 @@ The Outlook Extension requires to be configured both in Odoo and in Outlook.
 Enable the feature on your database
 -----------------------------------
 
-To enable this feature on your Odoo database, go to :menuselection:`CRM --> Configuration --> Lead
-Generation`, enable **Outlook CRM Extension**, and click on *Save*.
+To enable this feature on your Odoo database, go to :menuselection:`Settings --> General Settings -->
+Integrations`, enable **Mail Plugin**, and click on *Save*.
 
 .. _outlook_extension/add-in-installation:
 
@@ -129,47 +131,4 @@ Connect to your database
 .. note::
    The extension displays some information, even if you do not connect it to any Odoo database.
    Note that only a limited amount of contact enrichment requests are available as a trial, as this
-   feature requires prepaid credits. See the :ref:`Pricing section <outlook_extension/pricing>`
-   below for more information.
-
-.. _outlook_extension/pricing:
-
-Pricing
-=======
-
-The extension is **free** and doesn't require any purchase to be installed and used.
-
-However, this extension provides you with *Lead Enrichment* in the **Company Insights** section.
-This service is part of a paid service known as **Lead Generation**.
-
-The extension allows you to test this service for free, whether you connect the extension to a
-database or not. After a while, the extension asks you to buy credits to keep using this additional
-service.
-
-.. image:: media/outlook-extension-credits-message.png
-   :align: center
-   :alt: "Could not auto-complete the company: not enough credits!" warning message in the Outlook
-         extension
-
-.. tip::
-   You can buy more *Lead Generation* credits to keep using this service or disregard this message
-   and keep using the extension for free without *Lead Enrichment*.
-
-In-App Purchase
----------------
-
-| *Lead Generation* is an *In-App Purchase (IAP)* service, which requires prepaid credits to be
-  used. Each request consumes one credit.
-| To buy credits, go to :menuselection:`Settings --> Contacts --> Partner Autocomplete or Odoo IAP -->
-  View My Services` and select a package.
-
-.. note::
-   - If you run out of credits, the only information populated when clicking on the suggested
-     company is the website link and logo.
-   - If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free
-     trial credits to test the feature.
-   - Learn about our *Privacy Policy* `here <https://iap.odoo.com/privacy#header_2>`_.
-
-.. seealso::
-   - :doc:`../../../general/in_app_purchase/in_app_purchase`
-   - `Odoo Tutorials: Lead Enrichment <https://www.odoo.com/r/p73>`_
+   feature requires prepaid credits. See the :doc:`Pricing section <./pricing>` for more information.

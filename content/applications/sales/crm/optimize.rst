@@ -6,5 +6,4 @@ Optimize your Day-to-Day work
    :titlesonly:
 
    optimize/partner_autocomplete
-   optimize/outlook_extension
    optimize/gamification
