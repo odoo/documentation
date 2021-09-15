@@ -133,24 +133,24 @@ information:
 Moreover, an invoice line needs to be linked to an invoice. The easiest and most efficient way
 to link a line to an invoice is to include all lines at invoice creation. To do this, the
 ``invoice_line_ids`` field is included in the ``account.move`` creation, which is a
-:class:`~odoo.fields.One2many`. One2many and Many2many use special 'commands' described in
-:ref:`reference/orm/models/crud`. This format is a list of triplets executed sequentially, where
-each triplet is a command to execute on the set of records. Here is a simple example to include
-a One2many field ``line_ids`` at creation of a ``test.model``:: 
+:class:`~odoo.fields.One2many`. One2many and Many2many use special 'commands' which have been
+made human readable with the :class:`~odoo.fields.Command` namespace. This namespace represents
+a triplet command to execute on a set of records. The triplet was originally the only option to
+do these commands, but it is now standard to use the namespace instead. The format is to place
+them in a list which is executed sequentially. Here is a simple example to include a One2many
+field ``line_ids`` at creation of a ``test.model``::
+
+    from odoo import Command
 
     def inherited_action(self):
         self.env["test.model"].create(
             {
                 "name": "Test",
                 "line_ids": [
-                    (
-                        0,
-                        0,
-                        {
-                            "field_1": "value_1",
-                            "field_2": "value_2",
-                        },
-                    )
+                    Command.create({
+                        "field_1": "value_1",
+                        "field_2": "value_2",
+                    })
                 ],
             }
         )
