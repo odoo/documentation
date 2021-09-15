@@ -10,8 +10,9 @@ Advanced B: ACL and Record Rules
     <howto/rdtraining>`.
 
     To follow the exercise, it is recommended that you fetch the branch
-    14.0-core from the repository XXX, it
-    contains a version of the module created during the core training we can use
+    15.0-core from the
+    `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
+    It contains a version of the module created during the core training we can use
     as a starting point.
 
 So far we have mostly concerned ourselves with implementing useful features.
@@ -223,7 +224,7 @@ individual records:
         <field name="name">A description of the rule's role</field>
         <field name="model_id" ref="model_to_manage"/>
         <field name="perm_read" eval="False"/>
-        <field name="groups" eval="[(4, ref('base.group_user'))]"/>
+        <field name="groups" eval="[Command.link(ref('base.group_user'))]"/>
         <field name="domain_force">[
             '|', ('user_id', '=', user.id),
                  ('user_id', '=', False)

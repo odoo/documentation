@@ -6,7 +6,8 @@ Advanced C: Master and Demo Data
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 14.0-core from the repository XXX.
+  To do the exercise, fetch the branch 15.0-core from the
+  `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
   It contains a basic module we will use as a starting point
 
 Data Types
@@ -303,23 +304,23 @@ Add X2many fields
 -----------------
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`Common ORM methods<reference/orm/models/crud>`.
+:class:`~odoo.fields.Command`.
 
 If you need to add related data in a One2many or a Many2many field, you can do so by using the
-common ORM methods.
+:class:`~odoo.fields.Command` methods.
 
 .. code-block:: xml
 
     <odoo>
       <record id="id1" model="tutorial.example">
         <field name="related_ids" eval="[
-            (0, 0, {
+            Command.create({
                 'name': 'My name',
             }),
-            (0, 0, {
+            Command.create({
                 'name': 'Your name',
             }),
-            (4, ref('model.xml_id')),
+            Command.link(ref('model.xml_id')),
         ]"/>
       </record>
     </odoo>
