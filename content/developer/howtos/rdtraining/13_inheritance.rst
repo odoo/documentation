@@ -71,6 +71,12 @@ The decorator :func:`~odoo.api.model` is necessary for the :meth:`~odoo.models.M
 method because the content of the recordset ``self`` is not relevant in the context of creation,
 but it is not necessary for the other CRUD methods.
 
+It is also important to note that even though we can directly override the
+:meth:`~odoo.models.Model.unlink` method, you will almost always want to write a new method with
+the decorator :func:`~odoo.api.ondelete` instead. Methods marked with this decorator will be
+called during :meth:`~odoo.models.Model.unlink` and avoids some issues that can occur during
+uninstalling the model's module when :meth:`~odoo.models.Model.unlink` is directly overridden.
+
 In Python 3, ``super()`` is equivalent to ``super(TestModel, self)``. The latter may be necessary
 when you need to call the parent method with a modified recordset.
 
@@ -85,8 +91,8 @@ when you need to call the parent method with a modified recordset.
 
     - Prevent deletion of a property if its state is not 'New' or 'Canceled'
 
-    Tip: override :meth:`~odoo.models.Model.unlink` and remember that ``self`` can be a recordset
-    with more than one record.
+    Tip: create a new method with the :func:`~odoo.api.ondelete` decorator and remember that
+    ``self`` can be a recordset with more than one record.
 
     - At offer creation, set the property state to 'Offer Received'. Also raise an error if the user
       tries to create an offer with a lower amount than an existing offer.

@@ -611,7 +611,7 @@ Method decorators
 =================
 
 .. automodule:: odoo.api
-    :members: depends, depends_context, constrains, onchange, returns, autovacuum, model, model_create_multi
+    :members: depends, depends_context, constrains, onchange, returns, autovacuum, model, model_create_multi, ondelete
 
 .. .. currentmodule:: odoo.api
 

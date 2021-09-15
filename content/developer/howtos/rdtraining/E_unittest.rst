@@ -6,7 +6,8 @@ Advanced E: Python Unit Tests
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 14.0-core from the repository XXX.
+  To do the exercise, fetch the branch 15.0-core from the
+  `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
   It contains a basic module we will use as a starting point
 
 **Reference**:
@@ -175,18 +176,18 @@ coming from modules your module doesn't depend on.
 
 .. code-block:: python
 
-  from odoo.tests.common import SavepointCase
+  from odoo.tests.common import TransactionCase
   from odoo.tests import tagged
 
   # The CI will run these tests after all the modules are installed,
   # not right after installing the one defining it.
   @tagged('post_install', '-at_install')  # add `post_install` and remove `at_install`
-  class PostInstallTestCase(SavepointCase):
+  class PostInstallTestCase(TransactionCase):
       def test_01(self):
           ...
 
   @tagged('at_install')  # this is the default
-  class AtInstallTestCase(SavepointCase):
+  class AtInstallTestCase(TransactionCase):
       def test_01(self):
           ...
 
@@ -233,12 +234,7 @@ import the test folder/module in the ``__init__.py`` of the module.
   ├── __init__.py
   └── __manifest__.py
 
-.. note:: Some older tests extend ``odoo.tests.common.TransactionCase``, but they are less
-  scalable. The difference is that the setup is done per test method and not per test class.
-  Changed data is rolled back between each test in `SavepointCase` to have the same behavior as
-  `TransactionCase`.
-
-All the tests should extend ``odoo.tests.common.SavepointCase``. You usually define a
+All the tests should extend ``odoo.tests.common.TransactionCase``. You usually define a
 ``setUpClass`` and the tests. After writing the `setUpClass`, you have an `env` available in the
 class and can start interacting with the ORM.
 
@@ -246,14 +242,14 @@ These test classes are built on top of the ``unittest`` python module.
 
 .. code-block:: python
 
-  from odoo.tests.common import SavepointCase
+  from odoo.tests.common import TransactionCase
   from odoo.exceptions import UserError
   from odoo.tests import tagged
 
   # The CI will run these tests after all the modules are installed,
   # not right after installing the one defining it.
   @tagged('post_install', '-at_install')
-  class EstateTestCase(SavepointCase):
+  class EstateTestCase(TransactionCase):
 
       @classmethod
       def setUpClass(cls):

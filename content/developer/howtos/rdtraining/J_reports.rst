@@ -10,8 +10,9 @@ Advanced J: PDF Reports
     and have installed :ref:`wkhtmltopdf <howto/rdtraining/02_setup/install-wkhtmltopdf>`.
 
     To follow the exercise, it is recommended that you fetch the branch
-    14.0-core from the repository XXX, it
-    contains a version of the module created during the core training we can use
+    15.0-core from the
+    `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
+    It contains a version of the module created during the core training we can use
     as a starting point.
 
 We were previously :ref:`introduced to QWeb <howto/rdtraining/15_qwebintro>`
@@ -95,9 +96,9 @@ If you don't have a set of data like this already, you can either:
 * Complete :ref:`howto/rdtraining/C_data` (if you haven't done so already) and add the extra
   cases to your demo data (you may need to create a new database to load in the demo data).
 * Manually create the data in your database.
-* Copy this `data file <https://github.com/odoo/technical-training-solutions/blob/14.0-J_reports/estate/data/estate_demo.xml>`__
+* Copy this `data file <https://github.com/odoo/technical-training-solutions/blob/15.0-J_reports/estate/data/estate_demo.xml>`__
   into a new directory (data) in your estate module and copy
-  `these lines <https://github.com/odoo/technical-training-solutions/blob/14.0-J_reports/estate/__manifest__.py#L21-L23>`__
+  `these lines <https://github.com/odoo/technical-training-solutions/blob/15.0-J_reports/estate/__manifest__.py#L21-L23>`__
   into your __manifest__.py file (you may need to create a new database to load in the demo data).
 
 Before continuing, click through your data in your database and make sure your data is as expected.
