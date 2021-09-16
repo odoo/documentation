@@ -2,8 +2,8 @@
 Bank Accounts
 =============
 
-You can manage as many **Bank Accounts** as needed on your database. Configuring them well allows
-you to make sure that all your banking data is up to date and ready for the reconciliation with your
+You can manage as many **Bank Accounts** as needed on your database. Configuring them properly allows
+you to ensure that all your banking data is up to date and ready to be reconciled with your
 *Journal Entries*.
 
 In Odoo Accounting, each Bank Account is configured to have a dedicated *Journal* which is
@@ -24,8 +24,8 @@ convenient card. It includes action buttons that are displayed when appropriate.
 Add a new Bank Account
 ======================
 
-You can either connect your bank account to your Odoo database, or configure your bank account
-manually and :doc:`upload the bank statements manually <../feeds/bank_statements>`.
+You can either synch your bank account directly to your Odoo database, or configure it
+so you can and :doc:`upload the bank statements manually <../feeds/bank_statements>`.
 
 Bank Synchronization
 --------------------
@@ -82,8 +82,9 @@ If you need to edit the bank account details, go to the *Bank Account* field and
 Account Holder, Account Holder Name, and your Bank Institution's details by clicking on the
 *External Link* next to the *Bank* field. These details are used to register some payments.
 
-You can configure which types of payments are enabled in the **Payment Method Types** section and
-how the bank statements are recorded and posted in the **Bank Statements** section.
+You can configure which types of payments are enabled and if they use their own Outstanding
+Accounts by editing the Payment Method on the **Incoming/Outgoing Payments** tab and
+how the bank statements are recorded and posted in the **Bank Feeds** section on the Journal Entries tab.
 
 .. image:: media/bank_accounts_configuration.png
    :align: center
