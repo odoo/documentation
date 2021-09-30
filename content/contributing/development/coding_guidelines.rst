@@ -589,32 +589,6 @@ Programming in Odoo
 - As in python, use ``filtered``, ``mapped``, ``sorted``, ... methods to
   ease code reading and performance.
 
-
-Make your method work in batch
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When adding a function, make sure it can process multiple records by iterating
-on self to treat each record.
-
-.. code-block:: python
-
-    def my_method(self)
-        for record in self:
-            record.do_cool_stuff()
-
-For performance issue, when developing a 'stat button' (for instance), do not
-perform a ``search`` or a ``search_count`` in a loop. It
-is recommended to use ``read_group`` method, to compute all value in only one request.
-
-.. code-block:: python
-
-    def _compute_equipment_count(self):
-    """ Count the number of equipment per category """
-        equipment_data = self.env['hr.equipment'].read_group([('category_id', 'in', self.ids)], ['category_id'], ['category_id'])
-        mapped_data = dict([(m['category_id'][0], m['category_id_count']) for m in equipment_data])
-        for category in self:
-            category.equipment_count = mapped_data.get(category.id, 0)
-
-
 Propagate the context
 ~~~~~~~~~~~~~~~~~~~~~
 The context is a ``frozendict`` that cannot be modified. To call a method with

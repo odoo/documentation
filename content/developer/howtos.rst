@@ -12,7 +12,6 @@ Tutorials
     howtos/website
     howtos/backend
     howtos/web_services
-    howtos/profilecode
     howtos/company
     howtos/accounting_localization
     howtos/translations

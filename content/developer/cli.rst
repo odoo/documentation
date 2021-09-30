@@ -709,8 +709,9 @@ Database Population
 .. program:: odoo-bin populate
 
 Odoo CLI supports database population features. If the feature is
-:ref:`implemented on a given model <reference/testing/populate/methods>`, it allows automatic data
-generation of the model's records to test your modules in databases containing non-trivial amounts of records.
+:ref:`implemented on a given model <reference/performance/populate/methods>`, it allows automatic
+data generation of the model's records to test your modules in databases containing non-trivial
+amounts of records.
 
 .. code-block:: console
 
@@ -727,8 +728,7 @@ generation of the model's records to test your modules in databases containing n
     of a given model (cf. the :file:`populate` folder of modules for further details).
 
 .. seealso::
-
-    :ref:`reference/testing/populate`
+   :ref:`reference/performance/populate`
 
 .. _reference/cmdline/cloc:
 
