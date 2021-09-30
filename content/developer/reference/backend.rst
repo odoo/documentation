@@ -14,6 +14,7 @@ Python framework
     backend/module
     backend/reports
     backend/security
+    backend/performance
     backend/testing
     backend/http
     backend/mixins
