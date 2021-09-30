@@ -14,6 +14,7 @@ Server Addons
     addons/module
     addons/reports
     addons/security
+    addons/performances
     addons/testing
     addons/http
     addons/mixins
