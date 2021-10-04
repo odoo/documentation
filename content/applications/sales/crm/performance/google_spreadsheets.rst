@@ -1,10 +1,10 @@
 =====================================================
-How to use Google Spreadsheet in Addition to my Data?
+Comment utiliser la feuille de calcul Google en plus de mes données ?
 =====================================================
 
-Create custom dashboards in Google Spreadsheet that retrieves data directly from Odoo using
-spreadsheet formula. You can use it to create sales commission plans, budgets, project forecasts,
-etc. Formulas are written in Python but programming skills are not required.
+Créez des tableaux de bord personnalisés dans Google Sheets en récupérant les données directement depuis Odoo et en utilisant
+des formules de feuille de calcul. Vous pouvez utiliser cette fonctionnalité pour créer des plans de commission de vente, des budgets, des prévisions de projet,
+etc. Les formules sont écrites en Python mais aucune compétence en programmation n'est requise.
 
 Configuration
 =============
