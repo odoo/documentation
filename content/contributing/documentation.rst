@@ -70,12 +70,8 @@ Use the GitHub interface
 #. Verify that you are browsing the documentation in the version that you intend to change. The
    version can be selected from the dropdown in the top menu.
 
-   .. image:: documentation/version-selector.png
-
 #. Head over to the page that you want to change and click on the **Edit on GitHub** button in the
-   bottom of the left menu.
-
-   .. image:: documentation/edit-on-github.png
+   top right corner of the page.
 
 #. If you do not have edit rights on the repository (`odoo/documentation
    <https://github.com/odoo/documentation>`_), you need to fork it by clicking on the appropriate
