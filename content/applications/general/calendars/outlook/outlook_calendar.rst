@@ -100,5 +100,5 @@ The synchronization is a two-way process, meaning that events are reconciled in 
    to manage a specific instance of Microsoft cloud services for your internal and external users.
 
 .. seealso::
-   - :doc:`../../../sales/crm/optimize/outlook_extension`
+   - :doc:`../../../productivity/mail_plugins/outlook`
    - :doc:`../google/google_calendar_credentials`
