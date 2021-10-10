@@ -18,6 +18,9 @@ interact with your Odoo database directly from your mailbox by:
 - Creating tickets in the Helpdesk app.
 - Searching and storing insights on your contacts.
 
+Mail Plugins are available for :doc:`Outlook <mail_plugins/outlook>` and :doc:`Gmail
+<mail_plugins/gmail>`.
+
 .. _mail_plugins/pricing:
 
 Pricing
