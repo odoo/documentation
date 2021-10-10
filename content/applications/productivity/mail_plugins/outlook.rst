@@ -5,8 +5,7 @@ Outlook Plugin
 Configuration
 =============
 
-The Odoo-Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and
-Outlook.
+The Outlook :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Outlook.
 
 .. _mail-plugin/outlook/enable-mail-plugin:
 
@@ -116,7 +115,7 @@ time, it's possible to add it next to the other default actions.
       :align: center
       :alt: Odoo for Outlook customized action
 
-#. Open any email and the shortcut should be displayed.
+#. Open any email; the shortcut should be displayed.
 
    .. image:: outlook/odoo-outlook-shortcut.png
       :align: center
