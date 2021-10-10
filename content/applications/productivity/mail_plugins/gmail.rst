@@ -5,7 +5,7 @@ Gmail Plugin
 Configuration
 =============
 
-The Odoo-Gmail :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Gmail.
+The Gmail :doc:`Mail Plugin <../mail_plugins>` needs to be configured both on Odoo and Gmail.
 
 .. _mail-plugin/gmail/enable-mail-plugin:
 
@@ -17,8 +17,8 @@ First, you need to enable the *Mail Plugin* feature in your database. Go to :men
 
 .. _mail-plugin/gmail/install-plugin:
 
-Install the Odoo-Gmail Plugin
------------------------------
+Install the Gmail Plugin
+------------------------
 
 #. Open the `Gmail Plugin Apps Script project
    <https://script.google.com/d/1n7cxtaR4fGXKcP0RwinNQmL8S4FhVqpo-ZZ_cUAhYuuDpZAP_CnHE_7q/edit>`_.
@@ -32,7 +32,7 @@ Install the Odoo-Gmail Plugin
       :alt: Deploying from manifest the Gmail Plugin from the Apps Script project
 
    .. important::
-      Make sure you are using the legacy editor, otherwise the *Deploy from manifest* functionality
+      Make sure you are using the legacy editor; otherwise the *Deploy from manifest* functionality
       may not be available.
 
       .. image:: gmail/legacy-editor.png
@@ -88,7 +88,7 @@ Configure your Gmail mailbox
 
 #. If you aren't logged into your database, enter your credentials.
 
-#. Click on *Allow* to let the Odoo-Gmail Plugin connect to your database.
+#. Click on *Allow* to let the Gmail Plugin connect to your database.
 
    .. image:: gmail/odoo-permission.png
       :align: center
