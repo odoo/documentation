@@ -10,5 +10,5 @@ Maintain
     maintain/db_upgrade
     maintain/enterprise
     maintain/hosting_changes
-    maintain/db_premise
+    maintain/on_premise
     maintain/supported_versions
