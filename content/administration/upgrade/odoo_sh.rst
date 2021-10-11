@@ -1,9 +1,7 @@
 
-=====================
-Upgrade your database
-=====================
-
-.. _odoosh-advanced-upgrade_your_database:
+=======================
+Odoo.sh version upgrade
+=======================
 
 Download and Upload your database
 =================================
