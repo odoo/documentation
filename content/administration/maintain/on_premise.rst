@@ -1,9 +1,6 @@
-
-.. _db_premise:
-
-===============================
-On-premises Database management
-===============================
+==============================
+On-premise database management
+==============================
 
 Register a database
 ===================
@@ -21,7 +18,7 @@ Registration Error Message
 If you are unable to register your database, you will likely encounter this
 message:
 
-.. image:: media/error_message_sub_code.png
+.. image:: on_premise/error_message_sub_code.png
     :align: center
     :alt: Something went wrong while registering your database,
           you can try again or contact Odoo Help
@@ -44,14 +41,14 @@ Solutions
   * You can unlink the old database yourself on your `Odoo Contract
     <https://accounts.odoo.com/my/subscription>`__ with the button "Unlink database"
 
-    .. image:: media/unlink_single_db.png
+    .. image:: on_premise/unlink_single_db.png
         :align: center
 
 
     A confirmation message will appear; make sure this is the correct database as
     it will be deactivated shortly:
 
-    .. image:: media/unlink_confirm_enterprise_edition.png
+    .. image:: on_premise/unlink_confirm_enterprise_edition.png
         :align: center
 
 
@@ -65,7 +62,7 @@ Solutions
     <https://accounts.odoo.com/my/subscription>`__, a short message will appear
     specifying which database is problematic:
 
-    .. image:: media/unlink_db_name_collision.png
+    .. image:: on_premise/unlink_db_name_collision.png
         :align: center
 
 
@@ -96,7 +93,7 @@ Error message due to too many users
 If you have more users in your local database than provisionned in your
 Odoo Enterprise subscription, you may encounter this message:
 
-.. image:: media/add_more_users.png
+.. image:: on_premise/add_more_users.png
     :align: center
     :alt: This database will expire in X days, you
           have more users than your subscription allows
@@ -125,7 +122,7 @@ Database expired error message
 If your database reaches its expiration date before your renew your subscription,
 you will encounter this message:
 
-.. image:: media/database_expired.png
+.. image:: on_premise/database_expired.png
     :align: center
     :alt: This database has expired.
 
@@ -157,7 +154,7 @@ You can duplicate your database by accessing the database manager on your
 server (<odoo-server>/web/database/manager). In this page, you can easily
 duplicate your database (among other things).
 
-.. image:: media/db_manager.gif
+.. image:: on_premise/db_manager.gif
     :align: center
 
 
@@ -175,5 +172,5 @@ System Parameters`, we advise you to use a `uuid generator <https://www.uuidtool
 use the unix command ``uuidgen`` to generate a new uuid. You can then simply replace it like any
 other record by clicking on it and using the edit button.
 
-.. image:: media/db_uuid.png
+.. image:: on_premise/db_uuid.png
     :align: center

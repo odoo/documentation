@@ -184,4 +184,4 @@ as you can only have one database linked per subscription.
 
 If you plan to make it your production,
 unlink your former database from the subscription, and register the newly imported database.
-Read the :ref:`database registration documentation <db_premise>` for instructions.
+Read the :doc:`database registration documentation <../../maintain/on_premise>` for instructions.
