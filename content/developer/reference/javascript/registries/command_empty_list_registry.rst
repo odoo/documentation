@@ -1,0 +1,2 @@
+Command Empty List Registry
+===========================
