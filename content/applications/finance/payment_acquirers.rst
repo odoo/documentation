@@ -56,7 +56,7 @@ Online payment acquirers
 |                               | Payment flow         | Save cards | Capture amount  | Refund    |
 |                               |                      |            | manually        | from Odoo |
 +===============================+======================+============+=================+===========+
-| :doc:`Adyen                   | Payment from Odoo    | |V|        |                 | |V|       |
+| :doc:`Adyen                   | Payment from Odoo    | |V|        | |V|             | |V|       |
 | <payment_acquirers/adyen>`    |                      |            |                 |           |
 +-------------------------------+----------------------+------------+-----------------+-----------+
 | :doc:`Alipay                  | Redirection to the   |            |                 |           |
