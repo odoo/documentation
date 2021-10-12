@@ -2,7 +2,7 @@
 Paypal
 ======
 
-`Paypal <https://www.paypal.com//>` is available and popular worldwide. It doesn't charge any
+`Paypal <https://www.paypal.com/>`_ is available and popular worldwide. It doesn't charge any
 subscription fee and creating an account is very easy. That's why we definitely recommend it for
 starters in Odoo. It works as a seamless flow where the customer is routed to Paypal website to
 register the payment.
