@@ -99,5 +99,28 @@ where payments will be made (the URLs of the servers hosting your Odoo instances
    :align: center
    :alt: Allows payments originated from a specific domain.
 
+Place a hold on a card
+----------------------
+
+Adyen allows you to capture an amount manually instead of having an immediate capture.
+
+To set it up, enable the **Capture Amount Manually** option on Odoo, as explained in the
+:ref:`payment acquirers documentation <payment_acquirers/capture_amount>`.
+
+Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settings`, and set the
+**Capture Delay** to **manual**.
+
+.. image:: media/adyen_capture_delay.png
+   :align: center
+   :alt: Capture Delay settings in Adyen
+
+.. caution::
+   If you configure Odoo to capture amounts manually, make sure to set the **Capture Delay** to
+   **manual** on Adyen. Otherwise, the transaction will be blocked in the authorized state in Odoo.
+
+.. note::
+   After **7 days**, if the transaction hasn't been captured yet, the customer has the right to
+   **revoke** it.
+
 .. seealso::
    - :doc:`../payment_acquirers`
