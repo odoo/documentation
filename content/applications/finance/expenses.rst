@@ -21,7 +21,7 @@ Otherwise keep the cost at 0.0 and employees will report the real cost per expen
 .. image:: expenses/product.png
    :align: center
 
-Here are some examples to configure:
+Here are some examples:
 
 * Restaurant:
 
@@ -45,7 +45,7 @@ That way, employees report expenses with
 prices including taxes, which is usually the expected behaviour.
 
 .. tip:: 
-    The *Sales* app allows you to specify unit of measures for your 
+    The *Sales* app allows you to specify units of measure for your 
     expense types (units, miles, nights, etc.). 
     Go to :menuselection:`Sales --> Configuration --> Settings` and check
     *Some products may be sold/purchased in different units of measure (advanced)*.
@@ -181,10 +181,10 @@ Setup
 -  Go to the product configuration menu and set the invoicing method on
    all your Expense types:
 
-   -  Ordered quantities : it will invoice expenses based on the ordered
+   -  Ordered quantities: it will invoice expenses based on the ordered
       quantity
 
-   -  Delivered quantities :it will invoice expenses based on the
+   -  Delivered quantities: it will invoice expenses based on the
       expenses quantity
 
    -  At cost: will invoice expenses at their real cost.
