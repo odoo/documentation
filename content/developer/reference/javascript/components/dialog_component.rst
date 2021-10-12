@@ -2,6 +2,10 @@
 Dialog
 ======
 
+Add confirmation dialog
+Add error dialog
+
+
 Overview
 --------
 

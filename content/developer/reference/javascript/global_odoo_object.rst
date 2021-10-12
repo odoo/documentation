@@ -1,6 +1,6 @@
 
-Global odoo object
-==================
+Global ``odoo`` Object
+======================
 
 Overview
 --------

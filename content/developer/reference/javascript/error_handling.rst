@@ -1,6 +1,6 @@
 
-Crash Manager and Errors
-========================
+Error Handling
+==============
 
 Overview
 --------

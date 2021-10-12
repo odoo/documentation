@@ -1,6 +1,6 @@
 
-Popover
-=======
+Popover Component
+=================
 
 Props
 -----
