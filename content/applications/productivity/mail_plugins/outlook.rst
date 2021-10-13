@@ -40,7 +40,7 @@ Install the Outlook Plugin
       :align: center
       :alt: Custom add-ins in Outlook
 
-#. Enter the following URL `https://download.odoo.com/plugins/outlook/manifest.xml` and press
+#. Enter the following URL `https://download.odoo.com/plugins/v15/outlook/manifest.xml` and press
    *OK*.
 
    .. image:: outlook/enter-add-in-url.png
