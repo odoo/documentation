@@ -8,7 +8,7 @@ Odoo supports three different kinds of javascript files:
 - :ref:`native javascript module <javascript/native_js_module>`.
 - :ref:`Odoo modules <javascript/odoo_module>` (using a custom module system),
 
-As described in the :ref:`assets management section <javascript/assets_management>`,
+As described in the :ref:`assets management page <reference/assets>`,
 all javascript files are bundled together and served to the browser.
 Note that native javascript files are processed by the Odoo server and transformed into Odoo custom modules.
 
