@@ -17,3 +17,4 @@ Server Addons
     addons/testing
     addons/http
     addons/mixins
+    addons/assets
