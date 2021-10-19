@@ -9,3 +9,4 @@ API
 
     api/odoo
     api/iap
+    api/extract_api
