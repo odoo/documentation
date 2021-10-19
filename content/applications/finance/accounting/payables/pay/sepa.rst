@@ -1,30 +1,20 @@
-=============
-Pay with SEPA
-=============
+===============
+Payez avec SEPA
+===============
 
-SEPA, the Single Euro Payments Area, is a payment-integration initiative
-of the European union for simplification of bank transfers denominated
-in EURO. SEPA allows you to send payment orders to your bank to automate
-bank wire transfer.
+SEPA, the Single Euro Payments Area, est une initiative d'intégration des paiements
+de l'Union européenne visant à simplifier les transferts bancaires libellés
+en EURO. Le SEPA vous permet d'envoyer des ordres de paiement à votre banque pour automatiser
+les virements bancaires.
 
-SEPA is supported by the banks of the 28 EU member states as well as
-Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
+Le SEPA est soutenu par les banques des 28 États membres de l'UE, ainsi que par les pays suivants
+l'Islande, la Norvège, la Suisse, Andorre, Monaco et Saint-Marin.
 
-With Odoo, once you decide to pay a vendor, you can select to pay the
-bill with SEPA. Then, at the end of the day, the manager can generate
-the SEPA file containing all bank wire transfers and send it to the
-bank. 
+Avec Odoo, une fois que vous décidez de payer un fournisseur, vous pouvez choisir de payer la facture avec SEPA. Ensuite, à la fin de la journée, le gestionnaire peut générer le fichier SEPA contenant tous les virements bancaires et l'envoyer à la banque. 
 
-By default,the file follows the SEPA Credit Transfer **'pain.001.001.03'**
-specifications. This is a well-defined standard that makes consensus
-among banks. However, according to the country set on your company, 
-another format can be used : **'pain.001.001.03.ch.02'** for Switzerland
-and **'pain.001.003.03'** for Germany.
+Par défaut, le fichier suit les spécifications du virement SEPA **'pain.001.001.03'**. Il s'agit d'une norme bien définie qui fait consensus parmi les banques. Cependant, en fonction du pays défini sur votre entreprise, un autre format peut être utilisé : **'pain.001.001.03.ch.02'** pour la Suisse et **'pain.001.003.03'** pour l'Allemagne.
 
-Once the payments are processed by your bank, you can directly import
-the account statement inside Odoo. The bank reconciliation process will
-seamlessly match the SEPA orders you sent to your bank with actual bank
-statements.
+Une fois que les paiements sont traités par votre banque, vous pouvez directement importer le relevé de compte dans Odoo. Le processus de rapprochement bancaire fera correspondre de manière transparente les ordres SEPA que vous avez envoyés à votre banque avec les relevés bancaires réels.
 
 Configuration
 =============
