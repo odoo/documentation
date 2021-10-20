@@ -4,7 +4,7 @@
 Conditions Générales de Vente
 =============================
 
-.. note:: Dernière modification: 5 mai 2017.
+.. note:: Dernière modification: 20 octobre 2021.
 
 Ces conditions régissent la vente de produits et services entre
 Odoo S.A. et ses filiales (collectivement, "Odoo S.A.") et le client.
@@ -49,7 +49,10 @@ conformément à leur législation interne. La retenue à la source sera réglé
 le client, auprès de l'administration fiscale. En aucun cas, Odoo S.A. ne sera
 impliquée dans les coûts liés à la législation du pays. Le montant de la facture
 est donc dû à Odoo S.A. dans son intégralité et n’inclus pas les coûts relatifs
-à la législation du pays où se trouve le client.
+à la législation du pays où se trouve le client. Pour les clients implantés dans
+plusieurs pays, les prix applicables seront toujours basés sur l'implantation
+géographique ayant la liste de prix la plus élevée, sauf stipulation contraire
+par écrit au moment de la commande.
 
 Odoo S.A. s'engage à faire ses meilleurs efforts en vue de fournir en temps
 utile des services performants. Toutefois, aucune de ses obligations ne peut
