@@ -23,6 +23,7 @@ Odoo Enterprise Subscription Agreement (FR)
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command (+ paragraph 5.1 was partially outdated in FR)
 .. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
         on all branches)
+.. v9c2: minor simplification in FR wording
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -573,7 +574,7 @@ y compris, mais sans s'y limiter, la perte de revenus, perte de profits, perte d
 perte commerciale ou toute autre perte financière, les coûts relatifs à l'arrêt ou au retard,
 la perte ou altération des données, découlant ou en relation avec le présent Contrat, quelle que
 soit la forme de l'action, qu'elle soit fondée sur une obligation contractuelle, délictuelle
-(y compris la stricte négligence) ou fondée sur toute autre règle de droit ou d'équité,
+ou fondée sur toute autre règle de droit ou d'équité,
 même si la partie ou ses filiales ont été informées du risque de tels dommages, ou si le
 recours proposé par la partie ou ses filiales n'atteint pas son but essentiel.
 
