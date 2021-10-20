@@ -4,7 +4,7 @@
 General Terms of Sale
 =====================
 
-.. note:: Last revision: May 5, 2017.
+.. note:: Last revision: October 20, 2021.
 
 These General Terms of Sale govern the sale of products and services by
 Odoo S.A. and its affiliates (collectively, "Odoo S.A.") to the client.
@@ -39,7 +39,9 @@ paid by the client to the tax authorities. Under no circumstances can Odoo S.A.
 become involved in costs related to a country's legislation. The amount of the
 invoice will therefore be due to Odoo S.A. in its entirety and does not include
 any costs relating to the legislation of the country in which the client is
-located.
+located. For clients with a global presence, the applicable pricing is always
+based on the client location with the highest price list, unless otherwise
+specified in writing at the time of purchase.
 
 Odoo S.A. undertakes to do its best to supply services in due time in accordance
 with the agreed timeframes. However, none of its obligations can be considered
