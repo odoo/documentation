@@ -189,6 +189,8 @@ could mean a different thing depending on the situation).
    not to overuse it! Many problems can be solved in a standard way without
    modifying the context.
 
+.. _javascript/user-context:
+
 User Context
 ------------
 

@@ -185,3 +185,96 @@ When a rpc fails, then:
   ``{type: 'network'}``.
   When a network error occurs, a notification is displayed and the server is regularly
   contacted until it responds. The notification is closed as soon as the server responds.
+
+The `user` service
+==================
+
+Overview
+--------
+
+* Technical name: `user`
+* Dependencies: `rpc` 
+
+The `user` service provides a bunch of data and a few helper functions concerning 
+the connected user.
+
+
+API
+----
+
+.. list-table::
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * - Name 
+      - Type
+      - Description
+    * - ``context``
+      - ``Object``
+      - The :ref:`user context<javascript/user-context>`
+    * - ``db``
+      - ``Object``
+      - Info about the database
+    * - ``home_action_id``
+      - ``(number | false)``
+      - Id of the action used as home for the user
+    * - ``isAdmin``
+      - ``boolean``
+      - Whether the user is an admin (group `base.group_erp_manager` or superuser)
+    * - ``isSystem``
+      - ``boolean``
+      - Whether the user is part of the system group (`base.group_system`)
+    * - ``lang``
+      - ``string``
+      - language used 
+    * - ``name``
+      - ``string``
+      - Name of the user
+    * - ``partnerId``
+      - ``number``
+      - Id of the partner instance of the user
+    * - ``tz``
+      - ``string``
+      - The timezone of the user
+    * - ``userId``
+      - ``number``
+      - Id of the user
+    * - ``userName``
+      - ``string``
+      - Alternative nick name of the user
+
+
+.. js:function:: updateContext(update)
+
+    :param object update: the object to update the context with
+
+    update the :ref:`user context<javascript/user-context>` with the given object.
+
+    .. code-block:: javascript
+
+      userService.updateContext({ isFriend: true })
+
+.. js:function:: removeFromContext(key)
+
+    :param string key: the key of the targeted attribute
+
+    remove the value with the given key from the :ref:`user context<javascript/user-context>`
+
+    .. code-block:: js
+
+      userService.removeFromContext("isFriend")
+
+.. js:function:: hasGroup(group)
+
+    :param string group: the xml_id of the group to look for
+
+    :returns: `Promise<boolean>` is the user in the group
+
+    check if the user is part of a group
+
+    .. code-block:: js
+
+      const isInSalesGroup = await userService.hasGroup("sale.group_sales")
+
+
+
