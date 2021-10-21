@@ -28,6 +28,8 @@ every 5 seconds:
 
     serviceRegistry.add("myService", myService);
 
+At startup, the web client starts all services present in the `services`
+registry. Note that the name used in the registry is the name of the service.
 
 .. note::
 
@@ -36,20 +38,21 @@ every 5 seconds:
    purposes: tests can choose which services are active, so there are less chance
    for unwanted side effects interfering with the code being tested.
 
-Service API
-===========
+Defining a service
+==================
 
 A service needs to implement the following interface:
 
-dependencies (optional, string[])
-    The list of all dependencies that this service needs
+.. js:data:: dependencies
+    
+    Optional list of strings. It is the list of all dependencies (other services)
+    that this service needs
 
-start(env, deps)
-    .. code-block:: text
+.. js:function:: start(env, deps)
 
-       @param {Environment} env
-       @param {{[key: string]: any}} deps all requested dependencies
-       @returns {value of service or Promise<value of service>}
+    :param Environment env:
+    :param Object deps: all requested dependencies
+    :returns: value of service or Promise<value of service>
        
     This is the main definition for the service. It can return either a value or
     a promise. In that case, the service loader simply waits for the promise to
@@ -59,7 +62,10 @@ start(env, deps)
     need to be directly called by other code. In that case, their value will be
     set to ``null`` in ``env.services``.
 
-async (optional, true or string[])
+.. js:data:: async
+  
+    Optional value. If given, it should be `true` or a list of strings.
+
     Some services need to provide an asynchronous API. For example, the `rpc`
     service is an asynchronous function, or the `orm` service provides a set of
     functions to call the Odoo server.
@@ -72,9 +78,6 @@ async (optional, true or string[])
     that all asynchronous calls coming from components should be left pending if
     the component is destroyed.
 
-
-At startup, the web client starts all services present in the `services`
-registry. Note that the name used in the registry is the name of the service.
 
 Using a service
 ===============
@@ -101,26 +104,45 @@ component later. For example:
       }
     }
 
-The `rpc` service
-=================
+Reference List
+==============
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Technical Name
+     - Short Description
+   * - :ref:`rpc <services/rpc>`
+     - send requests to the server
+   * - :ref:`title <services/title>`
+     - read or modify the window title
+   * - :ref:`user <services/user>`
+     - provides some information related to the current user
+
+.. _services/rpc:
+
+RPC service
+-----------
+
+Overview
+~~~~~~~~
+
+- Technical name: `rpc`
+- Dependencies: none
+
 
 The `rpc` service provides a single asynchronous function to send requests to
-the server. It has the following signature:
+the server. Calling a controller is very simple: the route should be the first
+argument and optionally, a ``params`` object can be given as a second argument.
 
-rpc(route, params, settings)
-    .. code-block:: text
+.. code-block:: javascript
 
-       @param {string} route
-       @param {Object} [params] parameters sent to the server
-       @param {Object} [settings] optional settings (see below)
-    
-    The ``settings`` object can contain:
-    
-    - ``xhr``, which should be a ``XMLHTTPRequest`` object. In that case,
-      the ``rpc`` method will simply use it instead of creating a new one. This
-      is useful when one access to advanced features of the `XMLHTTPRequest` API.
-    - ``silent (boolean)`` If set to ``true``, the web client will not provide
-      a feedback that there is a pending rpc.
+   // in setup 
+   this.rpc = useService("rpc");
+
+   // somewhere else, in an async function:
+   const result = await this.rpc("/my/route", { some: "value" });
 
 .. note::
     
@@ -129,13 +151,22 @@ rpc(route, params, settings)
     is by far the most important usecase), one should use the ``orm`` service
     instead.
 
-Calling a controller is very simple: the route should be the first argument, and
-optionally, a ``params`` object can be given as a second argument.
+API
+~~~
 
-.. code-block:: javascript
+.. js:function:: rpc(route, params, settings)
 
-   const result = await this.rpc("/my/route", { some: "value" });
-
+    :param string route: route targeted by the request
+    :param Object params: parameters sent to the server
+    :param Object settings (optional): request settings (see below)
+    
+    The ``settings`` object can contain:
+    
+    - ``xhr``, which should be a ``XMLHTTPRequest`` object. In that case,
+      the ``rpc`` method will simply use it instead of creating a new one. This
+      is useful when one accesses advanced features of the `XMLHTTPRequest` API.
+    - ``silent (boolean)`` If set to ``true``, the web client will not provide
+      a feedback that there is a pending rpc.
 
 The ``rpc`` service communicates with the server by using a ``XMLHTTPRequest``
 object, configured to work with the ``application/json`` content type. So clearly
@@ -146,7 +177,7 @@ Server errors actually return the response with an http code 200. But the ``rpc`
 service will treat them as error.
 
 Error Handling
---------------
+~~~~~~~~~~~~~~
 
 An rpc can fail for two main reasons:
 
@@ -186,11 +217,87 @@ When a rpc fails, then:
   When a network error occurs, a notification is displayed and the server is regularly
   contacted until it responds. The notification is closed as soon as the server responds.
 
-The `user` service
-==================
+.. _services/title:
+
+Title Service
+-------------
 
 Overview
---------
+~~~~~~~~
+
+- Technical name: `title`
+- Dependencies: none
+
+The `title` service offers a simple API that allows to read/modify the document
+title. For example, if the current document title is "Odoo", we can change it
+to "Odoo 15 - Apple" by using the following command:
+
+.. code-block:: javascript
+
+   // in some component setup method
+   const titleService = useService("title");
+
+   titleService.setParts({ odoo: "Odoo 15", fruit: "Apple" });
+
+API
+~~~
+
+
+The ``title`` service manipulates the following interface:
+
+.. code-block:: ts
+
+   interface Parts {
+       [key: string]: string | null;
+   }
+
+Each key represents the identity of a part of the title, and each value is the
+string that is displayed, or `null` if it has been removed.
+
+Its API is:
+
+.. js:data:: current
+
+   This is a string representing the current title. It is structured in the
+   following way: ``value_1 - ... - value_n`` where each `value_i` is a (non null)
+   value found in the `Parts` object (returned by the `getParts` function)
+  
+.. js:function:: getParts
+
+   :returns: Parts the current `Parts` object maintained by the title service
+
+.. js:function:: setParts(parts)
+
+   :param Parts parts: object representing the required change
+
+   The ``setParts`` method allows to add/replace/delete several parts of the title.
+   Delete a part (a value) is done by setting the associated key value to `null`.
+
+   Note that one can only modify a single part without affecting the other
+   parts. For example, if the title is composed of the following parts:
+
+   .. code-block:: javascript
+
+      { odoo: "Odoo", action: "Import" }
+
+   with ``current`` value being ``Odoo - Import`` , then
+
+   .. code-block:: javascript
+
+      setParts({
+        action: null,
+      });
+
+   will change the title to ``Odoo``.
+
+
+.. _services/user:
+
+User service
+------------
+
+Overview
+~~~~~~~~
 
 * Technical name: `user`
 * Dependencies: `rpc` 
@@ -200,7 +307,7 @@ the connected user.
 
 
 API
-----
+~~~
 
 .. list-table::
     :widths: 25 25 50
