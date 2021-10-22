@@ -69,7 +69,7 @@ gettext:
 $(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss extensions/odoo_theme/static/scss/*.scss
 	@echo "Compiling stylesheets..."
 	mkdir -p $(HTML_BUILD_DIR)/_static
-	pysassc extensions/odoo_theme/static/style.scss $(HTML_BUILD_DIR)/_static/style.css
+	python3 -m pysassc extensions/odoo_theme/static/style.scss $(HTML_BUILD_DIR)/_static/style.css
 	@echo "Compilation finished."
 
 #=== Development and debugging rules ===#
