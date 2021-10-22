@@ -118,6 +118,8 @@ Reference List
      - Short Description
    * - :ref:`cookie <services/cookie>`
      - read or modify cookies
+   * - :ref:`effect <services/effect>`
+     - display graphical effects
    * - :ref:`notification <services/notification>`
      - display notifications
    * - :ref:`rpc <services/rpc>`
@@ -164,6 +166,180 @@ API
     :param string name: name of the cookie
 
     Deletes the cookie `name`.
+
+.. _services/effect:
+
+Effect service
+--------------
+
+Overview
+~~~~~~~~
+
+* Technical name: `effect`
+* Dependencies: None
+
+Effects are graphical elements that can be temporarily displayed on top of the page, usually to provide feedback to the user that something interesting happened.
+
+A good example would be the rainbow man:
+
+.. image:: images/rainbow_man.png
+    :alt: The rainbow man effect
+    :width: 600
+    :align: center
+
+
+Here's how this can be displayed:
+
+.. code-block:: javascript
+
+    const effectService = useService("effect");
+    effectService.add({
+      type: "rainbow_man",
+      message: "Boom! Team record for the past 30 days.",
+    });
+
+.. warning :: 
+    The hook `useEffect` is not related to the effect service.
+
+API
+~~~
+
+.. js:function:: effectService.add(options)
+
+  :param object options: the options for the effect. They will get passed along to the underlying effect component.
+
+  Display an effect.
+
+The options are defined by:
+
+.. code-block:: ts
+
+  @typedef {Object} [EffectOptions]
+  @property {string} [type="rainbow_man"]
+  // The name of the desired effect
+
+Available effects
+~~~~~~~~~~~~~~~~~
+
+Currently, the only effect is the rainbow man.
+
+RainbowMan
+**********
+
+.. code-block:: javascript
+
+  effectService.add({ type: "rainbow_man" });
+
+.. list-table::
+    :widths: 20 40 40
+    :header-rows: 1
+    
+    * - Name 
+      - Type
+      - Description
+    * - `params.message`
+      - `string?="Well Done"`
+      - The message in the notice the rainbowman holds or the content of the notification if effects are disabled. 
+        
+        Can be a simple a string. 
+        
+        Can be a string representation of html (prefer component if you want interactions in the DOM).
+    * - `params.img_url`
+      - `string?=/web/static/img/smile.svg`
+      - The url of the image to display inside the rainbow.
+    * - `params.messageIsHtml`
+      - `boolean?=false`
+      - Set to true if the message encodes html, s.t. it will be correctly inserted into the DOM.
+    * - `params.fadeout`
+      - `("slow"|"medium"|"fast"|"no")?="medium"`
+      - Delay for rainbowman to disappear.
+      
+        `"fast"` will make rainbowman dissapear quickly.
+
+        `"medium"` and 'slow' will wait little longer before disappearing (can be used when `options.message` is longer). 
+
+        `"no"` will keep rainbowman on screen until user clicks anywhere outside rainbowman.
+
+    * - `params.Component`
+      - `owl.Component?=RainbowMan`
+      - Component class to instantiate (if effects aren't disabled).
+    * - `params.props`
+      - `object?={}`
+      - If params.Component is given, its props can be passed with this argument.
+
+How to add an effect
+~~~~~~~~~~~~~~~~~~~~
+
+.. _javascript/effect_registry:
+
+The effects are stored in a registry called `effects`.
+You can add new effects by providing a name and a function.
+
+.. code-block:: javascript
+
+  const effectRegistry = registry.category("effects");
+  effectRegistry.add("rainbow_man", rainbowManEffectFunction);
+
+The function must follow this API:
+
+.. js:function:: <newEffectFunction>(env, params)
+
+    :param Env env: the environment received by the service
+    
+    :param object params: the params received from the add function on the service.
+
+    :returns: `({Component, props} | void)` A component and its props or nothing.
+
+This function must create a component and return it. This component is mounted inside the 
+effect component container.
+
+Example
+~~~~~~~
+
+Let's say we want to add an effect that add a sepia look at the page. 
+
+.. code-block:: javascript
+
+  /** @odoo-module **/
+
+  import { registry } from "@web/core/registry";
+  const { Component, tags } = owl;
+
+  class SepiaEffect extends Component {}
+  SepiaEffect.template = tags.xml`
+      <div style="
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          background: rgba(124,87,0, 0.4);
+      "></div>
+  `;
+
+  export function sepiaEffectProvider(env, params = {}) {
+      return {
+          Component: SepiaEffect,
+      };
+  }
+
+  const effectRegistry = registry.category("effects");
+  effectRegistry.add("sepia", sepiaEffectProvider);
+
+
+And then, call it somewhere you want and you will see the result. 
+Here, it is called in webclient.js to make it visible everywhere for the example.
+
+.. code-block:: javascript
+
+  const effectService = useService("effect");
+  effectService.add({ type: "sepia" });
+
+.. image:: images/odoo_sepia.png
+    :alt: Odoo in sepia
+    :width: 600
+    :align: center
 
 .. _services/notification:
 
