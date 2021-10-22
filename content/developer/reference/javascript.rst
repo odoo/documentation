@@ -13,6 +13,7 @@ Javascript
     javascript/registries
     javascript/services
     javascript/generic_components
+    javascript/hooks
     javascript/javascript_cheatsheet
     javascript/javascript_reference
     javascript/mobile
