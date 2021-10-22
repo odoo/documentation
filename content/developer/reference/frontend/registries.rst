@@ -244,3 +244,5 @@ Example:
         };
     }
 
+:ref:`Effect registry<javascript/effect_registry>`
+--------------------------------------------------
