@@ -185,7 +185,7 @@ html_permalinks = True  # Sphinx >= 3.5
 # Additional JS & CSS files that can be imported with the 'custom-js' and 'custom-css' metadata.
 # Lists are empty because the files are specified in extensions/themes.
 html_js_files = []
-html_css_files = []
+html_css_files = ["css/js.css"]
 
 # PHP lexer option to not require <?php
 highlight_options = {
