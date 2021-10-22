@@ -557,7 +557,7 @@ The javascript QWeb implementation provides a few debugging hooks:
     triggers a debugger breakpoint during template rendering::
 
         <t t-if="a_test">
-            <t t-debug="">
+            <t t-debug=""/>
         </t>
 
     will stop execution if debugging is active (exact condition depend on the
