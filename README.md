@@ -5,7 +5,7 @@
 ### Requirements
 
 - [Git](https://www.odoo.com/documentation/master/contributing/documentation.html#install-git)
-- [Python 3.6, 3.7, or 3.8](https://www.odoo.com/documentation/master/contributing/documentation.html#python)
+- [Python 3.7 or 3.8](https://www.odoo.com/documentation/master/contributing/documentation.html#python)
 - Python dependencies listed in the file [`requirements.txt`](https://github.com/odoo/documentation/tree/master/requirements.txt).
 - [Make](https://www.odoo.com/documentation/master/contributing/documentation.html#make)
 - A local copy of the [odoo/odoo repository in master](https://github.com/odoo/odoo/tree/master) (Optional)

@@ -131,7 +131,7 @@ to make sure we start on the same page during the development of our new applica
     https://en.wikipedia.org/wiki/Multitier_architecture
 
 .. _Python tutorial:
-    https://docs.python.org/3.6/tutorial/
+    https://docs.python.org/3.7/tutorial/
 
 .. _two versions:
     https://www.odoo.com/page/editions
