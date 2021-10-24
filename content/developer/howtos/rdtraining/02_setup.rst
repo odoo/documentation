@@ -161,7 +161,7 @@ Install the dependencies
 Python
 ------
 
-Odoo requires Python 3.6 or later, if your computer is up-to-date you should already be at this
+Odoo requires Python 3.7 or later, if your computer is up-to-date you should already be at this
 version or higher.
 
 You can check your Python version with:
