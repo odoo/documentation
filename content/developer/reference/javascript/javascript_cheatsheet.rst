@@ -8,7 +8,7 @@ Javascript Cheatsheet
 There are many ways to solve a problem in JavaScript, and in Odoo.  However, the
 Odoo framework was designed to be extensible (this is a pretty big constraint),
 and some common problems have a nice standard solution.  The standard solution
-has probably the advantage of being easy to understand for an odoo developers,
+has probably the advantage of being easy to understand for an odoo developer,
 and will probably keep working when Odoo is modified.
 
 This document tries to explain the way one could solve some of these issues.
