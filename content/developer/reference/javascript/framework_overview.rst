@@ -170,6 +170,106 @@ as a kind of mixin.
         return state;
     }
 
+Context
+=======
+
+An important concept in the Odoo javascript is the *context*: it provides a way
+for code to give more context to a function call or a rpc, so other parts of the
+system can properly react to that information. In some way, it is like a bag of
+information that is propagated everywhere. It is useful in some situations, such
+as letting the Odoo server know that a model rpc comes from a specific form view, 
+or activating/disabling some features in a component.
+
+There are two different contexts in the Odoo web client: the *user context* and
+the *action context* (so, we should be careful when using the word *context*: it
+could mean a different thing depending on the situation).
+
+.. note::
+   The `context` object may be useful in many cases, but one should be careful
+   not to overuse it! Many problems can be solved in a standard way without
+   modifying the context.
+
+User Context
+------------
+
+The *user context* is a small object containing various informations related to
+the current user. It is available through the `user` service:
+
+.. code-block:: javascript
+
+    class MyComponent extends Component {
+        setup() {
+            const user = useService("user");
+            console.log(user.context);
+        }
+    }
+
+It contains the following information:
+
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name 
+      - Type
+      - Description
+    * - `allowed_company_ids`
+      - `number[]`
+      - the list of active company ids for the user
+    * - `lang`
+      - `string`
+      - the user language code (such as "en_us")
+    * - `tz`
+      - `string`
+      - the user current timezone (for example "Europe/Brussels")  
+
+In practice, the `orm` service automatically adds the user context to each of
+its requests. This is why it is usually not necessary to import it directly in
+most cases.
+
+.. note::
+   The first element of the `allowed_company_ids` is the main company of the user.
+
+Action Context
+--------------
+
+The :ref:`ir.actions.act_window<reference/actions/window>` and
+:ref:`ir.actions.client<reference/actions/client>` support an optional `context` field.
+This field is a `char` that represents an object. Whenever the corresponding
+action is loaded in the web client, this context field will be evaluated as an
+object and given to the component that corresponds to the action.
+
+.. code-block:: xml
+
+    <field name="context">{'search_default_customer': 1}</field>
+
+It can be used in many different ways. For example, the views add the
+action context to every requests made to the server. Another important use is to
+activate some search filter by default (see example above).
+
+Sometimes, when we execute new actions manually (so, programmatically, in javascript),
+it is useful to be able to extend the action context. This can be done with the
+`additional_context` argument.
+
+.. code-block:: javascript
+
+    // in setup
+    let actionService = useService("action");
+
+    // in some event handler
+    actionService.doAction("addon_name.something", {
+        additional_context:{
+            default_period_id: defaultPeriodId
+        }
+    });
+
+In this example, the action with xml_id `addon_name.something` will be loaded,
+and its context will be extended with the `default_period_id` value. This is a
+very important usecase that lets developers combine actions together by providing
+some information to the next action.
+
+
 Browser Object
 ==============
 
