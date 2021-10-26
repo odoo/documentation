@@ -17,3 +17,6 @@ values and click on *Save*.
 
 - **Key**: `point_of_sale.enforce_https`
 - **Value**: `True`
+
+.. seealso::
+   - :doc:`epos_ssc`
