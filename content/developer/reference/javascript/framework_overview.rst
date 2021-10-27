@@ -90,6 +90,42 @@ simply a component that displays all components registered in the
 ``main_components`` registry. This is how other parts of the system can extend
 the web client.
 
+.. _javascript/environment:
+
+Environment
+===========
+
+As an Owl application, the Odoo web client defines its own environment (components
+can access it using ``this.env``). Here is a description of what Odoo adds to
+the shared ``env`` object:
+
++--------------+-------------------------------------------------------------------------------+
+| Key          | Value                                                                         |
++==============+===============================================================================+
+| ``qweb``     | required by Owl (contains all templates)                                      |
++--------------+-------------------------------------------------------------------------------+
+| ``bus``      | :ref:`main bus <javascript/bus>`, used to coordinate some generic events      |
++--------------+-------------------------------------------------------------------------------+
+| ``services`` | all deployed services (should usually be accessed with the `useService` hook) |
++--------------+-------------------------------------------------------------------------------+
+| ``debug``    | boolean. If true, the web client is in ``debug`` mode                         |
++--------------+-------------------------------------------------------------------------------+
+| ``_t``       | translation function                                                          |
++--------------+-------------------------------------------------------------------------------+
+| ``isSmall``  | boolean. If true, the web client is currently in mobile mode                  |
++--------------+-------------------------------------------------------------------------------+
+
+
+So, for example, to translate a string in a component (note: templates are
+automatically translated, so no specific action is required in that case), one
+can do this:
+
+
+.. code-block:: javascript
+
+    const someString = this.env._t('some text');
+
+
 Building Blocks
 ===============
 
@@ -270,6 +306,62 @@ In this example, the action with xml_id `addon_name.something` will be loaded,
 and its context will be extended with the `default_period_id` value. This is a
 very important usecase that lets developers combine actions together by providing
 some information to the next action.
+
+.. _javascript/bus:
+
+Bus
+===
+
+The web client :ref:`environment <javascript/environment>` object contains an event
+bus, named `bus`. Its purpose is to allow various parts of the system to properly
+coordinate themselves, without coupling them. The `env.bus` is an owl
+`EventBus <https://github.com/odoo/owl/blob/master/doc/reference/event_bus.md>`_,
+that should be used for global events of interest.
+
+
+.. code-block:: javascript
+
+   // for example, in some service code:
+   env.bus.on("WEB_CLIENT_READY", null, doSomething);
+
+Here is a list of the events that can be triggered on this bus:
+
+.. list-table::
+   :header-rows: 1
+
+   * - Message
+     - Payload
+     - Trigger
+   * - ``ACTION_MANAGER:UI-UPDATED``
+     - a mode indicating what part of the ui has been updated ('current', 'new' or 'fullscreen')
+     - the rendering of the action requested to the action manager is done
+   * - ``ACTION_MANAGER:UPDATE``
+     - next rendering info
+     - the action manager has finished computing the next interface
+   * - ``MENUS:APP-CHANGED``
+     - none
+     - the menu service's current app has changed
+   * - ``ROUTE_CHANGE``
+     - none
+     - the url hash was changed
+   * - ``RPC:REQUEST``
+     - rpc id
+     - a rpc request has just started
+   * - ``RPC:RESPONSE``
+     - rpc id
+     - a rpc request is completed
+   * - ``WEB_CLIENT_READY``
+     - none
+     - the web client has been mounted
+   * - ``FOCUS-VIEW``
+     - none
+     - the main view should focus itself
+   * - ``CLEAR-CACHES``
+     - none
+     - all internal caches should be cleared
+   * - ``CLEAR-UNCOMMITTED-CHANGES``
+     - list of functions
+     - all views with uncommitted changes should clear them, and push a callback in the list
 
 
 Browser Object
