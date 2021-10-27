@@ -101,39 +101,6 @@ the ``owl`` attribute set to 1.
 
    Template names should follow the convention `addon_name.ComponentName`.
 
-Environment
-===========
-
-The Odoo web client is an Owl application, with its own environment (components
-can access it using ``this.env``). Here is a description of what Odoo adds to
-the shared ``env`` object:
-
-+--------------+-------------------------------------------------------------------------------+
-| Key          | Value                                                                         |
-+==============+===============================================================================+
-| ``qweb``     | required by Owl (contains all templates)                                      |
-+--------------+-------------------------------------------------------------------------------+
-| ``bus``      | main bus, used to coordinate some generic events                              |
-+--------------+-------------------------------------------------------------------------------+
-| ``services`` | all deployed services (should usually be accessed with the `useService` hook) |
-+--------------+-------------------------------------------------------------------------------+
-| ``debug``    | boolean. If true, the web client is in ``debug`` mode                         |
-+--------------+-------------------------------------------------------------------------------+
-| ``_t``       | translation function                                                          |
-+--------------+-------------------------------------------------------------------------------+
-| ``isSmall``  | boolean. If true, the web client is currently in mobile mode                  |
-+--------------+-------------------------------------------------------------------------------+
-
-
-So, for example, to translate a string in a component (note: templates are
-automatically translated, so no specific action is required in that case), one
-can do this:
-
-
-.. code-block:: javascript
-
-    const someString = this.env._t('some text');
-
 
 .. seealso::
     - `Owl Repository <https://github.com/odoo/owl>`_
