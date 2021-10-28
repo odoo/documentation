@@ -276,5 +276,95 @@ API
 
       const isInSalesGroup = await userService.hasGroup("sale.group_sales")
 
+The `notification` service
+--------------------------
 
+Overview
+~~~~~~~~
 
+* Technical name: `notification`
+* Dependencies: None
+
+The `notification` service allows to display notifications on the screen.
+  
+.. code-block:: javascript
+
+  const notificationService = useService("notification");
+  notificationService.add("I'm a very simple notification"); 
+  
+API
+~~~
+
+.. js:function:: add(message, options?)
+  
+    :param string message: the notification message to display
+    :param object options: the options of the notification
+    :returns: a function to close the notification
+
+    Show a notification.
+
+The options are defined by:
+
+.. code-block:: ts 
+
+   @typedef {Object} NotificationOptions
+   @property {string} [title]
+   // Add a title to the notification
+   @property {"warning" | "danger" | "success" | "info"} [type]
+   // Change the background color
+   @property {boolean} [sticky=false]
+   // Whether or not the notification shouldn't be dismissed
+   @property {string} [className]
+   // Add a class name of the notification for css targetting
+   @property {function(): void} [onClose]
+   // Provide a callback to be executed when the notification closes
+   @property {NotificationButton[]} [buttons]
+   // Add buttons to the notifications. 
+
+   @typedef {Object} NotificationButton
+   @property {string} name
+   // The button text
+   @property {function(): void} onClick
+   // The callback to execute when the button is clicked
+   @property {string} [icon]
+   // A font-awesome string to add an icon
+   @property {boolean} [primary=false]
+   // Wheter the button has the primary button style
+
+Examples
+~~~~~~~~
+
+A notification for when a sale deal is made with a button to go some kind of commission page.
+
+.. code-block:: javascript
+    
+  // in setup
+  this.notificationService = useService("notification");
+  this.actionService = useService("actionService");
+
+  // later
+  this.notificationService.add("You closed a deal!", {
+    title: "Congrats",
+    type: "success",
+    buttons: [
+        {
+            name: "See your Commission",
+            onClick: () => {
+                this.actionService.doAction("commission_action");
+            },
+        },
+    ],
+  });
+
+.. image:: images/notification_service.png
+  :width: 600 px
+  :alt: Example of notification
+  :align: center
+
+A notification that closes after a second
+
+.. code-block:: javascript
+
+  const notificationService = useService("notification");
+  const close = notificationService.add("I'll will be quickly closed");
+  setTimeout(close, 1000);
