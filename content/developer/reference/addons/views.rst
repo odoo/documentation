@@ -1925,54 +1925,56 @@ Map
 
    <span class="badge" style="background-color:#AD5E99">Enterprise feature</span>
 
-This view is able to display records on a map and the routes between them. The record are represented by pins. It also allows the visualization of fields from the model in a popup tied to the record's pin.
+This view is able to display records on a map and the routes between them. The records are represented by pins. It also allows the visualization of fields from the model in a popup tied to the record's pin.
 
 .. note::
 
-    The model on which the view is applied should contains a res.partner many2one since the view relies on the res.partner's address and coordinates fields to localize the records.
+    The model on which the view is applied should contain a `res.partner` many2one since the view relies on the `res.partner`'s address and coordinates fields to localize the records.
 
 .. _reference/views/map/api:
 
-Api
+API
 ~~~
 
-The view uses location data platforms' api to fetch the tiles (the map's background), do the geoforwarding (converting addresses to a set of coordinates) and fetch the routes.
-The view implements two api, the default one, openstreet map is able to fetch `tiles`_ and do `geoforwarding`_. This api does not require a token.
-As soon as a valid `MapBox`_ token is provided in the general settings the view switches to the Mapbox api. This api is faster and allows the computation of routes. The token are available by `signing up`_ to MapBox
+The view uses location data platforms' API to fetch the tiles (the map's background), do the geoforwarding (converting addresses to a set of coordinates) and fetch the routes.
+The view implements two API, OpenStreetMap and MapBox. OpenStreetMap is used by default and is able to fetch `tiles`_ and do `geoforwarding`_. This API does not require a token.
+As soon as a valid `MapBox`_ token is provided in the general settings the view switches to the MapBox API. This API is faster and allows the computation of routes. A token can be obtained by `signing up`_ to MapBox.
 
 .. _reference/views/structural components:
 
 Structural components
 ~~~~~~~~~~~~~~~~~~~~~
 
-The view's root element is ``<map>`` multiple attributes are allowed
+The view's root element is ``<map>``. It can have the following attributes:
 
 ``res_partner``
-    Contains the res.partner many2one. If not provided the view will resort to create an empty  map.
+    Contains the `res.partner` many2one. If not provided the view resorts to create an empty map.
 ``default_order``
-    If a field is provided the view will override the model's default order. The field must be part of the model on which the view is applied not from res.partner
+    If a field is provided the view overrides the model's default order. The field must be part of the model on which the view is applied, not from `res.partner`.
 ``routing``
-    if ``true`` the routes between the records will be shown. The view still needs a valid MapBox token and at least two located records. (i.e the records has a res.partner many2one and the partner has a address or valid coordinates)
+    if ``1`` display the routes between the records. The view needs a valid MapBox token and at least two located records (i.e the records have a `res.partner` many2one and the partner has an address or valid coordinates).
 ``hide_name``
-    if ``true`` hide a name from the marker's popup (default: false)
+    if ``1`` hide the name from the pin's popup (default: ``0``).
 ``hide_address``
-    if ``true`` hide a address from the marker's popup (default: false)
+    if ``1`` hide the address from the pin's popup (default: ``0``).
+``hide_title``
+    if ``1`` hide the title from the pin list (default: ``0``).
+``panel_title``
+    String to display as title of the pin list. If not provided, the title is the action's name or "Items" if the view is not in an action.
+``limit``
+    Maximum number of records to fetch (default: 80). It must be a positive integer.
 
-The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`` element will be interpreted as a line in the marker's popup. The field's attributes are the following:
+The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`` element is interpreted as a line in the pin's popup. The field's attributes are the following:
 
 ``name``
     The field to display.
 ``string``
-    This string will be displayed before the field's content. It Can be used as a description.
-``limit``
-    The size of a page (default: 80). It must be a positive integer.
-
-No attribute or element is mandatory but as stated above if no res.partner many2one is provided the view won't be able to locate records.
+    String to display before the field's content. It can be used as a description.
 
 For example here is a map:
     .. code-block:: xml
 
-        <map res_partner="partner_id" default_order="date_begin" routing="true" hide_name="true">
+        <map res_partner="partner_id" default_order="date_begin" routing="1" hide_name="1">
             <field name="partner_id" string="Customer Name"/>
         </map>
 
