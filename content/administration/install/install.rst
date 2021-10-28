@@ -466,10 +466,10 @@ Prepare
 Python
 ^^^^^^
 
-Odoo requires Python 3.6 or later to run. Use your package manager to download and install Python 3
+Odoo requires Python 3.7 or later to run. Use your package manager to download and install Python 3
 on your machine if it is not already done.
 
-.. note:: If Python 3 is already installed, make sure that the version is 3.6 or above, as previous
+.. note:: If Python 3 is already installed, make sure that the version is 3.7 or above, as previous
           versions are not compatible with Odoo.
 
           .. code-block:: console
