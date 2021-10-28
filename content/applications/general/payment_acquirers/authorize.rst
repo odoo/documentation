@@ -5,8 +5,8 @@ Authorize.Net
 `Authorize.Net <https://www.authorize.net>`_ is a United States-based online payment solution
 provider, allowing businesses to accept **credit cards**.
 
-Configuration
-=============
+Configure Authorized.net on Odoo
+================================
 
 .. seealso::
    - :ref:`payment_acquirers/add_new`
@@ -42,6 +42,24 @@ enabled, the funds are reserved for 30 days on the customer's card, but not char
 
 .. warning::
    After **30 days**, the transaction is **voided automatically** by Authorize.net.
+
+Configure your Authorized.net Account
+=====================================
+
+You need to set up a **Default Receipt URL** and a **Default Relay Response URL** to your
+Authorize.net account.
+
+To do so, log into your Authorize.Net account, go to :menuselection:`Account --> Transaction Format
+Settings --> Transaction Response Settings --> Response/Receipt URLs`, and set the default links:
+
+- | Default Receipt URL:
+  | *https://[yourcompany.odoo.com]*/**payment/authorize/return**
+- | Default Relay Response URL:
+  | *https://[yourcompany.odoo.com]*/**shop/confirmation**
+
+.. note::
+   Failing to complete this step results in the following error: *"The referrer, relay response or
+   receipt link URL is invalid."*
 
 .. seealso::
    - :doc:`../payment_acquirers`
