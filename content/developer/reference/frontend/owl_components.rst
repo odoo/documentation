@@ -153,6 +153,8 @@ checkboxes or datepickers. This page explains how to use these generic component
      - a simple checkbox component with a label next to it
    * - :ref:`Dropdown <frontend/dropdown>`
      - full-featured dropdown
+   * - :ref:`Pager <frontend/pager>`
+     - a small component to handle pagination
 
 .. _frontend/checkbox:
 
@@ -466,3 +468,54 @@ In this example, we recursively call a template to display a tree-like structure
       </t>
     </Dropdown>
   </t>
+
+.. _frontend/pager:
+
+Pager
+-----
+
+Location
+~~~~~~~~
+
+`@web/core/pager/pager`
+
+Description
+~~~~~~~~~~~
+
+The Pager is a small component to handle pagination. A page is defined by an `offset` and a `limit` (the size of the page). It displays the current page and the `total` number of elements, for instance, "9-12 / 20". In the previous example, `offset` is 8, `limit` is 4 and `total` is 20. It has two buttons ("Previous" and "Next") to navigate between pages.
+
+.. note::
+    The pager can be used anywhere but its main use is in the control panel. See the :ref:`usePager <frontend/hooks/usepager>` hook in order to manipulate the pager of the control panel.
+
+.. code-block:: xml
+
+  <Pager offset="0" limit="80" total="50" onUpdate="doSomething" />
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `offset`
+      - `number`
+      - Index of the first element of the page. It starts with 0 but the pager displays `offset + 1`.
+    * - `limit`
+      - `number`
+      - Size of the page. The sum of `offset` and `limit` corresponds to the index of the last element of the page.
+    * - `total`
+      - `number`
+      - Total number of elements the page can reach.
+    * - `onUpdate`
+      - `function`
+      - Function that is called when page is modified by the pager. This function can be async, the pager cannot be edited while this function is executing.
+    * - `isEditable`
+      - `boolean`
+      - Allows to click on the current page to edit it (`true` by default).
+    * - `withAccessKey`
+      - `boolean`
+      - Binds access key `p` on the previous page button and `n` on the next page one (`true` by default).
