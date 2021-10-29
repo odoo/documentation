@@ -115,13 +115,15 @@ Subclasses of :class:`odoo.tests.common.BaseCase` (usually through
 :class:`~odoo.tests.common.TransactionCase`,
 :class:`~odoo.tests.common.SavepointCase` or
 :class:`~odoo.tests.common.HttpCase`) are automatically tagged with
-``standard``, ``at_install`` and their source module's name by default.
+``standard`` and ``at_install`` by default.
 
 Invocation
 ^^^^^^^^^^
 
 :option:`--test-tags <odoo-bin --test-tags>` can be used to select/filter tests
-to run on the command-line.
+to run on the command-line. It implies :option:`--test-enable <odoo-bin --test-enable>`,
+so it's not necessary to specify :option:`--test-enable <odoo-bin --test-enable>`
+when using :option:`--test-tags <odoo-bin --test-tags>`.
 
 This option defaults to ``+standard`` meaning tests tagged ``standard``
 (explicitly or implicitly) will be run by default when starting Odoo
@@ -152,7 +154,7 @@ have to be selected explicitly:
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags nice
+    $ odoo-bin --test-tags nice
 
 Note that only the tests tagged ``nice`` are going to be executed. To run
 *both* ``nice`` and ``standard`` tests, provide multiple values to
@@ -161,10 +163,10 @@ are *additive* (you're selecting all tests with *any* of the specified tags)
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags nice,standard
+    $ odoo-bin --test-tags nice,standard
 
 The config switch parameter also accepts the ``+`` and ``-`` prefixes. The
-``+`` prefix is implied and therefore, totaly optional. The ``-`` (minus)
+``+`` prefix is implied and therefore, totally optional. The ``-`` (minus)
 prefix is made to deselect tests tagged with the prefixed tags, even if they
 are selected by other specified tags e.g. if there are ``standard`` tests which
 are also tagged as ``slow`` you can run all standard tests *except* the slow
@@ -172,7 +174,7 @@ ones:
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags 'standard,-slow'
+    $ odoo-bin --test-tags 'standard,-slow'
 
 When you write a test that does not inherit from the
 :class:`~odoo.tests.common.BaseCase`, this test will not have the default tags,
@@ -188,6 +190,36 @@ they're not going to get run:
     @tagged('standard', 'at_install')
     class SmallTest(unittest.TestCase):
         ...
+
+Besides tags you can also specify specific modules, classes or functions to
+test. The full syntax of the format accepted by :option:`--test-tags <odoo-bin --test-tags>`
+is:
+
+.. code-block::
+
+    [-][tag][/module][:class][.method]
+
+So if you want to test the `stock_account` module, you can use:
+
+    .. code-block:: console
+
+        $ odoo-bin --test-tags /stock_account
+
+If you want to test a specific function with a unique name, it can be specified
+directly:
+
+    .. code-block:: console
+
+        $ odoo-bin --test-tags .test_supplier_invoice_forwarded_by_internal_user_without_supplier
+
+This is equivalent to
+
+    .. code-block:: console
+
+        $ odoo-bin --test-tags /account:TestAccountIncomingSupplierInvoice.test_supplier_invoice_forwarded_by_internal_user_without_supplier
+
+if the name of the test is unambiguous. Multiple modules, classes and functions
+can be specified at once separated by a `,` like with regular tags.
 
 Special tags
 ^^^^^^^^^^^^
@@ -206,43 +238,36 @@ Special tags
   Note that this is *not exclusive* with ``at_install``, however since you
   will generally not want both ``post_install`` is usually paired with
   ``-at_install`` when tagging a test class.
-- *module_name*: Odoo tests classes extending
-  :class:`~odoo.tests.common.BaseCase` are implicitly tagged with the
-  technical name of their module. This allows easily selecting or excluding
-  specific modules when testing e.g. if you want to only run tests from
-  ``stock_account``:
-
-  .. code-block:: console
-
-      $ odoo-bin --test-enable --test-tags stock_account
 
 Examples
 ^^^^^^^^
 
 .. important::
 
-    Tests will be executed only in the installed or updated modules.  So
-    modules have to be selected with the :option:`-u <odoo-bin -u>` or
-    :option:`-i <odoo-bin -i>` switches.  For simplicity, those switches are
+    Tests will be executed only in installed modules. If you're starting from
+    a clean database, you'll need to install the modules with the
+    :option:`-i <odoo-bin -i>` switch at least once. After that it's no longer
+    needed, unless you need to upgrade the module, in which case
+    :option:`-u <odoo-bin -u>` can be used. For simplicity, those switches are
     not specified in the examples below.
 
 Run only the tests from the sale module:
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags sale
+    $ odoo-bin --test-tags /sale
 
 Run the tests from the sale module but not the ones tagged as slow:
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags 'sale,-slow'
+    $ odoo-bin --test-tags '/sale,-slow'
 
 Run only the tests from stock or tagged as slow:
 
 .. code-block:: console
 
-    $ odoo-bin --test-enable --test-tags '-standard, slow, stock'
+    $ odoo-bin --test-tags '-standard, slow, /stock'
 
 .. note:: ``-standard`` is implicit (not required), and present for clarity
 
