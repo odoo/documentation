@@ -116,12 +116,52 @@ Reference List
 
    * - Technical Name
      - Short Description
+   * - :ref:`cookie <services/cookie>`
+     - read or modify cookies
    * - :ref:`rpc <services/rpc>`
      - send requests to the server
    * - :ref:`title <services/title>`
      - read or modify the window title
    * - :ref:`user <services/user>`
      - provides some information related to the current user
+
+.. _services/cookie:
+
+Cookie service
+--------------
+
+Overview
+~~~~~~~~
+
+- Technical name: `cookie`
+- Dependencies: none
+
+Provides a way to manipulate cookies. For example:
+
+.. code-block:: javascript
+
+   cookieService.setCookie("hello", "odoo");
+
+API
+~~~
+
+.. js:data:: current
+
+   Object representing each cookie and its value if any (or empty string)
+
+.. js:function:: setCookie(name[, value, ttl])
+
+    :param string name: the name of the cookie that should be set
+    :param any value: optional. If given, the cookie will be set to that value
+    :param number ttl: optional. the time in seconds before the cookie will be deleted (default=1 year)
+
+    Sets the cookie `name` to the value `value` with a max age of `ttl`
+    
+.. js:function:: deleteCookie(name)
+
+    :param string name: name of the cookie
+
+    Deletes the cookie `name`.
 
 .. _services/rpc:
 
@@ -133,7 +173,6 @@ Overview
 
 - Technical name: `rpc`
 - Dependencies: none
-
 
 The `rpc` service provides a single asynchronous function to send requests to
 the server. Calling a controller is very simple: the route should be the first
@@ -260,6 +299,7 @@ string that is displayed, or `null` if it has been removed.
 Its API is:
 
 .. js:data:: current
+   :noindex:
 
    This is a string representing the current title. It is structured in the
    following way: ``value_1 - ... - value_n`` where each `value_i` is a (non null)
@@ -386,8 +426,8 @@ API
 
       const isInSalesGroup = await userService.hasGroup("sale.group_sales")
 
-The `notification` service
---------------------------
+Notification service
+--------------------
 
 Overview
 ~~~~~~~~
@@ -411,7 +451,7 @@ API
     :param object options: the options of the notification
     :returns: a function to close the notification
 
-    Show a notification.
+    Shows a notification.
 
 The options are defined by:
 
@@ -471,10 +511,10 @@ A notification for when a sale deal is made with a button to go some kind of com
   :alt: Example of notification
   :align: center
 
-A notification that closes after a second
+A notification that closes after a second:
 
 .. code-block:: javascript
 
   const notificationService = useService("notification");
-  const close = notificationService.add("I'll will be quickly closed");
+  const close = notificationService.add("I will be quickly closed");
   setTimeout(close, 1000);
