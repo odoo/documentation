@@ -20,6 +20,8 @@ documents the list of hooks provided by the Odoo web framework.
      - Short Description
    * - :ref:`useBus <frontend/hooks/usebus>`
      - subscribe and unsubscribe to a bus
+   * - :ref:`usePager <frontend/hooks/usepager>`
+     - Display the pager of the control panel of a view.
    * - :ref:`usePosition <frontend/hooks/useposition>`
      - position an element relative to a target
 
@@ -59,6 +61,52 @@ API
     :param EventBus bus: the target event bus
     :param string eventName: the name of the event that we want to listen to
     :param function callback: listener callback
+
+.. _frontend/hooks/usepager:
+
+usePager
+========
+
+Location
+--------
+
+`@web/search/pager_hook`
+
+Description
+-----------
+
+Display the :ref:`Pager <frontend/pager>` of the control panel of a view. This hooks correctly sets `env.config` to provide the props to the pager.
+
+.. code-block:: javascript
+
+    import { usePager } from "@web/search/pager_hook";
+
+    class CustomView {
+      setup() {
+        const state = owl.hooks.useState({
+          offset: 0,
+          limit: 80,
+          total: 50,
+        });
+        usePager(() => {
+          return {
+            offset: this.state.offset,
+            limit: this.state.limit,
+            total: this.state.total,
+            onUpdate: (newState) => {
+              Object.assign(this.state, newState);
+            },
+          };
+        });
+      }
+    }
+
+API
+---
+
+.. js:function:: usePager(getPagerProps)
+
+    :param function getPagerProps: function that returns the pager props.
 
 .. _frontend/hooks/useposition:
 
