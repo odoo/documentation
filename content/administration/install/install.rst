@@ -151,7 +151,7 @@ Repository
       .. code-block:: console
 
           # wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-          # echo "deb http://nightly.odoo.com/13.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
+          # echo "deb http://nightly.odoo.com/15.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
           # apt-get update && apt-get install odoo
 
       You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
@@ -163,7 +163,7 @@ Repository
 
       .. code-block:: console
 
-         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/13.0/nightly/rpm/odoo.repo
+         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/15.0/nightly/rpm/odoo.repo
          $ sudo dnf install -y odoo
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
@@ -183,7 +183,8 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 13.0 'deb' package currently supports `Debian Buster`_, `Ubuntu 18.04`_ or above.
+         Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 20.04 (Focal)`_
+         or above.
 
       Next, execute the following commands **as root**:
 
@@ -223,13 +224,13 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 13.0 'rpm' package supports Fedora 30.
+         Odoo 15.0 'rpm' package supports Fedora 34.
 
       Once downloaded, the package can be installed using the 'dnf' package manager:
 
       .. code-block:: console
 
-         $ sudo dnf localinstall odoo_13.0.latest.noarch.rpm
+         $ sudo dnf localinstall odoo_15.0.latest.noarch.rpm
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
 
@@ -678,11 +679,11 @@ Docker
 The full documentation on how to use Odoo with Docker can be found on the
 official Odoo `docker image <https://registry.hub.docker.com/_/odoo/>`_ page.
 
-.. _Debian Buster: https://www.debian.org/releases/buster/
+.. _Debian 11 (Bullseye): https://www.debian.org/releases/bullseye/
 .. _demo: https://demo.odoo.com
 .. _docker: https://www.docker.com
 .. _download: https://www.odoo.com/page/download
-.. _Ubuntu 18.04: http://releases.ubuntu.com/18.04/
+.. _Ubuntu 20.04 (Focal): http://releases.ubuntu.com/20.04/
 .. _EPEL: https://fedoraproject.org/wiki/EPEL
 .. _PostgreSQL: http://www.postgresql.org
 .. _the official installer:
