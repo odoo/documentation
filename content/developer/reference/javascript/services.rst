@@ -1,3 +1,6 @@
+
+.. _javascript/services:
+
 ========
 Services
 ========
@@ -14,7 +17,7 @@ every 5 seconds:
 
 .. code-block:: javascript
 
-    import { registry } from "./core/registry";
+    import { registry } from "@web/core/registry";
 
     const myService = {
         dependencies: ["notification"],
@@ -26,7 +29,7 @@ every 5 seconds:
         }
     };
 
-    serviceRegistry.add("myService", myService);
+    registry.category("services").add("myService", myService);
 
 At startup, the web client starts all services present in the `services`
 registry. Note that the name used in the registry is the name of the service.
