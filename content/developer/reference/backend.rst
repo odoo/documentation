@@ -17,4 +17,3 @@ Backend
     backend/testing
     backend/http
     backend/mixins
-    backend/assets
