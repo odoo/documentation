@@ -316,6 +316,182 @@ and its context will be extended with the `default_period_id` value. This is a
 very important usecase that lets developers combine actions together by providing
 some information to the next action.
 
+.. _javascript/pyjs:
+
+Python Interpreter
+==================
+
+The Odoo framework features a built-in small python interpreter. Its purpose
+is to evaluate small python expressions. This is important, because views in
+Odoo have modifiers written in python, but they need to be evaluated by the
+browser.
+
+Example:
+
+.. code-block:: js
+
+   import { evaluateExpr } from "@web/core/py_js/py";
+
+   evaluateExpr("1 + 2*{'a': 1}.get('b', 54) + v", { v: 33 }); // returns 142
+
+
+The ``py`` javascript code exports 5 functions:
+
+.. js:function:: tokenize(expr)
+
+  :param string expr: the expression to tokenize
+  :returns: Token[] a list of token
+
+.. js:function:: parse(tokens)
+
+  :param Token[] tokens: a list of tokens
+  :returns: AST an abstract syntax tree structure representing the expression
+
+.. js:function:: parseExpr(expr)
+
+  :param string expr: a string representing a valid python expression
+  :returns: AST an abstract syntax tree structure representing the expression
+
+.. js:function:: evaluate(ast[, context])
+
+  :param AST ast: a AST structure that represents an expression
+  :param Object context: an object that provides an additional evaluation context
+  :returns: any the resulting value of the expression, with respect to the context
+
+.. js:function:: evaluateExpr(expr[, context])
+
+  :param string expr: a string representing a valid python expression
+  :param Object context: an object that provides an additional evaluation context
+  :returns: any the resulting value of the expression, with respect to the context
+
+.. _javascript/domains:
+
+Domains
+=======
+
+Broadly speaking, domains in Odoo represent a set of records that matches some
+specified conditions. In javascript, they are usually represented either as a
+list of conditions (or of operators: `|`, `&` or `!` in prefix notation), or as string
+expressions. They don't have to be normalized (the `&` operator is implied if
+necessary). For example:
+
+.. code-block:: javascript
+
+  // list of conditions
+  []
+  [["a", "=", 3]]
+  [["a", "=", 1], ["b", "=", 2], ["c", "=", 3]]
+  ["&", "&", ["a", "=", 1], ["b", "=", 2], ["c", "=", 3]]
+  ["&", "!", ["a", "=", 1], "|", ["a", "=", 2], ["a", "=", 3]]
+
+  // string expressions
+  "[('some_file', '>', a)]"
+  "[('date','>=', (context_today() - datetime.timedelta(days=30)).strftime('%Y-%m-%d'))]"
+  "[('date', '!=', False)]"
+
+String expressions are more powerful than list expressions: they can contain
+python expressions and unevaluated values, that depends on some evaluation context.
+However, manipulating string expressions is more difficult.
+
+Since domains are quite important in the web client, Odoo provides a `Domain`
+class:
+
+.. code-block:: javascript
+
+    new Domain([["a", "=", 3]]).contains({ a: 3 }) // true
+
+    const domain = new Domain(["&", "&", ["a", "=", 1], ["b", "=", 2], ["c", "=", 3]]);
+    domain.contains({ a: 1, b: 2, c: 3 }); // true
+    domain.contains({ a: -1, b: 2, c: 3 }); // false
+
+    // next expression returns ["|", ("a", "=", 1), ("b", "<=", 3)]
+    Domain.or([[["a", "=", 1]], "[('b', '<=', 3)]"]).toString(); 
+
+Here is the `Domain` class description:
+
+.. js:class:: Domain([descr]) 
+
+  :param descr: a domain description
+  :type descr: string | any[] | Domain
+
+  .. js:method:: contains(record)
+
+    :param Object record: a record object
+    :returns: boolean
+
+    Returns true if the record matches all the condition specified by the domain
+
+  .. js:method:: toString()
+
+    :returns: string
+
+    Returns a string description for the domain
+
+  .. js:method:: toList([context])
+
+    :param Object context: evaluation context
+    :returns: any[]
+
+    Returns a list description for the domain. Note that this method takes an
+    optional `context` object that will be used to replace all free variables.
+
+    .. code-block:: javascript
+
+      new Domain(`[('a', '>', b)]`).toList({ b:3 }); // [['a', '>', 3]]
+
+The `Domain` class also provides 4 useful static methods to combine domains:
+
+.. code-block:: javascript
+
+    // ["&", ("a", "=", 1), ("uid", "<=", uid)]
+    Domain.and([[["a", "=", 1]], "[('uid', '<=', uid)]"]).toString();
+
+    // ["|", ("a", "=", 1), ("uid", "<=", uid)]
+    Domain.or([[["a", "=", 1]], "[('uid', '<=', uid)]"]).toString();
+
+    // ["!", ("a", "=", 1)]
+    Domain.not([["a", "=", 1]]).toString();
+
+    // ["&", ("a", "=", 1), ("uid", "<=", uid)]
+    Domain.combine([[["a", "=", 1]], "[('uid', '<=', uid)]"], "AND").toString();
+
+
+.. staticmethod:: Domain.and(domains)
+
+  :param domains: a list of domain representations
+  :type domains: string[] | any[][] | Domain[]
+  :returns: Domain
+
+  Returns a domain representing the intersection of all domains.
+
+.. staticmethod:: Domain.or(domains)
+
+  :param domains: a list of domain representations
+  :type domains: string[] | any[][] | Domain[]
+  :returns: Domain
+
+  Returns a domain representing the union of all domains.
+
+.. staticmethod:: Domain.not(domain)
+
+  :param domain: a domain representation
+  :type domain: string | any[] | Domain
+  :returns: Domain
+
+  Returns a domain representing the negation of the domain argument
+
+.. staticmethod:: Domain.combine(domains, operator)
+
+  :param domains: a list of domain representations
+  :type domains: string[] | any[][] | Domain[]
+  :param operator: an operator
+  :type operator: 'AND' or 'OR'
+
+  :returns: Domain
+
+  Returns a domain representing either the intersection or the union of all the
+  domains, depending on the value of the operator argument.
+
 .. _javascript/bus:
 
 Bus
