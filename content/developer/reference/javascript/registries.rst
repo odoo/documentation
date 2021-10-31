@@ -108,6 +108,21 @@ category(subcategory)
 Reference List
 ==============
 
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Category
+     - Content
+   * - :ref:`main_components <registries/main_components>`
+     - top level components
+   * - :ref:`services <registries/services>`
+     - all services that should be activated
+   * - :ref:`systray <registries/systray>`
+     - components displayed in the systray zone in the navbar
+
+.. _registries/main_components:
+
 Main components registry
 ------------------------
 
@@ -133,3 +148,72 @@ this:
    registry.category("main_components").add("LoadingIndicator", {
      Component: LoadingIndicator,
    });
+
+.. _registries/services:
+
+Service registry
+----------------
+
+The service registry (category: `services`) contains all
+:ref:`services <javascript/services>` that should be activated by the Odoo
+framework.
+
+.. code-block:: javascript
+
+    import { registry } from "@web/core/registry";
+
+    const myService = {
+        dependencies: [...],
+        start(env, deps) {
+            // some code here
+        }
+    };
+
+    registry.category("services").add("myService", myService);
+
+.. _registries/systray:
+
+Systray registry
+----------------
+
+The systray is the zone on the right of the navbar that contains various small
+components, that usually display some sort of information (like the number of
+unread messages), notifications and/or let the user interact with them.
+
+The `systray` registry contains a description of these systray items, as objects
+with the following three keys:
+
+- `Component`: the component class that represents the item. Its root element
+  should be a `<li>` tag, otherwise it might not be styled properly.
+- `props (optional)`: props that should be given to the component
+- `isDisplayed (optional)`: a function that takes the :ref:`env <javascript/environment>`
+  and returns a boolean. If true, the systray item is displayed. Otherwise it is
+  removed.
+
+For example:
+
+.. code-block:: js
+
+    import { registry } from "@web/core/registry";
+
+    class MySystrayItem extends Component {
+        // some component ...
+    }
+
+    registry.category("systray").add("myAddon.myItem", {
+        Component: MySystrayItem,
+    });
+
+
+The systray registry is an ordered registry (with the `sequence` number):
+
+.. code-block:: js
+
+    const item = {
+        Component: MySystrayItem
+    };
+    registry.category("systray").add("myaddon.some_description", item, { sequence: 43 });
+
+The sequence number defaults to 50. If given, this number will be used
+to order the items. The lowest sequence is on the right and the highest sequence
+is on the left in the systray menu.
