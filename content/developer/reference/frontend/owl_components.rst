@@ -1,0 +1,438 @@
+
+==============
+Owl Components
+==============
+
+The Odoo Javascript framework uses a custom component framework called Owl. It
+is a declarative component system, loosely inspired by Vue and React. Components
+are defined using :doc:`QWeb templates <qweb>`, enriched with some Owl
+specific directives. The official 
+`Owl documentation <https://github.com/odoo/owl/blob/master/doc/readme.md>`_
+contains a complete reference and a tutorial.
+
+.. important::
+
+   Although the code can be found in the `web` module, it is maintained from a
+   separate GitHub repository. Any modification to Owl should therefore be made
+   through a pull request on https://github.com/odoo/owl.
+
+.. note::
+   Currently, all Odoo versions (starting in version 14) share the same Owl version.
+
+Using Owl components
+====================
+
+The `Owl documentation`_ already documents in detail the Owl framework, so this
+page will only provide Odoo specific information. But first, let us see how we
+can make a simple component in Odoo.
+
+.. code-block:: javascript
+    
+    const { useState } = owl.hooks;
+    const { xml } = owl.tags;
+
+    class MyComponent extends Component {
+        setup() {
+            this.state = useState({ value: 1 });
+        }
+
+        increment() {
+            this.state.value++;
+        }
+    }
+    MyComponent.template = xml
+        `<div t-on-click="increment">
+            <t t-esc="state.value">
+        </div>`;
+
+This example shows that Owl is available as a library in the global namespace as
+``owl``: it can simply be used like most libraries in Odoo. Note that we
+defined here the template as a static property, but without using the `static`
+keyword, which is not available in some browsers (Odoo javascript code should
+be Ecmascript 2019 compliant).
+
+We define here the template in the javascript code, with the help of the ``xml``
+helper. However, it is only useful to get started. In practice, templates in
+Odoo should be defined in an xml file, so they can be translated. In that case,
+the component should only define the template name.
+
+In practice, most components should define 2 or 3 files, located at the same
+place: a javascript file (``my_component.js``), a template file (``my_component.xml``)
+and optionally a scss (or css) file (``my_component.scss``). These files should
+then be added to some assets bundle. The web framework will take care of
+loading the javascript/css files, and loading the templates into Owl.
+
+Here is how the component above should be defined:
+
+.. code-block:: javascript
+    
+    const { useState } = owl.hooks;
+
+    class MyComponent extends Component {
+        ...
+    }
+    MyComponent.template = 'myaddon.MyComponent';
+
+And the template is now located in the corresponding xml file:
+
+.. code-block:: xml
+
+    <?xml version="1.0" encoding="UTF-8" ?>
+    <templates xml:space="preserve">
+
+    <t t-name="myaddon.MyComponent" owl="1">
+      <div t-on-click="increment">
+        <t t-esc="state.value"/>
+      </div>
+    </t>
+
+    </templates>
+
+Odoo code is not yet completely made in Owl, so it needs a way to tell the
+difference between Owl templates (new code) and old templates (for components). To
+do that in a backward-compatible way, all new templates should be defined with
+the ``owl`` attribute set to 1.
+
+.. note::
+
+   Do not forget to set ``owl="1"`` in your Owl templates!
+
+.. note::
+
+   Template names should follow the convention `addon_name.ComponentName`.
+
+
+.. seealso::
+    - `Owl Repository <https://github.com/odoo/owl>`_
+
+Reference List
+==============
+
+The Odoo web client is built with `Owl <https://github.com/odoo/owl>`_ components.
+To make it easier, the Odoo javascript framework provides a suite of generic
+components that can be reused in some common situations, such as dropdowns,
+checkboxes or datepickers. This page explains how to use these generic components.
+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Technical Name
+     - Short Description
+   * - :ref:`CheckBox <frontend/checkbox>`
+     - a simple checkbox component with a label next to it
+   * - :ref:`Dropdown <frontend/dropdown>`
+     - full-featured dropdown
+
+.. _frontend/checkbox:
+
+CheckBox
+--------
+
+Location
+~~~~~~~~
+
+`@web/core/checkbox/checkbox`
+
+Description
+~~~~~~~~~~~
+
+This is a simple checkbox component with a label next to it. The checkbox is
+linked to the label: the checkbox is toggled whenever the label is clicked.
+
+.. code-block:: xml
+
+  <CheckBox value="boolean" disabled="boolean" t-on-change="onValueChange">
+    Some Text
+  </CheckBox>
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name 
+      - Type
+      - Description
+    * - `value`
+      - `boolean`
+      - if true, the checkbox is checked, otherwise it is unchecked
+    * - `disabled`
+      - `boolean`
+      - if true, the checkbox is disabled, otherwise it is enabled
+
+.. _frontend/dropdown:
+
+Dropdown
+--------
+
+Location
+~~~~~~~~
+
+`@web/core/dropdown/dropdown` and `@web/core/dropdown/dropdown_item`  
+
+Description
+~~~~~~~~~~~
+
+Dropdowns are surprisingly complicated components. They need to provide many
+features such as:
+
+- Toggle the item list on click
+- Direct siblings dropdowns: when one is open, toggle others on hover
+- Close on outside click
+- Optionally close the item list when an item is selected
+- Emit an event to inform which list item is clicked
+- Support sub dropdowns, up to any level
+- SIY: style it yourself
+- Configurable hotkey to open/close a dropdown or select a dropdown item
+- Keyboard navigation (arrows, tab, shift+tab, home, end, enter and escape)
+- Reposition itself whenever the page scrolls or is resized
+- Smartly chose the direction it should open (right-to-left direction is automatically handled).
+
+To solve these issues once and for all, the Odoo framework provides a set of two
+components: a `Dropdown` component (the actual dropdown), and `DropdownItem`,
+for each element in the item list.
+
+.. code-block:: xml
+
+  <Dropdown>
+    <t t-set-slot="toggler">
+      <!-- "toggler" slot content is rendered inside a button -->
+      Click me to toggle the dropdown menu !
+    </t>
+    <!-- "default" slot content is rendered inside a div -->
+    <DropdownItem t-on-dropdown-item-selected="selectItem1">Menu Item 1</DropdownItem>
+    <DropdownItem t-on-dropdown-item-selected="selectItem2">Menu Item 2</DropdownItem>
+  </Dropdown>
+
+Props
+~~~~~
+
+A `<Dropdown/>` component is simply a `<div class="dropdown"/>` having a
+`<button class="dropdown-toggle"/>` next to menu div
+(`<div class="dropdown-menu"/>`). The button is responsible for the menu
+being present in the DOM or not.
+
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Dropdown
+     - Type
+     - Description
+   * - ``startOpen``
+     - boolean
+     - initial dropdown open state (defaults to `false`)
+   * - ``menuClass``
+     - string
+     - additional css class applied to the dropdown menu ``<div class="dropdown-menu"/>``
+   * - ``togglerClass``
+     - string
+     - additional css class applied to the toggler ``<button class="dropdown-toggle"/>``
+   * - ``hotkey``
+     - string
+     - hotkey to toggle the opening through keyboard
+   * - ``beforeOpen``
+     - function
+     - hook to execute logic just before opening. May be asynchronous.
+   * - ``manualOnly``
+     - boolean
+     - if true, only toggle the dropdown when the button is clicked on (defaults to `false`)
+   * - ``title``
+     - string
+     - title attribute content for the ``<button class="dropdown-toggle"/>`` (default: none)
+   * - ``position``
+     - string
+     - defines the desired menu opening position. RTL direction is automatically applied. Should be a valid :ref:`usePosition <frontend/hooks/useposition>` hook position. (default: ``bottom-start``)
+   * - ``toggler``
+     - ``"parent"`` or ``undefined``
+     - when set to ``"parent"`` the ``<button class="dropdown-toggle"/>`` is not
+       rendered (thus ``toggler`` slot is ignored) and the toggling feature is handled by the parent node (e.g. use
+       case: pivot cells). (default: ``undefined``)
+
+
+A `<DropdownItem/>` is simply a span (`<span class="dropdown-item"/>`).
+When a `<DropdownItem/>` is selected, it emits a custom `dropdown-item-selected`
+event containing its payload. (see
+`OWL Business Events <https://github.com/odoo/owl/blob/master/doc/reference/event_handling.md#business-dom-events>`_).
+So, to react to such an event, one needs to define an event listener on the
+`dropdown-item-selected` event.
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - DropdownItem
+     - Type
+     - Description
+   * - ``payload``
+     - Object
+     - payload that will be added to the `dropdown-item-selected` event (default to null)
+   * - `parentClosingMode`
+     - `none` | `closest` | `all`
+     - when the item is selected, control which parent dropdown will get closed:
+       none, closest or all (default = `all`)
+   * - ``hotkey``
+     - string
+     - optional hotkey to select the item
+   * - ``href``
+     - string
+     - if provided the DropdownItem will become an ``<a href="value" class="dropdown-item"/>`` instead of a ``<span class="dropdown-item"/>``. (default: not provided)
+   * - ``title``
+     - string
+     - optional title attribute which will be passed to the root node of the DropdownItem. (default: not provided)
+
+Technical notes
+~~~~~~~~~~~~~~~
+
+The rendered DOM is structured like this:
+
+.. code-block:: html
+
+   <div class="dropdown">
+       <button class="dropdown-toggle">Click me !</button>
+       <!-- following <div/> will or won't appear in the DOM depending on the state controlled by the preceding button -->
+       <div class="dropdown-menu">
+           <span class="dropdown-item">Menu Item 1</span>
+           <span class="dropdown-item">Menu Item 2</span>
+       </div>
+   </div>
+
+To properly use a `<Dropdown/>` component, you need to populate two
+`OWL slots <https://github.com/odoo/owl/blob/master/doc/reference/slots.md>`_ :
+
+
+- `toggler` slot: it contains the *toggler* elements of your dropdown and is
+  rendered inside the dropdown `button` (unless the `toggler` prop is set to `parent`),
+- `default` slot: it contains the *elements* of the dropdown menu itself and is
+  rendered inside the ``<div class="dropdown-menu"/>``. Although it is not mandatory, there is usually at least one
+  `DropdownItem` inside the `menu` slot.
+
+
+When several dropdowns share the same parent element in the DOM, then they are
+considered part of a group, and will notify each other about their state changes.
+This means that when one of these dropdowns is open, the others will automatically
+open themselves on mouse hover, without the need for a click.
+
+
+Example: Direct Siblings Dropdown
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When one dropdown toggler is clicked (**File** , **Edit** or **About**), the
+others will open themselves on hover.
+
+.. code-block:: xml
+
+  <div t-on-dropdown-item-selected="onItemSelected">
+    <Dropdown>
+      <t t-set-slot="toggler">File</t>
+      <DropdownItem payload="'file-open'">Open</DropdownItem>
+      <DropdownItem payload="'file-new-document'">New Document</DropdownItem>
+      <DropdownItem payload="'file-new-spreadsheet'">New Spreadsheet</DropdownItem>
+    </Dropdown>
+    <Dropdown>
+      <t t-set-slot="toggler">Edit</t>
+      <DropdownItem payload="'edit-undo'">Undo</DropdownItem>
+      <DropdownItem payload="'edit-redo'">Redo</DropdownItem>
+      <DropdownItem payload="'edit-find'">Search</DropdownItem>
+    </Dropdown>
+    <Dropdown>
+      <t t-set-slot="toggler">About</t>
+      <DropdownItem payload="'about-help'">Help</DropdownItem>
+      <DropdownItem payload="'about-update'">Check update</DropdownItem>
+    </Dropdown>
+  </div>
+
+Example: Multi-level Dropdown (with `t-call`)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+This example shows how one could make a `File` dropdown menu, with submenus for
+the `New` and `Save as...` sub elements.
+
+.. code-block:: xml
+
+  <t t-name="addon.Dropdown.File" owl="1">
+    <Dropdown t-on-dropdown-item-selected="onItemSelected">
+      <t t-set-slot="toggler">File</t>
+      <DropdownItem payload="'file-open'">Open</DropdownItem>
+      <t t-call="addon.Dropdown.File.New"/>
+      <DropdownItem payload="'file-save'">Save</DropdownItem>
+      <t t-call="addon.Dropdown.File.Save.As"/>
+    </Dropdown>
+  </t>
+
+  <t t-name="addon.Dropdown.File.New" owl="1">
+    <Dropdown>
+      <t t-set-slot="toggler">New</t>
+      <DropdownItem payload="'file-new-document'">Document</DropdownItem>
+      <DropdownItem payload="'file-new-spreadsheet'">Spreadsheet</DropdownItem>
+    </Dropdown>
+  </t>
+
+  <t t-name="addon.Dropdown.File.Save.As" owl="1">
+    <Dropdown>
+      <t t-set-slot="toggler">Save as...</t>
+      <DropdownItem payload="'file-save-as-csv'">CSV</DropdownItem>
+      <DropdownItem payload="'file-save-as-pdf'">PDF</DropdownItem>
+    </Dropdown>
+  </t>
+
+Example: Multi-level Dropdown (nested)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+.. code-block:: xml
+
+  <Dropdown t-on-dropdown-item-selected="onItemSelected">
+    <t t-set-slot="toggler">File</t>
+    <DropdownItem payload="'file-open'">Open</DropdownItem>
+    <Dropdown>
+      <t t-set-slot="toggler">New</t>
+      <DropdownItem payload="'file-new-document'">Document</DropdownItem>
+      <DropdownItem payload="'file-new-spreadsheet'">Spreadsheet</DropdownItem>
+    </Dropdown>
+    <DropdownItem payload="'file-save'">Save</DropdownItem>
+    <Dropdown>
+      <t t-set-slot="toggler">Save as...</t>
+      <DropdownItem payload="'file-save-as-csv'">CSV</DropdownItem>
+      <DropdownItem payload="'file-save-as-pdf'">PDF</DropdownItem>
+    </Dropdown>
+  </Dropdown>
+
+Example: Recursive Multi-level Dropdown
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In this example, we recursively call a template to display a tree-like structure.
+
+.. code-block:: xml
+
+  <t t-name="addon.MainTemplate" owl="1">
+    <div t-on-dropdown-item-selected="onItemSelected">
+      <t t-call="addon.RecursiveDropdown">
+        <t t-set="name" t-value="'Main Menu'" />
+        <t t-set="items" t-value="state.menuItems" />
+      </t>
+    </div>
+  </t>
+
+  <t t-name="addon.RecursiveDropdown" owl="1">
+    <Dropdown>
+      <t t-set-slot="toggler"><t t-esc="name"/></t>
+        <t t-foreach="items" t-as="item" t-key="item.id">
+
+          <!-- If this item has no child: make it a <DropdownItem/> -->
+          <t t-if="!item.childrenTree.length">
+            <DropdownItem payload="item" t-esc="item.name"/>
+          </t>
+          <!-- Else: recursively call the current dropdown template. -->
+          <t t-else="" t-call="addon.RecursiveDropdown">
+            <t t-set="name" t-value="item.name" />
+            <t t-set="items" t-value="item.childrenTree" />
+          </t>
+
+        </t>
+      </t>
+    </Dropdown>
+  </t>
