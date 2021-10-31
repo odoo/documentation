@@ -34,76 +34,66 @@ in such a way from one root registry, exported in `@web/core/registry`.
 Registry API
 ============
 
-constructor()
-    .. code-block::
+.. js:class:: Registry()
 
-       @returns {Registry}
+    Creates a new registry. Note that a registry is an event bus, so one can
+    listen to the `UPDATE` event if necessary. Registries are ordered: the
+    :js:meth:`getAll <Registry.getAll>` method returns a list of
+    values ordered according to their sequence number.
 
-    creates a new registry. Note that a registry is an event bus, so one can
-    listen to the `UPDATE` event if necessary.
+    .. js:method:: add(key, value[, options])
 
-    Registries are ordered: the :ref:`getAll <javascript/registries/api/getAll>` method returns a list of values ordered
-    according to their sequence number.
+        :param string key: key for the new entry
+        :param any value: value for the new entry
+        :param Object options: options
+        :param boolean [options.force]: do not throw if key already exists
+        :param number [options.sequence]: sequence number (useful to order entries)
+        :returns: Registry
 
-add(key, value, options)
-    .. code-block::
+        Inserts a value at a specific key. If the key is already used, this method
+        throws an error (unless the option `force` is set to true). The option
+        `sequence` is useful to insert the value at a specific position. This method
+        also triggers an `UPDATE` event.
 
-       @param {string} key
-       @param {any} value
-       @param {{force?: boolean, sequence?: number}} [options]
-       @returns {Registry}
-
-  Inserts a value at a specific key. If the key is already used, this method
-  throws an error (unless the option `force` is set to true). The option
-  `sequence` is useful to insert the value at a specific position. This method
-  also triggers an `UPDATE` event.
-
-  Returns the same registry, so `add` method calls can be chained.
+        Returns the same registry, so `add` method calls can be chained.
   
-get(key, defaultValue)
-    .. code-block::
+    .. js:method:: get(key[, defaultValue])
 
-       @param {string} key
-       @returns {any}
+        :param string key: key for the entry
+        :param defaultValue any: return value if no entry for key exists
 
-    Returns the value corresponding to the `key` argument. If the registry does
-    not contain that key, this method returns `defaultValue` if given, or throws
-    an error otherwise.
+        Returns the value corresponding to the `key` argument. If the registry does
+        not contain that key, this method returns `defaultValue` if given, or throws
+        an error otherwise.
     
-contains(key)
-    .. code-block::
+    .. js:method:: contains(key)
 
-       @param {string} key
-       @returns {boolean}
+        :param string key: key for the entry
+        :returns: boolean
 
-    Returns `true` if the `key` is present in the registry
+        Returns `true` if `key` is present in the registry
 
-.. _javascript/registries/api/getAll:
+    .. js:method:: getAll()
 
-getAll()
-    .. code-block::
-
-        @returns {any[]}
+        :returns: any[]
     
-    Returns the list of all elements in the registry. Note that it is ordered
-    according to the sequence numbers.
+        Returns the list of all elements in the registry. It is ordered
+        according to the sequence numbers.
 
-remove(key)
-    .. code-block::
+    .. js:method:: remove(key)
 
-       @param {string} key
-    
-    Removes a key/value pair from the registry. This operation triggers an
-    `UPDATE` event.
+        :param string key: the key for the entry that should be removed
+        
+        Removes a key/value pair from the registry. This operation triggers an
+        `UPDATE` event.
 
-category(subcategory)
-    .. code-block::
+    .. js:method:: category(subcategory)
 
-        @param {string} subcategory
-        @returns {Registry}
+        :param string subcategory: the name for the sub category
+        :returns: Registry 
 
-    Returns the sub registry associated with the `subcategory`. If it does not
-    exist yet, the sub registry is created on the fly.
+        Returns the sub registry associated with the `subcategory`. If it does not
+        exist yet, the sub registry is created on the fly.
 
 Reference List
 ==============
