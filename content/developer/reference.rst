@@ -1,12 +1,12 @@
 :nosearch:
 :types: reference
 
-================
-Reference Guides
-================
+=========
+Reference
+=========
 
 .. toctree::
     :titlesonly:
 
-    reference/addons
-    reference/javascript
+    reference/backend
+    reference/frontend
