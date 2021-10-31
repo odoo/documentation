@@ -105,6 +105,36 @@ the ``owl`` attribute set to 1.
 .. seealso::
     - `Owl Repository <https://github.com/odoo/owl>`_
 
+.. _frontend/owl/best_practices:
+
+Best practices
+==============
+
+First of all, components are classes, so they have a constructor. But constructors
+are special methods in javascript that are not overridable in any way. Since this
+is an occasionally useful pattern in Odoo, we need to make sure that no component
+in Odoo directly uses the constructor method. Instead, components should use the
+`setup` method:
+
+.. code-block:: javascript
+
+    // correct:
+    class MyComponent extends Component {
+        setup() {
+            // initialize component here
+        }
+    }
+
+    // incorrect. Do not do that!
+    class IncorrectComponent extends Component {
+        constructor(parent, props) {
+            // initialize component here
+        }
+    }
+
+Another good practice is to use a consistent convention for template names: 
+`addon_name.ComponentName`. This prevents name collision between odoo addons.
+
 Reference List
 ==============
 
