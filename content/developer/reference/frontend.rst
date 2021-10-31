@@ -8,6 +8,7 @@ Frontend
     :titlesonly:
 
     frontend/framework_overview
+    frontend/assets
     frontend/javascript_modules
     frontend/owl_component_system
     frontend/registries
