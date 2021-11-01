@@ -99,21 +99,24 @@ As an Owl application, the Odoo web client defines its own environment (componen
 can access it using ``this.env``). Here is a description of what Odoo adds to
 the shared ``env`` object:
 
-+--------------+-------------------------------------------------------------------------------+
-| Key          | Value                                                                         |
-+==============+===============================================================================+
-| ``qweb``     | required by Owl (contains all templates)                                      |
-+--------------+-------------------------------------------------------------------------------+
-| ``bus``      | :ref:`main bus <javascript/bus>`, used to coordinate some generic events      |
-+--------------+-------------------------------------------------------------------------------+
-| ``services`` | all deployed services (should usually be accessed with the `useService` hook) |
-+--------------+-------------------------------------------------------------------------------+
-| ``debug``    | boolean. If true, the web client is in ``debug`` mode                         |
-+--------------+-------------------------------------------------------------------------------+
-| ``_t``       | translation function                                                          |
-+--------------+-------------------------------------------------------------------------------+
-| ``isSmall``  | boolean. If true, the web client is currently in mobile mode                  |
-+--------------+-------------------------------------------------------------------------------+
+.. list-table::
+   :widths: 30 70
+   :header-rows: 1
+
+   * - Key
+     - Value
+   * - `qweb`
+     - required by Owl (contains all templates)
+   * - `bus`
+     - :ref:`main bus <javascript/bus>`, used to coordinate some generic events
+   * - `services`
+     - all deployed services (should usually be accessed with the `useService` hook)
+   * - `debug`
+     - string. If non empty, the web client is in :ref:`debug mode<javascript/debug_mode>`
+   * - `_t`
+     - translation function
+   * - `isSmall`
+     - boolean. If true, the web client is currently in mobile mode
 
 
 So, for example, to translate a string in a component (note: templates are
@@ -382,6 +385,78 @@ or ``setTimeout``.  For example, here is how one could use the
 It is mostly interesting for testing purposes: all code using the browser object
 can be tested easily by mocking the relevant functions for the duration of the
 test.
+
+.. _javascript/debug_mode:
+
+Debug mode
+==========
+
+Odoo can sometimes operate in a special mode called the `debug` mode. It is used
+for two main purposes:
+
+- display additional information/fields for some particular screens,
+- provide some additional tools to help developer debug the Odoo interface.
+
+The `debug` mode is described by a string. An empty string means that the `debug`
+mode is not active. Otherwise, it is active.  If the string contains `assets` or
+`tests`, then the corresponding specific sub modes are activated (see below). Both
+modes can be active at the same time, for example with the string `assets,tests`.
+
+The `debug` mode current value can be read in the :ref:`environment<javascript/environment>`:
+`env.debug`.
+
+.. tip::
+
+    To show menus, fields or view elements only in debug mode, you should target
+    the group `base.group_no_one`:
+    
+    .. code-block:: xml
+
+        <field name="fname" groups="base.group_no_one"/>
+
+Toggling debug mode
+-------------------
+
+The most common way to activate the debug mode is to edit the url: just add
+`?debug=1` or `?debug=assets` before the `#` sign, then reload the page. This
+will cause the server to mark the session as being in debug mode.
+
+To deactivate the debug mode, one can then simply add `?debug=0` to explicitely
+notify the server that we no longer want it.
+
+An alternative way to toggle the debug mode is to use the command palette. First
+step is to open it (ctrl+k), then type `debug`: a command will show up to
+activate the debug mode.
+
+Debug menu
+----------
+
+Once the debug mode is activated, an additional sub menu, called the `debug menu`,
+is available in the systray (in the top bar), or in the title bar of some
+dialogs. This menu contains additional tools that are useful to understand
+or edit technical data, such as the views or the actions. It contains
+some useful menu items such as:
+
+- edit action
+- manage filters
+- edit the current view
+- see the `fields view get`
+- and much more.
+
+Assets mode
+-----------
+
+The `debug=assets` sub mode is useful to debug javascript code: once activated,
+the :ref:`assets<reference/assets>` bundles are no longer minified, and source-maps
+are generated as well. This makes it useful to debug all kind of javascript code.
+
+Tests mode
+----------
+
+There is a specific sub mode named `tests`: if enabled, the server injects the
+bundle `web.assets_tests` in the page. This bundle contains mostly test tours
+(tours whose purpose is to test a feature, not to show something interesting to
+users). The `tests` mode is then useful to be able to run these tours.
 
 .. seealso::
     - `Owl Repository <https://github.com/odoo/owl>`_
