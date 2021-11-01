@@ -111,7 +111,7 @@ Reference List
 ==============
 
 .. list-table::
-   :widths: 30 70
+   :widths: 25 75
    :header-rows: 1
 
    * - Technical Name

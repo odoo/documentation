@@ -100,7 +100,7 @@ can access it using ``this.env``). Here is a description of what Odoo adds to
 the shared ``env`` object:
 
 .. list-table::
-   :widths: 30 70
+   :widths: 25 75
    :header-rows: 1
 
    * - Key
@@ -110,14 +110,14 @@ the shared ``env`` object:
    * - `bus`
      - :ref:`main bus <javascript/bus>`, used to coordinate some generic events
    * - `services`
-     - all deployed services (should usually be accessed with the `useService` hook)
+     - all deployed :ref:`services <javascript/services>` (should usually be accessed
+       with the `useService` hook)
    * - `debug`
-     - string. If non empty, the web client is in :ref:`debug mode<javascript/debug_mode>`
+     - string. If non empty, the web client is in :ref:`debug mode <javascript/debug_mode>`
    * - `_t`
      - translation function
    * - `isSmall`
-     - boolean. If true, the web client is currently in mobile mode
-
+     - boolean. If true, the web client is currently in mobile mode (screen width <= 767px)
 
 So, for example, to translate a string in a component (note: templates are
 automatically translated, so no specific action is required in that case), one
@@ -128,6 +128,12 @@ can do this:
 
     const someString = this.env._t('some text');
 
+.. note::
+
+   Having a reference to the environment is quite powerful, because it provides
+   access to all services. This is useful in many cases: for example,
+   user menu items are mostly defined as a string, and a function taking the `env`
+   as unique argument. This is enough to express all user menu needs.
 
 Building Blocks
 ===============
