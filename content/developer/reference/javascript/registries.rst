@@ -120,6 +120,8 @@ Reference List
      - all services that should be activated
    * - :ref:`systray <registries/systray>`
      - components displayed in the systray zone in the navbar
+   * - :ref:`user_menuitems <registries/usermenu>`
+     - menu items displayed in the user menu (top right of navbar)
 
 .. _registries/main_components:
 
@@ -217,3 +219,38 @@ The systray registry is an ordered registry (with the `sequence` number):
 The sequence number defaults to 50. If given, this number will be used
 to order the items. The lowest sequence is on the right and the highest sequence
 is on the left in the systray menu.
+
+.. _registries/usermenu:
+
+Usermenu registry
+-----------------
+
+The user menu registry (category: `user_menuitems`) contains all menu items that
+are shown when opening the user menu (the navbar element with the user name, on
+the top right).
+
+User menu items are defined by a function taking the :ref:`env <javascript/environment>`
+and returning a plain object, containing the following information:
+
+* `description` : the menu item text,
+* `href` : (optional) if given (and truthy), the item text is put in a `a` tag with given attribute href,
+* `callback` : callback to call when the item is selected,
+* `hide`: (optional) indicates if the item should be hidden (default: `false`),
+* `sequence`: (optional) determines the rank of the item among the other dropwdown items (default: 100).
+
+The user menu calls all the functions defining items every time it is opened.
+
+Example:
+
+.. code-block:: js
+
+    import { registry } from "@web/core/registry";
+
+    registry.category("user_menuitems").add("my item", (env) => {
+        return {
+            description: env._t("Technical Settings"),
+            callback: () => { env.services.action_manager.doAction(3); };
+            hide: (Math.random() < 0.5),
+        };
+    }
+

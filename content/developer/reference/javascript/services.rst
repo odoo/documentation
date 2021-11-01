@@ -405,7 +405,7 @@ The `notification` service allows to display notifications on the screen.
 API
 ~~~
 
-.. js:function:: add(message, options?)
+.. js:function:: add(message[, options])
   
     :param string message: the notification message to display
     :param object options: the options of the notification
