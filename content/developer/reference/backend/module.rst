@@ -118,11 +118,10 @@ Available manifest fields are:
     Whether the module should be considered as a fully-fledged application
     (``True``) or is just a technical module (``False``) that provides some
     extra functionality to an existing application module.
-``css`` (``list(str)``)
-    Specify css files with custom rules to be imported, these files should be
-    located in ``static/src/css`` inside the module.
-``images`` (``list(str)``)
-    Specify image files to be used by the module.
+``assets`` (``dict``)
+    A definition of how all static files are loaded in various assets bundles.
+    See the :ref:`assets <reference/assets>` page for more details on how to
+    describe bundles.
 ``installable`` (``bool`` default: ``True``)
     Whether a user should be able to install the module from the Web UI or not.
 ``maintainer`` (``str``)
