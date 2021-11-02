@@ -1,3 +1,5 @@
+.. _frontend/js_modules:
+
 ==================
 Javascript Modules
 ==================
