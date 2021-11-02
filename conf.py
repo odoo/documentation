@@ -74,6 +74,10 @@ if not odoo_dir.is_dir():
     )
 else:
     sys.path.insert(0, str(odoo_dir.absolute()))
+    if sys.version_info < (3, 7) and sys.version_info > (3, 6):
+        # running odoo needs python 3.7 min but monkey patch version_info to be
+        # able to build the doc in python 3.6
+        sys.version_info = (3, 7, 0)
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
     odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
     if release != odoo_version:
