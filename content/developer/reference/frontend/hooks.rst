@@ -20,12 +20,30 @@ documents the list of hooks provided by the Odoo web framework.
 
    * - Name
      - Short Description
+   * - :ref:`useAssets <frontend/hooks/useassets>`
+     - load assets
    * - :ref:`useBus <frontend/hooks/usebus>`
      - subscribe and unsubscribe to a bus
    * - :ref:`usePager <frontend/hooks/usepager>`
      - Display the pager of the control panel of a view.
    * - :ref:`usePosition <frontend/hooks/useposition>`
      - position an element relative to a target
+
+.. _frontend/hooks/useassets:
+
+useAssets
+=========
+
+Location
+--------
+
+`@web/core/assets`
+
+Description
+-----------
+
+See the section on :ref:`lazy loading assets <frontend/assets/lazy_loading>` for
+more details.
 
 .. _frontend/hooks/usebus:
 
