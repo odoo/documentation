@@ -149,14 +149,14 @@ checkboxes or datepickers. This page explains how to use these generic component
 
    * - Technical Name
      - Short Description
-   * - :ref:`CheckBox <frontend/checkbox>`
+   * - :ref:`CheckBox <frontend/owl/checkbox>`
      - a simple checkbox component with a label next to it
-   * - :ref:`Dropdown <frontend/dropdown>`
+   * - :ref:`Dropdown <frontend/owl/dropdown>`
      - full-featured dropdown
    * - :ref:`Pager <frontend/pager>`
      - a small component to handle pagination
 
-.. _frontend/checkbox:
+.. _frontend/owl/checkbox:
 
 CheckBox
 --------
@@ -195,7 +195,7 @@ Props
       - `boolean`
       - if true, the checkbox is disabled, otherwise it is enabled
 
-.. _frontend/dropdown:
+.. _frontend/owl/dropdown:
 
 Dropdown
 --------

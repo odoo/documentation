@@ -56,8 +56,8 @@ debug mode, add `?debug=0` instead.
 
 .. tip::
    Additional modes are available for developers: `?debug=assets` enables the
-   :ref:`assets mode <javascript/debug_mode/assets>`, and `?debug=tests` enables
-   the :ref:`tests mode <javascript/debug_mode/tests>`.
+   :ref:`assets mode <frontend/framework/assets_debug_mode>`, and `?debug=tests` enables
+   the :ref:`tests mode <frontend/framework/tests_debug_mode>`.
 
 Locate the mode tools
 =====================

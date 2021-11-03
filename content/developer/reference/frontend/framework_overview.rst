@@ -90,7 +90,7 @@ simply a component that displays all components registered in the
 ``main_components`` registry. This is how other parts of the system can extend
 the web client.
 
-.. _javascript/environment:
+.. _frontend/framework/environment:
 
 Environment
 ===========
@@ -108,12 +108,12 @@ the shared ``env`` object:
    * - `qweb`
      - required by Owl (contains all templates)
    * - `bus`
-     - :ref:`main bus <javascript/bus>`, used to coordinate some generic events
+     - :ref:`main bus <frontend/framework/bus>`, used to coordinate some generic events
    * - `services`
      - all deployed :ref:`services <javascript/services>` (should usually be accessed
        with the `useService` hook)
    * - `debug`
-     - string. If non empty, the web client is in :ref:`debug mode <javascript/debug_mode>`
+     - string. If non empty, the web client is in :ref:`debug mode <frontend/framework/debug_mode>`
    * - `_t`
      - translation function
    * - `isSmall`
@@ -234,7 +234,7 @@ could mean a different thing depending on the situation).
    not to overuse it! Many problems can be solved in a standard way without
    modifying the context.
 
-.. _javascript/user-context:
+.. _frontend/framework/user_context:
 
 User Context
 ------------
@@ -316,7 +316,7 @@ and its context will be extended with the `default_period_id` value. This is a
 very important usecase that lets developers combine actions together by providing
 some information to the next action.
 
-.. _javascript/pyjs:
+.. _frontend/framework/pyjs:
 
 Python Interpreter
 ==================
@@ -364,7 +364,7 @@ The ``py`` javascript code exports 5 functions:
   :param Object context: an object that provides an additional evaluation context
   :returns: any the resulting value of the expression, with respect to the context
 
-.. _javascript/domains:
+.. _frontend/framework/domains:
 
 Domains
 =======
@@ -492,12 +492,12 @@ The `Domain` class also provides 4 useful static methods to combine domains:
   Returns a domain representing either the intersection or the union of all the
   domains, depending on the value of the operator argument.
 
-.. _javascript/bus:
+.. _frontend/framework/bus:
 
 Bus
 ===
 
-The web client :ref:`environment <javascript/environment>` object contains an event
+The web client :ref:`environment <frontend/framework/environment>` object contains an event
 bus, named `bus`. Its purpose is to allow various parts of the system to properly
 coordinate themselves, without coupling them. The `env.bus` is an owl
 `EventBus <https://github.com/odoo/owl/blob/master/doc/reference/event_bus.md>`_,
@@ -568,7 +568,7 @@ It is mostly interesting for testing purposes: all code using the browser object
 can be tested easily by mocking the relevant functions for the duration of the
 test.
 
-.. _javascript/debug_mode:
+.. _frontend/framework/debug_mode:
 
 Debug mode
 ==========
@@ -584,7 +584,7 @@ mode is not active. Otherwise, it is active.  If the string contains `assets` or
 `tests`, then the corresponding specific sub modes are activated (see below). Both
 modes can be active at the same time, for example with the string `assets,tests`.
 
-The `debug` mode current value can be read in the :ref:`environment<javascript/environment>`:
+The `debug` mode current value can be read in the :ref:`environment<frontend/framework/environment>`:
 `env.debug`.
 
 .. tip::
@@ -600,7 +600,7 @@ The `debug` mode current value can be read in the :ref:`environment<javascript/e
    - :ref:`Activate the debug mode <developer-mode>`
 
 
-.. _javascript/debug_mode/assets:
+.. _frontend/framework/assets_debug_mode:
 
 Assets mode
 -----------
@@ -609,7 +609,7 @@ The `debug=assets` sub mode is useful to debug javascript code: once activated,
 the :ref:`assets<reference/assets>` bundles are no longer minified, and source-maps
 are generated as well. This makes it useful to debug all kind of javascript code.
 
-.. _javascript/debug_mode/tests:
+.. _frontend/framework/tests_debug_mode:
 
 Tests mode
 ----------

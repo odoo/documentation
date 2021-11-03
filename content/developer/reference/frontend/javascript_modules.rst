@@ -4,9 +4,9 @@ Javascript Modules
 
 Odoo supports three different kinds of javascript files:
 
-- :ref:`plain javascript files <javascript/plain_javascript>` (no module system),
-- :ref:`native javascript module <javascript/native_js_module>`.
-- :ref:`Odoo modules <javascript/odoo_module>` (using a custom module system),
+- :ref:`plain javascript files <frontend/modules/plain_js>` (no module system),
+- :ref:`native javascript module <frontend/modules/native_js>`.
+- :ref:`Odoo modules <frontend/modules/odoo_module>` (using a custom module system),
 
 As described in the :ref:`assets management page <reference/assets>`,
 all javascript files are bundled together and served to the browser.
@@ -18,7 +18,7 @@ specific low level purposes. All new javascript files should be created in the
 native javascript module system. The custom module system is only useful for old,
 not yet converted files.
 
-.. _javascript/plain_javascript:
+.. _frontend/modules/plain_js:
 
 Plain Javascript files
 ======================
@@ -44,7 +44,7 @@ execute them precisely in that order).
 .. note::
   In Odoo, all external libraries are loaded as plain javascript files.
 
-.. _javascript/native_js_module:
+.. _frontend/modules/native_js:
 
 Native Javascript Modules
 =========================
@@ -54,7 +54,7 @@ is simpler, and brings the benefits of a better developer experience with a bett
 integration with the IDE.
 
 There is a very important point to know: Odoo needs to know which files
-should be translated into :ref:`Odoo modules <javascript/odoo_module>` and which
+should be translated into :ref:`Odoo modules <frontend/modules/odoo_module>` and which
 files should not be translated. This is an opt-in system: Odoo will look at the
 first line of a JS file and check if it contains the string *@odoo-module*. If so, it will
 automatically be converted to an Odoo module.
@@ -132,7 +132,7 @@ But :file:`file_c` need to use the full name:
 Aliased modules
 ---------------
 
-Because :ref:`Odoo modules <javascript/odoo_module>` follow a different module naming pattern, a system exists to allow a smooth
+Because :ref:`Odoo modules <frontend/modules/odoo_module>` follow a different module naming pattern, a system exists to allow a smooth
 transition towards the new system. Currently, if a file is converted to a module (and therefore
 follow the new naming convention), other files not yet converted to ES6-like syntax in the project
 won't be able to require the module. Aliases are here to map old names with new ones by creating a
@@ -258,7 +258,7 @@ them if you encounter issues with, or are constrained by the limitations of, nat
 within the same Odoo addon.
 
 
-.. _javascript/odoo_module:
+.. _frontend/modules/odoo_module:
 
 Odoo Module System
 ===================
