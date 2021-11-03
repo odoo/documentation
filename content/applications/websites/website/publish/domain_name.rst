@@ -77,7 +77,7 @@ We can now apply the redirection from your domain name's manager account:
 
 .. note:: Here are some specific guidelines to create a CNAME record:
 
-   - `GoDaddy <https://be.godaddy.com/fr/help/add-a-cname-record-19236>`__
+   - `GoDaddy <https://www.godaddy.com/help/add-a-cname-record-19236>`__
    - `Namecheap <https://www.namecheap.com/support/knowledgebase/article.aspx/9646/10/how-can-i-set-up-a-cname-record-for-my-domain>`__
    - `OVH <https://www.ovh.co.uk/g1519.exchange_20132016_how_to_add_a_cname_record>`__
 
