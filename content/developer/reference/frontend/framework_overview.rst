@@ -596,34 +596,11 @@ The `debug` mode current value can be read in the :ref:`environment<javascript/e
 
         <field name="fname" groups="base.group_no_one"/>
 
-Toggling debug mode
--------------------
+.. seealso::
+   - :ref:`Activate the debug mode <developer-mode>`
 
-The most common way to activate the debug mode is to edit the url: just add
-`?debug=1` or `?debug=assets` before the `#` sign, then reload the page. This
-will cause the server to mark the session as being in debug mode.
 
-To deactivate the debug mode, one can then simply add `?debug=0` to explicitely
-notify the server that we no longer want it.
-
-An alternative way to toggle the debug mode is to use the command palette. First
-step is to open it (ctrl+k), then type `debug`: a command will show up to
-activate the debug mode.
-
-Debug menu
-----------
-
-Once the debug mode is activated, an additional sub menu, called the `debug menu`,
-is available in the systray (in the top bar), or in the title bar of some
-dialogs. This menu contains additional tools that are useful to understand
-or edit technical data, such as the views or the actions. It contains
-some useful menu items such as:
-
-- edit action
-- manage filters
-- edit the current view
-- see the `fields view get`
-- and much more.
+.. _javascript/debug_mode/assets:
 
 Assets mode
 -----------
@@ -632,10 +609,12 @@ The `debug=assets` sub mode is useful to debug javascript code: once activated,
 the :ref:`assets<reference/assets>` bundles are no longer minified, and source-maps
 are generated as well. This makes it useful to debug all kind of javascript code.
 
+.. _javascript/debug_mode/tests:
+
 Tests mode
 ----------
 
-There is a specific sub mode named `tests`: if enabled, the server injects the
+There is another sub mode named `tests`: if enabled, the server injects the
 bundle `web.assets_tests` in the page. This bundle contains mostly test tours
 (tours whose purpose is to test a feature, not to show something interesting to
 users). The `tests` mode is then useful to be able to run these tours.
