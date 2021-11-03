@@ -122,6 +122,8 @@ Reference List
      - display graphical effects
    * - :ref:`notification <frontend/services/notification>`
      - display notifications
+   * - :ref:`router <frontend/services/router>`
+     - manage the browser url
    * - :ref:`rpc <frontend/services/rpc>`
      - send requests to the server
    * - :ref:`title <frontend/services/title>`
@@ -454,6 +456,96 @@ A notification that closes after a second:
   const notificationService = useService("notification");
   const close = notificationService.add("I will be quickly closed");
   setTimeout(close, 1000);
+
+.. _frontend/services/router:
+
+Router Service
+--------------
+
+Overview
+~~~~~~~~
+
+- Technical name: `router`
+- Dependencies: none
+
+The `router` service provides three features:
+
+* information about the current route
+* a way for the application to update the url, depending on its state
+* listens to every hash change, and notifies the rest of the application
+
+API
+~~~
+
+.. js:data:: current
+   :noindex:
+
+   The current route can be accessed with the ``current`` key. It is an object
+   with the following information:
+ 
+   * `pathname (string)`: the path for the current location (most likely `/web` )
+   * `search (object)`: a dictionary mapping each search keyword (the querystring)
+     from the url to its value. An empty string is the value if no value was
+     explicitely given
+   * `hash (object)`: same as above, but for values described in the hash. 
+
+For example:
+
+.. code-block:: javascript 
+
+  // url = /web?debug=assets#action=123&owl&menu_id=174
+  const { pathname, search, hash } = env.services.router.current;
+  console.log(pathname); //   /web
+  console.log(search); //   { debug="assets" }
+  console.log(hash); //   { action:123, owl: "", menu_id: 174 }
+
+Updating the URL is done with the  `pushState` method:
+
+.. js:function:: pushState(hash: object[, replace?: boolean])
+
+  :param Object hash: object containing a mapping from some keys to some values
+  :param boolean replace: if true, the url will be replaced, otherwise only
+    key/value pairs from the `hash` will be updated.
+
+  Updates the URL with each key/value pair from the `hash` object. If a value is
+  set to an empty string, the key is added to the url without any corresponding
+  value.
+
+  If true, the `replace` argument tells the router that the url hash should be
+  completely replaced (so values not present in the `hash` object will be removed).
+
+  This method call does not reload the page. It also does not trigger a
+  `hashchange` event, nor a `ROUTE_CHANGE` in the :ref:`main bus <frontend/framework/bus>`.
+  This is because this method is intended to only updates the url. The code calling
+  this method has the responsibility to make sure that the screen is updated as
+  well.
+
+For example:
+
+.. code-block:: javascript
+
+  // url = /web#action_id=123
+  routerService.pushState({ menu_id: 321 });
+  // url is now /web#action_id=123&menu_id=321
+  routerService.pushState({ yipyip: "" }, replace: true);
+  // url is now /web#yipyip
+
+
+Finally, the `redirect` method will redirect the browser to a specified url:
+
+.. js:function:: redirect(url[, wait])
+  
+  :param string url: a valid url
+  :param boolean wait: if true, wait for the server to be ready, and redirect after
+  
+  Redirect the browser to `url`. This method reloads the page. The `wait`
+  argument is rarely used: it is useful in some cases where we know that the
+  server will be unavailable for a short duration, typically just after an addon
+  update or install operation.
+
+.. note::
+   The router service emits a `ROUTE_CHANGE` event on the :ref:`main bus <frontend/framework/bus>`
+   whenever the current route has changed.
 
 .. _frontend/services/rpc:
 
