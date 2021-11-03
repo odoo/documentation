@@ -104,16 +104,16 @@ Reference List
 
    * - Category
      - Content
-   * - :ref:`main_components <registries/main_components>`
+   * - :ref:`main_components <frontend/registries/main_components>`
      - top level components
-   * - :ref:`services <registries/services>`
+   * - :ref:`services <frontend/registries/services>`
      - all services that should be activated
-   * - :ref:`systray <registries/systray>`
+   * - :ref:`systray <frontend/registries/systray>`
      - components displayed in the systray zone in the navbar
-   * - :ref:`user_menuitems <registries/usermenu>`
+   * - :ref:`user_menuitems <frontend/registries/usermenu>`
      - menu items displayed in the user menu (top right of navbar)
 
-.. _registries/main_components:
+.. _frontend/registries/main_components:
 
 Main components registry
 ------------------------
@@ -141,7 +141,7 @@ this:
      Component: LoadingIndicator,
    });
 
-.. _registries/services:
+.. _frontend/registries/services:
 
 Service registry
 ----------------
@@ -163,7 +163,7 @@ framework.
 
     registry.category("services").add("myService", myService);
 
-.. _registries/systray:
+.. _frontend/registries/systray:
 
 Systray registry
 ----------------
@@ -178,7 +178,7 @@ with the following three keys:
 - `Component`: the component class that represents the item. Its root element
   should be a `<li>` tag, otherwise it might not be styled properly.
 - `props (optional)`: props that should be given to the component
-- `isDisplayed (optional)`: a function that takes the :ref:`env <javascript/environment>`
+- `isDisplayed (optional)`: a function that takes the :ref:`env <frontend/framework/environment>`
   and returns a boolean. If true, the systray item is displayed. Otherwise it is
   removed.
 
@@ -210,7 +210,7 @@ The sequence number defaults to 50. If given, this number will be used
 to order the items. The lowest sequence is on the right and the highest sequence
 is on the left in the systray menu.
 
-.. _registries/usermenu:
+.. _frontend/registries/usermenu:
 
 Usermenu registry
 -----------------
@@ -219,7 +219,7 @@ The user menu registry (category: `user_menuitems`) contains all menu items that
 are shown when opening the user menu (the navbar element with the user name, on
 the top right).
 
-User menu items are defined by a function taking the :ref:`env <javascript/environment>`
+User menu items are defined by a function taking the :ref:`env <frontend/framework/environment>`
 and returning a plain object, containing the following information:
 
 * `description` : the menu item text,
@@ -244,5 +244,5 @@ Example:
         };
     }
 
-:ref:`Effect registry<javascript/effect_registry>`
---------------------------------------------------
+:ref:`Effect registry<frontend/services/effect_registry>`
+---------------------------------------------------------

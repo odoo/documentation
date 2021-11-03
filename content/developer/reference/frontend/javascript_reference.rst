@@ -134,10 +134,10 @@ For most Odoo code, we want to use a module system.  Because of the way assets
 work in Odoo (and in particular, the fact that each installed odoo addon can
 modify the list of files contained in a bundle), Odoo has to resolve modules
 browser side.  To do that, Odoo provides a small module system described just
-below (see :ref:`javascript/odoo_module`).
+below (see :ref:`frontend/modules/odoo_module`).
 
 However, Odoo also provides support for native javascript modules (see
-:ref:`javascript/native_js_module`). These modules
+:ref:`frontend/modules/native_js`). These modules
 will simply be translated by the server into odoo modules. It is encouraged to
 write all javascript code as a native module, for a better IDE integration. In
 the future, the Odoo module system should be considered an implementation detail,

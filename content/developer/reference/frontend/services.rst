@@ -116,20 +116,20 @@ Reference List
 
    * - Technical Name
      - Short Description
-   * - :ref:`cookie <services/cookie>`
+   * - :ref:`cookie <frontend/services/cookie>`
      - read or modify cookies
-   * - :ref:`effect <services/effect>`
+   * - :ref:`effect <frontend/services/effect>`
      - display graphical effects
-   * - :ref:`notification <services/notification>`
+   * - :ref:`notification <frontend/services/notification>`
      - display notifications
-   * - :ref:`rpc <services/rpc>`
+   * - :ref:`rpc <frontend/services/rpc>`
      - send requests to the server
-   * - :ref:`title <services/title>`
+   * - :ref:`title <frontend/services/title>`
      - read or modify the window title
-   * - :ref:`user <services/user>`
+   * - :ref:`user <frontend/services/user>`
      - provides some information related to the current user
 
-.. _services/cookie:
+.. _frontend/services/cookie:
 
 Cookie service
 --------------
@@ -167,7 +167,7 @@ API
 
     Deletes the cookie `name`.
 
-.. _services/effect:
+.. _frontend/services/effect:
 
 Effect service
 --------------
@@ -270,7 +270,7 @@ RainbowMan
 How to add an effect
 ~~~~~~~~~~~~~~~~~~~~
 
-.. _javascript/effect_registry:
+.. _frontend/services/effect_registry:
 
 The effects are stored in a registry called `effects`.
 You can add new effects by providing a name and a function.
@@ -341,7 +341,7 @@ Here, it is called in webclient.js to make it visible everywhere for the example
     :width: 600
     :align: center
 
-.. _services/notification:
+.. _frontend/services/notification:
 
 Notification service
 --------------------
@@ -455,7 +455,7 @@ A notification that closes after a second:
   const close = notificationService.add("I will be quickly closed");
   setTimeout(close, 1000);
 
-.. _services/rpc:
+.. _frontend/services/rpc:
 
 RPC service
 -----------
@@ -548,11 +548,11 @@ When a rpc fails, then:
 
   If it is a network error, then the error description is simply an object
   ``{type: 'network'}``.
-  When a network error occurs, a :ref:`notification <services/notification>` is
+  When a network error occurs, a :ref:`notification <frontend/services/notification>` is
   displayed and the server is regularly contacted until it responds. The
   notification is closed as soon as the server responds.
 
-.. _services/title:
+.. _frontend/services/title:
 
 Title Service
 -------------
@@ -627,7 +627,7 @@ Its API is:
    will change the title to ``Odoo``.
 
 
-.. _services/user:
+.. _frontend/services/user:
 
 User service
 ------------
@@ -654,7 +654,7 @@ API
       - Description
     * - ``context``
       - ``Object``
-      - The :ref:`user context<javascript/user-context>`
+      - The :ref:`user context<frontend/framework/user_context>`
     * - ``db``
       - ``Object``
       - Info about the database
@@ -691,7 +691,7 @@ API
 
     :param object update: the object to update the context with
 
-    update the :ref:`user context<javascript/user-context>` with the given object.
+    update the :ref:`user context<frontend/framework/user_context>` with the given object.
 
     .. code-block:: javascript
 
@@ -701,7 +701,7 @@ API
 
     :param string key: the key of the targeted attribute
 
-    remove the value with the given key from the :ref:`user context<javascript/user-context>`
+    remove the value with the given key from the :ref:`user context<frontend/framework/user_context>`
 
     .. code-block:: js
 
