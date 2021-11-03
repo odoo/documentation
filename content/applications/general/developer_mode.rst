@@ -33,23 +33,45 @@ Activate through a browser extension
    :align: center
    :alt: View of odoo’s debug icon in a chrome’s toolbar
 
+Activate through the command palette
+====================================
+
+The command palette tool has a command to activate the debug mode: open it with
+the keyboard shortcut `ctrl+k`, then type `debug`: a command will show up to
+activate the debug mode. 
+
+.. image:: developer_mode/command_palette.png
+   :align: center
+   :alt: Command palette with debug command
+
 Activate through the URL
 ========================
 
-In the URL add ``?debug=1`` or ``?debug=true`` after *web*.
+In the URL, add ``?debug=1`` or ``?debug=true`` after *web*. To deactivate the
+debug mode, add `?debug=0` instead.
 
 .. image:: url.png
    :align: center
    :alt: Overview of an url with the debug mode command added in Odoo
 
 .. tip::
-   Developers: type ``?debug=assets`` and activate the mode with assets.
+   Additional modes are available for developers: `?debug=assets` enables the
+   :ref:`assets mode <javascript/debug_mode/assets>`, and `?debug=tests` enables
+   the :ref:`tests mode <javascript/debug_mode/tests>`.
 
 Locate the mode tools
 =====================
 
-The Developer mode tools can be accessed from the *Open Developer Tools* button, located on the
-header of your pages.
+The Developer mode tools can be accessed from the *Open Developer Tools* button,
+located on the header of your pages. This menu contains additional tools that
+are useful to understand or edit technical data, such as the views or the actions.
+It contains some useful menu items such as:
+
+- edit action
+- manage filters
+- edit the current view
+- see the `fields view get`
+- and much more.
 
 .. image:: button_location.png
    :align: center
