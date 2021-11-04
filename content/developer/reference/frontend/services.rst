@@ -120,6 +120,8 @@ Reference List
      - read or modify cookies
    * - :ref:`effect <frontend/services/effect>`
      - display graphical effects
+   * - :ref:`http <frontend/services/http>`
+     - perform low level http calls
    * - :ref:`notification <frontend/services/notification>`
      - display notifications
    * - :ref:`router <frontend/services/router>`
@@ -342,6 +344,52 @@ Here, it is called in webclient.js to make it visible everywhere for the example
     :alt: Odoo in sepia
     :width: 600
     :align: center
+
+.. _frontend/services/http:
+
+Http Service
+------------
+
+Overview
+~~~~~~~~
+
+* Technical name: `http`
+* Dependencies: None
+
+While most interactions between the client and the server in odoo are `RPCs` (`XMLHTTPRequest`), lower level
+control on requests may sometimes be required.
+
+This service provides a way to send `get` and `post` `http requests <https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods>`_.
+
+API
+~~~
+
+.. js:function:: async get(route[,readMethod = "json"])
+
+  :param string route: the url to send the request to
+  :param string readMethod: the response content type. Can be "text", "json", "formData", "blob", "arrayBuffer".
+  :returns: the result of the request with the format defined by the readMethod argument.
+
+  Sends a get request.
+
+.. js:function:: async post(route [,params = {}, readMethod = "json"])
+
+  :param string route: the url to send the request to
+  :param object params: key value data to be set in the form data part of the request
+  :param string readMethod: the response content type. Can be "text", "json", "formData", "blob", "arrayBuffer".
+  :returns: the result of the request with the format defined by the readMethod argument.
+
+  Sends a post request.
+
+Example
+~~~~~~~
+
+.. code-block:: javascript
+
+  const httpService = useService("http");
+  const data = await httpService.get("https://something.com/posts/1");
+  // ... 
+  await httpService.post("https://something.com/posts/1", { title: "new title", content: "new content" });
 
 .. _frontend/services/notification:
 
