@@ -10,3 +10,4 @@ Payment Terminals
    payment/ingenico
    payment/vantiv
    payment/six
+   payment/worldline
