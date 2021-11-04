@@ -38,31 +38,18 @@ trust.
    or Odoo databases hosted elsewhere. Instead, Odoo apps use a unique reference number to the data
    stored safely in the payment acquirers' systems.
 
-.. _payment_acquirers/acquirers:
+.. _payment_acquirers/supported_acquirers:
 
-Payment acquirers
-=================
+Supported payment acquirers
+===========================
 
-From an accounting perspective, we can distinguish two types of payment acquirers: the payments that
-go directly on the bank account and follow the usual reconciliation workflow, and the payment
-acquirers that are third-party services and require you to follow another accounting workflow.
+From an accounting perspective, we can distinguish two types of payment acquirers: the payment
+acquirers that are third-party services and require you to follow another accounting workflow, and
+the payments that go directly on the bank account and follow the usual reconciliation workflow.
 
-.. _payment_acquirers/bank_payments:
+.. _payment_acquirers/online_acquirers:
 
-Bank payments
--------------
-
-- | :doc:`Wire Transfer <payment_acquirers/wire_transfer>`
-  | When selected, Odoo displays your payment information with a payment reference. You have to
-    approve the payment manually once you have received it on your bank account.
-- | SEPA Direct Debit
-  | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
-    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for
-    more information about this payment method.
-
-.. _payment_acquirers/online_providers:
-
-Online payment providers
+Online payment acquirers
 ------------------------
 
 +-------------------------------+----------------------+------------+-----------------+-----------+
@@ -112,13 +99,27 @@ Online payment providers
    added and configured on your Accounting app to do a bank reconciliation, which is an accounting
    control process.
 
+.. _payment_acquirers/bank_payments:
+
+Bank payments
+-------------
+
+- | :doc:`Wire Transfer <payment_acquirers/wire_transfer>`
+  | When selected, Odoo displays your payment information with a payment reference. You have to
+    approve the payment manually once you have received it on your bank account.
+- | SEPA Direct Debit
+  | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
+    directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for
+    more information about this payment method.
+
 .. _payment_acquirers/configuration:
 
 Configuration
 =============
 
-Some of the features described in this section are available only with some payment acquirers. Refer
-to :ref:`the table above <payment_acquirers/online_providers>` for more details.
+.. note::
+   Each acquirer has its specific configuration flow, depending on :ref:`which feature is available
+   <payment_acquirers/online_acquirers>`.
 
 .. _payment_acquirers/add_new:
 
