@@ -116,6 +116,8 @@ Reference List
 
    * - Technical Name
      - Short Description
+   * - :ref:`company <frontend/services/company>`
+     - provides some information related to the companies
    * - :ref:`cookie <frontend/services/cookie>`
      - read or modify cookies
    * - :ref:`effect <frontend/services/effect>`
@@ -130,6 +132,48 @@ Reference List
      - read or modify the window title
    * - :ref:`user <frontend/services/user>`
      - provides some information related to the current user
+
+.. _frontend/services/company:
+
+Company service
+---------------
+
+Overview
+~~~~~~~~
+
+* Technical name: `company`
+* Dependencies: `user`, `router`, `cookie`
+
+Odoo has a concept of companies. You can manage several with the same Odoo instance. 
+More than one companies can be *active* at any time, but one company is always considered selected.
+The selected company is basically considered the current company, but for pages that support it,
+the content of all the active companies are displayed. By example, in the product page, the company A may be the main one
+but the products of all the active companies are shown. 
+
+This service provides information about them as well as a couple of functions.
+
+API
+~~~
+
+.. js:attribute:: availableCompanies: number[]
+
+  Get all the company ids registered in the odoo instance.
+
+.. js:attribute:: allowedCompanyIds: {id, name}[]
+
+  Get the currently active companies.
+
+.. js:attribute:: currentCompany: number
+
+  Get the current main company id
+
+.. js:function:: setCompanies(mode, ...companyIds)
+
+  :param string mode: `loginto` to set as main company (the first one of companyIds parameter is taken), `toggle` to toggle the active state of all the companyIds.
+  :param number[] companyIds: the company ids impacted.
+
+Changes the state of the main and active companies.
+
 
 .. _frontend/services/cookie:
 
