@@ -56,7 +56,7 @@ Checks for e-Commerce & Alias Gateway`, and retrieve **SHA Key IN**.
 SHA Key OUT
 ~~~~~~~~~~~
 
-In order to retrieve the API Key and the Client Key, log into your ogone account, go to
+In order to retrieve the SHA Key OUT, log into your ogone account, go to
 :menuselection:`Configuration --> Technical Information --> Transaction feedback --> All transaction
 submission modes`, and get or generate your **API Key** and **Client Key**. Be careful to copy your
 API key as you'll not be allowed to get it later without generating a new one.
