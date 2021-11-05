@@ -1,3 +1,5 @@
+.. _frontend/hooks:
+
 =====
 Hooks
 =====
