@@ -1,5 +1,5 @@
 
-.. _javascript/services:
+.. _frontend/services:
 
 ========
 Services

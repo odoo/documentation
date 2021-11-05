@@ -1,3 +1,4 @@
+.. _frontend/components:
 
 ==============
 Owl Components
