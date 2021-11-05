@@ -110,7 +110,7 @@ the shared ``env`` object:
    * - `bus`
      - :ref:`main bus <frontend/framework/bus>`, used to coordinate some generic events
    * - `services`
-     - all deployed :ref:`services <javascript/services>` (should usually be accessed
+     - all deployed :ref:`services <frontend/services>` (should usually be accessed
        with the `useService` hook)
    * - `debug`
      - string. If non empty, the web client is in :ref:`debug mode <frontend/framework/debug_mode>`
@@ -144,11 +144,11 @@ services, components and hooks.
 Registries
 ----------
 
-Registries are basically a simple key/value mapping that stores some specific
-kind of objects. They are an important part of the extensibility of the UI:
-once some object is registered, the rest of the web client can use it. For
-example, the field registry contains all field components (or widgets) that
-can be used in views.
+:ref:`Registries <frontend/registries>` are basically a simple key/value mapping
+that stores some specific kind of objects. They are an important part of the
+extensibility of the UI: once some object is registered, the rest of the web
+client can use it. For example, the field registry contains all field components
+(or widgets) that can be used in views.
 
 .. code-block:: javascript
 
@@ -166,12 +166,12 @@ sub registry ``fields``.
 Services
 --------
 
-Services are long lived pieces of code that provide a feature. They may be
-imported by components (with ``useService``) or by other services. Also, they
-can declare a set of dependencies. In that sense, services are basically a DI
-(dependency injection) system. For example, the ``notification`` service
-provides a way to display a notification, or the ``rpc`` service is the proper
-way to perform a request to the Odoo server.
+:ref:`Services <frontend/services>` are long lived pieces of code that provide a
+feature. They may be imported by components (with ``useService``) or by other
+services. Also, they can declare a set of dependencies. In that sense, services
+are basically a DI (dependency injection) system. For example, the ``notification``
+service provides a way to display a notification, or the ``rpc`` service is the
+proper way to perform a request to the Odoo server.
 
 The following example registers a simple service that displays a notification
 every 5 second:
@@ -195,7 +195,7 @@ every 5 second:
 Components and Hooks
 --------------------
 
-Components and hooks are ideas coming from the
+:ref:`Components <frontend/components>` and :ref:`hooks <frontend/hooks>` are ideas coming from the
 `Owl component system <https://github.com/odoo/owl/blob/master/doc/readme.md>`_.
 Odoo components are simply owl components that are part of the web client. 
 

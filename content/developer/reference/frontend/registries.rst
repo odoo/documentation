@@ -1,3 +1,5 @@
+.. _frontend/registries:
+
 ==========
 Registries
 ==========
@@ -147,7 +149,7 @@ Service registry
 ----------------
 
 The service registry (category: `services`) contains all
-:ref:`services <javascript/services>` that should be activated by the Odoo
+:ref:`services <frontend/services>` that should be activated by the Odoo
 framework.
 
 .. code-block:: javascript
@@ -244,5 +246,8 @@ Example:
         };
     }
 
-:ref:`Effect registry<frontend/services/effect_registry>`
----------------------------------------------------------
+Effect registry
+---------------
+
+Contains the implementations of all available effects. See the section on the
+:ref:`effect service <frontend/services/effect_registry>` for more details.
