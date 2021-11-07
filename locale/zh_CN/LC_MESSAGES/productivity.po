@@ -12,10 +12,10 @@
 # Datasource International <Hennessy@datasourcegroup.com>, 2021
 # Jeffery CHEN <jeffery9@gmail.com>, 2021
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2021
-# 稀饭~~ <wangwhai@qq.com>, 2021
 # F4NNIU <sparkamax@gmail.com>, 2021
 # Mandy Choy <mnc@odoo.com>, 2021
 # 新 陈 <powersstar@163.com>, 2021
+# 稀饭~~ <wangwhai@qq.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -24,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-08-10 09:10+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: 新 陈 <powersstar@163.com>, 2021\n"
+"Last-Translator: 稀饭~~ <wangwhai@qq.com>, 2021\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,6 +104,9 @@ msgid ""
 "device-or-application-to-send-email-using-"
 "Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__ to make it work."
 msgstr ""
+"Office 365邮件服务器无法方便地从Odoo这样的主机发送外部邮件。请参阅`微软文档 <https://support.office.com"
+"/en-us/article/How-to-set-up-a-multifunction-device-or-application-to-send-"
+"email-using-Office-365-69f58e99-c550-4274-ad18-c805d654b4c4>`__，了解如何设置。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:39
 msgid "How to manage outbound messages"
@@ -152,6 +155,8 @@ msgid ""
 " relays are not compatible with Odoo Online unless you configure Odoo to "
 "force the outgoing \"From\" address (see below)."
 msgstr ""
+"如果您在前提下运行 Odoo，您可以使用 Office 365 服务器。Office 365 SMTP 继电器与 Odoo 在线不兼容，除非您配置 "
+"Odoo 以强制外向的\"从\"地址（见下文）。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:66
 msgid ""
@@ -254,13 +259,13 @@ msgstr "请注意，出于安全原因，端口25被阻塞。 尝试使用587、
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:113
 msgid "Choose allowed \"From\" email addresses"
-msgstr ""
+msgstr "选择允许的\"From\"电子邮件地址"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:115
 msgid ""
 "Sometimes, an email's \"From\" (outgoing) address can belong to a different "
 "domain, and that can be a problem."
-msgstr ""
+msgstr "有时，电子邮件的\"From\"（传出）地址可能属于不同的域，这可能是一个问题。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:118
 msgid ""
@@ -270,12 +275,15 @@ msgid ""
 "that kind of usage for security (kudos for that), the Odoo's redistributed "
 "email would get rejected by some recipients' mail servers."
 msgstr ""
+"例如，如果有地址  *mary@customer.example.com* 的客户回复邮件，Odoo "
+"将尝试将同一电子邮件重新分发给线程中的其他订阅者。但是，如果域名*customer.example.com*禁止这种安全使用（kudos），Odoo "
+"的再分发电子邮件将被某些收件人的邮件服务器拒绝。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:124
 msgid ""
 "To avoid those kind of problems, you should make sure all emails use a "
 "\"From\" address from your authorized domain."
-msgstr ""
+msgstr "为了避免此类问题，您应该确保所有电子邮件都使用授权域名中的\"来自\"地址。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:127
 msgid ""
@@ -284,11 +292,13 @@ msgid ""
 " to handle these situations. However, that is more complex and requires more"
 " technical knowledge that is not meant to be covered by this documentation."
 msgstr ""
+"如果您的 MTA 支持 "
+"`SRS（发送者重写计划）<https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme>`_，您可以启用它来处理这些情况。但是，这更为复杂，需要更多的技术知识，而这些知识并非本文档所涵盖的。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:132
 msgid ""
 "Instead, you can also configure Odoo to do something similar by itself:"
-msgstr ""
+msgstr "相反，您也可以配置 Odoo 来自己做类似的事情："
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:134
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:188
@@ -299,11 +309,11 @@ msgstr "在一般设置中设置你的域名。"
 msgid ""
 "In developer mode, go to :menuselection:`Settings --> Technical --> "
 "Parameters --> System Parameters`."
-msgstr ""
+msgstr "在开发人员模式下，转到：菜单选择：'设置 -- -- >技术 -- -- >参数 -- -- >系统参数'。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:142
 msgid "Add one system parameter from these:"
-msgstr ""
+msgstr "从这些添加一个系统参数："
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:144
 msgid ""
@@ -311,6 +321,7 @@ msgid ""
 "use the key ``mail.force.smtp.from`` and set that address as value (such as "
 "``outgoing@mycompany.example.com``)."
 msgstr ""
+"如果您希望*all*您的传出邮件使用相同的\"来自\"地址，请使用键\"mail.force.smtp.从\"，并将该地址设置为值（如``outgoing@mycompany.example.com``）。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:148
 msgid ""
@@ -319,6 +330,8 @@ msgid ""
 "key ``mail.dynamic.smtp.from`` and set as value the email address that "
 "should be used in those cases (such as ``outgoing@mycompany.example.com``)."
 msgstr ""
+"如果您想保留使用相同域名的电子邮件的原始 \"From\" "
+"地址，但要更改该地址用于使用不同域名的电子邮件，请使用键``mail.dynamic.smtp.from``，并设置为这些情况下应使用的电子邮件地址（如``outgoing@mycompany.example.com``）。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:157
 msgid "How to manage inbound messages"
@@ -428,7 +441,7 @@ msgid ""
 "Object aliases can be edited from their  respective configuration view. To "
 "edit catchall and bounce aliases, you first need to activate the "
 ":ref:`developer mode <developer-mode>`."
-msgstr ""
+msgstr "对象别名可以从各自的配置视图进行编辑。要编辑捕获和反弹别名，您首先需要激活：参考：'开发者模式<developer-mode>`."
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:214
 msgid ""
@@ -446,10 +459,12 @@ msgid ""
 ":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
 " and look for *Mail: Fetchmail Service*."
 msgstr ""
+"默认情况下，每 5 分钟在 Odoo 本地获取一次入站消息。您可以在：<developer-mode>`.参考：\"开发人员模式\"中更改此值。转到 "
+"：菜单选择：'设置 - >技术 - >自动化 - >预定操作\"，并查找 *Mail: Fetchmail Service*。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:229
 msgid "Set up different dedicated servers for transactional and mass mails"
-msgstr ""
+msgstr "为事务和群发邮件设置不同的专用服务器"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:231
 msgid ""
@@ -461,13 +476,16 @@ msgid ""
 "Postmark for transactional e-mails, and Amazon SES or Sendgrid for mass "
 "mailings."
 msgstr ""
+"Odoo 的电子邮件服务器能够每天在 Odoo SH 云平台上发送 200 封电子邮件。但是，如果需要，您可以使用单独的邮件传输代理 （MTA） "
+"服务器处理事务性电子邮件和群发邮件。示例：使用 Odoo 自己的邮件服务器处理事务性电子邮件，以及发送电网、亚马逊 SES "
+"或邮件枪进行群发邮件。另一种选择是将邮戳用于交易电子邮件，而亚马逊 SES 或 Sendgrid 则用于群发邮件。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:239
 msgid ""
 "A default outgoing email server is already configured. You should not create"
 " an alternative one unless you want to use a specific external outgoing "
 "email server for technical reasons."
-msgstr ""
+msgstr "默认的传出电子邮件服务器已经配置。除非出于技术原因想要使用特定的外部传出电子邮件服务器，否则您不应创建替代电子邮件服务器。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:242
 msgid ""
@@ -478,6 +496,9 @@ msgid ""
 "the priority of transactional e-mail servers as low as the mass email "
 "servers."
 msgstr ""
+"为此，您应该首先激活：`开发人员模式<developer-mode>`。然后转到：菜单选择：'设置 ->技术 - "
+">外向\"电子邮件服务器。在那里，您必须创建两个电子邮件 MTA "
+"服务器设置。一个用于交易电子邮件，一个用于群发邮件服务器。请务必将事务性电子邮件服务器的优先级标记为低至大规模电子邮件服务器。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_servers.rst:247
 msgid ""
@@ -490,6 +511,10 @@ msgid ""
 "Sendinblue and Mailchimp, as your e-mails would be originated from the "
 "xxxx.odoo.com domain."
 msgstr ""
+"现在，转到：菜单选择：'电子邮件营销 ->设置'，并启用*Dedicated Server*。通过这些设置，Odoo "
+"将服务器用于交易电子邮件的低优先级，而此处选定的服务器用于群发邮件。请注意，在这种情况下，您必须设置域名的发送者策略框架 （SPF） "
+"记录，以包括交易和群发邮件服务器。如果您的服务器与 xxxx.odoo.com 一起存在，可用的选项是森丁蓝和邮件，因为您的电子邮件将来自 "
+"xxxx.odoo.com 域。"
 
 #: ../../content/applications/productivity/discuss/advanced/email_template.rst:3
 msgid "Email Templates"
