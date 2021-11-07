@@ -116,6 +116,8 @@ msgid ""
 " relays are not compatible with Odoo Online unless you configure Odoo to "
 "force the outgoing \"From\" address (see below)."
 msgstr ""
+"如果您在前提下运行 Odoo，您可以使用 Office 365 服务器。Office 365 SMTP 继电器与 Odoo 在线不兼容，除非您配置 "
+"Odoo 以强制外向的\"从\"地址（见下文）。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:44
 msgid ""
@@ -208,13 +210,13 @@ msgstr ""
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:89
 msgid "Choose allowed \"From\" email addresses"
-msgstr ""
+msgstr "选择允许的\"From\"电子邮件地址"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:91
 msgid ""
 "Sometimes, an email's \"From\" (outgoing) address can belong to a different "
 "domain, and that can be a problem."
-msgstr ""
+msgstr "有时，电子邮件的\"From\"（传出）地址可能属于不同的域，这可能是一个问题。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:94
 msgid ""
@@ -224,12 +226,15 @@ msgid ""
 "that kind of usage for security (kudos for that), the Odoo's redistributed "
 "email would get rejected by some recipients' mail servers."
 msgstr ""
+"例如，如果有地址  *mary@customer.example.com* 的客户回复邮件，Odoo "
+"将尝试将同一电子邮件重新分发给线程中的其他订阅者。但是，如果域名*customer.example.com*禁止这种安全使用（kudos），Odoo "
+"的再分发电子邮件将被某些收件人的邮件服务器拒绝。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:100
 msgid ""
 "To avoid those kind of problems, you should make sure all emails use a "
 "\"From\" address from your authorized domain."
-msgstr ""
+msgstr "为了避免此类问题，您应该确保所有电子邮件都使用授权域名中的\"来自\"地址。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:103
 msgid ""
@@ -238,11 +243,13 @@ msgid ""
 " to handle these situations. However, that is more complex and requires more"
 " technical knowledge that is not meant to be covered by this documentation."
 msgstr ""
+"如果您的 MTA 支持 "
+"`SRS（发送者重写计划）<https://en.wikipedia.org/wiki/Sender_Rewriting_Scheme>`_，您可以启用它来处理这些情况。但是，这更为复杂，需要更多的技术知识，而这些知识并非本文档所涵盖的。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:108
 msgid ""
 "Instead, you can also configure Odoo to do something similar by itself:"
-msgstr ""
+msgstr "相反，您也可以配置 Odoo 来自己做类似的事情："
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:110
 #: ../../content/applications/productivity/discuss/email_servers.rst:162
@@ -253,11 +260,11 @@ msgstr "在一般设置中设置你的域名。"
 msgid ""
 "In developer mode, go to :menuselection:`Settings --> Technical --> "
 "Parameters --> System Parameters`."
-msgstr ""
+msgstr "在开发人员模式下，转到：菜单选择：'设置 -- -- >技术 -- -- >参数 -- -- >系统参数'。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:118
 msgid "Add one system parameter from these:"
-msgstr ""
+msgstr "从这些添加一个系统参数："
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:120
 msgid ""
@@ -265,6 +272,7 @@ msgid ""
 "use the key ``mail.force.smtp.from`` and set that address as value (such as "
 "``outgoing@mycompany.example.com``)."
 msgstr ""
+"如果您希望*all*您的传出邮件使用相同的\"来自\"地址，请使用键\"mail.force.smtp.从\"，并将该地址设置为值（如``outgoing@mycompany.example.com``）。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:124
 msgid ""
@@ -273,6 +281,8 @@ msgid ""
 "key ``mail.dynamic.smtp.from`` and set as value the email address that "
 "should be used in those cases (such as ``outgoing@mycompany.example.com``)."
 msgstr ""
+"如果您想保留使用相同域名的电子邮件的原始 \"From\" "
+"地址，但要更改该地址用于使用不同域名的电子邮件，请使用键``mail.dynamic.smtp.from``，并设置为这些情况下应使用的电子邮件地址（如``outgoing@mycompany.example.com``）。"
 
 #: ../../content/applications/productivity/discuss/email_servers.rst:131
 msgid "How to manage inbound messages"
