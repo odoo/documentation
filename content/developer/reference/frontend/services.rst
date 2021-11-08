@@ -53,7 +53,7 @@ A service needs to implement the following interface:
 
 .. js:function:: start(env, deps)
 
-    :param Environment env:
+    :param Environment env: the application environment
     :param Object deps: all requested dependencies
     :returns: value of service or Promise<value of service>
        
