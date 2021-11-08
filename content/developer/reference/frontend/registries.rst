@@ -106,14 +106,49 @@ Reference List
 
    * - Category
      - Content
+   * - :ref:`effects <frontend/registries/effects>`
+     - implementation for all available effects
+   * - :ref:`formatters <frontend/registries/formatters>`
+     - utility functions to format values (mostly used for field values)
    * - :ref:`main_components <frontend/registries/main_components>`
      - top level components
+   * - :ref:`parsers <frontend/registries/parsers>`
+     - utility functions to parse values (mostly used for field values)
    * - :ref:`services <frontend/registries/services>`
      - all services that should be activated
    * - :ref:`systray <frontend/registries/systray>`
      - components displayed in the systray zone in the navbar
    * - :ref:`user_menuitems <frontend/registries/usermenu>`
      - menu items displayed in the user menu (top right of navbar)
+
+.. _frontend/registries/effects:
+
+Effect registry
+---------------
+
+The `effects` registry contains the implementations of all available effects.
+See the section on the :ref:`effect service <frontend/services/effect_registry>`
+for more details.
+
+.. _frontend/registries/formatters:
+
+Formatter registry
+------------------
+
+The `formatters` registry contains functions to format values. Each formatter 
+has the following API:
+
+.. js:function:: format(value[, options])
+
+    :param value: a value of a specific type, or `false` if no value is given
+    :type value: T | false
+    :param Object options: various options
+    :returns: string
+
+    Formats a value and returns a string
+
+.. seealso::
+    - :ref:`Parsers registry <frontend/registries/parsers>`
 
 .. _frontend/registries/main_components:
 
@@ -142,6 +177,28 @@ this:
    registry.category("main_components").add("LoadingIndicator", {
      Component: LoadingIndicator,
    });
+
+.. _frontend/registries/parsers:
+
+Parser registry
+---------------
+
+The `parsers` registry contains functions to parse values. Each parser 
+has the following API:
+
+.. js:function:: parse(value[, options])
+    :noindex:
+
+    :param value: a string representing a value
+    :type value: string
+    :param Object options: various options (parser specific)
+    :returns: T a valid value 
+
+    Parses a string and returns a value. If the string does not represent a valid
+    value, parsers can fail and throw errors.
+
+.. seealso::
+    - :ref:`Formatters registry <frontend/registries/formatters>`
 
 .. _frontend/registries/services:
 
@@ -245,9 +302,3 @@ Example:
             hide: (Math.random() < 0.5),
         };
     }
-
-Effect registry
----------------
-
-Contains the implementations of all available effects. See the section on the
-:ref:`effect service <frontend/services/effect_registry>` for more details.
