@@ -157,6 +157,13 @@ resized/scrolled.
     }
     MyPopover.template = owl.tags.xml`<div>I am positioned through a wonderful hook!</div>`
 
+
+.. note::
+   The following CSS classes can be used to style the target HTMLElement:
+   
+   - `o-popper-position`
+   - `o-popper-position--{D}{V}` where `{D}` and `{V}` are replaced by the first letter of the corresponding Direction and Variant (see Options table below for valid directions and variants). E.g.: for position `bottom-end`, the class name will be `o-popper-position--be`.
+
 API
 ---
 
