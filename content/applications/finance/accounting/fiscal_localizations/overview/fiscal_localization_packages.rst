@@ -22,10 +22,6 @@ selected at the creation of the database.
 To install a new package, go to :menuselection:`Accounting --> Configuration --> Fiscal
 Localization`, click on **Install More Packages**, and install your country's module.
 
-.. image:: media/fiscal_localization_packages_modules.png
-   :align: center
-   :alt: Install the appropriate module as fiscal localization package in Odoo Accounting.
-
 Once done, select your country's package, and click on *Save*.
 
 .. image:: media/fiscal_localization_packages_selection.png
