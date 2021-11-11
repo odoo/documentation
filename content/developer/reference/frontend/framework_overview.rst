@@ -553,7 +553,7 @@ Browser Object
 ==============
 
 The javascript framework also provides a special object ``browser`` that
-provides access to all browser APIs, like ``location``, ``localStorage``
+provides access to many browser APIs, like ``location``, ``localStorage``
 or ``setTimeout``.  For example, here is how one could use the
 ``browser.setTimeout`` function:
 
@@ -567,6 +567,32 @@ or ``setTimeout``.  For example, here is how one could use the
 It is mostly interesting for testing purposes: all code using the browser object
 can be tested easily by mocking the relevant functions for the duration of the
 test.
+
+It contains the following content: 
+
+.. list-table::
+
+  * - `addEventListener`
+    - `cancelAnimationFrame`
+    - `clearInterval`
+  * - `clearTimeout`
+    - `console`
+    - `Date`
+  * - `fetch`
+    - `history`
+    - `localStorage`
+  * - `location`
+    - `navigator`
+    - `open`
+  * - `random`
+    - `removeEventListener`
+    - `requestAnimationFrame`
+  * - `sessionStorage`
+    - `setInterval`
+    - `setTimeout`
+  * - `XMLHttpRequest`
+    -
+    -
 
 .. _frontend/framework/debug_mode:
 
