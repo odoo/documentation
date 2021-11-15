@@ -62,27 +62,23 @@ for example, `https://192.168.1.25`. Then, accept the self-signed certificate.
 .. note::
    Note that the protocol is now **HTTPS**.
 
-Click on :menuselection:`Not secure --> Certificate is not valid`.
+Click on :menuselection:`Connection is not secure --> Certificate is not valid`.
 
 .. image:: epos_ssc/browser-warning.png
    :align: center
    :alt: The web browser indicates that the connection to the printer is not secure.
 
-Go to the *Details* tab and click on **Export**.
+Go to the *Details* tab and click on **Copy to file**.
+Select X.509 in base 64 and save it.
 
-.. image:: epos_ssc/certificate-details.png
-   :align: center
-   :alt: Details of the ePOS printer certificate
-
-Import the Self-signed certificate to your browser (Chrome)
-===========================================================
+Import the Self-signed certificate to Windows (Using Chrome)
+============================================================
 
 In your Chrome browser, go to :menuselection:`Settings --> Privacy and security --> Security -->
-Manage certificates`, then open the *Authorities* tab, click on **Import**, and select all
-functionalities of the certificate.
+Manage certificates`
 
-.. tip::
-   You can directly access these settings by navigating to `chrome://settings/certificates`.
+Go to the *Trusted Root Certification Authorities* tab and click on **Import** and select
+your previous file. Accept all warnings and restart your browser.
 
 Import the Self-signed certificate to your Android device
 =========================================================
