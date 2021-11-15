@@ -47,19 +47,19 @@ can make a simple component in Odoo.
         </div>`;
 
 This example shows that Owl is available as a library in the global namespace as
-``owl``: it can simply be used like most libraries in Odoo. Note that we
+`owl`: it can simply be used like most libraries in Odoo. Note that we
 defined here the template as a static property, but without using the `static`
 keyword, which is not available in some browsers (Odoo javascript code should
 be Ecmascript 2019 compliant).
 
-We define here the template in the javascript code, with the help of the ``xml``
+We define here the template in the javascript code, with the help of the `xml`
 helper. However, it is only useful to get started. In practice, templates in
 Odoo should be defined in an xml file, so they can be translated. In that case,
 the component should only define the template name.
 
 In practice, most components should define 2 or 3 files, located at the same
-place: a javascript file (``my_component.js``), a template file (``my_component.xml``)
-and optionally a scss (or css) file (``my_component.scss``). These files should
+place: a javascript file (`my_component.js`), a template file (`my_component.xml`)
+and optionally a scss (or css) file (`my_component.scss`). These files should
 then be added to some assets bundle. The web framework will take care of
 loading the javascript/css files, and loading the templates into Owl.
 
@@ -92,11 +92,11 @@ And the template is now located in the corresponding xml file:
 Odoo code is not yet completely made in Owl, so it needs a way to tell the
 difference between Owl templates (new code) and old templates (for components). To
 do that in a backward-compatible way, all new templates should be defined with
-the ``owl`` attribute set to 1.
+the `owl` attribute set to 1.
 
 .. note::
 
-   Do not forget to set ``owl="1"`` in your Owl templates!
+   Do not forget to set `owl="1"` in your Owl templates!
 
 .. note::
 
@@ -150,12 +150,138 @@ checkboxes or datepickers. This page explains how to use these generic component
 
    * - Technical Name
      - Short Description
+   * - :ref:`ActionSwiper <frontend/owl/actionswiper>`
+     - a swiper component to perform actions on touch swipe
    * - :ref:`CheckBox <frontend/owl/checkbox>`
      - a simple checkbox component with a label next to it
    * - :ref:`Dropdown <frontend/owl/dropdown>`
      - full-featured dropdown
    * - :ref:`Pager <frontend/pager>`
      - a small component to handle pagination
+
+.. _frontend/owl/actionswiper:
+
+ActionSwiper
+------------
+
+.. note:: This component is a mobile feature, only supported in the Enterprise version of Odoo.
+
+Location
+~~~~~~~~
+
+`@web_enterprise/core/action_swiper/action_swiper`
+
+Description
+~~~~~~~~~~~
+
+This is a component that can perform actions when an element is swiped
+horizontally. The swiper is wrapping a target element to add actions to it. 
+The action is executed once the user has released the swiper passed
+half of its width.
+
+.. code-block:: xml
+
+  <ActionSwiper onLeftSwipe="Object" onRightSwipe="Object">
+    <SomeElement/>
+  </ActionSwiper>
+
+The simplest way to use the component is to use it around your target element directly
+in an xml template as shown above. But sometimes, you may want to extend an existing element
+and would not want to duplicate the template. It is possible to do just that.
+
+If you want to extend the behavior of an existing element, you must place the element
+inside, by wrapping it directly. Also, you can conditionnally add props to manage when the
+element might be swipable or not. 
+
+You can use the component to interact easily with records, messages, items in lists and much more.
+
+.. image:: ./images/actionswiper.png
+  :width: 400 px
+  :alt: Example of ActionSwiper usage
+  :align: center
+
+The following example creates a basic ActionSwiper component. 
+Here, the swipe is enabled in both directions.
+
+.. code-block:: xml
+    
+  <ActionSwiper 
+    onRightSwipe="
+      {
+        action: '() => Delete item',
+        icon: 'fa-delete',
+        bgColor: 'bg-danger',
+      }" 
+    onLeftSwipe="
+      {
+        action: '() => Star item',
+        icon: 'fa-star',
+        bgColor: 'bg-warning',
+      }"
+  >
+    <div>
+      Swipable item
+    </div>
+  </ActionSwiper>
+
+.. note:: Actions are permuted when using right-to-left (RTL) languages.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name 
+      - Type
+      - Description
+    * - `onLeftSwipe`
+      - `Object`
+      - if present, the actionswiper can be swiped to the left
+    * - `onRightSwipe`
+      - `Object`
+      - if present, the actionswiper can be swiped to the right
+
+You can use both `onLeftSwipe` and `onRightSwipe` props at the same time.
+
+Those `Object`'s must contain:
+    
+    - `action`, which is the callable `Function` serving as a callback.
+      Once the swipe has been completed in the given direction, that action
+      is performed.
+    - `icon` is the icon class to use, usually to represent the action.
+      It must be a `string`.
+    - `bgColor` is the background color, given to decorate the action.
+      can be one of the following `bootstrap contextual color
+      <https://getbootstrap.com/docs/3.3/components/#available-variations>`_ (`danger`,
+      `info`, `secondary`, `success` or `warning`).
+
+    Those values must be given to define the behavior and the visual aspect
+    of the swiper. 
+
+Example: Extending existing components
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+In the following example, you can use `xpath`'s to wrap an existing element
+in the ActionSwiper component. Here, a swiper has been added to mark
+a message as read in mail.
+
+.. code-block:: xml
+    
+  <xpath expr="//*[hasclass('o_Message')]" position="after">
+    <ActionSwiper
+      onRightSwipe="messaging.device.isMobile and messageView.message.isNeedaction ?
+        {
+          action: () => messageView.message.markAsRead(),
+          icon: 'fa-check-circle',
+          bgColor: 'bg-success',
+        } : undefined"
+    />
+  </xpath>
+  <xpath expr="//ActionSwiper" position="inside">
+    <xpath expr="//*[hasclass('o_Message')]" position="move"/>
+  </xpath>
 
 .. _frontend/owl/checkbox:
 
@@ -256,35 +382,35 @@ being present in the DOM or not.
    * - Dropdown
      - Type
      - Description
-   * - ``startOpen``
+   * - `startOpen`
      - boolean
      - initial dropdown open state (defaults to `false`)
-   * - ``menuClass``
+   * - `menuClass`
      - string
-     - additional css class applied to the dropdown menu ``<div class="dropdown-menu"/>``
-   * - ``togglerClass``
+     - additional css class applied to the dropdown menu `<div class="dropdown-menu"/>`
+   * - `togglerClass`
      - string
-     - additional css class applied to the toggler ``<button class="dropdown-toggle"/>``
-   * - ``hotkey``
+     - additional css class applied to the toggler `<button class="dropdown-toggle"/>`
+   * - `hotkey`
      - string
      - hotkey to toggle the opening through keyboard
-   * - ``beforeOpen``
+   * - `beforeOpen`
      - function
      - hook to execute logic just before opening. May be asynchronous.
-   * - ``manualOnly``
+   * - `manualOnly`
      - boolean
      - if true, only toggle the dropdown when the button is clicked on (defaults to `false`)
-   * - ``title``
+   * - `title`
      - string
-     - title attribute content for the ``<button class="dropdown-toggle"/>`` (default: none)
-   * - ``position``
+     - title attribute content for the `<button class="dropdown-toggle"/>` (default: none)
+   * - `position`
      - string
-     - defines the desired menu opening position. RTL direction is automatically applied. Should be a valid :ref:`usePosition <frontend/hooks/useposition>` hook position. (default: ``bottom-start``)
-   * - ``toggler``
-     - ``"parent"`` or ``undefined``
-     - when set to ``"parent"`` the ``<button class="dropdown-toggle"/>`` is not
-       rendered (thus ``toggler`` slot is ignored) and the toggling feature is handled by the parent node (e.g. use
-       case: pivot cells). (default: ``undefined``)
+     - defines the desired menu opening position. RTL direction is automatically applied. Should be a valid :ref:`usePosition <frontend/hooks/useposition>` hook position. (default: `bottom-start`)
+   * - `toggler`
+     - `"parent"` or `undefined`
+     - when set to `"parent"` the `<button class="dropdown-toggle"/>` is not
+       rendered (thus `toggler` slot is ignored) and the toggling feature is handled by the parent node (e.g. use
+       case: pivot cells). (default: `undefined`)
 
 
 A `<DropdownItem/>` is simply a span (`<span class="dropdown-item"/>`).
@@ -301,20 +427,20 @@ So, to react to such an event, one needs to define an event listener on the
    * - DropdownItem
      - Type
      - Description
-   * - ``payload``
+   * - `payload`
      - Object
      - payload that will be added to the `dropdown-item-selected` event (default to null)
    * - `parentClosingMode`
      - `none` | `closest` | `all`
      - when the item is selected, control which parent dropdown will get closed:
        none, closest or all (default = `all`)
-   * - ``hotkey``
+   * - `hotkey`
      - string
      - optional hotkey to select the item
-   * - ``href``
+   * - `href`
      - string
-     - if provided the DropdownItem will become an ``<a href="value" class="dropdown-item"/>`` instead of a ``<span class="dropdown-item"/>``. (default: not provided)
-   * - ``title``
+     - if provided the DropdownItem will become an `<a href="value" class="dropdown-item"/>` instead of a `<span class="dropdown-item"/>`. (default: not provided)
+   * - `title`
      - string
      - optional title attribute which will be passed to the root node of the DropdownItem. (default: not provided)
 
@@ -341,7 +467,7 @@ To properly use a `<Dropdown/>` component, you need to populate two
 - `toggler` slot: it contains the *toggler* elements of your dropdown and is
   rendered inside the dropdown `button` (unless the `toggler` prop is set to `parent`),
 - `default` slot: it contains the *elements* of the dropdown menu itself and is
-  rendered inside the ``<div class="dropdown-menu"/>``. Although it is not mandatory, there is usually at least one
+  rendered inside the `<div class="dropdown-menu"/>`. Although it is not mandatory, there is usually at least one
   `DropdownItem` inside the `menu` slot.
 
 
