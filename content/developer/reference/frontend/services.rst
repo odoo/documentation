@@ -128,6 +128,8 @@ Reference List
      - manage the browser url
    * - :ref:`rpc <frontend/services/rpc>`
      - send requests to the server
+   * - :ref:`scroller <frontend/services/scroller>`
+     - handle clicks on anchors elements
    * - :ref:`title <frontend/services/title>`
      - read or modify the window title
    * - :ref:`user <frontend/services/user>`
@@ -691,6 +693,57 @@ When a rpc fails, then:
   When a network error occurs, a :ref:`notification <frontend/services/notification>` is
   displayed and the server is regularly contacted until it responds. The
   notification is closed as soon as the server responds.
+
+.. _frontend/services/scroller:
+
+Scroller service
+----------------
+
+Overview
+~~~~~~~~
+
+- Technical name: `scroller`
+- Dependencies: none
+
+Whenever the user clicks on an anchor in the web client, this service automatically scrolls
+to the target (if appropriate).
+
+The service adds an event listener to get `click`'s on the document. The service checks
+if the selector contained in its href attribute is valid to distinguish anchors and Odoo 
+actions (e.g. `<a href="#target_element"></a>`). It does nothing if it is not the case.
+
+An event `SCROLLER:ANCHOR_LINK_CLICKED` is triggered on the main application bus if the click seems to be 
+targeted at an element. The event contains a custom event containing the `element` matching and its `id` as a reference.
+It may allow other parts to handle a behavior relative to anchors themselves. The original event is also 
+given as it might need to be prevented. If the event is not prevented, then the user interface will 
+scroll to the target element.
+
+API
+~~~
+
+The following values are contained in the `anchor-link-clicked` custom event explained above.
+
+.. list-table::
+    :widths: 25 25 50
+    :header-rows: 1
+
+    * - Name 
+      - Type
+      - Description
+    * - `element`
+      - `HTMLElement | null`
+      - The anchor element targeted by the href
+    * - `id`
+      - `string`
+      - The id contained in the href
+    * - `originalEv`
+      - `Event`
+      - The original click event
+
+.. note::
+   The scroller service emits a `SCROLLER:ANCHOR_LINK_CLICKED` event on the :ref:`main bus <frontend/framework/bus>`.
+   To avoid the default scroll behavior of the scroller service, you must use `preventDefault()` on the event given
+   to the listener so that you can implement your own behavior correctly from the listener.
 
 .. _frontend/services/title:
 
