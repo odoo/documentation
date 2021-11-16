@@ -74,16 +74,11 @@ To add a new bank account manually, go to :menuselection:`Accounting --> Configu
 Advanced configuration
 ======================
 
-To edit an existing bank account, go to :menuselection:`Accounting --> Configuration --> Bank
-Accounts`, and open the bank account you want to modify.
+To edit an existing bank account, go to the Accounting dashboard.
+Click on the three dots of the account's journal, then on *Configuration*.
 
-If you need to edit the bank account details, go to the *Bank Account* field and click on the
-*External Link* button next to the list arrow. There, you can edit the bank account's number,
-Account Holder, Account Holder Name, and your Bank Institution's details by clicking on the
-*External Link* next to the *Bank* field. These details are used to register some payments.
-
-You can configure which types of payments are enabled in the **Payment Method Types** section and
-how the bank statements are recorded and posted in the **Bank Statements** section.
+There, you can edit the bank account's number, bank feeds, Incoming and Outgoing Payments, and other information related
+to this account's Journal.
 
 .. image:: media/bank_accounts_configuration.png
    :align: center
