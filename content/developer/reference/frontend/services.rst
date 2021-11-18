@@ -198,7 +198,7 @@ Here's how this can be displayed:
 
     const effectService = useService("effect");
     effectService.add({
-      type: "rainbow_man",
+      type: "rainbow_man", // can be omitted, default type is already "rainbow_man"
       message: "Boom! Team record for the past 30 days.",
     });
 
@@ -218,9 +218,11 @@ The options are defined by:
 
 .. code-block:: ts
 
-  @typedef {Object} [EffectOptions]
-  @property {string} [type="rainbow_man"]
-  // The name of the desired effect
+  interface EffectOptions {
+    // The name of the desired effect
+    type?: string;
+    [paramName: string]: any;
+  }
 
 Available effects
 ~~~~~~~~~~~~~~~~~
@@ -237,39 +239,43 @@ RainbowMan
 .. list-table::
     :widths: 20 40 40
     :header-rows: 1
-    
+
     * - Name 
       - Type
       - Description
-    * - `params.message`
-      - `string?="Well Done"`
-      - The message in the notice the rainbowman holds or the content of the notification if effects are disabled. 
-        
-        Can be a simple a string. 
-        
-        Can be a string representation of html (prefer component if you want interactions in the DOM).
-    * - `params.img_url`
-      - `string?=/web/static/img/smile.svg`
-      - The url of the image to display inside the rainbow.
-    * - `params.messageIsHtml`
-      - `boolean?=false`
-      - Set to true if the message encodes html, s.t. it will be correctly inserted into the DOM.
-    * - `params.fadeout`
-      - `("slow"|"medium"|"fast"|"no")?="medium"`
-      - Delay for rainbowman to disappear.
-      
-        `"fast"` will make rainbowman dissapear quickly.
-
-        `"medium"` and 'slow' will wait little longer before disappearing (can be used when `options.message` is longer). 
-
-        `"no"` will keep rainbowman on screen until user clicks anywhere outside rainbowman.
-
     * - `params.Component`
-      - `owl.Component?=RainbowMan`
-      - Component class to instantiate (if effects aren't disabled).
+      - `owl.Component?`
+      - Component class to instantiate inside the RainbowMan (will replace the message).
     * - `params.props`
       - `object?={}`
       - If params.Component is given, its props can be passed with this argument.
+    * - `params.message`
+      - `string?="Well Done!"`
+      - Message is the notice the rainbowman holds.
+
+        If effects are disabled for the user, the rainbowman won't appear and a simple notification
+        will get displayed as a fallback.
+
+        If effects are enabled and params.Component is given, params.message is not used.
+
+        The message is a simple string or a string representing html
+        (prefer using params.Component if you want interactions in the DOM).
+    * - `params.messageIsHtml`
+      - `boolean?=false`
+      - Set to true if the message represents html, s.t. it will be correctly inserted into the DOM.
+    * - `params.img_url`
+      - `string?=/web/static/img/smile.svg`
+      - The url of the image to display inside the rainbow.
+    * - `params.fadeout`
+      - `("slow"|"medium"|"fast"|"no")?="medium"`
+      - Delay for rainbowman to disappear.
+
+        `"fast"` will make rainbowman dissapear quickly.
+
+        `"medium"` and `"slow"` will wait little longer before disappearing (can be used when `params.message` is longer). 
+
+        `"no"` will keep rainbowman on screen until user clicks anywhere outside rainbowman.
+
 
 How to add an effect
 ~~~~~~~~~~~~~~~~~~~~
@@ -289,7 +295,7 @@ The function must follow this API:
 .. js:function:: <newEffectFunction>(env, params)
 
     :param Env env: the environment received by the service
-    
+
     :param object params: the params received from the add function on the service.
 
     :returns: `({Component, props} | void)` A component and its props or nothing.
