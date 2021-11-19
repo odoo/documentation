@@ -12,6 +12,41 @@ sale app, the website or even the mobile application are different. Also, some
 assets may be large, but are seldom needed: in that case we may want them
 to be :ref:`loaded lazily (on demand) <frontend/assets/lazy_loading>`.
 
+Asset types
+===========
+
+There are three different asset types: code (`js` files), style (`css` or `scss`
+files) and templates (`xml` files).
+
+Code
+    Odoo supports :ref:`three different kinds of javascript files<frontend/js_modules>`.
+    All these files are then processed (native JS modules are transformed into odoo
+    modules), then minified (if not in `debug=assets` :ref:`mode <frontend/framework/assets_debug_mode>`)
+    and concatenated. The result is then saved as a file attachment. These file
+    attachments are usually loaded via a `<script>` tag in the `<head>` part of
+    the page (as a static file).
+
+Style
+    Styling can be done with either `css` or `scss <https://sass-lang.com/>`_. Like
+    the javascript files, these files are processed (`scss` files are converted into
+    `css`), then minified (again, if not in `debug=assets` :ref:`mode <frontend/framework/assets_debug_mode>`)
+    and concatenated. The result is then saved as a file attachment. They are
+    then usually loaded via a `<link>` tag in the `<head>` part of the page (as
+    a static file).
+
+Template
+    Templates (static `xml` files) are handled in a different way: they are simply
+    read from the file system whenever they are needed, and concatenated.
+
+    Whenever the browser loads odoo, it calls the `/web/webclient/qweb/` controller
+    to fetch the :ref:`templates <reference/qweb>`.
+
+It is useful to know that in most cases, a browser only performs a request the
+first time it loads a page. This is because each of these assets are
+associated with a checksum, which is injected into the page source. The checksum
+is then added to the url, which means that it is possible to safely set the cache
+headers to a long period.
+
 Bundles
 =======
 
@@ -63,43 +98,9 @@ know:
 
 - `web.qunit_mobile_suite_tests`: mobile specific qunit testing code
 
-Asset types
-===========
 
-There are three different asset types: code (`js` files), style (`css` or `scss`
-files) and templates (`xml` files).
-
-Code
-    Odoo supports :ref:`three different kinds of javascript files<frontend/js_modules>`.
-    All these files are then processed (native JS modules are transformed into odoo
-    modules), then minified (if not in `debug=assets` :ref:`mode <frontend/framework/assets_debug_mode>`)
-    and concatenated. The result is then saved as a file attachment. These file
-    attachments are usually loaded via a `<script>` tag in the `<head>` part of
-    the page (as a static file).
-
-Style
-    Styling can be done with either `css` or `scss <https://sass-lang.com/>`_. Like
-    the javascript files, these files are processed (`scss` files are converted into
-    `css`), then minified (again, if not in `debug=assets` :ref:`mode <frontend/framework/assets_debug_mode>`)
-    and concatenated. The result is then saved as a file attachment. They are
-    then usually loaded via a `<link>` tag in the `<head>` part of the page (as
-    a static file).
-
-Template
-    Templates (static `xml` files) are handled in a different way: they are simply
-    read from the file system whenever they are needed, and concatenated.
-
-    Whenever the browser loads odoo, it calls the `/web/webclient/qweb/` controller
-    to fetch the :ref:`templates <reference/qweb>`.
-
-It is useful to know that in most cases, a browser only performs a request the
-first time it loads a page. This is because each of these assets are
-associated with a checksum, which is injected into the page source. The checksum
-is then added to the url, which means that it is possible to safely set the cache
-headers to a long period.
-
-Operations on asset bundles
-===========================
+Operations
+----------
 
 Typically, handling assets is simple: you just need to add some new files
 to a frequently used bundle like `assets_common` or `assets_backend`. But there are other operations
@@ -111,7 +112,7 @@ in manifests higher up in the hierarchy or in ``ir.asset`` records with a lower
 sequence.
 
 `append`
---------
+~~~~~~~~
 
 This operation adds one or multiple file(s). Since it is the most common
 operation, it can be done by simply using the file name:
@@ -127,7 +128,7 @@ glob pattern at the end of the bundle. Obviously, the pattern may also be direct
 a single file path.
 
 `prepend`
----------
+~~~~~~~~~
 
 Add one or multiple file(s) at the beginning of the bundle.
 
@@ -142,7 +143,7 @@ syntax: `('prepend', <path>)`.
   ],
 
 `before`
---------
+~~~~~~~~
 
 Add one or multiple file(s) before a specific file.
 
@@ -158,7 +159,7 @@ file. It is declared by replacing the normal path with a 3-element tuple
   ],
 
 `after`
--------
+~~~~~~~
 
 Add one or multiple file(s) after a specific file.
 
@@ -173,7 +174,7 @@ It is declared by replacing the normal path with a 3-element tuple
   ],
 
 `include`
----------
+~~~~~~~~~
 
 Use nested bundles.
 
@@ -189,7 +190,7 @@ specify the sub bundle as a pair `('include', <bundle>)` like this:
   ],
 
 `remove`
---------
+~~~~~~~~
 
 Remove one or multiple file(s).
 
@@ -204,7 +205,7 @@ can be done using the `remove` directive by specifying a pair
   ],
 
 `replace`
----------
+~~~~~~~~~
 
 Replace an asset file with one or multiple file(s).
 
@@ -220,7 +221,7 @@ the `replace` directive, using a 3-element tuple `('replace', <target>, <path>)`
 
 
 Loading order
-=============
+-------------
 
 The order in which assets are loaded is sometimes critical and must be deterministic,
 mostly for stylesheets priorities and setup scripts. Assets in Odoo are processed
@@ -235,7 +236,7 @@ as follows:
 
 #. All modules declaring assets for said bundle in their manifest apply their
    assets operations to this list. This is done following the order of modules dependencies
-   (e.g. `web` assets is processed before 'website'). If a directive tries to add
+   (e.g. `web` assets is processed before `website`). If a directive tries to add
    a file already present in the list, nothing is done for that file. In other word,
    only the first occurrence of a file is kept in the list.
 
@@ -267,8 +268,8 @@ in the list before all the others included in the glob.
 
 .. _frontend/assets/lazy_loading:
 
-Lazy loading assets
-===================
+Lazy loading
+============
 
 It is sometimes useful to load files and/or asset bundles dynamically, for
 example to only load a library once it is needed. To do that, the Odoo framework
