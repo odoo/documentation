@@ -23,12 +23,12 @@ remove the "Apps" filter and search for "POS Six".
 .. image:: media/six_01.png
     :align: center
 
-Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`,
-Create a new payment method for SIX, select the payment terminal option
-"SIX without IoT Box", and enter your payment terminal IP address.
+Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`, create a new payment
+method for SIX, select the appropriate journal, select *SIX* in the **Use a Payment Terminal**
+field, then enter your payment terminal IP address.
 
-.. image:: media/six_02.png
-    :align: center
+.. note::
+   The journal's type must be *bank* to select a payment terminal.
 
 Pay with a Payment Terminal
 ===========================
