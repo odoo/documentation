@@ -84,7 +84,7 @@ and each of them represents a mode of visualization. Some examples are: *form*, 
 What is a Menu?
 ---------------
 
-A **Menu** is a button that executes and action. In Odoo Studio, to create menus (models) and
+A **Menu** is a button that executes an action. In Odoo Studio, to create menus (models) and
 rearrange their hierarchy, click on *Edit Menu*.
 
 .. image:: media/edit_menu.png
