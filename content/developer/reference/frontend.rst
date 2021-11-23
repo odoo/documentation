@@ -14,6 +14,7 @@ Frontend
     frontend/registries
     frontend/services
     frontend/hooks
+    frontend/fields
     frontend/patching_code
     frontend/javascript_cheatsheet
     frontend/javascript_reference
