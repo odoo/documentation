@@ -58,38 +58,43 @@ extension_dir = Path('extensions')
 sys.path.insert(0, str(extension_dir.absolute()))
 
 # Search for the directory of odoo sources to know whether autodoc should be used on the dev doc
-odoo_dir = Path('odoo')
+odoo_sources_candidate_dirs = (Path('odoo'), Path('../odoo'))
+odoo_sources_dirs = [
+    d for d in odoo_sources_candidate_dirs if d.is_dir() and (d / 'odoo-bin').exists()
+]
 odoo_dir_in_path = False
-if not odoo_dir.is_dir():
-    parent_odoo_dir = Path('../odoo')
-    if parent_odoo_dir.is_dir():
-        _logger.info('Using parent dir to find odoo sources')
-        odoo_dir = parent_odoo_dir
-if not odoo_dir.is_dir():
+
+if not odoo_sources_dirs:
     _logger.warning(
-        f"Could not find Odoo sources directory at {odoo_dir.absolute()}.\n"
-        f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
-        f"In order to fully build the 'Developer' documentation, clone the repository with "
-        f"`git clone https://github.com/odoo/odoo` or create a symbolink link."
+        "Could not find Odoo sources directory in neither of the following folders:\n"
+        "%(dir_list)s\n"
+        "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
+        "In order to fully build the 'Developer' documentation, clone the repository with "
+        "`git clone https://github.com/odoo/odoo` or create a symbolic link.",
+        {'dir_list': '\n'.join([f'\t- {d.resolve()}' for d in odoo_sources_candidate_dirs])},
     )
 else:
-    sys.path.insert(0, str(odoo_dir.absolute()))
-    if sys.version_info < (3, 7) and sys.version_info > (3, 6):
-        # running odoo needs python 3.7 min but monkey patch version_info to be
-        # able to build the doc in python 3.6
+    odoo_dir = odoo_sources_dirs[0].resolve()
+    sys.path.insert(0, str(odoo_dir))
+    if (3, 6) < sys.version_info < (3, 7):
+        # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6
         sys.version_info = (3, 7, 0)
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
     odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
     if release != odoo_version:
         _logger.warning(
-            f"Found Odoo sources directory but with version '{odoo_version}' incompatible with "
-            f"documentation version '{version}'.\n"
-            f"The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
-            f"In order to fully build the 'Developer' documentation, checkout the matching branch"
-            f" with `cd odoo && git checkout {version}`."
+            "Found Odoo sources in %(directory)s but with version '%(odoo_version)s' incompatible "
+            "with documentation version '%(doc_version)s'.\n"
+            "The 'Developer' documentation will be built but autodoc directives will be skipped.\n"
+            "In order to fully build the 'Developer' documentation, checkout the matching branch"
+            " with `cd odoo && git checkout %(doc_version)s`.",
+            {'directory': odoo_dir, 'odoo_version': odoo_version, 'doc_version': version},
         )
     else:
-        _logger.info(f"Found Odoo sources directory matching documentation version {release}.")
+        _logger.info(
+            "Found Odoo sources in %(directory)s matching documentation version '%(version)s'.",
+            {'directory': odoo_dir, 'version': release},
+        )
         odoo_dir_in_path = True
 
 # The Sphinx extensions to use, as module names.
