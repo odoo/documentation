@@ -1015,7 +1015,7 @@ take the following attributes:
     * ``plan``: If enabled and ``edit`` enabled, a "magnifying glass" button will be displayed
       on time slots to plan unassigned records into that time slot.
 
-    .. admonition:: Example
+    .. example::
 
         When you do not want to create records on the gantt view and the beginning and end
         dates are required on the model, the planning feature should be disabled
