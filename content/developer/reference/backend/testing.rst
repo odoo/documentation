@@ -17,7 +17,8 @@ tests
 Testing Python code
 ===================
 
-Odoo provides support for testing modules using unittest.
+Odoo provides support for testing modules using `Python's unittest library
+<https://docs.python.org/3/library/unittest.html>`_.
 
 To write tests, simply define a ``tests`` sub-package in your module, it will
 be automatically inspected for test modules. Test modules should have a name
