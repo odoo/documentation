@@ -17,7 +17,7 @@ tests
 Testing Python code
 ===================
 
-Odoo provides support for testing modules using unittest.
+Odoo provides support for testing modules using Python `unittest`_.
 
 To write tests, simply define a ``tests`` sub-package in your module, it will
 be automatically inspected for test modules. Test modules should have a name
@@ -664,3 +664,4 @@ the needed data generators.
 .. _mock server: https://github.com/odoo/odoo/blob/51ee0c3cb59810449a60dae0b086b49b1ed6f946/addons/web/static/tests/helpers/mock_server.js
 .. _qunit assertions: https://github.com/odoo/odoo/blob/51ee0c3cb59810449a60dae0b086b49b1ed6f946/addons/web/static/tests/helpers/qunit_asserts.js
 .. _createView: https://github.com/odoo/odoo/blob/51ee0c3cb59810449a60dae0b086b49b1ed6f946/addons/web/static/tests/helpers/test_utils_create.js#L267
+.. _unittest: https://docs.python.org/3/library/unittest.html
