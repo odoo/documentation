@@ -26,7 +26,7 @@ Integrating messaging features to your model is extremely easy. Simply inheritin
 the ``mail.thread`` model and adding the messaging fields (and their appropriate
 widgets) to your form view will get you up and running in no time.
 
-.. admonition:: Example
+.. example::
 
     Let's create a simplistic model representing a business trip. Since organizing
     this kind of trip usually involves a lot of people and a lot of discussion, let's
@@ -200,7 +200,7 @@ The ``mail`` module adds a powerful tracking system on fields, allowing you
 to log changes to specific fields in the record's chatter. To add tracking
 to a field, simple set the tracking attribute to True.
 
-.. admonition:: Example
+.. example::
 
     Let's track changes on the name and responsible of our business trips:
 
@@ -272,7 +272,7 @@ can override the ``_track_subtype()`` function:
     :returns: a subtype's full external id or False if no subtype is triggered
 
 
-.. admonition:: Example
+.. example::
 
     Let's add a ``state`` field on our example class and trigger a notification
     with a specific subtype when this field change values.
@@ -422,7 +422,7 @@ The urls in the actions list can be generated automatically by calling the
     :returns: link of the type selected for the record
     :rtype: str
 
-.. admonition:: Example
+.. example::
 
     Let's add a custom button to the Business Trip state change notification;
     this button will reset the state to Draft and will be only visible to a member
@@ -609,7 +609,7 @@ which means that while the alias is stored in another table, you have
 access to all these fields directly from your parent object. This allows
 you to make your alias easily configurable from the record's form view.
 
-.. admonition:: Example
+.. example::
 
     Let's add aliases on our business trip class to create expenses on the fly via
     e-mail.
@@ -738,7 +738,7 @@ and the specific widgets to display them (via the field ``activity_ids``) in the
 view and kanban view of your records (``mail_activity`` and ``kanban_activity``
 widgets, respectively).
 
-.. admonition:: Example
+.. example::
 
     Organizing a business trip is a tedious process and tracking needed activities
     like ordering plane tickets or a cab for the airport could be useful. To do so,
