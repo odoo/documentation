@@ -1,10 +1,12 @@
 import re
 import os
+import shutil
 import sys
 from pathlib import Path
 
 import docutils
 from pygments.lexers import JsonLexer, XmlLexer
+from sphinx.ext import graphviz
 from sphinx.util import logging
 import sphinx
 
@@ -156,6 +158,7 @@ else:
     extensions += [
         'autodoc_placeholder',
     ]
+extensions.append('sphinx.ext.graphviz' if shutil.which('dot') else 'graphviz_placeholder')
 
 todo_include_todos = False
 
