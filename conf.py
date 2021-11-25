@@ -3,6 +3,7 @@ import os
 import sys
 from pathlib import Path
 
+import docutils
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.util import logging
 import sphinx
@@ -53,6 +54,11 @@ add_function_parentheses = True
 
 #=== Extensions configuration ===#
 
+source_read_replace_vals = {
+    'GITHUB_PATH': f'https://github.com/odoo/odoo/blob/{version}',
+    'GITHUB_ENT_PATH': f'https://github.com/odoo/enterprise/blob/{version}',
+}
+
 # Add extensions directory to PYTHONPATH
 extension_dir = Path('extensions')
 sys.path.insert(0, str(extension_dir.absolute()))
@@ -75,6 +81,8 @@ if not odoo_sources_dirs:
     )
 else:
     odoo_dir = odoo_sources_dirs[0].resolve()
+    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
+    source_read_replace_vals['ODOO_ABSPATH'] = str(odoo_dir)
     sys.path.insert(0, str(odoo_dir))
     if (3, 6) < sys.version_info < (3, 7):
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6
@@ -265,6 +273,22 @@ latex_logo = 'static/img/odoo_logo.png'
 # If true, show URL addresses after external links.
 latex_show_urls = 'True'
 
+# https://github.com/sphinx-doc/sphinx/issues/4054#issuecomment-329097229
+def source_read_replace(app, docname, source):
+    """Substitute parts of strings with computed values.
+
+    Since the RST substitution is not working everywhere, i.e. in directives'
+    options, we need to be able to input those values when reading the sources.
+    This is using the config `source_read_replace_vals`, mapping a name to its
+    replacement. This will look for the name surrounded by curly braces in the source.
+
+    Meant to be connected to the `source-read` event.
+    """
+    result = source[0]
+    for key in app.config.source_read_replace_vals:
+        result = result.replace(f"{{{key}}}", app.config.source_read_replace_vals[key])
+    source[0] = result
+
 
 def setup(app):
     # Generate all alternate URLs for each document
@@ -273,11 +297,33 @@ def setup(app):
     app.add_config_value('versions', None, 'env')
     app.add_config_value('languages', None, 'env')
     app.add_config_value('is_remote_build', None, 'env')  # Whether the build is remotely deployed
+    app.add_config_value('source_read_replace_vals', {}, 'env')
+    app.connect('source-read', source_read_replace)
 
     app.add_lexer('json', JsonLexer)
     app.add_lexer('xml', XmlLexer)
 
     app.connect('html-page-context', _generate_alternate_urls)
+
+    # Add a `condition` option on directives to ignore them based on config values
+    app.add_config_value('odoo_dir_in_path', None, 'env')
+    def context_eval(expr):
+        return eval(expr, {confval.name: confval.value for confval in app.config})
+
+    def patch(to_patch):
+        to_patch.option_spec['condition'] = context_eval
+        original_run = to_patch.run
+        def new_run(self):
+            if not self.options.get('condition', True):
+                return []
+            return original_run(self)
+        to_patch.run = new_run
+
+    for to_patch in (
+        sphinx.directives.code.LiteralInclude,
+        docutils.parsers.rst.directives.tables.CSVTable,
+    ):
+        patch(to_patch)
 
 
 def _generate_alternate_urls(app, pagename, templatename, context, doctree):
