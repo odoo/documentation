@@ -19,6 +19,8 @@ def setup(app):
     directives.register_directive('autodata', PlaceHolder)
     directives.register_directive('automethod', PlaceHolder)
     directives.register_directive('autoattribute', PlaceHolder)
+    directives.register_directive('autofield', PlaceHolder)
+    directives.register_directive('automodel', PlaceHolder)
 
     return {
         'parallel_read_safe': True,
