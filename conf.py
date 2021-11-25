@@ -84,6 +84,8 @@ else:
     source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
     source_read_replace_vals['ODOO_ABSPATH'] = str(odoo_dir)
     sys.path.insert(0, str(odoo_dir))
+    import odoo.addons
+    odoo.addons.__path__.append(str(odoo_dir) + '/addons')
     if (3, 6) < sys.version_info < (3, 7):
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6
         sys.version_info = (3, 7, 0)
@@ -106,12 +108,17 @@ else:
         )
         odoo_dir_in_path = True
 
+# Mapping between odoo models related to master data and the declaration of the
+# data. This is used to point users to available xml_ids when giving values for
+# a field with the autodoc_field extension.
+model_references = {
+    'res.country': 'odoo/addons/base/data/res_country_data.xml',
+    'res.currency': 'odoo/addons/base/data/res_currency_data.xml',
+}
+
 # The Sphinx extensions to use, as module names.
 # They can be extensions coming with Sphinx (named 'sphinx.ext.*') or custom ones.
 extensions = [
-    # Parse Python docstrings (autodoc, automodule, autoattribute directives)
-    'sphinx.ext.autodoc' if odoo_dir_in_path else 'autodoc_placeholder',
-
     # Link sources in other projects (used to build the reference doc)
     'sphinx.ext.intersphinx',
 
@@ -141,6 +148,13 @@ if odoo_dir_in_path:
     extensions += [
         'sphinx.ext.linkcode',
         'github_link',
+        # Parse Python docstrings (autodoc, automodule, autoattribute directives)
+        'sphinx.ext.autodoc',
+        'autodoc_field',
+    ]
+else:
+    extensions += [
+        'autodoc_placeholder',
     ]
 
 todo_include_todos = False
