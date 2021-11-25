@@ -149,10 +149,9 @@ This means that the account codes the trailing zeroes are right-trimmed, and tha
 between the account codes in the FEC file and the ones already existing in Odoo is performed only on
 the first six digits of the codes.
 
-.. admonition:: Example
-
-    The account code `65800000` in the file is matched against an existing `658000` account in
-    Odoo, and that account is used instead of creating a new one.
+.. example::
+   The account code `65800000` in the file is matched against an existing `658000` account in Odoo,
+   and that account is used instead of creating a new one.
 
 Reconcilable flag
 *****************
@@ -177,17 +176,17 @@ computed this way.
 
 The match is done with the left-most digits, starting by using all digits, then 3, then 2.
 
-.. admonition:: Example
+.. example::
 
-    +------------+------------+-----------------+---------------------+---------------------+
-    | Name       | Code       | Full comparison | 3-digits comparison | 2-digits comparison |
-    +============+============+=================+=====================+=====================+
-    | Template   | `400000`   | `400000`        | `400`               | `40`                |
-    +------------+------------+-----------------+---------------------+---------------------+
-    | CompteNum  | `40100000` | `40100000`      | `401`               | `40`                |
-    +------------+------------+-----------------+---------------------+---------------------+
-    | **Result** |            |                 |                     | Match **found**     |
-    +------------+------------+-----------------+---------------------+---------------------+
+   +------------+------------+-----------------+---------------------+---------------------+
+   | Name       | Code       | Full comparison | 3-digits comparison | 2-digits comparison |
+   +============+============+=================+=====================+=====================+
+   | Template   | `400000`   | `400000`        | `400`               | `40`                |
+   +------------+------------+-----------------+---------------------+---------------------+
+   | CompteNum  | `40100000` | `40100000`      | `401`               | `40`                |
+   +------------+------------+-----------------+---------------------+---------------------+
+   | **Result** |            |                 |                     | Match **found**     |
+   +------------+------------+-----------------+---------------------+---------------------+
 
 The type of the account is then flagged as *payable* and *reconcilable* as per the account template.
 
@@ -202,9 +201,8 @@ creating a new one.
 
 New journals have their name prefixed by the string ``FEC-``.
 
-.. admonition:: Example
-
-    `ACHATS` -> `FEC-ACHATS`
+.. example::
+   `ACHATS` -> `FEC-ACHATS`
 
 The journals are *not* archived, the user is entitled to handle them as he wishes.
 
@@ -233,24 +231,23 @@ moves and accounts:
     - A minimum of three moves is necessary for journal type identification.
     - A threshold of 70% of moves must correspond to a criteria for a journal type to be determined.
 
-.. admonition:: Example
+.. example::
+   Suppose we are analyzing the moves that share a certain `journal_id`.
 
-    Suppose we are analyzing the moves that share a certain `journal_id`
+   +------------------------------------------------------------+-------+------------+
+   | Moves                                                      | Count | Percentage |
+   +============================================================+=======+============+
+   | that have a sale account line and no purchase account line | 0     | 0          |
+   +------------------------------------------------------------+-------+------------+
+   | that have a purchase account line and no sale account line | 1     | 25%        |
+   +------------------------------------------------------------+-------+------------+
+   | that have a liquidity account line                         | 3     | **75%**    |
+   +------------------------------------------------------------+-------+------------+
+   | **Total**                                                  | 4     | 100%       |
+   +------------------------------------------------------------+-------+------------+
 
-    +------------------------------------------------------------+-------+------------+
-    | Moves                                                      | Count | Percentage |
-    +============================================================+=======+============+
-    | that have a sale account line and no purchase account line | 0     | 0          |
-    +------------------------------------------------------------+-------+------------+
-    | that have a purchase account line and no sale account line | 1     | 25%        |
-    +------------------------------------------------------------+-------+------------+
-    | that have a liquidity account line                         | 3     | **75%**    |
-    +------------------------------------------------------------+-------+------------+
-    | **Total**                                                  | 4     | 100%       |
-    +------------------------------------------------------------+-------+------------+
-
-    The journal `type` would be `bank`, because the bank moves percentage (75%)
-    exceeds the threshold (70%).
+   The journal `type` would be `bank`, because the bank moves percentage (75%) exceeds the threshold
+   (70%).
 
 Partners
 ********
@@ -299,9 +296,8 @@ One last attempt is made, grouping all lines from the same journal and date (`Jo
 `EcritureDate`). Should this grouping generate balanced moves (sum(credit) - sum(debit) = 0), then
 each different combination of journal and date creates a new move.
 
-.. admonition:: Example
-
-    `ACH` + `2021/05/01` --> new move on journal `ACH` with name `20210501`.
+.. example::
+   `ACH` + `2021/05/01` --> new move on journal `ACH` with name `20210501`.
 
 Should this attempt fail, the user is prompted an error message with all the move lines that are
 supposedly unbalanced.

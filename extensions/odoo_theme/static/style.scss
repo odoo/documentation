@@ -938,10 +938,25 @@ header.o_main_header {
                 border-color: $danger;
 
                 > .alert-title, > h3 {
-                    color: darken($brand-danger,20%);
+                    color: darken($brand-danger, 20%);
+
                     &:before {
                         content: '#{$i-danger}';
                     }
+                }
+            }
+
+            &.alert-example {
+                border-color: tint-color($doc_example, 30%);
+                background-color: tint-color($doc_example, 90%);
+                color: shade-color($doc_example, 35%);
+
+                > .alert-title, > h3 {
+                    color: shade-color($doc_example, 35%);
+                }
+
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-knowledge}';
                 }
             }
 
