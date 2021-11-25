@@ -128,7 +128,7 @@ Reference List
      - `datetime`
      - `datetime`
      - description...
-  * - :ref:`EmailField <frontend/fields/email_field>`
+   * - :ref:`EmailField <frontend/fields/email_field>`
      - `text`
      - `char`
      - display email addresses
@@ -425,7 +425,7 @@ StatInfoField
 - Supported types: `float`, `integer`
 
 
-.. _frontend/fields/status_field:
+.. _frontend/fields/statusbar_field:
 
 StatusBarField
 --------------
