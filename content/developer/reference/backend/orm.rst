@@ -174,7 +174,7 @@ into a compatible type:
 * :func:`~odoo.fields.Date.to_date` will convert to a :class:`datetime.date`
 * :func:`~odoo.fields.Datetime.to_datetime` will convert to a :class:`datetime.datetime`.
 
-.. admonition:: Example
+.. example::
 
     To parse date/datetimes coming from external sources::
 
@@ -860,7 +860,7 @@ Domain criteria can be combined using logical operators in *prefix* form:
         Individual criterion generally have a negative form (e.g. ``=`` ->
         ``!=``, ``<`` -> ``>=``) which is simpler than negating the positive.
 
-.. admonition:: Example
+.. example::
 
     To search for partners named *ABC*, from belgium or germany, whose language
     is not english::
