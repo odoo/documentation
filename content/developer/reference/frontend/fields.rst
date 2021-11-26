@@ -164,6 +164,10 @@ Reference List
      - `priority`
      - `selection`
      - description...
+   * - :ref:`ProgressBarField <frontend/fields/progress_bar_field>`
+     - `priority`
+     - `integer`, `float`
+     - display a progress bar
    * - :ref:`RadioField <frontend/fields/radio_field>`
      - `radio`
      - `many2one`, `selection`
@@ -384,6 +388,51 @@ PriorityField
 - Technical name: `priority`
 - Supported types: `selection`
 
+.. _frontend/fields/progress_bar_field:
+
+ProgressBarField
+----------------
+
+- Location: `@web/fields/progress_bar_field`
+- Technical name: `priority`
+- Supported types: `integer`, `float`
+
+The `ProgressBarField` component indicates a progress with a bar. It is a more visual way to
+indicate a form of progression. The progress value can be displayed in two ways, depending
+if a maximum value is set explicitly or not. In the first case, a ratio is shown. Otherwise,
+a percentage is shown instead.
+
+The main entry point to edit the value is the `editable` option. If you use a percentage, 
+you will edit the value and see the changes directly on the left progress bar.
+But if you use a ratio (with a maximum value), you will edit the values following the
+specific options that were given. By default, you will only edit the current value. But if 
+any of the specific options `edit_max_value` and/or the `edit_current_value` are set, then 
+you will only be able to edit those fields.
+
+It supports the following options:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - `editable`
+     - `boolean`
+     - optional. set if the value is editable
+   * - `edit_current_value`
+     - `boolean`
+     - optional. set if the current value is editable
+   * - `edit_max_value`
+     - `boolean`
+     - optional. set if the maximum value is editable
+   * - `current_value`
+     - `integer`, `float`
+     - required. this is the current value of the progress from the field that is present in the view
+   * - `max_value`
+     - `integer`, `float`
+     - optional. this value is used to set a maximum value from the field that is present in the view
 
 .. _frontend/fields/radio_field:
 
