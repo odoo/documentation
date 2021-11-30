@@ -8,5 +8,4 @@ Misc
     :titlesonly:
 
     misc/api
-    misc/i18n
     misc/other
