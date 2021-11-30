@@ -1,0 +1,73 @@
+digraph foo {
+  graph [
+    newrank=true,
+    overlap=false,
+  ];
+  node [
+    fontname="Ubuntu"
+    fontsize=10,
+    style="filled,setlinewidth(6)",
+    shape=box,
+    height=0.1,
+    width=0.1,
+  ];
+  edge [
+    fontsize=8,
+  ];
+  res_country[label="res.country", fillcolor=white, penwidth=1];
+  subgraph cluster_invoice {
+    style = filled;
+    label = "Invoices";
+    color = lightyellow;
+    node [style=filled, color=white];
+    account_move_line[label="account.move.line"]
+    account_tax[label="account.tax"]
+    account_tax_repartition_line[label="account.tax.repartition.line"];
+    account_account_tag[label="account.account.tag"];
+    account_move_line -> account_tax [label="tax_ids | tax_line_ids"];
+    account_move_line -> account_tax_repartition_line [label="tax_repartition_line_id"];
+    account_move_line -> account_account_tag [label="tag_ids"];
+    account_tax_repartition_line -> account_account_tag [label="tag_ids"];
+    account_tax -> account_tax_repartition_line [label="1 for base, 1..* for tax amount"];
+  }
+  subgraph cluster_reporting {
+    style = filled;
+    label = "Reporting";
+    color = mistyrose;
+    node [style=filled, color=white];
+    account_tax_report_line[label="account.tax.report.line"];
+    account_generic_tax_report[label="account.generic.tax.report"];
+    account_tax_report[label="account.tax.report"];
+    account_tax_report -> account_generic_tax_report [label="Calls and displays", dir=back];
+    account_tax_report -> account_tax_report_line [label="0..*"]
+  }
+  subgraph cluster_templates {
+    style = filled;
+    label = "Templates";
+    color = lightblue;
+    node [style=filled, color=white];
+    account_tax_template[label="account.tax.template"];
+    account_tax_repartition_line_template[label="account.tax.repartition.line.template"];
+    account_tax_template -> account_tax_repartition_line_template [label="1 for base, 1..* for tax amount"];
+  }
+  {
+    rank=same;
+    account_tax;
+    account_tax_repartition_line;
+    account_account_tag;
+    res_country;
+  }
+  {
+    rank=same;
+    account_tax_report;
+    account_tax_report_line;
+    account_tax_template;
+    account_tax_repartition_line_template;
+  }
+  account_tax -> account_tax_template [label="Creates when installing CoA", dir=back];
+  account_tax_repartition_line -> account_tax_repartition_line_template [label="Creates when installing CoA", dir=back];
+  account_tax_repartition_line_template -> account_account_tag [label="tag_ids"];
+  account_tax_report_line -> account_account_tag [label="Creates (+ and -)"];
+  account_tax_report -> res_country [label="0..1"];
+  account_account_tag -> res_country [label="0..1"];
+}
