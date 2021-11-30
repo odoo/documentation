@@ -114,6 +114,7 @@ else:
 # data. This is used to point users to available xml_ids when giving values for
 # a field with the autodoc_field extension.
 model_references = {
+    'account.account.type': 'addons/account/data/data_account_type.xml',
     'res.country': 'odoo/addons/base/data/res_country_data.xml',
     'res.currency': 'odoo/addons/base/data/res_currency_data.xml',
 }
