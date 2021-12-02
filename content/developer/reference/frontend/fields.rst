@@ -96,6 +96,10 @@ Reference List
      - Technical name
      - Type
      - Short Description
+   * - :ref:`BinaryField <frontend/fields/binary_field>`
+     - `binary`
+     - `binary`
+     - transfer files with the client
    * - :ref:`BooleanFavoriteField <frontend/fields/boolean_favorite_field>`
      - `boolean_favorite`
      - `boolean`
@@ -197,6 +201,18 @@ Reference List
      - `char`
      - display URLs
 
+
+.. _frontend/fields/binary_field:
+
+BinaryField
+----------
+
+- Location: `@web/fields/image_field`
+- Technical name: `image`
+- Supported types: `binary`
+
+The purpose of this component is to upload files to the web client. In readonly
+mode, you may be able to download the file available from the field.
 
 .. _frontend/fields/boolean_favorite_field:
 
