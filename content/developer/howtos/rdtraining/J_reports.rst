@@ -35,7 +35,7 @@ There is no strict rule for the file names or where they are located, but these 
 typically stored in 2 separate files within a ``report`` folder in the top level of your module's
 directory. If a module has many or multiple long report templates, then they are often organized in
 a logical manner across different files named after the report(s) they contain. All actions
-for the reports are usually stored in the same file ending with ``_report_views.xml`` regardless of the
+for the reports are usually stored in the same file ending with ``_reports.xml`` regardless of the
 number of reports it contains.
 
 Therefore it is expected that your work tree will look something like:
@@ -47,8 +47,8 @@ Therefore it is expected that your work tree will look something like:
   │   ├── *.py
   │   └── __init__.py
   ├── report
-  │   ├── estate_report_templates.xml
-  │   └── estate_report_views.xml
+  │   ├── estate_property_templates.xml
+  │   └── estate_property_reports.xml
   ├── security
   │   └── ir.model.access.csv
   ├── views
