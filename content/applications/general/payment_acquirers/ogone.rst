@@ -5,8 +5,8 @@ Ogone
 `Ogone <https://www.ingenico.com/>`_, also known as **Ingenico Payment Services** is a France-based
 company that provides the technology involved in secure electronic transactions.
 
-Configuration
-=============
+Configuration on Odoo
+=====================
 
 .. seealso::
    - :ref:`payment_acquirers/add_new`
@@ -64,6 +64,25 @@ API key as you'll not be allowed to get it later without generating a new one.
 .. important::
    If you are trying Ogone as a test, with the Test Account, change the **State** to *Test Mode*. We
    recommend doing this on a test Odoo database, rather than on your main database.
+
+Configuration on Ogone
+======================
+
+Now that Odoo can communicate with Ogone, we need to make sure that Ogone can send information to
+your database.
+
+To do so, log into your Ogone account and go to :menuselection:`Configuration --> Technical
+Information --> Transaction feedback --> Direct HTTP server-to-server request`.
+
+Then, fill the form with the following data:
+
+- In the **Timing of the request**, select *Online but switch to a deferred request when the online
+  requests fail*.
+- | Enter your Odoo databases URL in both **URLs** followed by ``/payment/ogone/return``.
+  | For example: ``https://yourcompany.odoo.com/payment/ogone/return``
+- Select *POST* for the **Request Method**.
+
+Save, and you are ready to go!
 
 .. seealso::
    - :doc:`../payment_acquirers`
