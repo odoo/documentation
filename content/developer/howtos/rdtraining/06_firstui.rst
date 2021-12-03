@@ -56,7 +56,7 @@ Actions
 
     .. code-block:: text
 
-        INFO rd-demo odoo.modules.loading: loading estate/data/estate_property_views.xml
+        INFO rd-demo odoo.modules.loading: loading estate/views/estate_property_views.xml
 
 Actions can be triggered in three ways:
 
