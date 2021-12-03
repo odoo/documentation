@@ -80,7 +80,8 @@ else:
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6
         sys.version_info = (3, 7, 0)
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
-    odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
+    odoo_version = odoo_release.version.replace('~', '-')  # Change saas~XX.Y to saas-XX.Y
+    odoo_version = 'master' if 'alpha' in odoo_release.version else odoo_version
     if release != odoo_version:
         _logger.warning(
             "Found Odoo sources in %(directory)s but with version '%(odoo_version)s' incompatible "
