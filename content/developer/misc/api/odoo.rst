@@ -99,9 +99,9 @@ parameters
     want to use:
 
     * Log in your instance with an administrator account
-    * Go to :menuselection:`Settings --> Users --> Users`
+    * Go to :menuselection:`Settings --> Users & Companies --> Users`
     * Click on the user you want to use for XML-RPC access
-    * Click the :guilabel:`Change Password` button
+    * Click on :guilabel:`Action` and select :guilabel:`Change Password`
     * Set a :guilabel:`New Password` value then click
       :guilabel:`Change Password`.
 
