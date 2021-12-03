@@ -36,8 +36,8 @@ A reference to the rendered :file:`prices.html` and :file:`variants.html` could 
 
 #. Absolute:
 
-   - ``https://odoo.com/documentation/master/applications/sales/sales/products_prices/prices.html``
-   - ``https://odoo.com/documentation/master/applications/sales/sales/products_prices/products/variants.html``
+   - ``https://odoo.com/documentation/saas-15.1/applications/sales/sales/products_prices/prices.html``
+   - ``https://odoo.com/documentation/saas-15.1/applications/sales/sales/products_prices/products/variants.html``
 
 #. Relative:
 

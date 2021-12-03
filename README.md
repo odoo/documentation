@@ -4,11 +4,11 @@
 
 ### Requirements
 
-- [Git](https://www.odoo.com/documentation/master/contributing/documentation.html#install-git)
-- [Python 3.7 or 3.8](https://www.odoo.com/documentation/master/contributing/documentation.html#python)
-- Python dependencies listed in the file [`requirements.txt`](https://github.com/odoo/documentation/tree/master/requirements.txt).
-- [Make](https://www.odoo.com/documentation/master/contributing/documentation.html#make)
-- A local copy of the [odoo/odoo repository in master](https://github.com/odoo/odoo/tree/master) (Optional)
+- [Git](https://www.odoo.com/documentation/saas-15.1/contributing/documentation.html#install-git)
+- [Python 3.7 or 3.8](https://www.odoo.com/documentation/saas-15.1/contributing/documentation.html#python)
+- Python dependencies listed in the file [`requirements.txt`](https://github.com/odoo/documentation/tree/saas-15.1/requirements.txt).
+- [Make](https://www.odoo.com/documentation/saas-15.1/contributing/documentation.html#make)
+- A local copy of the [odoo/odoo repository in saas-15.1](https://github.com/odoo/odoo/tree/saas-15.1) (Optional)
 
 ### Instructions
 
@@ -23,7 +23,7 @@
 
 2. Open the file `documentation/_build/html/index.html` in your web browser to display the render.
 
-3. See [this guide](https://www.odoo.com/documentation/master/contributing/documentation.html#preview-your-changes)
+3. See [this guide](https://www.odoo.com/documentation/saas-15.1/contributing/documentation.html#preview-your-changes)
    for more detailed instructions.
 
 Optional: to fully build the developer documentation with inline docstrings for documented Python
@@ -34,7 +34,7 @@ be shown.
 ## Contribute to the documentation
 
 For contributions to the content of the documentation, please refer to the
-[Introduction Guide](https://www.odoo.com/documentation/master/contributing/documentation.html).
+[Introduction Guide](https://www.odoo.com/documentation/saas-15.1/contributing/documentation.html).
 
 To **report a content issue**, **request new content** or **ask a question**, use the
 [repository's issue tracker](https://github.com/odoo/documentation-user/issues) as usual.
