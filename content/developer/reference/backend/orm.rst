@@ -84,25 +84,24 @@ value::
 AbstractModel
 -------------
 
-.. autoclass:: odoo.models.AbstractModel()
+.. autoclass:: odoo.models.AbstractModel
 
 Model
 -----
 
-.. autoclass:: odoo.models.Model()
+.. autoclass:: odoo.models.Model
 
-      .. autoattribute:: _auto
-      .. autoattribute:: _abstract
-      .. autoattribute:: _transient
+   .. autoattribute:: _auto
+   .. autoattribute:: _abstract
 
 TransientModel
 --------------
 
-.. autoclass:: odoo.models.TransientModel()
+.. autoclass:: odoo.models.TransientModel
+   :members: _transient_vacuum
 
-      .. autoattribute:: _auto
-      .. autoattribute:: _abstract
-      .. autoattribute:: _transient
+   .. autoattribute:: _transient_max_count
+   .. autoattribute:: _transient_max_hours
 
 .. _reference/fields:
 .. _reference/orm/fields:
