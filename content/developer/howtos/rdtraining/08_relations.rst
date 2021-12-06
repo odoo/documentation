@@ -258,7 +258,7 @@ exercise: an offer is always accessed through a property.
 Second, despite the fact that the ``property_id`` field is required, we did not include it in the
 views. How does Odoo know which property our offer is linked to? Well that's part of the
 magic of using the Odoo framework: sometimes things are defined implicitly. However, We recommand that the many2one is created Manually. When we create
-a record through a one2many field, the corresponding many2one is created as well.
+a record through a one2many field, the corresponding many2one is needed to be created as well.
 
 Still alive? This chapter is definitely not the easiest one. It introduced a couple of new concepts
 while relying on everything that was introduced before. The
