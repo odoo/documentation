@@ -224,8 +224,9 @@ inverse.
 
 By convention, one2many fields have the ``_ids`` suffix. They behave as a list of records, meaning
 that accessing the data must be done in a loop::
+self: the current class name.
 
-    for test in partner.test_ids:
+    for test in self.test_ids:
         print(test.name)
 
 .. danger::
