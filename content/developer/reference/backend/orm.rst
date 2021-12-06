@@ -1,4 +1,3 @@
-
 .. _reference/orm:
 
 =======
@@ -388,12 +387,14 @@ dependencies are modified.
       f_ids = fields.Many2many(related="m2m_ids.m2m_ids")
       g_ids = fields.One2many(related="o2m_ids.o2m_ids")
 
+.. currentmodule:: odoo.models
+
 .. _reference/fields/automatic:
 
 Automatic fields
 ----------------
 
-.. attribute:: id
+.. attribute:: Model.id
 
     Identifier :class:`field <odoo.fields.Field>`
 
@@ -414,20 +415,20 @@ not useful.
 By default, :attr:`~odoo.models.BaseModel._log_access` is set to the same value
 as :attr:`~odoo.models.BaseModel._auto`
 
-.. attribute:: create_date
+.. attribute:: Model.create_date
 
     Stores when the record was created, :class:`~odoo.fields.Datetime`
 
-.. attribute:: create_uid
+.. attribute:: Model.create_uid
 
     Stores *who* created the record, :class:`~odoo.fields.Many2one` to a
     ``res.users``.
 
-.. attribute:: write_date
+.. attribute:: Model.write_date
 
     Stores when the record was last updated, :class:`~odoo.fields.Datetime`
 
-.. attribute:: write_uid
+.. attribute:: Model.write_uid
 
     Stores who last updated the record, :class:`~odoo.fields.Many2one` to a
     ``res.users``.
@@ -444,20 +445,26 @@ A few field names are reserved for pre-defined behaviors beyond that of
 automated fields. They should be defined on a model when the related
 behavior is desired:
 
-.. attribute:: name
+.. attribute:: Model.name
 
-  default value for :attr:`~odoo.models.BaseModel._rec_name`, used to
-  display records in context where a representative "naming" is
-  necessary.
+   default value for :attr:`~odoo.models.BaseModel._rec_name`, used to
+   display records in context where a representative "naming" is
+   necessary.
 
-  :class:`~odoo.fields.Char`
+   :class:`~odoo.fields.Char`
 
-.. attribute:: active
+.. attribute:: Model.active
 
   toggles the global visibility of the record, if ``active`` is set to
   ``False`` the record is invisible in most searches and listing.
 
   :class:`~odoo.fields.Boolean`
+
+  Special methods:
+
+  .. automethod:: Model.toggle_active
+  .. automethod:: Model.action_archive
+  .. automethod:: Model.action_unarchive
 
 .. .. attribute:: sequence
 ..
@@ -466,14 +473,14 @@ behavior is desired:
 ..
 ..   :class:`~odoo.fields.Integer`
 
-.. attribute:: state
+.. attribute:: Model.state
 
   lifecycle stages of the object, used by the ``states`` attribute on
   :class:`fields <odoo.fields.Field>`.
 
   :class:`~odoo.fields.Selection`
 
-.. attribute:: parent_id
+.. attribute:: Model.parent_id
 
   default_value of :attr:`~._parent_name`, used to organize
   records in a tree structure and enables the ``child_of``
@@ -481,7 +488,7 @@ behavior is desired:
 
   :class:`~odoo.fields.Many2one`
 
-.. attribute:: parent_path
+.. attribute:: Model.parent_path
 
   When :attr:`~._parent_store` is set to True, used to store a value reflecting
   the tree structure of :attr:`~._parent_name`, and to optimize the operators
@@ -490,7 +497,7 @@ behavior is desired:
 
   :class:`~odoo.fields.Char`
 
-.. attribute:: company_id
+.. attribute:: Model.company_id
 
   Main field name used for Odoo multi-company behavior.
 
