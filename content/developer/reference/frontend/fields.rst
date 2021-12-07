@@ -99,7 +99,7 @@ Reference List
    * - :ref:`BinaryField <frontend/fields/binary_field>`
      - `binary`
      - `binary`
-     - transfer files with the client
+     - transfer files in the client
    * - :ref:`BooleanFavoriteField <frontend/fields/boolean_favorite_field>`
      - `boolean_favorite`
      - `boolean`
@@ -205,14 +205,32 @@ Reference List
 .. _frontend/fields/binary_field:
 
 BinaryField
-----------
+-----------
 
 - Location: `@web/fields/image_field`
 - Technical name: `image`
 - Supported types: `binary`
 
 The purpose of this component is to upload files to the web client. In readonly
-mode, you may be able to download the file available from the field.
+mode, you are able to download the file if one is available from the field. Otherwise,
+the field indicates that no file is available. 
+
+When a file has been uploaded, the field let you replace the file by clicking on the
+field or its dedicated `edit` button. A button lets you delete the uploaded file.
+
+It supports the following options:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - `filename`
+     - `string`
+     - optional. used to display a name in the field. It can be the name of
+       a value from the record, or any value given as a `string`.
 
 .. _frontend/fields/boolean_favorite_field:
 
@@ -445,10 +463,12 @@ It supports the following options:
      - optional. set if the maximum value is editable
    * - `current_value`
      - `integer`, `float`
-     - required. this is the current value of the progress from the field that is present in the view
+     - required. this is the current value of the progress. It can be the name of another field 
+       that is present in the view, or any numerical value set directly.
    * - `max_value`
      - `integer`, `float`
-     - optional. this value is used to set a maximum value from the field that is present in the view
+     - optional. this value is used to set a maximum value. It can be the name of another field 
+       that is present in the view, or any numerical value set directly.
 
 .. _frontend/fields/radio_field:
 
