@@ -956,10 +956,6 @@ Generic structure
 Gantt
 -----
 
-.. raw:: html
-
-   <span class="badge" style="background-color:#AD5E99">Enterprise feature</span>
-
 Gantt views appropriately display Gantt charts (for scheduling).
 
 The root element of gantt views is ``<gantt/>``, it has no children but can
