@@ -99,7 +99,7 @@ Reference List
    * - :ref:`BinaryField <frontend/fields/binary_field>`
      - `binary`
      - `binary`
-     - transfer files with the client
+     - transfer files in the client
    * - :ref:`BooleanFavoriteField <frontend/fields/boolean_favorite_field>`
      - `boolean_favorite`
      - `boolean`
@@ -205,14 +205,39 @@ Reference List
 .. _frontend/fields/binary_field:
 
 BinaryField
-----------
+-----------
 
 - Location: `@web/fields/image_field`
 - Technical name: `image`
 - Supported types: `binary`
 
 The purpose of this component is to upload files to the web client. In readonly
-mode, you may be able to download the file available from the field.
+mode, you are able to download the file if one is available from the field. Otherwise,
+the field indicates that no file is available. 
+
+When a file has been uploaded, the field let you replace the file by clicking on the
+field or its dedicated `edit` button. A button lets you delete the uploaded file.
+
+A `filename` attribute can be added, to display a name in the field. It can be the name of
+a value from the record, or any value given as a `string`.
+
+It supports the following options:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+   * - `accepted_file_extensions`
+     - `string`
+     - optional. list of files accepted by the input.
+
+.. code-block:: xml
+
+    <field name="my_field" widget="binary" filename="Your document" options="{'accepted_file_extensions': '.dat,.bin'}" />
+
 
 .. _frontend/fields/boolean_favorite_field:
 
@@ -317,6 +342,11 @@ The `EmailField` component represents a textual value containing an email addres
 is an input with the `email` type in edit mode, and a link with an `href` in readonly mode with 
 the `mailto:` prefix. It opens an email application if available whenever a click is made by the user.
 
+.. code-block:: xml
+
+    <field name="my_field" widget="email" />
+
+
 .. _frontend/fields/handle_field:
 
 HandleField
@@ -381,6 +411,11 @@ decimal (e.g. `0.5671` would be converted to `56.7%`). When the user enters the 
 value is still visible as a percentage, but the inner value is not rounded this time. In the 
 end, the value is always saved as a float value.
 
+.. code-block:: xml
+
+    <field name="my_field" widget="percentage" />
+
+
 .. _frontend/fields/phone_field:
 
 PhoneField
@@ -394,6 +429,11 @@ The `PhoneField` component represents a phone number. This field is used as
 an input with the `phone` type in edit mode, and a link with an `href` in readonly mode.
 The link contains the `tel:` prefix which means that it starts a call to the given number 
 whenever a user clicks on it.
+
+.. code-block:: xml
+
+    <field name="my_field" widget="phone" />
+
 
 .. _frontend/fields/priority_field:
 
@@ -445,10 +485,22 @@ It supports the following options:
      - optional. set if the maximum value is editable
    * - `current_value`
      - `integer`, `float`
-     - required. this is the current value of the progress from the field that is present in the view
+     - required. this is the current value of the progress. It can be the name of another field 
+       that is present in the view, or any numerical value set directly.
    * - `max_value`
      - `integer`, `float`
-     - optional. this value is used to set a maximum value from the field that is present in the view
+     - optional. this value is used to set a maximum value. It can be the name of another field 
+       that is present in the view, or any numerical value set directly.
+
+.. note::
+
+   To use a more dynamic progress bar, it is recommended to set the current_value and the max_value
+   using the record instead of a static numerical value, which can't be edited.
+
+.. code-block:: xml
+
+    <field name="my_field" widget="progressbar" options="{'editable': true, 'current_value': 'quantity', 'max_value': 'available_stock'}" />
+
 
 .. _frontend/fields/radio_field:
 
@@ -535,3 +587,7 @@ It supports the following options:
    * - `website_path`
      - `boolean`
      - optional. if `true`, the href will be the exact given value. No prefix will be added to format the URL
+
+.. code-block:: xml
+
+    <field name="my_field" widget="url" options="{'website_path': true}" />
