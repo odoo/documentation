@@ -505,50 +505,75 @@ create a new PostgreSQL user:
 .. note:: Because your PostgreSQL user has the same name as your Unix login, you will be able to
           connect to the database without password.
 
-Dependencies
-^^^^^^^^^^^^
+.. _install/python-dependencies:
 
-For libraries using native code, it is necessary to install development tools and native
-dependencies before the Python dependencies of Odoo. They are available in `-dev` or `-devel`
-packages for Python, PostgreSQL, libxml2, libxslt1, libevent, libsasl2 and libldap2.
+Python Dependencies
+^^^^^^^^^^^^^^^^^^^
 
-On Debian/Unbuntu, the following command should install all the required libraries:
+Debian/Ubuntu
+~~~~~~~~~~~~~
+
+Using your **distribution packages** is the preferred way of installing dependencies.
+
+For Debian-based systems, these packages are listed in the `debian/control
+<https://github.com/odoo/odoo/blob/master/debian/control>`_ file of the Odoo sources.
+
+On Debian/Ubuntu, the following commands should install the required packages:
 
 .. code-block:: console
 
-    $ sudo apt install python3-dev libxml2-dev libxslt1-dev libldap2-dev libsasl2-dev \
-        libtiff5-dev libjpeg8-dev libopenjp2-7-dev zlib1g-dev libfreetype6-dev \
-        liblcms2-dev libwebp-dev libharfbuzz-dev libfribidi-dev libxcb1-dev libpq-dev
+   $ cd /CommunityPath
+   $ sed -n -e '/^Depends:/,/^Pre/ s/ python3-\(.*\),/python3-\1/p' debian/control | sudo xargs apt-get install -y
 
-Odoo dependencies are listed in the `requirements.txt` file located at the root of the Odoo
+Install with pip
+~~~~~~~~~~~~~~~~
+
+Alternatively, you can use **pip** to install python dependencies. As some of the packages need a
+compilation step, they require system libraries to be installed.
+
+On Debian/Ubuntu-based systems, the following command should install these required libraries:
+
+.. code-block:: console
+
+   $ sudo apt install python3-pip libldap2-dev libpq-dev libsasl2-dev
+
+Odoo dependencies are listed in the :file:`requirements.txt` file located at the root of the Odoo
 community directory.
 
-.. tip:: It can be preferable to not mix python modules packages between different instances of Odoo
-         or with your system. You can use virtualenv_ to create isolated Python environments.
+.. note::
+   The python packages in :file:`requirements.txt` are based on their stable/LTS Debian/Ubuntu
+   corresponding version at the moment of the Odoo release.
 
-Navigate to the path of your Odoo Community installation (`CommunityPath`) and run **pip**
-on the requirements file:
+   E.g., for Odoo 15.0, the `python3-babel` package version is 2.8.0 in Debian Bullseye and 2.6.0
+   in Ubuntu Focal. The lowest version is then chosen in the :file:`requirements.txt`.
+
+Navigate to the path of your Odoo Community installation (:file:`CommunityPath`) and run **pip** on
+the requirements file to install the requirements for the current user.
 
 .. code-block:: console
 
-    $ cd /CommunityPath
-    $ pip3 install setuptools wheel
-    $ pip3 install -r requirements.txt
+   $ cd /CommunityPath
+   $ pip install -r requirements.txt
 
-.. warning:: `wkhtmltopdf` is not installed through **pip** and must be installed manually in
-             version `0.12.5 <the wkhtmltopdf download page_>`_ for it to support headers and
-             footers. See our `wiki <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more
-             details on the various versions.
+.. tip::
+   It can be preferable not to mix python modules packages between different instances of Odoo or
+   with your system. You can use virtualenv_ to create isolated Python environments.
 
-For languages with right-to-left interface (such as Arabic or Hebrew), the package `rtlcss` is
-needed:
+Other Dependencies
+^^^^^^^^^^^^^^^^^^
 
-#. Download and install **nodejs** and **npm** with your package manager.
-#. Install `rtlcss`:
+- `wkhtmltopdf` must be installed manually in version `0.12.5
+  <https://github.com/wkhtmltopdf/wkhtmltopdf/releases/0.12.5/>`_ to support headers and footers.
+  See our `wiki about wkhtmltopdf <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details
+  on the various versions.
+- Languages with a right-to-left interface (such as Arabic or Hebrew) require the `rtlcss` package:
 
-   .. code-block:: console
+  #. Download and install **nodejs** and **npm** with your package manager.
+  #. Install `rtlcss`:
 
-       $ sudo npm install -g rtlcss
+     .. code-block:: console
+
+         $ sudo npm install -g rtlcss
 
 Running Odoo
 ''''''''''''
