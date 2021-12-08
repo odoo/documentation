@@ -49,7 +49,7 @@ From Odoo.sh to Odoo Online
 
 1.  Uninstall all the **non-standard apps**: test it in a staging build first, then do it in your production build.
 2.  **If you have time constraints, contact us earlier to schedule the transfer.**
-3. `Create a support ticket <https://www.odoo.com/help>`_ and attach the dump (if the file is too large, use any file transfer service and attach the link to your ticket). Also include your subscription number and the URL you want to use for your database (e.g.: my-company.odoo.com).
+3. `Create a support ticket <https://www.odoo.com/help>`_ and include your subscription number and the URL you want to use for your database (e.g.: my-company.odoo.com).
 4.  We will make sure your database is compatible and upload it to our cloud. In case of technical issues, we will get in touch with you.
 5.  It's done!
 
