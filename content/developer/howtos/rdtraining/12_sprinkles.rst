@@ -426,7 +426,6 @@ used to search on both ``name`` and ``description`` fields.
     <search string="Test">
         <field name="description" string="Name and description"
                filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
-        </group>
     </search>
 
 .. exercise:: Change the living area search.
