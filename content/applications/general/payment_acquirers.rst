@@ -62,7 +62,7 @@ Online payment acquirers
 | :doc:`Alipay                  | Redirection to the   |            |                 |           |
 | <payment_acquirers/alipay>`   | acquirer website     |            |                 |           |
 +-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Authorize.Net           | Payment from Odoo    | |V|        | |V|             |           |
+| :doc:`Authorize.Net           | Payment from Odoo    | |V|        | |V|             | |V|       |
 | <payment_acquirers/authorize>`|                      |            |                 |           |
 +-------------------------------+----------------------+------------+-----------------+-----------+
 | :doc:`Buckaroo                | Redirection to the   |            |                 |           |
