@@ -268,6 +268,9 @@ being present in the DOM or not.
    * - ``hotkey``
      - string
      - hotkey to toggle the opening through keyboard
+   * - ``tooltip``
+     - string
+     - add a tooltip on the toggler
    * - ``beforeOpen``
      - function
      - hook to execute logic just before opening. May be asynchronous.
