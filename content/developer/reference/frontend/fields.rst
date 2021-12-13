@@ -156,6 +156,10 @@ Reference List
      - `many2one`
      - `many2one`
      - description...
+   * - :ref:`PdfViewerField <frontend/fields/pdf_viewer_field>`
+     - `pdf_viewer`
+     - `binary`
+     - display a progress bar
    * - :ref:`PercentageField <frontend/fields/percentage_field>`
      - `text`
      - `float`
@@ -395,6 +399,33 @@ Many2OneField
 - Location: `@web/fields/many2one_field`
 - Technical name: `many2one`
 - Supported types: `many2one`
+
+
+.. _frontend/fields/pdf_viewer:
+
+PdfViewerField
+-----------
+
+- Location: `@web/fields/pdf_viewer_field`
+- Technical name: `pdf_viewer`
+- Supported types: `binary`
+
+Todo
+
+It supports the following options:
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Name
+     - Type
+     - Description
+
+.. code-block:: xml
+
+    <field name="my_field" widget="pdf_viewer" filename="Your document" options="{'accepted_file_extensions': '.dat,.bin'}" />
+
 
 .. _frontend/fields/percentage_field:
 
