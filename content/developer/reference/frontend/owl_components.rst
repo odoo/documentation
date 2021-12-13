@@ -216,7 +216,7 @@ features such as:
 - Direct siblings dropdowns: when one is open, toggle others on hover
 - Close on outside click
 - Optionally close the item list when an item is selected
-- Emit an event to inform which list item is clicked
+- Call a function when the item is selected
 - Support sub dropdowns, up to any level
 - SIY: style it yourself
 - Configurable hotkey to open/close a dropdown or select a dropdown item
@@ -236,8 +236,8 @@ for each element in the item list.
       Click me to toggle the dropdown menu !
     </t>
     <!-- "default" slot content is rendered inside a div -->
-    <DropdownItem t-on-dropdown-item-selected="selectItem1">Menu Item 1</DropdownItem>
-    <DropdownItem t-on-dropdown-item-selected="selectItem2">Menu Item 2</DropdownItem>
+    <DropdownItem onSelected="selectItem1">Menu Item 1</DropdownItem>
+    <DropdownItem onSelected="selectItem2">Menu Item 2</DropdownItem>
   </Dropdown>
 
 Props
@@ -288,11 +288,7 @@ being present in the DOM or not.
 
 
 A `<DropdownItem/>` is simply a span (`<span class="dropdown-item"/>`).
-When a `<DropdownItem/>` is selected, it emits a custom `dropdown-item-selected`
-event containing its payload. (see
-`OWL Business Events <https://github.com/odoo/owl/blob/master/doc/reference/event_handling.md#business-dom-events>`_).
-So, to react to such an event, one needs to define an event listener on the
-`dropdown-item-selected` event.
+When a `<DropdownItem/>` is selected, it calls its `onSelected` prop. If this prop is a method, make sure it is bound if the method need to use the `this` value.
 
 .. list-table::
    :widths: 20 20 60
@@ -301,9 +297,9 @@ So, to react to such an event, one needs to define an event listener on the
    * - DropdownItem
      - Type
      - Description
-   * - ``payload``
-     - Object
-     - payload that will be added to the `dropdown-item-selected` event (default to null)
+   * - ``onSelected``
+     - Function
+     - a function that will be called when the dropdown item is selected.
    * - `parentClosingMode`
      - `none` | `closest` | `all`
      - when the item is selected, control which parent dropdown will get closed:
@@ -317,6 +313,9 @@ So, to react to such an event, one needs to define an event listener on the
    * - ``title``
      - string
      - optional title attribute which will be passed to the root node of the DropdownItem. (default: not provided)
+   * - ``dataset``
+     - Object
+     - optional object containing values that should be added to the root element's dataset. This can be used so that the element is easier to find programmatically, for example in tests or tours.
 
 Technical notes
 ~~~~~~~~~~~~~~~
@@ -359,23 +358,23 @@ others will open themselves on hover.
 
 .. code-block:: xml
 
-  <div t-on-dropdown-item-selected="onItemSelected">
+  <div>
     <Dropdown>
       <t t-set-slot="toggler">File</t>
-      <DropdownItem payload="'file-open'">Open</DropdownItem>
-      <DropdownItem payload="'file-new-document'">New Document</DropdownItem>
-      <DropdownItem payload="'file-new-spreadsheet'">New Spreadsheet</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-open')">Open</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-document')">New Document</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-spreadsheet')">New Spreadsheet</DropdownItem>
     </Dropdown>
     <Dropdown>
       <t t-set-slot="toggler">Edit</t>
-      <DropdownItem payload="'edit-undo'">Undo</DropdownItem>
-      <DropdownItem payload="'edit-redo'">Redo</DropdownItem>
-      <DropdownItem payload="'edit-find'">Search</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('edit-undo')">Undo</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('edit-redo')">Redo</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('edit-find')">Search</DropdownItem>
     </Dropdown>
     <Dropdown>
       <t t-set-slot="toggler">About</t>
-      <DropdownItem payload="'about-help'">Help</DropdownItem>
-      <DropdownItem payload="'about-update'">Check update</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('about-help')">Help</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('about-update')">Check update</DropdownItem>
     </Dropdown>
   </div>
 
@@ -388,11 +387,11 @@ the `New` and `Save as...` sub elements.
 .. code-block:: xml
 
   <t t-name="addon.Dropdown.File" owl="1">
-    <Dropdown t-on-dropdown-item-selected="onItemSelected">
+    <Dropdown>
       <t t-set-slot="toggler">File</t>
-      <DropdownItem payload="'file-open'">Open</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-open')">Open</DropdownItem>
       <t t-call="addon.Dropdown.File.New"/>
-      <DropdownItem payload="'file-save'">Save</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save')">Save</DropdownItem>
       <t t-call="addon.Dropdown.File.Save.As"/>
     </Dropdown>
   </t>
@@ -400,16 +399,16 @@ the `New` and `Save as...` sub elements.
   <t t-name="addon.Dropdown.File.New" owl="1">
     <Dropdown>
       <t t-set-slot="toggler">New</t>
-      <DropdownItem payload="'file-new-document'">Document</DropdownItem>
-      <DropdownItem payload="'file-new-spreadsheet'">Spreadsheet</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-document')">Document</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-spreadsheet')">Spreadsheet</DropdownItem>
     </Dropdown>
   </t>
 
   <t t-name="addon.Dropdown.File.Save.As" owl="1">
     <Dropdown>
       <t t-set-slot="toggler">Save as...</t>
-      <DropdownItem payload="'file-save-as-csv'">CSV</DropdownItem>
-      <DropdownItem payload="'file-save-as-pdf'">PDF</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-as-csv')">CSV</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-as-pdf')">PDF</DropdownItem>
     </Dropdown>
   </t>
 
@@ -418,19 +417,19 @@ Example: Multi-level Dropdown (nested)
 
 .. code-block:: xml
 
-  <Dropdown t-on-dropdown-item-selected="onItemSelected">
+  <Dropdown>
     <t t-set-slot="toggler">File</t>
-    <DropdownItem payload="'file-open'">Open</DropdownItem>
+    <DropdownItem onSelected="() => this.onItemSelected('file-open')">Open</DropdownItem>
     <Dropdown>
       <t t-set-slot="toggler">New</t>
-      <DropdownItem payload="'file-new-document'">Document</DropdownItem>
-      <DropdownItem payload="'file-new-spreadsheet'">Spreadsheet</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-document')">Document</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-new-spreadsheet')">Spreadsheet</DropdownItem>
     </Dropdown>
-    <DropdownItem payload="'file-save'">Save</DropdownItem>
+    <DropdownItem onSelected="() => this.onItemSelected('file-save')">Save</DropdownItem>
     <Dropdown>
       <t t-set-slot="toggler">Save as...</t>
-      <DropdownItem payload="'file-save-as-csv'">CSV</DropdownItem>
-      <DropdownItem payload="'file-save-as-pdf'">PDF</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-)as-csv'">CSV</DropdownItem>
+      <DropdownItem onSelected="() => this.onItemSelected('file-save-)as-pdf'">PDF</DropdownItem>
     </Dropdown>
   </Dropdown>
 
@@ -442,7 +441,7 @@ In this example, we recursively call a template to display a tree-like structure
 .. code-block:: xml
 
   <t t-name="addon.MainTemplate" owl="1">
-    <div t-on-dropdown-item-selected="onItemSelected">
+    <div>
       <t t-call="addon.RecursiveDropdown">
         <t t-set="name" t-value="'Main Menu'" />
         <t t-set="items" t-value="state.menuItems" />
@@ -457,7 +456,7 @@ In this example, we recursively call a template to display a tree-like structure
 
           <!-- If this item has no child: make it a <DropdownItem/> -->
           <t t-if="!item.childrenTree.length">
-            <DropdownItem payload="item" t-esc="item.name"/>
+            <DropdownItem onSelected="() => this.onItemSelected(item)" t-esc="item.name"/>
           </t>
           <!-- Else: recursively call the current dropdown template. -->
           <t t-else="" t-call="addon.RecursiveDropdown">
