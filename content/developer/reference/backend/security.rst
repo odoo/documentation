@@ -79,14 +79,14 @@ will have all three of create, read, and update.
 
 .. _reference/security/rules:
 
-Access Rules
+Record Rules
 ============
 
 Record rules are *conditions* which must be satisfied in order for an operation
 to be allowed. Record rules are evaluated record-by-record, following access
 rights.
 
-Access rules are default-allow: if access rights grant access and no rule
+Record rules are default-allow: if access rights grant access and no rule
 applies to the operation and model for the user, the access is granted.
 
 .. class:: ir.rule
