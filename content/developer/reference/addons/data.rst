@@ -7,7 +7,7 @@ Data Files
 
 Odoo is greatly data-driven, and a big part of modules definition is thus
 the definition of the various records it manages: UI (menus and views),
-security (access rights and access rules), reports and plain data are all
+security (access rights and record rules), reports and plain data are all
 defined via records.
 
 Structure
