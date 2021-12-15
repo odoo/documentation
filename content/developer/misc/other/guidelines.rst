@@ -71,10 +71,11 @@ models.
     |   |-- plant_order.py (another main model)
     |   |-- res_partner.py (inherited Odoo model)
 
-Concerning *security* and access rights and rules two main files should be used.
-First one is the definition of access rights done in a ``ir.model.access.csv``
-file. User groups are defined in ``<module>_groups.xml``. Access rules are
-defined in ``<model>_security.xml``.
+Concerning *security*, three main files should be used:
+
+- First one is the definition of access rights done in a :file:`ir.model.access.csv` file.
+- User groups are defined in :file:`<module>_groups.xml`.
+- Record rules are defined in :file:`<model>_security.xml`.
 
 .. code-block:: text
 

@@ -199,7 +199,7 @@ Since the "demo" user was not made a real-estate agent or manager, they should
 not even be able to see the real-estate application. Use a private tab or window
 to check for this (the "demo" user has the password "demo").
 
-Access Rules
+Record Rules
 ============
 
 .. seealso:: The documentation related to this topic can be found at
@@ -215,7 +215,7 @@ Access rights can grant access to an entire model but often we need to be
 more specific: while an agent can interact with properties in general we may not
 want them to update or even see properties managed by one of their colleagues.
 
-Access *rules* provide that precision: they can grant or reject access to
+Record *rules* provide that precision: they can grant or reject access to
 individual records:
 
 .. code-block:: xml
@@ -296,9 +296,9 @@ There are two main ways to bypass existing security checks in Odoo, either
 wilfully or as a side-effect:
 
 * The ``sudo()`` method will create a new recordset in "sudo mode", this ignores
-  all access rules and access rights (although hard-coded group and user checks
+  all access rights and record rules (although hard-coded group and user checks
   may still apply).
-* Performing raw SQL queries will bypass access rules and access rights as a
+* Performing raw SQL queries will bypass access rights and record rules as a
   side-effect of bypassing the ORM itself.
 
 .. exercise::
@@ -323,12 +323,12 @@ Programmatically checking security
     At the end of this section, the creation of the invoice should be resilient
     to security issues regardless to changes to ``estate``.
 
-In Odoo, access rights and access rules are only checked *when performing data
+In Odoo, access rights and record rules are only checked *when performing data
 access via the ORM* e.g. creating, reading, searching, writing, or unlinking a
 record via ORM methods. Other methods do *not* necessarily check against any
 sort of access rights.
 
-In the previous section, we bypassed the access rules when creating the invoice
+In the previous section, we bypassed the record rules when creating the invoice
 in ``action_sold``. This bypass can be reached by any user without any access
 right being checked:
 
@@ -373,8 +373,8 @@ Explicit security checks can be performed by:
   verifies that the current user is allowed to perform the operation on *every*
   record of the set.
 
-.. warning:: Checking access rights and checking access rules are separate
-             operations, if you're checking access rules you usually want to
+.. warning:: Checking access rights and checking record rules are separate
+             operations, if you're checking record rules you usually want to
              also check access rights beforehand.
 
 .. exercise::
@@ -423,7 +423,7 @@ As before, because this is based on non-trivial records it's easier for a user
 to relax rules than to tighten them so it makes sense to default to a
 relatively stronger security model.
 
-Multi-company rules are simply access rules based on the ``company_ids`` or
+Multi-company rules are simply record rules based on the ``company_ids`` or
 ``company_id`` fields:
 
 * ``company_ids`` is all the companies to which the current user has access
