@@ -119,9 +119,15 @@ extensions = [
     # Code switcher (switcher and case directives)
     'switcher',
 
+    # Tabs switcher
+    'sphinx_tabs.tabs',
+
     # Strange html domain logic used in memento pages
     'html_domain',
 ]
+
+sphinx_tabs_disable_tab_closing = False
+
 if odoo_dir_in_path:
     # GitHub links generation
     extensions += [

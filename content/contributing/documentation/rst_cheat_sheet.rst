@@ -620,3 +620,260 @@ the outer backticks interpret enclosed backslashes and thus prevent them from es
 backticks. For instance, ```\`this formatting\```` produces an ``[UNKNOWN NODE title_reference]``
 error. Instead, `````this formatting````` should be used to produce the following result:
 ```this formatting```.
+
+
+Tabs
+====
+
+Sphinx extension ``'sphinx_tabs.tabs'`` enables to content tabs (basic, synchronized, nested and code) with custom names with complex content.
+
+
+Basic tabs
+----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+      .. tab:: Windows
+
+           Windows OS
+
+      .. tab:: Linux
+
+          Linux OS
+
+      .. tab:: Mac
+
+           Mac OS
+
+
+Render
+~~~~~~
+
+
+.. tabs::
+   .. tab:: Windows
+
+        Windows OS
+
+   .. tab:: Linux
+
+       Linux OS
+
+   .. tab:: Mac
+
+        Mac OS
+
+
+Group tabs
+----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. group-tab:: Linux
+
+         Linux tab content - tab set 1
+
+      .. group-tab:: Mac OSX
+
+         Mac OSX tab content - tab set 1
+
+      .. group-tab:: Windows
+
+         Windows tab content - tab set 1
+
+
+   .. tabs::
+
+      .. group-tab:: Linux
+
+         Linux  tab content - tab set 2
+
+      .. group-tab:: Mac OSX
+
+         Mac OSX tab content - tab set 2
+
+      .. group-tab:: Windows
+
+         Windows tab content - tab set 2
+
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux tab content - tab set 1
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX tab content - tab set 1
+
+   .. group-tab:: Windows
+
+      Windows tab content - tab set 1
+
+
+.. tabs::
+
+   .. group-tab:: Linux
+
+      Linux  tab content - tab set 2
+
+   .. group-tab:: Mac OSX
+
+      Mac OSX tab content - tab set 2
+
+   .. group-tab:: Windows
+
+      Windows tab content - tab set 2
+
+
+Nested tabs
+-----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. tab:: Linux
+
+         .. tabs::
+
+           .. group-tab:: Debian/Ubuntu
+
+              Debian/Ubuntu  tab content
+
+           .. group-tab:: Fedora
+
+              Fedora  tab content
+
+
+Render
+~~~~~~
+
+
+.. tabs::
+
+   .. tab:: Linux
+
+      .. tabs::
+
+        .. group-tab:: Debian/Ubuntu
+
+           Debian/Ubuntu  tab content
+
+        .. group-tab:: Fedora
+
+           Fedora  tab content
+
+
+Code tabs
+---------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. code-tab:: c
+
+            int main(const int argc, const char **argv) {
+            return 0;
+            }
+
+      .. code-tab:: c++
+
+            int main(const int argc, const char **argv) {
+            return 0;
+            }
+
+      .. code-tab:: py
+
+            def main():
+               return
+
+      .. code-tab:: java
+
+            class Main {
+               public static void main(String[] args) {
+               }
+            }
+
+      .. code-tab:: julia
+
+            function main()
+            end
+
+      .. code-tab:: fortran
+
+            PROGRAM main
+            END PROGRAM main
+
+      .. code-tab:: r R
+
+            main <- function() {
+               return(0)
+            }
+
+
+Render
+~~~~~~
+
+
+.. tabs::
+
+   .. code-tab:: c
+
+         int main(const int argc, const char **argv) {
+         return 0;
+         }
+
+   .. code-tab:: c++
+
+         int main(const int argc, const char **argv) {
+         return 0;
+         }
+
+   .. code-tab:: py
+
+         def main():
+            return
+
+   .. code-tab:: java
+
+         class Main {
+            public static void main(String[] args) {
+            }
+         }
+
+   .. code-tab:: julia
+
+         function main()
+         end
+
+   .. code-tab:: fortran
+
+         PROGRAM main
+         END PROGRAM main
+
+   .. code-tab:: r R
+
+         main <- function() {
+            return(0)
+         }
