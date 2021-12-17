@@ -124,9 +124,13 @@ extensions = [
     # Code switcher (switcher and case directives)
     'switcher',
 
+    # Content tabs
+    'sphinx_tabs.tabs',
+
     # Strange html domain logic used in memento pages
     'html_domain',
 ]
+
 if odoo_dir_in_path:
     # GitHub links generation
     extensions += [
@@ -166,6 +170,9 @@ supported_languages = {
 
 # The specifications of redirect rules used by the redirects extension.
 redirects_file = 'redirects.txt'
+
+sphinx_tabs_disable_tab_closing = True
+sphinx_tabs_disable_css_loading = False
 
 #=== Options for HTML output ===#
 

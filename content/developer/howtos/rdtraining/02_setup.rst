@@ -184,7 +184,7 @@ You can check your Python version with:
 Install required packages
 -------------------------
 
-See :ref:`install/python-dependencies`
+See :ref:`install/dependencies`.
 
 .. _howto/rdtraining/02_setup/install-wkhtmltopdf:
 
