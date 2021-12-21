@@ -1,9 +1,9 @@
 
 .. _enterprise_agreement_de:
 
-===========================================
-Odoo Enterprise Subscription Agreement (DE)
-===========================================
+==================================
+Odoo Enterprise Abonnementsvertrag
+==================================
 
 .. warning::
    Dies ist eine deutsche Übersetzung des "Odoo Enterprise Subscription Agreement".
@@ -21,20 +21,21 @@ Odoo Enterprise Subscription Agreement (DE)
 
 .. note:: Version 7.1 - 2018-03-16
 
-Durch das Abonnieren der von der Odoo SA und ihren Tochtergesellschaften (zusammen „Odoo SA“)
-hinsichtlich der Odoo Enterprise Edition oder der Odoo Community Edition (der „Software“)
-bereitgestellten Odoo Enterprise-Dienstleistungen (der „Dienste“) sind Sie (der „Kunde“)
-verpflichtet, die nachstehenden Allgemeinen Geschäftsbedingungen (die „Vereinbarung“) einzuhalten.
+Indem Sie (der “Kunde”) die Odoo Enterprise-Dienstleistungen (die "Dienstleistungen"), die von Odoo
+SA und seinen verbundenen Unternehmen (zusammen "Odoo SA") in Verbindung mit der Odoo Enterprise
+Edition oder der Odoo Community Edition (die "Software") bereitgestellt und auf den Cloud-
+Plattformen von Odoo SA (die "Cloud-Plattform") oder vor Ort ("Self-Hosting") gehostet werden,
+abonnieren, erklären Sie sich mit den folgenden Bedingungen einverstanden (die "Vereinbarung").
 
 .. _term_de:
 
 1. Laufzeit der Vereinbarung
 ============================
 
-Die Dauer dieser Vereinbarung (die „Laufzeit“) beträgt mindestens ein Jahr wie schriftlich bei
-Unterzeichnung dieser Vereinbarung festgelegt, beginnend zum Datum der Unterschrift.
-Sie wird automatisch um die gleiche Laufzeit verlängert, sofern nicht eine der Parteien mindestens
-30 Tage vor Ablauf der Laufzeit gegenüber der anderen Partei per Einschreiben schriftlich kündigt.
+Die Dauer dieser Vereinbarung (die "Laufzeit") wird bei Abschluss dieser Vereinbarung schriftlich
+festgelegt und beginnt mit dem Datum des Abschlusses. Sie verlängert sich automatisch um die
+gleiche Laufzeit, es sei denn, eine der beiden Parteien kündigt die Vereinbarung mindestens 30 Tage
+vor Ablauf der Laufzeit schriftlich gegenüber der anderen Partei.
 
 .. _definitions_de:
 
@@ -42,324 +43,430 @@ Sie wird automatisch um die gleiche Laufzeit verlängert, sofern nicht eine der 
 ===============
 
 Benutzer
-    Alle aktiven Benutzerkonten mit Zugriff auf die Software im Erstellungs- und/oder
-    Bearbeitungsmodus.
-    Deaktivierte Benutzerkonten und Konten, die von externen Personen (oder Systemen) verwendet
-    werden, die über das Portal nur eingeschränkten Zugriff auf die Software haben
-    („Portalbenutzer“ genannt), werden nicht als Benutzer gezählt.
+    Jedes Benutzerkonto, das in der Software als aktiv angegeben ist und Zugang zum Erstell-
+    und/oder Bearbeitungsmodus hat. Deaktivierte Benutzerkonten und Konten, die von externen
+    Personen (oder Systemen) verwendet werden, die nur begrenzten Zugang zur Software über die
+    Portalfunktionen haben ("Portalbenutzer"), werden nicht als Benutzer gezählt.
 
 App
-    Eine „App“ ist eine spezielle Gruppe von Funktionen, die in der Software installiert
-    werden können und bei Unterzeichnung dieser Vereinbarung in der öffentlichen Preisliste der
-    `Odoo SA-Website <https://www.odoo.com>`_ aufgeführt sind.
+    Eine "App" ist eine spezielle Gruppe von Funktionen, die zur Installation in der Software zur
+    Verfügung steht und in der öffentlichen Preisliste der `Odoo SA-Website <https://www.odoo.com>`_
+    aufgeführt ist.
 
-Fehler (Bug)
-    Als Fehler (oder auch Bug) gilt jeder Fehler der Software, der zu einem vollständigen Stopp,
-    einer Traceback-Fehlermeldung oder einer Sicherheitsverletzung führt und nicht direkt durch
-    eine fehlerhafte Installation oder Konfiguration verursacht wird. Eine Nichteinhaltung von
-    Spezifikationen oder Anforderungen wird im Ermessen von Odoo SA als Fehler angesehen
-    (in der Regel dann, wenn die Software nicht die Ergebnisse oder die Leistungswerte liefert,
-    für die sie entwickelt wurde oder wenn eine landesspezifische Funktion nicht mehr den
-    gesetzlichen Buchhaltungsanforderungen entspricht).
+Odoo-Partner
+    Ein Odoo-Partner ist ein Drittunternehmen oder eine Einzelperson, die vom Kunden ausgewählt
+    wurde und mit dem Kunden hinsichtlich seiner Dienstleistungen im Zusammenhang mit Odoo
+    zusammenarbeitet. Der Kunde kann jederzeit entscheiden, mit einem anderen Odoo-Partner oder
+    direkt mit Odoo SA zusammenzuarbeiten (nach vorheriger Ankündigung).
 
-Abgedeckte Versionen
-    Alle im Rahmen Vereinbarung erbrachten Dienstleistungen gelten nur für die abgedeckten
-    Versionen der Software, welche die 3 (drei) zuletzt veröffentlichten Hauptversionen umfassen.
+Zusatzmodul
+    Ein Zusatzmodul ist ein Verzeichnis von Quellcodedateien oder eine Reihe von Python-basierten
+    Anpassungen, die in einer Datenbank  erstellt (z. B. mit Odoo Studio) wurden,  das der Software
+    Funktionen hinzufügt oder ihr Standardverhalten ändert. Es kann vom Kunden, von Odoo SA, von
+    einem Odoo-Partner im Namen des Kunden oder von Dritten entwickelt worden sein.
 
-    Um von der aktuellen Vereinbarung abgedeckt zu sein, müssen die Installationen des Kunden
-    die aktuellste abgedeckte Version zum Zeitpunkt der Unterzeichnung dieser Vereinbarung
-    aufweisen. Sollte dies nicht der Fall sein, so können zusätzliche Kosten anfallen,
-    die unter :ref:`charges_de` beschrieben werden.
+Odoo unterstütztes Zusatzmodul
+    Ein unterstütztes Zusatzmodul ist ein Zusatzmodul, für das der Kunde eine Wartungsgebühr
+    entrichtet, um Support-, Upgrade- und Fehlerbehebungsdienste zu erhalten.
 
+Bug
+    Als Bug gilt jeder Ausfall der Software oder eines unterstützten Zusatzmoduls, der zu einem
+    vollständigen Stopp, einer Fehlersuche oder einer Sicherheitsverletzung führt und nicht direkt
+    durch eine fehlerhafte Installation oder Konfiguration verursacht wird. Die Nichteinhaltung von
+    Spezifikationen oder Anforderungen wird nach dem Ermessen von Odoo SA als Bug betrachtet
+    (typischerweise, wenn die Software nicht die Ergebnisse oder die Leistung erbringt, für die sie
+    entwickelt wurde, oder wenn eine länderspezifische Funktion nicht mehr den gesetzlichen
+    Buchhaltungsanforderungen entspricht).
+
+Unterstützte Versionen
+    Sofern nicht anders angegeben, gelten die im Rahmen dieser Vereinbarung erbrachten
+    Dienstleistungen nur für die unterstützten Versionen der Software, zu denen die drei zuletzt
+    veröffentlichten Hauptversionen gehören.
 
 .. _enterprise_access_de:
 
-3. Zugriff auf die Odoo Enterprise Edition
-==========================================
+3. Zugang zur Software
+======================
 
-Für die Laufzeit dieser Vereinbarung gewährt Odoo SA dem Kunden eine nicht-ausschließliche,
-nicht übertragbare Nutzungslizenz (Ausführung, Änderung, Ausführung nach Änderung)
-der Odoo Enterprise Edition-Software unter den in :ref:`appendix_a_de` festgelegten Bedingungen.
+Der Kunde kann die auf der Cloud-Plattform gehostete Software nutzen oder die Option Self-Hosting
+wählen. Die Cloud-Plattform wird von Odoo SA gehostet und vollständig verwaltet, der Kunde kann per
+Fernzugriff darauf zugreifen. Bei der Self-Hosting-Option hostet der Kunde die Software stattdessen
+auf Computersystemen seiner Wahl, über die Odoo SA keine Kontrolle hat.
 
-Der Kunde erklärt, alle notwendigen Maßnahmen zu ergreifen, um die unveränderte Ausführung des
-Teils der Software zu gewährleisten, mit dem die gültige Nutzung der Odoo Enterprise Edition
-überprüft wird und die zu diesem Zweck Statistiken sammelt, einschließlich unter anderem
-die Ausführung einer Instanz, die Anzahl der Benutzer und die installierten Apps.
+Odoo SA gewährt dem Kunden für die Dauer dieser Vereinbarung eine nicht exklusive, nicht
+übertragbare Lizenz zur Nutzung (Ausführung, Änderung, Ausführung nach Änderung) der Odoo Enterprise
+Edition Software unter den in :ref:`appendix_a_de` genannten Bedingungen.
 
-Odoo SA ist verpflichtet, einzelne keine einzelnen oder benannten Zahlen ohne Zustimmung des Kunden
-an Dritte weiterzugeben und alle gesammelten Daten gemäß seiner offiziellen Datenschutzrichtlinie
-zu behandeln, die unter https://www.odoo.com/privacy veröffentlicht ist.
+Der Kunde verpflichtet sich, alle erforderlichen Maßnahmen zu ergreifen, um die unveränderte
+Ausführung des Teils der Software zu gewährleisten, der die Gültigkeit der Nutzung der Odoo
+Enterprise Edition überprüft und zu diesem Zweck Statistiken sammelt, unter anderem zur Ausführung
+einer Instanz, der Anzahl der Benutzer, den installierten Apps und der Anzahl der Codezeilen der
+unterstützten Zusatzmodule.
 
-Nach Ablauf oder Kündigung dieser Vereinbarung wird diese Lizenz sofort widerrufen und der Kunde
-ist verpflichtet, die Nutzung der Odoo Enterprise Edition-Software einzustellen.
+Odoo SA verpflichtet sich, ohne Zustimmung des Kunden keine individuellen oder namentlichen Angaben
+an Dritte weiterzugeben und alle gesammelten Daten in Übereinstimmung mit der offiziellen
+Datenschutzpolitik zu behandeln, die unter https://www.odoo.com/privacy veröffentlicht ist.
 
-Sollte der Kunde gegen die Bestimmungen dieses Abschnitts verstoßen, so ist er verpflichtet,
-Odoo SA eine zusätzliche Gebühr in Höhe von 300 % des geltenden Listenpreises für
-die tatsächliche Anzahl der Nutzer zu zahlen.
+Bei Ablauf oder Kündigung dieser Vereinbarung wird diese Lizenz unverzüglich widerrufen und der
+Kunde verpflichtet sich, die Nutzung der Odoo Enterprise Edition Software und der Cloud-Plattform
+einzustellen.
 
+Sollte der Kunde gegen die Bestimmungen dieses Abschnitts verstoßen, erklärt er sich bereit, Odoo SA
+eine zusätzliche Gebühr in Höhe von 300 % des geltenden Listenpreises für die tatsächliche Anzahl
+der Benutzer und installierten Apps zu zahlen.
 
 .. _services_de:
 
-4. Inbegriffene Dienstleistungen
-================================
+4. Dienstleistungen
+===================
+
+.. _bugfix_de:
 
 4.1 Fehlerbehebung
 ------------------
 
-Während der Laufzeit dieser Vereinbarung ist Odoo SA verpflichtet, alle zumutbaren Anstrengungen
-zu unternehmen, um die Fehler zu beheben, die vom Kunden über den entsprechenden Kanal
-(üblicherweise die E-Mail-Adresse oder das Websiteformular des Odoo SA Servicedesks)
-eingereicht wurden, und mit der Bearbeitung dieser Einsendungen des Kunden innerhalb von
-2 Werktagen zu beginnen.
+Während der Laufzeit dieser Vereinbarung verpflichtet sich Odoo SA, alle zumutbaren Anstrengungen zu
+unternehmen, um Fehler der Software und der unterstützten Zusatzmodule zu beheben, die vom Kunden
+über den entsprechenden Kanal eingereicht werden (in der Regel das Webformular oder die
+Telefonnummern, die auf https://odoo.com/help aufgeführt sind, oder - im Falle der Zusammenarbeit mit einem
+Odoo-Partner - der vom Partner bereitgestellte Kanal), und mit der Bearbeitung innerhalb von zwei
+Werktagen nach Eingang zu beginnen.
 
-Der Kunde versteht, dass Fehler, die durch eine Änderung oder Erweiterung verursacht wurden,
-die kein Teil der offiziellen Software sind, von dieser Dienstleistung nicht abgedeckt sind.
+Sobald der Fehler behoben ist, wird dem Kunden eine entsprechende Problemlösung mitgeteilt. Wenn der
+Kunde eine unterstützte Version Version verwendet, wird er nicht zu einem Upgrade auf eine neuere
+unterstützte Version der Software aufgefordert, um einen Fehler zu beheben.
 
-Sobald der Fehler behoben wurde, wird dem Kunden eine geeignete Gegenmaßnahme mitgeteilt.
-Falls der Fehler in einer neueren Version der vom Kunden verwendeten Software behoben wurde,
-so ist der Kunde verpflichtet, seine Systeme auf diese Version zu aktualisieren,
-um die Korrektur zu erhalten. Der Kunde wird nicht aufgefordert, auf eine neuere abgedeckte
-Version der Software zu aktualisieren, um einen Fehler zu beheben.
+Wenn ein Fehler in einer unterstützten Version behoben wird, verpflichtet sich Odoo SA, den Fehler
+ebenfalls in allen neueren unterstützten Versionen der Software zu beheben.
 
-Wenn ein Fehler in einer abgedeckten Version behoben wurde, ist Odoo SA verpflichtet,
-den Fehler auch in allen neueren abgedeckten Versionen der Software zu beheben.
+Beide Parteien erkennen an, dass Odoo SA, wie in der Lizenz der Software und im Abschnitt
+:ref:`liability_de` dieser Vereinbarung angegeben, nicht für Fehler in der Software oder in
+unterstützten  Zusatzmodulen haftbar gemacht werden kann.
 
-Beide Parteien erkennen an, dass Odoo SA gemäß der Softwarelizenz und dem Abschnitt
-:ref:`liability_de` dieser Vereinbarung für Fehler in der Software nicht haftbar gemacht werden kann.
+4.2 Service für Sicherheitsupdates
+----------------------------------
+Self-Hosting
+++++++++++++
+    Für die Dauer dieser Vereinbarung verpflichtet sich Odoo SA, dem Kunden für jeden
+    Sicherheitsfehler, der in den unterstützten Versionen der Software (dies schließt Zusatzmodule
+    aus) entdeckt wird, einen Sicherheitsbericht zuzusenden, mindestens zwei Wochen vor dessen
+    Veröffentlichung, es sei denn, der Fehler wurde bereits von einer dritten Partei öffentlich
+    bekannt gegeben. Sicherheitsberichte enthalten eine vollständige Beschreibung des Fehlers,
+    seiner Ursache, seiner möglichen Auswirkungen auf die Systeme des Kunden und der entsprechenden
+    Lösung für jede unterstützte Version.
+    Der Kunde nimmt zur Kenntnis, dass der Bug und die Informationen im Sicherheitsbericht während
+    der Sperrfrist vor der öffentlichen Bekanntgabe als vertrauliche Informationen gemäß
+    :ref:`confidentiality_de` zu behandeln sind.
 
-
-4.2 Sicherheitsmitteilungen
----------------------------
-
-Für die Dauer dieser Vereinbarung ist Odoo SA verpflichtet, dem Kunden für jedes Sicherheitsproblem,
-das in den abgedeckten Versionen der Software entdeckt wurde, eine Sicherheitsmitteilung zuzusenden.
-Diese Zusendung muss mindestens 2 Wochen vor Veröffentlichung der Sicherheitsmitteilung erfolgen,
-außer wenn der Fehler bereits von Dritten öffentlich gemacht wurde.
-Diese Sicherheitsberatung umfasst eine vollständige Beschreibung des Fehlers, seine Ursache,
-seine möglichen Auswirkungen auf die Kundensysteme sowie die entsprechenden Gegenmaßnahmen
-für jede abgedeckte Version.
-
-Der Kunde versteht, dass der Fehler und die Informationen in der Sicherheitsmitteilung während
-der Sperrfrist vor der öffentlichen Bekanntgabe als vertrauliche Informationen behandelt
-werden müssen, die im Abschnitt :ref:`confidentiality_de` beschrieben werden.
+Cloud-Plattform
++++++++++++++++
+    Odoo SA verpflichtet sich, die Sicherheitsmaßnahmen für jeden Sicherheitsfehler, der in einer
+    auf der Cloud-Plattform gehosteten Version der Software entdeckt wird, auf alle von Odoo SA
+    kontrollierten Systemen anzuwenden, sobald die entsprechenden Mittel verfügbar sind, ohne dass
+    der Kunde manuell eingreifen muss.
 
 .. _upgrade_de:
 
-4.3 Upgrade-Dienstleistungen
-----------------------------
-
+4.3 Upgrade-Dienste
+-------------------
 .. _upgrade_odoo_de:
-
 Upgrade-Service für die Software
 ++++++++++++++++++++++++++++++++
 
-Während der Laufzeit dieser Vereinbarung kann der Kunde Upgrade-Anfragen über den entsprechenden
-Kanal übermitteln (üblicherweise die Website der Odoo SA für den Upgrade-Service), um eine
-Datenbank der Software einer abgedeckten Softwareversion auf eine neuere abgedeckte Version
-(die „Zielversion“) zu konvertieren.
+Während der Laufzeit dieser Vereinbarung kann der Kunde über den entsprechenden Kanal (in der Regel
+die Upgrade-Service-Website von Odoo SA) Upgrade-Anträge stellen, um eine Datenbank der Software von
+einer beliebigen Version der Software auf eine neuere unterstützte Version (die "Zielversion") zu
+konvertieren.
 
-Upgrade-Anfragen müssen eine vollständige Sicherungskopie der Kundendatenbank und die zugehörigen
-Daten enthalten (die in der Regel mit dem Backup-Menü der Software abgerufen werden können).
-Sollte es aus Gründen der Datensicherheit oder der Regulierung erforderlich sein, so umfasst der
-Upgrade-Service ein optionales Tool zur Anonymisierung identifizierbarer Daten einer Datenbank,
-bevor die Upgrade-Anfrage eingereicht wird, und ebenso ein Tool zum Wiederherstellen der
-anonymisierten Daten nach dem Upgrade.
+Bei Nutzung der Cloud-Plattform werden Upgrade-Anträge direkt über das Bedienfeld der
+Cloud-Plattform eingereicht und erfordern keinen Daten-Upload. Im Falle von Self-Hosting müssen
+Upgrade-Anträge eine Kopie der Datenbank des Kunden und der zugehörigen Daten enthalten (in der
+Regel über das Backup-Menü der Software).
 
-Dieser Service erfolgt über eine automatisierte Plattform, damit der Kunde unbeaufsichtigte
-Upgrades durchführen kann, sobald eine frühere Version der Kundendatenbank für eine abgedeckte
-Version erfolgreich aktualisiert worden ist. Der Kunde kann aufeinander folgende Upgrade-Anfragen
-für eine Datenbank einreichen. Er ist damit einverstanden, zuerst mindestens
-1 (eine) Upgrade-Anfrage zu Testzwecken einzureichen, bevor er die abschließende Upgrade-Anfrage
-einreicht.
+Dieser Service wird über eine automatisierte Plattform bereitgestellt, um dem Kunden die Ausführung
+unbeaufsichtigter Upgrades zu ermöglichen, sobald eine frühere Version der Datenbank des Kunden
+erfolgreich für eine unterstützte Version aktualisiert wurde.
 
-Der Upgrade-Service ist beschränkt auf die technische Konvertierung und Anpassung der
-Kundendatenbank, um diese mit der Zielversion kompatibel zu machen, und auf die Korrektur von
-Fehlern, die unmittelbar durch den Upgrade-Vorgang verursacht werden und in der Zielversion
-normalerweise nicht auftreten würden.
+Der Upgrade-Service beschränkt sich auf die technische Konvertierung und Anpassung der Datenbank des
+Kunden, um sie mit der Zielversion kompatibel zu machen, auf die Korrektur von Fehlern, die direkt
+durch den Upgrade-Vorgang verursacht werden und in der Zielversion normalerweise nicht auftreten,
+sowie auf die Konvertierung des Quellcodes und der Daten der abgedeckten Zusatzmodule für die
+Zielversion.
 
-Es liegt in der alleinigen Verantwortung des Kunden, die Datenbank nach dem Upgrade zu
-überprüfen und zu validieren, um Fehler zu erkennen, die Auswirkungen der in der Zielversion
-umgesetzten Änderungen und neuen Funktionen zu analysieren und diejenigen Erweiterungen der
-Software von Drittanbietern für die Zielversion zu konvertieren und anzupassen, die vor dem
-Upgrade in der Datenbank installiert waren (sofern nicht anders vorgesehen,
-siehe Abschnitt :ref:`upgrade_extra_de`). Der Kunde kann mehrere Upgrade-Anforderungen für eine
-Datenbank einreichen, bis ein akzeptables Ergebnis erzielt wird.
+Es liegt in der Verantwortung des Kunden, die aktualisierte Datenbank zu überprüfen, um Fehler zu
+erkennen, die Auswirkungen von Änderungen und neuen Funktionen, die in der Zielversion implementiert
+sind, zu analysieren und Erweiterungen von Drittanbietern der Software, die vor dem Upgrade in der
+Datenbank installiert waren (z. B. nicht unterstützte Zusatzmodule), zu konvertieren und für die
+Zielversion anzupassen. Der Kunde kann mehrere Upgrade-Anträge für eine Datenbank stellen, bis ein
+akzeptables Ergebnis erzielt wird.
 
 .. _upgrade_extra_de:
 
-Upgrade-Service für Erweiterungen von Drittanbietern
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+4.4 Cloud-Hosting-Dienste
+-------------------------
 
-Für die Laufzeit dieser Vereinbarung kann der Kunde optionale Upgrade-Services optionale für von
-Drittanbieter angebotene Erweiterungsmodule der Software anfordern. Für diese optionale
-Dienstleistung fallen zusätzlichen Gebühren an (die unter „Gebühren“ beschrieben werden).
-Sie umfasst die technische Anpassung der Module von Drittanbietern, die in der Datenbank des
-Kunden installiert sind, und deren entsprechende Daten, damit sie mit der Zielversion kompatibel
-sind. Der Kunde wird eine Upgrade-Version aller installierten Module von Drittanbietern zusammen
-mit der aktualisierten Datenbank erhalten.
+Wenn sich der Kunde für die Nutzung der Cloud-Plattform entscheidet, verpflichtet sich Odoo SA,
+während der Laufzeit dieser Vereinbarung mindestens folgendes anzubieten:
 
-.. _charges_de:
+- mehrere Hosting-Regionen (mindestens drei: Europa, Amerika, Asien/Pazifik)
+- Hosting in Tier-III-Rechenzentren oder gleichwertigen Zentren mit einer Netzwerkverfügbarkeit von
+  99,9%
+- erstklassige SSL (HTTPS) Verschlüsselung der Kommunikation
+- vollautomatische, verifizierte Backups, repliziert in mehreren Regionen
+- Notfallplan, regelmäßig getestet
 
-5. Abgaben und Gebühren
+Die Einzelheiten der Cloud-Hosting-Dienste sind in der Dienstgütevereinbarung unter
+https://www.odoo.com/cloud-sla beschrieben.
+
+4.5 Support-Dienste
+-------------------
+Umfang
+++++++
+Während der Laufzeit dieser Vereinbarung kann der Kunde eine unbegrenzte Anzahl von kostenlosen
+Support-Tickets öffnen, die ausschließlich Fragen zu Fehlern (siehe :ref:`bugfix_de`) oder
+Anleitungen zur Nutzung der Standardfunktionen der Software und der unterstützten Zusatzmodule
+betreffen.
+
+Andere Supportanfragen, wie z. B. Fragen zur Entwicklung oder zu Anpassungen, können durch den
+Erwerb einer separaten Servicevereinbarung abgedeckt werden. Falls nicht klar ist, ob eine Anfrage
+von diesem Vertrag abgedeckt ist, liegt die Entscheidung im Ermessen von Odoo SA.
+
+Verfügbarkeit
++++++++++++++
+Tickets können über das Webformular oder die auf https://odoo.com/help aufgeführten Telefonnummern
+eingereicht werden, oder, wenn Sie mit einem Odoo-Partner zusammenarbeiten, über den von diesem
+bereitgestellten Kanal, abhängig von den örtlichen Öffnungszeiten.
+
+4.6 Zusammenarbeit mit einem Odoo-Partner
+-----------------------------------------
+Für Fehlerbehebungen, Support- und Upgrade-Leistungen kann der Kunde entweder mit einem Odoo-Partner
+als Hauptansprechpartner oder direkt mit Odoo SA zusammenarbeiten.
+
+Entscheidet sich der Kunde für die Zusammenarbeit mit einem Odoo-Partner, beauftragt Odoo SA diesen
+mit Dienstleistungen im Zusammenhang mit den unterstützten Zusatzmodulen. Der Odoo-Partner kann sich
+im Namen des Kunden an Odoo SA wenden, um in Bezug auf die Standardfunktionen der Software Second
+Level Support zu erhalten.
+
+Entscheidet sich der Kunde dafür, direkt mit Odoo SA zusammenzuarbeiten, werden Dienstleistungen im
+Zusammenhang mit unterstützten Zusatzmodulen *ausschließlich* dann erbracht, wenn der Kunde auf der
+Odoo Cloud-Plattform gehostet wird.
+
+5. Kosten und Gebühren
 =======================
 
 .. _charges_standard_de:
 
-5.1 Standardgebühren
---------------------
+5.1 Standardkosten
+------------------
 
-Die Standardgebühren für das Odoo Enterprise Abonnement, die Fehlerbehebung,
-die Sicherheitsmitteilungen und die Upgrades basieren auf der Anzahl der Benutzer, den
-installierten Apps, der vom Kunden verwendeten Softwareversion und werden bei Unterzeichnung
-der Vereinbarung schriftlich festgehalten.
+Die Standardkosten für das Odoo Enterprise Abonnement und die Dienstleistungen basieren auf der
+Anzahl der Benutzer und der installierten Apps, die der Kunde nutzt, und werden bei
+Vertragsabschluss schriftlich festgehalten.
 
-Sollte der Kunde während der Laufzeit mehr Benutzer oder mehr installierte Apps als bei
-Unterzeichnung der vorliegenden Vereinbarung angegeben haben, so erklärt sich der Kunde bereit,
-für die restliche Laufzeit eine zusätzliche Gebühr in Höhe des (zu Beginn der Laufzeit) geltenden
-Listenpreises für die zusätzlichen Benutzer oder Apps zu entrichten.
+Wenn der Kunde während der Laufzeit eine höhere Anzahl an Benutzern oder installierten Apps nutzt,
+als zum Zeitpunkt des Vertragsabschlusses angegeben, stimmt der Kunde zu, hierfür für den Rest der
+Laufzeit eine zusätzliche Gebühr in Höhe des zu Beginn der Laufzeit geltenden Listenpreises zu
+zahlen.
 
-Sollte der Kunde bei Unterzeichnung dieser Vereinbarung eine abgedeckte Version verwenden,
-bei der es sich nicht um die neueste Version handelt, so können die Standardgebühren für die erste
-Laufzeit im Ermessen der Odoo SA um 50 % erhöht werden, um die zusätzlichen Wartungskosten
-abzudecken.
+Darüber hinaus werden die Kosten der Dienstleistungen im Zusammenhang mit unterstützten
+Zusatzmodulen basierend auf der Anzahl der Codezeilen in diesen Modulen berechnet. Entscheidet sich
+der Kunde für die Wartung von unterstützten Zusatzmodulen, beträgt die Gebühr monatlich 16,00 € pro
+100 Codezeilen (aufgerundet auf die nächsten Hundert), sofern bei Vertragsabschluss nichts anderes
+schriftlich vereinbart wurde. Codezeilen werden mit dem cloc-Befehl der Software gezählt und
+umfassen alle Textzeilen im Quellcode dieser Module, unabhängig von der Programmiersprache
+(Python, Javascript, XML etc.), ausgenommen Leerzeilen, Kommentarzeilen und Dateien, die bei der
+Installation oder Ausführung der Software nicht geladen werden.
+
+Wenn der Kunde ein Upgrade beantragt, kann Odoo SA für jedes unterstützte Zusatzmodul, das in den
+letzten 12 Monaten nicht durch eine Wartungsgebühr abgedeckt wurde, eine einmalige Zusatzgebühr von
+16,00 € pro 100 Codezeilen für jeden fehlenden Abdeckungsmonat erheben.
 
 .. _charges_renewal_de:
 
 5.2 Verlängerungsgebühren
 -------------------------
-
 Bei einer Verlängerung gemäß Abschnitt :ref:`term_de` erhöhen sich die Gebühren um bis
-zu 7 %, wenn die in der vorherigen Laufzeit erhobenen Gebühren niedriger als der dann
-gültige Listenpreis waren.
-
-.. _charges_thirdparty_de:
-
-5.3 Gebühren für Upgrade-Services für Module von Drittanbietern
----------------------------------------------------------------
-
-Die zusätzliche Gebühr für das Upgrade von Drittanbietern-Modulen beträgt 1000,00 €
-(eintausend Euro) pro 1000 Codezeilen in diesen Modulen, jeweils aufgerundet auf die nächsten
-Tausend Zeilen. Die Codezeilen umfassen alle Textzeilen im Quellcode dieser Module, unabhängig
-von Programmiersprache (Python, Javascript usw.) oder Datenformat (XML, TSV usw.). Ausgenommen
-sind Leer- und Kommentarzeilen.
-
-Odoo SA behält sich das Recht vor, eine Upgrade-Anfrage für Drittanbieter-Module unter den
-vorstehenden Bedingungen abzulehnen, wenn die Qualität des Quellcodes dieser Module zu schlecht
-sein oder diese Module eine Schnittstelle mit Drittanbieter-Software oder -Systemen darstellen
-sollten. Das Upgrade dieser Module erfolgt vorbehaltlich eines separaten Angebots außerhalb der
-vorliegenden Vereinbarung.
+zu 7 %, wenn die während der vorherigen Laufzeit erhobenen Gebühren (mit Ausnahme etwaiger
+"Erstnutzerrabatte") unter dem jeweils gültigen Listenpreis liegen.
 
 .. _taxes_de:
 
-5.4 Steuern
+5.3 Steuern
 -----------
 
-Alle Gebühren und Abgaben verstehen sich ausschließlich aller geltenden Steuern, Gebühren oder
-Abgaben auf Bundes-, Provinz-, Bundesland- oder Kommunalebene oder anderer Behörden (zusammen
-als „Steuern“ bezeichnet). Der Kunde ist für die Zahlung sämtlicher Steuern im Zusammenhang mit
-seinen Käufen im Rahmen dieser Vereinbarung verantwortlich, außer wenn Odoo SA rechtlich
-verpflichtet sein sollte, Steuern zu zahlen oder einzuziehen, für welche der Kunde verantwortlich
-ist.
-
+Alle Gebühren und Entgelte verstehen sich zuzüglich aller anwendbaren Bundes-, Landes-, Staats-,
+Kommunal- oder sonstigen staatlichen Steuern, Gebühren oder Abgaben (zusammenfassend "Steuern").
+Der Kunde ist für die Zahlung aller Steuern verantwortlich, die mit seinen im Rahmen dieser
+Vereinbarung getätigten Käufen verbunden sind, es sei denn, Odoo SA ist gesetzlich zur Zahlung oder
+Erhebung von Steuern verpflichtet, für die der Kunde verantwortlich ist.
 
 .. _conditions_de:
 
 6. Dienstleistungsbedingungen
 =============================
 
-6.1 Pflichten des Kunden
-------------------------
+6.1 Verpflichtungen des Kunden
+------------------------------
 
-Der Kunde stimmt folgenden Klauseln zu:
+Der Kunde verpflichtet sich:
 
-- er zahlt Odoo SA sämtliche Gebühren für die Dienstleistungen im Rahmen der vorliegenden
-  Vereinbarung gemäß den Zahlungsbedingungen, die auf der entsprechenden Rechnung angegeben sind;
-- er wird Odoo SA unverzüglich informieren, sobald seine tatsächliche Benutzerzahl oder die Anzahl
-  der installierten Apps die bei Unterzeichnung der Vereinbarung angegebenen Zahlen überschreiten
-  sollten. In diesem Falle wird er die geltende zusätzliche Gebühr gemäß dem Abschnitt
-  :ref:`charges_standard_de` entrichten;
-- er wird alle notwendigen Maßnahmen zu ergreifen, um die unveränderte Ausführung des Teils der
-  Software zu gewährleisten, mit dem die gültige Nutzung der Odoo Enterprise Edition überprüft,
-  wie sie in :ref:`enterprise_access_de` beschrieben wird;
-- er wird Odoo SA den notwendigen Zugang einräumen, um die Gültigkeit der Nutzung der Odoo
-  Enterprise Edition auf Anfrage zu prüfen (z. B. wenn die automatische Validierung für den Kunden
-  nicht funktioniert);
-- er wird 1 speziellen Ansprechpartner des Kunden für die gesamte Laufzeit der Vereinbarung
-  ernennen;
-- er wird alle angemessenen Maßnahmen ergreifen, um die Dateien und Datenbanken des Kunden zu
-  schützen und sicherzustellen, dass die Kundendaten sicher sind, während er anerkennt,
-  dass Odoo SA für Datenverluste nicht haftbar gemacht werden kann;
+- Odoo SA alle anfallenden Gebühren für die Dienstleistungen dieser Vereinbarung gemäß den bei der
+  Unterzeichnung dieses Vertrages festgelegten Zahlungsbedingungen zu zahlen;
+- Odoo SA unverzüglich zu benachrichtigen, wenn die tatsächliche Anzahl der Benutzer oder der
+  installierten Apps die bei Vertragsabschluss angegebene Anzahl übersteigt, und in diesem Fall die
+  entsprechende Zusatzgebühr zu entrichten, wie in Abschnitt :ref:`charges_standard_de` beschrieben;
+- alle erforderlichen Maßnahmen zu ergreifen, um die unveränderte Ausführung des Teils der Software
+  zu gewährleisten, der die Gültigkeit der Nutzung der Odoo Enterprise Edition prüft, wie in
+  :ref:`enterprise_access_de` beschrieben;
+- einen festen Ansprechpartner für die gesamte Laufzeit des Vereinbarung zu benennen;
+- Odoo SA den Wechsel seines Hauptansprechpartners zu einem anderen Odoo-Partner oder zu einer
+  direkten Zusammenarbeit mit Odoo SA 30 Tage vorher schriftlich mitzuteilen.
 
+Wenn sich der Kunde für die Nutzung der Cloud-Plattform entscheidet, erklärt er sich außerdem damit
+einverstanden:
+
+- alle angemessenen Maßnahmen zu ergreifen, um die Sicherheit seiner Benutzerkonten zu
+  gewährleisten, einschließlich der Wahl eines sicheren Passworts und der Nichtweitergabe dieses
+  Passworts an andere Personen;
+
+- die Hosting-Dienste in angemessener Weise und unter Ausschluss jeglicher illegaler oder
+  missbräuchlicher Aktivitäten zu nutzen und sich strikt an die Regeln zu halten, die in der unter
+  https://www.odoo.com/acceptable-use veröffentlichten Acceptable Use Policy (Nutzungsrichtlinien)
+  aufgeführt sind.
+
+Sollte der Kunde die Self-Hosting-Option gewählt haben, erklärt er sich des weiteren dazu bereit:
+
+- alle angemessenen Maßnahmen zu ergreifen, um seine Dateien und Datenbanken zu schützen, wobei
+  Odoo SA nicht für Datenverluste haftbar gemacht werden kann;
+- Odoo SA den notwendigen Zugang zu gewähren, um die Gültigkeit der Nutzung der Odoo Enterprise
+  Edition auf Anfrage überprüfen zu können (z.B. wenn die automatische Validierung für den Kunden
+  nicht funktioniert)
 
 .. _no_soliciting_de:
 
 6.2 Verzicht auf Abwerbung oder Einstellung
 -------------------------------------------
 
-Beide Parteien, ihre Tochtergesellschaften und Vertreter sind verpflichtet, während der Laufzeit
-dieser Vereinbarung und für einen Zeitraum von 12 Monaten ab dem Datum der Kündigung oder
-des Ablaufs dieser Vereinbarung keine Mitarbeiter der anderen Partei, die an der Erbringung oder
-Nutzung der Dienstleistungen im Rahmen dieser Vereinbarung beteiligt sind, abzuwerben oder eine
-Beschäftigung anzubieten, außer wenn diese andere Partei eine schriftliche Zustimmung dafür
-erteilt hat.
-Im Falle eines Verstoßes gegen die Bestimmungen dieses Abschnitts, der zu einer diesbezüglichen
-Kündigung dieses Arbeitnehmers führt, ist die dagegen verstoßende Partei verpflichtet, der anderen
-Partei einen Betrag in Höhe von 30.000,00 € (dreißigtausend Euro) zu zahlen.
-
+Falls schriftlich nicht anders vereinbart, verpflichten sich die Parteien, ihre verbundenen
+Unternehmen und Vertreter, für die Dauer der Vereinbarung und für einen Zeitraum von 12 Monaten ab
+dem Datum der Beendigung oder des Ablaufs dieser Vereinbarung keinen Mitarbeiter der anderen Partei,
+der an der Erbringung oder Nutzung der Dienstleistungen im Rahmen dieser Vereinbarung beteiligt ist,
+abzuwerben oder ihm eine Beschäftigung anzubieten. Im Falle eines Verstoßes gegen die Bedingungen
+dieses Abschnitts, der zum Austritt des Mitarbeiters führt, verpflichtet sich die verletzende
+Partei, der anderen Partei einen Betrag von 30.000,00 € (dreißigtausend Euro) zu zahlen.
 
 .. _publicity_de:
 
 6.3 Werbung
 -----------
 
-Sofern keine anderslautende schriftliche Mitteilung erfolgte, gewährt jede Partei der anderen
-Partei eine nicht übertragbare, nicht ausschließliche, gebührenfreie, weltweite Lizenz zur
-Wiedergabe und Anzeige des Namens, der Logos und der Markenzeichen der jeweils anderen Partei.
-Diese Lizenz gilt ausschließlich für die Bezugnahme auf die andere Partei als Kunde oder Lieferant
-auf Websites, Pressemitteilungen und anderen Marketingmaterialien.
-
+Sofern nicht anders schriftlich mitgeteilt, gewährt jede Partei der anderen eine nicht übertragbare,
+nicht exklusive, gebührenfreie, weltweite Lizenz, den Namen, die Logos und die Marken der anderen
+Partei zu reproduzieren und darzustellen, und zwar ausschließlich zu dem Zweck, auf die andere
+Partei als Kunden oder Lieferanten zu verweisen, und zwar auf Websites, in Pressemitteilungen und
+anderen Marketingmaterialien.
 
 .. _confidentiality_de:
 
 6.4 Vertraulichkeit
 -------------------
 
-Definition von „vertraulichen Informationen“:
-    Alle von einer Partei (der „offenlegenden Partei“) gegenüber der anderen Partei
-    (der „empfangenden Partei“) mündlich oder schriftlich mitgeteilten, offengelegten
-    Informationen, die als vertraulich bezeichnet werden oder angesichts der Art der
-    Informationen und den Umständen der Offenlegung vernünftigerweise als vertraulich
-    verstanden werden sollten. Insbesondere sollten alle Informationen zu Unternehmen,
-    Geschäften, Produkten, Entwicklungen, Geschäftsgeheimnissen, Fachwissen, Personal,
-    Kunden und Lieferanten beider Parteien als vertraulich betrachtet werden.
+Definition "Vertrauliche Informationen":
+    Alle von einer Partei (der "offenlegenden Partei") der anderen Partei (der "empfangenden
+    Partei") mündlich oder schriftlich offengelegten Informationen, die als vertraulich bezeichnet
+    werden oder die angesichts Ihrer Beschaffenheit und der Umstände der Offenlegung als vertraulich
+    zu verstehen sind. Als vertraulich sind insbesondere alle Informationen zu betrachten, die sich
+    auf die Geschäfte, Angelegenheiten, Produkte, Entwicklungen, Geschäftsgeheimnisse, das Know-how,
+    die Mitarbeiter, Kunden und Lieferanten einer der Parteien beziehen.
 
-Für alle während der Laufzeit dieser Vereinbarung empfangenen vertraulichen Informationen
-wird die empfangende Partei die gleiche Sorgfalt aufwenden, mit der sie die Vertraulichkeit
-ihrer eigenen, ähnlichen vertraulichen Informationen schützt, mindestens jedoch angemessene
-Sorgfalt.
+Für alle vertraulichen Informationen, die die empfangende Partei während der Laufzeit dieser
+Vereinbarung erhält, wendet sie die gleiche Sorgfalt an wie für den Schutz der Vertraulichkeit ihrer
+eigenen ähnlich vertraulichen Informationen, sofern es sich um ein Mindestmaß an Sorgfalt handelt.
 
-Die empfangende Partei kann vertrauliche Informationen der offenlegenden Partei offenlegen,
-soweit dies gesetzlich vorgeschrieben ist, sofern die empfangende Partei der offenlegenden
-Partei diese vorgeschriebene Offenlegung im gesetzlich zulässigen Umfang mitteilt.
+Die empfangende Partei darf vertrauliche Informationen der offenlegenden Partei veröffentlichen,
+soweit sie gesetzlich dazu gezwungen ist, vorausgesetzt, die empfangende Partei unterrichtet die
+offenlegende Partei vorher über die erzwungene Offenlegung, soweit dies gesetzlich zulässig ist.
 
 .. _termination_de:
 
-6.5 Kündigung
--------------
+6.5 Datenschutz
+---------------
 
-Sollte eine der Parteien ihre Verpflichtungen aus dieser Vereinbarung nicht erfüllen und dieser
-Verstoß nicht innerhalb von 30 Kalendertagen nach schriftlicher Benachrichtigung über diesen
-Verstoß nicht behoben worden sein, so kann dieser Vertrag von der nicht säumigen Partei fristlos
+Definitionen
+    "Personenbezogene Daten", "Verantwortliche" und "Auftragsverarbeiter" haben dieselbe Bedeutung
+    wie in der Verordnung (EU) 2016/679 und der Richtlinie 2002/58/EG sowie in allen Verordnungen
+    oder Rechtsvorschriften, die diese ändern oder ersetzen (im Folgenden als
+    "Datenschutzgesetzgebung" bezeichnet).
+
+Verarbeitung von personenbezogenen Daten
+++++++++++++++++++++++++++++++++++++++++
+
+Die Parteien erkennen an, dass die Datenbank des Kunden personenbezogene Daten enthalten kann, für
+die der Kunde verantwortlich ist. Diese Daten werden von Odoo SA verarbeitet, wenn der Kunde dies
+anweist, indem er eine der Dienstleistungen nutzt, für die eine Datenbank erforderlich ist (z. B.
+Cloud-Hosting-Dienste oder Datenbank-Upgrade-Service), oder wenn der Kunde seine Datenbank oder
+einen Teil seiner Datenbank aus irgendeinem Grund im Zusammenhang mit dieser Vereinbarung an
+Odoo SA überträgt.
+
+Diese Verarbeitung erfolgt in Übereinstimmung mit der Datenschutzgesetzgebung. Insbesondere
+verpflichtet sich Odoo SA dazu:
+
+- (a) die personenbezogenen Daten nur zu verarbeiten, wenn und wie sie vom Kunden angewiesen werden,
+  und zwar zum Zweck der Erbringung einer der Dienstleistungen im Rahmen dieser Vereinbarung, es sei
+  denn, dies ist gesetzlich vorgeschrieben; in diesem Fall wird Odoo SA den Kunden vorher
+  informieren, es sei denn, das Gesetz verbietet dies;
+- (b) sicherzustellen, dass alle Personen innerhalb von Odoo SA, die zur Verarbeitung der
+  personenbezogenen Daten befugt sind, sich zur Vertraulichkeit verpflichtet haben;
+- (c) angemessene technische und organisatorische Maßnahmen zu ergreifen und einzuhalten, um die
+  personenbezogenen Daten vor unbefugter oder unrechtmäßiger Verarbeitung und vor versehentlichem
+  Verlust, Zerstörung, Beschädigung, Diebstahl, Änderung oder Offenlegung zu schützen;
+- d) alle Datenschutzanfragen, die an Odoo SA in Bezug auf die Datenbank des Kunden gestellt werden,
+  unverzüglich an den Kunden weiterzuleiten;
+- (e) den Kunden unverzüglich zu benachrichtigen, sobald Odoo SA von einer versehentlichen,
+  unbefugten oder rechtswidrigen Verarbeitung, Offenlegung oder einem Zugriff auf die
+  personenbezogenen Daten erfährt und dies bestätigt;
+- (f) den Kunden zu benachrichtigen, wenn die Verarbeitungsanweisungen nach Ansicht von Odoo SA
+  gegen die geltende Datenschutzgesetzgebung verstoßen;
+- (g) dem Kunden alle Informationen zur Verfügung zu stellen, die erforderlich sind, um die
+  Einhaltung der Datenschutzgesetzgebung nachzuweisen, und Prüfungen, einschließlich Inspektionen,
+  die vom Kunden durchgeführt oder in Auftrag gegeben werden, zuzulassen und in angemessener Weise
+  dazu beizutragen;
+- (h) je nach Wahl des Kunden, alle Kopien der Datenbank des Kunden, die sich im Besitz von Odoo SA
+  befinden, bei Beendigung dieser Vereinbarung entweder dauerhaft zu löschen oder zurückzugeben,
+  unter Einhaltung der in der `Datenschutzrichtlinie <https://www.odoo.com/de_DE/privacy>`_ von
+  Odoo SA genannten Fristen
+
+In Bezug auf die Punkte (d) bis (f) verpflichtet sich der Kunde, Odoo SA jederzeit genaue
+Kontaktinformationen zur Verfügung zu stellen, die für die Benachrichtigung des
+Datenschutzbeauftragten des Kunden erforderlich sind.
+
+Unterauftragsverarbeiter
+++++++++++++++++++++++++
+
+Der Kunde nimmt zur Kenntnis und erklärt sich damit einverstanden, dass Odoo SA zur Erbringung der
+Dienstleistungen Dritte (Unterauftragsverarbeiter) mit der Verarbeitung personenbezogener Daten
+beauftragt. Odoo SA verpflichtet sich, Unterauftragsverarbeiter nur in Übereinstimmung mit der
+Datenschutzgesetzgebung einzusetzen. Diese Nutzung wird durch einen Vertrag zwischen Odoo SA und dem
+Unterauftragsverarbeiter abgedeckt, der entsprechende Garantien enthält. Die Datenschutzrichtlinie
+von Odoo SA, die unter https://www.odoo.com/privacy veröffentlicht ist, enthält aktuelle
+Informationen zu den Namen und Zwecken der Unterauftragsverarbeiter, die Odoo SA derzeit für die
+Erbringung der Dienstleistungen einsetzt.
+
+6.6 Beendigung
+--------------
+
+Für den Fall, dass eine der Parteien eine ihrer Verpflichtungen aus diesem Vertrag nicht erfüllt und
+diese Verletzung nicht innerhalb von 30 Kalendertagen nach der schriftlichen Benachrichtigung über
+diese Verletzung behoben wird, kann diese Vereinbarung umgehend von der nicht verletzenden Partei
 gekündigt werden.
 
-Außerdem kann Odoo SA den Vertrag sofort kündigen, falls der Kunde die geltenden Gebühren für
-die Dienstleistungen nicht bis zum in der entsprechenden Rechnung angegebenen Fälligkeitsdatum
-bezahlt.
+Ferner kann Odoo SA den Vertrag mit sofortiger Wirkung kündigen, sollte der Kunde die für die
+Dienstleistungen anfallenden Gebühren innerhalb von 21 Tagen nach dem auf der entsprechenden
+Rechnung angegebenen Fälligkeitsdatum und nach mindestens drei Mahnungen nicht bezahlt haben.
 
-Überdauernde Bestimmungen:
-Die Abschnitte ":ref:`confidentiality_de`”, “:ref:`disclaimers_de`”, “:ref:`liability_de`” sowie
-“:ref:`general_provisions_de`” werden jede Kündigung oder Ablauf dieser Vereinbarung überdauern.
-
+Fortgeltende Bestimmungen:
+    Die Abschnitte :ref:`confidentiality_de`, :ref:`disclaimers_de`, :ref:`liability_de` und
+    :ref:`general_provisions_de` gelten auch nach Beendigung oder Ablauf dieser Vereinbarung.
 
 .. _warranties_disclaimers_de:
 
@@ -368,72 +475,79 @@ Die Abschnitte ":ref:`confidentiality_de`”, “:ref:`disclaimers_de`”, “:r
 
 .. _warranties_de:
 
-7.1 Garantie
----------------
+7.1 Garantien
+-------------
 
-Für die Laufzeit dieser Vereinbarung ist Odoo SA verpflichtet, wirtschaftlich angemessene
-Anstrengungen zu unternehmen, um die Dienstleistungen gemäß den allgemein branchenweit
-anerkannten Standards auszuführen, sofern folgende Bedingungen erfüllt sind:
+Odoo SA besitzt das Urheberrecht oder ein gleichwertiges Recht [#cla_de1]_ an 100 % des Codes der Software und
+bestätigt, dass alle Softwarebibliotheken, die für die Nutzung der Software erforderlich sind, unter
+einer mit der Softwarelizenz kompatiblen Lizenz verfügbar sind.
 
-- die Computersysteme des Kunden befinden sich in einem guten Betriebszustand und die Software
-  ist in einer geeigneten Betriebsumgebung installiert;
-- der Kunde stellt angemessene Informationen und Zugänge für die Fehlerbehebung bereit, damit
-  Odoo SA Probleme identifizieren, reproduzieren und beheben kann;
-- alle Odoo SA zustehenden Beträge wurden bezahlt.
+Odoo SA verpflichtet sich für die Dauer dieser Vereinbarung, Dienstleistungen nach wirtschaftlich
+vertretbarem Aufwand in Übereinstimmung mit den allgemein anerkannten Branchenstandards auszuführen,
+vorausgesetzt, dass:
+
+
+- die Computersysteme des Kunden sich in einem guten Betriebszustand befinden und die Software bei
+  Self-Hosting in einer geeigneten Betriebsumgebung installiert ist;
+- der Kunde angemessene Informationen zur Fehlerbehebung zur Verfügung stellt und Odoo SA im Falle
+  von Self-Hosting jeden nötigen Zugang gewährt, um Probleme zu identifizieren, zu reproduzieren und
+  zu beheben;
+- alle an Odoo SA geschuldeten Beträge bezahlt wurden.
 
 Das einzige und ausschließliche Rechtsmittel des Kunden und die einzige Verpflichtung von Odoo SA
-bei Verstößen gegen diese Garantie besteht darin, dass Odoo SA die Ausführung der Dienste ohne
-zusätzliche Kosten wiederaufnimmt.
+bei einem Verstoß gegen diese Garantie besteht darin, dass Odoo SA die Ausführung der
+Dienstleistungen ohne zusätzliche Kosten wieder aufnimmt.
+
+.. [#cla_de1] Externe Beiträge sind durch einen
+              `Copyright-Lizenzvertrag <https://www.odoo.com/cla>`_ abgedeckt, der Odoo SA eine
+              dauerhafte, kostenlose und unwiderrufliche Copyright- und Patentlizenz gewährt.
 
 .. _disclaimers_de:
 
 7.2 Haftungsausschlüsse
 -----------------------
 
-Außer wenn in diesem Dokument ausdrücklich angegeben, räumt keine der beiden Parteien weder
-ausdrückliche noch stillschweigende, gesetzliche oder anderweitige Gewährleistungen irgendeiner
-Art ein, und beide Parteien lehnen alle implizierten Garantien ausdrücklich ab, einschließlich
-jeglicher stillschweigenden Zusicherung der Marktgängigkeit, der Eignung für einen bestimmten
-Zweck oder der Nichtverletzung, soweit diese Einschränkung nach geltendem Recht zulässig ist.
+Sofern nicht ausdrücklich in diesem Dokument vorgesehen, übernimmt keine der Parteien irgendeine
+Garantie, sei es ausdrücklich, stillschweigend, gesetzlich oder anderweitig, und jede Partei lehnt
+ausdrücklich alle stillschweigenden Garantien ab, einschließlich jeglicher stillschweigenden
+Garantie der Marktgängigkeit, Eignung für einen bestimmten Zweck oder Nichtverletzung von Rechten
+Dritter, soweit dies nach geltendem Recht zulässig ist.
 
-Odoo SA garantiert nicht, dass die Software örtlichen oder internationalen Gesetzen oder
-Rechtsvorschriften entspricht.
+Odoo SA übernimmt keine Garantie dafür, dass die Software mit lokalen oder internationalen Gesetzen
+oder Vorschriften konform ist.
 
 .. _liability_de:
 
 7.3 Haftungsbeschränkung
 ------------------------
 
-Im gesetzlich maximal zulässigen Umfang darf die Gesamthaftung jeder Partei zusammen mit ihren
-Tochtergesellschaften aus oder im Zusammenhang mit dieser Vereinbarung 50 % des vom Kunden im
-Rahmen dieser Vereinbarung in den 12 Monaten unmittelbar vor dem Datum des Ereignisses, das zu
-diesem Anspruch führt, gezahlten Gesamtbetrags nicht übersteigen. Auch bei mehreren Ansprüchen
-darf diese Beschränkung nicht verändert werden.
+Soweit gesetzlich zulässig, übersteigt die Gesamthaftung jeder Partei zusammen mit ihren verbundenen
+Unternehmen, die sich aus dieser Vereinbarung ergibt oder mit ihr in Zusammenhang steht, nicht 50 %
+des Gesamtbetrags, den der Kunde im Rahmen dieser Vereinbarung in den 12 Monaten unmittelbar vor dem
+Datum des Ereignisses, das einen solchen Anspruch begründet, gezahlt hat. Mehrfachansprüche führen
+nicht zu einer Ausweitung dieser Begrenzung.
 
-Keine der beiden Parteien oder ihre Tochtergesellschaften werden unter keinen Umständen für
-indirekte, besondere, exemplarische, zufällige oder Folgeschäden jeglicher Art haften,
-einschließlich unter anderem Verluste von Erträgen, Gewinnen, Einsparungen, verlorene
-Geschäftsgelegenheiten oder andere finanzielle Verluste, Kosten für Stillstand oder Verspätung,
-verlorene oder beschädigte Daten, die aus oder im Zusammenhang mit dieser Vereinbarung entstehen.
-Dies gilt unabhängig von der Art der Handlung, egal ob vertraglicher Art, unerlaubte Handlung
-(einschließlich grober Fahrlässigkeit) oder einer anderen rechtlichen oder billigen Theorie,
-selbst wenn eine Partei oder ihre Tochtergesellschaften auf die Möglichkeit solcher Schäden
-hingewiesen wurden oder die von einer Partei oder ihren Tochtergesellschaften ergriffenen
-Abhilfemaßnahmen ihren wesentlichen Zweck verfehlen.
+In keinem Fall haften die Parteien oder ihre verbundenen Unternehmen für indirekte, besondere,
+exemplarische, zufällige oder Folgeschäden jeglicher Art, einschließlich, aber nicht beschränkt auf
+Einnahmeverluste, Gewinne, Einsparungen, Geschäftsverluste oder andere finanzielle Verluste, Kosten
+für Stockungen oder Verzögerung, verlorene oder beschädigte Daten, die sich aus oder in Verbindung
+mit dieser Vereinbarung ergeben, unabhängig von der Form der Klage, ob auf vertraglicher Basis,
+aufgrund unerlaubter Handlung (einschließlich strikter Fahrlässigkeit) oder einer anderen
+rechtlichen oder gerechtfertigten Grundlage, selbst wenn eine Partei oder ihre Partner auf die
+Möglichkeit solcher Schäden hingewiesen wurden oder wenn das Rechtsmittel einer Partei oder ihrer
+Partner auf andere Weise seinen wesentlichen Zweck verfehlt.
 
 .. _force_majeure_de:
 
 7.4 Höhere Gewalt
 ------------------
 
-Keine der beiden Parteien haftet gegenüber der anderen Partei für die Verzögerung oder die
-Nichterbringung einer Leistung im Rahmen dieser Vereinbarung, wenn diese Nichterbringung oder
-Verzögerung durch folgende Punkte verursacht wurden: staatliche Rechtsvorschriften, Brand, Streik,
-Krieg, Überschwemmung, Unfall, Epidemie, Embargo, vollständige oder teilweise Enteignung von
-Anlagen oder Produkten seitens einer Regierung oder einer öffentlichen Behörde oder aus allen
-anderen Gründen oder Ursachen gleicher oder unterschiedlicher Art, die außerhalb des angemessenen
-Einflussbereichs dieser Partei liegen. Dies gilt, solange diese Gründe oder Ursachen vorliegen.
-
+Keine der Parteien haftet gegenüber der anderen Partei für die Verzögerung oder das Nichterbringen
+einer Leistung aus dieser Vereinbarung, wenn die Ursache für die Verzögerung oder das Nichterbringen
+auf höhere Gewalt zurückzuführen ist, wie z. B. behördliche Vorschriften, Feuer, Streik, Krieg,
+Überschwemmung, Unfall, Epidemie, Embargo, vollständige oder teilweise Aneignung von Anlagen oder
+Produkten durch eine Regierung oder Behörde oder andere Ursachen gleicher oder anderer Art, die
+außerhalb der zumutbaren Kontrolle der betreffenden Partei liegen, solange diese Ursachen bestehen.
 
 .. _general_provisions_de:
 
@@ -445,23 +559,21 @@ Einflussbereichs dieser Partei liegen. Dies gilt, solange diese Gründe oder Urs
 8.1 Geltendes Recht
 -------------------
 
-Beide Parteien stimmen zu, dass im Falle von Streitigkeiten aus oder im Zusammenhang mit dieser
-Vereinbarung das belgische Recht angewendet wird, ohne Rücksicht auf Wahl- oder Kollisionsrecht.
-Soweit im Rahmen dieser Bestimmung eine Klage oder ein Gerichtsverfahren zulässig ist, stimmen
-beide Parteien bei, die Gerichte in Nivelles (Belgien) für die Beilegung aller Streitigkeiten als
-ausschließlich zuständig anzuerkennen.
+Diese Vereinbarung und alle Kundenaufträge unterliegen dem belgischen Recht. Alle Streitigkeiten,
+die sich aus oder im Zusammenhang mit dieser Vereinbarung oder einem Kundenauftrag ergeben,
+unterliegen der ausschließlichen Zuständigkeit des Handelsgerichts von Nivelles.
 
 .. _severability_de:
 
 8.2 Salvatorische Klausel
 -------------------------
 
-Sollten eine oder mehrere Bestimmungen dieser Vereinbarung oder deren Anwendung unwirksam,
-rechtswidrig oder nicht durchsetzbar sein, so werden die Wirksamkeit, Rechtmäßigkeit und
-Durchsetzbarkeit der übrigen Bestimmungen dieser Vereinbarung und ihrer Anwendung davon
-nicht berührt oder beeinträchtigt. Beide Parteien verpflichten sich, alle unwirksamen,
-rechtswidrigen oder nicht durchsetzbaren Bestimmungen dieser Vereinbarung durch eine wirksame
-Bestimmung möglichst mit gleichen Wirkungen und Zielen zu ersetzen.
+Sollten eine oder mehrere Bestimmungen dieser Vereinbarung oder ihrer Anwendung ungültig,
+rechtswidrig oder nicht durchsetzbar sein, so wird die Gültigkeit, Rechtmäßigkeit und
+Durchsetzbarkeit der übrigen Bestimmungen dieser Vereinbarung und ihrer Anwendung dadurch in keiner
+Weise berührt oder beeinträchtigt. Beide Parteien verpflichten sich, jede ungültige, rechtswidrige
+oder nicht durchsetzbare Bestimmung dieser Vereinbarung durch eine gültige Bestimmung zu ersetzen,
+die die gleichen Auswirkungen und Ziele hat.
 
 
 .. _appendix_a_de:
