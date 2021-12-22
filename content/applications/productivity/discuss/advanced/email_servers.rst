@@ -224,6 +224,20 @@ alias in your mail server.
 
 .. _Office 365 documentation:
     https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
+    
+Set up different outgoing servers in a multi-company environment
+================================================================
+
+The "From Filter" allows to use a specific outgoing depending of the "From". If an email is sent from Odoo, the email server will be chosen as follows:
+
+#.  Odoo searches for an email server having the same "From Filter" as the "From" defined in the outgoing email. For example, if the "From" is foo@bar.com, only the email servers having the "From Filter" equals to foo@bar.com will be returned.
+
+#. If not found, Odoo searches for an email server having the same domain in the "From Filter" as in the "From". For example, if the "From" is foo@bar.com, only the email servers having the "From Filter" equals to bar.com will be returned.
+
+# If not found, Odoo will return all email servers without any "From Filter".
+
+.. note:: If several email servers are found, Odoo will use the first one per priority.
+
 
 Set up different dedicated servers for transactional and mass mails
 ===================================================================
