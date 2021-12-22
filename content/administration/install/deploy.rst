@@ -200,6 +200,7 @@ Worker number calculation
 
 * Rule of thumb : (#CPU * 2) + 1
 * Cron workers need CPU
+* Printing 1 PDF needs 2 workers
 * 1 worker ~= 6 concurrent users
 
 memory size calculation
