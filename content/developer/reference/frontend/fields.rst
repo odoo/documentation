@@ -162,8 +162,12 @@ Reference List
      - display a progress bar
    * - :ref:`PercentageField <frontend/fields/percentage_field>`
      - `text`
-     - `float`
+     - `integer`, `float`
      - display percentages
+   * - :ref:`PercentPieField <frontend/fields/percent_pie_field>`
+     - `text`
+     - `integer`, `float`
+     - display a progress using a pie
    * - :ref:`PhoneField <frontend/fields/phone_field>`
      - `text`
      - `char`, `integer`
@@ -401,30 +405,28 @@ Many2OneField
 - Supported types: `many2one`
 
 
-.. _frontend/fields/pdf_viewer:
+.. _frontend/fields/pdf_viewer_field:
 
 PdfViewerField
------------
+--------------
 
 - Location: `@web/fields/pdf_viewer_field`
 - Technical name: `pdf_viewer`
 - Supported types: `binary`
 
-Todo
+The PdfViewerField allows a user to upload a file in edit mode. If a file is loaded, the PDF is
+visible inside the field. From the preview, the user can navigate between pages or download
+the file. You can specify to which page the preview is loaded by using an other field in the
+same record. To do so, the field must have the same name, followed by `_page`.
 
-It supports the following options:
-
-.. list-table::
-   :widths: 20 20 60
-   :header-rows: 1
-
-   * - Name
-     - Type
-     - Description
+The following example will display the third page by default once the field is shown:
 
 .. code-block:: xml
 
-    <field name="my_field" widget="pdf_viewer" filename="Your document" options="{'accepted_file_extensions': '.dat,.bin'}" />
+    <record>
+      <field name="my_pdf_page">3</field>
+      <field name="my_pdf" widget="pdf_viewer" filename="Your PDF" />
+    </record>
 
 
 .. _frontend/fields/percentage_field:
@@ -434,7 +436,7 @@ PercentageField
 
 - Location: `@web/fields/percentage_field`
 - Technical name: `percentage`
-- Supported types: `float`
+- Supported types: `integer`, `float`
 
 The `PercentageField` component represents a percentage. To use the field, you must give a 
 float value. Then, the field will format and display the value to a percentage, using a single
@@ -445,6 +447,24 @@ end, the value is always saved as a float value.
 .. code-block:: xml
 
     <field name="my_field" widget="percentage" />
+
+
+.. _frontend/fields/percent_pie_field:
+
+PercentPieField
+---------------
+
+- Location: `@web/fields/percent_pie_field`
+- Technical name: `percentpie`
+- Supported types: `integer`, `float`
+
+The `PercentPieField` component represents a progress using a percentage associated with a 
+pie. To use this field, you provide the percentage directly to the field. The PercentPie 
+is not editable directly. To do so, you must update the value used by the field.
+
+.. code-block:: xml
+
+    <field name="my_field" widget="percentpie" />
 
 
 .. _frontend/fields/phone_field:
