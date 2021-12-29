@@ -259,6 +259,12 @@ Emails
 
     Email address used as <FROM> when Odoo needs to send mails
 
+.. option:: --from-filter <address or domain>
+
+    Email address or domain that the mail server is configured for. If the 
+    email of the sender does not match this value, it might be encapsulated 
+    into ``mail.default.from``.
+
 .. option:: --smtp <server>
 
     Address of the SMTP server to connect to in order to send mails
@@ -276,6 +282,14 @@ Emails
 .. option:: --smtp-password <password>
 
     Password to connect to the SMTP server
+
+.. option:: --smtp-ssl-certificate-filename <path/to/cert.pem>
+
+    SSL certificate used for SMTP authentication
+
+.. option:: --smtp-ssl-private-key-filename <path/to/key.pem>
+
+    SSL private key used for SMTP authentication
 
 .. _reference/cmdline/server/internationalisation:
 
