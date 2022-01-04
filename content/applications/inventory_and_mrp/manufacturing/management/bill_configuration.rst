@@ -3,92 +3,89 @@ Create Bills of Materials
 =========================
 
 A *Bill of Materials* is a document defining the quantity of each
-component required to manufacture a finished product. It also includes
-the routing and individual steps of the manufacturing process.
+component required to make or deliver a finished product. Additionally, it 
+can also include various operations and individual step guidelines
+needed to complete a production process. 
 
-With Odoo, you can link multiple BoMs to each product and use it to
-describe multiple variants of them. Each BoM will, yet, be associated
-with one product only.
+With Odoo's MRP solution, multiple BOMs can also be linked to each product,
+so that even product variants can have their *own* tailored BOM.
 
-This feature will help optimize your manufacturing process while saving
-you time.
+This will help you to optimize your manufacturing process and save time 
+as a result. 
 
 Setting up a BoM
 ================
+The simplest BoM set up is one without operations or instructions. 
+In this case, you will manage your production using Manufacturing Orders
+only.
 
-You can use BoMs without routings. You will use this if you choose to
-manage your manufacturing operations using manufacturing orders only. In
-other words, you choose to realize your manufacturing process in one
-step and do not track the steps the product goes through.
+To create a BoM from the Manufacturing module, go to :menuselection:`Products --> Bills of Materials`. 
+If you click **Create**, the first thing you'll have to do is to specify the final product. 
+For an existing product, simply select it from the list, or create a new one on the spot. Note 
+that if you go through the product form to create your BOM, the product will already be set for you.
 
-Before creating your *BoM*, you have to create the product using the
-*BoM* and, at least, one of the components. Go to the :menuselection:`Master Data menu --> Products`
-and create both the finished product and the component.
+For a standard Bill of Material, keep the default *BoM* type, which is *Manufacture this Product*. 
+Now specify the various components that make up the production of your final product and their 
+respective quantities. You can create components as you go, on the BOM, or create products beforehand,
+by going to the :menuselection:`Top Menu --> Products --> Create`, and add them later on. 
 
-Once done, go to the *Bills of Materials* menu under *Master Data*.
-Now, create it. Choose the product from the dropdown menu and add your
-components and the quantity. In this case, keep the default *BoM*
-type, which is *Manufacture this Product*.
 
-.. image:: media/bills_of_materials_01.png
+.. image:: media/bom_1.png
     :align: center
-
-.. warning::
-   The destination location should **not** be a scrap location. A scrap location is where you put
-   products that you don't need. 
 
 Using the same BoM to describe Variants
 ---------------------------------------
 
-As said above, you can use *BoM* for *Product Variants*. It is
-basically the same as for the standard product.
+As suggested above, you can use *BOMs* for specific *Product Variants*. 
+Once the various attributes have been configured on the product form, there 
+are two ways to configure the appropriate BoM for the respective product combination. 
 
-If your *BoM* is for one variant only, then specify which one in the
-*Product Variant* field. If not, specify the variant it is consumed
-for on each component line. You can add several variants for each
-component.
+Either create one BoM per variant, by specifying the Product Variant
+in the dedicated field below the product name. Or use one BOM, that contains
+all of the components and for each component, indicate which variant it applies to, 
+using the *Apply on Variants* column, as shown below. 
 
-.. image:: media/bills_of_materials_02.png
+.. image:: media/bom_2.png
     :align: center
 
-Adding a routing
-================
 
-You can add routing to your *BoM*. You will do this if you need to
-define a series of operations required by your manufacturing process. To
-use it, enable the *Work Orders* feature in the *Manufacturing* app
-settings.
+Adding Operations
+=================
 
-.. image:: media/bills_of_materials_03.png
+You can also add operations to your *BoM*, if you want workers to follow instructions
+or register time spent. To use this feature, enable the *Work Orders* feature in the 
+*Manufacturing* app settings, as shown below.
+
+.. image:: media/bom_3.png
     :align: center
 
 .. note::
-         Each *BoM* can have only one routing while each routing can be used
-         multiple times.
+         Each operation is unique as it is always linked to only one BOM. This being said, 
+         Operations Operations can be re-used when configuring a new BOM, with the *Copy Existing 
+         Operations* feature.
 
-Now that you have created your routing, add it to your *BoM*. You can
-select when, in the work operations, your components are consumed with
-the dropdown menu.
-
-.. image:: media/bills_of_materials_04.png
+.. image:: media/bom_4.png
     :align: center
+
+Finally, just like for components, operations can also be variant specific only, as shown below.
+
+.. image:: media/bom_5.png
+    :align: center
+
+
 
 Adding By-Products
 ==================
 
-In Odoo, a *by-product* is any product produced by a *BoM* in
-addition to the primary product.
+A *by-product* is a product that is produced on top of the main product 
+of a *BoM*. As opposed to the primary product, there can be more than one on a BOM. 
 
-To add *by-products* to a *BoM*, you will first need to enable them
-from the *Manufacturing* app settings.
+To add *by-products* to a *BoM*, you will first need to enable the by-product
+feature from the *Manufacturing* app settings.
 
-.. image:: media/bills_of_materials_05.png
+.. image:: media/bom_6.png
     :align: center
 
-Once the feature is enabled, you can add your *By-Products* to your
-*BoMs*. You can add as many *By-Products* as you want. Just keep in
-mind that you need to register during which operation your by-product is
-produced.
-
-.. image:: media/bills_of_materials_06.png
-    :align: center
+Once the feature is enabled, you can add *by-products* to your
+*BoMs*. Note that if you have Operations, you'll need to specify 
+in which operation the by-product is produced. 
