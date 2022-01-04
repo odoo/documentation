@@ -8,81 +8,63 @@ production based on your demand forecast.
 Configuration
 =============
 
-Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and activate the Master
-Production Schedule feature before hitting save.
-
-.. image:: media/use_mps_01.png
-    :align: center
+Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and 
+activate the Master Production Schedule feature before hitting save.
 
 .. tip::
-        In the manufacturing settings, you can define the time range of your MPS (month/week/day) and the number of periods you want to display.
+        In the MPS settings, you can define the time range of your MPS (month/week/day) 
+        and the number of periods you want to display at all times.
 
-Now, go in :menuselection:`Planning --> Master Production Schedule` and click on add a
-product. You can now define your safety stock target (= the stock you
+Now, go to :menuselection:`Planning --> Master Production Schedule` and click on *add a
+product*. You can now define your safety stock target (= the stock you
 want to have on hand at the end of the period) and the minimum and
-maximum quantities to replenish.
+maximum quantities that must or can be replenished in each period.
 
-.. image:: media/use_mps_02.png
+.. image:: media/mps_1.png
     :align: center
 
-.. tip::
-        The products are ordered in the MPS based on their sequence. You can
-        rearrange that sequence by going on the list of your products and
-        reorganize them with drag and drop.
+In the MPS view, you can decide which information you would like to display
+by clicking on *rows*. For instance, the *Actual demand* will show you which 
+quantity of products has already been ordered for the period, or *Available to Promise*,
+what can still be sold during that same period (what you plan to replenish - what
+is already sold during the period). You can also decide to hide rows if you like.
 
-.. image:: media/use_mps_03.png
-    :align: center
-
-In the MPS view, you can decide which information you would like to show
-by clicking on *rows*. Some fields can be added to the view, such as
-*Actual demand*, which will show which quantity of products has
-already been ordered for the period, or *Available to Promise*, which
-allows you to know what can still be sold during the period (what you
-plan to replenish - what is already sold during the period). You can
-also decide to hide some information if it isn’t necessary.
-
-.. image:: media/use_mps_04.png
+.. image:: media/mps_2.png
     :align: center
 
 Estimate your demand and launch replenishment
 =============================================
 
-The next step is to estimate the demand for the period. This estimation
-should be entered in the row *Demand Forecast*. You can easily, at any
-time, compare the demand forecast with the actual demand (= confirmed
-sales). The demand forecast for a finished product will impact the
-indirect demand for its components.
+The next step is to estimate the demand for the chosen period. This is done 
+in the *Forecasted Demand* Row. You can easily, at any time, compare the demand
+forecast with the actual demand (= confirmed sales). The demand forecast for a 
+finished product will impact the indirect demand for its components.
 
-.. image:: media/use_mps_05.png
+.. image:: media/mps_3.png
     :align: center
 
-Then, the quantity to replenish for the different periods will be
-automatically computed. The replenishments you are supposed to launch
-based on your lead times (vendor lead time or manufacturing lead time)
-are displayed in green. You can now launch the replenishment by clicking
+Once the forecasted demand has been set, the quantity to replenish for the 
+different periods will automatically be computed. The replenishments you are supposed
+to launch based on your lead times (vendor lead time or manufacturing lead time)
+are then displayed in green. You can now launch the replenishment by clicking
 on the replenish button.
 
 Depending on the configuration of the product (buy vs. manufacture),
 requests for quotations or manufacturing orders will be created. You can
 easily access those by clicking on the *Actual Replenishment* cell.
 
-.. image:: media/use_mps_06.png
+.. image:: media/mps_4.png
     :align: center
 
-.. image:: media/use_mps_07.png
-    :align: center
+In case you manually edit the *Suggested Replenishment* quantity, a small cross
+will appear on the left hand side of the cell. In case you want to go back to the
+automatically computed value given by Odoo, simply click the cross.
 
-In case you manually edit the *To replenish* quantity, a small cross
-will appear on the left. In case you want to go back to the
-automatically computed value given by Odoo, you can click the cross.
-
-.. image:: media/use_mps_08.png
-    :align: center
 
 Cells color signification
 =========================
 
-The cells, which are part of the *To replenish* line, can take
+The cells, which are part of the *Suggested Replenishment* line, can take
 different colors depending on the situation:
 
 -  **Green**: quantity of products which should be replenished to reach the expected safety stock considering the demand forecast and the indirect demand forecast.
@@ -115,6 +97,3 @@ What if I wrongly added a product to the MPS?
 
 You can easily remove a product from the MPS by clicking the small bin
 on the right of its name.
-
-.. image:: media/use_mps_09.png
-    :align: center
