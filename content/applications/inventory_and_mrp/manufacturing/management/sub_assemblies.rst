@@ -2,48 +2,59 @@
 Manage semi-finished products
 =============================
 
-In Odoo, you can use subassembly products to simplify a complex *Bill
+With Odoo MRP, you can use semi-finished products to simplify a complex *Bill
 of Materials* or to represent your manufacturing flow more accurately.
-A *subassembly product* is a manufactured product that is used as a
-component to make another one.
+A *semi-finished product* is a manufactured product that is used as a
+component in a Bill of Material.
 
-A *BoM* that employs *subassemblies* is referred to as a multi-level
-BoM. Those are accomplished by creating a *top-level BoM* and
-*subassembly ones*. This process requires a route that will ensure
-that every time a manufacturing order for the top-level product is
-created, another one will be for subassemblies.
+A *BoM* that employs *semi-finished products* is referred to as 
+a multi-level BoM, where we distinguish between the *top level Product*
+and the *sub-assemblies*. 
 
-Configure the Subassembly Product
-=================================
+Configure a Multi Level BoM
+============================
 
-To configure a *multi-level BoM*, you will need a top-level product
-but also its subassemblies. The first step is to create a product form
-for each of the subassemblies. Select the routes *Manufacture* and
-*Replenish on Order*. Now, hit save.
+To configure a *multi-level BoM*, you will need the top-level product
+and its sub-assemblies. Therefore, you must first create the sub-assembly
+products and their respective Bill of Materials. Please refer to 
+:doc:`bill_configuration` for more details on how to create a BOM. 
 
-.. image:: media/semi-finished_products_01.png
-    :align: center
-
-In the *Bill of Materials* menu, under *Master Data*, create a new
-*Bill of Materials*. Choose the product you just created and add its
-components.
-
-.. image:: media/semi-finished_products_02.png
+.. image:: media/sf_1.png
     :align: center
 
 Configure the Main BoM
 ======================
 
-Now, you can configure the top-level product and its *BoM*. Include
-any subassemblies in the list of components.
+Then on the final product form, simply add your semi-finished 
+products to the Bill of Material. 
 
-.. image:: media/semi-finished_products_03.png
+.. image:: media/sf_2.png
     :align: center
 
-Now, each time you will plan a manufacturing order for the top-level
-product, a manufacturing order will be created for the subassembly one.
-Then, you will have to manufacture the subassembly in order to make it
-available before manufacturing the finished product.
+Manage your production planning 
+=================================
 
-.. image:: media/semi-finished_products_04.png
+There are several methods to manage the triggering of the various manufacturing orders. 
+
+If every time a manufacturing order is confirmed for the main product, you'd like one for 
+the semi-finished products as well, you have two options: 
+
+Option 1 : Create re-ordering rules for the semi-finished products, with both the minimum 
+and maximum desired stock quantities at 0. 
+
+.. image:: media/sf_3.png
+    :align: center
+
+Option 2 : Use the Replenish on Order (MTO) route on the semi-finished product, as well as 
+the manufacturing one. 
+
+Note that Option 1 is usually recommended over Option 2 as it is more flexible. The MTO route 
+creates a unique link between the semi-finished and the top level product, whereas the 
+re-ordering rule allows you to simply unreserve that production from the top level product
+production and redirect it to another, more pressing demand, for example. 
+
+In any case, as soon as the semi-finished product is produced, it will become
+available in the manufacturing order of the final product, as shown below.
+
+.. image:: media/sf_4.png
     :align: center
