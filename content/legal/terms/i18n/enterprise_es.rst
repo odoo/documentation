@@ -1,41 +1,33 @@
 
 .. _enterprise_agreement_es:
 
-===========================================
-Odoo Enterprise Subscription Agreement (ES)
-===========================================
+========================================
+Acuerdo de suscripción a Odoo Enterprise
+========================================
 
 .. warning::
-    Esta es una traducción al español del "Odoo Enterprise Subscription Agreement".
-    Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene valor legal.
-    La única referencia oficial de los términos y condiciones del
-    "Odoo Enterprise Subscription Agreement" es :ref:`la versión original en
-    inglés <enterprise_agreement>`
+   Esta es una traducción al español del "Odoo Enterprise Subscription Agreement". Esta traducción
+   se proporciona con la esperanza de que facilitará la comprensión, pero no tiene valor legal. La
+   única referencia oficial de los términos y condiciones del "Odoo Partnership Agreement" es
+   :ref:`la versión original en inglés <enterprise_agreement>`
 
-.. warning::
-    ESTA VERSIÓN NO ESTÁ ACTUALIZADA. PARA LA ÚLTIMA VERSIÓN POR FAVOR VEA
-    :ref:`LA VERSIÓN ORIGINAL EN INGLÉS <enterprise_agreement>`
+.. note:: Versión 8.0 - 2018-05-22
 
-.. note:: Version 8.0 - 2018-05-22
-
-Al suscribirse a los servicios de Odoo Enterprise proporcionados por
-Odoo SA y sus afiliados (colectivamente “Odoo SA”) en relación a Odoo Enterprise
-Edition u Odoo Community Edition, alojados en las plataformas *Cloud
-Hosting* (la nube de Odoo) o en las instalaciones *On Premise*
-("Self-Hosting"), usted (el "Cliente") acepta regirse por lo siguientes términos y condiciones:
+Al suscribirse a los servicios de Odoo Enterprise proporcionados por Odoo Technologies, S.A. de C.V
+y sus afiliados (en lo sucesivo, “Odoo Technologies, S.A. de C.V.”) en relación a Odoo Enterprise
+Edition u Odoo Community Edition, alojados en las plataformas de alojamiento en la nube (la nube de
+Odoo) o de forma local, usted (en lo sucesivo, el "Cliente") reconocerá como vinculantes los
+siguientes términos y condiciones:
 
 .. _term_es:
 
-1 Términos de duración del acuerdo
-==================================
+1 Duración del acuerdo
+======================
 
-La duración de este Acuerdo se especifica por escrito en el acuerdo
-entre las partes. Odoo acepta contratos mensuales o anuales. Los
-contratos de la licencia, llámese uso de Aplicaciones y de Usuarios, se
-renueva automáticamente por un término igual al contrato inicial a menos
-que cualquiera de las partes proporcione un aviso de terminación por
-escrito con un mínimo de 30 días antes de la fecha de finalización del
-acuerdo.
+Las partes especificarán por escrito la duración (en lo sucesivo, “Duración”) del acuerdo en la
+última parte del mismo. Este acuerdo se renovará automáticamente por una duración igual a la
+acordada inicialmente a menos que cualquiera de las partes proporcione una notificación de
+terminación por escrito con un mínimo de 30 días antes de la fecha de finalización del acuerdo.
 
 .. _definitions_es:
 
@@ -43,68 +35,75 @@ acuerdo.
 ==============
 
 Usuario
-    Cualquier cuenta de usuario activa con acceso al Software en
-    modo de creación y / o edición. Las cuentas de usuario desactivadas y las cuentas utilizadas
-    por personas (o sistemas) externos que solo tienen acceso limitado al Software a través del
-    portal de usuario no son considerados *Usuarios.*
+    Cualquier cuenta de usuario activa con acceso al Software en modo de creación o edición. Las
+    cuentas de usuario desactivadas y las cuentas utilizadas por personas (o sistemas) externos que
+    solo tienen acceso limitado al Software a través del portal de usuario no son considerados
+    Usuarios.
 
 Aplicación
-    Una "Aplicación" es un grupo especializado de funciones
-    disponibles para la instalación en el Software, y listados en la sección de precios públicos
-    del `sitio web de Odoo SA <https://www.odoo.com/es_ES/>`__
+    Una "Aplicación" es un grupo especializado de funciones disponibles para la instalación en el
+    Software. Estas aplicaciones están listadas en la sección de precios públicos del
+    `sitio web de Odoo Technologies S.A. <https://www.odoo.com/es_ES/>`__, de C.V.
 
-Error/Bug
-    Se considera un error cualquier falla del Software que
-    resulte en una detención completa, un rastreo de errores o una violación de la seguridad,
-    y no es causada directamente por una instalación o configuración defectuosa.
-    El incumplimiento de algunas especificaciones o requisitos será considerado como error a
-    discreción del Odoo SA (Por ejemplo, cuando el Software no cumple con el comportamiento ni
-    los resultados para el cual fue diseñado, o cuando una característica específica del país
-    ya no cumple con los requisitos legales de contabilidad).
+Partner de Odoo
+    Un partner de Odoo es una empresa o individuo externo a Odoo que el cliente elige para trabajar juntos en los servicios de Odoo. El cliente puede decidir trabajar con otro partner de Odoo en cualquier momento o comenzar a trabajar directamente con Odoo, sujeto a notificación previa.
+
+Módulo adicional
+    Es un directorio de archivos de código fuente o un grupo de personalizaciones hechas con Python
+    dentro de una base de datos (por ejemplo, las aplicaciones realizadas con Odoo Studio). Este
+    directorio o grupo de aplicaciones agrega funciones o realiza cambios en el comportamiento
+    estándar del Software. Ya sea que un Cliente lo haya desarrollado por sí mismo, o que Odoo
+    Technologies, S.A de C.V. o un Partner de Odoo lo haya desarrollado por el Cliente. También lo
+    pudieron desarrollar terceros.
+
+Módulo adicional cubierto
+    Es un módulo adicional por el que el cliente paga una cuota de mantenimiento para obtener soporte, actualizaciones y servicios de solución de Bugs.
+
+Bug
+    Se considera un Bug cualquier falla del Software que resulte en una detención completa, un
+    rastreo de errores o una violación de la seguridad, y no es causada directamente por una
+    instalación o configuración defectuosa. El incumplimiento de algunas especificaciones o
+    requisitos será considerado como Bug a discreción de Odoo Technologies, S.A. de C.V. (Por
+    ejemplo, cuando el Software no cumple con el comportamiento ni los resultados para el cual fue
+    diseñado, o cuando una característica específica del país ya no cumple con los requisitos
+    legales de contabilidad).
 
 Versiones Cubiertas
-    A menos que se especifique lo contrario, los
-    servicios que se ofrecen bajo este acuerdo son aplicables hasta las 3 versiones más recientes,
-    inclusive.
+    A menos que se especifique lo contrario, los servicios que se ofrecen bajo este acuerdo son aplicables hasta las 3 versiones más recientes.
 
-    Para estar cubierto por el presente Contrato, el Cliente debe utilizar la versión más reciente
-    del software en el momento que se acuerda este contrato. De no ser el caso, se pueden realizar
-    cargos adicionales, como se describe en el apartado número :ref:`charges_es`
-
-    .. _enterprise_access_es:
+.. _enterprise_access_es:
 
 3 Acceso al Software
 ====================
 
-El cliente puede utilizar el software alojado en la plataforma en la
-nube, o elegir la opción de instalarlo en servidores propios. La
-plataforma en la nube está alojada y totalmente administrada por Odoo SA y se accede de forma
-remota por el cliente. Con la opción de self/hosting o alojado en servidores propios, el cliente
-en su lugar aloja el software en sistemas informáticos de su elección, que no están bajo el control
-de Odoo SA.
+El cliente puede utilizar el software alojado en la plataforma en la nube, o elegir la opción de
+instalarlo en servidores propios. La plataforma en la nube está alojada en y es totalmente
+administrada por Odoo Technologies, S.A. de C.V. y el cliente tiene acceso remoto. Cuando se aloja
+en servidores propios, el cliente aloja el software en sistemas informáticos de su elección, que no
+están bajo el control de Odoo Technologies, S.A. de C.V.
 
-Durante la vigencia de este Acuerdo, Odoo SA otorga al Cliente una
-licencia no exclusiva e intransferible para usar (ejecutar, modificar, ejecutar después de la
-modificación) las opciones adquiridas del software, según los términos establecidos en el
+Durante el periodo de vigencia de este Acuerdo, Odoo Technologies, S.A. de C.V. otorga al Cliente
+una licencia no exclusiva e intransferible para usar (ejecutar, modificar, ejecutar después de la
+modificación) la edición Odoo Enterprise del software, según los términos establecidos en el
 :ref:`appendix_a_es`.
 
-El Cliente acuerda tomar todas las medidas necesarias para garantizar la ejecución y verificación
-de la parte del Software que se encuentra instalada o descargada tanto la verificación del uso de
-Odoo Enterprise Edition, incluyendo pero no limitado a la ejecución de su instancia, el número de
-usuarios activos/instalados y las aplicaciones instaladas.
+El Cliente acuerda tomar todas las medidas necesarias para garantizar la ejecución sin
+modificaciones de la parte del Software que  verifica la validez del uso de la edición Odoo
+Enterprise y recolecta estadísticas que incluyen, de manera enunciativa más no limitativa, el
+número de usuarios activos, las aplicaciones instaladas y las líneas de código de Módulos
+Adicionales Cubiertos.
 
-Odoo SA se compromete a no divulgar figuras individuales o nombradas a terceros sin el
-consentimiento del Cliente, y tratar con todos los datos recopilados de conformidad con su
-Política de Privacidad oficial, publicado en `Odoo Privacy <https://www.odoo.com/privacy/>`__
+Odoo Technologies, S.A. de C.V. se compromete a no divulgar cifras individuales o nombradas a
+terceros sin el consentimiento del Cliente. Odoo Technologies S.A de C.V también se compromete a
+tratar con todos los datos recopilados de conformidad con la Política de privacidad oficial
+publicada en `Odoo Privacy <https://www.odoo.com/privacy/>`__.
 
-Al vencimiento o terminación de este Acuerdo, esta licencia se revoca
-inmediatamente y el cliente acepta dejar de usar el software Odoo
-Enterprise Edition y la plataforma en la nube.
+Al vencimiento o término de este Acuerdo, esta licencia se revoca de inmediato y el Cliente acepta
+dejar de usar el software Odoo Enterprise Edition y la plataforma en la nube.
 
-En caso de que el Cliente incumpla los términos de esta sección, el
-Cliente acepta pagar a Odoo SA una tarifa adicional igual a 300% del
-precio de lista aplicable para el número real de Usuarios y Aplicaciones
-instaladas.
+En caso de que el Cliente incumpla los términos de esta sección, el Cliente acepta pagar a Odoo
+Technologies, S.A. de C.V. una tarifa adicional igual a 300% del precio de lista aplicable para el
+número real de Usuarios y Aplicaciones instaladas.
 
 .. _services_es:
 
@@ -113,62 +112,54 @@ instaladas.
 
 .. _bugfix_es:
 
-4.1 Servicio de corrección de errores
--------------------------------------
+4.1 Servicio de solución de Bugs
+--------------------------------
 
-Durante la vigencia de este Acuerdo, Odoo SA se compromete a hacer todos los esfuerzos razonables
-para remediar cualquier error del software enviado por el cliente a través del canal apropiado
-(dirección de correo electrónico de la mesa de servicio de Odoo SA o el formulario del sitio web
-`Odoo Help <https://www.odoo.com/help/>`__ y comenzar a analizar la resolución del error dentro de
-un tiempo estimado de 2 días hábiles.
+Durante la vigencia de este Acuerdo, Odoo Technologies, S.A. de C.V. se compromete a hacer todos
+los esfuerzos razonables para solucionar cualquier Bug dentro del Software o de los Módulos
+Adicionales cubiertos reportado por el Cliente a través del canal apropiado y comenzar a analizar
+la resolución del Bug dentro de un tiempo estimado de 2 días hábiles. Normalmente se reporta
+mediante el formulario o números de teléfono que aparecen mencionados en el sitio web
+`Odoo Help <https://www.odoo.com/help/>`__ o, si se trabaja con un partner, se reporta mediante el
+canal indicado por el partner.
 
-El cliente entiende que los errores causados por una modificación o
-extensión que sea parte del software oficial no será cubierto por este servicio de soporte.
+Tan pronto como se solucione el Bug, se le comunicará al Cliente cuál fue la solución encontrada.
+Si el cliente usa una Versión Cubierta, la solución del Bug nunca será actualizar a la Versión
+Cubierta más reciente.
 
-Tan pronto como se solucione el error, se comunicará al cliente.
+Cuando se soluciona un Bug en cualquier Versión Cubierta, Odoo Technologies, S.A. de C.V. se
+compromete a solucionar el Bug en todas las Versiones Cubiertas más recientes del Software.
 
-Para los clientes con alojamiento en la nube, si el error se ha
-solucionado en una revisión más reciente de la Versión Cubierta del
-Software utilizado por el cliente, el cliente acepta actualizar su
-sistema a esa revisión para obtener la corrección. No se le pedirá al
-cliente que actualice a la versión más reciente como solución.
-
-Cuando se corrige un error en cualquier Versión Cubierta, Odoo SA se
-compromete a solucionar el error en todas las Versiones Cubiertas
-recientes del software.
-
-Ambas partes reconocen que tal como se especifica en la licencia del
-Software y en la sección :ref:`liability_es`,
-Odoo SA no se hace responsable de los errores en el Software.
+Ambas partes reconocen que tal como se especifica en la licencia del Software y en la sección
+:ref:`liability_es`, Odoo Technologies, S.A. de C.V. no se hace responsable de los Bugs en el
+Software y en Módulos Adicionales Cubiertos.
 
 4.2 Servicio de actualizaciones de seguridad
 --------------------------------------------
 
 .. _secu_self_hosting_es:
 
-Auto-alojamiento/Self-Hosting
-+++++++++++++++++++++++++++++
+Alojamiento propio
+++++++++++++++++++
 
-Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un "Aviso de Seguridad" al
-cliente para cualquier error de seguridad que se descubra en las Versiones Cubiertas del software,
-al menos 2 semanas antes de hacer público el Aviso de seguridad, a menos que el error ya haya sido
-divulgado públicamente por un tercero. Los avisos de seguridad incluyen una descripción completa
-del error, su causa, sus posibles impactos en los sistemas del cliente, y la solución
-correspondiente para cada Cobertura.
+Durante la vigencia de este Acuerdo, Odoo Technologies, S.A. de C.V. se compromete a enviar un
+"Aviso de Seguridad" al cliente para cualquier Bug de seguridad que se descubra en las Versiones
+Cubiertas del Software (sin incluir los Módulos Adicionales), al menos 2 semanas antes de hacer
+público el Aviso de seguridad, a menos que un tercero ya haya divulgado públicamente el Bug. Los
+avisos de seguridad incluyen una descripción completa del Bug, su causa, sus posibles impactos en
+los sistemas del cliente, y la solución correspondiente para cada una de las Versiones Cubiertas.
 
-El cliente entiende que el error y la información en el aviso de
-seguridad deben ser tratados como información confidencial como se
-describe en el apartado :ref:`confidentiality_es` durante el período de embargo anterior a la
-divulgación pública.
+El cliente entiende que el Bug y la información en el Aviso de Seguridad deben ser tratados como
+información confidencial como se describe en el apartado :ref:`confidentiality_es` durante el
+período de prohibición de revelación previo a la divulgación pública.
 
-Plataforma en la nube/Cloud Hosting
-+++++++++++++++++++++++++++++++++++
+Plataforma en la nube
++++++++++++++++++++++
 
-Odoo SA se compromete a aplicar las soluciones de seguridad para
-cualquier error de seguridad descubierto en una versión del software
-alojado en la plataforma de la nube, en todos los sistemas bajo su
-control, tan pronto como la solución esté disponible, sin requerir
-ninguna acción manual del cliente.
+Odoo Technologies, S.A. de C.V. se compromete a aplicar las soluciones de seguridad para cualquier
+Bug de seguridad descubierto en una versión del Software alojado en la plataforma en la nube, en
+todos los sistemas bajo su control, tan pronto como la solución esté disponible, sin requerir
+ninguna acción manual del Cliente.
 
 .. _upgrade_es:
 
@@ -180,72 +171,50 @@ ninguna acción manual del cliente.
 **Servicio de actualización para el software**
 
 Durante la vigencia de este Acuerdo, el Cliente puede enviar solicitudes de actualización a través
-del canal apropiado (normalmente, el sitio web del servicio de actualización de Odoo SA), para
-convertir una base de datos del software de una Versión Cubierta del software a una Versión
-Cubierta más reciente.
+del canal apropiado (normalmente, el sitio web del servicio de actualización de Odoo Technologies,
+S.A. de C.V.), para convertir una base de datos del Software de una Versión Cubierta del Software a
+una Versión Cubierta más reciente (la “Versión Objetivo”).
 
-Para la Plataforma en la nube, las solicitudes de actualización se
-envían directamente desde el panel de control de la Plataforma en la
-nube, y no requiere ninguna carga de datos. Para Auto-Hosting, las
-solicitudes de actualización deben incluir una copia de respaldo
-completa de la base de datos del Cliente y los datos asociados
-(generalmente obtenido en el menú de copia de seguridad del software).
+Para la Plataforma en la nube, las solicitudes de actualización se envían directamente desde el
+panel de control de la Plataforma en la nube, y no requiere subir datos. Para alojamiento propio,
+las solicitudes de actualización deben incluir una copia de respaldo completa de la base de datos
+del Cliente y los datos asociados (generalmente obtenida en el menú de copia de seguridad del
+Software).
 
-Este servicio se proporciona a través de una plataforma automatizada
-para permitir que el Cliente realice actualizaciones desatendidas una
-vez que una versión anterior de la base de datos del Cliente ha sido
-exitosamente actualizada para una Versión Cubierta. El Cliente puede
-presentar solicitudes de actualización sucesivas para una base de datos, y acepta enviar al menos
-1 solicitud de actualización para fines de prueba antes de enviar la solicitud de actualización final.
+Este servicio se proporciona a través de una plataforma automatizada para permitir que el Cliente
+realice actualizaciones automáticas una vez que una versión anterior de la base de datos del
+Cliente se haya actualizado exitosamente para una Versión Cubierta.
 
-El Servicio de actualización se limita a la conversión técnica y la
-adaptación de la base de datos para que sea compatible con la versión de destino y la corrección
-de cualquier error directamente causado por la operación de actualización y que normalmente no
-ocurre en la versión de ndestino.
+El Servicio de actualización se limita a la conversión técnica y la adaptación de la base de datos
+para que sea compatible con la Versión Objetivo y la solución de cualquier Bug directamente causado
+por la operación de actualización y que normalmente no ocurre en la Versión Objetivo, además de la
+conversión del código fuente y los datos de los Módulos Adicionales Cubiertos para la Versión
+Objetivo.
 
-Es responsabilidad exclusiva del Cliente verificar y validar la base de datos actualizada para
-detectar errores, analizar el impacto de los cambios y las nuevas características implementadas
-en el versión de destino, y para convertir y adaptar a la versión de destino cualquier extensión
-de terceros que se haya instalado en la base de datos antes de la actualización (excepto cuando
-sea aplicable según lo previsto en la sección Servicio de actualización para extensiones de
-terceros). El cliente puede presentar múltiples solicitudes de actualización para una base de
-datos, hasta que se logre un resultado aceptable.
-
-.. _upgrade_extra_es:
-
-Servicio de actualización para extensiones de terceros
-++++++++++++++++++++++++++++++++++++++++++++++++++++++
-
-Durante la vigencia de este Acuerdo, el Cliente podrá solicitar
-servicios de actualización opcionales para módulos de extensión de
-terceros, además de los Servicios de actualización habituales. Esta
-servicio es opcional y está sujeto a tarifas adicionales (como se
-describe en el apartado :ref:`charges_es`) e incluye la adaptación técnica de módulos de terceros
-instalados en la base de datos del Cliente y sus datos correspondientes para ser compatibles con
-la versión de destino. El cliente recibirá una versión actualizada de todos los módulos de terceros
-instalados junto con la base de datos actualizada.
+Es responsabilidad del Cliente verificar y validar la base de datos actualizada para detectar Bugs,
+analizar el impacto de los cambios y las nuevas funciones implementadas en el Versión Objetivo, y
+para convertir y adaptar a la Versión Objetivo cualquier extensión de terceros que se haya
+instalado en la base de datos antes de la actualización (por ejemplo, Módulos Adicionales no
+cubiertos). El Cliente puede enviar múltiples solicitudes de actualización para una base de datos,
+hasta que se logre un resultado aceptable.
 
 .. _cloud_hosting_es:
 
-4.4 Servicios de alojamiento en la nube / Cloud Hosting
--------------------------------------------------------
+4.4 Servicios de alojamiento en la nube
+---------------------------------------
 
-Durante la vigencia de este Acuerdo, cuando el Cliente elija utilizar la
-Plataforma en la nube (Cloud Hosting), Odoo SA se compromete a proporcionar los
-siguientes servicios:
+Durante la vigencia de este Acuerdo, cuando el Cliente elija utilizar la Plataforma en la nube,
+Odoo Technologies, S.A. de C.V. se compromete a proporcionar los siguientes servicios:
 
--  Elección de múltiples regiones de alojamiento (mínimo 3: Europa,
-   América, Asia / Pacífico)
--  Alojamiento en centros de datos de nivel III o equivalente, con un
-   99,9% de tiempo de actividad óptima de la red
--  Cifrado de comunicación Grado A SSL (HTTPS)
--  Copias de seguridad verificadas, completamente automatizadas,
-   replicadas en múltiples regiones
--  Plan de recuperación de desastres, probado regularmente
+-  Elección de múltiples regiones de alojamiento (mínimo 3: Europa, América, Asia/Pacífico);
+-  Alojamiento en centros de datos de Tier-III o equivalente, con un 99.9% de tiempo de actividad
+   óptima de la red;
+-  Cifrado de comunicación Grado A SSL (HTTPS);
+-  Copias de seguridad verificadas, completamente automatizadas y replicadas en múltiples regiones;
+-  Plan de recuperación de desastres con pruebas regulares.
 
-Los detalles de los servicios de alojamiento en la nube se describen en
-la página del Acuerdo de nivel de servicio:
-`Cloud SLA <http://www.odoo.com/cloud-sla>`__.
+Los detalles de los servicios de alojamiento en la nube se describen en la página del Acuerdo de
+nivel de servicio en `Cloud SLA <http://www.odoo.com/cloud-sla>`__.
 
 .. _support_service_es:
 
@@ -255,85 +224,91 @@ la página del Acuerdo de nivel de servicio:
 Alcance
 +++++++
 
-Durante la vigencia de este Acuerdo, el Cliente puede abrir un número
-ilimitado de tickets de soporte en `Odoo SA <https://www.odoo.com/help>`__,
-exclusivamente para preguntas relacionadas con errores (:ref:`bugfix_es`) u orientación con
-respecto al uso de las características estándar del Software y los Servicios (funcionalidades,
-uso previsto, configuración, solución de problemas).
+Durante la vigencia de este Acuerdo, el Cliente puede abrir un número ilimitado de tickets de
+soporte sin cargos adicionales, exclusivamente para preguntas relacionadas con Bugs
+(:ref:`bugfix_es`) u orientación con respecto al uso de las funciones estándar del Software y los
+Módulos Adicionales Cubiertos.
 
-Se pueden cubrir otras solicitudes de asistencia, como preguntas
-relacionadas con desarrollos, personalizaciones, instalación de
-Auto-Hosting o servicios que requieren acceso a la base de datos del
-Cliente a través de la compra de un Service Pack o Paquete de
-Implementación. En caso de que no quede claro si una solicitud está
-cubierta por este Acuerdo o un Service Pack, la decisión es a discreción de la disponibilidad de
-Odoo SA.
+Para otras solicitudes de asistencia, como preguntas relacionadas al desarrollo o
+personalizaciones, puede que sea necesario comprar un Acuerdo de servicio adicional. En caso de que
+no sea claro si este Acuerdo cubre una solicitud, la decisión es según el criterio de Odoo
+Technologies, S.A. de C.V.
+
+Disponibilidad
+++++++++++++++
+
+Se pueden enviar tickets a través de un formulario en el sitio web o llamando a los números que
+aparecen en odoo.com/help. Si se trabaja con un partner de Odoo, puede hacer su solicitud a través
+del canal dado por el partner, de acuerdo a su horario de atención.
+
+4.6 Trabajo con un partner de Odoo
+----------------------------------
+
+El Cliente puede trabajar ya sea con un partner de Odoo o directamente con Odoo Technologies, S.A.
+de C.V. para los servicios relacionados con solución de Bugs, soporte y actualización.
+
+Si el Cliente decide trabajar con un partner de Odoo, Odoo Technologies, S.A. de C.V. subcontratará
+al partner los servicios relacionados con los Módulos Adicionales Cubiertos. El partner de Odoo se
+convertirá en el punto principal de contacto para el Cliente. Puede que el partner de Odoo contacte
+a Odoo Technologies, S.A. de C.V. en nombre del cliente para solicitar asistencia de segundo nivel
+sobre cuestiones de funciones estándar del Software.
+
+Si el Cliente decide trabajar directamente con Odoo Technologies, S.A. de C.V., los servicios
+relacionados a los Módulos Adicionales Cubiertos se brindarán si y solo si la base de datos del
+cliente se aloja en la plataforma en la nube de Odoo.
 
 .. _charges_es:
 
-5 Cargos y Cuotas
+5 Costos y Cuotas
 =================
 
 .. _charges_standard_es:
 
-5.1 Cargos estándares
----------------------
+5.1 Costos estándar
+-------------------
 
-Los cargos estándares para la suscripción de Odoo Enterprise y los
-Servicios se basan en el número de Usuarios y las Aplicaciones
-instaladas, en la versión de software utilizada por el cliente.
+Los costos estándar para la suscripción de Odoo Enterprise y los Servicios se basan en el número de
+Usuarios y las Aplicaciones instaladas usadas por el Cliente, y lo que se especificó por escrito al
+celebrar este Acuerdo. 
 
-Cuando durante el plazo de uso del sistema, el Cliente tiene más
-Usuarios o más Aplicaciones instaladas que las especificadas en el
-momento de la celebración de este Acuerdo, el Cliente acepta pagar la
-tarifa adicional equivalente al precio de lista aplicable según el
-servicio que tenga instalado, para los Usuarios o Aplicaciones
-adicionales, para el resto del plazo.
+Si a lo largo de la Duración de uso del sistema, el Cliente tiene más Usuarios o más Aplicaciones
+instaladas que las especificadas al momento de celebrar este Acuerdo, el Cliente acepta pagar la
+cuota adicional equivalente al precio de lista (aplicable al inicio de la Duración) para los
+Usuarios o Aplicaciones adicionales, para el tiempo restante de la Duración.
 
-Si en el momento de la conclusión de este Acuerdo, el Cliente utiliza
-una Versión Cubierta que no es la más reciente, los cargos estándares
-pueden incrementarse en un 50% durante la duración del primer plazo, a discreción exclusiva de
-Odoo SA, para cubrir los costos de mantenimiento adicionales.
+Además, los servicios para Módulos Adicionales Cubiertos se cobran dependiendo del número de líneas
+de código en estos módulos. Si el cliente elige el mantenimiento de Módulos Adicionales Cubiertos,
+el costo mensual por 100 líneas de código (redondeadas a la siguiente centena) es de 16€, a no ser
+que se especifique lo contrario por escrito al celebrar este acuerdo. Las líneas de código se
+contarán con el comando cloc del Software e incluirán todas las líneas de texto del código fuente
+de estos módulos, sin importar el lenguaje de programación (Python, Javascript, XML, etc.), sin
+incluir líneas en blanco, líneas de comentario y archivos que no se cargan al instalar o ejecutar
+el Software. 
+
+Cuando el Cliente solicita una actualización, por cada Módulo Adicional Cubierto que no se haya
+incluído en la cuota de mantenimiento por los últimos 12 meses, Odoo Technologies, S.A. de C.V.
+puede solicitar un pago adicional único de 16€ por cada 100 líneas de código, por cada mes que no
+se incluyó en la cobertura.
 
 .. _charges_renewal_es:
 
 5.2 Cargos de renovación
 ------------------------
 
-En el momento de la renovación, tal como se describe en la sección :ref:`term_es`,
-si los cargos aplicados durante los términos
-anteriores son más bajos que el precio de lista aplicable más actual,
-estos cargos pueden aumentar hasta un 7%.
-
-.. _charges_thirdparty_es:
-
-5.3 Cargos por servicios de actualización de módulos de terceros
-----------------------------------------------------------------
-
-El cargo adicional por el Servicio de actualización para módulos de
-terceros es de EUR (€) 1000.00 (mil euros) por 1000 líneas de código en los módulos de terceros,
-redondeados a las siguientes mil líneas. Las líneas de código incluyen todas las líneas de texto
-en el código fuente de esos módulos, independientemente del lenguaje de programación
-(Python, Javascript, etc.) o el formato de datos (XML, CSV, etc.), excluyendo líneas en blanco y
-líneas de comentarios.
-
-Odoo SA se reserva el derecho de rechazar una solicitud de actualización para módulos de terceros
-en virtud de lo anterior si la calidad del código fuente de esos módulos es demasiado baja,
-o si estos módulos constituyen una interfaz con software o sistemas de terceros.
-La actualización de dichos módulos puede ser sujeta a una oferta por separado, fuera de este Acuerdo.
+En el momento de la renovación, tal como se describe en la sección :ref:`term_es`, si los costos
+aplicados durante la Duración (sin incluir los “Descuentos Iniciales de Usuarios”) anterior son más
+bajos que el precio de lista aplicable más actual, estos costos pueden aumentar hasta un 7%.
 
 .. _taxes_es:
 
-5.4 Impuestos
+5.3 Impuestos
 -------------
 
-Todos los aranceles y cargos son exclusivos de todos los impuestos,
-aranceles o cargos federales, provinciales, estatales, locales u otros
-gubernamentales aplicables (colectivamente, “Impuestos”). El cliente es
-responsable de pagar todos los Impuestos asociados con las compras
-realizadas por el Cliente en virtud de este Acuerdo, excepto cuando Odoo
-SA está legalmente obligado a pagar o cobrar impuestos de los cuales el
-cliente es responsable.
+Todos los costos y cuotas son exclusivos de todos los impuestos, costos o cuotas federales,
+provinciales, estatales, locales u otros gubernamentales aplicables (colectivamente, “Impuestos”).
+El Cliente es responsable de pagar todos los Impuestos asociados con las compras realizadas por el
+Cliente en virtud de este Acuerdo, excepto cuando sea responsabilidad legal de Odoo Technologies,
+S.A. de C.V. pagar o cobrar impuestos de los cuales el Cliente es responsable.
 
 .. _conditions_es:
 
@@ -345,51 +320,48 @@ cliente es responsable.
 
 El Cliente se compromete a:
 
-- Pagar a Odoo SA cualquier cargo aplicable por los Servicios del
-  presente Acuerdo, según las condiciones de pago especificadas en la
-  factura correspondiente;
+- Pagar a Odoo Technologies, S.A. de C.V. cualquier costo aplicable por los Servicios del presente
+  Acuerdo, según las condiciones de pago especificadas a la celebración del Acuerdo;
+- Notificar inmediatamente a Odoo Technologies, S.A. de C.V. cuando su número real de Usuarios o
+  Aplicaciones instaladas exceda el número especificado a la celebración del Acuerdo y, en este
+  caso, el pago de la cuota adicional aplicable como se describe en la sección 5.1 Costos estándar;
+- Tomar todas las medidas necesarias para garantizar la ejecución no modificada de la parte del
+  Software que verifica la validez del uso de la edición Enterprise de Odoo, como se describe en la
+  sección 3. Acceso al Software, :ref:`enterprise_access_es`;
+- Designar a 1 persona de contacto que se dedique al Cliente a lo largo de la Duración del Acuerdo;
+- Notificar por escrito a Odoo Technologies, S.A. de C.V. 30 días antes de cambiar el punto
+  principal de contacto para trabajar con otro partner de Odoo o directamente con Odoo
+  Technologies, S.A de C.V.
 
-- Notificar inmediatamente a Odoo SA cuando su número real de usarios
-  o aplicaciones instaladas exceda el número especificado al final
-  del Acuerdo y, en este caso, el pago de la tarifa adicional
-  aplicable como se describe en la sección :ref:`charges_standard_es`;
+Cuando el Cliente elige usar la Plataforma en la nube, el Cliente también se compromete a:
 
-- Tomar todas las medidas necesarias para garantizar la ejecución no
-  modificada de la parte del Software que verifica la validez del uso
-  de Odoo Enterprise Edition, como se describe en la sección :ref:`enterprise_access_es`;
+- Tomar todas las medidas razonables para mantener sus cuentas de Usuario seguras, incluso elegir
+  una contraseña segura y no compartirla con nadie más;
 
-- Designar a 1 persona de contacto dedicada del Cliente durante toda la duración del Acuerdo;
+- Hacer uso razonable de los servicios de alojamiento, sin incluir cualquier actividad ilegal o
+  actividades abusivas, y seguir estrictamente las reglas descritas en la Política de uso aceptable
+  publicada en `acceptable use <https://www.odoo.com/acceptable-use>`__.
 
-Cuando el Cliente elige usar la Plataforma en la nube, el Cliente
-acuerda además:
+Cuando el Cliente elige la opción de alojamiento propio, el Cliente también se compromete a:
 
-- Tomar todas las medidas razonables para mantener sus cuentas de
-  Usuario seguras, incluso al elegir una contraseña segura y no
-  compartirla con nadie más;
+- Tomar todas las medidas razonables para proteger los archivos y las bases de datos del Cliente y
+  para garantizar que los datos del Cliente estén seguros y protegidos. También debe reconocer que
+  Odoo Technologies, S.A. de C.V. no se hace responsable de ninguna pérdida de datos;
 
-- Hacer uso razonable de los servicios de alojamiento, cone xclusiónde cualquier actividad ilegal
-  o actividades abusivas, y observar estrictamente las reglas descritas en la Política de uso
-  aceptable publicada en `acceptable use <https://www.odoo.com/acceptable-use>`__.
-
-Cuando el Cliente elige la opción de Auto-alojamiento, el Cliente acepta
-además:
-
-Tomar todas las medidas razonables para proteger los archivos y las
-bases de datos del Cliente y para garantizar que los datos del Cliente sean seguros y estén
-protegidos, reconociendo que Odoo SA no se hace responsable de ninguna pérdida de datos
-
-Otorgar a Odoo SA el acceso necesario para verificar la validez de la Edición Enterprise de Odoo
-uso a solicitud (por ejemplo, si la validación automática no es válida para el Cliente);
+- Otorgar a Odoo Technologies, S.A. de C.V. el acceso necesario para verificar la validez del uso
+  de la Edición Enterprise de Odoo bajo solicitud (por ejemplo, si la validación automática no es
+  válida para el Cliente);
 
 6.2 No solicitar o contratar
 ----------------------------
-Excepto cuando la otra parte dé su consentimiento por escrito, cada
-parte, sus afiliados y sus representantes acuerdan no solicitar u
-ofrecer empleo a ningún empleado de la otra parte que esté involucrada en la prestación o el uso
-de los Servicios en virtud de este Acuerdo, durante la vigencia del Acuerdo y por un período de
-12 meses a partir de la fecha de terminación o vencimiento de este Acuerdo. En caso de cualquier
-incumplimiento de las condiciones de esta sección que conduzca a la terminación de dicho empleado,
-la parte infractora acuerda pagar a la otra parte un importe de EUR (€) 30000 (treinta mil euros).
+
+Excepto cuando la otra parte dé su consentimiento por escrito, cada parte, sus afiliados y sus
+representantes acuerdan no solicitar u ofrecer empleo a ningún empleado de la otra parte que esté
+involucrada en la prestación o el uso de los Servicios en virtud de este Acuerdo, durante la
+vigencia del Acuerdo y por un periodo de 12 meses a partir de la fecha de terminación o vencimiento
+de este Acuerdo. En caso de cualquier incumplimiento de las condiciones de esta sección que
+conduzca al despido de dicho empleado, la parte infractora acuerda pagar a la otra parte un importe
+de EUR (€) 30,000 (treinta mil euros).
 
 .. _publicity_es:
 
@@ -397,201 +369,191 @@ la parte infractora acuerda pagar a la otra parte un importe de EUR (€) 30000 
 --------------
 
 Excepto cuando se notifique lo contrario por escrito, cada parte otorga a la otra una licencia
-mundial no transferible, no exclusiva, sin regalías para reproducir y mostrar el nombre,
-los logotipos de la otra parte y marcas comerciales, con el único fin de referirse a la otra parte
-como cliente o proveedor, en sitios web, comunicados de prensa y otros materiales de marketing.
+mundial no transferible, no exclusiva y sin regalías para reproducir y mostrar el nombre, los logos
+y marcas comerciales de la otra parte, con el único fin de referirse a la otra parte como cliente o
+proveedor en sitios web, comunicados de prensa y otros materiales de marketing.
 
 .. _confidentiality_es:
 
 6.4 Confidencialidad
 --------------------
 
-Definición de "Información confidencial": Toda la información divulgada
-por una parte (la "Parte reveladora") a la otra parte (la "Parte
-receptora"), ya sea oralmente o por escrito, es decir, designado como
-confidencial o que razonablemente debe entenderse como confidencial dado
-la naturaleza de la información y las circunstancias de divulgación.
+**Definición de "Información Confidencial"** 
 
-En particular, cualquier información relacionada con los negocios,
-asuntos, productos, desarrollos, secretos comerciales, “know-how”, el
-personal, los clientes y los proveedores de cualquiera de las partes
-deben considerarse confidenciales.
+Toda la información divulgada por una parte (la "Parte Divulgadora") a la otra parte (la "Parte
+Receptora"), ya sea oralmente o por escrito, es decir, designado como confidencial o que
+razonablemente debe entenderse como confidencial dado la naturaleza de la información y las
+circunstancias de divulgación. En particular, cualquier información relacionada con los negocios,
+asuntos, productos, desarrollos, secretos comerciales, saber hacer, el personal, los clientes y los
+proveedores de cualquiera de las partes deben considerarse confidenciales.
 
-Para toda la Información confidencial recibida durante el Término de
-este Acuerdo, la parte receptora utilizará el mismo grado de atención
-que utiliza para proteger la confidencialidad de sus propios servicios
-similares.
+Para toda la Información Confidencial recibida durante la Duración de este Acuerdo, la Parte
+Receptora utilizará el mismo grado de atención que utiliza para proteger la confidencialidad de su
+propia Información Confidencial.
 
-La parte receptora puede divulgar información confidencial de la parte
-reveladora en la medida en que sea obligado por ley, siempre que la
-Parte Receptora dé aviso previo a la Parte Divulgadora de la divulgación
-obligada, en la medida permitida por la ley.
+La Parte Receptora puede revelar la Información Confidencial de la Parte Divulgadora en la medida
+en que sea obligada por ley, siempre que la Parte Receptora dé aviso previo a la Parte Divulgadora
+de la información que está obligada a dar a conocer, en la medida permitida por la ley.
 
 .. _data_protection_es:
 
 6.5 Protección de datos
 -----------------------
 
-Las definiciones de "Datos personales", "Controlador", "Procesamiento"
-toman los mismos significados que en el Reglamento (UE) 2016/679 y la
-Directiva 2002/58 / CE, y cualquier reglamento o legislación que los
-modifica o reemplaza (en lo sucesivo, "Legislación de protección de
-datos”)
+Definiciones
+++++++++++++
+
+Las definiciones de "Datos Personales", "Controlador", "Procesamiento" toman los mismos
+significados que en el Reglamento (UE) 2016/679 y la Directiva 2002/58/CE, y cualquier
+reglamento o legislación que los modifique o reemplace (en lo sucesivo, "Legislación de
+Protección de Datos”).
 
 Procesamiento de datos personales
 +++++++++++++++++++++++++++++++++
 
-Las partes reconocen que la base de datos del Cliente puede contener
-datos personales, para los cuales el cliente es el controlador. Estos
-datos serán procesados por Odoo SA cuando el Cliente así lo indique,
-mediante el uso de cualquiera de los Servicios que requieren una base de
-datos (por ejemplo, los Servicios de hospedaje en la nube o el Servicio
-de actualización de la base de datos), o si el Cliente transfiere su
-base de datos o una parte de su base de datos a Odoo SA por cualquier
-motivo relacionado con este Acuerdo.
+Las partes reconocen que la base de datos del Cliente puede contener Datos Personales, de los
+cuales el cliente es el Controlador. Odoo Technologies, S.A. de C.V. procesará esos datos cuando el
+Cliente así lo indique, mediante el uso de cualquiera de los Servicios que requieren una base de
+datos (por ejemplo, los Servicios de alojamiento en la nube o el Servicio de actualización de la
+base de datos), o si el Cliente transfiere su base de datos o una parte de esta a Odoo
+Technologies, S.A. de C.V. por cualquier motivo relacionado con este Acuerdo.
 
-Este procesamiento se realizará de conformidad con la legislación de
-protección de datos. En particular, Odoo SA se compromete a:
+El procesamiento se realizará de conformidad con la Legislación de Protección de Datos. En
+especial, Odoo Technologies, S.A. de C.V. se compromete a:
 
-- (a) Solo procesar los datos personales cuando y como lo indique el Cliente, y para elp ropósito
-  de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la
-  ley, en cuyo caso, Odoo SA proporcionará un aviso previo al Cliente, a menos que la ley lo prohíba;
-- (b) garantizar que todas las personas dentro de Odoo SA” autorizadas para procesar los Datos
-  personales estén comprometidos con la confidencialidad;
-- (c) implementar y mantener medidas técnicas y organizativas adecuadas para proteger los datos
-  personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental,
+- (a) Solo procesar los datos personales cuando y como lo indique el Cliente, y para el propósito
+  de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la ley,
+  en cuyo caso, Odoo Technologies, S.A. de C.V. proporcionará un aviso previo al Cliente, a menos
+  que la ley lo prohíba;
+- (b) Garantizar que todas las personas dentro de Odoo Technologies, S.A. de C.V. autorizadas para
+  procesar los Datos Personales estén comprometidas con la confidencialidad;
+- (c) Implementar y mantener medidas técnicas y organizativas adecuadas para proteger los Datos
+  Personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental,
   destrucción, daño, robo, alteración o divulgación;
-- (d) enviará sin demora al Cliente cualquier solicitud de protección de datos que se haya enviado
-  a Odoo SA con respecto a la base de datos del Cliente;
-- (e) notificar al Cliente inmediatamente al momento de conocer y confirmar cualquier accidente,
-  el procesamiento no autorizado o ilegal de, la divulgación o el acceso a los datos personales;
-- (f) notificar al Cliente si las instrucciones de procesamiento infringen la Protección de datos
-  aplicables a la legislación, en opinión de Odoo SA;
-- (g) poner a disposición del Cliente toda la información necesaria para demostrar el cumplimiento
-  con la legislación de protección de datos, permitir y contribuir razonablemente
-  a las auditorías, incluidas las inspecciones, realizadas o exigidas por el Cliente;
-- (h) eliminar permanentemente todas las copias de la base de datos del Cliente en posesión de
-  Odoo SA, o devolver dichos datos, a elección del Cliente, a la terminación de este Acuerdo,
-  sujeto a los retrasos especificados en la Política de privacidad
-  de Odoo SA (`Privacy <https://www.odoo.com/privacy>`__).
+- (d) Enviará sin demora al Cliente cualquier solicitud de protección de datos que se haya enviado
+  a Odoo Technologies, S.A. de C.V. con respecto a la base de datos del Cliente;
+- (e) Notificar al Cliente inmediatamente al momento de conocer y confirmar cualquier
+  procesamiento, divulgación o acceso accidental, no autorizado o ilegal a los Datos Personales;
+- (f) Notificar al Cliente si las instrucciones de procesamiento infringen la Protección de datos
+  aplicables a la legislación, a criterio de Odoo Technologies, S.A. de C.V.;
+- (g) Poner a disposición del Cliente toda la información necesaria para demostrar el cumplimiento
+  de la Legislación de Protección de Datos, así como permitir y contribuir razonablemente a las auditorías, incluidas las inspecciones, realizadas o exigidas por el Cliente;
+- (h) Eliminar de forma permanente todas las copias de la base de datos del Cliente en posesión de
+  Odoo Technologies, S.A. de C.V., o devolver dichos datos, a elección del Cliente, a la
+  terminación de este Acuerdo, sujeto a los retrasos especificados en la
+  `Política de privacidad <https://www.odoo.com/privacy>`__ de Odoo Technologies, S.A. de C.V.
 
-Con respecto a los puntos (d) a (f), el Cliente acepta proporcionar a Odoo SA un contacto preciso
-para información en todo momento, según sea necesario para notificar al responsable de Protección
-de Datos del Cliente.
+Con respecto a los puntos (d) a (f), el Cliente se compromete a proporcionar a Odoo Technologies, S.A. de C.V. información de contacto precisa en todo momento, cada que sea necesario notificar al responsable de Protección de Datos del Cliente.
 
-Sub procesadores
-++++++++++++++++
+Subprocesadores
++++++++++++++++
 
-El Cliente reconoce y acepta que para proporcionar los Servicios, Odoo SA puede utilizar
-proveedores de servicios de terceros (sub procesadores) para procesar datos personales.
-Odoo SA se compromete a utilizar únicamente sub procesadores de conformidad con la legislación de
-protección de datos. Este uso será cubierto por un contrato entre Odoo SA y el Sub procesador
-que proporciona garantías al efecto.
-
-La Política de privacidad de Odoo SA, publicada en `Odoo Privacy <https://www.odoo.com/privacy>`_
-proporciona información actualizada sobre los nombres y propósitos de los Sub procesadores
-actualmente en uso por Odoo SA para la ejecución de los Servicios.
+El Cliente reconoce y acepta que para proporcionar los Servicios, Odoo Technologies, S.A. de C.V.
+puede utilizar proveedores de servicios de terceros (Subprocesadores) para procesar datos
+personales. Odoo Technologies, S.A. de C.V. se compromete a utilizar únicamente Subprocesadores que
+cumplan con la Legislación de Protección de Datos. Un contrato entre Odoo Technologies, S.A. de C.V. y el Subprocesador regulará este uso y proporcionará garantías para este fin. La Política de
+privacidad de Odoo Technologies, S.A. de C.V., publicada en
+`Odoo Privacy <https://www.odoo.com/privacy>`__ proporciona información actualizada sobre los
+nombres y propósitos de los Subprocesadores que Odoo Technologies, S.A. de C.V. usa actualmente
+para la ejecución de los Servicios.
 
 .. _termination_es:
 
-6.6 Terminación
----------------
+6.6 Rescición
+-------------
 
-En el caso de que cualquiera de las Partes incumpla alguna de las
-obligaciones que surgen en el presente documento, y si tal el
-incumplimiento no ha sido subsanado dentro de los 30 días de calendario posteriores
-a la notificación por escrito de dicho incumplimiento, este Acuerdo puede ser rescindido
-inmediatamente por la Parte que no incumple.
+En el caso de que cualquiera de las Partes incumpla alguna de las obligaciones que surgen en el
+presente documento, y si tal incumplimiento no ha sido subsanado dentro de los 30 días naturales
+posteriores a la notificación por escrito de dicho incumplimiento, la Parte Afectada puede
+rescindir inmediatamente de este Acuerdo.
 
-Además, Odoo SA puede rescindir el Contrato inmediatamente en caso de que el Cliente incumpla
-con pagos de las tarifas aplicables a los
-Servicios dentro de la fecha de vencimiento especificada en el factura.
+Además, Odoo Technologies, S.A. de C.V. puede rescindir el Contrato inmediatamente en caso de que
+el Cliente incumpla con pagos de las cuotas aplicables a los Servicios dentro de 21 días después de
+la fecha de vencimiento especificada en la factura y después de 3 recordatorios.
 
-Disposiciones supervivientes: Las secciones ":ref:`confidentiality_es`",
-“:ref:`disclaimers_es`",“:ref:`liability_es`", y “:ref:`general_provisions_es`” sobrevivirán
-cualquier terminación o vencimiento de este Acuerdo.
+Disposiciones subsistentes
+++++++++++++++++++++++++++
+Las secciones ":ref:`confidentiality_es`", “:ref:`disclaimers_es`",“:ref:`liability_es`", y “:ref:`general_provisions_es`” sobrevivirán cualquier terminación o vencimiento de este Acuerdo.
 
 .. _warranties_disclaimers_es:
 
-7 Garantías, Renuncias, Responsabilidad Civil.
-==============================================
+7 Garantías, Renuncias, Limitaciones
+====================================
 
 .. _warranties_es:
 
 7.1 Garantías
 -------------
 
-Durante la vigencia de este Acuerdo, Odoo SA se compromete a utilizar
-esfuerzos comercialmente razonables con la finalidad de ejecutar los
-Servicios de acuerdo con los estándares de la industria generalmente
-aceptados siempre y cuando:
+Odoo Technologies, S.A. de C.V. es el titular de los derechos de autor o un equivalente [1] del
+100% del código del Software. Además, Odoo Technologies S.A. de C.V. confirma que todas las
+bibliotecas de Software que se requieren para utilizar el Software están disponibles bajo una
+licencia compatible con la licencia del Software.
 
-los sistemas informáticos del Cliente están en buen estado de
-funcionamiento y, en el caso de Auto-Hosting, el software se instala en
-un entorno operativo adecuado;
+Durante la vigencia de este Acuerdo, Odoo Technologies, S.A. de C.V. se compromete a utilizar
+esfuerzos comercialmente razonables con la finalidad de ejecutar los Servicios de acuerdo con los
+estándares del sector generalmente aceptados siempre y cuando:
 
-el Cliente proporciona información adecuada para la resolución de
-problemas y, para el Auto alojamiento, cualquier acceso que Odoo SA
-puede necesitar para identificar, reproducir y resolver problemas;
+- Los sistemas informáticos del Cliente están en buen estado de funcionamiento y, en el caso de
+  alojamiento propio, el software se instala en un entorno operativo adecuado;
+- El Cliente proporciona información adecuada para la resolución de problemas y, para el
+  alojamiento propio, cualquier acceso que Odoo Technologies, S.A. de C.V. puede necesitar para
+  identificar, reproducir y resolver problemas;
+- Todos los importes adeudados a Odoo Technologies, S.A. de C.V. han sido pagados.
 
-Todos los montos adeudados a Odoo SA han sido pagados.
+La única solución para el Cliente y la única obligación de Odoo Technologies, S.A. de C.V. por
+cualquier incumplimiento de esta garantía es que Odoo Technologies, S.A. de C.V. reanude la
+ejecución de los Servicios sin cargo adicional.
 
-El único y exclusivo remedio del Cliente y la única obligación de Odoo SA por cualquier
-incumplimiento de esta garantía es para Odoo SA reanudar la ejecución de los Servicios sin cargo
-adicional.
+[1] Las contribuciones externas están incluidas en el 
+`Acuerdo de Derechos de Autor <https://github.com/odoo/odoo/blob/15.0/doc/cla/sign-cla.md>`__, que
+hace a Odoo Technologies S.A. de C.V. el titular de los derechos de autor de manera permanente,
+gratis e irrevocable.
 
 .. _disclaimers_es:
 
-7.2 Renuncias
--------------
+7.2 Renuncia de responsabilidades
+---------------------------------
 
-Excepto por lo expresamente dispuesto en este documento, ninguna de las
-partes ofrece ninguna garantía de ningún tipo, ya sea expresa,
-implícita, estatutaria o de otro tipo, y cada parte niega
-específicamente todas las garantías implícitas, incluida cualquier
-garantía implícita de comercialización, idoneidad para un propósito
-particular o no infracción, en la medida máxima permitida por la ley
-aplicable.
+Excepto por lo expresamente dispuesto en este documento, ninguna de las partes ofrece ninguna
+garantía de ningún tipo, ya sea expresa, implícita, estatutaria o de otro tipo, y cada parte niega
+específicamente todas las garantías implícitas, incluida cualquier garantía implícita de
+comercialización, idoneidad para un propósito particular o no infracción, en la medida máxima
+permitida por la ley aplicable.
 
-Odoo SA no garantiza que el Software cumpla con leyes o regulaciones
+Odoo Technologies, S.A. de C.V. no garantiza que el Software cumpla con leyes o regulaciones
 locales o internacionales.
 
 .. _liability_es:
 
-7.3 Limitación de responsabilidad
----------------------------------
+7.3 Limitación de responsabilidades
+-----------------------------------
 
 En la medida máxima permitida por la ley, la responsabilidad agregada de cada parte junto con los
-afiliados que surjan de o estén relacionados con este Acuerdo no excederán el 50% del monto total
-pagado por el Cliente en virtud de este Acuerdo durante los 12 meses inmediatamente anteriores
-a la fecha del evento que da lugar a tal reclamo. Las reclamaciones múltiples no ampliarán esta
-limitación.
+afiliados que surjan de o estén relacionados con este Acuerdo no excederán el 50% del importe total
+pagado por el Cliente en virtud de este Acuerdo durante los 12 meses inmediatamente anteriores a la
+fecha del evento que da lugar a tal reclamo. Múltiples reclamos no ampliarán esta limitación.
 
-En ningún caso, ninguna de las partes o sus afiliadas serán responsable
-por daños indirectos, especiales, ejemplares, incidentales o
-consecuentes de cualquier tipo, incluidos, entre otros, la pérdida de
-ingresos, ganancias, ahorros, pérdida de negocios u otras pérdidas
-financieras, costos de inactividad o demora, datos perdidos o dañados,
-que surjan de o en conexión con este Acuerdo independientemente de la
-forma de acción, ya sea en contrato, agravio (incluida negligencia
-estricta) o cualquier otra teoría legal o equitativa, incluso si una
-parte o sus afiliados han sido informados de la posibilidad de tales
-daños, o si una parte o sus afiliados no cumpla con su propósito
-esencial.
+En ningún caso, ninguna de las partes o sus afiliadas serán responsables por daños indirectos,
+especiales, ejemplares, incidentales o consecuentes de cualquier tipo, incluidos de manera
+enunciativa más no limitativa, la pérdida de ingresos, ganancias, ahorros, pérdida de negocios u
+otras pérdidas financieras, costos de inactividad o demora, datos perdidos o dañados, que surjan de
+o en conexión con este Acuerdo independientemente de la forma de acción, ya sea en contrato,
+agravio (incluida negligencia estricta) o cualquier otra teoría legal o equitativa, incluso si una
+parte o sus afiliados hayan sido informados de la posibilidad de tales daños, o si una parte o sus
+afiliados no cumplan con su propósito esencial.
 
 .. _force_majeure_es:
 
 7.4 Fuerza mayor
 ----------------
 
-Ninguna de las partes será responsable ante la otra parte por la demora
-en el cumplimiento o la falta de hacer cualquier desempeño bajo este
-Acuerdo cuando tal falla o demora sea causada por regulaciones
-gubernamentales, incendios, huelgas, guerras, inundaciones, accidentes,
-epidemias, embargos, apropiación de plantas, o producto en su totalidad
-o en parte por cualquier gobierno o autoridad pública, o cualquier otra
-causa o causas, ya sean de naturaleza similar o diferente, más allá del
-control razonable de dicha parte siempre que tal causa o causas existen.
+Ninguna de las partes será responsable ante la otra parte por la demora en el cumplimiento o la
+falta de hacer cualquier desempeño bajo este Acuerdo cuando tal falla o demora sea causada por
+regulaciones gubernamentales, incendios, huelgas, guerras, inundaciones, accidentes, epidemias,
+embargos, apropiación total o parcial de plantas o producto por cualquier gobierno o autoridad
+pública, o cualquier otra causa o causas, ya sean de naturaleza similar o diferentes, más allá del
+control razonable de dicha parte siempre que tal causa o causas existan.
 
 .. _general_provisions_es:
 
@@ -603,27 +565,22 @@ control razonable de dicha parte siempre que tal causa o causas existen.
 8.1 Ley aplicable
 -----------------
 
-Ambas partes acuerdan que las leyes de Bélgica se aplicarán, en caso de
-que surja cualquier disputa fuera de o en relación con este Acuerdo, sin
-tener en cuenta la elección o el conflicto de principios legales. En la
-medida en que anteriormente se permita cualquier demanda o procedimiento
-judicial, ambas partes acuerdan someterse a la única jurisdicción del
-tribunal de Nivelles (Bélgica) con el fin de litigar todas las disputas.
+Ambas partes acuerdan que se aplicarán las leyes de Bélgica, en caso de que surja cualquier disputa
+fuera de o en relación con este Acuerdo, sin tener en cuenta la elección o el conflicto de
+principios legales. En la medida en que anteriormente se permita cualquier demanda o procedimiento
+judicial, ambas partes acuerdan someterse a la única jurisdicción del tribunal comercial de
+Nivelles (Bélgica) con el fin de litigar todas las disputas.
 
 .. _severability_es:
 
 8.2 Divisibilidad
 -----------------
 
-En caso de que una o más de las disposiciones de este Acuerdo o
-cualquiera de sus aplicaciones sean inválidas, ilegales o no exigibles
-en ningún aspecto, la validez, legalidad y exigibilidad de las
-disposiciones restantes del presente Acuerdo y su aplicación no serán de
-ninguna manera afectados o deteriorados. Ambas partes se comprometen a
-reemplazar cualquier inválido, ilegal o inaplicable disposición de este
-Acuerdo por una disposición válida que tenga los mismos efectos y
-objetivos.
-
+En caso de que una o más de las disposiciones de este Acuerdo o cualquiera de sus aplicaciones sean
+no válidas, ilegales o no exigibles en ningún aspecto, la validez, legalidad y cumplimiento de las
+disposiciones restantes del presente Acuerdo y su aplicación no serán de ninguna manera afectadas o
+deterioradas. Ambas partes se comprometen a reemplazar cualquier disposición no válida, ilegal o
+inaplicable de este Acuerdo por una disposición válida que tenga los mismos efectos y objetivos.
 
 .. _appendix_a_es:
 
