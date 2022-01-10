@@ -19,3 +19,4 @@ Frontend
     frontend/javascript_reference
     frontend/mobile
     frontend/qweb
+    frontend/icons_library
