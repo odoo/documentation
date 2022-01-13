@@ -56,11 +56,21 @@ endpoint** in your **Hosted endpoints**. A form opens, where you'll need to add 
 When you click on **Add endpoint**, your Webhook is configured. You can then click on **reveal** to
 display your signing secret.
 
+.. _stripe/local-payment-methods:
+
 Enable local payment methods
 ----------------------------
 
 Local payment methods are payment methods that are only available for certain merchants and
 customers countries and currencies.
+
+Odoo supports the following local payment methods:
+
+- Bancontact
+- EPS
+- giropay
+- iDEAL
+- Przelewy24 (P24)
 
 To enable specific local payment methods with Stripe, list them as supported payment icons. To do
 so, go to :menuselection:`Payment Acquirers --> Stripe --> Configuration` and add the desired
