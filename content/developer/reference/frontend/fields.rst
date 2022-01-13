@@ -124,6 +124,18 @@ Reference List
      - `color_picker`
      - `integer`
      - description...
+   * - :ref:`CopyClipboardCharField <frontend/fields/copy_clipboard_char_field>`
+     - `CopyClipboardChar`
+     - `char`
+     - button to copy a `char` value to the clipboard
+   * - :ref:`CopyClipboardTextField <frontend/fields/copy_clipboard_text_field>`
+     - `CopyClipboardText`
+     - `char`
+     - button to copy a text to the clipboard
+   * - :ref:`CopyClipboardURLField <frontend/fields/copy_clipboard_url_field>`
+     - `CopyClipboardURL`
+     - `char`
+     - button to copy a url to the clipboard
    * - :ref:`DateField <frontend/fields/date_field>`
      - `date`
      - `date`, `datetime`
@@ -316,6 +328,48 @@ ColorPickerField
 - Location: `@web/fields/color_picker_field`
 - Technical name: `color_picker`
 - Supported types: `integer`
+
+
+.. _frontend/fields/copy_clipboard_char_field:
+
+CopyClipboardCharField
+----------------------
+
+- Location: `@web/fields/copy_clipboard_char_field`
+- Technical name: `CopyClipboardText`
+- Supported types: `char`
+
+This component represents a field that allows a user to copy a `char` value to its clipboard
+by clicking on the copy button present in the field. The value is also displayed inline on
+the left.
+
+
+.. _frontend/fields/copy_clipboard_text_field:
+
+CopyClipboardTextField
+----------------------
+
+- Location: `@web/fields/copy_clipboard_text_field`
+- Technical name: `CopyClipboardChar`
+- Supported types: `char`
+
+This component represents a field that allows a user to copy a text block to its clipboard
+by clicking on the copy button present in the field. The text is also displayed on the left
+and can have multiple lines.
+
+
+.. _frontend/fields/copy_clipboard_url_field:
+
+CopyClipboardURLField
+---------------------
+
+- Location: `@web/fields/copy_clipboard_url_field`
+- Technical name: `CopyClipboardURL`
+- Supported types: `char`
+
+This component represents a field that allows a user to copy a URL link to its clipboard
+by clicking on the copy button present in the field. The value is also displayed on the left
+and the user can click on it to open the link in a new tab.
 
 
 .. _frontend/fields/date_field:
@@ -536,17 +590,12 @@ It supports the following options:
      - optional. set if the maximum value is editable
    * - `current_value`
      - `integer`, `float`
-     - required. this is the current value of the progress. It can be the name of another field 
+     - optional. this is the current value of the progress. It can be the name of any field 
        that is present in the view, or any numerical value set directly.
    * - `max_value`
      - `integer`, `float`
-     - optional. this value is used to set a maximum value. It can be the name of another field 
+     - optional. this value is used to set a maximum value. It can be the name of any field 
        that is present in the view, or any numerical value set directly.
-
-.. note::
-
-   To use a more dynamic progress bar, it is recommended to set the current_value and the max_value
-   using the record instead of a static numerical value, which can't be edited.
 
 .. code-block:: xml
 
