@@ -8,7 +8,6 @@ countries :
 
 -  **Balance Sheet**
 -  **Profit and Loss**
--  **Chart of Account**
 -  **Executive Summary**
 -  **General Ledger**
 -  **Aged Payable**
@@ -43,14 +42,6 @@ organisation's net income, by deducting expenses from revenue for the
 report period.
 
 .. image:: media/main_reports10.png  
-   :align: center
-
-Chart of account
-----------------
-
-A listing of all your accounts grouped by class.
-
-.. image:: media/main_reports08.png  
    :align: center
 
 Executive Summary
