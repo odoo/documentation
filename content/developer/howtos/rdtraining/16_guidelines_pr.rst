@@ -139,22 +139,6 @@ commits you can just copy/paste your commit messages as the PR message.
 
 .. image:: 16_guidelines_pr/media/pr_message.png
 
-Additional Info for Odoo Staff
-==============================
-
-Now that you know the basics, here are some more useful pages if you haven't seen them already:
-
-- Our `welcome <https://github.com/odoo/enterprise/wiki/Welcome>`__ page has extra info about
-  working at Odoo as well as additional
-  `tutorials <https://github.com/odoo/enterprise/wiki/Welcome#3-technical-training>`__ that are
-  both language and Odoo specific.
-- Once you are ready to start doing tasks, it is important to note that Odoo follows a
-  `rebasing workflow instead of merging <https://www.atlassian.com/git/tutorials/merging-vs-rebasing>`__
-  for your PRs.
-  `This cheatsheet <https://github.com/odoo/enterprise/wiki/GIT-Cheatsheet#pull-request-flow>`__ describes
-  how to do this flow. If you want to become more of a rebasing master, then
-  `this tutorial <https://www.atlassian.com/git/tutorials/rewriting-history>`__ is extra useful.
-
 Test on the runbot
 ==================
 

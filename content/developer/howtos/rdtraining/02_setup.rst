@@ -21,12 +21,23 @@ Fetch the sources & configure git
 Install and configure git
 -------------------------
 
-The very first step of the installation process is to install the `git version control system <https://git-scm.com/>`__
-because the Odoo source code is managed on GitHub. Once installed, you can set your name and email:
+The very first step of the installation process is to install the `git version control system <https://git-scm.com/>`_
+because the Odoo source code is managed on GitHub.
+
+Git can be installed on `Linux <https://git-scm.com/download/linux>`_, `Windows
+<https://git-scm.com/download/win>`_ or `MacOS <https://git-scm.com/download/mac>`_.
+
+If you're using the laptop provided to you by Odoo, Git should already be installed. If it is not,
+you can install it with:
 
 .. code-block:: console
 
     $ sudo apt install git
+
+Once installed, you can set your name and email:
+
+.. code-block:: console
+
     $ git config --global user.name "Your full name"
     $ git config --global user.email "xyz@odoo.com"
 
@@ -43,7 +54,7 @@ authentication will allow you to connect to GitHub without supplying your userna
 password every time.
 
 
-The following instructions are based on the official `GitHub documentation <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`__.
+The following instructions are based on the official `GitHub documentation <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`_.
 
 
 Here is a step-by-step procedure:
@@ -104,9 +115,9 @@ Configure development repository
 --------------------------------
 
 To contribute to Odoo's development you will need to
-`fork the repository <https://guides.github.com/activities/forking/>`__, create a branch containing
+`fork the repository <https://guides.github.com/activities/forking/>`_, create a branch containing
 your code in the fork and submit a
-`Pull Request <https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request>`__
+`Pull Request <https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request>`_
 to the Odoo repository.
 
 If you are lucky enough to work at Odoo, the forks already exist. They are called
@@ -296,9 +307,9 @@ Log in to Odoo
 --------------
 
 Open `http://localhost:8069/` on your browser. We recommend you use:
-`Firefox <https://www.mozilla.org/fr/firefox/new/>`__,
-`Chrome <https://www.google.com/intl/fr/chrome/>`__
-(`Chromium <https://www.chromium.org/Home>`__ the open source equivalent) or any other browser with
+`Firefox <https://www.mozilla.org/fr/firefox/new/>`_,
+`Chrome <https://www.google.com/intl/fr/chrome/>`_
+(`Chromium <https://www.chromium.org/Home>`_ the open source equivalent) or any other browser with
 development tools.
 
 To log in as the administrator user, you can use the following credentials:
@@ -313,7 +324,7 @@ The Developer or Debug Mode gives you access to additional (advanced) tools.
 
 This is useful for training and we assume that the user is in developer mode for the rest of the tutorials.
 
-To activate the developer or debug mode you can follow the steps `here <https://www.odoo.com/documentation/user/general/developer_mode/activate.html>`__.
+To activate the developer or debug mode you can follow the steps `here <https://www.odoo.com/documentation/user/general/developer_mode/activate.html>`_.
 
 Extra tools
 ===========
@@ -360,7 +371,7 @@ Administrator tools for PostgreSQL
 -----------------------------------
 
 You can manage your PostgreSQL databases using the command line as demonstrated earlier or using
-a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`__ or `DBeaver <https://dbeaver.io/>`__.
+a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver <https://dbeaver.io/>`_.
 
 To connect the GUI application to your database we recommend you connect using the Unix socket.
 
@@ -375,8 +386,8 @@ Python Debugging
 When facing a bug or trying to understand how the code works, simply printing things out can
 go a long way, but a proper debugger can save a lot of time.
 
-You can use a classic Python library debugger (`pdb <https://docs.python.org/3/library/pdb.html>`__,
-`pudb <https://pypi.org/project/pudb/>`__ or `ipdb <https://pypi.org/project/ipdb/>`__) or you can
+You can use a classic Python library debugger (`pdb <https://docs.python.org/3/library/pdb.html>`_,
+`pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_) or you can
 use your editor's debugger. To avoid difficult configurations in the beginning, it is
 easier if you use a library debugger.
 
@@ -460,5 +471,51 @@ Here is a list of commands:
         limit_time_cpu = 9999
         limit_time_real = 9999
 
-Now that your server is running, it's time to start
+Additional resources
+--------------------
+
+Below are links to resources that could prove helpful during this tutorial.
+
+Git
+~~~
+
+- Atlassian has a set of `excellent tutorials <https://www.atlassian.com/git/tutorials/>`_.
+  Particularly, how to `rewrite the history
+  <https://www.atlassian.com/git/tutorials/rewriting-history>`_.
+- If the Atlassian tutorial does not work for you, W3schools offers a `very nice alternative
+  <https://www.w3schools.com/git/>`_.
+- To visualize the effect of git commands on the commits graphs, play with this `interactive
+  tutorial <https://learngitbranching.js.org/>`_.
+- If you want to read more about Github, their `documentation
+  <https://docs.github.com/en/get-started/quickstart/hello-world>`_ includes a comprehensive
+  introduction.
+
+Python
+~~~~~~
+
+- Don't forget about `Python official documentation <https://docs.python.org/3/>`_
+  (and make sure to select the correct version at the top of the page!).
+- `The Hitchhiker's Guide <https://docs.python-guide.org/>`_ will teach you the good practices of
+  Python.
+- If you have good experience of similar languages or just need a quick recall,
+  `this guide <https://learnxinyminutes.com/docs/python3/>`_ is made for you.
+
+Javascript
+~~~~~~~~~~
+
+- You should find a tutorial that suits your level in this `"re-introduction" to JavaScript
+  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript>`_.
+- If you just need a quick recall, `this one <https://learnxinyminutes.com/docs/javascript/>`_
+  will do the trick.
+
+(Postgre)SQL
+~~~~~~~~~~~~
+
+- If you are not familiar with PostgreSQL, `these exercises <https://www.pgexercises.com/>`_
+  will teach you better than any long documentation.
+- Even though you shouldn't have to interact with it, you might be interested to know
+  that Odoo uses `psycopg2 <https://www.psycopg.org/docs/usage.html>`_ to interact
+  with its SQL backend.
+
+Back to the training! Now that your server is running, it's time to start
 :ref:`writing your own application <howto/rdtraining/03_newapp>`!
