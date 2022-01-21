@@ -124,7 +124,7 @@ Subclasses of :class:`odoo.tests.common.BaseCase` (usually through
 ``standard`` and ``at_install`` by default.
 
 Invocation
-^^^^^^^^^^
+~~~~~~~~~~
 
 :option:`--test-tags <odoo-bin --test-tags>` can be used to select/filter tests
 to run on the command-line. It implies :option:`--test-enable <odoo-bin --test-enable>`,
@@ -230,7 +230,7 @@ can be specified at once separated by a `,` like with regular tags.
 .. _reference/testing/tags:
 
 Special tags
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 - ``standard``: All Odoo tests that inherit from
   :class:`~odoo.tests.common.BaseCase` are implicitly tagged standard.
@@ -248,7 +248,7 @@ Special tags
   ``-at_install`` when tagging a test class.
 
 Examples
-^^^^^^^^
+~~~~~~~~
 
 .. important::
 
@@ -540,8 +540,139 @@ business flow.  It explains a sequence of steps that should be followed.  The
 test runner will then create a Chrome headless browser, point it to the proper url
 and simulate the click and inputs, according to the scenario.
 
+Writing a test tour
+-------------------
+
+Structure
+~~~~~~~~~
+
+.. code-block:: text
+
+    your_module
+    `-- ...
+    `-- static
+        `-- tests
+            `-- tours
+                |-- your_tour.js
+    `-- tests
+        |-- __init__.py
+        |-- test_calling_the_tour.py
+    |-- __manifest__.py
+
+and ``__manifest__.py`` contains:
+
+.. code-block:: python
+
+    'assets': {
+        'web.assets_tests': [
+            'your_module/static/tests/tours/your_tour.js',
+        ],
+    },
+
+and as for any python test, ``__init__.py`` in the folder ``tests`` contains::
+
+    from . import test_calling_the_tour
+
+Javascript
+~~~~~~~~~~
+
+1. Setup your tour by defining it
+
+    .. code-block:: javascript
+
+        /** @odoo-module **/
+
+        import tour from 'web_tour.tour';
+
+        tour.register('rental_product_configurator_tour', {
+            url: "/web",  // Here, you can specify any other starting url
+            test: true,
+        }, [tour.stepUtils.showAppsMenuItem(), {  // For this tour, we need the AppMenu
+            // First step
+            trigger: '.o_app[data-menu-xmlid="sale_renting.rental_menu_root"]',
+            edition: 'enterprise'  // Optional
+        }, {
+            // Another tour step
+        },
+        ]);
+
+.. tip::
+    - If you don't specify an edition, the step will be active in both community and enterprise.
+    - Sometimes, a step will be different in enterprise or in community. You can then write two
+      steps, one for the enterprise edition and one for the community one.
+    - Generally, you want to specify an edition for steps that use the main menu as the main menus
+      are different in community and enterprise.
+
+2. Add any step you want, for example:
+
+.. code-block:: javascript
+
+    {
+        trigger: '.js_product:has(strong:contains(Chair floor protection)) .js_add',
+        extra_trigger: '.oe_advanced_configurator_modal',  // This ensure we are in the wizard
+    },
+
+.. code-block:: javascript
+
+    {
+        trigger: "a:contains('Add a product')",
+        // Extra-trigger to make sure a line is added before trying to add another one
+        extra_trigger: '.o_field_many2one[name="product_template_id"] .o_external_button',
+    },
+
+Here are some possible arguments for your steps:
+
+- **trigger**: selector/element/jQuery you want to trigger
+- **extra-trigger**: optional selector/element/jQuery that needs to be present before the next step
+  begins. This is especially useful when the tour needs to wait for a wizard to open, a line added
+  to a list view...
+- **run**: optional action to run, default to `click`. A multitude of actions are possible. Here
+  are some of them: `click`, `dbclick`, `tripleclick`, `text Example`, `drag_and_drop selector1
+  selector2`...
+- **position**: optional
+- **id**: optional
+- **auto**: optional
+
+.. tip::
+  your browser dev-tools is your best tool to find the element your tour needs to use as a
+  trigger/extra-trigger.
+
+.. seealso:: `jQuery documentation about find <https://api.jquery.com/find/>`_
+
+Python
+~~~~~~
+
+If your testing class inherits from :class:`~odoo.tests.common.HTTPCase`, you can then call your
+tour in your python tests with:
+
+.. code-block:: python
+
+    def test_rental_product_configurator_ui(self):
+        # Optional Setup
+        self.start_tour("/web", 'rental_product_configurator_tour', login="admin")
+        # Optional verifications
+
+Debugging tips
+--------------
+
+Running the tour in debug mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, activate the :doc:`developer mode </applications/general/developer_mode>` with
+`?debug=tests`. Then, open your debug menu and click on `Start Tour`. You can now launch your tour
+from there.
+
+You can also add this step in your tour to stop it right where you want it to:
+
+.. code-block:: javascript
+
+    {
+        trigger: "body",
+        run: () => {debugger}
+    }
+
 Screenshots and screencasts during browser_js tests
----------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When running tests that use HttpCase.browser_js from the command line, the Chrome
 browser is used in headless mode. By default, if a test fails, a PNG screenshot is
@@ -602,7 +733,7 @@ To specify this feature for a given model, the following methods and attributes 
     on the model to enable database population.
 
 Example model
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -646,7 +777,7 @@ Example model
             return records
 
 Population tools
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Multiple population tools are available to easily create
 the needed data generators.
