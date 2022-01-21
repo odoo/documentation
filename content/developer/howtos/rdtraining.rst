@@ -63,12 +63,16 @@ Advanced topics
 
     rdtraining/B_acl_irrules
     rdtraining/C_data
+    rdtraining/D_mixins
     rdtraining/E_unittest
     rdtraining/J_reports
     rdtraining/K_dashboard
+    rdtraining/N_security
 
 * :doc:`rdtraining/B_acl_irrules`
 * :doc:`rdtraining/C_data`
+* :doc:`rdtraining/D_mixins`
 * :doc:`rdtraining/E_unittest`
 * :doc:`rdtraining/J_reports`
 * :doc:`rdtraining/K_dashboard`
+* :doc:`rdtraining/N_security`
