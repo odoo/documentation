@@ -17,7 +17,7 @@ Configuration
 Make sure your :ref:`Payment Acquirers are correctly configured <payment_acquirers/configuration>`.
 
 .. note::
-   By default, ":doc:`Wire Transfer </applications/general/payment_acquirers/wire_transfer>`" is the only
+   By default, ":doc:`Wire Transfer </applications/finance/payment_acquirers/wire_transfer>`" is the only
    Payment Acquirer activated, but you still have to fill out the payment details.
 
 To activate the Invoice Online Payment, go to :menuselection:`Accounting --> Configuration --> 
@@ -42,4 +42,4 @@ They can choose which Payment Acquirer to use by clicking on *Pay Now*.
 
 .. seealso::
 
-   - :doc:`/applications/general/payment_acquirers`
+   - :doc:`/applications/finance/payment_acquirers`
