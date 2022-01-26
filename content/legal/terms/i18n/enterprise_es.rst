@@ -13,7 +13,7 @@ Acuerdo de suscripción de Odoo Enterprise
     "Odoo Enterprise Subscription Agreement" es :ref:`la versión original en
     inglés <enterprise_agreement>`
 
-.. note:: Version 9.0 - 2021-04-27
+.. note:: Version 9c - 2020-06-15
 
 Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
 Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
@@ -81,7 +81,7 @@ Versiones Cubiertas
     Acuerdo son únicamente aplicables a las versiones cubiertas del Software, las cuales incluyen
     las últimas tres (3) versiones publicadas.
 
-    .. _enterprise_access_es:
+.. _enterprise_access_es:
 
 3 Acceso al Software
 ====================
@@ -176,7 +176,8 @@ bajo el control de esta plataforma, sin requerir de alguna acción manual por pa
 
 .. _upgrade_odoo_es:
 
-**Servicio de actualización para el software**
+Servicio de actualización para el software
+++++++++++++++++++++++++++++++++++++++++++
 
 Durante la vigencia de este Acuerdo, el Cliente puede solicitar la actualización de su versión del
 Software a través del medio apropiado (generalmente a través de la sección de servicios de
@@ -345,6 +346,12 @@ El Cliente se compromete a:
 
 - Designar a 1 persona de contacto dedicada del Cliente durante toda la duración del Acuerdo;
 
+- Designar a 1 persona de contacto que se dedique al Cliente a lo largo de la Duración del Acuerdo;
+
+- Notificar por escrito a Odoo SA 30 días antes de cambiar el punto principal de contacto
+  para trabajar con otro Partner de Odoo o directamente con Odoo SA
+
+
 Cuando el Cliente elige usar la Plataforma en la nube, el Cliente
 acuerda además:
 
@@ -391,12 +398,13 @@ proveedor, en sitios web, comunicados de prensa y otros medios de marketing.
 6.4 Confidencialidad
 --------------------
 
-Definición de "Información confidencial": Toda la información divulgada por una de las Partes del
-presente Acuerdo, ya sea oralmente o por escrito, designada como confidencial o razonablemente
-considerada confidencial dada la naturaleza de la información y las circunstancias de divulgación.
-En particular, cualquier información relacionada a los negocios, asuntos, productos, desarrollos,
-secretos comerciales, “know-how”, el personal, los clientes y los proveedores de cualquiera de las
-Partes del presente Acuerdo, debe ser considerada como confidencial.
+Definición de "Información confidencial":
+    Toda la información divulgada por una de las Partes del
+    presente Acuerdo, ya sea oralmente o por escrito, designada como confidencial o razonablemente
+    considerada confidencial dada la naturaleza de la información y las circunstancias de divulgación.
+    En particular, cualquier información relacionada a los negocios, asuntos, productos, desarrollos,
+    secretos comerciales, “know-how”, el personal, los clientes y los proveedores de cualquiera de las
+    Partes del presente Acuerdo, debe ser considerada como confidencial.
 
 Para cualquier tipo de información confidencial recibida durante el Plazo de este Acuerdo, la Parte
 que haya recibido la información confidencial hará uso del mismo grado de precaución que usaría esta
@@ -414,9 +422,10 @@ permita.
 6.5 Protección de datos
 -----------------------
 
-Los términos “Datos Personales”, “Responsable del tratamiento”, “Tratamiento” tienen los mismos
-significados que en el Reglamento (UE) 2016/679 y la Directiva 2002/58 / CE, y cualquier reglamento
-o legislación que los modifique o sustituya (en adelante, “Legislacion de Proteccion de Datos”).
+Definiciones
+    Los términos “Datos Personales”, “Responsable del tratamiento”, “Tratamiento” tienen los mismos
+    significados que en el Reglamento (UE) 2016/679 y la Directiva 2002/58 / CE, y cualquier reglamento
+    o legislación que los modifique o sustituya (en adelante, “Legislacion de Proteccion de Datos”).
 
 Procesamiento de datos personales
 +++++++++++++++++++++++++++++++++
@@ -498,7 +507,7 @@ incluso después de cualquier terminación o vencimiento del presente Acuerdo.
 7.1 Garantías
 -------------
 
-Odoo SA posee los derechos de autor o un equivalente 1 sobre el 100% del código del Software.
+Odoo SA posee los derechos de autor o un equivalente [#cla1]_ sobre el 100% del código del Software.
 Odoo SA confirma que todas las bibliotecas de software necesarias para el uso del Software están
 disponibles bajo una licencia compatible con la licencia del Software.
 
@@ -521,6 +530,12 @@ recurso que el Cliente podrá usar.
 
 Contribuciones externas son cubiertas por el Acuerdo de Licencia de Derechos de Autor, el cual
 provee a Odoo SA una licencia de derechos de autor y de patente permanente, gratis e irrevocable.
+
+
+.. [#cla1] Las contribuciones externas están cubiertas por un
+           `acuerdo de licencia de derechos de autor <https://www.odoo.com/cla>`__, que
+           proporciona una licencia de derechos de autor y patente permanente, gratuita e
+           irrevocable a Odoo SA.
 
 .. _disclaimers_es:
 
