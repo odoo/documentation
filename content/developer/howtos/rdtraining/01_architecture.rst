@@ -32,7 +32,7 @@ For reference this is the official `Python tutorial`_.
 .. note::
   Since version 15.0, Odoo is actively transitioning to using its own in-house developed `OWL
   framework <https://odoo.github.io/owl/>`_ as part of its presentation tier. The legacy JavaScript
-  framework is still supported but will be depreciated over time. This will be discussed further in
+  framework is still supported but will be deprecated over time. This will be discussed further in
   advanced topics.
 
 Odoo modules
