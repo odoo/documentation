@@ -47,6 +47,8 @@ associated with a checksum, which is injected into the page source. The checksum
 is then added to the url, which means that it is possible to safely set the cache
 headers to a long period.
 
+.. _reference/assets_bundle:
+
 Bundles
 =======
 
