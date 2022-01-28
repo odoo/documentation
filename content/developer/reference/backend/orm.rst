@@ -1,8 +1,15 @@
+:show-content:
+
 .. _reference/orm:
 
 =======
 ORM API
 =======
+
+.. toctree::
+   :titlesonly:
+
+   orm/changelog
 
 .. automodule:: odoo.models
 
