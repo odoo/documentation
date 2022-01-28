@@ -36,19 +36,19 @@ concepts to the proper understanding of the following reports:
 
   - **Revenue Churn**: It corresponds to the monthly recurring revenue loss rate.
 
-  .. admonition::
-     Let's imagine a 2$ increase in a subscription service.
+    .. example::
+       Let's imagine a 2$ increase in a subscription service.
 
-     - We lost 3 customers out of the initial 20, which generates a **Logo Churn** of 15%.
-     - | Therefore, the 56$ of MRR difference out of the initial 600$ causes a **Revenue Churn**
-       | of 9,33%.
+       - We lost 3 customers out of the initial 20, which generates a **Logo Churn** of 15%.
+       - | Therefore, the 56$ of MRR difference out of the initial 600$ causes a **Revenue Churn**
+         | of 9,33%.
 
-     .. image:: media/difference-between-logo-churn-and-revenue-churn.png
-        :align: center
-        :alt: Difference between logo churn and revenue churn in Odoo Subscriptions
+       .. image:: media/difference-between-logo-churn-and-revenue-churn.png
+          :align: center
+          :alt: Difference between logo churn and revenue churn in Odoo Subscriptions
 
-     Reminder: even though they seem to evolve in the same direction most of the time, it might not
-     be the case all the time.
+       Reminder: even though they seem to evolve in the same direction most of the time, it might
+       not be the case all the time.
 
 - **Customer Lifetime Value (CLV)**: Indicates how much revenue can be expected for a customer
   during his/her entire contract. This approach emphasizes the importance of customer retention,
