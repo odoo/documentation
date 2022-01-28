@@ -149,6 +149,7 @@ Here are some important bundles that most developers will need to know:
 - *web.assets_frontend*: this bundle is about all that is specific to the public
   website: ecommerce, forum, blog, event management, ...
 
+.. _js_reference/adding_assets:
 
 Adding files in an asset bundle
 -------------------------------
