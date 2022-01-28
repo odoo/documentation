@@ -14,6 +14,8 @@ tests
 - Tours (see `Integration Testing`_): tours simulate a real situation. They ensures that the
   python and the javascript parts properly talk to each other.
 
+.. _testing/python:
+
 Testing Python code
 ===================
 
@@ -28,11 +30,11 @@ e.g.
 .. code-block:: text
 
     your_module
-    |-- ...
-    `-- tests
-        |-- __init__.py
-        |-- test_bar.py
-        `-- test_foo.py
+    ├── ...
+    ├── tests
+    |   ├── __init__.py
+    |   ├── test_bar.py
+    |   └── test_foo.py
 
 and ``__init__.py`` contains::
 
@@ -124,7 +126,7 @@ Subclasses of :class:`odoo.tests.common.BaseCase` (usually through
 ``standard`` and ``at_install`` by default.
 
 Invocation
-^^^^^^^^^^
+~~~~~~~~~~
 
 :option:`--test-tags <odoo-bin --test-tags>` can be used to select/filter tests
 to run on the command-line. It implies :option:`--test-enable <odoo-bin --test-enable>`,
@@ -230,7 +232,7 @@ can be specified at once separated by a `,` like with regular tags.
 .. _reference/testing/tags:
 
 Special tags
-^^^^^^^^^^^^
+~~~~~~~~~~~~
 
 - ``standard``: All Odoo tests that inherit from
   :class:`~odoo.tests.common.BaseCase` are implicitly tagged standard.
@@ -248,7 +250,7 @@ Special tags
   ``-at_install`` when tagging a test class.
 
 Examples
-^^^^^^^^
+~~~~~~~~
 
 .. important::
 
@@ -533,15 +535,175 @@ Tips
 Integration Testing
 ===================
 
-Testing Python code and JS code separately is very useful, but it does not prove
-that the web client and the server work together.  In order to do that, we can
-write another kind of test: tours.  A tour is a mini scenario of some interesting
-business flow.  It explains a sequence of steps that should be followed.  The
-test runner will then create a Chrome headless browser, point it to the proper url
-and simulate the click and inputs, according to the scenario.
+Testing Python code and JS code separately is very useful, but it does not prove that the web client
+and the server work together.  In order to do that, we can write another kind of test: tours.  A
+tour is a mini scenario of some interesting business flow.  It explains a sequence of steps that
+should be followed.  The test runner will then create a PhantomJs browser, point it to the proper
+url and simulate the click and inputs, according to the scenario.
+
+Writing a test tour
+-------------------
+
+Structure
+~~~~~~~~~
+
+To write a test tour for `your_module`, start with creating the required files:
+
+.. code-block:: text
+
+    your_module
+    ├── ...
+    ├── static
+    |   └── tests
+    |       └── tours
+    |           └── your_tour.js
+    ├── tests
+    |   ├── __init__.py
+    |   └── test_calling_the_tour.py
+    └── __manifest__.py
+
+You can then:
+
+- update :file:`__manifest__.py` to add :file:`your_tour.js` in the assets.
+
+  .. code-block:: python
+
+     'assets': {
+         'web.assets_tests': [
+             'your_module/static/tests/tours/your_tour.js',
+         ],
+     },
+
+- update :file:`__init__.py` in the folder :file:`tests` to import :file:`test_calling_the_tour`.
+
+.. seealso::
+   - :ref:`Assets Bundle <reference/assets_bundle>`
+   - :ref:`testing/python`
+
+Javascript
+~~~~~~~~~~
+
+#. Setup your tour by registering it.
+
+   .. code-block:: javascript
+
+      /** @odoo-module **/
+      import tour from 'web_tour.tour';
+      tour.register('rental_product_configurator_tour', {
+          url: '/web',  // Here, you can specify any other starting url
+          test: true,
+      }, [
+          // Your sequence of steps
+      ]);
+
+#. Add any step you want.
+
+Every step contains at least a trigger. You can either use the `predefined steps
+<https://github.com/odoo/odoo/blob/saas-15.1/addons/web_tour/static/src/js/tour_step_utils.js>`_ or write
+your own personalized step.
+
+Here are some example of steps:
+
+.. example::
+
+   .. code-block:: javascript
+
+      // First step
+      tour.stepUtils.showAppsMenuItem(),
+      // Second step
+      {
+          trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
+          edition: 'community'  // Optional
+      }, {
+          // Third step
+      },
+
+.. example::
+
+   .. code-block:: javascript
+
+      {
+          trigger: '.js_product:has(strong:contains(Chair floor protection)) .js_add',
+          extra_trigger: '.oe_advanced_configurator_modal',  // This ensure we are in the wizard
+      },
+
+.. example::
+
+   .. code-block:: javascript
+
+      {
+          trigger: 'a:contains("Add a product")',
+          // Extra-trigger to make sure a line is added before trying to add another one
+          extra_trigger: '.o_field_many2one[name="product_template_id"] .o_external_button',
+      },
+
+Here are some possible arguments for your personalized steps:
+
+- **trigger**: selector/element/jQuery you want to trigger
+- **extra-trigger**: optional selector/element/jQuery that needs to be present before the next
+  step begins. This is especially useful when the tour needs to wait for a wizard to open, a
+  line added to a list view...
+- **run**: optional action to run, defaults either to `click` or `text Test` if you are triggering
+  an input. A multitude of actions are possible. Here are some of them: `click`, `dbclick`,
+  `tripleclick`, `text Example`, `drag_and_drop selector1 selector2`...
+- **edition**: optional,
+
+  - If you don't specify an edition, the step will be active in both community and enterprise.
+  - Sometimes, a step will be different in enterprise or in community. You can then write two
+    steps, one for the enterprise edition and one for the community one.
+  - Generally, you want to specify an edition for steps that use the main menu as the main
+    menus are different in community and enterprise.
+- **position**: optional
+- **id**: optional
+- **auto**: optional
+- **in_modal**: optional
+
+.. tip::
+   Your browser's developer tools are your best tool to find the element your tour needs to use as a
+   trigger/extra-trigger.
+
+.. seealso::
+   - `jQuery documentation about find <https://api.jquery.com/find/>`_
+
+Python
+~~~~~~
+
+To start a tour from a python test, make the class inherit from
+:class:`~odoo.tests.common.HTTPCase`, and call `start_tour`:
+
+.. code-block:: python
+
+   def test_your_test(self):
+       # Optional Setup
+       self.start_tour("/web", 'your_module.your_tour_name', login="admin")
+       # Optional verifications
+
+Debugging tips
+--------------
+
+Running the tour in debug mode
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+First, activate the :doc:`developer mode </applications/general/developer_mode>` with
+`?debug=tests`. Then, open your debug menu and click on **Start Tour**. You can now launch your tour
+from there with the button `Test`.
+
+You can also add this step in your tour to stop it right where you want it to:
+
+.. code-block:: javascript
+
+   {
+       trigger: "body",
+       run: () => {debugger}
+   }
+
+.. caution::
+   Be aware that when running the tour, any data added to the setup of your python test won't be
+   present in the tour unless you launched the test calling the tour with a breakpoint.
+
 
 Screenshots and screencasts during browser_js tests
----------------------------------------------------
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When running tests that use HttpCase.browser_js from the command line, the Chrome
 browser is used in headless mode. By default, if a test fails, a PNG screenshot is
@@ -602,7 +764,7 @@ To specify this feature for a given model, the following methods and attributes 
     on the model to enable database population.
 
 Example model
-^^^^^^^^^^^^^
+~~~~~~~~~~~~~
 
 .. code-block:: python
 
@@ -646,7 +808,7 @@ Example model
             return records
 
 Population tools
-^^^^^^^^^^^^^^^^
+~~~~~~~~~~~~~~~~
 
 Multiple population tools are available to easily create
 the needed data generators.
