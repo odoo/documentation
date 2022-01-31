@@ -5,8 +5,24 @@ Buckaroo
 `Buckaroo <https://www.buckaroo.eu/>`_ is a Dutch-based company that offers several online payment
 possibilities.
 
-Configuration
-=============
+Configuration on Buckaroo Plaza
+===============================
+
+Enable Push responses
+---------------------
+
+Log into `Buckaroo Plaza <https://plaza.buckaroo.nl>`_ and go to :menuselection:`My Buckaroo
+--> Websites --> Push settings`. Then,
+
+#. Check **Enable Push Response** in the **Delayed and Push responses** section.
+#. | Enter your Odoo database URL followed by `/payment/buckaroo/webhook` in both the **Push URI
+     Success** and **Push URI Failure** text fields.
+   | For example: `https://yourcompany.odoo.com/payment/buckaroo/webhook`.
+#. Leave the other fields at their default value.
+#. Click on **Save** to finalize the configuration.
+
+Configuration on Odoo
+=====================
 
 .. seealso::
    - :ref:`payment_acquirers/add_new`
@@ -28,7 +44,7 @@ the **Credentials** tab.
 Website Key
 ~~~~~~~~~~~
 
-In order to retrieve the Website Key, log into your Buckaroo account, go to
+In order to retrieve the Website Key, log into Buckaroo Plaza, go to
 :menuselection:`Configuration --> Templates --> Your Website`.
 
 .. _buckaroo/secret_key:
@@ -36,7 +52,7 @@ In order to retrieve the Website Key, log into your Buckaroo account, go to
 Secret Key
 ~~~~~~~~~~
 
-In order to retrieve the Website Key, log into your Buckaroo account, go to
+In order to retrieve the Website Key, log into Buckaroo Plaza, go to
 :menuselection:`Configuration --> Security --> Secret Key`.
 
 .. important::
