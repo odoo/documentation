@@ -36,8 +36,8 @@ Upgrade
 =======
 
 If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade
-<../upgrade/process>` your database. A **Rolling Release button** on your database's main screen
-proposes an upgrade to the latest version (e.g., 13.0 to 15.1).
+<../upgrade>` your database. A **Rolling Release button** on your database's main screen proposes an
+upgrade to the latest version (e.g., 13.0 to 15.1).
 
 .. important::
    - | **If your Odoo database's version is lower than the latest major release:**
@@ -53,7 +53,7 @@ proposes an upgrade to the latest version (e.g., 13.0 to 15.1).
    allows you to request a test upgrade of your database to check for any discrepancies.
 
 .. seealso::
-   - :doc:`../upgrade/process`
+   - :doc:`../upgrade`
    - :doc:`supported_versions`
 
 .. _online/duplicate:
