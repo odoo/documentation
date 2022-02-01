@@ -47,13 +47,13 @@ In general, the "smaller" the database, the quickest the upgrade request is comp
 database that uses only CRM will be processed faster than a multi-company, multi-user database that
 uses Accounting, Sales, Purchase, and Manufacturing.
 
-You can expect the time it takes for the platform to upgrade the test database will be similar to
-the production upgrade.
+You can expect the time it takes for the platform to upgrade the test database to be similar to the
+production upgrade.
 
 .. _upgrade-faq/project:
 
-The upgrade project
-===================
+Duration of the upgrade project
+-------------------------------
 
 It depends on the user involvement (the time spent on testing, reporting problems, etc.) and the
 issues encountered that might need to be addressed by our technical team.
@@ -80,6 +80,17 @@ partners, or you can do it yourself.
 
 .. note:: |assistance-contact|
 
+.. _upgrade-faq/upgrade-or-migration:
+
+Upgrade or Migration
+====================
+
+An upgrade is switching to a newer version of Odoo, while a migration reflects the change of
+:ref:`editions <upgrade-faq/editions-change>` or change of :ref:`hosting type
+<upgrade-faq/hosting-types-switch>`.
+
+.. note:: |assistance-contact|
+
 .. _upgrade-faq/editions-change:
 
 Editions change (from Community to Enterprise)
@@ -88,7 +99,9 @@ Editions change (from Community to Enterprise)
 The upgrade always returns an Enterprise edition of Odoo, whether the database you sent was a
 community or enterprise edition. It is required to have an enterprise subscription to upgrade.
 
-.. note:: |assistance-contact|
+ .. note::
+    If you need assistance on this matter,  please contact us via the `Odoo Support page
+    <https://www.odoo.com/help>`_.
 
 .. seealso::
    - `Editions <https://www.odoo.com/page/editions>`_
@@ -105,6 +118,28 @@ Open the following link to get :doc:`more information about how to change your h
 
 .. note:: |assistance-contact|
 
+.. _upgrade-faq/upgrade-report:
+
+The Upgrade Report
+==================
+
+When an upgrade request completes successfully (test or production), you receive an email
+notification about it that includes an 'Upgrade Report'. This report is also sent to you via the
+Discuss app. It contains valuable information regarding changes that occurred during the upgrade.
+While it serves as a guide to possible issues to look out for, it is not an exhaustive list. It
+remains imperative that you test the upgraded database thoroughly and report any discrepancies you
+might find, before you decide to upgrade your production database.
+
+.. _upgrade-faq/custom-views:
+
+Custom views
+============
+
+During the upgrade, some custom views might get disabled for technical reasons. Therefore they might
+have to be fixed after the upgrade. The :ref:`Upgrade Report <upgrade-faq/upgrade-report>` that is
+generated after the upgrade is available in the Discuss app, and lists all the custom views that
+might be impacted by this.
+
 .. _upgrade-faq/release-notes:
 
 Release Notes by version
@@ -114,38 +149,37 @@ Open our `Release Note <https://www.odoo.com/page/release-notes>`_ page to get a
 features and improvements made in each version.
 
 How long is my test available for
----------------------------------
+=================================
 
 An Odoo Online (SaaS) test database is available for one month by default. We can extend this trial
 period upon request. For Odoo.sh or on-premise, there is no restriction.
 
 How many tests to perform before upgrading to production?
----------------------------------------------------------
+=========================================================
 
 As many as needed. When you are comfortable with the database, run a last test upgrade 48 hours
 before requesting your production upgrade and test your workflows one last time.
 
 How to/Where to report upgrade issues?
---------------------------------------
+======================================
 
 If you encounter issues during the upgrade process, please contact the Odoo Support through the
-`Odoo Support page <https://www.odoo.com/help>`_
+`Odoo Support page <https://www.odoo.com/help>`_.
 
 - To report an issue discovered during the testing phase, please select **An issue related to my
   upgrade (test phase)**.
 - To report an issue discovered post-upgrade, please select **An issue related to my upgrade
-  (production)**
+  (production)**.
 
 Upgrading to production
------------------------
+=======================
 
 Once you have completed testing and are happy with the result, you decide on a date and time when
 you stop users from accessing Odoo, freeze all data entries, and create an upgrade request for the
 production upgrade.
 
-
 How is my data handled in the Upgrade Platform?
------------------------------------------------
+===============================================
 
 The Odoo Upgrade platform uses the same Privacy Policy as the rest of Odoo.com services.
 
@@ -169,3 +203,26 @@ are permanently deleted following that period.
 
 You can learn more about privacy and data handling at Odoo by visiting our `General Data Protection
 Regulation page <https://www.odoo.com/gdpr>`_.
+
+Rolling Release (applicable to Odoo Online databases)
+=====================================================
+
+This feature allows customers to upgrade their database directly from a message prompt sent to the
+database administrator as soon as the new version is released. Odoo first tests the upgrade to the
+next version. The rolling release upgrade option is displayed if the automated tests are successful.
+The message offers two options:
+
+#. To 'Upgrade Now', which immediately triggers the upgrade of your live production database.
+
+#. To take you to your `database manager <https://www.odoo.com/my/databases/>`_ where you can
+   `request an upgraded test database <https://upgrade.odoo.com/#online/>`_ and check the upgraded
+   test database for any discrepancies.
+
+When you choose to proceed with the production upgrade directly, make sure all users have saved
+their work and are logged out. The upgrade takes approximately 15 minutes. During this time your
+database is unreachable. If you notice any problem after the upgrade, please report it via the `Odoo
+Support page <https://www.odoo.com/help>`_.
+
+.. note::
+   If you are using the Website or Studio app, we recommend you always do a test upgrade before
+   upgrading your production instance.
