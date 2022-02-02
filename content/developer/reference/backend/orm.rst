@@ -56,7 +56,6 @@ value::
         Defaults to whatever value was set for :attr:`~._auto`.
 
     .. autoattribute:: _table
-    .. autoattribute:: _sequence
     .. autoattribute:: _sql_constraints
 
     .. autoattribute:: _register
