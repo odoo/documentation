@@ -595,7 +595,7 @@ Javascript
 #. Add any step you want.
 
 Every step contains at least a trigger. You can either use the `predefined steps
-<https://github.com/odoo/odoo/blob/13.0/addons/web_tour/static/src/js/tour_manager.js#L429-L451>`_
+<https://github.com/odoo/odoo/blob/14.0/addons/web_tour/static/src/js/tour_step_utils.js>`_
 or write your own personalized step.
 
 Here are some example of steps:
@@ -605,7 +605,7 @@ Here are some example of steps:
    .. code-block:: javascript
 
       // First step
-      tour.STEPS.SHOW_APPS_MENU_ITEM,
+      tour.stepUtils.showAppsMenuItem(),
       // Second step
       {
           trigger: '.o_app[data-menu-xmlid="your_module.maybe_your_module_menu_root"]',
