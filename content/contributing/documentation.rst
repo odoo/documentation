@@ -220,7 +220,8 @@ Python comes with its own package manager: `pip
 a single command.
 
 #. Download and install the recommended release (`see README file
-   <https://github.com/odoo/documentation/tree/master/README.md>`_) of **Python 3** on your machine.
+   <https://github.com/odoo/documentation/tree/saas-15.2/README.md>`_) of **Python 3** on your
+   machine.
 #. Make sure to have **pip** installed on your machine (on Windows, you can install pip alongside
    Python).
 #. Execute the following commands in a terminal to verify that both installations finished
