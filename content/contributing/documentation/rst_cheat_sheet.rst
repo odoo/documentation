@@ -403,6 +403,25 @@ Render
 .. tip::
    Use this admonition to inform the reader about a useful trick that requires an action.
 
+.. _contributing/example:
+
+Example
+-------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. example::
+      Use this admonition to show an example.
+
+Render
+~~~~~~
+
+.. example::
+   Use this admonition to show an example.
+
 .. _contributing/exercise:
 
 Exercise
@@ -414,7 +433,7 @@ RST
 .. code-block:: rst
 
    .. exercise::
-   Use this admonition to suggest an exercise to the reader.
+      Use this admonition to suggest an exercise to the reader.
 
 Render
 ~~~~~~
