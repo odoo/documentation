@@ -971,6 +971,15 @@ take the following attributes:
 ``date_stop`` (required)
   name of the field providing the end duration of the event for each
   record.
+``dependency_field``
+  name of the ``many2many`` field that provides the dependency relation between two records.
+  If B depends on A, ``dependency_field`` is the field that allows getting A
+  from B. Both this field and ``dependency_inverted_field`` field are used to
+  draw dependency arrows between pills and reschedule them.
+``dependency_inverted_field`` (required if ``dependency_field`` is provided)
+  name of the ``many2many`` field that provides the invert dependency relation than
+  ``dependency_field``. If B depends on A, ``dependency_inverted_field`` is
+  the field that allows getting B from A.
 ``color``
   name of the field used to color the pills according to its value
 ``decoration-{$name}``
