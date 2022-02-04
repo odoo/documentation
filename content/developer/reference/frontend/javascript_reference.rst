@@ -1907,10 +1907,12 @@ many2one (FieldMany2One)
 
   Options:
 
-  - no_create: prevent the creation of related records
   - quick_create: allow the quick creation of related records (default: true)
-  - no_quick_create: prevent the quick creation of related records (don't ask me)
-  - no_create_edit: same as no_create, maybe...
+  - no_create: prevent the creation of related records - hide both the 'Create "xxx"'
+    and "Create and Edit..." dropdown menu items (default: false)
+  - no_quick_create: prevent the quick creation of related records - hide the 'Create "xxx"'
+    dropdown menu item (default: false)
+  - no_create_edit: hide the "Create and Edit..." dropdown menu item (default: false)
   - create_name_field: when creating a related record, if this option is set, the value of the *create_name_field* will be filled with the value of the input (default: *name*)
   - always_reload: boolean, default to false.  If true, the widget will always
     do an additional name_get to fetch its name value.  This is used for the
