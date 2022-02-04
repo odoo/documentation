@@ -24,5 +24,6 @@ Go to :menuselection:`Accounting --> Settings --> Customer Invoices`, then enabl
 .. important::
    If you created your Odoo database prior to **January 13, 2022**, please :ref:`upgrade
    <general/upgrade>` the ``account_intrastat`` module to add the new transaction codes and
-   :ref:`install <general/install>` the ``account_invoice_expiry`` module to archive the old codes.
+   :ref:`install <general/install>` the ``account_intrastat_expiry`` module to archive the old
+   codes.
 
