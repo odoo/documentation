@@ -1024,7 +1024,8 @@ from the *ServiceMixin*:
     - *subtitle*: string, optional. This will be displayed on the top as a
       subtitle.
 
-    - *message*: string, optional. The content of the notification.
+    - *message*: string, optional. The content of the notification. Do not forget
+      to escape your message via the markup function if needed.
 
     - *sticky*: boolean, optional (default false). If true, the notification
       will stay until the user dismisses it.  Otherwise, the notification will
@@ -1036,11 +1037,6 @@ from the *ServiceMixin*:
     - *className*: string, optional.  This is a css class name that will be
       automatically added to the notification.  This could be useful for styling
       purpose, even though its use is discouraged.
-
-    - *messageIsHtml*: boolean, optional (default false). Allows passing an html
-      message. Strongly discouraged: other options should be considered before
-      enabling this option. The responsibility is on the caller to properly
-      escape the message if this option is enabled.
 
 Here are two examples on how to use these methods:
 
