@@ -7,7 +7,7 @@ Webinars
 
 Below you can find videos with a general description of the localization, and how to configure it.
 
-- `VIDEO WEBINAR OF A COMPLETE DEMO <https://youtu.be/BOzucXRUZDE>`_.
+- `VIDEO WEBINAR OF A COMPLETE DEMO <https://youtu.be/Y83p3YK1lFU>`_.
 
 Introduction
 ============
