@@ -264,8 +264,11 @@ Once all dependencies are set up, Odoo can be launched by running odoo-bin, the 
 .. code-block:: console
 
     $ cd $HOME/src/odoo/
+    $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo -i web_enterprise --stop-after-init
     $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo
 
+.. note:: The second command above installs the web_enterprise module (which is mandatory when using Odoo enterprise edition) and is only needed once. The third command is the genereral command you can use any time you want to start the server in the future.
+   
 There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to
 configure the server. In this training you will only need some of them.
 
