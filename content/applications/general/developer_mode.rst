@@ -11,6 +11,9 @@ Activate through the Settings
 
 Go to :menuselection:`Settings --> Activate the developer mode`.
 
+.. note::
+   You need to have at least one app installed for this menu option to appear.
+
 .. image:: settings.png
    :align: center
    :alt: Overview of the debug options under settings in Odoo
