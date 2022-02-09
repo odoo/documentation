@@ -148,7 +148,19 @@ sphinx.transforms.i18n.docname_to_domain = (
     sphinx.util.i18n.docname_to_domain
 ) = lambda docname, compact: docname.split('/')[1 if docname.startswith('applications/') else 0]
 
-supported_languages = {
+# The version names that should be shown in the version switcher, if the config option `versions`
+# is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
+versions_names = {
+    'master': "master",
+    'saas-15.1': "Odoo Online",
+    '15.0': "Odoo 15",
+    '14.0': "Odoo 14",
+    '13.0': "Odoo 13",
+}
+
+# The language names that should be shown in the language switcher, if the config option `languages`
+# is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
+languages_names = {
     'de': 'Deutsch',
     'en': 'English',
     'es': 'Español',
@@ -289,15 +301,18 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
 
         The entry 'version' is added by Sphinx in the rendering context.
         """
-        # If the list of versions is not set, assume that the project has no alternate version
-        _alternate_versions = app.config.versions and app.config.versions.split(',') or []
-        context['alternate_versions'] = [
-            (_alternate_version, _build_url(_version=_alternate_version))
-            for _alternate_version in sorted(_alternate_versions, reverse=True)
-            if _alternate_version != version and (
-                _alternate_version != 'master' or pagename.startswith('developer')
-            ) and not _alternate_version.startswith('saas')
-        ]
+        context['version_display_name'] = versions_names[version]
+
+        # If the list of versions is not set, assume the project has no alternate version
+        _provided_versions = app.config.versions and app.config.versions.split(',') or []
+
+        # Map alternate versions to their display names and URLs.
+        context['alternate_versions'] = []
+        for _alternate_version, _display_name in versions_names.items():
+            if _alternate_version in _provided_versions and _alternate_version != version:
+                context['alternate_versions'].append(
+                    (_display_name, _build_url(_alternate_version))
+                )
 
     def _localize():
         """ Add the pairs of (lang, code, url) for the current document in the rendering context.
@@ -308,19 +323,22 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         """
         _current_lang = app.config.language or 'en'
         # Replace the context value by its translated description ("Français" instead of "french")
-        context['language'] = supported_languages.get(_current_lang)
+        context['language'] = languages_names.get(_current_lang)
 
         # If the list of languages is not set, assume that the project has no alternate language
-        _alternate_languages = app.config.languages and app.config.languages.split(',') or []
-        context['alternate_languages'] = [
-            (
-                supported_languages.get(_alternate_lang),
-                _alternate_lang.split('_')[0] if _alternate_lang != 'en' else 'x-default',
-                _build_url(_lang=_alternate_lang),
-            )
-            for _alternate_lang in _alternate_languages
-            if _alternate_lang in supported_languages and _alternate_lang != _current_lang
-        ]
+        _provided_languages = app.config.languages and app.config.languages.split(',') or []
+
+        # Map alternate languages to their display names and URLs.
+        context['alternate_languages'] = []
+        for _alternate_lang, _display_name in languages_names.items():
+            if _alternate_lang in _provided_languages and _alternate_lang != _current_lang:
+                context['alternate_languages'].append(
+                    (
+                        _display_name,
+                        _alternate_lang.split('_')[0] if _alternate_lang != 'en' else 'x-default',
+                        _build_url(_lang=_alternate_lang),
+                    )
+                )
 
     def _build_url(_version=None, _lang=None):
         if app.config.is_remote_build:
