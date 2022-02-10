@@ -35,14 +35,26 @@ Several actions are available:
 Upgrade
 =======
 
-Upgrade the database to the latest Odoo version.
+If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade
+<../upgrade/process>` your database. A **Rolling Release button** on your database's main screen
+proposes an upgrade to the latest version (e.g., 13.0 to 15.1).
 
-.. warning::
-   Upgrading a database to a newer version of Odoo is a complex operation that requires time and
-   caution. It is essential to test the upgrade before upgrading the production database.
+.. important::
+   - | **If your Odoo database's version is lower than the latest major release:**
+     | You must upgrade your database within two months. After these two months, an automatic
+       upgrade is initiated.
+   - | **If your Odoo database's version is equal to or higher than the latest major release:**
+     | You can disregard the invitation to upgrade as you probably wouldn't benefit from new
+       features every two months.
+
+.. note::
+   Versions that are not supported anymore become deprecated and need to be updated to avoid
+   security issues. We recommend you initiate the upgrade of the database yourself, as this method
+   allows you to request a test upgrade of your database to check for any discrepancies.
 
 .. seealso::
    - :doc:`../upgrade/process`
+   - :doc:`supported_versions`
 
 .. _online/duplicate:
 
