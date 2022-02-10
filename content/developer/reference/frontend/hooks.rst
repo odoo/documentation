@@ -23,7 +23,7 @@ documents the list of hooks provided by the Odoo web framework.
    * - :ref:`useAssets <frontend/hooks/useassets>`
      - load assets
    * - :ref:`useAutofocus <frontend/hooks/useAutofocus>`
-     - focus automatically a referenced element
+     - focus automatically an element referenced by autofocus
    * - :ref:`useBus <frontend/hooks/usebus>`
      - subscribe and unsubscribe to a bus
    * - :ref:`usePager <frontend/hooks/usepager>`
@@ -61,10 +61,8 @@ Location
 Description
 -----------
 
-Focus automatically an element referenced by a component after its rendering if
-that element was not already present in the dom. The focus of that element can
-be forced at a future patch if the returning value (a function) of useAutofocus
-is called.
+Focus an element referenced by a t-ref="autofocus" in the current component as
+soon as it appears in the DOM and if it was not displayed before.
 
 .. code-block:: javascript
 
@@ -72,10 +70,7 @@ is called.
 
     class Comp {
       setup() {
-        const focusOnUpdate = useAutofocus("to_focus");
-      }
-      onStateReset() {
-        focusOnUpdate();
+        this.inputRef = useAutofocus();
       }
       static template = "Comp";
     }
@@ -83,16 +78,15 @@ is called.
 .. code-block:: xml
 
     <t t-name="Comp" owl="1">
-      <input t-ref="to_focus" type="text"/>
+      <input t-ref="autofocus" type="text"/>
     </t>
 
 API
 ---
 
-.. js:function:: useAutofocus([ref])
+.. js:function:: useAutofocus()
 
-    :param string ref: optional. If given, must be a t-ref value. Default is "autofocus"
-    :returns: a function to be called if focus must be forced on next patch.
+    :returns: the element reference.
 
 .. _frontend/hooks/usebus:
 
