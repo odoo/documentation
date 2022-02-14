@@ -14,6 +14,7 @@ def setup(app):
     app.add_js_file('js/layout.js')
     app.add_js_file('js/menu.js')
     app.add_js_file('js/page_toc.js')
+    app.add_js_file('js/switchers.js')
 
     return {
         'parallel_read_safe': True,
