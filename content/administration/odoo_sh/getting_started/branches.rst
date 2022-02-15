@@ -279,10 +279,21 @@ The *import database* feature accepts database archives in the format provided b
 * the Odoo.sh backup download button of this *Backups* tab,
 * the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
 
+.. _branches/tabs-upgrade:
+
+Upgrade
+-------
+
+Available for production and staging branches for valid projects.
+
+.. seealso::
+    :doc:`Upgrade - Odoo.sh <../../upgrade/odoo_sh>`
+
 .. _odoosh-gettingstarted-branches-tabs-settings:
 
 Settings
 --------
+
 Here you can find a couple of settings that only apply to the currently selected branch.
 
 .. image:: branches/interface-branches-settings.jpg
@@ -384,7 +395,7 @@ we are considering the feature if there is enough demand.
 In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
 (DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
 settings to increase the deliverability of your outgoing emails.
-The configuration steps are explained in the documentation about :ref:`SPF 
+The configuration steps are explained in the documentation about :ref:`SPF
 <email_communication/spf_compliant>` and :ref:`DKIM <email_communication/dkim_compliant>`.
 
 
