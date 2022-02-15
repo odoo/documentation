@@ -279,6 +279,13 @@ The *import database* feature accepts database archives in the format provided b
 * the Odoo.sh backup download button of this *Backups* tab,
 * the Odoo.sh dump download button in the :ref:`Builds view <odoosh-gettingstarted-builds>`.
 
+.. _odoosh-gettingstarted-branches-tabs-upgrade:
+
+Upgrade
+--------
+Available for production and staging branches for valid projects. More details in the :ref:`upgrade documentation
+<odoo_sh_upgrade>`.
+
 .. _odoosh-gettingstarted-branches-tabs-settings:
 
 Settings
