@@ -179,33 +179,33 @@ usePosition
 Location
 --------
 
-`@web/core/position/position_hook`
+`@web/core/position_hook`
 
 Description
 -----------
 
-Helps positioning a component (or a specific HTMLElement) relatively to a target
-HTMLElement. This hook ensures the positioning is updated when the window is
-resized/scrolled.
+Helps positioning an HTMLElement (the `popper`) relatively to another
+HTMLElement (the `reference`). This hook ensures the positioning is updated when
+the window is resized/scrolled.
 
 .. code-block:: javascript
 
-    import { usePosition } from "@web/core/position/position_hook";
+    import { usePosition } from "@web/core/position_hook";
 
-    class MyPopover {
+    class MyPopover extends owl.Component {
       setup() {
-        // Here, the target is an HTMLElement
+        // Here, the reference is the target props, which is an HTMLElement
         usePosition(this.props.target);
       }
     }
-    MyPopover.template = owl.tags.xml`<div>I am positioned through a wonderful hook!</div>`
+    MyPopover.template = owl.tags.xml`
+      <div t-ref="popper">
+        I am positioned through a wonderful hook!
+      </div>
+    `;
 
-
-.. note::
-   The following CSS classes can be used to style the target HTMLElement:
-   
-   - `o-popper-position`
-   - `o-popper-position--{D}{V}` where `{D}` and `{V}` are replaced by the first letter of the corresponding Direction and Variant (see Options table below for valid directions and variants). E.g.: for position `bottom-end`, the class name will be `o-popper-position--be`.
+.. important::
+   You should indicate your `popper` element using a `t-ref directive <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_.
 
 API
 ---
@@ -224,10 +224,9 @@ API
      - Type
      - Description
    * - `popper`
-     - string | undefined
-     - this is the element that will get positioned. You can provide here a
-       `useRef reference <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_.
-       If not provided, `this.el` is used (default: `undefined`).
+     - string
+     - this is a `useRef reference <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#useref>`_ for the element that will get positioned.
+       Default is `"popper"`.
    * - `container`
      - HTMLElement
      - the container from which the popper is expected not to overflow. If
@@ -237,10 +236,49 @@ API
      - number
      - added margin between popper and reference elements (default: `0`)
    * - `position`
-     - string
-     - the desired position. It is a string composed of one direction and one
-       variant separated by a dash character. Valid directions are: `top`,
-       `bottom`, `right`, `left`. Valid variants are: `start`,
-       `middle`, `end`. The variant can be omitted (default variant is
-       `middle`). Examples of valid positions: `right-end`, `top-start`,
-       `left-middle`, `left`. (default position: `bottom`)
+     - Direction[-Variant]
+     - the desired position. It is a string composed of one `Direction` and one
+       `Variant` separated by a dash character.
+       `Direction` could be: `top`, `bottom`, `right`, `left`.
+       `Variant` could be: `start`, `middle`, `end`.
+       The variant can be omitted (default variant is `middle`).
+       Examples of valid positions: `right-end`, `top-start`, `left-middle`,
+       `left`. (default position: `bottom`)
+   * - `onPositioned`
+     - (el: HTMLElement, position: PositioningSolution) => void
+     - a callback that will be called everytime a positioning occurs
+       (e.g. on component mounted/patched, document scroll, window resize...).
+       Can be used i.e. for dynamic styling regarding the current position.
+       The `PositioningSolution` is an object having the following type:
+       `{ direction: Direction, variant: Variant, top: number, left: number }`.
+
+.. example::
+
+   .. code-block:: javascript
+
+      import { usePosition } from "@web/core/position_hook";
+
+      class DropMenu extends owl.Component {
+        setup() {
+          const toggler = owl.useRef("toggler");
+          usePosition(
+            () => toggler.el,
+            {
+              popper: "menu",
+              position: "right-start",
+              onPositioned: (el, { direction, variant }) => {
+                el.classList.add(`dm-${direction}`); // -> "dm-top" "dm-right" "dm-bottom" "dm-left"
+                el.style.backgroundColor = variant === "middle" ? "red" : "blue";
+              },
+            },
+          );
+        }
+      }
+      DropMenu.template = owl.tags.xml`
+        <button t-ref="toggler">Toggle Menu</button>
+        <div t-ref="menu">
+          <t t-slot="default">
+            This is the menu default content.
+          </t>
+        </div>
+      `;
