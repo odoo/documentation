@@ -9,4 +9,4 @@ Advanced
 
    advanced/containers
    advanced/submodules
-   advanced/frequent_technical_questions
+   advanced/scheduled_actions
