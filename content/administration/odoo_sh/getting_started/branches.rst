@@ -74,8 +74,8 @@ The neutralization includes:
 * Setting payment acquirers and shipping providers in test mode.
 * Disabling IAP services
 
-The latest database will be kept alive indefinitely, older ones from the same branch may get garbage collected
-to make room for new ones. It will be valid for 3 months, after which you will be expected to rebuild the branch.
+The latest database will be kept alive for one year after which you will be expected to rebuild the branch.
+Older ones from the same branch may get garbage collected to make room for new ones.
 If you make configuration or view changes in these databases, make sure to document them or write them directly
 in the modules of the branch, using XML data files overriding the default configuration or views.
 
@@ -384,7 +384,7 @@ we are considering the feature if there is enough demand.
 In case the domain of your users email addresses use SPF (Sender Policy Framework) or DKIM
 (DomainKeys Identified Mail), don't forget to authorize Odoo as a sending host in your domain name
 settings to increase the deliverability of your outgoing emails.
-The configuration steps are explained in the documentation about :ref:`SPF 
+The configuration steps are explained in the documentation about :ref:`SPF
 <email_communication/spf_compliant>` and :ref:`DKIM <email_communication/dkim_compliant>`.
 
 
