@@ -151,14 +151,13 @@ This section shows the storage size used by your project.
 .. image:: ./media/interface-settings-storage.png
    :align: center
 
-Storage size is computed as follows:
+Storage size of a build is computed as follows:
 
 * the size of the PostgreSQL database
 
 * the size of the disk files available in your container: database filestore, sessions storage directory...
 
-.. Warning::
-  In case you want to analyze disk usage, you can run the tool `ncdu <https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell.
+The total storage accounts for the production database, the staging branches, and three backups.
 
 Should your production database size grow to exceed what's provisioned in your subscription, it
 will automatically be synchronized with it.
