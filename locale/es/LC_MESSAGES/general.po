@@ -6,9 +6,9 @@
 # Translators:
 # Luis M. Ontalba <luis.martinez@tecnativa.com>, 2020
 # Pablo Rojas <rojaspablo88@gmail.com>, 2020
-# Diego de cos <diegodecos@hotmail.com>, 2020
 # Jimmy Ramos <jimmybanegas93@gmail.com>, 2020
 # Jon Perez <jop@odoo.com>, 2020
+# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2020
 # David Arnold <blaggacao@users.noreply.github.com>, 2021
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2021
 # Fairuoz Hussein Naranjo <l92hunaf@gmail.com>, 2021
@@ -19,7 +19,6 @@
 # Vivian Montana <vmo@odoo.com>, 2021
 # Cris Martin <cristina.marrod@gmail.com>, 2021
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
-# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
 # Xabi Spacebiker <xabispacebiker@gmail.com>, 2021
 # jabelchi, 2021
 # Martin Trigaux, 2021
@@ -2186,6 +2185,12 @@ msgid ""
 "with your invoices numbering if you were to test your payment acquirers on "
 "your main database."
 msgstr ""
+"Recomendamos utilizar el *Modo de prueba* en una base de datos duplicada o "
+"de prueba. El Modo de prueba se debe usar con sus credenciales de prueba o "
+"de sandbox, pero Odoo genera órdenes de venta y facturas con normalidad. No "
+"siempre es posible cancelar una factura, y probar métodos de pago en su base"
+" de datos principal podría generar problemas con la numeración de sus "
+"facturas."
 
 #: ../../content/applications/general/payment_acquirers.rst:125
 msgid "Credentials tab"
@@ -2198,16 +2203,23 @@ msgid ""
 " Odoo requires these credentials to communicate with the Payment Acquirer "
 "and get the confirmation of the *payment authentication*."
 msgstr ""
+"Si no lo ha hecho aún, vaya al sitio web de su **proveedor de pago en "
+"línea**, cree una cuenta y asegúrese de tener las credenciales necesarias "
+"para uso de terceros. Odoo requiere estas credenciales para comunicarse con "
+"el método de pago y obtener la confirmación de la *autenticación de pago*."
 
 #: ../../content/applications/general/payment_acquirers.rst:131
 msgid ""
 "The form in this section is specific to the Payment Acquirer you are "
 "configuring. Please refer to the related documentation for more information."
 msgstr ""
+"El formulario en esta sección es específico del método de pago que se está "
+"configurando. Consulte la documentación relacionada para obtener más "
+"información. "
 
 #: ../../content/applications/general/payment_acquirers.rst:137
 msgid "Configuration tab"
-msgstr ""
+msgstr "Pestaña de configuración"
 
 #: ../../content/applications/general/payment_acquirers.rst:139
 msgid ""
@@ -2215,10 +2227,13 @@ msgid ""
 "name under the **Displayed as** field and which credit card icons to display"
 " under the **Supported Payment Icons** field."
 msgstr ""
+"Puede modificar la apariencia del método de pago en el frontend al modificar"
+" su nombre en el campo **Se muestra como** y seleccionar qué icono de "
+"tarjeta de crédito mostrar en el campo de **Iconos de pago compatibles**."
 
 #: ../../content/applications/general/payment_acquirers.rst:145
 msgid "Save and reuse Credit Cards"
-msgstr ""
+msgstr "Guardar y volver a utilizar tarjetas de crédito"
 
 #: ../../content/applications/general/payment_acquirers.rst:147
 msgid ""
@@ -2227,10 +2242,14 @@ msgid ""
 "reenter the payment details. This is particularly useful for subscriptions' "
 "recurring payments."
 msgstr ""
+"Con la función de **Guardar tarjetas**, Odoo pueden almacenar **tokens de "
+"pago** en su base de datos, los cuales se pueden utilizar para pagos "
+"subsecuentes sin tener que volver a introducir los detalles de pago. Esto es"
+" particularmente útil para pagos recurrentes de suscripciones."
 
 #: ../../content/applications/general/payment_acquirers.rst:154
 msgid "Place a hold on a card"
-msgstr ""
+msgstr "Hacer una retención de tarjeta de crédito"
 
 #: ../../content/applications/general/payment_acquirers.rst:156
 msgid ""
@@ -2240,6 +2259,11 @@ msgid ""
 "automatic cancellation, or *void the transaction* to unlock the funds from "
 "the customer's card."
 msgstr ""
+"Si se habilita el campo de **Capturar importe de forma manual**, los fondos "
+"en la tarjeta del cliente se reservan por algunos días, pero no se cobran "
+"aún. Debe ir a la orden de venta relacionada y *capturar* los fondos de "
+"forma manual antes de su cancelación automática, o *anular la transacción* "
+"para desbloquear los fondos de la tarjeta del cliente."
 
 #: ../../content/applications/general/payment_acquirers.rst:164
 #: ../../content/applications/general/payment_acquirers/authorize.rst:69
@@ -2252,12 +2276,17 @@ msgid ""
 "acquirer's portal to authenticate the payment, or if to stay on the current "
 "page and authenticate the payment from Odoo."
 msgstr ""
+"Elija en el campo de **Flujo de pago** si redirigir al usuario al portal del"
+" método de pago para autenticar el pago o si quedarse en la página actual y "
+"autenticar el pago en Odoo,"
 
 #: ../../content/applications/general/payment_acquirers.rst:170
 msgid ""
 "Some features are available only if you select *Redirection to the acquirer "
 "website*."
 msgstr ""
+"Algunas funciones solo están disponibles si selecciona *Redirección al sitio"
+" web del método de pago*."
 
 #: ../../content/applications/general/payment_acquirers.rst:175
 msgid "Countries"
@@ -2268,6 +2297,9 @@ msgid ""
 "Restrict the use of the Payment Acquirer to a selection of countries. Leave "
 "this field blank to make the Payment Acquirer available to all countries."
 msgstr ""
+"Restrinja el uso del método de pago a países seleccionados. Deje este campo "
+"en blanco para hacer que el método de pago esté disponible para todos los "
+"países."
 
 #: ../../content/applications/general/payment_acquirers.rst:183
 msgid "Payment Journal"
@@ -2278,8 +2310,8 @@ msgid ""
 "The **Payment Journal** selected for your Payment Acquirer must be a *Bank* "
 "journal."
 msgstr ""
-"El **Diario de Pagos** seleccionado para su Medio de Pago debe ser un diario"
-" de *Bancos*."
+"El **Diario de pagos** seleccionado para su método de pago debe ser un "
+"diario *bancario*."
 
 #: ../../content/applications/general/payment_acquirers.rst:188
 msgid ""
@@ -2290,25 +2322,26 @@ msgid ""
 " them if necessary."
 msgstr ""
 "En muchos casos, Odoo crea automáticamente un nuevo **diario** y una nueva "
-"**cuenta** cuando ud. activa un nuevo Método de Pago. Ambos estan "
-"predeterminados para trabajar inmediatamente, pero le recomendamos "
-"encarecidamente que se asegure que esos campos se han establecido "
-"correctamente de acuerdo con sus necesidades contables y que los adapte, si "
-"es necesario."
+"**cuenta** cuando se activa un nuevo método de pago. Ambos están "
+"configurados de forma que pueden funcionar de inmediato, pero recomendamos "
+"ampliamente que se asegure que esos campos se establecieron correctamente "
+"según sus necesidades contables y adáptelos si es necesario."
 
 #: ../../content/applications/general/payment_acquirers.rst:196
 msgid "Messages tab"
-msgstr ""
+msgstr "Pestaña de mensajes"
 
 #: ../../content/applications/general/payment_acquirers.rst:198
 msgid ""
 "Change here the messages displayed by Odoo after a payment's confirmation or"
 " failure."
 msgstr ""
+"Aquí puede cambiar los mensajes que Odoo muestra después de la confirmación "
+"o el fallo de un pago."
 
 #: ../../content/applications/general/payment_acquirers.rst:203
 msgid "Accounting perspective"
-msgstr ""
+msgstr "Perspectiva contable"
 
 #: ../../content/applications/general/payment_acquirers.rst:205
 msgid ""
@@ -2318,6 +2351,11 @@ msgid ""
 "your payments' journal entries. We recommend you to ask your accountant for "
 "advice."
 msgstr ""
+"Los **pagos bancarios** que van directamente a una de sus cuentas bancarias "
+"siguen sus flujos de trabajo usuales. Sin embargo, los pagos registrados con"
+" **proveedores de pago en línea** requieren que considere cómo desea "
+"registrar los asientos de diario de sus pagos. Le recomendamos consultarlo "
+"con su contador."
 
 #: ../../content/applications/general/payment_acquirers.rst:210
 msgid ""
@@ -2326,29 +2364,38 @@ msgid ""
 "confirmed. At some point, you transfer the funds from the *Payment Acquirer*"
 " to your *Bank Account*."
 msgstr ""
+"El método predeterminado de Odoo es registrar los pagos en una *cuenta de "
+"activos circulantes* en un *diario bancario* específico una vez que se "
+"confirme la *autenticación de pago*. Eventualmente, transferirá los fondos "
+"del *método de pago* a su *cuenta bancaria*."
 
 #: ../../content/applications/general/payment_acquirers.rst:214
 msgid "Here are the requirements for this to work:"
-msgstr "Aquí están los requerimientos para este trabajo:"
+msgstr "A continuación se encuentran los requisitos para este trabajo:"
 
 #: ../../content/applications/general/payment_acquirers.rst:216
 msgid "Bank Journal"
-msgstr "Diario del banco"
+msgstr "Diario bancario"
 
 #: ../../content/applications/general/payment_acquirers.rst:218
 msgid "The Journal's **type** must be *Bank Journal*."
-msgstr "El **tipo** de diario debe ser *Bancos*."
+msgstr "El **tipo** de diario debe ser *bancario*."
 
 #: ../../content/applications/general/payment_acquirers.rst:219
 msgid ""
 "Select the right **Default Debit Account** and **Default Credit Account**."
 msgstr ""
+"Seleccione la **Cuenta de débito predeterminada** y la **Cuenta de crédito "
+"predeterminada**."
 
 #: ../../content/applications/general/payment_acquirers.rst:0
 msgid ""
 "Under the *Advanced Settings* tab, make sure that **Posting** is set as "
 "*Post At Payment Validation*."
 msgstr ""
+"En la pestaña de *Ajustes avanzados* asegúrese de que el campo de "
+"*Publicar** tiene establecida la opción de *Publicar a la validación del "
+"pago*."
 
 #: ../../content/applications/general/payment_acquirers.rst:0
 msgid ""
@@ -2356,18 +2403,21 @@ msgid ""
 "database receives the confirmation of the *Payment Authentication* from the "
 "Online Payment Provider."
 msgstr ""
+"Esto implica que el asiento contable se registra directamente cuando su base"
+" de datos de Odoo recibe la confirmación de la *autenticación de pago* del "
+"proveedor de pago en línea."
 
 #: ../../content/applications/general/payment_acquirers.rst:225
 msgid "Current Asset Account"
-msgstr "Cuenta de activo corriente"
+msgstr "Cuenta de activos circulantes"
 
 #: ../../content/applications/general/payment_acquirers.rst:227
 msgid "The Account's **type** is *Current Assets*"
-msgstr "El **tipo** de cuenta es *Activos corrientes*"
+msgstr "El **tipo** de cuenta es *activos circulantes*"
 
 #: ../../content/applications/general/payment_acquirers.rst:228
 msgid "The Account must **Allow Reconciliation**"
-msgstr "La cuenta debe **permitir conciliación**"
+msgstr "La cuenta debe **permitir la conciliación**"
 
 #: ../../content/applications/general/payment_acquirers.rst:231
 msgid ""
@@ -2375,22 +2425,25 @@ msgid ""
 "**Current Asset Account** when you activate a new Payment Acquirer. You can "
 "modify them if necessary."
 msgstr ""
+"En muchos casos, Odoo crea de forma automática un nuevo **diario** y una "
+"nueva **cuenta de activos circulantes** cuando se activa un nuevo método de "
+"pago. Puede modificarlos si es necesario."
 
 #: ../../content/applications/general/payment_acquirers.rst:236
 msgid ":doc:`../finance/accounting/receivables/customer_payments/recording`"
-msgstr ""
+msgstr ":doc:`../finance/accounting/receivables/customer_payments/recording`"
 
 #: ../../content/applications/general/payment_acquirers.rst:237
 msgid ":doc:`payment_acquirers/wire_transfer`"
-msgstr ""
+msgstr ":doc:`payment_acquirers/wire_transfer`"
 
 #: ../../content/applications/general/payment_acquirers.rst:238
 msgid ":doc:`payment_acquirers/authorize`"
-msgstr ""
+msgstr ":doc:`payment_acquirers/authorize`"
 
 #: ../../content/applications/general/payment_acquirers.rst:239
 msgid ":doc:`payment_acquirers/paypal`"
-msgstr ""
+msgstr ":doc:`payment_acquirers/paypal`"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:3
 msgid "Authorize.Net"
@@ -2402,6 +2455,9 @@ msgid ""
 "online payment solution provider, allowing businesses to accept **credit "
 "cards**."
 msgstr ""
+"`Authorize.Net <https://www.authorize.net>`__ es un proveedor de pago con "
+"base en Estados Unidos que permite a las empresas aceptar **tarjetas de "
+"crédito**."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:12
 msgid ""
@@ -2409,26 +2465,33 @@ msgid ""
 "other :doc:`Payment Acquirers <../payment_acquirers>`, such as the ability "
 "to process your customer's payment after delivery."
 msgstr ""
+"Este método de pago ofrece opciones adicionales que no están disponibles "
+"para otros :doc:`Métodos de pago <../payment_acquirers>`, como la habilidad "
+"de procesar los pagos de sus clientes después de la entrega."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:17
 msgid "Authorize.Net account"
-msgstr "Cuenta Authorize.Net"
+msgstr "Cuenta de Authorize.Net"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:19
 msgid ""
 "If not done yet, choose a plan and `Sign Up for an Authorize.Net account "
 "<https://www.authorize.net/sign-up.html>`__."
 msgstr ""
+"Si no lo ha hecho aún, elija un plan y `regístrese para obtener una cuenta "
+"de Authorize.Net <https://www.authorize.net/sign-up.html>`__."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:22
 msgid ""
 "Odoo needs your **API Credentials & Keys** to connect with your "
 "Authorize.Net account, which comprise:"
 msgstr ""
+"Odoo necesita sus **claves y credenciales API** para conectarse con su "
+"cuenta de Authorize.Net, que comprenden:"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:25
 msgid "API Login ID"
-msgstr ""
+msgstr "ID de inicio de sesión API"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:26
 msgid "Transaction Key"
@@ -2445,6 +2508,10 @@ msgid ""
 "--> API Credentials & Keys`, and generate your **Transaction Key** and "
 "**Signature Key**."
 msgstr ""
+"Para obtenerlos, inicie sesión en su cuenta de Authorize.Net, vaya a "
+":menuselection:`Cuenta --> Ajustes de seguridad --> Ajustes generales de "
+"seguridad --> Claves y credenciales API`, y genere su **clave de "
+"transacción** y **clave de firma**."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:39
 #: ../../content/applications/general/payment_acquirers/authorize.rst:114
@@ -2453,10 +2520,13 @@ msgid ""
 "<https://support.authorize.net/s/article/Authorize-Net-Getting-Started-"
 "Guide>`__"
 msgstr ""
+"`Authorize.Net: Guía para empezar "
+"<https://support.authorize.net/s/article/Authorize-Net-Getting-Started-"
+"Guide>`__"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:43
 msgid "Payment Acquirer Configuration"
-msgstr "Configuración de medios de pago"
+msgstr "Configuración del método de pago"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:45
 msgid ""
@@ -2465,12 +2535,18 @@ msgid ""
 "**Authorize.Net**, and change the **State** to *Enabled*. Don't forget to "
 "click on *Save* once you've set everything up."
 msgstr ""
+"Para configurar Authorize.Net como método de pago en Odoo, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Métodos de pago`, abra "
+"**Authorize.Net** y cambie el **Estado** a *Habilitado*. No olvide hacer "
+"clic en *Guardar* cuando haya terminado de configurar todo."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:50
 msgid ""
 "Please refer to the :doc:`Payment Acquirers documentation "
 "<../payment_acquirers>` to read how to configure this payment acquirer."
 msgstr ""
+"Consulte la :doc:`documentación de Métodos de pago <../payment_acquirers>` "
+"para descubrir cómo configurar este método de pago."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:56
 msgid ""
@@ -2478,12 +2554,19 @@ msgid ""
 "Transaction Key, and API Signature Key), paste them in the related fields "
 "under the **Credentials** tab, then click on **Generate Client Key**."
 msgstr ""
+"Copie las credenciales de su cuenta de Authorize.Net (ID de inicio de sesión"
+" API, clave de transacción API y clave de firma API), péguelas en los campos"
+" relacionados en la pestaña de **Credenciales** y luego haga clic en "
+"**Generar clave de cliente**."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:61
 msgid ""
 "The **API Client Key** is necessary only if you select *Payment from Odoo* "
 "option as :ref:`Payment Flow <payment_acquirers/payment_flow>`."
 msgstr ""
+"La **clave de cliente API** es necesaria solo si seleccionó la opción de "
+"*Pago desde Odoo* como su :ref:`Flujo de pago "
+"<payment_acquirers/payment_flow>`."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:65
 msgid ""
@@ -2491,6 +2574,9 @@ msgid ""
 "the **State** to *Test Mode*. We recommend doing this on a test Odoo "
 "database, rather than on your main database."
 msgstr ""
+"Si está probando Authorize.Net, en una *cuenta sandbox*, cambie el "
+"**Estado** a *Modo de prueba*. Le recomendamos hacer esto en una base de "
+"datos de prueba en lugar de su base de datos de Odoo principal."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:71
 msgid ""
@@ -2499,6 +2585,10 @@ msgid ""
 "page and authenticate the payment from Odoo. This field is under the "
 "**Configuration** tab."
 msgstr ""
+"El **Flujo de pago** le permite decidir si redirigir al usuario al portal "
+"del método de pago para autenticar el pago o si permanecer en la página "
+"actual y autenticar el pago desde Odoo. Este campo está en la pestaña de "
+"**Configuración**."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:75
 msgid ""
@@ -2506,6 +2596,9 @@ msgid ""
 "**Default Receipt URL** and a **Default Relay Response URL** to your "
 "Authorize.net account."
 msgstr ""
+"Si selecciona *Redirección al sitio web del método de pago*, asegúrese de "
+"agregar una **URL de recibo predeterminada** y una **URL de respuesta de "
+"retransmisión predeterminada** a su cuenta de Authorize.net."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:78
 msgid ""
@@ -2513,34 +2606,40 @@ msgid ""
 " --> Transaction Format Settings --> Transaction Response Settings --> "
 "Response/Receipt URLs`, and set the default links:"
 msgstr ""
+"Para hacerlo, inicie sesión en su cuenta de Authorize.Net, vaya a "
+":menuselection:`Cuenta --> Ajustes de formato de transacción --> Ajustes de "
+"respuesta de transacción --> URL de respuesta y recepción`, y seleccione los"
+" enlaces predeterminados:"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "Default Receipt URL:"
-msgstr ""
+msgstr "URL de recepción predeterminada:"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "*https://[yourcompany.odoo.com]*/**payment/authorize/return**"
-msgstr ""
+msgstr "*https://[yourcompany.odoo.com]*/**payment/authorize/return**"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "Default Relay Response URL:"
-msgstr ""
+msgstr "URL de respuesta de retransmisión predeterminada:"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "*https://[yourcompany.odoo.com]*/**shop/confirmation**"
-msgstr ""
+msgstr "*https://[yourcompany.odoo.com]*/**shop/confirmation**"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "Failing to complete this step results in the following error:"
-msgstr "Un fallo al completar este paso provoca el siguiente error:"
+msgstr "No completar este paso da como resultado el siguiente error:"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:0
 msgid "*The referrer, relay response or receipt link URL is invalid.*"
 msgstr ""
+"*El referente, la respuesta de retransmisión o el URL del enlace de "
+"recepción no son válidos."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:91
 msgid "Capture the payment after the delivery"
-msgstr "Recibe el pago después de la entrega"
+msgstr "Capturar el pago después de la entrega"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:93
 msgid ""
@@ -2548,6 +2647,9 @@ msgid ""
 " enabled, the funds are reserved for 30 days on the customer's card, but not"
 " charged yet."
 msgstr ""
+"El campo de **Capturar el importe manualmente** se encuentra en la pestaña "
+"de **Configuración**. Si se habilita, los fondos se reservan por 30 días en "
+"la tarjeta del cliente, pero sin cobrarse aún."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:100
 msgid ""
@@ -2555,34 +2657,39 @@ msgid ""
 "Transaction*. If the order is canceled, you can click on *Void Transaction* "
 "to unlock the funds from the customer's card."
 msgstr ""
+"Para capturar el pago, vaya a la orden de venta relacionada y haga clic en "
+"*Capturar transacción*. Si se cancela la orden, puede hacer clic en *Anular "
+"transacción* para desbloquear los fondos de la tarjeta del cliente."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:108
 msgid ""
 "After **30 days**, the transaction is **voided automatically** by "
 "Authorize.net."
 msgstr ""
+"Después de **30 días**, Authorize.net **anula de forma automática** la "
+"transacción."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:111
 msgid ""
 "With other payment acquirers, you can manage the capture in their own "
 "interfaces, not from Odoo."
 msgstr ""
-"Con otros adquirentes de pagos, puede administrar la captura en sus propias "
+"Con otros métodos de pagos, puede gestionar la captura en sus propias "
 "interfaces, no desde Odoo."
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:116
 #: ../../content/applications/general/payment_acquirers/paypal.rst:206
 msgid ":doc:`../payment_acquirers`"
-msgstr ""
+msgstr ":doc:`../payment_acquirers`"
 
 #: ../../content/applications/general/payment_acquirers/authorize.rst:117
 #: ../../content/applications/general/payment_acquirers/paypal.rst:207
 msgid ":doc:`../../websites/ecommerce/shopper_experience/payment_acquirer`"
-msgstr ""
+msgstr ":doc:`../../websites/ecommerce/shopper_experience/payment_acquirer`"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:3
 msgid "Configure your Paypal account"
-msgstr "Configure su cuenta Paypal"
+msgstr "Configurar su cuenta de PayPal"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:5
 msgid ""
@@ -2591,10 +2698,14 @@ msgid ""
 "definitely recommend it for starters in Odoo. It works as a seamless flow "
 "where the customer is routed to Paypal website to register the payment."
 msgstr ""
+"PayPal es popular y está disponible en todo el mundo. No cobra ninguna cuota"
+" de suscripción y crear una cuenta es muy fácil. Por eso la recomendamos "
+"ampliamente a novatos de Odoo. Funciona como un flujo perfecto en el que se "
+"dirige al cliente al sitio web de PayPal para registrar el pago."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:12
 msgid "Paypal account"
-msgstr "Cuenta Paypal"
+msgstr "Cuenta de Paypal"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:14
 msgid ""
@@ -2605,26 +2716,37 @@ msgid ""
 "settings and click on *Upgrade to a Business account*. Then follow the few "
 "configuration steps."
 msgstr ""
+"Necesita una cuenta empresarial para cobrar con PayPal. Cree una `Cuenta "
+"empresarial de PayPal <https://www.paypal.com/us/merchantsignup/ "
+"applicationChecklist?signupType=CREATE_NEW_ACCOUNT&productIntentId=wp_standard>`_"
+" o suba de nivel su cuenta personal a una empresarial. Vaya a los ajustes de"
+" PayPal y haga clic en *Cambiar a cuenta empresarial*. Luego siga los pasos "
+"de configuración."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:23
 msgid "Settings in Paypal"
-msgstr ""
+msgstr "Ajustes en PayPal"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:26
 msgid ""
 "First, let’s see how to set up your Paypal account in order to build a "
 "seamless customer experience with Odoo."
 msgstr ""
+"Primero, veamos cómo configurar su cuenta de PayPal para crear una "
+"experiencia de cliente ideal con Odoo."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:28
 msgid ""
 "Log in and open the settings. Go to :menuselection:`Products & Services --> "
 "Website payments` and click **Update** on **Website preferences**."
 msgstr ""
+"Inicie sesión y abra los ajustes. Vaya a :menuselection:`Productos y "
+"servicios --> Pagos del Sitio web` y haga clic en **Actualizar** en "
+"**Preferencias de Sitio web**."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:34
 msgid "Auto Return"
-msgstr ""
+msgstr "Regreso automático"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:36
 msgid ""
@@ -2633,6 +2755,10 @@ msgid ""
 "the suffix ``/shop/confirmation`` as *Return URL* (e.g. "
 "``https://yourcompany.odoo.com/shop/confirmation``)."
 msgstr ""
+"El *regreso automático* redirige a sus clientes a Odoo una vez que se "
+"procesa el pago. Seleccione la opción de *Regreso automático* e introduzca "
+"el nombre de su dominio con el sufijo ``/shop/confirmation`` como *URL de "
+"regreso* (por ejemplo, ``https://yourcompany.odoo.com/shop/confirmation``)."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:41
 msgid ""
@@ -2640,10 +2766,13 @@ msgid ""
 "it at each transaction. Don’t worry if you manage several sales channels or "
 "Odoo databases."
 msgstr ""
+"Esta URL se solicita en Paypal pero no se utiliza en la práctica ya que Odoo"
+" la transmite en cada transacción. No se preocupe si gestionas varios "
+"canales de venta o bases de datos de Odoo."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:49
 msgid "Payment Data Transfer (PDT)"
-msgstr ""
+msgstr "Transferencia de datos de pago (PDT)"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:51
 msgid ""
@@ -2652,10 +2781,15 @@ msgid ""
 "must be activated as well. When saving, an *Identity Token* is generated. "
 "You will be later requested to enter it in Odoo."
 msgstr ""
+"La *transferencia de datos de pago (PDT, por su sigla en inglés)* envía la "
+"confirmación de pago a Odoo en cuanto se procesa. Sin ella, Odoo no puede "
+"terminar el flujo de ventas. Se debe activar este ajuste. Al guardar, se "
+"genera un *Token de identidad*. Posteriormente, se le solicitará "
+"introducirlo en Odoo."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:59
 msgid "Paypal Account Optional"
-msgstr ""
+msgstr "Cuenta de PayPal opcional"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:61
 msgid ""
@@ -2663,10 +2797,14 @@ msgid ""
 "they get to pay. Let them pay with debit/credit cards as well, or you might "
 "lose some deals. Make sure this setting is turned on."
 msgstr ""
+"Le aconsejamos que no pida a los clientes que se conecten con una cuenta de "
+"PayPal cuando paguen. Deje que paguen también con tarjetas de débito o "
+"crédito, o podría perder algunas ofertas. Asegúrese de que este ajuste está "
+"activado."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:68
 msgid "Instant Payment Notification (IPN)"
-msgstr ""
+msgstr "Notificación de pago instantáneo (IPN)"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:70
 msgid ""
@@ -2677,25 +2815,34 @@ msgid ""
 "guaranteed since IPN resends a confirmation until your site acknowledges "
 "receipt."
 msgstr ""
+"La transferencia de datos de pago envía las confirmaciones de órdenes solo "
+"una vez. Debido a esto, su sitio debe estar en funcionamiento cuando pasa o,"
+" de otra forma, nunca recibirá el mensaje. Por eso también le recomendamos "
+"activar las *notificaciones de pago instantáneas* (IPN, por su sigla en "
+"inglés). Con las IPN, la entrega de las confirmaciones de órdenes está "
+"prácticamente garantizada, ya que la IPN vuelve a enviar una confirmación "
+"hasta que su sitio web reconoce el recibo."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:77
 msgid ""
 "To activate IPN, get back to *Website payments* menu and click *Update* in "
 "*Instant Payment Notification*."
 msgstr ""
+"Para activar las IPN, vuelva al menú de *Pagos del Sitio web* y haga clic en"
+" *Actualizar* en *Notificación de pago instantánea*."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:79
 msgid ""
 "The *Notification URL* to set is your domain name + “payment/paypal/ipn” "
 "(e.g. ``https://yourcompany.odoo.com/payment/paypal/ipn``)."
 msgstr ""
-"La *URL de Notificatión* a establecer es su nombre de dominio + "
-"“payment/paypal/ipn” (p.e. "
+"El *URL de notificatión* por establecer es su nombre de dominio + "
+"“payment/paypal/ipn” (por ejemplo, "
 "``https://yourcompany.odoo.com/payment/paypal/ipn``)."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:85
 msgid "Payment Messages Format"
-msgstr ""
+msgstr "Formato de mensajes de pago"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:87
 msgid ""
@@ -2703,45 +2850,58 @@ msgid ""
 "characters) for your customer names, addresses... you MUST configure the "
 "encoding format of the payment request sent by Odoo to Paypal."
 msgstr ""
+"Si utiliza caracteres con acentos (o cualquier otra cosa que no sean "
+"caracteres latinos básicos) para los nombres de sus clientes, direcciones..."
+" DEBE configurar el formato de codificación de la solicitud de pago enviada "
+"por Odoo a PayPal."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:93
 msgid ""
 "If you don't configure this setting, some transactions fail without notice."
 msgstr ""
+"Si no configura este ajuste, algunas transacciones fallarán sin aviso."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:95
 msgid "To do so, open:"
-msgstr ""
+msgstr "Para hacerlo, abra:"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:97
 msgid ""
 "`this page for a test account <https://sandbox.paypal.com/cgi-"
 "bin/customerprofileweb?cmd=_profile-language-encoding>`__"
 msgstr ""
+"`esta página para obtener una cuenta de prueba "
+"<https://sandbox.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-"
+"language-encoding>`__"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:99
 msgid ""
 "`this page for a production account <https://www.paypal.com/cgi-"
 "bin/customerprofileweb?cmd=_profile-language-encoding>`__"
 msgstr ""
+"`esta página para obtener una cuenta de producción "
+"<https://www.paypal.com/cgi-bin/customerprofileweb?cmd=_profile-language-"
+"encoding>`__"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:101
 msgid ""
 "Then, click *More Options* and set the two default encoding formats as "
 "**UTF-8**."
 msgstr ""
-"A continuación, haz clic en *Más opciones* y establece los dos formatos de "
-"codificación predeterminados como **UTF-8**."
+"Posteriormente, haga clic en *Más opciones* y establezca los dos formatos de"
+" codificación predeterminados como **UTF-8**."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:109
 msgid "Your Paypal account is ready!"
-msgstr ""
+msgstr "¡Su cuenta de PayPal está lista!"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:112
 msgid ""
 "If you want your customers to pay without creating a Paypal account, *Paypal"
 " Account Optional* needs to be turned on."
 msgstr ""
+"Si quiere que sus clientes paguen sin crear una cuenta de Paypal, necesita "
+"activar la función *Cuenta de PayPal opcional*."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:118
 msgid ""
@@ -2750,10 +2910,14 @@ msgid ""
 "payments-standard/integration-guide/encryptedwebpayments/ #encrypted-"
 "website-payments-ewp>`_."
 msgstr ""
+"Para errores de Pagos de sitio web encriptados y EWP_SETTINGS, consulte la "
+"`documentación de PayPal <https://developer.paypal.com/docs/ classic/paypal-"
+"payments-standard/integration-guide/encryptedwebpayments/ #encrypted-"
+"website-payments-ewp>`_."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:124
 msgid "Settings in Odoo"
-msgstr "Configuraciones en Odoo"
+msgstr "Ajustes en Odoo"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:127
 msgid "Activation"
@@ -2764,30 +2928,39 @@ msgid ""
 "Activate *Paypal* from the config bar of Sales, Invoicing and eCommerce "
 "apps, or from the configuration menu of *Payment Acquirers*."
 msgstr ""
+"Active *PayPal* en la barra de configuración de las aplicaciones de Ventas, "
+"Facturación y Comercio electrónico, o en el menú de configuración de "
+"*Métodos de pago*."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:135
 msgid "Odoo requires three Paypal credentials:"
-msgstr "Odoo requiere tres credenciales Paypal:"
+msgstr "Odoo requiere tres credenciales de PayPal:"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:137
 msgid "*Email ID* is your login email address in Paypal."
-msgstr "*Email ID* es su dirección email de login en Paypal."
+msgstr ""
+"El *ID de correo electrónico* es su dirección de correo electrónico de "
+"inicio de sesión en PayPal."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:138
 msgid ""
 "*Merchant ID* can be found in the settings of your Paypal account, in "
 ":menuselection:`Account Settings --> Business information`."
 msgstr ""
+"El *ID de comerciante* se puede encontrar en los ajustes de su cuenta de "
+"PayPal, en :menuselection:`Ajustes de cuenta --> Información empresarial`."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:140
 msgid ""
 "*Paypal PDT Token* is given in *Website payments* configuration as explained"
 " here above."
 msgstr ""
+"El *Token de transferencia de datos de pago de PayPal* se obtiene en la "
+"configuración de *pagos del Sitio web*, como se explicó anteriormente."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:146
 msgid "Transaction fees"
-msgstr "Comisiones por transacción"
+msgstr "Cuotas de transacción"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:148
 msgid ""
@@ -2795,18 +2968,27 @@ msgid ""
 "cover the transaction fees Paypal charges you. Once redirected to Paypal, "
 "your customer sees an extra applied to the order amount."
 msgstr ""
+"Puede cobrar cuotas adicionales a sus clientes que pagan con PayPal. Esto es"
+" para cubrir las cuotas de transacción que PayPal le cobra a usted. Una vez "
+"que se le redirige a PayPal, su cliente verá un importe adicional aplicado "
+"al importe de la orden."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:151
 msgid ""
 "To activate this, go to the Configuration tab of Paypal configuration in "
 "Odoo and check *Add Extra Fees*."
 msgstr ""
+"Para activar esto, vaya a la pestaña de configuración de la configuración de"
+" PayPal en Odoo y seleccione  *Agregar cuotas adicionales*."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:157
 msgid ""
 "You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-"
 "fees>`__ to set up fees."
 msgstr ""
+"Puede consultar las `Cuotas de PayPal "
+"<https://www.paypal.com/webapps/mpp/paypal-fees>`__ para establecer las "
+"suyas."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:161
 msgid ""
@@ -2815,10 +2997,14 @@ msgid ""
 "index_en.htm>`_ are not allowed to charge extra fees for paying with credit "
 "cards."
 msgstr ""
+"`Los comerciantes en la UE "
+"<https://europa.eu/youreurope/citizens/consumers/shopping/pricing-payments/ "
+"index_en.htm>`_ no tienen permitido cobrar cuotas adicionales por pagar con "
+"tarjetas de crédito."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:165
 msgid "Go live!"
-msgstr ""
+msgstr "¡Lanzamiento!"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:167
 msgid ""
@@ -2826,6 +3012,9 @@ msgid ""
 " publish the payment method by clicking the *Published* button right next to"
 " it."
 msgstr ""
+"Su configuración está lista para la acción. Asegúrese de que el modo de "
+"*Producción* esté activado. Posteriormente, publique el método de pago al "
+"hacer clic en el botón de *Publicado* que se encuentra a lado."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:176
 msgid ""
@@ -2834,26 +3023,35 @@ msgid ""
 "*Pay Now*. They get back to a confirmation page in Odoo once the payment is "
 "processed."
 msgstr ""
+"PayPal ahora está disponible en su formulario de pago disponible en las "
+"aplicaciones de Comercio electrónico, Ventas y Facturación. Se redirige a "
+"los clientes al sitio web de PayPal cuando hacen clic en *Pagar ahora*. "
+"Después, regresan a una página de confirmación en Odoo una vez que el pago "
+"se procesa."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:185
 msgid "Test environment"
-msgstr "Entorno de pruebas"
+msgstr "Entorno de prueba"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:187
 msgid ""
 "You can test the entire payment flow in Odoo thanks to Paypal Sandbox "
 "accounts."
 msgstr ""
+"Puede probar el flujo de pago entero en Odoo gracias a las cuentas sandbox "
+"de PayPal."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:189
 msgid ""
 "Log in to `Paypal Developer Site <https://developer.paypal.com/>`__ with "
 "your Paypal credentials."
 msgstr ""
+"Inicie sesión en el `Sitio de desarrolladores de PayPal "
+"<https://developer.paypal.com/>`__ con sus credenciales de PayPal."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:191
 msgid "This will create two sandbox accounts:"
-msgstr ""
+msgstr "Esto creará dos cuentas sandbox:"
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:193
 msgid ""
@@ -2861,12 +3059,18 @@ msgid ""
 "`pp.merch01-facilitator@example.com "
 "<mailto:pp.merch01-facilitator@example.com>`__)."
 msgstr ""
+"Una cuenta empresarial (que se utilizará como comerciante, por ejemplo: "
+"`pp.merch01-facilitator@example.com "
+"<mailto:pp.merch01-facilitator@example.com>`__)."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:195
 msgid ""
 "A default personal account (to use as shopper, e.g. "
 "`pp.merch01-buyer@example.com <mailto:pp.merch01-buyer@example.com>`__)."
 msgstr ""
+"Una cuenta personal predeterminada (que se utilizará como comerciante, por "
+"ejemplo: `pp.merch01-buyer@example.com "
+"<mailto:pp.merch01-buyer@example.com>`__)."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:197
 msgid ""
@@ -2876,18 +3080,17 @@ msgid ""
 "automatic invoicing is not activated in your eCommerce settings, to not "
 "generate invoices when a fictitious transaction is completed."
 msgstr ""
-"Entre en la Paypal Sandbox con la cuenta de comerciante y siga las mismas "
-"instrucciones de configuración. Entre sus credenciales sandbox en Odoo y "
-"asegúrese de que Paypal todavía tiene está establecido como *Entorno de "
-"Test*. Además, asegúrese de que no está activada la facturación automática "
-"en los ajustes de su eCommerce, para no generar facturas cuando se completa "
-"una transacción ficticia."
+"Inicie sesión en la sandbox de PayPal con la cuenta de comerciante y siga "
+"las mismas instrucciones de configuración. Introduzca sus credenciales "
+"sandbox en Odoo y asegúrese de que PayPal sigue establecido como *Entorno de"
+" prueba*. Además, asegúrese de que no está activada la facturación "
+"automática en sus ajustes de Comercio electrónico, para no generar facturas "
+"cuando se completa una transacción ficticia."
 
 #: ../../content/applications/general/payment_acquirers/paypal.rst:203
 msgid "Run a test transaction from Odoo using the sandbox personal account."
 msgstr ""
-"Ejecuta una transacción de prueba desde Odoo con la cuenta personal de "
-"sandbox."
+"Ejecute una transacción de prueba desde Odoo con la cuenta sandbox personal."
 
 #: ../../content/applications/general/payment_acquirers/stripe.rst:5
 msgid ""
@@ -2895,16 +3098,21 @@ msgid ""
 "solution provider, allowing businesses to accept **credit cards** and other "
 "payment methods."
 msgstr ""
+"`Stripe <https://stripe.com/>`_ es un proveedor de soluciones de pago en "
+"línea con sede en Estados Unidos, lo que le permite a las empresas aceptar "
+"**tarjetas de crédito** y otros métodos de pago."
 
 #: ../../content/applications/general/payment_acquirers/stripe.rst:9
 msgid "Enable Local Payment Methods"
-msgstr ""
+msgstr "Habilitar métodos de pagos locales"
 
 #: ../../content/applications/general/payment_acquirers/stripe.rst:11
 msgid ""
 "Local payment methods are payment methods that are only available for "
 "certain merchants and customers countries and currencies."
 msgstr ""
+"Los métodos de pago locales son métodos que solo están disponibles para "
+"comerciantes, clientes, países y divisas específicas."
 
 #: ../../content/applications/general/payment_acquirers/stripe.rst:14
 msgid ""
