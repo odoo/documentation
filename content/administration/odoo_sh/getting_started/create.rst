@@ -79,9 +79,7 @@ Import your database
 ====================
 
 You can import your database in your Odoo.sh project as long as it is in a :doc:`supported version
-</administration/maintain/supported_versions>` of Odoo. The branch automatically switches to the
-Odoo version of the database.
-
+</administration/maintain/supported_versions>` of Odoo.
 
 Push your modules in production
 -------------------------------
