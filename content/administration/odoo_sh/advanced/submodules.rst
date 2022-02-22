@@ -109,7 +109,3 @@ Ignore modules
 If you're adding a repository that contains a lot of modules, you may want to ignore some of them in case there are any
 that are installed automatically. To do so, you can prefix your submodule folder with a :code:`.`. The platform will
 ignore this folder and you can hand pick your modules by creating symlinks to them from another folder.
-
-.. note::
-   This symlink has to be done within your GitHub repository. Do not try to create the symlink
-   with the container.
