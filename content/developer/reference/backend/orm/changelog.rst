@@ -27,6 +27,8 @@ Odoo version 16.0
   and `#101115 <https://github.com/odoo/odoo/pull/101115>`_.
   Code translations are no longer stored into the database.
   They become static and are extracted from the PO files when needed.
+- :meth:`~odoo.models.Model.search_count` takes the :attr:`limit` argument into account with `#95589 <https://github.com/odoo/odoo/pull/95589>`_.
+  It limits the number of records to count, improving performance when a partial result is acceptable.
 
 Odoo Online version 15.4
 ========================
@@ -37,6 +39,17 @@ Odoo Online version 15.4
   and are less confusing about what is actually done in each case.
   See the section :ref:`SQL Execution <reference/orm/sql>`.
 
+Odoo Online version 15.3
+========================
+
+- The argument `args` is renamed to `domain` for :meth:`~odoo.models.Model.search`, :meth:`~odoo.models.Model.search_count`
+  and :meth:`~odoo.models.Model._search`. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+- :meth:`~odoo.models.Model.filtered_domain` conserves the order of the current recordset. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+- :meth:`~odoo.models.Model.browse` does not accept :class:`str` as `ids`. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+- The methods :meth:`~odoo.models.Model.fields_get_keys` and :meth:`~odoo.models.Model.get_xml_id` on :class:`~odoo.models.Model` are deprecated. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+- The method :meth:`~odoo.models.Model._mapped_cache` is removed. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+- Remove the :attr:`limit` attribute of :class:`~odoo.fields.One2many` and :class:`~odoo.fields.Many2many`. `#83687 <https://github.com/odoo/odoo/pull/83687>`_
+
 Odoo Online version 15.2
 ========================
 
@@ -44,3 +57,6 @@ Odoo Online version 15.2
   `#83015 <https://github.com/odoo/odoo/pull/83015>`_, developers can now define what type of
   indexes can be used on fields by PostgreSQL. See the :ref:`index property <reference/fields>` of
   `odoo.fields.Field`.
+- The :attr:`_sequence` attribute of :class:`~odoo.models.Model` is removed. Odoo lets PostgreSQL use the default sequence of the primary key. `#82727 <https://github.com/odoo/odoo/pull/82727>`_
+- The method :meth:`~odoo.models.Model._write` does not raise an error for non-existing records. `#82727 <https://github.com/odoo/odoo/pull/82727>`_
+- The :attr:`column_format` and :attr:`deprecated` attributes of :class:`~odoo.fields.Field` are removed. `#82727 <https://github.com/odoo/odoo/pull/82727>`_

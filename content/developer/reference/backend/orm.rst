@@ -117,9 +117,6 @@ Fields
 
 .. autoclass:: Field()
 
-.. .. autoattribute:: Field._slots
-      :annotation:
-
 .. _reference/fields/basic:
 
 Basic Fields
