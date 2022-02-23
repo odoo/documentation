@@ -521,6 +521,219 @@ Render
 
    Customize this admonition with a **Title** of your choice.
 
+.. _contributing/tabs:
+
+Content tabs
+============
+
+.. caution::
+   The `tabs` directive may not work well in some situations. In particular:
+
+   - The tabs' headers cannot be translated.
+   - A tab cannot contain :ref:`headings <contributing/headings>`.
+   - An :ref:`admonition <contributing/admonitions>` cannot contain tabs.
+   - A tab cannot contain :ref:`internal hyperlink targets
+     <contributing/internal-hyperlink-targets>`.
+
+Basic tabs
+----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. tab:: Odoo Online
+
+         Content dedicated to Odoo Online users.
+
+      .. tab:: Odoo.sh
+
+         Alternative for Odoo.sh users.
+
+      .. tab:: On-premise
+
+         Third version for On-premise users.
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. tab:: Odoo Online
+
+      Content dedicated to Odoo Online users.
+
+   .. tab:: Odoo.sh
+
+      Alternative for Odoo.sh users.
+
+   .. tab:: On-premise
+
+      Third version for On-premise users.
+
+Nested tabs
+-----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. tab:: Stars
+
+         .. tabs::
+
+            .. tab:: The Sun
+
+               The closest star to us.
+
+            .. tab:: Proxima Centauri
+
+               The second closest star to us.
+
+            .. tab:: Polaris
+
+               The North Star.
+
+      .. tab:: Moons
+
+         .. tabs::
+
+            .. tab:: The Moon
+
+               Orbits the Earth.
+
+            .. tab:: Titan
+
+               Orbits Jupiter.
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. tab:: Stars
+
+      .. tabs::
+
+         .. tab:: The Sun
+
+            The closest star to us.
+
+         .. tab:: Proxima Centauri
+
+            The second closest star to us.
+
+         .. tab:: Polaris
+
+            The North Star.
+
+   .. tab:: Moons
+
+      .. tabs::
+
+         .. tab:: The Moon
+
+            Orbits the Earth.
+
+         .. tab:: Titan
+
+            Orbits Jupiter.
+
+Group tabs
+----------
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. group-tab:: C++
+
+         C++
+
+      .. group-tab:: Python
+
+         Python
+
+      .. group-tab:: Java
+
+         Java
+
+   .. tabs::
+
+      .. group-tab:: C++
+
+         .. code-block:: c++
+
+            int main(const int argc, const char **argv) {
+                return 0;
+            }
+
+      .. group-tab:: Python
+
+         .. code-block:: python
+
+            def main():
+                return
+
+      .. group-tab:: Java
+
+         .. code-block:: java
+
+            class Main {
+                public static void main(String[] args) {}
+            }
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      C++
+
+   .. group-tab:: Python
+
+      Python
+
+   .. group-tab:: Java
+
+      Java
+
+.. tabs::
+
+   .. group-tab:: C++
+
+      .. code-block:: c++
+
+         int main(const int argc, const char **argv) {
+             return 0;
+         }
+
+   .. group-tab:: Python
+
+      .. code-block:: python
+
+         def main():
+             return
+
+   .. group-tab:: Java
+
+      .. code-block:: java
+
+         class Main {
+             public static void main(String[] args) {}
+         }
+
 .. _contributing/document-metadata:
 
 Document metadata
