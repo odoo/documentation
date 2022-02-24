@@ -14,7 +14,7 @@ While this regulation mainly applies to :doc:`eCommerce <../../../../websites/ec
 private EU consumers, it is also valid for mail order sales and telesales.
 
 The Union **One-Stop Shop (OSS)** is an online portal where businesses can register for the OSS and
-declare their intra-community distance sales. Each EU member states integrates an online OSS portal.
+declare their intra-community distance sales. Each EU member state integrates an online OSS portal.
 
 The **EU intra-community Distance Selling** feature helps your organization comply with this
 regulation by creating and configuring new :doc:`fiscal positions <fiscal_positions>` and
