@@ -19,7 +19,6 @@
 # Pablo Rojas <rojaspablo88@gmail.com>, 2021
 # Paloma Yazmin Reyes Morales <paloma.reyes@jarsa.com.mx>, 2021
 # Juan Carlos Daniel Fernandez <estudiofaz@gmail.com>, 2021
-# eduardo mendoza <emendozajz@gmail.com>, 2021
 # Raquel Iciarte <ric@odoo.com>, 2021
 # Nicolás Broggi <rnbroggi@gmail.com>, 2021
 # Alejandro Kutulas <alk@odoo.com>, 2021
@@ -2320,6 +2319,12 @@ msgid ""
 "instead of overwriting them through extra CSS lines, resulting in a smaller "
 "file."
 msgstr ""
+"**Procesados previamente:** El entorno de trabajo CSS que Odoo utiliza es "
+"Bootstrap. Aunque un tema puede usar otro entorno de trabajo, la mayoría de "
+"los `temas de Odoo <https://www.odoo.com/apps/themes>`__ extienden y "
+"personalizan Bootstrap directamente. Ya que Odoo es compatible con Less y "
+"Sass, puede modificar las reglas CSS en lugar de sobreescribirlas a través "
+"de líneas CSS adicionales, lo que da como resultado un archivo más pequeño."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:395
 msgid ""
@@ -2332,6 +2337,16 @@ msgid ""
 "files like .JS and .CSS. Thus, the time to load CSS resources depends more "
 "on the number of requests to be done than the actual file size."
 msgstr ""
+"**Concatenados:** todos los módulos o bibliotecas que puede usar en Odoo "
+"tiene sus propios archivos CSS, Less o Sass (Comercio electrónico, blogs, "
+"temas, etc.). Tener varios archivos CSS es bueno para la modularidad pero no"
+" para el rendimiento, ya que la mayoría de los navegadores solo puede "
+"realizar 6 solicitudes en paralelo, lo que resulta en que se carguen muchos "
+"archivos en serie. El tiempo de latencia para transferir un archivo suele "
+"ser mucho mayor que el tiempo real de transferencia de datos, para archivos "
+"pequeños como .JS y .CSS. Por lo tanto, el tiempo de carga de recursos CSS "
+"depende más del número de solicitudes que se deben resolver que del tamaño "
+"real del archivo."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:405
 msgid ""
@@ -2341,12 +2356,12 @@ msgid ""
 "shared amongst all pages, when the visitor clicks on another page, the "
 "browser does not even have to load a new CSS file!"
 msgstr ""
-"Para circumvenir este problema, tdos los archivos CSS / Less / Sass estan "
-"siendo concatenados en uns solo archivo CSS que se envia hacia el navegador."
-" En consequencia, un visitador, solo **necesita cargar un solo archivo CSS**"
-" per página, algo especialmente eficiente. Como el CSS esta siendo "
-"compartido entre todas las páginas, cuando un visitador hace clic en otra "
-"página, ¡el navegador ni siquera debe recargar un nuevo archivo CSS!"
+"Para resolver este problema, todos los archivos CSS, Less o Sass se "
+"concatenan en un único archivo .CSS que se envía al navegador. Así, un "
+"visitante solo **tiene que cargar un solo archivo CSS** por página, lo cual "
+"es particularmente eficiente. Como el CSS se comparte entre todas las "
+"páginas, cuando un visitante hace clic en otra página, el navegador no tiene"
+" que cargar un nuevo archivo CSS."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:412
 msgid "**Both files in the <head>**"
@@ -2354,11 +2369,11 @@ msgstr "**Ambos archivos en el <head>**"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:412
 msgid "**What the visitor gets (only one file)**"
-msgstr "**Que obtiene el visitante (solo un archivo)**"
+msgstr "**Lo que el visitante recibe (solo un archivo)**"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:414
 msgid "/\\* From bootstrap.css \\*/"
-msgstr "/\\* From bootstrap.css \\*/"
+msgstr "/\\* De bootstrap.css \\*/"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:414
 #: ../../content/applications/websites/website/optimize/seo.rst:415
@@ -2379,11 +2394,11 @@ msgstr "color: #777;"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:416
 msgid "background: yellow"
-msgstr "background: yellow"
+msgstr "fondo: amarillo"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:417
 msgid "background: yellow;"
-msgstr "background: yellow;"
+msgstr "fondo: amarillo;"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:417
 #: ../../content/applications/websites/website/optimize/seo.rst:418
@@ -2394,7 +2409,7 @@ msgstr "}"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:420
 msgid "/\\* From my-theme.css \\*/"
-msgstr "/\\* From my-theme.css \\*/"
+msgstr "/\\* De my-theme.css \\*/"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:426
 msgid ""
@@ -2407,15 +2422,14 @@ msgid ""
 "is the backend that is only loaded when the visitor logs in and accesses the"
 " backend (/web)."
 msgstr ""
-"El archivo CSS enviado por Odoo incluye todos los CSS / Less / Sass de todas"
-" las páginas y módulos. Haciendo esto, visitas de páginas addiciónales del "
-"mismo visitador no deben recargar nigun archivo CSS. Sin embargo, algunos "
-"módulos pueden incluir recursos CSS / Javascript pesados los cuales no "
-"quiere precargar con la primera página por el mero tamaño. En este caso, "
-"Odoo separa este recurso en un segundo paquete que solo se carga cuando la "
-"página que lo este usando esta siendo soliciada. Un ejemplo es el backand "
-"que solamente esta cargado cuando un visitador esta ingresando al backend "
-"(/web)."
+"El archivo CSS enviado por Odoo incluye todos los CSS/Less/Sass de todas las"
+" páginas y módulos. Al hacer esto, las vistas adicionales de página del "
+"mismo visitante no tendrán que cargar ningún archivo CSS. Sin embargo, "
+"algunos módulos pueden incluir recursos CSS/Javascript grandes que no desea "
+"precargar en la primera página debido a su tamaño. En este caso, Odoo divide"
+" este recurso en un segundo paquete que se carga solo cuando la página que "
+"se solicita lo utiliza. Un ejemplo es el backend que solo carga cuando un "
+"visitante inicia sesión y accede al backend (/web)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:436
 msgid ""
@@ -2423,22 +2437,25 @@ msgid ""
 "avoid the 4095 selectors limit per sheet of Internet Explorer. But most "
 "themes fit below this limit."
 msgstr ""
+"Si el archivo CSS es muy grande, Odoo lo dividirá en dos archivos más "
+"pequeños para evitar el límite de 4095 selectores por hoja de Internet "
+"Explorer. Pero la mayoría de temas cumplen con este límite."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:440
 msgid ""
 "**Minified:** After being pre-processed and concatenated, the resulting CSS "
 "is minified to reduce its size."
 msgstr ""
-"**Minimizados:** Después de ser preprocesado y concatenado, el archivo CSS "
-"es minimizados para reducir su tamaño."
+"**Minificados:** Después de se procesa previamente y se concatena, el "
+"archivo CSS se minimiza para reducir su tamaño."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:444
 msgid "**Before minification**"
-msgstr "**Antes de minimizar**"
+msgstr "**Antes de minificar**"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:444
 msgid "**After minification**"
-msgstr "**Después de minimizar**"
+msgstr "**Después de minificar**"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:446
 msgid "/\\* some comments \\*/"
@@ -2451,9 +2468,7 @@ msgstr ".text-muted {color: #666}"
 #: ../../content/applications/websites/website/optimize/seo.rst:452
 msgid ""
 "The final result is then compressed, before being delivered to the browser."
-msgstr ""
-"El resultado final es entonces comprimido, antes de ser entregado al "
-"navegador."
+msgstr "El resultado final se comprime, antes de enviarse al navegador."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:455
 msgid ""
@@ -2461,39 +2476,50 @@ msgid ""
 "process, concatenate, minify at every request) and browser-side (so the same"
 " visitor will load the CSS only once for all pages they visit)."
 msgstr ""
+"Posteriormente, se almacena una versión de caché en el servidor (para que no"
+" tengamos que procesar previamente, concatenar y minificar en cada "
+"solicitud) y en el navegador (para que el mismo visitante cargue el archivo "
+"CSS solo una vez para todas las páginas que visiten)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:461
 msgid "Static Resources: Javascript"
-msgstr ""
+msgstr "Recursos estáticos: Javascript"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:463
 msgid ""
 "As with CSS resources, Javascript resources are also concatenated, minified,"
 " compressed and cached (server-side and browser-side)."
 msgstr ""
+"Al igual que los recursos CSS, los recursos Javascript también se "
+"concatenan, minifican, comprimen y se guardan en caché (tanto en el servidor"
+" como en el navegador)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:466
 msgid "Odoo creates three Javascript bundles:"
-msgstr "Odoo crea arboles de Paquetes Javascript:"
+msgstr "Odoo crea tres paquetes de Javascript:"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:468
 msgid ""
 "One for all pages of the website (including code for parallax effects, form "
 "validation, etc.)"
 msgstr ""
+"Uno para todas las páginas del sitio web (incluso el código para los efectos"
+" parallax, validación de formulario, etc.)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:471
 msgid ""
 "One for common Javascript code shared among frontend and backend (Bootstrap)"
 msgstr ""
+"Uno para el código de Javascript común que se comparte entre el frontend y "
+"el backend (Bootstrap)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:474
 msgid ""
 "One for backend specific Javascript code (Odoo Web Client interface for your"
 " employees using Odoo)"
 msgstr ""
-"Uno para código Javascript del backend (interfaz del Odoo Web Client para "
-"sus empleados utilizando Odoo)"
+"Uno para el código Javascript del backend (interfaz del Cliente web de Odoo "
+"para sus empleados que usan Odoo)"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:477
 msgid ""
@@ -2502,6 +2528,11 @@ msgid ""
 "As these files are shared across all pages, further clicks by the same "
 "visitor will not load any other Javascript resource."
 msgstr ""
+"La mayoría de los visitantes de su sitio web solo necesitarán los primeros "
+"dos paquetes, lo que resulta en un máximo de dos archivos Javascript por "
+"cargar para visualizar una página. Como estos archivos se comparten en todas"
+" las páginas, más clics por el mismo visitante no cargarán ningún otro "
+"recurso de Javascript."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:483
 msgid ""
@@ -2510,6 +2541,11 @@ msgid ""
 "But it allows you to easily debug with the Chrome debugger as CSS and "
 "Javascript resources are not transformed from their original versions."
 msgstr ""
+"Si trabaja con el :ref:`modo de desarrollador <developer-mode>`, los "
+"archivos CSS y Javascript no se concatenan ni se minifican. Por lo tanto, es"
+" mucho más lento, pero le permite resolver bugs con facilidad con el "
+"solucionador de bugs de Chrome, ya que los recursos CSS y Javascript no "
+"cambian de su versión original."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:488
 msgid "CDN"
@@ -2521,25 +2557,25 @@ msgid ""
 "images) are loaded from a Content Delivery Network. Using a Content Delivery"
 " Network has three advantages:"
 msgstr ""
-"Si activa la opción CDN en Odoo, recursos estáticos (Javascript, CSS, "
-"imágenes) están siendo cargados desde una red de distribución de contenido. "
-"Utilizar una red de distribuición de contenido conlleva tres ventajas:"
+"Si activa la opción de CDN en Odoo, los recursos estáticos (Javascript, CSS,"
+" imágenes) se cargan desde una red de distribución de contenido. Utilizar "
+"una red de distribución de contenido conlleva tres ventajas:"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:494
 msgid ""
 "Load resources from a nearby server (most CDN have servers in main countries"
 " around the globe)"
 msgstr ""
-"Cargar recursos de un servidor cercano (la mayoria de CDN mantiene "
-"servidores en los principales países alrededor del mundo)"
+"Cargar recursos de un servidor cercano (la mayoría de CDN tienen servidores "
+"en los principales países del mundo)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:497
 msgid ""
 "Cache resources efficiently (no computation resources usage on your own "
 "server)"
 msgstr ""
-"Guardar recursos eficientemente (no uso de recursos de computación en su "
-"propio servidor)"
+"Guardar recursos en el caché de forma eficiente (sin uso de recursos de "
+"cálculo en su propio servidor)."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:500
 msgid ""
@@ -2547,18 +2583,18 @@ msgid ""
 "resources in parallel (since the Chrome limit of 6 parallel requests is by "
 "domain)"
 msgstr ""
-"Distribuir la tarea de cargar recursos a traves de diferentes servicios "
-"permitiendo cargar maás recursos en paralelo (debido a que el límite de "
-"Chrome de 6 requestes en paralelo cuenta por dominio)"
+"Dividir la carga de recursos en diferentes servicios, lo que permite cargar "
+"más recursos en paralelo (ya que el límite de Chrome de 6 peticiones "
+"paralelas es por dominio)"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:504
 msgid ""
 "You can configure your CDN options from the **Website Admin** app, using the"
 " Configuration menu. Here is an example of configuration you can use:"
 msgstr ""
-"Puede configurar sus opciones CDN desde la aplicación **Administrador de "
-"página web** utilizando el menú de configuración. Aqui esta un ejemplo de "
-"configuración que puede utilizar:"
+"Puede configurar sus opciones de CDN desde la aplicación **Administrador de "
+"Sitio web**, en el menú de configuración. A continuación le presentamos un "
+"ejemplo de configuración que puede utilizar:"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:511
 msgid "HTML Pages"
@@ -2569,8 +2605,8 @@ msgid ""
 "The HTML pages can be compressed, but this is usually handled by your web "
 "server (NGINX or Apache)."
 msgstr ""
-"Las páginas HTML pueden ser comprimidas, pero esto es usualmente manejado "
-"por el servidor de tu web (NGINX or Apache)"
+"Las páginas HTML se pueden comprimir, pero esto usualmente lo maneja su "
+"servidor web (NGINX o Apache)"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:516
 msgid ""
@@ -2578,6 +2614,9 @@ msgid ""
 "HTML code. Building blocks have been developed to produce clean HTML code, "
 "usually using Bootstrap and the HTML editor."
 msgstr ""
+"El Creador de sitios web de Odoo se optimizó para garantizar un código HTML "
+"corto y claro. Los bloques de creación se desarrollaron para producto código"
+" HTML claro, usualmente al usar Bootstrap y el editor HTML."
 
 #: ../../content/applications/websites/website/optimize/seo.rst:520
 msgid ""
@@ -2585,13 +2624,13 @@ msgid ""
 "paragraph to the primary color of your website, Odoo will produce the "
 "following code:"
 msgstr ""
-"Como ejemplo, si usa el seleccionador de color para cambiar el color de un "
-"parrafo al color primario de su página web, Odoo producirá el siguiente "
+"Por ejemplo, si utiliza el seleccionador de color para cambiar el color de "
+"un párrafo al color primario de su sitio web, Odoo producirá el siguiente "
 "código:"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:524
 msgid "``<p class=\"text-primary\">My Text</p>``"
-msgstr "``<p class=\"text-primary\">Mi Texto</p>``"
+msgstr "``<p class=\"text-primary\">Mi texto</p>``"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:526
 msgid ""
@@ -2603,7 +2642,7 @@ msgstr ""
 
 #: ../../content/applications/websites/website/optimize/seo.rst:529
 msgid "``<p style=\"color: #AB0201\">My Text</p>``"
-msgstr "``<p style=\"color: #AB0201\">Mi Texto</p>``"
+msgstr "``<p style=\"color: #AB0201\">Mi texto</p>``"
 
 #: ../../content/applications/websites/website/optimize/seo.rst:532
 msgid "Responsive Design"
