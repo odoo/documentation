@@ -525,7 +525,7 @@ At a deeper level than the previous helper is the ``render`` method on
     Sets up a number of default values in the rendering context:
 
     ``request``
-        the current :class:`~odoo.http.WebRequest` object, if any
+        the current :class:`~odoo.http.Request` object, if any
     ``debug``
         whether the current request (if any) is in ``debug`` mode
     :func:`quote_plus <werkzeug.urls.url_quote_plus>`
