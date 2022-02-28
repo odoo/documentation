@@ -86,7 +86,7 @@ Online payment acquirers
 | :doc:`SIPS                    | Redirection to the   |            |                 |           |
 | <payment_acquirers/sips>`     | acquirer website     |            |                 |           |
 +-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Stripe                  | Redirection to the   | |V|        |                 |           |
+| :doc:`Stripe                  | Redirection to the   | |V|        | |V|             |           |
 | <payment_acquirers/stripe>`   | acquirer website     |            |                 |           |
 +-------------------------------+----------------------+------------+-----------------+-----------+
 
