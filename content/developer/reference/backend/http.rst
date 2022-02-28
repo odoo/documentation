@@ -56,7 +56,7 @@ API
 Routing
 -------
 
-.. autofunction:: odoo.http.route
+.. autodecorator:: odoo.http.route
 
 .. _reference/http/request:
 
@@ -64,15 +64,18 @@ Request
 -------
 
 The request object is automatically set on :data:`odoo.http.request` at
-the start of the request
+the start of the request.
 
-.. autoclass:: odoo.http.WebRequest
+.. autoclass:: odoo.http.Request
     :members:
     :member-order: bysource
-.. autoclass:: odoo.http.HttpRequest
+
+.. autoclass:: odoo.http.JsonRPCDispatcher
     :members:
-.. autoclass:: odoo.http.JsonRequest
+    :member-order: bysource
+.. autoclass:: odoo.http.HttpDispatcher
     :members:
+    :member-order: bysource
 
 Response
 --------
