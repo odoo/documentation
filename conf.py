@@ -180,7 +180,7 @@ languages_names = {
 redirects_file = 'redirects.txt'
 
 sphinx_tabs_disable_tab_closing = True
-sphinx_tabs_disable_css_loading = False
+sphinx_tabs_disable_css_loading = True
 
 #=== Options for HTML output ===#
 
