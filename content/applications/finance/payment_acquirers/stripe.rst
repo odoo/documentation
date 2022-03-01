@@ -5,49 +5,42 @@ Stripe
 `Stripe <https://stripe.com/>`_ is a United States-based online payment solution provider, allowing
 businesses to accept **credit cards** and other payment methods.
 
-Configuration
-=============
+Link your Stripe Account with Odoo
+==================================
 
 .. seealso::
    - :ref:`payment_acquirers/add_new`
 
-Credentials tab
----------------
-
 The method to acquire your credentials depends on your hosting type:
 
-- On Odoo Online, please follow the onboarding.
-- On Odoo.sh and On-premise, extra steps are required.
+.. tabs::
+   .. group-tab:: Odoo Online
 
-Odoo Online
-~~~~~~~~~~~
+      #. Go to the **eCommerce** or the **Sales** app and click on the *Activate Stripe* or the *Set
+         payments* button on the onboarding banner.
+      #. Fill in the requested information and submit the form.
+      #. Confirm your email address when Stripe sends you a confirmation email.
+      #. At the end of the process, you are redirected to Odoo. If you submitted all the requested
+         information, you are all set and your payment acquirer is enabled.
+      #. Your can continue to :ref:`stripe/local-payment-methods`.
 
-#. Go to the **eCommerce** or the **Sales** app and click on the *Activate Stripe* or the *Set
-   payments* button on the onboarding banner.
-#. Fill in the requested information and submit the form.
-#. Confirm your email address when Stripe sends you a confirmation email.
-#. At the end of the process, you are redirected to Odoo. If you submitted all the requested
-   information, you are all set and your payment acquirer is enabled.
+      .. tip::
+         To use your own API keys, :ref:`activate the Developer mode <developer-mode>` and
+         :ref:`enable Stripe manually <payment_acquirers/add_new>`. You can then :ref:`Fill in your
+         credentials <stripe/api_keys>`, :ref:`generate a webhook <stripe/webhook>` and enable the
+         payment acquirer.
 
-.. tip::
-   To connect your Stripe account after the onboarding is already completed, go to
-   :menuselection:`Accounting --> Configuration --> Payment Acquirers --> Stripe` and click on the
-   *Connect Stripe* button.
+   .. group-tab:: Odoo.sh or On-premise
 
-.. tip::
-   To use your own :ref:`API keys <stripe/api_keys>`, :ref:`activate the Developer mode
-   <developer-mode>` and :ref:`enable Stripe manually <payment_acquirers/add_new>`.
-
-Odoo.sh or On-premise
-~~~~~~~~~~~~~~~~~~~~~
-
-#. Go to the **eCommerce** or the **Sales** app and click on the *Activate Stripe* or the *Set
-   payments* button on the onboarding banner.
-#. Fill in the requested information and submit the form.
-#. Confirm your email address when Stripe sends you a confirmation email.
-#. At the end of the process, you are redirected to the payment acquirer **Stripe** on Odoo.
-#. :ref:`Fill in your credentials <stripe/api_keys>` and :ref:`generate a webhook <stripe/webhook>`.
-   Then, enable the payment acquirer.
+      #. Go to the **eCommerce** or the **Sales** app and click on the *Activate Stripe* or the *Set
+         payments* button on the onboarding banner.
+      #. Fill in the requested information and submit the form.
+      #. Confirm your email address when Stripe sends you a confirmation email.
+      #. At the end of the process, you are redirected to the payment acquirer **Stripe** on Odoo.
+      #. :ref:`Fill in your credentials <stripe/api_keys>`.
+      #. :ref:`Generate a webhook <stripe/webhook>`.
+      #. Enable the payment acquirer.
+      #. You are all set and can continue to :ref:`stripe/local-payment-methods`.
 
 .. tip::
    To connect your Stripe account after the onboarding is already completed, go to
@@ -60,10 +53,11 @@ Odoo.sh or On-premise
 
 .. _stripe/api_keys:
 
-Publishable and Secret keys
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Fill in your credentials
+------------------------
 
-Odoo needs your **API Credentials** to connect with your Stripe account, which comprises:
+In case your **API Credentials** are required to connect with your Stripe account, these are the
+credentials that must be completed:
 
 - :ref:`Publishable Key <stripe/api_keys>`: The key solely used to identify the account with Stripe.
 - :ref:`Secret Key <stripe/api_keys>`: The key to sign the merchant account with Stripe.
@@ -76,39 +70,40 @@ To retrieve the publishable and secret keys, follow this `link to your API keys
 
 .. _stripe/webhook:
 
-Webhook Signing Secret
-~~~~~~~~~~~~~~~~~~~~~~
+Generate a webhook
+------------------
 
-To retrieve the webhook signing secret, create a webhook either automatically or manually.
+In case your **Webhook Signing Secret** is required to connect with your Stripe account, you can
+create a webhook either automatically or manually.
 
-Create the webhook automatically
-********************************
+.. tabs::
+   .. tab:: Create the webhook automatically
 
-Make sure your :ref:`Publishable and Secret keys <stripe/api_keys>` are filled in, then click on the
-*Generate your Webhook* button.
+      Make sure your :ref:`Publishable and Secret keys <stripe/api_keys>` are filled in, then click
+      on the *Generate your Webhook* button.
 
-Create the webhook manually
-***************************
+   .. tab:: Create the webhook manually
 
-Visit the `webhooks page on Stripe <https://dashboard.stripe.com/webhooks>`_, or log into your
-Stripe dashboard and go to :menuselection:`Developers --> Webhooks`. Then, click on **Add endpoint**
-in your **Hosted endpoints** and insert the following data into the pop-up form:
+      Visit the `webhooks page on Stripe <https://dashboard.stripe.com/webhooks>`_, or log into your
+      Stripe dashboard and go to :menuselection:`Developers --> Webhooks`. Then, click on **Add
+      endpoint** in your **Hosted endpoints** and insert the following data into the pop-up form:
 
-- | In the **Endpoint URL**, enter your Odoo database's URL followed by `/payment/stripe/webhook`.
-  | For example: `https://yourcompany.odoo.com/payment/stripe/webhook`
-- At the end of the form, you can **Select events** to listen to. Click on it and, in the
-  **Checkout** section, select **checkout.session.completed**.
+      - | In the **Endpoint URL**, enter your Odoo database's URL followed by
+        | `/payment/stripe/webhook`.
+        | For example: `https://yourcompany.odoo.com/payment/stripe/webhook`
+      - At the end of the form, you can **Select events** to listen to. Click on it and, in the
+        **Checkout** section, select **checkout.session.completed**.
 
-.. note::
-   It is possible to select other events, but they are currently not processed by Odoo.
+        .. note::
+           It is possible to select other events, but they are currently not processed by Odoo.
 
-When you click on **Add endpoint**, your Webhook is configured. You can then click on **reveal** to
-display your signing secret.
+      When you click on **Add endpoint**, your Webhook is configured. You can then click on
+      **reveal** to display your signing secret.
 
 .. _stripe/local-payment-methods:
 
 Enable local payment methods
-----------------------------
+============================
 
 Local payment methods are payment methods that are only available for certain merchants and
 customers countries and currencies.
