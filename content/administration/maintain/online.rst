@@ -95,7 +95,7 @@ Domains
 Configure custom domains to access the database via another URL.
 
 .. seealso::
-   - :doc:`/applications/websites/website/publish/domain_name`
+   - :doc:`domain_names`
 
 .. _online/tags:
 
