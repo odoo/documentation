@@ -46,7 +46,7 @@ website. Follow the purple drops; they will help you in the first steps.
 
 .. note::
    If you run Odoo Online, don’t forget to redirect any new domain name to your Odoo database
-   (``CNAME``) and to authorize it Odoo-side. See :doc:`domain_name`.
+   (``CNAME``) and to authorize it Odoo-side. See :ref:`domain-name/existing`.
 
 Create the menu
 ===============
@@ -124,7 +124,7 @@ be redirected to the right website using GeoIP.
   See :doc:`on-premise_geo-ip-installation`
 
 .. seealso::
-   - :doc:`domain_name`
+   - :doc:`/administration/maintain/domain_names`
 
 Customize the visitor experience
 ================================
