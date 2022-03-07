@@ -12,6 +12,7 @@ Payment acquirers (credit cards, online payments)
    payment_acquirers/alipay
    payment_acquirers/authorize
    payment_acquirers/buckaroo
+   payment_acquirers/flutterwave
    payment_acquirers/mollie
    payment_acquirers/ogone
    payment_acquirers/paypal
@@ -52,43 +53,46 @@ the payments that go directly on the bank account and follow the usual reconcili
 Online payment acquirers
 ------------------------
 
-+-------------------------------+----------------------+------------+-----------------+-----------+
-|                               | Payment flow         | Save cards | Capture amount  | Refund    |
-|                               |                      |            | manually        | from Odoo |
-+===============================+======================+============+=================+===========+
-| :doc:`Adyen                   | Payment from Odoo    | |V|        | |V|             | |V|       |
-| <payment_acquirers/adyen>`    |                      |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Alipay                  | Redirection to the   |            |                 |           |
-| <payment_acquirers/alipay>`   | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Authorize.Net           | Payment from Odoo    | |V|        | |V|             |           |
-| <payment_acquirers/authorize>`|                      |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Buckaroo                | Redirection to the   |            |                 |           |
-| <payment_acquirers/buckaroo>` | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Mollie                  | Redirection to the   |            |                 |           |
-| <payment_acquirers/mollie>`   | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Ogone                   | Redirection to the   | |V|        |                 |           |
-| <payment_acquirers/ogone>`    | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`PayPal                  | Redirection to the   |            |                 |           |
-| <payment_acquirers/paypal>`   | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| PayU Latam                    | Redirection to the   |            |                 |           |
-|                               | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| PayUMoney                     | Redirection to the   |            |                 |           |
-|                               | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`SIPS                    | Redirection to the   |            |                 |           |
-| <payment_acquirers/sips>`     | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
-| :doc:`Stripe                  | Redirection to the   | |V|        | |V|             | |V|       |
-| <payment_acquirers/stripe>`   | acquirer website     |            |                 |           |
-+-------------------------------+----------------------+------------+-----------------+-----------+
++----------------------------------+---------------------+------------+----------------+-----------+
+|                                  | Payment flow        | Save cards | Capture amount | Refund    |
+|                                  |                     |            | manually       | from Odoo |
++==================================+=====================+============+================+===========+
+| :doc:`Adyen                      | Payment from Odoo   | |V|        | |V|            | |V|       |
+| <payment_acquirers/adyen>`       |                     |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Alipay                     | Redirection to the  |            |                |           |
+| <payment_acquirers/alipay>`      | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Authorize.Net              | Payment from Odoo   | |V|        | |V|            |           |
+| <payment_acquirers/authorize>`   |                     |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Buckaroo                   | Redirection to the  |            |                |           |
+| <payment_acquirers/buckaroo>`    | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Flutterwave                | Redirection to the  | |V|        |                |           |
+| <payment_acquirers/flutterwave>` | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Mollie                     | Redirection to the  |            |                |           |
+| <payment_acquirers/mollie>`      | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Ogone                      | Redirection to the  | |V|        |                |           |
+| <payment_acquirers/ogone>`       | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`PayPal                     | Redirection to the  |            |                |           |
+| <payment_acquirers/paypal>`      | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| PayU Latam                       | Redirection to the  |            |                |           |
+|                                  | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| PayUMoney                        | Redirection to the  |            |                |           |
+|                                  | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`SIPS                       | Redirection to the  |            |                |           |
+| <payment_acquirers/sips>`        | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
+| :doc:`Stripe                     | Redirection to the  | |V|        | |V|            | |V|       |
+| <payment_acquirers/stripe>`      | acquirer website    |            |                |           |
++----------------------------------+---------------------+------------+----------------+-----------+
 
 .. |V| replace:: ✔
 
