@@ -728,7 +728,7 @@ Cloc
 .. program:: odoo-bin cloc
 
 Odoo Cloc is a tool to count the number of relevant lines written in
-Python, Javascript or XML. This can be used as a rough metric for pricing
+Python, Javascript, CSS, SCSS, or XML. This can be used as a rough metric for pricing
 maintenance of extra modules.
 
 Command-line options
@@ -806,14 +806,15 @@ With the :option:`--database` option
 Odoo Cloc counts the lines in each file of extra installed modules in a
 given database. In addition, it counts the Python lines of server actions and
 custom computed fields that have been directly created in the database or
-imported.
+imported. Finally, it counts the lines of code of Javascript, CSS, and SCSS files,
+and of QWeb views from imported modules.
 
 Some files are excluded from the count by default:
 
 - The manifest (:file:`__manifest__.py` or :file:`__openerp__.py`)
 - The contents of the folder :file:`static/lib`
 - The tests defined in the folder :file:`tests` and :file:`static/tests`
-- The migrations scripts defined in the folder :file:`migrations`
+- The migrations scripts defined in the folder :file:`migrations` and `upgrades`
 - The XML files declared in the ``demo`` or ``demo_xml`` sections of the manifest
 
 For special cases, a list of files that should be ignored by Odoo Cloc can be defined
@@ -825,6 +826,7 @@ per module. This is specified by the ``cloc_exclude`` entry of the manifest:
         "lib/common.py", # exclude a single file
         "data/*.xml",    # exclude all XML files in a specific folder
         "example/**/*",  # exclude all files in a folder hierarchy recursively
+        "**/*.scss",     # exclude all scss file from the module
     ]
 
 | The pattern ``**/*`` can be used to ignore an entire module. This can be useful
