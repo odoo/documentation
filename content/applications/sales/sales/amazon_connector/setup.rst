@@ -2,71 +2,27 @@
 Configure Amazon Connector in Odoo
 ==================================
 
-Generate an Authorization Token in Seller Central
-=================================================
-
-.. _amazon/generate_auth_token:
-
-The Amazon Connector uses an Authorization Token that allows Odoo to fetch data from your Amazon
-Seller Central account. This token can be obtained directly through Seller Central in a few clicks
-and needs to be set up in your Odoo database configuration.
-
-Connect to your Seller Central account for the marketplace you initially signed
-up (e.g. if you created your account on Amazon Germany, go to `Amazon Seller
-Central for Germany <https://sellercentral.amazon.de>`_) with an administrator account.
-
-.. note::
-  You might need to use the *main* (or first) administrator account and not one
-  added subsequently.
-
-In the main menu, select :menuselection:`Apps & Services --> Manage Your Apps`;
-in the page that displays, click on the ``Authorize new developper`` button:
-
-.. image:: setup/seller_central_apps.png
-  :align: center
-
-Fill in the form depending on your Marketplace:
-
-.. image:: setup/seller_central_form.png
-  :align: center
-
-If your seller account is registered in the **North America** region, use these values:
-
-- Developer's Name: ``Odoo S.A.``
-- Developer ID: ``586127723692``
-
-For the **Europe** region, use these values:
-
-- Developer's Name: ``Odoo S.A.``
-- Developer ID: ``579095187166``
-
-Amazon will then inform you that by submitting the form, you are giving access
-to your Seller Central Information to Odoo S.A.
-
-.. note::
-    Odoo S.A. is unable to access your Amazon account's information without the
-    Authorization Token which is stored in your Odoo database - we do not store
-    these tokens on our platform directly and are therefore unable to access
-    your account's information outside of the Amazon Connector normal flows.
-
 Register your Amazon account in Odoo
 ====================================
 
 .. _amazon/setup:
 
 To register your seller account in Odoo, navigate to :menuselection:`Sales --> Configuration
---> Settings --> Connectors --> Amazon Sync --> Amazon Accounts` and click on **CREATE**.
+--> Settings --> Connectors --> Amazon Sync --> Amazon Accounts` and click on :guilabel:`CREATE`.
 
-The **Seller ID** can be found in Seller Central under the link **Your Merchant Token** on the
-**Seller Account Information** page. The **Authorization Token** is the one you generated in the
-:ref:`previous step <amazon/generate_auth_token>`.
+#. Choose a meaningful name for your account (e.g. `Europe`), and select your :guilabel:`Sign-up
+   Marketplace`. This is the original sign-up marketplace of your seller account (e.g. if you
+   created your account on Amazon Germany, your sign-up marketplace will be `amazon.de`)
 
-Upon saving, your credentials are checked. In case of issues, an error will be displayed - the
-information cannot be saved until your credentials are recognized by Amazon.
+#. Upon saving, a button to :guilabel:`link with Amazon` appears. Click on it to be redirected to
+   the Amazon login page, or directly to the consent page if you are already logged in. There,
+   confirm that you want Amazon to give Odoo access to your account and related data.
+
+#. Amazon redirects you to Odoo, with your account registered.
 
 Once the account is registered, the marketplaces available to this account are synchronized and
-listed under the **Marketplaces** tab. If you wish, you can remove some items from the list of
-synchronized marketplaces to disable their synchronization.
+listed under the :guilabel:`Marketplaces` tab. If you wish, you can remove some items from the list
+of synchronized marketplaces to disable their synchronization.
 
 Match database products in Amazon
 =================================
@@ -119,36 +75,39 @@ the subtotals between Seller Central and Odoo.
 Add an unsupported marketplace
 ==============================
 
-Some Amazon Marketplaces, such as Amazon Brazil, are not officially supported by Odoo but might be
-compatible with your seller account. These marketplaces can be added manually should you wish to use
-them. See :ref:`here <amazon/supported-marketplaces>` for the exhaustive list of natively supported
-marketplaces.
+Some Amazon Marketplaces, such as Amazon Brazil, are not created by default as they are not
+officially supported by Odoo but might be compatible with your seller account. These marketplaces
+can be added manually should you wish to use them. See :ref:`here <amazon/supported-marketplaces>`
+for the exhaustive list of natively supported marketplaces.
 
 .. tip::
    To find out if a marketplace is eventually compatible, check the `Amazon Documentation
-   <https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_. The marketplace
+   <https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_. The marketplace
    must belong to the same region as that of your seller account.
 
-To add a new marketplace, you must first activate the :ref:`developer mode <developer-mode>`.
+To add a new marketplace, activate the :ref:`developer mode <developer-mode>`.
 
 Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors -->
 Amazon Sync --> Amazon Marketplaces`.
 
-From there, you can create a new marketplace record. You will need the Marketplace ID and Endpoint
-for your marketplace as described in the `Amazon Documentation
-<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_.
+From there, create a new marketplace record. Enter the Marketplace ID and select the Amazon Region
+for your marketplace as described in the `Amazon Documentation for marketplace IDs
+<https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the Seller Central
+URL as described in the `Amazon Documentation for seller central URLs
+<https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_.
 
-Set the name of the record to ``Amazon.<domain>`` to easily retrieve it (for instance:
-``Amazon.se``). The **Code**, **Domain** and **API Identifier** fields should respectively hold
-the *Country Code*, *Amazon MWS Endpoint* and *MarketplaceId* values from the Amazon Documentation.
+Set the name of the record to ``Amazon.<country code>`` to easily retrieve it (e.g.: ``Amazon.se``).
+The :guilabel:`API Identifier`, the :guilabel:`Region` and the :guilabel:`Seller Central URL` fields
+should respectively hold the *MarketplaceId*, the selected Amazon region and the *Seller Central
+URL* values from the Amazon Documentation.
 
-Once the marketplace is saved, you should then update the Amazon Account configuration by going to 
+Once the marketplace is saved, update the Amazon Account configuration by going to
 :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
-Amazon Accounts`, open the account on which you wish to use the new marketplace, go to the
-**Marketplaces** tab and click on **Update available marketplaces** (an animation should confirm the
-success of the operation). Newly added marketplaces are automatically added to the list of
-synchronized marketplaces. If the new marketplace is not added to the list, it means that it is
-either incompatible or unavailable for your seller account.
+Amazon Accounts`. Open the account on which you wish to use the new marketplace, go to the
+:guilabel:`Marketplaces` tab and click on :guilabel:`Update available marketplaces` (an animation
+should confirm the success of the operation). Newly added marketplaces are automatically added to
+the list of synchronized marketplaces. If the new marketplace is not added to the list, it means
+that it is either incompatible or unavailable for your seller account.
 
 .. important::
    As manually added marketplaces are not officially supported by Odoo, there is no guarantee that
