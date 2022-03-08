@@ -117,9 +117,6 @@ extensions = [
     # Redirection generator
     'redirects',
 
-    # Code switcher (switcher and case directives)
-    'switcher',
-
     # Content tabs
     'sphinx_tabs.tabs',
 
