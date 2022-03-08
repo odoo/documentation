@@ -1,5 +1,5 @@
 
-.. _webservices/iap:
+.. _api/iap:
 
 ===============
 In-App Purchase
