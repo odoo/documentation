@@ -1051,12 +1051,10 @@ header.o_main_header {
 
         &:first-of-type {
             border-left: solid 1px $gray-light;
-            margin-left: -1px;
         }
 
         &:last-of-type {
             border-right: solid 1px $gray-light;
-            margin-right: -1px;
         }
 
         &:focus {
@@ -1083,10 +1081,17 @@ header.o_main_header {
         color: $gray-900;
         border: 1px solid $gray-light;
         padding: 1rem;
-        margin: 0 -1px -1px -1px;
 
         &:focus {
             outline: none;
+        }
+
+        > div[class^="highlight-"]{
+            border: 0 !important;
+        }
+        
+        > *:last-child {
+            margin-bottom: 0 !important;
         }
     }
 }
