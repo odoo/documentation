@@ -57,7 +57,7 @@ Use the following markups to emphasize your text to your liking:
 +--------------+----------+
 | \*Text\*     | *Text*   |
 +--------------+----------+
-| \`\`Text\`\` | ``Text`` |
+| \`Text\`     | ``Text`` |
 +--------------+----------+
 
 .. seealso::
@@ -521,6 +521,29 @@ Render
 
    Customize this admonition with a **Title** of your choice.
 
+.. _contributing/code-blocks:
+
+Code blocks
+===========
+
+RST
+---
+
+.. code-block:: text
+
+   .. code-block:: python
+
+      def main():
+          print("Hello world!")
+
+Render
+------
+
+.. code-block:: python
+
+   def main():
+       print("Hello world!")
+
 .. _contributing/tabs:
 
 Content tabs
@@ -535,8 +558,13 @@ Content tabs
    - A tab cannot contain :ref:`internal hyperlink targets
      <contributing/internal-hyperlink-targets>`.
 
+.. _contributing/tabs/basic:
+
 Basic tabs
 ----------
+
+Basic tabs are useful to split content into multiple options. The `tabs` directive is used to define
+a sequence of tabs. Each tab is then defined with the `tab` directive followed by a label.
 
 RST
 ~~~
@@ -574,8 +602,12 @@ Render
 
       Third version for On-premise users.
 
+.. _contributing/tabs/nested:
+
 Nested tabs
 -----------
+
+Tabs can be nested inside one another.
 
 RST
 ~~~
@@ -645,8 +677,14 @@ Render
 
             Orbits Jupiter.
 
+.. _contributing/tabs/group:
+
 Group tabs
 ----------
+
+Group tabs are special tabs that synchronize based on a group label. The last selected group is
+remembered and automatically selected when the user returns on the page or visits another page with
+the tabs group. The `group-tab` directive is used to define group tabs.
 
 RST
 ~~~
@@ -733,6 +771,62 @@ Render
          class Main {
              public static void main(String[] args) {}
          }
+
+.. _contributing/tabs/code:
+
+Code tabs
+---------
+
+Code tabs are essentially :ref:`group tabs <contributing/tabs/group>` that treat the content as a
+:ref:`code block <contributing/code-blocks>`. The `code-tab` directive is used to define a code tab.
+Just as for the `code-block` directive, the language defines the syntax highlighting of the tab. If
+set, the label is used instead of the language for grouping tabs.
+
+RST
+~~~
+
+.. code-block:: rst
+
+   .. tabs::
+
+      .. code-tab:: c++ Hello C++
+
+         #include <iostream>
+
+         int main() {
+             std::cout << "Hello World";
+             return 0;
+         }
+
+      .. code-tab:: python Hello Python
+
+         print("Hello World")
+
+      .. code-tab:: javascript Hello JavaScript
+
+         console.log("Hello World");
+
+Render
+~~~~~~
+
+.. tabs::
+
+   .. code-tab:: c++ Hello C++
+
+      #include <iostream>
+
+      int main() {
+          std::cout << "Hello World";
+          return 0;
+      }
+
+   .. code-tab:: python Hello Python
+
+      print("Hello World")
+
+   .. code-tab:: javascript Hello JavaScript
+
+      console.log("Hello World");
 
 .. _contributing/document-metadata:
 
