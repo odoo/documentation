@@ -342,9 +342,9 @@ ways:
   Expense Manager, etc.)
 
 These buttons settings can be applied to different groups that you can define
-yourself by overriding the function ``_notification_recipients``.
+yourself by overriding the function ``_notify_get_groups``.
 
-.. method:: _notification_recipients(message, groups)
+.. method:: _notify_get_groups(message, groups)
 
     Give the subtype triggered by the changes on the record according
     to values that have been updated.
@@ -392,10 +392,10 @@ yourself by overriding the function ``_notification_recipients``.
 
 
 The urls in the actions list can be generated automatically by calling the
-``_notification_link_helper()`` function:
+``_notify_get_action_link()`` function:
 
 
-.. method:: _notification_link_helper(self, link_type, **kwargs)
+.. method:: _notify_get_action_link(self, link_type, **kwargs)
 
     Generate a link for the given type on the current record (or on a specific
     record if the kwargs ``model`` and ``res_id`` are set).
@@ -440,14 +440,14 @@ The urls in the actions list can be generated automatically by calling the
             def action_cancel(self):
                 self.write({'state': 'draft'})
 
-            def _notification_recipients(self, message, groups):
+            def _notify_get_groups(self, message, groups):
                 """ Handle Trip Manager recipients that can cancel the trip at the last
                 minute and kill all the fun. """
-                groups = super(BusinessTrip, self)._notification_recipients(message, groups)
+                groups = super(BusinessTrip, self)._notify_get_groups(message, groups)
 
                 self.ensure_one()
                 if self.state == 'confirmed':
-                    app_action = self._notification_link_helper('method',
+                    app_action = self._notify_get_action_link('method',
                                         method='action_cancel')
                     trip_actions = [{'url': app_action, 'title': _('Cancel')}]
 
