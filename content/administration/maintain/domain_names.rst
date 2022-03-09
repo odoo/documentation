@@ -57,7 +57,7 @@ database manager.
 
 To do so, go to :menuselection:`Website --> Go to website --> Promote --> Domain Name`.
 Alternatively, open your `database manager <https://www.odoo.com/my/databases>`_, click on the
-*settings* button next to your database, then on *Domain names*.
+:guilabel:`settings` button next to your database, then on :guilabel:`Domain names`.
 
 .. image:: domain_names/register-promote.png
    :align: center
@@ -88,7 +88,8 @@ Manage your domain name registered with Odoo
 
 To manage the DNS records of your domain name registered with Odoo or to visualize the contacts
 associated with it, open your `database manager <https://www.odoo.com/my/databases>`_, click on the
-*settings* button next to your database, on *Domain names*, and then on *Contacts* or *DNS*.
+:guilabel:`settings` button next to your database, on :guilabel:`Domain names`, and then on
+:guilabel:`Contacts` or :guilabel:`DNS`.
 
 .. image:: domain_names/manage.png
    :align: center
@@ -136,7 +137,8 @@ database manager.
 
       If you want to target a specific branch (production, staging or development), go to
       :menuselection:`Branches --> select your branch --> Settings --> Custom domains`, and click on
-      *How to set up my domain?*. A message indicates which address your CNAME record should target.
+      :guilabel:`How to set up my domain?`. A message indicates which address your CNAME record
+      should target.
 
 #. Open your domain name's manager dashboard.
 #. Open the **DNS zone** management page for the domain name you want to configure.
@@ -182,7 +184,7 @@ domain name to access your website.
 
 #. Open your domain name's manager dashboard.
 #. Create a **redirection** from the naked domain (``example.com``) to your main domain name
-   (``www.example.com``)
+   (``www.example.com``).
 
 .. note::
    Depending on your domain name registrar, this redirection may be already pre-configured.
@@ -196,12 +198,13 @@ Map your domain name with your Odoo database
 
    .. group-tab:: Odoo Online
 
-      Open your `database manager <https://www.odoo.com/my/databases>`_, click on the *settings*
-      button next to your database, on *Domain names*, and then on *Use my own domain* at the bottom
-      of the right column.
+      Open your `database manager <https://www.odoo.com/my/databases>`_, click on the
+      :guilabel:`settings` button next to your database, on :guilabel:`Domain names`, and then on
+      :guilabel:`Use my own domain` at the bottom of the right column.
 
-      Type the domain name you want to add to this database, then click on *Verify* to check if the
-      the CNAME record is correctly configured. Once done, click on *I confirm, it's done*.
+      Type the domain name you want to add to this database, then click on :guilabel:`Verify` to
+      check if the CNAME record is correctly configured. Once done, click on :guilabel:`I confirm,
+      it's done`.
 
       .. image:: domain_names/online-map.png
          :align: center
@@ -210,7 +213,7 @@ Map your domain name with your Odoo database
    .. group-tab:: Odoo.sh
 
       Go to :menuselection:`Branches --> select your branch --> Settings --> Custom domains`, type
-      the domain name you want to add to this database, then click on *Add domain*.
+      the domain name you want to add to this database, then click on :guilabel:`Add domain`.
 
       .. image:: domain_names/odoo-sh-map.png
          :align: center
@@ -301,8 +304,8 @@ Mapping your domain name to your website isn't the same as mapping it with your 
 Go to :menuselection:`Website --> Configuration --> Settings --> Website Info`. If you have multiple
 websites, select the one you want to configure.
 
-In the **Domain** field, fill in the web address of your website (e.g., ``https://www.example.com``)
-and click on *Save*.
+In the :guilabel:`Domain` field, fill in the web address of your website (e.g.,
+``https://www.example.com``) and click on :guilabel:`Save`.
 
 .. image:: domain_names/website-settings.png
    :align: center
@@ -318,9 +321,9 @@ and click on *Save*.
 
 .. note::
    If you have multiple websites and companies on your database, make sure that you select the
-   right **Company** in the website settings, next to the **Domain** settings. Doing so indicates
-   Odoo which URL to use as the :ref:`base URL <domain-name/web-base-url>` according to the company
-   in use.
+   right :guilabel:`Company` in the website settings, next to the :guilabel:`Domain` settings. Doing
+   so indicates Odoo which URL to use as the :ref:`base URL <domain-name/web-base-url>` according to
+   the company in use.
 
 .. seealso::
   - :doc:`/applications/general/email_communication/email_servers`
