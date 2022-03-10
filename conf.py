@@ -48,6 +48,10 @@ exclude_patterns = [
 # See https://docutils.sourceforge.io/docs/ref/rst/roles.html#standard-roles for other roles.
 default_role = 'literal'
 
+
+# Whether scaled down images should be be wrapped in a `<a/>` tag linking to the image file or not.
+html_scaled_image_link = False
+
 # If true, '()' will be appended to :func: etc. cross-reference text
 add_function_parentheses = True
 
