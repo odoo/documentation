@@ -76,28 +76,25 @@ Request Body
             The client email.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-            {
-                "jsonrpc": string,
-                "method": string,
-                "params": {
-                        "account_token": string (hex),
-                        "version": int,
-                        "documents": [string],
-                        "user_infos": {
-                                "user_company_vat": string,
-                                "user_company_name": string,
-                                "user_company_country_code": string,
-                                "user_lang": string,
-                                "user_email": string,
-                        },
-                },
-                "id": string (hex),
-            }
+   {
+       "jsonrpc": string,
+       "method": string,
+       "params": {
+               "account_token": string (hex),
+               "version": int,
+               "documents": [string],
+               "user_infos": {
+                       "user_company_vat": string,
+                       "user_company_name": string,
+                       "user_company_country_code": string,
+                       "user_lang": string,
+                       "user_email": string,
+               },
+       },
+       "id": string (hex),
+   }
 
 Response
 ^^^^^^^^
@@ -127,21 +124,17 @@ Response
 =============  ==============================================================
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {
-            "jsonrpc": string,
-            "id": string,
-            "result": {
-                "status_code": int,
-                "status_msg": string,
-                "document_id": int,
-            }
-        }
-
+   {
+       "jsonrpc": string,
+       "id": string,
+       "result": {
+           "status_code": int,
+           "status_msg": string,
+           "document_id": int,
+       }
+   }
 
 .. _webservices/extract_api/invoice_get_results:
 
@@ -168,21 +161,17 @@ Request Body
         The list of ``document_id`` for which you want to get the current parsing status.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {
-            "jsonrpc": string,
-            "method": string,
-            "params": {
-                "version": int,
-                "documents_ids": [int]
-            },
-            "id": string (hex),
-        }
-
+   {
+       "jsonrpc": string,
+       "method": string,
+       "params": {
+           "version": int,
+           "documents_ids": [int]
+       },
+       "id": string (hex),
+   }
 
 Response
 ^^^^^^^^
@@ -213,34 +202,31 @@ Response
 =============  ==============================================================
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {
-            "jsonrpc": string,
-            "id": string,
-            "result": {
-                "document_id_1": {
-                    "status_code": int,
-                    "status_msg": str,
-                    "results": [{"feature_1_name": feature_1_result,
-                                 "feature_2_name": feature_2_result,
-                                 …
-                                }]
-                    },
-                "document_id_2": {
-                    "status_code": int,
-                    "status_msg": str,
-                    "results": [{"feature_1_name": feature_1_result,
-                                 "feature_2_name": feature_2_result,
-                                 …
-                                }]
-                    },
-                    ...
-            }
-        }
+   {
+       "jsonrpc": string,
+       "id": string,
+       "result": {
+           "document_id_1": {
+               "status_code": int,
+               "status_msg": str,
+               "results": [{"feature_1_name": feature_1_result,
+                            "feature_2_name": feature_2_result,
+                            …
+                           }]
+               },
+           "document_id_2": {
+               "status_code": int,
+               "status_msg": str,
+               "results": [{"feature_1_name": feature_1_result,
+                            "feature_2_name": feature_2_result,
+                            …
+                           }]
+               },
+               ...
+       }
+   }
 
 .. _webservices/extract_api/invoice_get_results/feature_result:
 
@@ -256,16 +242,13 @@ For each feature, we return a list of candidates and we spotlight the candidate 
 ``words``
     List of all the candidates for this feature ordered by decreasing score.
 
-.. container:: doc-aside
+.. rst-class:: setup doc-aside
+.. code-block:: text
 
-    .. switcher::
-
-        .. code-block:: text
-
-            {
-                "selected_value": candidate_12,
-                "words": [candidate_12, candidate_3, candidate_4,...]
-            }
+   {
+       "selected_value": candidate_12,
+       "words": [candidate_12, candidate_3, candidate_4,...]
+   }
 
 
 ``candidate``
@@ -281,17 +264,14 @@ For each candidate we give its representation and position in the document. Cand
 ``page``
     Page of the original document on which the candidate is located (starts at 0).
 
-.. container:: doc-aside
+.. rst-class:: setup doc-aside
+.. code-block:: text
 
-    .. switcher::
-
-        .. code-block:: text
-
-            {
-                "content": string|float,
-                "coords": [float, float, float, float, float],
-                "page": int
-            }
+   {
+       "content": string|float,
+       "coords": [float, float, float, float, float],
+       "page": int
+   }
 
 +-------------------------+------------------------------------------------------------------------------------+
 | Feature name            | Specifities                                                                        |
@@ -351,27 +331,24 @@ For each candidate we give its representation and position in the document. Cand
 It follows a more specific structure. It is basically a list of dictionaries where each dictionary represents an invoice line. Each value follows
 a :ref:`webservices/extract_api/invoice_get_results/feature_result` structure.
 
-.. container:: doc-aside
+.. rst-class:: doc-aside
+.. code-block:: text
 
-    .. switcher::
-
-        .. code-block:: text
-
-            [
-                {
-                    "description": feature_result,
-                    "discount": feature_result,
-                    "product": feature_result,
-                    "quantity": feature_result,
-                    "subtotal": feature_result,
-                    "total": feature_result,
-                    "taxes": feature_result,
-                    "total": feature_result,
-                    "unit": feature_result,
-                    "unit_price": feature_result
-                },
-                ...
-            ]
+   [
+       {
+           "description": feature_result,
+           "discount": feature_result,
+           "product": feature_result,
+           "quantity": feature_result,
+           "subtotal": feature_result,
+           "total": feature_result,
+           "taxes": feature_result,
+           "total": feature_result,
+           "unit": feature_result,
+           "unit_price": feature_result
+       },
+       ...
+   ]
 
 .. _webservices/extract_api/invoice_validate:
 
@@ -400,25 +377,22 @@ Request Body
           Therefore you should validate all the features you want to validate at once.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {
-            "jsonrpc": string,
-            "method": string,
-            "params": {
-                "document_id": int,
-                "values": {
-                    "merged_lines": bool
-                    "feature_name_1": validation_1,
-                    "feature_name_2": validation_2,
-                    ...
-                }
-            },
-            "id": string (hex),
-        }
+   {
+       "jsonrpc": string,
+       "method": string,
+       "params": {
+           "document_id": int,
+           "values": {
+               "merged_lines": bool
+               "feature_name_1": validation_1,
+               "feature_name_2": validation_2,
+               ...
+           }
+       },
+       "id": string (hex),
+   }
 
 ``validation``
 ''''''''''''''
@@ -427,12 +401,9 @@ A **validation** for a given feature is a dictionary containing the textual repr
 This format apply for all the features except for ``global_taxes`` and ``invoice_lines`` which have more complex validation format.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        { "content": string|float }
+   { "content": string|float }
 
 validation for ``global_taxes``
 '''''''''''''''''''''''''''''''
@@ -449,20 +420,17 @@ validation for ``global_taxes``
     Indicates if ``amount`` already contains the tax or not.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {"content": [
-            {
-                "amount": float,
-                "tax_amount": float,
-                "tax_amount_type": "fixed"|"percent",
-                "tax_price_include": bool
-            },
-            ...
-        ]}
+   {"content": [
+       {
+           "amount": float,
+           "tax_amount": float,
+           "tax_amount_type": "fixed"|"percent",
+           "tax_price_include": bool
+       },
+       ...
+   ]}
 
 validation for ``invoice_lines``
 ''''''''''''''''''''''''''''''''
@@ -470,31 +438,28 @@ validation for ``invoice_lines``
 **lines** is a list of dictionaries. Each dictionary represents an invoice line. The dictionary keys speak for themselves.
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {"lines": [
-            {
-                "description": string,
-                "quantity": float,
-                "unit_price": float,
-                "product": string,
-                "taxes_amount": float,
-                "taxes": [
-                            {
-                                "amount": float,
-                                "type": "fixed"|"percent",
-                                "price_include": bool
-                            },
-                            ...
-                        ],
-                "subtotal": float,
-                "total": float
-            },
-            ...
-        ]}
+   {"lines": [
+       {
+           "description": string,
+           "quantity": float,
+           "unit_price": float,
+           "product": string,
+           "taxes_amount": float,
+           "taxes": [
+                       {
+                           "amount": float,
+                           "type": "fixed"|"percent",
+                           "price_include": bool
+                       },
+                       ...
+                   ],
+           "subtotal": float,
+           "total": float
+       },
+       ...
+   ]}
 
 Response
 --------
@@ -517,19 +482,16 @@ Response
 =============  ==========================================================
 
 .. rst-class:: setup doc-aside
+.. code-block:: text
 
-.. switcher::
-
-    .. code-block:: text
-
-        {
-            "jsonrpc": string,
-            "id": string,
-            "result": {
-                "status_code": int,
-                "status_msg": string,
-            }
-        }
+   {
+       "jsonrpc": string,
+       "id": string,
+       "result": {
+           "status_code": int,
+           "status_msg": string,
+       }
+   }
 
 
 .. _webservices/extract_api/integration_testing:
