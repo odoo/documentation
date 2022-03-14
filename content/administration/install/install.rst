@@ -409,8 +409,10 @@ A typical way to run the server would be:
 
 Where `CommunityPath` is the path of the Odoo Community installation, `dbuser` is the
 PostgreSQL login, `dbpassword` is the PostgreSQL password
-and `mydb` is the default database to serve on `localhost:8069`. You can add other
-directory paths separated by a comma to ``addons`` at the end of the addons-path option.
+and `mydb` is the default database to serve on `localhost:8069`.
+
+.. seealso::
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
 
 Linux
 -----
@@ -578,8 +580,10 @@ A typical way to run the server would be:
     $ python3 odoo-bin --addons-path=addons -d mydb
 
 Where `CommunityPath` is the path of the Odoo Community installation
-and `mydb` is the default database to serve on `localhost:8069`. You can add other
-directory paths separated by a comma to ``addons`` at the end of the addons-path option.
+and `mydb` is the default database to serve on `localhost:8069`.
+
+.. seealso::
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
 
 Mac OS
 ------
@@ -740,9 +744,10 @@ A typical way to run the server would be:
     $ python3 odoo-bin --addons-path=addons -d mydb
 
 Where `CommunityPath` is the path of the Odoo Community installation
-and `mydb` is the default database to serve on `localhost:8069`. You can add other
-directory paths separated by a comma to ``addons`` at the end of the addons-path option.
+and `mydb` is the default database to serve on `localhost:8069`.
 
+.. seealso::
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
 
 .. _setup/install/docker:
 
@@ -750,7 +755,7 @@ Docker
 ======
 
 The full documentation on how to use Odoo with Docker can be found on the
-official Odoo `docker image <https://registry.hub.docker.com/_/odoo/>`_ page.
+official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page.
 
 .. _Debian Buster: https://www.debian.org/releases/buster/
 .. _demo: https://demo.odoo.com

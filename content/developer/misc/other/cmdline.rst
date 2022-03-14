@@ -1,9 +1,40 @@
 
 .. _reference/cmdline:
 
-=============
-CLI: odoo-bin
-=============
+============================
+Command-line interface (CLI)
+============================
+
+The CLI :dfn:`command-line interface` offers several functionalities related to Odoo. You can use it
+to :ref:`run the server <reference/cmdline/server>`, :ref:`launch Odoo as a Python console
+environment <reference/cmdline/shell>`, :ref:`scaffold an Odoo module <reference/cmdline/scaffold>`,
+:ref:`populate a database <reference/cmdline/populate>`, or :ref:`count the number of lines of code
+<reference/cmdline/cloc>`.
+
+.. important::
+   The command to use to call the CLI depends on how you installed Odoo. In the examples below, we
+   assume that you are :ref:`running Odoo from source <setup/install/source>` with the
+   :file:`odoo-bin` file. If you installed Odoo :ref:`from a distribution package
+   <setup/install/packaged>` or :ref:`with Docker <setup/install/docker>`, you must adapt the
+   command.
+
+   .. tabs::
+
+      .. tab:: Run Odoo from source
+
+         #. Navigate to the root of the directory where you downloaded the source files of Odoo
+            Community.
+         #. Run all CLI commands with :command:`./odoo-bin`
+
+      .. tab:: Odoo was installed from a distribution package
+
+         When Odoo was installed, an executable named `odoo` was added to your user's PATH. Replace
+         all occurrences of :command:`odoo-bin` with :command:`odoo` in the examples below.
+
+      .. tab:: Odoo was installed with Docker
+
+         Please refer to the `documentation of the official Docker image of Odoo
+         <https://hub.docker.com/_/odoo/>`_.
 
 .. _reference/cmdline/server:
 
@@ -521,6 +552,7 @@ Here is a sample file:
     http://werkzeug.pocoo.org/docs/contrib/fixers/#werkzeug.contrib.fixers.ProxyFix
 .. _pyinotify: https://github.com/seb-m/pyinotify/wiki
 
+.. _reference/cmdline/shell:
 
 Shell
 =====
@@ -603,6 +635,7 @@ generation of the model's records to test your modules in databases containing n
 
     :ref:`reference/testing/populate`
 
+.. _reference/cmdline/cloc:
 
 Cloc
 ====
