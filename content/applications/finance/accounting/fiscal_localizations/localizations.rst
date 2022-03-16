@@ -17,6 +17,7 @@ Localizations
    localizations/indonesia
    localizations/italy
    localizations/italy_IT
+   localizations/luxembourg
    localizations/mexico
    localizations/netherlands
    localizations/peru
