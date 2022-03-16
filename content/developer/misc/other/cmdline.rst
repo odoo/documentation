@@ -522,7 +522,7 @@ to that file.
 .. _a PostgreSQL URI:
     https://www.postgresql.org/docs/9.2/static/libpq-connect.html#AEN38208
 .. _Werkzeug's proxy support:
-    http://werkzeug.pocoo.org/docs/contrib/fixers/#werkzeug.contrib.fixers.ProxyFix
+    https://werkzeug.palletsprojects.com/en/0.16.x/middleware/proxy_fix/#module-werkzeug.middleware.proxy_fix
 .. _pyinotify: https://github.com/seb-m/pyinotify/wiki
 
 .. _reference/cmdline/shell:
