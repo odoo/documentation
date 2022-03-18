@@ -555,6 +555,14 @@ be *In Payment* since the payment will be effectively validated when it is bank 
    associated with the invoice, it must be valid so that the stamped payment complement can be
    created.
 
+.. warning::
+   - When making a payment in MXN for an invoice in USD, the payment must be created using the
+     :guilabel:`Register Payment` button **on the invoice view** and not separately as a payment.
+     Otherwise, the payment CFDI is not correctly generated.
+   - As such, a payment in MXN cannot be used to pay multiple invoices in USD. Rather, the payment
+     should be separated into multiple payments created using the :guilabel:`Register Payment`
+     button on the corresponding invoices.
+
 Register PUE Payments
 ~~~~~~~~~~~~~~~~~~~~~
 
