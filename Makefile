@@ -77,6 +77,6 @@ $(HTML_BUILD_DIR)/_static/style.css: extensions/odoo_theme/static/style.scss ext
 fast: SPHINXOPTS += -A collapse_menu=True
 fast: html
 
-static: $(HTML_BUILD_DIR)/static/style.css
+static: $(HTML_BUILD_DIR)/_static/style.css
 	cp -r extensions/odoo_theme/static/* $(HTML_BUILD_DIR)/_static/
 	cp -r static/* $(HTML_BUILD_DIR)/_static/
