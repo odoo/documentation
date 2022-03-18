@@ -97,6 +97,26 @@ The lazy version of `_` and `_t` is :func:`odoo._lt` in python and
 at rendering and can be used to declare translatable properties in class methods
 of global variables.
 
+.. note::
+
+    Translations of a module are **not** exposed to the front end by default and
+    thus are not accessible from JavaScript. In order to achieve that, the
+    module name has to be either prefixed with `website` (just like
+    `website_sale`, `website_event` etc.) or explicitly register by implementing
+    :func:`_get_translation_frontend_modules_name` for the `ir.http` model.
+
+    This could look like the following::
+
+        from odoo import models
+
+        class IrHttp(models.AbstractModel):
+            _inherit = 'ir.http'
+
+            @classmethod
+            def _get_translation_frontend_modules_name(cls):
+                modules = super()._get_translation_frontend_modules_name()
+                return modules + ['your_module']
+
 Variables
 ^^^^^^^^^
 **Don't** the extract may work but it will not translate the text correctly::
