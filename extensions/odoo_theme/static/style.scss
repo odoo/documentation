@@ -277,8 +277,6 @@ header.o_main_header {
 
         }
     }
-    scrollbar-width: thin;
-    scrollbar-color: $o-violet-darker transparent;
 
     &::-webkit-scrollbar {
         width: 5px;
@@ -521,7 +519,7 @@ header.o_main_header {
                     }
 
                     .o_git_link {
-                        right: calc(#{$o-codecol-width} + $padding-l);
+                        right: calc(#{$o-codecol-width} + #{$padding-l});
                     }
 
                     section {
@@ -723,7 +721,7 @@ header.o_main_header {
 
                     &:after {
                         content: '#{$i-link}';
-                        font-family: icomoon !important;
+                        font-family: icomoon, sans-serif !important;
                         @include font-size($font-size-base);
                         margin: 0 0 0 .3rem;
                         visibility: hidden;
@@ -758,7 +756,7 @@ header.o_main_header {
             margin: 1px 0 24px 0;
 
             div[class^="highlight"] {
-                padding: 0px;
+                padding: 0;
                 border: none;
                 margin: 0;
             }
@@ -959,10 +957,6 @@ header.o_main_header {
             &.alert-go_to {
                 border-color: $o-violet;
                 background-color: $gray-lightest;
-                @include media-breakpoint-up(lg){
-                    display: inline-block;
-                    width: calc(50% - 1rem);
-                }
 
                 a {
                     color: $o-violet-dark;
