@@ -1,55 +1,68 @@
-=============================================================
-How to sell accessories and optional products (cross-selling)
-=============================================================
+==============================================
+Cross-selling: Accessory and Optional Products
+==============================================
 
-You sell computers. Why not stimulating your customers to buy a top-notch
-screen or an extra-warranty? That's the goal of cross-selling functionalities: 
+Any sales process is an opportunity to maximize revenues. For example, with an extended warranty
+or some accessories.
 
-* Accessory products on checkout page,
-* Optional products on a new *Add to Cart* screen (not installed by default).
+To do so, you can use **Cross-selling**, a sales technique consisting in selling a customer
+something in addition to the product or service they were originally shopping for. It is a great way
+to maximize the value of each one of your customers.
 
-Accessory products when checking out
-====================================
+It can be done via two different features:
 
-Accessories (e.g. for computers: mouse, keyboard) show up when the customer
-reviews the cart before paying.
+- :ref:`Accessory products <cross_selling/accessory>` on the checkout page.
+- :ref:`Optional products <cross_selling/optional>` on a new :guilabel:`Add to Cart` screen.
 
-.. image:: cross_selling/cross_sell_accessory_web.png
+.. _cross_selling/accessory:
+
+Accessory Products
+==================
+
+**Accessory Products** are products that are displayed when customers review their cart before
+paying. As an example, you could suggest a mouse or a keyboard when someone buys a computer.
+
+To add *Accessory Products*, go to :menuselection:`Website --> Products --> Products` and, under
+the :guilabel:`Sales Tab`, add your products to the :guilabel:`Accessory Products` field.
+
+.. image:: cross_selling/accessory-product.png
    :align: center
+   :alt: Add an accessory product to product form.
 
-Select accessories in the *Sales* tab of the product detail page.
+Now, go to your website and add the product to your cart. On the payment step, you can see your
+accessory products suggested to the customer.
 
-.. image:: cross_selling/cross_sell_accessory.png
+.. image:: cross_selling/accessory-product-customer-view.png
    :align: center
+   :alt: See of payment view and accessory product suggestion.
 
-.. note::
-    There is an algorithm to figure out the best accessories to display in case
-    several items are added to cart. If any item is the accessory of several products
-    added to cart, it is most likely that it will be atop the list of suggested accessories.
+.. seealso::
+   `Odoo Tutorials: Alternative, Accessory, and Optional Products
+   <https://www.odoo.com/slides/slide/alternative-accessory-and-optional-products-637>`_.
 
-Optional products when adding to cart
-=====================================
+.. _cross_selling/optional:
 
-Optional products are directly related to the item added to cart (e.g. for computers:
-warranty, OS software, extra components). Whenever the main product is added to cart,
-such a new screen pops up as an extra step.
+Optional Products
+=================
 
-.. image:: cross_selling/cross_sell_optional_web.png
+**Optional products** are products directly related to an item. Each time the product is added to a
+cart, a pop-up appears, suggesting other products to buy.
+
+To enable optional products, go to :menuselection:`Website --> Configuration --> Settings` and tick
+:guilabel:`Optional Products`. Then, go to :menuselection:`Website --> Products --> Products` and
+open the item you want to add an optional product to. In the :guilabel:`Sales tab` of that product,
+add as many optional products as you want.
+
+.. image:: cross_selling/optional-product.png
    :align: center
+   :alt: Add an optional product to product form.
 
-To publish optional products:
+From now, when a customer adds this product to their cart, a pop-up appears and suggests also adding
+the optional product(s).
 
-* Install *eCommerce Optional Products* addon in *Apps* menu. Remove the default filter to
-  search on addons as well, otherwise only main apps show up.
-
-.. image:: cross_selling/cross_sell_optional_install.png
+.. image:: cross_selling/cross-selling-pop-up.png
    :align: center
+   :alt: Pop-up with optional products appears.
 
-* Select optional items from the *Sales* tab of the product detail form.
-
-.. image:: cross_selling/cross_sell_optional.png
-   :align: center
-
-.. note::
-    The quantity of optional items added to cart is the same than the main item.
-
+.. seealso::
+   - :doc:`upselling`
