@@ -9,22 +9,22 @@
 # Benson <Benson.Dr@Gmail.com>, 2021
 # liAnGjiA <liangjia@qq.com>, 2021
 # bf2549c5415a9287249cba2b8a5823c7, 2021
-# Martin Trigaux, 2021
 # mrshelly <mrshelly@hotmail.com>, 2021
 # Jeffery CHEN <jeffery9@gmail.com>, 2021
 # Gary Wei <Gary.wei@elico-corp.com>, 2021
 # Mandy Choy <mnc@odoo.com>, 2021
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2021
 # Datasource International <Hennessy@datasourcegroup.com>, 2021
+# Martin Trigaux, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-02 08:37+0000\n"
+"POT-Creation-Date: 2022-03-18 14:56+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
-"Last-Translator: Datasource International <Hennessy@datasourcegroup.com>, 2021\n"
+"Last-Translator: Martin Trigaux, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -561,9 +561,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:31
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:66
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:26
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
 msgid "Configuration"
 msgstr "基础配置"
@@ -3882,10 +3881,8 @@ msgid ""
 "considered as a sublocation of your warehouse, as a shelf, a floor, an "
 "aisle, etc. Therefore, a location is part of one warehouse only and it is "
 "not possible to link one location to multiple warehouses. You can configure "
-"as much locations as you need under one warehouse."
+"as many locations as you need under one warehouse."
 msgstr ""
-" **库位** 是仓库中的一个特定的位置。它可以被认为是仓库的下级, 一个货架, 一层楼, 一个通道, 等等。因此, 一个库位只能是你的仓库的一部分, "
-"不能把一个库位和多个仓库链接起来。在一个仓库下你可以配置足够多的库位。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/difference_warehouse_location.rst:15
 msgid "There are 3 types of locations:"
@@ -4600,32 +4597,29 @@ msgstr "可用规则触发各种动作。 如果Odoo提供 *推* 和 *拉* 规�
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:259
 msgid ""
 "**Pull From**: this rule is triggered by a need for the product in a "
-"specific stock location. The need can come from a sale order which has been "
-"validated or for a manufacturing order which requires a specific component. "
-"When the need appears in the source location, Odoo generates a picking to "
-"fulfill this need."
+"specific location. The need can come from a sale order which has been "
+"validated or from a manufacturing order which requires a specific component."
+" When the need appears in the destination location, Odoo generates a picking"
+" to fulfill this need."
 msgstr ""
-"**提货** ：该规则由特定库存位置中的产品需求触发。 需求可能来自已确认的销售订单，也可能来自需要特定组件的制造订单。 "
-"当需求出现在源位置时，Odoo会生成一个行动以满足需求。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:264
 msgid ""
 "**Push To**: this rule is triggered by the arrival of some products in the "
-"defined source location. In case you move products to the source location, "
-"Odoo generates a picking to move those products to the destination location."
-msgstr "**推送至** ：此规则由某些产品到达定义的来源位置触发。 万一您将产品移动到源位置，Odoo 会生成拣配以将这些产品移动到目标位置。"
+"defined source location. In the case you move products to the source "
+"location, Odoo generates a picking to move those products to the destination"
+" location."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:268
 msgid ""
-"**Push & Pull**: it allows to generate pickings in the two different "
-"situations explained above. It means that when products are required at a "
-"specific location, a transfer is created from the previous location to "
-"fulfill that need. Then, a need is created in the previous location and a "
-"rule is triggered to fulfill it. Once the second need fulfilled, the "
-"products are pushed to the first location and all the needs are fulfilled."
+"**Pull & Push**: this rule allows generating pickings in the two situations "
+"explained above. This means that when products are required at a specific "
+"location, a transfer is created from the previous location to fulfill that "
+"need. This creates a need in the previous location and a rule is triggered "
+"to fulfill it. Once the second need is fulfilled, the products are pushed to"
+" the destination location and all the needs are fulfilled."
 msgstr ""
-"**推拉** ：它允许在上述两种不同的情况下产生拣货。 这意味着当在特定位置需要产品时，会从先前的位置创建转移来满足该需求。 "
-"然后，在先前的位置创建需求，并触发一条规则来满足它。 一旦满足第二个需求，产品就会被推到第一个位置，所有需求都得到满足。"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:274
 msgid ""
@@ -6077,80 +6071,75 @@ msgid "Manufacturing Management"
 msgstr "制造管理"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:3
-msgid "Using an alternative Work Center"
-msgstr "使用替代工作中心"
+msgid "Alternative Work Centers"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:5
 msgid ""
-"For many manufacturing companies, a common issue is to have to manufacture, "
-"at the same time, several products usually produced at the same work center."
-" If in practice, employees can manufacture the goods at another work center,"
-" it is not that simple."
-msgstr "对于许多制造企业而言，常见的问题是必须在同一工作中心同时制造多种产品。如果在实践中，员工可以在另一个工作中心制造货物，那么问题就更复杂了。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:10
-msgid ""
-"You need to keep track of the job: which work center has been used and when,"
-" so you can schedule maintenance efficiently. With Odoo, you can configure "
-"it so you can keep tracking manufacturing orders and your employees have an "
-"alternative work center to use."
+"Manufacturing several different products simultaneously at the same work "
+"center is a common issue for manufacturing companies. Although in practice, "
+"employees can manufacture the goods at another work center instead of "
+"waiting for one to be available, it's not always simple to have visibility "
+"on which work center is busy and plan resources accordingly in real-time."
 msgstr ""
-"你必须追踪员工的工作，知晓何时使用了哪个工作中心，以便有效安排维护。你现在可以利用Odoo配置以上事务，以便追踪制造订单，让员工也有可使用的替代工作中心。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:11
+msgid ""
+"With Odoo, you can configure alternative work centers to solve this issue. "
+"This automatically checks which work center is busy and which equivalent "
+"ones are free, and schedules orders and maintenance accordingly."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:15
 msgid ""
-"This way, your process becomes more efficient, and less non-productive time "
-"will be noticed."
-msgstr "这样，你的流程效率提高，非生产时间也将显露出来。"
+"This way, your process becomes more efficient, as work center utilisation is"
+" optimised."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:20
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:19
 msgid "Configure your Work Centers"
 msgstr "配置你的工作中心"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:22
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:21
 msgid ""
-"The first thing to do is to go to the *Manufacturing* app settings. Then, "
-"enable the *Work Orders* feature and hit save."
-msgstr "首先是进入*制造*应用程序设置。然后，启用*工单*功能并点击保存。"
+"First, go to the :menuselection:`Manufacturing app --> Configuration --> "
+"Settings`. Then, enable the Work Orders feature and hit save."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:30
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:29
 msgid ""
-"Now, go to the *Work Centers* menu under *Master Data* and create two new "
-"work centers. Add the second work centers as an alternative to the first and"
-" vice versa."
-msgstr "现在，进入*主数据*下面的*工作中心*菜单，并创建两个新的工作中心。将第二个工作中心添加为第一个工作中心的替代品，反之亦然。"
+"Now, go to :menuselection:`Configuration --> Work Centers` and create two "
+"new work centers. Add the second work center as an alternative to the first "
+"one and vice versa."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:38
 msgid ""
-"The next step is to create your *routing*. Add your work center and an "
-"operation to it before saving."
-msgstr "下一步是创建你的*路线*。添加工作中心和操作，然后保存。"
+"Next, go to :menuselection:`Products --> Bills of Materials`, choose your "
+"product, and add these work centers to the operations of your BOM."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:47
-msgid ""
-"Then, you can create your *Bill of Materials* and add components and routing"
-" to it."
-msgstr "然后，你可创建*物料清单*并为它添加部件和路线。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:48
 msgid "Create your Work Orders"
 msgstr "创建工单"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:58
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:50
 msgid ""
 "Now that everything is configured, you can create your *Work Orders*. Go to "
-"the *Manufacturing Orders* menu and hit *Create*. There, add your product "
-"and plan it. In the *Work Orders* list, you can find it ready to be "
-"assembled."
-msgstr "现在，一切配置妥当，你可创建*工单*。进入*制造订单*菜单并点击*创建*。然后添加产品和计划。在*工单*列表中，它已组合完毕。"
+":menuselection:`Operations --> Manufacturing Orders`, and hit **Create**. "
+"There, add your product to your manufacturing order and plan it. You can "
+"then retrieve them from the Work Orders list view, under Operations > Work "
+"Orders."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:55
 msgid ""
 "Each new *Work Order*, which will be created before the end of the first "
-"one, will be scheduled at the alternative work center you configured."
-msgstr "每个新的*工单*都在前一个工单结束前创建，并安排到你配置的替代工作中心。"
+"one, will be scheduled at the alternative work center you configured, as "
+"shown below."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:64
 msgid ""
 "Keep in mind that, if you add time after production to your work center, you"
 " may have work orders scheduled for your alternative work center even if the"
@@ -6164,364 +6153,307 @@ msgstr "创建物料清单"
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:5
 msgid ""
 "A *Bill of Materials* is a document defining the quantity of each component "
-"required to manufacture a finished product. It also includes the routing and"
-" individual steps of the manufacturing process."
-msgstr "*物料清单*是指规定制造成品所需的每种部件数量的文件。它还包括制造过程的路线和各个步骤。"
+"required to make or deliver a finished product. Additionally, it can also "
+"include various operations and individual step guidelines needed to complete"
+" a production process."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:9
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:10
 msgid ""
-"With Odoo, you can link multiple BoMs to each product and use it to describe"
-" multiple variants of them. Each BoM will, yet, be associated with one "
-"product only."
-msgstr "在Odoo中，你可将多个物料清单与一种产品关联，用于描述产品的多种变体。但每个物料清单仅与一种产品挂钩。"
+"With Odoo's MRP solution, multiple BOMs can also be linked to each product, "
+"so that even product variants can have their *own* tailored BOM."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:13
 msgid ""
-"This feature will help optimize your manufacturing process while saving you "
-"time."
-msgstr "这项功能有助于优化制造过程并节约时间。"
+"This will help you to optimize your manufacturing process and save time as a"
+" result."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:17
 msgid "Setting up a BoM"
 msgstr "设置物料清单"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:19
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:18
 msgid ""
-"You can use BoMs without routings. You will use this if you choose to manage"
-" your manufacturing operations using manufacturing orders only. In other "
-"words, you choose to realize your manufacturing process in one step and do "
-"not track the steps the product goes through."
+"The simplest BoM set up is one without operations or instructions. In this "
+"case, you will manage your production using Manufacturing Orders only."
 msgstr ""
-"你在使用物料清单时可以不设路线。如果你选择只使用制造订单来管理制造操作，则可使用本功能。换句话说，你选择一个步骤实现制造过程，而不追踪产品经过的所有步骤。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:24
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:22
 msgid ""
-"Before creating your *BoM*, you have to create the product using the *BoM* "
-"and, at least, one of the components. Go to the :menuselection:`Master Data "
-"menu --> Products` and create both the finished product and the component."
+"To create a BoM from the Manufacturing module, go to "
+":menuselection:`Products --> Bills of Materials`. If you click **Create**, "
+"the first thing you'll have to do is to specify the final product. For an "
+"existing product, simply select it from the list, or create a new one on the"
+" spot. Note that if you go through the product form to create your BOM, the "
+"product will already be set for you."
 msgstr ""
-"在创建*物料清单*之前，你必须创建使用*物料清单*的产品以及至少一种部件。前往 :menuselection:`主数据菜单 --> "
-"产品`并创建成品和部件。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:27
 msgid ""
-"Once done, go to the *Bills of Materials* menu under *Master Data*. Now, "
-"create it. Choose the product from the dropdown menu and add your components"
-" and the quantity. In this case, keep the default *BoM* type, which is "
-"*Manufacture this Product*."
+"For a standard Bill of Material, keep the default *BoM* type, which is "
+"*Manufacture this Product*. Now specify the various components that make up "
+"the production of your final product and their respective quantities. You "
+"can create components as you go, on the BOM, or create products beforehand, "
+"by going to the :menuselection:`Top Menu --> Products --> Create`, and add "
+"them later on."
 msgstr ""
-"完成后，前往*主数据*下的*物料清单*。现在，创建物料清单。从下拉菜单中选择产品并添加你的部件和数量。在本例中，保留默认的*物料清单*类型，即*制造此产品*。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:37
-msgid ""
-"The destination location should **not** be a scrap location. A scrap "
-"location is where you put products that you don't need."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:41
 msgid "Using the same BoM to describe Variants"
 msgstr "使用同一个物料清单描述产品变体"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:39
+msgid ""
+"As suggested above, you can use *BOMs* for specific *Product Variants*. Once"
+" the various attributes have been configured on the product form, there are "
+"two ways to configure the appropriate BoM for the respective product "
+"combination."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:43
 msgid ""
-"As said above, you can use *BoM* for *Product Variants*. It is basically the"
-" same as for the standard product."
-msgstr "如上所述，你可将*物料清单*用于*产品变体*。它基本与标准产品的操作相同。"
+"Either create one BoM per variant, by specifying the Product Variant in the "
+"dedicated field below the product name. Or use one BOM, that contains all of"
+" the components and for each component, indicate which variant it applies "
+"to, using the *Apply on Variants* column, as shown below."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:46
-msgid ""
-"If your *BoM* is for one variant only, then specify which one in the "
-"*Product Variant* field. If not, specify the variant it is consumed for on "
-"each component line. You can add several variants for each component."
-msgstr "如果你的*物料清单*仅针对一种变体，那么在*产品变体*字段具体指明。否则，在每条部件线上指明相应的变体。你可为每种部件添加多种变体。"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:53
+msgid "Adding Operations"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:55
-msgid "Adding a routing"
-msgstr "添加路线"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:57
 msgid ""
-"You can add routing to your *BoM*. You will do this if you need to define a "
-"series of operations required by your manufacturing process. To use it, "
-"enable the *Work Orders* feature in the *Manufacturing* app settings."
-msgstr "你可为*物料清单*添加路线。这项功能适用于定义制造过程需要的一系列操作。为此，在*制造*应用程序设置中启用*工单*功能。"
+"You can also add operations to your *BoM*, if you want workers to follow "
+"instructions or register time spent. To use this feature, enable the *Work "
+"Orders* feature in the *Manufacturing* app settings, as shown below."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:63
 msgid ""
-"Each *BoM* can have only one routing while each routing can be used multiple"
-" times."
-msgstr "每个*物料清单*只能有一条路线，而每条路线可使用多次。"
+"Each operation is unique as it is always linked to only one BOM. This being "
+"said, Operations Operations can be re-used when configuring a new BOM, with "
+"the *Copy Existing Operations* feature."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:69
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:70
 msgid ""
-"Now that you have created your routing, add it to your *BoM*. You can select"
-" when, in the work operations, your components are consumed with the "
-"dropdown menu."
-msgstr "现在，你已创建路线，将它添加到你的*物料清单*。你可通过下拉菜单选择在工作操作中何时使用各项部件。"
+"Finally, just like for components, operations can also be variant specific "
+"only, as shown below."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:77
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:78
 msgid "Adding By-Products"
 msgstr "添加副产品"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:80
 msgid ""
-"In Odoo, a *by-product* is any product produced by a *BoM* in addition to "
-"the primary product."
-msgstr "在Odoo中，*副产品*是指*物料清单*产出主产品之外的其他产品。"
+"A *by-product* is a product that is produced on top of the main product of a"
+" *BoM*. As opposed to the primary product, there can be more than one on a "
+"BOM."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:82
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:83
 msgid ""
-"To add *by-products* to a *BoM*, you will first need to enable them from the"
-" *Manufacturing* app settings."
-msgstr "如要向*物料清单*添加*副产品*，首先需要从*制造*应用程序设置启用这项功能。"
+"To add *by-products* to a *BoM*, you will first need to enable the by-"
+"product feature from the *Manufacturing* app settings."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:89
 msgid ""
-"Once the feature is enabled, you can add your *By-Products* to your *BoMs*. "
-"You can add as many *By-Products* as you want. Just keep in mind that you "
-"need to register during which operation your by-product is produced."
-msgstr "启用该功能后，你可向*物料清单*添加*副产品*。你可添加多种*副产品*。只需记住，你需要登记产生副产品的操作环节。"
+"Once the feature is enabled, you can add *by-products* to your *BoMs*. Note "
+"that if you have Operations, you'll need to specify in which operation the "
+"by-product is produced."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Sell sets of products as kits"
-msgstr "将一组产品作为套件销售"
+msgid "Kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
-"A *kit* is a set of components that are delivered without first being "
-"assembled or mixed. *Kits* are described in Odoo using *Bills of Materials*."
-" There are two basic ways to configure *kits*, depending on how the stock of"
-" the kit product is to be managed. In either case, both the *Inventory* and "
-"*Manufacturing* apps must be installed."
+"A *kit* is a set of components that are not pre-assembled or mixed. This is "
+"useful for selling but also for creating cleaner and more effective *BOMs*. "
+"To use kits, you need both the Manufacturing and Inventory apps to be "
+"installed."
 msgstr ""
-"*套件*是指交货前未组装或混合的一组部件。它们在Odoo中被称为*物料清单*。根据套件产品的管理形式，有两种基本的*套件*配置方法。每种方法中，都必须安装“库存”和“制造”应用程序。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:12
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
 msgid "Manage Stock of Component Products"
 msgstr "管理部件产品库存"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:14
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:12
 msgid ""
 "If you want to assemble kits as they are ordered, managing stock of the kit "
-"components only, you will use a *Kit BoM* without a manufacturing step."
-msgstr "如你想按订单组装套件，只需对套件部件库存进行管理，则可跳过制造步骤使用*套件物料清单*。"
+"components only, you will use a *Kit BoM* Type without any manufacturing "
+"operations."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:18
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:15
 msgid ""
 "A product using a *Kit BoM* will appear as a single line item on a quotation"
-" and sales order, but will generate a delivery order with one line item for "
-"each of the components of the kit. In the examples below, the first image "
-"shows a sales order for the kit *Custom Computer Kit*, while the second "
-"image shows the corresponding delivery order."
+" and a sales order, but will generate a delivery order with one line item "
+"for each of the components of the kit. In the examples below, the first "
+"image shows a sales order for the kit *Custom Computer Kit*, while the "
+"second image shows the corresponding delivery order."
 msgstr ""
-"使用*套件物料清单*的产品将作为单行项目在报价和销售订单中显示，但它会为套件中的每个部件都生成一个单行交货单。在以下例子中，左图显示\"自定义电脑套件\"的销售订单，右图显示对应的交货单。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:33
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:29
 msgid ""
 "From the *Products menu* in either the *Inventory* or *Manufacturing* app, "
-"create each component product as you would with any other product, then "
-"create the top-level, or kit product. The kit product should have only the "
-"*route Manufacture* set, in the *Inventory tab*. Because you cannot track "
-"the stock of kit products, the *Product Type* should be set to Consumable. "
-"Because a kit product cannot be purchased, then, *Can be Purchased* should "
-"be unchecked."
+"create each component product (as you would with any other product), then "
+"create the top-level, or kit product. Because you cannot track the stock of "
+"kit products, the *Product Type* should be set to *Consumable*. However, if "
+"you are using Anglo-Saxon accounting, and you would like COGS to be posted "
+"when invoicing your kits (and only for this reason), the storable product "
+"type should selected instead. Because a kit product cannot be purchased, "
+"*Can be Purchased* should be unchecked. The route of the kit product in the "
+"*Inventory* Tab does not really matter, as, for replenishment, only the "
+"route of the components that will be taken into account only."
 msgstr ""
-"从*库存*或*制造*应用程序的*产品菜单*，创建每个部件产品，操作方法与所有其他产品一样，然后创建顶级产品或套件产品。套件产品在*库存选项卡*下应该只有*制造路线*组。由于你无法追踪套件产品的库存，*产品类型*应设置为消耗品。由于套件产品是无法购买的，所以应取消*采购*前面的勾号。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
 msgid ""
 "All other parameters on the kit product may be modified according to your "
 "preference. The component products require no particular configuration."
 msgstr "套件产品的所有其他参数都可按照你的偏好进行修改。套件产品无需特别的配置。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:48
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
 msgid ""
 "Once the products are configured, create a *bill of materials* for the kit "
-"product. Add each component and its quantity. Select the *BoM Type Ship this"
-" product as a set of components*. All other options may be left with their "
-"default values."
+"product. Add each component and its quantity. Select the *BoM Type* Kit. All"
+" other options may be left with their default values."
 msgstr ""
-"完成产品配置后，为套件产品创建*物料清单*。添加每种部件及其数量。选择*物料清单类型*下的*将本产品作为一套部件发货*。所有其他选项可保留默认值。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:57
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:48
 msgid "Manage Stock of Kit Product and Component Products"
 msgstr "管理套件及部件产品的库存"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
 msgid ""
-"If you want to manage stock of the *top-level kit product*, you will use a "
-"standard *BoM* with a manufacturing step instead of a *Kit BoM*. When using "
-"a standard BoM to assemble kits, a *manufacturing order* will be created. "
-"The *manufacturing order* must be registered as completed before the kit "
-"product will appear in your stock."
+"If you want to manage the stock of the *top-level kit product*, you will use"
+" a standard *BoM Type* manufacture or subcontracting instead. In this case "
+"you will either buy the final product from your subcontractor, or make it "
+"yourself through a manufacturing order."
 msgstr ""
-"如需管理*顶级套件产品*的库存，需要采用有制造步骤的标准*物料清单*而不用*套件物料清单*。使用标准物料清单组装套件时将创建一个*制造订单*。该*制造订单*必须登记后才能在库存中显示套件产品。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
 msgid ""
-"On the kit product, select the *route Manufacture*. You may also select "
-"*Make to Order*, which will create a *manufacturing order* whenever a sales "
-"order is confirmed. Select the product type *Storable Product* to enable "
-"stock management."
+"In that case the product type will be storable, and the BOM type either "
+"'Manufacture this product' or 'Subcontracting' as shown below."
 msgstr ""
-"在套件产品中选择*制造路线*。也可选择*按订单生产*，这会在每次确认销售订单时创建一个*制造订单*。请选择产品类别为*可库存产品*启用库存管理。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:76
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:62
+msgid "Build a cleaner BOM"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
 msgid ""
-"When you create the *bill of materials*, select the BoM Type *Manufacture "
-"this product*. The assembly of the kit will be described by a *manufacturing"
-" order* rather than a packing operation."
-msgstr "当你创建*物料清单*时，将物料清单类别选择为*制造此产品*。套件的组装由*制造订单*而非包装操作来定义。"
+"As suggested above, a kit BOM can also simply be used to manage a more "
+"complex BOM."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:66
+msgid ""
+"Imagine the Custom Computer parts above were part of another final product. "
+"It would be much clearer and simpler if the BOMs were added together (as "
+"shown below) instead of adding all the individual parts one by one."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
+msgid ""
+"This is even better illustrated when looking at the BOM Structure Report, "
+"where it is easy to expand and hide specific kit level or sub-assembly type "
+"BOMs."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
+msgid ""
+"On the creation of the manufacturing order, the BOM will automatically "
+"expand to show all top level and kit level components. You can go back to "
+"the BOM at any point though as it remains  available on the form view of "
+"your manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
+msgid ""
+"Finally, note that if there were any Operations in the Kit BOM, these would "
+"also simply be added in to the work order list of the main component."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
-msgid "How to manage BoMs for product variants"
-msgstr "如何管理产品变体的BoM"
+msgid "Variants BOM Management"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:5
 msgid ""
 "Odoo allows you to use one bill of materials for multiple variants of the "
-"same product. Simply enable variants from :menuselection:`Configuration --> "
-"Settings`."
+"same product. To activate variants, simply go to "
+":menuselection:`Configuration --> Settings --> Variants`."
 msgstr ""
-"Odoo允许你为同一产品的多个变量使用物料清单。启用变量的方式很简单，只需从 :menuselection:`配置 --> 设置` 中选择。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:12
 msgid ""
-"You will then be able to specify which component lines are to be used in the"
-" manufacture of each product variant. You may specify multiple variants for "
-"each line. If no variant is specified, the line will be used for all "
-"variants."
-msgstr "然后就可以指定每个产品变量的制造中需要用哪些部件行。可以为每个行指定多个变量。如果没有指定变量，这一行可以用于所有的变量。"
+"You will then be able to specify which BOM component lines are to be used in"
+" the manufacture of each product variant. You may specify multiple variants "
+"for each line. If no variant is specified on a component line, then this "
+"component will be used in the BOM of all variants."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:17
 msgid ""
 "When defining variant BoMs on a line-item-basis, the **Product Variant** "
-"field in the main section of the BoM should be left blank. This field is "
-"used when creating a BoM for one variant of a product only."
-msgstr "在行与项目对应的基础上定义变量BoM时，BoM主区域的 **产品变量** 字段应不填内容。这一字段只在为产品的一个变量创建BoM时有用。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:3
-msgid "Set routings on kit Bills of materials"
-msgstr "在套件物料清单上设置路线"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:5
-msgid ""
-"It often happens that you want to use kit BoM’s within manufactured product "
-"BoM’s in order to lighten the list of components for this manufactured "
-"product. When doing so, you would like to have the possibility to specify, "
-"for each kit component, in which operation they are consumed."
-msgstr "你经常希望使用已制产品物料清单内的套件物料清单，以缩减该产品的部件清单长度。在此过程中，你希望能够指明消耗每个套件部件的操作环节。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:11
-msgid ""
-"We will see the three use cases that you can face in these kinds of "
-"configurations."
-msgstr "我们来看你在这类配置中可能面临的三种用例。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:15
-msgid "Finished Product & Kit Component have the same Routing"
-msgstr "成品和套件部件路线相同"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:18
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:63
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:107
-msgid "Create BoM for the Finished Product"
-msgstr "为成品创建物料清单"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:20
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:65
-msgid ""
-"Create a manufactured BoM for the finished product which includes a kit "
-"component. Set a routing on your BoM, for example, *Assemble Furniture*."
-msgstr "为包含套件部件的成品创建物料清单。为该物料清单设置路线，例如*组装家具*。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:28
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:73
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:117
-msgid "Create a Kit BoM for the Kit Component"
-msgstr "为套件部件创建套件物料清单"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:30
-msgid ""
-"Update the kit component to define its BoM. Make sure that the routing which"
-" is set on this BoM is the same one than on the Finished Product."
-msgstr "更新套件部件，以定义其物料清单。确保该物料清单设定的路线与成品相同。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:36
-msgid ""
-"You can define the operations in which the kit components are used directly "
-"in the BoM of the kit."
-msgstr "你可直接在套件物料清单中定义使用该套件部件的操作环节。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:40
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:84
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:127
-msgid "Manufacturing Order"
-msgstr "制造订单"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:42
-msgid ""
-"In the list of components, the kit is split. Two work orders are created as "
-"we have two operations defined in the *Assemble Furniture* routing. The "
-"components of the kits are well consumed in the operations defined in the "
-"kit BoM."
+"field in the main section of the BoM should be left blank as shown below. "
+"This field is used when creating a BoM for one specific variant of a product"
+" only."
 msgstr ""
-"在部件清单中，套件被分拆。由于我们在*组装家具*路线中定义了两个操作环节，因此已创建两个工单。套件部件在套件物料清单中定义的操作环节被消耗。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:57
-msgid "Finished Product & Kit Component haven’t the same Routing"
-msgstr "成品和套件部件路线不同"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:60
-msgid "Kit Consumption set on Finished Product BoM"
-msgstr "在成品物料清单中设置套件消耗"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:26
 msgid ""
-"Update the kit component to define its BoM. In this use case, the routing "
-"which is set on this Kit BoM is different than the one of the Finished "
-"Product. Specify the operations at which the kit components are consumed in "
-"this BoM."
-msgstr "更新套件部件，以定义其物料清单。在本用例中，套件物料清单中设置的路线与成品不同。这次物料清单中指明消耗套件部件的操作环节。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:86
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:129
-msgid ""
-"When the manufacturing order is created for the Manufactured product, the "
-"kit is split among its components. When the manufacturing order is planned, "
-"three work orders are created in our case, one coming from the routing of "
-"the manufactured products, the two other ones coming from the routing of the"
-" kit BoM."
+"Note that the same principle applies for the configuration of operations."
 msgstr ""
-"当为制造产品创建制造订单时，套件分拆在各个部件中。在计划制造订单时，在本例中需创建三个工单，一个来自于制造产品的路线，另两个来自于套件物料清单的路线。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:95
-msgid "The components are all consumed during their respective operations."
-msgstr "这些部件在其各自的操作环节中被消耗。"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:32
+msgid "And for the production of by-products."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:104
-msgid "Kit Consumption set on Kit BoM"
-msgstr "在套件物料清单中设置套件消耗"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:3
+msgid "Quality Control"
+msgstr "质量管理"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:5
 msgid ""
-"Create a manufactured BoM for the finished product which includes a kit "
-"component. Set a routing on your BoM, for example, *Assemble Furniture*. "
-"Precise the consumption of the components on this BoM."
-msgstr "为包含套件部件的成品创建制造物料清单。为该物料清单设置路线，例如*组装家具*。在该物料清单上指明部件的消耗情况。"
+"Whether you want to control the quality of your production, or the "
+"production of your subcontractor, before registering the products into your "
+"stock, you can rely on Odoo's Quality module."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:119
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:10
 msgid ""
-"Update the kit component to define its BoM. In this use case, the routing "
-"which is set on this Kit BoM is different than the one of the Finished "
-"Product."
-msgstr "更新套件部件，以定义其物料清单。在本用例中，套件物料清单设置的路线与成品不同。"
+"To control the quality of your production, you need to set a *Quality "
+"Control Point* on the Manufacturing Operation Type, as shown below. To "
+"create it, Go to :menuselection:`Quality --> Quality Control --> Control "
+"Points`, and click **Create**. If the check only applies to specific "
+"products, or product categories, you can specify these during the setup as "
+"well."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/routing_kit_bom.rst:138
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:19
 msgid ""
-"All the components of the kits are consumed during the first operation. The "
-"last component is consumed during the second operation."
-msgstr "本套件的所有部件都在首个操作环节中被消耗。最后一个部件在第二个操作环节中被消耗。"
+"Regarding the reception of subcontracted products, instead of the "
+"Manufacturing Operation Type, you need to select the 'Receipts' Operation "
+"type. For the rest, the same principles apply."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/quality_control.rst:25
+msgid ""
+"By doing so, a quality check is automatically created each time a finished "
+"product is made and/or received. Note that several Quality Check *Types* can"
+" be chosen from the dropdown. Note also that several Quality Check Points "
+"can be set up for the same Operation Type."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:3
 msgid "Manage semi-finished products"
@@ -6529,57 +6461,84 @@ msgstr "管理半成品"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:5
 msgid ""
-"In Odoo, you can use subassembly products to simplify a complex *Bill of "
-"Materials* or to represent your manufacturing flow more accurately. A "
-"*subassembly product* is a manufactured product that is used as a component "
-"to make another one."
-msgstr "在Odoo中，你可用分组件产品简化复杂的*物料清单*，或更准确地代表制造过程。*分组件产品*是指用作另一个产品部件的已制产品。"
+"With Odoo MRP, you can use semi-finished products to simplify a complex "
+"*Bill of Materials* or to represent your manufacturing flow more accurately."
+" A *semi-finished product* is a manufactured product that is used as a "
+"component in a Bill of Material."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:10
 msgid ""
-"A *BoM* that employs *subassemblies* is referred to as a multi-level BoM. "
-"Those are accomplished by creating a *top-level BoM* and *subassembly ones*."
-" This process requires a route that will ensure that every time a "
-"manufacturing order for the top-level product is created, another one will "
-"be for subassemblies."
+"A *BoM* that employs *semi-finished products* is referred to as a multi-"
+"level BoM, where we distinguish between the *top level Product* and the "
+"*sub-assemblies*."
 msgstr ""
-"包含*分组件*的*物料清单*被称为多级物料清单。这需要创建*顶级物料清单*和*分组件物料清单*。这一流程将确保每次为顶级产品创建制造订单时，同时创建分组件制造订单。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:15
+msgid "Configure a Multi Level BoM"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:17
-msgid "Configure the Subassembly Product"
-msgstr "配置分组件产品"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:19
 msgid ""
-"To configure a *multi-level BoM*, you will need a top-level product but also"
-" its subassemblies. The first step is to create a product form for each of "
-"the subassemblies. Select the routes *Manufacture* and *Replenish on Order*."
-" Now, hit save."
-msgstr "如要配置*多级物料清单*，你需要顶级产品及其分组件。第一步是为每个分组件创建产品表单。选择*制造*和*按订单补给*路线。然后，点击保存。"
+"To configure a *multi-level BoM*, you will need the top-level product and "
+"its sub-assemblies. Therefore, you must first create the sub-assembly "
+"products and their respective Bill of Materials. Please refer to "
+":doc:`bill_configuration` for more details on how to create a BOM."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:27
-msgid ""
-"In the *Bill of Materials* menu, under *Master Data*, create a new *Bill of "
-"Materials*. Choose the product you just created and add its components."
-msgstr "在*主数据*下的*物料清单*菜单中，创建新的*物料清单*。选择你刚创建的产品并添加其部件。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:26
 msgid "Configure the Main BoM"
 msgstr "配置主物料清单"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:28
+msgid ""
+"Then on the final product form, simply add your semi-finished products to "
+"the Bill of Material."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:35
+msgid "Manage your production planning"
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:37
 msgid ""
-"Now, you can configure the top-level product and its *BoM*. Include any "
-"subassemblies in the list of components."
-msgstr "现在，你可配置顶级产品及其*物料清单*。在部件列表中可加入任何分组件。"
+"There are several methods to manage the triggering of the various "
+"manufacturing orders."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:39
 msgid ""
-"Now, each time you will plan a manufacturing order for the top-level "
-"product, a manufacturing order will be created for the subassembly one. "
-"Then, you will have to manufacture the subassembly in order to make it "
-"available before manufacturing the finished product."
-msgstr "现在，你每次为顶级产品规划制造订单时，系统将为分组件创建制造订单。然后，你必须制造分组件，确保其在制造成品前可用。"
+"If every time a manufacturing order is confirmed for the main product, you'd"
+" like one for the semi-finished products as well, you have two options:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:42
+msgid ""
+"Option 1 : Create re-ordering rules for the semi-finished products, with "
+"both the minimum and maximum desired stock quantities at 0."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:48
+msgid ""
+"Option 2 : Use the Replenish on Order (MTO) route on the semi-finished "
+"product, as well as the manufacturing one."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:51
+msgid ""
+"Note that Option 1 is usually recommended over Option 2 as it is more "
+"flexible. The MTO route creates a unique link between the semi-finished and "
+"the top level product, whereas the re-ordering rule allows you to simply "
+"unreserve that production from the top level product production and redirect"
+" it to another, more pressing demand, for example."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:56
+msgid ""
+"In any case, as soon as the semi-finished product is produced, it will "
+"become available in the manufacturing order of the final product, as shown "
+"below."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:3
 msgid "Subcontract your Manufacturing"
@@ -6587,170 +6546,148 @@ msgstr "外包制造"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:5
 msgid ""
-"Outsourcing a portion of some or all your company’s manufacturing needs is "
-"not easy. To make it work right, you have to:"
-msgstr "将公司的部分或全部制造程序需求外包出去并不容易。为了让它正常工作，你必须:"
+"Outsourcing a portion or all of your company’s manufacturing needs is not "
+"easy. To make it work correctly, you have to:"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:8
-msgid "Manage the inventory of raw materials at your subcontractor;"
-msgstr "管理分包商的原材料库存;"
+msgid "Manage the inventory of raw materials at your subcontractor"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:9
-msgid ""
-"Ship new materials to your subcontractors based on your forecasted demand;"
-msgstr "根据您的预期需求将新材料发送给您的分包商;"
+msgid "Ship raw material to your subcontractors, at the right time"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:10
+msgid "Control incoming goods quality"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:11
-msgid ""
-"Keep track of manufacturing operations done at the subcontractor location;"
-msgstr "跟踪在分包商进行的制造操作；"
+msgid "Control subcontractors bills"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:13
-msgid "Control incoming goods quality;"
-msgstr "控制进货质量;"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:14
-msgid "Control subcontractors bills."
-msgstr "控制分包商账单。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:16
 msgid ""
 "Here is an example of subcontracting the manufacturing of “C”, which is "
 "produced out of raw materials “A” and “B”."
 msgstr "这是转包制造“C”的例子，它是用原材料“A”和“B”生产的。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:20
 msgid ""
-"With its subcontracting feature, Odoo helps you handle this flow easily."
-msgstr "凭借其分包功能，Odoo帮助您轻松处理这一流程。"
+"With its MRP subcontracting feature, Odoo helps you handle this flow easily."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:28
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:25
 msgid ""
 "To use the subcontracting feature, go to :menuselection:`Manufacturing --> "
 "Configuration --> Settings` and tick the box *Subcontracting*."
 msgstr "要使用转包功能，请转到 :menuselection:`制造 --> 配置 --> 设置并勾选 *转包* 。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:35
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:32
 msgid ""
 "To define if a product must be subcontracted, use a *Bill of Materials "
 "(BoM)* of type *Subcontracting*."
 msgstr "要定义一个产品是否必须分包，使用类型 *分包* 的 *物料清单(BoM)* 。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:38
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:35
 msgid ""
-"To create a new *BoM*, go to :menuselection:`Manufacturing --> Master Data "
-"--> Bill of Materials` and hit create. Then, list the components your "
+"To create a new *BoM*, go to :menuselection:`Manufacturing --> Products --> "
+"Bill of Materials` and hit create. Then, list the components your "
 "subcontractor needs to manufacture the product. For costing purposes, you "
 "might want to register all the components, even the ones that are sourced "
 "directly from the subcontractor."
 msgstr ""
-"要创建一个新的 *BoM* ，请转到 :menuselection:`制造 --> 主数据 --> 物料清单(BoM) 并点击创建。 "
-"然后，列出分包商制造产品所需的组件。 出于成本目的，您可能想要注册所有组件，甚至包括直接从分包商处采购的组件。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:44
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:41
 msgid ""
 "Once you have set the *BoM Type* to *Subcontracting*, specify one or several"
 " subcontractors."
 msgstr "将 *BoM类型* 设置为 *转包* 后，指定一个或多个转包商。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:52
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:49
 msgid "Basic Subcontracting Flow"
 msgstr "基本分包流程"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:51
 msgid ""
 "To let your subcontractor know how many products you need, create and send "
-"them purchase orders (PO). To do so, open the *Purchase* app and create a "
-"new one. Be sure to send the PO to a vendor that is defined as a "
-"subcontractor on the *BoM*."
+"them purchase orders (PO). To do so, go to the *Purchase* app and create a "
+"new purchase order. Be sure to send the PO to a vendor that is defined as a "
+"subcontractor on the *BoM* of these products."
 msgstr ""
-"为了让你的分包商知道你需要多少产品，创建并发送采购订单(PO)给他们。为此，打开 *采购* "
-"应用程序并创建一个新的采购订单。确保将采购订单发送给供应商，该供应商在 *BoM* 中被定义为分包商。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:60
 msgid ""
 "Once the *PO* is validated (1), a pending receipt is created. When the "
 "products are received, validate the receipt (2), with the actual quantity "
-"received. Then Odoo automatically created several inventory moves:"
+"received. As a result, Odoo does the following things for you:"
 msgstr ""
-"一旦*PO*被验证(1)，将创建一个等待的收据。当收到产品时，验证收据(2)，与实际收到的数量。然后Odoo将自动创建了几个库存移动的记录:"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:64
+msgid ""
+"Consumes the respective components at the subcontractor’s location, based on"
+" the *BoM* and your input (3);"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:66
+msgid "Produces the finished goods at the subcontractor’s location (4);"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:68
 msgid ""
-"Consume the components at the subcontractor’s location, based on the *BoM* "
-"(3);"
-msgstr "根据* BoM *（3）在分包商的位置使用组件；"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:70
-msgid "Produce finished goods at the subcontractor’s location (4);"
-msgstr "在分包商的位置生产成品（4）；"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:71
-msgid ""
-"Move products from the subcontractor’s location to YourCompany through the "
+"Moves products from that subcontractor’s location to YourCompany via the "
 "validated receipt (5)."
-msgstr "通过有效的收据将产品从分包商所在地转移到\"YourCompany\"(5)。"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:74
-msgid ""
-"Of course, Odoo does all the transactions for you, automatically. Simply "
-"control the vendor bill with the usual matching process with the purchase "
-"order."
-msgstr "当然，Odoo会自动为你做所有的交易。只需通过与采购订单的常规匹配过程控制供应商账单。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:79
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:73
 msgid ""
 "The *PO* is optional. If you create a receipt manually, with the right "
-"subcontractor, Odoo still performs all the moves. Useful if the "
+"subcontractor, Odoo still performs all the moves. This can be useful if the "
 "subcontractor does not bill a fixed price per item, but rather the time and "
 "materials used."
 msgstr ""
-"*采购订单* "
-"是可选的。如果您想与正确的分包商手动创建收据，Odoo仍然可以执行所有的行动。如果转包商没有对每一件物品给出固定的价格，而是对所使用的时间和材料给出固定的价格，那么这种方法是有用的。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:79
 msgid "Inventory Valuation"
 msgstr "库存计价"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:87
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:81
 msgid "The cost of the manufactured product “C” is defined as:"
 msgstr "制成品“C”的成本定义为:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:83
 msgid "**C = A + B + s**"
 msgstr "**C = A + B + s**"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:91
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:85
 msgid "With:"
 msgstr "与："
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:93
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:87
 msgid "**A**: Cost of raw materials coming from YourCompany;"
 msgstr "**A** :来自贵公司的原材料成本;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:90
 msgid "**B**: Cost of raw materials sourced directly from the"
 msgstr "**B** :直接从采购的原材料成本"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:90
 msgid "subcontractor;"
 msgstr "分包商;"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:98
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:92
 msgid "**s**: Cost of the subcontracted service."
 msgstr "**s** :分包服务的成本。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:100
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:94
 msgid ""
 "Sending raw materials to your subcontractors (**A**) does not impact the "
-"inventory valuation, the components still belonging to your company. To "
-"manage this, the *Subcontracting Location* is configured as an *Internal "
-"Location* so that the components are still valued in the inventory."
+"inventory valuation, as the components are still valued as part of your "
+"stock. This is managed by making the *Subcontracting Location* an *Internal "
+"Location*."
 msgstr ""
-"将原材料发送给分包商（ **A** ）不会影响库存评估，这些组件仍然属于您的公司。 为了管理此问题，将 *转包地点* 配置为 *内部地点* "
-"，以便仍在清单中对组件进行估价。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:106
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:99
 msgid ""
 "Then, the vendor price set on the product C form has to be what has to be "
 "paid to the subcontractor for his parts and service time: **B + s**. The "
@@ -6760,159 +6697,133 @@ msgstr ""
 "然后，在产品C表格上设置的卖方价格必须是分包商为其零件和服务时间所必须支付的价格： ** B + s ** 。 产品成本必须为：**A + B + "
 "s** ，该产品在会计中的价值。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:111
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:104
 msgid ""
-"Finally, the subcontractor bill matches the purchase order, with the "
+"Finally, the subcontractor bill then matches the purchase order, with the "
 "proposed price coming from the finished products C."
-msgstr "最后，分包商账单与采购订单相匹配，建议价格来自成品C。"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:115
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:108
 msgid ""
 "If managing the replenishment of raw materials **B** at your subcontractor’s"
 " location is not needed, simply include the cost of **B** in the "
 "subcontractor’s price **s** and remove the products *B* from the *BoM*."
 msgstr "如果不需要在你的分包商所在地管理原材料的补充，只需在分包商的价格中包括 **B** 的成本，并将产品从 *BoM* 中删除。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:121
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:114
 msgid "Traceability"
 msgstr "追溯"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:123
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:116
 msgid ""
-"In case the products received from the subcontractor contain tracked "
+"In case the received products from the subcontractor contain tracked "
 "components, their serial or lot numbers need to be specified during the "
 "receipt."
-msgstr "如果从分包商收到的产品包被跟踪的组件，则在收货期间需要指定其序列号或批号。"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:127
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:120
 msgid ""
-"On the receipt of the subcontracted product, a *Record Components* button "
-"appears when necessary. Click on it to open a dialog and record the "
+"In that case, on the receipt of the subcontracted product, a *Record "
+"Components* button appears. Click on it to open a dialog box and record the "
 "serial/lot numbers of the components. If the finished product is also "
 "tracked, its serial/lot number can be registered here too."
 msgstr ""
-"在接收分包产品时，必要时将出现 *记录组件* 按钮。点击打开对话框，记录组件的序列号/批号。如果成品也被跟踪，它的序列号/批号也可以在这里登记。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:136
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:129
 msgid ""
 "For audit purposes, it is possible to check the lot numbers recorded on a "
 "receipt by using the icon on the right of the finished products:"
 msgstr "出于审计目的，可以使用成品右侧的图标检查收据上记录的批号:"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:144
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:136
+msgid ""
+"Also note that in case flexible consumption has been selected on the "
+"subcontracted BOM for a non-tracked product, the record components option "
+"will also appear optionally on each move line, if you want to register more "
+"or less component consumption at your subcontracting location, when "
+"receiving your final product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:145
+msgid ""
+"As you can see, the reception of both of these non-tracked products can "
+"either be executed by selecting the 'Set Quantities' Option or via the move "
+"line hamburger menus."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:149
 msgid "Automate Replenishment of Subcontractors"
 msgstr "分包商的自动化补货"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:146
-msgid ""
-"To manage the resupply of your subcontractor, activate *Multi-locations* in "
-":menuselection:`Inventory --> Configuration --> Configuration`. Then, the "
-"inventory at the subcontractor location can be tracked."
-msgstr ""
-"要管理您的分包商的补货，请在:menuselection:`库存 --> 配置 --> 配置中 激活 *多地点*。 然后，可以跟踪在分包商位置的库存。"
-
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:151
 msgid ""
-"It is possible to resupply subcontractors by sending products from the "
-"company locations, or by sending products from another supplier to the "
-"subcontractors."
-msgstr "可以通过从公司地点发送产品或从其他供应商发送产品给分包商进行补给。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:156
-msgid "Replenishment from the warehouse"
-msgstr "从仓库补货"
+"There are two ways to automate the supply of raw materials to your "
+"subcontractors when purchasing the final product. The chosen method depends "
+"on whether or not you want the materials to transit through your warehouse. "
+"Both of these methods are described as pull style mechanisms as their "
+"trigger is the inital PO to the subcontractor, which creates a need at the "
+"subcontracting location, for raw material."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:158
 msgid ""
-"Resupplying subcontractors manually is the simplest approach. To do so, "
-"create delivery orders in which the subcontractor is set as a delivery "
-"address and fill the components to deliver."
-msgstr "手动重新供应分包商是最简单的方法。 为此，创建将转包商设置为交货地址的交货订单，并填写要交货的组件。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:162
-msgid ""
-"To automate the subcontractors’ replenishment propositions, there are two "
-"approaches:"
-msgstr "为了使分包商的补给自动化，有两种方法:"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:165
-msgid "Reordering rules;"
-msgstr "重新订购规则;"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:166
-msgid "Replenish on order flow."
-msgstr "补充订单流程。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:168
-msgid ""
-"For the first one, just define a reordering rule on the subcontracting "
-"location, with a minimum and maximum inventory level. When the reordering "
-"rule is triggered, a delivery order is created to ship the components to the"
-" subcontractor."
-msgstr "对于第一类型，只需在转包地点定义最小和最大库存水平的重新订购规则。 触发重新订购规则后，将创建交货订单，以将组件运送到分包商。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:177
-msgid ""
-"The second approach is to use a “pull” flow. Here, the demand in the "
-"finished product (real demand or forecasted one through the Master "
-"Production Schedule) triggers the replenishment of the subcontractor. To do "
-"so, select the route *Resupply Subcontractor on Order* on the wanted "
-"components."
+"If you are supplying your subcontractor with raw material from your own "
+"warehouse, you must activate the 'Resupply Subcontractor on Order' route as "
+"shown below. If this is a component that you buy from a vendor, the buy "
+"route should also be activated."
 msgstr ""
-"第二种方法是使用“拉动式”流程。在这里，成品中的需求(实际需求或通过主生产计划预测的需求)触发了分包商的补给。要做到这一点，在所需的组件选择路线 "
-"*再供应分包商的订单*  。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:188
-msgid "Replenishment from another supplier"
-msgstr "从其他供应商补货"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:190
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:169
 msgid ""
-"When purchasing items to another supplier, it is possible to ask him to "
-"deliver the subcontractor directly. To do so, activate the *Drop Shipping* "
-"feature in :menuselection:`Purchase --> Configuration --> Configuration`."
+"Now, if you want your vendor to resupply your subcontractor directly, you "
+"must choose the 'Dropship Subcontractor on Order' option instead. In order "
+"for this option to be active on the product form, you must first activate "
+"the dropship option from :menuselection:`Purchase --> Configuration --> "
+"Settings --> Dropshipping`. Once the PO to the subcontractor is validated, "
+"this route will create a dropship RFQ from your vendor to that "
+"subcontractor. You then just need to review and validate it."
 msgstr ""
-"当向另一个供应商采购产品时，可以要求他直接从分包商交付。要做到这一点，在:menuselection: '采购 --> 设置 --> 设置中激活 "
-"*转运配送* 功能'。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:195
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:182
 msgid ""
-"Now, set the *Dropship* option in the *Deliver To* field of the *Other "
-"Information* tab. Then, provide the address of the subcontractor for the "
-"shipping."
-msgstr "现在，在 *其他信息* 标签的 *交付* 字段中设置 *转运配送* 选项。然后，提供运输的分包商的地址。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:203
-msgid ""
-"That way, the supplier can ship items directly and you simply receive and "
-"pay the bill. However, it is still required to validate receipts for the "
-"subcontractor."
-msgstr "通过这种方式，供应商可以直接发货，而您只需接收和支付账单。但是，仍然需要对分包商的收据进行验证。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:212
-msgid "Quality Control"
-msgstr "质量管理"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:214
-msgid ""
-"Controlling the quality of the products manufactured by subcontractors is "
-"possible thanks to the Odoo Quality app. Quality checks can be made on a "
-"manufacturing step but, because the manufacturing process is handled by an "
-"external party, it can be defined on the product reception."
+"Note that the buy route is not selected in this case, as the dropship route "
+"is a buy route already."
 msgstr ""
-"Odoo品控应用程序可以控制分包商生产产品的质量。品控检查可以在生产过程中进行，但由于生产过程是由外部方处理的，所以可以在产品接收过程中进行定义。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:224
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:185
 msgid ""
-"To create a quality check at the receipt, open the *Quality* app and create "
-"a new *Control Point* on the reception."
-msgstr "要在收货时创建质量检查，请打开 *品控* 应用程序并在收货处创建一个新的 *控制点* 。"
+"Finally, if you want to track the stock of these raw materials at your "
+"subcontracting location(s), then you must activate *Multi-locations* in "
+":menuselection:`Inventory --> Configuration --> Settings --> Storage "
+"locations`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:231
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:189
+msgid "From the location form, you are then able to access the Current Stock."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:198
+msgid "Manual Replenishment"
+msgstr "手动补给"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:200
+msgid "You can also choose to replenish your subcontractors manually."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:202
 msgid ""
-"By doing so, a quality check is automatically created each time a finished "
-"product is received."
-msgstr "通过这样做，每次收到成品时都会自动创建品控检查。"
+"If you want to send components to your subcontractor at your own "
+"convenience, select the 'Resupply Subcontractor' Operation Type from the "
+"*Inventory* Module, and create a picking, specifying to which subcontractor "
+"you are delivering to."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:210
+msgid ""
+"Alternatively, you can also manually ask your vendor to resupply your "
+"subcontractor by creating a dropship type PO, with your subcontractor set as"
+" the delivery address."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:3
 msgid "Use the Master Production Schedule"
@@ -6930,148 +6841,135 @@ msgid ""
 "and activate the Master Production Schedule feature before hitting save."
 msgstr "前往 :menuselection:`制造应用程序 --> 配置 --> 设置`并启用主生产排程功能，然后点击保存。"
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:15
+msgid ""
+"In the MPS settings, you can define the time range of your MPS "
+"(month/week/day) and the number of periods you want to display at all times."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:18
 msgid ""
-"In the manufacturing settings, you can define the time range of your MPS "
-"(month/week/day) and the number of periods you want to display."
-msgstr "在制造设置中，你可定义MPS（月/周/日）的时间范围和希望显示的周期数。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:20
-msgid ""
-"Now, go in :menuselection:`Planning --> Master Production Schedule` and "
-"click on add a product. You can now define your safety stock target (= the "
-"stock you want to have on hand at the end of the period) and the minimum and"
-" maximum quantities to replenish."
+"Now, go to :menuselection:`Planning --> Master Production Schedule` and "
+"click on *add a product*. You can now define your safety stock target (= the"
+" stock you want to have on hand at the end of the period) and the minimum "
+"and maximum quantities that must or can be replenished in each period."
 msgstr ""
-"现在，进入 :menuselection:`规划 --> "
-"主生产排程`并点击添加产品。你可定义你的安全库存目标（=在周期结束时希望保有的库存量）和补货的最小及最大数量。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:26
 msgid ""
-"The products are ordered in the MPS based on their sequence. You can "
-"rearrange that sequence by going on the list of your products and reorganize"
-" them with drag and drop."
-msgstr "在MPS中根据产品顺序进行订购。你可进入产品列表，拖放并重新排列，即可重新安排产品顺序。"
+"In the MPS view, you can decide which information you would like to display "
+"by clicking on *rows*. For instance, the *Actual demand* will show you which"
+" quantity of products has already been ordered for the period, or *Available"
+" to Promise*, what can still be sold during that same period (what you plan "
+"to replenish - what is already sold during the period). You can also decide "
+"to hide rows if you like."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:36
-msgid ""
-"In the MPS view, you can decide which information you would like to show by "
-"clicking on *rows*. Some fields can be added to the view, such as *Actual "
-"demand*, which will show which quantity of products has already been ordered"
-" for the period, or *Available to Promise*, which allows you to know what "
-"can still be sold during the period (what you plan to replenish - what is "
-"already sold during the period). You can also decide to hide some "
-"information if it isn’t necessary."
-msgstr ""
-"在MPS视图中，你可点击*行*，决定显示的信息。你可向该视图添加其他字段，如*实际需求*显示该产品在本周期内已经订购的数量，或*最小数量保证*显示你在本周期内仍可销售的产品（你计划的补货量"
-" - 本周期内已经售出的量）。你还可隐藏一些无关紧要的信息。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:48
 msgid "Estimate your demand and launch replenishment"
 msgstr "估计需求并发起补货"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:50
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:38
 msgid ""
-"The next step is to estimate the demand for the period. This estimation "
-"should be entered in the row *Demand Forecast*. You can easily, at any time,"
-" compare the demand forecast with the actual demand (= confirmed sales). The"
-" demand forecast for a finished product will impact the indirect demand for "
-"its components."
+"The next step is to estimate the demand for the chosen period. This is done "
+"in the *Forecasted Demand* Row. You can easily, at any time, compare the "
+"demand forecast with the actual demand (= confirmed sales). The demand "
+"forecast for a finished product will impact the indirect demand for its "
+"components."
 msgstr ""
-"下一步是估计本周期内的需求。你应在*需求预测*行输入估计结果。你可随时比较需求预测与实际需求（=已确认的销售量）。成品的需求预测将影响其部件的间接需求。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:59
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:46
 msgid ""
-"Then, the quantity to replenish for the different periods will be "
-"automatically computed. The replenishments you are supposed to launch based "
-"on your lead times (vendor lead time or manufacturing lead time) are "
-"displayed in green. You can now launch the replenishment by clicking on the "
-"replenish button."
+"Once the forecasted demand has been set, the quantity to replenish for the "
+"different periods will automatically be computed. The replenishments you are"
+" supposed to launch based on your lead times (vendor lead time or "
+"manufacturing lead time) are then displayed in green. You can now launch the"
+" replenishment by clicking on the replenish button."
 msgstr ""
-"然后，系统将自动计算不同周期的补货量。基于你的前置时间（供应商前置时间或制造前置时间）应发起的补货显示为绿色。现在，你可点击补货按钮，发起补货。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:65
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:52
 msgid ""
 "Depending on the configuration of the product (buy vs. manufacture), "
 "requests for quotations or manufacturing orders will be created. You can "
 "easily access those by clicking on the *Actual Replenishment* cell."
 msgstr "根据产品的配置（采购或制造），系统将创建报价请求或制造订单。只需点击*实际补货*单元格，即可轻松访问这些信息。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:75
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:59
 msgid ""
-"In case you manually edit the *To replenish* quantity, a small cross will "
-"appear on the left. In case you want to go back to the automatically "
-"computed value given by Odoo, you can click the cross."
-msgstr "如你手动编辑*待补货*数量，左侧将出现一个小十字。如你想要返回Odoo提供的自动计算值，你可点击十字图标。"
+"In case you manually edit the *Suggested Replenishment* quantity, a small "
+"cross will appear on the left hand side of the cell. In case you want to go "
+"back to the automatically computed value given by Odoo, simply click the "
+"cross."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:65
 msgid "Cells color signification"
 msgstr "单元格颜色的含义"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:85
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:67
 msgid ""
-"The cells, which are part of the *To replenish* line, can take different "
-"colors depending on the situation:"
-msgstr "*待补货*行上的单元格根据不同情况有不同颜色："
+"The cells, which are part of the *Suggested Replenishment* line, can take "
+"different colors depending on the situation:"
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:88
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:70
 msgid ""
 "**Green**: quantity of products which should be replenished to reach the "
 "expected safety stock considering the demand forecast and the indirect "
 "demand forecast."
 msgstr "**绿色**：考虑到需求预测和间接需求预测，为达到预期安全库存量需要补货的产品数量。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:90
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:72
 msgid ""
 "**Grey**: replenishment order has already been generated, and its quantity "
 "still matches current data."
 msgstr "**灰色**：已生成补货订单，其数量仍匹配当前数据。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:92
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:74
 msgid ""
 "**Red**: replenishment order has already been generated, and its quantity "
 "was too high considering current data."
 msgstr "**红色**：已生成补货订单，其数量与当前数据相比过高。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:94
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:76
 msgid ""
 "**Orange**: replenishment order has already been generated, and its quantity"
 " was too low considering current data."
 msgstr "**橙色**：已生成补货订单，其数量与当前数据相比过低。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:96
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:78
 msgid ""
 "The *Forecasted stock* line can also contain red cells, which means the "
 "stock will be negative during the period in question."
 msgstr "*已预测库存*行也可包含红色单元格，意思是该周期内的库存将为负值。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:100
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:82
 msgid "What if I have underestimated the demand?"
 msgstr "如果我低估了需求怎么办？"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:102
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:84
 msgid ""
 "You can still increase the demand forecast. It will impact the quantity to "
 "replenish. The cell will become orange, and you’ll be able to launch a new "
 "replenishment."
 msgstr "你仍可增加需求预测。它将影响补货数量。单元格将变为橙色，你可发起新补货。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:107
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:89
 msgid "What if I have overestimated the demand?"
 msgstr "如果我高估了需求怎么办？"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:109
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:91
 msgid ""
 "You can decrease the demand forecast. The cell will become red to inform you"
 " that you’ve ordered more than planned. If you’re still able to do it, you "
 "can cancel some RFQ or MO manually."
 msgstr "你可减少需求预测。单元格将变为红色，表明你订购的数量超过了计划数量。如果允许，你可手动取消一些询价单或制造订单。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:114
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:96
 msgid "What if I wrongly added a product to the MPS?"
 msgstr "如果我在MPS中错误添加了产品怎么办？"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:116
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:98
 msgid ""
 "You can easily remove a product from the MPS by clicking the small bin on "
 "the right of its name."
