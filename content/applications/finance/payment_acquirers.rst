@@ -9,7 +9,10 @@ Payment acquirers (credit cards, online payments)
 
    payment_acquirers/wire_transfer
    payment_acquirers/adyen
+<<<<<<< HEAD
    payment_acquirers/alipay
+=======
+>>>>>>> bf5d1dcf... temp
    payment_acquirers/authorize
    payment_acquirers/buckaroo
    payment_acquirers/mollie
@@ -159,8 +162,36 @@ If your payment acquirer supports this feature, customers can choose to save the
 making a subsequent payment. This is particularly useful for the eCommerce conversion rate and for
 subscriptions that use recurring payments.
 
+<<<<<<< HEAD
 Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment acquirer
 and by ticking the :guilabel:`Allow Saving Payment Methods` checkbox.
+=======
++-------------------------------------+----------------------+-----------+------------+-----------------+
+|                                     | Redirection to       | Payment   | Save Cards | Capture Amount  |
+|                                     | the acquirer website | from Odoo |            | Manually        |
++=====================================+======================+===========+============+=================+
+| :doc:`Adyen                         | ✔                    |           |            |                 |
+| <payment_acquirers/adyen>`          |                      |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| Alipay                              | ✔                    |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| :doc:`Authorize.Net                 | ✔                    | ✔         | ✔          | ✔               |
+| <payment_acquirers/authorize>`      |                      |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| Buckaroo                            | ✔                    |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| Ingenico                            | ✔                    | ✔         | ✔          |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| :doc:`PayPal                        | ✔                    |           |            |                 |
+| <payment_acquirers/paypal>`         |                      |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| PayUMoney                           | ✔                    |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| SIPS                                | ✔                    |           |            |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+| Stripe                              | ✔                    | ✔         | ✔          |                 |
++-------------------------------------+----------------------+-----------+------------+-----------------+
+>>>>>>> bf5d1dcf... temp
 
 .. note::
    You remain fully PCI-compliant when you enable this feature because Odoo does not store the card
