@@ -33,6 +33,10 @@ by going to the :menuselection:`Top Menu --> Products --> Create`, and add them 
 .. image:: media/bom_1.png
     :align: center
 
+.. warning::
+   The destination location should **not** be a scrap location. A scrap location is where you put
+   products that you don't need.
+
 Using the same BoM to describe Variants
 ---------------------------------------
 
