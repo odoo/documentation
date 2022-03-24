@@ -8,6 +8,7 @@ Payment Acquirers (Credit Cards, Online Payment)
    :titlesonly:
 
    payment_acquirers/wire_transfer
+   payment_acquirers/adyen
    payment_acquirers/authorize
    payment_acquirers/paypal
    payment_acquirers/stripe
@@ -63,7 +64,8 @@ Online Payment Providers
 |                                     | Redirection to       | Payment   | Save Cards | Capture Amount  |
 |                                     | the acquirer website | from Odoo |            | Manually        |
 +=====================================+======================+===========+============+=================+
-| Adyen                               | ✔                    |           |            |                 |
+| :doc:`Adyen                         | ✔                    |           |            |                 |
+| <payment_acquirers/adyen>`          |                      |           |            |                 |
 +-------------------------------------+----------------------+-----------+------------+-----------------+
 | Alipay                              | ✔                    |           |            |                 |
 +-------------------------------------+----------------------+-----------+------------+-----------------+
