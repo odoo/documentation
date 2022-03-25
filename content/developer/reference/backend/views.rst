@@ -297,6 +297,10 @@ how the matched node should be altered:
     * if the ``attribute`` element has no body, the attribute named after
       its ``name`` is removed from the matched node. If no such attribute
       exists, an error is raised
+    * if the ``attribute`` element has an ``add`` attribute, a ``remove`` attribute, or both, the
+      value of the matched node's attribute named after ``name`` is recomputed to include the
+      value(s) of ``add`` (separated by ``separator``) and delete the value(s) of ``remove``
+      (separated by ``separator``). If ``separator`` is not provided, ``,`` is used instead.
 
     .. code-block:: xml
 
@@ -305,6 +309,7 @@ how the matched node should be altered:
         <attribute name="attrs">
           {'invisible': [('sale_ok', '=', False)], 'readonly': [('editable', '=', False)]}
         </attribute>
+        <attribute name="class" add="mt-1 mb-1" remove="mt-2 mb-2" separator=" "/>
       </field>
 
 ``move``
