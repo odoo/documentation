@@ -19,6 +19,7 @@
 # Martin Trigaux, 2022
 # William Henrotin <whe@odoo.com>, 2022
 # Fernanda Marques <fem@odoo.com>, 2022
+# JM Mas, 2022
 # 
 #, fuzzy
 msgid ""
@@ -27,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-18 14:56+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Fernanda Marques <fem@odoo.com>, 2022\n"
+"Last-Translator: JM Mas, 2022\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -37,18 +38,20 @@ msgstr ""
 
 #: ../../content/administration.rst:8
 msgid "Install and Maintain"
-msgstr ""
+msgstr "Installer et maintenir"
 
 #: ../../content/administration.rst:10
 msgid ""
 "These guides provide instructions on how to install, maintain and upgrade "
 "Odoo databases."
 msgstr ""
+"Ces guides fournissent des instructions sur comment installer, maintenir et "
+"mettre à jour Odoo"
 
 #: ../../content/administration.rst:13
 msgid ""
 ":doc:`History of Versions <administration/maintain/supported_versions>`"
-msgstr ""
+msgstr ":doc:Historique des versions"
 
 #: ../../content/administration/install.rst:5
 msgid "Install"
@@ -56,42 +59,51 @@ msgstr "Installer"
 
 #: ../../content/administration/install/cdn.rst:3
 msgid "Setting up a Content Delivery Network (CDN)"
-msgstr ""
+msgstr "Mise en place d'un réseau de diffusion de contenu (CDN)"
 
 #: ../../content/administration/install/cdn.rst:8
 msgid "Deploying with KeyCDN_"
-msgstr ""
+msgstr "Déployer avec KeyCDN"
 
 #: ../../content/administration/install/cdn.rst:12
 msgid ""
 "This document will guide you through the setup of a KeyCDN_ account with "
 "your Odoo powered website."
 msgstr ""
+"Ce document vous guidera dans la configuration d'un compte KeyCDN_ avec "
+"votre site web alimenté par Odoo."
 
 #: ../../content/administration/install/cdn.rst:16
 msgid "Step 1: Create a pull zone in the KeyCDN dashboard"
-msgstr ""
+msgstr "Étape 1 : Créez une zone d'attraction dans le tableau de bord KeyCDN."
 
 #: ../../content/administration/install/cdn.rst:21
 msgid ""
 "When creating the zone, enable the CORS option in the :guilabel:`advanced "
 "features` submenu. (more on that later)"
 msgstr ""
+"Lors de la création de la zone, activez l'option CORS dans le sous-menu "
+":guilabel:`fonctionnalités avancées`. (plus d'informations à ce sujet plus "
+"tard)"
 
 #: ../../content/administration/install/cdn.rst:27
 msgid ""
 "Once done, you'll have to wait a bit while KeyCDN_ is crawling your website."
 msgstr ""
+"Une fois que c'est fait, vous devrez attendre un peu pendant que KeyCDN_ "
+"explore votre site Web."
 
 #: ../../content/administration/install/cdn.rst:32
 msgid ""
 "a new URL has been generated for your Zone, in this case it is "
 "``http://pulltest-b49.kxcdn.com``"
 msgstr ""
+"une nouvelle URL a été générée pour votre zone, dans ce cas c'est "
+"\"http://pulltest-b49.kxcdn.com\"."
 
 #: ../../content/administration/install/cdn.rst:36
 msgid "Step 2: Configure the odoo instance with your zone"
-msgstr ""
+msgstr "Etape 2 : Configurer l'instance odoo avec votre zone"
 
 #: ../../content/administration/install/cdn.rst:38
 msgid ""
@@ -100,22 +112,30 @@ msgid ""
 "Base URL` field. This field is only visible and configurable if you have "
 "developer mode activated."
 msgstr ""
+"Dans le back-end de Odoo, allez dans le menu :guilabel:`Paramètres du site "
+"web` :, puis activez le support CDN et copiez/collez l'URL de votre zone "
+"dans le champ :guilabel:`L'URL de base du CDN`. Ce champ n'est visible et "
+"configurable que si vous avez activé le mode développeur."
 
 #: ../../content/administration/install/cdn.rst:46
 msgid ""
 "Now your website is using the CDN for the resources matching the "
 ":guilabel:`CDN filters` regular expressions."
 msgstr ""
+"Votre site Web utilise désormais le CDN pour les ressources correspondant "
+"aux expressions régulières :guilabel:`Filtres CDN`."
 
 #: ../../content/administration/install/cdn.rst:49
 msgid ""
 "You can have a look to the HTML of your website in order to check if the CDN"
 " integration is properly working."
 msgstr ""
+"Vous pouvez jeter un coup d'œil au code HTML de votre site web afin de "
+"vérifier si l'intégration du CDN fonctionne correctement."
 
 #: ../../content/administration/install/cdn.rst:57
 msgid "Why should I activate CORS?"
-msgstr ""
+msgstr "Pourquoi devrais-je activer CORS ?"
 
 #: ../../content/administration/install/cdn.rst:59
 msgid ""
@@ -123,6 +143,9 @@ msgid ""
 "writing) prevents a remotely linked CSS file to fetch relative resources on "
 "this same external server."
 msgstr ""
+"Une restriction de sécurité dans certains navigateurs (Firefox et Chrome au "
+"moment de la rédaction) empêche un fichier CSS lié à distance d'aller "
+"chercher des ressources relatives sur ce même serveur externe."
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
@@ -131,22 +154,28 @@ msgid ""
 " icons because the font file declared in the font-awesome CSS won't be "
 "loaded on the remote server."
 msgstr ""
+"Si vous n'activez pas l'option CORS dans la zone CDN, le problème résultant "
+"le plus évident sur un site Web Odoo par défaut sera l'absence d'icônes "
+"font-awesome car le fichier de police déclaré dans le CSS font-awesome ne "
+"sera pas chargé sur le serveur distant."
 
 #: ../../content/administration/install/cdn.rst:68
 msgid "Here's what you would see on your homepage in such a case:"
-msgstr ""
+msgstr "Voici ce que vous verriez sur votre page d'accueil dans un tel cas :"
 
 #: ../../content/administration/install/cdn.rst:73
 msgid "A security error message will also appear in the browser's console:"
 msgstr ""
+"Un message d'erreur de sécurité apparaîtra également dans la console du "
+"navigateur :"
 
 #: ../../content/administration/install/cdn.rst:78
 msgid "Enabling the CORS option in the CDN fixes this issue."
-msgstr ""
+msgstr "L'activation de l'option CORS dans le CDN résout ce problème."
 
 #: ../../content/administration/install/deploy.rst:3
 msgid "System configuration"
-msgstr ""
+msgstr "Configuration système"
 
 #: ../../content/administration/install/deploy.rst:5
 msgid ""
@@ -155,16 +184,22 @@ msgid ""
 "is not generally necessary for a development systems that is not exposed on "
 "the internet."
 msgstr ""
+"Ce document décrit les étapes de base pour configurer Odoo en production ou "
+"sur un serveur exposé à Internet. Il suit :ref:`installation "
+"<setup/install>`, et n'est généralement pas nécessaire pour un système de "
+"développement qui n'est pas exposé sur internet."
 
 #: ../../content/administration/install/deploy.rst:10
 msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommandations!"
 msgstr ""
+"Si vous mettez en place un serveur public, n'oubliez pas de consulter nos "
+"recommandations :ref:`sécurité` !"
 
 #: ../../content/administration/install/deploy.rst:15
 msgid "dbfilter"
-msgstr ""
+msgstr "dbfilter"
 
 #: ../../content/administration/install/deploy.rst:17
 msgid ""
@@ -173,6 +208,10 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo est un système multi-tenant : un seul système Odoo peut fonctionner et "
+"servir un certain nombre d'instances de bases de données. Il est également "
+"hautement personnalisable, les personnalisations (à partir des modules "
+"chargés) dépendant de la \"base de données actuelle\"."
 
 #: ../../content/administration/install/deploy.rst:21
 msgid ""
@@ -180,6 +219,10 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"Ce n'est pas un problème lorsque vous travaillez avec le backend (client "
+"web) en tant qu'utilisateur de l'entreprise : la base de données peut être "
+"sélectionnée lors de la connexion, et les personnalisations chargées "
+"ensuite."
 
 #: ../../content/administration/install/deploy.rst:25
 msgid ""
@@ -190,6 +233,9 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"Cependant, c'est un problème pour les utilisateurs non connectés (portail, site web) qui ne sont pas liés à une base de données : Odoo doit savoir quelle base de données doit être utilisée pour charger la page du site web ou effectuer l'opération. Si la multi-location n'est pas utilisée, ce n'est pas un problème, il n'y a qu'une seule base de données à utiliser, mais s'il y a plusieurs bases de données accessibles, Odoo a besoin d'une règle pour savoir laquelle il doit utiliser.\n"
+"\n"
+"Traduit avec www.DeepL.com/Translator (version gratuite)"
 
 #: ../../content/administration/install/deploy.rst:31
 msgid ""
