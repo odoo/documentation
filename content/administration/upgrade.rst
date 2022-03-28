@@ -54,9 +54,9 @@ The upgrade process in a nutshell:
    newly upgraded database (this is done automatically on Odoo Online).
 
 .. seealso::
-   - :doc:`upgrade/online_hosting`
-   - :doc:`upgrade/odoo_sh`
-   - :doc:`upgrade/on_premise`
+   - :doc:`Upgrade process for Odoo Online (SaaS) <upgrade/online_hosting>`
+   - :doc:`Upgrade process for Odoo.sh <upgrade/odoo_sh>`
+   - :doc:`Upgrade process for On-Premise <upgrade/on_premise>`
 
 .. _upgrade/testing-phase:
 
