@@ -41,6 +41,13 @@ turn, notify the customer that the order (or a part of it) is on its way.
    carrier. If the carrier doesn't automatically provide a tracking reference, you'll need to set
    one manually. This concerns all marketplaces.
 
+.. tip::
+   - If your chosen carrier isn't one supported by Odoo, you can still create a carrier bearing its
+     name (e.g. create a carrier named `Colissimo`). This name is case insensitive, but be careful
+     about typos, as Amazon won't recognize them.
+   - Create a delivery carrier named `Self Delivery` to inform Amazon that you make your own
+     deliveries. You still have to enter a tracking reference, but Amazon won't do anything with it.
+
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
 
