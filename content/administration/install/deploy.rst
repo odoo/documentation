@@ -7,7 +7,7 @@ internet-facing server. It follows :ref:`installation <setup/install>`, and is
 not generally necessary for a development systems that is not exposed on the
 internet.
 
-.. warning:: If you are setting up a public server, be sure to check our :ref:`security` recommandations!
+.. warning:: If you are setting up a public server, be sure to check our :ref:`security` recommendations!
 
 
 .. _db_filter:
