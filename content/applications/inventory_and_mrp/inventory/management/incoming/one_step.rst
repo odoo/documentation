@@ -45,9 +45,10 @@ Now, enter the picking that you want to process. You will be able to
 click on *Validate* to complete the move directly as products coming
 from suppliers are considered as being always available. 
 
-Note: if you have Storage Locations activated, you would click the 
-hamburger menu next to the Done quantity to specify the location(s) 
-where you are storing the received product(s).
+.. note::
+   If you have :guilabel:`Storage Locations` activated, you can click the hamburger menu next to 
+   the :guilabel:`Done quantity` to specify the location(s) where you are storing the received
+   product(s).
 
 .. image:: media/one_step_04.png
    :align: center
