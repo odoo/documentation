@@ -78,6 +78,9 @@ available payment methods appear on the left of the screen. Select the payment
 method and enter the received amount. Then, you can validate the
 payment.
 
+.. tip::
+   You can use both `,` and `.` on your keyboard as decimal separators.
+
 Return and refund products
 --------------------------
 
