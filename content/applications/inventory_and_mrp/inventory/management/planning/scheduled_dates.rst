@@ -48,7 +48,7 @@ are:
    **Receipt scheduled date - Vendor delivery date** is the
    default *PO Order By* date.
 
--  **Days to Purchase**: number of days the purchasing department takes
+-  **Days To Purchase**: number of days the purchasing department takes
    to validate a PO. If another RFQ to the same vendor is already
    opened, Odoo adds the line to the RFQ instead of creating a new
    one. Then, the specific date is set on the line.
@@ -63,6 +63,13 @@ are:
    Order*, the **Delivery Order scheduled date - Manufacturing
    Lead Time - Manufacturing Security Lead Time** is the default
    *Manufacturing Order* planned date.
+
+   **Days to Prepare Manufacturing Order**: create and confirm Manufacturing Orders
+   these many days in advance, to have enough time to replenish components or
+   manufacture semi-finished products (note that this does not affect the MO
+   scheduled date, which still respects the just-in-time mechanism.)
+
+   **Visibility Days**: consider product forecast these many days in the future upon product replenishment, set to 0 for just-in-time.
 
 Sales - Lead Times
 ==================
