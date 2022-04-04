@@ -326,6 +326,9 @@ This is useful for training and we assume that the user is in developer mode for
 
 To activate the developer or debug mode you can follow the steps `here <https://www.odoo.com/documentation/user/general/developer_mode/activate.html>`_.
 
+.. note::
+   The main page of the Settings screen is only accessible if at least one application is installed. You will be led into installing your own application in the next chapter.
+
 Extra tools
 ===========
 
