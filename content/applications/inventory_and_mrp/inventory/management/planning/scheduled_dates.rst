@@ -38,12 +38,10 @@ are:
    customer. Then, the default scheduled date on the delivery order
    is **SO delivery date - Security Lead Time**.
 
--  **Purchase Security Lead Time**: additional time to mitigate the risk
-   of a vendor delay. The receipt will be scheduled that many days
-   earlier to cope with unexpected vendor delays. In case of a
-   *Replenish to Order*, the **Delivery order scheduled date -
-   Security lead time** for purchase will be the default
-   *Receipt* scheduled date.
+-  **Purchase Security Lead Time**: margin of error for vendor lead times.
+   When the system generates Purchase Orders for procuring products,
+   they will be scheduled that many days earlier to cope with unexpected
+   vendor delays.
 
 -  **Purchase Delivery Lead Time**: this is the expected time between a
    PO being confirmed and the receipt of the ordered products. The
