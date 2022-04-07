@@ -104,7 +104,7 @@
                     <div role="main"> {# Beacon used by the Sphinx search to know where to look for a string #}
                         {%- block body %} {%- endblock %}
                     </div>
-                    {%- if github_link and pagename != 'search' %}
+                    {%- if github_link and pagename != 'search' and not pagename.startswith('legal') %}
                         <a href="{{ github_link(mode='edit') }}"
                            class="o_git_link d-none d-lg-inline-block">
                             <i class="i-edit"></i> Edit on GitHub
