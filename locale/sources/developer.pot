@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 13:49+0000\n"
+"POT-Creation-Date: 2022-04-08 13:24+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12984,63 +12984,71 @@ msgstr ""
 msgid "The lazy version of `_` and `_t` is :func:`odoo._lt` in python and :js:func:`odoo.web._lt` in javascript. The translation lookup is executed only at rendering and can be used to declare translatable properties in class methods of global variables."
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:101
+#: ../../content/developer/misc/i18n/translations.rst:102
+msgid "Translations of a module are **not** exposed to the front end by default and thus are not accessible from JavaScript. In order to achieve that, the module name has to be either prefixed with `website` (just like `website_sale`, `website_event` etc.) or explicitly register by implementing :func:`_get_translation_frontend_modules_name` for the `ir.http` model."
+msgstr ""
+
+#: ../../content/developer/misc/i18n/translations.rst:108
+msgid "This could look like the following::"
+msgstr ""
+
+#: ../../content/developer/misc/i18n/translations.rst:121
 msgid "Variables"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:102
+#: ../../content/developer/misc/i18n/translations.rst:122
 msgid "**Don't** the extract may work but it will not translate the text correctly::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:106
+#: ../../content/developer/misc/i18n/translations.rst:126
 msgid "**Do** set the dynamic variables as a parameter of the translation lookup (this will fallback on source in case of missing placeholder in the translation)::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:113
+#: ../../content/developer/misc/i18n/translations.rst:133
 msgid "Blocks"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:114
+#: ../../content/developer/misc/i18n/translations.rst:134
 msgid "**Don't** split your translation in several blocks or multiples lines::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:124
+#: ../../content/developer/misc/i18n/translations.rst:144
 msgid "**Do** keep in one block, giving the full context to translators::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:135
+#: ../../content/developer/misc/i18n/translations.rst:155
 msgid "Plural"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:136
+#: ../../content/developer/misc/i18n/translations.rst:156
 msgid "**Don't** pluralize terms the English-way::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:142
+#: ../../content/developer/misc/i18n/translations.rst:162
 msgid "**Do** keep in mind every language has different plural forms::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:150
+#: ../../content/developer/misc/i18n/translations.rst:170
 msgid "Read vs Run Time"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:152
+#: ../../content/developer/misc/i18n/translations.rst:172
 msgid "**Don't** invoke translation lookup at server launch::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:165
+#: ../../content/developer/misc/i18n/translations.rst:185
 msgid "**Don't** invoke translation lookup when the javascript file is read::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:176
+#: ../../content/developer/misc/i18n/translations.rst:196
 msgid "**Do** use lazy translation lookup method::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:190
+#: ../../content/developer/misc/i18n/translations.rst:210
 msgid "or **do** evaluate dynamically the translatable content::"
 msgstr ""
 
-#: ../../content/developer/misc/i18n/translations.rst:199
+#: ../../content/developer/misc/i18n/translations.rst:219
 msgid "**Do** in the case where the translation lookup is done when the JS file is *read*, use `_lt` instead of `_t` to translate the term when it is *used*::"
 msgstr ""
 
