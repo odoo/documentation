@@ -15,7 +15,6 @@
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
 # Xabi Spacebiker <xabispacebiker@gmail.com>, 2021
 # Pauline Thiry <pth@odoo.com>, 2021
-# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # jabelchi, 2022
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Pablo Rojas <rojaspablo88@gmail.com>, 2022
@@ -25,6 +24,7 @@
 # Alonso Muñoz <Alonso.munoz.91@outlook.com>, 2022
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2022
 # Lucia Pacheco <lpo@odoo.com>, 2022
+# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-18 13:48+0000\n"
 "PO-Revision-Date: 2020-09-22 14:40+0000\n"
-"Last-Translator: Lucia Pacheco <lpo@odoo.com>, 2022\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1665,6 +1665,11 @@ msgid ""
 "key ``mail.dynamic.smtp.from`` and set as value the email address that "
 "should be used in those cases (such as ``outgoing@mycompany.example.com``)."
 msgstr ""
+"Si desea mantener la dirección de origen \"De\" para correos electrónicos "
+"que usan su mismo dominio pero cambiarla para correos electrónicos que usan "
+"un dominio diferente, use la clave ``mail.dynamic.smtp.from`` y establezca "
+"como valor la dirección de correo electrónica que se debe usar en esos casos"
+" (por ejemplo, ``saliente@miempresa.ejemplo.com``)."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:128
 msgid "How to manage inbound messages"
@@ -1805,6 +1810,9 @@ msgid ""
 "edit catchall and bounce aliases, you first need to activate the "
 ":ref:`developer mode <developer-mode>`."
 msgstr ""
+"Los seudónimos de objeto se pueden editar desde su respectiva vista de "
+"configuración. Para editar los seudónimos de catchall y bounce, primero debe"
+" activar el :ref:`modo de desarrollador <developer-mode>`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:185
 msgid ""
@@ -1823,10 +1831,17 @@ msgid ""
 ":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
 " and look for *Mail: Fetchmail Service*."
 msgstr ""
+"De forma predeterminada, los mensajes entrantes se obtienen cada 5 minutos "
+"en Odoo con alojamiento local. Puede cambiar este valor en el :ref:`modo de "
+"desarrollador <developer-mode>`. Vaya a :menuselection:`Ajustes --> Técnico "
+"--> Automatización --> Acciones planificadas` y busque *Correo: Servicio de "
+"Fetchmail*."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:198
 msgid "Set up different dedicated servers for transactional and mass mails"
 msgstr ""
+"Configurar distintos servidores dedicados para correos masivos y "
+"transaccionales"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:200
 msgid ""
@@ -1838,6 +1853,14 @@ msgid ""
 "mailings. Another alternative is to use Postmark for transactional e-mails, "
 "and Amazon SES or Sendgrid for mass mailings."
 msgstr ""
+"Odoo está sujeto a un :ref:`límite diario de correos electrónicos "
+"<email_communication/daily_limit_mail>` para prevenir el abuso. Sin embargo,"
+" si es necesario, puede utilizar un servidor de correo (MTA, por sus siglas "
+"en inglés) diferente para correos electrónicos transaccionales y correos "
+"masivos. Por ejemplo: utilice el servidor de correo de Odoo para correos "
+"transaccionales y  Sendgrid, Amazon SES, o Mailgun para los correos masivos."
+" Otra alternativa es utilizar Postmark para correos electrónicos "
+"transaccionales y Amazon SES o Sendgrid para los correos masivos."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:208
 msgid ""
@@ -1845,6 +1868,9 @@ msgid ""
 " an alternative one unless you want to use a specific external outgoing "
 "email server for technical reasons."
 msgstr ""
+"Ya se configuró un servidor predeterminado de correos electrónicos "
+"salientes. No debe crear uno alternativo a menos que quiera usar un servidor"
+" externo de correos electrónicos específico por razones técnicas."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:211
 msgid ""
@@ -1855,6 +1881,14 @@ msgid ""
 "the priority of transactional e-mail servers as low as the mass email "
 "servers."
 msgstr ""
+"Para hacerlo, primero debe activar el :ref:`modo de desarrollador "
+"<developer-mode>` y luego ir a :menuselection:`Ajustes --> Técnico --> "
+"Servidores de correos electrónicos salientes`. Ahí debe crear dos ajustes de"
+" servidores de correo electrónico. Uno para correos electrónicos "
+"transaccionales y otro para servidores de correos masivos. Asegúrese de "
+"marcar la prioridad de los servidores de correos electrónicos "
+"transaccionales tan baja como la de los servidores de correos electrónicos "
+"masivos."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:216
 msgid ""
@@ -1867,6 +1901,16 @@ msgid ""
 "Sendinblue and Mailchimp, as your e-mails would be originated from the "
 "xxxx.odoo.com domain."
 msgstr ""
+"Ahora, vaya a :menuselection:`Marketing por correo electrónico --> Ajustes` "
+"y habilite la opción *Servidor dedicado*. Con estos ajustes, Odoo utiliza el"
+" servidor con la prioridad más baja para los correos electrónicos "
+"transaccionales, y el servidor seleccionado aquí para los correos masivos. "
+"Tome en cuenta que en este caso debe establecer los registros del Convenio "
+"de remitentes (SPF, por sus siglas en inglés) de su dominio para que "
+"incluyan los servidores de correos transaccionales y los de correos masivos."
+" Si su servidor se encuentra con xxxx.odoo.com, las opciones disponibles son"
+" Sendinblue y Mailchimp, ya que sus correos electrónicos se originarán del "
+"dominio xxxx.odoo.com."
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
 msgid "Email Templates"
@@ -1899,12 +1943,18 @@ msgid ""
 ":menuselection:`Settings --> Technical --> Templates`. A view of the "
 "existing templates is shown."
 msgstr ""
+"El :ref:`modo de desarrollador <developer-mode>` debe estar activado. "
+"Posteriormente, vaya a :menuselection:`Ajustes --> Técnico --> Plantillas`. "
+"Se mostrará una vista de las plantillas existentes."
 
 #: ../../content/applications/general/email_communication/email_template.rst:18
 msgid ""
 "It is highly recommended not to change the content in existing templates "
 "unless the user has prior knowledge about placeholders."
 msgstr ""
+"Se recomienda ampliamente no cambiar el contenido de las plantillas "
+"existentes, a menos que el usuario tenga conocimiento previo sobre los "
+"marcadores de posición."
 
 #: ../../content/applications/general/email_communication/email_template.rst:21
 msgid ""
@@ -1954,12 +2004,19 @@ msgid ""
 "the final data. With email templates, for example, placeholders let you put "
 "dynamic content in order to personalize the email for the recipient."
 msgstr ""
+"Un marcador de posición es una cadena de caracteres que ocupa de forma "
+"temporal del lugar de los datos finales. Por ejemplo, con las plantillas de "
+"correo electrónico, los marcadores de posición le permiten poner contenido "
+"dinámico para personalizar el correo electrónico que se enviará al "
+"destinatario."
 
 #: ../../content/applications/general/email_communication/email_template.rst:43
 msgid ""
 "A common use is to use it to indicate the name of the recipient in the "
 "newsletter so that each recipient gets a personalized newsletter."
 msgstr ""
+"Un uso común es usarlos para indicar el nombre del destinatario en el "
+"boletín, de esta forma cada destinatario recibe un boletín personalizado."
 
 #: ../../content/applications/general/email_communication/email_template.rst:46
 msgid ""
@@ -1967,6 +2024,10 @@ msgid ""
 "will depend on the template you modify. One way to see the fields that are "
 "available is to check the Dynamic Placeholder Generator tab."
 msgstr ""
+"Los marcadores de posiciones y, más específicamente, los campos que están "
+"disponibles para una plantilla dependerán de la plantilla que modifica. Una "
+"forma de ver los campos disponibles es revisar la pestaña de Generador de "
+"marcadores de posición dinámicos."
 
 #: ../../content/applications/general/email_communication/email_template.rst:52
 msgid ""
@@ -1997,7 +2058,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_template.rst:70
 msgid "Using functions with placeholders"
-msgstr ""
+msgstr "Usar funciones con marcadores de posición"
 
 #: ../../content/applications/general/email_communication/email_template.rst:72
 msgid ""
@@ -2005,6 +2066,10 @@ msgid ""
 "data as you'd like within your mail templates, for example, the time format "
 "can be changed using a function such as ``format_time``."
 msgstr ""
+"Las funciones se pueden utilizar junto con sus marcadores de posición para "
+"dar el formato que desea a los datos en sus plantillas de correo, por "
+"ejemplo, el formato de tiempo se puede cambiar al usar una función como "
+"``format_time``."
 
 #: ../../content/applications/general/email_communication/email_template.rst:76
 msgid ""
@@ -2012,10 +2077,13 @@ msgid ""
 "To know that, you have to check the fields (the properties) of the object "
 "that are available to be used."
 msgstr ""
+"Para usar funciones, debe saber qué campos están disponibles para darles "
+"formato. Para saber esto, debe checar los campos (las propiedades) del "
+"objeto que están disponibles para usarse."
 
 #: ../../content/applications/general/email_communication/email_template.rst:80
 msgid "Checking the fields (properties) available on the object"
-msgstr ""
+msgstr "Revisar los campos (propiedades) disponibles en el objeto"
 
 #: ../../content/applications/general/email_communication/email_template.rst:82
 msgid ""
@@ -2023,6 +2091,10 @@ msgid ""
 " the example we use the Portal: new user template, so we click on Portal "
 "user Config."
 msgstr ""
+"Para revisar los **campos disponibles**, haga clic en el enlace que se "
+"encuentra a lado de \"Aplica a\". Como ejemplo, usaremos la plantilla de "
+"\"Portal: nuevo usuario\", así que haremos clic en Configuración de usuarios"
+" de portal."
 
 #: ../../content/applications/general/email_communication/email_template.rst:89
 msgid ""
@@ -2030,6 +2102,9 @@ msgid ""
 "``Portal user Config`` model that lists all the fields that you can use "
 "within your mail template."
 msgstr ""
+"Al hacer clic en el enlace, se le redireccionará al modelo, en este caso el "
+"modelo ``Portal user Config`` que enlista todos los campos que puede usar en"
+" su plantilla de correo."
 
 #: ../../content/applications/general/email_communication/email_template.rst:96
 msgid ""
@@ -2037,16 +2112,22 @@ msgid ""
 "the dynamic placeholder generator, as described :ref:`previously "
 "<email_communication/dynamic_placeholder_generator>`."
 msgstr ""
+"Adicionalmente, también puede ver los campos disponibles al acceder al "
+"generador de marcadores de posición dinámicos, como se explicó "
+":ref:`anteriormente <email_communication/dynamic_placeholder_generator>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:99
 msgid ""
 "See below an example with the email field that was added in the template and"
 " its result as well as some other placeholders already present by default."
 msgstr ""
+"Consulte el ejemplo a continuación con un campo de correo electrónico que se"
+" agregó en la plantilla y su resultado, así como otros marcadores de "
+"posición presentes de forma predeterminada. "
 
 #: ../../content/applications/general/email_communication/email_template.rst:107
 msgid "Using fields with functions"
-msgstr ""
+msgstr "Usar campos con funciones"
 
 #: ../../content/applications/general/email_communication/email_template.rst:109
 msgid ""
@@ -2055,6 +2136,10 @@ msgid ""
 "field to the body of the template ‘Portal: new user’ along with the "
 "``format_date`` function so that the user knows when he was invited."
 msgstr ""
+"Ahora que sabe qué *campos* se pueden usar, puede usar uno de ellos con una "
+"función. Para este ejemplo, agregamos la fecha de creación, el campo "
+"*create_date* al cuerpo de la plantilla ‘Portal: nuevo usuario’ junto con la"
+" función ``format_date`` para que el usuario sepa cuando fue invitado."
 
 #: ../../content/applications/general/email_communication/email_template.rst:117
 msgid ""
@@ -2063,6 +2148,10 @@ msgid ""
 "current object, this gives the following line of code "
 "``${format_date(object.create_date)}``."
 msgstr ""
+"Como puede ver, usamos el marcador de posición `${}` con la función "
+"``format_date`` la cual usa como parámetro el campo create_date disponible "
+"en el objeto actual, esto genera la siguiente línea de código: "
+"``${format_date(object.create_date)}``."
 
 #: ../../content/applications/general/email_communication/email_template.rst:122
 msgid ""
@@ -2072,12 +2161,19 @@ msgid ""
 "prior knowledge. We highly recommend duplicating the template and apply your"
 " changes within this one."
 msgstr ""
+"Es muy importante comprobar que la vista previa funcione, si la plantilla "
+"está dañada, puede aparecer totalmente en blanco en la vista previa. También"
+" recomendamos no cambiar el contenido de plantillas existentes a menos que "
+"tenga conocimiento previo. Recomendamos ampliamente duplicar la plantilla y "
+"aplicar sus cambios ahí."
 
 #: ../../content/applications/general/email_communication/email_template.rst:127
 msgid ""
 "Find below the result of the e-mail received in the recipient's mailbox with"
 " the modifications applied."
 msgstr ""
+"A continuación puede ver el resultado del correo electrónico recibido en la "
+"bandeja de entrada del destinatario con las modificaciones aplicadas."
 
 #: ../../content/applications/general/email_communication/email_template.rst:134
 msgid ""
@@ -2088,6 +2184,12 @@ msgid ""
 "information on how to access these parameters can be found :ref:`here "
 "<email_communication/usable_functions>`."
 msgstr ""
+"Al usar la función ``format_date``, tiene la posibilidad de adaptar el "
+"formato de la fecha en un correo electrónico específico al especificar el "
+"formato de la fecha como un segundo parámetro. Si no se especifica, el forma"
+" que se utiliza de forma predeterminada es el que se define en los ajustes "
+"del idioma. Puede consultar más información sobre como acceder a estos "
+"parámetros :ref:`aquí <email_communication/usable_functions>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:139
 msgid ""
@@ -2096,19 +2198,28 @@ msgid ""
 "``${format_date(object.create_date, date_format='dd -- MM -- YYYY')}`` here "
 "dd is the day, MM the month and YYYY the year."
 msgstr ""
+"Para adaptar el formato de fecha, el código que se utiliza en el ejemplo "
+"anterior ``${format_date(object.create_date)}`` se convierte a "
+"``${format_date(object.create_date, date_format='dd -- MM -- YYYY')}``, "
+"donde dd es el día, MM el mes y YYYY el año."
 
 #: ../../content/applications/general/email_communication/email_template.rst:143
 msgid "Here is the result once the function is adapted in the template."
 msgstr ""
+"Este es el resultado una vez que la función se adapte en la plantilla."
 
 #: ../../content/applications/general/email_communication/email_template.rst:152
 msgid "Functions used by default within email templates"
 msgstr ""
+"Funciones que se usan de forma predeterminada en las plantillas de correo "
+"electrónico"
 
 #: ../../content/applications/general/email_communication/email_template.rst:154
 msgid ""
 "To format your data, many functions can be used, here are some examples."
 msgstr ""
+"Puede usar varias funciones para darle formato a sus datos, a continuación "
+"se encuentran algunos ejemplos."
 
 #: ../../content/applications/general/email_communication/email_template.rst:157
 msgid ""
@@ -2119,6 +2230,12 @@ msgid ""
 "not least, modifications on the templates are considered as customization "
 "and isn’t covered by our support."
 msgstr ""
+"**Esta lista de funciones no es minuciosa**, lo que significa que no todas "
+"las funciones disponibles se encuentran en la lista a continuación. Para ver"
+" más funciones, consulte la documentación de `babel "
+"<http://babel.pocoo.org/en/latest/api/dates.html>`_. Por último, pero no "
+"menos importante, las modificaciones a las plantillas se consideran "
+"personalizaciones y no las cubre nuestro soporte."
 
 #: ../../content/applications/general/email_communication/email_template.rst:162
 msgid ""
@@ -2126,6 +2243,9 @@ msgid ""
 " default, the format of the date used is the one defined in the settings of "
 "the language."
 msgstr ""
+"Para los siguientes ejemplos, introduciremos en su mayoría funciones de "
+"fecha. De forma predeterminada, el formato de fecha que se utiliza es el que"
+" se definió en los ajustes del idioma."
 
 #: ../../content/applications/general/email_communication/email_template.rst:165
 msgid ""
@@ -2135,19 +2255,26 @@ msgid ""
 " the languages to see all the settings such as the time format or date "
 "format used by the language."
 msgstr ""
+"Solo se puede acceder a estos ajustes cuando se habilita el :ref:`modo de "
+"desarrollador <developer-mode>`. Una vez hecho esto, vaya a "
+":menuselection:`Ajustes --> Traducciones --> Idiomas` y haga clic en uno de "
+"los idiomas para ver todos los ajustes, como los formatos de hora o fecha "
+"utilizados por el idioma."
 
 #: ../../content/applications/general/email_communication/email_template.rst:170
 msgid "**format_date()** - formats the date (without the time)."
-msgstr ""
+msgstr "**format_date()** - da formato a la fecha (sin la hora)."
 
 #: ../../content/applications/general/email_communication/email_template.rst:172
 msgid "Can be found on the template `Purchase Order: Send PO`:"
 msgstr ""
+"Se puede encontrar en la plantilla `Orden de compra: enviar orden de "
+"compra`:"
 
 #: ../../content/applications/general/email_communication/email_template.rst:178
 #: ../../content/applications/general/email_communication/email_template.rst:193
 msgid "The result will look like this:"
-msgstr ""
+msgstr "El resultado se verá así:"
 
 #: ../../content/applications/general/email_communication/email_template.rst:184
 msgid ""
