@@ -50,8 +50,8 @@ PACK", do this for each package.
 .. image:: media/usage_06.png
     :align: center
 
-Packaging
-=========
+Packagings
+==========
 
 The packaging is a standard container containing several units of your 
 product. If you are selling cans of soda, the packagings would be a 
