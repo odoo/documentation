@@ -1,3 +1,5 @@
+:custom-css: showcase_tables.css
+
 ===============
 RST cheat sheet
 ===============
@@ -14,127 +16,309 @@ Headings
   encounter different heading formatting and in a different order, in which case you should follow
   the formatting in place in the document. In any other case, use the formatting shown below.
 
-+--------------+---------------+
-| Heading size | Formatting    |
-+==============+===============+
-| H1           | | ``=======`` |
-|              | | ``Heading`` |
-|              | | ``=======`` |
-+--------------+---------------+
-| H2           | | ``Heading`` |
-|              | | ``=======`` |
-+--------------+---------------+
-| H3           | | ``Heading`` |
-|              | | ``-------`` |
-+--------------+---------------+
-| H4           | | ``Heading`` |
-|              | | ``~~~~~~~`` |
-+--------------+---------------+
-| H5           | | ``Heading`` |
-|              | | ``*******`` |
-+--------------+---------------+
-| H6           | | ``Heading`` |
-|              | | ``^^^^^^^`` |
-+--------------+---------------+
++--------------+----------------------+
+| Heading size | Formatting           |
++==============+======================+
+| H1           | .. code-block:: text |
+|              |                      |
+|              |    =======           |
+|              |    Heading           |
+|              |    =======           |
++--------------+----------------------+
+| H2           | .. code-block:: text |
+|              |                      |
+|              |    Heading           |
+|              |    =======           |
++--------------+----------------------+
+| H3           | .. code-block:: text |
+|              |                      |
+|              |    Heading           |
+|              |    -------           |
++--------------+----------------------+
+| H4           | .. code-block:: text |
+|              |                      |
+|              |    Heading           |
+|              |    ~~~~~~~           |
++--------------+----------------------+
+| H5           | .. code-block:: text |
+|              |                      |
+|              |    Heading           |
+|              |    *******           |
++--------------+----------------------+
+| H6           | .. code-block:: text |
+|              |                      |
+|              |    Heading           |
+|              |    ^^^^^^^           |
++--------------+----------------------+
 
 .. important::
    Each document must have **exactly one H1 heading**. No less, no more.
 
-.. _contributing/markup:
+.. _contributing/markups:
 
-Markup
-======
+Markups
+=======
 
-.. _contributing/inline-markup:
+.. _contributing/markups/italic:
 
-Inline markup
+Emphasis (italic)
+-----------------
+
+To emphasize a part of the text. The text is rendered in italic.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Fill out the information *before* saving the form.
+
+   * - .. code-block:: text
+
+          Fill out the information *before* saving the form.
+
+.. _contributing/markups/bold:
+
+Strong emphasis (bold)
+----------------------
+
+To emphasize a part of the text. The text is rendered in bold.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - A **subdomain** is a domain that is a part of another domain.
+
+   * - .. code-block:: text
+
+          A **subdomain** is a domain that is a part of another domain.
+
+.. _contributing/markups/code-sample:
+
+Technical term (literal)
+------------------------
+
+To write a technical term or a specific value to insert. The text is rendered in literal.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Insert the IP address of your printer, for example, `192.168.1.25`.
+
+   * - .. code-block:: text
+
+          Insert the IP address of your printer, for example, `192.168.1.25`.
+
+.. _contributing/markups/definitions:
+
+Definitions
+-----------
+
+Use the `dfn` markup to define a term.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - The documentation is written in RST and needs to be built (:dfn:`converted to HTML`) to display
+       nicely.
+
+   * - .. code-block:: text
+
+          The documentation is written in RST and needs to be built (:dfn:`converted to HTML`) to display
+          nicely.
+
+.. _contributing/markups/abbreviations:
+
+Abbreviations
 -------------
 
-Use the following markups to emphasize your text to your liking:
+Use the `abbr` markup to write a self-defining abbreviation that is displayed as a tooltip.
 
-+--------------+----------+
-| \*\*Text\*\* | **Text** |
-+--------------+----------+
-| \*Text\*     | *Text*   |
-+--------------+----------+
-| \`Text\`     | ``Text`` |
-+--------------+----------+
+.. list-table::
+   :class: o-showcase-table
 
-.. seealso::
-   - :ref:`contributing/specialized-directives`
+   * - Odoo uses :abbr:`OCR (optical character recognition)` and artificial intelligence technologies to
+       recognize the content of the documents.
+
+   * - .. code-block:: text
+
+          Odoo uses :abbr:`OCR (optical character recognition)` and artificial intelligence technologies to
+          recognize the content of the documents.
+
+.. _contributing/markups/guilabel:
+
+:abbr:`GUI (Graphical User Interface)` element
+----------------------------------------------
+
+Use the `guilabel` markup to identify any text of the interactive user interface (e.g., button
+labels, view titles, field names, lists items, ...).
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Update your credentials, then click on :guilabel:`Save`.
+
+   * - .. code-block:: text
+
+          Update your credentials, then click on :guilabel:`Save`.
+
+.. _contributing/markups/menuselection:
+
+Menu selection
+--------------
+
+Use the `menuselection` markup to guide the user through a sequence of menus.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * -  To review your sales performance, go to :menuselection:`Sales --> Reporting --> Dashboard`.
+
+   * - .. code-block:: text
+
+          To review your sales performance, go to :menuselection:`Sales --> Reporting --> Dashboard`.
+
+.. _contributing/markups/file:
+
+File
+----
+
+Use the `file` markup to indicate a file path or name.
+
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Create redirections with the :file:`redirects.txt` file at the root of the repository.
+
+   * - .. code-block:: text
+
+          Create redirections with the :file:`redirects.txt` file at the root of the repository.
+
+.. _contributing/markups/command:
+
+Command
+-------
+
+Use the `command` markup to highlight a command.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - Run the command :command:`make clean html` to delete existing built files and build the
+       documentation to HTML.
+
+   * - .. code-block:: text
+
+          Run the command :command:`make clean html` to delete existing built files and build the
+          documentation to HTML.
+
+.. _contributing/lists:
+
+Lists
+=====
 
 .. _contributing/bulleted-list:
 
 Bulleted list
 -------------
 
-.. code-block:: rst
+.. list-table::
+   :class: o-showcase-table
 
-   - This is a bulleted list.
-   - It has two items, the second
-     item uses two lines.
+   * - - This is a bulleted list.
+       - It has two items, the second
+         item uses two lines.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   * This is a bulleted list too.
-   * The principle stays the same.
+          - This is a bulleted list.
+          - It has two items, the second
+            item uses two lines.
 
 .. _contributing/numbered-list:
 
 Numbered list
 -------------
 
-.. code-block:: rst
+.. list-table::
+   :class: o-showcase-table
 
-   #. This is a numbered list.
-   #. Numbering is automatic.
+   * - #. This is a numbered list.
+       #. Numbering is automatic.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   1. This is a numbered list too.
-   2. Use this format to specify the numbering.
+          #. This is a numbered list.
+          #. Numbering is automatic.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - 6. Use this format to start the numbering
+          with a number other than one.
+       #. The numbering is automatic from there.
+
+   * - .. code-block:: text
+
+          6. Use this format to start the numbering
+             with a number other than one.
+          #. The numbering is automatic from there.
+
+.. tip::
+   Prefer the use of autonumbered lists with `#.` for better code resilience.
 
 .. _contributing/nested-list:
 
 Nested lists
 ------------
 
-.. code-block:: rst
+.. list-table::
+   :class: o-showcase-table
 
-   - This is the first item of a bulleted list.
+   * - - This is the first item of a bulleted list.
 
-     1. It has a nested numbered list
-     2. with two items.
+         #. It has a nested numbered list
+         #. with two items.
+
+   * - .. code-block:: text
+
+          - This is the first item of a bulleted list.
+
+            #. It has a nested numbered list
+            #. with two items.
 
 .. _contributing/hyperlinks:
 
 Hyperlinks
 ==========
 
-.. _contributing/hyperlink-references:
+.. _contributing/external-hyperlinks:
 
-Hyperlink references
---------------------
+External hyperlinks
+-------------------
 
-Hyperlink references are links to a URL with a custom label. They follow this syntax:
+External hyperlinks are links to a URL with a custom label. They follow this syntax:
 ```label <URL>`_``
 
 .. note::
-   The URL can be a relative path to a file within the documentation.
+   - The URL can be a relative path to a file within the documentation.
+   - Use the :ref:`documentation pages hyperlinks <contributing/doc-pages-hyperlinks>` if you target
+     another documentation page.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-This excerpt of :abbr:`RST (reStructuredText)`: ``For instance, `this is a hyperlink reference
-<https://odoo.com>`_.`` is rendered as follows in HTML: “For instance, `this is a hyperlink
-reference <https://odoo.com>`_.”
+   * - For instance, `this is an external hyperlink to Odoo's website <https://www.odoo.com>`_.
 
-.. _contributing/external-hyperlink-targets:
+   * - .. code-block:: text
 
-External hyperlink targets
+          For instance, `this is an external hyperlink to Odoo's website <https://www.odoo.com>`_.
+
+.. _contributing/external-hyperlink-aliases:
+
+External hyperlink aliases
 --------------------------
 
-| External hyperlink targets allow creating shortcuts for hyperlink references.
+| External hyperlink aliases allow creating shortcuts for external hyperlinks.
 | The definition syntax is as follows: ``.. _target: URL``
 | There are two ways to reference them, depending on the use case:
 
@@ -143,41 +327,32 @@ External hyperlink targets
 #. ```label <target_>`_`` does exactly what you expect: the label replaces the name of the target,
    and the target is replaced by the URL.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-RST
-***
+   * - A `proof-of-concept <https://en.wikipedia.org/wiki/Proof_of_concept>`_ is a simplified
+       version, a prototype of what is expected to agree on the main lines of expected changes. `PoC
+       <https://en.wikipedia.org/wiki/Proof_of_concept>`_ is a common abbreviation.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   .. _proof-of-concept: https://en.wikipedia.org/wiki/Proof_of_concept
+          .. _proof-of-concept: https://en.wikipedia.org/wiki/Proof_of_concept
 
-   A proof-of-concept_ is a simplified version, a prototype of what is expected to agree on the main
-   lines of expected changes. `PoC <proof-of-concept_>`_ is a common abbreviation.
+             A proof-of-concept_ is a simplified version, a prototype of what is expected to agree on the main
+             lines of expected changes. `PoC <proof-of-concept_>`_ is a common abbreviation.
 
-Render
-******
+.. _contributing/custom-anchors:
 
-A `proof-of-concept <https://en.wikipedia.org/wiki/Proof_of_concept>`_ is a simplified version, a
-prototype of what is expected to agree on the main lines of expected changes. `PoC
-<https://en.wikipedia.org/wiki/Proof_of_concept>`_ is a common abbreviation.
+Custom anchors
+--------------
 
-.. _contributing/internal-hyperlink-targets:
-
-Internal hyperlink targets
---------------------------
-
-Internal hyperlink targets follow the same syntax as external hyperlink targets but without any URL.
-Indeed, they are internal. They allow referencing a specific part of a document by using the target
-as an anchor. When the user clicks on the reference, the documentation scrolls to the part of the
-page containing the target.
-
-.. important::
-   Targets can be referenced from other files than the ones in which they are defined.
+Custom anchors follow the same syntax as external hyperlink aliases but without any URL. Indeed,
+they are internal. They allow referencing a specific part of a document by using the target as an
+anchor. When the user clicks on the reference, the documentation scrolls to the part of the
+page containing the anchor.
 
 | The definition syntax is: ``.. _target:``
-| There are two ways to reference them, both using the ``ref`` directive:
+| There are two ways to reference them, both using the ``ref`` markup:
 
 #. ``:ref:`target``` creates a hyperlink to the anchor with the heading defined below as label.
 #. ``:ref:`label <target>``` creates a hyperlink to the anchor with the given label.
@@ -186,162 +361,102 @@ See :ref:`contributing/relative-links` to learn how to write proper relative lin
 references.
 
 .. note::
-  Notice that there is no ``_`` at the end, as it is done with :ref:`hyperlink targets
-  <contributing/hyperlink-references>`.
+   - Custom anchors can be referenced from other files than the ones in which they are defined.
+   - Notice that there is no ``_`` at the end, contrary to what is done with :ref:`external
+     hyperlinks <contributing/external-hyperlinks>`.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-RST
-***
+   * - This can easily be done by creating a new product, see `How to create a product?
+       <https://example.com/product>`_ for additional help.
 
-.. code-block:: rst
+       **How to create a product?**
 
-   .. _sales/quotation/start-of-page:
+       As explained at the `start of the page <https://example.com/scroll-to-start-of-page>`_, ...
 
-   This can easily be done by creating a new product, see :ref:`product` for additional help.
+   * - .. code-block:: text
 
-   .. _sales/quotation/product:
+          .. _sales/quotation/start-of-page:
 
-   How to create a product?
-   =========================
+          This can easily be done by creating a new product, see :ref:`product` for additional help.
 
-   As explained at the :ref:`start of the page <sales/quotation/start-of-page>`, ...
+          .. _sales/quotation/product:
 
-Render
-******
+          How to create a product?
+          ========================
 
-This can easily be done by creating a new product, see `How to create a product?
-<https://example.com/product>`_ for additional help.
+          As explained at the :ref:`start of the page <sales/quotation/start-of-page>`, ...
 
-**How to create a product?**
+.. _contributing/doc-pages-hyperlinks:
 
-As explained at the `start of the page <https://example.com/scroll-to-start-of-page>`_, ...
+Documentation pages hyperlinks
+------------------------------
 
-.. _contributing/implicit-hyperlink-targets:
+| The ``doc`` markup allows referencing a documentation page wherever it is in the file tree through
+  a relative file path.
+| As usual, there are two ways to use the markup:
 
-Implicit hyperlink targets
---------------------------
 
-| Implicit hyperlink targets are a special kind of internal hyperlink targets: they are
-  automatically generated by section titles, footnotes, etc. Consequently, they don’t have a
-  definition syntax.
-| They can be referenced the same first way as external hyperlink targets by using the name of the
-  section title as URL.
+#. ``:doc:`path_to_doc_page``` creates a hyperlink to the documentation page with the title of the
+   page as label.
+#. ``:doc:`label <path_to_doc_page>``` creates a hyperlink to the documentation page with the given
+   label.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-RST
-***
+   * - Please refer to `this documentation <https://example.com/doc/accounting/invoices.html>`_ and
+       to `Send a pro-forma invoice <https://example.com/doc/sales/proforma.html>`_.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   This can easily be done by creating a new user, see `How to create a new user?`_ for
-   additional help.  ...
-
-Render
-******
-
-This can easily be done by creating a new user, see `How to create a new user?
-<https://example.com/how-to-create-a-user>`_ for additional help. ...
-
-.. _contributing/doc:
-
-The ``doc`` directive
----------------------
-
-| The ``doc`` directive allows referencing a documentation page wherever it is in the file tree
-  through a relative file path.
-| As usual, there are two ways to use the directive:
-
-#. ``:doc:`path_to_doc_page``` creates a hyperlink reference to the documentation page with the
-   title of the page as label.
-#. ``:doc:`label <path_to_doc_page>``` creates a hyperlink reference to the documentation page with
-   the given label.
-
-Example
-~~~~~~~
-
-RST
-***
-
-.. code-block:: rst
-
-   Please refer to :doc:`this documentation <customer_invoices>` and to
-   :doc:`../sales/sales/invoicing/proforma`.
-
-Render
-******
-
-Please refer to `this documentation <https://example.com/doc/accounting/invoices.html>`_ and to
-`Send a pro-forma invoice <https://example.com/doc/sales/proforma.html>`_.
+          Please refer to :doc:`this documentation <customer_invoices>` and to
+          :doc:`../sales/sales/invoicing/proforma`.
 
 .. _contributing/download:
 
-The ``download`` directive
---------------------------
+File download hyperlinks
+------------------------
 
-The ``download`` directive allows referencing files (that are not necessarily :abbr:`RST
+The ``download`` markup allows referencing files (that are not necessarily :abbr:`RST
 (reStructuredText)` documents) within the source tree to be downloaded.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-RST
-***
+   * - Download this `module structure template
+       <https://example.com/doc/odoosh/extras/my_module.zip>`_ to start building your module in no
+       time.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   Download this :download:`module structure template <extras/my_module.zip>` to start building your
-   module in no time.
-
-Render
-******
-
-Download this `module structure template <https://example.com/doc/odoosh/extras/my_module.zip>`_ to
-start building your module in no time.
+          Download this :download:`module structure template <extras/my_module.zip>` to start building your
+          module in no time.
 
 .. _contributing/image:
 
-The ``image`` directive
------------------------
+Images
+======
 
-The ``image`` directive allows inserting images in a document. It comes with a set of optional
-parameter directives that can individually be omitted if considered redundant.
+The ``image`` markup allows inserting images in a document.
 
-Example
-~~~~~~~
+.. list-table::
+   :class: o-showcase-table
 
-RST
-***
+   * - .. image:: rst_cheat_sheet/create-invoice.png
+          :align: center
+          :alt: Create an invoice.
 
-.. code-block:: rst
+   * - .. code-block:: text
 
-   .. image:: media/create_invoice.png
-      :align: center
-      :alt: Create an invoice
-      :height: 100
-      :width: 200
-      :scale: 50
-      :class: img-thumbnail
-      :target: ../invoicing.html#create-an-invoice
+          .. image:: rst_cheat_sheet/create-invoice.png
+             :align: center
+             :alt: Create an invoice.
 
-Render
-******
+.. _contributing/alert-blocks:
 
-.. image:: rst_cheat_sheet/create-invoice.png
-   :align: center
-   :alt: Create an invoice
-   :height: 100
-   :width: 200
-   :scale: 50
-   :class: img-thumbnail
-   :target: https://example.com/doc/sales/invoicing.html#create-an-invoice
-
-.. _contributing/admonitions:
-
-Admonitions (alert blocks)
+Alert blocks (admonitions)
 ==========================
 
 .. _contributing/seealso:
@@ -349,200 +464,250 @@ Admonitions (alert blocks)
 Seealso
 -------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. seealso::
+          - `Customer invoices <https://example.com/doc/accounting/invoices.html>`_
+          - `Pro-forma invoices <https://example.com/doc/sales/proforma.html#activate-the-feature>`_
 
-   .. seealso::
-      - :doc:`customer_invoices`
-      - `Pro-forma invoices <../sales/sales/invoicing/proforma.html#activate-the-feature>`_
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. seealso::
-   - `Customer invoices <https://example.com/doc/accounting/invoices.html>`_
-   - `Pro-forma invoices <https://example.com/doc/sales/proforma.html#activate-the-feature>`_
+          .. seealso::
+             - :doc:`customer_invoices`
+             - `Pro-forma invoices <../sales/sales/invoicing/proforma.html#activate-the-feature>`_
 
 .. _contributing/note:
 
 Note
 ----
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. note::
+          Use this alert block to grab the reader's attention about additional information.
 
-   .. note::
-      Use this admonition to grab the reader's attention about additional information.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. note::
-   Use this admonition to grab the reader's attention about additional information.
+          .. note::
+             Use this alert block to grab the reader's attention about additional information.
 
 .. _contributing/tip:
 
 Tip
 ---
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. tip::
+          Use this alert block to inform the reader about a useful trick that requires an action.
 
-   .. tip::
-      Use this admonition to inform the reader about a useful trick that requires an action.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. tip::
-   Use this admonition to inform the reader about a useful trick that requires an action.
+          .. tip::
+             Use this alert block to inform the reader about a useful trick that requires an action.
 
 .. _contributing/example:
 
 Example
 -------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. example::
+          Use this alert block to show an example.
 
-   .. example::
-      Use this admonition to show an example.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. example::
-   Use this admonition to show an example.
+          .. example::
+             Use this alert block to show an example.
 
 .. _contributing/exercise:
 
 Exercise
 --------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. exercise::
+          Use this alert block to suggest an exercise to the reader.
 
-   .. exercise::
-      Use this admonition to suggest an exercise to the reader.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. exercise::
-   Use this admonition to suggest an exercise to the reader.
+          .. exercise::
+             Use this alert block to suggest an exercise to the reader.
 
 .. _contributing/important:
 
 Important
 ---------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. important::
+          Use this alert block to notify the reader about important information.
 
-   .. important::
-      Use this admonition to notify the reader about an important information.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. important::
-   Use this admonition to notify the reader about an important information.
+          .. important::
+             Use this alert block to notify the reader about important information.
 
 .. _contributing/warning:
 
 Warning
 -------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. warning::
+          Use this alert block to require the reader to proceed with caution with what is described in the
+          warning.
 
-   .. warning::
-      Use this admonition to require the reader to proceed with caution with what is described in
-      the warning.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-.. warning::
-   Use this admonition to require the reader to proceed with caution with what is described in the
-   warning.
+          .. warning::
+             Use this alert block to require the reader to proceed with caution with what is described in the
+             warning.
 
 .. _contributing/danger:
 
 Danger
 ------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. danger::
+          Use this alert block to bring the reader's attention to a serious threat.
 
-   .. danger::
-      Use this admonition to bring the reader's attention to a serious threat.
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. danger::
+             Use this alert block to bring the reader's attention to a serious threat.
 
-.. danger::
-   Use this admonition to bring the reader's attention to a serious threat.
-
-.. _contributing/custom-admonition:
+.. _contributing/custom-alert-blocks:
 
 Custom
 ------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. admonition:: Title
 
-   .. admonition:: Title
+          Customize this alert block with a **Title** of your choice.
 
-   Customize this admonition with a **Title** of your choice.
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. admonition:: Title
 
-.. admonition:: Title
+             Customize this alert block with a **Title** of your choice.
 
-   Customize this admonition with a **Title** of your choice.
+.. _contributing/tables:
+
+Tables
+======
+
+List tables
+-----------
+
+List tables use two-level bulleted lists to convert data into a table. The first level represents
+the rows and the second level represents the columns.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - .. list-table::
+          :header-rows: 1
+          :stub-columns: 1
+
+          * - Name
+            - Country
+            - Favorite color
+          * - Raúl
+            - Montenegro
+            - Purple
+          * - Mélanie
+            - France
+            - Red
+
+   * - .. code-block:: text
+
+          .. list-table::
+             :header-rows: 1
+             :stub-columns: 1
+
+             * - Name
+               - Country
+               - Favorite colour
+             * - Raúl
+               - Montenegro
+               - Purple
+             * - Mélanie
+               - France
+               - Turquoise
+
+Grid tables
+-----------
+
+Grid tables represent the rendered table and are more visual to work with.
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - +-----------------------+--------------+---------------+
+       |                       | Shirts       | T-shirts      |
+       +=======================+==============+===============+
+       | **Available colours** | Purple       | Green         |
+       |                       +--------------+---------------+
+       |                       | Turquoise    | Orange        |
+       +-----------------------+--------------+---------------+
+       | **Sleeves length**    | Long sleeves | Short sleeves |
+       +-----------------------+--------------+---------------+
+
+   * - .. code-block:: text
+
+          +-----------------------+--------------+---------------+
+          |                       | Shirts       | T-shirts      |
+          +=======================+==============+===============+
+          | **Available colours** | Purple       | Green         |
+          |                       +--------------+---------------+
+          |                       | Turquoise    | Orange        |
+          +-----------------------+--------------+---------------+
+          | **Sleeves length**    | Long sleeves | Short sleeves |
+          +-----------------------+--------------+---------------+
+
+.. tip::
+   - Use `=` instead of `-` to define header rows.
+   - Remove `-` and `|` separators to merge cells.
+   - Make use of `this convenient table generator <https://www.tablesgenerator.com/text_tables>`_ to
+     build your tables. Then, copy-paste the generated formatting into your document.
 
 .. _contributing/code-blocks:
 
 Code blocks
 ===========
 
-RST
----
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: text
+   * - .. code-block:: python
 
-   .. code-block:: python
+          def main():
+              print("Hello world!")
 
-      def main():
-          print("Hello world!")
+   * - .. code-block:: text
 
-Render
-------
+          .. code-block:: python
 
-.. code-block:: python
-
-   def main():
-       print("Hello world!")
+             def main():
+                 print("Hello world!")
 
 .. _contributing/tabs:
 
@@ -550,57 +715,53 @@ Content tabs
 ============
 
 .. caution::
-   The `tabs` directive may not work well in some situations. In particular:
+   The `tabs` markup may not work well in some situations. In particular:
 
    - The tabs' headers cannot be translated.
    - A tab cannot contain :ref:`headings <contributing/headings>`.
-   - An :ref:`admonition <contributing/admonitions>` cannot contain tabs.
-   - A tab cannot contain :ref:`internal hyperlink targets
-     <contributing/internal-hyperlink-targets>`.
+   - An :ref:`alert block <contributing/alert-blocks>` cannot contain tabs.
+   - A tab cannot contain :ref:`custom anchors <contributing/custom-anchors>`.
 
 .. _contributing/tabs/basic:
 
 Basic tabs
 ----------
 
-Basic tabs are useful to split content into multiple options. The `tabs` directive is used to define
-a sequence of tabs. Each tab is then defined with the `tab` directive followed by a label.
+Basic tabs are useful to split the content into multiple options. The `tabs` markup is used to
+define sequence of tabs. Each tab is then defined with the `tab` markup followed by a label.
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. tabs::
 
-   .. tabs::
+          .. tab:: Odoo Online
 
-      .. tab:: Odoo Online
+             Content dedicated to Odoo Online users.
 
-         Content dedicated to Odoo Online users.
+          .. tab:: Odoo.sh
 
-      .. tab:: Odoo.sh
+             Alternative for Odoo.sh users.
 
-         Alternative for Odoo.sh users.
+          .. tab:: On-premise
 
-      .. tab:: On-premise
+             Third version for On-premise users.
 
-         Third version for On-premise users.
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. tabs::
 
-.. tabs::
+             .. tab:: Odoo Online
 
-   .. tab:: Odoo Online
+                Content dedicated to Odoo Online users.
 
-      Content dedicated to Odoo Online users.
+             .. tab:: Odoo.sh
 
-   .. tab:: Odoo.sh
+                Alternative for Odoo.sh users.
 
-      Alternative for Odoo.sh users.
+             .. tab:: On-premise
 
-   .. tab:: On-premise
-
-      Third version for On-premise users.
+                Third version for On-premise users.
 
 .. _contributing/tabs/nested:
 
@@ -609,73 +770,70 @@ Nested tabs
 
 Tabs can be nested inside one another.
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. tabs::
 
-   .. tabs::
+          .. tab:: Stars
 
-      .. tab:: Stars
+             .. tabs::
 
-         .. tabs::
+                .. tab:: The Sun
 
-            .. tab:: The Sun
+                   The closest star to us.
 
-               The closest star to us.
+                .. tab:: Proxima Centauri
 
-            .. tab:: Proxima Centauri
+                   The second closest star to us.
 
-               The second closest star to us.
+                .. tab:: Polaris
 
-            .. tab:: Polaris
+                   The North Star.
 
-               The North Star.
+          .. tab:: Moons
 
-      .. tab:: Moons
+             .. tabs::
 
-         .. tabs::
+                .. tab:: The Moon
 
-            .. tab:: The Moon
+                   Orbits the Earth.
 
-               Orbits the Earth.
+                .. tab:: Titan
 
-            .. tab:: Titan
+                   Orbits Jupiter.
 
-               Orbits Jupiter.
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. tabs::
 
-.. tabs::
+             .. tab:: Stars
 
-   .. tab:: Stars
+                .. tabs::
 
-      .. tabs::
+                   .. tab:: The Sun
 
-         .. tab:: The Sun
+                      The closest star to us.
 
-            The closest star to us.
+                   .. tab:: Proxima Centauri
 
-         .. tab:: Proxima Centauri
+                      The second closest star to us.
 
-            The second closest star to us.
+                   .. tab:: Polaris
 
-         .. tab:: Polaris
+                      The North Star.
 
-            The North Star.
+             .. tab:: Moons
 
-   .. tab:: Moons
+                .. tabs::
 
-      .. tabs::
+                   .. tab:: The Moon
 
-         .. tab:: The Moon
+                      Orbits the Earth.
 
-            Orbits the Earth.
+                   .. tab:: Titan
 
-         .. tab:: Titan
-
-            Orbits Jupiter.
+                      Orbits Jupiter.
 
 .. _contributing/tabs/group:
 
@@ -683,94 +841,91 @@ Group tabs
 ----------
 
 Group tabs are special tabs that synchronize based on a group label. The last selected group is
-remembered and automatically selected when the user returns on the page or visits another page with
-the tabs group. The `group-tab` directive is used to define group tabs.
+remembered and automatically selected when the user returns to the page or visits another page with
+the tabs group. The `group-tab` markup is used to define group tabs.
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. tabs::
 
-   .. tabs::
+          .. group-tab:: C++
 
-      .. group-tab:: C++
+             C++
 
-         C++
+          .. group-tab:: Python
 
-      .. group-tab:: Python
+             Python
 
-         Python
+          .. group-tab:: Java
 
-      .. group-tab:: Java
+             Java
 
-         Java
+       .. tabs::
 
-   .. tabs::
+          .. group-tab:: C++
 
-      .. group-tab:: C++
+             .. code-block:: c++
 
-         .. code-block:: c++
+                int main(const int argc, const char **argv) {
+                    return 0;
+                }
 
-            int main(const int argc, const char **argv) {
-                return 0;
-            }
+          .. group-tab:: Python
 
-      .. group-tab:: Python
+             .. code-block:: python
 
-         .. code-block:: python
+                def main():
+                    return
 
-            def main():
-                return
+          .. group-tab:: Java
 
-      .. group-tab:: Java
+             .. code-block:: java
 
-         .. code-block:: java
+                class Main {
+                    public static void main(String[] args) {}
+                }
 
-            class Main {
-                public static void main(String[] args) {}
-            }
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. tabs::
 
-.. tabs::
+             .. group-tab:: C++
 
-   .. group-tab:: C++
+                C++
 
-      C++
+             .. group-tab:: Python
 
-   .. group-tab:: Python
+                Python
 
-      Python
+             .. group-tab:: Java
 
-   .. group-tab:: Java
+                Java
 
-      Java
+          .. tabs::
 
-.. tabs::
+             .. group-tab:: C++
 
-   .. group-tab:: C++
+                .. code-block:: c++
 
-      .. code-block:: c++
+                   int main(const int argc, const char **argv) {
+                       return 0;
+                   }
 
-         int main(const int argc, const char **argv) {
-             return 0;
-         }
+             .. group-tab:: Python
 
-   .. group-tab:: Python
+                .. code-block:: python
 
-      .. code-block:: python
+                   def main():
+                       return
 
-         def main():
-             return
+             .. group-tab:: Java
 
-   .. group-tab:: Java
+                .. code-block:: java
 
-      .. code-block:: java
-
-         class Main {
-             public static void main(String[] args) {}
-         }
+                   class Main {
+                       public static void main(String[] args) {}
+                   }
 
 .. _contributing/tabs/code:
 
@@ -778,62 +933,59 @@ Code tabs
 ---------
 
 Code tabs are essentially :ref:`group tabs <contributing/tabs/group>` that treat the content as a
-:ref:`code block <contributing/code-blocks>`. The `code-tab` directive is used to define a code tab.
-Just as for the `code-block` directive, the language defines the syntax highlighting of the tab. If
+:ref:`code block <contributing/code-blocks>`. The `code-tab` markup is used to define a code tab.
+Just as for the `code-block` markup, the language defines the syntax highlighting of the tab. If
 set, the label is used instead of the language for grouping tabs.
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - .. tabs::
 
-   .. tabs::
+          .. code-tab:: c++ Hello C++
 
-      .. code-tab:: c++ Hello C++
+             #include <iostream>
 
-         #include <iostream>
+             int main() {
+                 std::cout << "Hello World";
+                 return 0;
+             }
 
-         int main() {
-             std::cout << "Hello World";
-             return 0;
-         }
+          .. code-tab:: python Hello Python
 
-      .. code-tab:: python Hello Python
+             print("Hello World")
 
-         print("Hello World")
+          .. code-tab:: javascript Hello JavaScript
 
-      .. code-tab:: javascript Hello JavaScript
+             console.log("Hello World");
 
-         console.log("Hello World");
+   * - .. code-block:: text
 
-Render
-~~~~~~
+          .. tabs::
 
-.. tabs::
+             .. code-tab:: c++ Hello C++
 
-   .. code-tab:: c++ Hello C++
+                #include <iostream>
 
-      #include <iostream>
+                int main() {
+                    std::cout << "Hello World";
+                    return 0;
+                }
 
-      int main() {
-          std::cout << "Hello World";
-          return 0;
-      }
+             .. code-tab:: python Hello Python
 
-   .. code-tab:: python Hello Python
+                print("Hello World")
 
-      print("Hello World")
+             .. code-tab:: javascript Hello JavaScript
 
-   .. code-tab:: javascript Hello JavaScript
-
-      console.log("Hello World");
+                console.log("Hello World");
 
 .. _contributing/document-metadata:
 
 Document metadata
 =================
 
-| Sphinx supports document-wide metadata directives that specify a behavior for the entire page.
+| Sphinx supports document-wide metadata markups that specify a behavior for the entire page.
 | They must be placed between colons (`:`) at the top of the source file.
 
 +-----------------+--------------------------------------------------------------------------------+
@@ -842,7 +994,7 @@ Document metadata
 | `show-content`  |  Make a toctree page accessible from the navigation menu.                      |
 +-----------------+--------------------------------------------------------------------------------+
 | `show-toc`      |  Show the table of content on a page that has the `show-content` metadata      |
-|                 |  directive.                                                                    |
+|                 |  markup.                                                                       |
 +-----------------+--------------------------------------------------------------------------------+
 | `code-column`   |  | Show a dynamic side column that can be used to display interactive          |
 |                 |    tutorials or code excerpts.                                                 |
@@ -872,64 +1024,18 @@ Formatting tips
 Break the line but not the paragraph
 ------------------------------------
 
-RST
-~~~
+.. list-table::
+   :class: o-showcase-table
 
-.. code-block:: rst
+   * - | A first long line that you break in two
+         -> here <- is rendered as a single line.
+       | A second line that follows a line break.
 
-   | First super long line that you break in two…
-     here is rendered as a single line.
-   | Second line that follows a line break.
+   * - .. code-block:: text
 
-Render
-~~~~~~
-
-| First super long line that you break in two…
-  here is rendered as a single line.
-| Second line that follows a line break.
-
-.. _contributing/comments:
-
-Add comments
-------------
-
-If you made a particular choice of writing or formatting that a future writer should be able to
-understand and take into account, consider writing a comment. Comments are blocks of text that do
-not count as a part of the documentation and that are used to pass a message to writers of the
-source code. They consist of a line starting with two dots and a space, followed by the comment.
-
-``.. For instance, this line will not be rendered in the documentation.``
-
-.. _contributing/tables:
-
-Use tables
-----------
-
-Make use of `this convenient table generator <https://www.tablesgenerator.com/text_tables>`_ to
-build your tables. Then, copy-paste the generated formatting into your document.
-
-.. _contributing/specialized-directives:
-
-Spice up your writing with specialized directives
--------------------------------------------------
-
-Use these additional directives to fine-tune your content:
-
-+-------------------+------------------------------------------+-------------------------------------------------------------------------------------------------------------------+
-| **Directive**     | **Purpose**                              | **Example**                                                                                                       |
-|                   |                                          +-----------------------------------------------------------+-------------------------------------------------------+
-|                   |                                          | **RST**                                                   | **HTML**                                              |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``abbr``          | Self-defining abbreviations              | ``:abbr:`SO (Sales Order)```                              | :abbr:`SO (Sales Order)`                              |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``command``       | Highlight a command                      | ``:command:`python example.py```                          | :command:`python example.py`                          |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``dfn``           | Define a term                            | ``:dfn:`a definition for a new term```                    | :dfn:`a definition for a new term`                    |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``file``          | Indicate a file path                     | ``:file:`~/odoo/odoo-bin```                               | :file:`~/odoo/odoo-bin`                               |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
-| ``menuselection`` | Guide a user through a sequence of menus | ``:menuselection:`Sales --> Configuration --> Settings``` | :menuselection:`Sales --> Configuration --> Settings` |
-+-------------------+------------------------------------------+-----------------------------------------------------------+-------------------------------------------------------+
+          | A first long line that you break in two
+            -> here <- is rendered as a single line.
+          | A second line that follows a line break.
 
 .. _contributing/escaping:
 
@@ -940,8 +1046,8 @@ Markup symbols escaped with backslashes (``\``) are rendered normally. For insta
 \*\*line of text\*\* with \*markup\* symbols`` is rendered as “this \*\*line of text\*\* with
 \*markup\* symbols”.
 
-When it comes to backticks (`````), which are used in many case such as :ref:`hyperlink references
-<contributing/hyperlink-references>`, using backslashes for escaping is no longer an option because
+When it comes to backticks (`````), which are used in many cases such as :ref:`external hyperlinks
+<contributing/external-hyperlinks>`, using backslashes for escaping is no longer an option because
 the outer backticks interpret enclosed backslashes and thus prevent them from escaping inner
 backticks. For instance, ```\`this formatting\```` produces an ``[UNKNOWN NODE title_reference]``
 error. Instead, `````this formatting````` should be used to produce the following result:
