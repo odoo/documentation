@@ -1939,7 +1939,22 @@ Map
 
    <span class="badge" style="background-color:#AD5E99">Enterprise feature</span>
 
-This view is able to display records on a map and the routes between them. The records are represented by pins. It also allows the visualization of fields from the model in a popup tied to the record's pin.
+.. raw:: html
+
+   <div><div class="bg-primary">
+
+mon exemple en rst
+
+.. raw:: html
+
+   </div><div>
+
+mon exemple en rst
+
+.. raw:: html
+
+   </div></div>
+
 
 .. note::
 

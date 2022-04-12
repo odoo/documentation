@@ -566,8 +566,7 @@ Basic tabs
 Basic tabs are useful to split content into multiple options. The `tabs` directive is used to define
 a sequence of tabs. Each tab is then defined with the `tab` directive followed by a label.
 
-RST
-~~~
+**How you write it**
 
 .. code-block:: rst
 
@@ -585,8 +584,21 @@ RST
 
          Third version for On-premise users.
 
-Render
-~~~~~~
+.. raw:: html
+
+   <div class="badge">How it looks</div>
+
++-----------------+
+| .. code-block:: |
+|                 |
+|    coincoin     |
++-----------------+
+|  +---+---+      |
+|  | a | a |      |
+|  +===+===+      |
+|  | O | o |      |
+|  +---+---+      |
++-----------------+
 
 .. tabs::
 
@@ -835,6 +847,110 @@ Document metadata
 
 | Sphinx supports document-wide metadata directives that specify a behavior for the entire page.
 | They must be placed between colons (`:`) at the top of the source file.
+
+Juste l'html:
+
++-----------------+------------------------------+
+| **Row 1**       | **Row 2**                    |
++=================+==============================+
+| Coincoin        |  Coiiiiiiin                  |
++-----------------+------------------------------+
+| This is a       |  Pouet                       |
+| multi-line      |                              |
+| row.            |                              |
++-----------------+------------------------------+
+
+Juste le rst:
+
+.. code-block:: rst
+
+   +-----------------+------------------------------+
+   | **Row 1**       | **Row 2**                    |
+   +=================+==============================+
+   | Coincoin        |  Coiiiiiiin                  |
+   +-----------------+------------------------------+
+   | This is a       |  Pouet                       |
+   | multi-line      |                              |
+   | row.            |                              |
+   +-----------------+------------------------------+
+
+::
+
+   table.special>tbody>tr {
+       border: 10px solid red;
+   }
+
+
+Combiné:
+
+.. rst-class:: special
+
++--------------------------------------------------------+
+|  +-----------------+------------------------------+    |
+|  | **Row 1**       | **Row 2**                    |    |
+|  +=================+==============================+    |
+|  | Coincoin        |  Coiiiiiiin                  |    |
+|  +-----------------+------------------------------+    |
+|  | This is a       |  Pouet                       |    |
+|  | multi-line      |                              |    |
+|  | row.            |                              |    |
+|  +-----------------+------------------------------+    |
++--------------------------------------------------------+
+|                                                        |
+| .. code-block:: rst                                    |
+|                                                        |
+|    +-----------------+------------------------------+  |
+|    | **Row 1**       | **Row 2**                    |  |
+|    +=================+==============================+  |
+|    | Coincoin        |  Coiiiiiiin                  |  |
+|    +-----------------+------------------------------+  |
+|    | This is a       |  Pouet                       |  |
+|    | multi-line      |                              |  |
+|    | row.            |                              |  |
+|    +-----------------+------------------------------+  |
+|                                                        |
++--------------------------------------------------------+
+
+
++------------------------+
+|  .. warning::          |
+|     Youpie             |
+|                        |
++------------------------+
+|  .. code-block:: rst   |
+|                        |
+|     .. warning::       |
+|        Youpie          |
+|                        |
++------------------------+
+
++------------------------+
+|                        |
+|     **Youpie**         |
+|                        |
++------------------------+
+|  .. code-block:: rst   |
+|                        |
+|     **Youpie**         |
+|                        |
++------------------------+
+
++-----------------------------------+
+|  .. tabs::                        |
+|                                   |
+|    .. code-tab:: python           |
+|                                   |
+|       print("Hello World")        |
+|                                   |
+|    .. code-tab:: javascript       |
+|                                   |
+|       console.log("Hello World"); |
+|                                   |
+|    .. code-tab:: html             |
+|                                   |
+|       <p>Hello World</p>          |
+|                                   |
++-----------------------------------+
 
 +-----------------+--------------------------------------------------------------------------------+
 | **Metadata**    | **Purpose**                                                                    |
