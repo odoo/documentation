@@ -149,7 +149,7 @@ are not only displayed in the document but also on the navigation menu (only the
 
 .. seealso::
    - :ref:`RST cheat sheet: headings <contributing/headings>`
-   - :ref:`RST cheat sheet: specialized directives <contributing/specialized-directives>`
+   - :ref:`RST cheat sheet: markups <contributing/markups>`
 
 .. _contributing/organizing-documentation:
 
