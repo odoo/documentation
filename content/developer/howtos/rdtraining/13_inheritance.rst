@@ -159,7 +159,7 @@ By convention, each inherited model is defined in its own Python file. In our ex
 
     - Add a domain to the field so it only lists the available properties.
 
-Now let's add the field to the view and check that everything is working well!
+In the next section let's add the field to the view and check that everything is working well!
 
 View Inheritance
 ================
