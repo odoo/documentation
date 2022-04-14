@@ -1,3 +1,5 @@
+.. _pricing/pricing_and_faq:
+
 ===================
 SMS Pricing and FAQ
 ===================
