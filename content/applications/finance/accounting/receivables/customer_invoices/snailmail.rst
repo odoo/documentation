@@ -1,3 +1,5 @@
+.. _customer_invoices/snailmail:
+
 ======================================
 Send your invoices by post (Snailmail)
 ======================================
