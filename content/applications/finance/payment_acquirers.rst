@@ -283,9 +283,20 @@ Countries
 *********
 
 Restrict the use of the payment acquirer to a selection of countries. Leave this field blank to make
-the payment acquirer available to all countries.
+the payment acquirer available in all countries.
 
 .. _payment_acquirers/journal:
+
+Maximum Amount
+**************
+
+Restrict the maximum amount that can be paid with the selected acquirer. Leave this field to `0.00`
+to make the payment acquirer available regardless of the payment amount.
+
+.. important::
+   This feature is not intended to work on pages which allow the customer to update the payment
+   amount. For example, the **Donation** snippet of the Website app, and the **Checkout** page of
+   the **eCommerce** app when paid delivery methods are enabled.
 
 Payment journal
 ***************
