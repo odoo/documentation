@@ -21,8 +21,8 @@
 # 0169fee580ff5de3f9b7241d14f30af9_5f30934 <1948a2319336319ed4429b6139c8c1c2_916898>, 2022
 # Martin Trigaux, 2022
 # Fernanda Marques <fem@odoo.com>, 2022
-# Cécile Collart <cco@odoo.com>, 2022
 # Khadija Mbazaa <khadija.mbazaa@gmail.com>, 2022
+# Cécile Collart <cco@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -31,7 +31,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-18 13:48+0000\n"
 "PO-Revision-Date: 2020-09-22 14:40+0000\n"
-"Last-Translator: Khadija Mbazaa <khadija.mbazaa@gmail.com>, 2022\n"
+"Last-Translator: Cécile Collart <cco@odoo.com>, 2022\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1165,6 +1165,11 @@ msgid ""
 "necessary to add an outgoing email server to send emails from your custom "
 "domain. You can enjoy this feature by using the default Odoo email server."
 msgstr ""
+"Si votre base de données est hébergée sur notre cloud (Odoo Online ou "
+"Odoo.sh), il n'est pas nécessaire d'ajouter un serveur de messagerie sortant"
+" pour envoyer des emails depuis votre domaine personnalisé. Vous pouvez "
+"profiter de cette fonctionnalité en utilisant le serveur de messagerie Odoo "
+"par défaut."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:24
 msgid ""
@@ -1234,6 +1239,8 @@ msgid ""
 "See the :ref:`documentation on incoming emails "
 "<email_communication/inbound_messages>`."
 msgstr ""
+"Voir la :ref:`documentation sur les emails entrants "
+"<email_communication/inbound_messages>`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
@@ -1253,16 +1260,20 @@ msgid ""
 "If your domain name does not yet have an SPF record, the content of the "
 "record to create is as follows:"
 msgstr ""
+"Si votre nom de domaine n'a pas encore d'enregistrement SPF, le contenu de "
+"l'enregistrement à créer est le suivant :"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:59
 msgid "``v=spf1 include:_spf.odoo.com ~all``"
-msgstr ""
+msgstr "``v=spf1 include:_spf.odoo.com ~all``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:61
 msgid ""
 "If your domain name already has an SPF record, you need to update this "
 "record (and do not create a new one)."
 msgstr ""
+"Si votre nom de domaine a déjà un enregistrement SPF, vous devez mettre à "
+"jour cet enregistrement (et ne pas en créer un nouveau)."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:66
 msgid ""
@@ -1270,16 +1281,21 @@ msgid ""
 "edit it to add `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 msgstr ""
+"Si votre enregistrement TXT est`v=spf1 include:_spf.google.com ~all`, vous "
+"devez le modifier pour ajouter `include:_spf.odoo.com`: `v=spf1 "
+"include:_spf.odoo.com include:_spf.google.com ~all`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:69
 msgid ""
 "You can check if your SPF record is valid with a free tool like `MXToolbox "
 "SPF <https://mxtoolbox.com/spf.aspx>`_."
 msgstr ""
+"Vous pouvez vérifier si votre enregistrement SPF est valide avec un outil "
+"gratuit comme `MXToolbox SPF <https://mxtoolbox.com/spf.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid "Enable DKIM"
-msgstr ""
+msgstr "Activer DKIM"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:77
 msgid ""
@@ -1304,7 +1320,7 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid "``odoo._domainkey IN CNAME odoo._domainkey.odoo.com.``"
-msgstr ""
+msgstr "``odoo._domainkey IN CNAME odoo._domainkey.odoo.com.``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -1312,22 +1328,31 @@ msgid ""
 "`odoo._domainkey.mycompany.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Si votre nom de domaine est `mycompany.com`, vous devez créer un sous-"
+"domaine `odoo._domainkey.mycompany.com` dont le nom canonique est "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:92
 msgid ""
 "How to create or modify a CNAME record depends on the provider hosting the "
 "DNS zone of your domain name. The most common providers are list below."
 msgstr ""
+"La manière de créer ou de modifier un enregistrement CNAME dépend du "
+"fournisseur hébergeant la zone DNS de votre nom de domaine. Les fournisseurs"
+" les plus courants sont listés ci-dessous."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:95
 msgid ""
 "You can check if your DKIM record is valid with a free tool like `DKIM Core "
 "<https://dkimcore.org/tools/>`_. If a selector is asked, enter `odoo`."
 msgstr ""
+"Vous pouvez vérifier si votre enregistrement DKIM est valide avec un outil "
+"gratuit comme `DKIM Core <https://dkimcore.org/tools/>`_. Si un sélecteur "
+"est demandé, entrez `odoo`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid "Check your DMARC policy"
-msgstr ""
+msgstr "Vérifiez votre politique DMARC"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:101
 msgid ""
@@ -1336,24 +1361,36 @@ msgid ""
 "DMARC record of a domain name tell the destination server what to do with an"
 " incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+"Le Domain-based Message Authentication, Reporting & Conformance (DMARC) est "
+"un protocole qui unifie SPF et DKIM. Les instructions contenues dans "
+"l'enregistrement DMARC d'un nom de domaine indiquent au serveur de "
+"destination quoi faire avec un email entrant qui échoue au contrôle SPF "
+"et/ou DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "There are three DMARC policies: - ``p=none`` - ``p=quarantine`` - "
 "``p=reject``"
 msgstr ""
+"Il existe trois politiques DMARC : - ``p=none`` - ``p=quarantine`` - "
+"``p=reject``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:110
 msgid ""
 "``p=quarantine`` and ``p=reject`` instruct the server that receives an email"
 " to quarantine that email or ignore it if the SPF and/or DKIM check fails."
 msgstr ""
+"``p=quarantine`` et ``p=reject`` indiquent au serveur qui reçoit un email de"
+" mettre ce dernier en quarantaine ou de l'ignorer si la vérification SPF "
+"et/ou DKIM échoue."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid ""
 "If your domain name uses DMARC and has defined one of these policies, it is "
 "therefore imperative to be SPF compliant or to enable DKIM."
 msgstr ""
+"Si votre nom de domaine utilise DMARC et a défini une de ces politiques, il "
+"est donc impératif d'être conforme SPF ou d'activer DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:117
 msgid ""
@@ -1361,6 +1398,10 @@ msgid ""
 "``p=reject``. We strongly advise against using an *@yahoo.com* or *@aol.com*"
 " address for your users. These emails will never reach their recipient."
 msgstr ""
+"Yahoo ou AOL sont des exemples de fournisseurs de messagerie avec une "
+"politique DMARC définie sur ``p=reject``. Nous vous déconseillons fortement "
+"d'utiliser une adresse *@yahoo.com* ou *@aol.com* pour vos utilisateurs. Ces"
+" emails n'atteindront jamais leur destinataire."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid ""
@@ -1368,12 +1409,17 @@ msgid ""
 "using their domain. It should not impact the deliverability if the DMARC "
 "check fails."
 msgstr ""
+"``p=none`` est utilisé pour que le propriétaire du domaine reçoive des "
+"rapports sur les entités utilisant son domaine. Cela ne devrait pas avoir "
+"d'incidence sur la délivrabilité si la vérification DMARC échoue."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:124
 msgid ""
 "You can check the DMARC record of a domain name with a tool like `MXToolbox "
 "DMARC <https://mxtoolbox.com/DMARC.aspx>`_."
 msgstr ""
+"Vous pouvez vérifier l'enregistrement DMARC d'un nom de domaine avec un "
+"outil comme `MXToolbox DMARC <https://mxtoolbox.com/DMARC.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:127
 msgid ""
@@ -1381,6 +1427,9 @@ msgid ""
 "of these policies, the Odoo server cannot relay emails from this partner to "
 "your users."
 msgstr ""
+"Si l'un de vos partenaires, client ou fournisseur, utilise DMARC et a défini"
+" une de ces politiques, le serveur Odoo ne peut pas relayer les emails de ce"
+" partenaire vers vos utilisateurs."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
@@ -1388,35 +1437,44 @@ msgid ""
 "<discuss_app/notification_preferences>`, or replace the email address of the"
 " partner with a default email address."
 msgstr ""
+"Vous devez :ref:`gérer les notifications des utilisateurs dans Odoo "
+"<discuss_app/notification_preferences>`, ou remplacer l'adresse email du "
+"partenaire par une adresse email par défaut."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:136
 msgid "SPF, DKIM & DMARC documentation of common providers"
-msgstr ""
+msgstr "Documentation SPF, DKIM & DMARC des fournisseurs courants"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:138
 msgid ""
 "`OVH DNS "
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 msgstr ""
+"`DNS OVH "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 msgstr ""
+"`SPF OVH <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
+"`Enregistrement TXT GoDaddy <https://www.godaddy.com/help/add-a-txt-"
+"record-19232>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
-msgstr ""
+msgstr "`SPF GoDaddy <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 msgstr ""
+"`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
@@ -1424,23 +1482,31 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
+"do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
 msgstr ""
+"`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 msgstr ""
+"`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:146
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 msgstr ""
+"`DNS Azure <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
+"portal>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid ""
@@ -1449,10 +1515,14 @@ msgid ""
 "configuration you have in one email sent! Mail-Tester can also be used for "
 "other lesser known providers."
 msgstr ""
+"Pour tester entièrement votre configuration, l'outil `Mail-Tester "
+"<https://www.mail-tester.com/>`_ vous donnera un aperçu complet du contenu "
+"et de la configuration dont vous disposez en un seul email envoyé ! Mail-"
+"Tester peut également être utilisé pour d'autres fournisseurs moins connus."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:153
 msgid "Use a default email address"
-msgstr ""
+msgstr "Utiliser une adresse email par défaut"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:155
 msgid ""
@@ -1484,6 +1554,9 @@ msgid ""
 "mode>` in the :menuselection:`Settings --> Technical --> Parameters --> "
 "System Parameters` menu."
 msgstr ""
+"Vous accédez aux **Paramètres système** en :ref:`mode développeur "
+"<developer-mode>` dans le menu :menuselection:`Paramètres --> Techniques -->"
+" Paramètres --> Paramètres système`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:3
 msgid "Send and Receive Emails in Odoo with an Email Server"
