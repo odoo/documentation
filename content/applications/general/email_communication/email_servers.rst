@@ -201,7 +201,7 @@ alias in your mail server.
    :ref:`developer mode <developer-mode>`.
 
  Then go to :menuselection:`Settings --> Technical --> Parameters --> System Parameters`
- to customize the aliases (*mail.catchall.alias* & * mail.bounce.alias*).
+ to customize the aliases (*mail.catchall.alias* & *mail.bounce.alias*).
 
  .. image:: email_servers/system-parameters.png
     :align: center
