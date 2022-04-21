@@ -9,16 +9,20 @@ etc. Formulas are written in Python but programming skills are not required.
 Configuration
 =============
 
-From the *General Settings*, active *Google Drive* and *Google Spreadsheet*. The options
+From the *General Settings*, activate *Google Drive* and *Google Spreadsheet*. The options
 *Authorization Code* and *Get Authorization Code* are now available.
 
 .. image:: google_spreadsheets/authori.png
    :align: center
    :alt: Enable the Google Drive and Google Spreadsheet features in Odoo
 
-Now, link your Google account with Odoo going to :menuselection:`Get Authorization Code -->
-select your Google account --> enter your password --> copy the code -->
-paste it into the Authorization Code field`.
+Now, link your Google account with Odoo by following these steps:
+
+#. Get Authorization Code
+#. Select your Google account
+#. Enter your password
+#. Copy the code
+#. Paste it into the Authorization Code field
 
 Create a new Spreadsheet
 ------------------------
@@ -48,8 +52,8 @@ Link a Spreadsheet with Odoo
 Applications
 ============
 
-You have 2 different formulas of using Google Spreadsheet in Odoo: retrieve data and retrieve
-grouped sums.
+You have two different formulas available when using Google Spreadsheet in Odoo: *retrieve data* and
+*retrieve grouped sums*.
 
 .. warning::
    Google Drive limits the execution time of scripts; if the data you requested takes
