@@ -20,7 +20,7 @@ Setting up a Putaway Rule
 
 In some cases, like for a retail shop storing vegetables and fruits, we have to store products in different locations to maintain product quality. 
 
-Let’s suppose there are one warehouse location *WH/Stock* and two sub-locations *WH/Stock/Vegatable* and *WH/Stock/Fruits*.
+Let’s suppose there are one warehouse location *WH/Stock* and two sub-locations *WH/Stock/Vegetables* and *WH/Stock/Fruits*.
 
 To manage those locations, we will create putaway rules. To do so, open the *Inventory* app and go
 to :menuselection:`Configuration --> Putaway Rules`. Then, click on create and configure your first
