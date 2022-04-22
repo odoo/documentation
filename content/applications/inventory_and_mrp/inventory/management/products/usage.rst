@@ -57,7 +57,7 @@ The packaging is a standard container containing several units of your
 product. If you are selling cans of soda, the packagings would be a 
 6-Pack, a 15-Pack or even a pallet.
 
-In Odoo, packagings are used for indicative purpose on sales/purchase
+In Odoo, packagings are used for indicative purposes on sales/purchase
 orders and transfers. 
 The main difference between packagings and units of measure is that 
 packagings are defined at product level while UoMs are generic. 
