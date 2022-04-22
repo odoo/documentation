@@ -1412,7 +1412,7 @@ root can have the following attributes:
     ``{$name}`` can be ``bf`` (``font-weight: bold``), ``it``
     (``font-style: italic``), or any `bootstrap contextual color`_ (``danger``,
     ``info``, ``muted``, ``primary``, ``success`` or ``warning``).
-``create``, ``edit``, ``delete``, ``duplicate``, ``import``, ``export_xlsx``
+``create``, ``edit``, ``delete``, ``import``, ``export_xlsx``
     allows *dis*\ abling the corresponding action in the view by setting the
     corresponding attribute to ``false``
 ``limit``
