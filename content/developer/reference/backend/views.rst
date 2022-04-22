@@ -92,7 +92,7 @@ an impact on all view types.
 
   Disable/enable record deletion on the view through the **Action** dropdown.
 
-* ``duplicate`` (``form`` & ``list``)
+* ``duplicate`` (``form``)
 
   Disable/enable record duplication on the view through the **Action** dropdown.
 
