@@ -6,10 +6,6 @@ The landed cost feature in Odoo allows to include additional costs
 (shipment, insurance, customs duties, etc.) into the cost of the
 product.
 
-.. note::
-         Landed costs can only be applied to products with a FIFO or AVCO costing
-         method and an automated inventory valuation (which requires the
-         accounting application to be installed).
 
 Configuration
 =============
