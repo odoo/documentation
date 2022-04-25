@@ -148,10 +148,10 @@ Here are some useful git commands for your day-to-day work.
   .. code-block:: console
 
     $ cd $HOME/src/odoo
-    $ git checkout 14.0
+    $ git checkout master
 
     $ cd $HOME/src/enterprise
-    $ git checkout 14.0
+    $ git checkout master
 
 * Fetch and rebase:
 
@@ -159,11 +159,11 @@ Here are some useful git commands for your day-to-day work.
 
     $ cd $HOME/src/odoo
     $ git fetch --all --prune
-    $ git rebase --autostash odoo/14.0
+    $ git rebase --autostash odoo/master
 
     $ cd $HOME/src/enterprise
     $ git fetch --all --prune
-    $ git rebase --autostash enterprise/14.0
+    $ git rebase --autostash enterprise/master
 
 
 Install the dependencies
