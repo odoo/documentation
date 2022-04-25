@@ -54,7 +54,8 @@ measure, and click on *Edit*.
 
 In the *General Information* tab, you can select the *Unit of
 Measure* in which the product will be sold, which is also the unit in
-which internal transfers will take place. You can also select the
+which internal transfers will take place. All quantities for this product across your
+company will be expressed in this unit of measure. You can also select the
 *Purchase Unit of Measure*, which is the unit in which you purchase
 the product.
 
