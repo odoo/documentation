@@ -18,7 +18,7 @@ Configuration
 In the *Inventory* application, go to :menuselection:`Configuration --> Settings`. In
 the *Products* section, activate *Units of Measure*, then *Save*.
 
-.. image:: uom/uom-setting.png
+.. image:: uom/01-setting.png
     :align: center
 
 Create New Units of Measure
@@ -29,7 +29,7 @@ The category is important for unit conversion, you will be able to
 convert products from one unit to another only if those units belong to
 the same category.
 
-.. image:: uom/uom-categories.png
+.. image:: uom/02-categories.png
     :align: center
     
 As an example, we will create a Box of 6 units that we will use for the Egg product.
@@ -41,7 +41,7 @@ will use for the Egg product.
 The box of 6 is 6 times bigger than the reference
 unit of measure for the category which is “Units” here.
 
-.. image:: uom/uom-add-uom.png
+.. image:: uom/03-add-uom.png
     :align: center
 
 
@@ -58,7 +58,7 @@ which internal transfers will take place. You can also select the
 *Purchase Unit of Measure*, which is the unit in which you purchase
 the product.
 
-.. image:: uom/product.png
+.. image:: uom/04-product.png
     :align: center
 
 Transfer from One Unit to Another
@@ -71,7 +71,7 @@ In the *Purchase* application, *Create* a new request for quotation
 in which you include the product with the different *Units of Measure*
 and *Confirm* it.
 
-.. image:: uom/purchase-create.png
+.. image:: uom/05-purchase.png
     :align: center
 
 On the automatically generated purchase orders, the UoM used is the Box
@@ -81,7 +81,7 @@ which is linked to the purchase order, you can observe that the 10 boxes
 of 6 units have been converted in 60 units. Indeed, the stock is managed
 in units.
 
-.. image:: uom/purchase-receipt.png
+.. image:: uom/06-receipt.png
     :align: center
 
 Replenishment
@@ -90,10 +90,10 @@ Replenishment
 When doing a replenishment via the *Replenish* button on the product
 form, you have the possibility to use a different unit of measure.
 
-.. image:: uom/replenish-01.png
+.. image:: uom/07-replenish.png
     :align: center
 
-.. image:: uom-replenish-02.png
+.. image:: uom/08-replenish.png
     :align: center
 
 Sell in bigger UoM
@@ -103,11 +103,11 @@ You can choose the unit of measure on the sale order document and decide
 to sell the eggs by the dozen. When doing so, the price is automatically
 computed from Units UoM to adapt to the selected *UoM*.
 
-.. image:: uom/sales.png
+.. image:: uom/09-sales.png
     :align: center
 
 In the delivery order, the *UoM* used in the sale order is converted
 to the *UoM* used for stock management, in our use case, the Units.
 
-.. image:: uom/delivery.png
+.. image:: uom/10-delivery.png
     :align: center
