@@ -18,26 +18,32 @@ Configuration
 In the *Inventory* application, go to :menuselection:`Configuration --> Settings`. In
 the *Products* section, activate *Units of Measure*, then *Save*.
 
-.. image:: media/uom_01.png
+.. image:: uom/uom-setting.png
     :align: center
 
 Create New Units of Measure
 ===========================
 
-In the *Inventory* application go to :menuselection:`Configuration --> UoM`. There,
-hit *Create*. As an example, we will create a Box of 6 units that we
-will use for the Egg product.
-
-.. image:: media/uom_02.png
-    :align: center
-
+In the *Inventory* application go to :menuselection:`Configuration --> UoM Categories`.
 The category is important for unit conversion, you will be able to
 convert products from one unit to another only if those units belong to
-the same category. The box of 6 is 6 times bigger than the reference
+the same category.
+
+.. image:: uom/uom-categories.png
+    :align: center
+    
+As an example, we will create a Box of 6 units that we will use for the Egg product.
+
+Hit on the *Unit* category. 
+
+Hit *Add a line*. As an example, we will create a Box of 6 units that we
+will use for the Egg product. 
+The box of 6 is 6 times bigger than the reference
 unit of measure for the category which is “Units” here.
 
-.. image:: media/uom_03.png
+.. image:: uom/uom-add-uom.png
     :align: center
+
 
 Specify Units of Measure on your Products
 =========================================
@@ -52,7 +58,7 @@ which internal transfers will take place. You can also select the
 *Purchase Unit of Measure*, which is the unit in which you purchase
 the product.
 
-.. image:: media/uom_04.png
+.. image:: uom/product.png
     :align: center
 
 Transfer from One Unit to Another
@@ -65,7 +71,7 @@ In the *Purchase* application, *Create* a new request for quotation
 in which you include the product with the different *Units of Measure*
 and *Confirm* it.
 
-.. image:: media/uom_05.png
+.. image:: uom/purchase-create.png
     :align: center
 
 On the automatically generated purchase orders, the UoM used is the Box
@@ -75,7 +81,7 @@ which is linked to the purchase order, you can observe that the 10 boxes
 of 6 units have been converted in 60 units. Indeed, the stock is managed
 in units.
 
-.. image:: media/uom_06.png
+.. image:: uom/purchase-receipt.png
     :align: center
 
 Replenishment
@@ -84,10 +90,10 @@ Replenishment
 When doing a replenishment via the *Replenish* button on the product
 form, you have the possibility to use a different unit of measure.
 
-.. image:: media/uom_07.png
+.. image:: uom/replenish-01.png
     :align: center
 
-.. image:: media/uom_08.png
+.. image:: uom-replenish-02.png
     :align: center
 
 Sell in bigger UoM
@@ -97,11 +103,11 @@ You can choose the unit of measure on the sale order document and decide
 to sell the eggs by the dozen. When doing so, the price is automatically
 computed from Units UoM to adapt to the selected *UoM*.
 
-.. image:: media/uom_09.png
+.. image:: uom/sales.png
     :align: center
 
 In the delivery order, the *UoM* used in the sale order is converted
 to the *UoM* used for stock management, in our use case, the Units.
 
-.. image:: media/uom_10.png
+.. image:: uom/delivery.png
     :align: center
