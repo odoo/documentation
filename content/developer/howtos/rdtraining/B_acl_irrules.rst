@@ -168,7 +168,7 @@ C                     X
 ====== ====== ==== ====== ======
 
 A user with the groups A and C will be able to do anything but delete the object
-while one with B and C will be able to read or update, but not search or read.
+while one with B and C will be able to read and update it, but not create or delete it.
 
 .. note::
 
