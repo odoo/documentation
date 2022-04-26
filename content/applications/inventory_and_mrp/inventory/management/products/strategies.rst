@@ -76,7 +76,7 @@ Purchase/Manufacturing orders created by the Replenishment will have *Replenishm
 source document when created manually. If they are created automatically source document will be
 *OP/xxxxxxx* or *OP/xxxxxxx - Sxxxxxx* with the Sales Order(s) reference that triggered the rule.
 
-.. image:: strategies/snooze.png
+.. image:: strategies/rfq.png
     :align: center
     
 .. tip::
