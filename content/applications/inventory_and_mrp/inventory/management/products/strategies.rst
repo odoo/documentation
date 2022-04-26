@@ -2,54 +2,83 @@
 How to select the right replenishment strategy
 ==============================================
 
-Minimum Stock rules and Make to Order have similar consequences but
-different rules. They should be used depending on your manufacturing and
-delivery strategies.
+Reordering Rules and Make to Order have similar consequences: creating a
+Purchase or Manufacturing order automatically.
+But those methods work differently. They should be used depending on your 
+manufacturing and delivery strategies.
 
 Terminology
 ===========
 
-Minimum stock rule 
--------------------
+Replenishment Report and Reordering Rules
+-----------------------------------------
 
-Minimum Stock rules are used to ensure that you always have the minimum
+The replenishment report is a list all your products having a negative forecast 
+quantity. 
+Reordering rules are used to ensure that you always have the minimum
 amount of a product in stock in order to manufacture your products
 and/or answer to your customer needs. When the stock level of a product
 reaches its minimum the system will automatically generate a procurement
 order with the quantity needed to reach the maximum stock level.
+Reordering Rules can be created and managed in the replenishment report or
+from the product form.
 
 Make to Order
 -------------
 
-The Make to Order function will trigger a Purchase Order of the amount
-of the Sales Order related to the product. The system will **not** check
-the current stock. This means that a draft purchase order will be
-generated regardless of the quantity on hand of the product.
+The Make to Order is a route that creates a draft purchase order or manufacturing 
+order each time a sales order is confirmed, **regardless of the current stock**. 
+A strong link is created between the 
+SO and the PO/MO. 
+Another difference with Reorering Rules is that with MTO, a new PO or MO is generated
+immediately at the confirmation of the SO. With Reordering rules, as long as the 
+PO or MO is not confirmed, quantities will be added to it.
+This is a good way to handle products that are customized and should be 
+used for this purpose only.
 
 Configuration
 =============
 
-Minimum stock rules
--------------------
+Replenishment Report
+--------------------
+This Feature can be accessed through :menuselection:`Inventory --> Operations --> Replenishment`
+By default, the Replenishment Report show every product that needs to be reoredered manually. 
+If there is no specific rule for a product, it's assumed that the min and max stock are 0.
 
-The Minimum Stock Rules configuration is available through your
-Inventory module. In the Inventory Control menu select "Reordering Rule"
-in the drop down menu. There, click on "Create" to set minimum and
-maximum stock values for a given product.
-
-.. image:: media/strategies01.png
+.. image:: strategies/replenishment.png
     :align: center
 
 .. note::
-    Show tooltips for "minimum quantity", "maximum quantity" and "quantity multiple"
-    fields
+    - If a product doesn't have any specific rule, the system will check the forecast in an
+      infinite future.
+    - If a product has a specific rule, the system will check the forecast at D + 
+      purchase/manufacturing lead time + security lead time.
 
-Then, click on your product to access the related product form and, on
-the "Inventory submenu", do not forget to select a supplier.
+A Reordering Rule can be added through the replenishment report by simply adding a 
+line in the report. Be sure to have necessary information like supplier or bill of material configured on
+your product.
 
-.. image:: media/strategies02.png
+By default, the quantity to order is the quantity required to fill your max quantity in stock 
+but it can be adjusted. To replenish manually, just hit **Order Once**.
+
+Rules can create automatically a Purchase Order or a Manufacturing order when
+required. For this, hit **Automate Orders**
+
+A Reordering Rule can be temporarly deactivated for a given period by using the **Snooze** button. 
+
+
+
+.. image:: strategies/snooze.png
     :align: center
 
+
+Purchase/Manufacturing orders created by the Replenishment will have *Replenishment Report* as
+source document when created manually. If they are created automatically source document will be
+*OP/xxxxxxx* or *OP/xxxxxxx - Sxxxxxx* with the Sales Order(s) reference that triggered the rule.
+
+.. image:: strategies/snooze.png
+    :align: center
+    
 .. tip::
     Don't forget to select the right product type. A consumable
     can not be stocked and will thus not be accounted for in the stock valuation.
@@ -57,20 +86,29 @@ the "Inventory submenu", do not forget to select a supplier.
 Make to Order 
 --------------
 
-The Make to Order configuration is available on your product form
-through your :menuselection:`Inventory --> Inventory control --> Products` (or any
-other module where products are available).
+As this configuration is recommended in particular cases, the Make to Order is a bit hidden in Odoo.
+To activate it:
+#. go to :menuselection:`Inventory --> Configuration --> Settings` 
+#. activate setting **Multi-Step Routes** and save.
+#. go to :menuselection:`Inventory --> Configuration --> Routes` 
+#. Filter on archived routes
+#. Unarchive MTO route: select route and pick action *Unarchive*
 
-On the product form, under Inventory, click on "Make To Order".
+.. note::
+    Activating Multi-Step Routes also activate **Storage Locations** setting. If you don't need these features, 
+    don't forget to disable then after unarchiving the MTO route.
+    
+On the product form, in the Inventory tab, click on "Make To Order".
 
-.. image:: media/strategies03.png
+.. image:: strategies/product.png
     :align: center
 
 Choice between the two options
 ------------------------------
 
-The choice between the two options is thus dependent of your inventory
-strategy. If you prefer to have a buffer and always have at least a
-minimum amount, the minimum stock rule should be used. If you want to
-reorder your stocks only if your sale is confirmed it is better to use
-the Make to Order.
+Using the Replenishment Report with rules is the most flexible way
+to manage your stock levels. It can do the same as MTO except the strong 
+link between SO and PO/MO is not existing.
+Unless you sell/manufacture customized items, it's highly recommended to
+use the Replenishment Report.
+
