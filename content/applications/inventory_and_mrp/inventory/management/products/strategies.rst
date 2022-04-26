@@ -88,11 +88,11 @@ Make to Order
 
 As this configuration is recommended in particular cases, the Make to Order is a bit hidden in Odoo.
 To activate it:
-#. go to :menuselection:`Inventory --> Configuration --> Settings` 
+#. go to :menuselection:`Inventory --> Configuration --> Settings`
 #. activate setting **Multi-Step Routes** and save.
-#. go to :menuselection:`Inventory --> Configuration --> Routes` 
-#. Filter on archived routes
-#. Unarchive MTO route: select route and pick action *Unarchive*
+#. go to :menuselection:`Inventory --> Configuration --> Routes`
+#. Filter on archived routes.
+#. Unarchive MTO route: select route and pick action *Unarchive*.
 
 .. note::
     Activating Multi-Step Routes also activate **Storage Locations** setting. If you don't need these features, 
