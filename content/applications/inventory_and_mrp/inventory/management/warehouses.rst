@@ -8,5 +8,5 @@ Warehouses
    :titlesonly:
    :glob:
 
-   warehouses/difference_warehouse_location
+   warehouses/warehouse_location
    warehouses/resupply_warehouses
