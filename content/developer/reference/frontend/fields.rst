@@ -34,7 +34,10 @@ Fields are simply owl components registered in the fields registry.
 
     registry.category("fields").add("counter", CounterField);
 
-The component of a field receives several props:
+Most of those components can be instanciated as standalone components, since
+they are built around props, and can be used easily without a record.
+
+By default, the component of a field receives several props:
 
 .. list-table::
    :widths: 20 20 60
@@ -107,7 +110,7 @@ Reference List
    * - :ref:`BooleanField <frontend/fields/boolean_field>`
      - `boolean`
      - `boolean`
-     - Displays a checkbox
+     - displays a checkbox
    * - :ref:`BooleanToggleField <frontend/fields/boolean_toggle_field>`
      - `boolean_toggle`
      - `boolean`
@@ -147,7 +150,7 @@ Reference List
    * - :ref:`EmailField <frontend/fields/email_field>`
      - `text`
      - `char`
-     - display email addresses
+     - displays email addresses
    * - :ref:`HandleField <frontend/fields/handle_field>`
      - `handle`
      - `integer`
@@ -155,6 +158,10 @@ Reference List
    * - :ref:`ImageField <frontend/fields/image_field>`
      - `image`
      - `binary`
+     - description...
+   * - :ref:`ImageUrlField <frontend/fields/image_url_field>`
+     - `image`
+     - `char`
      - description...
    * - :ref:`Many2ManyCheckboxesField <frontend/fields/many2many_checkboxes_field>`
      - `many2many_checkboxes`
@@ -164,6 +171,10 @@ Reference List
      - `many2many_tags`
      - `many2many`
      - description...
+   * - :ref:`Many2ManyTagsAvatarField <frontend/fields/many2many_tags_avatar_field>`
+     - `many2many_tags_avatar`
+     - `many2many`
+     - description...
    * - :ref:`Many2oneField <frontend/fields/many2one_field>`
      - `many2one`
      - `many2one`
@@ -171,19 +182,19 @@ Reference List
    * - :ref:`PdfViewerField <frontend/fields/pdf_viewer_field>`
      - `pdf_viewer`
      - `binary`
-     - display a progress bar
+     - displays a progress bar
    * - :ref:`PercentageField <frontend/fields/percentage_field>`
      - `text`
      - `integer`, `float`
-     - display percentages
+     - displays percentages
    * - :ref:`PercentPieField <frontend/fields/percent_pie_field>`
      - `text`
      - `integer`, `float`
-     - display a progress using a pie
+     - displays a progress using a pie
    * - :ref:`PhoneField <frontend/fields/phone_field>`
      - `text`
      - `char`, `integer`
-     - display phone numbers
+     - displays phone numbers
    * - :ref:`PriorityField <frontend/fields/priority_field>`
      - `priority`
      - `selection`
@@ -191,7 +202,7 @@ Reference List
    * - :ref:`ProgressBarField <frontend/fields/progress_bar_field>`
      - `priority`
      - `integer`, `float`
-     - display a progress bar
+     - displays a progress bar
    * - :ref:`RadioField <frontend/fields/radio_field>`
      - `radio`
      - `many2one`, `selection`
@@ -219,7 +230,7 @@ Reference List
    * - :ref:`UrlField <frontend/fields/url_field>`
      - `text`
      - `char`
-     - display URLs
+     - displays URLs
 
 
 .. _frontend/fields/binary_field:
@@ -309,6 +320,13 @@ CharField
 - Technical name: `char`
 - Supported types: `char`
 
+The purpose of CharField to represent in a simple manner some text in a view. It is the default
+field for all fields of type `char`.
+
+.. code-block:: xml
+
+    <field name="my_field" widget="char" />
+
 
 .. _frontend/fields/color_field:
 
@@ -319,6 +337,10 @@ ColorField
 - Technical name: `color`
 - Supported types: `char`
 
+The ColorField allows the user to pick any kind of color from a dialog representing the
+full spectrum. The value is a `char` containing the hexadecimal value of the color (including
+an alpha value);
+
 
 .. _frontend/fields/color_picker_field:
 
@@ -328,6 +350,10 @@ ColorPickerField
 - Location: `@web/fields/color_picker_field`
 - Technical name: `color_picker`
 - Supported types: `integer`
+
+The ColorField allows the user to pick some color from a list of predefined colors.
+Those colors are represented by an `integer` corresponding to the color codes of
+bootstrap.
 
 
 .. _frontend/fields/copy_clipboard_char_field:
@@ -382,6 +408,16 @@ DateField
 - Supported types: `date`, `datetime`
 
 
+.. _frontend/fields/daterange_field:
+
+DateRangeField
+--------------
+
+- Location: `@web/fields/daterange_field`
+- Technical name: `daterange`
+- Supported types: `date`, `datetime`
+
+
 .. _frontend/fields/datetime_field:
 
 DateTimeField
@@ -390,6 +426,17 @@ DateTimeField
 - Location: `@web/fields/datetime_field`
 - Technical name: `datetime`
 - Supported types: `datetime`
+
+
+.. _frontend/fields/domain_field:
+
+DomainField
+-----------
+
+- Location: `@web/fields/domain_field`
+- Technical name: `domain`
+- Supported types: `char`
+
 
 .. _frontend/fields/email_field:
 
@@ -429,6 +476,16 @@ ImageField
 - Supported types: `binary`
 
 
+.. _frontend/fields/image_url_field:
+
+ImageUrlField
+-------------
+
+- Location: `@web/fields/image_url_field`
+- Technical name: `image_url`
+- Supported types: `char`
+
+
 .. _frontend/fields/many2many_checkboxes_field:
 
 Many2ManyCheckboxesField
@@ -447,6 +504,27 @@ Many2ManyTagsField
 - Location: `@web/fields/many2many_tags_field`
 - Technical name: `many2many_tags`
 - Supported types: `many2many`
+
+
+.. _frontend/fields/many2many_tags_avatar_field:
+
+Many2ManyTagsAvatarField
+------------------------
+
+- Location: `@web/fields/many2many_tags_avatar_field`
+- Technical name: `many2many_tags_avatar`
+- Supported types: `many2many`
+
+This field is is similar to the Many2ManyTagsField in appearance, with
+the addition of the image displayed on the left part of the tags. The user
+can remove a person from the list by clicking on the delete button. However,
+it is not possible to select colors specific to the associated records.
+
+In a list, the field will only display 5 tags, and it is not possible
+to delete the person from the tag.
+
+In a kanban, the field will only display 3 tags, and it is not possible
+to delete the person from the tag.
 
 
 .. _frontend/fields/many2one_field:
