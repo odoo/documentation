@@ -7,73 +7,10 @@ Proceeding to such behavior is called *inter-warehouse transfers*. If this actio
 easy to perform, the administrative part can be arduous. Fortunately, Odoo comes with an intuitive
 flow that helps save time when registering those transfers.
 
-Configuration
-=============
-
-First of all, go to :menuselection:`Configuration --> Settings` and enable **Storage Locations**.
-Then, hit save.
-
-.. image:: inter_warehouse/feature-storage-location.png
-   :align: center
-   :alt: Enabling the storage location feature in Odoo Inventory.
-
-.. important::
-   If you want to manage several routes within your warehouses, then enable **Multi-Step Routes**
-   and check :doc:`use-routes`.
-
-Creating a new warehouse
-========================
-
-The next step is to create your new warehouse. To do so, go to :menuselection:`Configuration -->
-Warehouse Management --> Warehouses` and click on **Create**.
-
-Fill out a **Warehouse Name** and a **Short Name**. The short name is five characters maximum.
-
-.. image:: inter_warehouse/create-new-warehouse.png
-   :align: center
-   :alt: Short name field of a warehouse on Odoo Inventory.
-
-.. important::
-   The **Short Name** appears on your transfer orders and other warehouse documents. We recommend
-   using an understandable one (e.g.: WH/[first letters of location]).
-
-Now, go back to your dashboard. There, new operations related to your warehouse have been
-automatically generated.
-
-.. image:: inter_warehouse/new-transfer-types.png
-   :align: center
-   :alt: Inventory app dashboard displaying new transfer type for the recently created warehouse.
-
-Creating a new inventory
-========================
-
-If you create a new warehouse, you might already have an existing inventory in it. In that case, you
-should create an inventory in Odoo. If this is not the case, you can skip this step.
-
-Into the inventory application, select :menuselection:`Operations --> Inventory Adjustment`.
-Then, create a new inventory by clicking on **Create**. Fill in the **Inventory Reference**,
-**Date** and make sure to select the right warehouse and location.
-
-.. image:: inter_warehouse/annual-inventory.png
-   :align: center
-   :alt: View of the inventory adjustment form before hitting the start button.
-
-Next, click on **Start Inventory**. You will be able to input your existing products in the new
-window. Select add an item and indicate the **Real Quantity** available in the warehouse.
-The theoretical quantity can not be changed as it represents a computed one from purchase and sales
-orders.
-
-.. image:: inter_warehouse/in-progress-annual-inventory.png
-   :align: center
-   :alt: View of the actual physical inventory of the new warehouse.
-
-.. tip::
-   Don't forget to validate your inventory once you have recorded the state of all your products.
 
 Create an internal transfer
 ===========================
-
-The final step is to create your internal transfer. If you want to transfer eight units of a product
+If you want to transfer eight units of a product
 from your first warehouse to another one, proceed as follows:
 
 From your dashboard, select an internal movement of one of the two warehouses. To do so, click on
