@@ -8,4 +8,5 @@ Inventory Adjustment
    :titlesonly:
    :glob:
 
-   replenishment_strategies/virtual_warehouses
+   inventory_adjustments/count_products
+   inventory_adjustments/cycle_counts
