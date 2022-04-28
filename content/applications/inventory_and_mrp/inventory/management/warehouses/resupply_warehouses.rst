@@ -38,9 +38,6 @@ In this example, a reordering rule is set with a minimum of 5 units
 in stock and a maximum of 10 units in stock, having currently 0 units on
 hand.
 
-.. image:: resupply_warehouses/virtual_warehouses_04.png
-   :align: center
-
 The system automatically creates two pickings, one *delivery order*
 from my Second Warehouse which contains the necessary products, and a
 receipt in my main warehouse WH/Stock for the same products. The source
