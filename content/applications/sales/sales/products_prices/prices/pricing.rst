@@ -4,7 +4,7 @@ How to adapt your prices to your customers and apply discounts
 
 Odoo has a powerful pricelist feature to support a pricing strategy tailored to your business.
 A pricelist is a list of prices or price rules that Odoo searches to determine the suggested price.
-You can set several critarias to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
+You can set several criteria to use a specific price: periods, min. sold quantity (meet a minimum order quantity and get a price break), etc.
 
 As pricelists only suggest prices, they can be overridden by vendors completing sales orders.
 Choose your pricing strategy from :menuselection:`Sales --> Settings`.
