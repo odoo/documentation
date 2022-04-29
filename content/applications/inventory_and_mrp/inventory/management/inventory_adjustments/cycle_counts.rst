@@ -8,8 +8,8 @@ scheduled date for the next count is set on the 31th of decemeber.
 But for some businesses it's crucial to have an accurate
 inventory count. 
 
-The goal of cycle counts is to count only what's necessary
-to keep your stock levels accurate.
+The goal of cycle counts is to count more often at key locations
+to keep your critical stock levels accurate.
 
 Configuration
 =============
