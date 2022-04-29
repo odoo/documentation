@@ -46,6 +46,8 @@ Code and Name
 
 Each account is identified by its **Code** and **Name**, which also indicates the account's purpose.
 
+.. _chart-of-account/type:
+
 Type
 ----
 
