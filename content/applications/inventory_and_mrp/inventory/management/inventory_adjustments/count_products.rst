@@ -80,13 +80,17 @@ prefill the quantity with the on hand quantity.
 .. image:: count_products/request-count.png
    :align: center
    :alt: history of moves
-   
-   
+     
 .. tip::
     The report offers a lot of filters that you can use to make your selection
+    
+By default, after an adjustment is applied, the scheduled date for the next 
+count is the 31th of december of the current year. This is a setting that can
+be modified in :menuselection:`Inventory --> Configuration --> Settings`.
+under the setting **Annual Inventory Day and Month**
+
+.. image:: count_products/annual-inventory.png
+   :align: center
+   :alt: history of moves
 
 
-
-.. note::
-    Show tooltips for "minimum quantity", "maximum quantity" and "quantity multiple"
-    fields
