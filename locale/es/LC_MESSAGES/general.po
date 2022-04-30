@@ -25,10 +25,10 @@
 # Vivian Montana <vmo@odoo.com>, 2022
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lucia Pacheco <lpo@odoo.com>, 2022
-# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # Borja García Rouco <bgrouco@gmail.com>, 2022
 # Martin Trigaux, 2022
 # marcescu, 2022
+# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -37,7 +37,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-08 13:26+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
-"Last-Translator: marcescu, 2022\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2300,6 +2300,7 @@ msgstr ""
 #: ../../content/applications/general/email_communication/email_template.rst:16
 msgid "Defining a default reply to on your mail template"
 msgstr ""
+"Definir una respuesta predeterminada en su plantilla de correo electrónico"
 
 #: ../../content/applications/general/email_communication/email_template.rst:18
 msgid ""
@@ -2310,10 +2311,17 @@ msgid ""
 " on the action button. If you have an option to send an email, you will see "
 "a mail composer with possible values to define:"
 msgstr ""
+"Aunque el campo *Responder a* está disponible en las plantillas de correo, "
+"**este campo solo se utiliza en el modo de envío masivo de correos** (al "
+"enviar plantillas en lo que llamamos envío de correos electrónicos en masa)."
+" Puede enviar correos electrónicos en masa en casi cualquier aplicación que "
+"tenga una lista de vista. Seleccione los registros que desea y haga clic en "
+"el botón de acción. Si tiene una opción para enviar un correo electrónico, "
+"verá un redactor de correo con posibles valores para definir:"
 
 #: ../../content/applications/general/email_communication/email_template.rst:28
 msgid "You can also define them by default on the template:"
-msgstr ""
+msgstr "También puede definirlos de forma predeterminada en la plantilla:"
 
 #: ../../content/applications/general/email_communication/email_template.rst:34
 msgid ""
@@ -2324,10 +2332,19 @@ msgid ""
 "please check :ref:`how to manage inbound messages "
 "<email_communication/inbound_messages>`."
 msgstr ""
+"Debido a esto, establecer un valor en este campo no es de utilidad, ya que "
+"el valor definido se ignorará por completo. El valor *Responder a* "
+"predeterminado es la dirección de correo electrónico catchall predeterminada"
+" para garantizar la comunicación entre su cliente y su base de datos de "
+"Odoo. Para obtener más información sobre cómo funciona el catchall, consulte"
+" :ref:`cómo gestionar los mensajes entrantes "
+"<email_communication/inbound_messages>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:40
 msgid "Transactional emails and corresponding URL for each company"
 msgstr ""
+"Correos electrónicos transaccionales y los URL correspondientes a cada "
+"empresa"
 
 #: ../../content/applications/general/email_communication/email_template.rst:42
 msgid ""
@@ -2335,6 +2352,10 @@ msgid ""
 "These emails are known as transactional emails and sometimes contain links "
 "pointing to your Odoo database."
 msgstr ""
+"Al usar Odoo, varios eventos pueden activar el envío de correos electrónicos"
+" automatizados. Estos correos electrónicos se conocen como correos "
+"electrónicos transaccionales y a veces contienen enlaces que llevan a su "
+"base de datos de Odoo."
 
 #: ../../content/applications/general/email_communication/email_template.rst:45
 msgid ""
@@ -2342,12 +2363,19 @@ msgid ""
 " defined in the system parameters. More information about this "
 ":ref:`parameter <domain-name/web-base-url>`."
 msgstr ""
+"De forma predeterminada, los enlaces generados por la base de datos usan la "
+"clave dinámica web.base.url que se definió en los parámetros del sistema. "
+"Consulte más información sobre este :ref:`parámetro <domain-name/web-base-"
+"url>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:48
 msgid ""
 "If the website application isn't installed, the web.base.url key will always"
 " be the default parameter used to generate all the links."
 msgstr ""
+"Si la aplicación de Sitio web no está instalada, la clave web.base.url "
+"siempre será el parámetro predeterminado que se utilizó para generar todos "
+"los enlaces."
 
 #: ../../content/applications/general/email_communication/email_template.rst:51
 msgid ""
@@ -2357,6 +2385,12 @@ msgid ""
 "document or within a transactional email might remain the same, whatever the"
 " website/company related to the sending of the email/document."
 msgstr ""
+"Es importante saber que esta clave solo puede tener un único valor, lo que "
+"significa que en un entorno de múltiples empresas o sitios web, incluso si "
+"tiene un nombre de dominio específico para cada sitio web, los enlaces "
+"generados para compartir un documento o dentro de un correo electrónico "
+"transaccional podrían mantenerse igual, sin importar el sitio web o empresa "
+"relacionados con el envío del correo electrónico o el documento."
 
 #: ../../content/applications/general/email_communication/email_template.rst:56
 msgid ""
@@ -2366,6 +2400,11 @@ msgid ""
 "generated in the email template will use the domain defined on the "
 "corresponding website of the company."
 msgstr ""
+"Este no es siempre el caso porque algunas aplicaciones de Odoo tienen un "
+"enlace establecido en la base de datos con la aplicación de Sitio web, lo "
+"que significa que, en este caso, si se define un dominio específico para los"
+" sitios web, el URL generado en la plantilla de correo electrónico utilizará"
+" el dominio definido en el sitio web correspondiente de la empresa."
 
 #: ../../content/applications/general/email_communication/email_template.rst:62
 msgid ""
@@ -2375,6 +2414,11 @@ msgid ""
 "web.base.url key value), whatever the company it's shared from, this is a "
 "known limitation!"
 msgstr ""
+"Un documento que se compartió al usar la aplicación de Documentos siempre "
+"usará la clave web.base.url, ya que el documento compartido no está asociado"
+" a ningún sitio web particular. Lo que significa que el URL siempre será el "
+"mismo (el valor de la clave web.base.url), sin importar la empresa desde la "
+"que se comparte. ¡Esta es una limitación conocida!"
 
 #: ../../content/applications/general/email_communication/email_template.rst:67
 msgid ""
@@ -2383,6 +2427,11 @@ msgid ""
 "order was made. As a result, the e-mail sent for the sales orders uses the "
 "domain name defined for the corresponding website to generate the links."
 msgstr ""
+"Por otro lado, las órdenes de venta hechas por clientes en uno de sus sitios"
+" web de comercio electrónico de Odoo tienen un enlace establecido con el "
+"sitio web que originó la orden. Como resultado, el correo electrónico "
+"enviado para las órdenes de ventas usa el nombre de dominio que se definió "
+"para el sitio web correspondiente para generar los enlaces."
 
 #: ../../content/applications/general/email_communication/email_template.rst:71
 msgid ""
@@ -2390,10 +2439,13 @@ msgid ""
 "check :doc:`our domain name documentation "
 "</administration/maintain/domain_names>`."
 msgstr ""
+"Para obtener más información sobre cómo configurar sus dominios, consulte "
+":doc:`nuestra documentación sobre nombres de dominio "
+"</administration/maintain/domain_names>`."
 
 #: ../../content/applications/general/email_communication/email_template.rst:75
 msgid "Updating translations within email templates"
-msgstr ""
+msgstr "Actualizar traducciones en plantillas de correos electrónicos"
 
 #: ../../content/applications/general/email_communication/email_template.rst:77
 msgid ""
@@ -2401,6 +2453,9 @@ msgid ""
 "shouldn’t be necessary. However, if for a specific reason you’d like to "
 "change some of the translations, this can be done."
 msgstr ""
+"Las plantillas de correo electrónico se traducen de forma automática. No es "
+"necesario cambiar las traducciones. Sin embargo, es posible cambiarlas si "
+"por alguna razón en específico desea hacerlo."
 
 #: ../../content/applications/general/email_communication/email_template.rst:80
 msgid ""
@@ -2408,15 +2463,20 @@ msgid ""
 "aren’t done correctly (for example modifications leading to bad syntax) can "
 "break the template, as a result, the template will appear blank."
 msgstr ""
+"Al igual que con las modificaciones de código, tenga en cuenta que las "
+"modificaciones que no se hagan correctamente (por ejemplo, modificaciones "
+"que lleven a una mala sintaxis) pueden romper la plantilla y, cómo "
+"resultado, aparecerá en blanco."
 
 #: ../../content/applications/general/email_communication/email_template.rst:84
 msgid ""
 "In order to edit your translations, follow these steps from the template."
-msgstr ""
+msgstr "Para editar sus traducciones, siga estos pasos en la plantilla."
 
 #: ../../content/applications/general/email_communication/email_template.rst:86
 msgid "Click on the edit button, then on the language button"
 msgstr ""
+"Haga clic en el botón de editar, luego haga clic en el botón de idioma."
 
 #: ../../content/applications/general/email_communication/email_template.rst:92
 msgid ""
@@ -2424,6 +2484,9 @@ msgid ""
 "be displayed. From here, editing the translations will be possible. Don't "
 "forget to hit the save button to preserve your changes."
 msgstr ""
+"Aparecerá una ventana emergente con los distintos idiomas instalados en la "
+"base de datos. Aquí es posible editar las traducciones. No olvide guardar "
+"sus cambios al hacer clic en el botón de Guardar."
 
 #: ../../content/applications/general/email_communication/faq.rst:3
 msgid "FAQ"
@@ -2434,6 +2497,8 @@ msgid ""
 "This document contains an explanation of the most recurring mailing "
 "concerns."
 msgstr ""
+"Este documento contiene una explicación de las preguntas más comunes sobre "
+"correos."
 
 #: ../../content/applications/general/email_communication/faq.rst:7
 msgid ""
@@ -2441,14 +2506,18 @@ msgid ""
 " received my email), and then, of incoming emails (ex: I do not receive "
 "responses from my customers in the database)."
 msgstr ""
+"Empezaremos abordando los problemas de los correos electrónicos salientes "
+"(por ejemplo: mi cliente no ha recibido mi correo electrónico) y, "
+"posteriormente, de los correos electrónicos entrantes (por ejemplo: no "
+"recibo respuestas de mis clientes en la base de datos)."
 
 #: ../../content/applications/general/email_communication/faq.rst:11
 msgid "Outgoing emails"
-msgstr ""
+msgstr "Correos electrónicos salientes"
 
 #: ../../content/applications/general/email_communication/faq.rst:16
 msgid "What do you have to check if your email is not sent?"
-msgstr ""
+msgstr "¿Qué debe revisar si no se envía su correo electrónico?"
 
 #: ../../content/applications/general/email_communication/faq.rst:18
 msgid ""
