@@ -65,6 +65,17 @@ API key as you'll not be allowed to get it later without generating a new one.
    If you are trying Ogone as a test, with the Test Account, change the **State** to *Test Mode*. We
    recommend doing this on a test Odoo database, rather than on your main database.
 
+Hash function
+~~~~~~~~~~~~~
+
+The hash function used to communicate with Ogone. It should be similar to the one set on Ogone.
+
+For new Odoo database, it's set to 'SHA512' by default which is Ogone default.
+If you upgrade from an older Odoo version, it will be set to Odoo's old default ('SHA1').
+
+This setting is only available in developer mode.
+
+
 Configuration on Ogone
 ======================
 
