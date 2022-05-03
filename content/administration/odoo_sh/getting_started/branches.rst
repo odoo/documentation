@@ -71,7 +71,7 @@ The neutralization includes:
 * Disabling outgoing emails by intercepting them with a mailcatcher. An
   :ref:`interface to view <odoosh-gettingstarted-branches-tabs-mails>` the emails sent by your
   database is provided. That way, you do not have to worry about sending test emails to your contacts.
-* Setting payment acquirers and shipping providers in test mode.
+* Setting payment providers and shipping providers in test mode.
 * Disabling IAP services
 
 The latest database will be kept alive indefinitely, older ones from the same branch may get garbage collected

@@ -9,7 +9,7 @@ Link your Stripe Account with Odoo
 ==================================
 
 .. seealso::
-   - :ref:`payment_acquirers/add_new`
+   - :ref:`payment_providers/add_new`
 
 The method to acquire your credentials depends on your hosting type:
 
@@ -21,14 +21,14 @@ The method to acquire your credentials depends on your hosting type:
       #. Fill in the requested information and submit the form.
       #. Confirm your email address when Stripe sends you a confirmation email.
       #. At the end of the process, you are redirected to Odoo. If you submitted all the requested
-         information, you are all set and your payment acquirer is enabled.
+         information, you are all set and your payment provider is enabled.
       #. You can continue to :ref:`stripe/local-payment-methods`.
 
       .. tip::
          To use your own API keys, :ref:`activate the Developer mode <developer-mode>` and
-         :ref:`enable Stripe manually <payment_acquirers/add_new>`. You can then :ref:`Fill in your
+         :ref:`enable Stripe manually <payment_providers/add_new>`. You can then :ref:`Fill in your
          credentials <stripe/api-keys>`, :ref:`generate a webhook <stripe/webhook>` and enable the
-         payment acquirer.
+         payment provider.
 
    .. group-tab:: Odoo.sh or On-premise
 
@@ -36,15 +36,15 @@ The method to acquire your credentials depends on your hosting type:
          payments* button on the onboarding banner.
       #. Fill in the requested information and submit the form.
       #. Confirm your email address when Stripe sends you a confirmation email.
-      #. At the end of the process, you are redirected to the payment acquirer **Stripe** on Odoo.
+      #. At the end of the process, you are redirected to the payment provider **Stripe** on Odoo.
       #. :ref:`Fill in your credentials <stripe/api-keys>`.
       #. :ref:`Generate a webhook <stripe/webhook>`.
-      #. Enable the payment acquirer.
+      #. Enable the payment provider.
       #. You are all set and can continue to :ref:`stripe/local-payment-methods`.
 
 .. tip::
    To connect your Stripe account after the onboarding is already completed, go to
-   :menuselection:`Accounting --> Configuration --> Payment Acquirers --> Stripe` and click on the
+   :menuselection:`Accounting --> Configuration --> Payment Providers --> Stripe` and click on the
    *Connect Stripe* button.
 
 .. important::
@@ -126,7 +126,7 @@ feature earmarks an amount on the customer's account for a determined period of 
 the payment method used.
 
 To set it up, enable the :guilabel:`Capture Amount Manually` option on Odoo, as explained in the
-:ref:`payment acquirers documentation <payment_acquirers/features/manual_capture>`.
+:ref:`payment providers documentation <payment_providers/features/manual_capture>`.
 
 .. warning::
    When the manual capture feature is activated, your customers are not able to proceed with any
@@ -137,7 +137,7 @@ To set it up, enable the :guilabel:`Capture Amount Manually` option on Odoo, as 
    interface is still managed as a full capture by Odoo.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`
 
 .. _stripe/local-payment-methods:
 
@@ -156,7 +156,7 @@ Odoo supports the following local payment methods:
 - Przelewy24 (P24)
 
 To enable some of these local payment methods with Stripe, list them as supported payment icons. To
-do so, go to :menuselection:`Payment Acquirers --> Stripe --> Configuration` and add the desired
+do so, go to :menuselection:`Payment Providers --> Stripe --> Configuration` and add the desired
 payment methods in the **Supported Payment Icons** field. If the desired payment method is already
 listed, you don't have anything to do.
 
@@ -175,7 +175,7 @@ Enable express checkout
 =======================
 
 .. seealso::
-   :ref:`payment_acquirers/features/express_checkout`
+   :ref:`payment_providers/features/express_checkout`
 
 After ticking the :guilabel:`Allow Express Checkout` checkbox, **Google Pay** is enabled out of the
 box, but **Apple Pay** requires extra steps: You must register your web domain with Apple. This can
@@ -184,7 +184,7 @@ be done either automatically from Odoo, or manually from Stripe.
 .. tabs::
   .. tab:: Register automatically from Odoo
 
-     #. Navigate to your payment acquirer and make sure that it is :guilabel:`enabled`.
+     #. Navigate to your payment provider and make sure that it is :guilabel:`enabled`.
      #. Go to the :guilabel:`Configuration` tab and click on the :guilabel:`Enable Apple Pay`
         button. A notification shows that the web domain was successfully registered with Apple.
 

@@ -5,7 +5,7 @@ Flutterwave
 `Flutterwave <https://flutterwave.com/>`_ is an online payments provider established in Nigeria and
 covering several African countries and payment methods.
 
-.. _payment_acquirers/flutterwave/configure_dashboard:
+.. _payment_providers/flutterwave/configure_dashboard:
 
 Configuration on Flutterwave Dashboard
 ======================================
@@ -20,16 +20,16 @@ Configuration on Flutterwave Dashboard
 #. Make sure all the remaining checkboxes are ticked.
 #. Click on **Save** to finalize the configuration.
 
-.. _payment_acquirers/flutterwave/configure_odoo:
+.. _payment_providers/flutterwave/configure_odoo:
 
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment acquirer Flutterwave <payment_acquirers/add_new>` and change its
+#. :ref:`Navigate to the payment provider Flutterwave <payment_providers/add_new>` and change its
    state to :guilabel:`Enabled`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Public Key`, :guilabel:`Secret Key`, and
    :guilabel:`Webhook Secret` with the values you saved at the step
-   :ref:`payment_acquirers/flutterwave/configure_dashboard`.
+   :ref:`payment_providers/flutterwave/configure_dashboard`.
 #. Configure the rest of the options to your liking.
 
    .. important::
@@ -38,4 +38,4 @@ Configuration on Odoo
       Flutterwave Dashboard and then to :menuselection:`Settings --> Account Settings`.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

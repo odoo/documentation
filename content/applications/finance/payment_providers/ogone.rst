@@ -6,7 +6,7 @@ Ogone
 company that provides the technology involved in secure electronic transactions.
 
 .. seealso::
-   - :ref:`payment_acquirers/add_new`
+   - :ref:`payment_providers/add_new`
    - `Ogone's documentation <https://epayments-support.ingenico.com/get-started/>`_.
 
 .. warning::
@@ -53,8 +53,8 @@ Technical Information --> Global Security Parameters`, select :guilabel:`SHA-512
 
 .. tip::
    If you need to use another algorithm, such as `sha-1` or `sha-256`, within Odoo, activate the
-   :ref:`developer mode <developer-mode>` and go to the **Payment Acquirers** page in
-   :menuselection:`Accounting --> Configuration --> Payment Acquirers`. Click on :guilabel:`Ogone`,
+   :ref:`developer mode <developer-mode>` and go to the **Payment Providers** page in
+   :menuselection:`Accounting --> Configuration --> Payment Providers`. Click on :guilabel:`Ogone`,
    and in the :guilabel:`Credentials` tab, select the algorithm you wish to use in the
    :guilabel:`Hash function` field.
 
@@ -102,6 +102,6 @@ to save the card information should be displayed, etc.
 Settings in Odoo
 ================
 
-To set up Ogone in Odoo, head to :menuselection:`Accounting --> Configuration --> Payment Acquirers`
-and open the Ogone acquirer. In the :guilabel:`Credentials` tab, enter the **PSPID** of your Ogone
+To set up Ogone in Odoo, head to :menuselection:`Accounting --> Configuration --> Payment Providers`
+and open the Ogone provider. In the :guilabel:`Credentials` tab, enter the **PSPID** of your Ogone
 account, and fill out the other fields as configured in your :ref:`Ogone portal <ogone/ogone>`.

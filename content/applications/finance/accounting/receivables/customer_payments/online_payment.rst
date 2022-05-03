@@ -7,18 +7,18 @@ To make it more convenient for your customers to pay the invoices you issue, you
 allows your customers to see their invoices online and pay directly with their favorite payment
 method, making the payment process much easier.
 
-.. image:: online_payment/online-payment-acquirers.png
+.. image:: online_payment/online-payment-providers.png
    :align: center
-   :alt: Payment acquirer choice after having clicked on "Pay Now"
+   :alt: Payment provider choice after having clicked on "Pay Now"
 
 Configuration
 =============
 
-Make sure your :ref:`Payment Acquirers are correctly configured <payment_acquirers/configuration>`.
+Make sure your :ref:`Payment Providers are correctly configured <payment_providers/configuration>`.
 
 .. note::
-   By default, ":doc:`Wire Transfer </applications/finance/payment_acquirers/wire_transfer>`" is the only
-   Payment Acquirer activated, but you still have to fill out the payment details.
+   By default, ":doc:`Wire Transfer </applications/finance/payment_providers/wire_transfer>`" is the only
+   Payment Provider activated, but you still have to fill out the payment details.
 
 To activate the Invoice Online Payment, go to :menuselection:`Accounting --> Configuration --> 
 Settings --> Customer Payments`, enable **Invoice Online Payment**, and click on *Save*.
@@ -34,7 +34,7 @@ Portal**.
    :align: center
    :alt: Email with a link to view the invoice online on the Customer Portal.
 
-They can choose which Payment Acquirer to use by clicking on *Pay Now*.
+They can choose which Payment Provider to use by clicking on *Pay Now*.
 
 .. image:: online_payment/online-payment-pay-now.png
    :align: center
@@ -42,4 +42,4 @@ They can choose which Payment Acquirer to use by clicking on *Pay Now*.
 
 .. seealso::
 
-   - :doc:`/applications/finance/payment_acquirers`
+   - :doc:`/applications/finance/payment_providers`

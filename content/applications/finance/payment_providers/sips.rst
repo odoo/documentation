@@ -9,7 +9,7 @@ Configuration
 =============
 
 .. seealso::
-   - :ref:`payment_acquirers/add_new`
+   - :ref:`payment_providers/add_new`
 
 Credentials tab
 ---------------
@@ -29,4 +29,4 @@ You can copy your credentials from your SIPS environment info documentation, in 
    Mode*. We recommend doing this on a test Odoo database, rather than on your main database.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

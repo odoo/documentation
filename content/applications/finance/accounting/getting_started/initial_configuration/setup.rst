@@ -176,7 +176,7 @@ Payment Method
 This menu helps you configure the payment methods with which your customers can pay you.
 
 .. important::
-   Configuring a *Payment Acquirer* with this tool also activates the *Invoice Online Payment*
+   Configuring a *Payment Provider* with this tool also activates the *Invoice Online Payment*
    option automatically. With this, users can directly pay online, from their Customer Portal.
 
 .. _invoicing-setup-sample:
