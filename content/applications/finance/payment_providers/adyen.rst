@@ -9,7 +9,7 @@ Configuration
 =============
 
 .. seealso::
-   :ref:`payment_acquirers/add_new`
+   :ref:`payment_providers/add_new`
 
 Credentials tab
 ---------------
@@ -28,7 +28,7 @@ the **Credentials** tab.
 
 .. important::
    If you are trying Adyen as a test, with an Adyen *test account*, head to
-   :menuselection:`Accounting --> Configuration --> Payment Acquirers`. There, click on
+   :menuselection:`Accounting --> Configuration --> Payment Providers`. There, click on
    :guilabel:`Adyen`, enable :guilabel:`Test Mode` and enter your credentials in the
    :guilabel:`Credentials` tab.
 
@@ -114,7 +114,7 @@ Place a hold on a card
 Adyen allows you to capture an amount manually instead of having an immediate capture.
 
 To set it up, enable the **Capture Amount Manually** option on Odoo, as explained in the
-:ref:`payment acquirers documentation <payment_acquirers/features/manual_capture>`.
+:ref:`payment providers documentation <payment_providers/features/manual_capture>`.
 
 Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settings`, and set the
 **Capture Delay** to **manual**.
@@ -135,4 +135,4 @@ Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settin
    **revoke** it.
 
 .. seealso::
-   :doc:`../payment_acquirers`
+   :doc:`../payment_providers`

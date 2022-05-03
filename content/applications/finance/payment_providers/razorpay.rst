@@ -5,7 +5,7 @@ Razorpay
 `Razorpay <https://razorpay.com/>`_ is an online payments provider established in India and
 covering more than 100 payment methods.
 
-.. _payment_acquirers/razorpay/configure_dashboard:
+.. _payment_providers/razorpay/configure_dashboard:
 
 Configuration on Razorpay Dashboard
 ===================================
@@ -23,16 +23,16 @@ Configuration on Razorpay Dashboard
    checkboxes are ticked.
 #. Click on :guilabel:`Create Webhook` to finalize the configuration.
 
-.. _payment_acquirers/razorpay/configure_odoo:
+.. _payment_providers/razorpay/configure_odoo:
 
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment acquirer Razorpay <payment_acquirers/add_new>` and change its
+#. :ref:`Navigate to the payment provider Razorpay <payment_providers/add_new>` and change its
    state to :guilabel:`Enabled`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Key Id`, :guilabel:`Key Secret`, and
    :guilabel:`Webhook Secret` with the values you saved at the step
-   :ref:`payment_acquirers/razorpay/configure_dashboard`.
+   :ref:`payment_providers/razorpay/configure_dashboard`.
 #. Configure the rest of the options to your liking.
 
 .. important::
@@ -44,4 +44,4 @@ Configuration on Odoo
     to **revoke** it.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

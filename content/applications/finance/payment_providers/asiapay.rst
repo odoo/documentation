@@ -5,7 +5,7 @@ AsiaPay
 `AsiaPay <https://www.asiapay.com/>`_ is an online payments provider established in Hong Kong and
 covering several Asian countries and payment methods.
 
-.. _payment_acquirers/asiapay/configure_dashboard:
+.. _payment_providers/asiapay/configure_dashboard:
 
 Configuration on AsiaPay Dashboard
 ==================================
@@ -21,21 +21,21 @@ Configuration on AsiaPay Dashboard
    | Click on :guilabel:`Test` to check if the webhook is working correctly.
 #. Click on :guilabel:`Update` to finalize the configuration.
 
-.. _payment_acquirers/asiapay/configure_odoo:
+.. _payment_providers/asiapay/configure_odoo:
 
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment acquirer AsiaPay <payment_acquirers/add_new>` and change its state
+#. :ref:`Navigate to the payment provider AsiaPay <payment_providers/add_new>` and change its state
    to :guilabel:`Enabled`.
 #. | In the :guilabel:`Credentials` tab, fill the :guilabel:`Merchant ID`, :guilabel:`Currency`, and
      :guilabel:`Secure Hash Secret` with the values you saved at the step
-     :ref:`payment_acquirers/asiapay/configure_dashboard`.
-   | By default, the payment acquirer AsiaPay is configured to verify the secret hash with the hash
+     :ref:`payment_providers/asiapay/configure_dashboard`.
+   | By default, the payment provider AsiaPay is configured to verify the secret hash with the hash
      function `SHA1`. If a different function is :ref:`set on your account
-     <payment_acquirers/asiapay/configure_dashboard>`, activate the :ref:`developer mode
+     <payment_providers/asiapay/configure_dashboard>`, activate the :ref:`developer mode
      <developer-mode>` and set the same value to the field :guilabel:`Secure Hash Function` in Odoo.
 #. Configure the rest of the options to your liking.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

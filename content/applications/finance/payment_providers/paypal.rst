@@ -11,7 +11,7 @@ Settings in Odoo
 ================
 
 .. seealso::
-   - :ref:`payment_acquirers/add_new`
+   - :ref:`payment_providers/add_new`
 
 Credentials tab
 ---------------
@@ -141,4 +141,4 @@ this on a test Odoo database rather than your main database.
 Run a test transaction from Odoo using the sandbox personal account.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

@@ -5,7 +5,7 @@ Amazon Payment Services
 `Amazon Payment Services <https://paymentservices.amazon.com/>`_ or APS is an online payment provider
 established in Dubai offering several online payment options.
 
-.. _payment_acquirers/aps/configure-dashboard:
+.. _payment_providers/aps/configure-dashboard:
 
 Configuration on APS Dashboard
 ==============================
@@ -31,14 +31,14 @@ Configuration on APS Dashboard
    look and feel of the Amazon Payment Services payment page (where customers fill out their
    credit card details during payment).
 
-.. _payment_acquirers/aps/configure-odoo:
+.. _payment_providers/aps/configure-odoo:
 
 Configuration on Odoo
 =====================
 
-#. :ref:`Navigate to the payment acquirer Amazon Payment Services <payment_acquirers/add_new>`,
+#. :ref:`Navigate to the payment provider Amazon Payment Services <payment_providers/add_new>`,
    change its state to :guilabel:`Enabled`, and make sure it is :guilabel:`Published`.
 #. In the :guilabel:`Credentials` tab, fill the :guilabel:`Merchant Identifier`,
    :guilabel:`Access Code`, :guilabel:`SHA Request Phrase` and :guilabel:`SHA Response Phrase` with
-   the values you saved at the step :ref:`payment_acquirers/aps/configure-dashboard`.
+   the values you saved at the step :ref:`payment_providers/aps/configure-dashboard`.
 #. Configure the rest of the options to your liking.

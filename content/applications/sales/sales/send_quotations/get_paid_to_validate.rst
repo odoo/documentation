@@ -19,12 +19,12 @@ feature.
    :class: img-thumbnail
    :alt: How to enable online payment on Odoo Sales?
 
-There, you will have direct access to the **Payment Acquirers** page. It will allow you to select
-and configure your acquirers of choice. Before creating or modifying a payment acquirer, be sure to
-check out our documentation about how to be paid with payment acquirers such as
-:doc:`/applications/finance/payment_acquirers/paypal`,
-:doc:`/applications/finance/payment_acquirers/authorize`, and others in the
-:doc:`/applications/finance/payment_acquirers` documentation.
+There, you will have direct access to the **Payment Providers** page. It will allow you to select
+and configure your providers of choice. Before creating or modifying a payment provider, be sure to
+check out our documentation about how to be paid with payment providers such as
+:doc:`/applications/finance/payment_providers/paypal`,
+:doc:`/applications/finance/payment_providers/authorize`, and others in the
+:doc:`/applications/finance/payment_providers` documentation.
 
 .. note::
    If you are familiar with this documentation: :doc:`quote_template`; you
@@ -48,8 +48,8 @@ possibilities to make their online payments. For example:
 
 .. seealso::
    - :doc:`quote_template`
-   - :doc:`/applications/finance/payment_acquirers`
-   - :doc:`/applications/finance/payment_acquirers/paypal`
-   - :doc:`/applications/finance/payment_acquirers/authorize`
+   - :doc:`/applications/finance/payment_providers`
+   - :doc:`/applications/finance/payment_providers/paypal`
+   - :doc:`/applications/finance/payment_providers/authorize`
 
 

@@ -4,7 +4,7 @@ How to get paid with wire transfers
 
 **Wire Transfer** is the default payment method available. The aim is providing your customers with
 your bank details so they can pay on their own. This is very easy to start with but slow and
-inefficient process-wise. Opt for payment acquirers as soon as you can!
+inefficient process-wise. Opt for payment providers as soon as you can!
 
 How to provide customers with payment instructions
 ==================================================
@@ -36,4 +36,4 @@ check. To do so, just rename *Wire Transfer* or duplicate it.
    :align: center
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

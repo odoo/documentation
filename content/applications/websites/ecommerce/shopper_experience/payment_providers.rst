@@ -1,12 +1,12 @@
 =========================================
-Manage orders paid with Payment Acquirers
+Manage orders paid with Payment Providers
 =========================================
 
-The moment a payment is officially authorized by a Payment Acquirer, Odoo *automatically* confirms
+The moment a payment is officially authorized by a Payment Provider, Odoo *automatically* confirms
 the order, which triggers the delivery. And, if you invoice based on ordered quantities, you are
 requested to invoice the order, as well.
 
-Let’s take a closer look at how to manage orders paid with Payment Acquirers.
+Let’s take a closer look at how to manage orders paid with Payment Providers.
 
 Checking the status of a payment
 ================================
@@ -17,7 +17,7 @@ click on the order you wish to check on.
 Once you are on the Sales Order page, you will find the payment is confirmed with an automatic note
 in the *Chatter*.
 
-.. image:: payment_acquirer/chatter-transaction.png
+.. image:: payment_providers/chatter-transaction.png
    :align: center
    :alt: payment is confirmed in the chatter of sales order
 
@@ -25,7 +25,7 @@ If the user decides to create an invoice, the payment is directly reconciled. Th
 the *Chatter* includes a link to the Payment entry, which contains various details about the
 transaction, along with a link to the related Journal Entry.
 
-.. image:: payment_acquirer/transaction-info.png
+.. image:: payment_providers/transaction-info.png
    :align: center
    :alt: page with details surrounding the specific transaction
 
@@ -46,17 +46,17 @@ To do automatically generate invoices at order:
   - Then, under the **Invoicing Policy** option, select *Invoice what is ordered*.
   - Then activate *Automatic Invoices* and *Save*.
 
-.. image:: payment_acquirer/automatic-invoice.png
+.. image:: payment_providers/automatic-invoice.png
    :align: center
    :alt: example of automatic invoice
 
 Capture payment after the delivery
 ==================================
 
-If the acquirer handling the payment is configured to capture amounts manually, the order is
+If the provider handling the payment is configured to capture amounts manually, the order is
 confirmed, but the amount is kept on hold. Once the delivery is processed, you can capture the
 payment from the related Sales Order.
 
 .. seealso::
-   - :doc:`../../../finance/payment_acquirers`
-   - :ref:`Payment Acquirers: Place a hold on a card <payment_acquirers/features/manual_capture>`
+   - :doc:`../../../finance/payment_providers`
+   - :ref:`Payment Providers: Place a hold on a card <payment_providers/features/manual_capture>`

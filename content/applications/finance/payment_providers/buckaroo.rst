@@ -25,7 +25,7 @@ Configuration on Odoo
 =====================
 
 .. seealso::
-   - :ref:`payment_acquirers/add_new`
+   - :ref:`payment_providers/add_new`
 
 Credentials tab
 ---------------
@@ -60,4 +60,4 @@ In order to retrieve the Website Key, log into Buckaroo Plaza, go to
    recommend doing this on a test Odoo database, rather than on your main database.
 
 .. seealso::
-   - :doc:`../payment_acquirers`
+   - :doc:`../payment_providers`

@@ -56,10 +56,10 @@ SEPA Direct Debit as a Payment Method
 -------------------------------------
 
 SEPA Direct Debit can be used as a payment method both on your **eCommerce** or on the **Customer
-Portal** by activating SDD as a **Payment Acquirer**. With this method, your customers can create
+Portal** by activating SDD as a **Payment Provider**. With this method, your customers can create
 and sign their mandates themselves.
 
-To do so, go to :menuselection:`Accounting --> Configuration --> Payment Acquirers`, click on *SEPA
+To do so, go to :menuselection:`Accounting --> Configuration --> Payment Providers`, click on *SEPA
 Direct Debit*, and set it up according to your needs.
 
 .. important::
@@ -70,7 +70,7 @@ Customers using SDD as payment method get prompted to add their IBAN, email addr
 their SEPA Direct Debit mandate.
 
 .. todo::
-   Add link to future **Payment Acquirer** documentation.
+   Add link to future **Payment Provider** documentation.
 
 Close or revoke a mandate 
 -------------------------
