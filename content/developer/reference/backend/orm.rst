@@ -785,6 +785,8 @@ Fields/Views
 
 .. automethod:: Model.fields_get
 
+.. automethod:: Model.get_view
+
 .. automethod:: Model.fields_view_get
 
 .. _reference/orm/domains:
