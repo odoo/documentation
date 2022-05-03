@@ -100,8 +100,8 @@ crucial to define the DTE incoming email server, considering this configuration:
 Certificate
 ~~~~~~~~~~~
 
-In order to generate the electronic invoice signature, a digital certificate with the extension ``.pfx``
-is required, proceed to this section and load your file and password. 
+In order to generate the electronic invoice signature, a digital certificate with the extension 
+``pfx`` is required, proceed to this section and load your file and password. 
 
 .. image:: media/Chile03_3.png
    :align: center
@@ -118,7 +118,7 @@ certificate for a particular user, just define the users in the certificate.
 .. note::
    In some cases, depending on the certificate format, it is possible that the field Subject Serial
    Number is not loaded automatically. If this is the case, you can manually edit this field by
-   filling it with the Certificate’s legal representative RUT.
+   filling it with the Certificate's legal representative RUT.
 
 Financial Reports
 ~~~~~~~~~~~~~~~~~
@@ -308,6 +308,8 @@ use documents.
    For the Chilean localization, it is important to define the default Debit and Credit accounts
    as they are required for one of the debit notes use cases.
    
+.. _chile/caf-documentation:
+
 CAF
 ---
 
@@ -319,8 +321,7 @@ Your company can make several requests for folios and obtain several CAFs, each 
 with different ranges of folios. The CAFs are shared within all the journals, this means
 that you only need one active CAF per document type and it will be applied on all journals.
 
-Please refer to the SII documentation to check the detail on how to acquire the CAF:
-`SII Timbraje <https://palena.sii.cl/dte/mn_timbraje.html>`_.
+Please refer to the `SII documentation <https://palena.sii.cl/dte/mn_timbraje.html>`_ to check the detail on how to acquire the CAF.
 
 .. important::
    The CAFs required by the SII are different from Production to Test (Certification mode). Make
@@ -382,11 +383,13 @@ You can manually change the document type if needed.
    Documents type 33: Electronic Invoice must have at least one item with tax, otherwise the SII
    rejects the document validation.
 
+.. _chile/electronic-invoice-validation:
+
 Validation and DTE Status
 ~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When all the invoice information is filled, either manually or automatically when it’s created
-from a sales order, proceed to validate the invoice.  After the invoice is posted:
+When all the invoice information is filled, either manually or automatically when it's created
+from a sales order, proceed to validate the invoice. After the invoice is posted:
 
 - The DTE File (Electronic Tax Document) is created automatically and added in the chatter.
 - The DTE SII status is set as: Pending to be sent. 
@@ -430,10 +433,10 @@ The DTE status workflow is as follows:
 
 
    **Accepted:** Indicates the invoice information is correct, our document is now fiscally valid
-   and it’s automatically sent to the customer. 
+   and it's automatically sent to the customer. 
 
    **Accepted with objections:** Indicates the invoice information is correct but a minor issue
-   was identified, nevertheless our document is now fiscally valid and it’s automatically
+   was identified, nevertheless our document is now fiscally valid and it's automatically
    sent to the customer.
 
    .. image:: media/Chile19.png
@@ -461,8 +464,8 @@ Crossed references
 
 When the Invoice is created as a result of another fiscal document, the information related to the
 originator document must be registered in the Tab Cross Reference, which is commonly used for 
-credit or debit notes, but in some cases can be used on Customer Invoices as well. In the case of the
-credit and debit notes, they are set automatically by Odoo:
+credit or debit notes, but in some cases can be used on Customer Invoices as well. In the case of
+the credit and debit notes, they are set automatically by Odoo:
 
 .. image:: media/Chile21.png
    :align: center
@@ -503,7 +506,7 @@ Processed for Claimed invoices
 
 Once the invoice has been Accepted by the SII **it can not be cancelled in Odoo**.  In case you
 get a Claim for your customer the correct way to proceed is with a Credit Note to either cancel
-the Invoice or correct it. Please refer to the Credit Notes section for more details. 
+the Invoice or correct it. Please refer to the :ref:`chile/credit-notes` section for more details. 
 
 .. image:: media/Chile24.png
    :align: center
@@ -530,7 +533,7 @@ you might have and which is the related solution.
 - Error: ``Fecha/Número Resolucion Invalido RECHAZO- CAF Vencido : (Firma_DTE[AAAA-MM-DD] -
   CAF[AAAA-MM-DD]) &gt; 6 meses.``
   
-  *Hint:* Try to add a new CAF related to this document as the one you’re using is expired.
+  *Hint:* Try to add a new CAF related to this document as the one you're using is expired.
   
 - Error: ``Element '{http://www.sii.cl/SiiDte%7DRutReceptor': This element is not expected. Expected
   is ( {http://www.sii.cl/SiiDte%7DRutEnvia ).``
@@ -546,7 +549,7 @@ you might have and which is the related solution.
   Manager or Customer Support as this certification is not part of the the Odoo services,
   but we can give you some alternatives.
 
-
+.. _chile/credit-notes:
 
 Credit Notes
 ------------
@@ -560,8 +563,9 @@ which is identified as document 64 in the SII.
    :alt: Creation of CAF for Credit notes.
 
 
-.. tip:: Refer to the CAF section where we described the process to load the CAF on each 
-   document type.
+.. tip:: 
+   Refer to the :ref:`CAF section <chile/caf-documentation>` where we described the process to load
+   the CAF on each document type.
 
 Use Cases
 ~~~~~~~~~
@@ -594,7 +598,7 @@ Odoo creates a Credit Note with the corrected text in an invoice and price 0.
    :alt: Credit note with the corrected value on the invoice lines.
 
 .. important::
-   It’s important to define the default credit account in the Sales journal as it
+   It's important to define the default credit account in the Sales journal as it
    is taken for this use case in specific. 
 
 Corrects Referenced Document Amount
@@ -646,7 +650,6 @@ Documentos de referencia.*
    :align: center
    :alt: Creating a debit note to cancel a credit note with the SII code reference 1.
 
-
 Vendor Bills
 ------------
 
@@ -656,7 +659,6 @@ have register in the SII in order to:
 - Automatically receive the vendor bills DTE and create the vendor bill based on this information. 
 - Automatically Send the reception acknowledgement to your vendor. 
 - Accept or Claim the document and send this status to your vendor. 
-
 
 Reception
 ~~~~~~~~~
@@ -674,13 +676,12 @@ Acceptation
 ~~~~~~~~~~~
 
 If all the commercial information is correct on your vendor bill, you can accept the document using
-the button: Aceptar Documento, once this is done the DTE Acceptation Status  changes to: Accepted and
-an email of acceptance is sent to the vendor. 
+the button: Aceptar Documento, once this is done the DTE Acceptation Status  changes to: Accepted
+and an email of acceptance is sent to the vendor. 
 
 .. image:: media/Chile35.png
    :align: center
-   :alt: Acceptance button in vendor bills to inform the vendor all the document is comercially accepted.
-   
+   :alt: Acceptance button in vendor bills to inform vendor the document is comercially accepted.
 
 Claim
 ~~~~~
@@ -694,9 +695,176 @@ Acceptation Status  change to: Claim  and an email of acceptance is sent to the 
    :alt: Claim button in vendor bills to inform the vendor all the document is comercially rejected.
    
 If you claim a vendor bill, the status changes from draft to cancel automatically. Considering this
-as best practice, all the Claim documents should be canceled as they won’t be valid for your
+as best practice, all the Claim documents should be canceled as they won't be valid for your
 accounting records. 
 
+Delivery Guide
+--------------
+
+To install the Delivery Guide module, go to **Apps** and search for *Chile (l10n_cl)*. Then click
+**Install** on the module *Chile - E-Invoicing Delivery Guide*. 
+
+.. note::
+   *Chile - E-Invoicing Delivery Guide* has a dependency with *Chile - Facturación Electrónica*.
+   Odoo will install the dependency automatically when the Delivery Guide module is installed.
+
+The Delivery Guide module includes sending the DTE to SII and the stamp in PDF reports for
+deliveries.
+
+.. image:: media/chile42.png
+   :align: center
+   :alt: Install Delivery Guide Module
+
+Once all configurations have been made for electronic invoices (e.g., uploading a valid company
+certificate, setting up master data, etc.), Delivery Guides need their own CAFs. Please refer to the
+:ref:`CAF documentation <chile/caf-documentation>` to check the details on how to acquire the CAFs
+for electronic Delivery Guides. 
+
+Verify the following important information in the *Price for the Delivery Guide* configuration:
+
+- **From Sales Order**: Delivery Guide takes the product price from the Sales Order and shows it on
+  the document.
+- **From Product Template**: Odoo takes the price configured in the product template and shows it
+  on the document.
+- **No show price**: no price is shown in the Delivery Guide.
+
+Electronic delivery guides are used to move stock from one place to another and they can represent
+sales, sampling, consignment, internal transfers, and basically any product move. 
+
+Delivery Guide from a Sales Process
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When a Sales Order is created and confirmed, a Delivery Order is generated. After validating the
+Delivery Order, the option to create a Delivery Guide is activated.
+
+.. image:: media/chile43.png
+   :align: center
+   :alt: Create Delivery Guide Button
+
+When clicking on **Create Delivery Guide** for the first time, a warning message pops up, showing
+the following:
+
+.. image:: media/chile44.png 
+   :align: center 
+   :alt: An example sequence error when creating a Delivery Guide in Odoo
+
+This warning message means the user needs to indicate the next sequence number Odoo has to take to
+generate the Delivery Guide, and only only happens the *first time* a Delivery Guide is created in
+Odoo. After the first document has been correctly generated, Odoo takes the CAFs next available
+number to generate the following Delivery Guide and so on.
+
+After the Delivery Guide is created:
+
+- The DTE file (Electronic Tax Document) is automatically created and added to the chatter.
+- The DTE SII status is set as: Pending to be sent.
+
+.. image:: media/chile45.png 
+   :align: center 
+   :alt: DTE Status in SII and creation of DTE/XML
+
+The DTE Status is automatically updated by Odoo with a scheduled action that runs every day at
+night. To get a response from the SII immediately, press the **Send now to SII** button.
+
+Once the Delivery Guide is sent, it may then be printed by clicking on the **Print Delivery Guide**
+button.
+
+.. image:: media/chile46.png 
+   :align: center 
+   :alt: Printing Delivery Guide PDF
+
+Electronic Receipt
+------------------
+
+To install the Electronic Receipt module, go to **Apps** and search for *Chile (l10n_cl)*. Then
+click **Install** on the module *Chile - Electronic Receipt*. 
+
+.. note::
+   *Chile - Electronic Receipt* has a dependency with *Chile - Facturación Electrónica*. Odoo will
+   install the dependency automatically when the E-invoicing Delivery Guide module is installed.
+
+This module contains the electronic receipt and daily sales report, which are automatically sent to
+SII.
+
+.. image:: media/chile47.png 
+   :align: center 
+   :alt: Install Electronic Receipt module
+
+Once all configurations have been made for Electronic Invoices (e.g., uploading a valid company
+certificate, setting up master data, etc.), Electronic Receipts need their own CAFs. Please refer
+to the :ref:`CAF documentation <chile/caf-documentation>` to check the details on how to acquire the
+CAFs for Electronic Receipts.
+
+Electronic Receipts are useful when clients do not need an Electronic Invoice. By default, there is
+a partner in the database called *Anonymous Final Consumer* with a generic RUT 66666666-6 and
+taxpayer type of *Final Consumer*. This partner can be used for Electronic Receipts or a new record
+may be created for the same purpose. 
+
+Although Electronic Receipts should be used for final consumers with a generic RUT, it can also be
+used for specific partners. After the partners and journals are created and configured, the
+Electronic Receipts are created in the standard way as Electronic Invoice, but the type of document
+**(39) Electronic Receipt** should be selected, like so:
+
+.. image:: media/chile48.png 
+   :align: center 
+   :alt: Select type of Document: (39) Boleta Electrónica
+
+Validation and DTE Status
+~~~~~~~~~~~~~~~~~~~~~~~~~
+
+When all of the Electronic Receipt information is filled, either manually or automatically from a
+Sales Order, proceed to validate the receipt. By default, Electronic Invoice is selected as the
+Document Type, however in order to validate the receipt correctly, make sure to edit the Document
+Type and change to Electronic Receipt.
+
+After the receipt is posted:
+
+- The DTE file (Electronic Tax Document) is created automatically and added to the chatter.
+- The DTE SII status is set as: Pending to be sent.
+
+.. image:: media/chile49.png 
+   :align: center 
+   :alt: DTE status in SII and creation of DTE/XML
+
+The DTE Status is automatically updated by Odoo with a scheduled action that runs every day at
+night. To get a response from the SII immediately, press the **Send now to SII** button.
+
+Please refer to the :ref:`DTE Workflow <chile/electronic-invoice-validation>` for Electronic
+Invoices as the workflow for Electronic Receipt follows the same process.
+
+Daily Sales Report
+~~~~~~~~~~~~~~~~~~
+
+Once Electronic Receipts have been created, the system creates a daily sales report containing all
+Electronic Receipts per day. This report is electronically stamped and sent to the SII overnight in
+XML format. These daily reports can be found in :menuselection:`Reports --> Daily Sales Reports`
+
+.. image:: media/chile50.png 
+   :align: center 
+   :alt: Find Electronic Receipts in the Reports menu, under Daily Sales Reports
+
+A list of daily reports is displayed with all daily DTE sent to SII. 
+
+.. image:: media/chile51.png 
+   :align: center 
+   :alt: List of Daily Reports
+
+If no Electronic Receipt was made on a particular day, the report is sent but it will not have any
+receipts in it. The report will also have an answer from the SII if it was accepted or rejected
+(depending on the company's certificate and validated receipts).
+
+.. image:: media/chile52.png 
+   :align: center 
+   :alt: Daily Sales Book example
+
+.. important::
+   For Chilean localization, note that the feature tax included in the price is *not* supported for
+   the Electronic Receipt.
+   
+   If a Daily Sales Report has already been created for a specific day in another system, the daily
+   report in Odoo will be rejected due to the sequence number used. If that is the case, the user
+   has to manually click on **Retry** in order for a new sequence number to be generated (this
+   action is automatically done by Odoo). Afterwards, users can manually verify report status with
+   SII or wait for Odoo to update status later at night.
 
 Financial Reports
 =================
@@ -721,7 +889,7 @@ The form F29 is a new system that the SII enabled to taxpayers, and that replace
 Sales Books. This report is integrated by Purchase Register (CR) and the Sales Register (RV).
 Its purpose is to support the transactions related to VAT, improving its control and declaration. 
 
-This record is supplied by the electronic tax documents (DTE’s) that have been received by the
+This record is supplied by the electronic tax documents (DTE's) that have been received by the
 SII.
 
 You can find this report in :menuselection:`Accounting --> Accounting --> Reports`
