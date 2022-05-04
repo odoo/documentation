@@ -4,6 +4,15 @@
 Changelog
 =========
 
+Odoo Online version 15.4
+========================
+
+- New API for flushing to the database and invalidating the cache with
+  `#87527 <https://github.com/odoo/odoo/pull/87527>`_.
+  New methods have been added to `odoo.models.Model` and `odoo.api.Environment`,
+  and are less confusing about what is actually done in each case.
+  See the section :ref:`SQL Execution <reference/orm/sql>`.
+
 Odoo Online version 15.2
 ========================
 

@@ -723,22 +723,100 @@ joins) or for performance reasons::
 
     self.env.cr.execute("some_sql", params)
 
+.. warning::
+    Executing raw SQL bypasses the ORM and, by consequent, Odoo security rules.
+    Please make sure your queries are sanitized when using user input and prefer using
+    ORM utilities if you don't really need to use SQL queries.
+
+One important thing to know about models is that they don't necessarily perform
+database updates right away. Indeed, for performance reasons, the framework
+delays the recomputation of fields after modifying records. And some database
+updates are delayed, too. Therefore, before querying the database, one has to
+make sure that it contains the relevant data for the query. This operation is
+called *flushing* and performs the expected database updates.
+
+.. example::
+
+    .. code-block:: python
+
+        # make sure that 'partner_id' is up-to-date in database
+        self.env['model'].flush_model(['partner_id'])
+
+        self.env.cr.execute("SELECT id FROM model WHERE partner_id IN %s", [ids])
+        ids = [row[0] for row in self.env.cr.fetchall()]
+
+Before every SQL query, one has to flush the data needed for that query. There
+are three levels for flushing, each with its own API. One can flush either
+everything, all the records of a model, or some specific records. Because
+delaying updates improves performance in general, we recommend to be *specific*
+when flushing.
+
+.. automethod:: odoo.api.Environment.flush_all
+
+.. automethod:: Model.flush_model
+
+.. automethod:: Model.flush_recordset
+
 Because models use the same cursor and the :class:`~odoo.api.Environment`
 holds various caches, these caches must be invalidated when *altering* the
 database in raw SQL, or further uses of models may become incoherent. It is
 necessary to clear caches when using ``CREATE``, ``UPDATE`` or ``DELETE`` in
 SQL, but not ``SELECT`` (which simply reads the database).
 
-.. note::
-    Clearing caches can be performed using the
-    :meth:`~odoo.models.Model.invalidate_cache` method.
+.. example::
 
-.. automethod:: Model.invalidate_cache
+    .. code-block:: python
 
-.. warning::
-    Executing raw SQL bypasses the ORM, and by consequent, Odoo security rules.
-    Please make sure your queries are sanitized when using user input and prefer using
-    ORM utilities if you don't really need to use SQL queries.
+        # make sure 'state' is up-to-date in database
+        self.env['model'].flush_model(['state'])
+
+        self.env.cr.execute("UPDATE model SET state=%s WHERE state=%s", ['new', 'old'])
+
+        # invalidate 'state' from the cache
+        self.env['model'].invalidate_model(['state'])
+
+Just like flushing, one can invalidate either the whole cache, the cache of all
+the records of a model, or the cache of specific records. One can even
+invalidate specific fields on some records or all records of a model. As the
+cache improves performance in general, we recommend to be *specific* when
+invalidating.
+
+.. automethod:: odoo.api.Environment.invalidate_all
+
+.. automethod:: Model.invalidate_model
+
+.. automethod:: Model.invalidate_recordset
+
+The methods above keep the caches and the database consistent with each other.
+However, if computed field dependencies have been modified in the database, one
+has to inform the models for the computed fields to be recomputed. The only
+thing the framework needs to know is *what* fields have changed on *which*
+records.
+
+.. example::
+
+    .. code-block:: python
+
+        # make sure 'state' is up-to-date in database
+        self.env['model'].flush_model(['state'])
+
+        # use the RETURNING clause to retrieve which rows have changed
+        self.env.cr.execute("UPDATE model SET state=%s WHERE state=%s RETURNING id", ['new', 'old'])
+        ids = [row[0] for row in self.env.cr.fetchall()]
+
+        # invalidate the cache, and notify the update to the framework
+        records = self.env['model'].browse(ids)
+        records.invalidate_recordset(['state'])
+        records.modified(['state'])
+
+One has to figure out which records have been modified. There are many ways to
+do this, possibly involving extra SQL queries. In the example above, we take
+advantage of the ``RETURNING`` clause of PostgreSQL to retrieve the information
+without an extra query. After making the cache consistent by invalidation,
+invoke the method ``modified`` on the modified records with the fields that
+have been updated.
+
+.. automethod:: Model.modified
 
 
 .. _reference/orm/models/crud:
@@ -762,8 +840,6 @@ Create/update
 .. automethod:: Model.name_create
 
 .. automethod:: Model.write
-
-.. automethod:: Model.flush
 
 Search/Read
 -----------
