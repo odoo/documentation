@@ -1,7 +1,7 @@
 :nosearch:
 
 ===========
-Fiscal Year
+Fiscal year
 ===========
 
 .. toctree::

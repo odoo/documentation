@@ -1,7 +1,7 @@
 :nosearch:
 
 ============
-Vendor Bills
+Vendor bills
 ============
 
 .. toctree::

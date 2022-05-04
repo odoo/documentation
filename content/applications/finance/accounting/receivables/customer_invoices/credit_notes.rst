@@ -1,5 +1,5 @@
 ========================
-Credit Notes and Refunds
+Credit notes and refunds
 ========================
 A **credit note**, or **credit memo**, is a document issued 
 to a customer that notifies them that they have been credited 
