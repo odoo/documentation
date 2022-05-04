@@ -1,5 +1,5 @@
 ============================
-Fiscal Localization Packages
+Fiscal localization packages
 ============================
 
 **Fiscal Localization Packages** are country-specific modules that install pre-configured taxes,

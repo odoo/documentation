@@ -1,5 +1,5 @@
 =======================================
-Batch Payments: SEPA Direct Debit (SDD)
+Batch payments: SEPA Direct Debit (SDD)
 =======================================
 
 SEPA, the Single Euro Payments Area, is a payment-integration initiative of the European Union for
