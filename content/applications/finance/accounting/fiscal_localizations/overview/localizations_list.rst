@@ -6,7 +6,7 @@ Odoo Accounting can be used in many countries out of the box by installing the a
 Here is a list of all :doc:`Fiscal Localization Packages <fiscal_localization_packages>` that are
 available on Odoo.
 
-Fiscal Localization Packages available
+Fiscal localization packages available
 ======================================
 
 - Algeria - Accounting
