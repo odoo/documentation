@@ -1,5 +1,5 @@
 ===================
-Manage vendor Bills
+Manage vendor bills
 ===================
 
 The **Purchase** application allows you to manage your purchase orders,

@@ -1,5 +1,5 @@
 ===================================
-EU intra-community Distance Selling
+EU intra-community distance selling
 ===================================
 
 **Distance sales within the European Union** include cross-border sales of goods and services to a

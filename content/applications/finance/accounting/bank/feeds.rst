@@ -1,7 +1,7 @@
 :nosearch:
 
 ==========
-Bank Feeds
+Bank feeds
 ==========
 
 .. toctree::

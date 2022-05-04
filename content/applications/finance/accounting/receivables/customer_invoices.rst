@@ -1,7 +1,7 @@
 :nosearch:
 
 =================
-Customer Invoices
+Customer invoices
 =================
 
 .. toctree::
