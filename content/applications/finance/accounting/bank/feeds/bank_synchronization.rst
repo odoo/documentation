@@ -1,5 +1,5 @@
 ======================================
-Bank Synchronization: Automatic Import
+Bank synchronization: Automatic import
 ======================================
 
 Odoo can synchronize directly with your bank institution to get all bank statements imported

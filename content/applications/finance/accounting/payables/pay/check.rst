@@ -1,5 +1,5 @@
 =============
-Pay by Checks
+Pay by checks
 =============
 
 Once you decide to pay a supplier bill, you can select to pay by check.

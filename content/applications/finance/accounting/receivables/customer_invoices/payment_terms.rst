@@ -1,5 +1,5 @@
 ===================================
-Payment Terms and Installment Plans
+Payment terms and installment plans
 ===================================
 
 **Payment Terms** specify all the conditions under which a sale is paid, mostly to ensure customers
