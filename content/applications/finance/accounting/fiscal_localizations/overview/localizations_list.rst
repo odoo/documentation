@@ -10,7 +10,7 @@ available on Odoo.
    :align: center
    :alt: Odoo Accounting.
 
-Fiscal Localization Packages available
+Fiscal localization packages available
 ======================================
 
 - Algeria - Accounting
