@@ -1,7 +1,7 @@
 :nosearch:
 
 ===================
-Bank Reconciliation
+Bank reconciliation
 ===================
 
 .. toctree::

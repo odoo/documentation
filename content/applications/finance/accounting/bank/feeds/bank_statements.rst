@@ -1,5 +1,5 @@
 ===============
-Bank Statements
+Bank statements
 ===============
 
 Importing your bank statements in Odoo Accounting allows you to keep track of the financial

@@ -1,5 +1,5 @@
 =============
-Cash Rounding
+Cash rounding
 =============
 
 **Cash rounding** is required when the lowest physical denomination

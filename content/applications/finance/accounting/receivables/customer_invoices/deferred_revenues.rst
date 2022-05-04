@@ -1,5 +1,5 @@
 =================
-Deferred Revenues
+Deferred revenues
 =================
 
 **Deferred revenues**, or **unearned revenue**, are payments made in advance by customers for
