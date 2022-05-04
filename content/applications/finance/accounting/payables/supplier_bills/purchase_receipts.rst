@@ -1,5 +1,5 @@
 =================
-Purchase Receipts
+Purchase receipts
 =================
 
 **Purchase Receipts** are not invoices but rather confirmations of received payments, such as a

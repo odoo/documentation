@@ -1,5 +1,5 @@
 ==============================================================
-Digitize Vendor Bills with Optical Character Recognition (OCR)
+Digitize vendor bills with optical character recognition (OCR)
 ==============================================================
 
 Encoding bills manually can be a time-consuming task. Having a solution that allows you to digitize

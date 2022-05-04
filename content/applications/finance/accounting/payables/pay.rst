@@ -1,7 +1,7 @@
 :nosearch:
 
 ===============
-Vendor Payments
+Vendor payments
 ===============
 
 .. toctree::
