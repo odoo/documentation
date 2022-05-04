@@ -1,8 +1,8 @@
 :nosearch:
 
-===========
-Bank & Cash
-===========
+=============
+Bank and cash
+=============
 
 .. toctree::
    :titlesonly:

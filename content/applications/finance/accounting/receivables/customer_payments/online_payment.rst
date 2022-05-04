@@ -1,5 +1,5 @@
 ======================
-Invoice Online Payment
+Invoice online payment
 ======================
 
 To make it more convenient for your customers to pay the invoices you issue, you can activate the

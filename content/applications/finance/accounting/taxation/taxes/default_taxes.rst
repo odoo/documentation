@@ -1,5 +1,5 @@
 =============
-Default Taxes
+Default taxes
 =============
 
 **Default Taxes** define which :doc:`taxes <taxes>` are automatically selected when there is no

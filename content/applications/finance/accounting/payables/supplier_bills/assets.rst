@@ -1,5 +1,5 @@
 ===================================
-Non-current Assets and Fixed Assets
+Non-current assets and fixed assets
 ===================================
 
 **Non-current Assets**, also known as **long-term assets**, are investments that are expected to be
