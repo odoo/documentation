@@ -1,8 +1,8 @@
 :nosearch:
 
-===========
+========
 Analytic
-===========
+========
 
 .. toctree::
    :titlesonly:

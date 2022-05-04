@@ -1,5 +1,5 @@
 ======================================
-Send your Invoices by Post (Snailmail)
+Send your invoices by post (Snailmail)
 ======================================
 
 Direct mail is a great way to capture individuals’ attention at a time where inboxes are always
