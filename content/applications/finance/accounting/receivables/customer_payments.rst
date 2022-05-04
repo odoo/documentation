@@ -1,7 +1,7 @@
 :nosearch:
 
 =================
-Customer Payments
+Customer payments
 =================
 
 .. toctree::

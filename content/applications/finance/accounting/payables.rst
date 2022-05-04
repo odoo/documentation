@@ -1,7 +1,7 @@
 :nosearch:
 
 ================
-Account Payables
+Account payables
 ================
 
 .. toctree::

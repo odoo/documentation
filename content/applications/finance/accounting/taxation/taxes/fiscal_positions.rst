@@ -1,5 +1,5 @@
 ==========================================
-Fiscal Positions (tax and account mapping)
+Fiscal positions (tax and account mapping)
 ==========================================
 
 Default taxes and accounts are set on products and customers to create new transactions on the fly.
