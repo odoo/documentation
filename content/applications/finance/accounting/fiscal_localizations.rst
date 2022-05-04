@@ -1,7 +1,7 @@
 :nosearch:
 
 ====================
-Fiscal Localizations
+Fiscal localizations
 ====================
 
 .. toctree::

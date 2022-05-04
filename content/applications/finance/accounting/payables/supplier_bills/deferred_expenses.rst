@@ -1,5 +1,5 @@
 =================================
-Deferred Expenses and Prepayments
+Deferred expenses and prepayments
 =================================
 
 **Deferred expenses** and **prepayments** (also known as **prepaid expense**), are both costs that
