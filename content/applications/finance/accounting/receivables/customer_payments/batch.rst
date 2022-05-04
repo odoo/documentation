@@ -1,5 +1,5 @@
 ==================================================
-Batch Payments: Batch Deposits (checks, cash etc.)
+Batch payments: Batch deposits (checks, cash etc.)
 ==================================================
 
 A **Batch Deposit** groups multiple payments in a single batch. This allows you to deposit several
