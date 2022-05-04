@@ -1,5 +1,5 @@
 ============================
-Tax Return (VAT Declaration)
+Tax return (VAT declaration)
 ============================
 
 Companies that are registered for **VAT (Value Added Tax)** must file a **Tax return** on a monthly
