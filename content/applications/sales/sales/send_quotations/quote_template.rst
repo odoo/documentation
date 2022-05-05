@@ -38,10 +38,6 @@ products and quantities as well as the expiration time of the quotation.
    :class: img-thumbnail
    :alt: Create a new quotation template on Odoo Sales
 
-.. note::
-   On each template, you can also specify discounts if the option is activated in the **Sales**
-   settings.
-
 Design your template
 ====================
 
