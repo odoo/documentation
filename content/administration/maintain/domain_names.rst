@@ -21,6 +21,11 @@ You can use a custom domain name to access your Odoo database and websites:
    databases for one year. Visitors can then access your website with an address such as
    ``www.example.com`` rather than the default ``example.odoo.com``.
 
+.. seealso::
+   - `Odoo Tutorials: Register a Free Domain Name
+     <https://www.odoo.com/slides/slide/register-a-free-domain-name-1663>`_
+   - `Odoo Quick Tips: Get a free domain name! <https://www.youtube.com/watch?v=eAfgeNOHLP4>`_
+
 .. _domain-name/about:
 
 About domain names
