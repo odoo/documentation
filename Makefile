@@ -19,6 +19,8 @@ SPHINXOPTS     = -D project_root=$(ROOT) -D canonical_version=$(CANONICAL_VERSIO
                  -D versions=$(VERSIONS) -D languages=$(LANGUAGES) -D language=$(CURRENT_LANG) \
                  -D is_remote_build=$(IS_REMOTE_BUILD) \
                  -A google_analytics_key=$(GOOGLE_ANALYTICS_KEY) \
+                 -A plausible_script=$(plausible_script) \
+                 -A plausible_domain=$(plausible_domain) \
 				 -j $(WORKERS)
 SOURCE_DIR     = content
 
