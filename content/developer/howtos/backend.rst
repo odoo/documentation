@@ -467,7 +467,7 @@ Relational field types are:
 :class:`Many2one(other_model, ondelete='set null') <odoo.fields.Many2one>`
     A simple link to an other object::
 
-        print foo.other_id.name
+        print(foo.other_id.name)
 
     .. seealso:: `foreign keys <http://www.postgresql.org/docs/9.3/static/tutorial-fk.html>`_
 
@@ -477,7 +477,7 @@ Relational field types are:
     accessing it results in a (possibly empty) set of records::
 
         for other in foo.other_ids:
-            print other.name
+            print(other.name)
 
     .. danger::
 
@@ -491,7 +491,7 @@ Relational field types are:
     records, accessing it also results in a possibly empty set of records::
 
         for other in foo.other_ids:
-            print other.name
+            print(other.name)
 
 .. exercise:: Many2one relations
 
