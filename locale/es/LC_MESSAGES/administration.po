@@ -12,11 +12,11 @@
 # RGB Consulting <odoo@rgbconsulting.com>, 2022
 # Jesse Garza <jga@odoo.com>, 2022
 # Pablo Rojas <rojaspablo88@gmail.com>, 2022
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lucia Pacheco <lpo@odoo.com>, 2022
-# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # Martin Trigaux, 2022
 # marcescu, 2022
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
+# Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +25,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-08 13:26+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: marcescu, 2022\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -194,10 +194,12 @@ msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
 msgstr ""
+"Si está configurando un servidor público, asegúrese de revisar sus "
+"recomendaciones de :ref:`seguridad`."
 
 #: ../../content/administration/install/deploy.rst:15
 msgid "dbfilter"
-msgstr ""
+msgstr "dbfilter"
 
 #: ../../content/administration/install/deploy.rst:17
 msgid ""
@@ -206,6 +208,10 @@ msgid ""
 "customizations (starting from the modules being loaded) depending on the "
 "\"current database\"."
 msgstr ""
+"Odoo es un sistema de tenencia múltiple: es posible que un solo sistema de "
+"Odoo ejecute y  sirva varias instancias de la base de datos. También puede "
+"tener varias personalizaciones (desde cómo se cargan los módulos) "
+"dependiendo la base de datos actual."
 
 #: ../../content/administration/install/deploy.rst:21
 msgid ""
@@ -213,6 +219,9 @@ msgid ""
 "in company user: the database can be selected when logging in, and "
 "customizations loaded afterwards."
 msgstr ""
+"Esto no es un problema al trabajar en el backend (cliente web) como un "
+"usuario de la empresa que inició sesión: la base de datos se puede "
+"seleccionar al iniciar sesión y las personalizaciones se cargan después."
 
 #: ../../content/administration/install/deploy.rst:25
 msgid ""
@@ -223,6 +232,13 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
+"Sin embargo, esto es un problema para usuarios que no iniciaron sesión "
+"(portal, sitio web) y no están ligados a la base de datos: Odoo necesita "
+"saber qué base de datos se deberían usar para cargar la página de sitio web "
+"o realizar la operación. Si la tenencia múltiple no se usa, no será un "
+"problema, ya que solo hay una base de datos para usar, pero si hay varias "
+"bases de datos a las que se pueden acceder, Odoo necesita una regla para "
+"saber cuál debe de usuar."
 
 #: ../../content/administration/install/deploy.rst:31
 msgid ""
@@ -232,6 +248,12 @@ msgid ""
 "possibly including the dynamically injected hostname (``%h``) or the first "
 "subdomain (``%d``) through which the system is being accessed."
 msgstr ""
+"Ese es uno de los propósitos de :option:`--db-filter <odoo-bin --db-"
+"filter>`: especifica cuál es la base de datos que se debe seleccionar "
+"dependiendo en el nombre de host (dominio) que se solicita. El valor es una "
+"`expresión regular`_, posiblemente incluyendo el nombre de host inyectado "
+"dinámicamente (``%h``) o el primer subdominio (``%d``)  mediante el cual el "
+"se accede al sistema."
 
 #: ../../content/administration/install/deploy.rst:37
 msgid ""
@@ -239,21 +261,26 @@ msgid ""
 "``website`` is used, dbfilter **must** be set, otherwise a number of "
 "features will not work correctly."
 msgstr ""
+"Para servidores que alojan varias bases de datos en producción, "
+"especialmente si se usa ``sitio web``, el dbfilter **debe** estar "
+"configurado, de lo contrario un número de funciones no trabajarán "
+"correctamente."
 
 #: ../../content/administration/install/deploy.rst:42
 msgid "Configuration samples"
-msgstr ""
+msgstr "Ejemplos de configuración"
 
 #: ../../content/administration/install/deploy.rst:44
 msgid "Show only databases with names beginning with 'mycompany'"
 msgstr ""
+"Mostrar solo las bases de datos con nombres que empiecen con 'miempresa'"
 
 #: ../../content/administration/install/deploy.rst:46
 #: ../../content/administration/install/deploy.rst:58
 #: ../../content/administration/install/deploy.rst:153
 #: ../../content/administration/install/deploy.rst:276
 msgid "in ``/etc/odoo.conf`` set:"
-msgstr ""
+msgstr "en ``/etc/odoo.conf`` configure:"
 
 #: ../../content/administration/install/deploy.rst:53
 msgid ""
@@ -262,6 +289,11 @@ msgid ""
 " ``www.mycompany.com`` or ``mycompany.co.uk``, but not for "
 "``www2.mycompany.com`` or ``helpdesk.mycompany.com``."
 msgstr ""
+"Mostrar solo las bases de datos que coinciden con el primer subdominio "
+"después de ``www``: por ejemplo, la base de datos \"miempresa\" se enseñará "
+"si la solicitud entreante se envió a ``www.miempresa.com`` or "
+"``miempresa.co.uk``, pero no para ``www2.miempresa.com`` o "
+"``serviciodeasistencia.miempresa.com``."
 
 #: ../../content/administration/install/deploy.rst:67
 msgid ""
@@ -272,13 +304,20 @@ msgid ""
 "database-list`` startup parameter to prevent listing your databases, and to "
 "block access to the database management screens. See also security_."
 msgstr ""
+"Configurar un :option:`--db-filtro <odoo-bin --db-filter>` es una parte "
+"importante para asegurar el despliegue. Una vez que funcione correctamente y"
+" solo se vincule una base de datos por nombre de host, se recomienda "
+"ampliamente bloquear el acceso de las pantallas de gerencia a la base de "
+"datos y use el parámetro de inicio  ``--no-database-list`` para evitar "
+"listar sus bases de datos y para bloquear el acceso a las pantallas de "
+"gerencia de la base de datos. También vea security_."
 
 #: ../../content/administration/install/deploy.rst:76
 #: ../../content/administration/install/install.rst:325
 #: ../../content/administration/install/install.rst:488
 #: ../../content/administration/install/install.rst:659
 msgid "PostgreSQL"
-msgstr ""
+msgstr "PostgreSQL"
 
 #: ../../content/administration/install/deploy.rst:78
 msgid ""
@@ -286,6 +325,9 @@ msgid ""
 " connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"Por defecto, PostgreSQL solo permite la conexión con UNIX mediante sockets y"
+" loopback (desde \"localhost\", la misma máquina en la que está instalada el"
+" servidor PostgreSQL)."
 
 #: ../../content/administration/install/deploy.rst:82
 msgid ""
@@ -294,6 +336,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"El socket de UNIX está bien si quiere que Odoo y PostgreSQL se ejecuten en "
+"la misma máquina y es lo predeterminado cuando no se brinda un alojamiento, "
+"pero si quiere que Odoo y PostgreSQL se ejecuten en diferentes máquinas "
+"[#different-machines]_ necesitará `escuchar las interfaces de la red`_ "
+"[#remote-socket]_, ya sea:"
 
 #: ../../content/administration/install/deploy.rst:87
 msgid ""
@@ -301,6 +348,9 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"Solo acepte conexiones loopback y `use un SSH tunel`_ entre la máquina en la"
+" que Odoo se ejecutra y la máquina en la que PostgreSQL se ejecuta, después "
+"configure Odoo para conectarse para su lado del tunel."
 
 #: ../../content/administration/install/deploy.rst:90
 msgid ""
@@ -308,33 +358,36 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
+"Aceptar conexiones a la máquina en la que Odoo está instalado, posiblemente "
+"en ssl (vea `ajustes de conexión con PostgreSQL`_ para más detalles), "
+"después configure Odoo para conectarlo con la red."
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
 #: ../../content/administration/install/deploy.rst:231
 #: ../../content/administration/install/deploy.rst:271
 msgid "Configuration sample"
-msgstr ""
+msgstr "Ejemplo de configuración"
 
 #: ../../content/administration/install/deploy.rst:97
 msgid "Allow tcp connection on localhost"
-msgstr ""
+msgstr "Permitir la conexión tcp en alojamiento local"
 
 #: ../../content/administration/install/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "Permitir la conexión tcp desde la red 192.168.1.x"
 
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:"
-msgstr ""
+msgstr "en ``/etc/postgresql/9.5/main/pg_hba.conf`` configure:"
 
 #: ../../content/administration/install/deploy.rst:108
 msgid "in ``/etc/postgresql/9.5/main/postgresql.conf`` set:"
-msgstr ""
+msgstr "en ``/etc/postgresql/9.5/main/postgresql.conf`` configure:"
 
 #: ../../content/administration/install/deploy.rst:119
 msgid "Configuring Odoo"
-msgstr ""
+msgstr "Configurando Odoo"
 
 #: ../../content/administration/install/deploy.rst:121
 msgid ""
@@ -343,12 +396,20 @@ msgid ""
 "<reference/cmdline/server/database>` when your Postgres deployment is not "
 "local and/or does not use the installation defaults."
 msgstr ""
+"Odoo es una aplicación que de inmediato se puede conectar a postgres locales"
+" con un socket UNIX mediante el puerto 5432.  Esto se puede anular con "
+":ref:`las opciones de la base de datos <reference/cmdline/server/database>` "
+"cuando su implementación no es local o no usa la configuración "
+"predeterminada de la instalación."
 
 #: ../../content/administration/install/deploy.rst:126
 msgid ""
 "The :ref:`packaged installers <setup/install/packaged>` will automatically "
 "create a new user (``odoo``) and set it as the database user."
 msgstr ""
+"Los :ref:`paquetes de instalación <setup/install/packaged>` crearán un nuevo"
+" usuario (``odoo``) automáticamente y lo marcarán como un usuario de la base"
+" de datos."
 
 #: ../../content/administration/install/deploy.rst:129
 msgid ""
@@ -358,6 +419,11 @@ msgid ""
 " randomly generated value to ensure third parties can not use this "
 "interface."
 msgstr ""
+"La configuración de ``admin_passwd`` protegen las pantallas de gestión de la"
+" base de datos. Esta configuración solo se puede usar con los archivos de "
+"configuración y simplemente se revisa antes de realizar alteraciones a la "
+"base de datos. Debería estar configurado a un valor generado de manera "
+"aleatoria para asegurar que terceros no pueden usar esta interfaz."
 
 #: ../../content/administration/install/deploy.rst:134
 msgid ""
@@ -366,6 +432,10 @@ msgid ""
 "screen. For the database management screen to work requires that the "
 "PostgreSQL user have ``createdb`` right."
 msgstr ""
+"Todas las operaciones de la base de datos usan las :ref:`opciones de base de"
+" datos <reference/cmdline/server/database>`, incluyendo la pantalla de "
+"gestión de las bases de datos. Para que la pantalla de gestión funcione, el "
+"usuario de PostgreSQL necesita tener el derecho ``createdb``."
 
 #: ../../content/administration/install/deploy.rst:138
 msgid ""
@@ -374,34 +444,38 @@ msgid ""
 "with ``no-createdb`` and the database must be owned by a different "
 "PostgreSQL user."
 msgstr ""
+"Los usuarios siempre pueden abandonar las bases de datos que les pertenecen."
+" Para que la pantalla de gestión de la base de datos deje de ser funcional, "
+"el usuario de PostgreSQL necesita crearse con ``no-createdb`` y otro usuario"
+" PostgreSQL debe ser el dueño de la base de datos."
 
 #: ../../content/administration/install/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
-msgstr ""
+msgstr "el usuario PostgreSQL *no puede** ser un superusuario. "
 
 #: ../../content/administration/install/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr ""
+msgstr "conéctese a un servidor PostgreSQL  en 192.168.1.2"
 
 #: ../../content/administration/install/deploy.rst:148
 msgid "port 5432"
-msgstr ""
+msgstr "puerto 5432"
 
 #: ../../content/administration/install/deploy.rst:149
 msgid "using an 'odoo' user account,"
-msgstr ""
+msgstr "usando una cuenta de usuario \"odoo\","
 
 #: ../../content/administration/install/deploy.rst:150
 msgid "with 'pwd' as a password"
-msgstr ""
+msgstr "con \"pwd\" como contraseña"
 
 #: ../../content/administration/install/deploy.rst:151
 msgid "filtering only db with a name beginning with 'mycompany'"
-msgstr ""
+msgstr "filtrando solo la base de datos con nombres que empiecen en \"miempresa\""
 
 #: ../../content/administration/install/deploy.rst:168
 msgid "SSL Between Odoo and PostgreSQL"
-msgstr ""
+msgstr "SSL entre Odoo y PostgreSQL"
 
 #: ../../content/administration/install/deploy.rst:170
 msgid ""
@@ -410,22 +484,30 @@ msgid ""
 "value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca' or "
 "'verify-full'"
 msgstr ""
+"Desde Odoo 11.0 puede aplicar la conexión entre Odoo y PostgreSQL. En Odoo, "
+"db_sslmode controla la seguridad ssl de la conexión con un valor que puede "
+"ser \"desabilitar\", \"permitir\", \"preferir\", \"requerir\", \"verificar-"
+"ca\", o \"verificar-completo\""
 
 #: ../../content/administration/install/deploy.rst:175
 msgid ""
 "`PostgreSQL Doc <https://www.postgresql.org/docs/current/static/libpq-"
 "ssl.html>`_"
 msgstr ""
+"`Documento PostgreSQL <https://www.postgresql.org/docs/current/static/libpq-"
+"ssl.html>`_"
 
 #: ../../content/administration/install/deploy.rst:180
 msgid "Builtin server"
-msgstr ""
+msgstr "Servidor built-in"
 
 #: ../../content/administration/install/deploy.rst:182
 msgid ""
 "Odoo includes built-in HTTP servers, using either multithreading or "
 "multiprocessing."
 msgstr ""
+"Odoo incluye servidores HTTP built-in, usando ya sea multihilos o "
+"multiprocesos."
 
 #: ../../content/administration/install/deploy.rst:185
 msgid ""
@@ -433,6 +515,9 @@ msgid ""
 "it increases stability, makes somewhat better use of computing resources and"
 " can be better monitored and resource-restricted."
 msgstr ""
+"Para uso en producción, se recomienda utilizar el servidor multiprocesos ya "
+"que aumenta la estabilidad, hace mejor uso de los recursos de cómputo y "
+"puede ser mejor monitorearlo y restringir los recursos."
 
 #: ../../content/administration/install/deploy.rst:189
 msgid ""
@@ -441,65 +526,82 @@ msgid ""
 "based on the number of cores in the machine (possibly with some room for "
 "cron workers depending on how much cron work is predicted)"
 msgstr ""
+"El multiprocesamiento se activa configurando :option:`un número, diferente a"
+" cero. de procesos laborales<odoo-bin --workers>`, el número de trabajadores"
+" debería basarse en el número de núcleos en la máquina (posiblemente con "
+"espacio para los trabajadores del cron dependiendo de cuánto trabajo en el "
+"cron se espere)"
 
 #: ../../content/administration/install/deploy.rst:193
 msgid ""
 "Worker limits can be configured based on the hardware configuration to avoid"
 " resources exhaustion"
 msgstr ""
+"Los límites del trabajador se pueden configurar según la configuración del "
+"hardware para evitar agotar recursos."
 
 #: ../../content/administration/install/deploy.rst:196
 msgid "multiprocessing mode currently isn't available on Windows"
-msgstr ""
+msgstr "el modo de multiprocesos todavía no está disponible en Windows"
 
 #: ../../content/administration/install/deploy.rst:199
 msgid "Worker number calculation"
-msgstr ""
+msgstr "Cálculo del número de trabajadores"
 
 #: ../../content/administration/install/deploy.rst:201
 msgid "Rule of thumb : (#CPU * 2) + 1"
-msgstr ""
+msgstr "Regla general : (#CPU * 2) + 1"
 
 #: ../../content/administration/install/deploy.rst:202
 msgid "Cron workers need CPU"
-msgstr ""
+msgstr "Los trabajadores del cron necesitan CPU"
 
 #: ../../content/administration/install/deploy.rst:203
 msgid "1 worker ~= 6 concurrent users"
-msgstr ""
+msgstr "1 trabajador ~= 6 usuarios concurrentes"
 
 #: ../../content/administration/install/deploy.rst:206
 msgid "memory size calculation"
-msgstr ""
+msgstr "cálculo del tamaño de la memoria"
 
 #: ../../content/administration/install/deploy.rst:208
 msgid ""
 "We consider 20% of the requests are heavy requests, while 80% are simpler "
 "ones"
 msgstr ""
+"Consideramos que el 20% de las solicitudes son serias, mientras que el 80% "
+"son más simples."
 
 #: ../../content/administration/install/deploy.rst:209
 msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
 msgstr ""
+"Se estima que un trabajador pesado consume alrededor de 1GB de RAM una vez "
+"que todos los campos computados y las peticiones SQL estén bien diseñadas, "
+"etc."
 
 #: ../../content/administration/install/deploy.rst:210
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
 msgstr ""
+"Se estima que un trabajador ligero en el mismo escenario consume alrededor "
+"de 150MB de RAM"
 
 #: ../../content/administration/install/deploy.rst:212
 msgid ""
 "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimation) "
 "+ (heavy_worker_ratio * heavy_worker_ram_estimation) )"
 msgstr ""
+"RAM necesario = #trabajador * ( (light_worker_ratio * "
+"light_worker_ram_estimation) + (heavy_worker_ratio * "
+"heavy_worker_ram_estimation) )"
 
 #: ../../content/administration/install/deploy.rst:215
 #: ../../content/administration/install/deploy.rst:369
 msgid "LiveChat"
-msgstr ""
+msgstr "Chat en vivo"
 
 #: ../../content/administration/install/deploy.rst:217
 msgid ""
@@ -525,33 +627,35 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:233
 msgid "Server with 4 CPU, 8 Thread"
-msgstr ""
+msgstr "Servidor con 4 CPU, 8 Thread"
 
 #: ../../content/administration/install/deploy.rst:234
 msgid "60 concurrent users"
-msgstr ""
+msgstr "60 usuarios concurrentes"
 
 #: ../../content/administration/install/deploy.rst:236
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
-msgstr ""
+msgstr "60 usuarios / 6 = 10 <- número teórico de trabajadores necesarios"
 
 #: ../../content/administration/install/deploy.rst:237
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
-msgstr ""
+msgstr "(4 * 2) + 1 = 9 <- número teórico máximo de trabajadores"
 
 #: ../../content/administration/install/deploy.rst:238
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
 msgstr ""
+"Usaremos 8 trabajadores + 1 para el cron.  También usaremos un sistema de "
+"monitoreo para medir la carga del cpu y revisar que sea entre 7 y 7.5."
 
 #: ../../content/administration/install/deploy.rst:239
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
-msgstr ""
+msgstr "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM para Odoo"
 
 #: ../../content/administration/install/deploy.rst:241
 msgid "in ``/etc/odoo.conf``:"
-msgstr ""
+msgstr "en ``/etc/odoo.conf``:"
 
 #: ../../content/administration/install/deploy.rst:257
 msgid "HTTPS"
@@ -570,14 +674,17 @@ msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
+"Activar el :option:`modo proxy <odoo-bin --proxy-mode>` de Odoo. Esto solo "
+"debería estar activado cuando Odoo esté detrás de un proxy reverso."
 
 #: ../../content/administration/install/deploy.rst:265
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
 msgstr ""
+"Configurar la terminación SSL del proxy (`ejemplo de terminación Nginx`_)"
 
 #: ../../content/administration/install/deploy.rst:266
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
-msgstr ""
+msgstr "Configurar el proxy en sí (`ejemplo Nginx del proxy`_)"
 
 #: ../../content/administration/install/deploy.rst:267
 msgid ""
@@ -2254,6 +2361,7 @@ msgstr ""
 msgid ""
 "`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 msgstr ""
+"`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:177
 msgid "Naked domain"
@@ -2822,7 +2930,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
-msgstr ""
+msgstr "Gestión de bases de datos de forma local"
 
 #: ../../content/administration/maintain/on_premise.rst:6
 msgid "Register a database"
@@ -2837,6 +2945,13 @@ msgid ""
 "registered database. You can check this Expiration Date in the About menu "
 "(Odoo 9) or in the Settings Dashboard (Odoo 10)."
 msgstr ""
+"Para registrar su base de datos, debe ingresar su código de suscripción en "
+"el panel en el intercambiador de aplicaciones. Asegúrese de no agregar "
+"espacios adicionales antes o después de su código de suscripción. Si el "
+"registro se realiza con éxito, cambiará a verde y le proporcionará la fecha "
+"de expiración de su base de datos recién registrada. Puede revisar esta "
+"fecha de expiración en el menú Sobre (Odoo 9) o en el tablero de ajustes "
+"(Odoo 10)."
 
 #: ../../content/administration/maintain/on_premise.rst:16
 msgid "Registration Error Message"
@@ -2847,6 +2962,7 @@ msgid ""
 "If you are unable to register your database, you will likely encounter this "
 "message:"
 msgstr ""
+"Si no puede registrar su base de datos, probablemente obtuvo este mensaje:"
 
 #: ../../content/administration/maintain/on_premise.rst:27
 #: ../../content/administration/maintain/on_premise.rst:106
@@ -2864,16 +2980,22 @@ msgid ""
 " Account <https://accounts.odoo.com/my/subscription>`__ or with your Account"
 " Manager"
 msgstr ""
+"Verifique si sus detalles de suscripción tienen la etiqueta \"En progreso\" "
+"en su `cuenta de Odoo <https://accounts.odoo.com/my/subscription>`__ o con "
+"su gerente de cuenta"
 
 #: ../../content/administration/maintain/on_premise.rst:35
 msgid "Have you already linked a database with your subscription reference?"
-msgstr ""
+msgstr "¿Ya vinculó una base de datos con su referencia de suscripción?"
 
 #: ../../content/administration/maintain/on_premise.rst:37
 msgid ""
 "You can link only one database per subscription. (Need a test or a "
 "development database? `Find a partner <https://www.odoo.com/partners>`__)"
 msgstr ""
+"Solo puede vincular una base de datos por suscripción. (¿Necesita una base "
+"de datos de prueba o de desarrollo? `Busque un partner "
+"<https://www.odoo.com/partners>`__)"
 
 #: ../../content/administration/maintain/on_premise.rst:41
 msgid ""
@@ -2881,12 +3003,17 @@ msgid ""
 "<https://accounts.odoo.com/my/subscription>`__ with the button \"Unlink "
 "database\""
 msgstr ""
+"Puede desvincular una base de datos antigua usted mismo en su `contrato de "
+"Odoo <https://accounts.odoo.com/my/subscription>`__ con el botón "
+"\"Desvincular base de datos\""
 
 #: ../../content/administration/maintain/on_premise.rst:48
 msgid ""
 "A confirmation message will appear; make sure this is the correct database "
 "as it will be deactivated shortly:"
 msgstr ""
+"Aparecerá un mensaje de confirmación, asegúrese de que sea la base de datos "
+"correcta porque se desactivará en breve:"
 
 #: ../../content/administration/maintain/on_premise.rst:55
 msgid "Do you have the updated version of Odoo 9?"
@@ -2908,6 +3035,10 @@ msgid ""
 "<https://accounts.odoo.com/my/subscription>`__, a short message will appear "
 "specifying which database is problematic:"
 msgstr ""
+"Si no es el caso, tal vez tenga múltiples bases de datos que comparten el "
+"mismo UUID. Revise su `contrato de Odoo "
+"<https://accounts.odoo.com/my/subscription>`__, aparecerá un pequeño mensaje"
+" que especifica cuál es la base de datos problemática:"
 
 #: ../../content/administration/maintain/on_premise.rst:69
 msgid ""
@@ -2915,6 +3046,9 @@ msgid ""
 "this issue. You will find more information about this in :ref:`this section "
 "<duplicate_premise>`."
 msgstr ""
+"En este caso, debe cambiar el UUID de su base de datos de prueba para "
+"resolver este problema. Encontrará más información sobre esto en :ref:`esta "
+"sección <duplicate_premise>`."
 
 #: ../../content/administration/maintain/on_premise.rst:72
 msgid ""
@@ -2922,10 +3056,13 @@ msgid ""
 "database should have a distinct UUID to ensure that registration and "
 "invoicing proceed effortlessly for your and for us."
 msgstr ""
+"Identificamos la base de datos con el UUID. Por lo tanto, cada base de datos"
+" debe tener un UUID único para garantizar que el registro y la facturación "
+"se lleven a cabo sin problemas para usted o para nosotros."
 
 #: ../../content/administration/maintain/on_premise.rst:76
 msgid "Check your network and firewall settings"
-msgstr ""
+msgstr "Compruebe sus ajustes de red y de firewall"
 
 #: ../../content/administration/maintain/on_premise.rst:78
 msgid ""
@@ -2933,30 +3070,39 @@ msgid ""
 " servers. In other words, make sure that the Odoo server is able to open "
 "outgoing connections towards:"
 msgstr ""
+"La notificación de actualización debe poder conectar con los servidores de "
+"validación de suscripción de Odoo. Es decir, asegúrese de que el servidor de"
+" Odoo puede abrir conexiones salientes con:"
 
 #: ../../content/administration/maintain/on_premise.rst:82
 msgid "services.odoo.com on port 443 (or 80)"
-msgstr ""
+msgstr "services.odoo.com en el puerto 443 (u 80)"
 
 #: ../../content/administration/maintain/on_premise.rst:83
 msgid "services.openerp.com on port 443 (or 80) for older deployments"
 msgstr ""
+"services.openerp.com en el puerto 443 (u 80) para implementaciones más "
+"antiguas"
 
 #: ../../content/administration/maintain/on_premise.rst:85
 msgid ""
 "Once you activated your database, you must keep these ports open, as the "
 "Update notification runs once a week."
 msgstr ""
+"Una vez que activó su base de datos, debe mantener estos puertos abiertos, "
+"ya que la notificación de actualización se ejecuta una vez a la semana."
 
 #: ../../content/administration/maintain/on_premise.rst:91
 msgid "Error message due to too many users"
-msgstr ""
+msgstr "Mensaje de error debido a demasiados usuarios"
 
 #: ../../content/administration/maintain/on_premise.rst:93
 msgid ""
 "If you have more users in your local database than provisionned in your Odoo"
 " Enterprise subscription, you may encounter this message:"
 msgstr ""
+"Puede recibir este mensaje si tiene más usuarios en su base de datos local "
+"que los indicados en su suscripción a Odoo Enterprise:"
 
 #: ../../content/administration/maintain/on_premise.rst:102
 msgid ""
