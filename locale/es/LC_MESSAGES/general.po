@@ -637,6 +637,9 @@ msgid ""
 "that emails from your users reach your partners, rather than being "
 "considered spam."
 msgstr ""
+"Sin embargo, le recomendamos configurar su nombre de dominio para garantizar"
+" que los correos electrónicos de sus usuarios lleguen a sus partners, en "
+"lugar de que se consideren spam."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:32
 msgid ""
@@ -644,10 +647,13 @@ msgid ""
 "address from a domain you manage, rather than a generic email address "
 "(gmail.com, outlook.com, etc.)."
 msgstr ""
+"Por la misma razón, le recomendamos que siempre brinde a sus usuarios una "
+"dirección de correo electrónico de un dominio que gestione, en lugar de una "
+"dirección de correo electrónico genérica (gmail.com, outlook.com, etc.)."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:38
 msgid "Be SPF compliant"
-msgstr ""
+msgstr "Cumplimiento SPF"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:40
 msgid ""
@@ -657,6 +663,12 @@ msgid ""
 "sending server is on the list of allowed IPs according to the SPF record of "
 "the sender."
 msgstr ""
+"El protocolo del Convenio de remitentes (SPF, por sus siglas en inglés) "
+"permite al propietario de un nombre de dominio especificar qué servidores "
+"pueden enviar correos electrónicos desde ese dominio. Cuando un servidor "
+"recibe un correo entrante, verifica si la dirección IP del servidor "
+"remitente está en la lista de direcciones IP permitidas según el registro "
+"SPF del remitente."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:46
 msgid ""
@@ -665,12 +677,18 @@ msgid ""
 "corresponds to the value of the `mail.catchall.domain` key in the database "
 "system parameters."
 msgstr ""
+"La verificación de SPF se realiza en el dominio que se mencionó en el campo "
+"Return-Path del correo electrónico. En el caso de un correo electrónico que "
+"Odoo envió, este dominio corresponde al valor de la clave "
+"`mail.catchall.domain` en los parámetros de sistema de la base de datos."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:50
 msgid ""
 "See the :ref:`documentation on incoming emails "
 "<email_communication/inbound_messages>`."
 msgstr ""
+"Consulte la :ref:`documentación sobre correos electrónicos entrantes "
+"<email_communication/inbound_messages>`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:52
 msgid ""
@@ -679,22 +697,30 @@ msgid ""
 "domain name. In order for the verification to work properly, each domain can"
 " only have one SPF record."
 msgstr ""
+"La política SPF de un dominio se establece mediante un registro TXT. Crear o"
+" modificar un registro TXT depende del proveedor que da alojamiento a la "
+"zona DNS de su nombre de dominio. Para que la verificación funcione de forma"
+" adecuada, cada dominio puede tener solo un registro SPF."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:56
 msgid ""
 "If your domain name does not yet have an SPF record, the content of the "
 "record to create is as follows:"
 msgstr ""
+"Si su nombre de dominio aún no tiene un registro SPF, el contenido del "
+"registro por crear es el siguiente:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:59
 msgid "``v=spf1 include:_spf.odoo.com ~all``"
-msgstr ""
+msgstr "``v=spf1 include:_spf.odoo.com ~all``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:61
 msgid ""
 "If your domain name already has an SPF record, you need to update this "
 "record (and do not create a new one)."
 msgstr ""
+"Si su nombre de dominio ya tiene un registro SPF, debe actualizarlo (y no "
+"crear uno nuevo)."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:66
 msgid ""
@@ -702,22 +728,30 @@ msgid ""
 "edit it to add `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 msgstr ""
+"Si su registro TXT es `v=spf1 include:_spf.google.com ~all`, debe editarlo "
+"para agregar `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
+"include:_spf.google.com ~all`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:69
 msgid ""
 "You can check if your SPF record is valid with a free tool like `MXToolbox "
 "SPF <https://mxtoolbox.com/spf.aspx>`_."
 msgstr ""
+"Puede verificar que su registro SPF sea válido con una herramienta gratuita "
+"como `MXToolbox SPF <https://mxtoolbox.com/spf.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:75
 msgid "Enable DKIM"
-msgstr ""
+msgstr "Habilitar DKIM"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:77
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows you to authenticate your emails"
 " with a digital signature."
 msgstr ""
+"El Correo Identificado con Claves de Dominio (DKIM, por sus siglas en "
+"inglés) le permite autenticar sus correos electrónicos con una firma "
+"digital."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:79
 msgid ""
@@ -727,16 +761,23 @@ msgid ""
 "record match, this guarantees that your message is authentic and has not "
 "been altered during transport."
 msgstr ""
+"Al enviar un correo electrónico, el servidor de Odoo incluye una firma DKIM "
+"única en los encabezados. El servidor del destinatario descifra esta firma "
+"mediante el registro DKIM en su nombre de dominio. Si la firma y la clave en"
+" el registro coinciden, garantiza que su mensaje es auténtico y que no se "
+"alteró durante el transporte."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:84
 msgid ""
 "To enable DKIM, you must add a CNAME record to the DNS zone of your domain "
 "name:"
 msgstr ""
+"Para habilitar la DKIM, debe agregar un registro CNAME en la zona DNS de su "
+"nombre de dominio:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid "``odoo._domainkey IN CNAME odoo._domainkey.odoo.com.``"
-msgstr ""
+msgstr "``odoo._domainkey IN CNAME odoo._domainkey.odoo.com.``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
@@ -744,22 +785,31 @@ msgid ""
 "`odoo._domainkey.mycompany.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Si su nombre de dominio es `miempresa.com`, debe crear un subdominio "
+"`odoo._domainkey.mycompany.com` cuyo nombre canónico es "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:92
 msgid ""
 "How to create or modify a CNAME record depends on the provider hosting the "
 "DNS zone of your domain name. The most common providers are list below."
 msgstr ""
+"Cómo se crea o modifica un registro CNAME depende del proveedor de "
+"alojamiento de la zona DNS de su nombre de dominio. Los proveedores más "
+"comunes se listan a continuación."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:95
 msgid ""
 "You can check if your DKIM record is valid with a free tool like `DKIM Core "
 "<https://dkimcore.org/tools/>`_. If a selector is asked, enter `odoo`."
 msgstr ""
+"Puede verificar si su registro DKIM es válido mediante una herramienta "
+"gratuita como `DKIM Core <https://dkimcore.org/tools/>`_. Si se le solicita "
+"un selector, ingrese `odoo`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:99
 msgid "Check your DMARC policy"
-msgstr ""
+msgstr "Verificar su política DMARC"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:101
 msgid ""
@@ -768,24 +818,35 @@ msgid ""
 "DMARC record of a domain name tell the destination server what to do with an"
 " incoming email that fails the SPF and/or DKIM check."
 msgstr ""
+"La Autenticación de Mensajes Basada en Dominios, Reportes y Conformidad "
+"(DMARC, por sus siglas en inglés) es un protocolo que unifica el SPF y la "
+"DKIM. Las instrucciones que vienen en el registro DMARC de un nombre de "
+"dominio indican al servidor destino qué hacer con un correo entrante que no "
+"cumpla con la verificación SPF y/o DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid ""
 "There are three DMARC policies: - ``p=none`` - ``p=quarantine`` - "
 "``p=reject``"
 msgstr ""
+"Hay tres políticas DMARC: - ``p=none`` - ``p=quarantine`` - ``p=reject``"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:110
 msgid ""
 "``p=quarantine`` and ``p=reject`` instruct the server that receives an email"
 " to quarantine that email or ignore it if the SPF and/or DKIM check fails."
 msgstr ""
+"``p=quarantine`` y ``p=reject`` indican al servidor que recibe el correo "
+"electrónico que lo ponga en cuarentena o lo ignore si no pasó las "
+"comprobación de SPF y/o de DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:113
 msgid ""
 "If your domain name uses DMARC and has defined one of these policies, it is "
 "therefore imperative to be SPF compliant or to enable DKIM."
 msgstr ""
+"Si su nombre de dominio usa DMARC y se le definió una de estas políticas,  "
+"es por lo tanto necesario que sea compatible con SPF o habilitar DKIM."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:117
 msgid ""
@@ -793,6 +854,10 @@ msgid ""
 "``p=reject``. We strongly advise against using an *@yahoo.com* or *@aol.com*"
 " address for your users. These emails will never reach their recipient."
 msgstr ""
+"Yahoo o AOL son ejemplos de proveedores de correo electrónico con una "
+"política DMAR establecida como ``p=reject``. Le recomendamos no usar "
+"direcciones *@yahoo.com* o *@aol.com* con sus usuarios. Estos correos "
+"electrónicos jamás llegarán a su destinatario."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:121
 msgid ""
@@ -800,12 +865,17 @@ msgid ""
 "using their domain. It should not impact the deliverability if the DMARC "
 "check fails."
 msgstr ""
+"El propietario del dominio utiliza ``p=none`` para recibir reportes sobre "
+"entidades que utilicen su dominio. Un fallo en la comprobación DMARC no "
+"debería tener ningún impacto en la entrega."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:124
 msgid ""
 "You can check the DMARC record of a domain name with a tool like `MXToolbox "
 "DMARC <https://mxtoolbox.com/DMARC.aspx>`_."
 msgstr ""
+"Puede revisar el registro DMARC de un nombre de dominio con una herramienta "
+"como `MXToolbox DMARC <https://mxtoolbox.com/DMARC.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:127
 msgid ""
@@ -813,6 +883,9 @@ msgid ""
 "of these policies, the Odoo server cannot relay emails from this partner to "
 "your users."
 msgstr ""
+"Si uno de sus partners, clientes o proveedores utiliza DMARC y definió una "
+"de estas políticas, el servidor de Odoo no puede retransmitir correos "
+"electrónicos de este contacto a sus usuarios."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:130
 msgid ""
@@ -820,35 +893,43 @@ msgid ""
 "<discuss_app/notification_preferences>`, or replace the email address of the"
 " partner with a default email address."
 msgstr ""
+"Debe :ref:`usar las notificaciones de usuario en Odoo "
+"<discuss_app/notification_preferences>`, o reemplazar la dirección de correo"
+" electrónico del contacto con una dirección predeterminada."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:136
 msgid "SPF, DKIM & DMARC documentation of common providers"
-msgstr ""
+msgstr "Documentación de SPF, DKIM y DMARC de los proveedores más comunes"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:138
 msgid ""
 "`OVH DNS "
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 msgstr ""
+"`OVH DNS "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
 "`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 msgstr ""
+"`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:140
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
+"`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:141
 msgid "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
-msgstr ""
+msgstr "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:142
 msgid ""
 "`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 msgstr ""
+"`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:143
 msgid ""
@@ -856,23 +937,31 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
+"`NameCheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
+"do-i-add-txtspfdkimdmarc-records-for-my-domain/>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:144
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
 msgstr ""
+"`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:145
 msgid ""
 "`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 msgstr ""
+"`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:146
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 msgstr ""
+"`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
+"portal>`_"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:148
 msgid ""
@@ -881,10 +970,14 @@ msgid ""
 "configuration you have in one email sent! Mail-Tester can also be used for "
 "other lesser known providers."
 msgstr ""
+"Para probar por completo su configuración, la herramienta `Mail-Tester "
+"<https://www.mail-tester.com/>`_ le dará un resumen completo del contenido y"
+" configuración de un correo electrónico enviado. Mail-Tester también se "
+"puede usar con otros proveedores menos conocidos."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:153
 msgid "Use a default email address"
-msgstr ""
+msgstr "Usar una dirección de correo electrónico predeterminada"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:155
 msgid ""
@@ -916,6 +1009,9 @@ msgid ""
 "mode>` in the :menuselection:`Settings --> Technical --> Parameters --> "
 "System Parameters` menu."
 msgstr ""
+"Puede acceder a los **parámetros de sistema** en el :ref:`modo de "
+"desarrollador <developer-mode>` en el menú :menuselection:`Ajustes --> "
+"Técnico --> Parámetros --> Parámetros de sistema`."
 
 #: ../../content/applications/general/email_communication/email_servers.rst:3
 msgid "Send and Receive Emails in Odoo with an Email Server"
@@ -2014,14 +2110,16 @@ msgid ""
 "The first indicator showing you that the email has not been sent is the red "
 "envelope next to the date and time of the message."
 msgstr ""
+"El primer indicador que muestra que no se envió un correo electrónico es el "
+"sobre rojo a lado de la fecha y hora del mensaje."
 
 #: ../../content/applications/general/email_communication/faq.rst:26
 msgid "Common error messages"
-msgstr ""
+msgstr "Mensajes de error comunes"
 
 #: ../../content/applications/general/email_communication/faq.rst:31
 msgid "You reached your daily limit:"
-msgstr ""
+msgstr "Se alcanzó el límite diario:"
 
 #: ../../content/applications/general/email_communication/faq.rst:37
 msgid ""
@@ -2030,43 +2128,58 @@ msgid ""
 " we have to limit our customers to prevent our e-mail servers from being "
 "blacklisted."
 msgstr ""
+"Cada proveedor de servicios de correo electrónico tiene sus propios límites "
+"de correo electrónico. Los límites pueden ser por día, hora e incluso por "
+"minuto. Lo mismo sucede con Odoo, le ponemos un límite a los clientes para "
+"prevenir que nuestros servidores de correo electrónico se agreguen a listas "
+"negras."
 
 #: ../../content/applications/general/email_communication/faq.rst:41
 msgid "Here are the default limits for new databases:"
 msgstr ""
+"A continuación se describen los límites predeterminados para bases de datos "
+"nuevas:"
 
 #: ../../content/applications/general/email_communication/faq.rst:43
 msgid ""
 "200 emails/day for Odoo Online and Odoo.sh databases with an active "
 "subscription,"
 msgstr ""
+"200 correos electrónicos por día para bases de datos de Odoo en línea y "
+"Odoo.sh con una suscripción activa."
 
 #: ../../content/applications/general/email_communication/faq.rst:45
 msgid "50 emails/day for one-app free and trial databases,"
 msgstr ""
+"50 correos electrónicos por día para bases de datos de prueba y de una "
+"aplicación gratis."
 
 #: ../../content/applications/general/email_communication/faq.rst:47
 msgid ""
 "in case of migration, your daily limit might be reset to 50 emails a day."
 msgstr ""
+"En el caso de migración, su límite diario se puede restablecer a 50 correos "
+"electrónicos por día."
 
 #: ../../content/applications/general/email_communication/faq.rst:49
 msgid "In case you hit the limit, you can:"
-msgstr ""
+msgstr "En caso de alcanzar el límite, puede:"
 
 #: ../../content/applications/general/email_communication/faq.rst:51
 msgid ""
 "Ask our support team to increase your daily limit. We will analyze the "
 "situation of your database depending on (non-exhaustive list):"
 msgstr ""
+"Solicitar al equipo de soporte que incremente su límite diario. Analizaremos"
+" la situación de su base de datos en función de (lista no exhaustiva):"
 
 #: ../../content/applications/general/email_communication/faq.rst:54
 msgid "How many users in your database,"
-msgstr ""
+msgstr "Cuántos usuarios hay en su base de datos."
 
 #: ../../content/applications/general/email_communication/faq.rst:55
 msgid "Which apps are installed,"
-msgstr ""
+msgstr "Qué aplicaciones se instalaron."
 
 #: ../../content/applications/general/email_communication/faq.rst:56
 msgid ""
@@ -2074,6 +2187,10 @@ msgid ""
 "your emails because it was returned by a mail server on its way to the final"
 " recipient. You can contact the `support <https://www.odoo.com/help>`_."
 msgstr ""
+"Su tasa de mensajes devueltos: el porcentaje de direcciones de correos "
+"electrónicos que no recibieron sus mensajes porque fueron devueltos por un "
+"servidor de correo durante su camino al destinatario final. Puede contactar "
+"al `soporte <https://www.odoo.com/help>`_."
 
 #: ../../content/applications/general/email_communication/faq.rst:60
 msgid ""
@@ -2081,6 +2198,10 @@ msgid ""
 "(please refer to :doc:`the corresponding documentation "
 "</applications/general/email_communication/email_servers>`),"
 msgstr ""
+"Usar su propio servidor de correos electrónicos salientes que sea "
+"independiente del límite de correos de Odoo (consulte la :doc:`documentación"
+" correspondiente "
+"</applications/general/email_communication/email_servers>`),"
 
 #: ../../content/applications/general/email_communication/faq.rst:62
 msgid ""
@@ -2088,6 +2209,10 @@ msgid ""
 ":ref:`Developer mode <developer-mode>` must be activated. Then, go to "
 ":menuselection:`Settings --> Technical --> Emails`"
 msgstr ""
+"Esperar hasta las 11 pm UTC para que suceda el restablecimiento y hacer clic"
+" en el botón de volver a intentar:: Se debe activar el :ref:`modo de "
+"desarrollador <developer-mode>`. Luego, vaya a :menuselection:`Ajustes --> "
+"Técnico --> Correos electrónicos`"
 
 #: ../../content/applications/general/email_communication/faq.rst:70
 msgid ""
@@ -2095,16 +2220,23 @@ msgid ""
 "an internal message, a notification, a note, etc. counts as an email in your"
 " daily limit if it notifies someone."
 msgstr ""
+"¡El límite diario es general para su base de datos y se puede aumentar "
+"rápidamente! De forma predeterminada, un mensaje interno, una notificación, "
+"una nota, entre otros, cuentan en su límite diario como un correo "
+"electrónico si notifican a alguien."
 
 #: ../../content/applications/general/email_communication/faq.rst:73
 msgid ""
 "You can mitigate this by receiving your :ref:`notifications in Odoo "
 "<discuss_app/notification_preferences>` instead of by emails."
 msgstr ""
+"Puede mitigar esto al recibir sus :ref:`notificaciones en Odoo "
+"<discuss_app/notification_preferences>` en lugar de por correos "
+"electrónicos."
 
 #: ../../content/applications/general/email_communication/faq.rst:77
 msgid "SMTP Error"
-msgstr ""
+msgstr "Error SMTP"
 
 #: ../../content/applications/general/email_communication/faq.rst:79
 msgid ""
@@ -2114,6 +2246,13 @@ msgid ""
 "error messages generated by email services are helpful tools to diagnose and"
 " troubleshoot email problems."
 msgstr ""
+"Puede descubrir por qué no se envió su correo electrónico al revisar los "
+"mensajes de error del Protocolo para transferencia simple de correo (SMTP, "
+"por sus siglas en inglés). El SMTP es un protocolo para describir la "
+"estructura del correo electrónico y transmitirlo por el internet, y los "
+"mensajes de error que generan los servicios de correo electrónico son "
+"herramientas útiles para diagnosticar y solucionar sus problemas de correo "
+"electrónico."
 
 #: ../../content/applications/general/email_communication/faq.rst:85
 msgid "No Error"
@@ -2126,6 +2265,10 @@ msgid ""
 "bounce emails and it is not always possible for Odoo to interpret it "
 "correctly."
 msgstr ""
+"Odoo no siempre puede proporcionar información sobre el motivo del fallo. "
+"Los diversos proveedores implementan una política personalizada de correos "
+"electrónicos devueltos y no siempre es posible para Odoo interpretarla de "
+"forma adecuada."
 
 #: ../../content/applications/general/email_communication/faq.rst:91
 msgid ""
@@ -2133,6 +2276,9 @@ msgid ""
 "same domain, please do not hesitate to contact `Odoo Support "
 "<https://www.odoo.com/help>`_ for help in finding a reason."
 msgstr ""
+"Si tiene este problema de forma recurrente con el mismo cliente o el mismo "
+"dominio, no dude en contactar al `Soporte de Odoo "
+"<https://www.odoo.com/help>`_ para que le ayuden a encontrar el motivo."
 
 #: ../../content/applications/general/email_communication/faq.rst:94
 msgid ""
@@ -2140,10 +2286,13 @@ msgid ""
 "<email_communication/spf_compliant>` and/or :ref:`DKIM "
 "<email_communication/DKIM_compliant>` configuration."
 msgstr ""
+"Tome en cuenta que en este caso, uno de los motivos más comunes se relaciona"
+" con la configuración :ref:`SPF <email_communication/spf_compliant>` y/o "
+":ref:`DKIM <email_communication/DKIM_compliant>`."
 
 #: ../../content/applications/general/email_communication/faq.rst:98
 msgid "Why is my email sent late?"
-msgstr ""
+msgstr "¿Por qué mi correo electrónico se envía tarde?"
 
 #: ../../content/applications/general/email_communication/faq.rst:100
 msgid ""
@@ -2154,22 +2303,34 @@ msgid ""
 " automatically at predetermined intervals. We use that policy in order to "
 "avoid cluttering the mail servers and prioritize the communication."
 msgstr ""
+"Puede suceder que programó una campaña de correo electrónico, pero no se "
+"envía a tiempo. Sabemos que usamos un retraso para enviar correos "
+"electrónicos que consideramos no urgentes (boletines como correos masivos, "
+"automatización de marketing, eventos). Puede utilizar el **cron** para "
+"planificar que los programas se ejecuten de forma automática en intervalos "
+"predeterminados. Usamos esa política para evitar la saturación de los "
+"servidores de correo y priorizar la comunicación."
 
 #: ../../content/applications/general/email_communication/faq.rst:106
 msgid ""
 "The emails considered urgent (communication from one person to another one "
 "such as Sales Orders, Invoices, Purchase Orders, etc.) are sent directly."
 msgstr ""
+"Los correos electrónicos que se consideran urgentes (comunicación entre dos "
+"personas, como órdenes de venta, facturas, órdenes de compra, etc.) se "
+"envían directamente."
 
 #: ../../content/applications/general/email_communication/faq.rst:113
 msgid ""
 "By default, the Mass Mailing cron runs every 60 minutes. So, you should wait"
 " maximum an hour before the campaign is actually sent."
 msgstr ""
+"De forma predeterminada, el cron de correos masivos se ejecuta cada 60 "
+"minutos. Debe esperar máximo una hora antes de que la campaña se envíe."
 
 #: ../../content/applications/general/email_communication/faq.rst:117
 msgid "Incoming emails"
-msgstr ""
+msgstr "Correos electrónicos entrantes"
 
 #: ../../content/applications/general/email_communication/faq.rst:119
 msgid ""
@@ -2177,20 +2338,26 @@ msgid ""
 "indication per se in Odoo. This is the client who tries to contact a "
 "database who will get a bounce (most of the time 550: mailbox unavailable)."
 msgstr ""
+"Cuando se tiene un problema con los correos electrónicos entrantes, puede "
+"que no haya una indicación como tal en Odoo. Es el cliente que intenta "
+"contactar con una base de datos quien recibirá un correo devuelto (la "
+"mayoría de las veces 550: bandeja de entrada no disponible)."
 
 #: ../../content/applications/general/email_communication/faq.rst:124
 msgid "Emails are not received"
-msgstr ""
+msgstr "No se reciben correos electrónicos"
 
 #: ../../content/applications/general/email_communication/faq.rst:126
 msgid "Depending on the platform you are using:"
-msgstr ""
+msgstr "Según la plataforma que utiliza:"
 
 #: ../../content/applications/general/email_communication/faq.rst:128
 msgid ""
 "The **Odoo.sh** users can find their live logs on the folder "
 ":file:`~/logs/`."
 msgstr ""
+"Los usuarios de **Odoo.sh** pueden encontrar sus registros en la carpeta "
+":file:`~/logs/`."
 
 #: ../../content/applications/general/email_communication/faq.rst:130
 msgid ""
@@ -2204,6 +2371,16 @@ msgid ""
 "Use the command ``grep`` and ``zgrep`` (for the compressed ones) to search "
 "through the files."
 msgstr ""
+"La carpeta :file:`~/logs/` (a la que se accede de preferencia mediante la "
+"línea de comando) de una base de datos de Odoo.sh contiene una lista de los "
+"archivos que contienen los registros de la base de datos. Los archivos de "
+"registros se crean todos los días a las 5:00 am UTC. Los últimos dos días no"
+" se comprimen, mientras que las más antiguas sí, para optimizar el espacio. "
+"Los nombres de los archivos para hoy y ayer son :file:`odoo.log` y "
+":file:`odoo.log.1` respectivamente. Los siguientes se nombran con sus fechas"
+" y se comprimen. Consulte la documentación de Odoo.sh sobre :ref:`registros "
+"<odoosh/logs>`. Utilice los comandos ``grep`` y ``zgrep`` (para los "
+"comprimidos) para buscar en los archivos."
 
 #: ../../content/applications/general/email_communication/faq.rst:138
 msgid ""
@@ -2211,16 +2388,21 @@ msgid ""
 "contact `Odoo Support <https://www.odoo.com/help>`_ , if you have a "
 "recurring issue with the same client or domain."
 msgstr ""
+"Los usuarios **SaaS** no tienen acceso a sus registros. Sin embargo, puede "
+"contactar al `soporte de Odoo <https://www.odoo.com/help>`_  si tiene un "
+"problema recurrente con el mismo cliente o dominio."
 
 #: ../../content/applications/general/email_communication/faq.rst:143
 msgid "Get help from support"
-msgstr ""
+msgstr "Recibir ayuda del equipo de soporte "
 
 #: ../../content/applications/general/email_communication/faq.rst:145
 msgid ""
 "In order to get helped efficiently, please provide as much information as "
 "possible. Here is a list of what can be helpful:"
 msgstr ""
+"Proporcione tanta información como sea posible para recibir ayuda de forma "
+"eficiente. A continuación se encuentra una lista de lo que puede ser útil:"
 
 #: ../../content/applications/general/email_communication/faq.rst:148
 msgid ""
@@ -2230,11 +2412,12 @@ msgid ""
 "EML files. Once you get the EML of the email, adding it in the attachment of"
 " your ticket is the most efficient way for us to investigate. The support "
 "will mainly focus on redundant issues."
-msgstr ""
+msgstr "El archivo **EML** del correo electrónico, es el formato de archivo ."
 
 #: ../../content/applications/general/email_communication/faq.rst:155
 msgid "`Gmail documentation <https://support.google.com/mail/answer/29436>`_"
 msgstr ""
+"`Documentación de Gmail <https://support.google.com/mail/answer/29436>`_"
 
 #: ../../content/applications/general/email_communication/faq.rst:157
 msgid ""
@@ -2242,36 +2425,47 @@ msgid ""
 "internet-message-headers-in-outlook-"
 "cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 msgstr ""
+"`Documentación de Outlook <https://support.microsoft.com/en-us/office/view-"
+"internet-message-headers-in-outlook-"
+"cd039382-dc6e-4264-ac74-c048563d212c#tab=Web>`_"
 
 #: ../../content/applications/general/email_communication/faq.rst:160
 msgid ""
 "The exact flow you are following in order to normally receive those emails "
 "in Odoo. Here are examples of questions whose answers can be useful:"
 msgstr ""
+"El flujo exacto que sigue para recibir normalmente esos correos electrónicos"
+" en Odoo. A continuación hay ejemplos de preguntas cuyas respuestas pueden "
+"ser útiles:"
 
 #: ../../content/applications/general/email_communication/faq.rst:163
 msgid "Is this simply a reply from an email going out from Odoo ?"
 msgstr ""
+"¿Esto es solamente una respuesta de un correo electrónico que sale de Odoo?"
 
 #: ../../content/applications/general/email_communication/faq.rst:165
 msgid "Are you using an incoming email server or somehow redirecting?"
 msgstr ""
+"¿Está usando un servidor de correo electrónico entrante o redirigiendo de "
+"alguna forma?"
 
 #: ../../content/applications/general/email_communication/faq.rst:167
 msgid ""
 "Can you provide us with an example of an email that has been correctly "
 "forwarded ?"
 msgstr ""
+"¿Puede proporcionarnos un ejemplo de un correo electrónico que se haya "
+"reenviado correctamente?"
 
 #: ../../content/applications/general/email_communication/faq.rst:169
 msgid "Providing answers to the following questions:"
-msgstr ""
+msgstr "Responda estas preguntas:"
 
 #: ../../content/applications/general/email_communication/faq.rst:171
 msgid ""
 "Is it a generic issue or is it specific to a use case? If yes, which one "
 "exactly?"
-msgstr ""
+msgstr "¿Es un problema genérico o es específico de un caso de uso? "
 
 #: ../../content/applications/general/email_communication/faq.rst:173
 msgid ""
@@ -2279,6 +2473,9 @@ msgid ""
 "email should reach the Odoo database and display the :ref:`red envelope "
 "<red_envelop>`."
 msgstr ""
+"¿Funciona como debería? En caso de que el correo electrónico se envie "
+"mediante Odoo, el correo electrónico devuelto debe llegar a la base de datos"
+" de Odoo y mostrar el :ref:`sobre rojo <red_envelop>`."
 
 #: ../../content/applications/general/export_import_data.rst:3
 msgid "Export and import data"
