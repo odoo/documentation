@@ -82,15 +82,15 @@ if not odoo_sources_dirs:
         {'dir_list': '\n'.join([f'\t- {d.resolve()}' for d in odoo_sources_candidate_dirs])},
     )
 else:
+    if (3, 6) < sys.version_info < (3, 7):
+        # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6.
+        sys.version_info = (3, 7, 0)
     odoo_dir = odoo_sources_dirs[0].resolve()
     source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
     source_read_replace_vals['ODOO_ABSPATH'] = str(odoo_dir)
     sys.path.insert(0, str(odoo_dir))
     import odoo.addons
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
-    if (3, 6) < sys.version_info < (3, 7):
-        # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6
-        sys.version_info = (3, 7, 0)
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
     odoo_version = odoo_release.version.replace('~', '-') \
         if 'alpha' not in odoo_release.version else 'master'
