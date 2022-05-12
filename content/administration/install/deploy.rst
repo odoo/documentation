@@ -324,7 +324,7 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     error_log /var/log/nginx/odoo.error.log;
 
     # Redirect longpoll requests to odoo longpolling port
-    location /longpolling {
+    location /longpolling/pull {
       proxy_pass http://odoochat;
     }
 
