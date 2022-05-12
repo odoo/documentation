@@ -6,7 +6,7 @@ While a Batch Transfer is a group of several pickings, a **Wave Transfer** only 
 some parts of different pickings.
 If you want to handle a orders of a specific product category, or fetch products that
 are at the same location, wave pickings are the ideal feature.
-.. note::
+.. important::
    Wave transfers are actually batch transfers with an extra step: transfers are split 
    before being grouped in a batch. 
 
