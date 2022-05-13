@@ -1,6 +1,6 @@
-==================================================
-What is a Removal Strategy (FIFO, LIFO, and FEFO)?
-==================================================
+================================================================
+What is a Removal Strategy (FIFO, LIFO, FEFO, Closest location)?
+================================================================
 
 Usually, *Removal Strategies* are defined in picking operations to select the best products to 
 optimize the distance for the worker, for quality control purposes, or to first move the products 
@@ -97,6 +97,14 @@ The transfer also requests one box from 20001 because it’s the lot that expire
 
 Then, you can remember that for every order of a product with the *FEFO* strategy, a transfer is 
 requested for the product that has the nearest expiration date from the order date.
+
+Closest Location
+----------------
+The **Closest location** strategy is completely different from the others. It's not related with the
+date of entry in the warehouse, but rather on the location of the product. It's commonly used for products
+that don't deteriorate with time. The aim is to avoid a long journey at the bottom of the stock when the 
+product is also located at a near location. This method is only available if you have the *storage locations*
+setting on. The closest location is actually the one that comes first in the alphabetic order.
 
 Use Removal Strategies
 ======================
