@@ -12,7 +12,7 @@ Configuration
 In the *Inventory* app, go to :menuselection:`Configuration --> Settings` and activate the
 *Multi-Step Routes*. By doing so, the *Storage Locations* will be automatically activated.
 
-.. image:: media/putaw1.png
+.. image:: putaway/putaw1.png
    :align: center
 
 Setting up a Putaway Rule
