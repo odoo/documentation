@@ -117,7 +117,7 @@ that you proceed with the following actions in this order:
 #. :ref:`Add a CNAME record <domain-name/cname>` on your domain name's DNS zone.
 #. :ref:`Map your domain name with your Odoo database <domain-name/db-map>`.
 #. :ref:`Map your domain name with your Odoo website <domain-name/website-map>`.
-#. Optionnally: :ref:`Change the web base address of your database <domain-name/web-base-url>`. 
+#. Optionally: :ref:`Change the web base address of your database <domain-name/web-base-url>`.
 
 .. _domain-name/cname:
 
