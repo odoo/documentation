@@ -4,19 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2022
-# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022
-# Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2022
-# Alejandro Kutulas <alk@odoo.com>, 2022
 # Noemi Nahomy <noemi.t.angles@gmail.com>, 2022
+# Leonardo J. Caballero G. <leonardocaballero@gmail.com>, 2022
+# Alejandro Kutulas <alk@odoo.com>, 2022
 # RGB Consulting <odoo@rgbconsulting.com>, 2022
 # Jesse Garza <jga@odoo.com>, 2022
 # Pablo Rojas <rojaspablo88@gmail.com>, 2022
 # Lucia Pacheco <lpo@odoo.com>, 2022
 # Martin Trigaux, 2022
 # marcescu, 2022
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
+# Marian Cuadra, 2022
 # Braulio D. López Vázquez <bdl@odoo.com>, 2022
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -25,7 +24,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-04-08 13:26+0000\n"
 "PO-Revision-Date: 2022-03-18 14:59+0000\n"
-"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2022\n"
+"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -609,6 +608,9 @@ msgid ""
 " listening on :option:`the longpolling port <odoo-bin --longpolling-port>` "
 "but the client will not connect to it."
 msgstr ""
+"En  el procesamiento paralelo, un trabajador especializado se inicia "
+"automáticamente y escucha el :option:`el puerto longpolling <odoo-bin "
+"--longpolling-port>` pero el cliente no lo conectará."
 
 #: ../../content/administration/install/deploy.rst:221
 msgid ""
@@ -616,6 +618,10 @@ msgid ""
 "``/longpolling/`` to the longpolling port. Other request should be proxied "
 "to the :option:`normal HTTP port <odoo-bin --http-port>`"
 msgstr ""
+"En su lugar, necesita tener un proxy para redireccionar las solicitudes de "
+"los URL que empiezan con \"/longpolling/\" al puerto longpolling. El resto "
+"de peticiones deben ser proxies al :option:`puerto HTTP normal <odoo-bin "
+"--http-port>`"
 
 #: ../../content/administration/install/deploy.rst:225
 msgid ""
@@ -624,6 +630,10 @@ msgid ""
 "http Headers to Odoo, and activate the proxy_mode in Odoo configuration to "
 "have Odoo read those headers."
 msgstr ""
+"Para lograr esto, necesita realizar el proxy reverso en Odoo, como nginx o "
+"apache. Al hacerlo, necesitará enviar algunos encabezados http a Odoo para "
+"activar el proxy_mode en la configuración de Odoo y el software pueda leer "
+"todos los encabezados."
 
 #: ../../content/administration/install/deploy.rst:233
 msgid "Server with 4 CPU, 8 Thread"
@@ -668,6 +678,11 @@ msgid ""
 "Odoo must use HTTPS\\ [#switching]_. SSL termination can be implemented via "
 "just about any SSL termination proxy, but requires the following setup:"
 msgstr ""
+"No importa si el acceso es mediante sitio web/cliente web o servicio web, "
+"Odoo transmite información de autenticación en cleartext. Esto significa que"
+" una implementación de Odoo segura debe usar HTTPS\\ [#switching]_. La "
+"terminación SSL se puede implementar con cualquier proxy de terminación SSL,"
+" pero requiere la siguiente configuración:"
 
 #: ../../content/administration/install/deploy.rst:264
 msgid ""
@@ -691,22 +706,24 @@ msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
 msgstr ""
+"Su terminación proxy SSL también debería de redirigir conexiones no seguras "
+"automáticamente para asegurar el puerto"
 
 #: ../../content/administration/install/deploy.rst:273
 msgid "Redirect http requests to https"
-msgstr ""
+msgstr "Redirigir solicitudes http a https"
 
 #: ../../content/administration/install/deploy.rst:274
 msgid "Proxy requests to odoo"
-msgstr ""
+msgstr "Solicitudes proxy a odoo"
 
 #: ../../content/administration/install/deploy.rst:282
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
-msgstr ""
+msgstr "en ``/etc/nginx/sites-enabled/odoo.conf`` configure:"
 
 #: ../../content/administration/install/deploy.rst:343
 msgid "Odoo as a WSGI Application"
-msgstr ""
+msgstr "Odoo como una aplicación WSGI"
 
 #: ../../content/administration/install/deploy.rst:345
 msgid ""
@@ -717,6 +734,12 @@ msgid ""
 ":mod:`odoo.tools.config` rather than through the command-line or a "
 "configuration file."
 msgstr ""
+"También es posible montar Odoo como una aplicación WSGI estándar. Odoo "
+"proporciona la base para un script de lanzamiento WSGI como ``odoo-"
+"wsgi.example.py``.  El script debe personalizarse (posiblemente después de "
+"copiarlo desde el directorio de configuración) para realizar la "
+"configuración correctamente en :mod:`odoo.tools.config` y no en la línea de "
+"comando o archivo de configuración."
 
 #: ../../content/administration/install/deploy.rst:351
 msgid ""
@@ -724,24 +747,32 @@ msgid ""
 "client, website and webservice API. Because Odoo does not control the "
 "creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
+"Sin embargo, el servidor WSGI solo mostrará el extremo HTTP principal para "
+"el cliente web, sitio web y servicio web API. Como Odoo ya no controla la "
+"creación de trabajadores, así que ya no puede configurar el cron o los "
+"trabajadores del chat en vivo."
 
 #: ../../content/administration/install/deploy.rst:356
 msgid "Cron Workers"
-msgstr ""
+msgstr "Trabajadores de cron"
 
 #: ../../content/administration/install/deploy.rst:358
 msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
 msgstr ""
+"Para ejecutar trabajos de cron en una implementación de Odoo, la aplicación "
+"de WSGI requiere:"
 
 #: ../../content/administration/install/deploy.rst:360
 msgid "A classical Odoo (run via ``odoo-bin``)"
-msgstr ""
+msgstr "Un Odoo clásico (ejecutado con ``odoo-bin``)"
 
 #: ../../content/administration/install/deploy.rst:361
 msgid ""
 "Connected to the database in which cron jobs have to be run (via "
 ":option:`odoo-bin -d`)"
 msgstr ""
+"Conexión a la base de datos en la que los trabajos de cron se tienen que "
+"ejecutar (via :option:`odoo-bin -d`)"
 
 #: ../../content/administration/install/deploy.rst:363
 msgid ""
@@ -750,6 +781,10 @@ msgid ""
 "entirely with :option:`odoo-bin --no-http` or setting ``http_enable = "
 "False`` in the configuration file"
 msgstr ""
+"No debería estar expuesta a la red. Para asegurarse de que los ejecutores "
+"del cron no tienen acceso a la red, es posible deshabilitar el servidor HTTP"
+" integrado por completo con :option:`odoo-bin --no-http` o si configuramos "
+"``http_enable = False`` en el archivo de configuración."
 
 #: ../../content/administration/install/deploy.rst:371
 msgid ""
@@ -758,6 +793,11 @@ msgid ""
 " process for the next request, LiveChat require a long-lived connection for "
 "each client in order to implement near-real-time notifications."
 msgstr ""
+"El segundo subsistema problemático para implementaciones con WSGI es el Chat"
+" en vivo: mientras que la mayoría de las conexiones HTTP son relativamente "
+"cortas y liberan rápidamente los procesos de trabajadores para la siguiente "
+"solicitud, el chat en vivo necesita una conexión duradera para cada cliente "
+"para poder implementar notificaciones casi a tiempo real."
 
 #: ../../content/administration/install/deploy.rst:376
 msgid ""
@@ -766,11 +806,17 @@ msgid ""
 "those long-lived connections do very little and mostly stay parked waiting "
 "for notifications."
 msgstr ""
+"Esto entra en conflicto con un modelo de trabajo basado en procesos, ya que "
+"vinculará los trabajadores de procesos y prevendrá que los nuevos usuarios "
+"ingresen al sistema. Sin embargo, esas conexiones duraderas hacen muy poco y"
+" usualmente se quedan sin hacer nada y esperando por notificaciones."
 
 #: ../../content/administration/install/deploy.rst:381
 msgid ""
 "The solutions to support livechat/motifications in a WSGI application are:"
 msgstr ""
+"Las soluciones para soportar chat en vivo/notificaciones en una aplicación "
+"WSGI son:"
 
 #: ../../content/administration/install/deploy.rst:383
 msgid ""
@@ -779,6 +825,10 @@ msgid ""
 "that Odoo, this is the simplest and the longpolling URL can double up as the"
 " cron instance."
 msgstr ""
+"Implementar una versión de subprocesamiento de Odoo (en lugar de una basada "
+"en procesos preforking) y redirigir solo solicitudes a URL que empiecen con "
+"``/longpolling/` a ese Odoo. Esta es la solución más simple y la URL "
+"longpolling también puede funcionar como una instancia de cron."
 
 #: ../../content/administration/install/deploy.rst:387
 msgid ""
@@ -786,10 +836,13 @@ msgid ""
 "``/longpolling/`` to :option:`the longpolling port <odoo-bin --longpolling-"
 "port>`."
 msgstr ""
+"Desplegar un Odoo con eventos con ayuda de ``odoo-gevent`` y hacer proxy de "
+"solicitudes que inicien con ``/longpolling/`` al :option:`puerto de "
+"longpolling<odoo-bin --longpolling-port>`."
 
 #: ../../content/administration/install/deploy.rst:392
 msgid "Serving Static Files"
-msgstr ""
+msgstr "Servicio de archivos estáticos"
 
 #: ../../content/administration/install/deploy.rst:394
 msgid ""
@@ -797,6 +850,10 @@ msgid ""
 "modules. This may not be ideal when it comes to performances, and static "
 "files should generally be served by a static HTTP server."
 msgstr ""
+"Por conveniencia, Odoo sirve directamente todos los archivos estáticos en "
+"sus módulos. Esto puede ser ideal cuando se trata de rendimiento y los "
+"archivos estáticos generalmente se deberían servir con un servidor HTTP "
+"estático."
 
 #: ../../content/administration/install/deploy.rst:398
 msgid ""
@@ -805,6 +862,10 @@ msgid ""
 ":samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) "
 "in the various addons paths."
 msgstr ""
+"Los archivos estáticos en la carpeta ``static/``, así que los archivos "
+"estáticos se pueden servir al interceptar todas las solicitudes a "
+":samp:`/{MODULE}/static/{FILE}` y puede buscar el módulo (y archivo) "
+"correcto en todas las rutas agregadas."
 
 #: ../../content/administration/install/deploy.rst:402
 #: ../../content/administration/upgrade.rst:122
@@ -817,6 +878,9 @@ msgid ""
 "this, and how (e.g. possibility of mapping ir.attachment id to filestore "
 "hash in the database?)"
 msgstr ""
+"pruebe si sería interesante servir los adjuntos guardados en filestore "
+"mediante esto y cómo (por ejemplo, la posibilidad de mapear el id del hash "
+"de ir.attachment en la base de datos?)"
 
 #: ../../content/administration/install/deploy.rst:409
 msgid "Security"
@@ -828,6 +892,9 @@ msgid ""
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
+"Para empezar, tome en cuenta que asegurar un sistema de información es un "
+"proceso continuo, no una operación de una sola vez. En cualquier momento, su"
+" entorno solo será tan seguro como el vínculo más débil."
 
 #: ../../content/administration/install/deploy.rst:415
 msgid ""
@@ -838,12 +905,20 @@ msgid ""
 "system and distribution, best practices in terms of users, passwords, and "
 "access control management, etc."
 msgstr ""
+"No tome esta sección como la  única lista de medidas para prevenir todos los"
+" problemas de seguridad. Esta lista solo es un resumen de las cosas más "
+"importantes que debe incluir en su plan de acción de seguridad. Lo demás "
+"vendrá de las mejores prácticas de seguridad para su sistema operativo y "
+"distribución. Las mejores prácticas en cuanto a usuarios, contraseñas y la "
+"gestión del control de acceso, etc."
 
 #: ../../content/administration/install/deploy.rst:421
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
+"Al desplegar un servidor con acceso a internet, asegúrese de considerar los "
+"siguientes temas relacionados a la seguridad:"
 
 #: ../../content/administration/install/deploy.rst:424
 msgid ""
@@ -851,6 +926,9 @@ msgid ""
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr ""
+"Siempre configure una contraseña de administrador del super-admin que sea "
+"fuerte y restrinja el acceso a la gestión de la página web tan pronto como "
+"se configure el sistema. Vea :ref:`db_manager_security`."
 
 #: ../../content/administration/install/deploy.rst:427
 msgid ""
@@ -860,6 +938,12 @@ msgid ""
 "*Never* use any default passwords like admin/admin, even for test/staging "
 "databases."
 msgstr ""
+"Elija inicios de sesión únicos y contraseñas fuertes para todas las cuentas "
+"de administrador en todas las bases de datos. No use \"admin\" como inicio "
+"de sesión. No use los mismos inicios de sesión para operaciones del día a "
+"día, solo para controlar/gestionar la instalación. *Nunca* use contraseñas "
+"automáticas, como admin/admin, incluso para bases de dato de prueba o de "
+"secuenciamiento. "
 
 #: ../../content/administration/install/deploy.rst:432
 msgid ""
@@ -867,6 +951,10 @@ msgid ""
 " data contain default logins and passwords that can be used to get into your"
 " systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
+"**No** instale los datos demo en servidores con acceso a internet. Las bases"
+" de datos con información de demo tienen inicios de sesión predeterminados y"
+" contraseñas que se podrían usar para ingresar a sus sistemas y puede ser un"
+" gran problema, incluso en sistemas de desarrollo o secuenciamiento. "
 
 #: ../../content/administration/install/deploy.rst:436
 msgid ""
@@ -877,6 +965,12 @@ msgid ""
 "from, instead of letting the system fetch them all from the database "
 "backend."
 msgstr ""
+"Use filtros apropiados para la base de datos ( :option:`--db-filter <odoo-"
+"bin --db-filter>`) para restringir la visibilidad de sus bases de datos "
+"según al nombre de host. Vea :ref:`db_filter`. También puede usar  "
+":option:`-d <odoo-bin -d>` para obtener su propia lista (separada por comas)"
+" de bases de datos que puede filtrar, en lugar de dejar que el sistema "
+"obtenga todo desde el backend de la base de datos."
 
 #: ../../content/administration/install/deploy.rst:443
 msgid ""
@@ -887,6 +981,12 @@ msgid ""
 ":option:`--no-database-list <odoo-bin --no-database-list>` command-line "
 "option)"
 msgstr ""
+"Una vez que su ``db_name`` y ``db_filter`` están configurados y solo "
+"emparejan las bases de datos por nombre de host. Debe poner la opción de "
+"configuración a ``Falso``, para prevenir que se enlisten las bases de datos "
+"por completo y para bloquear el acceso a la pantalla de gestión de la base "
+"de datos (esto también se muestra como :option:`--no-database-list <odoo-bin"
+" --no-database-list>` en la opción de la línea de comando)."
 
 #: ../../content/administration/install/deploy.rst:449
 msgid ""
@@ -896,6 +996,11 @@ msgid ""
 "using a dedicated non-privileged ``db_user``. See also "
 ":ref:`setup/deploy/odoo`."
 msgstr ""
+"Asegúrese de que el usuario de PostgreSQL (:option:`--db_user <odoo-bin "
+"--db_user>`) *no* es un super usuario y sus bases de datos le pertenecen a "
+"un usuario diferente. Por ejemplo, puede que los super usuarios de "
+"``postgres``  sean los dueños si usa un ``db_user`` especializado y no "
+"privilegiado. También vea :ref:`setup/deploy/odoo`."
 
 #: ../../content/administration/install/deploy.rst:454
 msgid ""
@@ -903,12 +1008,18 @@ msgid ""
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
+"Instale las versiones más recientes para que las instalaciones siempre estén"
+" actualizadas, ya sea por medio de GitHub, o descargando la versión más "
+"reciente de https://www.odoo.com/page/download o http://nightly.odoo.com"
 
 #: ../../content/administration/install/deploy.rst:458
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
+"Configure su servidor en un modo multiproceso con límites adecuados que sean"
+" igual a su uso habitual (memoria/CPU/tiempos de espera). También vea "
+":ref:`builtin_server`."
 
 #: ../../content/administration/install/deploy.rst:461
 msgid ""
@@ -919,6 +1030,13 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"Ejecute Odoo con un servicio web que proporcione una terminación HTTPS con "
+"un certificado SSL válido para evitar intercepción en comunicaciones de "
+"cleartext. Los certificados de SSL son baratos y existen muchas opciones "
+"gratis. Configure el proxy web para limitar el tamaño de las solicitudes, "
+"configure tiempos de espera apropiados y después active la opción de "
+":option:`modo proxy <odoo-bin --proxy-mode>`. También vea "
+":ref:`https_proxy`."
 
 #: ../../content/administration/install/deploy.rst:468
 msgid ""
@@ -929,6 +1047,13 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"Si necesita permitir el acceso remoto SSH a sus servidores, asegúrese de "
+"configurar una contraseña fuerte para **todas** las cuentas, no solo `root`."
+" Le recomendamos deshabilitar enteramente la autenticación a base de "
+"contraseña y solo permita la autenticación con clave pública. También "
+"considere restringir el acceso a través de VPN y solo permita IP de "
+"confianza en el firewall, o ejecutar un sistema de detección a fuerza bruta "
+"como un `fail2ban` o equivalente."
 
 #: ../../content/administration/install/deploy.rst:474
 msgid ""
@@ -936,6 +1061,9 @@ msgid ""
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
+"Considere instalar un factor de límite de tasa en su proxy o firewall para "
+"así evitar ataques de fuerza bruta y negar ataques al servicio. También vea "
+":ref:`login_brute_force` para medidas específicas."
 
 #: ../../content/administration/install/deploy.rst:478
 msgid ""
@@ -943,6 +1071,9 @@ msgid ""
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
+"Muchos proveedores de red brindan migración automática para ataques DoS "
+"(ataque de denegación de servicio, por su sigla en inglés), pero este es un "
+"servicio opcional. Le recomendamos que lo consulte con ellos."
 
 #: ../../content/administration/install/deploy.rst:482
 msgid ""
@@ -950,6 +1081,10 @@ msgid ""
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
+"Siempre que sea posible, aloje sus instancias de "
+"demostración/prueba/secuenciamiento en máquinas que sean diferentes a las de"
+" producción. Aplique las mismas precauciones de seguridad que para "
+"producción."
 
 #: ../../content/administration/install/deploy.rst:486
 msgid ""
@@ -965,6 +1100,18 @@ msgid ""
 "systemd.html>`_ may also be useful to implement per-process network access "
 "control."
 msgstr ""
+"Si su servidor público de Odoo tiene acceso a recursos o servicios sensibles"
+" de la red interna (por ejemplo, a través de una VLAN privada), implemente "
+"reglas de firewall apropiadas para proteger esos recursos internos. Esto es "
+"para asegurar que el servidor de Odoo no se pueda usar accidentalmente (o "
+"como resultado de las acciones de un usuario malicioso) para acceder o "
+"alterar aquellos recursos internos. Esto se puede hacer usualmente aplicando"
+" una regla de denegación automática de salida en el firewall. Una vez que lo"
+" haga solo autorice explícitamente el acceso a recursos internos a los que "
+"el servidor de Odoo tiene que acceder. `El control de acceso al tráfico IP "
+"de Systemd <http://0pointer.net/blog/ip-accounting-and-access-lists-with-"
+"systemd.html>`_ también puede servir para implementarse por control de "
+"acceso a la red de procesos."
 
 #: ../../content/administration/install/deploy.rst:497
 msgid ""
@@ -980,22 +1127,39 @@ msgid ""
 "CloudFlare usually maintain a public list of their IP address ranges for "
 "this purpose."
 msgstr ""
+"Si su servidor público de Odoo está detrás de un firewall de aplicaciones "
+"web, un balanceo de carga,  un servicio de protección DoS transparente (como"
+" CloudFlare), o un dispositivo similar a nivel de red, querrá evitar tener "
+"acceso directo al sistema de Odoo. Generalmente es difícil mantener el final"
+" de las direcciones IP de sus servidores de Odoo secreto. Por ejemplo, "
+"pueden aparecer en registros del servidor web al consultar sistemas "
+"públicos, o en los encabezados de los correos que Odoo publica. En cada "
+"situación, es posible que quiera configurar su firewall para que no se pueda"
+" ingresar a las terminales públicamente, excepto por las direcciones IP de "
+"su WAF, balanceo de carga, o servicio proxy. Los proveedores de servicios "
+"como CloudFlare usualmente mantienen una lista pública de sus rangos de "
+"direcciones IP para este propósito. "
 
 #: ../../content/administration/install/deploy.rst:508
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
+"Si está alojando a varios clientes, aísle datos de clientes y archivos el "
+"uno de otro usando contenedores o técnicas de \"jail\"."
 
 #: ../../content/administration/install/deploy.rst:511
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
+"Configure respaldos diarios para sus bases de datos y los datos de los "
+"archivos guardados, cópielos a un servidor de almacenamiento remoto que no "
+"sea accesible desde el servidor en sí."
 
 #: ../../content/administration/install/deploy.rst:518
 msgid "Blocking Brute Force Attacks"
-msgstr ""
+msgstr "Bloquear ataques de fuerza bruta"
 
 #: ../../content/administration/install/deploy.rst:519
 msgid ""
@@ -1004,56 +1168,72 @@ msgid ""
 "emits a log entry whenever a login attempt is performed, and reports the "
 "result: success or failure, along with the target login and source IP."
 msgstr ""
+"Para despliegues en internet, los ataques a fuerza bruta en las contraseñas "
+"de los usuarios son muy comunes. Esta amenaza no se pueda pasar por alto "
+"para los servidores de Odoo. Odoo registra una entrada cada que se realiza "
+"un intento de inicio de sesión y reporta los resultados: éxito o fallo, así "
+"como el objetivo de inicio de sesión e IP fuente."
 
 #: ../../content/administration/install/deploy.rst:523
 msgid "The log entries will have the following form."
-msgstr ""
+msgstr "Los registros de entradas tendrán el siguiente formato."
 
 #: ../../content/administration/install/deploy.rst:525
 msgid "Failed login::"
-msgstr ""
+msgstr "Inicio de sesión fallido::"
 
 #: ../../content/administration/install/deploy.rst:529
 msgid "Successful login::"
-msgstr ""
+msgstr "Inicio de sesión exitoso::"
 
 #: ../../content/administration/install/deploy.rst:534
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
+"Estos registros se pueden analizar fácilmente con un sistema de prevención "
+"de intrusos como `fail2ban`."
 
 #: ../../content/administration/install/deploy.rst:536
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
+"Por ejemplo, la siguiente definición del filtro fail2ban debe emparejarse "
+"con un inicio de sesión fallido::"
 
 #: ../../content/administration/install/deploy.rst:543
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
+"Esto se podía usar con una definición de jail para bloquear los ataques IP "
+"en HTTP(S)."
 
 #: ../../content/administration/install/deploy.rst:545
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
+"Así es como se podría ver por bloquear la IP por 15 minutos cuando se "
+"detectan 10 intentos fallidos de inicio de sesión desde la misma IP en 1 "
+"minuto::"
 
 #: ../../content/administration/install/deploy.rst:559
 msgid "Database Manager Security"
-msgstr ""
+msgstr "Seguridad del gestor de la base de datos"
 
 #: ../../content/administration/install/deploy.rst:561
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
-msgstr ""
+msgstr ":ref:`setup/deploy/odoo` menciona ``admin_passwd`` de paso."
 
 #: ../../content/administration/install/deploy.rst:563
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
+"Esta configuración se usa en todas las pantallas de gestión de la base de "
+"datos (para crear, borrar, descartar o restablecer bases de datos). "
 
 #: ../../content/administration/install/deploy.rst:566
 msgid ""
@@ -1061,6 +1241,9 @@ msgid ""
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
+"Si no se debería acceder a las pantallas de gestión de ninguna manera, debe "
+"establecer la opción de configuración ``list_db`` a ``Falso``, para bloquear"
+" el acceso a todas las pantallas de gestión o selección de bases de datos."
 
 #: ../../content/administration/install/deploy.rst:572
 msgid ""
@@ -1070,6 +1253,12 @@ msgid ""
 "production, and may even expose dangerous features to attackers. It is also "
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
+"¡Le recomendamos deshabilitar el gestor de la base de datos para un sistema "
+"en internet! Está hecha como una herramienta de desarrollo/demo, para "
+"facilitar la creación y gestión rápida de las bases de datos. No está "
+"diseñada para usarse en producción, además de que puede exponer funciones "
+"peligrosas para los atacantes. Tampoco está diseñado para ejecutar bases de "
+"datos grandes y puede que active límites de memoria."
 
 #: ../../content/administration/install/deploy.rst:578
 msgid ""
@@ -1077,6 +1266,9 @@ msgid ""
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr ""
+"En sistemas en producción, las operaciones de gestión en la base de datos "
+"siempre las debe realizar el administrador del sistema, incluyendo el "
+"suministro de bases de datos nuevas y respaldos automáticos."
 
 #: ../../content/administration/install/deploy.rst:581
 msgid ""
@@ -1085,6 +1277,10 @@ msgid ""
 "each request, otherwise users will be blocked as they won't be allowed to "
 "choose the database themselves."
 msgstr ""
+"Asegúrese de configurar un parámetro ``db_name``  apropiado (y también "
+"``db_filter``, opcionalmente) para que el sistema pueda determinar la base "
+"de datos objetivo para cada petición, de lo contrario, se bloqueará a los "
+"usuarios ya que no se permitirá que ellos mismos elijan la base de datos."
 
 #: ../../content/administration/install/deploy.rst:586
 msgid ""
@@ -1093,6 +1289,11 @@ msgid ""
 "starting with ``/web/database`` except (maybe) ``/web/database/selector`` "
 "which displays the database-selection screen."
 msgstr ""
+"Si solo se puede acceder a las pantallas de gestión desde un grupo de "
+"máquinas específicas, use las funciones de proxy del servidor para bloquear "
+"el acceso a todas las rutas que empiecen con ``/web/database``, excepto "
+"(quizá) ``/web/database/selector`` que muestra la pantalla de selección de "
+"base de datos."
 
 #: ../../content/administration/install/deploy.rst:590
 msgid ""
@@ -1100,60 +1301,74 @@ msgid ""
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
 "password is checked before allowing database-alteration operations."
 msgstr ""
+"Si se debe de mantener el acceso a la pantalla de gestión de la base de "
+"datos, la configuración de ``admin_passwd`` se debe de cambiar de la "
+"predeterminada que es ``admin``: esta contraseña se debe de revisar antes de"
+" permitir operaciones que alteren la base de datos."
 
 #: ../../content/administration/install/deploy.rst:594
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
+"Se debe guardar en un lugar seguro y se debe de generar aleatoriamente, p. "
+"ej."
 
 #: ../../content/administration/install/deploy.rst:600
 msgid "which will generate a 32 characters pseudorandom printable string."
-msgstr ""
+msgstr "que generará una cadena imprimible pseudoaleatoria de 32 caracteres."
 
 #: ../../content/administration/install/deploy.rst:603
 msgid "Supported Browsers"
-msgstr ""
+msgstr "Navegadores compatibles"
 
 #: ../../content/administration/install/deploy.rst:605
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
+"Odoo es compatible con todos los navegadores web principales, siempre y "
+"cuando sigan siendo compatibles con sus creadores."
 
 #: ../../content/administration/install/deploy.rst:608
 msgid "Here are the supported browsers:"
-msgstr ""
+msgstr "Estos son los navegadores compatibles:"
 
 #: ../../content/administration/install/deploy.rst:610
 msgid "Google Chrome"
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../../content/administration/install/deploy.rst:611
 msgid "Mozilla Firefox"
-msgstr ""
+msgstr "Mozilla Firefox"
 
 #: ../../content/administration/install/deploy.rst:612
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../../content/administration/install/deploy.rst:613
 msgid "Apple Safari"
-msgstr ""
+msgstr "Apple Safari"
 
 #: ../../content/administration/install/deploy.rst:615
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr ""
+"Asegúrese de que su navegador esté actualizado y que el creador le siga "
+"dando soporte antes de llenar un reporte de bug."
 
 #: ../../content/administration/install/deploy.rst:620
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
+"Desde Odoo 13.0, ES6 es compatible. Por lo tanto, ya no se da asistencia a "
+"IE."
 
 #: ../../content/administration/install/deploy.rst:623
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr ""
+"para que varias instalaciones de Odoo usen la misma base de datos "
+"PostgreSQL, o brindar más recursos de cálculo para el software."
 
 #: ../../content/administration/install/deploy.rst:626
 msgid ""
@@ -1161,6 +1376,9 @@ msgid ""
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr ""
+"técnicamente una herramienta como socat_ puede ser utilizada para proxy UNIX"
+" sockets a través de redes, pero eso es sobre todo para el software que sólo"
+" se puede utilizar a través de UNIX sockets"
 
 #: ../../content/administration/install/deploy.rst:630
 msgid ""
@@ -1174,25 +1392,32 @@ msgstr ""
 
 #: ../../content/administration/install/email_gateway.rst:3
 msgid "Email gateway"
-msgstr ""
+msgstr "Puerta de enlace de Email"
 
 #: ../../content/administration/install/email_gateway.rst:5
 msgid ""
 "The Odoo mail gateway allows you to inject directly all the received emails "
 "in Odoo."
 msgstr ""
+"La puerta de enlace del correo electrónico le permite inyectar directamente "
+"todos los correos recibidos en Odoo."
 
 #: ../../content/administration/install/email_gateway.rst:7
 msgid ""
 "Its principle is straightforward: your SMTP server executes the \"mailgate\""
 " script for every new incoming email."
 msgstr ""
+"El principio es directo: su servidor SMTP ejecuta el script \"mailgate\" "
+"para cada correo entrante."
 
 #: ../../content/administration/install/email_gateway.rst:9
 msgid ""
 "The script takes care of connecting to your Odoo database through XML-RPC, "
 "and send the emails via the `MailThread.message_process()` feature."
 msgstr ""
+"El script se encarga de conectarlo con la base de datos de Odoo a través de "
+"XML-RPC y enviar correos a través de la función "
+"`MailThread.message_process()`."
 
 #: ../../content/administration/install/email_gateway.rst:13
 msgid "Prerequisites"
@@ -1200,23 +1425,23 @@ msgstr "Prerrequisitos"
 
 #: ../../content/administration/install/email_gateway.rst:14
 msgid "Administrator access to the Odoo database."
-msgstr ""
+msgstr "Acceso de administrador a la base de datos de Odoo."
 
 #: ../../content/administration/install/email_gateway.rst:15
 msgid "Your own mail server such as Postfix or Exim."
-msgstr ""
+msgstr "Su propio servidor de correo como Postfix o Exim."
 
 #: ../../content/administration/install/email_gateway.rst:16
 msgid "Technical knowledge on how to configure an email server."
-msgstr ""
+msgstr "El conocimiento técnico sobre cómo configurar un servidor de correo."
 
 #: ../../content/administration/install/email_gateway.rst:19
 msgid "For Postfix"
-msgstr ""
+msgstr "Para Postfix"
 
 #: ../../content/administration/install/email_gateway.rst:20
 msgid "In you alias config (:file:`/etc/aliases`):"
-msgstr ""
+msgstr "En su configuración de alias (:file:`/etc/aliases`):"
 
 #: ../../content/administration/install/email_gateway.rst:27
 #: ../../content/administration/install/email_gateway.rst:41
@@ -1225,29 +1450,31 @@ msgstr "Recursos"
 
 #: ../../content/administration/install/email_gateway.rst:29
 msgid "`Postfix <http://www.postfix.org/documentation.html>`_"
-msgstr ""
+msgstr "`Postfix <http://www.postfix.org/documentation.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:30
 msgid "`Postfix aliases <http://www.postfix.org/aliases.5.html>`_"
-msgstr ""
+msgstr "`Alias Postfix <http://www.postfix.org/aliases.5.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:31
 msgid "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
-msgstr ""
+msgstr "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:35
 msgid "For Exim"
-msgstr ""
+msgstr "Para Exim"
 
 #: ../../content/administration/install/email_gateway.rst:43
 msgid "`Exim <https://www.exim.org/docs.html>`_"
-msgstr ""
+msgstr "`Exim <https://www.exim.org/docs.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:46
 msgid ""
 "If you don't have access/manage your email server, use :ref:`inbound "
 "messages <email_communication/inbound_messages>`."
 msgstr ""
+"Si no tiene acceso/no puede gestionar su servidor de correo, use "
+":ref:`imensajes entrantes <email_communication/inbound_messages>`."
 
 #: ../../content/administration/install/install.rst:6
 msgid "Installing Odoo"
@@ -1258,32 +1485,39 @@ msgid ""
 "There are multiple ways to install Odoo, or not install it at all, depending"
 " on the intended use case."
 msgstr ""
+"Hay varias maneras de instalar Odoo, o no instalarlo, dependiendo del caso "
+"de uso."
 
 #: ../../content/administration/install/install.rst:11
 msgid "This documents attempts to describe most of the installation options."
 msgstr ""
+"En este documento intentamos describir la mayoría de las opciones de "
+"instalación."
 
 #: ../../content/administration/install/install.rst:14
 msgid ":ref:`setup/install/online`"
-msgstr ""
+msgstr ":ref:`setup/install/online`"
 
 #: ../../content/administration/install/install.rst:14
 msgid "The easiest way to use Odoo in production or to try it."
-msgstr ""
+msgstr "La manera más fácil de usar Odoo en producción o de intentarlo."
 
 #: ../../content/administration/install/install.rst:18
 msgid ":ref:`setup/install/packaged`"
-msgstr ""
+msgstr ":ref:`setup/install/packaged`"
 
 #: ../../content/administration/install/install.rst:17
 msgid ""
 "Suitable for testing Odoo, developing modules and can be used for long-term "
 "production use with additional deployment and maintenance work."
 msgstr ""
+"Ideal para realizar pruebas, desarrollar módulos y se puede usar para una "
+"producción a largo término, use con un despliegue adicional y trabajo de "
+"mantenimiento. "
 
 #: ../../content/administration/install/install.rst:23
 msgid ":ref:`setup/install/source`"
-msgstr ""
+msgstr ":ref:`setup/install/source`"
 
 #: ../../content/administration/install/install.rst:21
 msgid ""
@@ -1291,20 +1525,25 @@ msgid ""
 "the same system. Good for developing modules, can be used as base for "
 "production deployment."
 msgstr ""
+"Brinda mayor flexibilidad, por ejemplo, permite que hayan múltiples "
+"versiones de Odoo en un mismo sistema. Excelente para desarrollar módulos, "
+"puede usarse como una base para producción o despliegue."
 
 #: ../../content/administration/install/install.rst:28
 msgid ":ref:`setup/install/docker`"
-msgstr ""
+msgstr ":ref:`setup/install/docker`"
 
 #: ../../content/administration/install/install.rst:26
 msgid ""
 "If you usually use docker_ for development or deployment, an official "
 "docker_ base image is available."
 msgstr ""
+"Si usualmente usa docker_ para desarrollo o despliegue, está disponible una "
+"imagen oficial de docker_ base"
 
 #: ../../content/administration/install/install.rst:33
 msgid "Editions"
-msgstr ""
+msgstr "Ediciones"
 
 #: ../../content/administration/install/install.rst:35
 msgid ""
@@ -1313,6 +1552,10 @@ msgid ""
 "accessing the code is restricted to Enterprise customers and partners. The "
 "Community version is freely available to anyone."
 msgstr ""
+"Hay dos Editions_ diferentes de Odoo: Community y Enterprise. Se puede usar "
+"la versión SaaS_ y si ingresar el código está restringido a clientes y "
+"partner Enterprise. La versión de comunidad siempre está disponible para "
+"todos."
 
 #: ../../content/administration/install/install.rst:40
 msgid ""
@@ -1320,6 +1563,8 @@ msgid ""
 "please refer to :ref:`setup/enterprise` (except for "
 ":ref:`setup/install/source`)."
 msgstr ""
+"Si ya usa la versión Community y desea mejorar a la versión Enterprise, vaya"
+" a :ref:`setup/enterprise` (excepto por :ref:`setup/install/source`)"
 
 #: ../../content/administration/install/install.rst:47
 msgid "Online"
@@ -1335,14 +1580,18 @@ msgid ""
 "shared instances which only live for a few hours, and can be used to browse "
 "around and try things out with no commitment."
 msgstr ""
+"Para hacerse una idea rápida de Odoo, las instancias demo_ están "
+"disponibles. Son instancias compartidas que solo viven un par de horas y se "
+"pueden usar para navegar por la aplicación sin ningún compromiso."
 
 #: ../../content/administration/install/install.rst:56
 msgid "Demo_ instances require no local installation, just a web browser."
 msgstr ""
+"Las instancias demo_ no necesitan instalación local, solo un navegador web."
 
 #: ../../content/administration/install/install.rst:59
 msgid "SaaS"
-msgstr ""
+msgstr "SaaS"
 
 #: ../../content/administration/install/install.rst:61
 msgid ""
@@ -1355,16 +1604,19 @@ msgstr ""
 #: ../../content/administration/install/install.rst:66
 msgid "Can be used for both testing Odoo and long-term production use."
 msgstr ""
+"Se puede usar tanto para probar Odoo como para la producción a largo plazo."
 
 #: ../../content/administration/install/install.rst:68
 msgid ""
 "Like demo_ instances, SaaS_ instances require no local installation, a web "
 "browser is sufficient."
 msgstr ""
+"Como las instancias demo_, las instancias SaaS_ no necesitan instalación "
+"local, solo un navegador web."
 
 #: ../../content/administration/install/install.rst:75
 msgid "Packaged installers"
-msgstr ""
+msgstr "Paquete de instaladores"
 
 #: ../../content/administration/install/install.rst:77
 msgid ""
@@ -1372,12 +1624,17 @@ msgid ""
 "(Debian, Ubuntu, …) and RPM-based distributions (Fedora, CentOS, RHEL, …) "
 "for both the Community and Enterprise versions."
 msgstr ""
+"Odoo tiene instaladores en paquetería para Windows, distribuciones basadas "
+"en debian (Debian, Ubuntu, ...) y basadas en RPM (Fedora, CenOS, RHEL, ...) "
+"tanto para las versiones Community como para las versiones Enterprise."
 
 #: ../../content/administration/install/install.rst:81
 msgid ""
 "These packages automatically set up all dependencies (for the Community "
 "version), but may be difficult to keep up-to-date."
 msgstr ""
+"Estos paquetes configuran automáticamente todas las dependencias (para la "
+"versión Community), pero puede ser difícil mantenerlas actualizadas."
 
 #: ../../content/administration/install/install.rst:84
 msgid ""
@@ -1390,54 +1647,61 @@ msgstr ""
 #: ../../content/administration/install/install.rst:90
 #: ../../content/administration/install/install.rst:252
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../content/administration/install/install.rst:92
 msgid ""
 "Download the installer from our nightly_ server (Community only) or the "
 "Windows installer from the download_ page (any edition)."
 msgstr ""
+"Descargue el instalador de nuestro servidor nightly_ (solo en Community) o "
+"el instalador Windows desde la página de download_ (cualquier edición)."
 
 #: ../../content/administration/install/install.rst:94
 msgid "Execute the downloaded file."
-msgstr ""
+msgstr "Ejecutar el archivo descargado."
 
 #: ../../content/administration/install/install.rst:0
 msgid ""
 "On Windows 8 and later you may see a warning titled \"Windows protected your"
 " PC\"."
 msgstr ""
+"En Windows 8 y posteriores puede que vea una advertencia con el título "
+"\"Windows protegió su PC\"."
 
 #: ../../content/administration/install/install.rst:0
 msgid "Click on **More Info** and then on **Run anyway**."
 msgstr ""
+"Haga clic en **más información** y después en **ejecutar de todas formas**."
 
 #: ../../content/administration/install/install.rst:99
 msgid "Accept the UAC_ prompt."
-msgstr ""
+msgstr "Aceptar el prompt UAC_."
 
 #: ../../content/administration/install/install.rst:100
 msgid "Go through the various installation steps."
-msgstr ""
+msgstr "Pase por los diferentes pasos de instalación."
 
 #: ../../content/administration/install/install.rst:102
 msgid "Odoo will automatically be started at the end of the installation."
-msgstr ""
+msgstr "Odoo se ejecutará automáticamente al finalizar la instalación."
 
 #: ../../content/administration/install/install.rst:105
 #: ../../content/administration/install/install.rst:418
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../content/administration/install/install.rst:108
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 #: ../../content/administration/install/install.rst:110
 msgid ""
 "Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu "
 "20.04 (Focal)`_ or above."
 msgstr ""
+"El paquete 'deb' de Odoo 15.0 es compatible con `Debian 11 (Bullseye)`_, "
+"`Ubuntu 20.04 (Focal)`_ o más."
 
 #: ../../content/administration/install/install.rst:113
 #: ../../content/administration/install/install.rst:186
@@ -1454,6 +1718,10 @@ msgid ""
 " as your Odoo instance. Execute the following command in order to install "
 "the PostgreSQL server:"
 msgstr ""
+"Odoo necesita un servidor `PostgreSQL`_ para ejecutarse como se debe. La "
+"configuración automática para el paquete 'deb' de Odoo es usar el servidor "
+"PostgreSQL en el mismo alojamiento que su instancia Odoo. Ejecute este "
+"comando para poder instalar el servidor PostgreSQL:"
 
 #: ../../content/administration/install/install.rst:123
 #: ../../content/administration/install/install.rst:198
@@ -1471,7 +1739,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:129
 #: ../../content/administration/install/install.rst:204
 msgid "Repository"
-msgstr ""
+msgstr "Repositorio"
 
 #: ../../content/administration/install/install.rst:131
 msgid ""
@@ -1479,21 +1747,27 @@ msgid ""
 "distributions. It can be used to install *Odoo Community Edition* by "
 "executing the following commands **as root**:"
 msgstr ""
+"Odoo S.A. cuenta con un repositorio que puede usarse con distribuciones "
+"Debian y Ubuntu. Se puede usar para instalar *La edición Community de Odoo* "
+"ejecutando el siguiente comando **como raíz**:"
 
 #: ../../content/administration/install/install.rst:140
 msgid ""
 "You can then use the usual `apt-get upgrade` command to keep your "
 "installation up-to-date."
 msgstr ""
+"Puede usar el comando usual `apt-get upgrade` para mantener su instalación "
+"actualizada."
 
 #: ../../content/administration/install/install.rst:142
 msgid ""
 "At this moment, there is no nightly repository for the Enterprise Edition."
 msgstr ""
+"En este momento, no hay un repositorio nightly para la edición Enterprise. "
 
 #: ../../content/administration/install/install.rst:145
 msgid "Deb Package"
-msgstr ""
+msgstr "Paquete deb"
 
 #: ../../content/administration/install/install.rst:147
 msgid ""
@@ -1501,6 +1775,9 @@ msgid ""
 "both the *Community* and *Enterprise* editions can be downloaded from the "
 "`official download page <download_>`_."
 msgstr ""
+"En lugar de usar el repositorio como se describe arriba, los paquetes 'deb' "
+"de la edición *Community* o *Enterprise* se pueden descargar desde  `la "
+"página oficial de descarga <download_>`_."
 
 #: ../../content/administration/install/install.rst:150
 msgid "Next, execute the following commands **as root**:"
@@ -1535,7 +1812,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:181
 msgid "Fedora"
-msgstr ""
+msgstr "Fedora"
 
 #: ../../content/administration/install/install.rst:183
 msgid "Odoo 15.0 'rpm' package supports Fedora 34."
@@ -1669,7 +1946,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:440
 #: ../../content/administration/install/install.rst:611
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: ../../content/administration/install/install.rst:276
 #: ../../content/administration/install/install.rst:442
@@ -1702,7 +1979,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:469
 #: ../../content/administration/install/install.rst:640
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../content/administration/install/install.rst:305
 msgid ""
@@ -1758,7 +2035,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:337
 msgid "Open **pgAdmin**."
-msgstr ""
+msgstr "Abrir **pgAdmin**."
 
 #: ../../content/administration/install/install.rst:338
 msgid "Double-click the server to create a connection."
@@ -1983,7 +2260,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:589
 msgid "Mac OS"
-msgstr ""
+msgstr "Mac OS"
 
 #: ../../content/administration/install/install.rst:642
 msgid ""
@@ -2026,7 +2303,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:755
 #: ../../content/administration/maintain/update.rst:147
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../content/administration/install/install.rst:757
 msgid ""
@@ -2234,7 +2511,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:119
 msgid "Add a CNAME record"
-msgstr ""
+msgstr "Añadir un registro CNAME"
 
 #: ../../content/administration/maintain/domain_names.rst:121
 msgid ""
@@ -2654,7 +2931,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/enterprise.rst:33
 msgid "Stop the odoo service"
-msgstr ""
+msgstr "Parar el servicio odoo"
 
 #: ../../content/administration/maintain/enterprise.rst:39
 msgid ""
@@ -2708,7 +2985,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/enterprise.rst:78
 msgid "On Windows"
-msgstr ""
+msgstr "En Windows"
 
 #: ../../content/administration/maintain/enterprise.rst:82
 msgid ""
@@ -2934,7 +3211,7 @@ msgstr "Gestión de bases de datos de forma local"
 
 #: ../../content/administration/maintain/on_premise.rst:6
 msgid "Register a database"
-msgstr "Registrar una Base de datos"
+msgstr "Registrar una base de datos"
 
 #: ../../content/administration/maintain/on_premise.rst:8
 msgid ""
@@ -2955,7 +3232,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:16
 msgid "Registration Error Message"
-msgstr "Mensaje de Error de Registración"
+msgstr "Mensaje de error en el registro"
 
 #: ../../content/administration/maintain/on_premise.rst:18
 msgid ""
@@ -3025,8 +3302,8 @@ msgid ""
 "From July 2016 onward, Odoo 9 now automatically change the uuid of a "
 "duplicated database; a manual operation is no longer required."
 msgstr ""
-"A partír de Julio de 2016 en adelante, Odoo 0 cambiara el uuid de una base "
-"dedatos duplicada automaticamente; una operación manual ya no es necesaria."
+"Desde julio de 2016 en adelante, Odoo 9 cambia de forma automática el UUID "
+"de una base de datos duplicada, ya no se necesita de una operación manual."
 
 #: ../../content/administration/maintain/on_premise.rst:60
 msgid ""
@@ -3109,12 +3386,16 @@ msgid ""
 "When the message appears you have 30 days before the expiration. The "
 "countdown is updated everyday."
 msgstr ""
+"A partir de la aparición del mensaje tiene 30 días antes de la expiración. "
+"El contador se actualiza diariamente."
 
 #: ../../content/administration/maintain/on_premise.rst:108
 msgid ""
 "**Add more users** on your subscription: follow the link and Validate the "
 "upsell quotation and pay for the extra users."
 msgstr ""
+"**Agregue más usuarios** a su suscripción: haga clic en el enlace y valide "
+"la cotización de venta adicional y pague por los usuarios adicionales."
 
 #: ../../content/administration/maintain/on_premise.rst:110
 msgid ""
@@ -3122,6 +3403,9 @@ msgid ""
 "<documentation.html#deactivating-users>`_ and **Reject** the upsell "
 "quotation."
 msgstr ""
+"**Desactive usuarios** como se explicó en esta `documentación "
+"<documentation.html#deactivating-users>`_ y **rechace** la cotización de "
+"venta adicional."
 
 #: ../../content/administration/maintain/on_premise.rst:113
 msgid ""
@@ -3131,16 +3415,24 @@ msgid ""
 " so you can :ref:`force an Update Notification <force_ping>`  to make the "
 "message disappear right away."
 msgstr ""
+"Una vez que su base de datos tenga el número correcto de usuarios, el "
+"mensaje de expiración desaparecerá de forma automática después de unos días,"
+" cuando ocurra la siguiente verificación. Sabemos que ver un contador puede "
+"ser un poco aterrador, por lo que puede :ref:`forzar una notificación de "
+"actualización <force_ping>`  para hacer que el mensaje desaparezca de "
+"inmediato."
 
 #: ../../content/administration/maintain/on_premise.rst:120
 msgid "Database expired error message"
-msgstr "Mensaje de Error Base de datos expirada"
+msgstr "Mensaje de error por base de datos expirada"
 
 #: ../../content/administration/maintain/on_premise.rst:122
 msgid ""
 "If your database reaches its expiration date before your renew your "
 "subscription, you will encounter this message:"
 msgstr ""
+"Si su base de datos llega a la fecha de expiración antes de renovar su "
+"suscripción, recibirá este mensaje:"
 
 #: ../../content/administration/maintain/on_premise.rst:130
 msgid ""
@@ -3148,12 +3440,17 @@ msgid ""
 " days. If you fail to take action before the end of the countdown, the "
 "database is expired."
 msgstr ""
+"Este mensaje de **bloqueo** aparece después de un mensaje de no bloqueo que "
+"dura 30 días. Si no toma ninguna acción antes del final del contador, la "
+"base de datos expirará."
 
 #: ../../content/administration/maintain/on_premise.rst:138
 msgid ""
 "Renew your subscription: follow the link and renew your subscription - note "
 "that"
 msgstr ""
+"Renueve su suscripción: haga clic en el enlace y renueve su suscripción. "
+"Tome en cuenta que"
 
 #: ../../content/administration/maintain/on_premise.rst:137
 msgid ""
@@ -3161,16 +3458,21 @@ msgid ""
 "renewed only when the payment arrives, which can take a few days. Credit "
 "card payments are processed immediately."
 msgstr ""
+"si desea pagar por transferencia bancaria, su suscripción se renovará solo "
+"cuando el pago llegue, lo cual puede tardar algunos días. Los pagos con "
+"tarjeta de crédito se procesan de inmediato."
 
 #: ../../content/administration/maintain/on_premise.rst:140
 msgid "Contact our `Support <https://www.odoo.com/help>`__"
-msgstr "Contacta nuestro `Soporte <https://www.odoo.com/help>`__"
+msgstr "Contacte a nuestro `soporte <https://www.odoo.com/help>`__"
 
 #: ../../content/administration/maintain/on_premise.rst:142
 msgid ""
 "None of those solutions worked for you? Please contact our `Support "
 "<https://www.odoo.com/help>`__"
 msgstr ""
+"¿No le funcionó ninguna solución? Contacte a nuestro `soporte "
+"<https://www.odoo.com/help>`__"
 
 #: ../../content/administration/maintain/on_premise.rst:151
 msgid "Duplicate a database"
@@ -3182,9 +3484,9 @@ msgid ""
 "server (<odoo-server>/web/database/manager). In this page, you can easily "
 "duplicate your database (among other things)."
 msgstr ""
-"Puede duplicar su base de datos ingresando a la base de datos del "
-"administrador en su servidor (<odoo-server>/web/database/manager). En esta "
-"página, puede fácilmente duplicar su base de datos (entre otras cosas)."
+"Puede duplicar su base de datos al acceder al gestor de bases de datos en su"
+" servidor (<odoo-server>/web/database/manager). En esta página puede "
+"duplicar su base de datos con facilidad (entre otras cosas)."
 
 #: ../../content/administration/maintain/on_premise.rst:161
 msgid ""
@@ -3194,12 +3496,12 @@ msgid ""
 "databases with the same uuid could result in invoicing problems or "
 "registration problems down the line."
 msgstr ""
-"Cuando duplique una base de datos local, se recomienda **fuertemente** "
-"cambiar los uuid (Unniversally Unique Identifier) de las bases de datos "
-"duplicadas, desde que el uuid es como su base de datos se identifica a si "
-"misma con otros servidores. Teniendo dos bases de datos con el mismo uuid "
-"podría resultar en problemas de facturación o problemas de registro bajo la "
-"línea."
+"Al duplicar una base de datos local, le recomendamos **ampliamente** cambiar"
+" el UUID (Identificador único universal, por sus siglas en inglés) de las "
+"bases de datos duplicadas, ya que el UUID es como su base de datos se "
+"identifica a sí misma con otros servidores. Tener dos bases de datos con el "
+"mismo UUID podría eventualmente resultar en problemas de facturación o "
+"problemas de registro."
 
 #: ../../content/administration/maintain/on_premise.rst:170
 msgid ""
@@ -3209,10 +3511,15 @@ msgid ""
 "command ``uuidgen`` to generate a new uuid. You can then simply replace it "
 "like any other record by clicking on it and using the edit button."
 msgstr ""
+"Puede acceder al UUID de la base de datos desde el menú "
+":menuselection:`Ajustes --> Técnico --> Parámetros del sistema`, le "
+"recomendamos usar un `generador de UUID <https://www.uuidtools.com>`_ o usar"
+" el comando unix ``uuidgen`` para generar un nuevo UUID. Puede reemplazarlo "
+"como cualquier otro registro al hacer clic en él y usar el botón de editar."
 
 #: ../../content/administration/maintain/online.rst:3
 msgid "Online (SaaS) database management"
-msgstr ""
+msgstr "Gestión de bases de datos en línea (SaaS)"
 
 #: ../../content/administration/maintain/online.rst:5
 msgid ""
@@ -3220,18 +3527,26 @@ msgid ""
 "`database management page <https://www.odoo.com/my/databases>`_ by clicking "
 "on the user icon, then on *My Databases*."
 msgstr ""
+"Para gestionar una base de datos, inicie sesión en https://www.odoo.com y "
+"acceda a la `página de gestión de bases de datos "
+"<https://www.odoo.com/my/databases>`_ mediante el icono de usuario y luego "
+"haga clic en *Mis bases de datos*."
 
 #: ../../content/administration/maintain/online.rst:13
 msgid ""
 "Make sure you are connected as the administrator of the database you want to"
 " manage."
 msgstr ""
+"Asegúrese de que inició sesión como el administrador de la base de datos que"
+" desea gestionar."
 
 #: ../../content/administration/maintain/online.rst:19
 msgid ""
 "Open the drop-down menu next to the database you want to manage by clicking "
 "on the gear icon."
 msgstr ""
+"Abra el menú desplegable junto a la base de datos que desea gestionar al "
+"hacer clic en el icono de engrane."
 
 #: ../../content/administration/maintain/online.rst:21
 msgid "Several actions are available:"
@@ -3239,39 +3554,39 @@ msgstr "Hay varias acciones disponibles:"
 
 #: ../../content/administration/maintain/online.rst:23
 msgid ":ref:`online/upgrade`"
-msgstr ""
+msgstr ":ref:`online/upgrade`"
 
 #: ../../content/administration/maintain/online.rst:24
 msgid ":ref:`online/duplicate`"
-msgstr ""
+msgstr ":ref:`online/duplicate`"
 
 #: ../../content/administration/maintain/online.rst:25
 msgid ":ref:`online/rename`"
-msgstr ""
+msgstr ":ref:`online/rename`"
 
 #: ../../content/administration/maintain/online.rst:26
 msgid ":ref:`online/download`"
-msgstr ""
+msgstr ":ref:`online/download`"
 
 #: ../../content/administration/maintain/online.rst:27
 msgid ":ref:`online/domains`"
-msgstr ""
+msgstr ":ref:`online/domains`"
 
 #: ../../content/administration/maintain/online.rst:28
 msgid ":ref:`online/tags`"
-msgstr ""
+msgstr ":ref:`online/tags`"
 
 #: ../../content/administration/maintain/online.rst:29
 msgid ":ref:`online/delete`"
-msgstr ""
+msgstr ":ref:`online/delete`"
 
 #: ../../content/administration/maintain/online.rst:30
 msgid ":ref:`online/contact-support`"
-msgstr ""
+msgstr ":ref:`online/contact-support`"
 
 #: ../../content/administration/maintain/online.rst:31
 msgid ":ref:`online/users`"
-msgstr ""
+msgstr ":ref:`online/users`"
 
 #: ../../content/administration/maintain/online.rst:36
 #: ../../content/administration/upgrade.rst:10
@@ -3285,29 +3600,41 @@ msgid ""
 " button** on your database's main screen proposes an upgrade to the latest "
 "version (e.g., 13.0 to 15.1)."
 msgstr ""
+"Si *no* está en la **versión en línea** más reciente, recibirá una "
+"invitación para :doc:`actualizar <../upgrade>` su base de datos. Un **botón "
+"de liberación continua** en la pantalla principal de su base de datos le "
+"propone actualizar a la versión más reciente (por ejemplo, de 13.0 a 15.1)."
 
 #: ../../content/administration/maintain/online.rst:0
 msgid ""
 "**If your Odoo database's version is lower than the latest major release:**"
 msgstr ""
+"**Si la versión de su base de datos de Odoo es menor que la versión más "
+"reciente:**"
 
 #: ../../content/administration/maintain/online.rst:0
 msgid ""
 "You must upgrade your database within two months. After these two months, an"
 " automatic upgrade is initiated."
 msgstr ""
+"Debe actualizar su base de datos dentro de dos meses. Después de este "
+"tiempo, se inicia una actualización automática."
 
 #: ../../content/administration/maintain/online.rst:0
 msgid ""
 "**If your Odoo database's version is equal to or higher than the latest "
 "major release:**"
 msgstr ""
+"**Si la versión de su base de datos de Odoo es igual o mayor a la de la "
+"versión más reciente:**"
 
 #: ../../content/administration/maintain/online.rst:0
 msgid ""
 "You can disregard the invitation to upgrade as you probably wouldn't benefit"
 " from new features every two months."
 msgstr ""
+"Puede ignorar la invitación a actualizar, ya que probablemente no recibiría "
+"ningún beneficio de nuevas funciones cada dos meses."
 
 #: ../../content/administration/maintain/online.rst:51
 msgid ""
@@ -3316,14 +3643,19 @@ msgid ""
 "the database yourself, as this method allows you to request a test upgrade "
 "of your database to check for any discrepancies."
 msgstr ""
+"Las versiones que ya no son compatibles se vuelven obsoletas y debe "
+"actualizarlas para evitar problemas de seguridad. Recomendamos que inicie la"
+" actualización de la base de datos por su cuenta, ya que este método le "
+"permite solicitar una actualización de prueba de su base de datos para "
+"revisar cualquier discrepancia."
 
 #: ../../content/administration/maintain/online.rst:56
 msgid ":doc:`../upgrade`"
-msgstr ""
+msgstr ":doc:`../upgrade`"
 
 #: ../../content/administration/maintain/online.rst:57
 msgid ":doc:`supported_versions`"
-msgstr ""
+msgstr ":doc:`supported_versions`"
 
 #: ../../content/administration/maintain/online.rst:62
 msgid "Duplicate"
@@ -3334,6 +3666,8 @@ msgid ""
 "Make an exact copy of the database to be able to perform testing without "
 "compromising the daily operations."
 msgstr ""
+"Haga una copia exacta de la base de datos para poder realizar pruebas sin "
+"comprometer las operaciones diarias."
 
 #: ../../content/administration/maintain/online.rst:68
 msgid ""
@@ -3341,11 +3675,15 @@ msgid ""
 "payments, delivery orders, etc.) are disabled by default on the duplicated "
 "database."
 msgstr ""
+"Al seleccionar la opción *Por motivos de prueba*, toda la comunicación "
+"externa (correos electrónicos, pagos, órdenes de entrega, etc.) se "
+"deshabilitan de forma predeterminada en la base de datos duplicada."
 
 #: ../../content/administration/maintain/online.rst:70
 msgid "Duplicate databases expire automatically after 15 days."
 msgstr ""
-"Las bases de datos duplicadas expiran automaticamente después de 15 días."
+"Las bases de datos duplicadas expiran de forma automática después de 15 "
+"días."
 
 #: ../../content/administration/maintain/online.rst:75
 msgid "Rename"
@@ -3353,7 +3691,7 @@ msgstr "Renombrar"
 
 #: ../../content/administration/maintain/online.rst:77
 msgid "Rename the database and its URL."
-msgstr ""
+msgstr "Cambie el nombre de la base de datos y su URL."
 
 #: ../../content/administration/maintain/online.rst:82
 msgid "Download"
@@ -3362,34 +3700,42 @@ msgstr "Descargar"
 #: ../../content/administration/maintain/online.rst:84
 msgid "Download instantly a ZIP file with a backup of the database."
 msgstr ""
+"Descargue de forma instantánea un archivo ZIP con un respaldo de la base de "
+"datos."
 
 #: ../../content/administration/maintain/online.rst:87
 msgid ""
 "Databases are backed up daily according to the `Odoo Cloud SLA "
 "<https://www.odoo.com/cloud-sla>`_."
 msgstr ""
+"Las bases de datos se respaldan diariamente según `el acuerdo de nivel de "
+"servicio de Odoo en la nube <https://www.odoo.com/cloud-sla>`_."
 
 #: ../../content/administration/maintain/online.rst:93
 msgid "Domains"
-msgstr ""
+msgstr "Dominios"
 
 #: ../../content/administration/maintain/online.rst:95
 msgid "Configure custom domains to access the database via another URL."
 msgstr ""
+"Configure dominios personalizados para acceder a la base de datos a través "
+"de otro URL."
 
 #: ../../content/administration/maintain/online.rst:98
 msgid ":doc:`domain_names`"
-msgstr ""
+msgstr ":doc:`domain_names`"
 
 #: ../../content/administration/maintain/online.rst:103
 msgid "Tags"
-msgstr "Categorías"
+msgstr "Etiquetas"
 
 #: ../../content/administration/maintain/online.rst:105
 msgid ""
 "Add tags to sort your databases out. You can search the tags in the search "
 "bar."
 msgstr ""
+"Agregue etiquetas para ordenar su base de datos. Puede buscar las etiquetas "
+"en la barra de búsqueda."
 
 #: ../../content/administration/maintain/online.rst:110
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:528
@@ -3398,7 +3744,7 @@ msgstr "Eliminar"
 
 #: ../../content/administration/maintain/online.rst:112
 msgid "Delete a database instantly."
-msgstr ""
+msgstr "Elimine una base de datos de forma instantánea."
 
 #: ../../content/administration/maintain/online.rst:115
 msgid ""
@@ -3406,20 +3752,27 @@ msgid ""
 " instant and for all users. It is recommended to create a backup of the "
 "database before deleting it."
 msgstr ""
+"Eliminar una base de datos significa que se perderán todos los datos de "
+"forma permanente. La eliminación es instantánea y para todos los usuarios. "
+"Le recomendamos crear un respaldo de la base de datos antes de eliminarla."
 
 #: ../../content/administration/maintain/online.rst:118
 msgid ""
 "Read carefully the warning message that pops up and proceed only if you "
 "fully understand the implications of deleting a database:"
 msgstr ""
+"Lea con atención el mensaje de advertencia que aparece y continúe solo si "
+"entiende por completo lo que implica eliminar una base de datos:"
 
 #: ../../content/administration/maintain/online.rst:126
 msgid "Only an administrator can delete a database."
-msgstr ""
+msgstr "Solo un administrador puede eliminar una base de datos."
 
 #: ../../content/administration/maintain/online.rst:127
 msgid "The database name is immediately available for a new database."
 msgstr ""
+"El nombre de la base de datos está disponible para una nueva base de datos "
+"de inmediato."
 
 #: ../../content/administration/maintain/online.rst:128
 msgid ""
@@ -3427,53 +3780,63 @@ msgid ""
 "subscription. If needed, please get in touch with `Odoo Support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"No es posible eliminar una base de datos si expiró o está vinculada a una "
+"suscripción. Si necesita hacerlo, contacte al `soporte de Odoo "
+"<https://www.odoo.com/help>`_."
 
 #: ../../content/administration/maintain/online.rst:130
 msgid ""
 "To delete your account, please get in touch with `Odoo Support "
 "<https://www.odoo.com/help>`_."
 msgstr ""
+"Contacte al `soporte de Odoo <https://www.odoo.com/help>`_ para eliminar su "
+"cuenta."
 
 #: ../../content/administration/maintain/online.rst:135
 msgid "Contact Support"
-msgstr "Contactar Soporte"
+msgstr "Contactar al soporte"
 
 #: ../../content/administration/maintain/online.rst:137
 msgid ""
 "Access the Odoo `support page <https://www.odoo.com/help>`_ with your "
 "database's details already pre-filled."
 msgstr ""
+"Acceda a la `página de soporte de Odoo <https://www.odoo.com/help>`_ con los"
+" detalles de su base de datos previamente ingresados."
 
 #: ../../content/administration/maintain/online.rst:143
 msgid "Invite / Remove Users"
-msgstr ""
+msgstr "Invitar/eliminar usuarios"
 
 #: ../../content/administration/maintain/online.rst:145
 msgid ""
 "To invite users, fill out the email address of the new user and click on "
 "*Invite*. To add multiple users, click on *Add more users*."
 msgstr ""
+"Para invitar usuarios, complete la dirección de correo electrónico del nuevo"
+" usuario y haga clic en *Invitar*. Para agregar múltiples usuarios, haga "
+"clic en *Agregar más usuarios*."
 
 #: ../../content/administration/maintain/online.rst:152
 msgid "To remove users, select the users to remove and click on *Remove*."
-msgstr ""
+msgstr "Para eliminar usuarios, selecciónelos y haga clic en *Eliminar*."
 
 #: ../../content/administration/maintain/online.rst:155
 msgid ":doc:`/applications/general/users/manage_users`"
-msgstr ""
+msgstr ":doc:`/applications/general/users/manage_users`"
 
 #: ../../content/administration/maintain/supported_versions.rst:6
 #: ../../content/administration/upgrade.rst:208
 msgid "Supported versions"
-msgstr "Versiones con soporte"
+msgstr "Versiones compatibles"
 
 #: ../../content/administration/maintain/supported_versions.rst:8
 msgid ""
 "Odoo provides support and bug fixing **for the 3 last major versions** of "
 "Odoo."
 msgstr ""
-"Odoo provee soporte y corrección de \"bugs\" **a las últimas 3 versiones "
-"mayores** de Odoo."
+"Odoo provee soporte y solución de bugs **a las últimas 3 versiones mayores**"
+" de Odoo."
 
 #: ../../content/administration/maintain/supported_versions.rst:11
 msgid ""
@@ -3481,38 +3844,46 @@ msgid ""
 ":doc:`Odoo Online <online>` hosting every two months. Odoo Online users can "
 "then benefit from the latest features of Odoo."
 msgstr ""
+"Odoo lanza versiones intermediarias conocidas como **versiones en línea** en"
+" el alojamiento de :doc:`Odoo en línea <online>` cada dos meses. Los "
+"usuarios de Odoo en línea se pueden beneficiar de las funciones más "
+"recientes de Odoo."
 
 #: ../../content/administration/maintain/supported_versions.rst:14
 msgid ""
 "Admins of Odoo Online databases are invited to :doc:`upgrade <../upgrade>` "
 "them regularly."
 msgstr ""
+"A los administradores de bases de datos de Odoo en línea se les invita a "
+":doc:`actualizarlas <../upgrade>` con regularidad."
 
 #: ../../content/administration/maintain/supported_versions.rst:15
 msgid ""
 "Online versions are *not* released for Odoo.sh and On-Premise installations."
 msgstr ""
+"Las versiones en línea *no* están disponibles para instalaciones de Odoo.sh "
+"y locales."
 
 #: ../../content/administration/maintain/supported_versions.rst:16
 msgid "Online versions are listed below as *SaaS*."
-msgstr ""
+msgstr "Las versiones en línea se listan a continuación como *SaaS*."
 
 #: ../../content/administration/maintain/supported_versions.rst:19
 msgid "What's the support status of my Odoo?"
-msgstr "¿Cuál es el estatus de soporte para mi versión de Odoo?"
+msgstr "¿Cuál es el estado de soporte de mi versión de Odoo?"
 
 #: ../../content/administration/maintain/supported_versions.rst:21
 msgid "This matrix shows the support status of every version."
-msgstr "Esta tabla muestra el estatus de soporte para todas las versiones."
+msgstr "Esta tabla muestra el estado de soporte para todas las versiones."
 
 #: ../../content/administration/maintain/supported_versions.rst:23
 msgid "**Major releases are in bold type.**"
-msgstr "**Versiones mayores en negrita.**"
+msgstr "**Las versiones mayores están en negritas.**"
 
 #: ../../content/administration/maintain/supported_versions.rst:26
 #: ../../content/administration/upgrade/on_premise.rst:3
 msgid "On-Premise"
-msgstr "On-Premise"
+msgstr "Local"
 
 #: ../../content/administration/maintain/supported_versions.rst:26
 msgid "Release date"
@@ -3520,11 +3891,11 @@ msgstr "Fecha de lanzamiento"
 
 #: ../../content/administration/maintain/supported_versions.rst:26
 msgid "End of support"
-msgstr ""
+msgstr "Fin del soporte"
 
 #: ../../content/administration/maintain/supported_versions.rst:28
 msgid "Odoo saas~15.2"
-msgstr ""
+msgstr "Odoo saas~15.2"
 
 #: ../../content/administration/maintain/supported_versions.rst:28
 #: ../../content/administration/maintain/supported_versions.rst:32
@@ -3537,7 +3908,7 @@ msgstr ""
 #: ../../content/administration/maintain/supported_versions.rst:36
 #: ../../content/administration/maintain/supported_versions.rst:36
 msgid "|green|"
-msgstr ""
+msgstr "|green|"
 
 #: ../../content/administration/maintain/supported_versions.rst:28
 #: ../../content/administration/maintain/supported_versions.rst:28
@@ -3562,11 +3933,11 @@ msgstr "N/A"
 
 #: ../../content/administration/maintain/supported_versions.rst:28
 msgid "March 2022"
-msgstr ""
+msgstr "Marzo de 2022"
 
 #: ../../content/administration/maintain/supported_versions.rst:30
 msgid "Odoo saas~15.1"
-msgstr ""
+msgstr "Odoo saas~15.1"
 
 #: ../../content/administration/maintain/supported_versions.rst:30
 #: ../../content/administration/maintain/supported_versions.rst:38
@@ -3589,37 +3960,37 @@ msgstr ""
 #: ../../content/administration/maintain/supported_versions.rst:58
 #: ../../content/administration/maintain/supported_versions.rst:58
 msgid "|red|"
-msgstr ""
+msgstr "|red|"
 
 #: ../../content/administration/maintain/supported_versions.rst:30
 msgid "February 2022"
-msgstr ""
+msgstr "Febrero de 2022"
 
 #: ../../content/administration/maintain/supported_versions.rst:32
 msgid "**Odoo 15.0**"
-msgstr ""
+msgstr "**Odoo 15.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:32
 #: ../../content/administration/maintain/supported_versions.rst:40
 msgid "October 2021"
-msgstr ""
+msgstr "Octubre de 2021"
 
 #: ../../content/administration/maintain/supported_versions.rst:32
 msgid "October 2024 (planned)"
-msgstr ""
+msgstr "Octubre de 2024 (planeado)"
 
 #: ../../content/administration/maintain/supported_versions.rst:34
 msgid "**Odoo 14.0**"
-msgstr ""
+msgstr "**Odoo 14.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:34
 #: ../../content/administration/maintain/supported_versions.rst:44
 msgid "October 2020"
-msgstr ""
+msgstr "Octubre de 2020"
 
 #: ../../content/administration/maintain/supported_versions.rst:34
 msgid "October 2023 (planned)"
-msgstr ""
+msgstr "Octubre de 2023 (planeado)"
 
 #: ../../content/administration/maintain/supported_versions.rst:36
 msgid "**Odoo 13.0**"
@@ -3628,101 +3999,101 @@ msgstr "**Odoo 13.0**"
 #: ../../content/administration/maintain/supported_versions.rst:36
 #: ../../content/administration/maintain/supported_versions.rst:50
 msgid "October 2019"
-msgstr "Octubre 2019"
+msgstr "Octubre de 2019"
 
 #: ../../content/administration/maintain/supported_versions.rst:36
 msgid "October 2022 (planned)"
-msgstr ""
+msgstr "Octubre de 2022 (planeado)"
 
 #: ../../content/administration/maintain/supported_versions.rst:38
 msgid "Odoo saas~12.3"
-msgstr ""
+msgstr "Odoo saas~12.3"
 
 #: ../../content/administration/maintain/supported_versions.rst:38
 msgid "August 2019"
-msgstr "Agosto 2019"
+msgstr "Agosto de 2019"
 
 #: ../../content/administration/maintain/supported_versions.rst:40
 msgid "**Odoo 12.0**"
-msgstr ""
+msgstr "**Odoo 12.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:40
 #: ../../content/administration/maintain/supported_versions.rst:54
 msgid "October 2018"
-msgstr "Octubre 2018"
+msgstr "Octubre de 2018"
 
 #: ../../content/administration/maintain/supported_versions.rst:42
 msgid "Odoo saas~11.3"
-msgstr ""
+msgstr "Odoo saas~11.3"
 
 #: ../../content/administration/maintain/supported_versions.rst:42
 msgid "April 2018"
-msgstr "Abril 2018"
+msgstr "Abril de 2018"
 
 #: ../../content/administration/maintain/supported_versions.rst:44
 msgid "**Odoo 11.0**"
-msgstr ""
+msgstr "**Odoo 11.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:44
 #: ../../content/administration/maintain/supported_versions.rst:58
 msgid "October 2017"
-msgstr "Octubre 2017"
+msgstr "Octubre de 2017"
 
 #: ../../content/administration/maintain/supported_versions.rst:46
 msgid "Odoo 10.saas~15"
-msgstr ""
+msgstr "Odoo 10.saas~15"
 
 #: ../../content/administration/maintain/supported_versions.rst:46
 msgid "March 2017"
-msgstr "Marzo 2017"
+msgstr "Marzo de 2017"
 
 #: ../../content/administration/maintain/supported_versions.rst:48
 msgid "Odoo 10.saas~14"
-msgstr ""
+msgstr "Odoo 10.saas~14"
 
 #: ../../content/administration/maintain/supported_versions.rst:48
 msgid "January 2017"
-msgstr "Enero 2017"
+msgstr "Enero de 2017"
 
 #: ../../content/administration/maintain/supported_versions.rst:50
 msgid "**Odoo 10.0**"
-msgstr ""
+msgstr "**Odoo 10.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:50
 msgid "October 2016"
-msgstr "Octubre 2016"
+msgstr "Octubre de 2016"
 
 #: ../../content/administration/maintain/supported_versions.rst:52
 msgid "Odoo 9.saas~11"
-msgstr ""
+msgstr "Odoo 9.saas~11"
 
 #: ../../content/administration/maintain/supported_versions.rst:52
 msgid "May 2016"
-msgstr "Mayo 2016"
+msgstr "Mayo de 2016"
 
 #: ../../content/administration/maintain/supported_versions.rst:54
 msgid "**Odoo 9.0**"
-msgstr ""
+msgstr "**Odoo 9.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:54
 msgid "October 2015"
-msgstr "Octubre 2015"
+msgstr "Octubre de 2015"
 
 #: ../../content/administration/maintain/supported_versions.rst:56
 msgid "Odoo 8.saas~6"
-msgstr ""
+msgstr "Odoo 8.saas~6"
 
 #: ../../content/administration/maintain/supported_versions.rst:56
 msgid "February 2015"
-msgstr "Febrero 2015"
+msgstr "Febrero de 2015"
 
 #: ../../content/administration/maintain/supported_versions.rst:58
 msgid "**Odoo 8.0**"
-msgstr ""
+msgstr "**Odoo 8.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:58
 msgid "September 2014"
-msgstr "Septiembre 2014"
+msgstr "Septiembre de 2014"
 
 #: ../../content/administration/maintain/supported_versions.rst:63
 msgid "|green| Supported version"
@@ -3730,15 +4101,15 @@ msgstr "|green| Versión con soporte"
 
 #: ../../content/administration/maintain/supported_versions.rst:65
 msgid "|red| End-of-support"
-msgstr "|red| Fin de soporte"
+msgstr "|red| Fin del soporte"
 
 #: ../../content/administration/maintain/supported_versions.rst:67
 msgid "N/A Never released for this platform"
-msgstr "N/A Nunca hubo par esta plataforma"
+msgstr "N/A Nunca hubo para esta plataforma"
 
 #: ../../content/administration/maintain/supported_versions.rst:69
 msgid "🏁 Future version, not released yet"
-msgstr "🏁 Versión futura, aún no disponibe"
+msgstr "🏁 Versión futura, aún no disponible"
 
 #: ../../content/administration/maintain/supported_versions.rst:81
 msgid "I run an older version of Odoo/OpenERP/TinyERP"
@@ -3761,6 +4132,8 @@ msgid ""
 "Even though we don't support older versions, you can always `upgrade from "
 "any version <https://upgrade.odoo.com/>`_."
 msgstr ""
+"Incluso si no somos compatibles con versiones antiguas, siempre puede "
+"`actualizar desde cualquier versión <https://upgrade.odoo.com/>`_."
 
 #: ../../content/administration/maintain/update.rst:6
 msgid "Bugfix updates"
@@ -3776,6 +4149,9 @@ msgid ""
 "corrections and performance boosts, you may need to update your Odoo "
 "installation from time to time."
 msgstr ""
+"Para poder beneficiarse de las mejoras más recientes, correcciones de "
+"seguridad y mejoras de rendimiento, tal vez deba actualizar su instalación "
+"de Odoo con regularidad."
 
 #: ../../content/administration/maintain/update.rst:14
 msgid ""
@@ -3783,16 +4159,21 @@ msgid ""
 "infrastructure. If you are using one of the Odoo Cloud solutions, updates "
 "are automatically performed for you."
 msgstr ""
+"Esta guía solo aplica cuando usa Odoo con su propia infraestructura de "
+"alojamiento. Si usa una de las soluciones de Odoo en la nube, las "
+"actualizaciones se realizan de forma automática."
 
 #: ../../content/administration/maintain/update.rst:17
 msgid ""
 "The terminology surrounding software updates is often confusing, so here are"
 " some preliminary definitions:"
 msgstr ""
+"La terminología de las actualizaciones de software a menudo es confusa, a "
+"continuación se encuentran algunas definiciones preliminares:"
 
 #: ../../content/administration/maintain/update.rst:25
 msgid "Updating (an Odoo installation)"
-msgstr ""
+msgstr "Actualizar (una instalación de Odoo)"
 
 #: ../../content/administration/maintain/update.rst:21
 msgid ""
@@ -3802,10 +4183,15 @@ msgid ""
 "contents of your Odoo database, and can be undone by reinstalling the "
 "previous revision of the source code."
 msgstr ""
+"Se refiere al proceso de obtener la versión más reciente del código fuente "
+"de su edición de Odoo actual. Por ejemplo, actualizar Odoo Enterprise 13.0 a"
+" la versión más reciente. Esto no causa ningún cambio directo en el "
+"contenido de su base de datos de Odoo, y se puede deshacer al reinstalar la "
+"versión anterior del código fuente."
 
 #: ../../content/administration/maintain/update.rst:35
 msgid "Upgrading (an Odoo database)"
-msgstr ""
+msgstr "Actualizar (una base de datos de Odoo)"
 
 #: ../../content/administration/maintain/update.rst:28
 msgid ""
@@ -3818,6 +4204,15 @@ msgid ""
 "because it involves moving data around inside the database, even though the "
 "database may end up at the same physical location after the upgrade."
 msgstr ""
+"Se refiere a una operación compleja de procesamiento de datos donde la "
+"estructura y contenido de su base de datos se altera de forma permanente "
+"para hacer que sea compatible con una nueva versión de Odoo. Esta operación "
+"es irreversible y normalmente se logra a través del `servicio de "
+"actualización de bases de datos <https://upgrade.odoo.com>`_ de Odoo, cuando"
+" decide cambiar a una nueva versión de Odoo. Históricamente, este progreso "
+"se ha conocido también como una \"migración\" porque involucra mover datos "
+"en su base de datos, a pesar de que la base de datos puede terminar en la "
+"misma ubicación física después de la actualización."
 
 #: ../../content/administration/maintain/update.rst:37
 msgid ""
@@ -3826,10 +4221,14 @@ msgid ""
 "upgrading a database, please visit the `Odoo Upgrade page "
 "<https://upgrade.odoo.com>`_ instead."
 msgstr ""
+"Esta página describe los pasos típicos necesarios para *actualizar* una "
+"instalación de Odoo a la versión más reciente. Si desea obtener más "
+"información sobre actualizar una base de datos, visite la `página de "
+"actualización de Odoo <https://upgrade.odoo.com>`_."
 
 #: ../../content/administration/maintain/update.rst:43
 msgid "In a nutshell"
-msgstr ""
+msgstr "En resumen"
 
 #: ../../content/administration/maintain/update.rst:45
 msgid ""
@@ -3838,18 +4237,27 @@ msgid ""
 "your data without any alteration, as long as you do not uninstall PostgreSQL"
 " (the database engine that comes with Odoo)."
 msgstr ""
+"Actualizar Odoo se logra de forma sencilla al reinstalar la versión más "
+"reciente de su edición de Odoo en su instalación actual. Esto preservará sus"
+" datos sin alterarlos, siempre y cuando no instale PostgreSQL (el motor de "
+"base de datos que viene con Odoo)."
 
 #: ../../content/administration/maintain/update.rst:49
 msgid ""
 "The main reference for updating is logically our :ref:`installation guide "
 "<setup/install>`, which explains the common installation methods."
 msgstr ""
+"La referencia principal para la actualización es, por supuesto, nuestra "
+":ref:`guía de instalación <setup/install>`, la cual explica los métodos de "
+"instalación más comunes."
 
 #: ../../content/administration/maintain/update.rst:52
 msgid ""
 "Updating is also most appropriately accomplished by the person who deployed "
 "Odoo initially, because the procedure is very similar."
 msgstr ""
+"Es más apropiado que la actualización la realice quien instaló Odoo en un "
+"principio, porque el procedimiento es muy similar."
 
 #: ../../content/administration/maintain/update.rst:55
 msgid ""
@@ -3859,10 +4267,16 @@ msgid ""
 "installations that are heavily customized, or for technical personnel who "
 "prefer to apply minimal changes temporarily while testing a complete update."
 msgstr ""
+"Siempre recomendamos descargar una nueva versión actualizada de Odoo en "
+"lugar de aplicar los parches de forma manual, como los parches de seguridad "
+"que vienen con las asesorías de seguridad. Los parches se proporcionan "
+"principalmente para instalaciones con muchas personalizaciones, o para el "
+"personal técnico que prefiere aplicar cambios mínimos de manera temporal "
+"mientras realizan las pruebas de una actualización completa."
 
 #: ../../content/administration/maintain/update.rst:64
 msgid "Step 1: Download an updated Odoo version"
-msgstr ""
+msgstr "Paso 1: descargar una versión actualizada de Odoo"
 
 #: ../../content/administration/maintain/update.rst:66
 msgid ""
@@ -3871,22 +4285,30 @@ msgid ""
 "into Odoo.com with the same login that is linked to your Odoo Enterprise "
 "subscription."
 msgstr ""
+"La página central de descarga es https://www.odoo.com/page/download. Si ve "
+"un enlace de \"Compra\" para la descarga de Odoo Enterprise, asegúrese de "
+"ingresar en Odoo.com con la misma información de inicio de sesión vinculada "
+"a su suscripción de Odoo Enterprise."
 
 #: ../../content/administration/maintain/update.rst:70
 msgid ""
 "Alternatively, you can use the unique download link that was included with "
 "your Odoo Enterprise purchase confirmation email."
 msgstr ""
+"Alternativamente, puede usar el enlace único de descarga que se incluyó en "
+"su correo electrónico de confirmación de compra de Odoo Enterprise."
 
 #: ../../content/administration/maintain/update.rst:73
 msgid ""
 "Downloading an updated version is not necessary if you installed via Github "
 "(see below)"
 msgstr ""
+"No es necesario descargar una versión actualizada si hizo la instalación a "
+"través de GitHub (ver a continuación)"
 
 #: ../../content/administration/maintain/update.rst:77
 msgid "Step 2: Make a backup of your database"
-msgstr ""
+msgstr "Paso 2: hacer un respaldo de su base de datos"
 
 #: ../../content/administration/maintain/update.rst:79
 msgid ""
@@ -3895,6 +4317,10 @@ msgid ""
 " on your installation, and to store it somewhere safe, on a different "
 "computer."
 msgstr ""
+"El procedimiento de actualización es seguro y no debería alterar sus datos. "
+"Sin embargo, es recomendable hacer un respaldo completo de su base de datos "
+"antes de realizar cualquier cambio en su instalación y almacenarlo en un "
+"lugar seguro, en una computadora distinta."
 
 #: ../../content/administration/maintain/update.rst:83
 msgid ""
@@ -3903,18 +4329,23 @@ msgid ""
 " selection screen) to download a backup of your database(s). If you disabled"
 " it, use the same procedure than for your usual backups."
 msgstr ""
+"Si no ha deshabilitado la pantalla del gestor de base de datos (puede ver "
+":ref:`aquí <security>` por qué debería hacerlo), puede usarla (a través del "
+"enlace en la parte inferior de su pantalla de selección de base de datos) "
+"para descargar un respaldo de su base o bases de datos. Si la deshabilitó, "
+"utilice el mismo procedimiento que con sus respaldos normales."
 
 #: ../../content/administration/maintain/update.rst:89
 msgid "Step 3: Install the updated version"
-msgstr ""
+msgstr "Paso 3: instalar la versión actualizada"
 
 #: ../../content/administration/maintain/update.rst:91
 msgid "Choose the method that matches your current installation:"
-msgstr ""
+msgstr "Elija el método que coincida con su instalación actual:"
 
 #: ../../content/administration/maintain/update.rst:95
 msgid "Packaged Installers"
-msgstr ""
+msgstr "Instalaladores de paquetes"
 
 #: ../../content/administration/maintain/update.rst:97
 msgid ""
@@ -3927,10 +4358,18 @@ msgid ""
 " be sure to restart the Odoo service or reboot your server, and you're all "
 "set."
 msgstr ""
+"Si instaló Odoo con un paquete de instalación que descargó de nuestro sitio "
+"web (el método que recomendamos), la actualización es muy sencilla. Todo lo "
+"que debe hacer es descargar el paquete de instalación que corresponda con su"
+" sistema (consulte el paso #1) e instálelo en su servidor. Se actualizan "
+"diariamente e incluyen las correcciones de seguridad más recientes. "
+"Normalmente, solo debe hacer doble clic en el paquete para instalarlo en su "
+"instalación actual. Después de instalar el paquete, asegúrese de reiniciar "
+"el servicio de Odoo o reiniciar su servidor, y estará listo."
 
 #: ../../content/administration/maintain/update.rst:106
 msgid "Source Install (Tarball)"
-msgstr ""
+msgstr "Instalación de la fuente (Tarball)"
 
 #: ../../content/administration/maintain/update.rst:107
 msgid ""
@@ -3940,6 +4379,12 @@ msgid ""
 "daily and include the latest security fixes (see step #1) After downloading "
 "the package, extract it to a temporary location on your server."
 msgstr ""
+"Si instaló Odoo originalmente con la versión \"tarball\" (archivo de código "
+"fuente), puede remplazar el directorio de instalación con una nueva versión."
+" Primero descargue el tarball más reciente en Odoo.com. Se actualizan "
+"diariamente e incluyen las correcciones de seguridad más recientes (consulte"
+" el paso #1). Después de descargar el paquete, extráigalo a una ubicación "
+"temporal en su servidor."
 
 #: ../../content/administration/maintain/update.rst:112
 msgid ""
@@ -3951,6 +4396,13 @@ msgid ""
 "it with the newer \"odoo\" or \"openerp\" folder that was in the archive you"
 " just extracted."
 msgstr ""
+"Obtendrá una carpeta etiquetada con la versión del código fuente, por "
+"ejemplo, \"odoo-13.0+e.20190719\", que contiene una carpeta \"odoo.egg-"
+"info\" y la carpeta de código fuente con el nombre de \"odoo\" (para Odoo 10"
+" y posteriores) o \"openerp\" para versiones más antiguas. Puede ignorar la "
+"carpeta odoo.egg-info. Encuentre la carpeta en la que se encuentra su "
+"instalación actual y remplácela con la nueva carpeta \"odoo\" o \"openerp\" "
+"del archivo que acaba de extraer."
 
 #: ../../content/administration/maintain/update.rst:118
 msgid ""
@@ -3961,10 +4413,16 @@ msgid ""
 "the new folder. Finally, restart the Odoo service or reboot the machine, and"
 " you are all set."
 msgstr ""
+"Asegúrese de hacer coincidir la disposición de la carpeta, por ejemplo, la "
+"nueva carpeta \"addons\" incluida en el código fuente debe estar en la misma"
+" ruta que antes. A continuación, busque cualquier archivo de configuración "
+"que haya copiado de forma manual o modificado en la carpeta anterior, y "
+"cópielos en la nueva carpeta. Por último, reinicie el servicio de Odoo o "
+"reinicie la máquina, y está listo."
 
 #: ../../content/administration/maintain/update.rst:125
 msgid "Source Install (Github)"
-msgstr ""
+msgstr "Instalación de la fuente (GitHub)"
 
 #: ../../content/administration/maintain/update.rst:126
 msgid ""
@@ -3974,6 +4432,11 @@ msgid ""
 " Odoo repository, and the Enterprise repository), and run the following "
 "commands::"
 msgstr ""
+"Si originalmente instaló Odoo con un clon completo de los repositorios "
+"oficiales de GitHub, el procedimiento de actualización requiere que obtenga "
+"el código fuente más reciente a través de git. Cambie al directorio de cada "
+"repositorio (el repositorio principal de Odoo y el repositorio de "
+"Enterprise) y ejecute los siguientes comandos:"
 
 #: ../../content/administration/maintain/update.rst:134
 msgid ""
@@ -3982,24 +4445,35 @@ msgid ""
 "with conflicts, and you will need to resolve the conflicts manually, by "
 "editing them and deciding which part of the code to keep."
 msgstr ""
+"El último comando puede tener problemas con el código fuente si editó el "
+"código fuente de Odoo de forma local. El mensaje de error le dará la lista "
+"de archivos con conflictos, y deberá resolverlos de forma manual al "
+"editarlos y decidir qué partes del código mantendrá. "
 
 #: ../../content/administration/maintain/update.rst:138
 msgid ""
 "Alternatively, if you prefer to simply discard the conflicting changes and "
 "restore the official version, you can use the following command::"
 msgstr ""
+"Alternativamente, si prefiere solamente descartar los cambios en conflicto y"
+" restaurar la versión oficial, puede usar el siguiente comando:"
 
 #: ../../content/administration/maintain/update.rst:143
 msgid ""
 "Finally, restart the Odoo service or reboot the machine, and you should be "
 "done."
 msgstr ""
+"Por último, reinicie el servicio de Odoo o reinicie la máquina y todo "
+"debería estar listo."
 
 #: ../../content/administration/maintain/update.rst:149
 msgid ""
 "Please refer to our `Docker image documentation "
 "<https://hub.docker.com/_/odoo/>`_ for specific update instructions."
 msgstr ""
+"Consulte nuestra `documentación de imágenes de Docker "
+"<https://hub.docker.com/_/odoo/>`_ para obtener instrucciones de "
+"actualización específicas."
 
 #: ../../content/administration/odoo_sh/advanced.rst:5
 msgid "Advanced"
@@ -6986,7 +7460,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:258
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:300
 msgid "Install your module"
-msgstr ""
+msgstr "Instale su módulo"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:260
 msgid ""
@@ -7050,7 +7524,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:308
 msgid "Add a change"
-msgstr ""
+msgstr "Añadir un cambio"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:310
 msgid ""
@@ -7180,7 +7654,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:423
 msgid "Use an external Python library"
-msgstr ""
+msgstr "Usar una librería externa de Python"
 
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:425
 msgid ""
@@ -7259,7 +7733,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:6
 msgid "Online Editor"
-msgstr ""
+msgstr "Editor en línea"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:11
 msgid ""
@@ -7280,7 +7754,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:25
 msgid "Edit the source code"
-msgstr ""
+msgstr "Editar el código fuente"
 
 #: ../../content/administration/odoo_sh/getting_started/online-editor.rst:27
 msgid "The working directory is composed of the following folders:"
@@ -7508,11 +7982,11 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:15
 msgid "Project name"
-msgstr ""
+msgstr "Nombre del proyecto"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:17
 msgid "The name of your project."
-msgstr ""
+msgstr "El nombre de su proyecto"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:22
 msgid ""
@@ -7537,11 +8011,11 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:37
 msgid "There are two levels of users:"
-msgstr ""
+msgstr "Hay dos niveles de usuarios:"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:39
 msgid "Admin: has access to all features of Odoo.sh."
-msgstr ""
+msgstr "Admin: tiene acceso a todas las características de Odoo.sh."
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:40
 msgid ""
@@ -7570,7 +8044,7 @@ msgstr "Usuario"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:50
 msgid "Admin"
-msgstr ""
+msgstr "Admin"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:52
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:52
@@ -7608,7 +8082,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:58
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:70
 msgid "Shell/SSH"
-msgstr ""
+msgstr "Shell/SSH"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:64
 msgid "Production & Staging"
@@ -7647,7 +8121,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:103
 msgid "Custom domains"
-msgstr ""
+msgstr "Dominios personalizados"
 
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:105
 msgid ""
@@ -7814,7 +8288,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/overview/introduction.rst:4
 msgid "Introduction to Odoo.sh"
-msgstr ""
+msgstr "Introducción a Odoo.sh"
 
 #: ../../content/administration/odoo_sh/overview/introduction.rst:11
 msgid ""
@@ -7864,7 +8338,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:37
 msgid "Process workflow"
-msgstr ""
+msgstr "Procesar flujo de trabajo"
 
 #: ../../content/administration/upgrade.rst:39
 msgid "The upgrade process in a nutshell:"
@@ -8197,7 +8671,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:233
 msgid "standard applications"
-msgstr ""
+msgstr "aplicaciones estándar"
 
 #: ../../content/administration/upgrade.rst:234
 msgid ""
@@ -8337,7 +8811,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:64
 msgid "Installed apps"
-msgstr ""
+msgstr "Aplicaciones instaladas"
 
 #: ../../content/administration/upgrade/faq.rst:65
 msgid "Volume of data"
@@ -8444,7 +8918,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:136
 msgid "Custom views"
-msgstr ""
+msgstr "Vistas personalizadas"
 
 #: ../../content/administration/upgrade/faq.rst:138
 msgid ""
