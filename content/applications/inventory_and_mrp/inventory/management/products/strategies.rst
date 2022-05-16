@@ -12,8 +12,7 @@ Terminology
 
 Replenishment Report and Reordering Rules
 -----------------------------------------
-
-The replenishment report is a list all your products having a negative forecast 
+The replenishment report is a list of all your products that have a negative forecast
 quantity. 
 Reordering rules are used to ensure that you always have the minimum
 amount of a product in stock in order to manufacture your products
