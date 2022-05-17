@@ -30,13 +30,13 @@ Use case 1 : you didn't receive your goods yet
 If you confirmed your purchase order and did not received your goods
 yet, you can simply cancel the PO it by clicking the cancel button.
 
-.. image:: media/cancel05.png
+.. image:: cancel/cancel05.png
     :align: center
 
 Odoo will automatically cancel the outstanding shipments related to this
 PO and the status bar will switch from **Purchase order** to **Cancelled**.
 
-.. image:: media/cancel03.png
+.. image:: cancel/cancel03.png
     :align: center
 
 Use case 2 : partially delivered goods
@@ -54,7 +54,7 @@ shipped. From the PO, click on **Receive products** and, on the **iPad Mini
 order line**, manually change the received quantities under the Column
 **Done**.
 
-.. image:: media/cancel02.png
+.. image:: cancel/cancel02.png
     :align: center
 
 .. note::
@@ -64,14 +64,14 @@ When clicking on **Validate**, Odoo will warn you that you have processed
 less products than the initial demand (2 instead of 3 in our case) and
 will ask you the permission to create a backorder.
 
-.. image:: media/cancel07.png
+.. image:: cancel/cancel07.png
     :align: center
 
 Click on **No backorder** to cancel the supply of the remaining product.
 You will notice than the quantity to receive has been changed
 accordingly and, therefore, the delivery status has switched to **Done**.
 
-.. image:: media/cancel04.png
+.. image:: cancel/cancel04.png
     :align: center
 
 Create reverse transfer
@@ -82,13 +82,13 @@ vendor location. To do so, click on the **Reverse** button from the same
 document. A reverse transfer window will pop up. Enter the quantity to
 return and the corresponding location and click on **Return**.
 
-.. image:: media/cancel06.png
+.. image:: cancel/cancel06.png
     :align: center
 
 Process the return shipment and control that the stock move is from your
 stock to your vendor location.
 
-.. image:: media/cancel01.png
+.. image:: cancel/cancel01.png
     :align: center
 
 When the reverse transfer is done, the status of your purchase order

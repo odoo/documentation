@@ -14,7 +14,7 @@ Enable online payment
 Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Online Payment**
 feature.
 
-.. image:: media/get_paid_1.png
+.. image:: get_paid_to_validate/get_paid_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to enable online payment on Odoo Sales?
@@ -37,7 +37,7 @@ Register a payment
 After opening quotations from their received email, your customers will have different
 possibilities to make their online payments. For example:
 
-.. image:: media/get_paid_2.png
+.. image:: get_paid_to_validate/get_paid_2.png
    :align: center
    :class: img-thumbnail
    :alt: How to register a payment on Odoo Sales?

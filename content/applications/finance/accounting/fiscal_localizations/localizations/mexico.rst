@@ -46,7 +46,7 @@ Install the Mexican Accounting Localization
 To :ref:`install <general/install>` the module, go to :menuselection:`Apps`, remove the *Apps*
 filter and search for "Mexico". Then click on *Install*.
 
-.. image:: media/mexico01.png
+.. image:: mexico/mexico01.png
    :align: center
 
 .. tip::
@@ -64,7 +64,7 @@ with this you will be able to generate the signed invoice (CFDI 3.2 and 3.3)
 and generate the payment complement signed as well (3.3 only) all fully
 integrate with the normal invoicing flow in Odoo.
 
-.. image:: media/mexico02.png
+.. image:: mexico/mexico02.png
    :align: center
 
 .. _mx-legal-info:
@@ -84,7 +84,7 @@ company’s contact.
    address inside Mexico with all fields for the company address and
    set the vat to **EKU9003173C9**.
 
-.. image:: media/mexico03.png
+.. image:: mexico/mexico03.png
    :align: center
 
 .. warning::
@@ -125,7 +125,7 @@ the entry with this name does not exist).
    in any new database created since v11.0 released CFDI 3.3 is the default
    behavior.
 
-.. image:: media/mexico11.png
+.. image:: mexico/mexico11.png
    :align: center
 
 
@@ -135,22 +135,22 @@ Important considerations when you enable the CFDI 3.3
 Your tax which represent the VAT 16% and 0% must have the "Factor Type" field
 set to "Tasa".
 
-.. image:: media/mx_faq_04.png
+.. image:: mexico/mx_faq_04.png
    :align: center
-.. image:: media/mx_faq_05.png
+.. image:: mexico/mx_faq_05.png
    :align: center
 
 You must go to the Fiscal Position configuration and set the proper code (it is
 the first 3 numbers in the name) for example for the test one you should set
 601, it will look like the image.
 
-.. image:: media/mexico14.png
+.. image:: mexico/mexico14.png
    :align: center
 
 All products must have for CFDI 3.3 the "SAT code" and the field "Reference"
 properly set, you can export them and re import them to do it faster.
 
-.. image:: media/mexico15.png
+.. image:: mexico/mexico15.png
    :align: center
 
 
@@ -173,22 +173,22 @@ and then enter your PAC username and PAC password.
    proposed for the SAT in order to set this information for your production
    environment with real transactions.
 
-.. image:: media/mexico04.png
+.. image:: mexico/mexico04.png
    :align: center
 
 .. tip::
    If you ticked the box *MX PAC test environment* there is no need
    to enter a PAC username or password.
 
-.. image:: media/mexico05.png
+.. image:: mexico/mexico05.png
    :align: center
 
 .. tip::
    Here is a SAT certificate you can use if you want to use the *Test
    Environment* for the Mexican Accounting Localization.
 
-   - :download:`Certificate <files/certificate.cer>`
-   - :download:`Certificate Key <files/certificate.key>`
+   - :download:`Certificate <mexico/certificate.cer>`
+   - :download:`Certificate Key <mexico/certificate.key>`
    - **Password:** ``12345678a``
 
 
@@ -199,7 +199,7 @@ This tag is used to set the tax type code, transferred or withhold, applicable
 to the concept in the CFDI.
 So, if the tax is a sale tax the "Tag" field should be "IVA", "ISR" or "IEPS".
 
-.. image:: media/mexico33.png
+.. image:: mexico/mexico33.png
    :align: center
 
 Note that the default taxes already has a tag assigned, but when you create a
@@ -219,20 +219,20 @@ Once you validate your first invoice a correctly signed invoice should look
 like this:
 
 
-.. image:: media/mexico07.png
+.. image:: mexico/mexico07.png
    :align: center
 
 You can generate the PDF just clicking on the Print button on the invoice or
 sending it by email following the normal process on odoo to send your invoice
 by email.
 
-.. image:: media/mexico08.png
+.. image:: mexico/mexico08.png
    :align: center
 
 Once you send the electronic invoice by email this is the way it should looks
 like.
 
-.. image:: media/mexico09.png
+.. image:: mexico/mexico09.png
    :align: center
 
 
@@ -245,17 +245,17 @@ If the invoice is not paid.
 
 - Go to to the customer invoice journal where the invoice belong to.
 
-  .. image:: media/mexico28.png
+  .. image:: mexico/mexico28.png
 
-  .. image:: media/mexico29.png
+  .. image:: mexico/mexico29.png
 
 - Check the "Allow cancelling entries" field.
 
-  .. image:: media/mexico29.png
+  .. image:: mexico/mexico29.png
 
 - Go back to your invoice and click on the button "Cancel Invoice".
 
-  .. image:: media/mexico30.png
+  .. image:: mexico/mexico30.png
 
 - For security reasons it is recommendable return the check on the to allow
   cancelling to false again, then go to the journal and un check such field.
@@ -335,7 +335,7 @@ of accounting.
 
 You can find all of those reports in :menuselection:`Accounting --> Reporting --> Mexico`
 
-.. image:: media/mx_ce_01.png
+.. image:: mexico/mx_ce_01.png
    :align: center
    :alt: MX reports
 
@@ -345,7 +345,7 @@ Electronic Chart of Accounts (Called and displayed as COA).
 Electronic invoicing has never been so easy, just go to :menuselection:`Accounting -> Reports ->
 Mexico -> COA` and click the button **Export for SAT (XML)**.
 
-.. image:: media/mx_ce_02.png
+.. image:: mexico/mx_ce_02.png
    :align: center
    :alt: COA for SAT
 
@@ -361,7 +361,7 @@ account with the number 102.01.99 once you change to establish the name you will
 automatically configured label, the configured labels are the ones chosen to be used in the COA
 in XML.
 
-.. image:: media/mx_ce_03.png
+.. image:: mexico/mx_ce_03.png
    :align: center
    :alt: Create account
 
@@ -386,7 +386,7 @@ correctly configured your COA, you can go to :menuselection:`Reports --> Trial B
 automatically generated and can be exported to XML using the button on the top **Export for SAT
 (XML)** with the previous selection of the period you want to export.
 
-.. image:: media/mx_ce_04.png
+.. image:: mexico/mx_ce_04.png
    :align: center
    :alt: Electronic verification balance
 
@@ -459,20 +459,20 @@ How to generate this report in Odoo?
 #. Go to :menuselection:`Accounting --> Reports --> Mexico --> Transactions with third partied
    (DIOT)`.
 
-   .. image:: media/mx_ce_05.png
+   .. image:: mexico/mx_ce_05.png
       :align: center
       :alt: DIOT report
 
 #. A report view is displayed, select the last month to report the immediately preceding month or
    leave the current month if it suits you.
 
-   .. image:: media/mx_ce_06.png
+   .. image:: mexico/mx_ce_06.png
       :align: center
       :alt: DIOT filter
 
 #. Click on *Export (XLSX)* or *Print (TXT)*
 
-.. image:: media/mx_ce_07.png
+.. image:: mexico/mx_ce_07.png
       :align: center
       :alt: Print DIOT
 
@@ -487,7 +487,7 @@ Important considerations about your supplier and invoice data for DIOT
   address, not You need to do nothing else there, but the l10n MX type of operation must be
   configured in all your providers.
 
-.. image:: media/mx_ce_08.png
+.. image:: mexico/mx_ce_08.png
      :align: center
      :alt: DIOT configuration
 
@@ -505,7 +505,7 @@ this is the reason why we recommend to use this report not only for exporting yo
 information. obligation, but generate it before the end of the month and use it as your auditory
 process to see that all your partners are configured correctly.
 
-.. image:: media/mx_ce_09.png
+.. image:: mexico/mx_ce_09.png
    :align: center
    :alt: DIOT Error
 
@@ -559,7 +559,7 @@ last day of the preceding financial year, which is set under the accounting sett
 way, the accountant can trust that no one else is changing the previous year's transactions while
 auditing the books.
 
-.. image:: media/mx_cc_01.png
+.. image:: mexico/mx_cc_01.png
    :align: center
    :alt: Fiscal year
 
@@ -579,7 +579,7 @@ As of December 31, the Balance Sheet shows the earnings of the Current Year that
 recognized (Account type Total Current Year Unallocated Earnings in MX account 305.01.01
 ['current year earnings' type])
 
-.. image:: media/mx_cc_02.png
+.. image:: mexico/mx_cc_02.png
    :align: center
    :alt: Balance sheet closing
 
@@ -589,7 +589,7 @@ Mexico) - that is an equity account.
 
 The simplified accounting entry would look like this:
 
-.. image:: media/mx_cc_03.png
+.. image:: mexico/mx_cc_03.png
    :align: center
    :alt: Closing journal entry
 
@@ -598,7 +598,7 @@ they must set the **Closing Date** to the last day of the fiscal year. Making su
 doing this, whether or not the current gain of the year in the **Balance Sheet** is properly
 reporting a balance 0.
 
-.. image:: media/mx_cc_04.png
+.. image:: mexico/mx_cc_04.png
    :align: center
    :alt: Check BS closing
 
@@ -621,7 +621,7 @@ SAT without having to manually create this information every day in Odoo.
 
 Go to settings and enable the multi-currency feature.
 
-.. image:: media/mx_mc_01.png
+.. image:: mexico/mx_mc_01.png
    :align: center
    :alt: Multi currency configuration
 
@@ -640,7 +640,7 @@ enable, to enable the Check with xsd feature follow the next steps (with the
 - Open any company you have.
 - Click on "Action" and then on "Download XSD file to CFDI".
 
-.. image:: media/mx-xsd-cfdi.png
+.. image:: mexico/mx-xsd-cfdi.png
    :align: center
    :alt: Download XSD files to CFDI from the Companies list view on Odoo
 
@@ -699,7 +699,7 @@ Common problems and errors
   You need to go to Fiscal Position settings and set the proper code (it is the first 3 numbers
   of the name), for example, for the test, you need to set 601, it will look like the picture.
 
-  .. image:: media/mx_faq_01.png
+  .. image:: mexico/mx_faq_01.png
      :align: center
      :alt: Fiscal position error
 
@@ -718,7 +718,7 @@ Common problems and errors
   **Solution**:
   The payment method is required on your invoice.
 
-.. image:: media/mx_faq_02.png
+.. image:: mexico/mx_faq_02.png
      :align: center
      :alt: Payment method error
 
@@ -749,7 +749,7 @@ Common problems and errors
   **Solution**:
   The postal code of your company address is not valid for Mexico, please correct it.
 
-.. image:: media/mx_faq_03.png
+.. image:: mexico/mx_faq_03.png
      :align: center
      :alt: ZIP code error
 
@@ -766,11 +766,11 @@ Common problems and errors
   Set the Mexican name for the 0% and 16% tax in your system and use it on the invoice. Your tax,
   which represents 16% VAT and 0%, must have the **Factor Type** field set to *Tasa*.
 
-  .. image:: media/mx_faq_04.png
+  .. image:: mexico/mx_faq_04.png
      :align: center
      :alt: Factor type error
 
-  .. image:: media/mx_faq_05.png
+  .. image:: mexico/mx_faq_05.png
      :align: center
      :alt: Rate error
 

@@ -13,7 +13,7 @@ Configuration
 Go to :menuselection:`Website --> Configuration --> Settings --> Live Chat` select the appropriate
 channel, and set it up.
 
-.. image:: media/enable_livechat.png
+.. image:: livechat/enable_livechat.png
    :align: center
    :alt: Enable live chat under website configurations for Odoo Social Marketing
 
@@ -35,7 +35,7 @@ Under the  *Visitors* menu,  see the visitors that landed on one of your
 | Open a record to see details including the visited pages, and the first and last date and time
   the user was connected.
 
-.. image:: media/monitor_visitors.png
+.. image:: livechat/monitor_visitors.png
    :align: center
    :alt: See a visitor's history of pages in Odoo Social Marketing
 
@@ -52,7 +52,7 @@ To define which pages are tracked, on the *Website* application, go to
 :menuselection:`Website --> Configuration --> Pages` and enable the option *Track*,
 on the respective pages.
 
-.. image:: media/website_track_pages.png
+.. image:: livechat/website_track_pages.png
    :align: center
    :alt: Choose the pages to be tracked in the website application for Odoo Social Marketing
 

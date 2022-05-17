@@ -40,7 +40,7 @@ Configure an Assets Account
 To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
 Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 
-.. image:: media/assets01.png
+.. image:: assets/assets01.png
    :align: center
    :alt: Configuration of an Assets Account in Odoo Accounting
 
@@ -55,7 +55,7 @@ Select the account on a draft bill
 
 On a draft bill, select the right account for all the assets you are buying.
 
-.. image:: media/assets02.png
+.. image:: assets/assets02.png
    :align: center
    :alt: Selection of an Assets Account on a draft bill in Odoo Accounting
 
@@ -67,7 +67,7 @@ Choose a different Expense Account for specific products
 Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and
 save.
 
-.. image:: media/assets03.png
+.. image:: assets/assets03.png
    :align: center
    :alt: Change of the Assets Account for a product in Odoo
 
@@ -84,7 +84,7 @@ To do so, open your Purchases Journal by going to :menuselection:`Accounting -->
 Purchases`, select the journal item you want to modify, click on the account, and select the right
 one.
 
-.. image:: media/assets04.png
+.. image:: assets/assets04.png
    :align: center
    :alt: Modification of a posted journal item's account in Odoo Accounting
 
@@ -106,7 +106,7 @@ Click on **select related purchases** to link an existing journal item to this n
 fields are then automatically filled out, and the journal item is now listed under the **Related
 Purchase** tab.
 
-.. image:: media/assets05.png
+.. image:: assets/assets05.png
    :align: center
    :alt: Assets entry in Odoo Accounting
 
@@ -114,7 +114,7 @@ Once done, you can click on *Compute Depreciation* (next to the *Confirm* button
 the values of the **Depreciation Board**. This board shows you all the entries that Odoo will post
 to depreciate your asset, and at which date.
 
-.. image:: media/assets06.png
+.. image:: assets/assets06.png
    :align: center
    :alt: Depreciation Board in Odoo Accounting
 
@@ -155,7 +155,7 @@ in the right account (see: :ref:`journal-assets-account`).
 Then, click on *Action*, select **Create Asset**, and fill out the form the same way you would do to
 :ref:`create a new entry <create-assets-entry>`.
 
-.. image:: media/assets07.png
+.. image:: assets/assets07.png
    :align: center
    :alt: Create Asset Entry from a journal item in Odoo Accounting
 
@@ -174,7 +174,7 @@ An **increase in value** requires you to fill out additional fields related to t
 and creates a new Asset entry with the **Value Increase**. The Gross Increase Asset Entry can be
 accessed with a Smart Button.
 
-.. image:: media/assets08.png
+.. image:: assets/assets08.png
    :align: center
    :alt: Gross Increase smart button in Odoo Accounting
 
@@ -185,7 +185,7 @@ To **sell** an asset or **dispose** of it implies that it must be removed from t
 
 To do so, open the asset you want to dispose of, click on *Sell or Dispose*, and fill out the form.
 
-.. image:: media/assets09.png
+.. image:: assets/assets09.png
    :align: center
    :alt: Disposal of Assets in Odoo Accounting
 
@@ -220,7 +220,7 @@ account.
 New buttons with all the models linked to that account appear at the top of the form. Clicking on a
 model button fills out the form according to that model.
 
-.. image:: media/assets10.png
+.. image:: assets/assets10.png
    :align: center
    :alt: Assets model button in Odoo Accounting
 
@@ -242,7 +242,7 @@ You have three choices for the **Automate Assets** field:
 #. **Create and validate:** you must also select an Asset Model (see: `Assets Models`_). Whenever a
    transaction is posted on the account, an *Assets entry* is created and immediately validated.
 
-.. image:: media/assets11.png
+.. image:: assets/assets11.png
    :align: center
    :alt: Automate Assets on an account in Odoo Accounting
 

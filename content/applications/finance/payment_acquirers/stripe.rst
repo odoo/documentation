@@ -23,7 +23,7 @@ To enable specific Local Payment Methods with Stripe, list them as supported pay
 To do so, go to :menuselection:`Payment Acquirers --> Stripe --> Configuration` and add the desired payment methods in
 the **Supported Payment Icons** field. If the desired payment method is already listed, you don't have anything to do.
 
-.. image:: media/stripe_enable_local_payment_method.png
+.. image:: stripe/stripe_enable_local_payment_method.png
    :align: center
    :alt: Select and add icons of payment methods you want to enable
 

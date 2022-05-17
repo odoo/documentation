@@ -24,7 +24,7 @@ First, open the *BoM* you want to use for flexible component
 consumption and edit it. In the *Miscellaneous* tab, choose
 *Flexible* as the consumption type. Then, save.
 
-.. image:: media/flexible_components_consumption_01.png
+.. image:: flexible_components_consumption/flexible_components_consumption_01.png
     :align: center
 
 Now, in the *Quality* app, open the *Control Point* menu, under
@@ -32,7 +32,7 @@ Now, in the *Quality* app, open the *Control Point* menu, under
 your product, your operation and work order operation. Then, choose
 *Register Consumed Materials* as type.
 
-.. image:: media/flexible_components_consumption_02.png
+.. image:: flexible_components_consumption/flexible_components_consumption_02.png
     :align: center
 
 Next, go back to your *Manufacturing* app and create a *Manufacturing
@@ -43,11 +43,11 @@ Then, confirm it and launch the process step. While processing, you will
 have the possibility to consume more components than expected in the
 *BoM*. To do so, click on *Continue Consumption*.
 
-.. image:: media/flexible_components_consumption_03.png
+.. image:: flexible_components_consumption/flexible_components_consumption_03.png
     :align: center
 
 When the job is over, you will find a summary of your component
 consumption in the *Finished Steps* tab of your work order.
 
-.. image:: media/flexible_components_consumption_04.png
+.. image:: flexible_components_consumption/flexible_components_consumption_04.png
     :align: center

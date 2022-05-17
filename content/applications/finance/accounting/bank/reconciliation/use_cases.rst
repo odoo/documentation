@@ -18,7 +18,7 @@ Configuration
 No special configuration is necessary to record invoices. All we need
 to do is to install the accounting app.
 
-.. image:: media/use01.png
+.. image:: use_cases/use01.png
    :align: center
 
 Use cases
@@ -39,20 +39,20 @@ customer.
 Our customer send us a payment confirmation. We can thus register a
 payment and mark the invoice as paid.
 
-.. image:: media/use02.png
+.. image:: use_cases/use02.png
    :align: center
 
 By clicking on **register payment,** we are telling Odoo that our
 customer has paid the Invoice. We thus have to specify the amount and the
 payment method.
 
-.. image:: media/use03.png
+.. image:: use_cases/use03.png
    :align: center
 
 Now we can always find the payment details in the Invoice by clicking on the
 :menuselection:`Info --> Open Payment`.
 
-.. image:: media/use04.png
+.. image:: use_cases/use04.png
    :align: center
 
 The invoice has been paid and **the reconciliation has been done
@@ -64,7 +64,7 @@ Case 2: Bank statements reconciliations
 We start at our issued Invoice of 3000 euros for Smith & Co. Let's also
 assume that other Invoices are open for different customers.
 
-.. image:: media/use05.png
+.. image:: use_cases/use05.png
    :align: center
 
 We receive our bank statement and find that not only the invoice issued to Smith & Co has
@@ -73,18 +73,18 @@ been paid, but the one to Buzz of 92 euros as well.
 **Import** or **Create** the bank statements. Please refer to the
 documents from the Bank Feeds section.
 
-.. image:: media/use06.png
+.. image:: use_cases/use06.png
    :align: center
 
 On the dashboard, click on **Reconcile # Items**
 
-.. image:: media/use07.png
+.. image:: use_cases/use07.png
    :align: center
 
 If everything was right (correct partner name, right amount) odoo will
 do the reconciliations **automatically**.
 
-.. image:: media/use08.png
+.. image:: use_cases/use08.png
    :align: center
 
 If some issues are found, you will need to take **manual actions**.
@@ -92,13 +92,13 @@ If some issues are found, you will need to take **manual actions**.
 For example, if the partner is missing from your bank statement, just
 fill it in :
 
-.. image:: media/use09.png
+.. image:: use_cases/use09.png
    :align: center
 
 If the payment is done with a down payment, just check if it is all
 right and validate all related payments :
 
-.. image:: media/use10.png
+.. image:: use_cases/use10.png
    :align: center
 
 .. seealso::

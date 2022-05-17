@@ -6,17 +6,17 @@ On the website click *New Page* in the top-right corner.
 
 Then click *New Product* and follow the blinking tips.
 
-.. image:: ./media/create_product.png
+.. image:: product_page/create_product.png
    :align: center
 
 Here are the main elements of the Product page:
 
-.. image:: ./media/product_page_tips.png
+.. image:: product_page/product_page_tips.png
    :align: center
 
 Many elements can be made visible from the *Customize* menu.
 
-.. image:: ./media/product_customize.png
+.. image:: product_page/product_customize.png
    :align: center
 
 See how to configure your products from links here below.

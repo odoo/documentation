@@ -21,7 +21,7 @@ Create a manufactured BoM for the finished product which includes a kit
 component. Set a routing on your BoM, for example, *Assemble
 Furniture*.
 
-.. image:: media/routing_kit_bom_01.png
+.. image:: routing_kit_bom/routing_kit_bom_01.png
     :align: center
 
 Create a Kit BoM for the Kit Component
@@ -30,7 +30,7 @@ Create a Kit BoM for the Kit Component
 Update the kit component to define its BoM. Make sure that the routing
 which is set on this BoM is the same one than on the Finished Product.
 
-.. image:: media/routing_kit_bom_02.png
+.. image:: routing_kit_bom/routing_kit_bom_02.png
     :align: center
 
 You can define the operations in which the kit components are used
@@ -44,13 +44,13 @@ as we have two operations defined in the *Assemble Furniture* routing.
 The components of the kits are well consumed in the operations defined
 in the kit BoM.
 
-.. image:: media/routing_kit_bom_03.png
+.. image:: routing_kit_bom/routing_kit_bom_03.png
     :align: center
 
-.. image:: media/routing_kit_bom_04.png
+.. image:: routing_kit_bom/routing_kit_bom_04.png
     :align: center
 
-.. image:: media/routing_kit_bom_05.png
+.. image:: routing_kit_bom/routing_kit_bom_05.png
     :align: center
 
 Finished Product & Kit Component haven’t the same Routing
@@ -66,7 +66,7 @@ Create a manufactured BoM for the finished product which includes a kit
 component. Set a routing on your BoM, for example, *Assemble
 Furniture*.
 
-.. image:: media/routing_kit_bom_01.png
+.. image:: routing_kit_bom/routing_kit_bom_01.png
     :align: center
 
 Create a Kit BoM for the Kit Component
@@ -77,7 +77,7 @@ routing which is set on this Kit BoM is different than the one of the
 Finished Product. Specify the operations at which the kit components are
 consumed in this BoM.
 
-.. image:: media/routing_kit_bom_06.png
+.. image:: routing_kit_bom/routing_kit_bom_06.png
     :align: center
 
 Manufacturing Order
@@ -89,15 +89,15 @@ planned, three work orders are created in our case, one coming from the
 routing of the manufactured products, the two other ones coming from the
 routing of the kit BoM.
 
-.. image:: media/routing_kit_bom_07.png
+.. image:: routing_kit_bom/routing_kit_bom_07.png
     :align: center
 
 The components are all consumed during their respective operations.
 
-.. image:: media/routing_kit_bom_08.png
+.. image:: routing_kit_bom/routing_kit_bom_08.png
     :align: center
 
-.. image:: media/routing_kit_bom_09.png
+.. image:: routing_kit_bom/routing_kit_bom_09.png
     :align: center
 
 Kit Consumption set on Kit BoM
@@ -110,7 +110,7 @@ Create a manufactured BoM for the finished product which includes a kit
 component. Set a routing on your BoM, for example, *Assemble
 Furniture*. Precise the consumption of the components on this BoM.
 
-.. image:: media/routing_kit_bom_10.png
+.. image:: routing_kit_bom/routing_kit_bom_10.png
     :align: center
 
 Create a Kit BoM for the Kit Component
@@ -120,7 +120,7 @@ Update the kit component to define its BoM. In this use case, the
 routing which is set on this Kit BoM is different than the one of the
 Finished Product.
 
-.. image:: media/routing_kit_bom_11.png
+.. image:: routing_kit_bom/routing_kit_bom_11.png
     :align: center
 
 Manufacturing Order
@@ -132,14 +132,14 @@ planned, three work orders are created in our case, one coming from the
 routing of the manufactured products, the two other ones coming from the
 routing of the kit BoM.
 
-.. image:: media/routing_kit_bom_08.png
+.. image:: routing_kit_bom/routing_kit_bom_08.png
     :align: center
 
 All the components of the kits are consumed during the first operation.
 The last component is consumed during the second operation.
 
-.. image:: media/routing_kit_bom_12.png
+.. image:: routing_kit_bom/routing_kit_bom_12.png
     :align: center
 
-.. image:: media/routing_kit_bom_13.png
+.. image:: routing_kit_bom/routing_kit_bom_13.png
     :align: center

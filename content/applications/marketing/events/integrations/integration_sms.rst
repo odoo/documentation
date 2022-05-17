@@ -15,7 +15,7 @@ Configuration
   installed, and to enable *Schedule & Tracks* under :menuselection:`Events --> Configuration -->
   Settings`.
 
-.. image:: media/int1.png
+.. image:: integration_sms/int1.png
    :align: center
    :alt: SMS for Events in Odoo Events
 
@@ -31,13 +31,13 @@ Send SMSs to attendees
 | You can choose to confirm each registration with the *Registration* template, and to send a
   reminder shortly before the event takes place with the *Reminder* template.
 
-.. image:: media/int2.png
+.. image:: integration_sms/int2.png
    :align: center
    :alt: SMS for Events in Odoo Events
 
 To make changes in an existing template, click on the external link.
 
-.. image:: media/int3.png
+.. image:: integration_sms/int3.png
    :align: center
    :alt: SMS for Events in Odoo Events
 
@@ -48,7 +48,7 @@ The benefit of the integration with the *SMS Marketing* application is that you 
 target you would like your message to be delivered to. To get started, click on *Contact Track
 Speakers*.
 
-.. image:: media/int4.png
+.. image:: integration_sms/int4.png
    :align: center
    :alt: SMS for Events in Odoo Events
 
@@ -57,7 +57,7 @@ Speakers*.
 | In the example below, the SMS would be sent to the speakers who are in the stage *Proposal* on
   *Event Track*.
 
-.. image:: media/int5.png
+.. image:: integration_sms/int5.png
    :align: center
    :alt: SMS for Events in Odoo Events
 

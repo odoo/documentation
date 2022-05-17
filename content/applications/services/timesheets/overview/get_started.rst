@@ -17,7 +17,7 @@ Choose an encoding unit
    For example: if the interval is set to 30min, a 14min entry shows up in reports as 0min, and
    a 29min entry as 30min.
 
-.. image:: media/get1.png
+.. image:: get_started/get1.png
    :align: center
    :alt: Set the time unit used to record your timesheets in Odoo Timesheets application
 
@@ -36,7 +36,7 @@ Create a task from a SO & timesheet on it
   Odoo automatically creates a task/project (if that was the chosen option) and allows you to
   timesheet on it.
 
-.. image:: media/get2.png
+.. image:: get_started/get2.png
    :align: center
    :alt: Choose the invoicing options under a product form in Odoo Timesheets application
 
@@ -46,7 +46,7 @@ Choose an Invoicing Policy
 Go to :menuselection:`Timesheets --> Configuration --> Settings` and choose if you want the recorded
 time to be directly invoiced, or if it should be approved first.
 
-.. image:: media/get3.png
+.. image:: get_started/get3.png
    :align: center
    :alt: Choose how to invoice the recorded times in Odoo Timesheets application
 
@@ -58,7 +58,7 @@ Send reminders
 | Go to :menuselection:`Timesheets --> Configuration --> Settings` and enable the *Employee
   Reminder* and *Manager Reminder* features.
 
-.. image:: media/get4.png
+.. image:: get_started/get4.png
    :align: center
    :alt: Activate timesheet reminders for managers and employees in Odoo Timesheets application
 

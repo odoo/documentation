@@ -61,7 +61,7 @@ installation. If you cannot find the module after having updated the list of ava
 modules, it means your Odoo source code is not up-to-date; refer to step one of this
 page.
 
-.. image:: ./media/auth_module.png
+.. image:: update/auth_module.png
   :align: center
 
 Once the module is installed, you will need to generate an Authorization Token in Amazon

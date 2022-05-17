@@ -15,7 +15,7 @@ Contact lists
   make the mailing list accessible to your recipients in the unsubscription page (allowing users to
   update their subscription preferences).
 
-.. image:: ./media/sms_marketing9.png
+.. image:: contact_lists_and_blacklist/sms_marketing9.png
    :align: center
 
 History with the Log Notes
@@ -27,7 +27,7 @@ History with the Log Notes
   interactions with your contacts or prospects. Example: your sales representative can easily find
   out which SMS mailing promotions a customer has received or not.
 
-.. image:: ./media/sms_marketing10.png
+.. image:: contact_lists_and_blacklist/sms_marketing10.png
    :align: center
    :height: 300
 
@@ -38,5 +38,5 @@ Blacklist
   blacklisted, you can import those entries to your database.
 | For that, go to :menuselection:`Configuration --> Phone Blacklist --> Import`.
 
-.. image:: ./media/sms_marketing11.png
+.. image:: contact_lists_and_blacklist/sms_marketing11.png
    :align: center

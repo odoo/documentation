@@ -11,7 +11,7 @@ companies.The inter-company feature helps you to buy and/or sell
 products and services between different branches within your
 conglomerate.
 
-.. image:: media/setup01.png
+.. image:: setup/setup01.png
     :align: center
 
 1.  Purchase orders and sales orders can be related. If a company within
@@ -31,12 +31,12 @@ Flag **Manage multiple companies** and then **Manage Inter Company**.
 
 Click on **Apply**.
 
-.. image:: media/setup02.png
+.. image:: setup/setup02.png
     :align: center
 
 New options will appear.
 
-.. image:: media/setup03.png
+.. image:: setup/setup03.png
     :align: center
 
 In the drop-down list, choose the company on which you want to add
@@ -45,7 +45,7 @@ rules.
 If you click on **SO and PO setting for inter company**, you will get
 extra options.
 
-.. image:: media/setup04.png
+.. image:: setup/setup04.png
     :align: center
 
 When you are done, click on **Apply**, then you can repeat the same steps

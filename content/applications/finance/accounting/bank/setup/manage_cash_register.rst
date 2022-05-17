@@ -8,7 +8,7 @@ It calculates the total money in and out, computing the total balance.
 Configuration
 =============
 
-.. image:: ./media/journal.png
+.. image:: manage_cash_register/journal.png
    :align: center
 
 1. Configure the Cash journal in :menuselection:`Accounting --> Configuration --> 
@@ -40,7 +40,7 @@ Put money in is used to placed your cash manually before starting your
 transactions. From the Register Transactions window, go to :menuselection:`More
 --> Put money in`
 
-.. image:: ./media/put-money-in.png
+.. image:: manage_cash_register/put-money-in.png
    :align: center
 
 Take money out
@@ -50,7 +50,7 @@ Take money out is used to collect/get yor your cash manually after
 ending all your transactions. From the Register Transaction windows, go to :menuselection:`More
 --> Take money out`
 
-.. image:: ./media/put-money-out.png
+.. image:: manage_cash_register/put-money-out.png
    :align: center
 
 The transactions will be added to the current cash payment registration.

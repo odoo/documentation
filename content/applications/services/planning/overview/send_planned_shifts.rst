@@ -12,14 +12,14 @@ Publish and send the planned week by email
 Once you have your shifts planned, click on *Send Schedule*. Select *Include Open shift* if
 you would like the *Unassigned* shifts to be seen.
 
-.. image:: media/sp1.png
+.. image:: send_planned_shifts/sp1.png
    :align: center
    :alt: Publish and Send planned shifts in Odoo Planning Application
 
 Choose if you just want to *Publish* or *Publish and Send*. If you *Publish and Send*, employees
 get an email that redirects them to their planned tasks:
 
-.. image:: media/sp2.png
+.. image:: send_planned_shifts/sp2.png
    :alt: Publish and Send planned shifts in Odoo Planning Application
 
 .. note::
@@ -32,11 +32,11 @@ Go to *Configuration* and enable *Allow Unassignment*.
 From now on, when an employee opens his tasks, he can indicate his unavailability clicking
 on *I am unavailable*. The shift will be opened again, allowing someone else to take it.
 
-.. image:: media/sp3.png
+.. image:: send_planned_shifts/sp3.png
    :align: center
    :alt: Allow Unassignment in Odoo Planning Application
 
-.. image:: media/sp4.png
+.. image:: send_planned_shifts/sp4.png
    :align: center
    :alt: Allow Unassignment in Odoo Planning Application
 

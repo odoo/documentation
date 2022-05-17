@@ -17,7 +17,7 @@ one on the fly.
 Note that every first time the product is purchased from a new vendor,
 Odoo will automatically link the contact and price with the product.
 
-.. image:: media/suppliers01.png
+.. image:: suppliers/suppliers01.png
     :align: center
 
 Add price & quantity as well as a validity period
@@ -27,7 +27,7 @@ When you're adding a vendor to a product, you're able to add the vendor
 product name & code as well as set the minimal quantity, price and
 validity period.
 
-.. image:: media/suppliers02.png
+.. image:: suppliers/suppliers02.png
     :align: center
 
 .. tip::

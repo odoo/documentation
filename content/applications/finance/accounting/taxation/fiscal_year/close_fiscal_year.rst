@@ -70,7 +70,7 @@ set under the accounting configuration. This way, the accountant can be
 confident that nobody is changing the previous year transactions
 while auditing the books.
 
-.. image:: media/close_fiscal_year01.png
+.. image:: close_fiscal_year/close_fiscal_year01.png
    :align: center
 
 Closing the fiscal year

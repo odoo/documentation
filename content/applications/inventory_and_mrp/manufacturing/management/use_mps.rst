@@ -11,7 +11,7 @@ Configuration
 Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and activate the Master
 Production Schedule feature before hitting save.
 
-.. image:: media/use_mps_01.png
+.. image:: use_mps/use_mps_01.png
     :align: center
 
 .. tip::
@@ -22,7 +22,7 @@ product. You can now define your safety stock target (= the stock you
 want to have on hand at the end of the period) and the minimum and
 maximum quantities to replenish.
 
-.. image:: media/use_mps_02.png
+.. image:: use_mps/use_mps_02.png
     :align: center
 
 .. tip::
@@ -30,7 +30,7 @@ maximum quantities to replenish.
         rearrange that sequence by going on the list of your products and
         reorganize them with drag and drop.
 
-.. image:: media/use_mps_03.png
+.. image:: use_mps/use_mps_03.png
     :align: center
 
 In the MPS view, you can decide which information you would like to show
@@ -41,7 +41,7 @@ allows you to know what can still be sold during the period (what you
 plan to replenish - what is already sold during the period). You can
 also decide to hide some information if it isn’t necessary.
 
-.. image:: media/use_mps_04.png
+.. image:: use_mps/use_mps_04.png
     :align: center
 
 Estimate your demand and launch replenishment
@@ -53,7 +53,7 @@ time, compare the demand forecast with the actual demand (= confirmed
 sales). The demand forecast for a finished product will impact the
 indirect demand for its components.
 
-.. image:: media/use_mps_05.png
+.. image:: use_mps/use_mps_05.png
     :align: center
 
 Then, the quantity to replenish for the different periods will be
@@ -66,17 +66,17 @@ Depending on the configuration of the product (buy vs. manufacture),
 requests for quotations or manufacturing orders will be created. You can
 easily access those by clicking on the *Actual Replenishment* cell.
 
-.. image:: media/use_mps_06.png
+.. image:: use_mps/use_mps_06.png
     :align: center
 
-.. image:: media/use_mps_07.png
+.. image:: use_mps/use_mps_07.png
     :align: center
 
 In case you manually edit the *To replenish* quantity, a small cross
 will appear on the left. In case you want to go back to the
 automatically computed value given by Odoo, you can click the cross.
 
-.. image:: media/use_mps_08.png
+.. image:: use_mps/use_mps_08.png
     :align: center
 
 Cells color signification
@@ -116,5 +116,5 @@ What if I wrongly added a product to the MPS?
 You can easily remove a product from the MPS by clicking the small bin
 on the right of its name.
 
-.. image:: media/use_mps_09.png
+.. image:: use_mps/use_mps_09.png
     :align: center

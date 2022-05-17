@@ -21,7 +21,7 @@ Accounting onboarding banner
 
 The step-by-step Accounting onboarding banner is composed of four steps:
 
-.. image:: media/setup_accounting_onboarding.png
+.. image:: setup/setup_accounting_onboarding.png
    :align: center
    :alt: Step-by-step onboarding banner in Odoo Accounting
 
@@ -39,7 +39,7 @@ This menu allows you to add your company’s details such as the name, address, 
 number, email address, and Tax ID, or VAT number. These details are then displayed on your documents,
 such as on invoices.
 
-.. image:: media/setup_company.png
+.. image:: setup/setup_company.png
    :align: center
    :alt: Add your company's details in Odoo Accounting and Odoo Invoicing
 
@@ -105,7 +105,7 @@ opening balances.
 Basic settings are displayed on this page to help you review your Chart of Accounts. To access all
 the settings of an account, click on the *double arrow button* at the end of the line.
 
-.. image:: media/setup_chart_of_accounts.png
+.. image:: setup/setup_chart_of_accounts.png
    :align: center
    :alt: Setup of the Chart of Accounts and their opening balances in Odoo Accounting
 
@@ -125,7 +125,7 @@ If you have Odoo Accounting installed on your database, you can reach it by goin
 
 The Invoicing onboarding banner is composed of four main steps:
 
-.. image:: media/setup_invoicing_onboarding.png
+.. image:: setup/setup_invoicing_onboarding.png
    :align: center
    :alt: Step-by-step onboarding banner in Odoo Invoicing
 
@@ -155,7 +155,7 @@ automatically adds the company's phone number, email, website URL, and Tax ID (o
 footer, according to the values you previously configured in the :ref:`Company Data
 <accounting-setup-company>`.
 
-.. image:: media/setup_document_layout.png
+.. image:: setup/setup_document_layout.png
    :align: center
    :alt: Document layout configuration in Odoo Invoicing
 

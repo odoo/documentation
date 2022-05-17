@@ -13,7 +13,7 @@ Configuration --> Settings` and activate the *Order Approval* feature.
 From there you can also set the minimum amount required to activate this
 feature.
 
-.. image:: media/approvals01.png
+.. image:: approvals/approvals01.png
     :align: center
 
 Create a new Request for Quotation
@@ -24,7 +24,7 @@ manager and the amount of the order is above the minimum amount you
 specified, a new *To Approve* status will be introduced in the
 process.
 
-.. image:: media/approvals02.png
+.. image:: approvals/approvals02.png
     :align: center
 
 Approve the order
@@ -36,5 +36,5 @@ control of what your users can or can't do.
 
 Once approved, the purchase order follows the normal process.
 
-.. image:: media/approvals03.png
+.. image:: approvals/approvals03.png
     :align: center

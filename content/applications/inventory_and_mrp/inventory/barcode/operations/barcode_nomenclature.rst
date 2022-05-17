@@ -20,14 +20,14 @@ To do so, go to :menuselection:`Inventory --> Configuration --> Barcode Nomencla
 You can create a barcode nomenclature from there, and then add a line to
 create your first rule.
 
-.. image:: media/barcode_nomenclature_01.png
+.. image:: barcode_nomenclature/barcode_nomenclature_01.png
     :align: center
 
 The first step is to specify the **rule name**, for example Weight
 Barcode with 3 Decimals. You then have to specify the type for barcode
 nomenclature, in our case it will be Weighted Product.
 
-.. image:: media/barcode_nomenclature_02.png
+.. image:: barcode_nomenclature/barcode_nomenclature_02.png
     :align: center
 
 The Barcode Pattern is a regular expression that defines the structure
@@ -53,7 +53,7 @@ Configure your Product
 3. The barcode should contain 0’s where you did defined D’s or N’s. In our case we need to set 5 zeros because we configured “21…..{NNDDD}”;
 4. In EAN-13, the last number is a check number, use an EAN13 generator to know which digit it should be in your case.
 
-.. image:: media/barcode_nomenclature_03.png
+.. image:: barcode_nomenclature/barcode_nomenclature_03.png
     :align: center
 
 In case you weight 1,5 Kg of pasta, the balance will print you the
@@ -63,7 +63,7 @@ automatically create a new line for the Pasta product for a quantity of
 1.5 Kg. For the point of sale, a price depending on the quantity will
 also be computed.
 
-.. image:: media/barcode_nomenclature_04.png
+.. image:: barcode_nomenclature/barcode_nomenclature_04.png
     :align: center
 
 Rule Types

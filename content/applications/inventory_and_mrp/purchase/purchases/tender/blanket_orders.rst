@@ -13,7 +13,7 @@ For this feature to work, go to :menuselection:`Purchases -->
 Configuration --> Settings` and activate the *Purchase Agreements*
 feature
 
-.. image:: media/blanket_orders01.png
+.. image:: blanket_orders/blanket_orders01.png
     :align: center
 
 Start a Blanket Order
@@ -24,7 +24,7 @@ To use this feature go to :menuselection:`Purchases --> Purchase Agreements`.
 Once you are creating the purchase agreement, access the *Agreement
 Type* drop down menu and select *Blanket Order*.
 
-.. image:: media/blanket_orders02.png
+.. image:: blanket_orders/blanket_orders02.png
     :align: center
 
 You can then create your new blanket order, select your vendor, the
@@ -34,7 +34,7 @@ When you are satisfied with your purchase agreement, confirm it. Its
 status will change from*Draft* to *Ongoing* and a new
 *RFQs/Orders* will appear in the top right corner of the document.
 
-.. image:: media/blanket_orders03.png
+.. image:: blanket_orders/blanket_orders03.png
     :align: center
 
 RFQ from the Blanket Order
@@ -58,7 +58,7 @@ name.
 Thanks to this, a blanket order can be used for automated replenishment
 (using *reordering rules* or *made to order* configuration).
 
-.. image:: media/blanket_orders04.png
+.. image:: blanket_orders/blanket_orders04.png
     :align: center
 
 .. tip::

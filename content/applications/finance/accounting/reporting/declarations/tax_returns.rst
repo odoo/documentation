@@ -31,7 +31,7 @@ and go to the **Tax Return Periodicity** section.
 - **Reminder**: define when Odoo should remind you to file your tax return.
 - **Journal**: select the journal in which to record the tax return.
 
-.. image:: media/tax_return_periodicity.png
+.. image:: tax_returns/tax_return_periodicity.png
    :align: center
    :alt: Configure how often tax returns have to be made in Odoo Accounting
 
@@ -46,7 +46,7 @@ Odoo generates Tax Reports based on the **Tax Grids** settings that are configur
 Therefore, it is crucial to make sure that all the recorded transactions use the right taxes. You
 can see on each Journal Item which Tax Grid is used for that transaction.
 
-.. image:: media/tax_return_grids.png
+.. image:: tax_returns/tax_return_grids.png
    :align: center
    :alt: see which tax grids are used to record transactions in Odoo Accounting
 
@@ -54,7 +54,7 @@ To configure your taxes' Tax Grids, go to :menuselection:`Accounting --> Configu
 and open the tax you want to modify. There, you can edit your tax settings, along with the tax
 grids that are used to record invoices or credit notes.
 
-.. image:: media/tax_return_taxes.png
+.. image:: tax_returns/tax_return_taxes.png
    :align: center
    :alt: Configure taxes and their tax grids in Odoo Accounting
 
@@ -83,7 +83,7 @@ Entry, which helps you avoid some tax declaration errors.
 To check the current **Tax Lock Date**, or to edit it, go to :menuselection:`Accounting -->
 Accounting --> Lock Dates`.
 
-.. image:: media/tax_return_lock.png
+.. image:: tax_returns/tax_return_lock.png
    :align: center
    :alt: Lock your tax for a specific period in Odoo Acounting
 
@@ -99,7 +99,7 @@ on *TAX Report* from your *Accounting Overview*.
 Make sure to select the right period you want to declare by using the date filter. You can see an
 overview of your tax report. Then, click on the button *Closing Journal Entry*.
 
-.. image:: media/tax_return_closing.png
+.. image:: tax_returns/tax_return_closing.png
    :align: center
    :alt: Select the period for the tax return and create a closing journal entry in Odoo Accounting
 
@@ -108,7 +108,7 @@ Odoo automatically creates a PDF file with the **Tax Report** that you can downl
 and preview on the right column. It includes all the values to report to the tax authorities, along
 with the amount you have to pay or be refunded.
 
-.. image:: media/tax_return_report.png
+.. image:: tax_returns/tax_return_report.png
    :align: center
    :alt: download the PDF with your Tax Report in Odoo Accounting
 

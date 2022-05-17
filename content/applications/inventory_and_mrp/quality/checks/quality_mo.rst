@@ -20,7 +20,7 @@ To create a quality control point, open the quality app and go to
 *Manufacturing* as operation and choose the type of quality check you
 want to perform.
 
-.. image:: media/quality_mo_01.png
+.. image:: quality_mo/quality_mo_01.png
    :align: center
 
 Process the Quality Check
@@ -30,16 +30,16 @@ Once your *Quality Control Point* has been created, you can create a
 manufacturing order for your product. Now, and before marking the
 manufacturing as done, you can register the *Quality Checks*.
 
-.. image:: media/quality_mo_02.png
+.. image:: quality_mo/quality_mo_02.png
    :align: center
 
-.. image:: media/quality_mo_03.png
+.. image:: quality_mo/quality_mo_03.png
    :align: center
 
 Once you have performed your quality checks, you can find them via the
 *Quality Checks* button available on the manufacturing order form.
 
-.. image:: media/quality_mo_04.png
+.. image:: quality_mo/quality_mo_04.png
    :align: center
 
 .. note::
@@ -57,7 +57,7 @@ app and go to :menuselection:`Control --> Control Points`. Then, click on create
 sure to select *Manufacturing* as operation and select the work order
 operation on which the quality check should be performed.
 
-.. image:: media/quality_mo_05.png
+.. image:: quality_mo/quality_mo_05.png
    :align: center
 
 .. note::
@@ -72,12 +72,12 @@ Once your *Quality Control Point* has been configured, create a
 manufacturing order for your product. You have to plan it if you want to
 generate the necessary work orders.
 
-.. image:: media/quality_mo_06.png
+.. image:: quality_mo/quality_mo_06.png
    :align: center
 
 Now, process the work order and your quality check will appear. In this
 example, the quality check requests to enter the serial number of the
 Table Top component.
 
-.. image:: media/quality_mo_07.png
+.. image:: quality_mo/quality_mo_07.png
    :align: center

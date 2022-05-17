@@ -9,13 +9,13 @@ Enable the feature
 Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams --> Edit` and enable
 :menuselection:`Onsite Interventions --> Save`.
 
-.. image:: media/po1.png
+.. image:: plan_onsite/po1.png
    :align: center
    :height: 400
    :alt: Tasks from tickets in Odoo Field Service
 
 Now once your helpdesk team needs, they have the option to *Plan Intervention* from tickets.
 
-.. image:: media/po2.png
+.. image:: plan_onsite/po2.png
    :align: center
    :alt: Tasks from tickets in Odoo Field Service

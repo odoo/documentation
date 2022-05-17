@@ -13,7 +13,7 @@ those days in your Gantt view.
 It also adapts to the working calendar of the employee. Example: the employee works part-time
 (from Monday to Wednesday). So, Thursday and Friday will also be greyed, in addition to the weekends.
 
-.. image:: media/mw1.png
+.. image:: manage_employees_schedule/mw1.png
    :alt: Employees' Time off in Odoo Field Service
 
 Easily manage employees’ schedules
@@ -21,7 +21,7 @@ Easily manage employees’ schedules
 From the Gantt view (under *Planning by User, Project or Worksheet*), click on the plus sign to add
 a new task or on the magnifying glass to plan an existing one.
 
-.. image:: media/mw2.png
+.. image:: manage_employees_schedule/mw2.png
    :align: center
    :alt: Manage employees' schedules in Odoo Field Service
 
@@ -31,7 +31,7 @@ If you need to plan an intervention but you do not know yet who will take care o
 the task unassigned. It will still be shown in the Gantt view. Simply drag and drop the responsible
 person he can be assigned.
 
-.. image:: media/mw3.png
+.. image:: manage_employees_schedule/mw3.png
    :align: center
    :alt: Unassigned tasks in Odoo Field Service
 

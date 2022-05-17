@@ -17,7 +17,7 @@ With the CRM app installed, you benefit from a ready-to-use contact form
 on your Odoo website that will generate leads/opportunities
 automatically.
 
-.. image:: media/generate_from_website03.png
+.. image:: generate_from_website/generate_from_website03.png
    :align: center
 
 To change to a specific sales channel, go to :menuselection:`Website
@@ -25,7 +25,7 @@ To change to a specific sales channel, go to :menuselection:`Website
 Contact Form info and where to change the *Sales Channel* or
 *Salesperson*.
 
-.. image:: media/generate_from_website04.png
+.. image:: generate_from_website/generate_from_website04.png
    :align: center
 
 Create a custom contact form
@@ -43,7 +43,7 @@ Configuration
 You will need to install the free *Form Builder* module, only
 available in Odoo Enterprise.
 
-.. image:: media/generate_from_website05.png
+.. image:: generate_from_website/generate_from_website05.png
    :align: center
 
 Create a custom contact form
@@ -53,7 +53,7 @@ First, go to the page where you want to put your contact form. In edit mode, dra
 the form builder onto the page, and you will be able to add all the fields
 you wish.
 
-.. image:: media/generate_from_website06.png
+.. image:: generate_from_website/generate_from_website06.png
    :align: center
 
 By default, any new contact form will send an email. You can switch to
@@ -70,9 +70,9 @@ When using a contact form, you should use a qualification step
 before assigning the form to the right sales people. To do so, activate *Leads*
 in CRM settings and refer to :doc:`convert`.
 
-.. |image0| image:: ./media/generate_from_website01.png
+.. |image0| image:: generate_from_website/generate_from_website01.png
    :width: 1.04401in
    :height: 1.16146in
-.. |image1| image:: ./media/generate_from_website02.png
+.. |image1| image:: generate_from_website/generate_from_website02.png
    :width: 1.43229in
    :height: 1.16244in

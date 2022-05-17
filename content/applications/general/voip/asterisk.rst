@@ -204,7 +204,7 @@ Configure Odoo VOIP
 In Odoo, the configuration should be done in the user's preferences.
 
 
-.. image:: media/voip_config01.png
+.. image:: asterisk/voip_config01.png
   :align: center
 
 - The SIP Login/Browser's Extension is the number you configured previously in the sip.conf file (in our example: 1060). 
@@ -216,7 +216,7 @@ In Odoo, the configuration should be done in the user's preferences.
 
 The configuration should also be done in the General Settings under the "Integrations" section. 
 
-.. image:: media/onsip02.png
+.. image:: onsip/onsip02.png
   :align: center
 
 - The PBX Server IP should be the same as the IP you define in the http.conf file.

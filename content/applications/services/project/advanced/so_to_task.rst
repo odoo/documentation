@@ -22,7 +22,7 @@ Product set up
 | - *Create a new project but no task*: only creates a new project, for each time that service is
    sold, based on the skeleton of the project template chosen.
 
-.. image:: media/sales_invoicing.png
+.. image:: so_to_task/sales_invoicing.png
    :align: center
    :alt: Choose the invoicing options on a product form under the sales tab in Odoo Project
 
@@ -32,7 +32,7 @@ Confirm a quotation and have a project/task created
 Now, once a *Quotation* is confirmed and transformed into a *Sales Order*, a project or task
 is automatically created.
 
-.. image:: media/confirm_quotation.png
+.. image:: so_to_task/confirm_quotation.png
    :align: center
    :alt: Click on confirm in a quotation and have a task or project created for Odoo Project
 
@@ -42,7 +42,7 @@ Access the task generated from Project
 On the *Project* application, your new project and/or task (depending on the previous *Service
 Tracking* options chosen), is shown:
 
-.. image:: media/access_tasks.png
+.. image:: so_to_task/access_tasks.png
    :align: center
    :height: 250
    :alt: Click on tasks in the dashboard view to access them in Odoo Project
@@ -52,13 +52,13 @@ Record the time spent and create an invoice
 
 From *Project*, access your task and document the time spent under the *Timesheets* tab.
 
-.. image:: media/record_time.png
+.. image:: so_to_task/record_time.png
    :align: center
    :alt: Access the task and under the tab timesheet record the time spent in Odoo Project
 
 Once the task is complete, click on *Sales Order* and *Create Invoice*.
 
-.. image:: media/sales_order.png
+.. image:: so_to_task/sales_order.png
    :align: center
    :alt: Click on sales order in the task once it is complete in Odoo Project
 

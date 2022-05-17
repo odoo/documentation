@@ -25,7 +25,7 @@ App Developer:
 Overview
 ========
 
-.. figure:: images/players.png
+.. figure:: iap/players.png
     :align: center
 
     The Players
@@ -40,7 +40,7 @@ Overview
       bridge/translator between an Odoo system and the actual service.
 
 
-.. figure:: images/credits.jpg
+.. figure:: iap/credits.jpg
     :align: center
 
     The Credits
@@ -67,7 +67,7 @@ Overview
 .. note:: In the following explanations we will ignore the External Service,
           they are just a detail of the service you provide.
 
-.. figure:: images/normal.png
+.. figure:: iap/normal.png
     :align: center
 
     'Normal' service flow
@@ -87,7 +87,7 @@ Overview
        been rendered, possibly (depending on the service) displaying or
        storing its results in the client's system.
 
-.. figure:: images/no-credit.png
+.. figure:: iap/no-credit.png
     :align: center
 
     Insufficient credits
@@ -174,16 +174,16 @@ The service has *seven* important fields:
   how you **use it, its relevance** to make your service work and inform the
   client on how they can **access, update or delete their personal information**.
 
-.. image:: images/menu.png
+.. image:: iap/menu.png
     :align: center
 
-.. image:: images/service_list.png
+.. image:: iap/service_list.png
     :align: center
 
-.. image:: images/creating_service.png
+.. image:: iap/creating_service.png
     :align: center
 
-.. image:: images/service_created.png
+.. image:: iap/service_created.png
     :align: center
 
 You can then create *credit packs* which clients can purchase in order to
@@ -214,7 +214,7 @@ A credit pack is essentially a product with five characteristics:
     pack to another.
 
 
-.. image:: images/package.png
+.. image:: iap/package.png
     :align: center
 
 .. _iap-odoo-app:
@@ -283,7 +283,7 @@ local value via your application and additional parts via a remote service.
         </record>
     </odoo>
 
-.. image:: images/button.png
+.. image:: iap/button.png
     :align: center
 
 We can now implement the action method/callback. This will *call our own
@@ -512,7 +512,7 @@ parameters we can use to make things clearer to the end-user.
 JSON-RPC2_ Transaction API
 ==========================
 
-.. image:: images/flow.png
+.. image:: iap/flow.png
     :align: center
 
 * The IAP transaction API does not require using Odoo when implementing your

@@ -933,7 +933,7 @@ Odoo provides three different mechanisms to extend models in a modular way:
   version
 * delegating some of the model's fields to records it contains
 
-.. image:: ../../images/inheritance_methods.png
+.. image:: orm/inheritance_methods.png
     :align: center
 
 Classical inheritance

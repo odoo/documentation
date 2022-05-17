@@ -14,7 +14,7 @@ To create a new *Sales Channel*, go to :menuselection:`Configuration --> Sales C
 There you can set an email alias to it. Every message sent to that email
 address will create a lead/opportunity.
 
-.. image:: media/multi_sales_team01.png
+.. image:: multi_sales_team/multi_sales_team01.png
     :align: center
 
 Add members to your sales channel
@@ -27,13 +27,13 @@ Therefore, you can only be a member of one channel.
 
 This will ease the process review of the team manager.
 
-.. image:: media/multi_sales_team02.png
+.. image:: multi_sales_team/multi_sales_team02.png
     :align: center
 
 If you now filter on this specific channel in your pipeline, you will
 find all of its opportunities.
 
-.. image:: media/multi_sales_team03.png
+.. image:: multi_sales_team/multi_sales_team03.png
     :align: center
 
 Sales channel dashboard

@@ -20,14 +20,14 @@ Unbuild Order
 While in the Manufacturing App, under the *Operations* tab you will
 find the menu *Unbuild Orders*.
 
-.. image:: media/unbuild01.png
+.. image:: unbuild/unbuild01.png
     :align: center
 
 When creating a new one, you can either select a MO if you are
 unbuilding something you manufactured or only select a product if you
 are unbuilding something you received.
 
-.. image:: media/unbuild02.png
+.. image:: unbuild/unbuild02.png
     :align: center
 
 When you are done, just click unbuild and the process will be over.

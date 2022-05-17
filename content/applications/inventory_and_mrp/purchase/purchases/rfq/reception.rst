@@ -20,7 +20,7 @@ Start by installing the Purchase application from the **Apps** module.
 This will automatically trigger the installation of the **Inventory** app
 (among others), which is required with **Purchase**.
 
-.. image:: media/reception02.png
+.. image:: reception/reception02.png
     :align: center
 
 Create products
@@ -30,7 +30,7 @@ Then, you need to create the products you want to purchase. Go to the
 **Purchase** app, then :menuselection:`Purchase --> Products`, 
 and click on **Create**.
 
-.. image:: media/reception05.png
+.. image:: reception/reception05.png
     :align: center
 
 When creating the product, the **Product Type** field is important:
@@ -60,7 +60,7 @@ reference in the **Vendor Reference** field. This will allow you to easily
 do the matching with the delivery order later on (as the delivery order
 will probably include the **Vendor Reference** of his sale order).
 
-.. image:: media/reception03.png
+.. image:: reception/reception03.png
     :align: center
 
 Receive Products
@@ -71,13 +71,13 @@ can receive the products from the **Inventory** application. From the
 **Inventory** dashboard, you should see a button **X To Receive**, on the
 receipt box of the related warehouse.
 
-.. image:: media/reception01.png
+.. image:: reception/reception01.png
     :align: center
 
 Click on this button and you access a list of all awaiting orders for
 this warehouse.
 
-.. image:: media/reception07.png
+.. image:: reception/reception07.png
     :align: center
 
 If you have a lot of awaiting orders, you can use the filter bar to
@@ -86,7 +86,7 @@ source document, which is the reference of your purchase order. You can
 open the document that matches with the received delivery order and
 process all the lines within it.
 
-.. image:: media/reception04.png
+.. image:: reception/reception04.png
     :align: center
 
 You may validate the whole document at once by clicking on the
@@ -104,7 +104,7 @@ When you validate the reception, if you have received less products than
 the initial demand, Odoo will ask youthe permission to create a
 backorder.
 
-.. image:: media/reception06.png
+.. image:: reception/reception06.png
     :align: center
 
 If you plan to receive the remaining product in the future, select

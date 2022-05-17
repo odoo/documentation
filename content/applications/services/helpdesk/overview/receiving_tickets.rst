@@ -13,7 +13,7 @@ Channels options to submit tickets
 Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`, and enable the following
 features as you want them to be available to your users.
 
-.. image:: media/channels_options.png
+.. image:: receiving_tickets/channels_options.png
    :align: center
    :alt: View of a helpdesk teams setting page emphasizing the channels options in Odoo Helpdesk
 
@@ -25,7 +25,7 @@ Email Alias
 | Select *Configure domain name* to be redirected to *Settings* and, from there, enable *External
   Email Servers* to determine or change your *Alias Domain*.
 
-.. image:: media/channels_emailalias.png
+.. image:: receiving_tickets/channels_emailalias.png
    :align: center
    :height: 250
    :alt: View of the settings page of a helpdesk team emphasizing the email alias feature
@@ -41,14 +41,14 @@ Website Form
 | Allow your customers to submit a ticket by filling in a form through your website.
 | Once the feature is activated, get redirected to your website by clicking on *Go to Website*.
 
-.. image:: media/go_to_website.png
+.. image:: receiving_tickets/go_to_website.png
    :align: center
    :alt: View of the settings page of a helpdesk team emphasizing the Go to Website button in
          Odoo Helpdesk
 
 From the website page customize the form as you like. Then, publish it by clicking on *Unpublished*.
 
-.. image:: media/submit_a_ticket_form.png
+.. image:: receiving_tickets/submit_a_ticket_form.png
    :align: center
    :alt: View of the website form to submit a ticket for Odoo Helpdesk
 
@@ -60,7 +60,7 @@ Live Chat
 | Click on your helpdesk team's name - for the example below: *Customer Care* -
   and :doc:`set up your channel </applications/websites/livechat/overview/get_started>`.
 
-.. image:: media/live_chat.png
+.. image:: receiving_tickets/live_chat.png
    :align: center
    :alt: View of the settings page of a helpdesk team emphasizing the live chat features and links
          in Odoo Helpdesk
@@ -78,7 +78,7 @@ the Kanban view.
 - 2 stars = *High priority*
 - 3 stars = *Urgent*
 
-.. image:: media/kanban_view_prioritize.png
+.. image:: receiving_tickets/kanban_view_prioritize.png
    :align: center
    :height: 330
    :alt: View of a team’s kanban view and the prioritized tasks in Odoo Helpdesk

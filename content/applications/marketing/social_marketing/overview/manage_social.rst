@@ -13,7 +13,7 @@ Add accounts and create your feed
 
 Click on *Add Stream* and grant the required permissions to add your accounts.
 
-.. image:: media/add_streams.png
+.. image:: manage_social/add_streams.png
    :align: center
    :alt: Click on add streams to add accounts in Odoo Social Marketing
 
@@ -24,14 +24,14 @@ Click on *Add Stream* and grant the required permissions to add your accounts.
 | You can then add new accounts and/or streams, such as Facebook mentions, and customize your
   Kanban view.
 
-.. image:: media/feed.png
+.. image:: manage_social/feed.png
    :align: center
    :alt: See all streams in the feed in Odoo Social Marketing
 
 Adding social media accounts to your feed will also link KPIs. To get redirected to the statistics
 page of the social account, click on *Insights*.
 
-.. image:: media/insights.png
+.. image:: manage_social/insights.png
    :align: center
    :alt: Click on insights to be redirected to the social account from Odoo Social Marketing
 
@@ -40,7 +40,7 @@ Link a LinkedIn account
 
 Go to :menuselection:`Social Marketing --> Configuration --> Social Media`.
 
-.. image:: media/add_linkedin.png
+.. image:: manage_social/add_linkedin.png
    :align: center
    :alt: Go to configuration to link a linkedin account in Odoo Social Marketing
 
@@ -53,7 +53,7 @@ Publish content
 Click on :menuselection:`Social Marketing --> Feed --> New Post`, or go to
 :menuselection:`Social Marketing --> Posts → Create`.
 
-.. image:: media/publish_content.png
+.. image:: manage_social/publish_content.png
    :align: center
    :alt: Click on create or new post to create and publish content in Odoo Social Marketing
 
@@ -69,7 +69,7 @@ Overview and plan your posts with a calendar view
 | Double-click on a date to create a post directly from the *Calendar view*, and click on an
   existing one to edit it.
 
-.. image:: media/calendar_view.png
+.. image:: manage_social/calendar_view.png
    :align: center
    :alt: Click on the calendar view option in Odoo Social Marketing
 

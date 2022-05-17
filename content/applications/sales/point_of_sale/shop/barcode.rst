@@ -14,7 +14,7 @@ Configuration --> Point of sale` and select your PoS interface.
 Under the IoT Box / Hardware category, you will find *Barcode Scanner*
 select it.
 
-.. image:: media/barcode01.png
+.. image:: barcode/barcode01.png
     :align: center
 
 Add barcodes to product
@@ -26,7 +26,7 @@ select a product.
 Under the general information tab, you can find a barcode field where
 you can input any barcode.
 
-.. image:: media/barcode02.png
+.. image:: barcode/barcode02.png
     :align: center
 
 Scanning products

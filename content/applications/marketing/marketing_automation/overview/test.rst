@@ -12,7 +12,7 @@ Launch a test
   *Run* and *Stop* activities individually. To stop the whole workflow click on *Stop*.
 
 
-.. image:: media/test1.png
+.. image:: test/test1.png
    :align: center
    :height: 350
    :alt: Create workflows in Odoo Marketing Automation
@@ -29,7 +29,7 @@ Click on *Start* to run the workflow, and on *Stop* to interrupt it. The interru
 can happen at any moment. The current status will be shown on the status bar.
 
 
-.. image:: media/test2.png
+.. image:: test/test2.png
    :align: center
    :alt: Create workflows in Odoo Marketing Automation
 
@@ -39,7 +39,7 @@ Participants and their specific workflow
 *Participants* are all the records that have ever been involved in the campaign.
 
 
-.. image:: media/test3.png
+.. image:: test/test3.png
    :align: center
    :alt: Create workflows in Odoo Marketing Automation
 

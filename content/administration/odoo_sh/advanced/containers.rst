@@ -232,6 +232,6 @@ Save the file and then run the Odoo Shell:
 Finally, *via* the Odoo Shell, you can trigger the piece of code/function/method
 you want to debug.
 
-.. image:: ./media/pdb_sh.png
+.. image:: containers/pdb_sh.png
     :align: center
     :alt: Console screenshot showing ``pdb`` running in an Odoo.sh shell.
