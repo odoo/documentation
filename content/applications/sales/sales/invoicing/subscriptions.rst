@@ -15,5 +15,5 @@ When you confirm the sale the subscription will be created
 automatically. You will see a direct link from the sales order to the
 Subscription in the upper right corner.
 
-.. image:: media/subscriptions01.png
+.. image:: subscriptions/subscriptions01.png
     :align: center

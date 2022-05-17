@@ -16,5 +16,5 @@ manage several sales teams with specific business processes. You will
 find the configuration of sales teams under
 :menuselection:`Configuration --> Sales Teams`.
 
-.. image:: media/generate_from_email01.png
+.. image:: generate_from_email/generate_from_email01.png
     :align: center

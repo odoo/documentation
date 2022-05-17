@@ -13,7 +13,7 @@ Add followers to a project
 | Followers are notified of any changes: tasks sliding from one stage to another, conversations
   taking place, etc.
 
-.. image:: media/add_followers.png
+.. image:: collaborate/add_followers.png
    :align: center
    :alt: Click on the follower icon to add followers to a project in Odoo Project
 
@@ -26,7 +26,7 @@ Add followers to a task
 Within a task, click on the *Followers* icon. Followers get notified of any changes in the task
 and can see the task like you do, with the description and the chatter.
 
-.. image:: media/follower_task.png
+.. image:: collaborate/follower_task.png
    :align: center
    :alt: Click on the follower icon to add followers to a task in Odoo Project
 
@@ -36,7 +36,7 @@ Select which notifications to get
 For a project or task, select what you would like to be notified about. For that, *Edit
 subscription*.
 
-.. image:: media/select_notif.png
+.. image:: collaborate/select_notif.png
    :align: center
    :alt: Click on the follower icon, then on edit subscription in Odoo Project
 
@@ -50,7 +50,7 @@ Use the pad like a collaborative note
   collaborative note. Every user has his own color and you can replay the whole creation
   of the content.
 
-.. image:: media/pad_collaborative.png
+.. image:: collaborate/pad_collaborative.png
    :align: center
    :alt: View of the collaborative pad in Odoo Project
 
@@ -69,7 +69,7 @@ The Chatter
 | You can also ping a channel using the hashtag sign (*#*). This way, users can have a channel per
   project team, for example.
 
-.. image:: media/the_chatter.png
+.. image:: collaborate/the_chatter.png
  	:align: center
 	:alt: Overview of the chatter in Odoo Project
 
@@ -79,7 +79,7 @@ Schedule activities
 Do not forget promises made and stay organized by conveniently *Scheduling activities* from the
 chatter.
 
-.. image:: media/schedule_activities.png
+.. image:: collaborate/schedule_activities.png
  	:align: center
 	:alt: Click on schedule activity and choose the activity to be scheduled in Odoo Project
 
@@ -88,6 +88,6 @@ Edit or create new activities types
 
 Go to :menuselection:`Project --> Configuration --> Activity Types`.
 
-.. image:: media/activity_type.png
+.. image:: collaborate/activity_type.png
  	:align: center
 	:alt: Overview of the activity types form in Odoo Project

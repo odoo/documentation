@@ -29,20 +29,20 @@ don't install anything, and follow the next step.
 Now go to your website. On the bottom right corner of the page, click on
 **Add a language**.
 
-.. image:: media/translate_website01.png
+.. image:: translate/translate_website01.png
     :align: center
 
 Choose the language in which you want to translate your website and then
 click on **Load.**
 
-.. image:: media/translate_website02.png
+.. image:: translate/translate_website02.png
     :align: center
 
 You will see that Now, next to English there is also French, which means
 that the page for the translation has been created. You can also see
 that some of the text has been translated automatically.
 
-.. image:: media/translate_website03.png
+.. image:: translate/translate_website03.png
     :align: center
 
 To translate the content of the website, click on **Translate** (here
@@ -58,7 +58,7 @@ key.
 
 The content you wish to translate will then be translated automatically.
 
-.. image:: media/translate_website04.png
+.. image:: translate/translate_website04.png
     :align: center
 
 Now you can see that most of the content is highlighted in yellow or
@@ -66,5 +66,5 @@ in green. The yellow represents the content that you have to translate by
 yourself. The green represents the content that has already been translated
 automatically.
 
-.. image:: media/translate_website05.png
+.. image:: translate/translate_website05.png
     :align: center

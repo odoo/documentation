@@ -13,7 +13,7 @@ For this feature to work, go to :menuselection:`Purchases -->
 Configuration --> Settings` and select which way you want to control your
 bills.
 
-.. image:: media/bills01.png
+.. image:: bills/bills01.png
     :align: center
 
 Change the control policy
@@ -26,7 +26,7 @@ product page under the *Purchase* tab.
 You might want to use different settings for different types of
 products.
 
-.. image:: media/bills02.png
+.. image:: bills/bills02.png
     :align: center
 
 
@@ -36,7 +36,7 @@ Verify your Vendor Bill
 If you didn’t receive any of your product yet on *Purchase Order*
 under the *Shipment* tab,
 
-.. image:: media/bills03.png
+.. image:: bills/bills03.png
     :align: center
 
 
@@ -45,6 +45,6 @@ billed based on ordered quantity, Odoo will suggest a bill for the
 number of units ordered. If you're supposed to be billed based on the
 received quantities, Odoo will suggest a bill for 0 as shown above.
 
-.. image:: media/bills04.png
+.. image:: bills/bills04.png
     :align: center
 

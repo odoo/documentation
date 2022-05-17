@@ -26,7 +26,7 @@ requires the next modules:
 Workflow
 ========
 
-.. image:: media/colombia01.png
+.. image:: colombia/colombia01.png
    :align: center
 
 
@@ -39,7 +39,7 @@ Install the Colombian localization modules
 To :ref:`install <general/install>` the modules, go to :menuselection:`Apps`, remove the *Apps*
 filter and search for "Colombia". Then click on *Install* for the first two modules.
 
-.. image:: media/colombia02.png
+.. image:: colombia/colombia02.png
    :align: center
 
 
@@ -53,7 +53,7 @@ and credentials, this information will be provided by Carvajal T&S.
 Go to :menuselection:`Accounting --> Configuration --> Settings` and
 look for the *Colombian Electronic Invoice* section.
 
-.. image:: media/colombia03.png
+.. image:: colombia/colombia03.png
    :align: center
 
 Using the Testing mode it is possible to connect with a Carvajal T&S
@@ -75,7 +75,7 @@ the PDF.
 Go to :menuselection:`Accounting --> Configuration --> Settings` and
 look for the *Colombian Electronic Invoice* section.
 
-.. image:: media/colombia04.png
+.. image:: colombia/colombia04.png
    :align: center
 
 
@@ -92,7 +92,7 @@ As part of the Colombian Localization, the document types defined by
 the DIAN are now available on the Partner form. Colombian partners
 have to have their identification number and document type set:
 
-.. image:: media/colombia05.png
+.. image:: colombia/colombia05.png
    :align: center
 
 .. tip:: When the document type is RUT the identification number needs
@@ -111,7 +111,7 @@ part of the information required by the DIAN .
 These fields can be found in :menuselection:`Partner --> Sales &
 Purchase Tab --> Fiscal Information`
 
-.. image:: media/colombia06.png
+.. image:: colombia/colombia06.png
    :align: center
 
 Additionally two booleans fields were added in order to specify the
@@ -125,14 +125,14 @@ If your sales transactions include products with taxes, it's important
 to consider that an extra field *Value Type* needs to be configured
 per tax. This option is located in the Advanced Options tab.
 
-.. image:: media/colombia07.png
+.. image:: colombia/colombia07.png
    :align: center
 
 Retention tax types (ICA, IVA, Fuente) are also included in the
 options to configure your taxes. This configuration is used in order
 to correctly display taxes in the invoice PDF.
 
-.. image:: media/colombia08.png
+.. image:: colombia/colombia08.png
    :align: center
 
 
@@ -145,13 +145,13 @@ invoice documents need to be updated in Odoo.  The sequence can be
 accessed using the :ref:`developer mode <developer-mode>`: :menuselection:`Accounting -->
 Settings --> Configuration Setting --> Journals`.
 
-.. image:: media/colombia09.png
+.. image:: colombia/colombia09.png
    :align: center
 
 Once that the sequence is opened, the Prefix and Next Number fields
 should be configured and synchronized with the CEN Financiero.
 
-.. image:: media/colombia10.png
+.. image:: colombia/colombia10.png
    :align: center
 
 
@@ -162,7 +162,7 @@ The default template that is used by Odoo on the invoice PDF includes
 the job position of the salesperson, so these fields should be
 configured:
 
-.. image:: media/colombia11.png
+.. image:: colombia/colombia11.png
    :align: center
 
 
@@ -183,7 +183,7 @@ The functional workflow that takes place before an invoice validation
 doesn't change. The main changes that are introduced with the
 electronic invoice are the next fields:
 
-.. image:: media/colombia12.png
+.. image:: colombia/colombia12.png
    :align: center
 
 There are three types of documents:
@@ -205,7 +205,7 @@ Invoice validation
 After the invoice is validated an XML file is created and sent
 automatically to Carvajal, this file is displayed in the chatter.
 
-.. image:: media/colombia13.png
+.. image:: colombia/colombia13.png
    :align: center
 
 An extra field is now displayed in "Other Info" tab with the name of
@@ -213,7 +213,7 @@ the XML file. Additionally there is a second extra field that is
 displayed with the Electronic Invoice status, with the initial value
 "In progress":
 
-.. image:: media/colombia14.png
+.. image:: colombia/colombia14.png
    :align: center
 
 
@@ -233,9 +233,9 @@ After this:
 - A ZIP containing the legal XML and the PDF is downloaded and
   displayed in the invoice chatter:
 
-  .. image:: media/colombia15.png
+  .. image:: colombia/colombia15.png
 
-  .. image:: media/colombia16.png
+  .. image:: colombia/colombia16.png
 
 - The Electronic Invoice status changes to "Accepted"
 
@@ -247,17 +247,17 @@ During the XML validation the most common errors are usually related
 to missing master data. In such cases, error messages are shown in the
 chatter after updating the electronic invoice status.
 
-.. image:: media/colombia17.png
+.. image:: colombia/colombia17.png
    :align: center
 
 After the master data is corrected, it's possible to reprocess the XML
 with the new data and send the updated version, using the following
 button:
 
-.. image:: media/colombia18.png
+.. image:: colombia/colombia18.png
    :align: center
 
-.. image:: media/colombia19.png
+.. image:: colombia/colombia19.png
    :align: center
 
 

@@ -22,7 +22,7 @@ time, they are listed as follows :
 When browsing your Chart of Accounts, you can filter the accounts by number, in the left column, and
 also group them by Account Type.
 
-.. image:: media/chart_of_accounts01.png
+.. image:: chart_of_accounts/chart_of_accounts01.png
    :align: center
    :alt: Group the accounts by type in Odoo Accounting
 
@@ -143,7 +143,7 @@ To display your **Trial Balance** report with your Account Groups, go to :menuse
 --> Reporting --> Trial Balance`, then open the *Options* menu and select **Hierarchy and
 Subtotals**.
 
-.. image:: media/chart_of_accounts02.png
+.. image:: chart_of_accounts/chart_of_accounts02.png
    :align: center
    :alt: Account Groups in the Trial Balance in Odoo Accounting
 

@@ -18,7 +18,7 @@ Creating a Request for Quotation
 In the Purchases module, open :menuselection:`Purchase --> Requests for Quotation`
 and click on **Create**.
 
-.. image:: ./media/image04.png
+.. image:: create/image04.png
    :align: center
 
 Select your supplier in the **Vendor** menu, or create it on-the-fly by
@@ -34,13 +34,13 @@ expected delivery date in the Scheduled Date field. Click on **Save**, then
 **Print Rfq** or **Send Rfq by email** (make sure an email address is specified
 for this supplier or enter a new one).
 
-.. image:: ./media/image08.png
+.. image:: create/image08.png
    :align: center
 
 After having clicked on **Send**, you will notice that the RFQ's status will
 switch from **Draft** to **RFQ Sent**.
 
-.. image:: ./media/image06.png
+.. image:: create/image06.png
    :align: center
 
 Once your supplier has replied with an offer, update the RfQ by clicking
@@ -51,11 +51,11 @@ Order.
 To proceed with the order, click on **Confirm Order** to send the order to
 the supplier. The RfQ's status will switch to **Purchase Order**.
 
-.. image:: ./media/image11.png
+.. image:: create/image11.png
    :align: center
 
 The status of the RfQ will change to PURCHASE ORDER. Tabs in the upper
 right corner of the order will show 1 Shipment and 0 Invoice.
 
-.. image:: ./media/image10.png
+.. image:: create/image10.png
    :align: center

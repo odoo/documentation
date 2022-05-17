@@ -9,7 +9,7 @@ analyze your content.
 
 Go to :menuselection:`Social Marketing --> Campaigns --> Create`.
 
-.. image:: media/create_campaign.png
+.. image:: campaigns/create_campaign.png
    :align: center
    :alt: Click on create to start a campaign in Odoo Social Marketing
 

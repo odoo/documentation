@@ -14,7 +14,7 @@ First of all you have to select the multi locations option. Go to
 Then tick the **Manage several locations per
 warehouse** option. Please don't forget to **apply** your changes.
 
-.. image:: media/inter01.png
+.. image:: inter_warehouse/inter01.png
    :align: center
 
 .. tip::
@@ -32,7 +32,7 @@ Warehouses`. You are now able to create your warehouse by clicking on
 Fill in a **Warehouse Name** and a **Short Name**. The short name is 5
 characters maximum.
 
-.. image:: media/inter02.png
+.. image:: inter_warehouse/inter02.png
    :align: center
 
 .. tip::
@@ -44,7 +44,7 @@ characters maximum.
 If you go back to your dashboard, new operations will automatically have
 been generated for your new warehouse.
 
-.. image:: media/inter03.png
+.. image:: inter_warehouse/inter03.png
    :align: center
 
 Creating a new inventory
@@ -59,7 +59,7 @@ Inventory Adjustment`. You can then create a new inventory by clicking on
 **Create**. Fill in the **Inventory Reference**, **Date**
 and be sure to select the right warehouse and location.
 
-.. image:: media/inter04.png
+.. image:: inter_warehouse/inter04.png
    :align: center
 
 Next, click on **Start Inventory**. A new window will open where you will
@@ -68,7 +68,7 @@ the **Real Quantity** available in the warehouse. The theoretical quantity
 can not be changed as it represents a computed quantity from purchase
 and sales orders.
 
-.. image:: media/inter05.png
+.. image:: inter_warehouse/inter05.png
    :align: center
 
 Don't forget to validate your inventory once you have recorder the state of
@@ -84,7 +84,7 @@ Brussels, proceed as follows:
 From your dashboard, select a internal movement of one of the two
 warehouses. To do so, click on :menuselection:`More  --> Transfer`.
 
-.. image:: media/inter06.png
+.. image:: inter_warehouse/inter06.png
    :align: center
 
 A new window will open where you will be able to select the source
@@ -94,7 +94,7 @@ location zone (in this case our "new" warehouse located in Brussels).
 Add the products you want to transfer by clicking on **Add an Item** and
 don't forget to **Validate** or **Mark as TODO** once you are done.
 
-.. image:: media/inter07.png
+.. image:: inter_warehouse/inter07.png
    :align: center
 
 If you select **Validate**, Odoo will process all quantities to transfer.
@@ -107,19 +107,19 @@ It is also possible to manually transfer each product:
 
 1. Via your dashboard, select the transfer order in the source location.
 
-   .. image:: media/inter08.png
+   .. image:: inter_warehouse/inter08.png
       :align: center
 
 2. Select the right transfer order
 
-   .. image:: media/inter09.png
+   .. image:: inter_warehouse/inter09.png
       :align: center
 
 3. Click on the little pencil logo in the lower right
 corner in order to open the operation details window. In this new
 window you can manually indicate how much products you process
 
-.. image:: media/inter10.png
+.. image:: inter_warehouse/inter10.png
    :align: center
 
 .. tip::

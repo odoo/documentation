@@ -12,7 +12,7 @@ Create mailing lists
 Go to :menuselection:`Mailing lists --> Mailing lists --> Create`. Enable the option *Is Public* to
 make the list visible for users when unsubscribing.
 
-.. image:: media/mailing1.png
+.. image:: mailing_lists/mailing1.png
    :align: center
    :alt: Mailing lists in Odoo Email Marketing
 
@@ -26,7 +26,7 @@ Linking a mailing list to my website
   ideas to subscribers interested in listening.
 | Go to your *Website*, add a *Newsletter* block and choose the respective mailing list.
 
-.. image:: media/mailing2.png
+.. image:: mailing_lists/mailing2.png
    :align: center
    :alt: Mailing lists in Odoo Email Marketing
 
@@ -36,13 +36,13 @@ Contacts
 Under :menuselection:`Mailing Lists --> Mailing List Contacts` see a list of all contacts under all
 your mailing lists, and the ones you individually created here.
 
-.. image:: media/mailing3.png
+.. image:: mailing_lists/mailing3.png
    :align: center
    :alt: Mailing lists in Odoo Email Marketing
 
 Open a contact form to see or add different mailing lists to which the contact is or will be part of.
 
-.. image:: media/mailing4.png
+.. image:: mailing_lists/mailing4.png
    :align: center
    :height: 400
    :alt: Mailing lists in Odoo Email Marketing

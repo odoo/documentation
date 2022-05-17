@@ -21,7 +21,7 @@ To configure your vendor lead times, go to a product page, under the
 purchase tab, click on a *Vendor* once there you can change the
 delivery lead time for that Vendor & Product.
 
-.. image:: media/compute_date01.png
+.. image:: compute_date/compute_date01.png
   :align: center
 
 Customer Lead Time
@@ -33,7 +33,7 @@ deliver the product to your customer.
 To configure your customer lead time open a product and go under the
 *Inventory* tab. You can then add how many days you need.
 
-.. image:: media/compute_date02.png
+.. image:: compute_date/compute_date02.png
   :align: center
 
 Manufacturing lead time
@@ -45,7 +45,7 @@ product.
 To configure your manufacturing lead time open a product and go under
 the *Inventory* tab. You can then add how many days you need.
 
-.. image:: media/compute_date03.png
+.. image:: compute_date/compute_date03.png
   :align: center
 
 Configure Security Lead Times
@@ -59,7 +59,7 @@ The easiest way is to go to *Settings* from any module and type
 **Lead Time** in the search bar. From there, tick each box and
 configure your various *Security Lead Time* for your needs.
 
-.. image:: media/compute_date04.png
+.. image:: compute_date/compute_date04.png
   :align: center
 
 Alternatively, you can go in the settings of the *Inventory* module

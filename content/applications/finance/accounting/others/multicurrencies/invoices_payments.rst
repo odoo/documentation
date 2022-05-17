@@ -34,14 +34,14 @@ In order to register payments in other currencies, you have to remove
 the currency constraint on the journal. Go to the accounting
 application, on the journal, click on :menuselection:`More --> Settings`.
 
-.. image:: media/invoice01.png
+.. image:: invoices_payments/invoice01.png
    :align: center
 
 Check if the currency field is empty or in the foreign currency in which
 you will register the payments. If a currency is filled in, it means
 that you can register payments only in this currency.
 
-.. image:: media/invoice02.png
+.. image:: invoices_payments/invoice02.png
    :align: center
 
 Multi-currency invoices & Vendor Bills
@@ -57,7 +57,7 @@ You are now able to set a different currency than the company one on
 your sale orders and on your invoices. The currency is set for the whole
 document.
 
-.. image:: media/invoice03.png
+.. image:: invoices_payments/invoice03.png
    :align: center
 
 Vendor Bills
@@ -67,7 +67,7 @@ You are now able to set a different currency than the company one on
 your purchase orders and on your vendor bills. The currency is set for
 the whole document.
 
-.. image:: media/invoice04.png
+.. image:: invoices_payments/invoice04.png
    :align: center
 
 Multi-currency Payments
@@ -77,7 +77,7 @@ In the accounting application, go to :menuselection:`Sales --> Payments`. Regist
 payment and indicate that it was done in the foreign currency. Then
 click on **Confirm**.
 
-.. image:: media/invoice05.png
+.. image:: invoices_payments/invoice05.png
    :align: center
 
 The journal entry has been posted but not allocated.
@@ -85,7 +85,7 @@ The journal entry has been posted but not allocated.
 Go back to your invoice (:menuselection:`Sales --> Customer Invoices`) and click on
 **Add** to allocate the payment.
 
-.. image:: media/invoice06.png
+.. image:: invoices_payments/invoice06.png
    :align: center
 
 Multi- Currency Bank Statements
@@ -95,14 +95,14 @@ When creating or importing bank statements, the amount is in the company
 currency. But there are now two complementary fields, the amount that
 was actually paid and the currency in which it was paid.
 
-.. image:: media/invoice07.png
+.. image:: invoices_payments/invoice07.png
    :align: center
 
 When reconciling it, Odoo will directly match the payment with the right
 invoice. You will get the invoice price in the invoice currency and the
 amount in your company currency.
 
-.. image:: media/invoice08.png
+.. image:: invoices_payments/invoice08.png
    :align: center
 
 Exchange Rate Journal
@@ -111,10 +111,10 @@ Exchange Rate Journal
 Go to :menuselection:`Adviser --> Journal Entries` and look for the **Exchange
 Difference** journal entries. All the exchange rates differences are recorded in it.
 
-.. image:: media/invoice09.png
+.. image:: invoices_payments/invoice09.png
    :align: center
 
-.. include:: full_reconcile_warning.rst
+.. include:: exchange/full_reconcile_warning.rst
 
 .. seealso::
    * :doc:`how_it_works`

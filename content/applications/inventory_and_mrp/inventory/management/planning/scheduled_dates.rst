@@ -74,14 +74,14 @@ allows seeing an additional field on the sales orders, *Expected
 Date*. This one is automatically computed based on the different lead
 times previously configured.
 
-.. image:: media/scheduled_dates_02.png
+.. image:: scheduled_dates/scheduled_dates_02.png
     :align: center
     :alt: View of the delivery settings to have the delivery lead time taken into account
 
 If the set up *Delivery Date* is earlier than the the *Expected
 Date*, a warning message is displayed.
 
-.. image:: media/scheduled_dates_03.png
+.. image:: scheduled_dates/scheduled_dates_03.png
     :align: center
     :alt: View of the error that occurs when trying to choose an earlier date than what calculated
           by Odoo
@@ -98,7 +98,7 @@ product by going to :menuselection:`Sales --> Products --> Products`.
 There, open your product form, go in the inventory tab, and add your
 *Customer Lead Time*.
 
-.. image:: media/scheduled_dates_04.png
+.. image:: scheduled_dates/scheduled_dates_04.png
     :align: center
     :alt: View of the customer lead time configuration from the product form
 
@@ -119,7 +119,7 @@ compute a scheduled date earlier than the one promised to the customer.
 To set this up, go to :menuselection:`Inventory --> Configuration -->
 Settings` and enable the feature *Security Lead Time for Sales*.
 
-.. image:: media/scheduled_dates_05.png
+.. image:: scheduled_dates/scheduled_dates_05.png
     :align: center
     :alt: View of the security lead time for sales configuration from the sales settings
 
@@ -161,7 +161,7 @@ purchased to be delivered. To configure it, open a product from
 :menuselection:`Purchase --> Products --> Products` and add a vendor
 under the *Purchase* tab.
 
-.. image:: media/scheduled_dates_06.png
+.. image:: scheduled_dates/scheduled_dates_06.png
     :align: center
     :alt: View of the way to add vendors to products
 
@@ -170,7 +170,7 @@ specify the *Delivery Lead Time* there. If done so, the delivery day
 for every purchase of that product is now equal to *Date of the
 Purchase Order + Delivery Lead Time*.
 
-.. image:: media/scheduled_dates_07.png
+.. image:: scheduled_dates/scheduled_dates_07.png
     :align: center
     :alt: View of the delivery lead time configuration from a vendor form
 
@@ -189,7 +189,7 @@ To set up *Security Lead Time* for purchase, go to
 :menuselection:`Inventory --> Configuration --> Settings` and enable
 the feature.
 
-.. image:: media/scheduled_dates_08.png
+.. image:: scheduled_dates/scheduled_dates_08.png
     :align: center
     :alt: View of the security lead time for purchase from the inventory settings
 
@@ -206,7 +206,7 @@ The *Manufacturing Lead Time* is the time needed to manufacture the
 product. To specify it, open the *Inventory* tab of your product form
 and add the number of days the manufacturing takes.
 
-.. image:: media/scheduled_dates_09.png
+.. image:: scheduled_dates/scheduled_dates_09.png
     :align: center
     :alt: View of the manufacturing lead time configuration from the product form
 
@@ -225,7 +225,7 @@ delays.
 To enable it, go to :menuselection:`Manufacturing --> Configuration -->
 Settings` and tick *Security Lead Time*.
 
-.. image:: media/scheduled_dates_10.png
+.. image:: scheduled_dates/scheduled_dates_10.png
     :align: center
     :alt: View of the security lead time for manufacturing from the manufacturing app settings
 

@@ -36,7 +36,7 @@ Configure a Deferred Revenue Account
 To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
 Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 
-.. image:: media/deferred_revenues01.png
+.. image:: deferred_revenues/deferred_revenues01.png
    :align: center
    :alt: Configuration of a Deferred Revenue Account in Odoo Accounting
 
@@ -52,7 +52,7 @@ Select the account on a draft invoice
 On a draft invoice, select the right account for all the products of which the incomes must be
 deferred.
 
-.. image:: media/deferred_revenues02.png
+.. image:: deferred_revenues/deferred_revenues02.png
    :align: center
    :alt: Selection of a Deferred Revenue Account on a draft invoice in Odoo Accounting
 
@@ -62,7 +62,7 @@ Choose a different Income Account for specific products
 Start editing the product, go to the *Accounting* tab, select the right **Income Account**, and
 save.
 
-.. image:: media/deferred_revenues03.png
+.. image:: deferred_revenues/deferred_revenues03.png
    :align: center
    :alt: Change of the Income Account for a product in Odoo 
 
@@ -77,7 +77,7 @@ To do so, open your Sales Journal by going to
 :menuselection:`Accounting --> Accounting --> Sales`, select the journal item you
 want to modify, click on the account, and select the right one. 
 
-.. image:: media/deferred_revenues04.png
+.. image:: deferred_revenues/deferred_revenues04.png
    :align: center
    :alt: Modification of a posted journal item's account in Odoo Accounting 
 
@@ -97,7 +97,7 @@ Click on **select related purchases** to link an existing journal item to this n
 fields are then automatically filled out, and the journal item is now listed under the **Related
 Sales** tab.
 
-.. image:: media/deferred_revenues05.png
+.. image:: deferred_revenues/deferred_revenues05.png
    :align: center
    :alt: Deferred Revenue entry in Odoo Accounting
 
@@ -105,7 +105,7 @@ Once done, you can click on *Compute Revenue* (next to the *Confirm* button) to 
 values of the **Revenue Board**. This board shows you all the entries that Odoo will post to
 recognize your revenue, and at which date.
 
-.. image:: media/deferred_revenues06.png
+.. image:: deferred_revenues/deferred_revenues06.png
    :align: center
    :alt: Revenue Board in Odoo Accounting   
    
@@ -134,7 +134,7 @@ Make sure that it is posted in the right account (see:
 Then, click on *Action*, select **Create Deferred Entry**, and fill out the form the same way you
 would do to `create a new entry`_.
 
-.. image:: media/deferred_revenues07.png
+.. image:: deferred_revenues/deferred_revenues07.png
    :align: center
    :alt: Create Deferred Entry from a journal item in Odoo Accounting
 
@@ -160,7 +160,7 @@ right recognition account.
 New buttons with all the models linked to that account appear at the top of the form. Clicking on a
 model button fills out the form according to that model.
 
-.. image:: media/deferred_revenues08.png
+.. image:: deferred_revenues/deferred_revenues08.png
    :align: center
    :alt: Deferred Revenue model button in Odoo Accounting
 
@@ -182,7 +182,7 @@ You have three choices for the **Automate Deferred Revenue** field:
    `Deferred Revenue Models`_). Whenever a transaction is posted on the account, a *Deferred
    Revenues entry* is created and immediately validated.
 
-.. image:: media/deferred_revenues09.png
+.. image:: deferred_revenues/deferred_revenues09.png
    :align: center
    :alt: Automate Deferred Revenue on an account in Odoo Accounting
 

@@ -27,7 +27,7 @@ The *Reordering Rules* configuration is available through the menu
 :menuselection:`Inventory --> Master Data --> Reordering Rules`. There, click on
 *Create* to set minimum and maximum stock values for a given product.
 
-.. image:: media/min_stock_rule_vs_mto_01.png
+.. image:: min_stock_rule_vs_mto/min_stock_rule_vs_mto_01.png
    :align: center
 
 When the forecasted stock goes below the *Minimum Quantity* specified
@@ -36,7 +36,7 @@ quantity to the *Maximum Quantity*. The *Quantity Multiple* is used
 to round the procurement quantity up to this multiple. If it is 0, the
 exact quantity will be used.
 
-.. image:: media/min_stock_rule_vs_mto_02.png
+.. image:: min_stock_rule_vs_mto/min_stock_rule_vs_mto_02.png
    :align: center
 
 The *Lead time* is the number of days after the order point is
@@ -52,10 +52,10 @@ each location.
       sure to select the route *Manufacture* and create a *Bill of Material* for the product. In case you purchase your products, make
       sure to select the route *Buy* and add a *Vendor Pricelist*.
 
-.. image:: media/min_stock_rule_vs_mto_03.png
+.. image:: min_stock_rule_vs_mto/min_stock_rule_vs_mto_03.png
    :align: center
 
-.. image:: media/min_stock_rule_vs_mto_04.png
+.. image:: min_stock_rule_vs_mto/min_stock_rule_vs_mto_04.png
    :align: center
 
 .. tip::
@@ -78,5 +78,5 @@ Again, if the *Buy* route is selected, make sure to set a *Vendor
 pricelist* in the *Purchase tab*. In case you have set a
 *Manufacture* route, make sure you have a *BoM* for this product.
 
-.. image:: media/min_stock_rule_vs_mto_05.png
+.. image:: min_stock_rule_vs_mto/min_stock_rule_vs_mto_05.png
    :align: center

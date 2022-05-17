@@ -14,12 +14,12 @@ Configuration
 Go to the **Inventory** module, click on **Configuration** and then on
 **Delivery Methods**.
 
-.. image:: media/delivery_countries01.png
+.. image:: delivery_countries/delivery_countries01.png
     :align: center
 
 Select the delivery method that you want to change, or create a new one.
 
-.. image:: media/delivery_countries02.png
+.. image:: delivery_countries/delivery_countries02.png
     :align: center
 
 In the **Destination** tab, choose the countries to which you want to
@@ -32,7 +32,7 @@ entered your details and you proceed to the payment, the website will
 propose you only the delivery methods that apply to your shipping
 address.
 
-.. image:: media/delivery_countries03.png
+.. image:: delivery_countries/delivery_countries03.png
     :align: center
 
 .. note::

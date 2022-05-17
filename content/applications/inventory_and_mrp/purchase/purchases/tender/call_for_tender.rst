@@ -12,7 +12,7 @@ For this feature to work, go to :menuselection:`Purchases -->
 Configuration --> Settings` and activate the *Purchase Agreements*
 feature.
 
-.. image:: media/call_for_tender01.png
+.. image:: call_for_tender/call_for_tender01.png
     :align: center
 
 Create a Call for Tender
@@ -27,7 +27,7 @@ When you are satisfied with your purchase agreement, confirm it will
 move from *Draft* to *Confirmed* and a new *RFQs/Orders* appeared
 in the top right corner of the document.
 
-.. image:: media/call_for_tender02.png
+.. image:: call_for_tender/call_for_tender02.png
     :align: center
 
 Request new quotations from the Call for Tender
@@ -43,7 +43,7 @@ The various RFQs and orders linked to the Call for Tenders will be under
 the *RFQs/Orders* button where you can select and confirm the best
 offer.
 
-.. image:: media/call_for_tender03.png
+.. image:: call_for_tender/call_for_tender03.png
     :align: center
 
 Close the Call for Tender
@@ -51,5 +51,5 @@ Close the Call for Tender
 
 Once you're done with your *Call for Tender* don't forget to close it.
 
-.. image:: media/call_for_tender04.png
+.. image:: call_for_tender/call_for_tender04.png
     :align: center

@@ -29,7 +29,7 @@ Install the Purchase Management module
 From the **Apps** menu, search and install the **Purchase Management**
 module.
 
-.. image:: media/analyze03.png
+.. image:: analyze/analyze03.png
     :align: center
 
 Issue some purchase orders
@@ -52,7 +52,7 @@ and for **each supplier**. Simply by accessing this basic report, you can
 get a quick overview of your actual performance. You can add a lot of
 extra data to your report by clicking on the **Measures** icon.
 
-.. image:: media/analyze04.png
+.. image:: analyze/analyze04.png
     :align: center
 
 .. tip::
@@ -69,7 +69,7 @@ just a click in 3 graph views : a **Pie Chart**, a **Bar Chart** and a **Line
 Chart**: These views are accessible through the icons highlighted on the
 screenshot below.
 
-.. image:: media/analyze02.png
+.. image:: analyze/analyze02.png
     :align: center
 
 .. note:: 
@@ -89,7 +89,7 @@ improves the readability of your reports. Note that you can filter and
 group by any existing field, making your customization very flexible and
 powerful.
 
-.. image:: media/analyze01.png
+.. image:: analyze/analyze01.png
     :align: center
 
 .. tip:: 

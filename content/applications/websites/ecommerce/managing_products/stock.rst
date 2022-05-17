@@ -4,18 +4,18 @@ Show product availability
 
 The availability of your products can be shown on the website to reassure your customers.
 
-.. image:: ./media/stock_web.png
+.. image:: stock/stock_web.png
    :align: center
 
 To display this, open the *eCommerce* tab in the product detail form and select an option in
 *Availability*.
 
-.. image:: ./media/stock.png
+.. image:: stock/stock.png
    :align: center
 
 A custom warning message can be anything related to a stock out, delivery delay, etc.
 
-.. image:: ./media/stock_warning.png
+.. image:: stock/stock_warning.png
    :align: center
 
 .. note::

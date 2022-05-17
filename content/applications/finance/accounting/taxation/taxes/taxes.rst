@@ -19,7 +19,7 @@ default, so that you can activate only the ones relevant for your business.
 To activate Sale Taxes, go to :menuselection:`Accounting --> Configuration --> Taxes` and use the
 *Activate* toggle button to activate or deactivate a tax.
 
-.. image:: media/taxes-list.png
+.. image:: taxes/taxes-list.png
    :align: center
    :alt: Activate pre-configured taxes in Odoo Accounting
 
@@ -31,7 +31,7 @@ Configuration
 To edit or create a **Tax**, go to :menuselection:`Accounting --> Configuration --> Taxes` and open
 a tax or click on *Create*.
 
-.. image:: media/taxes-edit.png
+.. image:: taxes/taxes-edit.png
    :align: center
    :alt: Edition of a tax in Odoo Accounting
 
@@ -156,7 +156,7 @@ Definition tab
 Allocate with precision the amount of the taxable basis or percentages of the computed tax to
 multiple accounts and Tax Grids.
 
-.. image:: media/taxes-definition.png
+.. image:: taxes/taxes-definition.png
    :align: center
    :alt: Allocate tax amounts to the right accounts and tax grids
 
@@ -183,7 +183,7 @@ The label of the tax, as displayed on each invoice line in the **Taxes** column.
 :ref:`label <taxes/labels>` visible to *front end* users, on exported invoices, on their Customer
 Portals, etc.
 
-.. image:: media/taxes-invoice-label.png
+.. image:: taxes/taxes-invoice-label.png
    :align: center
    :alt: The Label on Invoices is displayed on each invoice line
 
@@ -198,7 +198,7 @@ Select to which **Tax Group** the tax belongs. The Tax Group name is the :ref:`l
 Tax groups include different iterations of the same tax. This can be useful when you must record
 differently the same tax according to :doc:`Fiscal Positions <fiscal_positions>`.
 
-.. image:: media/taxes-invoice-tax-group.png
+.. image:: taxes/taxes-invoice-tax-group.png
    :align: center
    :alt: The Tax Group name is different from the Label on Invoices
 
@@ -258,7 +258,7 @@ the same product.
 You can configure a new :ref:`Group of Taxes <taxes/computation>` to include this tax, or add it
 directly to a product line.
 
-.. image:: media/taxes-subsequent-line.png
+.. image:: taxes/taxes-subsequent-line.png
    :align: center
    :alt: The eco-tax is taken into the basis of the 21% VAT tax
 
@@ -270,7 +270,7 @@ directly to a product line.
    To reorder the sequence, go to :menuselection:`Accounting --> Configuration --> Taxes`, and drag
    and drop the lines with the handles next to the tax names.
 
-   .. image:: media/taxes-list-sequence.png
+   .. image:: taxes/taxes-list-sequence.png
       :align: center
       :alt: The taxes' sequence in Odoo determines which tax is applied first
 

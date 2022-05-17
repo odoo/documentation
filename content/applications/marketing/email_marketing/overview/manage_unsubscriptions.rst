@@ -12,14 +12,14 @@ Enable the Blacklist feature
 Go to :menuselection:`Configuration --> Settings` and enable the option *Blacklist Option when
 Unsubscribing*.
 
-.. image:: media/manage1.png
+.. image:: manage_unsubscriptions/manage1.png
    :align: center
    :alt: Blacklist in Odoo Email Marketing
 
 Now, once the user clicks on the *Unsubscribe* link on your email, he is redirected to the
 following page:
 
-.. image:: media/manage2.png
+.. image:: manage_unsubscriptions/manage2.png
    :align: center
    :height: 350
    :alt: Blacklist in Odoo Email Marketing
@@ -38,7 +38,7 @@ blacklist himself, meaning that he will not receive *any* more emails from you.
 | Under :menuselection:`Configuration --> Blacklist`, blacklisted email addresses are shown.
 | When opening the record, as a *Log note*, a description-history is kept.
 
-.. image:: media/manage3.png
+.. image:: manage_unsubscriptions/manage3.png
    :align: center
    :alt: Blacklist in Odoo Email Marketing
 

@@ -15,14 +15,14 @@ Open a stockable product, you'll find the *Reordering Rules* tab.
   You can also access all your reordering rules from
   :menuselection:`Inventory --> Master Data --> Reordering Rules`.
 
-.. image:: media/setup_stock_rule01.png
+.. image:: setup_stock_rule/setup_stock_rule01.png
   :align: center
 
 Once in the next menu, you can create the reordering rules linked to
 your product. From now on, every time this product reaches the minimum
 quantity it will replenish your stock to your **maximum quantity**.
 
-.. image:: media/setup_stock_rule02.png
+.. image:: setup_stock_rule/setup_stock_rule02.png
   :align: center
 
 .. tip::
@@ -47,5 +47,5 @@ on the product. If the product is not fully configured or there is a
 mistake in your routes, a next activity will be logged on the product
 informing you there is an issue with the configuration.
 
-.. image:: media/setup_stock_rule03.png
+.. image:: setup_stock_rule/setup_stock_rule03.png
   :align: center

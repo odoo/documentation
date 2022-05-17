@@ -129,4 +129,4 @@ the flamegraph tool:
 
     flamegraph.pl ./test.flame > ~/mycode.svg
 
-.. image:: profile/flamegraph.svg
+.. image:: profilecode/flamegraph.svg

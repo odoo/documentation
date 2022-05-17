@@ -12,14 +12,14 @@ Select: under :menuselection:`General Information --> Product Type: Service`;
 under :menuselection:`Sales --> Service Invoicing Policy: Timesheet on task --> Service Tracking:
 Create a task in an existing project --> Project --> Worksheet Template --> Save`.
 
-.. image:: media/onsite1.png
+.. image:: onsite_tasks_from_sales_orders/onsite1.png
    :align: center
    :alt: Onsite Interventions from Sales Order in Odoo Field Service
 
 Now, once you have *Confirmed* a *quotation*, a task will be created in the respective
 project you have chosen.
 
-.. image:: media/onsite2.png
+.. image:: onsite_tasks_from_sales_orders/onsite2.png
    :align: center
    :alt: Onsite Interventions from Sales Order in Odoo Field Service
 

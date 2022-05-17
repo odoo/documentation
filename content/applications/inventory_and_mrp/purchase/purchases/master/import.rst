@@ -14,7 +14,7 @@ Pricelists".
 
 Don't forget to save your settings in the top left corner.
 
-.. image:: media/import01.png
+.. image:: import/import01.png
     :align: center
 
 Import a pricelist
@@ -27,7 +27,7 @@ clicking import.
 
 See below a template of the columns used.
 
-.. image:: media/import02.png
+.. image:: import/import02.png
     :align: center
 
-:download:`Click here to download the template <files/vendor_pricelists_template.csv>`
+:download:`Click here to download the template <import/vendor_pricelists_template.csv>`

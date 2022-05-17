@@ -20,7 +20,7 @@ Configuration
 For this feature to work, go to :menuselection:`Purchases -->
 Configuration --> Settings` and activate the *3-way matching* feature
 
-.. image:: media/3_way_matching01.png
+.. image:: 3_way_matching/3_way_matching01.png
    :align: center
 
 Should I pay the vendor bill?
@@ -32,7 +32,7 @@ appear on the vendor bill under the *Other info* tab.
 That way Odoo let's you easily know if you should pay the vendor bill or
 not.
 
-.. image:: media/3_way_matching02.png
+.. image:: 3_way_matching/3_way_matching02.png
    :align: center
 
 .. tip::

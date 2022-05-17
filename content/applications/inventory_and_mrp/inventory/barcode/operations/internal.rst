@@ -8,17 +8,17 @@ Simple Transfers
 To process a transfer from the *Barcode* app, the first step is to go
 to *Operations*.
 
-.. image:: media/internal_01.png
+.. image:: internal/internal_01.png
     :align: center
 
 Then, you have the choice to either enter an existing transfer, by going
 to the corresponding operation type and manually selecting the one you
 want to enter, or by scanning the barcode of the transfer.
 
-.. image:: media/internal_02.png
+.. image:: internal/internal_02.png
     :align: center
 
-.. image:: media/internal_03.png
+.. image:: internal/internal_03.png
     :align: center
 
 From there, you will be able to scan the products that are part of the
@@ -26,7 +26,7 @@ existing transfer and/or add new products to this transfer. Once all the
 products have been scanned, you can validate the transfer to proceed
 with the stock moves.
 
-.. image:: media/internal_04.png
+.. image:: internal/internal_04.png
     :align: center
 
 .. note::
@@ -41,7 +41,7 @@ to identify it in the system. Once done, you can either make it enter
 the main location of the transfer, for example WH/Stock, or scan a
 location barcode to make it enter a sub-location of the main location.
 
-.. image:: media/internal_05.png
+.. image:: internal/internal_05.png
     :align: center
 
 .. note::
@@ -56,7 +56,7 @@ different than the one initially set on the transfer. Then, you can
 start scanning the products that are delivered from this specific
 location.
 
-.. image:: media/internal_06.png
+.. image:: internal/internal_06.png
     :align: center
 
 Once the different products have been scanned, you have the possibility
@@ -64,14 +64,14 @@ to scan another location, such as WH/Stock, and another page will be
 added to your delivery order. You can move from one to the other thanks
 to the *Previous* and *Next* buttons.
 
-.. image:: media/internal_07.png
+.. image:: internal/internal_07.png
     :align: center
 
 Now, you can validate your transfer. To do so, click on *Next* until
 you reach the last page of the transfer. There, you will be able to
 validate it.
 
-.. image:: media/internal_08.png
+.. image:: internal/internal_08.png
     :align: center
 
 Internal Transfers
@@ -93,10 +93,10 @@ ways of working:
 
 -  If you work with serial/lot numbers taking all products into consideration, you can scan the barcode of the lot/serial number and Odoo will increase the quantity of the product, setting its lot/serial number.
 
-.. image:: media/internal_09.png
+.. image:: internal/internal_09.png
     :align: center
 
 -  If you have the same lot/serial number for different products, you can work by scanning the product barcode first, and then the barcode of the lot/serial number.
 
-.. image:: media/internal_10.png
+.. image:: internal/internal_10.png
     :align: center

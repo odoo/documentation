@@ -42,7 +42,7 @@ should take place:
    periodicity is based on the defined period (once a day, once a
    week).
 
-.. image:: media/control_points_01.png
+.. image:: control_points/control_points_01.png
    :align: center
    :alt: 
 
@@ -64,15 +64,15 @@ Text
 This control point type allows giving instructions to workers during the
 transfer or during the manufacturing process.
 
-.. image:: media/control_points_01.png
+.. image:: control_points/control_points_01.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_02.png
+.. image:: control_points/control_points_02.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_03.png
+.. image:: control_points/control_points_03.png
    :align: center
    :alt: 
 
@@ -82,15 +82,15 @@ Take a Picture
 This control point type asks to take a picture of the product applied in
 a transfer or when manufacturing it.
 
-.. image:: media/control_points_04.png
+.. image:: control_points/control_points_04.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_05.png
+.. image:: control_points/control_points_05.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_06.png
+.. image:: control_points/control_points_06.png
    :align: center
    :alt: 
 
@@ -104,22 +104,22 @@ Pass-Fail
 *Pass-Fail* requires to specify if the products pass or fail specific
 criteria. It can be applied for both transfers or manufacturing orders.
 
-.. image:: media/control_points_07.png
+.. image:: control_points/control_points_07.png
    :align: center
    :alt: 
 
 For this kind of type, there is the possibility to define a failure
 message giving instructions to follow in case of failure.
 
-.. image:: media/control_points_08.png
+.. image:: control_points/control_points_08.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_09.png
+.. image:: control_points/control_points_09.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_10.png
+.. image:: control_points/control_points_10.png
    :align: center
    :alt: 
 
@@ -133,22 +133,22 @@ To use it, it necessary to specify the norm for your product’s
 measurements, but also a tolerance threshold. Doing so, all the products
 with good measures can are automatically accepted.
 
-.. image:: media/control_points_11.png
+.. image:: control_points/control_points_11.png
    :align: center
    :alt: 
 
 As for *Pass-Fail*, this type allows defining a failure message that
 gives instructions to the worker.
 
-.. image:: media/control_points_12.png
+.. image:: control_points/control_points_12.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_13.png
+.. image:: control_points/control_points_13.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_14.png
+.. image:: control_points/control_points_14.png
    :align: center
    :alt: 
 
@@ -164,11 +164,11 @@ the component’s serial/lot numbers during the manufacturing process.
 .. note::
       This type is only available when working with routings.
 
-.. image:: media/control_points_15.png
+.. image:: control_points/control_points_15.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_16.png
+.. image:: control_points/control_points_16.png
    :align: center
    :alt: 
 
@@ -181,11 +181,11 @@ number of the by-products that are manufactured.
 .. note::
       This type is only available when working with routings.
 
-.. image:: media/control_points_17.png
+.. image:: control_points/control_points_17.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_18.png
+.. image:: control_points/control_points_18.png
    :align: center
    :alt: 
 
@@ -195,11 +195,11 @@ Print Label
 *Print Label*, as its name points out, allows printing labels to add
 to the product during the manufacturing process.
 
-.. image:: media/control_points_19.png
+.. image:: control_points/control_points_19.png
    :align: center
    :alt: 
 
-.. image:: media/control_points_20.png
+.. image:: control_points/control_points_20.png
    :align: center
    :alt: 
 

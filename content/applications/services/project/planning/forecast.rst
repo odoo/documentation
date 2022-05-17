@@ -12,7 +12,7 @@ Allocate times under shifts
 When planning a shift, in the *Planning* application, create a project and a task on the fly,
 or simply select the one you want.
 
-.. image:: media/allocate_time.png
+.. image:: forecast/allocate_time.png
    :align: center
    :alt: Planning form to choose the project, task and allocated hours in Odoo Planning
 
@@ -23,7 +23,7 @@ or simply select the one you want.
 | On :menuselection:`Project --> Planning --> By Project`, immediately see the total number of
   employees allocated per project.
 
-.. image:: media/planning_project.png
+.. image:: forecast/planning_project.png
    :align: center
    :alt: Planning by project view in Odoo Project
 
@@ -34,14 +34,14 @@ Now, once the employee has timesheeted his hours in the task, go to *Project* an
 *View list*, under *All Tasks*, conveniently see the *Planned Hours* compared to the
 *Remaining Hours*, and a calculation of the *Progress*.
 
-.. image:: media/compare_forecast.png
+.. image:: forecast/compare_forecast.png
    :align: center
    :alt: View of all tasks and their planned and remaining hours in Odoo Project
 
 .. important::
    Reminder: the option *Timesheets* has to be enabled on your project.
 
-   .. image:: media/enable_timesheets.png
+   .. image:: forecast/enable_timesheets.png
       :align: center
       :height: 400
       :alt: Under the settings of a project enable timesheets in Odoo Project

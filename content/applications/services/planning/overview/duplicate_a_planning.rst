@@ -12,7 +12,7 @@ Go to :menuselection:`Configuration --> Roles --> Create`.
 Optionally, go to the *Employees* application, select the respective employee, and under *Work
 Information* select the *Default Planning Role*.
 
-.. image:: media/cs1.png
+.. image:: duplicate_a_planning/cs1.png
    :align: center
    :alt: Roles in Odoo Planning Application
 
@@ -22,7 +22,7 @@ Make shifts recurrent
 While creating a shift, select *Repeat* and configure as needed, saving you from the need
 of re-planning it.
 
-.. image:: media/cs2.png
+.. image:: duplicate_a_planning/cs2.png
    :align: center
    :alt: Repeat shifts in Odoo Planning Application
 
@@ -30,7 +30,7 @@ of re-planning it.
    Repeated shifts are generated for the next six months. A modification is possible in
    :ref:`developer mode <developer-mode>`, from *Settings*.
 
-      .. image:: media/rate_shift_generation.png
+      .. image:: duplicate_a_planning/rate_shift_generation.png
          :align: center
          :alt: Repeat shifts in Odoo Planning Application
 
@@ -43,7 +43,7 @@ Save shifts as templates
 If creating a shift on the fly and know you might use that template in the future, click on *Save as
 a Template*.
 
-.. image:: media/cs3.png
+.. image:: duplicate_a_planning/cs3.png
    :align: center
    :alt: Save shift as a Template in Odoo Planning Application
 
@@ -57,7 +57,7 @@ Duplicate a planning from the previous week
 When in the Gantt view, either under *Schedule by Employee, Role or Project*, instead of re-planning
 shifts that have been planned before, simply click on *Copy Previous Week*.
 
-.. image:: media/cs4.png
+.. image:: duplicate_a_planning/cs4.png
    :align: center
    :alt: Shift recurrency in Odoo Planning Application
 

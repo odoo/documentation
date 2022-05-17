@@ -9,7 +9,7 @@ The ISRs are payment slips used in Switzerland. You can print them
 directly from Odoo. On the customer invoices, there is a new button
 called *Print ISR*.
 
-.. image:: media/switzerland00.png
+.. image:: switzerland/switzerland00.png
     :align: center
 
 .. tip:: 
@@ -17,12 +17,12 @@ called *Print ISR*.
     defined on the invoice. You can use CH6309000000250097798 as bank
     account number and 010391391 as CHF ISR reference.
 
-.. image:: media/switzerland01.png
+.. image:: switzerland/switzerland01.png
     :align: center
 
 Then you open a pdf with the ISR.
 
-.. image:: media/switzerland02.png
+.. image:: switzerland/switzerland02.png
     :align: center
 
 There exists two layouts for ISR: one with, and one without the bank
@@ -31,7 +31,7 @@ bank information on the ISR. To activate it, go in
 :menuselection:`Accounting --> Configuration --> Settings --> Customer Invoices`
 and enable **Print bank on ISR**:
 
-.. image:: media/switzerland03.png
+.. image:: switzerland/switzerland03.png
     :align: center
 
 ISR reference on invoices
@@ -45,7 +45,7 @@ To do so, you need to configure the Journal you usually use to issue invoices. G
 default, the Journal is named *Customer Invoices*), click en *Edit*, and open the *Advanced
 Settings* tab. In the **Communication Standard** field, select *Switzerland*, and click on *Save*.
 
-.. image:: media/switzerland-isr-reference.png
+.. image:: switzerland/switzerland-isr-reference.png
    :align: center
    :alt: Configure your Journal to display your ISR as payment reference on your invoices in Odoo
 
@@ -57,7 +57,7 @@ Tax Administration from Switzerland. For this, go in
 :menuselection:`Accounting --> Settings`, activate the multi-currencies setting and choose the service
 you want.
 
-.. image:: media/switzerland04.png
+.. image:: switzerland/switzerland04.png
     :align: center
 
 Updated VAT for January 2018
@@ -77,7 +77,7 @@ If you have started on an earlier version, you first have to update the
 module "Switzerland - Accounting Reports". For this, you go in
 :menuselection:`Apps --> remove the filter "Apps" --> search for "Switzerland - Accounting Reports" --> open the module --> click on "upgrade"`.
 
-.. image:: media/switzerland05.png
+.. image:: switzerland/switzerland05.png
     :align: center
 
 Once it has been done, you can work on creating new taxes for the

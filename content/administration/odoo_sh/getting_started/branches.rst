@@ -8,7 +8,7 @@ Overview
 
 The branches view gives you an overview of the different branches your repository has.
 
-.. image:: ./media/interface-branches.png
+.. image:: branches/interface-branches.png
    :align: center
 
 .. _odoosh-gettingstarted-branches-stages:
@@ -20,7 +20,7 @@ Odoo.sh offers three different stages for your branches: production, staging and
 
 You can change the stage of a branch by drag and dropping it into the stage section title.
 
-.. image:: ./media/interface-branches-stagechange.png
+.. image:: branches/interface-branches-stagechange.png
    :align: center
 
 .. _stage_production:
@@ -109,7 +109,7 @@ Merging your branches
 ---------------------
 You can merge your branches easily by drag and dropping them into each other.
 
-.. image:: ./media/interface-branches-merge.png
+.. image:: branches/interface-branches-merge.png
    :align: center
 
 When you want to test the changes of your development branches with the production data,
@@ -156,7 +156,7 @@ An overview of your branch history:
 * The messages of the commits and their authors,
 * The various events linked to the platform, such as stage changes, database imports, backup restores.
 
-.. image:: ./media/interface-branches-history.png
+.. image:: branches/interface-branches-history.png
    :align: center
 
 For each event, a status is displayed in the top right-hand corner.
@@ -172,7 +172,7 @@ This tab contains the mail catcher. It displays an overview of the emails sent b
 The mail catcher is available for your development and
 staging branches as the emails of your production database are really sent instead of being intercepted.
 
-.. image:: ./media/interface-branches-mails.png
+.. image:: branches/interface-branches-mails.png
    :align: center
    :scale: 50%
 
@@ -181,7 +181,7 @@ Shell
 A shell access to your container. You can perform basic linux commands (:code:`ls`, :code:`top`)
 and open a shell on your database by typing :code:`psql`.
 
-.. image:: ./media/interface-branches-shell.png
+.. image:: branches/interface-branches-shell.png
    :align: center
 
 You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
@@ -197,7 +197,7 @@ Editor
 An online integrated development environment (IDE) to edit the source code.
 You can also open terminals, Python consoles and even Odoo Shell consoles.
 
-.. image:: ./media/interface-branches-editor.png
+.. image:: branches/interface-branches-editor.png
    :align: center
 
 You can open multiple tabs and drag-and-drop them to arrange the layout as you wish,
@@ -207,7 +207,7 @@ Monitoring
 ----------
 This link contains various monitoring metrics of the current build.
 
-.. image:: ./media/interface-branches-monitoring.png
+.. image:: branches/interface-branches-monitoring.png
    :align: center
 
 You can zoom, change the time range or select a specific metric on each graph.
@@ -219,7 +219,7 @@ Logs
 ----
 A viewer to have a look to your server logs.
 
-.. image:: ./media/interface-branches-logs.png
+.. image:: branches/interface-branches-logs.png
    :align: center
 
 Different logs are available:
@@ -243,7 +243,7 @@ Backups
 A list of the backups available for download and restore, the ability to perform a manual backup and to import a
 database.
 
-.. image:: ./media/interface-branches-backups.png
+.. image:: branches/interface-branches-backups.png
    :align: center
 
 Odoo.sh makes daily backups of the production database. It keeps 7 daily, 4 weekly and 3 monthly backups.
@@ -285,7 +285,7 @@ Settings
 --------
 Here you can find a couple of settings that only apply to the currently selected branch.
 
-.. image:: ./media/interface-branches-settings.jpg
+.. image:: branches/interface-branches-settings.jpg
    :align: center
 
 **Behaviour upon new commit**
@@ -302,7 +302,7 @@ back from staging to development will automatically be set to 'Do nothing'.
 
 Choose the modules to install automatically for your development builds.
 
-.. image:: ./media/interface-settings-modulesinstallation.png
+.. image:: branches/interface-settings-modulesinstallation.png
    :align: center
 
 * *Install only my modules* will install the modules of the branch only. This is the default option.
@@ -397,7 +397,7 @@ Shell commands
 ==============
 In the top right-hand corner of the view, different shell commands are available.
 
-.. image:: ./media/interface-branches-shellcommands.png
+.. image:: branches/interface-branches-shellcommands.png
    :align: center
 
 Each command can be copied in the clipboard to be used in a terminal,
@@ -466,12 +466,12 @@ To do so, follow these steps:
    (only apply the step 1)
 #. Paste the copied content to your profile SSH keys and press "Add"
 
-   .. image:: ./media/SSH-key-pasting.png
+   .. image:: branches/SSH-key-pasting.png
       :align: center
 
 #. The key should appear below
 
-   .. image:: ./media/SSH-key-appearing.png
+   .. image:: branches/SSH-key-appearing.png
       :align: center
 
 Connection
@@ -485,7 +485,7 @@ To connect to your builds using ssh use the following command in a terminal:
 
 You will find a shortcut for this command into the SSH tab in the upper right corner.
 
-.. image:: ./media/SSH-panel.png
+.. image:: branches/SSH-panel.png
    :align: center
 
 Provided you have the :ref:`correct access rights <odoosh-gettingstarted-settings-collaborators>` on the project,

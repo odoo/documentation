@@ -19,13 +19,13 @@ Create the Work Orders
 The first thing you need to do is to open the *Manufacturing* app.
 Then, Go to the settings and enable the *Work Orders* feature.
 
-.. image:: media/plan_work_order_01.png
+.. image:: plan_work_orders/plan_work_order_01.png
     :align: center
 
 Now, go to the *Manufacturing Orders* menu and hit *Create*. Choose
 your product and add a *Planned Start Date*.
 
-.. image:: media/plan_work_order_02.png
+.. image:: plan_work_orders/plan_work_order_02.png
     :align: center
 
 .. note::
@@ -36,7 +36,7 @@ Mark your *Manufacturing Order* as todo and plan it. By going to the
 *Planning* menu, you can access to the scheduled orders. Here is the
 one we just created:
 
-.. image:: media/plan_work_order_03.png
+.. image:: plan_work_orders/plan_work_order_03.png
     :align: center
 
 .. note:: 
@@ -48,5 +48,5 @@ one we just created:
 If you overrun the planned date and begin the job later, you will have a
 track of it in the *Time Tracking* tab of your work order.
 
-.. image:: media/plan_work_order_04.png
+.. image:: plan_work_orders/plan_work_order_04.png
     :align: center

@@ -16,7 +16,7 @@ Activate the dropshipping feature
 Go to :menuselection:`Purchases --> Configuration --> Settings` and
 select *Dropshipping*.
 
-.. image:: media/dropshipping01.png
+.. image:: dropshipping/dropshipping01.png
    :align: center
 
 A new route *Dropshipping* has been created. You can go on a product
@@ -24,21 +24,21 @@ and tick the dropshipping route. You also need to define to which vendor
 you will buy the product. Now, each time this product will be sold, it
 will be drop shipped.
 
-.. image:: media/dropshipping02.png
+.. image:: dropshipping/dropshipping02.png
    :align: center
 
 If you don't always dropship that product, you can go to
 :menuselection:`Sales --> Configuration --> Settings` and tick the box
 in front of *Order-Specific Routes*.
 
-.. image:: media/dropshipping03.png
+.. image:: dropshipping/dropshipping03.png
    :align: center
 
 When you create a quotation or sales order, you can now decide, order
 line per order line, which products should be drop shipped by selecting
 the dropship route on the SO line.
 
-.. image:: media/dropshipping04.png
+.. image:: dropshipping/dropshipping04.png
    :align: center
 
 Drop ship a product
@@ -50,5 +50,5 @@ confirm that request for quotation into a purchase order, it will create
 a transfer from your vendor directly to your customer. The products
 doesn't go through your own stock.
 
-.. image:: media/dropshipping05.png
+.. image:: dropshipping/dropshipping05.png
    :align: center

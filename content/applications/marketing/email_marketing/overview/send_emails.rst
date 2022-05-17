@@ -13,7 +13,7 @@ Choose the right target and create the message
 | Choosing *Contacts* as *Recipients* (for example), allows you to add specifications to match
   just certain contacts, filtering your target.
 
-.. image:: media/sendemails1.png
+.. image:: send_emails/sendemails1.png
    :align: center
    :alt: Send mass mailing in Odoo Email Marketing
 
@@ -26,7 +26,7 @@ Under *Mail Body*, choose a layout and make the modifications needed by dragging
 double-clicking on content. Note that it is possible to start from scratch selecting the *blank*
 template option.
 
-.. image:: media/sendemails2.png
+.. image:: send_emails/sendemails2.png
    :align: center
    :alt: Send mass mailing in Odoo Email Marketing
 
@@ -36,7 +36,7 @@ template option.
   recipients’ records or on a specific email address. Note that this option is not available if you
   target mailing contacts or contacts as recipients.
 
-.. image:: media/sendemails3.png
+.. image:: send_emails/sendemails3.png
    :align: center
    :height: 400
    :alt: Send mass mailing in Odoo Email Marketing
@@ -44,7 +44,7 @@ template option.
 Test, send or schedule a mailing
 ================================
 
-.. image:: media/sendemails4.png
+.. image:: send_emails/sendemails4.png
    :align: center
    :height: 350
    :alt: Send mass mailing in Odoo Email Marketing
@@ -71,7 +71,7 @@ Manage campaigns
   centralized view of its metrics.
 | Go to *Campaign* and click on *Create* to start one.
 
-.. image:: media/sendemails5.png
+.. image:: send_emails/sendemails5.png
    :align: center
    :height: 300
    :alt: manage campaigns in Odoo Email Marketing

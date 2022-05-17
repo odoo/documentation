@@ -14,7 +14,7 @@ Go to :menuselection:`Campaigns --> Create`.
   database.
 
 
-.. image:: media/auto1.png
+.. image:: automate_actions/auto1.png
    :align: center
    :alt: Create workflows in Odoo Marketing Automation
 
@@ -30,7 +30,7 @@ Create a parent activity and start to build a workflow
 Click on *Add new activity*.
 
 
-.. image:: media/auto2.png
+.. image:: automate_actions/auto2.png
    :align: center
    :alt: Create workflows in Odoo Marketing Automation
 
@@ -50,7 +50,7 @@ Add Child Activities
   the email was replied or not, the link was clicked or not, the email bounced back.
 
 
-.. image:: media/auto3.png
+.. image:: automate_actions/auto3.png
    :align: center
    :height: 350
    :alt: Create workflows in Odoo Marketing Automation

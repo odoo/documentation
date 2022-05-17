@@ -10,13 +10,13 @@ Get the exact time spent on a task
 Click on *Start* to launch the timer. You can *Pause* at any moment and *Resume* when you would like
 to continue.
 
-.. image:: media/im1.png
+.. image:: invoicing_time/im1.png
    :align: center
    :alt: Timesheet Timer in Odoo Field Service
 
 Click on *Stop* once the work is done to confirm the total time spent and add a description.
 
-.. image:: media/im2.png
+.. image:: invoicing_time/im2.png
    :align: center
    :alt: Timesheet Timer in Odoo Field Service
 
@@ -24,7 +24,7 @@ Sign and send reports & validate stock-picking
 ==============================================
 Now, fill your *Worksheet* and add the used products clicking on *Products*.
 
-.. image:: media/im3.png
+.. image:: invoicing_time/im3.png
    :align: center
    :alt: Sign and send reports in Odoo Field Service
 
@@ -43,7 +43,7 @@ Under :menuselection:`All Tasks --> To Invoice`, find a list of all tasks marked
 have not been invoiced.
 Convenient feature as it allows accountants to easily access all finished tasks at once.
 
-.. image:: media/im4.png
+.. image:: invoicing_time/im4.png
    :align: center
    :alt: Invoice Tasks in Odoo Field Service
 
@@ -52,7 +52,7 @@ Convenient feature as it allows accountants to easily access all finished tasks 
    Invoice all tasks at once selecting them all and going to :menuselection:`Action -->
    Create Invoice`.
 
-.. image:: media/im5.png
+.. image:: invoicing_time/im5.png
    :align: center
    :alt: Invoice Task in Odoo Field Service
 

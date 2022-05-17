@@ -5,7 +5,7 @@ Authorize.Net
 `Authorize.Net <https://www.authorize.net>`__ is a United States-based online payment solution
 provider, allowing businesses to accept **credit cards**.
 
-.. image:: media/authorize-net.png
+.. image:: authorize/authorize-net.png
    :align: center
    :alt: Authorize.Net logo
 
@@ -30,7 +30,7 @@ To retrieve them, log into your Authorize.Net account, go to :menuselection:`Acc
 Settings --> General Security Settings --> API Credentials & Keys`, and generate your **Transaction
 Key** and **Signature Key**.
 
-.. image:: media/authorize-api-keys.png
+.. image:: authorize/authorize-api-keys.png
    :align: center
    :alt: Generate your Transaction Key and Signature Key on your Authorize.Net account
 
@@ -98,14 +98,14 @@ Capture the payment after the delivery
 The **Capture Amount Manually** field is under the **Configuration** tab. If enabled, the funds are
 reserved for 30 days on the customer's card, but not charged yet.
 
-.. image:: media/authorize-configuration.png
+.. image:: authorize/authorize-configuration.png
    :align: center
    :alt: Authorize.Net Configuration tab on Odoo
 
 To capture the payment, go to the related Sales Order and click on *Capture Transaction*. If the
 order is canceled, you can click on *Void Transaction* to unlock the funds from the customer's card.
 
-.. image:: media/authorize-capture.png
+.. image:: authorize/authorize-capture.png
    :align: center
    :alt: Hold the credit card payment until you capture or revoke it on Odoo
 

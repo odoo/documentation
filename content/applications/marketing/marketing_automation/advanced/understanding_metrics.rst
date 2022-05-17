@@ -10,7 +10,7 @@ employees to goals.
 | Let’s consider the example below:
 
 
-.. image:: media/metrics1.png
+.. image:: understanding_metrics/metrics1.png
    :align: center
    :alt: Metrics in Odoo Marketing Automation
 
@@ -20,7 +20,7 @@ employees to goals.
 | A total number of 20 records match the criteria.
 
 
-.. image:: media/metrics2.png
+.. image:: understanding_metrics/metrics2.png
    :align: center
    :alt: Metrics in Odoo Marketing Automation
 
@@ -28,7 +28,7 @@ employees to goals.
 Out of those 20 records, 25 have become participants, in other words, they have matched the criteria.
 
 
-.. image:: media/metrics3.png
+.. image:: understanding_metrics/metrics3.png
    :align: center
    :alt: Metrics in Odoo Marketing Automation
 
@@ -56,7 +56,7 @@ different from the number of *Participants*.
    | Example: for an activity sending an SMS, you could make sure a phone number is set to
      avoid triggering a SMS that would never be sent and crash.
 
-   .. image:: media/metrics4.png
+   .. image:: understanding_metrics/metrics4.png
       :align: center
       :alt: Metrics in Odoo Marketing Automation
 
@@ -64,7 +64,7 @@ different from the number of *Participants*.
   activity - was performed successfully in relation to the total number of participants.
 | If a participant does not match the conditions, it will be added to *Rejected*.
 
-.. image:: media/metrics5.png
+.. image:: understanding_metrics/metrics5.png
    :align: center
    :alt: Metrics in Odoo Marketing Automation
 

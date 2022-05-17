@@ -12,14 +12,14 @@ Set up
 
 Go to :menuselection:`Project --> Configuration --> Settings` and enable *Use Rating on Project*.
 
-.. image:: media/rating_project.png
+.. image:: feedback/rating_project.png
    :align: center
    :alt: Enable the feature on settings in Odoo Project
 
 | *Set Email Template to Stages* in order to define the template to be sent at a specific stage(s).
 | Choose an existing template or create one on the fly.
 
-.. image:: media/rating_template.png
+.. image:: feedback/rating_template.png
    :align: center
    :alt: Click on set email template and choose one in Odoo Project
 
@@ -31,7 +31,7 @@ Choosing the projects I want feedback from
 | Enable *Rating visible publicly* if you would like to publish the ratings in order to communicate
   them to a customer, prospect or the rest of your team.
 
-.. image:: media/customer_rating.png
+.. image:: feedback/customer_rating.png
    :align: center
    :height: 370
    :alt: View of a project's form to choose the customer rating in Odoo Project
@@ -39,7 +39,7 @@ Choosing the projects I want feedback from
 .. tip::
    See the customer rating email sent under the *Log notes* of your task.
 
-   .. image:: media/rating_chatter.png
+   .. image:: feedback/rating_chatter.png
       :align: center
       :alt: View of the chatter and the rating email sent to the customer in Odoo Project
 
@@ -48,14 +48,14 @@ Get reports
 
 Under :menuselection:`Project --> Reporting --> Customer Ratings` see ratings by task.
 
-.. image:: media/rating_report.png
+.. image:: feedback/rating_report.png
    :align: center
    :alt: View of the customer rating report in Odoo Project
 
 Clicking on the percentage of happy ratings over the last 30 days in the *Projects* overview,
 redirects you to your website with more rating details.
 
-.. image:: media/percentage_happy.png
+.. image:: feedback/percentage_happy.png
    :align: center
    :height: 300
    :alt: Project overview shows the percentage of happy ratings in Odoo Project

@@ -9,7 +9,7 @@ Have an itinerary displayed directly in Odoo
 ============================================
 Go to *Settings* and under *Map view* click on *Get token*.
 
-.. image:: media/plit1.png
+.. image:: planning_itinerary/plit1.png
    :alt: Configure Mapbox for Odoo Field Service
 
 Click on :menuselection:`Start mapping for free --> fill the Username, email and password fields
@@ -17,18 +17,18 @@ Click on :menuselection:`Start mapping for free --> fill the Username, email and
 your account. Scrolling the page down you will find *Access tokens*. Copy the *Default public
 token*.
 
-.. image:: media/plit2.png
+.. image:: planning_itinerary/plit2.png
    :align: center
    :alt: Configure Mapbox for Odoo Field Service
 
 Back in Odoo, paste it on :menuselection:`Token --> Save`.
 
-.. image:: media/plit3.png
+.. image:: planning_itinerary/plit3.png
    :alt: Configure Mapbox for Odoo Field Service
 
 Now, your maps will show the itinerary based on the scheduled time and best route.
 
-.. image:: media/plit4.png
+.. image:: planning_itinerary/plit4.png
    :align: center
    :alt: Configure Mapbox for Odoo Field Service
 

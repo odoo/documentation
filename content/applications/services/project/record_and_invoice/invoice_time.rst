@@ -19,7 +19,7 @@ Create a sales order and invoice from a task
 | Once the time spent on a task under that project has been recorded, click on *Create Sales Order*
   and continue to create your invoice.
 
-.. image:: media/sales_timesheet.png
+.. image:: invoice_time/sales_timesheet.png
    :align: center
    :alt: Have the sales order menu and the timesheet tab being shown under a task in Odoo Project
 
@@ -37,7 +37,7 @@ Create a sales order and invoice from a project
   billed by the same rate, or by the employee rate: timesheets are billed by the individual
   rate of the employee.
 
-.. image:: media/create_sales.png
+.. image:: invoice_time/create_sales.png
    :align: center
    :alt: Click on create sales order and choose the billing type in Odoo Project
 
@@ -52,7 +52,7 @@ Invoice only approved timesheets
 Go to :menuselection:`Timesheets --> Configuration --> Settings --> Invoicing Policy`, and choose
 *Approved timesheets only*.
 
-.. image:: media/invoice_approved.png
+.. image:: invoice_time/invoice_approved.png
    :align: center
    :alt: Enabling the feature to invoice only approved timesheets in Odoo Project
 

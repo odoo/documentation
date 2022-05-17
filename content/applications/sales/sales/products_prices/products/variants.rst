@@ -122,7 +122,7 @@ menu :menuselection:`Configuration --> Settings`, locate the **Products Variants
 and tick the option **Products can have several attributes**, then click
 on **Apply**.
 
-.. image:: media/variant01.png
+.. image:: variants/variant01.png
    :align: center
 
 Creating products with variants
@@ -143,14 +143,14 @@ In **Attributes**, click on the rolldown menu and select the type of
 variance you wish to add. If the variant does not yet exist, you can
 create it on the fly by clicking on Create and edit…
 
-.. image:: media/variant02.png
+.. image:: variants/variant02.png
    :align: center
 
 In the Attributes window, the **Value** field is the description of the
 attribute such as Green, Plastic or 32GB. The **Attribute** field is the
 type of variant such as Color, Material or Memory.
 
-.. image:: media/variant03.png
+.. image:: variants/variant03.png
    :align: center
 
 You can add a cost for the variant on the fly by adding it in the
@@ -189,7 +189,7 @@ To do this, click on the **Variants** button, select the XXL, White
 T-shirt. From the product form, uncheck the **Active** box of the T-shirt
 White, XXL.
 
-.. image:: media/variant04.png
+.. image:: variants/variant04.png
    :align: center
 
 .. tip::
@@ -207,14 +207,14 @@ products. To do so, go to the Sales module, open :menuselection:`Sales --> Produ
 and click on the product you want to modify. Click on the **Variant Prices**
 button to access the list of variant values.
 
-.. image:: media/variant05.png
+.. image:: variants/variant05.png
    :align: center
 
 Click on the variant name you wish to add a value to, to make the 3
 fields editable. In the **Attribute Price Extra** field, add the cost of
 the variant that will be added to the original price.
 
-.. image:: media/variant06.png
+.. image:: variants/variant06.png
    :align: center
 
 When you have entered all the extra values, click on **Save**.

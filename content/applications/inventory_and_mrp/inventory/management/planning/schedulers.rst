@@ -38,7 +38,7 @@ Schedulers`. The scheduler uses all the relevant parameters defined for
 products, suppliers and the company to prioritize the different
 production orders, deliveries and supplier purchases.
 
-.. image:: media/schedulers_01.png
+.. image:: schedulers/schedulers_01.png
     :align: center
 
 Configure and run the scheduler (for advanced users)
@@ -50,5 +50,5 @@ Then, go to :menuselection:`Settings --> Technical --> Automation --> Scheduled 
 and modify the *Run MRP Scheduler Configuration*. There, you can set
 the starting time of the scheduler.
 
-.. image:: media/schedulers_03.png
+.. image:: schedulers/schedulers_03.png
     :align: center

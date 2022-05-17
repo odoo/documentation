@@ -12,7 +12,7 @@ What are the payment status
 ===========================
 At anytime, the salesman can check the transaction status from the order.
 
-.. image:: media/payment_transaction.png
+.. image:: payment_acquirer/payment_transaction.png
     :align: center
 
 * *Draft*: transaction under processing.
@@ -47,7 +47,7 @@ When the order is confirmed you can also have an invoice automatically issued
 and paid. This fully-automated made for businesses that invoice 
 orders straight on.
 
-.. image:: media/payment_invoice.png
+.. image:: payment_acquirer/payment_invoice.png
     :align: center
 
 .. note::
@@ -65,13 +65,13 @@ With this mode, the order is confirmed but the amount is kept on hold.
 Once the delivery processed, you can capture the payment from Odoo.
 This mode is only available with Authorize.net.
 
-.. image:: media/payment_capture_mode.png
+.. image:: payment_acquirer/payment_capture_mode.png
     :align: center
 
 To capture the payment, open the transaction from the order.
 Then click *Capture Transaction*.
 
-.. image:: media/payment_capture.png
+.. image:: payment_acquirer/payment_capture.png
     :align: center
 
 With other payment acquirers, you can manage the capture in

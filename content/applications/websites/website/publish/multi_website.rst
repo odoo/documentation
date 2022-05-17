@@ -2,7 +2,7 @@
 Manage Multi Websites
 =====================
 
-.. image:: media/multi_website04.png
+.. image:: multi_website/multi_website04.png
   :align: center
 
 Odoo’s Multi-Websites opens up broad possibilities of diversification and
@@ -22,7 +22,7 @@ The button, *Create a new website*, lays in the first section.
 
 
 
-.. image:: media/multi_website05.png
+.. image:: multi_website/multi_website05.png
   :align: center
 
 In the upcoming prompt, set a name for your new website and a specific
@@ -30,7 +30,7 @@ domain name. Leave empty to publish the new website under the default
 domain of your Odoo database. You can later set some country groups to
 redirect visitors to it using Geo IP.
 
-.. image:: media/multi_website01.png
+.. image:: multi_website/multi_website01.png
   :align: center
 
 Then, select a theme. This new website might have an entirely different
@@ -40,7 +40,7 @@ different theme!
 Once the theme is selected, you can start to build the homepage of your
 website. Follow the purple drops; they will help you in the first steps.
 
-.. image:: media/multi_website08.png
+.. image:: multi_website/multi_website08.png
   :align: center
 
 
@@ -64,7 +64,7 @@ edit bar. Switching to another website will connect to the domain of
 this website. If you use another domain for the website, the user is
 requested to sign in.
 
-.. image:: media/multi_website03.png
+.. image:: multi_website/multi_website03.png
   :align: center
 
 .. note::
@@ -82,13 +82,13 @@ removing the menu item.
 Each website comes with a high range of specific options in the
 settings. First, select the website to configure.
 
-.. image:: media/multi_website15.png
+.. image:: multi_website/multi_website15.png
   :align: center
 
 Then, take a look at the options flagged with the earth icon. It means
 they only impact the very website you are working on.
 
-.. image:: media/multi_website12.png
+.. image:: multi_website/multi_website12.png
   :align: center
 
 You can, for instance, set specific :
@@ -115,7 +115,7 @@ use a specific one. If you share it and want to adapt the content per
 region, set country groups in the setting of each website. Visitors will
 be redirected to the right website using GeoIP.
 
-.. image:: media/multi_website18.png
+.. image:: multi_website/multi_website18.png
   :align: center
 
 .. note::
@@ -145,7 +145,7 @@ each website. Go through the different pages to adapt them to this new
 audience. Focus on workflows, and automatic pages (eCommerce checkout,
 blogs, events, etc.) as the number of available options is higher there.
 
-.. image:: media/multi_website14.png
+.. image:: multi_website/multi_website14.png
   :align: center
 
 Publish specific content per website
@@ -157,7 +157,7 @@ post, etc.) is always only published in the current website. You can
 change that from the edit form view in the backend and leave the
 *Website* field blank. This will publish it in all the websites.
 
-.. image:: media/multi_website06.png
+.. image:: multi_website/multi_website06.png
   :align: center
 
 Here are all the objects that you can link to *either one or all the
@@ -191,7 +191,7 @@ website. You can duplicate it to other websites from
 If you want to duplicate it in just one other website, duplicate the
 page and set the new website.
 
-.. image:: media/multi_website09.png
+.. image:: multi_website/multi_website09.png
   :align: center
 
 When you edit the page again, the change only affects the current
@@ -202,7 +202,7 @@ The original page still being linked to all websites.
       By grouping pages by URL in the page manager, you quickly find
       the original page behind each edited page.
 
-.. image:: media/multi_website10.png
+.. image:: multi_website/multi_website10.png
   :align: center
 
 Multi-companies
@@ -211,7 +211,7 @@ Multi-companies
 Each website can be linked to a specific company of your system, in a
 multi-companies environment.
 
-.. image:: media/multi_website16.png
+.. image:: multi_website/multi_website16.png
   :align: center
 
 With such a configuration, only company-related data appear on the
@@ -225,7 +225,7 @@ is it for visitors.
 .. note::
       If websites are multi-companies, you don’t change company when switching websites. To change the company and see the related content, use the company selector in the menu.
 
-.. image:: media/multi_website02.png
+.. image:: multi_website/multi_website02.png
   :align: center
 
 Configure your eCommerce website
@@ -242,7 +242,7 @@ We already saw earlier how to publish a specific record in only one
 website. You will find the \*Website\* field in the eCommerce tab of the
 product edit form. Empty means available in all websites.
 
-.. image:: media/multi_website13.png
+.. image:: multi_website/multi_website13.png
   :align: center
 
 Products available on *some* websites
@@ -269,7 +269,7 @@ pricelists. See :doc:`../../ecommerce/maximizing_revenue/pricing`.
 If you need help. Select a website to make a pricelist only available on
 this website.
 
-.. image:: media/multi_website07.png
+.. image:: multi_website/multi_website07.png
   :align: center
 
 Leaving the field empty means that you make it work in all websites if
@@ -293,7 +293,7 @@ the websites or compel them to create one account for each website. This
 last option is convenient if your websites shouldn’t be related to each
 other in the visitor mind.
 
-.. image:: media/multi_website17.png
+.. image:: multi_website/multi_website17.png
   :align: center
 
 Technical hints for customization
@@ -313,5 +313,5 @@ tips to make it work with multi websites:
        the domain to only display records available for the current
        website.
 
-.. image:: media/multi_website11.png
+.. image:: multi_website/multi_website11.png
   :align: center

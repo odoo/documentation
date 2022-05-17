@@ -12,7 +12,7 @@ Get started
 
 Go to :menuselection:`SMS Marketing --> Create`.
 
-.. image:: ./media/sms_marketing1.png
+.. image:: sms_mailing_reports/sms_marketing1.png
    :align: center
 
 | Specify a *subject* name to help you remembering what the mailing is about.
@@ -21,13 +21,13 @@ Go to :menuselection:`SMS Marketing --> Create`.
 | From there, you can refine your recipient list with the *add filter* option. In the example below,
   the message would be sent to the contacts living in Belgium.
 
-.. image:: ./media/sms_marketing2.png
+.. image:: sms_mailing_reports/sms_marketing2.png
    :align: center
 
 The *Mailing list* option, on the other hand, allows you to choose the specific mailing lists you
 created to group specific contacts. You are allowed to select multiple ones.
 
-.. image:: ./media/sms_marketing3.png
+.. image:: sms_mailing_reports/sms_marketing3.png
    :align: center
 
 | Under the *SMS Content* tab, links can be included and Odoo automatically generates *link
@@ -35,7 +35,7 @@ created to group specific contacts. You are allowed to select multiple ones.
 | Under *Settings* you have the option *Include opt-out link*. If activated, the contact
   is able to unsubscribe from the mailing list.
 
-.. image:: ./media/sms_marketing4.png
+.. image:: sms_mailing_reports/sms_marketing4.png
    :align: center
    :width: 450
 
@@ -43,7 +43,7 @@ created to group specific contacts. You are allowed to select multiple ones.
    In the *Link Tracker* menu under *Configuration*, you can see the history of your sent links,
    access them and look at statistics.
 
-   .. image:: ./media/sms_marketing5.png
+   .. image:: sms_mailing_reports/sms_marketing5.png
       :align: center
 
 .. note::
@@ -52,7 +52,7 @@ created to group specific contacts. You are allowed to select multiple ones.
 Send a mailing
 ==============
 
-.. image:: ./media/sms_marketing6.png
+.. image:: sms_mailing_reports/sms_marketing6.png
 
 Once you have your mailing created, you must choose when you would like it to be delivered:
 
@@ -72,14 +72,14 @@ Visualize reports
 Under the *Reporting* menu apply filters, measures, and adopt different layouts to do analyses of
 the performance of your SMS mailings.
 
-.. image:: ./media/sms_marketing7.png
+.. image:: sms_mailing_reports/sms_marketing7.png
    :align: center
 
 .. tip::
    You can also check the price to send an SMS for your country by clicking on the *Information*
    icon.
 
-   .. image:: ./media/sms_marketing8.png
+   .. image:: sms_mailing_reports/sms_marketing8.png
       :align: center
 
 .. note::

@@ -18,19 +18,19 @@ Configuration Steps
 #. Check that the Australian localization module (Australia - Accounting) is installed.
 #. Configure the *KeyPay API*.
 
-   .. image:: media/australia-keypay-api.png
+   .. image:: australia/australia-keypay-api.png
       :align: center
       :alt: Odoo Accounting settings includes a section for the Australian Loclization
 
 #. More fields become visible after clicking on *Enable KeyPay Integration*.
 
-   .. image:: media/australia-keypay-integration.png
+   .. image:: australia/australia-keypay-integration.png
       :align: center
       :alt: Enabling KeyPay Integration in Odoo Accounting displays new fields in the settings
 
 #. You can find the API Key in the *My Account* section of the KeyPay platform.
 
-   .. image:: media/australia-keypay-myaccount.png
+   .. image:: australia/australia-keypay-myaccount.png
       :align: center
       :alt: "Account Details" section on the KeyPay dashboard
 
@@ -38,7 +38,7 @@ Configuration Steps
    change it.*
 #. You can find the **Business ID** in the KeyPay URL. (i.e., ``189241``)
 
-   .. image:: media/australia-keypay-business-id.png
+   .. image:: australia/australia-keypay-business-id.png
       :align: center
       :alt: The KeyPay "Business ID" number is in the URL
 
@@ -51,14 +51,14 @@ The API syncs the journal entries from KeyPay to Odoo and leaves them in draft m
 includes the KeyPay payslip entry ID in brackets for the user to easily retrieve the same record in
 KeyPay and Odoo.
 
-.. image:: media/australia-keypay-journal-entry.png
+.. image:: australia/australia-keypay-journal-entry.png
    :align: center
    :alt: Example of a KeyPay Journal Entry in Odoo Accounting (Australia)
 
 .. note::
    The API sync is triggered by scheduled actions.
 
-   .. image:: media/australia-keypay-scheduled-actions.png
+   .. image:: australia/australia-keypay-scheduled-actions.png
       :align: center
       :alt: Scheduled Actions settings for KeyPay Payroll in Odoo (debug mode)
 
@@ -67,7 +67,7 @@ Odoo).
 
 The accounts used by KeyPay are defined in the section **Payroll settings**.
 
-.. image:: media/australia-keypay-chart-of-accounts.png
+.. image:: australia/australia-keypay-chart-of-accounts.png
    :align: center
    :alt: Chart of Accounts menu in KeyPay
 

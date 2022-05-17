@@ -18,7 +18,7 @@ First, you need to go in :menuselection:`Inventory --> Configuration --> Setting
 activate the landed costs feature. You can also determine the default
 journal in which the landed cost accounting entries will be recorded.
 
-.. image:: media/integrating_landed_costs_01.png
+.. image:: integrating_landed_costs/integrating_landed_costs_01.png
     :align: center
 
 Add costs to products
@@ -30,7 +30,7 @@ Receive the vendor bill
 Let’s imagine I receive a bill from custom duties for a shipment. I’ll
 tick the box *Landed Costs* on the vendor bill line.
 
-.. image:: media/integrating_landed_costs_02.png
+.. image:: integrating_landed_costs/integrating_landed_costs_02.png
     :align: center
 
 .. note::
@@ -39,14 +39,14 @@ tick the box *Landed Costs* on the vendor bill line.
 If this product is always a landed cost, you can also define it on the
 product and avoid having to tick the box on each vendor bill.
 
-.. image:: media/integrating_landed_costs_03.png
+.. image:: integrating_landed_costs/integrating_landed_costs_03.png
     :align: center
 
 At the top of my vendor bill, I’ll see a button *create landed costs*.
 I click on this button and a landed cost is automatically created. I can
 now decide on which picking those additional costs should apply.
 
-.. image:: media/integrating_landed_costs_04.png
+.. image:: integrating_landed_costs/integrating_landed_costs_04.png
     :align: center
 
 I can now click on *Compute* and go in the tab *Valuation
@@ -56,7 +56,7 @@ to validate the landed cost.
 I can access the journal entry that has been created by the landed cost
 by clicking on the journal entry.
 
-.. image:: media/integrating_landed_costs_05.png
+.. image:: integrating_landed_costs/integrating_landed_costs_05.png
     :align: center
 
 .. note::

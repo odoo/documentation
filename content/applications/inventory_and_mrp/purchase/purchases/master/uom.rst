@@ -39,7 +39,7 @@ Enter the purchase module, select :menuselection:`Configuration --> Settings`
 and tick the **Some products may be sold/purchased in different unit of measures
 (advanced)** box.
 
-.. image:: media/uom08.png
+.. image:: uom/uom08.png
     :align: center
 
 Specify sales and purchase unit of measures
@@ -70,7 +70,7 @@ of Measure** (for purchase).
 In this case select **Liters** for **Unit of Measure** and **Gallons** for
 **Purchase Unit of Measure**.
 
-.. image:: media/uom05.png
+.. image:: uom/uom05.png
     :align: center
 
 Create your own unit of measure and unit of measure category
@@ -90,13 +90,13 @@ To do so, go into your sales module select
 Create a new unit of **Measure Category** by selecting
 the dropdown list and clicking on create and edit (see picture below).
 
-.. image:: media/uom03.png
+.. image:: uom/uom03.png
     :align: center
 
 Create a new unit of measure. In this case our category will be called
 **Inter-Category-Computation**.
 
-.. image:: media/uom06.png
+.. image:: uom/uom06.png
     :align: center
 
 The next step is to create the **Rolls** and **Square meter** units of
@@ -112,7 +112,7 @@ Create two new units:
     on this measure (ex: 1 roll = 10 square meters, 2 rolls = 20
     square meters, etc.).
 
-.. image:: media/uom04.png
+.. image:: uom/uom04.png
     :align: center
 
 -   For the **Square Meter**, we will specify that ``1 Roll = 10 square meters``
@@ -120,14 +120,14 @@ Create two new units:
     the square meter is bigger than the reference unit. The **Bigger
     Ratio** is ``10`` as ``one Roll = 10 square meters``.
 
-.. image:: media/uom09.png
+.. image:: uom/uom09.png
     :align: center
 
 It is now possible to input **square meters** as Unit of measure and a
 **Roll** as Purchase Unit of Measure in the product form.
 
-.. image:: media/uom07.png
+.. image:: uom/uom07.png
     :align: center
 
-.. |uom01| image:: ./media/uom01.png
-.. |uom02| image:: ./media/uom02.png
+.. |uom01| image:: uom/uom01.png
+.. |uom02| image:: uom/uom02.png

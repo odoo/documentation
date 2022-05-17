@@ -14,7 +14,7 @@ When creating your survey, choose a *Title* and *Category*. The *Category* field
 which context the survey is being conducted, as different applications might use it for different
 purposes such as recruitment, certification, or employee appraisal.
 
-.. image:: media/new_survey.png
+.. image:: create/new_survey.png
    :align: center
    :alt: Form view of a survey with a title and category being chosen in Odoo Surveys
 
@@ -36,7 +36,7 @@ Tab: Questions
   displayed as an answer choice, with which a text type field is displayed.
 - *Matrix Type*: choose if you would like to have one or multiple choices per row.
 
-.. image:: media/sections_questions.png
+.. image:: create/sections_questions.png
    :align: center
    :alt: Sections and questions view of a survey in Odoo Surveys
 
@@ -45,7 +45,7 @@ Tab: Description
 
 Write a *Description* to be displayed under the title of the survey's homepage.
 
-.. image:: media/frontend_description.png
+.. image:: create/frontend_description.png
    :align: center
    :alt: Frontend of a survey showing the title and description of a survey for Odoo Surveys
 
@@ -59,7 +59,7 @@ Under the tab *Options*, choose the *Layout* of your questions. If choosing *One
 *One page per question*, an option *Back Button* becomes available, which allows the user to go back
 pages.
 
-.. image:: media/tab_options_layout.png
+.. image:: create/tab_options_layout.png
    :align: center
    :alt: Form view of a survey emphasizing the layout feature under options in Odoo Surveys
 
@@ -71,7 +71,7 @@ Test and share the survey
 | By default, a filter *Except Test Entries* is applied to keep the list of entries clean with only
   real participants.
 
-.. image:: media/user_feedback.png
+.. image:: create/user_feedback.png
    :align: center
    :alt: View list of the participations of a survey in Odoo Surveys
 
@@ -79,7 +79,7 @@ Test and share the survey
   Participations`.
 | Click on *See results* to be redirected to an analytical page.
 
-.. image:: media/analytical_page.png
+.. image:: create/analytical_page.png
    :align: center
    :alt: View of an analytical page for Odoo Surveys
 

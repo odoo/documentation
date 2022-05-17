@@ -13,14 +13,14 @@ Configuration
   *Track Proposals on Website* become available. Enabling them adds the menus *Talks*,
   *Talk Proposals*, and *Agenda* to your website.
 
-.. image:: media/track_proposals_website.png
+.. image:: track_talks/track_proposals_website.png
    :align: center
    :alt: View of an event form and the options to track and propose speaker in Odoo Events
 
 Besides having the ability to suggest their own talks, the website now allows users to see a list of
 the whole agenda and scheduled talks.
 
-.. image:: media/website_menus.png
+.. image:: track_talks/website_menus.png
    :align: center
    :alt: View of the published website and the menus talks, talk proposal and agenda in Odoo Events
 
@@ -34,14 +34,14 @@ Publishing speaker proposals
 Once partners have filled in the appropriate form and submitted their proposals, a new *Proposal* is
 instantly created under the menu *Track*.
 
-.. image:: media/proposals_list.png
+.. image:: track_talks/proposals_list.png
    :align: center
    :alt: View of the talks’ proposals page emphasizing the column proposal in Odoo Events
 
 If the proposal is accepted and can go online, simply open its form and click on *Go to Website*.
 From the website page, turn *Published* on.
 
-.. image:: media/publish_speakers.png
+.. image:: track_talks/publish_speakers.png
    :align: center
    :alt: View of the website page to publish a proposed talk for Odoo Events
 

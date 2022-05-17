@@ -10,7 +10,7 @@ Enable the feature
 Go to :menuselection:`Field Service --> Configuration` and enable
 :menuselection:`Worksheet Templates --> Save`.
 
-.. image:: media/cc1.png
+.. image:: customize_worksheets/cc1.png
    :align: center
    :alt: Custom Worksheet in Odoo Field Service
 
@@ -20,7 +20,7 @@ Under :menuselection:`Configuration --> Worksheet Templates`, click on *Create* 
 *Design Worksheet Template*.
 You will be redirected to the *Studio* application.
 
-.. image:: media/cc2.png
+.. image:: customize_worksheets/cc2.png
    :align: center
    :alt: Custom Worksheet in Odoo Field Service
 
@@ -30,7 +30,7 @@ Once you are done, click on *Close* and get an overview of the work done.
 *Worksheets* is where you can see how many times the worksheet has been used/completed under a task.
 *Analysis* examines all the worksheets under that given template and generates a graph.
 
-.. image:: media/cc3.png
+.. image:: customize_worksheets/cc3.png
    :align: center
    :alt: Custom Worksheet in Odoo Field Service
 

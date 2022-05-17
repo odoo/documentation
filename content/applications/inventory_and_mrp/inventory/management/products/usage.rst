@@ -10,7 +10,7 @@ have the possibility to specify the unit of measure in which you manage
 your stock and the one which is used when purchasing the product to your
 supplier.
 
-.. image:: media/usage_01.png
+.. image:: usage/usage_01.png
     :align: center
 
 The *conversion* between the different units of measure is done
@@ -22,13 +22,13 @@ run the scheduler, the quantity added in the automatically generated
 purchase order will be in dozens but what will enter the stock will be
 units.
 
-.. image:: media/usage_02.png
+.. image:: usage/usage_02.png
     :align: center
 
-.. image:: media/usage_03.png
+.. image:: usage/usage_03.png
     :align: center
 
-.. image:: media/usage_04.png
+.. image:: usage/usage_04.png
     :align: center
 
 Packages
@@ -44,10 +44,10 @@ To separate a delivery into different packages you will have to set the
 done quantity to the desired package quantity then click on "PUT IN 
 PACK", do this for each package.
 
-.. image:: media/usage_05.png
+.. image:: usage/usage_05.png
     :align: center
 
-.. image:: media/usage_06.png
+.. image:: usage/usage_06.png
     :align: center
 
 Packaging
@@ -60,10 +60,10 @@ notice and the power plug.
 In Odoo, packagings are used for indicative purposes on sale orders.
 They can be specified on the product form, in the inventory tab.
 
-.. image:: media/usage_07.png
+.. image:: usage/usage_07.png
     :align: center
 
-.. image:: media/usage_08.png
+.. image:: usage/usage_08.png
     :align: center
 
 .. note::

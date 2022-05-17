@@ -15,7 +15,7 @@ configured to post all entries in a dedicated *Account*.
 Every **Bank Journal** is displayed by default on the **Accounting Overview** in the form of a
 convenient card. It includes action buttons that are displayed when appropriate.
 
-.. image:: media/bank_accounts_card.png
+.. image:: bank_accounts/bank_accounts_card.png
    :align: center
    :alt: Bank Journals Cards are displayed on the Accounting Overview in Odoo Accounting
 
@@ -40,7 +40,7 @@ instructions on-screen.
    :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this bank
    synchronization.
 
-.. image:: media/bank_accounts_connect.png
+.. image:: bank_accounts/bank_accounts_connect.png
    :align: center
    :alt: Select a bank institution in the list and connect it to Odoo Accounting
 
@@ -66,7 +66,7 @@ To add a new bank account manually, go to :menuselection:`Accounting --> Configu
 .. note::
    Odoo detects the bank account type (e.g., IBAN) and enables some features accordingly.
 
-.. image:: media/bank_accounts_manual.png
+.. image:: bank_accounts/bank_accounts_manual.png
    :align: center
    :alt: Add manually a new bank account in Odoo Accounting
 .. _bank_accounts_configuration:
@@ -85,7 +85,7 @@ Account Holder, Account Holder Name, and your Bank Institution's details by clic
 You can configure which types of payments are enabled in the **Payment Method Types** section and
 how the bank statements are recorded and posted in the **Bank Statements** section.
 
-.. image:: media/bank_accounts_configuration.png
+.. image:: bank_accounts/bank_accounts_configuration.png
    :align: center
    :alt: Advanced configuration of a bank account in Odoo Accounting
 

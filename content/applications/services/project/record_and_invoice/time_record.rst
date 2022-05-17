@@ -14,7 +14,7 @@ Manually timesheet on task
   enable the *Timesheets* option on the project.
 | Now, once you are in your task, under the *Timesheet* tab, *Add a line* and specify the *Duration*.
 
-.. image:: media/manually_timesheet.png
+.. image:: time_record/manually_timesheet.png
    :align: center
    :alt: On the task under the timesheets tab add the time spent in Odoo Project Application
 
@@ -26,7 +26,7 @@ Time tasks
 | Now, you can time your task clicking on *Start*. *Pause* at any moment, and *Stop* to confirm the
   recorded time and add a description.
 
-.. image:: media/time_tasks.png
+.. image:: time_record/time_tasks.png
    :align: center
    :alt: Click on start in the task to initiate the timer in Odoo Project Application
 

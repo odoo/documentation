@@ -14,7 +14,7 @@ Configure the product
 Open a product form and, under the inventory tab, tick the routes
 *Buy* and *Make To Order*.
 
-.. image:: media/purchase_triggering01.png
+.. image:: purchase_triggering/purchase_triggering01.png
     :align: center
 
 Don't forget to also set a vendor under the *Purchase* tab.
@@ -34,14 +34,14 @@ A new RfQ will automatically be created in your *Purchases* module.
 Note that you can see for which SO this RfQ has been created thanks to
 the *Source Document* field, visible on the RfQ.
 
-.. image:: media/purchase_triggering02.png
+.. image:: purchase_triggering/purchase_triggering02.png
     :align: center
 
 When you confirm the RfQ into a purchase order, a receipt is
 automatically created and directly accessible from your purchase order
 with the use of the *Shipment* button.
 
-.. image:: media/purchase_triggering03.png
+.. image:: purchase_triggering/purchase_triggering03.png
     :align: center
 
 You can validate the receipt of your products. When you will go back to
