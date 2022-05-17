@@ -1,15 +1,14 @@
-====================================================
-Connect a SIX Payment Terminal to your PoS
-====================================================
+=========================================
+Connect a SIX Payment Terminal to the PoS
+=========================================
 
-Connecting a SIX payment terminal allows you to offer a fluid
-payment flow to your customers and ease the work of your cashiers.
+Connecting a SIX payment terminal allows you to offer a fluid payment flow to your customers and
+ease the work of your cashiers.
 
 .. warning::
-   Even though Worldline has recently acquired SIX Payment Services and both
-   companies use Yomani payment terminals, the firmware they run is different.
-   Terminals received from Worldline are therefore not compatible with this
-   integration.
+   Even though Worldline has recently acquired SIX Payment Services and both companies use Yomani
+   payment terminals, the firmware they run is different. Terminals received from Worldline are
+   therefore not compatible with this integration.
 
 Configuration
 =============
@@ -17,38 +16,40 @@ Configuration
 Configure the Payment Method
 ----------------------------
 
-First, make sure that the POS Six module is installed. For this, go to *Apps*,
-remove the "Apps" filter and search for "POS Six".
+First, make sure that the :guilabel:`POS Six` module is installed. For this, go to
+:guilabel:`Apps`, remove the :guilabel:`Apps` filter, and search for *POS Six*.
 
-.. image:: six/six_01.png
-    :align: center
+.. image:: six/pos-six-module.png
+   :align: center
+   :alt: The POS Six module.
 
-Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`, create a new payment
-method for SIX, select the appropriate journal, select *SIX* in the **Use a Payment Terminal**
-field, then enter your payment terminal IP address.
+Back in :menuselection:`Point of Sale --> Configuration --> Payment Methods`, click
+:guilabel:`Create` to create a new payment method for SIX, select the payment terminal option
+:guilabel:`SIX`, and enter the payment terminal IP address.
 
-.. note::
-   The journal's type must be *bank* to select a payment terminal.
+.. image:: six/new-payment-method.png
+   :align: center
+   :alt: Create a new payment method for the SIX payment terminal.
 
 Pay with a Payment Terminal
 ===========================
 
-In your PoS interface, at the moment of the payment, select a payment
-method using a payment terminal. Verify that the amount in the tendered
-column is the one that has to be sent to the payment terminal and click
-on *Send*. If you want to cancel the payment request, click on cancel.
+In the :abbr:`PoS (Point of Sale)` interface, at the moment of the payment, select a payment method
+using a payment terminal. Verify that the amount in the tendered column is the one that has to be
+sent to the payment terminal and click on :guilabel:`Send`. To cancel the payment request, click on
+:guilabel:`Cancel`.
 
-.. image:: six/six_06.png
-    :align: center
+.. image:: six/pos-send-payment.png
+   :align: center
+   :alt: The PoS interface.
 
-When the payment is done, the status will change to *Payment
-Successful*. You can always reverse the last transaction by clicking on
-*Reverse*.
+When the payment is done, the status will change to :guilabel:`Payment Successful`. If needed,
+reverse the last transaction by clicking on :guilabel:`Reverse`.
 
-.. image:: six/six_07.png
-    :align: center
+.. image:: six/pos-reverse-payment.png
+   :align: center
+   :alt: The Reverse button on the PoS interface.
 
-If there is any issue with the payment terminal, you can still force the
-payment using the *Force Done*. This will allow you to validate the
-order in Odoo even if the connection between the terminal and Odoo
-encounters issues.
+If there is any issue with the payment terminal, you can still force the payment using the
+:guilabel:`Force Done` button. This will allow you to validate the order in Odoo even if there are
+connection issues between the payment terminal and Odoo.
