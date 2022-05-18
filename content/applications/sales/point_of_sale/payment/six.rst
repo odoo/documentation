@@ -2,8 +2,8 @@
 SIX
 ====
 
-Connecting a SIX payment terminal allows you to offer a fluid
-payment flow to your customers and ease the work of your cashiers.
+Connecting a SIX payment terminal allows you to offer a fluid payment flow to your customers and
+ease the work of your cashiers.
 
 .. warning::
    Even though Worldline has recently acquired SIX Payment Services and both
