@@ -1,6 +1,6 @@
-=========================================
-Connect a SIX Payment Terminal to the PoS
-=========================================
+====
+SIX
+====
 
 Connecting a SIX payment terminal allows you to offer a fluid payment flow to your customers and
 ease the work of your cashiers.
