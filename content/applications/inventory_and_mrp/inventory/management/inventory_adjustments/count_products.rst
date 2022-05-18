@@ -37,7 +37,7 @@ Just press *Apply* on the line or button *Apply All* button on the top of the sc
 Count products
 ==============
 
-Counting products is a recurent activity in a warehouse. It often happens that theoric 
+Counting products is a recurring activity in a warehouse. It often happens that theoric 
 stock levels are not correct and must be amended. 
 
 If a count is correct, press on *set*, it will copy the on hand quantity in the counted
@@ -62,7 +62,7 @@ Plan counts
 On each line there is:
 - *Scheduled Date*: it's the date at which a count should be made.
 - *User*: it's the person in charge of the count.
-- *Accounting Date*: this is the dat at which the adjustments will be accounted. The
+- *Accounting Date*: this is the date at which the adjustments will be accounted. The
   column is hidden by default.
 
 .. image:: count_products/plan.png
@@ -85,7 +85,7 @@ prefill the quantity with the on hand quantity.
     The report offers a lot of filters that you can use to make your selection
     
 By default, after an adjustment is applied, the scheduled date for the next 
-count is the 31th of december of the current year. This is a setting that can
+count is the 31st of december of the current year. This is a setting that can
 be modified in :menuselection:`Inventory --> Configuration --> Settings`.
 under the setting **Annual Inventory Day and Month**
 
