@@ -47,15 +47,18 @@ Fiscal localization packages available
   - Denmark - Accounting Reports
 
 - Dominican Republic - Accounting
+- EU One Stop Shop (OSS)
 - Ecuador - Accounting
 - Ethiopia - Accounting
-- EU Mini One Stop Shop (MOSS)
+- Finland - Sale
 - Finnish Localization
 - France - Accounting
 - Generic - Accounting
 - Germany
 
   - Germany - Accounting
+  - Germany - Certification for Point of Sale
+  - Germany - Certification for Point of Sale of type restaurant
   - Germany SKR03 - Accounting
   - Germany SKR04 - Accounting
 
@@ -101,6 +104,7 @@ Fiscal localization packages available
 
   - Netherlands - Accounting
   - Netherlands - Intrastat Declaration
+  - Netherlands - Intrastat Declaration Reports
 
 - New Zealand - Accounting
 - Norway - Accounting
@@ -120,7 +124,11 @@ Fiscal localization packages available
   - Sweden - Structured Communication OCR
   - Swedish - Accounting
 
-- Switzerland - Accounting
+- Switzerland
+
+  - Switzerland - Accounting
+  - Switzerland - QR-IBAN
+
 - Thailand - Accounting
 - Turkey - Accounting
 - U.A.E. - Accounting
