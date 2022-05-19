@@ -9,6 +9,7 @@ Shop Features
 
    shop/invoice
    shop/barcode
+   shop/sales_order
    shop/multicashiers
    shop/reprint
    shop/cash_rounding
