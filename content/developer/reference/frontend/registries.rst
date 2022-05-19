@@ -298,7 +298,7 @@ Example:
     registry.category("user_menuitems").add("my item", (env) => {
         return {
             description: env._t("Technical Settings"),
-            callback: () => { env.services.action_manager.doAction(3); };
+            callback: () => { env.services.action_manager.doAction(3); },
             hide: (Math.random() < 0.5),
         };
-    }
+    });
