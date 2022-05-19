@@ -14,12 +14,7 @@ Fiscal localization packages available
 ======================================
 
 - Algeria - Accounting
-- Argentina
-
-  - Argentinian Accounting
-  - Argentinian Accounting Reports
-  - Argentinian Electronic Invoicing
-
+- Argentina - Accounting
 - Australian - Accounting
 - Austria - Accounting
 - Belgium - Accounting
@@ -27,35 +22,19 @@ Fiscal localization packages available
 - Brazilian - Accounting
 - Canada - Accounting
 - Chile - Accounting
-- China
-
-  - China - Accounting
-  - China - City Data
-  - China - Small Business CoA
-  - China - Standard CoA
-
-- Colombia
-
-  - Colombian - Accounting
-  - Colombian - Point of Sale
-
+- China - Accounting
+- Colombia - Accounting
 - Costa Rica - Accounting
 - Croatia - Accounting (RRIF 2012)
-- Denmark
-
-  - Denmark - Accounting
-  - Denmark - Accounting Reports
-
+- Denmark - Accounting
 - Dominican Republic - Accounting
 - Ecuador - Accounting
 - Ethiopia - Accounting
-- EU Mini One Stop Shop (MOSS)
 - Finnish Localization
 - France - Accounting
 - Generic - Accounting
 - Germany
 
-  - Germany - Accounting
   - Germany SKR03 - Accounting
   - Germany SKR04 - Accounting
 
@@ -64,67 +43,33 @@ Fiscal localization packages available
 - Honduras - Accounting
 - Hong Kong - Accounting
 - Hungarian - Accounting
-- India
-
-  - Indian - Accounting
-  - Indian - Point of Sale
-
+- Indian - Accounting
 - Indonesian - Accounting
 - Ireland - Accounting
 - Israel - Accounting
-- Italy
-
-  - Italy - Accounting
-  - Italy - E-invoicing
-
+- Italy - Accounting
 - Japan - Accounting
-- LATAM
-
-  - LATAM Localization Base
-  - LATAM Document
-
-- Lithuania
-
-  - Lithuania - Accounting
-  - LT - Accounting Reports
-
+- Lithuania - Accounting
 - Luxembourg - Accounting
 - Maroc - Accounting
 - Mexico - Accounting
-- Mongolia
-
-  - Mongolia - Accounting
-  - Mongolia - Accounting Reports
-
-- Multi Language Chart of Accounts
-- Netherlands
-
-  - Netherlands - Accounting
-  - Netherlands - Intrastat Declaration
-
+- Mongolia - Accounting
+- Netherlands - Accounting
 - New Zealand - Accounting
 - Norway - Accounting
 - OHADA - Accounting
 - Panama - Accounting
-- Peru
-
-  - Peruvian Accounting
-  - Peruvian Accounting Reports
-  - Peruvian Electronic Invoicing
-
+- Peru - Accounting
 - Poland - Accounting
 - Portugal - Accounting
 - Romania - Accounting
 - Saudi Arabia - Accounting
 - Singapore - Accounting
+- Slovak - Accounting
 - Slovenian - Accounting
 - South Africa - Accounting
 - Spain - Accounting (PGCE 2008)
-- Sweden
-
-  - Sweden - Structured Communication OCR
-  - Swedish - Accounting
-
+- Swedish - Accounting
 - Switzerland - Accounting
 - Thailand - Accounting
 - Turkey - Accounting
@@ -132,7 +77,7 @@ Fiscal localization packages available
 - UK - Accounting
 - Ukraine - Accounting
 - United States - Accounting
-- Uruguay - Chart of Accounts
+- Uruguay - Accounting
 - Venezuela - Accounting
 - Vietnam - Accounting
 
