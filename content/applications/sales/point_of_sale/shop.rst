@@ -8,7 +8,6 @@ Shop Features
    :titlesonly:
 
    shop/invoice
-   shop/cash_control
    shop/barcode
    shop/multicashiers
    shop/reprint
