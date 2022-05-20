@@ -7,6 +7,6 @@ API
 .. toctree::
     :titlesonly:
 
-    api/odoo
+    api/external_api
     api/iap
     api/extract_api
