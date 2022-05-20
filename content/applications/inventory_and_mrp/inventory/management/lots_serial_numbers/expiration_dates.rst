@@ -19,7 +19,7 @@ To use expiration date tracking, open the *Inventory* application and go to
 :menuselection:`Configuration --> Settings` and activate the *Lots & Serial Numbers* and *Expiration
 Dates* features.
 
-.. image:: media/expiration_dates_01.png
+.. image:: expiration_dates/expiration_dates_01.png
    :align: center
 
 Product configuration
@@ -38,7 +38,7 @@ Now, you can define different dates in the *inventory tab* of the product form:
   Once the Alert date is reached, an Activity is assigned on the relevant lot/serial number to the
   Responsible user defined on the Product.
 
-.. image:: media/expiration_dates_02.png
+.. image:: expiration_dates/expiration_dates_02.png
    :align: center
 
 Expiration Date on Lots/Serial Numbers
@@ -48,10 +48,10 @@ When receiving a product into inventory, the dates will automatically be updated
 corresponding lot/serial number. These updates will be based on the receipt date of the product and
 the days set on the product form.
 
-.. image:: media/expiration_dates_03.png
+.. image:: expiration_dates/expiration_dates_03.png
    :align: center
 
-.. image:: media/expiration_dates_04.png
+.. image:: expiration_dates/expiration_dates_04.png
    :align: center
 
 Expiration Alerts
@@ -61,5 +61,5 @@ You can access expiration alerts from the *inventory* app. To do so, go to :menu
 Data --> Lots/Serial Numbers`. There, you can use the pre-existing filter to show all the
 lots/serial numbers that have exceeded their respective alert dates.
 
-.. image:: media/expiration_dates_05.png
+.. image:: expiration_dates/expiration_dates_05.png
    :align: center

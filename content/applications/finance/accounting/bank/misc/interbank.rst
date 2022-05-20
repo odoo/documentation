@@ -25,14 +25,14 @@ select :menuselection:`Configuration --> Settings`.
 Your chart of accounts will be pre-installed depending on the country
 specified during your registration, it cannot be changed.
 
-.. image:: media/interbank04.png
+.. image:: interbank/interbank04.png
    :align: center
 
 The default transfer account will automatically be generated as well
 depending on your country's legislation. If necessary it can be modified
 from the same page.
 
-.. image:: media/interbank05.png
+.. image:: interbank/interbank05.png
    :align: center
 
 Create a second bank account / Journal
@@ -44,12 +44,12 @@ our accounting dashboard. To do so enter the accounting module, click on
 fill in the **Account Number**. You can also create and edit your bank to
 specify your bank's details.
 
-.. image:: media/interbank03.png
+.. image:: interbank/interbank03.png
    :align: center
 
 By saving the changes you now have 2 bank accounts.
 
-.. image:: media/interbank06.png
+.. image:: interbank/interbank06.png
    :align: center
 
 Register an internal transfer from one bank to another.
@@ -65,7 +65,7 @@ The first step is to register the internal payment. To do so go into
 your accounting dashboard, click on the **more** button of one of your banks
 and select :menuselection:`New --> Internal transfer`. 
 
-.. image:: media/interbank01.png
+.. image:: interbank/interbank01.png
    :align: center
 
 Create a new payment. The payment type will automatically be set to
@@ -76,7 +76,7 @@ internal transfer. Select the **Bank** you want to transfer to, specify the
    The memo is important if you wish to automatically reconcile (see `Import bank statements and
    reconcile`_).
 
-.. image:: media/interbank02.png
+.. image:: interbank/interbank02.png
    :align: center
 
 Save and confirm the changes to register the payment.
@@ -91,7 +91,7 @@ Import bank statements and reconcile
 Note that the bank balance computed by Odoo is different that the last
 statement of your bank.
 
-.. image:: media/interbank11.png
+.. image:: interbank/interbank11.png
    :align: center
 
 That is because we did not import the bank statement confirming the
@@ -100,7 +100,7 @@ bank statement and reconcile the payment with the correct bank statement
 line. Once you receive your bank statements click the **new statement**
 button of the corresponding bank to import them.
 
-.. image:: media/interbank07.png
+.. image:: interbank/interbank07.png
    :align: center
 
 Fill in your **Transactions line**. Once done, Odoo will display a **Computed
@@ -108,19 +108,19 @@ Balance**. that computed balance is the theorical end balance of your
 bank account. If it's corresponding to the bank statement, it means that no errors were
 made. Fill in the **Ending balance** and click on the **Reconcile** button.
 
-.. image:: media/interbank10.png
+.. image:: interbank/interbank10.png
    :align: center
 
 The following window will open:
 
-.. image:: media/interbank09.png
+.. image:: interbank/interbank09.png
    :align: center
 
 You need to choose counterparts for the payment. Select the correct
 bank statement line corresponding to the payment and click on the 
 **reconcile** button. Close the statement to finish the transaction
 
-.. image:: media/interbank08.png
+.. image:: interbank/interbank08.png
    :align: center
 
 The same steps will need to be repeated once you receive your second
@@ -128,5 +128,5 @@ bank statement. Note that if you specify the same amount and the
 same memo in both bank statements and payment transactions then the
 reconciliation will happen automatically.
 
-.. image:: media/interbank12.png
+.. image:: interbank/interbank12.png
    :align: center

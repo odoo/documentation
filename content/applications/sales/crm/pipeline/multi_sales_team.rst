@@ -20,7 +20,7 @@ Set a *Domain* to assign leads/opportunities to this Sales Team based on specifi
 country, language, or campaign. Set an *Invoicing Target* if this team has specific monthly revenue
 goals.
 
-.. image:: multiple_sales_teams/sales-team-creation.png
+.. image:: multi_sales_team/sales-team-creation.png
    :align: center
    :alt: Creating a Sales Team
 
@@ -32,7 +32,7 @@ configuration page. Select a salesperson from the dropdown menu or create new sa
 maximum number of leads that can be assigned to this salesperson in a 30-day period to ensure that
 they do not overwork.
 
-.. image:: multiple_sales_teams/add-a-salesperson.png
+.. image:: multi_sales_team/add-a-salesperson.png
    :align: center
    :alt: Adding a Salesperson
 
@@ -48,7 +48,7 @@ Each tile gives an overview of the Sales Team's open opportunities, quotations, 
 expected revenue, as well as a bar graph of new opportunities per week and an invoicing progress
 bar.
 
-.. image:: multiple_sales_teams/sales-team-overview.png
+.. image:: multi_sales_team/sales-team-overview.png
    :align: center
    :alt: Sales Team Overview
 
@@ -56,7 +56,7 @@ Click on the three dots in the corner of a tile to open a navigational menu that
 view documents or reports, create new quotations or opportunities, pick a color for this team, or
 access its configuration page.
 
-.. image:: multiple_sales_teams/team-overview-three-dot-menu.png
+.. image:: multi_sales_team/team-overview-three-dot-menu.png
    :align: center
    :alt: Three Dot Menu
 

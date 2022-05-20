@@ -7,13 +7,13 @@ Product Catalog
 
 All your published items show up in your catalog page (or *Shop* page).
 
-.. image:: ./media/shop.png
+.. image:: catalog/shop.png
    :align: center
 
 Most options are available in the *Customize* menu: display attributes,
 website categories, etc.
 
-.. image:: ./media/shop_customize.png
+.. image:: catalog/shop_customize.png
    :align: center
 
 Highlight a product
@@ -33,5 +33,5 @@ the catalog page. To do so, add product description and add to cart button. Turn
 options in *Customize* menu:  Product Description, Add to Cart, List View (to display product
 description better).
 
-.. image:: ./media/shop_list.png
+.. image:: catalog/shop_list.png
    :align: center

@@ -16,7 +16,7 @@ concepts to the proper understanding of the following reports:
   to estimate the coming year's performance. However, this estimation does not take variations and
   growth into account.
 
-.. image:: media/difference-between-MRR-and-ARR.png
+.. image:: subscription_reports/difference-between-MRR-and-ARR.png
   :align: center
   :alt: Difference between MRR and ARR in Odoo Subscriptions
 
@@ -43,7 +43,7 @@ concepts to the proper understanding of the following reports:
        - | Therefore, the 56$ of MRR difference out of the initial 600$ causes a **Revenue Churn**
          | of 9,33%.
 
-       .. image:: media/difference-between-logo-churn-and-revenue-churn.png
+       .. image:: subscription_reports/difference-between-logo-churn-and-revenue-churn.png
           :align: center
           :alt: Difference between logo churn and revenue churn in Odoo Subscriptions
 
@@ -66,7 +66,7 @@ can choose *Quantity*, *Recurring Price*, *Yearly Recurring Revenue* and *Count*
 *Quantity* is added. This way, you can review both of these measures at the same time. You can even
 *Group By Start Date* and, more precisely, by *Week*, to get a clear view of your report.
 
-.. image:: media/subscriptions-analysis-report.png
+.. image:: subscription_reports/subscriptions-analysis-report.png
   :align: center
   :alt: Subscriptions analysis report in Odoo Subscriptions
 
@@ -78,7 +78,7 @@ Go to :menuselection:`Subscriptions --> Reporting --> Retention`. The default me
 *Monthly Recurring Revenue* was chosen, and the *Month* periodicity remains intact.
 By using these criteria, you can see the progression of the retention from its start.
 
-.. image:: media/retention-analysis-report.png
+.. image:: subscription_reports/retention-analysis-report.png
   :align: center
   :alt: Retention analysis report in Odoo Subscriptions
 
@@ -91,7 +91,7 @@ different KPIs: *Monthly Recurring Revenue*, *Net Revenue*, *Non-Recurring Reven
 information on subscriptions, companies, and sales teams. This is useful if you are looking for
 specific information.
 
-.. image:: media/revenue-KPIs-report.png
+.. image:: subscription_reports/revenue-KPIs-report.png
   :align: center
   :alt: Revenue KPIs report in Odoo Subscriptions
 
@@ -100,7 +100,7 @@ data, which is the typical scenario for a new business. But, as your company gro
 these graphs get populated with more and more data. Once again, you can filter these specific KPIs
 on subscriptions, companies, and sales teams.
 
-.. image:: media/detailed-MRR-report.png
+.. image:: subscription_reports/detailed-MRR-report.png
   :align: center
   :alt: Detailed MRR report in Odoo Subscriptions
 
@@ -112,7 +112,7 @@ summary of your *Monthly Recurring Revenue*, *Non-Recurring Revenue*, *Subscript
 and *Non-Recurring Invoices* for each of your salespeople. You can choose the period you want to
 apply and the salesperson you want to analyze.
 
-.. image:: media/salesperson-dashboard-report.png
+.. image:: subscription_reports/salesperson-dashboard-report.png
   :align: center
   :alt: Salesperson dashboard report in Odoo Subscriptions
 

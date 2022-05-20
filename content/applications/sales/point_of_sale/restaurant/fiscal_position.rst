@@ -14,7 +14,7 @@ To enable this feature, go to :menuselection:`Point of Sale --> Configuration --
 and check *Fiscal Position per Order*. Now, you can choose the fiscal positions
 you want for your *PoS*.
 
-.. image:: media/fiscal_position_01.png
+.. image:: fiscal_position/fiscal_position_01.png
     :align: center
 
 .. note::
@@ -26,7 +26,7 @@ Using fiscal positions
 Once on your *PoS* interface, click on the *Tax* button.
 Now, choose the fiscal position you need for the current order.
 
-.. image:: media/fiscal_position_02.png
+.. image:: fiscal_position/fiscal_position_02.png
     :align: center
 
 Set up a default fiscal position
@@ -36,7 +36,7 @@ If you want to use a default fiscal position, meaning that a preexisting value i
 automatically assigned, go to :menuselection:`Point of Sale --> Configuration 
 --> Point of Sale` and enable *Fiscal Position*. Now, choose one to set as the default one.
 
-.. image:: media/fiscal_position_03.png
+.. image:: fiscal_position/fiscal_position_03.png
     :align: center
 
 .. note::

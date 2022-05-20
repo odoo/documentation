@@ -10,7 +10,7 @@ Deploy your platform
 
 Go to `Odoo.sh <https://www.odoo.sh/>`_ and hit the *Deploy your platform* button.
 
-.. image:: ./media/deploy.png
+.. image:: create/deploy.png
    :align: center
 
 Sign in with Github
@@ -18,7 +18,7 @@ Sign in with Github
 
 Sign in with your Github account. If you do not have an account yet, hit the *Create an account* link.
 
-.. image:: ./media/github-signin.png
+.. image:: create/github-signin.png
    :align: center
 
 Authorize Odoo.sh
@@ -26,7 +26,7 @@ Authorize Odoo.sh
 
 Grant Odoo.sh the required accesses to your account by clicking the *Authorize* button.
 
-.. image:: ./media/github-authorize.png
+.. image:: create/github-authorize.png
    :align: center
 
 Odoo.sh basically needs:
@@ -62,7 +62,7 @@ When submitting the form, if you are notified your subscription is not valid, it
 
 In case of doubt with your subscription, please contact the `Odoo support <https://www.odoo.com/help>`_.
 
-.. image:: ./media/deploy-form.png
+.. image:: create/deploy-form.png
    :align: center
 
 You're done !
@@ -70,7 +70,7 @@ You're done !
 
 You can start using Odoo.sh. Your first build is about to be created. You will soon be able to connect to your first database.
 
-.. image:: ./media/deploy-done.png
+.. image:: create/deploy-done.png
    :align: center
 
 .. _odoo_sh_import_your_database:
@@ -113,12 +113,12 @@ Access the URL :file:`/web/database/manager` of your on-premise database and dow
 
 You will need the master password of your database server. If you do not have it, contact your system administrator.
 
-.. image:: ./media/create-import-onpremise-backup.png
+.. image:: create/create-import-onpremise-backup.png
    :align: center
 
 Choose a zip including the filestore as the backup format.
 
-.. image:: ./media/create-import-onpremise-backup-dialog.png
+.. image:: create/create-import-onpremise-backup-dialog.png
   :align: center
 
 Odoo Online databases
@@ -126,7 +126,7 @@ Odoo Online databases
 
 `Access your databases manager <https://accounts.odoo.com/my/databases/manage>`_ and download a backup of your database.
 
-.. image:: ./media/create-import-online-backup.png
+.. image:: create/create-import-online-backup.png
   :align: center
 
 .. Warning::
@@ -138,12 +138,12 @@ Upload the backup
 
 Then, in your Odoo.sh project, in the backups tab of your production branch, import the backup you just downloaded.
 
-.. image:: ./media/create-import-production.png
+.. image:: create/create-import-production.png
    :align: center
 
 Once the backup imported, you can access the database using the *Connect* button in the history of the branch.
 
-.. image:: ./media/create-import-production-done.png
+.. image:: create/create-import-production-done.png
   :align: center
 
 Check your outgoing email servers

@@ -27,7 +27,7 @@ To allow *multi-step routes*, go to :menuselection:`Configuration --> Settings` 
 activate the feature. By default, activating *multi-step routes* will
 also activate *Storage Locations*.
 
-.. image:: media/two_steps_01.png
+.. image:: two_steps/two_steps_01.png
    :align: center
 
 Configure warehouse for receipt in 2 steps
@@ -38,14 +38,14 @@ Warehouse` and enter the warehouse which will use receipt in 2 steps.
 Then, you can select the option *Receive goods in input and then stock
 (2 steps)* for *Incoming Shipments*.
 
-.. image:: media/two_steps_02.png
+.. image:: two_steps/two_steps_02.png
    :align: center
 
 Activating this option will lead to the creation of a new *Input*
 location. If you want to rename it, you can go to :menuselection:`Configuration -->
 Locations --> Select Input` and update its name.
 
-.. image:: media/two_steps_03.png
+.. image:: two_steps/two_steps_03.png
    :align: center
 
 Create a purchase order
@@ -56,7 +56,7 @@ Quotation* with some storable products to receive from a supplier. Once
 the *RfQ* is confirmed, the receipt picking will be created and
 automatically linked to your purchase order.
 
-.. image:: media/two_steps_04.png
+.. image:: two_steps/two_steps_04.png
    :align: center
 
 Now, by clicking on the *1 Receipt* button, you will see the first
@@ -74,14 +74,14 @@ has been marked as *Done*.
 You can enter the receipt operation from the purchase order, or access
 it through the inventory dashboard.
 
-.. image:: media/two_steps_05.png
+.. image:: two_steps/two_steps_05.png
    :align: center
 
 By default, a receipt is always considered as ready to be processed.
 Then, you will be able to directly click on *Validate* to mark it as
 done.
 
-.. image:: media/two_steps_06.png
+.. image:: two_steps/two_steps_06.png
    :align: center
 
 Once the receipt has been validated, the internal transfer is ready to
@@ -90,8 +90,8 @@ received are automatically reserved on the internal transfer. Once the
 transfer is validated, those products enter the stock and you will be
 able to use them to fulfill customer deliveries or manufacture products.
 
-.. image:: media/two_steps_07.png
+.. image:: two_steps/two_steps_07.png
    :align: center
 
-.. image:: media/two_steps_08.png
+.. image:: two_steps/two_steps_08.png
    :align: center

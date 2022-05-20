@@ -27,19 +27,19 @@ the hotel for the first week on the site of your customer.
 You can then enter a relevant description and select an existing product
 or create a new one from right there.
 
-.. image:: media/expense01.png
+.. image:: expense/expense01.png
    :align: center
 
 Here, we are creating a *Hotel* product:
 
-.. image:: media/expense02.png
+.. image:: expense/expense02.png
    :align: center
 
 Under the invoicing tab, select *Delivered quantities* and either *At
 cost* or *Sales price* as well depending if you want to invoice the
 cost of your expense or a previously agreed on sales price.
 
-.. image:: media/expense03.png
+.. image:: expense/expense03.png
    :align: center
 
 To modify or create more products go to :menuselection:`Expenses -->
@@ -48,18 +48,18 @@ Configuration --> Expense products`.
 Back on the expense, add the original sale order in the expense to
 submit.
 
-.. image:: media/expense04.png
+.. image:: expense/expense04.png
    :align: center
 
 It can then be submitted to the manager, approved and finally posted.
 
-.. image:: media/expense05.png
+.. image:: expense/expense05.png
    :align: center
 
-.. image:: media/expense06.png
+.. image:: expense/expense06.png
    :align: center
 
-.. image:: media/expense07.png
+.. image:: expense/expense07.png
    :align: center
 
 It will then be in the sales order and ready to be invoiced.

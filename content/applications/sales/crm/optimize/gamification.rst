@@ -13,7 +13,7 @@ Configuration
 Install the *Gamification* module, or the *CRM gamification* one, which adds some useful data
 (goals and challenges) that can be used on *CRM/Sale*.
 
-.. image:: media/gamification_module_install.png
+.. image:: gamification/gamification_module_install.png
    :align: center
    :alt: View of the gamification module being installed in Odoo
 
@@ -28,7 +28,7 @@ Now, create your first challenge by going to :menuselection:`Settings --> Gamifi
    features in order to access the configuration. To do so, go to *Settings* and *Activate the
    developer mode*.
 
-.. image:: media/gamification_tools_menu.png
+.. image:: gamification/gamification_tools_menu.png
    :align: center
    :alt: View if the gamification tools menu in Odoo Settings
 
@@ -50,7 +50,7 @@ In the example below, 2 employees are being challenged with a *Monthly Sales Tar
 is based on 2 goals: the total amount invoiced and number of new leads generated. At the end of the
 month, the winner will be granted with a badge.
 
-.. image:: media/challenges.png
+.. image:: gamification/challenges.png
    :align: center
    :alt: View of the challenge form and a challenge being created for Odoo Sales
 
@@ -65,7 +65,7 @@ Set up goals
   leads, time to qualify a lead, total amount invoiced in a specific week, month or any other time
   frame based on your management preferences, etc.
 
-.. image:: media/goal_definitions.png
+.. image:: gamification/goal_definitions.png
    :align: center
    :alt: View of the goal definition form and a goal definition being created for Odoo Sales
 
@@ -81,6 +81,6 @@ exceptional achievement, a badge is an easy way to express gratitude to a user f
 To create and grant badges to your employees based on their performance, go to
 :menuselection:`Settings --> Gamification Tools --> Badges`.
 
-.. image:: media/badges.png
+.. image:: gamification/badges.png
    :align: center
    :alt: View of the badges page in Odoo

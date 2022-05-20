@@ -14,7 +14,7 @@ Create your policies
 | Create your policies through the team’s settings page or go to :menuselection:`Helpdesk -->
   Configuration --> SLA Policies`.
 
-.. image:: media/new_sla.png
+.. image:: sla/new_sla.png
    :align: center
    :height: 340
    :alt: View of an SLA form in Odoo Helpdesk
@@ -28,7 +28,7 @@ Create your policies
 | When a ticket has satisfied an SLA policy, the SLA tag appears in green and the deadline field
   is not shown anymore.
 
-.. image:: media/ticket_green_tag.png
+.. image:: sla/ticket_green_tag.png
    :align: center
    :height: 330
    :alt: View of a ticket’s form emphasizing a satisfied SLA in Odoo Helpdesk
@@ -39,7 +39,7 @@ SLA Analysis
 Go to :menuselection:`Helpdesk --> Reporting --> SLA Status Analysis`. Apply *Filters* and
 *Group by* to identify tickets that should be prioritized and keep track of upcoming deadlines.
 
-.. image:: media/sla_analysis.png
+.. image:: sla/sla_analysis.png
    :align: center
    :alt: View of the SLA status analysis page emphasizing the group by option in Odoo Helpdesk
 

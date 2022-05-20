@@ -6,7 +6,7 @@ Odoo allows you to use one bill of materials for multiple variants of
 the same product. To activate variants, simply go to :menuselection:`Configuration --> Settings
 --> Variants`.
 
-.. image:: media/bom-variants1.png
+.. image:: product_variants/bom-variants1.png
     :align: center
 
 You will then be able to specify which BOM component lines are to be used in
@@ -20,16 +20,16 @@ below. This field is used when creating a BoM for one specific variant
 of a product only.
 
 
-.. image:: media/kit-bom1.png
+.. image:: product_variants/kit-bom1.png
     :align: center
 
 Note that the same principle applies for the configuration 
 of operations.
 
-.. image:: media/kit-bom2.png
+.. image:: product_variants/kit-bom2.png
     :align: center
 
 And for the production of by-products. 
 
-.. image:: media/kit-bom3.png
+.. image:: product_variants/kit-bom3.png
     :align: center

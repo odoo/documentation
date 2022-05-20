@@ -8,7 +8,7 @@ Listing without variation
 In order to list a product, you need to check the **use eBay** field on a product
 form. The eBay tab will be available.
 
-.. image:: ./media/manage01.png
+.. image:: manage/manage01.png
   :align: center
 
 When the **Use Stock Quantity** field is checked, the quantity sets on eBay will
@@ -28,7 +28,7 @@ Price** as **Listing Type**, the eBay form is slightly different. In the
 variants array, you can choose which variant will be listed on eBay as well as
 set the price and the quantity for each variant.
 
-.. image:: ./media/manage02.png
+.. image:: manage/manage02.png
   :align: center
 
 Listing with item specifics
@@ -37,7 +37,7 @@ Listing with item specifics
 In order to add item specifics, you should create a product attribute with one
 value in the **Variants** tab on the product form.
 
-.. image:: ./media/manage03.png
+.. image:: manage/manage03.png
   :align: center
 
 Product Identifiers

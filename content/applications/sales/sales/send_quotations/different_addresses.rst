@@ -12,7 +12,7 @@ Activate the feature
 Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Customer Addresses**
 feature.
 
-.. image:: media/addresses_1.png
+.. image:: different_addresses/addresses_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to enable different customer addresses on Odoo Sales?
@@ -26,7 +26,7 @@ be a new customer. In this case, you have to **Create and edit** the contact for
 customer and link it, if necessary, to a company. In this contact form, you will be able to add,
 delete and modify invoice and delivery addresses.
 
-.. image:: media/addresses_2.png
+.. image:: different_addresses/addresses_2.png
    :align: center
    :class: img-thumbnail
    :alt: How to add addresses from a quotation on Odoo Sales?
@@ -45,7 +45,7 @@ sales order to add billing and shipping addresses to customers. But, if you go t
 and add, delete or modify invoice and delivery addresses instantly there, before creating a
 quotation.
 
-.. image:: media/addresses_3.png
+.. image:: different_addresses/addresses_3.png
    :align: center
    :class: img-thumbnail
    :alt: How to add addresses from a contact form on Odoo Sales?
@@ -57,7 +57,7 @@ Like for the previous example, go to :menuselection:`Sales --> Orders --> Custom
 new customer. There, you can add company information but, more importantly, you can enter billing
 and shipping addresses under the **Contacts & Addresses** tab.
 
-.. image:: media/addresses_4.png
+.. image:: different_addresses/addresses_4.png
    :align: center
    :class: img-thumbnail
    :alt: How to manage different customer addresses on Odoo Sales?
@@ -66,7 +66,7 @@ Once done, you can return to your Sales dashboard and create a new quotation. No
 your new customer, you will see that the other fields will fill in by themself with the information
 previously saved for billing and shipping addresses.
 
-.. image:: media/addresses_5.png
+.. image:: different_addresses/addresses_5.png
    :align: center
    :class: img-thumbnail
    :alt: Automatic quotation fields filling on Odoo Sales

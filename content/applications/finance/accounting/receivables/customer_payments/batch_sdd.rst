@@ -23,7 +23,7 @@ Go to :menuselection:`Accounting --> Configuration --> Settings`, activate **SEP
 (SDD)** and click on *Save*. Enter your company's **Creditor Identifier**. This number is provided
 by your bank institution, or the authority responsible for delivering them.
 
-.. image:: media/batch-sdd-creditor-identifier.png
+.. image:: batch_sdd/batch-sdd-creditor-identifier.png
    :align: center
    :alt: Add a SEPA Creditor Identifier to Odoo Accounting
 
@@ -39,7 +39,7 @@ money directly from their bank accounts.
 To create a new mandate, go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`,
 click on *Create*, and fill out the form.
 
-.. image:: media/batch-sdd-mandate-form.png
+.. image:: batch_sdd/batch-sdd-mandate-form.png
    :align: center
    :alt: Fill out SEPA Direct Debit in Odoo Accounting
 
@@ -78,7 +78,7 @@ Close or revoke a mandate
 Direct Debit mandates are closed automatically after their *End Date*. If this field is left blank,
 the mandate keeps being *Active* until it is *Closed* or *Revoked*.
 
-.. image:: media/batch-sdd-revoke-close.png
+.. image:: batch_sdd/batch-sdd-revoke-close.png
    :align: center
    :alt: Close or Revoke an SDD Mandate in Odoo Accounting
 
@@ -117,21 +117,21 @@ process all payments at once.
 To generate your XML file for the pending SDD payments, go to the related *bank journal* on your
 *Accounting dashboard*, then click on *Direct Debit Payments to Collect*.
 
-.. image:: media/batch-sdd-collect.png
+.. image:: batch_sdd/batch-sdd-collect.png
    :align: center
    :alt: Start the SDD payments collection in Odoo Accounting
 
 Select all the payments you want to include in your SDD XML file, then click on *Action* and select
 *Create Batch Payment*.
 
-.. image:: media/batch-sdd-batch.png
+.. image:: batch_sdd/batch-sdd-batch.png
    :align: center
    :alt: Create a batch payment with all the SDD payments in Odoo Accounting
 
 Odoo then takes you to your *Batch Payment*’s form. Click on *Validate* and download the SDD XML
 file.
 
-.. image:: media/batch-sdd-xml.png
+.. image:: batch_sdd/batch-sdd-xml.png
    :align: center
    :alt: Generate an XML file for your SDD payments in Odoo Accounting
 

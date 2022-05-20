@@ -14,7 +14,7 @@ Under *Automations*,  click on *Create* and set the following rules:
 - *Action To Do*: Update the Record
 - *Data to Write*: Lead/Opportunity > Value > 3
 
-.. image:: media/automated_actions/hight_priority_leads.png
+.. image:: automated_actions/hight_priority_leads.png
    :align: center
    :alt: View of an automated action that sets a high priority to Belgian leads in Odoo Studio
 

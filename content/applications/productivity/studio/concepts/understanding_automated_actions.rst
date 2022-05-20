@@ -8,7 +8,7 @@ Understanding Automated Actions
   adding a user as a follower of a confirmed invoice if its total is higher than a
   certain amount; or preventing a lead from changing stage if a field is not filled in.
 
-.. image:: media/automated_action_flow.png
+.. image:: understanding_automated_actions/automated_action_flow.png
    :align: center
    :height: 270
    :alt: Flowchart to exemplify an automated action rule for Odoo Studio
@@ -58,7 +58,7 @@ Example
 This is the process of which the update of the *Email* field on the Lead/Opportunity *Model*, with a
 *Trigger Condition* set to *On Update*, goes through:
 
-.. image:: media/action_update_lead_example.png
+.. image:: understanding_automated_actions/action_update_lead_example.png
    :align: center
    :alt: View of an automated action being created in Odoo Studio
 
