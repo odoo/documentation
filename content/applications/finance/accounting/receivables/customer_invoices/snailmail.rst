@@ -13,7 +13,7 @@ Set up Snailmail
 | If you would like this option to be a default feature, enable *Send by Post* under
   *Default Sending Options*.
 
-.. image:: media/setup_snailmail.png
+.. image:: snailmail/setup_snailmail.png
    :align: center
    :alt: Under settings enable the snailmail feature in Odoo Accounting
 
@@ -22,7 +22,7 @@ Send your invoices by post
 
 Open your Invoice, click on the *Send & Print* button and select *Send by Post*.
 
-.. image:: media/invoice_bypost.png
+.. image:: snailmail/invoice_bypost.png
    :align: center
    :alt: Overview of an invoice and the option send by post available in Odoo Accounting
 

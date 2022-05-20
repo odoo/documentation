@@ -26,7 +26,7 @@ Management --> Payment Terms` in the **Accounting** application. The following
 example show a payment term of 30% directly and the balance after 30
 days.
 
-.. image:: ./media/forecast01.png
+.. image:: forecast/forecast01.png
   :align: center
 
 Once payment terms are defined, you can assign them to your vendor by
@@ -34,7 +34,7 @@ default. Set the Vendor Payment Term field on the Accounting tab of a
 vendor form. That way, every time you will purchase to this vendor, Odoo
 will propose you automatically the right payment term.
 
-.. image:: ./media/forecast02.png
+.. image:: forecast/forecast02.png
   :align: center
 
 .. note::
@@ -51,7 +51,7 @@ application. This report gives you a summary per vendor of the amounts
 to pay, compared to their due date (the due date being computed on each
 bill using the payment term).
 
-.. image:: ./media/forecast03.png
+.. image:: forecast/forecast03.png
   :align: center
 
 This reports tells you how much you will have to pay within the next
@@ -64,7 +64,7 @@ Using the menu :menuselection:`Purchases --> Vendor Bills`, you can get a list o
 bills. Using the advanced filters, you can list all the bills that you
 should pay or the bills that are overdue (you are late on the payment).
 
-.. image:: ./media/forecast04.png
+.. image:: forecast/forecast04.png
   :align: center
 
 From this screen, you can also switch to the pivot table or the graph

@@ -12,7 +12,7 @@ Connect in USB
 To add a device connected by USB, just plug the USB cable in the *IoT
 Box*, and the device should appear in your Odoo database.
 
-.. image:: media/measurement_tool_01.png
+.. image:: measurement_tool/measurement_tool_01.png
    :align: center
 
 Connect in Bluetooth
@@ -24,7 +24,7 @@ to the device.
 
 Here is an example of what it should look like:
 
-.. image:: media/measurement_tool_03.png
+.. image:: measurement_tool/measurement_tool_03.png
    :align: center
 
 Link a measurement tool to a quality control point
@@ -41,12 +41,12 @@ assign a measurement tool.
 Now, you can edit the control point and choose the device from the
 dropdown list. Then, hit save.
 
-.. image:: media/measurement_tool_04.png
+.. image:: measurement_tool/measurement_tool_04.png
    :align: center
 
 Now, your measurement tool is linked to the chosen *Control Point*.
 The value, which needs to be changed manually, will be automatically
 updated while the tool is being used.
 
-.. image:: media/measurement_tool_05.png
+.. image:: measurement_tool/measurement_tool_05.png
    :align: center

@@ -21,7 +21,7 @@ Configuration
 Go to :menuselection:`Accounting --> Configuration --> Settings` 
 and activate the **SEPA QR Code** feature.
 
-.. image:: media/epc_qr_code01.png
+.. image:: epc_qr_code/epc_qr_code01.png
    :align: center
    
 Configure your Bank Account’s journal
@@ -33,7 +33,7 @@ To do so, go to :menuselection:`Accounting --> Configuration
 --> Journals`, open your *bank journal*, then fill out the 
 *Bank Account* and *Bank* under the *Bank Account* tab.
 
-.. image:: media/epc_qr_code02.png
+.. image:: epc_qr_code/epc_qr_code02.png
    :align: center
 
 Issue Invoices with EPC QR Codes
@@ -52,7 +52,7 @@ Make sure that the account indicated is the one you want to use to
 receive your customer’s payment as Odoo uses this field to generate 
 the EPC QR Code.
 
-.. image:: media/epc_qr_code03.png
+.. image:: epc_qr_code/epc_qr_code03.png
    :align: center
    
 .. tip::

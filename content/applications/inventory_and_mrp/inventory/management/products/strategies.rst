@@ -37,7 +37,7 @@ Inventory module. In the Inventory Control menu select "Reordering Rule"
 in the drop down menu. There, click on "Create" to set minimum and
 maximum stock values for a given product.
 
-.. image:: media/strategies01.png
+.. image:: strategies/strategies01.png
     :align: center
 
 .. note::
@@ -47,7 +47,7 @@ maximum stock values for a given product.
 Then, click on your product to access the related product form and, on
 the "Inventory submenu", do not forget to select a supplier.
 
-.. image:: media/strategies02.png
+.. image:: strategies/strategies02.png
     :align: center
 
 .. tip::
@@ -63,7 +63,7 @@ other module where products are available).
 
 On the product form, under Inventory, click on "Make To Order".
 
-.. image:: media/strategies03.png
+.. image:: strategies/strategies03.png
     :align: center
 
 Choice between the two options

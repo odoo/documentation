@@ -12,7 +12,7 @@ Activate online signature
 Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Online Signature**
 feature.
 
-.. image:: media/signature_1.png
+.. image:: get_signature_to_validate/signature_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to enable online signature on Odoo Sales?
@@ -22,7 +22,7 @@ feature.
    **Online Signature** feature for each quotation template you use, under their confirmation tab.
    Example:
 
-   .. image:: media/signature_2.png
+   .. image:: get_signature_to_validate/signature_2.png
       :align: center
       :class: img-thumbnail
       :alt: How to enable online signature on Odoo Sales?
@@ -35,7 +35,7 @@ click on **Sign & Pay**, they have the choice to draw their own signature, autom
 field with an automated signature or load a file from their computer. Here below, it is an example
 of an automated signature:
 
-.. image:: media/signature_3.png
+.. image:: get_signature_to_validate/signature_3.png
    :align: center
    :class: img-thumbnail
    :alt: How to confirm an order with a signature on Odoo Sales?

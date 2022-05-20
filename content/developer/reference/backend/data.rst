@@ -279,13 +279,13 @@ For this case, data files can also use csv_, this is often the case for
 Here's the first lines of the data file defining country states
 ``res.country.state.csv``
 
-.. literalinclude:: static/res.country.state.csv
+.. literalinclude:: data/res.country.state.csv
     :language: text
 
 rendered in a more readable format:
 
 .. csv-table::
-    :file: static/res.country.state.csv
+    :file: data/res.country.state.csv
     :header-rows: 1
     :class: table-striped table-hover table-sm
 

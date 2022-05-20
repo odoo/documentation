@@ -14,7 +14,7 @@ Choose your notifications preference
 
 Access your *Preferences* and choose how you would like your notifications to be handled.
 
-.. image:: media/change_preferences.png
+.. image:: get_started/change_preferences.png
    :align: center
    :alt: View of the preferences page for Odoo Discuss
 
@@ -23,14 +23,14 @@ Access your *Preferences* and choose how you would like your notifications to be
   they are shown in the *Inbox*.
 | Messages can then be *Marked as Todo*, *Replied*, or *Marked as Read*.
 
-.. image:: media/inbox_actions.png
+.. image:: get_started/inbox_actions.png
    :align: center
    :alt: View of an inbox message and its action options in Odoo Discuss
 
 The messages tagged as *Mark as Todo* are also shown in *Starred*, while the ones *Marked as Read*
 are moved to *History*.
 
-.. image:: media/starred_messages.png
+.. image:: get_started/starred_messages.png
    :align: center
    :alt: View of messages marked as todo in Odoo Discuss
 
@@ -41,7 +41,7 @@ The first time you log in to your account, OdooBot sends you a message asking fo
 receive desktop notifications to chats. If accepted, you receive push notifications to the messages
 sent to you despite of where you are in Odoo.
 
-.. image:: media/odoobot_push.png
+.. image:: get_started/odoobot_push.png
    :align: center
    :alt: View of the messages under the messaging menu emphasizing the request for push
          notifications for Odoo Discuss
@@ -52,7 +52,7 @@ sent to you despite of where you are in Odoo.
 To start a chat, click on *New Message* on the *Messaging Menu*, or go to *Discuss* and send a
 *Direct Message*.
 
-.. image:: media/channels_direct_messages.png
+.. image:: get_started/channels_direct_messages.png
    :align: center
    :height: 400
    :alt: View of discuss’s panel emphasizing the titles channels and direct messages in Odoo Discuss
@@ -67,7 +67,7 @@ Mentions in the chat and on the Chatter
 | A notification is sent to the user mentioned either to his *Inbox* or through email, depending
   on his settings.
 
-.. image:: media/chat_windows.png
+.. image:: get_started/chat_windows.png
    :align: center
    :alt: View of a couple of chat window messages for Odoo Discuss
 
@@ -88,7 +88,7 @@ sidebar and on the *Messaging menu*.
 - White = offline
 - Airplane = out of the office
 
-.. image:: media/status.png
+.. image:: get_started/status.png
    :align: center
    :height: 300
    :alt: View of the contacts’ status for Odoo Discuss

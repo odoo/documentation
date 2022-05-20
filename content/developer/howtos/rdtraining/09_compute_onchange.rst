@@ -27,13 +27,13 @@ Computed Fields
 
     - In the property model, the total area and the best offer should be computed:
 
-    .. image:: 09_compute_onchange/media/compute.gif
+    .. image:: 09_compute_onchange/compute.gif
         :align: center
         :alt: Compute fields
 
     - In the property offer model, the validity date should be computed and can be updated:
 
-    .. image:: 09_compute_onchange/media/compute_inverse.gif
+    .. image:: 09_compute_onchange/compute_inverse.gif
         :align: center
         :alt: Compute field with inverse
 
@@ -230,7 +230,7 @@ Onchanges
     **Goal**: at the end of this section, enabling the garden will set a default area of 10 and
     an orientation to North.
 
-    .. image:: 09_compute_onchange/media/onchange.gif
+    .. image:: 09_compute_onchange/onchange.gif
         :align: center
         :alt: Onchange
 

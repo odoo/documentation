@@ -62,7 +62,7 @@ journal.
    in the **payment from** field. You can customize it in your company settings,
    in the tab **Configuration**, under the **SEPA** section.
 
-.. image:: ./media/sepa01.png
+.. image:: sepa/sepa01.png
   :align: center
 
 Pay with SEPA
@@ -86,7 +86,7 @@ new one.
 If you pay a specific supplier bill, put the reference of the bill in
 the **memo** field.
 
-.. image:: ./media/sepa02.png
+.. image:: sepa/sepa02.png
   :align: center
 
 Once your payment is registered, don't forget to Confirm it. You can
@@ -100,7 +100,7 @@ Generate SEPA files
 From your accounting dashboard, you should see if there are SEPA files
 to generate for every bank account.
 
-.. image:: ./media/sepa03.png
+.. image:: sepa/sepa03.png
   :align: center
 
 Click on the link to check all the payments that are ready to transfer
@@ -108,7 +108,7 @@ via SEPA. Then, select all the payments you want to send (or check the
 top box to select all payment at once) and click on :menuselection:`More -->
 Download SEPA Payments`.
 
-.. image:: ./media/sepa04.png
+.. image:: sepa/sepa04.png
   :align: center
 
 Troubleshooting

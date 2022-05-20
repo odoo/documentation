@@ -14,20 +14,20 @@ Customer Rating
   is shown.
 | A copy of the conversation can also be sent by email.
 
-.. image:: media/user_chatwindow.png
+.. image:: ratings/user_chatwindow.png
    :align: center
    :height: 400
    :alt: View of the chat window from a user’s side for Odoo Live Chat
 
 The rating is shown on the chat window itself for the operator.
 
-.. image:: media/operator_chatwindow.png
+.. image:: ratings/operator_chatwindow.png
    :align: center
    :alt: View of a chat window from an operator’s side highlighting a rating for Odoo Live Chat
 
 And under :menuselection:`Report --> Customer Ratings`.
 
-.. image:: media/customer_ratings.png
+.. image:: ratings/customer_ratings.png
    :align: center
    :alt: View of the customer ratings page in Odoo Live Chat
 
@@ -37,7 +37,7 @@ Make the rating public
 Go to :menuselection:`Website --> Configuration --> Settings`, access your channel form, click on
 *Go to Website* and on *Unpublished*, to publish the rating of that channel on your website.
 
-.. image:: media/publish_ratings.png
+.. image:: ratings/publish_ratings.png
    :align: center
    :alt: View of the public ratings in the website for Odoo Live Chat
 
