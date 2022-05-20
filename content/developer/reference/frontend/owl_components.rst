@@ -195,7 +195,7 @@ element might be swipable or not.
 
 You can use the component to interact easily with records, messages, items in lists and much more.
 
-.. image:: ./images/actionswiper.png
+.. image:: owl_components/actionswiper.png
   :width: 400 px
   :alt: Example of ActionSwiper usage
   :align: center

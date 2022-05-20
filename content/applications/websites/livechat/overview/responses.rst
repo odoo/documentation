@@ -25,7 +25,7 @@ Commands are shortcuts that do specific actions within the chat window:
 
 To access the ticket or lead created from the chat, click on the shortcut link.
 
-.. image:: media/create_ticket.png
+.. image:: responses/create_ticket.png
    :align: center
    :alt: View of the chat window with a helpdesk ticket created in Odoo Live Chat
 
@@ -40,7 +40,7 @@ Send canned responses
   To create them, go to :menuselection:`Live Chat --> Configuration --> Canned Responses`.
 | To use them during a conversation, simply type **:** followed by the shortcut word you created.
 
-.. image:: media/canned_response.png
+.. image:: responses/canned_response.png
    :align: center
    :alt: View of a chat window and the use of a canned response in Odoo Live Chat
 

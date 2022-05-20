@@ -27,7 +27,7 @@ formula:
 - When new products arrive in a warehouse, the new average cost is
   recomputed as:
 
-.. image:: media/avg01.png
+.. image:: avg_price_valuation/avg01.png
    :align: center
 
 - When products leave the warehouse: the average cost **does not** change

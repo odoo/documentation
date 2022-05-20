@@ -23,7 +23,7 @@ The following example shows how to create a new automatic alert to send satisfac
 customers, by email, after one month of subscription. To do so, go to :menuselection:`Subscriptions
 --> Configuration --> Alerts`, and create a new alert.
 
-.. image:: media/create-a-new-automatic-alert.png
+.. image:: automatic_alerts/create-a-new-automatic-alert.png
   :align: center
   :alt: New automatic alert in Odoo Subscriptions
 
@@ -55,7 +55,7 @@ As a result, this alert will send a rating survey after one month, to the custom
 purchased that specific product. The survey will appear in the chatter of your respective
 subscription.
 
-.. image:: media/rating-satisfaction-survey.png
+.. image:: automatic_alerts/rating-satisfaction-survey.png
   :align: center
   :alt: Satisfaction survey in Odoo Subscriptions
 
@@ -64,7 +64,7 @@ Modify an existing automatic alert
 
 By default, Odoo suggests you an automatic alert called *Take action on less satisfied clients*.
 
-.. image:: media/modify-an-existing-automatic-alert.png
+.. image:: automatic_alerts/modify-an-existing-automatic-alert.png
   :align: center
   :alt: Modify an existing automatic alert in Odoo Subscriptions
 

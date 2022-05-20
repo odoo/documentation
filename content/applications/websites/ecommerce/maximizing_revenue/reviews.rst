@@ -6,7 +6,7 @@ Publishing and monitoring customer experience will help you gain the trust
 of new customers and better engage with your community. In 2 clicks, allow
 your customer to share their feedback!
 
-.. image:: ./media/comment_post.png
+.. image:: reviews/comment_post.png
    :align: center
 
 Setup
@@ -14,7 +14,7 @@ Setup
 
 Activate comments & rating from the *Customize* menu of the product web page.
 
-.. image:: ./media/comment_setup.png
+.. image:: reviews/comment_setup.png
    :align: center
 
 .. note::
@@ -27,7 +27,7 @@ Review the posts in real time
 Whenever a post is published, the product manager and all the product followers
 get notified in their Inbox (*Discuss* menu).
 
-.. image:: ./media/comment_new.png
+.. image:: reviews/comment_new.png
    :align: center
 
 .. note::
@@ -36,7 +36,7 @@ get notified in their Inbox (*Discuss* menu).
 Click the product name to open the detail form and review the comment (in the
 product discussion thread).
 
-.. image:: ./media/comment_inbox.png
+.. image:: reviews/comment_inbox.png
    :align: center
 
 Moderate & unpublish
@@ -48,12 +48,12 @@ or on the web page.
 To unpublish the post, open the product web page and click the *Published* button
 to turn it red (*Unpublished*). 
 
-.. image:: ./media/comment_unpublish.png
+.. image:: reviews/comment_unpublish.png
    :align: center
 
 ..tip::
     You can access the web page from the detail form by clicking the *Published*
     smart button (and vice versa).
 
-.. image:: ./media/comment_webpage.png
+.. image:: reviews/comment_webpage.png
    :align: center

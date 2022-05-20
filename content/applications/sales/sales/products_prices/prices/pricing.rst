@@ -10,7 +10,7 @@ As pricelists only suggest prices, they can be overridden by vendors completing 
 Choose your pricing strategy from :menuselection:`Sales --> Settings`.
 
 
-.. image:: ./media/pricing_options.png
+.. image:: pricing/pricing_options.png
    :align: center
 
 .. note::
@@ -31,14 +31,14 @@ Prices per customer segment
 
 Create pricelists for your customer segments: e.g. registered, premium, etc.
 
-.. image:: ./media/pricing_customer.png
+.. image:: pricing/pricing_customer.png
    :align: center
 
 The default pricelist applied to any new customer is *Public Pricelist*. To
 segment your customers, open the customer detail form and change the *Sale
 Pricelist* in the *Sales & Purchases* tab.
 
-.. image:: ./media/customer_pricelist.png
+.. image:: pricing/customer_pricelist.png
    :align: center
 
 Temporary prices
@@ -46,7 +46,7 @@ Temporary prices
 
 Apply deals for bank holidays, etc. Enter start and end dates dates.
 
-.. image:: ./media/pricing_period.png
+.. image:: pricing/pricing_period.png
    :align: center
 
 .. tip::
@@ -56,7 +56,7 @@ Apply deals for bank holidays, etc. Enter start and end dates dates.
 Prices per minimum quantity
 ---------------------------
 
-.. image:: ./media/pricing_quantity.png
+.. image:: pricing/pricing_quantity.png
    :align: center
 
 .. note::
@@ -78,12 +78,12 @@ Once installed go to
 (or :menuselection:`Website Admin --> Catalog --> Pricelists` if you
 use e-Commerce).
 
-.. image:: ./media/pricing_formula.png
+.. image:: pricing/pricing_formula.png
    :align: center
 
 Each pricelist item can be associated to either all products, to a product internal category (set of products) or to a specific product. Like in second option, you can set dates and minimum quantities.
 
-.. image:: ./media/pricelist_apply.png
+.. image:: pricing/pricelist_apply.png
    :align: center
 
 .. note::
@@ -94,7 +94,7 @@ Each pricelist item can be associated to either all products, to a product inter
   
 There are 3 modes of computation: fix price, discount & formula.
 
-.. image:: ./media/price_computation.png
+.. image:: pricing/price_computation.png
    :align: center
 
 Here are different price settings made possible thanks to formulas.
@@ -104,7 +104,7 @@ Discounts with roundings
 
 e.g. 20% discounts with prices rounded up to 9.99.
 
-.. image:: ./media/formula_discount.png
+.. image:: pricing/formula_discount.png
    :align: center
 
 Costs with markups (retail)
@@ -112,7 +112,7 @@ Costs with markups (retail)
 
 e.g. sale price = 2*cost (100% markup) with $5 of minimal margin.
 
-.. image:: ./media/formula_cost.png
+.. image:: pricing/formula_cost.png
    :align: center
 
 Prices per country
@@ -132,7 +132,7 @@ In case of discount, you can show the public price and the computed discount % o
 * Check *Allow discounts on sales order lines* in :menuselection:`Sales --> Configuration --> Settings --> Quotations & Sales --> Discounts`.
 * Apply the option in the pricelist setup form.
 
-.. image:: ./media/discount_options.png
+.. image:: pricing/discount_options.png
    :align: center
 
 .. seealso::

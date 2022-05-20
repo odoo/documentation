@@ -54,14 +54,14 @@ In order to retrieve the HMAC Key, you'll need to configure a `Standard Notifica
 this, log into your Adyen account then go to :menuselection:`Developers --> Webhooks --> Add webhook
 --> Add Standard notification`.
 
-.. image:: media/adyen_add_webhook.png
+.. image:: adyen/adyen_add_webhook.png
    :align: center
    :alt: Configure a webhook.
 
 There, in :menuselection:`Transport --> URL`, enter your server address followed by
 `/payment/adyen/notification`.
 
-.. image:: media/adyen_webhook_url.png
+.. image:: adyen/adyen_webhook_url.png
    :align: center
    :alt: Enter the notification URL.
 
@@ -79,7 +79,7 @@ To retrieve the URLs, log into your Adyen account, go to :menuselection:`Develop
 Pick one of the URLs listed next to **Recurring** as your **Recurring API URL** and one of the URLs
 listed next to **Checkout API** as your **Checkout API URL**.
 
-.. image:: media/adyen_api_urls.png
+.. image:: adyen/adyen_api_urls.png
    :align: center
    :alt: Get the links for the different API.
 
@@ -95,7 +95,7 @@ To allow payment originated from your website, follow the steps in :ref:`adyen/a
 to navigate to your API user and go to :menuselection:`Allowed Origins`, then add the URLs from
 where payments will be made (the URLs of the servers hosting your Odoo instances).
 
-.. image:: media/adyen_allowed_origins.png
+.. image:: adyen/adyen_allowed_origins.png
    :align: center
    :alt: Allows payments originated from a specific domain.
 

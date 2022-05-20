@@ -37,7 +37,7 @@ Configure a Deferred Expense Account
 To configure your account in the **Chart of Accounts**, go to :menuselection:`Accounting -->
 Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 
-.. image:: media/deferred_expenses01.png
+.. image:: deferred_expenses/deferred_expenses01.png
    :align: center
    :alt: Configuration of a Deferred Expense Account in Odoo Accounting
 
@@ -53,7 +53,7 @@ Select the account on a draft bill
 On a draft bill, select the right account for all the products of which the expenses must be
 deferred.
 
-.. image:: media/deferred_expenses02.png
+.. image:: deferred_expenses/deferred_expenses02.png
    :align: center
    :alt: Selection of a Deferred Expense Account on a draft bill in Odoo Accounting
 
@@ -63,7 +63,7 @@ Choose a different Expense Account for specific products
 Start editing the product, go to the *Accounting* tab, select the right **Expense Account**, and
 save.
 
-.. image:: media/deferred_expenses03.png
+.. image:: deferred_expenses/deferred_expenses03.png
    :align: center
    :alt: Change of the Expense Account for a product in Odoo
 
@@ -78,7 +78,7 @@ To do so, open your Purchases Journal by going to :menuselection:`Accounting -->
 Purchases`, select the journal item you want to modify, click on the account, and select the right
 one.
 
-.. image:: media/deferred_expenses04.png
+.. image:: deferred_expenses/deferred_expenses04.png
    :align: center
    :alt: Modification of a posted journal item's account in Odoo Accounting
 
@@ -98,7 +98,7 @@ Click on **select related purchases** to link an existing journal item to this n
 fields are then automatically filled out, and the journal item is now listed under the **Related
 Expenses** tab.
 
-.. image:: media/deferred_expenses05.png
+.. image:: deferred_expenses/deferred_expenses05.png
    :align: center
    :alt: Deferred Expense entry in Odoo Accounting
 
@@ -106,7 +106,7 @@ Once done, you can click on *Compute Deferral* (next to the *Confirm* button) to
 values of the **Expense Board**. This board shows you all the entries that Odoo will post to
 recognize your expense, and at which date.
 
-.. image:: media/deferred_expenses06.png
+.. image:: deferred_expenses/deferred_expenses06.png
    :align: center
    :alt: Expense Board in Odoo Accounting
 
@@ -134,7 +134,7 @@ account (see: `Change the account of a posted journal item`_).
 Then, click on *Action*, select **Create Deferred Entry**, and fill out the form the same way you
 would do to `create a new entry`_.
 
-.. image:: media/deferred_expenses07.png
+.. image:: deferred_expenses/deferred_expenses07.png
    :align: center
    :alt: Create Deferred Entry from a journal item in Odoo Accounting
 
@@ -160,7 +160,7 @@ right recognition account.
 New buttons with all the models linked to that account appear at the top of the form. Clicking on a
 model button fills out the form according to that model.
 
-.. image:: media/deferred_expenses08.png
+.. image:: deferred_expenses/deferred_expenses08.png
    :align: center
    :alt: Deferred Expense model button in Odoo Accounting
 
@@ -182,7 +182,7 @@ You have three choices for the **Automate Deferred Expense** field:
    Models`_). Whenever a transaction is posted on the account, a *Deferred Expenses entry* is
    created and immediately validated.
 
-.. image:: media/deferred_expenses09.png
+.. image:: deferred_expenses/deferred_expenses09.png
    :align: center
    :alt: Automate Deferred Expense on an account in Odoo Accounting
 
