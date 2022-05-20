@@ -22,12 +22,12 @@ Central for Germany <https://sellercentral.amazon.de>`_) with an administrator a
 In the main menu, select :menuselection:`Apps & Services --> Manage Your Apps`;
 in the page that displays, click on the ``Authorize new developper`` button:
 
-.. image:: ./media/seller_central_apps.png
+.. image:: setup/seller_central_apps.png
   :align: center
 
 Fill in the form depending on your Marketplace:
 
-.. image:: ./media/seller_central_form.png
+.. image:: setup/seller_central_form.png
   :align: center
 
 If your seller account is registered in the **North America** region, use these values:

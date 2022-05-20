@@ -18,7 +18,7 @@ If your camera is a `*supported
 one* <https://www.odoo.com/page/iot-hardware>`__, there is no need to
 set up anything as it will be detected as soon as it is connected.
 
-.. image:: media/camera_01.png
+.. image:: camera/camera_01.png
    :align: center
 
 Link a Camera to a Quality Control Point
@@ -34,12 +34,12 @@ and open the control point you want to link with the camera.
 Now, you can edit the control point and select the device from the
 dropdown list. Now, hit save.
 
-.. image:: media/camera_03.png
+.. image:: camera/camera_03.png
    :align: center
 
 Then, your camera can be used with the picked *Control Point*. During
 the manufacturing process, reaching the *Quality Control Point* you
 chose before will allow you to take a picture.
 
-.. image:: media/camera_04.png
+.. image:: camera/camera_04.png
    :align: center

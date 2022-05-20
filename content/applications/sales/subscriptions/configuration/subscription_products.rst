@@ -22,7 +22,7 @@ product type, it is recommended to use *Service* for subscription products as th
 products that you provide to your customers. Finally, you can adapt your prices and also add an
 internal reference.
 
-.. image:: media/subscription-products-configuration.png
+.. image:: subscription_products/subscription-products-configuration.png
   :align: center
   :alt: View of a subscription product form in Odoo Subscriptions
 
@@ -32,13 +32,13 @@ internal reference.
    application, this option is selected by default. However, if you create a product from another
    application, it is not the case.
 
-   .. image:: media/subscription-products-form.png
+   .. image:: subscription_products/subscription-products-form.png
      :align: center
      :alt: View of a subscription product form in Odoo Subscriptions
 
    You can also choose the subscription templates you want to use.
 
-   .. image:: media/subscription-products-using-subscription-templates.png
+   .. image:: subscription_products/subscription-products-using-subscription-templates.png
      :align: center
      :alt: View of a subscription product form in Odoo Subscriptions
 

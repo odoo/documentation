@@ -20,7 +20,7 @@ Concrete Example: Account Move
     - A new module ``estate_account`` should be created
     - When a property is sold, an invoice should be issued for the buyer
 
-    .. image:: 14_other_module/media/create_inv.gif
+    .. image:: 14_other_module/create_inv.gif
         :align: center
         :alt: Invoice creation
 

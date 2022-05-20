@@ -13,7 +13,7 @@ is not easy. To make it work correctly, you have to:
 Here is an example of subcontracting the manufacturing of “C”, which is
 produced out of raw materials “A” and “B”.
 
-.. image:: media/subcontracting_01.png
+.. image:: subcontracting/subcontracting_01.png
     :align: center
     :alt: 
 
@@ -25,7 +25,7 @@ Configuration
 To use the subcontracting feature, go to :menuselection:`Manufacturing
 --> Configuration --> Settings` and tick the box *Subcontracting*.
 
-.. image:: media/sbc_1.png
+.. image:: subcontracting/sbc_1.png
     :align: center
     :alt: 
 
@@ -41,7 +41,7 @@ that are sourced directly from the subcontractor.
 Once you have set the *BoM Type* to *Subcontracting*, specify one or
 several subcontractors.
 
-.. image:: media/sbc_2.png
+.. image:: subcontracting/sbc_2.png
     :align: center
     :alt: 
 
@@ -53,7 +53,7 @@ send them purchase orders (PO). To do so, go to the *Purchase* app and
 create a new purchase order. Be sure to send the PO to a vendor that is
 defined as a subcontractor on the *BoM* of these products.
 
-.. image:: media/subcontracting_04.png
+.. image:: subcontracting/subcontracting_04.png
     :align: center
     :alt: 
 
@@ -122,14 +122,14 @@ button appears. Click on it to open a dialog box and record the serial/lot numbe
 the components. If the finished product is also tracked, its serial/lot number can
 be registered here too.
 
-.. image:: media/sbc_3.png
+.. image:: subcontracting/sbc_3.png
     :align: center
     :alt: 
 
 For audit purposes, it is possible to check the lot numbers recorded on
 a receipt by using the icon on the right of the finished products:
 
-.. image:: media/sbc_4.png
+.. image:: subcontracting/sbc_4.png
     :align: center
     :alt: 
 
@@ -138,7 +138,7 @@ BOM for a non-tracked product, the record components option will also appear
 optionally on each move line, if you want to register more or less component consumption 
 at your subcontracting location, when receiving your final product. 
 
-.. image:: media/sbc_5.png
+.. image:: subcontracting/sbc_5.png
     :align: center
     :alt: 
 
@@ -161,7 +161,7 @@ below. If this is a component that you buy from a vendor, the buy route
 should also be activated. 
 
 
-.. image:: media/sbc_6.png
+.. image:: subcontracting/sbc_6.png
     :align: center
     :alt: 
 
@@ -175,7 +175,7 @@ Once the PO to the subcontractor is validated, this route will create a dropship
 RFQ from your vendor to that subcontractor. You then just need to review and validate it. 
 
 
-.. image:: media/sbc_7.png
+.. image:: subcontracting/sbc_7.png
     :align: center
     :alt: 
 
@@ -188,7 +188,7 @@ Configuration --> Settings --> Storage locations`.
 
 From the location form, you are then able to access the Current Stock. 
 
-.. image:: media/sbc_8.png
+.. image:: subcontracting/sbc_8.png
     :align: center
     :alt: 
 
@@ -203,12 +203,12 @@ If you want to send components to your subcontractor at your own convenience,
 select the 'Resupply Subcontractor' Operation Type from the *Inventory* Module, 
 and create a picking, specifying to which subcontractor you are delivering to. 
 
-.. image:: media/sbc_9.png
+.. image:: subcontracting/sbc_9.png
     :align: center
     :alt: 
 
 Alternatively, you can also manually ask your vendor to resupply your subcontractor 
 by creating a dropship type PO, with your subcontractor set as the delivery address.
 
-.. image:: media/sbc_10.png
+.. image:: subcontracting/sbc_10.png
     :align: center

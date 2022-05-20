@@ -14,7 +14,7 @@ The 3 recommended type of barcode scanners to work with the Odoo
 **Inventory** and **Barcode Scanning** apps are the **USB scanner**, **the bluetooth
 scanner** and the **mobile computer scanner**.
 
-.. image:: media/hardware02.png
+.. image:: hardware/hardware02.png
     :align: center
 
 -   If you scan products at a computer location, the **USB scanner** is the
@@ -44,7 +44,7 @@ Configure your barcode scanner
 Keyboard layout
 ---------------
 
-.. image:: media/hardware01.png
+.. image:: hardware/hardware01.png
     :align: center
 
 An USB barcode scanner needs to be configured to use the same keyboard

@@ -28,7 +28,7 @@ What is a Module?
   application to manage Real Estate sales, a model that represents the Properties for sale would
   probably be your first step.
 
-.. image:: media/new_app.png
+.. image:: understanding_general/new_app.png
    :align: center
    :alt: Overview of the main dashboard emphasizing the option to create a new app in Odoo Studio
 
@@ -59,7 +59,7 @@ Relational Fields in detail
   model.
 | In Odoo, relational field types are: *One2many*, *Many2one*, *Many2many*.
 
-.. image:: media/relational_fields.png
+.. image:: understanding_general/relational_fields.png
    :align: center
    :alt: Tables with a visual explanation of related fields for Odoo Studio
 
@@ -87,7 +87,7 @@ What is a Menu?
 A **Menu** is a button that executes an action. In Odoo Studio, to create menus (models) and
 rearrange their hierarchy, click on *Edit Menu*.
 
-.. image:: media/edit_menu.png
+.. image:: understanding_general/edit_menu.png
    :align: center
    :alt: Overview of a menu being edit in Odoo Studio
 

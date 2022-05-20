@@ -14,7 +14,7 @@ Warehouses` and edit the warehouse in question.
 Set the *Incoming Shipments* option to *Receive goods directly (1
 step)*.
 
-.. image:: media/one_step_01.png
+.. image:: one_step/one_step_01.png
    :align: center
 
 Create a Purchase Order
@@ -28,7 +28,7 @@ Notice that, now, we see 1 receipt associated with the purchase order
 you just created. If you click on the button, you will see your receipt
 order.
 
-.. image:: media/one_step_02.png
+.. image:: one_step/one_step_02.png
    :align: center
 
 Process a Receipt
@@ -38,7 +38,7 @@ You can also fin the receipt directly from the *Inventory* app. When
 on the dashboard, you can click the *1 TO PROCESS* button under the
 *Receipts* Kanban card. Then, you will see your receipt.
 
-.. image:: media/one_step_03.png
+.. image:: one_step/one_step_03.png
    :align: center
 
 Now, enter the picking that you want to process. You will be able to
@@ -50,7 +50,7 @@ from suppliers are considered as being always available.
    the :guilabel:`Done quantity` to specify the location(s) where you are storing the received
    product(s).
 
-.. image:: media/one_step_04.png
+.. image:: one_step/one_step_04.png
    :align: center
 
 Once you *Validate* the receipt, the products leave the *Supplier
@@ -58,5 +58,5 @@ Location* to enter your *WH/Stock Location*. You can easily see that
 the receipt took place thanks to the status of the document, which is
 now *Done*.
 
-.. image:: media/one_step_05.png
+.. image:: one_step/one_step_05.png
    :align: center

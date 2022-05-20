@@ -21,7 +21,7 @@ To use this feature, go to :menuselection:`Inventory --> Configuration --> Setti
 the inventory app. Then, enable the *Consignment* feature in the
 *Traceability* section. Now, hit save.
 
-.. image:: media/owned_stock_01.png
+.. image:: owned_stock/owned_stock_01.png
     :align: center
 
 Reception of Consignee Stock
@@ -32,7 +32,7 @@ reception. On the right side, you will see that a new line called
 *Assign Owner* has appeared. There, you can specify the partner which
 owns the stock.
 
-.. image:: media/owned_stock_02.png
+.. image:: owned_stock/owned_stock_02.png
     :align: center
 
 .. note::
@@ -41,5 +41,5 @@ owns the stock.
 Once the receipt is validated, the products enter your stock but still
 belong to the owner. They don’t impact your inventory valuation.
 
-.. image:: media/owned_stock_03.png
+.. image:: owned_stock/owned_stock_03.png
     :align: center

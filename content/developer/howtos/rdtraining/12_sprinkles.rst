@@ -26,7 +26,7 @@ Inline Views
     **Goal**: at the end of this section, a specific list of properties should be added to the property
     type view:
 
-    .. image:: 12_sprinkles/media/inline_view.png
+    .. image:: 12_sprinkles/inline_view.png
       :align: center
       :alt: Inline list view
 
@@ -101,7 +101,7 @@ Widgets
     **Goal**: at the end of this section, the state of the property should be displayed using a
     specific widget:
 
-    .. image:: 12_sprinkles/media/widget.png
+    .. image:: 12_sprinkles/widget.png
       :align: center
       :alt: Statusbar widget
 
@@ -240,7 +240,7 @@ Form
     - Conditional display of buttons and fields
     - Tag colors
 
-    .. image:: 12_sprinkles/media/form.gif
+    .. image:: 12_sprinkles/form.gif
       :align: center
       :alt: Form view with sprinkles
 
@@ -322,11 +322,11 @@ List
     Additionally, offers and tags will be editable directly in the list, and the availability date will be
     hidden by default.
 
-    .. image:: 12_sprinkles/media/decoration.png
+    .. image:: 12_sprinkles/decoration.png
       :align: center
       :alt: List view with decorations and optional field
 
-    .. image:: 12_sprinkles/media/editable_list.gif
+    .. image:: 12_sprinkles/editable_list.gif
       :align: center
       :alt: Editable list
 
@@ -393,7 +393,7 @@ Search
     and searching on the living area returns results where the area is larger than the given
     number.
 
-    .. image:: 12_sprinkles/media/search.gif
+    .. image:: 12_sprinkles/search.gif
       :align: center
       :alt: Default filters and domains
 
@@ -441,7 +441,7 @@ Stat Buttons
     **Goal**: at the end of this section, there will be a stat button on the property type form view
     which shows the list of all offers related to properties of the given type when it is clicked on.
 
-    .. image:: 12_sprinkles/media/stat_button.gif
+    .. image:: 12_sprinkles/stat_button.gif
       :align: center
       :alt: Stat button
 

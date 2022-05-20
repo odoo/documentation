@@ -16,7 +16,7 @@ option.
 .. note::
     In order to allow the option reprint receipt, you need to activate the receipt printer.
 
-.. image:: media/reprint01.png
+.. image:: reprint/reprint01.png
     :align: center
 
 Reprint a receipt
@@ -24,10 +24,10 @@ Reprint a receipt
 
 On your PoS interface, you now have a *Reprint receipt* button.
 
-.. image:: media/reprint02.png
+.. image:: reprint/reprint02.png
     :align: center
 
 When you use it, you can then reprint your last receipt.
 
-.. image:: media/reprint03.png
+.. image:: reprint/reprint03.png
     :align: center

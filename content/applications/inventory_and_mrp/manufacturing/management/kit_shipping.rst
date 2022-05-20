@@ -17,10 +17,10 @@ but will generate a delivery order with one line item for each of the components
 the examples below, the first image shows a sales order for the kit *Custom Computer Kit*,
 while the second image shows the corresponding delivery order.
 
-.. image:: media/kit-so-line.png
+.. image:: kit_shipping/kit-so-line.png
     :align: center
 
-.. image:: media/kit-do-picking.png
+.. image:: kit_shipping/kit-do-picking.png
     :align: center
 
 Configuration
@@ -41,7 +41,7 @@ products require no particular configuration.
 Once the products are configured, create a *bill of materials* for the kit product. Add each component
 and its quantity. Select the *BoM Type* Kit. All other options may be left with their default values.
 
-.. image:: media/kit-bom.png
+.. image:: kit_shipping/kit-bom.png
     :align: center
 
 Manage Stock of Kit Product and Component Products
@@ -54,7 +54,7 @@ subcontractor, or make it yourself through a manufacturing order.
 In that case the product type will be storable, and the BOM type either 'Manufacture this product' 
 or 'Subcontracting' as shown below.
 
-.. image:: media/kit-storable.png
+.. image:: kit_shipping/kit-storable.png
     :align: center
 
 
@@ -67,20 +67,20 @@ Imagine the Custom Computer parts above were part of another final product. It w
 clearer and simpler if the BOMs were added together (as shown below) instead of adding all 
 the individual parts one by one.
 
-.. image:: media/kit-bom4.png
+.. image:: kit_shipping/kit-bom4.png
     :align: center
 
 This is even better illustrated when looking at the BOM Structure Report, where it is 
 easy to expand and hide specific kit level or sub-assembly type BOMs. 
 
-.. image:: media/kit-bom5.png
+.. image:: kit_shipping/kit-bom5.png
     :align: center
 
 On the creation of the manufacturing order, the BOM will automatically expand to show all
 top level and kit level components. You can go back to the BOM at any point though as it 
 remains  available on the form view of your manufacturing order. 
 
-.. image:: media/kit-bom6.png
+.. image:: kit_shipping/kit-bom6.png
     :align: center
 
 Finally, note that if there were any Operations in the Kit BOM, these would also simply be added 
