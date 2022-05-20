@@ -9,7 +9,7 @@ This extension allows you to:
 - Centralize Prospects' emails into a CRM.
 - Search and store insights on your contacts.
 
-.. image:: media/outlook-extension-overview.png
+.. image:: outlook_extension/outlook-extension-overview.png
    :align: center
    :alt: Overview of the Outlook Extension in Outlook
 
@@ -52,20 +52,20 @@ You can install the Outlook Extension as a **Custom Add-in**. To do so, follow t
 #. Connect to your Outlook mailbox, open any email, and click on the *More actions* button,
    displayed as three little dots.
 
-   .. image:: media/outlook-extension-more-actions.png
+   .. image:: outlook_extension/outlook-extension-more-actions.png
       :align: center
       :alt: The button "More actions" in Outlook
 
 #. Click on *Get add-ins*.
 
-   .. image:: media/outlook-extension-get-add-ins.png
+   .. image:: outlook_extension/outlook-extension-get-add-ins.png
       :align: center
       :alt: List of actions in Outlook, including the installation of new add-ins
 
 #. In the new window, select the tab named *My add-ins*, click on *+ Add a custom add-in*, and then
    on *Add from URL...*
 
-   .. image:: media/outlook-extension-custom-add-ins.png
+   .. image:: outlook_extension/outlook-extension-custom-add-ins.png
       :align: center
       :alt: Installation of a custom add-in in Outlook
 
@@ -73,7 +73,7 @@ You can install the Outlook Extension as a **Custom Add-in**. To do so, follow t
      following URL, paste it in the box, and click on *OK*.
    | ``https://download.odoo.com/plugins/outlook/manifest.xml``
 
-   .. image:: media/outlook-extension-add-in-url.png
+   .. image:: outlook_extension/outlook-extension-add-in-url.png
       :align: center
       :alt: Getting a custom add-in in Outlook by providing the manifest file's URL
 
@@ -92,7 +92,7 @@ Add a shortcut to open the extension
 By default, you can open the **Odoo for Outlook** extension from the *More actions* menu. This
 section explains how to move the launcher next to the other default actions.
 
-.. image:: media/outlook-extension-default-actions.png
+.. image:: outlook_extension/outlook-extension-default-actions.png
    :align: center
    :alt: Odoo for Outlook extension as a default action in the mailbox
 
@@ -100,7 +100,7 @@ section explains how to move the launcher next to the other default actions.
 #. Go to :menuselection:`Settings --> Mail --> Customize actions --> Message surface`, select
    *Odoo for Outlook*, and click on *Save*.
 
-   .. image:: media/outlook-extension-customize-actions.png
+   .. image:: outlook_extension/outlook-extension-customize-actions.png
       :align: center
       :alt: add Odoo for Outlook extension as a default action in the message surface
 
@@ -113,7 +113,7 @@ Connect to your database
 #. Click on *login* at the bottom of the extension.
 #. Insert your database's URL then click on *Login*.
 
-   .. image:: media/outlook-extension-database-url.png
+   .. image:: outlook_extension/outlook-extension-database-url.png
       :align: center
       :alt: Connection to an Odoo database from the Outlook extension
 
@@ -146,7 +146,7 @@ The extension allows you to test this service for free, whether you connect the 
 database or not. After a while, the extension asks you to buy credits to keep using this additional
 service.
 
-.. image:: media/outlook-extension-credits-message.png
+.. image:: outlook_extension/outlook-extension-credits-message.png
    :align: center
    :alt: "Could not auto-complete the company: not enough credits!" warning message in the Outlook
          extension

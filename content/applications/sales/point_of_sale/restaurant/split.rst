@@ -16,7 +16,7 @@ interface.
 Under the Bills & Receipts category, you will find the Bill Splitting
 option.
 
-.. image:: media/split01.png
+.. image:: split/split01.png
     :align: center
 
 Split a bill
@@ -24,11 +24,11 @@ Split a bill
 
 In your PoS interface, you now have a *Split* button.
 
-.. image:: media/split02.png
+.. image:: split/split02.png
     :align: center
 
 When you use it, you will be able to select what that guest should had
 and process the payment, repeating the process for each guest.
 
-.. image:: media/split03.png
+.. image:: split/split03.png
     :align: center

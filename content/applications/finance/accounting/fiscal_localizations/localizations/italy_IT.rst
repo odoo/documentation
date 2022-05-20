@@ -51,7 +51,7 @@ elettronica sono i seguenti:
 
 -  Numero di Iscrizione nel registro delle Imprese.
 
-.. image:: media/italy_IT01.png
+.. image:: italy_IT/italy_IT01.png
   :align: center
 
 
@@ -67,7 +67,7 @@ Configurare le impostazioni per la Fatturazione Elettronica
    indicare in questo campo se l’Azienda si avvale di un Rappresentate
    Fiscale in Italia.
 
-.. image:: media/italy_IT02.png
+.. image:: italy_IT/italy_IT02.png
   :align: center
 
 
@@ -84,7 +84,7 @@ Codice Fiscale e Indice PA *che deve contere i 6-7 caratteri
 contenuti nell’indice PA e necessari per la comunicazione tramite
 fattura elettronica*.
 
-.. image:: media/italy_IT03.png
+.. image:: italy_IT/italy_IT03.png
   :align: center
 
 
@@ -98,10 +98,10 @@ fattura viene quindi inviata: lo stato della sua consegna verrà
 notificato all’utente tramite pop-up sulla parte iniziale della
 schermata della fattura.
 
-.. image:: media/italy_IT04.png
+.. image:: italy_IT/italy_IT04.png
   :align: center
 
-.. image:: media/italy_IT05.png
+.. image:: italy_IT/italy_IT05.png
   :align: center
 
 I messaggi che possono apparire sono i seguenti:
@@ -126,6 +126,6 @@ dall’elenco delle Fatture nella forma di icone, accanto alla colonna
 Per inviare la fattura tramite PEC e generare il file XML, basterà
 cliccare su invia. Il documento verrà poi mostrato tra gli allegati.
 
-.. image:: media/italy_IT06.png
+.. image:: italy_IT/italy_IT06.png
   :align: center
 

@@ -131,13 +131,13 @@ There are two ways to create the PR:
 - Open a browser in your development repository `https://github.com/xyz-odoo/technical-training-sandbox`.
   There will be a button to create a new pull request.
 
-  .. image:: 16_guidelines_pr/media/pr_from_branch.png
+  .. image:: 16_guidelines_pr/pr_from_branch.png
 
 You will notice that your commit message is used as the pull request message. This occurs if you have only 1 commit.
 If you have multiple commits, you can either make a summary of the commits as the PR message or if there aren't that many
 commits you can just copy/paste your commit messages as the PR message.
 
-.. image:: 16_guidelines_pr/media/pr_message.png
+.. image:: 16_guidelines_pr/pr_message.png
 
 Additional Info for Odoo Staff
 ==============================

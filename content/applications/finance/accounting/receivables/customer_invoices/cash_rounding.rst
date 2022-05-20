@@ -16,7 +16,7 @@ Configuration
 Go to :menuselection:`Accounting --> Configuration --> Settings`
 and enable *Cash Rounding*, then click on *Save*.
 
-.. image:: media/cash_rounding01.png
+.. image:: cash_rounding/cash_rounding01.png
     :align: center
 
 Go to :menuselection:`Accounting --> Configuration --> Cash Roundings`, 

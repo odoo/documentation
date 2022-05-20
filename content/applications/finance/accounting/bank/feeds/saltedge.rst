@@ -6,7 +6,7 @@ Salt Edge as bank synchronization provider
 from your bank accounts. It supports ~5000 institutions in more than 50
 countries.
 
-.. image:: media/saltedge-logo.png
+.. image:: saltedge/saltedge-logo.png
    :align: center
    :alt: Salt Edge Logo
 
@@ -30,20 +30,20 @@ Link your bank accounts with Odoo
    valid email address, as otherwise, you will not be able to access your Salt Edge
    account.
 
-   .. image:: media/saltedge-contact-email.png
+   .. image:: saltedge/saltedge-contact-email.png
       :align: center
       :alt: Email address to provide to Salt Edge for the creation of your account.
 
 #. After entering your email address, you are redirected to Salt Edge to continue
    the synchronization process.
 
-   .. image:: media/saltedge-login-page.png
+   .. image:: saltedge/saltedge-login-page.png
       :align: center
       :alt: Salt Edge Login page.
 
 #. Make sure you give your consent by checking the consent checkbox.
 
-   .. image:: media/saltedge-give-consent.png
+   .. image:: saltedge/saltedge-give-consent.png
       :align: center
       :alt: Salt Edge give consent page.
 

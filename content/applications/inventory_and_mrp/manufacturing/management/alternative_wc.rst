@@ -23,7 +23,7 @@ The first thing to do is to go to the *Manufacturing* app settings.
 Then, enable the *Work Orders* feature and hit save.
 
 
-.. image:: media/alternative_wc_01.png
+.. image:: alternative_wc/alternative_wc_01.png
     :align: center
 
 
@@ -32,7 +32,7 @@ two new work centers. Add the second work centers as an alternative to
 the first and vice versa.
 
 
-.. image:: media/alternative_wc_02.png
+.. image:: alternative_wc/alternative_wc_02.png
     :align: center
 
 
@@ -40,7 +40,7 @@ The next step is to create your *routing*. Add your work center and an
 operation to it before saving.
 
 
-.. image:: media/alternative_wc_03.png
+.. image:: alternative_wc/alternative_wc_03.png
     :align: center
 
 
@@ -48,7 +48,7 @@ Then, you can create your *Bill of Materials* and add components and
 routing to it.
 
 
-.. image:: media/alternative_wc_04.png
+.. image:: alternative_wc/alternative_wc_04.png
     :align: center
 
 
@@ -61,7 +61,7 @@ your product and plan it. In the *Work Orders* list, you can find it
 ready to be assembled.
 
 
-.. image:: media/alternative_wc_05.png
+.. image:: alternative_wc/alternative_wc_05.png
     :align: center
 
 
@@ -70,7 +70,7 @@ first one, will be scheduled at the alternative work center you
 configured.
 
 
-.. image:: media/alternative_wc_06.png
+.. image:: alternative_wc/alternative_wc_06.png
     :align: center
 
 

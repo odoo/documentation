@@ -30,7 +30,7 @@ Now, create it. Choose the product from the dropdown menu and add your
 components and the quantity. In this case, keep the default *BoM*
 type, which is *Manufacture this Product*.
 
-.. image:: media/bills_of_materials_01.png
+.. image:: bill_configuration/bills_of_materials_01.png
     :align: center
 
 .. warning::
@@ -48,7 +48,7 @@ If your *BoM* is for one variant only, then specify which one in the
 for on each component line. You can add several variants for each
 component.
 
-.. image:: media/bills_of_materials_02.png
+.. image:: bill_configuration/bills_of_materials_02.png
     :align: center
 
 Adding a routing
@@ -59,7 +59,7 @@ define a series of operations required by your manufacturing process. To
 use it, enable the *Work Orders* feature in the *Manufacturing* app
 settings.
 
-.. image:: media/bills_of_materials_03.png
+.. image:: bill_configuration/bills_of_materials_03.png
     :align: center
 
 .. note::
@@ -70,7 +70,7 @@ Now that you have created your routing, add it to your *BoM*. You can
 select when, in the work operations, your components are consumed with
 the dropdown menu.
 
-.. image:: media/bills_of_materials_04.png
+.. image:: bill_configuration/bills_of_materials_04.png
     :align: center
 
 Adding By-Products
@@ -82,7 +82,7 @@ addition to the primary product.
 To add *by-products* to a *BoM*, you will first need to enable them
 from the *Manufacturing* app settings.
 
-.. image:: media/bills_of_materials_05.png
+.. image:: bill_configuration/bills_of_materials_05.png
     :align: center
 
 Once the feature is enabled, you can add your *By-Products* to your
@@ -90,5 +90,5 @@ Once the feature is enabled, you can add your *By-Products* to your
 mind that you need to register during which operation your by-product is
 produced.
 
-.. image:: media/bills_of_materials_06.png
+.. image:: bill_configuration/bills_of_materials_06.png
     :align: center

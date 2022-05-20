@@ -9,7 +9,7 @@ Configuration
 
 For this feature to work, go to :menuselection:`CRM --> Configuration --> Settings` and activate the **Lead Mining** feature.
  
-.. image:: media/LM1.png
+.. image:: lead_mining/LM1.png
    :align: center
 
 
@@ -20,14 +20,14 @@ You are also able to create lead mining requests from the
 :menuselection:`Configuration --> Lead Mining Requests` and through
 :menuselection:`Leads --> Leads` where you have the **Generate Leads** button.
 
-.. image:: media/LM2.png
+.. image:: lead_mining/LM2.png
    :align: center
 
 
 From there, click on the **Generate Leads** button, a window where you will be able to pick your criteria will pop up.
 
 
-.. image:: media/LM5.png
+.. image:: lead_mining/LM5.png
    :align: center
 
 
@@ -54,10 +54,10 @@ Here is the pricing for this `feature <https://iap.odoo.com/iap/in-app-services/
 To buy credits you can either go to :menuselection:`CRM --> Configuration --> Settings --> Buy
 Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my Services`.
 
-.. image:: media/LM6.png
+.. image:: lead_mining/LM6.png
    :align: center
 
-.. image:: media/LM7.png
+.. image:: lead_mining/LM7.png
    :align: center
 
 

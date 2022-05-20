@@ -15,7 +15,7 @@ There are 2 types: GSM7 and UNICODE.
 following characters:
 
 
-.. image:: media/faq1.png
+.. image:: pricing_and_faq/faq1.png
    :align: center
    :alt: GSM7 in Odoo SMS Marketing
 
@@ -39,7 +39,7 @@ How much does it cost to send an SMS?
 The number of SMSs a message represents will be always available to you in your database.
 
 
-.. image:: media/faq2.png
+.. image:: pricing_and_faq/faq2.png
    :align: center
    :height: 300
    :alt: SMS pricing and FAQ Odoo SMS Marketing
@@ -50,14 +50,14 @@ How do I buy credits?
 Go to :menuselection:`Settings --> Buy Credits`.
 
 
-.. image:: media/faq3.png
+.. image:: pricing_and_faq/faq3.png
    :alt: SMS pricing and FAQ Odoo SMS Marketing
 
 
 Or go to :menuselection:`Settings --> View my Services`.
 
 
-.. image:: media/faq4.png
+.. image:: pricing_and_faq/faq4.png
    :alt: SMS pricing and FAQ Odoo SMS Marketing
 
 

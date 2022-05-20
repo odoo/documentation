@@ -25,7 +25,7 @@ NPWP/NIK settings
     field on the customer's contact to set the NPWP needed to generate the e-Faktur file. If your
     customer does not have an NPWP, just enter the NIK in the same VAT field.
 
-  .. image:: media/indonesia-partner-nik.png
+  .. image:: indonesia/indonesia-partner-nik.png
      :align: center
 
 .. _localization_indonesia/e-faktur_usage:
@@ -49,7 +49,7 @@ Generate Tax Invoice Serial Number
    number, as requested by the Indonesia Tax Revenue Department.
 #. There is a counter to inform you how many unused numbers are left in that group.
 
-   .. image:: media/indonesia-sn-count.png
+   .. image:: indonesia/indonesia-sn-count.png
       :align: center
 
 .. _localization_indonesia/csv:
@@ -63,7 +63,7 @@ Generate e-faktur csv for a single invoice or a batch invoices
 #. Set a Kode Transaksi for the e-Faktur. There are constraints related to the Kode transaksi and
    the type of VAT applied to invoice lines.
 
-   .. image:: media/indonesia-kode-transaksi.png
+   .. image:: indonesia/indonesia-kode-transaksi.png
       :align: center
 
 #. Odoo will automatically pick the next available serial number from the e-Faktur number table (see
@@ -71,13 +71,13 @@ Generate e-faktur csv for a single invoice or a batch invoices
    number as a concatenation of Kode Transaksi and serial number. You can see this from the invoice
    form view under the page *Extra Info* in the box *Electronic Tax*.
 
-   .. image:: media/indonesia-e-faktur-sn.png
+   .. image:: indonesia/indonesia-e-faktur-sn.png
       :align: center
 
 #. Once the invoice is posted, you can generate and download the e-Faktur from the *Action* menu
    item *Download e-faktur*. The checkbox *CSV created* will be set.
 
-   .. image:: media/indonesia-csv-created.png
+   .. image:: indonesia/indonesia-csv-created.png
       :align: center
 
 #. You can select multiple invoices in list view and generate a batch e-Faktur .csv.
@@ -110,7 +110,7 @@ Correct an invoice that has been posted and downloaded: Replace Invoice feature
    replaced invoice replacing the third digit of the original serial number with *1* (as requested
    to upload a replacement invoice in the e-Faktur app).
 
-.. image:: media/indonesia-replace-invoice.png
+.. image:: indonesia/indonesia-replace-invoice.png
    :align: center
 
 
@@ -124,5 +124,5 @@ Correct an invoice that has been posted but not downloaded yet: Reset e-Faktur
 #. The serial number will be unassigned, and we will be able to reset the invoice to draft, edit it
    and re-assign a new serial number.
 
-.. image:: media/indonesia-e-faktur-reset.png
+.. image:: indonesia/indonesia-e-faktur-reset.png
    :align: center

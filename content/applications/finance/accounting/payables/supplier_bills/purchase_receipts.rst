@@ -20,7 +20,7 @@ Register a receipt
 To record a new receipt, go to :menuselection:`Accounting --> Vendors --> Receipts`, click on
 *Create*, fill out the form, and click on *Post*.
 
-.. image:: media/purchase_receipts_draft.png
+.. image:: purchase_receipts/purchase_receipts_draft.png
    :align: center
    :alt: Fill out the draft purchase receipt in Odoo Accounting
 
@@ -36,7 +36,7 @@ post it.
 To do so, click on the **Journal Items** tab, change the accounts and values according to your
 needs, and click on *Post*.
 
-.. image:: media/purchase_receipts_journal_items.png
+.. image:: purchase_receipts/purchase_receipts_journal_items.png
    :align: center
    :alt: Change the accounts used in the journal entry to record a purchase receipt.
 

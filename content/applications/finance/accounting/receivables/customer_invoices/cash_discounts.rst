@@ -18,7 +18,7 @@ Configuration --> Management --> Payment Terms` and click on
 during which the offer is valid. You can also change the default balance
 term if needed.
 
-.. image:: media/cash_discounts01.png
+.. image:: cash_discounts/cash_discounts01.png
   :align: center
 
 Start offering the cash discount
@@ -30,7 +30,7 @@ automatically split the account receivables part of the journal entry
 into two installments having different due dates. Since the discounted
 price is already calculated, your payment controls will be simplified.
 
-.. image:: media/cash_discounts02.png
+.. image:: cash_discounts/cash_discounts02.png
   :align: center
 
 Grant the cash discount
@@ -41,7 +41,7 @@ cash discount. When you process the bank statement, match the payment
 with the related journal entry. Then, select the remaining cash discount
 and click on *Create Write-off* to reconcile it.
 
-.. image:: media/cash_discounts03.png
+.. image:: cash_discounts/cash_discounts03.png
   :align: center
 
 .. tip::
@@ -59,7 +59,7 @@ In this case, the customer has not fulfilled the payment term and cannot
 benefit from the cash discount. When you process the bank statement,
 match the payment with the two related journal entries.
 
-.. image:: media/cash_discounts04.png
+.. image:: cash_discounts/cash_discounts04.png
   :align: center
 
 

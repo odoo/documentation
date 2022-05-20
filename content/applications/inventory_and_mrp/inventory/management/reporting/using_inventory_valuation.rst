@@ -24,7 +24,7 @@ Let’s take an example with a product - a table - configured with a
 
 I purchase 10 tables at a cost of $10.
 
-.. image:: media/use_inventory_valuation_01.png
+.. image:: using_inventory_valuation/use_inventory_valuation_01.png
     :align: center
 
 When I’ll confirm the receipt of the products, the value of my inventory
@@ -37,7 +37,7 @@ the valuation stat button.
          owned by another company, they are not taken into account in your
          inventory valuation.
 
-.. image:: media/use_inventory_valuation_02.png
+.. image:: using_inventory_valuation/use_inventory_valuation_02.png
     :align: center
 
 .. note::
@@ -46,13 +46,13 @@ the valuation stat button.
 In this case, I can see that the 10 tables entered the stock for a total
 value of $100.
 
-.. image:: media/use_inventory_valuation_03.png
+.. image:: using_inventory_valuation/use_inventory_valuation_03.png
     :align: center
 
 I can also easily access the accounting entry that has been generated
 (in case of automated inventory valuation).
 
-.. image:: media/use_inventory_valuation_04.png
+.. image:: using_inventory_valuation/use_inventory_valuation_04.png
     :align: center
 
 Deliver a product
@@ -61,7 +61,7 @@ Deliver a product
 In the same logic, when a table will be delivered, the stock valuation
 will be impacted and you will have access to a similar information.
 
-.. image:: media/use_inventory_valuation_05.png
+.. image:: using_inventory_valuation/use_inventory_valuation_05.png
     :align: center
 
 The inventory valuation report
@@ -73,5 +73,5 @@ you, product per product, the value of your stock. By clicking on the
 button *Inventory At Date*, you can have the same information for a
 past date.
 
-.. image:: media/use_inventory_valuation_06.png
+.. image:: using_inventory_valuation/use_inventory_valuation_06.png
     :align: center

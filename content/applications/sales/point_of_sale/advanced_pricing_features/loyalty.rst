@@ -13,12 +13,12 @@ To activate the *Loyalty Program* feature, go to
 select your PoS interface. Under the Pricing features, select *Loyalty
 Program*
 
-.. image:: media/loyalty01.png
+.. image:: loyalty/loyalty01.png
     :align: center
 
 From there you can create and edit your loyalty programs.
 
-.. image:: media/loyalty02.png
+.. image:: loyalty/loyalty02.png
     :align: center
 
 You can decide what type of program you wish to use, if the reward is a
@@ -34,7 +34,7 @@ the transaction and they will accumulate until they are spent. They are
 spent using the button *Rewards* when they have enough points
 according to the rules defined in the loyalty program.
 
-.. image:: media/loyalty03.png
+.. image:: loyalty/loyalty03.png
     :align: center
 
 You can see the price is instantly updated to reflect the pricelist. You

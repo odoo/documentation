@@ -19,7 +19,7 @@ Register your application with the Microsoft identity platform
 .. note::
    When configuring your platform settings, choose *Web*.
 
-   .. image:: media/platform_configurations.png
+   .. image:: outlook_calendar/platform_configurations.png
       :align: center
       :alt: Adding a platform in Microsoft Azure for Outlook calendar sync in Odoo
 
@@ -27,7 +27,7 @@ Register your application with the Microsoft identity platform
    | For the **Redirect URI restrictions**, copy your Odoo database URI followed by
      ``/microsoft_account/authentication``. Example:
 
-      .. image:: media/redirect_URIs.png
+      .. image:: outlook_calendar/redirect_URIs.png
          :align: center
          :alt: Odoo's database URI that is accepted when microsoft returns authentication
 
@@ -43,21 +43,21 @@ Configuration in Odoo
 
 Go to general *Settings* and activate the *Outlook Calendar* feature.
 
-.. image:: media/outlook_calendar.png
+.. image:: outlook_calendar/outlook_calendar.png
    :align: center
    :alt: Outlook Calendar feature activated in Odoo
 
 From your Azure portal, under *Overview*, copy your *Application (client) ID*, and paste it to
 *Client ID* in Odoo.
 
-.. image:: media/application_client_ID.png
+.. image:: outlook_calendar/application_client_ID.png
    :align: center
    :alt: Client ID token to be copied from Microsoft to Odoo
 
 Going back to your Azure portal, now under *Certificates & secrets*, copy your *Client Secret Value*
 and paste it to *Client Secret* in Odoo.
 
-.. image:: media/client_secrets.png
+.. image:: outlook_calendar/client_secrets.png
    :align: center
    :alt: Client Secret token to be copied from Microsoft to Odoo
 
@@ -75,21 +75,21 @@ Sync with Outlook
      created in Outlook, and therefore, no redundant emails will be sent during the first
      synchronization. After the sync, events will only send one confirmation email.
 
-      .. image:: media/archive_odoocalendar.png
+      .. image:: outlook_calendar/archive_odoocalendar.png
          :align: center
          :alt: Archive events in Odoo Calendar
 
 Go to the *Calendar* application and *Sync with Outlook*. You are asked to log in to
 your account, if you are not already, and grant the required permissions.
 
-.. image:: media/sync_with_outlook.png
+.. image:: outlook_calendar/sync_with_outlook.png
    :align: center
    :alt: Calendar view and the button Sync with Outlook in Odoo Calendar
 
 The synchronization is a two-way process, meaning that events are reconciled in both accounts
 (Outlook and Odoo).
 
-.. image:: media/synched_with_outlook.png
+.. image:: outlook_calendar/synched_with_outlook.png
    :align: center
    :alt: View of Odoo's Calendar synched with Outlook's Calendar
 

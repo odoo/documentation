@@ -43,7 +43,7 @@ After having activated the currencies, you can configure the parameters
 to automate the currency rate update. These options are also in the
 settings of the Accounting application, in the bottom of the page:
 
-.. image:: media/foreign01.png
+.. image:: foreign_currency/foreign01.png
    :align: center
 
 Click on the **Update Now** link to update the currency rates now.
@@ -54,7 +54,7 @@ Create a new bank account
 In the accounting application, we first go to :menuselection:`Configuration -->
 Accounting / Bank account`, and we create a new one.
 
-.. image:: media/foreign02.png
+.. image:: foreign_currency/foreign02.png
    :align: center
 
 Once you save this bank account, Odoo will create all the documents for
@@ -75,13 +75,13 @@ from a supplier in China.
 
 In the :menuselection:`Purchase --> Vendor Bills` , this is what you could see:
 
-.. image:: media/foreign03.png
+.. image:: foreign_currency/foreign03.png
    :align: center
 
 Once you are ready to pay this bill, click on register payment on the
 bill to record a payment.
 
-.. image:: media/foreign04.png
+.. image:: foreign_currency/foreign04.png
    :align: center
 
 That's all you have to do. Odoo will automatically post the foreign
@@ -103,7 +103,7 @@ If you have several invoices with different currencies for the same
 customer, Odoo will split the customer statement by currency, as shown
 in the report below.
 
-.. image:: media/foreign05.png
+.. image:: foreign_currency/foreign05.png
    :align: center
 
 In the above report, the account receivable associated to Camptocamp is

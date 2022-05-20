@@ -16,7 +16,7 @@ Vendor bills default control policy
 As a first step, open your Purchase app and go to :menuselection:`Configuration --> Settings` to set
 the default bill control policy for all the products created onwards.
 
-.. image:: media/control-bills-quantities-default-setting.png
+.. image:: control_bills/control-bills-quantities-default-setting.png
    :align: center
    :alt: Vendor bills default control setting for new products in Odoo Purchase
 
@@ -28,7 +28,7 @@ received some of the products you have ordered. The quantities you have received
 generate the draft bill. If you try to create one without having received any product, you get an
 error message.
 
-.. image:: media/control-bills-no-invoiceable-line.png
+.. image:: control_bills/control-bills-no-invoiceable-line.png
    :align: center
    :alt: No invoiceable line error message in Odoo Purchase
 
@@ -39,7 +39,7 @@ If you want to modify a specific product's control policy, go to :menuselection:
 Products`, open it, click on *Edit* and go to the *Purchase tab*. There you can change a product's
 default bill control policy.
 
-.. image:: media/control-bills-quantities-on-product.png
+.. image:: control_bills/control-bills-quantities-on-product.png
    :align: center
    :alt: Vendor bills default control setting for new products in Odoo Purchase
 
@@ -49,7 +49,7 @@ View a purchase order's billing status
 Once you confirm an order, you can view its *Billing Status* by going to the *Other Information*
 tab.
 
-.. image:: media/control-bills-billing-status.png
+.. image:: control_bills/control-bills-billing-status.png
    :align: center
    :alt: Purchase order billing status in Odoo Purchase
 
@@ -73,7 +73,7 @@ Determine when to pay with 3-way matching
 
 First, go to :menuselection:`Configuration --> Settings` and activate *3-way matching*.
 
-.. image:: media/control-bills-3-way-matching-setting.png
+.. image:: control_bills/control-bills-3-way-matching-setting.png
    :align: center
    :alt: 3-way-matching setting in Odoo Purchase
 
@@ -86,7 +86,7 @@ Should I pay the vendor bill?
 With the feature activated, your vendor bills now display the *Should Be Paid* field under the
 *Other info* tab.
 
-.. image:: media/control-bills-should-be-paid.png
+.. image:: control_bills/control-bills-should-be-paid.png
    :align: center
    :alt: Should Be Paid field under a vendor bill in Odoo Purchase
 
@@ -101,7 +101,7 @@ you might have a valid reason to have done so.
 Once the payment has been registered and mentions *Paid*, the *Should Be Paid* status is set to
 *No*.
 
-.. image:: media/control-bills-paid-status.png
+.. image:: control_bills/control-bills-paid-status.png
    :align: center
    :alt: Paid bill in Odoo Purchase
 

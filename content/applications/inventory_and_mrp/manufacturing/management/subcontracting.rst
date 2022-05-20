@@ -16,7 +16,7 @@ is not easy. To make it work right, you have to:
 Here is an example of subcontracting the manufacturing of “C”, which is
 produced out of raw materials “A” and “B”.
 
-.. image:: media/subcontracting_01.png
+.. image:: subcontracting/subcontracting_01.png
     :align: center
     :alt: 
 
@@ -28,7 +28,7 @@ Configuration
 To use the subcontracting feature, go to :menuselection:`Manufacturing
 --> Configuration --> Settings` and tick the box *Subcontracting*.
 
-.. image:: media/subcontracting_02.png
+.. image:: subcontracting/subcontracting_02.png
     :align: center
     :alt: 
 
@@ -44,7 +44,7 @@ that are sourced directly from the subcontractor.
 Once you have set the *BoM Type* to *Subcontracting*, specify one or
 several subcontractors.
 
-.. image:: media/subcontracting_03.png
+.. image:: subcontracting/subcontracting_03.png
     :align: center
     :alt: 
 
@@ -56,7 +56,7 @@ send them purchase orders (PO). To do so, open the *Purchase* app and
 create a new one. Be sure to send the PO to a vendor that is defined as
 a subcontractor on the *BoM*.
 
-.. image:: media/subcontracting_04.png
+.. image:: subcontracting/subcontracting_04.png
     :align: center
     :alt: 
 
@@ -129,14 +129,14 @@ button appears when necessary. Click on it to open a dialog and record
 the serial/lot numbers of the components. If the finished product is
 also tracked, its serial/lot number can be registered here too.
 
-.. image:: media/subcontracting_05.png
+.. image:: subcontracting/subcontracting_05.png
     :align: center
     :alt: 
 
 For audit purposes, it is possible to check the lot numbers recorded on
 a receipt by using the icon on the right of the finished products:
 
-.. image:: media/subcontracting_06.png
+.. image:: subcontracting/subcontracting_06.png
     :align: center
     :alt: 
 
@@ -170,7 +170,7 @@ location, with a minimum and maximum inventory level. When the
 reordering rule is triggered, a delivery order is created to ship the
 components to the subcontractor.
 
-.. image:: media/subcontracting_07.png
+.. image:: subcontracting/subcontracting_07.png
     :align: center
     :alt: 
 
@@ -180,7 +180,7 @@ Production Schedule) triggers the replenishment of the subcontractor. To
 do so, select the route *Resupply Subcontractor on Order* on the
 wanted components.
 
-.. image:: media/subcontracting_08.png
+.. image:: subcontracting/subcontracting_08.png
     :align: center
     :alt: 
 
@@ -196,7 +196,7 @@ Now, set the *Dropship* option in the *Deliver To* field of the
 *Other Information* tab. Then, provide the address of the
 subcontractor for the shipping.
 
-.. image:: media/subcontracting_09.png
+.. image:: subcontracting/subcontracting_09.png
     :align: center
     :alt: 
 
@@ -204,7 +204,7 @@ That way, the supplier can ship items directly and you simply receive
 and pay the bill. However, it is still required to validate receipts for
 the subcontractor.
 
-.. image:: media/subcontracting_10.png
+.. image:: subcontracting/subcontracting_10.png
     :align: center
     :alt: 
 
@@ -217,14 +217,14 @@ on a manufacturing step but, because the manufacturing process is
 handled by an external party, it can be defined on the product
 reception.
 
-.. image:: media/subcontracting_11.png
+.. image:: subcontracting/subcontracting_11.png
     :align: center
     :alt: 
 
 To create a quality check at the receipt, open the *Quality* app and
 create a new *Control Point* on the reception.
 
-.. image:: media/subcontracting_12.png
+.. image:: subcontracting/subcontracting_12.png
     :align: center
     :alt: 
 
