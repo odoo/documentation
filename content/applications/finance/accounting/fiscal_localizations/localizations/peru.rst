@@ -31,7 +31,7 @@ Go to *Apps* and search for Peru, then click Install in the module Peru EDI. Thi
 dependency with *Peru - Accounting*. In case this last one is not installed, Odoo installs it
 automatically within EDI.
 
-.. image:: media/peru-modules.png
+.. image:: peru/peru-modules.png
    :align: center
    :alt: The "Module" filter is set on "Peru" 
 
@@ -47,7 +47,7 @@ essential for the Electronic Invoice to work properly. The field **Address Type 
 the establishment code assigned by the SUNAT when companies register their RUC (Unique Contributor 
 Registration):
 
-.. image:: media/peru-company.png
+.. image:: peru/peru-company.png
    :align: center
    :alt: Company data for Peru including RUC and Address type code
 
@@ -114,7 +114,7 @@ IAP (Odoo In-App Purchase)
 This is the default and the suggested option, considering the digital ceritificate is included as
 part of the service. 
 
-.. image:: media/peru-IAP.png
+.. image:: peru/peru-IAP.png
    :align: center
    :alt: IAP option as signature providers
    
@@ -178,7 +178,7 @@ document validation directly to Digiflow. In this case you need to consider:
 - Sign a service agreement directly with `Digiflow <https://www.digiflow.pe/>`_.
 - Provide your SOL credentials.
 
-.. image:: media/peru-Digiflow.png
+.. image:: peru/peru-Digiflow.png
    :align: center
    :alt: Digiflow
 
@@ -218,7 +218,7 @@ In case you don’t use Odoo IAP, in order to generate the electronic invoice si
 certificate with the extension ``.pfx`` is required. Proceed to this section and load your file and
 password.
 
-.. image:: media/peru-Certificate.png
+.. image:: peru/peru-Certificate.png
    :align: center
    :alt: EDI Certificate wizard
    
@@ -228,7 +228,7 @@ Multicurrency
 The official currency exchange rate in Peru is provided by the Bank of Peru. Odoo can connect 
 directly to its services and get the currency rate either automatically or manually.
 
-.. image:: media/peru-multicurrency.png
+.. image:: peru/peru-multicurrency.png
    :align: center
    :alt: Bank of Peru is displayed in Multicurrency Service option
    
@@ -245,7 +245,7 @@ Taxes
 As part of the localization module the taxes are created automatically with their related 
 financial account and electronic invoice configuration.
 
-.. image:: media/peru-taxes.png
+.. image:: peru/peru-taxes.png
    :align: center
    :alt: List of default taxes
 
@@ -256,7 +256,7 @@ As part of the taxes configuration, there are three new fields required for elec
 the taxes created by default have this data included, but in case you create new taxes make 
 sure you fill in the fields: 
 
-.. image:: media/peru-taxes-edi.png
+.. image:: peru/peru-taxes-edi.png
    :align: center
    :alt: Taxes EDI data for Peru
 
@@ -284,7 +284,7 @@ is created automatically when the localization module is installed.
 The information required for the document types is included by default so the user does not need 
 to fill anything on this view:
 
-.. image:: media/peru-document-type.png
+.. image:: peru/peru-document-type.png
    :align: center
    :alt: Document Type list
 
@@ -311,7 +311,7 @@ Electronic Data Interchange
 This  section indicates which EDI workflow is used in the invoice, for Peru we must select 
 “Peru UBL 2.1”.
 
-.. image:: media/peru-journal-edi.png
+.. image:: peru/peru-journal-edi.png
    :align: center
    :alt: Journal EDI field
 
@@ -328,7 +328,7 @@ As part of the Peruvian localization, the identification types defined by the SU
 available on the Partner form, this information is essential for most transactions either on 
 the sender company and in the customer, make sure you fill in this information in your records.
 
-.. image:: media/peru-id-type.png
+.. image:: peru/peru-id-type.png
    :align: center
    :alt: Partner identification type
 
@@ -339,7 +339,7 @@ Product
 Additional to the basic information in your products, for the Peruvian localization, the UNSPC 
 Code on the product is a required value to be configured. 
 
-.. image:: media/peru-unspc-code.png
+.. image:: peru/peru-unspc-code.png
    :align: center
    :alt: UNSPC Code on products
 
@@ -361,7 +361,7 @@ required as part of the Peru EDI:
 - **Document type**: The default value is “Factura Electronica” but  you can manually change the 
   document type if needed and select Boleta for example. 
 
-  .. image:: media/peru-invoice-document-type.png
+  .. image:: peru/peru-invoice-document-type.png
      :align: center
      :alt: Invoice document type field on invoices
 
@@ -369,7 +369,7 @@ required as part of the Peru EDI:
   type, the default value is “Internal Sale” but another value can be selected manually when needed, 
   for example Export of Goods. 
 
-  .. image:: media/peru-operation-type.png
+  .. image:: peru/peru-operation-type.png
      :align: center
      :alt: Invoice operation type field on invoices
 
@@ -378,7 +378,7 @@ required as part of the Peru EDI:
   All the taxes loaded by default are associated with a default EDI affection reason, if needed 
   you can manually select another one when creating the invoice.
 
-  .. image:: media/peru-tax-affectation-reason.png
+  .. image:: peru/peru-tax-affectation-reason.png
      :align: center
      :alt: Tax affectation reason in invoice line
 
@@ -389,7 +389,7 @@ Once you check all the information in your invoice is correct, you can proceed t
 action registers the account move and triggers the Electronic invoice workflow to send it to the 
 OSE and the SUNAT. The following message is displayed at the top of the invoice:
 
-.. image:: media/peru-posted-invoice.png
+.. image:: peru/peru-posted-invoice.png
    :align: center
    :alt: Sending of EDI Invoice in blue
 
@@ -402,7 +402,7 @@ Electronic Invoice Status
 done either automatically by Odoo with a *cron* that runs every hour, or the user can send it 
 immediately by clicking on the button “Sent now”.
 
-.. image:: media/peru-sent-manual.png
+.. image:: peru/peru-sent-manual.png
    :align: center
    :alt: Send EDI manually
 
@@ -410,7 +410,7 @@ immediately by clicking on the button “Sent now”.
 the validation a ZIP file is downloaded and a message is logged in the chatter indicating the 
 correct Government validation.  
 
-.. image:: media/peru-invoice-sent.png
+.. image:: peru/peru-invoice-sent.png
    :align: center
    :alt: Message on chatter when the invoice is valid
 
@@ -438,7 +438,7 @@ If a validation error is received, you have two options:
   data on the invoice lines), the correct solution is to reset the invoice to Draft, apply the 
   changes, and then send the invoice again to the SUNAT for another validation. 
 
-  .. image:: media/peru-errors.png
+  .. image:: peru/peru-errors.png
      :align: center
      :alt: List of common errors on invoices
 
@@ -452,7 +452,7 @@ Invoice PDF Report
 After the invoice is accepted and validated by the SUNAT, the invoice PDF report can be printed. 
 The report includes a QR code, indicating the invoice is a valid fiscal document.
 
-.. image:: media/peru-PDF.png
+.. image:: peru/peru-PDF.png
    :align: center
    :alt: Invoice PDF report
 
@@ -466,7 +466,7 @@ Once you run out of credits a red label is displayed at the top of the invoice i
 additional credits are required, you can easily buy them by accessing the link provided in 
 the message. 
 
-.. image:: media/peru-credits-IAP.png
+.. image:: peru/peru-credits-IAP.png
    :align: center
    :alt: Buying credits in the IAP
 
@@ -483,7 +483,7 @@ Some scenarios require an invoice cancellation, for example, when an invoice was
 If the invoice was already sent and validated by the SUNAT, the correct way to proceed is by 
 clicking on the button Request Cancellation:
 
-.. image:: media/peru-cancellation.png
+.. image:: peru/peru-cancellation.png
    :align: center
    :alt: Request invoice cancellation button
 
@@ -497,7 +497,7 @@ either automatically by Odoo with a *cron* that runs every hour, or the user can
 immediately by clicking on the button “Send now”. Once it is sent, a cancellation ticket is 
 created, as a result the next message and CDR File are logged in the chatter:
 
-.. image:: media/peru-cancellation-cdr.png
+.. image:: peru/peru-cancellation-cdr.png
    :align: center
    :alt: Cancellation CDR sent by the SUNAT
    
@@ -505,7 +505,7 @@ created, as a result the next message and CDR File are logged in the chatter:
 validated. As part of the validation a ZIP file is downloaded and a message is logged in the 
 chatter indicating the correct Government validation.
 
-.. image:: media/peru-cancelled.png
+.. image:: peru/peru-cancelled.png
    :align: center
    :alt: nvoice after cancellation
 
@@ -521,7 +521,7 @@ When creating exportation invoices, take into account the next considerations:
 - Operation type in your invoice must be an Exportation one. 
 - The taxes included in the invoice lines should be EXP taxes.
 
-.. image:: media/peru-exp-invoice.png
+.. image:: peru/peru-exp-invoice.png
    :align: center
    :alt: Exportation invoices main data
 
@@ -542,13 +542,13 @@ When creating invoices that is subject to Detractions, take into account the nex
 
 #. All the products included in the invoice must have these fields configured: 
 
-   .. image:: media/peru-detraction.png
+   .. image:: peru/peru-detraction.png
       :align: center
       :alt: Detraction fields on products
 	  
 #. Operation type in your invoice must be ``1001``
 
-   .. image:: media/peru-detraction-invoice.png
+   .. image:: peru/peru-detraction-invoice.png
       :align: center
       :alt: Detraction code on invoices.
 
@@ -559,7 +559,7 @@ When a correction or refund is needed over a validated invoice, a credit note mu
 for this just click on the button “Add Credit Note”, a part of the Peruvian localization you need 
 to prove a Credit Reason selecting one of the options in the list.
 
-.. image:: media/peru-credit-note.png
+.. image:: peru/peru-credit-note.png
    :align: center
    :alt: Add Credit Note from invoice
 
@@ -569,7 +569,7 @@ to prove a Credit Reason selecting one of the options in the list.
    
 By default the Credit Note is set in the document type:
 
-.. image:: media/peru-credit-note-document.png
+.. image:: peru/peru-credit-note-document.png
    :align: center
    :alt: Credit Note document type
 

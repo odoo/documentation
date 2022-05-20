@@ -188,7 +188,7 @@ Effects are graphical elements that can be temporarily displayed on top of the p
 
 A good example would be the rainbow man:
 
-.. image:: images/rainbow_man.png
+.. image:: services/rainbow_man.png
     :alt: The rainbow man effect
     :width: 600
     :align: center
@@ -348,7 +348,7 @@ Here, it is called in webclient.js to make it visible everywhere for the example
   const effectService = useService("effect");
   effectService.add({ type: "sepia" });
 
-.. image:: images/odoo_sepia.png
+.. image:: services/odoo_sepia.png
     :alt: Odoo in sepia
     :width: 600
     :align: center
@@ -500,7 +500,7 @@ A notification for when a sale deal is made with a button to go some kind of com
     ],
   });
 
-.. image:: images/notification_service.png
+.. image:: services/notification_service.png
   :width: 600 px
   :alt: Example of notification
   :align: center

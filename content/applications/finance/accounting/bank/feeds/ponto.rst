@@ -6,7 +6,7 @@ Ponto as bank synchronization provider
 place and directly see all their transactions within one app. It is a third-party solution that is
 continuously expanding the number of bank institutions that can be synchronized with Odoo.
 
-.. image:: media/ponto-logo.png
+.. image:: ponto/ponto-logo.png
    :align: center
    :alt: Logo of the Ponto brand
 
@@ -30,7 +30,7 @@ Link your bank accounts with Ponto
 #. Create an account if you don't have one yet.
 #. Once you are logged in, create an *organization*.
 
-   .. image:: media/ponto-organization.png
+   .. image:: ponto/ponto-organization.png
       :align: center
       :alt: Fill out the form to add an organization in Ponto.
 
@@ -39,7 +39,7 @@ Link your bank accounts with Ponto
 #. Select your country, your bank institutions, give your consent to Ponto, and follow the steps
    on-screen to link your bank account with your Ponto account.
 
-   .. image:: media/ponto-add-account.png
+   .. image:: ponto/ponto-add-account.png
       :align: center
       :alt: Add bank accounts to your Ponto account.
 
@@ -57,7 +57,7 @@ Link your Ponto account with your Odoo database
    **all the accounts** you want to synchronize. Even the ones coming from other banking
    institutions.
 
-   .. image:: media/ponto-select-accounts.png
+   .. image:: ponto/ponto-select-accounts.png
       :align: center
       :alt: Selection of the accounts you wish to synchronize with Odoo.
 

@@ -4,17 +4,17 @@ Connect an IoT Box to your database
 
 Install the Internet of Things (IoT) App on your Odoo Database.
 
-.. image:: media/connect01.png
+.. image:: connect/connect01.png
    :align: center
 
 Go in the IoT App and click on Connect on the IoT Boxes page.
 
-.. image:: media/connect02.png
+.. image:: connect/connect02.png
    :align: center
 
 Follow the steps to connect your IoT Box.
 
-.. image:: media/connect03.png
+.. image:: connect/connect03.png
    :align: center
 
 Ethernet Connection
@@ -27,7 +27,7 @@ Ethernet Connection
 
 3. Read the Pairing Code from a screen or a receipt printer connected to the IoT Box.
 
-   .. image:: media/connect04.png
+   .. image:: connect/connect04.png
 
 4. Input the Pairing Code and click on the Pair button.
 
@@ -43,18 +43,18 @@ WiFi Connection
 
 2. Copy the token
 
-   .. image:: media/connect05.png
+   .. image:: connect/connect05.png
 
 3. Connect to the IoT Box WiFi Network (make sure there is no ethernet
    cable plugged in your computer).
 
-   .. image:: media/connect06.png
+   .. image:: connect/connect06.png
 
 4. You will be redirected to the IoT Box Homepage (if it doesn't work,
    connect to the IP address of the box). Give a name to your IoT Box (not
    required) and paste the token, then click on next.
 
-   .. image:: media/connect07.png
+   .. image:: connect/connect07.png
 
    .. tip::
       If you are on Runbot, do not forget to add the -all or -base in the
@@ -67,15 +67,15 @@ WiFi Connection
    if there is one) and click on Submit. Wait a few seconds before being
    redirected to your database.
 
-   .. image:: media/connect08.png
+   .. image:: connect/connect08.png
 
 You should now see the IoT Box.
 
-.. image:: media/connect09.png
+.. image:: connect/connect09.png
    :align: center
 
 IoT Box Schema
 ~~~~~~~~~~~~~~
 
-.. image:: media/connect10.png
+.. image:: connect/connect10.png
    :align: center

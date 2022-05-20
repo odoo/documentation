@@ -15,7 +15,7 @@ To use this feature, you first need to activate the *Barcode*
 functionality via :menuselection:`Inventory --> Settings --> Barcode Scanner`. Once you
 have ticked the feature, you can hit save.
 
-.. image:: media/software_01.png
+.. image:: software/software_01.png
     :align: center
 
 Set Product Barcodes
@@ -24,16 +24,16 @@ Set Product Barcodes
 You can easily assign barcodes to your different products via the
 *Inventory* app. To do so, go to :menuselection:`Settings --> Configure Products Barcodes`.
 
-.. image:: media/software_02.png
+.. image:: software/software_02.png
     :align: center
 
 Then, you have the possibility to assign barcodes to your products
 directly at creation on the product form.
 
-.. image:: media/software_03.png
+.. image:: software/software_03.png
     :align: center
 
-.. image:: media/software_04.png
+.. image:: software/software_04.png
     :align: center
 
 .. note::
@@ -48,10 +48,10 @@ If you manage multiple locations, you will find useful to attribute a
 barcode to each location and stick it on the location. You can configure
 the locations barcodes in :menuselection:`Inventory --> Configuration --> Locations`.
 
-.. image:: media/software_05.png
+.. image:: software/software_05.png
     :align: center
 
-.. image:: media/software_06.png
+.. image:: software/software_06.png
     :align: center
 
 .. note::

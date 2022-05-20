@@ -13,29 +13,29 @@ Dashboard thanks to Google Analytics.
 
 - Select Analytics API.
 
-.. image:: media/google_analytics_api.png
+.. image:: google_analytics_dashboard/google_analytics_api.png
     :align: center
 
 - Create a new project and give it a name (e.g. Odoo).
   This project is needed to store your API credentials.
 
-.. image:: media/google_analytics_create_project.png
+.. image:: google_analytics_dashboard/google_analytics_create_project.png
     :align: center
 
 - Enable the API.
 
-.. image:: media/google_analytics_enable.png
+.. image:: google_analytics_dashboard/google_analytics_enable.png
     :align: center
 
 - Create credentials to use in Odoo.
 
-.. image:: media/google_analytics_create_credentials.png
+.. image:: google_analytics_dashboard/google_analytics_create_credentials.png
     :align: center
 
 - Select *Web browser (Javascript)* 
   as calling source and *User data* as kind of data.
 
-.. image:: media/google_analytics_get_credentials.png
+.. image:: google_analytics_dashboard/google_analytics_get_credentials.png
     :align: center
 
 - Then you can create a Client ID.
@@ -44,7 +44,7 @@ Dashboard thanks to Google Analytics.
   Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
   URL followed by '/google_account/authentication'.
 
-.. image:: media/google_analytics_authorization.png
+.. image:: google_analytics_dashboard/google_analytics_authorization.png
     :align: center
 
 
@@ -55,16 +55,16 @@ Dashboard thanks to Google Analytics.
 
 - Finally you are provided with your Client ID. Copy and paste it in Odoo.
 
-.. image:: media/google_analytics_client_id.png
+.. image:: google_analytics_dashboard/google_analytics_client_id.png
     :align: center
 
 - Open your Website Dashboard in Odoo and link your Analytics account to past
   your Client ID.
 
-.. image:: media/google_analytics_start.png
+.. image:: google_analytics_dashboard/google_analytics_start.png
     :align: center
 
 - As a last step, authorize Odoo to access Google API.
 
-.. image:: media/google_analytics_login.png
+.. image:: google_analytics_dashboard/google_analytics_login.png
     :align: center

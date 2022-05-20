@@ -12,18 +12,18 @@ Create a customer
 
 From your session interface, use the customer button.
 
-.. image:: media/register01.png
+.. image:: register/register01.png
     :align: center
 
 Create a new one by using this button.
 
-.. image:: media/register02.png
+.. image:: register/register02.png
     :align: center
 
 You will be invited to fill out the customer form with their
 information.
 
-.. image:: media/register03.png
+.. image:: register/register03.png
     :align: center
 
 Use the save button when you are done. You can then select that customer

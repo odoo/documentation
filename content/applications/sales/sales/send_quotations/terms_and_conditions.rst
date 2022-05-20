@@ -18,7 +18,7 @@ Configuration
 Go to :menuselection:`Accounting --> Configuration --> Settings` and activate
 *Default Terms & Conditions*.
 
-.. image:: media/terms_conditions_1.png
+.. image:: terms_and_conditions/terms_conditions_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to enable Default Terms & Conditions on Odoo Sales?
@@ -34,7 +34,7 @@ DT&C on your quotations, sales orders, and invoices
 In the settings of the **Invoicing App**, you have the possibility to insert your default terms
 and conditions.
 
-.. image:: media/terms_conditions_2.png
+.. image:: terms_and_conditions/terms_conditions_2.png
    :align: center
    :class: img-thumbnail
    :alt: Default Terms & Conditions on quotation on Odoo Sales
@@ -47,7 +47,7 @@ DT&C on your quotation templates
 According to your business needs, you can specify your terms and conditions on your quotation
 templates. This is interesting if you have different terms and conditions within your company.
 
-.. image:: media/terms_conditions_3.png
+.. image:: terms_and_conditions/terms_conditions_3.png
    :align: center
    :class: img-thumbnail
    :alt: Add Default Terms & Conditions to your quotation templates on Odoo Sales
@@ -65,7 +65,7 @@ GT&C on your website
 Use the **Website App** and create your own general terms and conditions page. For example, here is
 the Odoo terms and conditions page:
 
-.. image:: media/terms_conditions_4.png
+.. image:: terms_and_conditions/terms_conditions_4.png
    :align: center
    :class: img-thumbnail
    :alt: General Terms & Conditions on your website
@@ -74,7 +74,7 @@ You can refer to this page in the footer of all your documents. The layout is av
 **General Settings** under the **Business Documents** category. For example, this footer appears
 in every document from Odoo.
 
-.. image:: media/terms_conditions_7.png
+.. image:: terms_and_conditions/terms_conditions_7.png
    :align: center
    :class: img-thumbnail
    :alt: General Terms & Conditions in your business documents
@@ -85,7 +85,7 @@ GT&C as attachment in your emails
 Attach an external document with your general terms and conditions when you are about to send your
 quotation by email to your customers.
 
-.. image:: media/terms_conditions_5.png
+.. image:: terms_and_conditions/terms_conditions_5.png
    :align: center
    :class: img-thumbnail
    :alt: General Terms & conditions as attachment in your email
@@ -100,7 +100,7 @@ the confirmation tab, you are now able to activate online signatures, online pay
 a confirmation mail in which you have the possibility to configure the default attachment.
 There, you can put your general terms & conditions.
 
-.. image:: media/terms_conditions_6.png
+.. image:: terms_and_conditions/terms_conditions_6.png
    :align: center
    :class: img-thumbnail
    :alt: General Terms & conditions as attachment in your quotation templates

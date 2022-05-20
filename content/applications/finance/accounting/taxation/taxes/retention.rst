@@ -13,7 +13,7 @@ from the amount to pay, as the tax will be paid by the customer.
 
 As, an example, in Colombia you may have the following invoice:
 
-.. image:: media/retention03.png
+.. image:: retention/retention03.png
    :align: center
 
 In this example, the **company** who sent the invoice owes $20 of taxes to
@@ -26,14 +26,14 @@ In Odoo, a withholding tax is defined by creating a negative tax. For a
 retention of 10%, you would configure the following tax (accessible
 through :menuselection:`Configuration --> Taxes`):
 
-.. image:: media/retention04.png
+.. image:: retention/retention04.png
    :align: center
 
 In order to make it appear as a retention on the invoice, you should set
 a specific tax group **Retention** on your tax, in the **Advanced Options**
 tab.
 
-.. image:: media/retention02.png
+.. image:: retention/retention02.png
    :align: center
 
 Once the tax is defined, you can use it in your products, sales order or
@@ -51,7 +51,7 @@ Once your tax is created, you can use it on customer forms, sales order
 or customer invoices. You can apply several taxes on a single customer
 invoice line.
 
-.. image:: media/retention01.png
+.. image:: retention/retention01.png
    :align: center
 
 .. note::
@@ -62,7 +62,7 @@ invoice line.
 
 The printed invoice will show the different amounts in each tax group.
 
-.. image:: media/retention03.png
+.. image:: retention/retention03.png
    :align: center
 
 .. seealso::

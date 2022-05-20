@@ -161,7 +161,7 @@ payment methods in the **Supported Payment Icons** field. If the desired payment
 listed, you don't have anything to do. If a payment icon record doesn't exist in the database, its
 related payment method is considered enabled with Stripe.
 
-.. image:: media/stripe_enable_local_payment_method.png
+.. image:: stripe/stripe_enable_local_payment_method.png
    :align: center
    :alt: Select and add icons of the payment methods you want to enable
 

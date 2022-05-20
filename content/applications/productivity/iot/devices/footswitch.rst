@@ -19,7 +19,7 @@ If your footswitch is a `supported
 one <https://www.odoo.com/page/iot-hardware>`__, there is no need to
 set up anything since it will be automatically detected when connected.
 
-.. image:: media/footswitch_01.png
+.. image:: footswitch/footswitch_01.png
    :align: center
 
 Link a Footswitch to a Workcenter
@@ -30,7 +30,7 @@ workcenter. Go to the workcenter you want to use the footswitch in and
 add the device in the *IoT Triggers* tab. Then, you can link it to an
 action and also add a key to trigger it.
 
-.. image:: media/footswitch_03.png
+.. image:: footswitch/footswitch_03.png
    :align: center
 
 Note that the one that is first in the list will be chosen. So, the

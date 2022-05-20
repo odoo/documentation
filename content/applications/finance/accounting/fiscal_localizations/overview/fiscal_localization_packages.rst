@@ -24,7 +24,7 @@ Localization`, click on **Install More Packages**, and install your country's mo
 
 Once done, select your country's package, and click on *Save*.
 
-.. image:: media/fiscal_localization_packages_selection.png
+.. image:: fiscal_localization_packages/fiscal_localization_packages_selection.png
    :align: center
    :alt: Select your country's fiscal localization package in Odoo Accounting.
 

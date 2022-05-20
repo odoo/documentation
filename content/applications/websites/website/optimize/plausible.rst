@@ -10,24 +10,24 @@ To follow your website's traffic with Plausible.io:
 
 - Go through the `list of your websites <https://plausible.io/sites/>`__ and click on the gear icon.
 
-    .. image:: media/plausible_cog.png
+    .. image:: plausible/plausible_cog.png
        :align: center
 
 - Click on the button `+ New Link` in the tab Visibility to create your Shared links.
 
-    .. image:: media/plausible_new_sharedlink.png
+    .. image:: plausible/plausible_new_sharedlink.png
        :align: center
 
 - Choose a name (and NO password - it is not supported to embed it in Odoo) and click on the button `Create Shared Link`
 
-    .. image:: media/plausible_create_sharedlink.png
+    .. image:: plausible/plausible_create_sharedlink.png
        :align: center
 
 - Copy the new Shared Link url from Plausible.io and paste it in the Settings of Odoo
 
-    .. image:: media/plausible_copy_sharedlink.png
+    .. image:: plausible/plausible_copy_sharedlink.png
        :align: center
-    .. image:: media/plausible_paste_sharedlink.png
+    .. image:: plausible/plausible_paste_sharedlink.png
        :align: center
 
 

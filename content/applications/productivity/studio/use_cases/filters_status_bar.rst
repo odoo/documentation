@@ -8,13 +8,13 @@ Advanced Use Cases: Filters and Status Bar
 On your customer’s page, use *Filters* > *Add Custom Filter* to group customers by country. Now,
 under *Favorites*, *Save Current Search* enabling *Use by default* and *Save*.
 
-.. image:: media/filters_status_bar/customer_filter.png
+.. image:: filters_status_bar/customer_filter.png
    :align: center
    :alt: View of a custom filter being set to be used by default in Odoo
 
 On *Filter Rules* in Studio mode, select the respective filter and enable *Default Filter*.
 
-.. image:: media/filters_status_bar/sales_default_filter.png
+.. image:: filters_status_bar/sales_default_filter.png
    :align: center
    :alt: View of a filter’s rule form emphasizing the field default filter in Odoo Studio
 
@@ -27,7 +27,7 @@ On *Filter Rules* in Studio mode, select the respective filter and enable *Defau
 | On the *Views* menu, access *Kanban* and, under its *View* options, set the *Default Group by* as
   *Pipeline status bar*.
 
-.. image:: media/filters_status_bar/add_pipeline.png
+.. image:: filters_status_bar/add_pipeline.png
    :align: center
    :alt: Form view emphasizing the button add a pipeline bar in Odoo Studio
 
@@ -37,7 +37,7 @@ throughout stages (also through the product’s form), stages are shown in the K
 .. tip::
    To make modifications in the pipeline status bar, for example, remember to go back to *Form View*.
 
-   .. image:: media/filters_status_bar/form_view.png
+   .. image:: filters_status_bar/form_view.png
       :align: center
       :alt: View of Studio emphasizing the form view button in Odoo Studio
 
@@ -53,7 +53,7 @@ values:
 - *Action To Do*: Update the Record
 - *Data to Write*: Cost (Product Template) > Value > 0
 
-.. image:: media/filters_status_bar/automations_zero_price.png
+.. image:: filters_status_bar/automations_zero_price.png
    :align: center
    :alt: View of the automated action created to set the price of a product to zero in Odoo Studio
 

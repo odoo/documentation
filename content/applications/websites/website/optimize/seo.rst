@@ -32,7 +32,7 @@ They are automatically generated based on page title & content, but you can
 finetune them. Make sure they fit the content of the page, otherwise you will 
 be downgraded by search engines.
 
-.. image:: media/seo01.png
+.. image:: seo/seo01.png
   :align: center
 
 Keywords
@@ -43,7 +43,7 @@ towards your website. For each keyword, you see how it is used in the content
 (H1, H2, page title, page description, page content) and what are the related 
 searches in Google. The more keywords are used the better.
 
-.. image:: media/seo02.png
+.. image:: seo/seo02.png
   :align: center
 
 .. note:: 
@@ -92,7 +92,7 @@ Social Network
 Odoo allows to link all your social network accounts in your website footer.
 All you have to do is to refer all your accounts in your company settings.
 
-.. image:: media/seo03.png
+.. image:: seo/seo03.png
   :align: center
   
 Social Share
@@ -102,14 +102,14 @@ Drop the building block *Share* on any page you want your visitors to share.
 By clicking the icon, they are prompted to share the page in their social media
 wall.
 
-.. image:: media/seo04.png
+.. image:: seo/seo04.png
   :align: center
 
 Most social media use a picture of the picture to decorate the share post.
 Odoo uses the website logo by default but you can choose any other image 
 of your page in the Promote tool.
 
-.. image:: media/seo05.png
+.. image:: seo/seo05.png
   :align: center
   
 Facebook Page
@@ -319,7 +319,7 @@ visitor abandonment rate is also divided by two. (25% to 12.5%). One
 extra second to load a page could `cost $1.6b to Amazon in
 sales <http://www.fastcompany.com/1825005/how-one-second-could-cost-amazon-16-billion-sales>`__.
 
-.. image:: media/seo06.png
+.. image:: seo/seo06.png
   :align: center
 
 Fortunately, Odoo does all the magic for you. Below, you will find the
@@ -341,7 +341,7 @@ From the upload button, you have the option to keep the original image
 unmodified if you prefer to optimize the quality of the image rather
 than performance.
 
-.. image:: media/seo07.png
+.. image:: seo/seo07.png
   :align: center
 
 .. note::
@@ -355,12 +355,12 @@ When you click on an image, Odoo shows you the Alt and title attributes
 of the ``<img>`` tag. You can click on it to set your own title and Alt
 attributes for the image.
 
-.. image:: media/seo08.png
+.. image:: seo/seo08.png
   :align: center
 
 When you click on this link, the following window will appear:
 
-.. image:: media/seo09.png
+.. image:: seo/seo09.png
   :align: center
 
 Odoo's pictograms are implemented using a font (`Font
@@ -368,7 +368,7 @@ Awesome <https://fortawesome.github.io/Font-Awesome/icons/>`__ in most
 Odoo themes). Thus, you can use as many pictograms as you want in your
 page, they will not result in extra requests to load the page.
 
-.. image:: media/seo10.png
+.. image:: seo/seo10.png
   :align: center
 
 Static Resources: CSS
@@ -504,7 +504,7 @@ Delivery Network has three advantages:
 You can configure your CDN options from the **Website Admin** app, using
 the Configuration menu. Here is an example of configuration you can use:
 
-.. image:: media/seo11.png
+.. image:: seo/seo11.png
   :align: center
 
 HTML Pages
@@ -535,7 +535,7 @@ Websites that are not mobile-friendly are negatively
 impacted in search engine rankings. All Odoo themes rely on Bootstrap to
 render efficiently according to the device: desktop, tablet or mobile.
 
-.. image:: media/seo12.png
+.. image:: seo/seo12.png
   :align: center
 
 As all Odoo modules share the same technology, absolutely all pages in
@@ -569,7 +569,7 @@ eCommerce compared to Odoo when it comes to high query volumes:
 
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
-.. image:: media/seo13.png
+.. image:: seo/seo13.png
   :align: center
 
 Search Engines Files
@@ -620,7 +620,7 @@ products, forum posts and contact addresses. This allows your product
 pages to be displayed in Google using extra information like the price
 and rating of a product:
 
-.. image:: media/seo14.png
+.. image:: seo/seo14.png
   :align: center
 
 robots.txt

@@ -17,7 +17,7 @@ Imagine a generic warehouse plan, with receiving docks and area, storage locatio
 packing areas, and shipping docks. All products go through all these locations, but some rules, 
 such as removal strategies, can have an effect on which products are taken for the pickings.
 
-.. image:: media/empty-dock.png
+.. image:: removal/empty-dock.png
    :align: center
    :alt: empty stock waiting for deliveries at the docks.
 
@@ -25,7 +25,7 @@ Here, vendor trucks unload pallets of goods at the docks. Then, operators scan t
 receiving area, with the receiving date and, if the product has an expiration date, the expiration 
 date. After that, products are stored in their respective locations.
 
-.. image:: media/entering-stocks.png
+.. image:: removal/entering-stocks.png
    :align: center
    :alt: products entering stock via the receiving area.
 
@@ -34,7 +34,7 @@ and they don’t have the same expiration date. In that situation, you logically
 with the closest date first. Depending on the removal strategy you chose, Odoo generates a transfer 
 with the products fitting your settings the best.
 
-.. image:: media/packing-products.png
+.. image:: removal/packing-products.png
    :align: center
    :alt: products being packed at packing area for delivery, taking expiration dates into account.
 
@@ -105,7 +105,7 @@ To identify some units from other ones, you need to track them, either by *lot* 
 To do so, go to :menuselection:`Configuration --> Settings`. Then, activate *Storage Location*, 
 *Multi-Steps Routes*, and *Lots & Serial Numbers*.
 
-.. image:: media/enabled-features.png
+.. image:: removal/enabled-features.png
    :align: center
    :alt: features to enable in order to properly use removal strategies.
 
@@ -115,7 +115,7 @@ To do so, go to :menuselection:`Configuration --> Settings`. Then, activate *Sto
 Next, you need to define your removal strategy, on *Product Categories* via 
 :menuselection:`Inventory --> Configuration --> Product Categories`.
 
-.. image:: media/first-in-first-out.png
+.. image:: removal/first-in-first-out.png
    :align: center
    :alt: force removal strategy set up as first in first out.
 
@@ -130,7 +130,7 @@ For this example, we created three lots of white shirts. Those are from the All/
 where we put *FIFO* as the removal strategy. In our stock location (WH/Stock), we now find the 
 three lots available.
 
-.. image:: media/inventory-valuation.png
+.. image:: removal/inventory-valuation.png
    :align: center
    :alt: view of the white shirt lots inventory valuation.
 
@@ -141,7 +141,7 @@ to check that products from that lot are the first ones to move out.
 On the delivery order linked to the picking, you can see that the oldest lot numbers have been 
 reserved thanks to the *FIFO* strategy.
 
-.. image:: media/reserved-lots-FIFO.png
+.. image:: removal/reserved-lots-FIFO.png
    :align: center
    :alt: two lots being reserved for sell with the FIFO strategy.
 
@@ -155,14 +155,14 @@ Even if our white shirts are clothes, we can say that they are timeless. So, let
 test our *LIFO* strategy. Once again, open the product category via :menuselection:`Inventory 
 --> Configuration --> Product Categories` and change the removal strategy to *LIFO*.
 
-.. image:: media/last-in-first-out.png
+.. image:: removal/last-in-first-out.png
    :align: center
    :alt: last in first out strategy set up as forced removal strategy.
 
 Now, create a sale order for 4 white shirts and check that the reserved products are from lots 
 000003 and 000002.
 
-.. image:: media/reserved-lots-LIFO.png
+.. image:: removal/reserved-lots-LIFO.png
    :align: center
    :alt: two lots being reserved for sell with the LIFO strategy.
 
@@ -183,7 +183,7 @@ By activating *Expiration Dates*, it becomes possible to define different dates 
 numbers to be used in *FEFO*. These dates can be set by going to :menuselection:`Inventory --> 
 Master Data --> Lots/Serial Numbers`.
 
-.. image:: media/removal-date.png
+.. image:: removal/removal-date.png
    :align: center
    :alt: view of the removal date for 0000001.
 
@@ -197,7 +197,7 @@ defined are picked after lots with removal dates.
 To use the *FEFO* strategy, once again go to :menuselection:`Inventory --> Configuration --> 
 Product Categories` and choose *FEFO* as the *Force Removal Strategy*.
 
-.. image:: media/first-expiry-first-out.png
+.. image:: removal/first-expiry-first-out.png
    :align: center
    :alt: view of the FEFO strategy being set up as forced removal strategy.
 
@@ -217,6 +217,6 @@ When we realize a sale for 25 units of Hand Cream, we can see that the lot numbe
 automatically reserved by Odoo are the ones with the closest expiration date, meaning 0000001 and 
 0000003.
 
-.. image:: media/reserved-hand-cream.png
+.. image:: removal/reserved-hand-cream.png
    :align: center
    :alt: two hand cream lots reserved for sell with the FEFO strategy.

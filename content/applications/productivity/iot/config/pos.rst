@@ -2,7 +2,7 @@
 Use the IoT Box for the PoS
 ===========================
 
-.. image:: media/pos01.png
+.. image:: pos/pos01.png
     :align: center
 
 Prerequisites
@@ -62,7 +62,7 @@ Once it's done, you can connect the IoT Box to your PoS. For this, go in
 and select the devices you want to use in this Point of Sale. Save the
 changes.
 
-.. image:: media/pos02.png
+.. image:: pos/pos02.png
     :align: center
 
 Set up is done, you can launch a new PoS Session.

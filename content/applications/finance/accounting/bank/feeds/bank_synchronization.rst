@@ -8,7 +8,7 @@ automatically into your database.
 To check if your bank is compatible with Odoo, go to `Odoo Accounting Features
 <https://www.odoo.com/page/accounting-features>`_, and click on *See list of supported institutions*.
 
-.. image:: media/online-sync-doc.png
+.. image:: bank_synchronization/online-sync-doc.png
    :align: center
    :alt: Checking a bank's compatibility with Odoo
 
@@ -68,14 +68,14 @@ After your first synchronization, the created journals are synchronized by defau
 If you wish, you can synchronize manually by clicking on the *Synchronize Now* button on the
 dashboard.
 
-.. image:: media/online-sync-sync-now-dashboard.png
+.. image:: bank_synchronization/online-sync-sync-now-dashboard.png
    :align: center
    :alt: Synchronize Now Button
 
 Or you can go to :menuselection:`Accounting --> Configuration --> Online Synchronization`,
 select your institution and then click on the *Fetch Transactions* button.
 
-.. image:: media/online-sync-form-view.png
+.. image:: bank_synchronization/online-sync-form-view.png
    :align: center
    :alt: Online Synchronization Form view
 
@@ -121,7 +121,7 @@ To do so, go to :menuselection:`Apps --> Update Apps List`, remove the default f
 bar and type: **account_online_synchronization**. You can then click on the *Install* button to
 install the new module.
 
-.. image:: media/online-sync-module.png
+.. image:: bank_synchronization/online-sync-module.png
    :align: center
    :alt: Installation button of the account_online_synchronization module
 

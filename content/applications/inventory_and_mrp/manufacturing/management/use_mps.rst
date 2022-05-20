@@ -20,7 +20,7 @@ product*. You can now define your safety stock target (= the stock you
 want to have on hand at the end of the period) and the minimum and
 maximum quantities that must or can be replenished in each period.
 
-.. image:: media/mps_1.png
+.. image:: use_mps/mps_1.png
     :align: center
 
 In the MPS view, you can decide which information you would like to display
@@ -29,7 +29,7 @@ quantity of products has already been ordered for the period, or *Available to P
 what can still be sold during that same period (what you plan to replenish - what
 is already sold during the period). You can also decide to hide rows if you like.
 
-.. image:: media/mps_2.png
+.. image:: use_mps/mps_2.png
     :align: center
 
 Estimate your demand and launch replenishment
@@ -40,7 +40,7 @@ in the *Forecasted Demand* Row. You can easily, at any time, compare the demand
 forecast with the actual demand (= confirmed sales). The demand forecast for a 
 finished product will impact the indirect demand for its components.
 
-.. image:: media/mps_3.png
+.. image:: use_mps/mps_3.png
     :align: center
 
 Once the forecasted demand has been set, the quantity to replenish for the 
@@ -53,7 +53,7 @@ Depending on the configuration of the product (buy vs. manufacture),
 requests for quotations or manufacturing orders will be created. You can
 easily access those by clicking on the *Actual Replenishment* cell.
 
-.. image:: media/mps_4.png
+.. image:: use_mps/mps_4.png
     :align: center
 
 In case you manually edit the *Suggested Replenishment* quantity, a small cross

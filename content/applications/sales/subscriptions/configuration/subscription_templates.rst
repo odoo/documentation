@@ -35,7 +35,7 @@ Go to :menuselection:`Subscriptions --> Configuration --> Subscription templates
 suggests you two types of subscription (MON - Monthly subscription *vs* YEA - Yearly subscription).
 You can also create your own ones.
 
-.. image:: media/default-subscription-templates.png
+.. image:: subscription_templates/default-subscription-templates.png
   :align: center
   :alt: Default subscription templates on Odoo Subscriptions
 
@@ -54,7 +54,7 @@ Among the payment options, an additional field called *Invoice email* appears wh
 *Send*, *Send & try to charge* or *Send after successful payment*. This field allows you to add an
 invoice email template to your subscription templates.
 
-.. image:: media/creation-of-subscription-templates.png
+.. image:: subscription_templates/creation-of-subscription-templates.png
   :align: center
   :alt: Create your own subscription templates on Odoo Subscriptions
 
@@ -67,7 +67,7 @@ subscriptions or not. If enabled, you can set an *Automatic closing* limit and s
    essential to set out important contractual points between the customers and the sellers (payment,
    refund policy, cancellation, complaints, etc.).
 
-   .. image:: media/terms-and-conditions-on-subscription-templates.png
+   .. image:: subscription_templates/terms-and-conditions-on-subscription-templates.png
      :align: center
      :alt: Terms & conditions on Odoo Subscriptions
 
@@ -77,7 +77,7 @@ subscriptions or not. If enabled, you can set an *Automatic closing* limit and s
    summarizes all the records corresponding to these filters and you are able to manage them in one
    click.
 
-   .. image:: media/health-check-on-subscription-templates.png
+   .. image:: subscription_templates/health-check-on-subscription-templates.png
      :align: center
      :alt: Health check on Odoo Subscriptions
 

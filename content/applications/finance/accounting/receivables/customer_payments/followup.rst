@@ -33,7 +33,7 @@ Date* set on the statement.
 You can also set a trust level for your customers by marking them as
 bad, normal or good debtors on the follow-up reports.
 
-.. image:: media/followup01.png
+.. image:: followup/followup01.png
     :align: center
 
 Send reminders in batch
@@ -45,7 +45,7 @@ like to process, click on *Action* and then on *Process Follow-ups*.
 A pdf document containing all of the follow-up letters for you to print
 will also be automatically generated.
 
-.. image:: media/followup02.png
+.. image:: followup/followup02.png
     :align: center
 
 Plan a follow-up process
@@ -62,7 +62,7 @@ number of overdue days, plan to send an email, a letter or to undertake
 a manual action. You can also edit the template used for the statement
 according to the stage of the process.
 
-.. image:: media/followup03.png
+.. image:: followup/followup03.png
     :align: center
 
 .. tip::
