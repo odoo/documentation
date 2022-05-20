@@ -21,7 +21,7 @@ First, you need to activate the serial numbers tracking. To do so, go to
 :menuselection:`Configuration --> Settings` in the *Inventory* application. Then,
 enable the feature and hit save.
 
-.. image:: media/serial_numbers_01.png
+.. image:: serial_numbers/serial_numbers_01.png
     :align: center
 
 Product configuration
@@ -32,10 +32,10 @@ numbers. To do so, go to :menuselection:`Master Data --> Products` and open the 
 of your choice. Edit it and select *Tracking By Unique Serial Number*
 in the *Inventory tab*. Then, click on save.
 
-.. image:: media/serial_numbers_02.png
+.. image:: serial_numbers/serial_numbers_02.png
     :align: center
 
-.. image:: media/serial_numbers_03.png
+.. image:: serial_numbers/serial_numbers_03.png
     :align: center
 
 Manage Serial Numbers
@@ -56,7 +56,7 @@ specify its serial number. Of course, you have several ways of doing so:
 Whatever could be your favorite way to assign serial numbers, you
 firstly need to open the detailed operations of your picking.
 
-.. image:: media/serial_numbers_04.png
+.. image:: serial_numbers/serial_numbers_04.png
     :align: center
 
 Manual assignation of the different serial numbers
@@ -66,7 +66,7 @@ When opening the detailed operations, you can click on *Add a line*.
 Then, you will be able to fill in the serial number field. Once done,
 you can click again on *Add a line* to register a new serial number.
 
-.. image:: media/serial_numbers_05.png
+.. image:: serial_numbers/serial_numbers_05.png
     :align: center
 
 Multi-assignation
@@ -79,10 +79,10 @@ to assign a serial number to.
 
 Once done, click on *Assign Serial Numbers* and Odoo will do the rest.
 
-.. image:: media/serial_numbers_06.png
+.. image:: serial_numbers/serial_numbers_06.png
     :align: center
 
-.. image:: media/serial_numbers_07.png
+.. image:: serial_numbers/serial_numbers_07.png
     :align: center
 
 Copy/pasting from an Excel file
@@ -93,13 +93,13 @@ you received and copy the list. Then, past them in the *Lot/Serial
 Number Name* column of the wizard. Doing so, Odoo will automatically
 create the lines you need.
 
-.. image:: media/serial_numbers_08.png
+.. image:: serial_numbers/serial_numbers_08.png
     :align: center
 
-.. image:: media/serial_numbers_09.png
+.. image:: serial_numbers/serial_numbers_09.png
     :align: center
 
-.. image:: media/serial_numbers_10.png
+.. image:: serial_numbers/serial_numbers_10.png
     :align: center
 
 Operation types
@@ -113,7 +113,7 @@ For each type, you can decide if you allow the creation of new lot
 numbers or want to use existing ones. By default, the creation of new
 lots is only allowed at product reception.
 
-.. image:: media/serial_numbers_11.png
+.. image:: serial_numbers/serial_numbers_11.png
     :align: center
 
 .. tip::
@@ -131,17 +131,17 @@ Tracking an item is easy: open the *Inventory* app, and go to :menuselection:`Ma
 Lots/Serial Numbers` and click on the serial number corresponding to your search. Then, open the
 *Traceability* information. There, you will see in which documents the serial number has been used.
 
-.. image:: media/serial_numbers_12.png
+.. image:: serial_numbers/serial_numbers_12.png
     :align: center
 
-.. image:: media/serial_numbers_13.png
+.. image:: serial_numbers/serial_numbers_13.png
     :align: center
 
 And, if you want to locate a serial number, you can do so by clicking on
 the *Location* button available on the serial number form.
 
-.. image:: media/serial_numbers_14.png
+.. image:: serial_numbers/serial_numbers_14.png
     :align: center
 
-.. image:: media/serial_numbers_15.png
+.. image:: serial_numbers/serial_numbers_15.png
     :align: center

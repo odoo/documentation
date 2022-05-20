@@ -26,7 +26,7 @@ first time you request a down payment, you can set a percentage or a fixed amoun
 and select the right income account and taxes. These settings will be reused for future down
 payments.
 
-.. image:: media/down_payment_1.png
+.. image:: down_payment/down_payment_1.png
    :align: center
    :alt: How can you do a down payment on Odoo Sales?
 
@@ -46,7 +46,7 @@ policies here: :doc:`invoicing_policy` , before requesting your first down payme
 create and view the invoice, you will only have access to a draft invoice mentioning the down
 payment (as you can see below).
 
-.. image:: media/down_payment_2.png
+.. image:: down_payment/down_payment_2.png
    :align: center
    :alt: What is a basic sales flow using down payments on Odoo Sales (1)?
 
@@ -56,7 +56,7 @@ There, you will have the possibility to see the order as a customer with the **C
 button or to reach easily the previous draft invoice with the **Invoice** button. In any case, the
 down payment will be mentioned on both (sales order and draft invoice).
 
-.. image:: media/down_payment_3.png
+.. image:: down_payment/down_payment_3.png
    :align: center
    :alt: What is a basic sales flow using down payments on Odoo Sales (2)?
 
@@ -64,7 +64,7 @@ To complete the flow, when the customer wants to pay the rest of his sales order
 another invoice. Once again, you will have the choice to make another down payment or to deduct all
 the down payments and so, paying the rest of the invoice as a regular invoice.
 
-.. image:: media/down_payment_4.png
+.. image:: down_payment/down_payment_4.png
    :align: center
    :alt: What is a basic sales flow using down payments on Odoo Sales (3)?
 
@@ -83,7 +83,7 @@ Modify the income account and customer taxes
 
 From the products list, search for the **Down Payment** product.
 
-.. image:: media/down_payment_5.png
+.. image:: down_payment/down_payment_5.png
    :align: center
    :alt: Creation of a down payment product on Odoo Sales
 
@@ -91,7 +91,7 @@ You can edit it and under the **General Information Tab** you will be able to ch
 taxes. Now, to change the income account, you will need to install the **Accounting App** to have
 the possibility to see the **Accounting Tab** on the product form.
 
-.. image:: media/down_payment_6.png
+.. image:: down_payment/down_payment_6.png
    :align: center
    :alt: How to modify the income account link to down payments
 

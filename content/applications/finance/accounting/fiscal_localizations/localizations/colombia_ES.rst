@@ -25,7 +25,7 @@ requiere los siguientes Módulos:
 Flujo General
 =============
 
-.. image:: media/colombia01.png
+.. image:: colombia/colombia01.png
    :align: center
 
 
@@ -38,7 +38,7 @@ Instalación de los módulos de Localización Colombiana
 Para esto ve a las aplicaciones y busca “Colombia”, luego da click en
 Instalar a los primeros dos módulos:
 
-.. image:: media/colombia02.png
+.. image:: colombia/colombia02.png
    :align: center
 
 
@@ -51,7 +51,7 @@ Configuración de las credenciales del Servicio Web de Carvajal
 | Ve a :menuselection:`Facturación --> Configuración --> Configuración` y busca la sección
   **Facturación Electrónica Colombiana**
 
-.. image:: media/colombia_ES02.png
+.. image:: colombia_ES/colombia_ES02.png
   :align: center
 
 La funcionalidad de pruebas le permite conectarse e interactuar con el
@@ -81,7 +81,7 @@ Configuración de Información para PDF
 | Ve a :menuselection:`Contabilidad --> Configuración --> Ajustes` y busca la sección
   **Facturación Electrónica Colombiana**.
 
-.. image:: media/colombia_ES03.png
+.. image:: colombia_ES/colombia_ES03.png
   :align: center
 
 
@@ -99,7 +99,7 @@ definidos por la DIAN ahora están disponibles en el formulario de
 Contactos, por lo cual ya es posible asignarles su número de
 identificación asociado al tipo de documento correspondiente.
 
-.. image:: media/colombia_ES04.png
+.. image:: colombia_ES/colombia_ES04.png
   :align: center
 
 Nota: Cuando el tipo de documento es RUT la identificación necesita ser
@@ -118,7 +118,7 @@ Facturación Electrónica, dado que es información requerida por la DIAN.
 Estos campos se encuentran en :menuselection:`Contactos --> Pestaña de Ventas y Compras
 --> Información Fiscal`
 
-.. image:: media/colombia_ES05.png
+.. image:: colombia_ES/colombia_ES05.png
   :align: center
 
 Adicionalmente dos últimos campos fueron agregados para especificar el
@@ -135,7 +135,7 @@ importante considerar que un campo adicional llamado *Tipo de Valor*
 necesita ser configurado en la siguiente ruta: :menuselection:`Contabilidad
 --> Configuración --> Impuestos: --> Opciones Avanzadas --> Tipo de Valor`
 
-.. image:: media/colombia_ES06.png
+.. image:: colombia_ES/colombia_ES06.png
   :align: center
 
 Los impuestos para Retenciones (ICA, IVA y Fuente) también están
@@ -143,7 +143,7 @@ incluidos en las opciones para configurar tus impuestos, esta
 configuración es considerada para desplegar correctamente los impuestos
 en la representación gráfica de la Factura. (PDF)
 
-.. image:: media/colombia_ES07.png
+.. image:: colombia_ES/colombia_ES07.png
   :align: center
 
 
@@ -159,13 +159,13 @@ La secuencia es configurada usando el modo de desarrollador en la
 siguiente ruta: :menuselection:`Contabilidad --> Configuración --> Diarios
 --> Liga de Secuencia`
 
-.. image:: media/colombia_ES08.png
+.. image:: colombia_ES/colombia_ES08.png
   :align: center
 
 Una vez que la secuencia es abierta, los campos de Prefijo y Siguiente
 Número deben ser configurados y sincronizados con el CEN Financiero.
 
-.. image:: media/colombia_ES09.png
+.. image:: colombia_ES/colombia_ES09.png
   :align: center
 
 
@@ -176,7 +176,7 @@ La plantilla por defecto que es usada por Odoo en la representación
 gráfica incluye el nombre del Vendedor, así que estos campos deben ser
 considerados:
 
-.. image:: media/colombia_ES10.png
+.. image:: colombia_ES/colombia_ES10.png
   :align: center
 
 
@@ -216,7 +216,7 @@ Hay tres tipos de documentos
   manualmente. Al ingresar esta factura en el ERP, se debe
   seleccionar este tipo.
 
-  .. image:: media/colombia_ES11.png
+  .. image:: colombia_ES/colombia_ES11.png
 
 
 Invoice Validation
@@ -226,7 +226,7 @@ Después que la factura fue validada, un archivo XML es creado y enviado
 automáticamente al proveedor de la factura electrónica. Este archivo es
 desplegado en el historial.
 
-.. image:: media/colombia_ES12.png
+.. image:: colombia_ES/colombia_ES12.png
   :align: center
 
 Un campo adicional es ahora desplegado en la pestaña de “Otra
@@ -234,7 +234,7 @@ Información” con el nombre del archivo XML. Adicionalmente hay un
 segundo campo adicional que es desplegado con el estatus de la Factura
 Electrónica, con el valor inicial **En Proceso**.
 
-.. image:: media/colombia_ES13.png
+.. image:: colombia_ES/colombia_ES13.png
   :align: center
 
 
@@ -255,18 +255,18 @@ Recepción del XML y PDF Legal
 - El XML Legal y el PDF son incluidos en un archivo ZIP y desplegados
   en el historial de la Factura.
 
-  .. image:: media/colombia_ES14.png
+  .. image:: colombia_ES/colombia_ES14.png
 
 - El estatus de la Factura Electrónica es cambiado a “Aceptado”.
 
-  .. image:: media/colombia_ES15.png
+  .. image:: colombia_ES/colombia_ES15.png
 
 .. tip::
    En caso que el PDF y el XML sean requeridos inmediatamente, es
    posible mandar manualmente la petición del estatus usando el siguiente
    botón:
 
-   .. image:: media/colombia_ES16.png
+   .. image:: colombia_ES/colombia_ES16.png
       :align: center
 
 
@@ -278,17 +278,17 @@ relacionados con información principal faltante. En estos casos, los
 detalles del error son recuperados en la petición de actualización y
 desplegados en el historial.
 
-.. image:: media/colombia_ES17.png
+.. image:: colombia_ES/colombia_ES17.png
   :align: center
 
 Si la información principal es corregida, es posible re procesar el XML
 con la nueva información y mandar la versión actualizada usando el
 siguiente botón:
 
-.. image:: media/colombia_ES18.png
+.. image:: colombia_ES/colombia_ES18.png
   :align: center
 
-.. image:: media/colombia_ES19.png
+.. image:: colombia_ES/colombia_ES19.png
   :align: center
 
 
@@ -335,17 +335,17 @@ cuales dependen de los siguientes factores:
 
 #. Calendario de implementación de acuerdo con la actividad económica principal en el RUT:
 
-   .. image:: media/colombia-es-calendario-rut.png
+   .. image:: colombia_ES/colombia-es-calendario-rut.png
       :align: center
 
 #. Calendario de implementación, para otros sujetos obligados:
 
-   .. image:: media/colombia-es-calendario-otros-obligados.png
+   .. image:: colombia_ES/colombia-es-calendario-otros-obligados.png
       :align: center
 
 #. Calendario de implementación permanente:
 
-   .. image:: media/colombia-es-calendario-permanente.png
+   .. image:: colombia_ES/colombia-es-calendario-permanente.png
       :align: center
 
 Requerimientos en Odoo
@@ -361,7 +361,7 @@ Actualización de listado de Apps
 Utilizando el modo desarrollador, acceder al módulo de Aplicaciones y seleccionar el menú
 *Actualizar Lista*.
 
-.. image:: media/colombia-es-actualizar-lista.png
+.. image:: colombia_ES/colombia-es-actualizar-lista.png
    :align: center
 
 Actualización de Módulos
@@ -373,7 +373,7 @@ actualizar dos módulos.
 #. Colombia - Contabilidad - l10n_co
 #. Electronic invoicing for Colombia with Carvajal UBL 2.1 - l10n_co_edi_ubl_2_1
 
-.. image:: media/colombia-es-modulos.png
+.. image:: colombia_ES/colombia-es-modulos.png
    :align: center
 
 En cada módulo o ícono hay que desplegar el menú opciones utilizando los 3 puntos de la esquina
@@ -381,12 +381,12 @@ superior derecha y seleccionamos *Actualizar*.
 
 Primero lo hacemos con en el módulo l10n_co:
 
-.. image:: media/colombia-es-actualizar-contabilidad.png
+.. image:: colombia_ES/colombia-es-actualizar-contabilidad.png
    :align: center
 
 Posteriormente lo hacemos con el módulo l10n_co_edi_ubl_2_1:
 
-.. image:: media/colombia-es-actualizar-electronic-invoicing.png
+.. image:: colombia_ES/colombia-es-actualizar-electronic-invoicing.png
    :align: center
 
 Creación de Datos Maestros
@@ -413,13 +413,13 @@ se defina de esta manera debido a que son los parámetros definidos por la DIAN.
 - **Tipo de documento:** Cedula de Ciudadania
 - **Numero de Identificacion:** 222222222222
 
-.. image:: media/colombia-es-consumidor-final-nuevo-contacto.png
+.. image:: colombia_ES/colombia-es-consumidor-final-nuevo-contacto.png
    :align: center
 
 Dentro de la pestaña Ventas y Compras, en la sección Información Fiscal, del campo Obligaciones y
 Responsabilidades colocaremos el valor: **R-99-PN**.
 
-.. image:: media/colombia-es-consumidor-final-r-99-pn.png
+.. image:: colombia_ES/colombia-es-consumidor-final-r-99-pn.png
    :align: center
 
 IVA Excluido - Bienes Cubiertos
@@ -433,19 +433,19 @@ electrónica.
 Para el crear el impuesto accederemos a Contabilidad dentro del menú :menuselection:`Configuración
 --> Impuestos`:
 
-.. image:: media/colombia-es-menu-impuestos.png
+.. image:: colombia_ES/colombia-es-menu-impuestos.png
    :align: center
 
 Procedemos a crear un nuevo Impuesto con importe 0% considerando los siguientes parámetros:
 
-.. image:: media/colombia-es-nuevo-impuesto.png
+.. image:: colombia_ES/colombia-es-nuevo-impuesto.png
    :align: center
 
 El nombre del Impuesto puede ser definido a preferencia del usuario, sin embargo el campo clave es
 **Grupo de Impuestos** dentro de Opciones avanzadas, el cual debe ser: *bienes cubiertos* y el campo
 **Tipo de Valor**: *IVA*.
 
-.. image:: media/colombia-es-nuevo-impuesto-opciones-avanzadas.png
+.. image:: colombia_ES/colombia-es-nuevo-impuesto-opciones-avanzadas.png
    :align: center
 
 Actualización de descripción de Departamentos
@@ -454,13 +454,13 @@ Actualización de descripción de Departamentos
 Es necesario actualizar la descripción de algunos departamentos, para lo cual accederemos a módulo
 de Contactos y dentro del menú de :menuselection:`Configuración --> Provincias`.
 
-.. image:: media/colombia-es-menu-provincias.png
+.. image:: colombia_ES/colombia-es-menu-provincias.png
    :align: center
 
 Posteriormente, podemos agregar por País para identificar claramente las provincias (Departamentos)
 de Colombia:
 
-.. image:: media/colombia-es-provincias-agrupar.png
+.. image:: colombia_ES/colombia-es-provincias-agrupar.png
    :align: center
 
 Una vez agrupados buscar los siguientes departamentos para actualizarlos con el valor indicado en la
@@ -479,7 +479,7 @@ columna **Nombre actualizado**:
 
 Ejemplo:
 
-.. image:: media/colombia-es-provincias-ejemplo.png
+.. image:: colombia_ES/colombia-es-provincias-ejemplo.png
    :align: center
 
 Verificación de Código postal
@@ -506,7 +506,7 @@ generalmente será utilizado en las transacciones de facturación del punto de p
   correspondientes.
 - Contablemente todos los registros de Consumidor final quedarán asociados al identificador generico:
 
-.. image:: media/colombia-es-consumidor-final-asociado.png
+.. image:: colombia_ES/colombia-es-consumidor-final-asociado.png
    :align: center
 
 IVA Excluido - Bienes Cubiertos
@@ -580,7 +580,7 @@ Medidas en Odoo
   - Al finalizar las operaciones del día anterior a las fechas establecidas de día sin IVA, se debe
     hacer la actualización temporal a IVA de Bienes Cubiertos.
 
-    .. image:: media/columbia-es-producto-iva-bienes-cubiertos.png
+    .. image:: colombia_ES/columbia-es-producto-iva-bienes-cubiertos.png
        :align: center
 
 - **Durante el día SIN IVA**
@@ -588,7 +588,7 @@ Medidas en Odoo
   - Por defecto los productos previamente considerados con IVA de Bienes cubiertos serán generados
     con este parámetro tanto en Órdenes de venta como facturas creadas durante ese mismo día.
 
-    .. image:: media/columbia-es-factura-iva-bienes-cubiertos.png
+    .. image:: colombia_ES/columbia-es-factura-iva-bienes-cubiertos.png
        :align: center
 
   - Las órdenes de venta generadas con este impuesto deberán ser facturas el mismo día.

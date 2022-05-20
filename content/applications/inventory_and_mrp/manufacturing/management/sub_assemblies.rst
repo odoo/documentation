@@ -21,14 +21,14 @@ but also its subassemblies. The first step is to create a product form
 for each of the subassemblies. Select the routes *Manufacture* and
 *Replenish on Order*. Now, hit save.
 
-.. image:: media/semi-finished_products_01.png
+.. image:: sub_assemblies/semi-finished_products_01.png
     :align: center
 
 In the *Bill of Materials* menu, under *Master Data*, create a new
 *Bill of Materials*. Choose the product you just created and add its
 components.
 
-.. image:: media/semi-finished_products_02.png
+.. image:: sub_assemblies/semi-finished_products_02.png
     :align: center
 
 Configure the Main BoM
@@ -37,7 +37,7 @@ Configure the Main BoM
 Now, you can configure the top-level product and its *BoM*. Include
 any subassemblies in the list of components.
 
-.. image:: media/semi-finished_products_03.png
+.. image:: sub_assemblies/semi-finished_products_03.png
     :align: center
 
 Now, each time you will plan a manufacturing order for the top-level
@@ -45,5 +45,5 @@ product, a manufacturing order will be created for the subassembly one.
 Then, you will have to manufacture the subassembly in order to make it
 available before manufacturing the finished product.
 
-.. image:: media/semi-finished_products_04.png
+.. image:: sub_assemblies/semi-finished_products_04.png
     :align: center

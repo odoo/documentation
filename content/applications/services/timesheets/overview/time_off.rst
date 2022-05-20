@@ -9,14 +9,14 @@ and questions after hours that have not been timesheeted by the employee.
 Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and change the *Project*
 and *Task* set by default, if you like.
 
-.. image:: media/record_time_off.png
+.. image:: time_off/record_time_off.png
    :align: center
    :alt: View of Timesheets setting enabling the feature record time off in Odoo Timesheets
 
 Go to :menuselection:`Time Off --> Configuration --> Time Off Types`. Select or create the
 needed type, and decide if you would like the requests to be validated or not.
 
-.. image:: media/time_off_types.png
+.. image:: time_off/time_off_types.png
    :align: center
    :alt: View of a time off types form emphasizing the time off requests and timesheets section in
          Odoo Time Off
@@ -26,7 +26,7 @@ needed type, and decide if you would like the requests to be validated or not.
   respective project and task.
 | On the example below, the user requested *Paid Time off* from July 13th to 15th.
 
-.. image:: media/time_off_request.png
+.. image:: time_off/time_off_request.png
    :align: center
    :alt: View of the time off request form in Odoo Time Off
 
@@ -34,13 +34,13 @@ Considering that validation is not required, the requested time off is automatic
 *Timesheets*. If validation is necessary, the time is automatically allocated after the responsible
 person for validating does it so.
 
-.. image:: media/timesheets.png
+.. image:: time_off/timesheets.png
    :align: center
    :alt: Video of timesheets emphasizing the requested time off from the employee in Odoo Timesheets
 
 Click on the magnifying glass, hovering over the concerned cell, to access all the aggregated data
 on that cell (day), and see details regarding the project/task.
 
-.. image:: media/timesheet_description.png
+.. image:: time_off/timesheet_description.png
    :align: center
    :alt: View of the details of a project/task in Odoo Timeheets

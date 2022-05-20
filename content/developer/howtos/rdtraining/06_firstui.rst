@@ -113,15 +113,15 @@ Menus
     **Goal**: at the end of this section, three menus should be created and the default view is
     displayed:
 
-    .. image:: 06_firstui/media/estate_menu_root.png
+    .. image:: 06_firstui/estate_menu_root.png
       :align: center
       :alt: Root menus
 
-    .. image:: 06_firstui/media/estate_menu_action.png
+    .. image:: 06_firstui/estate_menu_action.png
       :align: center
       :alt: First level and action menus
 
-    .. image:: 06_firstui/media/estate_form_default.png
+    .. image:: 06_firstui/estate_form_default.png
       :align: center
       :alt: Default form view
 
@@ -145,11 +145,11 @@ However, menus always follow an architecture, and in practice there are three le
 2. The first level menu, displayed in the top bar
 3. The action menus
 
-   .. image:: 06_firstui/media/menu_01.png
+   .. image:: 06_firstui/menu_01.png
       :align: center
       :alt: Root menus
 
-   .. image:: 06_firstui/media/menu_02.png
+   .. image:: 06_firstui/menu_02.png
       :align: center
       :alt: First level and action menus
 
@@ -186,7 +186,7 @@ Fields, Attributes And View
     of bedrooms and the availability date should have default values. Additionally the selling price
     and availability date values won't be copied when the record is duplicated.
 
-    .. image:: 06_firstui/media/attribute_and_default.gif
+    .. image:: 06_firstui/attribute_and_default.gif
       :align: center
       :alt: Interaction between model and view
 
@@ -266,7 +266,7 @@ not be listed! ``active`` is an example of a reserved field with a specific beha
 a record has ``active=False``, it is automatically removed from any search. To display the
 created property, you will need to specifically search for inactive records.
 
-.. image:: 06_firstui/media/inactive.gif
+.. image:: 06_firstui/inactive.gif
   :align: center
   :alt: Inactive records
 

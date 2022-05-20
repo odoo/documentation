@@ -27,7 +27,7 @@ Settings in Paypal
 | Log in and open the settings. Go to :menuselection:`Products & Services -->
   Website payments` and click **Update** on **Website preferences**.
 
-.. image:: media/paypal01.png
+.. image:: paypal/paypal01.png
     :align: center
 
 Auto Return
@@ -42,7 +42,7 @@ This URL is requested in Paypal but not used in practice as Odoo
 transmits it at each transaction. Don’t worry if you manage several
 sales channels or Odoo databases.
 
-.. image:: media/paypal02.png
+.. image:: paypal/paypal02.png
     :align: center
 
 Payment Data Transfer (PDT)
@@ -53,7 +53,7 @@ soon as it is processed. Without it, Odoo cannot end the sales flow.
 This setting must be activated as well. When saving, an *Identity
 Token* is generated. You will be later requested to enter it in Odoo.
 
-.. image:: media/paypal03.png
+.. image:: paypal/paypal03.png
     :align: center
 
 Paypal Account Optional
@@ -61,7 +61,7 @@ Paypal Account Optional
 We advise you to not prompt customers to log in with a Paypal account
 when they get to pay. Let them pay with debit/credit cards as well, or you might lose some deals. Make sure this setting is turned on.
 
-.. image:: media/paypal04.png
+.. image:: paypal/paypal04.png
     :align: center
 
 Instant Payment Notification (IPN)
@@ -78,7 +78,7 @@ is virtually guaranteed since IPN resends a confirmation until your site acknowl
 | The *Notification URL* to set is your domain name +
   “payment/paypal/ipn” (e.g. ``https://yourcompany.odoo.com/payment/paypal/ipn``).
 
-.. image:: media/paypal05.png
+.. image:: paypal/paypal05.png
     :align: center
 
 Payment Messages Format
@@ -100,10 +100,10 @@ To do so, open:
 
 Then, click *More Options* and set the two default encoding formats as **UTF-8**.
 
-.. image:: media/paypal07.png
+.. image:: paypal/paypal07.png
     :align: center
 
-.. image:: media/paypal08.png
+.. image:: paypal/paypal08.png
     :align: center
 
 Your Paypal account is ready!
@@ -112,7 +112,7 @@ Your Paypal account is ready!
    If you want your customers to pay without creating a Paypal account,
    *Paypal Account Optional* needs to be turned on.
     
-   .. image:: media/paypal_account_optional.png
+   .. image:: paypal/paypal_account_optional.png
 
 .. tip::
    For Encrypted Website Payments & EWP_SETTINGS error,
@@ -139,7 +139,7 @@ Odoo requires three Paypal credentials:
   :menuselection:`Account Settings --> Business information`.
 - *Paypal PDT Token* is given in *Website payments* configuration as explained here above.
 
-.. image:: media/paypal09.png
+.. image:: paypal/paypal09.png
     :align: center
 
 Transaction fees
@@ -151,7 +151,7 @@ This to cover the transaction fees Paypal charges you. Once redirected to Paypal
 To activate this, go to the Configuration tab of Paypal configuration in
 Odoo and check *Add Extra Fees*.
 
-.. image:: media/paypal10.png
+.. image:: paypal/paypal10.png
     :align: center
 
 You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`__ to set up
@@ -167,10 +167,10 @@ Go live!
 Your configuration is ready to roll. Make sure *Production* mode is
 on. Then publish the payment method by clicking the *Published* button right next to it.
 
-.. image:: media/paypal11.png
+.. image:: paypal/paypal11.png
     :align: center 
 
-.. image:: media/paypal12.png
+.. image:: paypal/paypal12.png
     :align: Center
 
 Paypal is now available in your payment form available in eCommerce,
@@ -178,7 +178,7 @@ Sales and Invoicing apps. Customers are redirected to Paypal website
 when hitting *Pay Now*. They get back to a confirmation page in Odoo
 once the payment is processed.
 
-.. image:: media/paypal13.png
+.. image:: paypal/paypal13.png
     :align: center
 
 Test environment

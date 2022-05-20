@@ -11,7 +11,7 @@ Odoo follows a `multitier architecture`_, meaning that the presentation, the bus
 logic and the data storage are separated. More specifically, it uses a three-tier architecture
 (image from Wikipedia):
 
-.. image:: 01_architecture/media/three_tier.svg
+.. image:: 01_architecture/three_tier.svg
     :align: center
     :alt: Three-tier architecture
 
