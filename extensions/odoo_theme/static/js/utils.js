@@ -91,24 +91,32 @@ const _prepareAccordion = (tocElement) => {
 const _generateFallbackUrls = async (targetUrl) => {
 
     const _deconstructUrl = (urlObject) => {
+        let urlBase = urlObject.origin;
         let version = '';
         let language = '';
         const originalPathParts = [];
         for (let fragment of urlObject.pathname.split('/').reverse()) {
-            if (fragment.match(/^(?:saas-)?\d{2}\.\d$|^master$/)) {
-                version = fragment;
-            } else if (fragment.match(/^[a-z]{2}(?:_[A-Z]{2})?$/)) {
-                language = fragment;
-            } else if (fragment.length > 0) {
-                originalPathParts.unshift(fragment);
+            if (fragment.length > 0) {
+                if (fragment.match(/^(?:saas-)?\d{2}\.\d$|^master$/)) {
+                    // Try to match the version before considering the fragment part of the path.
+                    version = fragment;
+                } else if (fragment.match(/^[a-z]{2}(?:_[A-Z]{2})?$/)) {
+                    // Try to match the language before considering the fragment part of the path.
+                    language = fragment;
+                } else if (version || language) {
+                    // The fragment is part of the base URL but cannot be part of the part anymore.
+                    urlBase += `/${fragment}`;
+                } else {
+                    // The fragment is part of the original path.
+                    originalPathParts.unshift(fragment);
+                }
             }
         }
-        return [version, language, originalPathParts];
+        return [urlBase, version, language, originalPathParts];
     };
 
     const targetUrlObject = new URL(targetUrl);
-    const [version, language, originalPathParts] = _deconstructUrl(targetUrlObject);
-    const urlBase = targetUrlObject.origin;
+    const [urlBase, version, language, originalPathParts] = _deconstructUrl(targetUrlObject);
 
     // Generate the fallback URLs.
     const fallbackUrls = [];
@@ -124,21 +132,23 @@ const _generateFallbackUrls = async (targetUrl) => {
         }
 
         // Build the fallback URL from the version, language and path parts, if any.
-        if (version && language)
+        if (version && language) {
             fallbackUrls.push(
                 `${urlBase}/${version}/${language}/${fallbackPathParts.join('/')}`,
                 `${urlBase}/${version}/${fallbackPathParts.join('/')}`,
             );
-        else if (version && !language)
+        } else if (version && !language) {
             fallbackUrls.push(`${urlBase}/${version}/${fallbackPathParts.join('/')}`);
-        else if (!version && language)
+        } else if (!version && language) {
             fallbackUrls.push(
                 `${urlBase}/${language}/${fallbackPathParts.join('/')}`,
                 `${urlBase}/${fallbackPathParts.join('/')}`,
             );
-        else if (!version && !language)
+        } else if (!version && !language) {
             fallbackUrls.push(`${urlBase}/${fallbackPathParts.join('/')}`);
+        }
     }
+    fallbackUrls.push(`${urlBase}/`);
     return fallbackUrls;
 };
 
