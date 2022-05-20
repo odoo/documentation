@@ -197,11 +197,9 @@ alias in your mail server.
 Set up different dedicated servers for transactional and mass mails
 ===================================================================
 
-Odoo is subject to a :ref:`daily email limit <email_communication/daily_limit_mail>` to prevent abuse. 
-However, if needed, you can use a separate Mail Transfer Agent (MTA) servers for transactional
+If needed, you can use a separate Mail Transfer Agent (MTA) servers for transactional
 e-mails and mass mailings.
-Example: use Odoo's own mail server for transactional e-mails, and Sendgrid, Amazon SES, or Mailgun
-for mass mailings. Another alternative is to use Postmark for transactional e-mails, and Amazon SES
+Example: use Postmark for transactional e-mails, and Amazon SES
 or Sendgrid for mass mailings.
 
 .. note::
@@ -210,13 +208,10 @@ or Sendgrid for mass mailings.
 
 To do this, you should first activate the :ref:`developer mode <developer-mode>` and then go to
 :menuselection:`Settings --> Technical --> Outgoing` e-mail servers. There you have to create two
-e-mail MTA server settings. One for transactional e-mails and one for mass mail servers. Be sure to
-mark the priority of transactional e-mail servers as low as the mass email servers.
+outgoing mail servers. One for transactional emails and one for mass mail servers. Make sure you set the server for transactional emails to have priority over the server for mass mailing.
 
 Now, go to :menuselection:`Email Marketing --> Settings` and enable *Dedicated Server*.
 With these settings, Odoo uses the server with the lower priority for transactional emails, and the
 server here selected for mass mails.
 Note that in this case, you have to set your domain's Sender Policy Framework (SPF) records to
-include both transactional and mass mail servers. If your server resides with xxxx.odoo.com, the
-available options are Sendinblue and Mailchimp, as your e-mails would be originated from the
-xxxx.odoo.com domain.
+include both transactional and mass mail servers.
