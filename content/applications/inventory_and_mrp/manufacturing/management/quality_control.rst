@@ -13,13 +13,13 @@ on the Manufacturing Operation Type, as shown below. To create it, Go to :menuse
 If the check only applies to specific products, or product categories, you can specify these during
 the setup as well.
 
-.. image:: media/qc_1.png
+.. image:: quality_control/qc_1.png
     :align: center
 
 Regarding the reception of subcontracted products, instead of the Manufacturing Operation Type, 
 you need to select the 'Receipts' Operation type. For the rest, the same principles apply. 
 
-.. image:: media/qc_2.png
+.. image:: quality_control/qc_2.png
     :align: center
 
 By doing so, a quality check is automatically created each time a

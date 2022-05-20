@@ -25,13 +25,13 @@ SQL
 
     - Amounts should be (strictly) positive
 
-    .. image:: 11_constraints/media/sql_01.gif
+    .. image:: 11_constraints/sql_01.gif
         :align: center
         :alt: Constraints on amounts
 
     - Property types and tags should have a unique name
 
-    .. image:: 11_constraints/media/sql_02.gif
+    .. image:: 11_constraints/sql_02.gif
         :align: center
         :alt: Constraints on names
 
@@ -76,7 +76,7 @@ Python
     **Goal**: at the end of this section, it will not possible to accept an offer
     lower than 90% of the expected price.
 
-    .. image:: 11_constraints/media/python.gif
+    .. image:: 11_constraints/python.gif
         :align: center
         :alt: Python constraint
 

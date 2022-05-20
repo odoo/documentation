@@ -23,7 +23,7 @@ Apply a discount on a product
 
 From your PoS session interface, use the *Disc* button.
 
-.. image:: media/discounts_01.png
+.. image:: discounts/discounts_01.png
    :align: center
    :alt: View of the discount button for manual discount
 
@@ -38,19 +38,19 @@ Sales --> Configuration --> Point of Sale` and select your PoS.
 
 Once on your PoS form, select *Global Discounts*, under the *Pricing* category.
 
-.. image:: media/discounts_02.png
+.. image:: discounts/discounts_02.png
    :align: center
    :alt: View of the feature to enable for global discount
 
 Now, you have a new *Discount* button appearing on your PoS interface.
 
-.. image:: media/discounts_03.png
+.. image:: discounts/discounts_03.png
    :align: center
    :alt: View of the button to use for global discount via the pos interface
 
 Click on it and enter the wanted discount.
 
-.. image:: media/discounts_04.png
+.. image:: discounts/discounts_04.png
    :align: center
    :alt: View of the discount offered in the payment summary
 
@@ -66,7 +66,7 @@ feature. To do so, go to :menuselection:`Point of Sales -->
 Configuration --> Point of Sale` and open your PoS. Then, enable the
 pricelist feature.
 
-.. image:: media/discounts_05.png
+.. image:: discounts/discounts_05.png
    :align: center
    :alt: View of the pricelist feature
 
@@ -84,7 +84,7 @@ When creating a pricelist, you can set several criteria to use a
 specific price: period, min. quantity, etc. You can also decide to apply
 that pricelist on specific products or on the whole range.
 
-.. image:: media/discounts_06.png
+.. image:: discounts/discounts_06.png
    :align: center
    :alt: View of a time-limited pricelist for two products
 
@@ -94,7 +94,7 @@ Using a pricelist with the PoS interface
 On the PoS interface, a new button appears. Use it to select a
 pricelist.
 
-.. image:: media/discounts_07.png
+.. image:: discounts/discounts_07.png
    :align: center
    :alt: View of the button to use for time-limited discounts via the pos interface
 

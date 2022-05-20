@@ -15,7 +15,7 @@ can get a quick overview of your actual performance. By default, the reporting d
 line chart presenting the untaxed amount of your purchase orders per day, and below it, key metrics
 and a pivot table.
 
-.. image:: media/analyze-reporting-dashboard.png
+.. image:: analyze/analyze-reporting-dashboard.png
    :align: center
    :alt: Reporting dashboard in Odoo Purchase
 
@@ -51,7 +51,7 @@ pre-configured filters are:
    If you use the *Order Date* or *Confirmation Date* filters, the *Comparison* feature appears next
    to *Filters*. It enables you to compare the period you filtered with the previous one.
 
-.. image:: media/analyze-filters.png
+.. image:: analyze/analyze-filters.png
    :align: center
    :alt: Reporting filters in Odoo Purchase
 
@@ -66,7 +66,7 @@ repeat the process to add another custom filter. If you want to use the *or* ope
 click on *Apply*, and click on *Add a condition* instead. Once you have added all the desired
 filtering options, click on *Apply*.
 
-.. image:: media/analyze-custom-filter.png
+.. image:: analyze/analyze-custom-filter.png
    :align: center
    :alt: Custom reporting filter in Odoo Purchase
 
@@ -84,7 +84,7 @@ view or the pivot view. By default, the dashboard presents both views. However, 
 select won't be applied to both views. You can access each view separately by clicking on the icons
 at the top right of the dashboard.
 
-.. image:: media/analyze-switch-view.png
+.. image:: analyze/analyze-switch-view.png
    :align: center
    :alt: Switch reporting view in Odoo Purchase
 
@@ -95,7 +95,7 @@ You can transform the main graph in just a click by selecting one of the three c
 pie. Fourteen different measures are available, but you can only use one at a time. However, you can
 group the measure using one or several of the 19 *Groups*.
 
-.. image:: media/analyze-graph-view.png
+.. image:: analyze/analyze-graph-view.png
    :align: center
    :alt: Reporting graph view in Odoo Purchase
 
@@ -113,7 +113,7 @@ the **+** sign in the *Total* column, you can add as many as you want, each assi
 column. By clicking on the **+** sign in the *Total* row, you can add *Groups*. If you click on a
 group's **+** sign, you can add a sub-group, and so on.
 
-.. image:: media/analyze-pivot-view.png
+.. image:: analyze/analyze-pivot-view.png
    :align: center
    :alt: Pivot table view in Odoo Purchase
 

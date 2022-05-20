@@ -910,7 +910,7 @@ Exercise
                 border-radius: 3px;
             }
 
-        .. image:: web/qweb.*
+        .. image:: web/qweb.png
            :align: center
            :width: 70%
 
@@ -1818,7 +1818,7 @@ When an ``ActionManager`` instance receive an action of type
 the views themselves to a *view manager*, which will then set up one or
 multiple views depending on the original action's requirements:
 
-.. image:: web/viewarchitecture.*
+.. image:: web/viewarchitecture.png
    :align: center
    :width: 40%
 

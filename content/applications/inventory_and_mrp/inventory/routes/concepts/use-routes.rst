@@ -20,7 +20,7 @@ docks, a quality control area, storage locations, picking and
 packing areas, and shipping docks. All products go
 through all these locations, which also trigger all the route's rules.
 
-.. image:: media/stock-example.png
+.. image:: use-routes/stock-example.png
    :align: center
    :alt: view of a generic warehouse with stock and quality control area
 
@@ -29,7 +29,7 @@ Operators then scan the products in the receiving area. Some of these products a
 quality control area (those devoted to being used during the manufacturing process, for
 example), while others are directly stored in their respective locations.
 
-.. image:: media/push-to-rule-example.png
+.. image:: use-routes/push-to-rule-example.png
    :align: center
    :alt: view of a generic push to rule when receiving products
 
@@ -40,7 +40,7 @@ to where the orders are packed. Then, the orders are packed in their
 respective boxes and conveyors bring them close to the shipping docks,
 ready to be delivered to customers.
 
-.. image:: media/pull-from-rule-example.png
+.. image:: use-routes/pull-from-rule-example.png
    :align: center
    :alt: view of a generic pull from rule when preparing deliveries
 
@@ -118,7 +118,7 @@ To configure a route such as one of those above, open the **Inventory
 Application** and go to :menuselection:`Configuration --> Settings`.
 Then, enable the *Multi-Step Routes* feature.
 
-.. image:: media/multi-steps-routes-feature.png
+.. image:: use-routes/multi-steps-routes-feature.png
    :align: center
    :alt: activation of the multi-steps feature in Odoo Inventory
 
@@ -137,7 +137,7 @@ find it, go to :menuselection:`Inventory --> Configuration -->
 Warehouses`. There, open your warehouse and edit it to see the
 pre-configured routes for incoming and outgoing shipments.
 
-.. image:: media/example-preconfigured-warehouse.png
+.. image:: use-routes/example-preconfigured-warehouse.png
    :align: center
    :alt: preconfigured warehouse in Odoo Inventory
 
@@ -146,7 +146,7 @@ configured to make your life easier. Those are based on your choice for
 shipments. Once you made your choice, head to :menuselection:`Inventory -->
 Configuration --> Routes` to see the routes Odoo generated for you.
 
-.. image:: media/preconfigured-routes.png
+.. image:: use-routes/preconfigured-routes.png
    :align: center
    :alt: view of all the preconfigured routes Odoo offers
 
@@ -154,7 +154,7 @@ Opening one of those routes allows you to see on what you can apply the route.
 Here, all the selected product categories in the
 *YourCompany* warehouse are set up to follow the 3-steps route.
 
-.. image:: media/routes-example.png
+.. image:: use-routes/routes-example.png
    :align: center
    :alt: view of a route example applicable on category and warehouse
 
@@ -163,7 +163,7 @@ you can configure custom routes in which you can define your own
 rules, but also the source and destination location of each action. As
 an example, here are the rules for the pre-configured route.
 
-.. image:: media/rules-example.png
+.. image:: use-routes/rules-example.png
    :align: center
    :alt: rules example with push & pull actions in Odoo Inventory
 
@@ -175,7 +175,7 @@ Configuration --> Routes`, click on create, and choose the
 places where this route can be selected. Of course, combinations are
 available.
 
-.. image:: media/advanced-custom-route.png
+.. image:: use-routes/advanced-custom-route.png
    :align: center
    :alt: view of a pick - pack - ship route as an example
 
@@ -188,7 +188,7 @@ all the rules configured in the route are applied to **every**
 product of the category. For example, this can be useful if you use the
 dropshipping process for all the products from the same category.
 
-.. image:: media/routes-logistic-tab.png
+.. image:: use-routes/routes-logistic-tab.png
    :align: center
    :alt: view of a route applied to the "all" product category
 
@@ -196,7 +196,7 @@ The same behavior applies to the warehouses. If you tick *Warehouses*,
 all the transfers occurring inside the chosen warehouse, and meeting the
 conditions of the linked rules, then follow that route.
 
-.. image:: media/applicable-on-warehouse.png
+.. image:: use-routes/applicable-on-warehouse.png
    :align: center
    :alt: view of the route menu when selecting applicable on warehouse
 
@@ -204,20 +204,20 @@ For the *Sales Order Lines*, it is more or less the opposite. You have
 to choose the route yourself when creating a quotation. This is pretty useful if
 some products go through different routes.
 
-.. image:: media/applicable-on-sales-order-lines.png
+.. image:: use-routes/applicable-on-sales-order-lines.png
    :align: center
    :alt: view of the route menu when selecting applicable on sales order lines
 
 If you work with this kind of route, it is important to keep in mind
 that it must be selected on the sales order, such as below.
 
-.. image:: media/add-routes-to-sales-lines.png
+.. image:: use-routes/add-routes-to-sales-lines.png
    :align: center
    :alt: view of the menu allowing to add new lines to sales orders
 
 Then, the route can be chosen on each line of the document.
 
-.. image:: media/sales-order-lines-routes-application.png
+.. image:: use-routes/sales-order-lines-routes-application.png
    :align: center
    :alt: view of the routes added to the sales orders
 
@@ -225,7 +225,7 @@ Finally, there are routes that can be applied to products. Those work more or le
 like the product categories: once selected, you have to
 manually set on which product it must be applied.
 
-.. image:: media/applicable-on-products.png
+.. image:: use-routes/applicable-on-products.png
    :align: center
    :alt: view of the menu when selecting applicable on products
 
@@ -233,7 +233,7 @@ To do so, go to :menuselection:`Inventory --> Master Data -->
 Products` and open the one on which you want to apply the route. Then
 go to the *Inventory tab* and select the route you’ve created.
 
-.. image:: media/on-product-route.png
+.. image:: use-routes/on-product-route.png
    :align: center
    :alt: view of a product form, where the route must be selected
 
@@ -248,7 +248,7 @@ The rules are to be defined on the routes. To do so, go to
 :menuselection:`Inventory --> Configuration --> Routes`, then to the *Rules* section, 
 and click on *Add a line* button.
 
-.. image:: media/add-new-rules.png
+.. image:: use-routes/add-new-rules.png
    :align: center
    :alt: view of the rules menu, where it is possible to add new rules
 
@@ -276,7 +276,7 @@ all of them:
 -  **Manufacture**: when products are needed in the source location,
    a manufacturing order is created to fulfill the need.
 
-.. image:: media/pull-from-rule-stock-to-packing.png
+.. image:: use-routes/pull-from-rule-stock-to-packing.png
    :align: center
    :alt: overview of a transfer requested between the stock and the packing zone
 
@@ -325,14 +325,14 @@ following:
    Locations/Customers, Delivery Orders are created from WH/Output
    to fulfill the need.
 
-.. image:: media/transfers-overview.png
+.. image:: use-routes/transfers-overview.png
    :align: center
    :alt: overview of all the transfers created by the pick - pack - ship route
 
 This means that, when a customer orders products, a delivery order is
 created to fulfill the order.
 
-.. image:: media/operations-on-transfers.png
+.. image:: use-routes/operations-on-transfers.png
    :align: center
    :alt: view of the operations created by a pull from transfer
 
@@ -341,14 +341,14 @@ created to fulfill the order.
    same. In fact, the status is **Waiting Another Operation** if the
    previous transfer in the list is not done yet.
 
-.. image:: media/waiting-status.png
+.. image:: use-routes/waiting-status.png
    :align: center
    :alt: view of the transfers various status at the beginning of the process
 
 To prepare the order, conveyors need products packed at the output area,
 so an internal transfer is requested from the packing zone.
 
-.. image:: media/detailed-operations-2.png
+.. image:: use-routes/detailed-operations-2.png
    :align: center
    :alt: view of the detailed operations for a transfer between the packing and output zones
 
@@ -356,7 +356,7 @@ Obviously, the packing zone needs products ready to be packed. So, an
 internal transfer is requested to the stock and employees can gather the
 required products from the warehouse.
 
-.. image:: media/detailed-operations-transfer.png
+.. image:: use-routes/detailed-operations-transfer.png
    :align: center
    :alt: view of the detailed operations for a transfer between the stock and packing zones
 
@@ -370,6 +370,6 @@ items.
 In our case, the product is delivered to the customer when all the rules
 have been triggered and the transfers done.
 
-.. image:: media/transfers-status.png
+.. image:: use-routes/transfers-status.png
    :align: center
    :alt: view of the transfers' status when all the process is done

@@ -33,7 +33,7 @@ screen you get when you enter the accounting application), click on your bank
 account on :menuselection:`More --> Settings` option. On the
 **Payment Method** field, set **Check**.
 
-.. image:: ./media/check01.png
+.. image:: check/check01.png
   :align: center
 
 Compatible check stationery for printing checks
@@ -67,7 +67,7 @@ To register a payment on a bill, open any supplier bill from the menu
 validated, you can register a payment. Set the **Payment Method** to **Check**
 and validate the payment dialog.
 
-.. image:: ./media/check02.png
+.. image:: check/check02.png
   :align: center
 
 Print checks
@@ -87,7 +87,7 @@ number.
 To print all checks in batch, select all payments from the list view and
 Print Check from the top "print" menu.
 
-.. image:: ./media/check03.png
+.. image:: check/check03.png
   :align: center
 
 Reconcile bank statements
@@ -112,7 +112,7 @@ payment and select a payment method by check.
 If you pay a specific supplier bill, put the reference of the bill in
 the **Memo** field.
 
-.. image:: ./media/check04.png
+.. image:: check/check04.png
   :align: center
 
 Once your payment by check is registered, don't forget to **Confirm** it.

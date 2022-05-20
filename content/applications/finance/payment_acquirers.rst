@@ -188,7 +188,7 @@ The **Capture Amount Manually** field is under the **Configuration** tab. If ena
 reserved for a few days on the customer's card, but not charged yet. Please refer to your acquirer's
 documentation for the exact reservation duration.
 
-.. image:: payment_acquirers/media/capture_manually.png
+.. image:: payment_acquirers/capture_manually.png
    :align: center
    :alt: Configuration tab on Odoo
 
@@ -196,7 +196,7 @@ To capture the payment, you must then go to the related sales order or invoice a
 *capture* the funds before its automatic cancellation, or *void the transaction* to unlock the funds
 from the customer's card.
 
-.. image:: payment_acquirers/media/capture.png
+.. image:: payment_acquirers/capture.png
    :align: center
    :alt: Hold the credit card payment until you capture or revoke it on Odoo
 
@@ -237,7 +237,7 @@ You can use a single journal for many payment methods. And for each payment meth
 - Define an **Accounting Account** to separate these payments from another payment method.
 - Leave blank to fallback on the default account, which you can see or change in the settings.
 
-.. image:: payment_acquirers/media/bank_journal.png
+.. image:: payment_acquirers/bank_journal.png
    :align: center
    :alt: A bank journal in the "Incoming Payments Tab".
 

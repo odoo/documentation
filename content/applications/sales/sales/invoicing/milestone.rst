@@ -18,7 +18,7 @@ configure products to work this way, go to any product form.
 You have to set the product type as *Service* under general
 information and select *Milestones* in the sales tab.
 
-.. image:: media/milestone01.png
+.. image:: milestone/milestone01.png
     :align: center
 
 Invoice milestones
@@ -27,7 +27,7 @@ Invoice milestones
 From the sales order, you can manually edit the quantity delivered as
 you complete a milestone.
 
-.. image:: media/milestone02.png
+.. image:: milestone/milestone02.png
     :align: center
 
 You can then invoice that first milestone.

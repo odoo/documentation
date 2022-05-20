@@ -14,7 +14,7 @@ Set up the feature
 Go to :menuselection:`Accounting --> Settings --> Bill Digitalization`, and choose whether the bills
 should be processed automatically (with OCR) or manually (on demand).
 
-.. image:: media/setup_ocr.png
+.. image:: ocr/setup_ocr.png
    :align: center
    :alt: Activate the feature going to the settings application in Odoo Accounting
 
@@ -32,7 +32,7 @@ need to click on *Send for Digitalization* to do it manually.
 Once the data is extracted from the PDF, you can correct it if necessary by clicking on the
 respective tag (available in *Edit* mode), and selecting the right information instead.
 
-.. image:: media/example_ocr.png
+.. image:: ocr/example_ocr.png
    :align: center
    :height: 580
    :alt: Example of a scanned bill in Odoo Accounting

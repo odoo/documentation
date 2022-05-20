@@ -46,31 +46,31 @@ Once you have your authenticator of choice, go to the Odoo instance
 you want to setup :abbr:`2FA (two-factor authentication)`, then open
 :guilabel:`Preferences` (or :guilabel:`My Profile`):
 
-.. figure:: media/totp_setup/preferences.png
+.. figure:: 2fa/preferences.png
     :align: center
 
 Open the :guilabel:`Account Security` tab, then click the
 :guilabel:`Enable two-factor authentication` button:
 
-.. figure:: media/totp_setup/sec_tab.png
+.. figure:: 2fa/sec_tab.png
    :align: center
 
 Because this is a security-sensitive action, you will need to input
 your password:
 
-.. figure:: media/totp_setup/sec_enhanced.png
+.. figure:: 2fa/sec_enhanced.png
    :align: center
 
 After which you will see this screen with a barcode:
 
-.. figure:: media/totp_setup/totp_scan.png
+.. figure:: 2fa/totp_scan.png
    :align: center
 
 In most applications, you can simply *scan the barcode* via the
 authenticator of your choice, the authenticator will then take care of
 all the setup:
 
-.. figure:: media/totp_setup/scan_barcode.jpg
+.. figure:: 2fa/scan_barcode.jpg
    :align: center
 
 .. note::
@@ -80,17 +80,17 @@ all the setup:
    click the provided link, or copy the secret to manually set-up your
    authenticator:
 
-   .. figure:: media/totp_setup/secret_visible.png
+   .. figure:: 2fa/secret_visible.png
       :align: center
 
-   .. figure:: media/totp_setup/input_secret.png
+   .. figure:: 2fa/input_secret.png
       :align: center
 
 Once this is done, the authenticator should display a *verification
 code* with some useful identifying information (e.g. the domain and
 login for which the code is):
 
-.. figure:: media/totp_setup/authenticator.png
+.. figure:: 2fa/authenticator.png
    :align: center
 
 You can now input the code into the :guilabel:`Verification Code`
@@ -100,7 +100,7 @@ button.
 Congratulation, your account is now protected by two-factor
 authentication!
 
-.. figure:: media/totp_setup/totp_enabled.png
+.. figure:: 2fa/totp_enabled.png
    :align: center
 
 Logging in
@@ -112,7 +112,7 @@ On the login page, input the username and password of the account for
 which you set up :abbr:`2FA (two-factor authentication)`, rather than
 immediately enter Odoo you will now get a second log-in screen:
 
-.. figure:: media/totp_setup/2fa_input.png
+.. figure:: 2fa/2fa_input.png
    :align: center
 
 Get your authenticator, input the code it provides for the domain and

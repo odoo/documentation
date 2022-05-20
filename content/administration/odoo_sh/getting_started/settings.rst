@@ -8,7 +8,7 @@ Overview
 
 The settings allow you to manage the configuration of your project.
 
-.. image:: ./media/interface-settings.png
+.. image:: settings/interface-settings.png
    :align: center
 
 Project name
@@ -16,7 +16,7 @@ Project name
 
 The name of your project.
 
-.. image:: ./media/interface-settings-projectname.png
+.. image:: settings/interface-settings-projectname.png
    :align: center
 
 This defines the address that will be used to access your production database.
@@ -31,7 +31,7 @@ Collaborators
 
 Manage the Github users who can access your project.
 
-.. image:: ./media/interface-settings-collaborators.png
+.. image:: settings/interface-settings-collaborators.png
    :align: center
 
 There are two levels of users:
@@ -87,7 +87,7 @@ Public Access
 
 Allow public access to your development builds.
 
-.. image:: ./media/interface-settings-public.png
+.. image:: settings/interface-settings-public.png
    :align: center
 
 If activated, this option exposes the Builds page publicly, allowing visitors to connect to your development builds.
@@ -117,7 +117,7 @@ as submodules in your branches to allow Odoo.sh to download them.
   If you are looking on how to set up your submodules,
   instructions are available in the chapter :ref:`Submodules <odoosh-advanced-submodules>` of this documentation.
 
-.. image:: ./media/interface-settings-submodules.png
+.. image:: settings/interface-settings-submodules.png
    :align: center
 
 When a repository is private, it is not possible to publicly download its branches and revisions.
@@ -148,7 +148,7 @@ Storage Size
 
 This section shows the storage size used by your project.
 
-.. image:: ./media/interface-settings-storage.png
+.. image:: settings/interface-settings-storage.png
    :align: center
 
 Storage size is computed as follows:
@@ -170,7 +170,7 @@ Additional database workers can be configured here. More workers help increase t
 production database is able to handle. If you add more, it will automatically be synchronized
 with your subscription.
 
-.. image:: ./media/interface-settings-workers.png
+.. image:: settings/interface-settings-workers.png
    :align: center
 
 .. Warning::
@@ -185,7 +185,7 @@ Staging Branches
 Additional staging branches allow you to develop and test more features at the same time. If you
 add more, it will automatically be synchronized with your subscription.
 
-.. image:: ./media/interface-settings-staging-branches.png
+.. image:: settings/interface-settings-staging-branches.png
    :align: center
 
 Activation
@@ -193,5 +193,5 @@ Activation
 
 Shows the status of the project's activation. You can change the project's activation code if needed.
 
-.. image:: ./media/interface-settings-activation.png
+.. image:: settings/interface-settings-activation.png
    :align: center

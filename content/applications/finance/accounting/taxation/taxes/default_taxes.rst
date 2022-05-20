@@ -6,7 +6,7 @@ Default taxes
 other indication about which tax to use. For example, Odoo prefills the **Taxes** field with the
 Default Taxes when you create a new product or add a new line on an invoice.
 
-.. image:: media/default-taxes-invoice-line.png
+.. image:: default_taxes/default-taxes-invoice-line.png
    :align: center
    :alt: Odoo fills out the Tax field automatically according to the Default Taxes
 
@@ -26,7 +26,7 @@ To change your **Default Taxes**, go to :menuselection:`Accounting --> Configura
 --> Taxes --> Default Taxes`, select the appropriate taxes for your default **Sales Tax** and
 **Purchase Tax**, and click on *Save*.
 
-.. image:: media/default-taxes-configuration.png
+.. image:: default_taxes/default-taxes-configuration.png
    :align: center
    :alt: Define which taxes to use by default on Odoo
 

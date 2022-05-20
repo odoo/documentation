@@ -54,7 +54,7 @@ My printer is not detected
 If one of your printers doesn't show up in your devices list, go to the
 IoT Box homepage and make sure that it is listed under *Printers*.
 
-.. image:: media/troubleshooting_printer_01.png
+.. image:: troubleshooting/troubleshooting_printer_01.png
    :align: center
 
 If your printer is not present on the IoT Box homepage, hit
@@ -76,7 +76,7 @@ tab and select the printer in the list. In the Administration dropdown,
 click on *Modify Printer*. Follow the steps and select the Make and Model
 corresponding to your printer.
 
-.. image:: media/troubleshooting_printer_02.png
+.. image:: troubleshooting/troubleshooting_printer_02.png
    :align: center
 
 .. note::
@@ -121,7 +121,7 @@ recognized by the IoT Box.
 You can manually change the device type by going to its form view and
 activating the *Is scanner* option.
 
-.. image:: media/troubleshooting_barcode_01.png
+.. image:: troubleshooting/troubleshooting_barcode_01.png
    :align: center
 
 Cashdrawer

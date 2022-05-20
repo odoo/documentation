@@ -11,7 +11,7 @@ Configuration
 
 Go to :menuselection:`Website --> Configuration --> Settings` and activate *Link Trackers*.
 
-.. image:: media/enable_link_tracker.png
+.. image:: link_tracker/enable_link_tracker.png
    :align: center
    :alt: View of Website settings page emphasizing the link trackers field in Odoo Website
 
@@ -21,7 +21,7 @@ Set up traceable URLs
 Go to :menuselection:`Website --> Go to website --> Promote --> Track this page`. Here, you are able
 to get a specific tracked URL based on the campaign, medium, and source being used.
 
-.. image:: media/link_tracker_fields.png
+.. image:: link_tracker/link_tracker_fields.png
    :align: center
    :alt: View of the link tracker fields for Odoo Website
 
@@ -41,7 +41,7 @@ To look at statistics of your links, go to :menuselection:`Website --> Go to web
 can also see complete statistics by clicking on *Stats*, including the number of clicks, and the
 country of origin for those clicks.
 
-.. image:: media/links_statistics.png
+.. image:: link_tracker/links_statistics.png
    :align: center
    :alt: View of the tracked list emphasizing the statistics buttons in Odoo Website
 
