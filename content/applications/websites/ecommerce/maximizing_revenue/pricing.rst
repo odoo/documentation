@@ -26,7 +26,7 @@ In the case that you sell in several currencies, you can let your customers choo
 their own. Check the *Selectable* box to add the pricelist to the website drop-down menu, which
 can be found in *Pricelists* under the *Products* menu, located in the Website application.
 
-.. image:: ./media/website_pricelist_select.png
+.. image:: pricing/website_pricelist_select.png
    :align: center
    :width: 50 %
 

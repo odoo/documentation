@@ -29,7 +29,7 @@ Box* (you can find it on the form view of your IoT Box). Then, enter
 9000 as port. The terminal will restart. Once it is done, go on your
 *IoT Box* form in Odoo and verify that the terminal has been found.
 
-.. image:: media/payment_terminal_02.png
+.. image:: ingenico/payment_terminal_02.png
    :align: center
 
 Configure the payment method
@@ -38,7 +38,7 @@ Configure the payment method
 First, go in the general settings of the POS app, and activate the
 Ingenico setting.
 
-.. image:: media/payment_terminal_03.png
+.. image:: ingenico/payment_terminal_03.png
    :align: center
 
 Go back in :menuselection:`Point of Sale --> Configuration --> Point of Sale`,
@@ -46,7 +46,7 @@ go in the payments section and access your payment methods. Create a new
 payment method for Ingenico, select the payment terminal option Ingenico, and
 select your payment terminal device.
 
-.. image:: media/payment_terminal_04.png
+.. image:: ingenico/payment_terminal_04.png
    :align: center
 
 Pay with a payment terminal
@@ -58,7 +58,7 @@ column is the one that has to be sent to the payment terminal and click
 on *Send*. When the payment is successful, the status will change to
 *Payment Successful*.
 
-.. image:: media/payment_terminal_05.png
+.. image:: ingenico/payment_terminal_05.png
    :align: center
 
 If you want to cancel the payment request, click on cancel. You can
@@ -76,5 +76,5 @@ issues.
 Once your payment is processed, on the payment record, you’ll find the
 type of card that has been used and the transaction ID.
 
-.. image:: media/payment_terminal_06.png
+.. image:: ingenico/payment_terminal_06.png
    :align: center

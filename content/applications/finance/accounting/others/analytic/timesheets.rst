@@ -19,20 +19,20 @@ First, install the three applications necessary to use this
 functionality, namely **Accounting**, **Sales** and **Timesheet**. Enter the apps
 module name and install them.
 
-.. image:: media/timesheets14.png  
+.. image:: timesheets/timesheets14.png  
    :align: center
 
-.. image:: media/timesheets05.png
+.. image:: timesheets/timesheets05.png
    :align: center
 
-.. image:: media/timesheets11.png
+.. image:: timesheets/timesheets11.png
    :align: center
 
 Next you will need to enable analytical accounting. To do so enter the
 **Accounting app**. Select :menuselection:`Configuration --> Settings` and tick the
 **Analytic accounting** option (see picture below)
 
-.. image:: media/timesheets06.png
+.. image:: timesheets/timesheets06.png
    :align: center
 
 Apply your changes.
@@ -48,7 +48,7 @@ On the employee sheet enter the **HR settings** tab. Here you are able to
 specify the **Timesheet Cost** of your employee. In this case Harry has a
 cost of 18 euros / hours. We will thus fill in 18 in this field.
 
-.. image:: media/timesheets07.png
+.. image:: timesheets/timesheets07.png
    :align: center
 
 .. note:: 
@@ -69,7 +69,7 @@ We thus need to create a **sales order** with a **service** product invoiced
 **based on time and material** and tracked by timesheets with **hours** as unit
 of measures.
 
-.. image:: media/timesheets03.png
+.. image:: timesheets/timesheets03.png
    :align: center
 
 For more information on how to create a sales order based on time and
@@ -81,7 +81,7 @@ is confirmed. Our employees will have to point to that account (in this
 case **SO002-Smith&Co**) in order to be able to invoice their hours (see
 picture below).
 
-.. image:: media/timesheets10.png
+.. image:: timesheets/timesheets10.png
    :align: center
 
 Fill in timesheet
@@ -94,7 +94,7 @@ Account** discussed above.
 
 Harry worked three hours on a SWOT analysis for Smith&Co.
 
-.. image:: media/timesheets01.png
+.. image:: timesheets/timesheets01.png
    :align: center
 
 In the meantime, Cedric discussed businesses needs with the customer for
@@ -104,7 +104,7 @@ well on the **Analytic Account**.
 In the **Sales Order** we notice that the delivered amounts of hours is
 automatically computed (see picture below).
 
-.. image:: media/timesheets02.png
+.. image:: timesheets/timesheets02.png
    :align: center
 
 Analytic accounting
@@ -128,13 +128,13 @@ Note : you can specify a period for **Analysis**. If you want to open the
 current situation you should keep the fields empty. We can already note
 the credit and debit balance of the account.
 
-.. image:: media/timesheets12.png
+.. image:: timesheets/timesheets12.png
    :align: center
 
 If we click on the account a special button is provided to have the
 details of cost and revenues (see picture below).
 
-.. image:: media/timesheets13.png
+.. image:: timesheets/timesheets13.png
    :align: center
 
 Click the button **Cost/Revenue** to have an overview of cost and revenues with the
@@ -152,18 +152,18 @@ In this menu we have several options to analyse the human resource cost.
    of the project. Add a custom **Filter** where the **Analytic Account**
    contains the **Sales Order** number.
 
-   .. image:: media/timesheets04.png
+   .. image:: timesheets/timesheets04.png
       :align: center
 
    In the results we see timesheets activities and invoiced lines with
    the corresponding costs and revenues.
 
-   .. image:: media/timesheets09.png
+   .. image:: timesheets/timesheets09.png
      :align: center
 
 2. We can group the different analytical accounts together and check
    their respective revenues. Simply group by **Analytic account** and
    select the **Graph view** to have a clear overview.
 
-   .. image:: media/timesheets08.png
+   .. image:: timesheets/timesheets08.png
       :align: center

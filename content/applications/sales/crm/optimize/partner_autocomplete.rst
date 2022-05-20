@@ -10,7 +10,7 @@ Configuration
 
 Go to :menuselection:`Settings --> Contacts` and activate the *Partner Autocomplete* feature.
 
-.. image:: media/settings_partner_autocomplete.png
+.. image:: partner_autocomplete/settings_partner_autocomplete.png
    :align: center
    :alt: View of settings page and the activations of the feature in Odoo
 
@@ -22,11 +22,11 @@ Enrich your contacts with corporate data
   data.
 | For example, after typing *Odoo*, you will get the following information:
 
-.. image:: media/odoo_autocomplete.png
+.. image:: partner_autocomplete/odoo_autocomplete.png
    :align: center
    :alt: Creating a new contact in Odoo
 
-.. image:: media/odoo_info_autocomplete.png
+.. image:: partner_autocomplete/odoo_info_autocomplete.png
    :align: center
    :alt: View of the information being shown about odoo with the autocomplete option in Odoo
 

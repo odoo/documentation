@@ -75,20 +75,20 @@ In Github:
 
 - In the upper-right corner of any page, click your profile photo, then click Settings
 
-  .. image:: 02_setup/media/userbar-account-settings.png
+  .. image:: 02_setup/userbar-account-settings.png
 
 - In the user settings sidebar, click SSH and GPG keys.
 
-  .. image:: 02_setup/media/settings-sidebar-ssh-keys.png
+  .. image:: 02_setup/settings-sidebar-ssh-keys.png
 
 - Click New SSH key or Add SSH key.
 
-  .. image:: 02_setup/media/ssh-add-ssh-key.png
+  .. image:: 02_setup/ssh-add-ssh-key.png
 
 - In the "Title" field, add a descriptive label for the new key.
 - Paste your key into the "Key" field.
 
-  .. image:: 02_setup/media/ssh-key-paste.png
+  .. image:: 02_setup/ssh-key-paste.png
 
 - Click Add SSH key.
 

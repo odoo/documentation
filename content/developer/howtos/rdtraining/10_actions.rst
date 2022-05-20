@@ -28,7 +28,7 @@ Action Type
 
     - You should be able to cancel or set a property as sold:
 
-    .. image:: 10_actions/media/property.gif
+    .. image:: 10_actions/property.gif
         :align: center
         :alt: Cancel and set to sold
 
@@ -37,13 +37,13 @@ Action Type
 
     - You should be able to accept or refuse an offer:
 
-    .. image:: 10_actions/media/offer_01.gif
+    .. image:: 10_actions/offer_01.gif
         :align: center
         :alt: Accept or refuse an offer
 
     - Once an offer is accepted, the selling price and the buyer should be set:
 
-    .. image:: 10_actions/media/offer_02.gif
+    .. image:: 10_actions/offer_02.gif
         :align: center
         :alt: Accept an offer
 

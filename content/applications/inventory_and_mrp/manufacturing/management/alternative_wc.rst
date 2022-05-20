@@ -21,7 +21,7 @@ Configure your Work Centers
 First, go to the :menuselection:`Manufacturing app --> Configuration --> Settings`. Then, enable
 the Work Orders feature and hit save.
 
-.. image:: media/bom_3.png
+.. image:: bill_configuration/bom_3.png
     :align: center
     :alt: work order settings ticked
 
@@ -31,7 +31,7 @@ two new work centers. Add the second work center as an alternative to
 the first one and vice versa.
 
 
-.. image:: media/wc_alternate1.png
+.. image:: alternative_wc/wc_alternate1.png
     :align: center
 
 
@@ -39,7 +39,7 @@ Next, go to :menuselection:`Products --> Bills of Materials`, choose your produc
 and add these work centers to the operations of your BOM.
 
 
-.. image:: media/wc_alternate2.png
+.. image:: alternative_wc/wc_alternate2.png
     :align: center
 
 
@@ -56,7 +56,7 @@ Each new *Work Order*, which will be created before the end of the
 first one, will be scheduled at the alternative work center you
 configured, as shown below. 
 
-.. image:: media/wc_alternate3.png
+.. image:: alternative_wc/wc_alternate3.png
     :align: center
 
 

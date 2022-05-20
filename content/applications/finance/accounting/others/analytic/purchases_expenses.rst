@@ -20,17 +20,18 @@ Configuration
 The following modules needs to be installed to track cost. Enter the app
 module and install the following apps:
 
-+---------------------------------+---------------------------------+---------------------------------+
-| .. image:: media/purchase01.png | .. image:: media/purchase02.png | .. image:: media/purchase03.png |
-+=================================+=================================+=================================+
-+---------------------------------+---------------------------------+---------------------------------+
+.. list-table::
+
+   - - .. image:: purchases_expenses/purchase01.png
+     - .. image:: purchases_expenses/purchase02.png
+     - .. image:: purchases_expenses/purchase03.png
 
 Please note that the applications provided by these apps only allows us
 to **track** the costs. We won't be able to automatically re invoice
 those costs to our customers. To track and **re invoice costs** you
 should install the Sales management app as well.
 
-.. image:: media/purchase04.png
+.. image:: purchases_expenses/purchase04.png
    :align: center
 
 Enable Analytical accounting
@@ -40,13 +41,13 @@ Next step is to activate the analytical accounting. In the accounting
 app, select :menuselection:`Configuration --> Settings` and thick the Analytic
 accounting box.
 
-.. image:: media/purchase05.png
+.. image:: purchases_expenses/purchase05.png
    :align: center
 
 Moreover, scroll down and tick the **Analytic accounting for purchases**
 box.
 
-.. image:: media/purchase06.png
+.. image:: purchases_expenses/purchase06.png
    :align: center
 
 Don't forget to save your changes.
@@ -59,7 +60,7 @@ point all your expenses. Enter the accounting app, select
 :menuselection:`Configuration --> Analytic Accounts`. Create a new one. In this
 case we will call it "consulting pack" for our customer Smith&Co.
 
-.. image:: media/purchase07.png
+.. image:: purchases_expenses/purchase07.png
    :align: center
 
 We will point all our costs to this account to keep track of them.
@@ -79,7 +80,7 @@ Click on :menuselection:`Configuration --> Expense Products`. Create a new produ
 called Train ticket and set the cost price to 15.50 euros. Make sure the **Can be
 expensed** box is ticked.
 
-.. image:: media/purchase08.png
+.. image:: purchases_expenses/purchase08.png
    :align: center
 
 Book the expense
@@ -89,7 +90,7 @@ Enter the Expense module, click on :menuselection:`My expenses --> Create`. Sele
 Train ticket product and link it to the analytical account discussed
 above.
 
-.. image:: media/purchase09.png
+.. image:: purchases_expenses/purchase09.png
    :align: center
 
 Submit to manager and wait for the manager to approve and post the
@@ -107,7 +108,7 @@ Within the line we can link the product's cost with the analytical
 account. Specify the order line and select the correct analytical
 account. Confirm the sale.
 
-.. image:: media/purchase10.png
+.. image:: purchases_expenses/purchase10.png
    :align: center
 
 Accept the delivery and enter the invoice. Once the invoice is entered the cost
@@ -137,7 +138,7 @@ Enter the accounting module, click on :menuselection:`Advisers --> Analytic Acco
 Select "consulting pack - Smith" and click on the cost and revenue
 button to have an overview of all cost linked to the account.
 
-.. image:: media/purchase11.png
+.. image:: purchases_expenses/purchase11.png
    :align: center
 
 .. note::

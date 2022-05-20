@@ -9,7 +9,7 @@ according to your customers' and providers' localizations and business types.
 **Fiscal Positions** allow you to create *sets of rules* to automatically adapt the taxes and the
 accounts used for a transaction.
 
-.. image:: media/fiscal-positions-intra-community.png
+.. image:: fiscal_positions/fiscal-positions-intra-community.png
    :align: center
    :alt: Example: Belgian to Intra-Community tax mapping with Fiscal Positions in Odoo Accounting
 
@@ -57,7 +57,7 @@ configure a few conditions:
 - **VAT Required**: The VAT number *must* be indicated in the customer's contact form.
 - **Country Group** / **Country**: The Fiscal Position is applied to these countries.
 
-.. image:: media/fiscal-positions-automatic.png
+.. image:: fiscal_positions/fiscal-positions-automatic.png
    :align: center
    :alt: Example of settings to apply a Fiscal Position automatically
 
@@ -88,7 +88,7 @@ You can manually define which Fiscal Position must be used by default for a spec
 To do so, open the partner's contact form, go to the **Sales & Purchase** tab, edit the **Fiscal
 Position** field, and click on *Save*.
 
-.. image:: media/fiscal-positions-partner.png
+.. image:: fiscal_positions/fiscal-positions-partner.png
    :align: center
    :alt: Selection of a Fiscal Position on a Sales Order / Invoice / Bill in Odoo Accounting
 
@@ -100,7 +100,7 @@ Choose Fiscal Positions manually on Sales Orders, Invoices, and Bills
 To manually select which Fiscal Position to use for a new Sales Order, Invoice, or Bill, go to the
 **Other Info** tab and select the right **Fiscal Position** *before* adding product lines.
 
-.. image:: media/fiscal-positions-transaction.png
+.. image:: fiscal_positions/fiscal-positions-transaction.png
    :align: center
    :alt: Selection of a Fiscal Position on a Sales Order / Invoice / Bill in Odoo Accounting
 

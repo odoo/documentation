@@ -22,7 +22,7 @@ Enable purchase agreements
 From the Purchase app, go to :menuselection:`Configuration --> Settings` and activate *Purchase
 Agreements*.
 
-.. image:: media/agreements-enable-purchase-agreements.png
+.. image:: agreements/agreements-enable-purchase-agreements.png
    :align: center
    :alt: Enable purchase agreements in Odoo Purchase
 
@@ -51,7 +51,7 @@ the:
    orders is *Set quantities manually*, while for calls for tenders are set to *Use quantities of
    agreement*.
 
-.. image:: media/agreements-configure-types.png
+.. image:: agreements/agreements-configure-types.png
    :align: center
    :alt: Configure purchase agreements types in Odoo Purchase
 
@@ -66,7 +66,7 @@ for each product, for example, if you have agreed with your vendor to order a sp
 quantity each time or in total. If you have configured your blanket order to *Set quantities
 manually*, this is only used for informational purposes.
 
-.. image:: media/agreements-set-blanket-order.png
+.. image:: agreements/agreements-set-blanket-order.png
    :align: center
    :alt: Set up a blanket order in Odoo Purchase
 
@@ -85,7 +85,7 @@ Agreement Type*, product lines can also be pre-filled.
 From here, you can quickly view all the requests for quotations made under that blanket order by
 clicking on *RFQs/Orders*.
 
-.. image:: media/agreements-ongoing-blanket-order.png
+.. image:: agreements/agreements-ongoing-blanket-order.png
    :align: center
    :alt: Create new quotations for an ongoing blanket order in Odoo Purchase
 
@@ -100,7 +100,7 @@ Blanket orders can be used for :doc:`automated replenishment <../../purchase/pro
 as once a blanket order is confirmed, a new vendor line is added to your product. Make sure the
 related vendor is in the first position if you have several vendors linked to your product.
 
-.. image:: media/agreements-blanket-order-replenishment.png
+.. image:: agreements/agreements-blanket-order-replenishment.png
    :align: center
    :alt: Blanket order added to product configuration in Odoo Purchase
 
@@ -118,7 +118,7 @@ don't add a price, as the vendors should give you their best quote.
 You can also write any *Terms and Conditions* at the bottom of the agreement. Once you are ready,
 click on *Confirm*.
 
-.. image:: media/agreements-set-call-for-tenders.png
+.. image:: agreements/agreements-set-call-for-tenders.png
    :align: center
    :alt: Set up a call for tenders in Odoo Purchase
 
@@ -131,7 +131,7 @@ pre-filled in, depending on how you configured the *Purchase Agreement Type*. Cl
 email* to send it to the vendor. Go back to the call for tenders and repeat this process for each
 vendor.
 
-.. image:: media/agreements-request-quotation.png
+.. image:: agreements/agreements-request-quotation.png
    :align: center
    :alt: Request a quotation from a call for tenders in Odoo Purchase
 
@@ -139,7 +139,7 @@ Once you have sent a request for quotation to every vendor and receiving their q
 *Validate* to proceed to the bid selection. Next, click on the RFQs/Orders smart button to view all
 your vendors' quotations.
 
-.. image:: media/agreements-validate-call-for-tenders.png
+.. image:: agreements/agreements-validate-call-for-tenders.png
    :align: center
    :alt: Validate a call for tenders and view all quotations in Odoo Purchase
 
@@ -148,6 +148,6 @@ that's done, select the most advantageous offer and click on *Confirm Order*. Th
 closes the call for tenders. You can now proceed with the purchase order as you would for a regular
 one.
 
-.. image:: media/agreements-confirm-order.png
+.. image:: agreements/agreements-confirm-order.png
    :align: center
    :alt: Confirm an order in Odoo Purchase

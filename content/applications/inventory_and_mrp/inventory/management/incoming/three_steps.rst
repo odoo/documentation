@@ -23,7 +23,7 @@ actions together. In this case, we will chain the picking step to the shipping s
 To enable *Multi-Step Routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and 
 activate the option.
 
-.. image:: media/three_steps_01.png
+.. image:: three_steps/three_steps_01.png
    :align: center
    :alt: View of the features to enable in order to use multi-step routes for goods reception
 
@@ -38,7 +38,7 @@ Once *Multi-Step Routes* has been activated, go to :menuselection:`Inventory -->
 Warehouse` and enter the warehouse which should work with the 3-steps reception. Then, select 
 *Receive goods in input, then quality and then stock (3 steps)* for *Incoming Shipments*.
 
-.. image:: media/three_steps_02.png
+.. image:: three_steps/three_steps_02.png
    :align: center
    :alt: View of the incoming shipment strategy to choose to receive goods in three steps
 
@@ -61,7 +61,7 @@ Order* as the source document:
 
 3. The last one with a reference *INT* to designate the move to stock.
 
-.. image:: media/three_steps_03.png
+.. image:: three_steps/three_steps_03.png
    :align: center
    :alt: View of the three moves created by the purchase of products in three steps strategy
 
@@ -74,14 +74,14 @@ are *Waiting Another Operation*.
 To access the receipt operation, click on the button from the *Purchase Order* or go back to the 
 *Inventory* app dashboard and click on *Receipts*.
 
-.. image:: media/three_steps_04.png
+.. image:: three_steps/three_steps_04.png
    :align: center
    :alt: View of the button to click to see the receipts that need to be processed
 
 In the receipt order, products are always considered available because they come from the supplier. 
 Then, the receipt can be validated.
 
-.. image:: media/three_steps_05.png
+.. image:: three_steps/three_steps_05.png
    :align: center
    :alt: View of the move (internal transfer) from the reception area to the warehouse input area
 
@@ -89,21 +89,21 @@ Once the receipt has been validated, the transfer to quality becomes *Ready*. An
 are chained to each other, products previously received are automatically reserved on the 
 transfer. Then, the transfer can be directly validated.
 
-.. image:: media/three_steps_06.png
+.. image:: three_steps/three_steps_06.png
    :align: center
    :alt: View of the button to click to see the internal transfers that need to be processed
 
-.. image:: media/three_steps_07.png
+.. image:: three_steps/three_steps_07.png
    :align: center
    :alt: View of the move (internal transfer) from the input area to the quality control area
 
 Now, the transfer that enters the products to stock is *Ready*. Here, it is again ready to be 
 validated in order to transfer the products to your stock location.
 
-.. image:: media/three_steps_08.png
+.. image:: three_steps/three_steps_08.png
    :align: center
    :alt: View of the button to click to see the internal transfers that need to be processed
 
-.. image:: media/three_steps_09.png
+.. image:: three_steps/three_steps_09.png
    :align: center
    :alt: View of the move (internal transfer) from the quality control area to the stock
