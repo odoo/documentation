@@ -14,7 +14,7 @@ Configuration
 To use this feature, install the free module *Lead Scoring* under your
 *Apps* page (only available in Odoo Enterprise).
 
-.. image:: media/prospect_visits01.png
+.. image:: prospect_visits/prospect_visits01.png
    :align: center
 
 Track a webpage
@@ -23,12 +23,12 @@ Track a webpage
 Go to any static page you want to track on your website and under the
 *Promote* tab you will find *Optimize SEO*
 
-.. image:: media/prospect_visits02.png
+.. image:: prospect_visits/prospect_visits02.png
    :align: center
 
 There you will see a *Track Page* checkbox to track this page.
 
-.. image:: media/prospect_visits03.png
+.. image:: prospect_visits/prospect_visits03.png
    :align: center
 
 See visited pages in your leads/opportunities
@@ -43,10 +43,10 @@ chatter.
 Both will update if the viewers comes back to your website and visits
 more pages.
 
-.. image:: media/prospect_visits04.png
+.. image:: prospect_visits/prospect_visits04.png
    :align: center
 
-.. image:: media/prospect_visits05.png
+.. image:: prospect_visits/prospect_visits05.png
    :align: center
 
 The feature will not repeat multiple viewings of the same pages in the

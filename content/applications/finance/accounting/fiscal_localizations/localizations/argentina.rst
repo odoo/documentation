@@ -36,7 +36,7 @@ Install the Argentinean localization modules
 
 For this, go to *Apps* and search for Argentina. Then click *Install* for the first two modules.
 
-.. image:: media/argentina01.png
+.. image:: argentina/argentina01.png
    :align: center
 
 Configure your company
@@ -46,7 +46,7 @@ Once that the modules are installed, the first step is to set up your company da
 the basic information, a key field to fill in the AFIP Responsibility Type, that represent the
 fiscal obligation and structure of the company:
 
-.. image:: media/argentina02.png
+.. image:: argentina/argentina02.png
    :align: center
    
 
@@ -61,7 +61,7 @@ many accounts as the companies that gave more complex fiscal requirements:
 - IVA Exempto   (159 accounts).
 - Responsables Inscriptos  (166 Accounts).
 
-.. image:: media/argentina03.png
+.. image:: argentina/argentina03.png
    :align: center
 
 Configure Master data
@@ -81,7 +81,7 @@ the digital certificates of one instance are not valid in the other one.
 
 Go to :menuselection:`Accounting --> Settings --> Argentinian Localization` to select the environment:
 
-.. image:: media/argentina_edi_01.png
+.. image:: argentina/argentina_edi_01.png
    :align: center
 
 
@@ -96,7 +96,7 @@ if you don’t have one already.
    ``.csr`` (certificate signing request) is generated to be used the AFIP portal to request the
    certificate.
 
-   .. image:: media/argentina_edi_02.png
+   .. image:: argentina/argentina_edi_02.png
 
 #. Generate Certificate (AFIP). Access the AFIP portal and follow the instructions described in the
    next document in order to get a certificate. `Get AFIP Certificate
@@ -106,7 +106,7 @@ if you don’t have one already.
    be uploaded in Odoo, using the pencil next in the field “Certificado” and selecting the
    corresponding file.
 
-   .. image:: media/argentina_edi_03.png
+   .. image:: argentina/argentina_edi_03.png
 
 .. tip::
    In case you need to configure the Homologation Certificate, please refer to the AFIP official 
@@ -123,7 +123,7 @@ As part of the Argentinean localization, the document types defined by the AFIP 
 the Partner form, this information is essential for most transactions. There are six identification
 types available by default:
 
-.. image:: media/argentina04.png
+.. image:: argentina/argentina04.png
    :align: center
 
 .. note::
@@ -136,7 +136,7 @@ AFIP Responsibility Type
 In Argentina the document type associated with customers and vendors transactions is defined based
 on the AFIP Responsibility type, this field should be defined in the partner form:
 
-.. image:: media/argentina05.png
+.. image:: argentina/argentina05.png
    :align: center
 
 Taxes
@@ -145,7 +145,7 @@ Taxes
 As part of the localization module,  the taxes are created automatically with their related
 financial account and configuration.
 
-.. image:: media/argentina06.png
+.. image:: argentina/argentina06.png
    :align: center
 
 Taxes Types
@@ -165,7 +165,7 @@ Some argentine taxes are not commonly used  for all companies, these type of tax
 inactive by default, it's important that before creating a new tax you confirm if they are not
 already included in the Inactive taxes:
 
-.. image:: media/argentina07.png
+.. image:: argentina/argentina07.png
    :align: center
 
 Document Types
@@ -185,7 +185,7 @@ is created automatically when the localization module is installed.
 The information required for the document types is included by default so the user doesn't need to
 fill anything on this view:
 
-.. image:: media/argentina08.png
+.. image:: argentina/argentina08.png
    :align: center
 
 .. note::
@@ -204,7 +204,7 @@ transaction/operation, example:
 The documents included in the localization have the proper letter associated, the user doesn't need
 to configure anything additional.
 
-.. image:: media/argentina09.png
+.. image:: argentina/argentina09.png
    :align: center
 
 Use on Invoices
@@ -233,7 +233,7 @@ used to generate fiscal invoices, but mostly for account moves related to intern
 AFIP Information (also known as AFIP Point of Sale)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/argentina10.png
+.. image:: argentina/argentina10.png
    :align: center
 
 **AFIP POS System**: This field is only visible for the Sales journals and defined the type of AFIP
@@ -254,7 +254,7 @@ Web Services
 - ``wsfexv1: Electronic Exportation Invoice.`` Used to generate invoices for international customers
   and transactions that involve exportation process, the document type related is type “E”.
 
-.. image:: media/argentina_edi_04.png
+.. image:: argentina/argentina_edi_04.png
    :align: center
 
 **AFIP POS Number**: This is the number configured in the AFIP to identify the operations related to
@@ -278,7 +278,7 @@ In case that you want to synchronize the next number in the sequence in Odoo bas
 number in the AFIP POS, the next button that is visible under :ref:`developer mode <developer-mode>`
 can be used:
 
-.. image:: media/argentina_edi_05.png
+.. image:: argentina/argentina_edi_05.png
    :align: center
 
 .. note::
@@ -304,17 +304,17 @@ type:
 
 **Invoice for a customer IVA Responsable Inscripto, prefix A**.
 
-.. image:: media/argentina11.png
+.. image:: argentina/argentina11.png
    :align: center
 
 **Invoice for an end customer, prefix B**.
 
-.. image:: media/argentina12.png
+.. image:: argentina/argentina12.png
    :align: center
 
 **Exportation Invoice, prefix E**.
 
-.. image:: media/argentina13.png
+.. image:: argentina/argentina13.png
    :align: center
 
 As it is shown in the invoices, all of them use the same journal but the prefix and sequence is
@@ -342,7 +342,7 @@ in the AFIP Tab, including:
   - Aceptado en AFIP.
   - Aceptado con Observaciones. 
   
-.. image:: media/argentina_edi_15.png
+.. image:: argentina/argentina_edi_15.png
    :align: center
 
 Invoice Taxes
@@ -356,7 +356,7 @@ This condition applies when the customer has the following AFIP Responsibility t
 
 - Responsable Inscripto.
 
-.. image:: media/argentina14.png
+.. image:: argentina/argentina14.png
    :align: center
 
 **B. Tax amount included:** This means that the taxed amount is included as part of the product
@@ -368,7 +368,7 @@ Responsibility types:
 - Responsable Monotributo.
 - IVA liberado.
 
-.. image:: media/argentina15.png
+.. image:: argentina/argentina15.png
    :align: center
 
 
@@ -380,14 +380,14 @@ Invoices for Services
 For electronic invoices that include Services, the AFIP requires to report the  service starting
 and ending date, this information can be filled in the tab “Other Info”: 
 
-.. image:: media/argentina_edi_06.png
+.. image:: argentina/argentina_edi_06.png
    :align: center
 
 If  the dates are not selected manually before the invoice is validated, the values will be
 filled automatically considering the beginning and day of the invoice month:
 
 
-.. image:: media/argentina_edi_07.png
+.. image:: argentina/argentina_edi_07.png
    :align: center
 
 Exportation Invoices
@@ -395,7 +395,7 @@ Exportation Invoices
 The invoices related to Exportation transactions required a Journal that used the AFIP POS 
 System “Expo Voucher - Web Service” so the proper document type be associated:
 
-.. image:: media/argentina_edi_08.png
+.. image:: argentina/argentina_edi_08.png
    :align: center
 
 When the customer selected in the Invoice has set the AFIP responsibility type as “Cliente / 
@@ -407,13 +407,13 @@ Proveedor del Exterior” or “IVA Liberado – Ley Nº 19.640”, Odoo automat
 - Concepto AFIP:  Products / Definitive export of goods.
 - Exempt Taxes. 
 
-.. image:: media/argentina_edi_09.png
+.. image:: argentina/argentina_edi_09.png
    :align: center
 
 .. note::
    The Exportation Documents required the Incoterm in :menuselection:`Other Info --> Accounting`:
    
-.. image:: media/argentina_edi_13.png
+.. image:: argentina/argentina_edi_13.png
    :align: center
    
    
@@ -455,7 +455,7 @@ For these transactions it’s important to have into consideration the next requ
 - A bank account type CBU must be related to the emisor, otherwise the invoice can’t 
   be validated, having these errors messages for example:  
   
-.. image:: media/argentina_edi_10.png
+.. image:: argentina/argentina_edi_10.png
    :align: center
 
 **Credit& Debit Notes:** When creating a Credit/Debit note related to a FCE document, it is 
@@ -464,7 +464,7 @@ important take the next points into consideration:
 - Use the Credit and Debit Note buttons, so the correct reference of the originator 
   document passed to the note. 
 
-.. image:: media/argentina_edi_11.png
+.. image:: argentina/argentina_edi_11.png
    :align: center
    
 - The document letter should be the same than the originator document (either A or B).
@@ -479,7 +479,7 @@ In the workflow we can have two scenarios:
 #. The Credit Note, is created with the negative amount to annulate the FCE document, 
    in this case the field “FCE, is Cancellation?” must be empty (false). 
 
-.. image:: media/argentina_edi_12.png
+.. image:: argentina/argentina_edi_12.png
    :align: center
    
 Invoice printed report
@@ -488,7 +488,7 @@ The PDF report related to electronic invoices that have been validated by the AF
 a barcode at the bottom of the format which represent the CAE number, the Expiration Date is 
 also displayed as it’s legal requirement: 
    
-.. image:: media/argentina_edi_14.png
+.. image:: argentina/argentina_edi_14.png
    :align: center
 
 
@@ -497,17 +497,17 @@ Troubleshooting and Auditing
 For auditing and troubleshooting purposes you can get the detailed information of an 
 invoice number that has been  previously sent to the AFIP,  
 
-.. image:: media/argentina_edi_23.png
+.. image:: argentina/argentina_edi_23.png
    :align: center
      
-.. image:: media/argentina_edi_24.png
+.. image:: argentina/argentina_edi_24.png
    :align: center  
 
 
 You can also get the last number used in AFIP for a specific Document Type and POS Number 
 as support for any possible  issues on the sequence synchronization between Odoo and AFIP. 
 
-.. image:: media/argentina_edi_22.png
+.. image:: argentina/argentina_edi_22.png
    :align: center
 
 
@@ -518,14 +518,14 @@ Based on the purchase journal selected for the vendor bill, the document type is
 This value is auto populated based on the AFIP Responsibility type of Issuer and Customer, but the 
 value can be switched if necessary.
 
-.. image:: media/argentina16.png
+.. image:: argentina/argentina16.png
    :align: center
 
 The document number needs to be registered manually and the format is validated automatically, in
 case that the format is invalid a user error will be displayed indicating the correct format that is
 expected.
 
-.. image:: media/argentina17.png
+.. image:: argentina/argentina17.png
    :align: center
 
 The vendor bill number is structured in the same way that the invoices with the difference 
@@ -544,7 +544,7 @@ Argentinian Localization --> Validate document in the AFIP`, considering the fol
 - **Required:** The verification  is done and it doesn't allow the user to 
   post the vendor bill if the document number is not valid.
 
-.. image:: media/argentina_edi_16.png
+.. image:: argentina/argentina_edi_16.png
    :align: center
 
 How to use it in Odoo
@@ -552,13 +552,13 @@ How to use it in Odoo
 This tool incorporates in the vendor bill a new "Verify on AFIP" button located 
 next to the AFIP Authorization code. 
 
-.. image:: media/argentina_edi_17.png
+.. image:: argentina/argentina_edi_17.png
    :align: center
 
 In case it’s not a valid AFIP authorization the value “Rejected” will be 
 displayed and the details of the validation will be added to the chatter.
 
-.. image:: media/argentina_edi_18.png
+.. image:: argentina/argentina_edi_18.png
    :align: center
 
 
@@ -572,7 +572,7 @@ this is commonly used in fuel and gasoline invoices.
 The vendor bill will be registered using 1 item for each product that is part of the VAT
 base amount and an additional item to register the amount of  the Exempt concept:
 
-.. image:: media/argentina_edi_19.png
+.. image:: argentina/argentina_edi_19.png
    :align: center
 
 Perception Taxes
@@ -582,13 +582,13 @@ VAT base amount, the perception tax can be added in any of the product lines, as
 we will have one tax group for the VAT and one for the perception, the perception default 
 value is always 1.00. 
 
-.. image:: media/argentina_edi_20.png
+.. image:: argentina/argentina_edi_20.png
    :align: center
 
 You should use the pencil that is the next to the Perception amount to edit it 
 and set the correct amount. 
 
-.. image:: media/argentina_edi_21.png
+.. image:: argentina/argentina_edi_21.png
    :align: center
    
 After this is done the invoice can be validated. 
@@ -599,7 +599,7 @@ Reports
 
 As part of the localization the next Financial reports were added:
 
-.. image:: media/argentina18.png
+.. image:: argentina/argentina18.png
    :align: center
 
 VAT Reports
@@ -608,19 +608,19 @@ VAT Reports
 Libro de IVA Ventas
 ~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/argentina19.png
+.. image:: argentina/argentina19.png
    :align: center
 
 Libro de IVA Compras
 ~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/argentina20.png
+.. image:: argentina/argentina20.png
    :align: center
 
 Resumen de IVA
 ~~~~~~~~~~~~~~
 
-.. image:: media/argentina21.png
+.. image:: argentina/argentina21.png
    :align: center
 
 IIBB - Reports
@@ -629,11 +629,11 @@ IIBB - Reports
 IIBB - Ventas por Jurisdicción
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/argentina22.png
+.. image:: argentina/argentina22.png
    :align: center
 
 IIBB - Compras  por Jurisdicción
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. image:: media/argentina23.png
+.. image:: argentina/argentina23.png
    :align: center

@@ -13,7 +13,7 @@ Set a deadline
 With Odoo Sales, it is possible to instantly add an **Expiration Date** from the quotation or the
 sales order.
 
-.. image:: media/quotation_deadlines_1.png
+.. image:: deadline/quotation_deadlines_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to configure deadlines on Odoo Sales?
@@ -25,7 +25,7 @@ It is also possible to add a deadline to every quotation template created. Whene
 quotation template is used in a quote, its associated deadline will be automatically applied. Be
 sure to check out our documentation about :doc:`quote_template` to excel in their use.
 
-.. image:: media/quotation_deadlines_2.png
+.. image:: deadline/quotation_deadlines_2.png
    :align: center
    :class: img-thumbnail
    :alt: How to use deadline in a quotation template on Odoo Sales?
@@ -35,7 +35,7 @@ sure to check out our documentation about :doc:`quote_template` to excel in thei
    For your information, the number of days will be the same as those mentioned in the quotation
    template.
 
-   .. image:: media/quotation_deadlines_3.png
+   .. image:: deadline/quotation_deadlines_3.png
       :align: center
       :class: img-thumbnail
       :alt: How customers will see deadlines on Odoo Sales?

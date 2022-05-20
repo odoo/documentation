@@ -6,7 +6,7 @@ Advanced Use Cases: Views
 
 From the Sales page, access Studio and, under *Views*, set the *Kanban* option as the default one.
 
-.. image:: media/views/kanban_default.png
+.. image:: views/kanban_default.png
    :align: center
    :height: 380
    :alt: View of the Kanban option being set as the default one in Odoo Studio
@@ -20,7 +20,7 @@ From the Sales page, access Studio and, under *Views*, set the *Kanban* option a
 | If the field is left blank, no editing is possible and records are shown based on your column
   preferences on the lead's page (front-end).
 
-.. image:: media/views/view_editable.png
+.. image:: views/view_editable.png
    :align: center
    :alt: View options emphasizing the editable options of a leads page in Odoo Studio
 

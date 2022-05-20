@@ -17,7 +17,7 @@ In TaxCloud
   <https://taxcloud.com/#register>`__ website.
 * Register your Odoo website on TaxCloud to get an *API ID* and an *API Key*.
 
-.. image:: media/taxcloud01.png
+.. image:: taxcloud/taxcloud01.png
   :align: center
 
 * In Settings on TaxCloud, click *Locations* to enter the location of your Office(s) & Warehouse(s).
@@ -30,7 +30,7 @@ In Odoo
 * Enter your TaxCloud credentials.
 * Click SAVE to store your credentials.
 
-.. image:: media/taxcloud02.png
+.. image:: taxcloud/taxcloud02.png
   :align: center
 
 * Click the Refresh Icon next to *Default Category* to import the TIC product categories
@@ -101,14 +101,14 @@ You can configure Odoo to automatically detect which Customers should use this f
 position.  Go to :menuselection:`Accounting --> Configuration --> Fiscal Positions`
 to open and edit the record.
 
-.. image:: media/taxcloud03.png
+.. image:: taxcloud/taxcloud03.png
   :align: center
 
 Now, this fiscal position is automatically set on any sales order, web order, or invoice
 when the customer country is *United States*. This triggers the
 automated tax computation.
 
-.. image:: media/taxcloud04.png
+.. image:: taxcloud/taxcloud04.png
   :align: center
 
 Add your product(s). You have two options to get Sales Tax on the Order.  You can confirm it,

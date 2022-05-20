@@ -13,7 +13,7 @@ Add optional products to your quotations
 With Odoo Sales, it is possible to add or modify optional products directly on quotations
 (under the **Optional Products** tab, as you can see below).
 
-.. image:: media/optional_products_2.png
+.. image:: optional_products/optional_products_2.png
    :align: center
    :class: img-thumbnail
    :alt: How to add optional products to your quotations on Odoo Sales
@@ -22,7 +22,7 @@ With Odoo Sales, it is possible to add or modify optional products directly on q
    By clicking on the **Customer Preview** button, you will be able to see what your customers
    will have as possibilities after opening a quotation from their received email.
 
-   .. image:: media/optional_products_3.png
+   .. image:: optional_products/optional_products_3.png
       :align: center
       :class: img-thumbnail
       :alt: Preview your quotations on Odoo Sales
@@ -32,7 +32,7 @@ using associated carts, with a user-friendly layout. More than that, if a custom
 optional products suggested, these additional items will automatically fill in the quotation
 managed by the salesman.
 
-.. image:: media/optional_products_4.png
+.. image:: optional_products/optional_products_4.png
    :align: center
    :class: img-thumbnail
    :alt: How to select optional products on Odoo Sales
@@ -40,7 +40,7 @@ managed by the salesman.
 Like this, salespeople will see each movement made by the customer and tracking the order will be
 all the better.
 
-.. image:: media/optional_products_5.png
+.. image:: optional_products/optional_products_5.png
    :align: center
    :class: img-thumbnail
    :alt: How to follow each movement made by your customers on Odoo Sales
@@ -54,7 +54,7 @@ enable, create, design and manage your own quotation templates before reading th
 For quotation templates, you also have an **Optional Products** tab where you can add related
 products or services.
 
-.. image:: media/optional_products_1.png
+.. image:: optional_products/optional_products_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to add optional products to your quotation templates on Odoo Sales

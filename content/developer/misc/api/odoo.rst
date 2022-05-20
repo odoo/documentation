@@ -80,13 +80,13 @@ account (although they can not be used to log-in via the interface).
 In order to add a key to your account, simply go to your
 :guilabel:`Preferences` (or :guilabel:`My Profile`):
 
-.. image:: images/preferences.png
+.. image:: odoo/preferences.png
    :align: center
 
 then open the :guilabel:`Account Security` tab, and click
 :guilabel:`New API Key`:
 
-.. image:: images/account-security.png
+.. image:: odoo/account-security.png
    :align: center
 
 Input a description for the key, **this description should be as clear and
@@ -102,7 +102,7 @@ lost).
 Once you have keys configured on your account, they will appear above the
 :guilabel:`New API Key` button, and you will be able to delete them:
 
-.. image:: images/delete-key.png
+.. image:: odoo/delete-key.png
    :align: center
 
 **A deleted API key can not be undeleted or re-set**. You will have to generate

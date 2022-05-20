@@ -22,7 +22,7 @@ To allow *multi-step routes*, go to :menuselection:`Inventory --> Configuration 
 activate the option. Note that activating *Multi-Step Routes* will also 
 activate *Storage Locations*.
 
-.. image:: media/two_steps_01.png
+.. image:: two_steps/two_steps_01.png
     :align: center
 
 Warehouse configuration
@@ -33,14 +33,14 @@ Configuration --> Warehouse` and enter the warehouse which will use
 delivery in 2 steps. You can then select the option *Send goods in
 output and then deliver (2 steps)* for Outgoing Shipments.
 
-.. image:: media/two_steps_02.png
+.. image:: two_steps/two_steps_02.png
     :align: center
 
 Activating this option will lead to the creation of a new *Output*
 location. If you want to rename it go to :menuselection:`Inventory --> Configuration -->
 Locations`, Select Output and update its name.
 
-.. image:: media/two_steps_03.png
+.. image:: two_steps/two_steps_03.png
     :align: center
 
 Create a Sales Order
@@ -50,7 +50,7 @@ In the *Sales* application, you can create a quotation with some
 storable products to deliver. Once you confirm the quotation, two
 pickings will be created and automatically linked to your sale order.
 
-.. image:: media/two_steps_04.png
+.. image:: two_steps/two_steps_04.png
     :align: center
 
 If you click on the *2 Delivery* button, you should now see two
@@ -58,7 +58,7 @@ different pickings, one with a reference *PICK* to designate the
 picking process and another one with a reference *OUT* to designate
 the shipping process.
 
-.. image:: media/two_steps_05.png
+.. image:: two_steps/two_steps_05.png
     :align: center
 
 Process the Picking and the Delivery
@@ -71,13 +71,13 @@ once the picking operation has been marked as done.
 You can enter the picking operation from here, or access it through the
 inventory dashboard.
 
-.. image:: media/two_steps_06.png
+.. image:: two_steps/two_steps_06.png
     :align: center
 
 In case you have the product in stock, it has automatically been
 reserved and you can simply validate the picking document.
 
-.. image:: media/two_steps_07.png
+.. image:: two_steps/two_steps_07.png
     :align: center
 
 Once the picking has been validated, the delivery order is ready to be
@@ -85,8 +85,8 @@ processed. Thanks to the fact that the documents are chained, the
 products which have been previously picked are automatically reserved on
 the delivery order.
 
-.. image:: media/two_steps_08.png
+.. image:: two_steps/two_steps_08.png
     :align: center
 
-.. image:: media/two_steps_09.png
+.. image:: two_steps/two_steps_09.png
     :align: center

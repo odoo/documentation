@@ -22,7 +22,7 @@ Automatic conversion from public price
 The public price is in your company's main currency (see
 :menuselection:`Accounting --> Settings`) and is set in product detail form.
 
-.. image:: ./media/public_price.png
+.. image:: currencies/public_price.png
    :align: center
 
 The conversion rates can be found in
@@ -30,10 +30,10 @@ The conversion rates can be found in
 from Yahoo or the European Central Bank at your convenience: manually, daily, weekly,
 etc. See :menuselection:`Accounting --> Settings`.
 
-.. image:: ./media/currency_rate.png
+.. image:: currencies/currency_rate.png
    :align: center
 
-.. image:: ./media/prices_conversion.png
+.. image:: currencies/prices_conversion.png
    :align: center
 
 Set your own prices
@@ -41,7 +41,7 @@ Set your own prices
 
 This is advised if you don't want your pricing to change along with currency rates.
 
-.. image:: ./media/pricing_currency.png
+.. image:: currencies/pricing_currency.png
    :align: center
 
 .. seealso::

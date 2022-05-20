@@ -21,7 +21,7 @@ Activate these features
 Go to :menuselection:`Sales --> Configuration --> Settings` and under **Invoicing policy** choose
 the rule you want to apply.
 
-.. image:: media/invoicing_policy_1.png
+.. image:: invoicing_policy/invoicing_policy_1.png
    :align: center
    :class: img-thumbnail
    :alt: How to choose your invoicing policy on Odoo Sales?
@@ -37,7 +37,7 @@ Choose an invoicing policy on a product form
 From any product page, under the **Sales tab**, you will find the invoicing policy, which can be
 manually changed.
 
-.. image:: media/invoicing_policy_5.png
+.. image:: invoicing_policy/invoicing_policy_5.png
    :align: center
    :class: img-thumbnail
    :alt: How to change your invoicing policy on a product form on Odoo Sales?
@@ -57,7 +57,7 @@ wait for confirmation, confirm the sales order and create an invoice.
   create an invoice without validating the delivered quantity, you will receive an error message as
   below.
 
-  .. image:: media/invoicing_policy_3.png
+  .. image:: invoicing_policy/invoicing_policy_3.png
      :class: img-thumbnail
      :alt: How the choice of your invoicing policy impacts your sales flow on Odoo Sales?
 
@@ -66,7 +66,7 @@ wait for confirmation, confirm the sales order and create an invoice.
    **Sales order**, you are able to see your delivered and invoiced quantities directly from your
    sales order (it is true for both rules).
 
-   .. image:: media/invoicing_policy_4.png
+   .. image:: invoicing_policy/invoicing_policy_4.png
       :align: center
       :class: img-thumbnail
       :alt: How to see your delivered and invoiced quantities on Odoo Sales?

@@ -45,7 +45,7 @@ IoT Box will not work. You can verify that the Fiscal Data Module is
 recognized by the IoT Box by going to the *Hardware status page* via
 the IoT Box homepage.
 
-.. image:: media/posbox_fdm_hardware_status.png
+.. image:: setup/posbox_fdm_hardware_status.png
     :align: center
 
 Odoo
@@ -62,7 +62,7 @@ number of your IoT Box is set). The first time you open the Point of
 Sale and attempt to do a transaction, you will be asked to input the
 PIN that you received with your VAT signing card.
 
-.. image:: media/vat_signing_card_pin.png
+.. image:: setup/vat_signing_card_pin.png
     :align: center
 
 Certification & On-premise

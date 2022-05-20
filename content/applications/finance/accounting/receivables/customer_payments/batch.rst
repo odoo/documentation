@@ -27,7 +27,7 @@ To do so, go to :menuselection:`Accounting --> Configuration --> Journals`, open
 you want to edit, click on *Edit*, and open the *Advanced Settings* tab. In the *Payment Method
 Types* section, enable **Batch Deposit**, and click on *Save*.
 
-.. image:: media/batch-journal-settings.png
+.. image:: batch/batch-journal-settings.png
    :align: center
    :alt: Payment Method Types in a journal's advanced settings
 
@@ -46,7 +46,7 @@ opening the *Customer Invoice* for which you received a payment, and clicking on
 There, select the appropriate Journal linked to your bank account and select *Batch Deposit* as
 Payment Method.
 
-.. image:: media/batch-register-payment.png
+.. image:: batch/batch-register-payment.png
    :align: center
    :alt: Registering a customer payment as part of a Batch Deposit in Odoo Accounting
 
@@ -62,14 +62,14 @@ To add the payments to a Batch Deposit, go to :menuselection:`Accounting --> Cus
 Payments`, and click on *Create*. Next, select the Bank and Payment Method, then click on *Add a
 line*.
 
-.. image:: media/batch-new-inbound.png
+.. image:: batch/batch-new-inbound.png
    :align: center
    :alt: Filling out a new Inbound Batch Payment form on Odoo Accounting
 
 Select all payments to include in the current Batch Deposit and click on *Select*. You can also
 record a new payment and add it to the list by clicking on *Create*.
 
-.. image:: media/batch-payments-selection.png
+.. image:: batch/batch-payments-selection.png
    :align: center
    :alt: Selection of all payments to include in the Batch Deposit
 
@@ -88,7 +88,7 @@ tab, and select your Batch Payment. All related payments are automatically added
 .. note::
    The *Batch Payments* tab won't appear if a Partner is selected for this bank statement line.
 
-.. image:: media/batch-bank-reconciliation.png
+.. image:: batch/batch-bank-reconciliation.png
    :align: center
    :alt: Reconciliation of the Batch Payment with all its transactions
 
