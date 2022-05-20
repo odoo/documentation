@@ -8,7 +8,7 @@ to use Studio for prototyping.
 To export these customizations, activate Studio on the main dashboard and, under the menu
 *Customizations*, click on *Export*. The default filename is *customizations.zip*.
 
-.. image:: media/export_import/customizations_menu.png
+.. image:: export_import/customizations_menu.png
    :align: center
    :alt: View of the menu customizations in Odoo Studio
 
@@ -17,7 +17,7 @@ To export these customizations, activate Studio on the main dashboard and, under
 | To import and install the customizations in another instance, connect to the destination database,
   activate Studio and, under *Customizations*, click on *Import*.
 
-.. image:: media/export_import/import_modules.png
+.. image:: export_import/import_modules.png
    :align: center
    :alt: View of the import modules window for Odoo Studio
 

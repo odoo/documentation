@@ -54,7 +54,7 @@ Configure Drop-Shipping
 Activate the functionality in the *Purchase* application by going to :menuselection:`Configuration
 --> Settings`.
 
-.. image:: media/dropshipping_01.png
+.. image:: dropshipping/dropshipping_01.png
     :align: center
 
 Then, go to the *Inventory* app, in :menuselection:`Configuration --> Settings` to
@@ -62,14 +62,14 @@ activate the *Multi-Step Routes* feature. It will allow you to make
 the *Route* field appear on the sale order lines to specify you send a
 product via drop-shipping.
 
-.. image:: media/dropshipping_02.png
+.. image:: dropshipping/dropshipping_02.png
     :align: center
 
 Now, in the *Sales* app, go to :menuselection:`Products --> Products`. Select the
 product you would like to drop-ship and add a vendor pricelist which
 contains the right supplier, via the purchase tab.
 
-.. image:: media/dropshipping_03.png
+.. image:: dropshipping/dropshipping_03.png
     :align: center
 
 Send Products from the Suppliers Directly to the Customers
@@ -80,10 +80,10 @@ vendor. Add the *Route* field thanks to the widget on the right of the
 sale order line. Now, you are able to specify that your products’ route
 is *Drop-Shipping*.
 
-.. image:: media/dropshipping_04.png
+.. image:: dropshipping/dropshipping_04.png
     :align: center
 
-.. image:: media/dropshipping_05.png
+.. image:: dropshipping/dropshipping_05.png
     :align: center
 
 Once the sale order is confirmed, Odoo automatically generates a
@@ -91,7 +91,7 @@ Once the sale order is confirmed, Odoo automatically generates a
 drop-shipping. You can find it in the *Purchase* app, with the sale
 order as *Source Document*.
 
-.. image:: media/dropshipping_06.png
+.. image:: dropshipping/dropshipping_06.png
     :align: center
 
 Once this *Purchase Order* is confirmed, a *Receipt Order* is
@@ -99,11 +99,11 @@ created and linked to it. The source location is the vendor location and
 the destination location is the customer location. Then, the product
 won’t go through your own stock when you validate the dropship document.
 
-.. image:: media/dropshipping_07.png
+.. image:: dropshipping/dropshipping_07.png
     :align: center
 
 You can also easily access the dropship document directly from your
 inventory dashboard.
 
-.. image:: media/dropshipping_08.png
+.. image:: dropshipping/dropshipping_08.png
     :align: center

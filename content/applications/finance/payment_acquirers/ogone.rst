@@ -38,7 +38,7 @@ password`.
 If you don't have a user, create one by going to :menuselection:`Configuration --> Users -->
 New User`. Set your **User ID** to get your **password** when you save your new user.
 
-.. image:: media/ogone_new_user.png
+.. image:: ogone/ogone_new_user.png
    :align: center
    :alt: Get your password when you save the new user.
 

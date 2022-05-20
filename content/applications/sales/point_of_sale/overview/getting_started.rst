@@ -20,7 +20,7 @@ To make products available for sale, go to :menuselection:`Point of
 Sale --> Products --> Products` and open a product. In the *Sales*
 tab, enable *Available in Point of Sale*.
 
-.. image:: media/getting_started_01.png
+.. image:: getting_started/getting_started_01.png
     :align: center
     :alt: Product form. Making the product available in PoS.
 
@@ -35,7 +35,7 @@ To add a payment method, you first need to create it. Go to
 and click on create. Then, you can name your payment method and set it
 up.
 
-.. image:: media/getting_started_02.png
+.. image:: getting_started/getting_started_02.png
     :align: center
     :alt: Creating a new payment method for a Point of Sale.
 
@@ -47,7 +47,7 @@ go to :menuselection:`Point of Sale --> Configuration --> Point of
 Sale` and open the PoS in which you want to include the payment method. Then, add the
 payment method.
 
-.. image:: media/getting_started_03.png
+.. image:: getting_started/getting_started_03.png
     :align: center
     :alt: Making the payment method available in a point of sale.
 
@@ -63,13 +63,13 @@ Your first order
 
 Open a new session from the dashboard by clicking on *New Session*.
 
-.. image:: media/getting_started_04.png
+.. image:: getting_started/getting_started_04.png
     :align: center
     :alt: Launching a new session.
 
 After the loading screen, you arrive on the PoS interface.
 
-.. image:: media/getting_started_05.png
+.. image:: getting_started/getting_started_05.png
     :align: center
     :alt: Point of sale dashboard.
 
@@ -90,14 +90,14 @@ of accepting returns and refunds easy for you.
 To do that, from the PoS interface, select the product and quantity (with the +/- button) that the 
 customer wants to return. For multiple products, repeat the process individually.
 
-.. image:: media/getting_started_06.png
+.. image:: getting_started/getting_started_06.png
     :align: center
     :alt: Refunding a product with the point of sale app.
 
 When on the payment interface, the total is negative. To end the refund,
 process the payment and validate it.
 
-.. image:: media/getting_started_07.png
+.. image:: getting_started/getting_started_07.png
     :align: center
     :alt: Giving back money to customer in Odoo Point of Sale.
 
@@ -107,7 +107,7 @@ Close the PoS session
 To close your session at the end of the day, click on the close button on the upper right corner 
 of your screen and confirm. Now, close the session on the dashboard view.
 
-.. image:: media/getting_started_08.png
+.. image:: getting_started/getting_started_08.png
     :align: center
     :alt: How to close a point of sale session.
 
@@ -118,7 +118,7 @@ Once a session is closed, you can see a summary of all transactions per payment 
 Then, click on a line to see all orders that were paid during your PoS session. 
 If everything is correct, validate the session and post the closing entries.
 
-.. image:: media/getting_started_09.png
+.. image:: getting_started/getting_started_09.png
     :align: center
     :alt: Point of sale sales report before closing the session.
 
@@ -138,12 +138,12 @@ To access your statistics, go to :menuselection:`Point of Sales -->
 Reporting --> Orders`. There, you can see various statistics in graph
 or pivot form.
 
-.. image:: media/getting_started_10.png
+.. image:: getting_started/getting_started_10.png
     :align: center
     :alt: Orders analysis with pivot view of the point of sale reporting feature.
 
 You can also access them through the dashboard.
 
-.. image:: media/getting_started_11.png
+.. image:: getting_started/getting_started_11.png
     :align: center
     :alt: Accessing orders analysis via the point of sale dashboard. Reporting feature on the PoS form.

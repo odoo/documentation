@@ -29,7 +29,7 @@ Odoo supports multiple file formats to import bank statements:
 To import them, go to :menuselection:`Accounting --> Overview --> Bank`, click on *Import
 Statements*, or on the three dots, and then on *Import Statement*.
 
-.. image:: media/bank-statements-01.png
+.. image:: bank_statements/bank-statements-01.png
    :align: center
    :alt: Import a bank statement file in Odoo Accounting
 
@@ -38,7 +38,7 @@ Next, select the file you want to import and click on *Import*.
 Odoo opens an **import widget** to help you set the **Formatting Options** and **map** the
 different columns you want to import.
 
-.. image:: media/bank-statements-02.png
+.. image:: bank_statements/bank-statements-02.png
    :align: center
    :alt: Register bank statements manually in Odoo Accounting
 
@@ -59,7 +59,7 @@ Add a new line for each transaction written on the original bank statement.
 To ease the reconciliation process, make sure to fill out the *Partner* field. You can also write
 the payments’ references in the *Label* field.
 
-.. image:: media/bank-statements-03.png
+.. image:: bank_statements/bank-statements-03.png
    :align: center
    :alt: Register bank statements manually in Odoo Accounting
 

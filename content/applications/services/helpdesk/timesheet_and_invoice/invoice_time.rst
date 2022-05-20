@@ -19,7 +19,7 @@ Step 1: Set up a helpdesk team
   the one at which employees timesheet on by default. However, it can be ultimately modified on
   each ticket.
 
-.. image:: media/sell_track_hours.png
+.. image:: invoice_time/sell_track_hours.png
    :align: center
    :alt: View of a helpdesk team settings page emphasizing the timesheet on ticket and time
          reinvoicing features in Odoo Helpdesk
@@ -32,7 +32,7 @@ Step 2: Set up a service
 | Then, go to :menuselection:`Sales --> Products --> Products`, create or edit an existing one, and
   set its *Product Type* as *Service*.
 
-.. image:: media/product_type_unit.png
+.. image:: invoice_time/product_type_unit.png
    :align: center
    :alt: View of a product's form emphasizing the product type and unit of measure fields in Odoo
          Sales
@@ -40,7 +40,7 @@ Step 2: Set up a service
 Now, select the invoicing management you would like to have under the *Sales* tab. We recommend the
 following configuration:
 
-.. image:: media/product_invoicing.png
+.. image:: invoice_time/product_invoicing.png
    :align: center
    :alt: View of a product form and the invoicing options under the tab sales in Odoo Sales
 
@@ -64,7 +64,7 @@ Go to :menuselection:`Sales --> Orders --> Orders` and create one for the helpde
 you have previously set up, with the customer who needs the ticket to be opened. Set the number of
 hours needed to assist the customer and *Confirm* the order.
 
-.. image:: media/sales_order_new.png
+.. image:: invoice_time/sales_order_new.png
    :align: center
    :alt: View of a sales order emphasizing the order lines in Odoo Sales
 
@@ -73,7 +73,7 @@ Step 2: Invoice the customer
 
 In *Sales*, select the respective sales order to *Create Invoice*.
 
-.. image:: media/create_invoice.png
+.. image:: invoice_time/create_invoice.png
    :align: center
    :height: 330
    :alt: View of a sales order emphasizing the create invoice button in Odoo Sales
@@ -84,7 +84,7 @@ Step 3: Link the task to the ticket
 Now, in *Helpdesk*, create or edit the respective ticket and link it to the task created by the
 confirmation of the sales order.
 
-.. image:: media/helpdesk_task.png
+.. image:: invoice_time/helpdesk_task.png
    :align: center
    :alt: View of a helpdesk ticket emphasizing the field task in Odoo Helpdesk
 
@@ -93,14 +93,14 @@ Step 4: Record the time spent
 
 Still on the respective helpdesk ticket, record the hours performed under the *Timesheets* tab.
 
-.. image:: media/helpdesk_timesheet.png
+.. image:: invoice_time/helpdesk_timesheet.png
    :align: center
    :alt: View of a helpdesk ticket emphasizing the timesheets tab in Odoo Helpdesk
 
 Note that the hours recorded on the ticket form are shown on the *Delivered* column in the sales
 order.
 
-.. image:: media/quotation_delivered.png
+.. image:: invoice_time/quotation_delivered.png
    :align: center
    :alt: View of a sales order emphasizing the delivered column in Odoo Sales
 

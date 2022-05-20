@@ -10,7 +10,7 @@ Customizing Reports
 | When creating a new report, choose the purpose of it and if you would like the report to include
   header and footer (company logo, name, address, phone, email address, etc.).
 
-.. image:: media/reports/report_typing.png
+.. image:: reports/report_typing.png
    :align: center
    :alt: View of the types of new reports in Odoo Studio
 
@@ -19,7 +19,7 @@ tables*, *Subtotal & Total*, and *Address Book* are dynamic elements (meaning th
 :doc:`one2many or a many2many <../concepts/understanding_general>` related object). *Text*, *Title
 Block*, *Image*, and *Text in Cell* are static elements.
 
-.. image:: media/reports/add_tab.png
+.. image:: reports/add_tab.png
    :align: center
    :alt: View of a report and the tab add in Odoo Studio
 
@@ -27,7 +27,7 @@ Once the element is added to the view, select it to see its **Options**. The fir
 hierarchy of the selected object and its properties, allowing you to individually edit
 them. Fields with related objects have their directives shown on *Field Expression*.
 
-.. image:: media/reports/options_tab.png
+.. image:: reports/options_tab.png
    :align: center
    :alt: View of a report and the tab options in Odoo Studio
 
@@ -39,14 +39,14 @@ them. Fields with related objects have their directives shown on *Field Expressi
   visibility of the report to specifics groups, meaning that users belonging to other groups do not
   see the same final document.
 
-.. image:: media/reports/limit_visibility.png
+.. image:: reports/limit_visibility.png
    :align: center
    :alt: View of a report’s settings emphasizing the field limit visibility to groups in Odoo Studio
 
 Under the **Report** tab, name your report, choose the paper format, and if the report should be
 added to the *Print* menu list on its respective document form.
 
-.. image:: media/reports/print_menu.png
+.. image:: reports/print_menu.png
    :align: center
    :alt: View of an invoice form emphasizing the menu print for Odoo Studio
 
@@ -67,6 +67,6 @@ If activating the :ref:`developer mode <developer-mode>`, additional fields such
    Actions in Odoo Studio can be undone until you *Close* the toolbox. Once you have closed Studio,
    changes can not be undone anymore.
 
-   .. image:: media/reports/undo_redo.png
+   .. image:: reports/undo_redo.png
       :align: center
       :alt: View of a report being built and emphasizing the undo and redo buttons in Odoo Studio

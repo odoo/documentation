@@ -29,7 +29,7 @@ List
 
     **Goal**: at the end of this section, the list view should look like this:
 
-    .. image:: 07_basicviews/media/list.png
+    .. image:: 07_basicviews/list.png
       :align: center
       :alt: List view
 
@@ -78,7 +78,7 @@ Form
 
     **Goal**: at the end of this section, the form view should look like this:
 
-    .. image:: 07_basicviews/media/form.png
+    .. image:: 07_basicviews/form.png
       :align: center
       :alt: Form view
 
@@ -140,15 +140,15 @@ Search
 
     **Goal**: at the end of this section, the search view should look like this:
 
-    .. image:: 07_basicviews/media/search_01.png
+    .. image:: 07_basicviews/search_01.png
       :align: center
       :alt: Search fields
 
-    .. image:: 07_basicviews/media/search_02.png
+    .. image:: 07_basicviews/search_02.png
       :align: center
       :alt: Filter
 
-    .. image:: 07_basicviews/media/search_03.png
+    .. image:: 07_basicviews/search_03.png
       :align: center
       :alt: Group By
 

@@ -16,7 +16,7 @@ Sign up
 The invitation to sign up shows up when the customer wants to visualize
 the order from order confirmation email.
 
-.. image:: ./media/portal_odoo_signup.png
+.. image:: portal/portal_odoo_signup.png
    :align: center
 
 Customer account
@@ -25,12 +25,12 @@ Customer account
 Once logged in the customer will access the account by clicking *My Account*
 in the login dropdown menu.
 
-.. image:: ./media/portal_link.png
+.. image:: portal/portal_link.png
    :align: center
 
 THere they find all their history. The main address (billing) can also be modified.
 
-.. image:: ./media/portal_menu.png
+.. image:: portal/portal_menu.png
    :align: center
 
 .. note::

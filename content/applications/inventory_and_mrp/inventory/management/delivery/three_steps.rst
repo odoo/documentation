@@ -23,7 +23,7 @@ To allow *multi-step routes*, go to :menuselection:`Inventory --> Configuration 
 activate the option. Note that activating *Multi-Step
 Routes* will also activate *Storage Locations*.
 
-.. image:: media/three_steps_01.png
+.. image:: three_steps/three_steps_01.png
     :align: center
 
 Configure Warehouse for Delivery in 3 Steps
@@ -34,7 +34,7 @@ Once *Multi-Step Routes* has been activated, you can go to
 delivery in 3 steps. You can then select the option *Pack goods, send
 goods in output and then deliver (3 steps)* for *Outgoing Shipments*.
 
-.. image:: media/three_steps_02.png
+.. image:: three_steps/three_steps_02.png
     :align: center
 
 Activating this option will lead to the creation of two new locations,
@@ -48,7 +48,7 @@ In the *Sales* application, you can create a quotation with some
 storable products to deliver. Once you confirm the quotation, three
 pickings will be created and automatically linked to your sale order.
 
-.. image:: media/three_steps_03.png
+.. image:: three_steps/three_steps_03.png
     :align: center
 
 If you click the button, you should now see three different pickings:
@@ -59,7 +59,7 @@ If you click the button, you should now see three different pickings:
 
 3. The last one with a reference OUT to designate the shipping process.
 
-.. image:: media/three_steps_04.png
+.. image:: three_steps/three_steps_04.png
     :align: center
 
 Process the Picking, Packing, and Delivery
@@ -73,13 +73,13 @@ is marked as done.
 You can enter the picking operation from here, or access it through the
 inventory dashboard.
 
-.. image:: media/three_steps_05.png
+.. image:: three_steps/three_steps_05.png
     :align: center
 
 In case you have the product in stock, it has automatically been
 reserved and you can simply validate the picking document.
 
-.. image:: media/three_steps_06.png
+.. image:: three_steps/three_steps_06.png
     :align: center
 
 Once the picking has been validated, the packing order is ready to be
@@ -87,18 +87,18 @@ processed. Thanks to the fact that the documents are chained, the
 products which have been previously picked are automatically reserved on
 the packing order which can be directly validated.
 
-.. image:: media/three_steps_07.png
+.. image:: three_steps/three_steps_07.png
     :align: center
 
-.. image:: media/three_steps_08.png
+.. image:: three_steps/three_steps_08.png
     :align: center
 
 Once the packing has been validated, the delivery order is ready to be
 processed. Here again, it is directly ready to be validated in order to
 transfer the products to the customer location.
 
-.. image:: media/three_steps_09.png
+.. image:: three_steps/three_steps_09.png
     :align: center
 
-.. image:: media/three_steps_10.png
+.. image:: three_steps/three_steps_10.png
     :align: center

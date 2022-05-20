@@ -18,7 +18,7 @@ will be saved.
    This process can take more than 30 minutes. Do not turn off or unplug
    the IoT Box as it would leave it in an inconsistent state. 
 
-.. image:: media/flash_sdcard01.png
+.. image:: flash_sdcard/flash_sdcard01.png
    :align: center
 
 Upgrade with Etcher
@@ -33,5 +33,5 @@ Then, open *Etcher* and select *Flash from file*, find the image you just
 downloaded. Insert the IoT Box SD card into your computer and select it.
 Click on *Flash* and wait for the process to finish.
 
-.. image:: media/flash_sdcard02.png
+.. image:: flash_sdcard/flash_sdcard02.png
    :align: center

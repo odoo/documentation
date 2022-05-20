@@ -30,7 +30,7 @@ respective quantities. You can create components as you go, on the BOM, or creat
 by going to the :menuselection:`Top Menu --> Products --> Create`, and add them later on. 
 
 
-.. image:: media/bom_1.png
+.. image:: bill_configuration/bom_1.png
     :align: center
 
 .. warning::
@@ -49,7 +49,7 @@ in the dedicated field below the product name. Or use one BOM, that contains
 all of the components and for each component, indicate which variant it applies to, 
 using the *Apply on Variants* column, as shown below. 
 
-.. image:: media/bom_2.png
+.. image:: bill_configuration/bom_2.png
     :align: center
 
 
@@ -60,7 +60,7 @@ You can also add operations to your *BoM*, if you want workers to follow instruc
 or register time spent. To use this feature, enable the *Work Orders* feature in the 
 *Manufacturing* app settings, as shown below.
 
-.. image:: media/bom_3.png
+.. image:: bill_configuration/bom_3.png
     :align: center
 
 .. note::
@@ -68,12 +68,12 @@ or register time spent. To use this feature, enable the *Work Orders* feature in
          Operations Operations can be re-used when configuring a new BOM, with the *Copy Existing 
          Operations* feature.
 
-.. image:: media/bom_4.png
+.. image:: bill_configuration/bom_4.png
     :align: center
 
 Finally, just like for components, operations can also be variant specific only, as shown below.
 
-.. image:: media/bom_5.png
+.. image:: bill_configuration/bom_5.png
     :align: center
 
 
@@ -87,7 +87,7 @@ of a *BoM*. As opposed to the primary product, there can be more than one on a B
 To add *by-products* to a *BoM*, you will first need to enable the by-product
 feature from the *Manufacturing* app settings.
 
-.. image:: media/bom_6.png
+.. image:: bill_configuration/bom_6.png
     :align: center
 
 Once the feature is enabled, you can add *by-products* to your

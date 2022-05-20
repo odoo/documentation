@@ -24,14 +24,14 @@ First we need to install the relevant apps to use budgeting. The main
 module is the accounting app. Go in the app module and install the
 **Accounting and Finance** app.
 
-.. image:: media/budget01.png
+.. image:: budget/budget01.png
    :align: center
 
 Further configuration is as well necessary. Go to :menuselection:`Accounting
 module --> Configuration --> Settings` and enable the **Budget
 management** feature
 
-.. image:: media/budget02.png
+.. image:: budget/budget02.png
    :align: center
 
 Budgetary Positions
@@ -62,18 +62,18 @@ Budgetary Positions`.
 For our example we need to define what accounts relates to our project's
 expenses. Create a position and add items to select the accounts.
 
-.. image:: media/budget03.png
+.. image:: budget/budget03.png
    :align: center
 
 In this case we select the three relevant accounts used wherein we will
 book our expenses.
 
-.. image:: media/budget04.png
+.. image:: budget/budget04.png
    :align: center
 
 Click on *Select*.
 
-.. image:: media/budget05.png
+.. image:: budget/budget05.png
    :align: center
 
 Save the changes to confirm your Budgetary position.
@@ -91,7 +91,7 @@ analytical account by entering the Accounting module and clicking
 :menuselection:`Advisers --> Analytic Accounts --> Open Charts`. Create a new Account
 called Smith&Co project and select the related partner.
 
-.. image:: media/budget06.png
+.. image:: budget/budget06.png
    :align: center
 
 Set a budget
@@ -108,7 +108,7 @@ We have to give a name to the budget. In this case we'll call it "Smith
 Project". Select the period wherein the budget will be applicable. Next
 add an item to specify your targets in the Budget Line.
 
-.. image:: media/budget07.png
+.. image:: budget/budget07.png
    :align: center
 
 Select the Budgetary Position related to the Budget Line. In other
@@ -118,7 +118,7 @@ Select the "Cost" Budgetary Position and specify the Planned Amount.
 As we are recording a cost, we need to specify a **negative amount**.
 Finally, select the corresponding analytic account.
 
-.. image:: media/budget08.png
+.. image:: budget/budget08.png
    :align: center
 
 Click on **Save & new** to input the revenue budget. The Budgetary
@@ -146,7 +146,7 @@ Via the analytical account, Odoo can account the invoice lines and
 purchase lines booked in the accounts and will display them in the
 **Practical Amount** column.
 
-.. image:: media/budget09.png
+.. image:: budget/budget09.png
    :align: center
 
 .. note::

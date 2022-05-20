@@ -13,7 +13,7 @@ The analytic accounting can be used for several purposes:
 To manage analytic accounting, you have to activate it in
 :menuselection:`Configuration --> Settings`:
 
-.. image:: media/usage01.png
+.. image:: usage/usage01.png
    :align: center
 
 To illustrate analytic accounts clearly, you will follow three use
@@ -88,7 +88,7 @@ The analytic representation by department enables you to investigate the
 costs allocated to each department in the company. The analytic chart of
 accounts shows the distribution of the company's costs using the example above:
 
-.. image:: media/usage02.png
+.. image:: usage/usage02.png
    :align: center
 
 In this example of a hierarchical structure in Odoo, you can analyse not
@@ -97,7 +97,7 @@ production. A report that relates both general accounts and analytic
 accounts enables you to get a breakdown of costs within a given
 department.
 
-.. image:: media/usage03.png
+.. image:: usage/usage03.png
    :align: center
 
 The examples above are based on a breakdown of the costs of the company.

@@ -123,7 +123,7 @@ To open profile.svg you should use browser, because other viewer may not
 support interactive part.
 
 
-.. image:: profile/flamegraph.svg
+.. image:: profilecode/flamegraph.svg
 
 
 .. _py-spy: https://github.com/benfred/py-spy

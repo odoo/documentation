@@ -44,7 +44,7 @@ Creating products in Odoo is essential for quick and efficient
 purchasing within Odoo. Simply navigate to the Products submenu under
 Purchase and click create.
 
-.. image:: ./media/manage01.png
+.. image:: manage/manage01.png
   :align: center
 
 When creating the product, pay attention to the **Product Type** field,
@@ -78,7 +78,7 @@ quotation for an order, you may record the order reference number in the
 with the the vendor bill later (as the vendor bill will probably include
 the Vendor Reference)
 
-.. image:: ./media/manage02.png
+.. image:: manage/manage02.png
   :align: center
 
 Validate the purchase order and receive the products from the Inventory
@@ -93,13 +93,13 @@ after you confirm a purchase order. From the **Inventory dashboard**, you
 should see a button linking you directly to the transfer of products.
 This button is outlined in red below:
 
-.. image:: ./media/manage03.png
+.. image:: manage/manage03.png
   :align: center
 
 Navigating this route will take you to a list of all orders waiting to
 be received.
 
-.. image:: ./media/manage04.png
+.. image:: manage/manage04.png
   :align: center
 
 If you have a lot of awaiting orders, apply a filter using the search
@@ -110,7 +110,7 @@ group the orders by different criteria under **Group By**. Selecting an
 item from this list will open the following screen where you then will
 receive the products.
 
-.. image:: ./media/manage05.png
+.. image:: manage/manage05.png
   :align: center
 
 Purchasing service products does not trigger a delivery order.
@@ -123,7 +123,7 @@ record it in the Purchases application under the **Control Menu**. You
 need to create a new vendor bill even if you already registered a
 purchase order.
 
-.. image:: ./media/manage06.png
+.. image:: manage/manage06.png
   :align: center
 
 The first thing you will need to do upon creating a vendor bill is to
@@ -137,7 +137,7 @@ the appropriate vendor bill, you may search through the list by
 inputting the vendor reference number or your internal purchase order
 number.
 
-.. image:: ./media/manage07.png
+.. image:: manage/manage07.png
   :align: center
 
 While the invoice is in a draft state, you can make any modifications you
@@ -207,7 +207,7 @@ Ask your system administrator to enable these access on :menuselection:`Settings
 select the product(s) you wish to modify, and you should see a new field appear,
 labeled **Control Purchase Bills**.
 
-.. image:: ./media/manage08.png
+.. image:: manage/manage08.png
   :align: center
 
 You can then change the default management method for the selected

@@ -19,7 +19,7 @@ and its sub-assemblies. Therefore, you must first create the sub-assembly
 products and their respective Bill of Materials. Please refer to 
 :doc:`bill_configuration` for more details on how to create a BOM. 
 
-.. image:: media/sf_1.png
+.. image:: sub_assemblies/sf_1.png
     :align: center
 
 Configure the Main BoM
@@ -28,7 +28,7 @@ Configure the Main BoM
 Then on the final product form, simply add your semi-finished 
 products to the Bill of Material. 
 
-.. image:: media/sf_2.png
+.. image:: sub_assemblies/sf_2.png
     :align: center
 
 Manage your production planning 
@@ -42,7 +42,7 @@ the semi-finished products as well, you have two options:
 Option 1 : Create re-ordering rules for the semi-finished products, with both the minimum 
 and maximum desired stock quantities at 0. 
 
-.. image:: media/sf_3.png
+.. image:: sub_assemblies/sf_3.png
     :align: center
 
 Option 2 : Use the Replenish on Order (MTO) route on the semi-finished product, as well as 
@@ -56,5 +56,5 @@ production and redirect it to another, more pressing demand, for example.
 In any case, as soon as the semi-finished product is produced, it will become
 available in the manufacturing order of the final product, as shown below.
 
-.. image:: media/sf_4.png
+.. image:: sub_assemblies/sf_4.png
     :align: center
