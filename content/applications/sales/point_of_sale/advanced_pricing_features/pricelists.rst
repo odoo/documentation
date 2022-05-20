@@ -20,26 +20,26 @@ To set up a *Pricelist*, go to :menuselection:`Point of Sale --> Configuration -
 and enable the *Pricelist* feature. Then, go to :menuselection:`Point of Sale --> Configuration 
 --> Point of Sale` and enable *Pricelist* for the *PoS*.
 
-.. image:: media/pricelists_01.png
+.. image:: pricelists/pricelists_01.png
    :align: center
 
 Now, you can create *Pricelists* by clicking on the *Pricelists* link. 
 Then, set it up by choosing the product category you want to include in your happy hour 
 and the discount.
 
-.. image:: media/pricelists_02.png
+.. image:: pricelists/pricelists_02.png
    :align: center
 
 Go back to your *PoS* settings and add the Happy Hour pricelist to the
 list. You can even choose a default pricelist if needed.
 
-.. image:: media/pricelists_03.png
+.. image:: pricelists/pricelists_03.png
    :align: center
 
 From now on, on the *PoS* interface, a new button is available, allowing you to choose
 among the different *pricelists* you added before.
 
-.. image:: media/pricelists_04.png
+.. image:: pricelists/pricelists_04.png
    :align: center
 
 .. seealso::

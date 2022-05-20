@@ -14,7 +14,7 @@ and edit the warehouse in question.
 Then, choose *Deliver goods directly* as your *Outgoing Shipments*
 strategy.
 
-.. image:: media/one_step_01.png
+.. image:: one_step/one_step_01.png
     :align: center
 
 Create a Sales Order
@@ -27,7 +27,7 @@ Notice that we now see 1 delivery associated with this *sales order*
 in the stat button above the sales order. If you click on the 1 Delivery
 stat button, you should now see your delivery order.
 
-.. image:: media/one_step_02.png
+.. image:: one_step/one_step_02.png
     :align: center
 
 Process a Delivery
@@ -37,13 +37,13 @@ You can also find the *delivery order* directly from the *Inventory*
 application. In the dashboard, you can click the *1 TO PROCESS* button
 under the Delivery Orders Kanban card.
 
-.. image:: media/one_step_03.png
+.. image:: one_step/one_step_03.png
     :align: center
 
 Enter the picking that you want to process. You will be able to click on
 *Validate* to complete the move if you have products in stock.
 
-.. image:: media/one_step_04.png
+.. image:: one_step/one_step_04.png
     :align: center
 
 Once you *Validate* the delivery order, the products leave your
@@ -51,5 +51,5 @@ Once you *Validate* the delivery order, the products leave your
 can easily see that the delivery took place thanks to the status of the
 document which is now *Done*.
 
-.. image:: media/one_step_05.png
+.. image:: one_step/one_step_05.png
     :align: center

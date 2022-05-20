@@ -14,7 +14,7 @@ Configuration
 
 Go to Apps and install the module **VoIP OnSIP**.
 
-.. image:: media/onsip01.png
+.. image:: onsip/onsip01.png
   :align: center
 
 Go to Settings/General Settings. In the section Integrations/Asterisk (VoIP), fill in the 3 fields:
@@ -23,7 +23,7 @@ Go to Settings/General Settings. In the section Integrations/Asterisk (VoIP), fi
 - **WebSocket** should contain wss://edge.sip.onsip.com
 - **Mode** should be Production
 
-.. image:: media/onsip02.png
+.. image:: onsip/onsip02.png
   :align: center
 
 Go to **Settings/Users**. In the form view of each VoIP user, in the Preferences tab, fill in the section **PBX Configuration**:
@@ -35,7 +35,7 @@ Go to **Settings/Users**. In the form view of each VoIP user, in the Preferences
 
 You can find all this information by logging in at https://admin.onsip.com/users, then select the user you want to configure and refer to the fields as pictured below.
 
-.. image:: media/onsip03.png
+.. image:: onsip/onsip03.png
   :align: center
 
 You can now make phone calls by clicking the phone icon in the top right corner of Odoo (make sure you are logged in as a user properly configured in Odoo and in OnSIP).
@@ -44,19 +44,19 @@ You can now make phone calls by clicking the phone icon in the top right corner 
 
         If you see a *Missing Parameters* message in the Odoo softphone, make sure to refresh your Odoo window and try again.
 
-        .. image:: media/onsip04.png
+        .. image:: onsip/onsip04.png
           :align: center
 
 .. note::
 
         If you see an *Incorrect Number* message in the Odoo softphone, make sure to use the international format, leading with the plus (+) sign followed by the international country code. E.g.: +16506913277 (where +1 is the international prefix for the United States).
 
-        .. image:: media/onsip05.png
+        .. image:: onsip/onsip05.png
           :align: center
 
 You can now also receive phone calls. Your number is the one provided by OnSIP. Odoo will ring and display a notification.
 
-.. image:: media/onsip06.png
+.. image:: onsip/onsip06.png
   :align: center
 
 OnSIP on Your Cell Phone

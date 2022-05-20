@@ -12,7 +12,7 @@ Public and Private channels
 A *Public* channel can be seen by everyone, while a *Private* one is only visible to users invited
 to it.
 
-.. image:: media/create_channel.png
+.. image:: team_communication/create_channel.png
    :align: center
    :height: 370
    :alt: View of discuss’s sidebar and a channel being created in Odo Discuss
@@ -28,7 +28,7 @@ Configuration options
 You can configure a channel’s name, description, email alias, and privacy by clicking on the
 *Channel Settings* icon on the sidebar.
 
-.. image:: media/channel_settings.png
+.. image:: team_communication/channel_settings.png
    :align: center
    :alt: View of a channel’s settings form in Odoo Discuss
 
@@ -41,7 +41,7 @@ Privacy and Members
 | If you choose *Invited people only*, go to the *Members* tab to add your members, or, go to
   Discuss’ main page, select the channel and click on *Invite*.
 
-.. image:: media/invite_channel.png
+.. image:: team_communication/invite_channel.png
    :align: center
    :height: 380
    :alt: View of Discuss’ sidebar emphasizing the option to invite members in Odoo Discuss
@@ -58,7 +58,7 @@ Use a channel as a mailing list
 | Enabling this option allows you to *Moderate this channel*, meaning that messages will need to be
   approved before being sent.
 
-.. image:: media/pending_moderation.png
+.. image:: team_communication/pending_moderation.png
    :align: center
    :alt: View of a message with a pending moderation status in Odoo Discuss
 
@@ -66,13 +66,13 @@ Use a channel as a mailing list
   receive an *Automatic notification*.
 | Mark *Send guidelines to new subscribers* to automatically send instructions to newcomers.
 
-.. image:: media/moderation_settings.png
+.. image:: team_communication/moderation_settings.png
    :align: center
    :alt: View of a channel’s settings form emphasizing the tab moderation in Odoo Discuss
 
 Moderators can: *Accept*, *Reject*, *Discard*, *Always Allow* or *Ban* messages.
 
-.. image:: media/moderate_messages.png
+.. image:: team_communication/moderate_messages.png
    :align: center
    :alt: View of a message to be moderated in Odoo Discuss
 
@@ -83,7 +83,7 @@ Moderators can: *Accept*, *Reject*, *Discard*, *Always Allow* or *Ban* messages.
 Once a channel is moderated, the menu *Ban List* allows you to add email addresses per moderated
 channel to auto-ban them from sending messages.
 
-.. image:: media/ban_list.png
+.. image:: team_communication/ban_list.png
    :align: center
    :alt: View of a channel’s setting form emphasizing the ban Lists menu in Odoo Discuss
 
@@ -94,7 +94,7 @@ Once at least 20 channels, direct message and live chat conversations (if the mo
 on your database) are pinned in the sidebar, a *Quick search…* bar is displayed. It is a clever
 way to filter conversations and quickly find the one you need.
 
-.. image:: media/quick_search.png
+.. image:: team_communication/quick_search.png
    :align: center
    :height: 430
    :alt: View of the Discuss’ sidebar emphasizing the quick search bar in Odoo Discuss
@@ -107,7 +107,7 @@ Finding channels
 | Apply filters criteria and save it for later use. The search function accepts wildcards by using
   the underscore character *(_)* to represent a single character.
 
-.. image:: media/filter.png
+.. image:: team_communication/filter.png
    :align: center
    :alt: View of a channel being searched through filters in Odoo Discuss
 

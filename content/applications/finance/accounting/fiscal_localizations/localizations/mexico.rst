@@ -43,7 +43,7 @@ Modules
 To install the Mexican localization module, go to :menuselection:`Apps`, then remove the default
 filter "Apps" and search for ``l10n_mx``.
 
-.. image:: media/mx_mo_01.png
+.. image:: mexico/mx_mo_01.png
    :align: center
    :alt: Installation of the Mexican localization module in Odoo Apps
 
@@ -85,7 +85,7 @@ Go to :menuselection:`Settings --> Accounting --> Customer Invoices`, and make s
 invoice and also generate the signed payment complement, all automatically integrated into the
 normal billing flow in Odoo.
 
-.. image:: media/mx_co_01.png
+.. image:: mexico/mx_co_01.png
    :align: center
    :alt: Steps to enable electronic invoicing
 
@@ -98,7 +98,7 @@ After verifying the general configuration, you must verify that the company is c
 correct data. To do so, go to :menuselection:`Settings --> General Settings --> Companies`, and
 click on *Update information* under your company name.
 
-.. image:: media/mx_co_02.png
+.. image:: mexico/mx_co_02.png
    :align: center
    :alt: Update the company's details in the Settings of Odoo
 
@@ -116,7 +116,7 @@ the data.
    countries that Odoo shows, because if it is entered manually there is a risk of creating a "new
    country" in the system, which it will result in errors later when the CFDIs are generated.
 
-   .. image:: media/mx_co_03.png
+   .. image:: mexico/mx_co_03.png
       :align: center
       :alt: Company data information
 
@@ -133,7 +133,7 @@ done through a pre-existing field in Odoo called "Fiscal Regime".
 Go to :menuselection:`Settings --> Accounting --> Electronic Invoicing (MX) --> Fiscal Regime`, and
 select the option that applies to your company from the drop-down list.
 
-.. image:: media/mx_co_04.png
+.. image:: mexico/mx_co_04.png
    :align: center
    :alt: Set the Fiscal Regime in Odoo Accounting
 
@@ -148,7 +148,7 @@ When creating a contact to be invoiced in Odoo, the following information must b
 invoice validation: **complete address** (including postal code, city, state, country, etc.) and the
 **VAT** number.
 
-.. image:: media/mx_co_05.png
+.. image:: mexico/mx_co_05.png
    :align: center
    :alt: Contact form example
 
@@ -166,7 +166,7 @@ see only taxes associated with sales, which are those that are validated for the
 invoices. Open the form view of any of the sales taxes, select the **Advanced Options** tab and
 within the field **Factor Type** choose the option *Tasa*.
 
-.. image:: media/mx_co_06.png
+.. image:: mexico/mx_co_06.png
    :align: center
    :alt: Taxes configuration
 
@@ -182,7 +182,7 @@ Transition Account** to the account set in the **Definition** tab. For such move
 account will be used ("Base Imponible de Impuestos en Base a Flujo de Efectivo" - **do not eliminate
 this account**) in the Journal Entry when reclassifying taxes.
 
-.. image:: media/mx_co_07.png
+.. image:: mexico/mx_co_07.png
    :align: center
    :alt: Taxes accounts
 
@@ -196,7 +196,7 @@ To configure products, go to the **General Information** tab and in the **UNSPSC
 field select the category that represents that product. The process can be done manually or through
 a bulk import.
 
-.. image:: media/mx_co_08.png
+.. image:: mexico/mx_co_08.png
    :align: center
    :alt: Configure products
 
@@ -221,7 +221,7 @@ To add the credentials, go to :menuselection:`Settings --> Accounting --> Electr
 (MX)`. Under the **PAC MX** section, enter the name of your PAC with your credentials (PAC username
 and PAC password).
 
-.. image:: media/mx_co_09.png
+.. image:: mexico/mx_co_09.png
    :align: center
    :alt: PAC credentials
 
@@ -233,7 +233,7 @@ Finally, upload the digital certificates of the company within the section **MX 
 Click on *Add a line*, a window will open, click on *Create* and from there you can upload your
 digital certificate, your key and your password. To finish, click on *Save and Close*.
 
-.. image:: media/mx_co_10.png
+.. image:: mexico/mx_co_10.png
    :align: center
    :alt: Certificate and key
 
@@ -241,8 +241,8 @@ digital certificate, your key and your password. To finish, click on *Save and C
    If you still do not have one of the contracted PACs and you want to test electronic invoicing you
    can use the following SAT test certificates:
 
-   - :download:`Certificate <files/certificate.cer>`
-   - :download:`Certificate Key <files/certificate.key>`
+   - :download:`Certificate <mexico/certificate.cer>`
+   - :download:`Certificate Key <mexico/certificate.key>`
    - **Password:** ``12345678a``
 
    You must also configure the company with a real address within Mexico (including all fields) and
@@ -265,7 +265,7 @@ The invoice will be stamped after clicking on *Validate*, before that the status
 mode and changes can be made to it. After validating the invoice, you can verify that it was
 successfully stamped, as it would look like this:
 
-.. image:: media/mx_ft_01.png
+.. image:: mexico/mx_ft_01.png
    :align: center
    :alt: Creating an invoice
 
@@ -335,13 +335,13 @@ In order to generate foreign trade invoices, the following modules must be insta
 
 - EDI for Mexico (l10n_mx_edi)
 
-  .. image:: media/mx_ft_02.png
+  .. image:: mexico/mx_ft_02.png
      :align: center
      :alt: EDI para México
 
 - EDI for Mexico (l10n_mx_edi_extended)
 
-  .. image:: media/mx_ft_03.png
+  .. image:: mexico/mx_ft_03.png
      :align: center
      :alt: EDI Advanced Features
 
@@ -352,7 +352,7 @@ Configure the company with a valid postal code, and if you have a colony code, t
 with the corresponding Zip Code. At the same time, remember to place the Tax Identification Number
 (VAT Number - RFC).
 
-.. image:: media/mx_ft_04.png
+.. image:: mexico/mx_ft_04.png
    :align: center
    :alt: Contact address configuration
 
@@ -362,7 +362,7 @@ Receiving Client
 Generally it will be a foreign client, in which you must verify that you have at least the following
 fields completed with the corresponding information.
 
-.. image:: media/mx_ft_05.png
+.. image:: mexico/mx_ft_05.png
    :align: center
    :alt: External trade invoice
 
@@ -378,11 +378,11 @@ Products
 
 At the product level there must also configure some parameters in the following fields.
 
-.. image:: media/mx_ft_06.png
+.. image:: mexico/mx_ft_06.png
    :align: center
    :alt: SAT product code
 
-.. image:: media/mx_ft_07.png
+.. image:: mexico/mx_ft_07.png
    :align: center
    :alt: Tariff fraction
 
@@ -409,11 +409,11 @@ The **Certificate Source** (or proof of origin) is the document that allows an i
 to prove the country or region from which a good is considered to originate and serves to receive
 tariff preferences generally agreed in trade agreements.
 
-.. image:: media/mx_ft_08.png
+.. image:: mexico/mx_ft_08.png
    :align: center
    :alt: Incoterm on invoice
 
-.. image:: media/mx_ft_09.png
+.. image:: mexico/mx_ft_09.png
    :align: center
    :alt: PDF external Trade
 
@@ -427,7 +427,7 @@ First, go to :menuselection:`Apps`, remove the "Apps" filter and search for ``Me
 ``l10n_mx``. Then, install **Odoo Mexico Localization for Stock / Landing module
 (l10n_mx_edi_landing)**.
 
-.. image:: media/mx_ft_10.png
+.. image:: mexico/mx_ft_10.png
    :align: center
    :alt: MX stock module
 
@@ -440,7 +440,7 @@ Then, go to :menuselection:`Inventory --> Settings --> Settings`. Within the opt
 **Landed Costs**. This option will allow adding the Pedimentos number to the corresponding product
 receptions.
 
-.. image:: media/mx_ft_11.png
+.. image:: mexico/mx_ft_11.png
    :align: center
    :alt: Costos en destino
 
@@ -453,7 +453,7 @@ To associate the Pedimentos number indicated with an import (merchandise recepti
 Cost** must be created. They can be accessed through :menuselection:`Inventory --> Operations -->
 Landed Costs`. There you will find the option to attach the Pedimentos number.
 
-.. image:: media/mx_ft_12.png
+.. image:: mexico/mx_ft_12.png
    :align: center
    :alt: Customs number
 
@@ -471,7 +471,7 @@ The **Payment Terms** are already configured in Odoo when installing the Mexican
 means that if you go to :menuselection:`Accounting --> Configuration --> Payment Terms`, you will
 find the default list in Odoo.
 
-.. image:: media/mx_ft_13.png
+.. image:: mexico/mx_ft_13.png
    :align: center
    :alt: Payment terms
 
@@ -507,14 +507,14 @@ when you *Confirm* it. If the payment is PUE, the payment complement will not be
 of payment is visible from the invoice in the field called **Payment Policy** and takes the invoice
 date and the due date as parameters.
 
-.. image:: media/mx_ft_14.png
+.. image:: mexico/mx_ft_14.png
    :align: center
    :alt: Payment policy
 
 When configuring the contacts that will be used when making payments, you must configure the banks
 in the **Accounting** tab, place both the Bank, Account Number and CLABE.
 
-.. image:: media/mx_ft_15.png
+.. image:: mexico/mx_ft_15.png
    :align: center
    :alt: Contact bank account
 
@@ -527,11 +527,11 @@ generated with its details.
 The payment can be registered from the invoice and once it is confirmed, the invoice will be paid
 and with its payment associated.
 
-.. image:: media/mx_ft_16.png
+.. image:: mexico/mx_ft_16.png
    :align: center
    :alt: PPD payments
 
-.. image:: media/mx_ft_17.png
+.. image:: mexico/mx_ft_17.png
    :align: center
    :alt: PPD payment information
 
@@ -546,7 +546,7 @@ be *In Payment* since the payment will be effectively validated when it is bank 
 .. seealso::
    :doc:`../../bank/reconciliation/use_cases`.
 
-.. image:: media/mx_ft_18.png
+.. image:: mexico/mx_ft_18.png
    :align: center
    :alt: PPD payment created
 
@@ -572,15 +572,15 @@ If at the time of registering a payment it is of the PUE type then in this case 
 The payment can be registered from the invoice and once it is confirmed, the invoice will be paid
 and with its payment associated.
 
-.. image:: media/mx_ft_19.png
+.. image:: mexico/mx_ft_19.png
    :align: center
    :alt: PUE payments
 
-.. image:: media/mx_ft_20.png
+.. image:: mexico/mx_ft_20.png
    :align: center
    :alt: PUE payment information
 
-.. image:: media/mx_ft_21.png
+.. image:: mexico/mx_ft_21.png
    :align: center
    :alt: PUE payment created
 
@@ -620,13 +620,13 @@ Preparation: Create the Product
 The Down Payment product must be type *Service* and must use the **NSPSC Product Category**:
 *84111506 Servicios de facturación*.
 
-.. image:: media/mx_ft_22.png
+.. image:: mexico/mx_ft_22.png
    :align: center
    :alt: Down payment product
 
 Add the down payment product as default to be used from the Odoo configurations.
 
-.. image:: media/mx_ft_23.png
+.. image:: mexico/mx_ft_23.png
    :align: center
    :alt: Down payment configuration
 
@@ -636,27 +636,27 @@ Issuance of the electronic invoice for the value of the advance received
 Create the Advance Payment Invoice: From the sales order, create an advance payment invoice for the
 percentage of the purchase to be paid in advance (or for a fixed amount).
 
-.. image:: media/mx_ft_24.png
+.. image:: mexico/mx_ft_24.png
    :align: center
    :alt: Applying down payment
 
 Validate invoice with the down payment product.
 
-.. image:: media/mx_ft_25.png
+.. image:: mexico/mx_ft_25.png
    :align: center
    :alt: Confirm down payment
 
-.. image:: media/mx_ft_26.png
+.. image:: mexico/mx_ft_26.png
    :align: center
    :alt: Folio fiscal down payment
 
 Register Payment to the advance payment invoice.
 
-.. image:: media/mx_ft_27.png
+.. image:: mexico/mx_ft_27.png
    :align: center
    :alt: Down payment invoice
 
-.. image:: media/mx_ft_28.png
+.. image:: mexico/mx_ft_28.png
    :align: center
    :alt: Down payment registered
 
@@ -666,7 +666,7 @@ Issuance of the electronic invoice for the total value of the operation.
 From the sales order, create an invoice for the total, that is, for all the order lines without
 discounting the advance.
 
-.. image:: media/mx_ft_29.png
+.. image:: mexico/mx_ft_29.png
    :align: center
    :alt: Full invoice
 
@@ -678,13 +678,13 @@ Fiscal of the advance payment Invoice created in the previous step.
 
 Copy the Folio Fiscal of the following invoice following this example:
 
-.. image:: media/mx_ft_30.png
+.. image:: mexico/mx_ft_30.png
    :align: center
    :alt: Folio full invoice
 
 And paste it in the draft invoice created from the Sales Order without deducting the advances:
 
-.. image:: media/mx_ft_31.png
+.. image:: mexico/mx_ft_31.png
    :align: center
    :alt: CFDI origen folio
 
@@ -697,52 +697,52 @@ Add credit note from invoice
 Create a **Credit Note** from the down payment invoice (the corrective invoice must be edited prior
 to confirming it, see explanation below the 2 following images)
 
-.. image:: media/mx_ft_32.png
+.. image:: mexico/mx_ft_32.png
    :align: center
    :alt: Creation of a Credit Note
 
-.. image:: media/mx_ft_33.png
+.. image:: mexico/mx_ft_33.png
    :align: center
    :alt: Matching down payment
 
 Before you *Confirm* the Credit Note, edit the Origin CFDI with ``07 | XXX`` instead of the prefix
 ``01 | XXX``
 
-.. image:: media/mx_ft_34.png
+.. image:: mexico/mx_ft_34.png
    :align: center
    :alt: Modify folio fiscal
 
-.. image:: media/mx_ft_35.png
+.. image:: mexico/mx_ft_35.png
    :align: center
    :alt: CFDI origen type
 
 Now the invoice can be confirmed.
 
-.. image:: media/mx_ft_36.png
+.. image:: mexico/mx_ft_36.png
    :align: center
    :alt: Post credit note
 
 Now the Credit Note (Advance Payment) must be applied to the total invoice, this is added at the
 bottom below the amount owed.
 
-.. image:: media/mx_ft_37.png
+.. image:: mexico/mx_ft_37.png
    :align: center
    :alt: Add credit note
 
-.. image:: media/mx_ft_38.png
+.. image:: mexico/mx_ft_38.png
    :align: center
    :alt: Down payment applied
 
 Register a payment for the difference of the down payment and the total of the sale.
 
-.. image:: media/mx_ft_39.png
+.. image:: mexico/mx_ft_39.png
    :align: center
    :alt: Residual amount payment
 
 If you go to the XML of the invoice, you should see in CFDI related the type of relationship 07 and
 the Folio Fiscal of the advance payment invoice.
 
-.. image:: media/mx_ft_40.png
+.. image:: mexico/mx_ft_40.png
    :align: center
    :alt: XML down payment
 
@@ -767,13 +767,13 @@ example, 98% of the total price for a 2% discount) and the number of days for wh
 valid (for example 5 days). You can also change the balance due type if necessary (in this example
 30 days).
 
-.. image:: media/mx_ft_41.png
+.. image:: mexico/mx_ft_41.png
    :align: center
    :alt: Discount payment term
 
 Then when creating our Sales Order or Sales Invoice, assign the Payment Term created previously.
 
-.. image:: media/mx_ft_42.png
+.. image:: mexico/mx_ft_42.png
    :align: center
    :alt: discount on invoice
 
@@ -783,7 +783,7 @@ Register the Payment within the days of the discount
 Register the payment within the days in which the application of the discount was specified, in our
 case it is within 5 days after the creation of the Sales Invoice.
 
-.. image:: media/mx_ft_43.png
+.. image:: mexico/mx_ft_43.png
    :align: center
    :alt: Discount payment
 
@@ -791,15 +791,15 @@ Then go to the bottom of the invoice where the totals are located and there you 
 created, reset to draft and cancel the payment that does not correspond - the one related to the
 discount.
 
-.. image:: media/mx_ft_44.png
+.. image:: mexico/mx_ft_44.png
    :align: center
    :alt: See discount payment
 
-.. image:: media/mx_ft_45.png
+.. image:: mexico/mx_ft_45.png
    :align: center
    :alt: Mote to draft payment
 
-.. image:: media/mx_ft_46.png
+.. image:: mexico/mx_ft_46.png
    :align: center
    :alt: Cancel payment
 
@@ -810,23 +810,23 @@ Finally to close the cycle we must close the invoice, but as in this case we app
 close it correctly we must create a credit note specifying that the difference was given to the
 customer on a **Credit Note**.
 
-.. image:: media/mx_ft_47.png
+.. image:: mexico/mx_ft_47.png
    :align: center
    :alt: Discount credit note
 
-.. image:: media/mx_ft_48.png
+.. image:: mexico/mx_ft_48.png
    :align: center
    :alt: Reason of credit note
 
 Adjust the amount to the remaining balance in the original invoice.
 
-.. image:: media/mx_ft_49.png
+.. image:: mexico/mx_ft_49.png
    :align: center
    :alt: Total credit note
 
 Add the Credit Note to the original invoice so that it is settled.
 
-.. image:: media/mx_ft_50.png
+.. image:: mexico/mx_ft_50.png
    :align: center
    :alt: Add credit note for discount
 
@@ -841,20 +841,20 @@ the steps below.
 
 #. Request Cancellation
 
-   .. image:: media/mx_ft_51.png
+   .. image:: mexico/mx_ft_51.png
       :align: center
       :alt: Cancel within 72 hours
 
 #. The status of the **Electronic invoicing** changes to *Cancelled*
 #. Click on *RESET TO DRAFT*
 
-   .. image:: media/mx_ft_52.png
+   .. image:: mexico/mx_ft_52.png
       :align: center
       :alt: Invoice to draft
 
 #. Click on *CANCEL ENTRY*
 
-   .. image:: media/mx_ft_53.png
+   .. image:: mexico/mx_ft_53.png
       :align: center
       :alt: Cancel journal entry
 
@@ -872,7 +872,7 @@ must be asked to accept the cancellation, for this the following steps must be f
 #. Odoo synchronizes with the SAT to update the status of the **Electronic invoicing** with a
    scheduled action, Invoices canceled in the SAT will be canceled in Odoo.
 
-.. image:: media/mx_ft_54.png
+.. image:: mexico/mx_ft_54.png
    :align: center
    :alt: Cancel after 72 hours
 
@@ -880,7 +880,7 @@ After clicking on **Request EDI cancellation**, the status of the **Electronic i
 will be *To Cancel* but the status of the SAT will be the same to *Valid*, it will remain active
 until the end customer / Recipient approves the cancellation in the SAT.
 
-.. image:: media/mx_ft_55.png
+.. image:: mexico/mx_ft_55.png
    :align: center
    :alt: Check estado del PAC
 
@@ -891,7 +891,7 @@ scheduled action can be executed manually by entering with developer mode).
 If the invoice is canceled in the SAT, in Odoo it is also canceled, which allows you to switch the
 invoice to draft and finally cancel the invoice (*cancel entry*).
 
-.. image:: media/mx_ft_56.png
+.. image:: mexico/mx_ft_56.png
    :align: center
    :alt: PAC scheduled action
 
@@ -901,11 +901,11 @@ Cancel Paid Invoices
 If the invoice has already been paid, a credit note must be created from the invoice so that the
 originating CFDI is recognized and later cancel the original invoice.
 
-.. image:: media/mx_ft_57.png
+.. image:: mexico/mx_ft_57.png
    :align: center
    :alt: Cancel paid invoice
 
-.. image:: media/mx_ft_58.png
+.. image:: mexico/mx_ft_58.png
    :align: center
    :alt: Credit note to cancel
 
@@ -925,19 +925,19 @@ the reverse entry and save the cancellation information.
 
 Invoice to be canceled
 
-.. image:: media/mx_ft_59.png
+.. image:: mexico/mx_ft_59.png
    :align: center
    :alt: Previous period
 
 This is how the Balance Sheet looks like:
 
-.. image:: media/mx_ft_60.png
+.. image:: mexico/mx_ft_60.png
    :align: center
    :alt: Previous BS
 
 If the invoice is canceled, the journal entry and the Balance Sheet looks like this after canceling:
 
-.. image:: media/mx_ft_61.png
+.. image:: mexico/mx_ft_61.png
    :align: center
    :alt: AR in BS
 
@@ -956,7 +956,7 @@ Close accounting period each month (Best Practice Mexican Localization)
 If the accounting period is closed due to the blocking dates, Odoo will not allow to modify or add
 accounting entries of a date corresponding to that accounting period.
 
-.. image:: media/mx_ft_62.png
+.. image:: mexico/mx_ft_62.png
    :align: center
    :alt: Closing fiscal period
 
@@ -967,7 +967,7 @@ If the accounting period is closed, and the invoice was canceled in the SAT, the
 be published while the **Electronic invoicing** status will be *Sent* and the SAT status is
 *Cancelled*.
 
-.. image:: media/mx_ft_63.png
+.. image:: mexico/mx_ft_63.png
    :align: center
    :alt: Cancel in SAT
 
@@ -980,32 +980,32 @@ reconcile the open invoice with the reversion created manually.
 It must be clearly indicated in the reference that it is a cancellation (you can use a cancellation
 account for invoices from previous periods such as **Other Income**).
 
-.. image:: media/mx_ft_64.png
+.. image:: mexico/mx_ft_64.png
    :align: center
    :alt: Manual reversal
 
 Reconcile the open invoice with the reversal entry
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. image:: media/mx_ft_65.png
+.. image:: mexico/mx_ft_65.png
    :align: center
    :alt: Reconcile open invoice
 
-.. image:: media/mx_ft_66.png
+.. image:: mexico/mx_ft_66.png
    :align: center
    :alt: Open invoice paid
 
 In the Balance Sheet and Trial balance they are now with the correct balances.
 
-.. image:: media/mx_ft_67.png
+.. image:: mexico/mx_ft_67.png
    :align: center
    :alt: New BS
 
-.. image:: media/mx_ft_68.png
+.. image:: mexico/mx_ft_68.png
    :align: center
    :alt: Up to date BS
 
-.. image:: media/mx_ft_69.png
+.. image:: mexico/mx_ft_69.png
    :align: center
    :alt: Balanza de comprobación
 
@@ -1016,11 +1016,11 @@ A server action can be created that modifies the status of the invoice to *Cance
 reconciled with the reversal entry (You should check this with support or with your Assigned
 Functional Consultant prior to performing this action).
 
-.. image:: media/mx_ft_70.png
+.. image:: mexico/mx_ft_70.png
    :align: center
    :alt: Scheduled action PAC status
 
-.. image:: media/mx_ft_71.png
+.. image:: mexico/mx_ft_71.png
    :align: center
    :alt: Execute server action
 
@@ -1038,7 +1038,7 @@ of accounting.
 
 You can find all of those reports in :menuselection:`Accounting --> Reporting --> Mexico`
 
-.. image:: media/mx_ce_01.png
+.. image:: mexico/mx_ce_01.png
    :align: center
    :alt: MX reports
 
@@ -1048,7 +1048,7 @@ Electronic Chart of Accounts (Called and displayed as COA).
 Electronic invoicing has never been so easy, just go to :menuselection:`Accounting -> Reports ->
 Mexico -> COA` and click the button **Export for SAT (XML)**.
 
-.. image:: media/mx_ce_02.png
+.. image:: mexico/mx_ce_02.png
    :align: center
    :alt: COA for SAT
 
@@ -1064,7 +1064,7 @@ account with the number 102.01.99 once you change to establish the name you will
 automatically configured label, the configured labels are the ones chosen to be used in the COA
 in XML.
 
-.. image:: media/mx_ce_03.png
+.. image:: mexico/mx_ce_03.png
    :align: center
    :alt: Create account
 
@@ -1089,7 +1089,7 @@ correctly configured your COA, you can go to :menuselection:`Reports --> Trial B
 automatically generated and can be exported to XML using the button on the top **Export for SAT
 (XML)** with the previous selection of the period you want to export.
 
-.. image:: media/mx_ce_04.png
+.. image:: mexico/mx_ce_04.png
    :align: center
    :alt: Electronic verification balance
 
@@ -1162,20 +1162,20 @@ How to generate this report in Odoo?
 #. Go to :menuselection:`Accounting --> Reports --> Mexico --> Transactions with third partied
    (DIOT)`.
 
-   .. image:: media/mx_ce_05.png
+   .. image:: mexico/mx_ce_05.png
       :align: center
       :alt: DIOT report
 
 #. A report view is displayed, select the last month to report the immediately preceding month or
    leave the current month if it suits you.
 
-   .. image:: media/mx_ce_06.png
+   .. image:: mexico/mx_ce_06.png
       :align: center
       :alt: DIOT filter
 
 #. Click on *Export (XLSX)* or *Print (TXT)*
 
-.. image:: media/mx_ce_07.png
+.. image:: mexico/mx_ce_07.png
       :align: center
       :alt: Print DIOT
 
@@ -1190,7 +1190,7 @@ Important considerations about your supplier and invoice data for DIOT
   address, not You need to do nothing else there, but the l10n MX type of operation must be
   configured in all your providers.
 
-.. image:: media/mx_ce_08.png
+.. image:: mexico/mx_ce_08.png
      :align: center
      :alt: DIOT configuration
 
@@ -1208,7 +1208,7 @@ this is the reason why we recommend to use this report not only for exporting yo
 information. obligation, but generate it before the end of the month and use it as your auditory
 process to see that all your partners are configured correctly.
 
-.. image:: media/mx_ce_09.png
+.. image:: mexico/mx_ce_09.png
    :align: center
    :alt: DIOT Error
 
@@ -1262,7 +1262,7 @@ last day of the preceding financial year, which is set under the accounting sett
 way, the accountant can trust that no one else is changing the previous year's transactions while
 auditing the books.
 
-.. image:: media/mx_cc_01.png
+.. image:: mexico/mx_cc_01.png
    :align: center
    :alt: Fiscal year
 
@@ -1282,7 +1282,7 @@ As of December 31, the Balance Sheet shows the earnings of the Current Year that
 recognized (Account type Total Current Year Unallocated Earnings in MX account 305.01.01
 ['current year earnings' type])
 
-.. image:: media/mx_cc_02.png
+.. image:: mexico/mx_cc_02.png
    :align: center
    :alt: Balance sheet closing
 
@@ -1296,7 +1296,7 @@ Closing Entry, the Trial Balance won't be correct.
 
 The simplified accounting entry would look like this:
 
-.. image:: media/mx_cc_03.png
+.. image:: mexico/mx_cc_03.png
    :align: center
    :alt: Closing journal entry
 
@@ -1305,7 +1305,7 @@ they must set the **Closing Date** to the last day of the fiscal year. Making su
 doing this, whether or not the current gain of the year in the **Balance Sheet** is properly
 reporting a balance 0.
 
-.. image:: media/mx_cc_04.png
+.. image:: mexico/mx_cc_04.png
    :align: center
    :alt: Check BS closing
 
@@ -1328,7 +1328,7 @@ SAT without having to manually create this information every day in Odoo.
 
 Go to settings and enable the multi-currency feature.
 
-.. image:: media/mx_mc_01.png
+.. image:: mexico/mx_mc_01.png
    :align: center
    :alt: Multi currency configuration
 
@@ -1347,7 +1347,7 @@ enable, to enable the Check with xsd feature follow the next steps (with the
 - Open any company you have.
 - Click on "Action" and then on "Download XSD file to CFDI".
 
-.. image:: media/mx-xsd-cfdi.png
+.. image:: mexico/mx-xsd-cfdi.png
    :align: center
    :alt: Download XSD files to CFDI from the Companies list view on Odoo
 
@@ -1406,7 +1406,7 @@ Common problems and errors
   You need to go to Fiscal Position settings and set the proper code (it is the first 3 numbers
   of the name), for example, for the test, you need to set 601, it will look like the picture.
 
-  .. image:: media/mx_faq_01.png
+  .. image:: mexico/mx_faq_01.png
      :align: center
      :alt: Fiscal position error
 
@@ -1425,7 +1425,7 @@ Common problems and errors
   **Solution**:
   The payment method is required on your invoice.
 
-.. image:: media/mx_faq_02.png
+.. image:: mexico/mx_faq_02.png
      :align: center
      :alt: Payment method error
 
@@ -1456,7 +1456,7 @@ Common problems and errors
   **Solution**:
   The postal code of your company address is not valid for Mexico, please correct it.
 
-.. image:: media/mx_faq_03.png
+.. image:: mexico/mx_faq_03.png
      :align: center
      :alt: ZIP code error
 
@@ -1473,11 +1473,11 @@ Common problems and errors
   Set the Mexican name for the 0% and 16% tax in your system and use it on the invoice. Your tax,
   which represents 16% VAT and 0%, must have the **Factor Type** field set to *Tasa*.
 
-  .. image:: media/mx_faq_04.png
+  .. image:: mexico/mx_faq_04.png
      :align: center
      :alt: Factor type error
 
-  .. image:: media/mx_faq_05.png
+  .. image:: mexico/mx_faq_05.png
      :align: center
      :alt: Rate error
 

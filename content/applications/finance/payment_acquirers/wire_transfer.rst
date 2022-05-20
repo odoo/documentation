@@ -11,12 +11,12 @@ How to provide customers with payment instructions
 
 Put your payment instructions in the **Thanks Message** of your payment method.
 
-.. image:: media/payment_instructions.png
+.. image:: wire_transfer/payment_instructions.png
    :align: center
 
 They will appear to the customers when they place an order.
 
-.. image:: media/payment_customer_instructions.png
+.. image:: wire_transfer/payment_customer_instructions.png
    :align: center
 
 How to manage an order once you get paid
@@ -32,7 +32,7 @@ How to create other manual payment methods
 If you manage a B2B business, you can create other manually-processed payment methods like paying by
 check. To do so, just rename *Wire Transfer* or duplicate it.
 
-.. image:: media/payment_check.png
+.. image:: wire_transfer/payment_check.png
    :align: center
 
 .. seealso::

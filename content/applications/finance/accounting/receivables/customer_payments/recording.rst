@@ -21,7 +21,7 @@ If you register a payment on a customer invoice or a vendor bill, the
 payment is automatically reconciled with the invoice reducing the amount
 due.
 
-.. image:: ./media/recording01.png
+.. image:: recording/recording01.png
   :align: center
 
 The green icon near the payment line will display more information about
@@ -45,7 +45,7 @@ Sales menu (register a customer payment) or the Purchases menu (pay a
 vendor). If you use these menus, the payment is not linked to an
 invoice, but can easily be reconciled on an invoice later on.
 
-.. image:: ./media/recording02.png
+.. image:: recording/recording02.png
   :align: center
 
 When registering a new payment, you must select a customer or vendor,
@@ -68,7 +68,7 @@ payment for this customer or vendor is available. In this case, you can
 reconcile this payment to the invoice near the totals at the bottom,
 under "Outstanding Payments".
 
-.. image:: ./media/recording03.png
+.. image:: recording/recording03.png
   :align: center
 
 Reconciling all your outstanding payments and invoices
@@ -82,14 +82,14 @@ The batch reconciliation feature is available from the dashboard on the
 Customer Invoices card and the Vendor Bills card for reconciling
 Accounts Receivable and Payable, respectively.
 
-.. image:: ./media/recording04.png
+.. image:: recording/recording04.png
   :align: center
 
 The payments matching tool will open all unreconciled customers or
 vendors and will give you the opportunity to process them all one by
 one, doing the matching of all their payments and invoices at once.
 
-.. image:: ./media/recording05.png
+.. image:: recording/recording05.png
   :align: center
 
 During the reconciliation, if the sum of the debits and credits do not
@@ -103,13 +103,13 @@ Just like making a customer or vendor payment, you transfer cash
 internally between your bank accounts from the dashboard or from the
 menus up top.
 
-.. image:: ./media/recording06.png
+.. image:: recording/recording06.png
   :align: center
 
 This will take you to the same screen you have for receiving and making
 payments.
 
-.. image:: ./media/recording07.png
+.. image:: recording/recording07.png
   :align: center
 
 .. note::

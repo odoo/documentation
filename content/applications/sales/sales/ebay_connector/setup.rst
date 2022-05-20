@@ -10,7 +10,7 @@ In order to create your tokens, you need to create a developer account on the
 Once you are logged in, you can create **Sandbox Keys** and **Production Keys**
 by clicking on the adequate buttons.
 
-.. image:: ./media/setup01.png
+.. image:: setup/setup01.png
   :align: center
 
 After the creation of the keys, you can get the user token. To do so, click on
@@ -23,7 +23,7 @@ Set up tokens in Odoo?
 
 To set up the eBay integration, go to :menuselection:`Sales --> Configuration --> Settings`.
 
-.. image:: ./media/setup02.png
+.. image:: setup/setup02.png
   :align: center
 
 First choose if you want to use the production or the sandbox eBay Site. Then
@@ -60,7 +60,7 @@ Retrieve endpoint details from Odoo
 The endpoint details can be found in :menuselection:`Sales --> Configuration --> Settings --> eBay`.
 Click on *Generate Token* to retrieve your **Verification Token**.
 
-.. image:: media/verification-token.png
+.. image:: setup/verification-token.png
    :align: center
    :alt: Button to generate an eBay verification token in Odoo
 
@@ -72,7 +72,7 @@ Subscribe to account deletion notifications
 Log in on the `developer portal of eBay <https://go.developer.ebay.com/>`_ and go to **Alerts &
 Notifications**.
 
-.. image:: media/ebay-your-account.png
+.. image:: setup/ebay-your-account.png
    :align: center
    :alt: Overview of the Alerts & Notifications dashboard of eBay
 
@@ -84,7 +84,7 @@ To subscribe to deletion/closure notifications, eBay needs a few details:
   - The URL to Odoo's account deletion notification endpoint
   - A verification token
 
-.. image:: media/ebay-notification-endpoint.png
+.. image:: setup/ebay-notification-endpoint.png
    :align: center
    :alt: Dedicated fields to enter the endpoint details
 
@@ -99,7 +99,7 @@ with the **Send Test Notification** button.
 
 You should get the following confirmation message: "A test notification was sent successfully!"
 
-.. image:: media/test-notification.png
+.. image:: setup/test-notification.png
    :align: center
    :alt: Button to send test notification
 

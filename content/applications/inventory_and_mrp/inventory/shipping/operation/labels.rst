@@ -21,7 +21,7 @@ In the **Inventory** module, click on :menuselection:`Configuration --> Settings
 Under **Shipping Connectors**, flag the transportation companies you want to
 integrate :
 
-.. image:: media/labels03.png
+.. image:: labels/labels03.png
    :align: center
 
 Then click on **Apply**.
@@ -35,7 +35,7 @@ To configure your delivery methods, go to the **Inventory** module, click on
 The delivery methods for the chosen shippers have been automatically
 created.
 
-.. image:: media/labels01.png
+.. image:: labels/labels01.png
    :align: center
 
 In the **Pricing** tab, the name of the provider means that the delivery
@@ -58,7 +58,7 @@ In order to compute the right price, the provider needs your company
 information. Be sure your address and phone number are correctly
 encoded.
 
-.. image:: media/labels02.png
+.. image:: labels/labels02.png
    :align: center
 
 To check your information, go to the **Settings** application and click on
@@ -73,7 +73,7 @@ price computation cannot be done.
 Go the **Sales** module, click on :menuselection:`Sales --> Products`.
 Open the products you want to ship and set a weight on it.
 
-.. image:: media/labels06.png
+.. image:: labels/labels06.png
    :align: center
 
 .. tip::
@@ -90,7 +90,7 @@ information from it, but you can change the carrier if you want to.
 If you create a delivery transfer from the inventory module, you can add
 the third party shipper in the additional info tab.
 
-.. image:: media/labels05.png
+.. image:: labels/labels05.png
    :align: center
 
 Click on **Validate** to receive the tracking number and **the label(s)**.
@@ -98,12 +98,12 @@ Click on **Validate** to receive the tracking number and **the label(s)**.
 The label to stick on your package is available in the history
 underneath :
 
-.. image:: media/labels04.png
+.. image:: labels/labels04.png
    :align: center
 
 Click on it to open the document and print it :
 
-.. image:: media/labels07.png
+.. image:: labels/labels07.png
    :align: center
 
 .. note::

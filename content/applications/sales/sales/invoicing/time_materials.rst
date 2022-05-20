@@ -25,7 +25,7 @@ In *Project* you will use timesheets, to do so go to
 :menuselection:`Project --> Configuration --> Settings` and activate the
 *Timesheets* feature.
 
-.. image:: media/time_materials01.png
+.. image:: time_materials/time_materials01.png
    :align: center
 
 Invoice your time spent
@@ -35,7 +35,7 @@ From a product page set as a service, you will find two options under
 the invoicing tab, select both *Timesheets on tasks* and *Create a
 task in a new project*.
 
-.. image:: media/time_materials02.png
+.. image:: time_materials/time_materials02.png
    :align: center
 
 You could also add the task to an existing project.
@@ -43,7 +43,7 @@ You could also add the task to an existing project.
 Once confirming a sales order, you will now see two new buttons, one for
 the project overview and one for the current task.
 
-.. image:: media/time_materials03.png
+.. image:: time_materials/time_materials03.png
    :align: center
 
 You will directly be in the task if you click on it, you can also access
@@ -52,12 +52,12 @@ it from the *Project* app.
 Under timesheets, you can assign who works on it. You can or they can
 add how many hours they worked on the project so far.
 
-.. image:: media/time_materials04.png
+.. image:: time_materials/time_materials04.png
    :align: center
 
 From the sales order, you can then invoice those hours.
 
-.. image:: media/time_materials05.png
+.. image:: time_materials/time_materials05.png
    :align: center
 
 Expenses configuration
@@ -79,19 +79,19 @@ the hotel for the first week on the site of your customer.
 You can then enter a relevant description and select an existing product
 or create a new one from right there.
 
-.. image:: media/time_materials06.png
+.. image:: time_materials/time_materials06.png
    :align: center
 
 Here, we are creating a *Hotel* product:
 
-.. image:: media/time_materials07.png
+.. image:: time_materials/time_materials07.png
    :align: center
 
 under the invoicing tab, select *Delivered quantities* and either *At
 cost* or *Sales price* as well depending if you want to invoice the
 cost of your expense or a previously agreed on sales price.
 
-.. image:: media/time_materials08.png
+.. image:: time_materials/time_materials08.png
    :align: center
 
 To modify or create more products go to :menuselection:`Expenses -->
@@ -100,18 +100,18 @@ Configuration --> Expense products`.
 Back on the expense, add the original sale order in the expense to
 submit.
 
-.. image:: media/time_materials09.png
+.. image:: time_materials/time_materials09.png
    :align: center
 
 It can then be submitted to the manager, approved and finally posted.
 
-.. image:: media/time_materials10.png
+.. image:: time_materials/time_materials10.png
    :align: center
 
-.. image:: media/time_materials11.png
+.. image:: time_materials/time_materials11.png
    :align: center
 
-.. image:: media/time_materials12.png
+.. image:: time_materials/time_materials12.png
    :align: center
 
 It will then be in the sales order and ready to be invoiced.
@@ -129,7 +129,7 @@ You will need the *Purchase Analytics* feature, to activate it, go to
 While making the purchase order don't forget to add the right analytic
 account.
 
-.. image:: media/time_materials08.png
+.. image:: time_materials/time_materials08.png
    :align: center
 
 Once the PO is confirmed and received, you can create the vendor bill,

@@ -10,7 +10,7 @@ On your survey’s form, click on *Add a question* and, under the tab *Options*,
 *Scoring with answers at the end* or *Scoring without answers at the end*. Now, on your question’s
 form, set the right answer and score.
 
-.. image:: media/answers_form.png
+.. image:: scoring/answers_form.png
    :align: center
    :alt: Form view of a survey showing a list of answers in Odoo Surveys
 
@@ -18,7 +18,7 @@ Set the percentage score the user needs to achieve to have successfully taken th
 enabling *Certificate*, choose its template. The certification is automatically sent by email to the
 users who successfully finish it.
 
-.. image:: media/scoring_candidates.png
+.. image:: scoring/scoring_candidates.png
    :align: center
    :alt: Form view of a survey emphasizing the scoring and candidates section in Odoo Surveys
 
@@ -26,7 +26,7 @@ Enable *Login required* to be able to *Give Badges*. Badges are related to the e
 your website. Besides the logged-in user, visitors of the website that access the page *Courses*
 can also see the granted badges.
 
-.. image:: media/frontend_bagdes.png
+.. image:: scoring/frontend_bagdes.png
    :align: center
    :alt: View of the courses tab emphasizing the latest achievements section on the website for
          Odoo Surveys

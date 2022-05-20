@@ -22,7 +22,7 @@ Create your financial report
 First, you need to create your financial report. To do that, go to
 :menuselection:`Accounting --> Configuration --> Financial Reports`
 
-.. image:: media/customize02.png
+.. image:: customize/customize02.png
    :align: center
 
 Once the name is entered, there are two other parameters that need to be
@@ -49,7 +49,7 @@ After you've created the report, you need to fill it with lines. They
 all need a **name**, a **code** (that is used to refer to the line), a 
 **sequence number** and a **level** (Used for the line rendering).
 
-.. image:: media/customize04.png
+.. image:: customize/customize04.png
    :align: center
 
 In the **formulas** field you can add one or more formulas to assign a
