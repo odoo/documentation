@@ -203,7 +203,7 @@ Unsafe Public Methods
 ---------------------
 
 Any public method can be executed via a :ref:`RPC call
-<api/odoo/calling_methods>` with the chosen parameters. The methods
+<api/external_api/calling_methods>` with the chosen parameters. The methods
 starting with a ``_`` are not callable from an action button or external API.
 
 On public methods, the record on which a method is executed and the parameters
