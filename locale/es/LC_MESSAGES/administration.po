@@ -1389,6 +1389,12 @@ msgid ""
 "certificates are easier to deploy on a controlled environment than over the "
 "internet."
 msgstr ""
+"o puede ser accesible solo a través de una red interna de comunicación de "
+"paquetes, pero para esto se necesitan paquetes seguros, protección contra "
+"`suplantación de ARP`_ y excluye el uso de WiFi. Incluso en redes seguras de"
+" comunicación de paquetes, se recomienda el despliegue en HTTPS y los costos"
+" posibles se reducen, ya que los certificados \"autofirmados\" son más "
+"fáciles de desplegar en un entorno controlado que en Internet."
 
 #: ../../content/administration/install/email_gateway.rst:3
 msgid "Email gateway"
@@ -1600,6 +1606,12 @@ msgid ""
 "and test Odoo and do non-code customizations (i.e. incompatible with custom "
 "modules or the Odoo Apps Store) without having to install it locally."
 msgstr ""
+"El SaaS de Odoo es trivial para empezar y Odoo S.A. lo gestiona y migra. "
+"Además, el SaaS de Odoo proporciona instancias privadas y es gratis al "
+"inicio. Lo puede usar para descubrir y probar Odoo, así como para realizar "
+"personalizaciones que no requieran trabajar con código (es decir, que no "
+"sean compatibles con los módulos personalizados o la tienda de aplicaciones "
+"de Odoo) sin tener que instalarlo localmente."
 
 #: ../../content/administration/install/install.rst:66
 msgid "Can be used for both testing Odoo and long-term production use."
@@ -1643,6 +1655,11 @@ msgid ""
 " be downloaded from our download_ page (you must to be logged in as a paying"
 " customer or partner to download the Enterprise packages)."
 msgstr ""
+"Los paquetes oficiales de Community con todos los requisitos relevantes de "
+"dependencias están disponibles en el servidor nightly_. Tanto los paquetes "
+"de Community como los de Enterprise se pueden descargar desde nuestra página"
+" de descargas (debe haber iniciado sesión como un cliente de paga o un "
+"partner para descargar los paquetes de Enterprise)."
 
 #: ../../content/administration/install/install.rst:90
 #: ../../content/administration/install/install.rst:252
@@ -1735,6 +1752,11 @@ msgid ""
 "<https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ for more details on the "
 "various versions."
 msgstr ""
+"`wkhtmltopdf` no está instalado mediante **pip** y debe instalarse "
+"manualmente en la versión `0.12.5 <the wkhtmltopdf download page_>`_ para "
+"que sea compatible con los encabezados y pies de páginas.  Vea nuestra `wiki"
+" <https://github.com/odoo/odoo/wiki/Wkhtmltopdf>`_ para obtener más detalles"
+" sobre las diferentes versiones."
 
 #: ../../content/administration/install/install.rst:129
 #: ../../content/administration/install/install.rst:204
@@ -1781,23 +1803,27 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:150
 msgid "Next, execute the following commands **as root**:"
-msgstr ""
+msgstr "Ahora, ejecute estos comandos **como raíz**:"
 
 #: ../../content/administration/install/install.rst:158
 msgid ""
 "This will install Odoo as a service, create the necessary PostgreSQL_ user "
 "and automatically start the server."
 msgstr ""
+"Así se instalará Odoo como un servicio, cree el usuario PostgreSQL_ "
+"necesario y automáticamente inicie el servidor."
 
 #: ../../content/administration/install/install.rst:161
 msgid ""
 "The `python3-xlwt` Debian package does not exists in Debian Buster nor "
 "Ubuntu 18.04. This python module is needed to export into xls format."
 msgstr ""
+"El paquete debian `python3-xlwt` no existe en Debian Buster ni en Ubuntu "
+"18.04. Este módulo de python se necesita para exportarlo a formato xls."
 
 #: ../../content/administration/install/install.rst:164
 msgid "If you need the feature, you can install it manually with:"
-msgstr ""
+msgstr "Si necesita la función, puede instalarla manualmente con:"
 
 #: ../../content/administration/install/install.rst:170
 msgid ""
@@ -1805,10 +1831,13 @@ msgid ""
 "18.04. Textual amounts will not be rendered by Odoo and this could cause "
 "problems with the `l10n_mx_edi` module."
 msgstr ""
+"El paquete python `num2words` no existe en Debian Buster ni Ubuntu 18.04. "
+"Odoo no renderizará las cantidades textuales y esto podría causar problemas "
+"con el módulo `l10n_mx_edi`."
 
 #: ../../content/administration/install/install.rst:174
 msgid "If you need this feature, you can install manually with:"
-msgstr ""
+msgstr "Si necesita esta función, la puede instalar manualmente con:"
 
 #: ../../content/administration/install/install.rst:181
 msgid "Fedora"
@@ -1816,7 +1845,7 @@ msgstr "Fedora"
 
 #: ../../content/administration/install/install.rst:183
 msgid "Odoo 15.0 'rpm' package supports Fedora 34."
-msgstr ""
+msgstr "El paquete 'rpm' de Odoo 15.0 es compatible con Fedora 34."
 
 #: ../../content/administration/install/install.rst:187
 msgid ""
@@ -1824,6 +1853,10 @@ msgid ""
 " command is available and well configured and, only then, execute the "
 "following command in order to install the PostgreSQL server:"
 msgstr ""
+"Odoo necesita un servidor `PostgreSQL`_ para funcionar adecuadamente. "
+"Asegúrese de que el comando `sudo` esté disponible y bien configurado y, "
+"solo entonces, ejecute el siguiente comando para poder instalar el servidor "
+"PostgreSQL:"
 
 #: ../../content/administration/install/install.rst:206
 msgid ""
@@ -1831,10 +1864,13 @@ msgid ""
 "distributions. It can be used to install *Odoo Community Edition* by "
 "executing the following commands:"
 msgstr ""
+"Odoo S.A. cuenta con un repositorio que se puede usar con distribuciones de "
+"Fedora. Se puede usar para instalar *la edición Community de Odoo** si "
+"ejecuta los siguientes comandos:"
 
 #: ../../content/administration/install/install.rst:218
 msgid "RPM package"
-msgstr ""
+msgstr "Paquete RPM"
 
 #: ../../content/administration/install/install.rst:220
 msgid ""
@@ -1842,22 +1878,29 @@ msgid ""
 "both the *Community* and *Enterprise* editions can be downloaded from the "
 "`official download page <download_>`_."
 msgstr ""
+"En lugar de usar el repositorio como se describe arribe, los paquetes 'rpm' "
+"para las ediciones *Community* y *Enterprise* se pueden descargar desde la "
+"`página oficial de descargas <download_>`_."
 
 #: ../../content/administration/install/install.rst:223
 msgid ""
 "Once downloaded, the package can be installed using the 'dnf' package "
 "manager:"
 msgstr ""
+"Una vez que lo descargue, el paquete se instalará usando el gestor del "
+"paquete 'dnf': "
 
 #: ../../content/administration/install/install.rst:235
 msgid "Source Install"
-msgstr ""
+msgstr "Source Install"
 
 #: ../../content/administration/install/install.rst:237
 msgid ""
 "The source \"installation\" is really about not installing Odoo, and running"
 " it directly from source instead."
 msgstr ""
+"La \"instalación\" de origen no es sobre instalar Odoo, sino sobre "
+"ejecutarlo directamente desde el origen."
 
 #: ../../content/administration/install/install.rst:240
 msgid ""
@@ -1865,6 +1908,10 @@ msgid ""
 " easily accessible than using packaged installation (for information or to "
 "build this documentation and have it available offline)."
 msgstr ""
+"Esto puede ser más conveniente para desarrolladores de módulos ya que es más"
+" fácil acceder al origen de Odoo que usar la instalación de paquete (para "
+"más información o para construir esta documentación y tenerla disponible "
+"fuera de línea)."
 
 #: ../../content/administration/install/install.rst:244
 msgid ""
@@ -1873,18 +1920,26 @@ msgid ""
 "settings using :ref:`command-line parameters <reference/cmdline>` without "
 "needing to edit a configuration file."
 msgstr ""
+"También hace que el iniciar y detener Odoo sea más flexible y explícito que "
+"los servicios que las instalaciones en paquete configuraron, además de que "
+"permite sobrescribir los ajustes usando  :ref:`parámetros de líneas de "
+"comando<reference/cmdline>` sin tener que editar el archivo de "
+"configuración."
 
 #: ../../content/administration/install/install.rst:248
 msgid ""
 "Finally it provides greater control over the system's set up, and allows to "
 "more easily keep (and run) multiple versions of Odoo side-by-side."
 msgstr ""
+"Finalmente, permite tener más control sobre la configuración del sistema y "
+"hace que sea más fácil mantener (y ejecutar) varias versiones de Odoo al "
+"mismo tiempo."
 
 #: ../../content/administration/install/install.rst:255
 #: ../../content/administration/install/install.rst:421
 #: ../../content/administration/install/install.rst:592
 msgid "Fetch the sources"
-msgstr ""
+msgstr "Extraer los recursos"
 
 #: ../../content/administration/install/install.rst:257
 #: ../../content/administration/install/install.rst:423
@@ -1893,6 +1948,8 @@ msgid ""
 "There are two ways to obtain the source code of Odoo: as a zip **archive** "
 "or through **git**."
 msgstr ""
+"Hay dos maneras de obtener el código fuente de Odoo: desde un **archivo** "
+"zip o **git**."
 
 #: ../../content/administration/install/install.rst:260
 #: ../../content/administration/install/install.rst:426
@@ -1907,7 +1964,7 @@ msgstr "Archivar"
 #: ../../content/administration/install/install.rst:599
 #: ../../content/administration/install/install.rst:616
 msgid "Community Edition:"
-msgstr ""
+msgstr "Edición community:"
 
 #: ../../content/administration/install/install.rst:264
 #: ../../content/administration/install/install.rst:270
@@ -1916,31 +1973,31 @@ msgstr ""
 #: ../../content/administration/install/install.rst:601
 #: ../../content/administration/install/install.rst:607
 msgid "`Official download page <download_>`_"
-msgstr ""
+msgstr "`Página oficial de descarga <download_>`_"
 
 #: ../../content/administration/install/install.rst:265
 #: ../../content/administration/install/install.rst:431
 #: ../../content/administration/install/install.rst:602
 msgid "`GitHub repository <community-repository_>`_"
-msgstr ""
+msgstr "`Repositorio GitHub <community-repository_>`_"
 
 #: ../../content/administration/install/install.rst:266
 #: ../../content/administration/install/install.rst:432
 #: ../../content/administration/install/install.rst:603
 msgid "`Nightly server <nightly_>`_"
-msgstr ""
+msgstr "`Servidor Nightly <nightly_>`_"
 
 #: ../../content/administration/install/install.rst:268
 #: ../../content/administration/install/install.rst:434
 #: ../../content/administration/install/install.rst:605
 msgid "Enterprise Edition:"
-msgstr ""
+msgstr "Edición Enterprise:"
 
 #: ../../content/administration/install/install.rst:271
 #: ../../content/administration/install/install.rst:437
 #: ../../content/administration/install/install.rst:608
 msgid "`GitHub repository <enterprise-repository_>`_"
-msgstr ""
+msgstr "`Repositorio GitHub <enterprise-repository_>`_"
 
 #: ../../content/administration/install/install.rst:274
 #: ../../content/administration/install/install.rst:440
@@ -1955,12 +2012,15 @@ msgid ""
 "The following requires git_ to be installed on your machine and that you "
 "have basic knowledge of git commands."
 msgstr ""
+"Esto necesita que tenga git_ instalado en su equipo y también necesita tener"
+" conocimiento básico de comandos git."
 
 #: ../../content/administration/install/install.rst:286
 #: ../../content/administration/install/install.rst:452
 #: ../../content/administration/install/install.rst:623
 msgid "Enterprise Edition: (see :ref:`setup/install/editions` to get access)"
 msgstr ""
+"Edición Enterprise: (vea :ref:`setup/install/editions` para obtener acceso)"
 
 #: ../../content/administration/install/install.rst:292
 #: ../../content/administration/install/install.rst:458
@@ -1974,6 +2034,13 @@ msgid ""
 "Community and Enterprise repository to have a working Odoo Enterprise "
 "installation."
 msgstr ""
+"**El repositorio git de Enterprise no contiene el código fuente de Odoo "
+"completo**, solo es una colección de complementos. El servidor principal "
+"está en la versión de Comunidad. Cuando ejecutamos la versión Enterprise "
+"quiere decir que estamos ejecutando el servidor de la versión Community con "
+"la opción de addons-path configurada en el folder que contiene la versión "
+"Enterprise. Debe clonar tanto el repositorio de Community como de Enterprise"
+" para que la instalación de Odoo Enterprise funcione."
 
 #: ../../content/administration/install/install.rst:303
 #: ../../content/administration/install/install.rst:469
@@ -1987,12 +2054,18 @@ msgid ""
 "<https://www.python.org/downloads/windows/>`_ to download and install the "
 "latest version of Python 3 on your machine."
 msgstr ""
+"Odoo necesita Python 3.7 o más para poder ejecutarse. Visite `la página de "
+"descargas de Python <https://www.python.org/downloads/windows/>`_ para "
+"descargar e instalar la versión más reciente de Python 3 en su equipo."
 
 #: ../../content/administration/install/install.rst:308
 msgid ""
 "During installation, check **Add Python 3 to PATH**, then click **Customize "
 "Installation** and make sure that **pip** is checked."
 msgstr ""
+"Durante la instalación, marque **Agregue Python 3 a la RUTA**, después haga "
+"clic en **Personalización de la instalación** y asegúrese de que **pip** "
+"esté revisado."
 
 #: ../../content/administration/install/install.rst:311
 #: ../../content/administration/install/install.rst:474
@@ -2001,12 +2074,14 @@ msgid ""
 "If Python 3 is already installed, make sure that the version is 3.7 or "
 "above, as previous versions are not compatible with Odoo."
 msgstr ""
+"Si Python 3 ya está instalado, asegúrese de que sea la versión 3.7 o más, ya"
+" que las versiones previas no son compatibles con Odoo."
 
 #: ../../content/administration/install/install.rst:318
 #: ../../content/administration/install/install.rst:481
 #: ../../content/administration/install/install.rst:652
 msgid "Verify also that pip_ is installed for this version."
-msgstr ""
+msgstr "También verifique que pip_ esté instalado para esta versión."
 
 #: ../../content/administration/install/install.rst:327
 msgid ""
@@ -2014,6 +2089,9 @@ msgid ""
 "PostgreSQL <https://www.postgresql.org/download/windows/>`_ (supported "
 "version: 10.0 and later)."
 msgstr ""
+"Odoo usa PostgreSQL como un sistema de gestión de base de datos. `Descargue "
+"e instale PostgreSQL <https://www.postgresql.org/download/windows/>`_ "
+"(versión compatible: 10.0 y más avanzados)."
 
 #: ../../content/administration/install/install.rst:330
 #: ../../content/administration/install/install.rst:499
@@ -2022,16 +2100,20 @@ msgid ""
 "By default, the only user is `postgres` but Odoo forbids connecting as "
 "`postgres`, so you need to create a new PostgreSQL user:"
 msgstr ""
+"Por defecto, el único usuario es `postgres` pero Odoo no permite conectarse "
+"como `postgres`, así que necesita crear un nuevo usuario de PostgreSQL:"
 
 #: ../../content/administration/install/install.rst:333
 msgid ""
 "Add PostgreSQL's `bin` directory (by default: `C:\\\\Program "
 "Files\\\\PostgreSQL\\\\<version>\\\\bin`) to your `PATH`."
 msgstr ""
+"Agregue el directorio de `papelera` de PostgreSQL (por defecto: "
+"`C:\\\\Program Files\\\\PostgreSQL\\\\<version>\\\\bin`) a su `RUTA`."
 
 #: ../../content/administration/install/install.rst:335
 msgid "Create a postgres user with a password using the pg admin gui:"
-msgstr ""
+msgstr "Cree un usuario postgres con una contraseña usando la guía pgAdmin:"
 
 #: ../../content/administration/install/install.rst:337
 msgid "Open **pgAdmin**."
@@ -2039,27 +2121,35 @@ msgstr "Abrir **pgAdmin**."
 
 #: ../../content/administration/install/install.rst:338
 msgid "Double-click the server to create a connection."
-msgstr ""
+msgstr "Haga doble clic en el servidor para crear una conexión."
 
 #: ../../content/administration/install/install.rst:339
 msgid "Select :menuselection:`Object --> Create --> Login/Group Role`."
 msgstr ""
+"Seleccione :menuselection:`Objeto --> Crear --> Rol de Inicio se "
+"sesión/Grupo`."
 
 #: ../../content/administration/install/install.rst:340
 msgid "Enter the username in the **Role Name** field (e.g. `odoo`)."
 msgstr ""
+"Ingrese el nombre de usuario en el campo de **Nombre de la función** (por "
+"ejemplo, `odoo`)"
 
 #: ../../content/administration/install/install.rst:341
 msgid ""
 "Open the **Definition** tab and enter the password (e.g. ``odoo``), then "
 "click **Save**."
 msgstr ""
+"Abra la pestaña de **Definición** ingrese la contraseña (por ejemplo, "
+"``odoo``), después haga clic en **Guardar**."
 
 #: ../../content/administration/install/install.rst:342
 msgid ""
 "Open the **Privileges** tab and switch **Can login?** to `Yes` and **Create "
 "database?** to `Yes`."
 msgstr ""
+"Abra la pestaña de **Privilegios** y cambie **¿Puede iniciar sesión?** a "
+"`Sí` y **¿Crear una base de datos?** a `Sí`."
 
 #: ../../content/administration/install/install.rst:346
 #: ../../content/administration/install/install.rst:511
@@ -2075,6 +2165,11 @@ msgid ""
 "studio-2019>`_. When prompted, select **C++ build tools** in the "
 "**Workloads** tab and install them."
 msgstr ""
+"Antes de instalar las dependencias, debe descargar e instalar `Herramientas "
+"de creación para Visual Studio "
+"<https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-"
+"studio-2019>`_. Cuando se lo pida, seleccione **herramientas de creación "
+"C++** en la pestaña de **Carga de trabajo** e instálelo."
 
 #: ../../content/administration/install/install.rst:352
 #: ../../content/administration/install/install.rst:525
@@ -2083,6 +2178,8 @@ msgid ""
 "Odoo dependencies are listed in the `requirements.txt` file located at the "
 "root of the Odoo community directory."
 msgstr ""
+"Las dependencias de Odoo están enlistadas en el archivo `requirements.txt` "
+"que se encuentra en la raíz del directorio de Odoo community."
 
 #: ../../content/administration/install/install.rst:355
 #: ../../content/administration/install/install.rst:528
@@ -2092,6 +2189,9 @@ msgid ""
 "instances of Odoo or with your system. You can use virtualenv_ to create "
 "isolated Python environments."
 msgstr ""
+"Puede ser mejor no mezclar los paquetes de módulos python entre diferentes "
+"instancias de Odoo o con su sistema. Puede usar vitualenv_ para crear "
+"entornos Python aislados."
 
 #: ../../content/administration/install/install.rst:358
 msgid ""
@@ -2099,6 +2199,9 @@ msgid ""
 "and run **pip** on the requirements file in a terminal **with Administrator "
 "privileges**:"
 msgstr ""
+"Navegue a la ruta de su instalación de Odoo Community (`CommunityPath`) y "
+"ejecute **pip** en el campo de requisitos en una terminal **con privilegios "
+"de administrador**:"
 
 #: ../../content/administration/install/install.rst:372
 #: ../../content/administration/install/install.rst:545
@@ -2107,16 +2210,18 @@ msgid ""
 "For languages with right-to-left interface (such as Arabic or Hebrew), the "
 "package `rtlcss` is needed:"
 msgstr ""
+"Para idiomas que funcionan con una interfaz de izquierda a derecha (como las"
+" interfaces de árabe y hebreo) se necesita el paquete `rtlcss`:"
 
 #: ../../content/administration/install/install.rst:375
 msgid "Download and install `nodejs <https://nodejs.org/en/download/>`_."
-msgstr ""
+msgstr "Descargue e instale `nodejs <https://nodejs.org/en/download/>`_."
 
 #: ../../content/administration/install/install.rst:376
 #: ../../content/administration/install/install.rst:549
 #: ../../content/administration/install/install.rst:713
 msgid "Install `rtlcss`:"
-msgstr ""
+msgstr "Instale `rtlcss`:"
 
 #: ../../content/administration/install/install.rst:382
 msgid ""
@@ -2124,12 +2229,15 @@ msgid ""
 "`rtlcss.cmd` is located (typically: "
 "`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 msgstr ""
+"Edite la `RUTA` variable del entorno del sistema para agregar la carpeta "
+"donde se encuentra `rtlcss.cmd` (típicamente: "
+"`C:\\\\Users\\\\<user>\\\\AppData\\\\Roaming\\\\npm\\\\`)."
 
 #: ../../content/administration/install/install.rst:386
 #: ../../content/administration/install/install.rst:556
 #: ../../content/administration/install/install.rst:720
 msgid "Running Odoo"
-msgstr ""
+msgstr "Ejecutar Odoo"
 
 #: ../../content/administration/install/install.rst:388
 #: ../../content/administration/install/install.rst:558
@@ -2139,6 +2247,9 @@ msgid ""
 "bin`, the command-line interface of the server. It is located at the root of"
 " the Odoo Community directory."
 msgstr ""
+"Una vez que todas las dependencias estén configuradas, Odoo puede iniciarse "
+"ejecutando `odoo-bin`, la interfaz de la línea de comando del servidor. Se "
+"encuentra en la raíz del directorio de Odoo Community."
 
 #: ../../content/administration/install/install.rst:391
 #: ../../content/administration/install/install.rst:561
@@ -2148,6 +2259,9 @@ msgid ""
 " <reference/cmdline/server>` or a :ref:`configuration file "
 "<reference/cmdline/config>`."
 msgstr ""
+"Para configurar el servidor puede especificar :ref:`argumentos de las líneas"
+" de comando <reference/cmdline/server>` o un :ref:`archivo de configuración "
+"<reference/cmdline/config>`."
 
 #: ../../content/administration/install/install.rst:394
 #: ../../content/administration/install/install.rst:564
@@ -2157,28 +2271,34 @@ msgid ""
 " to the `addons-path` argument. Note that it must come before the other "
 "paths in `addons-path` for addons to be loaded correctly."
 msgstr ""
+"Para la edición de Enterprise, necesita agregar la ruta de los complementos "
+"de `enterprise` al argumento de `addons-path`. Tenga en cuenta que debe ser "
+"antes que otras rutas en `addons-path` para que los complementos se carguen "
+"correctamente."
 
 #: ../../content/administration/install/install.rst:398
 #: ../../content/administration/install/install.rst:568
 #: ../../content/administration/install/install.rst:732
 msgid "Common necessary configurations are:"
-msgstr ""
+msgstr "Estas son las configuraciones necesarias más comunes:"
 
 #: ../../content/administration/install/install.rst:400
 msgid "PostgreSQL user and password."
-msgstr ""
+msgstr "Usuario y contraseña de PostgreSQL"
 
 #: ../../content/administration/install/install.rst:401
 #: ../../content/administration/install/install.rst:573
 #: ../../content/administration/install/install.rst:737
 msgid "Custom addon paths beyond the defaults, to load your own modules."
 msgstr ""
+"Rutas de complementos personalizadas más allá de lo predeterminado para "
+"cargar los módulos."
 
 #: ../../content/administration/install/install.rst:403
 #: ../../content/administration/install/install.rst:575
 #: ../../content/administration/install/install.rst:739
 msgid "A typical way to run the server would be:"
-msgstr ""
+msgstr "Una forma típica de ejecutar el servidor sería:"
 
 #: ../../content/administration/install/install.rst:410
 msgid ""
@@ -2186,6 +2306,10 @@ msgid ""
 "`dbuser` is the PostgreSQL login, `dbpassword` is the PostgreSQL password "
 "and `mydb` is the default database to serve on `localhost:8069`."
 msgstr ""
+"Donde `CommunityPath` es la ruta de la instalación de Odoo Community, "
+"`dbuser` es el inicio de sesión de PostgreSQL, `dbpassword` es la contraseña"
+" de PostgreSQL y `mydb` es la base de datos automática que sirve en "
+"`localhost:8069`. "
 
 #: ../../content/administration/install/install.rst:415
 #: ../../content/administration/install/install.rst:586
@@ -2194,22 +2318,30 @@ msgid ""
 ":doc:`The exhaustive list of arguments for odoo-bin "
 "</developer/misc/other/cmdline>`."
 msgstr ""
+":doc:`La lista completa de argumentos para la papelera de "
+"odoo</developer/misc/other/cmdline>`."
 
 #: ../../content/administration/install/install.rst:471
 msgid ""
 "Odoo requires Python 3.7 or later to run. Use your package manager to "
 "download and install Python 3 on your machine if it is not already done."
 msgstr ""
+"Odoo necesita Python 3.7 o uno más reciente para poder ejecutarse. Use su "
+"gestor de paquetes para descargar e instalar Python 3 en su equipo si no lo "
+"ha hecho todavía."
 
 #: ../../content/administration/install/install.rst:490
 msgid ""
 "Odoo uses PostgreSQL as database management system. Use your package manager"
 " to download and install PostgreSQL (supported version: 10.0 and later)."
 msgstr ""
+"Odoo usa PostgreSQL sistema de gestión de base de datos.  Use su gestor de "
+"paquetes para descargar e instalar PostgreSQL (versión compatible: 10.0 y "
+"más avanzadas)."
 
 #: ../../content/administration/install/install.rst:493
 msgid "On Debian/Unbuntu, it can be achieved by executing the following:"
-msgstr ""
+msgstr "En Debian/Ubuntu, se puede lograr ejecutando lo siguiente:"
 
 #: ../../content/administration/install/install.rst:507
 #: ../../content/administration/install/install.rst:672
@@ -2217,6 +2349,8 @@ msgid ""
 "Because your PostgreSQL user has the same name as your Unix login, you will "
 "be able to connect to the database without password."
 msgstr ""
+"Ya que su usuario de PostgreSQL tiene el mismo nombre que su inicio de "
+"sesión de Unix, podrá conectarse a la base de datos sin una contraseña."
 
 #: ../../content/administration/install/install.rst:513
 msgid ""
@@ -2225,12 +2359,18 @@ msgid ""
 "are available in `-dev` or `-devel` packages for Python, PostgreSQL, "
 "libxml2, libxslt1, libevent, libsasl2 and libldap2."
 msgstr ""
+"Para librerías que usan código nativo es necesario instalar herramientas de "
+"desarrollo y dependencias nativas antes de instalar las dependencias Python "
+"de Odoo. Están disponibles en los paquetes `-dev` o `-devel` para Python, "
+"PostgreSQL, libxml2, libxslt1, libevent, libsasl2 y libldap2."
 
 #: ../../content/administration/install/install.rst:517
 msgid ""
 "On Debian/Unbuntu, the following command should install all the required "
 "libraries:"
 msgstr ""
+"En Debian/Ubuntu, este comando debería de instalar todas las bibliotecas "
+"necesarias:"
 
 #: ../../content/administration/install/install.rst:531
 #: ../../content/administration/install/install.rst:684
@@ -2238,10 +2378,12 @@ msgid ""
 "Navigate to the path of your Odoo Community installation (`CommunityPath`) "
 "and run **pip** on the requirements file:"
 msgstr ""
+"Vaya a la ruta de su instalación de Odoo Community (`CommunityPath`) y "
+"ejecute **pip** en el archivo de solicitudes:"
 
 #: ../../content/administration/install/install.rst:548
 msgid "Download and install **nodejs** and **npm** with your package manager."
-msgstr ""
+msgstr "Descargue e instale **nodejs** y **npm** con su gestor de paquetería."
 
 #: ../../content/administration/install/install.rst:570
 #: ../../content/administration/install/install.rst:734
@@ -2250,6 +2392,10 @@ msgid ""
 "defaults <http://initd.org/psycopg/docs/module.html>`_: connects over a UNIX"
 " socket on port `5432` with the current user and no password."
 msgstr ""
+"Usuario y contraseña de PostgreSQL. Odoo no tiene predeterminados fuera de "
+"los `predeterminados psycopg2 <http://initd.org/psycopg/docs/module.html>`_:"
+" conecta con un socket UNIX en el puerto `5432` con el usuario actual y sin "
+"contraseña."
 
 #: ../../content/administration/install/install.rst:582
 #: ../../content/administration/install/install.rst:746
@@ -2257,6 +2403,8 @@ msgid ""
 "Where `CommunityPath` is the path of the Odoo Community installation and "
 "`mydb` is the default database to serve on `localhost:8069`."
 msgstr ""
+"Donde `CommunityPath` es la ruta de la instalación de Odoo Community y "
+"`mydb` es la base de datos que funciona en `localhost:8069`."
 
 #: ../../content/administration/install/install.rst:589
 msgid "Mac OS"
@@ -2268,6 +2416,9 @@ msgid ""
 " (homebrew_, macports_) to download and install Python 3 on your machine if "
 "it is not already done."
 msgstr ""
+"Odoo necesita Python 3.7 o uno más reciente para poder ejecutarse. Use su "
+"gestor de paquetes preferido (homebrew_, macports_) para descargar e "
+"instalar Python 3 en su equipo si no lo ha hecho todavía. "
 
 #: ../../content/administration/install/install.rst:661
 msgid ""
@@ -2275,30 +2426,39 @@ msgid ""
 "<https://postgresapp.com>`_ to download and install PostgreSQL (supported "
 "version: 10.0 and later)."
 msgstr ""
+"Odoo usa PostgreSQL como sistema de gestión de base de datos.  Use "
+"`postgres.app <https://postgresapp.com>`_ para descargar e instalar "
+"PostgreSQL (versión compatible: 10.0 y más avanzadas)."
 
 #: ../../content/administration/install/install.rst:693
 msgid "Non-Python dependencies need to be installed with a package manager:"
 msgstr ""
+"Las dependencias que no sean Python necesitan instalarse con un gestor de "
+"paquetes:"
 
 #: ../../content/administration/install/install.rst:695
 msgid "Download and install the **Command Line Tools**:"
-msgstr ""
+msgstr "Descargue e instale las **Herramientas de líneas de comando**:"
 
 #: ../../content/administration/install/install.rst:701
 msgid ""
 "Download and install the package manager of your choice (homebrew_, "
 "macports_)."
 msgstr ""
+"Descargue e instale el gestor de paquetes que usted haya elegido (homebrew_,"
+" macports_)."
 
 #: ../../content/administration/install/install.rst:702
 msgid "Install non-python dependencies."
-msgstr ""
+msgstr "Instale dependencias que no sean python."
 
 #: ../../content/administration/install/install.rst:712
 msgid ""
 "Download and install **nodejs** with your preferred package manager "
 "(homebrew_, macports_)."
 msgstr ""
+"Descargue e instale **nodejs** con su gestor de paquete preferido "
+"(homebrew_, macports_)."
 
 #: ../../content/administration/install/install.rst:755
 #: ../../content/administration/maintain/update.rst:147
@@ -2310,14 +2470,17 @@ msgid ""
 "The full documentation on how to use Odoo with Docker can be found on the "
 "official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page."
 msgstr ""
+"La documentación completa sobre cómo usar Odoo con Docker se puede encontrar"
+" en la página oficial de Odoo `imágen de Odoo "
+"<https://hub.docker.com/_/odoo/>`_."
 
 #: ../../content/administration/maintain.rst:5
 msgid "Maintain"
-msgstr ""
+msgstr "Mantener"
 
 #: ../../content/administration/maintain/domain_names.rst:3
 msgid "Domain names"
-msgstr ""
+msgstr "Nombres de dominio"
 
 #: ../../content/administration/maintain/domain_names.rst:5
 msgid ""
@@ -2326,23 +2489,33 @@ msgid ""
 "address, such as ``www.odoo.com``, rather than its server's IP address with "
 "a series of numbers."
 msgstr ""
+"Un **nombre de dominio** funciona como una dirección a su sitio web. Hace "
+"que el internet sea mucho más accesible ya que permite que los usuarios "
+"escriban una dirección web valiosa, como ``www.odoo.com``, en lugar de las "
+"direcciones IP del servidor con una serie de números."
 
 #: ../../content/administration/maintain/domain_names.rst:9
 msgid ""
 "You can use a custom domain name to access your Odoo database and websites:"
 msgstr ""
+"Puede usar un nombre personalizado de dominio para acceder a su base de "
+"datos y sitios web:"
 
 #: ../../content/administration/maintain/domain_names.rst:11
 msgid ""
 "By :ref:`registering a free domain name with Odoo <domain-name/odoo-"
 "register>` (for Odoo Online databases)"
 msgstr ""
+"Al :ref:`registrar un nombre de dominio grtis con Odoo <domain-name/odoo-"
+"register>` (para bases de datos en línea de Odoo)"
 
 #: ../../content/administration/maintain/domain_names.rst:13
 msgid ""
 "By :ref:`configuring a custom domain that you already own <domain-"
 "name/existing>`."
 msgstr ""
+"Al :ref:`configurar un dominio personalizado que ya le pertenece <domain-"
+"name/existing>`."
 
 #: ../../content/administration/maintain/domain_names.rst:16
 msgid ""
@@ -2350,6 +2523,9 @@ msgid ""
 "a subdomain of ``odoo.com`` for both the URL and the emails (e.g., "
 "``https://example.odoo.com``)."
 msgstr ""
+"Las bases de datos de Odoo en línea y Odoo.sh, incluyendo los sitios web, "
+"usan, por defecto, el subdominio de ``odoo.com`` tanto para la URL como para"
+" los correos electrónicos (por ejemplo., ``https://ejemplo.odoo.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:20
 msgid ""
@@ -2358,10 +2534,14 @@ msgid ""
 "website with an address such as ``www.example.com`` rather than the default "
 "``example.odoo.com``."
 msgstr ""
+"Odoo ofrece un :ref:`nombre de dominio personalizado y gratis <domain-"
+"name/odoo-register> a todas las bases de dato de Odoo durante un año. "
+"Después, los visitantes pueden acceder a su sitio web con una dirección como"
+" ``www.example.com`` en lugar de la predeterminada, ``example.odoo.com``."
 
 #: ../../content/administration/maintain/domain_names.rst:27
 msgid "About domain names"
-msgstr ""
+msgstr "Sobre los nombres de dominio"
 
 #: ../../content/administration/maintain/domain_names.rst:29
 msgid ""
@@ -2370,6 +2550,10 @@ msgid ""
 " notice. We recommend you keep them *simple, short, easy to remember and "
 "spell*."
 msgstr ""
+"Tener un **buen nombre de dominio** es tan importante para su marca como el "
+"nombre de su empresa u organización, ya que es lo primero que verán sus "
+"visitantes. Le recomendamos que sean *simples, cortas y fáciles de "
+"escribir*."
 
 #: ../../content/administration/maintain/domain_names.rst:33
 msgid ""
@@ -2380,6 +2564,13 @@ msgid ""
 "to other websites than your main website or to specific pages (e.g., "
 "``experience.odoo.com`` points to a specific page.)"
 msgstr ""
+"Un **subdominio** es un dominio que es parte de otro dominio. Esto se "
+"refiere a la parte adicional que viene antes del nombre principal de "
+"dominio. Tradicionalmente, la mayoría de los sitios web usan el subdominio "
+"``www.``, pero también se puede usar cualquier serie de de letras. Puede "
+"usar los subdominios para dirigir a sus visitantes a otros sitios web que a "
+"su sitio web principal o a páginas específicas (ejemplo, "
+"``experience.odoo.com`` indica una página específica)."
 
 #: ../../content/administration/maintain/domain_names.rst:39
 msgid ""
@@ -2388,36 +2579,47 @@ msgid ""
 "servers, so any modification to the DNS can take up to 72 hours to propagate"
 " worldwide on all servers."
 msgstr ""
+"Todos los nombres de dominio están referenciados en el **Sistema de nombres "
+"de dominio**, o **DNS**, que funciona como un directorio enorme para el "
+"internet. Hay muchos servidores DNS, así que cualquier modificación al DNS "
+"puede tardar 72 horas en propagarse por todo el mundo y en todos los "
+"servidores."
 
 #: ../../content/administration/maintain/domain_names.rst:46
 msgid "Register a free domain name with Odoo"
-msgstr ""
+msgstr "Registre un nombre de dominio gratis con Odoo"
 
 #: ../../content/administration/maintain/domain_names.rst:48
 msgid ""
 "You can register a domain name for your Odoo Online database directly from "
 "Odoo Website or your database manager."
 msgstr ""
+"Puede registrar un nombre de dominio para su base de datos de Odoo en línea "
+"directamente desde su sitio web de Odoo o su gestor de base de datos."
 
 #: ../../content/administration/maintain/domain_names.rst:52
 msgid ""
 "Your domain name is **free for one year** if you register it with Odoo!"
 msgstr ""
+"¡Su nombre de dominio es **gratis por un año** si lo registra con Odoo!"
 
 #: ../../content/administration/maintain/domain_names.rst:53
 msgid ""
 "The domain name is registered with `Gandi <https://www.gandi.net/>`_, the "
 "domain name registrar."
 msgstr ""
+"El nombre de dominio se registra con `Gandi <https://www.gandi.net/>`_,el "
+"registrador de nombre de dominio."
 
 #: ../../content/administration/maintain/domain_names.rst:55
 msgid ""
 "You are the owner of the domain name and can use it for other purposes."
 msgstr ""
+"Usted es el dueño del nombre de dominio y puede usarlo para otros fines."
 
 #: ../../content/administration/maintain/domain_names.rst:56
 msgid "Odoo manages payment and technical support for you."
-msgstr ""
+msgstr "Odoo gestiona el pago y servicio de asistencia."
 
 #: ../../content/administration/maintain/domain_names.rst:58
 msgid ""
@@ -2426,24 +2628,36 @@ msgid ""
 "<https://www.odoo.com/my/databases>`_, click on the :guilabel:`settings` "
 "button next to your database, then on :guilabel:`Domain names`."
 msgstr ""
+"Para hacerlo, vaya a :menuselection:`Sitio web --> Vaya al sitio web --> "
+"Promocionar --> Nombre de dominio`. También puede abrir su `gestor de base "
+"de datos <https://www.odoo.com/my/databases>`_, haga clic en el botón de "
+":guilabel:`ajustes` a un lado de su base de datos, después en "
+":guilabel:`Nombres de dominio`."
 
 #: ../../content/administration/maintain/domain_names.rst:66
 msgid ""
 "Search for the domain name of your choice to check its availability, then "
 "select the one you want to register for your website."
 msgstr ""
+"Busque el nombre de dominio de su elección para revisar si está disponible, "
+"después seleccione el que quiere registrar para su sitio web."
 
 #: ../../content/administration/maintain/domain_names.rst:73
 msgid ""
 "Next, fill in the form with your information to become the domain name "
 "owner."
 msgstr ""
+"Después, llene el formulario con su información para convertirse en el dueño"
+" del nombre del dominio."
 
 #: ../../content/administration/maintain/domain_names.rst:75
 msgid ""
 "Your domain name is directly linked to your database, but you still have to "
 ":ref:`map your domain name with your website <domain-name/website-map>`."
 msgstr ""
+"Su nombre de dominio está directamente vinculado a su base de datos, pero "
+"todavía debe :ref:`mapear su nombre de dominio con su base de datos <domain-"
+"name/website-map>`."
 
 #: ../../content/administration/maintain/domain_names.rst:79
 msgid ""
@@ -2452,14 +2666,18 @@ msgid ""
 "request and your website to avoid abuse. This process may take up to three "
 "days."
 msgstr ""
+"También hay nombres de dominio gratis disponibles en las bases de datos de "
+"Odoo en línea (si instaló solo una aplicación, por ejemplo). En este caso, "
+"Odoo revisa su petisción y su sitio web para evitar abuso. Puede que este "
+"proceso tarde hasta 3 días."
 
 #: ../../content/administration/maintain/domain_names.rst:82
 msgid "This is not available for Odoo.sh databases yet."
-msgstr ""
+msgstr "Esto todavía no está disponible para bases de datos de Odoo.sh."
 
 #: ../../content/administration/maintain/domain_names.rst:87
 msgid "Manage your domain name registered with Odoo"
-msgstr ""
+msgstr "Gestione su nombre de dominio registrado con Odoo"
 
 #: ../../content/administration/maintain/domain_names.rst:89
 msgid ""
@@ -2469,21 +2687,31 @@ msgid ""
 "button next to your database, on :guilabel:`Domain names`, and then on "
 ":guilabel:`Contacts` or :guilabel:`DNS`."
 msgstr ""
+"Para gestionar los registros en el DS del nombre de su dominio que registró "
+"con Odoo o para visualizar los contactos asociados con él, abra su `gestor "
+"de bases de datos <https://www.odoo.com/my/databases>`_, haga clic en el "
+"botón de :guilabel:`ajustes` a un lado de su base de datos, en "
+":guilabel:`nombres de dominio` y después en :guilabel:`Contactos` o en "
+":guilabel:`DNS`."
 
 #: ../../content/administration/maintain/domain_names.rst:99
 msgid ""
 "Please `submit a support ticket <https://www.odoo.com/help>`_ if you need "
 "further assistance to manage your domain name."
 msgstr ""
+"`Cree un ticket de soporte <https://www.odoo.com/help>`_ si necesita más "
+"asistencia para gestionar su nombre de dominio."
 
 #: ../../content/administration/maintain/domain_names.rst:105
 msgid "Configure your existing domain name"
-msgstr ""
+msgstr "Configure su nombre de dominio existente"
 
 #: ../../content/administration/maintain/domain_names.rst:107
 msgid ""
 "If you already own a domain name, you can use it to point to your website."
 msgstr ""
+"Si ya es dueño de un nombre de dominio, puede usarlo para indicar su sitio "
+"web."
 
 #: ../../content/administration/maintain/domain_names.rst:109
 msgid ""
@@ -2491,23 +2719,32 @@ msgid ""
 "name/ssl>`, we highly recommend that you proceed with the following actions "
 "in this order:"
 msgstr ""
+"Para evitar cualquier problema con el :ref:`certificado de validación de SSL"
+" <domain-name/ssl>`, le recomendamos que realice las siguientes acciones en "
+"este orden:"
 
 #: ../../content/administration/maintain/domain_names.rst:112
 msgid ""
 ":ref:`Add a CNAME record <domain-name/cname>` on your domain name's DNS "
 "zone."
 msgstr ""
+":ref:`Agregue un registro CNAME <domain-name/cname>` en la zona DNS de su "
+"nombre de dominio."
 
 #: ../../content/administration/maintain/domain_names.rst:113
 msgid ""
 ":ref:`Map your domain name with your Odoo database <domain-name/db-map>`."
 msgstr ""
+":ref:`Mapee su nombre de dominio con su base de datos de Odoo <domain-"
+"name/db-map>`."
 
 #: ../../content/administration/maintain/domain_names.rst:114
 msgid ""
 ":ref:`Map your domain name with your Odoo website <domain-name/website-"
 "map>`."
 msgstr ""
+":ref:`Mapee su nombre de dominio con su sitio web de Odoo <domain-"
+"name/website-map>`."
 
 #: ../../content/administration/maintain/domain_names.rst:119
 msgid "Add a CNAME record"
@@ -2518,12 +2755,17 @@ msgid ""
 "A **CNAME record** is a type of DNS record that points to the IP address of "
 "another website rather than to directly to an IP address."
 msgstr ""
+"Un **registro CNAME** es un tipo de registro DNS que indica a la dirección "
+"de IP de otro sitio web en lugar de redireccionar directamente a una "
+"dirección IP."
 
 #: ../../content/administration/maintain/domain_names.rst:124
 msgid ""
 "You need a CNAME record that points to your Odoo database. The requirements "
 "are detailed in your database manager."
 msgstr ""
+"Necesita un registro de CNAME que lo lleve a su base de datos de Odoo. Los "
+"requisitos están detallados en su gestor de bases de datos."
 
 #: ../../content/administration/maintain/domain_names.rst:129
 #: ../../content/administration/maintain/domain_names.rst:199
@@ -2536,6 +2778,8 @@ msgid ""
 "The target address is the current address of your database, as defined at "
 "its creation (e.g., ``example.odoo.com``)"
 msgstr ""
+"La dirección objetivo es la dirección actual de su base de datos, como se "
+"definió al crearla (por ejemplo, ``example.odoo.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:134
 #: ../../content/administration/maintain/domain_names.rst:213
@@ -2550,6 +2794,8 @@ msgid ""
 "Your project's main address is defined in :menuselection:`Settings --> "
 "Project Name`."
 msgstr ""
+"La dirección principal de su proyecto está definido en "
+":menuselection:`Ajustes --> Nombre de proyecto`."
 
 #: ../../content/administration/maintain/domain_names.rst:138
 msgid ""
@@ -2558,21 +2804,29 @@ msgid ""
 "Settings --> Custom domains`, and click on :guilabel:`How to set up my "
 "domain?`. A message indicates which address your CNAME record should target."
 msgstr ""
+"Si quiere que el objetivo sea una rama específica (producción, etapa de "
+"prueba o desarrollo), vaya a :menuselection:`Ramas --> seleccione su rama "
+"--> Ajustes --> Dominios personalizados` y haga clic en :guilabel:`¿Cómo "
+"configurar mi dominio?`. Un mensaje indica qué dirección debería ser el "
+"objetivo de su registro CNAME."
 
 #: ../../content/administration/maintain/domain_names.rst:143
 #: ../../content/administration/maintain/domain_names.rst:185
 msgid "Open your domain name's manager dashboard."
-msgstr ""
+msgstr "Abra el tablero del gestor de nombre de dominio."
 
 #: ../../content/administration/maintain/domain_names.rst:144
 msgid ""
 "Open the **DNS zone** management page for the domain name you want to "
 "configure."
 msgstr ""
+"Abra la página de gestión de **zona DNS** para el nombre de dominio que "
+"quiere configurar"
 
 #: ../../content/administration/maintain/domain_names.rst:145
 msgid "Create a **CNAME record** pointing to the address of your database."
 msgstr ""
+"Cree un **registro CNAME** que lleve a la dirección de su base de datos."
 
 #: ../../content/administration/maintain/domain_names.rst:147
 msgid ""
@@ -2580,6 +2834,9 @@ msgid ""
 "(``www.example.com``, you can of course use any domain name of your choice, "
 "with any subdomain (e.g., ``anything.example.com``)."
 msgstr ""
+"Aunque Odoo sugiere crear un registro CNAME para su subdominio ``www.`` "
+"(``www.example.com``). Puede usar cualquier nombre de dominio de su elección"
+" con cualquier subdominio (``anything.example.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:152
 msgid ""
@@ -2588,6 +2845,11 @@ msgid ""
 "database primarily with the domain ``www.example.com`` but also with the "
 ":ref:`naked domain <domain-name/naked-domain>` ``example.com``."
 msgstr ""
+"Usted es el dueño del nombre de dominio ``ejemplo.com``, y tiene una base de"
+" datos de Odoo en línea en la dirección `ejemplo.odoo.com``. Querrá ingresar"
+" a su base de datos de Odoo principalmente con el dominio "
+"``www.ejemplo.com`` pero también con el :ref:`dominio desnudo <domain-"
+"name/naked-domain>` ``ejemplo.com``."
 
 #: ../../content/administration/maintain/domain_names.rst:157
 msgid ""
@@ -2596,15 +2858,21 @@ msgid ""
 "following rule and adds it to your DNS zone: ``www IN CNAME "
 "example.odoo.com.``"
 msgstr ""
+"Para hacerlo, debe crear un registro CNAME para el subdominio ``www`` que "
+"tenga ``example.odoo.com`` como objetivo. El gerente de la zona DNS genera "
+"la siguiente regla y la agrega a su zona DNS: ``www EN CNAME "
+"example.odoo.com.``"
 
 #: ../../content/administration/maintain/domain_names.rst:161
 msgid ""
 "You also create a redirection from ``example.com`` to ``wwww.example.com``."
 msgstr ""
+"También crea una redirección desde ``ejemplo.com`` a ``wwww.ejemplo.com``."
 
 #: ../../content/administration/maintain/domain_names.rst:163
 msgid "Your new DNS records are propagated to all DNS servers."
 msgstr ""
+"Sus registros nuevos de DNS se propagan a todos los servidores de DNS."
 
 #: ../../content/administration/maintain/domain_names.rst:166
 msgid "Here are some specific guidelines to create a CNAME record:"
@@ -2612,7 +2880,7 @@ msgstr "Aquí hay algunos lineamientos para crear un record CNAME:"
 
 #: ../../content/administration/maintain/domain_names.rst:168
 msgid "`GoDaddy <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
-msgstr ""
+msgstr "`GoDaddy <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:169
 msgid ""
@@ -2620,6 +2888,9 @@ msgid ""
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
 "to-create-a-cname-record-for-your-domain>`_"
 msgstr ""
+"`Namecheap "
+"<https://www.namecheap.com/support/knowledgebase/article.aspx/9646/2237/how-"
+"to-create-a-cname-record-for-your-domain>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:170
 msgid ""
@@ -2627,12 +2898,17 @@ msgid ""
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
 "a-new-dns-record>`_"
 msgstr ""
+"`OVH "
+"<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/#add-"
+"a-new-dns-record>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:171
 msgid ""
 "`CloudFlare <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
 msgstr ""
+"`CloudFlare <https://support.cloudflare.com/hc/en-"
+"us/articles/360019093151>`_"
 
 #: ../../content/administration/maintain/domain_names.rst:172
 msgid ""
@@ -2642,35 +2918,45 @@ msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:177
 msgid "Naked domain"
-msgstr ""
+msgstr "Dominio desnudo"
 
 #: ../../content/administration/maintain/domain_names.rst:179
 msgid ""
 "A **naked domain** is a domain name that doesn't have any subdomain at the "
 "beginning of the address (e.g., ``odoo.com`` instead of ``www.odoo.com``)."
 msgstr ""
+"Un **dominio desnudo** es un nombre de dominio que no tiene subdominio al "
+"inicio de la dirección (por ejemplo, ``odoo.com`` en lugar de "
+"``www.odoo.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:182
 msgid ""
 "You may want your naked domain to redirect to your website as some visitors "
 "may not type the full domain name to access your website."
 msgstr ""
+"Lo más probable es que quiera que su dominio desnudo redireccione a su sitio"
+" web, ya que algunos visitantes no escribirán el nombre de dominio completo "
+"para ir a su sitio web."
 
 #: ../../content/administration/maintain/domain_names.rst:186
 msgid ""
 "Create a **redirection** from the naked domain (``example.com``) to your "
 "main domain name (``www.example.com``)."
 msgstr ""
+"Cree una **redirección** desde el dominio desnudo (``ejemplo.com``) al "
+"nombre de su dominio (``www.ejemplo.com``)."
 
 #: ../../content/administration/maintain/domain_names.rst:190
 msgid ""
 "Depending on your domain name registrar, this redirection may be already "
 "pre-configured."
 msgstr ""
+"Dependiendo en el registrador de su nombre de dominio, esta redirección "
+"puede que ya esté preconfigurada."
 
 #: ../../content/administration/maintain/domain_names.rst:195
 msgid "Map your domain name with your Odoo database"
-msgstr ""
+msgstr "Mapee su nombre de dominio con su base de datos de Odoo."
 
 #: ../../content/administration/maintain/domain_names.rst:201
 msgid ""
@@ -2679,6 +2965,10 @@ msgid ""
 "names`, and then on :guilabel:`Use my own domain` at the bottom of the right"
 " column."
 msgstr ""
+"Abra su `gestor de base de datos <https://www.odoo.com/my/databases>`_, haga"
+" clic en el botón de :guilabel:`ajustes` a un lado de su base de datos, en "
+":guilabel:`Nombres de dominio`, y después en :guilabel:`Usar su propio "
+"dominio` al final de la columna derecha."
 
 #: ../../content/administration/maintain/domain_names.rst:205
 msgid ""
@@ -2686,6 +2976,10 @@ msgid ""
 ":guilabel:`Verify` to check if the CNAME record is correctly configured. "
 "Once done, click on :guilabel:`I confirm, it's done`."
 msgstr ""
+"Escriba el nombre de dominio que quiere agregar a esta base de datos, "
+"después haga clic en :guilabel:`Verificar` para saber si el registro CNAME "
+"está configurado correctamente. Una vez que lo haya hecho, haga clic en "
+":guilabel:`Confirmo, está listo`."
 
 #: ../../content/administration/maintain/domain_names.rst:215
 msgid ""
@@ -2693,18 +2987,26 @@ msgid ""
 "Custom domains`, type the domain name you want to add to this database, then"
 " click on :guilabel:`Add domain`."
 msgstr ""
+"Vaya a :menuselection:`Ramas --> seleccione su rama --> Ajustes --> Dominios"
+" personalizados`, ingrese el nombre de dominio que quiere agregar a esta "
+"base de datos, después haga clic en :guilabel:`Agregar dominio`."
 
 #: ../../content/administration/maintain/domain_names.rst:223
 msgid ""
 ":ref:`Odoo.sh branches: settings tab <odoosh-gettingstarted-branches-tabs-"
 "settings>`"
 msgstr ""
+":ref:`Odoo.sh ramas: pestaña de ajustes <odoosh-gettingstarted-branches-"
+"tabs-settings>`"
 
 #: ../../content/administration/maintain/domain_names.rst:226
 msgid ""
 "Make sure to :ref:`add a CNAME record <domain-name/cname>` to your domain "
 "name's DNS **before** mapping your domain name with your Odoo database."
 msgstr ""
+"Asegúrese de :ref:`agregar un registro CNAME <domain-name/cname>` al DNS de "
+"su dominio **antes** de mapear el nombre de su dominio a la base de datos de"
+" Odoo."
 
 #: ../../content/administration/maintain/domain_names.rst:229
 msgid ""
@@ -2713,6 +3015,10 @@ msgid ""
 "This is often displayed by web browsers as a warning such as *\"Your "
 "connection is not private\"*."
 msgstr ""
+"Si no lo hace, puede impedir la validación del :ref:`certificado SSL "
+"<domain-name/ssl>` y resultará en un error de *desfase con el nombre del "
+"certificado*. Los navegadores web normalmente muestran esto como una "
+"advertencia como *\"Su conexión no es privada\"*."
 
 #: ../../content/administration/maintain/domain_names.rst:233
 msgid ""
@@ -2721,10 +3027,15 @@ msgid ""
 "happen. Otherwise, please `submit a support ticket "
 "<https://www.odoo.com/help>`_ including screenshots of your CNAME records."
 msgstr ""
+"Si este es el caso y agregó el nombre de dominio a los ajustes de su base de"
+" datos hace menos de cinco días, espere horas ya que la validación puede que"
+" siga pendiente. De otra manera, `cree un ticket de soporte "
+"<https://www.odoo.com/help>`_ en el que incluya las capturas de pantalla de "
+"sus registros de CNAME."
 
 #: ../../content/administration/maintain/domain_names.rst:240
 msgid "SSL encryption (HTTPS protocol)"
-msgstr ""
+msgstr "Cifrado SSL (protocolo HTTPS)"
 
 #: ../../content/administration/maintain/domain_names.rst:242
 msgid ""
@@ -2733,6 +3044,10 @@ msgid ""
 "which appears as an ``https://`` protocol at the beginning of your web "
 "address, rather than a non-secure ``http://`` protocol."
 msgstr ""
+"**Codificación SSL** es un protocolo de seguridad en internet basado en "
+"codificación. Permite que sus visitantes naveguen por su sitio web con una "
+"conexión segura que aparece como un protocolo ``https://`` al inicio de su "
+"dirección web, en lugar de un protocolo ``http://`` que no es seguro."
 
 #: ../../content/administration/maintain/domain_names.rst:246
 msgid ""
@@ -2741,32 +3056,44 @@ msgid ""
 "Encrypt Certificate Authority and ACME protocol "
 "<https://letsencrypt.org/how-it-works/>`_."
 msgstr ""
+"Odoo genera un certificado SSL separado para cada dominio :ref:`mapeado en "
+"el gestor de bases de datos <domain-name/db-map>`, usando la integración con"
+" `Vamos a codificar el certificado de autoridad y protocolo ACME "
+"<https://letsencrypt.org/how-it-works/>`_."
 
 #: ../../content/administration/maintain/domain_names.rst:251
 msgid "The certificate generation may take up to 24h."
-msgstr ""
+msgstr "Es posible que tome 24 horas generar el certificado."
 
 #: ../../content/administration/maintain/domain_names.rst:252
 msgid ""
 "Several attempts to validate your certificate are made during the five days "
 "following the moment you add your domain name in your database's settings."
 msgstr ""
+"Se hacen varios intentos para validar su certificado durante los cinco días "
+"después del momento en el que agrega el nombre de su dominio a los ajustes "
+"de la base de datos."
 
 #: ../../content/administration/maintain/domain_names.rst:254
 msgid ""
 "If you already use another service, you can keep using it or simply change "
 "for Odoo."
 msgstr ""
+"Si ya usó otro servicio, puede seguir usándolo o simplemente cambiarse a "
+"Odoo."
 
 #: ../../content/administration/maintain/domain_names.rst:259
 msgid "Web base URL of a database"
-msgstr ""
+msgstr "URL web base de la base de datos"
 
 #: ../../content/administration/maintain/domain_names.rst:262
 msgid ""
 "If you have Odoo Website, you can disregard this part and directly :ref:`map"
 " your domain name with your website <domain-name/website-map>`."
 msgstr ""
+"Si tiene el Sitio web de Odoo, puede ignorar esta parte y :ref:`mapear su "
+"propio nombre de dominio a su sitio web <domain-name/website-map>` "
+"directamente."
 
 #: ../../content/administration/maintain/domain_names.rst:265
 msgid ""
@@ -2774,6 +3101,9 @@ msgid ""
 "website address and all the links sent to your customers (e.g., quotations, "
 "portal links, etc.)."
 msgstr ""
+"La **URL web base** de una base de datos, o **URL raíz** afecta la dirección"
+" web principal y todos los enlaces que se enviaron a sus clientes (por "
+"ejemplo, cotizaciones, enlaces al portal, entre otros)."
 
 #: ../../content/administration/maintain/domain_names.rst:268
 msgid ""
@@ -2781,6 +3111,10 @@ msgid ""
 "log in as an administrator of your database (any user in the *Settings* "
 "group) from the login screen."
 msgstr ""
+"Para configurarlo, vaya a su base de datos de Odoo con su dirección "
+"personalizada, después inicie sesión como administrador de su base de datos "
+"(cualquier usuario en el grupo *Ajustes*) desde la pantalla de inicio de "
+"sesión."
 
 #: ../../content/administration/maintain/domain_names.rst:272
 msgid ""
@@ -2788,6 +3122,10 @@ msgid ""
 "``example.odoo.com`` also updates the web base URL of your database. See "
 "below to prevent these automatic updates."
 msgstr ""
+"Si conecta su base de datos con la dirección de subdominio original de Odoo "
+"(por ejemplo, ``example.odoo.com``) también se actualiza la URL web base de "
+"su base de datos. Lea más abajo cómo evitar estas actualizaciones "
+"automáticas."
 
 #: ../../content/administration/maintain/domain_names.rst:275
 msgid ""
@@ -2795,6 +3133,9 @@ msgid ""
 ":ref:`developer mode <developer-mode>`, then go to :menuselection:`Settings "
 "--> Technical --> System Parameters`."
 msgstr ""
+"También lo puede hacer manualmente. Para hacerlo, active el :ref:`modo de "
+"desarrollo <developer-mode>`, después vaya a :menuselection:`Ajustes --> "
+"Técnico --> Parámetros del sistema`."
 
 #: ../../content/administration/maintain/domain_names.rst:278
 msgid ""
@@ -2802,66 +3143,88 @@ msgid ""
 " enter the full address of your website as value, such as "
 "``https://www.example.com``."
 msgstr ""
+"Encuentre la llave llamada ``web.base.url`` (o cree una si no existe) y "
+"después ingrese la dirección completa de su sitio web como valor, por "
+"ejemplo, ``https://www.ejemplo.com``."
 
 #: ../../content/administration/maintain/domain_names.rst:282
 msgid ""
 "The URL must include the protocol ``https://`` (or ``http://``) and must not"
 " end with a slash (``/``)."
 msgstr ""
+"El URL debe incluir el protocolo ``https://`` (o ``http://``)  y no debe "
+"terminar con la barra diagonal (``/``)."
 
 #: ../../content/administration/maintain/domain_names.rst:285
 msgid ""
 "To prevent the automatic update of the web base URL when an administrator "
 "logs in the database, you can create the following System Parameter:"
 msgstr ""
+"Para prevenir la actualización automática de la URL web base cuando un "
+"administrador inicie sesión en la base de datos, puede crear el parámetro "
+"del sistema:"
 
 #: ../../content/administration/maintain/domain_names.rst:288
 msgid "key: ``web.base.url.freeze``"
-msgstr ""
+msgstr "clave: ``web.base.url.freeze``"
 
 #: ../../content/administration/maintain/domain_names.rst:289
 msgid "value: ``True``"
-msgstr ""
+msgstr "valor: ``True``"
 
 #: ../../content/administration/maintain/domain_names.rst:294
 msgid "Map your domain name with your website"
-msgstr ""
+msgstr "Mapee el nombre del dominio con el sitio web"
 
 #: ../../content/administration/maintain/domain_names.rst:296
 msgid ""
 "Mapping your domain name to your website isn't the same as mapping it with "
 "your database:"
 msgstr ""
+"Mapear el nombre de su dominio a su sitio web no es lo mismo que mapearlo "
+"con su base de datos:"
 
 #: ../../content/administration/maintain/domain_names.rst:298
 msgid ""
 "It defines your domain name as the main one for your website, helping search"
 " engines to index your website properly."
 msgstr ""
+"Define el nombre del dominio como el principal para su sitio web, lo que le "
+"ayuda a los buscadores a indexar su sitio web apropiadamente."
 
 #: ../../content/administration/maintain/domain_names.rst:300
 msgid ""
 "It defines your domain name as the base URL for your database, including the"
 " portal links sent by email to your customers."
 msgstr ""
+"Define su nombre de domino como la URL base para su base de datos, "
+"incluyendo los enlaces del portal que enviaron sus clientes."
 
 #: ../../content/administration/maintain/domain_names.rst:302
 msgid ""
 "If you have multiple websites, it maps your domain name with the appropriate"
 " website."
 msgstr ""
+"Si tiene varios sitios web, mapea el nombre de su dominio al sitio web "
+"apropiado."
 
 #: ../../content/administration/maintain/domain_names.rst:304
 msgid ""
 "Go to :menuselection:`Website --> Configuration --> Settings --> Website "
 "Info`. If you have multiple websites, select the one you want to configure."
 msgstr ""
+"Vaya a :menuselection:`Sitio web --> Configuración --> Ajustes --> "
+"Información del sitio web`. Si tiene varios sitios web, seleccione el que "
+"quiere configurar."
 
 #: ../../content/administration/maintain/domain_names.rst:307
 msgid ""
 "In the :guilabel:`Domain` field, fill in the web address of your website "
 "(e.g., ``https://www.example.com``) and click on :guilabel:`Save`."
 msgstr ""
+"En el campo de :guilabel:`Dominio`, llene las direcciones web de su sitio "
+"web (por ejemplo, ``https://www.ejemplo.com``) y haga clic en "
+":guilabel:`Guardar`."
 
 #: ../../content/administration/maintain/domain_names.rst:315
 msgid ""
@@ -2869,6 +3232,9 @@ msgid ""
 "indexing both your custom domain name ``www.example.com`` and your original "
 "odoo database address ``example.odoo.com``."
 msgstr ""
+"Mapear su nombre de dominio con su sitio web de Odoo no permite que Google "
+"indexe tanto su nombre de dominio personalizado ``www.ejemplo.com`` como la "
+"dirección original de su base de datos de Odoo ``ejemplo.odoo.com``."
 
 #: ../../content/administration/maintain/domain_names.rst:318
 msgid ""
@@ -2877,6 +3243,10 @@ msgid ""
 "`Google Search Console <https://search.google.com/search-console/welcome>`_ "
 "to fix this."
 msgstr ""
+"Si ambas direcciones ya están indexadas, puede que pase tiempo antes de que "
+"Google quite la indexación de la segunda dirección. También puede usar la "
+"`Consola de búsqueda de Google <https://search.google.com/search-"
+"console/welcome>`_ para arreglar esto."
 
 #: ../../content/administration/maintain/domain_names.rst:323
 msgid ""
@@ -2886,6 +3256,11 @@ msgid ""
 " the :ref:`base URL <domain-name/web-base-url>` according to the company in "
 "use."
 msgstr ""
+"Si tiene varios sitios web y empresas en su base de datos, asegúrese de "
+"seleccionar la :guilabel:`Empresa` correcta en los ajustes de sitio web, "
+"junto a los ajustes del :guilabel:`Dominio`. Hacer esto le indica a Odoo qué"
+" URL usar como la :ref:`URL base <domain-name/web-base-url>` según la "
+"empresa que se está usando."
 
 #: ../../content/administration/maintain/domain_names.rst:329
 msgid ":doc:`/applications/general/email_communication/email_servers`"
@@ -2893,41 +3268,43 @@ msgstr ":doc:`/applications/general/email_communication/email_servers`"
 
 #: ../../content/administration/maintain/enterprise.rst:6
 msgid "Upgrade Community to Enterprise"
-msgstr ""
+msgstr "Actualizar de Community a Enterprise"
 
 #: ../../content/administration/maintain/enterprise.rst:8
 msgid ""
 "Depending on your current installation, there are multiple ways to upgrade "
 "your community version. In any case the basic guidelines are:"
 msgstr ""
+"Dependiendo en la instalación actual, hay varias maneras de actualizar la "
+"versión Community. En cualquier caso, las reglas básicas son:"
 
 #: ../../content/administration/maintain/enterprise.rst:12
 #: ../../content/administration/maintain/enterprise.rst:31
 #: ../../content/administration/maintain/enterprise.rst:63
 #: ../../content/administration/maintain/enterprise.rst:80
 msgid "Backup your community database"
-msgstr ""
+msgstr "Respalde su base de datos de Community"
 
 #: ../../content/administration/maintain/enterprise.rst:17
 #: ../../content/administration/maintain/enterprise.rst:62
 msgid "Shutdown your server"
-msgstr ""
+msgstr "Cierre su servidor "
 
 #: ../../content/administration/maintain/enterprise.rst:19
 msgid "Install the web_enterprise module"
-msgstr ""
+msgstr "Instale el módulo web_enterprise"
 
 #: ../../content/administration/maintain/enterprise.rst:21
 msgid "Restart your server"
-msgstr ""
+msgstr "Reinicie su servidor"
 
 #: ../../content/administration/maintain/enterprise.rst:23
 msgid "Enter your Odoo Enterprise Subscription code"
-msgstr ""
+msgstr "Ingrese su código de suscripción para Odoo Enterprise"
 
 #: ../../content/administration/maintain/enterprise.rst:29
 msgid "On Linux, using an installer"
-msgstr ""
+msgstr "En Linux, usando un instalador"
 
 #: ../../content/administration/maintain/enterprise.rst:33
 msgid "Stop the odoo service"
@@ -2937,10 +3314,12 @@ msgstr "Parar el servicio odoo"
 msgid ""
 "Install the enterprise .deb (it should install over the community package)"
 msgstr ""
+"Instale el .deb de Enterprise (debería volver a instalar el paquete de "
+"community)"
 
 #: ../../content/administration/maintain/enterprise.rst:45
 msgid "Update your database to the enterprise packages using"
-msgstr ""
+msgstr "Actualice su base de datos a los paquetes de enterprise usando"
 
 #: ../../content/administration/maintain/enterprise.rst:51
 msgid ""
@@ -2949,10 +3328,14 @@ msgid ""
 " Enterprise Subscription by entering the code you received by e-mail in the "
 "form input"
 msgstr ""
+"Debería poder conectar su instancia de Odoo Enterprise usando sus medios de "
+"identificación usuales. Después puede vincular su base de datos con su "
+"suscripción de Odoo Enterprise ingresando el código que recibió en su correo"
+" electrónico cuando llenó el formulario"
 
 #: ../../content/administration/maintain/enterprise.rst:57
 msgid "On Linux, using the source code"
-msgstr ""
+msgstr "En Linux, usando el código fuente"
 
 #: ../../content/administration/maintain/enterprise.rst:59
 msgid ""
@@ -2960,20 +3343,25 @@ msgid ""
 "probably have your own favourite. You may need to adapt sections to your "
 "usual workflow."
 msgstr ""
+"Hay muchas maneras de lanzar su servidor cuando se utilizan fuentes, y "
+"probablemente tenga su propia favorita. Puede que tenga que adaptar las "
+"secciones a su flujo de trabajo habitual."
 
 #: ../../content/administration/maintain/enterprise.rst:64
 msgid ""
 "Update the ``--addons-path`` parameter of your launch command (see "
 ":ref:`setup/install/source`)"
 msgstr ""
+"Actualice el parámetro ``--addons-path`` de su comando de inicio (vea "
+":ref:`setup/install/source`)"
 
 #: ../../content/administration/maintain/enterprise.rst:65
 msgid "Install the web_enterprise module by using"
-msgstr ""
+msgstr "Instale el módulo de web_enterprise con"
 
 #: ../../content/administration/maintain/enterprise.rst:71
 msgid "Depending on the size of your database, this may take some time."
-msgstr ""
+msgstr "Dependiendo el tamaño de su base de datos, puede que tarde un poco."
 
 #: ../../content/administration/maintain/enterprise.rst:73
 msgid ""
@@ -2982,6 +3370,10 @@ msgid ""
 "Odoo Enterprise Subscription by entering the code you received by e-mail in "
 "the form input"
 msgstr ""
+"Reinicie su servidor con los complementos de ruta del punto 3 actualizados. "
+"Debería poder conectarse a su instancia. Después puede vincular su base de "
+"datos con su suscripción a Odoo Enterprise, para esto solo debe ingresar el "
+"código que recibió por correo electrónico al llenar el formulario"
 
 #: ../../content/administration/maintain/enterprise.rst:78
 msgid "On Windows"
@@ -2992,6 +3384,8 @@ msgid ""
 "Uninstall Odoo Community (using the Uninstall executable in the installation"
 " folder) - PostgreSQL will remain installed"
 msgstr ""
+"Desinstalle Odoo Community (usando el archivo ejecutable \"Uninstall\" que "
+"se encuentra en la carpeta de instalación) - PostgreSQL seguirá instalado"
 
 #: ../../content/administration/maintain/enterprise.rst:88
 msgid ""
@@ -3000,12 +3394,19 @@ msgid ""
 "installation (this folder still contains the PostgreSQL installation). "
 "Uncheck ``Start Odoo`` at the end of the installation"
 msgstr ""
+"Ejecute el instalador de Odoo Enterprise y siga los espacios como siempre. "
+"Al elegir la ruta de instalación puede configurar la carpeta de la "
+"instalación de Community (esta carpeta sigue conteniendo la instalación de "
+"PostgreSQL). Quite la marca de ``Ejecutar Odoo`` al final de la instalación"
 
 #: ../../content/administration/maintain/enterprise.rst:96
 msgid ""
 "Using a command window, update your Odoo Database using this command (from "
 "the Odoo installation path, in the server subfolder)"
 msgstr ""
+"Con ayuda de la ventana de comando, actualice su base de datos de Odoo con "
+"este comando (desde la ruta de instalación de Odoo, en la subcarpeta del "
+"servidor)"
 
 #: ../../content/administration/maintain/enterprise.rst:103
 msgid ""
@@ -3014,6 +3415,11 @@ msgid ""
 "identification. You can then link your database with your Odoo Enterprise "
 "Subscription by entering the code you received by e-mail in the form input"
 msgstr ""
+"No es necesario lanzar manualmente el servidor, el servicio está "
+"funcionando. Debería poder conectarse a su instancia de Odoo Enterprise "
+"usando su medio habitual de identificación. A continuación, puede vincular "
+"su base de datos con su suscripción a Odoo Enterprise introduciendo el "
+"código que recibió por correo electrónico en la entrada del formulario"
 
 #: ../../content/administration/maintain/hosting_changes.rst:6
 msgid "Change hosting solution"
