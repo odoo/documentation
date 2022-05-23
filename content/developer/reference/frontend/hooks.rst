@@ -24,6 +24,8 @@ documents the list of hooks provided by the Odoo web framework.
      - load assets
    * - :ref:`useBus <frontend/hooks/usebus>`
      - subscribe and unsubscribe to a bus
+   * - :ref:`frontend/hooks/usehotkey`
+     - register and unregister an hotkey
    * - :ref:`usePosition <frontend/hooks/useposition>`
      - position an element relative to a target
 
@@ -79,6 +81,46 @@ API
     :param EventBus bus: the target event bus
     :param string eventName: the name of the event that we want to listen to
     :param function callback: listener callback
+
+.. _frontend/hooks/usehotkey:
+
+useHotkey
+=========
+
+Location
+--------
+
+`@web/core/hotkeys/hotkey_hook`
+
+Description
+-----------
+
+Helps react to hotkeys being pressed by a user.
+
+.. seealso:: 
+   :ref:`frontend/services/hotkey`
+
+.. code-block:: javascript
+
+    import { useHotkey } from "@web/core/hotkeys/hotkey_hook";
+
+    class MenuComponent {
+      setup() {
+        useHotkey("escape", () => {
+          // your logic
+        });
+      }
+    }
+
+API
+---
+
+.. note:: 
+   The `useHotkey` hook takes exactly the same arguments as
+   the :ref:`hotkey service's <frontend/services/hotkey>` `add` method
+   except that this hook does not return anything as the cleanup is
+   automatically handled when the using component is unmounted.
+
 
 .. _frontend/hooks/useposition:
 
