@@ -59,4 +59,4 @@ payment from the related Sales Order.
 
 .. seealso::
    - :doc:`../../../finance/payment_acquirers`
-   - :ref:`Payment Acquirers: Place a hold on a card <payment_acquirers/capture_amount>`
+   - :ref:`Payment Acquirers: Place a hold on a card <payment_acquirers/features/manual_capture>`

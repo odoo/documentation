@@ -126,7 +126,7 @@ feature earmarks an amount on the customer's account for a determined period of 
 the payment method used.
 
 To set it up, enable the :guilabel:`Capture Amount Manually` option on Odoo, as explained in the
-:ref:`payment acquirers documentation <payment_acquirers/capture_amount>`.
+:ref:`payment acquirers documentation <payment_acquirers/features/manual_capture>`.
 
 .. warning::
    When the manual capture feature is activated, your customers are not able to proceed with any
