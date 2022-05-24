@@ -53,46 +53,76 @@ the payments that go directly on the bank account and follow the usual reconcili
 Online payment acquirers
 ------------------------
 
-+----------------------------------+---------------------+------------+----------------+-----------+
-|                                  | Payment flow        | Save cards | Capture amount | Refund    |
-|                                  |                     |            | manually       | from Odoo |
-+==================================+=====================+============+================+===========+
-| :doc:`Adyen                      | Payment from Odoo   | |V|        | |V|            | |V|       |
-| <payment_acquirers/adyen>`       |                     |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Alipay                     | Redirection to the  |            |                |           |
-| <payment_acquirers/alipay>`      | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Authorize.Net              | Payment from Odoo   | |V|        | |V|            | |V|       |
-| <payment_acquirers/authorize>`   |                     |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Buckaroo                   | Redirection to the  |            |                |           |
-| <payment_acquirers/buckaroo>`    | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Flutterwave                | Redirection to the  | |V|        |                |           |
-| <payment_acquirers/flutterwave>` | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Mollie                     | Redirection to the  |            |                |           |
-| <payment_acquirers/mollie>`      | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Ogone                      | Redirection to the  | |V|        |                |           |
-| <payment_acquirers/ogone>`       | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`PayPal                     | Redirection to the  |            |                |           |
-| <payment_acquirers/paypal>`      | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| PayU Latam                       | Redirection to the  |            |                |           |
-|                                  | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| PayUMoney                        | Redirection to the  |            |                |           |
-|                                  | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`SIPS                       | Redirection to the  |            |                |           |
-| <payment_acquirers/sips>`        | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
-| :doc:`Stripe                     | Redirection to the  | |V|        | |V|            | |V|       |
-| <payment_acquirers/stripe>`      | acquirer website    |            |                |           |
-+----------------------------------+---------------------+------------+----------------+-----------+
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
+   :widths: auto
+
+   * -
+     - Payment flow
+     - :ref:`Save cards for later <payment_acquirers/features/tokenization>`
+     - :ref:`Manual capture <payment_acquirers/features/manual_capture>`
+     - :ref:`Refunds <payment_acquirers/features/refund>`
+   * - :doc:`Adyen <payment_acquirers/adyen>`
+     - Payment from Odoo
+     - |V|
+     - Full only
+     - Full and partial
+   * - :doc:`Alipay <payment_acquirers/alipay>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`Authorize.Net <payment_acquirers/authorize>`
+     - Payment from Odoo
+     - |V|
+     - Full only
+     - Full only
+   * - :doc:`Buckaroo <payment_acquirers/buckaroo>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`Flutterwave <payment_acquirers/flutterwave>`
+     - Payment from the acquirer website
+     - |V|
+     -
+     -
+   * - :doc:`Mollie <payment_acquirers/mollie>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`Ogone <payment_acquirers/ogone>`
+     - Payment from the acquirer website
+     - |V|
+     -
+     -
+   * - :doc:`PayPal <payment_acquirers/paypal>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - PayU Latam
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - PayUMoney
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`SIPS <payment_acquirers/sips>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`Stripe <payment_acquirers/stripe>`
+     - Payment from the acquirer website
+     - |V|
+     - Full only
+     - Full and partial
 
 .. |V| replace:: ✔
 
@@ -115,6 +145,87 @@ Bank payments
   | Your customers can sign a SEPA Direct Debit mandate online and get their bank account charged
     directly. :doc:`Click here <../finance/accounting/receivables/customer_payments/batch_sdd>` for
     more information about this payment method.
+
+.. _payment_acquirers/features:
+
+Additional features
+===================
+
+Some payment acquirers support additional features for the payment flow. Refer to the :ref:`table
+above <payment_acquirers/online_acquirers>` to check if your payment acquirer supports these
+features.
+
+.. _payment_acquirers/features/tokenization:
+
+Save cards for later
+--------------------
+
+If your payment acquirer supports this feature, customers can choose to save their card details as a
+**payment token** in Odoo. When they do, they will not have to enter their card details again when
+making a subsequent payment. This is particularly useful for the eCommerce conversion rate and for
+subscriptions that use recurring payments.
+
+Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment acquirer
+and by ticking the :guilabel:`Allow Saving Payment Methods` checkbox.
+
+.. note::
+   You remain fully PCI-compliant when you enable this feature because Odoo does not store the card
+   details directly. Instead, it creates a payment token that only holds a reference to the card
+   details stored on the payment acquirer's server.
+
+.. _payment_acquirers/features/manual_capture:
+
+Manual capture
+--------------
+
+If your payment acquirer supports this feature, you can authorize and capture payments in two steps
+instead of one. When you authorize a payment, the funds are reserved on the customer's payment
+method but they are not immediately charged. The charge is only made when you manually capture the
+payment later on. You can also void the authorization to release the reserved funds; this is
+equivalent to a regular cancellation. Capturing payments manually can prove itself useful in many
+situations:
+
+  - Receive the payment confirmation and wait until the order is shipped to capture the payment.
+  - Review and verify that orders are legitimate before the payment is completed and the fulfillment
+    process starts.
+  - Avoid potentially high processing fees for cancelled payments: payment acquirers will not charge
+    you for voiding an authorization.
+  - Hold a security deposit to return later, minus any deductions (e.g., after a damage).
+
+Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment acquirer
+and by ticking the :guilabel:`Capture Amount Manually` checkbox.
+
+To capture the payment after it was authorized, go to the related sales order or invoice and click
+on the :guilabel:`CAPTURE TRANSACTION` button. To release the funds, click on the :guilabel:`VOID
+TRANSACTION` button.
+
+.. note::
+   - Some payment acquirers support capturing only part of the authorized amount. The remaining
+     amount can then be either captured or voided. These acquirers have the value **Full and
+     partial** in the :ref:`table above <payment_acquirers/online_acquirers>`. The acquirers that
+     only support capturing or voiding the full amount have the value **Full only**.
+   - The funds are likely not reserved forever. After a certain time, they may be automatically
+     released back to the customer's payment method. Refer to your payment acquirer's documentation
+     for the exact reservation duration.
+   - Odoo does not support this feature for all payment acquirers but some allow the manual capture
+     from their website interface.
+
+.. _payment_acquirers/features/refund:
+
+Refunds
+-------
+
+If your payment acquirer supports this feature, you can refund payments directly from Odoo. It does
+not need to be enabled first. To refund a customer payment, navigate to it and click on the
+:guilabel:`REFUND` button.
+
+.. note::
+   - Some payment acquirers support refunding only part of the amount. The remaining amount can then
+     optionally be refunded too. These acquirers have the value **Full and partial** in the
+     :ref:`table above <payment_acquirers/online_acquirers>`. The acquirers that only support
+     refunding the full amount have the value **Full only**.
+   - Odoo does not support this feature for all payment acquirers but some allow to refund payments
+     from their website interface.
 
 .. _payment_acquirers/configuration:
 
@@ -165,48 +276,6 @@ Configuration tab
 You can change the payment acquirer's front-end appearance by modifying its name under the
 **Displayed as** field and which credit card icons to display under the **Supported Payment Icons**
 field.
-
-.. _payment_acquirers/save_cards:
-
-Save and reuse credit cards
-***************************
-
-With the **Save Cards** feature, Odoo can store **Payment Tokens** in your database, which can be
-used for subsequent payments, without having to reenter the payment details. This is particularly
-useful for the eCommerce conversion rate and subscriptions' recurring payments.
-
-.. _payment_acquirers/capture_amount:
-
-Place a hold on a card
-**********************
-
-If you wish to manually capture an amount instead of having an immediate capture, you can enable the
-manual capture. Capturing payments manually has many advantages:
-
-  - Receive the payment confirmation and wait until the order is shipped to capture the payment.
-  - Review and verify that orders are legitimate before the payment is completed and the fulfillment
-    process starts.
-  - Avoid potentially high credit card fees in the event of overselling or cancelled orders.
-
-The **Capture Amount Manually** field is under the **Configuration** tab. If enabled, the funds are
-reserved for a few days on the customer's card, but not charged yet. Please refer to your acquirer's
-documentation for the exact reservation duration.
-
-.. image:: payment_acquirers/capture_manually.png
-   :align: center
-   :alt: Configuration tab on Odoo
-
-To capture the payment, you must then go to the related sales order or invoice and manually
-*capture* the funds before its automatic cancellation, or *void the transaction* to unlock the funds
-from the customer's card.
-
-.. image:: payment_acquirers/capture.png
-   :align: center
-   :alt: Hold the credit card payment until you capture or revoke it on Odoo
-
-.. note::
-   Odoo may not yet support the manual capture for all acquirers, but some acquirers allow managing
-   the capture from their interfaces.
 
 .. _payment_acquirers/countries:
 
