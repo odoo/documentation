@@ -430,6 +430,12 @@ HTTP
     .. warning:: proxy mode *must not* be enabled outside of a reverse proxy
                  scenario
 
+.. option:: --x-sendfile
+
+    delegates serving attachments files to the static web server and sets both
+    ``X-Sendfile`` (apache) and ``X-Accel-*`` (nginx) http headers on stream
+    responses. See :ref:`deploy/streaming` for web server configuration.
+
 .. _reference/cmdline/server/logging:
 
 Logging
