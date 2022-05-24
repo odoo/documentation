@@ -145,5 +145,18 @@ It remains possible to resequence the invoices but with some restrictions:
 #. The feature does not work if the sequence is inconsistent with the month of the entry.
 #. It does not work if the sequence leads to a duplicate.
 #. The order of the invoice remains unchanged.
-#. It is useful for people who use a numbering from another software and who want to continue the 
+#. It is useful for people who use a numbering from another software and who want to continue the
    current year without starting over from the beginning.
+
+Invoice digitization with optical character recognition (OCR)
+---------------------------------------------------------------
+
+**Invoice digitization** is the process of automatically encoding traditional paper invoices into
+invoices forms in your accounting.
+
+Odoo uses OCR and artificial intelligence technologies to recognize the content of the documents.
+Vendor bills and customer invoices forms are automatically created and populated based on scanned
+invoices.
+
+.. seealso::
+   - :doc:`/applications/finance/accounting/payables/supplier_bills/invoice_digitization`
