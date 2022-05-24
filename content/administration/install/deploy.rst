@@ -388,20 +388,112 @@ The solutions to support livechat/motifications in a WSGI application are:
   with ``/longpolling/`` to
   :option:`the longpolling port <odoo-bin --longpolling-port>`.
 
-Serving Static Files
-====================
+.. _deploy/streaming:
 
-For development convenience, Odoo directly serves all static files in its
-modules. This may not be ideal when it comes to performances, and static
-files should generally be served by a static HTTP server.
+Serving static files and attachments
+====================================
 
-Odoo static files live in each module's ``static/`` folder, so static files
-can be served by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`,
-and looking up the right module (and file) in the various addons paths.
+For development convenience, Odoo directly serves all static files and attachments in its modules.
+This may not be ideal when it comes to performances, and static files should generally be served by
+a static HTTP server.
 
-.. todo:: test whether it would be interesting to serve filestored attachments
-          via this, and how (e.g. possibility of mapping ir.attachment id to
-          filestore hash in the database?)
+Serving static files
+--------------------
+
+Odoo static files are located in each module's :file:`static/` folder, so static files can be served 
+by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module
+(and file) in the various addons paths.
+
+.. example::
+   Say Odoo has been installed via the **debian packages** for Community and Enterprise, the addons
+   paths is :file:`/usr/lib/python3/dist-packages/odoo/addons`. Using the above NGINX (https)
+   configuration, the following location block should be added to serve static files via NGINX.
+   
+   .. code-block:: nginx
+   
+       location @odoo {
+           # copy-paste the content of the / location block
+       }
+   
+       # Serve static files right away
+       location ~ ^/[^/]+/static/.+$ {
+           root /usr/lib/python3/dist-packages/odoo/addons;
+           try_files $uri @odoo;
+           expires 24h;
+       }
+
+.. example::
+   Say Odoo has been installed via the **source**, and the two git repositories for Community and
+   Enterprise has been cloned in :file:`/opt/odoo` and :file:`/opt/odoo-enterprise` respectively. 
+   The addons paths is ``/opt/odoo/odoo,/opt/odoo/addons,/opt/odoo-enterprise``. Using the above
+   NGINX (https) configuragion, the following location block should be added to serve static files
+   via NGINX.
+
+   .. code-block:: nginx
+   
+       location @odoo {
+           # copy-paste the content of the / location block
+       }
+   
+       # Serve static files right away
+       location ~ ^/[^/]+/static/.+$ {
+           try_files /static-base$uri /static-addons$uri /static-enterprise$uri @odoo$uri;
+           expires 24h;
+       }
+   
+       location /static-base {
+           internal;
+           alias /opt/odoo/odoo/addons;
+       }
+   
+       location /static-addons {
+           internal;
+           alias /opt/odoo/addons;
+       }
+   
+       location /static-enterprise {
+           internal;
+           alias /opt/odoo-enterprise;
+       }
+
+.. warning::
+   The actual NGINX configuration you need is highly dependent on your own installation. The two
+   above snippets only highlight two possible configurations and may not be used as-is.
+
+Serving attachments
+-------------------
+
+Attachments are files stored in the filestore which access is regulated by Odoo. They cannot be
+directly accessed via a static web server as accessing them requires multiple lookups in the
+database to determine where the files are stored and whether the current user can access them or
+not.
+
+Nevertheless, once the file has been located and the access rights verified by Odoo, it is a good
+idea to serve the file using the static web server instead of Odoo. For Odoo to delegate serving
+files to the static web server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or
+`X-Accel <https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ (nginx) extensions
+must be enabled and configured on the static web server. Once it is set up, start Odoo with the
+:option:`--x-sendfile <odoo-bin --x-sendfile>` CLI flag (this unique flag is used for both
+X-Sendfile and X-Accel).
+
+
+.. note::
+   - The X-Sendfile extension for apache (and compatible web servers) does not require any
+     supplementary configuration.
+   - The X-Accel extension for NGINX **does** require the following additionnal configuration:
+
+     .. code-block:: nginx
+ 
+         location /web/filestore {
+             internal;
+             alias /path/to/odoo/data-dir/filestore;
+         }
+
+     In case you don't know what is the path to your filestore, start Odoo with the
+     :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to the ``/web/filestore`` URL
+     directly via Odoo (don't navigate to the URL via NGINX). This logs a warnings, the message
+     contains the configuration you need.
+
 
 .. _security:
 
