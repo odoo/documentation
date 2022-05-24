@@ -105,7 +105,7 @@ Place a hold on a card
 Adyen allows you to capture an amount manually instead of having an immediate capture.
 
 To set it up, enable the **Capture Amount Manually** option on Odoo, as explained in the
-:ref:`payment acquirers documentation <payment_acquirers/capture_amount>`.
+:ref:`payment acquirers documentation <payment_acquirers/features/manual_capture>`.
 
 Then, open your Adyen Merchant Account, go to :menuselection:`Account --> Settings`, and set the
 **Capture Delay** to **manual**.
