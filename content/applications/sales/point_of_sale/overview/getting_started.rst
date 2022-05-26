@@ -17,7 +17,7 @@ Make products available in the PoS
 ----------------------------------
 
 To make products available for sale, go to :menuselection:`Point of
-Sale --> Products --> Products` and open a product. In the *Sales*
+Sale --> Products --> Products` and open a product. In the *Point of Sale*
 tab, enable *Available in Point of Sale*.
 
 .. image:: getting_started/getting_started_01.png
