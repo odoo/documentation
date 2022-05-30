@@ -251,7 +251,7 @@ latex_elements = {
     'tableofcontents': '',  # no TOC
 
     # Output manually in latex docs
-    'releasename': '14.0',
+    'releasename': release,
 }
 
 latex_additional_files = ['static/latex/odoo.sty']
