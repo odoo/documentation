@@ -11,14 +11,17 @@ Depending on the platforms, you have to do it by yourself or contact our support
 From on-premises to Odoo Online
 ===============================
 
-.. warning:: Odoo Online is not compatible with **non-standard apps**.
-
 1. Create a :ref:`duplicate <duplicate_premise>` of your database: in this duplicate, uninstall all the **non-standard apps**.
 2. Grab a "dump with filestore" of your database by using the Database Manager.
 3. **If you have time constraints, contact us earlier to schedule the transfer.**
 4. `Create a support ticket <https://www.odoo.com/help>`_ and attach the dump (if the file is too large, use any file transfer service and attach the link to your ticket). Also include your subscription number and the URL you want to use for your database (e.g.: my-company.odoo.com).
 5. We will make sure your database is compatible and upload it to our cloud. In case of technical issues, we will get in touch with you.
 6. It's done!
+
+.. important::
+   - Odoo Online is not compatible with **non-standard apps**.
+   - The database you are moving to Odoo Online must be in a :doc:`supported version
+     <supported_versions>`.
 
 From on-premises to Odoo.sh
 ===========================
