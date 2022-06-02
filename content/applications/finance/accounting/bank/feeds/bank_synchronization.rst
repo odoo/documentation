@@ -21,6 +21,9 @@ To connect to the banks, Odoo uses multiple web-services:
 - **Salt Edge**: Europe (:doc:`more information <saltedge>`)
 - **Ponto**: Europe (:doc:`more information <ponto>`)
 
+.. important::
+   - Bank synchronization is not available for trial databases.
+
 Configuration
 =============
 
