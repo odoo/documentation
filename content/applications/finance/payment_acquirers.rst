@@ -19,6 +19,7 @@ Payment acquirers (credit cards, online payments)
    payment_acquirers/mollie
    payment_acquirers/ogone
    payment_acquirers/paypal
+   payment_acquirers/razorpay
    payment_acquirers/sips
    payment_acquirers/stripe
 
@@ -126,11 +127,11 @@ Online payment acquirers
      -
      -
      -
-   * - PayUMoney
-     - Payment from the acquirer website
+   * - :doc:`Razorpay <payment_acquirers/razorpay>`
+     - Payment from Odoo
      -
-     -
-     -
+     - Full only
+     - Full and partial
    * - :doc:`SIPS <payment_acquirers/sips>`
      - Payment from the acquirer website
      -
@@ -376,6 +377,7 @@ payment method... What best suit your needs.
    - :doc:`payment_acquirers/mollie`
    - :doc:`payment_acquirers/ogone`
    - :doc:`payment_acquirers/paypal`
+   - :doc:`payment_acquirers/razorpay`
    - :doc:`payment_acquirers/sips`
    - :doc:`payment_acquirers/stripe`
    - :doc:`../websites/ecommerce/shopper_experience/payment_acquirer`
