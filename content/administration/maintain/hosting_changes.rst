@@ -48,13 +48,37 @@ From Odoo Online to Odoo.sh
 From Odoo.sh to Odoo Online
 ===========================
 
-.. warning:: Odoo Online is not compatible with **non-standard apps**.
+#. Uninstall all the **non-standard apps**.
+#. `Create a support ticket <https://www.odoo.com/help>`_ and include the following:
 
-1.  Uninstall all the **non-standard apps**: test it in a staging build first, then do it in your production build.
-2.  **If you have time constraints, contact us earlier to schedule the transfer.**
-3. `Create a support ticket <https://www.odoo.com/help>`_ and include your subscription number and the URL you want to use for your database (e.g.: my-company.odoo.com).
-4.  We will make sure your database is compatible and upload it to our cloud. In case of technical issues, we will get in touch with you.
-5.  It's done!
+   - Your subscription number
+   - The URL you want to use for your database (e.g., `example.odoo.com`)
+   - Which brand you want to migrate
+   - In which region you want to be hosted:
+
+     - Americas
+     - Europe
+     - Asia
+
+   - Which user(s) will be the administrator(s)
+   - When (and in which timezone) you want the database to be up and running
+
+#. We will make sure your database is compatible and upload it to our cloud. In case of technical
+   issues, we will get in touch with you.
+#. All done!
+
+.. important::
+   - Odoo Online is not compatible with **non-standard apps**.
+   - Make sure to uninstall all the **non-standard apps** in a staging build before doing it in your
+     production build.
+
+.. note::
+   - Make sure you select the **region** that is closest to your users to reduce latency.
+   - The future **administrator(s)** must have an odoo.com account.
+   - The specific **date and time** at which you want the database to be up and running are mainly
+     helpful to organize the switch from the odoo.sh server to the Odoo Online servers.
+   - Databases are **not reachable** during their migration.
+   - **If you have time constraints, contact us earlier to schedule the transfer**.
 
 From Odoo.sh to on-premises
 ===========================
