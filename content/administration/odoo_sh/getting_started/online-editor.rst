@@ -37,7 +37,6 @@ The working directory is composed of the following folders:
   │         │    ├── enterprise          Odoo Enterprise source code
   │         │    ├── themes              Odoo Themes source code
   │         │    └── user                Your repository branch source code
-  │         ├── repositories             The Git repositories used by your project
   │         ├── data
   │         │    ├── filestore           database attachments, as well as the files of binary fields
   │         │    └── sessions            visitors and users sessions
