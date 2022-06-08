@@ -15,6 +15,13 @@ body {
         text-decoration: none !important;
     }
 
+    a.external:after {
+        content: '#{$i-external-link}';
+        font-family: icomoon, sans-serif !important;
+        @include font-size($font-size-base/1.3);
+        margin: 0 .2rem;
+    }
+
     dd {
         margin-left: 1rem;
     }
@@ -35,6 +42,10 @@ body {
     visibility: hidden !important;
     display: none !important;
     opacity: 0 !important;
+}
+
+span.viewcode-link {
+    float: none;
 }
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
@@ -1064,7 +1075,7 @@ header.o_main_header {
         > div[class^="highlight-"]{
             border: 0 !important;
         }
-        
+
         > *:last-child {
             margin-bottom: 0 !important;
         }
