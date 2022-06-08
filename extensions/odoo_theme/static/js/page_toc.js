@@ -3,43 +3,48 @@
 
     // Customize the page TOC
     document.addEventListener('DOMContentLoaded', () => {
-        this.pageToc = document.getElementById('o_page_toc'); // The tree of content of the page
-        if (this.pageToc) { // The local toctree is not included for toctree pages (see layout.html)
-            this.headingRefs = this.pageToc.querySelectorAll('a'); // The references to all headings
+        // Loop on all tree of content of the page. There may be from 0 to 2 depending on the page.
+        document.querySelectorAll('.o_page_toc').forEach(pageToc => {
+            const headingRefs = pageToc.querySelectorAll('a'); // The references to all headings.
 
-            // If the page TOC has less than 2 headings, in addition to the title, hide it entirely
-            if (this.headingRefs.length <= 2) {
-                _hidePageToc();
+            // If the page TOC has less than 2 headings, in addition to the title, hide it entirely.
+            if (headingRefs.length <= 2) {
+                _hidePageToc(pageToc);
                 return;
             }
 
             // Allow to automatically collapse and expand TOC entries
-            _prepareAccordion(this.pageToc);
+            _prepareAccordion(pageToc);
 
             // Allow to respectively highlight and expand the TOC entries and their related TOC
             // entry list whose section is focused.
-            _flagActiveTocEntriesAndLists();
+            _flagActiveTocEntriesAndLists(pageToc, headingRefs);
 
             // Allow to hide the TOC entry referring the title (<h1> heading)
-            _flagFirstHeadingRef();
+            _flagFirstHeadingRef(headingRefs);
 
             // Show hidden menu when the css classes have been properly specified
-            this.pageToc.removeAttribute('hidden');
-        }
+            pageToc.removeAttribute('hidden');
+        });
     });
 
     /**
      * Entirely hide the local tree of contents.
+     *
+     * @param {HTMLElement} pageToc - The tree of content of the page.
      */
-    const _hidePageToc = () => this.pageToc.style.display = 'none';
+    const _hidePageToc = pageToc => pageToc.style.display = 'none';
 
     /**
      * Add the relevant classes on the TOC entries (and lists) whose section is focused.
      *
      * TOC entries whose section is focused (<li> elements) receive the `o_active_toc_entry` class
      * and their related TOC entry list (<ul> elements) receive the `show` (Bootstrap) class.
+     *
+     * @param {HTMLElement} pageToc - The tree of content of the page.
+     * @param {NodeList} headingRefs - The references to all headings.
      */
-    const _flagActiveTocEntriesAndLists = () => {
+    const _flagActiveTocEntriesAndLists = (pageToc, headingRefs) => {
 
         const _updateFlags = () => {
             const activeHeadingRef = clickedHeadingRef || _findActiveHeadingRef();
@@ -56,8 +61,8 @@
         };
 
         const _findActiveHeadingRef = () => {
-            let activeHeadingRef = this.headingRefs[0];
-            this.headingRefs.forEach(headingRef => {
+            let activeHeadingRef = headingRefs[0];
+            headingRefs.forEach(headingRef => {
                 const href = headingRef.getAttribute('href');
                 if (href !== '#') {
                     const sectionId = href.replace('#', '');
@@ -78,17 +83,17 @@
         };
 
         const _unflagAll = () => {
-            this.pageToc.querySelectorAll('li,ul').forEach(element => {
+            pageToc.querySelectorAll('li,ul').forEach(element => {
                 element.classList.remove('o_active_toc_entry', 'show');
             });
-            this.pageToc.querySelectorAll('i').forEach(element => {
+            pageToc.querySelectorAll('i').forEach(element => {
                 element.setAttribute('aria-expanded', false);
             });
         };
 
         const _flagActiveHierarchy = (headingRef) => {
             let tocEntry = headingRef.parentElement;
-            while (tocEntry !== this.pageToc) {
+            while (tocEntry !== pageToc) {
                 if (tocEntry.tagName === 'LI') {
                     // Highlight all <li> in the active hierarchy
                     tocEntry.classList.add('o_active_toc_entry');
@@ -104,7 +109,7 @@
         };
 
         let clickedHeadingRef = undefined;
-        this.pageToc.addEventListener('click', ev => {
+        pageToc.addEventListener('click', ev => {
             clickedHeadingRef = ev.target.closest('a[href^="#"]'); // Highlight the clicked ref
         });
         let timeoutId = undefined;
@@ -122,9 +127,11 @@
 
     /**
      * Add the class `o_page_toc_title` on the first heading reference.
+     *
+     * @param {NodeList} headingRefs - The references to all headings.
      */
-    const _flagFirstHeadingRef = () => {
-        this.headingRefs[0].parentNode.classList.add('o_page_toc_title');
+    const _flagFirstHeadingRef = headingRefs => {
+        headingRefs[0].parentNode.classList.add('o_page_toc_title');
     }
 
 })();

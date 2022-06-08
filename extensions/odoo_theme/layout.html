@@ -62,12 +62,20 @@
         </nav>
     </noscript>
     {# Shown when the JS has properly set all the classes on the TOC elements #}
-    <nav id="o_main_toctree" class="o_side_nav border-end" hidden>
-        {%- include "layout_templates/menu.html" %}
+    <nav id="o_menu" class="o_side_nav border-end">
+        {%- if 'hide-page-toc' not in meta %}
+            {# Shown when the JS has properly set all the classes on the TOC elements #}
+            <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pb-3 mb-4" hidden>
+                {%- include "layout_templates/page_toc.html" %}
+            </aside>
+        {%- endif %}
+        <div id="o_main_toctree" class="o_main_toc" hidden>
+            {%- include "layout_templates/menu.html" %}
+        </div>
     </nav>
     <header class="o_main_header border-bottom navbar navbar-light navbar-expand-lg">
         {%- include "layout_templates/header.html" %}
-        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_main_toctree" aria-label="Toggle navigation">
+        <button class="navbar-toggler p-0 border-0" type="button" data-bs-toggle="collapse" data-bs-target="#o_menu" aria-label="Toggle navigation">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
