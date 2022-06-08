@@ -16,19 +16,16 @@ to compute the real price and the packagings.
 Configuration
 =============
 
-Install the inventory module
+Activate delivery methods
 ----------------------------
 
-Delivery methods are handled by the **Delivery costs** module. Go to
-**Apps** and search for the module. You should remove the **Apps** filter in
-order to see it :
+To activate delivery methods, go to the **Inventory** module, 
+click on :menuselection:`Configuration --> Settings`.
+Then activate the delivery methods setting.
 
 .. image:: delivery_method/setup05.png
    :align: center
 
-.. note::
-    If you want to integrate delivery methods in your e-commerce,
-    you'll have to install the **eCommerce Delivery** module.
 
 Configure the delivery method
 -----------------------------
