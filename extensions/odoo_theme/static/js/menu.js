@@ -2,17 +2,17 @@
 (function ($) {
 
     document.addEventListener('DOMContentLoaded', () => {
-        this.navigationMenu = document.getElementById('o_main_toctree');
+        const navigationMenu = document.getElementById('o_main_toctree');
 
         // Allow to automatically collapse and expand TOC entries
-        _prepareAccordion(this.navigationMenu);
+        _prepareAccordion(navigationMenu);
 
         // Allow to respectively highlight and expand the TOC entries and their related TOC
         // entry list whose page is displayed.
-        _flagActiveTocEntriesAndLists();
+        _flagActiveTocEntriesAndLists(navigationMenu);
 
         // Show hidden menu when the css classes have been properly specified
-        this.navigationMenu.removeAttribute('hidden');
+        navigationMenu.removeAttribute('hidden');
     });
 
     /**
@@ -23,13 +23,15 @@
      * the `show` (Bootstrap) class.
      * Also, the deepest TOC entries of their respective branch receive the
      * `o_deepest_active_toc_entry` class, and their child TOC entry lists receive the `show` class.
+     *
+     * @param {HTMLElement} navigationMenu - The navigation menu.
      */
-    const _flagActiveTocEntriesAndLists = () => {
+    const _flagActiveTocEntriesAndLists = navigationMenu => {
         const regexLayer = /\btoctree-l(?<layer>\d+)\b/;
         let lastLayer = undefined;
         let lastTocEntry = undefined;
         const deepestTocEntries = [];
-        this.navigationMenu.querySelectorAll('.current').forEach(element => {
+        navigationMenu.querySelectorAll('.current').forEach(element => {
             if (element.tagName === 'UL') {
                 element.classList.add('show'); // Expand all related <ul>
             } else if (element.tagName === 'LI') {

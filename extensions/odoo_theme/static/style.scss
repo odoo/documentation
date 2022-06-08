@@ -227,26 +227,29 @@ header.o_main_header {
             font-weight: 600;
         }
     }
+    .o_main_toc {
+        > ul {
+            li {
+                &.o_active_toc_entry {
+                    &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+                        color: $o-violet-dark;
+                    }
+                }
+
+                a {
+                    &.current {
+                        color: $o-violet-dark;
+                    }
+                }
+            }
+        }
+    }
 
     ul {
         .o_deepest_active_toc_entry {
             background-color: $gray-lighter;
             border-left: 3px solid $gray-lighter;
             margin-left: -3px;
-        }
-
-        li {
-            &.o_active_toc_entry {
-                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    color: $o-violet-dark;
-                }
-            }
-
-            a {
-                &.current {
-                    color: $o-violet-dark;
-                }
-            }
         }
 
         > .toctree-l1 {
@@ -292,7 +295,7 @@ header.o_main_header {
     }
 }
 
-.o_side_nav, .o_page_toc_nav {
+.o_main_toc, .o_page_toc_nav {
     ul { // all uls in toc
         list-style: none;
         padding-left: $padding-s;
@@ -350,19 +353,28 @@ header.o_main_header {
 //------------------------------------------------------------------------------
 
     aside.o_page_toc {
-        display: none;
+        color: $body-color;
         @include font-size($font-size-secondary);
-        @include media-breakpoint-up(xl) {
-            display: block;
+        &:not(.o_in_nav_toc) {
+            display: none;
+            @include media-breakpoint-up(xl) {
+                display: block;
+                top: $o-header-height;
+                right: 0;
+                padding: $padding-l $padding-s $padding-l 0;
+                overflow-y: auto;
+            }
             position: -webkit-sticky;
             position: sticky;
-            top: $o-header-height;
-            right: 0;
             width: $o-on-page-width;
             height: 100%;
             max-height: calc(100vh - #{$o-header-height});
-            padding: $padding-l $padding-s $padding-l 0;
-            overflow-y: auto;
+        }
+        &.o_in_nav_toc {
+            display: block;
+            @include media-breakpoint-up(xl) {
+                display: none;
+            }
         }
 
         h3 {
@@ -1071,7 +1083,7 @@ header.o_main_header {
         > div[class^="highlight-"]{
             border: 0 !important;
         }
-        
+
         > *:last-child {
             margin-bottom: 0 !important;
         }
