@@ -68,8 +68,7 @@ Click on :menuselection:`Connection is not secure --> Certificate is not valid`.
    :align: center
    :alt: The web browser indicates that the connection to the printer is not secure.
 
-Go to the *Details* tab and click on **Copy to file**.
-Select X.509 in base 64 and save it.
+Go to the :guilabel:`Details` tab and click on :guilabel:`Export` Select X.509 in base 64 and save it.
 
 Import the Self-signed certificate to Windows (Using Chrome)
 ============================================================
@@ -77,7 +76,7 @@ Import the Self-signed certificate to Windows (Using Chrome)
 In your Chrome browser, go to :menuselection:`Settings --> Privacy and security --> Security -->
 Manage certificates`
 
-Go to the *Trusted Root Certification Authorities* tab and click on **Import** and select
+Go to the :guilabel:`Authorities` tab and click on :guilabel:`Import` and select
 your previous file. Accept all warnings and restart your browser.
 
 Import the Self-signed certificate to your Android device
