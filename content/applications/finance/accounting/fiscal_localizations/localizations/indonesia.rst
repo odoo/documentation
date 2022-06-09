@@ -8,8 +8,13 @@ E-Faktur Module
 ===============
 
 The **E-Faktur Module** is installed by default with the Indonesian localization module. It allows
-one to generate a CSV file for one tax invoice or for a batch of tax invoices to upload to the
+one to generate a .CSV file for one tax invoice or for a batch of tax invoices to upload to the
 **Tax Office e-Faktur** application.
+
+.. danger::
+   - Do not add the character **"** as the last digit of a product's name as it will affect how Odoo
+     reads the information in the e-Faktur .CSV file generated from the invoice. Using **"** can
+     result in data showing in the wrong column.
 
 .. _localization_indonesia/npwp_nik:
 
