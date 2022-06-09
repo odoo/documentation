@@ -7,5 +7,5 @@ Bank reconciliation
 .. toctree::
    :titlesonly:
 
-   reconciliation/use_cases
+   reconciliation/bank_reconciliation
    reconciliation/reconciliation_models

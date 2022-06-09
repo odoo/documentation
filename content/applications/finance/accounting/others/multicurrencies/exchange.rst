@@ -109,4 +109,4 @@ journal entries. All the exchange rates differences are recorded in it.
 
 .. seealso::
     * :doc:`../../bank/reconciliation/reconciliation_models`
-    * :doc:`../../bank/reconciliation/use_cases`
+    * :doc:`../../bank/reconciliation/bank_reconciliation`

@@ -133,4 +133,4 @@ field.
 .. seealso::
    - :doc:`check`
    - :doc:`../../bank/setup/bank_accounts`
-   - :doc:`../../bank/reconciliation/use_cases`
+   - :doc:`../../bank/reconciliation/bank_reconciliation`

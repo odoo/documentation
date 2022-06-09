@@ -97,7 +97,7 @@ can reconcile the transaction from the Dashboard. It will automatically
 map the transaction amount.
 
 .. seealso::
-   - :doc:`../../bank/reconciliation/use_cases`
+   - :doc:`../../bank/reconciliation/bank_reconciliation`
 
 Partial payments of several supplier bills
 ==========================================
