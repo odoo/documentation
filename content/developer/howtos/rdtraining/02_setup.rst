@@ -279,17 +279,22 @@ The last two can be used to prevent the worker from being killed when debugging 
 
 .. tip:: You may face an error similar to `AttributeError: module '$MODULE_NAME' has no attribute '$ATTRIBUTE'`
 
-         In this case you may need to re-install the module with `$ pip install --upgrade --force-reinstall $MODULE_NAME`
+    In this case you may need to re-install the module with `$ pip install --upgrade --force-reinstall $MODULE_NAME`
 
-         If this error occurs with more than one module then you may need to re-install all the
-         requirements with `$ pip3 install --upgrade --force-reinstall -r requirements.txt`
+    If this error occurs with more than one module then you may need to re-install all the
+    requirements with `$ pip3 install --upgrade --force-reinstall -r requirements.txt`
 
-         You can also clear the python cache to solve the issue
+    You can also clear the python cache to solve the issue
 
-         .. code-block:: console
+    .. code-block:: console
 
-            $ cd $HOME/.local/lib/python3.8/site-packages/
-            $ find -name '*.pyc' -type f -delete
+        $ cd $HOME/.local/lib/python3.8/site-packages/
+        $ find -name '*.pyc' -type f -delete
+
+.. tip:: Other commonly used arguments are:
+
+    * :option:`-i <odoo-bin --init>`: install some modules before running the server (comma separated list)
+    * :option:`-u <odoo-bin --update>`: update some modules before running the server (comma separated list)
 
 
 Log in to Odoo
