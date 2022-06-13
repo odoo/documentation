@@ -181,8 +181,7 @@ header {
     height: 100%;
     overflow-y: auto;
     position: fixed;
-    top: -100%;
-    left:0;
+    left: -100%;
     @include o-transition(all, .3s);
     padding-left: $padding-s;
     background-color: lighten($o-violet-dark, 70%) ;
@@ -192,8 +191,8 @@ header {
     font-weight: $fw_regular;
     @include media-breakpoint-up(lg) {
         width: calc(#{$o-side-nav-width} - 1rem);
-        height: calc(100vh - #{$o-header-height});
-        top: $o-header-height;
+        height: calc(100vh - #{$o-headers-height});
+        left: 0;
         padding-top: $padding-m;
         padding-left: $padding-m;
     }
@@ -202,7 +201,7 @@ header {
     }
 
     &.show {
-        top: $o-header-mobile-height;
+        left: 0;
     }
 
     .toctree-l1 {
