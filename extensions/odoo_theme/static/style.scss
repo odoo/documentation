@@ -51,146 +51,123 @@ span.viewcode-link {
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
 
-header.o_main_header {
+header {
     width: 100%;
-    height: $o-header-mobile-height;
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
-    background-color: $o-header-white;
     z-index: 10;
-    padding: 0 $padding-s;
-    @include media-breakpoint-up(lg) {
-        height: $o-header-height;
-        padding: 0 $padding-m;
-    }
-    @include media-breakpoint-up(xl) {
-        padding: 0 $padding-l 0 $padding-m;
-    }
-
-    .o_logo_wrapper {
-        > .o_logo {
-            img {
-                margin-bottom: -2px;
-                vertical-align: baseline;
-            }
-
-            span {
-                @include font-size($font-size-base);
-                color: $o-violet;
-                @include o-easter-egg($img:'img/ducky.svg');
-            }
+    .o_main_header {
+        height: $o-header-mobile-height;
+        background-color: $o-header-white;
+        padding: 0 $padding-s;
+        @include media-breakpoint-up(lg) {
+            height: $o-header-height;
+            padding: 0 $padding-m;
         }
         @include media-breakpoint-up(xl) {
-            width: calc(#{$o-side-nav-width} - #{$padding-l});
-        }
-        @include media-breakpoint-up(lg) {
-            margin-right: $margin-l;
-        }
-    }
-
-    .o_logo img {
-        @include media-breakpoint-up(lg) {
-            height: 30px
-        }
-    }
-
-    .o_search_wrapper {
-        display: flex;
-        position: relative;
-        opacity: 1;
-        @include transition(opacity .3s);
-        @include media-breakpoint-down(lg) {
-            display: block;
-            position: absolute;
-            width: calc(100% - (#{$padding-s} * 2));
-            top: calc(100% + #{$padding-s});
-        }
-        @include media-breakpoint-up(lg) {
-            flex-grow: 1;
-            max-width: 500px;
+            padding: 0 $padding-l 0 $padding-m;
         }
 
-        .o_search {
-            position: relative;
-            width: 100%;
+        .o_logo_wrapper {
+            margin-right: $margin-s;
+            @include media-breakpoint-up(xl) {
+                width: calc(#{$o-side-nav-width} - #{$padding-m});
+            }
+            @include media-breakpoint-up(lg) {
+                margin-right: $margin-l;
+            }
 
+            > .o_logo {
+                img {
+                    margin-bottom: -2px;
+                    vertical-align: baseline;
+                }
 
-            .btn {
-                @include o-position-absolute($top: 50%, $right: 1rem);
-                @include o-transform (translateY(-50%)) ;
-                padding: 0;
-                font-size: 1.2rem;
-                color: $gray;
+                span {
+                    @include font-size($font-size-base);
+                    color: $o-violet;
+                    @include o-easter-egg($img:'img/ducky.svg');
+                }
             }
         }
-    }
 
-    &.o_header_scrolled {
+        .o_logo img {
+            @include media-breakpoint-up(lg) {
+                height: 30px
+            }
+        }
+
+        > div:not(.o_logo_wrapper) {
+            @include media-breakpoint-up(lg) {
+                width: calc(100% - (#{$o-side-nav-width}));
+            }
+        }
+
         .o_search_wrapper {
-            @include media-breakpoint-down(lg) {
-                opacity: 0;
+            position: relative;
+
+            @include media-breakpoint-up(lg) {
+                padding-right: $padding-m;
+            }
+
+            .o_search {
+                position: relative;
+                width: 100%;
+                .btn {
+                    @include o-position-absolute($top: 50%, $right: .5rem);
+                    @include o-transform (translateY(-50%)) ;
+
+                    @include media-breakpoint-up(lg) {
+                        right: 1rem;
+                    }
+                    padding: 0;
+                    font-size: 1.2rem;
+                    color: $gray;
+                }
+
+                .form-control {
+                    @include media-breakpoint-down(lg) {
+                        padding: 0.275rem 0.5rem;
+                        font-size: $font-size-secondary;
+                    }
+                }
+
+            }
+
+            .highlight-link {
+                @include o-position-absolute($bottom: -1.5rem, $right: 1rem);
+                margin-bottom: 0;
+                a {
+                    @include font-size(12px);
+                }
             }
         }
     }
 
-    .highlight-link {
-        @include o-position-absolute($bottom: -1.5rem, $right: 1rem);
-        margin-bottom: 0;
-        a {
-            @include font-size(12px);
+    .o_subheader {
+        background: $gray-lighter;
+        height: $o-subheader-height;
+        padding-right: $padding-s;
+        @include media-breakpoint-up(lg) {
+            padding: 0 $padding-m;
         }
-    }
-
-    .navbar-toggler {
-        &[aria-expanded="true"] {
-            .icon-bar {
-                &:nth-of-type(1) {
-                    @include o-transform(rotate(45deg));;
-                    @include o-transform-origin(10%, 10%)
-                }
-
-                &:nth-of-type(2) {
-                    opacity: 0;
-                    filter: alpha(opacity=0);
-                }
-
-                &:nth-of-type(3) {
-                    @include o-transform(rotate(-45deg));
-                    @include o-transform-origin(10%, 90%)
-                }
-            }
+        @include media-breakpoint-up(xl) {
+            padding: 0 $padding-l 0 0;
         }
 
-        .icon-bar {
-            display: block;
-            width: 22px;
-            height: 2px;
-            background-color: $gray-dark;
-            @include o-transition(all, .2s);
-
-            &+ .icon-bar {
-                margin-top: 4px;
+        .o_side_nav_toggler_wrapper {
+            height: 100%;
+            button {
+                &:focus, &:focus-visible{
+                box-shadow: none;
+                outline:none;
+                }
+                &[aria-expanded="true"]{
+                    background-color: rgba(0,0,0, .2);
+                }
             }
-
-            &:nth-of-type(1) {
-                @include o-transform(rotate(0));
-            }
-
-            &:nth-of-type(2) {
-                opacity: 1;
-                filter: alpha(opacity=100);
-            }
-
-            &:nth-of-type(3) {
-                @include o-transform(rotate(0));
-            }
-        }
-
-        &:focus {
-            box-shadow: none;
-            outline:none;
         }
     }
 }
@@ -207,7 +184,6 @@ header.o_main_header {
     top: -100%;
     left:0;
     @include o-transition(all, .3s);
-    padding-top: 4rem;
     padding-left: $padding-s;
     background-color: lighten($o-violet-dark, 70%) ;
     z-index: 10;
@@ -370,7 +346,7 @@ header.o_main_header {
             display: none;
             @include media-breakpoint-up(xl) {
                 display: block;
-                top: $o-header-height;
+                top: $o-headers-height;
                 right: 0;
                 padding: $padding-l $padding-s $padding-l 0;
                 overflow-y: auto;
@@ -379,7 +355,7 @@ header.o_main_header {
             position: sticky;
             width: $o-on-page-width;
             height: 100%;
-            max-height: calc(100vh - #{$o-header-height});
+            max-height: calc(100vh - #{$o-headers-height});
         }
         &.o_in_nav_toc {
             display: block;
@@ -415,11 +391,11 @@ header.o_main_header {
 //------------------------------------------------------------------------------
 
 #wrap {
-    margin-top: $o-header-mobile-height;
+    margin-top: $o-headers-mobile-height;
     @include media-breakpoint-up(lg) {
         display: flex;
         justify-content: space-between;
-        margin-top: $o-header-height;
+        margin-top: $o-headers-height;
     }
 
     code {
@@ -439,7 +415,6 @@ header.o_main_header {
 
     main {
         position: relative;
-        padding-top: 5rem;
         padding-bottom: $padding-l;
         @include media-breakpoint-up(lg) {
             left: calc(#{$o-side-nav-width} - #{$padding-s});
@@ -627,6 +602,7 @@ header.o_main_header {
         }
 
         article.doc-body {
+            padding-top: $padding-s;
             position: relative;
 
             .o_git_link {
