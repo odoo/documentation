@@ -638,10 +638,18 @@ header {
                 font-family: var(--bs-font-monospace);
             }
 
-            .field-list {
+            dl.field-list {
                 @include font-size($font-size-secondary);
                 padding: .5rem;
                 border: 1px solid $gray-light;
+                @include media-breakpoint-down(lg) {
+                    display: block;
+                }
+
+                > dt, > dd {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
 
                 ul {
                     list-style: none;
