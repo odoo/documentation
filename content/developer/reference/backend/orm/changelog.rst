@@ -4,6 +4,8 @@
 Changelog
 =========
 
+This is a test
+
 Odoo Online version 15.4
 ========================
 
