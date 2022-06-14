@@ -138,7 +138,11 @@ header {
             }
 
             .highlight-link {
-                @include o-position-absolute($bottom: -1.5rem, $right: 1rem);
+                @include o-position-absolute($bottom: -4.5rem, $right: 0);
+                @include media-breakpoint-up(lg) {
+                    bottom: -1.5rem;
+                    right: $padding-m;
+                }
                 margin-bottom: 0;
                 a {
                     @include font-size(12px);
