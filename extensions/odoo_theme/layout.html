@@ -62,15 +62,18 @@
         </nav>
     </noscript>
     {# Shown when the JS has properly set all the classes on the TOC elements #}
-    <nav id="o_menu" class="o_side_nav border-end">
-        {%- if 'hide-page-toc' not in meta %}
-            {# Shown when the JS has properly set all the classes on the TOC elements #}
-            <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden>
-                {%- include "layout_templates/page_toc.html" %}
-            </aside>
-        {%- endif %}
-        <div id="o_main_toctree" class="o_main_toc mt-3" hidden>
-            {%- include "layout_templates/menu.html" %}
+    <nav id="o_menu" class="o_side_nav">
+        <div class="o_mobile-overlay" data-bs-toggle="collapse" data-bs-target="#o_menu"></div>
+        <div class="o_side_nav-inner border-end">
+            {%- if 'hide-page-toc' not in meta %}
+                {# Shown when the JS has properly set all the classes on the TOC elements #}
+                <aside id="o_page_toc_in_nav" class="o_page_toc o_in_nav_toc border-bottom pt-3 pb-3" hidden>
+                    {%- include "layout_templates/page_toc.html" %}
+                </aside>
+            {%- endif %}
+            <div id="o_main_toctree" class="o_main_toc mt-3" hidden>
+                {%- include "layout_templates/menu.html" %}
+            </div>
         </div>
     </nav>
     <header class="o_headers">

@@ -11,6 +11,7 @@ div[aria-label="related navigation"] {
 }
 
 body {
+    position: relative;
     a:not(:hover), a.o_logo {
         text-decoration: none !important;
     }
@@ -178,31 +179,44 @@ header {
 
 .o_side_nav {
     width: 100%;
-    height: calc(100% - (#{$o-headers-mobile-height});
-    overflow-y: auto;
-    position: fixed;
-    top: $o-headers-mobile-height;
-    left: -100%;
-    @include o-transition(all, .3s);
-    padding-left: $padding-s;
-    background-color: lighten($o-violet-dark, 70%) ;
-    z-index: 10;
-    @include font-size($font-size-secondary);
-    color: $o-violet-dark;
-    font-weight: $fw_regular;
-    @include media-breakpoint-up(lg) {
-        width: calc(#{$o-side-nav-width} - 1rem);
-        height: calc(100vh - #{$o-headers-height});
-        left: 0;
-        padding-top: $padding-m;
-        padding-left: $padding-m;
+    .o_mobile-overlay {
+        background-color: rgba(0,0,0,.3);
+        @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
+        opacity: 0;
+        transition: opacity .2s linear;
+        z-index: -100;
     }
-    @include media-breakpoint-up(xl) {
-        width: $o-side-nav-width;
+    .o_side_nav-inner {
+        width: 90%;
+        height: calc(100% - (#{$o-headers-mobile-height});
+        overflow-y: auto;
+        position: fixed;
+        left: -100%;
+        @include o-transition(all, .3s);
+        padding-left: $padding-s;
+        background-color: lighten($o-violet-dark, 70%) ;
+        z-index: 10;
+        @include font-size($font-size-secondary);
+        color: $o-violet-dark;
+        font-weight: $fw_regular;
+        @include media-breakpoint-up(lg) {
+            width: $o-side-nav-width;
+            height: calc(100vh - (#{$o-headers-height}));
+            left: 0;
+            padding-top: $padding-m;
+            padding-left: $padding-m;
+        }
     }
 
     &.show {
-        left: 0;
+        .o_mobile-overlay {
+            opacity: 1;
+            z-index: 1;
+        }
+
+        .o_side_nav-inner {
+            left: 0;
+        }
     }
 
     .toctree-l1 {
