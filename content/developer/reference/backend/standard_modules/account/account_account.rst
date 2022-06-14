@@ -10,7 +10,7 @@ Account
     .. autofield:: name
     .. autofield:: currency_id
     .. autofield:: code
-    .. autofield:: user_type_id
+    .. autofield:: account_type
     .. autofield:: reconcile
     .. autofield:: note
     .. autofield:: tax_ids
