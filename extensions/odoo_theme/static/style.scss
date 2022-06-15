@@ -12,15 +12,27 @@ div[aria-label="related navigation"] {
 
 body {
     position: relative;
-    a:not(:hover), a.o_logo {
-        text-decoration: none !important;
-    }
+    a {
+        @include media-breakpoint-down(lg) {
+            overflow-wrap: anywhere;
+        }
 
-    a.external:after {
-        content: '#{$i-external-link}';
-        font-family: icomoon, sans-serif !important;
-        @include font-size($font-size-base/1.3);
-        margin: 0 .2rem;
+        &:not(:hover), &.o_logo {
+            text-decoration: none !important;
+        }
+
+        &:hover {
+            text-underline-position: from-font;
+        }
+
+        &.external {
+            &:not(.image-reference):after {
+                content: '#{$i-external-link}';
+                font-family: icomoon, sans-serif !important;
+                @include font-size($font-size-base/1.3);
+                margin: 0 .2rem;
+            }
+        }
     }
 
     dd {
