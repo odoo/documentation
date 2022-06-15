@@ -234,7 +234,11 @@ The "From Filter" allows to use a specific outgoing depending of the "From". If 
 
 #. If not found, Odoo searches for an email server having the same domain in the "From Filter" as in the "From". For example, if the "From" is foo@bar.com, only the email servers having the "From Filter" equals to bar.com will be returned.
 
-#. If not found, Odoo will return all email servers without any "From Filter".
+If no email servers are found after checking for the domain, then Odoo will return all email servers without any "From Filter" set.
+
+Should this previous query return no results, then Odoo performs a search for an email server using the system parameter: 'mail.default.from'. First, the email address listed will attempt to match an email server and then the domain will attempt a match.
+
+If no email server is found then Odoo will return the first outgoing email server (sorted by priority). In this case, it is likely the email configuration will be spoofing the email and it will be flagged as Spam. 
 
 .. note:: If several email servers are found, Odoo will use the first one per priority.
 
