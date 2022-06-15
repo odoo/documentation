@@ -15,10 +15,13 @@
         document.querySelectorAll('a[class="dropdown-item"]').forEach(element => {
             element.addEventListener('click', async event => {
                 if (element.hasAttribute('href')) {
-                    event.preventDefault();
-                    const fallbackUrls = await _generateFallbackUrls(element.getAttribute('href'));
-                    const fallbackUrl = await _getFirstValidUrl(fallbackUrls);
-                    window.location.href = fallbackUrl;
+                    const targetUrl = element.getAttribute('href');
+                    if (!targetUrl.startWith('/')) {  // Don't test for valid URLs if in localhost.
+                        event.preventDefault();
+                        const fallbackUrls = await _generateFallbackUrls(targetUrl);
+                        const fallbackUrl = await _getFirstValidUrl(fallbackUrls);
+                        window.location.href = fallbackUrl;
+                    }
                 }
             });
         });
