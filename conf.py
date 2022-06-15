@@ -163,14 +163,14 @@ versions_names = {
 # The language names that should be shown in the language switcher, if the config option `languages`
 # is populated. If a language is passed to `languages` but is not listed here, it will not be shown.
 languages_names = {
-    'de': 'Deutsch',
-    'en': 'English',
-    'es': 'Español',
-    'fr': 'Français',
-    'nl': 'Nederlands',
-    'pt_BR': 'Português (BR)',
-    'uk': 'українська',
-    'zh_CN': '简体中文',
+    'de': 'DE',
+    'en': 'EN',
+    'es': 'ES',
+    'fr': 'FR',
+    'nl': 'NL',
+    'pt_BR': 'PT',
+    'uk': 'UA',
+    'zh_CN': 'ZH',
 }
 
 # The specifications of redirect rules used by the redirects extension.
