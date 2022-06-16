@@ -42,5 +42,8 @@ Payments` tab. To display the outstanding accounts column, click on the toggle b
    :alt: Select the toggle button and click on outstanding Accounts
 
 .. note::
-   If you do not specify an outstanding payments account or an outstanding receipts account for a
-   specific journal, Odoo uses the default outstanding accounts.
+   - If you do not specify an outstanding payments account or an outstanding receipts account for a
+     specific journal, Odoo uses the default outstanding accounts.
+   - If your main bank account is added as an outstanding receipts account or outstanding payments
+     account, when a payment is registered, the invoice or bill's status is directly set to
+     :guilabel:`Paid`.
