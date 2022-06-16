@@ -419,12 +419,39 @@ header {
     code {
         display: inline-block;
         color: inherit;
-        background: $doc_code-bg;
         padding: 0 .3rem;
-        margin: 0 0.1rem;
         line-height: 1.3;
-        border: 1px solid $gray-light;
         overflow-wrap: anywhere;
+        &.sig-prename {
+            margin-right: 0 !important;
+            padding-right: 0 !important;
+
+            + .sig-name {
+                margin-left: 0 !important;
+                padding-left: 0 !important;
+            }
+
+        }
+        ~ .sig-paren, ~ .sig-param, ~.optional{
+            font-size: $font-size-secondary;
+            + .sig-paren {
+                padding-left: .2rem;
+            }
+        }
+        &.file {
+            font-family: $font-family-base;
+            font-weight: $fw_medium;
+            font-style: italic;
+            padding-right: .4rem;
+            color: $color-beta-dark;
+            background-color: lighten($color-beta-lightest, 30%);
+        }
+
+        &:not(.file) {
+            color: inherit;
+            margin: 0 0.1rem;
+            background: darken($doc_code-bg,3%);
+        }
     }
 
     iframe {
@@ -636,6 +663,20 @@ header {
 
             .command {
                 font-family: var(--bs-font-monospace);
+                font-weight: $fw_regular;
+                @extend code;
+            }
+
+            dl.py {
+                code {
+                    margin-left: 0
+                }
+
+                > dd {
+                    border-left: 2px solid $gray-lighter;
+                    margin: 0;
+                    padding-left: $padding-s;
+                }
             }
 
             dl.field-list {
@@ -802,21 +843,21 @@ header {
         .dfn{
             @include font-size($font-size-secondary);
             line-height: 1;
-            color: $o-violet;
+            color: $color-beta;
             font-weight: $fw_semibold;
             &:before {
                 content:'?';
                 display: inline-block;
                 width: 15px;
                 height: 15px;
-                background-color: $o-violet;
-                border: 1px solid $o-violet;
+                border: 2px solid $color-beta;
                 border-radius: 20px;
                 text-align: center;
-                color: $white;
+                color: $color-beta;
+                font-size: 12px;
                 font-weight: $fw_extrabold;
                 font-style: normal;
-                margin: 0 .2rem;
+                margin: 0 .1rem;
             }
         }
 
@@ -851,11 +892,14 @@ header {
 // Alerts
 //------------------------------------------------------------------------------
 // alert-info
+// alert-note
+// alert-tip
 // alert-warning
 // alert-danger
-// alert-go_to
+// alert-example
 // alert-exercise
-// alert-success // removed : never used in doc
+// alert-go_to
+
         .alert {
             position: relative;
             display: inline-block;
@@ -864,8 +908,10 @@ header {
             width: 100%;
             @include font-size($font-size-secondary);
 
-            code {
+            code, div[class^="highlight"] {
                 background-color: $white !important;
+                border: 1px solid $gray-light;
+                color: inherit;
             }
 
             > p , > ul {
@@ -899,6 +945,10 @@ header {
                     &:before {
                         content: '#{$i-info}';
                     }
+                }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-info, 30%);
                 }
             }
 
@@ -938,6 +988,10 @@ header {
                         content: '#{$i-warning}';
                     }
                 }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-warning, 50%);
+                }
             }
 
             &.alert-danger {
@@ -949,6 +1003,10 @@ header {
                     &:before {
                         content: '#{$i-danger}';
                     }
+                }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-danger, 50%);
                 }
             }
 
@@ -964,6 +1022,10 @@ header {
                 > .alert-title:before, > h3:before {
                     content: '#{$i-knowledge}';
                 }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($doc-example, 50%);
+                }
             }
 
             &.alert-exercise {
@@ -977,6 +1039,9 @@ header {
 
                 > .alert-title:before, > h3:before {
                     content: '#{$i-exercise}';
+                }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($doc-exercise, 50%);
                 }
             }
 
@@ -994,6 +1059,9 @@ header {
 
                 > .alert-title:before, > h3:before {
                     content: '#{$i-arrow-right}';
+                }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($o-violet, 50%);
                 }
             }
         }
