@@ -34,8 +34,11 @@ body {
         }
     }
 
-    abbr[title="Pull Request"] {
-        @include o-easter-egg();
+    abbr {
+        text-underline-offset: 2px;
+        &[title="Pull Request"] {
+            @include o-easter-egg();
+        }
     }
 }
 
@@ -224,7 +227,6 @@ header {
     }
 
     .toctree-l1 {
-        padding-top: $padding-xs;
         padding-bottom: $padding-xs;
 
         > .o_toc_entry_wrapper a {
@@ -366,7 +368,7 @@ header {
                 display: block;
                 top: $o-headers-height;
                 right: 0;
-                padding: $padding-l $padding-s $padding-l 0;
+                padding: $padding-m $padding-s $padding-m 0;
                 overflow-y: auto;
             }
             position: -webkit-sticky;
@@ -420,7 +422,6 @@ header {
         display: inline-block;
         color: inherit;
         padding: 0 .3rem;
-        line-height: 1.3;
         overflow-wrap: anywhere;
         &.sig-prename {
             margin-right: 0 !important;
@@ -464,7 +465,7 @@ header {
         @include media-breakpoint-up(lg) {
             left: calc(#{$o-side-nav-width} - #{$padding-s});
             max-width: calc(100vw - #{$o-side-nav-width});
-            padding: $padding-l;
+            padding: $padding-m $padding-l;
             margin: 0;
         }
         @include media-breakpoint-up(xl) {
@@ -487,11 +488,11 @@ header {
                 align-items: center;
                 @include o-gradient();
                 @include media-breakpoint-up(lg) {
-                    margin: -#{$margin-m} -#{$margin-m} $margin-m;
+                    margin: -#{$margin-m} -#{$margin-l} $margin-m;
                     padding: $padding-m $padding-m;
                 }
                 @include media-breakpoint-up(xl) {
-                    margin: -#{$margin-l} -#{$margin-l} $margin-l;
+                    margin: -#{$margin-m} -#{$margin-l} $margin-l;
                     padding: $padding-l $padding-l;
                 }
             }
@@ -687,8 +688,11 @@ header {
                     display: block;
                 }
 
-                > dt, > dd {
+                > dt {
                     padding-left: 0;
+                }
+
+                > dd {
                     padding-right: 0;
                 }
 
