@@ -62,6 +62,7 @@ body {
 
 span.viewcode-link {
     float: none;
+    margin-left: .3rem;
 }
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
@@ -431,26 +432,25 @@ header {
         grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
-
+    p {
+        > code {
+            padding: 0 .3rem;
+        }
+    }
     code {
         display: inline-block;
         color: inherit;
-        padding: 0 .3rem;
         overflow-wrap: anywhere;
-        &.sig-prename {
-            margin-right: 0 !important;
-            padding-right: 0 !important;
-
-            + .sig-name {
-                margin-left: 0 !important;
-                padding-left: 0 !important;
-            }
-
+        &:first-of-type:not(span):not(em) {
+            padding-left: .3rem;
         }
-        ~ .sig-paren, ~ .sig-param, ~.optional{
-            font-size: $font-size-secondary;
+        &:last-of-type:not(em) {
+            padding-right: .3rem;
+        }
+        ~ .sig-paren, ~ .sig-param, ~ .optional {
+            @extend code;
             + .sig-paren {
-                padding-left: .2rem;
+                padding: 0 .1rem;
             }
         }
         &.file {
@@ -464,7 +464,6 @@ header {
 
         &:not(.file) {
             color: inherit;
-            margin: 0 0.1rem;
             background: darken($doc_code-bg,3%);
         }
     }
@@ -679,15 +678,27 @@ header {
                 @extend code;
             }
 
-            dl.py {
-                code {
-                    margin-left: 0
-                }
-
+            dl.py, dl.js {
                 > dd {
-                    border-left: 2px solid $gray-lighter;
+                    border-left: 3px solid $gray-lighter;
                     margin: 0;
                     padding-left: $padding-s;
+                    padding-top: $padding-xs;
+                }
+                &.class em.property {
+                    font-size: $font-size-secondary;
+                    &:first-child {
+                        border-bottom: 3px solid $gray-lighter;
+                        + [class^=sig] {
+                            padding-left: .3rem;
+                        }
+                    }
+                    &:not(:first-child) {
+                        @extend code;
+                        &:last-of-type {
+                            padding-right: .3rem;
+                        }
+                    }
                 }
             }
 
@@ -795,6 +806,7 @@ header {
                 a.headerlink {
                     text-decoration: none;
                     font-size: 0;
+                    line-height: 0;
                     visibility: hidden !important;
 
                     &:before {
