@@ -15,3 +15,4 @@ Customer invoices
    customer_invoices/credit_notes
    customer_invoices/epc_qr_code
    customer_invoices/snailmail
+   customer_invoices/electronic_invoicing
