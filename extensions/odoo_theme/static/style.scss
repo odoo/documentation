@@ -378,14 +378,13 @@ header {
             display: none;
             @include media-breakpoint-up(xl) {
                 display: block;
+                grid-area: toc;
                 top: $o-headers-height;
-                right: 0;
                 padding: $padding-m $padding-s $padding-m 0;
                 overflow-y: auto;
             }
             position: -webkit-sticky;
             position: sticky;
-            width: $o-on-page-width;
             height: 100%;
             max-height: calc(100vh - #{$o-headers-height});
         }
@@ -423,10 +422,13 @@ header {
 //------------------------------------------------------------------------------
 
 #wrap {
+    display: grid;
+    grid-template-areas: "main";
+    grid-template-columns: minmax(0,100%);
     margin-top: $o-headers-mobile-height;
     @include media-breakpoint-up(lg) {
-        display: flex;
-        justify-content: space-between;
+        grid-template-areas: "sidebar main toc";
+        grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
 
@@ -473,22 +475,19 @@ header {
 
     main {
         position: relative;
+        grid-area: main;
         padding-bottom: $padding-l;
         @include media-breakpoint-up(lg) {
-            left: calc(#{$o-side-nav-width} - #{$padding-s});
-            max-width: calc(100vw - #{$o-side-nav-width});
             padding: $padding-m $padding-l;
             margin: 0;
+            grid-column-end: toc;
         }
         @include media-breakpoint-up(xl) {
-            left: $o-side-nav-width;
-            max-width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
+            grid-column-end: main;
         }
 
         &.o_index, &.o_fullwidth_page, &.o_has_code_column {
-            @include media-breakpoint-up(xl) {
-                max-width: calc(100vw - #{$o-side-nav-width});
-            }
+            grid-column-end: toc;
         }
 
         // Homepage
