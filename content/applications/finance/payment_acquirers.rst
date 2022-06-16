@@ -169,6 +169,12 @@ authenticate the payment, or if to stay on the current page and authenticate the
 .. note::
    Some features are available only if you select *Redirection to the acquirer website*.
 
+.. warning::
+   When configuring a payment acquirer with the payment flow :guilabel:`Payment from Odoo`, the
+   payment acquirer is visible only to people who have an account and are logged in on the related
+   database. To add a payment acquirer visible to everyone, the payment flow has to be set to
+   :guilabel:`Redirection to the acquirer website`.
+
 .. _payment_acquirers/countries:
 
 Countries
