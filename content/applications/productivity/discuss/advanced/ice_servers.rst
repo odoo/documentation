@@ -16,9 +16,11 @@ terms of service. Then, click :guilabel:`Start your free trial`. Verify your ema
 Twilio, as per their instructions.
 
 Next, enter your phone number into Twilio. Then, Twilio will send you an SMS text message
-containing a verification code. Enter the verification code into Twilio to verify your phone number.
+containing a verification code. Enter the verification code into Twilio to verify your phone
+number.
 
-After that, Twilio redirects to a welcome page. Use the following list to answer Twilio's questions:
+After that, Twilio redirects to a welcome page. Use the following list to answer Twilio's
+questions:
 
 - For :guilabel:`Which Twilio product are you here to use?`, select :guilabel:`Video`.
 - For :guilabel:`What do you plan to build with Twilio?`, select :guilabel:`Other`.
@@ -47,8 +49,9 @@ Connect Twilio to Odoo
 ======================
 
 Open the Odoo database and go to :menuselection:`Settings --> General Settings --> Discuss`. Check
-the box next to :guilabel:`Use Twilio ICE servers` and enter the Twilio account's :guilabel:`Account
-SID` and :guilabel:`Auth Token`. Finally, click :guilabel:`Save` to apply these changes.
+the box next to :guilabel:`Use Twilio ICE servers` and enter the Twilio account's
+:guilabel:`Account SID` and :guilabel:`Auth Token`. Finally, click :guilabel:`Save` to apply these
+changes.
 
 .. image:: ice_servers/connect-twilio-to-odoo.png
    :align: center
@@ -56,6 +59,10 @@ SID` and :guilabel:`Auth Token`. Finally, click :guilabel:`Save` to apply these 
 
 Define a list of custom ICE servers
 ===================================
+
+This step is not required for the Twilio configuration. However, if Twilio is not configured or is
+not working at any given moment, Odoo will fall back on the custom ICE servers list. The user must
+define the list of custom ICE servers.
 
 In :menuselection:`Settings --> General Settings --> Discuss`, click the :guilabel:`ICE Servers`
 button under :guilabel:`Custom ICE server list`.
