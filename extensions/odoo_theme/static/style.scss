@@ -126,7 +126,7 @@ header {
             position: relative;
 
             @include media-breakpoint-up(lg) {
-                padding-right: $padding-m;
+                margin-right: $padding-m;
             }
 
             .o_search {
@@ -136,10 +136,7 @@ header {
                     @include o-position-absolute($top: 50%, $right: .5rem);
                     @include o-transform (translateY(-50%)) ;
 
-                    @include media-breakpoint-up(lg) {
-                        right: 1rem;
-                    }
-                    padding: 0;
+                    padding: 0 $padding-xs;
                     font-size: 1.2rem;
                     color: $gray;
                 }
@@ -154,14 +151,16 @@ header {
             }
 
             .highlight-link {
-                @include o-position-absolute($bottom: -4.5rem, $right: 0);
-                @include media-breakpoint-up(lg) {
-                    bottom: -1.5rem;
-                    right: $padding-m;
-                }
+                @include font-size(0);
                 margin-bottom: 0;
                 a {
-                    @include font-size(12px);
+                    text-decoration: none;
+                    color: $gray;
+                    &:before {
+                        @include o-position-absolute($top: 50%, $right: 3rem);
+                        @include o-transform (translateY(-50%)) ;
+                        @include o-inline-icon($i-close, auto, middle, 1.2rem);
+                    }
                 }
             }
         }
