@@ -15,7 +15,6 @@ development with features such as AI-powered invoice recognition, synchronizatio
 accounts, smart matching suggestions, etc.
 
 .. seealso::
-   - `Odoo Tutorials: Invoicing <https://www.odoo.com/slides/invoicing-18>`_
    - `Odoo Tutorials: Accounting <https://www.odoo.com/slides/accounting-19>`_
    - :doc:`Accounting Cheat Sheet <accounting/getting_started/memento>`
 
