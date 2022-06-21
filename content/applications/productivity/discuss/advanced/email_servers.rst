@@ -225,7 +225,7 @@ alias in your mail server.
 .. _Office 365 documentation:
     https://support.office.com/en-us/article/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-office-365-69f58e99-c550-4274-ad18-c805d654b4c4
     
-Set up different outgoing servers in a multi-company environment
+Setting up different outgoing email servers for a multi-company environment
 ================================================================
 
 The "From Filter" allows to use a specific outgoing depending of the "From". If an email is sent from Odoo, the email server will be chosen as follows:
