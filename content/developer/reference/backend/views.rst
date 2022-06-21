@@ -274,6 +274,8 @@ There are three types of element locators for matching a target element:
 The inheritance spec may have an optional ``position`` attribute specifying
 how the matched node should be altered:
 
+.. rst-class:: o-definition-list
+
 ``inside`` (default)
     the content of the inheritance spec is appended to the matched node
 ``replace``
@@ -359,16 +361,22 @@ of all activities of the same type for the record is displayed.
 The root element of the Activity view is ``<activity>``, it accepts the following
 attributes:
 
-- ``string`` (mandatory)
+.. rst-class:: o-definition-list
+
+``string`` (mandatory)
     A title, which should describe the view
 
 Possible children of the view element are:
+
+.. rst-class:: o-definition-list
 
 ``field``
   declares fields to use in activity *logic*. If the field is simply displayed
   in the activity view, it does not need to be pre-declared.
 
   Possible attributes are:
+
+  .. rst-class:: o-definition-list
 
   ``name`` (required)
     the name of the field to fetch
@@ -382,6 +390,8 @@ Possible children of the view element are:
   The activity view uses mostly-standard :ref:`javascript qweb
   <reference/qweb/javascript>` and provides the following context variables
   (see :ref:`reference/views/kanban` for more details):
+
+  .. rst-class:: o-definition-list
 
   ``widget``
     the current :js:class:`ActivityRecord`, can be used to fetch some
@@ -406,6 +416,8 @@ calendar.
 
 Their root element is ``<calendar>``. Available attributes on the
 calendar view are:
+
+.. rst-class:: o-definition-list
 
 ``date_start`` (required)
     name of the record's field holding the start date for the event
@@ -446,25 +458,27 @@ calendar view are:
 ``scales``
     Comma-separated list of scales to provide. By default, all scales are
     available. See mode for possible scale values.
-
+``create``, ``delete``
+    allows disabling the corresponding action in the view by setting the
+    corresponding attribute to ``false``
 ``<field>``
   declares fields to aggregate or to use in kanban *logic*. If the field is
   simply displayed in the calendar cards.
 
   Fields can have additional attributes:
 
-  * ``invisible``
+  .. rst-class:: o-definition-list
+
+  ``invisible``
     use "True" to hide the value in the cards
-  * ``avatar_field``
+  ``avatar_field``
     only for x2many field, to display the avatar instead of the display_name
     in the cards
-  * ``write_model`` and ``write_field`` and ``filter_field``
-
+  ``write_model`` and ``write_field`` and ``filter_field``
     you can add a filter and save the result in the defined model, the
     filter is added in the sidebar. The ``filter_field`` is optional and allows
     you to specify the field that will hold the status of the filter.
-  * ``filter`` and ``color``
-
+  ``filter`` and ``color``
     use "True" to add this field in filter in the sidebar. You can specify
     a ``color`` field used to colorize the checkbox.
 
@@ -499,34 +513,35 @@ For example, here is a very simple cohort view:
 The root element of the Cohort view is <cohort>, it accepts the following
 attributes:
 
+.. rst-class:: o-definition-list
 
-- ``string`` (mandatory)
+``string`` (mandatory)
     A title, which should describe the view
 
-- ``date_start`` (mandatory)
+``date_start`` (mandatory)
     A valid date or datetime field. This field is understood by the view as the
     beginning date of a record
 
-- ``date_stop`` (mandatory)
+``date_stop`` (mandatory)
     A valid date or datetime field. This field is understood by the view as the
     end date of a record.  This is the field that will determine the churn.
 
-- ``mode`` (optional)
+``mode`` (optional)
     A string to describe the mode. It should be either 'churn' or
     'retention' (default). Churn mode will start at 0% and accumulate over time
     whereas retention will start at 100% and decrease over time.
 
-- ``timeline`` (optional)
+``timeline`` (optional)
     A string to describe the timeline. It should be either 'backward' or 'forward' (default).
     Forward timeline will display data from date_start to date_stop, whereas backward timeline
     will display data from date_stop to date_start (when the date_start is in future / greater
     than date_stop).
 
-- ``interval`` (optional)
+``interval`` (optional)
     A string to describe a time interval. It should be 'day', 'week', 'month''
     (default) or 'year'.
 
-- ``measure`` (optional)
+``measure`` (optional)
     A field that can be aggregated.  This field will be used to compute the values
     for each cell.  If not set, the cohort view will count the number of occurrences.
 
@@ -534,12 +549,14 @@ attributes:
   allows to specify a particular field in order to manage it from the available measures, it's
   main use is for hiding a field from the selectable measures:
 
-- ``name`` (mandatory)
+  .. rst-class:: o-definition-list
+
+  ``name`` (mandatory)
     the name of the field to use in the view.
-- ``string`` (optional)
+  ``string`` (optional)
     the name that would be used to display the field in the cohort view, overrides the
     default python String attribute of the field.
-- ``invisible`` (optional)
+  ``invisible`` (optional)
     if true, the field will not appear either in the active measures nor in the selectable
     measures (useful for fields that do not make sense aggregated, such as fields in different
     units, e.g. € and $).
@@ -579,19 +596,23 @@ attributes.
 
 There are 5 possible type of tags in a dashboard view:
 
+.. rst-class:: o-definition-list
+
 ``view``
     declares a sub view.
 
     Admissible attributes are:
 
-    - ``type`` (mandatory)
+    .. rst-class:: o-definition-list
+
+    ``type`` (mandatory)
         The type of the sub view.  For example, *graph* or *pivot*.
 
-    - ``ref`` (optional)
+    ``ref`` (optional)
         An xml id for a view. If not given, the default view for the model will
         be used.
 
-    - ``name`` (optional)
+    ``name`` (optional)
         A string which identifies this element.  It is mostly
         useful to be used as a target for an xpath.
 
@@ -601,13 +622,15 @@ There are 5 possible type of tags in a dashboard view:
 
     Admissible attributes are:
 
-    - ``string`` (optional)
+    .. rst-class:: o-definition-list
+
+    ``string`` (optional)
         A description which will be displayed as a group title.
 
-    - ``colspan`` (optional)
+    ``colspan`` (optional)
         The number of subcolumns in this group tag. By default, 6.
 
-    - ``col`` (optional)
+    ``col`` (optional)
         The number of columns spanned by this group tag (only makes sense inside
         another group). By default, 6.
 
@@ -621,7 +644,9 @@ There are 5 possible type of tags in a dashboard view:
 
     Admissible attributes are:
 
-    - ``field`` (mandatory)
+    .. rst-class:: o-definition-list
+
+    ``field`` (mandatory)
         The field name to use for computing the aggregate. Possible field types
         are:
 
@@ -629,23 +654,23 @@ There are 5 possible type of tags in a dashboard view:
         - ``float``  (default group operator is sum)
         - ``many2one`` (default group operator is count distinct)
 
-    - ``name`` (mandatory)
+    ``name`` (mandatory)
         A string to identify this aggregate (useful for formulas)
 
-    - ``string`` (optional)
+    ``string`` (optional)
         A short description that will be displayed above the value. If not
         given, it will fall back to the field string.
 
-    - ``domain`` (optional)
+    ``domain`` (optional)
         An additional restriction on the set of records that we want to aggregate.
         This domain will be combined with the current domain.
 
-    - ``domain_label`` (optional)
+    ``domain_label`` (optional)
         When the user clicks on an aggregate with a domain, it will be added to
         the search view as a facet.  The string displayed for this facet can
         be customized with this attribute.
 
-    - ``group_operator`` (optional)
+    ``group_operator`` (optional)
         A valid postgreSQL aggregate function identifier to use when aggregating
         values (see https://www.postgresql.org/docs/9.5/static/functions-aggregate.html).
         If not provided, By default, the group_operator from the field definition is used.
@@ -659,18 +684,18 @@ There are 5 possible type of tags in a dashboard view:
 
 
 
-    - ``col`` (optional)
+    ``col`` (optional)
         The number of columns spanned by this tag (only makes sense inside a
         group). By default, 1.
 
-    - ``widget`` (optional)
+    ``widget`` (optional)
         A widget to format the value (like the widget attribute for fields).
         For example, monetary.
 
-    - ``help`` (optional)
+    ``help`` (optional)
         A help message to dipslay in a tooltip (equivalent of help for a field in python)
 
-    - ``measure`` (optional)
+    ``measure`` (optional)
         This attribute is the name of a field describing the measure that has to be used
         in the graph and pivot views when clicking on the aggregate.
         The special value __count__ can be used to use the count measure.
@@ -679,12 +704,12 @@ There are 5 possible type of tags in a dashboard view:
 
           <aggregate name="total_ojects" string="Total Objects" field="id" group_operator="count" measure="__count__"/>
 
-    - ``clickable`` (optional)
+    ``clickable`` (optional)
         A boolean indicating if this aggregate should be clickable or not (default to true).
         Clicking on a clickable aggregate will change the measures used by the subviews
         and add the value of the domain attribute (if any) to the search view.
 
-    - ``value_label`` (optional)
+    ``value_label`` (optional)
         A string put on the right of the aggregate value.
         For example, it can be useful to indicate the unit of measure
         of the aggregate value.
@@ -697,30 +722,32 @@ There are 5 possible type of tags in a dashboard view:
 
     Admissible attributes are:
 
-    - ``value`` (mandatory)
+    .. rst-class:: o-definition-list
+
+    ``value`` (mandatory)
         A string expression that will be evaluated, with the builtin python
         evaluator (in the web client).  Every aggregate can be used in the
         context, in the ``record`` variable.  For example,
         ``record.price_total / record.order_id``.
 
-    - ``name`` (optional)
+    ``name`` (optional)
         A string to identify this formula
 
-    - ``string`` (optional)
+    ``string`` (optional)
         A short description that will be displayed above the formula.
 
-    - ``col`` (optional)
+    ``col`` (optional)
         The number of columns spanned by this tag (only makes sense inside a
         group). By default, 1.
 
-    - ``widget`` (optional)
+    ``widget`` (optional)
         A widget to format the value (like the widget attribute for fields).
         For example, monetary. By default, it is 'float'.
 
-    - ``help`` (optional)
+    ``help`` (optional)
         A help message to dipslay in a tooltip (equivalent of help for a field in python)
 
-    - ``value_label`` (optional)
+    ``value_label`` (optional)
         A string put on the right of the formula value.
         For example, it can be useful to indicate the unit of measure
         of the formula value.
@@ -731,11 +758,13 @@ There are 5 possible type of tags in a dashboard view:
 
     Admissible attributes are:
 
-    - ``name`` (mandatory)
+    .. rst-class:: o-definition-list
+
+    ``name`` (mandatory)
         A string to identify which widget should be instantiated. The view will
         look into the ``widget_registry`` to get the proper class.
 
-    - ``col`` (optional)
+    ``col`` (optional)
         The number of columns spanned by this tag (only makes sense inside a
         group). By default, 1.
 
@@ -754,15 +783,19 @@ Structural components
 Structural components provide structure or "visual" features with little
 logic. They are used as elements or sets of elements in form views.
 
+.. rst-class:: o-definition-list
+
 ``notebook``
   defines a tabbed section. Each tab is defined through a ``page`` child
   element. Pages can have the following attributes:
 
-  * ``string`` (required)
+  .. rst-class:: o-definition-list
+
+  ``string`` (required)
     the title of the tab
-  * ``accesskey``
+  ``accesskey``
     an HTML accesskey_
-  * ``attrs``
+  ``attrs``
     standard dynamic attributes based on record values
 
   .. note:: Note that ``notebook`` should not be placed within ``group``
@@ -802,10 +835,14 @@ Semantic components
 Semantic components tie into and allow interaction with the Odoo
 system. Available semantic components are:
 
+.. rst-class:: o-definition-list
+
 ``button``
   call into the Odoo system, similar to :ref:`list view buttons
   <reference/views/list/button>`. In addition, the following attribute can be
   specified:
+
+  .. rst-class:: o-definition-list
 
   ``special``
     for form views opened in dialogs: ``save`` to save the record and close the
@@ -820,6 +857,8 @@ system. Available semantic components are:
   can receive different values for modifiers 'invisible' and 'readonly'. However,
   the behavior is not guaranteed when several fields exist with different values
   for modifier 'required'. Possible attributes of the field node are:
+
+  .. rst-class:: o-definition-list
 
   ``name`` (mandatory)
     the name of the field to render
@@ -841,6 +880,8 @@ system. Available semantic components are:
     (including default widgets)
   ``class``
     HTML class to set on the generated element, common field classes are:
+
+    .. rst-class:: o-definition-list
 
     ``oe_inline``
       prevent the usual line break following fields
@@ -902,6 +943,8 @@ system. Available semantic components are:
   its ``nolabel`` attribute is set, the field's label isn't automatically
   displayed alongside its value. The ``label`` component is the manual alternative
   of displaying the label of a field. Possible attributes are:
+
+  .. rst-class:: o-definition-list
 
   ``for`` (mandatory)
     the reference to the field associated with the label. Can be either the name
@@ -969,6 +1012,8 @@ Gantt views appropriately display Gantt charts (for scheduling).
 
 The root element of gantt views is ``<gantt/>``, it has no children but can
 take the following attributes:
+
+.. rst-class:: o-definition-list
 
 ``date_start`` (required)
   name of the field providing the start datetime of the event for each
@@ -1047,27 +1092,27 @@ take the following attributes:
 ``precision``
   JSON object specifying snapping precisions for the pills in each scale.
 
-  * Possible values for scale ``day`` are (default: ``hour``):
+  Possible values for scale ``day`` are (default: ``hour``):
 
-    ``hour``: records times snap to full hours (ex: 7:12 becomes 8:00)
+  - ``hour``: records times snap to full hours (ex: 7:12 becomes 8:00)
 
-    ``hour:half``: records times snap to half hours (ex: 7:12 becomes 7:30)
+  - ``hour:half``: records times snap to half hours (ex: 7:12 becomes 7:30)
 
-    ``hour:quarter``: records times snap to half hours (ex: 7:12 becomes 7:15)
+  - ``hour:quarter``: records times snap to half hours (ex: 7:12 becomes 7:15)
 
-  * Possible values for scale ``week`` are (default: ``day:half``):
+  Possible values for scale ``week`` are (default: ``day:half``):
 
-    ``day``: records times snap to full days (ex: 7:28 AM becomes 11:59:59 PM of the previous day, 10:32 PM becomes 12:00 PM of the current day)
+  - ``day``: records times snap to full days (ex: 7:28 AM becomes 11:59:59 PM of the previous day, 10:32 PM becomes 12:00 PM of the current day)
 
-    ``day:half``: records times snap to half hours (ex: 7:28 AM becomes 12:00 PM)
+  - ``day:half``: records times snap to half hours (ex: 7:28 AM becomes 12:00 PM)
 
-  * Possible values for scale ``month`` are (default: ``day:half``):
+  Possible values for scale ``month`` are (default: ``day:half``):
 
-    ``day``: records times snap to full days (ex: 7:28 AM becomes 11:59:59 PM of the previous day, 10:32 PM becomes 12:00 PM of the current day)
+  - ``day``: records times snap to full days (ex: 7:28 AM becomes 11:59:59 PM of the previous day, 10:32 PM becomes 12:00 PM of the current day)
 
-    ``day:half``: records times snap to half hours (ex: 7:28 AM becomes 12:00 PM)
+  - ``day:half``: records times snap to half hours (ex: 7:28 AM becomes 12:00 PM)
 
-  * Scale ``year`` always snap to full day.
+  Scale ``year`` always snap to full day.
 
   Example of precision attribute: ``{"day": "hour:quarter", "week": "day:half", "month": "day"}``
 ``total_row``
@@ -1099,14 +1144,16 @@ take the following attributes:
   The gantt view uses mostly-standard :ref:`javascript qweb
   <reference/qweb/javascript>` and provides the following context variables:
 
+  .. rst-class:: o-definition-list
+
   ``widget``
     the current :js:class:`GanttRow`, can be used to fetch some
     meta-information. The ``getColor`` method to convert in a color integer is
     also available directly in the template context without using ``widget``.
 
   ``on_create``
-  If specified when clicking the add button on the view, instead of opening a generic dialog, launch a client action.
-  this should hold the xmlid of the action (eg: ``on_create="%(my_module.my_wizard)d"``
+    If specified when clicking the add button on the view, instead of opening a generic dialog, launch a client action.
+    this should hold the xmlid of the action (eg: ``on_create="%(my_module.my_wizard)d"``
 
 ``form_view_id``
   view to open when the user create or edit a record. Note that if this attribute
@@ -1145,6 +1192,8 @@ The graph view is used to visualize aggregations over a number of records or
 record groups. Its root element is ``<graph>`` which can take the following
 attributes:
 
+.. rst-class:: o-definition-list
+
 ``type`` (optional)
   one of ``bar`` (default), ``pie`` and ``line``, the type of graph to use
 
@@ -1165,6 +1214,8 @@ attributes:
 
 The only allowed element within a graph view is ``field`` which can have the
 following attributes:
+
+.. rst-class:: o-definition-list
 
 ``name`` (mandatory)
   the name of a field to use in the view. If used for grouping (rather
@@ -1478,6 +1529,8 @@ work-progress management), or ungrouped (used simply to visualize records).
 The root element of the Kanban view is ``<kanban>``, it can use the following
 attributes:
 
+.. rst-class:: o-definition-list
+
 ``default_group_by``
   whether the kanban view should be grouped if no grouping is specified via
   the action or the current search. Should be the name of the field to group
@@ -1513,11 +1566,15 @@ attributes:
 
 Possible children of the view element are:
 
+.. rst-class:: o-definition-list
+
 ``field``
   declares fields to use in kanban *logic*. If the field is simply displayed in
   the kanban view, it does not need to be pre-declared.
 
   Possible attributes are:
+
+  .. rst-class:: o-definition-list
 
   ``name`` (required)
     the name of the field to fetch
@@ -1532,6 +1589,8 @@ Possible children of the view element are:
   declares a progressbar element to put on top of kanban columns.
 
   Possible attributes are:
+
+  .. rst-class:: o-definition-list
 
   ``field`` (required)
     the name of the field whose values are used to subgroup column's records in
@@ -1554,6 +1613,8 @@ Possible children of the view element are:
 
   The kanban view uses mostly-standard :ref:`javascript qweb
   <reference/qweb/javascript>` and provides the following context variables:
+
+  .. rst-class:: o-definition-list
 
   ``widget``
     the current :js:class:`KanbanRecord`, can be used to fetch some
@@ -1590,6 +1651,8 @@ Possible children of the view element are:
       behavior depends on the corresponding widget. Possible values are (among
       others):
 
+      .. rst-class:: o-definition-list
+
       ``handle``
           for ``sequence`` (or ``integer``) fields by which records are
           sorted, allows to drag&drop records to reorder them.
@@ -1598,6 +1661,8 @@ Possible children of the view element are:
 
     * buttons and links with a ``type`` attribute become perform Odoo-related
       operations rather than their standard HTML function. Possible types are:
+
+      .. rst-class:: o-definition-list
 
       ``action``, ``object``
         standard behavior for :ref:`Odoo buttons
@@ -1615,53 +1680,7 @@ Possible children of the view element are:
        * kanban-specific CSS
        * kanban structures/widgets (vignette, details, ...)
 
-If you need to extend the Kanban view, see :js:class::`the JS API <KanbanRecord>`.
-
-Calendar
-~~~~~~~~
-
-Calendar views display records as events in a daily, weekly or monthly
-calendar. Their root element is ``<calendar>``. Available attributes on the
-calendar view are:
-
-``date_start`` (required)
-    name of the record's field holding the start date for the event
-``date_stop``
-    name of the record's field holding the end date for the event, if
-    ``date_stop`` is provided records become movable (via drag and drop)
-    directly in the calendar
-``date_delay``
-    alternative to ``date_stop``, provides the duration of the event instead of
-    its end date (unit: day)
-``color``
-    name of a record field to use for *color segmentation*. Records in the
-    same color segment are allocated the same highlight color in the calendar,
-    colors are allocated semi-randomly.
-    Displayed the display_name/avatar of the visible record in the sidebar
-``form_view_id``
-    view to open when the user create or edit an event. Note that if this attribute
-    is not set, the calendar view will fall back to the id of the form view in the
-    current action, if any.
-``event_open_popup``
-    If the option 'event_open_popup' is set to true, then the calendar view will
-    open events (or records) in a FormViewDialog. Otherwise, it will open events
-    in a new form view (with a do_action)
-``quick_add``
-    enables quick-event creation on click: only asks the user for a ``name``
-    and tries to create a new event with just that and the clicked event
-    time. Falls back to a full form dialog if the quick creation fails
-``all_day``
-    name of a boolean field on the record indicating whether the corresponding
-    event is flagged as day-long (and duration is irrelevant)
-``mode``
-    Default display mode when loading the calendar.
-    Possible attributes are: ``day``, ``week``, ``month``
-``create``, ``delete``
-    allows *dis*\ abling the corresponding action in the view by setting the
-    corresponding attribute to ``false``
-``<field>``
-  declares fields to aggregate or to use in kanban *logic*. If the field is
-  simply displayed in the calendar cards.
+If you need to extend the Kanban view, see :js:class:`KanbanRecord`.
 
 .. _reference/views/list:
 
@@ -1670,6 +1689,8 @@ List
 
 The root element of list views is ``<tree>``\ [#treehistory]_. The list view's
 root can have the following attributes:
+
+.. rst-class:: o-definition-list
 
 ``editable``
     by default, selecting a list view's row opens the corresponding
@@ -1723,8 +1744,12 @@ Possible children elements of the list view are:
 
 .. _reference/views/list/button:
 
+.. rst-class:: o-definition-list
+
 ``button``
     displays a button in a list cell
+
+   .. rst-class:: o-definition-list
 
     ``icon``
         icon to use to display the button
@@ -1733,6 +1758,8 @@ Possible children elements of the list view are:
         * if there is an ``icon``, ``alt`` text for the icon
     ``type``
         type of button, indicates how it clicking it affects Odoo:
+
+        .. rst-class:: o-definition-list
 
         ``object``
             call a method on the list's model. The button's ``name`` is the
@@ -1783,6 +1810,8 @@ Possible children elements of the list view are:
     defines a column where the corresponding field should be displayed for
     each record. Can use the following attributes:
 
+    .. rst-class:: o-definition-list
+
     ``name``
         the name of the field to display in the current model. A given name
         can only be used once per view
@@ -1798,6 +1827,8 @@ Possible children elements of the list view are:
     ``widget``
         alternate representations for a field's display. Possible list view
         values are (among others):
+
+        .. rst-class:: o-definition-list
 
         ``progressbar``
             displays ``float`` fields as a progress bar.
@@ -1862,6 +1893,8 @@ Possible children elements of the list view are:
   `groupby` which can be used for modifiers. These fields thus belong on the
   many2one comodel. These extra fields will be fetched in batch.
 
+  .. rst-class:: o-definition-list
+
   ``name``
       the name of a many2one field (on the current model). Custom header will be
       displayed when grouping the view on this field name.
@@ -1884,13 +1917,19 @@ Possible children elements of the list view are:
 
   Does not support any attribute, but can have children:
 
+  .. rst-class:: o-definition-list
+
   ``create``
     adds a button to create a new element on the current list.
+
+    .. rst-class:: o-definition-list
 
     .. note:: If any ``create`` is defined, it will overwrite the default
               "add a line" button.
 
     The following attributes are supported:
+
+    .. rst-class:: o-definition-list
 
     ``string`` (required)
       The text displayed on the button.
@@ -1961,6 +2000,9 @@ Structural components
 
 The view's root element is ``<map>``. It can have the following attributes:
 
+
+.. rst-class:: o-definition-list
+
 ``res_partner``
     Contains the `res.partner` many2one. If not provided the view resorts to create an empty map.
 ``default_order``
@@ -1979,6 +2021,8 @@ The view's root element is ``<map>``. It can have the following attributes:
     Maximum number of records to fetch (default: 80). It must be a positive integer.
 
 The ``<map>`` element can contain multiple ``<field>`` elements. Each ``<field>`` element is interpreted as a line in the pin's popup. The field's attributes are the following:
+
+.. rst-class:: o-definition-list
 
 ``name``
     The field to display.
@@ -2000,6 +2044,8 @@ Pivot
 The pivot view is used to visualize aggregations as a `pivot table`_. Its root
 element is ``<pivot>`` which can take the following attributes:
 
+.. rst-class:: o-definition-list
+
 ``disable_linking`` (optional)
   Set to ``1`` to remove table cell's links to list view.
 ``display_quantity`` (optional)
@@ -2017,6 +2063,8 @@ element is ``<pivot>`` which can take the following attributes:
 The only allowed element within a pivot view is ``field`` which can have the
 following attributes:
 
+.. rst-class:: o-definition-list
+
 ``name`` (mandatory)
   the name of a field to use in the view. If used for grouping (rather
   than aggregating)
@@ -2028,6 +2076,8 @@ following attributes:
 ``type`` (optional)
   indicates whether the field should be used as a grouping criteria or as an
   aggregated value within a group. Possible values are:
+
+  .. rst-class:: o-definition-list
 
   ``row`` (default)
     groups by the specified field, each group gets its own row.
@@ -2095,6 +2145,8 @@ The main additions of qweb-as-view to the basic qweb-as-template are:
 * qweb-as-view rendering adds several items to the standard qweb rendering
   context:
 
+  .. rst-class:: o-definition-list
+
   ``model``
     the model to which the qweb view is bound
   ``domain``
@@ -2130,12 +2182,16 @@ The root element of search views is ``<search>``. It takes no attributes.
 
 Possible children elements of the search view are:
 
+.. rst-class:: o-definition-list
+
 ``field``
     fields define domains or contexts with user-provided values. When search
     domains are generated, field domains are composed with one another and
     with filters using **AND**.
 
     Fields can have the following attributes:
+
+    .. rst-class:: o-definition-list
 
     ``name``
         the name of the field to filter on
@@ -2183,6 +2239,8 @@ Possible children elements of the search view are:
     sections to the search filter.
 
     Filters can have the following attributes:
+
+    .. rst-class:: o-definition-list
 
     ``string`` (required)
         the label of the filter
@@ -2318,16 +2376,23 @@ Possible children elements of the search view are:
   By default, the list and kanban views have the searchpanel enabled.
   The search panel can be activated on other views with the attribute:
 
-  * ``view_types`` a comma separated list of view types on which to enable the search panel
+  .. rst-class:: o-definition-list
+
+  ``view_types``
+    a comma separated list of view types on which to enable the search panel
     default: 'tree,kanban'
 
   This tool allows to quickly filter data on the basis of given fields. The fields
   are specified as direct children of the ``searchpanel`` with tag name ``field``,
   and the following attributes:
 
-  * ``name`` (mandatory) the name of the field to filter on
+  .. rst-class:: o-definition-list
 
-  * ``select`` determines the behavior and display. Possible values are
+  ``name`` (mandatory)
+    the name of the field to filter on
+
+  ``select``
+    determines the behavior and display. Possible values are
 
     * ``one`` (default) at most one value can be selected. Supported field types are
       many2one and selection.
@@ -2335,41 +2400,58 @@ Possible children elements of the search view are:
     * ``multi`` several values can be selected (checkboxes). Supported field
       types are many2one, many2many and selection.
 
-  * ``groups``: restricts to specific users
+    ``groups``
+      restricts to specific users
 
-  * ``string``: determines the label to display
+    ``string``
+      determines the label to display
 
-  * ``icon``: specifies which icon is used
+    ``icon``
+      specifies which icon is used
 
-  * ``color``: determines the icon color
+    ``color``
+      determines the icon color
 
-  * ``enable_counters``: default is false. If set to true the record counters will be computed and
-    displayed if non-zero.
+    Additional optional attributes are available in the ``multi`` case:
 
-    This feature has been implemented in case performances would be too bad.
+    .. rst-class:: o-definition-list
 
-    Another way to solve performance issues is to properly override the
-    ``search_panel_select_range`` and ``search_panel_select_multi_range`` methods.
+    ``enable_counters``
+      default is false. If set to true the record counters will be computed and
+      displayed if non-zero.
 
-  * ``expand``: default is false. If set to false categories or filters with 0 records will be hidden.
+      This feature has been implemented in case performances would be too bad.
 
-  * ``limit``: default is 200. Integer determining the maximal number of values to fetch for the field.
-    If the limit is reached, no values will be displayed in the search panel and an error message will
-    appear instead because we consider that is useless / bad performance-wise. All values will be
-    fetched if set to 0.
+      Another way to solve performance issues is to properly override the
+      ``search_panel_select_range`` and ``search_panel_select_multi_range`` methods.
 
-  Additional optional attributes are available according to the chosen case:
+    ``expand``
+      default is false. If set to false categories or filters with 0 records will be hidden.
 
-  For the ``one`` case:
+    ``limit``
+      default is 200. Integer determining the maximal number of values to fetch for the field.
+      If the limit is reached, no values will be displayed in the search panel and an error message will
+      appear instead because we consider that is useless / bad performance-wise. All values will be
+      fetched if set to 0.
 
-  * ``hierarchize``: (only available for many2one fields) default is true. Handles the display style of categories :
+    Additional optional attributes are available according to the chosen case:
 
-    If set to true child categories will appear under their related parent.
-    If not, all categories will be displayed on the same level.
+    - For the ``one`` case:
 
-  For the ``multi`` case:
+      .. rst-class:: o-definition-list
 
-  * ``domain``: determines conditions that the comodel records have to satisfy.
+      ``hierarchize``
+        (only available for many2one fields) default is true. Handles the display style of categories :
+
+        If set to true child categories will appear under their related parent.
+        If not, all categories will be displayed on the same level.
+
+    - For the ``multi`` case:
+
+      .. rst-class:: o-definition-list
+
+      ``domain``:
+        determines conditions that the comodel records have to satisfy.
 
   A domain might be used to express a dependency on another field (with select="one")
   of the search panel. Consider
