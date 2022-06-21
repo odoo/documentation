@@ -243,7 +243,10 @@ Should this previous query return no results, then Odoo performs a search for an
 
 If no email server is found then Odoo will return the first outgoing email server (sorted by priority). In this case, it is likely the email configuration will be spoofing the email and it will be flagged as Spam. 
 
-.. note:: If several email servers are found, Odoo will use the first one per priority.
+.. note::
+   If several email servers are found, then Odoo will use the first one according to its priority.
+   For example, if there are two email servers, one with a priority of 10 and the other with a
+   priority of 20, then the email server with a priority of 10 will be used.
 
 
 Set up different dedicated servers for transactional and mass mails
