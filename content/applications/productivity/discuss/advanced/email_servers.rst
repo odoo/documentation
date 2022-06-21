@@ -232,7 +232,9 @@ The "From Filter" allows for the use of a specific outgoing email server dependi
 email address that Odoo is sending on behalf of. When an email is sent from Odoo and the "From
 Filter" is configured, then the email server will be chosen as follows:
 
-#.  Odoo searches for an email server having the same "From Filter" as the "From" defined in the outgoing email. For example, if the "From" is foo@bar.com, only the email servers having the "From Filter" equals to foo@bar.com will be returned.
+#.  Odoo searches for an email server having the same "From Filter" as the "From" email address 
+defined in the outgoing email. For example, if the "From" email address is test@example.com, only
+the email servers having the "From Filter" equal to test@example.com will be returned.
 
 #.  If no email servers are found, then Odoo searches for an email server having the same domain in
 the "From Filter" as in the "From" email address of the outgoing email. For example, if the "From"
