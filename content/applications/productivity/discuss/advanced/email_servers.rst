@@ -283,4 +283,4 @@ server here selected for mass mails.
 Note that in this case, you have to set your domain's Sender Policy Framework (SPF) records to
 include both transactional and mass mail servers. If your server resides with xxxx.odoo.com, the
 available options are Sendinblue and Mailchimp, as your e-mails would be originated from the
-xxxx.odoo.com domain.
+mycompany.odoo.com domain
