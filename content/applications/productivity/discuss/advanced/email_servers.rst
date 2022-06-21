@@ -228,7 +228,9 @@ alias in your mail server.
 Setting up different outgoing email servers for a multi-company environment
 ================================================================
 
-The "From Filter" allows to use a specific outgoing depending of the "From". If an email is sent from Odoo, the email server will be chosen as follows:
+The "From Filter" allows for the use of a specific outgoing email server depending on the "From"
+email address that Odoo is sending on behalf of. When an email is sent from Odoo and the "From
+Filter" is configured, then the email server will be chosen as follows:
 
 #.  Odoo searches for an email server having the same "From Filter" as the "From" defined in the outgoing email. For example, if the "From" is foo@bar.com, only the email servers having the "From Filter" equals to foo@bar.com will be returned.
 
