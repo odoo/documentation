@@ -312,19 +312,22 @@ with :abbr:`RST (reStructuredText)` syntax (see :doc:`documentation/rst_cheat_sh
 guidelines.
 
 .. important::
-   If your changes include the addition of a new image, for instance :file:`my_image.png`, proceed
-   as follows:
+   - If your changes include the addition of a new image, for instance :file:`my-image.png`, proceed
+     as follows:
 
-   #. Make sure that the image is in ``.png`` format.
-   #. Execute the following commands in a terminal:
+     #. Make sure that the image is in ``.png`` format.
+     #. Execute the following commands in a terminal:
 
-      .. code-block:: console
+        .. code-block:: console
 
-         $ cd path-to-the-directory-of-the-image/
-         $ pngquant my_image.png
+           $ cd path/to/the/directory/of/the/image/
+           $ pngquant my-image.png
 
-   #. Delete :file:`my_image.png`.
-   #. Rename :file:`my_image-fs8.png` to :file:`my_image.png`.
+     #. Delete :file:`my-image.png`.
+     #. Rename :file:`my-image-fs8.png` to :file:`my-image.png`.
+   - If your changes include renaming or moving an RST file to a new location, follow the `manual
+     for redirect rules <https://github.com/odoo/documentation/tree/13.0/redirects/MANUAL.md>`_ to
+     create the appropriate redirect rule(s).
 
 .. _contributing/preview-changes:
 
