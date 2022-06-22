@@ -94,6 +94,10 @@ Restart the Odoo server and add the ``custom`` folder to the ``addons-path``:
 Go to Apps, click on Update Apps List, search for ``estate`` and... tadaaa, your module appears!
 Did it not appear? Maybe try removing the default 'Apps' filter ;-)
 
+.. warning::
+   Remember to enable the :ref:`developer mode <developer-mode>` as explained in the previous
+   chapter. You won't see the :guilabel:`Update Apps List` button otherwise.
+
 .. exercise:: Make your module an 'App'.
 
     Add the appropriate key to your ``__manifest__.py`` so that the module appears when the 'Apps'
