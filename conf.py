@@ -208,8 +208,8 @@ languages_names = {
     'zh_CN': 'ZH',
 }
 
-# The specifications of redirect rules used by the redirects extension.
-redirects_file = 'redirects.txt'
+# The directory in which files holding redirect rules used by the 'redirects' extension are listed.
+redirects_dir = 'redirects/'
 
 sphinx_tabs_disable_tab_closing = True
 sphinx_tabs_disable_css_loading = True
