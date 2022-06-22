@@ -197,7 +197,6 @@ header {
 //------------------------------------------------------------------------------
 
 .o_side_nav {
-    width: 100%;
     .o_mobile-overlay {
         background-color: rgba(0,0,0,.3);
         @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
@@ -205,6 +204,7 @@ header {
         transition: opacity .2s linear;
         z-index: -100;
     }
+
     .o_side_nav-inner {
         width: 90%;
         height: calc(100% - #{$o-headers-mobile-height});
@@ -258,6 +258,7 @@ header {
             font-weight: 600;
         }
     }
+
     .o_main_toc {
         > ul {
             li {
@@ -558,18 +559,7 @@ header {
         // pages with column for code on the right
         &.o_has_code_column {
             article.doc-body {
-                > * {
-                  max-width: 100%;
-                }
-
                 @include media-breakpoint-up(xl) {
-                    width: 100%;
-                    padding-right: 0;
-
-                    &:before {
-                        @include o-code-col();
-                    }
-
                     .o_git_link {
                         right: calc(#{$o-codecol-width} + #{$padding-l});
                     }
