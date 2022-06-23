@@ -606,9 +606,10 @@ for two main purposes:
 - provide some additional tools to help developer debug the Odoo interface.
 
 The `debug` mode is described by a string. An empty string means that the `debug`
-mode is not active. Otherwise, it is active.  If the string contains `assets` or
-`tests`, then the corresponding specific sub modes are activated (see below). Both
-modes can be active at the same time, for example with the string `assets,tests`.
+mode is not active. Otherwise, it is active.  If the string contains `assets`,
+`disable-t-cache` or `tests`, then the corresponding specific sub modes are
+activated (see below). Both modes can be active at the same time, for example
+with the string `assets,tests`.
 
 The `debug` mode current value can be read in the :ref:`environment<frontend/framework/environment>`:
 `env.debug`.
@@ -634,6 +635,16 @@ Assets mode
 The `debug=assets` sub mode is useful to debug javascript code: once activated,
 the :ref:`assets<reference/assets>` bundles are no longer minified, and source-maps
 are generated as well. This makes it useful to debug all kind of javascript code.
+
+.. _frontend/framework/t_cache_debug_mode:
+
+Disable `t-cache`
+-----------------
+
+The `debug=disable-t-cache` sub mode is useful to debug python `t-cache` and
+`t-nocache` directives. By activating this debugging mode, the contents of the
+`t-cache` directives will be rendered each time. It is therefore possible to
+compare the real time rendering with that which is cached.
 
 .. _frontend/framework/tests_debug_mode:
 

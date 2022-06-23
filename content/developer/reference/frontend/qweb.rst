@@ -684,9 +684,9 @@ Will render (counter = 1)::
             <footer>(views: 10)</footer>
         </section>
 
-Here the ``<i>`` tag that contains the container will always be rendered. While
-the rest is as a single string in the cache. The counter is not updated by the
-``t-set`` out of the ``t-nocache``
+Here the ``<header>`` and ``<i>`` tags will always be rendered. While the rest
+is as a single string in the cache. The counter is not updated by the ``t-set``
+out of the ``t-nocache``
 
 ``t-nocache-*`` add some primitive values in the cache
 '''''''''''''''''''''''''''''''''''''''''''''''''''''''
@@ -712,6 +712,10 @@ Example::
 
 The value ``cached_value`` is cached with the cached template part of
 ``t-cache="records"`` and add to the scoped root values each time.
+
+.. seealso::
+   - :ref:`Debug mode <frontend/framework/t_cache_debug_mode>`
+
 
 Helpers
 -------
