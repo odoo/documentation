@@ -229,7 +229,7 @@ manually set on which product it must be applied.
    :align: center
    :alt: view of the menu when selecting applicable on products
 
-To do so, go to :menuselection:`Inventory --> Master Data -->
+To do so, go to :menuselection:`Inventory --> Products -->
 Products` and open the one on which you want to apply the route. Then
 go to the *Inventory tab* and select the route you’ve created.
 
