@@ -717,6 +717,17 @@ Two new command line arguments were added since Odoo 13.0 to control this behavi
 :option:`--screenshots <odoo-bin --screenshots>` and :option:`--screencasts <odoo-bin --screencasts>`
 
 
+Watch `browser_js` tests in Chrome DevTools
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Set `watch` to `True` when starting a tour to automatically open a new Chrome tab and watch the execution of the tour in Chrome DevTools.
+
+.. example::
+   .. code-block:: python
+
+      self.browser_js("/web", code, watch=True)
+
+
 Performance Testing
 ===================
 
