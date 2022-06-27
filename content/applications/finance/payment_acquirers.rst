@@ -292,6 +292,25 @@ Payment journal
 
 The **Payment journal** selected for your payment acquirer must be a *Bank* journal.
 
+.. _payment_acquirers/publish:
+
+Publish on the website
+----------------------
+
+By default, payment acquirers are *unpublished*, which means that only internal users can see them
+on the website. Your customers cannot make payments through an unpublished acquirer but they can
+still manage :dfn:`(delete and assign to a subscription)` their already existing tokens linked to
+such an acquirer. This conveniently allows you to test an acquirer while preventing making payments
+and registering new tokens.
+
+Click on the :guilabel:`Publish` button located in the top right corner of the acquirer's form to
+publish it on the website and make it available to your customers. Click on the
+:guilabel:`Unpublish` button to unpublish it.
+
+.. tip::
+   Payment acquirers are automatically published and unpublished when you respectively change their
+   state to `enabled` and `test`.
+
 .. _payment_acquirers/accounting:
 
 Accounting perspective
