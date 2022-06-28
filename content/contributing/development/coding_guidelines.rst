@@ -1,11 +1,9 @@
 
 .. highlight:: python
 
-.. _reference/guidelines:
-
-===============
-Odoo Guidelines
-===============
+=================
+Coding Guidelines
+=================
 
 This page introduces the Odoo Coding Guidelines. Those aim to improve the
 quality of Odoo Apps code. Indeed proper code improves readability, eases
@@ -238,7 +236,7 @@ The complete tree of our Odoo module therefore looks like
 
 .. warning:: Use correct file permissions : folder 755 and file 644.
 
-.. _reference/guidelines/xml:
+.. _contributing/development/xml_guidelines:
 
 XML files
 =========
@@ -391,7 +389,7 @@ based upon the first one.
         ...
     </record>
 
-.. _reference/guidelines/python:
+.. _contributing/development/python_guidelines:
 
 Python
 ======
@@ -950,7 +948,7 @@ Symbols and Conventions
         def mail_user_confirm(self):
             ...
 
-.. _reference/guidelines/js:
+.. _contributing/development/js_guidelines:
 
 Javascript and CSS
 ==================
@@ -1012,7 +1010,7 @@ CSS coding guidelines
 - Use Bootstrap native classes
 - Use underscore lowercase notation to name class
 
-.. _reference/guidelines/git:
+.. _contributing/development/git_guidelines:
 
 Git
 ===
