@@ -412,7 +412,7 @@ PostgreSQL login, `dbpassword` is the PostgreSQL password
 and `mydb` is the default database to serve on `localhost:8069`.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
 Linux
 -----
@@ -583,7 +583,7 @@ Where `CommunityPath` is the path of the Odoo Community installation
 and `mydb` is the default database to serve on `localhost:8069`.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
 Mac OS
 ------
@@ -747,7 +747,7 @@ Where `CommunityPath` is the path of the Odoo Community installation
 and `mydb` is the default database to serve on `localhost:8069`.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
 .. _setup/install/docker:
 
