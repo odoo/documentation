@@ -1,9 +1,9 @@
 :nosearch:
 :types: reference
 
-================
-Reference Guides
-================
+=========
+Reference
+=========
 
 .. toctree::
     :titlesonly:
