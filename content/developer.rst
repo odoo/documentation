@@ -16,4 +16,6 @@ Learn through tutorials and get help using reference guides.
 
     developer/howtos
     developer/reference
-    developer/misc
+    developer/api
+    developer/cli
+    developer/iot

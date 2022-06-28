@@ -13,3 +13,5 @@ Tutorials
     howtos/web
     howtos/profilecode
     howtos/company
+    howtos/localization
+    howtos/translations
