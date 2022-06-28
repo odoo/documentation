@@ -1,8 +1,8 @@
 :show-content:
 
-===================
-Write documentation
-===================
+=============
+Documentation
+=============
 
 .. toctree::
    :titlesonly:
@@ -10,8 +10,6 @@ Write documentation
    documentation/content_guidelines
    documentation/rst_cheat_sheet
    documentation/rst_guidelines
-
-**First of all, thank you for landing here and helping us improve the user documentation of Odoo!**
 
 This introductory guide will help you acquire the tools and knowledge you need to write
 documentation, whether you plan to make a minor content change or document an application from

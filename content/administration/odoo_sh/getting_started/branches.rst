@@ -42,7 +42,7 @@ instance will be held temporarily unavailable for maintenance reason.
 
 This method is equivalent to perform an upgrade of the module through the Apps menu,
 or through the :code:`-u` switch of
-:doc:`the command line </developer/misc/other/cmdline>`.
+:doc:`the command line </developer/cli>`.
 
 In the case the changes in the commit prevent the server to restart,
 or if the modules update fails,
