@@ -55,7 +55,7 @@ Groups
     The documentation related to this topic can be found in :ref:`the security
     reference <reference/security>`.
 
-    :ref:`The guidelines <reference/guidelines>` document the format and
+    :doc:`/contributing/development/coding_guidelines` document the format and
     location of master data items.
 
 .. admonition:: **Goal**
@@ -482,7 +482,7 @@ or a *visibility* feature before using it:
 
 * *Visibility* features mean a user can still access the model or record
   otherwise, either through another part of the interface or by :doc:`performing
-  operations remotely using RPC <../../misc/api/external_api>`, things might just not be
+  operations remotely using RPC <../../api/external_api>`, things might just not be
   visible in the web interface in some contexts.
 * *Security* features mean a user can not access records, fields or operations.
 
