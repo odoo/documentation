@@ -4,18 +4,6 @@
 
 // Utilities
 // ------------------------------------------------------------------
-.o-no-select {
-    pointer-events: none;
-    cursor: default;
-    &, & * {
-        &::selection {
-            background: transparent;
-        }
-        &::-moz-selection {
-            background: transparent;
-        }
-    }
-}
 
 @mixin o-position-absolute($top: auto, $right: auto, $bottom: auto, $left: auto){
     position: absolute;
@@ -41,32 +29,6 @@
 
 // Backgrounds
 // ------------------------------------------------------------------
-@mixin o-svg-bg($file_name,$file_ext,$x:50%, $y:50%, $repeat: no-repeat, $folder: ''){
-    $std-url: url("img/${folder}${file_name}.${file_ext}");
-    $svg-url: url("img/${folder}${file_name}.svg");
-    background-image: $std-url;
-    background-image: $svg-url;
-    background-position: $x $y;
-    background-repeat: $repeat;
-}
-
-@mixin o-retina-bg($img,$x:50%, $y:50%, $repeat: no-repeat, $folder: ''){
-    $std-url: url("img/${folder}${img}");
-    background-image: $std-url;
-    background-position: $x $y;
-    background-repeat: $repeat;
-
-    @media
-    only screen and (-webkit-min-device-pixel-ratio: 2),
-    only screen and (   min--moz-device-pixel-ratio: 2),
-    only screen and (     -o-min-device-pixel-ratio: 2/1),
-    only screen and (        min-device-pixel-ratio: 2),
-    only screen and (                min-resolution: 192dpi),
-    only screen and (                min-resolution: 2dppx) {
-    // $2x-url: url("img/${folder}${website-2x-prefix}${img}");
-        background-image: url("img/${folder}${website-2x-prefix}${img}");
-    }
-}
 
 @mixin o-gradient($deg: 99deg , $startColor: $o-violet, $endColor: #62495B, $startOffset: 10%, $endOffset: 90%){
     background: mix($startColor, $endColor);
@@ -103,29 +65,8 @@
     display: block;
     width: 0;
     height: 0;
-    padding-top:  $o-header-height + 10px;
-    margin-top:  -$o-header-height - 10px;
-}
-
-
-//-- has_col
-
-@mixin o-pseudo-col(){
-  position: relative;
-  min-height: 1px;
-  padding-right: 15px;
-  padding-left: 15px;
-  float: left;
-  width: 100%;
-}
-
-@mixin o-code-col(){
-  /* content: ""; Deactivating o_has_code_column background */
-  background: $doc_code-bg;
-  /* @include box-shadow(inset 40px 0 40px -18px rgba(22, 24, 29, 0.3)); */
-  @include o-position-absolute($top: 3rem, $right:0);
-  width: 43%;
-  height: calc(100% - 3rem);
+    padding-top:  calc(#{$o-headers-height} + 10px);
+    margin-top:  -$o-headers-height - 10px;
 }
 
 @mixin o-easter-egg($width: 100%, $height: 100%, $img: 'img/poule.svg' ){
@@ -151,14 +92,10 @@
         }
 }
 
-@function valid-radius($radius) {
-  $return: ();
-  @each $value in $radius {
-    @if type-of($value) == number {
-      $return: append($return, max($value, 0));
-    } @else {
-      $return: append($return, $value);
-    }
-  }
-  @return $return;
+@mixin o-content-tab-selected {
+    font-weight: $fw_bold;
+    background: $doc-paper;
+    border-bottom: 1px solid $doc-paper;
+    border-left: 1px solid $gray-light;
+    border-right: 1px solid $gray-light;
 }

@@ -12,15 +12,27 @@ div[aria-label="related navigation"] {
 
 body {
     position: relative;
-    a:not(:hover), a.o_logo {
-        text-decoration: none !important;
-    }
+    a {
+        @include media-breakpoint-down(lg) {
+            overflow-wrap: anywhere;
+        }
 
-    a.external:after {
-        content: '#{$i-external-link}';
-        font-family: icomoon, sans-serif !important;
-        @include font-size($font-size-base/1.3);
-        margin: 0 .2rem;
+        &:not(:hover), &.o_logo {
+            text-decoration: none !important;
+        }
+
+        &:hover {
+            text-underline-position: from-font;
+        }
+
+        &.external {
+            &:not(.image-reference):after {
+                content: '#{$i-external-link}';
+                font-family: icomoon, sans-serif !important;
+                @include font-size($font-size-base/1.3);
+                margin: 0 .2rem;
+            }
+        }
     }
 
     dd {
@@ -34,8 +46,11 @@ body {
         }
     }
 
-    abbr[title="Pull Request"] {
-        @include o-easter-egg();
+    abbr {
+        text-underline-offset: 2px;
+        &[title="Pull Request"] {
+            @include o-easter-egg();
+        }
     }
 }
 
@@ -47,6 +62,7 @@ body {
 
 span.viewcode-link {
     float: none;
+    margin-left: .3rem;
 }
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
@@ -110,7 +126,7 @@ header {
             position: relative;
 
             @include media-breakpoint-up(lg) {
-                padding-right: $padding-m;
+                margin-right: $padding-m;
             }
 
             .o_search {
@@ -120,10 +136,7 @@ header {
                     @include o-position-absolute($top: 50%, $right: .5rem);
                     @include o-transform (translateY(-50%)) ;
 
-                    @include media-breakpoint-up(lg) {
-                        right: 1rem;
-                    }
-                    padding: 0;
+                    padding: 0 $padding-xs;
                     font-size: 1.2rem;
                     color: $gray;
                 }
@@ -138,14 +151,16 @@ header {
             }
 
             .highlight-link {
-                @include o-position-absolute($bottom: -4.5rem, $right: 0);
-                @include media-breakpoint-up(lg) {
-                    bottom: -1.5rem;
-                    right: $padding-m;
-                }
+                @include font-size(0);
                 margin-bottom: 0;
                 a {
-                    @include font-size(12px);
+                    text-decoration: none;
+                    color: $gray;
+                    &:before {
+                        @include o-position-absolute($top: 50%, $right: 3rem);
+                        @include o-transform (translateY(-50%)) ;
+                        @include o-inline-icon($i-close, auto, middle, 1.2rem);
+                    }
                 }
             }
         }
@@ -182,7 +197,6 @@ header {
 //------------------------------------------------------------------------------
 
 .o_side_nav {
-    width: 100%;
     .o_mobile-overlay {
         background-color: rgba(0,0,0,.3);
         @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
@@ -190,9 +204,10 @@ header {
         transition: opacity .2s linear;
         z-index: -100;
     }
+
     .o_side_nav-inner {
         width: 90%;
-        height: calc(100% - (#{$o-headers-mobile-height});
+        height: calc(100% - #{$o-headers-mobile-height});
         overflow-y: auto;
         position: fixed;
         left: -100%;
@@ -205,10 +220,22 @@ header {
         font-weight: $fw_regular;
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
-            height: calc(100vh - (#{$o-headers-height}));
+            height: calc(100vh - #{$o-headers-height});
             left: 0;
             padding-top: $padding-m;
             padding-left: $padding-m;
+        }
+        &::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        &::-webkit-scrollbar-track {
+            background: $white;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            background-color: $o-violet-darker ;
+            border-radius: 0;
         }
     }
 
@@ -224,7 +251,6 @@ header {
     }
 
     .toctree-l1 {
-        padding-top: $padding-xs;
         padding-bottom: $padding-xs;
 
         > .o_toc_entry_wrapper a {
@@ -232,6 +258,7 @@ header {
             font-weight: 600;
         }
     }
+
     .o_main_toc {
         > ul {
             li {
@@ -284,19 +311,6 @@ header {
             }
 
         }
-    }
-
-    &::-webkit-scrollbar {
-        width: 5px;
-    }
-
-    &::-webkit-scrollbar-track {
-        background: $white;
-    }
-
-    &::-webkit-scrollbar-thumb {
-        background-color: $o-violet-darker ;
-        border-radius: 0;
     }
 }
 
@@ -364,14 +378,13 @@ header {
             display: none;
             @include media-breakpoint-up(xl) {
                 display: block;
+                grid-area: toc;
                 top: $o-headers-height;
-                right: 0;
-                padding: $padding-l $padding-s $padding-l 0;
+                padding: $padding-m $padding-s $padding-m 0;
                 overflow-y: auto;
             }
             position: -webkit-sticky;
             position: sticky;
-            width: $o-on-page-width;
             height: 100%;
             max-height: calc(100vh - #{$o-headers-height});
         }
@@ -409,22 +422,49 @@ header {
 //------------------------------------------------------------------------------
 
 #wrap {
+    display: grid;
+    grid-template-areas: "main";
+    grid-template-columns: minmax(0,100%);
     margin-top: $o-headers-mobile-height;
     @include media-breakpoint-up(lg) {
-        display: flex;
-        justify-content: space-between;
+        grid-template-areas: "sidebar main toc";
+        grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
-
+    p {
+        > code {
+            padding: 0 .3rem;
+        }
+    }
     code {
         display: inline-block;
         color: inherit;
-        background: $doc_code-bg;
-        padding: 0 .3rem;
-        margin: 0 0.1rem;
-        line-height: 1.3;
-        border: 1px solid $gray-light;
         overflow-wrap: anywhere;
+        &:first-of-type:not(span):not(em) {
+            padding-left: .3rem;
+        }
+        &:last-of-type:not(em) {
+            padding-right: .3rem;
+        }
+        ~ .sig-paren, ~ .sig-param, ~ .optional {
+            @extend code;
+            + .sig-paren {
+                padding: 0 .1rem;
+            }
+        }
+        &.file {
+            font-family: $font-family-base;
+            font-weight: $fw_medium;
+            font-style: italic;
+            padding-right: .4rem;
+            color: $color-beta-dark;
+            background-color: lighten($color-beta-lightest, 30%);
+        }
+
+        &:not(.file) {
+            color: inherit;
+            background: darken($doc_code-bg,3%);
+        }
     }
 
     iframe {
@@ -433,22 +473,19 @@ header {
 
     main {
         position: relative;
+        grid-area: main;
         padding-bottom: $padding-l;
         @include media-breakpoint-up(lg) {
-            left: calc(#{$o-side-nav-width} - #{$padding-s});
-            max-width: calc(100vw - #{$o-side-nav-width});
-            padding: $padding-l;
+            padding: $padding-m $padding-l;
             margin: 0;
+            grid-column-end: toc;
         }
         @include media-breakpoint-up(xl) {
-            left: $o-side-nav-width;
-            max-width: calc(100vw - #{$o-side-nav-width} - #{$o-on-page-width});
+            grid-column-end: main;
         }
 
         &.o_index, &.o_fullwidth_page, &.o_has_code_column {
-            @include media-breakpoint-up(xl) {
-                max-width: calc(100vw - #{$o-side-nav-width});
-            }
+            grid-column-end: toc;
         }
 
         // Homepage
@@ -460,11 +497,11 @@ header {
                 align-items: center;
                 @include o-gradient();
                 @include media-breakpoint-up(lg) {
-                    margin: -#{$margin-m} -#{$margin-m} $margin-m;
+                    margin: -#{$margin-m} -#{$margin-l} $margin-m;
                     padding: $padding-m $padding-m;
                 }
                 @include media-breakpoint-up(xl) {
-                    margin: -#{$margin-l} -#{$margin-l} $margin-l;
+                    margin: -#{$margin-m} -#{$margin-l} $margin-l;
                     padding: $padding-l $padding-l;
                 }
             }
@@ -522,18 +559,7 @@ header {
         // pages with column for code on the right
         &.o_has_code_column {
             article.doc-body {
-                > * {
-                  max-width: 100%;
-                }
-
                 @include media-breakpoint-up(xl) {
-                    width: 100%;
-                    padding-right: 0;
-
-                    &:before {
-                        @include o-code-col();
-                    }
-
                     .o_git_link {
                         right: calc(#{$o-codecol-width} + #{$padding-l});
                     }
@@ -636,6 +662,32 @@ header {
 
             .command {
                 font-family: var(--bs-font-monospace);
+                font-weight: $fw_regular;
+                @extend code;
+            }
+
+            dl.py, dl.js {
+                > dd {
+                    border-left: 3px solid $gray-lighter;
+                    margin: 0;
+                    padding-left: $padding-s;
+                    padding-top: $padding-xs;
+                }
+                &.class em.property {
+                    font-size: $font-size-secondary;
+                    &:first-child {
+                        border-bottom: 3px solid $gray-lighter;
+                        + [class^=sig] {
+                            padding-left: .3rem;
+                        }
+                    }
+                    &:not(:first-child) {
+                        @extend code;
+                        &:last-of-type {
+                            padding-right: .3rem;
+                        }
+                    }
+                }
             }
 
             dl.field-list {
@@ -646,8 +698,11 @@ header {
                     display: block;
                 }
 
-                > dt, > dd {
+                > dt {
                     padding-left: 0;
+                }
+
+                > dd {
                     padding-right: 0;
                 }
 
@@ -739,6 +794,7 @@ header {
                 a.headerlink {
                     text-decoration: none;
                     font-size: 0;
+                    line-height: 0;
                     visibility: hidden !important;
 
                     &:before {
@@ -802,21 +858,21 @@ header {
         .dfn{
             @include font-size($font-size-secondary);
             line-height: 1;
-            color: $o-violet;
+            color: $color-beta;
             font-weight: $fw_semibold;
             &:before {
                 content:'?';
                 display: inline-block;
                 width: 15px;
                 height: 15px;
-                background-color: $o-violet;
-                border: 1px solid $o-violet;
+                border: 2px solid $color-beta;
                 border-radius: 20px;
                 text-align: center;
-                color: $white;
+                color: $color-beta;
+                font-size: 12px;
                 font-weight: $fw_extrabold;
                 font-style: normal;
-                margin: 0 .2rem;
+                margin: 0 .1rem;
             }
         }
 
@@ -851,11 +907,14 @@ header {
 // Alerts
 //------------------------------------------------------------------------------
 // alert-info
+// alert-note
+// alert-tip
 // alert-warning
 // alert-danger
-// alert-go_to
+// alert-example
 // alert-exercise
-// alert-success // removed : never used in doc
+// alert-go_to
+
         .alert {
             position: relative;
             display: inline-block;
@@ -864,8 +923,10 @@ header {
             width: 100%;
             @include font-size($font-size-secondary);
 
-            code {
+            code, div[class^="highlight"] {
                 background-color: $white !important;
+                border: 1px solid $gray-light;
+                color: inherit;
             }
 
             > p , > ul {
@@ -899,6 +960,10 @@ header {
                     &:before {
                         content: '#{$i-info}';
                     }
+                }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-info, 30%);
                 }
             }
 
@@ -938,6 +1003,10 @@ header {
                         content: '#{$i-warning}';
                     }
                 }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-warning, 50%);
+                }
             }
 
             &.alert-danger {
@@ -949,6 +1018,10 @@ header {
                     &:before {
                         content: '#{$i-danger}';
                     }
+                }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($brand-danger, 50%);
                 }
             }
 
@@ -964,6 +1037,10 @@ header {
                 > .alert-title:before, > h3:before {
                     content: '#{$i-knowledge}';
                 }
+
+                code, div[class^="highlight"] {
+                    border-color: tint-color($doc-example, 50%);
+                }
             }
 
             &.alert-exercise {
@@ -977,6 +1054,9 @@ header {
 
                 > .alert-title:before, > h3:before {
                     content: '#{$i-exercise}';
+                }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($doc-exercise, 50%);
                 }
             }
 
@@ -995,6 +1075,9 @@ header {
                 > .alert-title:before, > h3:before {
                     content: '#{$i-arrow-right}';
                 }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($o-violet, 50%);
+                }
             }
         }
         .graphviz {
@@ -1009,14 +1092,6 @@ header {
 //------------------------------------------------------------------------------
 // Content Tabs
 //------------------------------------------------------------------------------
-
-@mixin o-content-tab-selected {
-    font-weight: 700;
-    background: $doc-paper;
-    border-bottom: 1px solid $doc-paper;
-    border-left: 1px solid $gray-light;
-    border-right: 1px solid $gray-light;
-}
 
 .sphinx-tabs {
     padding: 0;
@@ -1050,8 +1125,8 @@ header {
         &:hover {
             &:not([aria-selected="true"]) {
                 cursor: pointer;
-                background: hsl(317deg, 16%, 90%);
-                color: #7A436B;
+                background: tint-color($o-violet-dark, 80%);
+                color: $o-violet-dark;
                 transition: color .15s, background .15s;
                 border-radius: 0;
             }
