@@ -2,6 +2,60 @@
 Different ways to record a payment
 ==================================
 
+In Odoo, a payment can either be linked automatically to an invoice or a bill, or be a stand-alone
+record for use on a later date.
+
+If a payment **is linked to an invoice or a bill**, it reduces the amount due of the invoice. You
+can have multiple payments linked to the same invoice.
+
+If a payment **is not linked to an invoice or a bill**, the customer has an outstanding credit with
+your company, or your company has an outstanding debit with a vendor. You can use those outstanding
+amounts to reduce unpaid invoices/bills.
+
+Registering payment from an invoice or a bill
+=============================================
+
+When you click on :guilabel:`Register payment` on a customer invoice or a vendor bill, it generates
+a new journal entry, reducing the amount due. The counterpart is reflected in an outstanding
+receipts or payments account. At this point, the customer invoice or vendor bill is marked as
+:guilabel:`In payment`. Then, when the outstanding account is reconciled with a bank statement line,
+the invoice or vendor bill is in status :guilabel:`Paid`.
+
+The :guilabel:`information icon` near the payment line displays more information about the payment.
+When clicking on :guilabel:`View` you can access additional information such as the related journal
+entry.
+
+.. image:: recording/information-icon.png
+   :align: center
+   :alt: See detailed information of a payment
+
+.. note::
+   - The customer invoice or vendor bill should be in status :guilabel:`posted` to register the
+     payment.
+   - When clicking on :guilabel:`Register payment`, you can select the amount to pay and therefore
+     make a partial or full payment.
+   - If your main bank account is put as :ref:`Outstanding account <outstanding_accounts>`, and the
+     payment is made in Odoo (not related to a bank statement), invoices and bills are directly
+     registered in the status :guilabel:`paid`.
+   - If you unreconcile a payment, it still appears in your books but is no longer linked to the
+     invoice.
+   - If you (un)reconcile a payment in a different currency, a journal entry is created to post the
+     Currency Exchange Loss/Gain (reversal) amount.
+   - If you (un)reconcile a payment and an invoice having cash basis taxes, a journal entry is
+     created to post the Cash Basis Tax (reversal) amount.
+
+.. seealso::
+   - reconciliation
+   - outstanding accounts
+   - Tuto: Bank Config
+
+Registering payments not tied to an invoice or a bill
+=====================================================
+
+
+-------------------------------------------------------------------------------------------
+Ancienne doc:
+
 In Odoo, a payment can either be linked directly to an invoice or be a
 stand alone record for use on a later date:
 
