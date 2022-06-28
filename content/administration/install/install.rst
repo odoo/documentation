@@ -669,7 +669,7 @@ A typical way to run the server would be:
       database to serve on `localhost:8069`.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/misc/other/cmdline>`.
+   - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
 .. _setup/install/docker:
 
