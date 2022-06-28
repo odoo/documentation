@@ -14,7 +14,8 @@ We will start refactoring the code to match to the Odoo coding guidelines. The g
 to improve the quality of the Odoo Apps code.
 
 
-**Reference**: you will find the Odoo coding guidelines in :ref:`reference/guidelines`.
+**Reference**: you will find the Odoo coding guidelines in
+:doc:`/contributing/development/coding_guidelines`.
 
 .. exercise:: Polish your code.
 
@@ -88,7 +89,8 @@ Commit your code:
 
 **Everyone reads your commit messages!**
 
-The commit message is very important, follow the :ref:`Developer guidelines <reference/guidelines/git>`.
+The commit message is very important, follow the :ref:`Git guidelines
+<contributing/development/git_guidelines>`.
 
 
 Push your new branch to your development repository:
