@@ -7,6 +7,9 @@ all of its data are also available from the outside for external analysis or
 integration with various tools. Part of the :ref:`reference/orm/model` API is
 easily available over XML-RPC_ and accessible from a variety of languages.
 
+.. seealso::
+   - :doc:`Tutorial on web services <../howtos/web_services>`
+
 Connection
 ==========
 
