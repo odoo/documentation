@@ -1,13 +1,9 @@
 # -*- coding: utf-8 -*-
-import os.path
-import posixpath
-import re
 
 from docutils import nodes
-from sphinx import addnodes, util, builders
 from sphinx.locale import admonitionlabels
 from sphinx.writers.html5 import HTML5Translator
-#from urllib.request import url2pathname
+
 
 # Translators inheritance chain:
 # Docutils Base HTML translator: https://sourceforge.net/p/docutils/code/HEAD/tree/trunk/docutils/docutils/writers/_html_base.py
@@ -55,7 +51,6 @@ class BootstrapTranslator(HTML5Translator):
     html_head = 'html_head'
     html_title = 'html_title'
     html_subtitle = 'html_subtitle'
-
 
     def __init__(self, builder, *args, **kwds):
         super().__init__(builder, *args, **kwds)
@@ -150,7 +145,8 @@ class BootstrapTranslator(HTML5Translator):
         # type: (nodes.Node) -> None
         self.generate_targets_for_table(node)
 
-        self._table_row_index = 0
+        # c/p of https://github.com/pydata/pydata-sphinx-theme/pull/509/files
+        self._table_row_indices.append(0)
 
         classes = [cls.strip(u' \t\n')
                    for cls in self.settings.table_style.split(',')]
