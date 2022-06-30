@@ -559,13 +559,7 @@ Scalability
 -----------
 
 In addition to being fast, Odoo is also more scalable than traditional
-CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop). The
-following link provides an analysis of the major open source CMS and
-eCommerce compared to Odoo when it comes to high query volumes:
-`https://www.odoo.com/slides/slide/197
-<https://www.odoo.com/slides/slide/odoo-cms-performance-comparison-and-optimisation-197>`_
-
-.. todo:: fix above link
+CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop).
 
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
