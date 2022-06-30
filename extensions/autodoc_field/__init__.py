@@ -114,11 +114,11 @@ class FieldDocumenter(AttributeDocumenter):
                 self.add_line(line, source_name)
         self.add_line('', source_name)
 
-    def get_doc(self, encoding=None, ignore=None):
+    def get_doc(self, *args, **kwargs):
         # only read docstring of field instance, do not fallback on field class
         field = self.object
         field.__doc__ = field.__dict__.get('__doc__', "")
-        res = super().get_doc(encoding, ignore)
+        res = super().get_doc(*args, **kwargs)
         return res
 
 
