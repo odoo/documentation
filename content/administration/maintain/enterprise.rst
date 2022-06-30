@@ -1,9 +1,9 @@
 
 .. _setup/enterprise:
 
-===============================
-Upgrade Community to Enterprise
-===============================
+=====================================
+Migrate from Community to Enterprise
+=====================================
 
 Depending on your current installation, there are multiple ways to upgrade
 your community version.
