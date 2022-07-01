@@ -49,7 +49,9 @@ turn, notify the customer that the order (or a part of it) is on its way.
      name (e.g. create a carrier named `Colissimo`). This name is case insensitive, but be careful
      about typos, as Amazon won't recognize them.
    - Create a delivery carrier named `Self Delivery` to inform Amazon that you make your own
-     deliveries. You still have to enter a tracking reference, but Amazon won't do anything with it.
+     deliveries. You still have to enter a tracking reference.
+   - Keep in mind that the customer is notified by email about the delivery, and the carrier and
+     tracking reference are displayed in the email to the customer.
 
 .. seealso::
    - :doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`
