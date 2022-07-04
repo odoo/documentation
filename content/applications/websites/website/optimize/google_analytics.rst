@@ -26,7 +26,3 @@ To follow your website's traffic with Google Analytics:
 
 To make your first steps in Google Analytics, refer to `Google Documentation
 <https://support.google.com/analytics/answer/1008015?hl=en/>`_.
-
-.. seealso::
-
-  * :doc:`google_analytics_dashboard`
