@@ -2,6 +2,24 @@
 How to track your website traffic from your Odoo Dashboard
 ==========================================================
 
+.. warning::
+  It is not possible anymore for new Google Analytics accounts to integrate
+  their **Google Analytics Dashboard** inside their **Odoo Dashboard**.
+  Google deprecated **Universal Analytics** which won't be supported anymore in
+  `July 2023 <https://support.google.com/analytics/answer/11583528>`_. They are
+  replacing it with **Analytics 4**. New accounts are already using it.
+
+  **Analytics 4** `doesn't allow <https://issuetracker.google.com/issues/233738709?pli=1>`_
+  its dashboard to be integrated in external websites.
+
+  You now have to check your Analytics data directly in the Google Platform as
+  it won't be possible in Odoo anymore.
+
+  Accounts created before `October 2020 <https://support.google.com/analytics/answer/11583832>`_
+  should still be using **Universal Analytics** and be able to integrate their
+  dashboard on external website until the official end of support `around mid
+  2023 <https://developers.googleblog.com/2022/03/gis-jsweb-authz-migration.html>`_.
+
 You can follow your traffic statistics straight from your Odoo Website 
 Dashboard thanks to Google Analytics.
 
