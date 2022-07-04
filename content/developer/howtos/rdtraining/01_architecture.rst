@@ -122,10 +122,10 @@ Odoo is available in `two versions`_: Odoo Enterprise (licensed & shared sources
 functionalities to Odoo. From a technical point-of-view, these functionalities are simply
 new modules installed on top of the modules provided by the Community version.
 
-Ready to start? Before writing actual code, let's go to the
-:ref:`next chapter <howto/rdtraining/02_setup>` to review the Odoo installation process. Even if
-Odoo is already running on your system, we strongly suggest you go through this chapter
-to make sure we start on the same page during the development of our new application.
+Ready to start? Before writing actual code, let's go to the :doc:`next chapter <02_setup>` to review
+the Odoo installation process. Even if Odoo is already running on your system, we strongly suggest
+you go through this chapter to make sure we start on the same page during the development of our new
+application.
 
 .. _multitier architecture:
     https://en.wikipedia.org/wiki/Multitier_architecture
