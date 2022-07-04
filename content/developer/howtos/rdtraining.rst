@@ -3,7 +3,7 @@
 .. _howto/rdtraining:
 
 ===============
-Getting Started
+Getting started
 ===============
 
 Welcome to the Getting Started Odoo tutorial! If you reached this page that means you are

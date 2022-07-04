@@ -248,6 +248,8 @@ packaged installations, and allows overriding settings using
 Finally it provides greater control over the system's set up, and allows to more easily keep
 (and run) multiple versions of Odoo side-by-side.
 
+.. _setup/install/source/windows:
+
 Windows
 -------
 
@@ -270,31 +272,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/windows/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: doscon
+.. tabs::
 
-    C:\> git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: doscon
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         C:\> git clone https://github.com/odoo/odoo.git
+         C:\> git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: doscon
+   .. tab:: Clone with SSH
 
-  C:\> git clone https://github.com/odoo/enterprise.git
+      .. code-block:: doscon
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         C:\> git clone git@github.com:odoo/odoo.git
+         C:\> git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/windows/prepare:
 
 Prepare
 '''''''
@@ -414,6 +427,8 @@ and `mydb` is the default database to serve on `localhost:8069`.
 .. seealso::
    - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
+.. _setup/install/source/linux:
+
 Linux
 -----
 
@@ -436,31 +451,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/linux/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: console
+.. tabs::
 
-    $ git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: console
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         $ git clone https://github.com/odoo/odoo.git
+         $ git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: console
+   .. tab:: Clone with SSH
 
-  $ git clone https://github.com/odoo/enterprise.git
+      .. code-block:: console
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         $ git clone git@github.com:odoo/odoo.git
+         $ git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/linux/prepare:
 
 Prepare
 '''''''
@@ -610,6 +636,8 @@ and `mydb` is the default database to serve on `localhost:8069`.
 .. seealso::
    - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
 
+.. _setup/install/source/mac_os:
+
 Mac OS
 ------
 
@@ -632,31 +660,42 @@ Enterprise Edition:
 * `Official download page <download_>`_
 * `GitHub repository <enterprise-repository_>`_
 
+.. _setup/install/source/mac_os/git:
+
 Git
 ^^^
 
-The following requires git_ to be installed on your machine and that you have basic knowledge of
-git commands.
+The following requires `Git <git_>`_ to be installed on your machine and that you have basic
+knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
+SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
+are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
+on contributing to Odoo source code, choose SSH.
 
-Community Edition:
+.. note::
+   **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
+   collection of extra add-ons. The main server code is in the Community version. Running the
+   Enterprise version actually means running the server from the Community version with the
+   addons-path option set to the folder with the Enterprise version. You need to clone both the
+   Community and Enterprise repository to have a working Odoo Enterprise installation. See
+   :ref:`setup/install/editions` to get access to the Enterprise repository.
 
-.. code-block:: console
+.. tabs::
 
-    $ git clone https://github.com/odoo/odoo.git
+   .. tab:: Clone with HTTPS
 
+      .. code-block:: console
 
-Enterprise Edition: (see :ref:`setup/install/editions` to get access)
+         $ git clone https://github.com/odoo/odoo.git
+         $ git clone https://github.com/odoo/enterprise.git
 
-.. code-block:: console
+   .. tab:: Clone with SSH
 
-  $ git clone https://github.com/odoo/enterprise.git
+      .. code-block:: console
 
-.. note:: **The Enterprise git repository does not contain the full Odoo source code**. It is only
-          a collection of extra add-ons. The main server code is in the Community version. Running
-          the Enterprise version actually means running the server from the Community version with
-          the addons-path option set to the folder with the Enterprise version. You need to clone
-          both the Community and Enterprise repository to have a working Odoo Enterprise
-          installation.
+         $ git clone git@github.com:odoo/odoo.git
+         $ git clone git@github.com:odoo/enterprise.git
+
+.. _setup/install/source/mac_os/prepare:
 
 Prepare
 '''''''
