@@ -2,6 +2,20 @@
 How to track your website's traffic in Google Analytics
 =======================================================
 
+.. warning::
+  Google deprecated **Universal Analytics** which won't be supported anymore in
+  `July 2023 <https://support.google.com/analytics/answer/11583528>`_. They are
+  replacing it with **Analytics 4**.
+
+  New accounts are already using it, but accounts created before `October 2020
+  <https://support.google.com/analytics/answer/11583832>`_ are most likely still
+  using **Universal Analytics**.
+
+  Odoo 15.0 is already adapted and ready for **Analytics 4**. After July 2023,
+  if you want to use Google Analytics tracking in versions before 15.0, you will
+  need to insert the GA tracker code manually, instead of entering your GA key
+  in the Odoo settings.
+
 To follow your website's traffic with Google Analytics:
 
 - `Create a Google Analytics account <https://www.google.com/analytics/>`__ if 
