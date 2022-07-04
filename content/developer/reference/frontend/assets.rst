@@ -329,6 +329,8 @@ manifest counterparts.
 
 .. autoclass:: odoo.addons.base.models.ir_asset.IrAsset
 
+.. rst-class:: o-definition-list
+
 `name`
     Name of the asset record (for identification purpose).
 
