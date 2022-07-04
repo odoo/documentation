@@ -647,3 +647,55 @@ users). The `tests` mode is then useful to be able to run these tours.
 
 .. seealso::
     - `Owl Repository <https://github.com/odoo/owl>`_
+
+Tooltips
+========
+
+Since the web client runs in a browser, tooltips can be displayed using the
+usual `title` attribute.  However, this approach has the following drawbacks:
+these tooltips cannot be styled, they should be pure text, and they cannot be
+customized in any way (so, adding a delay for them to show up and close down, or
+their positioning). 
+
+To solve these issues, the Odoo web framework provides a standard way to display
+tooltips using some special data attributes:
+
+.. code-block:: xml
+
+    <button data-tooltip="This is a tooltip">Do something</button>
+
+
+The ideal position of the tooltip can be specified thanks to the attribute
+`data-tooltip-position`. It should be one of the following string: `top`, `bottom`,
+`left`, `right`. The opening delay (in milliseconds) can be modified with the
+`data-tooltip-delay` attribute (default: 400).
+
+.. code-block:: xml
+
+    <button data-tooltip="This is a tooltip" data-tooltip-position="left" data-tooltip-delay="0">
+      Do something
+    </button>
+
+For advanced tooltips containing dynamic and/or html content, the
+`data-tooltip-template` and `data-tooltip-info` attributes can be used.
+For example, let's suppose we have the following qweb template:
+
+.. code-block:: xml
+
+    <t t-name="some_template">
+      <ul>
+        <li>info.x</li>
+        <li>info.y</li>
+      </ul>
+    </t>
+
+This template can then be used in a tooltip as follows:
+
+.. code-block:: xml
+
+    <button data-tooltip-template="some_template" data-tooltip-info="info">
+      Do something
+    </button>
+
+with `info` being a stringified object with two keys `x` and `y`.
+
