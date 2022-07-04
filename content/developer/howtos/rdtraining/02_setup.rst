@@ -1,321 +1,233 @@
-.. _howto/rdtraining/02_setup:
+========================================
+Chapter 2: Development environment setup
+========================================
 
-=========================================
-Chapter 2: Development Environment Set-up
-=========================================
+Depending on the intended use case, there are multiple ways to install Odoo. This tutorial will
+stick to the :ref:`source install <setup/install/source>` (:dfn:`running Odoo from the source
+code`), which is best suited for Odoo developers.
 
-There are multiple ways to install Odoo depending on the intended use case.
+Throughout this document, we assume that you are installing your development environment on a
+laptop provided by Odoo with Linux Mint installed and up-to-date. If that is not the case, switch to
+the :guilabel:`Windows` or :guilabel:`Mac OS` tab if any section of the installation guide,
+depending on which OS you are on. The steps remain essentially the same.
 
-This document attempts to describe the installation options for an internal Odoo R&D developer. We
-assume that you are installing your development environment on a standard Odoo laptop with Linux
-Mint installed and up-to-date. At the time of writing, we are using a vanilla Linux Mint 20
-(Ubuntu 20.04) as a starting point.
+Set up Git
+==========
 
-
-If you are using another environment, you can refer to :ref:`setup/install/source`.
-
-
-Fetch the sources & configure git
-=================================
-
-Install and configure git
+Install and configure Git
 -------------------------
 
-The very first step of the installation process is to install the `git version control system <https://git-scm.com/>`_
-because the Odoo source code is managed on GitHub.
-
-Git can be installed on `Linux <https://git-scm.com/download/linux>`_, `Windows
-<https://git-scm.com/download/win>`_ or `MacOS <https://git-scm.com/download/mac>`_.
-
-If you're using the laptop provided to you by Odoo, Git should already be installed. If it is not,
-you can install it with:
+The very first step of the installation process is to install the `Git version control system
+<https://git-scm.com/>`_ because the Odoo source code is managed on `GitHub <https://github.com/>`_.
 
 .. code-block:: console
 
-    $ sudo apt install git
+   $ sudo apt install git
 
-Once installed, you can set your name and email:
+.. tip::
+   Check if Git is installed by trying to print Git's version with the following command:
+
+   .. code-block:: console
+
+      $ git --version
+
+Once installed, register your name and email:
 
 .. code-block:: console
 
-    $ git config --global user.name "Your full name"
-    $ git config --global user.email "xyz@odoo.com"
+   $ git config --global user.name "Your full name (trigram)"
+   $ git config --global user.email "xyz@odoo.com"
 
 Configure GitHub
 ----------------
 
-To fetch the sources and contribute to Odoo's development you will need a GitHub account. We
-recommend using your trigram (xyz) followed by '-odoo' as your username: 'xyz-odoo'. If you prefer,
-you can also use your personal GitHub account.
+You need a GitHub account to fetch the sources and contribute to Odoo's development. If you don't
+have one yet, create it. For the username, we recommend using your trigram "xyz" (or quadrigam)
+followed by '-odoo': 'xyz-odoo'.
 
+The easiest way to authenticate with GitHub is to use an SSH connection. Using SSH authentication
+allows you to connect to GitHub without supplying your username and password every time you type a
+command.
 
-The easiest way to authenticate with GitHub is to use an SSH connection. Using the SSH
-authentication will allow you to connect to GitHub without supplying your username and
-password every time.
+.. note::
+   The following step-by-step procedure is based based on the `official GitHub documentation
+   <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
 
+#. Generate a new SSH key, add it to the ssh-agent, and copy the SSH key to your clipboard.
 
-The following instructions are based on the official `GitHub documentation <https://docs.github.com/en/github/authenticating-to-github/connecting-to-github-with-ssh>`_.
+   .. code-block:: console
 
+      $ ssh-keygen -t ed25519 -C "xyz@odoo.com"
+      $ ssh-add ~/.ssh/id_ed25519
+      $ sudo apt install xclip
+      $ xclip -sel clip < ~/.ssh/id_ed25519.pub
 
-Here is a step-by-step procedure:
+#. Go to `GitHub.com <https://github.com/>`_, then click on your profile picture in the upper-right
+   corner of the page and then on :guilabel:`Settings`.
 
+   .. image:: 02_setup/account-settings.png
 
-- Generate a new SSH key, add it to the ssh-agent and copy the SSH key to your clipboard.
+#. On the user settings sidebar, click on :guilabel:`SSH and GPG keys`.
 
-  .. code-block:: console
+   .. image:: 02_setup/settings-sidebar-ssh-keys.png
 
-    $ ssh-keygen -t ed25519 -C "xyz@odoo.com"
-    $ ssh-add ~/.ssh/id_ed25519
-    $ sudo apt-get install xclip
-    $ xclip -sel clip < ~/.ssh/id_ed25519.pub
+#. Click on :guilabel:`New SSH key` or on :guilabel:`Add SSH key`.
 
+   .. image:: 02_setup/ssh-add-ssh-key.png
 
-In Github:
+#. In the :guilabel:`Title` field, add a descriptive label for the new key.
+#. Paste your key into the :guilabel:`Key` field.
 
+   .. image:: 02_setup/ssh-key-paste.png
 
-- In the upper-right corner of any page, click your profile photo, then click Settings
-
-  .. image:: 02_setup/userbar-account-settings.png
-
-- In the user settings sidebar, click SSH and GPG keys.
-
-  .. image:: 02_setup/settings-sidebar-ssh-keys.png
-
-- Click New SSH key or Add SSH key.
-
-  .. image:: 02_setup/ssh-add-ssh-key.png
-
-- In the "Title" field, add a descriptive label for the new key.
-- Paste your key into the "Key" field.
-
-  .. image:: 02_setup/ssh-key-paste.png
-
-- Click Add SSH key.
-
+#. Click on :guilabel:`Add SSH key`.
 
 Fetch the sources
------------------
+=================
 
-All the Odoo sources will be located in `$HOME/src/`
+It is time to fetch the source code of Odoo. First, let's create a home for the Git repositories in
+:file:`$HOME/src/`.
 
 .. code-block:: console
 
-    $ mkdir -p $HOME/src
-    $ cd $HOME/src
-    $ git clone git@github.com:odoo/odoo.git
-    $ git clone git@github.com:odoo/enterprise.git
+   $ mkdir -p $HOME/src
+   $ cd $HOME/src
 
-.. tip:: Cloning the repositories will take a while, enjoy a cup of coffee while you wait.
+Then, clone the two repositories with SSH as explained in the :ref:`Installing Odoo guide
+<setup/install/source/git>`.
 
-.. tip:: You may need to ask your manager for read rights to fetch the enterprise repository.
+.. tip::
+   Cloning the repositories will take a while, enjoy a cup of coffee while you wait.
 
 .. _howto/rdtraining/02_setup/development_repository:
 
-Configure development repository
---------------------------------
+Configure the Git repositories
+==============================
 
-To contribute to Odoo's development you will need to
-`fork the repository <https://guides.github.com/activities/forking/>`_, create a branch containing
-your code in the fork and submit a
-`Pull Request <https://docs.github.com/en/github/getting-started-with-github/github-glossary#pull-request>`_
-to the Odoo repository.
+To contribute to an Odoo repository, you first need to `fork it
+<https://docs.github.com/en/get-started/quickstart/contributing-to-projects>`_, then create a branch
+containing your changes on the fork, and finally submit a `Pull Request
+<https://docs.github.com/en/get-started/quickstart/github-glossary#pull-request>`_ to the
+repository.
 
-If you are lucky enough to work at Odoo, the forks already exist. They are called
-`odoo-dev/odoo` and `odoo-dev/enterprise`.
+.. tip::
+   If you are lucky enough to work at Odoo, the forks already exist. They are hosted on
+   https://github.com/odoo-dev/odoo and https://github.com/odoo-dev/enterprise.
+
+After your two forks are created, their remote address can be added in your local repositories. In
+the commands below, replace `odoo-dev/odoo` and `odoo-dev/enterprise` with the name of your forks if
+needed.
 
 .. code-block:: console
 
-    $ cd  $HOME/src/odoo
-    $ git remote add odoo-dev git@github.com:odoo-dev/odoo.git #add odoo-dev as a new remote
-    $ git remote rename origin odoo #change the name of origin (the odoo repository) to odoo
-    $ git remote set-url --push odoo no_push #remove the possibility to push to odoo (you can only push to odoo-dev)
+   $ cd  $HOME/src/odoo
+   $ git remote add odoo-dev git@github.com:odoo-dev/odoo.git  # Add odoo-dev as a new remote.
+   $ git remote rename origin odoo  # Change the name of origin (the odoo repository) to odoo.
+   $ git remote set-url --push odoo no_push  # Remove the possibility to push directly to odoo (you can only push to odoo-dev).
 
-    $ cd  $HOME/src/enterprise
-    $ git remote add enterprise-dev git@github.com:odoo-dev/enterprise.git
-    $ git remote rename origin enterprise
-    $ git remote set-url --push enterprise no_push
-
-
-Useful git commands
--------------------
-
-Here are some useful git commands for your day-to-day work.
-
-* Change branch:
-  When you change branches, both repositories (odoo and enterprise) must be synchronized, i.e. both
-  need to be in the same branch.
-
-  .. code-block:: console
-
-    $ cd $HOME/src/odoo
-    $ git checkout saas-15.3
-
-    $ cd $HOME/src/enterprise
-    $ git checkout saas-15.3
-
-* Fetch and rebase:
-
-  .. code-block:: console
-
-    $ cd $HOME/src/odoo
-    $ git fetch --all --prune
-    $ git rebase --autostash odoo/saas-15.3
-
-    $ cd $HOME/src/enterprise
-    $ git fetch --all --prune
-    $ git rebase --autostash enterprise/saas-15.3
-
+   $ cd  $HOME/src/enterprise
+   $ git remote add enterprise-dev git@github.com:odoo-dev/enterprise.git
+   $ git remote rename origin enterprise
+   $ git remote set-url --push enterprise no_push
 
 Install the dependencies
 ========================
 
-Python
-------
+As seen in :ref:`howto/rdtraining/01_architecture`, Odoo's server runs on Python and uses PostgreSQL
+as an RDBMS. In the context of a development machine, the easiest approach is to install everything
+locally. To do so, follow once again the :ref:`Installing Odoo guide
+<setup/install/source/prepare>`.
 
-Odoo requires Python 3.7 or later, if your computer is up-to-date you should already be at this
-version or higher.
+.. tip::
+   Some useful SQL commands:
 
-You can check your Python version with:
+   .. code-block:: console
 
-.. code-block:: console
+      $ createdb $DB_NAME  # Create a database.
+      $ dropdb $DB_NAME  # Drop a database.
 
-    $ python3 --version
-
-Install required packages
--------------------------
-
-See :ref:`install/dependencies`.
-
-.. _howto/rdtraining/02_setup/install-wkhtmltopdf:
-
-Install wkhtmltopdf
--------------------
-
-wkhtmltopdf is a library to render HTML into PDF. Odoo uses it to create PDF reports. wkhtmltopdf
-is not installed through pip and must be installed manually in version 0.12.5 to support
-headers and footers.
-
-.. code-block:: console
-
-    $ cd /tmp/
-    $ sudo wget https://github.com/wkhtmltopdf/wkhtmltopdf/releases/download/0.12.5/wkhtmltox_0.12.5-1.focal_amd64.deb
-    $ sudo gdebi --n wkhtmltox_0.12.5-1.focal_amd64.deb
-    $ sudo ln -s /usr/local/bin/wkhtmltopdf /usr/bin
-    $ sudo ln -s /usr/local/bin/wkhtmltoimage /usr/bin
-
-Right-to-left interface support
--------------------------------
-
-In order to support right-to-left (RTL) languages, we need `rtlcss` to convert the CSS files:
-
-.. code-block:: console
-
-    $ sudo apt-get install nodejs npm
-    $ sudo npm install -g rtlcss
-
-Install PostgreSQL
-------------------
-
-As seen in :ref:`howto/rdtraining/01_architecture`, Odoo uses PostgreSQL as a RDBMS. In the context of a
-development machine, the easiest approach is to install it locally. Then we can create a PostgreSQL user
-corresponding to our current user:
-
-.. code-block:: console
-
-    $ sudo apt install postgresql postgresql-client
-    $ sudo -u postgres createuser -s $USER
-
-
-Some useful SQL commands:
-
-.. code-block:: console
-
-    $ createdb $DB_NAME #Create a database
-    $ dropdb $DB_NAME #Drop a database
-
-    $ psql $DB_NAME #Connect to a database
-        \l #List all the available databases
-        \dt #List all the tables of the $DB_NAME database
-        \d $TABLE_NAME #Show the structure of the table $TABLE_NAME
-        \q #Quit the psql environment (ctrl + d)
+      $ psql $DB_NAME  # Connect to a database.
+          \l  #List all the available databases.
+          \dt  #List all the tables of the $DB_NAME database.
+          \d $TABLE_NAME  #Show the structure of the table $TABLE_NAME.
+          \q  #Quit the psql environment (ctrl + d).
 
 Run the server
 ==============
 
-Running odoo-bin
-----------------
+Launch with `odoo-bin`
+----------------------
 
-Once all dependencies are set up, Odoo can be launched by running odoo-bin, the command-line interface of the server.
+Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the command-line
+interface of the server.
 
 .. code-block:: console
 
     $ cd $HOME/src/odoo/
     $ ./odoo-bin --addons-path="addons/,../enterprise/" -d rd-demo
 
-There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to
-configure the server. In this training you will only need some of them.
+There are multiple :ref:`command-line arguments <reference/cmdline/server>` that you can use to run
+the server. In this training you will only need some of them.
 
 .. option:: -d <database>
 
-    The database that is going to be used.
+   The database that is going to be used.
 
 .. option:: --addons-path <directories>
 
-    A comma-separated list of directories in which modules are stored. These directories are scanned
-    for modules.
+   A comma-separated list of directories in which modules are stored. These directories are scanned
+   for modules.
 
 .. option:: --limit-time-cpu <limit>
 
-    Prevents the worker from using more than <limit> CPU seconds for each request.
+   Prevent the worker from using more than <limit> CPU seconds for each request.
 
 .. option:: --limit-time-real <limit>
 
-    Prevents the worker from taking longer than <limit> seconds to process a request.
+   Prevent the worker from taking longer than <limit> seconds to process a request.
 
-The last two can be used to prevent the worker from being killed when debugging the source code.
+.. tip::
+   - The :option:`--limit-time-cpu` and :option:`--limit-time-real` arguments can be used to prevent
+     the worker from being killed when debugging the source code.
+   - | You may face an error similar to `AttributeError: module '<MODULE_NAME>' has no attribute
+       '<$ATTRIBUTE'>`. In this case, you may need to re-install the module with :command:`$ pip
+       install --upgrade --force-reinstall <MODULE_NAME>`.
+     | If this error occurs with more than one module, you may need to re-install all the
+       requirements with :command:`$ pip install --upgrade --force-reinstall -r requirements.txt`.
+     | You can also clear the python cache to solve the issue:
 
-.. tip:: You may face an error similar to `AttributeError: module '$MODULE_NAME' has no attribute '$ATTRIBUTE'`
+       .. code-block:: console
 
-    In this case you may need to re-install the module with `$ pip install --upgrade --force-reinstall $MODULE_NAME`
+          $ cd $HOME/.local/lib/python3.8/site-packages/
+          $ find -name '*.pyc' -type f -delete
 
-    If this error occurs with more than one module then you may need to re-install all the
-    requirements with `$ pip3 install --upgrade --force-reinstall -r requirements.txt`
+   - Other commonly used arguments are:
 
-    You can also clear the python cache to solve the issue
-
-    .. code-block:: console
-
-        $ cd $HOME/.local/lib/python3.8/site-packages/
-        $ find -name '*.pyc' -type f -delete
-
-.. tip:: Other commonly used arguments are:
-
-    * :option:`-i <odoo-bin --init>`: install some modules before running the server (comma separated list)
-    * :option:`-u <odoo-bin --update>`: update some modules before running the server (comma separated list)
-
+     - :option:`-i <odoo-bin --init>`: Install some modules before running the server
+       (comma-separated list).
+     - :option:`-u <odoo-bin --update>`: Update some modules before running the server
+       (comma-separated list).
 
 Log in to Odoo
 --------------
 
-Open `http://localhost:8069/` on your browser. We recommend you use:
-`Firefox <https://www.mozilla.org/fr/firefox/new/>`_,
-`Chrome <https://www.google.com/intl/fr/chrome/>`_
-(`Chromium <https://www.chromium.org/Home>`_ the open source equivalent) or any other browser with
-development tools.
+Open http://localhost:8069/ on your browser. We recommend using `Chrome
+<https://www.google.com/intl/en/chrome/>`_, `Firefox <https://www.mozilla.org/firefox/new/>`_, or
+any other browser with development tools.
 
-To log in as the administrator user, you can use the following credentials:
+To log in as the administrator user, use the following credentials:
 
-* email = `admin`
-* password = `admin`
+- email: `admin`
+- password: `admin`
 
-The developer mode
-==================
+Enable the developer mode
+=========================
 
-The Developer or Debug Mode gives you access to additional (advanced) tools.
+The developer or debug mode is useful for training as it gives access to additional (advanced)
+tools. In the next chapters, **we will always assume that you have enabled the developer mode**.
 
-This is useful for training and we assume that the user is in developer mode for the rest of the tutorials.
-
-To activate the developer or debug mode you can follow the steps `here <https://www.odoo.com/documentation/user/general/developer_mode/activate.html>`_.
+:ref:`Enable the developer mode <developer-mode>` now. Choose the method that you prefer; they are
+all equivalent.
 
 .. note::
    The main page of the Settings screen is only accessible if at least one application is installed.
@@ -324,193 +236,147 @@ To activate the developer or debug mode you can follow the steps `here <https://
 Extra tools
 ===========
 
+Useful Git commands
+-------------------
+
+Here are some useful Git commands for your day-to-day work.
+
+- | Switch branches:
+  | When you switch branches, both repositories (odoo and enterprise) must be synchronized, i.e.
+    both need to be in the same branch.
+
+  .. code-block:: console
+
+     $ cd $HOME/src/odoo
+     $ git switch saas-15.3
+
+     $ cd $HOME/src/enterprise
+     $ git switch saas-15.3
+
+- Fetch and rebase:
+
+  .. code-block:: console
+
+     $ cd $HOME/src/odoo
+     $ git fetch --all --prune
+     $ git rebase --autostash odoo/saas-15.3
+
+     $ cd $HOME/src/enterprise
+     $ git fetch --all --prune
+     $ git rebase --autostash enterprise/saas-15.3
+
 Code Editor
 -----------
 
-If you are working at Odoo, many of your colleagues are using `VSCode`_ (`VSCodium`_ the open source
-equivalent), `Sublime Text`_, `Atom`_ or `PyCharm`_. However you are free to
-choose your preferred editor.
+If you are working at Odoo, many of your colleagues are using `VSCode
+<https://code.visualstudio.com>`_, `VSCodium <https://vscodium.com>`_ (the open source equivalent),
+`PyCharm <https://www.jetbrains.com/pycharm/download/#section=linux>`_, or `Sublime Text
+<https://www.sublimetext.com>`_. However, you are free to choose your preferred editor.
 
-Don't forget to configure your linters correctly. Using a linter can help you by showing syntax and semantic
-warnings or errors. Odoo source code tries to respect Python and JavaScript standards, but some of
-them can be ignored.
+It is important to configure your linters correctly. Using a linter helps you by showing syntax and
+semantic warnings or errors. Odoo source code tries to respect Python's and JavaScript's standards,
+but some of them can be ignored.
 
 For Python, we use PEP8 with these options ignored:
 
-- E501: line too long
-- E301: expected 1 blank line, found 0
-- E302: expected 2 blank lines, found 1
+- `E501`: line too long
+- `E301`: expected 1 blank line, found 0
+- `E302`: expected 2 blank lines, found 1
 
-For JavaScript, we use ESLint and you can find a `configuration file example here`_.
-
-If you do not know how to set up a linter:
-
-- `Here is an explanation of how to set up a Python linter in VSCode <https://code.visualstudio.com/docs/python/linting>`_. There are multiple
-  linter options you are free to choose from, but `Flake8 <https://pypi.org/project/flake8/>`_ is a popular choice.
-- To setup ESLint in VSCode, you must download the `ESLint extension`_ and follow its instructions
-  for installing ESLint. Don't forget to create and set up the `.eslintrc` file to follow the
-  configuration file mentioned above.
-- Another useful VSCode plugin is `Trailing Spaces`_ to quickly notice trailing spaces while
-  you're working.
-
-.. _Trailing Spaces: https://marketplace.visualstudio.com/items?itemName=shardulm94.trailing-spaces
-.. _ESLint extension: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
-.. _configuration file example here: https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter
-.. _VSCode: https://code.visualstudio.com/
-.. _VSCodium: https://vscodium.com/
-.. _Sublime Text: https://www.sublimetext.com/
-.. _PyCharm: https://www.jetbrains.com/pycharm/download/#section=linux
-.. _Atom: https://atom.io/
+For JavaScript, we use ESLint and you can find a `configuration file example here
+<https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter>`_.
 
 Administrator tools for PostgreSQL
 -----------------------------------
 
 You can manage your PostgreSQL databases using the command line as demonstrated earlier or using
-a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver <https://dbeaver.io/>`_.
+a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver
+<https://dbeaver.io/>`_.
 
 To connect the GUI application to your database we recommend you connect using the Unix socket.
 
-* Host name/address = /var/run/postgresql
-* Port = 5432
-* Username = $USER
-
+- Host name/address: `/var/run/postgresql`
+- Port: `5432`
+- Username: `$USER`
 
 Python Debugging
 ----------------
 
-When facing a bug or trying to understand how the code works, simply printing things out can
-go a long way, but a proper debugger can save a lot of time.
+When facing a bug or trying to understand how the code works, simply printing things out can go a
+long way, but a proper debugger can save a lot of time.
 
 You can use a classic Python library debugger (`pdb <https://docs.python.org/3/library/pdb.html>`_,
-`pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_) or you can
-use your editor's debugger. To avoid difficult configurations in the beginning, it is
-easier if you use a library debugger.
+`pudb <https://pypi.org/project/pudb/>`_ or `ipdb <https://pypi.org/project/ipdb/>`_), or you can
+use your editor's debugger.
 
 In the following example we use ipdb, but the process is similar with other libraries.
 
-- Install the library:
+#. Install the library:
 
-  .. code-block:: console
+   .. code-block:: console
 
-        pip3 install ipdb
+      pip install ipdb
 
-- Trigger (breakpoint):
+#. Place a trigger (breakpoint):
 
-  .. code-block:: console
+   .. code-block:: python
 
-        import ipdb; ipdb.set_trace()
+      import ipdb; ipdb.set_trace()
 
-  Example:
+   .. example::
 
-  .. code-block:: python
-     :emphasize-lines: 2
+      .. code-block:: python
+         :emphasize-lines: 2
 
-        def copy(self, default=None):
-            import ipdb; ipdb.set_trace()
-            self.ensure_one()
-            chosen_name = default.get('name') if default else ''
-            new_name = chosen_name or _('%s (copy)') % self.name
-            default = dict(default or {}, name=new_name)
-            return super(Partner, self).copy(default)
+         def copy(self, default=None):
+             import ipdb; ipdb.set_trace()
+             self.ensure_one()
+             chosen_name = default.get('name') if default else ''
+             new_name = chosen_name or _('%s (copy)') % self.name
+             default = dict(default or {}, name=new_name)
+             return super(Partner, self).copy(default)
 
 Here is a list of commands:
 
 .. option:: h(elp) [command]
 
-    Without an argument, print the list of available commands. With a command as an argument, print help
-    about that command.
+   Print the list of available commands if not argument is supplied. With a command as an argument,
+   print the help about that command.
 
 .. option:: pp expression
 
-    The value of the ``expression`` is pretty-printed using the ``pprint`` module.
+   The value of the `expression` is pretty-printed using the `pprint` module.
 
 .. option:: w(here)
 
-    Print a stack trace, with the most recent frame at the bottom.
+   Print a stack trace with the most recent frame at the bottom.
 
 .. option:: d(own)
 
-    Move the current frame one level down in the stack trace (to a newer frame).
+   Move the current frame one level down in the stack trace (to a newer frame).
 
 .. option:: u(p)
 
-    Move the current frame one level up in the stack trace (to an older frame).
+   Move the current frame one level up in the stack trace (to an older frame).
 
 .. option:: n(ext)
 
-    Continue the execution until the next line in the current function is reached or it returns.
+   Continue the execution until the next line in the current function is reached or it returns.
 
 .. option:: c(ontinue)
 
-    Continue the execution and only stop when a breakpoint is encountered.
+   Continue the execution and only stop when a breakpoint is encountered.
 
 .. option:: s(tep)
 
-    Execute the current line, stop at the first possible occasion (either in a function that is
-    called or on the next line in the current function).
+   Execute the current line. Stop at the first possible occasion (either in a function that is
+   called or on the next line in the current function).
 
 .. option:: q(uit)
 
-    Quit the debugger. The program being executed is aborted.
+   Quit the debugger. The program being executed is aborted.
 
-.. tip::
+----
 
-    To avoid killing the worker when debugging, you can add these arguments when launching the
-    server: `--limit-time-cpu=9999 --limit-time-real=9999`
-    Another solution is to add them directly in the `~/.odoorc` file:
-
-    .. code-block:: console
-
-        $ cat ~/.odoorc
-        [options]
-        limit_time_cpu = 9999
-        limit_time_real = 9999
-
-Additional resources
---------------------
-
-Below are links to resources that could prove helpful during this tutorial.
-
-Git
-~~~
-
-- Atlassian has a set of `excellent tutorials <https://www.atlassian.com/git/tutorials/>`_.
-  Particularly, how to `rewrite the history
-  <https://www.atlassian.com/git/tutorials/rewriting-history>`_.
-- If the Atlassian tutorial does not work for you, W3schools offers a `very nice alternative
-  <https://www.w3schools.com/git/>`_.
-- To visualize the effect of git commands on the commits graphs, play with this `interactive
-  tutorial <https://learngitbranching.js.org/>`_.
-- If you want to read more about Github, their `documentation
-  <https://docs.github.com/en/get-started/quickstart/hello-world>`_ includes a comprehensive
-  introduction.
-
-Python
-~~~~~~
-
-- Don't forget about `Python official documentation <https://docs.python.org/3/>`_
-  (and make sure to select the correct version at the top of the page!).
-- `The Hitchhiker's Guide <https://docs.python-guide.org/>`_ will teach you the good practices of
-  Python.
-- If you have good experience of similar languages or just need a quick recall,
-  `this guide <https://learnxinyminutes.com/docs/python3/>`_ is made for you.
-
-Javascript
-~~~~~~~~~~
-
-- You should find a tutorial that suits your level in this `"re-introduction" to JavaScript
-  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/A_re-introduction_to_JavaScript>`_.
-- If you just need a quick recall, `this one <https://learnxinyminutes.com/docs/javascript/>`_
-  will do the trick.
-
-(Postgre)SQL
-~~~~~~~~~~~~
-
-- If you are not familiar with PostgreSQL, `these exercises <https://www.pgexercises.com/>`_
-  will teach you better than any long documentation.
-- Even though you shouldn't have to interact with it, you might be interested to know
-  that Odoo uses `psycopg2 <https://www.psycopg.org/docs/usage.html>`_ to interact
-  with its SQL backend.
-
-Back to the training! Now that your server is running, it's time to start
-:ref:`writing your own application <howto/rdtraining/03_newapp>`!
+Now that your server is running, it's time to start :ref:`writing your own application
+<howto/rdtraining/03_newapp>`!
