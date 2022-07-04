@@ -7,7 +7,7 @@ Advanced J: PDF Reports
 .. warning::
 
     This tutorial assumes you have completed the :ref:`Core Training <howto/rdtraining>`
-    and have installed :ref:`wkhtmltopdf <howto/rdtraining/02_setup/install-wkhtmltopdf>`.
+    and have installed :ref:`wkhtmltopdf <setup/install/source/prepare>`.
 
     To follow the exercise, it is recommended that you fetch the branch
     15.0-core from the
