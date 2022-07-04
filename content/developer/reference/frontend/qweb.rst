@@ -142,6 +142,8 @@ variables for various data points:
 
 .. warning:: ``$as`` will be replaced by the name passed to ``t-as``
 
+.. rst-class:: o-definition-list
+
 :samp:`{$as}_all` (deprecated)
     the object being iterated over
 
@@ -197,6 +199,8 @@ attributes
 QWeb can compute attributes on-the-fly and set the result of the computation
 on the output node. This is done via the ``t-att`` (attribute) directive which
 exists in 3 different forms:
+
+.. rst-class:: o-definition-list
 
 :samp:`t-att-{$name}`
     an attribute called ``$name`` is created, the attribute value is evaluated
@@ -442,6 +446,8 @@ to a normal string to "strip" the safety flag e.g. `str(content)` in Python and
 Deprecated output directives
 ----------------------------
 
+.. rst-class:: o-definition-list
+
 ``esc``
     An alias for ``out``, would originally HTML-escape its input. Not yet
     formally deprecated as the only difference between ``out`` and ``esc`` is
@@ -482,6 +488,8 @@ is ``widget``, other options are field- or widget-dependent.
 
 Debugging
 ---------
+
+.. rst-class:: o-definition-list
 
 ``t-debug``
     invokes a debugger using PDB's ``set_trace`` API. The parameter should
@@ -751,6 +759,8 @@ At a deeper level than the previous helper is the ``_render`` method on
     You can use ``minimal_qcontext=False`` option to avoid this default
     value like the public method ``render``:
 
+    .. rst-class:: o-definition-list
+
     ``request``
         the current :class:`~odoo.http.Request` object, if any
     ``debug``
@@ -875,6 +885,8 @@ The ``t-jquery`` directives takes a `CSS selector`_. This selector is used
 on the extended template to select *context nodes* to which the specified
 ``t-operation`` is applied:
 
+.. rst-class:: o-definition-list
+
 ``append``
     the node's body is appended at the end of the context node (after the
     context node's last child)
@@ -906,6 +918,8 @@ debugging
 ---------
 
 The javascript QWeb implementation provides a few debugging hooks:
+
+.. rst-class:: o-definition-list
 
 ``t-log``
     takes an expression parameter, evaluates the expression during rendering
