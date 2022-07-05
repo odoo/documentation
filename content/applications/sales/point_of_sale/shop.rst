@@ -13,3 +13,4 @@ Shop Features
    shop/multicashiers
    shop/reprint
    shop/cash_rounding
+   shop/serial_numbers
