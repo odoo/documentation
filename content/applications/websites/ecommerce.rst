@@ -16,6 +16,7 @@ products and increase your average cart sizes.
    ``www.example.com`` rather than the default ``example.odoo.com``.
 
 .. seealso::
+   - :doc:`Website Documentation <website>`
    - `Odoo Tutorials: Website <https://www.odoo.com/slides/website-25>`_
    - `Odoo Tutorials: eCommerce <https://www.odoo.com/slides/ecommerce-26>`_
 
@@ -26,6 +27,5 @@ products and increase your average cart sizes.
    ecommerce/managing_products
    ecommerce/taxes
    ecommerce/shopper_experience
-   ecommerce/publish
    ecommerce/maximizing_revenue
 
