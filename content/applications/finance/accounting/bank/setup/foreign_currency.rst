@@ -110,7 +110,7 @@ process the unrealized gains and losses.
 You can set the date of the report in the :guilabel:`Date` field. Odoo will automatically reverse
 the booking entry to the date set in :guilabel:`Reversal Date`.
 
-Once posted, the :guilabel:`adjustment` column says 0.00€.
+Once posted, the :guilabel:`adjustment` column is empty, meaning it is at 0.00€.
 
 .. image:: foreign_currency/foreign-adjustment.png
    :align: center
