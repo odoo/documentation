@@ -1,117 +1,117 @@
-===================================
-Manage a bank in a foreign currency
-===================================
+===========================================
+Manage a bank account in a foreign currency
+===========================================
 
-In Odoo, every transaction is recorded in the default currency of the
-company. Reports are all based on the currency of the company. But for
-transactions occurring in another currency, Odoo stores both the value
-in the currency of the company and the value in the currency of the
-transaction.
-
-When you have a bank account in a foreign currencies, for every
+In Odoo, every transaction is recorded in the default currency of the company, and reports are all
+based on that default currency. When you have a bank account in a foreign currency, for every
 transaction, Odoo stores two values:
 
--  The debit/credit in the currency of the company
+-  The debit/credit in the currency of the *company*;
+-  The debit/credit in the currency of the *bank account*.
 
--  The debit/credit in the currency of the bank account
-
-Currency rates are updated automatically using yahoo.com, or the
-European Central bank web-services.
+Currency rates are updated automatically using the web services of a banking institution. By
+default, Odoo uses the European Central Bank's web services but other options are available.
 
 Configuration
 =============
 
-Activate the multi-currency feature
------------------------------------
+Activate multi-currencies
+-------------------------
 
-In order to allow your company to work with multiple currencies, you
-should activate the multi-currency mode. In the accounting application,
-go into :menuselection:`Configuration --> Settings --> Accounting & Finance Features`
-make sure the **Allow Multi-currencies** box is ticked. Provide
-a **Currency Exchange Gain / Loss** account, then click on **Apply**.
+To work with multiple currencies, go to :menuselection:`Accounting --> Configuration --> Settings
+--> Currencies` and tick :guilabel:`Multi-Currencies`. Under :guilabel:`Post Exchange difference
+entries in:`, provide a :guilabel:`Journal`, a :guilabel:`Gain Account`, a :guilabel:`Loss Account`,
+and then click on :guilabel:`Save`.
 
 Configure currencies
 --------------------
 
-Once the Odoo is configured to support multiple currencies, you should
-activate the currencies you plan to work with. To do that, go to the menu
-:menuselection:`Configuration --> Currencies`. All the currencies are created by default,
-but you should activate the ones you plan to support (to activate a
-currency, check its "Active" field).
+Once Odoo is configured to support multiple currencies, they are all created by default, but not
+necessarily active. To activate the new currencies, click on :guilabel:`Activate Other Currencies`
+under the :guilabel:`Multi-Currencies` setting or go to :menuselection:`Accounting --> Configuration
+--> Accounting: Currencies`.
 
-After having activated the currencies, you can configure the parameters
-to automate the currency rate update. These options are also in the
-settings of the Accounting application, in the bottom of the page:
+When the currencies are activated, you can choose to **automate** the currency rate update, or leave
+it on **manual**. To configure the rate update, go back to :menuselection:`Accounting -->
+Configuration --> Settings --> Currencies`, check :guilabel:`Automatic Currency Rates`, set
+:guilabel:`Interval` to your desired frequency, and then click on :guilabel:`Save`. You also have
+the option to choose the :guilabel:`Service` you wish to obtain currency rates from.
 
-.. image:: foreign_currency/foreign01.png
-   :align: center
-
-Click on the **Update Now** link to update the currency rates now.
+Click on the Update now button (:guilabel:`🗘`) besides the :guilabel:`Next Run` field to update
+the currency rates manually.
 
 Create a new bank account
 -------------------------
 
-In the accounting application, we first go to :menuselection:`Configuration -->
-Accounting / Bank account`, and we create a new one.
+In the accounting application, go to :menuselection:`Accounting --> Configuration --> Journals` and
+create a new one. Enter a :guilabel:`Journal Name` and set the :guilabel:`Type` to `Bank`. In the
+:guilabel:`Journal Entries` tab, enter a **short code**, a **currency**, and then finally click on
+the :guilabel:`Bank Account` field to create a new account. In the pop-up window of the account
+creation, enter a name, a code (ex.: 550007), set its type to `Bank and Cash`, set a currency type,
+and save. When you are back on the **journal**, click on the :guilabel:`Account Number` field, and
+in the pop-up window, fill out the :guilabel:`Account Number`, :guilabel:`Bank` of your account, and
+save.
 
-.. image:: foreign_currency/foreign02.png
+.. image:: foreign_currency/foreign-journal.png
    :align: center
+   :alt: Example of a created bank journal.
 
-Once you save this bank account, Odoo will create all the documents for
-you:
+Upon creation of the journal, Odoo automatically links the bank account to the journal. It can be
+found under :menuselection:`Accounting --> Configuration --> Accounting: Chart of Accounts`.
 
-- An account in the trial balance
+Vendor bill in a foreign currency
+=================================
 
-- A journal in your dashboard
+To pay a bill in a foreign currency, simply select the currency next to the :guilabel:`Journal`
+field and register the payment. Odoo automatically creates and posts the foreign **exchange gain or
+loss** as a new journal entry.
 
-- Information about the bank account in the footer of your invoices if
-  checked the box **Show in Invoices Footer**
-
-Example: A vendor bill in a foreign currency
-============================================
-
-Based on the above example, let's assume we receive the following bill
-from a supplier in China.
-
-In the :menuselection:`Purchase --> Vendor Bills` , this is what you could see:
-
-.. image:: foreign_currency/foreign03.png
+.. image:: foreign_currency/foreign-bill-currency.png
    :align: center
+   :alt: How to set a bill currency.
 
-Once you are ready to pay this bill, click on register payment on the
-bill to record a payment.
+.. note::
+   Note that you can pay a foreign bill with another currency. In that case, Odoo automatically
+   converts between the two currencies.
 
-.. image:: foreign_currency/foreign04.png
+Unrealized Currency Gains/Losses Report
+=======================================
+
+This report gives an overview of all unrealized amounts in a foreign currency on your balance sheet,
+and allows you to adjust an entry or manually set an exchange rate. To access this report, go to
+:menuselection:`Reporting --> Management: Unrealized Currency Gains/Losses`. From here, you have
+access to all open entries in your **balance sheet**.
+
+.. image:: foreign_currency/foreign-gains-losses.png
    :align: center
+   :alt: View of the Unrealized Gains/Losses journal.
 
-That's all you have to do. Odoo will automatically post the foreign
-exchange gain or loss at the reconciliation of the payment with the
-invoice, depending if the currency rate increased or decreased between
-the invoice and the payment date.
+If you wish to use a different currency rate than the one set in :menuselection:`Accounting -->
+Configuration --> Settings --> Currencies`, click the :guilabel:`Exchange Rates` button and change
+the rate of the foreign currencies in the report.
 
-Note that you can pay a foreign bill with another currency. In such a
-case, Odoo will automatically convert between the two currencies.
-
-Customers Statements
-====================
-
-Customers and vendor statements are managed in the currency of the
-invoice. So, the amount due by your customer (to your vendor) is always
-expressed in the currency of the invoice.
-
-If you have several invoices with different currencies for the same
-customer, Odoo will split the customer statement by currency, as shown
-in the report below.
-
-.. image:: foreign_currency/foreign05.png
+.. image:: foreign_currency/foreign-exchange-rates.png
    :align: center
+   :alt: Menu to manually change exchange rates.
 
-In the above report, the account receivable associated to Camptocamp is
-not managed in a secondary currency, which means that it keeps every
-transaction in its own currency. If you prefer, you can set the account
-receivable for this customer in a secondary currency and all its debts
-will automatically be converted to this currency.
+When manually changing **exchange rates**, a yellow banner appears allowing you to reset back to
+Odoo's rate. To do so, simply click on :guilabel:`Reset to Odoo's Rate`.
 
-In such a case, the customer statement always has only one currency. In
-general, this is not what the customer expect as he prefers to see the
-amounts in the currency of the invoices he received;
+.. image:: foreign_currency/foreign-reset-rates.png
+   :align: center
+   :alt: Banner to reset back to Odoo's rates.
+
+In order to update your **balance sheet** with the amount of the :guilabel:`adjustment` column,
+click on the :guilabel:`Adjustment Entry` button. In the pop-up window, select a
+:guilabel:`Journal`, :guilabel:`Expense Account` and :guilabel:`Income Account` to calculate and
+process the **unrealized gains and losses**.
+
+You can set the date of the report in the :guilabel:`Date` field. Odoo automatically reverses the
+booking entry to the date set in :guilabel:`Reversal Date`.
+
+Once posted, the :guilabel:`adjustment` column should indicate `0.00`, meaning all **unrealized
+gains/losses** have been adjusted.
+
+.. image:: foreign_currency/foreign-adjustment.png
+   :align: center
+   :alt: Unrealized Currency Gains/Losses report once adjusted.
