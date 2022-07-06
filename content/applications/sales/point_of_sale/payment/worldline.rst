@@ -1,6 +1,6 @@
-===============================================
-Connect a Worldline Payment Terminal to the PoS
-===============================================
+=========
+Worldline
+=========
 
 Connecting a payment terminal allows you to offer a fluid payment flow to your customers and ease
 the work of your cashiers.
