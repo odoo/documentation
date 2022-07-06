@@ -22,7 +22,7 @@ The method to acquire your credentials depends on your hosting type:
       #. Confirm your email address when Stripe sends you a confirmation email.
       #. At the end of the process, you are redirected to Odoo. If you submitted all the requested
          information, you are all set and your payment acquirer is enabled.
-      #. Your can continue to :ref:`stripe/local-payment-methods`.
+      #. You can continue to :ref:`stripe/local-payment-methods`.
 
       .. tip::
          To use your own API keys, :ref:`activate the Developer mode <developer-mode>` and
@@ -133,7 +133,7 @@ To set it up, enable the :guilabel:`Capture Amount Manually` option on Odoo, as 
    payment if unsupported payment methods are selected.
 
 .. caution::
-   Odoo doesn't support the partial capture yet. Be aware that a partial capture from Stripe's 
+   Odoo doesn't support the partial capture yet. Be aware that a partial capture from Stripe's
    interface is still managed as a full capture by Odoo.
 
 .. seealso::
@@ -169,5 +169,33 @@ listed, you don't have anything to do.
      listed above, it is considered enabled with Stripe.
    - If a local payment method is not listed above, it is not supported and cannot be enabled.
 
+.. _stripe/express-checkout:
+
+Enable express checkout
+=======================
+
 .. seealso::
-   - :doc:`../payment_acquirers`
+   :ref:`payment_acquirers/features/express_checkout`
+
+After ticking the :guilabel:`Allow Express Checkout` checkbox, **Google Pay** is enabled out of the
+box, but **Apple Pay** requires extra steps: You must register your web domain with Apple. This can
+be done either automatically from Odoo, or manually from Stripe.
+
+.. tabs::
+  .. tab:: Register automatically from Odoo
+
+     #. Navigate to your payment acquirer and make sure that it is :guilabel:`enabled`.
+     #. Go to the :guilabel:`Configuration` tab and click on the :guilabel:`Enable Apple Pay`
+        button. A notification shows that the web domain was successfully registered with Apple.
+
+  .. tab:: Register manually from Stripe
+
+     Visit the `Apple pay web domains page on Stripe
+     <https://dashboard.stripe.com/settings/payments/apple_pay>`_, or log into your Stripe
+     dashboard and go to :menuselection:`Settings --> Payments methods --> Apple Pay --> Configure
+     --> Web domains`. Then, click on :guilabel:`Add new domain` and insert the web domain of your
+     Odoo database into the pop-up form. Odoo already hosts the verification file of Stripe. Click
+     on :guilabel:`Add` to register your web domain with Apple.
+
+.. important::
+   This operation must be repeated whenever your web domain changes.
