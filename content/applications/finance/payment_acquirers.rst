@@ -64,16 +64,19 @@ Online payment acquirers
 
    * -
      - Payment flow
-     - :ref:`Save cards for later <payment_acquirers/features/tokenization>`
+     - :ref:`Tokenization <payment_acquirers/features/tokenization>`
      - :ref:`Manual capture <payment_acquirers/features/manual_capture>`
      - :ref:`Refunds <payment_acquirers/features/refund>`
+     - :ref:`Express checkout <payment_acquirers/features/express_checkout>`
    * - :doc:`Adyen <payment_acquirers/adyen>`
      - Payment from Odoo
      - |V|
      - Full only
      - Full and partial
+     -
    * - :doc:`Alipay <payment_acquirers/alipay>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -82,8 +85,10 @@ Online payment acquirers
      -
      -
      -
+     -
    * - :doc:`AsiaPay <payment_acquirers/asiapay>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -92,8 +97,10 @@ Online payment acquirers
      - |V|
      - Full only
      - Full only
+     -
    * - :doc:`Buckaroo <payment_acquirers/buckaroo>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -102,13 +109,16 @@ Online payment acquirers
      - |V|
      -
      -
+     -
    * - :doc:`Mercado Pago <payment_acquirers/mercado_pago>`
      - Payment from the acquirer website
      -
      -
-     - 
+     -
+     -
    * - :doc:`Mollie <payment_acquirers/mollie>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -117,8 +127,10 @@ Online payment acquirers
      - |V|
      -
      -
+     -
    * - :doc:`PayPal <payment_acquirers/paypal>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -127,13 +139,16 @@ Online payment acquirers
      -
      -
      -
+     -
    * - :doc:`Razorpay <payment_acquirers/razorpay>`
      - Payment from Odoo
      -
      - Full only
      - Full and partial
+     -
    * - :doc:`SIPS <payment_acquirers/sips>`
      - Payment from the acquirer website
+     -
      -
      -
      -
@@ -142,6 +157,7 @@ Online payment acquirers
      - |V|
      - Full only
      - Full and partial
+     - |V|
 
 .. |V| replace:: ✔
 
@@ -176,13 +192,13 @@ features.
 
 .. _payment_acquirers/features/tokenization:
 
-Save cards for later
---------------------
+Tokenization
+------------
 
-If your payment acquirer supports this feature, customers can choose to save their card details as a
-**payment token** in Odoo. When they do, they will not have to enter their card details again when
-making a subsequent payment. This is particularly useful for the eCommerce conversion rate and for
-subscriptions that use recurring payments.
+If your payment acquirer supports this feature, customers can choose to save their card for later. A
+**payment token** is created in Odoo and can be used as a payment method for subsequent payments
+without having to enter the card details again. This is particularly useful for the eCommerce
+conversion rate and for subscriptions that use recurring payments.
 
 Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment acquirer
 and by ticking the :guilabel:`Allow Saving Payment Methods` checkbox.
@@ -245,6 +261,22 @@ not need to be enabled first. To refund a customer payment, navigate to it and c
      refunding the full amount have the value **Full only**.
    - Odoo does not support this feature for all payment acquirers but some allow to refund payments
      from their website interface.
+
+.. _payment_acquirers/features/express_checkout:
+
+Express checkout
+----------------
+
+If your payment acquirer supports this feature, customers can use the **Google Pay** and **Apple
+Pay** buttons to pay their eCommerce orders in one click without filling the contact form. Using one
+of those buttons, they'll go straight from the cart to the confirmation page, stopping by the
+payment form of Google or Apple to validate the payment.
+
+Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment acquirer
+and by ticking the :guilabel:`Allow Express Checkout` checkbox.
+
+.. note::
+   All prices shown in the express checkout payment form are always taxes included.
 
 .. _payment_acquirers/configuration:
 
