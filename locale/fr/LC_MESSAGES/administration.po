@@ -9,7 +9,7 @@
 # Rémi FRANÇOIS <remi@sudokeys.com>, 2022
 # Shark McGnark <peculiarcheese@gmail.com>, 2022
 # anthony chaussin <chaussin.anthony@gmail.com>, 2022
-# Alexandra Jubert <aju@odoo.com>, 2022
+# Alexandra Jubert, 2022
 # amsodoo <ams@odoo.com>, 2022
 # Jérôme Tanché <jerome.tanche@ouest-dsi.fr>, 2022
 # romrik_, 2022
@@ -36,7 +36,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../content/administration.rst:8
 msgid "Install and Maintain"
@@ -196,6 +196,8 @@ msgid ""
 "If you are setting up a public server, be sure to check our :ref:`security` "
 "recommendations!"
 msgstr ""
+"Si vous configurez un serveur public, assurez-vous de consulter nos "
+"recommandations de :ref:`securité` !"
 
 #: ../../content/administration/install/deploy.rst:15
 msgid "dbfilter"
@@ -314,6 +316,9 @@ msgid ""
 " connections (from \"localhost\", the same machine the PostgreSQL server is "
 "installed on)."
 msgstr ""
+"Par défaut, PostgreSQL n'autorise que les connexions via les sockets UNIX et"
+" les connexions loopback (à partir de \"localhost\", la même machine sur "
+"laquelle le serveur PostgreSQL est installé)."
 
 #: ../../content/administration/install/deploy.rst:82
 msgid ""
@@ -322,6 +327,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
+"UNIX socket est très bien si vous voulez que Odoo et PostgreSQL s'exécutent "
+"sur la même machine, et c'est la valeur par défaut quand aucun hôte n'est "
+"fourni, mais si vous voulez que Odoo et PostgreSQL s'exécutent sur des "
+"machines différentes [#different-machines]_ il devra `listen to network "
+"interfaces`_ [#remote-socket]_, soit :"
 
 #: ../../content/administration/install/deploy.rst:87
 msgid ""
@@ -329,6 +339,10 @@ msgid ""
 "machine on which Odoo runs and the one on which PostgreSQL runs, then "
 "configure Odoo to connect to its end of the tunnel"
 msgstr ""
+"N'acceptez que les connexions loopback et `utilisez un tunnel SSH`_ entre la"
+" machine sur laquelle fonctionne Odoo et celle sur laquelle fonctionne "
+"PostgreSQL, puis configurez Odoo pour qu'il se connecte à son extrémité du "
+"tunnel."
 
 #: ../../content/administration/install/deploy.rst:90
 msgid ""
@@ -336,21 +350,24 @@ msgid ""
 "ssl (see `PostgreSQL connection settings`_ for details), then configure Odoo"
 " to connect over the network"
 msgstr ""
+"Accepter les connexions à la machine sur laquelle Odoo est installé, "
+"éventuellement via ssl (voir `Paramètres de connexion PostgreSQL`_ pour plus"
+" de détails), puis configurer Odoo pour qu'il se connecte via le réseau."
 
 #: ../../content/administration/install/deploy.rst:95
 #: ../../content/administration/install/deploy.rst:145
 #: ../../content/administration/install/deploy.rst:231
 #: ../../content/administration/install/deploy.rst:271
 msgid "Configuration sample"
-msgstr ""
+msgstr "Exemple de configuration"
 
 #: ../../content/administration/install/deploy.rst:97
 msgid "Allow tcp connection on localhost"
-msgstr ""
+msgstr "Autoriser la connexion tcp sur localhost"
 
 #: ../../content/administration/install/deploy.rst:98
 msgid "Allow tcp connection from 192.168.1.x network"
-msgstr ""
+msgstr "Autoriser la connexion TCP à partir du réseau 192.168.1.x"
 
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:"
@@ -371,6 +388,11 @@ msgid ""
 "<reference/cmdline/server/database>` when your Postgres deployment is not "
 "local and/or does not use the installation defaults."
 msgstr ""
+"Par défaut, Odoo se connecte à un Postgres local sur un socket UNIX via le "
+"port 5432. Ceci peut être remplacé par :ref:`les options de base de données "
+"<reference/cmdline/server/database>` lorsque votre déploiement Postgres "
+"n'est pas local et/ou n'utilise pas les valeurs par défaut de "
+"l'installation."
 
 #: ../../content/administration/install/deploy.rst:126
 msgid ""
@@ -506,7 +528,7 @@ msgstr "Calcul du nombre de processus de travail "
 
 #: ../../content/administration/install/deploy.rst:201
 msgid "Rule of thumb : (#CPU * 2) + 1"
-msgstr ""
+msgstr "Règle de base : (#CPU * 2) + 1"
 
 #: ../../content/administration/install/deploy.rst:202
 msgid "Cron workers need CPU"
@@ -514,11 +536,11 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:203
 msgid "1 worker ~= 6 concurrent users"
-msgstr ""
+msgstr "1 worker ~= 6 utilisateurs simultanés"
 
 #: ../../content/administration/install/deploy.rst:206
 msgid "memory size calculation"
-msgstr ""
+msgstr "calcul de la taille de la mémoire"
 
 #: ../../content/administration/install/deploy.rst:208
 msgid ""
@@ -533,12 +555,16 @@ msgid ""
 "A heavy worker, when all computed field are well designed, SQL requests are "
 "well designed, ... is estimated to consume around 1GB of RAM"
 msgstr ""
+"Un gros worker, lorsque tous les champs calculés sont bien conçus, les "
+"requêtes SQL sont bien conçues, ... est estimé consommer environ 1 Go de RAM"
 
 #: ../../content/administration/install/deploy.rst:210
 msgid ""
 "A lighter worker, in the same scenario, is estimated to consume around 150MB"
 " of RAM"
 msgstr ""
+"On estime qu'un worker plus léger, dans le même scénario, consomme environ "
+"150 Mo de RAM"
 
 #: ../../content/administration/install/deploy.rst:212
 msgid ""
@@ -575,28 +601,35 @@ msgid ""
 "http Headers to Odoo, and activate the proxy_mode in Odoo configuration to "
 "have Odoo read those headers."
 msgstr ""
+"Pour réaliser une telle chose, vous devrez déployer un reverse proxy devant "
+"Odoo, comme nginx ou apache. En faisant cela, vous devrez transmettre "
+"d'autres en-têtes http à Odoo, et activer le proxy_mode dans la "
+"configuration de Odoo pour que Odoo lise ces en-têtes."
 
 #: ../../content/administration/install/deploy.rst:233
 msgid "Server with 4 CPU, 8 Thread"
-msgstr ""
+msgstr "Serveur avec 4 processeurs, 8 threads"
 
 #: ../../content/administration/install/deploy.rst:234
 msgid "60 concurrent users"
-msgstr ""
+msgstr "60 utilisateurs simultanés"
 
 #: ../../content/administration/install/deploy.rst:236
 msgid "60 users / 6 = 10 <- theoretical number of worker needed"
-msgstr ""
+msgstr "60 utilisateurs / 6 = 10 <- nombre théorique de workers nécessaires"
 
 #: ../../content/administration/install/deploy.rst:237
 msgid "(4 * 2) + 1 = 9 <- theoretical maximal number of worker"
-msgstr ""
+msgstr "(4 * 2) + 1 = 9 <- nombre maximal théorique de workers"
 
 #: ../../content/administration/install/deploy.rst:238
 msgid ""
 "We'll use 8 workers + 1 for cron. We'll also use a monitoring system to "
 "measure cpu load, and check if it's between 7 and 7.5 ."
 msgstr ""
+"Nous utiliserons 8 workers + 1 pour la cron. Nous utiliserons également un "
+"système de surveillance pour mesurer la charge du processeur et vérifier si "
+"elle se situe entre 7 et 7,5."
 
 #: ../../content/administration/install/deploy.rst:239
 msgid "RAM = 9 * ((0.8*150) + (0.2*1024)) ~= 3Go RAM for Odoo"
@@ -617,6 +650,11 @@ msgid ""
 "Odoo must use HTTPS\\ [#switching]_. SSL termination can be implemented via "
 "just about any SSL termination proxy, but requires the following setup:"
 msgstr ""
+"Qu'il soit accessible via un site web/un client web ou un service web, Odoo "
+"transmet les informations d'authentification en texte clair. Cela signifie "
+"qu'un déploiement sécurisé d'Odoo doit utiliser HTTPS\\ [#switching]_. La "
+"terminaison SSL peut être implémentée via à peu près n'importe quel proxy de"
+" terminaison SSL, mais nécessite la configuration suivante :"
 
 #: ../../content/administration/install/deploy.rst:264
 msgid ""
@@ -627,16 +665,19 @@ msgstr ""
 #: ../../content/administration/install/deploy.rst:265
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
 msgstr ""
+"Configurer le proxy de terminaison SSL (`Exemple de terminaison Nginx`_)"
 
 #: ../../content/administration/install/deploy.rst:266
 msgid "Set up the proxying itself (`Nginx proxying example`_)"
-msgstr ""
+msgstr "Configurer le proxy lui-même (`Exemple de proxy Nginx`_)"
 
 #: ../../content/administration/install/deploy.rst:267
 msgid ""
 "Your SSL termination proxy should also automatically redirect non-secure "
 "connections to the secure port"
 msgstr ""
+"Votre proxy de terminaison SSL doit également rediriger automatiquement les "
+"connexions non sécurisées vers le port sécurisé"
 
 #: ../../content/administration/install/deploy.rst:273
 msgid "Redirect http requests to https"
@@ -644,15 +685,15 @@ msgstr "Rediriger les requêtes http vers https"
 
 #: ../../content/administration/install/deploy.rst:274
 msgid "Proxy requests to odoo"
-msgstr ""
+msgstr "Demandes de proxy à odoo"
 
 #: ../../content/administration/install/deploy.rst:282
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
-msgstr ""
+msgstr "dans ``/etc/nginx/sites-enabled/odoo.conf`` définir :"
 
 #: ../../content/administration/install/deploy.rst:343
 msgid "Odoo as a WSGI Application"
-msgstr ""
+msgstr "Odoo en tant qu'application WSGI"
 
 #: ../../content/administration/install/deploy.rst:345
 msgid ""
@@ -670,6 +711,10 @@ msgid ""
 "client, website and webservice API. Because Odoo does not control the "
 "creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
+"Cependant, le serveur WSGI n'exposera que le point de terminaison HTTP "
+"principal pour le client Web, le site web et l'API du service web. Comme "
+"Odoo ne contrôle plus la création de workers, il ne peut pas configurer de "
+"workers cron ou livechat."
 
 #: ../../content/administration/install/deploy.rst:356
 msgid "Cron Workers"
@@ -681,7 +726,7 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:360
 msgid "A classical Odoo (run via ``odoo-bin``)"
-msgstr ""
+msgstr "Un Odoo classique (exécuté via ``odoo-bin``)"
 
 #: ../../content/administration/install/deploy.rst:361
 msgid ""
@@ -717,6 +762,8 @@ msgstr ""
 msgid ""
 "The solutions to support livechat/motifications in a WSGI application are:"
 msgstr ""
+"Les solutions pour supporter le livechat/modifications dans une application "
+"WSGI sont les suivantes :"
 
 #: ../../content/administration/install/deploy.rst:383
 msgid ""
@@ -774,6 +821,10 @@ msgid ""
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr ""
+"Pour commencer, gardez à l'esprit que la sécurisation d'un système "
+"d'information est un processus continu, et non une opération ponctuelle. À "
+"tout moment, votre sécurité ne sera que celle du maillon le plus faible de "
+"votre environnement."
 
 #: ../../content/administration/install/deploy.rst:415
 msgid ""
@@ -784,12 +835,21 @@ msgid ""
 "system and distribution, best practices in terms of users, passwords, and "
 "access control management, etc."
 msgstr ""
+"Ne considérez donc pas cette section comme la liste ultime des mesures qui "
+"permettront d'éviter tous les problèmes de sécurité. Il s'agit uniquement "
+"d'un résumé des premiers éléments importants que vous devez veiller à "
+"inclure dans votre plan d'action de sécurité. Le reste viendra des "
+"meilleures pratiques de sécurité pour votre système d'exploitation et votre "
+"distribution, des meilleures pratiques en termes d'utilisateurs, de mots de "
+"passe et de gestion du contrôle d'accès, etc."
 
 #: ../../content/administration/install/deploy.rst:421
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr ""
+"Lors du déploiement d'un serveur tourné vers l'Internet, veillez à prendre "
+"en compte les sujets suivants liés à la sécurité :"
 
 #: ../../content/administration/install/deploy.rst:424
 msgid ""
@@ -797,6 +857,9 @@ msgid ""
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr ""
+"Définissez toujours un mot de passe administrateur super-admin fort, et "
+"limitez l'accès aux pages de gestion de la base de données dès que le "
+"système est configuré. Voir :ref:`db_manager_security`."
 
 #: ../../content/administration/install/deploy.rst:427
 msgid ""
@@ -806,6 +869,12 @@ msgid ""
 "*Never* use any default passwords like admin/admin, even for test/staging "
 "databases."
 msgstr ""
+"Choisissez des identifiants uniques et des mots de passe forts pour tous les"
+" comptes administrateurs de toutes les bases de données. N'utilisez pas "
+"\"admin\" comme identifiant. N'utilisez pas ces identifiants pour les "
+"opérations quotidiennes, mais uniquement pour contrôler/gérer "
+"l'installation. *N'utilisez jamais de mots de passe par défaut comme "
+"admin/admin, même pour les bases de données de test/stage."
 
 #: ../../content/administration/install/deploy.rst:432
 msgid ""
@@ -813,6 +882,11 @@ msgid ""
 " data contain default logins and passwords that can be used to get into your"
 " systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
+"N'installez **pas** de données de démonstration sur des serveurs tournés "
+"vers l'Internet. Les bases de données contenant des données de démonstration"
+" contiennent des identifiants et des mots de passe par défaut qui peuvent "
+"être utilisés pour s'introduire dans vos systèmes et causer des problèmes "
+"importants, même sur les systèmes de mise en scène/de développement."
 
 #: ../../content/administration/install/deploy.rst:436
 msgid ""
@@ -823,6 +897,13 @@ msgid ""
 "from, instead of letting the system fetch them all from the database "
 "backend."
 msgstr ""
+"Utilisez les filtres de base de données appropriés ( :option:`--db-filter "
+"<odoo-bin --db-filter>`) pour restreindre la visibilité de vos bases de "
+"données en fonction du nom d'hôte. Voir :ref:`db_filter`. Vous pouvez "
+"également utiliser :option:`-d <odoo-bin -d>` pour fournir votre propre "
+"liste (séparée par des virgules) de bases de données disponibles à filtrer, "
+"au lieu de laisser le système les récupérer toutes depuis le backend de la "
+"base de données."
 
 #: ../../content/administration/install/deploy.rst:443
 msgid ""
@@ -833,6 +914,13 @@ msgid ""
 ":option:`--no-database-list <odoo-bin --no-database-list>` command-line "
 "option)"
 msgstr ""
+"Une fois que vos ``db_name`` et ``db_filter`` sont configurés et ne "
+"correspondent qu'à une seule base de données par nom d'hôte, vous devriez "
+"mettre l'option de configuration ``list_db`` à ``False``, pour empêcher de "
+"lister entièrement des bases de données, et pour bloquer l'accès aux écrans "
+"de gestion des bases de données (ceci est aussi exposé comme l'option de "
+"ligne de commande :option:`--no-database-list <odoo-bin --no-database-"
+"list>`)"
 
 #: ../../content/administration/install/deploy.rst:449
 msgid ""
@@ -842,6 +930,11 @@ msgid ""
 "using a dedicated non-privileged ``db_user``. See also "
 ":ref:`setup/deploy/odoo`."
 msgstr ""
+"Assurez-vous que l'utilisateur PostgreSQL (:option:`--db_user <odoo-bin "
+"--db_user>`) n'est *pas* un super-utilisateur, et que vos bases de données "
+"appartiennent à un autre utilisateur. Par exemple, elles pourraient "
+"appartenir au super-utilisateur ``postgres`` si vous utilisez un ``db_user``"
+" dédié et non privilégié. Voir aussi :ref:`setup/deploy/odoo`."
 
 #: ../../content/administration/install/deploy.rst:454
 msgid ""
@@ -849,12 +942,18 @@ msgid ""
 " via GitHub or by downloading the latest version from "
 "https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
+"Maintenez vos installations à jour en installant régulièrement les dernières"
+" versions, soit via GitHub, soit en téléchargeant la dernière version sur "
+"https://www.odoo.com/page/download ou http://nightly.odoo.com."
 
 #: ../../content/administration/install/deploy.rst:458
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
+"Configurez votre serveur en mode multi-process avec des limites appropriées "
+"correspondant à votre utilisation typique (mémoire/CPU/délais d'attente). "
+"Voir aussi :ref:`builtin_server`."
 
 #: ../../content/administration/install/deploy.rst:461
 msgid ""
@@ -865,6 +964,12 @@ msgid ""
 "enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also "
 ":ref:`https_proxy`."
 msgstr ""
+"Exécutez Odoo derrière un serveur web fournissant une terminaison HTTPS avec"
+" un certificat SSL valide, afin d'empêcher l'écoute des communications en "
+"clair. Les certificats SSL sont bon marché, et de nombreuses options "
+"gratuites existent. Configurez le proxy web pour limiter la taille des "
+"requêtes, définissez des délais d'attente appropriés, puis activez l'option "
+":option:`mode proxy <odoo-bin --proxy-mode>`. Voir aussi :ref:`https_proxy`."
 
 #: ../../content/administration/install/deploy.rst:468
 msgid ""
@@ -875,6 +980,13 @@ msgid ""
 " allowing only trusted IPs in the firewall, and/or running a brute-force "
 "detection system such as `fail2ban` or equivalent."
 msgstr ""
+"Si vous devez autoriser un accès SSH distant à vos serveurs, assurez-vous de"
+" définir un mot de passe fort pour **tous** les comptes, et pas seulement "
+"pour `root`. Il est fortement recommandé de désactiver complètement "
+"l'authentification par mot de passe et de n'autoriser que l'authentification"
+" par clé publique. Pensez également à restreindre l'accès via un VPN, à "
+"n'autoriser que les IP de confiance dans le pare-feu, et/ou à utiliser un "
+"système de détection par force brute tel que `fail2ban` ou équivalent."
 
 #: ../../content/administration/install/deploy.rst:474
 msgid ""
@@ -882,6 +994,10 @@ msgid ""
 "prevent brute-force attacks and denial of service attacks. See also "
 ":ref:`login_brute_force` for specific measures."
 msgstr ""
+"Pensez à installer une limitation de débit appropriée sur votre proxy ou "
+"votre pare-feu, afin d'empêcher les attaques par force brute et les attaques"
+" par déni de service. Voir aussi :ref:`login_brute_force` pour des mesures "
+"spécifiques."
 
 #: ../../content/administration/install/deploy.rst:478
 msgid ""
@@ -889,6 +1005,9 @@ msgid ""
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr ""
+"De nombreux fournisseurs de réseaux proposent une atténuation automatique "
+"des attaques par déni de service distribué (DDOS), mais il s'agit souvent "
+"d'un service facultatif, que vous devez donc consulter."
 
 #: ../../content/administration/install/deploy.rst:482
 msgid ""
@@ -896,6 +1015,10 @@ msgid ""
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr ""
+"Dans la mesure du possible, hébergez vos instances de "
+"démonstration/test/staging destinées au public sur des machines différentes "
+"de celles de la production. Et appliquez les mêmes précautions de sécurité "
+"que pour la production."
 
 #: ../../content/administration/install/deploy.rst:486
 msgid ""
@@ -911,6 +1034,18 @@ msgid ""
 "systemd.html>`_ may also be useful to implement per-process network access "
 "control."
 msgstr ""
+"Si votre serveur Odoo public a accès à des ressources ou des services réseau"
+" internes sensibles (par exemple via un VLAN privé), mettez en place des "
+"règles de pare-feu appropriées pour protéger ces ressources internes. Cela "
+"garantira que le serveur Odoo ne peut pas être utilisé accidentellement (ou "
+"à la suite d'actions malveillantes d'utilisateurs) pour accéder à ces "
+"ressources internes ou les perturber. Typiquement, cela peut être fait en "
+"appliquant une règle DENY par défaut sur le pare-feu, puis en autorisant "
+"explicitement l'accès aux ressources internes auxquelles le serveur Odoo "
+"doit accéder. `Systemd IP traffic access control "
+"<http://0pointer.net/blog/ip-accounting-and-access-lists-with-"
+"systemd.html>`_ peut également être utile pour implémenter un contrôle "
+"d'accès réseau par processus."
 
 #: ../../content/administration/install/deploy.rst:497
 msgid ""
@@ -926,22 +1061,42 @@ msgid ""
 "CloudFlare usually maintain a public list of their IP address ranges for "
 "this purpose."
 msgstr ""
+"Si votre serveur Odoo public se trouve derrière un pare-feu d'application "
+"web, un équilibreur de charge, un service de protection DDoS transparent "
+"(comme CloudFlare) ou un dispositif similaire au niveau du réseau, vous "
+"pouvez souhaiter éviter l'accès direct au système Odoo. Il est généralement "
+"difficile de garder secrètes les adresses IP d'extrémité de vos serveurs "
+"Odoo. Par exemple, elles peuvent apparaître dans les journaux des serveurs "
+"web lors de l'interrogation de systèmes publics, ou dans les en-têtes des "
+"courriers électroniques envoyés depuis Odoo. Dans une telle situation, vous "
+"pouvez configurer votre pare-feu de sorte que les points d'extrémité ne "
+"soient pas accessibles publiquement, sauf à partir des adresses IP "
+"spécifiques de votre WAF, de votre équilibreur de charge ou de votre service"
+" de proxy. Les fournisseurs de services comme CloudFlare maintiennent "
+"généralement une liste publique de leurs plages d'adresses IP à cette fin."
 
 #: ../../content/administration/install/deploy.rst:508
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr ""
+"Si vous hébergez plusieurs clients, isolez les données et les fichiers des "
+"clients les uns des autres en utilisant des conteneurs ou des techniques de "
+"\"prison\" appropriées."
 
 #: ../../content/administration/install/deploy.rst:511
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr ""
+"Configurez des sauvegardes quotidiennes de vos bases de données et des "
+"données de vos dépôts de fichiers/filstore data, et copiez-les sur un "
+"serveur d'archivage distant qui n'est pas accessible depuis le serveur lui-"
+"même."
 
 #: ../../content/administration/install/deploy.rst:518
 msgid "Blocking Brute Force Attacks"
-msgstr ""
+msgstr "Blocage des attaques par force brute"
 
 #: ../../content/administration/install/deploy.rst:519
 msgid ""
@@ -950,42 +1105,56 @@ msgid ""
 "emits a log entry whenever a login attempt is performed, and reports the "
 "result: success or failure, along with the target login and source IP."
 msgstr ""
+"Pour les déploiements orientés vers l'Internet, les attaques par force brute"
+" sur les mots de passe des utilisateurs sont très courantes, et cette menace"
+" ne doit pas être négligée pour les serveurs Odoo. Odoo émet une entrée de "
+"journal chaque fois qu'une tentative de connexion est effectuée, et rapporte"
+" le résultat : succès ou échec, ainsi que le login cible et l'IP source."
 
 #: ../../content/administration/install/deploy.rst:523
 msgid "The log entries will have the following form."
-msgstr ""
+msgstr "Les entrées du journal auront la forme suivante."
 
 #: ../../content/administration/install/deploy.rst:525
 msgid "Failed login::"
-msgstr ""
+msgstr "Échec de la connexion::"
 
 #: ../../content/administration/install/deploy.rst:529
 msgid "Successful login::"
-msgstr ""
+msgstr "Succès de la connexion::"
 
 #: ../../content/administration/install/deploy.rst:534
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr ""
+"Ces journaux/logs peuvent être facilement analysés par un système de "
+"prévention des intrusions tel que `fail2ban`."
 
 #: ../../content/administration/install/deploy.rst:536
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr ""
+"Par exemple, la définition suivante du filtre fail2ban devrait correspondre "
+"à un échec de connexion::"
 
 #: ../../content/administration/install/deploy.rst:543
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr ""
+"Ceci pourrait être utilisé avec une définition de prison pour bloquer l'IP "
+"attaquant sur HTTP(S)."
 
 #: ../../content/administration/install/deploy.rst:545
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
+"Voici à quoi cela pourrait ressembler pour bloquer l'IP pendant 15 minutes "
+"lorsque 10 tentatives de connexion échouées sont détectées à partir de la "
+"même IP en 1 minute::"
 
 #: ../../content/administration/install/deploy.rst:559
 msgid "Database Manager Security"
@@ -1000,6 +1169,8 @@ msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr ""
+"Ce paramètre est utilisé sur tous les écrans de gestion des bases de données"
+" (pour créer, supprimer, vider ou restaurer des bases de données)."
 
 #: ../../content/administration/install/deploy.rst:566
 msgid ""
@@ -1007,6 +1178,9 @@ msgid ""
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr ""
+"Si les écrans de gestion ne doivent pas être accessibles du tout, vous devez"
+" mettre l'option de configuration ``list_db`` à ``False``, pour bloquer "
+"l'accès à tous les écrans de sélection et de gestion des bases de données."
 
 #: ../../content/administration/install/deploy.rst:572
 msgid ""
@@ -1016,6 +1190,13 @@ msgid ""
 "production, and may even expose dangerous features to attackers. It is also "
 "not designed to handle large databases, and may trigger memory limits."
 msgstr ""
+"Il est fortement recommandé de désactiver le gestionnaire de bases de "
+"données pour tout système connecté à Internet ! Il est conçu comme un outil "
+"de développement/démonstration, pour faciliter la création et la gestion "
+"rapides de bases de données. Il n'est pas conçu pour être utilisé en "
+"production, et peut même exposer des fonctionnalités dangereuses aux "
+"attaquants. Il n'est pas non plus conçu pour gérer de grandes bases de "
+"données, et peut déclencher des limites de mémoire."
 
 #: ../../content/administration/install/deploy.rst:578
 msgid ""
@@ -1023,6 +1204,10 @@ msgid ""
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr ""
+"Sur les systèmes de production, les opérations de gestion des bases de "
+"données doivent toujours être effectuées par l'administrateur système, y "
+"compris le provisionnement de nouvelles bases de données et les sauvegardes "
+"automatiques."
 
 #: ../../content/administration/install/deploy.rst:581
 msgid ""
