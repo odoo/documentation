@@ -13,6 +13,7 @@
 # Braulio D. López Vázquez <bdl@odoo.com>, 2022
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # marcescu, 2022
+# Lucia Pacheco <lpo@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
@@ -21,13 +22,13 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-03-18 13:48+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: marcescu, 2022\n"
+"Last-Translator: Lucia Pacheco <lpo@odoo.com>, 2022\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../content/applications/services.rst:5
 msgid "Services"
@@ -1089,6 +1090,10 @@ msgid ""
 " is the one at which employees timesheet on by default. However, it can be "
 "ultimately modified on each ticket."
 msgstr ""
+"Seleccione o cree un proyecto en *Hoja de horas en el ticket*. El "
+"seleccionado/creado es aquel en el que los empleados registran sus hojas de "
+"horas de manera predeterminada. Sin embargo, se puede modificar fácilmente "
+"en cada ticket."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:28
 msgid "Step 2: Set up a service"
@@ -1100,12 +1105,17 @@ msgid ""
 "*Units of Measure* to optionally be able to choose *hours* (for example) as "
 "the unit of measure of your service."
 msgstr ""
+"Vaya a :menuselection:`Ventas --> Configuración --> Ajustes` y active las "
+"*unidades de medida* para poder elegir de manera opcional *horas* (por "
+"ejemplo) como unidad de medida de su servicio."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:33
 msgid ""
 "Then, go to :menuselection:`Sales --> Products --> Products`, create or edit"
 " an existing one, and set its *Product Type* as *Service*."
 msgstr ""
+"Después vaya a :menuselection:`Ventas --> Productos --> Productos`, cree o "
+"edite uno nuevo y configure su *tipo de producto* como *servicio*"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:40
 msgid ""
@@ -1123,6 +1133,11 @@ msgid ""
 " order is confirmed, a new task is created under the right project, "
 "automating the process."
 msgstr ""
+"Esta configuración garantiza que se facture al cliente por el número de "
+"horas pronosticadas en la orden de venta, lo que significa que no se tienen "
+"en cuenta las horas adicionales o no usadas. También garantiza que cada vez "
+"que se confirma una orden de venta, se crea una nueva tarea en el proyecto "
+"correspondiente, automatizando el proceso."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:53
 msgid ""
@@ -1131,6 +1146,10 @@ msgid ""
 "to be set on the corresponding project or task, in order to reinvoice the "
 "time spent on a ticket."
 msgstr ""
+"Le recomendamos configurar un proyecto en específico, así como se hizo en "
+"este ejemplo. Debe tener en cuenta que el artículo en la orden de venta se "
+"debe establecer en el proyecto/tarea correspondiente, de esta manera, se "
+"podrá volver a facturar el tiempo dedicado en el ticket."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:58
 msgid "Prevision an invoice and record time"
@@ -1138,7 +1157,7 @@ msgstr "Previsión de una factura y registro del tiempo"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:61
 msgid "Step 1: Place an order"
-msgstr "Paso 1: Hacer un pedido"
+msgstr "Paso 1: Hacer una orden"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:63
 msgid ""
@@ -1147,6 +1166,10 @@ msgid ""
 "needs the ticket to be opened. Set the number of hours needed to assist the "
 "customer and *Confirm* the order."
 msgstr ""
+"Vaya a :menuselection:`Ventas --> Órdenes --> Órdenes` y cree uno para el "
+"producto de servicio de asistencia que configuró previamente, con el cliente"
+" que necesite que se abra el ticket. Establezca el número de horas "
+"necesarias y *Confirme* la orden."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:72
 msgid "Step 2: Invoice the customer"
@@ -1155,7 +1178,7 @@ msgstr "Paso 2: Facturar al cliente"
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:74
 msgid "In *Sales*, select the respective sales order to *Create Invoice*."
 msgstr ""
-"En *Ventas*, seleccione el pedido de venta correspondiente para *Crear "
+"En *Ventas*, seleccione la orden de venta correspondiente para *Crear "
 "factura*."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:82
@@ -1167,18 +1190,21 @@ msgid ""
 "Now, in *Helpdesk*, create or edit the respective ticket and link it to the "
 "task created by the confirmation of the sales order."
 msgstr ""
+"En la aplicación de *servicio de asistencia* puede crear o editar el ticket "
+"correspondiente y vincularlo a la tarea creada al confirmar la orden de "
+"venta."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:92
 msgid "Step 4: Record the time spent"
-msgstr "Paso 4: Registrar el tiempo empleado"
+msgstr "Paso 4: Registrar el tiempo dedicado"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:94
 msgid ""
 "Still on the respective helpdesk ticket, record the hours performed under "
 "the *Timesheets* tab."
 msgstr ""
-"Siempre en el ticket de asistencia correspondiente, registre las horas "
-"realizadas en la pestaña *Hojas de tiempo*."
+"Registre siempre las horas dedicadas en el ticket de de servicio de "
+"asistencia correspondiente, en la pestaña *Hojas de horas*."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:100
 msgid ""
@@ -1186,7 +1212,7 @@ msgid ""
 " column in the sales order."
 msgstr ""
 "Tenga en cuenta que las horas registradas en el formulario del ticket se "
-"muestran en la columna *Entregado* del pedido de venta."
+"muestran en la columna *Entregado* de la orden de venta."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:108
 msgid ""
@@ -1194,7 +1220,7 @@ msgid ""
 "the dedicated task."
 msgstr ""
 "Las horas registradas en el ticket se muestran automáticamente en *Hojas de "
-"tiempo* y en la tarea dedicada."
+"horas* y en la tarea correspondiente."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:111
 msgid ":doc:`reinvoice_from_project`"
@@ -1209,7 +1235,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:3
 msgid "Invoice Time Spent on Tickets (Postpaid Support Services)"
 msgstr ""
-"Facturación del tiempo dedicado a los tickets (servicios de asistencia de "
+"Facturación del tiempo dedicado en los tickets (servicio de asistencia de "
 "pospago)"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:5
@@ -1219,9 +1245,9 @@ msgid ""
 "control over what you charge your client, and it is more efficient."
 msgstr ""
 "Extraiga directamente el tiempo facturable que ha rastreado en sus tickets "
-"del servicio de asistencia en los pedidos de venta y las facturas a través "
-"de una tarea del proyecto. De este modo, tendrá más control sobre lo que "
-"cobra a su cliente y será más eficiente."
+"de servicio de asistencia en las órdenes de venta y las facturas a través de"
+" una tarea de proyecto. De este modo, tendrá más control sobre lo que le "
+"cobra a sus clientes y será más eficiente."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:10
 msgid "Configuration"
@@ -1232,9 +1258,9 @@ msgid ""
 "Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk team --> Edit`"
 " and enable the options *Timesheet on Ticket* and *Time Reinvoicing*."
 msgstr ""
-"Vaya a :menuselection:`Helpdesk --> Configuración --> Equipo de Helpdesk -->"
-" Editar` y active las opciones *Hoja de tiempo en el ticket* y "
-"*Refacturación de tiempo*."
+"Vaya a :menuselection:`Servicio de asistencia --> Configuración --> Equipo "
+"de servicio de asistencia --> Editar` y active las opciones *Hojas de horas "
+"en el ticket* y * Refacturación de tiempo*."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:15
 msgid ""
@@ -1242,23 +1268,26 @@ msgid ""
 "timesheets) will be linked by default. Open its *External link* to enable "
 "the feature *Bill from tasks*."
 msgstr ""
-"En *Hoja de tiempo en el ticket*, elija el *Proyecto* al que se vincularán "
-"por defecto los tickets (y las hojas de tiempo). Abra su *Enlace externo* "
-"para habilitar la función *Factura desde las tareas*."
+"En *Hojas de horas en el ticket*, elija el *Proyecto* al que se vincularán "
+"de manera predeterminada los tickets (y las hojas de horas). Abra su *enlace"
+" externo* para habilitar la función *Facturar desde las tareas*."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:22
 msgid "Create a sales order and an invoice"
-msgstr "Crear un pedido de venta y una factura"
+msgstr "Crear una orden de venta y una factura"
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:24
 msgid ""
 "Now, once you have recorded the time you spent on the helpdesk ticket, under"
 " the *Timesheets* tab, access the task clicking on its name."
 msgstr ""
+"Una vez que haya registrado el tiempo dedicado en el ticket de servicio de "
+"asistencia, en la pestaña de *hojas de horas*, puede acceder fácilmente a la"
+" tarea al hacer clic en su nombre."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:31
 msgid "*Create Sales Order* and proceed to create the invoice."
-msgstr "*Crear Pedido de Venta* y proceder a crear la factura."
+msgstr "*Crear orden de venta* y proceder a crear la factura."
 
 #: ../../content/applications/services/project.rst:8
 msgid "Project"
@@ -1270,7 +1299,7 @@ msgid ""
 "`Odoo Tutorials: Project and Timesheets "
 "<https://www.odoo.com/slides/project-and-timesheets-21>`_"
 msgstr ""
-"`Tutoriales de Odoo: Proyectos y hojas de tiempo "
+"`Tutoriales de Odoo: Proyectos y hojas de horas "
 "<https://www.odoo.com/slides/project-and-timesheets-21>`_"
 
 #: ../../content/applications/services/project/tasks.rst:5
@@ -1279,7 +1308,8 @@ msgstr "Tareas"
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:3
 msgid "Create Project's Tasks from an Email Alias"
-msgstr "Crear tareas del proyecto a partir de un alias de correo electrónico"
+msgstr ""
+"Crear tareas del proyecto a partir de un seudónimo de correo electrónico"
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:5
 msgid ""
@@ -1289,6 +1319,11 @@ msgid ""
 "structured work. It automatically creates a task in the first stage of a "
 "project."
 msgstr ""
+"Cuando cuenta con una dirección de correo electrónico que sus clientes "
+"conocen de inicio a fin, lo último que querrá hacer es cambiarla. En su "
+"lugar, vincule esa dirección a su proyecto y transforme esas conversaciones "
+"en trabajo estructurado. De esta manera se crea automáticamente una tarea en"
+" la primera etapa de un proyecto."
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:11
 msgid "Set up an incoming email server"
@@ -1300,7 +1335,7 @@ msgid ""
 "the incoming email alias you would like to use."
 msgstr ""
 "En la aplicación *Configuración*, active *Servidores de correo electrónico "
-"externos* y defina el alias de correo electrónico entrante que desea "
+"externos* y defina el seudónimo de correo electrónico entrante que desea "
 "utilizar."
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:15
@@ -1313,7 +1348,7 @@ msgstr ""
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:18
 msgid "Configure the email alias in your project"
-msgstr "Configure el alias de correo electrónico en su proyecto"
+msgstr "Configure el seudónimo de correo electrónico en su proyecto"
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:22
 msgid ""
@@ -1322,6 +1357,10 @@ msgid ""
 "*Emails* tab, define the wanted email alias and choose the policy to receive"
 " a message."
 msgstr ""
+"Después de configurar su servidor de correo electrónico entrante, vaya a "
+":menuselection:`Proyecto --> Configuración --> Proyecto --> Editar`. En la "
+"pestaña de *correos electrónicos* puede definir su seudónimo de correo "
+"electrónico y elegir la política para recibir un mensaje."
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:23
 msgid "In addition, you can now directly set it when creating a new project."
@@ -1333,7 +1372,7 @@ msgid ""
 "All the recipients of the email (To/Cc/Bcc) are automatically added as "
 "followers of the task."
 msgstr ""
-"Todos los destinatarios del correo electrónico (To/Cc/Bcc) se añaden "
+"Todos los destinatarios del correo electrónico (Para/Cc/Cco) se añaden "
 "automáticamente como seguidores de la tarea."
 
 #: ../../content/applications/services/project/tasks/email_alias.rst:32
@@ -1344,11 +1383,11 @@ msgstr ""
 
 #: ../../content/applications/services/timesheets.rst:8
 msgid "Timesheets"
-msgstr "Partes de horas"
+msgstr "Hojas de horas"
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:3
 msgid "Create Timesheets upon Time Off Validation"
-msgstr "Cree hojas de horas después de la validación de tiempo libre"
+msgstr "Cree hojas de horas después de la validación del tiempo personal"
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:5
 msgid ""
@@ -1357,18 +1396,20 @@ msgid ""
 "does not leave place for forgetfulness and questions after hours that have "
 "not been timesheeted by the employee."
 msgstr ""
-"Odoo planifica automáticamente las horas trabajadas en proyectos / tareas "
-"cuando se solicita tiempo libre. Esto permite un mejor control general sobre"
-" la validación de las hojas de horas, ya que no deja lugar para el olvido y "
-"las preguntas fuera del horario que no han sido escritas por el empleado."
+"Odoo planifica automáticamente las horas dedicadas en proyectos/tareas "
+"cuando se solicita tiempo personal, lo que permite un mejor control general "
+"sobre la validación de las hojas de horas. De esta manera es más fácil "
+"llevar un control y no programar cosas fuera del horario especifícado por el"
+" empleado."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:9
 msgid ""
 "Activate the :ref:`developer mode <developer-mode>`, go to *Timesheets*, and"
 " change the *Project* and *Task* set by default, if you like."
 msgstr ""
-"Activar el modo :ref:`developer <developer-mode>`, vaya a *Hojas de tiempo*,"
-" y cambie el *Proyecto* y la *Tarea* establecidos por defecto, si lo desea."
+"Activar el modo de :ref:`desarrollador <developer-mode>`, vaya a *Hojas de "
+"horas*, y cambie el *Proyecto* y la *Tarea* establecidos de manera "
+"predeterminada, si así lo desea."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:16
 msgid ""
@@ -1376,8 +1417,8 @@ msgid ""
 " or create the needed type, and decide if you would like the requests to be "
 "validated or not."
 msgstr ""
-"Vaya a: menuselection: `Tiempo libre -> Configuración -> Tipos de tiempo "
-"libre`. Seleccione o cree el tipo necesario y decida si desea que las "
+"Vaya a: menuselection: `Tiempo personal -> Configuración -> Tipos de tiempo "
+"personal`. Seleccione o cree el tipo necesario y decida si desea que las "
 "solicitudes se validen o no."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:26
@@ -1387,17 +1428,17 @@ msgid ""
 "automatically allocated on *Timesheets*, under the respective project and "
 "task."
 msgstr ""
-"Ahora, una vez que el empleado ha solicitado su tiempo libre y la solicitud "
-"ha sido validada (o no, según la configuración elegida), el tiempo se asigna"
-" automáticamente en * Hojas de horas *, bajo el respectivo proyecto y tarea."
+"Una vez que el empleado solicitó su tiempo libre y se validó la solicitud (o"
+" no, según la configuración elegida), el tiempo se asigna automáticamente en"
+" las *hojas de horas *, bajo el respectivo proyecto y tarea."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:27
 msgid ""
 "On the example below, the user requested *Paid Time off* from July 13th to "
 "15th."
 msgstr ""
-"En el siguiente ejemplo, el usuario solicitó * Tiempo libre pagado * del 13 "
-"al 15 de julio."
+"En el siguiente ejemplo, el usuario solicitó *Tiempo personal pagado* del 13"
+" al 15 de julio."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:33
 msgid ""
@@ -1406,10 +1447,9 @@ msgid ""
 "time is automatically allocated after the responsible person for validating "
 "does it so."
 msgstr ""
-"Teniendo en cuenta que no se requiere validación, el tiempo libre solicitado"
-" se muestra automáticamente en * Hojas de horas *. Si la validación es "
-"necesaria, el tiempo se asigna automáticamente después de que la persona "
-"responsable de la validación lo haga."
+"Si no se necesita validación, el tiempo personal solicitado se muestra "
+"automáticamente en las *hojas de horas*. Si se necesita validación, el "
+"tiempo se asigna automáticamente después de validarlo."
 
 #: ../../content/applications/services/timesheets/overview/time_off.rst:41
 msgid ""
@@ -1417,9 +1457,9 @@ msgid ""
 "all the aggregated data on that cell (day), and see details regarding the "
 "project/task."
 msgstr ""
-"Haga clic en la lupa, colocando el cursor sobre la celda correspondiente, "
-"para acceder a todos los datos agregados en esa celda (día) y ver los "
-"detalles sobre el proyecto / tarea."
+"Haga clic en la lupa y coloque el cursor sobre la celda correspondiente para"
+" acceder a todos los datos agregados en esa celda (día) y ver los detalles "
+"sobre el proyecto/tarea."
 
 #: ../../content/services/support/what_can_i_expect.rst:7
 msgid "What can I expect from the support service?"
@@ -1436,18 +1476,18 @@ msgid ""
 "you have support, no matter your location. Your support representative could"
 " be communicating to you from San Francisco, Belgium, or India!"
 msgstr ""
-"Tu suscripción online incluye **soporte ilimitado 24 horas sin costo extra, "
-"lunes a viernes**. Nuestros equipos están localizados alrededor del mundo "
-"para asegurar que tengas soporte, sin importar tu ubicación. ¡Tu asesor de "
-"soporte puede estar en San Francisco, Bélgica, o India!"
+"Su suscripción en línea incluye **soporte ilimitado por 24 horas de lunes a "
+"viernes sin costo adicional**. Tenemos equipos ubicados por todo el mundo "
+"para garantizar que tenga acceso a soporte, sin importar su ubicación. ¡Su "
+"asesor de soporte puede estar en San Francisco, Bélgica, o la India!"
 
 #: ../../content/services/support/what_can_i_expect.rst:18
 msgid ""
 "Our support team can be contacted through our `online support form "
 "<https://www.odoo.com/help>`__."
 msgstr ""
-"Nuestro equipo de soporte puede ser contactado a través de nuestro "
-"`formulario de soporte online <https://www.odoo.com/help>`__."
+"Puede contactar con nuestro equipo de soporte a través de nuestro "
+"`formulario de soporte en línea <https://www.odoo.com/help>`__."
 
 #: ../../content/services/support/what_can_i_expect.rst:22
 msgid "What kind of support is included?"
@@ -1458,29 +1498,29 @@ msgid ""
 "Providing you with relevant material (guidelines, product documentation, "
 "etc...)"
 msgstr ""
-"Proveerte con material relevante (guías, documentación de producto, etc...)"
+"Proporcionarle el material pertinente (directrices, documentación del "
+"producto, etc.)"
 
 #: ../../content/services/support/what_can_i_expect.rst:26
 msgid ""
 "Answers to issues that you may encounter in your standard Odoo database (eg."
 " “I cannot close my Point of Sale” or “I cannot find my sales KPIs?”)"
 msgstr ""
-"Respuestas a preguntas o problemas relacionados con tu base de datos de Odoo"
-" estándar (por ej., “No puedo cerrar mi Punto de Venta” o “¿Dónde puedo "
-"encontrar los KPI's de ventas?”)"
+"Respuestas a los problemas que puede encontrar en su base de datos estándar "
+"de Odoo (por ejemplo, “no puedo cerrar mi punto de venta” o “no puedo "
+"encontrar mis KPI de ventas”)."
 
 #: ../../content/services/support/what_can_i_expect.rst:28
 msgid "Questions related to your account, subscription, or billing"
-msgstr "Preguntas relacionadas con tu cuenta, suscripción, o facturación."
+msgstr "Preguntas relacionadas con su cuenta, suscripción o facturación"
 
 #: ../../content/services/support/what_can_i_expect.rst:29
 msgid ""
 "Bug resolution (blocking issues or unexpected behaviour not due to "
 "misconfiguration or customization)"
 msgstr ""
-"Resolución de \"bugs\" (problemas que estén bloqueando el servicio o "
-"comportamientos inesperados que no se deban a configuraciones erróneas o "
-"personalizaciones)"
+"Solución de bugs (problemas de bloqueo o comportamientos inesperados que no "
+"se deban a una mala configuración o personalización)"
 
 #: ../../content/services/support/what_can_i_expect.rst:31
 msgid ""
@@ -1495,6 +1535,9 @@ msgid ""
 "*Odoo Support does not make changes to your production database without your"
 " agreement and gives you the material and knowledge to do it yourself!*"
 msgstr ""
+"*El equipo de soporte de Odoo no realiza cambios en su base de datos de "
+"producción sin su aprobación, además le proporciona el material y los "
+"conocimientos necesarios para que pueda hacerlo usted mismo.*"
 
 #: ../../content/services/support/what_can_i_expect.rst:38
 msgid "What kind of support is not included?"
@@ -1505,20 +1548,20 @@ msgid ""
 "Questions that require us to understand your business processes in order to "
 "help you implement your database"
 msgstr ""
-"Preguntas relacionadas a la implementación de tu base de datos que requieran"
-" que entendamos tus procesos de negocio específicos"
+"Preguntas que requieren que entendamos sus procesos de negocio para ayudarle"
+" a implementar su base de datos"
 
 #: ../../content/services/support/what_can_i_expect.rst:42
 msgid ""
 "Training on how to use our software (we will direct you to our many "
 "resources)"
 msgstr ""
-"Entrenamiento en cómo usar el software (te dirigiremos\n"
-" a nuestros variados recursos)"
+"Capacitación sobre cómo usar el software (le enviaremos varios de nuestros "
+"recursos)"
 
 #: ../../content/services/support/what_can_i_expect.rst:43
 msgid "Import of documents into your database"
-msgstr "Cómo importar información o documentos a tu base de datos"
+msgstr "Cómo importar información o documentos a su base de datos"
 
 #: ../../content/services/support/what_can_i_expect.rst:44
 msgid ""
@@ -1532,21 +1575,21 @@ msgid ""
 "How to set up configuration models (Examples include: Inventory Routes, "
 "Payment Terms, Warehouses, etc)"
 msgstr ""
-"Cómo fijar modelos de configuración (tales como rutas de inventario, "
-"términos de pago, bodegas, etc.)"
+"Cómo establecer modelos de configuración (por ejemplo: rutas de inventario, "
+"términos de pago, almacenes, etc.)"
 
 #: ../../content/services/support/what_can_i_expect.rst:47
 msgid "Any intervention on your own servers/deployments of Odoo"
 msgstr ""
-"Cualquier intervención en tus propios servidores o instalaciones de Odoo"
+"Cualquier intervención en sus propios servidores o instalaciones de Odoo"
 
 #: ../../content/services/support/what_can_i_expect.rst:48
 msgid ""
 "Any intervention on your own third party account (Ingenico, Authorize, UPS, "
 "etc)"
 msgstr ""
-"Cualquier intervención en las cuentas que tengas en otras compañías "
-"(Ingenico, Authorize, UPS, etc.)"
+"Cualquier intervención en su propia cuenta de terceros (Ingenico, Authorize,"
+" UPS, etc)"
 
 #: ../../content/services/support/what_can_i_expect.rst:49
 msgid ""
@@ -1555,7 +1598,7 @@ msgid ""
 "involving code)"
 msgstr ""
 "Preguntas o asuntos relacionados a desarrollos o personalizaciones hechas "
-"específicamente para tu base de datos, ya sea por Odoo o un tercero (así "
+"específicamente para su base de datos, ya sea por Odoo o un tercero (así "
 "como cualquier asunto relacionado con programación)"
 
 #: ../../content/services/support/what_can_i_expect.rst:53
@@ -1566,8 +1609,8 @@ msgid ""
 "most out of your Odoo Database. We will handle all configurations and coach "
 "you on how to use Odoo."
 msgstr ""
-"Puedes tener este tipo de soporte con un `Success Pack "
-"<https://www.odoo.com/pricing-packs>`__. Con un pack, uno de nuestros "
-"consultores analizará la manera que manejas tu negocio y te dirá cómo puedes"
-" optimizar el uso de tu base de datos de Odoo. Haremos todas las "
-"configuraciones y te entrenaremos en cómo usar Odoo."
+"Puede contar con este tipo de soporte a través de un `Paquete de éxito "
+"<https://www.odoo.com/pricing-packs>`__. Al contratar un paquete, uno de "
+"nuestros consultores analizará la forma en que funciona su negocio y le dirá"
+" cómo puede sacar el máximo provecho de su base de datos de Odoo. Nos "
+"encargaremos de todas las configuraciones y le enseñaremos a utilizar Odoo."
