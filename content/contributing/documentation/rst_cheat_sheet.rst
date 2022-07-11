@@ -454,6 +454,11 @@ The ``image`` markup allows inserting images in a document.
              :align: center
              :alt: Create an invoice.
 
+.. tip::
+   Add the :code:`:class: o-no-modal` `option
+   <https://docutils.sourceforge.io/docs/ref/rst/directives.html#common-options>`_ to an image to
+   prevent opening it in a modal.
+
 .. _contributing/alert-blocks:
 
 Alert blocks (admonitions)
