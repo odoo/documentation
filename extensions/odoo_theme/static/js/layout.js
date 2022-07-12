@@ -15,7 +15,7 @@
                    <div class="modal-dialog modal-dialog-centered">
                      <div class="modal-content">
                        <div class="modal-body">
-                         <img src="${image.src}" alt="${image.alt}"/>
+                         <img src="${image.src}" alt="${image.alt}" class="img-fluid"/>
                          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
                        </div>
                      </div>
