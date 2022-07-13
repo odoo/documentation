@@ -486,6 +486,7 @@ X-Sendfile and X-Accel).
  
          location /web/filestore {
              internal;
+             gzip_static on;
              alias /path/to/odoo/data-dir/filestore;
          }
 
