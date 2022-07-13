@@ -1,8 +1,8 @@
 :nosearch:
 
-========
-Frontend
-========
+====================
+JavaScript framework
+====================
 
 .. toctree::
     :titlesonly:
