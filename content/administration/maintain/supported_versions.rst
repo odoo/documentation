@@ -68,14 +68,13 @@ This matrix shows the support status of every version.
 
     🏁 Future version, not released yet
 
-.. This is an awful way to display colored circles but "Large Green Circle Emoji" was only released
-   in 2019 (see https://unicode-table.com/en/1F7E2/). Let's wait a few more years...
+.. |green| raw:: html
 
-.. |green| image:: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzIuMTkgMjMyLjE5Ij48Y2lyY2xlIGN4PSIxMTYuMDkiIGN5PSIxMTYuMDkiIHI9IjExNi4wOSIgc3R5bGU9ImZpbGw6IzAwYTcwMCIvPjwvc3ZnPg==
-   :width: 15
+   <span class="text-success" style="font-size: 32px; line-height: 0.5">●</span>
 
-.. |red| image:: data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyMzIuMTkgMjMyLjE5Ij48Y2lyY2xlIGN4PSIxMTYuMDkiIGN5PSIxMTYuMDkiIHI9IjExNi4wOSIgc3R5bGU9ImZpbGw6I2QwMDAwMCIvPjwvc3ZnPg==
-   :width: 15
+.. |red| raw:: html
+
+   <span class="text-danger" style="font-size: 32px; line-height: 0.5">●</span>
 
 I run an older version of Odoo/OpenERP/TinyERP
 ==============================================
