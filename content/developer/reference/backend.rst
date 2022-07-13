@@ -17,4 +17,3 @@ Python framework
     backend/testing
     backend/http
     backend/mixins
-    backend/standard_modules
