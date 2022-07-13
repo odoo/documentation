@@ -9,3 +9,4 @@ Reference
 
     reference/backend
     reference/frontend
+    reference/standard_modules
