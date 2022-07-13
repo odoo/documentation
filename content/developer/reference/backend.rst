@@ -1,8 +1,8 @@
 :nosearch:
 
-=======
-Backend
-=======
+================
+Python framework
+================
 
 .. toctree::
     :titlesonly:
