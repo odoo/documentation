@@ -1,5 +1,4 @@
 :nosearch:
-:types: reference
 
 =========
 Reference
