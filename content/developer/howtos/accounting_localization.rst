@@ -180,7 +180,7 @@ It works with the prefix *start*/*end*, so every account where the code starts w
 
   .. csv-table::
      :condition: odoo_dir_in_path
-     :file: {ODOO_ABSPATH}/addons/l10n_il/data/account.group.template.csv
+     :file: {ODOO_RELPATH}/addons/l10n_il/data/account.group.template.csv
      :widths: 20,20,20,20,20
      :header-rows: 1
 
