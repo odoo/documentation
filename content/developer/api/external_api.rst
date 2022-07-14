@@ -7,6 +7,11 @@ all of its data are also available from the outside for external analysis or
 integration with various tools. Part of the :ref:`reference/orm/model` API is
 easily available over XML-RPC_ and accessible from a variety of languages.
 
+.. important::
+   Starting with PHP8, the XML-RPC extension may not be available by default.
+   Check out the `manual <https://www.php.net/manual/en/xmlrpc.installation.php>`_
+   for the installation steps.
+
 .. seealso::
    - :doc:`Tutorial on web services <../howtos/web_services>`
 
