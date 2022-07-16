@@ -1216,6 +1216,11 @@ msgid ""
 "each request, otherwise users will be blocked as they won't be allowed to "
 "choose the database themselves."
 msgstr ""
+"Assurez-vous de configurer un paramètre approprié ``db_name`` (et "
+"optionnellement, ``db_filter`` aussi) afin que le système puisse déterminer "
+"la base de données cible pour chaque requête, sinon les utilisateurs seront "
+"bloqués car ils ne seront pas autorisés à choisir la base de données eux-"
+"mêmes."
 
 #: ../../content/administration/install/deploy.rst:586
 msgid ""
@@ -1224,6 +1229,11 @@ msgid ""
 "starting with ``/web/database`` except (maybe) ``/web/database/selector`` "
 "which displays the database-selection screen."
 msgstr ""
+"Si les écrans de gestion ne doivent être accessibles qu'à partir d'un "
+"ensemble de machines sélectionnées, utilisez les fonctionnalités du serveur "
+"proxy pour bloquer l'accès à toutes les routes commençant par "
+"``/web/database`` sauf (peut-être) ``/web/database/selector`` qui affiche "
+"l'écran de sélection de la base de données."
 
 #: ../../content/administration/install/deploy.rst:590
 msgid ""
@@ -1231,60 +1241,76 @@ msgid ""
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
 "password is checked before allowing database-alteration operations."
 msgstr ""
+"Si l'écran de gestion de la base de données doit rester accessible, le "
+"paramètre ``admin_passwd`` doit être modifié par rapport à sa valeur par "
+"défaut ``admin`` : ce mot de passe est vérifié avant d'autoriser les "
+"opérations de modification de la base de données."
 
 #: ../../content/administration/install/deploy.rst:594
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
+"Il doit être stocké en toute sécurité et doit être généré de manière "
+"aléatoire, par exemple"
 
 #: ../../content/administration/install/deploy.rst:600
 msgid "which will generate a 32 characters pseudorandom printable string."
-msgstr ""
+msgstr "qui générera une chaîne imprimable pseudo aléatoire de 32 caractères."
 
 #: ../../content/administration/install/deploy.rst:603
 msgid "Supported Browsers"
-msgstr ""
+msgstr "Navigateurs pris en charge"
 
 #: ../../content/administration/install/deploy.rst:605
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr ""
+"Odoo prend en charge tous les principaux navigateurs desktop et mobiles "
+"disponibles sur le marché, pour autant qu'ils soient pris en charge par "
+"leurs éditeurs."
 
 #: ../../content/administration/install/deploy.rst:608
 msgid "Here are the supported browsers:"
-msgstr ""
+msgstr "Voici les navigateurs pris en charge :"
 
 #: ../../content/administration/install/deploy.rst:610
 msgid "Google Chrome"
-msgstr ""
+msgstr "Google Chrome"
 
 #: ../../content/administration/install/deploy.rst:611
 msgid "Mozilla Firefox"
-msgstr ""
+msgstr "Mozilla Firefox"
 
 #: ../../content/administration/install/deploy.rst:612
 msgid "Microsoft Edge"
-msgstr ""
+msgstr "Microsoft Edge"
 
 #: ../../content/administration/install/deploy.rst:613
 msgid "Apple Safari"
-msgstr ""
+msgstr "Apple Safari"
 
 #: ../../content/administration/install/deploy.rst:615
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr ""
+"Veuillez vous assurer que votre navigateur est à jour et toujours pris en "
+"charge par son éditeur avant de déposer un rapport de bogue."
 
 #: ../../content/administration/install/deploy.rst:620
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
+"Depuis Odoo 13.0, ES6 est supporté. Par conséquent, le support d'IE est "
+"abandonné."
 
 #: ../../content/administration/install/deploy.rst:623
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr ""
+"pour que plusieurs installations Odoo utilisent la même base de données "
+"PostgreSQL, ou pour fournir plus de ressources informatiques aux deux "
+"logiciels."
 
 #: ../../content/administration/install/deploy.rst:626
 msgid ""
@@ -1305,25 +1331,31 @@ msgstr ""
 
 #: ../../content/administration/install/email_gateway.rst:3
 msgid "Email gateway"
-msgstr ""
+msgstr "Passerelle de messagerie"
 
 #: ../../content/administration/install/email_gateway.rst:5
 msgid ""
 "The Odoo mail gateway allows you to inject directly all the received emails "
 "in Odoo."
 msgstr ""
+"La passerelle mail Odoo vous permet d'injecter directement tous les emails "
+"reçus dans Odoo."
 
 #: ../../content/administration/install/email_gateway.rst:7
 msgid ""
 "Its principle is straightforward: your SMTP server executes the \"mailgate\""
 " script for every new incoming email."
 msgstr ""
+"Son principe est simple : votre serveur SMTP exécute le script \"mailgate\" "
+"pour chaque nouveau courriel entrant."
 
 #: ../../content/administration/install/email_gateway.rst:9
 msgid ""
 "The script takes care of connecting to your Odoo database through XML-RPC, "
 "and send the emails via the `MailThread.message_process()` feature."
 msgstr ""
+"Le script se charge de se connecter à votre base de données Odoo via XML-"
+"RPC, et d'envoyer les emails via la fonction `MailThread.message_process()`."
 
 #: ../../content/administration/install/email_gateway.rst:13
 msgid "Prerequisites"
@@ -1331,23 +1363,25 @@ msgstr "Prérequis"
 
 #: ../../content/administration/install/email_gateway.rst:14
 msgid "Administrator access to the Odoo database."
-msgstr ""
+msgstr "Accès administrateur à la base de données Odoo."
 
 #: ../../content/administration/install/email_gateway.rst:15
 msgid "Your own mail server such as Postfix or Exim."
-msgstr ""
+msgstr "Votre propre serveur de messagerie tel que Postfix ou Exim."
 
 #: ../../content/administration/install/email_gateway.rst:16
 msgid "Technical knowledge on how to configure an email server."
 msgstr ""
+"Connaissances techniques sur la façon de configurer un serveur de "
+"messagerie."
 
 #: ../../content/administration/install/email_gateway.rst:19
 msgid "For Postfix"
-msgstr ""
+msgstr "Pour Postfix"
 
 #: ../../content/administration/install/email_gateway.rst:20
 msgid "In you alias config (:file:`/etc/aliases`):"
-msgstr ""
+msgstr "Dans votre configuration d'alias (:file:`/etc/aliases`):"
 
 #: ../../content/administration/install/email_gateway.rst:27
 #: ../../content/administration/install/email_gateway.rst:41
@@ -1356,29 +1390,31 @@ msgstr "Ressources"
 
 #: ../../content/administration/install/email_gateway.rst:29
 msgid "`Postfix <http://www.postfix.org/documentation.html>`_"
-msgstr ""
+msgstr "`Postfix <http://www.postfix.org/documentation.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:30
 msgid "`Postfix aliases <http://www.postfix.org/aliases.5.html>`_"
-msgstr ""
+msgstr "`Alias Postfix <http://www.postfix.org/aliases.5.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:31
 msgid "`Postfix virtual <http://www.postfix.org/virtual.8.html>`_"
-msgstr ""
+msgstr "`Postfix virtuel <http://www.postfix.org/virtual.8.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:35
 msgid "For Exim"
-msgstr ""
+msgstr "Pour Exim"
 
 #: ../../content/administration/install/email_gateway.rst:43
 msgid "`Exim <https://www.exim.org/docs.html>`_"
-msgstr ""
+msgstr "`Exim <https://www.exim.org/docs.html>`_"
 
 #: ../../content/administration/install/email_gateway.rst:46
 msgid ""
 "If you don't have access/manage your email server, use :ref:`inbound "
 "messages <email_communication/inbound_messages>`."
 msgstr ""
+"Si vous n'avez pas accès/ne gérez pas votre serveur de messagerie, utilisez "
+":ref:`messages entrants <email_communication/inbound_messages>`."
 
 #: ../../content/administration/install/install.rst:6
 msgid "Installing Odoo"
@@ -1389,32 +1425,38 @@ msgid ""
 "There are multiple ways to install Odoo, or not install it at all, depending"
 " on the intended use case."
 msgstr ""
+"Il existe plusieurs façons d'installer Odoo, ou de ne pas l'installer du "
+"tout, selon le cas d'utilisation prévu."
 
 #: ../../content/administration/install/install.rst:11
 msgid "This documents attempts to describe most of the installation options."
-msgstr ""
+msgstr "Ce document tente de décrire la plupart des options d'installation."
 
 #: ../../content/administration/install/install.rst:14
 msgid ":ref:`setup/install/online`"
-msgstr ""
+msgstr ":ref:`setup/install/online`"
 
 #: ../../content/administration/install/install.rst:14
 msgid "The easiest way to use Odoo in production or to try it."
 msgstr ""
+"Le moyen le plus simple d'utiliser Odoo en production ou de l'essayer."
 
 #: ../../content/administration/install/install.rst:18
 msgid ":ref:`setup/install/packaged`"
-msgstr ""
+msgstr ":ref:`setup/install/packaged`"
 
 #: ../../content/administration/install/install.rst:17
 msgid ""
 "Suitable for testing Odoo, developing modules and can be used for long-term "
 "production use with additional deployment and maintenance work."
 msgstr ""
+"Convient pour tester Odoo, développer des modules et peut être utilisé pour "
+"une utilisation de production à long terme avec des travaux de déploiement "
+"et de maintenance supplémentaires."
 
 #: ../../content/administration/install/install.rst:23
 msgid ":ref:`setup/install/source`"
-msgstr ""
+msgstr ":ref:`setup/install/source`"
 
 #: ../../content/administration/install/install.rst:21
 msgid ""
@@ -1422,20 +1464,25 @@ msgid ""
 "the same system. Good for developing modules, can be used as base for "
 "production deployment."
 msgstr ""
+"Offre une plus grande flexibilité : par exemple, permet de faire tourner "
+"plusieurs versions d'Odoo sur le même système. Bon pour le développement de "
+"modules, peut être utilisé comme base pour le déploiement en production."
 
 #: ../../content/administration/install/install.rst:28
 msgid ":ref:`setup/install/docker`"
-msgstr ""
+msgstr ":ref:`setup/install/docker`"
 
 #: ../../content/administration/install/install.rst:26
 msgid ""
 "If you usually use docker_ for development or deployment, an official "
 "docker_ base image is available."
 msgstr ""
+"Si vous utilisez habituellement docker_ pour le développement ou le "
+"déploiement, une image de base docker_ officielle est disponible."
 
 #: ../../content/administration/install/install.rst:33
 msgid "Editions"
-msgstr ""
+msgstr "Éditions"
 
 #: ../../content/administration/install/install.rst:35
 msgid ""
@@ -1444,6 +1491,10 @@ msgid ""
 "accessing the code is restricted to Enterprise customers and partners. The "
 "Community version is freely available to anyone."
 msgstr ""
+"Il existe deux éditions différentes d'Odoo : les versions Community et "
+"Enterprise. L'utilisation de la version Enterprise est possible sur notre "
+"SaaS_ et l'accès au code est limité aux clients et partenaires Enterprise. "
+"La version Community est librement accessible à tous."
 
 #: ../../content/administration/install/install.rst:40
 msgid ""
@@ -1451,6 +1502,9 @@ msgid ""
 "please refer to :ref:`setup/enterprise` (except for "
 ":ref:`setup/install/source`)."
 msgstr ""
+"Si vous utilisez déjà la version Community et que vous souhaitez passer à la"
+" version Enterprise, veuillez vous référer à :ref:`setup/enterprise` (sauf "
+"pour :ref:`setup/install/source`)."
 
 #: ../../content/administration/install/install.rst:47
 msgid "Online"
@@ -1466,14 +1520,20 @@ msgid ""
 "shared instances which only live for a few hours, and can be used to browse "
 "around and try things out with no commitment."
 msgstr ""
+"Pour se faire une idée rapide d'Odoo, des instances de démonstration sont "
+"disponibles. Il s'agit d'instances partagées qui ne vivent que quelques "
+"heures, et peuvent être utilisées pour naviguer et faire des tests sans "
+"engagement."
 
 #: ../../content/administration/install/install.rst:56
 msgid "Demo_ instances require no local installation, just a web browser."
 msgstr ""
+"Les instances Demo_ ne nécessitent aucune installation locale, juste un "
+"navigateur web."
 
 #: ../../content/administration/install/install.rst:59
 msgid "SaaS"
-msgstr ""
+msgstr "SaaS"
 
 #: ../../content/administration/install/install.rst:61
 msgid ""
@@ -1482,20 +1542,29 @@ msgid ""
 "and test Odoo and do non-code customizations (i.e. incompatible with custom "
 "modules or the Odoo Apps Store) without having to install it locally."
 msgstr ""
+"Facile à utiliser, entièrement géré et migré par Odoo S.A., le SaaS_ d'Odoo "
+"fournit des instances privées et est gratuit au départ. Il peut être utilisé"
+" pour découvrir et tester Odoo et faire des personnalisations non codées "
+"(c'est-à-dire incompatibles avec les modules personnalisés ou le Odoo Apps "
+"Store) sans avoir à l'installer localement."
 
 #: ../../content/administration/install/install.rst:66
 msgid "Can be used for both testing Odoo and long-term production use."
 msgstr ""
+"Peut être utilisé aussi bien pour tester Odoo que pour une utilisation en "
+"production à long terme."
 
 #: ../../content/administration/install/install.rst:68
 msgid ""
 "Like demo_ instances, SaaS_ instances require no local installation, a web "
 "browser is sufficient."
 msgstr ""
+"Comme les instances demo_, les instances SaaS_ ne nécessitent aucune "
+"installation locale, un navigateur web suffit."
 
 #: ../../content/administration/install/install.rst:75
 msgid "Packaged installers"
-msgstr ""
+msgstr "Installeurs"
 
 #: ../../content/administration/install/install.rst:77
 msgid ""
@@ -1503,12 +1572,17 @@ msgid ""
 "(Debian, Ubuntu, …) and RPM-based distributions (Fedora, CentOS, RHEL, …) "
 "for both the Community and Enterprise versions."
 msgstr ""
+"Odoo fournit des installeurs pour Windows, les distributions basées sur deb "
+"(Debian, Ubuntu, ...) et les distributions basées sur RPM (Fedora, CentOS, "
+"RHEL, ...) pour les versions Community et Enterprise."
 
 #: ../../content/administration/install/install.rst:81
 msgid ""
 "These packages automatically set up all dependencies (for the Community "
 "version), but may be difficult to keep up-to-date."
 msgstr ""
+"Ces package configurent automatiquement toutes les dépendances (pour la "
+"version communautaire), mais peuvent être difficiles à maintenir à jour."
 
 #: ../../content/administration/install/install.rst:84
 msgid ""
@@ -1517,27 +1591,37 @@ msgid ""
 " be downloaded from our download_ page (you must to be logged in as a paying"
 " customer or partner to download the Enterprise packages)."
 msgstr ""
+"Les packages Community officiels avec toutes les dépendances requises sont "
+"disponibles sur notre serveur nightly_. Les packages Community et Enterprise"
+" peuvent être téléchargés depuis notre page de téléchargement (vous devez "
+"être connecté en tant que client ou partenaire payant pour télécharger les "
+"packages Enterprise)."
 
 #: ../../content/administration/install/install.rst:90
 #: ../../content/administration/install/install.rst:252
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../content/administration/install/install.rst:92
 msgid ""
 "Download the installer from our nightly_ server (Community only) or the "
 "Windows installer from the download_ page (any edition)."
 msgstr ""
+"Téléchargez l'installeur depuis notre serveur nightly_ (Community "
+"uniquement) ou l'installeur Windows depuis la page de téléchargement (toute "
+"édition)."
 
 #: ../../content/administration/install/install.rst:94
 msgid "Execute the downloaded file."
-msgstr ""
+msgstr "Exécutez le fichier téléchargé."
 
 #: ../../content/administration/install/install.rst:0
 msgid ""
 "On Windows 8 and later you may see a warning titled \"Windows protected your"
 " PC\"."
 msgstr ""
+"Sur Windows 8 et les versions ultérieures, vous pouvez voir un avertissement"
+" intitulé \"Windows a protégé votre PC\"."
 
 #: ../../content/administration/install/install.rst:0
 msgid "Click on **More Info** and then on **Run anyway**."
@@ -1549,26 +1633,28 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:100
 msgid "Go through the various installation steps."
-msgstr ""
+msgstr "Passez par les différentes étapes de l'installation."
 
 #: ../../content/administration/install/install.rst:102
 msgid "Odoo will automatically be started at the end of the installation."
-msgstr ""
+msgstr "Odoo sera automatiquement lancé à la fin de l'installation."
 
 #: ../../content/administration/install/install.rst:105
 #: ../../content/administration/install/install.rst:418
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../content/administration/install/install.rst:108
 msgid "Debian/Ubuntu"
-msgstr ""
+msgstr "Debian/Ubuntu"
 
 #: ../../content/administration/install/install.rst:110
 msgid ""
 "Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu "
 "20.04 (Focal)`_ or above."
 msgstr ""
+"Le package Odoo 15.0 'deb' est actuellement compatible avec `Debian 11 "
+"(Bullseye)`_, `Ubuntu 20.04 (Focal)`_ ou plus."
 
 #: ../../content/administration/install/install.rst:113
 #: ../../content/administration/install/install.rst:186
@@ -1585,6 +1671,10 @@ msgid ""
 " as your Odoo instance. Execute the following command in order to install "
 "the PostgreSQL server:"
 msgstr ""
+"Odoo a besoin d'un serveur `PostgreSQL`_ pour fonctionner correctement. La "
+"configuration par défaut pour le package 'deb' de Odoo est d'utiliser le "
+"serveur PostgreSQL sur le même hôte que votre instance Odoo. Exécutez la "
+"commande suivante afin d'installer le serveur PostgreSQL."
 
 #: ../../content/administration/install/install.rst:123
 #: ../../content/administration/install/install.rst:198
@@ -1642,6 +1732,8 @@ msgid ""
 "This will install Odoo as a service, create the necessary PostgreSQL_ user "
 "and automatically start the server."
 msgstr ""
+"Ceci installera Odoo comme un service, créera l'utilisateur PostgreSQL_ "
+"nécessaire et démarrera automatiquement le serveur."
 
 #: ../../content/administration/install/install.rst:161
 msgid ""
@@ -1652,6 +1744,8 @@ msgstr ""
 #: ../../content/administration/install/install.rst:164
 msgid "If you need the feature, you can install it manually with:"
 msgstr ""
+"Si vous avez besoin de cette fonctionnalité, vous pouvez l'installer "
+"manuellement avec :"
 
 #: ../../content/administration/install/install.rst:170
 msgid ""
@@ -1663,10 +1757,12 @@ msgstr ""
 #: ../../content/administration/install/install.rst:174
 msgid "If you need this feature, you can install manually with:"
 msgstr ""
+"Si vous avez besoin de cette fonctionnalité, vous pouvez l'installer "
+"manuellement avec :"
 
 #: ../../content/administration/install/install.rst:181
 msgid "Fedora"
-msgstr ""
+msgstr "Fedora"
 
 #: ../../content/administration/install/install.rst:183
 msgid "Odoo 15.0 'rpm' package supports Fedora 34."
@@ -1688,7 +1784,7 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:218
 msgid "RPM package"
-msgstr ""
+msgstr "Package RPM"
 
 #: ../../content/administration/install/install.rst:220
 msgid ""
@@ -1733,6 +1829,9 @@ msgid ""
 "Finally it provides greater control over the system's set up, and allows to "
 "more easily keep (and run) multiple versions of Odoo side-by-side."
 msgstr ""
+"Enfin, il offre un meilleur contrôle sur la configuration du système et "
+"permet de conserver (et de faire fonctionner) plus facilement plusieurs "
+"versions d'Odoo côte à côte."
 
 #: ../../content/administration/install/install.rst:255
 #: ../../content/administration/install/install.rst:421
@@ -1747,6 +1846,8 @@ msgid ""
 "There are two ways to obtain the source code of Odoo: as a zip **archive** "
 "or through **git**."
 msgstr ""
+"Il y a deux façons d'obtenir le code source d'Odoo : sous forme d'une "
+"**archive** zip ou par **git**."
 
 #: ../../content/administration/install/install.rst:260
 #: ../../content/administration/install/install.rst:426
@@ -1761,7 +1862,7 @@ msgstr "Archiver"
 #: ../../content/administration/install/install.rst:599
 #: ../../content/administration/install/install.rst:616
 msgid "Community Edition:"
-msgstr ""
+msgstr "Edition Community :"
 
 #: ../../content/administration/install/install.rst:264
 #: ../../content/administration/install/install.rst:270
@@ -1770,37 +1871,37 @@ msgstr ""
 #: ../../content/administration/install/install.rst:601
 #: ../../content/administration/install/install.rst:607
 msgid "`Official download page <download_>`_"
-msgstr ""
+msgstr "`Page officielle de téléchargement <download_>`_"
 
 #: ../../content/administration/install/install.rst:265
 #: ../../content/administration/install/install.rst:431
 #: ../../content/administration/install/install.rst:602
 msgid "`GitHub repository <community-repository_>`_"
-msgstr ""
+msgstr "`Dépôt GitHub <community-repository_>`_"
 
 #: ../../content/administration/install/install.rst:266
 #: ../../content/administration/install/install.rst:432
 #: ../../content/administration/install/install.rst:603
 msgid "`Nightly server <nightly_>`_"
-msgstr ""
+msgstr "`Serveur Nightly <nightly_>`_"
 
 #: ../../content/administration/install/install.rst:268
 #: ../../content/administration/install/install.rst:434
 #: ../../content/administration/install/install.rst:605
 msgid "Enterprise Edition:"
-msgstr ""
+msgstr "Édition Enterprise :"
 
 #: ../../content/administration/install/install.rst:271
 #: ../../content/administration/install/install.rst:437
 #: ../../content/administration/install/install.rst:608
 msgid "`GitHub repository <enterprise-repository_>`_"
-msgstr ""
+msgstr "`Dépôt GitHub <enterprise-repository_>`_"
 
 #: ../../content/administration/install/install.rst:274
 #: ../../content/administration/install/install.rst:440
 #: ../../content/administration/install/install.rst:611
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: ../../content/administration/install/install.rst:276
 #: ../../content/administration/install/install.rst:442
@@ -1815,6 +1916,7 @@ msgstr ""
 #: ../../content/administration/install/install.rst:623
 msgid "Enterprise Edition: (see :ref:`setup/install/editions` to get access)"
 msgstr ""
+"Édition Enterprise : (voir :ref:`setup/install/editions` pour y accéder)"
 
 #: ../../content/administration/install/install.rst:292
 #: ../../content/administration/install/install.rst:458
@@ -1828,12 +1930,19 @@ msgid ""
 "Community and Enterprise repository to have a working Odoo Enterprise "
 "installation."
 msgstr ""
+"**Le dépôt git Enterprise ne contient pas le code source complet d'Odoo**. "
+"Il s'agit uniquement d'une collection de modules complémentaires. Le code "
+"principal du serveur se trouve dans la version Community. Exécuter la "
+"version Enterprise signifie en fait exécuter le serveur à partir de la "
+"version Community avec l'option addons-path définie sur le dossier contenant"
+" la version Enterprise. Vous devez cloner à la fois le référentiel Community"
+" et Enterprise pour avoir une installation Odoo Enterprise fonctionnelle."
 
 #: ../../content/administration/install/install.rst:303
 #: ../../content/administration/install/install.rst:469
 #: ../../content/administration/install/install.rst:640
 msgid "Python"
-msgstr ""
+msgstr "Python"
 
 #: ../../content/administration/install/install.rst:305
 msgid ""
@@ -1841,6 +1950,10 @@ msgid ""
 "<https://www.python.org/downloads/windows/>`_ to download and install the "
 "latest version of Python 3 on your machine."
 msgstr ""
+"Odoo nécessite Python 3.7 ou une version ultérieure pour fonctionner. "
+"Visitez `la page de téléchargement de Python "
+"<https://www.python.org/downloads/windows/>`_ pour télécharger et installer "
+"la dernière version de Python 3 sur votre machine."
 
 #: ../../content/administration/install/install.rst:308
 msgid ""
@@ -1855,12 +1968,14 @@ msgid ""
 "If Python 3 is already installed, make sure that the version is 3.7 or "
 "above, as previous versions are not compatible with Odoo."
 msgstr ""
+"Si Python 3 est déjà installé, assurez-vous que la version est 3.7 ou "
+"supérieure, car les versions précédentes ne sont pas compatibles avec Odoo."
 
 #: ../../content/administration/install/install.rst:318
 #: ../../content/administration/install/install.rst:481
 #: ../../content/administration/install/install.rst:652
 msgid "Verify also that pip_ is installed for this version."
-msgstr ""
+msgstr "Vérifiez également que pip_ est installé pour cette version."
 
 #: ../../content/administration/install/install.rst:327
 msgid ""
@@ -1868,6 +1983,10 @@ msgid ""
 "PostgreSQL <https://www.postgresql.org/download/windows/>`_ (supported "
 "version: 10.0 and later)."
 msgstr ""
+"Odoo utilise PostgreSQL comme système de gestion de base de données. "
+"`Téléchargez et installez PostgreSQL "
+"<https://www.postgresql.org/download/windows/>`_ (version supportée : 10.0 "
+"et plus)."
 
 #: ../../content/administration/install/install.rst:330
 #: ../../content/administration/install/install.rst:499
@@ -1876,12 +1995,17 @@ msgid ""
 "By default, the only user is `postgres` but Odoo forbids connecting as "
 "`postgres`, so you need to create a new PostgreSQL user:"
 msgstr ""
+"Par défaut, le seul utilisateur est `postgres` mais Odoo interdit de se "
+"connecter en tant que `postgres`, vous devez donc créer un nouvel "
+"utilisateur PostgreSQL :"
 
 #: ../../content/administration/install/install.rst:333
 msgid ""
 "Add PostgreSQL's `bin` directory (by default: `C:\\\\Program "
 "Files\\\\PostgreSQL\\\\<version>\\\\bin`) to your `PATH`."
 msgstr ""
+"Ajoutez le répertoire `bin` de PostgreSQL (par défaut : `C:\\\\\\Program "
+"Files\\\\\\\\PostgreSQL\\\\<version>\\\\bin`) à votre `PATH`."
 
 #: ../../content/administration/install/install.rst:335
 msgid "Create a postgres user with a password using the pg admin gui:"
@@ -1889,11 +2013,11 @@ msgstr ""
 
 #: ../../content/administration/install/install.rst:337
 msgid "Open **pgAdmin**."
-msgstr ""
+msgstr "Ouvrez **pgAdmin**"
 
 #: ../../content/administration/install/install.rst:338
 msgid "Double-click the server to create a connection."
-msgstr ""
+msgstr "Double-cliquez sur le serveur pour créer une connexion."
 
 #: ../../content/administration/install/install.rst:339
 msgid "Select :menuselection:`Object --> Create --> Login/Group Role`."
