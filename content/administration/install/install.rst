@@ -478,6 +478,11 @@ PostgreSQL
       <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 10.0 and
       later).
 
+      .. tip::
+         To make the command line tools bundled with `postgres.app` available, make sure to setup your
+         `$PATH` variable by following the `Postgres.app CLI Tools Instructions
+         <https://postgresapp.com/documentation/cli-tools.html>`_.
+
       By default, the only user is `postgres` but Odoo forbids connecting as `postgres`, so you need
       to create a new PostgreSQL user:
 
