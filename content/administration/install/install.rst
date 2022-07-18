@@ -478,6 +478,11 @@ PostgreSQL
       <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 10.0 and
       later).
 
+      .. tip::
+         To make the command line tools bundled with `postgres.app` available, make sure to setup your
+         `$PATH` variable by following the `Postgres.app CLI Tools Instructions
+         <https://postgresapp.com/documentation/cli-tools.html>`_.
+
       By default, the only user is `postgres` but Odoo forbids connecting as `postgres`, so you need
       to create a new PostgreSQL user:
 
@@ -694,6 +699,11 @@ A typical way to run the server would be:
 
       Where `CommunityPath` is the path of the Odoo Community installation and `mydb` is the default
       database to serve on `localhost:8069`.
+
+      .. warning::
+         Some versions of python on Mac might lead to the following error message: `current limit
+         exceeds maximum limit`. In that case, add the following parameter `--limit-memory-hard 0`
+         to avoid the problem.
 
 .. seealso::
    - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
