@@ -113,6 +113,9 @@ extensions = [
     # Custom Odoo theme
     'odoo_theme',
 
+    # Sitemap.
+    'sphinx_sitemap',
+
     # Youtube and Vimeo videos integration (youtube, vimeo directives)
     'embedded_video',
 
@@ -175,6 +178,9 @@ languages_names = {
     'uk': 'UA',
     'zh_CN': 'ZH',
 }
+
+# The root of the documentation for the sitemap.
+html_baseurl = 'https://odoo.com/documentation/'
 
 # The directory in which files holding redirect rules used by the 'redirects' extension are listed.
 redirects_dir = 'redirects/'
