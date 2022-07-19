@@ -1,95 +1,116 @@
-=======================
-Manage cash basis taxes
-=======================
+================
+Cash basis taxes
+================
 
-The cash basis taxes are due when the payment has been done and not at
-the validation of the invoice (as it is the case with standard taxes).
-Reporting your income and expenses to the administration based on the
-cash basis method is legal in some countries and under some conditions.
+Cash basis taxes are due when the payment is made, as opposed to standard taxes that are due when
+the invoice is confirmed. Reporting your income and expenses to the government based on the cash
+basis method is mandatory in some countries and under some conditions.
 
-Example : You sell a product in the 1st quarter of your fiscal year and
-receive the payment the 2nd quarter of your fiscal year. Based on the
-cash basis method, the tax you have to pay to the administration is due
-for the 2nd quarter.
+.. example::
+   You sell a product in the 1st quarter of your fiscal year, and the payment is received in the 2nd
+   quarter. Based on the cash basis method, the tax you must pay is for the 2nd quarter.
 
-How to configure cash basis taxes ? 
-------------------------------------
+Configuration
+-------------
 
-You first have to activate the setting in
-:menuselection:`Accounting --> Configuration --> Settings --> Allow Tax Cash Basis`.
-You will be asked to define the Tax Cash Basis Journal.
+Go to :menuselection:`Accounting --> Configuration --> Settings` and under the :guilabel:`Taxes`
+section, enable :guilabel:`Cash Basis`.
 
-.. image:: cash_basis_taxes/cash_basis_taxes01.png
-    :width: 5.04688in
-    :height: 0.79688in
+Then, define the :guilabel:`Tax Cash Basis Journal`. Click on the external link button next to the
+journal to update its default properties such as the :guilabel:`Journal Name`, :guilabel:`Type` or
+:guilabel:`Short Code`.
+
+.. image:: cash_basis_taxes/tax_cash_basis_journal.png
     :align: center
+    :alt: Select your Tax Cash Basis Journal and click on the external link
 
-Once this is done, you can configure your taxes in
-:menuselection:`Accounting --> Configuration --> Taxes`.
-At first set the proper transitional accounts to post taxes
-until you register the payment.
+.. note::
+   By default, the journal entries of the :guilabel:`Cash Basis Taxes` journal are named using the
+   :guilabel:`CABA` short code.
 
-.. image:: cash_basis_taxes/cash_basis_taxes02.png
+Once this is done, go to :menuselection:`Accounting --> Configuration --> Accounting: Taxes` to
+configure your taxes. You can either :guilabel:`Create` a new tax or update an existing one by
+clicking on it.
+
+The :guilabel:`Account` column reflects the proper transitional accounts to post taxes until the
+payment is registered.
+
+.. image:: cash_basis_taxes/account_column.png
     :align: center
+    :alt: Fill in the account column with a transitional accounts where taxes go until the payment
+       is registered
 
-In the *Advanced Options* tab you will turn *Tax Due* to
-*Based on Payment*. You will then have to
-define the *Tax Received* account in which to post the tax amount
-when the payment is received and the *Base Tax Received Account*
-to post the base tax amount for an accurate tax report.
+In the :guilabel:`Advanced Options` tab, decide of the :guilabel:`Tax Exigilibity`. Select
+:guilabel:`Based on Payment`, so the tax is due when the payment of the invoice is received. You can
+then also define the :guilabel:`Cash Basis Transition Account` where the tax amount is recorded as
+long as the original invoice has not been reconciled.
 
-.. image:: cash_basis_taxes/cash_basis_taxes03.png
+.. image:: cash_basis_taxes/advanced_options.png
     :align: center
+    :alt: Fill in the Cash Basis Transition Account where taxes amounts go until payment
+        reconciliation.
 
-What is the impact of cash basis taxes in my accounting ? 
-----------------------------------------------------------
+Impact of cash basis taxes on accounting
+----------------------------------------
 
-Let’s take an example. You make a sale of $100 with a 15% cash basis
-tax. When you validate the customer invoice, the following entry is
-created in your accounting:
+To illustrate the impact of cash basis taxes on accounting transactions, let's take an example with
+the sales of a product that costs 1,000$, with a cash basis tax of 15%.
 
-+-----------------------------+---------------------------+
-| Customer Invoices Journal   |                           |
-+=============================+===========================+
-| **Debit**                   | **Credit**                |
-+-----------------------------+---------------------------+
-| Receivables $115            |                           |
-+-----------------------------+---------------------------+
-|                             | Temporary Tax Account $15 |
-+-----------------------------+---------------------------+
-|                             | Income Account $100       |
-+-----------------------------+---------------------------+
+.. image:: cash_basis_taxes/customer_invoice_with_cbt.png
+    :align: center
+    :alt:
 
-A few days later, you receive the payment:
+The following entries are created in your accounting, and the tax report is currently empty.
 
-+----------------+--------------------+
-| Bank Journal   |                    |
-+================+====================+
-| **Debit**      | **Credit**         |
-+----------------+--------------------+
-| Bank $115      |                    |
-+----------------+--------------------+
-|                | Receivables $115   |
-+----------------+--------------------+
++----------------------------+----------------------------+
+|**Customer journal (INV)**                               |
++============================+============================+
+| **Debit**                  |**Credit**                  |
++----------------------------+----------------------------+
+| Receivable $1,150          |                            |
++----------------------------+----------------------------+
+|                            |Income $1,000               |
++----------------------------+----------------------------+
+|                            |Temporary tax account $150  |
++----------------------------+----------------------------+
 
-When you reconcile the invoice and the payment, this entry is generated:
+When the payment is then received, it is registered as below :
 
-+--------------------------+----------------------------+
-| Tax Cash Basis Journal                                |
-+==========================+============================+
-| **Debit**                | **Credit**                 |
-+--------------------------+----------------------------+
-| Temporary Tax Account $15|                            |
-+--------------------------+----------------------------+
-|                          | Tax Received Account $15   |
-+--------------------------+----------------------------+
-| Income Account $100      |                            |
-+--------------------------+----------------------------+
-|                          | Income Account $100        |
-+--------------------------+----------------------------+
++----------------------------+----------------------------+
+| **Bank journal (BANK)**                                 |
++============================+============================+
+| **Debit**                  |**Credit**                  |
++----------------------------+----------------------------+
+| Bank $1,150                |                            |
++----------------------------+----------------------------+
+|                            |Receivable $1,150           |
++----------------------------+----------------------------+
 
-.. tip::
-    The last two journal items are neutral but they are needed to insure 
-    correct tax reports in Odoo with accurate base tax amounts.
-    We advise to use a default revenue account.
-    The balance of this account will then always be at zero.
+.. note::
+    Once the payment is registered, you can use the :guilabel:`Cash Basis Entries` smart button on
+    the invoice to access them directly.
+
+Finally, upon reconciliation of the invoice with the payment, the below entry is automatically
+created:
+
++----------------------------+----------------------------+
+| **Tax Cash Basis Journal (Caba)**                       |
++============================+============================+
+| **Debit**                  |**Credit**                  |
++----------------------------+----------------------------+
+| Income account $1,000      |                            |
++----------------------------+----------------------------+
+| Temporary tax account $150 |                            |
++----------------------------+----------------------------+
+|                            |  Income account $1,000     |
++----------------------------+----------------------------+
+|                            | Tax Received $150          |
++----------------------------+----------------------------+
+
+The journal items :guilabel:`Income account` vs. :guilabel:`Income account` are neutral, but they
+are needed to ensure correct tax reports in Odoo with accurate base tax amounts.
+
+Using a default :guilabel:`Base Tax Received Account` is recommended so your balance is at zero and
+your income account is not polluted by unnecessary accounting movements. To do so, go to
+:menuselection:`Configuration --> Settings --> Taxes`, and select a
+:guilabel:`Base Tax Received Account` under :guilabel:`Cash Basis`.
