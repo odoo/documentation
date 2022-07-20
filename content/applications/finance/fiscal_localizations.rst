@@ -124,7 +124,7 @@ available on Odoo.
 - Taiwan - Accounting
 - Thailand - Accounting
 - Turkey - Accounting
-- U.A.E. - Accounting
+- :doc:`United Arab Emirates - Accounting <fiscal_localizations/united_arab_emirates>`
 - :doc:`UK - Accounting <fiscal_localizations/united_kingdom>`
 - Ukraine - Accounting
 - United States - Accounting
@@ -156,4 +156,5 @@ available on Odoo.
    fiscal_localizations/peru
    fiscal_localizations/spain
    fiscal_localizations/switzerland
+   fiscal_localizations/united_arab_emirates
    fiscal_localizations/united_kingdom
