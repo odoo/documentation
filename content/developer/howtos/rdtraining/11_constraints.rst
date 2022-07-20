@@ -101,7 +101,7 @@ raise an exception if its invariant is not satisfied::
         # all records passed the test, don't return anything
 
 A simple example can be found
-`here <https://github.com/odoo/odoo/blob/3783654b87851bdeb11e32da78bb5b62865b869a/addons/account/models/account_payment_term.py#L104-L108>`__.
+`here <https://github.com/odoo/odoo/blob/274dd3bf503e1b612179db92e410b336bfaecfb4/addons/stock/models/stock_quant.py#L239-L244>`__.
 
 .. exercise:: Add Python constraints.
 
@@ -113,7 +113,8 @@ A simple example can be found
     .. warning::
 
         Always use the :meth:`~odoo.tools.float_utils.float_compare` and
-        :meth:`~odoo.tools.float_utils.float_is_zero` methods when working with floats!
+        :meth:`~odoo.tools.float_utils.float_is_zero` methods from `odoo.tools.float_utils` when
+        working with floats!
 
     Ensure the constraint is triggered every time the selling price or the expected price is changed!
 
