@@ -174,8 +174,10 @@ Do the same for all the sales taxes that the company needs, either those that co
 Odoo, or those that you add that are necessary for your company bill.
 
 .. tip::
-   For the 0% VAT tax, select the option *Exento* instead of *Tasa* within the **Factor Type**
-   field.
+   For the 0% VAT tax, select the option *Tasa* within the **Factor Type**
+   field. 
+   For the 0% VAT **exempt** tax, select the option *Exento* instead of *Tasa* within the **Factor Type**
+   field. 
 
 When registering a payment, Odoo will carry out the movement of taxes from the **Cash Basis
 Transition Account** to the account set in the **Definition** tab. For such movement, a tax base
