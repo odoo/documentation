@@ -335,11 +335,7 @@ right being checked:
   the invoice (as creating the invoice accesses the property, therefore triggers
   an ACL check) e.g.::
 
-      print(" reached ".center(100, '=')
-
-- Execute ``bypass.py`` in ``estate_account``, giving it the name of your
-  database, and the name of your version of ``action_sold`` (unless you named it
-  ``action_sold`` then it's fine)
+    print(" reached ".center(100, '='))
 
 You should see ``reached`` in your Odoo log, followed by an access error.
 
