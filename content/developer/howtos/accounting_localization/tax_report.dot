@@ -20,6 +20,7 @@ digraph foo {
     label = "Invoices";
     color = lightyellow;
     node [style=filled, color=white];
+    edge [fontsize=8,];
     account_move_line[label="account.move.line"]
     account_tax[label="account.tax"]
     account_tax_repartition_line[label="account.tax.repartition.line"];
@@ -35,10 +36,10 @@ digraph foo {
     label = "Reporting";
     color = mistyrose;
     node [style=filled, color=white];
-    account_tax_report_line[label="account.tax.report.line"];
-    account_generic_tax_report[label="account.generic.tax.report"];
-    account_tax_report[label="account.tax.report"];
-    account_tax_report -> account_generic_tax_report [label="Calls and displays", dir=back];
+    edge [fontsize=8,];
+    account_tax_report [label="account.report"];
+    account_tax_report_line [label="account.report.line"];
+    account_report_expression [label="account.report.expression"];
     account_tax_report -> account_tax_report_line [label="0..*"]
   }
   subgraph cluster_templates {
@@ -46,9 +47,15 @@ digraph foo {
     label = "Templates";
     color = lightblue;
     node [style=filled, color=white];
+    edge [fontsize=8,];
     account_tax_template[label="account.tax.template"];
     account_tax_repartition_line_template[label="account.tax.repartition.line.template"];
     account_tax_template -> account_tax_repartition_line_template [label="1 for base, 1..* for tax amount"];
+  }
+  {
+    rank=same;
+    account_move_line;
+    account_tax_report;
   }
   {
     rank=same;
@@ -59,15 +66,16 @@ digraph foo {
   }
   {
     rank=same;
-    account_tax_report;
-    account_tax_report_line;
+    account_report_expression;
     account_tax_template;
     account_tax_repartition_line_template;
   }
-  account_tax -> account_tax_template [label="Creates when installing CoA", dir=back];
-  account_tax_repartition_line -> account_tax_repartition_line_template [label="Creates when installing CoA", dir=back];
+  account_tax -> account_tax_template [label="    Creates when\n    installing CoA", dir=back];
+  account_tax_repartition_line -> account_tax_repartition_line_template[label="    Creates when\n   installing CoA", dir=back];
   account_tax_repartition_line_template -> account_account_tag [label="tag_ids"];
-  account_tax_report_line -> account_account_tag [label="Creates (+ and -)"];
+  account_tax_report_line -> account_report_expression [label="0..*"];
+  account_tax_report_line -> account_tax_report_line [label="children_ids"];
+  account_report_expression -> account_account_tag [label="Engine tax_tags 1..*"];
   account_tax_report -> res_country [label="0..1"];
   account_account_tag -> res_country [label="0..1"];
 }
