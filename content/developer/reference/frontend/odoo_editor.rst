@@ -1,17 +1,10 @@
-
-.. highlight:: javascript
-
-.. default-domain:: js
-
 ===========
 Odoo Editor
 ===========
 
-Odoo Editor is Odoo's own rich text editor. It has replaced the Summernote
-library since Odoo 15.0. It can be found at
-*web_editor/static/src/js/editor/odoo-editor*.
-
-Full documentation will come soon.
+Odoo Editor is Odoo's own rich text editor. Its sources can be found in the
+`odoo-editor directory
+<{GITHUB_PATH}/addons/web_editor/static/src/js/editor/odoo-editor>`_.
 
 Tests
 =====
@@ -31,12 +24,12 @@ navigated with the arrow keys.
 Instantiation
 -------------
 
-*OdooEditor.js* instantiates the Powerbox in its own constructor and stores it
+:file:`OdooEditor.js` instantiates the Powerbox in its own constructor and stores it
 in its `powerbox` instance variable.
 
 Odoo Editor passes it a set of default commands and categories, along with any
-Powerbox options passed to the editor (see *OdooEditor.js*'s `_createPowerbox`
-method).
+Powerbox options passed to the editor (see :file:`OdooEditor.js`'s
+`_createPowerbox` method).
 
 Options
 -------
@@ -99,11 +92,11 @@ Filters
 
 There are three ways to filter commands:
 
-1. Via the `powerboxFilters` Powerbox option. It's a *function* that takes the
+#. Via the `powerboxFilters` Powerbox option. It's a *function* that takes the
    current commands and returns them filtered.
-2. Via a given command's `isDisabled` entry. It's a *function* that simply
+#. Via a given command's `isDisabled` entry. It's a *function* that simply
    returns `true` when the command should be disabled.
-3. The user can filter commands by simply typing text after opening the
+#. The user can filter commands by simply typing text after opening the
    Powerbox. It will fuzzy-match that text with the names of the categories and
    commands.
 
