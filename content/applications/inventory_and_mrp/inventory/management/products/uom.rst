@@ -105,3 +105,8 @@ to the *UoM* used for stock management, in our use case, the Units.
 
 .. image:: uom/uom_10.png
     :align: center
+------------------
+
+Conclusion
+------------------
+The UOM is used for the convenience of sale orders or purchase orders which are displayed in different Measures. However, In the Inventory Module, still uses the basic unit to manage the stock. It is important.
