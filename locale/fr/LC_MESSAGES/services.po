@@ -12,7 +12,7 @@
 # Martin Trigaux, 2021
 # Richard Mathot <rim@odoo.com>, 2021
 # Jérôme Tanché <jerome.tanche@ouest-dsi.fr>, 2021
-# Alexandra Jubert <aju@odoo.com>, 2021
+# Alexandra Jubert, 2021
 # Jonathan Castillo <jcs@odoo.com>, 2021
 # Fernanda Marques <fem@odoo.com>, 2021
 # Priscilla (prs) Odoo <prs@odoo.com>, 2021
@@ -33,7 +33,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fr\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../content/applications/services.rst:5
 msgid "Services"
@@ -218,6 +218,11 @@ msgid ""
 "corresponding *Invoice*. Clicking on *Reverse* generates a credit note, and "
 "you can *Post* it while still being in the *Helpdesk* app."
 msgstr ""
+"Vous pouvez utiliser un avoir pour rembourser un client ou ajuster le "
+"montant dû. Pour cela, il suffit d'aller sur la page de votre ticket, de "
+"cliquer sur *Avoir* et de sélectionner la *Facture* correspondante. En "
+"cliquant sur *Inverser*, vous générez une note de crédit et vous pouvez la "
+"*Poster* tout en restant dans l'application *Assistance*."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:30
 msgid "Allow product returns from tickets"
@@ -241,6 +246,10 @@ msgid ""
 "*Website* application. Then, in *Helpdesk*, open your ticket, click on "
 "*Coupon*, and choose the respective one."
 msgstr ""
+"Tout d'abord, assurez-vous que votre *Campagne de coupons* est planifiée "
+"dans l'application *Ventes* ou *Site Web*. Ensuite, dans *Assistance*, "
+"ouvrez votre ticket, cliquez sur *Coupon*, et choisissez le coupon "
+"correspondant."
 
 #: ../../content/applications/services/helpdesk/advanced/after_sales.rst:48
 msgid "Repairs from tickets"
@@ -356,6 +365,9 @@ msgid ""
 ":menuselection:`Helpdesk --> Reporting --> Tickets --> Filters --> Add "
 "Custom filter --> Closed by partner --> Applied`."
 msgstr ""
+"Pour faire une analyse des tickets qui ont été fermés par les clients, allez"
+" dans :menuselection:`Assistance --> Reporting --> Tickets --> Filtres --> "
+"Ajouter un filtre personnalisé --> Fermé par le Partenaire --> Appliqué`."
 
 #: ../../content/applications/services/helpdesk/overview.rst:5
 #: ../../content/applications/services/timesheets/overview.rst:5
@@ -408,6 +420,10 @@ msgid ""
 "one answer is allowed per question or *Discussions*: multiple answers are "
 "allowed per question."
 msgstr ""
+"Créez ou modifiez un forum en cliquant sur le lien externe. Parmi les "
+"options d'édition, choisissez si vous souhaitez que le *Mode Forum* soit "
+"*Questions* : une seule réponse est autorisée par question ou *Discussions* "
+": plusieurs réponses sont autorisées par question."
 
 #: ../../content/applications/services/helpdesk/overview/forum_and_elearning.rst:31
 msgid ""
@@ -677,6 +693,10 @@ msgid ""
 "enable *Display Rating on Customer Portal*. Now, by clicking on the helpdesk"
 " team’s name on their ticket, customers can see its ratings."
 msgstr ""
+"Allez dans :menuselection:`Assistance --> Configuration --> Equipes "
+"d'Assistance` et activez *Afficher le classement sur le portail client*. "
+"Maintenant, en cliquant sur le nom de l'équipe du service d'assistance "
+"affiché sur leur ticket, les clients peuvent voir ses évaluations."
 
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:51
 #: ../../content/applications/services/helpdesk/overview/receiving_tickets.rst:88
@@ -1000,12 +1020,20 @@ msgid ""
 "a ticket has more than one policy applied to it, the closest deadline of all"
 " SLAs is the one considered."
 msgstr ""
+"**La Cible** est le stade qu'un ticket doit atteindre dans la période "
+"définie pour satisfaire le SLA. La période est basée sur la date de création"
+" du ticket, et une date limite est définie sur le formulaire du ticket une "
+"fois qu'il correspond à une règle du SLA. Si un ticket a plus d'une "
+"politique qui lui est appliquée, la date limite la plus proche de tous les "
+"SLA est celle qui est prise en compte."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:29
 msgid ""
 "When a ticket has satisfied an SLA policy, the SLA tag appears in green and "
 "the deadline field is not shown anymore."
 msgstr ""
+"Lorsqu'un ticket a satisfait à une politique de SLA, le tag SLA apparaît en "
+"vert et le champ de la date limite n'est plus affiché."
 
 #: ../../content/applications/services/helpdesk/overview/sla.rst:37
 msgid "SLA Analysis"
@@ -1017,6 +1045,9 @@ msgid ""
 " *Filters* and *Group by* to identify tickets that should be prioritized and"
 " keep track of upcoming deadlines."
 msgstr ""
+"Allez sur :menuselection:`Assistance --> Analyse --> Analyse Statut SLA`. "
+"Appliquez des *Filtres* et des *Groupes par* pour identifier les tickets qui"
+" doivent être priorisés et suivre les échéances à venir."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice.rst:5
 msgid "Timesheet and Invoice"
@@ -1061,6 +1092,10 @@ msgid ""
 " is the one at which employees timesheet on by default. However, it can be "
 "ultimately modified on each ticket."
 msgstr ""
+"Sélectionnez ou créez un projet sous *Feuille de temps sur un ticket*. Le "
+"projet sélectionné/créé est celui sur lequel les employés effectuent leur "
+"pointage par défaut. Cependant, il peut être modifié ultérieurement sur "
+"chaque ticket."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:28
 msgid "Step 2: Set up a service"
@@ -1134,6 +1169,11 @@ msgid ""
 "needs the ticket to be opened. Set the number of hours needed to assist the "
 "customer and *Confirm* the order."
 msgstr ""
+"Allez dans :menuselection:`Ventes --> Commandes --> Commandes` et créez-en "
+"une pour le produit de service d'assistance que vous avez précédemment "
+"configuré, avec le client qui a besoin que le ticket soit ouvert. Définissez"
+" le nombre d'heures nécessaires pour assister le client et *Confirmez* la "
+"commande."
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:72
 msgid "Step 2: Invoice the customer"
