@@ -1,72 +1,92 @@
-=======================
+===========
 Lead mining
-=======================
-In any business, getting quality leads is essential to keep the business growing. Lead mining allows you to generate leads from scratch directly from your database.
-Target your leads based on a set of criteria such as the country, the size of the company, the industry your leads are coming from to make them relevant to your business.
+===========
+
+Lead mining is a feature that allows CRM users to generate new leads directly into their Odoo
+database. To ensure lead qualification, lead mining output is determined by a variety of filtering
+criteria, such as the country, the company size, and the industry.
 
 Configuration
+=============
+
+To get started, go to :menuselection:`CRM --> Configuration --> Settings` and activate
+:guilabel:`Lead Mining`.
+
+.. image:: lead_mining/activate-lead-mining.png
+   :align: center
+   :alt: Activate lead mining in Odoo CRM settings.
+
+Generate leads
 ==============
 
-For this feature to work, go to :menuselection:`CRM --> Configuration --> Settings` and activate the **Lead Mining** feature.
+After the :guilabel:`Lead Mining` setting is activated, a new button called :guilabel:`Generate
+Leads` is available to use in the :guilabel:`CRM` pipeline. Lead mining requests are also available
+through :menuselection:`CRM --> Configuration --> Lead Mining Requests`, or through
+:menuselection:`CRM --> Leads --> Leads` where the :guilabel:`Generate Leads` button is also
+available.
 
-.. image:: lead_mining/LM1.png
+.. image:: lead_mining/generate-leads-button.png
    :align: center
+   :alt: The Generate Leads button to use the lead mining feature.
 
+Click on the :guilabel:`Generate Leads` button, and a window will appear offering a variety of
+criteria by which to generate leads.
 
-Start generating leads
-==========================
-You will now have a new button **Generate Leads** available in your pipeline.
-You are also able to create lead mining requests from the
-:menuselection:`Configuration --> Lead Mining Requests` and through
-:menuselection:`Leads --> Leads` where you have the **Generate Leads** button.
-
-.. image:: lead_mining/LM2.png
+.. image:: lead_mining/generate-leads-popup.png
    :align: center
+   :alt: The pop-up window with the selection criteria in order to generate leads in Odoo.
 
+Choose to generate leads for :guilabel:`Companies` to get company information only, or choose
+:guilabel:`Companies and their Contacts` to get company information as well as individual employee
+contact information. When targeting :guilabel:`Companies and their Contacts`, there is an option to
+filter contacts based on :guilabel:`Role` or :guilabel:`Seniority`.
 
-From there, click on the **Generate Leads** button, a window where you will be able to pick your criteria will pop up.
+Additional filtering options include:
 
+- :guilabel:`Size`: filter leads based on the number of employees at the company
+- :guilabel:`Countries`: filter leads based on the country (or countries) they are located in
+- :guilabel:`States`: further filter leads based on the state they are located in, if applicable
+- :guilabel:`Industries`: filter leads based on the specific industry they work in
+- :guilabel:`Sales Team`: choose which Sales Team the leads will be assigned to
+- :guilabel:`Salesperson`: choose which person(s) on the Sales Team the leads will be assigned to
+- :guilabel:`Default Tags`: choose which tags are applied directly to the leads once found
 
-.. image:: lead_mining/LM5.png
-   :align: center
-
-
-When choosing to target Companied and their contacts you can choose the contacts you are getting based on Role or Seniority.
-When getting contact information make sure to be aware of the latest EU regulation, get more information about General Data Protection Regulation on
-`Odoo GDPR <http://odoo.com/gdpr>`__,
-
-
-You can decide to filter the leads you are getting depending on the size (number of employees) of the companies.
-You can pick the countries your leads are coming from. It is possible to pick multiple countries.
-You can pick the industries your leads are coming from. It is possible to pick multiple industries.
-
-You can choose the salesperson and the Salesteam the lead will be assigned to.
-You can also add tags to track your generated leads.
-
-.. tip::
-    The generated leads will have the name of the company.
+.. note::
+   Make sure to be aware of the latest EU regulations when receiving contact information. Get more
+   information about the General Data Protection Regulation on `Odoo GDPR <http://odoo.com/gdpr>`_.
 
 Pricing
-==================
-This is an In-App Purchase feature, each generated lead will cost you one credit.
-If you choose to get contact information each contact will also cost us one additional credit.
-Here is the pricing for this `feature <https://iap.odoo.com/iap/in-app-services/167?>`__,
-To buy credits you can either go to :menuselection:`CRM --> Configuration --> Settings --> Buy
-Credits`; or go to :menuselection:`Settings --> In-App Purchases --> View my Services`.
+=======
 
-.. image:: lead_mining/LM6.png
+Lead mining is an *In-App Purchase* feature and each generated lead costs one credit.
+
+Choosing to generate :guilabel:`Companies and their Contacts` costs one additional credit for each
+contact generated.
+
+.. note::
+   See here for full pricing information: `Lead Generation by Odoo IAP <https://iap.odoo.com/iap/
+   in-app-services/167?>`_.
+
+To buy credits, navigate to :menuselection:`CRM --> Configuration --> Settings`. In the
+:guilabel:`Lead Generation` section, under the :guilabel:`Lead Mining` feature, click on
+:guilabel:`Buy Credits`.
+
+.. image:: lead_mining/buy-lead-mining-credits-setting.png
    :align: center
+   :alt: Buy credits from the lead mining settings.
 
-.. image:: lead_mining/LM7.png
+Credits may also be purchased by navigating to the :menuselection:`Settings --> General Settings`.
+In the :guilabel:`In-App Purchases` section, under the :guilabel:`Odoo IAP` feature, click on
+:guilabel:`View My Services`.
+
+.. image:: lead_mining/view-my-services-setting.png
    :align: center
-
+   :alt: Buy credits in the Odoo IAP settings.
 
 .. tip::
-    The blue box will automatically tell you how many credits are going to be consumed.
 
-.. tip::
-   If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits to
-   test the feature.
+   Users of Odoo Online (SaaS) Enterprise automatically have free trial credits in their database to
+   test any IAP features.
 
 .. seealso::
-   * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase>`
+   * :doc:`../../../general/in_app_purchase`
