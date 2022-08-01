@@ -677,8 +677,8 @@ A typical way to run the server would be:
           C:\> python odoo-bin -r dbuser -w dbpassword --addons-path=addons -d mydb
 
       Where `CommunityPath` is the path of the Odoo Community installation, `dbuser` is the
-      PostgreSQL login, `dbpassword` is the PostgreSQL password and `mydb` is the default database
-      to serve on `localhost:8069`.
+      PostgreSQL login, `dbpassword` is the PostgreSQL password, and `mydb` is the name of the
+      PostgreSQL database.
 
    .. group-tab:: Linux
 
@@ -687,8 +687,8 @@ A typical way to run the server would be:
           $ cd /CommunityPath
           $ python3 odoo-bin --addons-path=addons -d mydb
 
-      Where `CommunityPath` is the path of the Odoo Community installation and `mydb` is the default
-      database to serve on `localhost:8069`.
+      Where `CommunityPath` is the path of the Odoo Community installation, and `mydb` is the name
+      of the PostgreSQL database.
 
    .. group-tab:: Mac OS
 
@@ -697,11 +697,22 @@ A typical way to run the server would be:
           $ cd /CommunityPath
           $ python3 odoo-bin --addons-path=addons -d mydb
 
-      Where `CommunityPath` is the path of the Odoo Community installation and `mydb` is the default
-      database to serve on `localhost:8069`.
+      Where `CommunityPath` is the path of the Odoo Community installation, and `mydb` is the name
+      of the PostgreSQL database.
+
+After the server has started (the INFO log `odoo.modules.loading: Modules loaded.` is printed), open
+http://localhost:8069 in your web browser and log in with the base administrator account: Use
+`admin` for the :guilabel:`Email` and, again, `admin` for the :guilabel:`Password`. That's it, you
+just logged into your own Odoo database!
+
+.. tip::
+   - From there, you can create and manage new :doc:`users
+     </applications/general/users/manage_users>`.
+   - The user account you use to log into Odoo's web interface differs from the :option:`--db_user
+     <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   - :doc:`The exhaustive list of arguments for odoo-bin </developer/cli>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
 
 .. _setup/install/docker:
 
