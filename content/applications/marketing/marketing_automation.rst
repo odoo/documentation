@@ -13,4 +13,5 @@ Marketing Automation
 .. toctree::
    :titlesonly:
 
+   marketing_automation/getting_started
    marketing_automation/advanced
