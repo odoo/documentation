@@ -2,71 +2,70 @@
 When Should you Use Packages, Units of Measure or Special Packaging?
 ====================================================================
 
-Units of Measure
+Units of measure
 ================
 
-Units of measure specify the unit used to handle a product. In Odoo, you
-have the possibility to specify the unit of measure in which you manage
-your stock and the one which is used when purchasing the product to your
-supplier.
+Units of measure specify the unit used to handle a product. In Odoo, you have the possibility to
+specify the unit of measure in which you manage your stock and the one which is used when
+purchasing the product to your supplier.
 
-.. image:: usage/usage_01.png
-    :align: center
+.. image:: usage/uom-product-setting.png
+   :align: center
+   :alt: Specify unit of measure for handling a product vs. when it's purchased.
 
-The *conversion* between the different units of measure is done
-automatically. The only condition is that all the units have to be in
-the *same category* (Unit, Weight, Volume, Length,...)
+Once a product has a :guilabel:`Unit of Measure` and a :guilabel:`Purchase UoM` set on the product
+form, Odoo can automatically convert the different units in the product's purchase/sales orders and
+the orders' respective delivery orders/receipts. The only condition is that all the units have to
+be in the *same category* (Unit, Weight, Volume, Length, etc.).
 
-For example, if I have the following reordering rule for the egg and I
-run the scheduler, the quantity added in the automatically generated
-purchase order will be in dozens but what will enter the stock will be
-units.
-
-.. image:: usage/usage_02.png
-    :align: center
-
-.. image:: usage/usage_03.png
-    :align: center
-
-.. image:: usage/usage_04.png
-    :align: center
+For example, a product can have its :guilabel:`Unit of Measure` set to `feet (ft)` and its
+:guilabel:`Purchase UoM` set to `centimeters (cm)`. When a purchase order (PO) is created for that
+product, it will list the quantity in centimeters. Then, when the PO is confirmed, Odoo
+automatically generates a receipt and converts the centimeters to feet. The receipt will list the
+quantity in feet.
 
 Packages
 ========
 
-The package is the physical container in which you put one or several
-products from a picking. For example, when you deliver a product, you
-can decide to separate the quantity into two different packages. It then
-allows you to have a report with the quantity of products for each
-package.
+A package refers to the physical container that holds one or several products from a picking. For
+example, when a product is ready for delivery, its quantities can be separated into two different
+packages. In Odoo, the quantity of products in each package can be recorded in the database. Make
+sure the :guilabel:`Packages` option is enabled in :menuselection:`Inventory --> Configuration -->
+Settings --> Operations`.
 
-To separate a delivery into different packages you will have to set the 
-done quantity to the desired package quantity then click on "PUT IN 
-PACK", do this for each package.
+On a delivery order, separate the products into different packages by setting the :guilabel:`Done`
+quantity to the desired quantity in the first package. Then, click :guilabel:`Put in Pack` to
+record the first package. Repeat for each package.
 
-.. image:: usage/usage_05.png
-    :align: center
+.. image:: usage/separate-delivery-into-different-packages.png
+   :align: center
+   :alt: Separate delivery into different packages
 
-.. image:: usage/usage_06.png
-    :align: center
+.. image:: usage/delivery-package-details.png
+   :align: center
+   :alt: Separate delivery package details
 
-Packaging
-=========
+Packagings
+==========
 
-The packaging is the physical container that protects your product. If
-you are selling computers, the packaging contains the computer with the
-notice and the power plug.
+Packaging refers to a standard container that holds several unit of a product. For example, cans of
+soda can be in a 6-pack, 15-pack, or even a pallet for the packaging.
 
-In Odoo, packagings are used for indicative purposes on sale orders.
-They can be specified on the product form, in the inventory tab.
+In Odoo, packagings are used for indicative purposes on sales/purchase orders and inventory
+transfers. The main difference between packagings and units of measure is that packagings are
+defined at the product level while UoMs are generic.
 
-.. image:: usage/usage_07.png
-    :align: center
+.. image:: usage/product-packaging-examples.png
+   :align: center
+   :alt: Different product packaging examples.
 
-.. image:: usage/usage_08.png
-    :align: center
+.. image:: usage/package-field-on-po.png
+   :align: center
+   :alt: Package field on purchase order.
 
 .. note::
-        Another useful use of the packaging is for product reception. By
-        scanning the barcode of the packaging, Odoo adds the number of units
-        contained in the packing on the picking.
+   Packaging is also useful during product reception. When scanning the barcode of the
+   packaging, Odoo automatically adds the number of units contained in the packing on the picking.
+
+.. seealso::
+   :doc:`uom`
