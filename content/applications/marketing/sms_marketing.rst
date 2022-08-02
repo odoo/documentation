@@ -13,4 +13,5 @@ SMS Marketing
 .. toctree::
    :titlesonly:
 
+   sms_marketing/essentials
    sms_marketing/pricing
