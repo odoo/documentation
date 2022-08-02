@@ -2283,7 +2283,7 @@ Possible children elements of the search view are:
 
     ``default_period`` (optional)
         only makes sense for a filter with non empty ``date`` attribute.
-        determines which period is activated if the filter is in the
+        determines which periods are activated if the filter is in the
         default set of filters activated at the view initialization. If not provided,
         'this_month' is used by default.
 
@@ -2292,11 +2292,14 @@ Possible children elements of the search view are:
         fourth_quarter, third_quarter, second_quarter, first_quarter,
         this_year, last_year, antepenultimate_year.
 
-        Example:
+        The attribute accepts comma separated values.
+
+        Examples:
 
         .. code-block:: xml
 
           <filter name="filter_create_date" date="create_date" string="Creation Date" default_period="this_week"/>
+          <filter name="filter_create_date" date="create_date" string="Creation Date" default_period="this_year,last_year"/>
 
     ``context``
         a Python dictionary, merged into the action's domain to generate the
