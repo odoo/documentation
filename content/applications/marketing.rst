@@ -11,3 +11,4 @@ Marketing
    marketing/sms_marketing
    marketing/events
    marketing/surveys
+   marketing/social_marketing
