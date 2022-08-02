@@ -1,4 +1,3 @@
-
 .. _reference/testing:
 
 
@@ -639,28 +638,76 @@ Here are some example of steps:
 
 Here are some possible arguments for your personalized steps:
 
-- **trigger**: selector/element/jQuery you want to trigger
-- **extra-trigger**: optional selector/element/jQuery that needs to be present before the next
-  step begins. This is especially useful when the tour needs to wait for a wizard to open, a
-  line added to a list view...
-- **run**: optional action to run, defaults either to `click` or `text Test` if you are triggering
-  an input. A multitude of actions are possible. Here are some of them: `click`, `dbclick`,
-  `tripleclick`, `text Example`, `drag_and_drop selector1 selector2`...
-- **edition**: optional,
+- **trigger**: Selector/element to ``run`` an action on. The tour will
+  wait until the element exists and is visible before ``run``-ing the
+  action *on it*.
+- **extra_trigger**: Optional secondary condition for the step to
+  ``run``. Will be waited for like the **trigger** element but the
+  action will not run on the extra trigger.
+
+  Useful to have a precondition, or two different and unrelated
+  conditions.
+- **run**: Action to perform on the *trigger* element.
+
+  By default, tries to set the **trigger**'s content to ``Text`` if
+  it's an ``input``, otherwise ``click`` it.
+
+  The action can also be:
+
+  - A function, synchronous, executed with the trigger's ``Tip`` as
+    context (``this``) and the action helpers as parameter.
+  - The name of one of the action helpers, which will be run on the
+    trigger element:
+
+    .. rst-class::  o-definition-list
+
+    ``click``
+        Clicks the element, performing all the relevant intermediate
+        events.
+    :samp:`text {content}`
+        Clicks (focuses) the element then sets ``content`` as the
+        element's value (if an input), option (if a select), or
+        content.
+    ``dblclick``, ``tripleclick``
+        Same as ``click`` with multiple repetitions.
+    ``clicknoleave``
+        By default, ``click`` (and variants) will trigger "exit"
+        events on the trigger element (mouseout, mouseleave). This
+        helper suppresses those (note: further clicks on other
+        elements will not trigger those events implicitly).
+    ``text_blur``
+        Similar to ``text`` but follows the edition with ``focusout``
+        and ``blur`` events.
+    :samp:`drag_and_drop {target}`
+       Simulates the dragging of the **trigger** element over to the
+       ``target``.
+- **edition**: Optional,
 
   - If you don't specify an edition, the step will be active in both community and enterprise.
   - Sometimes, a step will be different in enterprise or in community. You can then write two
     steps, one for the enterprise edition and one for the community one.
   - Generally, you want to specify an edition for steps that use the main menu as the main
     menus are different in community and enterprise.
-- **position**: optional
-- **id**: optional
-- **auto**: optional
-- **in_modal**: optional
+- **position**: Optional, ``"top"``, ``"right"``, ``"bottom"``, or
+  ``"left"``. Where to position the tooltip relative to the **target**
+  when running interactive tours.
+- **content**: Optional but recommended, the content of the tooltip in
+  interactive tours, also logged to the console so very useful to
+  trace and debug automated tours.
+- **auto**: Whether the tour manager should wait for the user to
+  perform the action if the tour is interactive, defaults to
+  ``false``.
+- **in_modal**: If set the **trigger** element will be searched only
+  in the top modal window, defaults to ``false``.
+- **timeout**: How long to wait until the step can ``run``, in
+  milliseconds, 10000 (10 seconds).
 
-.. tip::
-   Your browser's developer tools are your best tool to find the element your tour needs to use as a
-   trigger/extra-trigger.
+.. important::
+
+   The last step(s) of a tour should always return the client to a
+   "stable" state (e.g. no ongoing editions) and ensure all
+   side-effects (network requests) have finished running to avoid race
+   conditions or errors during teardown.
 
 .. seealso::
    - `jQuery documentation about find <https://api.jquery.com/find/>`_
@@ -681,31 +728,75 @@ To start a tour from a python test, make the class inherit from
 Debugging tips
 --------------
 
-Running the tour in debug mode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Observing tours in a browser
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-First, activate the :doc:`developer mode </applications/general/developer_mode>` with
-`?debug=tests`. Then, open your debug menu and click on **Start Tour**. You can now launch your tour
-from there with the button `Test`.
+There are two ways with different tradeoffs:
 
-You can also add this step in your tour to stop it right where you want it to:
+``watch=True``
+''''''''''''''
+When running a tour locally via the test suite, the ``watch=True``
+parameter can be added to the ``browser_js`` or ``start_tour``
+call::
+
+    self.start_tour("/web", code, watch=True)
+
+This will automatically open a Chrome window with the tour being
+run inside it.
+
+**Advantages**
+  - always works if the tour has Python setup / surrounding code, or multiple steps
+  - runs entirely automatically (just select the test which launches the tour)
+  - transactional (*should* always be runnable multiple times)
+**Drawbacks**
+  - only works locally
+  - only works if the test / tour can run correctly locally
+
+Run via browser
+'''''''''''''''
+Tours can also be launched via the browser UI, either by calling
 
 .. code-block:: javascript
 
-   {
-       trigger: "body",
-       run: () => {debugger}
-   }
+    odoo.startTour(tour_name);
 
-.. caution::
-   Be aware that when running the tour, any data added to the setup of your python test won't be
-   present in the tour unless you launched the test calling the tour with a breakpoint.
+in the javascript console, or by enabling :ref:`tests mode
+<frontend/framework/tests_debug_mode>` by setting ``?debug=tests`` in
+the URL, then selecting **Start Tour** in the debug menu and picking a
+tour:
 
+.. image:: testing/tours.png
+   :align: center
+
+**Advantages**
+  - easier to run
+  - can be used on production or test sites, not just local instances
+  - allows running in "Onboarding" mode (manual steps)
+**Drawbacks**
+  - harder to use with test tours involving Python setup
+  - may not work multiple times depending on tour side-effects
+
+.. tip::
+
+   It's possible to use this method to observe or interact with tours
+   which require Python setup:
+
+   - add a *python* breakpoint before the relevant tour is started
+     (``start_tour`` or ``browser_js`` call)
+   - when the breakpoint is hit, open the instance in your browser
+   - run the tour
+
+   At this point the Python setup will be visible to the browser, and
+   the tour will be able to run.
+
+   You may want to comment the ``start_tour`` or ``browser_js`` call
+   if you also want the test to continue afterwards, depending on the
+   tour's side-effects.
 
 Screenshots and screencasts during browser_js tests
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-When running tests that use HttpCase.browser_js from the command line, the Chrome
+When running tests that use ``HttpCase.browser_js`` from the command line, the Chrome
 browser is used in headless mode. By default, if a test fails, a PNG screenshot is
 taken at the moment of the failure and written in
 
@@ -716,17 +807,47 @@ taken at the moment of the failure and written in
 Two new command line arguments were added since Odoo 13.0 to control this behavior:
 :option:`--screenshots <odoo-bin --screenshots>` and :option:`--screencasts <odoo-bin --screencasts>`
 
+Introspecting / debugging steps
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Watch `browser_js` tests in Chrome DevTools
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+When trying to fix / debug a tour, the screenshots (on failure) are
+not necessarily sufficient. In that case it can be useful to see
+what's happening at some or each step.
 
-Set `watch` to `True` when starting a tour to automatically open a new Chrome tab and watch the execution of the tour in Chrome DevTools.
+While this is pretty easy when in an "onboarding" (as they're mostly
+driven explicitly by the user) it's more complicated when running
+"test" tours, or when running tours through the test suite. In that
+case there are two main tricks:
 
-.. example::
-   .. code-block:: python
+- Have a step with a ``run() { debugger; }`` action.
 
-      self.browser_js("/web", code, watch=True)
+  This can be added to an existing step, or can be a new dedicated
+  step. Once the step's **trigger** is matched, the execution will
+  stop all javascript execution.
 
+  **Advantages**
+    - very simple
+    - the tour restarts as soon as you resume execution
+  **Drawbacks**
+    - page interaction is limited as all javascript is blocked
+    - debugging the inside of the tour manager is not very useful
+- Add a step with a trigger which never succeeds and a very long
+  ``timeout``.
+
+  The browser will wait for the **trigger** until the ``timeout``
+  before it fails the tour, this allows inspecting and interacting
+  with the page until the developer is ready to resume, by manually
+  enabling the **trigger** (a nonsense class is useful there, as it
+  can be triggered by adding the class to any visible element of the
+  page).
+
+  **Advantages**
+    - allows interacting with the page
+    - easy to apply to a step which times out (just add a long
+      ``timeout`` then look around)
+    - no useless (for this situation) debugger UI
+  **Drawbacks**
+    - more manual, especially when resuming
 
 Performance Testing
 ===================
