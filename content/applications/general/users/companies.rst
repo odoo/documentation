@@ -131,4 +131,4 @@ at an invoice/bills level or at a sales/purchase orders level.
 
 .. seealso::
    - :doc:`Multi-company Guidelines </developer/howtos/company>`
-   - :doc:`../../finance/accounting/others/multicurrencies/how_it_works`
+   - :doc:`../../finance/accounting/others/multi_currency`
