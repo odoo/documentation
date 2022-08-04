@@ -7,7 +7,7 @@ Others
 .. toctree::
    :titlesonly:
 
+   others/multi_currency
    others/analytic
    others/adviser
-   others/multicurrencies
    others/inventory
