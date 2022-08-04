@@ -1,7 +1,7 @@
 :nosearch:
 
 ===============
-Inventory & Mrp
+Inventory & MRP
 ===============
 
 
