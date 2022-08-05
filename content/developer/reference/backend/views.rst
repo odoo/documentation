@@ -1698,6 +1698,10 @@ attributes:
   whether it should be possible to drag records when kanban is grouped. Default: true.
 
   Set to ``true`` to always enable it, and to ``false`` to always disable it.
+``groups_draggable``
+  whether it should be possible to resequence colunms when kanban is grouped. Default: true.
+
+  Set to ``true`` to always enable it, and to ``false`` to always disable it.
 
 .. todo:: VFE missing information on on_create attribute of kanban views.
 
