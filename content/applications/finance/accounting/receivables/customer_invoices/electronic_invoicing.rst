@@ -33,10 +33,20 @@ Odoo supports, among others, the following formats.
      - For Italian companies
    * - CFDI (4.0)
      - For Mexican companies
-   * -  Peru UBL 2.1
+   * - Peru UBL 2.1
      - For Peruvian companies
    * - SII IVA Llevanza de libros registro (ES)
      - For Spanish companies
+   * - UBL 2.1 (Columbia)
+     - For Colombian companies
+   * - Egyptian Tax Authority
+     - For Egyptian companies
+   * - E-Invoice (IN)
+     - For Indian companies
+   * - NLCIUS (Netherlands)
+     - For Dutch companies
+   * - EHF 3.0
+     - For Norwegian companies
 
 .. seealso::
    - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
