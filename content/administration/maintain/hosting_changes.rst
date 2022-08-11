@@ -53,7 +53,7 @@ From Odoo.sh to Odoo Online
 
    - Your subscription number
    - The URL you want to use for your database (e.g., `example.odoo.com`)
-   - Which brand you want to migrate
+   - Which branch you want to migrate
    - In which region you want to be hosted:
 
      - Americas
