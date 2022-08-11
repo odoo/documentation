@@ -16,9 +16,9 @@ done by adding specific values in the correct registry.
 
    const myRegistry = new Registry();
 
-   registry.add("hello", "odoo");
+   myRegistry.add("hello", "odoo");
 
-   console.log(registry.get("hello"));
+   console.log(myRegistry.get("hello"));
 
 A useful feature of registries is that they maintain a set of sub registries,
 obtained by the `category` method. If the sub registry does not exist yet, it
