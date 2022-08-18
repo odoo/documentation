@@ -14,7 +14,7 @@ To link the scale to the **IoT Box**, connect them with a cable.
 .. note::
    In some cases, a serial to USB adapter may be needed.
 
-If your scale is `compatibale with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there
+If your scale is `compatible with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there
 is no need to set up anything because it will be automatically detected as soon as it is connected.
 
 .. image:: scale/iot-choice.png
