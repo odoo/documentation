@@ -1,95 +1,97 @@
-=========================
-Create Bills of Materials
-=========================
+==========================
+Create a bill of materials
+==========================
 
-A *Bill of Materials* is a document defining the quantity of each
-component required to make or deliver a finished product. Additionally, it 
-can also include various operations and individual step guidelines
-needed to complete a production process. 
+A *Bill of Materials* (or *BoM* for short) is a document that defines the quantity of each
+component required to make or deliver a finished product. It can also include various operations
+and the individual step guidelines needed to complete a production process.
 
-With Odoo's MRP solution, multiple BOMs can also be linked to each product,
-so that even product variants can have their *own* tailored BOM.
+In Odoo Manufacturing, multiple :abbr:`BoMs (Bills of Materials)` can be linked to each product, so
+that even product variants can have their own tailored :abbr:`BoMs (Bills of Materials)`.
 
-This will help you to optimize your manufacturing process and save time 
-as a result. 
+Correctly setting up a :abbr:`BoM (Bill of Materials)` helps optimize the manufacturing process and
+save time.
 
-Setting up a BoM
-================
-The simplest BoM set up is one without operations or instructions. 
-In this case, you will manage your production using Manufacturing Orders
-only.
+Set up a bill of baterials (BoM)
+================================
 
-To create a BoM from the Manufacturing module, go to :menuselection:`Products --> Bills of Materials`. 
-If you click **Create**, the first thing you'll have to do is to specify the final product. 
-For an existing product, simply select it from the list, or create a new one on the spot. Note 
-that if you go through the product form to create your BOM, the product will already be set for you.
+The simplest :abbr:`BoM (Bill of Materials)` setup is one without operations or instructions, only
+components. In this case, the production is solely managed using *Manufacturing Orders*.
 
-For a standard Bill of Material, keep the default *BoM* type, which is *Manufacture this Product*. 
-Now specify the various components that make up the production of your final product and their 
-respective quantities. You can create components as you go, on the BOM, or create products beforehand,
-by going to the :menuselection:`Top Menu --> Products --> Create`, and add them later on. 
-
-
-.. image:: bill_configuration/bom_1.png
-    :align: center
-
-.. warning::
-   The destination location should **not** be a scrap location. A scrap location is where you put
-   products that you don't need.
-
-Using the same BoM to describe Variants
----------------------------------------
-
-As suggested above, you can use *BOMs* for specific *Product Variants*. 
-Once the various attributes have been configured on the product form, there 
-are two ways to configure the appropriate BoM for the respective product combination. 
-
-Either create one BoM per variant, by specifying the Product Variant
-in the dedicated field below the product name. Or use one BOM, that contains
-all of the components and for each component, indicate which variant it applies to, 
-using the *Apply on Variants* column, as shown below. 
-
-.. image:: bill_configuration/bom_2.png
-    :align: center
-
-
-Adding Operations
-=================
-
-You can also add operations to your *BoM*, if you want workers to follow instructions
-or register time spent. To use this feature, enable the *Work Orders* feature in the 
-*Manufacturing* app settings, as shown below.
-
-.. image:: bill_configuration/bom_3.png
-    :align: center
+To create a :abbr:`BoM (Bill of Materials)` from the :guilabel:`Manufacturing` module, go to
+:menuselection:`Products --> Bills of Materials`. Then, click :guilabel:`Create`. Next, specify the
+:guilabel:`Product`.
 
 .. note::
-         Each operation is unique as it is always linked to only one BOM. This being said, 
-         Operations Operations can be re-used when configuring a new BOM, with the *Copy Existing 
-         Operations* feature.
+   A :abbr:`BoM (Bill of Materials)` can also be created directly from the product form, in which
+   case the :guilabel:`Product` field is pre-filled.
 
-.. image:: bill_configuration/bom_4.png
-    :align: center
+For a standard :abbr:`BoM (Bill of Materials)`, set the :guilabel:`BoM Type` to
+:guilabel:`Manufacture this Product`. Then, click :guilabel:`Add a Line` to specify the various
+components that make up the production of the final product and their respective quantities. New
+components can be created quickly through the :abbr:`BoM (Bill of Materials)`, or can be created
+beforehand in :menuselection:`Manufacturing --> Products --> Products --> Create`. Finally, click
+:guilabel:`Save` to finish creating the :abbr:`BoM (Bill of Materials)`.
 
-Finally, just like for components, operations can also be variant specific only, as shown below.
+.. image:: bill_configuration/bom-form.png
+   :align: center
+   :alt: Set up a Bill of Materials.
 
-.. image:: bill_configuration/bom_5.png
-    :align: center
+Specify a bill of materials (BoM) for a product variant
+-------------------------------------------------------
 
+:abbr:`BoMs (Bills of Materials)` can also be assigned to specific *Product Variants*, with two
+setup options available to choose from.
 
+.. note::
+   In order to assign :abbr:`BoMs (Bills of Materials)` to product variants, the product's variant
+   attributes must already be configured on the product form.
 
-Adding By-Products
-==================
+The first method is to create one :abbr:`BoM (Bill of Materials)` per variant by creating a new
+:abbr:`BoM (Bill of Materials)` and specifying the :guilabel:`Product Variant`. The second method
+is to create one master :abbr:`BoM (Bill of Materials)` that contains all of the components, and
+specify which variant each component applies to using the :guilabel:`Apply on Variants` column.
 
-A *by-product* is a product that is produced on top of the main product 
-of a *BoM*. As opposed to the primary product, there can be more than one on a BOM. 
+.. image:: bill_configuration/bom-variants.png
+   :align: center
+   :alt: Product Variants in the Bill of Materials.
 
-To add *by-products* to a *BoM*, you will first need to enable the by-product
-feature from the *Manufacturing* app settings.
+Set up operations
+=================
 
-.. image:: bill_configuration/bom_6.png
-    :align: center
+Add an :guilabel:`Operation` to a :abbr:`BoM (Bill of Materials)` to specify instructions for
+production and register time spent on an operation. To use this feature, first enable the
+:guilabel:`Work Orders` feature in :menuselection:`Manufacturing --> Configuration --> Settings -->
+Operations`.
 
-Once the feature is enabled, you can add *by-products* to your
-*BoMs*. Note that if you have Operations, you'll need to specify 
-in which operation the by-product is produced. 
+Then, when creating a new :abbr:`BoM (Bill of Materials)`, click on the :guilabel:`Operations` tab
+and click :guilabel:`Add a line` to add a new operation. In the :guilabel:`Create Operations` box,
+give the operation a name, specify the :guilabel:`Work Center` and duration settings. Like
+components, Odoo gives the option to specify a product variant in the :guilabel:`Apply on Variants`
+field so the operation only applies to that variant. Finally, click :guilabel:`Save & Close`.
+
+.. note::
+   Each operation is unique, as it is always exclusively linked to one :abbr:`BoM (Bill of
+   Materials)`. Operations can be reused when configuring a new :abbr:`BoM (Bill of Materials)`,
+   with the :guilabel:`Copy Existing Operations` feature.
+
+.. image:: bill_configuration/copy-existing-operations.png
+   :align: center
+   :alt: Copy Existing Operations feature.
+
+Add by-products to a bill of materials (BoM)
+============================================
+
+A *By-Product* is a residual product that is created during production in addition to the main
+product of a :abbr:`BoM (Bill of Materials)`. Unlike the primary product, there can be more than
+one by-product on a :abbr:`BoM (Bill of Materials)`.
+
+To add by-products to a :abbr:`BoM (Bill of Materials)`, first enable the :guilabel:`By-Products`
+feature in :menuselection:`Manufacturing --> Configuration --> Settings --> Operations`.
+
+Once the feature is enabled, you can add by-products to a :abbr:`BoM (Bill of Materials)` by
+clicking on the :guilabel:`Operations` tab and clicking :guilabel:`Add a line`. Then, name the
+by-product and indicate the :guilabel:`Quantity` and the :guilabel:`Unit of Measure`. If the
+:abbr:`BoM (Bill of Materials)` has configured operations, specify exactly which operation the
+by-product is produced from in the :guilabel:`Produced in Operation` field. Finally, click
+:guilabel:`Save`.
