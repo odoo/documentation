@@ -74,16 +74,16 @@ If you can not do that and if you really negotiate some prices with tax
 excluded and, for other customers, others prices with tax included, you
 must:
 
-1.  always store the default price TAX EXCLUDED on the product form, and
-    apply a tax (price included on the product form)
+#.  always store the default price **tax excluded** on the product form, and
+    apply a tax (price excluded on the product form)
 
-2.  create a pricelist with prices in TAX INCLUDED, for specific
+#.  create a pricelist with prices in **tax included**, for specific
     customers
 
-3.  create a fiscal position that switches the tax excluded to a tax
+#.  create a fiscal position that switches the tax excluded to a tax
     included
 
-4.  assign both the pricelist and the fiscal position to customers who
+#.  assign both the pricelist and the fiscal position to customers who
     want to benefit to this pricelist and fiscal position
 
 For the purpose of this documentation, we will use the above use case:
@@ -92,6 +92,22 @@ For the purpose of this documentation, we will use the above use case:
 
 -   but we want to sell it at 10€, tax included, in our shops or
     eCommerce website
+
+.. _b2b_b2c/ecommerce:
+
+eCommerce
+---------
+
+If you only use B2C or B2B prices on your website, simply select the appropriate setting in the
+**Website** app settings.
+
+If you have both B2B and B2C prices on a single website, please follow these instructions:
+
+#. Activate the :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings
+   --> Users & Companies --> Groups`.
+#. Open either `Technical / Tax display B2B` or `Technical / Tax display B2C`.
+#. Under the :guilabel:`Users` tab, add the users requiring access to the price type. Add B2C users
+   in the B2C group and B2B users in the B2B group.
 
 Setting your products
 ---------------------
