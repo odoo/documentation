@@ -416,9 +416,9 @@ HTTP
 
     Port on which the HTTP server listens, defaults to 8069.
 
-.. option:: --longpolling-port <port>
+.. option:: --gevent-port <port>
 
-    TCP port for long-polling connections in multiprocessing or gevent mode,
+    TCP port for websocket connections in multiprocessing or gevent mode,
     defaults to 8072. Not used in default (threaded) mode.
 
 .. option:: --proxy-mode

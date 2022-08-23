@@ -215,11 +215,11 @@ LiveChat
 --------
 
 In multiprocessing, a dedicated LiveChat worker is automatically started and
-listening on :option:`the longpolling port <odoo-bin --longpolling-port>` but
+listening on :option:`the gevent port <odoo-bin --gevent-port>` but
 the client will not connect to it.
 
 Instead you must have a proxy redirecting requests whose URL starts with
-``/longpolling/`` to the longpolling port. Other request should be proxied to
+``/websocket/`` to the gevent port. Other request should be proxied to
 the :option:`normal HTTP port <odoo-bin --http-port>`
 
 To achieve such a thing, you'll need to deploy a reverse proxy in front of Odoo,
@@ -323,9 +323,15 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     access_log /var/log/nginx/odoo.access.log;
     error_log /var/log/nginx/odoo.error.log;
 
-    # Redirect longpoll requests to odoo longpolling port
-    location /longpolling {
+    # Redirect websocket requests to odoo gevent port
+    location /websocket {
       proxy_pass http://odoochat;
+      proxy_set_header Upgrade $http_upgrade;
+      proxy_set_header Connection $connection_upgrade;
+      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_set_header X-Real-IP $remote_addr;
     }
 
     # Redirect requests to odoo backend server
@@ -381,12 +387,12 @@ notifications.
 The solutions to support livechat/motifications in a WSGI application are:
 
 * Deploy a threaded version of Odoo (instead of a process-based preforking
-  one) and redirect only requests to URLs starting with ``/longpolling/`` to
-  that Odoo, this is the simplest and the longpolling URL can double up as
-  the cron instance.
+  one) and redirect only requests to URLs starting with ``/websocket/`` to
+  that Odoo, this is the simplest and the websocket URL can double up as the cron 
+  instance.
 * Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting
-  with ``/longpolling/`` to
-  :option:`the longpolling port <odoo-bin --longpolling-port>`.
+  with ``/websocket/`` to
+  :option:`the gevent port <odoo-bin --gevent-port>`.
 
 .. _deploy/streaming:
 
