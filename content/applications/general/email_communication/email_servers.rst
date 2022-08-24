@@ -137,7 +137,8 @@ Odoo relies on generic email aliases to fetch incoming messages.
 * **Original messages**: Several business objects have their own alias to create new records in
   Odoo from incoming emails:
 
-  * Sales Channel (to create Leads or Opportunities in `Odoo CRM <https://www.odoo.com/page/crm>`__),
+  * Sales Channel (to create Leads or Opportunities in `Odoo CRM <https://www.odoo.com/page/
+    crm>`__),
   * Support Channel (to create Tickets in `Odoo Helpdesk <https://www.odoo.com/page/helpdesk>`__),
   * Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page
     /project-management>`__),
@@ -151,7 +152,6 @@ recommended method is to manage one email address per Odoo alias in the mail ser
 * Create the corresponding email addresses in the mail server (catchall@, bounce@, sales@, etc.).
 * Set the :guilabel:`Alias Domain` name in :menuselection:`Settings --> General Settings -->
   Discuss`.
-
 * If the database's hosting type is Odoo on-premise, create an :guilabel:`Incoming Mail Server` in
   Odoo for each alias. This can be done from the General Settings as well. Fill out the form
   according to the email provider's settings. Leave the :guilabel:`Actions to Perform on Incoming
@@ -186,6 +186,46 @@ By default, inbound messages are fetched every 5 minutes in Odoo on-premise.
    This value can be changed in :ref:`developer mode <developer-mode>`. Go to
    :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions` and look for
    :guilabel:`Mail: Fetchmail Service`.
+
+Utilizing the From Filter on an outgoing email server
+=====================================================
+
+The :guilabel:`FROM Filtering` field allows for the use of a specific outgoing email server
+depending on the :guilabel:`From` email address or domain that Odoo is sending on behalf of. This
+setting can be used to improve the deliverability or sending success rate of emails sent from the
+database. Setting the :guilabel:`FROM Filtering` field can also be used to send from different
+domains in a multi-company environment. Access this field in Odoo by navigating to
+:menuselection:`Settings --> Custom Mail Servers --> Outgoing Mail Servers --> New`.
+
+.. image:: email_servers/from-filter-setting.png
+   :align: center
+   :alt: Outgoing email server settings and the FROM filter settings.
+
+When an email is sent from Odoo while the :guilabel:`FROM Filtering` field is set, an email server
+is chosen in the following sequence:
+
+#. First, Odoo searches for an email server that has the same :guilabel:`FROM Filtering` value as
+   the :guilabel:`From` value (email address) defined in the outgoing email. For example, if the
+   :guilabel:`From` value (email address) is `test\@example.com`, only the email servers that have
+   the :guilabel:`FROM Filtering` value equal to `test\@example.com` are returned.
+#. However, if no email servers are found that use the :guilabel:`From` value, then Odoo searches
+   for an email server that has the same *domain* as the :guilabel:`From` value (email address)
+   defined in the outgoing email. For example, if the :guilabel:`From` email address is
+   `test\@example.com`, only the email servers that have the :guilabel:`FROM Filtering` value equal
+   to `example.com` are returned.
+
+If no email servers are found after checking for the domain, then Odoo returns all email servers
+that do not have any :guilabel:`FROM Filtering` value(s) set.
+
+Should this query return no results, then Odoo performs a search for an email server using the
+system parameter: `mail.default.from`. First, the email address listed attempts to match an email
+server, and then the domain attempts to find a match. If no email server is found, Odoo returns the
+first outgoing email server (sorted by priority).
+
+.. note::
+   If several email servers are found, then Odoo uses the first one according to its priority. For
+   example, if there are two email servers, one with a priority of `10` and the other with a
+   priority of `20`, then the email server with a priority of `10` is used first.
 
 Set up different dedicated servers for transactional and mass mails
 ===================================================================
