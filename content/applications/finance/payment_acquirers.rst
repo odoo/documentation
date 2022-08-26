@@ -11,6 +11,7 @@ Payment acquirers (credit cards, online payments)
    payment_acquirers/adyen
    payment_acquirers/alipay
    payment_acquirers/amazon_payment_services
+   payment_acquirers/asiapay
    payment_acquirers/authorize
    payment_acquirers/buckaroo
    payment_acquirers/flutterwave
@@ -75,6 +76,11 @@ Online payment acquirers
      -
      -
    * - :doc:`Amazon Payment Services <payment_acquirers/amazon_payment_services>`
+     - Payment from the acquirer website
+     -
+     -
+     -
+   * - :doc:`AsiaPay <payment_acquirers/asiapay>`
      - Payment from the acquirer website
      -
      -
@@ -358,6 +364,7 @@ payment method... What best suit your needs.
    - :doc:`payment_acquirers/adyen`
    - :doc:`payment_acquirers/alipay`
    - :doc:`payment_acquirers/authorize`
+   - :doc:`payment_acquirers/asiapay`
    - :doc:`payment_acquirers/buckaroo`
    - :doc:`payment_acquirers/mollie`
    - :doc:`payment_acquirers/ogone`
