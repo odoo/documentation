@@ -72,11 +72,6 @@ Online payment acquirers
      - |V|
      - Full only
      - Full and partial
-   * - :doc:`Alipay <payment_acquirers/alipay>`
-     - Payment from the acquirer website
-     -
-     -
-     -
    * - :doc:`Amazon Payment Services <payment_acquirers/amazon_payment_services>`
      - Payment from the acquirer website
      -
@@ -106,23 +101,13 @@ Online payment acquirers
      - Payment from the acquirer website
      -
      -
-     - 
+     -
    * - :doc:`Mollie <payment_acquirers/mollie>`
      - Payment from the acquirer website
      -
      -
      -
-   * - :doc:`Ogone <payment_acquirers/ogone>`
-     - Payment from the acquirer website
-     - |V|
-     -
-     -
    * - :doc:`PayPal <payment_acquirers/paypal>`
-     - Payment from the acquirer website
-     -
-     -
-     -
-   * - PayU Latam
      - Payment from the acquirer website
      -
      -

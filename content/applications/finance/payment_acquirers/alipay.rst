@@ -5,6 +5,9 @@ Alipay
 `Alipay <https://www.alipay.com/>`_ is an online payments platform established in China by Alibaba
 Group.
 
+.. warning::
+   The provider Alipay is deprecated. It is recommended to use :doc:`asiapay` instead.
+
 Configuration
 =============
 

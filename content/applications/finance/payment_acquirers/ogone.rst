@@ -9,6 +9,9 @@ company that provides the technology involved in secure electronic transactions.
    - :ref:`payment_acquirers/add_new`
    - `Ogone's documentation <https://epayments-support.ingenico.com/get-started/>`_.
 
+.. warning::
+   The provider Ogone is deprecated. It is recommended to use :doc:`stripe` instead.
+
 Settings in Ogone
 =================
 
