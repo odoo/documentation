@@ -38,6 +38,10 @@ payment dates defined beforehand by the seller.
 .. note::
    This document is about the *Payment Terms* feature, not *Terms & Conditions*.
 
+.. seealso::
+   - :doc:`cash_discounts`
+   - `Odoo Tutorials: Payment Terms <https://www.odoo.com/slides/slide/payment-terms-1679>`_
+
 Configuration
 =============
 
@@ -115,7 +119,3 @@ on the day of issuance, and the balance is due at the end of the following month
 
 The $1000 debited on the Account Receivable is split into two distinct *Journal Items*. Both of
 them have their own **Due Date**.
-
-.. seealso:: 
-   - :doc:`cash_discounts`
-   - `Odoo Tutorials: Terms and Conditions (T&C) and Payment Terms <https://www.odoo.com/r/fpv>`_
