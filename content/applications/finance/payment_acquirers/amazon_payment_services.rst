@@ -2,7 +2,7 @@
 Amazon Payment Services
 =======================
 
-`Amazon Payment Services <https://flutterwave.com/>`_ or APS is an online payment provider
+`Amazon Payment Services <https://paymentservices.amazon.com/>`_ or APS is an online payment provider
 established in Dubai offering several online payment options.
 
 .. _payment_acquirers/aps/configure-dashboard:
