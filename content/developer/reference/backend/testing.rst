@@ -95,10 +95,10 @@ in each method::
 .. autoclass:: odoo.tests.common.Form
     :members:
 
-.. autoclass:: odoo.tests.common.M2MProxy
+.. autoclass:: odoo.tests.common.form.M2MProxy
     :members: add, remove, clear
 
-.. autoclass:: odoo.tests.common.O2MProxy
+.. autoclass:: odoo.tests.common.form.O2MProxy
     :members: new, edit, remove
 
 Running tests
