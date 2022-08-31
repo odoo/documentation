@@ -1164,6 +1164,10 @@ take the following attributes:
   if set to true, the gantt view will start at the first record,
   instead of starting at the beginning of the year/month/day.
 
+``pill_label``
+  If set to true, the time appears in the pill label when the scale is set on week or month. (e.g.
+  `7:00 AM - 11:00 AM (4h) - DST Task 1`)
+
 ``thumbnails``
   This allows to display a thumbnail next to groups name if the group is a relationnal field.
   This expects a python dict which keys are the name of the field on the active model.
