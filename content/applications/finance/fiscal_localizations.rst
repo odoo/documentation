@@ -68,8 +68,7 @@ available on Odoo.
 - Canada - Accounting
 - :doc:`Chile - Accounting <fiscal_localizations/chile>`
 - China - Accounting
-- :doc:`Colombia - Accounting <fiscal_localizations/colombia>` (:doc:`doc in Spanish
-  <fiscal_localizations/colombia_ES>`)
+- :doc:`Colombia - Accounting <fiscal_localizations/colombia>`
 - Costa Rica - Accounting
 - Croatia - Accounting (RRIF 2012)
 - Czech - Accounting
@@ -142,7 +141,6 @@ available on Odoo.
    fiscal_localizations/brazil
    fiscal_localizations/chile
    fiscal_localizations/colombia
-   fiscal_localizations/colombia_ES
    fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
