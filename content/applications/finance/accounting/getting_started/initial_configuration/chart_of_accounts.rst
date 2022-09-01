@@ -1,65 +1,65 @@
 =================
-Chart of Accounts
+Chart of accounts
 =================
 
-The **Chart of Accounts (COA)** is the list of all the accounts used to record financial
+The **chart of accounts (COA)** is the list of all the accounts used to record financial
 transactions in the general ledger of an organization.
 
 The accounts are usually listed in the order of appearance in the financial reports. Most of the
 time, they are listed as follows :
 
-- Balance Sheet accounts
+- Balance Sheet accounts:
 
-  * Assets
-  * Liabilities
-  * Equity
+  - Assets
+  - Liabilities
+  - Equity
 
-- Profit & Loss
+- Profit & Loss:
 
-  * Income
-  * Expense
+  - Income
+  - Expense
 
-When browsing your Chart of Accounts, you can filter the accounts by number, in the left column, and
-also group them by Account Type.
+When browsing your chart of accounts, you can filter the accounts by number, in the left column, and
+also group them by :guilabel:`Account Type`.
 
-.. image:: chart_of_accounts/chart_of_accounts01.png
+.. image:: chart_of_accounts/chart-of-accounts.png
    :align: center
    :alt: Group the accounts by type in Odoo Accounting
 
-Configuration of an Account
+Configuration of an account
 ===========================
 
 The country you select at the creation of your database (or additional company on your database)
-determines which **Fiscal Localization Package** is installed by default. This package includes a
-standard Chart of Accounts already configured according to the country's regulations. You can use
+determines which **fiscal localization package** is installed by default. This package includes a
+standard chart of accounts already configured according to the country's regulations. You can use
 it directly or set it according to your company's needs.
 
 .. warning::
-   It is not possible to modify the **Fiscal Localization** of a company once a Journal Entry has
+   It is not possible to modify the **fiscal localization** of a company once a journal entry has
    been posted.
 
 To create a new account, go to :menuselection:`Accounting --> Configuration --> Chart of Accounts`,
-click on *Create*, and fill out the form.
+click on :guilabel:`Create`, and fill out the form.
 
-Code and Name
+Code and name
 -------------
 
-Each account is identified by its **Code** and **Name**, which also indicates the account's purpose.
+Each account is identified by its **code** and **name**, which also indicates the account's purpose.
 
 .. _chart-of-account/type:
 
 Type
 ----
 
-Configuring correctly the **Account Type** is critical as it serves multiple purposes:
+Correctly configuring the **account type** is critical as it serves multiple purposes:
 
 - Information on the account's purpose and behavior
 - Generate country-specific legal and financial reports
 - Set the rules to close a fiscal year
 - Generate opening entries
 
-To configure an account type, open the **Type** field's drop-down selector and select the right
-type among the following list:
+To configure an account type, open the :guilabel:`Type` field's drop-down selector and select the
+right type among the following list:
 
 +---------------+--------------+-------------------------+
 | Report        | Category     | Account Types           |
@@ -101,25 +101,22 @@ type among the following list:
 |Other          | Other        | Off-Balance Sheet       |
 +---------------+--------------+-------------------------+
 
-Assets, Deferred Expenses, and Deferred Revenues Automation
+Assets, deferred expenses, and deferred revenues automation
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Some Account Types display a new field **to automate** the creation of :ref:`Assets
-<assets-automation>` entries, :ref:`Deferred Expenses <deferred-expenses-automation>` entries,
-and :ref:`Deferred Revenues <deferred-revenues-automation>` entries.
+Some **account types** display a new field **to automate** the creation of :ref:`assets
+<assets-automation>` entries, :ref:`deferred expenses <deferred-expenses-automation>` entries,
+and :ref:`deferred revenues <deferred-revenues-automation>` entries.
 
-You have three choices for the **Automation** field:
+You have three choices for the :guilabel:`Automation` field:
 
-#. **No:** this is the default value. Nothing happens.
-#. **Create in draft:** whenever a transaction is posted on the account, a draft entry is created,
-   but not validated. You must first fill out the corresponding form.
-#. **Create and validate:** you must also select a Model. Whenever a transaction is posted on the
-   account, an entry is created and immediately validated.
+#. :guilabel:`No`: this is the default value. Nothing happens.
+#. :guilabel:`Create in draft`: whenever a transaction is posted on the account, a draft entry is
+   created, but not validated. You must first fill out the corresponding form.
+#. :guilabel:`Create and validate`: you must also select a **model**. Whenever a transaction is
+   posted on the account, an entry is created and immediately validated.
 
-.. note::
-   Please refer to the related documentation for more information.
-
-Default Taxes
+Default taxes
 -------------
 
 Select a **default tax** that will be applied when this account is chosen for a product sale or
@@ -131,35 +128,50 @@ Tags
 Some accounting reports require **tags** to be set on the relevant accounts. By default, you can
 choose among the tags that are used by the *Cash Flow Statement*.
 
-Account Groups
+Account groups
 --------------
 
-**Account Groups** are useful to list multiple accounts as *sub-accounts* of a bigger account and
-thus consolidate reports such as the **Trial Balance**.
+**Account groups** are useful to list multiple accounts as *sub-accounts* of a bigger account and
+thus consolidate reports such as the **Trial Balance**. By default, groups are handled automatically
+based on the code of the group. For example, a new account `131200` is going to be part of the group
+`131000`.
 
-To create a new Account Group, open the account you want to configure as sub-account, click on the
-*Group* drop-down selector, select *Create and Edit...*, fill out the form, and save. Next,
-set all the sub-accounts with the right Account Group.
+Create account groups manually
+------------------------------
 
-To display your **Trial Balance** report with your Account Groups, go to :menuselection:`Accounting
---> Reporting --> Trial Balance`, then open the *Options* menu and select **Hierarchy and
-Subtotals**.
+.. note::
+   Regular users should not need to create account groups manually. The following section is only
+   intended for rare and advanced use cases.
 
-.. image:: chart_of_accounts/chart_of_accounts02.png
+To create a new account group, :ref:`developer mode <developer-mode>` and head to
+:menuselection:`Accounting app --> Configuration --> Account Groups`. Here, create a new group and
+enter the :guilabel:`name, code prefix, and company` to which that group account should be
+available. Note that you must enter the same code prefix in both :guilabel:`From` and :guilabel:`to`
+fields.
+
+.. image:: chart_of_accounts/account-groups.png
+   :align: center
+   :alt: Account groups creation.
+
+To display your **Trial Balance** report with your account groups, go to :menuselection:`Accounting
+app-->Reporting-->Trial Balance`, then open the :guilabel:`Options` menu and select
+:guilabel:`Hierarchy and Subtotals`.
+
+.. image:: chart_of_accounts/trial-balance.png
    :align: center
    :alt: Account Groups in the Trial Balance in Odoo Accounting
 
-Allow Reconciliation
+Allow reconciliation
 --------------------
 
 Some accounts, such as accounts made to record the transactions of a payment method, can be used for
 the reconciliation of journal entries.
 
-For example, an invoice paid with a credit card can be *marked as paid* if reconciled with the
-payment. Therefore, the account used to record credit card payments needs to be configured as
-*allowing reconciliation*.
+For example, an invoice paid with a credit card can be marked as :guilabel:`paid` if reconciled with
+its payment. Therefore, the account used to record credit card payments needs to be configured as
+**allowing reconciliation**.
 
-To do so, check the **Allow Reconciliation** box and save.
+To do so, check the :guilabel:`Allow Reconciliation` box in the account's settings, and save.
 
 Deprecated
 ----------
@@ -167,7 +179,7 @@ Deprecated
 It is not possible to delete an account once a transaction has been recorded on it. You can make
 them unusable by using the **Deprecated** feature.
 
-To do so, check the **Deprecated** box and save.
+To do so, check the :guilabel:`Deprecated` box in the account's settings, and save.
 
 .. seealso::
    * :doc:`../../payables/supplier_bills/assets`
