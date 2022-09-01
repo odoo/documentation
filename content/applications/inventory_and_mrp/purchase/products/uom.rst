@@ -114,3 +114,4 @@ You can now configure your product just as you would using Odoo's standard units
 .. image:: uom/uom-product-configuration-new-units.png
    :align: center
    :alt: Set a product's units of measure using your own units in Odoo Purchase
+.. image:: uom/uom-product-conifiguration-specific-units.png
