@@ -123,7 +123,7 @@ Online payment providers
      -
      -
    * - :doc:`Razorpay <payment_providers/razorpay>`
-     - Payment from Odoo
+     - Payment from the provider website
      -
      - Full only
      - Full and partial
