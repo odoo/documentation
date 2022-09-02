@@ -13,7 +13,6 @@ Report
     .. autofield:: chart_template_id
     .. autofield:: country_id
     .. autofield:: only_tax_exigible
-    .. autofield:: caret_options_initializer
     .. autofield:: availability_condition
     .. autofield:: load_more_limit
     .. autofield:: search_bar
