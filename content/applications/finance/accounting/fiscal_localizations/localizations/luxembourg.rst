@@ -8,9 +8,21 @@ Configuration
 :ref:`Install <general/install>` the following modules to get all the features of the Luxembourgish
 localization:
 
-- :guilabel:`Luxembourg - Accounting` (module's technical name: ``l10n_lu``).
-- :guilabel:`Luxembourg - Accounting Reports` (module's technical name: ``l10n_lu_reports``).
-- :guilabel:`Luxembourg - Annual VAT Report` (module's technical name: ``l10n_lu_reports_annual_vat``).
+.. list-table::
+   :header-rows: 1
+
+   * - Name
+     - Technical name
+     - Description
+   * - :guilabel:`Luxembourg - Accounting`
+     - `l10n_lu`
+     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+   * - :guilabel:`Luxembourg - Accounting Reports`
+     - `l10n_lu_reports`
+     - Country-specific reports
+   * - :guilabel:`Luxembourg - Annual VAT Report`
+     - `l10n_lu_reports_annual_vat`
+     - Country-specific reports
 
 .. image:: luxembourg/modules.png
    :align: center
