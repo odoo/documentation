@@ -1,3 +1,6 @@
+SUGGESTION: I often get questions about "where does Odoo get the information" - so it might be worth linking to the IAP services, or the privacy policy for the current mining services - ie: https://iap.odoo.com/privacy#reveal 
+
+
 =======================
 Lead mining
 =======================
