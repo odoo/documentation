@@ -36,12 +36,11 @@ Configuration on Odoo
 #. Configure the rest of the options to your liking.
 
 .. important::
-  - If you configure Odoo to capture amounts manually, make sure to set the
-    :guilabel:`Manual Capture` to :guilabel:`manual` on Razorpay. Otherwise, the transaction
-    would be blocked in the authorized state in Odoo. To do so, go to your Razorpay Dashboard and
-    then to :menuselection:`Settings --> Configuration`.
-  - After **five days**, if the transaction hasn't been captured yet, the customer has the right
-    to **revoke** it.
+  If you configure Odoo to capture amounts manually:
+
+  - Be aware that the **manual voiding** of a transaction is not supported by Razorpay.
+  - After **five days**, if the transaction hasn't been captured yet, it'll automatically be
+    **voided**.
 
 .. seealso::
    - :doc:`../payment_providers`
