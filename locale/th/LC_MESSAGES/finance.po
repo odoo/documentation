@@ -8,17 +8,17 @@
 # Seksan Poltree <seksan.poltree@gmail.com>, 2022
 # Odoo Thaidev <odoothaidev@gmail.com>, 2022
 # Khwunchai Jaengsawang <khwunchai.j@ku.th>, 2022
-# Wichanon Jamwutthipreecha, 2022
 # Martin Trigaux, 2022
+# Wichanon Jamwutthipreecha, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-07-22 09:36+0000\n"
+"POT-Creation-Date: 2022-09-01 15:11+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
-"Last-Translator: Martin Trigaux, 2022\n"
+"Last-Translator: Wichanon Jamwutthipreecha, 2022\n"
 "Language-Team: Thai (https://www.transifex.com/odoo/teams/41243/th/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -248,13 +248,13 @@ msgstr ""
 #: ../../content/applications/finance/accounting/bank/misc/interbank.rst:14
 #: ../../content/applications/finance/accounting/bank/reconciliation/reconciliation_models.rst:69
 #: ../../content/applications/finance/accounting/bank/reconciliation/use_cases.rst:16
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:22
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:16
 #: ../../content/applications/finance/accounting/bank/setup/manage_cash_register.rst:9
 #: ../../content/applications/finance/accounting/bank/setup/outstanding_accounts.rst:20
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/argentina.rst:32
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:29
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:290
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:331
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:332
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/colombia.rst:34
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/germany.rst:58
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/italy.rst:18
@@ -273,8 +273,9 @@ msgstr ""
 #: ../../content/applications/finance/accounting/payables/supplier_bills/invoice_digitization.rst:22
 #: ../../content/applications/finance/accounting/payables/supplier_bills/manage.rst:31
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/cash_rounding.rst:14
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:55
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/epc_qr_code.rst:20
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:42
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:46
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch.rst:15
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:20
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:39
@@ -1573,172 +1574,166 @@ msgid "`Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:3
-msgid "Manage a bank in a foreign currency"
+msgid "Manage a bank account in a foreign currency"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:5
 msgid ""
 "In Odoo, every transaction is recorded in the default currency of the "
-"company. Reports are all based on the currency of the company. But for "
-"transactions occurring in another currency, Odoo stores both the value in "
-"the currency of the company and the value in the currency of the "
-"transaction."
+"company, and reports are all based on that default currency. When you have a"
+" bank account in a foreign currency, for every transaction, Odoo stores two "
+"values:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:11
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:9
+msgid "The debit/credit in the currency of the *company*;"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:10
+msgid "The debit/credit in the currency of the *bank account*."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:12
 msgid ""
-"When you have a bank account in a foreign currencies, for every transaction,"
-" Odoo stores two values:"
+"Currency rates are updated automatically using the web services of a banking"
+" institution. By default, Odoo uses the European Central Bank's web services"
+" but other options are available."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:14
-msgid "The debit/credit in the currency of the company"
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:19
+msgid "Activate multi-currencies"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:16
-msgid "The debit/credit in the currency of the bank account"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:18
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:21
 msgid ""
-"Currency rates are updated automatically using yahoo.com, or the European "
-"Central bank web-services."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:25
-msgid "Activate the multi-currency feature"
+"To work with multiple currencies, go to :menuselection:`Accounting --> "
+"Configuration --> Settings --> Currencies` and tick :guilabel:`Multi-"
+"Currencies`. Under :guilabel:`Post Exchange difference entries in:`, provide"
+" a :guilabel:`Journal`, a :guilabel:`Gain Account`, a :guilabel:`Loss "
+"Account`, and then click on :guilabel:`Save`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:27
-msgid ""
-"In order to allow your company to work with multiple currencies, you should "
-"activate the multi-currency mode. In the accounting application, go into "
-":menuselection:`Configuration --> Settings --> Accounting & Finance "
-"Features` make sure the **Allow Multi-currencies** box is ticked. Provide a "
-"**Currency Exchange Gain / Loss** account, then click on **Apply**."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:34
 msgid "Configure currencies"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:36
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:29
 msgid ""
-"Once the Odoo is configured to support multiple currencies, you should "
-"activate the currencies you plan to work with. To do that, go to the menu "
-":menuselection:`Configuration --> Currencies`. All the currencies are "
-"created by default, but you should activate the ones you plan to support (to"
-" activate a currency, check its \"Active\" field)."
+"Once Odoo is configured to support multiple currencies, they are all created"
+" by default, but not necessarily active. To activate the new currencies, "
+"click on :guilabel:`Activate Other Currencies` under the :guilabel:`Multi-"
+"Currencies` setting or go to :menuselection:`Accounting --> Configuration "
+"--> Accounting: Currencies`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:42
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:34
 msgid ""
-"After having activated the currencies, you can configure the parameters to "
-"automate the currency rate update. These options are also in the settings of"
-" the Accounting application, in the bottom of the page:"
+"When the currencies are activated, you can choose to **automate** the "
+"currency rate update, or leave it on **manual**. To configure the rate "
+"update, go back to :menuselection:`Accounting --> Configuration --> Settings"
+" --> Currencies`, check :guilabel:`Automatic Currency Rates`, set "
+":guilabel:`Interval` to your desired frequency, and then click on "
+":guilabel:`Save`. You also have the option to choose the :guilabel:`Service`"
+" you wish to obtain currency rates from."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:49
-msgid "Click on the **Update Now** link to update the currency rates now."
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:40
+msgid ""
+"Click on the Update now button (:guilabel:`🗘`) besides the :guilabel:`Next "
+"Run` field to update the currency rates manually."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:52
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:44
 msgid "Create a new bank account"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:54
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:46
 msgid ""
-"In the accounting application, we first go to :menuselection:`Configuration "
-"--> Accounting / Bank account`, and we create a new one."
+"In the accounting application, go to :menuselection:`Accounting --> "
+"Configuration --> Journals` and create a new one. Enter a :guilabel:`Journal"
+" Name` and set the :guilabel:`Type` to `Bank`. In the :guilabel:`Journal "
+"Entries` tab, enter a **short code**, a **currency**, and then finally click"
+" on the :guilabel:`Bank Account` field to create a new account. In the pop-"
+"up window of the account creation, enter a name, a code (ex.: 550007), set "
+"its type to `Bank and Cash`, set a currency type, and save. When you are "
+"back on the **journal**, click on the :guilabel:`Account Number` field, and "
+"in the pop-up window, fill out the :guilabel:`Account Number`, "
+":guilabel:`Bank` of your account, and save."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:60
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:59
 msgid ""
-"Once you save this bank account, Odoo will create all the documents for you:"
+"Upon creation of the journal, Odoo automatically links the bank account to "
+"the journal. It can be found under :menuselection:`Accounting --> "
+"Configuration --> Accounting: Chart of Accounts`."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:63
-msgid "An account in the trial balance"
+msgid "Vendor bill in a foreign currency"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:65
-msgid "A journal in your dashboard"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:67
 msgid ""
-"Information about the bank account in the footer of your invoices if checked"
-" the box **Show in Invoices Footer**"
+"To pay a bill in a foreign currency, simply select the currency next to the "
+":guilabel:`Journal` field and register the payment. Odoo automatically "
+"creates and posts the foreign **exchange gain or loss** as a new journal "
+"entry."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:71
-msgid "Example: A vendor bill in a foreign currency"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:73
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:74
 msgid ""
-"Based on the above example, let's assume we receive the following bill from "
-"a supplier in China."
+"Note that you can pay a foreign bill with another currency. In that case, "
+"Odoo automatically converts between the two currencies."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:76
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:78
+msgid "Unrealized Currency Gains/Losses Report"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:80
 msgid ""
-"In the :menuselection:`Purchase --> Vendor Bills` , this is what you could "
-"see:"
+"This report gives an overview of all unrealized amounts in a foreign "
+"currency on your balance sheet, and allows you to adjust an entry or "
+"manually set an exchange rate. To access this report, go to "
+":menuselection:`Reporting --> Management: Unrealized Currency Gains/Losses`."
+" From here, you have access to all open entries in your **balance sheet**."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:81
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:89
 msgid ""
-"Once you are ready to pay this bill, click on register payment on the bill "
-"to record a payment."
+"If you wish to use a different currency rate than the one set in "
+":menuselection:`Accounting --> Configuration --> Settings --> Currencies`, "
+"click the :guilabel:`Exchange Rates` button and change the rate of the "
+"foreign currencies in the report."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:87
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:97
 msgid ""
-"That's all you have to do. Odoo will automatically post the foreign exchange"
-" gain or loss at the reconciliation of the payment with the invoice, "
-"depending if the currency rate increased or decreased between the invoice "
-"and the payment date."
+"When manually changing **exchange rates**, a yellow banner appears allowing "
+"you to reset back to Odoo's rate. To do so, simply click on :guilabel:`Reset"
+" to Odoo's Rate`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:92
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:104
 msgid ""
-"Note that you can pay a foreign bill with another currency. In such a case, "
-"Odoo will automatically convert between the two currencies."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:96
-msgid "Customers Statements"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:98
-msgid ""
-"Customers and vendor statements are managed in the currency of the invoice. "
-"So, the amount due by your customer (to your vendor) is always expressed in "
-"the currency of the invoice."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:102
-msgid ""
-"If you have several invoices with different currencies for the same "
-"customer, Odoo will split the customer statement by currency, as shown in "
-"the report below."
+"In order to update your **balance sheet** with the amount of the "
+":guilabel:`adjustment` column, click on the :guilabel:`Adjustment Entry` "
+"button. In the pop-up window, select a :guilabel:`Journal`, "
+":guilabel:`Expense Account` and :guilabel:`Income Account` to calculate and "
+"process the **unrealized gains and losses**."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:109
 msgid ""
-"In the above report, the account receivable associated to Camptocamp is not "
-"managed in a secondary currency, which means that it keeps every transaction"
-" in its own currency. If you prefer, you can set the account receivable for "
-"this customer in a secondary currency and all its debts will automatically "
-"be converted to this currency."
+"You can set the date of the report in the :guilabel:`Date` field. Odoo "
+"automatically reverses the booking entry to the date set in "
+":guilabel:`Reversal Date`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:115
+#: ../../content/applications/finance/accounting/bank/setup/foreign_currency.rst:112
 msgid ""
-"In such a case, the customer statement always has only one currency. In "
-"general, this is not what the customer expect as he prefers to see the "
-"amounts in the currency of the invoices he received;"
+"Once posted, the :guilabel:`adjustment` column should indicate `0.00`, "
+"meaning all **unrealized gains/losses** have been adjusted."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/setup/manage_cash_register.rst:3
@@ -2791,7 +2786,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/argentina.rst:515
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:651
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:653
 #: ../../content/applications/finance/accounting/others/multicurrencies/invoices_payments.rst:64
 msgid "Vendor Bills"
 msgstr "บิลผู้ขาย"
@@ -3072,8 +3067,8 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:26
 msgid ""
-"**l10n_cl_reports:** Adds the reports Propuesta F29 y  Balance Tributario (8"
-" columnas)."
+"**l10n_cl_reports:** Adds the reports Propuesta F29 y Balance Tributario (8 "
+"columnas)."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:32
@@ -3167,7 +3162,7 @@ msgstr "ใบรับรอง"
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:103
 msgid ""
 "In order to generate the electronic invoice signature, a digital certificate"
-" with the extension ``.pfx`` is required, proceed to this section and load "
+" with the extension ``pfx`` is required, proceed to this section and load "
 "your file and password."
 msgstr ""
 
@@ -3175,7 +3170,7 @@ msgstr ""
 msgid ""
 "A certificate can be shared between several users. If this is the case leave"
 " the user field empty, so all your billing users can use the same one. On "
-"the other hand,  if you need to restrict the certificate for a particular "
+"the other hand, if you need to restrict the certificate for a particular "
 "user, just define the users in the certificate."
 msgstr ""
 
@@ -3183,12 +3178,12 @@ msgstr ""
 msgid ""
 "In some cases, depending on the certificate format, it is possible that the "
 "field Subject Serial Number is not loaded automatically. If this is the "
-"case, you can manually edit this field by filling it with the Certificate’s "
+"case, you can manually edit this field by filling it with the Certificate's "
 "legal representative RUT."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:124
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:702
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:871
 msgid "Financial Reports"
 msgstr "รายงานทางการเงิน"
 
@@ -3317,7 +3312,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:233
 msgid ""
-"Each document type can have a unique sequence per company.  As part of the "
+"Each document type can have a unique sequence per company. As part of the "
 "localization, the Document Type includes the country on which the document "
 "is applicable and the data is created automatically when the localization "
 "module is installed."
@@ -3419,25 +3414,25 @@ msgid ""
 "By default, all the sales journals created will use documents."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:308
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:307
 msgid ""
 "For the Chilean localization, it is important to define the default Debit "
 "and Credit accounts as they are required for one of the debit notes use "
 "cases."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:312
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:313
 msgid "CAF"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:314
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:315
 msgid ""
 "A CAF (Folio Authorization Code) is required, for each document type that is"
 " issued to your customers, the CAF is a file the SII provides to the Emisor "
 "with the folio/sequence authorized for the electronic invoice documents."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:318
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:319
 msgid ""
 "Your company can make several requests for folios and obtain several CAFs, "
 "each one associated with different ranges of folios. The CAFs are shared "
@@ -3445,59 +3440,60 @@ msgid ""
 "document type and it will be applied on all journals."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:322
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:323
 msgid ""
-"Please refer to the SII documentation to check the detail on how to acquire "
-"the CAF: `SII Timbraje <https://palena.sii.cl/dte/mn_timbraje.html>`_."
+"Please refer to the `SII documentation "
+"<https://palena.sii.cl/dte/mn_timbraje.html>`_ to check the detail on how to"
+" acquire the CAF."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:326
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:327
 msgid ""
 "The CAFs required by the SII are different from Production to Test "
 "(Certification mode). Make sure you have the correct CAF set depending on "
 "your environment."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:333
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:334
 msgid ""
 "Once you have the CAF files you need to associate them with a document type "
 "in Odoo, in order to add a CAF, just follow these steps:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:336
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:337
 msgid "Access to :menuselection:`Accounting --> Settings --> CAF`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:337
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:338
 msgid "Upload the file."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:338
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:339
 msgid "Save the CAF."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:344
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:345
 msgid ""
 "Once loaded, the status changes to *In Use*. At this moment, when a "
 "transaction is used for this document type, the invoice number takes the "
 "first folio in the sequence."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:348
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:349
 msgid ""
 "In case you have used some folios in your previous system, make sure you set"
 " the next valid folio when the first transaction is created."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:354
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:355
 msgid "Usage and Testing"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:357
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:358
 msgid "Electronic Invoice Workflow"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:359
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:360
 msgid ""
 "In the Chilean localization the electronic Invoice workflow covers the "
 "Emission of Customer Invoices and the reception of Vendor Bills, in the next"
@@ -3505,49 +3501,52 @@ msgid ""
 "the customers and Vendors."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:369
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:370
 msgid "Customer invoice Emission"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:371
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:372
 msgid ""
 "After the partners and journals are created and configured, the invoices are"
 " created in the standard way, for Chile one of the differentiators is the "
 "document type which is selected automatically based on the Taxpayer."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:375
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:376
 msgid "You can manually change the document type if needed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:382
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:383
 msgid ""
 "Documents type 33: Electronic Invoice must have at least one item with tax, "
 "otherwise the SII rejects the document validation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:386
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:389
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:813
 msgid "Validation and DTE Status"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:388
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:391
 msgid ""
 "When all the invoice information is filled, either manually or automatically"
-" when it’s created from a sales order, proceed to validate the invoice.  "
+" when it's created from a sales order, proceed to validate the invoice. "
 "After the invoice is posted:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:391
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:394
 msgid ""
 "The DTE File (Electronic Tax Document) is created automatically and added in"
 " the chatter."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:392
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:395
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:759
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:823
 msgid "The DTE SII status is set as: Pending to be sent."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:398
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:401
 msgid ""
 "The DTE Status is updated automatically by Odoo with a scheduled action that"
 " runs every day at night, if you need to get the response from the SII "
@@ -3555,7 +3554,7 @@ msgid ""
 "follows:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:407
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:410
 msgid ""
 "In the first step the DTE is sent to the SII, you can manually send it using"
 " the button: Enviar Ahora, a SII Tack number is generated and assigned to "
@@ -3563,38 +3562,38 @@ msgid ""
 "by email. The DTE status is updated to Ask for Status."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:412
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:415
 msgid ""
 "Once the SII response is received Odoo updates the DTE Status, in case you "
 "want to do it manually just click on the button: Verify on SII. The result "
 "can either be Accepted, Accepted With Objection or Rejected."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:421
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:424
 msgid ""
 "There are several internal status in the SII before you get Acceptance or "
-"Rejection, in case you click continuously  the Button Verify in SII, you "
-"will receive in the chatter the detail of those intermediate statuses:"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:429
-msgid "The final response from the SII, can take on of these values:"
+"Rejection, in case you click continuously the Button Verify in SII, you will"
+" receive in the chatter the detail of those intermediate statuses:"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:432
-msgid ""
-"**Accepted:** Indicates the invoice information is correct, our document is "
-"now fiscally valid and it’s automatically sent to the customer."
+msgid "The final response from the SII, can take on of these values:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:435
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:434
+msgid ""
+"**Accepted:** Indicates the invoice information is correct, our document is "
+"now fiscally valid and it's automatically sent to the customer."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:437
 msgid ""
 "**Accepted with objections:** Indicates the invoice information is correct "
 "but a minor issue was identified, nevertheless our document is now fiscally "
-"valid and it’s automatically sent to the customer."
+"valid and it's automatically sent to the customer."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:443
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:445
 msgid ""
 "**Rejected:** Indicates the information in the invoice is incorrect and "
 "needs to be corrected, the detail of the issue is received in the emails you"
@@ -3602,28 +3601,28 @@ msgid ""
 "are also retrieved in the chatter once the email server is processed."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:448
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:450
 msgid "If the invoice is Rejected please follow this steps:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:450
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:452
 msgid "Change the document to draft."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:451
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:453
 msgid ""
 "Make the required corrections based on the message received from the SII."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:452
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:454
 msgid "Post the invoice again."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:460
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:462
 msgid "Crossed references"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:462
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:464
 msgid ""
 "When the Invoice is created as a result of another fiscal document, the "
 "information related to the originator document must be registered in the Tab"
@@ -3632,128 +3631,128 @@ msgid ""
 "credit and debit notes, they are set automatically by Odoo:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:472
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:474
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:450
 msgid "Invoice PDF Report"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:474
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:476
 msgid ""
 "Once the invoice is accepted and validated by the SII and the PDF is "
 "printed, it includes the fiscal elements that indicate that the document is "
 "fiscally valid:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:482
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:484
 msgid ""
 "If you are hosted in Odoo SH or On-Premise, you should manually install the "
 "``pdf417gen`` library. Use the following command to install it: ``pip "
 "install pdf417gen``."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:486
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:488
 msgid "Commercial Validation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:488
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:490
 msgid "Once the invoice has been sent to the customer:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:490
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:492
 msgid "DTE partner status changes to “Sent”."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:491
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:493
 msgid "The customer must send a reception confirmation email."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:492
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:494
 msgid ""
 "Subsequently, if all the commercial terms and invoice data are correct, they"
 " will send the Acceptance confirmation, otherwise they send a Claim."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:494
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:496
 msgid "The field DTE acceptation status is updated automatically."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:502
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:504
 msgid "Processed for Claimed invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:504
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:506
 msgid ""
 "Once the invoice has been Accepted by the SII **it can not be cancelled in "
-"Odoo**.  In case you get a Claim for your customer the correct way to "
-"proceed is with a Credit Note to either cancel the Invoice or correct it. "
-"Please refer to the Credit Notes section for more details."
+"Odoo**. In case you get a Claim for your customer the correct way to proceed"
+" is with a Credit Note to either cancel the Invoice or correct it. Please "
+"refer to the :ref:`chile/credit-notes` section for more details."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:513
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:515
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:426
 msgid "Common Errors"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:515
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:517
 msgid ""
 "There are multiple reasons behind a rejection from the SII, but these are "
 "some of the common errors you might have and which is the related solution."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:518
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:520
 msgid "Error: ``RECHAZO- DTE Sin Comuna Origen.``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:520
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:522
 msgid ""
 "*Hint:* Make sure the Company Address is properly filled including the State"
 " and City."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:522
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:524
 msgid "Error en Monto: ``- IVA debe declararse.``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:524
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:528
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:526
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:530
 msgid ""
 "*Hint:* The invoice lines should include one VAT tax, make sure you add one "
 "on each invoice line."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:526
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:528
 msgid "Error: ``Rut No Autorizado a Firmar.``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:530
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:532
 msgid ""
 "Error: ``Fecha/Número Resolucion Invalido RECHAZO- CAF Vencido : "
 "(Firma_DTE[AAAA-MM-DD] - CAF[AAAA-MM-DD]) &gt; 6 meses.``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:533
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:535
 msgid ""
-"*Hint:* Try to add a new CAF related to this document as the one you’re "
+"*Hint:* Try to add a new CAF related to this document as the one you're "
 "using is expired."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:535
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:537
 msgid ""
 "Error: ``Element '{http://www.sii.cl/SiiDte%7DRutReceptor': This element is "
 "not expected. Expected is ( {http://www.sii.cl/SiiDte%7DRutEnvia ).``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:538
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:540
 msgid ""
 "*Hint:* Make sure the field Document Type and VAT are set either in the "
 "Customer and in the main company."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:541
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:543
 msgid "GLOSA: ``Usuario sin permiso de envio.``"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:543
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:545
 msgid ""
 "*Hint:* This error indicates that most likely, your company has not passed "
 "the `Certification process "
@@ -3763,12 +3762,12 @@ msgid ""
 "not part of the the Odoo services, but we can give you some alternatives."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:552
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:554
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:556
 msgid "Credit Notes"
 msgstr "ใบลดหนี้"
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:554
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:556
 msgid ""
 "When a cancellation or correction is needed over a validated invoice, a "
 "credit note must be generated. It is important to consider that a CAF file "
@@ -3776,33 +3775,33 @@ msgid ""
 "SII."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:563
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:566
 msgid ""
-"Refer to the CAF section where we described the process to load the CAF on "
-"each document type."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:567
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:619
-msgid "Use Cases"
+"Refer to the :ref:`CAF section <chile/caf-documentation>` where we described"
+" the process to load the CAF on each document type."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:570
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:622
+msgid "Use Cases"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:573
 msgid "Cancel Referenced document"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:572
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:575
 msgid ""
-"In case you need  to cancel or invalid an Invoice, use the button Add Credit"
-" note and select Full Refund, in this case the SII reference Code is "
+"In case you need to cancel or invalid an Invoice, use the button Add Credit "
+"note and select Full Refund, in this case the SII reference Code is "
 "automatically set to: Anula Documento de referencia."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:580
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:583
 msgid "Corrects Referenced Document Text"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:582
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:585
 msgid ""
 "If a correction in the invoice information is required, for example the "
 "Street Name, use the button Add Credit note,select Partial Refund and select"
@@ -3810,112 +3809,112 @@ msgid ""
 "automatically set to: Corrige el monto del Documento de Referencia."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:590
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:593
 msgid ""
 "Odoo creates a Credit Note with the corrected text in an invoice and price "
 "0."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:597
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:600
 msgid ""
-"It’s important to define the default credit account in the Sales journal as "
+"It's important to define the default credit account in the Sales journal as "
 "it is taken for this use case in specific."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:601
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:604
 msgid "Corrects Referenced Document Amount"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:603
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:606
 msgid ""
 "When a correction on the amounts is required, use the button Add Credit note"
 " and select Partial Refund. In this case the SII reference Code is "
 "automatically set to: Corrige el monto del Documento de Referencia."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:612
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:615
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:584
 msgid "Debit Notes"
 msgstr "ใบเพิ่มหนี้"
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:614
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:617
 msgid ""
 "As part of the Chilean localization, besides creating credit notes from an "
 "existing document you can also create debit Notes. For this just use the "
-"button “Add Debit Note”.  The two main use cases for debit notes are "
-"detailed below."
+"button “Add Debit Note”. The two main use cases for debit notes are detailed"
+" below."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:622
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:625
 msgid "Add debt on Invoices"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:624
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:627
 msgid ""
 "The most common use case for debit notes is to increase the value of an "
 "existing invoice, you need to select option 3 in the field Reference code "
 "SII:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:632
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:635
 msgid ""
 "In this case Odoo automatically includes the source invoice in the cross "
 "reference section:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:639
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:642
 msgid "Cancel Credit Notes"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:641
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:644
 msgid ""
 "In Chile the debits notes are used to cancel a validated Credit Note, in "
 "this case just select the button Add debit note and select the first option "
 "in the wizard: *1: Anula Documentos de referencia.*"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:653
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:655
 msgid ""
 "As part of the Chilean localization, you can configure your Incoming email "
 "server as the same you have register in the SII in order to:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:656
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:658
 msgid ""
 "Automatically receive the vendor bills DTE and create the vendor bill based "
 "on this information."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:657
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:659
 msgid "Automatically Send the reception acknowledgement to your vendor."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:658
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:660
 msgid "Accept or Claim the document and send this status to your vendor."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:662
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:663
 msgid "Reception"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:664
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:665
 msgid ""
 "As soon as the vendor email with the attached DTE is received: 1. The vendor"
 " Bill mapping all the information included in the xml. 2. An email is sent "
 "to the vendor with the Reception acknowledgement. 3. The DTE status is set "
-"as:  Acuse de Recibido Enviado"
+"as: Acuse de Recibido Enviado"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:674
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:675
 msgid "Acceptation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:676
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:677
 msgid ""
-"If all the commercial information is correct on your vendor bill, you can "
-"accept the document using the button: Aceptar Documento, once this is done "
-"the DTE Acceptation Status  changes to: Accepted and an email of acceptance "
-"is sent to the vendor."
+"If all the commercial information is correct on your vendor bill then you "
+"can accept the document using the :guilabel:`Aceptar Documento` button. Once"
+" this is done the DTE Acceptation Status changes to :guilabel:`Accepted`` "
+"and an email of acceptance is sent to the vendor."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:686
@@ -3925,23 +3924,253 @@ msgstr ""
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:688
 msgid ""
 "In case there is a commercial issue or the information is not correct on "
-"your vendor bill, you can Claim the document before validating it,  using "
-"the button: Claim, once this is done the DTE Acceptation Status  change to: "
-"Claim  and an email of acceptance is sent to the vendor."
+"your vendor bill, you can Claim the document before validating it, using the"
+" button: Claim, once this is done the DTE Acceptation Status change to: "
+"Claim and an email of acceptance is sent to the vendor."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:696
 msgid ""
 "If you claim a vendor bill, the status changes from draft to cancel "
 "automatically. Considering this as best practice, all the Claim documents "
-"should be canceled as they won’t be valid for your accounting records."
+"should be canceled as they won't be valid for your accounting records."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:705
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:701
+msgid "Delivery Guide"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:703
+msgid ""
+"To install the Delivery Guide module, go to :menuselection:`Apps` and search"
+" for :guilabel:`Chile (l10n_cl)`. Then click :guilabel:`Install` on the "
+"module :guilabel:`Chile - E-Invoicing Delivery Guide`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:708
+msgid ""
+"*Chile - E-Invoicing Delivery Guide* has a dependency with *Chile - "
+"Facturación Electrónica*. Odoo will install the dependency automatically "
+"when the Delivery Guide module is installed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:711
+msgid ""
+"The Delivery Guide module includes sending the DTE to SII and the stamp in "
+"PDF reports for deliveries."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:718
+msgid ""
+"Once all configurations have been made for electronic invoices (e.g., "
+"uploading a valid company certificate, setting up master data, etc.), "
+"Delivery Guides need their own CAFs. Please refer to the :ref:`CAF "
+"documentation <chile/caf-documentation>` to check the details on how to "
+"acquire the CAFs for electronic Delivery Guides."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:723
+msgid ""
+"Verify the following important information in the *Price for the Delivery "
+"Guide* configuration:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:725
+msgid ""
+":guilabel:`From Sales Order`: Delivery Guide takes the product price from "
+"the Sales Order and shows it on the document."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:727
+msgid ""
+":guilabel:`From Product Template`: Odoo takes the price configured in the "
+"product template and shows it on the document."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:729
+msgid ":guilabel:`No show price`: no price is shown in the Delivery Guide."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:731
+msgid ""
+"Electronic delivery guides are used to move stock from one place to another "
+"and they can represent sales, sampling, consignment, internal transfers, and"
+" basically any product move."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:735
+msgid "Delivery Guide from a Sales Process"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:737
+msgid ""
+"When a Sales Order is created and confirmed, a Delivery Order is generated. "
+"After validating the Delivery Order, the option to create a Delivery Guide "
+"is activated."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:744
+msgid ""
+"When clicking on :guilabel:`Create Delivery Guide` for the first time, a "
+"warning message pops up, showing the following:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:751
+msgid ""
+"This warning message means the user needs to indicate the next sequence "
+"number Odoo has to take to generate the Delivery Guide, and only only "
+"happens the *first time* a Delivery Guide is created in Odoo. After the "
+"first document has been correctly generated, Odoo takes the CAFs next "
+"available number to generate the following Delivery Guide and so on."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:756
+msgid "After the Delivery Guide is created:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:758
+msgid ""
+"The DTE file (Electronic Tax Document) is automatically created and added to"
+" the chatter."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:765
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:829
+msgid ""
+"The DTE Status is automatically updated by Odoo with a scheduled action that"
+" runs every day at night. To get a response from the SII immediately, press "
+"the :guilabel:`Send now to SII` button."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:768
+msgid ""
+"Once the Delivery Guide is sent, it may then be printed by clicking on the "
+":guilabel:`Print Delivery Guide` button."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:776
+msgid "Electronic Receipt"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:778
+msgid ""
+"To install the Electronic Receipt module, go to :menuselection:`Apps` and "
+"search for :guilabel:`Chile (l10n_cl)`. Then click :guilabel:`Install` on "
+"the module :guilabel:`Chile - Electronic Receipt`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:783
+msgid ""
+"*Chile - Electronic Receipt* has a dependency with *Chile - Facturación "
+"Electrónica*. Odoo will install the dependency automatically when the "
+"E-invoicing Delivery Guide module is installed."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:786
+msgid ""
+"This module contains the electronic receipt and daily sales report, which "
+"are automatically sent to SII."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:793
+msgid ""
+"Once all configurations have been made for Electronic Invoices (e.g., "
+"uploading a valid company certificate, setting up master data, etc.), "
+"Electronic Receipts need their own CAFs. Please refer to the :ref:`CAF "
+"documentation <chile/caf-documentation>` to check the details on how to "
+"acquire the CAFs for Electronic Receipts."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:798
+msgid ""
+"Electronic Receipts are useful when clients do not need an Electronic "
+"Invoice. By default, there is a partner in the database called *Anonymous "
+"Final Consumer* with a generic RUT 66666666-6 and taxpayer type of *Final "
+"Consumer*. This partner can be used for Electronic Receipts or a new record "
+"may be created for the same purpose."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:803
+msgid ""
+"Although Electronic Receipts should be used for final consumers with a "
+"generic RUT, it can also be used for specific partners. After the partners "
+"and journals are created and configured, the Electronic Receipts are created"
+" in the standard way as Electronic Invoice, but the type of document "
+":guilabel:`(39) Electronic Receipt` should be selected, like so:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:815
+msgid ""
+"When all of the Electronic Receipt information is filled, either manually or"
+" automatically from a Sales Order, proceed to validate the receipt. By "
+"default, Electronic Invoice is selected as the Document Type, however in "
+"order to validate the receipt correctly, make sure to edit the Document Type"
+" and change to Electronic Receipt."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:820
+msgid "After the receipt is posted:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:822
+msgid ""
+"The DTE file (Electronic Tax Document) is created automatically and added to"
+" the chatter."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:832
+msgid ""
+"Please refer to the :ref:`DTE Workflow <chile/electronic-invoice-"
+"validation>` for Electronic Invoices as the workflow for Electronic Receipt "
+"follows the same process."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:836
+msgid "Daily Sales Report"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:838
+msgid ""
+"Once Electronic Receipts have been created, the system creates a daily sales"
+" report containing all Electronic Receipts per day. This report is "
+"electronically stamped and sent to the SII overnight in XML format. These "
+"daily reports can be found in :menuselection:`Reports --> Daily Sales "
+"Reports`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:846
+msgid "A list of daily reports is displayed with all daily DTE sent to SII."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:852
+msgid ""
+"If no Electronic Receipt was made on a particular day, the report is sent "
+"but it will not have any receipts in it. The report will also have an answer"
+" from the SII if it was accepted or rejected (depending on the company's "
+"certificate and validated receipts)."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:861
+msgid ""
+"For Chilean localization, note that the feature tax included in the price is"
+" *not* supported for the Electronic Receipt."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:864
+msgid ""
+"If a Daily Sales Report has already been created for a specific day in "
+"another system, the daily report in Odoo will be rejected due to the "
+"sequence number used. If that is the case, the user has to manually click on"
+" :guilabel:`Retry` in order for a new sequence number to be generated (this "
+"action is automatically done by Odoo). Afterwards, users can manually verify"
+" report status with SII or wait for Odoo to update status later at night."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:874
 msgid "Balance Tributario de 8 Columnas"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:707
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:876
 msgid ""
 "This report presents the accounts in detail (with their respective "
 "balances), classifying them according to their origin and determining the "
@@ -3949,18 +4178,18 @@ msgid ""
 " time, so that a real and complete knowledge of the status of a company."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:711
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:727
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:880
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:896
 msgid ""
 "You can find this report in :menuselection:`Accounting --> Accounting --> "
 "Reports`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:718
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:887
 msgid "Propuesta F29"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:720
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:889
 msgid ""
 "The form F29 is a new system that the SII enabled to taxpayers, and that "
 "replaces the Purchase and Sales Books. This report is integrated by Purchase"
@@ -3968,9 +4197,9 @@ msgid ""
 "transactions related to VAT, improving its control and declaration."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:724
+#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:893
 msgid ""
-"This record is supplied by the electronic tax documents (DTE’s) that have "
+"This record is supplied by the electronic tax documents (DTE's) that have "
 "been received by the SII."
 msgstr ""
 
@@ -5226,10 +5455,12 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/egypt.rst:16
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/france.rst:182
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:93
 msgid "Name"
 msgstr "ชื่อ"
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/egypt.rst:17
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:94
 msgid "Technical name"
 msgstr "ชื่อทางเทคนิค"
 
@@ -5346,7 +5577,6 @@ msgid "These codes are confidential and should be stored safely."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/egypt.rst:76
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:9
 msgid "Configuration on Odoo"
 msgstr ""
 
@@ -5983,7 +6213,7 @@ msgstr "12"
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:218
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:228
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:244
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:107
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:68
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:81
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:131
@@ -6015,7 +6245,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:218
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:228
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:244
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:107
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:68
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:81
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:131
@@ -10487,7 +10717,7 @@ msgid "EUR"
 msgstr "EUR"
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:140
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:113
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:117
 msgid "1000"
 msgstr ""
 
@@ -12150,6 +12380,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/chart_of_accounts.rst:176
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/setup.rst:193
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:52
 #: ../../content/applications/finance/accounting/reporting/declarations/tax_returns.rst:125
 #: ../../content/applications/finance/accounting/taxation/taxes/default_taxes.rst:40
 msgid ""
@@ -12726,7 +12957,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:86
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/credit_notes.rst:83
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:90
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:94
 msgid "Journal Entries"
 msgstr "รายการบันทึกสมุดรายวัน"
 
@@ -12991,7 +13222,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:218
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:228
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:244
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:107
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:68
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:81
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:131
@@ -13000,8 +13231,8 @@ msgstr "บัญชี"
 
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:220
 #: ../../content/applications/finance/accounting/getting_started/memento.rst:246
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:109
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:113
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:115
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:70
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:133
 msgid "Account Receivable"
@@ -17854,6 +18085,233 @@ msgid ""
 "<https://www.odoo.com/r/EWO>`_"
 msgstr ""
 
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:3
+msgid "Electronic invoicing (:abbr:`EDI (electronic data interchange)`)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:5
+msgid ""
+"EDI, or electronic data interchange, is the inter-company communication of "
+"business documents, such as purchase orders and invoices, in a standard "
+"format. Sending documents according to an EDI standard ensures that the "
+"machine receiving the message can interpret the information correctly. "
+"Various EDI file formats exist and are available depending on your company's"
+" country."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:10
+msgid ""
+"EDI feature enables automating the administration between companies and "
+"might also be required by some governments for fiscal control or to "
+"facilitate the administration."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:13
+msgid ""
+"Electronic invoicing of your documents such as customer invoices, credit "
+"notes or vendor bills is one of the application of EDI."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:16
+msgid "Odoo supports, among others, the following formats."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:21
+msgid "Format Name"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:22
+msgid "Applicability"
+msgstr "การบังคับใช้"
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:23
+msgid "Factur-X (CII)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:24
+msgid "Default format on Odoo (enabled by default)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:25
+msgid "Peppol BIS Billing 3.0 (UBL)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:26
+msgid ""
+"For companies whose countries are part of the `EAS list "
+"<https://docs.peppol.eu/poacc/billing/3.0/codelist/eas/>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:28
+msgid "E-FFF"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:29
+msgid "For Belgian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:30
+msgid "XRechnung (UBL)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:31
+msgid "For German companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:32
+msgid "Fattura PA (IT)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:33
+msgid "For Italian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:34
+msgid "CFDI (4.0)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:35
+msgid "For Mexican companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:36
+msgid "Peru UBL 2.1"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:37
+msgid "For Peruvian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:38
+msgid "SII IVA Llevanza de libros registro (ES)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:39
+msgid "For Spanish companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:40
+msgid "UBL 2.1 (Columbia)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:41
+msgid "For Colombian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:42
+msgid "Egyptian Tax Authority"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:43
+msgid "For Egyptian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:44
+msgid "E-Invoice (IN)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:45
+msgid "For Indian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:46
+msgid "NLCIUS (Netherlands)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:47
+msgid "For Dutch companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:48
+msgid "EHF 3.0"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:49
+msgid "For Norwegian companies"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:57
+msgid ""
+"Go to :menuselection:`Accounting --> Configuration --> Journals --> Customer"
+" Invoices --> Advanced Settings --> Electronic Invoicing` and enable the "
+"formats you need for this journal."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:64
+msgid ""
+"Once an electronic invoicing format is enabled, XML documents are generated "
+"when clicking on :guilabel:`Confirm` in documents such as invoices, credit "
+"notes, etc. These documents are either visible in the attachment section, or"
+" embedded in the PDF."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:69
+msgid ""
+"For E-FFF, the xml file only appears after having generated the PDF "
+"(:guilabel:`Print` or :guilabel:`Send & Print` button), since the PDF needs "
+"to be embedded inside the xml."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:71
+msgid ""
+"By default, the :guilabel:`Factur-X` option is enabled. It means that an XML"
+" file is automatically included in the PDF document that is sent."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:73
+msgid ""
+"The formats available depend on the country registered in your company's "
+":guilabel:`General Information`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:75
+msgid ""
+"Odoo supports the **Peppol BIS Billing 3.0** format that can be used via "
+"existing access points."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:79
+msgid "Add new formats to a database created before July 2022"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:81
+msgid ""
+"If your database was created before July 2022 and you wish to use one of the"
+" formats available from July 2022, you have to :ref:`install "
+"<general/install>` the module :guilabel:`Import/Export electronic invoices "
+"with UBL/CII` (module’s technical name: `account_edi_ubl_cii`) and your "
+"country-specific module."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:87
+msgid ""
+"If you want to use the Belgian format E-FFF in a database created prior to "
+"July 2022, you need to :ref:`install <general/install>`:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:95
+msgid "Belgium - E-Invoicing (UBL 2.0, e-fff)"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:96
+msgid "`l10n_be_edi`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:97
+msgid "Import/Export electronic invoices with UBL/CII"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:98
+msgid "`account_edi_ubl_cii`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/electronic_invoicing.rst:101
+msgid ""
+"Once the new module is installed, UBL 2.0 and UBL 2.1 formats no longer "
+"appear in the journal since UBL BIS Billing 3.0 is available and more widely"
+" supported."
+msgstr ""
+
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/epc_qr_code.rst:3
 msgid "Add EPC QR Codes to invoices"
 msgstr ""
@@ -18312,49 +18770,59 @@ msgid ""
 "Conditions*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:44
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:42
+msgid ":doc:`cash_discounts`"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:43
+msgid ""
+"`Odoo Tutorials: Payment Terms <https://www.odoo.com/slides/slide/payment-"
+"terms-1679>`_"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:48
 msgid ""
 "Go to :menuselection:`Accounting --> Configuration --> Payment Terms` and "
 "click on *Create*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:46
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:50
 msgid ""
 "The **Description on the Invoice** is the text displayed on the document "
 "(sale order, invoice, etc.)."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:49
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:53
 msgid ""
 "In the **Terms** section, you can add a set of rules, called *terms*, to "
 "define what needs to be paid and by which due date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:52
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:56
 msgid ""
 "To add a term, click on *Add a line*, and define its *Type*, *Value*, and "
 "*Due Date Computation*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:55
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:59
 msgid "Terms are computed in the order they are set up."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:56
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:60
 msgid "The **balance** should always be used for the last line."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:58
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:62
 msgid ""
 "In the following example, 30% is due on the day of issuance, and the balance"
 " is due at the end of the following month."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:67
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:71
 msgid "Using Payment Terms"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:69
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:73
 msgid ""
 "Payment Terms can be defined in the **Due Date** field, with the **Terms** "
 "drop-down list, on:"
@@ -18389,13 +18857,13 @@ msgid ""
 "*Due Date* is enough."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:80
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:84
 msgid ""
 "You can also define a **Due Date** manually. If Payment Terms are already "
 "defined, empty the field so you can select a date."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:83
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:87
 msgid "Payment Terms can be defined with the **Payment Terms** field on:"
 msgstr ""
 
@@ -18410,64 +18878,54 @@ msgid ""
 "under the *Sales & Purchase* tab."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:92
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:96
 msgid ""
 "Invoices with specific Payment Terms generate different *Journal Entries*, "
 "with one *Journal Item* for every computed *Due Date*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:95
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:99
 msgid ""
 "This makes for easier *Follow-ups* and *Reconciliation* since Odoo takes "
 "each due date into account, rather than just the balance due date. It also "
 "helps to get an accurate *Aged Receivable report*."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:103
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:107
 msgid ""
 "In this example, an invoice of $1000 has been issued with the following "
 "payment terms: *30% is due on the day of issuance, and the balance is due at"
 " the end of the following month.*"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:107
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
 msgid "Due date"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:109
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:113
 msgid "February 21"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:109
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:113
 msgid "300"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:115
 msgid "March 31"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:111
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:115
 msgid "700"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:113
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:117
 msgid "Product Sales"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:116
+#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:120
 msgid ""
 "The $1000 debited on the Account Receivable is split into two distinct "
 "*Journal Items*. Both of them have their own **Due Date**."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:120
-msgid ":doc:`cash_discounts`"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_invoices/payment_terms.rst:121
-msgid ""
-"`Odoo Tutorials: Terms and Conditions (T&C) and Payment Terms "
-"<https://www.odoo.com/r/fpv>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/snailmail.rst:5
@@ -20323,12 +20781,13 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:77
 msgid ""
-"always store the default price TAX EXCLUDED on the product form, and apply a"
-" tax (price included on the product form)"
+"always store the default price **tax excluded** on the product form, and "
+"apply a tax (price excluded on the product form)"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:80
-msgid "create a pricelist with prices in TAX INCLUDED, for specific customers"
+msgid ""
+"create a pricelist with prices in **tax included**, for specific customers"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:83
@@ -20356,11 +20815,44 @@ msgid ""
 "website"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:97
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:99
+msgid "eCommerce"
+msgstr "eCommerce"
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:101
+msgid ""
+"If you only use B2C or B2B prices on your website, simply select the "
+"appropriate setting in the **Website** app settings."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:104
+msgid ""
+"If you have both B2B and B2C prices on a single website, please follow these"
+" instructions:"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:106
+msgid ""
+"Activate the :ref:`developer mode <developer-mode>` and go to "
+":menuselection:`General Settings --> Users & Companies --> Groups`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:108
+msgid ""
+"Open either `Technical / Tax display B2B` or `Technical / Tax display B2C`."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:109
+msgid ""
+"Under the :guilabel:`Users` tab, add the users requiring access to the price"
+" type. Add B2C users in the B2C group and B2B users in the B2B group."
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:113
 msgid "Setting your products"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:99
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:115
 msgid ""
 "Your company must be configured with tax excluded by default. This is "
 "usually the default configuration, but you can check your **Default Sale "
@@ -20368,7 +20860,7 @@ msgid ""
 "Accounting application."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:107
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:123
 msgid ""
 "Once done, you can create a **B2C** pricelist. You can activate the "
 "pricelist feature per customer from the menu: :menuselection:`Configuration "
@@ -20376,25 +20868,25 @@ msgid ""
 "per customer segment**."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:112
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:128
 msgid ""
 "Once done, create a B2C pricelist from the menu "
 ":menuselection:`Configuration --> Pricelists`. It's also good to rename the "
 "default pricelist into B2B to avoid confusion."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:116
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:132
 msgid ""
 "Then, create a product at 8.26€, with a tax of 21% (defined as tax not "
 "included in price) and set a price on this product for B2C customers at 10€,"
 " from the :menuselection:`Sales --> Products` menu of the Sales application:"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:125
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:141
 msgid "Setting the B2C fiscal position"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:127
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:143
 msgid ""
 "From the accounting application, create a B2C fiscal position from this "
 "menu: :menuselection:`Configuration --> Fiscal Positions`. This fiscal "
@@ -20402,18 +20894,18 @@ msgid ""
 "included in price)"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:136
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:152
 msgid "Test by creating a quotation"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:138
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:154
 msgid ""
 "Create a quotation from the Sale application, using the "
 ":menuselection:`Sales --> Quotations` menu. You should have the following "
 "result: 8.26€ + 1.73€ = 9.99€."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:145
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:161
 msgid ""
 "Then, create a quotation but **change the pricelist to B2C and the fiscal "
 "position to B2C** on the quotation, before adding your product. You should "
@@ -20421,15 +20913,15 @@ msgid ""
 "8.26€ + 1.74€ = 10.00€."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:153
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:169
 msgid "This is the expected behavior for a customer of your shop."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:156
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:172
 msgid "Avoid changing every sale order"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:158
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:174
 msgid ""
 "If you negotiate a contract with a customer, whether you negotiate tax "
 "included or tax excluded, you can set the pricelist and the fiscal position "
@@ -20437,13 +20929,13 @@ msgid ""
 "of this customer."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:163
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:179
 msgid ""
 "The pricelist is in the **Sales & Purchases** tab of the customer form, and "
 "the fiscal position is in the accounting tab."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:166
+#: ../../content/applications/finance/accounting/taxation/taxes/B2B_B2C.rst:182
 msgid ""
 "Note that this is error prone: if you set a fiscal position with tax "
 "included in prices but use a pricelist that is not included, you might have "
@@ -22628,7 +23120,6 @@ msgstr ""
 #: ../../content/applications/finance/payment_acquirers/authorize.rst:15
 #: ../../content/applications/finance/payment_acquirers/buckaroo.rst:15
 #: ../../content/applications/finance/payment_acquirers/mollie.rst:14
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:15
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:17
 #: ../../content/applications/finance/payment_acquirers/sips.rst:15
 msgid "Credentials tab"
@@ -22783,7 +23274,7 @@ msgstr ""
 #: ../../content/applications/finance/payment_acquirers/authorize.rst:12
 #: ../../content/applications/finance/payment_acquirers/buckaroo.rst:12
 #: ../../content/applications/finance/payment_acquirers/mollie.rst:11
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:12
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:9
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:14
 #: ../../content/applications/finance/payment_acquirers/sips.rst:12
 #: ../../content/applications/finance/payment_acquirers/stripe.rst:12
@@ -22928,10 +23419,9 @@ msgstr ""
 #: ../../content/applications/finance/payment_acquirers/authorize.rst:53
 #: ../../content/applications/finance/payment_acquirers/buckaroo.rst:47
 #: ../../content/applications/finance/payment_acquirers/mollie.rst:31
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:88
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:144
 #: ../../content/applications/finance/payment_acquirers/sips.rst:32
-#: ../../content/applications/finance/payment_acquirers/stripe.rst:130
+#: ../../content/applications/finance/payment_acquirers/stripe.rst:134
 #: ../../content/applications/finance/payment_acquirers/wire_transfer.rst:39
 msgid ":doc:`../payment_acquirers`"
 msgstr ""
@@ -23181,142 +23671,204 @@ msgid ""
 "in secure electronic transactions."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:17
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:10
 msgid ""
-"Odoo needs your **API Credentials** to connect with your Ogone account, "
-"which comprise:"
+"`Ogone's documentation <https://epayments-support.ingenico.com/get-"
+"started/>`_."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:19
-msgid ""
-"**PSPID**: The ID solely used to identify the account with Ogone. You chose "
-"it when you opened your account."
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:13
+msgid "Settings in Ogone"
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:21
-msgid ""
-":ref:`API User ID <ogone/api_user>`: The ID solely used to identify the user"
-" with Ogone."
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:16
+msgid "Create an API user"
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:22
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:18
 msgid ""
-":ref:`API User Password <ogone/api_user>`: Value used to identify the user "
-"with Ogone."
+"Log into your Ogone account and head to the :guilabel:`Configuration` tab."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:23
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:20
 msgid ""
-":ref:`SHA Key IN <ogone/sha_key_in>`: Key used in the signature Odoo send to"
-" Ogone."
+"You need to create an **API user** to be used in the creation of "
+"transactions from Odoo. While you can use your main account to do so, using "
+"an **API user** ensures that if the credentials used in Odoo are leaked, no "
+"access to your Ogone configuration is possible. Additionally, passwords for "
+"**API users** do not need to be updated regularly, unlike normal users."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:24
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:25
 msgid ""
-":ref:`SHA Key OUT <ogone/sha_key_out>`: Key used in the signature Ogone send"
-" to Odoo."
+"To create an **API user**, go to :menuselection:`Configuration --> Users` "
+"and click on :guilabel:`New User`. The following fields must be configured:"
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:26
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:30
+msgid ":guilabel:`UserID`: you can choose anything you want."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:31
 msgid ""
-"You can copy your credentials from your Ogone account, and paste them in the"
-" related fields under the **Credentials** tab."
+":guilabel:`User's Name, E-mail and Timezone`: you can enter the information "
+"you want."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:32
-msgid "API User ID and Password"
+msgid ":guilabel:`Profile`: should be set to :guilabel:`Admin`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:34
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:33
+msgid ":guilabel:`Special user for API`: should be checked."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:35
 msgid ""
-"If you already created a user and have both its ID and password, just copy "
-"them. You can also generate a new password from "
-":menuselection:`Configuration --> Users --> Your chosen user --> change "
-"password`."
+"After the creation of the user, you are required to generate a password. "
+"Save the password and **UserID**, as they will be required later on during "
+"the setup."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:38
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:39
 msgid ""
-"If you don't have a user, create one by going to "
-":menuselection:`Configuration --> Users --> New User`. Set your **User ID** "
-"to get your **password** when you save your new user."
+"If you already have an user set up, make sure it is activated without any "
+"error. If not, simply click the :guilabel:`Activate(Errors)` button to reset"
+" the user."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:48
-msgid "SHA Key IN"
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:43
+msgid "Set up Ogone for Odoo"
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:50
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:45
 msgid ""
-"In order to retrieve the SHA Key IN, log into your ogone account, go to "
-":menuselection:`Configuration --> Technical Information --> Data and origin "
-"verification --> Checks for e-Commerce & Alias Gateway`, and retrieve **SHA "
-"Key IN**."
+"Ogone must now be configured to accept payments from Odoo. Head to "
+":menuselection:`Configuration --> Technical Information --> Global Security "
+"Parameters`, select :guilabel:`SHA-1` as :guilabel:`Hash Algorithm` and "
+":guilabel:`UTF-8` as :guilabel:`character encoding`. Then, go to the "
+":guilabel:`Data and Origin verification` tab of the same page and leave the "
+"URL field of the :guilabel:`e-Commerce and Alias Gateway` section blank."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:52
+msgid ""
+"If you need to use another algorithm, such as `sha-256` or `sha-512`, within"
+" Odoo, activate the :ref:`developer mode <developer-mode>` and go to "
+":menuselection:`General Settings --> Technical --> System Parameters`. From "
+"here, search for `payment_ogone.hash.function` and change the value line to "
+"the desired algorithm (`sha-256` or `sha-512`)."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:57
-msgid "SHA Key OUT"
+msgid ""
+"You are now required to generate **SHA-IN** passphrases. **SHA-IN** and "
+"**SHA-OUT** passphrases are used to digitally sign the transaction requests "
+"and responses between Odoo and Ogone. By using these secret passphrases and "
+"the `sha-1` algorithm, both systems can ensure that the information they "
+"receive from the other was not altered or tampered with."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:59
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:62
 msgid ""
-"In order to retrieve the SHA Key OUT, log into your ogone account, go to "
-":menuselection:`Configuration --> Technical Information --> Transaction "
-"feedback --> All transaction submission modes`, and get or generate your "
-"**API Key** and **Client Key**. Be careful to copy your API key as you'll "
-"not be allowed to get it later without generating a new one."
+"Enter the same **SHA-IN** passphrase in both :guilabel:`Checks for "
+"e-Commerce & Alias Gateway` and :guilabel:`Checks for DirectLink and Batch "
+"(Automatic)`. You can leave the IP address field blank."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:65
 msgid ""
-"If you are trying Ogone as a test, with the Test Account, change the "
-"**State** to *Test Mode*. We recommend doing this on a test Odoo database, "
-"rather than on your main database."
+"Your **SHA-IN** and **SHA-OUT** passphrases should be different, and between"
+" 16 and 32 characters long. Make sure to use the same **SHA-IN** and **SHA-"
+"OUT** passphrases throughout the entire Ogone configuration, as Odoo only "
+"allows a single **SHA-IN** and single **SHA-OUT** passphrase."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:69
-msgid "Configuration on Ogone"
-msgstr ""
-
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:71
 msgid ""
-"Now that Odoo can communicate with Ogone, we need to make sure that Ogone "
-"can send information to your database."
+"In order to retrieve the **SHA-OUT** key, log into your Ogone account, go to"
+" :menuselection:`Configuration --> Technical Information --> Transaction "
+"feedback --> All transaction submission modes`, and get or generate your "
+"**API Key** and **Client Key**. Be careful to copy your API key as you’ll "
+"not be allowed to get it later without generating a new one."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:74
 msgid ""
-"To do so, log into your Ogone account and go to "
-":menuselection:`Configuration --> Technical Information --> Transaction "
-"feedback --> Direct HTTP server-to-server request`."
+"When done, head to :menuselection:`Configuration --> Technical Information "
+"--> Transaction Feedback` and check the following options:"
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:77
-msgid "Then, fill the form with the following data:"
+msgid ""
+"The :guilabel:`URL` fields for :guilabel:`HTTP redirection in the browser` "
+"can be left empty, as Odoo will specify these URLs for every transaction "
+"request."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:79
 msgid ""
-"In the **Timing of the request**, select *Online but switch to a deferred "
-"request when the online requests fail*."
+":guilabel:`I would like to receive transaction feedback parameters on the "
+"redirection URLs`: should be checked."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:0
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:81
 msgid ""
-"Enter your Odoo databases URL in both **URLs** followed by "
-"``/payment/ogone/return``."
-msgstr ""
-
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:0
-msgid "For example: ``https://yourcompany.odoo.com/payment/ogone/return``"
+":guilabel:`Direct HTTP server-to-server request`: should to be set to "
+"`Online but switch to a deferred request when the online request fails`."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/ogone.rst:83
-msgid "Select *POST* for the **Request Method**."
+msgid ""
+"Both **URL** fields should contain the same following URL, with `<example>` "
+"replaced by your database: `https://<example>/payment/ogone/return`."
 msgstr ""
 
-#: ../../content/applications/finance/payment_acquirers/ogone.rst:85
-msgid "Save, and you are ready to go!"
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:86
+msgid ""
+":guilabel:`Dynamic eCommerce Parameters` should contain the following "
+"values: `ALIAS`, `AMOUNT`, `CARDNO`, `CN`, `CURRENCY`, `IP`, `NCERROR` "
+"`ORDERID`, `PAYID`, `PM`, `STATUS`, `TRXDATE`. Other parameters can be "
+"included (if you have another integration with Ogone that requires them), "
+"but are not advised."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:90
+msgid ""
+"In the :guilabel:`All transaction submission modes` section, fill out **SHA-"
+"OUT** passphrase and disable `HTTP request for status change`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:93
+msgid ""
+"To allow your customers to save their credit card credentials for future "
+"use, head to :menuselection:`Configuration --> Alias --> My alias "
+"information`. From this tab, you can configure how the user can have its "
+"card details saved, for how long the information is saved, if a checkbox to "
+"save the card information should be displayed, etc."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:99
+#: ../../content/applications/finance/payment_acquirers/paypal.rst:11
+msgid "Settings in Odoo"
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:101
+msgid ""
+"To set up Ogone in Odoo, head to :menuselection:`Accounting --> "
+"Configuration --> Payment Acquirers` and open the Ogone acquirer. In the "
+":guilabel:`Credentials` tab, enter the **PSPID** of your Ogone account, and "
+"fill out the other fields as configured in your :ref:`Ogone portal "
+"<ogone/ogone>`."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/ogone.rst:106
+msgid ""
+"If you wish to run tests with Ogone, within the accounting app, go to "
+":menuselection:`Configuration --> Payment Acquirers`. Click on "
+":guilabel:`Ogone`, enable :guilabel:`Test Mode` and enter your credentials "
+"in the :guilabel:`Credentials` tab. We recommend doing this on an Odoo test "
+"database, rather than on your main database."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:3
@@ -23329,10 +23881,6 @@ msgid ""
 "doesn't charge any subscription fee, and creating an account is very easy. "
 "That's why we recommend it for starters in Odoo. It works as a seamless flow"
 " where the customer is routed to the Paypal website to register the payment."
-msgstr ""
-
-#: ../../content/applications/finance/payment_acquirers/paypal.rst:11
-msgid "Settings in Odoo"
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/paypal.rst:19
@@ -23850,12 +24398,23 @@ msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/stripe.rst:119
 msgid ""
-"To enable specific local payment methods with Stripe, list them as supported"
-" payment icons. To do so, go to :menuselection:`Payment Acquirers --> Stripe"
-" --> Configuration` and add the desired payment methods in the **Supported "
-"Payment Icons** field. If the desired payment method is already listed, you "
-"don't have anything to do. If a payment icon record doesn't exist in the "
-"database, its related payment method is considered enabled with Stripe."
+"To enable some of these local payment methods with Stripe, list them as "
+"supported payment icons. To do so, go to :menuselection:`Payment Acquirers "
+"--> Stripe --> Configuration` and add the desired payment methods in the "
+"**Supported Payment Icons** field. If the desired payment method is already "
+"listed, you don't have anything to do."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/stripe.rst:129
+msgid ""
+"If a payment icon record does not exist in the database and its related "
+"local payment method is listed above, it is considered enabled with Stripe."
+msgstr ""
+
+#: ../../content/applications/finance/payment_acquirers/stripe.rst:131
+msgid ""
+"If a local payment method is not listed above, it is not supported and "
+"cannot be enabled."
 msgstr ""
 
 #: ../../content/applications/finance/payment_acquirers/wire_transfer.rst:3
