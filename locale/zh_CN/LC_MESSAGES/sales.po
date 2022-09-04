@@ -4,7 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# rsh <263737@qq.com>, 2019
+# Sage.rsh <263737@qq.com>, 2019
 # udcs <seanhwa@hotmail.com>, 2019
 # 宣一敏 <freemanxuan@163.com>, 2019
 # bower Guo <124358678@qq.com>, 2019
@@ -29,20 +29,20 @@
 # Jeffery CHEN <jeffery9@gmail.com>, 2021
 # 稀饭~~ <wangwhai@qq.com>, 2021
 # Datasource International <Hennessy@datasourcegroup.com>, 2021
-# Martin Trigaux, 2022
 # Mandy Choy <mnc@odoo.com>, 2022
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2022
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2022
 # diaojiaolou <124412206@qq.com>, 2022
+# Martin Trigaux, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 13.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-08 13:15+0000\n"
+"POT-Creation-Date: 2022-09-01 12:24+0000\n"
 "PO-Revision-Date: 2019-10-03 09:47+0000\n"
-"Last-Translator: diaojiaolou <124412206@qq.com>, 2022\n"
+"Last-Translator: Martin Trigaux, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -104,8 +104,9 @@ msgstr "你可从CRM设置启用这一模式。它默认适用于你的所有销
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/advanced_pricing_features/loyalty.rst:9
 #: ../../content/applications/sales/point_of_sale/overview/getting_started.rst:14
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:9
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:12
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:15
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:16
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:13
 #: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:14
 #: ../../content/applications/sales/point_of_sale/restaurant/split.rst:10
@@ -1978,9 +1979,144 @@ msgstr "完成后，点击保存按钮。然后，你在未来的交易中就可
 msgid "Payment Terminals"
 msgstr "付款终端"
 
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:3
+msgid "Adyen"
+msgstr "Adyen"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:5
+msgid ""
+"Connecting an **Adyen payment terminal** allows you to offer a fluid payment"
+" flow to your customers and ease the work of your cashiers."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:11
+msgid ""
+"Start by creating your Adyen account on `Adyen's website "
+"<https://www.adyen.com/>`_. Then, board your terminal following the steps "
+"described on your terminal's screen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:15
+msgid ""
+"`Adyen Docs - Payment terminal quickstart guides "
+"<https://docs.adyen.com/point-of-sale/user-manuals>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:19
+#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:36
+msgid "Configure the payment method"
+msgstr "配置支付方式"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:21
+msgid ""
+"First, go to :menuselection:`Point of Sale --> Configuration --> Settings "
+"--> Payment Terminals`, and enable :guilabel:`Adyen`. Then, go to "
+":menuselection:`Configuration --> Payment Methods` and create a new payment "
+"method. Select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` "
+"field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:27
+msgid ""
+"The selected journal **must** be a bank journal for the :guilabel:`Use a "
+"payment terminal` field to appear."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:30
+msgid ""
+"Finally, fill the mandatory fields with an :guilabel:`Adyen API key`, and an"
+" :guilabel:`Adyen Terminal Identifier`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:34
+msgid "Generate an Adyen API key"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:36
+msgid ""
+"The **Adyen API key** is a key used to authenticate your requests. To "
+"generate an API key, go to your **Adyen account**."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:39
+msgid ""
+"Then, go to :menuselection:`Developers --> API credentials`. Create a new "
+"credential or click on an existing one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:42
+msgid ""
+"Click on :guilabel:`Generate an API key` and copy-paste that key onto the "
+"Odoo mandatory field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:45
+msgid ""
+"`Adyen Docs - API credentials <https://docs.adyen.com/development-"
+"resources/api-credentials#generate-api-key>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:49
+msgid "Locate the Adyen terminal identifier"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:51
+msgid ""
+"The **Adyen Terminal Identifier** is your terminal's serial number, which is"
+" used to identify the hardware."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:54
+msgid ""
+"To find this number, go to your **Adyen account**. Then, go to "
+":menuselection:`Point of Sale --> Terminals`, select the terminal to link, "
+"and copy-paste its serial number onto the Odoo mandatory field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:59
+msgid "Add a new payment method"
+msgstr "新增一个付款方式"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:61
+msgid ""
+"To add a new **payment method** to a point of sale, go to "
+":menuselection:`Point of Sale --> Configuration --> Point of Sale`. Then, "
+"select the POS and go to :menuselection:`Payments --> Payment Methods`, and "
+"add your new method for Adyen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:66
+#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:53
+msgid "Pay with a payment terminal"
+msgstr "用支付终端付款"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:68
+msgid ""
+"When processing a payment, select :guilabel:`Adyen` as the payment method. "
+"Check the amount and click on :guilabel:`Send`. Once the payment is "
+"successful, the status changes to :guilabel:`Payment Successful`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:0
+msgid ""
+"In case of connexion issues between Odoo and the payment terminal, force the"
+" payment by clicking on :guilabel:`Force Done`, which allows you to validate"
+" the order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:0
+msgid ""
+"This option is only available after receiving an error message informing you"
+" that the connection failed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:77
+msgid "To cancel the payment request, click on :guilabel:`cancel`."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:3
-msgid "Connect an Ingenico Payment Terminal to your PoS"
-msgstr "将Ingenico支付终端连接到你的PoS"
+msgid "Ingenico"
+msgstr "Ingenico "
 
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:5
 msgid ""
@@ -2026,10 +2162,6 @@ msgid ""
 msgstr ""
 "现在，单击连接更改和TCP/IP。键入*物联网盒*的IP（可以在物联网盒的表单视图中找到）。然后，输入9000作为端口。终端将重新启动。完成后，在Odoo中填写*物联网盒*表格，并验证终端是否已找到。"
 
-#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:36
-msgid "Configure the payment method"
-msgstr "配置支付方式"
-
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:38
 msgid ""
 "First, go in the general settings of the POS app, and activate the Ingenico "
@@ -2045,10 +2177,6 @@ msgid ""
 msgstr ""
 "回到 :menuselection:`POS --> 配置 --> "
 "POS`，进入支付版块并查看你的支付方式。为Ingenico创建新支付方式，选择支付终端选项Ingenico，并选择你的支付终端设备。"
-
-#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:53
-msgid "Pay with a payment terminal"
-msgstr "用支付终端付款"
 
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:55
 msgid ""
@@ -2086,8 +2214,8 @@ msgid ""
 msgstr "付款处理完毕后，在支付记录上可以看到使用的卡片类型和交易ID。"
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:3
-msgid "Connect a SIX Payment Terminal to your PoS"
-msgstr "将SIX支付终端连接到您的PoS"
+msgid "SIX"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:5
 msgid ""
@@ -2097,6 +2225,12 @@ msgstr "连接SIX付款终端可让您向客户提供流畅的付款流程，并
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:9
 msgid ""
+"Starting in July 2022, it will **not** be possible anymore to connect and "
+"use a Six payment terminal in PoS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:11
+msgid ""
 "Even though Worldline has recently acquired SIX Payment Services and both "
 "companies use Yomani payment terminals, the firmware they run is different. "
 "Terminals received from Worldline are therefore not compatible with this "
@@ -2105,18 +2239,18 @@ msgstr ""
 "尽管Worldline最近已经收购了SIX 付款服务，并且两家公司都使用Yomani付款终端，但是它们运行的固件是不同的。 "
 "因此，从Worldline收到的终端与此集成不兼容。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:18
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:19
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:16
 msgid "Configure the Payment Method"
 msgstr "配置支付方式"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:20
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:21
 msgid ""
 "First, make sure that the POS Six module is installed. For this, go to "
 "*Apps*, remove the \"Apps\" filter and search for \"POS Six\"."
 msgstr "首先，确保已安装POS Six模块。 为此，转到 *应用程式* ，删除“应用程式”过滤器，然后搜索“ POS Six”。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:26
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:27
 msgid ""
 "Back in :menuselection:`Point of Sale --> Configuration --> Payment "
 "Methods`, Create a new payment method for SIX, select the payment terminal "
@@ -2125,12 +2259,12 @@ msgstr ""
 "返回 :menuselection:` POS --> 配置 --> "
 "付款方式`，为SIX创建新的付款方式，选择付款终端选项“没有物联网盒子的SIX”，然后输入您的付款终端IP地址。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:34
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:35
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:40
 msgid "Pay with a Payment Terminal"
 msgstr "用支付终端付款"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:36
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:37
 msgid ""
 "In your PoS interface, at the moment of the payment, select a payment method"
 " using a payment terminal. Verify that the amount in the tendered column is "
@@ -2139,13 +2273,13 @@ msgid ""
 msgstr ""
 "在*PoS界面*，当处理付款时，选择使用支付终端的*支付方式*。检查栏目中的金额是否为须发送到付款终端的金额并单击*发送*。如你想要取消付款请求，点击取消。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:44
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:45
 msgid ""
 "When the payment is done, the status will change to *Payment Successful*. "
 "You can always reverse the last transaction by clicking on *Reverse*."
 msgstr "支付完成后，状态将变为*付款成功*。你可随时点击*逆转*，逆转最近一项操作。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:51
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:52
 msgid ""
 "If there is any issue with the payment terminal, you can still force the "
 "payment using the *Force Done*. This will allow you to validate the order in"
@@ -2154,8 +2288,8 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:3
-msgid "Connect a Vantiv Payment Terminal to your PoS"
-msgstr "将Vantiv支付终端接入你的PoS"
+msgid "Vantiv"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:5
 msgid ""
@@ -3433,14 +3567,14 @@ msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:94
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:111
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:73
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:59
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:95
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:160
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:74
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:119
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:60
 msgid ":doc:`manage`"
 msgstr ":doc:`manage`"
 
@@ -3530,15 +3664,36 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:51
 msgid ""
+"If your chosen carrier isn't one supported by Odoo, you can still create a "
+"carrier bearing its name (e.g. create a carrier named `Colissimo`). This "
+"name is case insensitive, but be careful about typos, as Amazon won't "
+"recognize them."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:54
+msgid ""
+"Create a delivery carrier named `Self Delivery` to inform Amazon that you "
+"make your own deliveries. You still have to enter a tracking reference."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:56
+msgid ""
+"Keep in mind that the customer is notified by email about the delivery, and "
+"the carrier and tracking reference are displayed in the email to the "
+"customer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:60
+msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`"
 msgstr ""
 ":文档:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:54
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:63
 msgid "Follow deliveries in FBA"
 msgstr "在FBA中跟进发货"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:56
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:65
 msgid ""
 "When a **FBA** (Fulfilled by Amazon) order is synchronized in Odoo, a stock "
 "move is recorded for each sales order item so that it is saved in your "
@@ -3552,14 +3707,14 @@ msgstr ""
 ":menuselection:`库存 --> 报告 --> "
 "产品移动`下找到相关记录。他们在**Amazon**的特定库位取货。这个库位代表你在Amazon仓库中的库存，并允许你在FBA程序下管理产品库存。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:63
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:72
 msgid ""
 "To follow your Amazon (FBA) stock in Odoo, you can make an inventory "
 "adjustment after replenishing it. You can also trigger an automated "
 "replenishment from reordering rules on the Amazon location."
 msgstr "如要在Odoo中追踪你的Amazon (FBA)库存，你可在补货后进行库存调整。你还可通过Amazon库位的重订货规则触发自动补货。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:68
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:77
 msgid ""
 "The Amazon location is configurable by Amazon account managed in Odoo. All "
 "accounts of the same company use the same location by default. It is however"
@@ -3572,11 +3727,11 @@ msgid ""
 msgstr ""
 "Amazon库位可通过Odoo管理的Amazon账户进行配置。同一家公司的所有账户默认使用同一库位。但是，你可以按电商平台追踪库存。首先，从已同步的电商平台列表中删除想要单独追踪库存的电商平台。然后，为该账户创建另一个注册账户，并删除所有其他电商平台。最后，为第二个注册账户分配其他库位。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:76
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:85
 msgid "Issue invoices and register payments"
 msgstr "开发票和登记付款"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:78
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:87
 msgid ""
 "You can issue invoices for Amazon orders in Odoo. Click **Create Invoice** "
 "in the sales order to do so. You can also do it in batch from the list view "
@@ -3584,13 +3739,13 @@ msgid ""
 msgstr ""
 "你可以在Odoo中为Amazon订单开发票。在销售订单中点击**创建发票**。你也可从订单列表视图中批量创建发票。然后，确认发票并发送给客户。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:83
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
 msgid ""
 "To display only Amazon-related orders on the list view, you can filter "
 "orders based on the sales team."
 msgstr "如要在列表视图中只显示与Amazon相关的订单，可以按销售团队筛选订单。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:86
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:95
 msgid ""
 "As the customer has paid Amazon as an intermediary, you should register "
 "invoice payments in a payment journal dedicated to Amazon (e.g. Amazon "
@@ -3602,11 +3757,11 @@ msgid ""
 msgstr ""
 "由于Amazon作为中间方已收到客户付款，你可以在Amazon专用的付款日记账中登记发票付款情况（例如，为Amazon付款设立专门的中间方账户）。对于从Amazon收到的供应商账单也可进行同样操作，并专门用于记录佣金。当你的银行账户在月底收到余额并在Odoo中录入银行对账单时，你只需按收到的金额录入Amazon中间方账户。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:93
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:102
 msgid "Follow your Amazon sales in sales reporting"
 msgstr "在销售报告中追踪你的Amazon销售情况"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:95
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:104
 msgid ""
 "As a sales team is set on your account under the tab **Order Follow-up**, "
 "this helps you give quick glances at the figures in just a few clicks in "
@@ -3615,13 +3770,13 @@ msgid ""
 msgstr ""
 "由于销售团队设置在你的账户下**订单跟进**选项卡中，你只需要在销售报告中点击数次即可快速查看所有数据。默认情况下，你的账户销售团队在公司所有账户之间共享。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:99
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:108
 msgid ""
 "If you wish, you can change the sales team on your account for another to "
 "perform a separate reporting for the sales of this account."
 msgstr "如有需要，你可将账户的销售团队更改为另一个，并对该账户的销售情况进行单独报告。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:103
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:112
 msgid ""
 "It is also possible to perform reporting on a per-marketplace basis in a "
 "similar fashion. First, remove the marketplace you wish to track separately "
@@ -3632,9 +3787,9 @@ msgid ""
 msgstr ""
 "你也可以类似方式对每个电商平台进行报告。首先，从已同步的电商平台列表中删除想要单独追踪库存的电商平台。然后，为该客户创建另一个注册账户，并删除所有其他电商平台。最后，为注册的两个账户其中一个分配其他销售团队。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:110
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:159
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:72
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:119
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:118
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:58
 msgid ":doc:`features`"
 msgstr ":doc:`features`"
 
@@ -3643,128 +3798,49 @@ msgid "Configure Amazon Connector in Odoo"
 msgstr "在Odoo中配置Amazon连接器"
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:6
-msgid "Generate an Authorization Token in Seller Central"
-msgstr "在卖家平台生成授权令牌"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:10
-msgid ""
-"The Amazon Connector uses an Authorization Token that allows Odoo to fetch "
-"data from your Amazon Seller Central account. This token can be obtained "
-"directly through Seller Central in a few clicks and needs to be set up in "
-"your Odoo database configuration."
-msgstr ""
-"亚马逊连接器使用授权令牌，该令牌允许Odoo从您的亚马逊卖家平台帐户中获取数据。 "
-"只需单击几下即可直接通过卖方中心获取此令牌，并且需要在Odoo数据库配置中进行设置。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:14
-msgid ""
-"Connect to your Seller Central account for the marketplace you initially "
-"signed up (e.g. if you created your account on Amazon Germany, go to `Amazon"
-" Seller Central for Germany <https://sellercentral.amazon.de>`_) with an "
-"administrator account."
-msgstr ""
-"使用管理员帐户连接到您最初注册的市场的卖方中心帐户（例如，如果您在亚马逊德国上创建了帐户，请转到`德国的亚马逊卖方中心<https://sellercentral.amazon.de>`_）"
-" 。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:19
-msgid ""
-"You might need to use the *main* (or first) administrator account and not "
-"one added subsequently."
-msgstr "您可能需要使用 *主要的*（或第一个）管理员帐户，而不是随后添加的一个帐户。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:22
-msgid ""
-"In the main menu, select :menuselection:`Apps & Services --> Manage Your "
-"Apps`; in the page that displays, click on the ``Authorize new developper`` "
-"button:"
-msgstr "在主菜单中，选择 :menuselection:`应用和服务 --> 管理您的应用`  在显示的页面中，单击``授权新开发者`` 按钮："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:28
-msgid "Fill in the form depending on your Marketplace:"
-msgstr "根据您的市场填写表格："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:33
-msgid ""
-"If your seller account is registered in the **North America** region, use "
-"these values:"
-msgstr "如果您的卖家帐户在 **北美** 地区注册，请使用以下资料："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:35
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:40
-msgid "Developer's Name: ``Odoo S.A.``"
-msgstr "开发者名称： ``Odoo S.A.``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:36
-msgid "Developer ID: ``586127723692``"
-msgstr "开发者编号：``586127723692``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:38
-msgid "For the **Europe** region, use these values:"
-msgstr "如果您的卖家帐户在 **欧洲** 地区注册，请使用以下资料："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:41
-msgid "Developer ID: ``579095187166``"
-msgstr "开发者编号： ``579095187166``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:43
-msgid ""
-"Amazon will then inform you that by submitting the form, you are giving "
-"access to your Seller Central Information to Odoo S.A."
-msgstr "然后，亚马逊将通知您，通过提交表格，您将向Odoo S.A.授予访问卖方中央信息的权限。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:47
-msgid ""
-"Odoo S.A. is unable to access your Amazon account's information without the "
-"Authorization Token which is stored in your Odoo database - we do not store "
-"these tokens on our platform directly and are therefore unable to access "
-"your account's information outside of the Amazon Connector normal flows."
-msgstr ""
-"如果没有存储在Odoo数据库中的授权令牌，Odoo "
-"S.A.将无法访问您的亚马逊帐户信息。我们不会将这些令牌直接存储在我们的平台上，因此无法在亚马逊连接器正常流程之外访问您的帐户信息。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:53
 msgid "Register your Amazon account in Odoo"
 msgstr "在Odoo中注册你的Amazon账户"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:57
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:10
 msgid ""
 "To register your seller account in Odoo, navigate to :menuselection:`Sales "
 "--> Configuration --> Settings --> Connectors --> Amazon Sync --> Amazon "
-"Accounts` and click on **CREATE**."
+"Accounts` and click on :guilabel:`CREATE`."
 msgstr ""
-"如要在Odoo中注册你的卖家账户，前往 :menuselection:`销售 --> 配置 --> 设置 --> 连接器 --> Amazon同步 "
-"--> Amazon账户`并点击**创建**。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:60
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:13
 msgid ""
-"The **Seller ID** can be found in Seller Central under the link **Your "
-"Merchant Token** on the **Seller Account Information** page. The "
-"**Authorization Token** is the one you generated in the :ref:`previous step "
-"<amazon/generate_auth_token>`."
+"Choose a meaningful name for your account (e.g. `Europe`), and select your "
+":guilabel:`Sign-up Marketplace`. This is the original sign-up marketplace of"
+" your seller account (e.g. if you created your account on Amazon Germany, "
+"your sign-up marketplace will be `amazon.de`)"
 msgstr ""
-"可以在 **卖家帐户信息** 页面上的 **您的商家令牌** 链接中的卖家平台中找到 **卖家ID** 。  **授权令牌** 是您在 "
-":ref:`上一步<amazon/generate_auth_token>`中生成的令牌。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:64
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:17
 msgid ""
-"Upon saving, your credentials are checked. In case of issues, an error will "
-"be displayed - the information cannot be saved until your credentials are "
-"recognized by Amazon."
-msgstr "保存后，将检查您的凭据。 如果出现问题，会显示错误 - 在亚马逊识别您的凭据之前，无法保存信息。"
+"Upon saving, a button to :guilabel:`link with Amazon` appears. Click on it "
+"to be redirected to the Amazon login page, or directly to the consent page "
+"if you are already logged in. There, confirm that you want Amazon to give "
+"Odoo access to your account and related data."
+msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:67
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:21
+msgid "Amazon redirects you to Odoo, with your account registered."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:23
 msgid ""
 "Once the account is registered, the marketplaces available to this account "
-"are synchronized and listed under the **Marketplaces** tab. If you wish, you"
-" can remove some items from the list of synchronized marketplaces to disable"
-" their synchronization."
-msgstr "在注册账户后，该账户可用的电商平台在**电商平台**选项卡下列出并同步。如需要，你可将某些项目从已同步电商平台列表中删除，以禁用同步。"
+"are synchronized and listed under the :guilabel:`Marketplaces` tab. If you "
+"wish, you can remove some items from the list of synchronized marketplaces "
+"to disable their synchronization."
+msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:72
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:28
 msgid "Match database products in Amazon"
 msgstr "与Amazon的数据库产品匹配"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:74
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:30
 msgid ""
 "When an Amazon order is synchronized, up to three sales order items are "
 "created in Odoo for each product sold on Amazon: one for the marketplace "
@@ -3773,7 +3849,7 @@ msgid ""
 msgstr ""
 "在Amazon订单同步后，Odoo将针对Amazon上售出的每件产品创造三个销售订单项目：分别针对电商平台产品、运费（如有）和礼品包装费（如有）。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:80
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:36
 msgid ""
 "The selection of a database product for a sales order item is done by "
 "matching its **internal reference** with the **SKU** for marketplace items, "
@@ -3782,7 +3858,7 @@ msgid ""
 msgstr ""
 "通过将**内部参考编号**与电商平台商品的**SKU**匹配，与运费的**发运代码**匹配，以及与包装费的**礼品包装**代码匹配，即可为销售订单项目选择数据库产品。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:84
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:40
 msgid ""
 "For marketplace products, pairings are saved as **Amazon Offers** which are "
 "listed under the **Offers** stat button on the account form. Offers are "
@@ -3793,7 +3869,7 @@ msgstr ""
 "对于电商平台产品，所有产品配对保存为**Amazon产品方案**，列在账户表单**产品方案**统计按钮下。当确定产品配对后自动创建产品方案，并用于之后的订单查找SKU。如果未找到匹配SKU的产品方案，则:ref:`使用内部参考编号"
 " <amazon/matching>`。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:90
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:46
 msgid ""
 "It is possible to force the pairing of a marketplace item with a specific "
 "product by changing either the product or the SKU of an offer. The offer can"
@@ -3803,7 +3879,7 @@ msgid ""
 msgstr ""
 "通过更改产品方案的产品或SKU，可强制将电商平台商品与特定产品配对。如为自动完成，则可手动创建产品方案。如你不使用内部参考编号作为SKU或用不同条件销售产品，这项功能非常有用。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:95
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:51
 msgid ""
 "If no database product with a matching internal reference is found for a "
 "given SKU or gift wrapping code, a default database product **Amazon Sale** "
@@ -3812,7 +3888,7 @@ msgid ""
 msgstr ""
 "如特定SKU或礼品包装代码未找到内部参考编号匹配的数据库产品，则使用默认数据库产品**Amazon销售**。它将使用默认产品**Amazon发货**和发运代码。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:56
 msgid ""
 "To modify the default products, activate the :ref:`developer mode "
 "<developer-mode>` and navigate to :menuselection:`Sales --> Configuration "
@@ -3821,11 +3897,11 @@ msgstr ""
 "要修改默认产品，请激活：ref：`开发者模式 <developer-mode>`并导航到：菜单选择:`销售 --> 配置 --> 设置 --> 连接器 "
 "--> 亚马逊同步 --> 默认产品`."
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:105
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:61
 msgid "Configure taxes of products"
 msgstr "配置产品税"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:107
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:63
 msgid ""
 "To allow for tax reporting of Amazon sales with Odoo, the taxes applied to "
 "the sales order items are those set on the product or determined by the "
@@ -3835,7 +3911,7 @@ msgid ""
 msgstr ""
 "如要允许在Odoo中对Amazon销售产品进行税务报告，则销售订单项目适用的税收设置在产品上或由财政状况决定。确保在Odoo的产品页面或按财政状况设置正确的税收，以免卖家中心和Odoo中的小计金额存在差异。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:113
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:69
 msgid ""
 "As Amazon does not necessarily apply the same taxes as those configured in "
 "Odoo, it may happen that order totals differ by a few cents from that on "
@@ -3844,83 +3920,72 @@ msgid ""
 msgstr ""
 "由于Amazon适用的税收不一定与Odoo的配置完全相同，某些订单的金额可能与卖家中心有细微差异。在与Odoo付款情况对账时，可冲销并解决这些差异。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:76
 msgid "Add an unsupported marketplace"
 msgstr "添加尚未受支持的市场"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:122
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:78
 msgid ""
-"Some Amazon Marketplaces, such as Amazon Brazil, are not officially "
-"supported by Odoo but might be compatible with your seller account. These "
-"marketplaces can be added manually should you wish to use them. See "
-":ref:`here <amazon/supported-marketplaces>` for the exhaustive list of "
-"natively supported marketplaces."
+"Some Amazon Marketplaces, such as Amazon Brazil, are not created by default "
+"as they are not officially supported by Odoo but might be compatible with "
+"your seller account. These marketplaces can be added manually should you "
+"wish to use them. See :ref:`here <amazon/supported-marketplaces>` for the "
+"exhaustive list of natively supported marketplaces."
 msgstr ""
-"Odoo并未正式支持某些亚马逊市场（例如亚马逊巴西），但可能与您的卖家帐户兼容。 如果您想使用这些市场，可以手动添加。 "
-"有关本地支持的市场的详尽列表，请参见  :ref:`此处<amazon / support-marketplaces>` 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:128
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:84
 msgid ""
 "To find out if a marketplace is eventually compatible, check the `Amazon "
-"Documentation "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_."
-" The marketplace must belong to the same region as that of your seller "
-"account."
+"Documentation <https://developer-docs.amazon.com/amazon-"
+"shipping/docs/seller-central-urls>`_. The marketplace must belong to the "
+"same region as that of your seller account."
 msgstr ""
-"要确定某个市场最终是否兼容，请查看`亚马逊文档 "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_"
-" 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:132
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:88
 msgid ""
-"To add a new marketplace, you must first activate the :ref:`developer mode "
-"<developer-mode>`."
+"To add a new marketplace, activate the :ref:`developer mode <developer-"
+"mode>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:134
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:90
 msgid ""
 "Once that is done, go to :menuselection:`Sales --> Configuration --> "
 "Settings --> Connectors --> Amazon Sync --> Amazon Marketplaces`."
 msgstr "完成后，转到 :menuselection:`销售 --> 设置 --> 设定 --> 连接器- -->亚马逊同步--> 亚马逊市场`。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:137
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:93
 msgid ""
-"From there, you can create a new marketplace record. You will need the "
-"Marketplace ID and Endpoint for your marketplace as described in the `Amazon"
-" Documentation "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_."
+"From there, create a new marketplace record. Enter the Marketplace ID and "
+"select the Amazon Region for your marketplace as described in the `Amazon "
+"Documentation for marketplace IDs <https://developer-docs.amazon.com/amazon-"
+"shipping/docs/marketplace-ids>`_, and the Seller Central URL as described in"
+" the `Amazon Documentation for seller central URLs <https://developer-"
+"docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_."
 msgstr ""
-"从那里，你可以创建一个新的市场记录。 如 `亚马逊文档 "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_"
-" 中所述，您将需要市场ID和市场的终端。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:141
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:99
 msgid ""
-"Set the name of the record to ``Amazon.<domain>`` to easily retrieve it (for"
-" instance: ``Amazon.se``). The **Code**, **Domain** and **API Identifier** "
-"fields should respectively hold the *Country Code*, *Amazon MWS Endpoint* "
-"and *MarketplaceId* values from the Amazon Documentation."
+"Set the name of the record to ``Amazon.<country code>`` to easily retrieve "
+"it (e.g.: ``Amazon.se``). The :guilabel:`API Identifier`, the "
+":guilabel:`Region` and the :guilabel:`Seller Central URL` fields should "
+"respectively hold the *MarketplaceId*, the selected Amazon region and the "
+"*Seller Central URL* values from the Amazon Documentation."
 msgstr ""
-"将记录的名称设置为 ``亚马逊<domain>`` 以方便地检索它  (例如: ``Amazon.se``). The **代码**, **域** 和 "
-"**API标识符”**  字段应分别保存亚马逊文档中的 *国家代码*, *亚马逊MWS端点* 和 *MarketplaceId* 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:145
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:104
 msgid ""
-"Once the marketplace is saved, you should then update the Amazon Account "
-"configuration by going to :menuselection:`Sales --> Configuration --> "
-"Settings --> Connectors --> Amazon Sync --> Amazon Accounts`, open the "
-"account on which you wish to use the new marketplace, go to the "
-"**Marketplaces** tab and click on **Update available marketplaces** (an "
-"animation should confirm the success of the operation). Newly added "
-"marketplaces are automatically added to the list of synchronized "
-"marketplaces. If the new marketplace is not added to the list, it means that"
-" it is either incompatible or unavailable for your seller account."
+"Once the marketplace is saved, update the Amazon Account configuration by "
+"going to :menuselection:`Sales --> Configuration --> Settings --> Connectors"
+" --> Amazon Sync --> Amazon Accounts`. Open the account on which you wish to"
+" use the new marketplace, go to the :guilabel:`Marketplaces` tab and click "
+"on :guilabel:`Update available marketplaces` (an animation should confirm "
+"the success of the operation). Newly added marketplaces are automatically "
+"added to the list of synchronized marketplaces. If the new marketplace is "
+"not added to the list, it means that it is either incompatible or "
+"unavailable for your seller account."
 msgstr ""
-"保存市场后，您应该通过以下方式更新亚马逊账户配置： :menuselection:`销售 --> 设置 --> 设定 --> 连接器 --> 亚马逊同步"
-" --> 亚马逊账户`, 在以下位置打开帐户並使用的新市场，请转到 **市场** 选项卡然后单击 "
-"**更新可用市场**（动画应确认操作成功）。新添加的市场将自动添加到同步市场列表中。 如果没有将新市场添加到列表中，则意味着您的卖方帐户不兼容或不可用。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:113
 msgid ""
 "As manually added marketplaces are not officially supported by Odoo, there "
 "is no guarantee that adding one as described above will work, nor can this "
@@ -3928,68 +3993,47 @@ msgid ""
 msgstr "由于Odoo并未正式支持手动添加的市场，因此无法保证可以如上所述添加一个市场，也无法保证在与Odoo支持人员联系时将其视为错误。"
 
 #: ../../content/applications/sales/sales/amazon_connector/update.rst:3
-msgid "Install the Amazon Connector Authentication Update"
-msgstr "安装亚马逊连接器身份验证更新"
+msgid "Install the Amazon Selling Partner API Update"
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/update.rst:5
 msgid ""
-"Starting July 2020, the Amazon Connector requires the use of a new "
-"authentication method that makes it easier for you to set up the Connector."
-msgstr "从2020年7月开始，亚马逊连接器要求使用新的身份验证方法，这使您更容易设置连接器。"
-
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:8
-msgid ""
-"Prior to the update, Odoo customers who wished to use the Amazon Connector "
-"had to apply to get developer credentials through Amazon, which was a "
-"painful and long process that could take weeks. This method of "
-"authentication is still technically possible, but Amazon will refuse to "
-"provide developer credentials for Odoo customers from July 2020 onwards and "
-"will deactivate such credentials for existing customers."
+"Starting July 2022, due to a change in Amazon's API, the Amazon Connector "
+"needs to be updated to continue to exchange information with Amazon. This "
+"also makes it easier for you to set up the Connector."
 msgstr ""
-"在更新之前，希望使用亚马逊连接器的Odoo客户必须申请通过亚马逊获取开发人员凭证，这是一个痛苦而漫长的过程，可能需要数周的时间。 "
-"从技术上讲，这种身份验证方法仍然可行，但是从2020年7月起，亚马逊将拒绝为Odoo客户提供开发人员凭证，并将为现有客户停用此类凭证。"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:14
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:10
 msgid ""
-"This documentation will help you install the update and use the new "
-"authentication flow."
-msgstr "本文档将帮助您安装更新并使用新的身份验证流程。"
+"If your Odoo database is created after the update was released, the update "
+"module is installed automatically. To check if this module is already "
+"installed, go to :guilabel:`Apps`, remove the ``Apps`` filter and search for"
+" ``Amazon``. If the module :guilabel:`Amazon/Selling Partner API Patch` is "
+"present and marked as installed, your Odoo database is already up-to-date "
+"and you can proceed with the :doc:`setup <setup>` step of the Amazon "
+"Connector."
+msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/update.rst:17
-msgid ""
-"Note that if your Odoo database was first created after the update was "
-"released, the update module is installed automatically. You can check if "
-"this module is already installed by going to the  **Apps** menu, removing "
-"the ``Apps`` search facet and search for ``amazon``. If the module "
-"**Amazon/Authentication Patch** is present and marked as installed, your "
-"Odoo database is already up-to-date and you can proceed with the :doc:`setup"
-" <setup>` step of the Amazon Connector."
-msgstr ""
-"请注意，如果您的Odoo数据库是在发布更新后第一次创建的，则更新模块将自动安装。 您可以转到 **应用** "
-"菜单，删除``应用``搜索页面并搜索``亚马逊``，以检查该模块是否已安装。 如果模块 "
-"**亚马逊/认证补丁*存在并且标记为已安装，则您的Odoo数据库已经是最新的，您可以继续执行 :doc:`setup <setup>` "
-"亚马逊连接器的步骤。"
-
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:25
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:63
 msgid "Update Odoo to the latest release"
 msgstr "将Odoo更新到最新版本"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:27
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:19
 msgid ""
 "The new authentication mechanism is made available through a new Odoo "
 "module; to be able to install it, you must make sure that your Odoo source "
 "code is up-to-date."
 msgstr "通过新的Odoo模块可以使用新的身份验证机制。 为了能够安装它，您必须确保您的Odoo源代码是最新的。"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:30
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:22
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:68
 msgid ""
 "If you use Odoo on Odoo.com or Odoo.sh platform, your code is already up-to-"
 "date and you can proceed to the next step."
 msgstr "如果您在Odoo.com或Odoo.sh平台上使用Odoo，则您的代码已经是最新的，您可以继续执行下一步。"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:33
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:25
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:70
 msgid ""
 "If you use Odoo with an on-premise setup or through a partner, then you must"
@@ -3998,60 +4042,54 @@ msgid ""
 "partner."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:39
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:31
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:75
 msgid "Update the list of available modules"
 msgstr "更新可用模块列表"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:41
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:33
 msgid ""
 "New modules must be *discovered* by your Odoo instance to be available in "
 "the **Apps** menu."
 msgstr "新模块必须由您的Odoo实例 *发现*，才能在 **应用** 菜单中使用。"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:44
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:36
 msgid ""
 "To do so, activate the :ref:`developer mode <developer-mode>`, and go to "
 ":menuselection:`Apps --> Update Apps List`. A wizard will ask for "
 "confirmation."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:48
-msgid "Install the Amazon/Authentication Patch"
-msgstr "安装亚马逊 /身份验证补丁"
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:40
+msgid "Install the Amazon/Selling Partner API Patch"
+msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:51
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:87
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:43
 msgid ""
 "You should never install new modules in your production database without "
-"testing them in a duplicate or staging environment. For Odoo.com customers, "
-"a duplicate database can be created from the database management page. For "
-"Odoo.sh users, you should use a staging or duplicate database. For on-"
-"premise users, you should use a staging environment - you should contact "
-"your integrating partner for more information regarding how to test a new "
-"module in your particular setup."
+"first testing them in a duplicate or staging environment. For Odoo.com "
+"customers, a duplicate database can be created from the database management "
+"page. For Odoo.sh users, you should use a staging or duplicate database. For"
+" on-premise users, you should use a staging environment---contact your "
+"integrating partner for more information regarding how to test a new module "
+"in your particular setup."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:58
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:49
 msgid ""
-"The module should now be available in your **Apps** menu. Remove the "
-"``Apps`` search facet and search for ``amazon``; the module "
-"**Amazon/Authentication Patch** should be available for installation. If you"
-" cannot find the module after having updated the list of available modules, "
-"it means your Odoo source code is not up-to-date; refer to step one of this "
-"page."
+"The module should now be available in your :guilabel:`Apps` menu. Remove the"
+" ``Apps`` filter and search for ``Amazon``; the module "
+":guilabel:`Amazon/Selling Partner API Patch` should be available for "
+"installation. If you cannot find the module after having updated the list of"
+" available modules, it means your Odoo source code is not up-to-date; refer "
+"to step one of this page."
 msgstr ""
-"该模块现在应该在 **应用** 菜单中可用。 删除``Apps`` 搜索页面，然后搜索``亚马逊``; **亚马逊/身份验证补丁** 模块应可用于安装。"
-" 如果在更新可用模块列表后找不到模块，则表明您的Odoo源代码不是最新的； 请参阅此页面的第一步。"
 
-#: ../../content/applications/sales/sales/amazon_connector/update.rst:67
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:54
 msgid ""
-"Once the module is installed, you will need to generate an Authorization "
-"Token in Amazon Seller Central and set it up on your Amazon Account in Odoo;"
-" this process is detailed in the :doc:`setup <setup>` page."
+"Once the module is installed, link your Amazon account by following the "
+"instructions on the :doc:`setup <setup>` page."
 msgstr ""
-"安装完模块后，您将需要在亚马逊卖家平台中生成一个授权令牌，并将其设置在您在Odoo中的亚马逊帐户中； 在 :doc:`设置<setup>` "
-"页面中详细介绍了此过程。"
 
 #: ../../content/applications/sales/sales/ebay_connector.rst:5
 msgid "eBay Connector"
@@ -4259,6 +4297,17 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:84
 msgid "Install the eBay Connector - Account Deletion update"
+msgstr ""
+
+#: ../../content/applications/sales/sales/ebay_connector/setup.rst:87
+msgid ""
+"You should never install new modules in your production database without "
+"testing them in a duplicate or staging environment. For Odoo.com customers, "
+"a duplicate database can be created from the database management page. For "
+"Odoo.sh users, you should use a staging or duplicate database. For on-"
+"premise users, you should use a staging environment - you should contact "
+"your integrating partner for more information regarding how to test a new "
+"module in your particular setup."
 msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:94
