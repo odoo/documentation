@@ -18,7 +18,6 @@
 # Wall, 2021
 # 敬雲 林 <chingyun@yuanchih-consult.com>, 2021
 # John An <johnxan@163.com>, 2021
-# Martin Trigaux, 2021
 # Jeffery CHEN <jeffery9@gmail.com>, 2021
 # LINYUN TONG <tong.linyun@elico-corp.com>, 2021
 # Manga Tsang <mts@odoo.com>, 2021
@@ -29,18 +28,19 @@
 # guohuadeng <guohuadeng@hotmail.com>, 2021
 # 稀饭~~ <wangwhai@qq.com>, 2021
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2021
-# Mandy Choy <mnc@odoo.com>, 2022
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2022
+# Martin Trigaux, 2022
 # diaojiaolou <124412206@qq.com>, 2022
+# Mandy Choy <mnc@odoo.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-04-08 13:20+0000\n"
+"POT-Creation-Date: 2022-09-01 15:09+0000\n"
 "PO-Revision-Date: 2020-09-22 14:41+0000\n"
-"Last-Translator: diaojiaolou <124412206@qq.com>, 2022\n"
+"Last-Translator: Mandy Choy <mnc@odoo.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -93,7 +93,6 @@ msgid ""
 msgstr "你可从CRM设置启用这一模式。它默认适用于你的所有销售渠道。但可从配置表单将它设置为适用于特定渠道。"
 
 #: ../../content/applications/sales/crm/acquire_leads/convert.rst:14
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:41
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:8
 #: ../../content/applications/sales/crm/optimize/gamification.rst:11
 #: ../../content/applications/sales/crm/optimize/outlook_extension.rst:27
@@ -103,8 +102,9 @@ msgstr "你可从CRM设置启用这一模式。它默认适用于你的所有销
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:12
 #: ../../content/applications/sales/point_of_sale/advanced_pricing_features/loyalty.rst:9
 #: ../../content/applications/sales/point_of_sale/overview/getting_started.rst:14
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:9
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:12
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:15
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:16
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:13
 #: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:14
 #: ../../content/applications/sales/point_of_sale/restaurant/split.rst:10
@@ -189,122 +189,162 @@ msgstr "以下是在列表视图下的具体操作方法。选择想要合并的
 msgid "It is also possible to merge more than 2 opportunities or leads."
 msgstr "你也可以合并2个以上商机或线索。"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_email.rst:3
-msgid "Generate leads/opportunities from emails"
-msgstr "通过电子邮件生成潜在客户/机会"
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:3
+msgid "Generate leads/opportunities"
+msgstr "产生潜在客户/机会"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_email.rst:5
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:5
 msgid ""
-"Automating the lead/opportunity generation will considerably improve your "
-"efficiency. By default, any email sent to *sales@database\\_domain.ext* will"
-" create an opportunity in the pipeline of the default sales channel."
+"Two key ways to generate new leads or opportunities for your business are "
+"through email aliases and website contact forms. Odoo automatically creates "
+"leads in your CRM whenever someone sends a message to a Sales Team email "
+"alias or fills out a contact form on your website."
 msgstr ""
-"自动化线索/商机生成将大大提高您的效率。 默认情况下，任何发送到   *sales@database\\_domain.ext*  "
-"的电子邮件都会在默认销售渠道中创造商机。"
+"为您的企业创造新潜在客户或机会的两种主要方法是通过电子邮件别名和网站联系表单。每当有人向销售团队电子邮件别名发送消息或在您的网站上填写联系表单时，Odoo都会在您的CRM中自动创建潜在客户。"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_email.rst:11
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:10
 msgid "Configure email aliases"
 msgstr "配置电子邮件别名"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_email.rst:13
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:12
 msgid ""
-"Each sales teams can have its own email alias, to generate "
-"leads/opportunities automatically assigned to it. It is useful if you manage"
-" several sales teams with specific business processes. You will find the "
-"configuration of sales teams under :menuselection:`Configuration --> Sales "
-"Teams`."
+"Each Sales Team can use its own unique email alias to generate "
+"leads/opportunities. Any email sent to a Sales Team's email alias will "
+"automatically create a lead (if leads are activated in your CRM settings) or"
+" an opportunity in the pipeline for that particular team. Configure custom "
+"email aliases on the configuration page for each Sales Team by navigating to"
+" :menuselection:`CRM --> Configuration --> Sales Teams`."
 msgstr ""
-"每个销售团队都可以有自己的电子邮件别名，以生成自动分配给它的线索/商机。如果你需要管理有特定业务流程的多个销售团队，这项功能非常有用。你可在 "
-":menuselection:`配置 --> 销售团队`下面找到销售团队配置的相关内容。"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:3
-msgid "Generate leads/opportunities from your website contact page"
-msgstr "从您的网站联系页面生成销售线索/商机"
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:23
+msgid "Use Contact Forms on your website"
+msgstr "在您的网站上使用联系表格"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:5
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:25
 msgid ""
-"Automating the lead/opportunity generation will considerably improve your "
-"efficiency. Any visitor using the contact form on your website will create a"
-" lead/opportunity in the pipeline."
-msgstr "自动生成销售线索/商机将大大提高您的效率。 任何使用您网站上的联系表的访问者都会在管道中创建销售线索/商机。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:10
-msgid "Use the contact us on your website"
-msgstr "使用您网站上的联系页面"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:12
-msgid "You should first go to your website app."
-msgstr "首先转到您的网站应用。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:14
-msgid "|image0|\\ |image1|"
-msgstr "|image0|\\ |image1|"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:16
-msgid ""
-"With the CRM app installed, you benefit from a ready-to-use contact form on "
-"your Odoo website that will generate leads/opportunities automatically."
-msgstr "通过已安装的CRM应用程序，你可通过Odoo网站上即时可用的联系人表单，自动生成线索/商机。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:23
-msgid ""
-"To change to a specific sales channel, go to :menuselection:`Website --> "
-"Configuration --> Settings` under *Communication* you will find the Contact "
-"Form info and where to change the *Sales Channel* or *Salesperson*."
+"By default, your website's *Contact Us* page displays Odoo's ready-to-use "
+"Contact Form. Whenever someone submits this form, a lead or an opportunity "
+"is generated in your database."
 msgstr ""
-"要更改为特定销售渠道，请转到 :menuselection:`网站 --> 配置 --> 设置`下 *通信* 您将找到联系表信息以及更改 *销售渠道* "
-"或 *销售人员* 的位置。"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:32
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:50
-msgid "Create a custom contact form"
-msgstr "创建自定义联系人表单"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:34
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:32
 msgid ""
-"You may want to know more from your visitor when they use the contact form "
-"to you will need to build a custom contact form on your website. These "
-"contact forms can generate multiple types of records in the system (emails, "
-"leads/opportunities, project tasks, helpdesk tickets, etc.)"
+"The Contact Form can be activated or deactivated at any time by going to "
+":menuselection:`Website --> Go to Website --> Customize --> Contact Form`."
+msgstr "联系人表单可以随时激活或停用，方法是转到：menuselection：`网站 --> 转到网站 --> 自定义 -->联系表单`。"
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:39
+msgid ""
+"When the Form is deactivated, the *Contact Us* page simply displays a button"
+" to email your company directly. Any email sent this way will generate a "
+"lead/opportunity."
 msgstr ""
-"当访问者使用联系人表单与你联系时，你可能需要向访问者了解更多情况，因此你需要在网站上创建自定义联系人表单。这些联系人表单可以在系统中生成多种类型的记录（邮件、线索/商机、项目任务、服务台工单等）"
 
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:43
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:46
 msgid ""
-"You will need to install the free *Form Builder* module, only available in "
-"Odoo Enterprise."
-msgstr "你需要安装免费的 *表单生成器* 模块，仅在Odoo企业版中可用。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:52
-msgid ""
-"First, go to the page where you want to put your contact form. In edit mode,"
-" drag the form builder onto the page, and you will be able to add all the "
-"fields you wish."
-msgstr "首先，进入你希望设置联系人表单的页面。在编辑模式下，将表单生成器拖动到该页面，然后就可以添加需要的所有字段。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:59
-msgid ""
-"By default, any new contact form will send an email. You can switch to "
-"lead/opportunity generation in *Change Form Parameters*."
-msgstr "在默认情况下，所有新的联系人表单都会发送邮件，你可以在 *更改表单参数* 中切换到线索/商机生成页面。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:63
-msgid ""
-"If the same visitor uses the contact form twice, the second entry will be "
-"added to the first lead/opportunity in the chatter."
-msgstr "如果同一访问者使用联系人表单两次，第二次输入的内容将添加到沟通栏的首个线索中。"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:67
-msgid "Generate leads instead of opportunities"
-msgstr "生成销售线索而不是商机"
-
-#: ../../content/applications/sales/crm/acquire_leads/generate_from_website.rst:69
-msgid ""
-"When using a contact form, you should use a qualification step before "
-"assigning the form to the right sales people. To do so, activate *Leads* in "
-"CRM settings and refer to :doc:`convert`."
+"Choose which Sales Team or salesperson is automatically assigned to the "
+"leads/opportunities created from the Contact Form by going to "
+":menuselection:`Website --> Configuration --> Settings --> Communication`."
 msgstr ""
-"在使用联系人表单时，在将表单分配给合适的销售人员之前，需要有一个资格鉴定步骤。如要进行此项操作，在CRM设置中启用 *线索* 并参见:doc:`转换`。"
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:55
+msgid "Customize Contact Forms"
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:57
+msgid ""
+"Contact Forms can be customized for the specific information your team "
+"needs, using the free *Form Builder* module."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:60
+msgid ""
+"The *Form Builder* module is installed automatically when a Form element is "
+"added to a web page via the Website Builder. It can also be installed "
+"manually from the :guilabel:`Apps` page."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:68
+msgid ""
+"Forms can be created from scratch to serve a wide variety of purposes. "
+"However, Odoo's default *Contact Us* page is designed to fit most users' "
+"needs. Start with the default form and modify from there."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:73
+msgid "Edit Contact Form fields"
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:75
+msgid ""
+"In Edit mode on your website, click on any field to start editing it. The "
+"following information can be edited for each field on the Contact Form:"
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:78
+msgid ""
+":guilabel:`Type`: Choose a custom field option or an existing field. "
+"Examples include phone, file upload, language, etc."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:80
+msgid ""
+":guilabel:`Input Type`: Determine the type of entry customers should input. "
+"Available options are text,email, telephone, and URL."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:82
+msgid ""
+":guilabel:`Input Placeholder`: Type in an example to guide users how to "
+"input information where formatting is important, such as a phone number or "
+"email address."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:84
+msgid ""
+":guilabel:`Label Name`: Type in the display name to show users what "
+"information is needed from them."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:86
+msgid ""
+":guilabel:`Label Position`: Choose the way the label is aligned with the "
+"rest of the form. The label can be hidden, above the field, to the far left "
+"of the field, or right adjusted and closer to the field."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:89
+msgid ""
+":guilabel:`Required`: Toggle this option for information that you absolutely"
+" need entered."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:90
+msgid ""
+":guilabel:`Hidden`: Toggle this option to hide the field without deleting "
+"it."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:91
+msgid ""
+":guilabel:`Shown on Mobile`: Toggle this option to show the field to users "
+"on mobile devices."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:97
+msgid ""
+"By default, when a Form is submitted, it sends you an email with the "
+"customer's inputted information. To have it automatically generate a "
+"lead/opportunity instead, edit the Form and select :guilabel:`Create an "
+"Opportunity` as the Action."
+msgstr ""
+
+#: ../../content/applications/sales/crm/acquire_leads/generate_leads.rst:102
+msgid ""
+"If leads are activated in your CRM settings, selecting :guilabel:`Create an "
+"Opportunity` generates a lead instead. To learn more about activating leads "
+"in the CRM settings, head over to :doc:`convert`."
+msgstr ""
 
 #: ../../content/applications/sales/crm/acquire_leads/lead_mining.rst:3
 msgid "Lead mining"
@@ -1159,71 +1199,88 @@ msgid ":doc:`../performance/win_loss`"
 msgstr ":doc:`../performance/win_loss`"
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:3
-msgid "Manage multiple sales teams"
-msgstr "管理多个销售团队"
+msgid "Multiple sales teams"
+msgstr "多个销售团队"
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:5
 msgid ""
-"In Odoo, you can manage several sales teams, departments or channels with "
-"specific sales processes. To do so, we use the concept of *Sales Channel*."
-msgstr "在 Odoo 中，您可以管理多个销售团队、部门或具有特定销售流程的渠道。为此，我们使用 *销售渠道*  的概念。"
+"Odoo lets you manage several sales teams, departments, or channels, each "
+"with their own unique sales processes, using *Sales Teams*."
+msgstr "Odoo允许您使用 *销售团队* 管理多个销售团队，部门或渠道，每个团队都有自己独特的销售流程。"
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:10
-msgid "Create a new sales channel"
-msgstr "创建新的销售渠道"
+msgid "Create a new Sales Team"
+msgstr "创建新的销售团队"
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:12
 msgid ""
-"To create a new *Sales Channel*, go to :menuselection:`Configuration --> "
-"Sales Channels`."
-msgstr "要创建新的 *销售渠道* ，请转到 :menuselection:`配置 --> 销售渠道`。"
+"To create a new Sales Team, go to :menuselection:`CRM --> Configuration --> "
+"Sales Teams` then click **Create**."
+msgstr "要创建新的销售团队，请转到：菜单选择:menuselection:`CRM --> 配置 --> 销售团队`，然后单击 **创建** 。"
 
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:14
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:15
 msgid ""
-"There you can set an email alias to it. Every message sent to that email "
-"address will create a lead/opportunity."
-msgstr "在那里，您可以设置一个电子邮件别名。发送到该电子邮件地址的每封邮件都将创建潜在顾客/商机。"
-
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:21
-msgid "Add members to your sales channel"
-msgstr "添加成员到您的销售渠道"
-
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:23
-msgid ""
-"You can add members to any channel; that way those members will see the "
-"pipeline structure of the sales channel when opening it. Any "
-"lead/opportunity assigned to them will link to the sales channel. Therefore,"
-" you can only be a member of one channel."
+"On the creation page, set an *Email Alias* to automatically generate a "
+"lead/opportunity for this Sales Team every time a message is sent to that "
+"unique email address. You can also choose whether to accept emails from "
+"*Everyone*, *Authenticated Partners*, or *Followers Only*."
 msgstr ""
-"您可以将成员添加到任何频道; "
-"这样，这些成员在打开销售渠道时将看到销售渠道的管道结构。分配给他们的任何销售线索/商机都将链接到销售渠道。因此，您只能是一个通道的成员。"
+
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:19
+msgid ""
+"Set a *Domain* to assign leads/opportunities to this Sales Team based on "
+"specific filters, such as country, language, or campaign. Set an *Invoicing "
+"Target* if this team has specific monthly revenue goals."
+msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:28
-msgid "This will ease the process review of the team manager."
-msgstr "这将简化团队经理的流程评审。"
+msgid "Add members to a Sales Team"
+msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:33
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:30
 msgid ""
-"If you now filter on this specific channel in your pipeline, you will find "
-"all of its opportunities."
-msgstr "如果现在筛选管道中的此特定通道，您将找到其所有商机。"
+"To add team members, click **Add** under the Assignment tab when editing the"
+" Sales Team's configuration page. Select a salesperson from the dropdown "
+"menu or create new salesperson. Set a maximum number of leads that can be "
+"assigned to this salesperson in a 30-day period to ensure that they do not "
+"overwork."
+msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:40
-msgid "Sales channel dashboard"
-msgstr "销售渠道仪表板"
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:39
+msgid ""
+"One person can be added as a team member or Team Leader to multiple Sales "
+"Teams, allowing them to access all of the pipelines that they need to."
+msgstr ""
 
 #: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:42
-msgid ""
-"To see the operations and results of any sales channel at a glance, the "
-"sales manager also has access to the *Sales Channel Dashboard* under "
-"*Reporting*."
-msgstr "要一目了然地查看任何销售渠道的运营和结果，销售经理还可以访问 *报告*  下的 *销售渠道仪表板* 。"
+msgid "Sales Team dashboard"
+msgstr ""
 
-#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:46
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:44
 msgid ""
-"It is shared with the whole ecosystem so every revenue stream is included in"
-" it: Sales, eCommerce, PoS, etc."
-msgstr "它与整个生态系统共享，因此每个收入流都包含在其中：销售、电子商务、PoS 等。"
+"To view the Sales Team dashboard, go to :menuselection:`CRM --> "
+"Configuration --> Sales Teams`. Any teams you are a part of will appear as "
+"dashboard tiles."
+msgstr ""
+
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:47
+msgid ""
+"Each tile gives an overview of the Sales Team's open opportunities, "
+"quotations, sales orders, and expected revenue, as well as a bar graph of "
+"new opportunities per week and an invoicing progress bar."
+msgstr ""
+
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:55
+msgid ""
+"Click on the three dots in the corner of a tile to open a navigational menu "
+"that lets you quickly view documents or reports, create new quotations or "
+"opportunities, pick a color for this team, or access its configuration page."
+msgstr ""
+
+#: ../../content/applications/sales/crm/pipeline/multi_sales_team.rst:63
+msgid ""
+"Click on the **Pipeline** button to go directly to that team's CRM pipeline."
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads.rst:5
 msgid "Assign and track leads"
@@ -1235,99 +1292,91 @@ msgstr "根据评分分配销售线索"
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:5
 msgid ""
-"With *Leads Scoring* you can automatically rank your leads based on selected"
-" criteria."
+"*Lead Scoring* lets you rank and prioritize leads based on selected "
+"criteria. A higher score indicates that a lead is more likely to bring value"
+" to your company."
 msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:8
 msgid ""
-"For example you could score customers from your country higher or the ones "
-"that visited specific pages on your website."
-msgstr "例如，您可以对您所在国家/地区的客户或访问您网站上特定网页的客户进行评分。"
+"For example, if customers from Canada tend to be more likely to purchase "
+"your products, you can assign them a higher score than customers from other "
+"countries."
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:14
 msgid ""
-"To use scoring, install the free module *Lead Scoring* under your *Apps* "
-"page (only available in Odoo Enterprise)."
-msgstr "要使用评分，请在 *应用* 页面下安装免费模块 *销售线索* （仅在 Odoo 企业版中提供）。"
+"To use scoring, go to :menuselection:`Apps`, remove the :guilabel:`Apps` "
+"filter, search for :guilabel:`Lead Scoring` and then install the module."
+msgstr ""
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:21
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:22
 msgid "Create scoring rules"
 msgstr "生成评分规则"
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:23
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:24
 msgid ""
-"You now have a new tab in your *CRM* app called *Leads Management* where you"
-" can manage your scoring rules."
-msgstr "现在，您的 *CRM* 应用中有一个名为 *销售线索管理* 的新选项卡，您可以在其中管理评分规则。"
+"To manage scoring rules, go to :menuselection:`CRM --> Leads --> Scoring "
+"Rules`."
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:26
 msgid ""
-"Here's an example for a Canadian lead, you can modify for whatever criteria "
-"you wish to score your leads on. You can add as many criteria as you wish."
+"Customize your rules to fit the needs of your business, and add as many "
+"criteria as you want."
 msgstr ""
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:33
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:32
 msgid ""
-"Every hour every lead without a score will be automatically scanned and "
-"assigned their right score according to your scoring rules."
-msgstr "每小时没有得分的一个线索都会被自动扫描，并根据您的评分规则分配正确的分数。"
+"Every hour, Odoo automatically assigns scores to new leads according to your"
+" configured rules."
+msgstr ""
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:40
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:39
 msgid "Assign leads"
 msgstr "分配销售线索"
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:42
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:41
 msgid ""
-"Once the scores computed, leads can be assigned to specific teams using the "
-"same domain mechanism. To do so go to :menuselection:`CRM --> Leads "
-"Management --> Team Assignation` and apply a specific domain on each team. "
-"This domain can include scores."
+"Odoo can also assign leads to specific teams based on configured rules. To "
+"configure assignment rules, go to the individual Sales Team's configuration "
+"page via :menuselection:`CRM --> Leads --> Team Assignment` or "
+":menuselection:`CRM --> Configuration --> Sales Teams`, and apply a specific"
+" Domain to each team. The Domain can include lead scores."
 msgstr ""
-"计算分数后，可以使用相同的域机制将销售线索分配给特定团队。为此，请转到菜单选择 :menuselection:`CRM --> 销售线索管理 --> "
-"团队分配'，并在每个团队中应用特定域。此域可以包含分数。"
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:49
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:50
 msgid ""
-"Further on, you can assign to a specific vendor in the team with an even "
-"more refined domain."
-msgstr "此外，您可以向团队中的特定供应商分配更精细的域。"
+"Assign leads to specific salespeople using further refined Domains at "
+":menuselection:`CRM --> Leads --> Leads Assignment`."
+msgstr ""
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:52
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:57
 msgid ""
-"To do so go to :menuselection:`CRM --> Leads Management --> Leads "
-"Assignation`."
-msgstr "要执行此操作，请转到菜单选择:menuselection:`CRM -->销售线索管理 --> 分配销售线索`。"
+"Odoo automatically assigns new leads to teams/salespeople once per day."
+msgstr ""
 
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:58
-msgid ""
-"The team & leads assignation will assign the unassigned leads once a day."
-msgstr "团队和销售线索分配将每天调派一次未分配的销售线索。"
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:60
+msgid "Evaluate and use the unassigned leads"
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:62
-msgid "Evaluate & use the unassigned leads"
-msgstr "评估和使用未分配的销售线索"
+msgid ""
+"Not all leads will fall into your set Domains and get assigned automatically"
+" by Odoo."
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:64
 msgid ""
-"Once your scoring rules are in place you will most likely still have some "
-"unassigned leads. Some of them could still lead to an opportunity so it is "
-"useful to do something with them."
-msgstr "一旦你的评分规则到位，你很可能仍然有一些未分配的销售线索。其中一些仍然可能成为机会，因此保留他们在这里是有用的。"
-
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:68
-msgid ""
-"In your leads page you can place a filter to find your unassigned leads."
-msgstr "在销售线索页面中，您可以放置一个筛选器来查找未分配的销售线索。"
-
-#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:73
-msgid ""
-"Why not using :menuselection:`Email Marketing` or :menuselection:`Marketing "
-"Automation` apps to send a mass email to them? You can also easily find such"
-" unassigned leads from there."
+"To view your unassigned leads, go to :menuselection:`CRM --> Leads --> "
+"Leads` and select the Unassigned filter."
 msgstr ""
-"为什么不使用: :menuselection:`邮件营销' 或 :menuselection:`营销自动化` "
-"应用程序向他们发送促销电邮？您还可以从那里轻松找到此类未分配的销售线索。"
+
+#: ../../content/applications/sales/crm/track_leads/lead_scoring.rst:72
+msgid ""
+"You can also find unassigned leads and create re-engagement campaigns using "
+"the :guilabel:`Email Marketing` or :guilabel:`Marketing Automation` apps."
+msgstr ""
 
 #: ../../content/applications/sales/crm/track_leads/prospect_visits.rst:3
 msgid "Track your prospects visits"
@@ -2056,32 +2105,31 @@ msgstr "单击：菜单选择：“连接不安全-->证书无效”。"
 
 #: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:71
 msgid ""
-"Go to the *Details* tab and click on **Copy to file**. Select X.509 in base "
-"64 and save it."
+"Go to the :guilabel:`Details` tab and click on :guilabel:`Export` Select "
+"X.509 in base 64 and save it."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:75
+#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:74
 msgid "Import the Self-signed certificate to Windows (Using Chrome)"
 msgstr "将自签名证书导入Windows（使用Chrome）"
 
-#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:77
+#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:76
 msgid ""
 "In your Chrome browser, go to :menuselection:`Settings --> Privacy and "
 "security --> Security --> Manage certificates`"
 msgstr "在Chrome浏览器中，转至：菜单选择：`设置-->隐私和安全-->安全-->管理证书`"
 
-#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:80
+#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:79
 msgid ""
-"Go to the *Trusted Root Certification Authorities* tab and click on "
-"**Import** and select your previous file. Accept all warnings and restart "
-"your browser."
+"Go to the :guilabel:`Authorities` tab and click on :guilabel:`Import` and "
+"select your previous file. Accept all warnings and restart your browser."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:84
+#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:83
 msgid "Import the Self-signed certificate to your Android device"
 msgstr "将自签名证书导入Android设备"
 
-#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:86
+#: ../../content/applications/sales/point_of_sale/overview/epos_ssc.rst:85
 msgid ""
 "On your Android device, open the settings and search for *certificate*. "
 "Then, click on **Certificate AC** (Install from device storage), and select "
@@ -2343,9 +2391,144 @@ msgstr "完成后，点击保存按钮。然后，你在未来的交易中就可
 msgid "Payment Terminals"
 msgstr "付款终端"
 
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:3
+msgid "Adyen"
+msgstr "Adyen"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:5
+msgid ""
+"Connecting an **Adyen payment terminal** allows you to offer a fluid payment"
+" flow to your customers and ease the work of your cashiers."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:11
+msgid ""
+"Start by creating your Adyen account on `Adyen's website "
+"<https://www.adyen.com/>`_. Then, board your terminal following the steps "
+"described on your terminal's screen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:15
+msgid ""
+"`Adyen Docs - Payment terminal quickstart guides "
+"<https://docs.adyen.com/point-of-sale/user-manuals>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:19
+#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:36
+msgid "Configure the payment method"
+msgstr "配置支付方式"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:21
+msgid ""
+"First, go to :menuselection:`Point of Sale --> Configuration --> Settings "
+"--> Payment Terminals`, and enable :guilabel:`Adyen`. Then, go to "
+":menuselection:`Configuration --> Payment Methods` and create a new payment "
+"method. Select :guilabel:`Adyen` in the :guilabel:`Use a Payment Terminal` "
+"field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:27
+msgid ""
+"The selected journal **must** be a bank journal for the :guilabel:`Use a "
+"payment terminal` field to appear."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:30
+msgid ""
+"Finally, fill the mandatory fields with an :guilabel:`Adyen API key`, and an"
+" :guilabel:`Adyen Terminal Identifier`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:34
+msgid "Generate an Adyen API key"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:36
+msgid ""
+"The **Adyen API key** is a key used to authenticate your requests. To "
+"generate an API key, go to your **Adyen account**."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:39
+msgid ""
+"Then, go to :menuselection:`Developers --> API credentials`. Create a new "
+"credential or click on an existing one."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:42
+msgid ""
+"Click on :guilabel:`Generate an API key` and copy-paste that key onto the "
+"Odoo mandatory field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:45
+msgid ""
+"`Adyen Docs - API credentials <https://docs.adyen.com/development-"
+"resources/api-credentials#generate-api-key>`_."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:49
+msgid "Locate the Adyen terminal identifier"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:51
+msgid ""
+"The **Adyen Terminal Identifier** is your terminal's serial number, which is"
+" used to identify the hardware."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:54
+msgid ""
+"To find this number, go to your **Adyen account**. Then, go to "
+":menuselection:`Point of Sale --> Terminals`, select the terminal to link, "
+"and copy-paste its serial number onto the Odoo mandatory field."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:59
+msgid "Add a new payment method"
+msgstr "新增一个付款方式"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:61
+msgid ""
+"To add a new **payment method** to a point of sale, go to "
+":menuselection:`Point of Sale --> Configuration --> Point of Sale`. Then, "
+"select the POS and go to :menuselection:`Payments --> Payment Methods`, and "
+"add your new method for Adyen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:66
+#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:53
+msgid "Pay with a payment terminal"
+msgstr "用支付终端付款"
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:68
+msgid ""
+"When processing a payment, select :guilabel:`Adyen` as the payment method. "
+"Check the amount and click on :guilabel:`Send`. Once the payment is "
+"successful, the status changes to :guilabel:`Payment Successful`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:0
+msgid ""
+"In case of connexion issues between Odoo and the payment terminal, force the"
+" payment by clicking on :guilabel:`Force Done`, which allows you to validate"
+" the order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:0
+msgid ""
+"This option is only available after receiving an error message informing you"
+" that the connection failed."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:77
+msgid "To cancel the payment request, click on :guilabel:`cancel`."
+msgstr ""
+
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:3
-msgid "Connect an Ingenico Payment Terminal to your PoS"
-msgstr "将Ingenico支付终端连接到你的PoS"
+msgid "Ingenico"
+msgstr "Ingenico "
 
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:5
 msgid ""
@@ -2391,10 +2574,6 @@ msgid ""
 msgstr ""
 "现在，单击连接更改和TCP/IP。键入*物联网盒*的IP（可以在物联网盒的表单视图中找到）。然后，输入9000作为端口。终端将重新启动。完成后，在Odoo中填写*物联网盒*表格，并验证终端是否已找到。"
 
-#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:36
-msgid "Configure the payment method"
-msgstr "配置支付方式"
-
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:38
 msgid ""
 "First, go in the general settings of the POS app, and activate the Ingenico "
@@ -2410,10 +2589,6 @@ msgid ""
 msgstr ""
 "回到 :menuselection:`POS --> 配置 --> "
 "POS`，进入支付版块并查看你的支付方式。为Ingenico创建新支付方式，选择支付终端选项Ingenico，并选择你的支付终端设备。"
-
-#: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:53
-msgid "Pay with a payment terminal"
-msgstr "用支付终端付款"
 
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:55
 msgid ""
@@ -2451,8 +2626,8 @@ msgid ""
 msgstr "付款处理完毕后，在支付记录上可以看到使用的卡片类型和交易ID。"
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:3
-msgid "Connect a SIX Payment Terminal to your PoS"
-msgstr "将SIX支付终端连接到您的PoS"
+msgid "SIX"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:5
 msgid ""
@@ -2462,6 +2637,12 @@ msgstr "连接SIX付款终端可让您向客户提供流畅的付款流程，并
 
 #: ../../content/applications/sales/point_of_sale/payment/six.rst:9
 msgid ""
+"Starting in July 2022, it will **not** be possible anymore to connect and "
+"use a Six payment terminal in PoS."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:11
+msgid ""
 "Even though Worldline has recently acquired SIX Payment Services and both "
 "companies use Yomani payment terminals, the firmware they run is different. "
 "Terminals received from Worldline are therefore not compatible with this "
@@ -2470,57 +2651,57 @@ msgstr ""
 "尽管Worldline最近已经收购了SIX 付款服务，并且两家公司都使用Yomani付款终端，但是它们运行的固件是不同的。 "
 "因此，从Worldline收到的终端与此集成不兼容。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:18
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:19
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:16
 msgid "Configure the Payment Method"
 msgstr "配置支付方式"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:20
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:21
 msgid ""
-"First, make sure that the POS Six module is installed. For this, go to "
-"*Apps*, remove the \"Apps\" filter and search for \"POS Six\"."
-msgstr "首先，确保已安装POS Six模块。 为此，转到 *应用程式* ，删除“应用程式”过滤器，然后搜索“ POS Six”。"
+"First, make sure that the :guilabel:`POS Six` module is installed. For this,"
+" go to :guilabel:`Apps`, remove the :guilabel:`Apps` filter, and search for "
+"*POS Six*."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:26
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:28
 msgid ""
 "Back in :menuselection:`Point of Sale --> Configuration --> Payment "
-"Methods`, Create a new payment method for SIX, select the payment terminal "
-"option \"SIX without IoT Box\", and enter your payment terminal IP address."
+"Methods`, create a new payment method for SIX, select the payment terminal "
+"option :guilabel:`SIX`, and enter the payment terminal IP address."
 msgstr ""
-"返回 :menuselection:` POS --> 配置 --> "
-"付款方式`，为SIX创建新的付款方式，选择付款终端选项“没有物联网盒子的SIX”，然后输入您的付款终端IP地址。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:34
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:37
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:40
 msgid "Pay with a Payment Terminal"
 msgstr "用支付终端付款"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:36
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:39
 msgid ""
-"In your PoS interface, at the moment of the payment, select a payment method"
-" using a payment terminal. Verify that the amount in the tendered column is "
-"the one that has to be sent to the payment terminal and click on *Send*. If "
-"you want to cancel the payment request, click on cancel."
+"In the :abbr:`PoS (Point of Sale)` interface, at the moment of the payment, "
+"select a payment method using a payment terminal. Verify that the amount in "
+"the tendered column is the one that has to be sent to the payment terminal "
+"and click on :guilabel:`Send`. To cancel the payment request, click on "
+":guilabel:`Cancel`."
 msgstr ""
-"在*PoS界面*，当处理付款时，选择使用支付终端的*支付方式*。检查栏目中的金额是否为须发送到付款终端的金额并单击*发送*。如你想要取消付款请求，点击取消。"
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:44
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:48
 msgid ""
-"When the payment is done, the status will change to *Payment Successful*. "
-"You can always reverse the last transaction by clicking on *Reverse*."
-msgstr "支付完成后，状态将变为*付款成功*。你可随时点击*逆转*，逆转最近一项操作。"
+"When the payment is done, the status will change to :guilabel:`Payment "
+"Successful`. If needed, reverse the last transaction by clicking on "
+":guilabel:`Reverse`."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment/six.rst:51
+#: ../../content/applications/sales/point_of_sale/payment/six.rst:55
 msgid ""
 "If there is any issue with the payment terminal, you can still force the "
-"payment using the *Force Done*. This will allow you to validate the order in"
-" Odoo even if the connection between the terminal and Odoo encounters "
-"issues."
+"payment using the :guilabel:`Force Done` button. This will allow you to "
+"validate the order in Odoo even if there are connection issues between the "
+"payment terminal and Odoo."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:3
-msgid "Connect a Vantiv Payment Terminal to your PoS"
-msgstr "将Vantiv支付终端接入你的PoS"
+msgid "Vantiv"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:5
 msgid ""
@@ -3778,12 +3959,14 @@ msgid "Amazon.nl"
 msgstr "Amazon.nl"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:88
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:108
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:117
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:59
 msgid ":doc:`setup`"
 msgstr ":doc:`setup`"
 
 #: ../../content/applications/sales/sales/amazon_connector/features.rst:89
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:160
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:119
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:60
 msgid ":doc:`manage`"
 msgstr ":doc:`manage`"
 
@@ -3871,15 +4054,36 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/amazon_connector/manage.rst:48
 msgid ""
+"If your chosen carrier isn't one supported by Odoo, you can still create a "
+"carrier bearing its name (e.g. create a carrier named `Colissimo`). This "
+"name is case insensitive, but be careful about typos, as Amazon won't "
+"recognize them."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:51
+msgid ""
+"Create a delivery carrier named `Self Delivery` to inform Amazon that you "
+"make your own deliveries. You still have to enter a tracking reference."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:53
+msgid ""
+"Keep in mind that the customer is notified by email about the delivery, and "
+"the carrier and tracking reference are displayed in the email to the "
+"customer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:57
+msgid ""
 ":doc:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`"
 msgstr ""
 ":文档:`../../../inventory_and_mrp/inventory/shipping/setup/third_party_shipper`"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:51
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:60
 msgid "Follow deliveries in FBA"
 msgstr "在FBA中跟进发货"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:53
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:62
 msgid ""
 "When a **FBA** (Fulfilled by Amazon) order is synchronized in Odoo, a stock "
 "move is recorded for each sales order item so that it is saved in your "
@@ -3893,14 +4097,14 @@ msgstr ""
 ":menuselection:`库存 --> 报告 --> "
 "产品移动`下找到相关记录。他们在**Amazon**的特定库位取货。这个库位代表你在Amazon仓库中的库存，并允许你在FBA程序下管理产品库存。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:60
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:69
 msgid ""
 "To follow your Amazon (FBA) stock in Odoo, you can make an inventory "
 "adjustment after replenishing it. You can also trigger an automated "
 "replenishment from reordering rules on the Amazon location."
 msgstr "如要在Odoo中追踪你的Amazon (FBA)库存，你可在补货后进行库存调整。你还可通过Amazon库位的重订货规则触发自动补货。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:65
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:74
 msgid ""
 "The Amazon location is configurable by Amazon account managed in Odoo. All "
 "accounts of the same company use the same location by default. It is however"
@@ -3913,11 +4117,11 @@ msgid ""
 msgstr ""
 "Amazon库位可通过Odoo管理的Amazon账户进行配置。同一家公司的所有账户默认使用同一库位。但是，你可以按电商平台追踪库存。首先，从已同步的电商平台列表中删除想要单独追踪库存的电商平台。然后，为该账户创建另一个注册账户，并删除所有其他电商平台。最后，为第二个注册账户分配其他库位。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:73
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:82
 msgid "Issue invoices and register payments"
 msgstr "开发票和登记付款"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:75
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:84
 msgid ""
 "You can issue invoices for Amazon orders in Odoo. Click **Create Invoice** "
 "in the sales order to do so. You can also do it in batch from the list view "
@@ -3925,13 +4129,13 @@ msgid ""
 msgstr ""
 "你可以在Odoo中为Amazon订单开发票。在销售订单中点击**创建发票**。你也可从订单列表视图中批量创建发票。然后，确认发票并发送给客户。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:80
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:89
 msgid ""
 "To display only Amazon-related orders on the list view, you can filter "
 "orders based on the sales team."
 msgstr "如要在列表视图中只显示与Amazon相关的订单，可以按销售团队筛选订单。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:83
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
 msgid ""
 "As the customer has paid Amazon as an intermediary, you should register "
 "invoice payments in a payment journal dedicated to Amazon (e.g. Amazon "
@@ -3943,11 +4147,11 @@ msgid ""
 msgstr ""
 "由于Amazon作为中间方已收到客户付款，你可以在Amazon专用的付款日记账中登记发票付款情况（例如，为Amazon付款设立专门的中间方账户）。对于从Amazon收到的供应商账单也可进行同样操作，并专门用于记录佣金。当你的银行账户在月底收到余额并在Odoo中录入银行对账单时，你只需按收到的金额录入Amazon中间方账户。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:90
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:99
 msgid "Follow your Amazon sales in sales reporting"
 msgstr "在销售报告中追踪你的Amazon销售情况"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:92
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:101
 msgid ""
 "As a sales team is set on your account under the tab **Order Follow-up**, "
 "this helps you give quick glances at the figures in just a few clicks in "
@@ -3956,13 +4160,13 @@ msgid ""
 msgstr ""
 "由于销售团队设置在你的账户下**订单跟进**选项卡中，你只需要在销售报告中点击数次即可快速查看所有数据。默认情况下，你的账户销售团队在公司所有账户之间共享。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:96
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:105
 msgid ""
 "If you wish, you can change the sales team on your account for another to "
 "perform a separate reporting for the sales of this account."
 msgstr "如有需要，你可将账户的销售团队更改为另一个，并对该账户的销售情况进行单独报告。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:109
 msgid ""
 "It is also possible to perform reporting on a per-marketplace basis in a "
 "similar fashion. First, remove the marketplace you wish to track separately "
@@ -3973,8 +4177,9 @@ msgid ""
 msgstr ""
 "你也可以类似方式对每个电商平台进行报告。首先，从已同步的电商平台列表中删除想要单独追踪库存的电商平台。然后，为该客户创建另一个注册账户，并删除所有其他电商平台。最后，为注册的两个账户其中一个分配其他销售团队。"
 
-#: ../../content/applications/sales/sales/amazon_connector/manage.rst:107
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:159
+#: ../../content/applications/sales/sales/amazon_connector/manage.rst:116
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:118
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:58
 msgid ":doc:`features`"
 msgstr ":doc:`features`"
 
@@ -3983,128 +4188,49 @@ msgid "Configure Amazon Connector in Odoo"
 msgstr "在Odoo中配置Amazon连接器"
 
 #: ../../content/applications/sales/sales/amazon_connector/setup.rst:6
-msgid "Generate an Authorization Token in Seller Central"
-msgstr "在卖方中心生成授权令牌"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:10
-msgid ""
-"The Amazon Connector uses an Authorization Token that allows Odoo to fetch "
-"data from your Amazon Seller Central account. This token can be obtained "
-"directly through Seller Central in a few clicks and needs to be set up in "
-"your Odoo database configuration."
-msgstr ""
-"亚马逊连接器使用授权令牌，该令牌允许Odoo从您的亚马逊卖家平台帐户中获取数据。 "
-"只需单击几下即可直接通过卖方中心获取此令牌，并且需要在Odoo数据库配置中进行设置。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:14
-msgid ""
-"Connect to your Seller Central account for the marketplace you initially "
-"signed up (e.g. if you created your account on Amazon Germany, go to `Amazon"
-" Seller Central for Germany <https://sellercentral.amazon.de>`_) with an "
-"administrator account."
-msgstr ""
-"使用管理员帐户连接到您最初注册的市场的卖方中心帐户（例如，如果您在亚马逊德国上创建了帐户，请转到`德国的亚马逊卖方中心<https://sellercentral.amazon.de>`_）"
-" 。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:19
-msgid ""
-"You might need to use the *main* (or first) administrator account and not "
-"one added subsequently."
-msgstr "您可能需要使用 *主要的*（或第一个）管理员帐户，而不是随后添加的一个帐户。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:22
-msgid ""
-"In the main menu, select :menuselection:`Apps & Services --> Manage Your "
-"Apps`; in the page that displays, click on the ``Authorize new developper`` "
-"button:"
-msgstr "在主菜单中，选择:menuselection:`应用和服务 --> 管理您的应用`  在显示的页面中，单击``授权新开发者`` 按钮："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:28
-msgid "Fill in the form depending on your Marketplace:"
-msgstr "根据您的市场填写表格："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:33
-msgid ""
-"If your seller account is registered in the **North America** region, use "
-"these values:"
-msgstr "如果您的卖家帐户在 **北美** 地区注册，请使用以下资料："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:35
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:40
-msgid "Developer's Name: ``Odoo S.A.``"
-msgstr "开发者名称： ``Odoo S.A.``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:36
-msgid "Developer ID: ``586127723692``"
-msgstr "开发者编号：``586127723692``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:38
-msgid "For the **Europe** region, use these values:"
-msgstr "如果您的卖家帐户在 **欧洲** 地区注册，请使用以下资料："
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:41
-msgid "Developer ID: ``579095187166``"
-msgstr "开发者编号： ``579095187166``"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:43
-msgid ""
-"Amazon will then inform you that by submitting the form, you are giving "
-"access to your Seller Central Information to Odoo S.A."
-msgstr "然后，亚马逊将通知您，通过提交表格，您将向Odoo S.A.授予访问卖方中央信息的权限。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:47
-msgid ""
-"Odoo S.A. is unable to access your Amazon account's information without the "
-"Authorization Token which is stored in your Odoo database - we do not store "
-"these tokens on our platform directly and are therefore unable to access "
-"your account's information outside of the Amazon Connector normal flows."
-msgstr ""
-"如果没有存储在Odoo数据库中的授权令牌，Odoo "
-"S.A.将无法访问您的亚马逊帐户信息。我们不会将这些令牌直接存储在我们的平台上，因此无法在亚马逊连接器正常流程之外访问您的帐户信息。"
-
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:53
 msgid "Register your Amazon account in Odoo"
 msgstr "在Odoo中注册你的Amazon账户"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:57
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:10
 msgid ""
 "To register your seller account in Odoo, navigate to :menuselection:`Sales "
 "--> Configuration --> Settings --> Connectors --> Amazon Sync --> Amazon "
-"Accounts` and click on **CREATE**."
+"Accounts` and click on :guilabel:`CREATE`."
 msgstr ""
-"如要在Odoo中注册你的卖家账户，前往 :menuselection:`销售 --> 配置 --> 设置 --> 连接器 --> Amazon同步 "
-"--> Amazon账户`并点击**创建**。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:60
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:13
 msgid ""
-"The **Seller ID** can be found in Seller Central under the link **Your "
-"Merchant Token** on the **Seller Account Information** page. The "
-"**Authorization Token** is the one you generated in the :ref:`previous step "
-"<amazon/generate_auth_token>`."
+"Choose a meaningful name for your account (e.g. `Europe`), and select your "
+":guilabel:`Sign-up Marketplace`. This is the original sign-up marketplace of"
+" your seller account (e.g. if you created your account on Amazon Germany, "
+"your sign-up marketplace will be `amazon.de`)"
 msgstr ""
-"可以在 **卖家帐户信息** 页面上的 **您的商家令牌** 链接中的卖家平台中找到 **卖家ID** 。  **授权令牌** 是您在 "
-":ref:`上一步<amazon / generate_auth_token>`中生成的令牌。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:64
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:17
 msgid ""
-"Upon saving, your credentials are checked. In case of issues, an error will "
-"be displayed - the information cannot be saved until your credentials are "
-"recognized by Amazon."
-msgstr "保存后，将检查您的凭据。 如果出现问题，会显示错误 - 在亚马逊识别您的凭据之前，无法保存信息。"
+"Upon saving, a button to :guilabel:`link with Amazon` appears. Click on it "
+"to be redirected to the Amazon login page, or directly to the consent page "
+"if you are already logged in. There, confirm that you want Amazon to give "
+"Odoo access to your account and related data."
+msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:67
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:21
+msgid "Amazon redirects you to Odoo, with your account registered."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:23
 msgid ""
 "Once the account is registered, the marketplaces available to this account "
-"are synchronized and listed under the **Marketplaces** tab. If you wish, you"
-" can remove some items from the list of synchronized marketplaces to disable"
-" their synchronization."
-msgstr "在注册账户后，该账户可用的电商平台在**电商平台**选项卡下列出并同步。如需要，你可将某些项目从已同步电商平台列表中删除，以禁用同步。"
+"are synchronized and listed under the :guilabel:`Marketplaces` tab. If you "
+"wish, you can remove some items from the list of synchronized marketplaces "
+"to disable their synchronization."
+msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:72
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:28
 msgid "Match database products in Amazon"
 msgstr "与Amazon的数据库产品匹配"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:74
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:30
 msgid ""
 "When an Amazon order is synchronized, up to three sales order items are "
 "created in Odoo for each product sold on Amazon: one for the marketplace "
@@ -4113,7 +4239,7 @@ msgid ""
 msgstr ""
 "在Amazon订单同步后，Odoo将针对Amazon上售出的每件产品创造三个销售订单项目：分别针对电商平台产品、运费（如有）和礼品包装费（如有）。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:80
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:36
 msgid ""
 "The selection of a database product for a sales order item is done by "
 "matching its **internal reference** with the **SKU** for marketplace items, "
@@ -4122,7 +4248,7 @@ msgid ""
 msgstr ""
 "通过将**内部参考编号**与电商平台商品的**SKU**匹配，与运费的**发运代码**匹配，以及与包装费的**礼品包装**代码匹配，即可为销售订单项目选择数据库产品。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:84
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:40
 msgid ""
 "For marketplace products, pairings are saved as **Amazon Offers** which are "
 "listed under the **Offers** stat button on the account form. Offers are "
@@ -4133,7 +4259,7 @@ msgstr ""
 "对于电商平台产品，所有产品配对保存为**Amazon产品方案**，列在账户表单**产品方案**统计按钮下。当确定产品配对后自动创建产品方案，并用于之后的订单查找SKU。如果未找到匹配SKU的产品方案，则:ref:`使用内部参考编号"
 " <amazon/matching>`。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:90
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:46
 msgid ""
 "It is possible to force the pairing of a marketplace item with a specific "
 "product by changing either the product or the SKU of an offer. The offer can"
@@ -4143,7 +4269,7 @@ msgid ""
 msgstr ""
 "通过更改产品方案的产品或SKU，可强制将电商平台商品与特定产品配对。如为自动完成，则可手动创建产品方案。如你不使用内部参考编号作为SKU或用不同条件销售产品，这项功能非常有用。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:95
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:51
 msgid ""
 "If no database product with a matching internal reference is found for a "
 "given SKU or gift wrapping code, a default database product **Amazon Sale** "
@@ -4152,7 +4278,7 @@ msgid ""
 msgstr ""
 "如特定SKU或礼品包装代码未找到内部参考编号匹配的数据库产品，则使用默认数据库产品**Amazon销售**。它将使用默认产品**Amazon发货**和发运代码。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:100
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:56
 msgid ""
 "To modify the default products, activate the :ref:`developer mode "
 "<developer-mode>` and navigate to :menuselection:`Sales --> Configuration "
@@ -4161,11 +4287,11 @@ msgstr ""
 "要修改默认产品，请激活：ref：`开发者模式 <developer-mode>`并导航到：菜单选择:`销售 --> 配置 --> 设置 --> 连接器 "
 "--> 亚马逊同步 --> 默认产品`."
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:105
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:61
 msgid "Configure taxes of products"
 msgstr "配置产品税"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:107
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:63
 msgid ""
 "To allow for tax reporting of Amazon sales with Odoo, the taxes applied to "
 "the sales order items are those set on the product or determined by the "
@@ -4175,7 +4301,7 @@ msgid ""
 msgstr ""
 "如要允许在Odoo中对Amazon销售产品进行税务报告，则销售订单项目适用的税收设置在产品上或由财政状况决定。确保在Odoo的产品页面或按财政状况设置正确的税收，以免卖家中心和Odoo中的小计金额存在差异。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:113
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:69
 msgid ""
 "As Amazon does not necessarily apply the same taxes as those configured in "
 "Odoo, it may happen that order totals differ by a few cents from that on "
@@ -4184,88 +4310,176 @@ msgid ""
 msgstr ""
 "由于Amazon适用的税收不一定与Odoo的配置完全相同，某些订单的金额可能与卖家中心有细微差异。在与Odoo付款情况对账时，可冲销并解决这些差异。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:120
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:76
 msgid "Add an unsupported marketplace"
 msgstr "添加尚未受支持的市场"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:122
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:78
 msgid ""
-"Some Amazon Marketplaces, such as Amazon Brazil, are not officially "
-"supported by Odoo but might be compatible with your seller account. These "
-"marketplaces can be added manually should you wish to use them. See "
-":ref:`here <amazon/supported-marketplaces>` for the exhaustive list of "
-"natively supported marketplaces."
+"Some Amazon Marketplaces, such as Amazon Brazil, are not created by default "
+"as they are not officially supported by Odoo but might be compatible with "
+"your seller account. These marketplaces can be added manually should you "
+"wish to use them. See :ref:`here <amazon/supported-marketplaces>` for the "
+"exhaustive list of natively supported marketplaces."
 msgstr ""
-"Odoo并未正式支持某些亚马逊市场（例如亚马逊巴西），但可能与您的卖家帐户兼容。 如果您想使用这些市场，可以手动添加。 "
-"有关本地支持的市场的详尽列表，请参见  :ref:`此处<amazon / support-marketplaces>` 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:128
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:84
 msgid ""
 "To find out if a marketplace is eventually compatible, check the `Amazon "
-"Documentation "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_."
-" The marketplace must belong to the same region as that of your seller "
-"account."
+"Documentation <https://developer-docs.amazon.com/amazon-"
+"shipping/docs/seller-central-urls>`_. The marketplace must belong to the "
+"same region as that of your seller account."
 msgstr ""
-"要确定某个市场最终是否兼容，请查看`亚马逊文档 "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_"
-" 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:132
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:88
 msgid ""
-"To add a new marketplace, you must first activate the :ref:`developer mode "
-"<developer-mode>`."
+"To add a new marketplace, activate the :ref:`developer mode <developer-"
+"mode>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:134
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:90
 msgid ""
 "Once that is done, go to :menuselection:`Sales --> Configuration --> "
 "Settings --> Connectors --> Amazon Sync --> Amazon Marketplaces`."
 msgstr "完成后，转到 :menuselection:`销售 --> 设置 --> 设定 --> 连接器- -->亚马逊同步--> 亚马逊市场`。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:137
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:93
 msgid ""
-"From there, you can create a new marketplace record. You will need the "
-"Marketplace ID and Endpoint for your marketplace as described in the `Amazon"
-" Documentation "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_."
+"From there, create a new marketplace record. Enter the Marketplace ID and "
+"select the Amazon Region for your marketplace as described in the `Amazon "
+"Documentation for marketplace IDs <https://developer-docs.amazon.com/amazon-"
+"shipping/docs/marketplace-ids>`_, and the Seller Central URL as described in"
+" the `Amazon Documentation for seller central URLs <https://developer-"
+"docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_."
 msgstr ""
-"从那里，你可以创建一个新的市场记录。 如 `亚马逊文档 "
-"<https://docs.developer.amazonservices.com/en_US/dev_guide/DG_Endpoints.html>`_"
-" 中所述，您将需要市场ID和市场的终端。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:141
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:99
 msgid ""
-"Set the name of the record to ``Amazon.<domain>`` to easily retrieve it (for"
-" instance: ``Amazon.se``). The **Code**, **Domain** and **API Identifier** "
-"fields should respectively hold the *Country Code*, *Amazon MWS Endpoint* "
-"and *MarketplaceId* values from the Amazon Documentation."
+"Set the name of the record to ``Amazon.<country code>`` to easily retrieve "
+"it (e.g.: ``Amazon.se``). The :guilabel:`API Identifier`, the "
+":guilabel:`Region` and the :guilabel:`Seller Central URL` fields should "
+"respectively hold the *MarketplaceId*, the selected Amazon region and the "
+"*Seller Central URL* values from the Amazon Documentation."
 msgstr ""
-"将记录的名称设置为 ``亚马逊<domain>`` 以方便地检索它  (例如: ``Amazon.se``). The **代码**, **域** 和 "
-"**API标识符”**  字段应分别保存亚马逊文档中的 *国家代码*, *亚马逊MWS端点* 和 *MarketplaceId* 。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:145
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:104
 msgid ""
-"Once the marketplace is saved, you should then update the Amazon Account "
-"configuration by going to :menuselection:`Sales --> Configuration --> "
-"Settings --> Connectors --> Amazon Sync --> Amazon Accounts`, open the "
-"account on which you wish to use the new marketplace, go to the "
-"**Marketplaces** tab and click on **Update available marketplaces** (an "
-"animation should confirm the success of the operation). Newly added "
-"marketplaces are automatically added to the list of synchronized "
-"marketplaces. If the new marketplace is not added to the list, it means that"
-" it is either incompatible or unavailable for your seller account."
+"Once the marketplace is saved, update the Amazon Account configuration by "
+"going to :menuselection:`Sales --> Configuration --> Settings --> Connectors"
+" --> Amazon Sync --> Amazon Accounts`. Open the account on which you wish to"
+" use the new marketplace, go to the :guilabel:`Marketplaces` tab and click "
+"on :guilabel:`Update available marketplaces` (an animation should confirm "
+"the success of the operation). Newly added marketplaces are automatically "
+"added to the list of synchronized marketplaces. If the new marketplace is "
+"not added to the list, it means that it is either incompatible or "
+"unavailable for your seller account."
 msgstr ""
-"保存市场后，您应该通过以下方式更新亚马逊账户配置： :menuselection:`销售 --> 设置 --> 设定 --> 连接器 --> 亚马逊同步"
-" --> 亚马逊账户`, 在以下位置打开帐户並使用的新市场，请转到 **市场** 选项卡然后单击 "
-"**更新可用市场**（动画应确认操作成功）。新添加的市场将自动添加到同步市场列表中。 如果没有将新市场添加到列表中，则意味着您的卖方帐户不兼容或不可用。"
 
-#: ../../content/applications/sales/sales/amazon_connector/setup.rst:154
+#: ../../content/applications/sales/sales/amazon_connector/setup.rst:113
 msgid ""
 "As manually added marketplaces are not officially supported by Odoo, there "
 "is no guarantee that adding one as described above will work, nor can this "
 "be considered as a bug when contacting Odoo Support."
 msgstr "由于Odoo并未正式支持手动添加的市场，因此无法保证可以如上所述添加一个市场，也无法保证在与Odoo支持人员联系时将其视为错误。"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:3
+msgid "Install the Amazon Selling Partner API Update"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:5
+msgid ""
+"Starting July 2022, due to a change in Amazon's API, the Amazon Connector "
+"needs to be updated to continue to exchange information with Amazon. This "
+"also makes it easier for you to set up the Connector."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:10
+msgid ""
+"If your Odoo database is created after the update was released, the update "
+"module is installed automatically. To check if this module is already "
+"installed, go to :guilabel:`Apps`, remove the ``Apps`` filter and search for"
+" ``Amazon``. If the module :guilabel:`Amazon/Selling Partner API Patch` is "
+"present and marked as installed, your Odoo database is already up-to-date "
+"and you can proceed with the :doc:`setup <setup>` step of the Amazon "
+"Connector."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:17
+#: ../../content/applications/sales/sales/ebay_connector/setup.rst:63
+msgid "Update Odoo to the latest release"
+msgstr "将Odoo更新到最新版本"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:19
+msgid ""
+"The new authentication mechanism is made available through a new Odoo "
+"module; to be able to install it, you must make sure that your Odoo source "
+"code is up-to-date."
+msgstr "通过新的Odoo模块可以使用新的身份验证机制。 为了能够安装它，您必须确保您的Odoo源代码是最新的。"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:22
+#: ../../content/applications/sales/sales/ebay_connector/setup.rst:68
+msgid ""
+"If you use Odoo on Odoo.com or Odoo.sh platform, your code is already up-to-"
+"date and you can proceed to the next step."
+msgstr "如果您在Odoo.com或Odoo.sh平台上使用Odoo，则您的代码已经是最新的，您可以继续执行下一步。"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:25
+#: ../../content/applications/sales/sales/ebay_connector/setup.rst:70
+msgid ""
+"If you use Odoo with an on-premise setup or through a partner, then you must"
+" update your installation as detailed in :doc:`this documentation page "
+"</administration/maintain/update>` or by contacting your integrating "
+"partner."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:31
+#: ../../content/applications/sales/sales/ebay_connector/setup.rst:75
+msgid "Update the list of available modules"
+msgstr "更新可用模块列表"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:33
+msgid ""
+"New modules must be *discovered* by your Odoo instance to be available in "
+"the **Apps** menu."
+msgstr "新模块必须由您的Odoo实例 *发现*，才能在 **应用** 菜单中使用。"
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:36
+msgid ""
+"To do so, activate the :ref:`developer mode <developer-mode>`, and go to "
+":menuselection:`Apps --> Update Apps List`. A wizard will ask for "
+"confirmation."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:40
+msgid "Install the Amazon/Selling Partner API Patch"
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:43
+msgid ""
+"You should never install new modules in your production database without "
+"first testing them in a duplicate or staging environment. For Odoo.com "
+"customers, a duplicate database can be created from the database management "
+"page. For Odoo.sh users, you should use a staging or duplicate database. For"
+" on-premise users, you should use a staging environment---contact your "
+"integrating partner for more information regarding how to test a new module "
+"in your particular setup."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:49
+msgid ""
+"The module should now be available in your :guilabel:`Apps` menu. Remove the"
+" ``Apps`` filter and search for ``Amazon``; the module "
+":guilabel:`Amazon/Selling Partner API Patch` should be available for "
+"installation. If you cannot find the module after having updated the list of"
+" available modules, it means your Odoo source code is not up-to-date; refer "
+"to step one of this page."
+msgstr ""
+
+#: ../../content/applications/sales/sales/amazon_connector/update.rst:54
+msgid ""
+"Once the module is installed, link your Amazon account by following the "
+"instructions on the :doc:`setup <setup>` page."
+msgstr ""
 
 #: ../../content/applications/sales/sales/ebay_connector.rst:5
 msgid "eBay Connector"
@@ -4452,34 +4666,12 @@ msgid ""
 " the :ref:`next step <ebay/retrieve-endpoint-details>`."
 msgstr ""
 
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:63
-msgid "Update Odoo to the latest release"
-msgstr "将Odoo更新到最新版本"
-
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:65
 msgid ""
 "The notification endpoint is made available through a new Odoo module; to be"
 " able to install it, you must make sure that your Odoo source code is up-to-"
 "date."
 msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:68
-msgid ""
-"If you use Odoo on Odoo.com or Odoo.sh platform, your code is already up-to-"
-"date and you can proceed to the next step."
-msgstr "如果您在Odoo.com或Odoo.sh平台上使用Odoo，则您的代码已经是最新的，您可以继续执行下一步。"
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:70
-msgid ""
-"If you use Odoo with an on-premise setup or through a partner, then you must"
-" update your installation as detailed in :doc:`this documentation page "
-"</administration/maintain/update>` or by contacting your integrating "
-"partner."
-msgstr ""
-
-#: ../../content/applications/sales/sales/ebay_connector/setup.rst:75
-msgid "Update the list of available modules"
-msgstr "更新可用模块列表"
 
 #: ../../content/applications/sales/sales/ebay_connector/setup.rst:77
 msgid ""
@@ -6351,16 +6543,10 @@ msgid ""
 msgstr "你可创建新模板或编辑现有模板。命名后，你可选择产品和数据以及报价的有效期。"
 
 #: ../../content/applications/sales/sales/send_quotations/quote_template.rst:42
-msgid ""
-"On each template, you can also specify discounts if the option is activated "
-"in the **Sales** settings."
-msgstr "在每个模板上，如在**销售**设置中启用折扣选项，你还可指定折扣。"
-
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:46
 msgid "Design your template"
 msgstr "设计模板"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:48
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:44
 msgid ""
 "You will have the possibility to design your template and edit the customer "
 "interface in order to manage what clients will see before accepting and "
@@ -6370,50 +6556,50 @@ msgid ""
 msgstr ""
 "你可设计模板并编辑客户界面，以管理客户在接受和支付报价之前看到的内容。例如，你可以介绍你的公司、服务和产品。为此，你可点击**编辑**，然后将转向报价单生成器。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:58
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:54
 msgid ""
 "You can easily edit the content of your template by dragging & dropping "
 "different building blocks to organize your quotation. For example, you can "
 "add a content block to describe your products."
 msgstr "你可拖放不同的创建块，轻松编辑模板内容，组织报价。例如，你可添加一个介绍产品的内容块。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:67
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:63
 msgid "Use a quotation template"
 msgstr "使用报价单模板"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:69
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:65
 msgid "When creating a quotation, you can choose a specific template."
 msgstr "在创建报价时，你可选择特定模板。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:77
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:73
 msgid ""
 "You can select any template of your choice and suggest it as the default "
 "template in the **Sales** settings."
 msgstr "在**销售**设置中，你可选择任意模板并将其设为默认模板。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:81
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:77
 msgid "Confirm the quotation"
 msgstr "确认报价单"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:83
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:79
 msgid ""
 "Templates facilitate the confirmation process by allowing customers to sign "
 "electronically or to pay online. You can activate these two options directly"
 " in the quotation template itself."
 msgstr "模板可允许客户填写电子签名并在线付款，加速确认流程。你可在报价模板中直接启用这两个选项。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:92
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:88
 msgid ""
 "Every quotation will now have this setting. Of course you can always change "
 "it and make it specific for each quotation."
 msgstr "现在，每个报价都有了这项设置。当然，你可随时更改并将它仅限于特定报价。"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:96
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:92
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:116
 msgid ":doc:`get_signature_to_validate`"
 msgstr ":doc:`get_signature_to_validate`"
 
-#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:97
+#: ../../content/applications/sales/sales/send_quotations/quote_template.rst:93
 #: ../../content/applications/sales/sales/send_quotations/terms_and_conditions.rst:117
 msgid ":doc:`get_paid_to_validate`"
 msgstr ":doc:`get_paid_to_validate`"
