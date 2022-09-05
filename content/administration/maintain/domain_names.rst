@@ -59,6 +59,8 @@ database manager.
      registrar.
    - You are the owner of the domain name and can use it for other purposes.
    - Odoo manages payment and technical support for you.
+   - This offer doesn't include any mailbox. However, you can :ref:`configure your MX records
+     <domain-name/odoo-manage>` to use your own email server or solution such as Google Workspace.
 
 To do so, go to :menuselection:`Website --> Go to website --> Promote --> Domain Name`.
 Alternatively, open your `database manager <https://www.odoo.com/my/databases>`_, click on the
