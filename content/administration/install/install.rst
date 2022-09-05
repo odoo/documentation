@@ -547,7 +547,7 @@ Dependencies
          .. tab:: Debian/Ubuntu
 
             For Debian-based systems, the packages are listed in the `debian/control
-            <https://github.com/odoo/odoo/blob/master/debian/control>`_ file of the Odoo sources.
+            <https://github.com/odoo/odoo/blob/16.0/debian/control>`_ file of the Odoo sources.
 
             On Debian/Ubuntu, the following commands should install the required packages:
 
