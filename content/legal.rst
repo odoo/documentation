@@ -32,45 +32,45 @@ Terms and Conditions
      - Deutsch
      - Español
    * - Odoo Enterprise Agreement [#]_
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Odoo Enterprise Agreement
           :target: legal/terms/enterprise.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement
           :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement.pdf
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Odoo Enterprise Agreement (FR)
           :target: legal/terms/i18n/enterprise_fr.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement (FR)
           :target: https://www.odoo.com/documentation/12.0/odoo_enterprise_agreement_fr.pdf
-     - |missing_txt| |missing_pdf|
-     - |missing_txt| |missing_pdf|
-     - |missing_txt| |missing_pdf|
+     - |missing_html| |missing_pdf|
+     - |missing_html| |missing_pdf|
+     - |missing_html| |missing_pdf|
    * - Odoo Partnership Agreement
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Odoo Partnership Agreement
           :target: legal/terms/partnership.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Partnership Agreement
           :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement.pdf
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Odoo Partnership Agreement (FR)
           :target: legal/terms/i18n/partnership_fr.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Partnership Agreement (FR)
           :target: https://www.odoo.com/documentation/12.0/odoo_partnership_agreement_fr.pdf
-     - |missing_txt| |missing_pdf|
-     - |missing_txt| |missing_pdf|
-     - |missing_txt| |missing_pdf|
+     - |missing_html| |missing_pdf|
+     - |missing_html| |missing_pdf|
+     - |missing_html| |missing_pdf|
    * - Terms of Sale
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Terms of Sale
           :target: legal/terms/terms_of_sale.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Terms of Sale
           :target: terms_of_sale.pdf
-     - .. image:: legal/img/txt.svg
+     - .. image:: legal/img/html.svg
           :alt: View Terms of Sale (FR)
           :target: legal/terms/i18n/terms_of_sale_fr.html
        .. image:: legal/img/pdf.svg
@@ -86,7 +86,7 @@ Terms and Conditions
    :alt: Document not yet available
    :class: o-no-modal
 
-.. |missing_txt| image:: legal/img/txt_missing.svg
+.. |missing_html| image:: legal/img/html_missing.svg
    :alt: Document not yet available
    :class: o-no-modal
 
