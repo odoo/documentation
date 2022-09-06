@@ -31,8 +31,8 @@ localization in Odoo, it is necessary to meet the following requirements:
 #. Be registered with the SAT and have an RFC.
 #. Have a `Certificate of Digital Seal
    <https://www.gob.mx/sat/acciones-y-programas/certificado-de-sello-digital>`_ (CSD).
-#. Choose a PAC and purchase stamps. Currently the Mexican location in Odoo works with two PACs:
-   `Solución Factible <https://solucionfactible.com/>`_, `Quadrum (formerly Finkok)
+#. Choose a PAC and purchase stamps. Currently the Mexican location in Odoo works with the following
+   PACs: `Solución Factible <https://solucionfactible.com/>`_, `Quadrum (formerly Finkok)
    <https://cfdiquadrum.com.mx/index.html>`_ and `SW Sapien - Smarter Web <https://sw.com.mx/>`_.
 #. Have knowledge and experience with billing, sales and accounting in Odoo. This documentation
    contains only the information necessary to enable the use of Odoo in a company based in Mexico.
