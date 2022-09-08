@@ -635,7 +635,7 @@ a different context, the ``with_context`` method should be used :
       having a field name *my_field* are created, their default value will be set too.
 
 If you need to create a key context influencing the behavior of some object,
-choice a good name, and eventually prefix it by the name of the module to
+choose a good name, and eventually prefix it by the name of the module to
 isolate its impact. A good example are the keys of ``mail`` module :
 *mail_create_nosubscribe*, *mail_notrack*, *mail_notify_user_signature*, ...
 
@@ -744,7 +744,7 @@ update the database even from within a report
 - within *models.Transient* methods: these methods are called exactly like
 regular *models.Model* ones, within a transaction and with the corresponding
 ``cr.commit()/rollback()`` at the end
-- etc. (see general rule above if you have in doubt!)
+- etc. (see general rule above if you are in doubt!)
 
 All ``cr.commit()`` calls outside of the server framework from now on must
 have an **explicit comment** explaining why they are absolutely necessary, why
@@ -883,8 +883,8 @@ Symbols and Conventions
       at the beginning of the method.
 
 - In a Model attribute order should be
-    #. Private attributes (``_name``, ``_description``, ``_inherit``, ...)
-    #. Default method and ``_default_get``
+    #. Private attributes (``_name``, ``_description``, ``_inherit``, ``_sql_constraints``, ...)
+    #. Default method and ``default_get``
     #. Field declarations
     #. Compute, inverse and search methods in the same order as field declaration
     #. Selection method (methods used to return computed values for selection fields)
