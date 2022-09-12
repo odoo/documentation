@@ -3,49 +3,64 @@ Online (SaaS) database management
 =================================
 
 To manage a database, sign in to https://www.odoo.com and access the `database management page
-<https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*.
+<https://www.odoo.com/my/databases>`_ by clicking on the user icon and then :guilabel:`My
+Databases`.
 
 .. image:: online/my-databases.png
    :align: center
-   :alt: Clicking on the user icon opens a drop-down menu. "My databases" button is highlighted.
+   :alt: Accessing My Databases from the user menu
 
 .. note::
    Make sure you are connected as the administrator of the database you want to manage.
 
-.. image:: online/dropdown-menu.png
-   :align: right
-   :alt: Clicking on the gear icon opens the drop-down menu.
+Manage a database by clicking the settings button (:guilabel:`⚙`) next to the database name. If an
+upgrade is available, click on the upgrade button (:guilabel:`🡅`) to launch the :ref:`upgrade
+process <online/upgrade>`.
 
-Open the drop-down menu next to the database you want to manage by clicking on the gear icon.
+.. image:: online/gear-and-upgrade.png
+   :align: center
+   :alt: The database settings and upgrade buttons
 
-Several actions are available:
+Here is a list of all the database actions and settings available by clicking the gear icon
+(:guilabel:`⚙`):
 
-- :ref:`online/upgrade`
 - :ref:`online/duplicate`
 - :ref:`online/rename`
 - :ref:`online/download`
 - :ref:`online/domains`
 - :ref:`online/tags`
+- :ref:`online/share`
 - :ref:`online/delete`
 - :ref:`online/contact-support`
-- :ref:`online/users`
+- :ref:`online/view-access-logs`
+- :ref:`online/invite-users`
+- :ref:`online/remove-users`
 
 .. _online/upgrade:
 
 Upgrade
 =======
 
-If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade
-<../upgrade>` your database. A **Rolling Release button** on your database's main screen proposes an
-upgrade to the latest version (e.g., 13.0 to 15.1).
+If you are *not* on the latest **Online version**, you should see an upgrade notification
+(:guilabel:`🡅`) at the top right of the database inviting you to start the process.
+
+.. image:: online/rolling-release-button.png
+   :align: center
+   :alt: Clicking on the upgrade the notification to proceed to the upgrade
+
+Clicking :guilabel:`Upgrade Now` redirects you to your portal.  If you want to start the upgrade,
+click on the upgrade button (:guilabel:`🡅`) located next to the database name. A new window opens
+where you should select the version you want to upgrade to.
+
+.. image:: online/upgrade-your-db.png
+   :align: center
+   :alt: Selecting the upgraded version to target
 
 .. important::
-   - | **If your Odoo database's version is lower than the latest major release:**
-     | You must upgrade your database within two months. After these two months, an automatic
-       upgrade is initiated.
-   - | **If your Odoo database's version is equal to or higher than the latest major release:**
-     | You can disregard the invitation to upgrade as you probably wouldn't benefit from new
-       features every two months.
+   - | When a major version is released (e.g., Odoo 16), you must upgrade your database within two
+       months. After these two months, an automatic upgrade is initiated.
+   - | When a minor version is released (e.g., Odoo 16.1), you can disregard the invitation to
+       upgrade unless you still haven't upgraded to the latest major release.
 
 .. note::
    Versions that are not supported anymore become deprecated and need to be updated to avoid
@@ -61,38 +76,43 @@ upgrade to the latest version (e.g., 13.0 to 15.1).
 Duplicate
 =========
 
-Make an exact copy of the database to be able to perform testing without compromising the daily
-operations.
+Create an exact copy of a database. Copies are often used to perform tests on a database without
+compromising your daily operations.
 
 .. important::
-   - By checking *For testing purposes*, all external communication (emails, payments, delivery
-     orders, etc.) are disabled by default on the duplicated database.
-   - Duplicate databases expire automatically after 15 days.
+   When you perform tests on a database, it is recommended to tick :guilabel:`For testing purposes`
+   as it disables all external communications (emails, payments, delivery orders, etc.).
+
+.. note::
+   Duplicated databases expire automatically after 15 days.
 
 .. _online/rename:
 
 Rename
 ======
 
-Rename the database and its URL.
+Change a database name/URL.
 
 .. _online/download:
 
 Download
 ========
 
-Download instantly a ZIP file with a backup of the database.
+Save a copy/backup of a database in ZIP file format.
 
 .. note::
-   Databases are backed up daily according to the `Odoo Cloud SLA
-   <https://www.odoo.com/cloud-sla>`_.
+   It is not required to create backups manually — Odoo backups databases daily according to the
+   `Odoo Cloud SLA <https://www.odoo.com/cloud-sla>`_.
 
 .. _online/domains:
 
-Domains
-=======
+Domain names
+============
 
 Configure custom domains to access the database via another URL.
+
+.. note::
+   This functionality is disabled on *edu-* databases.
 
 .. seealso::
    - :doc:`domain_names`
@@ -102,7 +122,20 @@ Configure custom domains to access the database via another URL.
 Tags
 ====
 
-Add tags to sort your databases out. You can search the tags in the search bar.
+Add tags to a database, which can be helpful if you manage several. You can add multiple tags by
+clicking on the plus button (:guilabel:`+`)
+
+.. note::
+   You can search for tags in the search bar.
+
+.. _online/share:
+
+Share
+=====
+
+The :guilabel:`Share` or :guilabel:`Share Course` feature is dedicated to teachers. It generates a
+link that students can use to create a copy of the database you shared. Once the link is opened,
+students are invited to click `Copy as student` and then register their database.
 
 .. _online/delete:
 
@@ -112,11 +145,12 @@ Delete
 Delete a database instantly.
 
 .. danger::
-   Deleting a database means that all data is permanently lost. The deletion is instant and for all
-   users. It is recommended to create a backup of the database before deleting it.
+   Deleting a database means that all data is permanently lost. The deletion is instant and applies
+   to all users. It is recommended to create a :ref:`backup <online/download>` of a database before
+   deleting it.
 
-Read carefully the warning message that pops up and proceed only if you fully understand the
-implications of deleting a database:
+Read carefully the warning message that pops up, and only proceed if you fully understand the
+implications of deleting a database.
 
 .. image:: online/delete.png
    :align: center
@@ -124,32 +158,43 @@ implications of deleting a database:
 
 .. note::
    - Only an administrator can delete a database.
-   - The database name is immediately available for a new database.
-   - It is not possible to delete a database if it is expired or linked to a subscription. If
-     needed, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
-   - To delete your account, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
+   - The database name is immediately available for newly created databases.
+   - It is impossible to delete a database yourself if it has expired or is linked to a
+     subscription. If you are in that situation, you can contact `Odoo Support
+     <https://www.odoo.com/help>`_.
+   - To delete your account, contact `Odoo Support <https://www.odoo.com/help>`_.
 
 .. _online/contact-support:
 
-Contact Support
-===============
+Contact us
+==========
 
-Access the Odoo `support page <https://www.odoo.com/help>`_ with your database's details already
+Access the Odoo `Support page <https://www.odoo.com/help>`_ with your database's details already
 pre-filled.
 
-.. _online/users:
+.. _online/view-access-logs:
 
-Invite / Remove Users
-=====================
+View access log
+===============
 
-To invite users, fill out the email address of the new user and click on *Invite*. To add multiple
-users, click on *Add more users*.
+View all database actions taken by the Odoo staff on a database. Typically, these actions result
+from requests received by our helpdesk, requested in the context of a quick start project, or
+necessary to maintain your service. It also includes important customer actions.
 
-.. image:: online/invite-users.png
-   :align: center
-   :alt: Clicking on "Add more users" adds additional email fields.
+.. _online/invite-users:
 
-To remove users, select the users to remove and click on *Remove*.
+Invite users
+============
+
+Invite users by filling out their email address. You can invite multiple users at the same by
+clicking on :guilabel:`Add more users`.
+
+.. _online/remove-users:
+
+Remove users
+============
+
+Remove users by selecting them and clicking on :guilabel:`Remove`.
 
 .. seealso::
    - :doc:`/applications/general/users/manage_users`
