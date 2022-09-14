@@ -14,6 +14,7 @@ Payment providers (credit cards, online payments)
    payment_providers/asiapay
    payment_providers/authorize
    payment_providers/buckaroo
+   payment_providers/demo
    payment_providers/flutterwave
    payment_providers/mercado_pago
    payment_providers/mollie
@@ -63,83 +64,96 @@ Online payment providers
    :widths: auto
 
    * -
-     - Payment flow
+     - Payment flow from
      - :ref:`Tokenization <payment_providers/features/tokenization>`
      - :ref:`Manual capture <payment_providers/features/manual_capture>`
      - :ref:`Refunds <payment_providers/features/refund>`
      - :ref:`Express checkout <payment_providers/features/express_checkout>`
+     - :ref:`Extra fees <payment_providers/features/extra_fees>`
    * - :doc:`Adyen <payment_providers/adyen>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      - Full and partial
      -
+     -
    * - :doc:`Amazon Payment Services <payment_providers/amazon_payment_services>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`AsiaPay <payment_providers/asiapay>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Authorize.Net <payment_providers/authorize>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      - Full only
      -
+     -
    * - :doc:`Buckaroo <payment_providers/buckaroo>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Flutterwave <payment_providers/flutterwave>`
-     - Payment from the provider website
+     - The provider website
      - |V|
      -
      -
      -
+     -
    * - :doc:`Mercado Pago <payment_providers/mercado_pago>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Mollie <payment_providers/mollie>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`PayPal <payment_providers/paypal>`
-     - Payment from the provider website
+     - The provider website
      -
      -
      -
      -
+     - |V|
    * - :doc:`Razorpay <payment_providers/razorpay>`
-     - Payment from the provider website
+     - The provider website
      -
      - Full only
      - Full and partial
      -
+     -
    * - :doc:`SIPS <payment_providers/sips>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Stripe <payment_providers/stripe>`
-     - Payment from the provider website
+     - The provider website
      - |V|
      - Full only
      - Full and partial
      - |V|
+     -
 
 .. |V| replace:: ✔
 
@@ -149,6 +163,12 @@ Online payment providers
    them as payment providers. Payment providers allow customers to pay online, and bank accounts are
    added and configured on your Accounting app to do a bank reconciliation, which is an accounting
    control process.
+
+.. tip::
+   In addition to the regular payment providers that integrate with an API such as Stripe, PayPal,
+   or Adyen, Odoo bundles the :doc:`Demo payment provider <payment_providers/demo>`. This payment
+   provider allows you to make demo payments to test business flows involving online payments. No
+   credentials are required as the demo payments are fake.
 
 .. _payment_providers/bank_payments:
 
@@ -251,7 +271,7 @@ Express checkout
 
 If your payment provider supports this feature, customers can use the **Google Pay** and **Apple
 Pay** buttons to pay their eCommerce orders in one click without filling the contact form. Using one
-of those buttons, they'll go straight from the cart to the confirmation page, stopping by the
+of those buttons, customers go straight from the cart to the confirmation page, stopping by the
 payment form of Google or Apple to validate the payment.
 
 Enable this feature by navigating to the :guilabel:`Configuration` tab from your payment provider
@@ -259,6 +279,23 @@ and by ticking the :guilabel:`Allow Express Checkout` checkbox.
 
 .. note::
    All prices shown in the express checkout payment form are always taxes included.
+
+.. _payment_providers/features/extra_fees:
+
+Extra Fees
+----------
+
+If supported by the payment provider, you can add **extra fees** to online transactions. Fees can be
+configured either as **fixed** amounts and percentages, **variable** amounts and percentages, or
+*both* simultaneously. These can be applied according to **domestic** or **international**
+geolocation.
+
+To enable fees, from the *eCommerce* or *Accounting* app, head to :menuselection:`Configuration
+--> Payment Providers` and select the desired supported provider. Click on the :guilabel:`Fees` tab
+and check the :guilabel:`Add Extra Fees` box. Configure the settings to your needs.
+
+.. note::
+   Fees are calculated on the tax-included price.
 
 .. _payment_providers/configuration:
 
@@ -387,6 +424,7 @@ payment method... What best suit your needs.
    - :doc:`payment_providers/authorize`
    - :doc:`payment_providers/asiapay`
    - :doc:`payment_providers/buckaroo`
+   - :doc:`payment_providers/demo`
    - :doc:`payment_providers/mercado_pago`
    - :doc:`payment_providers/mollie`
    - :doc:`payment_providers/ogone`
