@@ -67,6 +67,7 @@ like this:
 
     'assets': {
         'web.assets_backend': [
+            'web/static/src/core/**/*',
             'web/static/src/xml/**/*',
         ],
         'web.assets_common': [
@@ -92,9 +93,6 @@ know:
 
 - `web.assets_frontend`: this bundle is about all that is specific to the public
   website: ecommerce, portal, forum, blog, ...
-
-- `web.assets_qweb`: all static XML templates used in the backend environment
-  and in the point of sale.
 
 - `web.qunit_suite_tests`: all javascript qunit testing code (tests, helpers, mocks)
 
