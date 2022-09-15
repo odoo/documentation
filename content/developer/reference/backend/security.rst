@@ -481,3 +481,17 @@ field value can be easily achieved safely:
 
 The above method is obviously still too optimistic and additional verifications
 on the record id and field value must be done.
+
+
+Http Request
+---------------------------
+
+Some may need to make an HTTP request directly from python, it is require to follow some best practices
+
+**Injectable domain** 
+
+Care must be taken while manipulating the domain name of the request, the domain should never depend on user input.
+If the domain can be changed by the user, a malicious user could use the server running the code to send multiple requests to a chosen target. 
+This is known as a reflective-DDOS attack, where one can overload a target without sending the packet himself.
+
+**URL path/query Injectable**
