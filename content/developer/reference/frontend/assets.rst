@@ -38,7 +38,7 @@ Template
     Templates (static `xml` files) are handled in a different way: they are simply
     read from the file system whenever they are needed, and concatenated.
 
-    Whenever the browser loads odoo, it calls the `/web/webclient/qweb/` controller
+    Whenever the browser loads odoo, it calls the `/web/webclient/qweb?bundle=module.bundle_name` controller
     to fetch the :ref:`templates <reference/qweb>`.
 
 It is useful to know that in most cases, a browser only performs a request the
@@ -365,4 +365,3 @@ manifest counterparts.
 `sequence` (default= `16`)
     Loading order of the asset records (ascending). A sequence lower than 16 means
     that the asset will be processed *before* the ones declared in the manifest.
-

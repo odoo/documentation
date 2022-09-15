@@ -35,6 +35,13 @@ dictionary, where each key specifies module metadatum.
         'demo': [
             'demo/demo_data.xml',
         ],
+        'assets': {
+            'module.bundle_name': [
+                'module/static/src/*.js'
+                'module/static/src/*.scss'
+                'module/static/src/*.xml'
+            ]
+        }
     }
 
 Available manifest fields are:
