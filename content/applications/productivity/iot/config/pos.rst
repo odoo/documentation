@@ -48,10 +48,9 @@ Then, you have to connect the peripheral devices to your IoT Box.
 
 -  **Scale**: Connect your scale and power it on.
 
--  **Customer Display**: Connect a monitor to the IoT Box using an HDMI
-   cable. You can also access the Customer Display from any other computer
-   by accessing the IoT Box homepage and clicking on the *POS Display*
-   button.
+-  **Customer Display**: Connect a screen to the IoT Box to display the
+   PoS order. Please refer to
+   :doc:`/applications/productivity/iot/devices/screen`.
 
 -  **Payment terminal**: The connection process depends on the terminal,
    please refer to the :doc:`payment terminals documentation
