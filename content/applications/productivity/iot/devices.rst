@@ -8,6 +8,7 @@ Devices
    :titlesonly:
    :glob:
 
+   devices/screen
    devices/measurement_tool
    devices/camera
    devices/footswitch
