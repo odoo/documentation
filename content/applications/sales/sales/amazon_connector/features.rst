@@ -54,35 +54,10 @@ The connector is able to:
 Supported Marketplaces
 ======================
 
-The Amazon Connector currently supports 9 marketplaces.
-If a marketplace is not listed below, it may be possible for you to :ref:`add it as an unsupported
-marketplace <amazon/add-unsupported-marketplace>`.
+The Amazon Connector supports all the current marketplaces.
+If a marketplace is not listed in your Amazon marketplaces, you can :ref:`add a new marketplace
+<amazon/add-new-marketplace>`.
 
-+-------------------------------+
-| **North America region**      |
-+===============+===============+
-| Canada        | Amazon.ca     |
-+---------------+---------------+
-| Mexico        | Amazon.com.mx |
-+---------------+---------------+
-| US            | Amazon.com    |
-+---------------+---------------+
-
-+-------------------------------+
-| **Europe region**             |
-+===============+===============+
-| Germany       | Amazon.de     |
-+---------------+---------------+
-| Spain         | Amazon.es     |
-+---------------+---------------+
-| France        | Amazon.fr     |
-+---------------+---------------+
-| UK            | Amazon.co.uk  |
-+---------------+---------------+
-| Italy         | Amazon.it     |
-+---------------+---------------+
-| Netherlands   | Amazon.nl     |
-+---------------+---------------+
 
 .. seealso::
    - :doc:`setup`
