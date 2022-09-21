@@ -70,49 +70,35 @@ the subtotals between Seller Central and Odoo.
    that order totals differ by a few cents from that on Seller Central. Those differences can be
    resolved with a write-off when reconciling the payments in Odoo.
 
-.. _amazon/add-unsupported-marketplace:
+.. _amazon/add-new-marketplace:
 
-Add an unsupported marketplace
-==============================
+Add a new marketplace
+=====================
 
-Some Amazon Marketplaces, such as Amazon Brazil, are not created by default as they are not
-officially supported by Odoo but might be compatible with your seller account. These marketplaces
-can be added manually should you wish to use them. See :ref:`here <amazon/supported-marketplaces>`
-for the exhaustive list of natively supported marketplaces.
+:ref:`All marketplaces are supported by the Amazon Connector <amazon/supported-marketplaces>`, but
+recently created ones might be missing from your database. To add a new marketplace, proceed as
+follows:
 
-.. tip::
-   To find out if a marketplace is eventually compatible, check the `Amazon Documentation
-   <https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_. The marketplace
-   must belong to the same region as that of your seller account.
-
-To add a new marketplace, activate the :ref:`developer mode <developer-mode>`.
-
-Once that is done, go to :menuselection:`Sales --> Configuration --> Settings --> Connectors -->
-Amazon Sync --> Amazon Marketplaces`.
-
-From there, create a new marketplace record. Enter the Marketplace ID and select the Amazon Region
-for your marketplace as described in the `Amazon Documentation for marketplace IDs
-<https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the Seller Central
-URL as described in the `Amazon Documentation for seller central URLs
-<https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_.
-
-Set the name of the record to ``Amazon.<country code>`` to easily retrieve it (e.g.: ``Amazon.se``).
-The :guilabel:`API Identifier`, the :guilabel:`Region` and the :guilabel:`Seller Central URL` fields
-should respectively hold the *MarketplaceId*, the selected Amazon region and the *Seller Central
-URL* values from the Amazon Documentation.
-
-Once the marketplace is saved, update the Amazon Account configuration by going to
-:menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
-Amazon Accounts`. Open the account on which you wish to use the new marketplace, go to the
-:guilabel:`Marketplaces` tab and click on :guilabel:`Update available marketplaces` (an animation
-should confirm the success of the operation). Newly added marketplaces are automatically added to
-the list of synchronized marketplaces. If the new marketplace is not added to the list, it means
-that it is either incompatible or unavailable for your seller account.
-
-.. important::
-   As manually added marketplaces are not officially supported by Odoo, there is no guarantee that
-   adding one as described above will work, nor can this be considered as a bug when contacting Odoo
-   Support.
+#. Activate the :ref:`developer mode <developer-mode>`.
+#. Go to :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
+   Amazon Marketplaces`.
+#. Create a new marketplace record. Enter the :guilabel:`Marketplace ID` and select the
+   :guilabel:`Amazon Region` for your marketplace as described in the `Amazon Documentation for
+   marketplace IDs and regions
+   <https://developer-docs.amazon.com/amazon-shipping/docs/marketplace-ids>`_, and the
+   :guilabel:`Seller Central URL` as described in the `Amazon Documentation for seller central URLs
+   <https://developer-docs.amazon.com/amazon-shipping/docs/seller-central-urls>`_.
+#. Set the name of the record to `Amazon.<country code>` to easily retrieve it (e.g.:
+   **Amazon.se**). The :guilabel:`API Identifier`, the :guilabel:`Region` and the :guilabel:`Seller
+   Central URL` fields should respectively hold the *MarketplaceId*, the selected Amazon region and
+   the *Seller Central URL* values from the Amazon Documentation.
+#. Once the marketplace is saved, update the Amazon Account configuration by going to
+   :menuselection:`Sales --> Configuration --> Settings --> Connectors --> Amazon Sync -->
+   Amazon Accounts`. Open the account on which you wish to use the new marketplace, go to the
+   :guilabel:`Marketplaces` tab and click on :guilabel:`Update available marketplaces` (an animation
+   should confirm the success of the operation). Newly added marketplaces are automatically added to
+   the list of synchronized marketplaces. If the new marketplace is not added to the list, it means
+   that it is either incompatible or unavailable for your seller account.
 
 .. seealso::
    - :doc:`features`
