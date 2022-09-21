@@ -94,9 +94,11 @@ else:
     sys.path.insert(0, str(odoo_dir))
     import odoo.addons
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
-    from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
-    odoo_version = odoo_release.version.replace('~', '-')  # Change saas~XX.Y to saas-XX.Y
-    odoo_version = 'master' if 'alpha' in odoo_release.version else odoo_version
+    from odoo.release import version_info
+    if version_info[3] == 'alpha' and version_info[1] != 0:
+        odoo_version = 'master'
+    else:
+        odoo_version = '{0}.{1}'.format(*version_info)
     if release != odoo_version:
         _logger.warning(
             "Found Odoo sources in %(directory)s but with version '%(odoo_version)s' incompatible "
