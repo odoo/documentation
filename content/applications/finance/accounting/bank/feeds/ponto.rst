@@ -64,8 +64,8 @@ Link your Ponto account with your Odoo database
 #. Finish the flow.
 
 .. note::
-   You have to authorize all the accounts you want to access in Odoo but, Odoo will filter the
-   accounts based on the institution you selected at the second step.
+   You have to authorize all the accounts you want to access in Odoo, but Odoo will filter the
+   accounts based on the institution you selected in the second step.
 
 Update your synchronization credentials
 ---------------------------------------
