@@ -83,7 +83,6 @@ value::
     .. autoattribute:: _parent_name
     .. autoattribute:: _parent_store
 
-    .. autoattribute:: _date_name
     .. autoattribute:: _fold_name
 
 AbstractModel
@@ -856,14 +855,10 @@ Search/Read
 
 .. automethod:: Model.read_group
 
-Fields/Views
-''''''''''''
+Fields
+''''''
 
 .. automethod:: Model.fields_get
-
-.. automethod:: Model.get_view
-
-.. automethod:: Model.fields_view_get
 
 .. _reference/orm/domains:
 

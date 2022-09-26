@@ -336,6 +336,21 @@ A view's specs are applied sequentially.
                views: ``hasclass(*classes)`` matches if the context node has
                all the specified classes
 
+Model Commons
+====================
+
+.. currentmodule:: odoo.addons.base.models.ir_ui_view
+
+Attributes
+----------
+
+.. autoattribute:: Model._date_name
+
+Methods
+-------
+.. automethod:: Model.get_views
+.. automethod:: Model.get_view
+
 .. _reference/views/types:
 
 View types
