@@ -61,9 +61,9 @@ the locations barcodes in :menuselection:`Inventory --> Configuration --> Locati
 Barcode Formats
 ===============
 
-Most retail products use EAN-13 barcodes. They cannot be made up without
-proper authorization. You must pay the International Article Numbering
-Association a fee in exchange for an EAN code sequence.
+Most retail products use EAN-13 barcodes also named GTIN: Global trade Identification Number. They cannot be made up without
+proper authorization and you need a company number as a prefix. Find more information at https://www.gs1.org/standards/id-keys/gtin
+GS1 have assosiated organisation world wide, where you can apply for your company number.  There is a fee for your company number.
 
 Still, as Odoo supports any string as a barcode, you can always define
 your own barcode format for internal use.
