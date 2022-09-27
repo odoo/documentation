@@ -62,11 +62,11 @@ database manager.
    - This offer doesn't include any mailbox. However, you can :ref:`configure your MX records
      <domain-name/odoo-manage>` to use your own email server or solution such as Google Workspace.
 
-To do so, go to :menuselection:`Website --> Go to website --> Promote --> Domain Name`.
-Alternatively, open your `database manager <https://www.odoo.com/my/databases>`_, click on the
-:guilabel:`settings` button next to your database, then on :guilabel:`Domain names`.
+To do so, go to :menuselection:`Website --> Domain Name`. Alternatively, open your `database manager
+<https://www.odoo.com/my/databases>`_, click on the :guilabel:`settings` button next to your
+database, then on :guilabel:`Domain names`.
 
-.. image:: domain_names/register-promote.png
+.. image:: domain_names/register-menu.png
    :align: center
    :alt: Clicking on Domain Names from an Odoo website
 
