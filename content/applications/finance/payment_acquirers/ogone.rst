@@ -51,7 +51,7 @@ Technical Information --> Global Security Parameters`, select :guilabel:`SHA-1` 
 .. tip::
    If you need to use another algorithm, such as `sha-256` or `sha-512`, within Odoo, activate the
    :ref:`developer mode <developer-mode>` and go to :menuselection:`General Settings -->
-   Technical --> System Parameters`. From here, search for `payment_ogone.hash.function` and change
+   Technical --> System Parameters`. From here, search for `payment_ogone.hash_function` and change
    the value line to the desired algorithm (`sha-256` or `sha-512`).
 
 You are now required to generate **SHA-IN** passphrases. **SHA-IN** and **SHA-OUT** passphrases are
