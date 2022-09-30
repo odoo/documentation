@@ -15,4 +15,5 @@ Tutorials
     howtos/profilecode
     howtos/company
     howtos/accounting_localization
+    howtos/payment_provider
     howtos/translations

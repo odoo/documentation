@@ -1,4 +1,4 @@
-:hide-page-toc:
+y:hide-page-toc:
 
 =======
 Payment
