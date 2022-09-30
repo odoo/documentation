@@ -4,6 +4,8 @@
 Advanced B: ACL and Record Rules
 ================================
 
+ACL stands for "Access Control List"
+
 .. warning::
 
     This tutorial assumes you have completed the :ref:`Core Training
