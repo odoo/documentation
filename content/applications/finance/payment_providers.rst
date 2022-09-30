@@ -63,83 +63,96 @@ Online payment providers
    :widths: auto
 
    * -
-     - Payment flow
+     - Payment flow (from)
      - :ref:`Tokenization <payment_providers/features/tokenization>`
      - :ref:`Manual capture <payment_providers/features/manual_capture>`
      - :ref:`Refunds <payment_providers/features/refund>`
      - :ref:`Express checkout <payment_providers/features/express_checkout>`
+     - :ref:`Extra fees <payment_providers/features/extra_fees>`
    * - :doc:`Adyen <payment_providers/adyen>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      - Full and partial
      -
+     -
    * - :doc:`Amazon Payment Services <payment_providers/amazon_payment_services>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`AsiaPay <payment_providers/asiapay>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Authorize.Net <payment_providers/authorize>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      - Full only
      -
+     -
    * - :doc:`Buckaroo <payment_providers/buckaroo>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Flutterwave <payment_providers/flutterwave>`
-     - Payment from the provider website
+     - The provider website
      - |V|
      -
      -
      -
+     -
    * - :doc:`Mercado Pago <payment_providers/mercado_pago>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Mollie <payment_providers/mollie>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`PayPal <payment_providers/paypal>`
-     - Payment from the provider website
+     - The provider website
      -
      -
      -
      -
+     - |V|
    * - :doc:`Razorpay <payment_providers/razorpay>`
-     - Payment from the provider website
+     - The provider website
      -
      - Full only
      - Full and partial
      -
+     -
    * - :doc:`SIPS <payment_providers/sips>`
-     - Payment from the provider website
+     - The provider website
+     -
      -
      -
      -
      -
    * - :doc:`Stripe <payment_providers/stripe>`
-     - Payment from the provider website
+     - The provider website
      - |V|
      - Full only
      - Full and partial
      - |V|
+     -
 
 .. |V| replace:: ✔
 
@@ -259,6 +272,22 @@ and by ticking the :guilabel:`Allow Express Checkout` checkbox.
 
 .. note::
    All prices shown in the express checkout payment form are always taxes included.
+
+.. _payment_providers/features/extra_fees:
+
+Extra Fees
+----------
+
+If supported by the payment provider, you can add **extra fees** to online transactions. Fees can be
+configured either or both of **fixed** amounts and **percentages**, and can be applied according to
+**domestic** or **international** geolocation.
+
+To enable fees, from the *eCommerce* or *Accounting* app, head to :menuselection:`Configuration
+--> Payment Providers` and select the desired supported provider. Click on the :guilabel:`Fees` tab
+and check the :guilabel:`Add Extra Fees` box. Configure the settings to your needs.
+
+.. note::
+   Fees are calculated on the tax-included price.
 
 .. _payment_providers/configuration:
 
