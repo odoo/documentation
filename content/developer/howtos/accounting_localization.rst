@@ -375,7 +375,15 @@ You can check the meaning of the fields here:
 * :doc:`/developer/reference/standard_modules/account/account_report`
 * :doc:`/developer/reference/standard_modules/account/account_report_line`
 
-If you gave a `root_report_id` to your report, it is now available in its variant selector. If not, you still need to add a menu item for it. A default menu item can be created from the form view of the report, by clicking on 'Actions', then 'Create Menu Item'. You'll then need to refresh the page to see it. Alternatively, to create a dedicated section for a totally new report in the :guilabel:`Reporting` menu, you need to create a new `ir.ui.menu` record (usually in the main `l10n_XX` module) and a new `ir.actions.client` (usually in the new report xml file) that calls the `account.report` with  the new report id. Then, set the new menu as `parent_id` field in the action model. Example for the Belgian localization:
+If you gave a `root_report_id` to your report, it is now available in its variant selector. If not,
+you still need to add a menu item for it. A default menu item can be created from the form view of
+the report by clicking on :menuselection:`Actions --> Create Menu Item`. You will then need to
+refresh the page to see it. Alternatively, to create a dedicated section for a totally new report in
+the :guilabel:`Reporting` menu, you need to create a new `ir.ui.menu` record (usually in the main
+`l10n_XX` module) and a new `ir.actions.client` (usually in the new report XML file) that calls the
+`account.report` with  the new **report id**. Then, set the new menu as `parent_id` field in the
+action model.
 
-* `ir.ui.menu record in l10n_be <{GITHUB_PATH}/addons/l10n_be/data/menuitem_data.xml>`_
-* `parent_id field in l10n_be_reports (v16) <https://github.com/odoo/enterprise/blob/a1614d0b1460dc453cbe395efba41573d29e7b7e/l10n_be_reports/data/partner_vat_listing.xml#L55-L65>`_
+.. example::
+   * `ir.ui.menu creation <{GITHUB_PATH}/addons/l10n_be/data/menuitem_data.xml>`_
+   * `ir.actions.client and menu item creation <{GITHUB_ENT_PATH}/l10n_be_reports/data/partner_vat_listing.xml>`_
