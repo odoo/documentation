@@ -2,59 +2,74 @@
 Manage semi-finished products
 =============================
 
-With Odoo MRP, you can use semi-finished products to simplify a complex *Bill
-of Materials* or to represent your manufacturing flow more accurately.
-A *semi-finished product* is a manufactured product that is used as a
-component in a Bill of Material.
+A *semi-finished product*, also known as a *subassembly*, is a manufactured product that is used as
+a component in another product's bill of materials (BoM). Semi-finished products are used to
+simplify complex :abbr:`BoMs (Bills of Materials)` or to more accurately represent a manufacturing
+flow. A :abbr:`BoM (Bill of Materials)` that contains semi-finished products is referred to as a
+*multilevel BoM*, where the main *top-level product* and its subassemblies are distinguished.
 
-A *BoM* that employs *semi-finished products* is referred to as
-a multi-level BoM, where we distinguish between the *top level Product*
-and the *sub-assemblies*.
+Configure semi-finished products
+================================
 
-Configure a Multi Level BoM
-============================
+To set up a multilevel :abbr:`BoM (Bill of Materials)`, the top-level product and semi-finished
+products must be configured. Therefore, the first step is to create the semi-finished products and
+their :abbr:`BoMs (Bills of Materials)`.
 
-To configure a *multi-level BoM*, you will need the top-level product
-and its sub-assemblies. Therefore, you must first create the sub-assembly
-products and their respective Bill of Materials. Please refer to
-:doc:`bill_configuration` for more details on how to create a BOM.
+.. seealso::
+   :doc:`bill_configuration`
 
-.. image:: sub_assemblies/sf_1.png
-    :align: center
+.. image:: sub_assemblies/semifinished-product-bom.png
+   :align: center
+   :alt: A bill of materials for a semi-finished product.
 
-Configure the Main BoM
-======================
+Create the top-level bill of materials (BoM)
+============================================
 
-Then on the final product form, simply add your semi-finished
-products to the Bill of Material.
+After the semi-finished products are fully configured, navigate to :menuselection:`Manufacturing
+--> Products --> Products`. Then, :guilabel:`Create` the top-level product. Configure the product's
+specifications as desired, and be sure to :guilabel:`Save`.
 
-.. image:: sub_assemblies/sf_2.png
-    :align: center
+Once the top-level product is configured, click the :guilabel:`Bill of Materials` smart button on
+the product form, then click :guilabel:`Create` to make a :abbr:`BoM (Bill of Materials)` for the
+top-level product. Then, simply add the semi-finished products to this :abbr:`BoM (Bill of
+Materials)`, along with any other necessary components.
 
-Manage your production planning
-=================================
+.. image:: sub_assemblies/custom-computer-bom.png
+   :align: center
+   :alt: A bill of materials for a top-level product, containing a subassembly component.
 
-There are several methods to manage the triggering of the various manufacturing orders.
+Manage production planning
+==========================
 
-If every time a manufacturing order is confirmed for the main product, you'd like one for
-the semi-finished products as well, you have two options:
+There are several methods to manage manufacturing order automation for products with multilevel
+:abbr:`BoMs (Bills of Materials)`.
 
-Option 1 : Create re-ordering rules for the semi-finished products, with both the minimum
-and maximum desired stock quantities at 0.
+.. note::
+    Semi-finished products are specifically used to manage manufacturable products with multilevel
+    BoMs. If a BoM is being created simply to organize components or bundle sellable products,
+    using :doc:`Kits <kit_shipping>` is the more appropriate option.
 
-.. image:: sub_assemblies/sf_3.png
-    :align: center
+To automatically trigger manufacturing orders for semi-finished products after confirming a
+manufacturing order for the main product, there are two options:
 
-Option 2 : Use the Replenish on Order (MTO) route on the semi-finished product, as well as
-the manufacturing one.
+- **Option 1 (recommended):** Create *Reordering Rules* for the semi-finished products and set both
+  the minimum and maximum desired stock quantities to `0`.
 
-Note that Option 1 is usually recommended over Option 2 as it is more flexible. The MTO route
-creates a unique link between the semi-finished and the top level product, whereas the
-re-ordering rule allows you to simply unreserve that production from the top level product
-production and redirect it to another, more pressing demand, for example.
+.. seealso::
+   :doc:`../../purchase/products/reordering`
 
-In any case, as soon as the semi-finished product is produced, it will become
-available in the manufacturing order of the final product, as shown below.
+- **Option 2:** Activate the :guilabel:`Replenish on Order (MTO)` and :guilabel:`Manufacture`
+  routes under the :guilabel:`Inventory` tab of the semi-finished product's product form.
 
-.. image:: sub_assemblies/sf_4.png
-    :align: center
+Option 1 is more flexible than Option 2 and is therefore recommended. Reordering rules do not
+directly link demand to replenishment, and therefore allow stocks to be unreserved and redirected
+to other orders, if necessary. The Replenish on Order (MTO) route creates a unique link between the
+semi-finished and top-level products, exclusively reserving quantities for the confirmed top-level
+manufacturing order.
+
+Regardless of the method chosen, semi-finished products must be fully manufactured before
+manufacturing can begin on the top-level product.
+
+.. image:: sub_assemblies/semifinished-on-mo.png
+   :align: center
+   :alt: A manufacturing order for a top-level product.
