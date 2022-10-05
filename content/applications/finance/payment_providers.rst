@@ -347,6 +347,26 @@ You can change the payment provider's front-end appearance by modifying its name
 **Displayed as** field and which credit card icons to display under the **Supported Payment Icons**
 field.
 
+.. _payment_providers/currencies:
+
+Currencies
+**********
+
+All payment providers have a different list of available currencies. They are preconfigured and
+available in the :guilabel:`Configuration` tab. They serve as a first filter during payment
+operations, i.e. the payment provider is not displayed as available for payment if the currency is
+not in the supported list.
+
+.. tip::
+   As there might be errors, updates, and unknowns in the lists of available currencies, it is
+   possible to add or remove currencies.
+
+If the list of supported currencies is empty, it either means the list is too long to be displayed,
+or Odoo does not have information on that payment provider. The payment provider remains available,
+even though it is possible the payment will be refused at a later stage should the currency not be
+supported. This field is required if the user needs to select a currency when setting up their
+payment provider account.
+
 .. _payment_providers/countries:
 
 Countries
