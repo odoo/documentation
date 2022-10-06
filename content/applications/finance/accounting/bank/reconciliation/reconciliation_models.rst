@@ -1,5 +1,5 @@
 =====================
-Reconciliation Models
+Reconciliation models
 =====================
 
 Once the bank statements are correctly imported, it is essential to *reconcile* the records properly
