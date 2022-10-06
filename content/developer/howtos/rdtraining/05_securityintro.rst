@@ -24,10 +24,10 @@ which is loaded at installation of the ``base`` module.
 .. code-block:: text
 
     "id","country_id:id","name","code"
-    state_us_1,us,"Alabama","AL"
-    state_us_2,us,"Alaska","AK"
-    state_us_3,us,"Arizona","AZ"
-    state_us_4,us,"Arkansas","AR"
+    state_au_1,au,"Australian Capital Territory","ACT"
+    state_au_2,au,"New South Wales","NSW"
+    state_au_3,au,"Northern Territory","NT"
+    state_au_4,au,"Queensland","QLD"
     ...
 
 - ``id`` is an :term:`external identifier`. It can be used to refer to the record
@@ -77,14 +77,15 @@ Access Rights
 
     .. code-block:: text
 
-        WARNING rd-demo odoo.modules.loading: The model estate.property has no access rules...
+        WARNING rd-demo odoo.modules.loading: The models ['estate.property'] have no access rules...
 
 When no access rights are defined on a model, Odoo determines that no users can access the data.
 It is even notified in the log:
 
 .. code-block:: text
 
-    WARNING rd-demo odoo.modules.loading: The model estate.property has no access rules, consider adding one. E.g. access_estate_property,access_estate_property,model_estate_property,base.group_user,1,0,0,0
+    WARNING rd-demo odoo.modules.loading: The models ['estate.property'] have no access rules in module estate, consider adding some, like:
+    id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 
 Access rights are defined as records of the model ``ir.model.access``. Each
 access right is associated with a model, a group (or no group for global
