@@ -1,6 +1,6 @@
-======================
-Bank and cash accounts
-======================
+=============
+Bank accounts
+=============
 
 You can manage as many bank or cash accounts as needed on your database. Configuring them well
 allows you to have all your banking data up-to-date and ready for :doc:`reconciliation
