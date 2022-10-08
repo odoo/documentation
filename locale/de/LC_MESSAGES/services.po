@@ -6,15 +6,16 @@
 # Translators:
 # Leon Grill <leg@odoo.com>, 2022
 # Martin Trigaux, 2022
+# Friederike Fasterling-Nesselbosch, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 14:56+0000\n"
+"POT-Creation-Date: 2022-09-01 15:11+0000\n"
 "PO-Revision-Date: 2021-11-02 08:49+0000\n"
-"Last-Translator: Martin Trigaux, 2022\n"
+"Last-Translator: Friederike Fasterling-Nesselbosch, 2022\n"
 "Language-Team: German (https://www.transifex.com/odoo/teams/41243/de/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -306,7 +307,7 @@ msgstr ""
 #: ../../content/applications/services/helpdesk/overview/ratings.rst:10
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:11
 msgid "Set up"
-msgstr ""
+msgstr "Einstellen"
 
 #: ../../content/applications/services/helpdesk/overview/forum_and_elearning.rst:16
 msgid ""
@@ -926,6 +927,7 @@ msgid ":doc:`reinvoice_from_project`"
 msgstr ""
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/invoice_time.rst:112
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:104
 msgid ""
 ":doc:`/applications/inventory_and_mrp/inventory/management/products/uom`"
 msgstr ""
@@ -936,40 +938,153 @@ msgstr ""
 
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:5
 msgid ""
-"Directly pull the billable time you have tracked on your helpdesk tickets "
-"into sales orders and invoices through a project task. It gives you more "
-"control over what you charge your client, and it is more efficient."
+"The :guilabel:`Timesheets` integration provides more control and "
+"transparency over how clients are charged, and what they're specifically "
+"billed for."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:10
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:8
+msgid ""
+"In Odoo, the Helpdesk agent can use the ticket to record timesheets. Once a "
+"ticket is solved, the client can be billed for the time spent on the ticket."
+" Odoo will pull from the ticket's timesheet to accurately bill the client."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:13
 msgid "Configuration"
 msgstr "Konfiguration"
 
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:13
-msgid ""
-"Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk team --> Edit`"
-" and enable the options *Timesheet on Ticket* and *Time Reinvoicing*."
-msgstr ""
-
 #: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:15
 msgid ""
-"Under *Timesheet on Ticket*, choose the *Project* to which tickets (and "
-"timesheets) will be linked by default. Open its *External link* to enable "
-"the feature *Bill from tasks*."
+"To turn on the :guilabel:`Timesheets` feature, go to "
+":menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`, select a "
+"Helpdesk team, and then, click :guilabel:`Edit`. Next, enable the options "
+":guilabel:`Timesheets` and :guilabel:`Time Billing`. Then, click "
+":guilabel:`Save` to apply these changes to the Helpdesk team settings."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:22
-msgid "Create a sales order and an invoice"
-msgstr ""
-
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:24
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:20
 msgid ""
-"Now, once you have recorded the time you spent on the helpdesk ticket, under"
-" the *Timesheets* tab, access the task clicking on its name."
+"Once the :guilabel:`Timesheets` feature is enabled, a :guilabel:`Project` "
+"drop-down option will appear below :guilabel:`Timesheets`. The "
+":guilabel:`Project` drop-down option will automatically be set to a project "
+"that Odoo created for the Helpdesk team. The tickets' timesheets will be "
+"stored in the selected project."
 msgstr ""
 
-#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:31
-msgid "*Create Sales Order* and proceed to create the invoice."
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:26
+msgid "Create a sales order"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:28
+msgid ""
+"After a ticket comes into the pipeline, go to :menuselection:`Sales --> "
+"Create`. Then, add the customer from the ticket to the :guilabel:`Customer` "
+"field in the new quotation. In the :guilabel:`Order Lines` tab, create or "
+"select a product to charge the customer for the time spent on their Helpdesk"
+" ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:33
+msgid ""
+"If creating a new product from the sales order form, first give the product "
+"a name by typing it in the :guilabel:`Product` column. Then, click "
+":guilabel:`Create and edit`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:36
+msgid ""
+"First, in the :guilabel:`General Information` tab, set the "
+":guilabel:`Product Type` to :guilabel:`Service` and the :guilabel:`Sales "
+"Price` to the Helpdesk agent's service rate. Then, set the "
+":guilabel:`Invoicing Policy` to :guilabel:`Based on Timesheets`. Finally, "
+"click :guilabel:`Save` to create the new product and add it to the "
+"quotation."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:41
+msgid ""
+"Once the product is added, click :guilabel:`Confirm` to turn the quotation "
+"into a sales order."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:48
+msgid "Record a timesheet"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:50
+msgid ""
+"To record a timesheet, jump back to the Helpdesk ticket by going to the "
+":guilabel:`Helpdesk` dashboard, clicking :guilabel:`Tickets` on the team's "
+"card, and locating the correct ticket. Then, click :guilabel:`Edit` and use "
+"the :guilabel:`Timesheets` tab to record the time spent on the ticket."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:60
+msgid ""
+"The ticket's timesheets can be recorded before or after the sales order is "
+"made, the order doesn't matter."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:64
+msgid "Link the Helpdesk ticket to the SO"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:66
+msgid ""
+"To link the :guilabel:`Sales Order` to the ticket, start on the ticket form "
+"and click :guilabel:`Edit`. Next, select the :guilabel:`Sales Order` that "
+"was created earlier from the :guilabel:`Sales Order Item` drop-down menu. "
+"Odoo will automatically filter the options to only show sales orders that "
+"are connected to the ticket's customer. Lastly, click :guilabel:`Save` to "
+"connect the ticket and the :guilabel:`Sales Order Item`."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:77
+msgid ""
+"The :guilabel:`Sales Order Item` can be connected to the ticket before or "
+"after any timesheets are recorded, the order doesn't matter."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:81
+msgid "Modify billing rates"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:83
+msgid ""
+"If a timesheet entry is recorded, but the agent does not want to bill the "
+"client for that time, go to the :guilabel:`Timesheets` tab and toggle on the"
+" visibility of the :guilabel:`Sales Order Item` column. When filling out the"
+" information for the timesheet entry, make sure to leave the non-billable "
+"timesheet entry's :guilabel:`Sales Order Item` field blank."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:88
+msgid ""
+"If the agent wants to charge a different rate for a timesheet entry, first, "
+"add a new product to the connected :abbr:`SO (Sales Order)` priced at the "
+"new rate. Then, select the new product in the timesheet entry's "
+":guilabel:`Sales Order Item` field."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:93
+msgid "Create the invoice"
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:95
+msgid ""
+"When the Helpdesk ticket is completed and the client is ready to be billed "
+"for time, begin by clicking the :guilabel:`Sales Order` smart button on the "
+"ticket form to navigate to the sales order. The :guilabel:`Delivered` column"
+" should match the number of hours recorded on the ticket's timesheet. After "
+"checking and filling out the relevant information, click :guilabel:`Create "
+"Invoice` to bill the client for the time spent on the ticket. Odoo will "
+"automatically generate an invoice to send to the client and the Helpdesk "
+"ticket can officially be closed."
+msgstr ""
+
+#: ../../content/applications/services/helpdesk/timesheet_and_invoice/reinvoice_from_project.rst:103
+msgid ":doc:`invoice_time`"
 msgstr ""
 
 #: ../../content/applications/services/project.rst:8
