@@ -141,7 +141,7 @@ The service has *seven* important fields:
 
 * :samp:`name` - :class:`ServiceName`: This is the string you will need to provide inside
   the client's :ref:`app <iap-odoo-app>` when requesting a transaction from Odoo. (e.g.
-  :class:`self.env['iap.account].get(name)`). As good practice, this should match the
+  `self.env['iap.account].get(name)`). As good practice, this should match the
   technical name of your app.
 
 * :samp:`label` - :class:`Label`: The name displayed on the shopping portal for the
