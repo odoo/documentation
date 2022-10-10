@@ -650,50 +650,46 @@ Method decorators
 Environment
 ===========
 
-The :class:`~odoo.api.Environment` stores various contextual data used by
-the ORM: the database cursor (for database queries), the current user
-(for access rights checking) and the current context (storing arbitrary
-metadata). The environment also stores caches.
+.. currentmodule:: odoo.api
 
-All recordsets have an environment, which is immutable, can be accessed
-using :attr:`~odoo.models.Model.env` and gives access to:
-
-* the current user (:attr:`~odoo.api.Environment.user`)
-* the cursor (:attr:`~odoo.api.Environment.cr`)
-* the superuser flag (:attr:`~odoo.api.Environment.su`)
-* or the context (:attr:`~odoo.api.Environment.context`)
+.. autoclass:: Environment
 
 .. code-block:: bash
 
     >>> records.env
     <Environment object ...>
+    >>> records.env.uid
+    3
     >>> records.env.user
     res.user(3)
     >>> records.env.cr
-    <Cursor object ...)
+    <Cursor object ...>
 
 When creating a recordset from an other recordset, the environment is
 inherited. The environment can be used to get an empty recordset in an
-other model, and query that model::
+other model, and query that model:
+
+.. code-block:: bash
 
     >>> self.env['res.partner']
     res.partner()
-    >>> self.env['res.partner'].search([['is_company', '=', True], ['customer', '=', True]])
+    >>> self.env['res.partner'].search([('is_company', '=', True), ('customer', '=', True)])
     res.partner(7, 18, 12, 14, 17, 19, 8, 31, 26, 16, 13, 20, 30, 22, 29, 15, 23, 28, 74)
 
-.. currentmodule:: odoo.api
-
-.. automethod:: Environment.ref
+Some lazy properties are available to access the environment (contextual) data:
 
 .. autoattribute:: Environment.lang
-
 .. autoattribute:: Environment.user
-
 .. autoattribute:: Environment.company
-
 .. autoattribute:: Environment.companies
 
-.. TODO cr, uid but not @property or methods of Environment class...
+Useful environment methods
+--------------------------
+
+.. automethod:: Environment.ref
+.. automethod:: Environment.is_superuser
+.. automethod:: Environment.is_admin
+.. automethod:: Environment.is_system
 
 Altering the environment
 ------------------------
