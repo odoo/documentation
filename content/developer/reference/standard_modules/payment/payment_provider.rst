@@ -15,3 +15,4 @@ Payment Provider
    .. automethod:: _get_validation_currency
    .. automethod:: _is_tokenization_required
    .. automethod:: _should_build_inline_form
+   .. automethod:: _get_removal_values
