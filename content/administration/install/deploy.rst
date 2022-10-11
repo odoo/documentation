@@ -290,6 +290,10 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
   upstream odoochat {
     server 127.0.0.1:8072;
   }
+  map $http_upgrade $connection_upgrade {
+    default upgrade;
+    ''      close;
+  }
 
   # http -> https
   server {
