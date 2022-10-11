@@ -188,6 +188,13 @@ sphinx.transforms.i18n.docname_to_domain = (
 versions_names = {
     '16.0': "Odoo 16",
     'master': "Master",
+<<<<<<< HEAD
+||||||| parent of e2e0e884... temp
+    'saas-15.3': "Odoo Online",
+=======
+    '16.0': "Odoo 16",
+    'saas-15.3': "Odoo Online",
+>>>>>>> e2e0e884... temp
     'saas-15.2': "Odoo Online",
     '15.0': "Odoo 15",
     '14.0': "Odoo 14",
