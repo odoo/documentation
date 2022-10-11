@@ -32,7 +32,7 @@ language = None
 source_suffix = '.rst'
 
 # The master toctree document.
-master_doc = 'contents'
+master_doc = 'index'
 
 # List of patterns, relative to source directory, that match files and directories to ignore when
 # looking for source files.
