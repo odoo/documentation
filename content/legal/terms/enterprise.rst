@@ -4,7 +4,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 9c - 2020-06-15
+.. note:: Version 10 - 2022-10-13
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -16,6 +16,7 @@ Odoo Enterprise Subscription Agreement
 .. v9b: clarification that maintenance is opt-out + name of `cloc` command
 .. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
         on all branches)
+.. v10: fall 2022 pricing change - removal of "per app" notions
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -45,8 +46,7 @@ User
     counted as Users.
 
 App
-    An "App" is a specialized group of features available for installation in the Software,
-    and listed in the public Pricing section of `Odoo SA's website <https://www.odoo.com>`_.
+    An "App" is a specialized group of features available for installation in the Software.
 
 Odoo Partner
     An Odoo Partner is a third-party company or individual, chosen by the Customer, and working
@@ -77,6 +77,10 @@ Covered Versions
     to the Covered Versions of the Software, which include the 3 most recently released major
     versions.
 
+Subscription Plan
+    A Subscription Plan defines a set of Apps, features and hosting solutions covered by this
+    Agreement, and is defined in writing at the conclusion of this Agreement.
+
 
 .. _enterprise_access:
 
@@ -105,7 +109,7 @@ Upon expiration or termination of this Agreement, this license is revoked immedi
 Customer agrees to stop using the Odoo Enterprise Edition software and the Cloud Platform.
 
 Should the Customer breach the terms of this section, the Customer agrees to pay Odoo SA an extra
-fee equal to 300% of the applicable list price for the actual number of Users and installed Apps.
+fee equal to 300% of the applicable list price for the actual number of Users.
 
 
 .. _services:
@@ -271,24 +275,26 @@ are provided *if and only if* the Customer is hosted on the Odoo Cloud Platform.
 --------------------
 
 The standard charges for the Odoo Enterprise subscription and the Services are based on the number
-of Users and the installed Apps used by the Customer, and specified in writing
+of Users and the Subscription Plan used by the Customer, and specified in writing
 at the conclusion of the Agreement.
 
-When during the Term, the Customer has more Users or more installed Apps than specified at the time
+When during the Term, the Customer has more Users or uses features that require another
+Subscription Plan than specified at the time
 of conclusion of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
-list price (at the beginning of the Term) for the additional Users or Apps, for the remainder of the Term.
+list price (at that time) for the additional Users or the required Subscription Plan,
+for the remainder of the Term.
 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
 in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge
-is a monthly fee of 16€ per 100 lines of code (rounded up to the next hundred), unless otherwise
+is a monthly fee per 100 lines of code (rounded up to the next hundred), as
 specified in writing at the conclusion of the Agreement. Lines of code will be counted with the ``cloc``
 command of the Software, and include all text lines in the source code of those modules, regardless
 of the programming language (Python, Javascript, XML, etc.), excluding blank lines, comment lines
 and files that are not loaded when installing or executing the Software.
 
 When the Customer requests an upgrade, for each Covered Extra Module that has not been covered by
-a maintenance fee for the last 12 months, Odoo SA may charge a one-time extra fee of 16€ per 100
-lines of code, for each missing month of coverage.
+a maintenance fee for the last 12 months, Odoo SA may charge a one-time extra fee
+for each missing month of coverage.
 
 .. _charges_renewal:
 
@@ -296,7 +302,6 @@ lines of code, for each missing month of coverage.
 -------------------
 
 Upon renewal as covered in section :ref:`term`, if the charges applied during the previous Term
-(excluding any “Initial User Discounts”)
 are lower than the most current applicable list price, these charges will increase by up to 7%.
 
 .. _taxes:
@@ -324,8 +329,8 @@ The Customer agrees to:
 
 - pay Odoo SA any applicable charges for the Services of the present Agreement, in accordance with
   the payment conditions specified at the signature of this contract ;
-- immediately notify Odoo SA when their actual number of Users or their installed Apps exceed the
-  numbers specified at the conclusion of the Agreement, and in this event, pay the applicable
+- immediately notify Odoo SA when their actual number of Users exceeds the
+  number specified at the conclusion of the Agreement, and in this event, pay the applicable
   additional fee as described in section :ref:`charges_standard`;
 - take all measures necessary to guarantee the unmodified execution of the part of the Software
   that verifies the validity of the Odoo Enterprise Edition usage, as described
@@ -347,7 +352,7 @@ When the Customer chooses the Self-Hosting option, the Customer further agrees t
 - take all reasonable measures to protect Customer’s files and databases and to ensure Customer’s
   data is safe and secure, acknowledging that Odoo SA cannot be held liable for any data loss;
 - grant Odoo SA the necessary access to verify the validity of the Odoo Enterprise Edition usage
-  upon request (e.g. if the automatic validation is found to be inoperant for the Customer);
+  upon request (e.g. if the automatic validation is found to be inoperant for the Customer).
 
 
 .. _no_soliciting:
