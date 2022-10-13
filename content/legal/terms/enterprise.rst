@@ -542,8 +542,8 @@ In no event will either party or its affiliates be liable for any indirect, spec
 incidental or consequential damages of any kind, including but not limited to loss of revenue,
 profits, savings, loss of business or other financial loss, costs of standstill or delay, lost or
 corrupted data, arising out of or in connection with this Agreement regardless of the form of
-action, whether in contract, tort (including strict negligence) or any other legal or equitable
-theory, even if a party or its affiliates have been advised of the possibility of such damages,
+action, whether in contract, tort or otherwise,
+even if a party or its affiliates have been advised of the possibility of such damages,
 or if a party or its affiliates' remedy otherwise fails of its essential purpose.
 
 .. _force_majeure:

@@ -577,8 +577,7 @@ y compris, mais sans s'y limiter, la perte de revenus, perte de profits, perte d
 perte commerciale ou toute autre perte financière, les coûts relatifs à l'arrêt ou au retard,
 la perte ou altération des données, découlant ou en relation avec le présent Contrat, quelle que
 soit la forme de l'action, qu'elle soit fondée sur une obligation contractuelle, délictuelle
-ou fondée sur toute autre règle de droit ou d'équité,
-même si la partie ou ses filiales ont été informées du risque de tels dommages, ou si le
+ou autre, même si la partie ou ses filiales ont été informées du risque de tels dommages, ou si le
 recours proposé par la partie ou ses filiales n'atteint pas son but essentiel.
 
 .. _force_majeure_fr:
