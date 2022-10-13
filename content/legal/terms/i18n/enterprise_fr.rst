@@ -11,7 +11,7 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 9c - 2020-06-15
+.. note:: Version 10 - 2022-10-13
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -24,6 +24,7 @@ Odoo Enterprise Subscription Agreement (FR)
 .. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
         on all branches)
 .. v9c2: minor simplification in FR wording
+.. v10: fall 2022 pricing change - removal of "per app" notions
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -36,7 +37,7 @@ En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Od
 1 Durée du Contrat
 ==================
 
-La durée du présent contrat (la "Durée") sera spécifiée par
+La durée du présent Contrat (la "Durée") sera spécifiée par
 écrit à la conclusion du Contrat, à compter de la date de la conclusion. Celui-ci est automatiquement
 reconduit pour une même durée, à moins que l'une des parties n’envoie à l'autre partie un préavis
 écrit de résiliation, et au moins 30 jours avant la date d'échéance du contrat.
@@ -53,9 +54,7 @@ Utilisateur
     comptés comme Utilisateurs.
 
 App
-    Une "App" est un ensemble de fonctionnalités, disponible pour installation dans le Logiciel,
-    et inclus dans la section Tarifs Odoo sur `le site d'Odoo SA <https://www.odoo.com>`_, au moment
-    de la conclusion de ce Contrat.
+    Une "App" est un ensemble de fonctionnalités, disponible pour installation dans le Logiciel.
 
 Partenaire Odoo
     Un Partenaire Odoo est un individu ou société tierce, choisi par le Client et qui collabore
@@ -86,6 +85,10 @@ Bug
 Versions Couvertes
     Sauf exception explicite, tous les Services dans le cadre du présent contrat s'appliquent uniquement aux Versions
     Couvertes du Logiciel, qui comprennent les 3 plus récentes versions majeures.
+
+Formule d'Abonnement
+    Une Formule d'Abonnement définit un ensemble d'Apps, fonctionnalités et solutions d'hébergement
+    couvertes par ce Contrat, tel que précisé par écrit à la conclusion de ce Contrat.
 
 
 .. _enterprise_access_fr:
@@ -119,7 +122,7 @@ Cloud.
 
 Si le Client devait enfreindre les dispositions de la présente section, il accepte de payer
 à Odoo SA des frais supplémentaires équivalents à 300 % du tarif en vigueur applicable
-correspondant au nombre réel d'Utilisateurs et aux Apps installées.
+correspondant au nombre réel d'Utilisateurs.
 
 
 .. _services_fr:
@@ -295,17 +298,18 @@ la Plate-forme Cloud d'Odoo.
 --------------------
 
 Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
-d'Utilisateurs et les Apps installées, et précisés par écrit à la conclusion du contrat.
+d'Utilisateurs et la Formule d'Abonnement, et précisés par écrit à la conclusion du contrat.
 
-Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou d'Apps que spécifié au moment
+Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou utilise des fonctionnalités
+qui requièrent une autre Formule d'Abonnement que spécifié au moment
 de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
-en vigueur applicable (au début du Contrat) pour les utilisateurs supplémentaires,
-pour le reste de la durée.
+en vigueur applicable (à ce moment) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
+requise, pour le reste de la Durée.
 
 Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
 du nombre de lignes de code dans ces modules. Lorsque le client opte pour l'abonnement de maintenance
-des Modules Supplémentaires Couverts, le coût mensuel est de 16€ par 100 lignes de code (arrondi à la
-centaine supérieure), sauf si spécifié par écrit à la conclusion du Contrat. Les lignes de code
+des Modules Supplémentaires Couverts, le coût mensuel est défini par 100 lignes de code (arrondi à la
+centaine supérieure), tel que spécifié par écrit à la conclusion du Contrat. Les lignes de code
 sont comptées avec la commande ``cloc`` du Logiciel, et comprennent toutes les lignes de texte du code
 source de ces modules, peu importe le langage de programmation (Python, Javascript, XML, etc.),
 à l'exclusion des lignes vides, des lignes de commentaires et des fichiers qui ne sont pas chargés
@@ -322,7 +326,6 @@ supplémentaires unique de 16€ par 100 lignes de code, pour chaque mois de mai
 --------------------------
 
 Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
-(à l'exclusion des “Initial User Discounts”)
 qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
 en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%
 par reconduction, sans dépasser les tarifs en vigueur les plus récents.
@@ -350,8 +353,8 @@ Le Client accepte de / d':
 
 - Payer à Odoo SA les frais applicables pour les Services en vertu du présent Contrat,
   conformément aux conditions de paiement spécifiées à la souscription du présent Contrat ;
-- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs ou les Apps installées dépassent
-  les nombres spécifiés à la conclusion du Contrat, et dans ce cas, de régler les frais
+- Aviser immédiatement Odoo SA si le nombre réel d'Utilisateurs dépasse
+  le nombre spécifié à la conclusion du Contrat, et dans ce cas, de régler les frais
   supplémentaires applicables telles que décrits à la section :ref:`charges_standard_fr`;
 - Prendre toutes les mesures nécessaires pour garantir l'exécution non modifiée de la partie du
   Logiciel qui vérifie la validité de l'utilisation de Odoo Enterprise Edition, comme décrit à la
