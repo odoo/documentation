@@ -48,19 +48,20 @@ on related bank journals. From the accounting dashboard (the screen you
 get when you enter the accounting application), click on "More" on your
 bank account and select the "Settings" option.
 
-To activate SEPA, click the **Advanced Settings** tab and, in the **Payment
-Methods** part of the **Miscellaneous** section, check the box **Sepa Credit
-Transfer**.
+To activate SEPA, click the **Outgoing Payments** tab and, in the **Payment
+Method** list, add **SEPA Credit Transfer** as payment Method. And select 
+the **SEPA Pain Version**.
 
 Make sure to specify the IBAN account number (domestic account number
-won't work with SEPA) and the BIC (bank identifier code) on your bank
+won't work with SEPA) on your bank
 journal.
 
 .. note::
    By default, the payments you send using SEPA will use your company name as
    initiating party name. This is what appears on the recipient's bank statement
    in the **payment from** field. You can customize it in your company settings,
-   in the tab **Configuration**, under the **SEPA** section.
+   in the tab **Configuration**, under the **SEPA** section. And you need to insert 
+   your **SEPA identification number**. 
 
 .. image:: sepa/sepa01.png
   :align: center
