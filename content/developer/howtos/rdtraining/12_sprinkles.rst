@@ -519,4 +519,4 @@ Looking good? If not, don't worry, the :ref:`next chapter <howto/rdtraining/13_i
 require stat buttons ;-)
 
 .. _order_by:
-    https://www.postgresql.org/docs/current/queries-order.html
+    https://www.postgresql.org/docs/12/queries-order.html
