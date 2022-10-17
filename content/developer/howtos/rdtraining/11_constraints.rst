@@ -127,4 +127,4 @@ improve it in the :ref:`next chapter <howto/rdtraining/12_sprinkles>`.
 
 .. _PostgreSQL's documentation:
 .. _table_constraint:
-    https://www.postgresql.org/docs/current/ddl-constraints.html
+    https://www.postgresql.org/docs/12/ddl-constraints.html
