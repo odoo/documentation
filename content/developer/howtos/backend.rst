@@ -469,7 +469,7 @@ Relational field types are:
 
         print(foo.other_id.name)
 
-    .. seealso:: `foreign keys <http://www.postgresql.org/docs/9.3/static/tutorial-fk.html>`_
+    .. seealso:: `foreign keys <http://www.postgresql.org/docs/12/static/tutorial-fk.html>`_
 
 :class:`One2many(other_model, related_field) <odoo.fields.One2many>`
     A virtual relationship, inverse of a :class:`~odoo.fields.Many2one`.
@@ -1375,18 +1375,12 @@ Dashboards
              bypasses all Odoo authentication and security mechanisms.
 
 .. _database index:
-    http://use-the-index-luke.com/sql/preface
-
-.. _POEdit: http://poedit.net
-
+    https://use-the-index-luke.com/sql/preface
+.. _POEdit: https://poedit.net
 .. _PostgreSQL's documentation:
 .. _table_constraint:
-    http://www.postgresql.org/docs/9.3/static/ddl-constraints.html
-
-.. _python: http://python.org
-
-.. _XPath: http://w3.org/TR/xpath
-
-.. _twitter bootstrap: http://getbootstrap.com
-
-.. _wkhtmltopdf: http://wkhtmltopdf.org
+    https://www.postgresql.org/docs/12/static/ddl-constraints.html
+.. _python: https://python.org
+.. _XPath: https://w3.org/TR/xpath
+.. _twitter bootstrap: https://getbootstrap.com
+.. _wkhtmltopdf: https://wkhtmltopdf.org

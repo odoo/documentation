@@ -59,7 +59,7 @@ can then be easily done with::
 
 .. seealso::
 
-    `foreign keys <https://www.postgresql.org/docs/current/tutorial-fk.html>`_
+    `foreign keys <https://www.postgresql.org/docs/12/tutorial-fk.html>`_
 
 In practice a many2one can be seen as a dropdown list in a form view.
 
