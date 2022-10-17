@@ -97,7 +97,7 @@ Configuration sample
 * Allow tcp connection on localhost
 * Allow tcp connection from 192.168.1.x network
 
-in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:
+in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:
 
 .. code-block:: text
 
@@ -105,7 +105,7 @@ in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:
   host    all             all             127.0.0.1/32            md5
   host    all             all             192.168.1.0/24          md5
 
-in ``/etc/postgresql/9.5/main/postgresql.conf`` set:
+in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:
 
 .. code-block:: text
 
@@ -172,7 +172,7 @@ in Odoo the db_sslmode control the ssl security of the connection
 with value chosen out of 'disable', 'allow', 'prefer', 'require', 'verify-ca'
 or 'verify-full'
 
-`PostgreSQL Doc <https://www.postgresql.org/docs/current/static/libpq-ssl.html>`_
+`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_
 
 .. _builtin_server:
 
@@ -741,8 +741,8 @@ Here are the supported browsers:
 .. _socat: http://www.dest-unreach.org/socat/
 .. _PostgreSQL connection settings:
 .. _listen to network interfaces:
-    https://www.postgresql.org/docs/9.6/static/runtime-config-connection.html
+    https://www.postgresql.org/docs/12/static/runtime-config-connection.html
 .. _use an SSH tunnel:
-    https://www.postgresql.org/docs/9.6/static/ssh-tunnels.html
+    https://www.postgresql.org/docs/12/static/ssh-tunnels.html
 .. _WSGI: https://wsgi.readthedocs.org/
 .. _POSBox: https://www.odoo.com/page/point-of-sale-hardware#part_2

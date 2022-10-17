@@ -687,7 +687,7 @@ There are 5 possible type of tags in a dashboard view:
 
     ``group_operator`` (optional)
         A valid postgreSQL aggregate function identifier to use when aggregating
-        values (see https://www.postgresql.org/docs/9.5/static/functions-aggregate.html).
+        values (see https://www.postgresql.org/docs/12/static/functions-aggregate.html).
         If not provided, By default, the group_operator from the field definition is used.
         Note that no aggregation of field values is achieved if the group_operator value is "".
 

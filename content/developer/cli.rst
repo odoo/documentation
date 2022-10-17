@@ -633,16 +633,16 @@ Here is a sample file:
    db_user=odoo
    dbfilter=odoo
 
-.. _jinja2: http://jinja.pocoo.org
+.. _jinja2: https://jinja.palletsprojects.com/
 .. _regular expression: https://docs.python.org/3/library/re.html
 .. _password authentication:
-    https://www.postgresql.org/docs/9.3/static/auth-methods.html#AUTH-PASSWORD
+    https://www.postgresql.org/docs/12/static/auth-methods.html#AUTH-PASSWORD
 .. _template database:
-    https://www.postgresql.org/docs/9.3/static/manage-ag-templatedbs.html
+    https://www.postgresql.org/docs/12/static/manage-ag-templatedbs.html
 .. _level:
     https://docs.python.org/3/library/logging.html#logging.Logger.setLevel
 .. _a PostgreSQL URI:
-    https://www.postgresql.org/docs/9.2/static/libpq-connect.html#AEN38208
+    https://www.postgresql.org/docs/12/static/libpq-connect.html#AEN38208
 .. _Werkzeug's proxy support:
     https://werkzeug.palletsprojects.com/en/0.16.x/middleware/proxy_fix/#module-werkzeug.middleware.proxy_fix
 .. _pyinotify: https://github.com/seb-m/pyinotify/wiki
