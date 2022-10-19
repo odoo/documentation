@@ -12,7 +12,7 @@ Upgrade
 .. toctree::
    :titlesonly:
 
-   upgrade/online_hosting
+   upgrade/odoo_online
    upgrade/odoo_sh
    upgrade/on_premise
    upgrade/faq
@@ -22,8 +22,8 @@ An upgrade is switching to a newer version of Odoo (e.g., Odoo 14.0 to Odoo 15.0
 An upgrade does not cover:
 
 * Changing :ref:`editions <upgrade-faq/editions-change>` (i.e., Community to Enterprise edition)
-* Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Online or
-  Odoo.sh)
+* Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Odoo Online
+  or Odoo.sh)
 * Migration from another ERP to Odoo
 
 .. note:: |assistance-contact|
@@ -54,7 +54,7 @@ The upgrade process in a nutshell:
    newly upgraded database (this is done automatically on Odoo Online).
 
 .. seealso::
-   - :doc:`Upgrade process for Odoo Online (SaaS) <upgrade/online_hosting>`
+   - :doc:`Upgrade process for Odoo Online (SaaS) <upgrade/odoo_online>`
    - :doc:`Upgrade process for Odoo.sh <upgrade/odoo_sh>`
    - :doc:`Upgrade process for On-Premise <upgrade/on_premise>`
 
@@ -225,8 +225,8 @@ Service Level Agreement
 What is covered by the Enterprise Licence?
 ------------------------------------------
 
-Databases hosted on Odoo’s Cloud platforms (Saas and Odoo.sh) or On-Premise (Self-Hosting) enjoy the
-following services at all times.
+Databases hosted on Odoo’s Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting)
+enjoy the following services at all times.
 
 The upgrade of:
 
