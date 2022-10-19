@@ -37,39 +37,39 @@ Terms and Conditions
           :target: legal/terms/enterprise.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement
-          :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement.pdf
+          :target: odoo_enterprise_agreement.pdf
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Enterprise Agreement (FR)
           :target: legal/terms/i18n/enterprise_fr.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement (FR)
-          :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_fr.pdf
+          :target: odoo_enterprise_agreement_fr.pdf
      - |missing_txt| |missing_pdf|
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Enterprise Agreement (DE)
           :target: legal/terms/i18n/enterprise_de.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement (DE)
-          :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_de.pdf
+          :target: odoo_enterprise_agreement_de.pdf
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Enterprise Agreement (ES)
           :target: legal/terms/i18n/enterprise_es.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement (ES)
-          :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_es.pdf
+          :target: odoo_enterprise_agreement_es.pdf
    * - Odoo Partnership Agreement
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Partnership Agreement
           :target: legal/terms/partnership.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Partnership Agreement
-          :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement.pdf
+          :target: odoo_partnership_agreement.pdf
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Partnership Agreement (FR)
           :target: legal/terms/i18n/partnership_fr.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Partnership Agreement (FR)
-          :target: https://www.odoo.com/documentation/14.0/odoo_partnership_agreement_fr.pdf
+          :target: odoo_partnership_agreement_fr.pdf
      - |missing_txt| |missing_pdf|
      - |missing_txt| |missing_pdf|
      - |missing_txt| |missing_pdf|
@@ -85,7 +85,7 @@ Terms and Conditions
           :target: legal/terms/i18n/terms_of_sale_fr.html
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Terms of Sale (FR)
-          :target: https://www.odoo.com/documentation/14.0/terms_of_sale_fr.pdf
+          :target: terms_of_sale_fr.pdf
      -
      -
      -
