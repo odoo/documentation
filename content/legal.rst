@@ -45,7 +45,12 @@ Terms and Conditions
           :alt: Download Odoo Enterprise Agreement (FR)
           :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_fr.pdf
      - |missing_txt| |missing_pdf|
-     - |missing_txt| |missing_pdf|
+     - .. image:: legal/img/txt.svg
+          :alt: View Odoo Enterprise Agreement (DE)
+          :target: legal/terms/i18n/enterprise_de.html
+       .. image:: legal/img/pdf.svg
+          :alt: Download Odoo Enterprise Agreement (DE)
+          :target: https://www.odoo.com/documentation/14.0/odoo_enterprise_agreement_de.pdf
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Enterprise Agreement (ES)
           :target: legal/terms/i18n/enterprise_es.html
