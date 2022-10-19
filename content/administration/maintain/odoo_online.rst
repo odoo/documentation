@@ -1,18 +1,18 @@
-=================================
-Online (SaaS) database management
-=================================
+======================================
+Odoo Online (SaaS) database management
+======================================
 
 To manage a database, sign in to https://www.odoo.com and access the `database management page
 <https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*.
 
-.. image:: online/my-databases.png
+.. image:: odoo_online/my-databases.png
    :align: center
    :alt: Clicking on the user icon opens a drop-down menu. "My databases" button is highlighted.
 
 .. note::
    Make sure you are connected as the administrator of the database you want to manage.
 
-.. image:: online/dropdown-menu.png
+.. image:: odoo_online/dropdown-menu.png
    :align: right
    :alt: Clicking on the gear icon opens the drop-down menu.
 
@@ -20,17 +20,17 @@ Open the drop-down menu next to the database you want to manage by clicking on t
 
 Several actions are available:
 
-- :ref:`online/upgrade`
-- :ref:`online/duplicate`
-- :ref:`online/rename`
-- :ref:`online/download`
-- :ref:`online/domains`
-- :ref:`online/tags`
-- :ref:`online/delete`
-- :ref:`online/contact-support`
-- :ref:`online/users`
+- :ref:`odoo_online/upgrade`
+- :ref:`odoo_online/duplicate`
+- :ref:`odoo_online/rename`
+- :ref:`odoo_online/download`
+- :ref:`odoo_online/domains`
+- :ref:`odoo_online/tags`
+- :ref:`odoo_online/delete`
+- :ref:`odoo_online/contact-support`
+- :ref:`odoo_online/users`
 
-.. _online/upgrade:
+.. _odoo_online/upgrade:
 
 Upgrade
 =======
@@ -56,7 +56,7 @@ upgrade to the latest version (e.g., 13.0 to 15.1).
    - :doc:`../upgrade`
    - :doc:`supported_versions`
 
-.. _online/duplicate:
+.. _odoo_online/duplicate:
 
 Duplicate
 =========
@@ -69,14 +69,14 @@ operations.
      orders, etc.) are disabled by default on the duplicated database.
    - Duplicate databases expire automatically after 15 days.
 
-.. _online/rename:
+.. _odoo_online/rename:
 
 Rename
 ======
 
 Rename the database and its URL.
 
-.. _online/download:
+.. _odoo_online/download:
 
 Download
 ========
@@ -87,7 +87,7 @@ Download instantly a ZIP file with a backup of the database.
    Databases are backed up daily according to the `Odoo Cloud SLA
    <https://www.odoo.com/cloud-sla>`_.
 
-.. _online/domains:
+.. _odoo_online/domains:
 
 Domains
 =======
@@ -97,14 +97,14 @@ Configure custom domains to access the database via another URL.
 .. seealso::
    - :doc:`domain_names`
 
-.. _online/tags:
+.. _odoo_online/tags:
 
 Tags
 ====
 
 Add tags to sort your databases out. You can search the tags in the search bar.
 
-.. _online/delete:
+.. _odoo_online/delete:
 
 Delete
 ======
@@ -118,7 +118,7 @@ Delete a database instantly.
 Read carefully the warning message that pops up and proceed only if you fully understand the
 implications of deleting a database:
 
-.. image:: online/delete.png
+.. image:: odoo_online/delete.png
    :align: center
    :alt: A warning message is prompted before deleting a database.
 
@@ -129,7 +129,7 @@ implications of deleting a database:
      needed, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
    - To delete your account, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
 
-.. _online/contact-support:
+.. _odoo_online/contact-support:
 
 Contact Support
 ===============
@@ -137,7 +137,7 @@ Contact Support
 Access the Odoo `support page <https://www.odoo.com/help>`_ with your database's details already
 pre-filled.
 
-.. _online/users:
+.. _odoo_online/users:
 
 Invite / Remove Users
 =====================
@@ -145,7 +145,7 @@ Invite / Remove Users
 To invite users, fill out the email address of the new user and click on *Invite*. To add multiple
 users, click on *Add more users*.
 
-.. image:: online/invite-users.png
+.. image:: odoo_online/invite-users.png
    :align: center
    :alt: Clicking on "Add more users" adds additional email fields.
 
