@@ -25,6 +25,7 @@ Odoo Enterprise Subscription Agreement (FR)
         on all branches)
 .. v9c2: minor simplification in FR wording
 .. v10: fall 2022 pricing change - removal of "per app" notions
+.. v10.001FR: typo: removed 1 leftover 16€/10LoC price
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -317,7 +318,7 @@ source de ces modules, peu importe le langage de programmation (Python, Javascri
 
 Lorsque le Client demande une migration, pour chaque Module Supplémentaire Couvert qui n'a pas fait
 l'objet de frais de maintenance pour les 12 derniers mois, Odoo SA peut facturer des frais
-supplémentaires unique de 16€ par 100 lignes de code, pour chaque mois de maintenance manquant.
+supplémentaires uniques, pour chaque mois de maintenance manquant.
 
 
 .. _charges_renewal_fr:
