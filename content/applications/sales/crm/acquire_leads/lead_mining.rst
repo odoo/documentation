@@ -65,7 +65,7 @@ Credits`; or go to :menuselection:`Settings --> Contacts --> Odoo IAP --> View m
     The blue box will automatically tell you how many credits are going to be consumed.
 
 .. tip::
-   If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial credits to test the feature.
+   If you are on Odoo Online (SaaS) and have the Enterprise version, you benefit from free trial credits to test the feature.
 
 .. seealso::
    * :doc:`In-App Purchases (IAP) </applications/general/in_app_purchase>`

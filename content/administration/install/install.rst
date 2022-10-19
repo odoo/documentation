@@ -33,7 +33,7 @@ Editions
 ========
 
 There are two different Editions_ of Odoo: the Community and Enterprise versions.
-Using the Enterprise version is possible on our SaaS_ and accessing the code is
+Using the Enterprise version is possible on `Odoo Online`_ and accessing the code is
 restricted to Enterprise customers and partners. The Community version is freely
 available to anyone.
 
@@ -55,17 +55,17 @@ around and try things out with no commitment.
 
 Demo_ instances require no local installation, just a web browser.
 
-SaaS
-----
+Odoo Online
+-----------
 
-Trivial to start with, fully managed and migrated by Odoo S.A., Odoo's SaaS_
+Trivial to start with, fully managed and migrated by Odoo S.A., `Odoo Online`_
 provides private instances and starts out free. It can be used to discover and
 test Odoo and do non-code customizations (i.e. incompatible with custom modules
 or the Odoo Apps Store) without having to install it locally.
 
 Can be used for both testing Odoo and long-term production use.
 
-Like demo_ instances, SaaS_ instances require no local installation, a web
+Like demo_ instances, `Odoo Online`_ instances require no local installation, a web
 browser is sufficient.
 
 
@@ -738,7 +738,7 @@ official Odoo `docker image <https://hub.docker.com/_/odoo/>`_ page.
 .. _install pip:
     https://pip.pypa.io/en/latest/installing.html#install-pip
 .. _Quilt: http://en.wikipedia.org/wiki/Quilt_(software)
-.. _saas: https://www.odoo.com/page/start
+.. _Odoo Online: https://www.odoo.com/page/start
 .. _the wkhtmltopdf download page: https://github.com/wkhtmltopdf/wkhtmltopdf/releases/tag/0.12.5
 .. _UAC: http://en.wikipedia.org/wiki/User_Account_Control
 .. _wkhtmltopdf: http://wkhtmltopdf.org
