@@ -17,7 +17,7 @@ then choose the package you want in the **Fiscal Localization** section.
 Be careful, you can only change the accounting package as long as you have not created any accounting entry. 
 
 .. tip::
-    When you create a new SaaS database, the PGCE PYMEs 2008 is installed by default. 
+    When you create a new Odoo Online database, the PGCE PYMEs 2008 is installed by default.
 
 Spanish Accounting Reports
 ==========================

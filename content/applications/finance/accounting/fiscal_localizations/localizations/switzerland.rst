@@ -67,8 +67,8 @@ Starting from the 1st January 2018, new reduced VAT rates will be
 applied in Switzerland. The normal 8.0% rate will switch to 7.7% and the
 specific rate for the hotel sector will switch from 3.8% to 3.7%.
 
-How to update your taxes in Odoo Enterprise (SaaS or On Premise)?
------------------------------------------------------------------
+How to update your taxes in Odoo Enterprise (Odoo Online or On-premise)?
+------------------------------------------------------------------------
 
 If you have the V11.1 version, all the work is already been done, you
 don't have to do anything.
