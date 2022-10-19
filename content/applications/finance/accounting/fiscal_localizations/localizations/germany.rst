@@ -13,7 +13,7 @@ Be careful, you can only change the accounting package as long as you have not c
 
 .. tip::
 
-    When you create a new SaaS database, the SKR03 is installed by default. 
+    When you create a new Odoo Online database, the SKR03 is installed by default.
 
 German Accounting Reports
 =========================
@@ -224,8 +224,8 @@ accordance with the GoBD guidelines.
 Once bookings have been finally posted, they can no longer be changed or deleted via the
 application.
 
-- If Odoo is used in the cloud, regular backups are part of the SaaS service. In addition, regular
-  backups can be downloaded and backed up on external systems.
+- If Odoo is used in the cloud, regular backups are part of the Odoo Online service. In addition,
+  regular backups can be downloaded and backed up on external systems.
 
   .. seealso::
      `Odoo Cloud Hosting - Service Level Agreement <https://www.odooo.com/cloud-sla>`_
