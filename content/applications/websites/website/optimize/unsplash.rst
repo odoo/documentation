@@ -6,11 +6,11 @@ Generate an Unsplash access key
 ===============================
 
 .. tip::
-   **As a SaaS user**, you are ready to use Unsplash. You won't need to follow this guide to set up
-   Unsplash information since you will use our own Odoo Unsplash key in a transparent way.
+   **As an Odoo Online user**, you are ready to use Unsplash. You won't need to follow this guide to
+   set up Unsplash information since you will use our own Odoo Unsplash key in a transparent way.
 
-Generate an Unsplash access key for non-Saas users
---------------------------------------------------
+Generate an Unsplash access key for non-Odoo Online users
+---------------------------------------------------------
 
 - Create an account on `Unsplash.com <https://unsplash.com/join>`_.
 
@@ -39,8 +39,8 @@ Generate an Unsplash access key for non-Saas users
    :align: center
 
 .. warning::
-   **As a non-SaaS user**, you won't be able to register for a production Unsplash key and will be
-   limited to your test key that has a restriction of 50 Unsplash requests per hour.
+   **As a non-Odoo Online user**, you won't be able to register for a production Unsplash key and
+   will be limited to your test key that has a restriction of 50 Unsplash requests per hour.
 
 Generate an Unsplash application ID
 ===================================
@@ -62,5 +62,5 @@ Generate an Unsplash application ID
    :align: center
 
 .. warning::
-   **As a non-SaaS user**, you won't be able to register for a production Unsplash key and will be
-   limited to your test key that has a 50 Unsplash requests per hour restriction.
+   **As a non-Odoo Online user**, you won't be able to register for a production Unsplash key and
+   will be limited to your test key that has a 50 Unsplash requests per hour restriction.
