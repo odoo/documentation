@@ -131,7 +131,7 @@ Odoo Online databases
 
 .. Warning::
 
-  Saas releases (e.g. *saas-**) are not supported on Odoo.sh.
+  Online versions (e.g. *saas-**) are not supported on Odoo.sh.
 
 Upload the backup
 -----------------
