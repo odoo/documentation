@@ -81,7 +81,7 @@ The configuration steps are explained in `Google documentation <https://support.
 Restriction
 -----------
 
-Please note that port 25 is blocked for security reasons on the SaaS and Odoo.sh platforms. Try
+Please note that port 25 is blocked for security reasons on Odoo Online and Odoo.sh platforms. Try
 using ports 465, 587, or 2525 instead.
 
 .. _email_communication/default_from:

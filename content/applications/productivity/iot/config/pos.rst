@@ -14,7 +14,7 @@ Before starting, make sure you have the following:
 
 -  A computer or tablet with an up-to-date web browser
 
--  A running SaaS or Odoo instance with the Point of Sale and IoT apps
+-  A running Odoo Online or Odoo instance with the Point of Sale and IoT apps
    installed
 
 -  A local network setup with DHCP (this is the default setting)

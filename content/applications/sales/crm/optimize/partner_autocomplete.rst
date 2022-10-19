@@ -43,6 +43,6 @@ Pricing
 .. note::
    - If you run out of credits, the only information that will be populated when clicking on
      the suggested company will be the website link and the logo.
-   - If you are on Odoo Online (SAAS) and you have the Enterprise version, you benefit from free
+   - If you are on Odoo Online (SaaS) and you have the Enterprise version, you benefit from free
      trial credits to test the feature.
    - Learn about our *Privacy Policy* `here <https://iap.odoo.com/privacy#header_2>`_.

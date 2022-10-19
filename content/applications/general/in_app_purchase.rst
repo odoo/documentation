@@ -16,7 +16,7 @@ Services`.
    :align: center
 
 .. tip::
-   If I am on Odoo Online (SAAS) and have the Enterprise version, I benefit from free credits to
+   If I am on Odoo Online (SaaS) and have the Enterprise version, I benefit from free credits to
    test our IAP features.
 
 IAP accounts
@@ -57,7 +57,7 @@ IAP services available
 
 Different services are available depending on the hosting type of your Database:
 
-- *Odoo Online (SAAS)*: only the IAP services provided by Odoo can be used (i.e. the SMS, Snailmail,
+- *Odoo Online (SaaS)*: only the IAP services provided by Odoo can be used (i.e. the SMS, Snailmail,
   Reveal and Partner Autocomplete features);
 - *Odoo.sh and Odoo Enterprise (on-premise)*: both the services provided by Odoo and by third-party
   apps can be used.

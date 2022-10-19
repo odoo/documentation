@@ -8,8 +8,9 @@ Supported versions
 Odoo provides support and bug fixing **for the 3 last major versions** of Odoo.
 
 .. note::
-   Odoo releases intermediary versions called **Online versions** on the :doc:`Odoo Online <online>`
-   hosting every two months. Odoo Online users can then benefit from the latest features of Odoo.
+   Odoo releases intermediary versions called **Online versions** on the :doc:`Odoo Online
+   <odoo_online>` hosting every two months. Odoo Online users can then benefit from the latest
+   features of Odoo.
 
    - Admins of Odoo Online databases are invited to :doc:`upgrade <../upgrade>` them regularly.
    - Online versions are *not* released for Odoo.sh and On-Premise installations.

@@ -135,7 +135,7 @@ Depending on the platform you are using:
   See the Odoo.sh documentation about :ref:`logs <odoosh/logs>`. Use the command ``grep`` and 
   ``zgrep`` (for the compressed ones) to search through the files.
 
-- The **SaaS** users won’t have access to their logs. However you can still contact 
+- **Odoo Online** users won’t have access to their logs. However you can still contact
   `Odoo Support <https://www.odoo.com/help>`_ , if you have a recurring issue 
   with the same client or domain.
 
