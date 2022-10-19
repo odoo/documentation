@@ -69,7 +69,7 @@ Certification & On-premise
 ==========================
 
 The certification granted by the government is restricted to the use on odoo.com
-SaaS instance. The usage of the module from the source or a modified version
+Odoo Online instance. The usage of the module from the source or a modified version
 will **not** be certified. For on-premise users, we also support the Fiscal Data
 Module in such installations. The main restriction is that this requires an
 obfuscated version of the ``pos_blackbox_be`` module we will provide on request

@@ -108,8 +108,8 @@ community or enterprise edition. It is required to have an enterprise subscripti
 
 .. _upgrade-faq/hosting-types-switch:
 
-Switching the hosting types (Self-Hosting vs. Online Hosting - SaaS vs. Cloud Platform - Odoo.sh)
-=================================================================================================
+Switching the hosting types (On-premise vs. Odoo Online vs. Odoo.sh)
+====================================================================
 
 An upgrade does not cover a change of `Hosting types <https://www.odoo.com/page/hosting-types>`_.
 
