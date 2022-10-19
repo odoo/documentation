@@ -64,7 +64,7 @@ Or go to :menuselection:`Settings --> View my Services`.
 
 
 .. tip::
-   If you are on Odoo Online (SAAS) and have the Enterprise version, you benefit from free trial
+   If you are on Odoo Online (SaaS) and have the Enterprise version, you benefit from free trial
    credits to test the feature.
 
 
