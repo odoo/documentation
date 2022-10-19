@@ -11,6 +11,6 @@ Maintain
     maintain/update
     maintain/enterprise
     maintain/hosting_changes
-    maintain/online
+    maintain/odoo_online
     maintain/on_premise
     maintain/supported_versions
