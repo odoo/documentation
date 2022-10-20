@@ -50,7 +50,7 @@ Pricing
   click on *View My Services*.
 
 .. important::
-   - If you are on Odoo Online (SaaS) and have the Enterprise version, you benefit from free trial
-     credits to test the feature.
+   - If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits
+     to test the feature.
 .. seealso::
    - Our `Privacy Policy <https://iap.odoo.com/privacy#header_6>`_.
