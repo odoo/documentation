@@ -166,8 +166,8 @@ In-App Purchase
 .. note::
    - If you run out of credits, the only information populated when clicking on the suggested
      company is the website link and logo.
-   - If you are on Odoo Online (SaaS) and have the Enterprise version, you benefit from free
-     trial credits to test the feature.
+   - If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits
+     to test the feature.
    - Learn about our *Privacy Policy* `here <https://iap.odoo.com/privacy#header_2>`_.
 
 .. seealso::
