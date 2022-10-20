@@ -1,6 +1,6 @@
-======================================
-Odoo Online (SaaS) database management
-======================================
+===============================
+Odoo Online database management
+===============================
 
 To manage a database, sign in to https://www.odoo.com and access the `database management page
 <https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*.
