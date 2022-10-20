@@ -62,7 +62,7 @@ including tests.
       spans from when the profiler was enabled until it is disabled.
 
       .. note::
-         Odoo Online (SaaS) databases cannot be profiled.
+         Odoo Online databases cannot be profiled.
 
    .. tab:: Enable from Python code
 
