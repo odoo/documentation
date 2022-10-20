@@ -1,6 +1,6 @@
-==================
-Odoo Online (SaaS)
-==================
+===========
+Odoo Online
+===========
 
 Requesting a test upgrade
 =========================
