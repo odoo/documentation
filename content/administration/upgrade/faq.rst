@@ -151,8 +151,8 @@ features and improvements made in each version.
 How long is my test available for
 =================================
 
-An Odoo Online (SaaS) test database is available for one month by default. We can extend this trial
-period upon request. For Odoo.sh or on-premise, there is no restriction.
+An Odoo Online test database is available for one month by default. We can extend this trial period
+upon request. For Odoo.sh or on-premise, there is no restriction.
 
 How many tests to perform before upgrading to production?
 =========================================================
