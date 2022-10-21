@@ -714,6 +714,24 @@ Code blocks
              def main():
                  print("Hello world!")
 
+.. _contributing/spoilers:
+
+Spoilers
+========
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - .. spoiler:: Answer to the Ultimate Question of Life, the Universe, and Everything
+
+          42.
+
+   * - .. code-block:: text
+
+          .. spoiler:: Answer to the Ultimate Question of Life, the Universe, and Everything
+
+          42.
+
 .. _contributing/tabs:
 
 Content tabs

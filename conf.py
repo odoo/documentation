@@ -124,6 +124,9 @@ extensions = [
     # Content tabs
     'sphinx_tabs.tabs',
 
+    # Spoilers
+    'spoilers',
+
     # Strange html domain logic used in memento pages
     'html_domain',
 ]
