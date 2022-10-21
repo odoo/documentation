@@ -146,13 +146,13 @@ Repository
    .. group-tab:: Debian/Ubuntu
 
       Odoo S.A. provides a repository that can be used with Debian and Ubuntu distributions. It can
-      be used to install *Odoo Community Edition* by executing the following commands **as root**:
+      be used to install *Odoo Community Edition* by executing the following commands:
 
       .. code-block:: console
 
-          # wget -O - https://nightly.odoo.com/odoo.key | apt-key add -
-          # echo "deb http://nightly.odoo.com/16.0/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
-          # apt-get update && apt-get install odoo
+          $ wget -q -O - https://nightly.odoo.com/odoo.key | sudo gpg --dearmor -o /usr/share/keyrings/odoo-archive-keyring.gpg
+          $ echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/16.0/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
+          $ sudo apt-get update && sudo apt-get install odoo
 
       You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
 
