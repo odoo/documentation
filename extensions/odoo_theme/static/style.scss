@@ -1094,6 +1094,42 @@ header {
         }
     }
 }
+
+//------------------------------------------------------------------------------
+// Spoilers
+//------------------------------------------------------------------------------
+
+.o_spoiler {
+    border-color: tint-color($doc_exercise, 30%);
+    background-color: $o-accordion-bg;
+
+    .accordion-button {
+        &::after {
+            margin: 0 .2rem 0 0;
+        }
+
+        &.collapsed::after {
+            transform: rotate(-90deg);
+        }
+    }
+
+    .accordion-body {
+        #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
+            > *:first-child {
+                margin-top: 1rem;
+            }
+
+            code, div[class^="highlight"] {
+                border-color: tint-color($doc-exercise, 50%);
+
+                &:first-child:last-child {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
+}
+
 //------------------------------------------------------------------------------
 // Content Tabs
 //------------------------------------------------------------------------------
