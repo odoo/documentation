@@ -54,8 +54,6 @@ related to testing Odoo content (modules, mainly):
 .. autoclass:: odoo.tests.common.SingleTransactionCase
     :members: browse_ref, ref
 
-.. autoclass:: odoo.tests.common.SavepointCase
-
 .. autoclass:: odoo.tests.common.HttpCase
     :members: browse_ref, ref, url_open, browser_js
 
@@ -119,8 +117,7 @@ In Odoo, Python tests can be tagged to facilitate the test selection when
 running tests.
 
 Subclasses of :class:`odoo.tests.common.BaseCase` (usually through
-:class:`~odoo.tests.common.TransactionCase`,
-:class:`~odoo.tests.common.SavepointCase` or
+:class:`~odoo.tests.common.TransactionCase` or
 :class:`~odoo.tests.common.HttpCase`) are automatically tagged with
 ``standard`` and ``at_install`` by default.
 
