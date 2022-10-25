@@ -257,9 +257,6 @@ section of the view, and allowing a few *optional* attributes:
     website interface) and its default status. If unset, the view is always
     enabled.
 
-.. deprecated act_window & report
-.. ignored url, act_window and ir_set
-
 .. _reference/data/csvdatafiles:
 
 CSV data files
