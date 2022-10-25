@@ -485,16 +485,6 @@ customize the amount of logging output.
 
         $ odoo-bin --log-handler :DEBUG --log-handler werkzeug:CRITICAL --log-handler odoo.fields:WARNING
 
-.. option:: --log-request
-
-    enable DEBUG logging for RPC requests, equivalent to
-    ``--log-handler=odoo.http.rpc.request:DEBUG``
-
-.. option:: --log-response
-
-    enable DEBUG logging for RPC responses, equivalent to
-    ``--log-handler=odoo.http.rpc.response:DEBUG``
-
 .. option:: --log-web
 
     enables DEBUG logging of HTTP requests and responses, equivalent to
