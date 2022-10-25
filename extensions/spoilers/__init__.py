@@ -1,65 +1,96 @@
 from docutils import nodes
-from sphinx.locale import _
+from sphinx.locale import get_translation
 from sphinx.util.docutils import SphinxDirective
 
 
 class Spoiler(SphinxDirective):
-    """ Implement a `spoiler` directive. """
-
+    """ Implement a `spoiler` directive with Bootstrap's accordion component. """
     required_arguments = 0
     optional_arguments = 1
     final_argument_whitespace = True
     has_content = True
 
     def run(self):
+        """ Process the content of the directive.
+
+        We use custom node classes to represent HTML elements (e.g., 'div') rather than the
+        corresponding sphinx.nodes.* class (e.g., sphinx.nodes.container) to prevent automatically
+        setting the name of the node as class (e.g., "container") on the element.
+        """
+        _ = get_translation('spoilers')
         self.assert_has_content()
+        spoiler_id = self.env.new_serialno("spoiler")
+        heading_id = f'o_spoiler_header_{spoiler_id}'
+        content_id = f'o_spoiler_content_{spoiler_id}'
 
-        label = self.arguments[0] if self.arguments else _("Spoiler")
-        spoiler_id = f'o_spoiler_{self.env.new_serialno("spoiler")}'
+        # Create the main accordion container.
+        accordion_container = Container(classes=['accordion', 'accordion-flush'])
 
-        # Create the main container for the spoiler.
-        spoiler_container = nodes.container()
-        spoiler_container['classes'].append('o_spoiler')
+        # Create the accordion item container.
+        accordion_item_container = Container(classes=['accordion-item'])
+        accordion_container.append(accordion_item_container)
 
-        # Create the spoiler button.
-        spoiler_button = SpoilerButton(label=label, spoiler_target=f'.{spoiler_id}')
-        spoiler_container += spoiler_button
+        # Create the header.
+        header = Header(ids=[heading_id], classes=['accordion-header'])
+        accordion_item_container.append(header)
 
-        # Create the container for the spoiler content.
-        spoiler_content = nodes.container()
-        spoiler_content['classes'].extend(['collapse', 'o_spoiler_content', spoiler_id])
-        self.state.nested_parse(self.content, self.content_offset, spoiler_content)
-        spoiler_container += spoiler_content
-
-        return [spoiler_container]
-
-
-class SpoilerButton(nodes.General, nodes.Element):
-    """ Represent a spoiler button. """
-
-    def __init__(self, rawsource='', label=None, *children, **attributes):
-        super().__init__(rawsource, *children, **attributes)
-        self.label = label
-
-    @staticmethod
-    def visit(translator, node):
-        node['classes'].extend(['btn', 'btn-primary'])
-        attributes = {
+        # Create the toggle button.
+        button = Button(classes=['accordion-button', 'collapsed'], **{
             'type': 'button',
             'data-bs-toggle': 'collapse',
-            'data-bs-target': node['spoiler_target'],
-        }
-        translator.body.append(translator.starttag(node, 'button', **attributes).rstrip())
-        translator.body.append(node.label)
+            'data-bs-target': f'#{content_id}',
+            'aria-expanded': 'false',
+            'aria-controls': content_id,
+        })
+        header.append(button)
 
-    @staticmethod
-    def depart(translator, node):
-        translator.body.append('</button>')
+        # Create the button label.
+        label = self.arguments[0] if self.arguments else _("Spoiler")
+        button_label = nodes.Text(label)
+        button.append(button_label)
+
+        # Create the accordion collapse container.
+        accordion_collapse_container = Container(
+            ids=[content_id],
+            classes=['accordion-collapse', 'collapse'],
+            **{'aria-labelledby': heading_id},
+        )
+        accordion_item_container.append(accordion_collapse_container)
+
+        # Create the accordion body container.
+        accordion_body_container = Container(classes=['accordion-body'])
+        self.state.nested_parse(self.content, self.content_offset, accordion_body_container)
+        accordion_collapse_container.append(accordion_body_container)
+
+        return [accordion_container]
+
+
+class Container(nodes.General, nodes.Element):
+    custom_tag_name = 'div'
+
+
+class Header(nodes.General, nodes.Element):
+    custom_tag_name = 'span'
+
+
+class Button(nodes.General, nodes.Element):
+    custom_tag_name = 'button'
+
+
+def visit_node(translator, node):
+    custom_attr = {k: v for k, v in node.attributes.items() if k not in node.known_attributes}
+    translator.body.append(translator.starttag(node, node.custom_tag_name, **custom_attr).rstrip())
+
+
+def depart_node(translator, node):
+    translator.body.append(f'</{node.custom_tag_name}>')
 
 
 def setup(app):
     app.add_directive('spoiler', Spoiler)
-    app.add_node(SpoilerButton, html=(SpoilerButton.visit, SpoilerButton.depart))
+    app.add_node(Container, html=(visit_node, depart_node))
+    app.add_node(Header, html=(visit_node, depart_node))
+    app.add_node(Button, html=(visit_node, depart_node))
     return {
         'parallel_read_safe': True,
         'parallel_write_safe': True,

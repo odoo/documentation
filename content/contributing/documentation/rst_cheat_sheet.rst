@@ -719,102 +719,50 @@ Code blocks
 Spoilers
 ========
 
-.. spoiler:: Answer to the Ultimate Question of Life, the Universe, and Everything
-
-   42.
-
------
-
-.. raw:: html
-
-   <div class="accordion">
-      <div class="accordion-item">
-        <span class="accordion-header" id="headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Answer to the Ultimate Question of Life, the Universe, and Everything
-          </button>
-        </span>
-        <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-          <div class="accordion-body">
-            42.
-          </div>
-        </div>
-      </div>
-   </div>
-
------
-
 .. exercise::
+   Do something
 
-   .. raw:: html
+.. spoiler:: Showcase for MORM
 
-      <div class="accordion">
-         <div class="accordion-item">
-           <span class="accordion-header" id="headingOne">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-               Answer to the Ultimate Question of Life, the Universe, and Everything
-             </button>
-           </span>
-           <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne">
-             <div class="accordion-body">
-               42.
-             </div>
-           </div>
-         </div>
-      </div>
+   Hello! **bold** *italic*
 
------
+   .. warning::
+      warn
 
-.. raw:: html
+   .. code-block:: python
 
-   <div class="accordion accordion-flush">
-      <div class="accordion-item">
-        <h2 class="accordion-header" id="flush-headingOne">
-          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-            Answer to the Ultimate Question of Life, the Universe, and Everything
-          </button>
-        </h2>
-        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
-          <div class="accordion-body">
-            42.
-          </div>
-        </div>
-      </div>
-   </div>
+      print("hello world")
+
+   .. example::
+
+      .. tabs::
+
+         .. tab:: A
+
+            a
+
+         .. tab:: B
+
+            b
+
+         .. code-tab:: python Hello
+
+            print("hello")
 
 -----
 
-.. exercise::
-
-   .. raw:: html
-
-      <div class="accordion accordion-flush">
-         <div class="accordion-item">
-           <h2 class="accordion-header" id="flush-headingOne">
-             <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
-               Answer to the Ultimate Question of Life, the Universe, and Everything
-             </button>
-           </h2>
-           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne">
-             <div class="accordion-body">
-               42.
-             </div>
-           </div>
-         </div>
-      </div>
-
-.. .. list-table::
+.. list-table::
    :class: o-showcase-table
 
    * - .. spoiler:: Answer to the Ultimate Question of Life, the Universe, and Everything
 
-          42.
+          **42**
 
    * - .. code-block:: text
 
           .. spoiler:: Answer to the Ultimate Question of Life, the Universe, and Everything
 
-          42.
+             **42**
 
 .. _contributing/tabs:
 
