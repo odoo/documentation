@@ -276,10 +276,8 @@ Odoo supports custom tags acting as syntactic sugar:
 
 - menuitem: use it as a shortcut to declare a ``ir.ui.menu``
 - template: use it to declare a QWeb View requiring only the ``arch`` section of the view.
-- report: use to declare a :ref:`report action <reference/actions/report>`
-- act_window: use it if the record notation can't do what you want
 
-The 4 first tags are preferred over the *record* notation.
+These tags are preferred over the *record* notation.
 
 
 XML IDs and naming
