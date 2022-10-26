@@ -722,6 +722,13 @@ Spoilers
 .. exercise::
    Do something
 
+   .. spoiler:: text
+
+      test test
+
+      .. warning:: truc
+    
+
 .. spoiler:: Showcase for MORM
 
    Hello! **bold** *italic*
