@@ -4,7 +4,7 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
-.. note:: Version 10 - 2022-10-13
+.. note:: Version 10a - 2022-10-27
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -17,6 +17,7 @@ Odoo Enterprise Subscription Agreement
 .. v9c: minor wording changes, tuned User definition, + copyright guarantee (re-application of v8a changes
         on all branches)
 .. v10: fall 2022 pricing change - removal of "per app" notions
+.. v10a: clarified wording for Section 5.1 "(at that time)"
 
 By subscribing to the Odoo Enterprise services (the "Services") provided by Odoo SA and its
 affiliates (collectively, "Odoo SA") in relation with Odoo Enterprise Edition or Odoo Community
@@ -281,8 +282,8 @@ at the conclusion of the Agreement.
 When during the Term, the Customer has more Users or uses features that require another
 Subscription Plan than specified at the time
 of conclusion of this Agreement, the Customer agrees to pay an extra fee equivalent to the applicable
-list price (at that time) for the additional Users or the required Subscription Plan,
-for the remainder of the Term.
+list price (at the time of the deviation from the specified number of Users or Subscription Plan)
+for the additional Users or the required Subscription Plan, for the remainder of the Term.
 
 In addition, services for Covered Extra Modules are charged based on the number of lines of code
 in these modules. When the Customer opts for the maintenance of Covered Extra Modules, the charge

@@ -11,7 +11,7 @@ Odoo Enterprise Subscription Agreement (FR)
     La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
-.. note:: Version 10 - 2022-10-13
+.. note:: Version 10a - 2022-10-27
 
 .. v6: add "App" definition + update pricing per-App
 .. v7: remove possibility of price change at renewal after prior notice
@@ -26,6 +26,7 @@ Odoo Enterprise Subscription Agreement (FR)
 .. v9c2: minor simplification in FR wording
 .. v10: fall 2022 pricing change - removal of "per app" notions
 .. v10.001FR: typo: removed 1 leftover 16€/10LoC price
+.. v10a: clarified wording for Section 5.1 "(at that time)"
 
 En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Odoo SA et ses filiales
 (collectivement, "Odoo SA") en relation avec Odoo Enterprise Edition ou Odoo Community Edition
@@ -304,7 +305,8 @@ d'Utilisateurs et la Formule d'Abonnement, et précisés par écrit à la conclu
 Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou utilise des fonctionnalités
 qui requièrent une autre Formule d'Abonnement que spécifié au moment
 de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
-en vigueur applicable (à ce moment) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
+en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilisateurs ou de la
+Formule d'Abonnement spécifiés) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
 requise, pour le reste de la Durée.
 
 Par ailleurs, les services concernant les Modules Supplémentaires Couverts sont facturés sur base
