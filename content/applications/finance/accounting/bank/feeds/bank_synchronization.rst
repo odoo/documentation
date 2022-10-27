@@ -1,18 +1,15 @@
 ======================================
-Bank synchronization: Automatic import
+Bank synchronization: automatic import
 ======================================
 
 Odoo can synchronize directly with your bank institution to get all bank statements imported
 automatically into your database.
 
 To check if your bank is compatible with Odoo, go to `Odoo Accounting Features
-<https://www.odoo.com/page/accounting-features>`_, and click on *See list of supported institutions*.
+<https://www.odoo.com/page/accounting-features>`_, and click on
+:guilabel:`See list of supported institutions`.
 
-.. image:: bank_synchronization/online-sync-doc.png
-   :align: center
-   :alt: Checking a bank's compatibility with Odoo
-
-More than 20,000 institutions around the world are supported.
+Odoo supports more than 25,000 institutions around the world.
 
 To connect to the banks, Odoo uses multiple web-services:
 
@@ -20,9 +17,7 @@ To connect to the banks, Odoo uses multiple web-services:
 - **Yodlee**: Worldwide
 - **Salt Edge**: Europe (:doc:`more information <saltedge>`)
 - **Ponto**: Europe (:doc:`more information <ponto>`)
-
-.. important::
-   - Bank synchronization is not available for trial databases.
+- **EnableBanking**: Scandinavian countries
 
 Configuration
 =============
@@ -38,49 +33,50 @@ following address:
 
 - https://production.odoofin.com/
 
-First Synchronization
+First synchronization
 ---------------------
 
-You can start synchronization either by going to :menuselection:`Accounting --> Configuration
---> Add a Bank Account` or via the configuration bar on the accounting dashboard.
+You can start synchronization either by going to the Accounting app and
+:menuselection:`Accounting Dashboard --> Configuration --> Banks: Add a Bank Account`.
 
 Now you can search for your bank institution. Select it and follow the steps to synchronize with it.
 
 .. note::
    If you have any issues during your first synchronization, please verify that your
-   web browser doesn't block pop-ups and that your adblocker is disabled.
+   web browser doesn't block pop-ups and that your ad-blocker is disabled.
 
-During your first synchronization, you will be asked for a phone number to secure your account.
-The reason we ask for such information is that we don't want your data falling into the wrong
-hands. Therefore, if we detect suspicious activity on your account, we block all requests coming
-from your account, and you need to reactivate it using that phone number.
-The third-party provider may request more information in order to connect with your bank institution.
+.. important::
+   When choosing the date for the first bank statement synchronization, pick the date when you
+   start recording accounting transaction on your Odoo accounting database. For example, if you
+   import your closing balance in Odoo on the 31/12/2022 and you start recording accounting
+   transactions on the 01/01/2023, your synchronization date should be 01/01/2023.
+
+You must provide a phone number during your first synchronization to secure your account. We ask for
+such information because we don't want your data falling into the wrong hands. Therefore, if we
+detect suspicious activities on your account, we block all requests coming from your account, and
+you need to reactivate it using that phone number.
+
+The third-party provider may request more information in order to connect with your
+bank institution.
 This information is not stored on Odoo's servers.
 
 By default, transactions fetched from an online source are grouped inside the same statement, and
 one bank statement is created per month. You can change the bank statement creation periodicity
 in your journal settings.
 
-You can find all your synchronizations by going to :menuselection:`Accounting --> Configuration -->
-Online Synchronization`.
+You can find all your synchronizations by going to :menuselection:`Accounting Dashboard -->
+Configuration --> Accounting: Online Synchronization`.
 
 Synchronize manually
 --------------------
 
 After your first synchronization, the created journals are synchronized by default every 12 hours.
-If you wish, you can synchronize manually by clicking on the *Synchronize Now* button on the
-dashboard.
+If you wish, you can synchronize manually by clicking on the :guilabel:`Synchronize Now` button on
+the dashboard.
 
-.. image:: bank_synchronization/online-sync-sync-now-dashboard.png
-   :align: center
-   :alt: Synchronize Now Button
-
-Or you can go to :menuselection:`Accounting --> Configuration --> Online Synchronization`,
-select your institution and then click on the *Fetch Transactions* button.
-
-.. image:: bank_synchronization/online-sync-form-view.png
-   :align: center
-   :alt: Online Synchronization Form view
+Or you can go to :menuselection:`Accounting Dashboard --> Configuration -->
+Accounting: Online Synchronization`, select your institution and then click on the
+:guilabel:`fetch transactions` button.
 
 .. important::
    Some institutions do not allow transactions to be fetched automatically. For such institutions,
@@ -95,14 +91,14 @@ Synchronization in error
 ------------------------
 
 To report a connection error to the `Odoo support <https://www.odoo.com/help>`_, go to
-:menuselection:`Accounting --> Configuration --> Online Synchronization`, select the connection
-that failed, and copy the error description and the reference.
+:menuselection:`Accounting Dashboard--> Configuration --> Accounting: Online Synchronization`,
+select the connection that failed, and copy the error description and the reference.
 
 Synchronization disconnected
 ----------------------------
 
 If your connection with the proxy is disconnected, you can reconnect with the proxy using the
-*Reconnect* button.
+:guilabel:`Fetch Account` button.
 
 .. note::
    This disconnection can be caused by the Odoo support. In this case, please contact the `support
@@ -121,24 +117,19 @@ Users who have created a database before December 2020 need to install the new m
 use the new functionalities.
 
 To do so, go to :menuselection:`Apps --> Update Apps List`, remove the default filter in the search
-bar and type: **account_online_synchronization**. You can then click on the *Install* button to
-install the new module.
-
-.. image:: bank_synchronization/online-sync-module.png
-   :align: center
-   :alt: Installation button of the account_online_synchronization module
-
+bar and type `account_online_synchronization`. You can then click on :guilabel:`Install`.
 Finally, make sure all your users refresh their Odoo page by pressing CTRL+F5.
 
 .. Note::
 
    - All previous synchronizations are disconnected during the installation and won't work anymore.
-     You can find them directly in the synchronization menu (:menuselection:`Accounting -->
-     Configuration --> Online Synchronization`). It is not possible to resynchronize these
-     connections; you have to make new ones.
-   - Please do not uninstall *account_online_sync* which is the previous module for online
+   - You can find them directly in the synchronization menu
+     (:menuselection:`Accounting Dashboard --> Configuration -->
+     Accounting: Online Synchronization`). It is not possible to resynchronize these connections;
+     you have to make new ones.
+   - Do not uninstall `account_online_sync`, which is the previous module for online
      synchronization. The new one overrides it.
-   - By default *account_online_synchronization* is installed automatically with Accounting.
+   - By default, `account_online_synchronization` is installed automatically with Accounting.
 
 FAQ
 ===
@@ -148,14 +139,15 @@ The synchronization is not working in real-time. Is that normal?
 
 The process is not intended to work in real-time as third party providers synchronize your accounts
 at different intervals. To force the synchronization and fetch the statements, go to your
-*Accounting dashboard*, and click on the *Synchronize Now* button. You can also synchronize and
-fetch transactions through :menuselection:`Accounting --> Configuration --> Online Synchronization`.
-Some providers only allow one refresh per day, so it is possible that clicking on *Synchronize Now*
-does not get your latest transactions if you already performed such action earlier in the day.
+:guilabel:`Accounting Dashboard`, and click on the :guilabel:`Synchronize Now` button. You can also
+synchronize and fetch transactions through :menuselection:`Accounting Dashboard -->
+Configuration --> Accounting: Online Synchronization`. Some providers only allow one refresh per
+day, so it is possible that clicking on :guilabel:`Synchronize Now` does not get your latest
+transactions if you already performed such action earlier in the day.
 
-A transaction can be visible on your bank account, but not be fetched if it has the status
-*Pending*. Only transactions with the *Posted* status will be retrieved. If it is not *Posted* yet,
-you will have to wait until the status changes.
+A transaction can be visible on your bank account but not be fetched if it has the status
+:guilabel:`Pending`. Only transactions with the :guilabel:`Posted` status will be retrieved. If the
+transaction is not **Posted** yet, you will have to wait until the status changes.
 
 Is the Online Bank Synchronization feature included in my contract?
 -------------------------------------------------------------------
@@ -188,8 +180,9 @@ Why don't I see any transactions?
 ---------------------------------
 
 During your first synchronization, you selected the bank accounts you decided to synchronize with
-Odoo. If you didn't synchronize any of your accounts, you can go to :menuselection:`Accounting -->
-Configuration --> Online Synchronization` to click on the *Fetch Accounts* button on the connection.
+Odoo. If you didn't synchronize any of your accounts, you can go to
+:menuselection:`Accounting Dashboard --> Configuration --> Accounting: Online Synchronization` to
+click on the :guilabel:`Fetch Account` button on the connection.
 
 There may also be no new transactions.
 
@@ -199,9 +192,9 @@ database, please `submit a support ticket <https://www.odoo.com/help>`_.
 How can I update my bank credentials?
 -------------------------------------
 
-You can update your credentials by going to :menuselection:`Accounting --> Configuration --> Online
-Synchronization`, open the connection you want to update your credentials and click on the *Update
-Credentials* button.
+You can update your credentials by going to :menuselection:`Accounting Dashboard -->
+Configuration --> Accounting: Online Synchronization`,open the connection you want to update your
+credentials and click on the :guilabel:`Update Credentials` button.
 
 .. seealso::
    * :doc:`bank_statements`
