@@ -371,6 +371,8 @@ bekendmaken voor zover ze wettelijk verplicht is om dit te doen, mits de
 Ontvangende Partij de Bekendmakende Partij vooraf in kennis stelt van de
 verplichte bekendmaking, voor zover toegestaan door de wet.
 
+
+
 .. _termination_nl:
 
 6.5 Beëindiging
