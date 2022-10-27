@@ -20,4 +20,3 @@ JavaScript framework
     frontend/mobile
     frontend/qweb
     frontend/odoo_editor
-    frontend/icons_library
