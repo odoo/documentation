@@ -2,30 +2,15 @@
 Manage vendor bills
 ===================
 
-The **Purchase** application allows you to manage your purchase orders,
-incoming products, and vendor bills all seamlessly in one place.
+Managing a vendor bill in Odoo can be summarized in four steps:
 
-If you want to set up a vendor bill control process, the first thing you
-need to do is to have purchase data in Odoo. Knowing what has been
-purchased and received is the first step towards understanding your
-purchase management processes.
+#. You begin with a **Request for Quotation (RFQ)** to send out to your vendor(s).
 
-Here is the standard work flow in Odoo:
+#. Once the vendor has accepted the RFQ, confirm the RFQ into a **Purchase Order (PO)**.
 
-1. You begin with a **Request for Quotation (RFQ)** to send out to your
-   vendor(s).
+#. Confirming the PO generates an **Incoming Shipment** if you purchased any storable products.
 
-2. Once the vendor has accepted the RFQ, confirm the RFQ into a
-   **Purchase Order (PO)**.
-
-3. Confirming the PO generates an **Incoming Shipment** if you purchased
-   any stockable products.
-
-4. Upon receiving a **Vendor Bill** from your Vendor, validate the bill
-   with products received in the previous step to ensure accuracy.
-
-This process may be done by three different people within the company,
-or only one.
+#. Upon receiving the **vendor bill** from your vendor, validate the bill.
 
 Configuration
 =============
@@ -33,39 +18,36 @@ Configuration
 Installing the Purchase and Inventory applications
 --------------------------------------------------
 
-From the **Apps** application, search for the **Purchase** module and
-install it. Due to certain dependencies, installing Purchase will
-automatically install the **Inventory** and **Accounting** applications.
+From the :guilabel:`Apps` application, search for the :guilabel:`Purchase` module and install it.
+Due to certain dependencies, installing **Purchase** automatically installs the **Inventory** and
+**Accounting** applications.
 
 Creating products
 -----------------
 
-Creating products in Odoo is essential for quick and efficient
-purchasing within Odoo. Simply navigate to the Products submenu under
-Purchase and click create.
+Creating products in Odoo allows for quick access to pre-configured products' information. To create
+a product, navigate to :menuselection:`Purchase app --> Products --> Products --> Create`.
 
-.. image:: manage/manage01.png
-  :align: center
+.. image:: manage/manage-create-products.png
+   :align: center
+   :alt: Products page of the purchase app.
 
-When creating the product, pay attention to the **Product Type** field,
-since it is important:
+When creating a product, pay attention to the :guilabel:`Product Type` field, as:
 
-- Products that are set as **Stockable or Consumable** will allow you
-  to keep track of their inventory levels. These options imply
-  stock management and will allow for receiving these kinds of
-  products.
+- Products that are set as :guilabel:`Storable` or :guilabel:`Consumable` allow to keep track of
+  their inventory levels. These options imply stock management and therefore make it possible to
+  click on the :guilabel:`Receive Product` button.
 
-- Conversely, products that are set as a **Service or Digital Product**
-  will not imply stock management, simply due to the fact that
-  there is no inventory to manage. You will not be able to receive
-  products under either of these designations.
+- Conversely, products that are set as :guilabel:`Service` or :guilabel:`Digital Product` do not
+  require stock management. You are therefore not able to receive products under either of these
+  categories.
 
 .. tip::
-   It is recommended that you create a **Miscellaneous** product for all purchases
-   that occur infrequently and do not require inventory valuation or management.
-   If you create such a product, it is recommended to set the product type to **Service**.
+   It is recommended to create a **Miscellaneous** product category for all purchases occurring
+   infrequently and that do not require inventory valuation or management. If you create such a
+   product, it is recommended to set the product type as :guilabel:`Service`.
 
-Managing your Vendor Bills
+Managing your vendor bills
 ==========================
 
 Purchasing products or services
@@ -84,7 +66,7 @@ the Vendor Reference)
 Validate the purchase order and receive the products from the Inventory
 application.
 
-Receiving Products
+Receiving products
 ------------------
 
 If you purchased any stockable products that you manage the inventory
@@ -115,7 +97,7 @@ receive the products.
 
 Purchasing service products does not trigger a delivery order.
 
-Managing Vendor Bills
+Managing vendor bills
 ---------------------
 
 When you receive a vendor bill for a previous purchase, be sure to
@@ -158,7 +140,7 @@ product is not in hand and you may need to inquire further into this. At
 any point in time, before you validate the Vendor Bill, you may override
 this zero quantity.
 
-Vendor Bill Matching
+Vendor bill matching
 ====================
 
 What to do if your vendor bill does not match what you received
@@ -217,7 +199,7 @@ product to be based on either:
 
 - or Received quantities
 
-Batch Billing
+Batch billing
 -------------
 
 When creating a vendor bill and selecting the appropriate purchase
