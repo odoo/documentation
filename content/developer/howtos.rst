@@ -9,6 +9,7 @@ Tutorials
 
     howtos/rdtraining
     howtos/discover_js_framework
+    howtos/scss_tips
     howtos/website
     howtos/backend
     howtos/web_services
