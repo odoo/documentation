@@ -53,89 +53,45 @@ Managing your vendor bills
 Purchasing products or services
 -------------------------------
 
-From the purchase application, you can create a purchase order with as
-many products as you need. If the vendor sends you a confirmation or
-quotation for an order, you may record the order reference number in the
-**Vendor Reference** field. This will enable you to easily match the PO
-with the the vendor bill later (as the vendor bill will probably include
-the Vendor Reference)
+From the purchase application, you can create a **purchase order** with as many products as you
+need. If the vendor sends you a quotation or confirmation for an order, you can record the **order
+reference number** in the :guilabel:`Vendor Reference` field. This enables you to easily match the
+PO with the vendor bill later on. Click on :guilabel:`Confirm Order` to confirm the purchase order.
 
-.. image:: manage/manage02.png
-  :align: center
-
-Validate the purchase order and receive the products from the Inventory
-application.
+.. image:: manage/manage-vendor-reference.png
+   :align: center
+   :alt:
 
 Receiving products
 ------------------
 
-If you purchased any stockable products that you manage the inventory
-of, you will need to receive the products from the Inventory application
-after you confirm a purchase order. From the **Inventory dashboard**, you
-should see a button linking you directly to the transfer of products.
-This button is outlined in red below:
+Purchased storable products have to be indicated as *received* once the delivery is made. From the
+**Purchase** app, select the purchase order corresponding to the delivery, click on the
+:guilabel:`Receive Products` button, and then validate the transfer.
 
-.. image:: manage/manage03.png
-  :align: center
+Alternatively, you can confirm the delivery of products through the **Inventory** app by going to
+:menuselection:`Inventory dashboard --> Receipts` *or* :menuselection:`Inventory app --> Operations
+--> Transfers`.
 
-Navigating this route will take you to a list of all orders waiting to
-be received.
-
-.. image:: manage/manage04.png
-  :align: center
-
-If you have a lot of awaiting orders, apply a filter using the search
-bar in the upper right. With this search bar, you may filter based on
-the vendor (partner), the product, or the source document (also known as
-the reference of your purchase order). You can also
-group the orders by different criteria under **Group By**. Selecting an
-item from this list will open the following screen where you then will
-receive the products.
-
-.. image:: manage/manage05.png
-  :align: center
-
-Purchasing service products does not trigger a delivery order.
+.. note::
+   Purchasing **service** products does not trigger a delivery order.
 
 Managing vendor bills
 ---------------------
 
-When you receive a vendor bill for a previous purchase, be sure to
-record it in the Purchases application under the **Control Menu**. You
-need to create a new vendor bill even if you already registered a
-purchase order.
+.. todo::
+   see with PO of purchase if it's still applicable
 
-.. image:: manage/manage06.png
-  :align: center
+Your vendor may send you **several bills** for the same purchase order if:
 
-The first thing you will need to do upon creating a vendor bill is to
-select the appropriate vendor, since doing so will also pull up any associated
-accounting or pricelist information. From there, you can choose to
-specify one or multiple Purchase Orders to populate the Vendor Bill
-with. When you select a Purchase Order from the list, Odoo will pull any
-uninvoiced products associated to that Purchase Order and automatically
-populate that information below. If you are having a hard time finding
-the appropriate vendor bill, you may search through the list by
-inputting the vendor reference number or your internal purchase order
-number.
+#. Your vendor is in back-order and is sending you invoices as they ship the products;
+#. Your vendor is sending you a partial bill or asking for a deposit.
 
-.. image:: manage/manage07.png
-  :align: center
+Every time you record a new vendor bill, Odoo automatically populates the product quantities based
+on what has been previously received from the vendor. If the value is showing `0`, it means no
+deliveries for the product have been received yet.
 
-While the invoice is in a draft state, you can make any modifications you
-need (i.e. remove or add product lines, modify quantities, and change
-prices).
-
-.. note::
-   Your vendor may send you several bills for the same Purchase Order if:
-
-   #. Your vendor is in back-order and is sending you invoices as they ship the products.
-   #. Your vendor is sending you a partial bill or asking for a deposit.
-
-Every time you record a new vendor bill, Odoo will automatically
-populate the product quantities based on what has been received from the
-vendor. If this value is showing a zero, this means that you have not
-yet received this product and simply serves as a reminder that the
+you have not yet received this product and simply serves as a reminder that the
 product is not in hand and you may need to inquire further into this. At
 any point in time, before you validate the Vendor Bill, you may override
 this zero quantity.
@@ -190,7 +146,7 @@ select the product(s) you wish to modify, and you should see a new field appear,
 labeled **Control Purchase Bills**.
 
 .. image:: manage/manage08.png
-  :align: center
+   :align: center
 
 You can then change the default management method for the selected
 product to be based on either:
