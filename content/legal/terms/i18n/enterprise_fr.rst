@@ -272,8 +272,8 @@ correspondantes.
 
 .. _maintenance_partner_fr:
 
-Collaboration avec un Partenaire Odoo
--------------------------------------
+4.6 Collaboration avec un Partenaire Odoo
+-----------------------------------------
 
 Pour les services de correction de Bug, d'assistance et de migration, le Client peut choisir
 de collaborer avec un Partenaire Odoo comme point de contact principal, ou directement avec
