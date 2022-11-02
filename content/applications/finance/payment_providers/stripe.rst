@@ -10,6 +10,7 @@ Link your Stripe Account with Odoo
 
 .. seealso::
    - :ref:`payment_providers/add_new`
+   - :doc:`Use a Stripe payment terminal in Point of Sale <../../sales/point_of_sale/payment/stripe>`
 
 The method to acquire your credentials depends on your hosting type:
 
