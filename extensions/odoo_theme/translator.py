@@ -137,6 +137,17 @@ class BootstrapTranslator(HTML5Translator):
         else:
             super().depart_title(node)
 
+    def visit_literal(self, node):
+        """ Override to add the class `o_code` to all `literal`, `code`, and `file` roles. """
+        node['classes'].append('o_code')
+        return super().visit_literal(node)
+
+    def visit_literal_strong(self, node):
+        """ Override to add the class `o_code` to all `command` roles. """
+        if 'command' in node['classes']:
+            node['classes'].append('o_code')
+        return super().visit_literal_strong(node)
+
     # overwritten
     # Ensure table class is present for tables
     def visit_table(self, node):
