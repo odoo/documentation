@@ -23,7 +23,6 @@ products and increase your average cart sizes.
 .. toctree::
    :titlesonly:
 
-   ecommerce/getting_started
    ecommerce/managing_products
    ecommerce/taxes
    ecommerce/shopper_experience
