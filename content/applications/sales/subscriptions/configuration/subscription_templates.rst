@@ -20,8 +20,8 @@ The subscription business model is becoming more popular. Are you wondering why?
 
 .. raw:: html
 
-   <div align="center" style="color:#AD5E99; font-size: 2rem ;margin: 20px 0"> <b>Simplicity.
-   Higher customer retention. Opportunities for marketing. Business consistency. Better cash flow
+   <div align="center" style="color:#017e84; font-size: 1.5rem ;margin: 20px 0"> <b>Simplicity.
+   Higher customer retention. Opportunities for marketing. <br/>Business consistency. Better cash flow
    management.</b> </div>
 
 **Odoo Subscriptions** help you save time and money. Subscription templates can help you generate
