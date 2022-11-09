@@ -352,6 +352,11 @@ However the WSGI server will only expose the main HTTP endpoint for the web
 client, website and webservice API. Because Odoo does not control the creation
 of workers anymore it can not setup cron or livechat workers
 
+.. versionchanged:: 16.0
+
+   The application entry-point has been moved from
+   ``odoo.service.wsgi_server.application`` to ``odoo.http.root``.
+
 Cron Workers
 ------------
 
