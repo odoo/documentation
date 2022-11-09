@@ -2,148 +2,117 @@
 Getting started
 ===============
 
-When working with a Point of Sale application, employees want a
-simple, and user-friendly solution. A solution that works online or
-offline and with any device.
-
-A Point of Sale system is a fully integrated application that allows any transaction,
-automatically registers product moves in your stock, and gives you
-real-time statistics and consolidations across all shops.
+**Point of Sale** is a fully integrated application that allows you to sell products (online or
+offline) with any device. It also automatically registers product moves in your stock, gives you
+real-time statistics, and consolidations across all shops.
 
 Configuration
 =============
 
-Make products available in the PoS
-----------------------------------
+Make products available
+-----------------------
 
-To make products available for sale, go to :menuselection:`Point of
-Sale --> Products --> Products` and open a product. In the *Point of Sale*
-tab, enable *Available in Point of Sale*.
+To make products available for sale, go to :menuselection:`Point of Sale --> Products --> Products`,
+and open a product. In the :guilabel:`Sales` tab, enable :guilabel:`Available in POS`.
 
-.. image:: getting_started/getting_started_01.png
-    :align: center
-    :alt: Product form. Making the product available in PoS.
+.. image:: getting_started/pos-available.png
+   :align: center
+   :alt: Making a product available in your POS.
 
-.. note::
-   You can also define if the product has to be weighted or not.
+Configure payment methods
+-------------------------
 
-Configure your payment methods
-------------------------------
+To add a payment method, you first need to create it. Go to :menuselection:`Point of Sale -->
+Configuration --> Payment Methods --> Create`. Set a name and select the **payment terminal** or
+check :guilabel:`Cash` for cash payments.
 
-To add a payment method, you first need to create it. Go to
-:menuselection:`Point of Sale --> Configuration --> Payment Methods`
-and click on create. Then, you can name your payment method and set it
-up.
-
-.. image:: getting_started/getting_started_02.png
-    :align: center
-    :alt: Creating a new payment method for a Point of Sale.
+.. image:: getting_started/payment-method.png
+   :align: center
+   :alt: Creating a new payment method for a POS.
 
 .. note::
-   Don’t forget your credentials for methods using a payment terminal.
+   Credentials are mandatory to use a payment terminal. To learn how to configure the different
+   terminals, check out the following documentation pages:.
 
-Now, you can select the payment method in your PoS settings. To do so,
-go to :menuselection:`Point of Sale --> Configuration --> Point of
-Sale` and open the PoS in which you want to include the payment method. Then, add the
-payment method.
+   - :doc:`Adyen configuration <../payment/adyen>`
+   - :doc:`Vantiv configuration <../payment/vantiv>`
+   - :doc:`Ingenico configuration <../payment/ingenico>`
+   - :doc:`Six configuration <../payment/six>`
 
-.. image:: getting_started/getting_started_03.png
-    :align: center
-    :alt: Making the payment method available in a point of sale.
+Now, you can select the payment method in your POS settings. To do so, go to
+:menuselection:`Point of Sale --> Configuration --> Point of Sale` and select a POS for which you
+wish to make the payment method available. Click :guilabel:`Edit` and add the payment method under
+the :guilabel:`Payments` section.
+
+
+POS sessions
+============
+
+Start a session
+---------------
+
+From the **POS dashboard**, click :guilabel:`New Session` to start a POS session, or
+:guilabel:`Resume` if the session was already open.
 
 .. note::
-   *Configuration* is the menu where you can edit all your point of sale settings.
-   Some more features are available for restaurants.
+   Multiple users can be connected to the same session at the same time. However, the session can
+   only be open once on the same browser.
 
-Your first PoS session
-======================
+Click on products to add them to the cart. To change the **quantity**, click :guilabel:`Qty` and
+enter the number of products using the keypad. To add a **discount** or modify the product
+**price**, click respectively :guilabel:`Disc` or :guilabel:`Price` and enter the amounts.
 
-Your first order
-----------------
+Once an order is completed, proceed to checkout by clicking :guilabel:`Payment`. Select the
+**payment method**, enter the received amount, and click :guilabel:`Validate`. Click
+:guilabel:`New Order` to move on to the next customer.
 
-Open a new session from the dashboard by clicking on *New Session*.
-
-.. image:: getting_started/getting_started_04.png
-    :align: center
-    :alt: Launching a new session.
-
-After the loading screen, you arrive on the PoS interface.
-
-.. image:: getting_started/getting_started_05.png
-    :align: center
-    :alt: Point of sale dashboard.
-
-Once an order is completed, you can register the payment. All the
-available payment methods appear on the left of the screen. Select the payment
-method and enter the received amount. Then, you can validate the
-payment.
+.. image:: getting_started/pos-interface.png
+   :align: center
+   :alt: POS session interface.
 
 .. tip::
-   You can use both `,` and `.` on your keyboard as decimal separators.
+   - You can use both `,` and `.` on your keyboard as decimal separators.
+   - **Cash** is selected by default if you enter the amount without choosing a payment method.
+
 
 Return and refund products
 --------------------------
 
-Having a well-thought-out return policy is key to keep customers satisfied and make the process
-of accepting returns and refunds easy for you.
+To return a product and make a refund,
 
-To do that, from the PoS interface, select the product and quantity (with the +/- button) that the
-customer wants to return. For multiple products, repeat the process individually.
+#. from the **POS dashboard**, **open a session** and select the returned product;
+#. click :guilabel:`Qty` and :guilabel:`+/-` to enter the quantity of returned products;
+#. once the order is completed, click :guilabel:`Payment` to proceed to the refund;
+#. click :guilabel:`Validate` and :guilabel:`New Order` to move on to the next customer.
 
-.. image:: getting_started/getting_started_06.png
-    :align: center
-    :alt: Refunding a product with the point of sale app.
-
-When on the payment interface, the total is negative. To end the refund,
-process the payment and validate it.
-
-.. image:: getting_started/getting_started_07.png
-    :align: center
-    :alt: Giving back money to customer in Odoo Point of Sale.
-
-Close the PoS session
+Close the POS session
 ---------------------
 
-To close your session at the end of the day, click on the close button on the upper right corner
-of your screen and confirm. Now, close the session on the dashboard view.
+To close your session,
 
-.. image:: getting_started/getting_started_08.png
-    :align: center
-    :alt: How to close a point of sale session.
+#. go back to the POS dashboard by clicking :guilabel:`Close` and :guilabel:`Confirm` in the upper
+   right corner of your screen;
+#. then, click :guilabel:`Close` and proceed to the **closing control**;
+#. click the :guilabel:`Payments` smart button to know what amount of cash should be in your cash
+   drawer;
+#. once the control is done, click :guilabel:`Close session & post entries`;
+#. the status goes automatically from :guilabel:`In Progress` to :guilabel:`Closed & Posted`.
 
-.. tip::
-   It’s strongly advised to close your PoS session at the end of each day.
-
-Once a session is closed, you can see a summary of all transactions per payment method.
-Then, click on a line to see all orders that were paid during your PoS session.
-If everything is correct, validate the session and post the closing entries.
-
-.. image:: getting_started/getting_started_09.png
-    :align: center
-    :alt: Point of sale sales report before closing the session.
+.. image:: getting_started/close-pos-session.png
+   :align: center
+   :alt: How to close a POS session.
 
 .. tip::
-   To connect the PoS hardware with an Odoo IoT Box, please refer to these
-   docs: :doc:`Connect an IoT Box to your database
-   </applications/productivity/iot/config/connect>` and :doc:`Use the IoT Box for the PoS
-   </applications/productivity/iot/config/pos>`.
+   - It is strongly advised to close your POS session at the end of each day.
+   - To look at all your previous sessions, go to :menuselection:`Point of Sale --> Orders -->
+     Sessions`.
 
-View your statistics
-====================
+View statistics
+===============
 
-Keeping track of your sales is essential to get meaningful statistics. That’s why Odoo
-provides analyzes about your sales.
+To access your statistics, go to :menuselection:`Point of Sale --> Reporting --> Orders`. Or, from
+the **POS dashboard**, click the vertical ellipsis (:guilabel:`⋮`) button, :guilabel:`Reporting`,
+and :guilabel:`Orders`.
 
-To access your statistics, go to :menuselection:`Point of Sales -->
-Reporting --> Orders`. There, you can see various statistics in graph
-or pivot form.
-
-.. image:: getting_started/getting_started_10.png
-    :align: center
-    :alt: Orders analysis with pivot view of the point of sale reporting feature.
-
-You can also access them through the dashboard.
-
-.. image:: getting_started/getting_started_11.png
-    :align: center
-    :alt: Accessing orders analysis via the point of sale dashboard. Reporting feature on the PoS form.
+These statistics are available in graph or pivot view that you can filter or group depending on your
+needs.
