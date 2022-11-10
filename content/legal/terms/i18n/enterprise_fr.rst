@@ -51,7 +51,7 @@ reconduit pour une même durée, à moins que l'une des parties n’envoie à l'
 
 Utilisateur
     Tout compte utilisateur indiqué comme actif dans le Logiciel et donnant accès au mode création et/ou édition.
-    Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieur(e)s
+    Les comptes désactivés ainsi que ceux utilisés par des personnes ou systèmes extérieurs
     n'ayant qu'un accès limité au Logiciel via le portail ("Utilisateurs Portail") ne sont pas
     comptés comme Utilisateurs.
 
@@ -72,7 +72,7 @@ Module Supplémentaire
 
 Module Supplémentaire Couvert
     Un Module Supplémentaire Couvert est un Module Supplémentaire pour lequel le Client choisit de
-    payer un abonnement de maintenance afin d'obtenir de l'assistance, des corrections de bug et
+    payer un abonnement de maintenance afin d'obtenir de l'assistance, des corrections de bugs et
     des migrations.
 
 Bug
@@ -140,7 +140,7 @@ correspondant au nombre réel d'Utilisateurs.
 Pour la durée de ce Contrat, Odoo SA s'engage à déployer tous les efforts raisonnables pour
 corriger tout Bug du Logiciel ou des Modules Supplémentaires Couverts qui pourrait être signalé
 par le Client en suivant la procédure appropriée (généralement par le biais du formulaire en ligne
-ou des numéros de téléphone indiqués sur Module Supplémentaire Couvert, ou en cas de travail avec
+ou des numéros de téléphone indiqués sur http://www.odoo.com.help, ou en cas de travail avec
 un Partenaire Odoo, le canal prévu par le partenaire), et de commencer à traiter ces signalements
 du Client dans un délai de 2 jours ouvrables.
 
@@ -200,21 +200,21 @@ les procédures appropriées (généralement, via le site du service de migratio
 afin de convertir une base de données du Logiciel depuis n'importe quelle version du Logiciel vers
 une Version Couverte plus récente (la "Version Cible").
 
-Pour la Plate-forme Cloud, les demandes de migration sont envoyées directement depuis la panneau
+Pour la Plate-forme Cloud, les demandes de migration sont envoyées directement depuis le panneau
 de contrôle de la Plate-forme Cloud, et ne requièrent pas d'envoi de données.
 Pour l'Auto-Hébergement,
 les demandes de migration doivent inclure une copie complète de la
 base de données du Client et les données associées (généralement obtenues à partir du menu
 Backup du Logiciel).
 
-Ce service est fourni par le biais d'une plateforme automatisée, afin de permettre au Client
-d'effectuer des migration sans intervention humain, dès lors qu’une version précédente de la
+Ce service est fourni par le biais d'une plate-forme automatisée, afin de permettre au Client
+d'effectuer des migrations sans intervention humaine, dès lors qu’une version précédente de la
 base de données du Client a été migrée avec succès pour une Version Couverte donnée.
 
 Le service de migration est limité à la conversion et à l'adaptation techniques de la base
-de données du Client pour la rendre compatible avec la Version Cible, et à la correction de tout
+de données du Client pour la rendre compatible avec la Version Cible, à la correction de tout
 Bug directement causé par l'opération de migration, et ne se produisant normalement pas dans
-la Version Cible, et la conversion du code et des données des Modules Supplémentaires Couverts vers
+la Version Cible, et la conversion du code source et des données des Modules Supplémentaires Couverts vers
 la Version Cible.
 
 Il incombe au Client de vérifier et valider la base de données migrée afin de détecter tout Bug,
@@ -233,7 +233,7 @@ qu'un résultat satisfaisant soit obtenu.
 Pour la durée du présent Contrat, lorsque le Client choisit d'utiliser la Plate-forme Cloud,
 Odoo SA s'engage à fournir au minimum le service suivant:
 
-- Choix de plusieurs régions d'hébergement (minimum 3: Europe, America, Asia/Pacific)
+- Choix de plusieurs régions d'hébergement (minimum 3: Europe, Amérique, Asie/Pacifique)
 - Hébergement en centre de données Tiers-III ou équivalent, avec 99.9% de disponibilité
 - Cryptage des communications SSL Grade A (HTTPS)
 - Sauvegardes automatisées et vérifiées, répliquées dans plusieurs régions
@@ -253,7 +253,7 @@ Portée
 
 Pour la durée du présent Contrat, le Client peut ouvrir un nombre non limité de demandes d'assistance
 sans frais, exclusivement pour des questions relatives à des Bugs (voir :ref:`bugfix_fr`) ou des
-explications au sujet de l'utilisation des fonctions standard du Logiciel et des Modules
+explications au sujet de l'utilisation des fonctions standards du Logiciel et des Modules
 Supplémentaires Couverts
 
 D'autres types de demandes, telles que celles relatives à des développements ou des personnalisations,
@@ -264,25 +264,25 @@ discrétion d'Odoo SA.
 Disponibilité
 +++++++++++++
 
-Les demandes d'assistances peuvent être soumises à tout moment en ligne via https://www.odoo.com/help,
-ou par téléphone directement aux différents bureaux d'Odoo SA, ou en cas de travail avec un 
+Les demandes d'assistances peuvent être soumises via le formulaire en ligne ou les numéros
+de téléphone indiqués sur https://www.odoo.com/help, ou en cas de travail avec un
 Partenaire Odoo, le canal préconisé par ce partenaire, pendant les heures de bureau
 correspondantes.
 
 
 .. _maintenance_partner_fr:
 
-Collaboration avec un Partenaire Odoo
--------------------------------------
+4.6 Collaboration avec un Partenaire Odoo
+-----------------------------------------
 
-Pour les services de correction de Bug, d'assistance et de migration, le Client peut choisir
+Pour les services de correction de Bugs, d'assistance et de migration, le Client peut choisir
 de collaborer avec un Partenaire Odoo comme point de contact principal, ou directement avec
 Odoo SA.
 
 Si le Client choisit un Partenaire Odoo, Odoo SA sous-traitera les services liés au Modules
 Supplémentaires Couverts à ce partenaire, qui deviendra le point de contact principal du client.
 Le Partenaire Odoo peut obtenir de l'assistance de second niveau auprès d'Odoo SA pour le compte
-du Client, concernant les fonctions standard du Logiciel.
+du Client, concernant les fonctions standards du Logiciel.
 
 Si le Client décide de collaborer directement avec Odoo SA, les services liés aux Modules
 Supplémentaires Couverts ne seront fournis que *si et seulement si* le Client est hébergé sur
@@ -300,10 +300,10 @@ la Plate-forme Cloud d'Odoo.
 --------------------
 
 Les tarifs standards pour le contrat d'abonnement à Odoo Enterprise et les Services sont basés sur le nombre
-d'Utilisateurs et la Formule d'Abonnement, et précisés par écrit à la conclusion du contrat.
+d'Utilisateurs et la Formule d'Abonnement utilisés par le Client, et précisés par écrit à la conclusion du contrat.
 
 Pendant la durée du contrat, si le Client a plus d'Utilisateurs ou utilise des fonctionnalités
-qui requièrent une autre Formule d'Abonnement que spécifié au moment
+qui requièrent une autre Formule d'Abonnement que celle précisée au moment
 de la conclusion du présent Contrat, le Client accepte de payer un supplément équivalent au tarif
 en vigueur applicable (au moment de la divergence par rapport au nombre d'Utilisateurs ou de la
 Formule d'Abonnement spécifiés) pour les utilisateurs supplémentaires ou la Formule d'Abonnement
@@ -328,10 +328,9 @@ supplémentaires uniques, pour chaque mois de maintenance manquant.
 5.2 Tarifs de reconduction
 --------------------------
 
-Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs par Utilisateur
-qui ont été appliqués pendant la Durée précédente sont inférieurs aux tarifs par Utilisateur
-en vigueur les plus récents, les tarifs par Utilisateur augmenteront automatiquement de maximum 7%
-par reconduction, sans dépasser les tarifs en vigueur les plus récents.
+Lors de la reconduction telle que décrite à la section :ref:`term_fr`, si les tarifs appliqués
+pendant la Durée précédente du contrat sont inférieurs aux tarifs en vigueur les plus récents,
+ces frais augmenteront de maximum 7 %.
 
 .. _taxes_fr:
 
@@ -368,7 +367,7 @@ Le Client accepte de / d':
 
 Lorsque le Client choisit d'utiliser la Plate-forme Cloud, il accepte aussi de:
 
-- Prendre toute mesure raisonnable pour garantir la sécurité de ses comptes utilisateur, y compris
+- Prendre toute mesure raisonnable pour garantir la sécurité de ses comptes utilisateurs, y compris
   en choisissant un mot de passe sûr et en ne le partageant avec personne;
 - Faire une utilisation raisonnable des Services d'Hébergement, à l'exclusion de toute activité
   illégale ou abusive, et de respecter strictement les règles indiquées dans la Politique
@@ -557,8 +556,8 @@ garantie.
 Mis à part les dispositions expresses du présent Contrat, aucune des parties ne donne de
 garantie d'aucune sorte, expresse, implicite ou autre, et chaque partie
 décline expressément toutes garanties implicites, y compris toute garantie
-implicite de qualité marchande, d'adéquation à un usage particulier ou de non-
-contrefaçon, dans les limites autorisées par la loi en vigueur.
+implicite de qualité marchande, d'adéquation à un usage particulier ou de non-contrefaçon,
+dans les limites autorisées par la loi en vigueur.
 
 Odoo SA ne garantit pas que le Logiciel soit conforme à toute loi ou réglementation locale ou
 internationale.
@@ -575,7 +574,7 @@ le Client en vertu du présent Contrat au cours des 12 mois précédant la date 
 donnant lieu à une telle réclamation. Des réclamations multiples n'augmenteront pas cette limite.
 
 Les parties et leurs filiales ne pourront en aucun cas être tenues responsables des dommages
-indirects, spéciaux, accessoires ou consécutifs de quelque nature que ce soit,
+indirects, spéciaux, punitifs, accessoires ou consécutifs de quelque nature que ce soit,
 y compris, mais sans s'y limiter, la perte de revenus, perte de profits, perte d’économies,
 perte commerciale ou toute autre perte financière, les coûts relatifs à l'arrêt ou au retard,
 la perte ou altération des données, découlant ou en relation avec le présent Contrat, quelle que
