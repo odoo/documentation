@@ -78,7 +78,7 @@ header {
     z-index: 10;
     .o_main_header {
         height: $o-header-mobile-height;
-        background-color: $o-header-white;
+        background-color: $o-header-bg;
         padding: 0 $padding-s;
         @include media-breakpoint-up(lg) {
             height: $o-header-height;
@@ -139,7 +139,7 @@ header {
 
                     padding: 0 $padding-xs;
                     font-size: 1.2rem;
-                    color: $gray;
+                    color: $o-gray;
                 }
 
                 .form-control {
@@ -156,7 +156,7 @@ header {
                 margin-bottom: 0;
                 a {
                     text-decoration: none;
-                    color: $gray;
+                    color: $o-gray;
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
                         @include o-transform (translateY(-50%)) ;
@@ -168,7 +168,7 @@ header {
     }
 
     .o_subheader {
-        background: $gray-lighter;
+        background: $o-gray-bg;
         height: $o-subheader-height;
         padding-right: $padding-s;
         @include media-breakpoint-up(lg) {
@@ -214,10 +214,10 @@ header {
         left: -100%;
         @include o-transition(all, .3s);
         padding-left: $padding-s;
-        background-color: lighten($o-violet-dark, 70%) ;
+        background-color: lighten($o-violet, 70%) ;
         z-index: 10;
         @include font-size($font-size-secondary);
-        color: $o-violet-dark;
+        color: $o-violet;
         font-weight: $fw_regular;
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
@@ -235,7 +235,7 @@ header {
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: $o-violet-darker ;
+            background-color: $o-violet;
             border-radius: 0;
         }
     }
@@ -255,7 +255,7 @@ header {
         padding-bottom: $padding-xs;
 
         > .o_toc_entry_wrapper a {
-            color: $o-violet-dark;
+            color: $o-violet;
             font-weight: 600;
         }
     }
@@ -265,13 +265,13 @@ header {
             li {
                 &.o_active_toc_entry {
                     &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                        color: $o-violet-dark;
+                        color: $o-violet;
                     }
                 }
 
                 a {
                     &.current {
-                        color: $o-violet-dark;
+                        color: $o-violet;
                     }
                 }
             }
@@ -280,15 +280,15 @@ header {
 
     ul {
         .o_deepest_active_toc_entry {
-            background-color: $gray-lighter;
-            border-left: 3px solid $gray-lighter;
+            background-color: $o-toc-bg;
+            border-left: 3px solid $o-toc-border;
             margin-left: -3px;
         }
 
         > .toctree-l1 {
             &[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
                 @include o-inline-icon($i-doc-apps, 0 5px 0 0);
-                color: $o-violet-dark;
+                color: $o-violet;
             }
 
             &.o_menu_applications > .o_toc_entry_wrapper > i:before{
@@ -328,7 +328,7 @@ header {
             a {
                 display: inline-block;
                 padding: .4rem 0;
-                color: $gray-darker;
+                color: $o-gray-color;
                 font-weight: $fw_regular;
             }
 
@@ -399,14 +399,14 @@ header {
         h3 {
             text-transform: uppercase;
             font-weight: $fw_bold;
-            color: $gray-darker;
+            color: $o-gray-color;
             padding-left: $padding-xs;
             margin-bottom: $padding-xs;
         }
 
         a {
             font-weight: $fw_regular;
-            color: $gray-darker;
+            color: $o-gray-color
         }
 
         .o_page_toc_title {
@@ -438,12 +438,12 @@ header {
         }
     }
 
-    // Markup Styles
+    // Markup Styles (ex: ORM page)
     .o_code, .sig [class^="sig-"] {
         display: inline-block;
         color: inherit;
         overflow-wrap: anywhere;
-        background: $o-gray-bg;
+        background: $o-literals-bg;
         font-size: 0.875em;
         font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
     }
@@ -455,8 +455,8 @@ header {
             font-weight: $fw_medium;
             font-style: italic;
             padding-right: .4rem;
-            color: $color-beta-dark;
-            background-color: lighten($color-beta-lightest, 30%);
+            color: $blue-700;
+            background-color: $blue-100;
         }
     }
 
@@ -526,7 +526,7 @@ header {
 
                     &:before {
                         @include o-inline-icon($i-article, 0 .2rem 0 0);
-                        color: $gray-light;
+                        color: $o-gray-light;
                     }
                 }
             }
@@ -624,7 +624,7 @@ header {
                 @include font-size($h2-font-size);
                 margin-top: $padding-m;
                 padding-bottom: $padding-xs;
-                border-bottom: 1px solid $gray-light;
+                border-bottom: 1px solid $o-gray-border;
                 margin-bottom: $margin-s;
                 font-size: 1.2rem;
                 font-weight: 600;
@@ -642,7 +642,7 @@ header {
             a[href="#"] {
                 pointer-events: none;
                 cursor: default;
-                color: $gray-darker;
+                color: $o-gray-color;
                 font-weight: $fw_semibold;
             }
         }
@@ -664,7 +664,7 @@ header {
 
             dl.py, dl.js, dl.o-definition-list {
                 > dd {
-                    border-left: 3px solid $gray-lighter;
+                    border-left: 3px solid $o-literals-border;
                     margin: 0;
                     padding-left: $padding-s;
                     padding-top: $padding-xs;
@@ -672,7 +672,7 @@ header {
                 &.class em.property {
                     font-size: $font-size-secondary;
                     &:first-child {
-                        border-bottom: 3px solid $gray-lighter;
+                        border-bottom: 3px solid $o-literals-border;
                         + [class^=sig] {
                             padding-left: .3rem;
                         }
@@ -689,7 +689,7 @@ header {
             dl.field-list {
                 @include font-size($font-size-secondary);
                 padding: .5rem;
-                border: 1px solid $gray-light;
+                border: 1px solid $o-gray-border;
                 @include media-breakpoint-down(lg) {
                     display: block;
                 }
@@ -719,7 +719,7 @@ header {
 
             section {
                 > h1 {
-                    color: $o-violet-dark;
+                    color: $o-violet;
                     font-weight: $fw_bold;
                     @include media-breakpoint-up(lg) {
                         max-width: calc(100% - 120px);
@@ -731,11 +731,11 @@ header {
 
                 > h2 {
                     font-family: $font-family-serif;
-                    color: $gray-darker;
+                    color: $o-gray-color;
                     margin-top: $margin-m;
                     margin-bottom: $margin-s;
                     padding-bottom: .3rem;
-                    border-bottom: 1px solid $gray-light;
+                    border-bottom: 1px solid $o-gray-border;
                 }
 
                 > h3 {
@@ -752,7 +752,7 @@ header {
                 }
 
                 img {
-                    border: 1px solid $gray-lighter;
+                    border: 1px solid $o-gray-border;
                     background: $white;
                     padding: .5rem;
                     margin-bottom: 1rem;
@@ -776,7 +776,7 @@ header {
 
                     .caption, .caption-text {
                         font-weight: $fw_semibold;
-                        color: $gray;
+                        color: $o-gray;
                     }
 
                     .caption, .caption-text, .legend, .legend p {
@@ -807,7 +807,7 @@ header {
                         @include font-size($font-size-base);
                         margin: 0 0 0 .3rem;
                         visibility: hidden;
-                        color: $gray-light;
+                        color: $o-gray-light;
                         opacity: 0;
                         @include o-transition(all, .1s)
                     }
@@ -834,7 +834,7 @@ header {
         div[class^="highlight"] {
             // This styles the consoles like read-the-doc's consoles
             overflow-x: auto;
-            border: 1px solid $gray-light;
+            border: 1px solid $o-gray-border;
             margin: 1px 0 24px 0;
 
             div[class^="highlight"] {
@@ -858,17 +858,17 @@ header {
         .dfn{
             @include font-size($font-size-secondary);
             line-height: 1;
-            color: $color-beta;
+            color: $blue-600;
             font-weight: $fw_semibold;
             &:before {
                 content:'?';
                 display: inline-block;
                 width: 15px;
                 height: 15px;
-                border: 2px solid $color-beta;
+                border: 2px solid $blue-600;
                 border-radius: 20px;
                 text-align: center;
-                color: $color-beta;
+                color: $blue-600;
                 font-size: 12px;
                 font-weight: $fw_extrabold;
                 font-style: normal;
@@ -879,7 +879,7 @@ header {
         .pq-patch em {
             display: block;
             border-radius: 4px 4px 0 0;
-            background: $gray-lighter;
+            background: $o-gray-bg;
             padding: .2rem 1rem;
             @include font-size($font-size-secondary);
             font-weight: 600;
@@ -925,7 +925,7 @@ header {
 
             code, div[class^="highlight"] {
                 background-color: $white !important;
-                border: 1px solid $gray-light;
+                border: 1px solid $o-gray-border;
                 color: inherit;
             }
 
@@ -1088,7 +1088,7 @@ header {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    border-color: tint-color($doc_exercise, 30%);
+    border-color: tint-color($dark, 30%);
     background-color: $o-accordion-bg;
 
     .accordion-button {
@@ -1108,7 +1108,7 @@ header {
             }
 
             code, div[class^="highlight"] {
-                border-color: tint-color($doc-exercise, 50%);
+                border-color: tint-color($dark, 50%);
 
                 &:first-child:last-child {
                     margin-bottom: 0;
@@ -1127,7 +1127,7 @@ header {
     margin-bottom: 1rem;
 
     div[role="tablist"] {
-        border-color: $gray-light;
+        border-color: $o-gray-border;
         display: inline-flex;
         overflow-x: auto;
         overflow-y: clip;
@@ -1147,28 +1147,28 @@ header {
     }
 
     .sphinx-tabs-tab {
-        background: $gray-lightest;
-        color: $gray-900;
+        background: $o-gray-bg;
+        color: $o-gray-color;
         border: 0;
-        border-top: solid 1px $gray-light;
+        border-top: solid 1px $o-gray-border;
         padding: .5rem 1rem;
 
         &:hover {
             &:not([aria-selected="true"]) {
                 cursor: pointer;
-                background: tint-color($o-violet-dark, 80%);
-                color: $o-violet-dark;
+                background: tint-color($o-violet, 80%);
+                color: $o-violet;
                 transition: color .15s, background .15s;
                 border-radius: 0;
             }
         }
 
         &:first-of-type {
-            border-left: solid 1px $gray-light;
+            border-left: solid 1px $o-gray-border;
         }
 
         &:last-of-type {
-            border-right: solid 1px $gray-light;
+            border-right: solid 1px $o-gray-border;
         }
 
         &:focus {
@@ -1191,9 +1191,9 @@ header {
     }
 
     .sphinx-tabs-panel {
-        background: $doc-paper;
-        color: $gray-900;
-        border: 1px solid $gray-light;
+        background: $white;
+        color: $o-gray-color;
+        border: 1px solid $o-gray-border;
         padding: 1rem;
 
         &:focus {
@@ -1236,7 +1236,7 @@ footer {
     .o_get_help {
         padding-top: $padding-l;
         padding-bottom: $padding-l;
-        background: $gray-lighter;
+        background: $o-gray-bg;
         @include media-breakpoint-up(lg) {
             padding-left: calc(#{$o-side-nav-width} + #{$padding-l})
         }
