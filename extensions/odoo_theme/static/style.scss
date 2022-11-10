@@ -49,7 +49,7 @@ body {
     abbr {
         text-underline-offset: 2px;
         &[title="Pull Request"] {
-            @include o-easter-egg();
+            @include o-easter-egg(map-get($o-easter-egg, PR));
         }
     }
 }
@@ -70,10 +70,7 @@ span.viewcode-link {
 
 header {
     width: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
+    @include o-position($position: fixed, $top: 0, $left: 0, $right: 0);
     z-index: 10;
     .o_main_header {
         height: $o-header-mobile-height;
@@ -105,7 +102,7 @@ header {
                 span {
                     @include font-size($font-size-base);
                     color: $o-violet;
-                    @include o-easter-egg($img:'img/ducky.svg');
+                    @include o-easter-egg(map-get($o-easter-egg, logo));
                 }
             }
         }
@@ -133,7 +130,7 @@ header {
                 position: relative;
                 width: 100%;
                 .btn {
-                    @include o-position-absolute($top: 50%, $right: .5rem);
+                    @include o-position($top: 50%, $right: .5rem);
                     @include o-transform (translateY(-50%)) ;
 
                     padding: 0 $padding-xs;
@@ -157,7 +154,7 @@ header {
                     text-decoration: none;
                     color: $o-gray;
                     &:before {
-                        @include o-position-absolute($top: 50%, $right: 3rem);
+                        @include o-position($top: 50%, $right: 3rem);
                         @include o-transform (translateY(-50%)) ;
                         @include o-inline-icon($i-close, auto, middle, 1.2rem);
                     }
@@ -199,7 +196,7 @@ header {
 .o_side_nav {
     .o_mobile-overlay {
         background-color: rgba(0,0,0,.3);
-        @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
+        @include o-position($top: 0, $bottom: 0, $left: 0, $right:0);
         opacity: 0;
         transition: opacity .2s linear;
         z-index: -100;
@@ -1230,7 +1227,7 @@ header {
         padding: 2.2rem;
     }
     .btn-close {
-        @include o-position-absolute($top: 0);
+        @include o-position($top: 0);
     }
 }
 //------------------------------------------------------------------------------

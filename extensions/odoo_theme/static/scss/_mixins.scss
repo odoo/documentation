@@ -5,8 +5,8 @@
 // Utilities
 // ------------------------------------------------------------------
 
-@mixin o-position-absolute($top: auto, $right: auto, $bottom: auto, $left: auto){
-    position: absolute;
+@mixin o-position($position: absolute, $top: auto, $right: auto, $bottom: auto, $left: auto){
+    position: $position;
     top: $top;
     left: $left;
     bottom: $bottom;
@@ -69,18 +69,25 @@
     margin-top:  -$o-headers-height - 10px;
 }
 
-@mixin o-easter-egg($width: 100%, $height: 100%, $img: 'img/poule.svg' ){
+// Easter Egg
+$o-easter-egg: (
+    "PR" : (
+        "img" : 'img/poule.svg'
+    ),
+    "logo" : (
+        "img" : 'img/ducky.svg'
+    )
+);
+
+@mixin o-easter-egg($type){
     position: relative;
-        // Easter Egg on hover 5s
         &:after {
             content: '';
             display: block;
-            width: $width;
-            height: $height;
-            @include o-position-absolute(auto, 0, 0, 0);
-            background-image: url('#{$img}');
-            background-color: $white;
-            background-repeat: no-repeat;
+            width: 100%;
+            height: 100%;
+            @include o-position(absolute,auto, 0, 0, 0);
+            background: $white url(map-get($type, img)) no-repeat;
             opacity: 0;
             visibility: hidden;
             @include o-transition(all, .5s, ease-out, .5s);
@@ -91,6 +98,8 @@
                 @include o-transition(all, .5s, ease-in, 5s);
         }
 }
+
+// Content tabs
 
 @mixin o-content-tab-selected {
     font-weight: $fw_bold;
