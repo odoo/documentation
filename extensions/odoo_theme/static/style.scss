@@ -13,16 +13,14 @@ div[aria-label="related navigation"] {
 body {
     position: relative;
     a {
+        text-underline-offset: 3px;
+        text-underline-position: from-font;
         @include media-breakpoint-down(lg) {
             overflow-wrap: anywhere;
         }
 
         &:not(:hover), &.o_logo {
             text-decoration: none !important;
-        }
-
-        &:hover {
-            text-underline-position: from-font;
         }
 
         &.external {
@@ -148,7 +146,7 @@ header {
             }
 
             .highlight-link {
-                @include font-size(0);
+                font-size: 0;
                 margin-bottom: 0;
                 a {
                     text-decoration: none;
@@ -306,7 +304,6 @@ header {
             &.o_menu_contributing > .o_toc_entry_wrapper > i:before{
                 content:'#{$i-doc-contribute}';
             }
-
         }
     }
 }
@@ -428,9 +425,17 @@ header {
         grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
-    p {
-        > code {
-            padding: 0 .3rem;
+}
+
+main {
+    position: relative;
+    grid-area: main;
+    padding-bottom: $padding-l;
+    grid-column-end: main;
+    @include media-breakpoint-up(lg) {
+        &[class^="container"] {
+            padding: $padding-m $padding-l;
+            margin: 0;
         }
     }
 
@@ -469,613 +474,419 @@ header {
         max-width: 100%;
     }
 
-    main {
-        position: relative;
-        grid-area: main;
-        padding-bottom: $padding-l;
-        @include media-breakpoint-up(lg) {
-            padding: $padding-m $padding-l;
-            margin: 0;
-            grid-column-end: toc;
-        }
-        @include media-breakpoint-up(xl) {
-            grid-column-end: main;
+    // Toctree on 1st and 2nd level pages - start
+    .toctree-wrapper {
+        > ul, .toctree-l1 > ul {
+            padding-left: 0;
+            list-style: none;
         }
 
-        &.o_index, &.o_fullwidth_page, &.o_has_code_column {
-            grid-column-end: toc;
-        }
-
-        // Homepage
-
-        &.o_index {
-            .o_content_fw_banner {
-                margin: 0 -0.75rem $margin-m;
-                padding: $padding-m $padding-s;
-                align-items: center;
-                @include o-gradient();
-                @include media-breakpoint-up(lg) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-m;
-                    padding: $padding-m $padding-m;
-                }
-                @include media-breakpoint-up(xl) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-l;
-                    padding: $padding-l $padding-l;
-                }
-            }
-            .row:first-of-type h2.border-top {
-                @include media-breakpoint-up(lg) {
-                    border-top: 0 solid transparent !important;
-                }
-            }
-
-            h5 {
-                font-size: 12px;
-            }
-
-            ul {
-                > li {
-                    position: relative;
-                    padding-bottom: $padding-xs;
-                    display: flex;
-                    align-items: center;
-
-                    &:before {
-                        @include o-inline-icon($i-article, 0 .2rem 0 0);
-                        color: $o-gray-light;
-                    }
-                }
-            }
-
-            .o_changelog {
-                .row:last-of-type > .border-bottom {
-                    border: none !important;
-                }
-            }
-        }
-
-        // First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
-        &.o_fullwidth_page {
-                div.toctree-wrapper > ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    > li {
-                        @include media-breakpoint-down(lg) {
-                            width: 100%;
-                        }
-                        @include media-breakpoint-up(lg) {
-                            width: 33%;
-                            &:not(:nth-of-type(3n)){
-                                padding-right: $padding-m;
-                            }
-                        }
-
-                    }
-                }
-            }
-
-        // pages with column for code on the right
-        &.o_has_code_column {
-            article.doc-body {
-                @include media-breakpoint-up(xl) {
-                    .o_git_link {
-                        right: calc(#{$o-codecol-width} + #{$padding-l});
-                    }
-
-                    section {
-                        > * {
-                            width: $o-halfpage-width;
-                            float: left;
-                            clear: left;
-                        }
-
-                        > h1 {
-                            max-width: calc(#{$o-halfpage-width} - 120px);
-                        }
-
-                        > h1, > h2, > h3, > h4, > h5, > h6 {
-                            float: none;
-                            clear: none;
-                        }
-
-                        .doc-aside {
-                            width: $o-codecol-width;
-                            float: none;
-                            clear: none;
-                            margin-left: 57%;
-                            padding: $padding-s;
-
-                            blockquote {
-                                font-weight: $fw_semibold;
-                                font-style: italic;
-                            }
-
-                            pre {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            + aside.o_page_toc{
-                display: none;
-            }
-        }
-
-        &.o_hide_toc {
-            .toctree-wrapper {
-                display: none;
-            }
-        }
-
-        .toctree-wrapper {
-            > ul, .toctree-l1 > ul {
-                padding-left: 0;
-                list-style: none;
-            }
-
-            .toctree-l1 > a {
-                display: block;
-                @include font-size($h2-font-size);
-                margin-top: $padding-m;
-                padding-bottom: $padding-xs;
-                border-bottom: 1px solid $o-gray-border;
-                margin-bottom: $margin-s;
-                font-size: 1.2rem;
-                font-weight: 600;
-            }
-
-            .toctree-l1 {
-                margin-bottom: 2rem;
-            }
-
-            .toctree-l2 > a[href="#"] {
-                margin-top: 0.7rem;
-                display: inline-block;
-            }
-
-            a[href="#"] {
-                pointer-events: none;
-                cursor: default;
-                color: $o-gray-color;
-                font-weight: $fw_semibold;
-            }
-        }
-
-        article.doc-body {
-            padding-top: $padding-s;
-            position: relative;
-
-            .o_git_link {
-                @include font-size($font-size-secondary);
-                @include o-position-absolute($top: 0px, $right: $margin-s);
-                @include media-breakpoint-up(lg) {
-                    @include o-position-absolute($top: 10px, $right: $margin-s);
-                }
-                i {
-                    margin-right: .2rem;
-                }
-            }
-
-            dl.py, dl.js, dl.o-definition-list {
-                > dd {
-                    border-left: 3px solid $o-gray-border;
-                    margin: 0;
-                    padding-left: $padding-s;
-                    padding-top: $padding-xs;
-                }
-                &.class em.property {
-                    font-size: $font-size-secondary;
-                    &:first-child {
-                        border-bottom: 3px solid $o-gray-border;
-                        + [class^=sig] {
-                            padding-left: .3rem;
-                        }
-                    }
-                    &:not(:first-child) {
-                        @extend .o_code;
-                        &:last-of-type {
-                            padding-right: .3rem;
-                        }
-                    }
-                }
-            }
-
-            dl.field-list {
-                @include font-size($font-size-secondary);
-                padding: .5rem;
-                border: 1px solid $o-gray-border;
-                @include media-breakpoint-down(lg) {
-                    display: block;
-                }
-
-                > dt {
-                    padding-left: 0;
-                }
-
-                > dd {
-                    padding-right: 0;
-                }
-
-                ul {
-                    list-style: none;
-                    padding-left: 0;
-
-                    li {
-                        padding-bottom: $padding-xs;
-                    }
-                }
-            }
-
-            // Search items highlighted
-            span.highlighted {
-                background-color: lighten($warning, 15%);
-            }
-
-            section {
-                > h1 {
-                    color: $o-violet;
-                    font-weight: $fw_bold;
-                    @include media-breakpoint-up(lg) {
-                        max-width: calc(100% - 120px);
-                    }
-                    + * {
-                        margin-top: $margin-s;
-                    }
-                }
-
-                > h2 {
-                    font-family: $font-family-serif;
-                    color: $o-gray-color;
-                    margin-top: $margin-m;
-                    margin-bottom: $margin-s;
-                    padding-bottom: .3rem;
-                    border-bottom: 1px solid $o-gray-border;
-                }
-
-                > h3 {
-                    margin-top: $margin-m;
-                    font-weight: $fw_bold;
-                }
-
-                > h4 {
-                    margin-top: $margin-l;
-                }
-
-                > h4, > h5, > h6 {
-                    font-weight: $fw_semibold;
-                }
-
-                img {
-                    border: 1px solid $o-gray-border;
-                    background: $white;
-                    padding: .5rem;
-                    margin-bottom: 1rem;
-                }
-
-                img:not(.o-no-modal) {
-                    cursor: pointer;
-                }
-
-                iframe {
-                    margin-bottom: 1rem;
-                }
-
-                p > img {
-                    border: none;
-                    padding: 0;
-                    margin-bottom: 0;
-                }
-
-                .figure {
-
-                    .caption, .caption-text {
-                        font-weight: $fw_semibold;
-                        color: $o-gray;
-                    }
-
-                    .caption, .caption-text, .legend, .legend p {
-                        font-style: italic;
-                        margin: 0 auto;
-                    }
-
-                    @include media-breakpoint-up(md) {
-                        &:not([class^="col"]) .legend {
-                            max-width: 60%;
-                        }
-                    }
-                }
-
-                a.headerlink {
-                    text-decoration: none;
-                    font-size: 0;
-                    line-height: 0;
-                    visibility: hidden !important;
-
-                    &:before {
-                        content: "\a0";
-                    }
-
-                    &:after {
-                        content: '#{$i-link}';
-                        font-family: icomoon, sans-serif !important;
-                        @include font-size($font-size-base);
-                        margin: 0 0 0 .3rem;
-                        visibility: hidden;
-                        color: $o-gray-light;
-                        opacity: 0;
-                        @include o-transition(all, .1s)
-                    }
-                }
-
-                *:hover > a.headerlink:after {
-                    // This makes permalinks only visible on hover.
-                        visibility: visible;
-                        opacity: 1;
-                }
-
-                table.table {
-                    @include media-breakpoint-down(lg){
-                    display: block;
-                    overflow-x: auto;
-                        code {
-                            overflow-wrap: break-word;
-                        }
-                    }
-                }
-            }
-        }
-
-        div[class^="highlight"] {
-            // This styles the consoles like read-the-doc's consoles
-            overflow-x: auto;
-            border: 1px solid $o-gray-border;
-            margin: 1px 0 24px 0;
-
-            div[class^="highlight"] {
-                padding: 0;
-                border: none;
-                margin: 0;
-            }
-            pre {
-                white-space: pre;
-                margin: 0;
-                padding: 1rem;
-                display: block;
-                overflow: auto;
-            }
-        }
-
-        .guilabel, .menuselection {
-            font-weight: $fw_semibold;
-        }
-
-        .dfn{
-            @include font-size($font-size-secondary);
-            line-height: 1;
-            color: $blue-600;
-            font-weight: $fw_semibold;
-            &:before {
-                content:'?';
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                border: 2px solid $blue-600;
-                border-radius: 20px;
-                text-align: center;
-                color: $blue-600;
-                font-size: 12px;
-                font-weight: $fw_extrabold;
-                font-style: normal;
-                margin: 0 .1rem;
-            }
-        }
-
-        .pq-patch em {
+        .toctree-l1 > a {
             display: block;
-            border-radius: 4px 4px 0 0;
-            background: $o-gray-bg;
-            padding: .2rem 1rem;
-            @include font-size($font-size-secondary);
+            @include font-size($h2-font-size);
+            margin-top: $padding-m;
+            padding-bottom: $padding-xs;
+            border-bottom: 1px solid $o-gray-light;
+            margin-bottom: $margin-s;
+            font-size: 1.2rem;
             font-weight: 600;
         }
 
-        .container .container:not([class^="col"]) {
-            padding: 0;
-            margin: 0;
+        .toctree-l1 {
+            margin-bottom: 2rem;
         }
 
-        ul, ol {
-            text-align: left;
-        }
-
-        ol {
-            ol {
-                list-style: lower-alpha;
-                > li:before {
-                    content: none;
-                }
-            }
-        }
-
-//------------------------------------------------------------------------------
-// Alerts
-//------------------------------------------------------------------------------
-// alert-info
-// alert-note
-// alert-tip
-// alert-warning
-// alert-danger
-// alert-example
-// alert-exercise
-// alert-go_to
-
-        .alert {
-            position: relative;
+        .toctree-l2 > a[href="#"] {
+            margin-top: 0.7rem;
             display: inline-block;
-            border-radius: 0;
-            border-width: 0 0 0 3px;
-            width: 100%;
-            @include font-size($font-size-secondary);
+        }
 
-            code, div[class^="highlight"] {
-                background-color: $white !important;
-                border: 1px solid $o-gray-border;
-                color: inherit;
-            }
+        a[href="#"] {
+            pointer-events: none;
+            cursor: default;
+            color: $o-gray-color;
+            font-weight: $fw_semibold;
+        }
+    }
+    // Toctree on 1st and 2nd level pages - start
 
-            > p , > ul {
-                margin-bottom: .5rem;
-            }
-            > *:last-child {
-                margin-bottom: 0;
-            }
+    // Link to edit pages - start
+    .o_git_link {
+        @include font-size($font-size-secondary);
+        @include o-position($top: 0px, $right: $margin-s);
+        @include media-breakpoint-up(lg) {
+            @include o-position($top: 10px, $right: $margin-s);
+        }
+        i {
+            margin-right: .2rem;
+        }
+    }
+    // Link to edit pages - start
 
-            > h3, > .alert-title {
-                line-height: 1em;
-                margin: 0 0 10px 0;
-                @include font-size($font-size-base);
-                font-weight: $fw_bold;
+    article.doc-body {
+        padding-top: $padding-s;
+        position: relative;
+    }
 
-                &:before {
-                    @include o-inline-icon($i-info, 0 .2rem 0 0, baseline, $font-size-base, inherit);
-                    @include media-breakpoint-down(md) {
-                        display:none;
-                    }
+    // References (ie: addons/mixins, js references) - start
+    dl.py, dl.js, dl.o-definition-list {
+        > dd {
+            border-left: 3px solid $o-gray-border;
+            margin: 0;
+            padding-left: $padding-s;
+            padding-top: $padding-xs;
+        }
+        &.class em.property {
+            font-size: $font-size-secondary;
+            &:first-child {
+                border-bottom: 3px solid $o-gray-border;
+                + [class^=sig] {
+                    padding-left: .3rem;
                 }
             }
-
-            &.alert-info, &[class^="admonition"] {
-                border-color: tint-color($brand-info, 30%);
-                background-color: tint-color($brand-info, 85%);
-                color: shade-color($brand-info, 35%);
-
-                > .alert-title, > h3 {
-                    color: $brand-info;
-                    &:before {
-                        content: '#{$i-info}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-info, 30%);
-                }
-            }
-
-            &.alert-note {
-                border-color: shade-color($info, 30%);
-                background-color: $gray-lightest;
-                color: shade-color($info, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($info, 45%);
-                    &:before {
-                        content: '#{$i-note}';
-                    }
-                }
-            }
-
-            &.alert-tip, &.tip {
-                border-color: shade-color($color-alpha, 10%);
-                background-color: $gray-lightest;
-                color: shade-color($color-alpha, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($color-alpha, 40%);
-                    &:before {
-                        content: '#{$i-lightbulb}';
-                        @include font-size(1.2rem);
-                    }
-                }
-            }
-
-            &.alert-warning, &.warning {
-                border-color: $brand-warning;
-
-                > .alert-title, > h3 {
-                    color: shade-color($brand-warning, 10%);
-                    &:before {
-                        content: '#{$i-warning}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-warning, 50%);
-                }
-            }
-
-            &.alert-danger {
-                border-color: $danger;
-
-                > .alert-title, > h3 {
-                    color: darken($brand-danger, 20%);
-
-                    &:before {
-                        content: '#{$i-danger}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-danger, 50%);
-                }
-            }
-
-            &.alert-example {
-                border-color: tint-color($doc_example, 30%);
-                background-color: tint-color($doc_example, 90%);
-                color: shade-color($doc_example, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_example, 35%);
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-knowledge}';
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($doc-example, 50%);
-                }
-            }
-
-            &.alert-exercise {
-                border-color: tint-color($doc_exercise, 30%);
-                background-color: tint-color($doc_exercise, 90%);
-                color: shade-color($doc_exercise, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_exercise, 35%);
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-exercise}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($doc-exercise, 50%);
-                }
-            }
-
-            &.alert-go_to {
-                border-color: $o-violet;
-                background-color: $gray-lightest;
-
-                a {
-                    color: $o-violet-dark;
-                }
-
-                > .alert-title, > h3 {
-                    color: $o-violet-dark;
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-arrow-right}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($o-violet, 50%);
+            &:not(:first-child) {
+                @extend .o_code;
+                &:last-of-type {
+                    padding-right: .3rem;
                 }
             }
         }
+    }
+    // References (ie: addons/mixins, js references) - end
+
+    dl.field-list {
+        padding: .5rem;
+        border: 1px solid $o-gray-border;
+        @include font-size($font-size-secondary);
+        @include media-breakpoint-down(lg) {
+            display: block;
+        }
+
+        > dt {
+            padding-left: 0;
+        }
+
+        > dd {
+            padding-right: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li {
+                padding-bottom: $padding-xs;
+            }
+        }
+    }
+
+    // Highlight Search keywords
+    span.highlighted {
+        background-color: lighten($warning, 15%);
+    }
+
+    section {
+        > h1 {
+            color: $o-violet;
+            font-weight: $fw_bold;
+            @include media-breakpoint-up(lg) {
+                max-width: calc(100% - 120px);
+            }
+            + * {
+                margin-top: $margin-s;
+            }
+        }
+
+        > h2 {
+            font-family: $font-family-serif;
+            color: $o-gray-color;
+            margin-top: $margin-m;
+            margin-bottom: $margin-s;
+            padding-bottom: .3rem;
+            border-bottom: 1px solid $o-gray-border;
+        }
+
+        > h3 {
+            margin-top: $margin-m;
+            font-weight: $fw_bold;
+        }
+
+        > h4 {
+            margin-top: $margin-l;
+        }
+
+        > h4, > h5, > h6 {
+            font-weight: $fw_semibold;
+        }
+
+        img {
+            border: 1px solid $o-gray-border;
+            background: $white;
+            padding: .5rem;
+            margin-bottom: 1rem;
+        }
+
+        img:not(.o-no-modal) {
+            cursor: pointer;
+        }
+
+        iframe {
+            margin-bottom: 1rem;
+        }
+
+        p > img {
+            border: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+        .figure {
+
+            .caption, .caption-text {
+                font-weight: $fw_semibold;
+                color: $o-gray;
+            }
+
+            .caption, .caption-text, .legend, .legend p {
+                font-style: italic;
+                margin: 0 auto;
+            }
+
+            @include media-breakpoint-up(md) {
+                &:not([class^="col"]) .legend {
+                    max-width: 60%;
+                }
+            }
+        }
+
+        a.headerlink {
+            text-decoration: none;
+            font-size: 0;
+            line-height: 0;
+            visibility: hidden !important;
+
+            &:before {
+                content: "\a0";
+            }
+
+            &:after {
+                content: '#{$i-link}';
+                font-family: icomoon, sans-serif !important;
+                @include font-size($font-size-base);
+                margin: 0 0 0 .3rem;
+                visibility: hidden;
+                color: $o-gray-light;
+                opacity: 0;
+                @include o-transition(all, .1s)
+            }
+        }
+
+        // Make permalinks only visible on hover of the title
+        *:hover > a.headerlink:after {
+                visibility: visible;
+                opacity: 1;
+        }
+
+        table.table {
+            @include media-breakpoint-down(lg){
+            display: block;
+            overflow-x: auto;
+                code {
+                    overflow-wrap: break-word;
+                }
+            }
+        }
+    }
+}
+
+div[class^="highlight"] {
+    // This styles the consoles like read-the-doc's consoles
+    overflow-x: auto;
+    border: 1px solid $o-gray-border;
+
+    div[class^="highlight"] {
+        padding: 0;
+        border: none;
+        margin: 0;
+    }
+    pre {
+        white-space: pre;
+        margin: 0;
+        padding: 1rem;
+        display: block;
+        overflow: auto;
+    }
+    & + * {
+        margin-top: $margin-s;
+    }
+}
+
+.guilabel, .menuselection {
+    font-weight: $fw_semibold;
+}
+
+.dfn {
+    @include font-size($font-size-secondary);
+    line-height: 1;
+    color: $blue-600;
+    font-weight: $fw_semibold;
+    &:before {
+        content:'?';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        border: 2px solid $blue-600;
+        border-radius: 20px;
+        text-align: center;
+        color: $blue-600;
+        font-size: 12px;
+        font-weight: $fw_extrabold;
+        font-style: normal;
+        margin: 0 .1rem;
+    }
+}
+
+.container .container:not([class^="col"]) {
+    padding: 0;
+    margin: 0;
+}
+
+ul, ol {
+    text-align: left;
+}
+
+ol {
+    ol {
+        list-style: lower-alpha;
+        > li:before {
+            content: none;
+        }
+    }
+}
+
+
+//------------------------------------------------------------------------------
+// Main page different layouts
+//------------------------------------------------------------------------------
+//Page types' position
+.o_index, .o_fullwidth_page, .o_has_code_column {
+    grid-column-end: toc;
+}
+
+// Homepage
+.o_index {
+    .o_content_fw_banner {
+        margin: 0 -0.75rem $margin-m;
+        padding: $padding-m $padding-s;
+        align-items: center;
+        @include o-gradient();
+        @include media-breakpoint-up(lg) {
+            margin: -#{$margin-m} -#{$margin-l} $margin-m;
+            padding: $padding-m $padding-m;
+        }
+        @include media-breakpoint-up(xl) {
+            margin: -#{$margin-m} -#{$margin-l} $margin-l;
+            padding: $padding-l $padding-l;
+        }
+    }
+    .row:first-of-type h2.border-top {
+        @include media-breakpoint-up(lg) {
+            border-top: 0 solid transparent !important;
+        }
+    }
+
+    h5 {
+        font-size: 12px;
+    }
+
+    ul {
+        > li {
+            position: relative;
+            padding-bottom: $padding-xs;
+            display: flex;
+            align-items: center;
+
+            &:before {
+                @include o-inline-icon($i-article, 0 .2rem 0 0);
+                color: $o-gray-light;
+            }
+        }
+    }
+}
+
+// First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
+.o_fullwidth_page {
+        div.toctree-wrapper > ul {
+            display: flex;
+            flex-wrap: wrap;
+            > li {
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+                @include media-breakpoint-up(lg) {
+                    width: 33%;
+                    &:not(:nth-of-type(3n)){
+                        padding-right: $padding-m;
+                    }
+                }
+
+            }
+        }
+    }
+
+// Pages with column for code on the right
+.o_has_code_column {
+    article.doc-body {
+        @include media-breakpoint-up(xl) {
+            .o_git_link {
+                right: calc(#{$o-codecol-width} + #{$padding-l});
+            }
+
+            section {
+                > * {
+                    width: $o-halfpage-width;
+                    float: left;
+                    clear: left;
+                }
+
+                > h1 {
+                    max-width: calc(#{$o-halfpage-width} - 120px);
+                }
+
+                > h1, > h2, > h3, > h4, > h5, > h6 {
+                    float: none;
+                    clear: none;
+                }
+
+                .doc-aside {
+                    width: $o-codecol-width;
+                    float: none;
+                    clear: none;
+                    margin-left: 57%;
+                    padding: $padding-s;
+
+                    blockquote {
+                        font-weight: $fw_semibold;
+                        font-style: italic;
+                    }
+
+                    pre {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    // Hide the On This Page toc
+    + aside.o_page_toc{
+        display: none;
+    }
+}
+
+.o_hide_toc {
+    .toctree-wrapper {
+        display: none;
     }
 }
 
@@ -1084,7 +895,7 @@ header {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    border-color: tint-color($doc_exercise, 30%);
+    border-color: shade-color($o-accordion-bg, 40%);
     background-color: $o-accordion-bg;
 
     .accordion-button {
@@ -1098,17 +909,15 @@ header {
     }
 
     .accordion-body {
-        #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
-            > *:first-child {
-                margin-top: 1rem;
-            }
+        > *:first-child {
+            margin-top: 1rem;
+        }
 
-            code, div[class^="highlight"] {
-                border-color: tint-color($doc-exercise, 50%);
+        code, div[class^="highlight"] {
+            border-color: tint-color($o-accordion-bg, 50%);
 
-                &:first-child:last-child {
-                    margin-bottom: 0;
-                }
+            &:first-child:last-child {
+                margin-bottom: 0;
             }
         }
     }
@@ -1228,6 +1037,7 @@ header {
 //------------------------------------------------------------------------------
 // Footer
 //------------------------------------------------------------------------------
+
 footer {
     .o_get_help {
         padding-top: $padding-l;
