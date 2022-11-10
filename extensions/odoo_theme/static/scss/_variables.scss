@@ -4,43 +4,6 @@ $grid-breakpoint-xxxl: 1680px;
 $container-max-width-xxl:1380px;
 $container-max-width-xxxl: 1560px;
 
-// Odoo Colours
-// ==============================================
-$o-violet-dark           : #875A7B;
-$o-violet-darker         : #603c5e;
-
-$o-inverse-lightest      : #98A6B0;
-$o-inverse-light         : #8B979F;
-$o-inverse               : #47738F;
-$o-inverse-dark          : #5B7687;
-$o-inverse-darker        : #485761;
-
-//== Apps' Families Colours
-$color-alpha             : #00A09D;
-$color-alpha-dark        : #18856F;
-$color-alpha-light       : #26D1AF;
-$color-alpha-lightest    : #2AEBC4;
-
-$color-beta              : #5B899E;
-$color-beta-dark         : #3D5D6B;
-$color-beta-light        : #699FB8;
-$color-beta-lightest     : #77B5D1;
-
-$color-gamma             : #E46F78;
-$color-gamma-dark        : #B0565C;
-$color-gamma-light       : #FC7C84;
-$color-gamma-lightest    : #FC959C;
-
-$color-delta             : #5C5B80;
-$color-delta-dark        : #37364D;
-$color-delta-light       : #6E6D99;
-$color-delta-lightest    : #807FB3;
-
-$color-epsilon           : #D5653E;
-$color-epsilon-dark      : #A34E2F;
-$color-epsilon-light     : #F07346;
-$color-epsilon-lightest  : #FF8D63;
-
 // Typography
 // ===============================================
 $font-family-serif:           'Roboto Slab', Georgia, "Times New Roman", Times, serif;
@@ -149,68 +112,69 @@ $i-close: "\e942";
 //------------------------------------------------------------------------------
 // Colors
 //------------------------------------------------------------------------------
+//Replace bootstrap's gray values
+$white:                                     #FFFFFF;
+$gray-100:                                  #F9F9F9 !default;
+$gray-200:                                  #F2F2F2 !default;
+$gray-300:                                  #DEE2E6 !default;
+$gray-400:                                  #D5D5D5 !default;
+$gray-500:                                  #ADB5BD !default;
+$gray-600:                                  #888888 !default;
+$gray-700:                                  #707070 !default;
+$gray-800:                                  #343A40 !default;
+$gray-900:                                  #282F33 !default;
 
-$o-violet:                                  #875a7b;
-$o-violet-dark:                             #7A436B;
-$o-violet-darkest:                          #64305E;
+$o-light:                                   $white;
+$o-dark :                                   $gray-800;
 
-$o-inverse-lightest:                        #98a6b0;
-$o-inverse-light:                           #8b979f;
-$o-inverse:                                 #47738f;
-$o-inverse-dark:                            #5b7687;
-$o-inverse-darker:                          #485761;
+$o-gray-light :                             $gray-400;
+$o-gray :                                   $gray-600;
 
-$color-alpha:                               #00A19B;
-$color-alpha-dark:                          #017e84;
-$color-alpha-light:                         #26d1af;
-$color-alpha-lightest:                      #2aebc4;
+$o-gray-border:                             $gray-400;
+$o-gray-bg:                                 $gray-100;
+$o-gray-color:                              $gray-900;
 
-$color-beta:                                #5b899e;
-$color-beta-dark:                           #3d5d6b;
-$color-beta-light:                          #699fb8;
-$color-beta-lightest:                       #77b5d1;
+$o-violet :                                 #7A436B; //Odoo's #875a7b Doesn't give AAA contrast on white background
+$o-blue :                                   #77b5d1;
+$o-cyan:                                    #0dcaf0;
+$o-teal :                                   #017e84;
+$o-green :                                  #519161;
+$o-orange:                                  #ffa930;
+$o-red:                                     #D9534F;
+$o-red-light:                               #FF5722;
 
-$color-gamma:                               #e46f78;
-$color-gamma-dark:                          #b0565c;
-$color-gamma-light:                         #fc7c84;
-$color-gamma-lightest:                      #fc959c;
+$blue:                                      $o-blue;
+$purple:                                    $o-violet;
+$cyan:                                      $o-cyan;
+$red:                                       $o-red;
+$orange:                                    $o-orange;
+$green:                                     $o-green;
+$teal:                                      $o-teal;
 
-$color-delta:                               #5c5b80;
-$color-delta-dark:                          #37364d;
-$color-delta-light:                         #6e6d99;
-$color-delta-lightest:                      #807fb3;
+$primary:                                   $o-teal;
+$secondary:                                 $o-violet;
+$light:                                     $o-light;
+$dark:                                      $o-dark;
+$success:                                   $green;
+$info:                                      $blue;
+$warning:                                   $orange;
+$danger:                                    $red;
+$note:                                      shade-color($blue,10%);
+$tip:                                       $teal;
+$example:                                   $green;
+$exercise:                                  $gray-700;
+$go-to:                                     $o-violet;
 
-$color-epsilon:                             #d5653e;
-$color-epsilon-dark:                        #a34e2f;
-$color-epsilon-light:                       #f07346;
-$color-epsilon-lightest:                    #ff8d63;
-
-$header-link-normal:                        #343a40;
-
-$gray-lightest:                             #F9F9F9;
-$gray-lighter:                              #F2F2F2;
-$gray-light:                                #d5d5d5;
-$gray:                                      #888888;
-$gray-dark:                                 #707070;
-$gray-darker:                               #282F33;
-
-$primary:                                   $color-alpha-dark;
-$secondary:                                 $o-violet-dark;
-
-$brand-primary :                            $o-violet;
-$brand-success :                            #50AF51;
-$brand-info:                                #4B9EB6;
-$brand-warning :                            #f39c1e;
-$brand-danger  :                            #D9534F;
-
-$doc_paper_dark:                            $gray-lighter;
-$doc_paper:                                 #ffffff;
-$doc_example:                               #519161;
-$doc_exercise:                              #938E94;
-$doc_code-bg:                               #F8F8F8;
-$doc_lime:                                  #CDDC39;
-$doc_orange:                                #FF5722;
-$doc_cyan:                                  $color-alpha;
+$theme-colors: (
+  "primary":    $primary,
+  "secondary":  $secondary,
+  "success":    $success,
+  "info":       $info,
+  "warning":    $warning,
+  "danger":     $danger,
+  "light":      $light,
+  "dark":       $dark
+);
 
 //------------------------------------------------------------------------------
 // Misc
@@ -219,7 +183,7 @@ $doc_cyan:                                  $color-alpha;
 // Header
 $o-header-mobile-height:                    50px;
 $o-header-height:                           80px;
-$o-header-white:                            #ffffff;
+$o-header-bg:                               $white;
 
 $o-subheader-height:                        32px;
 
@@ -247,4 +211,4 @@ $margin-l:                                  $padding-l;
 //------------------------------------------------------------------------------
 
 // Accordion
-$o-accordion-bg:                            tint-color($doc_exercise, 90%)!default;
+$o-accordion-bg:                            $o-gray-bg!default;
