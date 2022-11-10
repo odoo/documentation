@@ -433,22 +433,19 @@ header {
             padding: 0 .3rem;
         }
     }
-    code {
+
+    // Markup Styles
+    .o_code, .sig [class^="sig-"] {
         display: inline-block;
         color: inherit;
         overflow-wrap: anywhere;
-        &:first-of-type:not(span):not(em) {
-            padding-left: .3rem;
-        }
-        &:last-of-type:not(em) {
-            padding-right: .3rem;
-        }
-        ~ .sig-paren, ~ .sig-param, ~ .optional {
-            @extend code;
-            + .sig-paren {
-                padding: 0 .1rem;
-            }
-        }
+        background: $o-gray-bg;
+        font-size: 0.875em;
+        font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+    }
+
+    .o_code {
+        padding: 0 .3rem;
         &.file {
             font-family: $font-family-base;
             font-weight: $fw_medium;
@@ -457,10 +454,14 @@ header {
             color: $blue-700;
             background-color: $blue-100;
         }
+    }
 
-        &:not(.file) {
-            color: inherit;
-            background: darken($doc_code-bg,3%);
+    .sig {
+        [class^="sig-"]:first-of-type, span[id] + [class^="sig-"]{
+                padding-left: .3rem;
+        }
+        [class^="sig-"]:last-of-type {
+            padding-right: .3rem;
         }
     }
 
@@ -657,12 +658,6 @@ header {
                 }
             }
 
-            .command {
-                font-family: var(--bs-font-monospace);
-                font-weight: $fw_regular;
-                @extend code;
-            }
-
             dl.py, dl.js, dl.o-definition-list {
                 > dd {
                     border-left: 3px solid $o-gray-border;
@@ -679,7 +674,7 @@ header {
                         }
                     }
                     &:not(:first-child) {
-                        @extend code;
+                        @extend .o_code;
                         &:last-of-type {
                             padding-right: .3rem;
                         }
