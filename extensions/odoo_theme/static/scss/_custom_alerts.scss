@@ -1,0 +1,98 @@
+$o-alert-states: (
+    "note": ("color": $note, "icon": $i-note),
+    "tip": ("color": $tip, "icon": $i-lightbulb),
+    "example": ("color": $example, "icon": $i-knowledge),
+    "exercise": ("color": $example, "icon": $i-exercise),
+    "go-to": ("color": $go-to, "icon": $i-arrow-right),
+    "warning": ("color": $warning, "icon": $i-warning),
+    "danger": ("color": $danger, "icon": $i-danger)
+);
+
+.alert {
+    $color: $o-blue;
+    $background: shift-color($color, $alert-bg-scale);
+    $border: shift-color($color, $alert-border-scale);
+    $color: shift-color($color, $alert-color-scale);
+    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+        $color: mix($color, color-contrast($background), abs($alert-color-scale));
+    }
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    padding: $alert-padding-y $alert-padding-x;
+    border: 0 solid transparent;
+    border-left-width: $alert-border-width;
+    @include font-size($font-size-secondary);
+    @include alert-variant($background, $border, $color);
+
+    .alert-title, > h3 {
+        line-height: 1em;
+        margin: 0 0 10px 0;
+        @include font-size($font-size-base);
+        font-weight: $fw_bold;
+        &:before {
+            content: $i-info;
+            font-family: 'icomoon' !important;
+            @include font-size($font-size-base);
+            font-weight: inherit;
+            vertical-align: baseline;
+            margin:  0 .2rem 0 0;
+        }
+    }
+    > p , > ul {
+        margin-bottom: .5rem;
+    }
+    > *:last-child {
+        margin-bottom: 0;
+    }
+    + * {
+        margin-top: $margin-s;
+    }
+}
+
+
+
+  // scss-docs-start alert-modifiers
+  // Generate contextual modifier classes for colorizing the alert.
+@mixin o-alert-states($state, $color, $icon) {
+    $background: shift-color($color, $alert-bg-scale);
+    $border: shift-color($color, $alert-border-scale);
+    @if ($state == "go-to") {
+        $color: $color;
+    }@else{
+        $color: shift-color($color, $alert-color-scale);
+    }
+
+    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+      $color: mix($color, color-contrast($background), abs($alert-color-scale));
+    }
+    .alert-#{$state} {
+        @include alert-variant($background, $border, $color);
+
+        > .alert-title, > h3 {
+            color: $color;
+            &:before {
+                content: '#{$icon}';
+                @if ($state == "tip") {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        @if ($state == "go-to") {
+            a {
+                color: $o-violet;
+            }
+        }
+
+        code, div[class^="highlight"] {
+            background-color: $white !important;
+            border: 1px solid shift-color($border, -40%);
+            color: inherit;
+        }
+    }
+}
+
+@each $state, $value in $o-alert-states {
+    @include o-alert-states($state, map-get($value, color), map-get($value, icon));
+}
