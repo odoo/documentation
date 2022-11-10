@@ -156,9 +156,9 @@ Odoo supports the following local payment methods:
 - iDEAL
 - Przelewy24 (P24)
 
-To enable some of these local payment methods with Stripe, list them as supported payment icons. To
-do so, go to :menuselection:`Payment Providers --> Stripe --> Configuration` and add the desired
-payment methods in the **Supported Payment Icons** field. If the desired payment method is already
+To enable some of these local payment methods with Stripe, go to
+:menuselection:`Payment Providers --> Stripe --> Configuration` and add the desired
+payment methods in the **Supported Payment Methods** field. If the desired payment method is already
 listed, you don't have anything to do.
 
 .. image:: stripe/stripe_enable_local_payment_method.png
@@ -166,7 +166,7 @@ listed, you don't have anything to do.
    :alt: Select and add icons of the payment methods you want to enable
 
 .. note::
-   - If a payment icon record does not exist in the database and its related local payment method is
+   - If a payment method record does not exist in the database and its related local payment method is
      listed above, it is considered enabled with Stripe.
    - If a local payment method is not listed above, it is not supported and cannot be enabled.
 
