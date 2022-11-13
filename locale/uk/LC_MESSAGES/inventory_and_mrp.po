@@ -4,17 +4,18 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Alina Lisnenko <alinasemeniuk1@gmail.com>, 2021
 # Martin Trigaux, 2022
+# Alina Lisnenko <alina.lisnenko@erp.co.ua>, 2022
+# trolka <trolka.olug@gmail.com>, 2022
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-03-18 14:56+0000\n"
+"POT-Creation-Date: 2022-09-01 15:11+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
-"Last-Translator: Martin Trigaux, 2022\n"
+"Last-Translator: trolka <trolka.olug@gmail.com>, 2022\n"
 "Language-Team: Ukrainian (https://www.transifex.com/odoo/teams/41243/uk/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n % 1 == 0 && n % 10 == 1 && n % 100 != 11 ? 0 : n % 1 == 0 && n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 12 || n % 100 > 14) ? 1 : n % 1 == 0 && (n % 10 ==0 || (n % 10 >=5 && n % 10 <=9) || (n % 100 >=11 && n % 100 <=14 )) ? 2: 3);\n"
 
 #: ../../content/applications/inventory_and_mrp.rst:5
-msgid "Inventory & Mrp"
+msgid "Inventory & MRP"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory.rst:8
@@ -80,12 +81,17 @@ msgid ""
 "create one. Note that, if you work with multi-location, you first need to "
 "specify in which location the inventory adjustment takes place."
 msgstr ""
+"Як тільки ви клікнете на *Налаштування Складів*, Odoo автоматично створить "
+"Склад. Зауважте, якщо ви працюєте з кількома складами, ви спочатку маєте "
+"визначити, які склади та місцезнаходження будете вести в системі."
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/adjustments.rst:24
 msgid ""
 "If you don’t work with multi-location, you will be able to scan the "
 "different products you want to include in the inventory adjustment."
 msgstr ""
+"If you don’t work with multi-location, you will be able to scan the "
+"different products you want to include in the inventory adjustment."
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/operations/adjustments.rst:31
 msgid ""
@@ -420,7 +426,7 @@ msgstr "Встановлення"
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:3
 msgid "Set up your barcode scanner"
-msgstr "Встановлення сканеру штрих-коду"
+msgstr "Встановіть ваш сканер штрих-коду"
 
 #: ../../content/applications/inventory_and_mrp/inventory/barcode/setup/hardware.rst:5
 msgid ""
@@ -1111,6 +1117,9 @@ msgid ""
 "status while the other ones are *Waiting Another Operation*. The Packing "
 "operation will become *Ready* as soon as the picking one is marked as done."
 msgstr ""
+"The picking operation is the first one to be processed and has a *Готово* "
+"status while the other ones are *Очікує іншої операції*. The Packing "
+"operation will become *Ready* as soon as the picking one is marked as done."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/delivery/three_steps.rst:73
 #: ../../content/applications/inventory_and_mrp/inventory/management/delivery/two_steps.rst:71
@@ -1385,7 +1394,14 @@ msgid ""
 "suppliers are considered as being always available."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/incoming/one_step.rst:51
+#: ../../content/applications/inventory_and_mrp/inventory/management/incoming/one_step.rst:49
+msgid ""
+"If you have :guilabel:`Storage Locations` activated, you can click the "
+"hamburger menu next to the :guilabel:`Done quantity` to specify the "
+"location(s) where you are storing the received product(s)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/incoming/one_step.rst:56
 msgid ""
 "Once you *Validate* the receipt, the products leave the *Supplier Location* "
 "to enter your *WH/Stock Location*. You can easily see that the receipt took "
@@ -2009,6 +2025,10 @@ msgid ""
 "product of your choice. Edit it and select *Tracking By Unique Serial "
 "Number* in the *Inventory tab*. Then, click on save."
 msgstr ""
+"Тепер ви можете налаштувати товари, які ви хочете відстежувати за серійними "
+"номерами. Щоб зробити це, перейдіть до меню \"Основні дані --> Товари\" і "
+"відкрийте товар. Відредагуйте його і оберіть \"відстеження за унікальними "
+"серійними номерами\" на вкладці \"Склад\". Збережіть картку товару. "
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/lots_serial_numbers/serial_numbers.rst:42
 msgid "Manage Serial Numbers"
@@ -2351,21 +2371,19 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:41
 msgid ""
-"**Purchase Security Lead Time**: additional time to mitigate the risk of a "
-"vendor delay. The receipt will be scheduled that many days earlier to cope "
-"with unexpected vendor delays. In case of a *Replenish to Order*, the "
-"**Delivery order scheduled date - Security lead time** for purchase will be "
-"the default *Receipt* scheduled date."
+"**Purchase Security Lead Time**: margin of error for vendor lead times. When"
+" the system generates Purchase Orders for procuring products, they will be "
+"scheduled that many days earlier to cope with unexpected vendor delays."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:46
 msgid ""
 "**Purchase Delivery Lead Time**: this is the expected time between a PO "
 "being confirmed and the receipt of the ordered products. The **Receipt "
 "scheduled date - Vendor delivery date** is the default *PO Order By* date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:53
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:51
 msgid ""
 "**Days to Purchase**: number of days the purchasing department takes to "
 "validate a PO. If another RFQ to the same vendor is already opened, Odoo "
@@ -2373,14 +2391,14 @@ msgid ""
 "date is set on the line."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:58
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:56
 msgid ""
 "**Manufacturing Lead Time**: this is the expected time it takes to "
 "manufacture a product. This lead time is independent of the quantity to "
 "produce and does not take the routing time into account."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:61
 msgid ""
 "**Manufacturing Security Lead Time**: additional time to mitigate the risk "
 "of a manufacturing delay. In case of a *Replenish to Order*, the **Delivery "
@@ -2388,11 +2406,11 @@ msgid ""
 " Time** is the default *Manufacturing Order* planned date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:70
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:68
 msgid "Sales - Lead Times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:70
 msgid ""
 "In the *Sales* app, there is an option called *Delivery Date*. It allows "
 "seeing an additional field on the sales orders, *Expected Date*. This one is"
@@ -2400,23 +2418,23 @@ msgid ""
 "configured."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:81
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:79
 msgid ""
 "If the set up *Delivery Date* is earlier than the the *Expected Date*, a "
 "warning message is displayed."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:87
 msgid ""
 "But, for all of this properly working, it is still necessary to configure "
 "all the lead times that could occur."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:93
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:91
 msgid "Customer Lead Time"
 msgstr "Термін доставки клієнту"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:95
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:93
 msgid ""
 "The *Customer Lead Time* is the time needed for your product to go from your"
 " warehouse to the customer place. It can be configured on any product by "
@@ -2424,64 +2442,64 @@ msgid ""
 "product form, go in the inventory tab, and add your *Customer Lead Time*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:105
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:103
 msgid ""
 "For example, product B is ordered on the 2nd of April but the *Customer Lead"
 " Time* is two days. In that case, the expected delivery date is the 4th of "
 "April."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:110
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:182
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:219
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:108
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:180
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:217
 msgid "Security Lead Time"
 msgstr "Час проведення безпеки"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:110
 msgid ""
 "In sales, *Security Lead Time* corresponds to backup days to ensure you are "
 "able to deliver the products in time. The purpose is to be ready shipping "
 "earlier in order to arrive on time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:116
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:114
 msgid ""
 "The number of security days is subtracted from the calculation to compute a "
 "scheduled date earlier than the one promised to the customer."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:117
 msgid ""
 "To set this up, go to :menuselection:`Inventory --> Configuration --> "
 "Settings` and enable the feature *Security Lead Time for Sales*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:124
 msgid ""
 "For example, product B is scheduled to be delivered on the 6th of April but "
 "the *Security Lead Time* is one day. In that case, the scheduled date for "
 "the delivery order is the 5th of April."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:131
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:129
 msgid "Deliver several products"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:133
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:131
 msgid ""
 "In many cases, customers order several products at the same time. Those can "
 "have different lead times but still need to be delivered, at once or "
 "separately. Fortunately, Odoo can help you handle these cases easily."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:137
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:135
 msgid ""
 "From the *Other Info* tab of your *Sale Order*, you can choose between *When"
 " all products are ready* and *As soon as possible*. The first one is to "
 "deliver products at once, while the second is to deliver them separately."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:142
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:140
 msgid ""
 "For example, products A and B are ordered at the same time. A has 8 lead "
 "days and B has 5. With the first option, the *Expected Date* is calculated "
@@ -2490,29 +2508,29 @@ msgid ""
 "April."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:148
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:146
 msgid ""
 "With the second option, the *Expected Date* is calculated based on the "
 "product with the least customer lead days. In this example, B is the product"
 " with the least lead days. So, the *Expected Date* is on the 7th of April."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:154
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:152
 msgid "Purchase - Lead Times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:157
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:155
 msgid "Supplier Lead Time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:159
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:157
 msgid ""
 "The *Supplier Lead Time* is the time needed for a product you purchased to "
 "be delivered. To configure it, open a product from :menuselection:`Purchase "
 "--> Products --> Products` and add a vendor under the *Purchase* tab."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:168
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:166
 msgid ""
 "By clicking on *Add a line*, a new window is displayed. You can specify the "
 "*Delivery Lead Time* there. If done so, the delivery day for every purchase "
@@ -2520,47 +2538,47 @@ msgid ""
 "Time*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:178
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:176
 msgid ""
 "It is possible to add different vendors and, thus, different lead times "
 "depending on the vendor."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:184
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:182
 msgid ""
 "The *Security Lead Time* for purchase follows the same logic as the one for "
 "*Sales*, except that you are the customer. Then, it is the margin of error "
 "for your supplier to deliver your order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:188
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:186
 msgid ""
 "To set up *Security Lead Time* for purchase, go to :menuselection:`Inventory"
 " --> Configuration --> Settings` and enable the feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:196
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:194
 msgid ""
 "Doing so, every time the system generates purchase orders, those are "
 "scheduled that many days earlier to cope with unexpected vendor delays."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:200
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:198
 msgid "Manufacturing - Lead Times"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:203
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:201
 msgid "Manufacturing Lead Time"
 msgstr "Час виконання виробництва"
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:205
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:203
 msgid ""
 "The *Manufacturing Lead Time* is the time needed to manufacture the product."
 " To specify it, open the *Inventory* tab of your product form and add the "
 "number of days the manufacturing takes."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:213
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:211
 msgid ""
 "When working with *Manufacturing Lead Times*, the *Deadline Start* of the "
 "*MO* is **Commitment Date - Manufacturing Lead Time**. For example, the MO’s"
@@ -2568,19 +2586,19 @@ msgid ""
 "July is June 27th."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:221
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:219
 msgid ""
 "The *Security Lead Time* for manufacturing allows generating manufacturing "
 "orders earlier to cope with the risk of manufacturing delays."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:225
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:223
 msgid ""
 "To enable it, go to :menuselection:`Manufacturing --> Configuration --> "
 "Settings` and tick *Security Lead Time*."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:232
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:230
 msgid ""
 "For example, a customer orders B with a delivery date scheduled on the 20th "
 "of June. The *Manufacturing Lead Time* is 14 days and the *Security Lead "
@@ -2588,65 +2606,65 @@ msgid ""
 "the 3rd of June, which is the MO’s planned date."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:238
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:236
 msgid "Global Example"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:240
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:238
 msgid "Here is a configuration:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:242
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:240
 msgid "1 day of security lead time for Sales"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:243
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:241
 msgid "2 days of security lead time for Manufacturing"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:244
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:242
 msgid "3 days of manufacturing lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:245
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:243
 msgid "1 day of security lead time for Purchase"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:246
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:244
 msgid "4 days of supplier lead time"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:248
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:246
 msgid ""
 "Let’s say that a customer orders B on the 1st of September and the delivery "
 "date is planned to be within 20 days (September 20th). In such a scenario, "
 "here is when all the various steps are triggered."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:252
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:250
 msgid "**September 1st**: the sales order is created"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:253
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:251
 msgid ""
 "**September 10th**: the deadline to order components from the supplier "
 "because of the manufacturing process (4 days of supplier lead time)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:256
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:254
 msgid ""
 "**September 13th**: the reception of the product from the supplier (1 day of"
 " security lead time for Purchase)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:258
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:256
 msgid ""
 "**September 14th**: the deadline start date for the manufacturing (19th - 3 "
 "days of manufacturing lead time - 2 days of security lead time for "
 "Manufacturing)"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:261
+#: ../../content/applications/inventory_and_mrp/inventory/management/planning/scheduled_dates.rst:259
 msgid ""
 "**September 19th**: the expected date on the delivery order form (1 day of "
 "security lead time for sales)"
@@ -4304,6 +4322,8 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:3
 msgid "Using Routes and Pull/Push Rules"
 msgstr ""
+"Використання Маршрутів та правил Витягування/"
+"                                            Виштовхування "
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:5
 msgid ""
@@ -4311,6 +4331,9 @@ msgid ""
 "should be fabricated, delivered to distribution centers, and made available "
 "in the retail channel."
 msgstr ""
+"В управлінні запасами стратегія ланцюга постачання визначає, коли продукти "
+"мають бути виготовлені, доставлені до розподільчих центрів і доступні в "
+"каналі роздрібної торгівлі."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:9
 msgid ""
@@ -4319,6 +4342,10 @@ msgid ""
 " app can automatically generate transfers following the instructions given "
 "by the rules. Yes, Odoo simplifies your life."
 msgstr ""
+"Цей вид стратегічного процесу можна налаштувати за допомогою *маршрутів*, що"
+" містять *правила Pull витягування і Push виштовхування*. Коли все правильно"
+" налаштовано, модуль Склад може автоматично генерувати переміщення "
+"відповідно до інструкцій, наданих правилами. Так, Odoo спрощує ваше життя."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:16
 msgid "Inside the warehouse"
@@ -4331,6 +4358,10 @@ msgid ""
 "shipping docks. All products go through all these locations, which also "
 "trigger all the route's rules."
 msgstr ""
+"Давайте уявімо загальний план складу, де ви можете знайти доки прийому, зону"
+" контролю якості, місця зберігання, зони комплектування та пакування, а "
+"також доки відвантаження. Усі продукти проходять через усі ці локації, що "
+"також активує всі правила маршруту."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:27
 msgid ""
@@ -4340,6 +4371,11 @@ msgid ""
 "during the manufacturing process, for example), while others are directly "
 "stored in their respective locations."
 msgstr ""
+"У цьому прикладі вантажівки постачальників розвантажують піддони із "
+"замовленими товарами в приймальних доках. Потім оператори сканують продукти "
+"в приймальній зоні. Деякі з цих продуктів відправляються в зону контролю "
+"якості (наприклад, призначену для використання під час виробничого процесу),"
+" а інші безпосередньо зберігаються у відповідних місцях."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:36
 msgid ""
@@ -4350,6 +4386,12 @@ msgid ""
 " and conveyors bring them close to the shipping docks, ready to be delivered"
 " to customers."
 msgstr ""
+"Ось приклад виконання маршруту. Зранку відбувається підбір товарів для всіх "
+"замовлень, які потрібно підготувати протягом дня. Ці предмети збираються зі "
+"складських місць і переміщуються в зону комплектування, поряд із місцем "
+"упаковки замовлень. Потім замовлення пакують у відповідні коробки, а "
+"конвеєри доставляють їх ближче до транспортних доків, готових до доставки "
+"клієнтам."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:48
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/removal.rst:45
@@ -4358,13 +4400,16 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:51
 msgid "Pull Rules"
-msgstr ""
+msgstr "Правила Витягуваня"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:53
 msgid ""
 "With *Pull Rules*, a demand for some products triggers procurements, while "
 "*Push Rules* are triggered by products arriving in a specific location."
 msgstr ""
+"За допомогою *Правил витягування* попит на деякі продукти ініціює закупівлі,"
+" тоді як *Правила виштовхування* запускаються продуктами, які надходять у "
+"певне місце."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:57
 msgid ""
@@ -4376,6 +4421,14 @@ msgid ""
 "*Customer Location* is found, and a transfer between the two locations is "
 "created."
 msgstr ""
+"Можна сказати, що *Правила витягування* використовуються для виконання "
+"замовлення клієнта, замовлення на продаж. Таким чином, Odoo генерує потребу "
+"в *Місцезнаходженні клієнта* для кожного продукту в замовленні. Оскільки "
+"*Правила витягування* викликаються потребою, Odoo шукає *Правило "
+"витягування*, визначене в *Місцезнаходженні клієнта*. У нашому випадку "
+"знайдено правило отримання замовлення на доставку, яке переносить продукти з"
+" *зони доставки* до *місцезнаходження клієнта*, і створюється передача між "
+"двома місцезнаходженнями."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:65
 msgid ""
@@ -4385,6 +4438,10 @@ msgid ""
 "triggered until a transfer between the *Stock* and the *Picking Area* is "
 "created."
 msgstr ""
+"Потім Odoo знаходить інше правило витягування, яке намагається задовольнити "
+"потребу в *зоні доставки*: *правило упаковки*, яке переносить продукти з "
+"*зони упаковки* в *зону доставки*. І, нарешті, діють інші правила, доки не "
+"буде створено передачу між *запасом* і *зоною комплектування*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:72
 msgid ""
@@ -4393,6 +4450,10 @@ msgid ""
 "opposite order: first the picking, then the packing, then the delivery "
 "order."
 msgstr ""
+"Усі ці переміщення попередньо генеруються Odoo, починаючи з кінця й у "
+"зворотному напрямку. Під час роботи оператор обробляє ці передачі в "
+"зворотному порядку: спочатку комплектація, потім пакування, потім замовлення"
+" на доставку."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:77
 msgid "Push Rules"
@@ -4405,6 +4466,11 @@ msgid ""
 "products arrive in a specific location. *Push Rules* basically say: \"when a"
 " product arrives at a specific location, move it to another location.\""
 msgstr ""
+"З іншого боку, *Правила виштовхування* набагато легше зрозуміти. Замість "
+"попереднього створення документів на основі потреб вони активуються в "
+"реальному часі, коли продукти надходять у певне місце. *Правила "
+"Виштовхування* в основному кажуть: «коли продукт прибуває в певне місце, "
+"перемістіть його в інше місце»."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:84
 msgid ""
@@ -4413,6 +4479,10 @@ msgid ""
 "different products, you can assign different storage locations for different"
 " products."
 msgstr ""
+"Простим прикладом може бути такий: коли продукт надходить у зону отримання, "
+"перемістіть його до місця зберігання. Оскільки різні правила можуть "
+"застосовуватися до різних продуктів, ви можете призначити різні місця "
+"зберігання для різних продуктів."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:89
 msgid ""
@@ -4420,12 +4490,17 @@ msgid ""
 "*Quality Control Area*. Then, once the quality check is done, move them to "
 "their *Storage Location*."
 msgstr ""
+"Іншим правилом може бути таке: коли продукти прибувають на місце, "
+"перемістіть їх до *зони контролю якості*. Після завершення перевірки якості "
+"перемістіть їх у *місце зберігання*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:94
 msgid ""
 "*Push Rules* can be triggered only if no *Pull Rule* pre-generated the "
 "upstream transfers."
 msgstr ""
+"*Push-правила* можуть бути запущені, лише якщо жодне *Pull-правило* "
+"попередньо не згенерувало вихідні переміщення."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:98
 msgid ""
@@ -4434,6 +4509,10 @@ msgid ""
 "the picking operation, all orders are grouped in one transfer, whereas the "
 "packing operation respects the grouping per customer order."
 msgstr ""
+"Такі набори правил називаються маршрутами. Групування за правилом визначає, "
+"групувати продукти в одному переміщення чи ні. Наприклад, під час операції "
+"комплектування всі замовлення групуються в одне переміщення, тоді як "
+"операція пакування дотримується групування за замовленням клієнта."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:105
 msgid "Use Routes and Rules"
@@ -4444,26 +4523,33 @@ msgid ""
 "Since *Routes* are a collection of *Push and Pull Rules*, Odoo helps you "
 "manage advanced routes configuration such as:"
 msgstr ""
+"Оскільки *Маршрути* — це набір *правил Витягування та Виштовхування*, Odoo "
+"допомагає керувати розширеною конфігурацією маршрутів, наприклад:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:110
 msgid "Manage product manufacturing chains;"
-msgstr ""
+msgstr "Керувати ланцюжками виробництва продукції;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:111
 msgid "Manage default locations per product;"
-msgstr ""
+msgstr "Керувати розташуванням за замовчуванням для кожного продукту;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:112
 msgid ""
 "Define routes within your warehouse according to business needs, such as "
 "quality control, after-sales services, or supplier returns;"
 msgstr ""
+"Визначайте маршрути в межах свого складу відповідно до бізнес-потреб, таких "
+"як контроль якості, післяпродажне обслуговування або повернення "
+"постачальникам;"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:114
 msgid ""
 "Help rental management by generating automated return moves for rented "
 "products."
 msgstr ""
+"Допоможіть управлінню орендою, генеруючи автоматичне повернення для "
+"орендованих продуктів."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:117
 msgid ""
@@ -4471,6 +4557,9 @@ msgid ""
 "Application** and go to :menuselection:`Configuration --> Settings`. Then, "
 "enable the *Multi-Step Routes* feature."
 msgstr ""
+"Щоб налаштувати такий маршрут, як один із наведених вище, відкрийте "
+"**додаток Склад** і перейдіть до Configuration ‣ Settings. Потім увімкніть "
+"функцію *Багатокрокові маршрути*."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:126
 msgid ""
@@ -4483,10 +4572,12 @@ msgid ""
 "Once this first step is completed, you have the choice between pre-"
 "configured routes or custom ones. Both are explained below."
 msgstr ""
+"Після завершення цього першого кроку у вас є вибір між попередньо "
+"налаштованими маршрутами або спеціальними. Обидва пояснюються нижче."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:133
 msgid "Pre-configured Routes"
-msgstr ""
+msgstr "Попередньо-налаштовані маршрути"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:135
 msgid ""
@@ -4495,6 +4586,10 @@ msgid ""
 "There, open your warehouse and edit it to see the pre-configured routes for "
 "incoming and outgoing shipments."
 msgstr ""
+"Попередньо налаштовані маршрути Odoo доступні в меню складів. Щоб знайти "
+"його, перейдіть до Інвентар ‣ Конфігурація ‣ Склади. Там відкрийте свій "
+"склад і відредагуйте його, щоб побачити попередньо налаштовані маршрути для "
+"вхідних і вихідних відправлень."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:144
 msgid ""
@@ -4503,6 +4598,10 @@ msgid ""
 "you made your choice, head to :menuselection:`Inventory --> Configuration "
 "--> Routes` to see the routes Odoo generated for you."
 msgstr ""
+"Деякі більш просунуті маршрути, такі як pick-pack-ship, уже налаштовані, щоб"
+" полегшити ваше життя. Вони залежать від вашого вибору доставки. Зробивши "
+"вибір, перейдіть до Склад ‣ Конфігурація ‣ Маршрути, щоб побачити маршрути, "
+"створені Odoo для вас."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:153
 msgid ""
@@ -4510,6 +4609,9 @@ msgid ""
 "route. Here, all the selected product categories in the *YourCompany* "
 "warehouse are set up to follow the 3-steps route."
 msgstr ""
+"Відкриття одного з цих маршрутів дає змогу побачити, до чого можна "
+"застосувати маршрут. Тут усі вибрані категорії продуктів на складі "
+"*YourCompany* налаштовані на 3-кроковий маршрут."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:161
 msgid ""
@@ -4518,6 +4620,10 @@ msgid ""
 " source and destination location of each action. As an example, here are the"
 " rules for the pre-configured route."
 msgstr ""
+"Цей процес простіше для багатьох підприємств, але може не підійти вашому. "
+"Таким чином, ви можете налаштувати користувацькі маршрути, у яких ви можете "
+"визначити власні правила, а також джерело та місце призначення кожної дії. "
+"Як приклад, ось правила для попередньо налаштованого маршруту."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:171
 msgid "Custom Routes"
@@ -4529,12 +4635,17 @@ msgid ""
 "--> Routes`, click on create, and choose the places where this route can be "
 "selected. Of course, combinations are available."
 msgstr ""
+"Щоб створити власний маршрут, перейдіть до Склад ‣ Налаштування ‣ Маршрути, "
+"натисніть «Створити» та виберіть місця, де цей маршрут можна вибрати. "
+"Звичайно, можливі комбінації."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:182
 msgid ""
 "Each place has a different behavior, so it is important to tick only the "
 "useful ones and adapt each route accordingly."
 msgstr ""
+"Кожне місце має різну поведінку, тому важливо відзначати лише корисні та "
+"відповідно адаптувати кожен маршрут."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:185
 msgid ""
@@ -4544,6 +4655,10 @@ msgid ""
 "can be useful if you use the dropshipping process for all the products from "
 "the same category."
 msgstr ""
+"Під час застосування маршруту до категорії продукту (Склад ‣ Налаштування ‣ "
+"Категорії продуктів) усі правила, налаштовані в маршруті, застосовуються до "
+"кожного продукту категорії. Наприклад, це може бути корисно, якщо ви "
+"використовуєте процес дропшиппінгу для всіх продуктів однієї категорії."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:195
 msgid ""
@@ -4551,6 +4666,9 @@ msgid ""
 "the transfers occurring inside the chosen warehouse, and meeting the "
 "conditions of the linked rules, then follow that route."
 msgstr ""
+"Така ж поведінка стосується і складів. Якщо ви позначите Склади, усі "
+"переміщення, що відбуваються всередині вибраного складу та відповідають "
+"умовам пов’язаних правил, тоді слідуйте цим маршрутом."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:203
 msgid ""
@@ -4558,16 +4676,21 @@ msgid ""
 "choose the route yourself when creating a quotation. This is pretty useful "
 "if some products go through different routes."
 msgstr ""
+"Для рядків замовлення на продаж це працює інакше. Ви повинні вибрати маршрут"
+" самостійно під час створення пропозиції. Це дуже корисно, якщо деякі "
+"продукти проходять різними шляхами."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:211
 msgid ""
 "If you work with this kind of route, it is important to keep in mind that it"
 " must be selected on the sales order, such as below."
 msgstr ""
+"Якщо ви працюєте з таким типом маршруту, важливо мати на увазі, що його "
+"потрібно вибрати в замовленні на продаж, наприклад, як показано нижче."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:218
 msgid "Then, the route can be chosen on each line of the document."
-msgstr ""
+msgstr "В цьому випадку маршрут можна обрати в кожному рядку документа."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:224
 msgid ""
@@ -4575,6 +4698,10 @@ msgid ""
 "or less like the product categories: once selected, you have to manually set"
 " on which product it must be applied."
 msgstr ""
+"Врешті решт існують маршрути, які можуть бути застосовані до товарів. Це "
+"працює приблизно так, як і для категорій продуктів: після вибору ви маєте "
+"вручну встановити в кожному продукті, для якого марштут може бути "
+"застосований."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:232
 msgid ""
@@ -4582,6 +4709,9 @@ msgid ""
 "open the one on which you want to apply the route. Then go to the *Inventory"
 " tab* and select the route you’ve created."
 msgstr ""
+"Щоб зробити це, перейдіть по меню Склад --> Основні дані --> Товари і "
+"відкрийте один з тих товарів, до якого ви хочете застосувати маршрут. "
+"Перейдіть на вкладку \"Склад\" та оберіть створений маршрут."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:240
 msgid ""
@@ -4589,6 +4719,9 @@ msgid ""
 "forget that we haven’t set up any rule yet. If not harder to set up, those "
 "are vital to have working routings."
 msgstr ""
+"Якщо, на перший погляд, конфігурація маршрутів може здатися досить простою, "
+"не забувайте, що ми ще не встановили жодного правила. Життєво важливо "
+"налаштувати правила для того, щоб мати робочі маршрути."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:245
 msgid "Rules"
@@ -4600,6 +4733,9 @@ msgid ""
 ":menuselection:`Inventory --> Configuration --> Routes`, then to the *Rules*"
 " section, and click on *Add a line* button."
 msgstr ""
+"Правила повинні бути визначені на маршрутах. Для цього перейдіть до Склад ‣ "
+"Налаштування ‣ Маршрути, потім до розділу Правила та натисніть кнопку Додати"
+" рядок."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:255
 msgid ""
@@ -4607,6 +4743,8 @@ msgid ""
 "*Pull* rules, others are also available. Here are some explanations for all "
 "of them:"
 msgstr ""
+"Доступні правила запускають різні дії. Odoo пропонує правила *Push* і "
+"*Pull*, інші також доступні. Ось деякі пояснення для всіх них:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:259
 msgid ""
@@ -4616,6 +4754,11 @@ msgid ""
 " When the need appears in the destination location, Odoo generates a picking"
 " to fulfill this need."
 msgstr ""
+"**Pull From**: це правило спрацьовує через потребу в продукті в певному "
+"місці. Потреба може виникнути через перевірене замовлення на продаж або "
+"замовлення на виробництво, для якого потрібен певний компонент. Коли потреба"
+" з’являється в цільовому місці, Odoo генерує переміщення для задоволення "
+"цієї потреби."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:264
 msgid ""
@@ -4624,6 +4767,9 @@ msgid ""
 "location, Odoo generates a picking to move those products to the destination"
 " location."
 msgstr ""
+"**Push To**: це правило активується після надходження деяких продуктів у "
+"визначене вихідне місце. Якщо ви переміщуєте продукти до вихідного місця, "
+"Odoo генерує переміщення, щоб перемістити ці продукти до місця призначення."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:268
 msgid ""
@@ -4634,18 +4780,28 @@ msgid ""
 "to fulfill it. Once the second need is fulfilled, the products are pushed to"
 " the destination location and all the needs are fulfilled."
 msgstr ""
+"**Pull & Push**: це правило дозволяє генерувати відбір у двох ситуаціях, "
+"описаних вище. Це означає, що коли продукти потрібні в певному місці, для "
+"задоволення цієї потреби створюється переміщення з попереднього місця. Це "
+"створює потребу в попередньому місці, і для її виконання запускається "
+"правило. Після задоволення другої потреби продукти надсилаються до місця "
+"призначення, і всі потреби задовольняються."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:274
 msgid ""
 "**Buy**: when products are needed at the destination location, a request for"
 " quotation is created to fulfill the need."
 msgstr ""
+"**Купити**: коли товари потрібні в місці призначення, для задоволення "
+"потреби створюється запит на пропозицію."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:276
 msgid ""
 "**Manufacture**: when products are needed in the source location, a "
 "manufacturing order is created to fulfill the need."
 msgstr ""
+"**Виробництво**: коли продукти потрібні у вихідному місці, для задоволення "
+"потреб створюється замовлення на виробництво."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:283
 msgid ""
@@ -4653,12 +4809,17 @@ msgid ""
 "which kind of picking is created from the rule. With our above screenshot, "
 "the created picking is, for example, an internal transfer."
 msgstr ""
+"Ви також маєте визначити *тип операції*. Ця операція дозволяє визначити тип "
+"переміщення, створеного з правила. На знімку екрана вище створене "
+"переміщення є, наприклад, внутрішнім переміщенням."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:288
 msgid ""
 "On the other hand, the *Supply Method*, allows defining what happens at the "
 "source location:"
 msgstr ""
+"З іншого боку, *Метод поставки* дозволяє визначити, що відбудеться в "
+"місцезнаходженні джерела:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:291
 msgid ""
@@ -4711,6 +4872,9 @@ msgid ""
 "(internal transfers from WH/Stock to WH/Packing Zone) are created from "
 "WH/Stock to fulfill the need."
 msgstr ""
+"**Взяти зі складу**: коли продукти потрібні у WH/Зона пакування, *Picks* "
+"(внутрішнє переміщення між Складом і Зоною пакування) створюється для "
+"задоволення потреб."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:321
 msgid ""
@@ -4718,6 +4882,9 @@ msgid ""
 "(internal transfers from WH/Packing Zone to WH/Output) are created from "
 "WH/Packing Zone to fulfill the need."
 msgstr ""
+"**Запускає інше правило**: Коли продукти потрібні у WH/Зона виходу, *Packs* "
+"(внутрішнє переміщення між Зоною пакування і зоною виходу) створюється з "
+"зони пакування для задоволення потреб."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:324
 msgid ""
@@ -4725,6 +4892,8 @@ msgid ""
 "Locations/Customers, Delivery Orders are created from WH/Output to fulfill "
 "the need."
 msgstr ""
+"**Запускає інше правило**: Коли продукти потрібні у Місцезнаходженні "
+"покупця, Відправки створюється з зони Виходу для задоволення потреб."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use-routes.rst:332
 msgid ""
@@ -4812,7 +4981,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:23
 msgid ""
 "Let’s suppose there are one warehouse location *WH/Stock* and two sub-"
-"locations *WH/Stock/Vegatable* and *WH/Stock/Fruits*."
+"locations *WH/Stock/Vegetables* and *WH/Stock/Fruits*."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:25
@@ -6376,10 +6545,16 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:37
+msgid ""
+"The destination location should **not** be a scrap location. A scrap "
+"location is where you put products that you don't need."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:41
 msgid "Using the same BoM to describe Variants"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:43
 msgid ""
 "As suggested above, you can use *BOMs* for specific *Product Variants*. Once"
 " the various attributes have been configured on the product form, there are "
@@ -6387,7 +6562,7 @@ msgid ""
 "combination."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:43
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:47
 msgid ""
 "Either create one BoM per variant, by specifying the Product Variant in the "
 "dedicated field below the product name. Or use one BOM, that contains all of"
@@ -6395,48 +6570,48 @@ msgid ""
 "to, using the *Apply on Variants* column, as shown below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:53
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:57
 msgid "Adding Operations"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:55
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:59
 msgid ""
 "You can also add operations to your *BoM*, if you want workers to follow "
 "instructions or register time spent. To use this feature, enable the *Work "
 "Orders* feature in the *Manufacturing* app settings, as shown below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:63
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:67
 msgid ""
 "Each operation is unique as it is always linked to only one BOM. This being "
 "said, Operations Operations can be re-used when configuring a new BOM, with "
 "the *Copy Existing Operations* feature."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:70
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:74
 msgid ""
 "Finally, just like for components, operations can also be variant specific "
 "only, as shown below."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:78
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:82
 msgid "Adding By-Products"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:80
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:84
 msgid ""
 "A *by-product* is a product that is produced on top of the main product of a"
 " *BoM*. As opposed to the primary product, there can be more than one on a "
 "BOM."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:83
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:87
 msgid ""
 "To add *by-products* to a *BoM*, you will first need to enable the by-"
 "product feature from the *Manufacturing* app settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:89
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/bill_configuration.rst:93
 msgid ""
 "Once the feature is enabled, you can add *by-products* to your *BoMs*. Note "
 "that if you have Operations, you'll need to specify in which operation the "
@@ -7917,6 +8092,12 @@ msgid ""
 "for other apps such as inventory). Then, select the *Purchase Unit of "
 "Measure* to be used for purchases."
 msgstr ""
+"Для того, щоб визначити різні одиниці вимірюванння для продаж і закупівель, "
+"відкрийте додаток Купівлі і перейдіть по меню \"Товари -->Товари\". Створіть"
+" товар або оберіть існуючий. В вкладці \"Основна інформація\" спочатку "
+"оберіть  Одиницю виміру, яка маж бути викорастана в продажах (як і в інших "
+"додатках, таких як Склад). Після того оберіть Одиницю вимірювання "
+"Закупівель. "
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/uom.rst:47
 msgid ""
