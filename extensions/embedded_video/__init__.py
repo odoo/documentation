@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 """
     ReST directive for embedding Youtube and Vimeo videos.
     There are two directives added: ``youtube`` and ``vimeo``. The only
@@ -13,7 +12,6 @@
     :copyright: (c) 2012 by Danilo Bargen.
     :license: BSD 3-clause
 """
-from __future__ import absolute_import
 from docutils import nodes
 from docutils.parsers.rst import Directive, directives
 
