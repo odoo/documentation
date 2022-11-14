@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 from docutils import nodes
 from sphinx.locale import admonitionlabels
 from sphinx.writers.html5 import HTML5Translator
@@ -77,16 +75,16 @@ class BootstrapTranslator(HTML5Translator):
 
     def encode(self, text):
         return str(text).translate({
-            ord('&'): u'&amp;',
-            ord('<'): u'&lt;',
-            ord('"'): u'&quot;',
-            ord('>'): u'&gt;',
-            0xa0: u'&nbsp;'
+            ord('&'): '&amp;',
+            ord('<'): '&lt;',
+            ord('"'): '&quot;',
+            ord('>'): '&gt;',
+            0xa0: '&nbsp;'
         })
 
     def unknown_visit(self, node):
         print("unknown node", node.__class__.__name__)
-        self.body.append(u'[UNKNOWN NODE {}]'.format(node.__class__.__name__))
+        self.body.append(f'[UNKNOWN NODE {node.__class__.__name__}]')
         raise nodes.SkipNode
 
     # NOTE: seems that when we remove/comment this, we get the titles 5 times in the global toc
@@ -100,7 +98,7 @@ class BootstrapTranslator(HTML5Translator):
         # close "parent" or preceding section, unless this is the opening of
         # the first section
         if self.section_level:
-            self.body.append(u'</section>')
+            self.body.append('</section>')
         self.section_level += 1
 
         self.body.append(self.starttag(node, 'section'))
@@ -108,7 +106,7 @@ class BootstrapTranslator(HTML5Translator):
         self.section_level -= 1
         # close last section of document
         if not self.section_level:
-            self.body.append(u'</section>')
+            self.body.append('</section>')
 
     # overwritten
     # Class mapping:
@@ -135,7 +133,7 @@ class BootstrapTranslator(HTML5Translator):
 
     def depart_title(self, node):
         if isinstance(node.parent, nodes.Admonition):
-            self.body.append(u"</p>")
+            self.body.append("</p>")
         else:
             super().depart_title(node)
 
@@ -148,7 +146,7 @@ class BootstrapTranslator(HTML5Translator):
         # c/p of https://github.com/pydata/pydata-sphinx-theme/pull/509/files
         self._table_row_indices.append(0)
 
-        classes = [cls.strip(u' \t\n')
+        classes = [cls.strip(' \t\n')
                    for cls in self.settings.table_style.split(',')]
         classes.insert(0, "docutils")  # compat
         classes.insert(0, "table")  # compat
