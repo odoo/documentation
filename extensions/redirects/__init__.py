@@ -1,6 +1,5 @@
 # Adapted from https://github.com/sphinx-contrib/redirects
 
-import os
 import re
 from pathlib import Path
 
@@ -23,7 +22,7 @@ def generate_redirects(app):
         return
 
     source_suffix = next(iter(app.config.source_suffix))
-    escaped_source_suffix = source_suffix.replace('.', '\.')
+    escaped_source_suffix = source_suffix.replace('.', r'\.')
     pattern = re.compile(
         r'^[ \t]*([\w\-/]+{0})[ \t]+([\w\-/]+{0})[ \t]*(?:#.*)?$'.format(escaped_source_suffix)
     )
