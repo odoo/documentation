@@ -484,7 +484,7 @@ A notification for when a sale deal is made with a button to go some kind of com
 
   // in setup
   this.notificationService = useService("notification");
-  this.actionService = useService("actionService");
+  this.actionService = useService("action");
 
   // later
   this.notificationService.add("You closed a deal!", {
