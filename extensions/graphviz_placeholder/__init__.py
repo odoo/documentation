@@ -1,5 +1,5 @@
-from docutils.parsers.rst import Directive, directives
 from docutils import nodes
+from docutils.parsers.rst import Directive, directives
 
 
 class PlaceHolder(Directive):
