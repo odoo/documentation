@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 from pygments.style import Style
 from pygments.token import Keyword, Name, Comment, String, Error, \
     Number, Other, Whitespace, Generic
@@ -40,8 +39,9 @@ class OdooStyle(Style):
         Error: 'bg:#ffe2e2 #a61717'
     }
 
-import types
 import sys
+import types
+
 modname = 'pygments.styles.odoo'
 m = types.ModuleType(modname)
 m.OdooStyle = OdooStyle
