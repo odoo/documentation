@@ -1,5 +1,3 @@
-# -*- coding: utf-8 -*-
-
 """
 Defines a "raw HTML" domain with a ``div[classes]`` and a number of roles
 rendered more or less directly to HTML.
@@ -13,12 +11,11 @@ for directives likes .. h:div::
 TO REMOVE AS SOON AS WE DROP MEMENTOES
 """
 
+import sphinx
+import sphinx.roles
 from docutils import nodes, utils
 from docutils.parsers.rst import Directive, directives
 from docutils.parsers.rst.directives.body import LineBlock
-
-import sphinx
-import sphinx.roles
 from sphinx.domains import Domain
 
 
@@ -78,7 +75,7 @@ class address(nodes.General, nodes.Element):
 
 class Address(LineBlock):
     def run(self):
-        [node] = super(Address, self).run()
+        [node] = super().run()
         ad = address(node.rawsource, *node.children)
         return [ad]
 

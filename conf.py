@@ -1,14 +1,14 @@
-import re
 import os
+import re
 import shutil
 import sys
 from pathlib import Path
 
 import docutils
+import sphinx
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.ext import graphviz
 from sphinx.util import logging
-import sphinx
 
 _logger = logging.getLogger(__name__)
 
@@ -279,7 +279,7 @@ latex_documents = [
     ('legal/terms/i18n/partnership_tex_fr',
      'odoo_partnership_agreement_fr.tex', 'Odoo Partnership Agreement (FR)', '', 'howto'),
     ('legal/terms/i18n/terms_of_sale_fr', 'terms_of_sale_fr.tex',
-     u'Conditions Générales de Vente Odoo', '', 'howto'),
+     'Conditions Générales de Vente Odoo', '', 'howto'),
 
     ('legal/terms/i18n/enterprise_tex_nl', 'odoo_enterprise_agreement_nl.tex',
      'Odoo Enterprise Subscription Agreement (NL)', '', 'howto'),

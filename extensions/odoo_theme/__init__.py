@@ -25,7 +25,7 @@ def set_missing_meta(app, pagename, templatename, context, doctree):
     if context.get('meta') is None:  # Pages without title (used with `include::`) have no meta
         context['meta'] = {}
 
-class Monkey(object):
+class Monkey:
     """ Replace patched method of an object by a new method receiving the old one in argument. """
     def __init__(self, obj):
         self.obj = obj
