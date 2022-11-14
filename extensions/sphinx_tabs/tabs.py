@@ -5,18 +5,16 @@ Salvaged from https://github.com/executablebooks/sphinx-tabs
 """
 
 import base64
-from pathlib import Path
 from functools import partial
+from pathlib import Path
+
 import sphinx
-
-
 from docutils import nodes
 from docutils.parsers.rst import directives
 from pygments.lexers import get_all_lexers
+from sphinx.directives.code import CodeBlock
 from sphinx.highlighting import lexer_classes
 from sphinx.util.docutils import SphinxDirective
-from sphinx.directives.code import CodeBlock
-
 
 FILES = [
     "tabs.js",
