@@ -3,11 +3,10 @@ from typing import Sequence
 
 from docutils.parsers.rst import directives
 from docutils.parsers.rst.states import RSTState
-from sphinx.domains.python import PyClasslike, PyAttribute
+from sphinx.domains.python import PyAttribute, PyClasslike
 from sphinx.ext.autodoc import AttributeDocumenter, ClassDocumenter
 
 import odoo
-
 
 nested_parse = RSTState.nested_parse
 def patched_nested_parse(self, block, input_offset, node, match_titles=False,
