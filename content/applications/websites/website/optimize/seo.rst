@@ -621,7 +621,7 @@ robots.txt
 ----------
 
 When indexing your website, search engines take a first look at the
-general indexing rules of the a``/robots.txt`` file (allowed robots,
+general indexing rules of the ``/robots.txt`` file (allowed robots,
 sitemap path, etc.). Odoo automatically creates it. Its content is:
 
 User-agent: \*
