@@ -29,4 +29,3 @@ We advise that:
 - Your scheduled actions should be
   `idempotent <https://stackoverflow.com/a/1077421/3332416>`_: they must not
   cause side-effects if they are started more often than expected.
-

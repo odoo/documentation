@@ -670,4 +670,3 @@ een geldige bepaling met dezelfde effecten en doelstellingen.
 .. only:: html
 
     Zie :ref:`odoo_enterprise_license`.
-

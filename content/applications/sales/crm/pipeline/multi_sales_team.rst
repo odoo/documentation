@@ -61,5 +61,3 @@ access its configuration page.
    :alt: Three Dot Menu
 
 Click on the **Pipeline** button to go directly to that team's CRM pipeline.
-
-
