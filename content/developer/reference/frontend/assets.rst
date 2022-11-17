@@ -53,10 +53,10 @@ Bundles
 =======
 
 Odoo assets are grouped by *bundles*. Each bundle (a *list of file paths*
-of specific types: `xml`, `js`, `css` or `scss`) is listed in the 
+of specific types: `xml`, `js`, `css` or `scss`) is listed in the
 :ref:`module manifest <reference/module/manifest>`. Files can be declared using
 `glob <https://en.wikipedia.org/wiki/Glob_(programming)>`_ syntax, meaning that
-you can declare several asset files using a single line. 
+you can declare several asset files using a single line.
 
 The bundles are defined in each module's :file:`__manifest__.py`,
 with a dedicated `assets` key which contains a dictionary. The dictionary maps

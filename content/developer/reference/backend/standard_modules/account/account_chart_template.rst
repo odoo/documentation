@@ -43,7 +43,7 @@ Chart Template
 
 
 .. automodel:: odoo.addons.l10n_multilang.models.account.AccountChartTemplate
-    
+
     Multi language support for Chart of Accounts, Taxes, Tax Codes, Journals,
     Accounting Templates, Analytic Chart of Accounts and Analytic Journals.
 

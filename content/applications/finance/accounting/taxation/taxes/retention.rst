@@ -40,8 +40,8 @@ Once the tax is defined, you can use it in your products, sales order or
 invoices.
 
 .. tip::
-    If the retention is a percentage of a regular tax, create a Tax with a 
-    **Tax Computation** as a **Tax Group** and set the two taxes in this group 
+    If the retention is a percentage of a regular tax, create a Tax with a
+    **Tax Computation** as a **Tax Group** and set the two taxes in this group
     (normal tax and retention).
 
 Applying retention taxes on invoices
@@ -55,9 +55,9 @@ invoice line.
    :align: center
 
 .. note::
-    When you see the customer invoice on the screen, you get only a 
-    **Taxes line** summarizing all the taxes (normal taxes & retentions). 
-    But when you print or send the invoice, Odoo does the correct 
+    When you see the customer invoice on the screen, you get only a
+    **Taxes line** summarizing all the taxes (normal taxes & retentions).
+    But when you print or send the invoice, Odoo does the correct
     grouping amongst all the taxes.
 
 The printed invoice will show the different amounts in each tax group.
