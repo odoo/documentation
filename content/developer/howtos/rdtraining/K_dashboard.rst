@@ -37,7 +37,7 @@ File Structure
 You probably have already guessed that since dashboard views are an Enterprise view, they must have
 a dependency on an Enterprise module. The Enterprise module is ``web_dashboard``. Don't forget to
 add it to your manifest file! It is standard to add dashboards intended to be used as a
-``view_mode`` for one of your module's models (in the ``model`` folder``) to the views directory
+``view_mode`` for one of your module's models (in the ``model`` folder) to the views directory
 (i.e. the same file that contains the other views for the same model).
 
 It is standard to create a separate Enterprise module to add extra Enterprise views and features to
