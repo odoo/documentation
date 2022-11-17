@@ -52,4 +52,3 @@ To publish optional products:
 
 .. note::
     The quantity of optional items added to cart is the same than the main item.
-

@@ -155,4 +155,3 @@ purchase lines booked in the accounts and will display them in the
    is 1200 for 12 months (january to december), and today is 31 of january, the
    theoretical amount will be 100, since this is the actual amount that could
    have been realised.
-

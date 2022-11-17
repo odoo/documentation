@@ -136,4 +136,3 @@ Administrator* or managers.
 
 .. seealso::
    - :doc:`../concepts/understanding_general`
-
