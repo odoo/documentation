@@ -31,6 +31,7 @@ Terms and Conditions
      - Nederlands
      - Deutsch
      - Español
+     - Indonesian
    * - Odoo Enterprise Agreement [#]_
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Enterprise Agreement
@@ -57,6 +58,12 @@ Terms and Conditions
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Enterprise Agreement (ES)
           :target: odoo_enterprise_agreement_es.pdf
+     - .. image:: legal/img/txt.svg
+          :alt: View Odoo Enterprise Agreement (ID)
+          :target: legal/terms/i18n/enterprise_id.html
+       .. image:: legal/img/pdf.svg
+          :alt: Download Odoo Enterprise Agreement (ID)
+          :target: odoo_enterprise_agreement_id.pdf
    * - Odoo Partnership Agreement
      - .. image:: legal/img/txt.svg
           :alt: View Odoo Partnership Agreement
@@ -73,6 +80,7 @@ Terms and Conditions
      - |missing_txt| |missing_pdf|
      - |missing_txt| |missing_pdf|
      - |missing_txt| |missing_pdf|
+     - |missing_txt| |missing_pdf|
    * - Terms of Sale
      - .. image:: legal/img/txt.svg
           :alt: View Terms of Sale
@@ -86,6 +94,7 @@ Terms and Conditions
        .. image:: legal/img/pdf.svg
           :alt: Download Odoo Terms of Sale (FR)
           :target: terms_of_sale_fr.pdf
+     -
      -
      -
      -
