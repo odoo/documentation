@@ -356,6 +356,78 @@ To populate a given model, the following methods and attributes can be defined.
 
                return records
 
+Create a serve profile service
+------------------------------
+
+When working locally, it can be convenient to have multiple profiling in the same place even if
+they come from different database. It also allows to access ir.profile without enabling profiling
+on the database each time.
+
+We can create a small odoo service.
+
+This is an example on how to do that
+
+To avoid having hudge sources directory, we can do a shallow clone.
+
+.. code-block:: bash
+
+   cd
+   mkdir services
+   cd services
+   git clone --depth=1 --branch=16.0 git@github.com:odoo/odoo.git
+   git clone --depth=1 --branch=16.0 git@github.com:odoo/enterprise.git #optionnal
+
+
+Then create a simple database to collect all profilers
+
+.. code-block:: bash
+
+   odoo/odoo-bin --addons-path odoo/addons,enterprise -d profiling -u base --without-demo=1 --stop-after-init
+
+
+edit profiling.
+
+.. code-block:: bash
+
+   #!/bin/bash
+   odoo/odoo-bin --addons-path odoo/addons,enterprise -d profiling --http-port 9100
+
+make it executable
+
+.. code-block:: bash
+
+   chmod +x profiling.sh
+
+
+And create a service for it
+
+edit /etc/systemd/system/profiling.service
+
+.. code-block:: ini
+
+   [Unit]
+   Description=Profiling service
+
+   [Service]
+   PassEnvironment=LANG
+   Type=simple
+   User=<user>
+   WorkingDirectory=/home/<user>/services
+   ExecStart=/home/<user>/services/profiling.sh
+   KillMode=process
+   Restart=on-failure
+
+   [Install]
+   WantedBy=multi-user.target
+
+
+If you want to automatically have profile save to this database, toy can also edit your .bashrc
+
+.. code-block:: bash
+
+   export ODOO_PROFILER_DATABASE=profiling
+
+
 Population tools
 ----------------
 
