@@ -46,7 +46,7 @@ You can easily moderate by using the chatter, either in the product detail form
 or on the web page.
 
 To unpublish the post, open the product web page and click the *Published* button
-to turn it red (*Unpublished*). 
+to turn it red (*Unpublished*).
 
 .. image:: reviews/comment_unpublish.png
    :align: center

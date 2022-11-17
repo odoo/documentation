@@ -26,7 +26,7 @@ Before starting, make sure you have the following:
    The list of supported hardware can be found on the `POS Hardware
    page <https://www.odoo.com/page/point-of-sale-hardware>`__
 
-Set Up 
+Set Up
 ~~~~~~~
 
 To connect hardware to the PoS, the first step is to connect an IoT Box

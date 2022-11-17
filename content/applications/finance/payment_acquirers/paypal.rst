@@ -111,7 +111,7 @@ Your Paypal account is ready!
 .. tip::
    If you want your customers to pay without creating a Paypal account,
    *Paypal Account Optional* needs to be turned on.
-    
+
    .. image:: paypal/paypal_account_optional.png
 
 .. tip::
@@ -168,7 +168,7 @@ Your configuration is ready to roll. Make sure *Production* mode is
 on. Then publish the payment method by clicking the *Published* button right next to it.
 
 .. image:: paypal/paypal11.png
-    :align: center 
+    :align: center
 
 .. image:: paypal/paypal12.png
     :align: Center

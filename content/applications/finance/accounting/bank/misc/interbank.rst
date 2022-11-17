@@ -63,7 +63,7 @@ Log an internal transfer
 
 The first step is to register the internal payment. To do so go into
 your accounting dashboard, click on the **more** button of one of your banks
-and select :menuselection:`New --> Internal transfer`. 
+and select :menuselection:`New --> Internal transfer`.
 
 .. image:: interbank/interbank01.png
    :align: center
@@ -117,7 +117,7 @@ The following window will open:
    :align: center
 
 You need to choose counterparts for the payment. Select the correct
-bank statement line corresponding to the payment and click on the 
+bank statement line corresponding to the payment and click on the
 **reconcile** button. Close the statement to finish the transaction
 
 .. image:: interbank/interbank08.png

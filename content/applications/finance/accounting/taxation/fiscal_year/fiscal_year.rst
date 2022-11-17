@@ -29,6 +29,6 @@ You can then configure your fiscal years in
     You only have to create fiscal years if they last more or less
     than 12 months.
 
-.. seealso:: 
+.. seealso::
 
     * :doc:`close_fiscal_year`

@@ -9,7 +9,7 @@ delivery strategies.
 Terminology
 ===========
 
-Minimum stock rule 
+Minimum stock rule
 -------------------
 
 Minimum Stock rules are used to ensure that you always have the minimum
@@ -54,7 +54,7 @@ the "Inventory submenu", do not forget to select a supplier.
     Don't forget to select the right product type. A consumable
     can not be stocked and will thus not be accounted for in the stock valuation.
 
-Make to Order 
+Make to Order
 --------------
 
 The Make to Order configuration is available on your product form

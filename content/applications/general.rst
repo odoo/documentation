@@ -13,4 +13,3 @@ Miscellaneous
     general/calendars
     general/in_app_purchase
     general/developer_mode
-    

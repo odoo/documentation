@@ -12,7 +12,7 @@ receive the payment the 2nd quarter of your fiscal year. Based on the
 cash basis method, the tax you have to pay to the administration is due
 for the 2nd quarter.
 
-How to configure cash basis taxes ? 
+How to configure cash basis taxes ?
 ------------------------------------
 
 You first have to activate the setting in
@@ -41,7 +41,7 @@ to post the base tax amount for an accurate tax report.
 .. image:: cash_basis_taxes/cash_basis_taxes03.png
     :align: center
 
-What is the impact of cash basis taxes in my accounting ? 
+What is the impact of cash basis taxes in my accounting ?
 ----------------------------------------------------------
 
 Let’s take an example. You make a sale of $100 with a 15% cash basis
@@ -89,7 +89,7 @@ When you reconcile the invoice and the payment, this entry is generated:
 +--------------------------+----------------------------+
 
 .. tip::
-    The last two journal items are neutral but they are needed to insure 
+    The last two journal items are neutral but they are needed to insure
     correct tax reports in Odoo with accurate base tax amounts.
     We advise to use a default revenue account.
     The balance of this account will then always be at zero.

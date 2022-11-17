@@ -3,7 +3,7 @@ How to sell accessories and optional products (cross-selling)
 =============================================================
 
 You sell computers. Why not stimulating your customers to buy a top-notch
-screen or an extra-warranty? That's the goal of cross-selling functionalities: 
+screen or an extra-warranty? That's the goal of cross-selling functionalities:
 
 * Accessory products on checkout page,
 * Optional products on a new *Add to Cart* screen (not installed by default).

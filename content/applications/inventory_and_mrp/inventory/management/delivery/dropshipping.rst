@@ -18,12 +18,12 @@ warehouse.
 Points to be Considered while Implementing Drop-Shipping
 ========================================================
 
--  Use drop-shipping only for the products you can't or don't want to keep in stock. 
+-  Use drop-shipping only for the products you can't or don't want to keep in stock.
         One reason is that you'll always make smaller
         margins on items that are drop-shipped, so you should keep it
         only for items that take up a lot of space in your warehouse.
 
--  Drop-shipping is best for niche products. 
+-  Drop-shipping is best for niche products.
        Chances are that products that are in high demand are being offered by large suppliers at a
        fraction of the price you'll be able to charge, so using a more
        costly shipping method won't be financially rewarding. But if
@@ -32,11 +32,11 @@ Points to be Considered while Implementing Drop-Shipping
 -  To protect your customers from bad experiences.
        Test drop-shipping companies for yourself beforehand and list the best ones.
 
--  Make sure time is not against you. 
+-  Make sure time is not against you.
        Drop-shipping should take a reasonable amount of time and surely not more than it would have taken you to handle it all by yourself. It's also nice to be able
        to provide your customers with a tracking number.
 
--  Items have to be available from your supplier. 
+-  Items have to be available from your supplier.
        It's good to know if
        the product you're selling is available upstream. If you don't
        have that information, inform your customers that you don't hold

@@ -18,7 +18,7 @@ Configuration
 Enable multi-currencies
 -----------------------
 
-In the accounting module, Go to :menuselection:`Configuration --> Settings` 
+In the accounting module, Go to :menuselection:`Configuration --> Settings`
 and flag **Allow multi currencies**, then click on **apply**.
 
 .. image:: exchange/exchange_rate03.png
@@ -36,9 +36,9 @@ in **Dollars**.
 .. image:: exchange/exchange_rate08.png
    :align: center
 
-.. tip:: 
+.. tip::
     You can automatically fetch the currency rates from the **European
-    Central Bank** or from **Yahoo**. Please read the document : 
+    Central Bank** or from **Yahoo**. Please read the document :
     :doc:`how_it_works`.
 
 Configure your journal
@@ -61,7 +61,7 @@ that you can register payments only in this currency.
 Record a payment in a different currency
 ========================================
 
-In the **Accounting** application, go to :menuselection:`Sales --> Payments`. 
+In the **Accounting** application, go to :menuselection:`Sales --> Payments`.
 Register the payment and indicate that it was done in the foreign currency. Then
 click on **confirm**.
 
@@ -80,7 +80,7 @@ Record a bank statement in a different currency
 ===============================================
 
 Create or import the bank statement of your payment. The **Amount** is in
-the company currency. There are two complementary fields, the **Amount currency**, 
+the company currency. There are two complementary fields, the **Amount currency**,
 which is the amount that was actually paid and the **Currency** in which it was paid.
 
 .. image:: exchange/exchange_rate07.png
