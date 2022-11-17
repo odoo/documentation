@@ -173,7 +173,7 @@ variables for various data points:
     index
 
 These extra variables provided and all new variables created into the
-``foreach`` are only available in the scope of the``foreach``. If the
+``foreach`` are only available in the scope of the ``foreach``. If the
 variable exists outside the context of the ``foreach``, the value is copied
 at the end of the foreach into the global context.
 
