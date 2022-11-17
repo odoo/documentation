@@ -49,5 +49,3 @@ will be paid and confirmed, a delivery order will be created automatically by Od
 
 .. seealso::
    - :doc:`quote_template`
-
-

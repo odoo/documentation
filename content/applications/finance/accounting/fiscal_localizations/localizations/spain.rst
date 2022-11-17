@@ -28,4 +28,3 @@ If the Spanish Accounting Localization is installed, you will have access to acc
 - Tax Report (Modelo 111)
 - Tax Report (Modelo 115)
 - Tax Report (Modelo 303) 
-
