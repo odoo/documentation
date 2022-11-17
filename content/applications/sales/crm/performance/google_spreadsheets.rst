@@ -89,7 +89,3 @@ Other uses
 ----------
 
 Mix Odoo data with spreadsheet data, add traditional formulas, and create Dynamic Tabled and Graphs.
-
-
-
-

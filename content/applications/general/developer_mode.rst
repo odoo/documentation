@@ -78,4 +78,3 @@ It contains some useful menu items such as:
 .. image:: developer_mode/button_location.png
    :align: center
    :alt: Overview of a console page and the debug icon being shown in Odoo
-

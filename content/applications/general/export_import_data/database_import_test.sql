@@ -152,4 +152,3 @@ ALTER TABLE ONLY persons
 --
 -- PostgreSQL database dump complete
 --
-

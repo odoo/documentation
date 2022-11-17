@@ -623,4 +623,3 @@ die die gleichen Auswirkungen und Ziele hat.
 .. only:: html
 
     Siehe :ref:`odoo_enterprise_license`.
-
