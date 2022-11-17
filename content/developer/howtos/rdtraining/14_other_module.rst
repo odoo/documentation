@@ -136,7 +136,7 @@ to link a line to an invoice is to include all lines at invoice creation. To do 
 :class:`~odoo.fields.One2many`. One2many and Many2many use special 'commands' described in
 :ref:`reference/orm/models/crud`. This format is a list of triplets executed sequentially, where
 each triplet is a command to execute on the set of records. Here is a simple example to include
-a One2many field ``line_ids`` at creation of a ``test.model``:: 
+a One2many field ``line_ids`` at creation of a ``test.model``::
 
     def inherited_action(self):
         self.env["test.model"].create(

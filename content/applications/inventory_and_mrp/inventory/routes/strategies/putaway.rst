@@ -18,7 +18,7 @@ In the *Inventory* app, go to :menuselection:`Configuration --> Settings` and ac
 Setting up a Putaway Rule
 ==========================
 
-In some cases, like for a retail shop storing vegetables and fruits, we have to store products in different locations to maintain product quality. 
+In some cases, like for a retail shop storing vegetables and fruits, we have to store products in different locations to maintain product quality.
 
 Let’s suppose there are one warehouse location *WH/Stock* and two sub-locations *WH/Stock/Vegetables* and *WH/Stock/Fruits*.
 

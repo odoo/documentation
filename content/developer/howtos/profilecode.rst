@@ -33,9 +33,9 @@ A tool called *gprof2dot* will produce a graph with this result:
 A tool called *xdot* will display the resulting graph:
 
 .. code:: bash
-    
+
     xdot /temp/prof.xdot
-    
+
 Log a method
 ============
 

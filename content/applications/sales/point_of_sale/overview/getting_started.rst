@@ -6,7 +6,7 @@ When working with a Point of Sale application, employees want a
 simple, and user-friendly solution. A solution that works online or
 offline and with any device.
 
-A Point of Sale system is a fully integrated application that allows any transaction, 
+A Point of Sale system is a fully integrated application that allows any transaction,
 automatically registers product moves in your stock, and gives you
 real-time statistics and consolidations across all shops.
 
@@ -84,10 +84,10 @@ payment.
 Return and refund products
 --------------------------
 
-Having a well-thought-out return policy is key to keep customers satisfied and make the process 
+Having a well-thought-out return policy is key to keep customers satisfied and make the process
 of accepting returns and refunds easy for you.
 
-To do that, from the PoS interface, select the product and quantity (with the +/- button) that the 
+To do that, from the PoS interface, select the product and quantity (with the +/- button) that the
 customer wants to return. For multiple products, repeat the process individually.
 
 .. image:: getting_started/getting_started_06.png
@@ -104,7 +104,7 @@ process the payment and validate it.
 Close the PoS session
 ---------------------
 
-To close your session at the end of the day, click on the close button on the upper right corner 
+To close your session at the end of the day, click on the close button on the upper right corner
 of your screen and confirm. Now, close the session on the dashboard view.
 
 .. image:: getting_started/getting_started_08.png
@@ -114,8 +114,8 @@ of your screen and confirm. Now, close the session on the dashboard view.
 .. tip::
    It’s strongly advised to close your PoS session at the end of each day.
 
-Once a session is closed, you can see a summary of all transactions per payment method. 
-Then, click on a line to see all orders that were paid during your PoS session. 
+Once a session is closed, you can see a summary of all transactions per payment method.
+Then, click on a line to see all orders that were paid during your PoS session.
 If everything is correct, validate the session and post the closing entries.
 
 .. image:: getting_started/getting_started_09.png

@@ -80,12 +80,12 @@ FAQ
 I have an error when I try to delete my synchronization within Odoo
 -------------------------------------------------------------------
 
-Odoo can't permanently delete the connection you have created with the banking institution. However, 
-it can revoke the consent you gave so that Odoo won't be able to access your account anymore. The 
-error you are seeing is probably a message telling you that the consent was revoked, but the record 
-could not be deleted as it still exists within Salt edge. If you want to remove the connection 
-completely, please connect to your `Salt Edge account <https://www.saltedge.com/dashboard>`_ 
-and manually delete your synchronization. Once this is done, you can go back to Odoo to delete the 
+Odoo can't permanently delete the connection you have created with the banking institution. However,
+it can revoke the consent you gave so that Odoo won't be able to access your account anymore. The
+error you are seeing is probably a message telling you that the consent was revoked, but the record
+could not be deleted as it still exists within Salt edge. If you want to remove the connection
+completely, please connect to your `Salt Edge account <https://www.saltedge.com/dashboard>`_
+and manually delete your synchronization. Once this is done, you can go back to Odoo to delete the
 record.
 
 I have an error saying that I have already synchronized this account

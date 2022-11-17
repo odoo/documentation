@@ -19,14 +19,14 @@ Choose your pricing strategy from :menuselection:`Sales --> Settings`.
     * *Different prices per customer segment :* you will set several prices per products ;
     * *Advanced pricing based on formula :* will let you apply discounts, margins and roundings.
 
-Several prices per product 
+Several prices per product
 ==========================
 
 To apply several prices per product, select *Different prices per customer
 segment* in :menuselection:`Sales --> Settings`. Then open the *Sales* tab
 in the product detail form. You can settle following strategies.
 
-Prices per customer segment 
+Prices per customer segment
 ---------------------------
 
 Create pricelists for your customer segments: e.g. registered, premium, etc.
@@ -88,10 +88,10 @@ Each pricelist item can be associated to either all products, to a product inter
 
 .. note::
 
-    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item. 
+    * Once again the system is smart. If a rule is set for a particular item and another one for its category, Odoo will take the rule of the item.
 
     * Make sure at least one pricelist item covers all your products.
-  
+
 There are 3 modes of computation: fix price, discount & formula.
 
 .. image:: pricing/price_computation.png
@@ -122,7 +122,7 @@ Any new customer recorded in Odoo gets a default pricelist, i.e. the first one i
 
 The default pricelist can be replaced when creating a sales order.
 
-.. tip:: You can change the pricelists sequence by drag & drop in list view. 
+.. tip:: You can change the pricelists sequence by drag & drop in list view.
 
 Compute and show discount % to customers
 ========================================

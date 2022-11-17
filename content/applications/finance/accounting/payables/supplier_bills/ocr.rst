@@ -7,7 +7,7 @@ them and automatically import the data into your database reduces errors and sav
 
 .. important::
    `Try it out <https://www.odoo.com/app/invoice-automation>`_! Upload one of your Bills or try one of our samples.
-   
+
 Set up the feature
 ==================
 

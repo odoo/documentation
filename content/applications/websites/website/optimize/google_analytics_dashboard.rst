@@ -20,14 +20,14 @@ How to track your website traffic from your Odoo Dashboard
   dashboard on external website until the official end of support `around mid
   2023 <https://developers.googleblog.com/2022/03/gis-jsweb-authz-migration.html>`_.
 
-You can follow your traffic statistics straight from your Odoo Website 
+You can follow your traffic statistics straight from your Odoo Website
 Dashboard thanks to Google Analytics.
 
-- A preliminary step is creating a Google Analytics account and entering the 
+- A preliminary step is creating a Google Analytics account and entering the
   tracking ID in your Website's settings (see :doc:`google_analytics`).
 
-- Go to `Google APIs platform <https://console.developers.google.com>`__ 
-  to generate Analytics API credentials. Log in with your Google account. 
+- Go to `Google APIs platform <https://console.developers.google.com>`__
+  to generate Analytics API credentials. Log in with your Google account.
 
 - Select Analytics API.
 
@@ -50,25 +50,25 @@ Dashboard thanks to Google Analytics.
 .. image:: google_analytics_dashboard/google_analytics_create_credentials.png
     :align: center
 
-- Select *Web browser (Javascript)* 
+- Select *Web browser (Javascript)*
   as calling source and *User data* as kind of data.
 
 .. image:: google_analytics_dashboard/google_analytics_get_credentials.png
     :align: center
 
 - Then you can create a Client ID.
-  Enter the name of the application (e.g. Odoo) and the allowed pages on 
-  which you will be redirected. The *Authorized JavaScript origin* is your 
-  Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance 
+  Enter the name of the application (e.g. Odoo) and the allowed pages on
+  which you will be redirected. The *Authorized JavaScript origin* is your
+  Odoo's instance URL. The *Authorized redirect URI* is your Odoo's instance
   URL followed by '/google_account/authentication'.
 
 .. image:: google_analytics_dashboard/google_analytics_authorization.png
     :align: center
 
 
-- Go through the Consent Screen step by entering a product name 
-  (e.g. Google Analytics in Odoo). Feel free to check the customizations options 
-  but this is not mandatory. The Consent Screen will only show up when you enter 
+- Go through the Consent Screen step by entering a product name
+  (e.g. Google Analytics in Odoo). Feel free to check the customizations options
+  but this is not mandatory. The Consent Screen will only show up when you enter
   the Client ID in Odoo for the first time.
 
 - Finally you are provided with your Client ID. Copy and paste it in Odoo.

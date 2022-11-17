@@ -40,8 +40,8 @@ can decide to separate the quantity into two different packages. It then
 allows you to have a report with the quantity of products for each
 package.
 
-To separate a delivery into different packages you will have to set the 
-done quantity to the desired package quantity then click on "PUT IN 
+To separate a delivery into different packages you will have to set the
+done quantity to the desired package quantity then click on "PUT IN
 PACK", do this for each package.
 
 .. image:: usage/usage_05.png
