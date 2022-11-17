@@ -36,7 +36,7 @@ File Structure
 You probably have already guessed that since dashboard views are an Enterprise view, they must have
 a dependency on an Enterprise module. The Enterprise module is ``web_dashboard``. Don't forget to
 add it to your manifest file! It is standard to add dashboards intended to be used as a
-``view_mode`` for one of your module's models (in the ``model`` folder``) to the views directory
+``view_mode`` for one of your module's models (in the ``model`` folder) to the views directory
 (i.e. the same file that contains the other views for the same model).
 
 It is standard to create a separate Enterprise module to add extra Enterprise views and features to
@@ -319,8 +319,8 @@ View
 Now that we have our model, we can make its dashboard view. There is no difference to how its made
 except that its file is located in the ``report`` folder. Since it is a new model not linked to
 any other model, we will also have to add a new menuitem to view our dashboard. Typically SQL views
-are added under a first level menu called ``Reporting` (because it's a report, surprise!). Do you
-remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_firstui`) again.
+are added under a first level menu called ``Reporting`` (because it's a report, surprise!). Do you
+remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_firstui` again.
 
 .. exercise:: Create report view.
 
