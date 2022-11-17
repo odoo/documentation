@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-10-04 12:47+0000\n"
+"POT-Creation-Date: 2022-11-17 09:28+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -196,11 +196,11 @@ msgid "Allow tcp connection from 192.168.1.x network"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:100
-msgid "in ``/etc/postgresql/9.5/main/pg_hba.conf`` set:"
+msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:108
-msgid "in ``/etc/postgresql/9.5/main/postgresql.conf`` set:"
+msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:119
@@ -260,7 +260,7 @@ msgid "Since Odoo 11.0, you can enforce ssl connection between Odoo and PostgreS
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:175
-msgid "`PostgreSQL Doc <https://www.postgresql.org/docs/current/static/libpq-ssl.html>`_"
+msgid "`PostgreSQL Doc <https://www.postgresql.org/docs/12/static/libpq-ssl.html>`_"
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:180
@@ -324,7 +324,7 @@ msgid "Needed RAM = #worker * ( (light_worker_ratio * light_worker_ram_estimatio
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:215
-#: ../../content/administration/install/deploy.rst:375
+#: ../../content/administration/install/deploy.rst:379
 msgid "LiveChat"
 msgstr ""
 
@@ -404,319 +404,324 @@ msgstr ""
 msgid "in ``/etc/nginx/sites-enabled/odoo.conf`` set:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:349
+#: ../../content/administration/install/deploy.rst:353
 msgid "Odoo as a WSGI Application"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:351
+#: ../../content/administration/install/deploy.rst:355
 msgid "It is also possible to mount Odoo as a standard WSGI_ application. Odoo provides the base for a WSGI launcher script as ``odoo-wsgi.example.py``. That script should be customized (possibly after copying it from the setup directory) to correctly set the configuration directly in :mod:`odoo.tools.config` rather than through the command-line or a configuration file."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:357
+#: ../../content/administration/install/deploy.rst:361
 msgid "However the WSGI server will only expose the main HTTP endpoint for the web client, website and webservice API. Because Odoo does not control the creation of workers anymore it can not setup cron or livechat workers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:362
+#: ../../content/administration/install/deploy.rst:366
 msgid "Cron Workers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:364
+#: ../../content/administration/install/deploy.rst:368
 msgid "To run cron jobs for an Odoo deployment as a WSGI application requires"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:366
+#: ../../content/administration/install/deploy.rst:370
 msgid "A classical Odoo (run via ``odoo-bin``)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:367
+#: ../../content/administration/install/deploy.rst:371
 msgid "Connected to the database in which cron jobs have to be run (via :option:`odoo-bin -d`)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:369
+#: ../../content/administration/install/deploy.rst:373
 msgid "Which should not be exposed to the network. To ensure cron runners are not network-accessible, it is possible to disable the built-in HTTP server entirely with :option:`odoo-bin --no-http` or setting ``http_enable = False`` in the configuration file"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:377
+#: ../../content/administration/install/deploy.rst:381
 msgid "The second problematic subsystem for WSGI deployments is the LiveChat: where most HTTP connections are relatively short and quickly free up their worker process for the next request, LiveChat require a long-lived connection for each client in order to implement near-real-time notifications."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:382
+#: ../../content/administration/install/deploy.rst:386
 msgid "This is in conflict with the process-based worker model, as it will tie up worker processes and prevent new users from accessing the system. However, those long-lived connections do very little and mostly stay parked waiting for notifications."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:387
+#: ../../content/administration/install/deploy.rst:391
 msgid "The solutions to support livechat/motifications in a WSGI application are:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:389
+#: ../../content/administration/install/deploy.rst:393
 msgid "Deploy a threaded version of Odoo (instead of a process-based preforking one) and redirect only requests to URLs starting with ``/websocket/`` to that Odoo, this is the simplest and the websocket URL can double up as the cron instance."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:393
+#: ../../content/administration/install/deploy.rst:397
 msgid "Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting with ``/websocket/`` to :option:`the gevent port <odoo-bin --gevent-port>`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:400
+#: ../../content/administration/install/deploy.rst:404
 msgid "Serving static files and attachments"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:402
+#: ../../content/administration/install/deploy.rst:406
 msgid "For development convenience, Odoo directly serves all static files and attachments in its modules. This may not be ideal when it comes to performances, and static files should generally be served by a static HTTP server."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:407
+#: ../../content/administration/install/deploy.rst:411
 msgid "Serving static files"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:409
+#: ../../content/administration/install/deploy.rst:413
 msgid "Odoo static files are located in each module's :file:`static/` folder, so static files can be served by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module (and file) in the various addons paths."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:414
-msgid "Say Odoo has been installed via the **debian packages** for Community and Enterprise, the addons paths is :file:`/usr/lib/python3/dist-packages/odoo/addons`. Using the above NGINX (https) configuration, the following location block should be added to serve static files via NGINX."
+#: ../../content/administration/install/deploy.rst:418
+msgid "Say Odoo has been installed via the **debian packages** for Community and Enterprise and the :option:`--addons-path <odoo-bin --addons-path>` is ``'/usr/lib/python3/dist-packages/odoo/addons'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:432
-msgid "Say Odoo has been installed via the **source**, and the two git repositories for Community and Enterprise has been cloned in :file:`/opt/odoo` and :file:`/opt/odoo-enterprise` respectively. The addons paths is ``/opt/odoo/odoo,/opt/odoo/addons,/opt/odoo-enterprise``. Using the above NGINX (https) configuragion, the following location block should be added to serve static files via NGINX."
+#: ../../content/administration/install/deploy.rst:421
+#: ../../content/administration/install/deploy.rst:443
+msgid "Using the above NGINX (https) configuration, the following location block should be added to serve static files via NGINX."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:466
+#: ../../content/administration/install/deploy.rst:438
+msgid "Say Odoo has been installed via the **source**. The two git repositories for Community and Enterprise have been cloned in :file:`/opt/odoo/community` and :file:`/opt/odoo/enterprise` respectively and the :option:`--addons-path <odoo-bin --addons-path>` is ``'/opt/odoo/community/odoo/addons,/opt/community/addons,/opt/odoo/enterprise'``."
+msgstr ""
+
+#: ../../content/administration/install/deploy.rst:460
 msgid "The actual NGINX configuration you need is highly dependent on your own installation. The two above snippets only highlight two possible configurations and may not be used as-is."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:470
+#: ../../content/administration/install/deploy.rst:464
 msgid "Serving attachments"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:472
+#: ../../content/administration/install/deploy.rst:466
 msgid "Attachments are files stored in the filestore which access is regulated by Odoo. They cannot be directly accessed via a static web server as accessing them requires multiple lookups in the database to determine where the files are stored and whether the current user can access them or not."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:477
+#: ../../content/administration/install/deploy.rst:471
 msgid "Nevertheless, once the file has been located and the access rights verified by Odoo, it is a good idea to serve the file using the static web server instead of Odoo. For Odoo to delegate serving files to the static web server, the `X-Sendfile <https://tn123.org/mod_xsendfile/>`_ (apache) or `X-Accel <https://www.nginx.com/resources/wiki/start/topics/examples/x-accel/>`_ (nginx) extensions must be enabled and configured on the static web server. Once it is set up, start Odoo with the :option:`--x-sendfile <odoo-bin --x-sendfile>` CLI flag (this unique flag is used for both X-Sendfile and X-Accel)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:487
+#: ../../content/administration/install/deploy.rst:481
 msgid "The X-Sendfile extension for apache (and compatible web servers) does not require any supplementary configuration."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:489
+#: ../../content/administration/install/deploy.rst:483
 msgid "The X-Accel extension for NGINX **does** require the following additionnal configuration:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:498
+#: ../../content/administration/install/deploy.rst:492
 msgid "In case you don't know what is the path to your filestore, start Odoo with the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to the ``/web/filestore`` URL directly via Odoo (don't navigate to the URL via NGINX). This logs a warnings, the message contains the configuration you need."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:507
+#: ../../content/administration/install/deploy.rst:501
 msgid "Security"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:509
+#: ../../content/administration/install/deploy.rst:503
 msgid "For starters, keep in mind that securing an information system is a continuous process, not a one-shot operation. At any moment, you will only be as secure as the weakest link in your environment."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:513
+#: ../../content/administration/install/deploy.rst:507
 msgid "So please do not take this section as the ultimate list of measures that will prevent all security problems. It's only intended as a summary of the first important things you should be sure to include in your security action plan. The rest will come from best security practices for your operating system and distribution, best practices in terms of users, passwords, and access control management, etc."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:519
+#: ../../content/administration/install/deploy.rst:513
 msgid "When deploying an internet-facing server, please be sure to consider the following security-related topics:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:522
+#: ../../content/administration/install/deploy.rst:516
 msgid "Always set a strong super-admin admin password, and restrict access to the database management pages as soon as the system is set up. See :ref:`db_manager_security`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:525
+#: ../../content/administration/install/deploy.rst:519
 msgid "Choose unique logins and strong passwords for all administrator accounts on all databases. Do not use 'admin' as the login. Do not use those logins for day-to-day operations, only for controlling/managing the installation. *Never* use any default passwords like admin/admin, even for test/staging databases."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:530
+#: ../../content/administration/install/deploy.rst:524
 msgid "Do **not** install demo data on internet-facing servers. Databases with demo data contain default logins and passwords that can be used to get into your systems and cause significant trouble, even on staging/dev systems."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:534
+#: ../../content/administration/install/deploy.rst:528
 msgid "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-filter>`) to restrict the visibility of your databases according to the hostname. See :ref:`db_filter`. You may also use :option:`-d <odoo-bin -d>` to provide your own (comma-separated) list of available databases to filter from, instead of letting the system fetch them all from the database backend."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:541
+#: ../../content/administration/install/deploy.rst:535
 msgid "Once your ``db_name`` and ``db_filter`` are configured and only match a single database per hostname, you should set ``list_db`` configuration option to ``False``, to prevent listing databases entirely, and to block access to the database management screens (this is also exposed as the :option:`--no-database-list <odoo-bin --no-database-list>` command-line option)"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:547
+#: ../../content/administration/install/deploy.rst:541
 msgid "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is *not* a super-user, and that your databases are owned by a different user. For example they could be owned by the ``postgres`` super-user if you are using a dedicated non-privileged ``db_user``. See also :ref:`setup/deploy/odoo`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:552
+#: ../../content/administration/install/deploy.rst:546
 msgid "Keep installations updated by regularly installing the latest builds, either via GitHub or by downloading the latest version from https://www.odoo.com/page/download or http://nightly.odoo.com"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:556
+#: ../../content/administration/install/deploy.rst:550
 msgid "Configure your server in multi-process mode with proper limits matching your typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:559
+#: ../../content/administration/install/deploy.rst:553
 msgid "Run Odoo behind a web server providing HTTPS termination with a valid SSL certificate, in order to prevent eavesdropping on cleartext communications. SSL certificates are cheap, and many free options exist. Configure the web proxy to limit the size of requests, set appropriate timeouts, and then enable the :option:`proxy mode <odoo-bin --proxy-mode>` option. See also :ref:`https_proxy`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:566
+#: ../../content/administration/install/deploy.rst:560
 msgid "If you need to allow remote SSH access to your servers, make sure to set a strong password for **all** accounts, not just `root`. It is strongly recommended to entirely disable password-based authentication, and only allow public key authentication. Also consider restricting access via a VPN, allowing only trusted IPs in the firewall, and/or running a brute-force detection system such as `fail2ban` or equivalent."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:572
+#: ../../content/administration/install/deploy.rst:566
 msgid "Consider installing appropriate rate-limiting on your proxy or firewall, to prevent brute-force attacks and denial of service attacks. See also :ref:`login_brute_force` for specific measures."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:576
+#: ../../content/administration/install/deploy.rst:570
 msgid "Many network providers provide automatic mitigation for Distributed Denial of Service attacks (DDOS), but this is often an optional service, so you should consult with them."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:580
+#: ../../content/administration/install/deploy.rst:574
 msgid "Whenever possible, host your public-facing demo/test/staging instances on different machines than the production ones. And apply the same security precautions as for production."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:584
+#: ../../content/administration/install/deploy.rst:578
 msgid "If your public-facing Odoo server has access to sensitive internal network resources or services (e.g. via a private VLAN), implement appropriate firewall rules to protect those internal resources. This will ensure that the Odoo server cannot be used accidentally (or as a result of malicious user actions) to access or disrupt those internal resources. Typically this can be done by applying an outbound default DENY rule on the firewall, then only explicitly authorizing access to internal resources that the Odoo server needs to access. `Systemd IP traffic access control <http://0pointer.net/blog/ip-accounting-and-access-lists-with-systemd.html>`_ may also be useful to implement per-process network access control."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:595
+#: ../../content/administration/install/deploy.rst:589
 msgid "If your public-facing Odoo server is behind a Web Application Firewall, a load-balancer, a transparent DDoS protection service (like CloudFlare) or a similar network-level device, you may wish to avoid direct access to the Odoo system. It is generally difficult to keep the endpoint IP addresses of your Odoo servers secret. For example they can appear in web server logs when querying public systems, or in the headers of emails posted from Odoo. In such a situation you may want to configure your firewall so that the endpoints are not accessible publicly except from the specific IP addresses of your WAF, load-balancer or proxy service. Service providers like CloudFlare usually maintain a public list of their IP address ranges for this purpose."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:606
+#: ../../content/administration/install/deploy.rst:600
 msgid "If you are hosting multiple customers, isolate customer data and files from each other using containers or appropriate \"jail\" techniques."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:609
+#: ../../content/administration/install/deploy.rst:603
 msgid "Setup daily backups of your databases and filestore data, and copy them to a remote archiving server that is not accessible from the server itself."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:616
+#: ../../content/administration/install/deploy.rst:610
 msgid "Blocking Brute Force Attacks"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:617
+#: ../../content/administration/install/deploy.rst:611
 msgid "For internet-facing deployments, brute force attacks on user passwords are very common, and this threat should not be neglected for Odoo servers. Odoo emits a log entry whenever a login attempt is performed, and reports the result: success or failure, along with the target login and source IP."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:621
+#: ../../content/administration/install/deploy.rst:615
 msgid "The log entries will have the following form."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:623
+#: ../../content/administration/install/deploy.rst:617
 msgid "Failed login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:627
+#: ../../content/administration/install/deploy.rst:621
 msgid "Successful login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:632
+#: ../../content/administration/install/deploy.rst:626
 msgid "These logs can be easily analyzed by an intrusion prevention system such as `fail2ban`."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:634
+#: ../../content/administration/install/deploy.rst:628
 msgid "For example, the following fail2ban filter definition should match a failed login::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:641
+#: ../../content/administration/install/deploy.rst:635
 msgid "This could be used with a jail definition to block the attacking IP on HTTP(S)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:643
+#: ../../content/administration/install/deploy.rst:637
 msgid "Here is what it could look like for blocking the IP for 15 minutes when 10 failed login attempts are detected from the same IP within 1 minute::"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:657
+#: ../../content/administration/install/deploy.rst:651
 msgid "Database Manager Security"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:659
+#: ../../content/administration/install/deploy.rst:653
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:661
+#: ../../content/administration/install/deploy.rst:655
 msgid "This setting is used on all database management screens (to create, delete, dump or restore databases)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:664
+#: ../../content/administration/install/deploy.rst:658
 msgid "If the management screens must not be accessible at all, you should set ``list_db`` configuration option to ``False``, to block access to all the database selection and management screens."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:670
+#: ../../content/administration/install/deploy.rst:664
 msgid "It is strongly recommended to disable the Database Manager for any internet-facing system! It is meant as a development/demo tool, to make it easy to quickly create and manage databases. It is not designed for use in production, and may even expose dangerous features to attackers. It is also not designed to handle large databases, and may trigger memory limits."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:676
+#: ../../content/administration/install/deploy.rst:670
 msgid "On production systems, database management operations should always be performed by the system administrator, including provisioning of new databases and automated backups."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:679
+#: ../../content/administration/install/deploy.rst:673
 msgid "Be sure to setup an appropriate ``db_name`` parameter (and optionally, ``db_filter`` too) so that the system can determine the target database for each request, otherwise users will be blocked as they won't be allowed to choose the database themselves."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:684
+#: ../../content/administration/install/deploy.rst:678
 msgid "If the management screens must only be accessible from a selected set of machines, use the proxy server's features to block access to all routes starting with ``/web/database`` except (maybe) ``/web/database/selector`` which displays the database-selection screen."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:688
+#: ../../content/administration/install/deploy.rst:682
 msgid "If the database-management screen should be left accessible, the ``admin_passwd`` setting must be changed from its ``admin`` default: this password is checked before allowing database-alteration operations."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:692
+#: ../../content/administration/install/deploy.rst:686
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:698
+#: ../../content/administration/install/deploy.rst:692
 msgid "which will generate a 32 characters pseudorandom printable string."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:701
+#: ../../content/administration/install/deploy.rst:695
 msgid "Supported Browsers"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:703
+#: ../../content/administration/install/deploy.rst:697
 msgid "Odoo supports all the major desktop and mobile browsers available on the market, as long as they are supported by their publishers."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:706
+#: ../../content/administration/install/deploy.rst:700
 msgid "Here are the supported browsers:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:708
+#: ../../content/administration/install/deploy.rst:702
 msgid "Google Chrome"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:709
+#: ../../content/administration/install/deploy.rst:703
 msgid "Mozilla Firefox"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:710
+#: ../../content/administration/install/deploy.rst:704
 msgid "Microsoft Edge"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:711
+#: ../../content/administration/install/deploy.rst:705
 msgid "Apple Safari"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:713
+#: ../../content/administration/install/deploy.rst:707
 msgid "Please make sure your browser is up-to-date and still supported by its publisher before filing a bug report."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:718
+#: ../../content/administration/install/deploy.rst:712
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:721
+#: ../../content/administration/install/deploy.rst:715
 msgid "to have multiple Odoo installations use the same PostgreSQL database, or to provide more computing resources to both software."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:724
+#: ../../content/administration/install/deploy.rst:718
 msgid "technically a tool like socat_ can be used to proxy UNIX sockets across networks, but that is mostly for software which can only be used over UNIX sockets"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:728
+#: ../../content/administration/install/deploy.rst:722
 msgid "or be accessible only over an internal packet-switched network, but that requires secured switches, protections against `ARP spoofing`_ and precludes usage of WiFi. Even over secure packet-switched networks, deployment over HTTPS is recommended, and possible costs are lowered as \"self-signed\" certificates are easier to deploy on a controlled environment than over the internet."
 msgstr ""
 
@@ -838,7 +843,7 @@ msgid "Editions"
 msgstr ""
 
 #: ../../content/administration/install/install.rst:35
-msgid "There are two different Editions_ of Odoo: the Community and Enterprise versions. Using the Enterprise version is possible on our SaaS_ and accessing the code is restricted to Enterprise customers and partners. The Community version is freely available to anyone."
+msgid "There are two different Editions_ of Odoo: the Community and Enterprise versions. Using the Enterprise version is possible on `Odoo Online`_ and accessing the code is restricted to Enterprise customers and partners. The Community version is freely available to anyone."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:40
@@ -862,11 +867,15 @@ msgid "Demo_ instances require no local installation, just a web browser."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:59
-msgid "SaaS"
+#: ../../content/administration/maintain/domain_names.rst:136
+#: ../../content/administration/maintain/domain_names.rst:206
+#: ../../content/administration/maintain/supported_versions.rst:27
+#: ../../content/administration/upgrade/odoo_online.rst:3
+msgid "Odoo Online"
 msgstr ""
 
 #: ../../content/administration/install/install.rst:61
-msgid "Trivial to start with, fully managed and migrated by Odoo S.A., Odoo's SaaS_ provides private instances and starts out free. It can be used to discover and test Odoo and do non-code customizations (i.e. incompatible with custom modules or the Odoo Apps Store) without having to install it locally."
+msgid "Trivial to start with, fully managed and migrated by Odoo S.A., `Odoo Online`_ provides private instances and starts out free. It can be used to discover and test Odoo and do non-code customizations (i.e. incompatible with custom modules or the Odoo Apps Store) without having to install it locally."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:66
@@ -874,7 +883,7 @@ msgid "Can be used for both testing Odoo and long-term production use."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:68
-msgid "Like demo_ instances, SaaS_ instances require no local installation, a web browser is sufficient."
+msgid "Like demo_ instances, `Odoo Online`_ instances require no local installation, a web browser is sufficient."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:75
@@ -975,7 +984,7 @@ msgid "Repository"
 msgstr ""
 
 #: ../../content/administration/install/install.rst:148
-msgid "Odoo S.A. provides a repository that can be used with Debian and Ubuntu distributions. It can be used to install *Odoo Community Edition* by executing the following commands **as root**:"
+msgid "Odoo S.A. provides a repository that can be used with Debian and Ubuntu distributions. It can be used to install *Odoo Community Edition* by executing the following commands:"
 msgstr ""
 
 #: ../../content/administration/install/install.rst:157
@@ -999,7 +1008,7 @@ msgid "Instead of using the repository as described above, the 'deb' packages fo
 msgstr ""
 
 #: ../../content/administration/install/install.rst:186
-msgid "Odoo 15.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 20.04 (Focal)`_ or above."
+msgid "Odoo 16.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 22.04 (Jammy)`_ or above."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:189
@@ -1031,7 +1040,7 @@ msgid "Instead of using the repository as described above, the 'rpm' packages fo
 msgstr ""
 
 #: ../../content/administration/install/install.rst:227
-msgid "Odoo 15.0 'rpm' package supports Fedora 34."
+msgid "Odoo 16.0 'rpm' package supports Fedora 36."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:229
@@ -1164,7 +1173,7 @@ msgid "Odoo requires Python 3.7 or later to run. Use your preferred package mana
 msgstr ""
 
 #: ../../content/administration/install/install.rst:434
-msgid "Odoo uses PostgreSQL as database management system. `Download and install PostgreSQL <https://www.postgresql.org/download/windows/>`_ (supported version: 10.0 and later)."
+msgid "Odoo uses PostgreSQL as database management system. `Download and install PostgreSQL <https://www.postgresql.org/download/windows/>`_ (supported version: 12.0 and later)."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:437
@@ -1206,7 +1215,7 @@ msgid "Open the **Privileges** tab and switch **Can login?** to `Yes` and **Crea
 msgstr ""
 
 #: ../../content/administration/install/install.rst:454
-msgid "Odoo uses PostgreSQL as database management system. Use your package manager to download and install PostgreSQL (supported version: 10.0 and later)."
+msgid "Odoo uses PostgreSQL as database management system. Use your package manager to download and install PostgreSQL (supported version: 12.0 and later)."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:457
@@ -1219,7 +1228,7 @@ msgid "Because your PostgreSQL user has the same name as your Unix login, you wi
 msgstr ""
 
 #: ../../content/administration/install/install.rst:477
-msgid "Odoo uses PostgreSQL as database management system. Use `postgres.app <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 10.0 and later)."
+msgid "Odoo uses PostgreSQL as database management system. Use `postgres.app <https://postgresapp.com>`_ to download and install PostgreSQL (supported version: 12.0 and later)."
 msgstr ""
 
 #: ../../content/administration/install/install.rst:482
@@ -1571,19 +1580,13 @@ msgstr ""
 msgid "You need a CNAME record that points to your Odoo database. The requirements are detailed in your database manager."
 msgstr ""
 
-#: ../../content/administration/maintain/domain_names.rst:136
-#: ../../content/administration/maintain/domain_names.rst:206
-#: ../../content/administration/maintain/supported_versions.rst:26
-msgid "Odoo Online"
-msgstr ""
-
 #: ../../content/administration/maintain/domain_names.rst:138
 msgid "The target address is the current address of your database, as defined at its creation (e.g., ``example.odoo.com``)"
 msgstr ""
 
 #: ../../content/administration/maintain/domain_names.rst:141
 #: ../../content/administration/maintain/domain_names.rst:220
-#: ../../content/administration/maintain/supported_versions.rst:26
+#: ../../content/administration/maintain/supported_versions.rst:27
 #: ../../content/administration/odoo_sh.rst:5
 #: ../../content/administration/upgrade/odoo_sh.rst:3
 msgid "Odoo.sh"
@@ -2325,6 +2328,229 @@ msgstr ""
 msgid "Grab a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`."
 msgstr ""
 
+#: ../../content/administration/maintain/odoo_online.rst:3
+msgid "Odoo Online database management"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:5
+msgid "To manage a database, sign in to https://www.odoo.com and access the `database management page <https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:None
+msgid "Clicking on the user icon opens a drop-down menu. \"My databases\" button is highlighted."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:13
+msgid "Make sure you are connected as the administrator of the database you want to manage."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:None
+msgid "Clicking on the gear icon opens the drop-down menu."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:19
+msgid "Open the drop-down menu next to the database you want to manage by clicking on the gear icon."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:21
+msgid "Several actions are available:"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:23
+msgid ":ref:`odoo_online/upgrade`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:24
+msgid ":ref:`odoo_online/duplicate`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:25
+msgid ":ref:`odoo_online/rename`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:26
+msgid ":ref:`odoo_online/download`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:27
+msgid ":ref:`odoo_online/domains`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:28
+msgid ":ref:`odoo_online/tags`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:29
+msgid ":ref:`odoo_online/delete`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:30
+msgid ":ref:`odoo_online/contact-support`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:31
+msgid ":ref:`odoo_online/users`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:36
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:285
+#: ../../content/administration/upgrade.rst:10
+msgid "Upgrade"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:38
+msgid "If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade <../upgrade>` your database. A **Rolling Release button** on your database's main screen proposes an upgrade to the latest version (e.g., 13.0 to 15.1)."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:0
+msgid "**If your Odoo database's version is lower than the latest major release:**"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:0
+msgid "You must upgrade your database within two months. After these two months, an automatic upgrade is initiated."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:0
+msgid "**If your Odoo database's version is equal to or higher than the latest major release:**"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:0
+msgid "You can disregard the invitation to upgrade as you probably wouldn't benefit from new features every two months."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:51
+msgid "Versions that are not supported anymore become deprecated and need to be updated to avoid security issues. We recommend you initiate the upgrade of the database yourself, as this method allows you to request a test upgrade of your database to check for any discrepancies."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:56
+msgid ":doc:`../upgrade`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:57
+msgid ":doc:`supported_versions`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:62
+msgid "Duplicate"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:64
+msgid "Make an exact copy of the database to be able to perform testing without compromising the daily operations."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:68
+msgid "By checking *For testing purposes*, all external communication (emails, payments, delivery orders, etc.) are disabled by default on the duplicated database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:70
+msgid "Duplicate databases expire automatically after 15 days."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:75
+msgid "Rename"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:77
+msgid "Rename the database and its URL."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:82
+msgid "Download"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:84
+msgid "Download instantly a ZIP file with a backup of the database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:87
+msgid "Databases are backed up daily according to the `Odoo Cloud SLA <https://www.odoo.com/cloud-sla>`_."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:93
+msgid "Domains"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:95
+msgid "Configure custom domains to access the database via another URL."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:98
+msgid ":doc:`domain_names`"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:103
+msgid "Tags"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:105
+msgid "Add tags to sort your databases out. You can search the tags in the search bar."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:110
+#: ../../content/administration/odoo_sh/getting_started/branches.rst:539
+msgid "Delete"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:112
+msgid "Delete a database instantly."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:115
+msgid "Deleting a database means that all data is permanently lost. The deletion is instant and for all users. It is recommended to create a backup of the database before deleting it."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:118
+msgid "Read carefully the warning message that pops up and proceed only if you fully understand the implications of deleting a database:"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:None
+msgid "A warning message is prompted before deleting a database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:126
+msgid "Only an administrator can delete a database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:127
+msgid "The database name is immediately available for a new database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:128
+msgid "It is not possible to delete a database if it is expired or linked to a subscription. If needed, please get in touch with `Odoo Support <https://www.odoo.com/help>`_."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:130
+msgid "To delete your account, please get in touch with `Odoo Support <https://www.odoo.com/help>`_."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:135
+msgid "Contact Support"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:137
+msgid "Access the Odoo `support page <https://www.odoo.com/help>`_ with your database's details already pre-filled."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:143
+msgid "Invite / Remove Users"
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:145
+msgid "To invite users, fill out the email address of the new user and click on *Invite*. To add multiple users, click on *Add more users*."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:None
+msgid "Clicking on \"Add more users\" adds additional email fields."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:152
+msgid "To remove users, select the users to remove and click on *Remove*."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:155
+msgid ":doc:`/applications/general/users/manage_users`"
+msgstr ""
+
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
 msgstr ""
@@ -2498,229 +2724,6 @@ msgstr ""
 msgid "The database uuid is currently accessible from the menu :menuselection:`Settings --> Technical --> System Parameters`, we advise you to use a `uuid generator <https://www.uuidtools.com>`_ or to use the unix command ``uuidgen`` to generate a new uuid. You can then simply replace it like any other record by clicking on it and using the edit button."
 msgstr ""
 
-#: ../../content/administration/maintain/online.rst:3
-msgid "Online (SaaS) database management"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:5
-msgid "To manage a database, sign in to https://www.odoo.com and access the `database management page <https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:None
-msgid "Clicking on the user icon opens a drop-down menu. \"My databases\" button is highlighted."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:13
-msgid "Make sure you are connected as the administrator of the database you want to manage."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:None
-msgid "Clicking on the gear icon opens the drop-down menu."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:19
-msgid "Open the drop-down menu next to the database you want to manage by clicking on the gear icon."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:21
-msgid "Several actions are available:"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:23
-msgid ":ref:`online/upgrade`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:24
-msgid ":ref:`online/duplicate`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:25
-msgid ":ref:`online/rename`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:26
-msgid ":ref:`online/download`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:27
-msgid ":ref:`online/domains`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:28
-msgid ":ref:`online/tags`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:29
-msgid ":ref:`online/delete`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:30
-msgid ":ref:`online/contact-support`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:31
-msgid ":ref:`online/users`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:36
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:285
-#: ../../content/administration/upgrade.rst:10
-msgid "Upgrade"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:38
-msgid "If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade <../upgrade>` your database. A **Rolling Release button** on your database's main screen proposes an upgrade to the latest version (e.g., 13.0 to 15.1)."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:0
-msgid "**If your Odoo database's version is lower than the latest major release:**"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:0
-msgid "You must upgrade your database within two months. After these two months, an automatic upgrade is initiated."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:0
-msgid "**If your Odoo database's version is equal to or higher than the latest major release:**"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:0
-msgid "You can disregard the invitation to upgrade as you probably wouldn't benefit from new features every two months."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:51
-msgid "Versions that are not supported anymore become deprecated and need to be updated to avoid security issues. We recommend you initiate the upgrade of the database yourself, as this method allows you to request a test upgrade of your database to check for any discrepancies."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:56
-msgid ":doc:`../upgrade`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:57
-msgid ":doc:`supported_versions`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:62
-msgid "Duplicate"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:64
-msgid "Make an exact copy of the database to be able to perform testing without compromising the daily operations."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:68
-msgid "By checking *For testing purposes*, all external communication (emails, payments, delivery orders, etc.) are disabled by default on the duplicated database."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:70
-msgid "Duplicate databases expire automatically after 15 days."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:75
-msgid "Rename"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:77
-msgid "Rename the database and its URL."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:82
-msgid "Download"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:84
-msgid "Download instantly a ZIP file with a backup of the database."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:87
-msgid "Databases are backed up daily according to the `Odoo Cloud SLA <https://www.odoo.com/cloud-sla>`_."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:93
-msgid "Domains"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:95
-msgid "Configure custom domains to access the database via another URL."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:98
-msgid ":doc:`domain_names`"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:103
-msgid "Tags"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:105
-msgid "Add tags to sort your databases out. You can search the tags in the search bar."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:110
-#: ../../content/administration/odoo_sh/getting_started/branches.rst:539
-msgid "Delete"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:112
-msgid "Delete a database instantly."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:115
-msgid "Deleting a database means that all data is permanently lost. The deletion is instant and for all users. It is recommended to create a backup of the database before deleting it."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:118
-msgid "Read carefully the warning message that pops up and proceed only if you fully understand the implications of deleting a database:"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:None
-msgid "A warning message is prompted before deleting a database."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:126
-msgid "Only an administrator can delete a database."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:127
-msgid "The database name is immediately available for a new database."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:128
-msgid "It is not possible to delete a database if it is expired or linked to a subscription. If needed, please get in touch with `Odoo Support <https://www.odoo.com/help>`_."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:130
-msgid "To delete your account, please get in touch with `Odoo Support <https://www.odoo.com/help>`_."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:135
-msgid "Contact Support"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:137
-msgid "Access the Odoo `support page <https://www.odoo.com/help>`_ with your database's details already pre-filled."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:143
-msgid "Invite / Remove Users"
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:145
-msgid "To invite users, fill out the email address of the new user and click on *Invite*. To add multiple users, click on *Add more users*."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:None
-msgid "Clicking on \"Add more users\" adds additional email fields."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:152
-msgid "To remove users, select the users to remove and click on *Remove*."
-msgstr ""
-
-#: ../../content/administration/maintain/online.rst:155
-msgid ":doc:`/applications/general/users/manage_users`"
-msgstr ""
-
 #: ../../content/administration/maintain/supported_versions.rst:6
 #: ../../content/administration/upgrade.rst:208
 msgid "Supported versions"
@@ -2731,277 +2734,289 @@ msgid "Odoo provides support and bug fixing **for the 3 last major versions** of
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:11
-msgid "Odoo releases intermediary versions called **Online versions** on the :doc:`Odoo Online <online>` hosting every two months. Odoo Online users can then benefit from the latest features of Odoo."
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:14
-msgid "Admins of Odoo Online databases are invited to :doc:`upgrade <../upgrade>` them regularly."
+msgid "Odoo releases intermediary versions called **Online versions** on the :doc:`Odoo Online <odoo_online>` hosting every two months. Odoo Online users can then benefit from the latest features of Odoo."
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:15
-msgid "Online versions are *not* released for Odoo.sh and On-Premise installations."
+msgid "Admins of Odoo Online databases are invited to :doc:`upgrade <../upgrade>` them regularly."
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:16
+msgid "Online versions are *not* released for Odoo.sh and On-Premise installations."
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:17
 msgid "Online versions are listed below as *SaaS*."
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:19
+#: ../../content/administration/maintain/supported_versions.rst:20
 msgid "What's the support status of my Odoo?"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:21
+#: ../../content/administration/maintain/supported_versions.rst:22
 msgid "This matrix shows the support status of every version."
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:23
+#: ../../content/administration/maintain/supported_versions.rst:24
 msgid "**Major releases are in bold type.**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:26
+#: ../../content/administration/maintain/supported_versions.rst:27
 #: ../../content/administration/upgrade/on_premise.rst:3
 msgid "On-Premise"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:26
+#: ../../content/administration/maintain/supported_versions.rst:27
 msgid "Release date"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:26
+#: ../../content/administration/maintain/supported_versions.rst:27
 msgid "End of support"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:28
-msgid "Odoo saas~15.2"
+#: ../../content/administration/maintain/supported_versions.rst:29
+msgid "**Odoo 16.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:28
-#: ../../content/administration/maintain/supported_versions.rst:32
-#: ../../content/administration/maintain/supported_versions.rst:32
-#: ../../content/administration/maintain/supported_versions.rst:32
-#: ../../content/administration/maintain/supported_versions.rst:34
-#: ../../content/administration/maintain/supported_versions.rst:34
-#: ../../content/administration/maintain/supported_versions.rst:34
-#: ../../content/administration/maintain/supported_versions.rst:36
-#: ../../content/administration/maintain/supported_versions.rst:36
-#: ../../content/administration/maintain/supported_versions.rst:36
+#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:31
+#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:37
 msgid "|green|"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:28
-#: ../../content/administration/maintain/supported_versions.rst:28
-#: ../../content/administration/maintain/supported_versions.rst:30
-#: ../../content/administration/maintain/supported_versions.rst:30
-#: ../../content/administration/maintain/supported_versions.rst:38
-#: ../../content/administration/maintain/supported_versions.rst:38
-#: ../../content/administration/maintain/supported_versions.rst:42
-#: ../../content/administration/maintain/supported_versions.rst:42
-#: ../../content/administration/maintain/supported_versions.rst:46
-#: ../../content/administration/maintain/supported_versions.rst:46
-#: ../../content/administration/maintain/supported_versions.rst:48
-#: ../../content/administration/maintain/supported_versions.rst:48
-#: ../../content/administration/maintain/supported_versions.rst:52
-#: ../../content/administration/maintain/supported_versions.rst:52
-#: ../../content/administration/maintain/supported_versions.rst:54
-#: ../../content/administration/maintain/supported_versions.rst:56
-#: ../../content/administration/maintain/supported_versions.rst:56
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:29
+#: ../../content/administration/maintain/supported_versions.rst:39
+msgid "October 2022"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:29
+msgid "October 2025 (planned)"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:31
+msgid "Odoo saas~15.2"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:31
+#: ../../content/administration/maintain/supported_versions.rst:31
+#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:61
 msgid "N/A"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:28
+#: ../../content/administration/maintain/supported_versions.rst:31
 msgid "March 2022"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:30
+#: ../../content/administration/maintain/supported_versions.rst:33
 msgid "Odoo saas~15.1"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:30
-#: ../../content/administration/maintain/supported_versions.rst:38
-#: ../../content/administration/maintain/supported_versions.rst:40
-#: ../../content/administration/maintain/supported_versions.rst:40
-#: ../../content/administration/maintain/supported_versions.rst:40
-#: ../../content/administration/maintain/supported_versions.rst:42
-#: ../../content/administration/maintain/supported_versions.rst:44
-#: ../../content/administration/maintain/supported_versions.rst:44
-#: ../../content/administration/maintain/supported_versions.rst:44
-#: ../../content/administration/maintain/supported_versions.rst:46
-#: ../../content/administration/maintain/supported_versions.rst:48
-#: ../../content/administration/maintain/supported_versions.rst:50
-#: ../../content/administration/maintain/supported_versions.rst:50
-#: ../../content/administration/maintain/supported_versions.rst:50
-#: ../../content/administration/maintain/supported_versions.rst:52
-#: ../../content/administration/maintain/supported_versions.rst:54
-#: ../../content/administration/maintain/supported_versions.rst:54
-#: ../../content/administration/maintain/supported_versions.rst:56
-#: ../../content/administration/maintain/supported_versions.rst:58
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:33
+#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:41
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:45
+#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:49
+#: ../../content/administration/maintain/supported_versions.rst:51
+#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:53
+#: ../../content/administration/maintain/supported_versions.rst:55
+#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:57
+#: ../../content/administration/maintain/supported_versions.rst:59
+#: ../../content/administration/maintain/supported_versions.rst:61
+#: ../../content/administration/maintain/supported_versions.rst:61
 msgid "|red|"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:30
+#: ../../content/administration/maintain/supported_versions.rst:33
 msgid "February 2022"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:32
+#: ../../content/administration/maintain/supported_versions.rst:35
 msgid "**Odoo 15.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:32
-#: ../../content/administration/maintain/supported_versions.rst:40
+#: ../../content/administration/maintain/supported_versions.rst:35
+#: ../../content/administration/maintain/supported_versions.rst:43
 msgid "October 2021"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:32
+#: ../../content/administration/maintain/supported_versions.rst:35
 msgid "October 2024 (planned)"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:34
+#: ../../content/administration/maintain/supported_versions.rst:37
 msgid "**Odoo 14.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:34
-#: ../../content/administration/maintain/supported_versions.rst:44
+#: ../../content/administration/maintain/supported_versions.rst:37
+#: ../../content/administration/maintain/supported_versions.rst:47
 msgid "October 2020"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:34
+#: ../../content/administration/maintain/supported_versions.rst:37
 msgid "October 2023 (planned)"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:36
+#: ../../content/administration/maintain/supported_versions.rst:39
 msgid "**Odoo 13.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:36
-#: ../../content/administration/maintain/supported_versions.rst:50
+#: ../../content/administration/maintain/supported_versions.rst:39
+#: ../../content/administration/maintain/supported_versions.rst:53
 msgid "October 2019"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:36
-msgid "October 2022 (planned)"
-msgstr ""
-
-#: ../../content/administration/maintain/supported_versions.rst:38
+#: ../../content/administration/maintain/supported_versions.rst:41
 msgid "Odoo saas~12.3"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:38
+#: ../../content/administration/maintain/supported_versions.rst:41
 msgid "August 2019"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:40
+#: ../../content/administration/maintain/supported_versions.rst:43
 msgid "**Odoo 12.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:40
-#: ../../content/administration/maintain/supported_versions.rst:54
+#: ../../content/administration/maintain/supported_versions.rst:43
+#: ../../content/administration/maintain/supported_versions.rst:57
 msgid "October 2018"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:42
+#: ../../content/administration/maintain/supported_versions.rst:45
 msgid "Odoo saas~11.3"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:42
+#: ../../content/administration/maintain/supported_versions.rst:45
 msgid "April 2018"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:44
+#: ../../content/administration/maintain/supported_versions.rst:47
 msgid "**Odoo 11.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:44
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:47
+#: ../../content/administration/maintain/supported_versions.rst:61
 msgid "October 2017"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:46
+#: ../../content/administration/maintain/supported_versions.rst:49
 msgid "Odoo 10.saas~15"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:46
+#: ../../content/administration/maintain/supported_versions.rst:49
 msgid "March 2017"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:48
+#: ../../content/administration/maintain/supported_versions.rst:51
 msgid "Odoo 10.saas~14"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:48
+#: ../../content/administration/maintain/supported_versions.rst:51
 msgid "January 2017"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:50
+#: ../../content/administration/maintain/supported_versions.rst:53
 msgid "**Odoo 10.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:50
+#: ../../content/administration/maintain/supported_versions.rst:53
 msgid "October 2016"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:52
+#: ../../content/administration/maintain/supported_versions.rst:55
 msgid "Odoo 9.saas~11"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:52
+#: ../../content/administration/maintain/supported_versions.rst:55
 msgid "May 2016"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:54
+#: ../../content/administration/maintain/supported_versions.rst:57
 msgid "**Odoo 9.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:54
+#: ../../content/administration/maintain/supported_versions.rst:57
 msgid "October 2015"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:56
+#: ../../content/administration/maintain/supported_versions.rst:59
 msgid "Odoo 8.saas~6"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:56
+#: ../../content/administration/maintain/supported_versions.rst:59
 msgid "February 2015"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:61
 msgid "**Odoo 8.0**"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:58
+#: ../../content/administration/maintain/supported_versions.rst:61
 msgid "September 2014"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:63
+#: ../../content/administration/maintain/supported_versions.rst:66
 msgid "|green| Supported version"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:65
+#: ../../content/administration/maintain/supported_versions.rst:68
 msgid "|red| End-of-support"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:67
+#: ../../content/administration/maintain/supported_versions.rst:70
 msgid "N/A Never released for this platform"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:69
+#: ../../content/administration/maintain/supported_versions.rst:72
 msgid "🏁 Future version, not released yet"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:80
+#: ../../content/administration/maintain/supported_versions.rst:83
 msgid "I run an older version of Odoo/OpenERP/TinyERP"
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:82
+#: ../../content/administration/maintain/supported_versions.rst:85
 msgid "OpenERP 7.0, 6.1, 6.0 and 5.0 is not supported anymore, on any platform."
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:84
+#: ../../content/administration/maintain/supported_versions.rst:87
 msgid "TinyERP 4.0, 3.0, 2.0 and 1.0 is not supported anymore, on any platform."
 msgstr ""
 
-#: ../../content/administration/maintain/supported_versions.rst:86
+#: ../../content/administration/maintain/supported_versions.rst:89
 msgid "Even though we don't support older versions, you can always `upgrade from any version <https://upgrade.odoo.com/>`_."
 msgstr ""
 
@@ -4446,7 +4461,7 @@ msgid "`Access your databases manager <https://accounts.odoo.com/my/databases/ma
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:134
-msgid "Saas releases (e.g. *saas-**) are not supported on Odoo.sh."
+msgid "Online versions (e.g. *saas-**) are not supported on Odoo.sh."
 msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/create.rst:137
@@ -5426,7 +5441,7 @@ msgid "Changing :ref:`editions <upgrade-faq/editions-change>` (i.e., Community t
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:25
-msgid "Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Online or Odoo.sh)"
+msgid "Switching :ref:`hosting type <upgrade-faq/hosting-types-switch>` (i.e., On-Premise to Odoo Online or Odoo.sh)"
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:27
@@ -5491,7 +5506,7 @@ msgid "You restore it in your Production environment a few short hours later and
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:57
-msgid ":doc:`Upgrade process for Odoo Online (SaaS) <upgrade/online_hosting>`"
+msgid ":doc:`Upgrade process for Odoo Online <upgrade/odoo_online>`"
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:58
@@ -5694,7 +5709,7 @@ msgid "What is covered by the Enterprise Licence?"
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:228
-msgid "Databases hosted on Odoo’s Cloud platforms (Saas and Odoo.sh) or On-Premise (Self-Hosting) enjoy the following services at all times."
+msgid "Databases hosted on Odoo’s Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting) enjoy the following services at all times."
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:231
@@ -5866,7 +5881,7 @@ msgid "`Editions <https://www.odoo.com/page/editions>`_"
 msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:112
-msgid "Switching the hosting types (Self-Hosting vs. Online Hosting - SaaS vs. Cloud Platform - Odoo.sh)"
+msgid "Switching the hosting types (On-premise vs. Odoo Online vs. Odoo.sh)"
 msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:114
@@ -5906,7 +5921,7 @@ msgid "How long is my test available for"
 msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:154
-msgid "An Odoo Online (SaaS) test database is available for one month by default. We can extend this trial period upon request. For Odoo.sh or on-premise, there is no restriction."
+msgid "An Odoo Online test database is available for one month by default. We can extend this trial period upon request. For Odoo.sh or on-premise, there is no restriction."
 msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:158
@@ -6011,6 +6026,46 @@ msgstr ""
 
 #: ../../content/administration/upgrade/faq.rst:227
 msgid "If you are using the Website or Studio app, we recommend you always do a test upgrade before upgrading your production instance."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:6
+msgid "Requesting a test upgrade"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:8
+msgid "Go to your `database manager <https://www.odoo.com/my/databases/>`_"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:9
+msgid "Click on your profile icon and select *My Databases*."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:0
+msgid "Selecting My Databases under my profile"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:14
+msgid "Click on the action settings icon next to your main database and select the *Upgrade* option."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:0
+msgid "Selecting the action settings icon"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:19
+msgid "In the pop-up message that will appear, select Test Upgrade."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:0
+msgid "Selecting test upgrade"
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:24
+msgid "This triggers the automated upgrade process. A confirmation email is then sent to you with the the link to the upgraded database or to provide information if the upgrade failed."
+msgstr ""
+
+#: ../../content/administration/upgrade/odoo_online.rst:28
+msgid "You can also see and access your test database from your *My Databases* page."
 msgstr ""
 
 #: ../../content/administration/upgrade/odoo_sh.rst:10
@@ -6240,48 +6295,4 @@ msgstr ""
 
 #: ../../content/administration/upgrade/on_premise.rst:59
 msgid "by Odoo (if you hold a subscription to 'Maintenance of Customizations')."
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:3
-msgid "Odoo Online (SaaS)"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:6
-msgid "Requesting a test upgrade"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:8
-msgid "Go to your `database manager <https://www.odoo.com/my/databases/>`_"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:9
-msgid "Click on your profile icon and select *My Databases*."
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:0
-msgid "Selecting My Databases under my profile"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:14
-msgid "Click on the action settings icon next to your main database and select the *Upgrade* option."
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:0
-msgid "Selecting the action settings icon"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:19
-msgid "In the pop-up message that will appear, select Test Upgrade."
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:0
-msgid "Selecting test upgrade"
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:24
-msgid "This triggers the automated upgrade process. A confirmation email is then sent to you with the the link to the upgraded database or to provide information if the upgrade failed."
-msgstr ""
-
-#: ../../content/administration/upgrade/online_hosting.rst:28
-msgid "You can also see and access your test database from your *My Databases* page."
 msgstr ""
