@@ -7,7 +7,7 @@ Owl Components
 The Odoo Javascript framework uses a custom component framework called Owl. It
 is a declarative component system, loosely inspired by Vue and React. Components
 are defined using :doc:`QWeb templates <qweb>`, enriched with some Owl
-specific directives. The official 
+specific directives. The official
 `Owl documentation <https://github.com/odoo/owl/blob/master/doc/readme.md>`_
 contains a complete reference and a tutorial.
 
@@ -28,7 +28,7 @@ page will only provide Odoo specific information. But first, let us see how we
 can make a simple component in Odoo.
 
 .. code-block:: javascript
-    
+
     const { useState } = owl.hooks;
     const { xml } = owl.tags;
 
@@ -66,7 +66,7 @@ loading the javascript/css files, and loading the templates into Owl.
 Here is how the component above should be defined:
 
 .. code-block:: javascript
-    
+
     const { useState } = owl.hooks;
 
     class MyComponent extends Component {
@@ -133,7 +133,7 @@ in Odoo directly uses the constructor method. Instead, components should use the
         }
     }
 
-Another good practice is to use a consistent convention for template names: 
+Another good practice is to use a consistent convention for template names:
 `addon_name.ComponentName`. This prevents name collision between odoo addons.
 
 Reference List
@@ -184,7 +184,7 @@ Props
     :widths: 20 20 60
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - `value`
@@ -202,7 +202,7 @@ Dropdown
 Location
 ~~~~~~~~
 
-`@web/core/dropdown/dropdown` and `@web/core/dropdown/dropdown_item`  
+`@web/core/dropdown/dropdown` and `@web/core/dropdown/dropdown_item`
 
 Description
 ~~~~~~~~~~~

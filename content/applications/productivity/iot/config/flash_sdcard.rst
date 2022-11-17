@@ -16,7 +16,7 @@ will be saved.
 
 .. note::
    This process can take more than 30 minutes. Do not turn off or unplug
-   the IoT Box as it would leave it in an inconsistent state. 
+   the IoT Box as it would leave it in an inconsistent state.
 
 .. image:: flash_sdcard/flash_sdcard01.png
    :align: center

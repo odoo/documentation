@@ -6,7 +6,7 @@ Hooks
 
 `Owl hooks <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_ are a
 way to factorize code, even if it depends on some component lifecycle. Most hooks
-provided by Owl are related to the lifecycle of a component, but some of them (such as 
+provided by Owl are related to the lifecycle of a component, but some of them (such as
 `useComponent <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#usecomponent>`_)
 provide a way to build specific hooks.
 
@@ -112,7 +112,7 @@ resized/scrolled.
 
 .. note::
    The following CSS classes can be used to style the target HTMLElement:
-   
+
    - `o-popper-position`
    - `o-popper-position--{D}{V}` where `{D}` and `{V}` are replaced by the first letter of the corresponding Direction and Variant (see Options table below for valid directions and variants). E.g.: for position `bottom-end`, the class name will be `o-popper-position--be`.
 

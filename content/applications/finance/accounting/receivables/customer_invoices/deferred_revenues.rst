@@ -42,7 +42,7 @@ Configuration --> Chart of Accounts`, click on *Create*, and fill out the form.
 
 .. note::
    This account's type must be either *Current Liabilities* or *Non-current Liabilities*
-   
+
 Post an income to the right account
 -----------------------------------
 
@@ -64,7 +64,7 @@ save.
 
 .. image:: deferred_revenues/deferred_revenues03.png
    :align: center
-   :alt: Change of the Income Account for a product in Odoo 
+   :alt: Change of the Income Account for a product in Odoo
 
 .. tip::
    It is possible to automate the creation of revenue entries for these products (see:
@@ -75,11 +75,11 @@ Change the account of a posted journal item
 
 To do so, open your Sales Journal by going to
 :menuselection:`Accounting --> Accounting --> Sales`, select the journal item you
-want to modify, click on the account, and select the right one. 
+want to modify, click on the account, and select the right one.
 
 .. image:: deferred_revenues/deferred_revenues04.png
    :align: center
-   :alt: Modification of a posted journal item's account in Odoo Accounting 
+   :alt: Modification of a posted journal item's account in Odoo Accounting
 
 Deferred Revenues entries
 =========================
@@ -107,8 +107,8 @@ recognize your revenue, and at which date.
 
 .. image:: deferred_revenues/deferred_revenues06.png
    :align: center
-   :alt: Revenue Board in Odoo Accounting   
-   
+   :alt: Revenue Board in Odoo Accounting
+
 What does "Prorata Temporis" mean?
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
@@ -126,7 +126,7 @@ Deferred Entry from the Sales Journal
 
 You can create a deferred entry from a specific journal item in your **Sales Journal**.
 
-To do so, open your Sales Journal by going to 
+To do so, open your Sales Journal by going to
 :menuselection:`Accounting --> Accounting --> Sales`, and select the journal item you want to defer.
 Make sure that it is posted in the right account (see:
 `Change the account of a posted journal item`_).

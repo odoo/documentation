@@ -13,7 +13,7 @@ Configuration
 =============
 
 To configure the use of packages, go to the menu
-:menuselection:`Inventory --> Configuration --> Settings`. 
+:menuselection:`Inventory --> Configuration --> Settings`.
 Locate the **Packages** section and tick **Record
 packages used on packing: pallets, boxes,...**
 

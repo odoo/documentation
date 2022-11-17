@@ -950,7 +950,7 @@ The convention is to organize the code according to the following structure:
     - *static/src/js*
 
       - *static/src/js/tours*: end user tour files (tutorials, not tests)
-      
+
     - *static/src/scss*: scss files
     - *static/src/xml*: all qweb templates that will be rendered in JS
 

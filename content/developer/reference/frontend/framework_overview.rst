@@ -44,11 +44,11 @@ on the web client.
 Code structure
 ==============
 
-The ``web/static/src`` folder contains all the ``web/`` javascript (and css and 
+The ``web/static/src`` folder contains all the ``web/`` javascript (and css and
 templates) codebase. Here is a list of the most important folders:
 
 - ``core/`` most of the low level features
-- ``fields/`` all field components           
+- ``fields/`` all field components
 - ``views/`` all javascript views components (``form``, ``list``, ...)
 - ``search/`` control panel, search bar, search panel, ...
 - ``webclient/`` the web client specific code: navbar, user menu, action service, ...
@@ -57,7 +57,7 @@ The ``web/static/src`` is the root folder. Everything inside can simply be
 imported by using the ``@web`` prefix. For example, here is how one can import
 the ``memoize`` function located in ``web/static/src/core/utils/functions``:
 
-.. code-block:: javascript 
+.. code-block:: javascript
 
     import { memoize } from "@web/core/utils/functions";
 
@@ -86,7 +86,7 @@ all active actions (represented in the breadcrumbs), and coordinates each
 change.
 
 Another interesting thing to note is the ``MainComponentsContainer``: it is
-simply a component that displays all components registered in the 
+simply a component that displays all components registered in the
 ``main_components`` registry. This is how other parts of the system can extend
 the web client.
 
@@ -197,14 +197,14 @@ Components and Hooks
 
 :ref:`Components <frontend/components>` and :ref:`hooks <frontend/hooks>` are ideas coming from the
 `Owl component system <https://github.com/odoo/owl/blob/master/doc/readme.md>`_.
-Odoo components are simply owl components that are part of the web client. 
+Odoo components are simply owl components that are part of the web client.
 
 `Hooks <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_ are a
 way to factorize code, even if it depends on lifecycle. This is a
 composable/functional way to inject a feature in a component. They can be seen
-as a kind of mixin. 
+as a kind of mixin.
 
-.. code-block:: javascript 
+.. code-block:: javascript
 
     function useCurrentTime() {
         const state = useState({ now: new Date() });
@@ -222,7 +222,7 @@ An important concept in the Odoo javascript is the *context*: it provides a way
 for code to give more context to a function call or a rpc, so other parts of the
 system can properly react to that information. In some way, it is like a bag of
 information that is propagated everywhere. It is useful in some situations, such
-as letting the Odoo server know that a model rpc comes from a specific form view, 
+as letting the Odoo server know that a model rpc comes from a specific form view,
 or activating/disabling some features in a component.
 
 There are two different contexts in the Odoo web client: the *user context* and
@@ -258,7 +258,7 @@ It contains the following information:
     :widths: 20 20 60
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - `allowed_company_ids`
@@ -269,7 +269,7 @@ It contains the following information:
       - the user language code (such as "en_us")
     * - `tz`
       - `string`
-      - the user current timezone (for example "Europe/Brussels")  
+      - the user current timezone (for example "Europe/Brussels")
 
 In practice, the `orm` service automatically adds the user context to each of
 its requests. This is why it is usually not necessary to import it directly in
@@ -405,11 +405,11 @@ class:
     domain.contains({ a: -1, b: 2, c: 3 }); // false
 
     // next expression returns ["|", ("a", "=", 1), ("b", "<=", 3)]
-    Domain.or([[["a", "=", 1]], "[('b', '<=', 3)]"]).toString(); 
+    Domain.or([[["a", "=", 1]], "[('b', '<=', 3)]"]).toString();
 
 Here is the `Domain` class description:
 
-.. js:class:: Domain([descr]) 
+.. js:class:: Domain([descr])
 
   :param descr: a domain description
   :type descr: string | any[] | Domain
@@ -568,7 +568,7 @@ It is mostly interesting for testing purposes: all code using the browser object
 can be tested easily by mocking the relevant functions for the duration of the
 test.
 
-It contains the following content: 
+It contains the following content:
 
 .. list-table::
 
@@ -617,7 +617,7 @@ The `debug` mode current value can be read in the :ref:`environment<frontend/fra
 
     To show menus, fields or view elements only in debug mode, you should target
     the group `base.group_no_one`:
-    
+
     .. code-block:: xml
 
         <field name="fname" groups="base.group_no_one"/>

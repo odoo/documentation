@@ -47,7 +47,7 @@ Defining a service
 A service needs to implement the following interface:
 
 .. js:data:: dependencies
-    
+
     Optional list of strings. It is the list of all dependencies (other services)
     that this service needs
 
@@ -56,7 +56,7 @@ A service needs to implement the following interface:
     :param Environment env: the application environment
     :param Object deps: all requested dependencies
     :returns: value of service or Promise<value of service>
-       
+
     This is the main definition for the service. It can return either a value or
     a promise. In that case, the service loader simply waits for the promise to
     resolve to a value, which is then the value of the service.
@@ -66,7 +66,7 @@ A service needs to implement the following interface:
     set to ``null`` in ``env.services``.
 
 .. js:data:: async
-  
+
     Optional value. If given, it should be `true` or a list of strings.
 
     Some services need to provide an asynchronous API. For example, the `rpc`
@@ -166,7 +166,7 @@ API
     :param number ttl: optional. the time in seconds before the cookie will be deleted (default=1 year)
 
     Sets the cookie `name` to the value `value` with a max age of `ttl`
-    
+
 .. js:function:: deleteCookie(name)
 
     :param string name: name of the cookie
@@ -204,7 +204,7 @@ Here's how this can be displayed:
       message: "Boom! Team record for the past 30 days.",
     });
 
-.. warning :: 
+.. warning ::
     The hook `useEffect` is not related to the effect service.
 
 API
@@ -239,16 +239,16 @@ RainbowMan
 .. list-table::
     :widths: 20 40 40
     :header-rows: 1
-    
-    * - Name 
+
+    * - Name
       - Type
       - Description
     * - `params.message`
       - `string?="Well Done"`
-      - The message in the notice the rainbowman holds or the content of the notification if effects are disabled. 
-        
-        Can be a simple a string. 
-        
+      - The message in the notice the rainbowman holds or the content of the notification if effects are disabled.
+
+        Can be a simple a string.
+
         Can be a string representation of html (prefer component if you want interactions in the DOM).
     * - `params.img_url`
       - `string?=/web/static/img/smile.svg`
@@ -259,10 +259,10 @@ RainbowMan
     * - `params.fadeout`
       - `("slow"|"medium"|"fast"|"no")?="medium"`
       - Delay for rainbowman to disappear.
-      
+
         `"fast"` will make rainbowman dissapear quickly.
 
-        `"medium"` and 'slow' will wait little longer before disappearing (can be used when `options.message` is longer). 
+        `"medium"` and 'slow' will wait little longer before disappearing (can be used when `options.message` is longer).
 
         `"no"` will keep rainbowman on screen until user clicks anywhere outside rainbowman.
 
@@ -291,18 +291,18 @@ The function must follow this API:
 .. js:function:: <newEffectFunction>(env, params)
 
     :param Env env: the environment received by the service
-    
+
     :param object params: the params received from the add function on the service.
 
     :returns: `({Component, props} | void)` A component and its props or nothing.
 
-This function must create a component and return it. This component is mounted inside the 
+This function must create a component and return it. This component is mounted inside the
 effect component container.
 
 Example
 ~~~~~~~
 
-Let's say we want to add an effect that add a sepia look at the page. 
+Let's say we want to add an effect that add a sepia look at the page.
 
 .. code-block:: javascript
 
@@ -334,7 +334,7 @@ Let's say we want to add an effect that add a sepia look at the page.
   effectRegistry.add("sepia", sepiaEffectProvider);
 
 
-And then, call it somewhere you want and you will see the result. 
+And then, call it somewhere you want and you will see the result.
 Here, it is called in webclient.js to make it visible everywhere for the example.
 
 .. code-block:: javascript
@@ -390,7 +390,7 @@ Example
 
   const httpService = useService("http");
   const data = await httpService.get("https://something.com/posts/1");
-  // ... 
+  // ...
   await httpService.post("https://something.com/posts/1", { title: "new title", content: "new content" });
 
 .. _frontend/services/notification:
@@ -405,17 +405,17 @@ Overview
 * Dependencies: None
 
 The `notification` service allows to display notifications on the screen.
-  
+
 .. code-block:: javascript
 
   const notificationService = useService("notification");
-  notificationService.add("I'm a very simple notification"); 
-  
+  notificationService.add("I'm a very simple notification");
+
 API
 ~~~
 
 .. js:function:: add(message[, options])
-  
+
     :param string message: the notification message to display
     :param object options: the options of the notification
     :returns: a function to close the notification
@@ -475,7 +475,7 @@ Examples
 A notification for when a sale deal is made with a button to go some kind of commission page.
 
 .. code-block:: javascript
-    
+
   // in setup
   this.notificationService = useService("notification");
   this.actionService = useService("actionService");
@@ -532,16 +532,16 @@ API
 
    The current route can be accessed with the ``current`` key. It is an object
    with the following information:
- 
+
    * `pathname (string)`: the path for the current location (most likely `/web` )
    * `search (object)`: a dictionary mapping each search keyword (the querystring)
      from the url to its value. An empty string is the value if no value was
      explicitely given
-   * `hash (object)`: same as above, but for values described in the hash. 
+   * `hash (object)`: same as above, but for values described in the hash.
 
 For example:
 
-.. code-block:: javascript 
+.. code-block:: javascript
 
   // url = /web?debug=assets#action=123&owl&menu_id=174
   const { pathname, search, hash } = env.services.router.current;
@@ -584,10 +584,10 @@ For example:
 Finally, the `redirect` method will redirect the browser to a specified url:
 
 .. js:function:: redirect(url[, wait])
-  
+
   :param string url: a valid url
   :param boolean wait: if true, wait for the server to be ready, and redirect after
-  
+
   Redirect the browser to `url`. This method reloads the page. The `wait`
   argument is rarely used: it is useful in some cases where we know that the
   server will be unavailable for a short duration, typically just after an addon
@@ -614,14 +614,14 @@ argument and optionally, a ``params`` object can be given as a second argument.
 
 .. code-block:: javascript
 
-   // in setup 
+   // in setup
    this.rpc = useService("rpc");
 
    // somewhere else, in an async function:
    const result = await this.rpc("/my/route", { some: "value" });
 
 .. note::
-    
+
     Note that the ``rpc`` service is considered a low-level service. It should
     only be used to interact with Odoo controllers. To work with models (which
     is by far the most important usecase), one should use the ``orm`` service
@@ -635,9 +635,9 @@ API
     :param string route: route targeted by the request
     :param Object params: parameters sent to the server
     :param Object settings (optional): request settings (see below)
-    
+
     The ``settings`` object can contain:
-    
+
     - ``xhr``, which should be a ``XMLHTTPRequest`` object. In that case,
       the ``rpc`` method will simply use it instead of creating a new one. This
       is useful when one accesses advanced features of the `XMLHTTPRequest` API.
@@ -667,7 +667,7 @@ When a rpc fails, then:
 
 * the promise representing the rpc is rejected, so the calling code will crash,
   unless it handles the situation
-* 
+*
   an event ``RPC_ERROR`` is triggered on the main application bus. The event payload
   contains a description of the cause of the error:
 
@@ -677,10 +677,10 @@ When a rpc fails, then:
 
   * ``type = 'server'``
   * ``message(string)``
-  * 
+  *
     ``code(number)``
 
-  * 
+  *
     ``name(string)`` (optional, used by the error service to look for an appropriate
     dialog to use when handling the error)
 
@@ -709,13 +709,13 @@ Whenever the user clicks on an anchor in the web client, this service automatica
 to the target (if appropriate).
 
 The service adds an event listener to get `click`'s on the document. The service checks
-if the selector contained in its href attribute is valid to distinguish anchors and Odoo 
+if the selector contained in its href attribute is valid to distinguish anchors and Odoo
 actions (e.g. `<a href="#target_element"></a>`). It does nothing if it is not the case.
 
-An event `SCROLLER:ANCHOR_LINK_CLICKED` is triggered on the main application bus if the click seems to be 
+An event `SCROLLER:ANCHOR_LINK_CLICKED` is triggered on the main application bus if the click seems to be
 targeted at an element. The event contains a custom event containing the `element` matching and its `id` as a reference.
-It may allow other parts to handle a behavior relative to anchors themselves. The original event is also 
-given as it might need to be prevented. If the event is not prevented, then the user interface will 
+It may allow other parts to handle a behavior relative to anchors themselves. The original event is also
+given as it might need to be prevented. If the event is not prevented, then the user interface will
 scroll to the target element.
 
 API
@@ -727,7 +727,7 @@ The following values are contained in the `anchor-link-clicked` custom event exp
     :widths: 25 25 50
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - `element`
@@ -790,7 +790,7 @@ Its API is:
    This is a string representing the current title. It is structured in the
    following way: ``value_1 - ... - value_n`` where each `value_i` is a (non null)
    value found in the `Parts` object (returned by the `getParts` function)
-  
+
 .. js:function:: getParts
 
    :returns: Parts the current `Parts` object maintained by the title service
@@ -829,9 +829,9 @@ Overview
 ~~~~~~~~
 
 * Technical name: `user`
-* Dependencies: `rpc` 
+* Dependencies: `rpc`
 
-The `user` service provides a bunch of data and a few helper functions concerning 
+The `user` service provides a bunch of data and a few helper functions concerning
 the connected user.
 
 
@@ -842,7 +842,7 @@ API
     :widths: 25 25 50
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - ``context``
@@ -862,7 +862,7 @@ API
       - Whether the user is part of the system group (`base.group_system`)
     * - ``lang``
       - ``string``
-      - language used 
+      - language used
     * - ``name``
       - ``string``
       - Name of the user

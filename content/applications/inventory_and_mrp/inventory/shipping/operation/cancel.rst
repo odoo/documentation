@@ -14,7 +14,7 @@ the destination.
 
 You can easily cancel the request made to the carrier system.
 
-How to cancel a shipping request? 
+How to cancel a shipping request?
 =================================
 
 -   If the delivery order is not **Validated**, then the request hasn't been
@@ -36,7 +36,7 @@ You will now see that the shipment has been cancelled.
 
 You can now change the carrier if you wish.
 
-How to send a shipping request after cancelling one? 
+How to send a shipping request after cancelling one?
 ====================================================
 
 After cancelling the shipping request, you can change the carrier you
