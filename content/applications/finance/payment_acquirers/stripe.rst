@@ -133,7 +133,7 @@ To set it up, enable the :guilabel:`Capture Amount Manually` option on Odoo, as 
    payment if unsupported payment methods are selected.
 
 .. caution::
-   Odoo doesn't support the partial capture yet. Be aware that a partial capture from Stripe's 
+   Odoo doesn't support the partial capture yet. Be aware that a partial capture from Stripe's
    interface is still managed as a full capture by Odoo.
 
 .. seealso::

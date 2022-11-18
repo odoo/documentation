@@ -15,5 +15,5 @@ If you like to show your products under several angles, you can turn the image i
 .. image:: multi_images/multi_images02.png
    :align: center
 
-.. note:: 
+.. note::
     Such extra image are common to all the product variants (if any).

@@ -38,7 +38,7 @@ goods in output and then deliver (3 steps)* for *Outgoing Shipments*.
     :align: center
 
 Activating this option will lead to the creation of two new locations,
-*Output* and *Packing Zone*. If you want to rename it go to :menuselection:`Inventory --> 
+*Output* and *Packing Zone*. If you want to rename it go to :menuselection:`Inventory -->
 Configuration --> Locations`, *Select* the one you want to rename and update its name.
 
 Create a Sales Order

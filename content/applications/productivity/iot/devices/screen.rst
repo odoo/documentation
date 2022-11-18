@@ -8,7 +8,7 @@ connected, the screen can be used to display a :abbr:`PoS (Point of Sale)` order
 .. image:: screen/screen-pos-client-display.png
    :align: center
    :alt: An example of a PoS (point of sale) order on a screen display.
-   
+
 .. note::
    Access the customer display from any other computer by going to the :abbr:`IoT (Internet of Things)`
    Box homepage and clicking on the :guilabel:`POS Display` button.
@@ -47,21 +47,21 @@ screen.
    :align: center
    :alt: The default "POS Client Display" screen that appears when a screen display is successfully
          connected to an IoT Box.
-   
+
 The screen should also appear in the list of :guilabel:`Displays` on the :abbr:`IoT (Internet of
 Things)` Box homepage.
 
 .. image:: screen/screen-screen-name-example.png
    :align: center
    :alt: An example of a screen display name shown on the IoT Box homepage.
-   
+
 .. note::
     If no screen is detected, a default display named :guilabel:`Distant Display` will be used instead.
 
     .. image:: screen/screen-no-screen.png
        :align: center
        :alt: The "Distant Display" screen name will be used if no screen is detected.
-   
+
 Usage
 =====
 
@@ -78,7 +78,7 @@ Now, select :guilabel:`IoT Box` in the drop-down menu and choose the screen in t
     .. image:: screen/screen-pos-screen-config.png
        :align: center
        :alt: Connect the screen display to the Point of Sale app.
-   
+
 The screen is now available for :abbr:`PoS (Point of Sale)` sessions. A "screen" icon will appear
 in the top bar to inform the connection status with the screen.
 

@@ -407,7 +407,7 @@ Calendar
 --------
 
 Calendar views display records as events in a daily, weekly, monthly or yearly
-calendar. 
+calendar.
 
 .. note:: By default the calendar view will be centered around the current date
    (today). You can pass a specific initial date to the context of the action in

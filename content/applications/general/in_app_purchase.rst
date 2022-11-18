@@ -29,7 +29,7 @@ Settings --> IAP Account`.
 
 .. image:: in_app_purchase/image2.png
    :align: center
-   
+
 IAP Portal
 ==========
 
@@ -62,7 +62,7 @@ Different services are available depending on the hosting type of your Database:
 - *Odoo.sh and Odoo Enterprise (on-premise)*: both the services provided by Odoo and by third-party
   apps can be used.
 
-Offering my own services 
+Offering my own services
 ========================
 
 I am more than welcome to offer my own IAP services through Odoo Apps! It is the perfect opportunity
