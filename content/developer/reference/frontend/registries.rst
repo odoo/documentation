@@ -10,7 +10,7 @@ into a registry whenever it needs a definition for some object (such as fields,
 views, client actions or services). Customizing the web client is then simply
 done by adding specific values in the correct registry.
 
-.. code-block:: javascript 
+.. code-block:: javascript
 
    import { Registry } from "@web/core/registry";
 
@@ -25,7 +25,7 @@ obtained by the `category` method. If the sub registry does not exist yet, it
 is created on the fly. All registries used by the web client are obtained
 in such a way from one root registry, exported in `@web/core/registry`.
 
-.. code-block:: javascript 
+.. code-block:: javascript
 
    import { registry } from "@web/core/registry";
 
@@ -58,7 +58,7 @@ Registry API
         also triggers an `UPDATE` event.
 
         Returns the same registry, so `add` method calls can be chained.
-  
+
     .. js:method:: get(key[, defaultValue])
 
         :param string key: key for the entry
@@ -67,7 +67,7 @@ Registry API
         Returns the value corresponding to the `key` argument. If the registry does
         not contain that key, this method returns `defaultValue` if given, or throws
         an error otherwise.
-    
+
     .. js:method:: contains(key)
 
         :param string key: key for the entry
@@ -78,21 +78,21 @@ Registry API
     .. js:method:: getAll()
 
         :returns: any[]
-    
+
         Returns the list of all elements in the registry. It is ordered
         according to the sequence numbers.
 
     .. js:method:: remove(key)
 
         :param string key: the key for the entry that should be removed
-        
+
         Removes a key/value pair from the registry. This operation triggers an
         `UPDATE` event.
 
     .. js:method:: category(subcategory)
 
         :param string subcategory: the name for the sub category
-        :returns: Registry 
+        :returns: Registry
 
         Returns the sub registry associated with the `subcategory`. If it does not
         exist yet, the sub registry is created on the fly.
@@ -135,7 +135,7 @@ for more details.
 Formatter registry
 ------------------
 
-The `formatters` registry contains functions to format values. Each formatter 
+The `formatters` registry contains functions to format values. Each formatter
 has the following API:
 
 .. js:function:: format(value[, options])
@@ -166,7 +166,7 @@ API
         interface {
           Component: Owl Component class
           props?: any
-        } 
+        }
 
 
 For example, the `LoadingIndicator` component can be added in the registry like
@@ -183,7 +183,7 @@ this:
 Parser registry
 ---------------
 
-The `parsers` registry contains functions to parse values. Each parser 
+The `parsers` registry contains functions to parse values. Each parser
 has the following API:
 
 .. js:function:: parse(value[, options])
@@ -192,7 +192,7 @@ has the following API:
     :param value: a string representing a value
     :type value: string
     :param Object options: various options (parser specific)
-    :returns: T a valid value 
+    :returns: T a valid value
 
     Parses a string and returns a value. If the string does not represent a valid
     value, parsers can fail and throw errors.

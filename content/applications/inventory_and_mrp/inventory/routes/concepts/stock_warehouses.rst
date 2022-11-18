@@ -23,7 +23,7 @@ Now, you have to make sure that the main stock locations of warehouse A and ware
 Sell a product from the virtual warehouse
 ==========================================
 
-Let’s say you have two products, one stored in warehouse A and one stored in warehouse B. Now, you can create a new quotation for one of each product. Go to other information and choose Warehouse A+B in the shipping information. 
+Let’s say you have two products, one stored in warehouse A and one stored in warehouse B. Now, you can create a new quotation for one of each product. Go to other information and choose Warehouse A+B in the shipping information.
 
 .. image:: stock_warehouses/ware3.png
    :align: center

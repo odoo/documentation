@@ -40,7 +40,7 @@ After that, the different transfers that needed to be included in the batch tran
           to the batch transfer
 
 To see the products to pick for the different transfers, click on
-*Select*. If *Multi-locations* has been activated, the document also shows the locations they have 
+*Select*. If *Multi-locations* has been activated, the document also shows the locations they have
 been reserved from.
 
 .. image:: batch_transfers/batch_transfers_05.png
@@ -77,12 +77,12 @@ too.
     :align: center
     :alt: View of an in progress batch transfer
 
-In case all the products cannot be picked, you can create backorders for each individual transfer 
+In case all the products cannot be picked, you can create backorders for each individual transfer
 which couldn’t be completely processed.
 
 .. image:: batch_transfers/batch_transfers_09.png
     :align: center
-    :alt: How to handle batch transfers with unavailable products. Creation of a backorder inside 
+    :alt: How to handle batch transfers with unavailable products. Creation of a backorder inside
           of a batch transfer
 
 .. image:: batch_transfers/batch_transfers_10.png

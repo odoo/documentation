@@ -4,10 +4,10 @@ How to track your website's traffic in Google Analytics
 
 To follow your website's traffic with Google Analytics:
 
-- `Create a Google Analytics account <https://www.google.com/analytics/>`__ if 
+- `Create a Google Analytics account <https://www.google.com/analytics/>`__ if
   you don't have any.
 
-- Go through the creation form and accept the conditions to get the tracking ID.  
+- Go through the creation form and accept the conditions to get the tracking ID.
 
     .. image:: google_analytics/google_analytics_account.png
         :align: center

@@ -8,11 +8,11 @@ production based on your demand forecast.
 Configuration
 =============
 
-Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and 
+Go to the :menuselection:`Manufacturing app --> Configuration --> Settings` and
 activate the Master Production Schedule feature before hitting save.
 
 .. tip::
-        In the MPS settings, you can define the time range of your MPS (month/week/day) 
+        In the MPS settings, you can define the time range of your MPS (month/week/day)
         and the number of periods you want to display at all times.
 
 Now, go to :menuselection:`Planning --> Master Production Schedule` and click on *add a
@@ -24,7 +24,7 @@ maximum quantities that must or can be replenished in each period.
     :align: center
 
 In the MPS view, you can decide which information you would like to display
-by clicking on *rows*. For instance, the *Actual demand* will show you which 
+by clicking on *rows*. For instance, the *Actual demand* will show you which
 quantity of products has already been ordered for the period, or *Available to Promise*,
 what can still be sold during that same period (what you plan to replenish - what
 is already sold during the period). You can also decide to hide rows if you like.
@@ -35,15 +35,15 @@ is already sold during the period). You can also decide to hide rows if you like
 Estimate your demand and launch replenishment
 =============================================
 
-The next step is to estimate the demand for the chosen period. This is done 
+The next step is to estimate the demand for the chosen period. This is done
 in the *Forecasted Demand* Row. You can easily, at any time, compare the demand
-forecast with the actual demand (= confirmed sales). The demand forecast for a 
+forecast with the actual demand (= confirmed sales). The demand forecast for a
 finished product will impact the indirect demand for its components.
 
 .. image:: use_mps/mps_3.png
     :align: center
 
-Once the forecasted demand has been set, the quantity to replenish for the 
+Once the forecasted demand has been set, the quantity to replenish for the
 different periods will automatically be computed. The replenishments you are supposed
 to launch based on your lead times (vendor lead time or manufacturing lead time)
 are then displayed in green. You can now launch the replenishment by clicking

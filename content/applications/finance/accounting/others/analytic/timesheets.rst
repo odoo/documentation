@@ -19,7 +19,7 @@ First, install the three applications necessary to use this
 functionality, namely **Accounting**, **Sales** and **Timesheet**. Enter the apps
 module name and install them.
 
-.. image:: timesheets/timesheets14.png  
+.. image:: timesheets/timesheets14.png
    :align: center
 
 .. image:: timesheets/timesheets05.png
@@ -51,14 +51,14 @@ cost of 18 euros / hours. We will thus fill in 18 in this field.
 .. image:: timesheets/timesheets07.png
    :align: center
 
-.. note:: 
+.. note::
     If you want the employee to be able to enter timesheets he
     needs to be related to a User.
 
 Repeat the operation to create the Cedric Digory employee. Don't forget
 to specify its related user and **Timesheet Costs**.
 
-Issue a Sales Order 
+Issue a Sales Order
 --------------------
 
 We created two employees called Harry Potter and Cedric Diggory in the
@@ -121,7 +121,7 @@ Without filters
 
 If we pointed all our costs and revenues of the project on the correct
 analytical account we can easily retrieve the cost and revenues related
-to this analytical account. Enter the *Accounting* app, select 
+to this analytical account. Enter the *Accounting* app, select
 :menuselection:`Adviser --> Analytic Accounts --> Open Charts`.
 
 Note : you can specify a period for **Analysis**. If you want to open the

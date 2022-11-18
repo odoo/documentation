@@ -14,4 +14,3 @@ Miscellaneous
     general/digest_emails
     general/in_app_purchase
     general/developer_mode
-    
