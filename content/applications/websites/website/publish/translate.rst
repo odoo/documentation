@@ -37,4 +37,3 @@ that some of the text has been translated automatically.
 
 To translate the content of the website, click on **Translate** (here
 **Traduire** since we want to translate the website in French).
-

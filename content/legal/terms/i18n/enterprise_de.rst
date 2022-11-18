@@ -481,4 +481,3 @@ Bestimmung möglichst mit gleichen Wirkungen und Zielen zu ersetzen.
 .. only:: html
 
     Siehe :ref:`odoo_enterprise_license`.
-
