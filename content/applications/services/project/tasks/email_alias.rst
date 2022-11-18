@@ -35,4 +35,3 @@ The email can be seen under the name of your project on the dashboard.
    :align: center
    :height: 300
    :alt: View of the email alias chosen on the dashboard view in Odoo Project
-

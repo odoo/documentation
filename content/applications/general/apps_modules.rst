@@ -72,5 +72,3 @@ To complete the uninstallation, click on *Confirm*.
 
 .. danger::
    Uninstalling an app also uninstalls all its dependencies and permanently erases their data.
-
-

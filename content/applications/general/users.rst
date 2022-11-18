@@ -17,4 +17,3 @@ can be applied. Users and access rights can be added and changed at any point.
    users/language
    users/access_rights
    users/companies
-
