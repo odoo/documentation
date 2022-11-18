@@ -277,18 +277,18 @@ the template, such as data from additional models:
 
 Custom fonts
 ============
-If you want to use custom fonts you will need to add your custom font and the related less/CSS to the ``web.reports_assets_common`` assets bundle. 
+If you want to use custom fonts you will need to add your custom font and the related Scss/CSS to the ``web.reports_assets_common`` assets bundle in the manifest.
 Adding your custom font(s) to ``web.assets_common`` or ``web.assets_backend`` will not make your font available in QWeb reports.
 
 Example::
 
-    <template id="report_assets_common_custom_fonts" name="Custom QWeb fonts" inherit_id="web.report_assets_common">
-        <xpath expr="." position="inside">
-            <link href="/your_module/static/src/less/fonts.less" rel="stylesheet" type="text/less"/>
-        </xpath>
-    </template>
+    'assets': {
+        'web.report_assets_common': [
+            '/your_module/static/src/css/fonts.scss',
+        ],
+    },
 
-You will need to define your ``@font-face`` within this less file, even if you've used in another assets bundle (other than ``web.reports_assets_common``).
+You will need to define your ``@font-face`` within this scss file, even if you've used in another assets bundle (other than ``web.reports_assets_common``).
 
 Example::
 
@@ -303,7 +303,7 @@ Example::
         color: #3399cc;
     }
 
-After you've added the less into your assets bundle you can use the classes - in this example ``h1-title-big`` - in your custom QWeb report.
+After you've added the scss into your assets bundle you can use the classes - in this example ``h1-title-big`` - in your custom QWeb report.
 
 Reports are web pages
 =====================
