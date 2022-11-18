@@ -222,4 +222,3 @@ The configuration should also be done in the General Settings under the "Integra
 - The PBX Server IP should be the same as the IP you define in the http.conf file.
 
 - The WebSocket should be: ws://localhost:XXXX/ws where "localhost" needs to be the same as the IP defined previously and "XXXX" needs to be the port defined in the http.conf file.
-

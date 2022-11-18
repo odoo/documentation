@@ -12,6 +12,3 @@ Optimize
    optimize/plausible
    optimize/link_tracker
    optimize/unsplash
-
-
-

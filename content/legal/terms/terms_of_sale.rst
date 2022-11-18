@@ -66,4 +66,3 @@ acceptation of those terms.
 All our contractual relations will be governed exclusively by Belgian law.
 Moreover, any dispute that may arise will be subject exclusively to the
 jurisdiction of the courts of the Nivelles arrondissement (Belgium).
-

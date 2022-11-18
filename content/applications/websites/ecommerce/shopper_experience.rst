@@ -9,7 +9,3 @@ Get paid
 
    shopper_experience/payment_providers
    shopper_experience/portal
-
-
-
-

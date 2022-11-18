@@ -51,5 +51,3 @@ possibilities to make their online payments. For example:
    - :doc:`/applications/finance/payment_providers`
    - :doc:`/applications/finance/payment_providers/paypal`
    - :doc:`/applications/finance/payment_providers/authorize`
-
-

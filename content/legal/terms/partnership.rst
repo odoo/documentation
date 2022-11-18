@@ -378,6 +378,3 @@ found shall be finally settled by the Courts of Belgium in Nivelles.
 .. only:: html
 
     See :ref:`odoo_enterprise_license`.
-
-
-

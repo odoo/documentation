@@ -33,4 +33,3 @@ can also see the granted badges.
 
 .. seealso::
    - :doc:`time_random`
-
