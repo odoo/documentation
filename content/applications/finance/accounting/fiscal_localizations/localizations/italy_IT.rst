@@ -128,4 +128,3 @@ cliccare su invia. Il documento verrà poi mostrato tra gli allegati.
 
 .. image:: italy_IT/italy_IT06.png
   :align: center
-

@@ -26,4 +26,3 @@ Go to :menuselection:`Accounting --> Settings --> Customer Invoices`, then enabl
    <general/upgrade>` the ``account_intrastat`` module to add the new transaction codes and
    :ref:`install <general/install>` the ``account_intrastat_expiry`` module to archive the old
    codes.
-
