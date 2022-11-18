@@ -123,7 +123,7 @@ server in Odoo. The configuration automatically loads the token in Odoo, and a t
    :align: center
    :alt: Configure Outgoing Email Servers in Odoo.
 
-Finally, save the settings and :guilabel:`Test the Connection`. A confirmation message should 
+Finally, save the settings and :guilabel:`Test the Connection`. A confirmation message should
 appear. The Odoo database can now send safe, secure emails through Google using OAuth
 authentication.
 

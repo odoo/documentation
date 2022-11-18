@@ -265,7 +265,7 @@ Disponibilité
 +++++++++++++
 
 Les demandes d'assistances peuvent être soumises à tout moment en ligne via https://www.odoo.com/help,
-ou par téléphone directement aux différents bureaux d'Odoo SA, ou en cas de travail avec un 
+ou par téléphone directement aux différents bureaux d'Odoo SA, ou en cas de travail avec un
 Partenaire Odoo, le canal préconisé par ce partenaire, pendant les heures de bureau
 correspondantes.
 

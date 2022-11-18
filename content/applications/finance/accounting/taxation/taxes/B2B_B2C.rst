@@ -114,19 +114,19 @@ Setting your products
 
 Your company must be configured with tax excluded by default. This is
 usually the default configuration, but you can check your **Default Sale
-Tax** from the menu :menuselection:`Configuration --> Settings` 
+Tax** from the menu :menuselection:`Configuration --> Settings`
 of the Accounting application.
 
 .. image:: B2B_B2C/price_B2C_B2B01.png
   :align: center
 
 Once done, you can create a **B2C** pricelist. You can activate the
-pricelist feature per customer from the menu: 
-:menuselection:`Configuration --> Settings` of the Sale application. 
+pricelist feature per customer from the menu:
+:menuselection:`Configuration --> Settings` of the Sale application.
 Choose the option **different prices per customer segment**.
 
-Once done, create a B2C pricelist from the menu 
-:menuselection:`Configuration --> Pricelists`. 
+Once done, create a B2C pricelist from the menu
+:menuselection:`Configuration --> Pricelists`.
 It's also good to rename the default pricelist into B2B to avoid confusion.
 
 Then, create a product at 8.26€, with a tax of 21% (defined as tax not
@@ -141,8 +141,8 @@ Setting the B2C fiscal position
 -------------------------------
 
 From the accounting application, create a B2C fiscal position from this
-menu: :menuselection:`Configuration --> Fiscal Positions`. 
-This fiscal position should map the VAT 21% (tax excluded of price) 
+menu: :menuselection:`Configuration --> Fiscal Positions`.
+This fiscal position should map the VAT 21% (tax excluded of price)
 with a VAT 21% (tax included in price)
 
 .. image:: B2B_B2C/price_B2C_B2B03.png
@@ -151,8 +151,8 @@ with a VAT 21% (tax included in price)
 Test by creating a quotation
 ============================
 
-Create a quotation from the Sale application, using the 
-:menuselection:`Sales --> Quotations` menu. You should have the 
+Create a quotation from the Sale application, using the
+:menuselection:`Sales --> Quotations` menu. You should have the
 following result: 8.26€ + 1.73€ = 9.99€.
 
 .. image:: B2B_B2C/price_B2C_B2B04.png
