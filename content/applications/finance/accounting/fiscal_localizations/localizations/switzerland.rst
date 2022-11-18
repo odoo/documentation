@@ -12,7 +12,7 @@ called *Print ISR*.
 .. image:: switzerland/switzerland00.png
     :align: center
 
-.. tip:: 
+.. tip::
     The button *Print ISR* only appears there is well a bank account
     defined on the invoice. You can use CH6309000000250097798 as bank
     account number and 010391391 as CHF ISR reference.
@@ -142,4 +142,4 @@ odoo.com/help.
 .. tip::
     Don't forget to update your fiscal positions. If you have a version
     11.1 (or higher), there is nothing to do. Otherwise, you will also
-    have to update your fiscal positions accordingly. 
+    have to update your fiscal positions accordingly.

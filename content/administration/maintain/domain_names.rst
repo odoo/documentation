@@ -17,7 +17,7 @@ You can use a custom domain name to access your Odoo database and websites:
    ``odoo.com`` for both the URL and the emails (e.g., ``https://example.odoo.com``).
 
 .. important::
-   Odoo offers a :ref:`free custom domain name <domain-name/odoo-register>` to all Odoo Online 
+   Odoo offers a :ref:`free custom domain name <domain-name/odoo-register>` to all Odoo Online
    databases for one year. Visitors can then access your website with an address such as
    ``www.example.com`` rather than the default ``example.odoo.com``.
 

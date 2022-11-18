@@ -37,7 +37,7 @@ Give Odoo permission to process files
 Since the files are transmitted through Odoo's server before being sent to SDICoop or received by
 your database, you need to authorize Odoo to process your files from your database.
 
-To do this, go to :menuselection:`Accounting --> Settings --> Electronic Invoicing` and click on 
+To do this, go to :menuselection:`Accounting --> Settings --> Electronic Invoicing` and click on
 *Register*.
 
 .. image:: italy/register.png
