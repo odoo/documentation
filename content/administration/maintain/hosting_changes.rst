@@ -85,4 +85,3 @@ From Odoo.sh to on-premises
 
 1.  Grab a :ref:`backup of your Odoo.sh production database <odoo_sh_branches_backups>`.
 2.  Restore it from the database manager on your local server.
-
