@@ -81,7 +81,7 @@ Open the products you want to ship and set a weight on it.
     Don't forget to do the conversion if you are used to the imperial
     measurement system.
 
-How to print shipping labels ? 
+How to print shipping labels ?
 ===============================
 
 The delivery order created from the sale order will take the shipping

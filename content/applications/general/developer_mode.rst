@@ -38,7 +38,7 @@ Activate through the command palette
 
 The command palette tool has a command to activate the debug mode: open it with
 the keyboard shortcut `ctrl+k`, then type `debug`: a command will show up to
-activate the debug mode. 
+activate the debug mode.
 
 .. image:: developer_mode/command_palette.png
    :align: center

@@ -17,7 +17,7 @@ From Vendor Bill to Payment
 Record a new vendor bill
 ------------------------
 
-When a vendor bill is received, you can record it from :menuselection:`Purchases --> Vendor Bills` 
+When a vendor bill is received, you can record it from :menuselection:`Purchases --> Vendor Bills`
 in the Accounting application. As a shortcut,
 you can also use the **New Bill** feature on the accounting dashboard.
 
@@ -36,12 +36,12 @@ Save the invoice to update the pre tax and tax amounts at the bottom of
 the screen. You will most likely need to configure the prices of your
 products without taxes as Odoo will compute the tax for you.
 
-.. note:: 
-    On the bottom left corner, Odoo shows a summary table of all taxes on the vendor bill. 
-    In several countries, different methods are accepted to round the totals (round per line, 
-    or round globally). The default rounding method in Odoo is to round the final prices 
-    per line (as you may have different taxes per product. E.g. Alcohol and cigarettes). 
-    However if your vendor has a different tax amount on their bill, you can change the 
+.. note::
+    On the bottom left corner, Odoo shows a summary table of all taxes on the vendor bill.
+    In several countries, different methods are accepted to round the totals (round per line,
+    or round globally). The default rounding method in Odoo is to round the final prices
+    per line (as you may have different taxes per product. E.g. Alcohol and cigarettes).
+    However if your vendor has a different tax amount on their bill, you can change the
     amount in the bottom left table to adjust and match.
 
 Validate The Vendor Bill
@@ -91,8 +91,8 @@ if set it correctly).
 
 
 .. note::
-    You can also register a payment to a vendor directly without applying it to a vendor bill. 
-    To do that, :menuselection:`Purchases --> Payments`. Then, 
+    You can also register a payment to a vendor directly without applying it to a vendor bill.
+    To do that, :menuselection:`Purchases --> Payments`. Then,
     from the vendor bill you will be able to reconcile this payment with directly.
 
 Printing vendor Checks

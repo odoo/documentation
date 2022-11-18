@@ -231,7 +231,7 @@ exists in 3 different forms:
     .. tip::
        There are two equivalent syntaxes for format strings: ``"plain_text {{code}}"`` (aka
        jinja-style) and ``"plain_text #{code}"`` (aka ruby-style).
-    
+
 :samp:`t-att=mapping`
     if the parameter is a mapping, each (key, value) pair generates a new
     attribute and its value::

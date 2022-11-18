@@ -41,7 +41,7 @@ On Linux, using an installer
   .. code-block:: console
 
     $ sudo dpkg -i <path_to_enterprise_deb>
-  
+
 * Update your database to the enterprise packages using
 
   .. code-block:: console

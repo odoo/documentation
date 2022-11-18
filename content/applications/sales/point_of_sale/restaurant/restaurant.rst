@@ -96,7 +96,7 @@ customer.
 
 .. image:: restaurant/restaurant_09.png
     :align: center
-    :alt: View of the pos interface and transfer button. How to transfer customers from one table 
+    :alt: View of the pos interface and transfer button. How to transfer customers from one table
           to another
 
 Register an additional order

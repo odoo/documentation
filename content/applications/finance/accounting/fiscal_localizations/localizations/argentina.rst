@@ -23,9 +23,9 @@ modules are available:
 - **l10n_ar_reports**: Add VAT Book report which is a legal requirement in Argentine and that holds
   the VAT detail info of sales or purchases recorded on the journal entries. This module includes as
   well the VAT summary report that is used to analyze the invoice
-  
-- **l10n_ar_edi**: This module includes all technical and functional requirements to generate 
-  Electronic Invoice via web service, based on the AFIP regulations. 
+
+- **l10n_ar_edi**: This module includes all technical and functional requirements to generate
+  Electronic Invoice via web service, based on the AFIP regulations.
 
 
 Configuration
@@ -48,7 +48,7 @@ fiscal obligation and structure of the company:
 
 .. image:: argentina/argentina02.png
    :align: center
-   
+
 
 Chart of Account
 ~~~~~~~~~~~~~~~~
@@ -75,9 +75,9 @@ Environment
 
 The AFIP infrastructure is replicated in two separate environments, Testing and Production.
 
-Testing is provided so that the Companies can test their developments until they are ready to move 
-into the Production environment. As these two environments are completely isolated from each other, 
-the digital certificates of one instance are not valid in the other one. 
+Testing is provided so that the Companies can test their developments until they are ready to move
+into the Production environment. As these two environments are completely isolated from each other,
+the digital certificates of one instance are not valid in the other one.
 
 Go to :menuselection:`Accounting --> Settings --> Argentinian Localization` to select the environment:
 
@@ -87,10 +87,10 @@ Go to :menuselection:`Accounting --> Settings --> Argentinian Localization` to s
 
 AFIP Certificates
 *****************
-The electronic invoice and other afip services work with WebServices (WS) provided by the AFIP. 
+The electronic invoice and other afip services work with WebServices (WS) provided by the AFIP.
 
 In order to enable communication with the AFIP, the first step is to request a Digital Certificate
-if you don’t have one already.   
+if you don’t have one already.
 
 #. Generate certificate Sign Request (Odoo). When this option is selected a file with extension
    ``.csr`` (certificate signing request) is generated to be used the AFIP portal to request the
@@ -101,7 +101,7 @@ if you don’t have one already.
 #. Generate Certificate (AFIP). Access the AFIP portal and follow the instructions described in the
    next document in order to get a certificate. `Get AFIP Certificate
    <http://www.afip.gob.ar/ws/WSAA/wsaa_obtener_certificado_produccion.pdf>`_.
-   
+
 #. Upload Certificate and Private Key (Odoo). Once the certificate has been generated, it needs to
    be uploaded in Odoo, using the pencil next in the field “Certificado” and selecting the
    corresponding file.
@@ -109,7 +109,7 @@ if you don’t have one already.
    .. image:: argentina/argentina_edi_03.png
 
 .. tip::
-   In case you need to configure the Homologation Certificate, please refer to the AFIP official 
+   In case you need to configure the Homologation Certificate, please refer to the AFIP official
    documentation: `Homologation Certificate
    <http://www.afip.gob.ar/ws/documentacion/certificados.asp>`_.
 
@@ -244,11 +244,11 @@ defines as well:
 #. The structure and data of the electronic invoice file.
 
 Web Services
-************      
-- ``wsfev1: Electronic Invoice.`` This is the most common service, 
-  is used to generated invoices for document types A, B, C, M  with no detail per item. 
-- ``wsbfev1: Electronic Fiscal Bond.``  For those who invoice capital goods and wish 
-  to access the benefit of the Electronic Tax Bonds granted by the Ministry of Economy. For more 
+************
+- ``wsfev1: Electronic Invoice.`` This is the most common service,
+  is used to generated invoices for document types A, B, C, M  with no detail per item.
+- ``wsbfev1: Electronic Fiscal Bond.``  For those who invoice capital goods and wish
+  to access the benefit of the Electronic Tax Bonds granted by the Ministry of Economy. For more
   detail you can refer to the next link: `Fiscal Bond
   <https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-capital>`_.
 - ``wsfexv1: Electronic Exportation Invoice.`` Used to generate invoices for international customers
@@ -282,8 +282,8 @@ can be used:
    :align: center
 
 .. note::
-  When creating the Purchase journals, it's possible to define if they can be related to document 
-  types or not.  In case that the option to use documents is selected, there is no need to manually 
+  When creating the Purchase journals, it's possible to define if they can be related to document
+  types or not.  In case that the option to use documents is selected, there is no need to manually
   associate the document type sequences as the document number is provided by the vendor.
 
 
@@ -326,22 +326,22 @@ responsibility type but it can be updated manually by the user.
 
 Electronic Invoice elements
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
-When using electronic invoice, if all the information is correct the Invoice is posted in the 
-standard way, in case that something needs to be addressed (check the section common errors for more 
-detail), an error message is raised indicating the issue/proposed solution and the invoice remains 
-in draft until the related data is corrected. 
+When using electronic invoice, if all the information is correct the Invoice is posted in the
+standard way, in case that something needs to be addressed (check the section common errors for more
+detail), an error message is raised indicating the issue/proposed solution and the invoice remains
+in draft until the related data is corrected.
 
-Once the invoice is posted, the information related to the AFIP validation and status is displayed 
-in the AFIP Tab, including: 
+Once the invoice is posted, the information related to the AFIP validation and status is displayed
+in the AFIP Tab, including:
 
 - AFIP Autorisation:  CAE number.
-- Expiration date: Deadline to deliver the invoice to the customers. Normally 10 days after the 
-  CAE is generated. 
+- Expiration date: Deadline to deliver the invoice to the customers. Normally 10 days after the
+  CAE is generated.
 - Result:
 
   - Aceptado en AFIP.
-  - Aceptado con Observaciones. 
-  
+  - Aceptado con Observaciones.
+
 .. image:: argentina/argentina_edi_15.png
    :align: center
 
@@ -378,7 +378,7 @@ Special Use Cases
 Invoices for Services
 *********************
 For electronic invoices that include Services, the AFIP requires to report the  service starting
-and ending date, this information can be filled in the tab “Other Info”: 
+and ending date, this information can be filled in the tab “Other Info”:
 
 .. image:: argentina/argentina_edi_06.png
    :align: center
@@ -392,34 +392,34 @@ filled automatically considering the beginning and day of the invoice month:
 
 Exportation Invoices
 ********************
-The invoices related to Exportation transactions required a Journal that used the AFIP POS 
+The invoices related to Exportation transactions required a Journal that used the AFIP POS
 System “Expo Voucher - Web Service” so the proper document type be associated:
 
 .. image:: argentina/argentina_edi_08.png
    :align: center
 
-When the customer selected in the Invoice has set the AFIP responsibility type as “Cliente / 
+When the customer selected in the Invoice has set the AFIP responsibility type as “Cliente /
 Proveedor del Exterior” or “IVA Liberado – Ley Nº 19.640”, Odoo automatically assigned:
 
 - Journal related to the exportation Web Service.
 - Exportation document type .
 - Fiscal position: Compras/Ventas al exterior.
 - Concepto AFIP:  Products / Definitive export of goods.
-- Exempt Taxes. 
+- Exempt Taxes.
 
 .. image:: argentina/argentina_edi_09.png
    :align: center
 
 .. note::
    The Exportation Documents required the Incoterm in :menuselection:`Other Info --> Accounting`:
-   
+
 .. image:: argentina/argentina_edi_13.png
    :align: center
-   
-   
+
+
 Fiscal Bond
 ***********
-The Electronic Fiscal bond is used for those who invoice capital goods and wish to access 
+The Electronic Fiscal bond is used for those who invoice capital goods and wish to access
 the benefit of the Electronic Tax Bonds granted by the Ministry of Economy.
 
 For these transactions it’s important to have into consideration the next requirements:
@@ -435,77 +435,77 @@ For these transactions it’s important to have into consideration the next requ
   - Quantity.
   - Unit of measurement.
   - Bonus.
-  - VAT rate. 
+  - VAT rate.
 
 
-Electronic Credit Invoice MiPyme (FCE) 
+Electronic Credit Invoice MiPyme (FCE)
 **************************************
 
 **Invoices:** There are several document types classified as Mipyme also known as
-Electronic Credit Invoice (FCE in spanish), which is used to impulse the SME, its purpose is 
-to develop a mechanism that improves the financing conditions of these companies and allows 
-them to increase their productivity, through the early collection of credits and receivables 
-issued to their clients and / or vendors. 
+Electronic Credit Invoice (FCE in spanish), which is used to impulse the SME, its purpose is
+to develop a mechanism that improves the financing conditions of these companies and allows
+them to increase their productivity, through the early collection of credits and receivables
+issued to their clients and / or vendors.
 
 For these transactions it’s important to have into consideration the next requirements:
 
 - Specific document types (201, 202, 206, etc).
-- The emisor should be eligible by the AFIP to MiPyme transactions. 
-- The amount should be bigger than 100,000 ARS. 
-- A bank account type CBU must be related to the emisor, otherwise the invoice can’t 
-  be validated, having these errors messages for example:  
-  
+- The emisor should be eligible by the AFIP to MiPyme transactions.
+- The amount should be bigger than 100,000 ARS.
+- A bank account type CBU must be related to the emisor, otherwise the invoice can’t
+  be validated, having these errors messages for example:
+
 .. image:: argentina/argentina_edi_10.png
    :align: center
 
-**Credit& Debit Notes:** When creating a Credit/Debit note related to a FCE document, it is 
+**Credit& Debit Notes:** When creating a Credit/Debit note related to a FCE document, it is
 important take the next points into consideration:
 
-- Use the Credit and Debit Note buttons, so the correct reference of the originator 
-  document passed to the note. 
+- Use the Credit and Debit Note buttons, so the correct reference of the originator
+  document passed to the note.
 
 .. image:: argentina/argentina_edi_11.png
    :align: center
-   
+
 - The document letter should be the same than the originator document (either A or B).
-- The same currency as the source document must be used.  When using a secondary currency 
-  there is an exchange difference  if the currency rate is different between the emission day 
-  and the payment date, it’s possible to create a credit/debit note to decrease/increase the 
-  amount to pay in ARS. 
+- The same currency as the source document must be used.  When using a secondary currency
+  there is an exchange difference  if the currency rate is different between the emission day
+  and the payment date, it’s possible to create a credit/debit note to decrease/increase the
+  amount to pay in ARS.
 
 In the workflow we can have two scenarios:
 
-#. The FCE is rejected so the Credit Note should have the field “FCE, is Cancellation?” as True. 
-#. The Credit Note, is created with the negative amount to annulate the FCE document, 
-   in this case the field “FCE, is Cancellation?” must be empty (false). 
+#. The FCE is rejected so the Credit Note should have the field “FCE, is Cancellation?” as True.
+#. The Credit Note, is created with the negative amount to annulate the FCE document,
+   in this case the field “FCE, is Cancellation?” must be empty (false).
 
 .. image:: argentina/argentina_edi_12.png
    :align: center
-   
+
 Invoice printed report
 ~~~~~~~~~~~~~~~~~~~~~~
-The PDF report related to electronic invoices that have been validated by the AFIP includes 
-a barcode at the bottom of the format which represent the CAE number, the Expiration Date is 
-also displayed as it’s legal requirement: 
-   
+The PDF report related to electronic invoices that have been validated by the AFIP includes
+a barcode at the bottom of the format which represent the CAE number, the Expiration Date is
+also displayed as it’s legal requirement:
+
 .. image:: argentina/argentina_edi_14.png
    :align: center
 
 
 Troubleshooting and Auditing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-For auditing and troubleshooting purposes you can get the detailed information of an 
-invoice number that has been  previously sent to the AFIP,  
+For auditing and troubleshooting purposes you can get the detailed information of an
+invoice number that has been  previously sent to the AFIP,
 
 .. image:: argentina/argentina_edi_23.png
    :align: center
-     
+
 .. image:: argentina/argentina_edi_24.png
-   :align: center  
+   :align: center
 
 
-You can also get the last number used in AFIP for a specific Document Type and POS Number 
-as support for any possible  issues on the sequence synchronization between Odoo and AFIP. 
+You can also get the last number used in AFIP for a specific Document Type and POS Number
+as support for any possible  issues on the sequence synchronization between Odoo and AFIP.
 
 .. image:: argentina/argentina_edi_22.png
    :align: center
@@ -514,8 +514,8 @@ as support for any possible  issues on the sequence synchronization between Odoo
 Vendor Bills
 ------------
 
-Based on the purchase journal selected for the vendor bill, the document type is now a required field. 
-This value is auto populated based on the AFIP Responsibility type of Issuer and Customer, but the 
+Based on the purchase journal selected for the vendor bill, the document type is now a required field.
+This value is auto populated based on the AFIP Responsibility type of Issuer and Customer, but the
 value can be switched if necessary.
 
 .. image:: argentina/argentina16.png
@@ -528,20 +528,20 @@ expected.
 .. image:: argentina/argentina17.png
    :align: center
 
-The vendor bill number is structured in the same way that the invoices with the difference 
+The vendor bill number is structured in the same way that the invoices with the difference
 that the document sequence is input by the user: “Document Prefix - Letter -  Document number".
 
 
 Validate Vendor Bill number in AFIP
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 As most companies have internal controls to verify that the vendor bill is related to an AFIP
-valid document,  an automatic validation can be set in :menuselection:`Accounting --> Settings --> 
-Argentinian Localization --> Validate document in the AFIP`, considering the following levels: 
+valid document,  an automatic validation can be set in :menuselection:`Accounting --> Settings -->
+Argentinian Localization --> Validate document in the AFIP`, considering the following levels:
 
 - **Not available:** The verification is not done (this is the default value).
-- **Available:**  The verification  is done, in case the number is not valid 
-  it only raises a warning but it allows you to post the vendor bill. 
-- **Required:** The verification  is done and it doesn't allow the user to 
+- **Available:**  The verification  is done, in case the number is not valid
+  it only raises a warning but it allows you to post the vendor bill.
+- **Required:** The verification  is done and it doesn't allow the user to
   post the vendor bill if the document number is not valid.
 
 .. image:: argentina/argentina_edi_16.png
@@ -549,13 +549,13 @@ Argentinian Localization --> Validate document in the AFIP`, considering the fol
 
 How to use it in Odoo
 *********************
-This tool incorporates in the vendor bill a new "Verify on AFIP" button located 
-next to the AFIP Authorization code. 
+This tool incorporates in the vendor bill a new "Verify on AFIP" button located
+next to the AFIP Authorization code.
 
 .. image:: argentina/argentina_edi_17.png
    :align: center
 
-In case it’s not a valid AFIP authorization the value “Rejected” will be 
+In case it’s not a valid AFIP authorization the value “Rejected” will be
 displayed and the details of the validation will be added to the chatter.
 
 .. image:: argentina/argentina_edi_18.png
@@ -566,8 +566,8 @@ Special Use cases
 ~~~~~~~~~~~~~~~~~
 Untaxed Concepts
 ****************
-There are some transactions that include items that are not part of the VAT base amount, 
-this is commonly used in fuel and gasoline invoices. 
+There are some transactions that include items that are not part of the VAT base amount,
+this is commonly used in fuel and gasoline invoices.
 
 The vendor bill will be registered using 1 item for each product that is part of the VAT
 base amount and an additional item to register the amount of  the Exempt concept:
@@ -577,23 +577,23 @@ base amount and an additional item to register the amount of  the Exempt concept
 
 Perception Taxes
 ****************
-The vendor bill will be registered using 1 item for each product that is part of the 
-VAT base amount, the perception tax can be added in any of the product lines, as result 
-we will have one tax group for the VAT and one for the perception, the perception default 
-value is always 1.00. 
+The vendor bill will be registered using 1 item for each product that is part of the
+VAT base amount, the perception tax can be added in any of the product lines, as result
+we will have one tax group for the VAT and one for the perception, the perception default
+value is always 1.00.
 
 .. image:: argentina/argentina_edi_20.png
    :align: center
 
-You should use the pencil that is the next to the Perception amount to edit it 
-and set the correct amount. 
+You should use the pencil that is the next to the Perception amount to edit it
+and set the correct amount.
 
 .. image:: argentina/argentina_edi_21.png
    :align: center
-   
-After this is done the invoice can be validated. 
-   
-   
+
+After this is done the invoice can be validated.
+
+
 Reports
 =======
 

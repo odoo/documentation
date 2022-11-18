@@ -37,11 +37,11 @@ Plain javascript files can contain arbitrary content. It is advised to use the
   })();
 
 The advantages of such files is that we avoid leaking local variables to the
-global scope.  
+global scope.
 
 Clearly, plain javascript files do not offer the benefits of a module system, so
 one needs to be careful about the order in the bundle (since the browser will
-execute them precisely in that order).  
+execute them precisely in that order).
 
 .. note::
   In Odoo, all external libraries are loaded as plain javascript files.

@@ -27,7 +27,7 @@ information.
    a block of redirect rules that start with `applications/sales/sales` if you are adding a redirect
    rule for a page in the Sales app. If the block does not exist yet, create it. Ideally, there
    should be one block per app or scope and redirect rules should be sorted alphabetically.
-3. Add a new line for your redirect rule at the end of the block. The line should follow this 
+3. Add a new line for your redirect rule at the end of the block. The line should follow this
    pattern:
 
    `path/to/old/file.rst path/to/new/file.rst  # optional comment`
