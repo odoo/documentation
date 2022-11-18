@@ -8,8 +8,8 @@ Every day we hear about data leaks and attacks in the newspapers.
 We expect you to be aware and careful about how to avoid security breaches in your future
 developments.
 
-You already defined new models in your training. Did you check the access rights and define record 
-rules on it ? Are you sure your module is not an open door to SQL injections ? Did you use getattr 
+You already defined new models in your training. Did you check the access rights and define record
+rules on it ? Are you sure your module is not an open door to SQL injections ? Did you use getattr
 or t-raw in your code?
 
 - No or wrong access rules on models.

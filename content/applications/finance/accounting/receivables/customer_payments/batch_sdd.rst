@@ -72,7 +72,7 @@ their SEPA Direct Debit mandate.
 .. todo::
    Add link to future **Payment Provider** documentation.
 
-Close or revoke a mandate 
+Close or revoke a mandate
 -------------------------
 
 Direct Debit mandates are closed automatically after their *End Date*. If this field is left blank,
@@ -95,7 +95,7 @@ included in the next SDD XML file.
 Get paid with SDD Batch Payments
 ================================
 
-Customer Invoices 
+Customer Invoices
 -----------------
 
 You can register SDD payments for invoices issued to customers who have an active SDD mandate.

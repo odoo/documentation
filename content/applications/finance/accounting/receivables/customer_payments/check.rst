@@ -6,14 +6,14 @@ There are two ways to handle payments received by checks. Odoo support
 both approaches so that you can use the one that better fits your
 habits.
 
-1. **Undeposited Funds:** 
+1. **Undeposited Funds:**
    once you receive the check, you record a payment
    by check on the invoice. (using a Check journal and posted on the
    Undeposited Fund account) Then, once the check arrives in your
    bank account, move money from Undeposited Funds to your bank
    account.
 
-2. **One journal entry only:** 
+2. **One journal entry only:**
    once your receive the check, you record a
    payment on your bank, paid by check, without going through the
    **Undeposited Funds**. Once you process your bank statement, you do
@@ -28,7 +28,7 @@ Even if the first method is cleaner, Odoo support the second approach
 because some accountants are used to it (quickbooks and peachtree
 users).
 
-.. Note:: 
+.. Note::
   You may have a look at the *Deposit Ticket feature* if you deposit
   several checks to your bank accounts in batch.
 
@@ -90,7 +90,7 @@ If you use this approach to manage received checks, you get the list of
 checks that have not been cashed in the **Undeposit Funds** account
 (accessible, for example, from the general ledger).
 
-.. Note:: 
+.. Note::
     Both methods will produce the same data in your accounting at the
     end of the process. But, if you have checks that have not been cashed,
     this one is cleaner because those checks have not been reported yet on
@@ -135,7 +135,7 @@ books:
 | Bank                 |                   | 100.00   |          |
 +----------------------+-------------------+----------+----------+
 
-.. tip:: 
+.. tip::
     You may also record the payment directly without going on the
     customer invoice, using the menu :menuselection:`Sales --> Payments`. This method may
     be more convenient if you have a lot of checks to record in a batch but

@@ -11,7 +11,7 @@ Configuration
 .. image:: manage_cash_register/journal.png
    :align: center
 
-1. Configure the Cash journal in :menuselection:`Accounting --> Configuration --> 
+1. Configure the Cash journal in :menuselection:`Accounting --> Configuration -->
    Journals`.
 
 2. In the tab Journal Entries, the Default Debit and Credit Account can be

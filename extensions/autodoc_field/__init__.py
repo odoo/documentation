@@ -43,7 +43,7 @@ class OdooClassDocumenter(ClassDocumenter):
             title = f"Original definition from `{module}`"
         else:
             title = f"Additional fields with `{module}`"
-        
+
         self.add_line(title, sourcename)
         self.add_line('=' * len(title), sourcename)
         self.add_line('', sourcename)

@@ -70,7 +70,7 @@ Credentials
 
 #. Select **Web Application** as the Application type. Now configure the allowed pages on which you
    will be redirected.
-   
+
    In order to achieve this, in the **Authorized redirect URIs** field, enter your database's domain
    immediately followed by ``/auth_oauth/signin``. For example:
    ``https://mydomain.odoo.com/auth_oauth/signin``, then click on *Create*.
@@ -106,7 +106,7 @@ Odoo activation
 
    .. note::
       You may have to log in again after this step.
-   
+
 #. Go back to :menuselection:`General Settings --> Integrations`, activate **Google
    Authentication**, then fill out the *Client ID* with the key from the Google API Dashboard, and
    *Save*.

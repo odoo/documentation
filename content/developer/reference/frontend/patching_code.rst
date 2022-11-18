@@ -33,7 +33,7 @@ The patch function is located in `@web/core/utils/patch`:
     Most patch operations provide access to the parent value by using the
     `_super` property (see below in the examples). To do that, the `patch` method
     wraps each pair key/value in a getter that dynamically binds `_super`.
-    
+
     The only option is `pure (boolean)`. If set to `true`, the patch operation
     does not bind the `_super` property.
 

@@ -370,7 +370,7 @@ Some good examples:
 * `l10n_ch_reports/data/account_financial_html_report_data.xml <{GITHUB_ENT_PATH}/l10n_ch_reports/data/account_financial_html_report_data.xml>`_
 * `l10n_be_reports/data/account_financial_html_report_data.xml <{GITHUB_ENT_PATH}/l10n_be_reports/data/account_financial_html_report_data.xml>`_
 
-You can check the meaning of the fields here: 
+You can check the meaning of the fields here:
 
 * :doc:`/developer/reference/standard_modules/account/account_report`
 * :doc:`/developer/reference/standard_modules/account/account_report_line`

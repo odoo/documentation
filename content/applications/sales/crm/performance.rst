@@ -1,7 +1,7 @@
 :nosearch:
 
 ===================
-Analyze performance 
+Analyze performance
 ===================
 
 .. toctree::

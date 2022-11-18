@@ -46,7 +46,7 @@ Add lines in your custom reports
 =================================
 
 After you've created the report, you need to fill it with lines. They
-all need a **name**, a **code** (that is used to refer to the line), a 
+all need a **name**, a **code** (that is used to refer to the line), a
 **sequence number** and a **level** (Used for the line rendering).
 
 .. image:: customize/customize04.png

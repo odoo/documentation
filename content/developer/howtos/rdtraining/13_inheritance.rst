@@ -239,7 +239,7 @@ An example of a view inheritance extension can be found
     Add the ``property_ids`` field to the ``base.view_users_form`` in a new notebook page.
 
     Tip: an example an inheritance of the users' view can be found
-    `here <https://github.com/odoo/odoo/blob/691d1f087040f1ec7066e485d19ce3662dfc6501/addons/gamification/views/res_users_views.xml#L5-L14>`__. 
+    `here <https://github.com/odoo/odoo/blob/691d1f087040f1ec7066e485d19ce3662dfc6501/addons/gamification/views/res_users_views.xml#L5-L14>`__.
 
 Inheritance is extensively used in Odoo due to its modular concept. Do not hesitate to read
 the corresponding documentation for more info!
