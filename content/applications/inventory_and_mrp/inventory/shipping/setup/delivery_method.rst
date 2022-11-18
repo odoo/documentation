@@ -1,5 +1,5 @@
 ===============================
-How to setup a delivery method? 
+How to setup a delivery method?
 ===============================
 
 Overview
@@ -33,7 +33,7 @@ order to see it :
 Configure the delivery method
 -----------------------------
 
-To configure your delivery methods, go to the **Inventory** module, 
+To configure your delivery methods, go to the **Inventory** module,
 click on :menuselection:`Configuration --> Delivery Methods`.
 
 First set a name and a transporter company.
@@ -65,9 +65,9 @@ feature limits the list of countries on your e-commerce.
 .. image:: delivery_method/setup02.png
    :align: center
 
-.. note:: 
+.. note::
     You can integrate Odoo with external shippers in order to compute the
-    real price and packagings, and handle the printing the shipping labels. 
+    real price and packagings, and handle the printing the shipping labels.
     See :doc:`third_party_shipper`
 
 Delivery process

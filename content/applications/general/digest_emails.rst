@@ -54,7 +54,7 @@ Custom digest emails
 To do so, click on **Configure Digest Emails** and then **Create**.
 
 From there, give your Digest Email a title, specify periodicity, and choose your desired KPIs and
-recipients fields as needed. 
+recipients fields as needed.
 
 After you click **Save**, your new custom Digest Email is available as a selection in the **General
 Settings** dropdown menu.
@@ -111,4 +111,4 @@ Computed values reference table
 | POS Sales             | `kpi_pos_total_value`                     |
 +-----------------------+-------------------------------------------+
 | New Employees         | `kpi_hr_recruitment_new_colleagues_value` |
-+-----------------------+-------------------------------------------+   
++-----------------------+-------------------------------------------+

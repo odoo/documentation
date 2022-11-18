@@ -22,7 +22,7 @@ Go to :menuselection:`Accounting --> Configuration --> Settings` and activate
    :align: center
    :class: img-thumbnail
    :alt: How to enable Default Terms & Conditions on Odoo Sales?
- 
+
 .. note::
    Please note that this feature is activated via the settings of the **Invoicing App** and **not**
    via the settings of the **Sales App**. Moreover, you don't need to install the invoicing
@@ -55,7 +55,7 @@ templates. This is interesting if you have different terms and conditions within
 .. important::
    Be sure to check out our documentation about quotation templates: :doc:`quote_template`,
    to master each step of this amazing feature.
-  
+
 General Terms & Conditions
 ==========================
 

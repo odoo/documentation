@@ -7,7 +7,7 @@ Owl Components
 The Odoo Javascript framework uses a custom component framework called Owl. It
 is a declarative component system, loosely inspired by Vue and React. Components
 are defined using :doc:`QWeb templates <qweb>`, enriched with some Owl
-specific directives. The official 
+specific directives. The official
 `Owl documentation <https://github.com/odoo/owl/blob/master/doc/readme.md>`_
 contains a complete reference and a tutorial.
 
@@ -28,7 +28,7 @@ page will only provide Odoo specific information. But first, let us see how we
 can make a simple component in Odoo.
 
 .. code-block:: javascript
-    
+
     const { useState } = owl.hooks;
     const { xml } = owl.tags;
 
@@ -66,7 +66,7 @@ loading the javascript/css files, and loading the templates into Owl.
 Here is how the component above should be defined:
 
 .. code-block:: javascript
-    
+
     const { useState } = owl.hooks;
 
     class MyComponent extends Component {
@@ -133,7 +133,7 @@ in Odoo directly uses the constructor method. Instead, components should use the
         }
     }
 
-Another good practice is to use a consistent convention for template names: 
+Another good practice is to use a consistent convention for template names:
 `addon_name.ComponentName`. This prevents name collision between odoo addons.
 
 Reference List
@@ -175,7 +175,7 @@ Description
 ~~~~~~~~~~~
 
 This is a component that can perform actions when an element is swiped
-horizontally. The swiper is wrapping a target element to add actions to it. 
+horizontally. The swiper is wrapping a target element to add actions to it.
 The action is executed once the user has released the swiper passed
 half of its width.
 
@@ -191,7 +191,7 @@ and would not want to duplicate the template. It is possible to do just that.
 
 If you want to extend the behavior of an existing element, you must place the element
 inside, by wrapping it directly. Also, you can conditionnally add props to manage when the
-element might be swipable or not. 
+element might be swipable or not.
 
 You can use the component to interact easily with records, messages, items in lists and much more.
 
@@ -200,18 +200,18 @@ You can use the component to interact easily with records, messages, items in li
   :alt: Example of ActionSwiper usage
   :align: center
 
-The following example creates a basic ActionSwiper component. 
+The following example creates a basic ActionSwiper component.
 Here, the swipe is enabled in both directions.
 
 .. code-block:: xml
-    
-  <ActionSwiper 
+
+  <ActionSwiper
     onRightSwipe="
       {
         action: '() => Delete item',
         icon: 'fa-delete',
         bgColor: 'bg-danger',
-      }" 
+      }"
     onLeftSwipe="
       {
         action: '() => Star item',
@@ -233,7 +233,7 @@ Props
     :widths: 20 20 60
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - `onLeftSwipe`
@@ -246,7 +246,7 @@ Props
 You can use both `onLeftSwipe` and `onRightSwipe` props at the same time.
 
 Those `Object`'s must contain:
-    
+
     - `action`, which is the callable `Function` serving as a callback.
       Once the swipe has been completed in the given direction, that action
       is performed.
@@ -258,7 +258,7 @@ Those `Object`'s must contain:
       `info`, `secondary`, `success` or `warning`).
 
     Those values must be given to define the behavior and the visual aspect
-    of the swiper. 
+    of the swiper.
 
 Example: Extending existing components
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -268,7 +268,7 @@ in the ActionSwiper component. Here, a swiper has been added to mark
 a message as read in mail.
 
 .. code-block:: xml
-    
+
   <xpath expr="//*[hasclass('o_Message')]" position="after">
     <ActionSwiper
       onRightSwipe="messaging.device.isMobile and messageView.message.isNeedaction ?
@@ -312,7 +312,7 @@ Props
     :widths: 20 20 60
     :header-rows: 1
 
-    * - Name 
+    * - Name
       - Type
       - Description
     * - `value`
@@ -330,7 +330,7 @@ Dropdown
 Location
 ~~~~~~~~
 
-`@web/core/dropdown/dropdown` and `@web/core/dropdown/dropdown_item`  
+`@web/core/dropdown/dropdown` and `@web/core/dropdown/dropdown_item`
 
 Description
 ~~~~~~~~~~~
