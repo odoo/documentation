@@ -1,5 +1,5 @@
 ==================================
-How to customize my catalog page 
+How to customize my catalog page
 ==================================
 
 Product Catalog

@@ -9,7 +9,7 @@ The chart of accounts SKR03 and SKR04 are both supported in Odoo. You can choose
 one you want by going in :menuselection:`Accounting --> Configuration` then choose the
 package you want in the Fiscal Localization section.
 
-Be careful, you can only change the accounting package as long as you have not created any accounting entry. 
+Be careful, you can only change the accounting package as long as you have not created any accounting entry.
 
 .. tip::
 
@@ -20,7 +20,7 @@ German Accounting Reports
 
 Here is the list of German-specific reports available on Odoo Enterprise:
 
-- Balance Sheet 
+- Balance Sheet
 - Profit & Loss
 - Tax Report (Umsatzsteuervoranmeldung)
 - Partner VAT Intra

@@ -20,7 +20,7 @@ If your database is hosted on our cloud (Odoo Online or Odoo.sh), it is not nece
 outgoing email server to send emails from your custom domain. You can enjoy this feature by using
 the default Odoo email server.
 
-.. important:: 
+.. important::
    The Odoo server is subject to a daily email limit to prevent abuse. The default limit is 200
    emails sent per day for databases with an Enterprise subscription. This limit can be increased
    under certain conditions. See our :doc:`FAQ <faq>` or contact support for more
@@ -38,19 +38,19 @@ Be SPF compliant
 ================
 
 The Sender Policy Framework (SPF) protocol allows the owner of a domain name to specify which
-servers are allowed to send email from that domain. When a server receives an incoming email, 
-it checks whether the IP address of the sending server is on the list of allowed IPs according 
+servers are allowed to send email from that domain. When a server receives an incoming email,
+it checks whether the IP address of the sending server is on the list of allowed IPs according
 to the SPF record of the sender.
 
-.. note:: 
+.. note::
    The SPF verification is performed on the domain mentioned in the Return-Path field of the email.
    In the case of an email sent by Odoo, this domain corresponds to the value of the
    `mail.catchall.domain` key in the database system parameters.
 
    See the :ref:`documentation on incoming emails <email_communication/inbound_messages>`.
 
-The SPF policy of a domain is set using a TXT record. How to create or modify a TXT record depends 
-on the provider hosting the DNS zone of your domain name. In order for the verification to work 
+The SPF policy of a domain is set using a TXT record. How to create or modify a TXT record depends
+on the provider hosting the DNS zone of your domain name. In order for the verification to work
 properly, each domain can only have one SPF record.
 
 If your domain name does not yet have an SPF record, the content of the record to create is as
@@ -66,7 +66,7 @@ new one).
    If your TXT record is `v=spf1 include:_spf.google.com ~all`, you need to edit it to add
    `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com include:_spf.google.com ~all`
 
-You can check if your SPF record is valid with a free tool like 
+You can check if your SPF record is valid with a free tool like
 `MXToolbox SPF <https://mxtoolbox.com/spf.aspx>`_.
 
 .. _email_communication/DKIM_compliant:
@@ -86,13 +86,13 @@ To enable DKIM, you must add a CNAME record to the DNS zone of your domain name:
 ``odoo._domainkey IN CNAME odoo._domainkey.odoo.com.``
 
 .. tip::
-   If your domain name is `mycompany.com`, you need to create a subdomain 
+   If your domain name is `mycompany.com`, you need to create a subdomain
    `odoo._domainkey.mycompany.com` whose canonical name is `odoo._domainkey.odoo.com.`.
 
 How to create or modify a CNAME record depends on the provider hosting the DNS zone of your domain
 name. The most common providers are list below.
 
-You can check if your DKIM record is valid with a free tool like 
+You can check if your DKIM record is valid with a free tool like
 `DKIM Core <https://dkimcore.org/tools/>`_. If a selector is asked, enter `odoo`.
 
 Check your DMARC policy
@@ -110,7 +110,7 @@ There are three DMARC policies:
 ``p=quarantine`` and ``p=reject`` instruct the server that receives an email to quarantine that
 email or ignore it if the SPF and/or DKIM check fails.
 
-If your domain name uses DMARC and has defined one of these policies, it is therefore imperative 
+If your domain name uses DMARC and has defined one of these policies, it is therefore imperative
 to be SPF compliant or to enable DKIM.
 
 .. danger::
@@ -118,7 +118,7 @@ to be SPF compliant or to enable DKIM.
    strongly advise against using an *@yahoo.com* or *@aol.com* address for your users. These emails
    will never reach their recipient.
 
-``p=none`` is used for the domain owner to receive reports about entities using their domain. It 
+``p=none`` is used for the domain owner to receive reports about entities using their domain. It
 should not impact the deliverability if the DMARC check fails.
 
 You can check the DMARC record of a domain name with a tool like
@@ -127,12 +127,12 @@ You can check the DMARC record of a domain name with a tool like
 If one of your partners, customer or vendor, uses DMARC and has defined one of these policies, the
 Odoo server cannot relay emails from this partner to your users.
 
-You need to :ref:`handle user notifications in Odoo <discuss_app/notification_preferences>`, or replace the 
+You need to :ref:`handle user notifications in Odoo <discuss_app/notification_preferences>`, or replace the
 email address of the partner with a default email address.
 
 .. _email_communication/SPFDKIM_common_providers:
 
-SPF, DKIM & DMARC documentation of common providers 
+SPF, DKIM & DMARC documentation of common providers
 ===================================================
 
 - `OVH DNS <https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_
@@ -145,8 +145,8 @@ SPF, DKIM & DMARC documentation of common providers
 - `Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_
 - `Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-portal>`_
 
-To fully test your configuration, the tool `Mail-Tester <https://www.mail-tester.com/>`_ will give 
-you a full overview of the content and configuration you have in one email sent! Mail-Tester can 
+To fully test your configuration, the tool `Mail-Tester <https://www.mail-tester.com/>`_ will give
+you a full overview of the content and configuration you have in one email sent! Mail-Tester can
 also be used for other lesser known providers.
 
 Use a default email address
@@ -156,7 +156,7 @@ To force the email address from which emails are sent, you need to create the fo
 the System Parameters of the database:
 
 - If ``mail.default.from`` is set, and contains a full email address, all outgoing emails are sent
-  from the given address. This is a requirement to use `Outlook with Odoo 
+  from the given address. This is a requirement to use `Outlook with Odoo
   <https://docs.microsoft.com/en-us/exchange/mail-flow-best-practices/how-to-set-up-a-multifunction-device-or-application-to-send-email-using-microsoft-365-or-office-365#option-1-authenticate-your-device-or-application-directly-with-a-microsoft-365-or-office-365-mailbox-and-send-mail-using-smtp-auth-client-submission>`_.
 
 You access the **System Parameters** in :ref:`developer mode <developer-mode>` in the :menuselection:`Settings -->

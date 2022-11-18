@@ -392,7 +392,7 @@ The solutions to support livechat/motifications in a WSGI application are:
 
 * Deploy a threaded version of Odoo (instead of a process-based preforking
   one) and redirect only requests to URLs starting with ``/websocket/`` to
-  that Odoo, this is the simplest and the websocket URL can double up as the cron 
+  that Odoo, this is the simplest and the websocket URL can double up as the cron
   instance.
 * Deploy an evented Odoo via ``odoo-gevent`` and proxy requests starting
   with ``/websocket/`` to
@@ -410,7 +410,7 @@ a static HTTP server.
 Serving static files
 --------------------
 
-Odoo static files are located in each module's :file:`static/` folder, so static files can be served 
+Odoo static files are located in each module's :file:`static/` folder, so static files can be served
 by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up the right module
 (and file) in the various addons paths.
 
@@ -420,13 +420,13 @@ by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up 
 
    Using the above NGINX (https) configuration, the following location block should be added to
    serve static files via NGINX.
-   
+
    .. code-block:: nginx
-   
+
        location @odoo {
            # copy-paste the content of the / location block
        }
-   
+
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
            root /usr/lib/python3/dist-packages/odoo/addons;
@@ -444,11 +444,11 @@ by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up 
    serve static files via NGINX.
 
    .. code-block:: nginx
-   
+
        location @odoo {
            # copy-paste the content of the / location block
        }
-   
+
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
            root /opt/odoo;
@@ -483,7 +483,7 @@ X-Sendfile and X-Accel).
    - The X-Accel extension for NGINX **does** require the following additionnal configuration:
 
      .. code-block:: nginx
- 
+
          location /web/filestore {
              internal;
              alias /path/to/odoo/data-dir/filestore;

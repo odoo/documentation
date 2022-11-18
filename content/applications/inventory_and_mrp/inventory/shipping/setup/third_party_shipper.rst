@@ -16,7 +16,7 @@ Configuration
 Install the shipper company connector module
 --------------------------------------------
 
-In the inventory module, click on :menuselection:`Configuration --> Settings`. 
+In the inventory module, click on :menuselection:`Configuration --> Settings`.
 Under **Shipping Connectors**, flag the transportation companies you want to
 integrate :
 
@@ -26,7 +26,7 @@ integrate :
 Then click on **Apply**.
 
 .. note::
-    If you want to integrate delivery methods in your e-commerce, 
+    If you want to integrate delivery methods in your e-commerce,
     you'll have to install the **eCommerce Delivery** module.
 
 Configure the delivery method

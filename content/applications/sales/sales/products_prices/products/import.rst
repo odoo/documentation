@@ -4,7 +4,7 @@ How to import Products with Categories and Variants
 
 Import templates are provided in the **Import Tool** of the most common data to
 import (contacts, products, bank statements, etc.).
-You can open them with any spreadsheet software (Microsoft Office, 
+You can open them with any spreadsheet software (Microsoft Office,
 OpenOffice, Google Drive, etc.).
 
 How to customize the file

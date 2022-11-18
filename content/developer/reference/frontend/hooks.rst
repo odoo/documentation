@@ -6,7 +6,7 @@ Hooks
 
 `Owl hooks <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md>`_ are a
 way to factorize code, even if it depends on some component lifecycle. Most hooks
-provided by Owl are related to the lifecycle of a component, but some of them (such as 
+provided by Owl are related to the lifecycle of a component, but some of them (such as
 `useComponent <https://github.com/odoo/owl/blob/master/doc/reference/hooks.md#usecomponent>`_)
 provide a way to build specific hooks.
 

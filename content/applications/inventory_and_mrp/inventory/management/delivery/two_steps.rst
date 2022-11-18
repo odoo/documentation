@@ -19,7 +19,7 @@ provide a mechanism to chain different actions together. In this case,
 we will chain the picking step to the shipping step.
 
 To allow *multi-step routes*, go to :menuselection:`Inventory --> Configuration --> Settings` and
-activate the option. Note that activating *Multi-Step Routes* will also 
+activate the option. Note that activating *Multi-Step Routes* will also
 activate *Storage Locations*.
 
 .. image:: two_steps/two_steps_01.png
@@ -28,7 +28,7 @@ activate *Storage Locations*.
 Warehouse configuration
 =======================
 
-Once *Multi-Step Routes* has been activated, you can go to :menuselection:`Inventory --> 
+Once *Multi-Step Routes* has been activated, you can go to :menuselection:`Inventory -->
 Configuration --> Warehouse` and enter the warehouse which will use
 delivery in 2 steps. You can then select the option *Send goods in
 output and then deliver (2 steps)* for Outgoing Shipments.
