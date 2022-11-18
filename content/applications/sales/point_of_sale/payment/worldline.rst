@@ -102,5 +102,3 @@ record.
      This option is only available after receiving an error message informing you that the
      connection failed.
    * To cancel the payment request, click on **cancel**.
-
-

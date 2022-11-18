@@ -28,4 +28,3 @@ products and increase your average cart sizes.
    ecommerce/taxes
    ecommerce/shopper_experience
    ecommerce/maximizing_revenue
-

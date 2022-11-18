@@ -367,4 +367,3 @@ manifest counterparts.
 `sequence` (default= `16`)
     Loading order of the asset records (ascending). A sequence lower than 16 means
     that the asset will be processed *before* the ones declared in the manifest.
-

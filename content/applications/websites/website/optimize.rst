@@ -12,6 +12,3 @@ Optimize
    optimize/google_analytics_dashboard
    optimize/link_tracker
    optimize/unsplash
-
-
-
