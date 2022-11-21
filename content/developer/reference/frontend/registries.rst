@@ -161,11 +161,11 @@ direct child. This component is basically a live representation of the ordered
 list of components registered in the main components registry.
 
 API
-    .. code-block::
+    .. code-block:: text
 
         interface {
-          Component: Owl Component class
-          props?: any
+            Component: Owl Component class
+            props?: any
         }
 
 
@@ -243,7 +243,7 @@ with the following three keys:
 
 For example:
 
-.. code-block:: js
+.. code-block:: javascript
 
     import { registry } from "@web/core/registry";
 
@@ -258,7 +258,7 @@ For example:
 
 The systray registry is an ordered registry (with the `sequence` number):
 
-.. code-block:: js
+.. code-block:: javascript
 
     const item = {
         Component: MySystrayItem
@@ -291,7 +291,7 @@ The user menu calls all the functions defining items every time it is opened.
 
 Example:
 
-.. code-block:: js
+.. code-block:: javascript
 
     import { registry } from "@web/core/registry";
 
