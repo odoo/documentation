@@ -1394,7 +1394,7 @@ merge all those contexts before sending them to the server.
 
     @api.model
     def my_method(self):
-        print self.env.context
+        print(self.env.context)
         // will print: {'lang': 'en_US', 'new_key': 'key_value', 'tz': 'Europe/Brussels', 'uid': 1}
 
 You can see the dictionary in the argument ``context`` contains some keys that
