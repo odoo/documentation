@@ -1,14 +1,12 @@
+:orphan:
 
-=====================
+==============
 Theme Tutorial
-=====================
+==============
 
 .. warning::
 
-    This tutorial provides a great overview of what you can do creating an
-    Odoo theme. It is however incomplete. We are currently working on a new
-    detailed theme tutorial, come back here soon to unleash the true power of
-    Odoo themes!
+    This tutorial is outdated and won't work out of the box.
 
 .. rst-class:: lead
 
