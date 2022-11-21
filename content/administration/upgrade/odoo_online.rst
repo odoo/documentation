@@ -11,15 +11,17 @@ Requesting a test upgrade
    .. image:: odoo_online/accessing-my-databases.png
       :alt: Selecting My Databases under my profile
 
-#. Click on the action settings icon next to your main database and select the *Upgrade* option.
+#. Click on the up arrow button next to your main database name to proceed to the test upgrade.
 
    .. image:: odoo_online/upgrade-option.png
       :alt: Selecting the action settings icon
 
-#. In the pop-up message that will appear, select Test Upgrade.
+#. In the pop-up message that appears, select the target version and then :guilabel:`Test` as
+   purpose.
 
-   .. image:: odoo_online/select-test-upgrade.png
-      :alt: Selecting test upgrade
+   .. note::
+      The :guilabel:`Production` purpose doesn't appear if you didn't test your upgraded database at
+      least once.
 
 #. This triggers the automated upgrade process. A confirmation email is then sent to you with the
    the link to the upgraded database or to provide information if the upgrade failed.
