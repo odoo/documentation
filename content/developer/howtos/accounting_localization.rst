@@ -23,7 +23,7 @@ Building a localization module
 
 The structure of a basic ``l10n_XX`` module may be described with the following :file:`__manifest__.py` file:
 
-.. code-block:: py
+.. code-block:: python
 
     {
         "name": "COUNTRY - Accounting",
@@ -345,7 +345,7 @@ Accounting reports should be added via a separate module `l10n_XX_reports` that 
 Basic :file:`__manifest__.py` file for such a module looks as following:
 
 
-.. code-block:: py
+.. code-block:: python
 
     {
         "name": "COUNTRY - Accounting Reports",
