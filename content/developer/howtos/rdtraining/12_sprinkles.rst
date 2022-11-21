@@ -355,8 +355,8 @@ complete list):
 .. code-block:: xml
 
     <tree decoration-success="is_partner==True">
-        <field name="name">
-        <field name="is_partner" invisible="1">
+        <field name="name"/>
+        <field name="is_partner" invisible="1"/>
     </tree>
 
 The records where ``is_partner`` is ``True`` will be displayed in green.
