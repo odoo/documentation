@@ -218,6 +218,7 @@ on our test model a link to the ``res.partner`` model thanks to the field ``part
 We can define the inverse relation, i.e. the list of test models linked to our partner::
 
     test_ids = fields.One2many("test.model", "partner_id", string="Tests")
+    offer_ids = fields.one2many("estate.property.offer", "property_id", string="Offers")
 
 The first parameter is called the ``comodel`` and the second parameter is the field we want to
 inverse.
