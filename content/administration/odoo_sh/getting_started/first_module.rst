@@ -141,7 +141,7 @@ Uncomment the content of the files:
   the manifest of your module, including for instance its title, description and data files to load.
   You just need to uncomment the access control list data file:
 
-  .. code-block:: xml
+  .. code-block:: python
 
     # 'security/ir.model.access.csv',
 

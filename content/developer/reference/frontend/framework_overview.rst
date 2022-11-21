@@ -328,7 +328,7 @@ browser.
 
 Example:
 
-.. code-block:: js
+.. code-block:: javascript
 
    import { evaluateExpr } from "@web/core/py_js/py";
 
