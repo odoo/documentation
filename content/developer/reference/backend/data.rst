@@ -20,11 +20,11 @@ of an XML data file is the following:
 
 .. code-block:: xml
 
-    <!-- the root elements of the data file -->
     <?xml version="1.0" encoding="UTF-8"?>
+    <!-- the root elements of the data file -->
     <odoo>
-      <operation/>
-      ...
+        <operation/>
+        ...
     </odoo>
 
 Data files are executed sequentially, operations can only refer to the result
@@ -39,15 +39,15 @@ of operations defined previously
 
     .. code-block:: xml
 
-      <odoo>
-          <data noupdate="1">
-              <!-- Only loaded when installing the module (odoo-bin -i module) -->
-              <operation/>
-          </data>
+        <odoo>
+            <data noupdate="1">
+                <!-- Only loaded when installing the module (odoo-bin -i module) -->
+                <operation/>
+            </data>
 
-          <!-- (Re)Loaded at install and update (odoo-bin -i/-u) -->
-          <operation/>
-      </odoo>
+            <!-- (Re)Loaded at install and update (odoo-bin -i/-u) -->
+            <operation/>
+        </odoo>
 
 Core operations
 ===============
@@ -173,24 +173,24 @@ values).
 
 .. code-block:: xml
 
-  <odoo>
-      <data noupdate="1">
-          <record name="partner_1" model="res.partner">
-              <field name="name">Odude</field>
-          </record>
+    <odoo>
+        <data noupdate="1">
+            <record name="partner_1" model="res.partner">
+                <field name="name">Odude</field>
+            </record>
 
-          <function model="res.partner" name="send_inscription_notice"
-              eval="[[ref('partner_1'), ref('partner_2')]]"/>
+            <function model="res.partner" name="send_inscription_notice"
+                eval="[[ref('partner_1'), ref('partner_2')]]"/>
 
-          <function model="res.users" name="send_vip_inscription_notice">
-              <function eval="[[('vip','=',True)]]" model="res.partner" name="search"/>
-          </function>
-      </data>
+            <function model="res.users" name="send_vip_inscription_notice">
+                <function eval="[[('vip','=',True)]]" model="res.partner" name="search"/>
+            </function>
+        </data>
 
-      <record id="model_form_view" model="ir.ui.view">
-
-      </record>
-  </odoo>
+        <record id="model_form_view" model="ir.ui.view">
+            ...
+        </record>
+    </odoo>
 
 .. ignored assert
 

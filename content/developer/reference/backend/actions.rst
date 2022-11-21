@@ -419,7 +419,7 @@ Actions triggered automatically on a predefined frequency.
     Number of *interval_type* uom between two executions of the action
 
 ``interval_type``
-    Unit of measure of frequency interval (``minutes``, ``hours``, ``days``, ``weeks``, ``months``,
+    Unit of measure of frequency interval (``minutes``, ``hours``, ``days``, ``weeks``, ``months``)
 
 ``numbercall``
     Number of times this action has to be run.
@@ -438,7 +438,7 @@ Actions triggered automatically on a predefined frequency.
 
     .. code-block:: python
 
-      model.<method_name>()
+        model.<method_name>()
 
 ``nextcall``
     Next planned execution date of this action (date/time format)

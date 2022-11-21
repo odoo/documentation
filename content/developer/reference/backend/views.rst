@@ -114,9 +114,9 @@ an impact on all view types.
   .. code-block:: xml
 
     <tree decoration-info="state == 'draft'"
-      decoration-danger="state == 'help_needed'"
-      decoration-bf="state='busy'">
-      <TREE_VIEW_CONTENT>
+        decoration-danger="state == 'help_needed'"
+        decoration-bf="state='busy'">
+        <!-- TREE_VIEW_CONTENT -->
     </tree>
 
   .. warning::
@@ -1739,6 +1739,8 @@ root can have the following attributes:
     .. code-block:: xml
 
         <tree default_order="sequence,name desc">
+            ...
+        </tree>
 
 ``decoration-{$name}``
     allow changing the style of a row's text based on the corresponding
@@ -2485,7 +2487,7 @@ Possible children elements of the search view are:
     <searchpanel>
       <field name="department_id"/>
       <field name="manager_id" select="multi" domain="[('department_id', '=', department_id)]"/>
-    <searchpanel/>
+    </searchpanel>
 
   In the above example, the range of values for manager_id (manager names) available at screen
   will depend on the value currently selected for the field ``department_id``.

@@ -154,7 +154,6 @@ After that, you have to write your code inside a ``<odoo>`` tag.
 
 .. code-block:: xml
 
-   [XML]
    <?xml version="1.0" encoding="utf-8" ?>
    <odoo>
      
@@ -166,7 +165,6 @@ Almost every element and option that you create has to be placed inside a ``<tem
 
 .. code-block:: xml
 
-    [XML]
     <template id="my_title" name="My title">
       <h1>This is an HTML block</h1>
       <h2 class="lead">And this is a subtitle</h2>
