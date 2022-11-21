@@ -1369,36 +1369,36 @@ integer (FieldInteger)
         <field name="int_value" options='{"format": false}'/>
 
 float (FieldFloat)
-  This is the default field type for fields of type *float*.
+    This is the default field type for fields of type *float*.
 
-  - Supported field types: *float*
+    - Supported field types: *float*
 
-  Attributes:
+    Attributes:
 
-  - digits: displayed precision
+    - digits: displayed precision
 
-  .. code-block:: xml
+    .. code-block:: xml
 
-      <field name="factor" digits="[42,5]"/>
+        <field name="factor" digits="[42,5]"/>
 
-  Options:
+    Options:
 
-  - type: setting the input type (*text* by default, can be set on *number*)
+    - type: setting the input type (*text* by default, can be set on *number*)
 
-  On edit mode, the field is rendered as an input with the HTML attribute type
-  set on *number* (so user can benefit the native support, especially on
-  mobile). In this case, the default formatting is disabled to avoid incompability.
+    On edit mode, the field is rendered as an input with the HTML attribute type
+    set on *number* (so user can benefit the native support, especially on
+    mobile). In this case, the default formatting is disabled to avoid incompability.
 
-  .. code-block:: xml
+    .. code-block:: xml
 
-      <field name="int_value" options='{"type": "number"}'/>
+        <field name="int_value" options='{"type": "number"}'/>
 
-  - step: set the step to the value up and down when the user click on buttons
-    (only for input of type number, 1 by default)
+    - step: set the step to the value up and down when the user click on buttons
+        (only for input of type number, 1 by default)
 
-  .. code-block:: xml
+    .. code-block:: xml
 
-      <field name="int_value" options='{"type": "number", "step": 0.1}'/>
+        <field name="int_value" options='{"type": "number", "step": 0.1}'/>
 
     - format: should the number be formatted. (true by default)
 
@@ -1545,15 +1545,15 @@ phone (FieldPhone)
   - Supported field types: *char*
 
 url (UrlWidget)
-  This field displays an url (in readonly mode). The main reason to use it is
-  that it is rendered as an anchor tag with the proper css classes and href.
+    This field displays an url (in readonly mode). The main reason to use it is
+    that it is rendered as an anchor tag with the proper css classes and href.
 
-  Also, the text of the anchor tag can be customized with the *text* attribute
-  (it won't change the href value).
+    Also, the text of the anchor tag can be customized with the *text* attribute
+    (it won't change the href value).
 
-  .. code-block:: xml
+    .. code-block:: xml
 
-      <field name="foo" widget="url" text="Some URL"/>
+        <field name="foo" widget="url" text="Some URL"/>
 
     Options:
 
@@ -2068,7 +2068,7 @@ one2many (FieldOne2Many)
 
   .. code-block:: xml
 
-      <field name="turtles" options="{\'create_text\': \'Add turtle\'}">
+      <field name="turtles" options="{\'create_text\': \'Add turtle\'}"/>
 
 statusbar (FieldStatus)
   This is a really specialized widget for the form views. It is the bar on top
@@ -2096,7 +2096,7 @@ week_days (WeekDays)
 
   .. code-block:: xml
 
-      <widget name="week_days">
+      <widget name="week_days"/>
 
 Client actions
 ==============
