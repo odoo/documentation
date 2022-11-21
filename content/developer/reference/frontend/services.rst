@@ -902,7 +902,7 @@ API
 
     remove the value with the given key from the :ref:`user context<frontend/framework/user_context>`
 
-    .. code-block:: js
+    .. code-block:: javascript
 
       userService.removeFromContext("isFriend")
 
@@ -914,6 +914,6 @@ API
 
     check if the user is part of a group
 
-    .. code-block:: js
+    .. code-block:: javascript
 
       const isInSalesGroup = await userService.hasGroup("sale.group_sales")

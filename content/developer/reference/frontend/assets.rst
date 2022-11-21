@@ -63,7 +63,7 @@ with a dedicated `assets` key which contains a dictionary. The dictionary maps
 bundle names (keys) to the list of files they contain (values). It looks
 like this:
 
-.. code-block:: py
+.. code-block:: python
 
     'assets': {
         'web.assets_backend': [

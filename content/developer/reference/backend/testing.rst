@@ -199,7 +199,7 @@ Besides tags you can also specify specific modules, classes or functions to
 test. The full syntax of the format accepted by :option:`--test-tags <odoo-bin --test-tags>`
 is:
 
-.. code-block::
+.. code-block:: text
 
     [-][tag][/module][:class][.method]
 
