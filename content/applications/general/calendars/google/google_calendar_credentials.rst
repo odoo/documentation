@@ -105,7 +105,7 @@ next to :guilabel:`Google Calendar`.
    :align: center
    :alt: The Google Calendar checkbox in General Settings.
 
-Next, copy and paste the Client ID and the Client Secret from the Google Calender API Credentials
+Next, copy and paste the Client ID and the Client Secret from the Google Calendar API Credentials
 page into their respective fields below the :guilabel:`Google Calendar` checkbox. Then, click
 :guilabel:`Save`.
 
