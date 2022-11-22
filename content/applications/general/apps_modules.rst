@@ -45,7 +45,8 @@ Upgrade apps and modules
 ========================
 
 On some occasions, new improvements or app features are added to :doc:`supported versions of Odoo
-</administration/maintain/supported_versions>`. To be able to use them, you must **upgrade** your app.
+</administration/maintain/supported_versions>`. To be able to use them, you must **upgrade** your
+app.
 
 Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to upgrade, then on
 *Upgrade*.
@@ -62,7 +63,7 @@ Go to :menuselection:`Apps`, click on the *dropdown menu* of the app you want to
    :align: center
 
 Some apps have dependencies, meaning that one app requires another. Therefore, uninstalling one app
-may uninstall multiple apps and modules. Odoo warns you which dependant apps and modules are
+may uninstall multiple apps and modules. Odoo warns you which dependent apps and modules are
 affected by it.
 
 .. image:: apps_modules/uninstall_deps.png
