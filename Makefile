@@ -42,6 +42,7 @@ help:
 	@echo "  html         to build the documentation to HTML"
 	@echo "  fast         to build the documentation to HTML with shallow menu (faster)"
 	@echo "  clean        to delete the build files"
+	@echo "  test         to run the guidelines tests"
 
 clean:
 	@echo "Cleaning build files..."
@@ -82,3 +83,6 @@ fast: html
 static: $(HTML_BUILD_DIR)/_static/style.css
 	cp -r extensions/odoo_theme/static/* $(HTML_BUILD_DIR)/_static/
 	cp -r static/* $(HTML_BUILD_DIR)/_static/
+
+test:
+	python tests/rst_style.py $(SOURCE_DIR)
