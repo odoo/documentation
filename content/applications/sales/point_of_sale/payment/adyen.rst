@@ -55,6 +55,20 @@ To find this number, go to your **Adyen account**. Then, go to :menuselection:`P
 --> Terminals`, select the terminal to link, and copy-paste its serial number onto the Odoo
 mandatory field.
 
+Set the Event URLs
+~~~~~~~~~~~~~~~~~~
+
+For Odoo to know when a payment is made, you must set the terminal **Event URLs**. To do so,
+
+#. log in to `Adyen's website <https://www.adyen.com/>`_;
+#. go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and select the connected
+   terminal;
+#. from the terminal settings, click :guilabel:`Integrations`;
+#. set the :guilabel:`Switch to decrypted mode to edit this setting` field as :guilabel:`Decrypted`;
+#. click the **pencil icon** button and enter your server address, followed by
+   `/pos_adyen/notification` in the :guilabel:`Event URLs` field; and
+#. click :guilabel:`Save` at the bottom of the screen to save the changes.
+
 Add a new payment method
 ========================
 
