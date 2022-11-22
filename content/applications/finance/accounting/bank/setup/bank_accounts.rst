@@ -1,5 +1,5 @@
 =============
-Bank Accounts
+Bank accounts
 =============
 
 You can manage as many **Bank Accounts** as needed on your database. Configuring them well allows

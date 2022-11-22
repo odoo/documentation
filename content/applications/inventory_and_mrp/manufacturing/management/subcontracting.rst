@@ -18,7 +18,7 @@ produced out of raw materials “A” and “B”.
 
 .. image:: subcontracting/subcontracting_01.png
     :align: center
-    :alt: 
+    :alt:
 
 With its subcontracting feature, Odoo helps you handle this flow easily.
 
@@ -30,7 +30,7 @@ To use the subcontracting feature, go to :menuselection:`Manufacturing
 
 .. image:: subcontracting/subcontracting_02.png
     :align: center
-    :alt: 
+    :alt:
 
 To define if a product must be subcontracted, use a *Bill of Materials
 (BoM)* of type *Subcontracting*.
@@ -46,7 +46,7 @@ several subcontractors.
 
 .. image:: subcontracting/subcontracting_03.png
     :align: center
-    :alt: 
+    :alt:
 
 Basic Subcontracting Flow
 =========================
@@ -58,7 +58,7 @@ a subcontractor on the *BoM*.
 
 .. image:: subcontracting/subcontracting_04.png
     :align: center
-    :alt: 
+    :alt:
 
 Once the *PO* is validated (1), a pending receipt is created. When the
 products are received, validate the receipt (2), with the actual
@@ -131,14 +131,14 @@ also tracked, its serial/lot number can be registered here too.
 
 .. image:: subcontracting/subcontracting_05.png
     :align: center
-    :alt: 
+    :alt:
 
 For audit purposes, it is possible to check the lot numbers recorded on
 a receipt by using the icon on the right of the finished products:
 
 .. image:: subcontracting/subcontracting_06.png
     :align: center
-    :alt: 
+    :alt:
 
 Automate Replenishment of Subcontractors
 ========================================
@@ -172,7 +172,7 @@ components to the subcontractor.
 
 .. image:: subcontracting/subcontracting_07.png
     :align: center
-    :alt: 
+    :alt:
 
 The second approach is to use a “pull” flow. Here, the demand in the
 finished product (real demand or forecasted one through the Master
@@ -182,7 +182,7 @@ wanted components.
 
 .. image:: subcontracting/subcontracting_08.png
     :align: center
-    :alt: 
+    :alt:
 
 Replenishment from another supplier
 -----------------------------------
@@ -198,7 +198,7 @@ subcontractor for the shipping.
 
 .. image:: subcontracting/subcontracting_09.png
     :align: center
-    :alt: 
+    :alt:
 
 That way, the supplier can ship items directly and you simply receive
 and pay the bill. However, it is still required to validate receipts for
@@ -206,7 +206,7 @@ the subcontractor.
 
 .. image:: subcontracting/subcontracting_10.png
     :align: center
-    :alt: 
+    :alt:
 
 Quality Control
 ---------------
@@ -219,14 +219,14 @@ reception.
 
 .. image:: subcontracting/subcontracting_11.png
     :align: center
-    :alt: 
+    :alt:
 
 To create a quality check at the receipt, open the *Quality* app and
 create a new *Control Point* on the reception.
 
 .. image:: subcontracting/subcontracting_12.png
     :align: center
-    :alt: 
+    :alt:
 
 By doing so, a quality check is automatically created each time a
 finished product is received.

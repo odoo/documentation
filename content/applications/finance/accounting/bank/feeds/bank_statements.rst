@@ -43,7 +43,7 @@ different columns you want to import.
    :alt: Register bank statements manually in Odoo Accounting
 
 .. note::
-   Quicken Interchange Format (.QIF) is an older file format that is no longer supported since 2005. 
+   Quicken Interchange Format (.QIF) is an older file format that is no longer supported since 2005.
    If possible, prefer OFX files over QIF.
 
 Register bank statements manually

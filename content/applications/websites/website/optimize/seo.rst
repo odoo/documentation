@@ -29,7 +29,7 @@ Title, Description
 Every web page should define the ``<title>`` and ``<description>`` meta data.
 These information elements are used by search engines to promote your website.
 They are automatically generated based on page title & content, but you can
-finetune them. Make sure they fit the content of the page, otherwise you will 
+finetune them. Make sure they fit the content of the page, otherwise you will
 be downgraded by search engines.
 
 .. image:: seo/seo01.png
@@ -40,15 +40,15 @@ Keywords
 In order to write quality content and boost your traffic, Odoo provides
 a ``<keyword>`` finder. Those keywords are the searches you want to head
 towards your website. For each keyword, you see how it is used in the content
-(H1, H2, page title, page description, page content) and what are the related 
+(H1, H2, page title, page description, page content) and what are the related
 searches in Google. The more keywords are used the better.
 
 .. image:: seo/seo02.png
   :align: center
 
-.. note:: 
+.. note::
   If your website is in multiple languages, you can use the Promote
-  tool for every language of a single page and set specific title, 
+  tool for every language of a single page and set specific title,
   description and search tags.
 
 Content is King
@@ -80,8 +80,8 @@ modules to help you build your website content:
 Use Social Networks
 ===================
 
-Social media is built for mass sharing. If lots of people share your content 
-on social media, then it's likely more people will link to it, 
+Social media is built for mass sharing. If lots of people share your content
+on social media, then it's likely more people will link to it,
 and links are a huge factor for SEO ranking.
 
 Odoo embeds several tools to share content through social media:
@@ -94,7 +94,7 @@ All you have to do is to refer all your accounts in your company settings.
 
 .. image:: seo/seo03.png
   :align: center
-  
+
 Social Share
 ------------
 
@@ -106,17 +106,17 @@ wall.
   :align: center
 
 Most social media use a picture of the picture to decorate the share post.
-Odoo uses the website logo by default but you can choose any other image 
+Odoo uses the website logo by default but you can choose any other image
 of your page in the Promote tool.
 
 .. image:: seo/seo05.png
   :align: center
-  
+
 Facebook Page
 -------------
 
-Drop the building block *Facebook Page* to display a widget of your Facebook 
-business page and encourage visitors to follow it. 
+Drop the building block *Facebook Page* to display a widget of your Facebook
+business page and encourage visitors to follow it.
 You can display the timeline, the next events and the messages.
 
 Twitter Scroller
@@ -179,7 +179,7 @@ an example, the following URLs all do a 301 redirect to the above URL:
    product name)
 
 Some URLs have several dynamic parts, like this one (a blog category and
-a post): 
+a post):
 
 -  https://www.odoo.com/blog/company-news-5/post/the-odoo-story-56
 
@@ -191,7 +191,7 @@ In the above example:
 
 When an Odoo page has a pager, the page number is set directly in the
 URL (does not have a GET argument). This allows every page to be indexed
-by search engines. Example: 
+by search engines. Example:
 
 -  https://www.odoo.com/blog/page/3
 
@@ -222,7 +222,7 @@ maintaining the SEO link juice.
 HTTPS
 -----
 
-Search engines boost ranking of secure HTTPS/SSL websites. 
+Search engines boost ranking of secure HTTPS/SSL websites.
 So, by default all Odoo Online instances are fully
 based on HTTPS. If the visitor accesses your website through a non HTTPS
 url, it gets a 301 redirect to its HTTPS equivalent.
@@ -230,7 +230,7 @@ url, it gets a 301 redirect to its HTTPS equivalent.
 Links: Nofollow Strategy
 ------------------------
 
-The more a page is linked from external and quality websites, 
+The more a page is linked from external and quality websites,
 the better it is for your SEO.
 
 Here are Odoo strategies to manage links:
@@ -296,7 +296,7 @@ yourwebsite.com/shop), they may automatically be redirected to a
 translated version according to their browser language preference (e.g.
 yourwebsite.com/fr\_FR/shop).
 
-Next time, it keeps a cookie of the current language to 
+Next time, it keeps a cookie of the current language to
 avoid any redirection.
 
 To force a visitor to stick to the default language, you can use the
@@ -409,18 +409,18 @@ CSS is shared amongst all pages, when the visitor clicks on another
 page, the browser does not even have to load a new CSS file!
 
 ================================= =============================================
-  **Both files in the <head>**     **What the visitor gets (only one file)**   
+  **Both files in the <head>**     **What the visitor gets (only one file)**
 ================================= =============================================
- /\* From bootstrap.css \*/       .text-muted {                                
- .text-muted {                    color: #666;                                 
- color: #777;                     background: yellow                           
- background: yellow;              }                                             
+ /\* From bootstrap.css \*/       .text-muted {
+ .text-muted {                    color: #666;
+ color: #777;                     background: yellow
+ background: yellow;              }
  }
 
- /\* From my-theme.css \*/                                                     
- .text-muted {                                                                 
- color: #666;                                                                  
- }                                                                             
+ /\* From my-theme.css \*/
+ .text-muted {
+ color: #666;
+ }
 ================================= =============================================
 
 The CSS sent by Odoo includes all CSS / Less / Sass of all pages /
@@ -432,28 +432,28 @@ into a second bundle that is loaded only when the page using it is
 requested. An example of this is the backend that is only loaded when
 the visitor logs in and accesses the backend (/web).
 
-.. note:: 
+.. note::
   If the CSS file is very big, Odoo will split it into two smaller
-  files to avoid the 4095 selectors limit per sheet of Internet Explorer. 
+  files to avoid the 4095 selectors limit per sheet of Internet Explorer.
   But most themes fit below this limit.
 
 **Minified:** After being pre-processed and concatenated, the resulting
 CSS is minified to reduce its size.
 
 ============================ ==============================
-  **Before minification**     **After minification**       
+  **Before minification**     **After minification**
 ============================ ==============================
-  /\* some comments \*/       .text-muted {color: #666}    
-  .text-muted {                                            
-  color: #666;                                             
-  }                                                        
+  /\* some comments \*/       .text-muted {color: #666}
+  .text-muted {
+  color: #666;
+  }
 ============================ ==============================
 
 The final result is then compressed, before being delivered to the
 browser.
 
 Then, a cached version is stored server-side (so we do not have
-to pre-process, concatenate, minify at every request) and browser-side 
+to pre-process, concatenate, minify at every request) and browser-side
 (so the same visitor will load the CSS only once for all pages they
 visit).
 
@@ -621,7 +621,7 @@ robots.txt
 ----------
 
 When indexing your website, search engines take a first look at the
-general indexing rules of the a``/robots.txt`` file (allowed robots,
+general indexing rules of the ``/robots.txt`` file (allowed robots,
 sitemap path, etc.). Odoo automatically creates it. Its content is:
 
 User-agent: \*

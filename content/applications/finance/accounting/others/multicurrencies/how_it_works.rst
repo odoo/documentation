@@ -63,7 +63,7 @@ Live Currency Rate
 
 By default, the currencies need to be updated manually. But you can
 synchronize it with `Yahoo <https://finance.yahoo.com/currency-converter/>`__ or
-the `European Central Bank <http://www.ecb.europa.eu>`__. In 
+the `European Central Bank <http://www.ecb.europa.eu>`__. In
 :menuselection:`Configuration --> Settings`, go to the **Live Currency Rate** section.
 
 Choose the interval : Manually, Daily, Weekly or Monthly. You can always

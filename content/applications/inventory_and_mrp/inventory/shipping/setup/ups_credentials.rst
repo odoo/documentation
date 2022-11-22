@@ -16,15 +16,15 @@ the UPS Developer Kit API Development and Production servers.
 Create a UPS Account
 =====================
 
-Note that only customers located in the US can open a UPS account online. 
-If you are located outside the US, you will need to contact UPS Customer 
+Note that only customers located in the US can open a UPS account online.
+If you are located outside the US, you will need to contact UPS Customer
 Service in order to to open an account.
 
-You can read additional information about opening a UPS account on the 
-their website, on the page, 
-`How to Open a UPS Account Online <https://www.ups.com/content/us/en/resources/sri/openaccountonline.html?srch_pos=2&srch_phr=open+ups+account>`_ 
+You can read additional information about opening a UPS account on the
+their website, on the page,
+`How to Open a UPS Account Online <https://www.ups.com/content/us/en/resources/sri/openaccountonline.html?srch_pos=2&srch_phr=open+ups+account>`_
 
-If you don't already have a UPS account, you can create one along with 
+If you don't already have a UPS account, you can create one along with
 your online profile by following these steps:
 
 1. Access the UPS.com web site at
@@ -34,7 +34,7 @@ at the top of the page.
 2. Click the **Register for MyUPS** button, and follow the prompts to
 complete the registration process.
 
-If you already have a UPS account, you can add it to your online profile as follows: 
+If you already have a UPS account, you can add it to your online profile as follows:
 
 1. Log in to the `UPS.com website <http://www.ups.com/>`_) using your UPS.com User ID and Password.
 
@@ -45,7 +45,7 @@ If you already have a UPS account, you can add it to your online profile as foll
 4. Click the **Add an Existing UPS Account** link in the **UPS Account Details**
 section of the page.
 
-5. In the **Add New Account** screen, enter the **UPS Account Number**, 
+5. In the **Add New Account** screen, enter the **UPS Account Number**,
 **Account Name**, and **Postal Code** fields. The country defaults to
 United States.q
 

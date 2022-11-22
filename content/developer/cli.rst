@@ -791,4 +791,3 @@ If an extra module contains such files, they should be fixed to allow the module
 load. If the module works despite the presence of those files, they are probably
 not loaded and should therefore be removed from the module, or at least excluded
 in the manifest via ``cloc_exclude``.
-

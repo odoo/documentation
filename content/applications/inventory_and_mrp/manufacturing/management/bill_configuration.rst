@@ -35,7 +35,7 @@ type, which is *Manufacture this Product*.
 
 .. warning::
    The destination location should **not** be a scrap location. A scrap location is where you put
-   products that you don't need. 
+   products that you don't need.
 
 Using the same BoM to describe Variants
 ---------------------------------------

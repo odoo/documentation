@@ -13,11 +13,11 @@ Iceland, Norway, Switzerland, Andorra, Monaco and San Marino.
 With Odoo, once you decide to pay a vendor, you can select to pay the
 bill with SEPA. Then, at the end of the day, the manager can generate
 the SEPA file containing all bank wire transfers and send it to the
-bank. 
+bank.
 
 By default,the file follows the SEPA Credit Transfer **'pain.001.001.03'**
 specifications. This is a well-defined standard that makes consensus
-among banks. However, according to the country set on your company, 
+among banks. However, according to the country set on your company,
 another format can be used : **'pain.001.001.03.ch.02'** for Switzerland
 and **'pain.001.003.03'** for Germany.
 

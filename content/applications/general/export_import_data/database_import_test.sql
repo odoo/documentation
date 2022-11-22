@@ -16,7 +16,7 @@ SET default_tablespace = '';
 SET default_with_oids = false;
 
 --
--- Name: companies; Type: TABLE; Schema: public; Owner: fp; Tablespace: 
+-- Name: companies; Type: TABLE; Schema: public; Owner: fp; Tablespace:
 --
 
 CREATE TABLE companies (
@@ -56,7 +56,7 @@ SELECT pg_catalog.setval('companies_id_seq', 3, true);
 
 
 --
--- Name: persons; Type: TABLE; Schema: public; Owner: fp; Tablespace: 
+-- Name: persons; Type: TABLE; Schema: public; Owner: fp; Tablespace:
 --
 
 CREATE TABLE persons (
@@ -134,7 +134,7 @@ COPY persons (id, company_id, person_name) FROM stdin;
 
 
 --
--- Name: companies_pkey; Type: CONSTRAINT; Schema: public; Owner: fp; Tablespace: 
+-- Name: companies_pkey; Type: CONSTRAINT; Schema: public; Owner: fp; Tablespace:
 --
 
 ALTER TABLE ONLY companies
@@ -152,4 +152,3 @@ ALTER TABLE ONLY persons
 --
 -- PostgreSQL database dump complete
 --
-

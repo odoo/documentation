@@ -26,7 +26,7 @@ In order to install libsrtp, follow the instructions below:
 .. code-block:: console
 
     cd /usr/local/src/
-    wget http://srtp.sourceforge.net/srtp-1.4.2.tgz 
+    wget http://srtp.sourceforge.net/srtp-1.4.2.tgz
     tar zxvf srtp-1.4.2.tgz
     cd /usr/local/src/srtp
     ./configure CFLAGS=-fPIC --prefix=/usr/local/lib
@@ -67,7 +67,7 @@ You also need to install PJSIP, you can download the source `here <http://www.pj
     # ldconfig -p | grep pj
 
 - **The result should be:**
-    
+
 .. code-block:: console
 
     libpjsua.so (libc6,x86-64) => /usr/lib/libpjsua.so
@@ -90,7 +90,7 @@ Asterisk
 - Extract Asterisk:
 
 .. code-block:: console
-    
+
     tar zxvf asterisk*
 
 - Enter the Asterisk directory:
@@ -99,7 +99,7 @@ Asterisk
 
     cd ./asterisk*
 
-- Run the Asterisk configure script: 
+- Run the Asterisk configure script:
 
 .. code-block:: console
 
@@ -207,14 +207,14 @@ In Odoo, the configuration should be done in the user's preferences.
 .. image:: asterisk/voip_config01.png
   :align: center
 
-- The SIP Login/Browser's Extension is the number you configured previously in the sip.conf file (in our example: 1060). 
+- The SIP Login/Browser's Extension is the number you configured previously in the sip.conf file (in our example: 1060).
 
-- The SIP Password is the secret you chose in the sip.conf file. 
+- The SIP Password is the secret you chose in the sip.conf file.
 
 - The extension of your office's phone is not a required field but it is used if you want to transfer your call from Odoo to an external phone also configured in the sip.conf file.
 
 
-The configuration should also be done in the General Settings under the "Integrations" section. 
+The configuration should also be done in the General Settings under the "Integrations" section.
 
 .. image:: onsip/onsip02.png
   :align: center
@@ -222,4 +222,3 @@ The configuration should also be done in the General Settings under the "Integra
 - The PBX Server IP should be the same as the IP you define in the http.conf file.
 
 - The WebSocket should be: ws://localhost:XXXX/ws where "localhost" needs to be the same as the IP defined previously and "XXXX" needs to be the port defined in the http.conf file.
-
