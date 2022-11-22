@@ -51,6 +51,14 @@ Help & version
 
    shows Odoo version e.g. "Odoo Server 13.0"
 
+.. tip:: You can enable auto-completion in your shell by running
+
+  .. code-block:: bash
+
+    echo "complete -W '`./odoo-bin --help | \
+      sed -e 's/[^a-z_-]\(-\+[a-z0-9_-]\+\)/\n\1\n/' | \
+      grep -- '^-' | sort | uniq | tr '\n' ' '`' odoo-bin" >> ~/.bash_completion
+
 .. _reference/cmdline/server:
 
 Running the server
