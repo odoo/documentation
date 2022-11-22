@@ -73,7 +73,7 @@ Python
 
 .. note::
 
-    **Goal**: at the end of this section, it will not possible to accept an offer
+    **Goal**: at the end of this section, it will not be possible to accept an offer
     lower than 90% of the expected price.
 
     .. image:: 11_constraints/python.gif
