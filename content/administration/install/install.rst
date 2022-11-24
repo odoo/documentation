@@ -138,7 +138,7 @@ used to install *Odoo Community Edition* by executing the following commands **a
     # echo "deb http://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/deb/ ./" >> /etc/apt/sources.list.d/odoo.list
     # apt-get update && apt-get install odoo
 
-You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
+You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.content/developer/howtos/website_themes/animations.rst
 
 At this moment, there is no nightly repository for the Enterprise Edition.
 
@@ -396,6 +396,8 @@ needed:
 #. Edit the System Environment's variable `PATH` to add the folder where `rtlcss.cmd` is located
    (typically: `C:\\Users\\<user>\\AppData\\Roaming\\npm\\`).
 
+.. _setup/install/source/windows/running_odoo:
+
 Running Odoo
 ~~~~~~~~~~~~
 
@@ -590,6 +592,8 @@ needed:
 
        $ sudo npm install -g rtlcss
 
+.. _setup/install/source/linux/running_odoo:
+
 Running Odoo
 ~~~~~~~~~~~~
 
@@ -782,6 +786,8 @@ needed:
    .. code-block:: console
 
        $ sudo npm install -g rtlcss
+
+.. _setup/install/source/mac_os/running_odoo:
 
 Running Odoo
 ~~~~~~~~~~~~
