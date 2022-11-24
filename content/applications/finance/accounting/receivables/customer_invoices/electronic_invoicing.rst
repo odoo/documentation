@@ -41,6 +41,8 @@ Odoo supports, among others, the following formats.
 .. seealso::
    - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
 
+.. _e-invoicing/configuration:
+
 Configuration
 =============
 
