@@ -12,10 +12,47 @@ If a payment is **not linked to an invoice or bill**, the customer has an outsta
 your company, or your company has an outstanding debit with a vendor. You can use those outstanding
 amounts to reduce unpaid invoices/bills.
 
+.. seealso::
+   - :doc:`Internal transfers <../../bank/misc/interbank>`
+   - :doc:`../../bank/reconciliation/use_cases`
+   - `Odoo tutorial on Bank Configuration <https://www.odoo.com/slides/slide/bank-configuration-1880?fullscreen=1>`_
+
+Invoices and bills statuses
+===========================
+
+Different types of status exist in Odoo to help you quickly identify the stage of your transactions.
+
+Invoices and bills creation statuses
+------------------------------------
+
+- :guilabel:`Draft`: Upon creation of a customer invoice or a vendor bill. The document is not
+  confirmed yet, and no journal entry gets created.
+- :guilabel:`Posted`: Once the invoice is confirmed, a journal entry is created.
+
+.. image:: recording/draft-posted.png
+   :align: center
+   :alt: See status information of a payment
+
+Invoices and bills status when registering payment
+--------------------------------------------------
+
+The customer invoice or vendor bill should be in the :guilabel:`Posted` status to register the
+payment. When clicking on :guilabel:`Register payment`, you can select the amount to pay and make a
+partial or full payment. A banner appears on the record to indicate its status:
+
+- :guilabel:`Partial`: If you register part of the payment.
+- :guilabel:`In payment`: If you register the total amount of the payment.
+- :guilabel:`Paid`: Once the bank statement is reconciled with the invoice.
+
+.. note::
+   If your main bank account is set as an outstanding account, and the payment is made in Odoo (not
+   related to a bank statement), invoices and bills are directly registered in the status
+   :guilabel:`Paid`.
+
 Registering payment from an invoice or bill
 ===========================================
 
-When you click on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
+When clicking on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
 new journal entry and changes the amount due according to the amount of the payment. The counterpart
 is reflected in an outstanding receipts or payments account. At this point, the customer invoice or
 vendor bill is marked as :guilabel:`In payment`. Then, when the outstanding account is reconciled
@@ -29,22 +66,12 @@ access additional information, such as the related journal, by clicking on :guil
    :alt: See detailed information of a payment
 
 .. note::
-   - The customer invoice or vendor bill should be in the status :guilabel:`Posted` to register the
-     payment.
-   - When clicking on :guilabel:`Register payment`, you can select the amount to pay and make a
-     partial or full payment.
-   - If your main bank account is set as oustanding account, and the payment is made in Odoo (not
-     related to a bank statement), invoices and bills are directly registered in the status
-     :guilabel:`Paid`.
-   - If you unreconciled a payment, it still appears in your books but is no longer linked to the
+   - If you unreconcile a payment, it still appears in your books but is no longer linked to the
      invoice.
    - If you (un)reconcile a payment in a different currency, a journal entry is automatically
      created to post the currency exchange gains/losses (reversal) amount.
    - If you (un)reconcile a payment and an invoice having cash basis taxes, a journal entry is
      automatically created to post the cash basis tax (reversal) amount.
-
-.. seealso::
-   - :doc:`../../bank/reconciliation/use_cases`
 
 Registering payments not tied to an invoice or bill
 ===================================================
@@ -68,17 +95,14 @@ clicking on :guilabel:`ADD` under :guilabel:`Outstanding Credits` or :guilabel:`
 The invoice or bill is now marked as :guilabel:`In payment` until it is reconciled with the bank
 statement.
 
-.. seealso::
-   - :doc:`../../bank/reconciliation/use_cases`
-
 Batch payment
 -------------
 
-Batch payments allow you to group different payments to ease reconciliation. They are also useful
-when you deposit checks to the bank or for SEPA Payments.
-Go to :menuselection:`Accounting --> Customers --> Batch Payments` or :menuselection:`Accounting -->
+Batch payments allow you to group different payments to ease :doc:`reconciliation <../../bank/reconciliation/use_cases>`.
+They are also useful when you deposit checks to the bank or for SEPA Payments. To do so go to
+:menuselection:`Accounting --> Customers --> Batch Payments` or :menuselection:`Accounting -->
 Vendors --> Batch Payments`. In the list view of payments, you can select several payments and group
-them in a batch clicking on :menuselection:`Action > Create Batch Payment`.
+them in a batch by clicking on :menuselection:`Action --> Create Batch Payment`.
 
 .. seealso::
   - :doc:`../../receivables/customer_payments/batch`
@@ -94,9 +118,9 @@ Customer Invoices / Vendor Bills`, and click on :guilabel:`⋮` and select :guil
 Matching`, or by going to :menuselection:`Accounting --> Reconciliation`.
 
 .. note::
-   During the reconciliation, if the sum of the debits and credits does not match, it means there is
-   a remaining balance that either needs to be reconciled at a later date or needs to be written off
-   directly.
+   During the :doc:`reconciliation <../../bank/reconciliation/use_cases>`, if the sum of the debits
+   and credits does not match, it means there is a remaining balance that either needs to be
+   reconciled at a later date or needs to be written off directly.
 
 Batch payments matching
 -----------------------
@@ -114,8 +138,5 @@ Reconciling payments with bank statements
 =========================================
 
 Once a payment has been registered, the status of the invoice or bill is :guilabel:`In payment`. The
-next step is to reconcile it with the related bank statement line to have the transaction finalized
-and the invoice or bill marked as :guilabel:`Paid`.
-
-.. seealso::
-   - :doc:`../../bank/reconciliation/use_cases`
+next step is to :doc:`reconcile <../../bank/reconciliation/use_cases>` it with the related bank
+statement line to have the transaction finalized and the invoice or bill marked as :guilabel:`Paid`.
