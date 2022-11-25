@@ -249,10 +249,10 @@ Here are some useful Git commands for your day-to-day work.
   .. code-block:: console
 
      $ cd $HOME/src/odoo
-     $ git switch 15.0
+     $ git switch {BRANCH}
 
      $ cd $HOME/src/enterprise
-     $ git switch 15.0
+     $ git switch {BRANCH}
 
 - Fetch and rebase:
 
@@ -260,11 +260,11 @@ Here are some useful Git commands for your day-to-day work.
 
      $ cd $HOME/src/odoo
      $ git fetch --all --prune
-     $ git rebase --autostash odoo/15.0
+     $ git rebase --autostash odoo/{BRANCH}
 
      $ cd $HOME/src/enterprise
      $ git fetch --all --prune
-     $ git rebase --autostash enterprise/15.0
+     $ git rebase --autostash enterprise/{BRANCH}
 
 Code Editor
 -----------
