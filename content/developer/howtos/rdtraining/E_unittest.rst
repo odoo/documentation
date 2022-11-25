@@ -6,9 +6,9 @@ Advanced E: Python Unit Tests
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 15.0-core from the
-  `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
-  It contains a basic module we will use as a starting point
+  To do the exercise, fetch the branch {BRANCH}-core from the `technical training solutions
+  <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
+  contains a basic module we will use as a starting point
 
 **Reference**:
 `Odoo's Test Framework: Learn Best Practices <https://www.youtube.com/watch?v=JEIscps0OOQ>`__
@@ -284,7 +284,7 @@ These test classes are built on top of the ``unittest`` python module.
 .. note:: For better readability, split your tests into multiple files depending on the scope of the
   tests. You can also have a Common class that most of the tests should inherit from; this common
   class can define the whole set up for the module. For instance in
-  `account <https://github.com/odoo/odoo/blob/14.0/addons/account/tests/common.py>`__.
+  `account <{GITHUB_PATH}/addons/account/tests/common.py>`__.
 
 .. exercise:: Update the code so no one can:
 

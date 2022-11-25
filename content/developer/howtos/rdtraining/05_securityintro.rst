@@ -17,9 +17,9 @@ Data Files (CSV)
 
 Odoo is a highly data driven system. Although behavior is customized using Python code, part of a
 module's value is in the data it sets up when loaded. One way to load data is through a CSV
-file. One example is the
-`list of country states <https://github.com/odoo/odoo/blob/16.0/odoo/addons/base/data/res.country.state.csv>`__
-which is loaded at installation of the ``base`` module.
+file. One example is the `list of country states
+<{GITHUB_PATH}/odoo/addons/base/data/res.country.state.csv>`_ which is loaded at installation of the
+`base` module.
 
 .. code-block:: text
 

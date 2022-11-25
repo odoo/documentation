@@ -10,10 +10,10 @@ Advanced K: Dashboards
     access to Odoo Enterprise features.
 
     To follow the exercise, it is recommended that you fetch the branch
-    15.0-core from the
-    `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
-    It contains a version of the module created during the core training we can use
-    as a starting point.
+    {BRANCH}-core from the `technical training solutions
+    <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
+    contains a version of the module created during the core training we can use as a starting
+    point.
 
 The term "Dashboard" is used in Odoo for objects that display data, but involves different
 implementations. This tutorial will only focus on the Enterprise view that is used to provide
@@ -119,9 +119,10 @@ If you don't have a set of data like this already, you can either:
 * Complete :ref:`howto/rdtraining/C_data` (if you haven't done so already) and add the extra
   cases to your demo data (you may need to create a new database to load in the demo data).
 * Manually create the data in your database.
-* Copy this `data file <https://github.com/odoo/technical-training-solutions/blob/15.0-K_dashboard/estate/data/estate_demo.xml>`__
-  into a new directory called ``data`` in your estate module and copy
-  `these lines <https://github.com/odoo/technical-training-solutions/blob/15.0-K_dashboard/estate/__manifest__.py#L21-L23>`__
+* Copy this `data file
+  <https://github.com/odoo/technical-training-solutions/blob/{BRANCH}-K_dashboard/estate/data/estate_demo.xml>`_
+  into a new directory called ``data`` in your estate module and copy `these lines
+  <https://github.com/odoo/technical-training-solutions/blob/{BRANCH}-K_dashboard/estate/__manifest__.py#L21-L23>`_
   into your __manifest__.py file (you may need to create a new database to load in the demo data).
 
 Click through your database data and make sure it is what you expect. Of course you can add the
@@ -208,8 +209,8 @@ The `ref` attribute can be added to `<view>` elements to use a specific xml id f
 no xml id is provided for a graph or pivot view then the default view will be used.
 The cohort view will not work in the dashboard without a specific xml id. If you have already
 created some of these views then you are welcome to add them to your dashboard! Sample graph and
-pivot views are included in the
-`solution code <https://github.com/odoo/technical-training-solutions/blob/15.0-K_dashboard/estate/views/estate_property_views.xml#L169-L191>`__
+pivot views are included in the `solution code
+<https://github.com/odoo/technical-training-solutions/blob/{BRANCH}-K_dashboard/estate/views/estate_property_views.xml#L169-L191>`_
 that you are welcome to use as well.
 
 .. exercise:: Add subviews.
@@ -363,7 +364,7 @@ graph views), then you can add ``store=False`` to it and it will not show.
 
 The *select* and *from* methods remain the same.
 
-`Here is an example <https://github.com/odoo/odoo/blob/14.0/addons/account/report/account_invoice_report.py>`__
+`Here is an example <{GITHUB_PATH}/addons/account/report/account_invoice_report.py>`__
 of a report that depends on the currently selected companies (in a multi-company environment) context to
 determine the currency exchange rates to use for accurately displaying amounts when the selected companies
 have different currencies.

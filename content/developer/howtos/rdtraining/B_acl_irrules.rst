@@ -12,10 +12,10 @@ ACL stands for "Access Control List"
     <howto/rdtraining>`.
 
     To follow the exercise, it is recommended that you fetch the branch
-    15.0-core from the
-    `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
-    It contains a version of the module created during the core training we can use
-    as a starting point.
+    {BRANCH}-core from the `technical training solutions
+    <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
+    contains a version of the module created during the core training we can use as a starting
+    point.
 
 So far we have mostly concerned ourselves with implementing useful features.
 However in most business scenarios *security* quickly becomes a concern:
