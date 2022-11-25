@@ -6,7 +6,7 @@ Advanced C: Master and Demo Data
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 14.0-core from the repository XXX.
+  To do the exercise, fetch the branch {CURRENT_MAJOR_BRANCH}-core from the repository XXX.
   It contains a basic module we will use as a starting point
 
 Data Types

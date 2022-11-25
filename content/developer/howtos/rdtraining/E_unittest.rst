@@ -6,7 +6,7 @@ Advanced E: Python Unit Tests
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 14.0-core from the repository XXX.
+  To do the exercise, fetch the branch {CURRENT_MAJOR_BRANCH}-core from the repository XXX.
   It contains a basic module we will use as a starting point
 
 **Reference**:
@@ -288,7 +288,7 @@ These test classes are built on top of the ``unittest`` python module.
 .. note:: For more readability, split your tests into multiple files depending on the scope of the
   tests. You can also have a Common class that most of the tests should inherit from; that common
   class can define the whole set up for the module. For instance in
-  `account <https://github.com/odoo/odoo/blob/14.0/addons/account/tests/common.py>`__.
+  `account <{GITHUB_PATH}/addons/account/tests/common.py>`__.
 
 .. exercise:: Ensure no one can create an offer for a sold Property, and create a test for it.
 
