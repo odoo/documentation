@@ -49,7 +49,7 @@ Help & version
 
 .. option:: --version
 
-   shows Odoo version e.g. "Odoo Server 13.0"
+   shows Odoo version e.g. "Odoo Server {BRANCH}"
 
 .. _reference/cmdline/server:
 
