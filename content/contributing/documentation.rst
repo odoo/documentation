@@ -159,24 +159,43 @@ the mean of a :abbr:`PR (Pull Request)` (:dfn:`proposal of content changes`) to 
 of the changes before updating the sources of the documentation.
 
 Prior to submitting a modification, you need to make a copy of the sources and download that copy on
-your machine.
+your machine. Git's CLI (:dfn:`command-line interface`) allows downloading the sources by passing an
+URL to its :command:`git clone` command. You must choose the protocol of the URL depending on what
+you want to do with the sources: choose HTTPS if you intend to only build the documentation locally;
+choose SSH if you plan on proposing content changes.
 
 #. Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
-   **Fork** button in the top right corner.
+   **Fork** button in the top right corner. If work at Odoo, skip this step.
 
    .. image:: documentation/fork-button.png
 
 #. Execute the following commands in a terminal:
 
-   .. code-block:: console
+   .. tabs::
 
-      $ git clone https://github.com/odoo/documentation
-      $ cd documentation/
+      .. tab:: Clone with HTTPS
 
-   .. important::
-      If you do not have edit rights on the repository owned by Odoo, replace "odoo" with your
-      Github username in the URL of the command above. If you do have edit rights, it is not
-      necessary to fork the repository.
+         .. code-block:: console
+
+            $ git clone https://github.com/<username>/documentation.git
+            $ cd documentation/
+
+         Replace `<username>` with your GitHub username. If you work at Odoo, replace it with
+         `odoo`.
+
+      .. tab:: Clone with SSH
+
+         .. important::
+            Make sure that you `registered your SSH key on GitHub
+            <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
+
+         .. code-block:: console
+
+            $ git clone git@github.com:<username>/documentation.git
+            $ cd documentation/
+
+         Replace `<username>` with your GitHub username. If you work at Odoo, replace it with
+         `odoo`.
 
 #. In order to ease the collaboration between writers coming from many different systems and teams,
    execute the following group of commands that correspond to your :abbr:`OS (Operating System)` in
