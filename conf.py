@@ -3,7 +3,6 @@ import re
 import sys
 from pathlib import Path
 
-import docutils
 import sphinx
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.util import logging
@@ -17,10 +16,24 @@ _logger = logging.getLogger(__name__)
 project = 'Odoo'
 copyright = 'Odoo S.A.'
 
-# `version` if the version info for the project being documented, acts as replacement for |version|,
+# `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
 # `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
 version = release = '14.0'
+
+# `current_branch` is the technical name of the current branch.
+# E.g., saas-15.4 -> saas-15.4; 12.0 -> 12.0, master -> master (*).
+current_branch = version
+# `current_version` is the Odoo version linked to the current branch.
+# E.g., saas-15.4 -> 15.4; 12.0 -> 12; master -> master (*).
+current_version = current_branch.replace('saas-', '').replace('.0', '')
+# `current_major_branch` is the technical name of the major branch before the current branch.
+# E.g., saas-15.4 -> 15.0; 12.0 -> 12.0; master -> master (*).
+current_major_branch = re.sub(r'\.\d', '.0', current_branch.replace('saas-', ''))
+# `current_major_version` is the Odoo version linked to the current major branch.
+# E.g., saas-15.4 -> 15; 12.0 -> 12; master -> master (*).
+current_major_version = current_major_branch.replace('.0', '')
+# (*): We don't care for master.
 
 # The minimal Sphinx version required to build the documentation.
 needs_sphinx = '3.0.0'
@@ -59,6 +72,11 @@ add_function_parentheses = True
 #=== Extensions configuration ===#
 
 source_read_replace_vals = {
+    'BRANCH': current_branch,
+    'CURRENT_BRANCH': current_branch,
+    'CURRENT_VERSION': current_version,
+    'CURRENT_MAJOR_BRANCH': current_major_branch,
+    'CURRENT_MAJOR_VERSION': current_major_version,
     'GITHUB_PATH': f'https://github.com/odoo/odoo/blob/{version}',
     'GITHUB_ENT_PATH': f'https://github.com/odoo/enterprise/blob/{version}',
 }
