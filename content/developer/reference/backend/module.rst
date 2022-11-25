@@ -154,5 +154,4 @@ Available manifest fields are:
     Deprecated. Replaced by ``auto_install``.
 
 .. _semantic versioning: https://semver.org
-.. _existing categories:
-     https://github.com/odoo/odoo/blob/14.0/odoo/addons/base/data/ir_module_category_data.xml
+.. _existing categories: {GITHUB_PATH}/odoo/addons/base/data/ir_module_category_data.xml

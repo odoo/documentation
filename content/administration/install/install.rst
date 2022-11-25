@@ -151,7 +151,7 @@ Repository
       .. code-block:: console
 
           $ wget -q -O - https://nightly.odoo.com/odoo.key | sudo gpg --dearmor -o /usr/share/keyrings/odoo-archive-keyring.gpg
-          $ echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/16.0/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
+          $ echo 'deb [signed-by=/usr/share/keyrings/odoo-archive-keyring.gpg] https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/deb/ ./' | sudo tee /etc/apt/sources.list.d/odoo.list
           $ sudo apt-get update && sudo apt-get install odoo
 
       You can then use the usual `apt-get upgrade` command to keep your installation up-to-date.
@@ -163,7 +163,7 @@ Repository
 
       .. code-block:: console
 
-         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/16.0/nightly/rpm/odoo.repo
+         $ sudo dnf config-manager --add-repo=https://nightly.odoo.com/{CURRENT_MAJOR_BRANCH}/nightly/rpm/odoo.repo
          $ sudo dnf install -y odoo
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
@@ -183,8 +183,8 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 16.0 'deb' package currently supports `Debian 11 (Bullseye)`_, `Ubuntu 22.04 (Jammy)`_
-         or above.
+         Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian 11 (Bullseye)`_,
+         `Ubuntu 22.04 (Jammy)`_ or above.
 
       Next, execute the following commands **as root**:
 
@@ -224,13 +224,13 @@ Distribution package
       <download_>`_.
 
       .. note::
-         Odoo 16.0 'rpm' package supports Fedora 36.
+         Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 36.
 
       Once downloaded, the package can be installed using the 'dnf' package manager:
 
       .. code-block:: console
 
-         $ sudo dnf localinstall odoo_16.0.latest.noarch.rpm
+         $ sudo dnf localinstall odoo_{CURRENT_MAJOR_BRANCH}.latest.noarch.rpm
          $ sudo systemctl enable odoo
          $ sudo systemctl start odoo
 
@@ -547,7 +547,7 @@ Dependencies
          .. tab:: Debian/Ubuntu
 
             For Debian-based systems, the packages are listed in the `debian/control
-            <https://github.com/odoo/odoo/blob/master/debian/control>`_ file of the Odoo sources.
+            <{GITHUB_PATH}/debian/control>`_ file of the Odoo sources.
 
             On Debian/Ubuntu, the following commands should install the required packages:
 

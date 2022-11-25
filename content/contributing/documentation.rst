@@ -237,7 +237,8 @@ Python comes with its own package manager: `pip
 a single command.
 
 #. Download and install the recommended release (`see README file
-   <https://github.com/odoo/documentation/tree/master/README.md>`_) of **Python 3** on your machine.
+   <https://github.com/odoo/documentation/tree/{BRANCH}/README.md>`_) of **Python 3** on your
+   machine.
 #. Make sure to have **pip** installed on your machine (on Windows, you can install pip alongside
    Python).
 #. Execute the following commands in a terminal to verify that both installations finished
@@ -291,12 +292,12 @@ Prepare your version
 --------------------
 
 Now that your machine is all set up, it is time to do the same for your version of the documentation
-files. As it would not be convenient to have several people working on the version 13.0 in parallel
-(conflicts of content would occur all the time), and in order to be able to create a :abbr:`PR
-(Pull Request)`, you must `create a new branch
-<https://www.atlassian.com/git/tutorials/using-branches>`_ starting from the branch 13.0. In other
-words, you copy the entirety of this version’s files and give it another name. For this example, we
-will go with ``13.0-my_contribution``.
+files. As it would not be convenient to have several people working on the version {BRANCH} in
+parallel (conflicts of content would occur all the time), and in order to be able to create a
+:abbr:`PR (Pull Request)`, you must `create a new branch
+<https://www.atlassian.com/git/tutorials/using-branches>`_ starting from the branch {BRANCH}. In
+other words, you copy the entirety of this version’s files and give it another name. For this
+example, we will go with ``{BRANCH}-my_contribution``.
 
 Execute the following commands in a terminal to...
 
@@ -306,17 +307,17 @@ Execute the following commands in a terminal to...
 
       $ cd documentation/
 
-#. Switch to the version 13.0:
+#. Switch to the version {BRANCH}:
 
    .. code-block:: console
 
-      $ git checkout 13.0
+      $ git checkout {BRANCH}
 
-#. Create your own branch which will be a copy of 13.0:
+#. Create your own branch which will be a copy of {BRANCH}:
 
    .. code-block:: console
 
-      $ git checkout -b 13.0-my_contribution
+      $ git checkout -b {BRANCH}-my_contribution
 
 .. _contributing/perform-changes:
 
@@ -343,8 +344,8 @@ guidelines.
      #. Delete :file:`my-image.png`.
      #. Rename :file:`my-image-fs8.png` to :file:`my-image.png`.
    - If your changes include renaming or moving an RST file to a new location, follow the `manual
-     for redirect rules <https://github.com/odoo/documentation/tree/13.0/redirects/MANUAL.md>`_ to
-     create the appropriate redirect rule(s).
+     for redirect rules <https://github.com/odoo/documentation/tree/{BRANCH}/redirects/MANUAL.md>`_
+     to create the appropriate redirect rule(s).
 
 .. _contributing/preview-changes:
 
@@ -390,7 +391,7 @@ Submit your changes
 
       $ git add *
       $ git commit
-      $ git push -u origin 13.0-my_contribution
+      $ git push -u origin {BRANCH}-my_contribution
 
 #. Go to `github.com/odoo/documentation/pulls
    <https://github.com/odoo/documentation/pulls>`_ and click on the **New pull request** button.
@@ -403,7 +404,8 @@ Submit your changes
    .. image:: documentation/compare-across-forks.png
 
 #. In the dropdown for the selection of the base branch (i.e., the version of the documentation that
-   your changes concern), make sure to select the version that your changes target (here **13.0**).
+   your changes concern), make sure to select the version that your changes target (here
+   **{BRANCH}**).
 
    .. image:: documentation/select-branches-fork.png
 
