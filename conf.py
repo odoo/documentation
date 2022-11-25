@@ -3,6 +3,7 @@ import re
 import sys
 from pathlib import Path
 
+import docutils
 import sphinx
 from pygments.lexers import JsonLexer, XmlLexer
 from sphinx.util import logging
@@ -57,6 +58,11 @@ add_function_parentheses = True
 
 #=== Extensions configuration ===#
 
+source_read_replace_vals = {
+    'GITHUB_PATH': f'https://github.com/odoo/odoo/blob/{version}',
+    'GITHUB_ENT_PATH': f'https://github.com/odoo/enterprise/blob/{version}',
+}
+
 # Add extensions directory to PYTHONPATH
 extension_dir = Path('extensions')
 sys.path.insert(0, str(extension_dir.absolute()))
@@ -79,6 +85,7 @@ if not odoo_sources_dirs:
     )
 else:
     odoo_dir = odoo_sources_dirs[0].resolve()
+    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
     sys.path.insert(0, str(odoo_dir))
     from odoo import release as odoo_release  # Don't collide with Sphinx's 'release' config option
     odoo_version = odoo_release.version if 'alpha' not in odoo_release.version else 'master'
@@ -268,6 +275,19 @@ latex_logo = 'static/img/odoo_logo.png'
 # If true, show URL addresses after external links.
 latex_show_urls = 'True'
 
+# https://github.com/sphinx-doc/sphinx/issues/4054#issuecomment-329097229
+def source_read_replace(app, docname, source):
+    """Substitute parts of strings with computed values.
+    Since the RST substitution is not working everywhere, i.e. in directives'
+    options, we need to be able to input those values when reading the sources.
+    This is using the config `source_read_replace_vals`, mapping a name to its
+    replacement. This will look for the name surrounded by curly braces in the source.
+    Meant to be connected to the `source-read` event.
+    """
+    result = source[0]
+    for key in app.config.source_read_replace_vals:
+        result = result.replace(f"{{{key}}}", app.config.source_read_replace_vals[key])
+    source[0] = result
 
 def setup(app):
     # Generate all alternate URLs for each document
@@ -276,6 +296,8 @@ def setup(app):
     app.add_config_value('versions', None, 'env')
     app.add_config_value('languages', None, 'env')
     app.add_config_value('is_remote_build', None, 'env')  # Whether the build is remotely deployed
+    app.add_config_value('source_read_replace_vals', {}, 'env')
+    app.connect('source-read', source_read_replace)
 
     app.add_lexer('json', JsonLexer)
     app.add_lexer('xml', XmlLexer)
