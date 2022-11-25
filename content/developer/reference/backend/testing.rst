@@ -599,8 +599,8 @@ Javascript
 #. Add any step you want.
 
 Every step contains at least a trigger. You can either use the `predefined steps
-<https://github.com/odoo/odoo/blob/15.0/addons/web_tour/static/src/js/tour_step_utils.js>`_ or write
-your own personalized step.
+<{GITHUB_PATH}/addons/web_tour/static/src/js/tour_step_utils.js>`_ or write your own personalized
+step.
 
 Here are some example of steps:
 

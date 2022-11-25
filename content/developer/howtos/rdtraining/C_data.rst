@@ -6,9 +6,9 @@ Advanced C: Master and Demo Data
 
 .. tip:: This tutorial assumes you followed the Core Training.
 
-  To do the exercise, fetch the branch 15.0-core from the
-  `technical training solutions <https://github.com/odoo/technical-training-solutions/tree/15.0-core>`__ repository.
-  It contains a basic module we will use as a starting point
+  To do the exercise, fetch the branch {BRANCH}-core from the `technical training solutions
+  <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
+  contains a basic module we will use as a starting point
 
 Data Types
 ==========
