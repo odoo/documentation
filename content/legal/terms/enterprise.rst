@@ -4,6 +4,10 @@
 Odoo Enterprise Subscription Agreement
 ======================================
 
+.. only:: html
+
+    `Download PDF <odoo_enterprise_agreement.pdf>`_
+
 .. note:: Version 10a - 2022-10-27
 
 .. v6: add "App" definition + update pricing per-App
