@@ -4,6 +4,9 @@
 Conditions Générales de Vente
 =============================
 
+.. only:: html
+
+    `Download PDF <terms_of_sale_fr.pdf>`_
 .. note:: Dernière modification: 20 octobre 2021.
 
 Ces conditions régissent la vente de produits et services entre
