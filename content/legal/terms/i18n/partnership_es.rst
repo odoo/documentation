@@ -4,6 +4,9 @@
 Odoo Partnership Agreement (ES)
 ===============================
 
+.. only:: html
+
+    `Download PDF <odoo_partnership_agreement_es.pdf>`_
 .. warning::
     Esta es una traducción al español del "Odoo Partnership Agreement".
     Esta traducción se proporciona con la esperanza de que facilitará la comprensión,

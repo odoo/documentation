@@ -401,8 +401,9 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
         The entry 'language' is added by Sphinx in the rendering context.
         """
         _current_lang = app.config.language or 'en'
-        # Replace the context value by its translated description ("Français" instead of "french")
+        # Replace the context value by its upper-cased value ("FR" instead of "fr")
         context['language'] = languages_names.get(_current_lang)
+        context['language_code'] = _current_lang
 
         # If the list of languages is not set, assume that the project has no alternate language
         _provided_languages = app.config.languages and app.config.languages.split(',') or []
