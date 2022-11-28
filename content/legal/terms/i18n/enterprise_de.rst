@@ -5,6 +5,9 @@
 Odoo Enterprise Abonnementsvertrag
 ==================================
 
+.. only:: html
+
+    `Download PDF <odoo_enterprise_agreement_de.pdf>`_
 .. warning::
    Dies ist eine deutsche Übersetzung des "Odoo Enterprise Subscription Agreement". Diese
    Übersetzung soll das Verständnis erleichtern, hat aber keinen rechtlichen Wert. Der einzige
