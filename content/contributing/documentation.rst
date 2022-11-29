@@ -165,7 +165,7 @@ you want to do with the sources: choose HTTPS if you intend to only build the do
 choose SSH if you plan on proposing content changes.
 
 #. Go to `github.com/odoo/documentation <https://github.com/odoo/documentation>`_ and click on the
-   **Fork** button in the top right corner. If work at Odoo, skip this step.
+   **Fork** button in the top right corner. If you work at Odoo, skip this step.
 
    .. image:: documentation/fork-button.png
 
