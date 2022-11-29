@@ -1,60 +1,63 @@
-==============================
-Invoice from the PoS interface
-==============================
+================
+Invoice issuance
+================
 
-Some of your customers might request an invoice when buying from your
-Point of Sale, you can easily manage it directly from the PoS interface.
+In Point of Sale, you can issue and print invoices upon payment at the cash register or retrieve all
+the past invoiced orders.
 
-Activate invoicing
+Set a customer
+==============
+
+First, you need to open a session and set your customer. Open the **POS interface** by going to
+:menuselection:`Point of Sale --> New session --> Open session`. Then, click :guilabel:`Customer` to
+access the list of **customers**.
+
+.. image:: invoice/select-customer-ui.png
+   :align: center
+   :alt: customer selection and creation button
+
+From there, you can either set an existing customer by clicking their name or create a new one by
+clicking :guilabel:`Create`. Doing so opens a customer creation form to fill in with their
+information. Click :guilabel:`Save` to validate and set this new customer.
+
+.. note::
+   - You can also **edit** a customer's information by clicking :guilabel:`Details`.
+   - If you did not set your customer during the order, you can do so at the payment screen by
+     clicking :guilabel:`Customer`.
+
+Invoice a customer
 ==================
 
-Go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`
-and select your Point of Sale:
+Once an order is done, click :guilabel:`Payment` to move to the **payment screen**. Click
+:guilabel:`Invoice` underneath the customer's name to enable issuing and printing invoices upon
+payment.
 
-.. image:: invoice/invoice01.png
-    :align: center
+.. image:: invoice/invoice-button.png
+   :align: center
+   :alt: button to generate an invoice in POS
 
-Under the *Bills & Receipts* you will see the invoicing option, tick
-it. Don't forget to choose in which journal the invoices should be
-created.
+Select the payment method and click :guilabel:`Validate`. The **invoice** is automatically issued
+and ready to be downloaded and/or printed.
 
-.. image:: invoice/invoice02.png
-    :align: center
-
-Select a customer
-=================
-
-From your session interface, use the customer button
-
-.. image:: invoice/invoice03.png
-    :align: center
-
-You can then either select an existing customer and set it as your
-customer or create a new one by using this button.
-
-.. image:: invoice/invoice04.png
-    :align: center
-
-You will be invited to fill out the customer form with its information.
-
-Invoice your customer
-=====================
-
-From the payment screen, you now have an invoice option, use the button
-to select it and validate.
-
-.. image:: invoice/invoice05.png
-    :align: center
-
-You can then print the invoice and move on to your next order.
+.. seealso::
+   - :doc:`../overview/getting_started`
 
 Retrieve invoices
 -----------------
 
-Once out of the PoS interface (:menuselection:`Close --> Confirm` on the top right corner)
-you will find all your orders in :menuselection:`Point of Sale -->
-Orders --> Orders` and under the status tab you will see which ones have
-been invoiced. When clicking on a order you can then access the invoice.
+To retrieve invoices from the **POS dashboard**,
 
-.. image:: invoice/invoice06.png
-    :align: center
+#. access all orders made through your POS by going to :menuselection:`Point of Sale --> Orders -->
+   Orders`;
+#. to access an order's invoice, open the **order form** by selecting the order, then click
+   :guilabel:`Invoice`.
+
+.. image:: invoice/invoice-smart-button.png
+   :align: center
+   :alt: invoice smart button from an order form
+
+.. note::
+   - **Invoiced orders** can be identified by the :guilabel:`Invoiced` status in the
+     :guilabel:`Status` column;
+   - You can filter the list of orders to invoiced orders by clicking :guilabel:`Filters` and
+     :guilabel:`Invoiced`.
