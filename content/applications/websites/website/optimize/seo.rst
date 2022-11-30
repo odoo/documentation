@@ -254,6 +254,8 @@ Here are Odoo strategies to manage links:
 Multi-Language Support
 ======================
 
+.. _seo-multilanguage:
+
 Multi-Language URLs
 -------------------
 
