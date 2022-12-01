@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 09:28+0000\n"
+"POT-Creation-Date: 2022-11-29 12:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -1783,20 +1783,52 @@ msgid "To find this number, go to your **Adyen account**. Then, go to :menuselec
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/adyen.rst:59
-msgid "Add a new payment method"
+msgid "Set the Event URLs"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/adyen.rst:61
-msgid "To add a new **payment method** to a point of sale, go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`. Then, select the POS and go to :menuselection:`Payments --> Payment Methods`, and add your new method for Adyen."
+msgid "For Odoo to know when a payment is made, you must set the terminal **Event URLs**. To do so,"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:63
+msgid "log in to `Adyen's website <https://www.adyen.com/>`_;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:64
+msgid "go to :menuselection:`Adyen's dashboard --> Point of Sale --> Terminals` and select the connected terminal;"
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/payment/adyen.rst:66
+msgid "from the terminal settings, click :guilabel:`Integrations`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:67
+msgid "set the :guilabel:`Switch to decrypted mode to edit this setting` field as :guilabel:`Decrypted`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:68
+msgid "click the **pencil icon** button and enter your server address, followed by `/pos_adyen/notification` in the :guilabel:`Event URLs` field; and"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:70
+msgid "click :guilabel:`Save` at the bottom of the screen to save the changes."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:73
+msgid "Add a new payment method"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:75
+msgid "To add a new **payment method** to a point of sale, go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`. Then, select the POS and go to :menuselection:`Payments --> Payment Methods`, and add your new method for Adyen."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:80
 #: ../../content/applications/sales/point_of_sale/payment/ingenico.rst:53
 #: ../../content/applications/sales/point_of_sale/payment/worldline.rst:88
 msgid "Pay with a payment terminal"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:68
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:82
 msgid "When processing a payment, select :guilabel:`Adyen` as the payment method. Check the amount and click on :guilabel:`Send`. Once the payment is successful, the status changes to :guilabel:`Payment Successful`."
 msgstr ""
 
@@ -1808,7 +1840,7 @@ msgstr ""
 msgid "This option is only available after receiving an error message informing you that the connection failed."
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:77
+#: ../../content/applications/sales/point_of_sale/payment/adyen.rst:91
 msgid "To cancel the payment request, click on :guilabel:`cancel`."
 msgstr ""
 
@@ -4570,6 +4602,102 @@ msgstr ""
 msgid "Changes to the product template automatically apply to every variant of that product."
 msgstr ""
 
+#: ../../content/applications/sales/sales/products_prices/returns.rst:3
+msgid "Process returns and refunds"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:5
+msgid "The :guilabel:`Sales` app provides two different ways to process returns based on whether an invoice has been sent or not."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:9
+msgid "Before invoicing"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:11
+msgid "Returns are completed using *Reverse Transfers* when a customer decides to return a product before an invoice has been sent or validated."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:15
+msgid "In order to use Reverse Transfers, the :guilabel:`Inventory` app must also be installed."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:17
+msgid "To start a return, open the :guilabel:`Sales` app, navigate to the customer's sales order, and click on the :guilabel:`Delivery` smart button to open the associated delivery order."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:20
+msgid "On the validated delivery order, click :guilabel:`Return` to open the :guilabel:`Reverse Transfer` pop-up window. By default, the :guilabel:`Quantity` matches the validated quantities from the delivery order. Update the quantities if necessary. Click on the trash icon next to a line item to remove it from the return."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:None
+msgid "The \"Reverse Transfer\" pop-up window, to make a return before invoicing the customer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:29
+msgid "Next, click :guilabel:`Return` to confirm the return. This generates a new warehouse operation for the incoming returned product(s). Upon receiving the return, the warehouse team validates the warehouse operation. Then, on the original sales order, the :guilabel:`Delivered` quantity will reflect the difference between the initial validated quantities and the returned quantities."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:None
+msgid "The updated \"Delivered\" quantity on the sales order after the reverse transfer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:38
+msgid "When an invoice is created, the customer receives an invoice only for the products they are keeping."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:42
+msgid "After invoicing"
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:44
+msgid "Sometimes, customers return an item after they receive and/or pay for their invoice. In these cases, a return using only *Reverse Transfers* is impossible since validated or sent invoices cannot be changed. However, *Reverse Transfers* can be used in conjunction with *Credit Notes* to complete the customer's return."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:49
+msgid "To start a return, navigate to the relevant sales order. If there is a payment registered on the sales order, then the payment details will appear in the Chatter, and the invoice (accessible through the :guilabel:`Invoices` smart button) will have a green banner across it."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:53
+msgid "From the sales order, click on the :guilabel:`Delivery` smart button to view the validated delivery order. Then, click :guilabel:`Return` to open the :guilabel:`Reverse Transfer` pop-up window. Next, edit the :guilabel:`Product` or :guilabel:`Quantity` as needed for the return, and then click :guilabel:`Return`. This generates a new warehouse operation for the incoming returned product(s), which is validated by the warehouse team once the return is received. Then, on the sales order, the :guilabel:`Delivered` quantity will reflect the difference between the initial validated quantities and the returned quantities."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:61
+msgid "Since the returned products have already been paid for, the validated invoice must be modified to reflect the return. Navigate to the relevant invoice (from the sales order, click on the :guilabel:`Invoices` smart button). Then, click on the :guilabel:`i` icon next to the :guilabel:`Paid` line at the bottom of the invoice to open the :guilabel:`Payment Info` window. Next, click :guilabel:`Unreconcile`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:None
+msgid "The \"Unreconcile\" button."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:71
+msgid "After the invoice is unreconciled, the options for :guilabel:`Send & Print` and :guilabel:`Register Payment` become available again alongside a note that there are outstanding payments for the customer."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:75
+msgid "To process a refund, click :guilabel:`Add Credit Note` from the validated invoice."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:None
+msgid "The \"Credit Note\" pop-up window, to issue a credit to the customer after invoicing."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:81
+msgid "Choose whether to issue a :guilabel:`Partial Refund`, :guilabel:`Full Refund`, or :guilabel:`Full refund and new draft invoice`. The :guilabel:`Partial Refund` option creates a draft credit note that can be edited before posting. The :guilabel:`Full refund and new draft invoice` option validates the credit note and duplicates the original invoice as a new draft."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:86
+msgid "A :guilabel:`Reason` for the credit and a :guilabel:`Specific Journal` to use to process the credit can also be specified. If a :guilabel:`Specific Reversal Date` is selected, then a :guilabel:`Refund Date` must also be selected."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:90
+msgid "After the information is filled, click :guilabel:`Reverse`. Then, for a :guilabel:`Partial Refund` or :guilabel:`Full refund and new draft invoice`, :guilabel:`Edit` the draft as needed, and finally, click :guilabel:`Confirm`."
+msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/returns.rst:None
+msgid "The \"outstanding payments\" banner."
+msgstr ""
+
 #: ../../content/applications/sales/sales/products_prices/taxes.rst:5
 msgid "Set taxes"
 msgstr ""
@@ -4849,10 +4977,6 @@ msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:54
 msgid "For quotation templates, you also have an **Optional Products** tab where you can add related products or services."
-msgstr ""
-
-#: ../../content/applications/sales/sales/send_quotations/optional_products.rst:None
-msgid "How to add optional products to your quotation templates on Odoo Sales"
 msgstr ""
 
 #: ../../content/applications/sales/sales/send_quotations/optional_products.rst:62
@@ -5607,10 +5731,6 @@ msgstr ""
 
 #: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:90
 msgid "By confirming the cancellation, the customer is redirected to his/her portal. The administrator is informed of this modification. Indeed, the status of the subscription becomes *Closed* and a note appears in the chatter with the new stage, the end date, the close reason, and the closing text added by the customer."
-msgstr ""
-
-#: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:None
-msgid "What happens when customers close their subscription in Odoo Subscriptions?"
 msgstr ""
 
 #: ../../content/applications/sales/subscriptions/sales_flow/closing.rst:100
