@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 09:28+0000\n"
+"POT-Creation-Date: 2022-11-29 12:54+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -223,6 +223,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/taxation/taxes/retention.rst:23
 #: ../../content/applications/finance/accounting/taxation/taxes/taxes.rst:29
 #: ../../content/applications/finance/accounting/taxation/taxes/vat_validation.rst:13
+#: ../../content/applications/finance/documents.rst:17
 #: ../../content/applications/finance/payment_providers.rst:266
 #: ../../content/applications/finance/payment_providers/adyen.rst:9
 #: ../../content/applications/finance/payment_providers/alipay.rst:12
@@ -911,7 +912,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/bank/reconciliation/reconciliation_models.rst:10
 #: ../../content/applications/finance/accounting/fiscal_localizations/overview/fiscal_localization_packages.rst:44
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:72
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:69
 #: ../../content/applications/finance/accounting/reporting/declarations/tax_returns.rst:16
 msgid "Todo"
 msgstr ""
@@ -3400,10 +3401,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:822
 msgid "The DTE file (Electronic Tax Document) is created automatically and added to the chatter."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:None
-msgid "DTE status in SII and creation of DTE/XML"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/chile.rst:832
@@ -8923,7 +8920,6 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:106
 #: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:170
-#: ../../content/applications/finance/accounting/fiscal_localizations/localizations/peru.rst:None
 msgid "Digiflow"
 msgstr ""
 
@@ -10372,6 +10368,7 @@ msgid "Select a **default tax** that will be applied when this account is chosen
 msgstr ""
 
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/chart_of_accounts.rst:126
+#: ../../content/applications/finance/documents.rst:58
 msgid "Tags"
 msgstr ""
 
@@ -10688,7 +10685,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/setup.rst:190
 #: ../../content/applications/finance/accounting/payables/pay/sepa.rst:135
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/epc_qr_code.rst:64
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:146
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:128
 msgid ":doc:`../../bank/setup/bank_accounts`"
 msgstr ""
 
@@ -14151,6 +14148,7 @@ msgid "Account receivables"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_invoices.rst:5
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:92
 msgid "Customer invoices"
 msgstr ""
 
@@ -15404,11 +15402,11 @@ msgid "Batch payments: SEPA Direct Debit (SDD)"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:5
-msgid "SEPA, the Single Euro Payments Area, is a payment-integration initiative of the European Union for simplification of bank transfers denominated in EURO. With **SEPA Direct Debit**, your customers can sign a **mandate** that authorizes you to collect future payments from their bank accounts. This is particularly useful for recurring payments based on a subscription."
+msgid "SEPA, the Single Euro Payments Area, is a payment-integration initiative of the European Union for simplification of bank transfers denominated in euros. With **SEPA Direct Debit** (SDD), your customers can sign a mandate that authorizes you to collect future payments from their bank accounts. This is particularly useful for recurring payments based on a subscription."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:10
-msgid "You can record customer mandates in Odoo, and generate XML files containing pending payments made with an SDD mandate."
+msgid "You can record customer mandates in Odoo, and generate `.xml` files containing pending payments made with an SDD mandate."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:0
@@ -15420,159 +15418,127 @@ msgid "`List of all SEPA countries <https://www.europeanpaymentscouncil.eu/docum
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:22
-msgid "Go to :menuselection:`Accounting --> Configuration --> Settings`, activate **SEPA Direct Debit (SDD)** and click on *Save*. Enter your company's **Creditor Identifier**. This number is provided by your bank institution, or the authority responsible for delivering them."
+msgid "Go to :menuselection:`Accounting app --> Configuration --> Settings`, activate :guilabel:`SEPA Direct Debit (SDD)`, and click on :guilabel:`Save`. Enter your company's :guilabel:`Creditor Identifier`. This number is provided by your bank institution, or the authority responsible for delivering them."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
 msgid "Add a SEPA Creditor Identifier to Odoo Accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:31
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:32
 msgid "SEPA Direct Debit Mandates"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:34
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:35
 msgid "Create a mandate"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:36
-msgid "The SEPA Direct Debit Mandate is the document that your customers sign to authorize you to collect money directly from their bank accounts."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:37
+msgid "The :abbr:`SDD (sepa direct debit)` Mandate is the document that your customers sign to authorize you to collect money directly from their bank accounts."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:39
-msgid "To create a new mandate, go to :menuselection:`Accounting --> Customers --> Direct Debit Mandates`, click on *Create*, and fill out the form."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
-msgid "Fill out SEPA Direct Debit in Odoo Accounting"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:40
+msgid "To create a new mandate, go to :menuselection:`Accounting app --> Customers --> Direct Debit Mandates`, on :guilabel:`Create`, and fill out the form. Export the PDF file by clicking on :guilabel:`Print`. It is then up to your customer to sign this document. Once done, upload the signed file and click on :guilabel:`Validate` to start running the mandate."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:46
-msgid "Export the PDF file by clicking on *Print*. It is then up to your customer to sign this document. Once done, upload the signed file in the **Original Document** field, and click on *Validate* to start running the mandate."
+msgid "Make sure that the **IBAN bank accounts details** are correctly recorded on the debtor’s contact form, under the :guilabel:`Accounting` tab, and in your own :doc:`Bank Account <../../bank/setup/bank_accounts>` settings."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:51
-msgid "Make sure that the **IBAN bank accounts details** are correctly recorded on the debtor’s contact form, under the *Accounting* tab, and in your own :doc:`Bank Account <../../bank/setup/bank_accounts>` settings."
+msgid "SEPA Direct Debit as a payment method"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:56
-msgid "SEPA Direct Debit as a Payment Method"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:53
+msgid "SDD can be used as a payment method both on your **eCommerce** or on the **Customer Portal** by activating SDD as a **Payment Provider**. With this method, your customers can create and sign their mandates themselves."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:58
-msgid "SEPA Direct Debit can be used as a payment method both on your **eCommerce** or on the **Customer Portal** by activating SDD as a **Payment Provider**. With this method, your customers can create and sign their mandates themselves."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:57
+msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Payment Providers`, click on *SEPA Direct Debit*, and set it up according to your needs. To do so, go to :menuselection:`Accounting app --> Configuration --> Payment Acquirers`, click on :guilabel:`SEPA Direct Debit`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:62
-msgid "To do so, go to :menuselection:`Accounting --> Configuration --> Payment Providers`, click on *SEPA Direct Debit*, and set it up according to your needs."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:63
+msgid "Make sure to change the :guilabel:`State` field to :guilabel:`Enabled`, and to check :guilabel:`Online Signature`, as this is necessary to let your customers sign their mandates."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:66
-msgid "Make sure to change the **State** field to *Enabled*, and to check **Online Signature**, as this is necessary to let your customers sign their mandates."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:69
 msgid "Customers using SDD as payment method get prompted to add their IBAN, email address, and to sign their SEPA Direct Debit mandate."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:73
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:70
 msgid "Add link to future **Payment Provider** documentation."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:76
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:73
 msgid "Close or revoke a mandate"
 msgstr ""
 
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:75
+msgid "Direct debit mandates are closed automatically after their :guilabel:`End Date`. If this field is left blank, the mandate keeps being **Active** until it is **Closed** or **Revoked**."
+msgstr ""
+
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:78
-msgid "Direct Debit mandates are closed automatically after their *End Date*. If this field is left blank, the mandate keeps being *Active* until it is *Closed* or *Revoked*."
+msgid "Clicking on :guilabel:`Close` updates the mandate’s end day to the current day. This means that invoices issued after the present day will not be processed with an SDD payment."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
-msgid "Close or Revoke an SDD Mandate in Odoo Accounting"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:81
+msgid "Clicking on :guilabel:`Revoke` disables the mandate immediately. No SDD payment can be registered anymore, regardless of the invoice’s date. However, payments that have already been registered are still included in the next SDD `.xml` file."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:85
-msgid "Clicking on **Close** updates the mandate’s end day to the current day. This means that invoices issued after the present day will not be processed with an SDD payment."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:86
+msgid "Once a mandate has been :guilabel:`closed` or :guilabel:`revoked`, it cannot be reactivated."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:88
-msgid "Clicking on **Revoke** disables the mandate immediately. No SDD payment can be registered anymore, regardless of the invoice’s date. However, payments that have already been registered are still included in the next SDD XML file."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:89
+msgid "Get paid with SEPA Direct Debit batch payments"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:93
-msgid "Once a mandate has been *closed* or *revoked*, it cannot be reactivated."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:96
-msgid "Get paid with SDD Batch Payments"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:99
-msgid "Customer Invoices"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:101
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:94
 msgid "You can register SDD payments for invoices issued to customers who have an active SDD mandate."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:103
-msgid "To do so, open the invoice, click on *Register Payment*, and choose *SEPA Direct Debit* as payment method."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:96
+msgid "To do so, open the invoice, click on :guilabel:`Register Payment`, and choose :guilabel:`SEPA Direct Debit` as payment method."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:107
-msgid "Generate SEPA Direct Debit XML files to submit payments"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:100
+msgid "Generate SEPA Direct Debit `.XML` files to submit payments"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:109
-msgid "**XML files** with all SDD payment instructions can be uploaded to your online banking interface to process all payments at once."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:102
+msgid "`.xml` files with all SDD payment instructions can be uploaded to your online banking interface to process all payments at once."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:113
-msgid "The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02** specifications, as required by the SEPA customer-to-bank Implementation Guidelines, which ensures compatibility with the banks."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:106
+msgid "The files generated by Odoo follow the SEPA Direct Debit **PAIN.008.001.02** specifications, as required by the SEPA customer-to-bank `implementation guidelines <https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-customer-psp-implementation>`_, which ensures compatibility with the banks."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:117
-msgid "To generate your XML file for the pending SDD payments, go to the related *bank journal* on your *Accounting dashboard*, then click on *Direct Debit Payments to Collect*."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
-msgid "Start the SDD payments collection in Odoo Accounting"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:124
-msgid "Select all the payments you want to include in your SDD XML file, then click on *Action* and select *Create Batch Payment*."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:111
+msgid "To generate your `.xml` file of multiple pending SDD payments, you can create a batch payment. To do so, go to :menuselection:`Accounting app --> Customers --> Payments`, select the needed payments, then click on :guilabel:`Action`, and finally :guilabel:`Create a batch Payment`. Once you click on :guilabel:`Validate`, the `.xml` file is directly available for download."
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
-msgid "Create a batch payment with all the SDD payments in Odoo Accounting"
+msgid "Generate an .XML file for your SDD payments in Odoo Accounting"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:131
-msgid "Odoo then takes you to your *Batch Payment*’s form. Click on *Validate* and download the SDD XML file."
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:None
-msgid "Generate an XML file for your SDD payments in Odoo Accounting"
-msgstr ""
-
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:138
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:120
 msgid "Finally, upload this file to your online banking interface to process the payments."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:141
-msgid "You can retrieve all the generated SDD XML files by going to :menuselection:`Accounting --> Configuration --> Customers --> Batch Payments`."
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:123
+msgid "You can retrieve all the generated SDD `.xml` files by going to :menuselection:`Accounting app --> Customers --> Batch Payments`."
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:145
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:127
 msgid ":doc:`batch`"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:147
-msgid "`Odoo Academy: SEPA Direct Debit Mandates (SDD) <https://www.odoo.com/r/Zxs>`_"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:129
+msgid "`List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_"
 msgstr ""
 
-#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:148
-msgid "`List of all SEPA countries <https://www.europeanpaymentscouncil.eu/document-library/other/epc-list-sepa-scheme-countries>`_"
+#: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:131
+msgid "`Sepa guidelines <https://www.europeanpaymentscouncil.eu/document-library/implementation-guidelines/sepa-credit-transfer-inter-psp-implementation-guidelines>`_"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/check.rst:3
@@ -16534,6 +16500,10 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/taxation.rst:5
 msgid "Taxation"
+msgstr ""
+
+#: ../../content/applications/finance/accounting/taxation/fiscal_year.rst:5
+msgid "Fiscal year"
 msgstr ""
 
 #: ../../content/applications/finance/accounting/taxation/fiscal_year/close_fiscal_year.rst:3
@@ -17913,172 +17883,264 @@ msgstr ""
 msgid "`Odoo Documents: product page <https://www.odoo.com/app/documents>`_"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:14
-msgid "Workflow actions"
+#: ../../content/applications/finance/documents.rst:12
+msgid "`Odoo Tutorials: Documents basics <https://www.odoo.com/slides/slide/documents-basics-674>`_"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:16
-msgid "Workflow actions are automated actions you can create and customize at the level of each workspace. They appear next to a file whenever it meets the criteria you set. That way you can, for example, add tags to a file or move it to another workspace with a single click. Workflow actions help you streamline the management of your documents and your overall business operations."
+#: ../../content/applications/finance/documents.rst:13
+msgid "`Odoo Tutorials: Using Documents with your Accounting App <https://www.odoo.com/slides/slide/using-documents-with-your-accounting-app-675?fullscreen=1#>`_"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:22
-msgid "Create workflow actions"
-msgstr ""
-
-#: ../../content/applications/finance/documents.rst:24
-msgid "To create workflow actions, go to :menuselection:`Documents --> Configuration --> Workspaces` and select the workspace where the action should apply. Click on the *Actions* smart button, and then on *Create*."
+#: ../../content/applications/finance/documents.rst:19
+msgid "By going to :menuselection:`Documents --> Configuration --> Settings`, you can enable the centralization of files attached to a specific area of your activity. For example, by ticking :guilabel:`Human Resources`, your HR documents are automatically available in the HR workspace, while documents related to Payroll are automatically available in the Payroll sub-workspace . You can change the default workspace by using the dropdown menu and edit its properties by clicking the internal link button (:guilabel:`➔`)."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
-msgid "Workflow actions smart button in Odoo Documents"
+msgid "Enable the centralization of files attached to a specific area of your activity."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:33
-msgid "An action applies to all *Child Workspaces* under the *Parent Workspace* you selected."
+#: ../../content/applications/finance/documents.rst:31
+msgid "If you enable the centralization of your accounting files and documents, it is necessary to click on :guilabel:`Journals` and define each journal independently to allow automatic synchronization."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:36
-msgid "If you use the :ref:`developer mode <developer-mode>`, you can directly access all your actions by going to :menuselection:`Documents --> Configuration --> Actions`."
+#: ../../content/applications/finance/documents.rst:0
+msgid "Enable the centralization of files attached to your accounting."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:40
-msgid "Set the conditions"
+#: ../../content/applications/finance/documents.rst:39
+msgid "If you select a new workspace, existing documents aren't moved. Only newly created documents will be found under the new workspace."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:42
-msgid "After naming your workflow action, you can set the conditions that trigger the appearance of the action button on the right-side panel when selecting a file."
+#: ../../content/applications/finance/documents.rst:43
+msgid "Workspaces"
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:45
-msgid "There are three basic types of conditions you can set:"
-msgstr ""
-
-#: ../../content/applications/finance/documents.rst:47
-msgid "**Tags**: you can both use the *Contains* and *Does not contain* conditions, meaning the files *must have* or *mustn't have* the tags set here."
+msgid "Workspaces are hierarchical folders having their own set of tags and actions. Default workspaces exist, but you can create your own by going to :menuselection:`Documents --> Configuration --> Workspaces` and clicking on :guilabel:`Create`."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:50
-msgid "**Contact**: the files must be associated with the contact set here."
+msgid ":guilabel:`Workspaces` and :guilabel:`Sub-workspaces` can be created, edited, or deleted by clicking on the gear icon :guilabel:`⚙` on the left menu."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:52
-msgid "**Owner**: the files must be associated with the owner set here."
+#: ../../content/applications/finance/documents.rst:None
+msgid "Create sub-workspaces from the left menu"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:60
+msgid "Tags are used within workspaces to add a level of differentiation between documents. They are organized per category and filters can be used to sort them."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:64
+msgid "The tags of a parent workspace apply to the child workspaces automatically."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:65
+msgid "Tags can be created and modified by going to :menuselection:`Configuration --> Tags`."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:66
+msgid "Tags can also be created, edited, or deleted, by clicking on the gear icon :guilabel:`⚙`, on the left menu."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:70
+msgid "Documents management"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:72
+msgid "When clicking on a specific document, the right panel displays different options. On the top, additional options might be available: :guilabel:`Download`, :guilabel:`Share`, :guilabel:`Replace`, :guilabel:`Lock` or :guilabel:`Split`. It is also possible to :guilabel:`Open chatter` or :guilabel:`Archive` the document."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:None
+msgid "right panel options"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:81
+msgid "Then, you can modify the name of your file by clicking on :guilabel:`Document`. A :guilabel:`Contact` or an :guilabel:`Owner` can be assigned. The related :guilabel:`Workspace` can be modified and it is possible to access the related :guilabel:`Journal Entry` or to add :guilabel:`Tags`."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:87
+msgid "The :guilabel:`Contact` is the person related to the document and assigned to it. He can only view the document and not modify it. I.e.: an existing supplier in your database is the contact for their bill."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:90
+msgid "The person who creates a document is, by default :guilabel:`Owner` of it and has complete rights to the document. It is possible to replace the owner of a document. I.e.: an employee must be owner of a document to be able to see it in \"My Profile\"."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:94
+msgid "Finally, different :guilabel:`Actions` are available at the bottom of the right panel, depending on the workspace where your document is stored."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:98
+msgid "Workflow actions"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:100
+msgid "Workflow actions help you streamline the management of your documents and your overall business operations. These are automated actions that can be created and customized for each workspace. For example, create documents, process bills, sign, organize files, add tags to a file or move it to another workspace with a single click etc. These workflow actions appear on the right panel when it meets the criteria you set."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:107
+msgid "Create workflow actions"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:109
+msgid "To create workflow actions, go to :menuselection:`Documents --> Configuration --> Actions` and then click on :guilabel:`Create`."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:113
+msgid "An action applies to all :guilabel:`Child Workspaces` under the :guilabel:`Parent Workspace` you selected."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:117
+msgid "Set the conditions"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:119
+msgid "You can :guilabel:`Create` a new :guilabel:`Action` or edit an existing one. You can define the :guilabel:`Action Name` and then set the conditions that trigger the appearance of the action button (:guilabel:`▶`) on the right-side panel when selecting a file."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:123
+msgid "There are three basic types of conditions you can set:"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:125
+msgid ":guilabel:`Tags`: you can both use the :guilabel:`Contains` and :guilabel:`Does not contain` conditions, meaning the files *must have* or *mustn't have* the tags set here."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:128
+msgid ":guilabel:`Contact`: the files must be associated with the contact set here."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:130
+msgid ":guilabel:`Owner`: the files must be associated with the owner set here."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
 msgid "Example of a workflow action's basic condition in Odoo Documents"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:59
+#: ../../content/applications/finance/documents.rst:137
 msgid "If you don't set any conditions, the action button appears for all files located inside the selected workspace."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:63
+#: ../../content/applications/finance/documents.rst:141
 msgid "Advanced condition type: domain"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:66
+#: ../../content/applications/finance/documents.rst:144
 msgid "It is recommended to have some knowledge of Odoo development to properly configure *Domain* filters."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:69
-msgid "To access the *Domain* condition, the :ref:`developer mode <developer-mode>` needs to be activated. Once that's done, select the *Domain* condition type, and click on *Add Filter*."
+#: ../../content/applications/finance/documents.rst:147
+msgid "To access the *Domain* condition, the :ref:`developer mode <developer-mode>` needs to be activated. Once that's done, select the :guilabel:`Domain` condition type, and click on :guilabel:`Add Filter`."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
 msgid "Activating the domain condition type in Odoo Documents"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:76
-msgid "To create a rule, you typically select a field, an operator, and a value. For example, if you want to add a workflow action to all the PDF files inside a workspace, set the field to *Mime Type*, the operator to *contains*, and the value to *pdf*."
+#: ../../content/applications/finance/documents.rst:154
+msgid "To create a rule, you typically select a :guilabel:`field`, an :guilabel:`operator`, and a :guilabel:`value`. For example, if you want to add a workflow action to all the PDF files inside a workspace, set the :guilabel:`field` to *Mime Type*, the :guilabel:`operator` to *contains*, and the :guilabel:`value` to *pdf*."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
 msgid "Example of a workflow action's domain condition in Odoo Documents"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:84
-msgid "Click on *Add node* (plus-circle icon) and *Add branch* (ellipsis icon) to add conditions and sub-conditions. You can then specify if your rule should match *ALL* or *ANY* conditions. You can also edit the rule directly using the *Code editor*."
+#: ../../content/applications/finance/documents.rst:163
+msgid "Click on :guilabel:`Add node` (plus-circle icon) and :guilabel:`Add branch` (ellipsis icon) to add conditions and sub-conditions. You can then specify if your rule should match :guilabel:`ALL` or :guilabel:`ANY` conditions. You can also edit the rule directly using the :guilabel:`Code editor`."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
 msgid "Add a node or a branch to a workflow action's condition in Odoo Documents"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:93
+#: ../../content/applications/finance/documents.rst:172
 msgid "Configure the actions"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:95
-msgid "Select the *Actions* tab to set up your action. You can simultaneously:"
+#: ../../content/applications/finance/documents.rst:174
+msgid "Select the :guilabel:`Actions` tab to set up your action. You can simultaneously:"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:97
+#: ../../content/applications/finance/documents.rst:176
 msgid "**Set Contact**: add a contact to the file, or replace an existing contact with a new one."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:98
+#: ../../content/applications/finance/documents.rst:177
 msgid "**Set Owner**: add an owner to the file, or replace an existing owner with a new one."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:99
+#: ../../content/applications/finance/documents.rst:178
 msgid "**Move to Workspace**: move the file to any workspace."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:100
+#: ../../content/applications/finance/documents.rst:179
 msgid "**Create**: create one of the following items attached to the file in your database:"
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:102
+#: ../../content/applications/finance/documents.rst:181
 msgid "**Product template**: create a product you can edit directly."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:103
+#: ../../content/applications/finance/documents.rst:182
 msgid "**Task**: create a Project task you can edit directly."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:104
+#: ../../content/applications/finance/documents.rst:183
 msgid "**Signature request**: create a new Sign template to send out."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:105
+#: ../../content/applications/finance/documents.rst:184
 msgid "**Sign directly**: create a Sign template to sign directly."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:106
+#: ../../content/applications/finance/documents.rst:185
 msgid "**Vendor bill**: create a vendor bill using OCR and AI to scrape information from the file content."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:108
+#: ../../content/applications/finance/documents.rst:187
 msgid "**Customer invoice**: create a customer invoice using OCR and AI to scrape information from the file."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:110
+#: ../../content/applications/finance/documents.rst:189
 msgid "**Vendor credit note**: create a vendor credit note using OCR and AI to scrape information from the file."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:112
+#: ../../content/applications/finance/documents.rst:191
 msgid "**Credit note**: create a customer credit note using OCR and AI to scrape information from the file."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:114
+#: ../../content/applications/finance/documents.rst:193
 msgid "**Applicant**: create a new HR application you can edit directly."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:116
+#: ../../content/applications/finance/documents.rst:195
 msgid "**Set Tags**: add, remove, and replace any number of tags."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:117
+#: ../../content/applications/finance/documents.rst:196
 msgid "**Activities - Mark all as Done**: mark all activities linked to the file as done."
 msgstr ""
 
-#: ../../content/applications/finance/documents.rst:118
+#: ../../content/applications/finance/documents.rst:197
 msgid "**Activities - Schedule Activity**: create a new activity linked to the file as configured in the action. You can choose to set the activity on the document owner."
 msgstr ""
 
 #: ../../content/applications/finance/documents.rst:None
 msgid "Example of a workflow action Odoo Documents"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:205
+msgid "Digitize documents with AI and optical character recognition (OCR)"
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:207
+msgid "Documents available in the Finance workspace can be digitized. Select the document you want to digitize, click on :guilabel:`Create Bill`, :guilabel:`Create Customer Invoice` or :guilabel:`Create credit note`, and then click on :guilabel:`Send for Digitization`."
+msgstr ""
+
+#: ../../content/applications/finance/documents.rst:212
+msgid ":doc:`AI-powered document digitization <../finance/accounting/payables/supplier_bills/invoice_digitization>`"
 msgstr ""
 
 #: ../../content/applications/finance/expenses.rst:5
