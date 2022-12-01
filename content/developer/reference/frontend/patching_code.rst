@@ -1,3 +1,5 @@
+.. _reference/patching:
+
 =============
 Patching code
 =============

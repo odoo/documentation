@@ -53,3 +53,4 @@ Exercises
 * :doc:`discover_js_framework/01_components`
 * :doc:`discover_js_framework/02_odoo_web_framework`
 * :doc:`discover_js_framework/03_fields_and_views`
+* :doc:`discover_js_framework/04_miscellaneous`
