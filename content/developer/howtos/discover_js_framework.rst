@@ -56,3 +56,4 @@ Exercises
 * :doc:`discover_js_framework/04_miscellaneous`
 * :doc:`discover_js_framework/05_custom_kanban_view`
 * :doc:`discover_js_framework/06_creating_view_from_scratch`
+* :doc:`discover_js_framework/07_testing`

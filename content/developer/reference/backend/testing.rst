@@ -289,6 +289,8 @@ codebase in Javascript, it is necessary to test it. In this section, we will
 discuss the practice of testing JS code in isolation: these tests stay in the
 browser, and are not supposed to reach the server.
 
+.. _reference/testing/qunit:
+
 Qunit test suite
 ----------------
 
