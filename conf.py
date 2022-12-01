@@ -63,6 +63,7 @@ add_function_parentheses = True
 source_read_replace_vals = {
     'GITHUB_PATH': f'https://github.com/odoo/odoo/blob/{version}',
     'GITHUB_ENT_PATH': f'https://github.com/odoo/enterprise/blob/{version}',
+    'OWL_PATH': f'https://github.com/odoo/owl/blob/master',
 }
 
 # Add extensions directory to PYTHONPATH

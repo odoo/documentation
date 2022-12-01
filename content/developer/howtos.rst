@@ -8,6 +8,7 @@ Tutorials
     :titlesonly:
 
     howtos/rdtraining
+    howtos/discover_js_framework
     howtos/website
     howtos/backend
     howtos/web_services
