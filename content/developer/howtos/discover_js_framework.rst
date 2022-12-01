@@ -51,3 +51,4 @@ Exercises
 =========
 
 * :doc:`discover_js_framework/01_components`
+* :doc:`discover_js_framework/02_odoo_web_framework`
