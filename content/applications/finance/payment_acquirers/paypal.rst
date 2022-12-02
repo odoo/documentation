@@ -38,15 +38,15 @@ token by following the configuration step :ref:`paypal/enable-pdt`.
    change the **State** to *Test Mode*. We recommend doing this on a test Odoo database rather than
    on your main database.
 
-Configuration tab
------------------
+Fees tab
+--------
 
 You can charge extra fees to your customers for paying with Paypal to cover the transaction fees
 Paypal charges you. Once redirected to Paypal, your customer sees an extra amount applied to the
 order amount.
 
-To activate this, go to Paypal configuration's Configuration tab in Odoo and activate *Add Extra
-Fees*.
+To activate this, go to Paypal configuration's :guilabel:`Fees` tab in Odoo and activate
+:guilabel:`Add Extra Fees`.
 
 You can refer to `Paypal Fees <https://www.paypal.com/webapps/mpp/paypal-fees>`_ to set up fees.
 
