@@ -58,62 +58,62 @@ Online payment acquirers
    :widths: auto
 
    * -
-     - Payment flow
+     - Payment flow from
      - :ref:`Save cards for later <payment_acquirers/features/tokenization>`
      - :ref:`Manual capture <payment_acquirers/features/manual_capture>`
      - :ref:`Refunds <payment_acquirers/features/refund>`
    * - :doc:`Adyen <payment_acquirers/adyen>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      - Full and partial
    * - :doc:`Alipay <payment_acquirers/alipay>`
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - :doc:`Authorize.Net <payment_acquirers/authorize>`
-     - Payment from Odoo
+     - Odoo
      - |V|
      - Full only
      -
    * - :doc:`Buckaroo <payment_acquirers/buckaroo>`
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - :doc:`Mollie <payment_acquirers/mollie>`
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - :doc:`Ogone <payment_acquirers/ogone>`
-     - Payment from the acquirer website
+     - The acquirer website
      - |V|
      -
      -
    * - :doc:`PayPal <payment_acquirers/paypal>`
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - PayU Latam
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - PayUMoney
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - :doc:`SIPS <payment_acquirers/sips>`
-     - Payment from the acquirer website
+     - The acquirer website
      -
      -
      -
    * - :doc:`Stripe <payment_acquirers/stripe>`
-     - Payment from the acquirer website
+     - The acquirer website
      - |V|
      - Full only
      -
