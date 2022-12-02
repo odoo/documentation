@@ -142,14 +142,14 @@ Odoo requires three Paypal credentials:
 .. image:: paypal/paypal09.png
     :align: center
 
-Transaction fees
-----------------
+Fees
+----
 
 You can charge extra fees to your customers for paying with Paypal;
 This to cover the transaction fees Paypal charges you. Once redirected to Paypal, your customer sees an extra applied to the order amount.
 
-To activate this, go to the Configuration tab of Paypal configuration in
-Odoo and check *Add Extra Fees*.
+To activate this, go to the :guilabel:`Fees` tab of Paypal configuration in Odoo and check
+:guilabel:`Add Extra Fees`.
 
 .. image:: paypal/paypal10.png
     :align: center
