@@ -1,37 +1,65 @@
-=====================
-Using barcodes in PoS
-=====================
+========
+Barcodes
+========
 
-Using a barcode scanner to process point of sale orders improves your
-efficiency and helps you to save time for you and your customers.
+Using a barcode scanner to process point-of-sale orders improves your efficiency in providing
+quicker customer service. Barcode scanners can be used both to scan products or to log employees
+into a POS session.
 
 Configuration
 =============
 
-To use a barcode scanner, go to :menuselection:`Point of Sale -->
-Configuration --> Point of sale` and select your PoS interface.
+To use a barcode scanner, you must enable the feature in the Inventory app. Go to
+:menuselection:`Inventory --> Configuration --> Settings`, in the :guilabel:`Barcode` section, tick
+:guilabel:`Barcode Scanner` and save.
 
-Under the IoT Box / Hardware category, you will find *Barcode Scanner*
-select it.
+.. image:: barcode/barcode-inventory.png
+   :align: center
+   :alt: barcode setting in the Inventory application
 
-.. image:: barcode/barcode01.png
-    :align: center
+.. seealso::
+   - :doc:`Set up a barcode scanner<../../../inventory_and_mrp/inventory/barcode/setup/hardware>`
+   - :doc:`Activate barcode scanners<../../../inventory_and_mrp/inventory/barcode/setup/software>`
 
-Add barcodes to product
-=======================
+Once enabled in **Inventory**, you can use the barcode feature in **Point of Sale** with products
+that have a barcode number assigned.
 
-Go to :menuselection:`Point of Sale --> Catalog --> Products` and
-select a product.
+Assign barcodes
+===============
 
-Under the general information tab, you can find a barcode field where
-you can input any barcode.
+To your products
+----------------
 
-.. image:: barcode/barcode02.png
-    :align: center
+To use this feature in POS, your products must have barcodes assigned. To do so, go to
+:menuselection:`Point of Sale --> Products --> Products` and open a **product form**. Add a barcode
+number in the :guilabel:`Barcode` field in the :guilabel:`General Information` tab.
 
-Scanning products
-=================
+To your employees
+-----------------
 
-From your PoS interface, scan any barcode with your barcode scanner. The
-product will be added, you can scan the same product to add it multiple
-times or change the quantity manually on the screen.
+To add an identification number to an employee, go to the **Employees** app and open an **employee
+form**. Choose an identification number for your employee and fill in the :guilabel:`PIN Code`
+field in the :guilabel:`HR Settings` tab.
+
+Use barcodes
+============
+
+Scan products
+-------------
+
+Scan a product's barcode using a barcode scanner. Doing so adds it directly to the cart. To change
+the quantity, scan a product as many times as needed, or click :guilabel:`Qty` and enter the number
+of products using the keypad.
+
+You can also enter the barcode number manually in the search bar to look for the product. Then,
+click it to add it to the cart.
+
+.. seealso::
+   - :doc:`Get started <../overview/getting_started>`
+
+Log employees
+-------------
+
+You can also use a barcode scanner to log your employees. To do so, :ref:`restrict access
+<restrict-employee-pos>` to the POS and :ref:`use barcodes to log your employees in
+<employee-barcode>` your POS.

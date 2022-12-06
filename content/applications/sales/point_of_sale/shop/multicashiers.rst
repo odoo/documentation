@@ -12,6 +12,8 @@ cashier*, by *entering a PIN code* or by *scanning a barcode*.
 .. note::
    To manage multiple cashiers, you need several employees (at least two).
 
+.. _restrict-employee-pos:
+
 Set up log in with employees
 ============================
 
@@ -38,6 +40,8 @@ Now, you just have to click on your name.
 .. image:: multicashiers/multicashiers03.png
     :align: center
 
+.. _set-pin-code:
+
 Switch cashier with pin codes
 =============================
 
@@ -51,6 +55,8 @@ Now, when switching cashier, a PIN password will be asked.
 
 .. image:: multicashiers/multicashiers05.png
     :align: center
+
+.. _employee-barcode:
 
 Switch cashier with barcodes
 ============================
