@@ -12,10 +12,16 @@ If a payment is **not linked to an invoice or bill**, the customer has an outsta
 your company, or your company has an outstanding debit with a vendor. You can use those outstanding
 amounts to reduce unpaid invoices/bills.
 
+.. seealso::
+   - :doc:`Internal transfers <../../bank/misc/interbank>`
+   - :doc:`../../bank/reconciliation/use_cases`
+   - `Odoo Tutorials: Bank Configuration
+     <https://www.odoo.com/slides/slide/bank-configuration-1880>`_
+
 Registering payment from an invoice or bill
 ===========================================
 
-When you click on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
+When clicking on :guilabel:`Register payment` in a customer invoice or vendor bill, it generates a
 new journal entry and changes the amount due according to the amount of the payment. The counterpart
 is reflected in an outstanding receipts or payments account. At this point, the customer invoice or
 vendor bill is marked as :guilabel:`In payment`. Then, when the outstanding account is reconciled
@@ -33,7 +39,7 @@ access additional information, such as the related journal, by clicking on :guil
      payment.
    - When clicking on :guilabel:`Register payment`, you can select the amount to pay and make a
      partial or full payment.
-   - If your main bank account is set as :doc:`oustanding account
+   - If your main bank account is set as :doc:`outstanding account
      <../../bank/setup/outstanding_accounts>`, and the payment is made in Odoo (not related to a
      bank statement), invoices and bills are directly registered in the status :guilabel:`Paid`.
    - If you unreconciled a payment, it still appears in your books but is no longer linked to the
@@ -74,11 +80,12 @@ statement.
 Batch payment
 -------------
 
-Batch payments allow you to group different payments to ease reconciliation. They are also useful
-when you deposit checks to the bank or for SEPA Payments.
-Go to :menuselection:`Accounting --> Customers --> Batch Payments` or :menuselection:`Accounting -->
-Vendors --> Batch Payments`. In the list view of payments, you can select several payments and group
-them in a batch clicking on :menuselection:`Action > Create Batch Payment`.
+Batch payments allow you to group different payments to ease :doc:`reconciliation
+<../../bank/reconciliation/use_cases>`. They are also useful when you deposit checks to the bank or
+for SEPA Payments. To do so, go to :menuselection:`Accounting --> Customers --> Batch Payments` or
+:menuselection:`Accounting --> Vendors --> Batch Payments`. In the list view of payments, you can
+select several payments and group them in a batch by clicking on :menuselection:`Action --> Create
+Batch Payment`.
 
 .. seealso::
   - :doc:`../../receivables/customer_payments/batch`
@@ -94,9 +101,9 @@ Customer Invoices / Vendor Bills`, and click on :guilabel:`⋮` and select :guil
 Matching`, or by going to :menuselection:`Accounting --> Reconciliation`.
 
 .. note::
-   During the reconciliation, if the sum of the debits and credits does not match, it means there is
-   a remaining balance that either needs to be reconciled at a later date or needs to be written off
-   directly.
+   During the :doc:`reconciliation <../../bank/reconciliation/use_cases>`, if the sum of the debits
+   and credits does not match, there is a remaining balance. This either needs to be reconciled at a
+   later date or needs to be written off directly.
 
 Batch payments matching
 -----------------------
