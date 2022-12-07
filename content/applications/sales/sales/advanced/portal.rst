@@ -1,48 +1,64 @@
-=================================================
-How to give portal access rights to my customers?
-=================================================
+-------------
+Portal access
+-------------
 
-What is Portal access/Who is a portal user?
-============================================
+Portal access is given to users who need the ability to view certain documents or information
+within an Odoo database.
 
-A portal access is given to a user who has the necessity to have access
-to Odoo instance, to view certain documents or information in the
-system.
+Some common use cases for providing portal access include allowing customers to read/view any or
+all of the following in Odoo:
 
-For Example, a long term client who needs to view online quotations.
+- leads/opportunities
+- quotations/sales orders
+- purchase orders
+- invoices & bills
+- projects
+- tasks
+- timesheets
+- tickets
+- signatures
+- subscriptions
 
-A portal user has only read/view access. He or she will not be able to
-edit any document in the system.
+.. note::
+   Portal users only have read/view access, and will not be able to edit any documents in the
+   database.
 
-How to give portal access to customers?
-=======================================
+Provide portal access to customers
+----------------------------------
+From the main Odoo dashboard, select the :guilabel:`Contacts` application. If the contact is not
+yet created in the database, click on the :guilabel:`Create` button, enter the details of the
+contact, and then click :guilabel:`Save`. Otherwise, choose an existing contact, and then click on
+the :guilabel:`Action` drop-down menu located at the top-center of the interface.
 
-From Contacts Module
---------------------
+.. image:: portal/grant-portal-access.png
+   :align: center
+   :alt: Use the Contacts application to give portal access to users
 
-From the main menu, select **Contacts** menu. If the contact is not
-yet created in the system, click on the create button to create
-new contact. Enter details of the contact and click "save".
+Then select :guilabel:`Grant portal access`. A pop-up window appears, listing three fields:
 
-.. image:: portal/portal01.png
-    :align: center
+- :guilabel:`Contact`: the recorded name of the contact in the Odoo database
+- :guilabel:`Email`: the contact's email address that they will use to log into the portal
+- :guilabel:`In Portal`: whether or not the user has portal access
 
-.. image:: portal/portal02.png
-    :align: center
+To grant portal access, first enter the contact's :guilabel:`Email` they will use to log into the
+portal. Then, check the box under the :guilabel:`In Portal` column. Optionally, add text to the
+invitation message the contact will receive. Then click :guilabel:`Apply` to finish.
 
-Choose a contact, click on the **Action** menu in the top-center of
-the interface and from the drop down.
+.. image:: portal/add-contact-to-portal.png
+   :align: center
+   :alt: An email address and corresponding checkbox for the contact need to be filled in before
+         sending a portal invitation.
 
-Select **Portal Access Management**. A pop up window appears.
+An email will be sent to the specified email address, indicating that the contact is now a portal
+user for that Odoo database.
 
-.. image:: portal/portal03.png
-    :align: center
+.. tip::
+   To grant portal access to multiple users at once, navigate to a company contact, then click
+   :menuselection:`Action --> Grant portal access` to view a list of all of the company's related
+   contacts. Check the box under the :guilabel:`In Portal` column for all the contacts that need
+   portal access, then click :guilabel:`Apply`.
 
-Enter the login **email ID**, check the box under **In Portal** and
-add the content to be included in the email in the text field box below. Click on **Apply** when you're done.
-
-.. image:: portal/portal04.png
-    :align: center
-
-An email will be sent to the specified email address, indicating that
-the contact is now a portal user of the respective instance.
+.. note::
+   At any time, portal access can be revoked by navigating to the contact, clicking
+   :menuselection:`Action --> Grant portal access`, and then unselecting the checkbox under the
+   :guilabel:`In Portal` column and clicking :guilabel:`Apply`.
