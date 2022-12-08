@@ -105,8 +105,6 @@ Your manifest should look like this:
 
 .. code-block:: python
 
-  # -*- coding: utf-8 -*-
-
   {
       "name": "Real Estate",
       "depends": [
