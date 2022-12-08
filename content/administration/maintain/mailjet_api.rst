@@ -201,7 +201,7 @@ Connection`.
    #. The :guilabel:`From Filter` needs to be set on the server configuration. It is recommended
       to set it as a domain and not a full email address. It should match the domain in the two
       proceeding steps. More information can be referenced :ref:`here
-      <email_servers/outgoing-email-server>`.
+      <email_communication/from_filter>`.
    #. The :guilabel:`mail.default.from` system parameter must have the value
       `notifications\@yourdomain.com`.
    #. The :guilabel:`mail.default.from_filter` system parameter must have the value

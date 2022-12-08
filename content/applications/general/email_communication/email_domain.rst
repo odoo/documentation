@@ -1,37 +1,36 @@
-=======================
-Send an email with Odoo
-=======================
+============================================
+Configure DNS records to send emails in Odoo
+============================================
 
-Use an email domain in Odoo
-===========================
+SPAM labels overview
+====================
 
-Documents in Odoo (such as a CRM opportunity, a sales order, an invoice, etc.) have a discussion
-thread, called *chatter*.
+Sometimes, emails from Odoo are misclassified by the different email providers and end up in spam
+folders. At the moment, some settings are out of Odoo's control, notably the way the different email
+providers classify Odoo's emails according to their own restriction policy and/or limitations.
 
-When a database user posts a message in the chatter, this message is sent by email to the followers
-of the document. If a follower replies to the message, the reply updates the chatter, and Odoo
-relays the reply to the followers as a notification.
+It is standard in Odoo that emails are received from ``"name of the author"
+<notifications@mycompany.odoo.com>``. In other words this can be translated to: ``"name of the
+author" <{ICP.mail.from.filter}@{mail.catchall.domain}>``. In this case ICP stands for
+`ir.config.parameters`, which are the System Parameters. Deliverability is greatly improved with the
+:ref:`notifications configuration <email_servers/notifications>`.
 
-Messages sent in the chatter from internal database users to external users (such as partners,
-customers, or vendors) are relayed on behalf of the database users. Messages sent back to the
-chatter from external users will appear in the chatter from their respective email addresses, or as
-they are listed in their Contacts record.
+In order for servers to accept emails from Odoo on a more regular basis, one of the solutions is
+for customers to create rules within their own mailbox. A filter can be added to the email inbox so
+that when email is received from Odoo (`notifications@mycompany.odoo.com`) it is moved to the
+inbox. It is also possible to add the Odoo database domain onto a safe senders list or whitelist
+on the receiving domain.
 
-If the Odoo database is hosted on the cloud (Odoo Online or Odoo.sh), it is not necessary to add an
-outgoing email server to send emails from a custom domain.
+If an Odoo email server appears on a blacklist, notify Odoo via a `new help ticket
+<https://www.odoo.com/help>`_ and the support team will work to get the servers removed from the
+blacklist.
 
-.. important::
-   The Odoo server is subject to a daily email limit to prevent abuse. The default limit is 200
-   emails sent per day for databases with an **Enterprise** subscription. This limit can be
-   increased under certain conditions. See the :doc:`FAQ <faq>` or contact support for more
-   information.
-
-To ensure that emails sent to and from the chatter reach their intended contacts, instead of being
-considered spam, Odoo recommends configuring the domain name.
-
-For the same reason, Odoo also recommends giving each database user an email address from the
-configured domain, rather than a generic email address domain (such as gmail.com, outlook.com,
-etc.).
+Should the Odoo database be using a custom domain for sending emails from Odoo there are three
+records that should be implemented on the custom domain's DNS to ensure deliverability of email.
+This includes setting records for :abbr:`SPF (Sender Policy Framework)`,
+:abbr:`DKIM (DomainKeys Identified Mail)` and
+:abbr:`DMARC (Domain-based Message Authentication, Reporting, & Conformance)`. Ultimately though,
+it is up to the discretion of the final receiving mailbox.
 
 .. _email_communication/spf_compliant:
 
@@ -40,27 +39,23 @@ Be SPF compliant
 
 The Sender Policy Framework (SPF) protocol allows the owner of a domain name to specify which
 servers are allowed to send emails from that domain. When a server receives an incoming email,
-it checks if the IP address of the sending server is on the list of allowed IPs according to the
-sender's :abbr:`SPF (Sender Policy Framework)` record.
+it checks whether the IP address of the sending server is on the list of allowed IPs according to
+the sender's :abbr:`SPF (Sender Policy Framework)` record.
 
 .. note::
    The :abbr:`SPF (Sender Policy Framework)` verification is performed on the domain mentioned in
    the `Return-Path` field of the email. In the case of an email sent by Odoo, this domain
    corresponds to the value of the `mail.catchall.domain` key in the database system parameters.
 
-   See the :ref:`documentation on incoming emails <email_communication/inbound_messages>`.
-
 The :abbr:`SPF (Sender Policy Framework)` policy of a domain is set using a TXT record. The way to
 create or modify a TXT record depends on the provider hosting the :abbr:`DNS (Domain Name System)`
 zone of the domain name. In order for the verification to work properly, each domain can only have
 one :abbr:`SPF (Sender Policy Framework)` record.
 
-If the domain name does not yet have an :abbr:`SPF (Sender Policy Framework)` record, the content
-of the record to create it is as follows:
+If the domain name does not yet have a :abbr:`SPF (Sender Policy Framework)` record, create one
+using the following input: `v=spf1 include:_spf.odoo.com ~all`
 
-`v=spf1 include:_spf.odoo.com ~all`
-
-If the domain name already has an :abbr:`SPF (Sender Policy Framework)` record, the record must be
+If the domain name already has a :abbr:`SPF (Sender Policy Framework)` record, the record must be
 updated (and do not create a new one).
 
 .. example::
@@ -111,6 +106,11 @@ Conformance)` record of a domain name tell the destination server what to do wit
 that fails the :abbr:`SPF (Sender Policy Framework)` and/or :abbr:`DKIM (DomainKeys Identified
 Mail)` check.
 
+.. example::
+   DMARC: TXT record
+
+   `v=DMARC1; p=none;`
+
 There are three :abbr:`DMARC (Domain-based Message Authentication, Reporting, & Conformance)`
 policies:
 
@@ -118,15 +118,15 @@ policies:
 - `p=quarantine`
 - `p=reject`
 
-`p=quarantine` and `p=reject` instruct the server that receives an email to quarantine that email
-or ignore it if the :abbr:`SPF (Sender Policy Framework)` and/or :abbr:`DKIM (DomainKeys Identified
+`p=quarantine` and `p=reject` instruct the server that receives an email to quarantine that email or
+ignore it if the :abbr:`SPF (Sender Policy Framework)` and/or :abbr:`DKIM (DomainKeys Identified
 Mail)` check fails.
 
 If the domain name uses :abbr:`DMARC (Domain-based Message Authentication, Reporting, &
 Conformance)` and has defined one of these policies, the domain must be :abbr:`SPF (Sender Policy
 Framework)` compliant or enable :abbr:`DKIM (DomainKeys Identified Mail)`.
 
-.. danger::
+.. warning::
    Yahoo or AOL are examples of email providers with a :abbr:`DMARC (Domain-based Message
    Authentication, Reporting, & Conformance)` policy set to `p=reject`. Odoo strongly advises
    against using an *@yahoo.com* or *@aol.com* address for the database users. These emails will
@@ -136,16 +136,55 @@ Framework)` compliant or enable :abbr:`DKIM (DomainKeys Identified Mail)`.
 should not impact the deliverability if the :abbr:`DMARC (Domain-based Message Authentication,
 Reporting, & Conformance)` check fails.
 
+:abbr:`DMARC (Domain-based Message Authentication, Reporting, & Conformance)` records are comprised
+of tags in the form of :abbr:`DNS (Domain Name System)` records. These tags/parameters allow for
+reporting, such as :abbr:`RUA (Reporting URI of aggregate reports)` and :abbr:`RUF (Reporting URI
+for forensic reports)`, along with more precise specification like :abbr:`PCT (Percentage of
+messages subjected to filtering)`, :abbr:`P (Policy for organizational domain)`, :abbr:`SP (Policy
+for subdomains of the OD)` :abbr:`ADKIM (Alignment mode for DKIM)` & :abbr:`ASPF (Alignment mode for
+SPF)`. For best practice, the the :abbr:`DMARC (Domain-based Message Authentication, Reporting, &
+Conformance)` policy should not start out being too restrictive.
+
+The following chart displays available tags:
+
+.. list-table::
+   :header-rows: 1
+   :widths: 15 50 35
+
+   * - Tag Name
+     - Purpose
+     - Example
+   * - v
+     - Protocol version
+     - `v=DMARC1`
+   * - pct
+     - Percentage of messages subjected to filtering
+     - `pct=20`
+   * - ruf
+     - Reporting URI for forensic reports
+     - `ruf=mailto:authfail@example.com`
+   * - rua
+     - Reporting URI of aggregate reports
+     - `rua=mailto:aggrep@example.com`
+   * - p
+     - Policy for organizational domain
+     - `p=quarantine`
+   * - sp
+     - Policy for subdomains of the OD
+     - `sp=reject`
+   * - adkim
+     - Alignment mode for DKIM
+     - `adkim=s`
+   * - aspf
+     - Alignment mode for SPF
+     - `aspf=r`
+
 Check the :abbr:`DMARC (Domain-based Message Authentication, Reporting, & Conformance)` record of a
 domain name with a tool like `MXToolbox DMARC <https://mxtoolbox.com/DMARC.aspx>`_.
 
-If a partner, customer, or vendor, uses :abbr:`DMARC (Domain-based Message Authentication,
-Reporting, & Conformance)` and has defined one of these policies, the Odoo server cannot relay
-emails from this partner to the database users.
-
-To solve this issue, :ref:`handle user notifications in Odoo
-<discuss_app/notification_preferences>`, or replace the email address of the partner with a default
-email address.
+.. seealso::
+   `DMARC.org is another great resource to learn about DMARC records.
+   <https://dmarc.org/overview/>`_
 
 .. _email_communication/SPFDKIM_common_providers:
 
@@ -165,30 +204,7 @@ SPF, DKIM & DMARC documentation of common providers
 
 To fully test the configuration, use the `Mail-Tester <https://www.mail-tester.com/>`_ tool, which
 gives a full overview of the content and configuration in one sent email. Mail-Tester can also be
-used for other, lesser-known providers.
+used to configure records for other, lesser-known providers.
 
-.. _email_communication/default:
-
-Use a default email address
-===========================
-
-Access the :guilabel:`System Parameters` by activating :ref:`developer mode <developer-mode>` and
-going to :menuselection:`Settings --> Technical --> Parameters --> System Parameters` menu.
-
-To force the email address from which emails are sent, a combination of the following keys needs to
-be set in the system parameters of the database:
-
-- `mail.default.from`: accepts the local part or a complete email address as value
-- `mail.default.from_filter`: accepts a domain name or a full email address as value
-
-.. note::
-   The `mail.default.from_filter` works only for `odoo-bin` configurations, otherwise this
-   parameter can be set using the `from_filter` field on `ir.mail_server`.
-
-If the email address of the author does not match `mail.default.from_filter`, the email address is
-replaced by `mail.default.from` (if it contains a full email address) or a combination of
-`mail.default.from` and `mail.catchall.domain`.
-
-If the `from_filter` contains a full email address, and if the `mail.default.from` is the same as
-this address, then all of the email addresses that are different from `mail.default.from` will be
-encapsulated in `mail.default.from`.
+.. seealso::
+   `Using Mail-Tester to set SPF Records for specific carriers <https://www.mail-tester.com/spf/>`_
