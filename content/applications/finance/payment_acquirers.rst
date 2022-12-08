@@ -107,9 +107,9 @@ Add a new Payment Acquirer
 --------------------------
 
 To add a new Payment acquirer and make it available to your customers, go to
-:menuselection:`Accounting --> Configuration --> Payment Acquirers`, look for your payment acquirer,
-install the related module, and activate it. To do so, open the payment acquirer and change its
-state from *Disabled* to *Enabled*.
+:menuselection:`Accounting / Website --> Configuration --> eCommerce: Payment Acquirers`, look for
+your payment acquirer, install the related module, and activate it. To do so, open the payment
+acquirer and change its state from *Disabled* to *Enabled*.
 
 .. image:: payment_acquirers/activation.png
    :align: center
@@ -204,6 +204,22 @@ Messages tab
 ~~~~~~~~~~~~
 
 Change here the messages displayed by Odoo after a payment's confirmation or failure.
+
+.. _payment_acquirers/multi-company:
+
+Multi-company environment
+-------------------------
+
+If you have multiple companies on your database and wish to use the same payment acquirer for
+several or all of them, switch to the company on which the payment acquirer is configured, then go
+to :menuselection:`Accounting / Website --> Configuration --> Payments: Payment Acquirers` and
+select the payment acquirer to use. Then, click :menuselection:`Action --> Duplicate`, and in the
+:guilabel:`Company` field, set the company for which you want to have that payment acquirer
+available. Configure the rest of the fields according to your needs, and :guilabel:`Save`.
+
+.. note::
+   Creating a payment acquirer from the :guilabel:`Create` button is not supported. You *must* use
+   the :guilabel:`Duplicate` action instead.
 
 .. _payment_acquirers/accounting:
 
