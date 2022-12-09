@@ -111,8 +111,6 @@ This is enough to create an empty invoice.
 
     - the ``partner_id`` is taken from the current ``estate.property``
     - the ``move_type`` should correspond to a 'Customer Invoice'
-    - the ``journal_id`` must be a ``sale`` journal (when in doubt, have a look
-      `here <https://github.com/odoo/odoo/blob/f1f48cdaab3dd7847e8546ad9887f24a9e2ed4c1/addons/sale/models/sale.py#L534>`__)
 
     Tips:
 
