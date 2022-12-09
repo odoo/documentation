@@ -44,6 +44,8 @@ activate the debug mode.
    :align: center
    :alt: Command palette with debug command
 
+.. _developer-mode/url:
+
 Activate through the URL
 ========================
 
