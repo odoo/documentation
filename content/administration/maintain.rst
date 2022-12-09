@@ -8,6 +8,7 @@ Maintain
 
     maintain/domain_names
     maintain/google_oauth
+    maintain/mailjet_api
     maintain/update
     maintain/enterprise
     maintain/hosting_changes

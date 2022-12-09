@@ -149,6 +149,8 @@ To fully test your configuration, the tool `Mail-Tester <https://www.mail-tester
 you a full overview of the content and configuration you have in one email sent! Mail-Tester can
 also be used for other lesser known providers.
 
+.. _email_domain/default:
+
 Use a default email address
 ===========================
 
