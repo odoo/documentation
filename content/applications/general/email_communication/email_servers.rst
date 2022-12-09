@@ -78,6 +78,8 @@ A G Suite server can be used for any Odoo hosting type. To do so, set up the SMT
 The configuration steps are explained in `Google documentation <https://support.google.com
 /a/answer/2956491?hl=en>`__.
 
+.. _email_servers/restriction:
+
 Restriction
 -----------
 
@@ -186,6 +188,8 @@ By default, inbound messages are fetched every 5 minutes in Odoo on-premise.
    This value can be changed in :ref:`developer mode <developer-mode>`. Go to
    :menuselection:`Settings --> Technical --> Automation --> Scheduled Actions` and look for
    :guilabel:`Mail: Fetchmail Service`.
+
+.. _email_servers/outgoing-email-server:
 
 Utilizing the From Filter on an outgoing email server
 =====================================================
