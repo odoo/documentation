@@ -899,7 +899,7 @@ system. Available semantic components are:
     .. rst-class:: o-definition-list
 
     ``oe_inline``
-      prevent the usual line break following fields
+      prevent the usual line break following fields and limit their span.
     ``oe_left``, ``oe_right``
       floats_ the field to the corresponding direction
     ``oe_read_only``, ``oe_edit_only``
