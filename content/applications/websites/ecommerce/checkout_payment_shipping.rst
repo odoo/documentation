@@ -1,5 +1,3 @@
-:nosearch:
-
 ===============================
 Checkout, payment, and shipping
 ===============================
@@ -8,3 +6,4 @@ Checkout, payment, and shipping
    :titlesonly:
 
    checkout_payment_shipping/cart
+   checkout_payment_shipping/checkout
