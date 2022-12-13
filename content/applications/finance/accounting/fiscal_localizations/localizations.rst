@@ -19,6 +19,7 @@ Localizations
    localizations/indonesia
    localizations/italy
    localizations/italy_IT
+   localizations/kenya
    localizations/luxembourg
    localizations/mexico
    localizations/netherlands
