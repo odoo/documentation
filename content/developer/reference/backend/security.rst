@@ -418,6 +418,40 @@ likely it is to break things.
     >> html_sanitize(code, strip_classes=True)
     '<p>Important Information</p>'
 
+**Markup**
+
+The library Markup is used in Odoo to escape and sanitize the content.
+When using Markup, the developer must ensure that the user content is passed correctly.
+
+The inside of the constructor of Markup is used for trusted content, you should never pass user-modifiable
+the content inside of the constructor of markup. 
+
+.. code-block:: python
+
+    >>text = Markup('<strong> Your username is %s </strong>') % self.env.user.name
+    # We put our HTML inside of the constructor because it is trusted and fully under the control of the developer
+    # Since the user's name is passed by the operator '%', it will be escaped and any HTML code present will not be interpreted by the browser. 
+
+Markup can also handle being combined with another Markup object without escaping them: 
+
+.. code-block:: python 
+    
+    >>text = Markup('<i>Your username is : %s</i>') % self.env.user.name
+    # Now we want to make it <strong>
+    >>code = Markup('<strong> %s </strong>') % text
+    # Markup is smart enough not to escape the text a second time. Since this object is already of type Markup, it will be trusted. 
+
+Here is a bad example:  
+
+.. code-block:: python
+
+    >>text = f'<strong> Your username is : {self.env.user.name}'
+    >>html = Markup(text) 
+    # This example is wrong, we use the data in the control of the user (the username) inside of an f-string, with is directly passed to the constructor of Markup. 
+    # Since we always trust the content of the constructor, it will be trusted and interpreted as HTML.
+
+
+
 Evaluating content
 ------------------
 Some may want to ``eval`` to parse user provided content. Using ``eval`` should
@@ -483,15 +517,77 @@ The above method is obviously still too optimistic and additional verifications
 on the record id and field value must be done.
 
 
-Http Request
+Injectable Request
 ---------------------------
 
-Some may need to make an HTTP request directly from python, it is require to follow some best practices
+Some may need to make an HTTP request directly, it is require to follow some best practices
 
 **Injectable domain** 
 
 Care must be taken while manipulating the domain name of the request, the domain should never depend on user input.
 If the domain can be changed by the user, a malicious user could use the server running the code to send multiple requests to a chosen target. 
-This is known as a reflective-DDOS attack, where one can overload a target without sending the packet himself.
+This is known as a reflective-DDOS attack, where one can overload a target without sending the request himself.
 
 **URL path/query Injectable**
+
+In the same way as for the domain, care must be taken when manipulating the string of the URL. It should not allow for any user input to be added to the URL. If a user were to modify the URL, he could make the request do other actions than the expected one.  
+
+**Timeout**
+
+By default, requests never timeout. If the destination server is not reachable, the running working will halt forever.
+For this reason, it is crucial to set a timeout for the request.
+It is best practice to set the timeout slightly higher than a multiple of 3, which is the default retransmission window of TCP.
+
+**Error Handling**
+
+Errors should always be handled explicitly, an error response code can happen depending on the state of the other host. In order to avoid a simple crash with traceback presented to the user, you should verify
+response.ok is set to True. 
+
+
+Automated Testing
+=================
+
+
+SQL Injection detection
+---------------------------
+
+Detection of potential SQL Injection vulnaribility is handled by a custom module of pylint. 
+This test decompose the AST of the python in order to infer the value of the string that is used as a SQL query. 
+
+You should never use the query string to pass a parameter. As seen in the section of Security pitfall, 
+
+
+.. code-block:: python
+
+    # this is not allowed
+    def get_table(self, arg1):
+        self.env.cr.execute("SELECT * FROM table WHERE %s" % arg1)
+
+    # this is allowed
+    def get_table(self, arg1):
+        self.env.cr.execute("""SELECT * FROM table WHERE %s""", (arg1,))
+
+However, sometimes one need to build a query dynamically,
+
+.. code-block:: python
+    
+    # not OK
+    def test(self, extended=False):
+        base_query = "SELECT * FROM table"
+        extended_query = " LEFT JOIN SELECT * FROM table2 ON arg1=arg2"
+        self.env.cr.execute(base_query + extended_query*extended)
+
+    # OK
+    def get_table(self, extended=False):
+        base_query = "SELECT * FROM table"
+        extended_query = " LEFT JOIN SELECT * FROM table2 ON arg1=arg2"
+        if extended: 
+            self.env.cr.execute(base_query + extended_query)
+        else: 
+            self.env.cr.execute(base_query)
+
+The first exemple will trigger the test because the value of the string 
+
+This is allowed and won't be flagged as a potential SQL Injection. 
+The AST analysis will try to infer the value of both ``base_query`` and ``base_query + extended``. Both of these will be found to be constant. 
+
