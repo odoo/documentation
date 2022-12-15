@@ -6,7 +6,8 @@ General Terms of Sale
 
 .. only:: html
 
-    `Download PDF <terms_of_sale.pdf>`_
+    `Download PDF <../../terms_of_sale.pdf>`_
+
 .. note:: Last revision: October 20, 2021.
 
 These General Terms of Sale govern the sale of products and services by

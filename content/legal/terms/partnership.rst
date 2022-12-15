@@ -6,7 +6,8 @@ Odoo Partnership Agreement
 
 .. only:: html
 
-    `Download PDF <odoo_partnership_agreement.pdf>`_
+    `Download PDF <../../odoo_partnership_agreement.pdf>`_
+
 .. v6a: typo in section 4.4
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified parts, clarified others, added trademark use restrictions, updated benefits
