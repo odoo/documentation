@@ -55,7 +55,7 @@ html: $(HTML_BUILD_DIR)/_static/style.css
 
 # To call *after* `make html`
 # Binary dependencies (Debian): texlive-fonts-recommended texlive-latex-extra
-# texlive-generic-recommended texlive-fonts-extra
+# texlive-fonts-extra
 latexpdf:
 	@echo "Starting build..."
 	$(SPHINX_BUILD) -c $(CONFIG_DIR) -b latex $(SPHINXOPTS) $(SOURCE_DIR) $(BUILD_DIR)/latex
