@@ -906,21 +906,8 @@ header {
 //------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------
-// alert-info
-// alert-note
-// alert-tip
-// alert-warning
-// alert-danger
-// alert-example
-// alert-exercise
-// alert-go_to
-
         .alert {
-            position: relative;
-            display: inline-block;
-            border-radius: 0;
-            border-width: 0 0 0 3px;
-            width: 100%;
+            border-width: 0 0 0 $alert-border-width;
             @include font-size($font-size-secondary);
 
             code, div[class^="highlight"] {
@@ -932,6 +919,7 @@ header {
             > p , > ul {
                 margin-bottom: .5rem;
             }
+
             > *:last-child {
                 margin-bottom: 0;
             }
@@ -950,133 +938,88 @@ header {
                 }
             }
 
-            &.alert-info, &[class^="admonition"] {
-                border-color: tint-color($brand-info, 30%);
-                background-color: tint-color($brand-info, 85%);
-                color: shade-color($brand-info, 35%);
+            // Custom Admonitions
+            &[class^="admonition"] {
+                @extend .alert-info;
 
-                > .alert-title, > h3 {
-                    color: $brand-info;
-                    &:before {
-                        content: '#{$i-info}';
-                    }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($info, 30%);
+                }
+            }
+
+            // Note
+            &.alert-primary {
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-note}';
                 }
 
                 code, div[class^="highlight"] {
-                    border-color: tint-color($brand-info, 30%);
+                    border-color: tint-color($primary, 30%);
                 }
             }
 
-            &.alert-note {
-                border-color: shade-color($info, 30%);
-                background-color: $gray-lightest;
-                color: shade-color($info, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($info, 45%);
-                    &:before {
-                        content: '#{$i-note}';
-                    }
+            // See Also
+            &.alert-secondary {
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-arrow-right}';
                 }
-            }
 
-            &.alert-tip, &.tip {
-                border-color: shade-color($color-alpha, 10%);
-                background-color: $gray-lightest;
-                color: shade-color($color-alpha, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($color-alpha, 40%);
-                    &:before {
-                        content: '#{$i-lightbulb}';
-                        @include font-size(1.2rem);
-                    }
-                }
-            }
-
-            &.alert-warning, &.warning {
-                border-color: $brand-warning;
-
-                > .alert-title, > h3 {
-                    color: shade-color($brand-warning, 10%);
-                    &:before {
-                        content: '#{$i-warning}';
-                    }
+                a {
+                    color: $secondary;
                 }
 
                 code, div[class^="highlight"] {
-                    border-color: tint-color($brand-warning, 50%);
+                    border-color: tint-color($secondary, 50%);
                 }
             }
 
-            &.alert-danger {
-                border-color: $danger;
-
-                > .alert-title, > h3 {
-                    color: darken($brand-danger, 20%);
-
-                    &:before {
-                        content: '#{$i-danger}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-danger, 50%);
+            // Tip
+            &.alert-tip {
+                background-color: $o-gray-bg;
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-lightbulb}';
+                    @include font-size(1.2rem);
                 }
             }
 
-            &.alert-example {
-                border-color: tint-color($doc_example, 30%);
-                background-color: tint-color($doc_example, 90%);
-                color: shade-color($doc_example, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_example, 35%);
-                }
-
+            // Example
+            &.alert-success {
                 > .alert-title:before, > h3:before {
                     content: '#{$i-knowledge}';
                 }
 
                 code, div[class^="highlight"] {
-                    border-color: tint-color($doc-example, 50%);
+                    border-color: tint-color($success, 50%);
                 }
             }
 
-            &.alert-exercise {
-                border-color: tint-color($doc_exercise, 30%);
-                background-color: tint-color($doc_exercise, 90%);
-                color: shade-color($doc_exercise, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_exercise, 35%);
+            // Warning & Important
+            &.alert-warning {
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-warning}';
                 }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($warning, 50%);
+                }
+            }
 
+            // Danger
+            &.alert-danger {
+                > .alert-title:before, > h3:before {
+                    content: '#{$i-danger}';
+                }
+                code, div[class^="highlight"] {
+                    border-color: tint-color($danger, 50%);
+                }
+            }
+
+            // Exercises
+            &.alert-dark {
                 > .alert-title:before, > h3:before {
                     content: '#{$i-exercise}';
                 }
                 code, div[class^="highlight"] {
-                    border-color: tint-color($doc-exercise, 50%);
-                }
-            }
-
-            &.alert-go_to {
-                border-color: $o-violet;
-                background-color: $gray-lightest;
-
-                a {
-                    color: $o-violet-dark;
-                }
-
-                > .alert-title, > h3 {
-                    color: $o-violet-dark;
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-arrow-right}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($o-violet, 50%);
+                    border-color: tint-color($dark, 50%);
                 }
             }
         }
