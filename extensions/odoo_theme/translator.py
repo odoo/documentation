@@ -10,15 +10,12 @@ from sphinx.writers.html5 import HTML5Translator
 #         └── Odoo Translator
 
 ADMONITION_MAPPING = {
-    # ???: 'alert-success',
-
-    'note': 'alert-note',
-
-    'hint': 'alert-info',
+# The alert classes have been replaced by default BS classes to reduce number of scss lines.
+    'note': 'alert-primary',
 
     'tip': 'alert-tip',
 
-    'seealso': 'alert-go_to',
+    'seealso': 'alert-secondary',
 
     'warning': 'alert-warning',
     'attention': 'alert-warning',
@@ -28,8 +25,8 @@ ADMONITION_MAPPING = {
     'danger': 'alert-danger',
     'error': 'alert-danger',
 
-    'example': 'alert-example',
-    'exercise': 'alert-exercise',
+    'example': 'alert-success',
+    'exercise': 'alert-dark',
 }
 
 
