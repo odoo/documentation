@@ -167,7 +167,7 @@ To fully test the configuration, use the `Mail-Tester <https://www.mail-tester.c
 gives a full overview of the content and configuration in one sent email. Mail-Tester can also be
 used for other, lesser-known providers.
 
-.. _email_domain/default:
+.. _email_communication/default:
 
 Use a default email address
 ===========================
