@@ -1,18 +1,16 @@
+.. _epos_ssc/ePOS printers:
+
 =========================================
 Self-signed certificate for ePOS printers
 =========================================
 
-ePos printers are designed specifically to work with your Point of Sale system, which sends the
-tickets directly to the printer.
-
-Some models don't require an IoT box, but the connection between your web browser and the printer
-may require a :doc:`secure connection with the HTTPS protocol <https>`. If so, a self-signed
-certificate is necessary to use your printer.
+ePOS printers are designed to work seamlessly with Point of Sale systems. Once connected, the two
+devices automatically share information, enabling the direct printing of tickets from the POS system
+to the ePOS printer.
 
 .. note::
-   Please check the following list of compatible `Epson ePOS printers
-   <https://c4b.epson-biz.com/modules/community/index.php?content_id=91>`_. This list includes the
-   following models:
+   These `Epson ePOS printers
+   <https://c4b.epson-biz.com/modules/community/index.php?content_id=91>`_ are compatible with Odoo:
 
    - TM-H6000IV-DT (Receipt printer only)
    - TM-T70II-DT
@@ -31,56 +29,191 @@ certificate is necessary to use your printer.
    - TM-P60II (Peeler: Wi-Fi® model)
    - TM-P80 (Wi-Fi® model)
 
-Generate a Self-signed certificate
-==================================
+To work with Odoo, some models that can be used without an
+:doc:`IoT box <../../../productivity/iot/config/connect>` may require :doc:`the HTTPS protocol
+<https>` to establish a secure connection between the browser and the printer. However, trying to
+reach the printer's IP address using HTTPS leads to a warning page on most web browsers.
 
-Access your ePOS printer's settings with your web browser by navigating to its IP address, for
-example, `http://192.168.1.25`.
-
-.. note::
-   - The printer automatically prints the IP address during startup.
-   - We recommend assigning a **fixed IP address** to the printer from the network router.
-
-Go to :menuselection:`Authentication --> Certificate List` and create a new **Self-Signed
-Certificate**.
-
-- **Common Name**: the IP address of the ePos Printer, for example, `192.168.1.25`
-- **Validity Period**: `10`
-
-Create and reboot the printer, go to :menuselection:`Security --> SSL/TLS`, and check if
-**Selfsigned Certificate** is selected.
-
-Export the Self-signed certificate
-==================================
-
-To avoid having to accept the self-signed certificate several times, you can export it and then
-import it to your web browser or mobile device.
-
-To do so, access your ePOS printer's settings with your web browser by navigating to its IP address,
-for example, `https://192.168.1.25`. Then, accept the self-signed certificate.
-
-.. note::
-   Note that the protocol is now **HTTPS**.
-
-Click on :menuselection:`Connection is not secure --> Certificate is not valid`.
-
-.. image:: epos_ssc/browser-warning.png
+.. figure:: epos_ssc/browser-https-insecure.png
    :align: center
-   :alt: The web browser indicates that the connection to the printer is not secure.
+   :alt: warning page about the connection privacy on Google Chrome
 
-Go to the :guilabel:`Details` tab and click on :guilabel:`Export` Select X.509 in base 64 and save it.
+   Warning page on Google Chrome, Windows 10
 
-Import the Self-signed certificate to Windows (Using Chrome)
-============================================================
+In that case, you can temporarily force the connection by clicking :guilabel:`Advanced` and
+:guilabel:`Proceed to [IP address] (unsafe)`. Doing so allows you to reach the page in HTTPS and use
+the ePOS printer in Odoo as long as the browser window stays open.
 
-In your Chrome browser, go to :menuselection:`Settings --> Privacy and security --> Security -->
-Manage certificates`
+.. note::
+   The previous instructions apply to Google Chrome but are similar to other browsers.
 
-Go to the :guilabel:`Authorities` tab and click on :guilabel:`Import` and select
-your previous file. Accept all warnings and restart your browser.
+.. warning::
+   The connection is lost after closing the browser window. Therefore, this method should only be
+   used as a **workaround** or as a pre-requisite for the :ref:`following instructions
+   <epos_ssc/instructions>`.
 
-Import the Self-signed certificate to your Android device
-=========================================================
+.. _epos_ssc/instructions:
 
-On your Android device, open the settings and search for *certificate*. Then, click on **Certificate
-AC** (Install from device storage), and select the certificate.
+Generate, export, and import self-signed certificates
+=====================================================
+
+For a long-term solution, you must generate a **self-signed certificate**. Then, export and import
+it into your browser.
+
+.. important::
+   **Generating** an SSL certificate should only be done **once**. If you create another
+   certificate, devices using the previous one will lose HTTPS access.
+
+.. tabs::
+
+   .. tab:: Windows 10 & Linux OS
+
+      .. tabs::
+
+         .. tab:: Generate a self-signed certificate
+
+            After forcing the connection, sign in using your printer credentials to access the ePOS
+            printer settings. To sign in, enter `epson` in the :guilabel:`ID` field and your printer
+            serial number in the :guilabel:`Password` field.
+
+            Click :guilabel:`Certificate List` in the :guilabel:`Authentication` section, and click
+            :guilabel:`create` to generate a new **Self-Signed Certificate**. The :guilabel:`Common
+            Name` should be automatically filled out. If not, fill it in with the printer IP address
+            number. Select the years the certificate will be valid in the :guilabel:`Validity
+            Period` field, click :guilabel:`Create`, and :guilabel:`Reset` or manually restart the
+            printer.
+
+            The self-signed certificate is generated. Reload the page and click :guilabel:`SSL/TLS`
+            in the :guilabel:`Security` section to ensure **Selfsigned Certificate** is correctly
+            selected in the :guilabel:`Server Certificate` section.
+
+         .. tab:: Export a self-signed certificate
+
+            The export process is heavily dependent on the :abbr:`OS (Operating System)` and the
+            browser. Start by accessing your ePOS printer settings on your web browser by navigating
+            to its IP address, for example, `https://192.168.1.25`. Then, force the connection as
+            explained in the :ref:`introduction <epos_ssc/ePOS printers>`.
+
+            If you are using **Google Chrome**,
+
+            #. click :guilabel:`Not secure` next to the search bar, and :guilabel:`Certificate is
+               not valid`;
+
+               .. image:: epos_ssc/browser-warning.png
+                  :align: center
+                  :alt: Connection to the printer not secure button in Google Chrome browser.
+
+            #. go to the :guilabel:`Details` tab and click :guilabel:`Export`;
+            #. add `.crt` at the end of the file name to ensure it has the correct extension;
+            #. select :guilabel:`Base64-encoded ASCII, single certificate`, at the bottom of the
+               pop-up window;
+            #. save, and the certificate is exported.
+
+            .. warning::
+               Make sure that the certificate ends with the extension `.crt`. Otherwise, some
+               browsers might not see the file during the import process.
+
+            If you are using **Mozilla Firefox**,
+
+            #. click the **lock-shaped** icon on the left of the address bar;
+            #. go to :menuselection:`Connection not secure --> More information --> Security tab
+               --> View certificate`;
+
+            .. image:: epos_ssc/mozilla-not-secure.png
+               :align: center
+               :alt: Connection is not secure button in Mozilla Firefox browser
+
+            #. scroll down to the :guilabel:`Miscellaneous` section;
+            #. click :guilabel:`PEM (cert)` in the :guilabel:`Download` section;
+            #. save, and the certificate is exported.
+
+         .. tab:: Import a self-signed certificate
+
+            The import process is heavily dependent on the :abbr:`OS (Operating System)` and the
+            browser.
+
+            .. tabs::
+
+               .. tab:: Windows 10
+
+                  Windows 10 manages certificates, which means that self-signed certificates must be
+                  imported from the certification file rather than the browser. To do so,
+
+                  #. open the Windows File Explorer and locate the downloaded certification file;
+                  #. right-click on the certification file and click :guilabel:`Install
+                     Certificate`;
+                  #. select where to install the certificate and for whom - either for the
+                     :guilabel:`Current User` or all users (:guilabel:`Local Machine`). Then, click
+                     :guilabel:`Next`;
+                  #. on the `Certificate Store` screen, tick :guilabel:`Place all certificates in
+                     the following store`, click :guilabel:`Browse...`, and select
+                     :guilabel:`Trusted Root Certification Authorities`;
+
+                     .. image:: epos_ssc/win-cert-wizard-store.png
+                        :align: center
+
+                  #. click :guilabel:`Finish`, accept the pop-up security window;
+                  #. restart the computer to make sure that the changes are applied.
+
+               .. tab:: Linux
+
+                  If you are using **Google Chrome**,
+
+                  #. open Chrome;
+                  #. go to :menuselection:`Settings --> Privacy and security --> Security -->
+                     Manage certificates`;
+                  #. go to the :guilabel:`Authorities` tab, click :guilabel:`Import`, and select
+                     the exported certification file;
+                  #. accept all warnings;
+                  #. click :guilabel:`ok`;
+                  #. restart your browser.
+
+
+                  If you are using **Mozilla Firefox**,
+
+                  #. open Firefox;
+                  #. go to :menuselection:`Settings --> Privacy & Security --> Security --> View
+                     Certificates... --> Import`;
+                  #. select the exported certification file;
+                  #. tick the checkboxes and validate;
+                  #. restart your browser.
+
+   .. tab:: Mac OS
+
+      To secure the connection on a Mac:
+
+      #. open Safari and navigate to your printer's IP address. Doing so leads to a warning page;
+      #. on the warning page,  go to :menuselection:`Show Details --> visit this website --> Visit
+         Website`, validate;
+      #. reboot the printer so you can use it with any other browser.
+
+   .. tab:: Android OS
+
+      To import an SSL certificate into an Android device, first create and export it from a
+      computer. Next, transfer the `.crt` file to the device using email, Bluetooth, or USB. Once
+      the file is on the device,
+
+      #. open the settings and search for `certificate`;
+      #. click :guilabel:`Certificate AC` (Install from device storage);
+      #. select the certificate file to install it on the device.
+
+      .. Note::
+         The specific steps for installing a certificate may vary depending on the version of
+         Android and the device manufacturer.
+
+.. important::
+
+   - If you need to export SSL certificates from an operating system or web browser that has not
+     been mentioned, search for `export SSL certificate` + `the name of your browser or operating
+     system` in your preferred search engine.
+   - Similarly, to import SSL certificates from an unmentioned OS or browser, search for `import SSL
+     certificate root authority` + `the name of your browser or operating system` in your preferred
+     search engine.
+
+Check if the certificate was imported correctly
+===============================================
+
+To confirm your printer's connection is secure, connect to its IP address using HTTPS. For example,
+navigate to `https://192.168.1.25` in your browser. If the SSL certificate has been applied
+correctly, you should no longer see a warning page, and the address bar should display a padlock
+icon, indicating that the connection is secure.
