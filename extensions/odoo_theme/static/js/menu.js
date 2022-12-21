@@ -7,9 +7,12 @@
         // Allow to automatically collapse and expand TOC entries
         _prepareAccordion(navigationMenu);
 
-        // Allow to respectively highlight and expand the TOC entries and their related TOC
-        // entry list whose page is displayed.
+        // Allow to respectively highlight and expand the TOC entries and their related TOC entry
+        // list whose page is displayed.
         _flagActiveTocEntriesAndLists(navigationMenu);
+
+        // Expand the top-level menu items on the homepage.
+        _expandTopMenus(navigationMenu);
 
         // Show hidden menu when the css classes have been properly specified
         navigationMenu.removeAttribute('hidden');
@@ -20,9 +23,9 @@
      *
      * TOC entries (<li> elements) that are on the path of the displayed page receive the
      * `o_active_toc_entry` class, and their related (parent) TOC entry list (<ul> elements) receive
-     * the `show` (Bootstrap) class.
-     * Also, the deepest TOC entries of their respective branch receive the
-     * `o_deepest_active_toc_entry` class, and their child TOC entry lists receive the `show` class.
+     * the `show` (Bootstrap) class. Also, the deepest TOC entries of their respective branch
+     * receive the `o_deepest_active_toc_entry` class, and their child TOC entry lists receive the
+     * `show` class.
      *
      * @param {HTMLElement} navigationMenu - The navigation menu.
      */
@@ -44,7 +47,7 @@
                 lastLayer = currentLayer;
                 lastTocEntry = element;
             }
-        })
+        });
         if (lastTocEntry) {
             deepestTocEntries.push(lastTocEntry); // The last TOC entry is the deepest of its branch
         }
@@ -56,6 +59,19 @@
                 deepestTocEntry = deepestTocEntry.parentElement.parentElement;
             }
             deepestTocEntry.classList.add('o_deepest_active_toc_entry');
+        });
+    };
+
+    /**
+     * Add the `show` class on top-level menus if the user is browsing the homepage.
+     *
+     * @param {HTMLElement} navigationMenu - The navigation menu.
+     */
+    const _expandTopMenus = navigationMenu => {
+        navigationMenu.querySelectorAll('.toctree-l1').forEach(element => {
+            if (!element.parentElement.classList.contains('current')) { // For the homepage only.
+                element.querySelector('ul').classList.add('show'); // Expand the top-level menus.
+            }
         });
     };
 
