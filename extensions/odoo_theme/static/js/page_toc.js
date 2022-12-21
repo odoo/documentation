@@ -16,8 +16,7 @@
             // Allow to automatically collapse and expand TOC entries
             _prepareAccordion(pageToc);
 
-            // Allow to respectively highlight and expand the TOC entries and their related TOC
-            // entry list whose section is focused.
+            // Highlight TOC entries whose section is focused and expand their TOC entry list.
             _flagActiveTocEntriesAndLists(pageToc, headingRefs);
 
             // Allow to hide the TOC entry referring the title (<h1> heading)
@@ -97,6 +96,12 @@
                 if (tocEntry.tagName === 'LI') {
                     // Highlight all <li> in the active hierarchy
                     tocEntry.classList.add('o_active_toc_entry');
+
+                    // Update the attributes on the <i>.
+                    const tocEntryWrapper = tocEntry.querySelector('.o_toc_entry_wrapper');
+                    if (tocEntryWrapper) {
+                        tocEntryWrapper.querySelector('i').setAttribute('aria-expanded', true);
+                    }
 
                     // Expand all related <ul>
                     const relatedTocEntryList = tocEntry.querySelector('ul');
