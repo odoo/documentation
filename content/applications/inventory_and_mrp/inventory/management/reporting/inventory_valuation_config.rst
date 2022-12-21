@@ -1,424 +1,132 @@
-:code-column:
-:custom-css: accounting.css
-:custom-js: coa-valuation-continental.js,coa-valuation-anglo-saxon.js,misc.js
-
 =================================
-Inventory valuation configuration
+Inventory Valuation Configuration
 =================================
 
-Inventory valuation refers to how you value your stock. It’s a very
-important aspect of a business as the inventory can be the biggest asset
-of a company.
-
-Inventory valuation implies two main choices:
-
--  The cost method you use to value your goods (standard, fifo, avco)
--  The way you record this value into your accounting books (manually or automatically)
-
-Those two concepts are explained in the sections below.
-
-Costing Methods: Standard, FIFO, AVCO
-=====================================
-
-The costing method is defined in the product category. There are three
-options available. Each of them is explained in detail below.
-
-.. rst-class:: alternatives doc-aside
-
-Standard Price
-  .. rst-class:: values-table
-
-  .. list-table::
-     :widths: 28 18 18 18 18
-     :header-rows: 1
-     :stub-columns: 1
-
-     * - Operation
-       - Unit Cost
-       - Qty On Hand
-       - Delta Value
-       - Inventory Value
-     * -
-       - €10
-       - 0
-       -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
-       - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €10
-       - 12
-       - +4*€10
-       - €120
-     * - Deliver 10 Products
-       - €10
-       - 2
-       - | -10*€10
-         |
-       - €20
-     * - Receive 2 Products at €9
-       - €10
-       - 4
-       - +2*€10
-       - €40
-
-  In **Standard Price**, any product will be valued at the cost that you defined
-  manually on the product form. Usually, this cost is an estimation based
-  on the material and labor needed to obtain the product. This cost must
-  be reviewed periodically.
-
-Average Price
-  .. rst-class:: values-table
-
-  .. list-table::
-     :widths: 28 18 18 18 18
-     :header-rows: 1
-     :stub-columns: 1
-
-     * - Operation
-       - Unit Cost
-       - Qty On Hand
-       - Delta Value
-       - Inventory Value
-     * -
-       - €0
-       - 0
-       -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
-       - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €12
-       - 12
-       - +4*€16
-       - €144
-     * - Deliver 10 Products
-       - €12
-       - 2
-       - | -10*€12
-         |
-       - €24
-     * - Receive 2 Products at €6
-       - €9
-       - 4
-       - +2*€6
-       - €36
-
-  In **AVCO (Average Cost)**, each product has the same value and this
-  value is the average purchase cost of the product. With this costing method, the
-  cost of the product is recomputed as each receipt.
-
-  The average cost does not change when products leave the warehouse.
-
-FIFO
-  .. rst-class:: values-table
-
-  .. list-table::
-     :widths: 28 18 18 18 18
-     :header-rows: 1
-     :stub-columns: 1
-
-     * - Operation
-       - Unit Cost
-       - Qty On Hand
-       - Delta Value
-       - Inventory Value
-     * -
-       - €0
-       - 0
-       -
-       - €0
-     * - Receive 8 Products at €10
-       - €10
-       - 8
-       - +8*€10
-       - €80
-     * - Receive 4 Products at €16
-       - €12
-       - 12
-       - +4*€16
-       - €144
-     * - Deliver 10 Products
-       - €16
-       - 2
-       - | -8*€10
-         | -2*€16
-       - €32
-     * - Receive 2 Products at €6
-       - €11
-       - 4
-       - +2*€6
-       - €44
-
-  In **FIFO (First In First Out)**, the products are valued at their
-  purchase cost. When a product leaves the stock, that’s the “First in,
-  first out” rule that applies.
-
-  Pay attention, that this is a financial FIFO. The first value “in”
-  is the first value “out”, no matter the storage location, warehouse
-  or serial number.
-
-  FIFO is advised if you manage all your workflows into Odoo (Sales,
-  Purchases, Inventory). It suits any kind of users.
-
-Inventory Valuation: Manual or Automated
-========================================
-
-There are two ways to record your inventory valuation in your accounting
-books. As the costing method, this is defined in your product category.
-Those two methods are detailed below.
-
-It is important to also note that the accounting entries will depend on
-your accounting mode: it can be continental or anglo-saxon. In
-continental accounting, the cost of a good is taken into account as soon
-as the product is received in stock. In anglo-saxon accounting, the cost
-of a good is only recorded as an expense when this good is invoiced to a
-final customer. In the tables below, you can easily compare those two
-accounting modes.
-
-Usually, based on your country, the correct accounting mode will be
-chosen by default. If you want to verify your accounting mode, activate
-the :ref:`developer mode <developer-mode>` and open your accounting
-settings.
-
-Manual Inventory Valuation
---------------------------
-
-In this case, goods receipts and deliveries won’t have any direct impact
-on your accounting books. Periodically, you create a manual journal
-entry representing the value of what you have in stock. To know that
-value, go in :menuselection:`Inventory --> Reporting --> Inventory Valuation`.
-
-This is the default configuration in Odoo and it works
-out-of-the-box. Check following operations and find out how
-Odoo is managing the accounting postings.
-
-Continental Accounting
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. rst-class:: alternatives doc-aside
-
-Vendor Bill
-  .. rst-class:: values-table
-
-  ============================= ===== ======
-  \                             Debit Credit
-  ============================= ===== ======
-  Assets: Inventory                50
-  Assets: Deferred Tax Assets    4.68
-  Liabilities: Accounts Payable        54.68
-  ============================= ===== ======
-
-  Configuration:
-    * Purchased Goods: defined on the product or on the internal category of related product (Expense Account field)
-    * Deferred Tax Assets: defined on the tax used on the purchase order line
-    * Accounts Payable: defined on the vendor related to the bill
-Goods Receptions
-  No Journal Entry
-Customer Invoice
-  .. rst-class:: values-table
-
-  ===================================== ===== ======
-  \                                     Debit Credit
-  ===================================== ===== ======
-  Revenues: Sold Goods                           100
-  Liabilities: Deferred Tax Liabilities            9
-  Assets: Accounts Receivable             109
-  ===================================== ===== ======
-
-  Configuration:
-    * Revenues: defined on the product or on the internal category of related product (Income Account field)
-    * Deferred Tax Liabilities: defined on the tax used on the invoice line
-    * Accounts Receivable: defined on the customer (Receivable Account)
-
-  The fiscal position used on the invoice may have a rule that replaces the
-  Income Account or the tax defined on the product by another one.
-Customer Shipping
-  No Journal Entry
-Manufacturing Orders
-  No Journal Entry
-
-.. raw:: html
-
-   <hr style="float: none; visibility: hidden; margin: 0;">
-
-At the end of the month/year, your company does a physical inventory
-or just relies on the inventory in Odoo to value the stock into your books.
-
-Create a journal entry to move the stock variation value from your
-Profit&Loss section to your assets.
-
-.. h:div:: doc-aside
-
-  .. rst-class:: values-table
-
-  ===================================== ===== ======
-  \                                     Debit Credit
-  ===================================== ===== ======
-  Assets: Inventory                         X
-  Expenses: Inventory Variations                   X
-  ===================================== ===== ======
-
-  If the stock value decreased, the **Inventory** account is credited
-  and the **Inventory Variations** debited.
-
-.. raw:: html
-
-   <hr style="float: none; visibility: hidden; margin: 0;">
-
-Anglo-Saxon Accounting
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. rst-class:: alternatives doc-aside
-
-Vendor Bill
-  .. rst-class:: values-table
-
-  ============================= ===== ======
-  \                             Debit Credit
-  ============================= ===== ======
-  Assets: Inventory                50
-  Assets: Deferred Tax Assets    4.68
-  Liabilities: Accounts Payable        54.68
-  ============================= ===== ======
-
-  Configuration:
-    * Purchased Goods: defined on the product or on the internal category of related product
-      (Expense Account field)
-    * Deferred Tax Assets: defined on the tax used on the purchase order line
-    * Accounts Payable: defined on the vendor related to the bill
-Goods Receptions
-  No Journal Entry
-Customer Invoice
-  .. rst-class:: values-table
-
-  ===================================== ===== ======
-  \                                     Debit Credit
-  ===================================== ===== ======
-  Revenues: Sold Goods                           100
-  Liabilities: Deferred Tax Liabilities            9
-  Assets: Accounts Receivable             109
-  ===================================== ===== ======
-
-  Configuration:
-    * Revenues: defined on the product or on the internal category of related
-      product (Income Account field)
-    * Deferred Tax Liabilities: defined on the tax used on the invoice line
-    * Accounts Receivable: defined on the customer (Receivable Account)
-
-  The fiscal position used on the invoice may have a rule that replaces the
-  Income Account or the tax defined on the product by another one.
-Customer Shipping
-  No Journal Entry
-Manufacturing Orders
-  No Journal Entry
-
-.. raw:: html
-
-   <hr style="float: none; visibility: hidden; margin: 0;">
-
-At the end of the month/year, your company does a physical inventory
-or just relies on the inventory in Odoo to value the stock into your books.
-
-Then you need to break down the purchase balance into both the inventory and
-the cost of goods sold using the following formula:
-
-Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing inventory value
-
-To update the stock valuation in your books, record such an entry:
-
-.. h:div:: doc-aside
-
-   .. rst-class:: values-table
-
-  ===================================== ===== ======
-  \                                     Debit Credit
-  ===================================== ===== ======
-  Assets: Inventory (closing value)         X
-  Expenses: Cost of Good Sold               X
-  Expenses: Purchased Goods                        X
-  Assets: Inventory (starting value)               X
-  ===================================== ===== ======
-
-Automated Inventory Valuation
------------------------------
-
-In that case, when a product enters or leaves your stock, an accounting
-entry will be automatically created. This means your accounting books
-are always up-to-date. This mode is dedicated to expert accountants and
-advanced users only. As opposed to periodic valuation, it requires some
-extra configuration & testing.
-
-First, you need to define the accounts that will be used for those
-accounting entries. This is done on the product category.
-
-Continental Accounting
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. h:div:: valuation-chart-continental doc-aside
-
-   .. placeholder
-
-.. raw:: html
-
-   <hr style="float: none; visibility: hidden; margin: 0;">
-
-.. h:div:: doc-aside
-
-   **Configuration:**
-
-   - Accounts Receivable/Payable: defined on the partner (Accounting tab)
-
-   - Deferred Tax Assets/Liabilities: defined on the tax used on the invoice line
-
-   - Revenues/Expenses: defined by default on product's internal category; can be
-     also set in product form (Accounting tab) as a replacement value.
-
-   - Inventory Variations: to set as Stock Input/Output Account in product's internal
-     category
-
-   - Inventory: to set as Stock Valuation Account in product's internal category
-
-Anglo-Saxon Accounting
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. h:div:: valuation-chart-anglo-saxon doc-aside
-
-   .. placeholder
-
-.. raw:: html
-
-   <hr style="float: none; visibility: hidden; margin: 0;">
-
-.. h:div:: doc-aside
-
-   **Configuration:**
-
-   - Accounts Receivable/Payable: defined on the partner (Accounting tab)
-
-   - Deferred Tax Assets/Liabilities: defined on the tax used on the
-     invoice line
-
-   - Revenues: defined on the product category as a default, or specifically
-     to a specific product.
-
-   - Expenses: this is where you should set the "Cost of Goods Sold" account.
-     Defined on the product category as a default value, or specifically on
-     the product form.
-
-   - Goods Received Not Purchased: to set as Stock Input Account in product's
-     internal category
-
-   - Goods Issued Not Invoiced: to set as Stock Output Account in product's
-     internal category
-
-   - Inventory: to set as Stock Valuation Account in product's internal category
-
-   - Price Difference: to set in product's internal category or in product
-     form as a specific replacement value
+All of a company's stock on-hand contributes to the valuation of its inventory. That value should
+be reflected in the company's accounting records to accurately show the value of the company and
+all of its assets.
+
+By default, Odoo uses a periodic inventory valuation (also known as manual inventory valuation).
+This method implies that the accounting team posts journal entries based on the physical inventory
+of the company, and that warehouse employees take the time to count the stock. In Odoo, this method
+is reflected inside each product category, where the :guilabel:`Costing Method` field will be set
+to `Standard Price` by default, and the :guilabel:`Inventory Valuation` field will be set to
+`Manual`.
+
+.. image:: inventory_valuation_config/inventory-valuation-fields.png
+   :align: center
+   :alt: The Inventory Valuation fields are located on the Product Categories form.
+
+Alternatively, automated inventory valuation is an integrated valuation method that updates the
+inventory value in real-time by creating journal entries whenever there are stock moves initiated
+between locations in a company's inventory.
+
+.. note::
+   Automated inventory valuation is a method recommended for expert accountants, given the extra
+   steps involved in journal entry configuration. Even after the initial setup, the method will
+   need to be periodically checked to ensure accuracy, and adjustments may be needed on an ongoing
+   basis depending on the needs and priorities of the business.
+
+Types of Accounting
+-------------------
+
+Accounting entries will depend on the accounting mode: Continental or Anglo-Saxon.
+
+.. tip::
+   Verify the accounting mode by activating the :ref:`developer-mode`
+   and navigating to :menuselection:`Accounting --> Configuration --> Settings`.
+
+In Anglo-Saxon accounting, the costs of goods sold (COGS) are reported when products are sold or
+delivered. This means that the cost of a good is only recorded as an expense when a customer is
+invoiced for a product. Interim Stock Accounts are used for the input and output accounts, and are
+both Asset Accounts in the Balance Sheet.
+
+In Continental accounting, the cost of a good is reported as soon as a product is received into
+stock. Additionally, a *single* Expense account is used for both input and output accounts in
+the Balance Sheet.
+
+Costing Methods
+---------------
+
+Below are the three costing methods that can be used in Odoo for inventory valuation.
+
+- **Standard Price**: is the default costing method in Odoo. The cost of the product is manually
+  defined on the product form, and this cost is used to compute the valuation. Even if the purchase
+  price on a Purchase Order differs, the valuation will still use the cost defined on the product
+  form.
+- **Average Cost (AVCO)**: calculates the valuation of a product based on the average cost of that
+  product, divided by the total number of available stock on-hand. With this costing method,
+  inventory valuation is *dynamic*, and constantly adjusts based on the purchase price of products.
+- **First In First Out (FIFO)**: tracks the costs of incoming and outgoing items in real-time and
+  uses the real price of the products to change the valuation. The oldest purchase price is used as
+  the cost for the next good sold until an entire lot of that product is sold. When the next
+  inventory lot moves up in the queue, an updated product cost is used based on the valuation of
+  that specific lot. This method is arguably the most accurate inventory valuation method for a
+  variety of reasons, however, it's highly sensitive to input data and human error.
+
+.. warning::
+   Changing the costing method greatly impacts inventory valuation. It's highly recommended to
+   consult an accountant first before making any adjustments here.
+
+Configure automated inventory valuation in Odoo
+-----------------------------------------------
+
+Make changes to inventory valuation options by navigating to :menuselection:`Inventory -->
+Configuration --> Product Categories`, and choose the category/categories where the automated
+valuation method should apply.
+
+.. note::
+   It is possible to use different valuation settings for different product categories.
+
+Under the :guilabel:`Inventory Valuation` heading are two labels: :guilabel:`Costing Method` and
+:guilabel:`Inventory Valuation`. Pick the desired :guilabel:`Costing Method` using the drop-down
+menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First In First Out
+(FIFO)` and switch the :guilabel:`Inventory Valuation` to :guilabel:`Automated`.
+
+.. seealso::
+   :doc:`Using the inventory valuation <using_inventory_valuation>`
+
+.. note::
+   When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, the numerical
+   value in the :guilabel:`Cost` field for products in the respective product category will no
+   longer be editable, and will appear grayed out. The :guilabel:`Cost` amount will instead
+   automatically update based on the average purchase price both of inventory on hand and the costs
+   accumulated from validated purchase orders.
+
+On the same screen, the :guilabel:`Account Stock Properties` fields will appear, as they are now
+required fields given the change to automated inventory valuation. These accounts are defined as
+follows:
+
+- :guilabel:`Stock Valuation Account`: when automated inventory valuation is enabled on a product,
+  this account will hold the current value of the products.
+- :guilabel:`Stock Input Account`: counterpart journal items for all incoming stock moves will be
+  posted in this account, unless there is a specific valuation account set on the source location.
+  This is the default value for all products in a given category, and can also be set directly on
+  each product.
+- :guilabel:`Stock Output Account`: counterpart journal items for all outgoing stock moves will be
+  posted in this account, unless there is a specific valuation account set on the destination
+  location. This is the default value for all products in a given category, and can also be set
+  directly on each product.
+
+Access reporting data generated by inventory valuation
+------------------------------------------------------
+
+To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`. At the top of the
+dashboard, change the :guilabel:`As of` field value to :guilabel:`Today`, and adjust the filtering
+:guilabel:`Options` to :guilabel:`Unfold All` in order to see all of the latest data displayed,
+all at once.
+
+Under the parent :guilabel:`Current Assets` line item, look for the nested :guilabel:`Stock
+Valuation Account` line item, where the total valuation of all of the inventory on hand is
+displayed.
+
+Access more specific information with the :guilabel:`Stock Valuation Account` drop-down menu, by
+selecting either the :guilabel:`General Ledger` to see an itemized view of all of the journal
+entries, or by selecting :guilabel:`Journal Items` to review all of the individualized journal
+entries that were submitted to the account. As well, annotations to the :guilabel:`Balance Sheet`
+can be added by choosing :guilabel:`Annotate`, filling in the text box, and clicking
+:guilabel:`Save`.
+
+.. image:: inventory_valuation_config/stock-valuation-breakdown-in-accounting.png
+   :align: center
+   :alt: See the full inventory valuation breakdown in Odoo Accounting app.
