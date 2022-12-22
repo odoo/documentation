@@ -1,7 +1,7 @@
 /* global Immutable, React */
 /* global createAtom */
 (function () {
-    // NOTE: used by memento.rst
+    // NOTE: used by cheat_sheet.rst
     'use strict';
 
     var data = createAtom();
@@ -145,8 +145,8 @@
 
         var controls = document.createElement('div');
         controls.setAttribute('id', 'chart-controls');
-        chart.insertBefore(controls, chart.lastElementChild);
 
+        chart.children[1].insertBefore(controls, chart.children[1].lastElementChild);
         data.reset(Immutable.Map({
             // last-selected operation
             active: null,
@@ -245,14 +245,14 @@
         ]
     }, {
         id: 'refund',
-        label: "Customer Refund",
+        label: "Customer Refund*",
         operations: [
             { account: REVENUE.SALES.code, debit: constant(refund) },
             { account: LIABILITIES.TAXES_PAYABLE.code, debit: constant(refund_tax) },
             { account: ASSETS.ACCOUNTS_RECEIVABLE.code, credit: constant(refund + refund_tax) }
         ]
     }, {
-        label: "Customer Payment",
+        label: "Customer Payment*",
         operations: [
             {
                 account: ASSETS.BANK.code, debit: function (ops) {
