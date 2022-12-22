@@ -16,7 +16,7 @@ accounts, smart matching suggestions, etc.
 
 .. seealso::
    - `Odoo Tutorials: Accounting <https://www.odoo.com/slides/accounting-19>`_
-   - :doc:`Accounting Cheat Sheet <accounting/getting_started/memento>`
+   - :doc:`Accounting Cheat Sheet <accounting/getting_started/cheat_sheet>`
 
 
 .. toctree::
