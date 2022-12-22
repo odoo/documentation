@@ -180,6 +180,7 @@ them unusable by using the **Deprecated** feature.
 To do so, check the :guilabel:`Deprecated` box in the account's settings, and save.
 
 .. seealso::
+   * :doc:`../cheat_sheet`
    * :doc:`../../payables/supplier_bills/assets`
    * :doc:`../../payables/supplier_bills/deferred_expenses`
    * :doc:`../../receivables/customer_invoices/deferred_revenues`

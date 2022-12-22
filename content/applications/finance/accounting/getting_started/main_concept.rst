@@ -14,7 +14,7 @@ entries are automatically balanced (sum of debits = sum of credits).
 
 .. seealso::
    - :doc:`Understand Odoo's accounting transactions per document
-     <memento>`
+     <cheat_sheet>`
 
 Accrual and Cash Basis Methods
 ==============================
