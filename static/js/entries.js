@@ -2,7 +2,7 @@
 /* global createAtom, findAncestor */
 (function () {
     'use strict';
-    // NOTE: memento.rst
+    // NOTE: cheat_sheet.rst
 
     var data = createAtom();
     data.addWatch('chart', function (k, m, prev, next) {
@@ -175,7 +175,7 @@
             ],
             explanation: [
                 "The company receives $109 in cash",
-                "The customer owes $109 less"
+                "The receivable held against the client is reduced by $109"
             ],
             configuration: [
                 "Cash: defined on the journal used when registering the payment, fields Default Credit Account and Default Debit Account",

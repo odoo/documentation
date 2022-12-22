@@ -67,7 +67,7 @@
         });
     }
     function checks_handling() {
-        // NOTE: used by memento.rst
+        // NOTE: used by cheat_sheet.rst
         var $section = $('.checks-handling');
         if (!$section.length) { return; }
 
