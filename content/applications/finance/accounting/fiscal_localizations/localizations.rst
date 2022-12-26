@@ -23,3 +23,4 @@ Localizations
    localizations/peru
    localizations/spain
    localizations/switzerland
+   localizations/united_kingdom
