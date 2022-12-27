@@ -8,9 +8,9 @@
 @mixin o-position-absolute($top: auto, $right: auto, $bottom: auto, $left: auto){
     position: absolute;
     top: $top;
-    left: $left;
-    bottom: $bottom;
     right: $right;
+    bottom: $bottom;
+    left: $left;
 }
 
 @mixin o-transform-origin($x: 50%, $y: 50%, $z: 0){
@@ -49,13 +49,13 @@
 
 //-- add icon
 
-@mixin o-inline-icon($icon-content, $margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $fw_regular) {
+@mixin o-inline-icon($icon-content, $margin, $v-align: middle, $font-size: 1.5rem, $font-weight: $o-fw-regular) {
     content: '#{$icon-content}';
-    font-family: 'icomoon' !important;
-    @include font-size($font-size);
-    font-weight: $font-weight;
     vertical-align: $v-align;
     margin: $margin;
+    @include font-size($font-size);
+    font-family: 'icomoon' !important;
+    font-weight: $font-weight;
 }
 
 //-- fix scroll issue
@@ -65,8 +65,8 @@
     display: block;
     width: 0;
     height: 0;
-    padding-top:  calc(#{$o-headers-height} + 10px);
     margin-top:  -$o-headers-height - 10px;
+    padding-top:  calc(#{$o-headers-height} + 10px);
 }
 
 @mixin o-easter-egg($width: 100%, $height: 100%, $img: 'img/poule.svg' ){
@@ -74,10 +74,10 @@
         // Easter Egg on hover 5s
         &:after {
             content: '';
+            @include o-position-absolute(auto, 0, 0, 0);
             display: block;
             width: $width;
             height: $height;
-            @include o-position-absolute(auto, 0, 0, 0);
             background-image: url('#{$img}');
             background-color: $white;
             background-repeat: no-repeat;
@@ -93,19 +93,19 @@
 }
 
 @mixin o-content-tab-selected {
-    font-weight: $fw_bold;
-    background: $white;
+    font-weight: $o-fw-bold;
     border-bottom: 1px solid $white;
     border-left: 1px solid $o-gray-border;
     border-right: 1px solid $o-gray-border;
+    background: $white;
 }
 
 @mixin o-code {
     display: inline-block;
-    color: inherit;
     overflow-wrap: anywhere;
     background: $o-literals-bg;
     font-size: 0.875rem;
     font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
-    font-weight: $fw_regular;
+    font-weight: $o-fw-regular;
+    color: inherit;
 }
