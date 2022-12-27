@@ -91,6 +91,8 @@ Batch Payment`.
   - :doc:`../../receivables/customer_payments/batch`
   - :doc:`../../receivables/customer_payments/batch_sdd`
 
+.. _payments-matching:
+
 Payments matching
 -----------------
 
