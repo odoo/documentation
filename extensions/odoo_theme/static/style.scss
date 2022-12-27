@@ -29,9 +29,9 @@ body {
         &.external {
             &:not(.image-reference):after {
                 content: '#{$i-external-link}';
+                margin: 0 $o-icon-margin;
                 font-family: icomoon, sans-serif !important;
                 @include font-size($font-size-base/1.3);
-                margin: 0 $o-icon-margin;
             }
         }
     }
@@ -52,9 +52,9 @@ body {
 }
 
 .hidden {
-    visibility: hidden !important;
     display: none !important;
     opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 span.viewcode-link {
@@ -66,42 +66,46 @@ span.viewcode-link {
 //------------------------------------------------------------------------------
 
 header {
-    width: 100%;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
     .o_main_header {
         height: $o-header-mobile-height;
+        padding: 0 $o-padding-s;
         background-color: $o-header-bg;
-        padding: 0 $padding-s;
+
         @include media-breakpoint-up(lg) {
             height: $o-header-height;
-            padding: 0 $padding-m;
+            padding: 0 $o-padding-m;
         }
+
         @include media-breakpoint-up(xl) {
-            padding: 0 $padding-l 0 $padding-m;
+            padding: 0 $o-padding-l 0 $o-padding-m;
         }
 
         .o_logo_wrapper {
-            margin-right: $margin-s;
+            margin-right: $o-margin-s;
+
             @include media-breakpoint-up(xl) {
-                width: calc(#{$o-side-nav-width} - #{$padding-m});
+                width: calc(#{$o-side-nav-width} - #{$o-padding-m});
             }
+
             @include media-breakpoint-up(lg) {
-                margin-right: $margin-l;
+                margin-right: $o-margin-l;
             }
 
             > .o_logo {
                 img {
-                    margin-bottom: -2px;
                     vertical-align: baseline;
+                    margin-bottom: -2px;
                 }
 
                 span {
-                    @include font-size($font-size-base);
                     color: $o-violet;
+                    @include font-size($font-size-base);
                     @include o-easter-egg($img:'img/ducky.svg');
                 }
             }
@@ -123,17 +127,18 @@ header {
             position: relative;
 
             @include media-breakpoint-up(lg) {
-                margin-right: $padding-m;
+                margin-right: $o-padding-m;
             }
 
             .o_search {
                 position: relative;
                 width: 100%;
+
                 .btn {
                     @include o-position-absolute($top: 50%, $right: .5rem);
                     @include o-transform (translateY(-50%)) ;
 
-                    padding: 0 $padding-xs;
+                    padding: 0 $o-padding-xs;
                     font-size: 1.2rem;
                     color: $o-gray;
                 }
@@ -148,11 +153,13 @@ header {
             }
 
             .highlight-link {
-                @include font-size(0);
                 margin-bottom: 0;
+                @include font-size(0);
+
                 a {
                     text-decoration: none;
                     color: $o-gray;
+
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
                         @include o-transform (translateY(-50%)) ;
@@ -164,23 +171,27 @@ header {
     }
 
     .o_subheader {
-        background: $o-gray-bg;
         height: $o-subheader-height;
-        padding-right: $padding-s;
+        padding-right: $o-padding-s;
+        background: $o-gray-bg;
+
         @include media-breakpoint-up(lg) {
-            padding: 0 $padding-m;
+            padding: 0 $o-padding-m;
         }
+
         @include media-breakpoint-up(xl) {
-            padding: 0 $padding-l 0 0;
+            padding: 0 $o-padding-l 0 0;
         }
 
         .o_side_nav_toggler_wrapper {
             height: 100%;
+
             button {
                 &:focus, &:focus-visible{
-                box-shadow: none;
-                outline:none;
+                    box-shadow: none;
+                    outline:none;
                 }
+
                 &[aria-expanded="true"]{
                     background-color: rgba(0,0,0, .2);
                 }
@@ -195,32 +206,33 @@ header {
 
 .o_side_nav {
     .o_mobile-overlay {
-        background-color: rgba(0,0,0,.3);
         @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
+        z-index: -100;
         opacity: 0;
         transition: opacity .2s linear;
-        z-index: -100;
+        background-color: rgba(0,0,0,.3);
     }
 
     .o_side_nav-inner {
+        position: fixed;
+        left: -100%;
+        z-index: 10;
         width: 90%;
         height: calc(100% - #{$o-headers-mobile-height});
         overflow-y: auto;
-        position: fixed;
-        left: -100%;
-        @include o-transition(all, .3s);
-        padding-left: $padding-s;
+        padding-left: $o-padding-s;
         background-color: lighten($o-violet, 70%) ;
-        z-index: 10;
-        @include font-size($font-size-sm);
         color: $o-violet;
-        font-weight: $fw_regular;
+        font-weight: $o-fw-regular;
+
+        @include o-transition(all, .3s);
+        @include font-size($font-size-sm);
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
             height: calc(100vh - #{$o-headers-height});
             left: 0;
-            padding-top: $padding-m;
-            padding-left: $padding-m;
+            padding-top: $o-padding-m;
+            padding-left: $o-padding-m;
         }
         &::-webkit-scrollbar {
             width: 5px;
@@ -248,7 +260,7 @@ header {
     }
 
     .toctree-l1 {
-        padding-bottom: $padding-xs;
+        padding-bottom: $o-padding-xs;
 
         > .o_toc_entry_wrapper a {
             color: $o-violet;
@@ -314,7 +326,7 @@ header {
 .o_main_toc, .o_page_toc_nav {
     ul { // all uls in toc
         list-style: none;
-        padding-left: $padding-s;
+        padding-left: $o-padding-s;
 
         li {
             > a.reference {
@@ -325,7 +337,7 @@ header {
                 display: inline-block;
                 padding: .4rem 0;
                 color: $o-gray-color;
-                font-weight: $fw_regular;
+                font-weight: $o-fw-regular;
             }
 
             &:not(.toctree-l1) {
@@ -354,7 +366,7 @@ header {
                     }
                 }
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    font-weight: $fw_bold;
+                    font-weight: $o-fw-bold;
                 }
             }
         }
@@ -377,7 +389,7 @@ header {
                 display: block;
                 grid-area: toc;
                 top: $o-headers-height;
-                padding: $padding-m $padding-s $padding-m 0;
+                padding: $o-padding-m $o-padding-s $o-padding-m 0;
                 overflow-y: auto;
             }
             position: -webkit-sticky;
@@ -394,14 +406,14 @@ header {
 
         h5 {
             text-transform: uppercase;
-            font-weight: $fw_bold;
+            font-weight: $o-fw-bold;
             color: $o-gray-color;
-            padding-left: $padding-xs;
-            margin-bottom: $padding-xs;
+            padding-left: $o-padding-xs;
+            margin-bottom: $o-padding-xs;
         }
 
         a {
-            font-weight: $fw_regular;
+            font-weight: $o-fw-regular;
             color: $o-gray-color
         }
 
@@ -438,7 +450,7 @@ header {
         padding: 0 .3rem;
         &.file {
             font-family: $font-family-base;
-            font-weight: $fw_medium;
+            font-weight: $o-fw-medium;
             font-style: italic;
             padding-right: .4rem;
             color: $blue-700;
@@ -465,8 +477,8 @@ header {
         > dd {
             border-left: 3px solid $o-literals-border;
             margin-top: -0.075rem;
-            padding-left: $padding-s;
-            padding-top: $padding-xs;
+            padding-left: $o-padding-s;
+            padding-top: $o-padding-xs;
         }
         &.class em.property {
             font-size: $font-size-sm;
@@ -476,9 +488,6 @@ header {
             &:not(:first-child) {
                 @include o_code;
                 padding: 0 .3rem;
-                // &:last-of-type {
-                //     padding-right: .3rem;
-                // }
             }
         }
     }
@@ -500,7 +509,7 @@ header {
             padding-left: 0;
 
             li:not(:last-child) {
-                padding-bottom: $padding-xs;
+                padding-bottom: $o-padding-xs;
             }
         }
     }
@@ -512,9 +521,9 @@ header {
     main {
         position: relative;
         grid-area: main;
-        padding-bottom: $padding-l;
+        padding-bottom: $o-padding-l;
         @include media-breakpoint-up(lg) {
-            padding: $padding-m $padding-l;
+            padding: $o-padding-m $o-padding-l;
             margin: 0;
             grid-column-end: toc;
         }
@@ -530,17 +539,17 @@ header {
 
         &.o_index {
             .o_content_fw_banner {
-                margin: 0 -0.75rem $margin-m;
-                padding: $padding-m $padding-s;
+                margin: 0 -0.75rem $o-margin-m;
+                padding: $o-padding-m $o-padding-s;
                 align-items: center;
                 @include o-gradient();
                 @include media-breakpoint-up(lg) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-m;
-                    padding: $padding-m $padding-m;
+                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
+                    padding: $o-padding-m $o-padding-m;
                 }
                 @include media-breakpoint-up(xl) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-l;
-                    padding: $padding-l $padding-l;
+                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
+                    padding: $o-padding-l $o-padding-l;
                 }
             }
             .row:first-of-type h2.border-top {
@@ -556,7 +565,7 @@ header {
             ul {
                 > li {
                     position: relative;
-                    padding-bottom: $padding-xs;
+                    padding-bottom: $o-padding-xs;
                     display: flex;
                     align-items: center;
 
@@ -586,7 +595,7 @@ header {
                         @include media-breakpoint-up(lg) {
                             width: 33%;
                             &:not(:nth-of-type(3n)){
-                                padding-right: $padding-m;
+                                padding-right: $o-padding-m;
                             }
                         }
 
@@ -599,7 +608,7 @@ header {
             article.doc-body {
                 @include media-breakpoint-up(xl) {
                     .o_git_link {
-                        right: calc(#{$o-codecol-width} + #{$padding-l});
+                        right: calc(#{$o-codecol-width} + #{$o-padding-l});
                     }
 
                     section {
@@ -623,10 +632,10 @@ header {
                             float: none;
                             clear: none;
                             margin-left: 57%;
-                            padding: $padding-s;
+                            padding: $o-padding-s;
 
                             blockquote {
-                                font-weight: $fw_semibold;
+                                font-weight: $o-fw-semibold;
                                 font-style: italic;
                             }
 
@@ -658,10 +667,10 @@ header {
             .toctree-l1 > a {
                 display: block;
                 @include font-size($h2-font-size);
-                margin-top: $padding-m;
-                padding-bottom: $padding-xs;
+                margin-top: $o-padding-m;
+                padding-bottom: $o-padding-xs;
                 border-bottom: 1px solid $o-gray-border;
-                margin-bottom: $margin-s;
+                margin-bottom: $o-margin-s;
                 font-size: 1.2rem;
                 font-weight: 600;
             }
@@ -679,19 +688,19 @@ header {
                 pointer-events: none;
                 cursor: default;
                 color: $o-gray-color;
-                font-weight: $fw_semibold;
+                font-weight: $o-fw-semibold;
             }
         }
 
         article.doc-body {
-            padding-top: $padding-s;
+            padding-top: $o-padding-s;
             position: relative;
 
             .o_git_link {
                 @include font-size($font-size-sm);
-                @include o-position-absolute($top: 0px, $right: $margin-s);
+                @include o-position-absolute($top: 0px, $right: $o-margin-s);
                 @include media-breakpoint-up(lg) {
-                    @include o-position-absolute($top: 10px, $right: $margin-s);
+                    @include o-position-absolute($top: 10px, $right: $o-margin-s);
                 }
                 i {
                     margin-right: .2rem;
@@ -704,12 +713,12 @@ header {
             }
 
             section {
-                margin-bottom: $margin-m;
+                margin-bottom: $o-margin-m;
 
                 > h1 {
                     color: $o-violet;
-                    font-weight: $fw_bold;
-                    margin-bottom: $margin-s;
+                    font-weight: $o-fw-bold;
+                    margin-bottom: $o-margin-s;
 
                     @include media-breakpoint-up(lg) {
                         max-width: calc(100% - 120px);
@@ -717,24 +726,24 @@ header {
                 }
 
                 > h2 {
-                    font-family: $font-family-serif;
+                    font-family: $o-font-family-serif;
                     color: $o-gray-color;
-                    margin-bottom: $margin-s;
+                    margin-bottom: $o-margin-s;
                     padding-bottom: .3rem;
                     border-bottom: 1px solid $o-gray-border;
                 }
 
                 > h3 {
-                    font-weight: $fw_bold;
+                    font-weight: $o-fw-bold;
                 }
 
 
                 > h4, > h5, > h6 {
-                    font-weight: $fw_semibold;
+                    font-weight: $o-fw-semibold;
                 }
 
                 img {
-                    margin-bottom: $margin-s;
+                    margin-bottom: $o-margin-s;
                 }
 
                 img:not(.o-no-modal) {
@@ -742,7 +751,7 @@ header {
                 }
 
                 iframe {
-                    margin-bottom: $margin-s;
+                    margin-bottom: $o-margin-s;
                 }
 
                 p > img {
@@ -754,7 +763,7 @@ header {
                 .figure {
 
                     .caption, .caption-text {
-                        font-weight: $fw_semibold;
+                        font-weight: $o-fw-semibold;
                         color: $o-gray;
                     }
 
@@ -831,14 +840,14 @@ header {
         }
 
         .guilabel, .menuselection {
-            font-weight: $fw_semibold;
+            font-weight: $o-fw-semibold;
         }
 
         .dfn{
             @include font-size($font-size-sm);
             line-height: 1;
             color: $blue-600;
-            font-weight: $fw_semibold;
+            font-weight: $o-fw-semibold;
             &:before {
                 content:'?';
                 display: inline-block;
@@ -849,7 +858,7 @@ header {
                 text-align: center;
                 color: $blue-600;
                 font-size: 12px;
-                font-weight: $fw_extrabold;
+                font-weight: $o-fw-extrabold;
                 font-style: normal;
                 margin: 0 .1rem;
             }
@@ -899,7 +908,7 @@ header {
                 line-height: 1em;
                 margin: 0 0 10px 0;
                 @include font-size($font-size-base);
-                font-weight: $fw_bold;
+                font-weight: $o-fw-bold;
 
                 &:before {
                     @include o-inline-icon($i-info, 0 $o-icon-margin 0 0, baseline, $font-size-base, inherit);
@@ -1018,7 +1027,7 @@ header {
     .accordion-body {
         #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
             > *:first-child {
-                margin-top: $margin-s;
+                margin-top: $o-margin-s;
             }
 
             code, div[class^="highlight"] {
@@ -1038,7 +1047,7 @@ header {
 
 .sphinx-tabs {
     padding: 0;
-    margin-bottom: $margin-s;
+    margin-bottom: $o-margin-s;
 
     div[role="tablist"] {
         border-color: $o-gray-border;
@@ -1065,7 +1074,7 @@ header {
         color: $o-gray-color;
         border: 0;
         border-top: solid 1px $o-gray-border;
-        padding: $padding-xs $padding-s;
+        padding: $o-padding-xs $o-padding-s;
 
         &:hover {
             &:not([aria-selected="true"]) {
@@ -1108,7 +1117,7 @@ header {
         background: $white;
         color: $o-gray-color;
         border: 1px solid $o-gray-border;
-        padding: $padding-s;
+        padding: $o-padding-s;
 
         &:focus {
             outline: none;
@@ -1129,17 +1138,17 @@ header {
 //------------------------------------------------------------------------------
 footer {
     .o_get_help {
-        padding-top: $padding-l;
-        padding-bottom: $padding-l;
+        padding-top: $o-padding-l;
+        padding-bottom: $o-padding-l;
         background: $o-gray-bg;
         @include media-breakpoint-up(lg) {
-            padding-left: calc(#{$o-side-nav-width} + #{$padding-l})
+            padding-left: calc(#{$o-side-nav-width} + #{$o-padding-l})
         }
 
         h4 {
             color: $secondary;
-            font-weight: $fw_bold;
-            margin-bottom: $margin-s;
+            font-weight: $o-fw-bold;
+            margin-bottom: $o-margin-s;
         }
 
     }
