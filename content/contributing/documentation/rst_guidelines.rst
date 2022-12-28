@@ -10,7 +10,7 @@ Use relative links for internal URLs
 If you need to reference an internal documentation page or a file that is not sitting in the same
 directory as your current page, always make use of *relative file paths* rather than *absolute file
 paths*. An absolute file path indicates the location of the target from the root of its file tree. A
-relative file path makes use of smart notations (such as ``../`` git that redirects to the parent
+relative file path makes use of smart notations (such as ``../`` that redirects to the parent
 folder) to indicate the location of the target *relative* to that of the source document.
 
 Example
