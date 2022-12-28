@@ -163,7 +163,8 @@ header {
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
                         @include o-transform (translateY(-50%)) ;
-                        @include o-inline-icon($i-close, auto, middle, 1.2rem);
+                        content: $i-close;
+                        @include o-inline-icon(auto, middle, 1.2rem);
                     }
                 }
             }
@@ -295,7 +296,8 @@ header {
 
         > .toctree-l1 {
             &[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
-                @include o-inline-icon($i-doc-apps, 0 5px 0 0);
+                content: $i-doc-apps;
+                @include o-inline-icon(0 5px 0 0);
                 color: $o-violet;
             }
 
@@ -570,7 +572,8 @@ header {
                     align-items: center;
 
                     &:before {
-                        @include o-inline-icon($i-article, 0 $o-icon-margin 0 0);
+                        content: $i-article;
+                        @include o-inline-icon(0 $o-icon-margin 0 0);
                         color: $o-gray-light;
                     }
                 }
@@ -886,13 +889,14 @@ header {
 //------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------
+
         .alert {
             border-width: 0 0 0 $alert-border-width;
             @include font-size($font-size-sm);
 
             code, div[class^="highlight"] {
                 background-color: $white !important;
-                border: 1px solid $o-gray-border;
+                border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
                 color: inherit;
             }
 
@@ -911,7 +915,8 @@ header {
                 font-weight: $o-fw-bold;
 
                 &:before {
-                    @include o-inline-icon($i-info, 0 $o-icon-margin 0 0, baseline, $font-size-base, inherit);
+                    content: var(--o-alert-icon, #{$o-alert-default-icon});
+                    @include o-inline-icon(0 $o-icon-margin 0 0, baseline, $font-size-base, inherit);
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
@@ -920,87 +925,70 @@ header {
 
             // Custom Admonitions
             &[class^="admonition"] {
-                @extend .alert-info;
+                --o-alert-icon: '#{$i-info}';
+                --o-alert-code-border-color: tint-color($info, 30%);
+                $background: shift-color($info, $alert-bg-scale);
+                $border: shift-color($info, $alert-border-scale);
+                $color: shift-color($info, $alert-color-scale);
 
-                code, div[class^="highlight"] {
-                    border-color: tint-color($info, 30%);
+                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+                    $color: mix($info, color-contrast($background), abs($alert-color-scale));
                 }
+
+                @include alert-variant($background, $border, $color);
             }
 
             // Note
             &.alert-primary {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-note}';
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($primary, 30%);
-                }
+                --o-alert-code-border-color: #{tint-color($primary, 50%)};
+                --o-alert-icon: '#{$i-note}';
             }
 
             // See Also
             &.alert-secondary {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-arrow-right}';
-                }
-
+                --o-alert-icon: '#{$i-article}';
+                --o-alert-code-border-color: #{tint-color($secondary, 30%)};
                 a {
                     color: $secondary;
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($secondary, 50%);
                 }
             }
 
             // Tip
             &.alert-tip {
-                background-color: $o-gray-bg;
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-lightbulb}';
-                    @include font-size(1.2rem);
+                --o-alert-icon: '#{$i-lightbulb}';
+                --o-alert-code-border-color: #{$o-gray-border};
+                $background: $o-gray-bg;
+                $border: shift-color($primary, $alert-border-scale);
+                $color: shift-color($primary, $alert-color-scale);
+
+                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+                    $color: mix($primary, color-contrast($background), abs($alert-color-scale));
                 }
+                @include alert-variant($background, $border, $color);
             }
 
             // Example
             &.alert-success {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-knowledge}';
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($success, 50%);
-                }
+                --o-alert-icon: '#{$i-knowledge}';
+                --o-alert-code-border-color: #{tint-color($success, 50%)};
             }
 
             // Warning & Important
             &.alert-warning {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-warning}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($warning, 50%);
-                }
+                --o-alert-icon: '#{$i-warning}';
+                --o-alert-code-border-color: #{tint-color($warning, 50%)};
             }
 
             // Danger
             &.alert-danger {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-danger}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($danger, 50%);
-                }
+                --o-alert-icon: '#{$i-danger}';
+                --o-alert-code-border-color: #{tint-color($danger, 50%)};
             }
 
             // Exercises
             &.alert-dark {
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-exercise}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($dark, 50%);
-                }
+                --o-alert-icon: '#{$i-exercise}';
+                --o-alert-code-border-color: #{tint-color($dark, 50%)};
             }
         }
     }
