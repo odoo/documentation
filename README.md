@@ -4,40 +4,30 @@
 
 ### Requirements
 
-- [Git](https://www.odoo.com/documentation/14.0/contributing/documentation.html#install-git)
-- [Python 3.6, 3.7, or 3.8](https://www.odoo.com/documentation/14.0/contributing/documentation.html#python)
-- Python dependencies listed in the file [`requirements.txt`](https://github.com/odoo/documentation/tree/14.0/requirements.txt).
-- [Make](https://www.odoo.com/documentation/14.0/contributing/documentation.html#make)
-- A local copy of the [odoo/odoo repository in 14.0](https://github.com/odoo/odoo/tree/14.0) (Optional)
+- Git
+- Python 3.6, 3.7, or 3.8
+- Python dependencies listed in the file `requirements.txt`.
+- Make
+- A local copy of the [odoo/odoo repository](https://github.com/odoo/odoo) (optional)
 
 ### Instructions
 
-1. In a terminal, navigate to the root directory and compile the documentation to HTML with the
-   following command:
-
-   ```sh
-   make
-   ```
-
+1. In a terminal, navigate to the root directory of the documentation and build it `make`.
    Additional commands are available with `make help`.
-
-2. Open the file `documentation/_build/html/index.html` in your web browser to display the render.
-
-3. See [this guide](https://www.odoo.com/documentation/14.0/contributing/documentation.html#preview-your-changes)
+2. Open the file `documentation/_build/html/index.html` in your web browser.
+3. See [this guide](https://www.odoo.com/documentation/latest/contributing/documentation.html)
    for more detailed instructions.
 
-Optional: to fully build the developer documentation with inline docstrings for documented Python
-functions, place your local copy of the `odoo/odoo` repository in the root directory. Alternatively,
-create a symbolic link with `odoo` as link name. If the Odoo sources are not found, a warning will
-be shown.
+Optional: place your local copy of the `odoo/odoo` repository in the parent directory or in the root
+directory of the documentation to build the latter with the documented Python docstrings.
 
 ## Contribute to the documentation
 
 For contributions to the content of the documentation, please refer to the
-[Introduction Guide](https://www.odoo.com/documentation/14.0/contributing/documentation.html).
+[Introduction Guide](https://www.odoo.com/documentation/latest/contributing/documentation.html).
 
 To **report a content issue**, **request new content** or **ask a question**, use the
-[repository's issue tracker](https://github.com/odoo/documentation-user/issues) as usual.
+[repository's issue tracker](https://github.com/odoo/documentation/issues).
 
 ## Learn More
 
