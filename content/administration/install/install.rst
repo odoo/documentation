@@ -238,9 +238,8 @@ Source Install
 The source "installation" is really about not installing Odoo, and running it directly from source
 instead.
 
-This can be more convenient for module developers as the Odoo source is more easily accessible
-than using packaged installation (for information or to build this documentation and have it
-available offline).
+It can be more convenient for module developers as the Odoo source is more easily accessible than
+using packaged installation.
 
 It also makes starting and stopping Odoo more flexible and explicit than the services set up by the
 packaged installations, and allows overriding settings using
