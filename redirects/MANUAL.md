@@ -9,8 +9,8 @@ rule that applies to a single documentation page.
 
 ## How do redirect rules work?
 
-For each redirect rule, the redirects Sphinx extension creates a blank HTML file at the location of
-the specified target with only the `meta http-equiv="refresh"` tag in the `<head/>`. When users
+For each redirect rule, the **redirects** Sphinx extension creates a blank HTML file at the location
+of the specified target with only the `meta http-equiv="refresh"` tag in the `<head/>`. When users
 visit that HTML file, a client-side redirection is triggered and the browser loads the target
 documentation page.
 
@@ -25,10 +25,9 @@ information.
    it.
 2. Look for the block of redirect rules related to the one you want to add. For example, search for
    a block of redirect rules that start with `applications/sales/sales` if you are adding a redirect
-   rule for a page in the Sales app. If the block does not exist yet, create it. Ideally, there
-   should be one block per app or scope and redirect rules should be sorted alphabetically.
-3. Add a new line for your redirect rule at the end of the block. The line should follow this
-   pattern:
+   rule for a page in the Sales app. If the block does not exist yet, create it. There should be one
+   block per app or scope and redirect rules must be sorted alphabetically.
+3. Insert your redirect rule in the block. The line should follow this pattern:
 
    `path/to/old/file.rst path/to/new/file.rst  # optional comment`
 
