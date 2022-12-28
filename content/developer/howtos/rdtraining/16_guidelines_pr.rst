@@ -89,8 +89,8 @@ Commit your code:
 
 **Everyone reads your commit messages!**
 
-The commit message is very important, follow the :ref:`Git guidelines
-<contributing/development/git_guidelines>`.
+The commit message is very important, follow the :doc:`Git guidelines
+</contributing/development/git_guidelines>`.
 
 
 Push your new branch to your development repository:
