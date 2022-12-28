@@ -182,7 +182,8 @@ content. However, avoid adding too many images: it isn't necessary to illustrate
 features, and it may overload your page.
 
 .. important::
-   Don't forget to :ref:`compress your PNG files with pngquant <contributing/pngquant>`.
+   Don't forget to :ref:`compress your PNG files with pngquant
+   <contributing/documentation/first-contribution>`.
 
 .. _contributing/screenshots:
 
