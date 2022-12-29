@@ -36,10 +36,6 @@ body {
         }
     }
 
-    dd {
-        margin-left: $margin-s;
-    }
-
     // This fixes the scroll position on all elements, including refs
     :target {
         &:before {
@@ -435,12 +431,7 @@ header {
 
     // Literals Styles (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
     .o_code, .sig [class^="sig-"] {
-        display: inline-block;
-        color: inherit;
-        overflow-wrap: anywhere;
-        background: $o-literals-bg;
-        font-size: 0.875em;
-        font-family: 'Consolas', 'Menlo', 'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', monospace;
+        @include o-code;
     }
 
     .o_code {
@@ -456,11 +447,61 @@ header {
     }
 
     .sig {
-        [class^="sig-"]:first-of-type, span[id] + [class^="sig-"]{
-                padding-left: .3rem;
+        .sig-prename {
+            padding-left: .3rem;
+            &+ .sig-name {
+                padding-right: .3rem;
+            }
         }
-        [class^="sig-"]:last-of-type {
+        em.property + .sig-name {
+            padding-left: .3rem;
+        }
+        .sig-paren:last-of-type {
             padding-right: .3rem;
+        }
+    }
+
+    dl.py, dl.js, dl.o-definition-list {
+        > dd {
+            border-left: 3px solid $o-literals-border;
+            margin-top: -0.075rem;
+            padding-left: $padding-s;
+            padding-top: $padding-xs;
+        }
+        &.class em.property {
+            font-size: $font-size-sm;
+            &:first-child {
+                border-bottom: 3px solid $o-literals-border;
+            }
+            &:not(:first-child) {
+                @include o_code;
+                padding: 0 .3rem;
+                // &:last-of-type {
+                //     padding-right: .3rem;
+                // }
+            }
+        }
+    }
+
+    dl.field-list {
+        @include font-size($font-size-sm);
+        padding: .5rem;
+        border: 1px solid $o-gray-border;
+        @include media-breakpoint-down(lg) {
+            display: block;
+        }
+
+        > dt {
+            padding-left: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li:not(:last-child) {
+                padding-bottom: $padding-xs;
+            }
         }
     }
 
@@ -654,56 +695,6 @@ header {
                 }
                 i {
                     margin-right: .2rem;
-                }
-            }
-
-            dl.py, dl.js, dl.o-definition-list {
-                > dd {
-                    border-left: 3px solid $o-literals-border;
-                    margin: 0;
-                    padding-left: $padding-s;
-                    padding-top: $padding-xs;
-                }
-                &.class em.property {
-                    font-size: $font-size-sm;
-                    &:first-child {
-                        border-bottom: 3px solid $o-literals-border;
-                        + [class^=sig] {
-                            padding-left: .3rem;
-                        }
-                    }
-                    &:not(:first-child) {
-                        @extend .o_code;
-                        &:last-of-type {
-                            padding-right: .3rem;
-                        }
-                    }
-                }
-            }
-
-            dl.field-list {
-                @include font-size($font-size-sm);
-                padding: .5rem;
-                border: 1px solid $o-gray-border;
-                @include media-breakpoint-down(lg) {
-                    display: block;
-                }
-
-                > dt {
-                    padding-left: 0;
-                }
-
-                > dd {
-                    padding-right: 0;
-                }
-
-                ul {
-                    list-style: none;
-                    padding-left: 0;
-
-                    li {
-                        padding-bottom: $padding-xs;
-                    }
                 }
             }
 
