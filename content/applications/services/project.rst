@@ -17,3 +17,4 @@ coworkers, and keep track of each project's profitability.
    :titlesonly:
 
    project/tasks
+   project/project_management
