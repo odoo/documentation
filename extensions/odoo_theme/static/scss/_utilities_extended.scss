@@ -1,0 +1,16 @@
+// Extend Utilities
+$utilities: () !default;
+$utilities: map-merge(
+  $utilities,
+  (
+    "font-weight": map-merge(
+      map-get($utilities, "font-weight"),
+      (
+        values: map-merge(
+            map-get(map-get($utilities, "font-weight"), "values"),
+            ("medium" : $o-font-weight-medium)
+        ),
+      ),
+    ),
+  )
+);

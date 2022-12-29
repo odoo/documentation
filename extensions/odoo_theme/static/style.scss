@@ -3,6 +3,8 @@
 @import "scss/bootstrap_overridden";
 @import "scss/bootstrap_scss/bootstrap";
 @import "scss/_variables";
+@import "scss/_utilities_extended";
+@import "scss/bootstrap_scss/utilities/_api.scss";
 @import "scss/_mixins";
 @import "scss/_typography";
 @import "scss/_iconfont";
@@ -224,7 +226,7 @@ header {
         padding-left: $o-padding-s;
         background-color: lighten($secondary, 70%) ;
         color: $secondary;
-        font-weight: $o-fw-regular;
+        font-weight: $font-weight-normal;
 
         @include o-transition(all, .3s);
         @include font-size($font-size-sm);
@@ -339,7 +341,7 @@ header {
                 display: inline-block;
                 padding: .4rem 0;
                 color: $o-gray-color;
-                font-weight: $o-fw-regular;
+                font-weight: $font-weight-normal;
             }
 
             &:not(.toctree-l1) {
@@ -368,7 +370,7 @@ header {
                     }
                 }
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    font-weight: $o-fw-bold;
+                    font-weight: $font-weight-bolder;
                 }
             }
         }
@@ -408,14 +410,14 @@ header {
 
         h5 {
             text-transform: uppercase;
-            font-weight: $o-fw-bold;
+            font-weight: $font-weight-bolder;
             color: $o-gray-color;
             padding-left: $o-padding-xs;
             margin-bottom: $o-padding-xs;
         }
 
         a {
-            font-weight: $o-fw-regular;
+            font-weight: $font-weight-normal;
             color: $o-gray-color
         }
 
@@ -452,7 +454,7 @@ header {
         padding: 0 .3rem;
         &.file {
             font-family: $font-family-base;
-            font-weight: $o-fw-medium;
+            font-weight: $o-font-weight-medium;
             font-style: italic;
             padding-right: .4rem;
             color: $blue-700;
@@ -638,7 +640,7 @@ header {
                             padding: $o-padding-s;
 
                             blockquote {
-                                font-weight: $o-fw-semibold;
+                                font-weight: $font-weight-bold;
                                 font-style: italic;
                             }
 
@@ -691,7 +693,7 @@ header {
                 pointer-events: none;
                 cursor: default;
                 color: $o-gray-color;
-                font-weight: $o-fw-semibold;
+                font-weight: $font-weight-bold;
             }
         }
 
@@ -720,7 +722,7 @@ header {
 
                 > h1 {
                     color: $secondary;
-                    font-weight: $o-fw-bold;
+                    font-weight: $font-weight-bolder;
                     margin-bottom: $o-margin-s;
 
                     @include media-breakpoint-up(lg) {
@@ -737,12 +739,8 @@ header {
                 }
 
                 > h3 {
-                    font-weight: $o-fw-bold;
-                }
-
-
-                > h4, > h5, > h6 {
-                    font-weight: $o-fw-semibold;
+                    font-size: $font-size-base * 1.3;
+                    font-weight: $font-weight-bold;
                 }
 
                 img {
@@ -766,7 +764,7 @@ header {
                 .figure {
 
                     .caption, .caption-text {
-                        font-weight: $o-fw-semibold;
+                        font-weight: $font-weight-bold;
                         color: $o-gray;
                     }
 
@@ -843,14 +841,14 @@ header {
         }
 
         .guilabel, .menuselection {
-            font-weight: $o-fw-semibold;
+            font-weight: $font-weight-bold;
         }
 
         .dfn{
             @include font-size($font-size-sm);
             line-height: 1;
             color: $blue-600;
-            font-weight: $o-fw-semibold;
+            font-weight: $font-weight-bold;
             &:before {
                 content:'?';
                 display: inline-block;
@@ -861,7 +859,7 @@ header {
                 text-align: center;
                 color: $blue-600;
                 font-size: 12px;
-                font-weight: $o-fw-extrabold;
+                font-weight: $font-weight-bolder;
                 font-style: normal;
                 margin: 0 .1rem;
             }
@@ -912,7 +910,7 @@ header {
                 line-height: 1em;
                 margin: 0 0 10px 0;
                 @include font-size($font-size-base);
-                font-weight: $o-fw-bold;
+                font-weight: $font-weight-bolder;
 
                 &:before {
                     content: var(--o-alert-icon, #{$o-alert-default-icon});
@@ -1147,7 +1145,7 @@ footer {
 
         h4 {
             color: $secondary;
-            font-weight: $o-fw-bold;
+            font-weight: $font-weight-bolder;
             margin-bottom: $o-margin-s;
         }
 
