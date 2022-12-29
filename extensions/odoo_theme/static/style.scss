@@ -888,7 +888,6 @@ header {
 
         .alert {
             border-width: 0 0 0 $alert-border-width;
-            @include font-size($font-size-sm);
 
             > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
                 background-color: $white !important;
@@ -907,12 +906,12 @@ header {
             > h3, > .alert-title {
                 line-height: 1em;
                 margin: 0 0 10px 0;
-                @include font-size($font-size-base);
+                @include font-size($h5-font-size);
                 font-weight: $font-weight-bolder;
 
                 &:before {
                     content: var(--o-alert-icon, #{$o-alert-default-icon});
-                    @include o-inline-icon(0 $o-icon-margin 0 0, baseline, $font-size-base, inherit);
+                    @include o-inline-icon(0 $o-icon-margin 0 0, baseline, inherit, inherit);
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
