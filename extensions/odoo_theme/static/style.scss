@@ -138,7 +138,7 @@ header {
 
                 .btn {
                     @include o-position-absolute($top: 50%, $right: .5rem);
-                    @include o-transform (translateY(-50%)) ;
+                    transform: translateY(-50%);
 
                     padding: 0 $o-padding-xs;
                     font-size: 1.2rem;
@@ -164,7 +164,7 @@ header {
 
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
-                        @include o-transform (translateY(-50%)) ;
+                        transform: translateY(-50%);
                         content: $i-close;
                         @include o-inline-icon(auto, middle, 1.2rem);
                     }
@@ -222,13 +222,13 @@ header {
         z-index: 10;
         width: 90%;
         height: calc(100% - #{$o-headers-mobile-height});
+        transition: all, .3s;
         overflow-y: auto;
         padding-left: $o-padding-s;
         background-color: lighten($secondary, 70%) ;
         color: $secondary;
         font-weight: $font-weight-normal;
 
-        @include o-transition(all, .3s);
         @include font-size($font-size-sm);
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
@@ -354,10 +354,10 @@ header {
                     > i[class^="i-"] {
                         display: inline-block;
                         margin-right: .125rem;
-                        @include o-transition(rotate, .3s);
+                        transition: rotate, .3s;
                         font-size: .75rem;
                         &[aria-expanded="true"] {
-                            @include o-transform(rotate(90deg));
+                            transform: rotate(90deg);
                         }
                     }
                 }
@@ -366,7 +366,7 @@ header {
             &.o_active_toc_entry {
                 &:not(.toctree-l1) > .o_toc_entry_wrapper {
                     i[class^="i-"]:not(.collapsed) {
-                        @include o-transform(rotate(90deg));
+                        transform: rotate(90deg);
                     }
                 }
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
@@ -796,7 +796,7 @@ header {
                         visibility: hidden;
                         color: $o-gray-light;
                         opacity: 0;
-                        @include o-transition(all, .1s)
+                        transition: all, .1s;
                     }
                 }
 
