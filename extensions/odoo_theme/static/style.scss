@@ -999,8 +999,14 @@ header {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    border-color: tint-color($dark, 30%);
-    background-color: $o-accordion-bg;
+    $background: shift-color($o-accordion-bg, $alert-bg-scale);
+    $border: shift-color($o-accordion-bg, $alert-border-scale);
+    $color: shift-color($o-accordion-bg, $alert-color-scale);
+
+    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+        $color: mix($o-accordion-bg, color-contrast($background), abs($alert-color-scale));
+    }
+    @include alert-variant($background, $border, $color);
 
     .accordion-button {
         &::after {
@@ -1013,17 +1019,23 @@ header {
     }
 
     .accordion-body {
-        #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
-            > *:first-child {
-                margin-top: $o-margin-s;
-            }
+        > *:first-child {
+            margin-top: $o-margin-s;
+        }
 
-            code, div[class^="highlight"] {
-                border-color: tint-color($dark, 50%);
+        > p , > ul {
+            margin-bottom: .5rem;
+        }
 
-                &:first-child:last-child {
-                    margin-bottom: 0;
-                }
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+        code, div[class^="highlight"] {
+            border-color: tint-color($dark, 50%);
+
+            &:first-child:last-child {
+                margin-bottom: 0;
             }
         }
     }
