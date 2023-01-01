@@ -23,7 +23,7 @@ information in an organized template to support the business in different ways. 
 can additionally add our company's header and footer to our reports with minimal extra effort.
 
 The documentation related to this topic can be found in :ref:`reference/qweb`,
-:ref:`reference/reports/report` and the :ref:`reference/actions/report`
+:ref:`reference/reports/report`, and the :ref:`reference/actions/report`
 section of the Actions reference.
 
 File Structure
@@ -32,13 +32,13 @@ File Structure
 The bulk of a PDF report is its QWeb template. It also typically needs a corresponding
 ``ir.actions.report`` to include the report within a module's business logic.
 There is no strict rule for the file names or where they are located, but these two parts are
-typically stored in 2 separate files within a ``report`` folder in the top level of your module's
+typically stored in 2 separate files within a ``report`` folder at the top level of your module's
 directory. If a module has many or multiple long report templates, then they are often organized in
-a logical manner across different files named after the report(s) they contain. All actions
-for the reports are usually stored in the same file ending with ``_reports.xml`` regardless of the
+logically across different files, named after the report(s) they contain. All actions
+for the reports are usually stored in the same file ending with ``_reports.xml``, regardless of the
 number of reports it contains.
 
-Therefore it is expected that your work tree will look something like:
+Therefore, it is expected that your work tree will look something like this:
 
 .. code-block:: bash
 
@@ -61,8 +61,8 @@ the report folder. These are unrelated to the reports covered in this tutorial a
 :ref:`another advanced topic <howto/rdtraining/K_dashboard>`. For now you can think of them as customized views
 that use direct SQL queries (sometimes referred to as SQL Views).
 
-Don't forget to add whatever files your template and action view will be located in to your ``__manifest__.py``.
-In this case you will want to add the files to the ``data`` list and remember that the files listed in a manifest
+Don't forget to add whatever files your template and action view will be into your ``__manifest__.py``.
+In this case, you will want to add the files to the ``data`` list and remember that the files listed in a manifest
 are loaded sequentially!
 
 Basic Report
@@ -155,10 +155,10 @@ our minimal property offers template file:
 Most of the Odoo specific (i.e. non-HTML) items in our file are explained in the minimal viable template section.
 Some additional features in our template are:
 
-* The use of the ``class="table"`` attribute so our table has some nice formatting. Twitter Bootstrap
-  (we're using its table class in this case) and FontAwesome (useful for adding icons) classes can
+* The use of the ``class="table"`` attribute, so our table has some nice formatting. Twitter Bootstrap
+  (we're using its table class in this case), and Font Awesome (useful for adding icons) classes can
   be used in your report template.
-* The use of ``t-set``, ``t-value``, ``t-foreach`` and ``t-as`` so that we can loop over all of the ``offer_ids``.
+* The use of ``t-set``, ``t-value``, ``t-foreach``, and ``t-as`` so that we can loop over all the ``offer_ids``.
 
 If you are already familiar with website templating engines, then the QWeb directives (i.e. the `t-` commands)
 probably don't need much explanation and you can just look at its :ref:`documentation <reference/qweb>` and
@@ -172,7 +172,7 @@ such as setting and accessing temporary variables. For example, in the above exa
 
 * ``t-set`` creates a temporary variable called "offers" that has its value set by ``t-value`` to the current
   ``estate.property`` recordset's ``offer_ids``.
-* the ``t-foreach`` and ``t-as`` usage is the equivalent to the Python:
+* The ``t-foreach`` and ``t-as`` usage is the equivalent to the Python:
 
 .. code-block:: Python
 
@@ -189,9 +189,9 @@ corresponding to
 Its contents are all explained in :ref:`the documentation <reference/actions/report>`.
 
 An ``ir.actions.report`` is primarily used via the Print menu of a model's view. In the practical
-example, the ``binding_model_id`` specifies which model's views the report should show in and Odoo
+example, the ``binding_model_id`` specifies which model's views the report should show, and Odoo
 will auto-magically add it for you. Another common use case of the report action is to link it to
-a button like we learned in :ref:`howto/rdtraining/10_actions`. This is handy for reports that
+a button as we learned in :ref:`howto/rdtraining/10_actions`. This is handy for reports that
 only make sense under specific conditions. For example, if we wanted to make a "Final Sale" report,
 then we can link it to a "Print Sale Info" button that appears in the form view only when the
 property is "Sold".
@@ -201,7 +201,7 @@ property is "Sold".
     :alt: Print Menu Button
 
 You may have noticed or are wondered why our report template loops through a recordset. When our
-template is passed more than one record, it can produce one PDF report for all of the records.
+template is passed more than one record, it can produce one PDF report for all the records.
 Using the Print menu in the list view with multiple records selected will demonstrate this.
 
 Make a Report
@@ -235,7 +235,7 @@ Sub-templates
       :alt: Report using a subtemplate
 
 There are two main reasons for using sub-templates. One is to make the code easier to read when working with
-extra long or complicated templates. The other is to reuse code where possible. Our simple property offers
+extra-long or complicated templates. The other is to reuse code where possible. Our simple property offers
 report is useful, but listing property offers information can be useful for more than just one report template.
 One example is a report that lists all of a salesman's properties' offers.
 
@@ -288,7 +288,7 @@ created for them, so we can add this information to our report.
 Additional Features
 ===================
 
-All of the following extra features are described further in the :ref:`reference/reports/report`
+All the following extra features are described further in the :ref:`reference/reports/report`
 documentation, including how to implement each of them.
 
 Translations
@@ -296,13 +296,13 @@ Translations
 
 We all know Odoo is used in multiple languages thanks to automated and manual translating. QWeb reports are no
 exception! Note that sometimes the translations do not work properly if there are unnecessary spaces in your
-template's text content so try to avoid them when possible (especially leading spaces).
+template's text content, so try to avoid them when possible (especially leading spaces).
 
 Reports are web pages
 ---------------------
 
 You probably are tired of hearing that QWeb creates HTML, but we're saying it again! One of the
-neat features about reports being written in QWeb is they can be viewed within the web browser.
+neat features of reports being written in QWeb is they can be viewed within the web browser.
 This can be useful if you want to embed a hyperlink that leads to a specific report. Note that
 the usual security checks will still apply to prevent unauthorized users from accessing the reports.
 
