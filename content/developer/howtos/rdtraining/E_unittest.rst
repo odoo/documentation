@@ -12,9 +12,9 @@ Advanced E: Python Unit Tests
 
 **Reference**:
 `Odoo's Test Framework: Learn Best Practices <https://www.youtube.com/watch?v=JEIscps0OOQ>`__
-(Odoo Experience 2020) on Youtube.
+(Odoo Experience 2020) on YouTube.
 
-Writing tests is a necessity for multiple reasons. Here is a non exhaustive list:
+Writing tests is a necessity for multiple reasons. Here is a non-exhaustive list:
 
 * Ensure code will not be broken in the future
 * Define the scope of your code
@@ -168,7 +168,7 @@ Modules
 =======
 
 Because Odoo is modular, the tests need to be also modular. This means tests are defined in
-the module that adds the functionality you are adding in and tests cannot depend on functionality
+the module that adds the functionality you are adding in, and tests cannot depend on functionality
 coming from modules your module doesn't depend on.
 
 **Reference**: the documentation related to this topic can be found in
@@ -193,21 +193,21 @@ coming from modules your module doesn't depend on.
 
 
 If the behavior you want to test can be changed by the installation of another module, you need to
-ensure that the tag `at_install` is set; otherwise you can use the tag `post_install` to speed up
+ensure that the tag `at_install` is set; otherwise, you can use the tag `post_install` to speed up
 the CI and ensure it is not changed if it shouldn't.
 
 Writing a test
 ==============
 
 **Reference**: the documentation related to this topic can be found in
-`Python unittest <https://docs.python.org/3/library/unittest.html>`__.
+`Python unittest <https://docs.python.org/3/library/unittest.html>`__
 and :ref:`Testing Odoo<reference/testing>`.
 
 Here are a few things to take into consideration before writing a test
 
-* The tests should be independent from the data currently in the database (including demo data)
+* The tests should be independent of the data currently in the database (including demo data)
 * Tests should not impact the database by leaving/changing residual data. This is usually done by
-  the test framework by doing a rollback. This is why you must never call ``cr.commit`` in a test
+  the test framework by doing a rollback. Therefore, you must never call ``cr.commit`` in a test
   (nor anywhere else in the business code).
 * For a bug fix, the test should fail before applying the fix and pass after.
 * Don't test something that is already tested elsewhere; you can trust the ORM. Most of the tests
@@ -218,7 +218,7 @@ Here are a few things to take into consideration before writing a test
   in python. This also applies in the tests. If you want to emulate a Form view, you can use
   ``odoo.tests.common.Form``.
 
-The tests should be located in a ``tests`` folder in the root of your module. Each test file name
+The tests should be in a ``tests`` folder at the root of your module. Each test file name
 should start with `test_` and be imported in the ``__init__.py`` of the test folder. You shouldn't
 import the test folder/module in the ``__init__.py`` of the module.
 
@@ -283,7 +283,7 @@ These test classes are built on top of the ``unittest`` python module.
 
 .. note:: For better readability, split your tests into multiple files depending on the scope of the
   tests. You can also have a Common class that most of the tests should inherit from; this common
-  class can define the whole set up for the module. For instance in
+  class can define the whole setup for the module. For instance, in
   `account <{GITHUB_PATH}/addons/account/tests/common.py>`__.
 
 .. exercise:: Update the code so no one can:
