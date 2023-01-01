@@ -304,7 +304,7 @@ the call above will be rendered as ``<p/>`` (no content), but::
 
 will be rendered as ``<p>1</p>``.
 
-However this has the problem of being visible from outside the ``t-call``.
+However, this has the problem of being visible from outside the ``t-call``.
 Alternatively, content set in the body of the ``call`` directive will be
 evaluated *before* calling the sub-template, and can alter a local context::
 
