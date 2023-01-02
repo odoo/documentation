@@ -242,10 +242,12 @@ API
      - the desired position. It is a string composed of one `Direction` and one
        `Variant` separated by a dash character.
        `Direction` could be: `top`, `bottom`, `right`, `left`.
-       `Variant` could be: `start`, `middle`, `end`.
+       `Variant` could be: `start`, `middle`, `end`, `fit`.
        The variant can be omitted (default variant is `middle`).
+       The `fit` variant means that the popper would have the exact same width or height,
+       depending on the chosen direction.
        Examples of valid positions: `right-end`, `top-start`, `left-middle`,
-       `left`. (default position: `bottom`)
+       `left`, `bottom-fit`. (default position: `bottom`)
    * - `onPositioned`
      - (el: HTMLElement, position: PositioningSolution) => void
      - a callback that will be called everytime a positioning occurs
