@@ -31,13 +31,13 @@ body {
                 content: '#{$i-external-link}';
                 font-family: icomoon, sans-serif !important;
                 @include font-size($font-size-base/1.3);
-                margin: 0 .2rem;
+                margin: 0 $o-icon-margin;
             }
         }
     }
 
     dd {
-        margin-left: 1rem;
+        margin-left: $margin-s;
     }
 
     // This fixes the scroll position on all elements, including refs
@@ -525,7 +525,7 @@ header {
                     align-items: center;
 
                     &:before {
-                        @include o-inline-icon($i-article, 0 .2rem 0 0);
+                        @include o-inline-icon($i-article, 0 $o-icon-margin 0 0);
                         color: $o-gray-light;
                     }
                 }
@@ -752,7 +752,7 @@ header {
                 }
 
                 img {
-                    margin-bottom: 1rem;
+                    margin-bottom: $margin-s;
                 }
 
                 img:not(.o-no-modal) {
@@ -760,7 +760,7 @@ header {
                 }
 
                 iframe {
-                    margin-bottom: 1rem;
+                    margin-bottom: $margin-s;
                 }
 
                 p > img {
@@ -928,7 +928,7 @@ header {
                 font-weight: $fw_bold;
 
                 &:before {
-                    @include o-inline-icon($i-info, 0 .2rem 0 0, baseline, $font-size-base, inherit);
+                    @include o-inline-icon($i-info, 0 $o-icon-margin 0 0, baseline, $font-size-base, inherit);
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
@@ -1033,7 +1033,7 @@ header {
 
     .accordion-button {
         &::after {
-            margin: 0 .2rem 0 0;
+            margin: 0 $o-icon-margin 0 0;
         }
 
         &.collapsed::after {
@@ -1044,7 +1044,7 @@ header {
     .accordion-body {
         #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
             > *:first-child {
-                margin-top: 1rem;
+                margin-top: $margin-s;
             }
 
             code, div[class^="highlight"] {
@@ -1064,7 +1064,7 @@ header {
 
 .sphinx-tabs {
     padding: 0;
-    margin-bottom: 1rem;
+    margin-bottom: $margin-s;
 
     div[role="tablist"] {
         border-color: $o-gray-border;
@@ -1091,7 +1091,7 @@ header {
         color: $o-gray-color;
         border: 0;
         border-top: solid 1px $o-gray-border;
-        padding: .5rem 1rem;
+        padding: $padding-xs $padding-s;
 
         &:hover {
             &:not([aria-selected="true"]) {
@@ -1134,7 +1134,7 @@ header {
         background: $white;
         color: $o-gray-color;
         border: 1px solid $o-gray-border;
-        padding: 1rem;
+        padding: $padding-s;
 
         &:focus {
             outline: none;
@@ -1165,7 +1165,7 @@ footer {
         h4 {
             color: $secondary;
             font-weight: $fw_bold;
-            margin-bottom: 1.5rem;
+            margin-bottom: $margin-s;
         }
 
     }
