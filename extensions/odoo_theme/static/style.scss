@@ -20,6 +20,7 @@ body {
         text-underline-position: from-font;
 
         &.external:not(.image-reference):after {
+            //see https://www.odoo.com/documentation/master/contributing/documentation/rst_cheat_sheet.html#external-hyperlinks
             content: '#{$i-external-link}';
             margin: 0 $o-icon-margin;
             font-family: icomoon, sans-serif !important;
@@ -36,24 +37,12 @@ body {
         @include o-scroll-padding()
     }
 
-    abbr {
-        text-underline-offset: 2px;
-
-        &[title="Pull Request"] {
-            @include o-easter-egg();
-        }
-    }
 }
 
 .hidden {
     display: none !important;
     opacity: 0 !important;
     visibility: hidden !important;
-}
-
-span.viewcode-link {
-    float: none;
-    margin-left: .3rem;
 }
 
 //------------------------------------------------------------------------------
@@ -199,7 +188,7 @@ header {
 }
 
 //------------------------------------------------------------------------------
-// Left side nav toctree
+// Navigation - Left side-nav toctree
 //------------------------------------------------------------------------------
 
 .o_side_nav {
@@ -370,62 +359,63 @@ header {
         padding-left: 0;
     }
 }
+
 //------------------------------------------------------------------------------
-// On this page local toctree
+// Navigation - "On This Page" local toctree
 //------------------------------------------------------------------------------
 
-    aside.o_page_toc {
-        color: $body-color;
-        @include font-size($font-size-sm);
+aside.o_page_toc {
+    color: $body-color;
+    @include font-size($font-size-sm);
 
-        &:not(.o_in_nav_toc) {
-            position: -webkit-sticky;
-            position: sticky;
-            display: none;
-            height: 100%;
-            max-height: calc(100vh - #{$o-headers-height});
+    &:not(.o_in_nav_toc) {
+        position: -webkit-sticky;
+        position: sticky;
+        display: none;
+        height: 100%;
+        max-height: calc(100vh - #{$o-headers-height});
 
-            @include media-breakpoint-up(xl) {
-                display: block;
-                grid-area: toc;
-                top: $o-headers-height;
-                padding: $o-padding-m $o-padding-s $o-padding-m 0;
-                overflow-y: auto;
-            }
-        }
-
-        &.o_in_nav_toc {
+        @include media-breakpoint-up(xl) {
             display: block;
-
-            @include media-breakpoint-up(xl) {
-                display: none;
-            }
-        }
-
-        h5 {
-            margin-bottom: $o-padding-xs;
-            padding-left: $o-padding-xs;
-            font-weight: $font-weight-bolder;
-            color: $o-gray-color;
-            text-transform: uppercase;
-        }
-
-        a {
-            font-weight: $font-weight-normal;
-            color: $o-gray-color
-        }
-
-        .o_page_toc_title {
-            display:none;
-
-            + ul {
-                padding-left: 0;
-            }
+            grid-area: toc;
+            top: $o-headers-height;
+            padding: $o-padding-m $o-padding-s $o-padding-m 0;
+            overflow-y: auto;
         }
     }
 
+    &.o_in_nav_toc {
+        display: block;
+
+        @include media-breakpoint-up(xl) {
+            display: none;
+        }
+    }
+
+    h5 {
+        margin-bottom: $o-padding-xs;
+        padding-left: $o-padding-xs;
+        font-weight: $font-weight-bolder;
+        color: $o-gray-color;
+        text-transform: uppercase;
+    }
+
+    a {
+        font-weight: $font-weight-normal;
+        color: $o-gray-color
+    }
+
+    .o_page_toc_title {
+        display:none;
+
+        + ul {
+            padding-left: 0;
+        }
+    }
+}
+
 //------------------------------------------------------------------------------
-// Main page content
+// Layout
 //------------------------------------------------------------------------------
 
 #wrap {
@@ -439,565 +429,601 @@ header {
         grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
+}
 
-    // Literals Styles (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
-    .o_code, .sig [class^="sig-"] {
-        @include o-code;
+main.container-fluid {
+    position: relative;
+    grid-area: main;
+    padding-bottom: $o-padding-l;
+
+    @include media-breakpoint-up(lg) {
+        grid-column-end: toc;
+        margin: 0;
+        padding: $o-padding-m $o-padding-l;
     }
 
-    .o_code {
-        padding: 0 .3rem;
+    @include media-breakpoint-up(xl) {
+        grid-column-end: main;
+    }
 
-        &.file {
-            padding-right: .4rem;
-            background-color: $blue-100;
-            font-family: $font-family-base;
-            font-weight: $o-font-weight-medium;
-            font-style: italic;
-            color: $blue-700;
+    &.o_index, &.o_fullwidth_page, &.o_has_code_column {
+        grid-column-end: toc;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Content
+//------------------------------------------------------------------------------
+
+// Homepage
+// https://www.odoo.com/documentation/master/index.html
+
+.o_index {
+    .o_content_fw_banner {
+        align-items: center;
+        margin: 0 -0.75rem $o-margin-m;
+        padding: $o-padding-m $o-padding-s;
+        @include o-gradient();
+
+        @include media-breakpoint-up(lg) {
+            margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
+            padding: $o-padding-m $o-padding-m;
+        }
+
+        @include media-breakpoint-up(xl) {
+            margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
+            padding: $o-padding-l $o-padding-l;
+        }
+    }
+    .row:first-of-type h2.border-top {
+        @include media-breakpoint-up(lg) {
+            border-top: 0 solid transparent !important;
         }
     }
 
-    .sig {
-        .sig-prename {
-            padding-left: .3rem;
+    h5 {
+        font-size: 12px;
+    }
 
-            &+ .sig-name {
-                padding-right: .3rem;
+    ul > li {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding-bottom: $o-padding-xs;
+
+        &:before {
+            content: $i-article;
+            @include o-inline-icon(0 $o-icon-margin 0 0);
+            color: $o-gray-light;
+        }
+    }
+}
+
+// First level legal page and pages with toctrees
+// (ex: https://www.odoo.com/documentation/master/developer.html)
+.o_fullwidth_page div.toctree-wrapper > ul {
+    flex-wrap: wrap;
+    display: flex;
+
+    > li {
+
+        @include media-breakpoint-down(lg) {
+            width: 100%;
+        }
+
+        @include media-breakpoint-up(lg) {
+            width: 33%;
+
+            &:not(:nth-of-type(3n)){
+                padding-right: $o-padding-m;
+            }
+        }
+    }
+}
+
+// Pages with a column for code on the right
+// (ex: https://www.odoo.com/documentation/master/applications/finance/accounting/getting_started/memento.html)
+
+.o_has_code_column {
+    article.doc-body {
+        @include media-breakpoint-up(xl) {
+            .o_git_link {
+                right: calc(#{$o-codecol-width} + #{$o-padding-l});
+            }
+
+            section {
+                > * {
+                    float: left;
+                    clear: left;
+                    width: $o-halfpage-width;
+                }
+
+                > h1 {
+                    max-width: calc(#{$o-halfpage-width} - 120px);
+                }
+
+                > h1, > h2, > h3, > h4, > h5, > h6 {
+                    float: none;
+                    clear: none;
+                }
+
+                .doc-aside {
+                    float: none;
+                    clear: none;
+                    width: $o-codecol-width;
+                    margin-left: 57%;
+                    padding: $o-padding-s;
+
+                    blockquote {
+                        font-weight: $font-weight-bold;
+                        font-style: italic;
+                    }
+
+                    pre {
+                        font-size: 12px;
+                    }
+                }
+            }
+        }
+    }
+
+    + aside.o_page_toc{
+        display: none;
+    }
+}
+
+.o_hide_toc .toctree-wrapper {
+    display: none;
+}
+
+.toctree-wrapper {
+    > ul, .toctree-l1 > ul {
+        padding-left: 0;
+        list-style: none;
+    }
+
+    .toctree-l1 > a {
+        display: block;
+        margin-top: $o-padding-m;
+        margin-bottom: $o-margin-s;
+        padding-bottom: $o-padding-xs;
+        border-bottom: 1px solid $o-gray-border;
+        @include font-size($h2-font-size);
+        font-weight: 600;
+    }
+
+    .toctree-l1 {
+        margin-bottom: 2rem;
+    }
+
+    .toctree-l2 > a[href="#"] {
+        margin-top: 0.7rem;
+        display: inline-block;
+    }
+
+    a[href="#"] {
+        color: $o-gray-color;
+        font-weight: $font-weight-bold;
+        pointer-events: none;
+        cursor: default;
+    }
+}
+
+article.doc-body {
+    position: relative;
+    padding-top: $o-padding-s;
+
+    .o_git_link {
+        @include o-position-absolute($top: 0px, $right: $o-margin-s);
+        @include font-size($font-size-sm);
+
+        @include media-breakpoint-up(lg) {
+            @include o-position-absolute($top: 10px, $right: $o-margin-s);
+        }
+
+        i {
+            margin-right: .2rem;
+        }
+    }
+
+    // Search items highlighted
+    span.highlighted {
+        background-color: lighten($warning, 15%);
+    }
+
+    section {
+        margin-bottom: $o-margin-m;
+
+        > h1 {
+            margin-bottom: $o-margin-s;
+            color: $secondary;
+            font-weight: $font-weight-bolder;
+
+            @include media-breakpoint-up(lg) {
+                max-width: calc(100% - 120px);
             }
         }
 
-        em.property + .sig-name {
-            padding-left: .3rem;
+        > h2 {
+            margin-bottom: $o-margin-s;
+            padding-bottom: .3rem;
+            border-bottom: 1px solid $o-gray-border;
+            font-family: $o-font-family-serif;
+            color: $o-gray-color;
         }
 
-        .sig-paren:last-of-type {
+        > h3 {
+            font-size: $font-size-base * 1.3;
+            font-weight: $font-weight-bold;
+        }
+
+        img {
+            margin-bottom: $o-margin-s;
+        }
+
+        img:not(.o-no-modal) {
+            cursor: pointer;
+        }
+
+        iframe {
+            margin-bottom: $o-margin-s;
+        }
+
+        p > img {
+            margin-bottom: 0;
+            padding: 0;
+            border: none;
+        }
+
+        .figure {
+            .caption, .caption-text {
+                font-weight: $font-weight-bold;
+                color: $o-gray;
+            }
+
+            .caption, .caption-text, .legend, .legend p {
+                margin: 0 auto;
+                font-style: italic;
+            }
+
+            @include media-breakpoint-up(md) {
+                &:not([class^="col"]) .legend {
+                    max-width: 60%;
+                }
+            }
+        }
+
+        a.headerlink {
+            line-height: 0;
+            visibility: hidden !important;
+            text-decoration: none;
+            font-size: 0;
+
+            &:before {
+                content: "\a0";
+            }
+
+            &:after {
+                content: '#{$i-link}';
+                visibility: hidden;
+                opacity: 0;
+                transition: all, .1s;
+                margin: 0 0 0 .3rem;
+                color: $o-gray-light;
+                font-family: icomoon, sans-serif !important;
+                @include font-size($font-size-base);
+            }
+        }
+
+        *:hover > a.headerlink:after {
+            // This makes permalinks only visible on hover.
+            visibility: visible;
+            opacity: 1;
+        }
+
+        table.table {
+            @include media-breakpoint-down(lg){
+                display: block;
+                overflow-x: auto;
+
+                code {
+                    overflow-wrap: break-word;
+                }
+            }
+        }
+    }
+}
+
+div[class^="highlight"] {
+    // This styles the consoles like read-the-doc's consoles
+    overflow-x: auto;
+    margin: 1px 0 24px 0;
+    border: 1px solid $o-gray-border;
+
+    div[class^="highlight"] {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+    pre {
+        display: block;
+        overflow: auto;
+        white-space: pre;
+        margin: 0;
+        padding: 1rem;
+    }
+}
+
+iframe {
+    max-width: 100%;
+}
+
+.container .container:not([class^="col"]) {
+    margin: 0;
+    padding: 0;
+}
+
+ul, ol {
+    text-align: left;
+}
+
+ol ol {
+    list-style: lower-alpha;
+
+    > li:before {
+        content: none;
+    }
+}
+
+//------------------------------------------------------------------------------
+// Markups
+// (see https://www.odoo.com/documentation/master/contributing/documentation/rst_cheat_sheet.html#markups)
+//------------------------------------------------------------------------------
+
+// Technical Terms (Literals)
+.o_code, .sig [class^="sig-"] {
+    @include o-code;
+}
+
+.o_code {
+    padding: 0 .3rem;
+
+//File
+    &.file {
+        padding-right: .4rem;
+        background-color: $blue-100;
+        font-family: $font-family-base;
+        font-weight: $o-font-weight-medium;
+        font-style: italic;
+        color: $blue-700;
+    }
+}
+
+// Definitions
+.dfn{
+    @include font-size($font-size-sm);
+    line-height: 1;
+    color: $blue-600;
+    font-weight: $font-weight-bold;
+
+    &:before {
+        content:'?';
+        display: inline-block;
+        width: 15px;
+        height: 15px;
+        margin: 0 .1rem;
+        border: 2px solid $blue-600;
+        border-radius: 20px;
+        text-align: center;
+        color: $blue-600;
+        font-size: 12px;
+        font-weight: $font-weight-bolder;
+        font-style: normal;
+    }
+}
+
+//Abbreviations
+abbr {
+    text-underline-offset: 2px;
+
+    &[title="Pull Request"] {
+        @include o-easter-egg();
+    }
+}
+
+//GUI Element & Menu Selection
+.guilabel, .menuselection {
+    font-weight: $font-weight-bold;
+}
+
+// API and Reference Styles
+//(ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
+
+.sig {
+    .sig-prename {
+        padding-left: .3rem;
+
+        &+ .sig-name {
             padding-right: .3rem;
         }
     }
 
-    dl.py, dl.js, dl.o-definition-list {
-        > dd {
-            margin-top: -0.075rem;
-            padding-left: $o-padding-s;
-            padding-top: $o-padding-xs;
-            border-left: 3px solid $o-literals-border;
-        }
-
-        &.class em.property {
-            font-size: $font-size-sm;
-
-            &:first-child {
-                border-bottom: 3px solid $o-literals-border;
-            }
-
-            &:not(:first-child) {
-                @include o-code;
-                padding: 0 .3rem;
-            }
-        }
+    em.property + .sig-name {
+        padding-left: .3rem;
     }
 
-    dl:not([class]) dd {
-        margin-left: $o-margin-s;
+    .sig-paren:last-of-type {
+        padding-right: .3rem;
+    }
+}
+
+dl.py, dl.js, dl.o-definition-list {
+    > dd {
+        margin-top: -0.075rem;
+        padding-left: $o-padding-s;
+        padding-top: $o-padding-xs;
+        border-left: 3px solid $o-literals-border;
     }
 
-    dl.field-list {
-        padding: .5rem;
-        border: 1px solid $o-gray-border;
-        @include font-size($font-size-sm);
+    &.class em.property {
+        font-size: $font-size-sm;
 
-        @include media-breakpoint-down(lg) {
-            display: block;
+        &:first-child {
+            border-bottom: 3px solid $o-literals-border;
         }
 
-        > dt {
-            padding-left: 0;
-        }
-
-        ul {
-            list-style: none;
-            padding-left: 0;
-
-            li:not(:last-child) {
-                padding-bottom: $o-padding-xs;
-            }
+        &:not(:first-child) {
+            @include o-code;
+            padding: 0 .3rem;
         }
     }
+}
 
-    iframe {
-        max-width: 100%;
+// The field-lists are generated Parameters and Arguments
+// within the References (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#odoo.fields.Field)
+dl.field-list {
+    padding: .5rem;
+    border: 1px solid $o-gray-border;
+    @include font-size($font-size-sm);
+
+    @include media-breakpoint-down(lg) {
+        display: block;
     }
 
-    main {
-        position: relative;
-        grid-area: main;
-        padding-bottom: $o-padding-l;
+    > dt {
+        padding-left: 0;
+    }
 
-        @include media-breakpoint-up(lg) {
-            grid-column-end: toc;
-            margin: 0;
-            padding: $o-padding-m $o-padding-l;
+    ul {
+        list-style: none;
+        padding-left: 0;
+
+        li:not(:last-child) {
+            padding-bottom: $o-padding-xs;
         }
+    }
+}
 
-        @include media-breakpoint-up(xl) {
-            grid-column-end: main;
-        }
+dl:not([class]) dd {
+    margin-left: $o-margin-s;
+}
 
-        &.o_index, &.o_fullwidth_page, &.o_has_code_column {
-            grid-column-end: toc;
-        }
-
-        // Homepage
-
-        &.o_index {
-            .o_content_fw_banner {
-                align-items: center;
-                margin: 0 -0.75rem $o-margin-m;
-                padding: $o-padding-m $o-padding-s;
-                @include o-gradient();
-
-                @include media-breakpoint-up(lg) {
-                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
-                    padding: $o-padding-m $o-padding-m;
-                }
-
-                @include media-breakpoint-up(xl) {
-                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
-                    padding: $o-padding-l $o-padding-l;
-                }
-            }
-            .row:first-of-type h2.border-top {
-                @include media-breakpoint-up(lg) {
-                    border-top: 0 solid transparent !important;
-                }
-            }
-
-            h5 {
-                font-size: 12px;
-            }
-
-            ul > li {
-                position: relative;
-                display: flex;
-                align-items: center;
-                padding-bottom: $o-padding-xs;
-
-                &:before {
-                    content: $i-article;
-                    @include o-inline-icon(0 $o-icon-margin 0 0);
-                    color: $o-gray-light;
-                }
-            }
-        }
-
-        // First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
-        &.o_fullwidth_page div.toctree-wrapper > ul {
-            flex-wrap: wrap;
-            display: flex;
-
-            > li {
-
-                @include media-breakpoint-down(lg) {
-                    width: 100%;
-                }
-
-                @include media-breakpoint-up(lg) {
-                    width: 33%;
-
-                    &:not(:nth-of-type(3n)){
-                        padding-right: $o-padding-m;
-                    }
-                }
-            }
-        }
-
-        // pages with column for code on the right
-        &.o_has_code_column {
-            article.doc-body {
-                @include media-breakpoint-up(xl) {
-                    .o_git_link {
-                        right: calc(#{$o-codecol-width} + #{$o-padding-l});
-                    }
-
-                    section {
-                        > * {
-                            float: left;
-                            clear: left;
-                            width: $o-halfpage-width;
-                        }
-
-                        > h1 {
-                            max-width: calc(#{$o-halfpage-width} - 120px);
-                        }
-
-                        > h1, > h2, > h3, > h4, > h5, > h6 {
-                            float: none;
-                            clear: none;
-                        }
-
-                        .doc-aside {
-                            float: none;
-                            clear: none;
-                            width: $o-codecol-width;
-                            margin-left: 57%;
-                            padding: $o-padding-s;
-
-                            blockquote {
-                                font-weight: $font-weight-bold;
-                                font-style: italic;
-                            }
-
-                            pre {
-                                font-size: 12px;
-                            }
-                        }
-                    }
-                }
-            }
-
-            + aside.o_page_toc{
-                display: none;
-            }
-        }
-
-        &.o_hide_toc .toctree-wrapper {
-            display: none;
-        }
-
-        .toctree-wrapper {
-            > ul, .toctree-l1 > ul {
-                padding-left: 0;
-                list-style: none;
-            }
-
-            .toctree-l1 > a {
-                display: block;
-                margin-top: $o-padding-m;
-                margin-bottom: $o-margin-s;
-                padding-bottom: $o-padding-xs;
-                border-bottom: 1px solid $o-gray-border;
-                @include font-size($h2-font-size);
-                font-weight: 600;
-            }
-
-            .toctree-l1 {
-                margin-bottom: 2rem;
-            }
-
-            .toctree-l2 > a[href="#"] {
-                margin-top: 0.7rem;
-                display: inline-block;
-            }
-
-            a[href="#"] {
-                color: $o-gray-color;
-                font-weight: $font-weight-bold;
-                pointer-events: none;
-                cursor: default;
-            }
-        }
-
-        article.doc-body {
-            position: relative;
-            padding-top: $o-padding-s;
-
-            .o_git_link {
-                @include o-position-absolute($top: 0px, $right: $o-margin-s);
-                @include font-size($font-size-sm);
-
-                @include media-breakpoint-up(lg) {
-                    @include o-position-absolute($top: 10px, $right: $o-margin-s);
-                }
-
-                i {
-                    margin-right: .2rem;
-                }
-            }
-
-            // Search items highlighted
-            span.highlighted {
-                background-color: lighten($warning, 15%);
-            }
-
-            section {
-                margin-bottom: $o-margin-m;
-
-                > h1 {
-                    margin-bottom: $o-margin-s;
-                    color: $secondary;
-                    font-weight: $font-weight-bolder;
-
-                    @include media-breakpoint-up(lg) {
-                        max-width: calc(100% - 120px);
-                    }
-                }
-
-                > h2 {
-                    margin-bottom: $o-margin-s;
-                    padding-bottom: .3rem;
-                    border-bottom: 1px solid $o-gray-border;
-                    font-family: $o-font-family-serif;
-                    color: $o-gray-color;
-                }
-
-                > h3 {
-                    font-size: $font-size-base * 1.3;
-                    font-weight: $font-weight-bold;
-                }
-
-                img {
-                    margin-bottom: $o-margin-s;
-                }
-
-                img:not(.o-no-modal) {
-                    cursor: pointer;
-                }
-
-                iframe {
-                    margin-bottom: $o-margin-s;
-                }
-
-                p > img {
-                    margin-bottom: 0;
-                    padding: 0;
-                    border: none;
-                }
-
-                .figure {
-                    .caption, .caption-text {
-                        font-weight: $font-weight-bold;
-                        color: $o-gray;
-                    }
-
-                    .caption, .caption-text, .legend, .legend p {
-                        margin: 0 auto;
-                        font-style: italic;
-                    }
-
-                    @include media-breakpoint-up(md) {
-                        &:not([class^="col"]) .legend {
-                            max-width: 60%;
-                        }
-                    }
-                }
-
-                a.headerlink {
-                    line-height: 0;
-                    visibility: hidden !important;
-                    text-decoration: none;
-                    font-size: 0;
-
-                    &:before {
-                        content: "\a0";
-                    }
-
-                    &:after {
-                        content: '#{$i-link}';
-                        visibility: hidden;
-                        opacity: 0;
-                        transition: all, .1s;
-                        margin: 0 0 0 .3rem;
-                        color: $o-gray-light;
-                        font-family: icomoon, sans-serif !important;
-                        @include font-size($font-size-base);
-                    }
-                }
-
-                *:hover > a.headerlink:after {
-                    // This makes permalinks only visible on hover.
-                    visibility: visible;
-                    opacity: 1;
-                }
-
-                table.table {
-                    @include media-breakpoint-down(lg){
-                        display: block;
-                        overflow-x: auto;
-
-                        code {
-                            overflow-wrap: break-word;
-                        }
-                    }
-                }
-            }
-        }
-
-        div[class^="highlight"] {
-            // This styles the consoles like read-the-doc's consoles
-            overflow-x: auto;
-            margin: 1px 0 24px 0;
-            border: 1px solid $o-gray-border;
-
-            div[class^="highlight"] {
-                margin: 0;
-                padding: 0;
-                border: none;
-            }
-            pre {
-                display: block;
-                overflow: auto;
-                white-space: pre;
-                margin: 0;
-                padding: 1rem;
-            }
-        }
-
-        .guilabel, .menuselection {
-            font-weight: $font-weight-bold;
-        }
-
-        .dfn{
-            @include font-size($font-size-sm);
-            line-height: 1;
-            color: $blue-600;
-            font-weight: $font-weight-bold;
-
-            &:before {
-                content:'?';
-                display: inline-block;
-                width: 15px;
-                height: 15px;
-                margin: 0 .1rem;
-                border: 2px solid $blue-600;
-                border-radius: 20px;
-                text-align: center;
-                color: $blue-600;
-                font-size: 12px;
-                font-weight: $font-weight-bolder;
-                font-style: normal;
-            }
-        }
-
-
-        .container .container:not([class^="col"]) {
-            margin: 0;
-            padding: 0;
-        }
-
-        ul, ol {
-            text-align: left;
-        }
-
-        ol ol {
-            list-style: lower-alpha;
-
-            > li:before {
-                content: none;
-            }
-        }
+// Child of source-code URL
+// ex: https://www.odoo.com/documentation/16.0/developer/reference/backend/orm.html#odoo.models.AbstractModel
+span.viewcode-link {
+    float: none;
+    margin-left: .3rem;
+}
 
 //------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------
 
-        .alert {
-            border-width: 0 0 0 $alert-border-width;
+.alert {
+    border-width: 0 0 0 $alert-border-width;
 
-            > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
-                border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
-                background-color: $white !important;
-                color: inherit;
-            }
+    > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
+        border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
+        background-color: $white !important;
+        color: inherit;
+    }
 
-            > p , > ul {
-                margin-bottom: .5rem;
-            }
+    > p , > ul {
+        margin-bottom: .5rem;
+    }
 
-            > *:last-child {
-                margin-bottom: 0;
-            }
+    > *:last-child {
+        margin-bottom: 0;
+    }
 
-            > h3, > .alert-title {
-                margin: 0 0 10px 0;
-                @include font-size($h5-font-size);
-                line-height: 1em;
-                font-weight: $font-weight-bolder;
+    > h3, > .alert-title {
+        margin: 0 0 10px 0;
+        @include font-size($h5-font-size);
+        line-height: 1em;
+        font-weight: $font-weight-bolder;
 
-                &:before {
-                    content: var(--o-alert-icon, #{$o-alert-default-icon});
-                    @include o-inline-icon(0 $o-icon-margin 0 0, baseline, inherit, inherit);
+        &:before {
+            content: var(--o-alert-icon, #{$o-alert-default-icon});
+            @include o-inline-icon(0 $o-icon-margin 0 0, baseline, inherit, inherit);
 
-                    @include media-breakpoint-down(md) {
-                        display:none;
-                    }
-                }
-            }
-
-            // Custom Admonitions
-            &[class^="admonition"] {
-                --o-alert-icon: '#{$i-info}';
-                --o-alert-code-border-color: tint-color($info, 30%);
-
-                $background: shift-color($info, $alert-bg-scale);
-                $border: shift-color($info, $alert-border-scale);
-                $color: shift-color($info, $alert-color-scale);
-
-                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-                    $color: mix($info, color-contrast($background), abs($alert-color-scale));
-                }
-
-                @include alert-variant($background, $border, $color);
-            }
-
-            // Note
-            &.alert-primary {
-                --o-alert-code-border-color: #{tint-color($primary, 50%)};
-                --o-alert-icon: '#{$i-note}';
-            }
-
-            // See Also
-            &.alert-secondary {
-                --o-alert-icon: '#{$i-article}';
-                --o-alert-code-border-color: #{tint-color($secondary, 30%)};
-
-                a {
-                    color: $secondary;
-                }
-            }
-
-            // Tip
-            &.alert-tip {
-                --o-alert-icon: '#{$i-lightbulb}';
-                --o-alert-code-border-color: #{$o-gray-border};
-
-                $background: $o-gray-bg;
-                $border: shift-color($primary, $alert-border-scale);
-                $color: shift-color($primary, $alert-color-scale);
-
-                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-                    $color: mix($primary, color-contrast($background), abs($alert-color-scale));
-                }
-
-                @include alert-variant($background, $border, $color);
-            }
-
-            // Example
-            &.alert-success {
-                --o-alert-icon: '#{$i-knowledge}';
-                --o-alert-code-border-color: #{tint-color($success, 50%)};
-            }
-
-            // Warning & Important
-            &.alert-warning {
-                --o-alert-icon: '#{$i-warning}';
-                --o-alert-code-border-color: #{tint-color($warning, 50%)};
-            }
-
-            // Danger
-            &.alert-danger {
-                --o-alert-icon: '#{$i-danger}';
-                --o-alert-code-border-color: #{tint-color($danger, 50%)};
-            }
-
-            // Exercises
-            &.alert-dark {
-                --o-alert-icon: '#{$i-exercise}';
-                --o-alert-code-border-color: $dark;
-
-                background: $gray-200;
+            @include media-breakpoint-down(md) {
+                display:none;
             }
         }
+    }
+
+    // Custom Admonitions
+    &[class^="admonition"] {
+        --o-alert-icon: '#{$i-info}';
+        --o-alert-code-border-color: tint-color($info, 30%);
+
+        $background: shift-color($info, $alert-bg-scale);
+        $border: shift-color($info, $alert-border-scale);
+        $color: shift-color($info, $alert-color-scale);
+
+        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+            $color: mix($info, color-contrast($background), abs($alert-color-scale));
+        }
+
+        @include alert-variant($background, $border, $color);
+    }
+
+    // Note
+    &.alert-primary {
+        --o-alert-code-border-color: #{tint-color($primary, 50%)};
+        --o-alert-icon: '#{$i-note}';
+    }
+
+    // See Also
+    &.alert-secondary {
+        --o-alert-icon: '#{$i-article}';
+        --o-alert-code-border-color: #{tint-color($secondary, 30%)};
+
+        a {
+            color: $secondary;
+        }
+    }
+
+    // Tip
+    &.alert-tip {
+        --o-alert-icon: '#{$i-lightbulb}';
+        --o-alert-code-border-color: #{$o-gray-border};
+
+        $background: $o-gray-bg;
+        $border: shift-color($primary, $alert-border-scale);
+        $color: shift-color($primary, $alert-color-scale);
+
+        @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+            $color: mix($primary, color-contrast($background), abs($alert-color-scale));
+        }
+
+        @include alert-variant($background, $border, $color);
+    }
+
+    // Example
+    &.alert-success {
+        --o-alert-icon: '#{$i-knowledge}';
+        --o-alert-code-border-color: #{tint-color($success, 50%)};
+    }
+
+    // Warning & Important
+    &.alert-warning {
+        --o-alert-icon: '#{$i-warning}';
+        --o-alert-code-border-color: #{tint-color($warning, 50%)};
+    }
+
+    // Danger
+    &.alert-danger {
+        --o-alert-icon: '#{$i-danger}';
+        --o-alert-code-border-color: #{tint-color($danger, 50%)};
+    }
+
+    // Exercises
+    &.alert-dark {
+        --o-alert-icon: '#{$i-exercise}';
+        --o-alert-code-border-color: $dark;
+
+        background: $gray-200;
     }
 }
 
@@ -1166,6 +1192,7 @@ header {
 //------------------------------------------------------------------------------
 // Footer
 //------------------------------------------------------------------------------
+
 footer {
     .o_get_help {
         padding-top: $o-padding-l;
