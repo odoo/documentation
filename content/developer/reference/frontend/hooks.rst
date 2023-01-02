@@ -30,6 +30,8 @@ documents the list of hooks provided by the Odoo web framework.
      - Display the pager of the control panel of a view.
    * - :ref:`usePosition <frontend/hooks/useposition>`
      - position an element relative to a target
+   * - :ref:`useSpellCheck <frontend/hooks/useSpellCheck>`
+     - activate spellcheck on focus for input or textarea
 
 .. _frontend/hooks/useassets:
 
@@ -282,3 +284,72 @@ API
           </t>
         </div>
       `;
+
+.. _frontend/hooks/useSpellCheck:
+
+useSpellCheck
+=============
+
+Location
+--------
+
+`@web/core/utils/hooks`
+
+Description
+-----------
+
+Activate the spellcheck state to an input or textarea on focus by a `t-ref="spellcheck"` in
+the current component. This state is then removed on blur, as well as the red outline, which
+improves readability of the content.
+
+The hook can also be used on any HTML element with the `contenteditable` attribute. To disable
+spellcheck completely on elements that might be enabled by the hook, set explicitly the
+`spellcheck` attribute as `false` on the element.
+
+.. example::
+
+   In the following example, the spellcheck will be enabled on the first input, the textarea and
+   the div with `contenteditable="true"`.
+
+   .. code-block:: javascript
+
+       import { useSpellCheck } from "@web/core/utils/hooks";
+
+       class Comp {
+         setup() {
+           this.simpleRef = useSpellCheck();
+           this.customRef = useSpellCheck({ refName: "custom" });
+           this.nodeRef = useSpellCheck({ refName: "container" });
+         }
+         static template = "Comp";
+       }
+
+   .. code-block:: xml
+
+       <t t-name="Comp" owl="1">
+         <input t-ref="spellcheck" type="text"/>
+         <textarea t-ref="custom"/>
+         <div t-ref="container">
+           <input type="text" spellcheck="false"/>
+           <div contenteditable="true"/>
+         </div>
+       </t>
+
+API
+---
+
+.. js:function:: useSpellCheck([options])
+
+    :param Options options: the spellcheck options (see table below)
+
+.. list-table::
+   :widths: 20 20 60
+   :header-rows: 1
+
+   * - Option
+     - Type
+     - Description
+   * - `refName`
+     - string
+     - this is a `useRef reference <{OWL_PATH}/doc/reference/hooks.md#useref>`_ for the element that will be
+       spellcheck enabled.
