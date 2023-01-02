@@ -15,11 +15,8 @@ div[aria-label="related navigation"] {
 
 body {
     position: relative;
-    a {
-        @include media-breakpoint-down(lg) {
-            overflow-wrap: anywhere;
-        }
 
+    a {
         &:not(:hover), &.o_logo {
             text-decoration: none !important;
         }
@@ -28,25 +25,26 @@ body {
             text-underline-position: from-font;
         }
 
-        &.external {
-            &:not(.image-reference):after {
-                content: '#{$i-external-link}';
-                margin: 0 $o-icon-margin;
-                font-family: icomoon, sans-serif !important;
-                @include font-size($font-size-base/1.3);
-            }
+        &.external:not(.image-reference):after {
+            content: '#{$i-external-link}';
+            margin: 0 $o-icon-margin;
+            font-family: icomoon, sans-serif !important;
+            @include font-size($font-size-base/1.3);
+        }
+
+        @include media-breakpoint-down(lg) {
+            overflow-wrap: anywhere;
         }
     }
 
     // This fixes the scroll position on all elements, including refs
-    :target {
-        &:before {
-            @include o-scroll-padding()
-        }
+    :target:before {
+        @include o-scroll-padding()
     }
 
     abbr {
         text-underline-offset: 2px;
+
         &[title="Pull Request"] {
             @include o-easter-egg();
         }
@@ -63,6 +61,7 @@ span.viewcode-link {
     float: none;
     margin-left: .3rem;
 }
+
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
@@ -74,6 +73,7 @@ header {
     left: 0;
     right: 0;
     z-index: 10;
+
     .o_main_header {
         height: $o-header-mobile-height;
         padding: 0 $o-padding-s;
@@ -106,9 +106,9 @@ header {
                 }
 
                 span {
-                    color: $secondary;
-                    @include font-size($font-size-base);
                     @include o-easter-egg($img:'img/ducky.svg');
+                    @include font-size($font-size-base);
+                    color: $secondary;
                 }
             }
         }
@@ -139,7 +139,6 @@ header {
                 .btn {
                     @include o-position-absolute($top: 50%, $right: .5rem);
                     transform: translateY(-50%);
-
                     padding: 0 $o-padding-xs;
                     font-size: 1.2rem;
                     color: $o-gray;
@@ -164,8 +163,8 @@ header {
 
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
-                        transform: translateY(-50%);
                         content: $i-close;
+                        transform: translateY(-50%);
                         @include o-inline-icon(auto, middle, 1.2rem);
                     }
                 }
@@ -228,8 +227,8 @@ header {
         background-color: lighten($secondary, 70%) ;
         color: $secondary;
         font-weight: $font-weight-normal;
-
         @include font-size($font-size-sm);
+
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
             height: calc(100vh - #{$o-headers-height});
@@ -237,6 +236,7 @@ header {
             padding-top: $o-padding-m;
             padding-left: $o-padding-m;
         }
+
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -271,29 +271,25 @@ header {
         }
     }
 
-    .o_main_toc {
-        > ul {
-            li {
-                &.o_active_toc_entry {
-                    &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                        color: $secondary;
-                    }
-                }
+    .o_main_toc > ul li {
+        &.o_active_toc_entry {
+            &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+                color: $secondary;
+            }
+        }
 
-                a {
-                    &.current {
-                        color: $secondary;
-                    }
-                }
+        a {
+            &.current {
+                color: $secondary;
             }
         }
     }
 
     ul {
         .o_deepest_active_toc_entry {
-            background-color: $o-toc-bg;
-            border-left: 3px solid $o-toc-border;
             margin-left: -3px;
+            border-left: 3px solid $o-toc-border;
+            background-color: $o-toc-bg;
         }
 
         > .toctree-l1 {
@@ -328,9 +324,9 @@ header {
 }
 
 .o_main_toc, .o_page_toc_nav {
-    ul { // all uls in toc
-        list-style: none;
+    ul {
         padding-left: $o-padding-s;
+        list-style: none;
 
         li {
             > a.reference {
@@ -344,31 +340,29 @@ header {
                 font-weight: $font-weight-normal;
             }
 
-            &:not(.toctree-l1) {
-                .o_toc_entry_wrapper {
-                    &:not(.o_page_toc_title) {
-                        display: flex;
-                        align-items: baseline;
-                    }
+            &:not(.toctree-l1) .o_toc_entry_wrapper {
+                &:not(.o_page_toc_title) {
+                    display: flex;
+                    align-items: baseline;
+                }
 
-                    > i[class^="i-"] {
-                        display: inline-block;
-                        margin-right: .125rem;
-                        transition: rotate, .3s;
-                        font-size: .75rem;
-                        &[aria-expanded="true"] {
-                            transform: rotate(90deg);
-                        }
+                > i[class^="i-"] {
+                    display: inline-block;
+                    margin-right: .125rem;
+                    transition: rotate, .3s;
+                    font-size: .75rem;
+
+                    &[aria-expanded="true"] {
+                        transform: rotate(90deg);
                     }
                 }
             }
 
             &.o_active_toc_entry {
-                &:not(.toctree-l1) > .o_toc_entry_wrapper {
-                    i[class^="i-"]:not(.collapsed) {
-                        transform: rotate(90deg);
-                    }
+                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
+                    transform: rotate(90deg);
                 }
+
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
                     font-weight: $font-weight-bolder;
                 }
@@ -387,8 +381,14 @@ header {
     aside.o_page_toc {
         color: $body-color;
         @include font-size($font-size-sm);
+
         &:not(.o_in_nav_toc) {
+            position: -webkit-sticky;
+            position: sticky;
             display: none;
+            height: 100%;
+            max-height: calc(100vh - #{$o-headers-height});
+
             @include media-breakpoint-up(xl) {
                 display: block;
                 grid-area: toc;
@@ -396,24 +396,22 @@ header {
                 padding: $o-padding-m $o-padding-s $o-padding-m 0;
                 overflow-y: auto;
             }
-            position: -webkit-sticky;
-            position: sticky;
-            height: 100%;
-            max-height: calc(100vh - #{$o-headers-height});
         }
+
         &.o_in_nav_toc {
             display: block;
+
             @include media-breakpoint-up(xl) {
                 display: none;
             }
         }
 
         h5 {
-            text-transform: uppercase;
+            margin-bottom: $o-padding-xs;
+            padding-left: $o-padding-xs;
             font-weight: $font-weight-bolder;
             color: $o-gray-color;
-            padding-left: $o-padding-xs;
-            margin-bottom: $o-padding-xs;
+            text-transform: uppercase;
         }
 
         a {
@@ -439,6 +437,7 @@ header {
     grid-template-areas: "main";
     grid-template-columns: minmax(0,100%);
     margin-top: $o-headers-mobile-height;
+
     @include media-breakpoint-up(lg) {
         grid-template-areas: "sidebar main toc";
         grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
@@ -452,26 +451,30 @@ header {
 
     .o_code {
         padding: 0 .3rem;
+
         &.file {
+            padding-right: .4rem;
+            background-color: $blue-100;
             font-family: $font-family-base;
             font-weight: $o-font-weight-medium;
             font-style: italic;
-            padding-right: .4rem;
             color: $blue-700;
-            background-color: $blue-100;
         }
     }
 
     .sig {
         .sig-prename {
             padding-left: .3rem;
+
             &+ .sig-name {
                 padding-right: .3rem;
             }
         }
+
         em.property + .sig-name {
             padding-left: .3rem;
         }
+
         .sig-paren:last-of-type {
             padding-right: .3rem;
         }
@@ -479,16 +482,19 @@ header {
 
     dl.py, dl.js, dl.o-definition-list {
         > dd {
-            border-left: 3px solid $o-literals-border;
             margin-top: -0.075rem;
             padding-left: $o-padding-s;
             padding-top: $o-padding-xs;
+            border-left: 3px solid $o-literals-border;
         }
+
         &.class em.property {
             font-size: $font-size-sm;
+
             &:first-child {
                 border-bottom: 3px solid $o-literals-border;
             }
+
             &:not(:first-child) {
                 @include o-code;
                 padding: 0 .3rem;
@@ -501,9 +507,10 @@ header {
     }
 
     dl.field-list {
-        @include font-size($font-size-sm);
         padding: .5rem;
         border: 1px solid $o-gray-border;
+        @include font-size($font-size-sm);
+
         @include media-breakpoint-down(lg) {
             display: block;
         }
@@ -530,11 +537,13 @@ header {
         position: relative;
         grid-area: main;
         padding-bottom: $o-padding-l;
+
         @include media-breakpoint-up(lg) {
-            padding: $o-padding-m $o-padding-l;
-            margin: 0;
             grid-column-end: toc;
+            margin: 0;
+            padding: $o-padding-m $o-padding-l;
         }
+
         @include media-breakpoint-up(xl) {
             grid-column-end: main;
         }
@@ -547,14 +556,16 @@ header {
 
         &.o_index {
             .o_content_fw_banner {
+                align-items: center;
                 margin: 0 -0.75rem $o-margin-m;
                 padding: $o-padding-m $o-padding-s;
-                align-items: center;
                 @include o-gradient();
+
                 @include media-breakpoint-up(lg) {
                     margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
                     padding: $o-padding-m $o-padding-m;
                 }
+
                 @include media-breakpoint-up(xl) {
                     margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
                     padding: $o-padding-l $o-padding-l;
@@ -570,41 +581,40 @@ header {
                 font-size: 12px;
             }
 
-            ul {
-                > li {
-                    position: relative;
-                    padding-bottom: $o-padding-xs;
-                    display: flex;
-                    align-items: center;
+            ul > li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-bottom: $o-padding-xs;
 
-                    &:before {
-                        content: $i-article;
-                        @include o-inline-icon(0 $o-icon-margin 0 0);
-                        color: $o-gray-light;
-                    }
+                &:before {
+                    content: $i-article;
+                    @include o-inline-icon(0 $o-icon-margin 0 0);
+                    color: $o-gray-light;
                 }
             }
         }
 
         // First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
-        &.o_fullwidth_page {
-                div.toctree-wrapper > ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    > li {
-                        @include media-breakpoint-down(lg) {
-                            width: 100%;
-                        }
-                        @include media-breakpoint-up(lg) {
-                            width: 33%;
-                            &:not(:nth-of-type(3n)){
-                                padding-right: $o-padding-m;
-                            }
-                        }
+        &.o_fullwidth_page div.toctree-wrapper > ul {
+            flex-wrap: wrap;
+            display: flex;
 
+            > li {
+
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    width: 33%;
+
+                    &:not(:nth-of-type(3n)){
+                        padding-right: $o-padding-m;
                     }
                 }
             }
+        }
 
         // pages with column for code on the right
         &.o_has_code_column {
@@ -616,9 +626,9 @@ header {
 
                     section {
                         > * {
-                            width: $o-halfpage-width;
                             float: left;
                             clear: left;
+                            width: $o-halfpage-width;
                         }
 
                         > h1 {
@@ -631,9 +641,9 @@ header {
                         }
 
                         .doc-aside {
-                            width: $o-codecol-width;
                             float: none;
                             clear: none;
+                            width: $o-codecol-width;
                             margin-left: 57%;
                             padding: $o-padding-s;
 
@@ -655,10 +665,8 @@ header {
             }
         }
 
-        &.o_hide_toc {
-            .toctree-wrapper {
-                display: none;
-            }
+        &.o_hide_toc .toctree-wrapper {
+            display: none;
         }
 
         .toctree-wrapper {
@@ -669,12 +677,11 @@ header {
 
             .toctree-l1 > a {
                 display: block;
-                @include font-size($h2-font-size);
                 margin-top: $o-padding-m;
+                margin-bottom: $o-margin-s;
                 padding-bottom: $o-padding-xs;
                 border-bottom: 1px solid $o-gray-border;
-                margin-bottom: $o-margin-s;
-                font-size: 1.2rem;
+                @include font-size($h2-font-size);
                 font-weight: 600;
             }
 
@@ -688,23 +695,25 @@ header {
             }
 
             a[href="#"] {
-                pointer-events: none;
-                cursor: default;
                 color: $o-gray-color;
                 font-weight: $font-weight-bold;
+                pointer-events: none;
+                cursor: default;
             }
         }
 
         article.doc-body {
-            padding-top: $o-padding-s;
             position: relative;
+            padding-top: $o-padding-s;
 
             .o_git_link {
-                @include font-size($font-size-sm);
                 @include o-position-absolute($top: 0px, $right: $o-margin-s);
+                @include font-size($font-size-sm);
+
                 @include media-breakpoint-up(lg) {
                     @include o-position-absolute($top: 10px, $right: $o-margin-s);
                 }
+
                 i {
                     margin-right: .2rem;
                 }
@@ -719,9 +728,9 @@ header {
                 margin-bottom: $o-margin-m;
 
                 > h1 {
+                    margin-bottom: $o-margin-s;
                     color: $secondary;
                     font-weight: $font-weight-bolder;
-                    margin-bottom: $o-margin-s;
 
                     @include media-breakpoint-up(lg) {
                         max-width: calc(100% - 120px);
@@ -729,11 +738,11 @@ header {
                 }
 
                 > h2 {
-                    font-family: $o-font-family-serif;
-                    color: $o-gray-color;
                     margin-bottom: $o-margin-s;
                     padding-bottom: .3rem;
                     border-bottom: 1px solid $o-gray-border;
+                    font-family: $o-font-family-serif;
+                    color: $o-gray-color;
                 }
 
                 > h3 {
@@ -754,21 +763,20 @@ header {
                 }
 
                 p > img {
-                    border: none;
-                    padding: 0;
                     margin-bottom: 0;
+                    padding: 0;
+                    border: none;
                 }
 
                 .figure {
-
                     .caption, .caption-text {
                         font-weight: $font-weight-bold;
                         color: $o-gray;
                     }
 
                     .caption, .caption-text, .legend, .legend p {
-                        font-style: italic;
                         margin: 0 auto;
+                        font-style: italic;
                     }
 
                     @include media-breakpoint-up(md) {
@@ -779,10 +787,10 @@ header {
                 }
 
                 a.headerlink {
-                    text-decoration: none;
-                    font-size: 0;
                     line-height: 0;
                     visibility: hidden !important;
+                    text-decoration: none;
+                    font-size: 0;
 
                     &:before {
                         content: "\a0";
@@ -790,26 +798,27 @@ header {
 
                     &:after {
                         content: '#{$i-link}';
-                        font-family: icomoon, sans-serif !important;
-                        @include font-size($font-size-base);
-                        margin: 0 0 0 .3rem;
                         visibility: hidden;
-                        color: $o-gray-light;
                         opacity: 0;
                         transition: all, .1s;
+                        margin: 0 0 0 .3rem;
+                        color: $o-gray-light;
+                        font-family: icomoon, sans-serif !important;
+                        @include font-size($font-size-base);
                     }
                 }
 
                 *:hover > a.headerlink:after {
                     // This makes permalinks only visible on hover.
-                        visibility: visible;
-                        opacity: 1;
+                    visibility: visible;
+                    opacity: 1;
                 }
 
                 table.table {
                     @include media-breakpoint-down(lg){
-                    display: block;
-                    overflow-x: auto;
+                        display: block;
+                        overflow-x: auto;
+
                         code {
                             overflow-wrap: break-word;
                         }
@@ -821,20 +830,20 @@ header {
         div[class^="highlight"] {
             // This styles the consoles like read-the-doc's consoles
             overflow-x: auto;
-            border: 1px solid $o-gray-border;
             margin: 1px 0 24px 0;
+            border: 1px solid $o-gray-border;
 
             div[class^="highlight"] {
+                margin: 0;
                 padding: 0;
                 border: none;
-                margin: 0;
             }
             pre {
+                display: block;
+                overflow: auto;
                 white-space: pre;
                 margin: 0;
                 padding: 1rem;
-                display: block;
-                overflow: auto;
             }
         }
 
@@ -847,11 +856,13 @@ header {
             line-height: 1;
             color: $blue-600;
             font-weight: $font-weight-bold;
+
             &:before {
                 content:'?';
                 display: inline-block;
                 width: 15px;
                 height: 15px;
+                margin: 0 .1rem;
                 border: 2px solid $blue-600;
                 border-radius: 20px;
                 text-align: center;
@@ -859,26 +870,24 @@ header {
                 font-size: 12px;
                 font-weight: $font-weight-bolder;
                 font-style: normal;
-                margin: 0 .1rem;
             }
         }
 
 
         .container .container:not([class^="col"]) {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
         ul, ol {
             text-align: left;
         }
 
-        ol {
-            ol {
-                list-style: lower-alpha;
-                > li:before {
-                    content: none;
-                }
+        ol ol {
+            list-style: lower-alpha;
+
+            > li:before {
+                content: none;
             }
         }
 
@@ -890,8 +899,8 @@ header {
             border-width: 0 0 0 $alert-border-width;
 
             > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
-                background-color: $white !important;
                 border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
+                background-color: $white !important;
                 color: inherit;
             }
 
@@ -904,14 +913,15 @@ header {
             }
 
             > h3, > .alert-title {
-                line-height: 1em;
                 margin: 0 0 10px 0;
                 @include font-size($h5-font-size);
+                line-height: 1em;
                 font-weight: $font-weight-bolder;
 
                 &:before {
                     content: var(--o-alert-icon, #{$o-alert-default-icon});
                     @include o-inline-icon(0 $o-icon-margin 0 0, baseline, inherit, inherit);
+
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
@@ -922,6 +932,7 @@ header {
             &[class^="admonition"] {
                 --o-alert-icon: '#{$i-info}';
                 --o-alert-code-border-color: tint-color($info, 30%);
+
                 $background: shift-color($info, $alert-bg-scale);
                 $border: shift-color($info, $alert-border-scale);
                 $color: shift-color($info, $alert-color-scale);
@@ -943,6 +954,7 @@ header {
             &.alert-secondary {
                 --o-alert-icon: '#{$i-article}';
                 --o-alert-code-border-color: #{tint-color($secondary, 30%)};
+
                 a {
                     color: $secondary;
                 }
@@ -952,6 +964,7 @@ header {
             &.alert-tip {
                 --o-alert-icon: '#{$i-lightbulb}';
                 --o-alert-code-border-color: #{$o-gray-border};
+
                 $background: $o-gray-bg;
                 $border: shift-color($primary, $alert-border-scale);
                 $color: shift-color($primary, $alert-color-scale);
@@ -959,6 +972,7 @@ header {
                 @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
                     $color: mix($primary, color-contrast($background), abs($alert-color-scale));
                 }
+
                 @include alert-variant($background, $border, $color);
             }
 
@@ -1001,6 +1015,7 @@ header {
     @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
         $color: mix($o-accordion-bg, color-contrast($background), abs($alert-color-scale));
     }
+
     @include alert-variant($background, $border, $color);
 
     .accordion-button {
@@ -1041,15 +1056,15 @@ header {
 //------------------------------------------------------------------------------
 
 .sphinx-tabs {
-    padding: 0;
     margin-bottom: $o-margin-s;
+    padding: 0;
 
     div[role="tablist"] {
-        border-color: $o-gray-border;
         display: inline-flex;
+        width: 100%;
         overflow-x: auto;
         overflow-y: clip;
-        width: 100%;
+        border-color: $o-gray-border;
     }
 
     *:focus-visible {
@@ -1065,19 +1080,19 @@ header {
     }
 
     .sphinx-tabs-tab {
-        background: $o-gray-bg;
-        color: $o-gray-color;
+        padding: $o-padding-xs $o-padding-s;
         border: 0;
         border-top: solid 1px $o-gray-border;
-        padding: $o-padding-xs $o-padding-s;
+        background: $o-gray-bg;
+        color: $o-gray-color;
 
         &:hover {
             &:not([aria-selected="true"]) {
                 cursor: pointer;
+                border-radius: 0;
                 background: tint-color($secondary, 80%);
                 color: $secondary;
                 transition: color .15s, background .15s;
-                border-radius: 0;
             }
         }
 
@@ -1109,10 +1124,10 @@ header {
     }
 
     .sphinx-tabs-panel {
+        padding: $o-padding-s;
+        border: 1px solid $o-gray-border;
         background: $white;
         color: $o-gray-color;
-        border: 1px solid $o-gray-border;
-        padding: $o-padding-s;
 
         &:focus {
             outline: none;
@@ -1136,14 +1151,15 @@ footer {
         padding-top: $o-padding-l;
         padding-bottom: $o-padding-l;
         background: $o-gray-bg;
+
         @include media-breakpoint-up(lg) {
             padding-left: calc(#{$o-side-nav-width} + #{$o-padding-l})
         }
 
         h4 {
+            margin-bottom: $o-margin-s;
             color: $secondary;
             font-weight: $font-weight-bolder;
-            margin-bottom: $o-margin-s;
         }
 
     }
