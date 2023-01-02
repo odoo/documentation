@@ -78,8 +78,11 @@
      * @param {HTMLElement} navigationMenu - The navigation menu.
      */
     const _expandTopMenus = navigationMenu => {
-        navigationMenu.querySelectorAll('.toctree-l1').forEach(element => {
-            element.querySelector('ul').classList.add('show'); // Expand the top-level menus.
+        navigationMenu.querySelectorAll('.toctree-l1').forEach(tocEntry => {
+            const childTocEntryList = tocEntry.querySelector('ul');
+            if (childTocEntryList) {  // The TOC entry has an associated TOC entry list.
+                childTocEntryList.classList.add('show'); // Expand the top-level menus.
+            }
         });
     };
 
