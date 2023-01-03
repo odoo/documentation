@@ -32,15 +32,15 @@ class Dfn(SphinxRole):
         sphinx.nodes.* class to prevent automatically setting the name of the node as class (e.g.,
         "container") on the element.
         """
-        outer_span = Span(classes=['dfn'])
-        inner_span = Span()
+        outer_span = DfnSpan(classes=['dfn'])
+        inner_span = DfnSpan()
         outer_span.append(inner_span)
         text = nodes.Text(self.text)
         inner_span.append(text)
         return [outer_span], []
 
 
-class Span(nodes.General, nodes.Element):
+class DfnSpan(nodes.General, nodes.Element):
 
     @staticmethod
     def visit(translator, node):
@@ -63,7 +63,7 @@ def setup(app):
         lambda self, node: self.depart_admonition(node),
     ))
     app.add_role('dfn', Dfn(), override=True)
-    app.add_node(Span, html=(Span.visit, Span.depart))
+    app.add_node(DfnSpan, html=(DfnSpan.visit, DfnSpan.depart))
 
     return {
         'parallel_read_safe': True,
