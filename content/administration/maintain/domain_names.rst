@@ -125,8 +125,8 @@ that you proceed with the following actions in this order:
 Add a CNAME record
 ------------------
 
-A **CNAME record** is a type of DNS record that points to the IP address of another website rather
-than to directly to an IP address.
+A **CNAME record** is a type of DNS record that points to the domain of another website rather than
+directly to an IP address.
 
 You need a CNAME record that points to your Odoo database. The requirements are detailed in your
 database manager.
@@ -151,7 +151,7 @@ database manager.
 #. Open the **DNS zone** management page for the domain name you want to configure.
 #. Create a **CNAME record** pointing to the address of your database.
 
-While Odoo suggests creating a CNAME record for your ``www.`` subdomain (``www.example.com``, you
+While Odoo suggests creating a CNAME record for your ``www.`` subdomain (``www.example.com``), you
 can of course use any domain name of your choice, with any subdomain (e.g.,
 ``anything.example.com``).
 
