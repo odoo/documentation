@@ -10,7 +10,6 @@ from sphinx.writers.html5 import HTML5Translator
 #         └── Odoo Translator
 
 ADMONITION_MAPPING = {
-# The alert classes have been replaced by default BS classes to reduce number of scss lines.
     'note': 'alert-primary',
 
     'tip': 'alert-tip',
@@ -27,7 +26,7 @@ ADMONITION_MAPPING = {
 
     'example': 'alert-success',
     'exercise': 'alert-dark',
-}
+}  # The alert classes have been replaced by default BS classes to reduce number of scss lines.
 
 
 class BootstrapTranslator(HTML5Translator):
