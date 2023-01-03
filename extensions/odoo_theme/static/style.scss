@@ -212,14 +212,13 @@ header {
         background-color: lighten($secondary, 70%) ;
         color: $secondary;
         font-weight: $font-weight-normal;
-        @include font-size($font-size-sm);
 
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
             height: calc(100vh - #{$o-headers-height});
             left: 0;
             padding-top: $o-padding-m;
-            padding-left: $o-padding-m;
+            padding-left: $o-padding-s;
         }
 
         &::-webkit-scrollbar {
@@ -247,115 +246,131 @@ header {
         }
     }
 
+}
+
+.o_main_toc {
+    ul {
+        &.current li.o_active_toc_entry {
+            color: $secondary;
+        }
+    }
+
     .toctree-l1 {
         padding-bottom: $o-padding-xs;
 
-        > .o_toc_entry_wrapper a {
-            color: $secondary;
-            font-weight: 600;
-        }
-    }
-
-    .o_main_toc > ul li {
-        &.o_active_toc_entry {
-            &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+        > .o_toc_entry_wrapper {
+            a, i {
                 color: $secondary;
+                font-weight: $o-font-weight-medium;
             }
         }
 
-        a {
-            &.current {
-                color: $secondary;
+        &[class*="o_menu_"] {
+            &.o_deepest_active_toc_entry > .o_toc_entry_wrapper i {
+                color: $white;
+            }
+
+            > .o_toc_entry_wrapper > i:before {
+                @include o-inline-icon(0 $o-icon-margin 0 0);
             }
         }
-    }
 
-    ul {
-        .o_deepest_active_toc_entry {
-            margin-left: -3px;
-            border-left: 3px solid $o-toc-border;
-            background-color: $o-toc-bg;
+        &.o_menu_applications > .o_toc_entry_wrapper > i:before {
+            content:'#{$i-doc-apps}';
         }
 
-        > .toctree-l1 {
-            &[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
-                content: $i-doc-apps;
-                @include o-inline-icon(0 5px 0 0);
-                color: $secondary;
-            }
+        &.o_menu_administration > .o_toc_entry_wrapper > i:before {
+            content:'#{$i-doc-admin}';
+        }
 
-            &.o_menu_applications > .o_toc_entry_wrapper > i:before{
-                content:'#{$i-doc-apps}';
-            }
+        &.o_menu_developer > .o_toc_entry_wrapper > i:before {
+            content:'#{$i-doc-dev}';
+        }
 
-            &.o_menu_administration > .o_toc_entry_wrapper > i:before{
-                content:'#{$i-doc-admin}';
-            }
+        &.o_menu_services > .o_toc_entry_wrapper > i:before {
+            content:'#{$i-doc-services}';
+        }
 
-            &.o_menu_developer > .o_toc_entry_wrapper > i:before{
-                content:'#{$i-doc-dev}';
-            }
-
-            &.o_menu_services > .o_toc_entry_wrapper > i:before{
-                content:'#{$i-doc-services}';
-            }
-
-            &.o_menu_contributing > .o_toc_entry_wrapper > i:before{
-                content:'#{$i-doc-contribute}';
-            }
-
+        &.o_menu_contributing > .o_toc_entry_wrapper > i:before {
+            content:'#{$i-doc-contribute}';
         }
     }
 }
 
 .o_main_toc, .o_page_toc_nav {
+
+    a, .o_toc_entry_wrapper {
+        display: flex;
+        align-items: baseline;
+        width: 100%;
+        border-radius: $border-radius 0 0 $border-radius;
+    }
+
+    a {
+        padding: .3rem;
+        text-decoration: none;
+        color: $o-gray-color;
+        font-weight: $font-weight-normal;
+        @include font-size($font-size-sm);
+    }
+
     ul {
         padding-left: $o-padding-s;
         list-style: none;
 
         li {
-            > a.reference {
-                padding-left: .875rem;
-            }
+            &.o_active_toc_entry {
+                font-weight: $font-weight-bolder;
 
-            a {
-                display: inline-block;
-                padding: .4rem 0;
-                color: $o-gray-color;
-                font-weight: $font-weight-normal;
+                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
+                    transform: rotate(90deg);
+                }
+
+                > .o_toc_entry_wrapper a, > a {
+                    color: inherit;
+                    font-weight: inherit;
+                }
+
+                &.o_deepest_active_toc_entry {
+                    > a,  > .o_toc_entry_wrapper, > .o_toc_entry_wrapper a {
+                        background-color: $secondary;
+                        color: $white;
+                        font-weight: inherit;
+                    }
+                }
             }
 
             &:not(.toctree-l1) .o_toc_entry_wrapper {
-                &:not(.o_page_toc_title) {
-                    display: flex;
-                    align-items: baseline;
-                }
-
                 > i[class^="i-"] {
-                    display: inline-block;
-                    margin-right: .125rem;
                     transition: rotate, .3s;
+                    cursor: pointer;
                     font-size: .75rem;
 
                     &[aria-expanded="true"] {
                         transform: rotate(90deg);
                     }
+
                 }
             }
 
-            &.o_active_toc_entry {
-                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
-                    transform: rotate(90deg);
+            &:not(.o_deepest_active_toc_entry) {
+                > .o_toc_entry_wrapper:hover, > a:hover {
+                    background-color: $o-gray-bg;
                 }
+            }
 
-                > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    font-weight: $font-weight-bolder;
-                }
+            .o_toc_entry_wrapper > i {
+                cursor: pointer;
+                margin-left: $o-icon-margin;
+            }
+
+            > a {
+                padding-left: 1.25rem;
             }
         }
     }
 
-    > ul { //is first ul in toc
+    > ul {
         padding-left: 0;
     }
 }
@@ -366,7 +381,6 @@ header {
 
 aside.o_page_toc {
     color: $body-color;
-    @include font-size($font-size-sm);
 
     &:not(.o_in_nav_toc) {
         position: -webkit-sticky;
@@ -379,7 +393,7 @@ aside.o_page_toc {
             display: block;
             grid-area: toc;
             top: $o-headers-height;
-            padding: $o-padding-m $o-padding-s $o-padding-m 0;
+            padding: $o-padding-m 0;
             overflow-y: auto;
         }
     }
@@ -394,15 +408,9 @@ aside.o_page_toc {
 
     h5 {
         margin-bottom: $o-padding-xs;
-        padding-left: $o-padding-xs;
         font-weight: $font-weight-bolder;
         color: $o-gray-color;
         text-transform: uppercase;
-    }
-
-    a {
-        font-weight: $font-weight-normal;
-        color: $o-gray-color
     }
 
     .o_page_toc_title {
@@ -739,6 +747,7 @@ div[class^="highlight"] {
     overflow-x: auto;
     margin: 1px 0 24px 0;
     border: 1px solid $o-gray-border;
+    border-radius: $border-radius;
 
     div[class^="highlight"] {
         margin: 0;
@@ -787,6 +796,7 @@ ol ol {
 
 .o_code {
     padding: 0 .3rem;
+    border-radius: $border-radius;
 
 //File
     &.file {
@@ -840,12 +850,21 @@ abbr {
 //(ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
 
 .sig {
+    font-size: 0.875rem;
     .sig-prename {
         padding-left: .3rem;
 
         &+ .sig-name {
             padding-right: .3rem;
         }
+    }
+
+    .sig-name:first-of-type {
+        padding-left: .3rem;
+    }
+
+    .sig-name:last-of-type {
+        padding-right: .3rem;
     }
 
     em.property + .sig-name {
@@ -1110,7 +1129,6 @@ span.viewcode-link {
         width: 100%;
         overflow-x: auto;
         overflow-y: clip;
-        border-color: $o-gray-border;
     }
 
     *:focus-visible {
@@ -1129,25 +1147,25 @@ span.viewcode-link {
         padding: $o-padding-xs $o-padding-s;
         border: 0;
         border-top: solid 1px $o-gray-border;
-        background: $o-gray-bg;
-        color: $o-gray-color;
+        background-color: $o-gray-bg;
+        color: lighten($o-gray-color, 15%);
 
         &:hover {
             &:not([aria-selected="true"]) {
-                cursor: pointer;
-                border-radius: 0;
-                background: tint-color($secondary, 80%);
-                color: $secondary;
-                transition: color .15s, background .15s;
+                color: $o-gray-color;
+                background-color: darken($o-gray-bg, 3%);
+                transition: color .2s, background .2s;
             }
         }
 
         &:first-of-type {
             border-left: solid 1px $o-gray-border;
+            border-radius: $border-radius 0 0 0;
         }
 
         &:last-of-type {
             border-right: solid 1px $o-gray-border;
+            border-radius: 0 $border-radius 0 0;
         }
 
         &:focus {
@@ -1155,16 +1173,13 @@ span.viewcode-link {
         }
 
         &[aria-selected="true"] {
-            @include o-content-tab-selected();
-            margin-top: 0;
-            margin-bottom: -1px;
-
+            font-weight: $font-weight-bolder;
+            border-left: 1px solid $o-gray-border;
+            border-right: 1px solid $o-gray-border;
+            color: $o-gray-color;
+            background: $white;
             &:hover {
                 cursor: unset;
-            }
-
-            &:first-of-type {
-                @include o-content-tab-selected();
             }
         }
     }
@@ -1174,6 +1189,7 @@ span.viewcode-link {
         border: 1px solid $o-gray-border;
         background: $white;
         color: $o-gray-color;
+        border-radius: 0 $border-radius $border-radius $border-radius;
 
         &:focus {
             outline: none;

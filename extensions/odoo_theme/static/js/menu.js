@@ -59,15 +59,11 @@
             deepestActiveTocEntries.push(lastTocEntry);
         }
         deepestActiveTocEntries.forEach(deepestTocEntry => {
-            let tocEntryToHighlight;
             const childTocEntryList = deepestTocEntry.querySelector('ul');
             if (childTocEntryList) {  // The TOC entry has an associated TOC entry list.
-                tocEntryToHighlight = deepestTocEntry;
                 childTocEntryList.classList.add('show');
-            } else { // The TOC entry is at the last level of its branch.
-                tocEntryToHighlight = deepestTocEntry.parentElement.parentElement;
             }
-            tocEntryToHighlight.classList.add('o_deepest_active_toc_entry');
+            deepestTocEntry.classList.add('o_deepest_active_toc_entry');
         });
         return deepestActiveTocEntries;
     };
