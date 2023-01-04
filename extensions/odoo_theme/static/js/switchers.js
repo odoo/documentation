@@ -12,7 +12,7 @@
      * original target URL) that is available.
      */
     const _prepareSwitchersFallbacks = () => {
-        document.querySelectorAll('a[class="o_switcher_item"]').forEach(element => {
+        document.querySelectorAll('a.o_switcher_item').forEach(element => {
             element.addEventListener('click', async event => {
                 if (element.hasAttribute('href')) {
                     const targetUrl = element.getAttribute('href');
