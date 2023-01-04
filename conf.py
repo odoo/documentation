@@ -229,6 +229,7 @@ languages_names = {
     'pt_BR': 'PT',
     'uk': 'UA',
     'zh_CN': 'ZH',
+    'ro': 'RO'.
 }
 
 # The directory in which files holding redirect rules used by the 'redirects' extension are listed.
