@@ -137,13 +137,9 @@ Running the server
 
     stops the server after its initialization.
 
-.. option:: --geoip-city-db <path>
+.. option:: --geoip-db <path>
 
-   Absolute path to the GeoIP City database file.
-
-.. option:: --geoip-country-db <path>
-
-   Absolute path to the GeoIP Country database file.
+   Absolute path to the GeoIP database file.
 
 
 .. _reference/cmdline/testing:
