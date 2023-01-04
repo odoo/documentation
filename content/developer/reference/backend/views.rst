@@ -1748,6 +1748,11 @@ Possible children of the view element are:
   least one root template ``kanban-box``, which will be rendered once for each
   record.
 
+  Two additional templates can be defined: ``kanban-menu`` and ``kanban-tooltip``.
+  If defined, the ``kanban-menu`` template is rendered inside a dropdown that can be
+  toggled with a vertical ellipsis (:guilabel:`⋮`) on the top right of the card.
+  The ``kanban-tooltip`` template is rendered inside a tooltip when hovering kanban cards.
+
   The kanban view uses mostly-standard :ref:`javascript qweb
   <reference/qweb/javascript>` and provides the following context variables:
 
