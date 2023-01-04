@@ -1,8 +1,10 @@
 @import "scss/bootstrap_scss/_functions.scss";
 @import "scss/_sphinx_basic";
-@import "scss/_variables";
 @import "scss/bootstrap_overridden";
 @import "scss/bootstrap_scss/bootstrap";
+@import "scss/_variables";
+@import "scss/_utilities_extended";
+@import "scss/bootstrap_scss/utilities/_api.scss";
 @import "scss/_mixins";
 @import "scss/_typography";
 @import "scss/_iconfont";
@@ -13,42 +15,30 @@ div[aria-label="related navigation"] {
 
 body {
     position: relative;
+
     a {
+        text-underline-position: from-font;
+
+        &.external:not(.image-reference):after {
+            content: '#{$i-external-link}';
+            margin: 0 $o-icon-margin;
+            font-family: icomoon, sans-serif !important;
+            @include font-size($font-size-base/1.3);
+        }
+
         @include media-breakpoint-down(lg) {
             overflow-wrap: anywhere;
         }
-
-        &:not(:hover), &.o_logo {
-            text-decoration: none !important;
-        }
-
-        &:hover {
-            text-underline-position: from-font;
-        }
-
-        &.external {
-            &:not(.image-reference):after {
-                content: '#{$i-external-link}';
-                font-family: icomoon, sans-serif !important;
-                @include font-size($font-size-base/1.3);
-                margin: 0 .2rem;
-            }
-        }
-    }
-
-    dd {
-        margin-left: 1rem;
     }
 
     // This fixes the scroll position on all elements, including refs
-    :target {
-        &:before {
-            @include o-scroll-padding()
-        }
+    :target:before {
+        @include o-scroll-padding()
     }
 
     abbr {
         text-underline-offset: 2px;
+
         &[title="Pull Request"] {
             @include o-easter-egg();
         }
@@ -56,57 +46,65 @@ body {
 }
 
 .hidden {
-    visibility: hidden !important;
     display: none !important;
     opacity: 0 !important;
+    visibility: hidden !important;
 }
 
 span.viewcode-link {
     float: none;
     margin-left: .3rem;
 }
+
 //------------------------------------------------------------------------------
 // Header with logo, searchbar and switchers
 //------------------------------------------------------------------------------
 
 header {
-    width: 100%;
     position: fixed;
+    width: 100%;
     top: 0;
     left: 0;
     right: 0;
     z-index: 10;
+
     .o_main_header {
         height: $o-header-mobile-height;
-        background-color: $o-header-white;
-        padding: 0 $padding-s;
+        padding: 0 $o-padding-s;
+        background-color: $o-header-bg;
+
         @include media-breakpoint-up(lg) {
             height: $o-header-height;
-            padding: 0 $padding-m;
+            padding: 0 $o-padding-m;
         }
+
         @include media-breakpoint-up(xl) {
-            padding: 0 $padding-l 0 $padding-m;
+            padding: 0 $o-padding-l 0 $o-padding-m;
         }
 
         .o_logo_wrapper {
-            margin-right: $margin-s;
+            margin-right: $o-margin-s;
+
             @include media-breakpoint-up(xl) {
-                width: calc(#{$o-side-nav-width} - #{$padding-m});
+                width: calc(#{$o-side-nav-width} - #{$o-padding-m});
             }
+
             @include media-breakpoint-up(lg) {
-                margin-right: $margin-l;
+                margin-right: $o-margin-l;
             }
 
             > .o_logo {
+                text-decoration: none;
+
                 img {
-                    margin-bottom: -2px;
                     vertical-align: baseline;
+                    margin-bottom: -2px;
                 }
 
                 span {
-                    @include font-size($font-size-base);
-                    color: $o-violet;
                     @include o-easter-egg($img:'img/ducky.svg');
+                    @include font-size($font-size-base);
+                    color: $secondary;
                 }
             }
         }
@@ -127,40 +125,43 @@ header {
             position: relative;
 
             @include media-breakpoint-up(lg) {
-                margin-right: $padding-m;
+                margin-right: $o-padding-m;
             }
 
             .o_search {
                 position: relative;
                 width: 100%;
+
                 .btn {
                     @include o-position-absolute($top: 50%, $right: .5rem);
-                    @include o-transform (translateY(-50%)) ;
-
-                    padding: 0 $padding-xs;
+                    transform: translateY(-50%);
+                    padding: 0 $o-padding-xs;
                     font-size: 1.2rem;
-                    color: $gray;
+                    color: $o-gray;
                 }
 
                 .form-control {
                     @include media-breakpoint-down(lg) {
                         padding: 0.275rem 0.5rem;
-                        font-size: $font-size-secondary;
+                        font-size: $font-size-sm;
                     }
                 }
 
             }
 
             .highlight-link {
-                @include font-size(0);
                 margin-bottom: 0;
+                @include font-size(0);
+
                 a {
                     text-decoration: none;
-                    color: $gray;
+                    color: $o-gray;
+
                     &:before {
                         @include o-position-absolute($top: 50%, $right: 3rem);
-                        @include o-transform (translateY(-50%)) ;
-                        @include o-inline-icon($i-close, auto, middle, 1.2rem);
+                        content: $i-close;
+                        transform: translateY(-50%);
+                        @include o-inline-icon(auto, middle, 1.2rem);
                     }
                 }
             }
@@ -168,23 +169,27 @@ header {
     }
 
     .o_subheader {
-        background: $gray-lighter;
         height: $o-subheader-height;
-        padding-right: $padding-s;
+        padding-right: $o-padding-s;
+        background: $o-gray-bg;
+
         @include media-breakpoint-up(lg) {
-            padding: 0 $padding-m;
+            padding: 0 $o-padding-m;
         }
+
         @include media-breakpoint-up(xl) {
-            padding: 0 $padding-l 0 0;
+            padding: 0 $o-padding-l 0 0;
         }
 
         .o_side_nav_toggler_wrapper {
             height: 100%;
+
             button {
                 &:focus, &:focus-visible{
-                box-shadow: none;
-                outline:none;
+                    box-shadow: none;
+                    outline:none;
                 }
+
                 &[aria-expanded="true"]{
                     background-color: rgba(0,0,0, .2);
                 }
@@ -199,33 +204,35 @@ header {
 
 .o_side_nav {
     .o_mobile-overlay {
-        background-color: rgba(0,0,0,.3);
         @include o-position-absolute($top: 0, $bottom: 0, $left: 0, $right:0);
+        z-index: -100;
         opacity: 0;
         transition: opacity .2s linear;
-        z-index: -100;
+        background-color: rgba(0,0,0,.3);
     }
 
     .o_side_nav-inner {
-        width: 90%;
-        height: calc(100% - #{$o-headers-mobile-height});
-        overflow-y: auto;
         position: fixed;
         left: -100%;
-        @include o-transition(all, .3s);
-        padding-left: $padding-s;
-        background-color: lighten($o-violet-dark, 70%) ;
         z-index: 10;
-        @include font-size($font-size-secondary);
-        color: $o-violet-dark;
-        font-weight: $fw_regular;
+        width: 90%;
+        height: calc(100% - #{$o-headers-mobile-height});
+        transition: all, .3s;
+        overflow-y: auto;
+        padding-left: $o-padding-s;
+        background-color: lighten($secondary, 70%) ;
+        color: $secondary;
+        font-weight: $font-weight-normal;
+        @include font-size($font-size-sm);
+
         @include media-breakpoint-up(lg) {
             width: $o-side-nav-width;
             height: calc(100vh - #{$o-headers-height});
             left: 0;
-            padding-top: $padding-m;
-            padding-left: $padding-m;
+            padding-top: $o-padding-m;
+            padding-left: $o-padding-m;
         }
+
         &::-webkit-scrollbar {
             width: 5px;
         }
@@ -235,7 +242,7 @@ header {
         }
 
         &::-webkit-scrollbar-thumb {
-            background-color: $o-violet-darker ;
+            background-color: $secondary;
             border-radius: 0;
         }
     }
@@ -252,43 +259,40 @@ header {
     }
 
     .toctree-l1 {
-        padding-bottom: $padding-xs;
+        padding-bottom: $o-padding-xs;
 
         > .o_toc_entry_wrapper a {
-            color: $o-violet-dark;
+            color: $secondary;
             font-weight: 600;
         }
     }
 
-    .o_main_toc {
-        > ul {
-            li {
-                &.o_active_toc_entry {
-                    &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                        color: $o-violet-dark;
-                    }
-                }
+    .o_main_toc > ul li {
+        &.o_active_toc_entry {
+            &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed), > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
+                color: $secondary;
+            }
+        }
 
-                a {
-                    &.current {
-                        color: $o-violet-dark;
-                    }
-                }
+        a {
+            &.current {
+                color: $secondary;
             }
         }
     }
 
     ul {
         .o_deepest_active_toc_entry {
-            background-color: $gray-lighter;
-            border-left: 3px solid $gray-lighter;
             margin-left: -3px;
+            border-left: 3px solid $o-toc-border;
+            background-color: $o-toc-bg;
         }
 
         > .toctree-l1 {
             &[class*="o_menu_"] > .o_toc_entry_wrapper > i:before {
-                @include o-inline-icon($i-doc-apps, 0 5px 0 0);
-                color: $o-violet-dark;
+                content: $i-doc-apps;
+                @include o-inline-icon(0 5px 0 0);
+                color: $secondary;
             }
 
             &.o_menu_applications > .o_toc_entry_wrapper > i:before{
@@ -316,9 +320,9 @@ header {
 }
 
 .o_main_toc, .o_page_toc_nav {
-    ul { // all uls in toc
+    ul {
+        padding-left: $o-padding-s;
         list-style: none;
-        padding-left: $padding-s;
 
         li {
             > a.reference {
@@ -328,37 +332,35 @@ header {
             a {
                 display: inline-block;
                 padding: .4rem 0;
-                color: $gray-darker;
-                font-weight: $fw_regular;
+                color: $o-gray-color;
+                font-weight: $font-weight-normal;
             }
 
-            &:not(.toctree-l1) {
-                .o_toc_entry_wrapper {
-                    &:not(.o_page_toc_title) {
-                        display: flex;
-                        align-items: baseline;
-                    }
+            &:not(.toctree-l1) .o_toc_entry_wrapper {
+                &:not(.o_page_toc_title) {
+                    display: flex;
+                    align-items: baseline;
+                }
 
-                    > i[class^="i-"] {
-                        display: inline-block;
-                        margin-right: .125rem;
-                        @include o-transition(rotate, .3s);
-                        font-size: .75rem;
-                        &[aria-expanded="true"] {
-                            @include o-transform(rotate(90deg));
-                        }
+                > i[class^="i-"] {
+                    display: inline-block;
+                    margin-right: .125rem;
+                    transition: rotate, .3s;
+                    font-size: .75rem;
+
+                    &[aria-expanded="true"] {
+                        transform: rotate(90deg);
                     }
                 }
             }
 
             &.o_active_toc_entry {
-                &:not(.toctree-l1) > .o_toc_entry_wrapper {
-                    i[class^="i-"]:not(.collapsed) {
-                        @include o-transform(rotate(90deg));
-                    }
+                &:not(.toctree-l1) > .o_toc_entry_wrapper i[class^="i-"]:not(.collapsed) {
+                    transform: rotate(90deg);
                 }
+
                 > a , > .o_toc_entry_wrapper a, > .o_toc_entry_wrapper i {
-                    font-weight: $fw_bold;
+                    font-weight: $font-weight-bolder;
                 }
             }
         }
@@ -374,39 +376,43 @@ header {
 
     aside.o_page_toc {
         color: $body-color;
-        @include font-size($font-size-secondary);
+        @include font-size($font-size-sm);
+
         &:not(.o_in_nav_toc) {
+            position: -webkit-sticky;
+            position: sticky;
             display: none;
+            height: 100%;
+            max-height: calc(100vh - #{$o-headers-height});
+
             @include media-breakpoint-up(xl) {
                 display: block;
                 grid-area: toc;
                 top: $o-headers-height;
-                padding: $padding-m $padding-s $padding-m 0;
+                padding: $o-padding-m $o-padding-s $o-padding-m 0;
                 overflow-y: auto;
             }
-            position: -webkit-sticky;
-            position: sticky;
-            height: 100%;
-            max-height: calc(100vh - #{$o-headers-height});
         }
+
         &.o_in_nav_toc {
             display: block;
+
             @include media-breakpoint-up(xl) {
                 display: none;
             }
         }
 
-        h3 {
+        h5 {
+            margin-bottom: $o-padding-xs;
+            padding-left: $o-padding-xs;
+            font-weight: $font-weight-bolder;
+            color: $o-gray-color;
             text-transform: uppercase;
-            font-weight: $fw_bold;
-            color: $gray-darker;
-            padding-left: $padding-xs;
-            margin-bottom: $padding-xs;
         }
 
         a {
-            font-weight: $fw_regular;
-            color: $gray-darker;
+            font-weight: $font-weight-normal;
+            color: $o-gray-color
         }
 
         .o_page_toc_title {
@@ -427,44 +433,95 @@ header {
     grid-template-areas: "main";
     grid-template-columns: minmax(0,100%);
     margin-top: $o-headers-mobile-height;
+
     @include media-breakpoint-up(lg) {
         grid-template-areas: "sidebar main toc";
         grid-template-columns: minmax(0,$o-side-nav-width) minmax(0,auto) minmax(0,$o-on-page-width);
         margin-top: $o-headers-height;
     }
-    p {
-        > code {
-            padding: 0 .3rem;
+
+    // Literals Styles (ex: https://www.odoo.com/documentation/master/developer/reference/backend/orm.html#fields)
+    .o_code, .sig [class^="sig-"] {
+        @include o-code;
+    }
+
+    .o_code {
+        padding: 0 .3rem;
+
+        &.file {
+            padding-right: .4rem;
+            background-color: $blue-100;
+            font-family: $font-family-base;
+            font-weight: $o-font-weight-medium;
+            font-style: italic;
+            color: $blue-700;
         }
     }
-    code {
-        display: inline-block;
-        color: inherit;
-        overflow-wrap: anywhere;
-        &:first-of-type:not(span):not(em) {
+
+    .sig {
+        .sig-prename {
             padding-left: .3rem;
-        }
-        &:last-of-type:not(em) {
-            padding-right: .3rem;
-        }
-        ~ .sig-paren, ~ .sig-param, ~ .optional {
-            @extend code;
-            + .sig-paren {
-                padding: 0 .1rem;
+
+            &+ .sig-name {
+                padding-right: .3rem;
             }
         }
-        &.file {
-            font-family: $font-family-base;
-            font-weight: $fw_medium;
-            font-style: italic;
-            padding-right: .4rem;
-            color: $color-beta-dark;
-            background-color: lighten($color-beta-lightest, 30%);
+
+        em.property + .sig-name {
+            padding-left: .3rem;
         }
 
-        &:not(.file) {
-            color: inherit;
-            background: darken($doc_code-bg,3%);
+        .sig-paren:last-of-type {
+            padding-right: .3rem;
+        }
+    }
+
+    dl.py, dl.js, dl.o-definition-list {
+        > dd {
+            margin-top: -0.075rem;
+            padding-left: $o-padding-s;
+            padding-top: $o-padding-xs;
+            border-left: 3px solid $o-literals-border;
+        }
+
+        &.class em.property {
+            font-size: $font-size-sm;
+
+            &:first-child {
+                border-bottom: 3px solid $o-literals-border;
+            }
+
+            &:not(:first-child) {
+                @include o-code;
+                padding: 0 .3rem;
+            }
+        }
+    }
+
+    dl:not([class]) dd {
+        margin-left: $o-margin-s;
+    }
+
+    dl.field-list {
+        padding: .5rem;
+        border: 1px solid $o-gray-border;
+        @include font-size($font-size-sm);
+
+        @include media-breakpoint-down(lg) {
+            display: block;
+        }
+
+        > dt {
+            padding-left: 0;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+
+            li:not(:last-child) {
+                padding-bottom: $o-padding-xs;
+            }
         }
     }
 
@@ -475,12 +532,14 @@ header {
     main {
         position: relative;
         grid-area: main;
-        padding-bottom: $padding-l;
+        padding-bottom: $o-padding-l;
+
         @include media-breakpoint-up(lg) {
-            padding: $padding-m $padding-l;
-            margin: 0;
             grid-column-end: toc;
+            margin: 0;
+            padding: $o-padding-m $o-padding-l;
         }
+
         @include media-breakpoint-up(xl) {
             grid-column-end: main;
         }
@@ -493,17 +552,19 @@ header {
 
         &.o_index {
             .o_content_fw_banner {
-                margin: 0 -0.75rem $margin-m;
-                padding: $padding-m $padding-s;
                 align-items: center;
+                margin: 0 -0.75rem $o-margin-m;
+                padding: $o-padding-m $o-padding-s;
                 @include o-gradient();
+
                 @include media-breakpoint-up(lg) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-m;
-                    padding: $padding-m $padding-m;
+                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-m;
+                    padding: $o-padding-m $o-padding-m;
                 }
+
                 @include media-breakpoint-up(xl) {
-                    margin: -#{$margin-m} -#{$margin-l} $margin-l;
-                    padding: $padding-l $padding-l;
+                    margin: -#{$o-margin-m} -#{$o-margin-l} $o-margin-l;
+                    padding: $o-padding-l $o-padding-l;
                 }
             }
             .row:first-of-type h2.border-top {
@@ -516,60 +577,54 @@ header {
                 font-size: 12px;
             }
 
-            ul {
-                > li {
-                    position: relative;
-                    padding-bottom: $padding-xs;
-                    display: flex;
-                    align-items: center;
+            ul > li {
+                position: relative;
+                display: flex;
+                align-items: center;
+                padding-bottom: $o-padding-xs;
 
-                    &:before {
-                        @include o-inline-icon($i-article, 0 .2rem 0 0);
-                        color: $gray-light;
-                    }
-                }
-            }
-
-            .o_changelog {
-                .row:last-of-type > .border-bottom {
-                    border: none !important;
+                &:before {
+                    content: $i-article;
+                    @include o-inline-icon(0 $o-icon-margin 0 0);
+                    color: $o-gray-light;
                 }
             }
         }
 
         // First level legal page and pages with toctrees (i.e.: User Docs, Install & Maintain, Developer, Contributing)
-        &.o_fullwidth_page {
-                div.toctree-wrapper > ul {
-                    display: flex;
-                    flex-wrap: wrap;
-                    > li {
-                        @include media-breakpoint-down(lg) {
-                            width: 100%;
-                        }
-                        @include media-breakpoint-up(lg) {
-                            width: 33%;
-                            &:not(:nth-of-type(3n)){
-                                padding-right: $padding-m;
-                            }
-                        }
+        &.o_fullwidth_page div.toctree-wrapper > ul {
+            flex-wrap: wrap;
+            display: flex;
 
+            > li {
+
+                @include media-breakpoint-down(lg) {
+                    width: 100%;
+                }
+
+                @include media-breakpoint-up(lg) {
+                    width: 33%;
+
+                    &:not(:nth-of-type(3n)){
+                        padding-right: $o-padding-m;
                     }
                 }
             }
+        }
 
         // pages with column for code on the right
         &.o_has_code_column {
             article.doc-body {
                 @include media-breakpoint-up(xl) {
                     .o_git_link {
-                        right: calc(#{$o-codecol-width} + #{$padding-l});
+                        right: calc(#{$o-codecol-width} + #{$o-padding-l});
                     }
 
                     section {
                         > * {
-                            width: $o-halfpage-width;
                             float: left;
                             clear: left;
+                            width: $o-halfpage-width;
                         }
 
                         > h1 {
@@ -582,14 +637,14 @@ header {
                         }
 
                         .doc-aside {
-                            width: $o-codecol-width;
                             float: none;
                             clear: none;
+                            width: $o-codecol-width;
                             margin-left: 57%;
-                            padding: $padding-s;
+                            padding: $o-padding-s;
 
                             blockquote {
-                                font-weight: $fw_semibold;
+                                font-weight: $font-weight-bold;
                                 font-style: italic;
                             }
 
@@ -606,10 +661,8 @@ header {
             }
         }
 
-        &.o_hide_toc {
-            .toctree-wrapper {
-                display: none;
-            }
+        &.o_hide_toc .toctree-wrapper {
+            display: none;
         }
 
         .toctree-wrapper {
@@ -620,12 +673,11 @@ header {
 
             .toctree-l1 > a {
                 display: block;
+                margin-top: $o-padding-m;
+                margin-bottom: $o-margin-s;
+                padding-bottom: $o-padding-xs;
+                border-bottom: 1px solid $o-gray-border;
                 @include font-size($h2-font-size);
-                margin-top: $padding-m;
-                padding-bottom: $padding-xs;
-                border-bottom: 1px solid $gray-light;
-                margin-bottom: $margin-s;
-                font-size: 1.2rem;
                 font-weight: 600;
             }
 
@@ -639,81 +691,27 @@ header {
             }
 
             a[href="#"] {
+                color: $o-gray-color;
+                font-weight: $font-weight-bold;
                 pointer-events: none;
                 cursor: default;
-                color: $gray-darker;
-                font-weight: $fw_semibold;
             }
         }
 
         article.doc-body {
-            padding-top: $padding-s;
             position: relative;
+            padding-top: $o-padding-s;
 
             .o_git_link {
-                @include font-size($font-size-secondary);
-                @include o-position-absolute($top: 0px, $right: $margin-s);
+                @include o-position-absolute($top: 0px, $right: $o-margin-s);
+                @include font-size($font-size-sm);
+
                 @include media-breakpoint-up(lg) {
-                    @include o-position-absolute($top: 10px, $right: $margin-s);
+                    @include o-position-absolute($top: 10px, $right: $o-margin-s);
                 }
+
                 i {
                     margin-right: .2rem;
-                }
-            }
-
-            .command {
-                font-family: var(--bs-font-monospace);
-                font-weight: $fw_regular;
-                @extend code;
-            }
-
-            dl.py, dl.js, dl.o-definition-list {
-                > dd {
-                    border-left: 3px solid $gray-lighter;
-                    margin: 0;
-                    padding-left: $padding-s;
-                    padding-top: $padding-xs;
-                }
-                &.class em.property {
-                    font-size: $font-size-secondary;
-                    &:first-child {
-                        border-bottom: 3px solid $gray-lighter;
-                        + [class^=sig] {
-                            padding-left: .3rem;
-                        }
-                    }
-                    &:not(:first-child) {
-                        @extend code;
-                        &:last-of-type {
-                            padding-right: .3rem;
-                        }
-                    }
-                }
-            }
-
-            dl.field-list {
-                @include font-size($font-size-secondary);
-                padding: .5rem;
-                border: 1px solid $gray-light;
-                @include media-breakpoint-down(lg) {
-                    display: block;
-                }
-
-                > dt {
-                    padding-left: 0;
-                }
-
-                > dd {
-                    padding-right: 0;
-                }
-
-                ul {
-                    list-style: none;
-                    padding-left: 0;
-
-                    li {
-                        padding-bottom: $padding-xs;
-                    }
                 }
             }
 
@@ -723,44 +721,33 @@ header {
             }
 
             section {
+                margin-bottom: $o-margin-m;
+
                 > h1 {
-                    color: $o-violet-dark;
-                    font-weight: $fw_bold;
+                    margin-bottom: $o-margin-s;
+                    color: $secondary;
+                    font-weight: $font-weight-bolder;
+
                     @include media-breakpoint-up(lg) {
                         max-width: calc(100% - 120px);
-                    }
-                    + * {
-                        margin-top: $margin-s;
                     }
                 }
 
                 > h2 {
-                    font-family: $font-family-serif;
-                    color: $gray-darker;
-                    margin-top: $margin-m;
-                    margin-bottom: $margin-s;
+                    margin-bottom: $o-margin-s;
                     padding-bottom: .3rem;
-                    border-bottom: 1px solid $gray-light;
+                    border-bottom: 1px solid $o-gray-border;
+                    font-family: $o-font-family-serif;
+                    color: $o-gray-color;
                 }
 
                 > h3 {
-                    margin-top: $margin-m;
-                    font-weight: $fw_bold;
-                }
-
-                > h4 {
-                    margin-top: $margin-l;
-                }
-
-                > h4, > h5, > h6 {
-                    font-weight: $fw_semibold;
+                    font-size: $font-size-base * 1.3;
+                    font-weight: $font-weight-bold;
                 }
 
                 img {
-                    border: 1px solid $gray-lighter;
-                    background: $white;
-                    padding: .5rem;
-                    margin-bottom: 1rem;
+                    margin-bottom: $o-margin-s;
                 }
 
                 img:not(.o-no-modal) {
@@ -768,25 +755,24 @@ header {
                 }
 
                 iframe {
-                    margin-bottom: 1rem;
+                    margin-bottom: $o-margin-s;
                 }
 
                 p > img {
-                    border: none;
-                    padding: 0;
                     margin-bottom: 0;
+                    padding: 0;
+                    border: none;
                 }
 
                 .figure {
-
                     .caption, .caption-text {
-                        font-weight: $fw_semibold;
-                        color: $gray;
+                        font-weight: $font-weight-bold;
+                        color: $o-gray;
                     }
 
                     .caption, .caption-text, .legend, .legend p {
-                        font-style: italic;
                         margin: 0 auto;
+                        font-style: italic;
                     }
 
                     @include media-breakpoint-up(md) {
@@ -797,10 +783,10 @@ header {
                 }
 
                 a.headerlink {
-                    text-decoration: none;
-                    font-size: 0;
                     line-height: 0;
                     visibility: hidden !important;
+                    text-decoration: none;
+                    font-size: 0;
 
                     &:before {
                         content: "\a0";
@@ -808,26 +794,27 @@ header {
 
                     &:after {
                         content: '#{$i-link}';
+                        visibility: hidden;
+                        opacity: 0;
+                        transition: all, .1s;
+                        margin: 0 0 0 .3rem;
+                        color: $o-gray-light;
                         font-family: icomoon, sans-serif !important;
                         @include font-size($font-size-base);
-                        margin: 0 0 0 .3rem;
-                        visibility: hidden;
-                        color: $gray-light;
-                        opacity: 0;
-                        @include o-transition(all, .1s)
                     }
                 }
 
                 *:hover > a.headerlink:after {
                     // This makes permalinks only visible on hover.
-                        visibility: visible;
-                        opacity: 1;
+                    visibility: visible;
+                    opacity: 1;
                 }
 
                 table.table {
                     @include media-breakpoint-down(lg){
-                    display: block;
-                    overflow-x: auto;
+                        display: block;
+                        overflow-x: auto;
+
                         code {
                             overflow-wrap: break-word;
                         }
@@ -839,250 +826,174 @@ header {
         div[class^="highlight"] {
             // This styles the consoles like read-the-doc's consoles
             overflow-x: auto;
-            border: 1px solid $gray-light;
             margin: 1px 0 24px 0;
+            border: 1px solid $o-gray-border;
 
             div[class^="highlight"] {
+                margin: 0;
                 padding: 0;
                 border: none;
-                margin: 0;
             }
             pre {
+                display: block;
+                overflow: auto;
                 white-space: pre;
                 margin: 0;
                 padding: 1rem;
-                display: block;
-                overflow: auto;
             }
         }
 
         .guilabel, .menuselection {
-            font-weight: $fw_semibold;
+            font-weight: $font-weight-bold;
         }
 
         .dfn{
-            @include font-size($font-size-secondary);
+            @include font-size($font-size-sm);
             line-height: 1;
-            color: $color-beta;
-            font-weight: $fw_semibold;
+            color: $blue-600;
+            font-weight: $font-weight-bold;
+
             &:before {
                 content:'?';
                 display: inline-block;
                 width: 15px;
                 height: 15px;
-                border: 2px solid $color-beta;
+                margin: 0 .1rem;
+                border: 2px solid $blue-600;
                 border-radius: 20px;
                 text-align: center;
-                color: $color-beta;
+                color: $blue-600;
                 font-size: 12px;
-                font-weight: $fw_extrabold;
+                font-weight: $font-weight-bolder;
                 font-style: normal;
-                margin: 0 .1rem;
             }
         }
 
-        .pq-patch em {
-            display: block;
-            border-radius: 4px 4px 0 0;
-            background: $gray-lighter;
-            padding: .2rem 1rem;
-            @include font-size($font-size-secondary);
-            font-weight: 600;
-        }
 
         .container .container:not([class^="col"]) {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
 
         ul, ol {
             text-align: left;
         }
 
-        ol {
-            ol {
-                list-style: lower-alpha;
-                > li:before {
-                    content: none;
-                }
+        ol ol {
+            list-style: lower-alpha;
+
+            > li:before {
+                content: none;
             }
         }
 
 //------------------------------------------------------------------------------
 // Alerts
 //------------------------------------------------------------------------------
-// alert-info
-// alert-note
-// alert-tip
-// alert-warning
-// alert-danger
-// alert-example
-// alert-exercise
-// alert-go_to
 
         .alert {
-            position: relative;
-            display: inline-block;
-            border-radius: 0;
-            border-width: 0 0 0 3px;
-            width: 100%;
-            @include font-size($font-size-secondary);
+            border-width: 0 0 0 $alert-border-width;
 
-            code, div[class^="highlight"] {
+            > *:not(.sphinx-tabs) .o_code, > *:not(.sphinx-tabs) div[class^="highlight"] {
+                border: 1px solid var(--o-alert-code-border-color,#{$o-gray-border}) ;
                 background-color: $white !important;
-                border: 1px solid $gray-light;
                 color: inherit;
             }
 
             > p , > ul {
                 margin-bottom: .5rem;
             }
+
             > *:last-child {
                 margin-bottom: 0;
             }
 
             > h3, > .alert-title {
-                line-height: 1em;
                 margin: 0 0 10px 0;
-                @include font-size($font-size-base);
-                font-weight: $fw_bold;
+                @include font-size($h5-font-size);
+                line-height: 1em;
+                font-weight: $font-weight-bolder;
 
                 &:before {
-                    @include o-inline-icon($i-info, 0 .2rem 0 0, baseline, $font-size-base, inherit);
+                    content: var(--o-alert-icon, #{$o-alert-default-icon});
+                    @include o-inline-icon(0 $o-icon-margin 0 0, baseline, inherit, inherit);
+
                     @include media-breakpoint-down(md) {
                         display:none;
                     }
                 }
             }
 
-            &.alert-info, &[class^="admonition"] {
-                border-color: tint-color($brand-info, 30%);
-                background-color: tint-color($brand-info, 85%);
-                color: shade-color($brand-info, 35%);
+            // Custom Admonitions
+            &[class^="admonition"] {
+                --o-alert-icon: '#{$i-info}';
+                --o-alert-code-border-color: tint-color($info, 30%);
 
-                > .alert-title, > h3 {
-                    color: $brand-info;
-                    &:before {
-                        content: '#{$i-info}';
-                    }
+                $background: shift-color($info, $alert-bg-scale);
+                $border: shift-color($info, $alert-border-scale);
+                $color: shift-color($info, $alert-color-scale);
+
+                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+                    $color: mix($info, color-contrast($background), abs($alert-color-scale));
                 }
 
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-info, 30%);
-                }
+                @include alert-variant($background, $border, $color);
             }
 
-            &.alert-note {
-                border-color: shade-color($info, 30%);
-                background-color: $gray-lightest;
-                color: shade-color($info, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($info, 45%);
-                    &:before {
-                        content: '#{$i-note}';
-                    }
-                }
+            // Note
+            &.alert-primary {
+                --o-alert-code-border-color: #{tint-color($primary, 50%)};
+                --o-alert-icon: '#{$i-note}';
             }
 
-            &.alert-tip, &.tip {
-                border-color: shade-color($color-alpha, 10%);
-                background-color: $gray-lightest;
-                color: shade-color($color-alpha, 55%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($color-alpha, 40%);
-                    &:before {
-                        content: '#{$i-lightbulb}';
-                        @include font-size(1.2rem);
-                    }
-                }
-            }
-
-            &.alert-warning, &.warning {
-                border-color: $brand-warning;
-
-                > .alert-title, > h3 {
-                    color: shade-color($brand-warning, 10%);
-                    &:before {
-                        content: '#{$i-warning}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-warning, 50%);
-                }
-            }
-
-            &.alert-danger {
-                border-color: $danger;
-
-                > .alert-title, > h3 {
-                    color: darken($brand-danger, 20%);
-
-                    &:before {
-                        content: '#{$i-danger}';
-                    }
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($brand-danger, 50%);
-                }
-            }
-
-            &.alert-example {
-                border-color: tint-color($doc_example, 30%);
-                background-color: tint-color($doc_example, 90%);
-                color: shade-color($doc_example, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_example, 35%);
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-knowledge}';
-                }
-
-                code, div[class^="highlight"] {
-                    border-color: tint-color($doc-example, 50%);
-                }
-            }
-
-            &.alert-exercise {
-                border-color: tint-color($doc_exercise, 30%);
-                background-color: tint-color($doc_exercise, 90%);
-                color: shade-color($doc_exercise, 35%);
-
-                > .alert-title, > h3 {
-                    color: shade-color($doc_exercise, 35%);
-                }
-
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-exercise}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($doc-exercise, 50%);
-                }
-            }
-
-            &.alert-go_to {
-                border-color: $o-violet;
-                background-color: $gray-lightest;
+            // See Also
+            &.alert-secondary {
+                --o-alert-icon: '#{$i-article}';
+                --o-alert-code-border-color: #{tint-color($secondary, 30%)};
 
                 a {
-                    color: $o-violet-dark;
+                    color: $secondary;
+                }
+            }
+
+            // Tip
+            &.alert-tip {
+                --o-alert-icon: '#{$i-lightbulb}';
+                --o-alert-code-border-color: #{$o-gray-border};
+
+                $background: $o-gray-bg;
+                $border: shift-color($primary, $alert-border-scale);
+                $color: shift-color($primary, $alert-color-scale);
+
+                @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+                    $color: mix($primary, color-contrast($background), abs($alert-color-scale));
                 }
 
-                > .alert-title, > h3 {
-                    color: $o-violet-dark;
-                }
+                @include alert-variant($background, $border, $color);
+            }
 
-                > .alert-title:before, > h3:before {
-                    content: '#{$i-arrow-right}';
-                }
-                code, div[class^="highlight"] {
-                    border-color: tint-color($o-violet, 50%);
-                }
+            // Example
+            &.alert-success {
+                --o-alert-icon: '#{$i-knowledge}';
+                --o-alert-code-border-color: #{tint-color($success, 50%)};
+            }
+
+            // Warning & Important
+            &.alert-warning {
+                --o-alert-icon: '#{$i-warning}';
+                --o-alert-code-border-color: #{tint-color($warning, 50%)};
+            }
+
+            // Danger
+            &.alert-danger {
+                --o-alert-icon: '#{$i-danger}';
+                --o-alert-code-border-color: #{tint-color($danger, 50%)};
+            }
+
+            // Exercises
+            &.alert-dark {
+                --o-alert-icon: '#{$i-exercise}';
+                --o-alert-code-border-color: #{tint-color($dark, 50%)};
             }
         }
         .graphviz {
@@ -1100,12 +1011,19 @@ header {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    border-color: tint-color($doc_exercise, 30%);
-    background-color: $o-accordion-bg;
+    $background: shift-color($o-accordion-bg, $alert-bg-scale);
+    $border: shift-color($o-accordion-bg, $alert-border-scale);
+    $color: shift-color($o-accordion-bg, $alert-color-scale);
+
+    @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
+        $color: mix($o-accordion-bg, color-contrast($background), abs($alert-color-scale));
+    }
+
+    @include alert-variant($background, $border, $color);
 
     .accordion-button {
         &::after {
-            margin: 0 .2rem 0 0;
+            margin: 0 $o-icon-margin 0 0;
         }
 
         &.collapsed::after {
@@ -1114,17 +1032,23 @@ header {
     }
 
     .accordion-body {
-        #wrap & { // FIXME: Temporary workaround to take priority over pre-existing rules.
-            > *:first-child {
-                margin-top: 1rem;
-            }
+        > *:first-child {
+            margin-top: $o-margin-s;
+        }
 
-            code, div[class^="highlight"] {
-                border-color: tint-color($doc-exercise, 50%);
+        > p , > ul {
+            margin-bottom: .5rem;
+        }
 
-                &:first-child:last-child {
-                    margin-bottom: 0;
-                }
+        > *:last-child {
+            margin-bottom: 0;
+        }
+
+        code, div[class^="highlight"] {
+            border-color: tint-color($dark, 50%);
+
+            &:first-child:last-child {
+                margin-bottom: 0;
             }
         }
     }
@@ -1135,15 +1059,15 @@ header {
 //------------------------------------------------------------------------------
 
 .sphinx-tabs {
+    margin-bottom: $o-margin-s;
     padding: 0;
-    margin-bottom: 1rem;
 
     div[role="tablist"] {
-        border-color: $gray-light;
         display: inline-flex;
+        width: 100%;
         overflow-x: auto;
         overflow-y: clip;
-        width: 100%;
+        border-color: $o-gray-border;
     }
 
     *:focus-visible {
@@ -1159,28 +1083,28 @@ header {
     }
 
     .sphinx-tabs-tab {
-        background: $gray-lightest;
-        color: $gray-900;
+        padding: $o-padding-xs $o-padding-s;
         border: 0;
-        border-top: solid 1px $gray-light;
-        padding: .5rem 1rem;
+        border-top: solid 1px $o-gray-border;
+        background: $o-gray-bg;
+        color: $o-gray-color;
 
         &:hover {
             &:not([aria-selected="true"]) {
                 cursor: pointer;
-                background: tint-color($o-violet-dark, 80%);
-                color: $o-violet-dark;
-                transition: color .15s, background .15s;
                 border-radius: 0;
+                background: tint-color($secondary, 80%);
+                color: $secondary;
+                transition: color .15s, background .15s;
             }
         }
 
         &:first-of-type {
-            border-left: solid 1px $gray-light;
+            border-left: solid 1px $o-gray-border;
         }
 
         &:last-of-type {
-            border-right: solid 1px $gray-light;
+            border-right: solid 1px $o-gray-border;
         }
 
         &:focus {
@@ -1203,10 +1127,10 @@ header {
     }
 
     .sphinx-tabs-panel {
-        background: $doc-paper;
-        color: $gray-900;
-        border: 1px solid $gray-light;
-        padding: 1rem;
+        padding: $o-padding-s;
+        border: 1px solid $o-gray-border;
+        background: $white;
+        color: $o-gray-color;
 
         &:focus {
             outline: none;
@@ -1223,41 +1147,22 @@ header {
 }
 
 //------------------------------------------------------------------------------
-// Image modals
-//------------------------------------------------------------------------------
-
-.o_image_modal {
-    .modal-dialog {
-        max-width: fit-content;
-    }
-    .modal-content {
-        background-color: transparent;
-        border: none;
-    }
-    .modal-body {
-        padding: 2.2rem;
-    }
-    .btn-close {
-        @include o-position-absolute($top: 0);
-    }
-}
-//------------------------------------------------------------------------------
 // Footer
 //------------------------------------------------------------------------------
 footer {
     .o_get_help {
-        padding-top: $padding-l;
-        padding-bottom: $padding-l;
-        background: $gray-lighter;
+        padding-top: $o-padding-l;
+        padding-bottom: $o-padding-l;
+        background: $o-gray-bg;
+
         @include media-breakpoint-up(lg) {
-            padding-left: calc(#{$o-side-nav-width} + #{$padding-l})
+            padding-left: calc(#{$o-side-nav-width} + #{$o-padding-l})
         }
 
-        h5 {
+        h4 {
+            margin-bottom: $o-margin-s;
             color: $secondary;
-            font-size: 20px;
-            font-weight: $fw_bold;
-            margin-bottom: 1.5rem;
+            font-weight: $font-weight-bolder;
         }
 
     }
