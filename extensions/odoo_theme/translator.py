@@ -10,15 +10,12 @@ from sphinx.writers.html5 import HTML5Translator
 #         └── Odoo Translator
 
 ADMONITION_MAPPING = {
-    # ???: 'alert-success',
-
-    'note': 'alert-note',
-
-    'hint': 'alert-info',
+# The alert classes have been replaced by default BS classes to reduce number of scss lines.
+    'note': 'alert-primary',
 
     'tip': 'alert-tip',
 
-    'seealso': 'alert-go_to',
+    'seealso': 'alert-secondary',
 
     'warning': 'alert-warning',
     'attention': 'alert-warning',
@@ -28,8 +25,8 @@ ADMONITION_MAPPING = {
     'danger': 'alert-danger',
     'error': 'alert-danger',
 
-    'example': 'alert-example',
-    'exercise': 'alert-exercise',
+    'example': 'alert-success',
+    'exercise': 'alert-dark',
 }
 
 
@@ -136,6 +133,17 @@ class BootstrapTranslator(HTML5Translator):
             self.body.append("</p>")
         else:
             super().depart_title(node)
+
+    def visit_literal(self, node):
+        """ Override to add the class `o_code` to all `literal`, `code`, and `file` roles. """
+        node['classes'].append('o_code')
+        return super().visit_literal(node)
+
+    def visit_literal_strong(self, node):
+        """ Override to add the class `o_code` to all `command` roles. """
+        if 'command' in node['classes']:
+            node['classes'].append('o_code')
+        return super().visit_literal_strong(node)
 
     # overwritten
     # Ensure table class is present for tables
