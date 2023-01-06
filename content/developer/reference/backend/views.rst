@@ -1854,6 +1854,11 @@ root can have the following attributes:
     editable or not editable list can activate the multi-editing feature by defining
     the `multi_edit=1`
 
+``default_group_by``
+    whether the list view should be grouped if no grouping is specified via
+    the action or the current search. Should be the name of the field to group
+    by when no grouping is otherwise specified
+
 ``default_order``
     overrides the ordering of the view, replacing the model's order (:attr:`~odoo.models.BaseModel._order` model attribute).
     The value is a comma-separated list of fields, postfixed by ``desc`` to
