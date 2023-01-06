@@ -41,5 +41,5 @@ needs, and click on *Post*.
    :alt: Change the accounts used in the journal entry to record a purchase receipt.
 
 .. seealso::
-   - :doc:`manage`
+   - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
    - :doc:`/applications/finance/expenses`
