@@ -32,53 +32,51 @@ The structure of a basic ``l10n_XX`` module may be described with the following 
         "license": "LGPL-3",
         "depends": [
             "account",
-            # "l10n_multilang",
         ],
         "data": [
-            # Chart of Accounts
-            "data/account_chart_template_data.xml",
-            "data/account_account_tag_data.xml",
-            "data/account.account.template.csv",
-            "data/account.group.template.csv",
-
-            # Taxes
-            "data/account_tax_group_data.xml",
-            "data/account_tax_report_data.xml",
-            "data/account_tax_template_data.xml",
-            "data/account_fiscal_position_template_data.xml",
-            "data/account_account_template_post_data.xml",
-
-            "data/account_chart_post_data.xml",
-            "data/account_chart_template_try_loading.xml",
-
-            # Views and others
-            "views/xxxmodel_views.xml"
+            "data/other_data.xml",
+            "views/xxxmodel_views.xml",
         ],
         "demo": [
             "demo/demo_company.xml",
         ]
     }
 
+Your worktree should look like this
 
-In the first file :file:`data/account_chart_template_data.xml`, we set the name for the chart of accounts along with some basic fields.
+.. code-block:: bash
+
+  l10n_xx
+  ├── data
+  │   ├── template
+  │   │   ├── account.account-xx.csv
+  │   │   ├── account.group-xx.csv
+  │   │   └── account.tax.group-xx.csv
+  │   └── other_data.xml
+  ├── views
+  │   └── xxxmodel_views.xml
+  ├── demo
+  │   └── demo_company.xml
+  ├── models
+  │   ├── template_xx.py
+  │   └── __init__.py
+  ├── __init__.py
+  └── __manifest__.py
+
+
+In the first file :file:`models/template_xx.py`, we set the name for the chart of accounts along with some basic fields.
 
 .. seealso::
-   :ref:`Chart Template References <reference/account_chart_template>`
+   :doc:`Chart Template References </developer/reference/standard_modules/account>`
 
 .. example::
-  `addons/l10n_ch/data/l10n_ch_chart_data.xml <{GITHUB_PATH}/addons/l10n_ch/data/l10n_ch_chart_data.xml>`_
+  `addons/l10n_be/models/template_be.py <{GITHUB_PATH}/addons/l10n_be/models/template_be.py>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/l10n_ch_chart_data.xml
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_be/models/template_be.py
     :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: l10nch_chart_template
-    :end-at: </record>
-
-
-.. note::
-
-  Recommended **xmlid** for the record is `chart_template`.
-  If you need many chart of accounts, you can add some suffixes, i.e. `chart_template_XXX`.
+    :language: python
+    :start-at: _get_be_template_data
+    :end-before: _get_be_reconcile_model
 
 
 Chart of Accounts
@@ -97,23 +95,12 @@ The solution is the usage of tags, one for each report line, to filter accounts 
 Put the tags in the :file:`data/account_account_tag_data.xml` file.
 
 .. example::
-  `addons/l10n_lt/data/account.account.template.csv <{GITHUB_PATH}/addons/l10n_lt/data/account.account.template.csv>`_
+  `addons/l10n_lt/data/template/account.account-lt.csv <{GITHUB_PATH}/addons/l10n_lt/data/template/account.account-lt.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_lt/data/account.account.template.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_lt/data/template/account.account-lt.csv
     :condition: odoo_dir_in_path
     :language: csv
     :end-at: account_account_template_1201
-
-.. example::
-  `addons/l10n_at/data/account_account_template.xml <{GITHUB_PATH}/addons/l10n_at/data/account_account_template.xml>`_
-
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_at/data/account_account_template.xml
-    :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: chart_at_template_0010
-    :end-at: </record>
-
-.. _howtos/account_localization/accounts:
 
 Accounts
 --------
@@ -125,43 +112,19 @@ Accounts
 Obviously, :guilabel:`Chart of Accounts` cannot exist without :guilabel:`Accounts`. You need to specify them in :file:`data/account.account.template.csv`.
 
 .. example::
-  `addons/l10n_ch/data/account.account.template.csv <{GITHUB_PATH}/addons/l10n_ch/data/account.account.template.csv>`_
+  `addons/l10n_ch/data/template/account.account-ch.csv <{GITHUB_PATH}/addons/l10n_ch/data/template/account.account-ch.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/account.account.template.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/template/account.account-ch.csv
     :condition: odoo_dir_in_path
     :language: csv
     :end-at: ch_coa_1171
 
-CSV is prefered but you may use XML format instead.
-
-.. example::
-  `addons/l10n_at/data/account_account_template.xml <{GITHUB_PATH}/addons/l10n_at/data/account_account_template.xml>`_
-
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_at/data/account_account_template.xml
-    :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: chart_at_template_0010
-    :end-at: </record>
-
 .. warning::
 
-    - Avoid the usage of liquidity ``account.account.type``!
+    - Avoid the usage of `asset_cash` ``account_type``!
       Indeed, the bank & cash accounts are created directly at the installation of the localization module and then, are linked to an ``account.journal``.
     - Only one account of type payable/receivable is enough for the generic case.  We need to define a PoS receivable account as well however. (linked in the CoA)
     - Don't create too many accounts: 200-300 is enough. But mostly, we try to find a good balance where the CoA needs minimal adapting for most companies afterwards.
-
-Next settings for the chart of accounts are set in a separate file, because we need to provide a :ref:`list of accounts <howtos/account_localization/accounts>` first. In :file:`data/account_chart_post_data.xml`, we set some default accounts:
-
-.. todo add reference to account_id in CoA
-
-.. example::
-  `addons/l10n_ch/data/l10n_ch_chart_post_data.xml <{GITHUB_PATH}/addons/l10n_ch/data/l10n_ch_chart_post_data.xml>`_
-
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/l10n_ch_chart_post_data.xml
-    :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: l10nch_chart_template
-    :end-at: </record>
 
 
 Account groups
@@ -172,15 +135,15 @@ Account groups
 
 Account groups allow describing the hierarchical structure of the chart of accounts. The filter needs to be activated in the report and then when you decollapse into journal entries it will show the parents of the account.
 
-It works with the prefix *start*/*end*, so every account where the code starts with something between *start* and *end* will have this account.group as the parent group.  Furthermore, the account groups can have a parent account group as well to form the hierarchy.
+It works with the prefix *start*/*end*, so every account where the code starts with something between *start* and *end* will have this ``account.group`` as the parent group.  Furthermore, the account groups can have a parent account group as well to form the hierarchy.
 
 
 .. example::
-  `addons/l10n_il/data/account.group.template.csv <{GITHUB_PATH}/addons/l10n_il/data/account.group.template.csv>`_
+  `addons/l10n_il/data/template/account.group-il.csv <{GITHUB_PATH}/addons/l10n_il/data/template/account.group-il.csv>`_
 
   .. csv-table::
      :condition: odoo_dir_in_path
-     :file: {ODOO_RELPATH}/addons/l10n_il/data/account.group.template.csv
+     :file: {ODOO_RELPATH}/addons/l10n_il/data/template/account.group-il.csv
      :widths: 20,20,20,20,20
      :header-rows: 1
 
@@ -192,51 +155,27 @@ Taxes
    - :doc:`/applications/finance/accounting/taxation/taxes/taxes`
 
 To add taxes you first need to specify tax groups. You normally need just one tax group for every tax rate, except for the 0% as you need to often distinguish between exempt, 0%, not subject, ... taxes.
-This model only has two required fields: *name* and *country*. Create the file :file:`data/account_tax_group_data.xml` and list the groups:
-
-.. code-block:: xml
-
-    <odoo>
-        <data noupdate="1">
-            <record id="tax_group_tva_0" model="account.tax.group">
-                <field name="name">TVA 0%</field>
-                <field name="country_id" ref="base.ch"/>
-            </record>
-
-            ...
-        </data>
-    </odoo>
+This model only has two required fields: `name` and `country`. Create the file :file:`data/template/account.tax.group-xx.csv` and list the groups.
 
 .. example::
-  `addons/l10n_ch/data/account_tax_group_data.xml <{GITHUB_PATH}/addons/l10n_ch/data/account_tax_group_data.xml>`_
+  `addons/l10n_uk/data/template/account.tax.group-uk.csv <{GITHUB_PATH}/addons/l10n_uk/data/template/account.tax.group-uk.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/account_tax_group_data.xml
-    :condition: odoo_dir_in_path
-    :language: xml
-    :start-after: <data
-    :end-before: </data>
-
-.. example::
-  `addons/l10n_uk/data/account.tax.group.csv <{GITHUB_PATH}/addons/l10n_uk/data/account.tax.group.csv>`_
-
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_uk/data/account.tax.group.csv
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_uk/data/template/account.tax.group-uk.csv
     :condition: odoo_dir_in_path
     :language: csv
 
 
-Now you can add the taxes via :file:`data/account_tax_template_data.xml` file.  The first tax you define that is purchase/sale also becomes the default purchase/sale tax for your products.
+Now you can add the taxes via :file:`data/template/account.tax-xx.csv` file.  The first tax you define that is purchase/sale also becomes the default purchase/sale tax for your products.
 
 
 .. example::
-  `addons/l10n_ae/data/account_tax_template_data.xml <{GITHUB_PATH}/addons/l10n_ae/data/account_tax_template_data.xml>`_
+  `addons/l10n_ae/data/template/account.tax-ae.csv <{GITHUB_PATH}/addons/l10n_ae/data/template/account.tax-ae.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ae/data/account_tax_template_data.xml
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ae/data/template/account.tax-ae.csv
     :condition: odoo_dir_in_path
     :language: xml
-    :start-at: uae_sale_tax_5_dubai
-    :end-at: </record>
+    :end-at: uae_sale_tax_5_ras_al_khaima
 
-If some accounts should use default taxes, you can set them up in :file:`data/account_account_template_post_data.xml`
 
 Tax Report
 ----------
@@ -293,31 +232,18 @@ Fiscal positions
    - :ref:`Fiscal Position References <reference/account_fiscal_position>`
    - :doc:`/applications/finance/accounting/taxation/taxes/fiscal_positions`
 
-Specify fiscal positions in the :file:`data/account_fiscal_position_template_data.xml` file.
+Specify fiscal positions in the :file:`data/template/account.fiscal.position-xx.csv` file.
 
 .. example::
-  `addons/l10n_es/data/account_fiscal_position_template_data.xml <{GITHUB_PATH}/addons/l10n_es/data/account_fiscal_position_template_data.xml>`_
+  `addons/l10n_es/data/template/account.fiscal.position-es_common.csv <{GITHUB_PATH}/addons/l10n_es/data/template/account.fiscal.position-es_common.csv>`_
 
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/account_fiscal_position_template_data.xml
+  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_es/data/template/account.fiscal.position-es_common.csv
     :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: fp_nacional
-    :end-before: fp_intra
+    :language: csv
+    :end-at: account_tax_template_p_iva10_sp_ex
 
 Final steps
 ===========
-
-The last step when installing a localization module is to try to apply its chart of accounts to the current company (if it does not already have one).
-The file :file:`data/account_chart_template_try_loading.xml` is responsible for that.
-
-.. example::
-  `addons/l10n_ch/data/account_chart_template_data.xml <{GITHUB_PATH}/addons/l10n_ch/data/account_chart_template_data.xml>`_
-
-  .. literalinclude:: {ODOO_RELPATH}/addons/l10n_ch/data/account_chart_template_data.xml
-    :condition: odoo_dir_in_path
-    :language: xml
-    :start-at: <function
-    :end-at: </function>
 
 Finally, you may add a demo company, so the localization can easily be tested in demo mode.
 
