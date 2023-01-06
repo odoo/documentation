@@ -6,8 +6,8 @@ Odoo offers the possibility of grouping multiple bills' payments into one, facil
 reconciliation process.
 
 .. seealso::
-   - :doc:`../supplier_bills/manage`
-   - :doc:`../../bank/reconciliation/use_cases`
+   - :doc:`/applications/inventory_and_mrp/purchase/manage_deals/manage`
+   - :doc:`/applications/finance/accounting/bank/reconciliation/use_cases`
 
 Group payments
 ==============
@@ -43,9 +43,11 @@ Partial group payments with cash discounts
 ------------------------------------------
 
 In case of **partial group payments with cash discounts**, you can follow the steps found on the
-:doc:`cash discount documentation page <../../receivables/customer_invoices/cash_discounts>`. Make
-sure to apply the :doc:`payment terms <../../receivables/customer_invoices/payment_terms>` to the
-**bills** *instead* of the invoices.
+:doc:`cash discount documentation page
+</applications/finance/accounting/receivables/customer_invoices/cash_discounts>`. Make sure to
+apply the :doc:`payment terms
+</applications/finance/accounting/receivables/customer_invoices/payment_terms>` to the **bills**
+*instead* of the invoices.
 
 .. seealso::
-   :doc:`../../receivables/customer_invoices/payment_terms`
+   :doc:`/applications/finance/accounting/receivables/customer_invoices/payment_terms`
