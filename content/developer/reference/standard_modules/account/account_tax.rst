@@ -4,10 +4,9 @@
 Taxes
 =====
 
-.. automodel:: odoo.addons.account.models.chart_template.AccountTaxTemplate
+.. automodel:: odoo.addons.account.models.account_tax.AccountTax
     :main:
 
-    .. autofield:: chart_template_id
     .. autofield:: name
     .. autofield:: type_tax_use
     .. autofield:: tax_scope

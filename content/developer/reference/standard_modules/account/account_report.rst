@@ -9,7 +9,6 @@ Report
     .. autofield:: line_ids
     .. autofield:: column_ids
     .. autofield:: root_report_id
-    .. autofield:: chart_template_id
     .. autofield:: country_id
     .. autofield:: only_tax_exigible
     .. autofield:: availability_condition

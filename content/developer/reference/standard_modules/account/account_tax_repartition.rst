@@ -4,13 +4,13 @@
 Tax Repartitions
 ================
 
-.. automodel:: odoo.addons.account.models.chart_template.AccountTaxRepartitionLineTemplate
+.. automodel:: odoo.addons.account.models.account_tax.AccountTaxRepartitionLine
     :main:
 
     .. autofield:: factor_percent
     .. autofield:: repartition_type
+    .. autofield:: document_type
     .. autofield:: account_id
-    .. autofield:: invoice_tax_id
-    .. autofield:: refund_tax_id
+    .. autofield:: tax_id
     .. autofield:: tag_ids
     .. autofield:: use_in_tax_closing

@@ -9,7 +9,6 @@ Accounting
 
     account/account_account_tag
     account/account_account
-    account/account_chart_template
     account/account_fiscal_position
     account/account_group
     account/account_report

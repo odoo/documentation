@@ -4,12 +4,11 @@
 Fiscal Position
 ===============
 
-.. automodel:: odoo.addons.account.models.chart_template.AccountFiscalPositionTemplate
+.. automodel:: odoo.addons.account.models.partner.AccountFiscalPosition
     :main:
 
     .. autofield:: sequence
     .. autofield:: name
-    .. autofield:: chart_template_id
     .. autofield:: account_ids
     .. autofield:: tax_ids
     .. autofield:: note
