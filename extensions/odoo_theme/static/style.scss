@@ -1160,3 +1160,30 @@ footer {
 
     }
 }
+
+.o_toctree_card {
+    transition: box-shadow 200ms;
+
+    &:hover {
+        text-decoration: none;
+        cursor: pointer;
+        box-shadow: inset 0 -3px 0 $primary;
+    }
+
+    & .card-text {
+        font-weight: 400;
+    }
+
+    //The goal of the following selector is to simulate the space when there is no badges on the card.
+    //this is necessary in the scenarios where the card is alone on its row. 
+    & > .card-body {
+
+        & .card-text {
+            padding-bottom: 20px;
+        }
+
+        & .card-text:not(:last-child) {
+            padding-bottom: 0;
+        }
+    }
+}
