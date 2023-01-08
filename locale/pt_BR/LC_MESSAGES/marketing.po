@@ -9,29 +9,31 @@
 # grazziano <gra.negocia@gmail.com>, 2021
 # Keli Brugalli <kbr@odoo.com>, 2021
 # Éder Brito <britoederr@gmail.com>, 2021
-# Martin Trigaux, 2021
 # Marcos Rodrigues, 2021
+# Luis Felipe Miléo <mileo@kmee.com.br>, 2023
+# Martin Trigaux, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-08-10 09:10+0000\n"
+"POT-Creation-Date: 2023-01-03 07:53+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Marcos Rodrigues, 2021\n"
+"Last-Translator: Martin Trigaux, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/odoo/teams/41243/pt_BR/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: pt_BR\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=3; plural=(n == 0 || n == 1) ? 0 : n != 0 && n % 1000000 == 0 ? 1 : 2;\n"
 
 #: ../../content/applications/marketing.rst:5
 msgid "Marketing"
 msgstr "Marketing"
 
 #: ../../content/applications/marketing/marketing_automation.rst:8
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:3
 msgid "Marketing Automation"
 msgstr "Automação de Marketing"
 
@@ -47,142 +49,698 @@ msgid "Advanced"
 msgstr "Avançado"
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:3
-msgid "Understanding Metrics"
-msgstr "Entendendo a métrica"
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:4
-msgid ""
-"Metrics are values that help you measure progress and can be a powerful way "
-"of linking your employees to goals."
+msgid "Understanding metrics"
 msgstr ""
-"As métricas são valores que ajudam a medir o progresso e podem ser uma forma"
-" poderosa de vincular seus funcionários às metas."
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:5
+msgid ""
+"Metrics are detailed statistics that measure the progress (and success) of "
+"marketing campaigns. When creating marketing activities in a workflow, Odoo "
+"will visually display various metrics related to the campaign with graphs "
+"and data."
+msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:9
-msgid ""
-"When you create a workflow in Odoo, its visual content already shows metrics"
-" in a graph form and in numbers."
+msgid "Consider the following example:"
 msgstr ""
-"Quando você cria um fluxo de trabalho em Odoo, seu conteúdo visual já mostra"
-" as métricas em forma de gráfico e em números."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:10
-msgid "Let’s consider the example below:"
-msgstr "Vamos considerar o exemplo abaixo:"
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rstNone
+msgid "An example of a marketing automation campaign in Odoo."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:15
+msgid ""
+"In this case, the :guilabel:`Target` of this campaign is set to "
+":guilabel:`Lead/Opportunity` and was narrowed down to only focus on the "
+"Leads (or Opportunities) whose :guilabel:`Tag Name` contain a value of "
+"`product` and they *also* have an email address set up in the database."
+msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:19
 msgid ""
-"The *Target* - business object - is *Lead/Opportunity* and was narrowed down"
-" to the ones whose *Tag Name* contain the description “Product”, and have an"
-" email address set."
+"Beneath the filter nodes, Odoo will display how many records in the database"
+" fall into the previously-specified criteria filter. In this example, there "
+"are 18 records in the database that match the criteria."
 msgstr ""
-"O *Target* - objeto comercial - é *Lead/Opportunity* e foi restrito àqueles "
-"cujo *Nome da Tag* contém a descrição \"Produto\", e tem um endereço de "
-"e-mail definido."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:20
-msgid "A total number of 20 records match the criteria."
-msgstr "Um número total de 20 registros corresponde aos critérios."
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:28
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rstNone
 msgid ""
-"Out of those 20 records, 25 have become participants, in other words, they "
-"have matched the criteria."
+"Lead generation filters used to refine records on marketing automation "
+"campaigns in Odoo."
 msgstr ""
-"Desses 20 registros, 25 se tornaram participantes, em outras palavras, "
-"corresponderam aos critérios."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:36
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:27
 msgid ""
-"Every time the system runs, updating numbers and triggering actions, it will"
-" look at the *Target* model and check if new records have been added or "
-"modified, keeping the flow up-to-date."
+"At the top of the marketing automation form, there are a series of smart "
+"buttons. The :guilabel:`Participations` smart button in this example "
+"indicates that, out of those 18 records, 25 have become participants. In "
+"other words, they have matched the criteria, and have already interacted "
+"with the campaign in one way or another."
 msgstr ""
-"Toda vez que o sistema for executado, atualizando números e acionando ações,"
-" ele examinará o modelo *Target* e verificará se novos registros foram "
-"adicionados ou modificados, mantendo o fluxo atualizado."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:41
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:33
 msgid ""
-"The filter here is applied to *all* activities. Leads that lose the tag in "
-"the meantime will be excluded from later activities."
+":guilabel:`Records` represent a real-time number. Therefore, while the "
+"workflow is running, changes in opportunity records (deletions, additions, "
+"adjustments) may occur. This means there will be real-time updates to the "
+"number of :guilabel:`Records`, but such updates do *not* change the number "
+"of :guilabel:`Participants`, as the metric *will not* exclude opportunities "
+"that have already been set as :guilabel:`Participants` before - Odoo will "
+"just add new ones. That's why the number of :guilabel:`Records` can be "
+"different from the number of :guilabel:`Participants` from time to time."
 msgstr ""
-"O filtro aqui é aplicado a *todas* as atividades. As pistas que entretanto "
-"perderem a etiqueta serão excluídas de atividades posteriores."
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rstNone
+msgid ""
+"Difference between real-time record count and total participants on a "
+"markeing campaign."
+msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:45
 msgid ""
-"*Records* is a real-time number, therefore while the workflow is running, "
-"changes in opportunity records can be made - delete, add, adjustment - "
-"updating the number of records, but not changing the number of participants,"
-" as the metric *will not* exclude opportunities that have been set as "
-"participants before. It will just add new ones. For this reason, the number "
-"of *Records* can be different from the number of *Participants*."
+"Whenever the system runs, updating numbers and triggering actions, it will "
+"look at the :guilabel:`Target` model, and check if new :guilabel:`Records` "
+"have been added (or modified), which always keeps the flow up-to-date."
 msgstr ""
-"*Registros* é um número em tempo real, portanto, enquanto o fluxo de "
-"trabalho está em execução, mudanças nos registros de oportunidades podem ser"
-" feitas - apagar, adicionar, ajustar - atualizando o número de registros, "
-"mas não mudando o número de participantes, pois a métrica * não* excluirá "
-"oportunidades que tenham sido definidas como participantes antes. Ele apenas"
-" adicionará novas oportunidades. Por este motivo, o número de *registros* "
-"pode ser diferente do número de *Participantes*."
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:50
+msgid ""
+"The filter here is applied to *all* activities. Leads that lose that "
+"specific :guilabel:`Tag` in the meantime will be excluded from later "
+"activities."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:54
+msgid ""
+"Filters can also be applied to individual activities, in the "
+":guilabel:`Domain` section of the activity pop-up form. Use this feature to "
+"specify an individual filter that will only be performed if the records "
+"satisfy *both* filter criteria - the activity filter and its specific domain"
+" filter."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:59
+msgid ""
+"(*Example*: when configuring an SMS activity, make sure a certain phone "
+"number is set, in order to avoid triggering a SMS that would never be sent.)"
+msgstr ""
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:0
 msgid ""
-"You can also have filters applied to activities individually, under "
-"*Domain*. A useful feature to specify an individual filter that will only be"
-" performed if the records satisfied both filters, the activity and its "
-"domain one."
+"A relevant targeting filter that applies to a type of individual activity."
 msgstr ""
-"Você também pode ter filtros aplicados às atividades individualmente, sob "
-"*Domínio*. Um recurso útil para especificar um filtro individual que só será"
-" realizado se os registros satisfizerem ambos os filtros, a atividade e seu "
-"domínio."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:0
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:66
 msgid ""
-"Example: for an activity sending an SMS, you could make sure a phone number "
-"is set to avoid triggering a SMS that would never be sent and crash."
+":guilabel:`Success` represents the number of times the searching for "
+"participants - who match the criteria filter(s) of that activity - was "
+"performed successfully, in relation to the total number of participants. If "
+"a participant does *not* match the conditions, it will be added to "
+":guilabel:`Rejected`."
 msgstr ""
-"Exemplo: para uma atividade que envia um SMS, você poderia ter certeza de "
-"que um número de telefone está configurado para evitar o acionamento de um "
-"SMS que nunca seria enviado e que cairia."
 
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:64
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rstNone
 msgid ""
-"*Success* is the number of times the searching for participants - that match"
-" the filter(s) of that activity - was performed successfully in relation to "
-"the total number of participants."
+"Overview showing participants who do or do not match filtering criteria on "
+"an activity."
 msgstr ""
-"*Sucesso* é o número de vezes que a busca por participantes - que "
-"correspondem ao(s) filtro(s) daquela atividade - foi realizada com sucesso "
-"em relação ao número total de participantes."
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:65
-msgid ""
-"If a participant does not match the conditions, it will be added to "
-"*Rejected*."
-msgstr ""
-"Se um participante não corresponder às condições, ele será adicionado a "
-"*Rejeitado*."
-
-#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:71
-msgid ""
-"Hovering over the graph, you can see the number of successful and rejected "
-"participants, per day, for the last 15 days."
-msgstr ""
-"Ao pairar sobre o gráfico, você pode ver o número de participantes bem-"
-"sucedidos e rejeitados, por dia, durante os últimos 15 dias."
 
 #: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:75
 msgid ""
-"Every time a new record is added to the *Target* model, it will be "
-"automatically added to the workflow, and, it will start the workflow from "
-"the beginning (parent action)."
+"Hovering over the graph, Odoo displays the number of successful and rejected"
+" participants, per day, over the last 15 days."
 msgstr ""
-"Toda vez que um novo registro é adicionado ao modelo *Target*, ele será "
-"automaticamente adicionado ao fluxo de trabalho e, ele iniciará o fluxo de "
-"trabalho desde o início (ação dos pais)."
+
+#: ../../content/applications/marketing/marketing_automation/advanced/understanding_metrics.rst:79
+msgid ""
+"Whenever a new record is added to the :guilabel:`Target` model, it will "
+"automatically be added to the workflow, and it will start the workflow from "
+"the beginning (:guilabel:`Parent Action`)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started.rst:5
+msgid "Getting Started"
+msgstr "Começando"
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:5
+msgid ""
+"The Odoo Marketing Automation app automates a variety of marketing tasks by "
+"combining specific rules and filters to generate timed actions. Instead of "
+"manually having to build each stage of a campaign (such as a series of timed"
+" massmails), the Marketing Automation app allows marketers to build the "
+"entire campaign, and all of its stages, in one place on one dashboard."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:11
+msgid "Create a campaign"
+msgstr "Crie uma campanha"
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:13
+msgid ""
+"To create a new automated marketing campaign, open the :guilabel:`Marketing "
+"Automation` app and click :guilabel:`Create`. On the :guilabel:`Campaign` "
+"page, there are the following smart buttons and fields:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rstNone
+msgid ""
+"A dashboard showing the creation of a new marketing automation campaign in "
+"Odoo."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:21
+msgid ""
+":guilabel:`Templates`: represents the number of pre-configured mail "
+"templates being used in this particular campaign. (Templates can always be "
+"created on-the-fly as well)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:23
+msgid ""
+":guilabel:`SMS`: represents the number of personalized SMS messages "
+"connected to this campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:24
+msgid ""
+":guilabel:`Clicks`: represents the number of times attached links have been "
+"clicked by recipients of this campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:26
+msgid ""
+":guilabel:`Participants`: represents the number of contacts that have "
+"directly participated in this campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:28
+msgid ""
+":guilabel:`Target`: this field is a drop-down menu to choose which model is "
+"targeted by this campaign (i.e., by Contacts, Sales Order, Lead/Opportunity,"
+" etc.)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:32
+msgid "Campaign filters"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:34
+msgid ""
+"To add a filter to the target audience, click :guilabel:`Add Filter`, and a "
+"node field will appear. In the node field, a custom equation can be "
+"configured for Odoo to use when filtering who to include (and exclude) in "
+"this specific marketing campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rstNone
+msgid "A filter node in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:42
+msgid ""
+"When the first field of the node is clicked, a nested drop-down menu of "
+"options appears on the screen where specific criteria is chosen based on "
+"needs of the campaign. The remaining fields on the node further define the "
+"criteria which determines which records to include (or exclude) in the "
+"execution of the campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:47
+msgid ""
+"To add another node, simply click the :guilabel:`+ (plus sign)` icon to the "
+"right of the filtering rule. To add a branch of multiple nodes at the same "
+"time, click the :guilabel:`... (ellipses)` icon."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:51
+msgid ""
+"For further information on filters, refer to :doc:`this documentation page "
+"<target_audience>`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:54
+msgid ""
+":guilabel:`Records` represent the number of contacts in the system that fit "
+"the specified criteria for a campaign."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:58
+msgid ":doc:`testing_running`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/first_campaign.rst:59
+msgid ":doc:`workflow_activities`"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:3
+msgid "Target an audience"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:5
+msgid ""
+"Delivering marketing campaigns to the *right* audience is paramount when "
+"trying to grow a business. The :guilabel:`Odoo Marketing Automation` "
+"application helps marketers to do just that by providing filtering tools, "
+"that can be as simple or as complex as necessary, to reach the right "
+"customers at the right time."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:11
+msgid "Work with target filters"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:13
+msgid ""
+"When configuring the filters on a marketing campaign, there are some options"
+" that have an arrow icon beside them. The arrow signifies that the filter "
+"has more refined parameters within it."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rstNone
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rstNone
+msgid "The drop-down filter menu in the Marketing Automation application."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:20
+msgid ""
+"Filters can be extended by adding *branches* and *nodes*. A *node* adds "
+"another filtering parameter to a group of targeting conditions (e.g. a new "
+"line), and a *branch* creates a narrowly refined cluster of parameters, "
+"allowing filters to be grouped with *Any* or *All* statements."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:24
+msgid "Every time a new branch is created, there are two options:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:26
+msgid ""
+"Either the records can match :guilabel:`ALL` criteria for the upcoming rules"
+" (an AND statement where all criteria must match)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:29
+msgid ""
+"Or, the records can match :guilabel:`ANY` criteria for the upcoming rules "
+"(an OR statement where only one of the criteria must match)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:32
+msgid ""
+"To change between these two options, simply click the drop-down arrow icon "
+"in the green box and select :guilabel:`Any` or :guilabel:`All`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:35
+msgid ""
+"To add a node, click on the :guilabel:`+ (plus sign icon)` and to add "
+"another branch click on the :guilabel:`... (ellipses icon)`. To exclude a "
+":guilabel:`node` (or a :guilabel:`branch`), click on :guilabel:`x (delete)`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:44
+msgid "Use cases"
+msgstr "Casos de uso"
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:46
+msgid ""
+"The following scenarios below outline different combinations of filters a "
+"marketing campaign might commonly use."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:50
+msgid ""
+"Scenario #1: Narrow the target down to new opportunities in the pipeline"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:52
+msgid ""
+"While in Edit mode on a campaign template form, select the "
+":guilabel:`Target` field, and click :guilabel:`Search More` from the drop-"
+"down menu. Then, search for :guilabel:`Lead/Opportunity` and select it."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:56
+msgid ""
+"Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Click on"
+" the default :guilabel:`ID` filter option in the first portion of the filter"
+" equation. Doing so reveals a drop-down menu full of filter options. From "
+"this drop-down, scroll down (or search for) :guilabel:`Type`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:61
+msgid ""
+"Keep the second portion of the filter equation on the default :guilabel:`= "
+"(equal sign)`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:63
+msgid ""
+"Then, change the third (and final) portion of the filter equation from "
+":guilabel:`Lead` to :guilabel:`Opportunity`. The number of "
+":guilabel:`Records` that fit this specific filter equation will change as "
+"the equation is customized."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:67
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:103
+msgid ""
+"Add another node to this filter by clicking the :guilabel:`+ (plus sign)` to"
+" the right of the equation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:70
+msgid ""
+"With \"new\" opportunities being the target of this filter, the second node "
+"will focus on only locating opportunities that are in the :guilabel:`New` "
+"stage of the pipeline. To do that, select the default :guilabel:`ID` from "
+"the first portion of the second filter equation, and scroll down (or search "
+"for) :guilabel:`Stage` from the field drop-down menu."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:75
+msgid ""
+"Once again, leave the second portion of the filter equation on :guilabel:`= "
+"(equal sign)`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:77
+msgid ""
+"Lastly, highlight the default value in the third (and final) portion of the "
+"second filter equation and type in :guilabel:`New`. With that completed, "
+"Odoo will only target opportunities that are in the \"New\" stage of the "
+"pipeline."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rstNone
+msgid ""
+"A standard scenario using filters in the Odoo Marketing Automation app."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:86
+msgid ""
+"Scenario #2: Narrow the target down to the event attendees that purchased a "
+"specific ticket"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:88
+msgid ""
+"While in Edit mode on a campaign template form, select the "
+":guilabel:`Target` field, and click :guilabel:`Search More` from the drop-"
+"down menu. Then, scroll down (or search for) :guilabel:`Event` and select "
+"it."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:92
+msgid ""
+"Next, click :guilabel:`Add Filter` in the :guilabel:`Filter` field. Click on"
+" the default :guilabel:`ID` filter option in the first portion of the filter"
+" equation. Doing so reveals a drop-down menu full of filter options. From "
+"this drop-down, scroll down (or search for) :guilabel:`Event`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:97
+msgid ""
+"Click the the default :guilabel:`= (equal sign)` in the second portion of "
+"the filter equation. This reveals a drop-down menu. On this menu, select "
+":guilabel:`contains`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:100
+msgid ""
+"In the third (and final) empty portion of the filter equation, type in the "
+"name of the event(s) that you would like Odoo to consider for this campaign "
+"filter."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:106
+msgid ""
+"The second node will focus on targeting this campaign to attendees who "
+"purchase a specific type of ticket to the aforementioned event(s) in the "
+"first filter equation. To do that, select the default :guilabel:`ID` from "
+"the first portion of the second filter equation, and scroll down (or search "
+"for) :guilabel:`Event Ticket` from the field drop-down menu. Then, in that "
+"same drop-down menu, select :guilabel:`Name`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:112
+msgid ""
+"Once again, click the the default :guilabel:`= (equal sign)` in the second "
+"portion of the filter equation, and select :guilabel:`contains`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rst:115
+msgid ""
+"Lastly, in the third (and final) portion of the second filter equation, "
+"which will be blank, type in the name of the ticket type that should be used"
+" for the filter. In this case, :guilabel:`Standard` is the name of the event"
+" ticket type for this sample filter."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/target_audience.rstNone
+msgid "An event ticket filter in the Odoo Marketing Automation application."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:3
+msgid "Testing and running a campaign"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:5
+msgid ""
+"Odoo gives users the ability to test marketing campaigns (and mailings) "
+"before officially running them."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:8
+msgid ""
+"First, open the :guilabel:`Marketing Automation` application and click on a "
+"campaign. Make sure the campaign already has activities configured on it (or"
+" build a campaign by following the directions here on :doc:`this "
+"documentation <workflow_activities>`). To start a test, click the "
+":guilabel:`Launch a Test` button at the top of the template form."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rstNone
+msgid "Launch a test button in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:17
+msgid ""
+"When clicked, a pop-up window appears. In the dropdown field choose a "
+"specific record to run the test on, or create a brand new record by clicking"
+" the :guilabel:`Search More...` link at the bottom of the dropdown menu, and"
+" then click the :guilabel:`Create` button."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:21
+msgid ""
+"Once the record is selected, click :guilabel:`Continue`, and Odoo will "
+"redirect to the campaign test page."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rstNone
+msgid "Test screen in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:28
+msgid ""
+"Here, the name of the :guilabel:`Record` being tested is visible, along with"
+" the precise time this test workflow was started. Beneath that is the first "
+"activity (or activities) in the workflow."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:31
+msgid ""
+"To start a test, click the :guilabel:`Run` icon beside the first activity in"
+" the workflow. When clicked, the page will reload, and Odoo will show the "
+"various results (and analytics) connected to that specific activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rstNone
+msgid "Workflow test progress in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/testing_running.rst:39
+msgid ""
+"Once all the workflow activities are completed, the test will end and be "
+"moved to the :guilabel:`Completed` stage. To stop a test before all the "
+"workflow activities are completed, click the :guilabel:`Stop` button."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:3
+msgid "Marketing activities"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:5
+msgid ""
+"When creating a campaign in the :guilabel:`Marketing Automation` app, users "
+"can plan marketing activities such as email or SMS campaigns. To get "
+"started, navigate to the :guilabel:`Workflow` area, and click :guilabel:`Add"
+" New Activity`. A blank activity template will appear where parameters can "
+"be set for that specific activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:10
+msgid ""
+"When :guilabel:`Add New Activity` is selected, a blank activity template "
+"will appear with the following customizable fields:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rstNone
+msgid "An activity template in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:17
+msgid ":guilabel:`Activity Name`: the title of the activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:18
+msgid ""
+":guilabel:`Activity Type`: choose between Email, Server Action (internal "
+"Odoo operation), or SMS."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:19
+msgid ""
+":guilabel:`Mail Template`: choose from pre-configured templates (or create a"
+" new one on-the-fly)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:20
+msgid ":guilabel:`Trigger`: choose when this activity should be triggered."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:21
+msgid ""
+":guilabel:`Expiry Duration`: configure to stop the actions after a specific "
+"amount of time (after the scheduled date). When selected, a "
+":guilabel:`Cancel after` field appears, in which the user can choose how "
+"many :guilabel:`Hours, Days, Weeks, or Months` they want the actions to "
+"cease after the initial date."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:25
+msgid ""
+":guilabel:`Activity Filter`: domain related to this activity (and all "
+"subsequent Child Activities)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:27
+msgid ""
+":guilabel:`Applied Filter`: activity will *only* be performed if it "
+"satisfies the specified domain (filter)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:30
+msgid ""
+"After the activity's settings are fully configured, click :guilabel:`Save & "
+"Close` to finish creating the activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:34
+msgid "Workflow activity"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:36
+msgid ""
+"Once saved, the :guilabel:`Workflow Activity` will appear in Odoo, where "
+"each activity will be shown as a graph by default. The configured trigger "
+"time for that activity can be found to the left of the :guilabel:`Workflow "
+"Activity` card."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:40
+msgid ""
+"In the :guilabel:`Workflow Activity` section, there is also the number of "
+"activities that are successful or rejected. The :guilabel:`Success` and "
+":guilabel:`Rejected` numbers are color-coded in the graph for easy reference"
+" (in green and red, respectively)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rstNone
+msgid "Typical workflow activity in Odoo Marketing Automation."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:49
+msgid ""
+"If the :guilabel:`Activity Type` of the activity is set to "
+":guilabel:`Email`, there are more in-depth analytics beneath the "
+":guilabel:`Workflow Activity` data detailing how many emails have been "
+":guilabel:`Sent`, and what percentage of those have been "
+":guilabel:`Clicked`, :guilabel:`Replied` to, or :guilabel:`Bounced`."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:55
+msgid "Child activities"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:57
+msgid ""
+"Odoo also has the option to :guilabel:`Add Child Activity`. *Child "
+"Activities* are sub-activities that are connected to (and triggered by) the "
+"activity above it, which is also known as its *Parent Activity*."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:61
+msgid ""
+"Odoo provides a number of triggering options to launch a :guilabel:`Child "
+"Activity` - all of which depend on the trigger configurations related to the"
+" parent activity. Under the desired parent activity, hover over "
+":guilabel:`Add child activity`, and select the trigger:"
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:65
+msgid ":guilabel:`Add Another Activity`: instantly add another activity."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:66
+msgid ""
+":guilabel:`Opened`: the next activity will be triggered if the (email) "
+"recipient opens the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:68
+msgid ""
+":guilabel:`Not Opened`: the next activity will be triggered if the recipient"
+" does not open the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:70
+msgid ""
+":guilabel:`Replied`: the next activity will be triggered if the recipient "
+"replies to the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:71
+msgid ""
+":guilabel:`Not Replied`: the next activity will be triggered if the "
+"recipient does not reply to the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:73
+msgid ""
+":guilabel:`Clicked`: the next activity will be triggered if the recipient "
+"clicks on a link included in the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:75
+msgid ""
+":guilabel:`Not Clicked`: the next activity will be triggered if the "
+"recipient does not click on a link included in the mailing."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:77
+msgid ""
+":guilabel:`Bounced`: the next activity will be triggered if the mailing is "
+"bounced (not sent)."
+msgstr ""
+
+#: ../../content/applications/marketing/marketing_automation/getting_started/workflow_activities.rst:79
+msgid ""
+"Once a trigger is selected, the user can configure the child activity (it "
+"has the same configuration options as a regular activity) and click "
+":guilabel:`Save & Close`` to finish creating the child activity."
+msgstr ""
 
 #: ../../content/applications/marketing/sms_marketing.rst:8
 msgid "SMS Marketing"
@@ -192,15 +750,15 @@ msgstr "Marketing SMS"
 msgid "Pricing and FAQ"
 msgstr "Preços e FAQ"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:3
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:5
 msgid "SMS Pricing and FAQ"
 msgstr "Preços de SMS e FAQ"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:6
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:8
 msgid "What do I need to send SMSs?"
 msgstr "O que eu preciso enviar SMSs?"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:7
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:9
 msgid ""
 "SMS Text Messaging is an In-App Purchase (IAP) service that *requires "
 "prepaid credits* to work."
@@ -208,15 +766,15 @@ msgstr ""
 "O SMS Text Messaging é um serviço de Compra In-App (IAP) que *exige créditos"
 " pré-pagos* para trabalhar."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:11
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:13
 msgid "How many types of SMSs are there?"
 msgstr "Quantos tipos de SMS existem?"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:12
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:14
 msgid "There are 2 types: GSM7 and UNICODE."
 msgstr "Existem 2 tipos: GSM7 e UNICODE."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:14
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:16
 msgid ""
 "**GSM7** is the standard format, with a limit of 160 characters per message,"
 " that includes the following characters:"
@@ -224,7 +782,11 @@ msgstr ""
 "**GSM7*** é o formato padrão, com um limite de 160 caracteres por mensagem, "
 "que inclui os seguintes caracteres:"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:23
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rstNone
+msgid "GSM7 in Odoo SMS Marketing"
+msgstr ""
+
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:25
 msgid ""
 "**UNICODE** is the format applied if a special character, that *is not* in "
 "the GSM7 list, is used. Limit per SMS: 70 characters."
@@ -232,7 +794,7 @@ msgstr ""
 "**UNICODE** é o formato aplicado se for utilizado um caractere especial, que"
 " *não está* na lista GSM7. Limite por SMS: 70 caracteres."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:27
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:29
 msgid ""
 "For GSM7 SMS the size limit is 160 characters, and for Unicode is 70. *Above"
 " these limits, the content is divided into a multi-part message* and the "
@@ -246,11 +808,11 @@ msgstr ""
 "para Unicode. O sistema o informará em tempo real sobre o número de SMS que "
 "sua mensagem representa."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:34
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:36
 msgid "How much does it cost to send an SMS?"
 msgstr "Quanto custa enviar um SMS?"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:35
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:37
 msgid ""
 "The price of an SMS depends on the destination and the length (number of "
 "characters) of the message."
@@ -258,7 +820,7 @@ msgstr ""
 "O preço de um SMS depende do destino e do comprimento (número de caracteres)"
 " da mensagem."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:37
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:39
 msgid ""
 "To see the **price per country, please consult**: `Odoo SMS - FAQ "
 "<https://iap-services.odoo.com/iap/sms/pricing#sms_faq_01>`_."
@@ -266,7 +828,7 @@ msgstr ""
 "Para ver o **preço por país, favor consultar***: Odoo SMS - FAQ "
 "<https://iap-services.odoo.com/iap/sms/pricing#sms_faq_01>`_."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:39
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:41
 msgid ""
 "The number of SMSs a message represents will be always available to you in "
 "your database."
@@ -274,39 +836,43 @@ msgstr ""
 "O número de SMSs que uma mensagem representa estará sempre disponível para "
 "você em seu banco de dados."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:49
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rstNone
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rstNone
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rstNone
+msgid "SMS pricing and FAQ Odoo SMS Marketing"
+msgstr ""
+
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:51
 msgid "How do I buy credits?"
 msgstr "Como posso comprar créditos?"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:50
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:52
 msgid "Go to :menuselection:`Settings --> Buy Credits`."
 msgstr "Ir para :menuselection:`Settings --> Buy Credits'."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:57
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:59
 msgid "Or go to :menuselection:`Settings --> View my Services`."
 msgstr "Ou vá para :menuselection:`Settings --> View my Services'."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:65
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:67
 msgid ""
-"If you are on Odoo Online (SAAS) and have the Enterprise version, you "
-"benefit from free trial credits to test the feature."
+"If you are on Odoo Online and have the Enterprise version, you benefit from "
+"free trial credits to test the feature."
 msgstr ""
-"Se você estiver no Odoo Online (SAAS) e tiver a versão Enterprise, você se "
-"beneficia de créditos de teste gratuitos para testar o recurso."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:70
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:72
 msgid "More common questions"
 msgstr "Mais perguntas comuns"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:72
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:74
 msgid "**Is there an expiration time for my credits?**"
 msgstr "**Há um tempo de expiração para meus créditos?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:74
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:76
 msgid "No, credits do not expire."
 msgstr "Não, os créditos não expiram."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:77
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:79
 msgid ""
 "**Can I send an SMS to a phone number (which is not a mobile phone) because "
 "I see the icon in front of the field “phone”?**"
@@ -314,29 +880,29 @@ msgstr ""
 "**Posso enviar um SMS para um número de telefone (que não é um telefone "
 "celular) porque vejo o ícone em frente ao campo \"telefone\"?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:80
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:82
 msgid "Only if that phone number supports SMS (e.g. SIP phones)."
 msgstr ""
 "Somente se esse número de telefone suportar SMS (por exemplo, telefones "
 "SIP)."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:83
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:85
 msgid "**Do I receive an invoice to buy my credits?**"
 msgstr "**Eu recebo uma fatura para comprar meus créditos?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:85
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:87
 msgid "Yes."
 msgstr "Sim."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:88
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:90
 msgid "**Can the recipient answer to me?**"
 msgstr "**Pode o destinatário responder a mim?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:90
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:92
 msgid "No, it is not possible to reply to the SMS."
 msgstr "Não, não é possível responder ao SMS."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:93
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:95
 msgid ""
 "**What happens if I send multiple SMS but I do not have enough credits to "
 "send them all?**"
@@ -344,7 +910,7 @@ msgstr ""
 "**O que acontece se eu enviar vários SMS mas não tiver créditos suficientes "
 "para enviá-los todos?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:95
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:97
 msgid ""
 "The whole transaction is counted as a single one, so no SMS will be sent "
 "until you have enough credits to send them all."
@@ -352,11 +918,11 @@ msgstr ""
 "A transação inteira é contada como uma única transação, portanto nenhum SMS "
 "será enviado até que você tenha créditos suficientes para enviá-los todos."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:99
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:101
 msgid "**Do I have a history of the sent SMSs?**"
 msgstr "**Eu tenho um histórico dos SMSs enviados?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:101
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:103
 msgid ""
 "Yes, the SMS is logged as a note under the chatter of the corresponding "
 "record, and a complete history of the SMSs sent is available on "
@@ -368,15 +934,15 @@ msgstr ""
 " :ref:`developer <developer-mode>mode` sob :menuselection:`Technical --&gt; "
 "SMS`</developer-mode>."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:106
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:108
 msgid "**Can I send as many SMSs I want at once?**"
 msgstr "**Posso enviar quantos SMS eu quiser de uma só vez?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:108
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:110
 msgid "Yes, if you have enough credits."
 msgstr "Sim, se você tiver créditos suficientes."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:111
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:113
 msgid ""
 "**If I have a number that does not exist in the list of recipients, will I "
 "lose credits?**"
@@ -384,7 +950,7 @@ msgstr ""
 "**Se eu tiver um número que não exista na lista de destinatários, vou perder"
 " créditos?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:113
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:115
 msgid ""
 "Not if the phone number is in the wrong format (e.g. too many digits). "
 "Otherwise, if the SMS is sent to the wrong person or to a fake number, the "
@@ -394,7 +960,7 @@ msgstr ""
 "dígitos). Caso contrário, se o SMS for enviado para a pessoa errada ou para "
 "um número falso, o crédito será perdido."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:117
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:119
 msgid ""
 "**What happens if I send my SMS to a paying number (e.g.: a contest to win a"
 " ticket for a festival)?**"
@@ -402,7 +968,7 @@ msgstr ""
 "**O que acontece se eu enviar meu SMS para um número de pagamento (por "
 "exemplo: um concurso para ganhar um ingresso para um festival)?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:119
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:121
 msgid ""
 "The SMS will not be delivered to that kind of number, so you won’t be "
 "charged."
@@ -410,32 +976,32 @@ msgstr ""
 "O SMS não será entregue para esse tipo de número, portanto, você não será "
 "cobrado."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:122
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:124
 msgid ""
 "**Can I identify the numbers that do not exist when I send several SMSs?**"
 msgstr ""
 "**Posso identificar os números que não existem quando envio vários SMS?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:124
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:126
 msgid "Only the ones that have an invalid format."
 msgstr "Somente os que têm um formato inválido."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:127
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:129
 msgid "**How does the GDPR regulation affect this service?**"
 msgstr "**Como a regulamentação do GDPR afeta este serviço?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:129
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:131
 msgid ""
 "Please find our `Privacy Policy here <https://iap.odoo.com/privacy#sms>`__."
 msgstr ""
 "Por favor, encontre nossa `Política de Privacidade aqui "
 "<https://iap.odoo.com/privacy#sms>`__."
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:131
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:133
 msgid "**Can I use my own SMS provider?**"
 msgstr "**Posso usar meu próprio provedor de SMS?**"
 
-#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:133
+#: ../../content/applications/marketing/sms_marketing/pricing/pricing_and_faq.rst:135
 msgid ""
 "Yes, but it is not possible out of the box. Our experts can help you "
 "customize your database to make it happen. Please, check our success packs "
@@ -493,6 +1059,11 @@ msgstr ""
 "conduzida, pois diferentes aplicações podem usá-la para diferentes "
 "propósitos, tais como recrutamento, certificação ou avaliação de "
 "funcionários."
+
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid ""
+"Form view of a survey with a title and category being chosen in Odoo Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/create.rst:22
 msgid "Tab: Questions"
@@ -554,6 +1125,10 @@ msgstr ""
 "*Tipo de Matriz*: escolha se você gostaria de ter uma ou várias escolhas por"
 " linha."
 
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid "Sections and questions view of a survey in Odoo Surveys"
+msgstr ""
+
 #: ../../content/applications/marketing/surveys/overview/create.rst:44
 msgid "Tab: Description"
 msgstr "Tab: Descrição"
@@ -565,6 +1140,12 @@ msgid ""
 msgstr ""
 "Escreva um *Descrição* para ser exibido sob o título da página inicial da "
 "pesquisa."
+
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid ""
+"Frontend of a survey showing the title and description of a survey for Odoo "
+"Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/create.rst:53
 msgid "Click on *Edit* to personalize your pages with the website builder."
@@ -584,6 +1165,12 @@ msgstr ""
 "Na aba *Opções*, escolha o *Layout* de suas perguntas. Se escolher *Uma "
 "página por seção* ou *Uma página por pergunta*, uma opção *Botão de retorno*"
 " fica disponível, o que permite ao usuário voltar às páginas anteriores."
+
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid ""
+"Form view of a survey emphasizing the layout feature under options in Odoo "
+"Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/create.rst:67
 msgid "Test and share the survey"
@@ -607,6 +1194,10 @@ msgstr ""
 "Por padrão, é aplicado um filtro *Exceto Entradas de Teste* para manter a "
 "lista de entradas limpa apenas com participantes reais."
 
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid "View list of the participations of a survey in Odoo Surveys"
+msgstr ""
+
 #: ../../content/applications/marketing/surveys/overview/create.rst:79
 msgid ""
 "Another way to access detailed answers is by going to "
@@ -619,6 +1210,10 @@ msgstr ""
 msgid "Click on *See results* to be redirected to an analytical page."
 msgstr ""
 "Clique em *Ver resultados* para ser redirecionado para uma página analítica."
+
+#: ../../content/applications/marketing/surveys/overview/create.rstNone
+msgid "View of an analytical page for Odoo Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/create.rst:87
 #: ../../content/applications/marketing/surveys/overview/time_random.rst:34
@@ -656,6 +1251,10 @@ msgstr ""
 "respostas no final*. Agora, no formulário de sua pergunta, defina a resposta"
 " certa e marque a pontuação."
 
+#: ../../content/applications/marketing/surveys/overview/scoring.rstNone
+msgid "Form view of a survey showing a list of answers in Odoo Surveys"
+msgstr ""
+
 #: ../../content/applications/marketing/surveys/overview/scoring.rst:17
 msgid ""
 "Set the percentage score the user needs to achieve to have successfully "
@@ -668,6 +1267,12 @@ msgstr ""
 "certificação é automaticamente enviada por e-mail para os usuários que a "
 "concluem com sucesso."
 
+#: ../../content/applications/marketing/surveys/overview/scoring.rstNone
+msgid ""
+"Form view of a survey emphasizing the scoring and candidates section in Odoo"
+" Surveys"
+msgstr ""
+
 #: ../../content/applications/marketing/surveys/overview/scoring.rst:25
 msgid ""
 "Enable *Login required* to be able to *Give Badges*. Badges are related to "
@@ -679,6 +1284,12 @@ msgstr ""
 "relacionados à seção de eLearning de seu site. Além do usuário logado, os "
 "visitantes do site que acessam a página *Cursos* também podem ver os crachás"
 " concedidos."
+
+#: ../../content/applications/marketing/surveys/overview/scoring.rstNone
+msgid ""
+"View of the courses tab emphasizing the latest achievements section on the website for\n"
+"Odoo Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/time_random.rst:3
 msgid "Time and Randomize Questions"
@@ -703,6 +1314,11 @@ msgstr ""
 #: ../../content/applications/marketing/surveys/overview/time_random.rst:11
 msgid "Set the *Time limit* under the tab *Options*."
 msgstr "Defina o *limite de tempo* sob a guia *Opções*."
+
+#: ../../content/applications/marketing/surveys/overview/time_random.rstNone
+msgid ""
+"View of a survey form emphasizing the time limit feature in Odoo Surveys"
+msgstr ""
 
 #: ../../content/applications/marketing/surveys/overview/time_random.rst:17
 msgid ""
@@ -738,3 +1354,9 @@ msgstr ""
 "Para isso, na aba *Options*, habilite *Randomized per section*. Agora, sob a"
 " aba *Questões*, defina quantas das perguntas dessa seção devem ser levadas "
 "em conta durante o embaralhamento."
+
+#: ../../content/applications/marketing/surveys/overview/time_random.rstNone
+msgid ""
+"View of a survey form emphasizing the random questions count column in Odoo "
+"Surveys"
+msgstr ""
