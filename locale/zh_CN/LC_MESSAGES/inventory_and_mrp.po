@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 09:05+0000\n"
+"POT-Creation-Date: 2023-01-02 09:09+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Jeffery CHEN Fan <jeffery9@gmail.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -572,7 +572,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
 msgid "Configuration"
@@ -7666,125 +7665,127 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Kits"
-msgstr "套件"
+msgid "Use kits"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
-"A *kit* is a set of components that are not pre-assembled or mixed. This is "
-"useful for selling but also for creating cleaner and more effective *BOMs*. "
-"To use kits, you need both the Manufacturing and Inventory apps to be "
-"installed."
+"A *kit* is a set of unassembled components. Kits may be sold as products, "
+"but are also useful tools for managing more complex bills of materials "
+"(BoMs). To use kits, the :guilabel:`Manufacturing` and :guilabel:`Inventory`"
+" applications need to be installed."
 msgstr ""
-"*套件*是一组未预组装或混合的组件。这对销售很有用，但也有助于创建更干净、更有效的*BOM表*。要使用套件，您需要同时安装制造和库存应用程序。"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
-msgid "Manage Stock of Component Products"
-msgstr "管理部件产品库存"
+msgid "Create the kit as a product"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:12
 msgid ""
-"If you want to assemble kits as they are ordered, managing stock of the kit "
-"components only, you will use a *Kit BoM* Type without any manufacturing "
-"operations."
-msgstr "如果您想按订单组装套件，只管理套件组件的库存，您将使用*套件BoM*类型，而不进行任何制造操作。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:15
-msgid ""
-"A product using a *Kit BoM* will appear as a single line item on a quotation"
-" and a sales order, but will generate a delivery order with one line item "
-"for each of the components of the kit. In the examples below, the first "
-"image shows a sales order for the kit *Custom Computer Kit*, while the "
-"second image shows the corresponding delivery order."
+"To use a kit as a sellable product or simply as a component organization "
+"tool, the kit should first be created as a product. To create a kit product,"
+" go to :menuselection:`Manufacturing or Inventory --> Products --> "
+"Products`, and then click :guilabel:`Create`."
 msgstr ""
-"使用*套件BoM*的产品将在报价单和销售订单上显示为一个单行项目，但将为套件的每个组件生成一个带有一个行项目的交货订单。在下面的示例中，第一个图像显示套件*自定义计算机套件*的销售订单，而第二个图像显示相应的交货订单。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"From the *Products menu* in either the *Inventory* or *Manufacturing* app, "
-"create each component product (as you would with any other product), then "
-"create the top-level, or kit product. Because you cannot track the stock of "
-"kit products, the *Product Type* should be set to *Consumable*. However, if "
-"you are using Anglo-Saxon accounting, and you would like COGS to be posted "
-"when invoicing your kits (and only for this reason), the storable product "
-"type should selected instead. Because a kit product cannot be purchased, "
-"*Can be Purchased* should be unchecked. The route of the kit product in the "
-"*Inventory* Tab does not really matter, as, for replenishment, only the "
-"route of the components that will be taken into account only."
+"Next, set the :guilabel:`Product Type` to :guilabel:`Storable Product`: this"
+" allows for management of kit inventory. The :guilabel:`Route` designation "
+"under the :guilabel:`Inventory` tab does not matter, since Odoo uses the "
+"routes of the kit's components for replenishment purposes. All other "
+"parameters for the kit product may be modified according to preference. "
+"Finally, click :guilabel:`Save`."
 msgstr ""
-"从*库存*或*制造*应用程序中的*产品菜单*中，创建每个组件产品（与任何其他产品一样），然后创建顶级或套件产品。由于无法跟踪套件产品的库存，*产品类型*应设置为*耗材*。但是，如果您使用的是盎格鲁-"
-"撒克逊会计，并且您希望在为套件开具发票时过账COG（仅出于此原因），则应选择可存储产品类型。由于无法购买套件产品，因此应取消选中“可以购买”。“库存”选项卡中套件产品的路线实际上并不重要，因为对于补货，只考虑组件的路线。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
+msgid ""
+"The kit's components must also be configured as products via "
+":menuselection:`Manufacturing or Inventory --> Products --> Products`. These"
+" components require no specific configuration."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
+msgid "Set up the kit BoM"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:28
+msgid ""
+"After fully configuring the kit product and its components, create a "
+":abbr:`BoM (Bill of Materials)` for the kit product. Go to "
+":menuselection:`Manufacturing --> Products --> Bills of Materials`, and then"
+" click :guilabel:`Create`. Next, set the :guilabel:`Product` field to the "
+"previously configured kit product. Then, set the :guilabel:`BoM Type` to "
+":guilabel:`Kit`. Finally, add each component and specify its quantity. Make "
+"sure to :guilabel:`Save` the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Kit selection on the bill of materials."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
 msgid ""
-"All other parameters on the kit product may be modified according to your "
-"preference. The component products require no particular configuration."
-msgstr "套件产品的所有其他参数都可按照你的偏好进行修改。套件产品无需特别的配置。"
+"If the kit is solely being used as a sellable product, then only components "
+"need to be added under the :guilabel:`Components` tab, and configuring "
+"manufacturing operations is not necessary."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:42
 msgid ""
-"Once the products are configured, create a *bill of materials* for the kit "
-"product. Add each component and its quantity. Select the *BoM Type* Kit. All"
-" other options may be left with their default values."
-msgstr "配置产品后，为套件产品创建*物料清单*。添加每个组件及其数量。选择*BoM类型*套件。所有其他选项可能保留其默认值。"
+"When a kit is sold as a product, it appears as a single line item on the "
+"quotation and sales order. However, on delivery orders, each component of "
+"the kit is listed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+msgid "Use kits to manage complex BoMs"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:48
-msgid "Manage Stock of Kit Product and Component Products"
-msgstr "管理套件及部件产品的库存"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
 msgid ""
-"If you want to manage the stock of the *top-level kit product*, you will use"
-" a standard *BoM Type* manufacture or subcontracting instead. In this case "
-"you will either buy the final product from your subcontractor, or make it "
-"yourself through a manufacturing order."
+"Kits are also used to manage *multilevel* :abbr:`BoMs (Bills of Materials)`."
+" These are products that contain other products as components and therefore "
+"require nested :abbr:`BoMs (Bills of Materials)`. Incorporating pre-"
+"configured kits into multilevel :abbr:`BoMs (Bills of Materials)` allows for"
+" cleaner organization of bundled products. Under :guilabel:`Components`, "
+"list a kit as a component in a higher-level product's :abbr:`BoM (Bills of "
+"Material)` to eliminate the need to add the kit's parts individually. Any "
+":guilabel:`BoM Type` can be used for the higher-level product's :abbr:`BoM "
+"(Bill of Materials)`."
 msgstr ""
-"如果您想管理*顶级套件产品*的库存，您将使用标准的*BoM类型*制造或分包。在这种情况下，您可以从分包商处购买最终产品，也可以通过生产订单自行制造。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
-msgid ""
-"In that case the product type will be storable, and the BOM type either "
-"'Manufacture this product' or 'Subcontracting' as shown below."
-msgstr "在这种情况下，产品类型将是可存储的，BOM类型为“制造此产品”或“分包”，如下所示。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:62
-msgid "Build a cleaner BOM"
-msgstr "构建更清晰的BOM表"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
-msgid ""
-"As suggested above, a kit BOM can also simply be used to manage a more "
-"complex BOM."
-msgstr "如上所述，套件BOM也可以简单地用于管理更复杂的BOM。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:66
-msgid ""
-"Imagine the Custom Computer parts above were part of another final product. "
-"It would be much clearer and simpler if the BOMs were added together (as "
-"shown below) instead of adding all the individual parts one by one."
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Kit as a component in a multilevel bill of materials."
 msgstr ""
-"想象一下，上面的定制计算机部件是另一个最终产品的一部分。如果将BOM表添加到一起（如下所示），而不是逐个添加所有单独的部分，则会更加清晰和简单。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
 msgid ""
-"This is even better illustrated when looking at the BOM Structure Report, "
-"where it is easy to expand and hide specific kit level or sub-assembly type "
-"BOMs."
-msgstr "这在查看BOM结构报告时得到了更好的说明，在该报告中，可以轻松扩展和隐藏特定的套件级别或子装配类型BOM。"
+"To access a comprehensive overview of the multilevel :abbr:`BoM's (Bill of "
+"Material's)` components, click on the :guilabel:`Structure & Cost` smart "
+"button. Sublevel :abbr:`BoMs (Bills of Materials)` can be expanded and "
+"viewed from this report."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
-msgid ""
-"On the creation of the manufacturing order, the BOM will automatically "
-"expand to show all top level and kit level components. You can go back to "
-"the BOM at any point though as it remains  available on the form view of "
-"your manufacturing order."
-msgstr "在创建制造订单时，BOM表将自动展开以显示所有顶级和套件级组件。尽管如此，您可以随时返回BOM，因为它在制造订单的表单视图中仍然可用。"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Expanded kit in the Structure and Cost report."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
 msgid ""
-"Finally, note that if there were any Operations in the Kit BOM, these would "
-"also simply be added in to the work order list of the main component."
-msgstr "最后，请注意，如果套件BOM中有任何操作，这些操作也将简单地添加到主要组件的工作订单列表中。"
+"When creating a manufacturing order for a product with a multilevel "
+":abbr:`BoM (Bill of Materials)`, the kit product automatically expands to "
+"show all components. Any operations in the kit's :abbr:`BoM (Bill of "
+"Materials)` are also added to the list of work orders on the manufacturing "
+"order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:74
+msgid ""
+"Kits are primarily used to bundle components together for organization or "
+"sale. To manage multilevel products that require manufactured subcomponents,"
+" refer to :doc:`this documentation <sub_assemblies>` on sub-assemblies."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
 msgid "Managing BoMs for product variants"
