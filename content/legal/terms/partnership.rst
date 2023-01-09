@@ -11,8 +11,9 @@ Odoo Partnership Agreement
 .. v9: added maintenance commission + obligations
 .. v9a: minor clarification to allow OE commission even without maintenance
 .. v9b: 2021-01-12 - update requirements for Partnership levels
+.. v10: 2023-01-09 - change Odoo SH commission rate to 50%
 
-.. note:: Version 9b - 2021-01-12
+.. note:: Version 10 - 2023-01-09
 
 | BETWEEN:
 |  Odoo S.A., having its registered office at Chaussée de Namur, 40, 1367 Grand-Rosière,
@@ -158,7 +159,7 @@ The details of the benefits for each level of the partnership are described in t
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | **Sales benefits**                    |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Commission on Odoo SH platform [#s1]_ | 10%              | 100%               | 100%               | 100%               |
+| Commission on Odoo SH platform [#s1]_ | 10%              | 50%                | 50%                | 50%                |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Commission on Odoo Enterprise         | 10%              | 10%                | 15%                | 20%                |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+

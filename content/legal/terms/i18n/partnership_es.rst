@@ -19,6 +19,8 @@ Odoo Partnership Agreement (ES)
 .. v7: introduce "Learning Partners" and a few related changes
 .. v8: simplified, clarified, added trademark use restrictions, updated benefits
 .. v8a: minor clarifications and simplifications
+.. v... !missing updates!
+.. v10: 2023-01-09 - change Odoo SH commission rate to 50%
 
 .. note:: Versión 8a - 2019-08-09
 
@@ -169,7 +171,7 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | **Ventajas de las ventas**            |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
-| Comisión por la plataforma Odoo SH    | 10%              | 100%               | 100%               | 100%               |
+| Comisión por la plataforma Odoo SH    | 10%              | 50%                | 50%                | 50%                |
 | [#s1]_                                |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Comisión por Odoo Enterprise          | 10%              | 10%                | 15%                | 20%                |
