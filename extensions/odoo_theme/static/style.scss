@@ -993,9 +993,9 @@ header {
             // Exercises
             &.alert-dark {
                 --o-alert-icon: '#{$i-exercise}';
-                --o-alert-code-border-color: #{tint-color($dark, 50%)};
+                --o-alert-code-border-color: $dark;
 
-                background: $gray-300;
+                background: $gray-200;
             }
         }
         .graphviz {
@@ -1013,12 +1013,12 @@ header {
 //------------------------------------------------------------------------------
 
 .o_spoiler {
-    $background: shift-color($o-accordion-bg, $alert-bg-scale);
-    $border: shift-color($o-accordion-bg, $alert-border-scale);
-    $color: shift-color($o-accordion-bg, $alert-color-scale);
+    $background: $gray-200;
+    $border: shift-color($accordion-color, $alert-border-scale);
+    $color: shift-color($accordion-color, $alert-color-scale);
 
     @if (contrast-ratio($background, $color) < $min-contrast-ratio) {
-        $color: mix($o-accordion-bg, color-contrast($background), abs($alert-color-scale));
+        $color: mix($dark, color-contrast($background), abs($alert-color-scale));
     }
 
     @include alert-variant($background, $border, $color);
