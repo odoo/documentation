@@ -180,6 +180,8 @@ every 5 second:
 
     import { registry } from "./core/registry";
 
+    const serviceRegistry = registry.category("services");
+
     const myService = {
         dependencies: ["notification"],
         start(env, { notification }) {
