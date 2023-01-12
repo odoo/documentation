@@ -2142,6 +2142,11 @@ Possible children elements of the list view are:
       />
     </control>
 
+``open_on_click``
+  defines whether or not the record can be opened from the list. By default, this attribute is set
+  to true if the list is in a view and set to false if the list is in a `one2many` or `many2many`
+  field.
+
 .. [#treehistory] for historical reasons, it has its origin in tree-type views
                   later repurposed to a more table/list-type display
 
