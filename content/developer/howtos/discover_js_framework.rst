@@ -52,3 +52,8 @@ Exercises
 
 * :doc:`discover_js_framework/01_components`
 * :doc:`discover_js_framework/02_odoo_web_framework`
+* :doc:`discover_js_framework/03_fields_and_views`
+* :doc:`discover_js_framework/04_miscellaneous`
+* :doc:`discover_js_framework/05_custom_kanban_view`
+* :doc:`discover_js_framework/06_creating_view_from_scratch`
+* :doc:`discover_js_framework/07_testing`
