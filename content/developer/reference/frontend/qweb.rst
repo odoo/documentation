@@ -826,6 +826,8 @@ The template name is an arbitrary string, although when multiple templates
 are related (e.g. called sub-templates) it is customary to use dot-separated
 names to indicate hierarchical relationships.
 
+.. _reference/qweb/template_inheritance:
+
 Template inheritance
 ''''''''''''''''''''
 

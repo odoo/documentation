@@ -57,7 +57,6 @@ intended to quickly understand and practice the basics of Owl.
    .. image:: 01_components/overview.png
       :scale: 50%
       :align: center
-      :alt: Overview of chapter 1.
 
 .. spoiler:: Solutions
 
@@ -91,7 +90,6 @@ route with your browser.
    .. image:: 01_components/counter.png
       :scale: 70%
       :align: center
-      :alt: A counter component.
 
 .. seealso::
    `Video: How to use the DevTools <https://www.youtube.com/watch?v=IUyQjwnrpzM>`_
@@ -143,7 +141,6 @@ todos. This will be done incrementally in multiple exercises that will introduce
    .. image:: 01_components/todo.png
       :scale: 70%
       :align: center
-      :alt: A Todo component
 
 .. seealso::
    `Owl: Dynamic class attributes <{OWL_PATH}/doc/reference/templates.md#dynamic-class-attribute>`_
@@ -184,7 +181,6 @@ list.
    .. image:: 01_components/todo_list.png
       :scale: 70%
       :align: center
-      :alt: A TodoList
 
 6. Adding a todo
 ================
@@ -214,7 +210,6 @@ a todo to the list.
    .. image:: 01_components/create_todo.png
       :scale: 70%
       :align: center
-      :alt: Creating todos
 
 .. seealso::
    `Owl: Reactivity <{OWL_PATH}/doc/reference/reactivity.md>`_
@@ -256,7 +251,6 @@ way to do this is by using a `callback prop
    .. image:: 01_components/toggle_todo.png
       :scale: 70%
       :align: center
-      :alt: Toggling todos
 
 9. Deleting todos
 =================
@@ -287,7 +281,6 @@ The final touch is to let the user delete a todo.
    .. image:: 01_components/delete_todo.png
       :scale: 70%
       :align: center
-      :alt: Deleting todos
 
 10. Generic components with slots
 =================================
@@ -332,7 +325,6 @@ components. This is useful to factorize the common layout between different part
     .. image:: 01_components/card.png
        :scale: 70%
        :align: center
-       :alt: Creating card with slots
 
 .. seealso::
    `Bootstrap: documentation on cards <https://getbootstrap.com/docs/5.2/components/card/>`_

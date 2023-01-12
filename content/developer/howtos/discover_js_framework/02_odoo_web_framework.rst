@@ -16,10 +16,12 @@ learn how to use the Odoo JavaScript framework which is is built on top of Owl.
 
 ..     odoo[Odoo JavaScript framework] --> Owl
 
-.. image:: 02_odoo_web_framework/previously_learned.svg
+.. figure:: 02_odoo_web_framework/previously_learned.svg
    :align: center
-   :alt: What we learned in chapter 1
    :width: 50%
+
+   This is the progress that we have made in discovering the JavaScript web framework at the end of
+   :doc:`01_components`.
 
 In the `awesome_tshirt` module, we will build our Awesome dashboard. This will be a good
 opportunity to discover many useful features in the Odoo JavaScript framework.
@@ -28,7 +30,6 @@ opportunity to discover many useful features in the Odoo JavaScript framework.
 
    .. image:: 02_odoo_web_framework/overview_02.png
       :align: center
-      :alt: overview
 
 .. spoiler:: Solutions
 
@@ -50,7 +51,6 @@ and a main content zone just below. This is done using a `Layout component
 
    .. image:: 02_odoo_web_framework/new_layout.png
       :align: center
-      :alt: new Layout
 
 .. seealso::
 
@@ -99,7 +99,6 @@ services, and components can import a service with the `useService()` hooks.
 
    .. image:: 02_odoo_web_framework/navigation_buttons.png
       :align: center
-      :alt: buttons for quick navigation
 
 .. seealso::
    - `Example: doAction use
@@ -153,7 +152,6 @@ Here is a short explanation on the various arguments:
 
    .. image:: 02_odoo_web_framework/statistics.png
       :align: center
-      :alt: statistics cards
 
 .. seealso::
 
@@ -227,7 +225,6 @@ chartjs code every time if they don't need it).
       .. image:: 02_odoo_web_framework/pie_chart.png
          :align: center
          :scale: 50%
-         :alt: pie chart
 
 .. seealso::
    - `Example: lazy loading a js file
@@ -251,7 +248,6 @@ Here is a list of some small improvements you could try to do if you have the ti
    .. image:: 02_odoo_web_framework/misc.png
       :align: center
       :scale: 50%
-      :alt: background color and translation
 
 .. seealso::
    - `Example: use of env._t function
