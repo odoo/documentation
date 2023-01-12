@@ -22,7 +22,7 @@ copyright = 'Odoo S.A.'
 # `version` is the version info for the project being documented, acts as replacement for |version|,
 # also used in various other places throughout the built documents.
 # `release` is the full version, including alpha/beta/rc tags. Acts as replacement for |release|.
-version = release = 'master'
+version = release = 'saas-16.1'
 
 # `current_branch` is the technical name of the current branch.
 # E.g., saas-15.4 -> saas-15.4; 12.0 -> 12.0, master -> master (*).
@@ -210,6 +210,7 @@ sphinx.transforms.i18n.docname_to_domain = (
 # is populated. If a version is passed to `versions` but is not listed here, it will not be shown.
 versions_names = {
     'master': "Master",
+    'saas-16.1': "Odoo Online",
     '16.0': "Odoo 16",
     'saas-15.2': "Odoo Online",
     '15.0': "Odoo 15",
