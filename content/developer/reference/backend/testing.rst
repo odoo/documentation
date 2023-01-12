@@ -286,6 +286,8 @@ codebase in Javascript, it is necessary to test it. In this section, we will
 discuss the practice of testing JS code in isolation: these tests stay in the
 browser, and are not supposed to reach the server.
 
+.. _reference/testing/qunit:
+
 Qunit test suite
 ----------------
 
@@ -527,6 +529,7 @@ Tips
   is possible to see the state of the widget directly, and even better, to
   manipulate the widget by clicking/interacting with it.
 
+.. _reference/testing/integration-testing:
 
 Integration Testing
 ===================
