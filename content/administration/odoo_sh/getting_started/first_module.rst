@@ -211,7 +211,10 @@ you can click on your branch name in the left navigation panel to access its his
   :align: center
 
 You can see here the changes you just pushed, including the comment you set.
-Once the database ready, you can access it by clicking the *Connect* button.
+Once the database is ready, you can access it by clicking the *Connect* button.
+
+.. note::
+   The tests may take approximately an hour to run.
 
 .. image:: first_module/firstmodule-test-database.png
   :align: center
