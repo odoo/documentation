@@ -224,6 +224,7 @@ languages_names = {
     'fr': 'FR',
     'nl': 'NL',
     'pt_BR': 'PT',
+    'ro': 'RO',
     'uk': 'UA',
     'zh_CN': 'ZH',
 }
