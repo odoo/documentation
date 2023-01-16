@@ -24,6 +24,7 @@ localization:
      - :ref:`Indian e-invoicing integration <india/e-invoicing>`
    * - :guilabel:`Indian E-waybill`
      - `l10n_in_edi_ewaybill`
+<<<<<<< HEAD
      - :ref:`Indian E-way bill integration <india/e-waybill>`
    * - :guilabel:`Indian - GSTR India eFiling`
      - `l10n_in_reports_gstr`
@@ -43,6 +44,26 @@ localization:
 
 .. image:: india/india-modules.png
    :alt: Indian localization modules
+||||||| parent of 8c26e4a37 (temp)
+     - :ref:`Indian E-waybill integration <india/e-waybill>`
+=======
+     - :ref:`Indian E-way bill integration <india/e-waybill>`
+   * - :guilabel:`Indian - Accounting Reports`
+     - `l10n_in_reports`
+     - Indian tax reports
+   * - :guilabel:`Indian - Purchase Report(GST)`
+     - `l10n_in_purchase`
+     - Indian GST Purchase report
+   * - :guilabel:`Indian - Sale Report(GST)`
+     - `l10n_in_sale`
+     - Indian GST Sale report
+   * - :guilabel:`Indian - Stock Report(GST)`
+     - `l10n_in_stock`
+     - Indian GST Stock report
+
+.. image:: india/india-modules.png
+   :alt: Indian localization modules
+>>>>>>> 8c26e4a37 (temp)
 
 .. _india/e-invoicing:
 
@@ -50,6 +71,9 @@ e-Invoice system
 ================
 
 Odoo is compliant with the **Indian Goods and Services Tax (GST) e-Invoice system** requirements.
+
+Setup
+-----
 
 Setup
 -----
@@ -293,6 +317,7 @@ fill out the :guilabel:`Cancel reason` and :guilabel:`Cancel remarks` fields. Th
    :alt: Cancel reason and remarks
 
 .. note::
+<<<<<<< HEAD
    - If you want to abort the cancellation before processing the invoice, click :guilabel:`Call Off
      EDI Cancellation`.
    - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
@@ -498,3 +523,17 @@ The :guilabel:`GSTR-3` report contains different sections:
 
    .. image:: india/gst-gstr-3-report.png
       :alt: GSTR-3 Report
+||||||| parent of 8c26e4a37 (temp)
+   - If you want to abort the cancellation before processing the invoice, click on :guilabel:`Call
+     Off EDI Cancellation`.
+   - If the E-invoice is applicable for this invoice, then it will also be canceled.
+   - Once you request to cancel the E-waybill, Odoo automatically submits the JSON Signed file to
+     the government portal. You can click on :guilabel:`Process Now` if you want to process the
+     invoice immediately.
+=======
+   - If you want to abort the cancellation before processing the invoice, click :guilabel:`Call Off
+     EDI Cancellation`.
+   - Once you request to cancel the E-Way bill, Odoo automatically submits the JSON-signed file to
+     the government portal. You can click :guilabel:`Process Now` if you want to process the invoice
+     immediately.
+>>>>>>> 8c26e4a37 (temp)
