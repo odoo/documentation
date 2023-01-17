@@ -20,7 +20,7 @@ Action Type
 ===========
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`reference/actions` and :ref:`reference/exceptions`.
+:doc:`../../reference/backend/actions` and :ref:`reference/exceptions`.
 
 .. note::
 

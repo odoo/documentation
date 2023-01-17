@@ -622,7 +622,7 @@ and having opened a listing of teachers. From the listing it is possible to
 view.
 
 If there is no definition of how to present records (a
-:ref:`view <reference/views>`) Odoo will automatically create a basic one
+:doc:`view <../reference/user_interface/view_records>`) Odoo will automatically create a basic one
 on-the-fly. In our case it works for the "list" view for now (only displays
 the teacher's name) but in the "form" view the HTML ``biography`` field is
 displayed side-by-side with the ``name`` field and not given enough space.

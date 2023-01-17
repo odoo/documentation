@@ -10,9 +10,8 @@ Python framework
     backend/orm
     backend/data
     backend/actions
-    backend/views
-    backend/module
     backend/reports
+    backend/module
     backend/security
     backend/performance
     backend/testing

@@ -73,6 +73,7 @@ like this:
             'web/static/lib/bootstrap/**/*',
             'web/static/src/js/boot.js',
             'web/static/src/js/webclient.js',
+            'web/static/src/xml/webclient.xml',
         ],
         'web.qunit_suite_tests': [
             'web/static/src/js/webclient_tests.js',

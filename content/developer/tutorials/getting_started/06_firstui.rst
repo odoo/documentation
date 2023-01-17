@@ -47,7 +47,7 @@ Actions
 =======
 
 **Reference**: the documentation related to this topic can be found in
-:ref:`reference/actions`.
+:doc:`../../reference/backend/actions`.
 
 .. note::
 
