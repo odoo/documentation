@@ -16,7 +16,8 @@ This chapter covers a very small subset of what can be done in the views. Do not
 read the reference documentation for a more complete overview.
 
 **Reference**: the documentation related to this chapter can be found in
-:ref:`reference/views`.
+:doc:`../../reference/user_interface/view_records` and
+:doc:`../../reference/user_interface/view_architecture`.
 
 Inline Views
 ============
@@ -271,41 +272,41 @@ behavior customizations, we can add the ``options`` attribute to several field w
 In :ref:`tutorials/getting_started/06_firstui`, we saw that reserved fields were used for
 specific behaviors. For example, the ``active`` field is used to automatically filter out
 inactive records. We added the ``state`` as a reserved field as well. It's now time to use it!
-A ``state`` field is used in combination with a ``states`` attribute in the view to display
+A ``state`` field is used in combination with a ``invisible`` attribute in the view to display
 buttons conditionally.
 
 .. exercise:: Add conditional display of buttons.
 
-    Use the ``states`` attribute to display the header buttons conditionally as depicted
+    Use the ``invisible`` attribute to display the header buttons conditionally as depicted
     in this section's **Goal** (notice how the 'Sold' and 'Cancel' buttons change when the state is modified).
 
-    Tip: do not hesitate to search for ``states=`` in the Odoo XML files for some examples.
+    Tip: do not hesitate to search for ``invisible=`` in the Odoo XML files for some examples.
 
 More generally, it is possible to make a field ``invisible``, ``readonly`` or ``required`` based
-on the value of other fields thanks to the ``attrs`` attribute. Note that ``invisible`` can also be applied
-to other elements of the view such as ``button`` or ``group``.
+on the value of other fields. Note that ``invisible`` can also be appliedto other elements of
+the view such as ``button`` or ``group``.
 
-The ``attrs`` is a dictionary with the property as a key and a domain as a value. The domain gives
-the condition in which the property applies. For example:
+``invisible``, ``readonly`` or ``required`` can have ``True``, ``False`` or a domain as value.
+The domain gives the condition in which the property applies. For example:
 
 .. code-block:: xml
 
     <form>
-        <field name="description" attrs="{'invisible': [('is_partner', '=', False)]}"/>
+        <field name="description" invisible="not is_partner"/>
         <field name="is_partner" invisible="1"/>
     </form>
 
 This means that the ``description`` field is invisible when ``is_partner`` is ``False``. It is
-important to note that a field used in an ``attrs`` **must** be present in the view. If it
+important to note that a field used in ``invisible`` **must** be present in the view. If it
 should not be displayed to the user, we can use the ``invisible`` attribute to hide it.
 
-.. exercise:: Use ``attrs``.
+.. exercise:: Use ``invisible``.
 
     - Make the garden area and orientation invisible in the ``estate.property`` form view when
       there is no garden.
     - Make the 'Accept' and 'Refuse' buttons invisible once the offer state is set.
     - Do not allow adding an offer when the property state is 'Offer Accepted', 'Sold' or
-      'Canceled'. To do this use the ``readonly`` ``attrs``.
+      'Canceled'. To do this use the ``readonly`` attribute.
 
 .. warning::
 
@@ -385,7 +386,7 @@ Search
 ------
 
 **Reference**: the documentation related to this section can be found in
-:ref:`reference/views/search` and :ref:`reference/views/search/defaults`.
+:ref:`reference/view_architecture/search` and :ref:`reference/view_architecture/search/defaults`.
 
 .. note::
 

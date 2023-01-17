@@ -676,7 +676,7 @@ Request-based
 
 Most Python-side uses of QWeb are in controllers (and during HTTP requests),
 in which case templates stored in the database (as
-:ref:`views <reference/views/qweb>`) can be trivially rendered by calling
+:ref:`views <reference/view_architecture/qweb>`) can be trivially rendered by calling
 :meth:`odoo.http.HttpRequest.render`:
 
 .. code-block:: python

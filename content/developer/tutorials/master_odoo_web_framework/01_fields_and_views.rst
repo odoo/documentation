@@ -166,7 +166,7 @@ whenever it is set to `true`.
 .. seealso::
    - `Example: A field inheriting another
      <{GITHUB_PATH}/addons/account/static/src/components/account_type_selection>`_
-   - :ref:`Documentation on xpath <reference/views/inheritance>`
+   - :ref:`Documentation on xpath <reference/view_records/inheritance>`
 
 4. Message for some customers
 =============================

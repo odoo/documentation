@@ -259,7 +259,7 @@ Report Inheritance
       :align: center
       :alt: An inherited report
 
-Inheritance in QWeb uses the same ``xpath`` elements as :ref:`views inheritance <reference/views/inheritance>`.
+Inheritance in QWeb uses the same ``xpath`` elements as :ref:`views inheritance <reference/view_records/inheritance>`.
 A QWeb template refers to its parent template in a different way though. It is even easier to do by just adding
 the ``inherit_id`` attribute to the ``template`` element and setting it equal to the *module.parent_template_id*.
 

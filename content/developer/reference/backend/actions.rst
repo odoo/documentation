@@ -1,6 +1,3 @@
-
-.. _reference/actions:
-
 =======
 Actions
 =======
@@ -65,7 +62,7 @@ Window Actions (``ir.actions.act_window``)
 ==========================================
 
 The most common action type, used to present visualisations of a model through
-:ref:`views <reference/views>`: a window action defines a set of view types
+:doc:`views <../user_interface/view_records>`: a window action defines a set of view types
 (and possibly specific views) for a model (and possibly specific record of the
 model).
 

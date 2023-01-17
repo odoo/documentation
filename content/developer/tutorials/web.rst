@@ -535,7 +535,7 @@ characteristics:
 .. note::
    The rationale behind using QWeb instead of existing javascript template
    engines is the extensibility of pre-existing (third-party) templates, much
-   like Odoo :ref:`views <reference/views>`.
+   like Odoo :doc:`views <../reference/user_interface/view_records>`.
 
    Most javascript template engines are text-based which precludes easy
    structural extensibility where an XML-based templating engine can be
@@ -1649,7 +1649,7 @@ Existing web components
 The Action Manager
 ------------------
 
-In Odoo, many operations start from an :ref:`action <reference/actions>`:
+In Odoo, many operations start from an :doc:`action <../reference/backend/actions>`:
 opening a menu item (to a view), printing a report, ...
 
 Actions are pieces of data describing how a client should react to the
@@ -1664,7 +1664,7 @@ Using the Action Manager
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
 The action manager can be invoked explicitly from javascript code by creating
-a dictionary describing :ref:`an action <reference/actions>` of the right
+a dictionary describing :doc:`an action <../reference/backend/actions>` of the right
 type, and calling an action manager instance with it.
 
 :func:`~odoo.Widget.do_action` is a shortcut of :class:`~odoo.Widget`
@@ -1819,7 +1819,7 @@ multiple views depending on the original action's requirements:
 The Views
 ~~~~~~~~~
 
-Most :ref:`Odoo views <reference/views>` are implemented through a subclass
+Most :doc:`Odoo views <../reference/user_interface/view_records>` are implemented through a subclass
 of :class:`odoo.web.View` which provides a bit of generic basic structure
 for handling events and displaying model information.
 

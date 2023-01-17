@@ -56,13 +56,14 @@ Business objects
     Declared as Python classes, these resources are automatically persisted
     by Odoo based on their configuration
 
-:ref:`Object views <reference/views>`
+:doc:`Object views <../reference/user_interface/view_architecture>`
     Definition of business objects UI display
 
 :ref:`Data files <reference/data>`
     XML or CSV files declaring the model metadata :
 
-    * :ref:`views <reference/views>` or :ref:`reports <reference/reports>`,
+    * :doc:`views <../reference/user_interface/view_architecture>` or :ref:`reports
+      <reference/reports>`,
     * configuration data (modules parametrization, :ref:`security rules <reference/security>`),
     * demonstration data
     * and more
@@ -304,7 +305,7 @@ requests, the view with the correct type and the lowest priority will be
 used (so the lowest-priority view of each type is the default view for that
 type).
 
-:ref:`View inheritance <reference/views/inheritance>` allows altering views
+:ref:`View inheritance <reference/view_records/inheritance>` allows altering views
 declared elsewhere (adding or removing content).
 
 Generic view declaration
@@ -398,11 +399,11 @@ Form views can also use plain HTML for more flexible layouts:
    <form string="Idea Form">
        <header>
            <button string="Confirm" type="object" name="action_confirm"
-                   states="draft" class="oe_highlight" />
+                   invisible="state != 'draft'" class="oe_highlight" />
            <button string="Mark as done" type="object" name="action_done"
-                   states="confirmed" class="oe_highlight"/>
+                   invisible="state != 'confirmed'" class="oe_highlight"/>
            <button string="Reset to draft" type="object" name="action_draft"
-                   states="confirmed,done" />
+                   invisible="state not in ['confirmed', 'done']" />
            <field name="state" widget="statusbar"/>
        </header>
        <sheet>
@@ -1288,7 +1289,7 @@ A report is a combination two elements:
      the *report* contextual menu rather than the *action* one. There is no
      technical difference but putting elements in the right place helps users.
 
-* A standard :ref:`QWeb view <reference/views/qweb>` for the actual report:
+* A standard :ref:`QWeb view <reference/view_architecture/qweb>` for the actual report:
 
   .. code-block:: xml
 
