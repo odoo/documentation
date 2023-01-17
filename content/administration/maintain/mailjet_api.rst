@@ -208,7 +208,7 @@ Connection`.
       `yourdomain.com`. Replace `yourdomain` with the custom domain for the Odoo database. If there
       isn't one, then use the :guilabel:`mail.catchall.domain` system parameter.
 
-   For more information see :ref:`Using a default email address <email_domain/default>`.
+   For more information see :ref:`Using a default email address <email_communication/default>`.
 
    The :guilabel:`System Parameters` can be accessed by activating
    :doc:`../../applications/general/developer_mode` in the :menuselection:`Settings --> Technical
