@@ -16,95 +16,40 @@ How-to guides
     howtos/provide_iap_services
     howtos/connect_device
 
-.. raw:: html
+.. cards::
 
-   <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-4">
+   .. card:: Write lean easy-to-maintain CSS
+      :target: howtos/scss_tips
 
-       <a class="o_toctree_card col" href="howtos/scss_tips.html">
-           <div class="card h-100">
-               <div class="card-body pb-0">
-                   <h4 class="card-title text-primary mb-1">Write lean easy-to-maintain CSS</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Follow this guide to keep the technical debt of your CSS code under control.
-                   </p>
-               </div>
-               <div class="card-footer border-0">
-               </div>
-           </div>
-       </a>
+      Follow this guide to keep the technical debt of your CSS code under control.
 
-       <a class="o_toctree_card col" href="howtos/web_services.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Web services</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn more about Odoo's web services.
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+   .. card:: Web services
+      :target: howtos/web_services
 
-       <a class="o_toctree_card col" href="howtos/company.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Multi-company guidelines</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn how to manage multiple companies and deal with the records-related
-                       specificities of a multi-company environment.
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+      Learn more about Odoo's web services.
 
-       <a class="o_toctree_card col" href="howtos/accounting_localization.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Accounting localization</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn how to build a localization module, create bank operation models and
-                       dynamic reports.
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+   .. card:: Multi-company guidelines
+      :target: howtos/company
 
-       <a class="o_toctree_card col" href="howtos/translations.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Translating modules</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn how to provide translation abilities to your module.
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+      Learn how to manage multiple companies and deal with the records-related specificities of a
+      multi-company environment.
 
-       <a class="o_toctree_card col" href="howtos/provide_iap_services.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Provide IAP services</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+   .. card:: Accounting localization
+      :target: howtos/accounting_localization
 
-       <a class="o_toctree_card col" href="howtos/connect_device.html">
-           <div class="card h-100 pb-0">
-               <div class="card-body">
-                   <h4 class="card-title text-primary mb-1">Connect with a device</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn how to enable a module to detect and communicate with an IoT device.
-                   </p>
-               </div>
-               <div class="card-footer border-0"></div>
-           </div>
-       </a>
+      Learn how to build a localization module, create bank operation models and dynamic reports.
 
-   </div>
+   .. card:: Translating modules
+      :target: howtos/translations
+
+      Learn how to provide translation abilities to your module.
+
+   .. card:: Provide IAP services
+      :target: howtos/provide_iap_services
+
+       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
+
+   .. card:: Connect with a device
+      :target: howtos/connect_device
+
+      Learn how to enable a module to detect and communicate with an IoT device.
