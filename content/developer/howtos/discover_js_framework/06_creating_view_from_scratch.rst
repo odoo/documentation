@@ -41,15 +41,7 @@ addon includes the necessary server files to add a new view.
 1. Make a hello world view
 ==========================
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 First step is to create a JavaScript implementation with a simple component.
-=======
-First step is to create a javascript implementation with a simple component.
->>>>>>> 953fca3a ([IMP] developer: JavaScript tutorial: chapter 6)
-=======
-The first step is to create a JavaScript implementation with a simple component.
->>>>>>> e1a22ec3 (review chapter 6)
 
 .. exercise::
 
