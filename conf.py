@@ -165,6 +165,9 @@ extensions = [
     # Content tabs
     'sphinx_tabs.tabs',
 
+    # Cards
+    'cards',
+
     # Spoilers
     'spoilers',
 
