@@ -1003,6 +1003,54 @@ set, the label is used instead of the language for grouping tabs.
 
                 console.log("Hello World");
 
+.. _contributing/cards:
+
+Cards
+=====
+
+.. list-table::
+   :class: o-showcase-table
+
+   * - .. cards::
+
+          .. card:: Documentation
+             :target: ../documentation
+             :tag: Step-by-step guide
+             :large:
+
+             Use this guide to acquire the tools and knowledge you need to write documentation.
+
+          .. card:: Content guidelines
+             :target: content_guidelines
+
+             List of guidelines and trips and tricks to make your content shine at its brightest!
+
+          .. card:: RST guidelines
+             :target: rst_guidelines
+
+             List of technical guidelines to observe when writing with reStructuredText.
+
+   * - .. code-block:: text
+
+          .. cards::
+
+             .. card:: Documentation
+                :target: ../documentation
+                :tag: Step-by-step guide
+                :large:
+
+                Use this guide to acquire the tools and knowledge you need to write documentation.
+
+             .. card:: Content guidelines
+                :target: content_guidelines
+
+                List of guidelines and trips and tricks to make your content shine at its brightest!
+
+             .. card:: RST guidelines
+                :target: rst_guidelines
+
+                List of technical guidelines to observe when writing with reStructuredText.
+
 .. _contributing/document-metadata:
 
 Document metadata
