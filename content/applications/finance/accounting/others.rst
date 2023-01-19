@@ -8,6 +8,6 @@ Others
    :titlesonly:
 
    others/multi_currency
-   others/analytic
+   others/analytic_accounting
    others/adviser
    others/inventory
