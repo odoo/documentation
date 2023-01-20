@@ -428,8 +428,8 @@ Inside these 3 groups, the imported lines are alphabetically sorted.
     from odoo import api, fields, models, _ # alphabetically ordered
     from odoo.tools.safe_eval import safe_eval as eval
     # 3 : imports from odoo addons
-    from odoo.addons.website.models.website import slug
     from odoo.addons.web.controllers.main import login_redirect
+    from odoo.addons.website.models.website import slug
 
 Idiomatics of Programming (Python)
 ----------------------------------
