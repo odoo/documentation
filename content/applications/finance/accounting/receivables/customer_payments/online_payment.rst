@@ -1,6 +1,12 @@
+:show-content:
+
 ======================
 Invoice online payment
 ======================
+
+.. toctree::
+
+   online_payment/install_portal_patch
 
 To make it more convenient for your customers to pay the invoices you issue, you can activate the
 **Invoice Online Payment** feature, which adds a *Pay Now* button on their **Customer Portal**. This
