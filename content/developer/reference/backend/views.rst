@@ -2003,10 +2003,9 @@ Possible children elements of the list view are:
     ``width`` (for ``editable``)
         when there is no data in the list, the width of a column can be forced
         by setting this attribute. The value can be an absolute width (e.g.
-        '100px'), or a relative weight (e.g. '3', meaning that this column will
-        be 3 times larger than the others). Note that when there are records in
-        the list, we let the browser automatically adapt the column's widths
-        according to their content, and this attribute is thus ignored.
+        '100px'). Note that when there are records in the list, we let the
+        browser automatically adapt the column's widths according to their content,
+        and this attribute is thus ignored.
     ``decoration-{$name}``
         allow changing the style of a cell's text based on the corresponding
         record's attributes.
