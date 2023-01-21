@@ -15,19 +15,19 @@
 # marcescu, 2023
 # Jesse Garza <jga@odoo.com>, 2023
 # Marian Cuadra, 2023
-# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Lucia Pacheco <lpo@odoo.com>, 2023
 # Martin Trigaux, 2023
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 14:27+0000\n"
+"POT-Creation-Date: 2023-01-19 15:37+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
-"Last-Translator: Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -2507,6 +2507,384 @@ msgstr ""
 msgid "Maintain"
 msgstr "Mantener"
 
+#: ../../content/administration/maintain/azure_oauth.rst:3
+msgid "Connect Microsoft Outlook 365 to Odoo using Azure OAuth"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:5
+msgid ""
+"Odoo is compatible with Microsoft's Azure OAuth for Microsoft 365. In order "
+"to send and receive secure emails from a custom domain, all that is required"
+" is to configure a few settings on the Azure platform and on the back end of"
+" the Odoo database. This configuration works with either a personal email "
+"address or an address created by a custom domain."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:11
+msgid ""
+"`Microsoft Learn: Register an application with the Microsoft identity "
+"platform <https://learn.microsoft.com/azure/active-"
+"directory/develop/quickstart-register-app>`_"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:15
+msgid "Setup in Microsoft Azure Portal"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:18
+msgid "Create a new application"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:20
+msgid ""
+"To get started, go to `Microsoft's Azure Portal "
+"<https://portal.azure.com/>`_. Log in with the :guilabel:`Microsoft Outlook "
+"Office 365` account if there is one, otherwise log in with the personal "
+":guilabel:`Microsoft account`. A user with administrative access to the "
+"Azure Settings will need to connect and perform the following configuration."
+" Next, navigate to the section labeled :guilabel:`Manage Azure Active "
+"Directory`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:26
+msgid ""
+"Now, click on :guilabel:`Add (+)`, located in the top menu, and then select "
+":guilabel:`App registration`. On the :guilabel:`Register an application` "
+"screen, rename the :guilabel:`Name` to `Odoo` or something recognizable. "
+"Under the :guilabel:`Supported account types` section select "
+":guilabel:`Accounts in any organizational directory (Any Azure AD directory "
+"- Multitenant) and personal Microsoft accounts (e.g. Skype, Xbox)`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:32
+msgid ""
+"Under the :guilabel:`Redirect URL` section, select :guilabel:`Web` as the "
+"platform, and then input `https://<odoo base url>/microsoft_outlook/confirm`"
+" in the :guilabel:`URL` field. The Odoo base URL is the canonical domain at "
+"which your Odoo instance can be reached in the URL field."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:37
+msgid ""
+"*mydatabase.odoo.com*, where *mydatabase* is the actual prefix of the "
+"database's subdomain, assuming it's hosted on Odoo.com"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:40
+msgid ""
+"After the URL has been added to the field, :guilabel:`Register` the "
+"application so it is created."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:43
+msgid "API permissions"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:45
+msgid ""
+"The :guilabel:`API permissions` should be set next. Odoo will need specific "
+"API permissions to be able to read (IMAP) and send (IMAP) emails in the "
+"Microsoft 365 setup. First, click the :guilabel:`API permissions` link, "
+"located in the left menu bar. Next, click on the :guilabel:`(+) Add a "
+"Permission` button and select :guilabel:`Microsoft Graph` under "
+":guilabel:`Commonly Used Microsoft APIs`. After, select the "
+":guilabel:`Delegated Permissions` option."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:51
+msgid ""
+"In the search bar, search for the following :guilabel:`Deregulated "
+"permissions` and click :guilabel:`Add permissions` for each one:"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:54
+msgid ":guilabel:`SMTP.Send`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:55
+msgid ":guilabel:`IMAP.AccessAsUser.All`"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:58
+msgid "The :guilabel:`User.Read` permission will be added by default."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid ""
+"API permissions needed for Odoo integration are listed under the Microsoft "
+"Graph."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:65
+msgid "Assign users and groups"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:67
+msgid ""
+"After adding the API permissions, navigate back to the :guilabel:`Overview` "
+"of the :guilabel:`Application` in the top of the left sidebar menu."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:70
+msgid ""
+"Now, add users to this application. Under the :guilabel:`Essentials` "
+"overview table, click on the link labeled :guilabel:`Managed Application in "
+"Local Directory`, or the last option on the bottom right-hand side of the "
+"table."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid ""
+"Add users/groups by clicking the Managed application in local directory link for the\n"
+"created application."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:79
+msgid ""
+"In the left sidebar menu, select :guilabel:`Users and Groups`. Next, click "
+"on :guilabel:`(+) Add User/Group`. Depending on the account, either a "
+":guilabel:`Group` and a :guilabel:`User` can be added, or only "
+":guilabel:`Users`. Personal accounts will only allow for :guilabel:`Users` "
+"to be added."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:84
+msgid ""
+"Under :guilabel:`Users` or :guilabel:`Groups`, click on :guilabel:`None "
+"Selected` and add the users or group of users that will be sending emails "
+"from the :guilabel:`Microsoft account` in Odoo. :guilabel:`Add` the "
+"users/groups, click :guilabel:`Select`, and then :guilabel:`Assign` them to "
+"the application."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:90
+msgid "Create credentials"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:92
+msgid ""
+"Now that the Microsoft Azure app is set up, credentials need to be created "
+"for the Odoo setup. These include the :guilabel:`Client ID` and "
+":guilabel:`Client Secret`. To start, the :guilabel:`Client ID` can be copied"
+" from the :guilabel:`Overview` page of the app. The :guilabel:`Client ID` or"
+" :guilabel:`Application ID` is located under the :guilabel:`Display Name` in"
+" the :guilabel:`Essentials` overview of the app."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid "Application/Client ID located in the Overview of the app."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:102
+msgid ""
+"Next, the :guilabel:`Client Secret Value` needs to be retrieved. To get this"
+" value, click on :guilabel:`Certificates & Secrets` in the left sidebar "
+"menu. Then, a :guilabel:`Client Secret` needs to be produced. In order to do"
+" this, click on the :guilabel:`(+) New Client Secret` button."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:106
+msgid ""
+"A window on the right will populate with a button labeled :guilabel:`Add a "
+"client secret`. Under :guilabel:`Description`, type in `Odoo Fetchmail` or "
+"something recognizable, and then set the :guilabel:`expiration date`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:111
+msgid ""
+"A new :guilabel:`Client Secret` will need to be produced and configured if "
+"the first one expires. In this event, there could be an interruption of "
+"service, so the expiration date should be noted and set to the furthest "
+"possible date."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:115
+msgid ""
+"Next, click on :guilabel:`Add` when these two values are entered. A "
+":guilabel:`Client Secret Value` and :guilabel:`Secret ID` will be created. "
+"It is important to copy the :guilabel:`Value` or :guilabel:`Client Secret "
+"Value` into a notepad as it will become encrypted after leaving this page. "
+"The :guilabel:`Secret ID` is not needed."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid "Client Secret Value or Value in the app's credentials."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:124
+msgid ""
+"After these steps, the following items should be ready to be set up in Odoo:"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:126
+msgid "A client ID (:guilabel:`Client ID` or :guilabel:`Application ID`)"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:127
+msgid "A client secret (:guilabel:`Value` or :guilabel:`Client Secret Value`)"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:129
+msgid ""
+"This completes the setup on the :guilabel:`Microsoft Azure Portal` side."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:132
+#: ../../content/administration/maintain/google_oauth.rst:84
+msgid "Setup in Odoo"
+msgstr "Configuración en Odoo"
+
+#: ../../content/administration/maintain/azure_oauth.rst:135
+msgid "Enter Microsoft Outlook credentials"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:137
+msgid ""
+"First, open the Odoo database and navigate to the :guilabel:`Apps` module. "
+"Then, remove the :guilabel:`Apps` filter from the search bar and type in "
+"`Outlook`. After that, install the module called :guilabel:`Microsoft "
+"Outlook`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:141
+msgid ""
+"Next, navigate to :menuselection:`Settings --> General Settings`, and under "
+"the :guilabel:`Discuss` section, ensure that the checkbox for "
+":guilabel:`Custom Email Servers` is checked. This populates a new option for"
+" :guilabel:`Outlook Credentials`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:145
+msgid ":guilabel:`Save` the progress."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:147
+msgid ""
+"Then, copy and paste the :guilabel:`Client ID` (Application ID) and "
+":guilabel:`Client Secret (Client Secret Value)` into the respective fields "
+"and :guilabel:`Save` the settings."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid "Outlook Credentials in Odoo General Settings."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:155
+#: ../../content/administration/maintain/google_oauth.rst:98
+msgid "Configure outgoing email server"
+msgstr "Configurar servidor de correos electrónicos salientes"
+
+#: ../../content/administration/maintain/azure_oauth.rst:157
+msgid ""
+"On the :guilabel:`General Settings` page, under the :guilabel:`Custom Email "
+"Servers` setting, click the :guilabel:`Outgoing Email Servers` link to "
+"configure the Microsoft account."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:160
+msgid ""
+"Then, create a new email server and check the box for :guilabel:`Outlook`. "
+"Next, fill in the :guilabel:`Name` (it can be anything) and the Microsoft "
+"Outlook email :guilabel:`Username`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:163
+msgid ""
+"If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain "
+"or email address <email_communication/default_from>`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:166
+msgid "Then, cick on :guilabel:`Connect your Outlook account`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:168
+msgid ""
+"A new window from Microsoft opens to complete the :guilabel:`authorization "
+"process`. Select the appropriate email address that is being configured in "
+"Odoo."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid "Permission page to grant access between newly created app and Odoo."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:175
+msgid ""
+"Then, allow Odoo to access the Microsoft account by clicking on "
+":guilabel:`Yes`. After this, the page will navigate back to the newly "
+"configured :guilabel:`Outgoing Mail Server` in Odoo. The configuration "
+"automatically loads the :guilabel:`token` in Odoo, and a tag stating "
+":guilabel:`Outlook Token Valid` appears in green."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rstNone
+msgid "Valid Outlook Token indicator."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:184
+msgid ""
+"Finally, click :guilabel:`Test Connection`. A confirmation message should "
+"appear. The Odoo database can now send safe, secure emails through Microsoft"
+" Outlook using OAuth authentication."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:188
+msgid "Multiple user configuration"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:190
+msgid ""
+"Each user should have a separate server set up. The :guilabel:`from-filter` "
+"should be set so that only the user's email is sent from that server. In "
+"other words, only a user with an email address that matches the set "
+":guilabel:`from-filter` is able to use this server."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:194
+msgid ""
+"After setting the :guilabel:`from-filter`, set up a fallback email account "
+"to allow for the sending of :guilabel:`notifications`. The fallback email "
+"must be configured as a :guilabel:`general transactional server`. The "
+":guilabel:`mail.default.from` system parameter must be set to the "
+":guilabel:`username` of the general transactional server account. For more "
+"information see :ref:`Use a default email address "
+"<email_communication/default>`."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:201
+#: ../../content/administration/maintain/mailjet_api.rst:213
+msgid ""
+"The :guilabel:`System Parameters` can be accessed by activating "
+":doc:`../../applications/general/developer_mode` in the "
+":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
+" menu."
+msgstr ""
+"Puede acceder a los :guilabel:`parámetros de sistema` can al activar el "
+":doc:`../../applications/general/developer_mode` en el menú "
+":menuselection:`Ajustes --> Técnico --> Parámetros --> Parámetros del "
+"sistema`."
+
+#: ../../content/administration/maintain/azure_oauth.rst:206
+msgid "Configure incoming email server"
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:208
+msgid ""
+"The incoming account should be configured in a similar way to the outgoing "
+"email account. Navigate to the :guilabel:`Incoming Mail Servers` in the "
+":guilabel:`Technical Menu` and :guilabel:`Create` a new configuration. Check"
+" or Select the button next to :guilabel:`Outlook Oauth Authentication` and "
+"enter the :guilabel:`Microsoft Outlook username`.  Click on "
+":guilabel:`Connect your Outlook account`. Odoo will state: "
+":guilabel:`Outlook Token Valid` Now :guilabel:`Test and Confirm` the "
+"account. The account should be ready to receive email to the Odoo database."
+msgstr ""
+
+#: ../../content/administration/maintain/azure_oauth.rst:216
+msgid ":doc:`../../applications/general/email_communication/email_servers`"
+msgstr ""
+
 #: ../../content/administration/maintain/domain_names.rst:3
 msgid "Domain names"
 msgstr "Nombres de dominio"
@@ -3706,10 +4084,6 @@ msgstr ""
 msgid "Client ID and Client Secret for Google OAuth."
 msgstr ""
 
-#: ../../content/administration/maintain/google_oauth.rst:84
-msgid "Setup in Odoo"
-msgstr "Configuración en Odoo"
-
 #: ../../content/administration/maintain/google_oauth.rst:87
 msgid "Enter Google Credentials"
 msgstr "Introducir credenciales de Google"
@@ -3740,10 +4114,6 @@ msgstr ""
 ":guilabel:`credenciales de Gmail`. Luego, copie y pegue el :guilabel:`ID de "
 "cliente` y el :guilabel:`Secreto de cliente` en los respectivos campos y "
 ":guilabel:`guarde` los ajustes."
-
-#: ../../content/administration/maintain/google_oauth.rst:98
-msgid "Configure outgoing email server"
-msgstr "Configurar servidor de correos electrónicos salientes"
 
 #: ../../content/administration/maintain/google_oauth.rst:100
 msgid ""
@@ -4224,7 +4594,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/mailjet_api.rst:3
 msgid "Mailjet API"
-msgstr ""
+msgstr "API de Mailjet"
 
 #: ../../content/administration/maintain/mailjet_api.rst:5
 msgid ""
@@ -4234,14 +4604,21 @@ msgid ""
 "database. In some circumstances, settings need to be configured on the "
 "custom domain's :abbr:`DNS (Domain Name System)` settings as well."
 msgstr ""
+"Odoo es compatible con la :abbr:`API (interfaz de programación de "
+"aplicación, por sus siglas en inglés)` de Mailjet para el envío masivo de "
+"correos. Configure un servidor dedicado de correos masivos con Mailjet al "
+"configurar los ajustes de la cuenta de Mailjet y de su base de datos de "
+"Odoo. En algunos casos, también se deben configurar los ajustes en el "
+":abbr:`DNS (sistema de nombres de dominio, por sus siglas en inglés)` del "
+"dominio personalizado."
 
 #: ../../content/administration/maintain/mailjet_api.rst:11
 msgid "Set up in Mailjet"
-msgstr ""
+msgstr "Configuración en Mailjet"
 
 #: ../../content/administration/maintain/mailjet_api.rst:14
 msgid "Create API credentials"
-msgstr ""
+msgstr "Crear credenciales API"
 
 #: ../../content/administration/maintain/mailjet_api.rst:16
 msgid ""
@@ -4250,11 +4627,17 @@ msgid ""
 ":guilabel:`Senders & Domains` section and click on :guilabel:`SMTP and SEND "
 "API Settings`."
 msgstr ""
+"Para empezar, inicie sesión en la página de `información de cuenta de "
+"Mailjet <https://app.mailjet.com/account>`_. A continuación, vaya a la "
+"sección de :guilabel:`Remitentes y dominios` y haga clic en los "
+":guilabel:`Ajustes de API de SMTP y ENVIAR`."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid ""
 "SMTP and Send API Settings link in the Senders & Domains section of Mailjet."
 msgstr ""
+"Enlace de los ajustes de API de SMTP y Enviar en la sección de Remitentes y "
+"dominios de Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:24
 msgid ""
@@ -4267,28 +4650,45 @@ msgid ""
 "to configure Mailjet in Odoo, which is covered in the :ref:`last section "
 "<maintain/mailjet-api/odoo-setup>`."
 msgstr ""
+"Posteriormente, copie los ajustes de configuración del :abbr:`SMTP "
+"(protocolo para transferencia de correo, por sus siglas en  inglés)` en un "
+"bloc de notas. Los puede encontrar en la sección de :guilabel:`Configuración"
+" (solo SMTP)`. Los ajustes de configuración del :abbr:`SMTP (protocolo para "
+"transferencia de correo, por sus siglas en inglés)` incluyen la dirección "
+"del servidor, la opción de seguridad necesaria (utilice :abbr:`SSL (capa de "
+"sockets seguros, por sus siglas en inglés)`/:abbr:`TLS (seguridad de la capa"
+" de transporte, por sus siglas en inglés)`) y el número de puerto. Los "
+"ajustes son necesarios para configurar Mailjet en Odoo, como se explica en "
+"la :ref:`última sección <maintain/mailjet-api/odoo-setup>`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:32
 msgid ""
 "`Mailjet: How can I configure my SMTP parameters? "
 "<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 msgstr ""
+"`Mailjet: ¿cómo puedo configurar mis parámetros SMTP? "
+"<https://documentation.mailjet.com/hc/articles/360043229473>`_"
 
 #: ../../content/administration/maintain/mailjet_api.rst:36
 msgid ""
 "Odoo blocks `port 25` on Odoo Online and Odoo.sh databases. :ref:`See "
 "reference here <email_servers/restriction>`."
 msgstr ""
+"Odoo bloquea el `puerto 25` en las bases de datos de Odoo en línea y "
+"Odoo.sh. :ref:`Consulte la siguiente referencia "
+"<email_servers/restriction>`."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "SMTP configuration from Mailjet."
-msgstr ""
+msgstr "Configuración SMTP en Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:43
 msgid ""
 "Next, click on the button labeled :guilabel:`Retrieve your API credentials` "
 "to retrieve the Mailjet API credentials."
 msgstr ""
+"A continuación, haga clic en el botón de :guilabel:`Obtener sus credenciales"
+" API` para obtener sus credenciales API de Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:46
 msgid ""
@@ -4298,10 +4698,16 @@ msgid ""
 "generate the :guilabel:`Secret Key`. Copy this key to a notepad, as this "
 "serves as the :guilabel:`Password` in the Odoo configuration."
 msgstr ""
+"Posteriormente, haga clic en el icono de ojo para revelar la "
+":guilabel:`clave API`. Copie esta clave en un bloc de notas, ya que es el "
+":guilabel:`nombre de usuario` en la configuración de Odoo. A continuación, "
+"haga clic en el botón de :guilabel:`Generar clave secreta` para generar la "
+":guilabel:`clave secreta`. Copie esta clave en un bloc de notas, ya que es "
+"la :guilabel:`Contraseña` en la configuración de Odoo."
 
 #: ../../content/administration/maintain/mailjet_api.rst:52
 msgid "Add verified sender address(es)"
-msgstr ""
+msgstr "Agregar direcciones de remitente verificadas"
 
 #: ../../content/administration/maintain/mailjet_api.rst:54
 msgid ""
@@ -4312,10 +4718,19 @@ msgid ""
 " a Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section."
 msgstr ""
+"El siguiente paso es agregar una dirección de remitente o un dominio a los "
+"ajustes de la cuenta de Mailjet para que la dirección de correo electrónico "
+"o el dominio tenga la aprobación para enviar correos electrónicos a través "
+"de los servidores de Mailjet. Primero, vaya a la página de `información de "
+"cuenta de Mailjet <https://app.mailjet.com/account>`_. A continuación, haga "
+"clic en el enlace de :guilabel:`Agregar un dominio o dirección de remitente`"
+" en la sección de :guilabel:`Remitentes y dominios`."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "Add a sender domain or address in the Mailjet interface."
 msgstr ""
+"Enlace de \"Agregar un dominio o dirección de remitente en la interfaz de "
+"Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:63
 msgid ""
@@ -4325,6 +4740,12 @@ msgid ""
 ":ref:`Add a domain <maintain/mailjet-api/add-domain>` section for steps on "
 "adding the domain."
 msgstr ""
+"Determine si una dirección de correo electrónico de remitente o el dominio "
+"entero se debe agregar a los ajustes de Mailjet. Puede ser más fácil "
+"configurar el dominio entero si el acceso :abbr:`DNS (sistema de nombre de "
+"dominio, por sus siglas en inglés)` está disponible. Vaya a la sección de "
+":ref:`Agregar un dominio <maintain/mailjet-api/add-domain>` para ver los "
+"pasos para agregar el dominio."
 
 #: ../../content/administration/maintain/mailjet_api.rst:69
 msgid ""
@@ -4332,6 +4753,10 @@ msgid ""
 " using Mailjet's servers need to be configured or the domain(s) of the "
 "users' email addresses can be configured."
 msgstr ""
+"Todas las direcciones de correo electrónico de los usuarios de la base de "
+"datos de Odoo que envían correos electrónicos mediante los servidores de "
+"Mailjet se deben configurar o los dominios de las direcciones de correo "
+"electrónico de los usuarios se pueden configurar."
 
 #: ../../content/administration/maintain/mailjet_api.rst:72
 msgid ""
@@ -4340,30 +4765,41 @@ msgid ""
 " labeled :guilabel:`Add a sender address`. Then, add the email address that "
 "is configured to send from the custom domain."
 msgstr ""
+"De forma predeterminada, la dirección de correo electrónico que se configuró"
+" originalmente en la cuenta de Mailjet se agrega como remitente de "
+"confianza. Para agregar otra dirección de correo electrónico, haga clic en "
+"el botón de :guilabel:`Agregar una dirección de remitente`. Posteriormente, "
+"agregue la dirección de correo electrónico que se configuró para enviar "
+"desde el dominio personalizado."
 
 #: ../../content/administration/maintain/mailjet_api.rst:76
 msgid ""
 "At minimum the following email addresses should be set up in the provider "
 "and verified in Mailjet:"
 msgstr ""
+"Como mínimo, las siguientes direcciones de correo electrónico se deben "
+"configurar en el proveedor y verificar en Mailjet:"
 
 #: ../../content/administration/maintain/mailjet_api.rst:78
 msgid "notifications\\@yourdomain.com"
-msgstr ""
+msgstr "notifications\\@sudominio.com"
 
 #: ../../content/administration/maintain/mailjet_api.rst:79
 msgid "bounce\\@yourdomain.com"
-msgstr ""
+msgstr "bounce\\@sudominio.com"
 
 #: ../../content/administration/maintain/mailjet_api.rst:80
 msgid "catchall\\@yourdomain.com"
-msgstr ""
+msgstr "catchall\\@sudominio.com"
 
 #: ../../content/administration/maintain/mailjet_api.rst:83
 msgid ""
 "Replace `yourdomain` with the custom domain for the Odoo database. If there "
 "isn't one, then use the :guilabel:`mail.catchall.domain` system parameter."
 msgstr ""
+"Remplace `sudominio` con el dominio personalizado de su base de datos. Si no"
+" tiene uno, utilice el parámetro de sistema "
+":guilabel:`mail.catchall.domain`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:86
 msgid ""
@@ -4372,6 +4808,11 @@ msgid ""
 " completing the form, an activation email is sent to the email address and "
 "the trusted sender can be activated."
 msgstr ""
+"Después, complete el formulario de :guilabel:`información de correo "
+"electrónico`, asegúrese de seleccionar el tipo de correo electrónico "
+"adecuado: correos electrónicos transaccionales o correos electrónicos "
+"masivos. Después de completar el formulario, se envía un correo electrónico "
+"de confirmación a la dirección y se puede activar el remitente."
 
 #: ../../content/administration/maintain/mailjet_api.rst:90
 msgid ""
@@ -4380,6 +4821,10 @@ msgid ""
 "based Message Authentication, Reporting, and Conformance)` settings on the "
 "domain of the sender."
 msgstr ""
+"Se recomienda configurar los ajustes de :abbr:`SPF (convenio de remitentes, "
+"por sus siglas en inglés)`/:abbr:`DKIM (DomainKeys Identified "
+"Mail)`/:abbr:`DMARC (autenticación de mensajes basada en dominios, reportes "
+"y conformidad)` en el dominio del remitente."
 
 #: ../../content/administration/maintain/mailjet_api.rst:95
 #: ../../content/administration/maintain/mailjet_api.rst:162
@@ -4388,6 +4833,9 @@ msgid ""
 "<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
 "Domains-with-SPF-DKIM>`_"
 msgstr ""
+"`Documentación de Mailjet sobre SPF/DKIM/DMARC "
+"<https://documentation.mailjet.com/hc/articles/ 360042412734-Authenticating-"
+"Domains-with-SPF-DKIM>`_"
 
 #: ../../content/administration/maintain/mailjet_api.rst:99
 msgid ""
@@ -4396,10 +4844,16 @@ msgid ""
 "above) should be set up in Odoo CRM to create a lead. Then, the database is "
 "able to receive the verification email and verify the accounts."
 msgstr ""
+"Si la base de datos no utiliza un dominio personalizado, para verificar la "
+"dirección de remitente, se debe configurar un seudónimo temporal (de las "
+"tres direcciones de correo electrónico que se mencionaron anteriormente) "
+"para crear un lead en la aplicación de CRM de Odoo. Posteriormente, la base "
+"de datos puede recibir el correo electrónico de verificación y verificar las"
+" cuentas."
 
 #: ../../content/administration/maintain/mailjet_api.rst:107
 msgid "Add a domain"
-msgstr ""
+msgstr "Agregar un dominio"
 
 #: ../../content/administration/maintain/mailjet_api.rst:109
 msgid ""
@@ -4410,18 +4864,31 @@ msgid ""
 "Sender Domain or Address` link under the :guilabel:`Senders & Domains` "
 "section. Then, click on :guilabel:`Add domain` to add the custom domain."
 msgstr ""
+"Al agregar un dominio entero a la cuenta de Mailjet, todas las direcciones "
+"de remitente relacionadas con ese dominio automáticamente se validan para "
+"enviar correos electrónicos mediante los servidores de Mailjet. Primero, "
+"vaya a la página de `información de cuenta de Mailjet "
+"<https://app.mailjet.com/account>`_. Posteriormente, haga clic en el enlace "
+"de :guilabel:`Agregar un dominio o dirección de remitente` en la sección de "
+":guilabel:`Remitentes y dominios`. Después, haga clic en :guilabel:`Agregar "
+"dominio` para agregar su dominio personalizado."
 
 #: ../../content/administration/maintain/mailjet_api.rst:116
 msgid ""
 "The domain needs to be added to the Mailjet account and then validated "
 "through the :abbr:`DNS (Domain Name System)`."
 msgstr ""
+"El dominio se debe agregar a la cuenta de Mailjet para posteriormente "
+"validarlo mediante el :abbr:`DNS (sistema de nombres de dominio, por sus "
+"siglas en inglés)`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:119
 msgid ""
 "After that, fill out the :guilabel:`Add a new Domain` page on Mailjet and "
 "click :guilabel:`Continue`."
 msgstr ""
+"Posteriormente, complete la página de :guilabel:`Agregar un nuevo dominio` "
+"en Mailjet y haga clic en :guilabel:`Continuar`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:122
 msgid ""
@@ -4431,14 +4898,21 @@ msgid ""
 "to a notepad and then navigate to the domain's :abbr:`DNS (Domain Name "
 "System)` provider to complete validation."
 msgstr ""
+"Después de agregar el dominio, se completará una página de validación. A "
+"menos que la base de datos de Odoo sea con alojamiento local (en cuyo caso, "
+"elija la :guilabel:`opción 1`), elija la :guilabel:`opción 2: Crear un "
+"registro DNS`. Copie la información de registro TXT en un bloc de notas y "
+"vaya al proveedor del :abbr:`DNS (sistema de nombres de dominio, por sus "
+"siglas en inglés)` del dominio para completar la validación."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "The TXT record information to input on the domain's DNS."
 msgstr ""
+"Información de registro TXT que se debe introducir en el DNS del dominio."
 
 #: ../../content/administration/maintain/mailjet_api.rst:132
 msgid "Setup in the domain's DNS"
-msgstr ""
+msgstr "Configuración en el DNS del dominio"
 
 #: ../../content/administration/maintain/mailjet_api.rst:134
 msgid ""
@@ -4449,10 +4923,18 @@ msgid ""
 "information consists of the :guilabel:`Host` and :guilabel:`Value`. Paste "
 "these into the corresponding fields in the TXT record."
 msgstr ""
+"Después de obtener la información de registro TXT de la cuenta de Mailjet, "
+"agregué un registro TXT al :abbr:`DNS (sistema de nombres de dominio, por "
+"sus siglas en inglés)` del dominio. Este proceso varía dependiendo del "
+"proveedor de :abbr:`DNS (sistema de nombres de dominio, por sus siglas en "
+"inglés)`. Consulte con el proveedor acerca de procesos de configuración "
+"específicos. La información de registro TXT consiste del "
+":guilabel:`alojamiento` y el :guilabel:`Valor`. Péguelos en los campos "
+"correspondientes del registro TXT."
 
 #: ../../content/administration/maintain/mailjet_api.rst:141
 msgid "Return to Mailjet account information"
-msgstr ""
+msgstr "Regresar a la información de cuenta de Mailjet"
 
 #: ../../content/administration/maintain/mailjet_api.rst:143
 msgid ""
@@ -4462,6 +4944,11 @@ msgid ""
 "click the gear icon next to :guilabel:`Domain`, and select "
 ":guilabel:`Validate`."
 msgstr ""
+"Después de agregar el registro TXT al :abbr:`DNS (siste ade nombres de "
+"dominio, por sus siglas en inglés)` del dominio, vuelva a la cuenta de "
+"Mailjet. Posteriormente, vaya a :menuselection:`Información de cuenta --> "
+"Agregar un dominio o dirección de remitente`, haga clic en el icono de "
+"engrane junto al :guilabel:`dominio` y seleccione :guilabel:`Validar`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:147
 msgid ""
@@ -4469,6 +4956,9 @@ msgid ""
 "<https://app.mailjet.com/ account/sender>`_ page on the Mailjet account "
 "information and clicking on :guilabel:`Manage`."
 msgstr ""
+"Esta acción también se puede realizar al ir a la página de `Dominios y "
+"direcciones de remitentes <https://app.mailjet.com/ account/sender>`_ en la "
+"información de cuenta de Mailjet y hacer clic en :guilabel:`Gestionar`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:150
 msgid ""
@@ -4476,10 +4966,13 @@ msgid ""
 "on the domain. A success screen will appear if the domain is configured "
 "correctly."
 msgstr ""
+"A continuación, haga clic en :guilabel:`Revisar ahora` para validar el "
+"registro TXT que se agregó al dominio. Aparecerá una pantalla de éxito si el"
+" dominio se configuró correctamente."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "Check DNS record in Mailjet."
-msgstr ""
+msgstr "Revisar el registro del DNS en Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:157
 msgid ""
@@ -4488,14 +4981,20 @@ msgid ""
 ":abbr:`SPF (Sender Policy Framework)` & :abbr:`DKIM (DomainKeys Identified "
 "Mail) records to input into the :abbr:`DNS (Domain Name System)` provider."
 msgstr ""
+"Después de configurar con éxito el dominio, tiene la opción de "
+":guilabel:`autenticar este dominio (SPF/DKIM)`. Este botón completa los "
+"registros :abbr:`SPF (convenio de remitentes, por sus siglas en inglés)` y "
+":abbr:`DKIM (DomainKeys Identified Mail) para que se introduzcan en el "
+"proveedor de :abbr:`DNS (sistema de nombres de dominio, por sus siglas en "
+"inglés)`."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "Authenticate the domain with SPF/DKIM records in Mailjet."
-msgstr ""
+msgstr "Autenticación del dominio con registros SPF/DKIM en Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:172
 msgid "Set up in Odoo"
-msgstr ""
+msgstr "Configuración en Odoo"
 
 #: ../../content/administration/maintain/mailjet_api.rst:174
 msgid ""
@@ -4505,6 +5004,11 @@ msgid ""
 "create a new outgoing server configuration by clicking on the "
 ":guilabel:`Create` button."
 msgstr ""
+"Para completar la configuración, vaya a la base de datos de Odoo y luego a "
+"los :guilabel:`Ajustes`. Active el :ref:`modo de desarrollador`, vaya a "
+":menuselection:`Menú técnico --> Correo electrónico --> Servidores de correo"
+" saliente`. Posteriormente, cree una nueva configuración de servidor "
+"saliente al hacer clic en el botón de :guilabel:`Crear`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:179
 msgid ""
@@ -4515,6 +5019,13 @@ msgid ""
 ":abbr:`SSL (Secure Sockets Layer)`/:abbr:`TLS (Transport Layer Security)` "
 "even though Mailjet may not require it."
 msgstr ""
+"A continuación, introduzca el `servidor SMTP` (in-v3.mailjet.com), el "
+"`número de puerto` (587 o 465), y la `seguridad (SSL/TLS)` que copió antes "
+"de su cuenta de Mailjet. También puede encontrar esta información `aquí "
+"<https://app.mailjet.com/account/setup>`_. Se recomienda utilizar :abbr:`SSL"
+" (capa de sockets seguros, por sus siglas en inglés)`/:abbr:`TLS (seguridad "
+"de la capa de transporte, por sus siglas en inglés)` a pesar de que no son "
+"necesarios para utilizar Mailjet."
 
 #: ../../content/administration/maintain/mailjet_api.rst:184
 msgid ""
@@ -4524,6 +5035,11 @@ msgid ""
 ":menuselection:`Mailjet -->  Account Settings --> SMTP and SEND API "
 "Settings`."
 msgstr ""
+"Para el :guilabel:`nombre de usuario`, introduzca la :guilabel:`CLAVE API`. "
+"Para la :guilabel:`Contraseña`, introduzca la :guilabel:`CLAVE SECRETA` que "
+"copió de la cuenta de Mailjet en un bloc de notas. Puede encontrar estos "
+"ajuestes en :menuselection:`Mailjet -->  Ajustes de cuenta --> Ajustes de "
+"API SMTP y ENVIAR`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:189
 msgid ""
@@ -4531,16 +5047,22 @@ msgid ""
 ":guilabel:`Priority` value higher than that of any transactional email "
 "server(s). Finally, save the settings and :guilabel:`Test the Connection`."
 msgstr ""
+"Posteriormente, si utiliza el servidor de Mailjet para el envío masivo de "
+"correos, establezca el valor :guilabel:`Prioridad` que sea mayor al del "
+"servidor o servidores de correos electrónicos transaccionales. Por último, "
+"guarde los ajustes y :guilabel:`pruebe la conexión`."
 
 #: ../../content/administration/maintain/mailjet_api.rstNone
 msgid "Odoo outgoing email server settings."
-msgstr ""
+msgstr "Ajustes de un servidor de correos electrónicos salientes de Odoo."
 
 #: ../../content/administration/maintain/mailjet_api.rst:198
 msgid ""
 "In order for the notifications feature to work using Mailjet, there are "
 "three settings that need to be set in Odoo."
 msgstr ""
+"Para que la función de notificaciones funcione con Mailjet, debe establecer "
+"tres ajustes en Odoo."
 
 #: ../../content/administration/maintain/mailjet_api.rst:201
 msgid ""
@@ -4549,12 +5071,19 @@ msgid ""
 " match the domain in the two proceeding steps. More information can be "
 "referenced :ref:`here <email_servers/outgoing-email-server>`."
 msgstr ""
+"El :guilabel:`filtro De` se debe establecer en la configuración del "
+"servidor. Se recomienda establecerlo como dominio y no como una dirección de"
+" correo electrónico completa. Debe coincidir con el dominio en los "
+"siguientes dos pasos. Puede consultar más información :ref:`aquí "
+"<email_servers/outgoing-email-server>`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:205
 msgid ""
 "The :guilabel:`mail.default.from` system parameter must have the value "
 "`notifications\\@yourdomain.com`."
 msgstr ""
+"El parámetro de sistema :guilabel:`mail.default.from` debe tener el valor "
+"`notifications\\@sudominio.com`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:207
 msgid ""
@@ -4563,19 +5092,15 @@ msgid ""
 "Odoo database. If there isn't one, then use the "
 ":guilabel:`mail.catchall.domain` system parameter."
 msgstr ""
+"El parámetro de sistema :guilabel:`mail.default.from_filter` debe tener el "
+"valor `sudominio.com`. Remplace `sudominio` con el dominio personalizado de "
+"su base de datos. Si no tiene uno, utilice el parámetro de sistema "
+":guilabel:`mail.catchall.domain`."
 
 #: ../../content/administration/maintain/mailjet_api.rst:211
 msgid ""
 "For more information see :ref:`Using a default email address "
-"<email_domain/default>`."
-msgstr ""
-
-#: ../../content/administration/maintain/mailjet_api.rst:213
-msgid ""
-"The :guilabel:`System Parameters` can be accessed by activating "
-":doc:`../../applications/general/developer_mode` in the "
-":menuselection:`Settings --> Technical --> Parameters --> System Parameters`"
-" menu."
+"<email_communication/default>`."
 msgstr ""
 
 #: ../../content/administration/maintain/mailjet_api.rst:217
@@ -4583,10 +5108,13 @@ msgid ""
 "Once the setup is complete, the Odoo database is ready to use the Mailjet "
 "email server for mass mailing or transactional emails!"
 msgstr ""
+"Una vez que la configuración esté completa, la base de datos de Odoo está "
+"lista para utilizar el servidor de correo electrónico de Mailjet para "
+"correos masivos o correos electrónicos transaccionales."
 
 #: ../../content/administration/maintain/odoo_online.rst:3
 msgid "Odoo Online database management"
-msgstr ""
+msgstr "Gestión de bases de datos de Odoo en línea"
 
 #: ../../content/administration/maintain/odoo_online.rst:5
 msgid ""
@@ -4604,6 +5132,8 @@ msgid ""
 "Clicking on the user icon opens a drop-down menu. \"My databases\" button is"
 " highlighted."
 msgstr ""
+"Hacer clic en el icono de usuario abre un menú desplegable. El botón de "
+"\"Mis bases de datos\" está resaltado."
 
 #: ../../content/administration/maintain/odoo_online.rst:13
 msgid ""
@@ -4615,7 +5145,7 @@ msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "Clicking on the gear icon opens the drop-down menu."
-msgstr ""
+msgstr "Hacer clic en el icono de engrane abre el menú desplegable."
 
 #: ../../content/administration/maintain/odoo_online.rst:19
 msgid ""
@@ -4631,39 +5161,39 @@ msgstr "Hay varias acciones disponibles:"
 
 #: ../../content/administration/maintain/odoo_online.rst:23
 msgid ":ref:`odoo_online/upgrade`"
-msgstr ""
+msgstr ":ref:`odoo_online/upgrade`"
 
 #: ../../content/administration/maintain/odoo_online.rst:24
 msgid ":ref:`odoo_online/duplicate`"
-msgstr ""
+msgstr ":ref:`odoo_online/duplicate`"
 
 #: ../../content/administration/maintain/odoo_online.rst:25
 msgid ":ref:`odoo_online/rename`"
-msgstr ""
+msgstr ":ref:`odoo_online/rename`"
 
 #: ../../content/administration/maintain/odoo_online.rst:26
 msgid ":ref:`odoo_online/download`"
-msgstr ""
+msgstr ":ref:`odoo_online/download`"
 
 #: ../../content/administration/maintain/odoo_online.rst:27
 msgid ":ref:`odoo_online/domains`"
-msgstr ""
+msgstr ":ref:`odoo_online/domains`"
 
 #: ../../content/administration/maintain/odoo_online.rst:28
 msgid ":ref:`odoo_online/tags`"
-msgstr ""
+msgstr ":ref:`odoo_online/tags`"
 
 #: ../../content/administration/maintain/odoo_online.rst:29
 msgid ":ref:`odoo_online/delete`"
-msgstr ""
+msgstr ":ref:`odoo_online/delete`"
 
 #: ../../content/administration/maintain/odoo_online.rst:30
 msgid ":ref:`odoo_online/contact-support`"
-msgstr ""
+msgstr ":ref:`odoo_online/contact-support`"
 
 #: ../../content/administration/maintain/odoo_online.rst:31
 msgid ":ref:`odoo_online/users`"
-msgstr ""
+msgstr ":ref:`odoo_online/users`"
 
 #: ../../content/administration/maintain/odoo_online.rst:36
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:285
@@ -4818,7 +5348,7 @@ msgstr ""
 #: ../../content/administration/maintain/odoo_online.rst:110
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:539
 msgid "Delete"
-msgstr "Suprimir"
+msgstr "Eliminar"
 
 #: ../../content/administration/maintain/odoo_online.rst:112
 msgid "Delete a database instantly."
@@ -4845,6 +5375,7 @@ msgstr ""
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "A warning message is prompted before deleting a database."
 msgstr ""
+"Aparece un mensaje de advertencia antes de eliminar una base de datos."
 
 #: ../../content/administration/maintain/odoo_online.rst:126
 msgid "Only an administrator can delete a database."
@@ -4902,6 +5433,8 @@ msgstr ""
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "Clicking on \"Add more users\" adds additional email fields."
 msgstr ""
+"Hacer clic en \"Agregar más usuarios\" agrega campos adicionales de correo "
+"electrónico."
 
 #: ../../content/administration/maintain/odoo_online.rst:152
 msgid "To remove users, select the users to remove and click on *Remove*."
@@ -4952,6 +5485,8 @@ msgid ""
 "Something went wrong while registering your database,\n"
 "you can try again or contact Odoo Help"
 msgstr ""
+"Algo salió mal al registrar su base de datos,\n"
+"vuelva a intentarlo o contacte al soporte de Odoo."
 
 #: ../../content/administration/maintain/on_premise.rst:27
 #: ../../content/administration/maintain/on_premise.rst:106
@@ -5097,6 +5632,8 @@ msgid ""
 "This database will expire in X days, you\n"
 "have more users than your subscription allows"
 msgstr ""
+"Esta base de datos expirará en X días,\n"
+"tiene más usuarios de los permitidos en su suscripción"
 
 #: ../../content/administration/maintain/on_premise.rst:102
 msgid ""
@@ -5248,8 +5785,8 @@ msgid ""
 "Odoo provides support and bug fixing **for the 3 last major versions** of "
 "Odoo."
 msgstr ""
-"Odoo provee soporte y solución de bugs **a las últimas 3 versiones mayores**"
-" de Odoo."
+"Odoo proporciona soporte y solución de bugs **a las últimas 3 versiones "
+"mayores** de Odoo."
 
 #: ../../content/administration/maintain/supported_versions.rst:11
 msgid ""
@@ -5257,6 +5794,10 @@ msgid ""
 ":doc:`Odoo Online <odoo_online>` hosting every two months. Odoo Online users"
 " can then benefit from the latest features of Odoo."
 msgstr ""
+"Odoo lanza cada dos meses versiones intermediarias llamadas **versiones en "
+"línea** en el alojamiento de :doc:`Odoo en línea <odoo_online>`. Así, los "
+"usuarios de Odoo en línea se pueden beneficiar de las funciones más "
+"recientes de Odoo."
 
 #: ../../content/administration/maintain/supported_versions.rst:15
 msgid ""
@@ -5304,7 +5845,7 @@ msgstr "Fin del soporte"
 
 #: ../../content/administration/maintain/supported_versions.rst:29
 msgid "**Odoo 16.0**"
-msgstr ""
+msgstr "**Odoo 16.0**"
 
 #: ../../content/administration/maintain/supported_versions.rst:29
 #: ../../content/administration/maintain/supported_versions.rst:29
@@ -5855,7 +6396,7 @@ msgid ""
 msgstr ""
 "Si originalmente instaló Odoo con un clon completo de los repositorios "
 "oficiales de GitHub, el procedimiento de actualización requiere que obtenga "
-"el código fuente más reciente a través de git. Cambie al directorio de cada "
+"el código fuente más reciente a través de Git. Cambie al directorio de cada "
 "repositorio (el repositorio principal de Odoo y el repositorio de "
 "Enterprise) y ejecute los siguientes comandos:"
 
@@ -5944,6 +6485,15 @@ msgid ""
 "file. To have a concrete example, check out the `requirements.txt file of "
 "Odoo <https://github.com/odoo/odoo/blob/16.0/requirements.txt>`_."
 msgstr ""
+"Si su proyecto necesita de dependencias adicionales de Python, o de "
+"lanzamientos más recientes, puede definir un archivo "
+":file:`requirements.txt` file en la raíz de sus ramas listándolas. La "
+"plataforma se encargará de instalar las dependencias en sus contenedores. "
+"`La documentación sobre especificadores de requisitos pip "
+"<https://pip.pypa.io/en/stable/reference/pip_install/#requirement-"
+"specifiers>`_ puede ayudarle a redactar su archivo :file:`requirements.txt`."
+" Puede ver un ejemplo más concreto al revisar el `archivo requirements.txt "
+"de Odoo <https://github.com/odoo/odoo/blob/16.0/requirements.txt>`_."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:22
 msgid ""
@@ -5954,7 +6504,7 @@ msgid ""
 msgstr ""
 "También se consideran los archivos :file:`requirements.txt` de submódulos. "
 "La plataforma busca los archivos :file:`requirements.txt` en todas las "
-"carpetas que contengan módulos de Odoo: No en la carpeta del módulo, sino en"
+"carpetas que contengan módulos de Odoo: no en la carpeta del módulo, sino en"
 " su carpeta madre."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:27
@@ -5968,7 +6518,7 @@ msgid ""
 "<https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_"
 " explains the main directories."
 msgstr ""
-"Ya que los contenedores tienen base Ubuntu, su estructura de directorio "
+"Ya que los contenedores tienen base en Ubuntu, su estructura de directorio "
 "sigue el estándar de jerarquía del sistema de archivos de Linux. En "
 "`Información general del árbol de sistema de archivos de Ubuntu "
 "<https://help.ubuntu.com/community/LinuxFilesystemTreeOverview#Main_directories>`_"
@@ -6017,7 +6567,7 @@ msgid ""
 "(*BEGIN...COMMIT/ROLLBACK*) for every *sql* statements leading to changes "
 "(*UPDATE*, *DELETE*, *ALTER*, ...), especially for your production database."
 msgstr ""
-"**¡Advertencia!** `Use transaccioes "
+"**¡Advertencia!** `Use transacciones "
 "<https://www.postgresql.org/docs/current/static/sql-begin.html>`_ "
 "(*BEGIN...COMMIT/ROLLBACK*) para cada declaración *sql* que lleve a un "
 "cambio (*UPDATE*, *DELETE*, *ALTER*, ...), especialmente para su base de "
@@ -6102,7 +6652,7 @@ msgstr "En los comandos anteriores, el argumento:"
 #: ../../content/administration/odoo_sh/advanced/containers.rst:166
 msgid "``--without-demo=all`` prevents demo data to be loaded for all modules"
 msgstr ""
-"``--without-demo=all`` previene que los datos de demostración se carguen en "
+"``--without-demo=all`` evita que los datos de demostración se carguen en "
 "todos los módulos."
 
 #: ../../content/administration/odoo_sh/advanced/containers.rst:167
@@ -6242,6 +6792,8 @@ msgstr ""
 #: ../../content/administration/odoo_sh/advanced/containers.rstNone
 msgid "Console screenshot showing ``pdb`` running in an Odoo.sh shell."
 msgstr ""
+"Captura de pantalla de la consola que muestra el ``pdb`` en ejecución en un "
+"shell de Odoo.sh."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:6
 msgid "Frequent Technical Questions"
@@ -6278,8 +6830,8 @@ msgstr ""
 msgid ""
 "Do not expect any scheduled action to be run more often than every 5 min."
 msgstr ""
-"Ninguna acción planificada se ejecuta con más frecuencia que cada 5 minutos."
-" "
+"Ninguna acción planificadas se ejecuta con más frecuencia que cada 5 "
+"minutos. "
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:19
 msgid "Are there \"best practices\" regarding scheduled actions?"
@@ -6310,9 +6862,9 @@ msgid ""
 " this way, if they get interrupted by the time-limit, there is no need to "
 "start over."
 msgstr ""
-"Sus acciones programadas deben confirmar su trabajo después de procesar cada"
-" lote. De esta forma, si las interrumpe el límite de tiempo, no es necesario"
-" volver a empezar."
+"Sus acciones planificadas deben confirmar su trabajo después de procesar "
+"cada lote. De esta forma, si las interrumpe el límite de tiempo, no es "
+"necesario volver a empezar."
 
 #: ../../content/administration/odoo_sh/advanced/frequent_technical_questions.rst:29
 msgid ""
@@ -6478,7 +7030,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:364
 #: ../../content/administration/odoo_sh/getting_started/first_module.rst:502
 msgid "Replace"
-msgstr "Reemplazar "
+msgstr "Reemplace"
 
 #: ../../content/administration/odoo_sh/advanced/submodules.rst:84
 msgid ""
@@ -6594,7 +7146,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:29
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:43
 msgid "Production"
-msgstr "Producción"
+msgstr "Etapa de producción"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:30
 msgid ""
@@ -6722,7 +7274,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:74
 msgid "Setting payment providers and shipping providers in test mode."
-msgstr ""
+msgstr "Ajustes de proveedores de pago y de envío en el modo de prueba."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:75
 msgid "Disabling IAP services"
@@ -6738,12 +7290,12 @@ msgid ""
 " data files overriding the default configuration or views."
 msgstr ""
 "La base de datos más reciente seguirá activa de forma indefinida, las más "
-"antiguas de la misma rama pueden recolectar basura para hacer espacio para "
-"más nuevas. Serán válidas por 3 meses, después de este tiempo deberá volver "
-"a crear la rama. Si realiza cambios de configuración o de vista en estas "
-"bases de datos, asegúrese de documentarlos o escribirlos directamente en los"
-" módulos de la rama, mediante archivos de datos XML que sobreescriban la "
-"configuración vista predeterminadas."
+"antiguas de la misma rama se pueden depurar para hacer espacio para más "
+"nuevas. Serán válidas por 3 meses, después de este tiempo deberá volver a "
+"crear la rama. Si realiza cambios de configuración o de vista en estas bases"
+" de datos, asegúrese de documentarlos o escribirlos directamente en los "
+"módulos de la rama, mediante archivos de datos XML que sobreescriban la "
+"configuración o vista predeterminadas."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:82
 msgid ""
@@ -6762,7 +7314,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/builds.rst:80
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:52
 msgid "Development"
-msgstr "Desarrollo"
+msgstr "Etapa de desarrollo"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:89
 msgid ""
@@ -6937,7 +7489,7 @@ msgstr ""
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:150
 msgid "Tabs"
-msgstr "Etiquetas"
+msgstr "Pestañas"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:153
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:52
@@ -6980,7 +7532,7 @@ msgstr ""
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:60
 #: ../../content/administration/odoo_sh/getting_started/settings.rst:72
 msgid "Mails"
-msgstr "Correos"
+msgstr "Correos electrónicos"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:171
 msgid ""
@@ -7428,8 +7980,8 @@ msgid ""
 "possible to add other *<name>.odoo.com* domains or your own custom domains. "
 "For the latter you have to:"
 msgstr ""
-"Aqupi puede configurar dominios adicionales para las ramas seleccionadas. Es"
-" posible agregar otros dominios *<name>.odoo.com* o sus propios dominios "
+"Aquí puede configurar dominios adicionales para las ramas seleccionadas. Es "
+"posible agregar otros dominios *<name>.odoo.com* o sus propios dominios "
 "personalizados. Para hacer esto último, debe:"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:356
@@ -7462,7 +8014,7 @@ msgid ""
 "in Odoo.sh, add *www.mycompany.com* in the custom domains of your project "
 "settings,"
 msgstr ""
-"En Odoo.sh, agregue *www.mycompany.com* en los dominios personalizados de "
+"En Odoo.sh, agregue *www.miempresa.com* en los dominios personalizados de "
 "los ajustes de su proyecto."
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:364
@@ -7689,7 +8241,7 @@ msgstr "SSH"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:469
 msgid "Setup"
-msgstr "Configurar"
+msgstr "Configuración"
 
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:470
 msgid ""
