@@ -25,7 +25,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-02 09:09+0000\n"
+"POT-Creation-Date: 2023-01-19 15:32+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Jeffery CHEN Fan <jeffery9@gmail.com>, 2022\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -7898,86 +7898,124 @@ msgstr "管理半成品"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:5
 msgid ""
-"With Odoo MRP, you can use semi-finished products to simplify a complex "
-"*Bill of Materials* or to represent your manufacturing flow more accurately."
-" A *semi-finished product* is a manufactured product that is used as a "
-"component in a Bill of Material."
-msgstr "使用Odoo MRP，您可以使用半成品简化复杂的物料清单，或更准确地表示您的制造流程。*半成品*是用作物料清单中组件的制成品。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:10
-msgid ""
-"A *BoM* that employs *semi-finished products* is referred to as a multi-"
-"level BoM, where we distinguish between the *top level Product* and the "
-"*sub-assemblies*."
-msgstr "使用*半成品*的*BoM*被称为多级BoM，我们在其中区分*顶级产品*和*子组件*。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:15
-msgid "Configure a Multi Level BoM"
-msgstr "配置多级BoM表"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:17
-msgid ""
-"To configure a *multi-level BoM*, you will need the top-level product and "
-"its sub-assemblies. Therefore, you must first create the sub-assembly "
-"products and their respective Bill of Materials. Please refer to "
-":doc:`bill_configuration` for more details on how to create a BOM."
+"A *semi-finished product*, also known as a *subassembly*, is a manufactured "
+"product that is used as a component in another product's bill of materials "
+"(BoM). Semi-finished products are used to simplify complex :abbr:`BoMs "
+"(Bills of Materials)` or to more accurately represent a manufacturing flow. "
+"A :abbr:`BoM (Bill of Materials)` that contains semi-finished products is "
+"referred to as a *multilevel BoM*, where the main *top-level product* and "
+"its subassemblies are distinguished."
 msgstr ""
-"要配置*多级BoM表*，您需要顶级产品及其子组件。因此，必须首先创建子部件产品及其各自的BOM表。有关如何创建BOM的更多详细信息，请参阅：doc:`bill_configuration`。"
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:12
+msgid "Configure semi-finished products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:14
+msgid ""
+"To set up a multilevel :abbr:`BoM (Bill of Materials)`, the top-level "
+"product and semi-finished products must be configured. Therefore, the first "
+"step is to create the semi-finished products and their :abbr:`BoMs (Bills of"
+" Materials)`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:19
+msgid ":doc:`bill_configuration`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
+msgid "A bill of materials for a semi-finished product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:26
-msgid "Configure the Main BoM"
-msgstr "配置主物料清单"
+msgid "Create the top-level bill of materials (BoM)"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:28
 msgid ""
-"Then on the final product form, simply add your semi-finished products to "
-"the Bill of Material."
-msgstr "然后在最终产品表单上，只需将半成品添加到物料清单中。"
+"After the semi-finished products are fully configured, navigate to "
+":menuselection:`Manufacturing --> Products --> Products`. Then, "
+":guilabel:`Create` the top-level product. Configure the product's "
+"specifications as desired, and be sure to :guilabel:`Save`."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:35
-msgid "Manage your production planning"
-msgstr "管理生产计划"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:32
 msgid ""
-"There are several methods to manage the triggering of the various "
-"manufacturing orders."
-msgstr "有几种方法可以管理各种生产订单的触发。"
+"Once the top-level product is configured, click the :guilabel:`Bill of "
+"Materials` smart button on the product form, then click :guilabel:`Create` "
+"to make a :abbr:`BoM (Bill of Materials)` for the top-level product. Then, "
+"simply add the semi-finished products to this :abbr:`BoM (Bill of "
+"Materials)`, along with any other necessary components."
+msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
 msgid ""
-"If every time a manufacturing order is confirmed for the main product, you'd"
-" like one for the semi-finished products as well, you have two options:"
-msgstr "如果每次确认主要产品的生产订单时，你也想要一个半成品订单，你有两种选择:"
+"A bill of materials for a top-level product, containing a subassembly "
+"component."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:42
+msgid "Manage production planning"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:44
 msgid ""
-"Option 1 : Create re-ordering rules for the semi-finished products, with "
-"both the minimum and maximum desired stock quantities at 0."
-msgstr "选项1：为半成品创建重新订购规则，最小和最大预期库存量均为0。"
+"There are several methods to manage manufacturing order automation for "
+"products with multilevel :abbr:`BoMs (Bills of Materials)`."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:48
 msgid ""
-"Option 2 : Use the Replenish on Order (MTO) route on the semi-finished "
-"product, as well as the manufacturing one."
-msgstr "选项2：在半成品和制造产品上使用按订单补充（MTO）路线。"
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:51
-msgid ""
-"Note that Option 1 is usually recommended over Option 2 as it is more "
-"flexible. The MTO route creates a unique link between the semi-finished and "
-"the top level product, whereas the re-ordering rule allows you to simply "
-"unreserve that production from the top level product production and redirect"
-" it to another, more pressing demand, for example."
+"Semi-finished products are specifically used to manage manufacturable "
+"products with multilevel BoMs. If a BoM is being created simply to organize "
+"components or bundle sellable products, using :doc:`Kits <kit_shipping>` is "
+"the more appropriate option."
 msgstr ""
-"注意，方案1通常优于方案2，因为它更灵活。MTO路线在半成品和顶级产品之间创建了一个独特的链接，而重新订购规则允许您简单地从顶级产品生产中取消该生产，并将其重定向到另一个更紧迫的需求，例如。"
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:52
 msgid ""
-"In any case, as soon as the semi-finished product is produced, it will "
-"become available in the manufacturing order of the final product, as shown "
-"below."
-msgstr "在任何情况下，一旦生产出半成品，它将在最终产品的制造订单中可用，如下所示。"
+"To automatically trigger manufacturing orders for semi-finished products "
+"after confirming a manufacturing order for the main product, there are two "
+"options:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:55
+msgid ""
+"**Option 1 (recommended):** Create *Reordering Rules* for the semi-finished "
+"products and set both the minimum and maximum desired stock quantities to "
+"`0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:59
+msgid ":doc:`../../purchase/products/reordering`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:61
+msgid ""
+"**Option 2:** Activate the :guilabel:`Replenish on Order (MTO)` and "
+":guilabel:`Manufacture` routes under the :guilabel:`Inventory` tab of the "
+"semi-finished product's product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:64
+msgid ""
+"Option 1 is more flexible than Option 2 and is therefore recommended. "
+"Reordering rules do not directly link demand to replenishment, and therefore"
+" allow stocks to be unreserved and redirected to other orders, if necessary."
+" The Replenish on Order (MTO) route creates a unique link between the semi-"
+"finished and top-level products, exclusively reserving quantities for the "
+"confirmed top-level manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:70
+msgid ""
+"Regardless of the method chosen, semi-finished products must be fully "
+"manufactured before manufacturing can begin on the top-level product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
+msgid "A manufacturing order for a top-level product."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:3
 msgid "Subcontract your Manufacturing"
