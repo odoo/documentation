@@ -42,7 +42,7 @@ After invoicing
 ===============
 
 Sometimes, customers return an item after they receive and/or pay for their invoice. In these
-cases, a return using only *Reverse Transfers* is impossible since validated or sent invoices
+cases, a return using only *Reverse Transfers* is insufficient since validated or sent invoices
 cannot be changed. However, *Reverse Transfers* can be used in conjunction with *Credit Notes* to
 complete the customer's return.
 
@@ -58,39 +58,16 @@ which is validated by the warehouse team once the return is received. Then, on t
 :guilabel:`Delivered` quantity will reflect the difference between the initial validated quantities
 and the returned quantities.
 
-Since the returned products have already been paid for, the validated invoice must be modified to
-reflect the return. Navigate to the relevant invoice (from the sales order, click on the
-:guilabel:`Invoices` smart button). Then, click on the :guilabel:`i` icon next to the
-:guilabel:`Paid` line at the bottom of the invoice to open the :guilabel:`Payment Info` window.
-Next, click :guilabel:`Unreconcile`.
-
-.. image:: returns/unreconcile-button.png
-   :align: center
-   :alt: The "Unreconcile" button.
-
-After the invoice is unreconciled, the options for :guilabel:`Send & Print` and
-:guilabel:`Register Payment` become available again alongside a note that there are outstanding
-payments for the customer.
-
-To process a refund, click :guilabel:`Add Credit Note` from the validated invoice.
+To process a refund, navigate to the relevant invoice (from the sales order, click on the
+:guilabel:`Invoices` smart button). Click :guilabel:`Add Credit Note` from the validated invoice.
 
 .. image:: returns/credit-note-popup.png
    :align: center
    :alt: The "Credit Note" pop-up window, to issue a credit to the customer after invoicing.
 
-Choose whether to issue a :guilabel:`Partial Refund`, :guilabel:`Full Refund`, or
-:guilabel:`Full refund and new draft invoice`. The :guilabel:`Partial Refund` option creates a
-draft credit note that can be edited before posting. The :guilabel:`Full refund and new draft
-invoice` option validates the credit note and duplicates the original invoice as a new draft.
-
 A :guilabel:`Reason` for the credit and a :guilabel:`Specific Journal` to use to process the credit
-can also be specified. If a :guilabel:`Specific Reversal Date` is selected, then a
-:guilabel:`Refund Date` must also be selected.
+can be specified. If a :guilabel:`Specific Reversal Date` is selected, then a :guilabel:`Refund
+Date` must also be selected.
 
-After the information is filled, click :guilabel:`Reverse`. Then, for a :guilabel:`Partial Refund`
-or :guilabel:`Full refund and new draft invoice`, :guilabel:`Edit` the draft as needed, and
-finally, click :guilabel:`Confirm`.
-
-.. image:: returns/outstanding-payment-banner.png
-   :align: center
-   :alt: The "outstanding payments" banner.
+After the information is filled in, click :guilabel:`Reverse`. Then, :guilabel:`Edit` the draft as
+needed, and finally, click :guilabel:`Confirm` to confirm the credit note.
