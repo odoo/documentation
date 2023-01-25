@@ -976,6 +976,39 @@ system. Available semantic components are:
   ``attrs``
     same as for ``field`` component.
 
+  .. _reference/views/form/setting:
+``setting``
+  The ``setting`` tag is used to declare a setting, an entity visually separated on two panels
+  (left and right), and used to edit a given field. The first field in the setting is used as the
+  main field (optional). This field is placed on the left panel (if it's a boolean field) or on the
+  top of the right panel (otherwise). The field is also used to create the setting label if a
+  ``string`` is not defined. The ``setting`` tag can also contain more elements (e.g. html), all of
+  these elements are rendered in the right panel.
+
+  .. rst-class:: o-definition-list
+
+  ``string`` (optional)
+    The text used as label of the setting. If it's not defined, the first field is used as label.
+  ``title`` (optional)
+    The text used as tooltip.
+  ``help`` (optional)
+    The help/description of the setting. This text is displayed just below the setting label (with classname ``text-muted``).
+  ``company_dependent`` (optional)
+    If this attribute is set to "1" an icon is displayed next to the setting label to explicit
+    that this setting is company-specific.
+  ``documentation`` (optional)
+    If this attribute is set, an icon is added next to the setting label, this icon is a link to the documentation.
+    Note that you can use relative or absolute path. The relative path is relative to ``https://www.odoo.com/documentation/<server_version>``,
+    so it's not necessary to hard-code the server version on the arch anymore.
+
+  .. example::
+    .. code-block:: xml
+
+      <setting string="this is bar">
+          <field name="bar"/>
+          ...More elements
+      </setting>
+
 
 Generic structure
 ~~~~~~~~~~~~~~~~~
@@ -1020,8 +1053,8 @@ Settings Form View
 The settings form view is a customization of the form view. It's used to centralize all the settings
 of Odoo.
 
-This view differs from a generic form view because it has a search bar, a sidebar and accepts 3
-additional tags: ``app``, ``block`` and ``setting``.
+This view differs from a generic form view because it has a search bar, a sidebar and accepts 2
+additional tags: ``app`` and ``block``. It also adds a new parameter to the ``setting`` tag.
 
 .. rst-class:: o-definition-list
 
@@ -1069,44 +1102,18 @@ additional tags: ``app``, ``block`` and ``setting``.
     The description/help of the block of settings, you can perform research on its text.
 
 ``setting``
-  The ``setting`` tag is used to declare the setting itself. The first field in the setting is
-  used as the main field (optional). This field is placed on the left panel (if it's a boolean field)
-  or on the top of the right panel (otherwise). The field is also used to create the setting label
-  if a ``string`` is not defined. The ``setting`` tag can also contain more elements (e.g. html),
-  all of these elements are rendered in the right panel.
-
-  Syntax:
-
-  .. code-block:: xml
-
-    <setting string="this is bar">
-        <field name="bar"/>
-        ...More elements
-    </setting>
-
-  Parameters:
+  The definition and all the available parameters of the ``setting`` tag can be found in
+  the :ref:`setting tag <reference/views/form/setting>` definition in the form view. The settings
+  form view adds the following parameter to the ``setting`` tag:
 
   .. rst-class:: o-definition-list
 
-  ``type`` (optional)
-    By default, a setting is visually separated on two panels (left and right), and is used to
-    edit a given field. By defining ``type='header'``, a special kind of setting is rendered
-    instead. This setting is used to modify the scope of the other settings. For example, on the
-    website application, this setting is used to indicate to which website the other settings
-    apply. The header setting is visually represented as a yellow banner on the top of the screen.
-  ``string`` (optional)
-    The text used as label of the setting. If it's not defined, the first field is used as label.
-  ``title`` (optional)
-    The text used as tooltip.
-  ``help`` (optional)
-    The help/description of the setting. This text is displayed just below the setting label (with classname ``text-muted``).
-  ``company_dependent`` (optional)
-    If this attribute is set to "1" an icon is displayed next to the setting label to explicit
-    that this setting is company-specific.
-  ``documentation`` (optional)
-    If this attribute is set, an icon is added next to the setting label, this icon is a link to the documentation.
-    Note that you can use relative or absolute path. The relative path is relative to ``https://www.odoo.com/documentation/<server_version>``,
-    so it's not necessary to hard-code the server version on the arch anymore.
+    ``type`` (optional)
+      By default, a setting is visually separated on two panels (left and right), and is used to
+      edit a given field. By defining ``type='header'``, a special kind of setting is rendered
+      instead. This setting is used to modify the scope of the other settings. For example, on the
+      website application, this setting is used to indicate to which website the other settings
+      apply. The header setting is visually represented as a yellow banner on the top of the screen.
 
 .. example::
 
