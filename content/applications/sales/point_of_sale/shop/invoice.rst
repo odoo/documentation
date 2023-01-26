@@ -58,6 +58,24 @@ To retrieve invoices from the **POS dashboard**,
 
 .. note::
    - **Invoiced orders** can be identified by the :guilabel:`Invoiced` status in the
-     :guilabel:`Status` column;
+     :guilabel:`Status` column.
    - You can filter the list of orders to invoiced orders by clicking :guilabel:`Filters` and
      :guilabel:`Invoiced`.
+
+QR codes to generate invoices
+-----------------------------
+
+Customers can also request an invoice by scanning the **QR code** printed on their receipt. Upon
+scanning, they must fill in a form with their billing information and click :guilabel:`Get my
+invoice`. On the one hand, doing so generates an invoice available for download. On the other hand,
+the order status goes from :guilabel:`Paid` or :guilabel:`Posted` to :guilabel:`Invoiced` in the
+Odoo backend.
+
+.. image:: invoice/order-status.png
+   :align: center
+   :alt: order status change
+
+To use this feature, you have to enable QR codes on receipts by going to :menuselection:`Point of
+Sale --> Configuration --> Settings`. Then, select the POS in the :guilabel:`Point of Sale` field,
+scroll down to the :guilabel:`Bills & Receipts` section and enable :guilabel:`Use QR code on
+ticket`.
