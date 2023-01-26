@@ -72,6 +72,8 @@ If you already have an Odoo server installed, you can just use its parameters.
                username = "admin",
                password = <insert password for your admin user (default: admin)>;
 
+.. _api/external_api/keys:
+
 API Keys
 ~~~~~~~~
 
