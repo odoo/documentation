@@ -225,15 +225,14 @@ Service Level Agreement
 What is covered by the Enterprise Licence?
 ------------------------------------------
 
-Databases hosted on Odoo’s Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting)
+Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-Premise (Self-Hosting)
 enjoy the following services at all times.
 
 The upgrade of:
 
 * standard applications
 * Studio customization (as long as the :guilabel:`Studio` app is still active)
-* customizations done by our consulting and developer services *if* they are covered by a
-  ‘Maintenance of Customisations’ subscription
+* customizations *if* they are covered by a "Maintenance of Customizations" subscription
 
 The Upgrade Service is limited to your database's technical conversion and adaptation (standard
 modules and data) to make it compatible with the targeted version.
