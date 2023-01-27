@@ -1,7 +1,7 @@
 :nosearch:
 
 ========================
-Manufacturing Management
+Manufacturing management
 ========================
 
 .. toctree::
