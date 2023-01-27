@@ -92,11 +92,74 @@ sign it.
 Roles are available by going to :menuselection:`Sign --> Configuration --> Roles`.
 
 It is possible to update existing roles or to create new roles by clicking on :guilabel:`Create`.
-Choose a :guilabel:`Role Name`, add an :guilabel:`Extra Authentification Step` to confirm the
-identity of the person, and if the document can be reassigned to another contact then you can select
+Choose a :guilabel:`Role Name`, add an :guilabel:`Extra Authentication Step` to confirm the
+identity of the signing person, and if the document can be reassigned to another contact, select
 :guilabel:`Change Authorized` for the role. A :guilabel:`Color` can also be chosen for the role.
 This color can help understand which roles are responsible for which field when configuring a
 template.
+
+Secured identification
+----------------------
+
+As the owner of a document, you may request an :guilabel:`Extra Authentication Step` through an SMS
+verification or via Itsme® (available in Belgium and the Netherlands). Both authentication options
+require :ref:`credits <iap/buying_credits>`. If you do not have any credits left, the authentication
+steps will be skipped.
+
+.. seealso::
+   - :doc:`In-App Purchase (IAP) <../general/in_app_purchase>`
+   - :doc:`SMS pricing and FAQ <../marketing/sms_marketing/pricing/pricing_and_faq>`
+
+SMS verification
+~~~~~~~~~~~~~~~~
+
+Go to :menuselection:`Sign --> Configuration --> Roles`. Click in the :guilabel:`Extra
+Authentication Step` column for the role, and select :guilabel:`Unique Code Via SMS`.
+
+.. image:: sign/sms-verification.png
+   :align: center
+   :alt: Add a hash to your document
+
+Go to the document to sign, add the field for which the SMS verification is required, for example
+the :guilabel:`Signature` field, and click :guilabel:`Send`. A page pops up, select the customer,
+and click :guilabel:`Send`.
+
+The person signing the document fills in the :guilabel:`Signature` field and clicks
+:guilabel:`Validate & Send Completed Document`. A :guilabel:`Final Validation` page pops up where to
+add their phone number. One-time codes are sent by SMS.
+
+.. image:: sign/final-validation.png
+   :align: center
+   :alt: fill in your phone number for final validation
+
+.. note::
+   - This feature is enabled by default.
+   - As soon as the :guilabel:`Extra Authentication Step` applies to a role, this validation step is
+     requested for any field assigned to this role.
+
+Itsme®
+~~~~~~
+
+Go to :menuselection:`Sign --> Configuration --> Settings` and enable :guilabel:`Identify with
+itsme®`.
+
+Then, go to :menuselection:`Sign --> Configuration --> Roles`. Click in the :guilabel:`Extra
+Authentication Step` column for the role, and select :guilabel:`Via itsme®`.
+
+Go to the document that needs to be signed and add the :guilabel:`Signature` field. Switch the role
+to :guilabel:`customer (identified with itsme®)`, and click :guilabel:`Validate`, and
+:guilabel:`Send`.
+
+.. image:: sign/itsme-identification.png
+   :align: center
+   :alt: select customer identified with itsme®
+
+The person signing the document fills in the :guilabel:`Signature` field and clicks
+:guilabel:`Validate & Send Completed Document`. A :guilabel:`Final Validation` page pops up, and the
+person must authenticate with itsme®.
+
+.. note::
+   This feature is only available in Belgium and the Netherlands.
 
 .. _sign/field-types:
 
