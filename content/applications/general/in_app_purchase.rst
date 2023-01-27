@@ -5,6 +5,8 @@ In-App Purchase (IAP)
 In-App Purchases (IAP) gives access to additional services through Odoo. For instance, it allows you
 to send SMS Text Messages or to send Invoices by post directly from my database.
 
+.. _iap/buying_credits:
+
 Buying Credits
 ==============
 
