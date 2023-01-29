@@ -23,8 +23,8 @@
 # marcescu, 2022
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lucia Pacheco <lpo@odoo.com>, 2022
-# Josep Anton Belchi, 2022
-# Braulio D. López Vázquez <bdl@odoo.com>, 2022
+# jabelchi, 2022
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -33,7 +33,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-01-02 09:09+0000\n"
 "PO-Revision-Date: 2021-11-02 08:47+0000\n"
-"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2022\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1779,6 +1779,10 @@ msgid ""
 " address from the configured domain, rather than a generic email address "
 "domain (such as gmail.com, outlook.com, etc.)."
 msgstr ""
+"Por la misma razón, Odoo también recomienda que brinde a cada usuario de la "
+"base de datos una dirección de correo electrónico del dominio configurado en"
+" lugar de una dirección de correo de un dominio genérico (por ejemplo, "
+"gmail.com, outlook.com, etc.). "
 
 #: ../../content/applications/general/email_communication/email_domain.rst:39
 msgid "Be SPF compliant"
@@ -1792,6 +1796,13 @@ msgid ""
 "sending server is on the list of allowed IPs according to the sender's "
 ":abbr:`SPF (Sender Policy Framework)` record."
 msgstr ""
+"El protocolo del Convenio de remitentes (SPF, por sus siglas en inglés) "
+"permite al propietario de un nombre de dominio especificar qué servidores "
+"pueden enviar correos electrónicos desde ese dominio. Cuando un servidor "
+"recibe un correo electrónico entrante, verifica si la dirección IP del "
+"servidor remitente está en la lista de direcciones IP permitidas según el "
+"registro del :abbr:`SPF (Convenio de remitentes, por sus siglas en inglés)` "
+"del remitente."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:47
 msgid ""
@@ -1800,6 +1811,11 @@ msgid ""
 "email sent by Odoo, this domain corresponds to the value of the "
 "`mail.catchall.domain` key in the database system parameters."
 msgstr ""
+"La verificación de :abbr:`SPF (Convenio de remitentes, por sus siglas en "
+"inglés)` se realiza en el dominio que se mencionó en el campo `Return-Path` "
+"del correo electrónico. En el caso de un correo electrónico enviado por "
+"Odoo, este dominio corresponde al valor de la clave `mail.catchall.domain` "
+"en los parámetros de sistema de la base de datos."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:51
 msgid ""
@@ -1817,22 +1833,35 @@ msgid ""
 "order for the verification to work properly, each domain can only have one "
 ":abbr:`SPF (Sender Policy Framework)` record."
 msgstr ""
+"La política :abbr:`SPF (Convenio de remitentes, por sus siglas en inglés)` "
+"de un dominio se establece mediante un registro TXT. La creación o "
+"modificación de un registro TXT depende del proveedor que da alojamiento a "
+"la zona :abbr:`DNS (sistema de nombre de dominio, por sus siglas en inglés)`"
+" de su nombre de dominio. Para que la verificación funcione de forma "
+"adecuada, cada dominio puede tener solo un registro :abbr:`SPF (Convenio de "
+"remitentes, por sus siglas en inglés)`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:58
 msgid ""
 "If the domain name does not yet have an :abbr:`SPF (Sender Policy "
 "Framework)` record, the content of the record to create it is as follows:"
 msgstr ""
+"Si el nombre de dominio aún no tiene un registro :abbr:`SPF (Convenio de "
+"remitentes, por sus siglas en inglés)`, el contenido del registro por crear "
+"es el siguiente:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:61
 msgid "`v=spf1 include:_spf.odoo.com ~all`"
-msgstr ""
+msgstr "`v=spf1 include:_spf.odoo.com ~all`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid ""
 "If the domain name already has an :abbr:`SPF (Sender Policy Framework)` "
 "record, the record must be updated (and do not create a new one)."
 msgstr ""
+"Si el nombre de dominio ya tiene un registro :abbr:`SPF (Convenio de "
+"remitentes, por sus siglas en inglés)`, debe actualizar el registro (y no "
+"crear uno nuevo)."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:68
 msgid ""
@@ -1840,12 +1869,18 @@ msgid ""
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 msgstr ""
+"Si el registro TXT es `v=spf1 include:_spf.google.com ~all`, edítelo para "
+"agregar `include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
+"include:_spf.google.com ~all`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:71
 msgid ""
 "Check if the :abbr:`SPF (Sender Policy Framework)` record is valid with a "
 "free tool like `MXToolbox SPF <https://mxtoolbox.com/spf.aspx>`_."
 msgstr ""
+"Puede verificar si el registro :abbr:`SPF (Convenio de remitentes, por sus "
+"siglas en inglés)` es válido con una herramienta gratuita como `MXToolbox "
+"SPF <https://mxtoolbox.com/spf.aspx>`_."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:77
 msgid "Enable DKIM"
@@ -1856,6 +1891,9 @@ msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
 msgstr ""
+"El Correo Identificado con Claves de Dominio (DKIM, por sus siglas en "
+"inglés) permite a los usuarios autenticar sus correos electrónicos gracias a"
+" una firma digital."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:82
 msgid ""
@@ -1866,6 +1904,13 @@ msgid ""
 "contained in the record match, this guarantees that the message is authentic"
 " and has not been altered during transport."
 msgstr ""
+"Al enviar un correo electrónico, el servidor de Odoo incluye una firma "
+":abbr:`DKIM (Correo Identificado con Claves de Dominio, por sus siglas en "
+"inglés)` única en los encabezados. El servidor del destinatario descifra "
+"esta firma mediante el registro :abbr:`DKIM (Correo Identificado con Claves "
+"de Dominio, por sus siglas en inglés)` en el nombre de dominio de la base de"
+" datos. Si la firma y la clave en el registro coinciden, garantiza que el "
+"mensaje es auténtico y que no se alteró durante el transporte."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:88
 msgid ""
@@ -1873,10 +1918,14 @@ msgid ""
 "(Canonical Name)` record to the :abbr:`DNS (Domain Name System)` zone of the"
 " domain name:"
 msgstr ""
+"Para habilitar el :abbr:`DKIM (Correo Identificado con Claves de Dominio, "
+"por sus siglas en inglés)`, agregue un registro :abbr:`CNAME (nombre "
+"canónico)` en la zona :abbr:`DNS (Sistema de nombres de dominio, por sus "
+"siglas en inglés)` del nombre de dominio:"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:91
 msgid "`odoo._domainkey IN CNAME odoo._domainkey.odoo.com.`"
-msgstr ""
+msgstr "`odoo._domainkey IN CNAME odoo._domainkey.odoo.com.`"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:94
 msgid ""
@@ -1884,6 +1933,9 @@ msgid ""
 "`odoo._domainkey.mycompany.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
+"Si el nombre de dominio es `miempresa.com`, asegúrese de crear un subdominio"
+" `odoo._domainkey.mycompany.com` cuyo nombre canónico sea "
+"`odoo._domainkey.odoo.com.`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:97
 msgid ""
@@ -1892,6 +1944,11 @@ msgid ""
 "domain name. The most common providers are :ref:`listed below "
 "<email_communication/SPFDKIM_common_providers>`."
 msgstr ""
+"La creación o modificación de un registro :abbr:`CNAME (nombre canónico)` "
+"depende del proveedor que da alojamiento a la zona :abbr:`DNS (sistema de "
+"nombre de dominio)` del nombre de dominio. Puede consultar una lista de los "
+"proveedores más comunes :ref:`aquí "
+"<email_communication/SPFDKIM_common_providers>`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:101
 msgid ""
@@ -1899,6 +1956,10 @@ msgid ""
 "a free tool like `DKIM Core <https://dkimcore.org/tools/>`_. If a selector "
 "is asked, enter `odoo`."
 msgstr ""
+"Verifique si el registro :abbr:`DKIM (Correo Identificado con Claves de "
+"Dominio, por sus siglas en inglés)` es válido con una herramienta gratuita "
+"como `DKIM Core <https://dkimcore.org/tools/>`_. Si se le solicita un "
+"selector, introduzca `odoo`."
 
 #: ../../content/applications/general/email_communication/email_domain.rst:105
 msgid "Check the DMARC policy"
