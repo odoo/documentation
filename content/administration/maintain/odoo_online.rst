@@ -3,20 +3,22 @@ Odoo Online database management
 ===============================
 
 To manage a database, sign in to https://www.odoo.com and access the `database management page
-<https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on *My Databases*.
+<https://www.odoo.com/my/databases>`_ by clicking on the user icon, then on
+:guilabel:`My Databases`.
 
 .. image:: odoo_online/my-databases.png
    :align: center
    :alt: Clicking on the user icon opens a drop-down menu. "My databases" button is highlighted.
 
 .. note::
-   Make sure you are connected as the administrator of the database you want to manage.
+   Make sure to connect as the administrator of the database that changes will be made on.
 
 .. image:: odoo_online/dropdown-menu.png
    :align: right
    :alt: Clicking on the gear icon opens the drop-down menu.
 
-Open the drop-down menu next to the database you want to manage by clicking on the gear icon.
+Open the drop-down menu next to the database that changes will be made on by clicking on the gear
+icon.
 
 Several actions are available:
 
@@ -35,22 +37,22 @@ Several actions are available:
 Upgrade
 =======
 
-If you are *not* on the latest **Online version**, you should receive an invitation to :doc:`upgrade
-<../upgrade>` your database. A **Rolling Release button** on your database's main screen proposes an
-upgrade to the latest version (e.g., 13.0 to 15.1).
+If the database is *not* on the latest **Online version**, the administrator should receive an
+invitation to :doc:`upgrade <../upgrade>` the database. A :guilabel:`Rolling Release`` button on the
+database's main screen proposes an upgrade to the latest version (e.g., 14.0 to 16.1).
 
 .. important::
-   - | **If your Odoo database's version is lower than the latest major release:**
-     | You must upgrade your database within two months. After these two months, an automatic
+   - | **If the Odoo database's version is lower than the latest major release:**
+     | The database must be upgraded within two months. After these two months, an automatic
        upgrade is initiated.
-   - | **If your Odoo database's version is equal to or higher than the latest major release:**
-     | You can disregard the invitation to upgrade as you probably wouldn't benefit from new
+   - | **If the Odoo database's version is equal to or higher than the latest major release:**
+     | Disregard the invitation to upgrade as the database probably wouldn't benefit from new
        features every two months.
 
 .. note::
    Versions that are not supported anymore become deprecated and need to be updated to avoid
-   security issues. We recommend you initiate the upgrade of the database yourself, as this method
-   allows you to request a test upgrade of your database to check for any discrepancies.
+   security issues. Odoo recommends that the company initiate the upgrade, as this method allows for
+   the company to request a test upgrade of the database to check for any discrepancies.
 
 .. seealso::
    - :doc:`../upgrade`
@@ -61,12 +63,12 @@ upgrade to the latest version (e.g., 13.0 to 15.1).
 Duplicate
 =========
 
-Make an exact copy of the database to be able to perform testing without compromising the daily
-operations.
+This allows to make an exact copy of the database to be able to perform testing without compromising
+the daily operations.
 
 .. important::
-   - By checking *For testing purposes*, all external communication (emails, payments, delivery
-     orders, etc.) are disabled by default on the duplicated database.
+   - By checking :guilabel:`For testing purposes`, all external communication (emails, payments,
+     delivery orders, etc.) are disabled by default on the duplicated database.
    - Duplicate databases expire automatically after 15 days.
 
 .. _odoo_online/rename:
@@ -81,7 +83,7 @@ Rename the database and its URL.
 Download
 ========
 
-Download instantly a ZIP file with a backup of the database.
+Instantly download a ZIP file with a backup of the database.
 
 .. note::
    Databases are backed up daily according to the `Odoo Cloud SLA
@@ -115,8 +117,8 @@ Delete a database instantly.
    Deleting a database means that all data is permanently lost. The deletion is instant and for all
    users. It is recommended to create a backup of the database before deleting it.
 
-Read carefully the warning message that pops up and proceed only if you fully understand the
-implications of deleting a database:
+Carefully read the warning message that pops up and proceed only if the implications of deleting a
+database are fully understood:
 
 .. image:: odoo_online/delete.png
    :align: center
@@ -127,7 +129,6 @@ implications of deleting a database:
    - The database name is immediately available for a new database.
    - It is not possible to delete a database if it is expired or linked to a subscription. If
      needed, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
-   - To delete your account, please get in touch with `Odoo Support <https://www.odoo.com/help>`_.
 
 .. _odoo_online/contact-support:
 
@@ -142,14 +143,15 @@ pre-filled.
 Invite / Remove Users
 =====================
 
-To invite users, fill out the email address of the new user and click on *Invite*. To add multiple
-users, click on *Add more users*.
+To invite users, fill out the email address of the new user and click on :guilabel:`Invite`. To add
+multiple users, click on :guilabel:`Add more users`.
 
 .. image:: odoo_online/invite-users.png
    :align: center
    :alt: Clicking on "Add more users" adds additional email fields.
 
-To remove users, select the users to remove and click on *Remove*.
+To remove users, select the users to remove and click on :guilabel:`Remove`.
 
 .. seealso::
    - :doc:`/applications/general/users/manage_users`
+   - :doc:`/applications/general/users/delete_account`
