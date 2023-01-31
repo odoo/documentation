@@ -1,110 +1,128 @@
-=================================================
-Control and know when vendor bills should be paid
-=================================================
+=====================
+Bill control policies
+=====================
 
-With Odoo, you can define how your vendor bills are controlled. For each purchase order, you can
-decide when the related vendor bill should be paid: either before or after you have received your
-products. You can also check at a glance what is the billing status of each purchase order.
+In Odoo, the *bill control* policy determines the quantities billed by vendors on every purchase
+order, for ordered or received quantities. The policy selected in the settings will act as the
+default value and will be applied to any new product created.
 
-With the 3-way matching feature, Odoo compares the information appearing on the *Purchase Order*,
-the *Vendor Bill* and the *Receipt*, and lets you know if you should pay the bill. This way you can
-avoid paying incorrect or fraudulent vendor bills.
+Configuration
+=============
 
-Vendor bills default control policy
-===================================
+To view the default bill control policy and make changes, go to :menuselection:`Purchase -->
+Configuration --> Settings`, and scroll down to the :guilabel:`Invoicing` section. Here, there are
+the two :guilabel:`Bill Control` policy options: :guilabel:`Ordered quantities` and
+:guilabel:`Received quantities`.
 
-As a first step, open your Purchase app and go to :menuselection:`Configuration --> Settings` to set
-the default bill control policy for all the products created onwards.
+The policy selected will be the default for any new product created. The definition of each policy
+is as follows:
 
-.. image:: control_bills/control-bills-quantities-default-setting.png
+- :guilabel:`Ordered quantities`: creates a vendor bill as soon as a purchase order is confirmed.
+  The products and quantities in the purchase order are used to generate a draft bill.
+- :guilabel:`Received quantities`: a bill is created only *after* part of the total order has been
+  received. The products and quantities *received* are used to generate a draft bill. An error
+  message will appear if creation of a vendor bill is attempted without receiving anything.
+
+.. image:: control_bills/bill-control-policy-error-message.png
    :align: center
-   :alt: Vendor bills default control setting for new products in Odoo Purchase
+   :alt: Bill control policy draft bill error message.
 
-By selecting *On ordered quantities*, you can create a vendor bill as soon as you confirm an order.
-The quantities mentioned in the purchase order are used to generate the draft bill.
+.. note::
+   If one or two products need a different control policy, the default bill control setting can be
+   overridden by going to the :guilabel:`Purchase` tab in a product's template and modifying its
+   :guilabel:`Control Policy` field.
 
-If you choose *On received quantities* instead, you can only create one once you have at least
-received some of the products you have ordered. The quantities you have received are used to
-generate the draft bill. If you try to create one without having received any product, you get an
-error message.
+Example flow: Ordered quantities
+--------------------------------
 
-.. image:: control_bills/control-bills-no-invoiceable-line.png
+To complete an example workflow using the *ordered quantities* bill control policy, first go to
+:menuselection:`Purchase --> Configuration --> Settings`, scroll down to the :guilabel:`Invoicing`
+section, and select :guilabel:`Ordered quantities`. Then, :guilabel:`Save` changes.
+
+In the :guilabel:`Purchase` app, create a new :abbr:`RFQ (Request for Quotation)`. Fill out the
+information on the quotation form, add products to the invoice lines, and click :guilabel:`Confirm
+Order`. Then, click :guilabel:`Create Bill`. Since the policy is set to *ordered quantities*, the
+draft bill can be confirmed as soon as it is created, without any products actually being received.
+
+Example flow: Received quantities
+---------------------------------
+
+To complete an example workflow using the *received quantities* bill control policy, first go to
+:menuselection:`Purchase --> Configuration --> Settings`, scroll down to the :guilabel:`Invoicing`
+section, and select :guilabel:`Received quantities`. Then, :guilabel:`Save` changes.
+
+In the :guilabel:`Purchase` app, create a new :abbr:`RFQ (Request for Quotation)`. Fill out the
+information on the quotation form, add products to the invoice lines, and click :guilabel:`Confirm
+Order`. Then, click on the :guilabel:`Receipt smart button`. Set the quantities in the
+:guilabel:`Done` column to match the quantities in the :guilabel:`Demand` column, and
+:guilabel:`Validate` the changes. Then, in the purchase order, click :guilabel:`Create Bill` and
+:guilabel:`Confirm`. Since the policy is set to *received quantities*, the draft bill can be
+confirmed *only* when at least some of the quantities are received.
+
+3-way matching
+==============
+
+Activating :guilabel:`3-way matching` ensures that vendor bills are only paid once some or all of
+the products included in the purchase order have actually been received. To activate it, go to
+:menuselection:`Purchase --> Configuration --> Settings`, and scroll down to the
+:guilabel:`Invoicing` section. Then, click :guilabel:`3-way matching: purchases, receptions, and
+bills`.
+
+.. note::
+   3-way matching is *only* intended to work when the bill control policy is set to *received
+   quantities*.
+
+Pay vendor bills with 3-way matching
+------------------------------------
+
+When :guilabel:`3-way matching` is activated, vendor bills will display the :guilabel:`Should Be
+Paid` field under the :guilabel:`Other Info` tab. When a new vendor bill is created, the field will
+be set to :guilabel:`Yes`, since a bill can't be created until at least some of the products
+included in a purchase order have been received.
+
+.. image:: control_bills/vendor-bill-should-be-paid.png
    :align: center
-   :alt: No invoiceable line error message in Odoo Purchase
+   :alt: Draft bill should be paid field status.
 
-Change a specific product's control policy
-------------------------------------------
+.. note::
+   If the total quantity of products from a purchase order has not been received, Odoo only includes
+   the products that *have* been received in the draft vendor bill.
 
-If you want to modify a specific product's control policy, go to :menuselection:`Products -->
-Products`, open it, click on *Edit* and go to the *Purchase tab*. There you can change a product's
-default bill control policy.
+Draft bills can be edited to increase the billed quantity, change the price of the products in the
+bill, and add additional products to the bill. If this is done, the :guilabel:`Should Be Paid` field
+status will be set to :guilabel:`Exception`. This means that Odoo notices the discrepancy, but
+doesn't block the changes or display an error message, since there might be a valid reason for
+making changes to the draft bill.
 
-.. image:: control_bills/control-bills-quantities-on-product.png
-   :align: center
-   :alt: Vendor bills default control setting for new products in Odoo Purchase
+Once payment has been registered for a vendor bill and displays the green :guilabel:`Paid` banner,
+the :guilabel:`Should Be Paid` field status will be set to :guilabel:`No`.
+
+.. tip::
+   The :guilabel:`Should Be Paid` status on bills is set automatically by Odoo. However, the status
+   can be changed manually by clicking the field's drop-down menu inside the :guilabel:`Other Info`
+   tab.
 
 View a purchase order's billing status
 ======================================
 
-Once you confirm an order, you can view its *Billing Status* by going to the *Other Information*
-tab.
+When a purchase order is confirmed, its :guilabel:`Billing Status` can be viewed under the
+:guilabel:`Other Information` tab on the purchase order form.
 
-.. image:: control_bills/control-bills-billing-status.png
+.. image:: control_bills/billing-status-nothing-to-bill.png
    :align: center
-   :alt: Purchase order billing status in Odoo Purchase
+   :alt: Purchase order billing status.
 
-Below you can find a list of the different *Billing Status*, and when they are displayed, depending
-on the products' bill control policy.
+Below is a list of the different statuses that a :guilabel:`Billing Status` could appear as and when
+they are displayed, depending on the bill control policy used.
 
-+--------------------+--------------------------------------------------------------------------+
-| **Billing status** |                              **Conditions**                              |
-|                    +------------------------------------------------+-------------------------+
-|                    |            *On received quantities*            | *On ordered quantities* |
-+--------------------+------------------------------------------------+-------------------------+
-| *Nothing to Bill*  |       PO confirmed; no products received       |    *(Not applicable)*   |
-+--------------------+------------------------------------------------+-------------------------+
-| *Waiting Bills*    |  All/some products received; bill not created  |       PO confirmed      |
-+--------------------+------------------------------------------------+-------------------------+
-| *Fully Billed*     | All/some products received; draft bill created |    Draft bill created   |
-+--------------------+------------------------------------------------+-------------------------+
-
-Determine when to pay with 3-way matching
-=========================================
-
-First, go to :menuselection:`Configuration --> Settings` and activate *3-way matching*.
-
-.. image:: control_bills/control-bills-3-way-matching-setting.png
-   :align: center
-   :alt: 3-way-matching setting in Odoo Purchase
-
-.. note::
-   3-way matching is intended to work with the bill control policy set to *On received quantities*.
-
-Should I pay the vendor bill?
------------------------------
-
-With the feature activated, your vendor bills now display the *Should Be Paid* field under the
-*Other info* tab.
-
-.. image:: control_bills/control-bills-should-be-paid.png
-   :align: center
-   :alt: Should Be Paid field under a vendor bill in Odoo Purchase
-
-As you can't create a bill until you have received your products - and if you haven't received all
-of them, Odoo only includes the products you have received in the draft bill - the *Should Be Paid*
-status is set to *Yes* when you create one.
-
-If you edit a draft bill to increase the billed quantity, change the price, or add other products,
-the *Should Be Paid* status is set to *Exception*. It means Odoo notices the discrepancy, but that
-you might have a valid reason to have done so.
-
-Once the payment has been registered and mentions *Paid*, the *Should Be Paid* status is set to
-*No*.
-
-.. image:: control_bills/control-bills-paid-status.png
-   :align: center
-   :alt: Paid bill in Odoo Purchase
-
-.. tip::
-   The *Should Be Paid* status is set automatically by Odoo. However, you can change the status
-   manually when you are viewing a bill in edit mode.
++------------------------------+--------------------------------------------------------------------------+
+| :guilabel:`Billing Status`   |                              **Conditions**                              |
+|                              +------------------------------------------------+-------------------------+
+|                              |            *On received quantities*            | *On ordered quantities* |
++------------------------------+------------------------------------------------+-------------------------+
+| :guilabel:`Nothing to Bill`  |       PO confirmed; no products received       |     *Not applicable*    |
++------------------------------+------------------------------------------------+-------------------------+
+| :guilabel:`Waiting Bills`    |  All/some products received; bill not created  |       PO confirmed      |
++------------------------------+------------------------------------------------+-------------------------+
+| :guilabel:`Fully Billed`     | All/some products received; draft bill created |    Draft bill created   |
++------------------------------+------------------------------------------------+-------------------------+
