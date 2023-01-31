@@ -243,6 +243,7 @@ What upgrading does NOT cover
 * The cleaning of pre-existing data & configuration while upgrading
 * Any new developments and/or upgrades of your own :ref:`custom modules
   <upgrade-faq/custom-modules>`
+* Lines of code added to standard modules that are not created with Odoo Studio.
 * `Training <https://www.odoo.com/learn>`_ on the latest version
 
 You can get more information about your Enterprise Licence on our :ref:`Odoo Enterprise Subscription
