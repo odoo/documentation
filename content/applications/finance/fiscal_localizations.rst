@@ -10,9 +10,9 @@ Fiscal localization packages
 ============================
 
 **Fiscal Localization Packages** are country-specific modules that install pre-configured taxes,
-fiscal positions, chart of accounts, and legal statements on your database. Some additional features,
-such as the configuration of specific certificates, are also added to your Accounting app, following
-your fiscal administration requirements.
+fiscal positions, chart of accounts, and legal statements on your database. Some additional
+features, such as the configuration of specific certificates, are also added to your Accounting app,
+following your fiscal administration requirements.
 
 .. note::
    Odoo continuously adds new localizations and improves the existing packages.
@@ -75,7 +75,7 @@ available on Odoo.
 - Czech - Accounting
 - Denmark - Accounting
 - Dominican Republic - Accounting
-- Ecuadorian - Accounting
+- :doc:`Ecuadorian - Accounting <fiscal_localizations/ecuador>`
 - :doc:`Egypt - Accounting <fiscal_localizations/egypt>`
 - Ethiopia - Accounting
 - Finnish Localization
@@ -140,6 +140,7 @@ available on Odoo.
    fiscal_localizations/chile
    fiscal_localizations/colombia
    fiscal_localizations/colombia_ES
+   fiscal_localizations/ecuador
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
