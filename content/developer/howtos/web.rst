@@ -1766,7 +1766,7 @@ the Odoo web know to start this widget? Because the widget is registered as
 a *client action*.
 
 A client action is (as its name implies) an action type defined almost
-entirely in the client, in javascript for Odoo web. The server simply sends
+entirely in the client, in JavaScript for Odoo web. The server simply sends
 an action tag (an arbitrary name), and optionally adds a few parameters, but
 beyond that *everything* is handled by custom client code.
 
