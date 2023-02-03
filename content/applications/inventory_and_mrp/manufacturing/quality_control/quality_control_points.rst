@@ -11,7 +11,7 @@ Configure quality control points
 ================================
 
 To create a new quality control point, go to :menuselection:`Quality Control --> Control Points -->
-Create`. Then, fill in the primary control point form fields, as follows:
+Create`. Then, fill in the following form fields, accordingly:
 
 - :guilabel:`Title`: give the quality control point a simple, but informative title so production
   floor and quality check teams can understand it easily
@@ -78,5 +78,10 @@ be configured so that only products within a certain tolerance will pass the che
 When the quality control points form is complete, click :guilabel:`Save`. Now, this
 measurement-based test will trigger for products that were specified on the form.
 
-For products that measure outside of the values indicated in the :guilabel:`Tolerance` fields, the
-test will fail. Failed tests will create
+When production of the specified product reaches the operation that requires a measure quality
+check, the manufacturing employee responsible will be prompted to record and validate the measured
+value in the tablet view. For products that measure within the values indicated in the
+:guilabel:`Tolerance` fields, the test will pass. However, for products that measure outside of
+those values, the test will fail. In that case, the worker who performed the check would create a
+quality alert from the tablet view. That quality alert can then be addressed by the quality
+management team.
