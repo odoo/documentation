@@ -2101,8 +2101,8 @@ week_days (WeekDays)
 Client actions
 ==============
 
-The idea of a client action is a customized widget that is integrated in the
-web client interface, just like a *act_window_action*.  This is useful when
+The idea of a client action is a customized widget that is integrated into the
+web client interface, just like an *act_window_action*.  This is useful when
 you need a component that is not closely linked to an existing view or a
 specific model.  For example, the Discuss application is actually a client
 action.
@@ -2111,11 +2111,11 @@ A client action is a term that has various meanings, depending on the context:
 
 - from the perspective of the server, it is a record of the model *ir_action*,
   with a field *tag* of type char
-- from the perspective of the web client, it is a widget, which inherit from
+- from the perspective of the web client, it is a widget, which inherits from
   the class AbstractAction, and is supposed to be registered in the
   action registry under the corresponding key (from the field char)
 
-Whenever a menu item is associated to a client action, opening it will simply
+Whenever a menu item is associated with a client action, opening it will simply
 fetch the action definition from the server, then lookup into its action
 registry to get the Widget definition at the appropriate key, and finally, it
 will instantiate and append the widget to the proper place in the DOM.
@@ -2123,9 +2123,9 @@ will instantiate and append the widget to the proper place in the DOM.
 Adding a client action
 ----------------------
 
-A client action is a widget which will control the part of the screen below the
+A client action is a widget that will control the part of the screen below the
 menu bar.  It can have a control panel, if necessary.  Defining a client action
-can be done in two steps: implementing a new widget, and registering the widget
+can be done in two steps: implementing a new widget and registering the widget
 in the action registry.
 
 Implementing a new client action.
@@ -2166,7 +2166,7 @@ Registering the client action:
 Using the control panel
 -----------------------
 
-By default, the client action does not display a control panel.  In order to
+By default, the client action does not display a control panel. To
 do that, several steps should be done.
 
 - Set the *hasControlPanel* to *true*.
@@ -2181,7 +2181,7 @@ do that, several steps should be done.
       });
 
   .. warning::
-      when the ``loadControlPanel`` is set to true, the client action will automatically get the content of a search view or a control panel view.
+      When the ``loadControlPanel`` is set to true, the client action will automatically get the content of a search view or a control panel view.
       In this case, a model name should be specified like this:
 
       .. code-block:: javascript
@@ -2221,7 +2221,7 @@ do that, several steps should be done.
               });
           }
 
-The ``updateControlPanel`` is the main method to customize the content in controlpanel.
+The ``updateControlPanel`` is the main method to customize the content in the control panel.
 For more information, look into the `control_panel_renderer.js <{GITHUB_PATH}/addons/web/static/src/js/views/control_panel/control_panel_renderer.js#L130>`_ file.
 
 .. _glob:
