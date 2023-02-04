@@ -25,15 +25,16 @@
 # Cécile Collart <cco@odoo.com>, 2023
 # Martin Trigaux, 2023
 # Jolien De Paepe, 2023
+# Rémi CAZENAVE, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-19 15:37+0000\n"
+"POT-Creation-Date: 2023-01-31 10:29+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
-"Last-Translator: Jolien De Paepe, 2023\n"
+"Last-Translator: Rémi CAZENAVE, 2023\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -239,9 +240,12 @@ msgid ""
 "multiple databases accessible Odoo needs a rule to know which one it should "
 "use."
 msgstr ""
-"Cependant, c'est un problème pour les utilisateurs non connectés (portail, site web) qui ne sont pas liés à une base de données : Odoo doit savoir quelle base de données doit être utilisée pour charger la page du site web ou effectuer l'opération. Si la multi-location n'est pas utilisée, ce n'est pas un problème, il n'y a qu'une seule base de données à utiliser, mais s'il y a plusieurs bases de données accessibles, Odoo a besoin d'une règle pour savoir laquelle il doit utiliser.\n"
-"\n"
-"Traduit avec www.DeepL.com/Translator (version gratuite)"
+"Cependant, c'est un problème pour les utilisateurs non connectés (portail, "
+"site web) qui ne sont pas liés à une base de données : Odoo doit savoir "
+"quelle base de données doit être utilisée pour charger la page du site web "
+"ou effectuer l'opération. Si une seule base de données est utilisée, ce "
+"n'est pas un problème, mais s'il y a plusieurs bases de données accessibles,"
+" Odoo a besoin d'une règle pour savoir laquelle il doit utiliser."
 
 #: ../../content/administration/install/deploy.rst:31
 msgid ""
@@ -329,11 +333,11 @@ msgid ""
 "and PostgreSQL to execute on different machines [#different-machines]_ it "
 "will need to `listen to network interfaces`_ [#remote-socket]_, either:"
 msgstr ""
-"UNIX socket est très bien si vous voulez que Odoo et PostgreSQL s'exécutent "
-"sur la même machine, et c'est la valeur par défaut quand aucun hôte n'est "
-"fourni, mais si vous voulez que Odoo et PostgreSQL s'exécutent sur des "
-"machines différentes [#different-machines]_ il devra `listen to network "
-"interfaces`_ [#remote-socket]_, soit :"
+"Vous pouvez utiliser la socket UNIX si vous voulez qu'Odoo et PostgreSQL "
+"s'exécutent sur la même machine, et c'est la valeur par défaut quand aucun "
+"hôte n'est fourni, mais si vous voulez que Odoo et PostgreSQL s'exécutent "
+"sur des machines différentes [#different-machines]_ il devra `configurer une"
+" interface réseau`_ [#remote-socket]_, soit :"
 
 #: ../../content/administration/install/deploy.rst:87
 msgid ""
@@ -374,11 +378,15 @@ msgstr "Autoriser la connexion TCP à partir du réseau 192.168.1.x"
 #: ../../content/administration/install/deploy.rst:100
 msgid "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` set:"
 msgstr ""
+"dans ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/pg_hba.conf`` "
+"configurer :"
 
 #: ../../content/administration/install/deploy.rst:108
 msgid ""
 "in ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` set:"
 msgstr ""
+"dans ``/etc/postgresql/<YOUR POSTGRESQL VERSION>/main/postgresql.conf`` "
+"configurer :"
 
 #: ../../content/administration/install/deploy.rst:119
 msgid "Configuring Odoo"
@@ -402,6 +410,9 @@ msgid ""
 "The :ref:`packaged installers <setup/install/packaged>` will automatically "
 "create a new user (``odoo``) and set it as the database user."
 msgstr ""
+"Les :ref:`packaged installers <setup/install/packaged>` vont créer "
+"automatiquement un nouvel utilisateur (``odoo``) et l'utiliser comme "
+"utilisateur pour la base de données."
 
 #: ../../content/administration/install/deploy.rst:129
 msgid ""
@@ -411,6 +422,12 @@ msgid ""
 " randomly generated value to ensure third parties can not use this "
 "interface."
 msgstr ""
+"Les pages d'administration de la base de données sont protégées par l'entrée"
+" de configuration ``admin_passwd``. Cette valeur peut uniquement être "
+"configurée dans le fichier de configuration, et est vérifié avant de "
+"modifier la base de données. Il devrait être généré aléatoirement pour "
+"éviter que cette interface ne puisse être utilisée par des tiers non "
+"autorisés."
 
 #: ../../content/administration/install/deploy.rst:134
 msgid ""
@@ -419,6 +436,10 @@ msgid ""
 "screen. For the database management screen to work requires that the "
 "PostgreSQL user have ``createdb`` right."
 msgstr ""
+"Toutes les opérations en base de données utilisent les :ref:`database "
+"options <reference/cmdline/server/database>`, ainsi que la page "
+"d'administration de la base de données. Pour que cette dernière fonctionne, "
+"il est nécessaire que l'utilisateur PostgreSQL ait les droits ``createdb``."
 
 #: ../../content/administration/install/deploy.rst:138
 msgid ""
@@ -427,6 +448,11 @@ msgid ""
 "with ``no-createdb`` and the database must be owned by a different "
 "PostgreSQL user."
 msgstr ""
+"Les utilisateurs peuvent supprimer des bases de données qui leur "
+"appartiennent. Pour rendre non fonctionnelle la page d'administration des "
+"bases de données, l'utilisateur PostgreSQL doit être créé avec les droits "
+"``no-createdb`` et le propriétaire de la base de données doit être un autre "
+"utilisateur."
 
 #: ../../content/administration/install/deploy.rst:142
 msgid "the PostgreSQL user *must not* be a superuser"
@@ -434,7 +460,7 @@ msgstr "l'utilisateur PostgreSQL *ne doit pas* être un superutilisateur"
 
 #: ../../content/administration/install/deploy.rst:147
 msgid "connect to a PostgreSQL server on 192.168.1.2"
-msgstr ""
+msgstr "se connecter au serveur PostgreSQL à l'adresse 192.168.1.2"
 
 #: ../../content/administration/install/deploy.rst:148
 msgid "port 5432"
@@ -451,6 +477,7 @@ msgstr "avec 'pwd' comme mot de passe"
 #: ../../content/administration/install/deploy.rst:151
 msgid "filtering only db with a name beginning with 'mycompany'"
 msgstr ""
+"n'afficher que les bases de données dont le nom commence par 'mycompany'"
 
 #: ../../content/administration/install/deploy.rst:168
 msgid "SSL Between Odoo and PostgreSQL"
@@ -475,7 +502,7 @@ msgstr ""
 
 #: ../../content/administration/install/deploy.rst:180
 msgid "Builtin server"
-msgstr ""
+msgstr "Serveur intégré"
 
 #: ../../content/administration/install/deploy.rst:182
 msgid ""
@@ -586,6 +613,9 @@ msgid ""
 " listening on :option:`the gevent port <odoo-bin --gevent-port>` but the "
 "client will not connect to it."
 msgstr ""
+"En configuration multiprocessing, un worker LiveChat dédié est "
+"automatiquement démarré et écoute sur :option:`le port gevent <odoo-bin "
+"--gevent-port>` mais le client ne s'y connectera pas."
 
 #: ../../content/administration/install/deploy.rst:221
 msgid ""
@@ -593,6 +623,10 @@ msgid ""
 "``/websocket/`` to the gevent port. Other request should be proxied to the "
 ":option:`normal HTTP port <odoo-bin --http-port>`"
 msgstr ""
+"A la place, vous devez avoir un proxy qui redirige les requêtes dont l'URL "
+"commence par ``/websocket/`` vers le port gevent. Les autres requêtes "
+"doivent être redirigées par le proxy vers le :option:`port HTTP <odoo-bin "
+"--http-port>`"
 
 #: ../../content/administration/install/deploy.rst:225
 msgid ""
@@ -661,6 +695,8 @@ msgid ""
 "Enable Odoo's :option:`proxy mode <odoo-bin --proxy-mode>`. This should only"
 " be enabled when Odoo is behind a reverse proxy"
 msgstr ""
+"Activer dans Odoo l' :option:`proxy mode <odoo-bin --proxy-mode>`. A activer"
+" uniquement quand Odoo est derrière un proxy inverse."
 
 #: ../../content/administration/install/deploy.rst:265
 msgid "Set up the SSL termination proxy (`Nginx termination example`_)"
@@ -3437,8 +3473,8 @@ msgid ""
 "--> Technical --> System Parameters`."
 msgstr ""
 "Vous pouvez également le faire manuellement. Pour cela, activez le "
-":ref:`mode développeur`, puis allez dans :menuselection:`Paramètres --> "
-"Technique --> Paramètres du système`."
+":ref:`mode développeur <developer-mode>`, puis allez dans "
+":menuselection:`Paramètres --> Technique --> Paramètres du système`."
 
 #: ../../content/administration/maintain/domain_names.rst:285
 msgid ""
@@ -5317,6 +5353,10 @@ msgstr "N/D"
 msgid "March 2022"
 msgstr ""
 
+#: ../../content/administration/maintain/supported_versions.rst:31
+msgid "January 2023"
+msgstr ""
+
 #: ../../content/administration/maintain/supported_versions.rst:33
 msgid "Odoo saas~15.1"
 msgstr ""
@@ -5349,6 +5389,10 @@ msgstr "|red|"
 
 #: ../../content/administration/maintain/supported_versions.rst:33
 msgid "February 2022"
+msgstr ""
+
+#: ../../content/administration/maintain/supported_versions.rst:33
+msgid "July 2022"
 msgstr ""
 
 #: ../../content/administration/maintain/supported_versions.rst:35
@@ -8932,7 +8976,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:29
 #: ../../content/administration/upgrade.rst:148
-#: ../../content/administration/upgrade.rst:252
+#: ../../content/administration/upgrade.rst:251
 #: ../../content/administration/upgrade/faq.rst:81
 #: ../../content/administration/upgrade/faq.rst:92
 #: ../../content/administration/upgrade/faq.rst:119
@@ -9268,7 +9312,7 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/upgrade.rst:218
-#: ../../content/administration/upgrade.rst:257
+#: ../../content/administration/upgrade.rst:256
 msgid ":doc:`maintain/supported_versions`"
 msgstr ""
 
@@ -9282,7 +9326,7 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:228
 msgid ""
-"Databases hosted on Odoo’s Cloud platforms (Odoo Online and Odoo.sh) or On-"
+"Databases hosted on Odoo's Cloud platforms (Odoo Online and Odoo.sh) or On-"
 "Premise (Self-Hosting) enjoy the following services at all times."
 msgstr ""
 
@@ -9301,28 +9345,28 @@ msgstr ""
 
 #: ../../content/administration/upgrade.rst:235
 msgid ""
-"customizations done by our consulting and developer services *if* they are "
-"covered by a ‘Maintenance of Customisations’ subscription"
+"customizations *if* they are covered by a \"Maintenance of Customizations\" "
+"subscription"
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:238
+#: ../../content/administration/upgrade.rst:237
 msgid ""
 "The Upgrade Service is limited to your database's technical conversion and "
 "adaptation (standard modules and data) to make it compatible with the "
 "targeted version."
 msgstr ""
 
-#: ../../content/administration/upgrade.rst:242
+#: ../../content/administration/upgrade.rst:241
 msgid "What upgrading does NOT cover"
 msgstr "Ce que la mise à niveau ne couvre PAS"
 
-#: ../../content/administration/upgrade.rst:244
+#: ../../content/administration/upgrade.rst:243
 msgid "The cleaning of pre-existing data & configuration while upgrading"
 msgstr ""
 "Le nettoyage des données et de la configuration préexistantes lors de la "
 "mise à niveau."
 
-#: ../../content/administration/upgrade.rst:245
+#: ../../content/administration/upgrade.rst:244
 msgid ""
 "Any new developments and/or upgrades of your own :ref:`custom modules "
 "<upgrade-faq/custom-modules>`"
@@ -9330,11 +9374,11 @@ msgstr ""
 "Tout nouveau développement et/ou mise à niveau de vos propres :ref:`modules "
 "personnalisés <upgrade-faq/custom-modules>`."
 
-#: ../../content/administration/upgrade.rst:247
+#: ../../content/administration/upgrade.rst:246
 msgid "`Training <https://www.odoo.com/learn>`_ on the latest version"
 msgstr "`Formation <https://www.odoo.com/learn>`_ sur la dernière version"
 
-#: ../../content/administration/upgrade.rst:249
+#: ../../content/administration/upgrade.rst:248
 msgid ""
 "You can get more information about your Enterprise Licence on our :ref:`Odoo"
 " Enterprise Subscription Agreement <upgrade>` page."
@@ -9342,11 +9386,11 @@ msgstr ""
 "Vous pouvez obtenir plus d'informations sur votre licence Enterprise sur "
 "notre page :ref:`Contrat d'abonnement d'Odoo Enterprise <upgrade>`."
 
-#: ../../content/administration/upgrade.rst:255
+#: ../../content/administration/upgrade.rst:254
 msgid ":doc:`upgrade/faq`"
 msgstr ":doc:`upgrade/faq`"
 
-#: ../../content/administration/upgrade.rst:256
+#: ../../content/administration/upgrade.rst:255
 msgid ":doc:`odoo_sh`"
 msgstr ":doc:`odoo_sh`"
 
