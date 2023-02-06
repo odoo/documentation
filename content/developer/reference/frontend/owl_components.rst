@@ -164,12 +164,10 @@ checkboxes or datepickers. This page explains how to use these generic component
 ActionSwiper
 ------------
 
-.. note:: This component is a mobile feature, only supported in the Enterprise version of Odoo.
-
 Location
 ~~~~~~~~
 
-`@web_enterprise/core/action_swiper/action_swiper`
+`@web/core/action_swiper/action_swiper`
 
 Description
 ~~~~~~~~~~~
@@ -177,7 +175,7 @@ Description
 This is a component that can perform actions when an element is swiped
 horizontally. The swiper is wrapping a target element to add actions to it.
 The action is executed once the user has released the swiper passed
-half of its width.
+a portion of its width.
 
 .. code-block:: xml
 
@@ -191,7 +189,7 @@ and would not want to duplicate the template. It is possible to do just that.
 
 If you want to extend the behavior of an existing element, you must place the element
 inside, by wrapping it directly. Also, you can conditionnally add props to manage when the
-element might be swipable or not.
+element might be swipable, its animation and the minimum portion to swipe to perform the action.
 
 You can use the component to interact easily with records, messages, items in lists and much more.
 
@@ -236,16 +234,25 @@ Props
     * - Name
       - Type
       - Description
+    * - `animationOnMove`
+      - `Boolean`
+      - optional boolean to determine if a translate effect is present during the swipe
+    * - `animationType`
+      - `String`
+      - optional animation that is used after the swipe ends (`bounce` or `forwards`)
     * - `onLeftSwipe`
       - `Object`
       - if present, the actionswiper can be swiped to the left
     * - `onRightSwipe`
       - `Object`
       - if present, the actionswiper can be swiped to the right
+    * - `swipeDistanceRatio`
+      - `Number`
+      - optional minimum width ratio that must be swiped to perform the action
 
 You can use both `onLeftSwipe` and `onRightSwipe` props at the same time.
 
-Those `Object`'s must contain:
+The `Object`'s used for the left/right swipe must contain:
 
     - `action`, which is the callable `Function` serving as a callback.
       Once the swipe has been completed in the given direction, that action
