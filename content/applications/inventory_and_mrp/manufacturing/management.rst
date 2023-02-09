@@ -15,3 +15,4 @@ Manufacturing management
    management/subcontracting
    management/routing_kit_bom
    management/use_mps
+   management/using_work_centers
