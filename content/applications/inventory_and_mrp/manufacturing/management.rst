@@ -15,3 +15,4 @@ Manufacturing management
    management/alternative_wc
    management/subcontracting
    management/use_mps
+   management/using_work_centers
