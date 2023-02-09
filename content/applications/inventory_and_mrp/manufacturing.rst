@@ -19,5 +19,6 @@ and allow workers to trigger maintenance operations, feedback loops, quality iss
 .. toctree::
    :titlesonly:
 
+   manufacturing/maintenance
    manufacturing/management
    manufacturing/quality_control
