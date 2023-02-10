@@ -1,8 +1,8 @@
 :nosearch:
 
-=================
+========
 Advanced
-=================
+========
 
 .. toctree::
    :titlesonly:
