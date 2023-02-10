@@ -10,7 +10,7 @@ Terminology
 ===========
 
 Minimum stock rule
--------------------
+------------------
 
 Minimum Stock rules are used to ensure that you always have the minimum
 amount of a product in stock in order to manufacture your products
@@ -38,24 +38,23 @@ in the drop down menu. There, click on "Create" to set minimum and
 maximum stock values for a given product.
 
 .. image:: strategies/strategies01.png
-    :align: center
+   :align: center
 
 .. note::
-    Show tooltips for "minimum quantity", "maximum quantity" and "quantity multiple"
-    fields
+   Show tooltips for "minimum quantity", "maximum quantity" and "quantity multiple" fields
 
 Then, click on your product to access the related product form and, on
 the "Inventory submenu", do not forget to select a supplier.
 
 .. image:: strategies/strategies02.png
-    :align: center
+   :align: center
 
 .. tip::
-    Don't forget to select the right product type. A consumable
-    can not be stocked and will thus not be accounted for in the stock valuation.
+   Don't forget to select the right product type. A consumable can not be stocked and will thus not
+   be accounted for in the stock valuation.
 
 Make to Order
---------------
+-------------
 
 The Make to Order configuration is available on your product form
 through your :menuselection:`Inventory --> Inventory control --> Products` (or any
@@ -64,7 +63,7 @@ other module where products are available).
 On the product form, under Inventory, click on "Make To Order".
 
 .. image:: strategies/strategies03.png
-    :align: center
+   :align: center
 
 Choice between the two options
 ------------------------------

@@ -71,7 +71,7 @@ save.
    `Automate the Deferred Revenues`_).
 
 Change the account of a posted journal item
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To do so, open your Sales Journal by going to
 :menuselection:`Accounting --> Accounting --> Sales`, select the journal item you

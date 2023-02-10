@@ -13,7 +13,7 @@ cash basis method, the tax you have to pay to the administration is due
 for the 2nd quarter.
 
 How to configure cash basis taxes ?
-------------------------------------
+-----------------------------------
 
 You first have to activate the setting in
 :menuselection:`Accounting --> Configuration --> Settings --> Allow Tax Cash Basis`.
@@ -42,7 +42,7 @@ to post the base tax amount for an accurate tax report.
     :align: center
 
 What is the impact of cash basis taxes in my accounting ?
-----------------------------------------------------------
+---------------------------------------------------------
 
 Let’s take an example. You make a sale of $100 with a 15% cash basis
 tax. When you validate the customer invoice, the following entry is

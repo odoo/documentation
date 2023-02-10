@@ -1,6 +1,6 @@
-=======================================
+===================================
 How to get paid with wire transfers
-=======================================
+===================================
 
 **Wire Transfer** is the default payment method available.
 The aim is providing your customers with your bank details
@@ -8,19 +8,18 @@ so they can pay on their own.
 This is very easy to start with but slow and inefficient process-wise.
 Opt for payment acquirers as soon as you can!
 
-
 How to provide customers with payment instructions
 ==================================================
+
 Put your payment instructions in the **Thanks Message** of your payment method.
 
 .. image:: wire_transfer/payment_instructions.png
-  :align: center
+   :align: center
 
 They will appear to the customers when they place an order.
 
 .. image:: wire_transfer/payment_customer_instructions.png
-  :align: center
-
+   :align: center
 
 How to manage an order once you get paid
 ========================================
@@ -30,7 +29,6 @@ intermediary stage **Quotation Sent** (i.e. unpaid order).
 When you get paid,
 you confirm the order manually to launch the delivery.
 
-
 How to create other manual payment methods
 ==========================================
 
@@ -39,4 +37,4 @@ payment methods like paying by check.
 To do so, just rename *Wire Transfer* or duplicate it.
 
 .. image:: wire_transfer/payment_check.png
-  :align: center
+   :align: center

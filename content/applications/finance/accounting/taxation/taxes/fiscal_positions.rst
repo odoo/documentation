@@ -81,7 +81,7 @@ Application
 .. _fiscal_positions/partner:
 
 Assign a Fiscal Position to a partner
---------------------------------------
+-------------------------------------
 
 You can manually define which Fiscal Position must be used by default for a specific partner.
 

@@ -1,9 +1,9 @@
 
 .. _odoosh-advanced-frequent_technical_questions:
 
-==================================
+============================
 Frequent Technical Questions
-==================================
+============================
 
 "Scheduled actions do not run at the exact time they were expected"
 -------------------------------------------------------------------
