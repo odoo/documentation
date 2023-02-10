@@ -51,7 +51,7 @@ Odoo supports, among others, the following formats.
      - For Australian/New Zealand companies
 
 .. seealso::
-   - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
+   :ref:`fiscal_localizations/packages`
 
 .. _e-invoicing/configuration:
 
