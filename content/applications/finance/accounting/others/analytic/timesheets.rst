@@ -59,7 +59,7 @@ Repeat the operation to create the Cedric Digory employee. Don't forget
 to specify its related user and **Timesheet Costs**.
 
 Issue a Sales Order
---------------------
+-------------------
 
 We created two employees called Harry Potter and Cedric Diggory in the
 **Employee** app. Both of them will work on a consultancy contract for our
@@ -148,7 +148,7 @@ We can thus filter this information from the **Analytic Entries**.
 Enter the **Accounting** app, and click on :menuselection:`Adviser --> Analytic Entries`.
 In this menu we have several options to analyse the human resource cost.
 
-1. We filter on the **Analytic account** so we can see the cost and revenues
+#. We filter on the **Analytic account** so we can see the cost and revenues
    of the project. Add a custom **Filter** where the **Analytic Account**
    contains the **Sales Order** number.
 
@@ -161,7 +161,7 @@ In this menu we have several options to analyse the human resource cost.
    .. image:: timesheets/timesheets09.png
      :align: center
 
-2. We can group the different analytical accounts together and check
+#. We can group the different analytical accounts together and check
    their respective revenues. Simply group by **Analytic account** and
    select the **Graph view** to have a clear overview.
 
