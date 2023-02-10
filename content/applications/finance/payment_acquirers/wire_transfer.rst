@@ -1,6 +1,6 @@
-=======================================
+===================================
 How to get paid with wire transfers
-=======================================
+===================================
 
 **Wire Transfer** is the default payment method available. The aim is providing your customers with
 your bank details so they can pay on their own. This is very easy to start with but slow and

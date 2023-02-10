@@ -1,9 +1,9 @@
 
 .. _odoosh-gettingstarted-online-editor:
 
-==================================
+=============
 Online Editor
-==================================
+=============
 
 Overview
 ========
@@ -120,24 +120,23 @@ In this last command,
 .. image:: online-editor/interface-editor-commit-push.png
    :align: center
 
-.. Note::
-  The SSH Github remote is not used because your SSH private key
-  is not hosted in your build containers (for obvious security concerns)
-  nor forwarded through an SSH Agent (as you access this editor through a web browser)
-  and you therefore cannot authenticate yourself to Github using SSH.
-  You have to use the HTTPS remote of your Github repository to push your changes,
-  which is added automatically named as *https* in your Git remotes.
-  You will be prompted to enter your Github username and password.
-  If you activated the two-factor authentication on Github,
-  you can create a
-  `personal access token <https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>`_
-  and use it as password. Granting the ``repo`` permission suffices.
+.. note::
+   The SSH Github remote is not used because your SSH private key
+   is not hosted in your build containers (for obvious security concerns)
+   nor forwarded through an SSH Agent (as you access this editor through a web browser)
+   and you therefore cannot authenticate yourself to Github using SSH.
+   You have to use the HTTPS remote of your Github repository to push your changes,
+   which is added automatically named as *https* in your Git remotes.
+   You will be prompted to enter your Github username and password.
+   If you activated the two-factor authentication on Github,
+   you can create a `personal access token
+   <https://help.github.com/articles/creating-a-personal-access-token-for-the-command-line/>`_
+   and use it as password. Granting the ``repo`` permission suffices.
 
-
-.. Note::
-  The Git source folder *~/src/user* is not checked out on a branch but rather on a detached revision:
-  This is because builds work on specific revisions rather than branches.
-  In other words, this means you can have multiple builds on the same branch, but on different revisions.
+.. note::
+   The Git source folder *~/src/user* is not checked out on a branch but rather on a detached revision:
+   This is because builds work on specific revisions rather than branches.
+   In other words, this means you can have multiple builds on the same branch, but on different revisions.
 
 Once your changes are pushed,
 according to your :ref:`branch push behavior <odoosh-gettingstarted-branches-tabs-settings>`,
@@ -166,12 +165,11 @@ You can also open an Odoo Shell console to play around
 with the Odoo registry and model methods of your database. You can also directly read or write
 on your records.
 
-.. Warning::
-  In an Odoo Console, transactions are automatically committed.
-  This means, for instance, that changes in records are applied effectively in the database.
-  If you change the name of a user, the name of the user is changed in your database
-  as well.
-  You therefore should use Odoo consoles carefully on production databases.
+.. warning::
+   In an Odoo Console, transactions are automatically committed.
+   This means, for instance, that changes in records are applied effectively in the database.
+   If you change the name of a user, the name of the user is changed in your database as well.
+   You therefore should use Odoo consoles carefully on production databases.
 
 You can use *env* to invoke models of your database registry, e.g. :code:`env['res.users']`.
 
@@ -196,4 +194,4 @@ You can also use
 to display graphs.
 
 .. image:: online-editor/interface-editor-console-odoo-graph.png
-  :align: center
+   :align: center
