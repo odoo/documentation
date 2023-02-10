@@ -18,7 +18,7 @@ localization:
      - Description
    * - :guilabel:`Indian - Accounting`
      - `l10n_in`
-     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
    * - :guilabel:`Indian E-invoicing`
      - `l10n_in_edi`
      - :ref:`Indian e-invoicing integration <india/e-invoicing>`

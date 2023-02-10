@@ -28,9 +28,9 @@ localization:
      - Description
    * - :guilabel:`Argentina - Accounting`
      - `l10n_ar`
-     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`, which
-       represents the minimal configuration to operate in Argentina under the :abbr:`AFIP
-       (Administración Federal de Ingresos Públicos)` regulations and guidelines.
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`, which represents
+       the minimal configuration to operate in Argentina under the :abbr:`AFIP (Administración
+       Federal de Ingresos Públicos)` regulations and guidelines.
    * - :guilabel:`Argentinean Accounting Reports`
      - `l10n_ar_reports`
      - VAT Book report and VAT summary report.
@@ -562,9 +562,9 @@ Troubleshooting and auditing
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For auditing and troubleshooting purposes, it is possible to obtain detailed information of an
-invoice number that has been previously sent to the AFIP. To retrieve this information, go into
-:doc:`Developer Mode <../../../../general/developer_mode>`, then go to the
-:menuselection:`Accounting` menu and click on the button :guilabel:`Consult Invoice` button in AFIP.
+invoice number that has been previously sent to the AFIP. To retrieve this information, activate the
+:ref:`developer mode <developer-mode>`, then go to the :menuselection:`Accounting` menu and click on
+the button :guilabel:`Consult Invoice` button in AFIP.
 
 .. image:: argentina/consult-invoice-in-afip.png
    :align: center
