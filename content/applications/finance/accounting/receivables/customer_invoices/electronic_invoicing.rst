@@ -39,7 +39,7 @@ Odoo supports, among others, the following formats.
      - For Spanish companies
 
 .. seealso::
-   - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
+   :ref:`fiscal_localizations/packages`
 
 .. _e-invoicing/configuration:
 

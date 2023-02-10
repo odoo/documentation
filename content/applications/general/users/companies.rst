@@ -89,8 +89,7 @@ First, make sure each one of your companies is properly set in relation to:
 - :doc:`Taxes <../../finance/accounting/taxation/taxes/default_taxes>`
 - :doc:`Fiscal Positions <../../finance/accounting/taxation/taxes/fiscal_positions>`
 - :doc:`Journals <../../finance/accounting/bank/setup/bank_accounts>`
-- :doc:`Fiscal Localizations
-  <../../finance/accounting/fiscal_localizations/overview/fiscal_localization_packages>`
+- :doc:`Fiscal Localizations <../../finance/fiscal_localizations>`
 - :doc:`Pricelists <../../sales/sales/products_prices/prices/pricing>`
 
 Now, activate the *Inter-Company Transactions* option under *Settings*. With the respective company

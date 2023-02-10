@@ -20,8 +20,8 @@ They can be applied in various ways:
 - :ref:`assigned to a partner, on its contact form <fiscal_positions/transaction>`
 
 .. note::
-   A few Fiscal Positions are already preconfigured on your database, as part of your :doc:`Fiscal
-   Localization Package <../../fiscal_localizations/overview/fiscal_localization_packages>`.
+   A few Fiscal Positions are already preconfigured on your database, as part of your :ref:`fiscal
+   localization package <fiscal_localizations/packages>`.
 
 Configuration
 =============

@@ -40,7 +40,7 @@ Point of Sale in Germany: Technical Security System
 
 The **Kassensicherungsverordnung** (The Act on Protection against Manipulation of Digital Records)
 requires that electronic record-keeping systems - including the :doc:`point of sale
-<../../../../sales/point_of_sale>` systems - must be equipped with a **Technical Security System**
+</applications/sales/point_of_sale>` systems - must be equipped with a **Technical Security System**
 (also called **TSS** or **TSE**).
 
 Odoo offers a service that is compliant with the help of `fiskaly <https://fiskaly.com>`_, a
