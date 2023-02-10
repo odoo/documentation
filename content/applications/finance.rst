@@ -12,3 +12,4 @@ Finance
     finance/documents
     finance/sign
     finance/payment_providers
+    finance/fiscal_localizations
