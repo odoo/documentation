@@ -48,7 +48,7 @@ Post an expense to the right account
 ------------------------------------
 
 Select the account on a draft bill
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 On a draft bill, select the right account for all the products of which the expenses must be
 deferred.
@@ -72,7 +72,7 @@ save.
    `Automate the Deferred Expenses`_).
 
 Change the account of a posted journal item
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To do so, open your Purchases Journal by going to :menuselection:`Accounting --> Accounting -->
 Purchases`, select the journal item you want to modify, click on the account, and select the right
