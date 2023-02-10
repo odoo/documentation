@@ -49,7 +49,7 @@ Odoo supports, among others, the following formats.
      - For Norwegian companies
 
 .. seealso::
-   - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
+   :ref:`fiscal_localizations/packages`
 
 .. _e-invoicing/configuration:
 
