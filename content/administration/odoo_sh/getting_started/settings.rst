@@ -1,7 +1,6 @@
-
-==================================
+========
 Settings
-==================================
+========
 
 Overview
 ========
@@ -21,8 +20,8 @@ The name of your project.
 
 This defines the address that will be used to access your production database.
 
-Addresses of your staging and development builds are derived from this name and assigned automatically.
-However, when you change your project name, only future builds will use the new name.
+Addresses of your staging and development builds are derived from this name and assigned
+automatically. However, when you change your project name, only future builds will use the new name.
 
 .. _odoosh-gettingstarted-settings-collaborators:
 
@@ -39,10 +38,10 @@ There are two levels of users:
 * Admin: has access to all features of Odoo.sh.
 * User: does not have access to the project settings nor to the production and staging databases.
 
-The user group is meant for developers who can make modifications in your code but are not allowed to access the
-production data.
-Users of this group cannot connect to the production and staging databases using the *1-click connect* feature,
-but they can of course use their regular account on these databases if they have one, using their regular credentials.
+The user group is meant for developers who can make modifications in your code but are not allowed
+to access the production data. Users of this group cannot connect to the production and staging
+databases using the *1-click connect* feature, but they can of course use their regular account on
+these databases if they have one, using their regular credentials.
 
 In addition, they cannot use the webshell nor have access to the server logs.
 
@@ -90,7 +89,8 @@ Allow public access to your development builds.
 .. image:: settings/interface-settings-public.png
    :align: center
 
-If activated, this option exposes the Builds page publicly, allowing visitors to connect to your development builds.
+If activated, this option exposes the Builds page publicly, allowing visitors to connect to your
+development builds.
 
 In addition, visitors have access to the logs, shell and mails of your development builds.
 
@@ -98,11 +98,11 @@ Production and staging builds are excluded, visitors can only see their status.
 
 .. _odoosh-gettingstarted-settings-modules-installation:
 
-
 Custom domains
 ==============
 
-To configure additional domains please refer to the corresponding branch's :ref:`settings tab <odoosh-gettingstarted-branches-tabs-settings>`.
+To configure additional domains please refer to the corresponding branch's :ref:`settings tab
+<odoosh-gettingstarted-branches-tabs-settings>`.
 
 .. _odoosh-gettingstarted-settings-submodules:
 
@@ -112,10 +112,10 @@ Submodules
 Configure the deploy keys for the private repositories you use
 as submodules in your branches to allow Odoo.sh to download them.
 
-.. Warning::
-  These settings are required for **private repositories** only.
-  If you are looking on how to set up your submodules,
-  instructions are available in the chapter :ref:`Submodules <odoosh-advanced-submodules>` of this documentation.
+.. warning::
+   These settings are required for **private repositories** only. If you are looking on how to set
+   up your submodules, instructions are available in the chapter :ref:`Submodules
+   <odoosh-advanced-submodules>` of this documentation.
 
 .. image:: settings/interface-settings-submodules.png
    :align: center
@@ -130,7 +130,8 @@ To configure the deploy key for a private repository, proceed as follows:
 * in the input, paste the SSH URL of your private sub-repository and click on *Add*,
 
   * e.g. *git@github.com:USERNAME/REPOSITORY.git*
-  * it can be another Git server than Github, such as Bitbucket, Gitlab or even your own self-hosted server
+  * it can be another Git server than Github, such as Bitbucket, Gitlab or even your own self-hosted
+    server
 
 * copy the public key,
 
@@ -157,8 +158,9 @@ Storage size is computed as follows:
 
 * the size of the disk files available in your container: database filestore, sessions storage directory...
 
-.. Warning::
-  In case you want to analyze disk usage, you can run the tool `ncdu <https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell.
+.. warning::
+   In case you want to analyze disk usage, you can run the tool `ncdu
+   <https://dev.yorhel.nl/ncdu/man>`_ in your Web Shell.
 
 Should your production database size grow to exceed what's provisioned in your subscription, it
 will automatically be synchronized with it.
@@ -191,7 +193,8 @@ add more, it will automatically be synchronized with your subscription.
 Activation
 ==========
 
-Shows the status of the project's activation. You can change the project's activation code if needed.
+Shows the status of the project's activation. You can change the project's activation code if
+needed.
 
 .. image:: settings/interface-settings-activation.png
    :align: center
