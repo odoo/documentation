@@ -19,7 +19,7 @@ localization:
      - Description
    * - Italy - Accounting
      - `l10n_it`
-     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
    * - Italy - E-invoicing
      - `l10n_it_edi`
      - e-invoice implementation
@@ -102,7 +102,7 @@ XML file can be found in the **chatter** of the invoice.
    :alt: Electronic invoicing status (waiting for confirmation)
 
 .. seealso::
-   :doc:`../../receivables/customer_invoices/electronic_invoicing`
+   :doc:`../accounting/receivables/customer_invoices/electronic_invoicing`
 
 File processing authorization (Odoo)
 ------------------------------------
