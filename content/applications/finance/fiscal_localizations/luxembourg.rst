@@ -16,7 +16,7 @@ localization:
      - Description
    * - :guilabel:`Luxembourg - Accounting`
      - `l10n_lu`
-     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
    * - :guilabel:`Luxembourg - Accounting Reports`
      - `l10n_lu_reports`
      - Country-specific reports
@@ -35,8 +35,8 @@ localization:
 Standard Chart of Accounts - PCN 2020
 =====================================
 
-Odoo's :doc:`Fiscal Localization Package <../overview/fiscal_localization_packages>` for Luxembourg
-includes the current **Standard Chart of Accounts (PCN 2020)**, effective since January 2020.
+Odoo's :ref:`fiscal localization package <fiscal_localizations/packages>` for Luxembourg includes
+the current **Standard Chart of Accounts (PCN 2020)**, effective since January 2020.
 
 eCDF tax return
 ===============
@@ -47,7 +47,7 @@ To download it, go to :menuselection:`Accounting --> Report --> Audit Reports --
 click on :guilabel:`Export eCDF declaration`.
 
 .. seealso::
-   - :doc:`../../reporting/declarations/tax_returns`
+   - :doc:`../accounting/reporting/declarations/tax_returns`
    - `Platform for electronic gathering of financial data (eCDF) <http://www.ecdf.lu>`_
 
 Annual tax report

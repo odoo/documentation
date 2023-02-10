@@ -185,4 +185,4 @@ To do so, check the :guilabel:`Deprecated` box in the account's settings, and sa
    * :doc:`../../payables/supplier_bills/assets`
    * :doc:`../../payables/supplier_bills/deferred_expenses`
    * :doc:`../../receivables/customer_invoices/deferred_revenues`
-   * :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
+   * :doc:`../../../fiscal_localizations`
