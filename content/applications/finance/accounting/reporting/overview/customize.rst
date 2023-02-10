@@ -43,7 +43,7 @@ configured:
       Statement)
 
 Add lines in your custom reports
-=================================
+================================
 
 After you've created the report, you need to fill it with lines. They
 all need a **name**, a **code** (that is used to refer to the line), a
