@@ -19,8 +19,8 @@ Configuration
 =============
 
 **Default Taxes** are automatically set up according to the country selected at the creation of your
-database, or when you set up a :doc:`Fiscal Localization Package
-<../../fiscal_localizations/overview/fiscal_localization_packages>` for your company.
+database, or when you set up a :ref:`fiscal localization package <fiscal_localizations/packages>`
+for your company.
 
 To change your **Default Taxes**, go to :menuselection:`Accounting --> Configuration --> Settings
 --> Taxes --> Default Taxes`, select the appropriate taxes for your default **Sales Tax** and
@@ -37,4 +37,4 @@ To change your **Default Taxes**, go to :menuselection:`Accounting --> Configura
 
   - :doc:`taxes`
   - :doc:`fiscal_positions`
-  - :doc:`../../fiscal_localizations/overview/fiscal_localization_packages`
+  - :doc:`../../../fiscal_localizations`

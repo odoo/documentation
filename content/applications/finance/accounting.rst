@@ -29,4 +29,3 @@ accounts, smart matching suggestions, etc.
    accounting/taxation
    accounting/reporting
    accounting/others
-   accounting/fiscal_localizations

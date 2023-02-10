@@ -233,7 +233,7 @@ directly to its services and get the currency rate either automatically or manua
    :alt: Bank of Peru is displayed in Multicurrency Service option
 
 Please refer to the next section in our documentation for more information about
-:doc:`multicurrencies <../../others/multi_currency>`.
+:doc:`multicurrencies <../accounting/others/multi_currency>`.
 
 Configure Master data
 ---------------------
@@ -354,8 +354,8 @@ EDI Elements
 
 Once you have configured your master data, the invoices can be created from your sales order or
 manually. Additional to the basic invoice information described on :doc:`our page about the
-invoicing process <../../receivables/customer_invoices/overview>`, there are a couple of fields
-required as part of the Peru EDI:
+invoicing process <../accounting/receivables/customer_invoices/overview>`, there are a couple of
+fields required as part of the Peru EDI:
 
 - **Document type**: The default value is “Factura Electronica” but  you can manually change the
   document type if needed and select Boleta for example.
@@ -573,7 +573,7 @@ By default the Credit Note is set in the document type:
    :alt: Credit Note document type
 
 To finish the workflow please follow the instructions on :doc:`our page about Credit Notes
-<../../receivables/customer_invoices/credit_notes>`.
+<../accounting/receivables/customer_invoices/credit_notes>`.
 
 .. note::
    The EDI workflow for the Credit notes works in the same way as the invoices.
