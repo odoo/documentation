@@ -11,10 +11,9 @@ supports all kinds of uses and computations.
 Activate Sales Taxes from the List view
 =======================================
 
-As part of your :doc:`Fiscal Localization Package
-<../../fiscal_localizations/overview/fiscal_localization_packages>`, most of your country's sales
-taxes are already preconfigured on your database. However, only a few of them are activated by
-default, so that you can activate only the ones relevant for your business.
+As part of your :ref:`fiscal localization package <fiscal_localizations/packages>`, most of your
+country's sales taxes are already preconfigured on your database. However, only a few of them are
+activated by default, so that you can activate only the ones relevant for your business.
 
 To activate Sale Taxes, go to :menuselection:`Accounting --> Configuration --> Taxes` and use the
 *Activate* toggle button to activate or deactivate a tax.

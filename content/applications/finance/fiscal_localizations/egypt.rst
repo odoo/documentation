@@ -18,7 +18,7 @@ localization:
      - Description
    * - :guilabel:`Egypt - Accounting`
      - ``l10n_eg``
-     - Default :doc:`fiscal localization package <../overview/fiscal_localization_packages>`
+     - Default :ref:`fiscal localization package <fiscal_localizations/packages>`
    * - :guilabel:`Egyptian E-invoice Integration`
      - ``l10n_eg_edi_eta``
      - :ref:`Egyptian Tax Authority (ETA) e-invoicing integration <egypt/e-invoicing>`
@@ -122,7 +122,7 @@ Most of these codes are handled automatically by Odoo, provided that your :ref:`
 .. seealso::
    - `Egyptian eInvoicing & eReceipt SDK - Code Tables
      <https://sdk.preprod.invoicing.eta.gov.eg/codes/>`_
-   - :doc:`../../taxation/taxes/taxes`
+   - :doc:`../accounting/taxation/taxes/taxes`
 
 .. _egypt/e-invoicing-branches:
 
