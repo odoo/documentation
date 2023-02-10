@@ -27,7 +27,7 @@ Create the development branch
 =============================
 
 From Odoo.sh
--------------
+------------
 
 In the branches view:
 
@@ -43,19 +43,17 @@ In the branches view:
 .. |pic2| image:: first_module/firstmodule-development-fork.png
    :width: 45%
 
-
 Once the build created, you can access the editor and browse to the folder *~/src/user* to access
 to the code of your development branch.
 
 .. image:: first_module/firstmodule-development-editor.png
-  :align: center
+   :align: center
 
 .. image:: first_module/firstmodule-development-editor-interface.png
-  :align: center
+   :align: center
 
 From your computer
 ------------------
-
 
 Clone your Github repository on your computer:
 
@@ -71,7 +69,6 @@ Create a new branch:
 .. code-block:: bash
 
   $ git checkout -b feature-1 master
-
 
 Create the module structure
 ===========================
@@ -119,11 +116,11 @@ The below structure will be generated:
       ├── templates.xml
       └── views.xml
 
-.. Warning::
+.. warning::
 
-  Do not use special characters other than the underscore ( _ ) for your module name, not even an
-  hyphen ( - ). This name is used for the Python classes of your module, and having classes name
-  with special characters other than the underscore is not valid in Python.
+   Do not use special characters other than the underscore ( _ ) for your module name, not even an
+   hyphen ( - ). This name is used for the Python classes of your module, and having classes name
+   with special characters other than the underscore is not valid in Python.
 
 Uncomment the content of the files:
 
@@ -222,7 +219,6 @@ install.
 
 You can then play around with your module, create new records and test your features and buttons.
 
-
 Test with the production data
 =============================
 
@@ -237,12 +233,12 @@ You can either:
   title.
 
   .. image:: first_module/firstmodule-test-devtostaging.png
-    :align: center
+     :align: center
 
 * Merge it in an existing staging branch, by drag and dropping it onto the given staging branch.
 
   .. image:: first_module/firstmodule-test-devinstaging.png
-    :align: center
+     :align: center
 
 You can also use the :code:`git merge` command to merge your branches.
 
@@ -250,7 +246,7 @@ This will create a new staging build, which will duplicate the production databa
 using a server updated with your latest changes of your branch.
 
 .. image:: first_module/firstmodule-test-mergedinstaging.png
-  :align: center
+   :align: center
 
 Once the database ready, you can access it using the *Connect* button.
 
@@ -419,7 +415,7 @@ Or, from your computer terminal:
 The platform will then create a new build for the branch *feature-1*.
 
 .. image:: first_module/firstmodule-test-addachange-build.png
-  :align: center
+   :align: center
 
 Once you tested your changes, you can merge your changes in the production branch, for instance by
 drag-and-dropping the branch on the production branch in the Odoo.sh interface. As you increased the
