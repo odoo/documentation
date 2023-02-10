@@ -1,9 +1,9 @@
 
 .. _odoosh-advanced-submodules:
 
-==================================
+==========
 Submodules
-==================================
+==========
 
 Overview
 ========
@@ -64,7 +64,7 @@ On Github, you can get the repository URL with the *Clone or download* button of
 .. _odoosh-advanced-submodules-withgit:
 
 With Git (advanced)
----------------------
+-------------------
 
 In a terminal, in the folder where your Git repository is cloned,
 checkout the branch in which you want to add a submodule:
