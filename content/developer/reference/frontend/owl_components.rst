@@ -154,8 +154,12 @@ checkboxes or datepickers. This page explains how to use these generic component
      - a swiper component to perform actions on touch swipe
    * - :ref:`CheckBox <frontend/owl/checkbox>`
      - a simple checkbox component with a label next to it
+   * - :ref:`ColorList <frontend/owl/colorlist>`
+     - a list of colors to choose from
    * - :ref:`Dropdown <frontend/owl/dropdown>`
      - full-featured dropdown
+   * - :ref:`Notebook <frontend/owl/notebook>`
+     - a component to navigate between pages using tabs
    * - :ref:`Pager <frontend/pager>`
      - a small component to handle pagination
    * - :ref:`SelectMenu <frontend/select_menu>`
@@ -330,6 +334,85 @@ Props
     * - `disabled`
       - `boolean`
       - if true, the checkbox is disabled, otherwise it is enabled
+
+.. _frontend/owl/colorlist:
+
+ColorList
+---------
+
+Location
+~~~~~~~~
+
+`@web/core/colorlist/colorlist`
+
+Description
+~~~~~~~~~~~
+
+The ColorList let you choose a color from a predefined list. By default, the component displays the current
+selected color, and is not expandable until the `canToggle` props is present. Different props can change its
+behavior, to always expand the list, or make it act as a toggler once it is clicked, to display the list of
+available colors until a choice is selected.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `canToggle`
+      - `boolean`
+      - optional. Whether the colorlist can expand the list on click
+    * - `colors`
+      - `array`
+      - list of colors to display in the component. Each color has a unique `id`
+    * - `forceExpanded`
+      - `boolean`
+      - optional. If true, the list is always expanded
+    * - `isExpanded`
+      - `boolean`
+      - optional. If true, the list is expanded by default
+    * - `onColorSelected`
+      - `function`
+      - callback executed once a color is selected
+    * - `selectedColor`
+      - `number`
+      - optional. The color `id` that is selected
+
+Color `id`'s are the following:
+
+.. list-table::
+    :header-rows: 1
+
+    * - Id
+      - Color
+    * - `0`
+      - `No color`
+    * - `1`
+      - `Red`
+    * - `2`
+      - `Orange`
+    * - `3`
+      - `Yellow`
+    * - `4`
+      - `Light blue`
+    * - `5`
+      - `Dark purple`
+    * - `6`
+      - `Salmon pink`
+    * - `7`
+      - `Medium blue`
+    * - `8`
+      - `Dark blue`
+    * - `9`
+      - `Fuchsia`
+    * - `12`
+      - `Green`
+    * - `11`
+      - `Purple`
 
 .. _frontend/owl/dropdown:
 
@@ -606,6 +689,119 @@ In this example, we recursively call a template to display a tree-like structure
       </t>
     </Dropdown>
   </t>
+
+.. _frontend/owl/notebook:
+
+Notebook
+--------
+
+Location
+~~~~~~~~
+
+`@web/core/notebook/notebook`
+
+Description
+~~~~~~~~~~~
+
+The Notebook is made to display multiple pages in a tabbed interface. Tabs can be located
+at the top of the element to display horizontally, or at the left for a vertical layout.
+
+There are two ways to define your Notebook pages to instanciate, either by using `slot`'s,
+or by passing a dedicated `props`.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `anchors`
+      - `object`
+      - optional. Allow anchors navigation to elements inside tabs that are not visible.
+    * - `className`
+      - `string`
+      - optional. Classname set on the root of the component.
+    * - `defaultPage`
+      - `string`
+      - optional. Page `id` to display by default.
+    * - `orientation`
+      - `string`
+      - optional. Whether tabs direction is `horizontal` or `vertical`.
+    * - `onPageUpdate`
+      - `function`
+      - optional. Callback executed once the page has changed.
+    * - `pages`
+      - `array`
+      - optional. Contain the list of `page`'s to populate from a template.
+
+.. example::
+
+   The first approach is to set the pages in the slots of the component.
+
+   .. code-block:: xml
+
+    <Notebook orientation="'vertical'">
+      <t t-set-slot="page_1" title="'Page 1'" isVisible="true">
+        <h1>My First Page</h1>
+        <p>It's time to build Owl components. Did you read the documentation?</p>
+      </t>
+      <t t-set-slot="page_2" title="'2nd page'" isVisible="true">
+        <p>Wise owl's silent flight. Through the moonlit forest deep, guides my path to code</p>
+      </t>
+    </Notebook>
+
+   The other way to define your pages is by passing the props. This can be useful if some pages share
+   the same structure. Create first a component for each page template that you may use.
+
+   .. code-block:: javascript
+
+      import { Notebook } from "@web/core/notebook/notebook";
+
+      class MyTemplateComponent extends owl.Component {
+        static template = owl.tags.xml`
+          <h1 t-esc="props.title" />
+          <p t-esc="props.text" />
+        `;
+      }
+
+      class MyComponent extends owl.Component {
+        get pages() {
+          return [
+            {
+              Component: MyTemplateComponent,
+              title: "Page 1",
+              props: {
+                title: "My First Page",
+                text: "This page is not visible",
+              },
+            },
+            {
+              Component: MyTemplateComponent,
+              id: "page_2",
+              title: "Page 2",
+              props: {
+                title: "My second page",
+                text: "You're at the right place!",
+              },
+            },
+          ]
+        }
+      }
+      MyComponent.template = owl.tags.xml`
+        <Notebook defaultPage="'page_2'" pages="pages" />
+      `;
+
+  Both examples are shown here:
+
+  .. image:: owl_components/notebook.png
+     :width: 400 px
+     :alt: Examples with vertical and horizontal layout
+     :align: center
+
 
 .. _frontend/pager:
 
