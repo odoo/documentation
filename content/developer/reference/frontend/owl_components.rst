@@ -158,6 +158,8 @@ checkboxes or datepickers. This page explains how to use these generic component
      - full-featured dropdown
    * - :ref:`Pager <frontend/pager>`
      - a small component to handle pagination
+   * - :ref:`SelectMenu <frontend/select_menu>`
+     - a dropdown component to choose between different options
 
 .. _frontend/owl/actionswiper:
 
@@ -655,3 +657,140 @@ Props
     * - `withAccessKey`
       - `boolean`
       - Binds access key `p` on the previous page button and `n` on the next page one (`true` by default).
+
+.. _frontend/select_menu:
+
+SelectMenu
+----------
+
+Location
+~~~~~~~~
+
+`@web/core/select_menu/select_menu`
+
+Description
+~~~~~~~~~~~
+
+This component can be used when you want to do more than using the native `select` element. You can define your own option template, allowing to search
+between your options, or group them in subsections.
+
+.. note::
+    Prefer the native HTML `select` element, as it provides by default accessibility features, and has a better user interface on mobile devices.
+    This component is designed to be used for more complex use cases, to overcome limitations of the native element.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `choices`
+      - `array`
+      - optional. List of `choice`'s to display in the dropdown.
+    * - `class`
+      - `string`
+      - optional. Classname set on the root of the SelectMenu component.
+    * - `groups`
+      - `array`
+      - optional. List of `group`'s, containing `choices` to display in the dropdown.
+    * - `togglerClass`
+      - `string`
+      - optional. classname set on the toggler button.
+    * - `searchPlaceholder`
+      - `string`
+      - optional. Text displayed as the search box placeholder.
+    * - `value`
+      - `any`
+      - optional. Current selected value. It can be from any kind of type.
+    * - `onSelect`
+      - `function`
+      - optional. Callback executed when an option is chosen.
+
+The shape of a `choice` is the following:
+
+    - `value` is actual value of the choice. It is usually a technical string, but can be from `any` type.
+    - `label` is the displayed text associated with the option. This one is usually a more friendly and translated `string`.
+
+The shape of a `group` is the following:
+
+    - `choices` is the list of `choice`'s to display for this group.
+    - `label` is the displayed text associated with the group. This is a `string` displayed at the top of the group.
+
+.. example::
+
+   In the following example, the SelectMenu will display four choices. One of them is displayed on top of the options,
+   since no groups are associated with it, but the other ones are separated by the label of their group.
+
+   .. code-block:: javascript
+
+      import { SelectMenu } from "@web/core/select_menu/select_menu";
+
+      class MyComponent extends owl.Component {
+        get choices() {
+          return [
+              {
+                value: "value_1",
+                label: "First value"
+              }
+          ]
+        }
+        get groups() {
+          return [
+            {
+                label: "Group A",
+                choices: [
+                    {
+                      value: "value_2",
+                      label: "Second value"
+                    },
+                    {
+                      value: "value_3",
+                      label: "Third value"
+                    }
+                ]
+            },
+            {
+                label: "Group B",
+                choices: [
+                    {
+                      value: "value_4",
+                      label: "Fourth value"
+                    }
+                ]
+            }
+          ]
+        }
+      }
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+          choices="choices"
+          groups="groups"
+          value="'value_2'"
+        />
+      `;
+
+   You can also customize the appearance of the toggler and set a custom template for the choices, using the appropriate component `slot`'s.
+
+   .. code-block:: javascript
+
+      MyComponent.template = owl.tags.xml`
+        <SelectMenu
+          choices="choices"
+          groups="groups"
+          value="'value_2'"
+        >
+          Make a choice!
+          <t t-set-slot="choice" t-slot-scope="choice">
+            <span class="coolClass" t-esc="'👉 ' + choice.data.label + ' 👈'" />
+          </t>
+        </SelectMenu>
+      `;
+
+   .. image:: owl_components/select_menu.png
+      :width: 400 px
+      :alt: Example of SelectMenu usage and customization
+      :align: center
