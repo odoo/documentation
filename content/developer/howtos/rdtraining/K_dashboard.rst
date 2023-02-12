@@ -172,7 +172,7 @@ Adding pie charts to dashboards is a piece of cake using the `<widget>` element.
         </group>
     </dashboard>
 
-In this example, we indicate that we're using the `pie_chart` widget with the `name` attribute,
+In this example, we indicate that we're using the `pie_chart` widget with the `name` attribute and
 the ``title`` for the pie chart, and that we're grouping it by property type.
 
 .. exercise:: Add some pie charts.
@@ -194,7 +194,7 @@ Similar to how we can use the list view within the form view (we saw this automa
 One2many relationships in :ref:`howto/rdtraining/08_relations`), we can add other views within our
 dashboard view. The most commonly added are the pivot and graph views, but the cohort view is
 also an option. These views are covered in more depth in :ref:`howto/rdtraining/H_adv_views`. For
-this topic you are only required to know their names. A dashboard with only subviews is:
+this topic, you are only required to know their names. A dashboard with only subviews is:
 
 .. code-block:: xml
 
@@ -203,10 +203,10 @@ this topic you are only required to know their names. A dashboard with only subv
         <view type="pivot"/>
     </dashboard>
 
-The `ref` attribute can be added to `<view>` elements to use a specific xml id for that view. If
-no xml id is provided for a graph or pivot view then the default view will be used.
-The cohort view will not work in the dashboard without a specific xml id. If you have already
-created some of these views then you are welcome to add them to your dashboard! Sample graph and
+The `ref` attribute can be added to `<view>` elements to use a specific XML id for that view. If
+no XML id is provided for a graph or pivot view, then the default view will be used.
+The cohort view will not work in the dashboard without a specific XML id. If you have already
+created some of these views, then you are welcome to add them to your dashboard! Sample graph and
 pivot views are included in the
 `solution code <https://github.com/odoo/technical-training-solutions/blob/{CURRENT_MAJOR_BRANCH}-K_dashboard/estate/views/estate_property_views.xml#L169-L191>`__
 that you are welcome to use as well.
@@ -247,7 +247,7 @@ model clean of unnecessary fields.
 Model
 -----
 We will start with the more difficult part: our special report model. This file starts the same as
-any other model except that we add 2 attributes ``_auto`` and ``_rec_name``::
+any other model, except that we add 2 attributes ``_auto`` and ``_rec_name``::
 
   from odoo import fields, models, tools
 
@@ -258,20 +258,20 @@ any other model except that we add 2 attributes ``_auto`` and ``_rec_name``::
       _rec_name = 'id'
       _auto = False
 
-``_auto = False`` indicates that we do not want to store the model in the database and we will
+``_auto = False`` indicates that we do not want to store the model in the database, and we will
 create a custom table by overriding the ``BaseModel.init()`` method. ``_rec_name`` indicates
 which of the model's fields represents a record's name (i.e. the name that will be used in the
-navigation breadcrumb when opening a record's form view). In this case I left it as 'id' because
+navigation breadcrumb when opening a record's form view). In this case, I left it as 'id' because
 our property offers don't have a name. We will need the `tools` import later (i.e.
-``odoo/odoo/tools``, which is full of all sort of useful helper methods you will probably use in
-the future). Note that it is standard to include ``report`` in the model name.
+``odoo/odoo/tools``, which is full of all sorts of useful helper methods you will probably use in
+the future). Note that it is standard to include ``report`` in the model's name.
 
-Remember your new model will need to be added to your security file like you learned in
+Remember, your new model will need to be added to your security file, as you learned in
 :ref:`howto/rdtraining/05_securityintro`!
 
 Then we define the fields we need for our dashboard the same way as any other model (like you
 learned in :ref:`howto/rdtraining/04_basicmodel`), except that every field is
-``readonly=True``. After all, our model is for readonly purposes only.
+``readonly=True``. After all, our model is for read-only purposes only.
 
 Now we override the ``BaseModel.init()`` method mentioned earlier::
 
@@ -288,8 +288,8 @@ We use ``tools.drop_view_if_exists`` to ensure that we don't create a conflictin
 execute the SQL query. It is standard to separate the different parts of the query to
 allow for easier model extension. Exactly how the query is split up across methods is not
 standardized, but you will often see at minimum ``_select`` and ``_from`` methods [or something
-similar] and of course all of these methods will return strings. The columns from the SELECT
-will populate our model's fields so ensure that your column names match your field names
+similar], and of course all these methods will return strings. The columns from the SELECT
+will populate our model's fields, so ensure that your column names match your field names
 or use alias names that match.
 
 .. exercise:: Create report model.
@@ -316,10 +316,10 @@ or use alias names that match.
 
 View
 ----
-Now that we have our model, we can make its dashboard view. There is no difference to how its made
+Now that we have our model, we can make its dashboard view. There is no difference in how it's made,
 except that its file is located in the ``report`` folder. Since it is a new model not linked to
-any other model, we will also have to add a new menuitem to view our dashboard. Typically SQL views
-are added under a first level menu called ``Reporting`` (because it's a report, surprise!). Do you
+any other model, we will also have to add a new menuitem to view our dashboard. Typically, SQL views
+are added under a first-level menu called ``Reporting`` (because it's a report, surprise!). Do you
 remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_firstui` again.
 
 .. exercise:: Create report view.
@@ -332,12 +332,12 @@ remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_fi
 
 Extra Tips
 ----------
-**Tip 1** A common mistake in SQL views is to not take into account the duplication of certain data
-due to table JOINs. For example, in our **Goal** we have a pie chart of the offers' property types.
+**Tip 1** A common mistake in SQL views is not considering the duplication of certain data
+due to table JOINs. For example, in our **Goal**, we have a pie chart of the offers' property types.
 We may be tempted to add a similar pie chart with a domain to only include canceled properties,
-so we think we are only counting the number of canceled properties by property type. In reality we
-are still looking at all the offers per property so any property with more than 1 offer will be
-counted per offer. This example is easily double checked by clicking on the pie chart to see its
+so we think we are only counting the number of canceled properties by property type. In reality, we
+are still looking at all the offers per property, so any property with more than 1 offer will be
+counted per offer. This example is easily double-checked by clicking on the pie chart to see its
 list view:
 
     .. image:: K_dashboard/report_list_detail.png
@@ -346,9 +346,9 @@ list view:
 
 But for cases such as average aggregations or using a subview such as the pivot view, it is easy to
 miss this mistake. It is also easy to miss this mistake when you have insufficient test data.
-In order to add a number of properties canceled by property type pie chart to this
+To add a number of properties canceled by property type pie chart to this
 report, we would either have to do a hack (too advanced for this tutorial) or simply exclude it
 from this report.
 
 **Tip 2** If you have a field that you do not want as a measure (i.e. in your pivot or
-graph views), then you can add ``store=False`` to it and it will not show.
+graph views), then you can add ``store=False`` to it, and it will not show.
