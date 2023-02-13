@@ -516,6 +516,7 @@ security-related topics:
 
 Blocking Brute Force Attacks
 ----------------------------
+
 For internet-facing deployments, brute force attacks on user passwords are very common, and this
 threat should not be neglected for Odoo servers. Odoo emits a log entry whenever a login attempt
 is performed, and reports the result: success or failure, along with the target login and source IP.

@@ -225,6 +225,7 @@ properly.
 
 Bypassing the ORM
 -----------------
+
 You should never use the database cursor directly when the ORM can do the same
 thing! By doing so you are bypassing all the ORM features, possibly the
 automated behaviours like translations, invalidation of fields, ``active``,
@@ -250,6 +251,7 @@ less secure.
 
 SQL injections
 ~~~~~~~~~~~~~~
+
 Care must be taken not to introduce SQL injections vulnerabilities when using
 manual SQL queries. The vulnerability is present when user input is either
 incorrectly filtered or badly quoted, allowing an attacker to introduce
@@ -420,6 +422,7 @@ likely it is to break things.
 
 Evaluating content
 ------------------
+
 Some may want to ``eval`` to parse user provided content. Using ``eval`` should
 be avoided at all cost. A safer, sandboxed, method :class:`~odoo.tools.safe_eval`
 can be used instead but still gives tremendous capabilities to the user running

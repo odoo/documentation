@@ -534,9 +534,8 @@ Advance Payments
 #. Reconcile the Credit note with the final invoice.
 #. The remaining balance on the final invoice should be paid with a regular payment transaction.
 
-
 Detraction Invoices
-********************
+*******************
 
 When creating invoices that is subject to Detractions, take into account the next considerations:
 
@@ -579,9 +578,8 @@ To finish the workflow please follow the instructions on :doc:`our page about Cr
 .. note::
    The EDI workflow for the Credit notes works in the same way as the invoices.
 
-
 Debit Notes
-------------
+-----------
 
 As part of the Peruvian localization, besides creating credit notes from an existing document
 you can also create debit Notes. For this just use the button “Add Debit Note”.

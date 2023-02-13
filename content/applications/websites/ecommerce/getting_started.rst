@@ -1,8 +1,8 @@
 :nosearch:
 
-=================
+===========
 Get started
-=================
+===========
 
 .. toctree::
    :titlesonly:

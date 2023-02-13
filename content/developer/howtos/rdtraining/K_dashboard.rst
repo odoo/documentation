@@ -104,6 +104,7 @@ these options. A full example to reference while doing the exercises in this sec
 
 Data
 ----
+
 To fully enjoy our dashboard view, we will need good test data to populate it. Test data will
 allow us to check that the resulting look and statistics are correct. It is a good idea to test
 with data that will cover most or all of your expected use cases, but is also easy to verify with
@@ -128,6 +129,7 @@ data after you write your dashboard code and then test that your view is working
 
 Aggregations
 ------------
+
 Building a dashboard view is very similar to what you have previously done in
 :ref:`howto/rdtraining/07_basicviews`. For the dashboard view, we use the `dashboard` root element
 and choose from its possible tags (see all the possibilities and their attributes in the
@@ -162,6 +164,7 @@ covered in :ref:`howto/rdtraining/06_firstui`). Now let's make some dashboards!
 
 Pie Charts
 ----------
+
 Adding pie charts to dashboards is a piece of cake using the `<widget>` element. An example is:
 
 .. code-block:: xml
@@ -190,6 +193,7 @@ the ``title`` for the pie chart, and that we're grouping it by property type.
 
 Subviews
 --------
+
 Similar to how we can use the list view within the form view (we saw this automatically happen for
 One2many relationships in :ref:`howto/rdtraining/08_relations`), we can add other views within our
 dashboard view. The most commonly added are the pivot and graph views, but the cohort view is
@@ -246,6 +250,7 @@ model clean of unnecessary fields.
 
 Model
 -----
+
 We will start with the more difficult part: our special report model. This file starts the same as
 any other model, except that we add 2 attributes ``_auto`` and ``_rec_name``::
 
@@ -316,6 +321,7 @@ or use alias names that match.
 
 View
 ----
+
 Now that we have our model, we can make its dashboard view. There is no difference in how it's made,
 except that its file is located in the ``report`` folder. Since it is a new model not linked to
 any other model, we will also have to add a new menuitem to view our dashboard. Typically, SQL views
@@ -332,6 +338,7 @@ remember how to add a ``menuitem``? If not, revisit :ref:`howto/rdtraining/06_fi
 
 Extra Tips
 ----------
+
 **Tip 1** A common mistake in SQL views is not considering the duplication of certain data
 due to table JOINs. For example, in our **Goal**, we have a pie chart of the offers' property types.
 We may be tempted to add a similar pie chart with a domain to only include canceled properties,

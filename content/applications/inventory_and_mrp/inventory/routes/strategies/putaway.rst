@@ -12,7 +12,7 @@ products are not stored close to each other because of a potential chemical reac
 putaway rules intervene, to avoid storing products wrongly.
 
 Configuration
-==============
+=============
 
 In the *Inventory* app, go to :menuselection:`Configuration --> Settings` and activate the
 *Multi-Step Routes*. By doing so, the *Storage Locations* will be automatically activated.
@@ -21,7 +21,7 @@ In the *Inventory* app, go to :menuselection:`Configuration --> Settings` and ac
    :align: center
 
 Setting up a Putaway Rule
-==========================
+=========================
 
 In some cases, like for a retail shop storing vegetables and fruits, we have to store products in
 different locations to maintain product quality.

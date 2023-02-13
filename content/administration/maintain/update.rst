@@ -104,6 +104,7 @@ and you're all set.
 
 Source Install (Tarball)
 ------------------------
+
 If you have originally installed Odoo with the "tarball" version (source code archive), you have
 to replace the installation directory with a newer version. First download the latest tarball
 from Odoo.com. They are updated daily and include the latest security fixes (see step #1)
@@ -123,6 +124,7 @@ Finally, restart the Odoo service or reboot the machine, and you are all set.
 
 Source Install (Github)
 -----------------------
+
 If you have originally installed Odoo with a full Github clone of the official repositories, the
 update procedure requires you to pull the latest source code via git.
 Change into the directory for each repository (the main Odoo repository, and the Enterprise

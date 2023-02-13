@@ -7,7 +7,7 @@ track trends, identify areas for improvement, manage employees’ workloads and,
 meet your customer’s expectations.
 
 Cases
-~~~~~
+=====
 
 Some examples of the reports Odoo Helpdesk can generate include:
 
@@ -45,7 +45,7 @@ customers not only expect fast responses but they also want their issues to be h
          Odoo Helpdesk
 
 Save filters
-~~~~~~~~~~~~
+============
 
 Save the filters you use the most and avoid having to reconstruct them every time they are
 needed. To do so, set the groups, filters, and measures needed. Then, go to *Favorites*.

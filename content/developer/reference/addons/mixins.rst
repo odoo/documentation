@@ -20,7 +20,7 @@ Messaging integration
 ---------------------
 
 Basic messaging system
-''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~
 
 Integrating messaging features to your model is extremely easy. Simply inheriting
 the ``mail.thread`` model and adding the messaging fields (and their appropriate
@@ -192,9 +192,8 @@ a date or an e-mail address, add CC's addresses as followers, etc.).
     :return: True
     :rtype: bool
 
-
 Logging changes
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 The ``mail`` module adds a powerful tracking system on fields, allowing you
 to log changes to specific fields in the record's chatter. To add tracking
@@ -221,9 +220,8 @@ to a field, simple set the tracking attribute to True.
     well to give more context about the notification (even if the name did not
     change).
 
-
 Subtypes
-''''''''
+~~~~~~~~
 
 Subtypes give you more granular control over messages. Subtypes act as a classification
 system for notifications, allowing subscribers to a document to customize the
@@ -318,9 +316,8 @@ can override the ``_track_subtype()`` function:
                     return self.env.ref('my_module.mt_state_change')
                 return super(BusinessTrip, self)._track_subtype(init_values)
 
-
 Customizing notifications
-'''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When sending notifications to followers, it can be quite useful to add buttons in
 the template to allow quick actions directly from the e-mail. Even a simple button
@@ -469,7 +466,7 @@ The urls in the actions list can be generated automatically by calling the
     that can sometimes be boring, I choose the former instead of the latter.
 
 Overriding defaults
-'''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~
 
 There are several ways you can customize the behaviour of ``mail.thread`` models,
 including (but not limited to):
@@ -510,7 +507,7 @@ the outside, allowing users or customers to quickly create records in your
 database without needing to connect to Odoo directly.
 
 Aliases vs. Incoming Mail Gateway
-'''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Some people use the Incoming Mail Gateway for this same purpose. You still need
 a correctly configured mail gateway to use aliases, however a single
@@ -531,7 +528,7 @@ Aliases have several advantages over Mail Gateways:
 
 
 Alias support integration
-'''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Aliases are usually configured on a parent model which will then create specific
 record when contacted by e-mail. For example, Project have aliases to create tasks
@@ -977,7 +974,7 @@ The rating mixin allows sending email to ask for customer rating, automatic
 transitioning in a kanban processes and aggregating statistics on your ratings.
 
 Adding rating on your model
-'''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 To add rating support, simply inherit the ``rating.mixin`` model:
 
@@ -1010,7 +1007,7 @@ The behaviour of the mixin adapts to your model:
   ``mail.thread``)
 
 Send rating requests by e-mail
-''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you wish to send emails to request a rating, simply generate an e-mail with
 links to the rating object. A very basic email template could look like this:

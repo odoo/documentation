@@ -1,11 +1,10 @@
-
 .. highlight:: javascript
 
 .. default-domain:: js
 
-=====================
+====================
 Javascript Reference
-=====================
+====================
 
 This document presents the Odoo Javascript framework. This
 framework is not a large application in term of lines of code, but it is quite
@@ -15,7 +14,7 @@ records in the database.  It is even possible to use the web client to modify
 the interface of the web client.
 
 Overview
-=========
+========
 
 The Javascript framework is designed to work with three main use cases:
 
@@ -53,7 +52,7 @@ action manager) actually creates and destroys many sub components. The state is
 highly dynamic, and each widget could be destroyed at any time.
 
 Overview of web client JS code
--------------------------------------
+------------------------------
 
 Here, we give a very quick overview on the web client code, in
 the *web/static/src/js* addon. Note that it is deliberately not exhaustive.
@@ -133,6 +132,7 @@ them once.
 
 Main bundles
 ------------
+
 When the Odoo server is started, it checks the timestamp of each file in a bundle,
 and if necessary, will create/recreate the corresponding bundles.
 
@@ -326,10 +326,8 @@ If an error happens, it will be logged (in debug mode) in the console:
 * ``Non loaded modules``:
   Modules who depend on a missing or a failed module
 
-
-
 Asynchronous modules
----------------------
+--------------------
 
 It can happen that a module needs to perform some work before it is ready.  For
 example, it could do a rpc to load some data.  In that case, the module can
@@ -351,7 +349,7 @@ wait for the promise to complete before registering the module.
 
 
 Best practices
-----------------
+--------------
 
 - remember the convention for a module name: *addon name* suffixed with *module
   name*.
@@ -367,7 +365,6 @@ Best practices
   executed when the DOM is ready.
 - try to avoid defining more than one module in one file.  It may be convenient
   in the short term, but this is actually harder to maintain.
-
 
 Class System
 ============
@@ -417,7 +414,6 @@ framework will secretly rebind a special method: *_super* to the currently
 called method.  This allows us to use *this._super* whenever we need to call a
 parent method.
 
-
 .. code-block:: javascript
 
     var Animal = require('web.Animal');
@@ -461,7 +457,6 @@ of them in the new class.
 In this example, the *Hamster* class is a subclass of Animal, but it also mix
 the DanceMixin in.
 
-
 Patching an existing class
 --------------------------
 
@@ -485,7 +480,6 @@ This is obviously a dangerous operation and should be done with care.  But with
 the way Odoo is structured, it is sometimes necessary in one addon to modify
 the behavior of a widget/class defined in another addon.  Note that it will
 modify all instances of the class, even if they have already been created.
-
 
 Widgets
 =======
@@ -736,7 +730,6 @@ Widget API
     :param Element element: a DOM element or jQuery object to set as
                             the widget's DOM root
 
-
 Inserting a widget in the DOM
 -----------------------------
 
@@ -770,7 +763,7 @@ and are charged with three tasks:
 * starting the widget, and returning the result of starting it
 
 Widget Guidelines
-----------------------
+-----------------
 
 * Identifiers (``id`` attribute) should be avoided. In generic applications
   and modules, ``id`` limits the re-usability of components and tends to make
@@ -878,7 +871,6 @@ in order to make the web client slightly lighter.  In that case, we can use the
 With this, the *Counter* widget will load the xmlDependencies files in its
 *willStart* method, so the template will be ready when the rendering is performed.
 
-
 Event system
 ============
 
@@ -970,9 +962,8 @@ The previous example can be updated to use the custom event system:
 
     ... this.trigger_up('valuechange', {value: someValue});
 
-
 Registries
-===========
+==========
 
 A common need in the Odoo ecosystem is to extend/change the behaviour of the
 base system from the outside (by installing an application, i.e. a different
@@ -1008,7 +999,6 @@ action registry
   is where the action manager looks up whenever it needs to create a client
   action.  In version 11, each value should simply be a subclass of *Widget*.
   However, in version 12, the values are required to be *AbstractAction*.
-
 
 Communication between widgets
 =============================
@@ -1077,7 +1067,6 @@ Cross component
           },
       });
 
-
     In this example, we use the bus exported by *web.core*, but this is not
     required. A bus could be created for a specific purpose.
 
@@ -1094,7 +1083,7 @@ events, these events bubble up to a service provider, which will ask a service
 to perform a task, then maybe return an answer.
 
 Service
---------
+-------
 
 A service is an instance of the *AbstractService* class.  It basically only has
 a name and a few methods.  Its job is to perform some work, typically something
@@ -1125,7 +1114,6 @@ For services to work, it is necessary that we have a service provider ready to
 dispatch the custom events.  In the *backend* (web client), this is done by the
 main web client instance. Note that the code for the service provider comes from
 the *ServiceProviderMixin*.
-
 
 Widget
 ------
@@ -1185,7 +1173,7 @@ may need to directly call a controller (available on some route).
     });
 
 Notifications
-==============
+=============
 
 The Odoo framework has a standard way to communicate various information to the
 user: notifications, which are displayed on the top right of the user interface.
@@ -1220,9 +1208,9 @@ The notification system in Odoo is designed with the following components:
 
 - two helper functions in *ServiceMixin*: *do_notify* and *do_warn*
 
-
 Displaying a notification
 -------------------------
+
 The most common way to display a notification is by using two methods that come
 from the *ServiceMixin*:
 
@@ -1310,7 +1298,6 @@ the class variable SystrayMenu.items.
 
     SystrayMenu.Items.push(MySystrayWidget);
 
-
 Ordering
 --------
 
@@ -1323,7 +1310,6 @@ left).
 .. code-block:: javascript
 
     MySystrayWidget.prototype.sequence = 100;
-
 
 Translation management
 ======================
@@ -1419,7 +1405,7 @@ client for everyone), and for data which is required early in the initialization
 process.
 
 Views
-======
+=====
 
 The word 'view' has more than one meaning. This section is about the design of
 the javascript code of the views, not the structure of the *arch* or anything
@@ -1427,7 +1413,6 @@ else.
 
 In 2017, Odoo replaced the previous view code with a new architecture.  The
 main need was to separate the rendering logic from the model logic.
-
 
 Views (in a generic sense) are now described with  4 pieces: a View, a
 Controller, a Renderer and a Model.  The API of these 4 pieces is described in
@@ -2280,7 +2265,6 @@ reference (FieldReference)
 
   - Supported field types: *char, reference*
 
-
 Client actions
 ==============
 
@@ -2344,7 +2328,6 @@ Registering the client action:
           <field name="name">Some Name</field>
           <field name="tag">my-custom-action</field>
       </record>
-
 
 Using the control panel
 -----------------------
