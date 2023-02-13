@@ -673,8 +673,7 @@ When a rpc fails, then:
 
 * the promise representing the rpc is rejected, so the calling code will crash,
   unless it handles the situation
-*
-  an event ``RPC_ERROR`` is triggered on the main application bus. The event payload
+* an event ``RPC_ERROR`` is triggered on the main application bus. The event payload
   contains a description of the cause of the error:
 
   If it is a server error (the server code threw an exception). In that case

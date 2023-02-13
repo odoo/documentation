@@ -1,15 +1,14 @@
 :orphan:
 
-=============================
+==========================
 Customizing the web client
-=============================
+==========================
 
 .. note::
 
     this section is really really out of date. It will be updated someday,
     but meanwhile, this tutorial will probably be frustrating to follow, since it
     was written a long time ago.
-
 
 .. highlight:: javascript
 
@@ -29,7 +28,6 @@ or extend existing business systems of Odoo, see :doc:`backend`.
     * `Underscore.js`_
 
     It also requires :ref:`an installed Odoo <setup/install>`, and Git_.
-
 
 A Simple Module
 ===============
@@ -110,7 +108,9 @@ sub-folders are conventional and not strictly necessary.
 
 Which only prints a small message in the browser's console.
 
-The files in the ``static`` folder, need to be defined within the module in order for them to be loaded correctly. Everything in ``src/xml`` is defined in ``__manifest__.py`` while the contents of ``src/css`` and ``src/js`` are defined in ``petstore.xml``, or a similar file.
+The files in the ``static`` folder, need to be defined within the module in order for them to be
+loaded correctly. Everything in ``src/xml`` is defined in ``__manifest__.py`` while the contents of
+``src/css`` and ``src/js`` are defined in ``petstore.xml``, or a similar file.
 
 .. warning::
 
@@ -503,11 +503,10 @@ must be explicitly cleaned up (because the garbage collector will not handle
 them), you can override :func:`~odoo.Widget.destroy`.
 
 .. danger::
-
-    when overriding :func:`~odoo.Widget.destroy`, ``_super()``
-    *must always* be called otherwise the widget and its children are not
-    correctly cleaned up leaving possible memory leaks and "phantom events",
-    even if no error is displayed
+   when overriding :func:`~odoo.Widget.destroy`, ``_super()``
+   *must always* be called otherwise the widget and its children are not
+   correctly cleaned up leaving possible memory leaks and "phantom events",
+   even if no error is displayed
 
 The QWeb Template Engine
 ========================
@@ -537,16 +536,15 @@ characteristics:
   :class:`~odoo.Widget` without relying on QWeb)
 
 .. note::
+   The rationale behind using QWeb instead of existing javascript template
+   engines is the extensibility of pre-existing (third-party) templates, much
+   like Odoo :ref:`views <reference/views>`.
 
-    The rationale behind using QWeb instead of existing javascript template
-    engines is the extensibility of pre-existing (third-party) templates, much
-    like Odoo :ref:`views <reference/views>`.
-
-    Most javascript template engines are text-based which precludes easy
-    structural extensibility where an XML-based templating engine can be
-    generically altered using e.g. XPath or CSS and a tree-alteration DSL (or
-    even just XSLT). This flexibility and extensibility is a core
-    characteristic of Odoo, and losing it was considered unacceptable.
+   Most javascript template engines are text-based which precludes easy
+   structural extensibility where an XML-based templating engine can be
+   generically altered using e.g. XPath or CSS and a tree-alteration DSL (or
+   even just XSLT). This flexibility and extensibility is a core
+   characteristic of Odoo, and losing it was considered unacceptable.
 
 Using QWeb
 ----------
@@ -598,14 +596,13 @@ usages:
   sub-widget also gets a red background
 
 .. warning::
-
-    templates should have a single non-``t`` root element, especially if
-    they're set as a widget's :attr:`~odoo.Widget.template`. If there are
-    multiple "root elements", results are undefined (usually only the first
-    root element will be used and the others will be ignored)
+   templates should have a single non-``t`` root element, especially if
+   they're set as a widget's :attr:`~odoo.Widget.template`. If there are
+   multiple "root elements", results are undefined (usually only the first
+   root element will be used and the others will be ignored)
 
 QWeb Context
-''''''''''''
+~~~~~~~~~~~~
 
 QWeb templates can be given data and can contain basic display logic.
 
@@ -659,7 +656,7 @@ Result:
     <div>Hello Mordecai</div>
 
 Template Declaration
-''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~
 
 We've seen how to *render* QWeb templates, let's now see the syntax of
 the templates themselves.
@@ -683,7 +680,7 @@ it can be called using :func:`QWeb.render`. It can only be used at the
 top-level of a template file.
 
 Escaping
-''''''''
+~~~~~~~~
 
 The ``t-esc`` directive can be used to output text:
 
@@ -707,7 +704,7 @@ or method calls:
     <div><t t-esc="name.toUpperCase()"/></div>
 
 Outputting HTML
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 To inject HTML in the page being rendered, use ``t-raw``. Like ``t-esc`` it
 takes an arbitrary Javascript expression as parameter, but it does not
@@ -724,7 +721,7 @@ perform an HTML-escape step.
     vulnerabilities
 
 Conditionals
-''''''''''''
+~~~~~~~~~~~~
 
 QWeb can have conditional blocks using ``t-if``. The directive takes an
 arbitrary expression, if the expression is falsy (``false``, ``null``, ``0``
@@ -748,7 +745,7 @@ or an empty string) the whole block is suppressed, otherwise it is displayed.
     local variable if it's a complex or expensive expression.
 
 Iteration
-'''''''''
+~~~~~~~~~
 
 To iterate on a list, use ``t-foreach`` and ``t-as``. ``t-foreach`` takes an
 expression returning a list to iterate on ``t-as`` takes a variable name to
@@ -768,7 +765,7 @@ bind to each item during iteration.
           (dictionaries)
 
 Defining attributes
-'''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~
 
 QWeb provides two related directives to define computed attributes:
 :samp:`t-att-{name}` and :samp:`t-attf-{name}`. In either case, *name* is the
@@ -799,7 +796,7 @@ literal and partially computed such as a class:
     </div>
 
 Calling other templates
-'''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Templates can be split into sub-templates (for simplicity, maintainability,
 reusability or to avoid excessive markup nesting).
@@ -829,12 +826,12 @@ rendering the ``A`` template will result in:
 Sub-templates inherit the rendering context of their caller.
 
 To Learn More About QWeb
-''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 For a QWeb reference, see :ref:`reference/qweb`.
 
 Exercise
-''''''''
+~~~~~~~~
 
 .. exercise:: Usage of QWeb in Widgets
 
@@ -1667,7 +1664,7 @@ In Odoo Web, the component responsible for handling and reacting to these
 actions is the *Action Manager*.
 
 Using the Action Manager
-''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 The action manager can be invoked explicitly from javascript code by creating
 a dictionary describing :ref:`an action <reference/actions>` of the right
@@ -1811,7 +1808,7 @@ Much of Odoo web's usefulness (and complexity) resides in views. Each view
 type is a way of displaying a model in the client.
 
 The View Manager
-''''''''''''''''
+~~~~~~~~~~~~~~~~
 
 When an ``ActionManager`` instance receive an action of type
 ``ir.actions.act_window``, it delegates the synchronization and handling of
@@ -1823,7 +1820,7 @@ multiple views depending on the original action's requirements:
    :width: 40%
 
 The Views
-'''''''''
+~~~~~~~~~
 
 Most :ref:`Odoo views <reference/views>` are implemented through a subclass
 of :class:`odoo.web.View` which provides a bit of generic basic structure
@@ -1932,14 +1929,14 @@ interface and the ``AbstractField`` class directly in the code of the Odoo web
 client.
 
 Creating a New Type of Field
-''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In this part we will explain how to create a new type of field. The example
 here will be to re-implement the ``FieldChar`` class and progressively explain
 each part.
 
 Simple Read-Only Field
-""""""""""""""""""""""
+**********************
 
 Here is a first implementation that will only display text. The
 user will not be able to modify the content of the field.
@@ -1979,7 +1976,7 @@ none is specified by the form view (here we assume the default value of a
 ``char`` field should be an empty string).
 
 Read-Write Field
-""""""""""""""""
+****************
 
 Read-only fields, which only display content and don't allow the
 user to modify it can be useful, but most fields in Odoo also allow editing.

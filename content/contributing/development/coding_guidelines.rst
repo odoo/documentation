@@ -30,6 +30,7 @@ Module structure
 
 Directories
 -----------
+
 A module is organized in important directories. Those contain the business logic;
 having a look at them should make you understand the purpose of the module.
 
@@ -242,6 +243,7 @@ XML files
 
 Format
 ------
+
 To declare a record in XML, the **record** notation (using *<record>*) is recommended:
 
 - Place ``id`` attribute before ``model``
@@ -408,6 +410,7 @@ source code tries to respect Python standard, but some of them can be ignored.
 
 Imports
 -------
+
 The imports are ordered as
 
 #. External libraries (one per line sorted and split in python stdlib)
@@ -588,6 +591,7 @@ Programming in Odoo
 
 Propagate the context
 ~~~~~~~~~~~~~~~~~~~~~
+
 The context is a ``frozendict`` that cannot be modified. To call a method with
 a different context, the ``with_context`` method should be used :
 
@@ -609,7 +613,6 @@ If you need to create a key context influencing the behavior of some object,
 choose a good name, and eventually prefix it by the name of the module to
 isolate its impact. A good example are the keys of ``mail`` module :
 *mail_create_nosubscribe*, *mail_notrack*, *mail_notify_user_signature*, ...
-
 
 Think extendable
 ~~~~~~~~~~~~~~~~
@@ -654,9 +657,9 @@ the starting point of readable/maintainable code and tighter documentation.
 This recommendation is also relevant for classes, files, modules and packages.
 (See also http://en.wikipedia.org/wiki/Cyclomatic_complexity)
 
-
 Never commit the transaction
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
 The Odoo framework is in charge of providing the transactional context for
 all RPC calls. The principle is that a new database cursor is opened at the
 beginning of each RPC call, and committed when the call has returned, just
@@ -721,7 +724,6 @@ All ``cr.commit()`` calls outside of the server framework from now on must
 have an **explicit comment** explaining why they are absolutely necessary, why
 they are indeed correct, and why they do not break the transactions. Otherwise
 they can and will be removed !
-
 
 Use translation method correctly
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -810,7 +812,6 @@ In general in Odoo, when manipulating strings, prefer ``%`` over ``.format()``
 (when only one variable to replace in a string), and prefer ``%(varname)`` instead
 of position (when multiple variables have to be replaced). This makes the
 translation easier for the community translators.
-
 
 Symbols and Conventions
 -----------------------
@@ -925,7 +926,7 @@ Javascript
 ==========
 
 Static files organization
---------------------------
+-------------------------
 
 Odoo addons have some conventions on how to structure various files. We explain
 here in more details how web assets are supposed to be organized.

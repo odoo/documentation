@@ -1,7 +1,6 @@
-
-===============
+===========
 Report Line
-===============
+===========
 
 .. automodel:: odoo.addons.account.models.account_report.AccountReportLine
     :main:

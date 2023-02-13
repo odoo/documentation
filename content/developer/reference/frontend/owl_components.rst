@@ -487,7 +487,7 @@ open themselves on mouse hover, without the need for a click.
 
 
 Example: Direct Siblings Dropdown
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 When one dropdown toggler is clicked (**File** , **Edit** or **About**), the
 others will open themselves on hover.

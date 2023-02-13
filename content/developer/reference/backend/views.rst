@@ -337,7 +337,7 @@ A view's specs are applied sequentially.
                all the specified classes
 
 Model Commons
-====================
+=============
 
 .. currentmodule:: odoo.addons.base.models.ir_ui_view
 
@@ -348,6 +348,7 @@ Attributes
 
 Methods
 -------
+
 .. automethod:: Model.get_views
 .. automethod:: Model.get_view
 

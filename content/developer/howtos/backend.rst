@@ -7,8 +7,7 @@ Building a Module
 =================
 
 .. warning::
-
-    This tutorial requires :ref:`having installed Odoo <setup/install>`
+   This tutorial requires :ref:`having installed Odoo <setup/install>`
 
 Start/Stop the Odoo server
 ==========================
@@ -26,7 +25,7 @@ necessary:
 
 .. code:: bash
 
-    odoo-bin
+   odoo-bin
 
 The server is stopped by hitting ``Ctrl-C`` twice from the terminal, or by
 killing the corresponding OS process.
@@ -78,10 +77,10 @@ are specified by using the :option:`--addons-path <odoo-bin --addons-path>`
 option.
 
 .. tip::
-    :class: aphorism
+   :class: aphorism
 
-    most command-line options can also be set using :ref:`a configuration
-    file <reference/cmdline/config>`
+   most command-line options can also be set using :ref:`a configuration file
+   <reference/cmdline/config>`
 
 An Odoo module is declared by its :ref:`manifest <reference/module/manifest>`.
 
@@ -101,7 +100,7 @@ Odoo provides a mechanism to help set up a new module, :ref:`odoo-bin
 
 .. code-block:: console
 
-    $ odoo-bin scaffold <module name> <where to put it>
+   $ odoo-bin scaffold <module name> <where to put it>
 
 The command creates a subdirectory for your module, and automatically creates a
 bunch of standard files for a module. Most of them simply contain commented code
@@ -109,8 +108,7 @@ or XML. The usage of most of those files will be explained along this tutorial.
 
 .. exercise:: Module creation
 
-    Use the command line above to  create an empty module Open Academy, and
-    install it in Odoo.
+   Use the command line above to  create an empty module Open Academy, and install it in Odoo.
 
 Object-Relational Mapping
 -------------------------
@@ -147,7 +145,7 @@ defined as attributes on the model class::
         name = fields.Char()
 
 Common Attributes
-#################
+~~~~~~~~~~~~~~~~~
 
 Much like the model itself, its fields can be configured, by passing
 configuration attributes as parameters::
@@ -167,7 +165,7 @@ Some attributes are available on all fields, here are the most common ones:
     Requests that Odoo create a `database index`_ on the column.
 
 Simple fields
-#############
+~~~~~~~~~~~~~
 
 There are two broad categories of fields: "simple" fields which are atomic
 values stored directly in the model's table and "relational" fields linking
@@ -177,7 +175,7 @@ Example of simple fields are :class:`~odoo.fields.Boolean`,
 :class:`~odoo.fields.Date`, :class:`~odoo.fields.Char`.
 
 Reserved fields
-###############
+~~~~~~~~~~~~~~~
 
 Odoo creates a few fields in all models\ [#autofields]_. These fields are
 managed by the system and shouldn't be written to. They can be read if
@@ -195,7 +193,7 @@ useful or necessary:
     user who last modified the record.
 
 Special fields
-##############
+~~~~~~~~~~~~~~
 
 By default, Odoo also requires a ``name`` field on all models for various
 display and search behaviors. The field used for these purposes can be
@@ -203,8 +201,8 @@ overridden by setting :attr:`~odoo.models.Model._rec_name`.
 
 .. exercise:: Define a model
 
-    Define a new data model *Course* in the *openacademy* module. A course
-    has a title and a description. Courses must have a title.
+   Define a new data model *Course* in the *openacademy* module. A course has a title and a
+   description. Courses must have a title.
 
 Data files
 ----------
@@ -213,7 +211,7 @@ Odoo is a highly data driven system. Although behavior is customized using
 Python_ code part of a module's value is in the data it sets up when loaded.
 
 .. tip:: some modules exist solely to add data into Odoo
-    :class: aphorism
+   :class: aphorism
 
 Module data is declared via :ref:`data files <reference/data>`, XML files with
 ``<record>`` elements. Each ``<record>`` element creates or updates a database
@@ -221,13 +219,13 @@ record.
 
 .. code-block:: xml
 
-    <odoo>
+   <odoo>
 
-            <record model="{model name}" id="{record identifier}">
-                <field name="{a field name}">{a value}</field>
-            </record>
+           <record model="{model name}" id="{record identifier}">
+               <field name="{a field name}">{a value}</field>
+           </record>
 
-    </odoo>
+   </odoo>
 
 * ``model`` is the name of the Odoo model for the record.
 * ``id`` is an :term:`external identifier`, it allows referring to the record
@@ -241,15 +239,13 @@ be declared in the ``'data'`` list (always loaded) or in the ``'demo'`` list
 
 .. exercise:: Define demonstration data
 
-    Create demonstration data filling the *Courses* model with a few
-    demonstration courses.
+   Create demonstration data filling the *Courses* model with a few demonstration courses.
 
-.. tip:: The content of the data files is only loaded when a module is
-    installed or updated.
+.. tip::
+   The content of the data files is only loaded when a module is installed or updated.
 
-    After making some changes, do not forget to use
-    :ref:`odoo-bin -u openacademy <reference/cmdline>` to save the changes
-    to your database.
+   After making some changes, do not forget to use :ref:`odoo-bin -u openacademy
+   <reference/cmdline>` to save the changes to your database.
 
 .. _howtos/module/actions:
 
@@ -269,29 +265,29 @@ action more easily.
 
 .. code-block:: xml
 
-    <record model="ir.actions.act_window" id="action_list_ideas">
-        <field name="name">Ideas</field>
-        <field name="res_model">idea.idea</field>
-        <field name="view_mode">tree,form</field>
-    </record>
-    <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"
-              action="action_list_ideas"/>
+   <record model="ir.actions.act_window" id="action_list_ideas">
+       <field name="name">Ideas</field>
+       <field name="res_model">idea.idea</field>
+       <field name="view_mode">tree,form</field>
+   </record>
+   <menuitem id="menu_ideas" parent="menu_root" name="Ideas" sequence="10"
+             action="action_list_ideas"/>
 
 .. danger::
-    :class: aphorism
+   :class: aphorism
 
-    The action must be declared before its corresponding menu in the XML file.
+   The action must be declared before its corresponding menu in the XML file.
 
-    Data files are executed sequentially, the action's ``id`` must be present
-    in the database before the menu can be created.
+   Data files are executed sequentially, the action's ``id`` must be present in the database before
+   the menu can be created.
 
 .. exercise:: Define new menu entries
 
-    Define new menu entries to access courses under the
-    OpenAcademy menu entry. A user should be able to :
+   Define new menu entries to access courses under the OpenAcademy menu entry. A user should be able
+   to:
 
-    - display a list of all the courses
-    - create/modify courses
+   - display a list of all the courses
+   - create/modify courses
 
 Basic views
 ===========
@@ -315,20 +311,19 @@ is implied by the root element of the ``arch`` field:
 
 .. code-block:: xml
 
-    <record model="ir.ui.view" id="view_id">
-        <field name="name">view.name</field>
-        <field name="model">object_name</field>
-        <field name="priority" eval="16"/>
-        <field name="arch" type="xml">
-            <!-- view content: <form>, <tree>, <graph>, ... -->
-        </field>
-    </record>
+   <record model="ir.ui.view" id="view_id">
+       <field name="name">view.name</field>
+       <field name="model">object_name</field>
+       <field name="priority" eval="16"/>
+       <field name="arch" type="xml">
+           <!-- view content: <form>, <tree>, <graph>, ... -->
+       </field>
+   </record>
 
 .. danger:: The view's content is XML.
-    :class: aphorism
+   :class: aphorism
 
-    The ``arch`` field must thus be declared as ``type="xml"`` to be parsed
-    correctly.
+   The ``arch`` field must thus be declared as ``type="xml"`` to be parsed correctly.
 
 Tree views
 ----------
@@ -384,40 +379,39 @@ elements (groups, notebooks) and interactive elements (buttons and fields):
 
 .. exercise:: Customise form view using XML
 
-    Create your own form view for the Course object. Data displayed should be:
-    the name and the description of the course.
+   Create your own form view for the Course object. Data displayed should be: the name and the
+   description of the course.
 
 .. exercise:: Notebooks
 
-    In the Course form view, put the description field under a tab, such that
-    it will be easier to add other tabs later, containing additional
-    information.
+   In the Course form view, put the description field under a tab, such that it will be easier to
+   add other tabs later, containing additional information.
 
 Form views can also use plain HTML for more flexible layouts:
 
 .. code-block:: xml
 
-    <form string="Idea Form">
-        <header>
-            <button string="Confirm" type="object" name="action_confirm"
-                    states="draft" class="oe_highlight" />
-            <button string="Mark as done" type="object" name="action_done"
-                    states="confirmed" class="oe_highlight"/>
-            <button string="Reset to draft" type="object" name="action_draft"
-                    states="confirmed,done" />
-            <field name="state" widget="statusbar"/>
-        </header>
-        <sheet>
-            <div class="oe_title">
-                <label for="name" class="oe_edit_only" string="Idea Name" />
-                <h1><field name="name" /></h1>
-            </div>
-            <separator string="General" colspan="2" />
-            <group colspan="2" col="2">
-                <field name="description" placeholder="Idea description..." />
-            </group>
-        </sheet>
-    </form>
+   <form string="Idea Form">
+       <header>
+           <button string="Confirm" type="object" name="action_confirm"
+                   states="draft" class="oe_highlight" />
+           <button string="Mark as done" type="object" name="action_done"
+                   states="confirmed" class="oe_highlight"/>
+           <button string="Reset to draft" type="object" name="action_draft"
+                   states="confirmed,done" />
+           <field name="state" widget="statusbar"/>
+       </header>
+       <sheet>
+           <div class="oe_title">
+               <label for="name" class="oe_edit_only" string="Idea Name" />
+               <h1><field name="name" /></h1>
+           </div>
+           <separator string="General" colspan="2" />
+           <group colspan="2" col="2">
+               <field name="description" placeholder="Idea description..." />
+           </group>
+       </sheet>
+   </form>
 
 Search views
 ------------
@@ -428,17 +422,17 @@ composed of fields defining which fields can be searched on:
 
 .. code-block:: xml
 
-    <search>
-        <field name="name"/>
-        <field name="inventor_id"/>
-    </search>
+   <search>
+       <field name="name"/>
+       <field name="inventor_id"/>
+   </search>
 
 If no search view exists for the model, Odoo generates one which only allows
 searching on the ``name`` field.
 
 .. exercise:: Search courses
 
-    Allow searching for courses based on their title or their description.
+   Allow searching for courses based on their title or their description.
 
 Relations between models
 ========================
@@ -449,12 +443,12 @@ client data; it is also related to its sale order line records.
 
 .. exercise:: Create a session model
 
-    For the module Open Academy, we consider a model for *sessions*: a session
-    is an occurrence of a course taught at a given time for a given audience.
+   For the module Open Academy, we consider a model for *sessions*: a session
+   is an occurrence of a course taught at a given time for a given audience.
 
-    Create a model for *sessions*. A session has a name, a start date, a
-    duration and a number of seats. Add an action and a menu item to display
-    them. Make the new model visible via a menu item.
+   Create a model for *sessions*. A session has a name, a start date, a
+   duration and a number of seats. Add an action and a menu item to display
+   them. Make the new model visible via a menu item.
 
 Relational fields
 -----------------
@@ -481,9 +475,9 @@ Relational field types are:
 
     .. danger::
 
-        Because a :class:`~odoo.fields.One2many` is a virtual relationship,
-        there *must* be a :class:`~odoo.fields.Many2one` field in the
-        :samp:`{other_model}`, and its name *must* be :samp:`{related_field}`
+       Because a :class:`~odoo.fields.One2many` is a virtual relationship,
+       there *must* be a :class:`~odoo.fields.Many2one` field in the
+       :samp:`{other_model}`, and its name *must* be :samp:`{related_field}`
 
 :class:`Many2many(other_model) <odoo.fields.Many2many>`
     Bidirectional multiple relationship, any record on one side can be related
@@ -495,28 +489,28 @@ Relational field types are:
 
 .. exercise:: Many2one relations
 
-    Using a many2one, modify the *Course* and *Session* models to reflect their
-    relation with other models:
+   Using a many2one, modify the *Course* and *Session* models to reflect their
+   relation with other models:
 
-    - A course has a *responsible* user; the value of that field is a record of
-      the built-in model ``res.users``.
-    - A session has an *instructor*; the value of that field is a record of the
-      built-in model ``res.partner``.
-    - A session is related to a *course*; the value of that field is a record
-      of the model ``openacademy.course`` and is required.
-    - Adapt the views.
+   - A course has a *responsible* user; the value of that field is a record of
+     the built-in model ``res.users``.
+   - A session has an *instructor*; the value of that field is a record of the
+     built-in model ``res.partner``.
+   - A session is related to a *course*; the value of that field is a record
+     of the model ``openacademy.course`` and is required.
+   - Adapt the views.
 
 .. exercise:: Inverse one2many relations
 
-    Using the inverse relational field one2many, modify the models to reflect
-    the relation between courses and sessions.
+   Using the inverse relational field one2many, modify the models to reflect
+   the relation between courses and sessions.
 
 .. exercise:: Multiple many2many relations
 
-    Using the relational field many2many, modify the *Session* model to relate
-    every session to a set of *attendees*. Attendees will be represented by
-    partner records, so we will relate to the built-in model ``res.partner``.
-    Adapt the views accordingly.
+   Using the relational field many2many, modify the *Session* model to relate
+   every session to a set of *attendees*. Attendees will be represented by
+   partner records, so we will relate to the built-in model ``res.partner``.
+   Adapt the views accordingly.
 
 Inheritance
 ===========
@@ -541,12 +535,11 @@ model to a record in a parent model, and provides transparent access to the
 fields of the parent record.
 
 .. image:: ../reference/backend/orm/inheritance_methods.png
-    :align: center
+   :align: center
 
 .. seealso::
-
-    * :attr:`~odoo.models.Model._inherit`
-    * :attr:`~odoo.models.Model._inherits`
+   * :attr:`~odoo.models.Model._inherit`
+   * :attr:`~odoo.models.Model._inherits`
 
 View inheritance
 ----------------
@@ -561,19 +554,19 @@ instead of a single view its ``arch`` field is composed of any number of
 
 .. code-block:: xml
 
-    <!-- improved idea categories list -->
-    <record id="idea_category_list2" model="ir.ui.view">
-        <field name="name">id.category.list2</field>
-        <field name="model">idea.category</field>
-        <field name="inherit_id" ref="id_category_list"/>
-        <field name="arch" type="xml">
-            <!-- find field description and add the field
-                 idea_ids after it -->
-            <xpath expr="//field[@name='description']" position="after">
-              <field name="idea_ids" string="Number of ideas"/>
-            </xpath>
-        </field>
-    </record>
+   <!-- improved idea categories list -->
+   <record id="idea_category_list2" model="ir.ui.view">
+       <field name="name">id.category.list2</field>
+       <field name="model">idea.category</field>
+       <field name="inherit_id" ref="id_category_list"/>
+       <field name="arch" type="xml">
+           <!-- find field description and add the field
+                idea_ids after it -->
+           <xpath expr="//field[@name='description']" position="after">
+             <field name="idea_ids" string="Number of ideas"/>
+           </xpath>
+       </field>
+   </record>
 
 ``expr``
     An XPath_ expression selecting a single element in the parent view.
@@ -595,30 +588,29 @@ instead of a single view its ``arch`` field is composed of any number of
         ``attribute`` elements in the ``xpath``'s body
 
 .. tip::
-
-    When matching a single element, the ``position`` attribute can be set directly
-    on the element to be found. Both inheritances below will give the same result.
+   When matching a single element, the ``position`` attribute can be set directly
+   on the element to be found. Both inheritances below will give the same result.
 
     .. code-block:: xml
 
-        <xpath expr="//field[@name='description']" position="after">
-            <field name="idea_ids" />
-        </xpath>
+       <xpath expr="//field[@name='description']" position="after">
+           <field name="idea_ids" />
+       </xpath>
 
-        <field name="description" position="after">
-            <field name="idea_ids" />
-        </field>
+       <field name="description" position="after">
+           <field name="idea_ids" />
+       </field>
 
 
 .. exercise:: Alter existing content
 
-    * Using model inheritance, modify the existing *Partner* model to add an
-      ``instructor`` boolean field, and a many2many field that corresponds to
-      the session-partner relation
-    * Using view inheritance, display this fields in the partner form view
+   * Using model inheritance, modify the existing *Partner* model to add an
+     ``instructor`` boolean field, and a many2many field that corresponds to
+     the session-partner relation
+   * Using view inheritance, display this fields in the partner form view
 
 Domains
-#######
+~~~~~~~
 
 In Odoo, :ref:`reference/orm/domains` are values that encode conditions on
 records. A domain is a  list of criteria used to select a subset of a model's
@@ -646,14 +638,14 @@ records for the relation when trying to select records in the client interface.
 
 .. exercise:: Domains on relational fields
 
-    When selecting the instructor for a *Session*, only instructors (partners
-    with ``instructor`` set to ``True``) should be visible.
+   When selecting the instructor for a *Session*, only instructors (partners
+   with ``instructor`` set to ``True``) should be visible.
 
 .. exercise:: More complex domains
 
-    Create new partner categories *Teacher / Level 1* and *Teacher / Level 2*.
-    The instructor for a session can be either an instructor or a teacher
-    (of any level).
+   Create new partner categories *Teacher / Level 1* and *Teacher / Level 2*.
+   The instructor for a session can be either an instructor or a teacher
+   (of any level).
 
 Computed fields and default values
 ==================================
@@ -669,30 +661,29 @@ method should simply set the value of the field to compute on every record in
 ``self``.
 
 .. danger:: ``self`` is a collection
-    :class: aphorism
+   :class: aphorism
 
-    The object ``self`` is a *recordset*, i.e., an ordered collection of
-    records. It supports the standard Python operations on collections, like
-    ``len(self)`` and ``iter(self)``, plus extra set operations like ``recs1 +
-    recs2``.
+   The object ``self`` is a *recordset*, i.e., an ordered collection of records. It supports the
+   standard Python operations on collections, like ``len(self)`` and ``iter(self)``, plus extra set
+   operations like ``recs1 + recs2``.
 
-    Iterating over ``self`` gives the records one by one, where each record is
-    itself a collection of size 1. You can access/assign fields on single
-    records by using the dot notation, like ``record.name``.
+   Iterating over ``self`` gives the records one by one, where each record is itself a collection of
+   size 1. You can access/assign fields on single records by using the dot notation, like
+   ``record.name``.
 
 .. code-block:: python
 
-    import random
-    from odoo import models, fields, api
+   import random
+   from odoo import models, fields, api
 
-    class ComputedModel(models.Model):
-        _name = 'test.computed'
+   class ComputedModel(models.Model):
+       _name = 'test.computed'
 
-        name = fields.Char(compute='_compute_name')
+       name = fields.Char(compute='_compute_name')
 
-        def _compute_name(self):
-            for record in self:
-                record.name = str(random.randint(1, 1e6))
+       def _compute_name(self):
+           for record in self:
+               record.name = str(random.randint(1, 1e6))
 
 
 Dependencies
@@ -719,9 +710,9 @@ field whenever some of its dependencies have been modified::
 
 .. exercise:: Computed fields
 
-    * Add the percentage of taken seats to the *Session* model
-    * Display that field in the tree and form views
-    * Display the field as a progress bar
+   * Add the percentage of taken seats to the *Session* model
+   * Display that field in the tree and form views
+   * Display the field as a progress bar
 
 Default values
 --------------
@@ -734,9 +725,7 @@ float, string), or a function taking a recordset and returning a value::
     user_id = fields.Many2one('res.users', default=lambda self: self.env.user)
 
 .. note::
-
-    The object ``self.env`` gives access to request parameters and other useful
-    things:
+   The object ``self.env`` gives access to request parameters and other useful things:
 
     - ``self.env.cr`` or ``self._cr`` is the database *cursor* object; it is
       used for querying the database
@@ -748,10 +737,10 @@ float, string), or a function taking a recordset and returning a value::
 
 .. exercise:: Active objects – Default values
 
-    * Define the start_date default value as today (see
-      :class:`~odoo.fields.Date`).
-    * Add a field ``active`` in the class Session, and set sessions as active by
-      default.
+   * Define the start_date default value as today (see
+     :class:`~odoo.fields.Date`).
+   * Add a field ``active`` in the class Session, and set sessions as active by
+     default.
 
 Onchange
 ========
@@ -769,25 +758,25 @@ to specify on which field it has to be triggered. Any change you make on
 
 .. code-block:: xml
 
-    <!-- content of form view -->
-    <field name="amount"/>
-    <field name="unit_price"/>
-    <field name="price" readonly="1"/>
+   <!-- content of form view -->
+   <field name="amount"/>
+   <field name="unit_price"/>
+   <field name="price" readonly="1"/>
 
 .. code-block:: python
 
-    # onchange handler
-    @api.onchange('amount', 'unit_price')
-    def _onchange_price(self):
-        # set auto-changing field
-        self.price = self.amount * self.unit_price
-        # Can optionally return a warning and domains
-        return {
-            'warning': {
-                'title': "Something bad happened",
-                'message': "It was very bad indeed",
-            }
-        }
+   # onchange handler
+   @api.onchange('amount', 'unit_price')
+   def _onchange_price(self):
+       # set auto-changing field
+       self.price = self.amount * self.unit_price
+       # Can optionally return a warning and domains
+       return {
+           'warning': {
+               'title': "Something bad happened",
+               'message': "It was very bad indeed",
+           }
+       }
 
 For computed fields, valued ``onchange`` behavior is built-in as can be seen by
 playing with the *Session* form: change the number of seats or participants, and
@@ -795,8 +784,8 @@ the ``taken_seats`` progressbar is automatically updated.
 
 .. exercise:: Warning
 
-    Add an explicit onchange to warn about invalid values, like a negative
-    number of seats, or more participants than seats.
+   Add an explicit onchange to warn about invalid values, like a negative
+   number of seats, or more participants than seats.
 
 Model constraints
 =================
@@ -822,8 +811,8 @@ raise an exception if its invariant is not satisfied::
 
 .. exercise:: Add Python constraints
 
-    Add a constraint that checks that the instructor is not present in the
-    attendees of his/her own session.
+   Add a constraint that checks that the instructor is not present in the
+   attendees of his/her own session.
 
 SQL constraints are defined through the model attribute
 :attr:`~odoo.models.Model._sql_constraints`. The latter is assigned to a list
@@ -833,20 +822,20 @@ and ``message`` is the error message.
 
 .. exercise:: Add SQL constraints
 
-    With the help of `PostgreSQL's documentation`_ , add the following
-    constraints:
+   With the help of `PostgreSQL's documentation`_ , add the following
+   constraints:
 
-    #. CHECK that the course description and the course title are different
-    #. Make the Course's name UNIQUE
+   #. CHECK that the course description and the course title are different
+   #. Make the Course's name UNIQUE
 
 .. exercise:: Exercise 6 - Add a duplicate option
 
-    Since we added a constraint for the Course name uniqueness, it is not
-    possible to use the "duplicate" function anymore (:menuselection:`Form -->
-    Duplicate`).
+   Since we added a constraint for the Course name uniqueness, it is not
+   possible to use the "duplicate" function anymore (:menuselection:`Form -->
+   Duplicate`).
 
-    Re-implement your own "copy" method which allows to duplicate the Course
-    object, changing the original name into "Copy of [original name]".
+   Re-implement your own "copy" method which allows to duplicate the Course
+   object, changing the original name into "Copy of [original name]".
 
 Advanced Views
 ==============
@@ -915,14 +904,14 @@ their most common attributes are:
 
 .. code-block:: xml
 
-    <calendar string="Ideas" date_start="invent_date" color="inventor_id">
-        <field name="name"/>
-    </calendar>
+   <calendar string="Ideas" date_start="invent_date" color="inventor_id">
+       <field name="name"/>
+   </calendar>
 
 .. exercise:: Calendar view
 
-    Add a Calendar view to the *Session* model enabling the user to view the
-    events associated to the Open Academy.
+   Add a Calendar view to the *Session* model enabling the user to view the
+   events associated to the Open Academy.
 
 Search views
 ------------
@@ -943,20 +932,20 @@ predefined searches. Filters must have one of the following attributes:
 
 .. code-block:: xml
 
-    <search string="Ideas">
-        <field name="name"/>
-        <field name="description" string="Name and description"
-               filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
-        <field name="inventor_id"/>
-        <field name="country_id" widget="selection"/>
+   <search string="Ideas">
+       <field name="name"/>
+       <field name="description" string="Name and description"
+              filter_domain="['|', ('name', 'ilike', self), ('description', 'ilike', self)]"/>
+       <field name="inventor_id"/>
+       <field name="country_id" widget="selection"/>
 
-        <filter name="my_ideas" string="My Ideas"
-                domain="[('inventor_id', '=', uid)]"/>
-        <group string="Group By">
-            <filter name="group_by_inventor" string="Inventor"
-                    context="{'group_by': 'inventor_id'}"/>
-        </group>
-    </search>
+       <filter name="my_ideas" string="My Ideas"
+               domain="[('inventor_id', '=', uid)]"/>
+       <group string="Group By">
+           <filter name="group_by_inventor" string="Inventor"
+                   context="{'group_by': 'inventor_id'}"/>
+       </group>
+   </search>
 
 To use a non-default search view in an action, it should be linked using the
 ``search_view_id`` field of the action record.
@@ -969,33 +958,32 @@ default and behave as booleans (they can only be enabled by default).
 
 .. exercise:: Search views
 
-    #. Add a button to filter the courses for which the current user is the
-       responsible in the course search view. Make it selected by default.
-    #. Add a button to group courses by responsible user.
+   #. Add a button to filter the courses for which the current user is the
+      responsible in the course search view. Make it selected by default.
+   #. Add a button to group courses by responsible user.
 
 Gantt
 -----
 
 .. warning::
-
-    The gantt view requires the web_gantt module which is present in
-    :ref:`the enterprise edition <setup/install/editions>` version.
+   The gantt view requires the web_gantt module which is present in :ref:`the enterprise edition
+   <setup/install/editions>` version.
 
 Horizontal bar charts typically used to show project planning and advancement,
 their root element is ``<gantt>``.
 
 .. code-block:: xml
 
-    <gantt string="Ideas"
-           date_start="invent_date"
-           date_stop="date_finished"
-           progress="progress"
-           default_group_by="inventor_id" />
+   <gantt string="Ideas"
+          date_start="invent_date"
+          date_stop="date_finished"
+          progress="progress"
+          default_group_by="inventor_id" />
 
 .. exercise:: Gantt charts
 
-    Add a Gantt Chart enabling the user to view the sessions scheduling linked
-    to the Open Academy module. The sessions should be grouped by instructor.
+   Add a Gantt Chart enabling the user to view the sessions scheduling linked
+   to the Open Academy module. The sessions should be grouped by instructor.
 
 Graph views
 -----------
@@ -1004,10 +992,9 @@ Graph views allow aggregated overview and analysis of models, their root
 element is ``<graph>``.
 
 .. note::
-    Pivot views (element ``<pivot>``) a multidimensional table, allows the
-    selection of filers and dimensions to get the right aggregated dataset
-    before moving to a more graphical overview. The pivot view shares the same
-    content definition as graph views.
+   Pivot views (element ``<pivot>``) a multidimensional table, allows the selection of filers and
+   dimensions to get the right aggregated dataset before moving to a more graphical overview. The
+   pivot view shares the same content definition as graph views.
 
 Graph views have 4 display modes, the default mode is selected using the
 ``@type`` attribute.
@@ -1033,20 +1020,19 @@ the values:
 
 .. code-block:: xml
 
-    <graph string="Total idea score by Inventor">
-        <field name="inventor_id"/>
-        <field name="score" type="measure"/>
-    </graph>
+   <graph string="Total idea score by Inventor">
+       <field name="inventor_id"/>
+       <field name="score" type="measure"/>
+   </graph>
 
 .. warning::
-
-    Graph views perform aggregations on database values, they do not work
-    with non-stored computed fields.
+   Graph views perform aggregations on database values, they do not work with non-stored computed
+   fields.
 
 .. exercise:: Graph view
 
-    Add a Graph view in the Session object that displays, for each course, the
-    number of attendees under the form of a bar chart.
+   Add a Graph view in the Session object that displays, for each course, the
+   number of attendees under the form of a bar chart.
 
 Kanban
 ------
@@ -1065,8 +1051,8 @@ Kanban views define the structure of each card as a mix of form elements
 
 .. exercise:: Kanban view
 
-    Add a Kanban view that displays sessions grouped by course (columns are
-    thus courses).
+   Add a Kanban view that displays sessions grouped by course (columns are
+   thus courses).
 
 Security
 ========
@@ -1095,22 +1081,22 @@ rights are usually created by a CSV file named after its model:
 
 .. code-block:: text
 
-    id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
-    access_idea_idea,idea.idea,model_idea_idea,base.group_user,1,1,1,0
-    access_idea_vote,idea.vote,model_idea_vote,base.group_user,1,1,1,0
+   id,name,model_id/id,group_id/id,perm_read,perm_write,perm_create,perm_unlink
+   access_idea_idea,idea.idea,model_idea_idea,base.group_user,1,1,1,0
+   access_idea_vote,idea.vote,model_idea_vote,base.group_user,1,1,1,0
 
 .. exercise:: Add access control through the Odoo interface
 
-    Create a new user "John Smith". Then create a group
-    "OpenAcademy / Session Read" with read access to the *Session* model.
+   Create a new user "John Smith". Then create a group
+   "OpenAcademy / Session Read" with read access to the *Session* model.
 
 .. exercise:: Add access control through data files in your module
 
-    Using data files,
+   Using data files,
 
-    * Create a group *OpenAcademy / Manager* with full access to all
-      OpenAcademy models
-    * Make *Session* and *Course* readable by all users
+   * Create a group *OpenAcademy / Manager* with full access to all
+     OpenAcademy models
+   * Make *Session* and *Course* readable by all users
 
 Record rules
 ------------
@@ -1127,23 +1113,23 @@ the same convention as the method :meth:`~odoo.models.Model.write` of the ORM.
 
 .. code-block:: xml
 
-    <record id="delete_cancelled_only" model="ir.rule">
-        <field name="name">Only cancelled leads may be deleted</field>
-        <field name="model_id" ref="crm.model_crm_lead"/>
-        <field name="groups" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
-        <field name="perm_read" eval="0"/>
-        <field name="perm_write" eval="0"/>
-        <field name="perm_create" eval="0"/>
-        <field name="perm_unlink" eval="1" />
-        <field name="domain_force">[('state','=','cancel')]</field>
-    </record>
+   <record id="delete_cancelled_only" model="ir.rule">
+       <field name="name">Only cancelled leads may be deleted</field>
+       <field name="model_id" ref="crm.model_crm_lead"/>
+       <field name="groups" eval="[(4, ref('sales_team.group_sale_manager'))]"/>
+       <field name="perm_read" eval="0"/>
+       <field name="perm_write" eval="0"/>
+       <field name="perm_create" eval="0"/>
+       <field name="perm_unlink" eval="1" />
+       <field name="domain_force">[('state','=','cancel')]</field>
+   </record>
 
 .. exercise:: Record rule
 
-    Add a record rule for the model Course and the group
-    "OpenAcademy / Manager", that restricts ``write`` and ``unlink`` accesses
-    to the responsible of a course. If a course has no responsible, all users
-    of the group must be able to modify it.
+   Add a record rule for the model Course and the group
+   "OpenAcademy / Manager", that restricts ``write`` and ``unlink`` accesses
+   to the responsible of a course. If a course has no responsible, all users
+   of the group must be able to modify it.
 
 .. _howto/module/wizard:
 
@@ -1169,8 +1155,8 @@ session, or for a list of sessions at once.
 
 .. exercise:: Define the wizard
 
-    Create a wizard model with a many2one relationship with the *Session*
-    model and a many2many relationship with the *Partner* model.
+   Create a wizard model with a many2one relationship with the *Session*
+   model and a many2many relationship with the *Partner* model.
 
 Launching wizards
 -----------------
@@ -1188,37 +1174,36 @@ the action is "bound" to.
 
 .. code:: xml
 
-    <record id="launch_the_wizard" model="ir.actions.act_window">
-        <field name="name">Launch the Wizard</field>
-        <field name="res_model">wizard.model.name</field>
-        <field name="view_mode">form</field>
-        <field name="target">new</field>
-        <field name="binding_model_id" ref="model_context_model_ref"/>
-    </record>
+   <record id="launch_the_wizard" model="ir.actions.act_window">
+       <field name="name">Launch the Wizard</field>
+       <field name="res_model">wizard.model.name</field>
+       <field name="view_mode">form</field>
+       <field name="target">new</field>
+       <field name="binding_model_id" ref="model_context_model_ref"/>
+   </record>
 
 .. tip::
-
-    While wizards use regular views and buttons, normally clicking any button in
-    a form would first save the form then close the dialog. Because this is
-    often undesirable in wizards, a special attribute ``special="cancel"`` is
-    available which immediately closes the wizard without saving the form.
+   While wizards use regular views and buttons, normally clicking any button in
+   a form would first save the form then close the dialog. Because this is
+   often undesirable in wizards, a special attribute ``special="cancel"`` is
+   available which immediately closes the wizard without saving the form.
 
 .. exercise:: Launch the wizard
 
-    #. Define a form view for the wizard.
-    #. Add the action to launch it in the context of the *Session* model.
-    #. Define a default value for the session field in the wizard; use the
-       context parameter ``self._context`` to retrieve the current session.
+   #. Define a form view for the wizard.
+   #. Add the action to launch it in the context of the *Session* model.
+   #. Define a default value for the session field in the wizard; use the
+      context parameter ``self._context`` to retrieve the current session.
 
 .. exercise:: Register attendees
 
-    Add buttons to the wizard, and implement the corresponding method for adding
-    the attendees to the given session.
+   Add buttons to the wizard, and implement the corresponding method for adding
+   the attendees to the given session.
 
 .. exercise:: Register attendees to multiple sessions
 
-    Modify the wizard model so that attendees can be registered to multiple
-    sessions.
+   Modify the wizard model so that attendees can be registered to multiple
+   sessions.
 
 Internationalization
 ====================
@@ -1234,21 +1219,20 @@ Translation` without specifying a language), to create the module template POT
 file, and then derive the translated PO files. Many IDE's have plugins or modes
 for editing and merging PO/POT files.
 
-.. tip:: The Portable Object files generated by Odoo are published on
-         `Transifex <https://www.transifex.com/odoo/public/>`__, making it
-         easy to translate the software.
+.. tip::
+   The Portable Object files generated by Odoo are published on `Transifex
+   <https://www.transifex.com/odoo/public/>`_, making it easy to translate the software.
 
 .. code-block:: text
 
-   |- idea/ # The module directory
-      |- i18n/ # Translation files
-         | - idea.pot # Translation Template (exported from Odoo)
-         | - fr.po # French translation
-         | - pt_BR.po # Brazilian Portuguese translation
-         | (...)
+  |- idea/ # The module directory
+     |- i18n/ # Translation files
+        | - idea.pot # Translation Template (exported from Odoo)
+        | - fr.po # French translation
+        | - pt_BR.po # Brazilian Portuguese translation
+        | (...)
 
 .. tip::
-
    By default Odoo's POT export only extracts labels inside XML files or
    inside field definitions in Python code, but any Python string can be
    translated this way by surrounding it with the function :func:`odoo._`
@@ -1276,43 +1260,43 @@ A report is a combination two elements:
 
   .. code-block:: xml
 
-      <record id="account_invoices" model="ir.actions.report">
-          <field name="name">Invoices</field>
-          <field name="model">account.invoice</field>
-          <field name="report_type">qweb-pdf</field>
-          <field name="report_name">account.report_invoice</field>
-          <field name="report_file">account.report_invoice</field>
-          <field name="attachment_use" eval="True"/>
-          <field name="attachment">(object.state in ('open','paid')) and
-              ('INV'+(object.number or '').replace('/','')+'.pdf')</field>
-          <field name="binding_model_id" ref="model_account_invoice"/>
-          <field name="binding_type">report</field>
-      </record>
+     <record id="account_invoices" model="ir.actions.report">
+         <field name="name">Invoices</field>
+         <field name="model">account.invoice</field>
+         <field name="report_type">qweb-pdf</field>
+         <field name="report_name">account.report_invoice</field>
+         <field name="report_file">account.report_invoice</field>
+         <field name="attachment_use" eval="True"/>
+         <field name="attachment">(object.state in ('open','paid')) and
+             ('INV'+(object.number or '').replace('/','')+'.pdf')</field>
+         <field name="binding_model_id" ref="model_account_invoice"/>
+         <field name="binding_type">report</field>
+     </record>
 
   .. tip::
 
-      Because it largerly a standard action, as with :ref:`howto/module/wizard`
-      it is generally useful to add the report as a *contextual item* on the
-      tree and / or form views of the model being reported on via the
-      ``binding_model_id`` field.
+     Because it largerly a standard action, as with :ref:`howto/module/wizard`
+     it is generally useful to add the report as a *contextual item* on the
+     tree and / or form views of the model being reported on via the
+     ``binding_model_id`` field.
 
-      Here we are also using ``binding_type`` in order for the report to be in
-      the *report* contextual menu rather than the *action* one. There is no
-      technical difference but putting elements in the right place helps users.
+     Here we are also using ``binding_type`` in order for the report to be in
+     the *report* contextual menu rather than the *action* one. There is no
+     technical difference but putting elements in the right place helps users.
 
 * A standard :ref:`QWeb view <reference/views/qweb>` for the actual report:
 
   .. code-block:: xml
 
-    <t t-call="web.html_container">
-        <t t-foreach="docs" t-as="o">
-            <t t-call="web.external_layout">
-                <div class="page">
-                    <h2>Report title</h2>
-                </div>
-            </t>
-        </t>
-    </t>
+     <t t-call="web.html_container">
+         <t t-foreach="docs" t-as="o">
+             <t t-call="web.external_layout">
+                 <div class="page">
+                     <h2>Report title</h2>
+                 </div>
+             </t>
+         </t>
+     </t>
 
   the standard rendering context provides a number of elements, the most
   important being:
@@ -1333,25 +1317,25 @@ http://localhost:8069/report/pdf/account.report_invoice/1.
 
 .. danger::
 
-    If it appears that your PDF report is missing the styles (i.e. the text
-    appears but the style/layout is different from the html version), probably
-    your wkhtmltopdf_ process cannot reach your web server to download them.
+   If it appears that your PDF report is missing the styles (i.e. the text
+   appears but the style/layout is different from the html version), probably
+   your wkhtmltopdf_ process cannot reach your web server to download them.
 
-    If you check your server logs and see that the CSS styles are not being
-    downloaded when generating a PDF report, most surely this is the problem.
+   If you check your server logs and see that the CSS styles are not being
+   downloaded when generating a PDF report, most surely this is the problem.
 
-    The wkhtmltopdf_ process will use the ``web.base.url`` system parameter as
-    the *root path* to all linked files, but this parameter is automatically
-    updated each time the Administrator is logged in. If your server resides
-    behind some kind of proxy, that could not be reachable. You can fix this by
-    adding one of these system parameters:
+   The wkhtmltopdf_ process will use the ``web.base.url`` system parameter as
+   the *root path* to all linked files, but this parameter is automatically
+   updated each time the Administrator is logged in. If your server resides
+   behind some kind of proxy, that could not be reachable. You can fix this by
+   adding one of these system parameters:
 
-    - ``report.url``, pointing to an URL reachable from your server
-      (probably ``http://localhost:8069`` or something similar). It will be
-      used for this particular purpose only.
+   - ``report.url``, pointing to an URL reachable from your server
+     (probably ``http://localhost:8069`` or something similar). It will be
+     used for this particular purpose only.
 
-    - ``web.base.url.freeze``, when set to ``True``, will stop the
-      automatic updates to ``web.base.url``.
+   - ``web.base.url.freeze``, when set to ``True``, will stop the
+     automatic updates to ``web.base.url``.
 
 .. exercise:: Create a report for the Session model
 

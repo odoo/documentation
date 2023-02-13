@@ -6,7 +6,7 @@ Installing Asterisk server
 ==========================
 
 Dependencies
-~~~~~~~~~~~~
+------------
 
 Before installing Asterisk you need to install the following dependencies:
 
@@ -32,7 +32,8 @@ In order to install libsrtp, follow the instructions below:
     ./configure CFLAGS=-fPIC --prefix=/usr/local/lib
     make && make install
 
-You also need to install PJSIP, you can download the source `here <http://www.pjsip.org/download.htm>`_. Once the source directory is extracted:
+You also need to install PJSIP, you can download the source `here
+<http://www.pjsip.org/download.htm>`_. Once the source directory is extracted:
 
 - **Change to the pjproject source directory:**
 
@@ -83,9 +84,10 @@ You also need to install PJSIP, you can download the source `here <http://www.pj
     libpj.so (libc6,x86-64) => /usr/lib/libpj.so
 
 Asterisk
-~~~~~~~~
+--------
 
-- In order to install Asterisk 13.7.0, you can download the source directly `there <http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz>`_.
+- In order to install Asterisk 13.7.0, you can download the source directly `there
+  <http://downloads.asterisk.org/pub/telephony/asterisk/old-releases/asterisk-13.7.0.tar.gz>`_.
 
 - Extract Asterisk:
 
@@ -111,7 +113,9 @@ Asterisk
 
     make menuselect
 
-- In the menuselect, go to the resources option and ensure that res_srtp is enabled. If there are 3 x’s next to res_srtp, there is a problem with the srtp library and you must reinstall it. Save the configuration (press x). You should also see stars in front of the res_pjsip lines.
+- In the menuselect, go to the resources option and ensure that res_srtp is enabled. If there are
+  3 x’s next to res_srtp, there is a problem with the srtp library and you must reinstall it. Save
+  the configuration (press x). You should also see stars in front of the res_pjsip lines.
 
 - Compile and install Asterisk:
 
@@ -119,10 +123,11 @@ Asterisk
 
     make && make install
 
-- If you need the sample configs you can run 'make samples' to install the sample configs. If you need to install the Asterisk startup script you can run 'make config'.
+- If you need the sample configs you can run 'make samples' to install the sample configs. If you
+  need to install the Asterisk startup script you can run 'make config'.
 
 DTLS Certificates
-~~~~~~~~~~~~~~~~~
+-----------------
 
 - After you need to setup the DTLS certificates.
 
@@ -136,7 +141,8 @@ DTLS Certificates
 
     cd /asterisk*/contrib/scripts
 
-- Create the DTLS certificates (replace pbx.mycompany.com with your ip address or dns name, replace My Super Company with your company name):
+- Create the DTLS certificates (replace pbx.mycompany.com with your ip address or dns name, replace
+  My Super Company with your company name):
 
 .. code-block:: console
 
@@ -145,7 +151,9 @@ DTLS Certificates
 Configure Asterisk server
 =========================
 
-For WebRTC, a lot of the settings that are needed MUST be in the peer settings. The global settings do not flow down into the peer settings very well. By default, Asterisk config files are located in /etc/asterisk/. Start by editing http.conf and make sure that the following lines are uncommented:
+For WebRTC, a lot of the settings that are needed MUST be in the peer settings. The global settings
+do not flow down into the peer settings very well. By default, Asterisk config files are located in
+/etc/asterisk/. Start by editing http.conf and make sure that the following lines are uncommented:
 
 .. code-block:: console
 
@@ -155,7 +163,10 @@ For WebRTC, a lot of the settings that are needed MUST be in the peer settings. 
     bindaddr=127.0.0.1 ; Replace this with your IP address
     bindport=8088 ; Replace this with the port you want to listen on
 
-Next, edit sip.conf. The WebRTC peer requires encryption, avpf, and icesupport to be enabled. In most cases, directmedia should be disabled. Also under the WebRTC client, the transport needs to be listed as ‘ws’ to allow websocket connections. All of these config lines should be under the peer itself; setting these config lines globally might not work:
+Next, edit sip.conf. The WebRTC peer requires encryption, avpf, and icesupport to be enabled. In
+most cases, directmedia should be disabled. Also under the WebRTC client, the transport needs to be
+listed as ‘ws’ to allow websocket connections. All of these config lines should be under the peer
+itself; setting these config lines globally might not work:
 
 .. code-block:: console
 
@@ -207,11 +218,13 @@ In Odoo, the configuration should be done in the user's preferences.
 .. image:: asterisk/voip_config01.png
   :align: center
 
-- The SIP Login/Browser's Extension is the number you configured previously in the sip.conf file (in our example: 1060).
+- The SIP Login/Browser's Extension is the number you configured previously in the sip.conf file (in
+  our example: 1060).
 
 - The SIP Password is the secret you chose in the sip.conf file.
 
-- The extension of your office's phone is not a required field but it is used if you want to transfer your call from Odoo to an external phone also configured in the sip.conf file.
+- The extension of your office's phone is not a required field but it is used if you want to
+  transfer your call from Odoo to an external phone also configured in the sip.conf file.
 
 
 The configuration should also be done in the General Settings under the "Integrations" section.
@@ -221,4 +234,5 @@ The configuration should also be done in the General Settings under the "Integra
 
 - The PBX Server IP should be the same as the IP you define in the http.conf file.
 
-- The WebSocket should be: ws://localhost:XXXX/ws where "localhost" needs to be the same as the IP defined previously and "XXXX" needs to be the port defined in the http.conf file.
+- The WebSocket should be: ws://localhost:XXXX/ws where "localhost" needs to be the same as the IP
+  defined previously and "XXXX" needs to be the port defined in the http.conf file.
