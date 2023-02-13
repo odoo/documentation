@@ -203,7 +203,7 @@ template is passed more than one record, it can produce one PDF report for all t
 Using the Print menu in the list view with multiple records selected will demonstrate this.
 
 Make a Report
----------------
+-------------
 
 Finally, you now know where to create your files and how the content of the files should look. Happy report making!
 

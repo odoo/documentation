@@ -53,7 +53,7 @@ For every Trigger option, **conditions** can be applied, such as:
 - *Send SMS Text Message*: sends an :doc:`SMS </applications/marketing/sms_marketing/pricing/pricing_and_faq>`.
 
 Example
-~~~~~~~
+=======
 
 This is the process of which the update of the *Email* field on the Lead/Opportunity *Model*, with a
 *Trigger Condition* set to *On Update*, goes through:

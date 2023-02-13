@@ -1,8 +1,8 @@
 :code-column:
 
-===============
+===========
 Extract API
-===============
+===========
 
 Odoo provides a service allowing you to automate the processing of your invoices. The service scans your document using an Optical
 Character Recognition (OCR) engine and then uses AI-based algorithms to extract the fields of interest such as the total, the due date, or
@@ -15,6 +15,7 @@ allows you to integrate our service directly into your own projects.
 
 Invoices
 ========
+
 The extract API use the JSON-RPC2_ protocol. The diffent routes are located at the following address: **https://iap-extract.odoo.com**.
 
 Expected successful flow
@@ -36,14 +37,15 @@ Routes
 .. _webservices/extract_api/invoice_parse:
 
 ``/iap/invoice_extract/parse``
-''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Description
-^^^^^^^^^^^
+***********
+
 Request a processing of the document from the OCR. The route will return a `document_id` you can use to obtain the result of your request.
 
 Request Body
-^^^^^^^^^^^^
+************
 
 ``jsonrpc`` (required)
     Must be exactly “2.0”.
@@ -97,7 +99,7 @@ Request Body
    }
 
 Response
-^^^^^^^^
+********
 
 ``jsonrpc``
     A string specifying the version of the JSON-RPC protocol. It will be “2.0”.
@@ -139,14 +141,15 @@ Response
 .. _webservices/extract_api/invoice_get_results:
 
 ``/iap/invoice_extract/get_results``
-''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Description
-^^^^^^^^^^^
+***********
+
 Request the results of the documents ids obtained with the :ref:`/parse <webservices/extract_api/invoice_parse>` route. Can either return the results or a "request pending" message.
 
 Request Body
-^^^^^^^^^^^^
+************
 
 ``jsonrpc`` (required)
     |SAME_AS_PARSE|
@@ -174,7 +177,7 @@ Request Body
    }
 
 Response
-^^^^^^^^
+********
 
 ``jsonrpc``
     |SAME_AS_PARSE|
@@ -231,7 +234,7 @@ Response
 .. _webservices/extract_api/invoice_get_results/feature_result:
 
 ``feature_result``
-''''''''''''''''''
+~~~~~~~~~~~~~~~~~~
 
 Each field of interest we want to extract from the invoice such as the total or the due date are also called features. An exhaustive list of all the extracted features can be found in the table below.
 
@@ -252,7 +255,7 @@ For each feature, we return a list of candidates and we spotlight the candidate 
 
 
 ``candidate``
-'''''''''''''
+~~~~~~~~~~~~~
 
 For each candidate we give its representation and position in the document. Candidates are sorted by decreasing order of suitability.
 
@@ -326,7 +329,7 @@ For each candidate we give its representation and position in the document. Cand
 +-------------------------+------------------------------------------------------------------------------------+
 
 ``feature_result`` for the ``invoice_lines`` feature
-''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 It follows a more specific structure. It is basically a list of dictionaries where each dictionary represents an invoice line. Each value follows
 a :ref:`webservices/extract_api/invoice_get_results/feature_result` structure.
@@ -353,15 +356,16 @@ a :ref:`webservices/extract_api/invoice_get_results/feature_result` structure.
 .. _webservices/extract_api/invoice_validate:
 
 ``/iap/invoice_extract/validate``
-'''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Description
-^^^^^^^^^^^
+***********
+
 Route that validates the different features of an invoice. The validation step is an optional step but is strongly recommended. By telling the system if it were right or wrong for each
 feature you give an important feedback. It has no direct impact but it helps the system to greatly improve its prediction accuracy for the invoices you will send in the future.
 
 Request Body
-^^^^^^^^^^^^
+************
 
 ``jsonrpc`` (required)
     |SAME_AS_PARSE|
@@ -395,7 +399,7 @@ Request Body
    }
 
 ``validation``
-''''''''''''''
+~~~~~~~~~~~~~~
 
 A **validation** for a given feature is a dictionary containing the textual representation of the expected value for this given feature.
 This format apply for all the features except for ``global_taxes`` and ``invoice_lines`` which have more complex validation format.
@@ -406,7 +410,7 @@ This format apply for all the features except for ``global_taxes`` and ``invoice
    { "content": string|float }
 
 validation for ``global_taxes``
-'''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **content** is a list of dictionaries. Each dictionary represents a tax:
 
@@ -433,7 +437,7 @@ validation for ``global_taxes``
    ]}
 
 validation for ``invoice_lines``
-''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 **lines** is a list of dictionaries. Each dictionary represents an invoice line. The dictionary keys speak for themselves.
 

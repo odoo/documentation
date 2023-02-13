@@ -1,4 +1,3 @@
-
 .. _reference/orm:
 
 =======
@@ -150,7 +149,7 @@ Advanced Fields
 .. _reference/fields/date:
 
 Date(time) Fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 :class:`Dates <odoo.fields.Date>` and :class:`Datetimes <odoo.fields.Datetime>`
 are very important fields in any kind of business application.
@@ -211,7 +210,7 @@ These helpers are also available by importing `odoo.tools.date_utils`.
 .. _reference/fields/relational:
 
 Relational Fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Many2one()
 
@@ -220,7 +219,7 @@ Relational Fields
 .. autoclass:: Many2many()
 
 Pseudo-relational fields
-''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. autoclass:: Reference()
 
@@ -229,7 +228,7 @@ Pseudo-relational fields
 .. _reference/fields/compute:
 
 Computed Fields
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 Fields can be computed (instead of read straight from the database) using the
 ``compute`` parameter. **It must assign the computed value to the field**. If
@@ -320,7 +319,7 @@ it uses the values of other *fields*, it should specify those fields using
 .. _reference/fields/related:
 
 Related fields
-''''''''''''''
+~~~~~~~~~~~~~~
 
 A special case of computed fields are *related* (proxy) fields, which provide
 the value of a sub-field on the current record. They are defined by setting
@@ -400,7 +399,7 @@ Automatic fields
 .. _reference/fields/automatic/log_access:
 
 Access Log fields
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 These fields are automatically set and updated if
 :attr:`~odoo.models.BaseModel._log_access` is enabled. It can be
@@ -456,10 +455,10 @@ behavior is desired:
   :class:`~odoo.fields.Boolean`
 
 .. .. attribute:: sequence
-..
+
 ..   Alterable ordering criteria, allows drag-and-drop reordering of models
 ..   in list views.
-..
+
 ..   :class:`~odoo.fields.Integer`
 
 .. attribute:: state
@@ -764,7 +763,7 @@ Search/Read
 .. automethod:: Model.read_group
 
 Fields/Views
-''''''''''''
+~~~~~~~~~~~~
 
 .. automethod:: Model.fields_get
 
@@ -773,7 +772,7 @@ Fields/Views
 .. _reference/orm/domains:
 
 Search domains
-''''''''''''''
+~~~~~~~~~~~~~~
 
 A domain is a list of criteria, each criterion being a triple (either a
 ``list`` or a ``tuple``) of ``(field_name, operator, value)`` where:
@@ -935,14 +934,14 @@ Recordsets therefore provide the following operations returning recordsets thems
 (when possible):
 
 Filter
-''''''
+~~~~~~
 
 .. automethod:: Model.filtered
 
 .. automethod:: Model.filtered_domain
 
 Map
-'''
+~~~
 
 .. automethod:: Model.mapped
 
@@ -957,7 +956,7 @@ Map
         records.partner_id.mapped('name')  # == records.mapped('partner_id.name')
 
 Sort
-''''
+~~~~
 
 .. automethod:: Model.sorted
 

@@ -22,13 +22,11 @@ requires the next modules:
    required for the Integration with Carvajal and generate the
    electronic invoice, based on the DIAN legal requirements.
 
-
 Workflow
 ========
 
 .. image:: colombia/colombia01.png
    :align: center
-
 
 Configuration
 =============
@@ -41,7 +39,6 @@ filter and search for "Colombia". Then click on *Install* for the first two modu
 
 .. image:: colombia/colombia02.png
    :align: center
-
 
 Configure credentials for Carvajal web service
 ----------------------------------------------
@@ -72,7 +69,6 @@ CSC is the default for new databases.
 Once that Odoo and Carvajal are fully configured and ready for
 production the testing environment can be disabled.
 
-
 Configure your report data
 --------------------------
 
@@ -86,7 +82,6 @@ look for the *Colombian Electronic Invoice* section.
 .. image:: colombia/colombia04.png
    :align: center
 
-
 Configure data required in the XML
 ----------------------------------
 
@@ -94,7 +89,7 @@ Partner
 ~~~~~~~
 
 Identification
-^^^^^^^^^^^^^^
+**************
 
 As part of the Colombian Localization, the document types defined by
 the DIAN are now available on the Partner form. Colombian partners
@@ -108,9 +103,8 @@ have to have their identification number and document type set:
    will split this number when the data to the third party vendor is
    sent.
 
-
 Fiscal structure (RUT)
-^^^^^^^^^^^^^^^^^^^^^^
+**********************
 
 The partner's responsibility codes (section 53 in the RUT document)
 are included as part of the electronic invoice module given that is
@@ -124,7 +118,6 @@ Purchase Tab --> Fiscal Information`
 
 Additionally two booleans fields were added in order to specify the
 fiscal regimen of the partner.
-
 
 Taxes
 ~~~~~
@@ -142,7 +135,6 @@ to correctly display taxes in the invoice PDF.
 
 .. image:: colombia/colombia08.png
    :align: center
-
 
 Journals
 ~~~~~~~~
@@ -162,7 +154,6 @@ should be configured and synchronized with the CEN Financiero.
 .. image:: colombia/colombia10.png
    :align: center
 
-
 Users
 ~~~~~
 
@@ -173,7 +164,6 @@ configured:
 .. image:: colombia/colombia11.png
    :align: center
 
-
 Usage and testing
 =================
 
@@ -182,7 +172,6 @@ Invoice
 
 When all your master data and credentials has been configured, it's
 possible to start testing the electronic invoice workflow.
-
 
 Invoice creation
 ~~~~~~~~~~~~~~~~
@@ -206,7 +195,6 @@ There are three types of documents:
   this invoice is added to the ERP, this invoice type should be
   selected.
 
-
 Invoice validation
 ~~~~~~~~~~~~~~~~~~
 
@@ -223,7 +211,6 @@ displayed with the Electronic Invoice status, with the initial value
 
 .. image:: colombia/colombia14.png
    :align: center
-
 
 Reception of legal XML and PDF
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -247,7 +234,6 @@ After this:
 
 - The Electronic Invoice status changes to "Accepted"
 
-
 Common errors
 ~~~~~~~~~~~~~
 
@@ -267,7 +253,6 @@ button:
 
 .. image:: colombia/colombia19.png
    :align: center
-
 
 Additional use cases
 --------------------

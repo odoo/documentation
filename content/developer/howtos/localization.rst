@@ -1,18 +1,17 @@
-
 =======================
 Accounting Localization
 =======================
 
 .. warning::
-
-    This tutorial requires knowledges about how to build a module in Odoo (see
-    :doc:`/developer/howtos/backend`).
+   This tutorial requires knowledges about how to build a module in Odoo (see
+   :doc:`/developer/howtos/backend`).
 
 Building a localization module
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+==============================
 
-When installing the ``accounting`` module, the localization module corresponding to the country code of the company is installed automatically.
-In case of no country code set or no localization module found, the ``l10n_generic_coa`` (US) localization module is installed by default.
+When installing the ``accounting`` module, the localization module corresponding to the country code
+of the company is installed automatically. In case of no country code set or no localization module
+found, the ``l10n_generic_coa`` (US) localization module is installed by default.
 
 For example, ``l10n_be`` will be installed if the company has ``Belgium`` as country.
 
@@ -26,24 +25,27 @@ This behavior is allowed by the presence of a *.xml* file containing the followi
 
 Where ``module.template_xmlid`` is the **fully-qualified** xmlid of the corresponding template.
 
-Usually located in the ``data`` folder, it must be loaded at the very last in the ``__manifest__.py`` file.
+Usually located in the ``data`` folder, it must be loaded at the very last in the
+``__manifest__.py`` file.
 
 .. danger::
 
     If the *.xml* file is missing, the right chart of accounts won't be loaded on time!
 
-
 Configuring my own Chart of Accounts?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=====================================
 
-First of all, before I proceed, we need to talk about the templates. A template is a record that allows replica of itself.
-This mechanism is needed when working in multi-companies. For example, the creation of a new account is done using the ``account.account.template`` model.
-However, each company using this chart of accounts will be linked to a replica having ``account.account`` as model.
-So, the templates are never used directly by the company.
+First of all, before I proceed, we need to talk about the templates. A template is a record that
+allows replica of itself. This mechanism is needed when working in multi-companies. For example, the
+creation of a new account is done using the ``account.account.template`` model. However, each
+company using this chart of accounts will be linked to a replica having ``account.account`` as
+model. So, the templates are never used directly by the company.
 
-Then, when a chart of accounts needs to be installed, all templates dependent of this one will create a replica and link this newly generated record to the company's user.
-It means all such templates must be linked to the chart of accounts in some way. To do so, each one must reference the desired chart of accounts using the ``chart_template_id`` field.
-For this reason, we need to define an instance of the ``account.chart.template`` model before creating its templates.
+Then, when a chart of accounts needs to be installed, all templates dependent of this one will
+create a replica and link this newly generated record to the company's user. It means all such
+templates must be linked to the chart of accounts in some way. To do so, each one must reference the
+desired chart of accounts using the ``chart_template_id`` field. For this reason, we need to define
+an instance of the ``account.chart.template`` model before creating its templates.
 
 .. code-block:: xml
 
@@ -96,15 +98,15 @@ For example, let's take a look to the Belgium chart of accounts.
         <field name="spoken_languages" eval="'nl_BE'"/>
     </record>
 
-Now that the chart of accounts is created, we can focus on the creation of the templates.
-As said previously, each record must reference this record through the ``chart_template_id`` field.
-If not, the template will be ignored. The following sections show in details how to create these templates.
+Now that the chart of accounts is created, we can focus on the creation of the templates. As said
+previously, each record must reference this record through the ``chart_template_id`` field. If not,
+the template will be ignored. The following sections show in details how to create these templates.
 
 Adding a new account to my Chart of Accounts
-############################################
+--------------------------------------------
 
-It's time to create our accounts. It consists to creating records of ``account.account.template`` type.
-Each ``account.account.template`` is able to create an ``account.account`` for each company.
+It's time to create our accounts. It consists to creating records of ``account.account.template``
+type. Each ``account.account.template`` is able to create an ``account.account`` for each company.
 
 .. code-block:: xml
 
@@ -136,23 +138,26 @@ Each ``account.account.template`` is able to create an ``account.account`` for e
 
 Some of the described fields above deserve a bit more explanation.
 
-The ``user_type_id`` field requires a value of type ``account.account.type``.
-Although some additional types could be created in a localization module, we encourage the usage of the existing types in the `account/data/data_account_type.xml <{GITHUB_PATH}/addons/account/data/data_account_type.xml>`_ file.
-The usage of these generic types ensures the generic reports working correctly in addition to those that you could create in your localization module.
+The ``user_type_id`` field requires a value of type ``account.account.type``. Although some
+additional types could be created in a localization module, we encourage the usage of the existing
+types in the `account/data/data_account_type.xml
+<{GITHUB_PATH}/addons/account/data/data_account_type.xml>`_ file. The usage of these generic types
+ensures the generic reports working correctly in addition to those that you could create in your
+localization module.
 
 .. warning::
-
-    Avoid the usage of liquidity ``account.account.type``!
-    Indeed, the bank & cash accounts are created directly at the installation of the localization module and then, are linked to an ``account.journal``.
+   Avoid the usage of liquidity ``account.account.type``! Indeed, the bank & cash accounts are
+   created directly at the installation of the localization module and then, are linked to an
+   ``account.journal``.
 
 .. warning::
+   Only one account of type payable/receivable is enough.
 
-    Only one account of type payable/receivable is enough.
-
-Although the ``tag_ids`` field is optional, this one remains a very powerful feature.
-Indeed, this one allows you to define some tags for your accounts to spread them correctly on your reports.
-For example, suppose you want to create a financial report having multiple lines but you have no way to find a rule to dispatch the accounts according their ``code`` or ``name``.
-The solution is the usage of tags, one for each report line, to spread and aggregate your accounts like you want.
+Although the ``tag_ids`` field is optional, this one remains a very powerful feature. Indeed, this
+one allows you to define some tags for your accounts to spread them correctly on your reports. For
+example, suppose you want to create a financial report having multiple lines but you have no way to
+find a rule to dispatch the accounts according their ``code`` or ``name``. The solution is the usage
+of tags, one for each report line, to spread and aggregate your accounts like you want.
 
 Like any other record, a tag can be created with the following xml structure:
 
@@ -181,11 +186,10 @@ An examples coming from the ``l10n_be`` module:
         </record>
 
 .. warning::
-
-    Don't create too much accounts: 200-300 is enough.
+   Don't create too much accounts: 200-300 is enough.
 
 Adding a new tax to my Chart of Accounts
-########################################
+----------------------------------------
 
 To create a new tax record, you just need to follow the same process as the creation of accounts.
 The only difference being that you must use the ``account.tax.template`` model.
@@ -285,14 +289,12 @@ An example found in the ``l10n_pl`` module:
         <field name="tax_group_id" ref="tax_group_vat_23"/>
     </record>
 
-
 Adding a new fiscal position to my Chart of Accounts
-####################################################
+----------------------------------------------------
 
 .. note::
-
-    If you need more information about what is a fiscal position and how it works in Odoo,
-    please refer to :doc:`/applications/finance/accounting/taxation/taxes/fiscal_positions`.
+   If you need more information about what is a fiscal position and how it works in Odoo, please
+   refer to :doc:`/applications/finance/accounting/taxation/taxes/fiscal_positions`.
 
 To create a new fiscal position, simply use the ``account.fiscal.position.template`` model:
 
@@ -310,10 +312,12 @@ To create a new fiscal position, simply use the ``account.fiscal.position.templa
     </record>
 
 Adding the properties to my Chart of Accounts
-#############################################
+---------------------------------------------
 
-When the whole accounts are generated, you have the possibility to override the newly generated chart of accounts by adding some properties that correspond to default accounts used in certain situations.
-This must be done after the creation of accounts before each one must be linked to the chart of accounts.
+When the whole accounts are generated, you have the possibility to override the newly generated
+chart of accounts by adding some properties that correspond to default accounts used in certain
+situations. This must be done after the creation of accounts before each one must be linked to the
+chart of accounts.
 
 .. code-block:: xml
 
@@ -345,7 +349,8 @@ This must be done after the creation of accounts before each one must be linked 
         </record>
     </odoo>
 
-For example, let's come back to the Belgium PCMN. This chart of accounts is override in this way to add some properties.
+For example, let's come back to the Belgium PCMN. This chart of accounts is override in this way to
+add some properties.
 
 .. code-block:: xml
 
@@ -360,15 +365,15 @@ For example, let's come back to the Belgium PCMN. This chart of accounts is over
     </record>
 
 How to create a new bank operation model?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=========================================
 
 .. note::
+   How a bank operation model works exactly in Odoo? See
+   :doc:`/applications/finance/accounting/bank/reconciliation/reconciliation_models`.
 
-    How a bank operation model works exactly in Odoo? See :doc:`/applications/finance/accounting/bank/reconciliation/reconciliation_models`.
-
-Since ``V10``, a new feature is available in the bank statement reconciliation widget: the bank operation model.
-This allows the user to pre-fill some accounting entries with a single click.
-The creation of an ``account.reconcile.model.template`` record is quite easy:
+Since ``V10``, a new feature is available in the bank statement reconciliation widget: the bank
+operation model. This allows the user to pre-fill some accounting entries with a single click. The
+creation of an ``account.reconcile.model.template`` record is quite easy:
 
 .. code-block:: xml
 
@@ -412,14 +417,17 @@ The creation of an ``account.reconcile.model.template`` record is quite easy:
    </record>
 
 How to create a new dynamic report?
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===================================
 
-If you need to add some reports on your localization, you need to create a new module named **l10n_xx_reports**.
-Furthermore, this additional module must be present in the ``enterprise`` repository and must have at least two dependencies,
-one to bring all the stuff for your localization module and one more, ``account_reports``, to design dynamic reports.
+If you need to add some reports on your localization, you need to create a new module named
+**l10n_xx_reports**. Furthermore, this additional module must be present in the ``enterprise``
+repository and must have at least two dependencies, one to bring all the stuff for your localization
+module and one more, ``account_reports``, to design dynamic reports.
 
 .. code-block:: py
 
     'depends': ['l10n_xx', 'account_reports'],
 
-Once it's done, you can start the creation of your report statements. The documentation is available in the following `slides <https://www.odoo.com/slides/slide/how-to-create-custom-accounting-report-415>`_.
+Once it's done, you can start the creation of your report statements. The documentation is available
+in the following `slides
+<https://www.odoo.com/slides/slide/how-to-create-custom-accounting-report-415>`_.

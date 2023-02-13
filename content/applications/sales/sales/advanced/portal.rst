@@ -1,6 +1,6 @@
--------------
+=============
 Portal access
--------------
+=============
 
 Portal access is given to users who need the ability to view certain documents or information
 within an Odoo database.
@@ -24,7 +24,8 @@ all of the following in Odoo:
    database.
 
 Provide portal access to customers
-----------------------------------
+==================================
+
 From the main Odoo dashboard, select the :guilabel:`Contacts` application. If the contact is not
 yet created in the database, click on the :guilabel:`Create` button, enter the details of the
 contact, and then click :guilabel:`Save`. Otherwise, choose an existing contact, and then click on

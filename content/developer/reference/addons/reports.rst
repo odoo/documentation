@@ -164,6 +164,7 @@ More parameters can be passed as a query string
 
 Useful Remarks
 --------------
+
 * Twitter Bootstrap and FontAwesome classes can be used in your report
   template
 * Local CSS can be put directly in the template
@@ -277,6 +278,7 @@ the template, such as data from additional models:
 
 Custom fonts
 ============
+
 If you want to use custom fonts you will need to add your custom font and the related less/CSS to the ``web.reports_assets_common`` assets bundle.
 Adding your custom font(s) to ``web.assets_common`` or ``web.assets_backend`` will not make your font available in QWeb reports.
 

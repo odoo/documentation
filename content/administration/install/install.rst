@@ -105,13 +105,13 @@ Linux
 -----
 
 Debian/Ubuntu
-'''''''''''''
+~~~~~~~~~~~~~
 
 Odoo {CURRENT_MAJOR_VERSION} 'deb' package currently supports `Debian Buster`_, `Ubuntu 18.04`_ or
 above.
 
 Prepare
-^^^^^^^
+*******
 
 Odoo needs a `PostgreSQL`_ server to run properly. The default configuration for
 the Odoo 'deb' package is to use the PostgreSQL server on the same host as your
@@ -127,7 +127,7 @@ Odoo instance. Execute the following command in order to install the PostgreSQL 
              details on the various versions.
 
 Repository
-^^^^^^^^^^
+**********
 
 Odoo S.A. provides a repository that can be used with  Debian and Ubuntu distributions. It can be
 used to install *Odoo Community Edition* by executing the following commands **as root**:
@@ -143,7 +143,7 @@ You can then use the usual `apt-get upgrade` command to keep your installation u
 At this moment, there is no nightly repository for the Enterprise Edition.
 
 Deb Package
-^^^^^^^^^^^
+***********
 
 Instead of using the repository as described above, the 'deb' packages for both the *Community* and
 *Enterprise* editions can be downloaded from the `official download page <download_>`_.
@@ -179,12 +179,13 @@ and automatically start the server.
                 $ sudo pip3 install num2words
 
 Fedora
-''''''
+~~~~~~
 
 Odoo {CURRENT_MAJOR_VERSION} 'rpm' package supports Fedora 30.
 
 Prepare
-^^^^^^^
+*******
+
 Odoo needs a `PostgreSQL`_ server to run properly. Make sure that the `sudo` command is available
 and well configured and, only then, execute the following command in order to install the PostgreSQL
 server:
@@ -202,7 +203,7 @@ server:
              details on the various versions.
 
 Repository
-^^^^^^^^^^
+**********
 
 Odoo S.A. provides a repository that can be used with the Fedora distributions.
 It can be used to install *Odoo Community Edition* by executing the following
@@ -216,7 +217,7 @@ commands:
     $ sudo systemctl start odoo
 
 RPM package
-^^^^^^^^^^^
+***********
 
 Instead of using the repository as described above, the 'rpm' packages for both the *Community* and
 *Enterprise* editions can be downloaded from the `official download page <download_>`_.
@@ -254,12 +255,12 @@ Windows
 -------
 
 Fetch the sources
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 There are two ways to obtain the source code of Odoo: as a zip **archive** or through **git**.
 
 Archive
-^^^^^^^
+*******
 
 Community Edition:
 
@@ -275,7 +276,7 @@ Enterprise Edition:
 .. _setup/install/source/windows/git:
 
 Git
-^^^
+***
 
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
@@ -310,10 +311,10 @@ on contributing to Odoo source code, choose SSH.
 .. _setup/install/source/windows/prepare:
 
 Prepare
-'''''''
+~~~~~~~
 
 Python
-^^^^^^
+******
 
 Odoo requires Python 3.6 or later to run. Visit `Python's download page <https://www.python.org/downloads/windows/>`_
 to download and install the latest version of Python 3 on your machine.
@@ -335,7 +336,7 @@ sure that **pip** is checked.
               C:\> pip --version
 
 PostgreSQL
-^^^^^^^^^^
+**********
 
 Odoo uses PostgreSQL as database management system. `Download and install PostgreSQL <https://www.postgresql.org/download/windows/>`_
 (supported version: 10.0 and later).
@@ -356,7 +357,7 @@ create a new PostgreSQL user:
       `Yes`.
 
 Dependencies
-^^^^^^^^^^^^
+************
 
 Before installing the dependencies, you must download and install the
 `Build Tools for Visual Studio <https://visualstudio.microsoft.com/downloads/#build-tools-for-visual-studio-2019>`_.
@@ -396,7 +397,7 @@ needed:
    (typically: `C:\\Users\\<user>\\AppData\\Roaming\\npm\\`).
 
 Running Odoo
-''''''''''''
+~~~~~~~~~~~~
 
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the
 command-line interface of the server. It is located at the root of the Odoo Community directory.
@@ -444,12 +445,12 @@ Linux
 -----
 
 Fetch the sources
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 There are two ways to obtain the source code of Odoo: as a zip **archive** or through **git**.
 
 Archive
-^^^^^^^
+*******
 
 Community Edition:
 
@@ -465,7 +466,7 @@ Enterprise Edition:
 .. _setup/install/source/linux/git:
 
 Git
-^^^
+***
 
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
@@ -500,10 +501,10 @@ on contributing to Odoo source code, choose SSH.
 .. _setup/install/source/linux/prepare:
 
 Prepare
-'''''''
+~~~~~~~
 
 Python
-^^^^^^
+******
 
 Odoo requires Python 3.6 or later to run. Use your package manager to download and install Python 3
 on your machine if it is not already done.
@@ -522,7 +523,7 @@ on your machine if it is not already done.
               $ pip3 --version
 
 PostgreSQL
-^^^^^^^^^^
+**********
 
 Odoo uses PostgreSQL as database management system. Use your package manager to download and install
 PostgreSQL (supported version: 10.0 and later).
@@ -545,7 +546,7 @@ create a new PostgreSQL user:
           connect to the database without password.
 
 Dependencies
-^^^^^^^^^^^^
+************
 
 For libraries using native code, it is necessary to install development tools and native
 dependencies before the Python dependencies of Odoo. They are available in `-dev` or `-devel`
@@ -590,7 +591,7 @@ needed:
        $ sudo npm install -g rtlcss
 
 Running Odoo
-''''''''''''
+~~~~~~~~~~~~
 
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the
 command-line interface of the server. It is located at the root of the Odoo Community directory.
@@ -639,12 +640,12 @@ Mac OS
 ------
 
 Fetch the sources
-'''''''''''''''''
+~~~~~~~~~~~~~~~~~
 
 There are two ways to obtain the source code of Odoo: as a zip **archive** or through **git**.
 
 Archive
-^^^^^^^
+*******
 
 Community Edition:
 
@@ -660,7 +661,7 @@ Enterprise Edition:
 .. _setup/install/source/mac_os/git:
 
 Git
-^^^
+***
 
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
@@ -695,10 +696,10 @@ on contributing to Odoo source code, choose SSH.
 .. _setup/install/source/mac_os/prepare:
 
 Prepare
-'''''''
+~~~~~~~
 
 Python
-^^^^^^
+******
 
 Odoo requires Python 3.6 or later to run. Use your preferred package manager (homebrew_, macports_)
 to download and install Python 3 on your machine if it is not already done.
@@ -717,7 +718,7 @@ to download and install Python 3 on your machine if it is not already done.
               $ pip3 --version
 
 PostgreSQL
-^^^^^^^^^^
+**********
 
 Odoo uses PostgreSQL as database management system. Use `postgres.app <https://postgresapp.com>`_
 to download and install PostgreSQL (supported version: 10.0 and later).
@@ -739,7 +740,7 @@ create a new PostgreSQL user:
           connect to the database without password.
 
 Dependencies
-^^^^^^^^^^^^
+************
 
 Odoo dependencies are listed in the `requirements.txt` file located at the root of the Odoo
 community directory.
@@ -783,7 +784,7 @@ needed:
        $ sudo npm install -g rtlcss
 
 Running Odoo
-''''''''''''
+~~~~~~~~~~~~
 
 Once all dependencies are set up, Odoo can be launched by running `odoo-bin`, the
 command-line interface of the server. It is located at the root of the Odoo Community directory.
