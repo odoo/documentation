@@ -5,7 +5,7 @@ Changelog
 =========
 
 Odoo version 16.0
-========================
+=================
 
 - Translations for translated fields are stored as JSONB values with
   `#97692 <https://github.com/odoo/odoo/pull/97692>`_

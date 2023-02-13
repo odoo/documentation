@@ -1,8 +1,8 @@
 :nosearch:
 
-=================
+=============
 Collect taxes
-=================
+=============
 
 .. toctree::
    :titlesonly:

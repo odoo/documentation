@@ -18,18 +18,18 @@ Follow the steps to connect your IoT Box.
    :align: center
 
 Ethernet Connection
-~~~~~~~~~~~~~~~~~~~
+===================
 
-1. Connect to the IoT Box all the devices that have to be connected with
+#. Connect to the IoT Box all the devices that have to be connected with
    cables (ethernet, usb devices, etc.).
 
-2. Power on the IoT Box.
+#. Power on the IoT Box.
 
-3. Read the Pairing Code from a screen or a receipt printer connected to the IoT Box.
+#. Read the Pairing Code from a screen or a receipt printer connected to the IoT Box.
 
    .. image:: connect/connect04.png
 
-4. Input the Pairing Code and click on the Pair button.
+#. Input the Pairing Code and click on the Pair button.
 
 .. note::
    Recent changes in modern web browsers forced us to modify the connection wizard.
@@ -37,20 +37,20 @@ Ethernet Connection
    ``iot_pairing`` module is installed.
 
 WiFi Connection
-~~~~~~~~~~~~~~~
+===============
 
-1. Power on the IoT Box
+#. Power on the IoT Box
 
-2. Copy the token
+#. Copy the token
 
    .. image:: connect/connect05.png
 
-3. Connect to the IoT Box WiFi Network (make sure there is no ethernet
+#. Connect to the IoT Box WiFi Network (make sure there is no ethernet
    cable plugged in your computer).
 
    .. image:: connect/connect06.png
 
-4. You will be redirected to the IoT Box Homepage (if it doesn't work,
+#. You will be redirected to the IoT Box Homepage (if it doesn't work,
    connect to the IP address of the box). Give a name to your IoT Box (not
    required) and paste the token, then click on next.
 
@@ -63,7 +63,7 @@ WiFi Connection
       should become
       **http://375228-saas-11-5-iot-f3f920-all.runbot16.odoo.com\|4957098401**).
 
-5. Choose the WiFi network you want to connect with (enter the password
+#. Choose the WiFi network you want to connect with (enter the password
    if there is one) and click on Submit. Wait a few seconds before being
    redirected to your database.
 
@@ -75,7 +75,7 @@ You should now see the IoT Box.
    :align: center
 
 IoT Box Schema
-~~~~~~~~~~~~~~
+==============
 
 .. image:: connect/connect10.png
    :align: center

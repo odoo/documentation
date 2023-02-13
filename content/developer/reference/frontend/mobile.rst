@@ -1,9 +1,8 @@
-
 .. _reference/mobile:
 
-==================
+=================
 Mobile JavaScript
-==================
+=================
 
 Introduction
 ============
@@ -11,15 +10,16 @@ Introduction
 In Odoo 10.0 we released a mobile app which allows you to access all **Odoo apps**
 (even your customized modules).
 
-The application is a combination of **Odoo Web** and **Native Mobile
-components**. In other words it is a Odoo Web instance loaded inside a native, mobile, WebView container.
+The application is a combination of **Odoo Web** and **Native Mobile components**. In other words it
+is a Odoo Web instance loaded inside a native, mobile, WebView container.
 
 This page documents how you can access mobile native components like Camera,
 Vibration, Notification and Toast through Odoo Web (via JavaScript). For this, you
 do not need to be a mobile developer, if you know Odoo JavaScript API you can
 access all available mobile features.
 
-.. warning:: These features work with **Odoo Enterprise 10.0+** only
+.. warning::
+   These features work with **Odoo Enterprise 10.0+** only
 
 How does it work?
 =================
@@ -64,7 +64,7 @@ Methods
    a data JSON dictionary
 
 Show Toast in device
-.....................
+~~~~~~~~~~~~~~~~~~~~
 
 .. js:function:: showToast
 
@@ -80,10 +80,8 @@ remains visible and interactive.
 
 .. image:: mobile/toast.png
 
-
 Vibrating device
-................
-
+~~~~~~~~~~~~~~~~
 
 .. js:function:: vibrate
 
@@ -97,7 +95,7 @@ Vibrate mobile device with given duration.
     mobile.methods.vibrate({'duration': 100});
 
 Show snackbar with action
-.........................
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. js:function:: showSnackBar
 
@@ -122,7 +120,7 @@ displayed at a time.
 .. image:: mobile/snackbar.png
 
 Showing notification
-.....................
+~~~~~~~~~~~~~~~~~~~~
 
 .. js:function:: showNotification
 
@@ -143,7 +141,7 @@ view at any time.
 
 
 Create contact in device
-.........................
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. js:function:: addContact
 
@@ -176,7 +174,7 @@ Create a new device contact with the given contact details.
 .. image:: mobile/mobile_contact_create.png
 
 Scanning barcodes
-..................
+~~~~~~~~~~~~~~~~~
 
 .. js:function:: scanBarcode
 
@@ -198,7 +196,7 @@ The barcode API can read the following barcode formats:
     });
 
 Switching account in device
-...........................
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 .. js:function:: switchAccount
 

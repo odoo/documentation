@@ -1,11 +1,13 @@
-================================================
+===============================================
 Plan onsite interventions from helpdesk tickets
-================================================
+===============================================
+
 The integration with the Helpdesk app lets your helpdesk team manage intervention requests directly.
 Planning field service tasks from tickets speeds up your processes.
 
 Configure the helpdesk team
 ===========================
+
 Go to :menuselection:`Helpdesk --> Configuration --> Helpdesk Teams`. Select a team and enable
 *Onsite Interventions*.
 
