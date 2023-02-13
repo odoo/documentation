@@ -1,7 +1,6 @@
-
-===============
+======
 Report
-===============
+======
 
 .. automodel:: odoo.addons.account.models.account_report.AccountReport
     :main:

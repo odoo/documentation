@@ -60,6 +60,7 @@ section, click :guilabel:`Update info`. From here, fill out the fields:
 
 PEC mail
 --------
+
 The **PEC email** is a specific type of **certified** email providing a legal equivalent to the
 traditional registered mail. The **PEC email** of the main company must be the same as the one
 registered by the **Agenzia delle Entrate** authorities.
