@@ -208,7 +208,7 @@ Odoo is compliant with the **Indian Goods and Services Tax (GST) E-waybill syste
 .. _india/e-waybill-api:
 
 API Registration on your NIC E-waybill web portal
---------------------------------------------------
+-------------------------------------------------
 
 You must register on the **NIC E-waybill** web portal to create your **API credentials**. You need
 these credentials to :ref:`configure your Odoo Accounting app <india/e-waybill-configuration>`.

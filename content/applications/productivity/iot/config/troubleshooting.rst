@@ -6,7 +6,7 @@ IoT Box Connection
 ==================
 
 I can't find the pairing code to connect my IoT Box
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------------
 
 The pairing code should be printed on receipt printers connected to the
 IoT Box and should also be displayed on connected monitors.
@@ -30,7 +30,7 @@ has correctly started, by checking that a fixed green LED is showing next to
 the micro-USB port.
 
 I've connected my IoT Box but it's not showing in my database
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------------------
 
 When you connect an IoT Box to a database, the IoT Box might restart, if
 that is the case, it might take up to one minute before appearing in your
@@ -39,7 +39,7 @@ your database can be reached from the IoT Box and that your server doesn't
 use a multi-database environment.
 
 My IoT Box is connected to my database, but cannot be reached
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-------------------------------------------------------------
 
 Make sure that the IoT Box and the device running the browser are located
 on the same network as the IoT Box cannot be reached from outside the local
@@ -49,7 +49,7 @@ Printer
 =======
 
 My printer is not detected
-~~~~~~~~~~~~~~~~~~~~~~~~~~
+--------------------------
 
 If one of your printers doesn't show up in your devices list, go to the
 IoT Box homepage and make sure that it is listed under *Printers*.
@@ -63,7 +63,7 @@ If your printer is not present on the IoT Box homepage, hit
 not connected properly.
 
 My printer outputs random text
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------
 
 For most printers, the correct driver should be automatically detected
 and selected. However, in some cases, the automatic detection mechanism
@@ -85,7 +85,7 @@ corresponding to your printer.
    printers.
 
 My Zebra Printer doesn't print anything
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------
 
 Zebra printers are quite sensitive to the format of the ZPL code that is
 printed. If nothing comes out of the printer or blank labels are printed,
@@ -97,7 +97,7 @@ Barcode Scanner
 ===============
 
 The characters read by the barcode scanner don't match the barcode
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+------------------------------------------------------------------
 
 By default, we assume that your barcode scanner is configured in US
 QWERTY. This is the default configuration of most barcode readers.
@@ -105,14 +105,14 @@ If your barcode scanner uses a different layout, please go to the
 form view of your device and select the correct one.
 
 Nothing happens when a barcode is scanned
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-----------------------------------------
 
 Make sure that the correct device is selected in your Point of Sale
 configuration and that your barcode is configured to send an ENTER
 character (keycode 28) at the end of every barcode.
 
 The barcode scanner is detected as a keyboard
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------------------
 
 Some poorly built barcode scanners do not advertise themselves as
 barcode scanners but as a USB keyboard instead, and will not be
@@ -128,7 +128,7 @@ Cashdrawer
 ==========
 
 The cashdrawer does not open
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+----------------------------
 
 The cashdrawer should be connected to the printer and the *Cashdrawer*
 checkbox should be ticked in the POS configuration.

@@ -1,6 +1,7 @@
 ============================
 Add EPC QR Codes to invoices
 ============================
+
 European Payments Council Quick Response Code,
 or **EPC QR Code**, are two-dimensional barcodes
 that customers can scan with their **mobile banking
@@ -18,6 +19,7 @@ make for payment issues.
 
 Configuration
 =============
+
 Go to :menuselection:`Accounting --> Configuration --> Settings`
 and activate the **SEPA QR Code** feature.
 
@@ -26,6 +28,7 @@ and activate the **SEPA QR Code** feature.
 
 Configure your Bank Account’s journal
 -------------------------------------
+
 Make sure that your *Bank Account* is correctly configured
 on Odoo with your IBAN and BIC.
 
@@ -38,6 +41,7 @@ To do so, go to :menuselection:`Accounting --> Configuration
 
 Issue Invoices with EPC QR Codes
 ================================
+
 EPC QR Codes are added automatically to your invoices, as
 long as you issue them to customers that are located in a
 country where this feature is available.

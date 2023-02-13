@@ -1,9 +1,8 @@
 .. _reference/testing:
 
-
-===============
+============
 Testing Odoo
-===============
+============
 
 There are many ways to test an application.  In Odoo, we have three kinds of
 tests
@@ -734,7 +733,8 @@ Observing tours in a browser
 There are two ways with different tradeoffs:
 
 ``watch=True``
-''''''''''''''
+**************
+
 When running a tour locally via the test suite, the ``watch=True``
 parameter can be added to the ``browser_js`` or ``start_tour``
 call::
@@ -753,7 +753,8 @@ run inside it.
   - only works if the test / tour can run correctly locally
 
 Run via browser
-'''''''''''''''
+***************
+
 Tours can also be launched via the browser UI, either by calling
 
 .. code-block:: javascript

@@ -3,10 +3,10 @@ Use the IoT Box for the PoS
 ===========================
 
 .. image:: pos/pos01.png
-    :align: center
+   :align: center
 
 Prerequisites
-~~~~~~~~~~~~~
+=============
 
 Before starting, make sure you have the following:
 
@@ -27,7 +27,7 @@ Before starting, make sure you have the following:
    page <https://www.odoo.com/page/point-of-sale-hardware>`__
 
 Set Up
-~~~~~~~
+======
 
 To connect hardware to the PoS, the first step is to connect an IoT Box
 to your database. For this, follow this
@@ -62,6 +62,6 @@ and select the devices you want to use in this Point of Sale. Save the
 changes.
 
 .. image:: pos/pos02.png
-    :align: center
+   :align: center
 
 Set up is done, you can launch a new PoS Session.
