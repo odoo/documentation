@@ -1,6 +1,6 @@
-=================
+===============
 Quality Control
-=================
+===============
 
 Whether you want to control the quality of your production, or the production
 of your subcontractor, before registering the products into your stock, you can

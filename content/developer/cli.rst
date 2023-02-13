@@ -1,4 +1,3 @@
-
 .. _reference/cmdline:
 
 ============================
@@ -371,7 +370,7 @@ Advanced Options
 .. _reference/cmdline/dev:
 
 Developer features
-''''''''''''''''''
+~~~~~~~~~~~~~~~~~~
 
 .. option:: --dev <feature,feature,...,feature>
 
@@ -398,7 +397,7 @@ Developer features
 .. _reference/cmdline/server/http:
 
 HTTP
-''''
+~~~~
 
 .. option:: --no-http
 
@@ -435,7 +434,7 @@ HTTP
 .. _reference/cmdline/server/logging:
 
 Logging
-'''''''
+~~~~~~~
 
 By default, Odoo displays all logging of level_ ``info`` except for workflow
 logging (``warning`` only), and log output is sent to ``stdout``. Various
@@ -530,7 +529,7 @@ customize the amount of logging output.
 .. _reference/cdmline/workers:
 
 Multiprocessing
-'''''''''''''''
+~~~~~~~~~~~~~~~
 
 .. option:: --workers <count>
 
@@ -804,7 +803,7 @@ Processed files
 .. _reference/cmdline/cloc/database-option:
 
 With the :option:`--database` option
-''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Odoo Cloc counts the lines in each file of extra installed modules in a
 given database. In addition, it counts the Python lines of server actions and
@@ -837,12 +836,10 @@ per module. This is specified by the ``cloc_exclude`` entry of the manifest:
 | For more information about the pattern syntax, see `glob
   <https://docs.python.org/3/library/pathlib.html#pathlib.Path.glob>`_.
 
-
-
 .. _reference/cmdline/cloc/path-option:
 
 With the :option:`--path` option
-''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This method works the same as with the :ref:`--database option
 <reference/cmdline/cloc/database-option>` if a manifest file is present in the given
@@ -865,7 +862,7 @@ Some file cannot be counted by Odoo Cloc.
 Those file are reported at the end of the output.
 
 Max file size exceeded
-''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~
 
 Odoo Cloc rejects any file larger than 25MB. Usually, source files are smaller
 than 1 MB. If a file is rejected, it may be:
@@ -874,7 +871,7 @@ than 1 MB. If a file is rejected, it may be:
 - A JavaScript library that should be placed in the :file:`static/lib` folder.
 
 Syntax Error
-''''''''''''
+~~~~~~~~~~~~
 
 Odoo Cloc cannot count the lines of code of a Python file with a syntax problem.
 If an extra module contains such files, they should be fixed to allow the module to

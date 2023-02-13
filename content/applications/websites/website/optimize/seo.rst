@@ -33,10 +33,11 @@ finetune them. Make sure they fit the content of the page, otherwise you will
 be downgraded by search engines.
 
 .. image:: seo/seo01.png
-  :align: center
+   :align: center
 
 Keywords
 --------
+
 In order to write quality content and boost your traffic, Odoo provides
 a ``<keyword>`` finder. Those keywords are the searches you want to head
 towards your website. For each keyword, you see how it is used in the content
@@ -44,7 +45,7 @@ towards your website. For each keyword, you see how it is used in the content
 searches in Google. The more keywords are used the better.
 
 .. image:: seo/seo02.png
-  :align: center
+   :align: center
 
 .. note::
   If your website is in multiple languages, you can use the Promote
@@ -93,7 +94,7 @@ Odoo allows to link all your social network accounts in your website footer.
 All you have to do is to refer all your accounts in your company settings.
 
 .. image:: seo/seo03.png
-  :align: center
+   :align: center
 
 Social Share
 ------------
@@ -103,14 +104,14 @@ By clicking the icon, they are prompted to share the page in their social media
 wall.
 
 .. image:: seo/seo04.png
-  :align: center
+   :align: center
 
 Most social media use a picture of the picture to decorate the share post.
 Odoo uses the website logo by default but you can choose any other image
 of your page in the Promote tool.
 
 .. image:: seo/seo05.png
-  :align: center
+   :align: center
 
 Facebook Page
 -------------
@@ -564,7 +565,7 @@ CMS and eCommerce (Drupal, Wordpress, Magento, Prestashop).
 Here is the slide that summarizes the scalability of Odoo Website & eCommerce.
 
 .. image:: seo/seo13.png
-  :align: center
+   :align: center
 
 Search Engines Files
 ====================
@@ -615,7 +616,7 @@ pages to be displayed in Google using extra information like the price
 and rating of a product:
 
 .. image:: seo/seo14.png
-  :align: center
+   :align: center
 
 robots.txt
 ----------

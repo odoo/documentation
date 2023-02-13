@@ -149,7 +149,7 @@ It remains possible to resequence the invoices but with some restrictions:
    current year without starting over from the beginning.
 
 Invoice digitization with optical character recognition (OCR)
----------------------------------------------------------------
+-------------------------------------------------------------
 
 **Invoice digitization** is the process of automatically encoding traditional paper invoices into
 invoices forms in your accounting.
