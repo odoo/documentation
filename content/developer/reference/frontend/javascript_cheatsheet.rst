@@ -280,12 +280,13 @@ using the view in the kanban arch (a specific example is the helpdesk dashboard)
     need to have a valid arch field.
 
 Promises and asynchronous code
-===============================
+==============================
 
 For a very good and complete introduction to promises, please read this excellent article https://github.com/getify/You-Dont-Know-JS/blob/1st-ed/async%20%26%20performance/ch3.md
 
 Creating new Promises
------------------------
+---------------------
+
 - turn a constant into a promise
     There are 2 static functions on Promise that create a resolved or rejected promise based on a constant:
 
@@ -383,6 +384,7 @@ Creating new Promises
 
 Waiting for Promises
 --------------------
+
 - waiting for a number of Promises
         if you have multiple promises that all need to be waited, you can convert them into a single promise that will be resolved when all the promises are resolved using Promise.all(arrayOfPromises).
 
@@ -486,7 +488,7 @@ Error handling
 
 
 Testing asynchronous code
---------------------------
+-------------------------
 
 - using promises in tests
         In the tests code, we support the latest version of Javascript, including primitives like `async` and `await`. This makes using and waiting for promises very easy.

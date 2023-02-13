@@ -1,6 +1,4 @@
-
 .. _reference/translations:
-
 
 ===================
 Translating Modules
@@ -118,7 +116,8 @@ of global variables.
                 return modules + ['your_module']
 
 Variables
-^^^^^^^^^
+---------
+
 **Don't** the extract may work but it will not translate the text correctly::
 
     _("Scheduled meeting with %s" % invitee.name)
@@ -130,7 +129,8 @@ will fallback on source in case of missing placeholder in the translation)::
 
 
 Blocks
-^^^^^^
+------
+
 **Don't** split your translation in several blocks or multiples lines::
 
     # bad, trailing spaces, blocks out of context
@@ -152,7 +152,8 @@ Blocks
       "this sales order request.")
 
 Plural
-^^^^^^
+------
+
 **Don't** pluralize terms the English-way::
 
     msg = _("You have %(count)s invoice", count=invoice_count)
@@ -167,7 +168,7 @@ Plural
       msg = _("You have one invoice")
 
 Read vs Run Time
-^^^^^^^^^^^^^^^^
+----------------
 
 **Don't** invoke translation lookup at server launch::
 

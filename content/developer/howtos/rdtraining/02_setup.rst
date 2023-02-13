@@ -288,7 +288,7 @@ For JavaScript, we use ESLint and you can find a `configuration file example her
 <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines#use-a-linter>`_.
 
 Administrator tools for PostgreSQL
------------------------------------
+----------------------------------
 
 You can manage your PostgreSQL databases using the command line as demonstrated earlier or using
 a GUI application such as `pgAdmin <https://www.pgadmin.org/download/pgadmin-4-apt/>`_ or `DBeaver
@@ -376,8 +376,6 @@ Here is a list of commands:
 .. option:: q(uit)
 
    Quit the debugger. The program being executed is aborted.
-
-----
 
 Now that your server is running, it's time to start :ref:`writing your own application
 <howto/rdtraining/03_newapp>`!
