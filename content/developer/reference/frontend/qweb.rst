@@ -257,9 +257,8 @@ exists in 3 different forms:
 setting variables
 =================
 
-QWeb allows creating variables from within the template, to memoize a
-computation (to use it multiple times), give a piece of data a clearer name,
-...
+QWeb allows creating variables from within the template, to memoize a computation (to use it
+multiple times), give a piece of data a clearer name, ...
 
 This is done via the ``set`` directive, which takes the name of the variable
 to create. The value to set can be provided in two ways:
@@ -374,7 +373,7 @@ templates:
   will not strip that information from safe content.
 
 Creating safe content using :class:`~markupsafe.Markup`
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See the official documentation for explanations, but the big advantage of
 :class:`~markupsafe.Markup` is that it's a very rich type overrinding
@@ -471,12 +470,12 @@ Exclusive directives
 --------------------
 
 Asset bundles
-'''''''''''''
+~~~~~~~~~~~~~
 
 .. todo:: have fme write these up because I've no idea how they work
 
 "smart records" fields formatting
-'''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``t-field`` directive can only be used when performing field access
 (``a.b``) on a "smart" record (result of the ``browse`` method). It is able
@@ -511,7 +510,7 @@ are also done only once.
 The content can only use the root values.
 
 Why and when to use ``t-cache``?
-''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 This directive is used to speed up the rendering, by caching parts of the final
 document, which may save queries to the database.  However, it should be used
@@ -542,7 +541,7 @@ the template, the rendering of what comes after it could be different than if
 there was no ``t-cache`` directive.
 
 What if there is a ``t-cache`` inside a ``t-cache``?
-''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The parts are cached. Each containing only the string corresponding to its
 rendering. Thus, the ``t-cache`` inside will probably be read less often, its
@@ -550,7 +549,7 @@ cache key will not necessarily be used. If this must be the case, then you may
 need to add a ``t-nocache`` (on the same node or a parent).
 
 What is ``t-nocache`` used for?
-'''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 If you want to cache part of a template with ``t-cache`` but a small piece must
 remain dynamic and be evaluated at cache times. However, the part in
@@ -562,7 +561,7 @@ investigate). However, in the menu, we want the ecommerce cart to be always up
 to date. So there is a ``t-nocache`` to keep this part dynamic.
 
 The base of ``t-cache``
-'''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``t-cache`` directive allows you to store the rendered result of a template.
 The **key expression** (eg 42: ``t-cache="42"``) will be evaluated as a python
@@ -587,7 +586,7 @@ condition. And if a module modifies the record, the write_date being modified,
 the cached value is discarded.
 
 ``t-cache`` and scoped values (``t-set``, ``t-foreach``...)
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Values in ``t-cache`` are scoped, this involves a change in behavior between
 having or not having ``t-cache`` on one of the parent nodes. Don't forget to
@@ -626,7 +625,7 @@ Will render::
 
 
 The base of ``t-nocache``
-'''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The template part contained in a node with a ``t-nocache`` attribute is not
 cached. This content is therefore **dynamic** and is rendered systematically.
@@ -655,7 +654,7 @@ Here the ``<i>`` tag that contains the container will always be rendered. While
 the rest is as a single string in the cache.
 
 ``t-nocache`` and scoped root values (``t-set``, ``t-foreach``...)
-''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The contents of the ``t-nocache`` tag can be used for documentation and to
 explain why the directive is added.
@@ -697,7 +696,7 @@ the rest is as a single string in the cache. The counter is not updated by the
 ``t-set`` out of the ``t-nocache``
 
 ``t-nocache-*`` add some primitive values in the cache
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 In order to be able to use values generated in the template, it is possible to
 cache them. The directive is used as ``t-nocache-*="expr"`` where ``*`` is the
@@ -725,7 +724,7 @@ Helpers
 -------
 
 Request-based
-'''''''''''''
+~~~~~~~~~~~~~
 
 Most Python-side uses of QWeb are in controllers (and during HTTP requests),
 in which case templates stored in the database (as
@@ -742,7 +741,7 @@ This automatically creates a :class:`~odoo.http.Response` object which can
 be returned from the controller (or further customized to suit).
 
 View-based
-''''''''''
+~~~~~~~~~~
 
 At a deeper level than the previous helper is the ``_render`` method on
 ``ir.qweb`` (use the datable) and the public module method ``render``
@@ -808,7 +807,7 @@ Exclusive directives
 --------------------
 
 Defining templates
-''''''''''''''''''
+~~~~~~~~~~~~~~~~~~
 
 The ``t-name`` directive can only be placed at the top-level of a template
 file (direct children to the document root)::
@@ -829,7 +828,7 @@ names to indicate hierarchical relationships.
 .. _reference/qweb/template_inheritance:
 
 Template inheritance
-''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~
 
 Template inheritance is used to either:
  - Alter existing templates in-place, e.g. to add information to templates
@@ -866,7 +865,7 @@ Extension inheritance (in-place transformation)::
     </t>
 
 Old inheritance mechanism (deprecated)
-''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Template inheritance is performed via the ``t-extend`` directive which takes
 the name of the template to alter as parameter.

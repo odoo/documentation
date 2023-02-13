@@ -28,12 +28,9 @@ From common CMS to Odoo
 -----------------------
 
 .. note::
-
    If you always think and work in the same way, you’ll probably get the same results. If you want something completely new,  then try something different.
 
-..
-
-    Where is my header.php file?
+**Where is my header.php file?**
 
 This is usually the first question from a web designer used to working with Wordpress or Joomla and coming to Odoo for the first time.
 
@@ -183,7 +180,7 @@ Keep reading the tutorial to learn to how properly extend it with your own code.
 
 
 Create a theme module
-======================
+=====================
 
 Odoo’s themes are packaged like modules. Even if you are designing a very simple website for your company or client, you need to package the theme like an Odoo module.
 
@@ -808,7 +805,7 @@ Options allow publishers to edit a snippet’s appearance using the Website Buil
 Using Website Builder functionalities, you can create snippet options easily and automatically add them to the UI.
 
 Options group properties
--------------------------
+------------------------
 
 Options are wrapped in groups. Groups can have properties that define how the included options will interact with the user interface.
 
@@ -822,7 +819,7 @@ Options are wrapped in groups. Groups can have properties that define how the in
   Defines the list of elements that the snippet can be dropped beside.
 
 Default option methods
------------------------
+----------------------
 
 Options apply standard CSS classes to the snippet. Depending on the method that you choose, the UI will behave differently.
 
@@ -1100,11 +1097,12 @@ Describe your page
 ------------------
 
 Define keywords
-'''''''''''''''
+~~~~~~~~~~~~~~~
+
 You should use appropriate, relevant keywords and synonyms for those keywords. You can define them for each page using the built-in “Promote” function found in the bar at the top.
 
 Define a title and a description
-''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Define them using the “Promote” function. Keep your page titles short and include the main keyword phrase for the page.
 Good titles evoke an emotional response, ask a question or promise something.
