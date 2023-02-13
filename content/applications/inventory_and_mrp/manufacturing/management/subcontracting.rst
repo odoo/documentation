@@ -195,7 +195,7 @@ From the location form, you are then able to access the Current Stock.
 
 
 Manual Replenishment
---------------------------------
+--------------------
 
 You can also choose to replenish your subcontractors manually.
 

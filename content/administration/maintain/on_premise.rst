@@ -19,12 +19,12 @@ If you are unable to register your database, you will likely encounter this
 message:
 
 .. image:: on_premise/error_message_sub_code.png
-    :align: center
-    :alt: Something went wrong while registering your database,
-          you can try again or contact Odoo Help
+   :align: center
+   :alt: Something went wrong while registering your database, you can try again or contact Odoo
+         Help
 
 Solutions
-'''''''''
+~~~~~~~~~
 
 * Do you have a valid Enterprise subscription?
 
@@ -42,15 +42,13 @@ Solutions
     <https://accounts.odoo.com/my/subscription>`__ with the button "Unlink database"
 
     .. image:: on_premise/unlink_single_db.png
-        :align: center
-
+       :align: center
 
     A confirmation message will appear; make sure this is the correct database as
     it will be deactivated shortly:
 
     .. image:: on_premise/unlink_confirm_enterprise_edition.png
-        :align: center
-
+       :align: center
 
 * Do you have the updated version of Odoo 9?
 
@@ -63,8 +61,7 @@ Solutions
     specifying which database is problematic:
 
     .. image:: on_premise/unlink_db_name_collision.png
-        :align: center
-
+       :align: center
 
     In this case, you need to change the UUID on your test databases to solve this
     issue. You will find more information about this in :ref:`this section <duplicate_premise>`.
@@ -85,8 +82,6 @@ Solutions
   * Once you activated your database, you must keep these ports open, as the
     Update notification runs once a week.
 
-
-
 Error message due to too many users
 -----------------------------------
 
@@ -94,16 +89,15 @@ If you have more users in your local database than provisionned in your
 Odoo Enterprise subscription, you may encounter this message:
 
 .. image:: on_premise/add_more_users.png
-    :align: center
-    :alt: This database will expire in X days, you
-          have more users than your subscription allows
+   :align: center
+   :alt: This database will expire in X days, you have more users than your subscription allows
 
 
 When the message appears you have 30 days before the expiration.
 The countdown is updated everyday.
 
 Solutions
-'''''''''
+~~~~~~~~~
 
 - **Add more users** on your subscription: follow the link and Validate
   the upsell quotation and pay for the extra users.
@@ -123,15 +117,14 @@ If your database reaches its expiration date before your renew your subscription
 you will encounter this message:
 
 .. image:: on_premise/database_expired.png
-    :align: center
-    :alt: This database has expired.
-
+   :align: center
+   :alt: This database has expired.
 
 This **blocking** message appears after a non-blocking message that lasts 30 days.
 If you fail to take action before the end of the countdown, the database is expired.
 
 Solutions
-'''''''''
+~~~~~~~~~
 
 * Renew your subscription: follow the link and renew your subscription - note that
     if you wish to pay by Wire Transfer, your subscription will effectively be renewed
@@ -141,7 +134,6 @@ Solutions
 
 None of those solutions worked for you? Please contact our
 `Support <https://www.odoo.com/help>`__
-
 
 .. _force_ping:
 
@@ -155,8 +147,7 @@ server (<odoo-server>/web/database/manager). In this page, you can easily
 duplicate your database (among other things).
 
 .. image:: on_premise/db_manager.gif
-    :align: center
-
+   :align: center
 
 When you duplicate a local database, it is **strongly** advised to change
 the duplicated database's uuid (Unniversally Unique Identifier), since this
@@ -164,8 +155,9 @@ uuid is how your database identifies itself with our servers. Having two
 databases with the same uuid could result in invoicing problems or registration
 problems down the line.
 
-.. note:: From July 2016 onward, Odoo 9 now automatically change the uuid of a
-    duplicated database; a manual operation is no longer required.
+.. note::
+   From July 2016 onward, Odoo 9 now automatically change the uuid of a duplicated database; a
+   manual operation is no longer required.
 
 The database uuid is currently accessible from the menu :menuselection:`Settings --> Technical -->
 System Parameters`, we advise you to use a `uuid generator <https://www.uuidtools.com>`_ or to
@@ -173,4 +165,4 @@ use the unix command ``uuidgen`` to generate a new uuid. You can then simply rep
 other record by clicking on it and using the edit button.
 
 .. image:: on_premise/db_uuid.png
-    :align: center
+   :align: center

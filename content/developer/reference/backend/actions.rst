@@ -408,7 +408,7 @@ how the POS interface works.
 .. _reference/actions/cron:
 
 Automated Actions (``ir.cron``)
-======================================
+===============================
 
 Actions triggered automatically on a predefined frequency.
 

@@ -263,7 +263,7 @@ within the same Odoo addon.
 .. _frontend/modules/odoo_module:
 
 Odoo Module System
-===================
+==================
 
 Odoo has defined a small module system (located in the file
 :file:`addons/web/static/src/js/boot.js`, which needs to be loaded first). The Odoo
@@ -371,7 +371,7 @@ If an error happens, it will be logged (in debug mode) in the console:
   Modules who depend on a missing or a failed module
 
 Asynchronous modules
----------------------
+--------------------
 
 It can happen that a module needs to perform some work before it is ready.  For
 example, it could do an rpc to load some data.  In that case, the module can
