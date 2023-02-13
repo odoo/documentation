@@ -13,7 +13,7 @@ improving their overall experience with the company.
    making customizations more robust as you don’t have to edit code.
 
 Defining a default reply to on your mail template
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+=================================================
 
 Although the field *reply to* is available within the mail templates, **this field is only used
 for mass mailing** mode (this means when sending templates on what we call bulk emailing). You
@@ -37,7 +37,7 @@ communication between your customer and your Odoo database. For more information
 the catchall works, please check :ref:`how to manage inbound messages <email_communication/inbound_messages>`.
 
 Transactional emails and corresponding URL for each company
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+===========================================================
 
 When using Odoo, multiple events trigger the sending of automated emails. These emails are known
 as transactional emails and sometimes contain links pointing to your Odoo database.
@@ -72,7 +72,7 @@ For more information about how to configure your domains, we invite you to check
 documentation </administration/maintain/domain_names>`.
 
 Updating translations within email templates
-********************************************
+--------------------------------------------
 
 Email templates are automatically translated. Changing the translations shouldn’t be necessary.
 However, if for a specific reason you’d like to change some of the translations, this can be done.

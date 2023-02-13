@@ -1,6 +1,6 @@
-=================================================
+===============================================
 How customers can access their customer account
-=================================================
+===============================================
 
 It has never been so easy for your customers to access their
 customer account. Forget endless signup forms,
