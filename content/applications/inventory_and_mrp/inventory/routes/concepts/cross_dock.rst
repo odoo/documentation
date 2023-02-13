@@ -15,7 +15,7 @@ to reorganize products and load another truck.
    <https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_
 
 Configuration
-==============
+=============
 
 In the *Inventory* app, open :menuselection:`Configuration --> Settings` and activate the
 *Multi-Step Routes*.

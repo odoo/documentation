@@ -86,8 +86,7 @@ into the **Production** environment. As these two environments are completely is
 other, the digital certificates of one instance are not valid in the other one.
 
 To select a database environment, go to :menuselection:`Accounting --> Settings --> Argentinean
-Localization` and choose either :guilabel:`Prueba (Testing)` or :guilabel:`Produccion (Production)`
-.
+Localization` and choose either :guilabel:`Prueba (Testing)` or :guilabel:`Produccion (Production)`.
 
 .. image:: argentina/select-environment.png
    :align: center

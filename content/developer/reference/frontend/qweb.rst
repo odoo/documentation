@@ -257,9 +257,8 @@ exists in 3 different forms:
 setting variables
 =================
 
-QWeb allows creating variables from within the template, to memoize a
-computation (to use it multiple times), give a piece of data a clearer name,
-...
+QWeb allows creating variables from within the template, to memoize a computation (to use it
+multiple times), give a piece of data a clearer name, ...
 
 This is done via the ``set`` directive, which takes the name of the variable
 to create. The value to set can be provided in two ways:
@@ -374,7 +373,7 @@ templates:
   will not strip that information from safe content.
 
 Creating safe content using :class:`~markupsafe.Markup`
-'''''''''''''''''''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 See the official documentation for explanations, but the big advantage of
 :class:`~markupsafe.Markup` is that it's a very rich type overrinding
@@ -471,12 +470,12 @@ Exclusive directives
 --------------------
 
 Asset bundles
-'''''''''''''
+~~~~~~~~~~~~~
 
 .. todo:: have fme write these up because I've no idea how they work
 
 "smart records" fields formatting
-'''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The ``t-field`` directive can only be used when performing field access
 (``a.b``) on a "smart" record (result of the ``browse`` method). It is able
@@ -503,7 +502,7 @@ Helpers
 -------
 
 Request-based
-'''''''''''''
+~~~~~~~~~~~~~
 
 Most Python-side uses of QWeb are in controllers (and during HTTP requests),
 in which case templates stored in the database (as
@@ -520,7 +519,7 @@ This automatically creates a :class:`~odoo.http.Response` object which can
 be returned from the controller (or further customized to suit).
 
 View-based
-''''''''''
+~~~~~~~~~~
 
 At a deeper level than the previous helper is the ``render`` method on
 ``ir.ui.view``:
@@ -576,7 +575,7 @@ Exclusive directives
 --------------------
 
 Defining templates
-''''''''''''''''''
+~~~~~~~~~~~~~~~~~~
 
 The ``t-name`` directive can only be placed at the top-level of a template
 file (direct children to the document root)::
@@ -595,7 +594,7 @@ are related (e.g. called sub-templates) it is customary to use dot-separated
 names to indicate hierarchical relationships.
 
 Template inheritance
-''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~
 
 Template inheritance is used to either:
  - Alter existing templates in-place, e.g. to add information to templates
@@ -632,7 +631,7 @@ Extension inheritance (in-place transformation)::
     </t>
 
 Old inheritance mechanism (deprecated)
-''''''''''''''''''''''''''''''''''''''
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Template inheritance is performed via the ``t-extend`` directive which takes
 the name of the template to alter as parameter.

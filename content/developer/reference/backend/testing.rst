@@ -1,10 +1,8 @@
-
 .. _reference/testing:
 
-
-===============
+============
 Testing Odoo
-===============
+============
 
 There are many ways to test an application.  In Odoo, we have three kinds of
 tests
