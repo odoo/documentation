@@ -14,9 +14,10 @@ to move to the next line.
    :alt: knowledge's user interface
 
 .. tip::
-   Click :guilabel:`Untitled` on the left side of the top bar to automatically match your :dfn:`h1
-   (First-level header)` title and the article's name. To change the name of your article later, you
-   must do it manually. To do so, click the name on the top bar and proceed to the modification.
+   Click :guilabel:`Untitled` on the left side of the top bar to automatically match your h1
+   :dfn:`(First-level header)` title and the article's name. To change the name of your article
+   later, you must do it manually. To do so, click the name on the top bar and proceed to the
+   modification.
 
 Text editor
 -----------
@@ -53,8 +54,8 @@ allows:
 - Changing a paragraph into lists (unordered, ordered, checklists).
 - Changing a paragraph into a header (1 → 6), normal text, `code`, or *quotes*.
 
-Add a cover
------------
+Cover pictures
+--------------
 
 You can customize your article by adding a cover picture and an icon. Hover above the h1 title and
 click :guilabel:`Add Cover`. A pop-up window opens to set a cover picture.
@@ -78,8 +79,8 @@ To remove the cover, hover over it to make the buttons appear and click :guilabe
      be repositioned manually to fit a particular screen, as they automatically resize
      depending on the device.
 
-Add an icon
------------
+Icons
+-----
 
 To add an icon, hover above the h1 title and click :guilabel:`Add Icon`. Doing this sets a random
 emoji automatically. To change it, click it and select one from the emoji window. To remove it,
@@ -236,8 +237,8 @@ Commands are divided into multiple categories depending on their use.
          * - :guilabel:`Signature`
            - Insert your signature.
 
-Content from other app
-======================
+Content from other apps
+=======================
 
 Knowledge allows to retrieve content views from other applications. To do so, go to the targeted app
 and create the desired view. Then, click :menuselection:`Favorite --> Insert view in article` and
