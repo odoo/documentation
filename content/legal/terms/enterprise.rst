@@ -36,7 +36,7 @@ following terms and conditions (the "Agreement").
 1 Term of the Agreement
 =======================
 
-The duration of this Agreement (the “Term”) shall be specified in writing on conclusion of this
+The duration of this Agreement (the "Term") shall be specified in writing on conclusion of this
 Agreement, beginning on the date of conclusion.
 It is automatically renewed for an equal Term, unless either party provides a written notice of
 termination minimum 30 days before the end of the Term to the other party.
@@ -243,7 +243,7 @@ with respect to the use of the standard features of the Software and Covered Ext
 
 Other assistance requests, such as questions related to development or customizations
 may be covered through the purchase of a separate service agreement.
-In case it’s not clear if a request is covered by this Agreement,
+In case it's not clear if a request is covered by this Agreement,
 the decision is at the discretion of Odoo SA.
 
 Availability
@@ -356,7 +356,7 @@ When the Customer chooses to use the Cloud Platform, the Customer further agrees
 
 When the Customer chooses the Self-Hosting option, the Customer further agrees to:
 
-- take all reasonable measures to protect Customer’s files and databases and to ensure Customer’s
+- take all reasonable measures to protect Customer's files and databases and to ensure Customer's
   data is safe and secure, acknowledging that Odoo SA cannot be held liable for any data loss;
 - grant Odoo SA the necessary access to verify the validity of the Odoo Enterprise Edition usage
   upon request (e.g. if the automatic validation is found to be inoperant for the Customer).
@@ -382,7 +382,7 @@ EUR (€) 30 000.00 (thirty thousand euros).
 -------------
 
 Except where notified otherwise in writing, each party grants the other a non-transferable,
-non-exclusive, royalty free, worldwide license to reproduce and display the other party’s name,
+non-exclusive, royalty free, worldwide license to reproduce and display the other party's name,
 logos and trademarks, solely for the purpose of referring to the other party as a customer or
 supplier, on websites, press releases and other marketing materials.
 
@@ -418,7 +418,7 @@ Definitions
     "Personal Data", "Controller", "Processing" take the same meanings as in the
     Regulation (EU) 2016/679 and the Directive 2002/58/EC,
     and any regulation or legislation that amends or replaces them
-    (hereafter referred to as “Data Protection Legislation”)
+    (hereafter referred to as "Data Protection Legislation")
 
 Processing of Personal Data
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -451,7 +451,7 @@ In particular, Odoo SA commits to:
   Data Protection Legislation, allow for and contribute reasonably to audits, including
   inspections, conducted or mandated by the Customer;
 - (h) permanently delete all copies of the Customer's database in possession of Odoo SA,
-  or return such data, at the Customer’s choice, upon termination of this Agreement,
+  or return such data, at the Customer's choice, upon termination of this Agreement,
   subject to the delays specified in Odoo SA's
   `Privacy Policy <https://www.odoo.com/privacy>`_ ;
 
@@ -484,8 +484,8 @@ the applicable fees for the Services within 21 days following the due date speci
 corresponding invoice, and after minimum 3 reminders.
 
 Surviving Provisions:
-  The sections ":ref:`confidentiality`”, “:ref:`disclaimers`”,
-  “:ref:`liability`”, and “:ref:`general_provisions`” will survive any termination or expiration of
+  The sections ":ref:`confidentiality`", ":ref:`disclaimers`",
+  ":ref:`liability`", and ":ref:`general_provisions`" will survive any termination or expiration of
   this Agreement.
 
 
@@ -508,7 +508,7 @@ with the licence of the Software.
 For the duration of this Agreement, Odoo SA commits to using commercially reasonable efforts to
 execute the Services in accordance with the generally accepted industry standards provided that:
 
-- the Customer’s computing systems are in good operational order and, for Self-Hosting, that
+- the Customer's computing systems are in good operational order and, for Self-Hosting, that
   the Software is installed in a suitable operating environment;
 - the Customer provides adequate troubleshooting information and, for Self-Hosting, any access
   that Odoo SA may need to identify, reproduce and address problems;

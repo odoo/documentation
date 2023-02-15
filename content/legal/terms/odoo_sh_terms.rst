@@ -8,8 +8,8 @@ Odoo.sh Beta Program
 
 TERMS & CONDITIONS OF THE ODOO.SH BETA PROGRAM
 
-You understand and acknowledge that the Service is being provided as a “Public Beta”,
-and is made available on an “AS IS” and “AS AVAILABLE” basis for the purpose of providing
+You understand and acknowledge that the Service is being provided as a "Public Beta",
+and is made available on an "AS IS" and "AS AVAILABLE" basis for the purpose of providing
 Odoo S.A. and its affiliates with feedback on the quality and usability of the Service.
 
 The Service may contain errors or inaccuracies that could cause failures, corruption or

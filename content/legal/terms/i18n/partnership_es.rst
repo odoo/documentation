@@ -29,13 +29,13 @@ Odoo Partnership Agreement (ES)
 
 | ENTRE:
 |  Odoo S.A., una empresa que tiene su sede social en Chaussée de Namur, 40, 1367 Grand-Rosière,
-|  Bélgica, y sus filiales (en adelante denominados conjuntamente “ODOO”)
+|  Bélgica, y sus filiales (en adelante denominados conjuntamente "ODOO")
 | Y:
 |  _____________________________________________, una empresa que tiene su domicilio social en
 |  _____________________________________________________________________________________.
-|  (en adelante denominado “EL COLABORADOR”)
+|  (en adelante denominado "EL COLABORADOR")
 
-ODOO y EL COLABORADOR se denominan individualmente “Parte” y conjuntamente “las Partes”.
+ODOO y EL COLABORADOR se denominan individualmente "Parte" y conjuntamente "las Partes".
 
 1 Objeto
 ========
@@ -44,13 +44,13 @@ a EL COLABORADOR, acceso al software Odoo Enterprise Edition, y bajo las cuales 
 cumple con las obligaciones establecidas a continuación.
 
 Por la presente ODOO nombra a EL COLABORADOR, y EL COLABORADOR acepta ser nombrado, socio no
-exclusivo para promover y vender “Odoo Enterprise Edition” a los clientes.
+exclusivo para promover y vender "Odoo Enterprise Edition" a los clientes.
 
 EL COLABORADOR se compromete a hacer su mejor esfuerzo para vender contratos de Odoo Enterprise a
 sus clientes. En apoyo a esta afirmación, EL COLABORADOR dará prioridad a la comercialización
-de la versión “Odoo Enterprise Edition” a clientes potenciales y clientes.
+de la versión "Odoo Enterprise Edition" a clientes potenciales y clientes.
 EL COLABORADOR siempre tiene la posibilidad de vender servicios con otras versiones del software,
-como “Odoo Community Edition”, en caso de ser necesario.
+como "Odoo Community Edition", en caso de ser necesario.
 
 2 Duración del Contrato
 =======================
@@ -64,7 +64,7 @@ por escrito a la otra parte su terminación como mínimo 30 días antes del fina
 3.1 Acceso a la plataforma del proyecto
 ---------------------------------------
 Para ayudar a EL COLABORADOR a promover Odoo Enterprise Edition, ODOO otorga a EL COLABORADOR
-acceso a su repositorio de código del proyecto para todas las “Aplicaciones Odoo Enterprise Edition”,
+acceso a su repositorio de código del proyecto para todas las "Aplicaciones Odoo Enterprise Edition",
 en los términos establecidos en :ref:`appendix_p_a_es` y las condiciones restringidas del presente
 Contrato.
 
@@ -153,7 +153,7 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 | Visibilidad en odoo.com               | No               | "Ready Partner"    | "Silver Partner"   | "Gold Partner"     |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | Derechos de uso de la marca registrada| Sí               | Sí                 | Sí                 | Sí                 |
-| “Odoo” y logotipos                    |                  |                    |                    |                    |
+| "Odoo" y logotipos                    |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
 | **Ventajas de la formación**          |                  |                    |                    |                    |
 +---------------------------------------+------------------+--------------------+--------------------+--------------------+
@@ -197,7 +197,7 @@ En la tabla siguiente se describen los detalles de las ventajas para cada nivel 
 ODOO promocionará EL COLABORADOR como socio oficial en el sitio web oficial (odoo.com).
 
 ODOO concede a EL COLABORADOR, de forma no exclusiva, el derecho a usar y reproducir el logotipo
-de socio de ODOO del nivel de colaboración correspondiente y el nombre “Odoo” en relación con este
+de socio de ODOO del nivel de colaboración correspondiente y el nombre "Odoo" en relación con este
 contrato de colaboración.
 
 Cada Parte se compromete a respetar todos los derechos de la otra Parte en todos los elementos
@@ -242,7 +242,7 @@ naturales a partir de la notificación por escrito de dicho incumplimiento, la P
 incumplió sus obligaciones puede rescindir este contrato inmediatamente.
 
 Disposiciones subsistentes:
-  Las secciones « :ref:`restrictions_es` », « :ref:`p_liability_es` », y « :ref:`gov_law_es` »
+  Las secciones ":ref:`restrictions_es`", ":ref:`p_liability_es`", y ":ref:`gov_law_es`"
   mantendrán su vigencia tras cualquier resolución o expiración de este contrato.
 
 6.1 Consecuencia de la resolución

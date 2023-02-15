@@ -90,7 +90,7 @@ in communities where the conduct described above is normal and expected.
 However, failure to observe the code may be grounds for reprimand, probation,
 or removal from the lists.
 
-If you have concerns about someone’s conduct:
+If you have concerns about someone's conduct:
 Direct contact: it is always appropriate to email a list member, mention that
 you think their behavior was out of line, and (if necessary) point them to this
 document.

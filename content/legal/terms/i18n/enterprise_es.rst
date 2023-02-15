@@ -18,19 +18,19 @@ Acuerdo de suscripción de Odoo Enterprise
 
 .. note:: Version 9c - 2020-06-15
 
-Al suscribirse a los servicios de Odoo Enterprise (en adelante “los Servicios”) proporcionados por
-Odoo SA y sus filiales (en adelante denominadas conjuntamente “Odoo SA”), relacionados con las
-versiones Odoo Enterprise o Odoo community (en adelante “el Software”) y alojados en los servidores
-de la nube de Odoo SA (en adelante “Servicio en la Nube”) o en servidores locales (en adelante
-“Auto-hospedaje”), usted (en adelante “el Cliente”) acepta los términos y condiciones establecidos a
-continuación (en adelante “el Acuerdo”).
+Al suscribirse a los servicios de Odoo Enterprise (en adelante "los Servicios") proporcionados por
+Odoo SA y sus filiales (en adelante denominadas conjuntamente "Odoo SA"), relacionados con las
+versiones Odoo Enterprise o Odoo community (en adelante "el Software") y alojados en los servidores
+de la nube de Odoo SA (en adelante "Servicio en la Nube") o en servidores locales (en adelante
+"Auto-hospedaje"), usted (en adelante "el Cliente") acepta los términos y condiciones establecidos a
+continuación (en adelante "el Acuerdo").
 
 .. _term_es:
 
 1 Término del Acuerdo
 =====================
 
-La duración de la suscripción (en adelante el “Plazo”) será indicada por escrito en este Acuerdo, y
+La duración de la suscripción (en adelante el "Plazo") será indicada por escrito en este Acuerdo, y
 comenzará a partir de la fecha de firma del Acuerdo. La suscripción se considerará renovada
 automáticamente por un período igual al Plazo estipulado originalmente, salvo que alguna de las
 partes del Acuerdo proporcione un aviso por escrito expresando su deseo de culminar los Servicios al
@@ -48,12 +48,12 @@ Usuario
     limitado al Software a través del portal del usuario.
 
 Aplicación
-    Una ‘aplicación’ es un grupo especializado de funciones disponibles para ser instaladas en el
+    Una 'aplicación' es un grupo especializado de funciones disponibles para ser instaladas en el
     Software, las cuales están enunciadas en la sección de Precios del
     `sitio web de Odoo SA <https://www.odoo.com/es_ES/>`__
 
 Partner de Odoo
-    Un ‘Partner’ de Odoo es una empresa o individuo externo a Odoo SA que ofrece servicios
+    Un 'Partner' de Odoo es una empresa o individuo externo a Odoo SA que ofrece servicios
     relacionados con el Software, y quien ha sido seleccionado por el Cliente para trabajar
     directamente con él. En cualquier momento, el cliente puede decidir trabajar con un Partner
     diferente o con Odoo SA directamente (sujeto a previo aviso).
@@ -71,7 +71,7 @@ Módulo adicional de mantenimiento
     corrección de errores.
 
 Error/Bug
-    Se considera como ‘bug’ a cualquier falla del Software o de un módulo adicional de mantenimiento
+    Se considera como 'bug' a cualquier falla del Software o de un módulo adicional de mantenimiento
     que resulte en una disrupción completa, una cadena de errores o un fallo de seguridad, y que no
     es causado directamente por una instalación o configuración defectuosa. El incumplimiento de
     algunas especificaciones o requisitos será considerado como un Bug a la discreción de Odoo SA
@@ -153,7 +153,7 @@ Acuerdo y en la licencia del Software.
 Hospedaje en servidores propios
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un “Aviso de Seguridad” al
+Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un "Aviso de Seguridad" al
 Cliente al identificar algún Bug de seguridad en las versiones cubiertas del Software (excluyendo
 módulos adicionales), al menos 2 semanas antes de hacer público el Aviso de Seguridad, al menos que
 el Bug ya haya sido revelado públicamente por algún tercero. Los Avisos de Seguridad pueden incluir
@@ -185,8 +185,8 @@ Servicio de actualización para el software
 Durante la vigencia de este Acuerdo, el Cliente puede solicitar la actualización de su versión del
 Software a través del medio apropiado (generalmente a través de la sección de servicios de
 actualizaciones del sitio web de Odoo SA), con la finalidad de actualizar la base de datos del
-Software que tiene a una versión más reciente de las versiones cubiertas (en adelante la “Versión
-Deseada”).
+Software que tiene a una versión más reciente de las versiones cubiertas (en adelante la "Versión
+Deseada").
 
 Las solicitudes de actualización de los Clientes que usan los servicios en la nube deben ser
 solicitadas directamente desde el panel de control de la Plataforma en la nube y no requieren
@@ -294,7 +294,7 @@ Además, los servicios de los módulos adicionales de mantenimiento se cobran en
 líneas de código de estos módulos. Cuando el cliente opta por el mantenimiento de estos módulos
 adicionales de mantenimiento, el costo es una tarifa mensual de 16 € por 100 líneas de código
 (redondeadas a las siguientes 100), al menos que se especifique lo contrario por escrito al celebrar
-este Acuerdo. Las líneas de código serán contadas con el comando ‘cloc’ del Software, e incluyen
+este Acuerdo. Las líneas de código serán contadas con el comando 'cloc' del Software, e incluyen
 todas las líneas de texto en el código fuente de esos módulos, independientemente del lenguaje de
 programación (Python, Javascript, XML, etc), excluyendo líneas en blanco, comentarios y archivos que
 no se cargan al instalar o ejecutar el software.
@@ -309,7 +309,7 @@ tarifa adicional única de 16 € por cada 100 líneas de código, por cada mes 
 ------------------------
 
 Siguiendo la renovación descrita en la sección :ref:`term_es` del presente Acuerdo, si los cargos
-aplicados durante el Plazo anterior (excluyendo cualquier “Descuento para usuarios iniciales”) son
+aplicados durante el Plazo anterior (excluyendo cualquier "Descuento para usuarios iniciales") son
 más bajos que el precio aplicable en la lista de precios actual, dichos cargos podrán aumentar 7%
 como máximo.
 
@@ -319,7 +319,7 @@ como máximo.
 -------------
 
 Todas las tarifas y cargos son exclusivos de todos los impuestos, tarifas o cargos federales,
-provinciales, estatales, locales o gubernamentales aplicables (conjuntamente los “Impuestos”). El
+provinciales, estatales, locales o gubernamentales aplicables (conjuntamente los "Impuestos"). El
 Cliente es responsable de pagar todos los Impuestos asociados con las compras realizadas por el
 Cliente en virtud de este Acuerdo, excepto cuando Odoo SA esté legítimamente obligado a pagar o
 recolectar los Impuestos que el Cliente debe asumir.
@@ -406,7 +406,7 @@ Definición de "Información confidencial":
     presente Acuerdo, ya sea oralmente o por escrito, designada como confidencial o razonablemente
     considerada confidencial dada la naturaleza de la información y las circunstancias de divulgación.
     En particular, cualquier información relacionada a los negocios, asuntos, productos, desarrollos,
-    secretos comerciales, “know-how”, el personal, los clientes y los proveedores de cualquiera de las
+    secretos comerciales, "know-how", el personal, los clientes y los proveedores de cualquiera de las
     Partes del presente Acuerdo, debe ser considerada como confidencial.
 
 Para cualquier tipo de información confidencial recibida durante el Plazo de este Acuerdo, la Parte
@@ -426,9 +426,9 @@ permita.
 -----------------------
 
 Definiciones
-    Los términos “Datos Personales”, “Responsable del tratamiento”, “Tratamiento” tienen los mismos
+    Los términos "Datos Personales", "Responsable del tratamiento", "Tratamiento" tienen los mismos
     significados que en el Reglamento (UE) 2016/679 y la Directiva 2002/58 / CE, y cualquier reglamento
-    o legislación que los modifique o sustituya (en adelante, “Legislacion de Proteccion de Datos”).
+    o legislación que los modifique o sustituya (en adelante, "Legislacion de Proteccion de Datos").
 
 Procesamiento de datos personales
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -446,7 +446,7 @@ protección de datos. En particular, Odoo SA se compromete a:
 - (a) Solo procesar los datos personales cuando y como lo indique el Cliente, y para elp ropósito
   de realizar uno de los Servicios en virtud de este Acuerdo, a menos que sea requerido por la
   ley, en cuyo caso, Odoo SA proporcionará un aviso previo al Cliente, a menos que la ley lo prohíba;
-- (b) garantizar que todas las personas dentro de Odoo SA” autorizadas para procesar los Datos
+- (b) garantizar que todas las personas dentro de Odoo SA" autorizadas para procesar los Datos
   personales estén comprometidos con la confidencialidad;
 - (c) implementar y mantener medidas técnicas y organizativas adecuadas para proteger los datos
   personales contra el procesamiento no autorizado o ilegal y contra la pérdida accidental,
@@ -473,7 +473,7 @@ Sub procesadores
 ~~~~~~~~~~~~~~~~
 
 El Cliente reconoce y acepta que, para proporcionar los Servicios, Odoo SA puede utilizar a terceros
-como proveedores de servicios para procesar Datos Personales (en adelante “Sub-procesadores”).
+como proveedores de servicios para procesar Datos Personales (en adelante "Sub-procesadores").
 Odoo SA se compromete a utilizar Sub-procesadores únicamente de conformidad con la Legislación de
 Protección de Datos. Este uso estará amparado bajo un contrato entre Odoo SA y el Sub-procesador que
 de garantías para estos servicios.
@@ -497,7 +497,7 @@ obligación de pago del Servicio dentro de los 21 días siguientes a la fecha de
 facturación, y después de haber emitido al menos 3 recordatorios de pago.
 
 Disposiciones supervivientes: Las secciones ":ref:`confidentiality_es`",
-“:ref:`disclaimers_es`",“:ref:`liability_es`", y “:ref:`general_provisions_es`” estarán vigentes
+":ref:`disclaimers_es`",":ref:`liability_es`", y ":ref:`general_provisions_es`" estarán vigentes
 incluso después de cualquier terminación o vencimiento del presente Acuerdo.
 
 .. _warranties_disclaimers_es:

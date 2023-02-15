@@ -8,10 +8,10 @@ Odoo Enterprise Subscription Agreement (FR)
 
     `Download PDF <odoo_enterprise_agreement_fr.pdf>`_
 .. warning::
-    Ceci est une traduction en français du contrat “Odoo Enterprise Subscription Agreement”.
-    Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
+    Ceci est une traduction en français du contrat "Odoo Enterprise Subscription Agreement".
+    Cette traduction est fournie dans l'espoir qu'elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes du contrat “Odoo Enterprise Subscription Agreement”
+    La seule référence officielle des termes du contrat "Odoo Enterprise Subscription Agreement"
     est la :ref:`version originale en anglais <enterprise_agreement>`.
 
 .. note:: Version 10a - 2022-10-27
@@ -44,7 +44,7 @@ En vous abonnant aux services de Odoo Enterprise (les "Services") fournis par Od
 
 La durée du présent Contrat (la "Durée") sera spécifiée par
 écrit à la conclusion du Contrat, à compter de la date de la conclusion. Celui-ci est automatiquement
-reconduit pour une même durée, à moins que l'une des parties n’envoie à l'autre partie un préavis
+reconduit pour une même durée, à moins que l'une des parties n'envoie à l'autre partie un préavis
 écrit de résiliation, et au moins 30 jours avant la date d'échéance du contrat.
 
 .. _definitions_fr:
@@ -211,7 +211,7 @@ base de données du Client et les données associées (généralement obtenues �
 Backup du Logiciel).
 
 Ce service est fourni par le biais d'une plate-forme automatisée, afin de permettre au Client
-d'effectuer des migrations sans intervention humaine, dès lors qu’une version précédente de la
+d'effectuer des migrations sans intervention humaine, dès lors qu'une version précédente de la
 base de données du Client a été migrée avec succès pour une Version Couverte donnée.
 
 Le service de migration est limité à la conversion et à l'adaptation techniques de la base
@@ -504,7 +504,7 @@ Odoo SA pour l'exécution des Services.
 ---------------
 
 Dans le cas où l'une des parties ne remplit pas ses obligations découlant du
-présent contrat, et si une telle violation n’est pas résolue dans les 30 jours
+présent contrat, et si une telle violation n'est pas résolue dans les 30 jours
 civils à compter de la notification écrite de cette violation, le présent
 contrat peut être résilié immédiatement par la partie qui n'a pas commis la
 violation.
@@ -514,8 +514,8 @@ Client ne paie pas les frais applicables pour les services dans les 21 jours sui
 indiquée sur la facture correspondante, après minimum 3 rappels.
 
 Durée de l'applicabilité des dispositions:
-  Les sections ":ref:`confidentiality_fr`", “:ref:`disclaimers_fr`",   “:ref:`liability_fr`",
-  et “:ref:`general_provisions_fr`" survivront la résiliation ou l'expiration du présent contrat.
+  Les sections ":ref:`confidentiality_fr`", ":ref:`disclaimers_fr`",   ":ref:`liability_fr`",
+  et ":ref:`general_provisions_fr`" survivront la résiliation ou l'expiration du présent contrat.
 
 
 .. _warranties_disclaimers_fr:
@@ -578,7 +578,7 @@ donnant lieu à une telle réclamation. Des réclamations multiples n'augmentero
 
 Les parties et leurs filiales ne pourront en aucun cas être tenues responsables des dommages
 indirects, spéciaux, punitifs, accessoires ou consécutifs de quelque nature que ce soit,
-y compris, mais sans s'y limiter, la perte de revenus, perte de profits, perte d’économies,
+y compris, mais sans s'y limiter, la perte de revenus, perte de profits, perte d'économies,
 perte commerciale ou toute autre perte financière, les coûts relatifs à l'arrêt ou au retard,
 la perte ou altération des données, découlant ou en relation avec le présent Contrat, quelle que
 soit la forme de l'action, qu'elle soit fondée sur une obligation contractuelle, délictuelle
@@ -596,7 +596,7 @@ d'exécution en vertu du présent Contrat, si ce manquement ou retard trouve sa 
 une règlementation gouvernementale, un incendie, une grève, une guerre, une inondation,
 un accident, une épidémie, un embargo, la saisie d'une usine ou d'un produit dans son intégralité
 ou en partie par un gouvernement ou une autorité publique, ou toute (s) autre (s) cause (s),
-qu’elle (s) soit (soient) de nature similaire ou différente, pour autant que cette cause soit
+qu'elle (s) soit (soient) de nature similaire ou différente, pour autant que cette cause soit
 hors du contrôle raisonnable de la partie concernée, et tant qu'une telle cause existe.
 
 .. _general_provisions_fr:
@@ -611,7 +611,7 @@ hors du contrôle raisonnable de la partie concernée, et tant qu'une telle caus
 
 Le présent contrat et les commandes passées par le client sont exclusivement régis par le droit belge.
 Tout différend relatif au présent contrat ou à une commande passée par le Client relève de la
-compétence exclusive du tribunal de l’entreprise de Nivelles.
+compétence exclusive du tribunal de l'entreprise de Nivelles.
 
 .. _severability_fr:
 
@@ -634,17 +634,17 @@ Odoo Enterprise Edition est publié sous la licence Odoo Enterprise Edition Lice
 définie ci-dessous.
 
 .. warning::
-    Ceci est une traduction en français de la licence “Odoo Enterprise Edition License”.
-    Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
+    Ceci est une traduction en français de la licence "Odoo Enterprise Edition License".
+    Cette traduction est fournie dans l'espoir qu'elle facilitera sa compréhension, mais elle
     n'a aucune valeur légale.
-    La seule référence officielle des termes de la licence “Odoo Enterprise Edition License”
+    La seule référence officielle des termes de la licence "Odoo Enterprise Edition License"
     est la :ref:`version originale <odoo_enterprise_license>`.
 
-    This is a french translation of the "Odoo Enterprise Edition License”.
+    This is a french translation of the "Odoo Enterprise Edition License".
     This translation is provided in the hope that it will facilitate understanding, but it has
     no legal value.
-    The only official reference of the terms of the “Odoo Enterprise Edition
-    License” is the :ref:`original english version <odoo_enterprise_license>`.
+    The only official reference of the terms of the "Odoo Enterprise Edition
+    License" is the :ref:`original english version <odoo_enterprise_license>`.
 
 .. raw:: html
 

@@ -30,12 +30,12 @@ Odoo Enterprise Subscription Agreement (NL)
 
 .. note:: Version 10a - 2022-10-27
 
-Door u op de Odoo Enterprise-diensten (de “Diensten”) te abonneren die door
-Odoo NV en haar dochterondernemingen (gezamenlijk “Odoo NV”) worden verleend
+Door u op de Odoo Enterprise-diensten (de "Diensten") te abonneren die door
+Odoo NV en haar dochterondernemingen (gezamenlijk "Odoo NV") worden verleend
 met betrekking tot de Odoo Enterprise Edition of de Odoo Community Edition (de
-“Software”) gehost op de Cloudplatforms van Odoo NV (het "Cloudplatform") of
+"Software") gehost op de Cloudplatforms van Odoo NV (het "Cloudplatform") of
 op locatie ("Self-Hosting"), gaat u (de "Klant") ermee akkoord om gebonden te zijn door de
-volgende algemene voorwaarden (de “Overeenkomst”).
+volgende algemene voorwaarden (de "Overeenkomst").
 
 .. _term_nl:
 
@@ -55,7 +55,7 @@ in kennis stelt van de beëindiging.
 
 Gebruiker
     Elke actieve gebruikersaccount met toegang tot de Software in de
-    creatie- en/of bewerkingsmodus. Gedeactiveerde gebruikersaccounts en
+    creatie- en/of bewerkingsmodus. Gedeactiveerde gebruikersaccounts en
     accounts die worden gebruikt door externe personen (of systemen) die slechts
     beperkte toegang hebben tot de Software via de portaalfaciliteiten
     ("Portaalgebruikers") tellen niet mee als Gebruikers.
@@ -535,8 +535,8 @@ na de vervaldatum die op de desbetreffende factuur vermeld wordt, en na minstens
 2 herinneringen.
 
 Overlevende bepalingen:
-    De secties ":ref:`confidentiality_nl`”, ":ref:`disclaimers_nl`”,
-    ":ref:`liability_nl`” en ":ref:`general_provisions_nl`”
+    De secties ":ref:`confidentiality_nl`", ":ref:`disclaimers_nl`",
+    ":ref:`liability_nl`" en ":ref:`general_provisions_nl`"
     blijven geldig na de beëindiging of het afloop van deze
     Overeenkomst.
 
