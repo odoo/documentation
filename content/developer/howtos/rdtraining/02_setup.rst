@@ -50,7 +50,7 @@ allows you to connect to GitHub without supplying your username and password eve
 command.
 
 .. note::
-   The following step-by-step procedure is based based on the `official GitHub documentation
+   The following step-by-step procedure is based on the `official GitHub documentation
    <https://docs.github.com/en/authentication/connecting-to-github-with-ssh>`_.
 
 #. Generate a new SSH key, add it to the ssh-agent, and copy the SSH key to your clipboard.
