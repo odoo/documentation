@@ -45,6 +45,36 @@ All domain names are referenced in the **Domain Name System**, or **DNS**, which
 directory for the Internet. There are many DNS servers, so any modification to the DNS can take up
 to 72 hours to propagate worldwide on all servers.
 
+.. _domain-name/indexing:
+
+Indexing of domain names by search engines
+------------------------------------------
+
+Search engines, such as Google and Bing, rely on web crawlers (:dfn:`robots that explore and analyze
+the web`) to index all websites and their related domain names. These crawlers discover new URLs
+thanks to links on known web pages. As a result, search engines should index domain names
+automatically after a while, as long as their URLs are mentioned elsewhere on the Internet.
+
+Improving the appearance and positioning of web pages on search engines is a practice named "Search
+Engine Optimization" (SEO).
+
+.. tip::
+   Adding relevant content, optimizing metadata, and building high-quality backlinks can all help
+   improve a website's search engine visibility.
+
+Some search engines provide tools for web admins, such as
+`Google Search Console <https://search.google.com/search-console>`_ and
+`Bing Webmaster Tools <https://www.bing.com/webmasters>`_, to help you analyze and improve your
+page ranking. To use these services, you must prove that you are the owner of your domain name. One
+way to verify the ownership of your domain name is by adding a DNS record. You can do this for
+:ref:`domain names registered with Odoo <domain-name/odoo-manage>` and for domain names managed by
+other providers.
+
+.. seealso::
+   - :doc:`/applications/websites/website/optimize/seo`
+   - `Google Search Console Help - Verify your site ownership <https://support.google.com/webmasters/answer/9008080>`_
+   - `Bing Webmaster Tools - Add and Verify site <https://www.bing.com/webmasters/help/add-and-verify-site-12184f8b>`_
+
 .. _domain-name/odoo-register:
 
 Register a free domain name with Odoo
@@ -319,7 +349,7 @@ In the :guilabel:`Domain` field, fill in the web address of your website (e.g.,
 
    If both addresses are already indexed, it may take some time before Google removes the indexation
    of the second address. You may also try using the `Google Search Console
-   <https://search.google.com/search-console/welcome>`_ to fix this.
+   <https://search.google.com/search-console>`_ to fix this.
 
 .. seealso::
   - :doc:`/applications/general/email_communication/email_servers`
