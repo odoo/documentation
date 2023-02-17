@@ -4,7 +4,7 @@ Accounting Localization
 
 .. warning::
    This tutorial requires knowledges about how to build a module in Odoo (see
-   :doc:`/developer/howtos/backend`).
+   :doc:`../tutorials/getting_started`).
 
 Building a localization module
 ==============================
