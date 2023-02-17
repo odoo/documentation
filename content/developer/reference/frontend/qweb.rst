@@ -372,58 +372,6 @@ templates:
 * :func:`~odoo.tools.pycompat.to_text` does not mark the content as safe, but
   will not strip that information from safe content.
 
-Creating safe content using :class:`~markupsafe.Markup`
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-See the official documentation for explanations, but the big advantage of
-:class:`~markupsafe.Markup` is that it's a very rich type overrinding
-:class:`str` operations to *automatically escape parameters*.
-
-This means that it's easy to create *safe* html snippets by using
-:class:`~markupsafe.Markup` on a string literal and "formatting in"
-user-provided (and thus potentially unsafe) content:
-
-.. code-block:: pycon
-
-    >>> Markup('<em>Hello</em> ') + '<foo>'
-    Markup('<em>Hello</em> &lt;foo&gt;')
-    >>> Markup('<em>Hello</em> %s') % '<foo>'
-    Markup('<em>Hello</em> &lt;foo&gt;')
-
-though it is a very good thing, note that the effects can be odd at times:
-
-.. code-block:: pycon
-
-    >>> Markup('<a>').replace('>', 'x')
-    Markup('<a>')
-    >>> Markup('<a>').replace(Markup('>'), 'x')
-    Markup('<ax')
-    >>> Markup('<a&gt;').replace('>', 'x')
-    Markup('<ax')
-    >>> Markup('<a&gt;').replace('>', '&')
-    Markup('<a&amp;')
-
-.. tip:: Most of the content-safe APIs actually return a
-         :class:`~markupsafe.Markup` with all that implies.
-
-Javascript
-----------
-
-.. todo:: what APIs do we end up considering OK there?
-.. todo:: talk about vdom thingies?
-
-.. warning::
-
-    Due to the lack of operator overriding, :js:class:`Markup` is a much more
-    limited type than :class:`~markupsafe.Markup`.
-
-    Therefore it doesn't override methods either, and any operation involving
-    :js:class:`Markup` will return a normal :js:class:`String` (and in reality
-    not even that, but a "primitive string").
-
-    This means the fallback is safe, but it is easy to trigger double-escaping
-    when working with :js:class:`Markup` objects.
-
 forcing double-escaping
 -----------------------
 

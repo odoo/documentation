@@ -353,6 +353,87 @@ While formatting the template differently would prevent such vulnerabilities.
         font-weight: bold;
     }
 
+Creating safe content using :class:`~markupsafe.Markup`
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+See the `official documentation <https://markupsafe.palletsprojects.com/>`_ for
+explanations, but the big advantage of
+:class:`~markupsafe.Markup` is that it's a very rich type overrinding
+:class:`str` operations to *automatically escape parameters*.
+
+This means that it's easy to create *safe* html snippets by using
+:class:`~markupsafe.Markup` on a string literal and "formatting in"
+user-provided (and thus potentially unsafe) content:
+
+.. code-block:: pycon
+
+    >>> Markup('<em>Hello</em> ') + '<foo>'
+    Markup('<em>Hello</em> &lt;foo&gt;')
+    >>> Markup('<em>Hello</em> %s') % '<foo>'
+    Markup('<em>Hello</em> &lt;foo&gt;')
+
+though it is a very good thing, note that the effects can be odd at times:
+
+.. code-block:: pycon
+
+    >>> Markup('<a>').replace('>', 'x')
+    Markup('<a>')
+    >>> Markup('<a>').replace(Markup('>'), 'x')
+    Markup('<ax')
+    >>> Markup('<a&gt;').replace('>', 'x')
+    Markup('<ax')
+    >>> Markup('<a&gt;').replace('>', '&')
+    Markup('<a&amp;')
+
+.. tip:: Most of the content-safe APIs actually return a
+         :class:`~markupsafe.Markup` with all that implies.
+
+The :class:`~markupsafe.escape` method (and its
+alias :class:`~odoo.tools.misc.html_escape`) turns a `str` into
+a :class:`~markupsafe.Markup` and escapes its content. It will not escape the
+content of a :class:`~markupsafe.Markup` object.
+
+.. code-block:: python
+
+    def get_name(self, to_html=False):
+        if to_html:
+            return Markup("<strong>%s</strong>") % self.name  # escape the name
+        else:
+            return self.name
+
+    >>> record.name = "<R&D>"
+    >>> escape(record.get_name())
+    Markup("&lt;R&amp;D&gt;")
+    >>> escape(record.get_name(True))
+    Markup("<strong>&lt;R&amp;D&gt;</strong>")  # HTML is kept
+
+When generating HTML code, it is important to separate the structure (tags) from
+the content (text).
+
+.. code-block:: pycon
+
+    >>> Markup("<p>") + "Hello <R&D>" + Markup("</p>")
+    Markup('<p>Hello &lt;R&amp;D&gt;</p>')
+    >>> Markup("%s <br/> %s") % ("<R&D>", Markup("<p>Hello</p>"))
+    Markup('&lt;R&amp;D&gt; <br/> <p>Hello</p>')
+    >>> escape("<R&D>")
+    Markup('&lt;R&amp;D&gt;')
+    >>> escape(_("List of Tasks on project %s: %s")) % (
+    ...     project.name,
+    ...     Markup("<ul>%s</ul>") % Markup().join([Markup("<li>%s</li>") % t.name for t in project.task_ids])
+    ... )
+    Markup('Liste de tâches pour le projet &lt;R&amp;D&gt;: <ul><li>First &lt;R&amp;D&gt; task</li></ul>')
+
+    >>> Markup("<p>Foo %</p>" % bar)  # bad, bar is not escaped
+    >>> Markup("<p>Foo %</p>") % bar  # good, bar is escaped if text and kept if markup
+
+    >>> link = Markup("<a>%s</a>") % self.name
+    >>> message = "Click %s" % link  # bad, message is text and Markup did nothing
+    >>> message = escape("Click %s") % link  # good, format two markup objects together
+
+    >>> Markup(f"<p>Foo {self.bar}</p>")  # bad, bar is inserted before escaping
+    >>> Markup("<p>Foo {bar}</p>").format(bar=self.bar)  # good, sorry no fstring
+
 Escaping vs Sanitizing
 ----------------------
 
@@ -380,10 +461,10 @@ variable contains *TEXT* and which contains *CODE*.
     # Escaping turns it into CODE, good!
     >>> code = html_escape(data)
     >>> code
-    '&lt;R&amp;D&gt;'
+    Markup('&lt;R&amp;D&gt;')
 
     # Now you can mix it with other code...
-    >>> self.message_post(body="<strong>%s</strong>" % code)
+    >>> self.website_description = Markup("<strong>%s</strong>") % code
 
 **Sanitizing** converts *CODE* to *SAFER CODE* (but not necessary *safe* code).
 It does not work on *TEXT*. Sanitizing is only necessary when *CODE* is
@@ -398,11 +479,11 @@ expected.
 
     # Sanitizing without escaping is BROKEN: data is corrupted!
     >>> html_sanitize(data)
-    ''
+    Markup('')
 
     # Sanitizing *after* escaping is OK!
     >>> html_sanitize(code)
-    '<p>&lt;R&amp;D&gt;</p>'
+    Markup('<p>&lt;R&amp;D&gt;</p>')
 
 Sanitizing can break features, depending on whether the *CODE* is expected to
 contain patterns that are not safe. That's why `fields.Html` and
@@ -414,11 +495,11 @@ likely it is to break things.
 
 .. code-block:: python
 
-    >>code = "<p class='text-warning'>Important Information</p>"
+    >>> code = "<p class='text-warning'>Important Information</p>"
     # this will remove the style, which may break features
     # but is necessary if the source is untrusted
-    >> html_sanitize(code, strip_classes=True)
-    '<p>Important Information</p>'
+    >>> html_sanitize(code, strip_classes=True)
+    Markup('<p>Important Information</p>')
 
 Evaluating content
 ------------------
