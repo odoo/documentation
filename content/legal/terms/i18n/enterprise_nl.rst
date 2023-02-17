@@ -174,7 +174,7 @@ Extra Modules.
 .. _secu_self_hosting_nl:
 
 Self-Hosting
-++++++++++++
+~~~~~~~~~~~~
 
 Voor de duur van deze Overeenkomst verbingt Odoo NV zich ertoe een "Veiligheidsadvies"
 naar de Klant te sturen voor elke beveiligingsfout die wordt ontdekt in de Ondersteunde
@@ -192,7 +192,7 @@ als Vertrouwelijke Informatie zoals beschreven in
 .. _secu_cloud_platform_nl:
 
 Cloudplatform
-+++++++++++++
+~~~~~~~~~~~~~
 
 Odoo NV verbindt zich ertoe om de beveiligingsoplossingen voor elke beveiligingsbug
 die wordt ontdekt in een versie van de Software die op het Cloudplatform wordt gehost,
@@ -207,7 +207,7 @@ zonder dat daarvoor enige handmatige actie van de Klant nodig is.
 .. _upgrade_odoo_nl:
 
 Upgradedienst voor de Software
-++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Voor de duur van deze Overeenkomst kan de Klant via het juiste kanaal
 (doorgaans de upgradedienstwebsite van Odoo NV) upgradeaanvragen indienen om
@@ -263,7 +263,7 @@ Agreement-pagina op https://www.odoo.com/cloud-sla.
 ------------------------
 
 Toepassingsgebied
-+++++++++++++++++
+~~~~~~~~~~~~~~~~~
 
 Voor de duur van deze Overeenkomst kan de klant gratis een onbeperkt aantal ondersteuningstickets
 openen, uitsluitend voor vragen over Bugs (zie :ref:`bugfix_nl`) of begeleiding met betrekking
@@ -275,7 +275,7 @@ duidelijk is of een verzoek onder deze Overeenkomst valt, ligt het uiteindelijke
 bij Odoo NV.
 
 Beschikbaarheid
-+++++++++++++++
+~~~~~~~~~~~~~~~
 
 Tickets kunnen worden ingediend via het websiteformulier of de telefoonnummers
 vermeld op https://www.odoo.com/help of, in geval van samenwerking met een
@@ -466,7 +466,7 @@ Definities
     "Gegevensbeschermingswetgeving" genoemd).
 
 Verwerken van persoonsgegevens
-++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 De partijen erkennen dat de database van de Klant Persoonsgegevens kan bevatten, waarvoor
 de Klant de Verwerkingsverantwoordelijke is. Deze gegevens worden verwerkt door Odoo NV wanneer
@@ -508,7 +508,7 @@ voorzien van nauwkeurige contactgegevens, die nodig zijn om de verantwoordelijke
 gegevensbescherming van de Klant in kennis te stellen.
 
 Subverwerkers
-+++++++++++++
+~~~~~~~~~~~~~
 
 De Klant erkent en gaat ermee akkoord dat Odoo NV voor de levering van de Diensten een beroep kan doen
 op externe dienstverleners (Subverwerkers) om Persoonsgegevens te verwerken. Odoo NV verbindt zich ertoe
