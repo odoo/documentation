@@ -15,6 +15,7 @@ Learn through tutorials and get help using reference guides.
     :titlesonly:
     :maxdepth: 3
 
+    developer/tutorials
     developer/howtos
     developer/reference
     developer/api
