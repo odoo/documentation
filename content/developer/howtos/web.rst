@@ -17,7 +17,7 @@ Customizing the web client
 This guide is about creating modules for Odoo's web client.
 
 To create websites with Odoo, see :doc:`website`; to add business capabilities
-or extend existing business systems of Odoo, see :doc:`backend`.
+or extend existing business systems of Odoo, see :doc:`../tutorials/getting_started`.
 
 .. warning::
 
