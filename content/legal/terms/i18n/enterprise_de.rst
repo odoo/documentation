@@ -159,7 +159,7 @@ unterstützten  Zusatzmodulen haftbar gemacht werden kann.
 .. _secu_self_hosting_de:
 
 Self-Hosting
-++++++++++++
+~~~~~~~~~~~~
 
     Für die Dauer dieser Vereinbarung verpflichtet sich Odoo SA, dem Kunden für jeden
     Sicherheitsfehler, der in den unterstützten Versionen der Software (dies schließt Zusatzmodule
@@ -176,7 +176,7 @@ Self-Hosting
 .. _secu_cloud_platform_de:
 
 Cloud-Plattform
-+++++++++++++++
+~~~~~~~~~~~~~~~
 
     Odoo SA verpflichtet sich, die Sicherheitsmaßnahmen für jeden Sicherheitsfehler, der in einer
     auf der Cloud-Plattform gehosteten Version der Software entdeckt wird, auf alle von Odoo SA
@@ -191,7 +191,7 @@ Cloud-Plattform
 .. _upgrade_odoo_de:
 
 Upgrade-Service für die Software
-++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Während der Laufzeit dieser Vereinbarung kann der Kunde über den entsprechenden Kanal (in der Regel
 die Upgrade-Service-Website von Odoo SA) Upgrade-Anträge stellen, um eine Datenbank der Software von
@@ -244,7 +244,7 @@ https://www.odoo.com/cloud-sla beschrieben.
 -------------------
 
 Umfang
-++++++
+~~~~~~
 
 Während der Laufzeit dieser Vereinbarung kann der Kunde eine unbegrenzte Anzahl von kostenlosen
 Support-Tickets öffnen, die ausschließlich Fragen zu Fehlern (siehe :ref:`bugfix_de`) oder
@@ -256,7 +256,7 @@ Erwerb einer separaten Servicevereinbarung abgedeckt werden. Falls nicht klar is
 von diesem Vertrag abgedeckt ist, liegt die Entscheidung im Ermessen von Odoo SA.
 
 Verfügbarkeit
-+++++++++++++
+~~~~~~~~~~~~~
 
 Tickets können über das Webformular oder die auf https://odoo.com/help aufgeführten Telefonnummern
 eingereicht werden, oder, wenn Sie mit einem Odoo-Partner zusammenarbeiten, über den von diesem
@@ -430,7 +430,7 @@ Definitionen
     "Datenschutzgesetzgebung" bezeichnet).
 
 Verarbeitung von personenbezogenen Daten
-++++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Die Parteien erkennen an, dass die Datenbank des Kunden personenbezogene Daten enthalten kann, für
 die der Kunde verantwortlich ist. Diese Daten werden von Odoo SA verarbeitet, wenn der Kunde dies
@@ -472,7 +472,7 @@ Kontaktinformationen zur Verfügung zu stellen, die für die Benachrichtigung de
 Datenschutzbeauftragten des Kunden erforderlich sind.
 
 Unterauftragsverarbeiter
-++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~
 
 Der Kunde nimmt zur Kenntnis und erklärt sich damit einverstanden, dass Odoo SA zur Erbringung der
 Dienstleistungen Dritte (Unterauftragsverarbeiter) mit der Verarbeitung personenbezogener Daten
