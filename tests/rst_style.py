@@ -1,8 +1,9 @@
 import re
 import sys
+from pathlib import Path
+from unittest.mock import patch
 
 import sphinxlint
-from unittest.mock import patch
 
 
 CUSTOM_RST_DIRECTIVES = [
@@ -24,7 +25,70 @@ FORBIDDEN_HEADING_CHARS = [
 FORBIDDEN_HEADING_DELIMITER_RE = re.compile(
     '^(' + '|'.join(rf'\{char}+' for char in FORBIDDEN_HEADING_CHARS) + ')\n$'
 )
+GIT_CONFLICT_MARKERS = ['<' * 7, '>' * 7]
+REDIRECT_RULE_RE = re.compile(r'^[ \t]*([\w\-/]+\.rst)[ \t]+([\w\-/]+\.rst)[ \t]*(?:#.*)?$')
+REDIRECTS_FILE_VERSION_RE = re.compile('(?:redirects/)?(?:saas-)?(\d\d\.\d)\.txt')
 
+
+@sphinxlint.checker('.rst', '.py', '.js', '.xml', '.css', '.sass', '.less', '.po', '.pot')
+def check_git_conflict_markers(file, lines, options=None):
+    """ Check that there are no conflict markers. """
+    for lno, line in enumerate(lines):
+        if any(marker in line for marker in GIT_CONFLICT_MARKERS):
+            yield lno + 1, "the git conflict should be resolved"
+
+
+@sphinxlint.checker('')
+def check_file_extensions(file, lines, options=None):
+    """ Check that there is no file without extension. """
+    yield 0, "the file does not have an extension"
+
+
+@sphinxlint.checker('.txt')
+def check_redirect_rules_format(file, lines, options=None):
+    """ Check that redirect rules are correctly formatted. """
+    if file.startswith('redirects/'):  # Only check text files in the /redirects folder.
+        for lno, line in enumerate(lines):
+            if not line.rstrip() or line.startswith('#'):
+                continue
+            if not REDIRECT_RULE_RE.search(line):
+                yield lno + 1, "invalid redirect rule format; learn more at redirects/MANUAL.md"
+
+
+@sphinxlint.checker('.txt')
+def check_redirect_rules_target(file, lines, options=None):
+    """ Check that redirect rules refer to existing files. """
+    def get_redirects_file_version(file_name_):
+        match_ = REDIRECTS_FILE_VERSION_RE.search(file_name_)
+        if match_:
+            return float(match_.group(1))
+        return -1.0
+
+    if file.startswith('redirects/'):  # Only check text files in the /redirects folder.
+        # Find the current version, which is that of the file with the latest version.
+        redirects_dir = Path('redirects')
+        latest_redirects_version = 0.0
+        for redirect_file in redirects_dir.iterdir():
+            if redirect_file.is_dir() or redirect_file.suffix != '.txt':
+                continue
+            latest_redirects_version = max(
+                latest_redirects_version, get_redirects_file_version(redirect_file.name)
+            )
+
+        # Only check the existence of the redirection target if we are in the right version.
+        current_file_version = get_redirects_file_version(file)
+        if current_file_version < latest_redirects_version:
+            return
+
+        for lno, line in enumerate(lines):
+            if not line.rstrip() or line.startswith('#'):
+                continue
+            match_res = REDIRECT_RULE_RE.search(line)
+            if match_res:
+                _old_path, new_path = match_res.groups()
+                redirect_file = Path('content') / new_path
+                if not redirect_file.is_file():
+                    yield lno + 1, f"the redirect rule targets the non-existing file {new_path}"
 
 @sphinxlint.checker('.rst')
 def check_heading_delimiters_characters(file, lines, options=None):
