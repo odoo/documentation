@@ -37,7 +37,7 @@ installed. If you have not installed it yet, we recommend installing it from :re
 <setup/install/source>` (:dfn:`running Odoo from source code`).
 
 To setup your development environment, you can also follow the dedicated chapter in :doc:`Getting
-Started: Development environment setup <rdtraining/02_setup>` tutorial.
+Started: Development environment setup <../tutorials/getting_started/02_setup>` tutorial.
 
 The last things to do are:
 
