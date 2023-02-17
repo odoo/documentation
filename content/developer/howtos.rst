@@ -1,9 +1,9 @@
 :show-content:
 :hide-page-toc:
 
-=========
-Tutorials
-=========
+=============
+How-to guides
+=============
 
 .. toctree::
     :titlesonly:
