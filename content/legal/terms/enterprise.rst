@@ -146,7 +146,7 @@ or in Covered Extra Modules.
 .. _secu_self_hosting:
 
 Self-Hosting
-++++++++++++
+~~~~~~~~~~~~
 
 For the duration of this Agreement, Odoo SA commits to sending a "Security Advisory" to the Customer
 for any security Bug that is discovered in the Covered Versions of the Software (this excludes Extra
@@ -162,7 +162,7 @@ the public disclosure.
 .. _secu_cloud_platform:
 
 Cloud Platform
-++++++++++++++
+~~~~~~~~~~~~~~
 
 Odoo SA commits to apply the security remedies for any security Bug discovered in a version of
 the Software hosted on the Cloud Platform, on all systems under its control, as soon as
@@ -177,7 +177,7 @@ the remedy is available, without requiring any manual action of the Customer.
 .. _upgrade_odoo:
 
 Upgrade Service for the Software
-++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For the duration of this Agreement, the Customer can submit upgrade requests through the appropriate
 channel (typically Odoo SA's upgrade service website), in order to convert a database of the Software
@@ -228,7 +228,7 @@ https://www.odoo.com/cloud-sla.
 --------------------
 
 Scope
-+++++
+~~~~~
 
 For the duration of this Agreement, the Customer may open an unlimited number of support tickets
 free of charge, exclusively for questions regarding Bugs (see :ref:`bugfix`) or guidance
@@ -240,7 +240,7 @@ In case it’s not clear if a request is covered by this Agreement,
 the decision is at the discretion of Odoo SA.
 
 Availability
-++++++++++++
+~~~~~~~~~~~~
 
 Tickets can be submitted via the web form or phone numbers listed on `odoo.com/help <https://www.odoo.com/help>`_,
 or when working with an Odoo Partner, the channel provided by the partner, subject to local
@@ -413,7 +413,7 @@ Definitions
     (hereafter referred to as “Data Protection Legislation”)
 
 Processing of Personal Data
-+++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 The parties acknowledge that the Customer's database may contain Personal Data, for which the
 Customer is the Controller. This data will be processed by Odoo SA when the Customer instructs so,
@@ -451,7 +451,7 @@ With regard to points (d) to (f), the Customer agrees to provide Odoo SA with ac
 information at all times, as necessary to notify the Customer's Data Protection responsible.
 
 Subprocessors
-+++++++++++++
+~~~~~~~~~~~~~
 
 The Customer acknowledges and agrees that in order to provide the Services, Odoo SA may use
 third-party service providers (Subprocessors) to process Personal Data. Odoo SA commits to only

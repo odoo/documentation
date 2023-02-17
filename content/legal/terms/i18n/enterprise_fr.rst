@@ -160,7 +160,7 @@ des Modules Supplémentaires Couverts.
 .. _secu_self_hosting_fr:
 
 Auto-Hébergement
-++++++++++++++++
+~~~~~~~~~~~~~~~~
 
 Pour la durée du Contrat, Odoo SA s'engage à envoyer une "alerte de sécurité"" au Client
 pour tout Bug présentant un risque de sécurité qui serait découvert dans les Versions Couvertes
@@ -176,7 +176,7 @@ sécurité comme des Informations Confidentielles telles que décrites à la sec
 .. _secu_cloud_platform_fr:
 
 Plate-forme Cloud
-+++++++++++++++++
+~~~~~~~~~~~~~~~~~
 
 Odoo SA s'engage à appliquer les correctifs de sécurité pour tout Bug de sécurité découvert
 dans une version du Logiciel hébergé sur la Plate-forme Cloud, sur tous les systèmes sous son
@@ -191,7 +191,7 @@ contrôle, dès que le correctif est disponible, et sans intervention manuelle d
 .. _upgrade_odoo_fr:
 
 Service de migration du Logiciel
-++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Pour la durée du présent Contrat, le Client peut soumettre des demandes de migration en suivant
 les procédures appropriées (généralement, via le site du service de migration d'Odoo SA),
@@ -247,7 +247,7 @@ https://www.odoo.com/cloud-sla.
 ------------------------
 
 Portée
-++++++
+~~~~~~
 
 Pour la durée du présent Contrat, le Client peut ouvrir un nombre non limité de demandes d'assistance
 sans frais, exclusivement pour des questions relatives à des Bugs (voir :ref:`bugfix_fr`) ou des
@@ -260,7 +260,7 @@ Au cas où il n'est pas clair qu'une demande est couverte par ce Contrat, la dé
 discrétion d'Odoo SA.
 
 Disponibilité
-+++++++++++++
+~~~~~~~~~~~~~
 
 Les demandes d'assistances peuvent être soumises via le formulaire en ligne ou les numéros
 de téléphone indiqués sur https://www.odoo.com/help, ou en cas de travail avec un
@@ -440,7 +440,7 @@ Définitions
     qui les amende ou les remplace (collectivement, la "Législation sur la Protection des Données")
 
 Traitement de Données à Caractère Personnel
-+++++++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Les parties conviennent que la base de données du Client peut contenir des Données à Caractère Personnel,
 pour lesquelles le Client est le Responsable de Traitement. Ces données seront traitées par Odoo SA
@@ -480,7 +480,7 @@ contact valables, tel que nécessaire pour toute notification auprès du respons
 données du Client.
 
 Sous-traitants
-++++++++++++++
+~~~~~~~~~~~~~~
 
 Le Client convient et accepte que pour fournir les Services, Odoo SA peut faire appel à des
 prestataires de service tiers (Sous-traitants) pour traiter les Données à Caractère Personnel.

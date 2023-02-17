@@ -151,7 +151,7 @@ Acuerdo y en la licencia del Software.
 .. _secu_self_hosting_es:
 
 Hospedaje en servidores propios
-+++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Durante la vigencia de este Acuerdo, Odoo SA se compromete a enviar un “Aviso de Seguridad” al
 Cliente al identificar algún Bug de seguridad en las versiones cubiertas del Software (excluyendo
@@ -165,7 +165,7 @@ tratados como Información Confidencial de acuerdo a lo descrito en la sección
 :ref:`confidentiality_es` del presente Acuerdo, hasta la fecha de publicación del Aviso de Seguridad.
 
 Plataforma en la nube
-+++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~
 
 En el momento que exista una medida de seguridad, Odoo SA se compromete a aplicar dicha medida de
 seguridad ante cualquier Bug que comprometa la seguridad del Software, siempre y cuando este Bug
@@ -180,7 +180,7 @@ bajo el control de esta plataforma, sin requerir de alguna acción manual por pa
 .. _upgrade_odoo_es:
 
 Servicio de actualización para el software
-++++++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Durante la vigencia de este Acuerdo, el Cliente puede solicitar la actualización de su versión del
 Software a través del medio apropiado (generalmente a través de la sección de servicios de
@@ -234,7 +234,7 @@ el nivel del servicio, disponible en `Cloud SLA <http://www.odoo.com/cloud-sla>`
 ------------------------
 
 Alcance
-+++++++
+~~~~~~~
 
 Durante la vigencia del presente Acuerdo, el Cliente puede crear un número ilimitado de tickets de
 soporte sin costos adicionales, exclusivamente para preguntas relacionadas a Bugs (consultar sección
@@ -247,7 +247,7 @@ claro si una solicitud puede ser respondida por el Servicio de soporte, la decis
 discreción de Odoo SA.
 
 Disponibilidad
-++++++++++++++
+~~~~~~~~~~~~~~
 
 Los tickets de soporte pueden ser enviados a través del formulario en el sitio web o a los números
 de contacto que se encuentran en `Odoo Help <https://www.odoo.com/es_ES/help>`__, o cuando se
@@ -431,7 +431,7 @@ Definiciones
     o legislación que los modifique o sustituya (en adelante, “Legislacion de Proteccion de Datos”).
 
 Procesamiento de datos personales
-+++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Las Partes reconocen que la base de datos del Cliente puede contener Datos Personales, de los cuales
 el Cliente es el Responsable del tratamiento. Esta data será procesada por Odoo SA cuando el Cliente
@@ -470,7 +470,7 @@ precisa en todo momento, según sea necesario para notificar al responsable de l
 Protección de Datos del Cliente.
 
 Sub procesadores
-++++++++++++++++
+~~~~~~~~~~~~~~~~
 
 El Cliente reconoce y acepta que, para proporcionar los Servicios, Odoo SA puede utilizar a terceros
 como proveedores de servicios para procesar Datos Personales (en adelante “Sub-procesadores”).

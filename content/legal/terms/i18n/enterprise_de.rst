@@ -154,7 +154,7 @@ werden müssen, die im Abschnitt :ref:`confidentiality_de` beschrieben werden.
 .. _upgrade_odoo_de:
 
 Upgrade-Service für die Software
-++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Während der Laufzeit dieser Vereinbarung kann der Kunde Upgrade-Anfragen über den entsprechenden
 Kanal übermitteln (üblicherweise die Website der Odoo SA für den Upgrade-Service), um eine
@@ -191,7 +191,7 @@ Datenbank einreichen, bis ein akzeptables Ergebnis erzielt wird.
 .. _upgrade_extra_de:
 
 Upgrade-Service für Erweiterungen von Drittanbietern
-++++++++++++++++++++++++++++++++++++++++++++++++++++
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Für die Laufzeit dieser Vereinbarung kann der Kunde optionale Upgrade-Services optionale für von
 Drittanbieter angebotene Erweiterungsmodule der Software anfordern. Für diese optionale
