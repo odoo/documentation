@@ -6,7 +6,7 @@ Accounting localization
 .. warning::
 
     This tutorial requires knowledge about how to build a module in Odoo (see
-    :doc:`/developer/howtos/backend`).
+    :doc:`../tutorials/getting_started`).
 
 
 Installation procedure
