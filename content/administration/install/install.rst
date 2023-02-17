@@ -281,8 +281,8 @@ Git
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
 SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
-are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
-on contributing to Odoo source code, choose SSH.
+are following the :doc:`Getting started </developer/tutorials/getting_started>` developer tutorial,
+or plan on contributing to Odoo source code, choose SSH.
 
 .. note::
    **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
@@ -471,8 +471,8 @@ Git
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
 SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
-are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
-on contributing to Odoo source code, choose SSH.
+are following the :doc:`Getting started </developer/tutorials/getting_started>` developer tutorial,
+or plan on contributing to Odoo source code, choose SSH.
 
 .. note::
    **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
@@ -691,8 +691,8 @@ Git
 The following requires `Git <git_>`_ to be installed on your machine and that you have basic
 knowledge of Git commands. To clone a Git repository, you must choose between cloning with HTTPS or
 SSH. If you do not know the difference between the two, the best option is most likely HTTPS. If you
-are following the :doc:`Getting started </developer/howtos/rdtraining>` developer tutorial, or plan
-on contributing to Odoo source code, choose SSH.
+are following the :doc:`Getting started </developer/tutorials/getting_started>` developer tutorial,
+or plan on contributing to Odoo source code, choose SSH.
 
 .. note::
    **The Enterprise Git repository does not contain the full Odoo source code**. It is only a
