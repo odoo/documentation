@@ -1,22 +1,16 @@
-.. _tutorials/getting_started/J_reports:
+=================
+Build PDF Reports
+=================
 
-=======================
-Advanced J: PDF Reports
-=======================
-
-.. warning::
-
-    This tutorial assumes you have completed the :ref:`Core Training <tutorials/getting_started>`
-    and have installed :ref:`wkhtmltopdf <setup/install/source/prepare>`.
-
-    To follow the exercise, it is recommended that you fetch the branch {BRANCH}-core from the
-    `technical training solutions
-    <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
-    contains a version of the module created during the core training we can use as a starting
-    point.
+.. important::
+   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   completed it and use the `estate` module you have built as a base for the exercises in this
+   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
+   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
+   want to start from a clean base.
 
 We were previously :ref:`introduced to QWeb <tutorials/getting_started/15_qwebintro>`
-in the Core Training where it was used to build a kanban view. Now we will expand on one of QWeb's
+where it was used to build a kanban view. Now we will expand on one of QWeb's
 other main uses: creating PDF reports. A common business requirement is the ability to create documents
 to send to customers and to use internally. These reports can be used to summarize and display
 information in an organized template to support the business in different ways. Odoo
@@ -58,8 +52,8 @@ Therefore, it is expected that your work tree will look something like this:
 
 Note that you will often see other non-QWeb and non-XML files containing "report" in their name also within
 the report folder. These are unrelated to the reports covered in this tutorial and are covered in
-:ref:`another advanced topic <tutorials/getting_started/K_dashboard>`. For now you can think of them
-as customized views that use direct SQL queries (sometimes referred to as SQL Views).
+the :doc:`dashboards` tutorial. For now you can think of them as customized views that use direct
+SQL queries (sometimes referred to as SQL Views).
 
 Don't forget to add whatever files your template and action view will be into to your ``__manifest__.py``.
 In this case, you will want to add the files to the ``data`` list and remember that the files listed in a manifest
@@ -73,7 +67,7 @@ Basic Report
     **Goal**: at the end of this section, we will can print a report that displays all offers for a
     property.
 
-    .. image:: J_reports/simple_report.png
+    .. image:: pdf_reports/simple_report.png
       :align: center
       :alt: Simple PDF report
 
@@ -93,8 +87,8 @@ or all of your expected use cases. A good representation set for our simple repo
 
 If you don't have a set of data like this already, you can either:
 
-* Complete :ref:`tutorials/getting_started/C_data` (if you haven't done so already) and add the
-  extra cases to your demo data (you may need to create a new database to load in the demo data).
+* Complete the :doc:`define_module_data` tutorial (if you haven't done so already) and add the extra
+  cases to your demo data (you may need to create a new database to load in the demo data).
 * Manually create the data in your database.
 * Copy this `data file
   <https://github.com/odoo/technical-training-solutions/blob/{BRANCH}-J_reports/estate/data/estate_demo.xml>`_
@@ -196,7 +190,7 @@ that only make sense under specific conditions. For example, if we wanted to mak
 report, then we can link it to a "Print Sale Info" button that appears in the form view only when
 the property is "Sold".
 
-.. image:: J_reports/print_menu.png
+.. image:: pdf_reports/print_menu.png
     :align: center
     :alt: Print Menu Button
 
@@ -230,7 +224,7 @@ Sub-templates
 
     **Goal**: at the end of this section, we will have a sub-template that we use in 2 reports.
 
-    .. image:: J_reports/report_subtemplate.png
+    .. image:: pdf_reports/report_subtemplate.png
       :align: center
       :alt: Report using a subtemplate
 
@@ -266,7 +260,7 @@ Report Inheritance
     **Goal**: at the end of this section, we will inherit the property report in the ``estate_account``
     module.
 
-    .. image:: J_reports/inherited_report.png
+    .. image:: pdf_reports/inherited_report.png
       :align: center
       :alt: An inherited report
 

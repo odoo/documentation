@@ -84,8 +84,6 @@ Static web data
 None of these elements are mandatory. Some modules may only add data files (e.g. country-specific
 accounting configuration), while others may only add business objects. During this training, we will
 create business objects, object views and data files.
-:ref:`Web controllers <tutorials/getting_started/G_website>` and
-:ref:`static web data <tutorials/getting_started/I_jswidget>` are advanced topics.
 
 Module structure
 ----------------
