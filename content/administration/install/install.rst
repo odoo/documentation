@@ -437,7 +437,7 @@ just logged into your own Odoo database!
      <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/reference/cli>`.
 
 .. _setup/install/source/linux:
 
@@ -657,7 +657,7 @@ just logged into your own Odoo database!
      <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/reference/cli>`.
 
 .. _setup/install/source/mac_os:
 
@@ -855,7 +855,7 @@ just logged into your own Odoo database!
      <odoo-bin -r>` CLI argument.
 
 .. seealso::
-   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/cli>`.
+   :doc:`The exhaustive list of CLI arguments for odoo-bin </developer/reference/cli>`.
 
 .. _setup/install/docker:
 
