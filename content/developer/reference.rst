@@ -11,3 +11,4 @@ Reference
     reference/addons
     reference/javascript
     reference/external_api
+    reference/extract_api
