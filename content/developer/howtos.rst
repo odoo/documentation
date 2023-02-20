@@ -9,7 +9,6 @@ How-to guides
     :titlesonly:
 
     howtos/scss_tips
-    howtos/website
     howtos/web_services
     howtos/company
     howtos/accounting_localization
@@ -28,21 +27,6 @@ How-to guides
                    </p>
                </div>
                <div class="card-footer border-0">
-               </div>
-           </div>
-       </a>
-
-       <!-- Small card with badge rounded-pill -->
-       <a class="o_toctree_card col" href="howtos/website.html">
-           <div class="card h-100">
-               <div class="card-body pb-0">
-                   <h4 class="card-title text-primary mb-1">Building a website</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Build your first website modules with Odoo.
-                   </p>
-               </div>
-               <div class="card-footer border-0">
-                   <span class="badge rounded-pill bg-dark mt-auto mb-2">Beginner</span>
                </div>
            </div>
        </a>
