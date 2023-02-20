@@ -9,7 +9,6 @@ How-to guides
     :titlesonly:
 
     howtos/website
-    howtos/backend
     howtos/profilecode
     howtos/company
     howtos/localization
