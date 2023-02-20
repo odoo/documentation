@@ -309,12 +309,6 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
     proxy_connect_timeout 720s;
     proxy_send_timeout 720s;
 
-    # Add Headers for odoo proxy mode
-    proxy_set_header X-Forwarded-Host $host;
-    proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-    proxy_set_header X-Forwarded-Proto $scheme;
-    proxy_set_header X-Real-IP $remote_addr;
-
     # SSL parameters
     ssl_certificate /etc/ssl/nginx/server.crt;
     ssl_certificate_key /etc/ssl/nginx/server.key;
@@ -340,6 +334,11 @@ in ``/etc/nginx/sites-enabled/odoo.conf`` set:
 
     # Redirect requests to odoo backend server
     location / {
+      # Add Headers for odoo proxy mode
+      proxy_set_header X-Forwarded-Host $host;
+      proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+      proxy_set_header X-Forwarded-Proto $scheme;
+      proxy_set_header X-Real-IP $remote_addr;
       proxy_redirect off;
       proxy_pass http://odoo;
     }
@@ -429,6 +428,11 @@ by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up 
 
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
+           # Add Headers for odoo proxy mode
+           proxy_set_header X-Forwarded-Host $host;
+           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+           proxy_set_header X-Forwarded-Proto $scheme;
+           proxy_set_header X-Real-IP $remote_addr;
            root /usr/lib/python3/dist-packages/odoo/addons;
            try_files $uri @odoo;
            expires 24h;
