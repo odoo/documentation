@@ -8,7 +8,6 @@ How-to guides
 .. toctree::
     :titlesonly:
 
-    howtos/website
     howtos/profilecode
     howtos/company
     howtos/localization
@@ -17,21 +16,6 @@ How-to guides
 .. raw:: html
 
    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-4">
-
-       <!-- Small card with badge rounded-pill -->
-       <a class="o_toctree_card col" href="howtos/website.html">
-           <div class="card h-100">
-               <div class="card-body pb-0">
-                   <h4 class="card-title text-primary mb-1">Building a website</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Build your first website modules with Odoo.
-                   </p>
-               </div>
-               <div class="card-footer border-0">
-                   <span class="badge rounded-pill bg-dark mt-auto mb-2">Beginner</span>
-               </div>
-           </div>
-       </a>
 
        <a class="o_toctree_card col" href="howtos/profilecode.html">
            <div class="card h-100 pb-0">
