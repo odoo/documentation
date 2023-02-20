@@ -1,19 +1,13 @@
-.. _tutorials/getting_started/K_dashboard:
+============================
+Visualize data in dashboards
+============================
 
-======================
-Advanced K: Dashboards
-======================
-
-.. warning::
-
-    This tutorial assumes you have completed the :ref:`Core Training <tutorials/getting_started>`
-    and have access to Odoo Enterprise features.
-
-    To follow the exercise, it is recommended that you fetch the branch
-    {BRANCH}-core from the `technical training solutions
-    <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
-    contains a version of the module created during the core training we can use as a starting
-    point.
+.. important::
+   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   completed it and use the `estate` module you have built as a base for the exercises in this
+   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
+   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
+   want to start from a clean base.
 
 The term "Dashboard" is used in Odoo for objects that display data, but involves different
 implementations. This tutorial will only focus on the Enterprise view that is used to provide
@@ -56,8 +50,8 @@ is also common to include "report" in the name of the SQL view's files. You may 
 wondering why do we put the files in a report directory? We saw earlier that the dashboard is
 for data visualization, therefore it is not editable. You can think of dashboards as interactive
 reports where you can click on statistics, graphs, and charts to see the specific data contributing
-to them. Note it is also standard to store the xml code for
-:ref:`PDF report templates <tutorials/getting_started/J_reports>` in the report directory.
+to them. Note it is also standard to store the xml code for :doc:`PDF report templates
+<pdf_reports>` in the report directory.
 
 It is expected that your work tree will look something like:
 
@@ -87,7 +81,7 @@ Dashboard View
     **Goal**: at the end of this section, we will have a new dashboard view that displays
     different property statistics.
 
-    .. image:: K_dashboard/simple_dashboard.png
+    .. image:: dashboards/simple_dashboard.png
       :align: center
       :alt: Basic Dashboard view
 
@@ -117,8 +111,8 @@ minimum, and maximum statistics, therefore a good representation set for our das
 
 If you don't have a set of data like this already, you can either:
 
-* Complete :ref:`tutorials/getting_started/C_data` (if you haven't done so already) and add the
-  extra cases to your demo data (you may need to create a new database to load in the demo data).
+* Complete :doc:`define_module_data` (if you haven't done so already) and add the extra cases to
+  your demo data (you may need to create a new database to load in the demo data).
 * Manually create the data in your database.
 * Copy this `data file
   <https://github.com/odoo/technical-training-solutions/blob/{BRANCH}-K_dashboard/estate/data/estate_demo.xml>`_
@@ -199,9 +193,7 @@ Subviews
 Similar to how we can use the list view within the form view (we saw this automatically happen for
 One2many relationships in :ref:`tutorials/getting_started/08_relations`), we can add other views
 within our dashboard view. The most commonly added are the pivot and graph views, but the cohort
-view is also an option. These views are covered in more depth in
-:ref:`tutorials/getting_started/H_adv_views`. For this topic, you are only required to know their
-names. A dashboard with only subviews is:
+view is also an option. A dashboard with only subviews is:
 
 .. code-block:: xml
 
@@ -240,7 +232,7 @@ SQL Views
     **Goal**: at the end of this section, we will have a new SQL view that displays different
     property statistics.
 
-    .. image:: K_dashboard/report_dashboard.png
+    .. image:: dashboards/report_dashboard.png
       :align: center
       :alt: SQL view
 
@@ -350,7 +342,7 @@ are still looking at all the offers per property, so any property with more than
 counted per offer. This example is easily double-checked by clicking on the pie chart to see its
 list view:
 
-    .. image:: K_dashboard/report_list_detail.png
+    .. image:: dashboards/report_list_detail.png
       :align: center
       :alt: Pie chart list view
 
