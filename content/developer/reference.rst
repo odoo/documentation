@@ -10,5 +10,6 @@ Reference
 
     reference/addons
     reference/javascript
+    reference/cli
     reference/external_api
     reference/extract_api
