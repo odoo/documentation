@@ -10,7 +10,6 @@ How-to guides
 
     howtos/scss_tips
     howtos/website
-    howtos/backend
     howtos/web_services
     howtos/company
     howtos/accounting_localization
