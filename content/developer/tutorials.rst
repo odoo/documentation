@@ -16,6 +16,7 @@ Tutorials
     tutorials/mixins
     tutorials/pdf_reports
     tutorials/dashboards
+    tutorials/backend
 
 .. raw:: html
 
