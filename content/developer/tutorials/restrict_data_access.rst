@@ -1,17 +1,11 @@
-.. _tutorials/getting_started/B_acl_irrules:
+=======================
+Restrict access to data
+=======================
 
-================================
-Advanced B: ACL and Record Rules
-================================
-
-.. warning::
-
-    This tutorial assumes you have completed the :ref:`Core Training <tutorials/getting_started>`.
-
-    To follow the exercise, it is recommended that you fetch the branch
-    {CURRENT_MAJOR_BRANCH}-core from the repository XXX, it
-    contains a version of the module created during the core training we can use
-    as a starting point.
+.. important::
+   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   completed it and use the `estate` module you have built as a base for the exercises in this
+   tutorial.
 
 So far we have mostly concerned ourselves with implementing useful features.
 However in most business scenarios *security* quickly becomes a concern:
@@ -82,8 +76,8 @@ This baseline seems sufficient for us:
   which are not specifically under the care of any agent.
 
 In keeping with Odoo's data-driven nature, a group is no more than a record of
-the ``res.groups`` model. They are normally part of a module's :ref:`master data
-<tutorials/getting_started/C_data>`, defined in one of the module's data files.
+the ``res.groups`` model. They are normally part of a module's :doc:`master data
+<define_module_data>`, defined in one of the module's data files.
 
 As simple example `can be found here <https://github.com/odoo/odoo/blob/532c083cbbe0ee6e7a940e2bdc9c677bd56b62fa/addons/hr/security/hr_security.xml#L9-L14>`_.
 
@@ -117,7 +111,7 @@ As simple example `can be found here <https://github.com/odoo/odoo/blob/532c083c
     If you go to :menuselection:`Settings --> Manage Users` and open the
     ``admin`` user ("Mitchell Admin"), you should see a new section:
 
-    .. figure:: B_acl_irrules/groups.png
+    .. figure:: restrict_data_access/groups.png
 
     Set the admin user to be a *Real Estate manager*.
 
@@ -130,7 +124,7 @@ As simple example `can be found here <https://github.com/odoo/odoo/blob/532c083c
     a password), as the real-estate agent you should only see the real estate
     application, and possibly the Discuss (chat) application:
 
-    .. figure:: B_acl_irrules/agent.png
+    .. figure:: restrict_data_access/agent.png
 
 Access Rights
 =============
@@ -280,7 +274,7 @@ Bypassing Security
 If you try to mark a property as "sold" as the real estate agent, you should get
 an access error:
 
-.. figure:: B_acl_irrules/error.png
+.. figure:: restrict_data_access/error.png
 
 This happens because ``estate_account`` tries to create an invoice during the
 process, but creating an invoice requires the right to all invoice management.
@@ -379,7 +373,7 @@ Explicit security checks can be performed by:
 
     Re-run the bypass script, check that the error occurs before the print.
 
-.. _tutorials/getting_started/B_acl_irrules/multicompany:
+.. _tutorials/restrict_data_access/multicompany:
 
 Multi-company security
 ======================
@@ -476,7 +470,7 @@ or a *visibility* feature before using it:
 
 * *Visibility* features mean a user can still access the model or record
   otherwise, either through an other part of the interface or by :doc:`perform
-  operations remotely using RPC <../../api/external_api>`, things might just not be
+  operations remotely using RPC <../api/external_api>`, things might just not be
   visible in the web interface in some contexts.
 * *Security* features mean a user can not access records, fields or operations.
 
