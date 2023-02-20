@@ -1,14 +1,13 @@
-.. _tutorials/getting_started/E_unittest:
+===================================
+Safeguard your code with unit tests
+===================================
 
-=============================
-Advanced E: Python Unit Tests
-=============================
-
-.. tip:: This tutorial assumes you followed the Core Training.
-
-  To do the exercise, fetch the branch {BRANCH}-core from the `technical training solutions
-  <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository. It
-  contains a basic module we will use as a starting point
+.. important::
+   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   completed it and use the `estate` module you have built as a base for the exercises in this
+   tutorial. Fetch the branch `{BRANCH}-core` from the `technical-training-solutions
+   <https://github.com/odoo/technical-training-solutions/tree/{BRANCH}-core>`_ repository if you
+   want to start from a clean base.
 
 **Reference**:
 `Odoo's Test Framework: Learn Best Practices <https://www.youtube.com/watch?v=JEIscps0OOQ>`__
