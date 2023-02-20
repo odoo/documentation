@@ -13,6 +13,7 @@ How-to guides
     howtos/company
     howtos/accounting_localization
     howtos/translations
+    howtos/provide_iap_services
     howtos/connect_device
 
 .. raw:: html
@@ -76,6 +77,18 @@ How-to guides
                    <h4 class="card-title text-primary mb-1">Translating modules</h4>
                    <p class="card-text text-dark fw-normal">
                        Learn how to provide translation abilities to your module.
+                   </p>
+               </div>
+               <div class="card-footer border-0"></div>
+           </div>
+       </a>
+
+       <a class="o_toctree_card col" href="howtos/provide_iap_services.html">
+           <div class="card h-100 pb-0">
+               <div class="card-body">
+                   <h4 class="card-title text-primary mb-1">Provide IAP services</h4>
+                   <p class="card-text text-dark fw-normal">
+                       Learn how to provide ongoing services with Odoo's In-App Purchase (IAP).
                    </p>
                </div>
                <div class="card-footer border-0"></div>
