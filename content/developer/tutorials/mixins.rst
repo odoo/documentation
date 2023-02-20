@@ -1,11 +1,9 @@
-.. _tutorials/getting_started/D_mixins:
-
-==================
-Advanced D: Mixins
-==================
+======================
+Reuse code with mixins
+======================
 
 If you need to interface with common Odoo features such as the chatter, you can rely on
-:doc:`mixins <../../reference/backend/mixins>`.
+:doc:`mixins <../reference/backend/mixins>`.
 They are Odoo models exposing useful methods through inheritance.
 
 To learn and play with mixins, visit `this repository <https://github.com/tivisse/odoodays-2018/>`_.
