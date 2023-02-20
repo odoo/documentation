@@ -85,7 +85,7 @@ server with the library ``xmlrpc.client``::
             })
 
 .. seealso::
-   - :doc:`../api/external_api`: The in-depth tutorial on XML-RPC with examples spanning multiple programming languages.
+   - :doc:`../reference/external_api`: The in-depth tutorial on XML-RPC with examples spanning multiple programming languages.
 
 JSON-RPC Library
 ----------------
