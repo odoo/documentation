@@ -14,6 +14,7 @@ Tutorials
     tutorials/unit_tests
     tutorials/pdf_reports
     tutorials/dashboards
+    tutorials/backend
 
 .. raw:: html
 
