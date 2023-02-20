@@ -1,3 +1,4 @@
+:orphan:
 
 .. _howto/base:
 .. _howto/module:
@@ -5,6 +6,9 @@
 =================
 Building a Module
 =================
+
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`getting_started` instead.
 
 .. warning::
    This tutorial requires :ref:`having installed Odoo <setup/install>`
