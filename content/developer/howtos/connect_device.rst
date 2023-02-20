@@ -1,7 +1,6 @@
-
-==================
-Internet of Things
-==================
+=====================
+Connect with a device
+=====================
 
 IoT Drivers allow any Odoo module to communicate in real-time with any device
 connected to the IoT Box. Communication with the IoT Box goes both ways, so the
