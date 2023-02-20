@@ -1,13 +1,11 @@
-.. _tutorials/getting_started/C_data:
+==================
+Define module data
+==================
 
-================================
-Advanced C: Master and Demo Data
-================================
-
-.. tip:: This tutorial assumes you followed the Core Training.
-
-  To do the exercise, fetch the branch {CURRENT_MAJOR_BRANCH}-core from the repository XXX.
-  It contains a basic module we will use as a starting point
+.. important::
+   This tutorial is an extension of the :doc:`getting_started` tutorial. Make sure you have
+   completed it and use the `estate` module you have built as a base for the exercises in this
+   tutorial.
 
 Data Types
 ==========
@@ -19,9 +17,8 @@ Master data is usually part of the technical or business requirements for the mo
 words, such data is often necessary for the module to work properly. This data will always be
 installed when installing the module.
 
-We already met technical data previously since we have defined
-:ref:`security rules <tutorials/getting_started/N_security>`, :ref:`views<reference/views>` and
-:ref:`actions<reference/actions>`. Those are one kind of master data.
+We already met technical data previously since we have defined :ref:`views <reference/views>` and
+:ref:`actions <reference/actions>`. Those are one kind of master data.
 
 On top of technical data, business data can be defined: countries, currencies, units of measure but
 also complete country localization (legal reports, tax definitions, chart of account), and much

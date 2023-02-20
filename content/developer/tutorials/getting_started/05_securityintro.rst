@@ -9,8 +9,8 @@ intended to store business data. In a business application such as Odoo, one of 
 to consider is who\ [#who]_ can access the data. Odoo provides a security mechanism to allow access
 to the data for specific groups of users.
 
-The topic of security is covered in more detail in :ref:`tutorials/getting_started/B_acl_irrules`.
-This chapter aims to cover the minimum required for our new module.
+The topic of security is covered in more detail in :doc:`../restrict_data_access`. This chapter aims
+to cover the minimum required for our new module.
 
 Data Files (CSV)
 ================
@@ -104,9 +104,7 @@ Here is an example for our previous ``test.model``:
 - ``model_id/id`` refers to the model which the access right applies to. The standard way to refer
   to the model is ``model_<model_name>``, where ``<model_name>`` is the ``_name`` of the model
   with the ``.`` replaced by ``_``. Seems cumbersome? Indeed it is...
-- ``group_id/id`` refers to the group which the access right applies to. We will cover the concept
-  of groups in the :ref:`advanced topic <tutorials/getting_started/N_security>` dedicated to the
-  security.
+- ``group_id/id`` refers to the group which the access right applies to.
 - ``perm_read,perm_write,perm_create,perm_unlink``: read, write, create and unlink permissions
 
 .. exercise:: Add access rights.
