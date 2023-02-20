@@ -1,6 +1,11 @@
+:orphan:
+
 ==================
 Building a Website
 ==================
+
+.. danger::
+   This tutorial is outdated. We recommend reading :doc:`getting_started` instead.
 
 .. warning::
 

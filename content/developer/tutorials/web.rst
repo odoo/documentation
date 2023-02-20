@@ -4,11 +4,8 @@
 Customizing the web client
 ==========================
 
-.. note::
-
-    this section is really really out of date. It will be updated someday,
-    but meanwhile, this tutorial will probably be frustrating to follow, since it
-    was written a long time ago.
+.. danger::
+   This tutorial is outdated.
 
 .. highlight:: javascript
 
