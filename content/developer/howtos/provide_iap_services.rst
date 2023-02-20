@@ -1,9 +1,6 @@
-
-.. _api/iap:
-
-===============
-In-App Purchase
-===============
+====================
+Provide IAP services
+====================
 
 In-App Purchase (IAP) allows providers of ongoing services through Odoo apps to
 be compensated for ongoing service use rather than — and possibly instead of
@@ -25,7 +22,7 @@ App Developer:
 Overview
 ========
 
-.. figure:: iap/players.png
+.. figure:: provide_iap_service/players.png
     :align: center
 
     The Players
@@ -40,7 +37,7 @@ Overview
       bridge/translator between an Odoo system and the actual service.
 
 
-.. figure:: iap/credits.jpg
+.. figure:: provide_iap_service/credits.jpg
     :align: center
 
     The Credits
@@ -67,7 +64,7 @@ Overview
 .. note:: In the following explanations we will ignore the External Service,
           they are just a detail of the service you provide.
 
-.. figure:: iap/normal.png
+.. figure:: provide_iap_service/normal.png
     :align: center
 
     'Normal' service flow
@@ -87,7 +84,7 @@ Overview
        been rendered, possibly (depending on the service) displaying or
        storing its results in the client's system.
 
-.. figure:: iap/no-credit.png
+.. figure:: provide_iap_service/no-credit.png
     :align: center
 
     Insufficient credits
@@ -174,16 +171,16 @@ The service has *seven* important fields:
   how you **use it, its relevance** to make your service work and inform the
   client on how they can **access, update or delete their personal information**.
 
-.. image:: iap/menu.png
+.. image:: provide_iap_service/menu.png
     :align: center
 
-.. image:: iap/service_list.png
+.. image:: provide_iap_service/service_list.png
     :align: center
 
-.. image:: iap/creating_service.png
+.. image:: provide_iap_service/creating_service.png
     :align: center
 
-.. image:: iap/service_created.png
+.. image:: provide_iap_service/service_created.png
     :align: center
 
 You can then create *credit packs* which clients can purchase in order to
@@ -214,7 +211,7 @@ A credit pack is essentially a product with five characteristics:
     pack to another.
 
 
-.. image:: iap/package.png
+.. image:: provide_iap_service/package.png
     :align: center
 
 .. _iap-odoo-app:
@@ -283,7 +280,7 @@ local value via your application and additional parts via a remote service.
         </record>
     </odoo>
 
-.. image:: iap/button.png
+.. image:: provide_iap_service/button.png
     :align: center
 
 We can now implement the action method/callback. This will *call our own
@@ -516,7 +513,7 @@ parameters we can use to make things clearer to the end-user.
 JSON-RPC2_ Transaction API
 ==========================
 
-.. image:: iap/flow.png
+.. image:: provide_iap_service/flow.png
     :align: center
 
 * The IAP transaction API does not require using Odoo when implementing your
