@@ -9,7 +9,6 @@ How-to guides
     :titlesonly:
 
     howtos/website
-    howtos/backend
     howtos/web_services
     howtos/company
     howtos/accounting_localization
