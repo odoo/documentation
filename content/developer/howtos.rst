@@ -12,6 +12,7 @@ How-to guides
     howtos/company
     howtos/accounting_localization
     howtos/translations
+    howtos/connect_device
 
 .. raw:: html
 
@@ -61,6 +62,18 @@ How-to guides
                    <h4 class="card-title text-primary mb-1">Translating modules</h4>
                    <p class="card-text text-dark fw-normal">
                        Learn how to provide translation abilities to your module.
+                   </p>
+               </div>
+               <div class="card-footer border-0"></div>
+           </div>
+       </a>
+
+       <a class="o_toctree_card col" href="howtos/connect_device.html">
+           <div class="card h-100 pb-0">
+               <div class="card-body">
+                   <h4 class="card-title text-primary mb-1">Connect with a device</h4>
+                   <p class="card-text text-dark fw-normal">
+                       Learn how to enable a module to detect and communicate with an IoT device.
                    </p>
                </div>
                <div class="card-footer border-0"></div>
