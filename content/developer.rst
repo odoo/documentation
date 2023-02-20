@@ -19,4 +19,3 @@ Learn through tutorials and get help using reference guides.
     developer/reference
     developer/api
     developer/cli
-    developer/iot
