@@ -542,6 +542,9 @@ attributes:
     A valid date or datetime field. This field is understood by the view as the
     end date of a record.  This is the field that will determine the churn.
 
+``disable_linking`` (optional)
+  Set to ``1`` to prevent from redirecting clicks on cohort cells to list view.
+
 ``mode`` (optional)
     A string to describe the mode. It should be either 'churn' or
     'retention' (default). Churn mode will start at 0% and accumulate over time
