@@ -118,6 +118,11 @@ Once you have keys configured on your account, they will appear above the
 **A deleted API key can not be undeleted or re-set**. You will have to generate
 a new key and update all the places where you used the old one.
 
+Rate limits
+~~~~~~~~~~~
+
+The Odoo API has no rate limits.
+
 Test database
 ~~~~~~~~~~~~~
 
