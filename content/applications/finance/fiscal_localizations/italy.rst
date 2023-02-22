@@ -365,6 +365,12 @@ For **vendor bills**, **three** types of configurations are technically identifi
      - All invoice lines either have :guilabel:`Consumable` products, or a tax with
        :guilabel:`Goods` as tax scope.
 
+.. warning::
+   Odoo does not offer the
+   `Conservazione Sostitutiva <https://www.agid.gov.it/index.php/it/piattaforme/conservazione>`_
+   requirements. Other providers and **Agenzia delle Entrate** supply free and certified storage to
+   meet the requested conditions.
+
 .. _italy/internal-reverse:
 
 Internal reverse charge
