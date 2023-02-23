@@ -89,7 +89,7 @@ available on Odoo.
 - Greece - Accounting
 - Guatemala - Accounting
 - Honduras - Accounting
-- Hong Kong - Accounting
+- :doc:`Hong Kong - Accounting <fiscal_localizations/hong_kong>`
 - Hungarian - Accounting
 - :doc:`Indian - Accounting <fiscal_localizations/india>`
 - :doc:`Indonesian - Accounting <fiscal_localizations/indonesia>`
@@ -145,6 +145,7 @@ available on Odoo.
    fiscal_localizations/egypt
    fiscal_localizations/france
    fiscal_localizations/germany
+   fiscal_localizations/hong_kong
    fiscal_localizations/india
    fiscal_localizations/indonesia
    fiscal_localizations/italy
