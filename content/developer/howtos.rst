@@ -8,7 +8,6 @@ How-to guides
 .. toctree::
     :titlesonly:
 
-    howtos/discover_js_framework
     howtos/scss_tips
     howtos/website
     howtos/backend
@@ -20,22 +19,6 @@ How-to guides
 .. raw:: html
 
    <div class="row row-cols-1 row-cols-md-2 row-cols-xl-3 row-cols-xxl-4 g-4 mb-4">
-
-       <a class="o_toctree_card col-md-12 col-xl-8 col-xxl-6" href="howtos/discover_js_framework.html">
-           <div class="card h-100">
-               <div class="card-body pb-0">
-                   <h4 class="card-title text-primary mb-1">Discover the JavaScript Framework</h4>
-                   <p class="card-text text-dark fw-normal">
-                       Learn everything you need to know about the JavaScript framework of Odoo.
-                       This tutorial will teach you how to build custom components and views, give
-                       life to your application, and even re-introduce the kitten mode.
-                   </p>
-               </div>
-               <div class="card-footer border-0">
-                   <span class="badge rounded-pill bg-dark mt-auto mb-2">Beginner</span>
-               </div>
-           </div>
-       </a>
 
        <a class="o_toctree_card col" href="howtos/scss_tips.html">
            <div class="card h-100">
