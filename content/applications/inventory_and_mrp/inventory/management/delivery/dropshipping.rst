@@ -1,109 +1,105 @@
 ==================================================================
-Send Products to Customers Directly from Suppliers (Drop-shipping)
+Send products to customers directly from suppliers (drop-shipping)
 ==================================================================
 
-What is Drop-Shipping?
+What is drop shipping?
 ======================
 
-Drop-Shipping is a system that allows orders taken from your store to be
-shipped straight from your supplier to your customer. On a usual
-delivery system, products are sent from your supplier to your warehouse
-to be put in stock and then shipped to your customers after ordering.
+Drop-Shipping is a system that allows orders taken from a store to be shipped straight from a
+supplier to the customer. Typically, products are sent from a supplier to the warehouse to be put in
+stock, then shipped to the customer after orders are placed.
 
-With drop-shipping, no item is stocked. When a customer places an order
-in your shop, the item is delivered straight from the supplier to the
-customer. Therefore, the product doesn't need to get through your
-warehouse.
+With drop-shipping, items are not stocked. When an order is placed by a customer, the item is
+delivered directly from the supplier to the customer. Therefore, the product doesn't need to go
+through the warehouse.
 
-Points to be Considered while Implementing Drop-Shipping
-========================================================
+Products can be configured to be automatically drop-shipped anytime they are ordered by selecting
+the Route :guilabel:`Dropship` on the product form. Products can also be configured to be
+drop-shipped when creating a quote by selecting the Route :guilabel:`Dropship` for each specific
+product in the :guilabel:`Order Line`.
 
--  Use drop-shipping only for the products you can't or don't want to keep in stock.
-        One reason is that you'll always make smaller
-        margins on items that are drop-shipped, so you should keep it
-        only for items that take up a lot of space in your warehouse.
+When to use drop-shipping
+=========================
 
--  Drop-shipping is best for niche products.
-       Chances are that products that are in high demand are being offered by large suppliers at a
-       fraction of the price you'll be able to charge, so using a more
-       costly shipping method won't be financially rewarding. But if
-       your product is unique, then it makes sense!
+Drop-shipping is typically used on products that can't or should not be kept in stock. Since there
+are smaller margins on items that are drop-shipped, it should be primarily used  on items that take
+up a lot of space in the warehouse. Another common use is for unique items that are infrequently
+ordered. Products that are in high demand make sense to keep in stock, whereas the more unique and
+infrequently sold products are best to drop-ship.
 
--  To protect your customers from bad experiences.
-       Test drop-shipping companies for yourself beforehand and list the best ones.
+Things to consider when implementing drop-shipping
+==================================================
 
--  Make sure time is not against you.
-       Drop-shipping should take a reasonable amount of time and surely not more than it would have taken you to handle it all by yourself. It's also nice to be able
-       to provide your customers with a tracking number.
+- | **Ensure customer satisfaction.**
+  | Test drop-shipping from the suppliers before offering it to customers.
 
--  Items have to be available from your supplier.
-       It's good to know if
-       the product you're selling is available upstream. If you don't
-       have that information, inform your customers that you don't hold
-       the item in stock and that it's subject to availability from a
-       third party.
+- | **Make sure drop-shipping is efficient.**
+  | Shipping time should not take longer than if the product was stored and shipped from the
+    warehouse. Be sure customers can be provided with a tracking number for drop-shipments.
 
-.. tip::
-      For more information and insights about Drop-Shipping, you can read our
-      blog: `*What is drop-shipping and how to use
-      it* <https://www.odoo.com/blog/business-hacks-1/post/what-is-drop-shipping-and-how-to-use-it-250>`__.
+- | **Ensure items are readily available from the supplier.**
+  | It is best practice to check with the supplier on stock for items that are drop-shipped. If the
+    product's availability is not known, customers should be informed  that the items are not kept
+    in stock and availability is dependent on a third party.
 
-Configure Drop-Shipping
-=======================
+Configuration
+=============
 
-Activate the functionality in the *Purchase* application by going to :menuselection:`Configuration
---> Settings`.
+Enable the :guilabel:`Dropshipping` option in :menuselection:`Purchase --> Configuration -->
+Settings --> Logistics`.
 
 .. image:: dropshipping/dropshipping_01.png
-    :align: center
+   :align: center
+   :alt: Dropshipping settings option enabled Odoo Inventory configuration settings.
 
-Then, go to the *Inventory* app, in :menuselection:`Configuration --> Settings` to
-activate the *Multi-Step Routes* feature. It will allow you to make
-the *Route* field appear on the sale order lines to specify you send a
-product via drop-shipping.
+Then, in the :guilabel:`Inventory` app, enable the :guilabel:`Multi-Step Routes` option in
+:menuselection:`Inventory --> Configuration --> Settings --> Warehouse`. Note that activating
+:guilabel:`Multi-Step Routes` will also activate :guilabel:`Storage Locations`.
 
-.. image:: dropshipping/dropshipping_02.png
-    :align: center
+These two configurations enable the :guilabel:`Route` field on the sale order, allowing products to
+be drop-shipped.
 
-Now, in the *Sales* app, go to :menuselection:`Products --> Products`. Select the
-product you would like to drop-ship and add a vendor pricelist which
-contains the right supplier, via the purchase tab.
+.. image:: dropshipping/warehouse-settings.png
+   :align: center
+   :alt: Storage Locations and Multi-Step Routes enabled in Warehouse settings.
 
-.. image:: dropshipping/dropshipping_03.png
-    :align: center
+Next, drop-shipping needs to be configured on the product form.  In the :guilabel:`Sales` app, go to
+:menuselection:`Products --> Products`. Select the product to drop-ship, and in the
+:guilabel:`Purchase` tab, add the vendor information.
 
-Send Products from the Suppliers Directly to the Customers
+.. image:: dropshipping/dropship-chair-vendor.png
+   :align: center
+   :alt: Adding vendor to the product page.
+
+.. note::
+   If a product should always be drop-shipped anytime a customer places an order, select the route
+   :guilabel:`Dropship` in the :guilabel:`Inventory` tab. If selected, dropship will not need to be
+   specified on the sales order, instead the product will always be drop-shipped when ordered.
+
+Send products from the suppliers directly to the customers
 ==========================================================
 
-Create a *Sales Order* and add the product on which you just set the
-vendor. Add the *Route* field thanks to the widget on the right of the
-sale order line. Now, you are able to specify that your products’ route
-is *Drop-Shipping*.
+In the :guilabel:`Sales` application, create a quotation with the product that a vendor was just
+assigned to. Assign the route :guilabel:`Dropship` to the product. If the :guilabel:`Route` column
+is not visible, enable it by clicking on the :guilabel:`Additional Options Menu` next to
+:guilabel:`Subtotal`, then click on :guilabel:`Route`.
 
-.. image:: dropshipping/dropshipping_04.png
-    :align: center
+.. image:: dropshipping/dropship-activate-route.png
+   :align: center
+   :alt: Enable Route column on sales quote.
 
-.. image:: dropshipping/dropshipping_05.png
-    :align: center
+Once the sale order is confirmed, Odoo automatically generates a :guilabel:`Request for Quotation`
+for the supplier to drop-ship the product. The quote can be found in the source document.
 
-Once the sale order is confirmed, Odoo automatically generates a
-*Request for Quotation* for the supplier who will proceed to the
-drop-shipping. You can find it in the *Purchase* app, with the sale
-order as *Source Document*.
+Once the :guilabel:`Purchase Order` is confirmed, a :guilabel:`Receipt Order` is created and linked
+to it. The :guilabel:`Receive From` field defines the vendor location and the :guilabel:`Destination
+Location` defines the partner/customer location. Once the dropship is validated, the product won't
+go through the warehouse, rather it will go directly from the supplier to the customer.
 
-.. image:: dropshipping/dropshipping_06.png
-    :align: center
+.. image:: dropshipping/dropship-validate.png
+   :align: center
+   :alt: Dropship Receipt Order.
 
-Once this *Purchase Order* is confirmed, a *Receipt Order* is
-created and linked to it. The source location is the vendor location and
-the destination location is the customer location. Then, the product
-won’t go through your own stock when you validate the dropship document.
-
-.. image:: dropshipping/dropshipping_07.png
-    :align: center
-
-You can also easily access the dropship document directly from your
-inventory dashboard.
-
-.. image:: dropshipping/dropshipping_08.png
-    :align: center
+.. tip::
+   Dropship documents ready for processing  can also be found from the :guilabel:`Inventory`
+   dashboard.
