@@ -59,7 +59,7 @@ It should be the code of your Enterprise subscription that includes Odoo.sh.
 
 Partners can use their partnership codes to start a trial. Should their clients start a project,
 they ought to get an Enterprise subscription including Odoo.sh and use its subscription code. The
-partner will get the full amount as back commission. Contact your sales representative or account
+partner will get 50% of the amount back as commission. Contact your sales representative or account
 manager in order to get it.
 
 When submitting the form, if you are notified your subscription is not valid, it either means:
