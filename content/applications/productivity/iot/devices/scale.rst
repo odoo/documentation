@@ -1,54 +1,57 @@
 ===============
-Connect a Scale
+Connect a scale
 ===============
 
-When using your **IoT Box** in Odoo, you could need to use a scale. Doing so is easy and convenient
-as it can be done in a few steps. Then, you can use it in your **Point of Sale app** to weigh your
-products, which is helpful if their price are based on it.
+A scale can be connected to the :abbr:`IoT (Internet of Things)` box on an Odoo database in a few
+easy steps. After setup, the *Point of Sale* app can be used to weigh products, which is helpful if
+their prices are calculated based on weight.
 
 Connection
 ==========
 
-To link the scale to the **IoT Box**, connect them with a cable.
+To link the scale to the :abbr:`IoT (Internet of Things)` box, connect it with a :abbr:`USB
+(Universal Serial Bus)` cable.
 
 .. note::
-   In some cases, a serial to USB adapter may be needed.
+   In some cases, a serial port to :abbr:`USB (Universal Serial Bus)` adapter may be needed.
 
-If your scale is `compatible with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there
-is no need to set up anything because it will be automatically detected as soon as it is connected.
+If the scale is `compatible with Odoo IoT Box <https://www.odoo.com/page/iot-hardware>`_, there is
+no need to set up anything because it will be automatically detected as soon as it is connected.
 
 .. image:: scale/iot-choice.png
    :align: center
    :alt: IOT box auto detection.
 
-You may need to restart the box and download your scales’ drivers from the box in some cases. To do
-so, go to the *IoT Box Home Page* and click on *drivers list*. Then, click on load drivers.
+The :abbr:`IoT (Internet of Things)` box may need to be restarted and the scale's drivers may need
+to be downloaded to the box in some cases. To update the drivers, go to the :abbr:`IoT (Internet of
+Things)` box homepage and click on :guilabel:`Drivers List`. Then, click on :guilabel:`Load
+Drivers`.
 
 .. image:: scale/driver-list.png
    :align: center
    :alt: View of the IoT box settings and driver list.
 
-Use a Scale in Point of Sale
-============================
+If loading the drivers still doesn't allow for the scale to function, it may be that the scale is
+not compatible with the Odoo :abbr:`IoT (Internet of Things)` box. In this case, a different scale
+will need to be used.
 
-To use the scale in your *Point of Sale* app, go to :menuselection:`Point of Sale --> Configuration
---> Point of Sale`, open the one you want to configure, then click on *Edit* and enable the *IoT
-Box* feature.
+Use a scale in a point of sale (POS) system
+===========================================
 
-.. image:: scale/iot-box-pos.png
-   :align: center
-   :alt: View of the IoT box feature inside of the PoS settings.
+To use the scale in the *Point of Sale app*, go to :menuselection:`PoS app --> 3-Dot Menu on the PoS
+--> Settings`, then enable the :abbr:`IoT (Internet of Things)` box feature. After this is complete,
+the scale device can be set.
 
-Now, choose the *IoT Box* in the dropdown menu and check the *Electronic Scale* option. Then, you
-hit save.
+Select the scale from the :guilabel:`Electronic Scale` drop-down menu. Then click :guilabel:`Save`
+to save the changes, if required.
 
 .. image:: scale/electronic-scale-feature.png
    :align: center
    :alt: List of the external tools that can be used with PoS and the IoT box.
 
-The scale is now available in all your *PoS* sessions. Then, if a product has a price per weight
-set, clicking on it on the *PoS* screen opens the scale screen, where the cashier can weigh the
-product and add the correct price to the cart.
+The scale is now available in all the :abbr:`PoS (Point of Sale)` sessions. Now, if a product has a
+price per weight set, clicking on it on the :guilabel:`PoS` screen opens the scale screen, where the
+cashier can weigh the product and add the correct price to the cart.
 
 .. image:: scale/scale-view.png
    :align: center
