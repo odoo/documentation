@@ -118,6 +118,14 @@ Once you have keys configured on your account, they will appear above the
 **A deleted API key can not be undeleted or re-set**. You will have to generate
 a new key and update all the places where you used the old one.
 
+Rate limits
+~~~~~~~~~~~
+For on-premises use on , there is no pre-defined rate limit on external API use.
+
+For use of the external API on Odoo.com and Odoo.sh there are limits on API use. These limits are based on fair use. One external API call per database per second for prolonged times is considered reasonable use. Intense bursting and/or intense use can lead to the API being disabled for a time.
+
+To improve API use efficiency, it is recommended to cache data where possible, use filtering to limit the data volume and use batching of retrieval by passing lists of ID to be handled. Also, limit the number of logins and pass the API key with each subsequent API call.
+
 Test database
 ~~~~~~~~~~~~~
 
