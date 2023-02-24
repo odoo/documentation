@@ -1,67 +1,67 @@
-===========================
-Use the IoT Box for the PoS
-===========================
-
-.. image:: pos/pos01.png
-   :align: center
+=========================
+Use an IoT box with a PoS
+=========================
 
 Prerequisites
 =============
 
-Before starting, make sure you have the following:
+Before starting, make sure the following equipment is available:
 
--  An IoT Box, with its power adapter.
+- An :abbr:`IoT (Internet of Things)` box, with its power adapter.
+- A computer or tablet with an up-to-date web browser.
+- Odoo Online or an Odoo instance with the *Point of Sale* and *IoT* applications installed.
+- A local network set up with :abbr:`DHCP (Dynamic Host Configuration Protocol)` (this is the
+  default setting).
+- An RJ45 Ethernet Cable (optional, but preferred over WiFi, which is already built in).
+- Any of the supported hardware (receipt printer, barcode scanner, cash drawer, payment terminal,
+  scale, customer display, etc.). The list of supported hardware can be found on the `POS Hardware
+  page <https://www.odoo.com/page/point-of-sale-hardware>`_.
 
--  A computer or tablet with an up-to-date web browser
+Setup
+=====
 
--  A running Odoo Online or Odoo instance with the Point of Sale and IoT apps
-   installed
+.. figure:: pos/pos-connections.png
 
--  A local network setup with DHCP (this is the default setting)
+  A suggested configuration for a point of sale system.
 
--  An RJ45 Ethernet Cable (optional, WiFi is built in)
+To connect hardware to the :abbr:`PoS (Point of Sale)`, the first step is to connect an :abbr:`IoT
+(Internet of Things)` box to the database. To do this, follow these instructions: :doc:`Connect an
+Internet of Things (IoT) box to the Odoo database <connect>`.
 
--  Any of the supported hardware (receipt printer, barcode scanner,
-   cash drawer, payment terminal, scale, customer display, etc.).
-   The list of supported hardware can be found on the `POS Hardware
-   page <https://www.odoo.com/page/point-of-sale-hardware>`__
+Then, connect the peripheral devices to the :abbr:`IoT (Internet of Things)` box.
 
-Set Up
-======
+.. list-table::
+   :header-rows: 1
+   :stub-columns: 1
 
-To connect hardware to the PoS, the first step is to connect an IoT Box
-to your database. For this, follow this
-:doc:`documentation <connect>`.
+   * - Device Name
+     - Instructions
+   * - Printer
+     - Connect a supported receipt printer to a :abbr:`USB (Universal Serial Bus)` port or
+       to the network, and power it on. Refer to
+       :doc:`/applications/sales/point_of_sale/restaurant/kitchen_printing`.
+   * - Cash drawer
+     - The cash drawer should be connected to the printer with an RJ25 cable.
+   * - Barcode scanner
+     - In order for the barcode scanner to be compatible it must end barcodes with an `ENTER`
+       character (keycode 28). This is most likely the default configuration of the barcode scanner.
+   * - Scale
+     - Connect the scale and power it on. Refer to
+       :doc:`/applications/productivity/iot/devices/scale`.
+   * - Customer display
+     - Connect a screen to the :abbr:`IoT (Internet of Things)` box to display the :abbr:`PoS (Point
+       of Sale)` order. Refer to :doc:`/applications/productivity/iot/devices/screen`.
+   * - Payment terminal
+     - The connection process depends on the terminal. Refer to the :doc:`payment terminals
+       documentation </applications/sales/point_of_sale/payment_methods>`.
 
-Then, you have to connect the peripheral devices to your IoT Box.
+Once this is completed, connect the :abbr:`IoT (Internet of Things)` box to the :menuselection:`PoS`
+application. To do this, go to :menuselection:`Point of Sale --> Configuration --> PoS`, tick the
+:guilabel:`IoT Box` option, and select the devices to be used in this :abbr:`PoS (Point of Sale)`.
+:guilabel:`Save` the the changes.
 
--  **Printer**: Connect a supported receipt printer to a USB port or to
-   the network and power it on.
-
--  **Cash drawer**: The cash drawer should be connected to the printer
-   with an RJ25 cable.
-
--  **Barcode scanner**: Connect your barcode scanner. In order for your
-   barcode scanner to be compatible it must end barcodes with an Enter
-   character (keycode 28). This is most likely the default configuration
-   of your barcode scanner.
-
--  **Scale**: Connect your scale and power it on.
-
--  **Customer Display**: Connect a screen to the IoT Box to display the
-   PoS order. Please refer to
-   :doc:`/applications/productivity/iot/devices/screen`.
-
--  **Payment terminal**: The connection process depends on the terminal,
-   please refer to the :doc:`payment terminals documentation
-   </applications/sales/point_of_sale/payment_methods>`.
-
-Once it's done, you can connect the IoT Box to your PoS. For this, go in
-:menuselection:`Point of Sale --> Configuration --> PoS`, tick *IoT Box*
-and select the devices you want to use in this Point of Sale. Save the
-changes.
-
-.. image:: pos/pos02.png
+.. image:: pos/iot-connected-devices.png
    :align: center
+   :alt: Configuring the connected devices in the POS application.
 
-Set up is done, you can launch a new PoS Session.
+Once set up is done, a new :abbr:`PoS (Point of Sale)` session can be launched.
