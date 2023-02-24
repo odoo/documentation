@@ -1,42 +1,52 @@
 ====================
-Connect a Footswitch
+Connect a footswitch
 ====================
 
-When working, it is always better to have your two hands available.
-Using Odoo’s *IoT Box* and a footswitch will allow it.
+When working in a manufacturing environment, it's always better for an operator to have both hands
+available at all times. Odoo's :abbr:`IoT (Internet of Things)` box makes this possible when using a
+footswitch.
 
-In fact, you will be able to go from one screen to another and perform
-actions by using your foot and the footswitch. Really convenient, it
-can be configured in a few steps.
+In fact, with a footswitch, the operator is able to go from one screen to another, and perform
+actions using their foot. This can be configured in just a few steps on the work center in the
+*Manufacturing* app.
 
 Connection
 ==========
 
-Connecting the footswitch to the *IoT Box* is easy, you just have to
-connect the two by cable.
+To connect a footswitch to the :abbr:`IoT (Internet of Things)` box, connect the two devices via
+cable. More often than not, this is done with a :abbr:`USB (Universal Serial Bus)` cable.
 
-If your footswitch is a `supported
-one <https://www.odoo.com/page/iot-hardware>`__, there is no need to
-set up anything since it will be automatically detected when connected.
+If the footswitch is a `supported device <https://www.odoo.com/page/iot-hardware>`_, there is no
+need to take further action, since it'll be automatically detected when connected.
 
-.. image:: footswitch/footswitch_01.png
+.. image:: footswitch/footswitch-dropdown.png
    :align: center
+   :alt: Footswitch recognized on the IoT box.
 
-Link a Footswitch to a Workcenter
-=================================
+Link a footswitch to a work center in the Odoo Manufacturing app
+================================================================
 
-To link the footswitch to an action, it needs to be configured on a
-workcenter. Go to the workcenter you want to use the footswitch in and
-add the device in the *IoT Triggers* tab. Then, you can link it to an
-action and also add a key to trigger it.
+To link a footswitch to an action, it first needs to be configured on a work center. Navigate to
+:menuselection:`Manufacturing app --> Configuration --> Work Centers`. From here, go to the desired
+:guilabel:`Work Center` in which the footswitch will be used, and add the device in the
+:guilabel:`IoT Triggers` tab, under the :guilabel:`Device` column, by selecting :guilabel:`Add a
+Line`. Doing so means the footswitch can be linked to an option in the :guilabel:`Action` column
+drop-down, and optionally, a key can be added to trigger it. An example of an :guilabel:`Action` in
+the *Manufacturing app* could be the :guilabel:`Validate` or :guilabel:`Mark as Done` buttons on a
+manufacturing work order.
 
-.. image:: footswitch/footswitch_03.png
+.. image:: footswitch/footswitch-example.png
    :align: center
+   :alt: Footswitch trigger setup on the Odoo database.
 
-Note that the one that is first in the list will be chosen. So, the
-order matters! In the picture above, using the footswitch will, for
-example, automatically skip the current part of the process you work on.
+.. important::
+   It should be noted that the first listed trigger is chosen first. So, the order matters, and
+   these triggers can be dragged into any order. In the picture above, using the footswitch
+   automatically skips the part of the process that's currently being worked on.
 
 .. note::
-   When you are on the work order screen, a status button indicates if you
-   are correctly connected to the footswitch.
+   On the :guilabel:`Work Order` screen, a status graphic indicates whether the database is
+   correctly connected to the footswitch.
+
+.. seealso::
+   :ref:`workcenter_iot`
