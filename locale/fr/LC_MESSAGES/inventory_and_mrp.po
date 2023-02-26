@@ -29,7 +29,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-17 09:05+0000\n"
+"POT-Creation-Date: 2023-01-19 15:32+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
 "Last-Translator: Martin Trigaux, 2022\n"
 "Language-Team: French (https://www.transifex.com/odoo/teams/41243/fr/)\n"
@@ -716,7 +716,6 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:13
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/delivery_method.rst:17
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:27
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
 msgid "Configuration"
@@ -7790,118 +7789,126 @@ msgid ""
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:3
-msgid "Kits"
+msgid "Use kits"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:5
 msgid ""
-"A *kit* is a set of components that are not pre-assembled or mixed. This is "
-"useful for selling but also for creating cleaner and more effective *BOMs*. "
-"To use kits, you need both the Manufacturing and Inventory apps to be "
-"installed."
+"A *kit* is a set of unassembled components. Kits may be sold as products, "
+"but are also useful tools for managing more complex bills of materials "
+"(BoMs). To use kits, the :guilabel:`Manufacturing` and :guilabel:`Inventory`"
+" applications need to be installed."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:10
-msgid "Manage Stock of Component Products"
+msgid "Create the kit as a product"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:12
 msgid ""
-"If you want to assemble kits as they are ordered, managing stock of the kit "
-"components only, you will use a *Kit BoM* Type without any manufacturing "
-"operations."
+"To use a kit as a sellable product or simply as a component organization "
+"tool, the kit should first be created as a product. To create a kit product,"
+" go to :menuselection:`Manufacturing or Inventory --> Products --> "
+"Products`, and then click :guilabel:`Create`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:15
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:16
 msgid ""
-"A product using a *Kit BoM* will appear as a single line item on a quotation"
-" and a sales order, but will generate a delivery order with one line item "
-"for each of the components of the kit. In the examples below, the first "
-"image shows a sales order for the kit *Custom Computer Kit*, while the "
-"second image shows the corresponding delivery order."
+"Next, set the :guilabel:`Product Type` to :guilabel:`Storable Product`: this"
+" allows for management of kit inventory. The :guilabel:`Route` designation "
+"under the :guilabel:`Inventory` tab does not matter, since Odoo uses the "
+"routes of the kit's components for replenishment purposes. All other "
+"parameters for the kit product may be modified according to preference. "
+"Finally, click :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:29
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:22
 msgid ""
-"From the *Products menu* in either the *Inventory* or *Manufacturing* app, "
-"create each component product (as you would with any other product), then "
-"create the top-level, or kit product. Because you cannot track the stock of "
-"kit products, the *Product Type* should be set to *Consumable*. However, if "
-"you are using Anglo-Saxon accounting, and you would like COGS to be posted "
-"when invoicing your kits (and only for this reason), the storable product "
-"type should selected instead. Because a kit product cannot be purchased, "
-"*Can be Purchased* should be unchecked. The route of the kit product in the "
-"*Inventory* Tab does not really matter, as, for replenishment, only the "
-"route of the components that will be taken into account only."
+"The kit's components must also be configured as products via "
+":menuselection:`Manufacturing or Inventory --> Products --> Products`. These"
+" components require no specific configuration."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:26
+msgid "Set up the kit BoM"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:28
+msgid ""
+"After fully configuring the kit product and its components, create a "
+":abbr:`BoM (Bill of Materials)` for the kit product. Go to "
+":menuselection:`Manufacturing --> Products --> Bills of Materials`, and then"
+" click :guilabel:`Create`. Next, set the :guilabel:`Product` field to the "
+"previously configured kit product. Then, set the :guilabel:`BoM Type` to "
+":guilabel:`Kit`. Finally, add each component and specify its quantity. Make "
+"sure to :guilabel:`Save` the changes."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Kit selection on the bill of materials."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:38
 msgid ""
-"All other parameters on the kit product may be modified according to your "
-"preference. The component products require no particular configuration."
+"If the kit is solely being used as a sellable product, then only components "
+"need to be added under the :guilabel:`Components` tab, and configuring "
+"manufacturing operations is not necessary."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:41
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:42
 msgid ""
-"Once the products are configured, create a *bill of materials* for the kit "
-"product. Add each component and its quantity. Select the *BoM Type* Kit. All"
-" other options may be left with their default values."
+"When a kit is sold as a product, it appears as a single line item on the "
+"quotation and sales order. However, on delivery orders, each component of "
+"the kit is listed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:46
+msgid "Use kits to manage complex BoMs"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:48
-msgid "Manage Stock of Kit Product and Component Products"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:50
 msgid ""
-"If you want to manage the stock of the *top-level kit product*, you will use"
-" a standard *BoM Type* manufacture or subcontracting instead. In this case "
-"you will either buy the final product from your subcontractor, or make it "
-"yourself through a manufacturing order."
+"Kits are also used to manage *multilevel* :abbr:`BoMs (Bills of Materials)`."
+" These are products that contain other products as components and therefore "
+"require nested :abbr:`BoMs (Bills of Materials)`. Incorporating pre-"
+"configured kits into multilevel :abbr:`BoMs (Bills of Materials)` allows for"
+" cleaner organization of bundled products. Under :guilabel:`Components`, "
+"list a kit as a component in a higher-level product's :abbr:`BoM (Bills of "
+"Material)` to eliminate the need to add the kit's parts individually. Any "
+":guilabel:`BoM Type` can be used for the higher-level product's :abbr:`BoM "
+"(Bill of Materials)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:54
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Kit as a component in a multilevel bill of materials."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:60
 msgid ""
-"In that case the product type will be storable, and the BOM type either "
-"'Manufacture this product' or 'Subcontracting' as shown below."
+"To access a comprehensive overview of the multilevel :abbr:`BoM's (Bill of "
+"Material's)` components, click on the :guilabel:`Structure & Cost` smart "
+"button. Sublevel :abbr:`BoMs (Bills of Materials)` can be expanded and "
+"viewed from this report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:62
-msgid "Build a cleaner BOM"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rstNone
+msgid "Expanded kit in the Structure and Cost report."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:64
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:68
 msgid ""
-"As suggested above, a kit BOM can also simply be used to manage a more "
-"complex BOM."
+"When creating a manufacturing order for a product with a multilevel "
+":abbr:`BoM (Bill of Materials)`, the kit product automatically expands to "
+"show all components. Any operations in the kit's :abbr:`BoM (Bill of "
+"Materials)` are also added to the list of work orders on the manufacturing "
+"order."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:66
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:74
 msgid ""
-"Imagine the Custom Computer parts above were part of another final product. "
-"It would be much clearer and simpler if the BOMs were added together (as "
-"shown below) instead of adding all the individual parts one by one."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:73
-msgid ""
-"This is even better illustrated when looking at the BOM Structure Report, "
-"where it is easy to expand and hide specific kit level or sub-assembly type "
-"BOMs."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:79
-msgid ""
-"On the creation of the manufacturing order, the BOM will automatically "
-"expand to show all top level and kit level components. You can go back to "
-"the BOM at any point though as it remains  available on the form view of "
-"your manufacturing order."
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/kit_shipping.rst:86
-msgid ""
-"Finally, note that if there were any Operations in the Kit BOM, these would "
-"also simply be added in to the work order list of the main component."
+"Kits are primarily used to bundle components together for organization or "
+"sale. To manage multilevel products that require manufactured subcomponents,"
+" refer to :doc:`this documentation <sub_assemblies>` on sub-assemblies."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/product_variants.rst:3
@@ -8012,83 +8019,123 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:5
 msgid ""
-"With Odoo MRP, you can use semi-finished products to simplify a complex "
-"*Bill of Materials* or to represent your manufacturing flow more accurately."
-" A *semi-finished product* is a manufactured product that is used as a "
-"component in a Bill of Material."
+"A *semi-finished product*, also known as a *subassembly*, is a manufactured "
+"product that is used as a component in another product's bill of materials "
+"(BoM). Semi-finished products are used to simplify complex :abbr:`BoMs "
+"(Bills of Materials)` or to more accurately represent a manufacturing flow. "
+"A :abbr:`BoM (Bill of Materials)` that contains semi-finished products is "
+"referred to as a *multilevel BoM*, where the main *top-level product* and "
+"its subassemblies are distinguished."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:10
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:12
+msgid "Configure semi-finished products"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:14
 msgid ""
-"A *BoM* that employs *semi-finished products* is referred to as a multi-"
-"level BoM, where we distinguish between the *top level Product* and the "
-"*sub-assemblies*."
+"To set up a multilevel :abbr:`BoM (Bill of Materials)`, the top-level "
+"product and semi-finished products must be configured. Therefore, the first "
+"step is to create the semi-finished products and their :abbr:`BoMs (Bills of"
+" Materials)`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:15
-msgid "Configure a Multi Level BoM"
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:19
+msgid ":doc:`bill_configuration`"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:17
-msgid ""
-"To configure a *multi-level BoM*, you will need the top-level product and "
-"its sub-assemblies. Therefore, you must first create the sub-assembly "
-"products and their respective Bill of Materials. Please refer to "
-":doc:`bill_configuration` for more details on how to create a BOM."
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
+msgid "A bill of materials for a semi-finished product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:26
-msgid "Configure the Main BoM"
+msgid "Create the top-level bill of materials (BoM)"
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:28
 msgid ""
-"Then on the final product form, simply add your semi-finished products to "
-"the Bill of Material."
+"After the semi-finished products are fully configured, navigate to "
+":menuselection:`Manufacturing --> Products --> Products`. Then, "
+":guilabel:`Create` the top-level product. Configure the product's "
+"specifications as desired, and be sure to :guilabel:`Save`."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:35
-msgid "Manage your production planning"
-msgstr ""
-
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:37
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:32
 msgid ""
-"There are several methods to manage the triggering of the various "
-"manufacturing orders."
+"Once the top-level product is configured, click the :guilabel:`Bill of "
+"Materials` smart button on the product form, then click :guilabel:`Create` "
+"to make a :abbr:`BoM (Bill of Materials)` for the top-level product. Then, "
+"simply add the semi-finished products to this :abbr:`BoM (Bill of "
+"Materials)`, along with any other necessary components."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:39
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
 msgid ""
-"If every time a manufacturing order is confirmed for the main product, you'd"
-" like one for the semi-finished products as well, you have two options:"
+"A bill of materials for a top-level product, containing a subassembly "
+"component."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:42
+msgid "Manage production planning"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:44
 msgid ""
-"Option 1 : Create re-ordering rules for the semi-finished products, with "
-"both the minimum and maximum desired stock quantities at 0."
+"There are several methods to manage manufacturing order automation for "
+"products with multilevel :abbr:`BoMs (Bills of Materials)`."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:48
 msgid ""
-"Option 2 : Use the Replenish on Order (MTO) route on the semi-finished "
-"product, as well as the manufacturing one."
+"Semi-finished products are specifically used to manage manufacturable "
+"products with multilevel BoMs. If a BoM is being created simply to organize "
+"components or bundle sellable products, using :doc:`Kits <kit_shipping>` is "
+"the more appropriate option."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:51
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:52
 msgid ""
-"Note that Option 1 is usually recommended over Option 2 as it is more "
-"flexible. The MTO route creates a unique link between the semi-finished and "
-"the top level product, whereas the re-ordering rule allows you to simply "
-"unreserve that production from the top level product production and redirect"
-" it to another, more pressing demand, for example."
+"To automatically trigger manufacturing orders for semi-finished products "
+"after confirming a manufacturing order for the main product, there are two "
+"options:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:56
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:55
 msgid ""
-"In any case, as soon as the semi-finished product is produced, it will "
-"become available in the manufacturing order of the final product, as shown "
-"below."
+"**Option 1 (recommended):** Create *Reordering Rules* for the semi-finished "
+"products and set both the minimum and maximum desired stock quantities to "
+"`0`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:59
+msgid ":doc:`../../purchase/products/reordering`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:61
+msgid ""
+"**Option 2:** Activate the :guilabel:`Replenish on Order (MTO)` and "
+":guilabel:`Manufacture` routes under the :guilabel:`Inventory` tab of the "
+"semi-finished product's product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:64
+msgid ""
+"Option 1 is more flexible than Option 2 and is therefore recommended. "
+"Reordering rules do not directly link demand to replenishment, and therefore"
+" allow stocks to be unreserved and redirected to other orders, if necessary."
+" The Replenish on Order (MTO) route creates a unique link between the semi-"
+"finished and top-level products, exclusively reserving quantities for the "
+"confirmed top-level manufacturing order."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rst:70
+msgid ""
+"Regardless of the method chosen, semi-finished products must be fully "
+"manufactured before manufacturing can begin on the top-level product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/sub_assemblies.rstNone
+msgid "A manufacturing order for a top-level product."
 msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:3
