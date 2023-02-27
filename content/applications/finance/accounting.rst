@@ -4,7 +4,7 @@
 :show-toc:
 
 ========================
-Accounting and Invoicing
+Accounting and Invoicing KAul
 ========================
 
 **Odoo Invoicing** is a standalone invoicing app to create invoices, send them to your customers,
