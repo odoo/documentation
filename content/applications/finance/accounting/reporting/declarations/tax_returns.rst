@@ -14,8 +14,12 @@ refunded.
    You can find additional information about VAT and its mechanism on this page from the European
    Commission: `"What is VAT?" <https://ec.europa.eu/taxation_customs/business/vat/what-is-vat_en>`_.
 
+.. _tax-returns/prerequisites:
+
 Prerequisites
 =============
+
+.. _tax-returns/periodicity:
 
 Tax Return Periodicity
 ----------------------
@@ -38,6 +42,8 @@ To do so, go to :menuselection:`Accounting --> Configuration --> Settings`. Unde
 .. note::
    This is usually configured during the :doc:`app's initial set up
    <../../getting_started/initial_configuration/setup>`.
+
+.. _tax-returns/tax-grids:
 
 Tax Grids
 ---------
@@ -64,8 +70,12 @@ grids that are used to record invoices or credit notes.
    <fiscal_localizations/packages>` is installed according to the country you select at the creation
    of your database.
 
+.. _tax-returns/close:
+
 Close a tax period
 ==================
+
+.. _tax-returns/lock-date:
 
 Tax Lock Date
 -------------
@@ -85,6 +95,8 @@ To check the current :guilabel:`Tax Lock Date`, or to edit it, go to
 .. image:: tax_returns/tax_return_lock.png
    :align: center
    :alt: Lock your tax for a specific period in Odoo Accounting
+
+.. _tax-returns/report:
 
 Tax Report
 ----------
