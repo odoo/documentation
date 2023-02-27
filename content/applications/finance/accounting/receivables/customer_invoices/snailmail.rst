@@ -1,45 +1,55 @@
 .. _customer_invoices/snailmail:
 
-======================================
-Send your invoices by post (Snailmail)
-======================================
+=========
+Snailmail
+=========
 
-Direct mail is a great way to capture individuals’ attention at a time where inboxes are always
-full. Odoo allows you to send invoices and follow-up reports by post, worldwide, directly from
-your database.
+Sending direct mail can be an effective strategy for grabbing people's attention, especially when
+their email inboxes are overflowing. With Odoo, you have the ability to send invoices and follow-up
+reports through postal mail worldwide, all from within your database.
 
-Set up Snailmail
-================
+Configuration
+=============
 
-| Go to :menuselection:`Accounting --> Settings --> Snailmail` and activate the feature.
-| If you would like this option to be a default feature, enable *Send by Post* under
-  *Default Sending Options*.
+Go to :menuselection:`Accounting --> Configuration --> Settings --> Customer invoices` section to
+activate :guilabel:`Snailmail`.
 
-.. image:: snailmail/setup_snailmail.png
+To make it a by-default feature, select :guilabel:`Send by Post` in the :guilabel:`Default Sending
+Options` section.
+
+.. image:: snailmail/setup-snailmail.png
    :align: center
    :alt: Under settings enable the snailmail feature in Odoo Accounting
 
-Send your invoices by post
---------------------------
+Send invoices by post
+=====================
 
-Open your Invoice, click on the *Send & Print* button and select *Send by Post*.
-
-.. image:: snailmail/invoice_bypost.png
-   :align: center
-   :alt: Overview of an invoice and the option send by post available in Odoo Accounting
+Open your invoice, click on :guilabel:`Send & Print` and select :guilabel:`Send by Post`. Make sure
+your customer’s address is set correctly, including the country, before sending the letter.
 
 .. important::
-   Make sure to have your customer’s address set correctly, and that it includes a country,
-   before sending the letter.
+   Your document must respect the following rules to pass the validation before being sent:
+
+   - Margins must be **5 mm** on all sides. As Odoo forces the outer margins by filling them with
+     white before sending the snailmail, it can results in the user's custom being cut off if it
+     protrudes into the margins. To check the margins, go to :menuselection:`Settings --> General
+     Settings` and scroll down to the :guilabel:`Business Documents` section, and open the external
+     link.
+   - A square of **15mm by 15mm** on the bottom left corner has to stay clear.
+   - The postage area has to stay clear (click :download:`here <snailmail/snailmail-template.pdf>`
+     to get more info about the area).
+   - Pingen (Odoo Snailmail service provider) scans the area to process the address, so if something
+     gets written outside the area, it is not counted as part of the address.
 
 Pricing
 =======
 
-| *Snailmail* is an *In-App Purchase (IAP)* service which requires prepaid stamps (=credits)
-  to work. Sending one document consumes one stamp.
-| To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings --> Snailmail`
-  and click on *Buy credits*, or go to :menuselection:`Settings --> Odoo IAP` and click on
-  *View my Services*.
+Snailmail is an :doc:`../../../../general/in_app_purchase` service that requires prepaid stamps
+(=credits) to work. Sending one document consumes one stamp.
+
+To buy stamps, go to :menuselection:`Accounting --> Configuration --> Settings --> Customer
+invoices: Snailmail`, click on :guilabel:`Buy credits`, or go to :menuselection:`Settings --> In-App
+Purchases: Odoo IAP`, and click on :guilabel:`View my Services`.
 
 .. tip::
    - If you are on Odoo Online and have the Enterprise version, you benefit from free trial credits
