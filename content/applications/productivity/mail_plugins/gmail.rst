@@ -116,8 +116,11 @@ Delete the following three lines of text from the :file:`login.ts` file:
 This removes the `odoo.com` domain constraint from the Gmail Plugin program.
 
 Next, in the ZIP file, go to :menuselection:`mail-client-extensions-master --> gmail`, and open the
-file called :guilabel:`README`. Follow the instructions in the :guilabel:`README` file to push the
-Gmail Plugin files as a Google Project.
+file called :guilabel:`appsscript.json`. In the :guilabel:`urlFetchWhitelist` section, replace all
+the references to `odoo.com` with the Odoo customer's unique server domain.
+
+Then, in the same :guilabel:`gmail` folder, open the file called :guilabel:`README.md`. Follow the
+instructions in the :guilabel:`README` file to push the Gmail Plugin files as a Google Project.
 
 .. note::
    The computer must be able to run Linux commands in order to follow the instructions on the
