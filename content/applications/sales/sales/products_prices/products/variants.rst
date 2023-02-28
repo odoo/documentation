@@ -135,9 +135,9 @@ and five different sizes. If the white t-shirts are not available in the XXL siz
 variant can be deactivated.
 
 To deactivate a particular product variant, go to :menuselection:`Sales --> Products --> Products`
-and select the relevant product. Next, click on the :guilabel:`Configure Variants` button, open the
-relevant product variant attribute value form (in this example, the :guilabel:`White Color`
-attribute), and then click on :guilabel:`Edit`.
+and select the relevant product. Next, click on the :guilabel:`Configure` button next to the
+relevant attribute value. Then select the relevant value (in this example, the :guilabel:`White
+Color` attribute), and then click on :guilabel:`Edit`.
 
 In the :guilabel:`Exclude for` section, click :guilabel:`Add a line` and select any product(s)
 and/or specific attribute values that are currently unavailable. Finally, click :guilabel:`Save` to
