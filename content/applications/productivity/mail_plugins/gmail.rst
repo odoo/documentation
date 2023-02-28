@@ -116,15 +116,18 @@ Delete the following three lines of text from the :file:`login.ts` file:
 This removes the `odoo.com` domain constraint from the Gmail Plugin program.
 
 Next, in the ZIP file, go to :menuselection:`mail-client-extensions-master --> gmail`, and open the
-file called :guilabel:`README`. Follow the instructions in the :guilabel:`README` file to push the
-Gmail Plugin files as a Google Project.
+file called :guilabel:`appsscript.json`. In the :guilabel:`urlFetchWhitelist` section, replace all
+the references to `odoo.com` with the Odoo customer's unique server domain.
+
+Then, in the same :guilabel:`gmail` folder, open the file called :guilabel:`README.md`. Follow the
+instructions in the :guilabel:`README.md` file to push the Gmail Plugin files as a Google Project.
 
 .. note::
    The computer must be able to run Linux commands in order to follow the instructions on the
-   :guilabel:`README` file.
+   :guilabel:`README.md` file.
 
-After that, share the Google Project with the Gmail account that the user wishes to connect to
-Odoo. Then, click :guilabel:`Publish` and :guilabel:`Deploy from manifest`. Lastly, click
+After that, share the Google Project with the Gmail account that the user wishes to connect to Odoo.
+Then, click :guilabel:`Publish` and :guilabel:`Deploy from manifest`. Lastly, click
 :guilabel:`Install the add-on` to install the Gmail Plugin.
 
 Configure the Odoo database
@@ -132,8 +135,7 @@ Configure the Odoo database
 
 The :guilabel:`Mail Plugin` feature must be enabled in the Odoo database in order to use the Gmail
 Plugin. To enable the feature, go to :menuselection:`Settings --> General Settings`. Under the
-:guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click
-:guilabel:`Save`.
+:guilabel:`Integrations` section, activate :guilabel:`Mail Plugin`, and then click :guilabel:`Save`.
 
 .. image:: gmail/mail-plugin-setting.png
    :align: center
