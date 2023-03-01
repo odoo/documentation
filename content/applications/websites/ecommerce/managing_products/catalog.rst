@@ -34,6 +34,11 @@ category, the option :guilabel:`Collapsable Category Recursive` appears and allo
    :align: center
    :alt: Categories options for your eCommerce website
 
+.. seealso::
+   :doc:`products`
+
+.. _ecommerce-browsing:
+
 Browsing
 --------
 
@@ -157,7 +162,8 @@ or a **wishlist**. To do so, go to your **main shop page**, and at the end of th
 :guilabel:`Products Page` category, click on the feature buttons you wish to use. All three buttons
 appear when hovering the mouse over a product's image.
 
-- :guilabel:`Add to Cart`: adds a button to **add the product to the cart**;
+- :guilabel:`Add to Cart`: adds a button to
+  :doc:`add the product to the cart <../checkout_payment_shipping/cart>`;
 - :guilabel:`Comparison List`: adds a button to **compare** products based on their price, variant,
   etc.;
 - :guilabel:`Wishlist Button`: adds a button to **wishlist** the product.
