@@ -15,6 +15,9 @@ customers.
 **Upselling** is only done via :ref:`alternative products <cross_upselling/alternative>` on the
 **product page**.
 
+.. seealso::
+   :doc:`catalog`
+
 Cross-selling
 =============
 
