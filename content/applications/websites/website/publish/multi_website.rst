@@ -263,11 +263,11 @@ Pricelists
 To manage specific prices by websites, you can activate *Multiple Sales
 Prices per Product* in Website settings.
 
-Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional
-pricelists. See :doc:`../../ecommerce/maximizing_revenue/pricing`.
+Then, go to :menuselection:`Website --> Products --> Pricelists` to create additional pricelists.
+You can also choose to have a pricelist available *only* on a specific website.
 
-If you need help. Select a website to make a pricelist only available on
-this website.
+.. seealso::
+   :doc:`../../ecommerce/maximizing_revenue/pricing`.
 
 .. image:: multi_website/multi_website07.png
   :align: center
