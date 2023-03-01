@@ -6,6 +6,10 @@ Odoo supports a multitude of online
 :doc:`payment providers </applications/finance/payment_providers>` for your website, allowing your
 customers to pay with their preferred payment methods.
 
+.. seealso::
+   - :doc:`/applications/sales/sales/products_prices/ewallets_giftcards`
+   - :doc:`../checkout_payment_shipping/checkout`
+
 Configuration
 -------------
 

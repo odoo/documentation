@@ -11,6 +11,7 @@ To use product variants, enable them under :menuselection:`Website --> Configura
 in the :guilabel:`Shop - Products` section.
 
 .. seealso::
+   - :doc:`../managing_products/products`
    - :doc:`../../../sales/sales/products_prices/products/variants`
    - :doc:`../../../sales/sales/products_prices/products/import`
 
@@ -74,7 +75,7 @@ Filter catalog by attributes
 ============================
 
 Customers **can** filter the **catalog** based on product attributes and values, allowing them to
-filter the catalog based only on the attribute(s) of their choice.
+:ref:`filter <ecommerce-browsing>` the catalog based only on the attribute(s) of their choice.
 
 To enable **attributes filtering**, go to :menuselection:`Edit --> Customize` from your **main shop
 page** and click on one of the :guilabel:`Categories` in the left column. Here, enable either
