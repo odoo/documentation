@@ -10,6 +10,9 @@ The :guilabel:`Add to Cart` button can be customized in multiple ways. You can:
 - Create additional 'Add to Cart / Buy Now' buttons;
 - Add an 'Order Again' button to the customer portal.
 
+.. seealso::
+   :doc:`checkout`
+
 'Add to Cart' action customization
 ==================================
 
@@ -22,9 +25,13 @@ the :guilabel:`Shop - Checkout Process` section, look for :guilabel:`Add to Cart
 the options.
 
 .. note::
-   If a product has **optional products**, the **dialog box** will always appear.
+   If a product has :doc:`optional products <../managing_products/cross_upselling>`, the **dialog
+   box** will always appear.
 
-.. todo:: add :ref: to optional products when published.
+.. seealso::
+   :doc:`../managing_products/catalog`
+
+.. _cart/prevent-sale:
 
 Replace 'Add to Cart' button by 'Contact Us' button
 ===================================================
@@ -34,10 +41,8 @@ of your choice.
 
 .. note::
    Hiding the :guilabel:`Add to Cart` button is often used by B2B eCommerces that need to restrict
-   purchases only to customers with an account, but still want to display an online product catalog
-   for those without.
-
-.. todo:: add :ref: to sign-up section doc when published to note
+   purchases only to :ref:`customers with an account <checkout-sign>`, but still want to
+   display an online product catalog for those without.
 
 To do so, go to :menuselection:`Website --> Configuration --> Settings --> Shop - Products` and tick
 :guilabel:`Prevent Sale of Zero Priced Product`. This creates a new :guilabel:`Button url` field
@@ -72,6 +77,8 @@ and place the building block. Once placed, you have the following options:
 .. image:: cart/cart-add.png
    :align: center
    :alt: Customizable 'Add to Cart' button
+
+.. _cart/buy-now:
 
 'Buy Now' button
 ================
