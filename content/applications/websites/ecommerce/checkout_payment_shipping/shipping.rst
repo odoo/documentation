@@ -8,6 +8,9 @@ methods <ecommerce-own-shipping>`, or use an integration with an :ref:`existing 
 
 .. _ecommerce-own-shipping:
 
+.. seealso::
+   :doc:`../checkout_payment_shipping/checkout`
+
 Own shipping methods
 ====================
 
@@ -65,6 +68,3 @@ Customers can choose the shipping method at the end of the checkout process, at 
 .. image:: shipping/shipping-checkout.png
    :align: center
    :alt: Delivery method choice at checkout
-
-.. seealso::
-   :doc:`../checkout_payment_shipping/checkout`
