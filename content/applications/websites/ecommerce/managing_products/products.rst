@@ -17,6 +17,7 @@ To add a product to your catalog, you can either do it in:
   :ref:`Import records <import-data>`.
 
 .. seealso::
+   - :doc:`../managing_products/catalog`
    - :doc:`../../../sales/sales/products_prices/products/import`
    - :doc:`Product-related documentation <../../../sales/sales>`
 
@@ -66,8 +67,9 @@ In the **website builder** window, click :guilabel:`Customize` to enable additio
   :doc:`variants </applications/sales/sales/products_prices/products/variants>` of the product as a
   :guilabel:`Products List`; :guilabel:`Options` as selectable options to compose the variant
   yourself;
-- :guilabel:`Cart`: :guilabel:`Buy Now` adds a checkout button taking the customer directly to the
-  checkout page; :guilabel:`Wishlist` allows to add the product to a wishlist;
+- :guilabel:`Cart`: :guilabel:`Buy Now` adds a :ref:`checkout button <cart/buy-now>` taking the
+  customer directly to the checkout page; :guilabel:`Wishlist` allows to add the product to a
+  wishlist;
 - :guilabel:`Specification`: allows you to select where the :guilabel:`Specifications` section is
   displayed. This option displays a list of all variant attributes and values of a product, but only
   works for products *with* variants.
@@ -233,7 +235,8 @@ products:
   threshold on the product page. The available quantity is calculated based on the 'On hand'
   quantity minus the quantity already reserved for outgoing transfers.
 
-.. todo:: add ref to cart.rst about preventing sale if price = 0
+.. seealso::
+   :ref:`Allow only selected customers to buy <cart/prevent-sale>`
 
 Selling as kit
 --------------
@@ -258,8 +261,8 @@ On the product page, scroll down to the :guilabel:`Specifications` section and c
 summary.
 
 .. note::
-   The :guilabel:`Product Comparison Tool` can only be used if **attributes** are set on the
-   **product's template**.
+   The :guilabel:`Product Comparison Tool` can only be used if :doc:`attributes <variants>` are set
+   on the **product's template**.
 
 .. image:: products/products-compare.png
    :align: center
