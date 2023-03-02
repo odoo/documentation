@@ -1,6 +1,6 @@
-==================================
-Print orders at the kitchen or bar
-==================================
+===============
+Orders printing
+===============
 
 To ease the workflow between the front of house and the back of the
 house, printing the orders taken on the PoS interface right in the
