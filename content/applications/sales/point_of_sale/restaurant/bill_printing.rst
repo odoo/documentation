@@ -1,29 +1,41 @@
+=====
+Bills
+=====
+
+Typical practices in restaurants or bars are to request the bill before proceeding to payment or
+splitting it based on the items ordered. Odoo POS provides two features to perform these tasks
+seamlessly: **Bill Printing** and **Bill Splitting**.
+
+Configuration
+=============
+
+To activate the features, go to :menuselection:`Point of Sale --> Configuration --> Settings`,
+select the POS, and activate :guilabel:`Early Receipt Printing` and :guilabel:`Allow Bill Splitting`
+in the :guilabel:`Restaurant & Bar` section.
+
+.. image:: bill_printing/settings.png
+   :align: center
+   :alt: activate the bill printing and bill splitting features in the POS settings
+
+Bill printing
+=============
+
+From an open session, click :menuselection:`Bill --> Print` at any moment to generate and print a
+bill.
+
+.. note::
+   The printed bill is **not** final and will be updated to reflect any changes to the order.
+
+Bill splitting
 ==============
-Print the Bill
-==============
 
-Use the *Bill Printing* feature to print the bill before the payment.
-This is useful if the bill is still subject to evolve and is thus not
-the definitive ticket.
+From an open session, click :guilabel:`Split` to select the items to regroup. Once everything is
+selected, click :guilabel:`Payment` and proceed to checkout for these items. Repeat for each guest.
 
-Configure Bill Printing
-=======================
+.. note::
+   - Once you return to the table, the selected items are no longer on order, as they have been paid
+     for.
+   - The feature is available as soon as at least two items are ordered.
 
-To activate *Bill Printing*, go to :menuselection:`Point of Sale -->
-Configuration --> Point of sale` and select your PoS interface.
-
-Under the Bills & Receipts category, you will find *Bill Printing*
-option.
-
-.. image:: bill_printing/bill_printing01.png
-    :align: center
-
-Split a Bill
-============
-
-On your PoS interface, you now have a *Bill* button.
-
-.. image:: bill_printing/bill_printing02.png
-    :align: center
-
-When you use it, you can then print the bill.
+.. seealso::
+   - :doc:`floors_tables`
