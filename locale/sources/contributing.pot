@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-13 14:27+0000\n"
+"POT-Creation-Date: 2023-03-03 17:52+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -418,926 +418,926 @@ msgstr ""
 msgid "Directories"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:33
+#: ../../content/contributing/development/coding_guidelines.rst:34
 msgid "A module is organized in important directories. Those contain the business logic; having a look at them should make you understand the purpose of the module."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:36
+#: ../../content/contributing/development/coding_guidelines.rst:37
 msgid "*data/* : demo and data xml"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:37
+#: ../../content/contributing/development/coding_guidelines.rst:38
 msgid "*models/* : models definition"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:38
+#: ../../content/contributing/development/coding_guidelines.rst:39
 msgid "*controllers/* : contains controllers (HTTP routes)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:39
+#: ../../content/contributing/development/coding_guidelines.rst:40
 msgid "*views/* : contains the views and templates"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:40
+#: ../../content/contributing/development/coding_guidelines.rst:41
 msgid "*static/* : contains the web assets, separated into *css/, js/, img/, lib/, ...*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:42
+#: ../../content/contributing/development/coding_guidelines.rst:43
 msgid "Other optional directories compose the module."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:44
+#: ../../content/contributing/development/coding_guidelines.rst:45
 msgid "*wizard/* : regroups the transient models (``models.TransientModel``) and their views"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:45
+#: ../../content/contributing/development/coding_guidelines.rst:46
 msgid "*report/* : contains the printable reports and models based on SQL views. Python objects and XML views are included in this directory"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:46
+#: ../../content/contributing/development/coding_guidelines.rst:47
 msgid "*tests/* : contains the Python tests"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:50
+#: ../../content/contributing/development/coding_guidelines.rst:51
 msgid "File naming"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:52
+#: ../../content/contributing/development/coding_guidelines.rst:53
 msgid "File naming is important to quickly find information through all odoo addons. This section explains how to name files in a standard odoo module. As an example we use a `plant nursery <https://github.com/tivisse/odoodays-2018/tree/master/plant_nursery>`_ application. It holds two main models *plant.nursery* and *plant.order*."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:57
+#: ../../content/contributing/development/coding_guidelines.rst:58
 msgid "Concerning *models*, split the business logic by sets of models belonging to a same main model. Each set lies in a given file named based on its main model. If there is only one model, its name is the same as the module name. Each inherited model should be in its own file to help understanding of impacted models."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:71
+#: ../../content/contributing/development/coding_guidelines.rst:72
 msgid "Concerning *security*, three main files should be used:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:73
+#: ../../content/contributing/development/coding_guidelines.rst:74
 msgid "First one is the definition of access rights done in a :file:`ir.model.access.csv` file."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:74
+#: ../../content/contributing/development/coding_guidelines.rst:75
 msgid "User groups are defined in :file:`<module>_groups.xml`."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:75
+#: ../../content/contributing/development/coding_guidelines.rst:76
 msgid "Record rules are defined in :file:`<model>_security.xml`."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:86
+#: ../../content/contributing/development/coding_guidelines.rst:87
 msgid "Concerning *views*, backend views should be split like models and suffixed by ``_views.xml``. Backend views are list, form, kanban, activity, graph, pivot, .. views. To ease split by model in views main menus not linked to specific actions may be extracted into an optional ``<module>_menus.xml`` file. Templates (QWeb pages used notably for portal / website display) and bundles (import of JS and CSS assets) are put in separate files. Those are respectively ``<model>_templates.xml`` and ``assets.xml`` files."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:106
+#: ../../content/contributing/development/coding_guidelines.rst:107
 msgid "Concerning *data*, split them by purpose (demo or data) and main model. Filenames will be the main_model name suffixed by ``_demo.xml`` or ``_data.xml``. For instance for an application having demo and data for its main model as well as subtypes, activities and mail templates all related to mail module:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:119
+#: ../../content/contributing/development/coding_guidelines.rst:120
 msgid "Concerning *controllers*, generally all controllers belong to a single controller contained in a file named ``<module_name>.py``. An old convention in Odoo is to name this file ``main.py`` but it is considered as outdated. If you need to inherit an existing controller from another module do it in ``<inherited_module_name>.py``. For example adding portal controller in an application is done in ``portal.py``."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:133
+#: ../../content/contributing/development/coding_guidelines.rst:134
 msgid "Concerning *static files*, Javascript files follow globally the same logic as python models. Each component should be in its own file with a meaningful name. For instance, the activity widgets are located in ``activity.js`` of mail module. Subdirectories can also be created to structure the 'package' (see web module for more details). The same logic should be applied for the templates of JS widgets (static XML files) and for their styles (scss files). Don't link data (image, libraries) outside Odoo: do not use an URL to an image but copy it in the codebase instead."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:142
+#: ../../content/contributing/development/coding_guidelines.rst:143
 msgid "Concerning *wizards*, naming convention is the same of for python models: ``<transient>.py`` and ``<transient>_views.xml``. Both are put in the wizard directory. This naming comes from old odoo applications using the wizard keyword for transient models."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:154
+#: ../../content/contributing/development/coding_guidelines.rst:155
 msgid "Concerning *statistics reports* done with python / SQL views and classic views naming is the following :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:164
+#: ../../content/contributing/development/coding_guidelines.rst:165
 msgid "Concerning *printable reports* which contain mainly data preparation and Qweb templates naming is the following :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:174
+#: ../../content/contributing/development/coding_guidelines.rst:175
 msgid "The complete tree of our Odoo module therefore looks like"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:233
+#: ../../content/contributing/development/coding_guidelines.rst:234
 msgid "File names should only contain ``[a-z0-9_]`` (lowercase alphanumerics and ``_``)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:236
+#: ../../content/contributing/development/coding_guidelines.rst:237
 msgid "Use correct file permissions : folder 755 and file 644."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:241
+#: ../../content/contributing/development/coding_guidelines.rst:242
 msgid "XML files"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:244
+#: ../../content/contributing/development/coding_guidelines.rst:245
 msgid "Format"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:245
+#: ../../content/contributing/development/coding_guidelines.rst:247
 msgid "To declare a record in XML, the **record** notation (using *<record>*) is recommended:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:247
+#: ../../content/contributing/development/coding_guidelines.rst:249
 msgid "Place ``id`` attribute before ``model``"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:248
+#: ../../content/contributing/development/coding_guidelines.rst:250
 msgid "For field declaration, ``name`` attribute is first. Then place the *value* either in the ``field`` tag, either in the ``eval`` attribute, and finally other attributes (widget, options, ...) ordered by importance."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:253
+#: ../../content/contributing/development/coding_guidelines.rst:255
 msgid "Try to group the record by model. In case of dependencies between action/menu/views, this convention may not be applicable."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:255
+#: ../../content/contributing/development/coding_guidelines.rst:257
 msgid "Use naming convention defined at the next point"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:256
+#: ../../content/contributing/development/coding_guidelines.rst:258
 msgid "The tag *<data>* is only used to set not-updatable data with ``noupdate=1``. If there is only not-updatable data in the file, the ``noupdate=1`` can be set on the ``<odoo>`` tag and do not set a ``<data>`` tag."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:274
+#: ../../content/contributing/development/coding_guidelines.rst:276
 msgid "Odoo supports custom tags acting as syntactic sugar:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:276
+#: ../../content/contributing/development/coding_guidelines.rst:278
 msgid "menuitem: use it as a shortcut to declare a ``ir.ui.menu``"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:277
+#: ../../content/contributing/development/coding_guidelines.rst:279
 msgid "template: use it to declare a QWeb View requiring only the ``arch`` section of the view."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:279
+#: ../../content/contributing/development/coding_guidelines.rst:281
 msgid "These tags are preferred over the *record* notation."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:283
+#: ../../content/contributing/development/coding_guidelines.rst:285
 msgid "XML IDs and naming"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:286
+#: ../../content/contributing/development/coding_guidelines.rst:288
 msgid "Security, View and Action"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:288
+#: ../../content/contributing/development/coding_guidelines.rst:290
 msgid "Use the following pattern :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:290
+#: ../../content/contributing/development/coding_guidelines.rst:292
 msgid "For a menu: :samp:`{<model_name>}_menu`, or :samp:`{<model_name>}_menu_{do_stuff}` for submenus."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:291
+#: ../../content/contributing/development/coding_guidelines.rst:293
 msgid "For a view: :samp:`{<model_name>}_view_{<view_type>}`, where *view_type* is ``kanban``, ``form``, ``tree``, ``search``, ..."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:293
+#: ../../content/contributing/development/coding_guidelines.rst:295
 msgid "For an action: the main action respects :samp:`{<model_name>}_action`. Others are suffixed with :samp:`_{<detail>}`, where *detail* is a lowercase string briefly explaining the action. This is used only if multiple actions are declared for the model."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:297
+#: ../../content/contributing/development/coding_guidelines.rst:299
 msgid "For window actions: suffix the action name by the specific view information like :samp:`{<model_name>}_action_view_{<view_type>}`."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:299
+#: ../../content/contributing/development/coding_guidelines.rst:301
 msgid "For a group: :samp:`{<module_name>}_group_{<group_name>}` where *group_name* is the name of the group, generally 'user', 'manager', ..."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:301
+#: ../../content/contributing/development/coding_guidelines.rst:303
 msgid "For a rule: :samp:`{<model_name>}_rule_{<concerned_group>}` where *concerned_group* is the short name of the concerned group ('user' for the 'model_name_group_user', 'public' for public user, 'company' for multi-company rules, ...)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:306
+#: ../../content/contributing/development/coding_guidelines.rst:308
 msgid "Name should be identical to xml id with dots replacing underscores. Actions should have a real naming as it is used as display name."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:360
+#: ../../content/contributing/development/coding_guidelines.rst:362
 msgid "Inheriting XML"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:362
+#: ../../content/contributing/development/coding_guidelines.rst:364
 msgid "Xml Ids of inheriting views should use the same ID as the original record. It helps finding all inheritance at a glance. As final Xml Ids are prefixed by the module that creates them there is no overlap."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:366
+#: ../../content/contributing/development/coding_guidelines.rst:368
 msgid "Naming should contain an ``.inherit.{details}`` suffix to ease understanding the override purpose when looking at its name."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:377
+#: ../../content/contributing/development/coding_guidelines.rst:379
 msgid "New primary views do not require the inherit suffix as those are new records based upon the first one."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:392
+#: ../../content/contributing/development/coding_guidelines.rst:394
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:879
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:881
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:897
 msgid "Python"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:396
+#: ../../content/contributing/development/coding_guidelines.rst:398
 msgid "Do not forget to read the :ref:`Security Pitfalls <reference/security/pitfalls>` section as well to write secure code."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:400
+#: ../../content/contributing/development/coding_guidelines.rst:402
 msgid "PEP8 options"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:402
+#: ../../content/contributing/development/coding_guidelines.rst:404
 msgid "Using a linter can help show syntax and semantic warnings or errors. Odoo source code tries to respect Python standard, but some of them can be ignored."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:405
+#: ../../content/contributing/development/coding_guidelines.rst:407
 msgid "E501: line too long"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:406
+#: ../../content/contributing/development/coding_guidelines.rst:408
 msgid "E301: expected 1 blank line, found 0"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:407
+#: ../../content/contributing/development/coding_guidelines.rst:409
 msgid "E302: expected 2 blank lines, found 1"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:410
+#: ../../content/contributing/development/coding_guidelines.rst:412
 msgid "Imports"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:411
+#: ../../content/contributing/development/coding_guidelines.rst:414
 msgid "The imports are ordered as"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:413
+#: ../../content/contributing/development/coding_guidelines.rst:416
 msgid "External libraries (one per line sorted and split in python stdlib)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:414
+#: ../../content/contributing/development/coding_guidelines.rst:417
 msgid "Imports of ``odoo``"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:415
+#: ../../content/contributing/development/coding_guidelines.rst:418
 msgid "Imports from Odoo modules (rarely, and only if necessary)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:417
+#: ../../content/contributing/development/coding_guidelines.rst:420
 msgid "Inside these 3 groups, the imported lines are alphabetically sorted."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:435
+#: ../../content/contributing/development/coding_guidelines.rst:438
 msgid "Idiomatics of Programming (Python)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:437
+#: ../../content/contributing/development/coding_guidelines.rst:440
 msgid "Always favor *readability* over *conciseness* or using the language features or idioms."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:438
+#: ../../content/contributing/development/coding_guidelines.rst:441
 msgid "Don't use ``.clone()``"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:449
+#: ../../content/contributing/development/coding_guidelines.rst:452
 msgid "Python dictionary : creation and update"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:474
+#: ../../content/contributing/development/coding_guidelines.rst:477
 msgid "Use meaningful variable/class/method names"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:475
+#: ../../content/contributing/development/coding_guidelines.rst:478
 msgid "Useless variable : Temporary variables can make the code clearer by giving names to objects, but that doesn't mean you should create temporary variables all the time:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:487
+#: ../../content/contributing/development/coding_guidelines.rst:490
 msgid "Multiple return points are OK, when they're simpler"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:507
+#: ../../content/contributing/development/coding_guidelines.rst:510
 msgid "Know your builtins : You should at least have a basic understanding of all the Python builtins (http://docs.python.org/library/functions.html)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:515
+#: ../../content/contributing/development/coding_guidelines.rst:518
 msgid "Also, ``if 'key' in my_dict`` and ``if my_dict.get('key')`` have very different meaning, be sure that you're using the right one."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:518
+#: ../../content/contributing/development/coding_guidelines.rst:521
 msgid "Learn list comprehensions : Use list comprehension, dict comprehension, and basic manipulation using ``map``, ``filter``, ``sum``, ... They make the code easier to read."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:531
+#: ../../content/contributing/development/coding_guidelines.rst:534
 msgid "Collections are booleans too : In python, many objects have \"boolean-ish\" value when evaluated in a boolean context (such as an if). Among these are collections (lists, dicts, sets, ...) which are \"falsy\" when empty and \"truthy\" when containing items:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:542
+#: ../../content/contributing/development/coding_guidelines.rst:545
 msgid "So, you can write ``if some_collection:`` instead of ``if len(some_collection):``."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:545
+#: ../../content/contributing/development/coding_guidelines.rst:548
 msgid "Iterate on iterables"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:559
+#: ../../content/contributing/development/coding_guidelines.rst:562
 msgid "Use dict.setdefault"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:575
+#: ../../content/contributing/development/coding_guidelines.rst:578
 msgid "As a good developer, document your code (docstring on methods, simple comments for tricky part of code)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:577
+#: ../../content/contributing/development/coding_guidelines.rst:580
 msgid "In additions to these guidelines, you may also find the following link interesting: http://python.net/~goodger/projects/pycon/2007/idiomatic/handout.html (a little bit outdated, but quite relevant)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:582
+#: ../../content/contributing/development/coding_guidelines.rst:585
 msgid "Programming in Odoo"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:584
+#: ../../content/contributing/development/coding_guidelines.rst:587
 msgid "Avoid to create generators and decorators: only use the ones provided by the Odoo API."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:586
+#: ../../content/contributing/development/coding_guidelines.rst:589
 msgid "As in python, use ``filtered``, ``mapped``, ``sorted``, ... methods to ease code reading and performance."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:590
+#: ../../content/contributing/development/coding_guidelines.rst:593
 msgid "Propagate the context"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:591
+#: ../../content/contributing/development/coding_guidelines.rst:595
 msgid "The context is a ``frozendict`` that cannot be modified. To call a method with a different context, the ``with_context`` method should be used :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:600
+#: ../../content/contributing/development/coding_guidelines.rst:604
 msgid "Passing parameter in context can have dangerous side-effects."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:602
+#: ../../content/contributing/development/coding_guidelines.rst:606
 msgid "Since the values are propagated automatically, some unexpected behavior may appear. Calling ``create()`` method of a model with *default_my_field* key in context will set the default value of *my_field* for the concerned model. But if during this creation, other objects (such as sale.order.line, on sale.order creation) having a field name *my_field* are created, their default value will be set too."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:608
+#: ../../content/contributing/development/coding_guidelines.rst:612
 msgid "If you need to create a key context influencing the behavior of some object, choose a good name, and eventually prefix it by the name of the module to isolate its impact. A good example are the keys of ``mail`` module : *mail_create_nosubscribe*, *mail_notrack*, *mail_notify_user_signature*, ..."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:615
+#: ../../content/contributing/development/coding_guidelines.rst:618
 msgid "Think extendable"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:617
+#: ../../content/contributing/development/coding_guidelines.rst:620
 msgid "Functions and methods should not contain too much logic: having a lot of small and simple methods is more advisable than having few large and complex methods. A good rule of thumb is to split a method as soon as it has more than one responsibility (see http://en.wikipedia.org/wiki/Single_responsibility_principle)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:622
+#: ../../content/contributing/development/coding_guidelines.rst:625
 msgid "Hardcoding a business logic in a method should be avoided as it prevents to be easily extended by a submodule."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:648
+#: ../../content/contributing/development/coding_guidelines.rst:651
 msgid "The above code is over extendable for the sake of example but the readability must be taken into account and a tradeoff must be made."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:651
+#: ../../content/contributing/development/coding_guidelines.rst:654
 msgid "Also, name your functions accordingly: small and properly named functions are the starting point of readable/maintainable code and tighter documentation."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:654
+#: ../../content/contributing/development/coding_guidelines.rst:657
 msgid "This recommendation is also relevant for classes, files, modules and packages. (See also http://en.wikipedia.org/wiki/Cyclomatic_complexity)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:659
+#: ../../content/contributing/development/coding_guidelines.rst:661
 msgid "Never commit the transaction"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:660
+#: ../../content/contributing/development/coding_guidelines.rst:663
 msgid "The Odoo framework is in charge of providing the transactional context for all RPC calls. The principle is that a new database cursor is opened at the beginning of each RPC call, and committed when the call has returned, just before transmitting the answer to the RPC client, approximately like this:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:681
+#: ../../content/contributing/development/coding_guidelines.rst:684
 msgid "If any error occurs during the execution of the RPC call, the transaction is rolled back atomically, preserving the state of the system."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:684
+#: ../../content/contributing/development/coding_guidelines.rst:687
 msgid "Similarly, the system also provides a dedicated transaction during the execution of tests suites, so it can be rolled back or not depending on the server startup options."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:688
+#: ../../content/contributing/development/coding_guidelines.rst:691
 msgid "The consequence is that if you manually call ``cr.commit()`` anywhere there is a very high chance that you will break the system in various ways, because you will cause partial commits, and thus partial and unclean rollbacks, causing among others:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:693
+#: ../../content/contributing/development/coding_guidelines.rst:696
 msgid "inconsistent business data, usually data loss"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:694
+#: ../../content/contributing/development/coding_guidelines.rst:697
 msgid "workflow desynchronization, documents stuck permanently"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:695
+#: ../../content/contributing/development/coding_guidelines.rst:698
 msgid "tests that can't be rolled back cleanly, and will start polluting the database, and triggering error (this is true even if no error occurs during the transaction)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:706
+#: ../../content/contributing/development/coding_guidelines.rst:709
 msgid "Here is the very simple rule:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:700
+#: ../../content/contributing/development/coding_guidelines.rst:703
 msgid "You should **NEVER** call ``cr.commit()`` yourself, **UNLESS** you have created your own database cursor explicitly! And the situations where you need to do that are exceptional!"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:704
+#: ../../content/contributing/development/coding_guidelines.rst:707
 msgid "And by the way if you did create your own cursor, then you need to handle error cases and proper rollback, as well as properly close the cursor when you're done with it."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:708
+#: ../../content/contributing/development/coding_guidelines.rst:711
 msgid "And contrary to popular belief, you do not even need to call ``cr.commit()`` in the following situations: - in the ``_auto_init()`` method of an *models.Model* object: this is taken care of by the addons initialization method, or by the ORM transaction when creating custom models - in reports: the ``commit()`` is handled by the framework too, so you can update the database even from within a report - within *models.Transient* methods: these methods are called exactly like regular *models.Model* ones, within a transaction and with the corresponding ``cr.commit()/rollback()`` at the end - etc. (see general rule above if you are in doubt!)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:720
+#: ../../content/contributing/development/coding_guidelines.rst:723
 msgid "All ``cr.commit()`` calls outside of the server framework from now on must have an **explicit comment** explaining why they are absolutely necessary, why they are indeed correct, and why they do not break the transactions. Otherwise they can and will be removed !"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:727
+#: ../../content/contributing/development/coding_guidelines.rst:729
 msgid "Use translation method correctly"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:729
+#: ../../content/contributing/development/coding_guidelines.rst:731
 msgid "Odoo uses a GetText-like method named \"underscore\" ``_( )`` to indicate that a static string used in the code needs to be translated at runtime using the language of the context. This pseudo-method is accessed within your code by importing as follows:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:738
+#: ../../content/contributing/development/coding_guidelines.rst:740
 msgid "A few very important rules must be followed when using it, in order for it to work and to avoid filling the translations with useless junk."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:741
+#: ../../content/contributing/development/coding_guidelines.rst:743
 msgid "Basically, this method should only be used for static strings written manually in the code, it will not work to translate field values, such as Product names, etc. This must be done instead using the translate flag on the corresponding field."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:746
+#: ../../content/contributing/development/coding_guidelines.rst:748
 msgid "The method accepts optional positional or named parameter The rule is very simple: calls to the underscore method should always be in the form ``_('literal string')`` and nothing else:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:789
+#: ../../content/contributing/development/coding_guidelines.rst:791
 msgid "Also, keep in mind that translators will have to work with the literal values that are passed to the underscore function, so please try to make them easy to understand and keep spurious characters and formatting to a minimum. Translators must be aware that formatting patterns such as ``%s`` or ``%d``, newlines, etc. need to be preserved, but it's important to use these in a sensible and obvious manner:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:809
+#: ../../content/contributing/development/coding_guidelines.rst:811
 msgid "In general in Odoo, when manipulating strings, prefer ``%`` over ``.format()`` (when only one variable to replace in a string), and prefer ``%(varname)`` instead of position (when multiple variables have to be replaced). This makes the translation easier for the community translators."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:816
+#: ../../content/contributing/development/coding_guidelines.rst:817
 msgid "Symbols and Conventions"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:826
+#: ../../content/contributing/development/coding_guidelines.rst:827
 msgid "Model name (using the dot notation, prefix by the module name) :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:819
+#: ../../content/contributing/development/coding_guidelines.rst:820
 msgid "When defining an Odoo Model : use singular form of the name (*res.partner* and *sale.order* instead of *res.partnerS* and *saleS.orderS*)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:821
+#: ../../content/contributing/development/coding_guidelines.rst:822
 msgid "When defining an Odoo Transient (wizard) : use ``<related_base_model>.<action>`` where *related_base_model* is the base model (defined in *models/*) related to the transient, and *action* is the short name of what the transient do. Avoid the *wizard* word. For instance : ``account.invoice.make``, ``project.task.delegate.batch``, ..."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:825
+#: ../../content/contributing/development/coding_guidelines.rst:826
 msgid "When defining *report* model (SQL views e.i.) : use ``<related_base_model>.report.<action>``, based on the Transient convention."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:828
+#: ../../content/contributing/development/coding_guidelines.rst:829
 msgid "Odoo Python Class : use camelcase (Object-oriented style)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:839
+#: ../../content/contributing/development/coding_guidelines.rst:840
 msgid "Variable name :"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:837
+#: ../../content/contributing/development/coding_guidelines.rst:838
 msgid "use camelcase for model variable"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:838
+#: ../../content/contributing/development/coding_guidelines.rst:839
 msgid "use underscore lowercase notation for common variable."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:839
+#: ../../content/contributing/development/coding_guidelines.rst:840
 msgid "suffix your variable name with *_id* or *_ids* if it contains a record id or list of id. Don't use ``partner_id`` to contain a record of res.partner"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:847
+#: ../../content/contributing/development/coding_guidelines.rst:848
 msgid "``One2Many`` and ``Many2Many`` fields should always have *_ids* as suffix (example: sale_order_line_ids)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:848
+#: ../../content/contributing/development/coding_guidelines.rst:849
 msgid "``Many2One`` fields should have *_id* as suffix (example : partner_id, user_id, ...)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:858
+#: ../../content/contributing/development/coding_guidelines.rst:859
 msgid "Method conventions"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:850
+#: ../../content/contributing/development/coding_guidelines.rst:851
 msgid "Compute Field : the compute method pattern is *_compute_<field_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:851
+#: ../../content/contributing/development/coding_guidelines.rst:852
 msgid "Search method : the search method pattern is *_search_<field_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:852
+#: ../../content/contributing/development/coding_guidelines.rst:853
 msgid "Default method : the default method pattern is *_default_<field_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:853
+#: ../../content/contributing/development/coding_guidelines.rst:854
 msgid "Selection method: the selection method pattern is *_selection_<field_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:854
+#: ../../content/contributing/development/coding_guidelines.rst:855
 msgid "Onchange method : the onchange method pattern is *_onchange_<field_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:855
+#: ../../content/contributing/development/coding_guidelines.rst:856
 msgid "Constraint method : the constraint method pattern is *_check_<constraint_name>*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:856
+#: ../../content/contributing/development/coding_guidelines.rst:857
 msgid "Action method : an object action method is prefix with *action_*. Since it uses only one record, add ``self.ensure_one()`` at the beginning of the method."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:869
+#: ../../content/contributing/development/coding_guidelines.rst:870
 msgid "In a Model attribute order should be"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:861
+#: ../../content/contributing/development/coding_guidelines.rst:862
 msgid "Private attributes (``_name``, ``_description``, ``_inherit``, ``_sql_constraints``, ...)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:862
+#: ../../content/contributing/development/coding_guidelines.rst:863
 msgid "Default method and ``default_get``"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:863
+#: ../../content/contributing/development/coding_guidelines.rst:864
 msgid "Field declarations"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:864
+#: ../../content/contributing/development/coding_guidelines.rst:865
 msgid "Compute, inverse and search methods in the same order as field declaration"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:865
+#: ../../content/contributing/development/coding_guidelines.rst:866
 msgid "Selection method (methods used to return computed values for selection fields)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:866
+#: ../../content/contributing/development/coding_guidelines.rst:867
 msgid "Constrains methods (``@api.constrains``) and onchange methods (``@api.onchange``)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:867
+#: ../../content/contributing/development/coding_guidelines.rst:868
 msgid "CRUD methods (ORM overrides)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:868
+#: ../../content/contributing/development/coding_guidelines.rst:869
 msgid "Action methods"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:869
+#: ../../content/contributing/development/coding_guidelines.rst:870
 msgid "And finally, other business methods."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:925
+#: ../../content/contributing/development/coding_guidelines.rst:926
 msgid "Javascript"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:928
+#: ../../content/contributing/development/coding_guidelines.rst:929
 msgid "Static files organization"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:930
+#: ../../content/contributing/development/coding_guidelines.rst:931
 msgid "Odoo addons have some conventions on how to structure various files. We explain here in more details how web assets are supposed to be organized."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:933
+#: ../../content/contributing/development/coding_guidelines.rst:934
 msgid "The first thing to know is that the Odoo server will serve (statically) all files located in a *static/* folder, but prefixed with the addon name. So, for example, if a file is located in *addons/web/static/src/js/some_file.js*, then it will be statically available at the url *your-odoo-server.com/web/static/src/js/some_file.js*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:938
+#: ../../content/contributing/development/coding_guidelines.rst:939
 msgid "The convention is to organize the code according to the following structure:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:940
+#: ../../content/contributing/development/coding_guidelines.rst:941
 msgid "*static*: all static files in general"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:942
+#: ../../content/contributing/development/coding_guidelines.rst:943
 msgid "*static/lib*: this is the place where js libs should be located, in a sub folder. So, for example, all files from the *jquery* library are in *addons/web/static/lib/jquery*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:944
+#: ../../content/contributing/development/coding_guidelines.rst:945
 msgid "*static/src*: the generic static source code folder"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:946
+#: ../../content/contributing/development/coding_guidelines.rst:947
 msgid "*static/src/css*: all css files"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:947
+#: ../../content/contributing/development/coding_guidelines.rst:948
 msgid "*static/fonts*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:948
+#: ../../content/contributing/development/coding_guidelines.rst:949
 msgid "*static/img*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:949
+#: ../../content/contributing/development/coding_guidelines.rst:950
 msgid "*static/src/js*"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:951
+#: ../../content/contributing/development/coding_guidelines.rst:952
 msgid "*static/src/js/tours*: end user tour files (tutorials, not tests)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:953
+#: ../../content/contributing/development/coding_guidelines.rst:954
 msgid "*static/src/scss*: scss files"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:954
+#: ../../content/contributing/development/coding_guidelines.rst:955
 msgid "*static/src/xml*: all qweb templates that will be rendered in JS"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:956
+#: ../../content/contributing/development/coding_guidelines.rst:957
 msgid "*static/tests*: this is where we put all test related files."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:958
+#: ../../content/contributing/development/coding_guidelines.rst:959
 msgid "*static/tests/tours*: this is where we put all tour test files (not tutorials)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:961
+#: ../../content/contributing/development/coding_guidelines.rst:962
 msgid "Javascript coding guidelines"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:963
+#: ../../content/contributing/development/coding_guidelines.rst:964
 msgid "``use strict;`` is recommended for all javascript files"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:964
+#: ../../content/contributing/development/coding_guidelines.rst:965
 msgid "Use a linter (jshint, ...)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:965
+#: ../../content/contributing/development/coding_guidelines.rst:966
 msgid "Never add minified Javascript Libraries"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:966
+#: ../../content/contributing/development/coding_guidelines.rst:967
 msgid "Use camelcase for class declaration"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:968
+#: ../../content/contributing/development/coding_guidelines.rst:969
 msgid "More precise JS guidelines are detailed in the `github wiki  <https://github.com/odoo/odoo/wiki/Javascript-coding-guidelines>`_. You may also have a look at existing API in Javascript by looking Javascript References."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:975
+#: ../../content/contributing/development/coding_guidelines.rst:976
 msgid "CSS and SCSS"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:980
+#: ../../content/contributing/development/coding_guidelines.rst:981
 msgid "Syntax and Formatting"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1012
+#: ../../content/contributing/development/coding_guidelines.rst:1013
 msgid "four (4) space indents, no tabs;"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1013
+#: ../../content/contributing/development/coding_guidelines.rst:1014
 msgid "columns of max. 80 characters wide;"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1014
+#: ../../content/contributing/development/coding_guidelines.rst:1015
 msgid "opening brace (`{`): empty space after the last selector;"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1015
+#: ../../content/contributing/development/coding_guidelines.rst:1016
 msgid "closing brace (`}`): on its own new line;"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1016
+#: ../../content/contributing/development/coding_guidelines.rst:1017
 msgid "one line for each declaration;"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1017
+#: ../../content/contributing/development/coding_guidelines.rst:1018
 msgid "meaningful use of whitespace."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1060
+#: ../../content/contributing/development/coding_guidelines.rst:1061
 msgid "Properties order"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1062
+#: ../../content/contributing/development/coding_guidelines.rst:1063
 msgid "Order properties from the \"outside\" in, starting from `position` and ending with decorative rules (`font`,  `filter`, etc.)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1065
+#: ../../content/contributing/development/coding_guidelines.rst:1066
 msgid ":ref:`Scoped SCSS variables <contributing/coding_guidelines/scss/scoped_scss_variables>` and :ref:`CSS variables <contributing/coding_guidelines/scss/css_variables>` must be placed at the very top, followed by an empty line separating them from other declarations."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1091
+#: ../../content/contributing/development/coding_guidelines.rst:1092
 msgid "Naming Conventions"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1093
+#: ../../content/contributing/development/coding_guidelines.rst:1094
 msgid "Naming conventions in CSS are incredibly useful in making your code more strict, transparent and informative."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1098
+#: ../../content/contributing/development/coding_guidelines.rst:1099
 msgid "Avoid `id` selectors, and prefix your classes with `o_<module_name>`, where `<module_name>` is the technical name of the module (`sale`, `im_chat`, ...) or the main route reserved by the module (for website modules mainly, i.e. : `o_forum` for the `website_forum` module)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1099
+#: ../../content/contributing/development/coding_guidelines.rst:1100
 msgid "The only exception for this rule is the webclient: it simply uses the `o_` prefix."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1101
+#: ../../content/contributing/development/coding_guidelines.rst:1102
 msgid "Avoid creating hyper-specific classes and variable names. When naming nested elements, opt for the \"Grandchild\" approach."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1109
+#: ../../content/contributing/development/coding_guidelines.rst:1110
 msgid "Don't"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1123
+#: ../../content/contributing/development/coding_guidelines.rst:1124
 msgid "Do"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1135
+#: ../../content/contributing/development/coding_guidelines.rst:1136
 msgid "Besides being more compact, this approach eases maintenance because it limits the need of renaming when changes occur at the DOM."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1141
+#: ../../content/contributing/development/coding_guidelines.rst:1142
 msgid "SCSS Variables"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1143
+#: ../../content/contributing/development/coding_guidelines.rst:1144
 msgid "Our standard convention is `$o-[root]-[element]-[property]-[modifier]`, with:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1145
+#: ../../content/contributing/development/coding_guidelines.rst:1146
 msgid "`$o-`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1146
-msgid "The prefix."
-msgstr ""
-
 #: ../../content/contributing/development/coding_guidelines.rst:1147
-#: ../../content/contributing/development/coding_guidelines.rst:1231
-msgid "`[root]`"
+msgid "The prefix."
 msgstr ""
 
 #: ../../content/contributing/development/coding_guidelines.rst:1148
 #: ../../content/contributing/development/coding_guidelines.rst:1232
-msgid "Either the component **or** the module name (components take priority)."
+msgid "`[root]`"
 msgstr ""
 
 #: ../../content/contributing/development/coding_guidelines.rst:1149
 #: ../../content/contributing/development/coding_guidelines.rst:1233
-msgid "`[element]`"
+msgid "Either the component **or** the module name (components take priority)."
 msgstr ""
 
 #: ../../content/contributing/development/coding_guidelines.rst:1150
 #: ../../content/contributing/development/coding_guidelines.rst:1234
-msgid "An optional identifier for inner elements."
+msgid "`[element]`"
 msgstr ""
 
 #: ../../content/contributing/development/coding_guidelines.rst:1151
 #: ../../content/contributing/development/coding_guidelines.rst:1235
-msgid "`[property]`"
+msgid "An optional identifier for inner elements."
 msgstr ""
 
 #: ../../content/contributing/development/coding_guidelines.rst:1152
 #: ../../content/contributing/development/coding_guidelines.rst:1236
+msgid "`[property]`"
+msgstr ""
+
+#: ../../content/contributing/development/coding_guidelines.rst:1153
+#: ../../content/contributing/development/coding_guidelines.rst:1237
 msgid "The property/behavior defined by the variable."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1154
-#: ../../content/contributing/development/coding_guidelines.rst:1238
+#: ../../content/contributing/development/coding_guidelines.rst:1155
+#: ../../content/contributing/development/coding_guidelines.rst:1239
 msgid "`[modifier]`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1154
-#: ../../content/contributing/development/coding_guidelines.rst:1238
+#: ../../content/contributing/development/coding_guidelines.rst:1155
+#: ../../content/contributing/development/coding_guidelines.rst:1239
 msgid "An optional modifier."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1167
+#: ../../content/contributing/development/coding_guidelines.rst:1168
 msgid "SCSS Variables (scoped)"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1169
+#: ../../content/contributing/development/coding_guidelines.rst:1170
 msgid "These variables are declared within blocks and are not accessible from the outside. Our standard convention is `$-[variable name]`."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1187
+#: ../../content/contributing/development/coding_guidelines.rst:1188
 msgid "`Variables scope on the SASS Documentation <https://sass-lang.com/documentation/variables#scope>`_"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1193
+#: ../../content/contributing/development/coding_guidelines.rst:1194
 msgid "SCSS Mixins and Functions"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1195
+#: ../../content/contributing/development/coding_guidelines.rst:1196
 msgid "Our standard convention is `o-[name]`. Use descriptive names. When naming functions, use verbs in the imperative form (e.g.: `get`, `make`, `apply`...)."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1198
+#: ../../content/contributing/development/coding_guidelines.rst:1199
 msgid "Name optional arguments in the :ref:`scoped variables form <contributing/coding_guidelines/scss/scoped_scss_variables>`, so `$-[argument]`."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1218
+#: ../../content/contributing/development/coding_guidelines.rst:1219
 msgid "`Mixins on the SASS Documentation <https://sass-lang.com/documentation/at-rules/mixin>`_"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1219
+#: ../../content/contributing/development/coding_guidelines.rst:1220
 msgid "`Functions on the SASS Documentation <https://sass-lang.com/documentation/at-rules/function>`_"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1224
+#: ../../content/contributing/development/coding_guidelines.rst:1225
 msgid "CSS Variables"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1226
+#: ../../content/contributing/development/coding_guidelines.rst:1227
 msgid "In Odoo, the use of CSS variables is strictly DOM-related. Use them to **contextually** adapt the design and layout."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1229
+#: ../../content/contributing/development/coding_guidelines.rst:1230
 msgid "Our standard convention is BEM, so `--[root]__[element]-[property]--[modifier]`, with:"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1260
+#: ../../content/contributing/development/coding_guidelines.rst:1261
 msgid "Use of CSS Variables"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1262
+#: ../../content/contributing/development/coding_guidelines.rst:1263
 msgid "In Odoo, the use of CSS variables is strictly DOM-related, meaning that are used to **contextually** adapt the design and layout rather than to manage the global design-system. These are typically used when a component's properties can vary in specific contexts or in other circumstances."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1266
+#: ../../content/contributing/development/coding_guidelines.rst:1267
 msgid "We define these properties inside the component's main block, providing default fallbacks."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1270
+#: ../../content/contributing/development/coding_guidelines.rst:1271
 msgid ":file:`my_component.scss`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1277
+#: ../../content/contributing/development/coding_guidelines.rst:1278
 msgid ":file:`my_dashboard.scss`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1286
+#: ../../content/contributing/development/coding_guidelines.rst:1287
 msgid "`CSS variables on MDN web docs <https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties>`_"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1292
+#: ../../content/contributing/development/coding_guidelines.rst:1293
 msgid "CSS and SCSS Variables"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1294
+#: ../../content/contributing/development/coding_guidelines.rst:1295
 msgid "Despite being apparently similar, `CSS` and `SCSS` variables behave very differently. The main difference is that, while `SCSS` variables are **imperative** and compiled away, `CSS` variables are **declarative** and included in the final output."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1299
+#: ../../content/contributing/development/coding_guidelines.rst:1300
 msgid "`CSS/SCSS variables difference on the SASS Documentation <https://sass-lang.com/documentation/variables#:~:text=CSS%20variables%20are%20included%20in,use%20will%20stay%20the%20same>`_"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1302
+#: ../../content/contributing/development/coding_guidelines.rst:1303
 msgid "In Odoo, we take the best of both worlds: using the `SCSS` variables to define the design-system while opting for the `CSS` ones when it comes to contextual adaptations."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1305
+#: ../../content/contributing/development/coding_guidelines.rst:1306
 msgid "The implementation of the previous example should be improved by adding SCSS variables in order to gain control at the top-level and ensure consistency with other components."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1310
+#: ../../content/contributing/development/coding_guidelines.rst:1311
 msgid ":file:`secondary_variables.scss`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1317
+#: ../../content/contributing/development/coding_guidelines.rst:1318
 msgid ":file:`component.scss`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1324
+#: ../../content/contributing/development/coding_guidelines.rst:1325
 msgid ":file:`dashboard.scss`"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1334
+#: ../../content/contributing/development/coding_guidelines.rst:1335
 msgid "The `:root` pseudo-class"
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1336
+#: ../../content/contributing/development/coding_guidelines.rst:1337
 msgid "Defining CSS variables on the `:root` pseudo-class is a technique we normally **don't use** in Odoo's UI. The practice is commonly used to access and modify CSS variables globally. We perform this using SCSS instead."
 msgstr ""
 
-#: ../../content/contributing/development/coding_guidelines.rst:1340
+#: ../../content/contributing/development/coding_guidelines.rst:1341
 msgid "Exceptions to this rule should be fairly apparent, such as templates shared across bundles that require a certain level of contextual awareness in order to be rendered properly."
 msgstr ""
 
@@ -1607,7 +1607,7 @@ msgid "Click on the :guilabel:`Preview changes` button to review your contributi
 msgstr ""
 
 #: ../../content/contributing/documentation.rst:184
-msgid "Scroll to the bottom of the page and fill out the small form to propose your changes. In the first text box, write a very short summary of your changes. For instance, \"Fix a typo\" or \"Add documentation for invoicing of sales orders\". In the second text box, explain *why* you are proposing these changes. Then, click on the :guilabel:`Propose changes` button."
+msgid "Scroll to the bottom of the page and fill out the small form to propose your changes. In the first text box, write a very short summary of your changes. For instance, \"Fix a typo\" or \"Add documentation for invoicing of sales orders.\" In the second text box, explain *why* you are proposing these changes. Then, click on the :guilabel:`Propose changes` button."
 msgstr ""
 
 #: ../../content/contributing/documentation.rst:195
@@ -2750,42 +2750,46 @@ msgid "Code tabs are essentially :ref:`group tabs <contributing/tabs/group>` tha
 msgstr ""
 
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:1009
+msgid "Cards"
+msgstr ""
+
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1057
 msgid "Document metadata"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1011
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1059
 msgid "Sphinx supports document-wide metadata markups that specify a behavior for the entire page."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1012
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1060
 msgid "They must be placed between colons (`:`) at the top of the source file."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1015
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1063
 msgid "**Metadata**"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1015
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1063
 msgid "**Purpose**"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1017
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1065
 msgid "`show-content`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1017
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1065
 msgid "Make a toctree page accessible from the navigation menu."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1019
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1067
 msgid "`show-toc`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1019
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1067
 msgid "Show the table of content on a page that has the `show-content` metadata markup."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1022
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1070
 msgid "`code-column`"
 msgstr ""
 
@@ -2794,62 +2798,62 @@ msgid "Show a dynamic side column that can be used to display interactive tutori
 msgstr ""
 
 #: ../../content/contributing/documentation/rst_cheat_sheet.rst:0
-msgid "For example, see :doc:`/applications/finance/accounting/getting_started/memento`."
+msgid "For example, see :doc:`/applications/finance/accounting/getting_started/cheat_sheet`."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1027
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1075
 msgid "`hide-page-toc`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1027
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1075
 msgid "Hide the \"On this page\" sidebar and use full page width for the content."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1029
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1077
 msgid "`custom-css`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1029
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1077
 msgid "Link CSS files (comma-separated) to the document."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1031
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1079
 msgid "`custom-js`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1031
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1079
 msgid "Link JS files (comma-separated) to the document."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1033
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1081
 msgid "`classes`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1033
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1081
 msgid "Assign the specified classes to the `<main/>` element of the document."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1035
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1083
 msgid "`orphan`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1035
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1083
 msgid "Suppress the need to include the document in a toctree."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1037
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1085
 msgid "`nosearch`"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1037
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1085
 msgid "Exclude the document from search results."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1043
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1091
 msgid "Formatting tips"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1048
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1096
 msgid "Break the line but not the paragraph"
 msgstr ""
 
@@ -2861,15 +2865,15 @@ msgstr ""
 msgid "A second line that follows a line break."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1066
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1114
 msgid "Escape markup symbols (Advanced)"
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1068
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1116
 msgid "Markup symbols escaped with backslashes (``\\``) are rendered normally. For instance, ``this \\*\\*line of text\\*\\* with \\*markup\\* symbols`` is rendered as “this \\*\\*line of text\\*\\* with \\*markup\\* symbols”."
 msgstr ""
 
-#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1072
+#: ../../content/contributing/documentation/rst_cheat_sheet.rst:1120
 msgid "When it comes to backticks (`````), which are used in many cases such as :ref:`external hyperlinks <contributing/external-hyperlinks>`, using backslashes for escaping is no longer an option because the outer backticks interpret enclosed backslashes and thus prevent them from escaping inner backticks. For instance, ```\\`this formatting\\```` produces an ``[UNKNOWN NODE title_reference]`` error. Instead, `````this formatting````` should be used to produce the following result: ```this formatting```."
 msgstr ""
 
