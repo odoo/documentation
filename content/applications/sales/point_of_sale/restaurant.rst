@@ -33,7 +33,6 @@ These features are displayed in the :guilabel:`Restaurant & Bar` section.
 
    restaurant/bill_printing
    restaurant/floors_tables
-   restaurant/split
    restaurant/kitchen_printing
    restaurant/fiscal_position
    restaurant/tips
