@@ -432,4 +432,4 @@ payment method... What best suit your needs.
    - :doc:`payment_providers/razorpay`
    - :doc:`payment_providers/sips`
    - :doc:`payment_providers/stripe`
-   - :doc:`../websites/ecommerce/shopper_experience/payment_providers`
+   - :doc:`../websites/ecommerce/checkout_payment_shipping/payments`
