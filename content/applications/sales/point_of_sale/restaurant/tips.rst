@@ -1,6 +1,6 @@
-===================================
-Integrate a tip option into payment
-===================================
+====
+Tips
+====
 
 As it is customary to tip in many countries all over the world, it is
 important to have the option in your PoS interface.
