@@ -20,7 +20,6 @@ Receipt Printing` setting.
 
 .. seealso::
    - :doc:`../restaurant/bill_printing`
-   - :doc:`../restaurant/split`
 
 Reprint a receipt
 =================
