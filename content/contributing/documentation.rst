@@ -183,7 +183,7 @@ Make your first contribution
 
       #. Scroll to the bottom of the page and fill out the small form to propose your changes. In
          the first text box, write a very short summary of your changes. For instance, "Fix a typo"
-         or "Add documentation for invoicing of sales orders". In the second text box, explain *why*
+         or "Add documentation for invoicing of sales orders." In the second text box, explain *why*
          you are proposing these changes. Then, click on the :guilabel:`Propose changes` button.
 
          .. image:: documentation/propose-changes.png
