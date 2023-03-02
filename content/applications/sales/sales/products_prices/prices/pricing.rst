@@ -143,4 +143,4 @@ orders and in your eCommerce catalog. To do so:
 .. seealso::
 
     * :doc:`currencies`
-    * :doc:`/applications/websites/ecommerce/maximizing_revenue/pricing`
+    * :doc:`/applications/websites/ecommerce/managing_products/price_management`

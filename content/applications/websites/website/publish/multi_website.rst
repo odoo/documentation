@@ -267,7 +267,7 @@ Then, go to :menuselection:`Website --> Products --> Pricelists` to create addit
 You can also choose to have a pricelist available *only* on a specific website.
 
 .. seealso::
-   :doc:`../../ecommerce/maximizing_revenue/pricing`.
+   :doc:`../../ecommerce/managing_products/price_management`.
 
 .. image:: multi_website/multi_website07.png
   :align: center
