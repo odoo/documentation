@@ -31,7 +31,6 @@ select your POS, and click :menuselection:`Edit --> Is a Bar/Restaurant --> Save
 
    restaurant/bill_printing
    restaurant/floors_tables
-   restaurant/split
    restaurant/kitchen_printing
    restaurant/fiscal_position
    restaurant/tips
