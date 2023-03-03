@@ -7,7 +7,7 @@ Odoo supports a multitude of online
 customers to pay with their preferred payment methods.
 
 Configuration
--------------
+=============
 
 To set up payment providers on the eCommerce app, go to :menuselection:`Website --> Configuration
 --> Payment Providers`. From here, :guilabel:`Activate` the payment providers you wish to have
@@ -32,3 +32,20 @@ process**, at the :guilabel:`Confirm Order` step.
 .. image:: payments/payments-checkout.png
    :align: center
    :alt: Payment provider selection at checkout
+
+eWallets and gift cards
+=======================
+
+Customers can pay with an **eWallet** or **gift cards** at the payment checkout step. To enable
+eWallets and gift cards, go to :menuselection:`Website --> Configuration --> Settings`, and in the
+**Shop - Products** section, enable :menuselection:`Discounts, Loyalty & Gift Card`.
+
+Once enabled, customers can enter their gift card **code** or pay with their eWallet at the checkout
+step.
+
+.. image:: payments/payments-discounts.png
+   :align: center
+   :alt: Enter gift card code to process checkout
+
+.. seealso::
+   :doc:`/applications/sales/sales/products_prices/ewallets_giftcards`
