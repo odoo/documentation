@@ -11,7 +11,7 @@ customers to pay with their preferred payment methods.
    - :doc:`../checkout_payment_shipping/checkout`
 
 Configuration
--------------
+=============
 
 To set up payment providers on the eCommerce app, go to :menuselection:`Website --> Configuration
 --> Payment Providers`. From here, :guilabel:`Activate` the payment providers you wish to have
@@ -36,3 +36,20 @@ process**, at the :guilabel:`Confirm Order` step.
 .. image:: payments/payments-checkout.png
    :align: center
    :alt: Payment provider selection at checkout
+
+eWallets and gift cards
+=======================
+
+When checking out, customers can pay with an eWallet or gift cards. To enable these, go to
+:menuselection:`Website --> Configuration --> Settings`, and in the :guilabel:`Shop-Products`
+section, enable :menuselection:`Discounts, Loyalty & Gift Card`.
+
+Once enabled, customers can enter their gift card **code** or pay with their eWallet at the checkout
+step.
+
+.. image:: payments/payments-ewallets-giftcards.png
+   :align: center
+   :alt: Enter gift card code to process checkout
+
+.. seealso::
+   :doc:`/applications/sales/sales/products_prices/ewallets_giftcards`
