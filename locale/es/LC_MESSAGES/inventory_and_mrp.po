@@ -10,28 +10,27 @@
 # Paloma Yazmin Reyes Morales <paloma.reyes@jarsa.com.mx>, 2021
 # Julián Andrés Osorio López <mcjulian1107@gmail.com>, 2021
 # Miguel Orueta <mo@landoo.es>, 2021
-# miguelchuga <miguelchuga@gmail.com>, 2021
 # Katerina Katapodi <katerinakatapodi@gmail.com>, 2021
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2021
-# Pablo Rojas <rojaspablo88@gmail.com>, 2021
-# AleEscandon <alejandra.escandon@jarsa.com.mx>, 2021
-# Lucia Pacheco <lpo@odoo.com>, 2022
 # marcescu, 2022
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2022
 # Mariela Moreno <mam@odoo.com>, 2022
-# Martin Trigaux, 2022
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
+# AleEscandon <alejandra.escandon@jarsa.com.mx>, 2023
+# Martin Trigaux, 2023
+# Pablo Rojas <rojaspablo88@gmail.com>, 2023
+# Lucia Pacheco <lpo@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-01-19 15:32+0000\n"
+"POT-Creation-Date: 2023-03-03 11:23+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
-"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
+"Last-Translator: Lucia Pacheco <lpo@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -730,9 +729,9 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:9
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/resupply_warehouses.rst:11
 #: ../../content/applications/inventory_and_mrp/inventory/management/warehouses/warehouses_locations.rst:42
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:14
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:15
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:82
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/invoicing.rst:16
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:15
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/multipack.rst:13
@@ -740,6 +739,7 @@ msgstr ""
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/setup/third_party_shipper.rst:14
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/subcontracting.rst:23
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/use_mps.rst:9
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:31
 msgid "Configuration"
 msgstr "Configuración"
 
@@ -4506,6 +4506,10 @@ msgid ""
 "its inventory unit of measure is `Units`, the SO shows the quantity in boxes"
 " of six, and the delivery shows the quantity in units."
 msgstr ""
+"Por ejemplo, si la unidad de medida en la orden de venta se cambió a `caja "
+"de f 6`, pero su unidad de medida de inventario es `unidades`, entonces la "
+"orden de venta muestra la cantidad en cajas de seis y la entrega la mostrará"
+" en unidades."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:3
 msgid "When Should you Use Packages, Units of Measure or Special Packaging?"
@@ -4532,6 +4536,8 @@ msgstr ""
 msgid ""
 "Specify unit of measure for handling a product vs. when it's purchased."
 msgstr ""
+"Especificar la unidad de medida para la gestión de un producto vs. para su "
+"compra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:16
 msgid ""
@@ -4541,6 +4547,12 @@ msgid ""
 "delivery orders/receipts. The only condition is that all the units have to "
 "be in the *same category* (Unit, Weight, Volume, Length, etc.)."
 msgstr ""
+"Una vez que establezca una :guilabel:`unidad de medida` y una :guilabel:`UdM"
+" de compra` en el formulario del producto, Odoo puede convertir de forma "
+"automática las distintas unidades en las órdenes de compra o venta y sus "
+"respectivas órdenes o recibos de entrega. La única condición es que todas "
+"las unidades deben pertenecer a la *misma categoría* (unidad, peso, volumen,"
+" longitud, etc.)."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:21
 msgid ""
@@ -4551,6 +4563,12 @@ msgid ""
 " a receipt and converts the centimeters to feet. The receipt will list the "
 "quantity in feet."
 msgstr ""
+"Por ejemplo, se puede establecer la :guilabel:`unidad de medida` de un "
+"producto en `pies (ft)` y su :guilabel:`UdM de compra` en `centímetros "
+"(cm)`. Cuando se crea una orden de compra para ese producto, la cantidad "
+"aparecerá en centímetros. Después, cuando se confirma la orden de compra, "
+"Odoo genera de forma automática un recibo y convierte los centímetros a "
+"pies. El recibo indicará la cantidad en pies."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:28
 msgid "Packages"
@@ -4565,6 +4583,12 @@ msgid ""
 "sure the :guilabel:`Packages` option is enabled in :menuselection:`Inventory"
 " --> Configuration --> Settings --> Operations`."
 msgstr ""
+"Un paquete es el contenedor físico que contiene uno o mpas productos "
+"provenientes de una recolección. Por ejemplo, cuando un producto está listo "
+"para su entrega, sus cantidades se pueden separar en dos paquetes. Puede "
+"registrar en su base de datos de Odoo la cantidad de productos dentro de "
+"cada paquete. Asegúrese de habilitar la opción :guilabel:`paquetes` en "
+":menuselection:`Inventario --> Configuración --> Ajustes --> Operaciones`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:36
 msgid ""
@@ -4573,14 +4597,18 @@ msgid ""
 "package. Then, click :guilabel:`Put in Pack` to record the first package. "
 "Repeat for each package."
 msgstr ""
+"Puede separar los productos de una orden de entrega en distintos paquetes si"
+" establece la cantidad deseada como la cantidad :guilabel:`hecha` en el "
+"primer paquete. Después, haga clic en :guilabel:`Poner en paquete` para "
+"registrar el primer paquete. Repita esta operación con cada paquete."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rstNone
 msgid "Separate delivery into different packages"
-msgstr ""
+msgstr "Separación de la entrega en distintos paquetes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rstNone
 msgid "Separate delivery package details"
-msgstr ""
+msgstr "Detalles del paquete de la entrega"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:49
 msgid "Packagings"
@@ -4592,6 +4620,9 @@ msgid ""
 "product. For example, cans of soda can be in a 6-pack, 15-pack, or even a "
 "pallet for the packaging."
 msgstr ""
+"Un empaquetado se refiere a un contenedor estándar que puede tener varias "
+"unidades de un producto. Por ejemplo, un empaquetado puede tener latas de "
+"refresco en paquetes de 6, de 15 o incluso en un palé."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:54
 msgid ""
@@ -4600,14 +4631,18 @@ msgid ""
 "units of measure is that packagings are defined at the product level while "
 "UoMs are generic."
 msgstr ""
+"En Odoo, los empaquetados se utilizan con fines indicativos en las órdenes "
+"de venta y compra, así como en los traslados de inventario. La diferencia "
+"principal entre los empaquetados y las unidades de medida es que los "
+"empaquetados se definen en el producto, mientras que las UdM son genéricas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rstNone
 msgid "Different product packaging examples."
-msgstr ""
+msgstr "Ejemplos de distintos empaquetados de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rstNone
 msgid "Package field on purchase order."
-msgstr ""
+msgstr "Campo de paquete en la orden de compra."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:67
 msgid ""
@@ -4615,14 +4650,18 @@ msgid ""
 " of the packaging, Odoo automatically adds the number of units contained in "
 "the packing on the picking."
 msgstr ""
+"Los empaquetados también son útiles durante la recepción de productos. "
+"Cuando se escanea el código de barras de un empaquetado, Odoo suma de  forma"
+" automática el número de unidades contenidas en el empaquetado de la "
+"recolección."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/products/usage.rst:71
 msgid ":doc:`uom`"
-msgstr ""
+msgstr ":doc:`uom`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/replenishment_strategies.rst:5
 msgid "Replenishment strategies"
-msgstr ""
+msgstr "Estrategias de reabastecimiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/replenishment_strategies/virtual_warehouses.rst:3
 msgid "Resupply from another Warehouse"
@@ -4703,6 +4742,9 @@ msgid ""
 "The landed cost feature in Odoo allows the user to include additional costs "
 "(shipment, insurance, customs duties, etc.) into the cost of the product."
 msgstr ""
+"La función \"costos en destino\" de Odoo le permite incluir costos "
+"adicionales (envío, seguro, derechos aduanales, etc.) en el costo del "
+"producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:11
 msgid ""
@@ -4711,10 +4753,14 @@ msgid ""
 "gives the option to set a :guilabel:`Default Journal` in which the landed "
 "costs accounting entries will be recorded."
 msgstr ""
+"Primero, vaya a :menuselection:`Inventario --> Configuración --> Ajustes -->"
+" Valoración` y active la función :guilabel:`costos en destino`. Odoo también"
+" le da la opción de establecer un :guilabel:`diario predeterminado` en el "
+"cual se registrarán los asientos contables de costos en destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rstNone
 msgid "Activate the landed cost feature in Inventory settings."
-msgstr ""
+msgstr "Active la función de costos en destino en los ajustes de Inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:20
 msgid "Add costs to products"
@@ -4732,10 +4778,17 @@ msgid ""
 "the box in the :guilabel:`Landed Costs` column on the vendor bill invoice "
 "line."
 msgstr ""
+"Después de que un proveedor completa una orden de compra y le envía la "
+"factura, haga clic en :guilabel:`crear factura` en la orden de compra para "
+"crear una factura de proveedor en Odoo. Si la factura de proveedor incluye "
+"costos en destino, como derechos aduanales, seleccione la casilla en la "
+"columna :guilabel:`costos en destino` en la factura de proveedor.."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rstNone
 msgid "Enable Landed Costs option on vendor bill line."
 msgstr ""
+"Habilitar la opción de costos en destino en la línea de la factura de "
+"proveedor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:33
 msgid ""
@@ -4744,6 +4797,11 @@ msgid ""
 "bill as an invoice line instead of manually entering the landed cost "
 "information every time a vendor bill comes in."
 msgstr ""
+"En el caso de los cargos que siempre son costos en destino, debe crear un "
+"producto de costo en destino en Odoo. De esta forma, el producto de costo en"
+" destino se puede agregar con rapidez a la factura de proveedor como una "
+"línea en la factura en lugar de tener que ingresar la información de costo "
+"en destino cada vez que recibe una factura de proveedor."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:37
 msgid ""
@@ -4754,6 +4812,14 @@ msgid ""
 " tab and check the box next to :guilabel:`Is a Landed Cost`. Finally, click "
 ":guilabel:`Save` to finish creating the landed cost product."
 msgstr ""
+"Primero, cree un nuevo producto en :menuselection:`Inventario --> Productos "
+"--> Productos --> Crear`. A continuación escriba el nombre del costo en "
+"destino. Después, establezca el :guilabel:`tipo de producto` como "
+":guilabel:`servicio`. Los productos de costo en destino siempre deben ser de"
+" este tipo. Posteriormente, vaya a la pestaña :guilabel:`compra` y "
+"seleccione la casilla junto a :guilabel:`es un costo en destino`. Por "
+"último, haga clic en :guilabel:`guardar` para terminar de crear el producto "
+"de costo en destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:43
 msgid ""
@@ -4766,7 +4832,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rstNone
 msgid "Option to define a product as a landed cost."
-msgstr ""
+msgstr "Opción para definir si un producto es un costo en destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:50
 msgid ""
@@ -4779,11 +4845,23 @@ msgid ""
 "clicking :guilabel:`Edit` and selecting the picking reference number from "
 "the :guilabel:`Transfers` drop-down menu. Finally, click :guilabel:`Save`."
 msgstr ""
+"Una vez que se agregue el costo en destino a la factura de proveedor (ya sea"
+" al seleccionar la opción :guilabel:`costo en destino` en la línea de la "
+"factura o agregar un producto de costo en destino en la factura), haga clic "
+"en el botón :guilabel:`crear costos en destino` en la parte superior de la "
+"factura. Odoo crea de forma automática un registro de costo en destino con "
+"el costo en destino precompletado en las líneas de :guilabel:`costos "
+"adicionales` del producto. Ahí elija a qué recolección se deben aplicar los "
+"costos adicionales, haga clic en :guilabel:`editar` y seleccione el número "
+"de referencia de la recolección en el menú desplegable "
+":guilabel:`traslados`. Por último, haga clic en :guilabel:`Guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rstNone
 msgid ""
 "Use a warehouse transfer to cover a landed cost in the accounting journal."
 msgstr ""
+"Utilice un traslado de almacén para registrar un costo en destino en el "
+"diario contable."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/integrating_landed_costs.rst:62
 msgid ""
@@ -4817,11 +4895,240 @@ msgid ""
 "necessary to create a landed cost record from the vendor bill."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:7
-msgid "Inventory valuation configuration"
-msgstr "Configuración de la valoración de inventario"
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:3
+msgid "Inventory Valuation Configuration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:5
+msgid ""
+"All of a company's stock on-hand contributes to the valuation of its "
+"inventory. That value should be reflected in the company's accounting "
+"records to accurately show the value of the company and all of its assets."
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:9
+msgid ""
+"By default, Odoo uses a periodic inventory valuation (also known as manual "
+"inventory valuation). This method implies that the accounting team posts "
+"journal entries based on the physical inventory of the company, and that "
+"warehouse employees take the time to count the stock. In Odoo, this method "
+"is reflected inside each product category, where the :guilabel:`Costing "
+"Method` field will be set to `Standard Price` by default, and the "
+":guilabel:`Inventory Valuation` field will be set to `Manual`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rstNone
+msgid ""
+"The Inventory Valuation fields are located on the Product Categories form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:20
+msgid ""
+"Alternatively, automated inventory valuation is an integrated valuation "
+"method that updates the inventory value in real-time by creating journal "
+"entries whenever there are stock moves initiated between locations in a "
+"company's inventory."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:25
+msgid ""
+"Automated inventory valuation is a method recommended for expert "
+"accountants, given the extra steps involved in journal entry configuration. "
+"Even after the initial setup, the method will need to be periodically "
+"checked to ensure accuracy, and adjustments may be needed on an ongoing "
+"basis depending on the needs and priorities of the business."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:31
+msgid "Types of Accounting"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:33
+msgid ""
+"Accounting entries will depend on the accounting mode: Continental or Anglo-"
+"Saxon."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:36
+msgid ""
+"Verify the accounting mode by activating the :ref:`developer-mode` and "
+"navigating to :menuselection:`Accounting --> Configuration --> Settings`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:39
+msgid ""
+"In Anglo-Saxon accounting, the costs of goods sold (COGS) are reported when "
+"products are sold or delivered. This means that the cost of a good is only "
+"recorded as an expense when a customer is invoiced for a product. Interim "
+"Stock Accounts are used for the input and output accounts, and are both "
+"Asset Accounts in the Balance Sheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:44
+msgid ""
+"In Continental accounting, the cost of a good is reported as soon as a "
+"product is received into stock. Additionally, a *single* Expense account is "
+"used for both input and output accounts in the Balance Sheet."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:49
+msgid "Costing Methods"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:51
+msgid ""
+"Below are the three costing methods that can be used in Odoo for inventory "
+"valuation."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:53
+msgid ""
+"**Standard Price**: is the default costing method in Odoo. The cost of the "
+"product is manually defined on the product form, and this cost is used to "
+"compute the valuation. Even if the purchase price on a Purchase Order "
+"differs, the valuation will still use the cost defined on the product form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:57
+msgid ""
+"**Average Cost (AVCO)**: calculates the valuation of a product based on the "
+"average cost of that product, divided by the total number of available stock"
+" on-hand. With this costing method, inventory valuation is *dynamic*, and "
+"constantly adjusts based on the purchase price of products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:60
+msgid ""
+"**First In First Out (FIFO)**: tracks the costs of incoming and outgoing "
+"items in real-time and uses the real price of the products to change the "
+"valuation. The oldest purchase price is used as the cost for the next good "
+"sold until an entire lot of that product is sold. When the next inventory "
+"lot moves up in the queue, an updated product cost is used based on the "
+"valuation of that specific lot. This method is arguably the most accurate "
+"inventory valuation method for a variety of reasons, however, it's highly "
+"sensitive to input data and human error."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:68
+msgid ""
+"Changing the costing method greatly impacts inventory valuation. It's highly"
+" recommended to consult an accountant first before making any adjustments "
+"here."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:72
+msgid "Configure automated inventory valuation in Odoo"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:74
+msgid ""
+"Make changes to inventory valuation options by navigating to "
+":menuselection:`Inventory --> Configuration --> Product Categories`, and "
+"choose the category/categories where the automated valuation method should "
+"apply."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:79
+msgid ""
+"It is possible to use different valuation settings for different product "
+"categories."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:81
+msgid ""
+"Under the :guilabel:`Inventory Valuation` heading are two labels: "
+":guilabel:`Costing Method` and :guilabel:`Inventory Valuation`. Pick the "
+"desired :guilabel:`Costing Method` using the drop-down menu (e.g. "
+":guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First "
+"In First Out (FIFO)` and switch the :guilabel:`Inventory Valuation` to "
+":guilabel:`Automated`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:87
+msgid ":doc:`Using the inventory valuation <using_inventory_valuation>`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:90
+msgid ""
+"When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing "
+"Method`, the numerical value in the :guilabel:`Cost` field for products in "
+"the respective product category will no longer be editable, and will appear "
+"grayed out. The :guilabel:`Cost` amount will instead automatically update "
+"based on the average purchase price both of inventory on hand and the costs "
+"accumulated from validated purchase orders."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:96
+msgid ""
+"On the same screen, the :guilabel:`Account Stock Properties` fields will "
+"appear, as they are now required fields given the change to automated "
+"inventory valuation. These accounts are defined as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
+msgid ""
+":guilabel:`Stock Valuation Account`: when automated inventory valuation is "
+"enabled on a product, this account will hold the current value of the "
+"products."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
+msgid ""
+":guilabel:`Stock Input Account`: counterpart journal items for all incoming "
+"stock moves will be posted in this account, unless there is a specific "
+"valuation account set on the source location. This is the default value for "
+"all products in a given category, and can also be set directly on each "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:106
+msgid ""
+":guilabel:`Stock Output Account`: counterpart journal items for all outgoing"
+" stock moves will be posted in this account, unless there is a specific "
+"valuation account set on the destination location. This is the default value"
+" for all products in a given category, and can also be set directly on each "
+"product."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
+msgid "Access reporting data generated by inventory valuation"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
+msgid ""
+"To start, go to :menuselection:`Accounting --> Reporting --> Balance Sheet`."
+" At the top of the dashboard, change the :guilabel:`As of` field value to "
+":guilabel:`Today`, and adjust the filtering :guilabel:`Options` to "
+":guilabel:`Unfold All` in order to see all of the latest data displayed, all"
+" at once."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:119
+msgid ""
+"Under the parent :guilabel:`Current Assets` line item, look for the nested "
+":guilabel:`Stock Valuation Account` line item, where the total valuation of "
+"all of the inventory on hand is displayed."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
+msgid ""
+"Access more specific information with the :guilabel:`Stock Valuation "
+"Account` drop-down menu, by selecting either the :guilabel:`General Ledger` "
+"to see an itemized view of all of the journal entries, or by selecting "
+":guilabel:`Journal Items` to review all of the individualized journal "
+"entries that were submitted to the account. As well, annotations to the "
+":guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, "
+"filling in the text box, and clicking :guilabel:`Save`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rstNone
+msgid "See the full inventory valuation breakdown in Odoo Accounting app."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:3
+msgid "Using the inventory valuation"
+msgstr "Usar la valoración de inventario"
+
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:5
 msgid ""
 "Inventory valuation refers to how you value your stock. It’s a very "
@@ -4831,765 +5138,6 @@ msgstr ""
 "La valoración de inventario se refiere a cómo evalúa sus existencias. Es un "
 "aspecto muy importante de un negocio, ya que el inventario puede ser el  "
 "activo más grande de una empresa."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:13
-msgid "Inventory valuation implies two main choices:"
-msgstr "La valoración de inventario implica dos elecciones principales:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:15
-msgid "The cost method you use to value your goods (standard, fifo, avco)"
-msgstr ""
-"El método de costo que utiliza para evaluar sus productos (estándar, PEPS, "
-"costo promedio)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:16
-msgid ""
-"The way you record this value into your accounting books (manually or "
-"automatically)"
-msgstr ""
-"La forma en la que registra este valor en sus libros contables (de manera "
-"manual o automática)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:18
-msgid "Those two concepts are explained in the sections below."
-msgstr "Esos dos conceptos se explican en las secciones a continuación."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:21
-msgid "Costing Methods: Standard, FIFO, AVCO"
-msgstr "Métodos de costo: Estándar, PEPS, Costo promedio (AVCO)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:23
-msgid ""
-"The costing method is defined in the product category. There are three "
-"options available. Each of them is explained in detail below."
-msgstr ""
-"El método de costo se define en la categoría del producto. Hay tres opciones"
-" disponibles. Explicaremos cada una de ellas a continuación."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:71
-msgid "Standard Price"
-msgstr "Precio estándar"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:36
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:81
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:127
-msgid "Operation"
-msgstr "Operación"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:37
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:82
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:128
-msgid "Unit Cost"
-msgstr "Costo unitario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:38
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:83
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:129
-msgid "Qty On Hand"
-msgstr "Cantidad a la mano"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:39
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:84
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:130
-msgid "Delta Value"
-msgstr "Valor delta"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:40
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:85
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:131
-msgid "Inventory Value"
-msgstr "Valor del inventario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:42
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:47
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:52
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:57
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:63
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:92
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:138
-msgid "€10"
-msgstr "€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:43
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:88
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:134
-msgid "0"
-msgstr "0"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:45
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:87
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:90
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:133
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:136
-msgid "€0"
-msgstr "€0"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:46
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:91
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:137
-msgid "Receive 8 Products at €10"
-msgstr "Recibir 8 productos a €10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:48
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:93
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:139
-msgid "8"
-msgstr "8"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:49
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:94
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:140
-msgid "+8*€10"
-msgstr "+8*€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:50
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:95
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:141
-msgid "€80"
-msgstr "€80"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:51
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:96
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:142
-msgid "Receive 4 Products at €16"
-msgstr "Recibir 4 productos a €16"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:53
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:98
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:144
-msgid "12"
-msgstr "12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:54
-msgid "+4*€10"
-msgstr "+4*€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:55
-msgid "€120"
-msgstr "€120"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:56
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:101
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:147
-msgid "Deliver 10 Products"
-msgstr "Entregar 10 productos"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:58
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:103
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:149
-msgid "2"
-msgstr "2"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
-msgid "-10*€10"
-msgstr "-10*€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:61
-msgid "€20"
-msgstr "€20"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:62
-msgid "Receive 2 Products at €9"
-msgstr "Recibir 2 productos a €9"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:64
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:109
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:155
-msgid "4"
-msgstr "4"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:65
-msgid "+2*€10"
-msgstr "+2*€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:66
-msgid "€40"
-msgstr "€40"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:68
-msgid ""
-"In **Standard Price**, any product will be valued at the cost that you "
-"defined manually on the product form. Usually, this cost is an estimation "
-"based on the material and labor needed to obtain the product. This cost must"
-" be reviewed periodically."
-msgstr ""
-"En **precio estándar**, cualquier producto se evaluará al costo que definió "
-"manualmente en el formulario del producto. Normalmente, este costo es una "
-"estimación basada en el material y la mano de obra necesarias para obtener "
-"el producto. Se debe revisar este costo con periodicidad."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:117
-msgid "Average Price"
-msgstr "Precio promedio"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:97
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:143
-msgid "€12"
-msgstr "€12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:99
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:145
-msgid "+4*€16"
-msgstr "+4*€16"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:146
-msgid "€144"
-msgstr "€144"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
-msgid "-10*€12"
-msgstr "-10*€12"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:106
-msgid "€24"
-msgstr "€24"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:107
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:153
-msgid "Receive 2 Products at €6"
-msgstr "Recibir 2 productos a €6"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:108
-msgid "€9"
-msgstr "€9"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:110
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:156
-msgid "+2*€6"
-msgstr "+2*€6"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:111
-msgid "€36"
-msgstr "€36"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:113
-msgid ""
-"In **AVCO (Average Cost)**, each product has the same value and this value "
-"is the average purchase cost of the product. With this costing method, the "
-"cost of the product is recomputed as each receipt."
-msgstr ""
-"En **Costo promedio (AVCO)**, todos los productos tienen el mismo valor, el "
-"cual es el costo promedio de compra del producto. Con este método de costo, "
-"el costo del producto se vuelve a calcular en cada recepción."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:117
-msgid "The average cost does not change when products leave the warehouse."
-msgstr "El costo promedio no cambia cuando los productos salen del almacén."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:168
-msgid "FIFO"
-msgstr "PEPS"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:148
-msgid "€16"
-msgstr "€16"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
-msgid "-8*€10"
-msgstr "-8*€10"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:0
-msgid "-2*€16"
-msgstr "-2*€16"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:152
-msgid "€32"
-msgstr "€32"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:154
-msgid "€11"
-msgstr "€11"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:157
-msgid "€44"
-msgstr "€44"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:159
-msgid ""
-"In **FIFO (First In First Out)**, the products are valued at their purchase "
-"cost. When a product leaves the stock, that’s the “First in, first out” rule"
-" that applies."
-msgstr ""
-"En **PEPS (Primeras entradas, primeras salidas)**, se evalúan los productos "
-"con su costo de compra. Cuando un producto sale de las existencias, se "
-"aplica la regla “Primera entrada, primera salida”."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:163
-msgid ""
-"Pay attention, that this is a financial FIFO. The first value “in” is the "
-"first value “out”, no matter the storage location, warehouse or serial "
-"number."
-msgstr ""
-"Tenga en cuenta que este es un PEPS financiero. El primer valor de "
-"\"entrada\" es el primero valor de \"salida\", sin importar la ubicación de "
-"almacenamiento, el almacén o el número de serie."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:167
-msgid ""
-"FIFO is advised if you manage all your workflows into Odoo (Sales, "
-"Purchases, Inventory). It suits any kind of users."
-msgstr ""
-"Se recomienda usar PEPS si gestiona sus flujos de trabajo en Odoo (Ventas, "
-"Compra, Inventario). Se adapta a cualquier tipo de usuario."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:171
-msgid "Inventory Valuation: Manual or Automated"
-msgstr "Valoración de inventario: manual o automática."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:173
-msgid ""
-"There are two ways to record your inventory valuation in your accounting "
-"books. As the costing method, this is defined in your product category. "
-"Those two methods are detailed below."
-msgstr ""
-"Hay dos formas de registrar su valoración de inventario en sus libros "
-"contables. Al igual que el método de costo, esto se define en la categoría "
-"de su producto. Estos dos métodos se detallan a continuación."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:177
-msgid ""
-"It is important to also note that the accounting entries will depend on your"
-" accounting mode: it can be continental or anglo-saxon. In continental "
-"accounting, the cost of a good is taken into account as soon as the product "
-"is received in stock. In anglo-saxon accounting, the cost of a good is only "
-"recorded as an expense when this good is invoiced to a final customer. In "
-"the tables below, you can easily compare those two accounting modes."
-msgstr ""
-"Es importante tomar en cuenta que los asientos contables dependerán de su "
-"modo de contabilidad: puede ser continental o anglosajona. En la "
-"contabilidad continental, el costo de un producto se toma en cuenta en "
-"cuanto se recibe en existencias. En la contabilidad anglosajona, el costo de"
-" un producto se registra solo como un gasto cuando se factura al cliente "
-"final. En las tablas a continuación puede comparar con facilidad los dos "
-"modos contables."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:185
-msgid ""
-"Usually, based on your country, the correct accounting mode will be chosen "
-"by default. If you want to verify your accounting mode, activate the "
-":ref:`developer mode <developer-mode>` and open your accounting settings."
-msgstr ""
-"Normalmente, según su país, el modelo de contabilidad correcto se elige de "
-"forma predeterminada Si desea verificar su modo de contabilidad, active el "
-":ref:`modo de desarrollador <developer-mode>` y abra sus ajustes de "
-"Contabilidad."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:191
-msgid "Manual Inventory Valuation"
-msgstr "Valoración manual de inventario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:193
-msgid ""
-"In this case, goods receipts and deliveries won’t have any direct impact on "
-"your accounting books. Periodically, you create a manual journal entry "
-"representing the value of what you have in stock. To know that value, go in "
-":menuselection:`Inventory --> Reporting --> Inventory Valuation`."
-msgstr ""
-"En este caso, las recepciones y entregas de productos no tendrán un impacto "
-"directo en sus libros contables. Usted crea de forma periódica un asiento "
-"contable manual que representa el valor de lo que tiene en existencias. Para"
-" conocer este valor, vaya a :menuselection:`Inventario --> Reportes --> "
-"Valoración de inventario`."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:198
-msgid ""
-"This is the default configuration in Odoo and it works out-of-the-box. Check"
-" following operations and find out how Odoo is managing the accounting "
-"postings."
-msgstr ""
-"Esta es la configuración predeterminada en Odoo y funciona de inmediato. "
-"Verifique las siguientes operaciones y descubra cómo Odoo gestiona las "
-"publicaciones contables."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:203
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:362
-msgid "Continental Accounting"
-msgstr "Contabilidad continental"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:220
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:294
-msgid "Vendor Bill"
-msgstr "Factura de proveedor"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:211
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:228
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:262
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:284
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:302
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:341
-msgid "\\"
-msgstr "\\"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:211
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:228
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:262
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:284
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:302
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:341
-msgid "Debit"
-msgstr "Debe"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:211
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:228
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:262
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:284
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:302
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:341
-msgid "Credit"
-msgstr "Haber"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:213
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:264
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:286
-msgid "Assets: Inventory"
-msgstr "Activos: inventario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:213
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:286
-msgid "50"
-msgstr "50"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:287
-msgid "Assets: Deferred Tax Assets"
-msgstr "Activos: impuesto diferido de activos"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:214
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:287
-msgid "4.68"
-msgstr "4.68"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:215
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:288
-msgid "Liabilities: Accounts Payable"
-msgstr "Pasivo: cuentas por pagar"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:215
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:288
-msgid "54.68"
-msgstr "54.68"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:220
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:238
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:294
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:313
-msgid "Configuration:"
-msgstr "Configuración:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:219
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:292
-msgid ""
-"Purchased Goods: defined on the product or on the internal category of "
-"related product (Expense Account field)"
-msgstr ""
-"Bienes adquiridos: se define en el producto o en la categoría interna del "
-"producto relacionado (campo de cuenta de gastos)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:220
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:294
-msgid ""
-"Deferred Tax Assets: defined on the tax used on the purchase order line"
-msgstr ""
-"Activos por impuestos diferidos: se define en el impuesto que se usa en la "
-"línea de la orden de compra"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:221
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:295
-msgid "Accounts Payable: defined on the vendor related to the bill"
-msgstr ""
-"Cuentas por pagar: se define en el proveedor relacionado con la factura"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:222
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:296
-msgid "Goods Receptions"
-msgstr "Recepciones de bienes"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:223
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:243
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:245
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:297
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:318
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:320
-msgid "No Journal Entry"
-msgstr "Sin asiento contable"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:240
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:315
-msgid "Customer Invoice"
-msgstr "Factura de cliente"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:230
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:304
-msgid "Revenues: Sold Goods"
-msgstr "Ingresos: bienes vendidos"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:230
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:304
-msgid "100"
-msgstr "100"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:231
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:305
-msgid "Liabilities: Deferred Tax Liabilities"
-msgstr "Pasivos: pasivos por impuestos diferidos"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:231
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:305
-msgid "9"
-msgstr "9"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:306
-msgid "Assets: Accounts Receivable"
-msgstr "Activos: cuentas por cobrar"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:232
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:306
-msgid "109"
-msgstr "109"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:236
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:310
-msgid ""
-"Revenues: defined on the product or on the internal category of related "
-"product (Income Account field)"
-msgstr ""
-"Ingresos: se definen en el producto o en la categoría interna del producto "
-"relacionado (campo de cuenta de ingresos)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:237
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:312
-msgid "Deferred Tax Liabilities: defined on the tax used on the invoice line"
-msgstr ""
-"Pasivos por impuesto diferido: se definen en el impuesto que se utiliza en "
-"la línea de la factura"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:238
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:313
-msgid "Accounts Receivable: defined on the customer (Receivable Account)"
-msgstr ""
-"Cuentas por cobrar: se definen en el cliente (Cuenta de cuentas por cobrar)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:240
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:315
-msgid ""
-"The fiscal position used on the invoice may have a rule that replaces the "
-"Income Account or the tax defined on the product by another one."
-msgstr ""
-"La posición fiscal que se utiliza en la factura puede tener una regla que "
-"sustituye a la cuenta de ingresos o el impuesto definido en el producto por "
-"otro."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:242
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:317
-msgid "Customer Shipping"
-msgstr "Envío al cliente "
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:245
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:320
-msgid "Manufacturing Orders"
-msgstr "Órdenes de fabricación"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:251
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:326
-msgid ""
-"At the end of the month/year, your company does a physical inventory or just"
-" relies on the inventory in Odoo to value the stock into your books."
-msgstr ""
-"Al final del mes/año, su empresa realiza un inventario físico o solo confía "
-"en el inventario en Odoo para valorizar las existencias en los libros "
-"contables."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:254
-msgid ""
-"Create a journal entry to move the stock variation value from your "
-"Profit&Loss section to your assets."
-msgstr ""
-"Cree un asiento contable para trasladar el valor de la variación de "
-"existencias de su sección de estado de resultados a sus activos."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:264
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:265
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:343
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:344
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:345
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:346
-msgid "X"
-msgstr "X"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:265
-msgid "Expenses: Inventory Variations"
-msgstr "Gastos: variaciones de inventario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:268
-msgid ""
-"If the stock value decreased, the **Inventory** account is credited and the "
-"**Inventory Variations** debited."
-msgstr ""
-"Si el valor de las existencias disminuye, la cuenta de **Inventario** va a "
-"crédito y  las **variaciones de inventario** a débito."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:276
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:389
-msgid "Anglo-Saxon Accounting"
-msgstr "Contabilidad anglosajona"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:329
-msgid ""
-"Then you need to break down the purchase balance into both the inventory and"
-" the cost of goods sold using the following formula:"
-msgstr ""
-"Luego debe desglosar el balance de compra entre ambos, el inventario y el "
-"costo de mercancías vendidas usando la siguiente fórmula:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:332
-msgid ""
-"Cost of goods sold (COGS) = Starting inventory value + Purchases – Closing "
-"inventory value"
-msgstr ""
-"Costo de bienes vendidos (COGS) = Valor del inventario inicial + Compras - "
-"Valor del inventario de cierre"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:334
-msgid "To update the stock valuation in your books, record such an entry:"
-msgstr ""
-"Para actualizar la valoración del inventario en sus libros, registre tal "
-"entrada:"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:343
-msgid "Assets: Inventory (closing value)"
-msgstr "Activos: inventario (valor de cierre)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:344
-msgid "Expenses: Cost of Good Sold"
-msgstr "Gastos: costo de bienes vendidos"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:345
-msgid "Expenses: Purchased Goods"
-msgstr "Gastos: bienes comprados"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:346
-msgid "Assets: Inventory (starting value)"
-msgstr "Activos: inventario (valor inicial)"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:350
-msgid "Automated Inventory Valuation"
-msgstr "Valoración automatizada de inventario"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:352
-msgid ""
-"In that case, when a product enters or leaves your stock, an accounting "
-"entry will be automatically created. This means your accounting books are "
-"always up-to-date. This mode is dedicated to expert accountants and advanced"
-" users only. As opposed to periodic valuation, it requires some extra "
-"configuration & testing."
-msgstr ""
-"En ese caso, cuando un producto entra o deja las existencias, se crea un "
-"asiento contable de forma automática. Esto significa que sus libros "
-"contables siempre están actualizados. Este modo solo es para contadores "
-"expertos y usuarios avanzados. A diferencia de la valoración periódica, "
-"requiere algo de configuración adicional y pruebas."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:358
-msgid ""
-"First, you need to define the accounts that will be used for those "
-"accounting entries. This is done on the product category."
-msgstr ""
-"Primero, debe definir las cuentas que se utilizarán para esos asientos "
-"contables. Esto se hace en la categoría del producto."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:374
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:401
-msgid "**Configuration:**"
-msgstr "**Configuración:**"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:376
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:403
-msgid "Accounts Receivable/Payable: defined on the partner (Accounting tab)"
-msgstr ""
-"Cuentas por cobrar/por pagar: se definen en el partner (pestaña de "
-"Contabilidad)."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:378
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:405
-msgid ""
-"Deferred Tax Assets/Liabilities: defined on the tax used on the invoice line"
-msgstr ""
-"Activos/pasivos por impuestos diferidos: se definen en el impuesto que se "
-"utiliza en la línea de la factura."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:380
-msgid ""
-"Revenues/Expenses: defined by default on product's internal category; can be"
-" also set in product form (Accounting tab) as a replacement value."
-msgstr ""
-"Ingresos/gastos: se definen de forma predeterminada en la categoría interna "
-"de los productos. También se pueden establecer en el formulario del producto"
-" (pestaña de Contabilidad) como un valor específico de reemplazo."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:383
-msgid ""
-"Inventory Variations: to set as Stock Input/Output Account in product's "
-"internal category"
-msgstr ""
-"Variaciones de inventario: para configurar la cuenta de entrada/salida de "
-"inventario en la categoría interna del producto"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:386
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:421
-msgid ""
-"Inventory: to set as Stock Valuation Account in product's internal category"
-msgstr ""
-"Inventario: para configurar la cuenta de valoración de inventario en la "
-"categoría interna del producto"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:408
-msgid ""
-"Revenues: defined on the product category as a default, or specifically to a"
-" specific product."
-msgstr ""
-"Ingresos: se definen en la categoría del producto como un valor "
-"predeterminado, o específicamente a un producto específico."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:411
-msgid ""
-"Expenses: this is where you should set the \"Cost of Goods Sold\" account. "
-"Defined on the product category as a default value, or specifically on the "
-"product form."
-msgstr ""
-"Gastos: aquí es donde debe configurar la cuenta \"Costo de los bienes "
-"vendidos\". Se definen en la categoría del producto como un valor "
-"predeterminado, o específicamente en el formulario del producto."
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:415
-msgid ""
-"Goods Received Not Purchased: to set as Stock Input Account in product's "
-"internal category"
-msgstr ""
-"Bienes recibidos, no comprados: para configurar la Cuenta de entrada de "
-"existencias en la categoría interna del producto"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:418
-msgid ""
-"Goods Issued Not Invoiced: to set as Stock Output Account in product's "
-"internal category"
-msgstr ""
-"Bienes expedidos, no facturados: para configurar la Cuenta de salida de "
-"existencias en la categoría interna del producto"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:423
-msgid ""
-"Price Difference: to set in product's internal category or in product form "
-"as a specific replacement value"
-msgstr ""
-"Diferencia de precio: establecer en la categoría interna del producto o en "
-"el formulario del producto como un valor específico de reemplazo"
-
-#: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:3
-msgid "Using the inventory valuation"
-msgstr "Usar la valoración de inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:9
 msgid ""
@@ -5981,18 +5529,14 @@ msgstr ""
 "simplemente se descargan en un área de *Cross-Dock* con el fin de "
 "reorganizar productos y cargar otro camión."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:11
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:13
 msgid ""
 "For more information on how to organize your warehouse, read our blog: `What"
 " is cross-docking and is it for me? <https://www.odoo.com/blog/business-"
-"hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`__"
+"hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_"
 msgstr ""
-"Para obtener más información sobre cómo organizar su almacén, consulte "
-"nuestro blog: `Qué es cross-docking y es lo que necesita? "
-"<https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-"
-"is-it-for-me-270>`__"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:20
 msgid ""
 "In the *Inventory* app, open :menuselection:`Configuration --> Settings` and"
 " activate the *Multi-Step Routes*."
@@ -6000,12 +5544,12 @@ msgstr ""
 "En la aplicación *Inventario*, vaya a :menuselection:`Configuración --> "
 "Ajustes` y active las *rutas multietapa*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:22
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:27
 msgid "Doing so will also enable the *Storage Locations* feature."
 msgstr ""
 "Hacer esto habilitará también la función *Ubicaciones de almacenamiento*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:29
 msgid ""
 "Now, both *Incoming* and *Outgoing* shipments should be configured to work "
 "with 2 steps. To adapt the configuration, go to :menuselection:`Inventory "
@@ -6016,7 +5560,7 @@ msgstr ""
 ":menuselection:`Inventario --> Configuración --> Almacenes` y edite su "
 "almacén."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:36
 msgid ""
 "This modification will lead to the creation of a *Cross-Docking* route that "
 "can be found in :menuselection:`Inventory --> Configuration --> Routes`."
@@ -6025,11 +5569,11 @@ msgstr ""
 "que puede encontrar en :menuselection:`Inventario --> Configuración --> "
 "Rutas`."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:43
 msgid "Configure products with Cross-Dock Route"
 msgstr "Configurar productos con ruta de cross-dock"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:40
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:45
 msgid ""
 "Create the product that uses the *Cross-Dock Route* and then, in the "
 "inventory tab, select the routes *Buy* and *Cross-Dock*. Now, in the "
@@ -6041,7 +5585,7 @@ msgstr ""
 "compra especifique el proveedor de quien compra el producto y establezca su "
 "precio."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:48
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:55
 msgid ""
 "Once done, create a sale order for the product and confirm it. Odoo will "
 "automatically create two transfers which will be linked to the sale order. "
@@ -6059,7 +5603,7 @@ msgstr ""
 "salida* a la *ubicación de cliente*. Ambos están en el estado *En espera de "
 "otra operación* porque aún debemos ordenar el producto de nuestro proveedor."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:56
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:68
 msgid ""
 "Now, go to the *Purchase* app. There, you will find the purchase order that "
 "has been automatically triggered by the system. Validate it and receive the "
@@ -6069,7 +5613,7 @@ msgstr ""
 "el sistema activó de forma automática. Valídela y reciba los productos en la"
 " *ubicación de entrada*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:64
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:77
 msgid ""
 "When the products have been received from the supplier, you can go back to "
 "your initial sale order and validate the internal transfer from *Input* to "
@@ -6079,7 +5623,7 @@ msgstr ""
 "orden de venta inicial y validar el traslado interno de *entrada* a "
 "*salida*."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:72
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:86
 msgid ""
 "The delivery order is now ready to be processed and can be validated too."
 msgstr ""
@@ -6218,37 +5762,27 @@ msgstr "Tomar existencias de diferentes almacenes"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:5
 msgid ""
-"When you plan to deliver a customer, you don’t know in advance if the "
+"When you plan to deliver a customer, you don't know in advance if the "
 "products will come from Warehouse A or Warehouse B. You may, in some cases, "
 "need to take stock from different warehouses. With *Odoo*, you can configure"
 " this by using the concept of virtual warehouses. Let us show you how to set"
 " those virtual warehouses."
 msgstr ""
-"Cuando planea realizar una entrega a un cliente, no sabe si los productos "
-"vendrán del Almacén A o del Almacén B. En algunos casos puede llegar a "
-"necesitar tomar existencias de diferentes almacenes. Con *Odoo*, puede "
-"configurar esto al usar el concepto de almacenes virtuales. Le mostraremos "
-"cómo establecerlos."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:8
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:11
 msgid "Set up virtual warehouses"
 msgstr "Configurar almacenes virtuales"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:13
 msgid ""
-"Let’s say you have two warehouses: Warehouse A and Warehouse B. Create a new"
+"Let's say you have two warehouses: Warehouse A and Warehouse B. Create a new"
 " warehouse, that will be a virtual one. It will allow you to take the stock "
 "from A or B. To do so, go to your inventory app settings and enable the "
 "multi-warehouses feature. Then, go to the warehouses menu and click on "
 "create."
 msgstr ""
-"Digamos que tiene dos almacenes: Almacén A y Almacén B. Cree un nuevo "
-"almacén, este será el virtual. Le permitirá tomar existencias de A o B. Para"
-" hacerlo, vaya a los ajustes de la aplicación Inventario y habilite la "
-"función de múltiples almacenes. Luego, vaya al menú de almacenes y haga clic"
-" en crear."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:16
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:22
 msgid ""
 "The *Storage Location* feature will be automatically enabled. Good news, "
 "because you will need it later in the process."
@@ -6256,7 +5790,7 @@ msgstr ""
 "La función de *Ubicación de almacenamiento* se habilitará automáticamente. "
 "Esto es bueno porque lo necesitará más tarde."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:18
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:25
 msgid ""
 "Now, you have to make sure that the main stock locations of warehouse A and "
 "warehouse B are children locations of the main stock location of warehouse A"
@@ -6270,22 +5804,26 @@ msgstr ""
 "principal de sus dos almacenes. Luego, cambie su ubicación principal a la "
 "ubicación principal del almacén A+B."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:24
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:34
 msgid "Sell a product from the virtual warehouse"
 msgstr "Vender un producto del almacén virtual"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:36
 msgid ""
-"Let’s say you have two products, one stored in warehouse A and one stored in"
+"Let's say you have two products, one stored in warehouse A and one stored in"
 " warehouse B. Now, you can create a new quotation for one of each product. "
 "Go to other information and choose Warehouse A+B in the shipping "
 "information."
 msgstr ""
-"Digamos que tiene dos productos, uno almacenado en el almacén A y otro en el"
-" almacén B. Puede crear una nueva cotización para cada producto. Vaya a otra"
-" información y elija Almacén A+B en la información de envío."
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:31
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:41
+msgid ""
+"You might find it handy to set the Warehouse A+B as the default warehouse "
+"for each sales person. This way each sale will use the Warehouse A+B as the "
+"default warehouse option."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/stock_warehouses.rst:47
 msgid ""
 "Once you have done it, you can convert it to a sales order. Then, a delivery"
 " order will be automatically generated, with a product reserved in warehouse"
@@ -6898,10 +6436,14 @@ msgid "Putaway & Removal Strategies"
 msgstr "Estrategias de remoción y almacenamiento"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:3
+msgid "Putaway rules"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:6
 msgid "What is a Putaway Rule?"
 msgstr "¿Qué es una regla de almacenamiento?"
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:5
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:8
 msgid ""
 "A good warehouse implementation makes sure that products automatically move "
 "to their appropriate destination location. To make that process easier, Odoo"
@@ -6909,7 +6451,7 @@ msgid ""
 "received shipments and putting them into the appropriate location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:10
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:13
 msgid ""
 "If, for example, a warehouse contains volatile substances, it is important "
 "to make sure that certain products are not stored close to each other "
@@ -6917,7 +6459,7 @@ msgid ""
 "intervene, to avoid storing products wrongly."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:17
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:20
 msgid ""
 "In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> "
 "Settings` and activate the :guilabel:`Multi-Step Routes` feature. By doing "
@@ -6929,11 +6471,11 @@ msgstr ""
 msgid "Activate Multi-Step Routes in Inventory configuration settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:26
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:29
 msgid "Setting up a putaway rule"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:28
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:31
 msgid ""
 "In some cases, like for a retail shop storing fruits and vegetables, "
 "products should be stored in different locations depending on several "
@@ -6941,45 +6483,45 @@ msgid ""
 "and so on."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:32
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:35
 msgid ""
 "In this example, suppose there is one warehouse location, **WH/Stock**, with"
 " the following sub-locations:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:35
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:38
 msgid "WH/Stock/Pallets"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:37
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:40
 msgid "WH/Stock/Pallets/PAL1"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:38
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:41
 msgid "WH/Stock/Pallets/PAL2"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:39
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:42
 msgid "WH/Stock/Pallets/PAL3"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:41
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:44
 msgid "WH/Stock/Shelf 1"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:43
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:46
 msgid "WH/Stock/Shelf 2"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:45
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:48
 msgid "WH/Stock/Shelf 2/Small Refrigerator"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:47
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:50
 msgid "WH/Stock/Shelf 3"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:49
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:52
 msgid ""
 "Manage those locations with putaway rules. To create a putaway rule, open "
 "the :guilabel:`Inventory` app and go to :menuselection:`Configuration --> "
@@ -6988,36 +6530,36 @@ msgid ""
 "redirected to the right storage location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:55
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:58
 msgid ""
 "The putaway rules can be defined either per product/product category and/or "
 "package type (the :guilabel:`Packages` setting must be enabled for that). "
 "Putaway rules are read sequentially until a match is found."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:59
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:62
 msgid "Take the following example:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:61
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:64
 msgid ""
 "If water (category All/drinks) is received, whatever the package, it will be"
 " redirected to WH/Stock/Shelf 2/Small Refrigerator."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:63
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:66
 msgid ""
 "If orange juice cans, packaged in boxes, are received, they will be "
 "redirected to WH/Stock/Shelf 2."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:65
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:68
 msgid ""
 "If water or apple juice bottles, packaged in boxes, are received, they will "
 "be redirected to WH/Stock/Shelf 3."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:67
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:70
 msgid ""
 "If a pallet of lemonade cans are receieved, it will be redirected to "
 "WH/Stock/Pallets/PAL1."
@@ -7027,18 +6569,18 @@ msgstr ""
 msgid "Some examples of putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:75
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:77
 msgid "Using Storage Categories"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:77
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:79
 msgid ""
 "A *Storage Category* is an extra location attribute. Storage categories "
 "allow the user to define the quantity of products that can be stored in the "
 "location and how the location will be selected with putaway rules."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:84
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:86
 msgid ""
 "In the :guilabel:`Inventory` app, go to :menuselection:`Configuration --> "
 "Settings` and activate the :guilabel:`Storage Categories` feature. By doing "
@@ -7046,11 +6588,11 @@ msgid ""
 "activated."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:89
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:91
 msgid "Create a Storage Category"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:91
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:93
 msgid ""
 "To create a storage category, go to :menuselection:`Inventory --> "
 "Configuration --> Storage Categories` and click :guilabel:`Create`. Then, "
@@ -7064,37 +6606,37 @@ msgid ""
 "Create Storage Categories inside Odoo Inventory configuration settings."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:100
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:102
 msgid ""
 "First, click :guilabel:`Create` and type a name for the storage category."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:102
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:104
 msgid ""
 "Then, there are options to limit the capacity by weight, by product, or by "
 "package type. The :guilabel:`Allow New Product` field defines when the "
 "location is considered available to store a product:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:106
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:108
 msgid ""
 ":guilabel:`If location is empty`: a product can be added there only if the "
 "location is empty."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:107
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:109
 msgid ""
 ":guilabel:`If products are the same`: a product can be added there only if "
 "the same product is already there."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:109
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:111
 msgid ""
 ":guilabel:`Allow mixed products`: several different products can be stored "
 "in this location at the same time."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:112
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:114
 msgid ""
 "Once the storage category settings are saved, the storage category can be "
 "linked to a location."
@@ -7106,32 +6648,32 @@ msgid ""
 "location."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:119
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:121
 msgid "Storage categories in putaway rules"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:121
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:123
 msgid ""
 "To continue the example from above, apply the \"High Frequency Pallets\" on "
 "the PAL1 and PAL2 locations and rework the putaway rules as follows:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:124
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
 msgid "Assume one pallet of lemonade cans is received:"
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:126
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:128
 msgid ""
 "If PAL1 and PAL2 are empty, the pallet will be redirected to "
 "WH/Stock/Pallets/PAL1."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:127
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:129
 msgid ""
 "If PAL1 is full, the pallet will be redirected to WH/Stock/Pallets/PAL2."
 msgstr ""
 
-#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:128
+#: ../../content/applications/inventory_and_mrp/inventory/routes/strategies/putaway.rst:130
 msgid ""
 "If PAL1 and 2 are full, the pallet will be redirected to WH/Stock/Pallets."
 msgstr ""
@@ -7825,6 +7367,7 @@ msgid ":doc:`labels`"
 msgstr ":doc:`labels`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:3
+#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:85
 msgid "How to print shipping labels?"
 msgstr "¿Cómo imprimir etiquetas de envío?"
 
@@ -7974,10 +7517,6 @@ msgid ""
 msgstr ""
 "El peso en el formulario del producto es expresado en kilogramos. No olvide "
 "hacer la conversión si esta acostumbrado al sistema de medida imperial."
-
-#: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:85
-msgid "How to print shipping labels ?"
-msgstr "¿Cómo imprimir etiquetas de envío?"
 
 #: ../../content/applications/inventory_and_mrp/inventory/shipping/operation/labels.rst:87
 msgid ""
@@ -8669,17 +8208,11 @@ msgstr "Fabricación"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:10
 msgid ""
-"**Odoo Manufacturing** helps you schedule, plan and process manufacturing "
-"orders. With the work center control panel, put tablets on the shop floor to"
-" control all your work orders in real-time and allow workers to trigger "
-"maintenance operations, feedback loops, quality issues, etc."
+"**Odoo Manufacturing** helps manufacturers schedule, plan and process "
+"manufacturing orders. With the work center control panel, put tablets on the"
+" shop floor to control work orders in real-time and allow workers to trigger"
+" maintenance operations, feedback loops, quality issues, etc."
 msgstr ""
-"La aplicación de **fabricación de Odoo** le ayuda a programar, planificar y "
-"procesar las órdenes de fabricación. Coloque tabletas en el taller para "
-"controlar todas las órdenes de trabajo en tiempo real mediante el panel de "
-"control del centro de trabajo y permita que los trabajadores activen las "
-"operaciones de mantenimiento, circuitos de retroalimentación, problemas de "
-"calidad, etc."
 
 #: ../../content/applications/inventory_and_mrp/manufacturing.rst:15
 msgid "`Odoo Tutorials: MRP <https://www.odoo.com/slides/mrp-29>`_"
@@ -8690,8 +8223,8 @@ msgid ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
 msgstr ":doc:`IoT Boxes (MES) </applications/productivity/iot>`"
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management.rst:5
-msgid "Manufacturing Management"
-msgstr "Gestión de la fabricación"
+msgid "Manufacturing management"
+msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/manufacturing/management/alternative_wc.rst:3
 msgid "Alternative Work Centers"
@@ -9788,6 +9321,473 @@ msgstr ""
 "Puede eliminar un elemento del PMP al hacer clic en el icono de bote de "
 "basura ubicado a la derecha del producto."
 
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:3
+msgid "Manage work orders using work centers"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:5
+msgid ""
+"Odoo Manufacturing allows for work orders to be carried out at specific work"
+" centers. When a manufacturing order is created for a product, any work "
+"orders listed in the :guilabel:`Operations` tab of the product bill of "
+"materials (BoM) will be automatically created as well and assigned to the "
+"specified work center. Work orders can be managed in the "
+":guilabel:`Manufacturing` module by selecting :menuselection:`Operations -->"
+" Work Orders`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:11
+msgid ""
+"In order to use work centers, the :guilabel:`Work Orders` feature must first"
+" be enabled. To do so, go to the :guilabel:`Manufacturing` module, select "
+":menuselection:`Configuration --> Settings`, and activate the checkbox next "
+"to :guilabel:`Work Orders`. Work centers can then be created and managed by "
+"selecting :menuselection:`Configuration --> Work Centers`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:17
+msgid "Create a work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:19
+msgid ""
+"Within the :guilabel:`Manufacturing` module, select "
+":menuselection:`Configuration --> Work Centers --> Create`. The work center "
+"form can then be filled out as follows:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:22
+msgid ""
+":guilabel:`Work Center Name`: give the work center a concise name that "
+"describes the type of operations it will be used for"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:24
+msgid ""
+":guilabel:`Alternative Workcenters`: specify an alternative work center for "
+"operations to be carried out at if the main work center is not available"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:26
+msgid ":guilabel:`Code`: assign the work center a reference code"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:27
+msgid ""
+":guilabel:`Working Hours`: define the number of hours that the work center "
+"can be in use each week"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:28
+msgid ""
+":guilabel:`Company`: select the company that the work center belongs to"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid "An example of a fully configured work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:35
+msgid "Set standards for work center productivity"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:37
+msgid ""
+"The :guilabel:`General Information` tab on the work center form allows for "
+"productivity goals to be assigned to a work center:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:40
+msgid ""
+":guilabel:`Time Efficiency`: used to calculate the expected duration of a "
+"work order at the work center; for example, if a work order normally takes "
+"one hour and the efficiency is set to 200%, the work order will take 30 "
+"minutes"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:43
+msgid ""
+":guilabel:`Capacity`: the number of operations that can be performed at the "
+"work center simultaneously"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:45
+msgid ":guilabel:`OEE Target`: the target for efficiency at the work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:46
+msgid ""
+":guilabel:`Time before prod.`: setup time required before work can commence"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:47
+msgid ""
+":guilabel:`Time after prod.`: breakdown or cleanup time required after work "
+"is finished"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:48
+msgid ""
+":guilabel:`Cost per hour`: the cost of operating the work center for one "
+"hour"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:49
+msgid ""
+":guilabel:`Analytic Account`: the account where the cost of the work center "
+"should be recorded"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid "The general information tab of the work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:56
+msgid "Assign equipment to a work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:58
+msgid ""
+"Using the :guilabel:`Equipment` tab, it is possible for specific pieces of "
+"equipment to be assigned to a work center. The following information will be"
+" displayed for each piece of equipment added:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:61
+msgid ":guilabel:`Equipment Name`: the name of the piece of equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:62
+msgid ""
+":guilabel:`Technician`: the technician responsible for servicing the "
+"equipment"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:63
+msgid ":guilabel:`Equipment Category`: the category the equipment belongs to"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:64
+msgid ""
+":guilabel:`MTBF`: mean time between failures; the average time that the "
+"piece of equipment will operate before failing"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:66
+msgid ""
+":guilabel:`MTTR`: mean time to recovery; the average time it takes for the "
+"equipment to become fully operational again"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:68
+msgid ""
+":guilabel:`Est. Next Failure`: an estimate of when the next equipment "
+"failure will occur"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid "The equipment tab of the work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:75
+msgid ""
+":guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are "
+"all calculated automatically based on past failure data, if any exists."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:79
+msgid "Integrate IoT devices"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:81
+msgid ""
+"The :guilabel:`IoT Triggers` tab enables the integration of :abbr:`IoT "
+"(Internet of Things)` devices with a work center:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:84
+msgid ":guilabel:`Device`: specifies the IoT device to be triggered"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:85
+msgid ":guilabel:`Key`: the security key for the device"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:86
+msgid ":guilabel:`Action`: the IoT device action triggered"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid "The IoT Triggers tab of the work center form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:93
+msgid "Use case: configure an alternative work center"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:95
+msgid ""
+"When a work center is at capacity, it cannot accept any new work orders. "
+"Instead of waiting for the work center to become available, it is possible "
+"to specify an alternative work center where surplus work orders should be "
+"carried out."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:99
+msgid ""
+"Begin by creating a new work center. Configure the :guilabel:`Equipment` tab"
+" so that it has all of the same equipment as the main work center. This will"
+" ensure that the same tasks can be carried out at both work centers. "
+"Navigate to the main work center and include the new work center in the "
+":guilabel:`Alternative Workcenters` selection field."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:104
+msgid ""
+"Now, create a new manufacturing order that uses the main work center for one"
+" of its operations. The main work center will automatically be selected for "
+"the operation in the :guilabel:`Work Orders` tab. After confirming the "
+"manufacturing order, click the :guilabel:`Plan` button that appears at the "
+"top left of the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid ""
+"Click the plan button to automatically select an available work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:113
+msgid ""
+"If the main work center is at capacity, the work center selected for the "
+"operation will be automatically changed to the alternative work center."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rstNone
+msgid "The alternative work center is automatically selected."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:121
+msgid "Monitor work center performance"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:123
+msgid ""
+"Performance for an individual work center can be viewed by selecting "
+":menuselection:`Configuration --> Work Centers`, and clicking on a work "
+"center. A variety of metrics showing work center performance can be viewed "
+"at the top right of the form:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:127
+msgid ""
+":guilabel:`OEE`: overall effective efficiency, the percentage of time that "
+"the work center has been fully productive"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:129
+msgid ":guilabel:`Lost`: the amount of time lost due to work stoppages"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:130
+msgid ""
+":guilabel:`Load`: the amount of time it will take to complete the current "
+"workload"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/management/using_work_centers.rst:131
+msgid ""
+":guilabel:`Performance`: the real duration of work time, shown as a "
+"percentage of the expected duration"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control.rst:5
+msgid "Quality control"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:3
+msgid "Add quality controls"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:5
+msgid ""
+"Use **Odoo Quality** to control the quality of products before they are "
+"registered into stock, during picking operations, and when leaving the "
+"warehouse for a delivery order. By creating *quality control points*, "
+"manufacturers can set up quality checks that automatically trigger at "
+"specific points during production."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:11
+msgid "Configure quality control points"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:13
+msgid ""
+"To create a new quality control point, go to :menuselection:`Quality Control"
+" --> Control Points --> Create`. Then, fill in the following form fields, "
+"accordingly:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:16
+msgid ""
+":guilabel:`Title`: give the quality control point a simple, but informative "
+"title so production floor and quality check teams can understand it easily"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:18
+msgid ""
+":guilabel:`Products`: indicate which product(s) should pass through the "
+"specific quality control point"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:20
+msgid ""
+":guilabel:`Operations`: determine which operations team(s) should perform "
+"the quality control check (e.g., `Manufacturing`, `Receipts`, `Delivery "
+"Orders`, etc.)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:22
+msgid ""
+":guilabel:`Work Order Operation`: for manufacturing operations, use the "
+"drop-down menu to indicate which type of work order the quality control "
+"point applies to: :guilabel:`Manual Assembly`, :guilabel:`Packing`, "
+":guilabel:`Assembly`, :guilabel:`Testing` or :guilabel:`Long time assembly`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:26
+msgid ""
+":guilabel:`Company`: add the company that will implement the quality control"
+" point. Usually this will be the company that owns the Odoo database. "
+"However, a multi-company or vendor profile can be selected, as well, for "
+"cases where there are multiple manufacturing or engineering locations"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:29
+msgid ""
+":guilabel:`Control Type`: using the drop-down menu, choose from "
+":guilabel:`All Operations`, :guilabel:`Randomly` or :guilabel:`Periodically`"
+" to determine how often the control point should executed"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:32
+msgid ""
+":guilabel:`Type`: using the drop-down menu, choose the control point type: "
+":guilabel:`Instructions`, :guilabel:`Take a Picture`, :guilabel:`Pass - "
+"Fail`, or :guilabel:`Measure`"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:35
+msgid ""
+":guilabel:`Team`: decide which quality team should receive the results of "
+"the quality control point check"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:37
+msgid ""
+":guilabel:`Responsible`: add a point person to manage the status and "
+"evolution of the quality control point over time"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:40
+msgid ""
+"The tabs at the bottom of the form can be used to provide additional "
+"information to quality teams:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:42
+msgid ":guilabel:`Instructions`: describe the quality check to be performed"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:43
+msgid ""
+":guilabel:`Message If Failure`: detail what should be done if the check "
+"fails"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:44
+msgid ":guilabel:`Notes`: use to include any additional information"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rstNone
+msgid ""
+"An example of a completed quality control point form for a Pass-Fail test."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:50
+msgid ""
+"Once a control point has been configured, a quality check will be "
+"automatically created and assigned when the specified operation or work "
+"order has been reached. Quality checks can be managed by selecting "
+":menuselection:`Quality Control --> Quality Checks`."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:55
+msgid ""
+"To see all of the quality checks created by a control point, go to "
+":menuselection:`Quality Control --> Control Points`, select a control point,"
+" and click :guilabel:`Quality Checks` in the top right corner."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:60
+msgid "Use case: configure a measure quality check"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:62
+msgid ""
+"To ensure that a product meets specific measurement requirements, select "
+":guilabel:`Measure` from the :guilabel:`Type` drop-down menu. Selecting the "
+":guilabel:`Measure` quality check type reveals three new fields: "
+":guilabel:`Device`, :guilabel:`Norm`, and :guilabel:`Tolerance`. These "
+"fields can be configured so that only products within a certain tolerance "
+"will pass the check:"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:67
+msgid ""
+":guilabel:`Device`: select the measuring device that should be used to take "
+"the measurement (e.g., measuring tape)."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:69
+msgid ""
+":guilabel:`Norm`: specify the desired measurement that the product should "
+"conform to and the unit of measurement that should be used"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:71
+msgid ""
+":guilabel:`Tolerance`: select the range that a measurement can be within "
+"while still passing the check (e.g., :guilabel:`from` 59.5 mm :guilabel:`to`"
+" 60.5 mm)"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rstNone
+msgid ""
+"An example of a quality control point form configured for a measure quality "
+"check."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:78
+msgid ""
+"When the quality control points form is complete, click :guilabel:`Save`. "
+"Now, this measurement-based test will trigger for products that were "
+"specified on the form."
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/manufacturing/quality_control/quality_control_points.rst:81
+msgid ""
+"When production of the specified product reaches the operation that requires"
+" a measure quality check, the manufacturing employee responsible will be "
+"prompted to record and validate the measured value in the tablet view. For "
+"products that measure within the values indicated in the "
+":guilabel:`Tolerance` fields, the test will pass. However, for products that"
+" measure outside of those values, the test will fail. In that case, the "
+"worker who performed the check would create a quality alert from the tablet "
+"view. That quality alert can then be addressed by the quality management "
+"team."
+msgstr ""
+
 #: ../../content/applications/inventory_and_mrp/purchase.rst:8
 msgid "Purchase"
 msgstr "Compra"
@@ -10659,6 +10659,444 @@ msgid ""
 msgstr ""
 "Odoo establece automáticamente el estado *Se debe pagar*. Sin embargo, puede"
 " cambiarlo de forma manual desde el modo de edición de la factura."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:3
+msgid "Manage vendor bills"
+msgstr ""
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:5
+msgid ""
+"The **Purchase** application allows you to manage your purchase orders, "
+"incoming products, and vendor bills all seamlessly in one place."
+msgstr ""
+"La aplicación de **Compras** permite que usted maneje las órdenes de "
+"compras, los productos entrantes y las facturas de los proveedores, todo en "
+"un mismo lugar. "
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:8
+msgid ""
+"If you want to set up a vendor bill control process, the first thing you "
+"need to do is to have purchase data in Odoo. Knowing what has been purchased"
+" and received is the first step towards understanding your purchase "
+"management processes."
+msgstr ""
+"Si desea establecer un proceso de control de factura de proveedor, el primer"
+" paso es tener los datos de compras en Odoo. Debe saber lo que se ha "
+"comprado y recibido para entender sus procesos de gestión de compras."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:13
+msgid "Here is the standard work flow in Odoo:"
+msgstr "Este es un flujo de trabajo normal en Odoo:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:15
+msgid ""
+"You begin with a **Request for Quotation (RFQ)** to send out to your "
+"vendor(s)."
+msgstr ""
+"Empezará con las **solicitudes de cotización** que se enviarán a sus "
+"proveedores."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:18
+msgid ""
+"Once the vendor has accepted the RFQ, confirm the RFQ into a **Purchase "
+"Order (PO)**."
+msgstr ""
+"Una vez que el proveedor haya aceptado la solicitud de cotización, es "
+"necesario confirmarla para convertirla en **orden de compra**."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:21
+msgid ""
+"Confirming the PO generates an **Incoming Shipment** if you purchased any "
+"stockable products."
+msgstr ""
+"Al confirmar la orden de compra se generará un **envío entrante**, en caso "
+"de adquirir cualquiera de los productos almacenables."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:24
+msgid ""
+"Upon receiving a **Vendor Bill** from your Vendor, validate the bill with "
+"products received in the previous step to ensure accuracy."
+msgstr ""
+"Al recibir una **factura de proveedor** de su proveedor, debe validar la "
+"cuenta con los productos recibidos en el paso anterior para asegurar la "
+"precisión."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:27
+msgid ""
+"This process may be done by three different people within the company, or "
+"only one."
+msgstr ""
+"Este proceso lo pueden hacer tres personas diferentes de una misma empresa o"
+" solo una."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:34
+msgid "Installing the Purchase and Inventory applications"
+msgstr "Instalar las aplicaciones Compra e Inventario"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:36
+msgid ""
+"From the **Apps** application, search for the **Purchase** module and "
+"install it. Due to certain dependencies, installing Purchase will "
+"automatically install the **Inventory** and **Accounting** applications."
+msgstr ""
+"Desde la aplicación de **Aplicaciones**, busque el módulo **Compra** y haga "
+"clic en instalar. Debido a ciertas dependencias, al instalar Compra, también"
+" se instalarán las aplicaciones de **Inventario** y **Contabilidad** de "
+"manera automática."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:41
+msgid "Creating products"
+msgstr "Creando productos"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:43
+msgid ""
+"Creating products in Odoo is essential for quick and efficient purchasing "
+"within Odoo. Simply navigate to the Products submenu under Purchase and "
+"click create."
+msgstr ""
+"Crear productos en Odoo es esencial para realizar compras de manera rápida y"
+" eficiente. Simplemente vaya al submenú de productos, debajo de Compra, y "
+"haga clic en crear."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:50
+msgid ""
+"When creating the product, pay attention to the **Product Type** field, "
+"since it is important:"
+msgstr ""
+"Ponga atención al campo **tipo de producto** al crear el producto, ya que es"
+" muy importante:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:53
+msgid ""
+"Products that are set as **Stockable or Consumable** will allow you to keep "
+"track of their inventory levels. These options imply stock management and "
+"will allow for receiving these kinds of products."
+msgstr ""
+"Los productos que se configuran como **almacenable** o **consumible** le "
+"permitirán realizar un seguimiento de sus niveles de inventario. Estas "
+"opciones implican la gestión de existencias y permitirán la recepción de "
+"este tipo de productos."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:58
+msgid ""
+"Conversely, products that are set as a **Service or Digital Product** will "
+"not imply stock management, simply due to the fact that there is no "
+"inventory to manage. You will not be able to receive products under either "
+"of these designations."
+msgstr ""
+"Por el contrario, los productos que se configuran como **servicio** o "
+"**producto digital** no necesitarán de la gestión de almacén, simplemente "
+"por el hecho de que no existe un inventario que administrar. No podrá "
+"recibir productos en cualquiera de estas designaciones."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:64
+msgid ""
+"It is recommended that you create a **Miscellaneous** product for all "
+"purchases that occur infrequently and do not require inventory valuation or "
+"management. If you create such a product, it is recommended to set the "
+"product type to **Service**."
+msgstr ""
+"Se recomienda crear un producto **Varios** para todas las compras que se "
+"realicen con poca frecuencia y que no requieran valoración o gestión de "
+"inventario. Si crea un producto de este tipo, se recomienda establecer el "
+"tipo de producto como **Servicio**."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:69
+msgid "Managing your Vendor Bills"
+msgstr "Gestionar las facturas de proveedores"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:72
+msgid "Purchasing products or services"
+msgstr "Comprar productos o servicios"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:74
+msgid ""
+"From the purchase application, you can create a purchase order with as many "
+"products as you need. If the vendor sends you a confirmation or quotation "
+"for an order, you may record the order reference number in the **Vendor "
+"Reference** field. This will enable you to easily match the PO with the the "
+"vendor bill later (as the vendor bill will probably include the Vendor "
+"Reference)"
+msgstr ""
+"Desde la aplicación de Compra, puede crear una orden de compra con tantos "
+"productos como sean necesarios. Si el proveedor le envía una confirmación o "
+"una cotización de una orden, puede registrar el número de referencia de la "
+"orden en el campo de **referencia del proveedor**. Gracias a esto, la orden "
+"de compra coincidirá con la factura del proveedor en el futuro (ya que es "
+"probable que la factura de proveedor incluya la referencia del proveedor)"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:84
+msgid ""
+"Validate the purchase order and receive the products from the Inventory "
+"application."
+msgstr ""
+"Valide la orden de compra y reciba los productos desde la aplicación "
+"Inventario."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:88
+msgid "Receiving Products"
+msgstr "Recibiendo productos"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:90
+msgid ""
+"If you purchased any stockable products that you manage the inventory of, "
+"you will need to receive the products from the Inventory application after "
+"you confirm a purchase order. From the **Inventory dashboard**, you should "
+"see a button linking you directly to the transfer of products. This button "
+"is outlined in red below:"
+msgstr ""
+"Si compró algún producto almacenable del cual administra el inventario, "
+"deberá recibir los productos desde la aplicación de Inventario después de "
+"confirmar una orden de compra. En el **tablero de Inventario**, debería ver "
+"un botón que le lleva directamente al traslado de productos. A continuación "
+"se muestra este botón señalado en rojo:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:99
+msgid ""
+"Navigating this route will take you to a list of all orders waiting to be "
+"received."
+msgstr ""
+"Si sigue estos pasos llegará a una lista con todas las órdenes pendientes de"
+" recibir."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:105
+msgid ""
+"If you have a lot of awaiting orders, apply a filter using the search bar in"
+" the upper right. With this search bar, you may filter based on the vendor "
+"(partner), the product, or the source document (also known as the reference "
+"of your purchase order). You can also group the orders by different criteria"
+" under **Group By**. Selecting an item from this list will open the "
+"following screen where you then will receive the products."
+msgstr ""
+"Si cuenta con muchas órdenes pendientes, vaya a la barra de búsqueda en la "
+"esquina superior derecha para usar un filtro. Puede filtrar por proveedor "
+"(partner), producto, documento origen (referencia de la orden de compra). "
+"También puede agrupar las órdenes por diferentes parámetros con **Agrupar "
+"por**. Si selecciona un artículo de esta lista, se abrirá la siguiente "
+"pantalla en la cual recibirá los productos."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:116
+msgid "Purchasing service products does not trigger a delivery order."
+msgstr "Comprar productos de servicio no genera una orden de entrega."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:119
+msgid "Managing Vendor Bills"
+msgstr "Gestionar las facturas de proveedores"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:121
+msgid ""
+"When you receive a vendor bill for a previous purchase, be sure to record it"
+" in the Purchases application under the **Control Menu**. You need to create"
+" a new vendor bill even if you already registered a purchase order."
+msgstr ""
+"Cuando reciba una factura de proveedor de una compra anterior, asegúrese de "
+"registrarla en la aplicación de Compra, debajo del **Menú de control**. "
+"Necesita crear una nueva factura de proveedor aunque ya haya registrado la "
+"orden de compra."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:129
+msgid ""
+"The first thing you will need to do upon creating a vendor bill is to select"
+" the appropriate vendor, since doing so will also pull up any associated "
+"accounting or pricelist information. From there, you can choose to specify "
+"one or multiple Purchase Orders to populate the Vendor Bill with. When you "
+"select a Purchase Order from the list, Odoo will pull any uninvoiced "
+"products associated to that Purchase Order and automatically populate that "
+"information below. If you are having a hard time finding the appropriate "
+"vendor bill, you may search through the list by inputting the vendor "
+"reference number or your internal purchase order number."
+msgstr ""
+"Lo primero que tendrá que hacer al crear una factura de proveedor es "
+"seleccionar al proveedor correspondiente, ya que esto mostrará la "
+"información contable o lista de precios relacionada. El siguiente paso es "
+"especificar si se va a completar la factura de proveedor con una o varias "
+"órdenes de compra. Al momento de seleccionar alguna orden de compra de la "
+"lista, Odoo extraerá todos los productos no facturados relacionados con esa "
+"orden de compra y completará la información requerida. Si no encuentra la "
+"factura de proveedor correcta, puede buscarla mediante el número de "
+"referencia o el número de orden de compra interno."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:143
+msgid ""
+"While the invoice is in a draft state, you can make any modifications you "
+"need (i.e. remove or add product lines, modify quantities, and change "
+"prices)."
+msgstr ""
+"Mientras la factura se encuentre en modo borrador podrá realizar los cambios"
+" que necesite (por ejemplo, eliminar o agregar líneas de producto, modificar"
+" cantidades y cambiar precios)."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:148
+msgid "Your vendor may send you several bills for the same Purchase Order if:"
+msgstr ""
+"Su proveedor puede enviar varias facturas para la misma orden de compra si:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:150
+msgid ""
+"Your vendor is in back-order and is sending you invoices as they ship the "
+"products."
+msgstr ""
+"Su proveedor va retrasado con sus entregas y le envía las facturas al mismo "
+"tiempo en que envía los productos."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:151
+msgid "Your vendor is sending you a partial bill or asking for a deposit."
+msgstr "Su proveedor envía una factura parcial o pide un depósito."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:153
+msgid ""
+"Every time you record a new vendor bill, Odoo will automatically populate "
+"the product quantities based on what has been received from the vendor. If "
+"this value is showing a zero, this means that you have not yet received this"
+" product and simply serves as a reminder that the product is not in hand and"
+" you may need to inquire further into this. At any point in time, before you"
+" validate the Vendor Bill, you may override this zero quantity."
+msgstr ""
+"Cada vez que registre una nueva factura de proveedor, Odoo automáticamente "
+"completará las cantidades de producto basado en lo que recibió del "
+"proveedor. Si este valor es cero, significa que todavía no ha recibido este "
+"producto y solo sirve como recordatorio de que el producto no ha llegado y "
+"debe investigar más a fondo el por qué. Además, antes de validar la factura,"
+" puede modificar esta cantidad de cero."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:162
+msgid "Vendor Bill Matching"
+msgstr "Coincidencia de facturas de proveedores"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:165
+msgid "What to do if your vendor bill does not match what you received"
+msgstr "¿Qué hacer si su factura de proveedor no coincide con lo que recibió?"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:167
+msgid ""
+"If the bill you receive from the vendor has quantities that do not match the"
+" quantities automatically populated by Odoo, this could be due to several "
+"reasons:"
+msgstr ""
+"Si la factura que recibe del proveedor tiene cantidades que no coinciden con"
+" las que puso Odoo automáticamente, se puede deber a varias razones:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:171
+msgid ""
+"The vendor is incorrectly charging you for products and/or services that you"
+" have not ordered."
+msgstr ""
+"El proveedor le está cobrando productos y/o servicios que usted no pidió."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:174
+msgid ""
+"The vendor is billing you for products that you might not have received yet,"
+" as the invoicing control may be based on ordered or received quantities."
+msgstr ""
+"El proveedor está facturando productos que no recibe todavía, ya que el "
+"control de la facturación puede basarse en cantidades ordenadas o recibidas."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:178
+msgid "The vendor did not bill you for previously purchased products."
+msgstr ""
+"El proveedor no había facturado productos que usted compró anteriormente."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:180
+msgid ""
+"In these instances it is recommended that you verify that the bill, and any "
+"associated purchase order to the vendor, are accurate and that you "
+"understand what you have ordered and what you have already received."
+msgstr ""
+"En estos casos se recomienda que verifique que la factura, y cualquier orden"
+" de compra relacionada con el proveedor, sea correcta y entienda lo que "
+"usted ordenó y recibió."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:184
+msgid ""
+"If you are unable to find a purchase order related to a vendor bill, this "
+"could be due to one of a few reasons:"
+msgstr ""
+"Si no puede encontrar una orden de compra relacionada con la factura de "
+"proveedor, esto podría deberse a una de varias razones:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:187
+msgid ""
+"The vendor has already invoiced you for this purchase order; therefore it is"
+" not going to appear anywhere in the selection."
+msgstr ""
+"El proveedor ya facturó esta orden de compra, por lo tanto no va a aparecer "
+"en la selección."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:190
+msgid ""
+"Someone in the company forgot to record a purchase order for this vendor."
+msgstr ""
+"Alguien en la empresa olvidó registrar una orden de compra para este "
+"proveedor."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:193
+msgid "The vendor is charging you for something you did not order."
+msgstr "El proveedor le cobró algo que usted no ordenó."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:198
+msgid "How product quantities are managed"
+msgstr "¿Cómo se manejan las cantidades de productos?"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:200
+msgid ""
+"By default, services are managed based on ordered quantities, while "
+"stockables and consumables are managed based on received quantities."
+msgstr ""
+"Los servicios se gestionan en función de las cantidades ordenadas de manera "
+"predeterminada. En cambio, los almacenables y consumibles se gestionan en "
+"función de las cantidades recibidas."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:203
+msgid ""
+"If you need to manage products based on ordered quantities over received "
+"quantities, you will need to belong to the group **Purchase Manager**. Ask "
+"your system administrator to enable these access on :menuselection:`Settings"
+" --> Users --> Users --> Access Rights`. Once you belong to the correct "
+"group, select the product(s) you wish to modify, and you should see a new "
+"field appear, labeled **Control Purchase Bills**."
+msgstr ""
+"Si necesita gestionar productos en función de las cantidades ordenadas en "
+"vez de cantidades recibidas, debe ser parte del grupo **Administrador de "
+"compras**. Pida a su administrador del sistema que le de acceso en "
+":menuselection:`Ajustes --> Usuarios --> Usuarios --> Derechos de acceso`. "
+"Una vez que pertenezca al grupo correcto, seleccione los productos que desea"
+" modificar; deberá ver un nuevo campo llamado **Control de facturas de "
+"proveedor**."
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:213
+msgid ""
+"You can then change the default management method for the selected product "
+"to be based on either:"
+msgstr ""
+"Después, puede cambiar el método de gestión predeterminado para que el "
+"producto seleccionado se base en:"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:216
+msgid "Ordered quantities"
+msgstr "Cantidades pedidas"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:218
+msgid "or Received quantities"
+msgstr "o cantidades recibidas"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:221
+msgid "Batch Billing"
+msgstr "Facturación por lotes"
+
+#: ../../content/applications/inventory_and_mrp/purchase/manage_deals/manage.rst:223
+msgid ""
+"When creating a vendor bill and selecting the appropriate purchase order, "
+"you may continue to select additional purchase orders. Odoo will add the "
+"additional line items from the purchase orders you select. If you have not "
+"deleted the previous line items from the first purchase order, the bill will"
+" be linked to all the appropriate purchase orders."
+msgstr ""
+"Al crear una factura de proveedor y seleccionar la orden de compra "
+"correspondiente, puede continuar seleccionando órdenes de compra "
+"adicionales. Odoo agregará las líneas de orden adicionales de las órdenes de"
+" compra que seleccione. Si no ha eliminado las líneas de orden anteriores de"
+" la primera orden de compra, la factura se vinculará a todas las órdenes de "
+"compra correspondientes."
 
 #: ../../content/applications/inventory_and_mrp/purchase/products/reordering.rst:3
 msgid "Don’t run out of stock with reordering rules"
