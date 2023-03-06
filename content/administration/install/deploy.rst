@@ -438,7 +438,7 @@ by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up 
    Say Odoo has been installed via the **source**. The two git repositories for Community and
    Enterprise have been cloned in :file:`/opt/odoo/community` and :file:`/opt/odoo/enterprise`
    respectively and the :option:`--addons-path <odoo-bin --addons-path>` is
-   ``'/opt/odoo/community/odoo/addons,/opt/community/addons,/opt/odoo/enterprise'``.
+   ``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``.
 
    Using the above NGINX (https) configuration, the following location block should be added to
    serve static files via NGINX.
