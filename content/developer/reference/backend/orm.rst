@@ -845,7 +845,11 @@ Search/Read
 
 .. automethod:: Model.search_count
 
+.. automethod:: Model.search_fetch
+
 .. automethod:: Model.name_search
+
+.. automethod:: Model.fetch
 
 .. automethod:: Model.read
 
