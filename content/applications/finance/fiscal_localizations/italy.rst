@@ -23,19 +23,15 @@ localization:
    * - Italy - E-invoicing
      - `l10n_it_edi`
      - e-invoice implementation
-   * - Italy - E-invoicing (SdiCoop)
-     - `l10n_it_edi_sdicoop`
-     - Web service e-invoice implementation
+   * - Italy - E-invoicing
+     - `l10n_it_edi_withholding`
+     - e-invoice withholding
    * - Italy - Accounting Reports
      - `l10n_it_reports`
      - Country-specific reports
    * - Italy - Stock DDT
      - `l10n_it_stock_ddt`
      - Transport documents - Documento di Trasporto (DDT)
-
-.. warning::
-   Once the `l10_it_edi_sdicoop` module is installed, sending invoices via PEC mails is no longer
-   possible.
 
 .. image:: italy/italy-modules.png
    :align: center
