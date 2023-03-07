@@ -197,6 +197,6 @@ Configuration --> Accounting: Online Synchronization`,open the connection you wa
 credentials and click on the :guilabel:`Update Credentials` button.
 
 .. seealso::
-   * :doc:`bank_statements`
+   * :doc:`transactions`
    * :doc:`ponto`
    * :doc:`saltedge`
