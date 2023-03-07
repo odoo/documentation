@@ -615,6 +615,12 @@ for partners and one for countries::
         country = partner.country_id        # first pass prefetches all partners
         countries.add(country.name)         # first pass prefetches all countries
 
+.. seealso::
+    The methods :meth:`~odoo.models.Model.search_fetch` and
+    :meth:`~odoo.models.Model.fetch` can be used to populate the cache of
+    records, typically in cases where the prefetching mechanism does not work
+    well.
+
 
 .. _reference/api/decorators:
 
@@ -845,7 +851,11 @@ Search/Read
 
 .. automethod:: Model.search_count
 
+.. automethod:: Model.search_fetch
+
 .. automethod:: Model.name_search
+
+.. automethod:: Model.fetch
 
 .. automethod:: Model.read
 
