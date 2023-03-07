@@ -121,4 +121,4 @@ and we advise you to contact Ponto directly.
 
    * :doc:`bank_synchronization`
    * :doc:`saltedge`
-   * :doc:`bank_statements`
+   * :doc:`transactions`
