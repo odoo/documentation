@@ -83,7 +83,7 @@ You can edit the accounting information and bank account number according to you
 
 .. seealso::
    - :doc:`../../others/multi_currency`
-   - :doc:`../../bank/feeds/bank_statements`
+   - :doc:`../../bank/feeds/transactions`
    - :doc:`../../bank/setup/outstanding_accounts`
 
 Suspense account
@@ -133,4 +133,4 @@ Bank feeds
 
 .. seealso::
    - :doc:`../../bank/feeds/bank_synchronization`
-   - :doc:`../../bank/feeds/bank_statements`
+   - :doc:`../../bank/feeds/transactions`
