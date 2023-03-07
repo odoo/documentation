@@ -7,7 +7,7 @@ Bank feeds
 .. toctree::
    :titlesonly:
 
-   feeds/bank_statements
+   feeds/transactions
    feeds/bank_synchronization
    feeds/ponto
    feeds/saltedge
