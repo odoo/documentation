@@ -4,6 +4,15 @@
 Changelog
 =========
 
+Odoo Online version 16.2
+========================
+
+- Refactor the implementation of searching and reading methods to be able to
+  combine both in a minimal number of SQL queries. We introduce two new methods
+  `odoo.models.Model.search_fetch` and `odoo.models.Model.fetch` that take
+  advantage of the combination. More details can be found on the pull request
+  `#112126 <https://github.com/odoo/odoo/pull/112126>`_.
+
 Odoo version 16.0
 =================
 
