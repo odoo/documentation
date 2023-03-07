@@ -52,10 +52,8 @@ Shipments` and :guilabel:`Outgoing Shipments` by selecting between the :guilabel
 procurement process, and might differ for individual products or product categories.
 
 .. seealso::
-   - :doc:`How to choose the right flow to handle receipts?
-     </applications/inventory_and_mrp/inventory/management/incoming/handle_receipts>`
-   - :doc:`How to choose the right inventory flow to handle delivery orders?
-     </applications/inventory_and_mrp/inventory/management/delivery/inventory_flow>`
+   - :doc:`How to choose the right flow to handle receipts and deliveries?
+     </applications/inventory_and_mrp/inventory/management/shipments_deliveries>`
 
 Under the :guilabel:`Resupply` heading, configure the method(s) for how the warehouse resupplies
 its inventory:
