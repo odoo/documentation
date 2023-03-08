@@ -58,7 +58,7 @@ Additional functions
 
 In the **website builder** window, click :guilabel:`Customize` to enable additional functions:
 
-- :guilabel:`Customers: Rating` allows customers to submit product reviews;
+- :guilabel:`Customers: Rating` allows customers to submit :ref:`product reviews <product-reviews>`;
   :guilabel:`Share` adds social media and email icon buttons to share the product via those
   channels;
 - :guilabel:`Select Quantity`: if enabled, allows to choose the quantity added to cart;
