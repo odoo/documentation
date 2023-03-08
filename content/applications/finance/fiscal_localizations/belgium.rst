@@ -61,7 +61,6 @@ POS.
 
 - On a certified POS, you cannot:
 
-  - Make a refund.
   - Set up and use the **global discounts** feature (the `pos_discount` module is blacklisted and
     cannot be activated).
   - Set up and use the **loyalty programs** feature (the `pos_loyalty` module is blacklisted and
@@ -76,9 +75,9 @@ POS.
   and set to a :guilabel:`Rounding Precision` of `0,05` and a :guilabel:`Rounding Method` set as
   :guilabel:`Half-Up`.
 - Taxes must be set as included in the price. To set it up, go to :menuselection:`Point of Sale -->
-  Configuration --> Settings`, and from the :guilabel:`Taxes` section, open the :guilabel:`Default
-  Sales Tax` form by clicking the arrow next to the default sales tax field. There, click
-  :guilabel:`Advanced Options` and enable :guilabel:`Included in Price`.
+  Configuration --> Settings`, and from the :guilabel:`Accounting` section, open the
+  :guilabel:`Default Sales Tax` form by clicking the arrow next to the default sales tax field.
+  There, click :guilabel:`Advanced Options` and enable :guilabel:`Included in Price`.
 - At the start of a POS session, users must click :guilabel:`Work in` to clock in. Doing so allows
   the registration of POS orders. If users are not clocked in, they cannot make POS orders.
   Likewise, they must click :guilabel:`Work Out` to clock out at the end of the session.
@@ -129,7 +128,7 @@ Once the module is activated, add your VAT number to your company information. T
 :menuselection:`Settings --> Companies --> Update Info`, and fill in the :guilabel:`VAT` field.
 Then, enter a national registration number for every staff member who operates the POS system. To do
 so, go to the :guilabel:`Employees` app and open an employee form. There, go to :menuselection:`HR
-settings tab --> Attendance`, and fill in the :guilabel:`INSZ or BIS number` field.
+settings tab --> Attendance/Point of Sale`, and fill in the :guilabel:`INSZ or BIS number` field.
 
 .. image:: belgium/bis-number.png
    :align: center
