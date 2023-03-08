@@ -428,11 +428,6 @@ by intercepting all requests to :samp:`/{MODULE}/static/{FILE}`, and looking up 
 
        # Serve static files right away
        location ~ ^/[^/]+/static/.+$ {
-           # Add Headers for odoo proxy mode
-           proxy_set_header X-Forwarded-Host $host;
-           proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
-           proxy_set_header X-Forwarded-Proto $scheme;
-           proxy_set_header X-Real-IP $remote_addr;
            root /usr/lib/python3/dist-packages/odoo/addons;
            try_files $uri @odoo;
            expires 24h;
