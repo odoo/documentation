@@ -27,7 +27,9 @@ needed.
    in the Odoo database.
 
 .. important::
-   Odoo integration of Sendcloud does **not** work on free plans of Sendcloud.
+   Odoo integration of Sendcloud works on free Sendcloud plans *only* if a bank account is linked,
+   since Sendcloud won't ship for free. To use shipping rules or individual custom carrier contacts,
+   a paid plan of Sendcloud is required.
 
 Warehouse configuration
 -----------------------
@@ -143,7 +145,7 @@ After configuring and saving the form, follow these steps to load the shipping p
    | :guilabel:`Return Shipping Product`: `DPD Return 0-20kg`
    | :guilabel:`Return Carrier`: `DPD`
    | :guilabel:`Return Minimum Weight`: `0.00`
-   | :guilabel:`Return Minimum Weight`: `20.00`
+   | :guilabel:`Return Maximum Weight`: `20.00`
    | :guilabel:`Return Countries`: `Belgium` `Netherlands`
 
 .. image:: sendcloud_shipping/sendcloud-example.png
