@@ -2,25 +2,26 @@
 Manage work orders using work centers
 =====================================
 
-Odoo Manufacturing allows for work orders to be carried out at specific work centers. When a
+Odoo *Manufacturing* allows for work orders to be carried out at specific work centers. When a
 manufacturing order is created for a product, any work orders listed in the :guilabel:`Operations`
-tab of the product bill of materials (BoM) will be automatically created as well and assigned to the
-specified work center. Work orders can be managed in the :guilabel:`Manufacturing` module by
-selecting :menuselection:`Operations --> Work Orders`.
+tab of the product *Bill of Materials* (*BoM*) will be automatically created as well and assigned to
+the specified work center. Work orders can be managed in the :menuselection:`Manufacturing` module
+by selecting :menuselection:`Operations --> Work Orders`.
 
 In order to use work centers, the :guilabel:`Work Orders` feature must first be enabled. To do so,
-go to the :guilabel:`Manufacturing` module, select :menuselection:`Configuration --> Settings`, and
-activate the checkbox next to :guilabel:`Work Orders`. Work centers can then be created and managed
-by selecting :menuselection:`Configuration --> Work Centers`.
+go to the :menuselection:`Manufacturing` module, select :menuselection:`Configuration --> Settings`,
+and activate the checkbox next to :guilabel:`Work Orders`. Work centers can then be created and
+managed by selecting :menuselection:`Configuration --> Work Centers`.
 
 Create a work center
 ====================
 
-Within the :guilabel:`Manufacturing` module, select :menuselection:`Configuration --> Work Centers
---> Create`. The work center form can then be filled out as follows:
+Within the :menuselection:`Manufacturing` module, select :menuselection:`Configuration --> Work
+Centers --> Create`. The work center form can then be filled out as follows:
 
 - :guilabel:`Work Center Name`: give the work center a concise name that describes the type of
   operations it will be used for
+- :guilabel:`Tag`: assign the work center one or more user-created tags
 - :guilabel:`Alternative Workcenters`: specify an alternative work center for operations to be
   carried out at if the main work center is not available
 - :guilabel:`Code`: assign the work center a reference code
@@ -43,8 +44,8 @@ assigned to a work center:
 - :guilabel:`Capacity`: the number of operations that can be performed at the work center
   simultaneously
 - :guilabel:`OEE Target`: the target for efficiency at the work center
-- :guilabel:`Time before prod.`: setup time required before work can commence
-- :guilabel:`Time after prod.`: breakdown or cleanup time required after work is finished
+- :guilabel:`Setup Time`: time required to set up the work center before work can commence
+- :guilabel:`Cleanup Time`: time required to clean the work center after work is finished
 - :guilabel:`Cost per hour`: the cost of operating the work center for one hour
 - :guilabel:`Analytic Account`: the account where the cost of the work center should be recorded
 
@@ -72,8 +73,8 @@ to a work center. The following information will be displayed for each piece of 
    :alt: The equipment tab of the work center form.
 
 .. note::
-    :guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are all calculated
-    automatically based on past failure data, if any exists.
+   :guilabel:`MTBF`, :guilabel:`MTTR`, and :guilabel:`Est. Next Failure` are all calculated
+   automatically based on past failure data, if any exists.
 
 Integrate IoT devices
 ---------------------
@@ -120,9 +121,9 @@ automatically changed to the alternative work center.
 Monitor work center performance
 ===============================
 
-Performance for an individual work center can be viewed by selecting
-:menuselection:`Configuration --> Work Centers`, and clicking on a work center. A variety of metrics
-showing work center performance can be viewed at the top right of the form:
+Performance for an individual work center can be viewed by selecting :menuselection:`Configuration
+--> Work Centers`, and clicking on a work center. A variety of metrics showing work center
+performance can be viewed at the top right of the form:
 
 - :guilabel:`OEE`: overall effective efficiency, the percentage of time that the work center has
   been fully productive
