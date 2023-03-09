@@ -2,6 +2,8 @@
 Activate the Barcodes in Odoo
 =============================
 
+.. _inventory/barcode/software:
+
 The barcode scanning features can save you a lot of time usually lost
 switching between the keyboard, the mouse and the scanner. Properly
 attributing barcodes to products, pickings locations, etc. allows you to
