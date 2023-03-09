@@ -2,6 +2,8 @@
 Process to Transfers
 ====================
 
+.. _barcode/operations/intro:
+
 Simple Transfers
 ================
 
