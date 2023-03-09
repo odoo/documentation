@@ -2,6 +2,8 @@
 Use Different Units of Measure
 ==============================
 
+.. _inventory/management/products/units_of_measure:
+
 In some cases, handling products in different units of measure is
 necessary. For example, if you buy products in a country where the
 metric system is of application and sell in a country where the imperial
