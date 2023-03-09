@@ -2,74 +2,60 @@
 Deliver and invoice to different addresses
 ==========================================
 
-With Odoo Sales, you can configure different addresses for delivery and invoicing. For some
-customers, it will be very practical to define specific billing and shipping addresses. Indeed, not
-everyone will have the same delivery location as the invoicing location.
+People and businesses often use separate addresses for billing (invoicing) and shipping (delivery)
+purposes. With the Odoo *Sales* app, contacts can have different specified addresses for
+delivery and invoicing.
 
-Activate the feature
-====================
+Configure the settings
+======================
 
-Go to :menuselection:`Sales --> Configuration --> Settings` and activate the **Customer Addresses**
-feature.
+Begin by activating the :guilabel:`Customer Addresses` feature in the settings:
 
-.. image:: different_addresses/addresses_1.png
+- If the *Accounting* app is installed, the :guilabel:`Customer Addresses` feature is located in
+  :menuselection:`Accounting --> Configuration --> Settings`.
+
+- If the *Accounting* app is **not** installed, the :guilabel:`Customer Addresses` feature is
+  located in :menuselection:`Invoicing --> Configuration --> Settings`.
+
+.. image:: different_addresses/customer-addresses-setting.png
    :align: center
-   :class: img-thumbnail
-   :alt: How to enable different customer addresses on Odoo Sales?
+   :alt: Activate the Customer Addresses setting
 
-Add addresses from a quotation
+Configure the contact form
+==========================
+
+Navigate to the :menuselection:`Contacts` app (or to :menuselection:`Sales --> Orders -->
+Customers`), and click on a customer to open their contact form.
+
+Under the :guilabel:`Contacts & Addresses` tab, click :guilabel:`Add`.
+
+.. image:: different_addresses/contact-form-add-address.png
+   :align: center
+   :alt: Add a contact/address to the contact form
+
+Then, select which type of address to add to the contact form (i.e. :guilabel:`Invoice Address` or
+:guilabel:`Delivery Address`).
+
+.. image:: different_addresses/create-contact-window.png
+   :align: center
+   :alt: Create a new contact/address on a contact form
+
+Enter the address information. Then click :guilabel:`Save & Close` to save the address and close
+the :guilabel:`Create Contact` window. Or, click :guilabel:`Save & New` to save this address and
+immediately input another one.
+
+Add addresses to the quotation
 ==============================
 
-When you create a quotation, you must add a customer. This customer can be a company or a person
-with specific billing and shipping addresses already defined and registered in the system, or it can
-be a new customer. In this case, you have to **Create and edit** the contact form for your new
-customer and link it, if necessary, to a company. In this contact form, you will be able to add,
-delete and modify invoice and delivery addresses.
+When a customer is added to a quotation, the :guilabel:`Invoice Address` and :guilabel:`Delivery
+Address` fields will autopopulate according to the addresses specified on the customer's contact
+form.
 
-.. image:: different_addresses/addresses_2.png
+.. image:: different_addresses/quotation-address-autopopulate.png
    :align: center
-   :class: img-thumbnail
-   :alt: How to add addresses from a quotation on Odoo Sales?
+   :alt: Invoice and Delivery Addresses autopopulate on a quotation
 
-.. note::
-   If you select a customer with defined invoice and delivery addresses, Odoo will automatically use
-   them to fill in the fields. Now, if you want to change it instantly, it is possible to do so
-   directly from the quotation or the sales order.
+The :guilabel:`Invoice Address` and :guilabel:`Delivery Address` can also be edited directly from
+the quotation by clicking on the :guilabel:`Internal link` buttons next to each address line.
 
-Add addresses from a contact form
-=================================
-
-Previously, we talked about the contact form that you can fill in directly from a quotation or a
-sales order to add billing and shipping addresses to customers. But, if you go to
-:menuselection:`Sales --> Orders --> Customers`, you can create or modify every customer you want
-and add, delete or modify invoice and delivery addresses instantly there, before creating a
-quotation.
-
-.. image:: different_addresses/addresses_3.png
-   :align: center
-   :class: img-thumbnail
-   :alt: How to add addresses from a contact form on Odoo Sales?
-
-Deal with different addresses
-=============================
-
-Like for the previous example, go to :menuselection:`Sales --> Orders --> Customers` and create a
-new customer. There, you can add company information but, more importantly, you can enter billing
-and shipping addresses under the **Contacts & Addresses** tab.
-
-.. image:: different_addresses/addresses_4.png
-   :align: center
-   :class: img-thumbnail
-   :alt: How to manage different customer addresses on Odoo Sales?
-
-Once done, you can return to your Sales dashboard and create a new quotation. Now, if you enter
-your new customer, you will see that the other fields will fill in by themself with the information
-previously saved for billing and shipping addresses.
-
-.. image:: different_addresses/addresses_5.png
-   :align: center
-   :class: img-thumbnail
-   :alt: Automatic quotation fields filling on Odoo Sales
-
-With Odoo Sales, it is now very convenient to play with various addresses in terms of invoice and
-delivery features.
+These addresses can be updated at any time to ensure accurate invoicing and delivery.
