@@ -88,15 +88,13 @@ Concerning *views*, backend views should be split like models and suffixed
 by ``_views.xml``. Backend views are list, form, kanban, activity, graph, pivot, ..
 views. To ease split by model in views main menus not linked to specific actions
 may be extracted into an optional ``<module>_menus.xml`` file. Templates (QWeb
-pages used notably for portal / website display) and bundles (import of JS and
-CSS assets) are put in separate files. Those are respectively
-``<model>_templates.xml`` and ``assets.xml`` files.
+pages used notably for portal / website display) are put in separate files named
+``<model>_templates.xml``.
 
 .. code-block:: text
 
     addons/plant_nursery/
     |-- views/
-    |   | -- assets.xml (import of JS / CSS)
     |   | -- plant_nursery_menus.xml (optional definition of main menus)
     |   | -- plant_nursery_views.xml (backend views)
     |   | -- plant_nursery_templates.xml (portal templates)
@@ -220,7 +218,6 @@ The complete tree of our Odoo module therefore looks like
     |   |   |   |-- widget_a.xml
     |   |   |   |-- widget_a.xml
     |-- views/
-    |   |-- assets.xml
     |   |-- plant_nursery_menus.xml
     |   |-- plant_nursery_views.xml
     |   |-- plant_nursery_templates.xml
