@@ -19,7 +19,7 @@ To connect to the banks, Odoo uses multiple web-services:
 - **Yodlee**: Worldwide
 - :doc:`Salt Edge <bank_synchronization/saltedge>`: Europe
 - :doc:`Ponto <bank_synchronization/ponto>`: Europe
-- **Enable Banking**: Scandinavian countries
+- :doc:`Enable Banking <bank_synchronization/enablebanking>`: Scandinavian countries
 
 .. seealso::
    :doc:`bank_statements`
@@ -206,3 +206,4 @@ credentials and click on the :guilabel:`Update Credentials` button.
 
    bank_synchronization/saltedge
    bank_synchronization/ponto
+   bank_synchronization/enablebanking
