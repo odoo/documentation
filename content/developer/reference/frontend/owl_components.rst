@@ -335,6 +335,12 @@ Props
       - `boolean`
       - if true, the checkbox is disabled, otherwise it is enabled
 
+.. spoiler:: Preview CheckBox in Owlybook
+
+   .. raw:: html
+
+      <iframe src="http://localhost:8069/owlybook#module=web&folder=Core%20components&title=Checkbox&hideSidebar=true" loading="lazy" frameborder="0" width="100%" height="550px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 .. _frontend/owl/colorlist:
 
 ColorList
@@ -413,6 +419,13 @@ Color `id`'s are the following:
       - `Green`
     * - `11`
       - `Purple`
+
+.. spoiler:: Preview ColorList in Owlybook
+
+   .. raw:: html
+
+      <iframe src="http://localhost:8069/owlybook#module=web&folder=Core%20components&title=ColorList&hideSidebar=true" loading="lazy" frameborder="0" width="100%" height="700px" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+
 
 .. _frontend/owl/dropdown:
 
