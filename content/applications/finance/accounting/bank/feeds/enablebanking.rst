@@ -47,7 +47,7 @@ I have an error with authorization.
 If it's your first attempt at authorization, try again later in case of maintenance.
 
 If this issues is still occuring, please contact Odoo support.
-When contacting support please include time of authorization attempt and whether you are using a business or personal account.
+When contacting support please include time of authorization-attempt and whether you are using a business or personal account.
 
 Additional authorization guidance currently available for
 
