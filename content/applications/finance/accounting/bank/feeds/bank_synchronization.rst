@@ -17,7 +17,7 @@ To connect to the banks, Odoo uses multiple web-services:
 - **Yodlee**: Worldwide
 - **Salt Edge**: Europe (:doc:`more information <saltedge>`)
 - **Ponto**: Europe (:doc:`more information <ponto>`)
-- **EnableBanking**: Scandinavian countries
+- **Enable Banking**: Scandinavian countries (:doc:`more information <enablebanking>`)
 
 Configuration
 =============
