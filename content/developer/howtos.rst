@@ -9,6 +9,9 @@ How-to guides
     :titlesonly:
 
     howtos/scss_tips
+    howtos/javascript_field
+    howtos/javascript_view
+    howtos/javascript_client_action
     howtos/web_services
     howtos/company
     howtos/accounting_localization
@@ -22,6 +25,21 @@ How-to guides
       :target: howtos/scss_tips
 
       Follow this guide to keep the technical debt of your CSS code under control.
+
+   .. card:: Customize a field
+      :target: howtos/javascript_field
+
+      Learn how to customize field components in the Odoo JavaScript web framework.
+
+   .. card:: Customize a view type
+      :target: howtos/javascript_view
+
+      Learn how to customize view types in the Odoo JavaScript web framework.
+
+   .. card:: Create a client action
+      :target: howtos/javascript_client_action
+
+      Learn how to create client actions in the Odoo JavaScript web framework.
 
    .. card:: Web services
       :target: howtos/web_services
