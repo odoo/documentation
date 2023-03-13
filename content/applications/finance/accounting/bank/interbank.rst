@@ -15,8 +15,8 @@ Settings` and then under the :guilabel:`Default Accounts` section.
 
 .. note::
    At least two bank accounts are needed to make internal transfers. Refer to
-   :doc:`Bank and cash accounts section <../setup/bank_accounts>` to see how to add an additional
-   bank account to your database.
+   :doc:`Bank and cash accounts section <setup/bank_accounts>` to see how to add an additional bank
+   account to your database.
 
 Register an internal transfer from one bank to another
 ======================================================
@@ -91,8 +91,8 @@ Manage and reconcile bank statements
 ------------------------------------
 
 The next step is to book the bank statements to finalize the transaction by creating,
-:doc:`importing <../feeds/bank_statements>`, or :doc:`synchronizing <../feeds/bank_synchronization>`
-your :guilabel:`Transactions lines`. Fill in the :guilabel:`Ending balance` and click on the
+:doc:`importing <feeds/bank_statements>`, or :doc:`synchronizing <feeds/bank_synchronization>` your
+:guilabel:`Transactions lines`. Fill in the :guilabel:`Ending balance` and click on the
 :guilabel:`Reconcile` button.
 
 .. image:: interbank/transactions-line.png
@@ -100,7 +100,7 @@ your :guilabel:`Transactions lines`. Fill in the :guilabel:`Ending balance` and 
    :alt: Transaction lines to be filled in prior to reconciliation
 
 .. seealso::
-   - :doc:`../reconciliation/use_cases`
+   :doc:`reconciliation/use_cases`
 
 In the next window, choose counterparts for the payment - in this example, the outstanding payment
 account - then click :guilabel:`Validate`.
