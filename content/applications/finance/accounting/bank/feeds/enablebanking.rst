@@ -57,8 +57,8 @@ https://tilisy.enablebanking.com/guides/FI/
 Swedish banks:
 https://tilisy.enablebanking.com/guides/SE/
 
-Im seeing duplicate transactions.
--------------------------------------------------------------------
+Im seeing duplicate transactions
+-----------------------------------------------
 This is commonly caused by lack of unique transaction references. Please contact Odoo.
 
 These issues may take some time to be resolved, as they often require contacting the bank
