@@ -13,7 +13,7 @@ your company, or your company has an outstanding debit with a vendor. You can us
 amounts to reduce unpaid invoices/bills.
 
 .. seealso::
-   - :doc:`Internal transfers <../../bank/misc/interbank>`
+   - :doc:`Internal transfers <../../bank/interbank>`
    - :doc:`../../bank/reconciliation/use_cases`
    - `Odoo Tutorials: Bank Configuration
      <https://www.odoo.com/slides/slide/bank-configuration-1880>`_
