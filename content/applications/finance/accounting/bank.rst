@@ -9,5 +9,5 @@ Bank and cash
 
    bank/setup
    bank/feeds
-   bank/misc
    bank/reconciliation
+   bank/interbank
