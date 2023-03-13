@@ -42,8 +42,8 @@ Link your bank accounts with Odoo
 FAQ
 ===
 
-I have an error with authorization.
--------------------------------------------------------------------
+I have an error with authorization
+-------------------------------------------------
 If it's your first attempt at authorization, try again later in case of maintenance.
 
 If this issues is still occuring, please contact Odoo support.
