@@ -21,13 +21,7 @@ Configuration
 Link your bank accounts with Odoo
 ---------------------------------
 
-#. Start synchronization by clicking on :menuselection:`Accounting --> Configuration
-   --> Add a Bank Account`.
-#. Select the institution you want to synchronize. You can see if Enable Banking is the
-   third party provider of the institution by selecting it.
-#. After giving and confirming your phone number, you are redirected to Enable Banking to finalize
-   the synchronization process.
-
+#. Start synchronization by clicking on :menuselection:`Accounting --> Configuration`
 #. Make sure you give your consent to share your account information with Odoo by clicking Continue authentication.
 
    .. image:: enablebanking/enablebankingauth.png
