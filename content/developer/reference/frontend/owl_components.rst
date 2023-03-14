@@ -495,6 +495,9 @@ being present in the DOM or not.
    * - `manualOnly`
      - boolean
      - if true, only toggle the dropdown when the button is clicked on (defaults to `false`)
+   * - `disabled`
+     - boolean
+     - disable (if true) the dropdown button (defaults to `false`)
    * - `title`
      - string
      - title attribute content for the `<button class="dropdown-toggle"/>` (default: none)
