@@ -2,8 +2,10 @@
 What is a Removal Strategy (FIFO, LIFO, FEFO, Closest location)?
 ================================================================
 
-Usually, *Removal Strategies* are defined in picking operations to select the best products,
-optimize the distance for the worker, for quality control purposes, or to first move products
+.. _inventory/routes/strategies/removal:
+
+Usually, *Removal Strategies* are defined in picking operations to select the best products to
+optimize the distance for the worker, for quality control purposes, or to first move the products
 with the closest expiration date.
 
 When a product movement needs to be done, Odoo finds available products that can be assigned to
