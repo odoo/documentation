@@ -12,3 +12,4 @@ Warehouses
    warehouses/warehouse_replenishment_transfer
    warehouses/warehouses_locations
    warehouses/create_a_second_warehouse
+   warehouses/use_locations
