@@ -92,7 +92,7 @@ one of the **preconfigured groups**.
       :align: center
       :alt: Grouping records on the Sales Analysis report
 
-You can also **custom groups** by using a wide selection of fields present on the model. To do so,
+You can **customize groups** by using a wide selection of fields present on the model. To do so,
 click :menuselection:`Group By --> Add Custom Group`, select a field, and click :guilabel:`Apply`.
 
 .. note::
