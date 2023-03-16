@@ -24,6 +24,7 @@ Odoo needs your **API Credentials** to connect with your PayPal account, which c
 You can copy your credentials from your Paypal account and paste them into the related fields under
 the **Credentials** tab.
 
+
 To set the **PDT Identity Token**, retrieve the token by following the configuration
 step :ref:`paypal/enable-pdt`.
 
