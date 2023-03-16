@@ -9,15 +9,16 @@ Spreadsheet
    :titlesonly:
 
    spreadsheet/insert
+   spreadsheet/templates
 
 Spreadsheet lets you organize, analyze, and visualize your data in tabular form. Among others, you
 can:
 
 - :doc:`Insert and link your Odoo data (pivots, graphs, lists, and menus) <spreadsheet/insert>`.
-- Use default templates or create your own.
-- Format your data.
+- :doc:`Use default templates or create new ones <spreadsheet/templates>`.
+- Format data.
 - Use formulas and functions.
-- Sort and filter your data.
+- Sort and filter data.
 
 .. _spreadsheet/glossary:
 
