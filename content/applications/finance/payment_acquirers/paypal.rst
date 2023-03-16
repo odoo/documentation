@@ -19,7 +19,6 @@ Credentials tab
 Odoo needs your **API Credentials** to connect with your PayPal account, which comprise:
 
 - **Email**: your login email address in Paypal.
-- **Merchant Account ID**: the code of the merchant account used to identify your Paypal account.
 - **PDT Identity Token**: the key used to verify the authenticity of transactions.
 - **Use IPN**: whether you want to use Instant Payment Notification. Already checked, you don't have
   to change it.
@@ -27,8 +26,6 @@ Odoo needs your **API Credentials** to connect with your PayPal account, which c
 You can copy your credentials from your Paypal account and paste them into the related fields under
 the **Credentials** tab.
 
-To retrieve the **Merchant Account ID**, log into your Paypal account and go to
-:menuselection:`Account menu --> Account Settings --> Business information`.
 
 To set the **PDT Identity Token**, switch to :ref:`developer mode <developer-mode>` and retrieve the
 token by following the configuration step :ref:`paypal/enable-pdt`.
