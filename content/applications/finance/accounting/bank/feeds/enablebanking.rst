@@ -32,33 +32,3 @@ Link your bank accounts with Odoo
 #. After giving consent for sharing data with Odoo, you may be prompted with your bank credentials, or redirected to your bank for authorization.
 
 #. Post authorization, you should be redirected to Odoo
-
-FAQ
-===
-
-I have an error with authorization
--------------------------------------------------
-If it's your first attempt at authorization, try again later in case of maintenance.
-
-If this issues is still occuring, please contact Odoo support.
-When contacting support please include time of authorization-attempt and whether you are using a business or personal account.
-
-Additional authorization guidance currently available for
-
-Finnish banks:
-https://tilisy.enablebanking.com/guides/FI/
-
-Swedish banks:
-https://tilisy.enablebanking.com/guides/SE/
-
-Im seeing duplicate transactions
------------------------------------------------
-This is commonly caused by lack of unique transaction references. Please contact Odoo.
-
-These issues may take some time to be resolved, as they often require contacting the bank
-
-
-
-
-
-If your question isn't answered, please contact Odoo support.
