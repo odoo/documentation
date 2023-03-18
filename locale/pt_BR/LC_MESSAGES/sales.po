@@ -18,7 +18,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 17:52+0000\n"
+"POT-Creation-Date: 2023-03-16 11:06+0000\n"
 "PO-Revision-Date: 2022-10-04 12:54+0000\n"
 "Last-Translator: Martin Trigaux, 2023\n"
 "Language-Team: Portuguese (Brazil) (https://www.transifex.com/odoo/teams/41243/pt_BR/)\n"
@@ -96,8 +96,8 @@ msgstr ""
 #: ../../content/applications/sales/point_of_sale/payment/stripe.rst:12
 #: ../../content/applications/sales/point_of_sale/payment/vantiv.rst:13
 #: ../../content/applications/sales/point_of_sale/payment/worldline.rst:12
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:14
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:10
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:20
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:10
 #: ../../content/applications/sales/point_of_sale/restaurant/tips.rst:11
 #: ../../content/applications/sales/point_of_sale/shop/barcode.rst:10
 #: ../../content/applications/sales/point_of_sale/shop/cash_rounding.rst:17
@@ -2004,188 +2004,6 @@ msgstr ""
 msgid ":doc:`../../sales/products_prices/prices/pricing`"
 msgstr ":doc:`../../sales/products_prices/prices/pricing`"
 
-#: ../../content/applications/sales/point_of_sale/belgian_fdm.rst:5
-msgid "Fiscal Data Modules"
-msgstr "Módulos de dados fiscais"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:3
-msgid "Setting up the Fiscal Data Module with the Odoo POS"
-msgstr "Configurando o Módulo de Dados Fiscais com o Odoo PDV"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:6
-msgid "Introduction"
-msgstr "Introdução"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:8
-msgid ""
-"The Belgian government requires certain businesses to use a government-"
-"certified device called a **Fiscal Data Module** (also known as a "
-"**blackbox**). This device works together with the POS application and logs "
-"certain transactions. On top of that, the used POS application must also be "
-"certified by the government and must adhere to strict standards specified by"
-" them. `Odoo 9 (Enterprise Edition) is a certified application "
-"<http://www.systemedecaisseenregistreuse.be/systemes-certifies>`_. More "
-"information concerning the Fiscal Data Module can be found on `the official "
-"website <http://www.systemedecaisseenregistreuse.be/>`_."
-msgstr ""
-"O governo belga exige que certas empresas usem um dispositivo certificado "
-"pelo governo chamado ** Módulo de Dados Fiscais ** (também conhecido como **"
-" caixa preta **). Este dispositivo funciona junto com o aplicativo PDV e "
-"registra certas transações. Além disso, o aplicativo PDV usado também deve "
-"ser certificado pelo governo e deve seguir os padrões estritos especificados"
-" por eles. ʻOdoo 9 (Enterprise Edition) é um aplicativo certificado "
-"<http://www.systemedecaisseenregistreuse.be/systemes-certifies> `_. Mais "
-"informações sobre o Módulo de Dados Fiscais podem ser encontradas no site "
-"oficial <http://www.systemedecaisseenregistreuse.be/> `_."
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:20
-msgid "Required hardware"
-msgstr "Hardware necessário"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:22
-msgid ""
-"A government certified `Fiscal Data Module "
-"<http://www.systemedecaisseenregistreuse.be/systemes-"
-"certifies#FDM%20certifiés>`_ per POS, all of them should work, but the "
-"Cleancash SC-B is recommended, you will also need:"
-msgstr ""
-"Um `Fiscal Data Module <http://www.systemedecaisseenregistreuse.be/systemes-"
-"certifies#FDM%20certifiés>` _ por PDV, todos eles devem funcionar, mas o "
-"Cleancash SC-B é recomendado, você também vai precisar :"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:27
-msgid ""
-"Serial null modem cable per FDM (`example "
-"<http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-"
-"Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM>`__)"
-msgstr ""
-"Cabo de modem nulo serial por FDM ('exemplo "
-"<http://www.startech.com/Cables/Serial-Parallel-PS-2/DB9-DB25/10-ft-Cross-"
-"Wired-Serial-Null-Modem-Cable-DB9-FM~SCNM9FM>'__"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:29
-msgid ""
-"Serial-to-USB adapter per FDM (`example "
-"<http://trendnet.com/products/proddetail.asp?prod=265_TU-S9>`__)"
-msgstr ""
-"Adaptador serial para USB por FDM (ʻexemplo "
-"<http://trendnet.com/products/proddetail.asp?prod=265_TU-S9> `__)"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:32
-msgid "A registered IoT Box per POS configuration"
-msgstr "Uma IoT Box registrada por configuração de PDV"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:35
-msgid "Setup"
-msgstr "Definição"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:38
-msgid "IoT Box"
-msgstr "IoT Box"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:40
-msgid ""
-"In order to use a Fiscal Data Module, you will need a registered IoT Box. "
-"These IoT Boxes are similar to the regular IoT Boxes we sell, but they are "
-"registered with the Belgian government. This is required by law. Attempting "
-"to use a Fiscal Data Module on a non-registered IoT Box will not work. You "
-"can verify that the Fiscal Data Module is recognized by the IoT Box by going"
-" to the *Hardware status page* via the IoT Box homepage."
-msgstr ""
-"Para usar um Módulo de Dados Fiscais, você precisará de uma Caixa IoT "
-"registrada. Essas caixas de IoT são semelhantes às caixas de IoT regulares "
-"que vendemos, mas estão registradas no governo belga. Isso é exigido por "
-"lei. Tentar usar um Módulo de Dados Fiscais em uma IoT Box não registrada "
-"não funcionará. Você pode verificar se o Módulo de dados fiscais é "
-"reconhecido pela IoT Box acessando a * página de status do hardware * por "
-"meio da página inicial da IoT Box."
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:52
-#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:88
-msgid "Odoo"
-msgstr "Odoo"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:54
-msgid ""
-"An Odoo POS app can be given certified POS capabilities by installing the "
-"**Belgian Registered Cash Register** app (technical name: "
-"``pos_blackbox_be``). Because of government restrictions imposed on us, this"
-" installation cannot be undone. After this, you will have to ensure that "
-"each POS configuration has a unique registered IoT Box associated with it "
-"(:menuselection:`Point of Sale --> Configuration --> Point of Sale` and "
-"ensure Hardware Proxy / IoT Box and the serial number of your IoT Box is "
-"set). The first time you open the Point of Sale and attempt to do a "
-"transaction, you will be asked to input the PIN that you received with your "
-"VAT signing card."
-msgstr ""
-"Um aplicativo Odoo PDV pode receber recursos de PDV certificados instalando "
-"o aplicativo ** Belgian Registered Cash Register ** (nome técnico: `` "
-"pos_blackbox_be``). Devido às restrições governamentais impostas a nós, esta"
-" instalação não pode ser desfeita. Depois disso, você terá que garantir que "
-"cada configuração de PDV tenha uma IoT Box registrada exclusiva associada a "
-"ela (: seleção de menus: `Ponto de Venda-> Configuração -> Ponto de Venda` e"
-" garantir Hardware Proxy / IoT Box e serial número da sua caixa IoT está "
-"definido). Na primeira vez que você abrir o Ponto de venda e tentar fazer "
-"uma transação, será solicitado que você insira o PIN que recebeu com seu "
-"cartão de assinatura de VAT."
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:69
-msgid "Certification & On-premise"
-msgstr "Certificação e local"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:71
-msgid ""
-"The certification granted by the government is restricted to the use on "
-"odoo.com Odoo Online instance. The usage of the module from the source or a "
-"modified version will **not** be certified. For on-premise users, we also "
-"support the Fiscal Data Module in such installations. The main restriction "
-"is that this requires an obfuscated version of the ``pos_blackbox_be`` "
-"module we will provide on request for Enterprise customers."
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:79
-msgid "Restrictions"
-msgstr "Restrições"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:81
-msgid ""
-"As mentioned before, in order to get certified the POS application must "
-"adhere to strict government guidelines. Because of this, a certified Odoo "
-"POS has some limitations not present in the non-certified Odoo POS."
-msgstr ""
-"Conforme mencionado antes, para obter a certificação, o aplicativo de PDV "
-"deve aderir às rígidas diretrizes governamentais. Por isso, um PDV Odoo "
-"certificado tem algumas limitações não presentes no PDV Odoo não "
-"certificado."
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:86
-msgid "Refunding is disabled"
-msgstr "Reembolso está desativado"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:87
-msgid "Modifying orderline prices"
-msgstr "Modificando os preços da linha de pedido"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:88
-msgid "Creating/modifying/deleting POS orders"
-msgstr "Criação / modificação / exclusão de pedidos de PDV"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:89
-msgid "Selling products without a valid tax"
-msgstr "Venda de produtos sem imposto válido"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:90
-msgid "Multiple Odoo POS configurations per IoT Box are not allowed"
-msgstr "Múltiplas configurações Odoo PDV por IoT Box não são permitidas"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:91
-msgid "Using the POS without a connection to the IoT Box (and thus FDM)"
-msgstr "Usando o PDV sem uma conexão com a IoT Box (e, portanto, FDM)"
-
-#: ../../content/applications/sales/point_of_sale/belgian_fdm/setup.rst:92
-msgid "Blacklisted modules: pos_discount, pos_reprint, pos_loyalty"
-msgstr "Módulos na lista negra: pos_discount, pos_reprint, pos_loyalty"
-
 #: ../../content/applications/sales/point_of_sale/overview.rst:5
 msgid "Overview"
 msgstr "Visão Geral"
@@ -3580,57 +3398,135 @@ msgid "To cancel the payment request, click on **cancel**."
 msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant.rst:5
-msgid "Restaurant Features"
-msgstr "Características do restaurante"
+msgid "Restaurant features"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:7
+msgid ""
+"Managing a restaurant or a bar comes with specific needs. The Point of Sale "
+"application provides various features that allow performing all the required"
+" tasks in such businesses."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:10
+msgid "Once the POS is set to be used in a restaurant or a bar, you can:"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:12
+msgid ""
+":doc:`organize your floors and tables to reflect your interior "
+"<restaurant/floors_tables>`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:13
+msgid ":ref:`take orders <floors_tables/orders>`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:14
+msgid ""
+":doc:`communicate with the kitchen or the bar through the POS "
+"<restaurant/kitchen_printing>`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:15
+msgid ""
+":doc:`print bills in advance and split them <restaurant/bill_printing>`;"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:16
+msgid ":doc:`collect tips <restaurant/tips>`; and"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:17
+msgid ""
+":doc:`set different taxes for takeaway food <restaurant/fiscal_position>`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:22
+msgid ""
+"To enable the restaurant and bar-specific features, go to "
+":menuselection:`Point of Sale --> Configuration --> Settings`, select the "
+"POS, and activate :guilabel:`Is a Bar/Restaurant`."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rst:25
+msgid ""
+"These features are displayed in the :guilabel:`Restaurant & Bar` section."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant.rstNone
+msgid "restaurant and bar-specific features"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:3
-msgid "Print the Bill"
-msgstr "Imprima a conta"
+msgid "Bills"
+msgstr "Faturas"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:5
 msgid ""
-"Use the *Bill Printing* feature to print the bill before the payment. This "
-"is useful if the bill is still subject to evolve and is thus not the "
-"definitive ticket."
+"Typical practices in restaurants or bars are to request the bill before "
+"proceeding to payment or splitting it based on the items ordered. Odoo POS "
+"provides two features to perform these tasks seamlessly: **Bill Printing** "
+"and **Bill Splitting**."
 msgstr ""
-"Use o recurso * Impressão de fatura * para imprimir a fatura antes do "
-"pagamento. Isso é útil se a conta ainda está sujeita a evoluir e, portanto, "
-"não é o bilhete definitivo."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:10
-msgid "Configure Bill Printing"
-msgstr "Configurar impressão de fatura"
 
 #: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:12
 msgid ""
-"To activate *Bill Printing*, go to :menuselection:`Point of Sale --> "
-"Configuration --> Point of sale` and select your PoS interface."
+"To activate the features, go to :menuselection:`Point of Sale --> "
+"Configuration --> Settings`, select the POS, and activate :guilabel:`Early "
+"Receipt Printing` and :guilabel:`Allow Bill Splitting` in the "
+":guilabel:`Restaurant & Bar` section."
 msgstr ""
-"Para ativar a * Impressão de fatura *, vá para: seleção de menus: `Ponto de "
-"venda -> Configuração -> Ponto de venda` e selecione sua interface de PDV."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:15
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rstNone
 msgid ""
-"Under the Bills & Receipts category, you will find *Bill Printing* option."
+"activate the bill printing and bill splitting features in the POS settings"
 msgstr ""
-"Na categoria Contas e recibos, você encontrará a opção * Impressão de notas "
-"fiscais *."
 
-#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:22
-msgid "Split a Bill"
-msgstr "Dividir uma conta"
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:21
+msgid "Bill printing"
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:24
-msgid "On your PoS interface, you now have a *Bill* button."
-msgstr "Em sua interface de PDV, agora você tem um botão * Conta *."
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:23
+msgid ""
+"From an open session, click :menuselection:`Bill --> Print` at any moment to"
+" generate and print a bill."
+msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:29
-msgid "When you use it, you can then print the bill."
-msgstr "Ao usá-lo, você pode imprimir a fatura."
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:27
+msgid ""
+"The printed bill is **not** final and will be updated to reflect any changes"
+" to the order."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:30
+msgid "Bill splitting"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:32
+msgid ""
+"From an open session, click :guilabel:`Split` to select the items to "
+"regroup. Once everything is selected, click :guilabel:`Payment` and proceed "
+"to checkout for these items. Repeat for each guest."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:36
+msgid ""
+"Once you return to the table, the selected items are no longer on order, as "
+"they have been paid for."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:38
+msgid "The feature is available as soon as at least two items are ordered."
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/bill_printing.rst:41
+msgid ":doc:`floors_tables`"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:3
-msgid "Using fiscal positions in PoS"
-msgstr "Usando posições fiscais no PdS"
+msgid "Tax rates (fiscal positions)"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/fiscal_position.rst:5
 msgid ""
@@ -3698,9 +3594,161 @@ msgstr ""
 "Agora, o botão *tax* é substituído por um botão *no local* quando na "
 "interface *PoS*."
 
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:3
+msgid "Floors and tables management"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:6
+msgid "Add a floor"
+msgstr "Adicione um piso"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:8
+msgid ""
+"Once your *Point of Sale* has been configured, select *Table Management* "
+"under :menuselection:`Point of Sale --> Configuration --> Point of Sale`. "
+"Then, click on *Floors* to create and name your floor and tables."
+msgstr ""
+"Uma vez configurado seu *Ponto de venda*, selecione *Gerenciamento de mesas*"
+" em :menuselection:`Ponto de venda --> Configuração --> Ponto de venda`. Em "
+"seguida, clique em *Piso* para criar e nomear seu piso e suas mesas."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid ""
+"View of the table management feature. Way to manage and create floors for a "
+"pos"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid ""
+"Backend view of a restaurant floor. Table name and number of sits for each "
+"table"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:21
+msgid "Don’t forget to link your floor to your point of sale."
+msgstr "Não se esqueça de ligar seu andar ao seu ponto de venda."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:24
+msgid "Add tables"
+msgstr "Adicionar mesas"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:26
+msgid ""
+"To add tables, you can also open your PoS interface to see your floor(s)."
+msgstr ""
+"Para adicionar tabelas, você também pode abrir sua interface PdS para ver "
+"seu(s) piso(s)."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid "View of the floors menu to manage several floors at the same time"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:33
+msgid ""
+"Then, click on *Edit Mode* (pencil icon on the upper right corner) to be "
+"allowed to create, move, modify tables, etc."
+msgstr ""
+"Em seguida, clique em *Editar Modo* (ícone de lápis no canto superior "
+"direito) para ter permissão para criar, mover, modificar tabelas, etc."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid ""
+"View of the floor management. Add tables, the number of sits, their name and"
+" their shape"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:41
+msgid ""
+"To make your table easier to be found, you can rename them, change their "
+"shape, size or even color. It is also possible to add the maximum number of "
+"sits the table can have."
+msgstr ""
+"Para facilitar a localização de sua mesa, você pode renomeá-las, mudar sua "
+"forma, tamanho ou até mesmo sua cor. Também é possível acrescentar o número "
+"máximo de lugares que a mesa pode ter."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:48
+msgid "Register your table(s) orders"
+msgstr "Registre seus pedidos de mesa (s)"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:50
+msgid ""
+"To register an order, click on the respective table. By doing so, you are "
+"taken to your main interface."
+msgstr ""
+"Para registrar um pedido, clique na respectiva tabela. Ao fazer isso, você é"
+" levado à sua interface principal."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid "View of the pos interface to register orders"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:58
+msgid "Transfer customer(s)"
+msgstr "Cliente (s) de transferência"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:60
+msgid ""
+"If your customers want to move to another table after they already ordered, "
+"use the transfer button. This way, the order is also moved to the new table."
+msgstr ""
+"Se seus clientes quiserem passar para outra mesa depois de terem feito o "
+"pedido, use o botão de transferência. Desta forma, o pedido também é movido "
+"para a nova mesa."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:64
+msgid "To do so, select the table your customer is currently on."
+msgstr ""
+"Para fazer isso, selecione a tabela em que seu cliente está atualmente."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid "View of the restaurant tables, one having a pending order"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:70
+msgid ""
+"Now, click on the transfer button and select the table to which you are "
+"transferring your customer."
+msgstr ""
+"Agora, clique no botão de transferência e selecione a tabela para a qual "
+"você está transferindo seu cliente."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid ""
+"View of the pos interface and transfer button. How to transfer customers from one table\n"
+"to another"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:79
+msgid "Register an additional order"
+msgstr "Registre um pedido adicional"
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:81
+msgid ""
+"When registering an order, use the + button to simultaneously proceed to "
+"another one."
+msgstr ""
+"Ao registrar um pedido, use o botão + para prosseguir simultaneamente para "
+"outro."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:84
+msgid ""
+"Then, you can shift between your orders and process the payment when needed."
+msgstr ""
+"Então, você pode alternar entre seus pedidos e processar o pagamento quando "
+"necessário."
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rstNone
+msgid "View of the - button, allowing employees to close/remove an order"
+msgstr ""
+
+#: ../../content/applications/sales/point_of_sale/restaurant/floors_tables.rst:92
+msgid "The - button allows you to remove the order you are currently on."
+msgstr "O botão - permite que você retire o pedido em que está atualmente."
+
 #: ../../content/applications/sales/point_of_sale/restaurant/kitchen_printing.rst:3
-msgid "Print orders at the kitchen or bar"
-msgstr "Imprimir pedidos na cozinha ou no bar"
+msgid "Orders printing"
+msgstr ""
 
 #: ../../content/applications/sales/point_of_sale/restaurant/kitchen_printing.rst:5
 msgid ""
@@ -3767,250 +3815,6 @@ msgid ""
 "When you press it, it will print the order on your kitchen/bar printer."
 msgstr ""
 "Ao pressioná-lo, o pedido será impresso na impressora de sua cozinha / bar."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:3
-msgid "Manage your tables"
-msgstr "Gerencie suas mesas"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:5
-msgid ""
-"Restaurants have specific needs that shops don’t have. That’s why Odoo gives"
-" restaurant owners several unique features to help them manage their "
-"business in the best possible way."
-msgstr ""
-"Os restaurantes têm necessidades específicas que as lojas não têm. É por "
-"isso que a Odoo oferece aos proprietários de restaurantes várias "
-"características únicas para ajudá-los a administrar seus negócios da melhor "
-"maneira possível."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:9
-msgid ""
-"Floor and table management, bill splitting, or even the possibility to print"
-" orders from the kitchen, everything is there to help your business shine "
-"and your employees to work efficiently."
-msgstr ""
-"Gerenciamento de pisos e mesas, divisão de contas, ou mesmo a possibilidade "
-"de imprimir pedidos da cozinha, tudo está lá para ajudar sua empresa a "
-"brilhar e seus funcionários a trabalhar eficientemente."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:16
-msgid ""
-"To activate the bar/restaurant features, go to :menuselection:`Point of Sale"
-" --> Configuration --> Point of Sale` and open your PoS. Now, select *Is a "
-"Bar/Restaurant*."
-msgstr ""
-"Para ativar as características do bar/restaurante, vá para "
-":menuselection:`Point of Sale --> Configuration --> Point of Sale` e abra "
-"seu PdV. Agora, selecione *É um bar/restaurante*."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "Restaurant set up. Enabling the is a bar/Restaurant feature on a PoS"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:24
-msgid ""
-"New features are shown with a fork and a knife next to it, indicating that "
-"they are restaurant-specific."
-msgstr ""
-"Novas características são mostradas com um garfo e uma faca junto a ele, "
-"indicando que são específicas para restaurantes."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "Several restaurant features. Bill printing, bill splitting and tips"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:32
-msgid "Add a floor"
-msgstr "Adicione um piso"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:34
-msgid ""
-"Once your *Point of Sale* has been configured, select *Table Management* "
-"under :menuselection:`Point of Sale --> Configuration --> Point of Sale`. "
-"Then, click on *Floors* to create and name your floor and tables."
-msgstr ""
-"Uma vez configurado seu *Ponto de venda*, selecione *Gerenciamento de mesas*"
-" em :menuselection:`Ponto de venda --> Configuração --> Ponto de venda`. Em "
-"seguida, clique em *Piso* para criar e nomear seu piso e suas mesas."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid ""
-"View of the table management feature. Way to manage and create floors for a "
-"pos"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid ""
-"Backend view of a restaurant floor. Table name and number of sits for each "
-"table"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:47
-msgid "Don’t forget to link your floor to your point of sale."
-msgstr "Não se esqueça de ligar seu andar ao seu ponto de venda."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:50
-msgid "Add tables"
-msgstr "Adicionar mesas"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:52
-msgid ""
-"To add tables, you can also open your PoS interface to see your floor(s)."
-msgstr ""
-"Para adicionar tabelas, você também pode abrir sua interface PdS para ver "
-"seu(s) piso(s)."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "View of the floors menu to manage several floors at the same time"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:59
-msgid ""
-"Then, click on *Edit Mode* (pencil icon on the upper right corner) to be "
-"allowed to create, move, modify tables, etc."
-msgstr ""
-"Em seguida, clique em *Editar Modo* (ícone de lápis no canto superior "
-"direito) para ter permissão para criar, mover, modificar tabelas, etc."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid ""
-"View of the floor management. Add tables, the number of sits, their name and"
-" their shape"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:67
-msgid ""
-"To make your table easier to be found, you can rename them, change their "
-"shape, size or even color. It is also possible to add the maximum number of "
-"sits the table can have."
-msgstr ""
-"Para facilitar a localização de sua mesa, você pode renomeá-las, mudar sua "
-"forma, tamanho ou até mesmo sua cor. Também é possível acrescentar o número "
-"máximo de lugares que a mesa pode ter."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:72
-msgid "Register your table(s) orders"
-msgstr "Registre seus pedidos de mesa (s)"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:74
-msgid ""
-"To register an order, click on the respective table. By doing so, you are "
-"taken to your main interface."
-msgstr ""
-"Para registrar um pedido, clique na respectiva tabela. Ao fazer isso, você é"
-" levado à sua interface principal."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "View of the pos interface to register orders"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:82
-msgid "Transfer customer(s)"
-msgstr "Cliente (s) de transferência"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:84
-msgid ""
-"If your customers want to move to another table after they already ordered, "
-"use the transfer button. This way, the order is also moved to the new table."
-msgstr ""
-"Se seus clientes quiserem passar para outra mesa depois de terem feito o "
-"pedido, use o botão de transferência. Desta forma, o pedido também é movido "
-"para a nova mesa."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:88
-msgid "To do so, select the table your customer is currently on."
-msgstr ""
-"Para fazer isso, selecione a tabela em que seu cliente está atualmente."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "View of the restaurant tables, one having a pending order"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:94
-msgid ""
-"Now, click on the transfer button and select the table to which you are "
-"transferring your customer."
-msgstr ""
-"Agora, clique no botão de transferência e selecione a tabela para a qual "
-"você está transferindo seu cliente."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid ""
-"View of the pos interface and transfer button. How to transfer customers from one table\n"
-"to another"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:103
-msgid "Register an additional order"
-msgstr "Registre um pedido adicional"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:105
-msgid ""
-"When registering an order, use the + button to simultaneously proceed to "
-"another one."
-msgstr ""
-"Ao registrar um pedido, use o botão + para prosseguir simultaneamente para "
-"outro."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:108
-msgid ""
-"Then, you can shift between your orders and process the payment when needed."
-msgstr ""
-"Então, você pode alternar entre seus pedidos e processar o pagamento quando "
-"necessário."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rstNone
-msgid "View of the - button, allowing employees to close/remove an order"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/restaurant/restaurant.rst:116
-msgid "The - button allows you to remove the order you are currently on."
-msgstr "O botão - permite que você retire o pedido em que está atualmente."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:3
-msgid "Offer a bill-splitting option"
-msgstr "Ofereça uma opção de divisão de contas"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:5
-msgid ""
-"Offering an easy bill splitting solution to your customers will leave them "
-"with a positive experience. That's why this feature is available out-of-the-"
-"box in the Odoo Point of Sale application."
-msgstr ""
-"Oferecer uma solução de divisão de contas fácil para seus clientes irá "
-"deixá-los com uma experiência positiva. É por isso que esse recurso está "
-"disponível fora da caixa no aplicativo Odoo Ponto de Venda."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:12
-msgid ""
-"To activate the *Bill Splitting* feature, go to :menuselection:`Point of "
-"Sales --> Configuration --> Point of sale` and select your PoS interface."
-msgstr ""
-"Para ativar o recurso * Divisão de fatura *, acesse: seleção de menus: "
-"`Ponto de venda -> Configuração -> Ponto de venda` e selecione sua interface"
-" de PDV."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:16
-msgid ""
-"Under the Bills & Receipts category, you will find the Bill Splitting "
-"option."
-msgstr "Na categoria Contas & Recibos, você encontrará a opção Dividir Conta."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:23
-msgid "Split a bill"
-msgstr "Dividir uma conta"
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:25
-msgid "In your PoS interface, you now have a *Split* button."
-msgstr "Em sua interface PDV, agora você tem um botão * Dividir *."
-
-#: ../../content/applications/sales/point_of_sale/restaurant/split.rst:30
-msgid ""
-"When you use it, you will be able to select what that guest should had and "
-"process the payment, repeating the process for each guest."
-msgstr ""
-"Ao utilizá-lo, você poderá selecionar o que aquele hóspede deve ter e "
-"processar o pagamento, repetindo o processo para cada hóspede."
 
 #: ../../content/applications/sales/point_of_sale/restaurant/tips.rst:3
 msgid "Tips"
@@ -4623,15 +4427,11 @@ msgstr ""
 msgid ":doc:`../restaurant/bill_printing`"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:23
-msgid ":doc:`../restaurant/split`"
-msgstr ""
-
-#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:26
+#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:25
 msgid "Reprint a receipt"
 msgstr "Reimprimir um recibo"
 
-#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:28
+#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:27
 msgid ""
 "From the POS interface, click :guilabel:`Orders`, open the dropdown "
 "selection menu next to the search bar, and change the default :guilabel:`All"
@@ -4643,7 +4443,7 @@ msgstr ""
 msgid "print receipt button from the backend"
 msgstr ""
 
-#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:37
+#: ../../content/applications/sales/point_of_sale/shop/receipts.rst:36
 msgid ""
 "You can filter the list of orders using the search bar. Type in your "
 "reference and click :guilabel:`Receipt Number`, :guilabel:`Date`, or "
@@ -7466,8 +7266,9 @@ msgid ":doc:`currencies`"
 msgstr ":doc:`currencies`"
 
 #: ../../content/applications/sales/sales/products_prices/prices/pricing.rst:146
-msgid ":doc:`/applications/websites/ecommerce/maximizing_revenue/pricing`"
-msgstr ":doc:`/aplicações/sites web/ecomércio/maximização_receita/preço"
+msgid ""
+":doc:`/applications/websites/ecommerce/managing_products/price_management`"
+msgstr ""
 
 #: ../../content/applications/sales/sales/products_prices/products.rst:5
 msgid "Manage your products"
@@ -7713,6 +7514,10 @@ msgstr ""
 msgid ""
 "Save your **Search Engine Id**. You’ll need it for the next step in Odoo!"
 msgstr ""
+
+#: ../../content/applications/sales/sales/products_prices/products/product_images.rst:88
+msgid "Odoo"
+msgstr "Odoo"
 
 #: ../../content/applications/sales/sales/products_prices/products/product_images.rst:90
 msgid ""

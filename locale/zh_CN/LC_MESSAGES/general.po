@@ -7,26 +7,26 @@
 # 黎伟杰 <674416404@qq.com>, 2022
 # Miao Zhou <zhoumiao_nuaa@outlook.com>, 2022
 # Connie Xiao <connie.xiao@elico-corp.com>, 2022
-# Datasource International <Hennessy@datasourcegroup.com>, 2022
 # fausthuang, 2022
 # 稀饭~~ <wangwhai@qq.com>, 2022
+# Datasource International <Hennessy@datasourcegroup.com>, 2022
 # Mandy Choy <mnc@odoo.com>, 2022
 # diaojiaolou <124412206@qq.com>, 2022
 # 山西清水欧度(QQ:54773801) <54773801@qq.com>, 2022
 # zhao yonghui, 2022
 # Raymond Yu <cl_yu@hotmail.com>, 2022
-# Emily Jia <eji@odoo.com>, 2022
-# Martin Trigaux, 2023
 # Jeffery CHEN Fan <jeffery9@gmail.com>, 2023
+# Martin Trigaux, 2023
+# Emily Jia <eji@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 17:52+0000\n"
+"POT-Creation-Date: 2023-03-16 11:06+0000\n"
 "PO-Revision-Date: 2022-10-04 12:53+0000\n"
-"Last-Translator: Jeffery CHEN Fan <jeffery9@gmail.com>, 2023\n"
+"Last-Translator: Emily Jia <eji@odoo.com>, 2023\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -1558,80 +1558,74 @@ msgid "Email Communication"
 msgstr "电子邮件通信"
 
 #: ../../content/applications/general/email_communication/email_domain.rst:3
-msgid "Send an email with Odoo"
+msgid "Configure DNS records to send emails in Odoo"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:6
-msgid "Use an email domain in Odoo"
+msgid "SPAM labels overview"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:8
 msgid ""
-"Documents in Odoo (such as a CRM opportunity, a sales order, an invoice, "
-"etc.) have a discussion thread, called *chatter*."
+"Sometimes, emails from Odoo are misclassified by the different email "
+"providers and end up in spam folders. At the moment, some settings are out "
+"of Odoo's control, notably the way the different email providers classify "
+"Odoo's emails according to their own restriction policy and/or limitations."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:11
+#: ../../content/applications/general/email_communication/email_domain.rst:12
 msgid ""
-"When a database user posts a message in the chatter, this message is sent by"
-" email to the followers of the document. If a follower replies to the "
-"message, the reply updates the chatter, and Odoo relays the reply to the "
-"followers as a notification."
+"It is standard in Odoo that emails are received from ``\"name of the "
+"author\" <notifications@mycompany.odoo.com>``. In other words this can be "
+"translated to: ``\"name of the author\" "
+"<{ICP.mail.from.filter}@{mail.catchall.domain}>``. In this case ICP stands "
+"for `ir.config.parameters`, which are the System Parameters. Deliverability "
+"is greatly improved with the :ref:`notifications configuration "
+"<email_servers/notifications>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:15
+#: ../../content/applications/general/email_communication/email_domain.rst:18
 msgid ""
-"Messages sent in the chatter from internal database users to external users "
-"(such as partners, customers, or vendors) are relayed on behalf of the "
-"database users. Messages sent back to the chatter from external users will "
-"appear in the chatter from their respective email addresses, or as they are "
-"listed in their Contacts record."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:20
-msgid ""
-"If the Odoo database is hosted on the cloud (Odoo Online or Odoo.sh), it is "
-"not necessary to add an outgoing email server to send emails from a custom "
-"domain."
+"In order for servers to accept emails from Odoo on a more regular basis, one"
+" of the solutions is for customers to create rules within their own mailbox."
+" A filter can be added to the email inbox so that when email is received "
+"from Odoo (`notifications@mycompany.odoo.com`) it is moved to the inbox. It "
+"is also possible to add the Odoo database domain onto a safe senders list or"
+" whitelist on the receiving domain."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:24
 msgid ""
-"The Odoo server is subject to a daily email limit to prevent abuse. The "
-"default limit is 200 emails sent per day for databases with an "
-"**Enterprise** subscription. This limit can be increased under certain "
-"conditions. See the :doc:`FAQ <faq>` or contact support for more "
-"information."
+"If an Odoo email server appears on a blacklist, notify Odoo via a `new help "
+"ticket <https://www.odoo.com/help>`_ and the support team will work to get "
+"the servers removed from the blacklist."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:29
+#: ../../content/applications/general/email_communication/email_domain.rst:28
 msgid ""
-"To ensure that emails sent to and from the chatter reach their intended "
-"contacts, instead of being considered spam, Odoo recommends configuring the "
-"domain name."
+"Should the Odoo database be using a custom domain for sending emails from "
+"Odoo there are three records that should be implemented on the custom "
+"domain's DNS to ensure deliverability of email. This includes setting "
+"records for :abbr:`SPF (Sender Policy Framework)`, :abbr:`DKIM (DomainKeys "
+"Identified Mail)` and :abbr:`DMARC (Domain-based Message Authentication, "
+"Reporting, & Conformance)`. Ultimately though, it is up to the discretion of"
+" the final receiving mailbox."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:32
-msgid ""
-"For the same reason, Odoo also recommends giving each database user an email"
-" address from the configured domain, rather than a generic email address "
-"domain (such as gmail.com, outlook.com, etc.)."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:39
+#: ../../content/applications/general/email_communication/email_domain.rst:38
 msgid "Be SPF compliant"
 msgstr "符合 SPF 标准"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:41
+#: ../../content/applications/general/email_communication/email_domain.rst:40
 msgid ""
 "The Sender Policy Framework (SPF) protocol allows the owner of a domain name"
 " to specify which servers are allowed to send emails from that domain. When "
-"a server receives an incoming email, it checks if the IP address of the "
-"sending server is on the list of allowed IPs according to the sender's "
+"a server receives an incoming email, it checks whether the IP address of the"
+" sending server is on the list of allowed IPs according to the sender's "
 ":abbr:`SPF (Sender Policy Framework)` record."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:47
+#: ../../content/applications/general/email_communication/email_domain.rst:46
 msgid ""
 "The :abbr:`SPF (Sender Policy Framework)` verification is performed on the "
 "domain mentioned in the `Return-Path` field of the email. In the case of an "
@@ -1639,13 +1633,7 @@ msgid ""
 "`mail.catchall.domain` key in the database system parameters."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:51
-msgid ""
-"See the :ref:`documentation on incoming emails "
-"<email_communication/inbound_messages>`."
-msgstr "请参阅 ：ref：`有关传入电子邮件的文档<email_communication/inbound_messages>`。"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:53
+#: ../../content/applications/general/email_communication/email_domain.rst:50
 msgid ""
 "The :abbr:`SPF (Sender Policy Framework)` policy of a domain is set using a "
 "TXT record. The way to create or modify a TXT record depends on the provider"
@@ -1654,46 +1642,43 @@ msgid ""
 ":abbr:`SPF (Sender Policy Framework)` record."
 msgstr ""
 
+#: ../../content/applications/general/email_communication/email_domain.rst:55
+msgid ""
+"If the domain name does not yet have a :abbr:`SPF (Sender Policy Framework)`"
+" record, create one using the following input: `v=spf1 include:_spf.odoo.com"
+" ~all`"
+msgstr ""
+
 #: ../../content/applications/general/email_communication/email_domain.rst:58
 msgid ""
-"If the domain name does not yet have an :abbr:`SPF (Sender Policy "
-"Framework)` record, the content of the record to create it is as follows:"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:61
-msgid "`v=spf1 include:_spf.odoo.com ~all`"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:63
-msgid ""
-"If the domain name already has an :abbr:`SPF (Sender Policy Framework)` "
+"If the domain name already has a :abbr:`SPF (Sender Policy Framework)` "
 "record, the record must be updated (and do not create a new one)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:68
+#: ../../content/applications/general/email_communication/email_domain.rst:63
 msgid ""
 "If the TXT record is `v=spf1 include:_spf.google.com ~all`, edit it to add "
 "`include:_spf.odoo.com`: `v=spf1 include:_spf.odoo.com "
 "include:_spf.google.com ~all`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:71
+#: ../../content/applications/general/email_communication/email_domain.rst:66
 msgid ""
 "Check if the :abbr:`SPF (Sender Policy Framework)` record is valid with a "
 "free tool like `MXToolbox SPF <https://mxtoolbox.com/spf.aspx>`_."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:77
+#: ../../content/applications/general/email_communication/email_domain.rst:72
 msgid "Enable DKIM"
 msgstr "启用DKIM"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:79
+#: ../../content/applications/general/email_communication/email_domain.rst:74
 msgid ""
 "The DomainKeys Identified Mail (DKIM) allows a user to authenticate emails "
 "with a digital signature."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:82
+#: ../../content/applications/general/email_communication/email_domain.rst:77
 msgid ""
 "When sending an email, the Odoo server includes a unique :abbr:`DKIM "
 "(DomainKeys Identified Mail)` signature in the headers. The recipient's "
@@ -1703,25 +1688,25 @@ msgid ""
 " and has not been altered during transport."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:88
+#: ../../content/applications/general/email_communication/email_domain.rst:83
 msgid ""
 "To enable :abbr:`DKIM (DomainKeys Identified Mail)`, add a :abbr:`CNAME "
 "(Canonical Name)` record to the :abbr:`DNS (Domain Name System)` zone of the"
 " domain name:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:91
+#: ../../content/applications/general/email_communication/email_domain.rst:86
 msgid "`odoo._domainkey IN CNAME odoo._domainkey.odoo.com.`"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:94
+#: ../../content/applications/general/email_communication/email_domain.rst:89
 msgid ""
 "If the domain name is `mycompany.com`, make sure to create a subdomain "
 "`odoo._domainkey.mycompany.com` whose canonical name is "
 "`odoo._domainkey.odoo.com.`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:97
+#: ../../content/applications/general/email_communication/email_domain.rst:92
 msgid ""
 "The way to create or modify a :abbr:`CNAME (Canonical Name)` record depends "
 "on the provider hosting the :abbr:`DNS (Domain Name System)` zone of the "
@@ -1729,18 +1714,18 @@ msgid ""
 "<email_communication/SPFDKIM_common_providers>`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:101
+#: ../../content/applications/general/email_communication/email_domain.rst:96
 msgid ""
 "Check if the :abbr:`DKIM (DomainKeys Identified Mail)` record is valid with "
 "a free tool like `DKIM Core <https://dkimcore.org/tools/>`_. If a selector "
 "is asked, enter `odoo`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:105
+#: ../../content/applications/general/email_communication/email_domain.rst:100
 msgid "Check the DMARC policy"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:107
+#: ../../content/applications/general/email_communication/email_domain.rst:102
 msgid ""
 "The Domain-based Message Authentication, Reporting, & Conformance (DMARC) "
 "record is a protocol that unifies :abbr:`SPF (Sender Policy Framework)` and "
@@ -1749,6 +1734,14 @@ msgid ""
 "Conformance)` record of a domain name tell the destination server what to do"
 " with an incoming email that fails the :abbr:`SPF (Sender Policy Framework)`"
 " and/or :abbr:`DKIM (DomainKeys Identified Mail)` check."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:110
+msgid "DMARC: TXT record"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:112
+msgid "`v=DMARC1; p=none;`"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:114
@@ -1762,6 +1755,7 @@ msgid "`p=none`"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:118
+#: ../../content/applications/general/email_communication/email_domain.rst:171
 msgid "`p=quarantine`"
 msgstr ""
 
@@ -1803,31 +1797,145 @@ msgstr ""
 
 #: ../../content/applications/general/email_communication/email_domain.rst:139
 msgid ""
+":abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
+"Conformance)` records are comprised of tags in the form of :abbr:`DNS "
+"(Domain Name System)` records. These tags/parameters allow for reporting, "
+"such as :abbr:`RUA (Reporting URI of aggregate reports)` and :abbr:`RUF "
+"(Reporting URI for forensic reports)`, along with more precise specification"
+" like :abbr:`PCT (Percentage of messages subjected to filtering)`, :abbr:`P "
+"(Policy for organizational domain)`, :abbr:`SP (Policy for subdomains of the"
+" OD)` :abbr:`ADKIM (Alignment mode for DKIM)` & :abbr:`ASPF (Alignment mode "
+"for SPF)`. For best practice, the the :abbr:`DMARC (Domain-based Message "
+"Authentication, Reporting, & Conformance)` policy should not start out being"
+" too restrictive."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:148
+msgid "The following chart displays available tags:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:154
+msgid "Tag Name"
+msgstr "标签名称"
+
+#: ../../content/applications/general/email_communication/email_domain.rst:155
+msgid "Purpose"
+msgstr "目的"
+
+#: ../../content/applications/general/email_communication/email_domain.rst:156
+msgid "Example"
+msgstr "示例"
+
+#: ../../content/applications/general/email_communication/email_domain.rst:157
+msgid "v"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:158
+msgid "Protocol version"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:159
+msgid "`v=DMARC1`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:160
+msgid "pct"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:161
+msgid "Percentage of messages subjected to filtering"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:162
+msgid "`pct=20`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:163
+msgid "ruf"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:164
+msgid "Reporting URI for forensic reports"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:165
+msgid "`ruf=mailto:authfail@example.com`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:166
+msgid "rua"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:167
+msgid "Reporting URI of aggregate reports"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:168
+msgid "`rua=mailto:aggrep@example.com`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:169
+msgid "p"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:170
+msgid "Policy for organizational domain"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:172
+msgid "sp"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:173
+msgid "Policy for subdomains of the OD"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:174
+msgid "`sp=reject`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:175
+msgid "adkim"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:176
+msgid "Alignment mode for DKIM"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:177
+msgid "`adkim=s`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:178
+msgid "aspf"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:179
+msgid "Alignment mode for SPF"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:180
+msgid "`aspf=r`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_domain.rst:182
+msgid ""
 "Check the :abbr:`DMARC (Domain-based Message Authentication, Reporting, & "
 "Conformance)` record of a domain name with a tool like `MXToolbox DMARC "
 "<https://mxtoolbox.com/DMARC.aspx>`_."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:142
+#: ../../content/applications/general/email_communication/email_domain.rst:186
 msgid ""
-"If a partner, customer, or vendor, uses :abbr:`DMARC (Domain-based Message "
-"Authentication, Reporting, & Conformance)` and has defined one of these "
-"policies, the Odoo server cannot relay emails from this partner to the "
-"database users."
+"`DMARC.org is another great resource to learn about DMARC records. "
+"<https://dmarc.org/overview/>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:146
-msgid ""
-"To solve this issue, :ref:`handle user notifications in Odoo "
-"<discuss_app/notification_preferences>`, or replace the email address of the"
-" partner with a default email address."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:153
+#: ../../content/applications/general/email_communication/email_domain.rst:192
 msgid "SPF, DKIM & DMARC documentation of common providers"
 msgstr "SPF，DKIM和DMARC常见提供商的文档"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:155
+#: ../../content/applications/general/email_communication/email_domain.rst:194
 msgid ""
 "`OVH DNS "
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
@@ -1835,36 +1943,36 @@ msgstr ""
 "`OVH DNS "
 "<https://docs.ovh.com/us/en/domains/web_hosting_how_to_edit_my_dns_zone/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:156
+#: ../../content/applications/general/email_communication/email_domain.rst:195
 msgid ""
 "`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 msgstr ""
 "`OVH SPF <https://docs.ovh.com/us/en/domains/web_hosting_the_spf_record/>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:157
+#: ../../content/applications/general/email_communication/email_domain.rst:196
 msgid ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 msgstr ""
 "`GoDaddy TXT record <https://www.godaddy.com/help/add-a-txt-record-19232>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:158
+#: ../../content/applications/general/email_communication/email_domain.rst:197
 msgid "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
 msgstr "`GoDaddy SPF <https://www.godaddy.com/help/add-an-spf-record-19218>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:159
+#: ../../content/applications/general/email_communication/email_domain.rst:198
 msgid ""
 "`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 msgstr ""
 "`GoDaddy DKIM <https://www.godaddy.com/help/add-a-cname-record-19236>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:160
+#: ../../content/applications/general/email_communication/email_domain.rst:199
 msgid ""
 "`NameCheap "
 "<https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-"
 "do-i-add- txtspfdkimdmarc-records-for-my-domain/>`_"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:162
+#: ../../content/applications/general/email_communication/email_domain.rst:201
 msgid ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
@@ -1872,12 +1980,12 @@ msgstr ""
 "`CloudFlare DNS <https://support.cloudflare.com/hc/en-"
 "us/articles/360019093151>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:163
+#: ../../content/applications/general/email_communication/email_domain.rst:202
 msgid ""
 "`Google Domains <https://support.google.com/domains/answer/3290350?hl=en>`_"
 msgstr "“谷歌域名<https://support.google.com/domains/answer/3290350?hl=en>”_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:164
+#: ../../content/applications/general/email_communication/email_domain.rst:203
 msgid ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
@@ -1885,64 +1993,18 @@ msgstr ""
 "`Azure DNS <https://docs.microsoft.com/en-us/azure/dns/dns-getstarted-"
 "portal>`_"
 
-#: ../../content/applications/general/email_communication/email_domain.rst:166
+#: ../../content/applications/general/email_communication/email_domain.rst:205
 msgid ""
 "To fully test the configuration, use the `Mail-Tester <https://www.mail-"
 "tester.com/>`_ tool, which gives a full overview of the content and "
-"configuration in one sent email. Mail-Tester can also be used for other, "
-"lesser-known providers."
+"configuration in one sent email. Mail-Tester can also be used to configure "
+"records for other, lesser-known providers."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_domain.rst:173
-msgid "Use a default email address"
-msgstr "使用默认电子邮件地址"
-
-#: ../../content/applications/general/email_communication/email_domain.rst:175
+#: ../../content/applications/general/email_communication/email_domain.rst:210
 msgid ""
-"Access the :guilabel:`System Parameters` by activating :ref:`developer mode "
-"<developer-mode>` and going to :menuselection:`Settings --> Technical --> "
-"Parameters --> System Parameters` menu."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:178
-msgid ""
-"To force the email address from which emails are sent, a combination of the "
-"following keys needs to be set in the system parameters of the database:"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:181
-msgid ""
-"`mail.default.from`: accepts the local part or a complete email address as "
-"value"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:182
-msgid ""
-"`mail.default.from_filter`: accepts a domain name or a full email address as"
-" value"
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:185
-msgid ""
-"The `mail.default.from_filter` works only for `odoo-bin` configurations, "
-"otherwise this parameter can be set using the `from_filter` field on "
-"`ir.mail_server`."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:188
-msgid ""
-"If the email address of the author does not match "
-"`mail.default.from_filter`, the email address is replaced by "
-"`mail.default.from` (if it contains a full email address) or a combination "
-"of `mail.default.from` and `mail.catchall.domain`."
-msgstr ""
-
-#: ../../content/applications/general/email_communication/email_domain.rst:192
-msgid ""
-"If the `from_filter` contains a full email address, and if the "
-"`mail.default.from` is the same as this address, then all of the email "
-"addresses that are different from `mail.default.from` will be encapsulated "
-"in `mail.default.from`."
+"`Using Mail-Tester to set SPF Records for specific carriers "
+"<https://www.mail-tester.com/spf/>`_"
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:3
@@ -1957,394 +2019,219 @@ msgstr "Odoo 在线或 Odoo.sh 用户"
 msgid ""
 "Since **Odoo sets up its own mail servers for the database**, outgoing and "
 "incoming emails already work out-of-the-box. So for **Odoo Online** and "
-"**Odoo.sh** customers, nothing needs to be done!"
+"**Odoo.sh** customers, nothing needs to be configured!"
 msgstr ""
-"鉴于**Odoo为数据库设置了自有邮件服务器**，可以立即发送、接收电子邮件。因此，**Odoo "
-"Online**和**Odoo.sh**用户无需任何操作！"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:11
+#: ../../content/applications/general/email_communication/email_servers.rst:12
 msgid ""
 "Unless an external mail server is required to send large batches of mass "
-"mailing, simply use the standard online Odoo database normally since it has "
-"already been preconfigured for email."
-msgstr "除非需要通过外部邮件服务器发送大量邮件，否则仅需正常使用标准线上Odoo数据库，已经对电子邮件进行了预配置。"
+"emails, simply use the standard online Odoo database normally since it has "
+"already been pre-configured to send email."
+msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:15
+#: ../../content/applications/general/email_communication/email_servers.rst:16
+msgid ""
+"The Odoo server is subject to a daily email limit to prevent abuse. The "
+"default limit is 200 emails sent per day for databases with an "
+"**Enterprise** subscription. This limit can be increased under certain "
+"conditions. See the :doc:`FAQ <faq>` or contact support for more "
+"information."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:22
 msgid "Scope of this documentation"
 msgstr "本文档的范围"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:17
+#: ../../content/applications/general/email_communication/email_servers.rst:24
 msgid ""
-"This document is **mainly dedicated to Odoo on-premise users** who don't "
-"benefit from an out-of-the-box solution to send and receive emails in Odoo, "
-"unlike `Odoo Online <https://www.odoo. com/trial>`_ and `Odoo.sh "
-"<https://www.odoo.sh>`_."
+"This document is **mainly dedicated to Odoo on-premise databases** who don't"
+" benefit from an out-of-the-box solution to send and receive emails in Odoo,"
+" unlike `Odoo Online <https://www.odoo. com/trial>`_ and `Odoo.sh "
+"<https://www.odoo.sh>`_. Incoming and outgoing servers must be configured "
+"for on-premise databases."
 msgstr ""
-"本文件**主要面向Odoo本地用户**，该等用户无法在Odoo中发送、接收电子邮件，与`Odoo Online <https://www.odoo. "
-"com/trial>`_ 和`Odoo.sh <https://www.odoo.sh>`_不同。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:21
+#: ../../content/applications/general/email_communication/email_servers.rst:29
 msgid ""
 "The following sections below contain information on how to integrate an "
 "external email server with Odoo."
 msgstr "下面的章节包含了关于如何将外部电子邮件服务器与Odoo集成的信息。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:25
+#: ../../content/applications/general/email_communication/email_servers.rst:33
 msgid ""
-"If no one in the company is used to managing email servers, Odoo Online and "
-"Odoo.sh are strongly recommended. Those Odoo hosting types' email systems "
-"work instantly and are monitored by professionals. Nevertheless, a company "
-"can use their own email server if they want to manage the email server's "
-"reputation themselves."
+"If no one in the company is employed to manage email servers, Odoo Online "
+"and Odoo.sh are strongly recommended. In these Odoo hosting types email "
+"sending and receiving works instantly and is monitored by professionals. "
+"Nevertheless, a company can use their own email server if they want to "
+"manage the email server's reputation themselves. For more information see "
+":doc:`Configure DNS records to send emails in Odoo <email_domain>`"
 msgstr ""
-"如果公司里没有人习惯于管理电子邮件服务器，强烈推荐 Odoo 在线和 Odoo.sh。这些Odoo托管类型的电子邮件系统立即工作，并由专业人员监控。 "
-"尽管如此，如果公司想维护管理电子邮件服务器的声誉，可以使用自己的电子邮件服务器。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:31
+#: ../../content/applications/general/email_communication/email_servers.rst:42
+msgid "Default notifications system"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:44
 msgid ""
-"Office 365 email servers don't easily allow the sending of external emails "
-"from hosts like Odoo. Refer to `Microsoft's documentation "
-"<https://support.office.com/en-us/article/How-to-set-up-a- multifunction-"
-"device-or-application-to-send-email-using-"
-"Office-365-69f58e99-c550-4274-ad18- c805d654b4c4>`_ to make it work."
+"Documents in Odoo (such as a CRM opportunity, a sales order, an invoice, "
+"etc.) have a discussion thread, called *chatter*."
 msgstr ""
-"Office 365 电子邮件服务器不容易允许从 Odoo "
-"等主机发送外部电子邮件。参考“微软的文档<https://support.office.com/en-us/article/How-to-set-"
-"up-a- multifunction-device-or-application-to-send-email-using-"
-"Office-365-69f58e99-c550-4274-ad18- c805d654b4c4>”_来使其发挥作用。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:37
+#: ../../content/applications/general/email_communication/email_servers.rst:47
+msgid ""
+"When a database user posts a message in the chatter, this message is sent by"
+" email to the followers of the document as a notification (except to the "
+"sender). If a follower replies to the message, the reply updates the "
+"chatter, and Odoo relays another reply to the followers as a notification. "
+"Messages sent back to the chatter from users or external users will appear "
+"in the chatter from their respective email, or as the name listed in their "
+"*Contacts* record."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:53
+msgid ""
+"These notifications are sent using a default from address. For more "
+"information see :ref:`Use a default email address "
+"<email_communication/default>`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:57
 msgid "Manage outbound messages"
 msgstr "管理出站邮件"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:39
+#: ../../content/applications/general/email_communication/email_servers.rst:59
 msgid ""
 "As a system admin, go to :menuselection:`Settings --> General Settings --> "
-"Discuss` in Odoo, and enable the :guilabel:`External Email Servers` option. "
+"Discuss` in Odoo, and enable the :guilabel:`Custom Email Servers` option. "
 "Then, click :guilabel:`Save`. Next, click :guilabel:`Outgoing Email Servers`"
 " and click :guilabel:`Create` to create a new outgoing mail server record in"
 " Odoo. Reference the SMTP data of the external email server. Once all the "
 "information has been filled out, click :guilabel:`Test Connection`."
 msgstr ""
-"在Odoo中，以系统管理员身份进入：菜单选择：`设置--> 一般设置--> "
-"讨论`，启用guilabel：`外部电子邮件服务器`选项，然后单击guilabel：`保存`。单击guilabel：`出站电子邮件服务器`，再单击guilabel：`创建`，创建新的出站邮件服务器记录。引用外部电子邮件服务器的SMTP数据。填写完所有信息后，单击guilabel：`测试连接`。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:45
-msgid "Here is a typical configuration for a G Suite server."
-msgstr "下面是 G Suite 服务器的典型配置。"
-
-#: ../../content/applications/general/email_communication/email_servers.rstNone
-msgid "The typical G Suite configuration on Odoo."
-msgstr "Odoo中的典型G套件配置。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:51
-msgid ""
-"Then, go back to :menuselection:`Settings --> General Settings --> Discuss` "
-"and set the email domain name in the :guilabel:`Alias Domain` name. Finally,"
-" click :guilabel:`Save` to finish setting up the email server."
-msgstr ""
-"返回：菜单选择：`设置 --> 一般设置--> 讨论`，在guilabel：`别名域`中设置电子邮件域名。最后，单击`保存`，电子邮件服务器设置完成。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:56
-msgid ""
-"If an `[AUTHENTICATION FAILED] Invalid credentials (Failure)` warning "
-"appears when :guilabel:`Test Connection` is clicked for a Gmail address, "
-"activate the :guilabel:`Less secure app access` option. A direct link can be"
-" `accessed here <https://myaccount.google.com/ lesssecureapps?pli=1>`_."
-msgstr ""
-"如果在Gmail地址中单击guilabel：`测试连接` "
-"后出现`（【验证失败】域相关参数设置有误（失败））`警告信息，请激活guilabel：`Less secure app "
-"access`选项。直接链接可以是`accessed here <https://myaccount.google.com/ "
-"lesssecureapps?pli=1>`_。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:61
-msgid ""
-"In addition to that, enable the :guilabel:`IMAP setting` on the Gmail "
-"account."
-msgstr "还应在Gmail帐户中启用guilabel：`IMAP setting`。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:64
-msgid "Use an Office 365 server"
-msgstr "使用 Office 365 服务器"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:66
-msgid ""
-"An Office 365 server can be used if the database's hosting type is **Odoo "
-"on-premise**. Office 365 SMTP relays are not compatible with Odoo Online or "
-"Odoo.sh unless Odoo is configured to :ref:`force the outgoing \"From\" "
-"address <email_communication/default_from>`."
+msgid ":doc:`/administration/maintain/google_oauth`"
 msgstr ""
-"如果数据库托管类型为**Odoo本地**，可以使用Office 365服务器。Office 365 SMTP中继与Odoo "
-"Online和Odoo.sh不兼容，除非Odoo配置至ref：`强制设置“发件人”地址<email_communication/default_from>`。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:67
+msgid ":doc:`/administration/maintain/azure_oauth`"
+msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:70
 msgid ""
-"Please refer to `Microsoft's documentation <https://support.office.com/en-"
-"us/article/How-to-set-up- a-multifunction-device-or-application-to-send-"
-"email-using-Office-365-69f58e99-c550-4274-ad18- c805d654b4c4>`_ to configure"
-" an SMTP relay for the Odoo database's IP address."
+"Ensuring the outgoing domain has :abbr:`SPF (Sender Policy Framework)`, "
+":abbr:`DKIM (DomainKeys Identified Mail)` and :abbr:`DMARC (Domain-based "
+"Message Authentication, Reporting, & Conformance)` set up on the :abbr:`DNS "
+"(Domain Name System)` will improve deliverability. For more information see "
+":doc:`email_domain`."
 msgstr ""
-"请参见`Microsoft文件<https://support.office.com/en-us/article/How-to-set-up- "
-"a-multifunction-device-or-application-to-send-email-using-"
-"Office-365-69f58e99-c550-4274-ad18- c805d654b4c4>`_ ，为Odoo数据库IP地址配置SMTP中继。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:75
-msgid "Use a G Suite server"
-msgstr "使用 G Suite 服务器"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:77
-msgid ""
-"A G Suite server can be used for any Odoo hosting type. To do so, set up the"
-" SMTP relay service. The configuration steps are explained in `Google "
-"documentation <https://support.google.com /a/answer/2956491?hl=en>`__."
+#: ../../content/applications/general/email_communication/email_servers.rst:78
+msgid "Port restriction"
 msgstr ""
-"G Suite 服务器可以用于任何 Odoo "
-"主机类型。要做到这一点，需要设置SMTP中继服务。配置步骤在“谷歌文档<https://support.google.com "
-"/a/answer/2956491?hl=en>”__中解释。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:84
-msgid "Restriction"
-msgstr "限制条件"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:86
+#: ../../content/applications/general/email_communication/email_servers.rst:80
 msgid ""
-"Please note that port 25 is blocked for security reasons on Odoo Online and "
+"Note that port 25 is blocked for security reasons on the Odoo Online and "
 "Odoo.sh platforms. Try using ports 465, 587, or 2525 instead."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:92
+#: ../../content/applications/general/email_communication/email_servers.rst:86
 msgid "Use a default \"From\" email address"
 msgstr "使用默认的“发件人”电子邮件地址"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:94
+#: ../../content/applications/general/email_communication/email_servers.rst:88
 msgid ""
 "Sometimes, an email's \"From\" (outgoing) address can belong to a different "
 "domain, and that can be a problem."
 msgstr "有时，电子邮件的\"From\"（传出）地址可能属于不同的域，这可能是一个问题。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:97
+#: ../../content/applications/general/email_communication/email_servers.rst:91
 msgid ""
 "For example, if a customer with the email address "
-"*mary\\@customer.example.com* responds to a message, Odoo will try to "
+"`mary\\@customer.example.com` responds to a message, Odoo will try to "
 "redistribute that same email to the other subscribers in the thread. "
-"However, if the domain *customer.example.com* forbids that kind of usage for"
+"However, if the domain `customer.example.com` forbids that kind of usage for"
 " security, the email that Odoo is trying to redistribute would get rejected "
 "by some recipients' email servers."
 msgstr ""
-"例如，如果电子邮件地址为*mary\\@customer.example.com*的客户响应了一条消息，Odoo将向线程中的其他订阅用户发送电子邮件。但如果*customer.example.com*域出于安全考虑禁止该等操作，某些电子邮件服务器将拒绝Odoo的该等操作。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:96
+msgid ""
+"To avoid that problem, Odoo sends all emails using a \"From\" address from "
+"the same authorized domain."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:99
+msgid ""
+"Access the :guilabel:`System Parameters` by activating :ref:`developer mode "
+"<developer-mode>` and going to :menuselection:`Settings --> Technical --> "
+"Parameters --> System Parameters` menu."
+msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:102
 msgid ""
-"To avoid that problem, make sure all emails use a \"From\" address from the "
-"same authorized domain."
-msgstr "要避免此问题，请确保所有电子邮件都使用来自同一授权域的\"发件人\"地址。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:104
-msgid ""
-"If the MTA supports `SRS (Sender Rewriting Scheme) "
-"<https://en.wikipedia.org/wiki/Sender_Rewriting _Scheme>`_, SRS can be "
-"enabled to handle these situations. However, that is more complex and "
-"requires more technical knowledge that is not meant to be covered by this "
-"documentation."
+"To force the email address from which emails are sent, a combination of the "
+"following keys needs to be set in the system parameters of the database:"
 msgstr ""
-"如果MTA支持`发件人重写方案（SRS）<https://en.wikipedia.org/wiki/Sender_Rewriting "
-"_Scheme>`_，可以启用SRS，以处理此类情况。但过程将更为复杂，需要本文件未介绍的技术知识。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:108
-msgid "Instead, Odoo can be configured to do something similar by itself:"
-msgstr "但可以配置Odoo，以进行类似操作："
-
-#: ../../content/applications/general/email_communication/email_servers.rst:110
+#: ../../content/applications/general/email_communication/email_servers.rst:105
 msgid ""
-"Set the :guilabel:`Alias Domain` name in the :menuselection:`Settings --> "
-"General Settings --> Discuss`."
-msgstr "在菜单选择：`设置--> 一般设置--> 讨论`中设置guilabel：`别名域`名。"
+"`mail.default.from`: accepts the local part or a complete email address as "
+"value"
+msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:0
-msgid "Setting the domain alias configuration on Odoo."
-msgstr "在Odoo中设置域别名配置。"
+#: ../../content/applications/general/email_communication/email_servers.rst:106
+msgid ""
+"`mail.default.from_filter`: accepts a domain name or a full email address as"
+" value"
+msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:116
-msgid "Turn on :doc:`developer mode </applications/general/developer_mode>`."
-msgstr "开启文件：`开发者模式 </applications/general/developer_mode>`。"
+#: ../../content/applications/general/email_communication/email_servers.rst:109
+msgid ""
+"The `mail.default.from_filter` works only for `odoo-bin` configurations or "
+"the default Odoo email server, otherwise this parameter can be set using the"
+" `from_filter` field on `ir.mail_server`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:112
+msgid ""
+"The field can be a domain name or an entire email address, or it can remain "
+"empty. If the sender's email address does not match this set filter, then "
+"the email will be encapsulated using a combination of the two system "
+"parameters: `mail.default.from` and `mail.catchall.domain`."
+msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rst:117
 msgid ""
-"Go to :menuselection:`Settings --> Technical --> Parameters --> System "
-"Parameters`."
-msgstr "进入菜单选择：`设置 --> 技术--> 参数--> 系统参数`。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:118
-msgid "Add one system parameter from the following list:"
-msgstr "添加以下列表中的一个系统参数："
-
-#: ../../content/applications/general/email_communication/email_servers.rst:120
-msgid ""
-"To use the same \"From\" address for *all* outgoing messages, use the key "
-"`mail.force.smtp.from` and set that address as value (such as "
-"`outgoing@mycompany.example.com`)."
+"In the following example, the from email address is replaced with the "
+"combination of the the two system parameters (`mail.default.from` and "
+"`mail.catchall.domain`). This is the default\\ notifications configuration "
+"in Odoo: ``“Admin” <admin@example.com>`` => ``“Admin” "
+"<notifications@mycompany.com>``."
 msgstr ""
-"为*所有*传出邮件使用相同的“发件人”电子邮件地址，请使用`mail.force.smtp.from`键，并将电子邮件地址设置为值（如`outgoing@mycompany.example.com`）。"
 
 #: ../../content/applications/general/email_communication/email_servers.rst:122
 msgid ""
-"To keep the original \"From\" address for emails that use the same domain, "
-"but change it for emails that use a different domain, use the key "
-"`mail.dynamic.smtp.from` and set the value as the email address that should "
-"be used in those cases (such as `outgoing@mycompany.example.com` )."
-msgstr ""
-"为使用同一域的电子邮件保留原“发件人”的电子邮件地址，并更改使用不同域的电子邮件的“发件人”电子邮件地址，请使用`mail.dynamic.smtp.from`键，并将此类情况下使用的电子邮件地址设置为值（如`outgoing@mycompany.example.com`）。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:130
-msgid "Manage inbound messages"
-msgstr "管理入站信息"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:132
-msgid "Odoo relies on generic email aliases to fetch incoming messages."
-msgstr "Odoo依赖通用的电子邮件别名来收取入站邮件。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:134
-msgid ""
-"**Reply messages** of messages sent from Odoo are routed to their original "
-"discussion thread (and to the inbox of all its followers) by the catchall "
-"alias (**catchall@**)."
-msgstr ""
-"从Odoo所发邮件对应的  **复邮**  通过catchall别名（**catchall@**）接入原来的讨论话题（以及所有关注者的收件箱）。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:136
-msgid ""
-"**Bounced messages** are routed to **bounce@** in order to track them in "
-"Odoo. This is especially used in `Odoo Email Marketing "
-"<https://www.odoo.com/page/email-marketing>`__ to opt-out invalid "
-"recipients."
-msgstr ""
-" **回的邮**  接入 **bounce@** ，以便在Odoo上追踪。这项功能特别用于`Odoo邮件营销 "
-"<https://www.odoo.com/page/email-marketing>`__，可取消选择无效的收件人。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:139
-msgid ""
-"**Original messages**: Several business objects have their own alias to "
-"create new records in Odoo from incoming emails:"
-msgstr " **始邮**  ：几个业务对象有自己的别名，从入站邮件中创建Odoo新记录："
-
-#: ../../content/applications/general/email_communication/email_servers.rst:142
-msgid ""
-"Sales Channel (to create Leads or Opportunities in `Odoo CRM "
-"<https://www.odoo.com/page/ crm>`__),"
+"In other words if the email address of the author does not match "
+"`mail.default.from_filter`, the email address is replaced by "
+"`mail.default.from` (if it contains a full email address) or a combination "
+"of `mail.default.from` and `mail.catchall.domain`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:144
+#: ../../content/applications/general/email_communication/email_servers.rst:126
 msgid ""
-"Support Channel (to create Tickets in `Odoo Helpdesk "
-"<https://www.odoo.com/page/helpdesk>`__),"
-msgstr "支持渠道（在`Odoo服务台 <https://www.odoo.com/page/helpdesk>`__创建工单），"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:145
-msgid ""
-"Projects (to create new Tasks in `Odoo Project <https://www.odoo.com/page "
-"/project-management>`__),"
-msgstr ""
-"项目（在`Odoo项目<https://www.odoo.com/page /project-management>`__中创建新任任务），"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:147
-msgid ""
-"Job Positions (to create Applicants in `Odoo Recruitment "
-"<https://www.odoo.com/page /recruitment>`__),"
-msgstr "工作岗位（在`Odoo招聘<https://www.odoo.com/page /recruitment>`__中创建申请人），"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:149
-msgid "etc."
-msgstr "等等"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:151
-msgid ""
-"Depending on the mail server, there might be several methods to fetch "
-"emails. The easiest and most recommended method is to manage one email "
-"address per Odoo alias in the mail server."
-msgstr "根据您的邮件服务器，可能有几种方法来收取电子邮件。最简单也最推荐的方法是在邮件服务器中按Odoo别名管理电子邮箱。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:154
-msgid ""
-"Create the corresponding email addresses in the mail server (catchall@, "
-"bounce@, sales@, etc.)."
-msgstr "在您的邮件服务器中创建相应的电子邮件地址（catchall@、bounce@、sales@等）。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:155
-msgid ""
-"Set the :guilabel:`Alias Domain` name in :menuselection:`Settings --> "
-"General Settings --> Discuss`."
-msgstr "在菜单选项：`设置--> 一般设置--> 讨论`中设置guilabel：`别名域`名。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:157
-msgid ""
-"If the database's hosting type is Odoo on-premise, create an "
-":guilabel:`Incoming Mail Server` in Odoo for each alias. This can be done "
-"from the General Settings as well. Fill out the form according to the email "
-"provider's settings. Leave the :guilabel:`Actions to Perform on Incoming "
-"Mails` field blank. Once all the information has been filled out, click on "
-":guilabel:`TEST & CONFIRM`."
-msgstr ""
-"如果您使用本地部署的Odoo，请在Odoo中为每个别名创建一个guilabel：`入站邮件服务器`。您也可以在一般设置中进行操作。根据您的电子邮件服务提供商的设置填写表格。将guilabel：`对入站邮件执行的操作`字段留空。填写完所有信息后，单击guilabel:`测试和确认`。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:0
-msgid "Incoming mail server configuration on Odoo."
-msgstr "Odoo中的接收邮件服务器配置。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:167
-msgid ""
-"If the database's hosting type is Odoo Online or Odoo.sh, redirecting "
-"incoming messages to Odoo's domain name instead of the external email server"
-" is recommended. That way, incoming messages can be received without delay. "
-"Odoo Online only fetches incoming messages of external servers once every "
-"hour. Redirections for all email addresses should be set to Odoo's domain "
-"name in the email server (e.g. *catchall\\@mydomain.ext* to "
-"*catchall\\@mycompany.odoo.com*)."
-msgstr ""
-"如果您使用Odoo "
-"Online或Odoo.sh，建议您将入站邮件重新定向至Odoo的域名，而不是外部电子邮件服务器。这样，您将不会延迟接收入站邮件。Odoo "
-"Online每小时仅收取一次外部服务器的入站邮件。您应在电子邮件服务器中将所有电子邮箱重定向至Odoo的域名（如*catcall\\@mydomain.ext*设为*catcall"
-" \\@mycompany.Odoo.com*）。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:173
-msgid ""
-"All the aliases are customizable in Odoo. Object aliases can be edited from "
-"their respective configuration view."
-msgstr "可在Odoo中自定义所有别名。可以在配置视图中编辑对象别名。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:177
-msgid ""
-"To edit catchall and bounce aliases, first activate the :ref:`developer mode"
-" <developer-mode>`. Then, go to :menuselection:`Settings --> Technical --> "
-"Parameters --> System Parameters` to customize the aliases "
-"(*mail.catchall.alias* & *mail.bounce.alias*)."
-msgstr ""
-"要编辑catchall和bounce别名，首先激活：ref:`开发者模式<developer-mode>`，然后前往 "
-":menuselection:`设置 --> 技术 --> 参数 --> 系统参数`定义别名（ *mail.catchall.alias* 和 * "
-"mail.bounce.alias* ）。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:0
-msgid "System parameters with catchall configuration in Odoo."
-msgstr "系统参数Odoo catchall配置"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:185
-msgid ""
-"By default, inbound messages are fetched every 5 minutes in Odoo on-premise."
-msgstr "Odoo默认第5分钟收取一次入站邮件。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:188
-msgid ""
-"This value can be changed in :ref:`developer mode <developer-mode>`. Go to "
-":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
-" and look for :guilabel:`Mail: Fetchmail Service`."
-msgstr ""
-"可以在ref:`开发模式<developer-mode>`中修改该值。进入菜单选择：`设置--> 技术--> 自动化--> "
-"预订操作`，查找：guilabel:`电子邮件：收取邮件服务`。"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:195
-msgid "Utilizing the From Filter on an outgoing email server"
+"If the `from_filter` contains a full email address, and if the "
+"`mail.default.from` is the same as this address, then all of the email "
+"addresses that are different from `mail.default.from` will be encapsulated "
+"in `mail.default.from`."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:197
+#: ../../content/applications/general/email_communication/email_servers.rst:133
+msgid "Utilizing the \"From\" filter on an outgoing email server"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:135
 msgid ""
 "The :guilabel:`FROM Filtering` field allows for the use of a specific "
 "outgoing email server depending on the :guilabel:`From` email address or "
@@ -2352,21 +2239,21 @@ msgid ""
 "improve the deliverability or sending success rate of emails sent from the "
 "database. Setting the :guilabel:`FROM Filtering` field can also be used to "
 "send from different domains in a multi-company environment. Access this "
-"field in Odoo by navigating to :menuselection:`Settings --> Custom Mail "
-"Servers --> Outgoing Mail Servers --> New`."
+"field in Odoo by navigating to :menuselection:`Settings --> Discuss --> "
+"Custom Mail Servers --> Outgoing Mail Servers --> New`."
 msgstr ""
 
 #: ../../content/applications/general/email_communication/email_servers.rstNone
 msgid "Outgoing email server settings and the FROM filter settings."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:208
+#: ../../content/applications/general/email_communication/email_servers.rst:146
 msgid ""
 "When an email is sent from Odoo while the :guilabel:`FROM Filtering` field "
 "is set, an email server is chosen in the following sequence:"
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:211
+#: ../../content/applications/general/email_communication/email_servers.rst:149
 msgid ""
 "First, Odoo searches for an email server that has the same :guilabel:`FROM "
 "Filtering` value as the :guilabel:`From` value (email address) defined in "
@@ -2375,7 +2262,7 @@ msgid ""
 ":guilabel:`FROM Filtering` value equal to `test\\@example.com` are returned."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:215
+#: ../../content/applications/general/email_communication/email_servers.rst:153
 msgid ""
 "However, if no email servers are found that use the :guilabel:`From` value, "
 "then Odoo searches for an email server that has the same *domain* as the "
@@ -2385,14 +2272,14 @@ msgid ""
 "`example.com` are returned."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:221
+#: ../../content/applications/general/email_communication/email_servers.rst:159
 msgid ""
 "If no email servers are found after checking for the domain, then Odoo "
 "returns all email servers that do not have any :guilabel:`FROM Filtering` "
 "value(s) set."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:224
+#: ../../content/applications/general/email_communication/email_servers.rst:162
 msgid ""
 "Should this query return no results, then Odoo performs a search for an "
 "email server using the system parameter: `mail.default.from`. First, the "
@@ -2401,7 +2288,7 @@ msgid ""
 "first outgoing email server (sorted by priority)."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:230
+#: ../../content/applications/general/email_communication/email_servers.rst:168
 msgid ""
 "If several email servers are found, then Odoo uses the first one according "
 "to its priority. For example, if there are two email servers, one with a "
@@ -2409,52 +2296,196 @@ msgid ""
 "server with a priority of `10` is used first."
 msgstr ""
 
-#: ../../content/applications/general/email_communication/email_servers.rst:235
-msgid "Set up different dedicated servers for transactional and mass mails"
-msgstr "为事务和群发邮件设置不同的专用服务器"
-
-#: ../../content/applications/general/email_communication/email_servers.rst:237
-msgid ""
-"In Odoo a separate Mail Transfer Agent (MTA) server can be used for "
-"transactional emails and mass mailings. Example: Use Postmark or SendinBlue "
-"for transactional emails, and Amazon SES, Mailgun or Sendgrid for mass "
-"mailings."
+#: ../../content/applications/general/email_communication/email_servers.rst:175
+msgid "Set up different dedicated servers for transactional and mass emails"
 msgstr ""
-"在Odoo中，独立邮件传输代理（MTA）服务器可以用于交易电子邮件和群发邮件。示例：使用Postmark或SendinBlue发送交易电子邮件，使用Amazon"
-" SES、Mailgun或Sendgrid发送群发邮件。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:242
+#: ../../content/applications/general/email_communication/email_servers.rst:177
+msgid ""
+"In Odoo a separate email server can be used for transactional emails and "
+"mass mailings. Example: Use Postmark or SendinBlue for transactional emails,"
+" and Amazon SES, Mailgun, Sendgrid or :doc:`Mailjet "
+"</administration/maintain/mailjet_api>` for mass mailings."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:182
 msgid ""
 "A default outgoing email server is already configured. Do not create an "
 "alternative one unless a specific external outgoing email server is needed "
 "for technical reasons."
 msgstr "默认的出站邮件服务器已配置。除非出于技术原因需要使用特定的外部出站邮件服务器，否则您不应创建替代邮件服务器。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:245
+#: ../../content/applications/general/email_communication/email_servers.rst:185
 msgid ""
 "To do this, first activate the :ref:`developer mode <developer-mode>`, and "
 "then go to :menuselection:`Settings --> Technical --> Outgoing` email "
-"servers. There, create two email MTA server settings; one for the "
+"servers. There, create two outgoing email server settings; one for the "
 "transactional emails and one for the mass mailing server. Make sure to give "
 "priority to the transactional server over the mass mailing server by "
-"providing a lower priority number for the transactional MTA server."
+"providing a lower priority number for the transactional email server."
 msgstr ""
-"为此，您应首先激活ref：`开发人员模式<developer-mode>`，然后转到：菜单选择：`设置 -->技术 "
-"-->出站\"邮件服务器。在那里，您须创建两个邮件 MTA "
-"服务器设置。一个用于交易电子邮件，一个用于群发电子邮件。请务必将交易电子邮件服务器的优先级标记为低至群发电子邮件服务器。"
 
-#: ../../content/applications/general/email_communication/email_servers.rst:251
+#: ../../content/applications/general/email_communication/email_servers.rst:191
 msgid ""
 "Now, go to :menuselection:`Email Marketing --> Settings` and enable "
-":guilabel:`Dedicated Server`. With these settings, Odoo uses the server with"
-" the lower priority for transactional emails, and the server here selected "
-"for mass mails. Note that in this case, the domain's Sender Policy Framework"
-" (SPF) records must be set to include both transactional and mass mail "
-"servers."
+":guilabel:`Dedicated Server`. Choose the appropriate email server. With "
+"these settings, Odoo uses the server with the lower priority for "
+"transactional emails, and the server here selected for mass mails. Note that"
+" in this case, the domain's Sender Policy Framework (SPF) records must be "
+"set to include both transactional and mass mail servers."
 msgstr ""
-"现在，转到：菜单选择：'电子邮件营销 -->设置'，并启用guilabel:`特定服务器`。通过这些设置，Odoo "
-"将服务器用于交易电子邮件的低优先级，而此处选定的服务器用于群发电子邮件。请注意，在这种情况下，您须设置域名的发送者策略框架 （SPF） "
-"记录，以包括交易和群发邮件服务器。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:198
+msgid ":doc:`email_domain`"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:203
+msgid "Manage inbound messages"
+msgstr "管理入站信息"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:205
+msgid "Odoo relies on generic email aliases to fetch incoming messages."
+msgstr "Odoo依赖通用的电子邮件别名来收取入站邮件。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:207
+msgid ""
+"**Reply messages** of messages sent from Odoo are routed to their original "
+"discussion thread (and to the inbox of all its followers) by the alias of "
+"the model if there is any or by the catchall alias (**catchall@**). Replies "
+"to messages of models that don't have a custom alias will use the catchall "
+"alias (`catchall@mycompany.odoo.com`). The catchall address, however, does "
+"not have another action attached to it like other aliases might, it is only "
+"used to collect replies."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:212
+msgid ""
+"**Bounced messages** are used as a Return-Path. One example this is "
+"especially useful for is in `Odoo Email Marketing "
+"<https://www.odoo.com/page/email-marketing>`__. In this case bounces are "
+"opt-out based on if the email bounced too many times (5) in the last month "
+"and the bounces are separated by one week. This is done to avoid "
+"blacklisting someone because of a mail server error. If these circumstances "
+"are met then the email is considered invalid and is blacklisted. A log note "
+"is added on the contact under :guilabel:`Blacklisted Email Addresses` on the"
+" :guilabel:`Email Marketing Configuration Menu`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:220
+msgid ""
+"Messages that bounce in the chatter (outside of Email Marketing) will "
+"populate a red envelope indicating the failed delivery. This can be helpful "
+"to know that a Sales Order or an Invoice did not reach its final "
+"destination."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:223
+msgid ""
+"**Original messages**: several business objects have their own alias to "
+"create new records in Odoo from incoming emails:"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:226
+msgid ""
+"Sales channel (to create *Leads* or *Opportunities* in `Odoo CRM "
+"<https://www.odoo.com/page/ crm>`_)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:228
+msgid ""
+"Support channel (to create *Tickets* in `Odoo Helpdesk "
+"<https://www.odoo.com/page/helpdesk>`_)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:229
+msgid ""
+"Projects (to create new *Tasks* in `Odoo Project <https://www.odoo.com/page "
+"/project-management>`_)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:231
+msgid ""
+"Job positions (to create *Applicants* in `Odoo Recruitment "
+"<https://www.odoo.com/page /recruitment>`_)"
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:234
+msgid ""
+"Depending on the mail server, there might be several methods to fetch "
+"emails. The easiest and most recommended method is to manage one email "
+"address per Odoo alias in the mail server."
+msgstr "根据您的邮件服务器，可能有几种方法来收取电子邮件。最简单也最推荐的方法是在邮件服务器中按Odoo别名管理电子邮箱。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:237
+msgid ""
+"Create the corresponding email addresses in the mail server (**catchall@**, "
+"**bounce@**, **sales@**, etc.)."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:239
+msgid ""
+"Set the :guilabel:`Alias Domain` name in :menuselection:`Settings --> "
+"General Settings --> Discuss`. Changing the :guilabel:`Alias Domain` will "
+"change the catchall's domain for the database."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:242
+msgid ""
+"If the database's hosting type is Odoo on-premise, create an "
+":guilabel:`Incoming Mail Server` in Odoo for each alias. To create a new "
+"incoming server go to: :menuselection:`Settings --> Discuss --> Custom Mail "
+"Servers --> Incoming Mail Servers --> New` Fill out the form according to "
+"the email provider's settings. Leave the :guilabel:`Actions to Perform on "
+"Incoming Mails` field blank. Once all the information has been filled out, "
+"click on :guilabel:`TEST & CONFIRM`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:0
+msgid "Incoming mail server configuration on Odoo."
+msgstr "Odoo中的接收邮件服务器配置。"
+
+#: ../../content/applications/general/email_communication/email_servers.rst:252
+msgid ""
+"If the database's hosting type is Odoo Online or Odoo.sh, redirecting or "
+"forwarding incoming messages to Odoo's domain name instead of the external "
+"email server is recommended. That way, incoming messages can be received "
+"without delay. Redirections for all email addresses should be set to Odoo's "
+"domain name in the email server (e.g. `catchall\\@mydomain.ext` to "
+"`catchall\\@mycompany.odoo.com`)."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:258
+msgid ""
+"All the aliases are customizable in Odoo. Object aliases can be edited from "
+"their respective configuration view by navigating to "
+":menuselection:`Settings --> Technical Menu --> Email --> Aliases`."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:262
+msgid ""
+"To edit catchall and bounce aliases, first activate the :ref:`developer mode"
+" <developer-mode>`. Then, go to :menuselection:`Settings --> Technical --> "
+"Parameters --> System Parameters` to customize the aliases "
+"(`mail.catchall.alias` & `mail.bounce.alias`). These types of changes should"
+" be completed prior to the database going live. If a customer replies after "
+"a change is made then the system will not recognize the old alias and the "
+"reply won't be received."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:268
+msgid ""
+"By default, inbound messages are fetched every 5 minutes for on-premise "
+"databases."
+msgstr ""
+
+#: ../../content/applications/general/email_communication/email_servers.rst:271
+msgid ""
+"This value can be changed in :ref:`developer mode <developer-mode>`. Go to "
+":menuselection:`Settings --> Technical --> Automation --> Scheduled Actions`"
+" and look for :guilabel:`Mail: Fetchmail Service`."
+msgstr ""
+"可以在ref:`开发模式<developer-mode>`中修改该值。进入菜单选择：`设置--> 技术--> 自动化--> "
+"预订操作`，查找：guilabel:`电子邮件：收取邮件服务`。"
 
 #: ../../content/applications/general/email_communication/email_template.rst:3
 msgid "Email Templates"
@@ -4250,11 +4281,11 @@ msgid ""
 "categories, and so on."
 msgstr ""
 
-#: ../../content/applications/general/users.rst:7
-msgid "Users & Companies"
-msgstr "用户 & 公司"
+#: ../../content/applications/general/users.rst:5
+msgid "Users and companies"
+msgstr ""
 
-#: ../../content/applications/general/users.rst:9
+#: ../../content/applications/general/users.rst:7
 msgid ""
 "Odoo defines a *user* as someone who has access to a database to perform "
 "daily tasks. You can add as many users as you need and, in order to restrict"
@@ -4649,6 +4680,43 @@ msgstr ":doc:`多公司指南</开发人员/操作方法/公司>`"
 #: ../../content/applications/general/users/companies.rst:133
 msgid ":doc:`../../finance/accounting/others/multi_currency`"
 msgstr ":doc:`../../finance/accounting/others/multi_currency`"
+
+#: ../../content/applications/general/users/delete_account.rst:3
+msgid "Deleting an Odoo.com Account"
+msgstr ""
+
+#: ../../content/applications/general/users/delete_account.rst:5
+msgid ""
+"To delete your Odoo.com account, access the delete option by clicking on the"
+" user icon. The delete option can be accessed by going to :menuselection:`My"
+" Account --> Edit Security Settings --> Delete Account`. It can also be "
+"accessed by going to https://www.odoo.com/my/home."
+msgstr ""
+
+#: ../../content/applications/general/users/delete_account.rst:10
+msgid ""
+"Deleting an Odoo account is irreversible. Take caution when performing this "
+"action as the Odoo.com account will not be retrievable."
+msgstr ""
+
+#: ../../content/applications/general/users/delete_account.rst:13
+msgid ""
+"Upon clicking the :guilabel:`Delete Account` button, a pop-up window will "
+"appear, asking you to confirm the account deletion."
+msgstr ""
+
+#: ../../content/applications/general/users/delete_account.rstNone
+msgid ""
+"Clicking on the Delete Account button will populate a window verifying the "
+"change."
+msgstr ""
+
+#: ../../content/applications/general/users/delete_account.rst:20
+msgid ""
+"Confirm the deletion by entering the :guilabel:`password` and the "
+":guilabel:`login` for the account being deleted. Click the :guilabel:`Delete"
+" Account` button to confirm the deletion."
+msgstr ""
 
 #: ../../content/applications/general/users/language.rst:3
 msgid "Change language"

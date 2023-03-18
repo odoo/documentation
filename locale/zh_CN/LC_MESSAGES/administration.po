@@ -28,7 +28,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-03 17:52+0000\n"
+"POT-Creation-Date: 2023-03-16 11:06+0000\n"
 "PO-Revision-Date: 2023-01-13 14:30+0000\n"
 "Last-Translator: lyper lai, 2023\n"
 "Language-Team: Chinese (China) (https://www.transifex.com/odoo/teams/41243/zh_CN/)\n"
@@ -58,98 +58,182 @@ msgid "Install"
 msgstr "安装"
 
 #: ../../content/administration/install/cdn.rst:3
-msgid "Setting up a Content Delivery Network (CDN)"
-msgstr "设置内容分发网络 （CDN）"
+msgid "Set up a content delivery network (CDN)"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:8
-msgid "Deploying with KeyCDN_"
-msgstr "使用KeyCDN_进行部署"
+msgid "Deploying with KeyCDN"
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:12
+#: ../../content/administration/install/cdn.rst:10
 msgid ""
-"This document will guide you through the setup of a KeyCDN_ account with "
-"your Odoo powered website."
-msgstr "本文档将指导您通过Odoo驱动的网站设置KeyCDN_帐户。"
+"A :abbr:`CDN (Content Delivery Network)` or *content distribution network*, "
+"is a geographically distributed network of servers that provides high speed "
+"internet content. The :abbr:`CDN (Content Delivery Network)` provides quick,"
+" high-quality content delivery for content-heavy websites."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:16
-msgid "Step 1: Create a pull zone in the KeyCDN dashboard"
-msgstr "步骤 1：在 KeyCDN 仪表板中创建拉取区域"
-
-#: ../../content/administration/install/cdn.rst:21
+#: ../../content/administration/install/cdn.rst:14
 msgid ""
-"When creating the zone, enable the CORS option in the :guilabel:`advanced "
-"features` submenu. (more on that later)"
-msgstr "创建区域时，请在 ：guilabel：`高级功能` 子菜单中启用 CORS 选项。（稍后将详细介绍）"
+"This document will guide you through the setup of a KeyCDN_ account with an "
+"Odoo powered website."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:27
-msgid ""
-"Once done, you'll have to wait a bit while KeyCDN_ is crawling your website."
-msgstr "完成后，您必须等待一段时间，KeyCDN_抓取您的网站。"
+#: ../../content/administration/install/cdn.rst:17
+msgid "Create a pull zone in the KeyCDN dashboard"
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:32
+#: ../../content/administration/install/cdn.rst:19
 msgid ""
-"a new URL has been generated for your Zone, in this case it is "
-"``http://pulltest-b49.kxcdn.com``"
-msgstr "已为您的区域生成了一个新的URL，在本例中为“http://pulltest-b49.kxcdn.com`"
+"On the KeyCDN dashboard, start by navigating to the :menuselection:`Zones` "
+"menu item on the left. On the form, give a value to the :guilabel:`Zone "
+"Name`, which will appear as part of the :abbr:`CDN (Content Delivery "
+"Network)`'s :abbr:`URL (Uniform Resource Locator)`. Then, set the "
+":guilabel:`Zone Status` to :guilabel:`active` to engage the zone. For the "
+":guilabel:`Zone Type` set the value to :guilabel:`Pull`, and then, finally, "
+"under the :guilabel:`Pull Settings`, enter the :guilabel:`Origin URL`— this "
+"address should be the full Odoo database :abbr:`URL (Uniform Resource "
+"Locator)`."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:28
+msgid ""
+"Use ``https://yourdatabase.odoo.com`` and replace the *yourdatabase* "
+"subdomain prefix with the actual name of the database. A custom :abbr:`URL "
+"(Uniform Resource Locator)` can be used, as well, in place of the Odoo "
+"subdomain that was provided to the database."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rstNone
+msgid "KeyCDN's Zone configuration page."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:36
-msgid "Step 2: Configure the odoo instance with your zone"
-msgstr "步骤 2：使用您的区域配置 odoo 实例"
-
-#: ../../content/administration/install/cdn.rst:38
 msgid ""
-"In the Odoo back end, go to the :guilabel:`Website Settings`: menu, then "
-"activate the CDN support and copy/paste your zone URL in the :guilabel:`CDN "
-"Base URL` field. This field is only visible and configurable if you have "
-"developer mode activated."
+"Under the :guilabel:`General Settings` heading below the zone form, click "
+"the :guilabel:`Show all settings` button to expand the zone options. This "
+"should be the last option on the page. After expanding the "
+":guilabel:`General Settings` ensure that the :guilabel:`CORS` option is "
+":guilabel:`enabled`."
 msgstr ""
-"在 Odoo 后端，转到 ：guilabel：`网站设置`： 菜单，然后激活 CDN 支持并将您的区域 URL 复制/粘贴到 "
-"：guilabel：`CDN 基本 URL` 字段中。仅当激活了开发人员模式时，此字段才可见且可配置。"
 
-#: ../../content/administration/install/cdn.rst:46
+#: ../../content/administration/install/cdn.rst:41
 msgid ""
-"Now your website is using the CDN for the resources matching the "
-":guilabel:`CDN filters` regular expressions."
-msgstr "现在，您的网站正在将 CDN 用于与 :guilabel:`CDN filters` 正则表达式匹配的资源。"
+"Next, scroll to the bottom of the zone configuration page and "
+":guilabel:`Save` the changes. KeyCDN will indicate that the new zone will be"
+" deployed. This can take about 10 minutes."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rstNone
+msgid "KeyCDN deploying the new Zone."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:49
 msgid ""
-"You can have a look to the HTML of your website in order to check if the CDN"
-" integration is properly working."
-msgstr "您可以查看网站的HTML，以检查CDN集成是否正常工作。"
+"A new :guilabel:`Zone URL` has been generated for your Zone, in this example"
+" it is ``pulltest-xxxxx.kxcdn.com``. This value will differ for each "
+"database."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:52
+msgid ""
+"Copy this :guilabel:`Zone URL` to a text editor for later, as it will be "
+"used in the next steps."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:55
+msgid "Configure the Odoo instance with the new zone"
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:57
-msgid "Why should I activate CORS?"
-msgstr "为什么要激活 CORS？"
-
-#: ../../content/administration/install/cdn.rst:59
 msgid ""
-"A security restriction in some browsers (Firefox and Chrome at time of "
-"writing) prevents a remotely linked CSS file to fetch relative resources on "
-"this same external server."
-msgstr "某些浏览器（在撰写本文时的Firefox和Chrome）中的安全限制会阻止远程链接的CSS文件在同一外部服务器上获取相关资源。"
+"In the Odoo :guilabel:`Website` app, go to the :menuselection:`Settings` and"
+" then activate the :guilabel:`Content Delivery Network (CDN)` setting and "
+"copy/paste the :guilabel:`Zone URL` value from the earlier step into the "
+":guilabel:`CDN Base URL` field. This field is only visible and configurable "
+"when :doc:`Developer Mode <../../applications/general/developer_mode>` is "
+"activated."
+msgstr ""
 
 #: ../../content/administration/install/cdn.rst:63
 msgid ""
-"If you don't activate the CORS option in the CDN zone, the more obvious "
-"resulting problem on a default Odoo website will be the lack of font-awesome"
-" icons because the font file declared in the font-awesome CSS won't be "
-"loaded on the remote server."
+"Ensure that there are two *forward slashes* (`//`) before the :guilabel:`CDN"
+" Base URL` and one forward slash (`/`) after the :guilabel:`CDN Base URL`."
 msgstr ""
-"如果您没有在CDN区域中激活CORS选项，那么默认Odoo网站上更明显的问题将是缺少字体真棒图标，因为在font-awesome "
-"CSS中声明的字体文件不会加载到远程服务器上。"
 
-#: ../../content/administration/install/cdn.rst:68
-msgid "Here's what you would see on your homepage in such a case:"
-msgstr "在这种情况下，您可以在主页上看到以下内容："
+#: ../../content/administration/install/cdn.rst:66
+msgid ":guilabel:`Save` the settings when complete."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:73
-msgid "A security error message will also appear in the browser's console:"
-msgstr "浏览器控制台中还会出现一条安全错误消息："
+#: ../../content/administration/install/cdn.rstNone
+msgid "Activate the CDN setting in Odoo."
+msgstr ""
 
-#: ../../content/administration/install/cdn.rst:78
-msgid "Enabling the CORS option in the CDN fixes this issue."
-msgstr "在 CDN 中启用 CORS 选项可解决此问题。"
+#: ../../content/administration/install/cdn.rst:72
+msgid ""
+"Now the website is using the CDN for the resources matching the "
+":guilabel:`CDN filters` regular expressions."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:75
+msgid ""
+"In the HTML of the Odoo website, the :abbr:`CDN (content delivery network)` "
+"integration is evidenced as working properly by checking the :abbr:`URL "
+"(Uniform Resource Locators)` of images. The *CDN Base URL* value can be seen"
+" by using your web browser's :guilabel:`Inspect` feature on the Odoo "
+"website. Look for it's record by searching within the :guilabel:`Network` "
+"tab inside of devtools."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rstNone
+msgid ""
+"The CDN Base URL can be seen using the inspect function on the Odoo website."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:85
+msgid ""
+"Prevent security issues by activating cross-origin resource sharing (CORS)"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:87
+msgid ""
+"A security restriction in some browsers (such as Mozilla Firefox and Google "
+"Chrome) prevents a remotely linked CSS file to fetch relative resources on "
+"this same external server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:90
+msgid ""
+"If the :abbr:`CORS (Cross-Origin Resource Sharing)` option isn't enabled in "
+"the :guilabel:`CDN Zone`, the more obvious resulting problem on a standard "
+"Odoo website will be the lack of *Font Awesome* icons because the font file "
+"declared in the *Font Awesome* CSS won't be loaded from the remote server."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:95
+msgid ""
+"When these cross-origin resource issues occur, a security error message "
+"similar to the output below will appear in the web browser's developer "
+"console:"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:98
+msgid ""
+"``Font from origin 'http://pulltest-xxxxx.kxcdn.com' has been blocked from "
+"loading /shop:1 by Cross-Origin Resource Sharing policy: No 'Access-Control-"
+"Allow-Origin' header is present on the requested resource. Origin "
+"'http://yourdatabase.odoo.com' is therefore not allowed access.``"
+msgstr ""
+
+#: ../../content/administration/install/cdn.rstNone
+msgid "Error message populated in the browser console."
+msgstr ""
+
+#: ../../content/administration/install/cdn.rst:106
+msgid ""
+"Enabling the :abbr:`CORS (Cross-Origin Resource Sharing)` option in the "
+":abbr:`CDN (Content Delivery Network)` settings fixes this issue."
+msgstr ""
 
 #: ../../content/administration/install/deploy.rst:3
 msgid "System configuration"
@@ -729,33 +813,33 @@ msgid ""
 msgstr ""
 
 #: ../../content/administration/install/deploy.rst:420
-#: ../../content/administration/install/deploy.rst:447
+#: ../../content/administration/install/deploy.rst:442
 msgid ""
 "Using the above NGINX (https) configuration, the following location block "
 "should be added to serve static files via NGINX."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:442
+#: ../../content/administration/install/deploy.rst:437
 msgid ""
 "Say Odoo has been installed via the **source**. The two git repositories for"
 " Community and Enterprise have been cloned in :file:`/opt/odoo/community` "
 "and :file:`/opt/odoo/enterprise` respectively and the :option:`--addons-path"
 " <odoo-bin --addons-path>` is "
-"``'/opt/odoo/community/odoo/addons,/opt/community/addons,/opt/odoo/enterprise'``."
+"``'/opt/odoo/community/odoo/addons,/opt/odoo/community/addons,/opt/odoo/enterprise'``."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:464
+#: ../../content/administration/install/deploy.rst:459
 msgid ""
 "The actual NGINX configuration you need is highly dependent on your own "
 "installation. The two above snippets only highlight two possible "
 "configurations and may not be used as-is."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:468
+#: ../../content/administration/install/deploy.rst:463
 msgid "Serving attachments"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:470
+#: ../../content/administration/install/deploy.rst:465
 msgid ""
 "Attachments are files stored in the filestore which access is regulated by "
 "Odoo. They cannot be directly accessed via a static web server as accessing "
@@ -763,7 +847,7 @@ msgid ""
 "are stored and whether the current user can access them or not."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:475
+#: ../../content/administration/install/deploy.rst:470
 msgid ""
 "Nevertheless, once the file has been located and the access rights verified "
 "by Odoo, it is a good idea to serve the file using the static web server "
@@ -777,19 +861,19 @@ msgid ""
 "X-Accel)."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:485
+#: ../../content/administration/install/deploy.rst:480
 msgid ""
 "The X-Sendfile extension for apache (and compatible web servers) does not "
 "require any supplementary configuration."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:487
+#: ../../content/administration/install/deploy.rst:482
 msgid ""
 "The X-Accel extension for NGINX **does** require the following additionnal "
 "configuration:"
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:496
+#: ../../content/administration/install/deploy.rst:491
 msgid ""
 "In case you don't know what is the path to your filestore, start Odoo with "
 "the :option:`--x-sendfile <odoo-bin --x-sendfile>` option and navigate to "
@@ -798,18 +882,18 @@ msgid ""
 "need."
 msgstr ""
 
-#: ../../content/administration/install/deploy.rst:505
+#: ../../content/administration/install/deploy.rst:500
 msgid "Security"
 msgstr "安全"
 
-#: ../../content/administration/install/deploy.rst:507
+#: ../../content/administration/install/deploy.rst:502
 msgid ""
 "For starters, keep in mind that securing an information system is a "
 "continuous process, not a one-shot operation. At any moment, you will only "
 "be as secure as the weakest link in your environment."
 msgstr "首先，请记住，保护信息系统是一个连续的过程，而不是一次性操作。在任何时候，您都只能像环境中最薄弱的环节一样安全。"
 
-#: ../../content/administration/install/deploy.rst:511
+#: ../../content/administration/install/deploy.rst:506
 msgid ""
 "So please do not take this section as the ultimate list of measures that "
 "will prevent all security problems. It's only intended as a summary of the "
@@ -820,20 +904,20 @@ msgid ""
 msgstr ""
 "因此，请不要将此部分视为防止所有安全问题的最终措施列表。它仅作为安全行动计划中应确保包含的第一个重要事项的摘要。其余的将来自操作系统和发行版的最佳安全实践，用户，密码和访问控制管理等方面的最佳实践。"
 
-#: ../../content/administration/install/deploy.rst:517
+#: ../../content/administration/install/deploy.rst:512
 msgid ""
 "When deploying an internet-facing server, please be sure to consider the "
 "following security-related topics:"
 msgstr "部署面向互联网的服务器时，请务必考虑以下与安全相关的主题："
 
-#: ../../content/administration/install/deploy.rst:520
+#: ../../content/administration/install/deploy.rst:515
 msgid ""
 "Always set a strong super-admin admin password, and restrict access to the "
 "database management pages as soon as the system is set up. See "
 ":ref:`db_manager_security`."
 msgstr "始终设置强超级管理员密码，并在系统设置后立即限制对数据库管理页面的访问。请参阅：:ref:`db_manager_security`。"
 
-#: ../../content/administration/install/deploy.rst:523
+#: ../../content/administration/install/deploy.rst:518
 msgid ""
 "Choose unique logins and strong passwords for all administrator accounts on "
 "all databases. Do not use 'admin' as the login. Do not use those logins for "
@@ -843,7 +927,7 @@ msgid ""
 msgstr ""
 "为所有数据库上的所有管理员帐户选择唯一登录名和强密码。不要使用“admin”作为登录名。不要将这些登录名用于日常操作，仅用于控制/管理安装。*从不*使用任何默认密码，如管理员/管理员，即使对于测试/临时数据库也是如此。"
 
-#: ../../content/administration/install/deploy.rst:528
+#: ../../content/administration/install/deploy.rst:523
 msgid ""
 "Do **not** install demo data on internet-facing servers. Databases with demo"
 " data contain default logins and passwords that can be used to get into your"
@@ -852,7 +936,7 @@ msgstr ""
 "不要 **要 "
 "**面向互联网的服务器上安装演示数据。包含演示数据的数据库包含默认登录名和密码，可用于进入系统并造成重大麻烦，即使在暂存/开发系统上也是如此。"
 
-#: ../../content/administration/install/deploy.rst:532
+#: ../../content/administration/install/deploy.rst:527
 msgid ""
 "Use appropriate database filters ( :option:`--db-filter <odoo-bin --db-"
 "filter>`) to restrict the visibility of your databases according to the "
@@ -865,7 +949,7 @@ msgstr ""
 "根据主机名限制数据库的可见性。请参阅：:ref:`db_filter`。您还可以使用 :option:`-d <odoo-bin -d=\"\">` "
 "来提供您自己的（逗号分隔的）可用数据库列表，以便从中进行筛选，而不是让系统从数据库后端获取所有数据库。"
 
-#: ../../content/administration/install/deploy.rst:539
+#: ../../content/administration/install/deploy.rst:534
 msgid ""
 "Once your ``db_name`` and ``db_filter`` are configured and only match a "
 "single database per hostname, you should set ``list_db`` configuration "
@@ -877,7 +961,7 @@ msgstr ""
 "一旦配置了“db_name”和“db_filter”，并且每个主机名只匹配一个数据库，则应将“list_db”配置选项设置为“False”，以防止完全列出数据库，并阻止对数据库管理屏幕的访问（这也显示为"
 " :option:`--no-database-list <odoo-bin --no-database-list>`命令行选项）"
 
-#: ../../content/administration/install/deploy.rst:545
+#: ../../content/administration/install/deploy.rst:540
 msgid ""
 "Make sure the PostgreSQL user (:option:`--db_user <odoo-bin --db_user>`) is "
 "*not* a super-user, and that your databases are owned by a different user. "
@@ -889,7 +973,7 @@ msgstr ""
 "不是超级用户，并且您的数据库由其他用户拥有。例如，如果您使用的是专用的非特权“db_user”，则可以由“postgres”超级用户拥有。另请参阅 "
 "：:ref:`odoo <setup/deploy/odoo>`。"
 
-#: ../../content/administration/install/deploy.rst:550
+#: ../../content/administration/install/deploy.rst:545
 msgid ""
 "Keep installations updated by regularly installing the latest builds, either"
 " via GitHub or by downloading the latest version from "
@@ -898,14 +982,14 @@ msgstr ""
 "通过 GitHub 定期安装最新版本，或者从 https://www.odoo.com/page/download 或 "
 "http://nightly.odoo.com 下载最新版本，从而保持安装更新"
 
-#: ../../content/administration/install/deploy.rst:554
+#: ../../content/administration/install/deploy.rst:549
 msgid ""
 "Configure your server in multi-process mode with proper limits matching your"
 " typical usage (memory/CPU/timeouts). See also :ref:`builtin_server`."
 msgstr ""
 "在多进程模式下配置服务器，并具有与典型使用（内存/CPU/超时）匹配的适当限制。另请参阅：:ref:`内建服务器 <builtin_server>`。"
 
-#: ../../content/administration/install/deploy.rst:557
+#: ../../content/administration/install/deploy.rst:552
 msgid ""
 "Run Odoo behind a web server providing HTTPS termination with a valid SSL "
 "certificate, in order to prevent eavesdropping on cleartext communications. "
@@ -918,7 +1002,7 @@ msgstr ""
 "代理配置为限制请求的大小，设置适当的超时，然后启用 :option:`proxy mode <odoo-bin --proxy-mode>` "
 "选项。另请参阅：:ref:`Https 代理 <https_proxy>`。"
 
-#: ../../content/administration/install/deploy.rst:564
+#: ../../content/administration/install/deploy.rst:559
 msgid ""
 "If you need to allow remote SSH access to your servers, make sure to set a "
 "strong password for **all** accounts, not just `root`. It is strongly "
@@ -930,7 +1014,7 @@ msgstr ""
 "如果需要允许对服务器进行远程 SSH 访问，请确保为 **all** "
 "帐户设置强密码，而不仅仅是“root”。强烈建议完全禁用基于密码的身份验证，并且仅允许公钥身份验证。还要考虑限制通过VPN的访问，仅允许防火墙中的受信任IP，和/或运行暴力检测系统，如“fail2ban”或等效系统。"
 
-#: ../../content/administration/install/deploy.rst:570
+#: ../../content/administration/install/deploy.rst:565
 msgid ""
 "Consider installing appropriate rate-limiting on your proxy or firewall, to "
 "prevent brute-force attacks and denial of service attacks. See also "
@@ -938,21 +1022,21 @@ msgid ""
 msgstr ""
 "请考虑在代理或防火墙上安装适当的速率限制，以防止暴力攻击和拒绝服务攻击。另请参阅：ref：`login_brute_force`了解具体措施。"
 
-#: ../../content/administration/install/deploy.rst:574
+#: ../../content/administration/install/deploy.rst:569
 msgid ""
 "Many network providers provide automatic mitigation for Distributed Denial "
 "of Service attacks (DDOS), but this is often an optional service, so you "
 "should consult with them."
 msgstr "许多网络提供商为分布式拒绝服务攻击 （DDOS） 提供自动缓解措施，但这通常是一项可选服务，因此您应该咨询他们。"
 
-#: ../../content/administration/install/deploy.rst:578
+#: ../../content/administration/install/deploy.rst:573
 msgid ""
 "Whenever possible, host your public-facing demo/test/staging instances on "
 "different machines than the production ones. And apply the same security "
 "precautions as for production."
 msgstr "只要有可能，就将面向公众的演示/测试/过渡实例托管在与生产计算机不同的计算机上。并应用与生产相同的安全预防措施。"
 
-#: ../../content/administration/install/deploy.rst:582
+#: ../../content/administration/install/deploy.rst:577
 msgid ""
 "If your public-facing Odoo server has access to sensitive internal network "
 "resources or services (e.g. via a private VLAN), implement appropriate "
@@ -972,7 +1056,7 @@ msgstr ""
 " IP 流量访问控制<http://0pointer.net/blog/ip-accounting-and-access-lists-with-"
 "systemd.html>”_ 对于实现每个进程的网络访问控制也可能很有用。"
 
-#: ../../content/administration/install/deploy.rst:593
+#: ../../content/administration/install/deploy.rst:588
 msgid ""
 "If your public-facing Odoo server is behind a Web Application Firewall, a "
 "load-balancer, a transparent DDoS protection service (like CloudFlare) or a "
@@ -990,23 +1074,23 @@ msgstr ""
 " WAF、负载均衡器或代理服务的特定 IP "
 "地址访问终结点外，无法公开访问终结点。为此，像CloudFlare这样的服务提供商通常会维护其IP地址范围的公共列表。"
 
-#: ../../content/administration/install/deploy.rst:604
+#: ../../content/administration/install/deploy.rst:599
 msgid ""
 "If you are hosting multiple customers, isolate customer data and files from "
 "each other using containers or appropriate \"jail\" techniques."
 msgstr "如果您托管多个客户，请使用容器或适当的“jail”技术将客户数据和文件彼此隔离。"
 
-#: ../../content/administration/install/deploy.rst:607
+#: ../../content/administration/install/deploy.rst:602
 msgid ""
 "Setup daily backups of your databases and filestore data, and copy them to a"
 " remote archiving server that is not accessible from the server itself."
 msgstr "设置数据库和文件存储数据的每日备份，并将它们复制到无法从服务器本身访问的远程存档服务器。"
 
-#: ../../content/administration/install/deploy.rst:614
+#: ../../content/administration/install/deploy.rst:609
 msgid "Blocking Brute Force Attacks"
 msgstr "阻止暴力破解攻击"
 
-#: ../../content/administration/install/deploy.rst:616
+#: ../../content/administration/install/deploy.rst:611
 msgid ""
 "For internet-facing deployments, brute force attacks on user passwords are "
 "very common, and this threat should not be neglected for Odoo servers. Odoo "
@@ -1015,64 +1099,64 @@ msgid ""
 msgstr ""
 "对于面向互联网的部署，对用户密码的暴力攻击非常普遍，对于Odoo服务器来说，这种威胁不容忽视。每当执行登录尝试时，Odoo都会发出日志条目，并报告结果：成功或失败，以及目标登录和源IP。"
 
-#: ../../content/administration/install/deploy.rst:620
+#: ../../content/administration/install/deploy.rst:615
 msgid "The log entries will have the following form."
 msgstr "日志条目将具有以下形式。"
 
-#: ../../content/administration/install/deploy.rst:622
+#: ../../content/administration/install/deploy.rst:617
 msgid "Failed login::"
 msgstr "登录失败：："
 
-#: ../../content/administration/install/deploy.rst:626
+#: ../../content/administration/install/deploy.rst:621
 msgid "Successful login::"
 msgstr "登录成功："
 
-#: ../../content/administration/install/deploy.rst:631
+#: ../../content/administration/install/deploy.rst:626
 msgid ""
 "These logs can be easily analyzed by an intrusion prevention system such as "
 "`fail2ban`."
 msgstr "这些日志可以通过入侵防御系统（如“fail2ban”）轻松分析。"
 
-#: ../../content/administration/install/deploy.rst:633
+#: ../../content/administration/install/deploy.rst:628
 msgid ""
 "For example, the following fail2ban filter definition should match a failed "
 "login::"
 msgstr "例如，以下 fail2ban 筛选器定义应与失败的登录相匹配："
 
-#: ../../content/administration/install/deploy.rst:640
+#: ../../content/administration/install/deploy.rst:635
 msgid ""
 "This could be used with a jail definition to block the attacking IP on "
 "HTTP(S)."
 msgstr "这可以与 jail 定义一起使用，以阻止 HTTP（S） 上的攻击 IP。"
 
-#: ../../content/administration/install/deploy.rst:642
+#: ../../content/administration/install/deploy.rst:637
 msgid ""
 "Here is what it could look like for blocking the IP for 15 minutes when 10 "
 "failed login attempts are detected from the same IP within 1 minute::"
 msgstr "以下是在 1 分钟内从同一 IP 检测到 10 次登录尝试失败时，阻止 IP 15 分钟的情况："
 
-#: ../../content/administration/install/deploy.rst:656
+#: ../../content/administration/install/deploy.rst:651
 msgid "Database Manager Security"
 msgstr "数据库管理器安全性"
 
-#: ../../content/administration/install/deploy.rst:658
+#: ../../content/administration/install/deploy.rst:653
 msgid ":ref:`setup/deploy/odoo` mentioned ``admin_passwd`` in passing."
 msgstr "：ref：`setup/deploy/odoo` 顺便提到``admin_passwd``"
 
-#: ../../content/administration/install/deploy.rst:660
+#: ../../content/administration/install/deploy.rst:655
 msgid ""
 "This setting is used on all database management screens (to create, delete, "
 "dump or restore databases)."
 msgstr "此设置用于所有数据库管理屏幕（用于创建、删除、转储或还原数据库）。"
 
-#: ../../content/administration/install/deploy.rst:663
+#: ../../content/administration/install/deploy.rst:658
 msgid ""
 "If the management screens must not be accessible at all, you should set "
 "``list_db`` configuration option to ``False``, to block access to all the "
 "database selection and management screens."
 msgstr "如果管理屏幕根本无法访问，则应将“list_db”配置选项设置为“False”，以阻止访问所有数据库选择和管理屏幕。"
 
-#: ../../content/administration/install/deploy.rst:669
+#: ../../content/administration/install/deploy.rst:664
 msgid ""
 "It is strongly recommended to disable the Database Manager for any internet-"
 "facing system! It is meant as a development/demo tool, to make it easy to "
@@ -1083,14 +1167,14 @@ msgstr ""
 "强烈建议对任何面向 Internet "
 "的系统禁用数据库管理器！它旨在作为开发/演示工具，以便于快速创建和管理数据库。它不是为在生产中使用而设计的，甚至可能向攻击者暴露危险的功能。它也不是为处理大型数据库而设计的，并且可能会触发内存限制。"
 
-#: ../../content/administration/install/deploy.rst:675
+#: ../../content/administration/install/deploy.rst:670
 msgid ""
 "On production systems, database management operations should always be "
 "performed by the system administrator, including provisioning of new "
 "databases and automated backups."
 msgstr "在生产系统上，数据库管理操作应始终由系统管理员执行，包括预配新数据库和自动备份。"
 
-#: ../../content/administration/install/deploy.rst:678
+#: ../../content/administration/install/deploy.rst:673
 msgid ""
 "Be sure to setup an appropriate ``db_name`` parameter (and optionally, "
 "``db_filter`` too) so that the system can determine the target database for "
@@ -1099,7 +1183,7 @@ msgid ""
 msgstr ""
 "请务必设置适当的“db_name”参数（也可以选择“db_filter”），以便系统可以确定每个请求的目标数据库，否则用户将被阻止，因为他们将不被允许自己选择数据库。"
 
-#: ../../content/administration/install/deploy.rst:683
+#: ../../content/administration/install/deploy.rst:678
 msgid ""
 "If the management screens must only be accessible from a selected set of "
 "machines, use the proxy server's features to block access to all routes "
@@ -1108,7 +1192,7 @@ msgid ""
 msgstr ""
 "如果只能从一组选定的计算机访问管理屏幕，请使用代理服务器的功能阻止访问以“/web/database”开头的所有路由，但（可能）“/web/database/selector”除外，它显示数据库选择屏幕。"
 
-#: ../../content/administration/install/deploy.rst:687
+#: ../../content/administration/install/deploy.rst:682
 msgid ""
 "If the database-management screen should be left accessible, the "
 "``admin_passwd`` setting must be changed from its ``admin`` default: this "
@@ -1116,68 +1200,68 @@ msgid ""
 msgstr ""
 "如果数据库管理屏幕应保持可访问状态，则必须将“admin_passwd”设置从其默认值“admin”更改为“admin”：在允许数据库更改操作之前，将检查此密码。"
 
-#: ../../content/administration/install/deploy.rst:691
+#: ../../content/administration/install/deploy.rst:686
 msgid "It should be stored securely, and should be generated randomly e.g."
 msgstr "它应该安全地存储，并且应该随机生成，例如"
 
-#: ../../content/administration/install/deploy.rst:697
+#: ../../content/administration/install/deploy.rst:692
 msgid "which will generate a 32 characters pseudorandom printable string."
 msgstr "这将生成一个32个字符的伪随机可打印字符串。"
 
-#: ../../content/administration/install/deploy.rst:700
+#: ../../content/administration/install/deploy.rst:695
 msgid "Supported Browsers"
 msgstr "将图像的 WebP 版本用于受支持的浏览器，并且对于不支持 WebP 的浏览器，请优雅地回退 JPEG 和 PNG。"
 
-#: ../../content/administration/install/deploy.rst:702
+#: ../../content/administration/install/deploy.rst:697
 msgid ""
 "Odoo supports all the major desktop and mobile browsers available on the "
 "market, as long as they are supported by their publishers."
 msgstr "Odoo支持市场上所有主要的桌面和移动浏览器，只要它们得到出版商的支持。"
 
-#: ../../content/administration/install/deploy.rst:705
+#: ../../content/administration/install/deploy.rst:700
 msgid "Here are the supported browsers:"
 msgstr "以下是支持的浏览器："
 
-#: ../../content/administration/install/deploy.rst:707
+#: ../../content/administration/install/deploy.rst:702
 msgid "Google Chrome"
 msgstr "谷歌浏览器"
 
-#: ../../content/administration/install/deploy.rst:708
+#: ../../content/administration/install/deploy.rst:703
 msgid "Mozilla Firefox"
 msgstr "火狐浏览器"
 
-#: ../../content/administration/install/deploy.rst:709
+#: ../../content/administration/install/deploy.rst:704
 msgid "Microsoft Edge"
 msgstr "Microsoft Edge"
 
-#: ../../content/administration/install/deploy.rst:710
+#: ../../content/administration/install/deploy.rst:705
 msgid "Apple Safari"
 msgstr "苹果浏览器"
 
-#: ../../content/administration/install/deploy.rst:712
+#: ../../content/administration/install/deploy.rst:707
 msgid ""
 "Please make sure your browser is up-to-date and still supported by its "
 "publisher before filing a bug report."
 msgstr "在提交错误报告之前，请确保您的浏览器是最新的，并且仍然受其发布者的支持。"
 
-#: ../../content/administration/install/deploy.rst:717
+#: ../../content/administration/install/deploy.rst:712
 msgid "Since Odoo 13.0, ES6 is supported.  Therefore, IE support is dropped."
 msgstr "从Odoo 13.0开始，支持ES6。 因此，将删除 IE 支持。"
 
-#: ../../content/administration/install/deploy.rst:720
+#: ../../content/administration/install/deploy.rst:715
 msgid ""
 "to have multiple Odoo installations use the same PostgreSQL database, or to "
 "provide more computing resources to both software."
 msgstr "让多个Odoo安装使用相同的PostgreSQL数据库，或者为两个软件提供更多的计算资源。"
 
-#: ../../content/administration/install/deploy.rst:723
+#: ../../content/administration/install/deploy.rst:718
 msgid ""
 "technically a tool like socat_ can be used to proxy UNIX sockets across "
 "networks, but that is mostly for software which can only be used over UNIX "
 "sockets"
 msgstr "从技术上讲，像socat_这样的工具可以用来跨网络代理UNIX套接字，但这主要用于只能通过UNIX套接字使用的软件。"
 
-#: ../../content/administration/install/deploy.rst:727
+#: ../../content/administration/install/deploy.rst:722
 msgid ""
 "or be accessible only over an internal packet-switched network, but that "
 "requires secured switches, protections against `ARP spoofing`_ and precludes"
@@ -2425,11 +2509,11 @@ msgstr ""
 #: ../../content/administration/maintain/azure_oauth.rst:163
 msgid ""
 "If the :guilabel:`From Filter` field is empty, enter either a :ref:`domain "
-"or email address <email_communication/default_from>`."
+"or email address <email_communication/default>`."
 msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:166
-msgid "Then, cick on :guilabel:`Connect your Outlook account`."
+msgid "Then, click on :guilabel:`Connect your Outlook account`."
 msgstr ""
 
 #: ../../content/administration/maintain/azure_oauth.rst:168
@@ -4253,7 +4337,7 @@ msgid ""
 "The :guilabel:`From Filter` needs to be set on the server configuration. It "
 "is recommended to set it as a domain and not a full email address. It should"
 " match the domain in the two proceeding steps. More information can be "
-"referenced :ref:`here <email_servers/outgoing-email-server>`."
+"referenced :ref:`here <email_communication/from_filter>`."
 msgstr ""
 
 #: ../../content/administration/maintain/mailjet_api.rst:205
@@ -4290,10 +4374,8 @@ msgstr ""
 msgid ""
 "To manage a database, sign in to https://www.odoo.com and access the "
 "`database management page <https://www.odoo.com/my/databases>`_ by clicking "
-"on the user icon, then on *My Databases*."
+"on the user icon, then on :guilabel:`My Databases`."
 msgstr ""
-"要管理数据库，请登录 https://www.odoo.com "
-"并通过单击用户图标，然后单击“我的数据库”*访问“数据库管理页面<https://www.odoo.com/my/databases>”_。"
 
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid ""
@@ -4301,218 +4383,215 @@ msgid ""
 " highlighted."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:13
+#: ../../content/administration/maintain/odoo_online.rst:14
 msgid ""
-"Make sure you are connected as the administrator of the database you want to"
-" manage."
-msgstr "确保您以要管理的数据库的管理员身份进行连接。"
+"Make sure to connect as the administrator of the database that changes will "
+"be made on."
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "Clicking on the gear icon opens the drop-down menu."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:19
+#: ../../content/administration/maintain/odoo_online.rst:20
 msgid ""
-"Open the drop-down menu next to the database you want to manage by clicking "
-"on the gear icon."
-msgstr "通过单击齿轮图标打开要管理的数据库旁边的下拉菜单。"
+"Open the drop-down menu next to the database that changes will be made on by"
+" clicking on the gear icon."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:21
+#: ../../content/administration/maintain/odoo_online.rst:23
 msgid "Several actions are available:"
 msgstr "有几种措施可供选择："
 
-#: ../../content/administration/maintain/odoo_online.rst:23
+#: ../../content/administration/maintain/odoo_online.rst:25
 msgid ":ref:`odoo_online/upgrade`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:24
+#: ../../content/administration/maintain/odoo_online.rst:26
 msgid ":ref:`odoo_online/duplicate`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:25
+#: ../../content/administration/maintain/odoo_online.rst:27
 msgid ":ref:`odoo_online/rename`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:26
+#: ../../content/administration/maintain/odoo_online.rst:28
 msgid ":ref:`odoo_online/download`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:27
+#: ../../content/administration/maintain/odoo_online.rst:29
 msgid ":ref:`odoo_online/domains`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:28
+#: ../../content/administration/maintain/odoo_online.rst:30
 msgid ":ref:`odoo_online/tags`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:29
+#: ../../content/administration/maintain/odoo_online.rst:31
 msgid ":ref:`odoo_online/delete`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:30
+#: ../../content/administration/maintain/odoo_online.rst:32
 msgid ":ref:`odoo_online/contact-support`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:31
+#: ../../content/administration/maintain/odoo_online.rst:33
 msgid ":ref:`odoo_online/users`"
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:36
+#: ../../content/administration/maintain/odoo_online.rst:38
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:293
 #: ../../content/administration/upgrade.rst:10
 msgid "Upgrade"
 msgstr "升级"
 
-#: ../../content/administration/maintain/odoo_online.rst:38
+#: ../../content/administration/maintain/odoo_online.rst:40
 msgid ""
-"If you are *not* on the latest **Online version**, you should receive an "
-"invitation to :doc:`upgrade <../upgrade>` your database. A **Rolling Release"
-" button** on your database's main screen proposes an upgrade to the latest "
-"version (e.g., 13.0 to 15.1)."
+"If the database is *not* on the latest **Online version**, the administrator"
+" should receive an invitation to :doc:`upgrade <../upgrade>` the database. A"
+" :guilabel:`Rolling Release`` button on the database's main screen proposes "
+"an upgrade to the latest version (e.g., 14.0 to 16.1)."
 msgstr ""
-"如果您*不是*最新的**在线版本**，您应该会收到:d "
-"oc：'升级<....的邀请。/upgrade>'数据库。数据库主屏幕上的“滚动发布”按钮建议升级到最新版本（例如，13.0 到 15.1）。"
 
 #: ../../content/administration/maintain/odoo_online.rst:0
 msgid ""
-"**If your Odoo database's version is lower than the latest major release:**"
-msgstr "**如果您的 Odoo 数据库的版本低于最新的主要版本：**"
+"**If the Odoo database's version is lower than the latest major release:**"
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:0
 msgid ""
-"You must upgrade your database within two months. After these two months, an"
-" automatic upgrade is initiated."
-msgstr "您必须在两个月内升级数据库。这两个月后，将启动自动升级。"
+"The database must be upgraded within two months. After these two months, an "
+"automatic upgrade is initiated."
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:0
 msgid ""
-"**If your Odoo database's version is equal to or higher than the latest "
-"major release:**"
-msgstr "**如果您的 Odoo 数据库的版本等于或高于最新的主要版本：**"
+"**If the Odoo database's version is equal to or higher than the latest major"
+" release:**"
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:0
 msgid ""
-"You can disregard the invitation to upgrade as you probably wouldn't benefit"
-" from new features every two months."
-msgstr "您可以忽略升级邀请，因为您可能不会每两个月从新功能中受益。"
+"Disregard the invitation to upgrade as the database probably wouldn't "
+"benefit from new features every two months."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:51
+#: ../../content/administration/maintain/odoo_online.rst:53
 msgid ""
 "Versions that are not supported anymore become deprecated and need to be "
-"updated to avoid security issues. We recommend you initiate the upgrade of "
-"the database yourself, as this method allows you to request a test upgrade "
-"of your database to check for any discrepancies."
+"updated to avoid security issues. Odoo recommends that the company initiate "
+"the upgrade, as this method allows for the company to request a test upgrade"
+" of the database to check for any discrepancies."
 msgstr ""
-"不再受支持的版本将被弃用，需要更新以避免安全问题。我们建议您自己启动数据库的升级，因为此方法允许您请求数据库的测试升级以检查是否存在任何差异。"
 
-#: ../../content/administration/maintain/odoo_online.rst:56
+#: ../../content/administration/maintain/odoo_online.rst:58
 msgid ":doc:`../upgrade`"
 msgstr ":doc:`../升级`"
 
-#: ../../content/administration/maintain/odoo_online.rst:57
+#: ../../content/administration/maintain/odoo_online.rst:59
 msgid ":doc:`supported_versions`"
 msgstr ":doc:`supported_versions`"
 
-#: ../../content/administration/maintain/odoo_online.rst:62
+#: ../../content/administration/maintain/odoo_online.rst:64
 msgid "Duplicate"
 msgstr "复制"
 
-#: ../../content/administration/maintain/odoo_online.rst:64
+#: ../../content/administration/maintain/odoo_online.rst:66
 msgid ""
-"Make an exact copy of the database to be able to perform testing without "
-"compromising the daily operations."
-msgstr "制作数据库的精确副本，以便能够在不影响日常操作的情况下执行测试。"
-
-#: ../../content/administration/maintain/odoo_online.rst:68
-msgid ""
-"By checking *For testing purposes*, all external communication (emails, "
-"payments, delivery orders, etc.) are disabled by default on the duplicated "
-"database."
-msgstr "通过选中*出于测试目的*，默认情况下，在重复的数据库上禁用所有外部通信（电子邮件，付款，交货订单等）。"
+"This allows to make an exact copy of the database to be able to perform "
+"testing without compromising the daily operations."
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rst:70
+msgid ""
+"By checking :guilabel:`For testing purposes`, all external communication "
+"(emails, payments, delivery orders, etc.) are disabled by default on the "
+"duplicated database."
+msgstr ""
+
+#: ../../content/administration/maintain/odoo_online.rst:72
 msgid "Duplicate databases expire automatically after 15 days."
 msgstr "数据库副本将在15天后自动过期。"
 
-#: ../../content/administration/maintain/odoo_online.rst:75
+#: ../../content/administration/maintain/odoo_online.rst:77
 msgid "Rename"
 msgstr "重命名"
 
-#: ../../content/administration/maintain/odoo_online.rst:77
+#: ../../content/administration/maintain/odoo_online.rst:79
 msgid "Rename the database and its URL."
 msgstr "重命名数据库及其 URL。"
 
-#: ../../content/administration/maintain/odoo_online.rst:82
+#: ../../content/administration/maintain/odoo_online.rst:84
 msgid "Download"
 msgstr "下载"
 
-#: ../../content/administration/maintain/odoo_online.rst:84
-msgid "Download instantly a ZIP file with a backup of the database."
-msgstr "立即下载带有数据库备份的ZIP文件。"
+#: ../../content/administration/maintain/odoo_online.rst:86
+msgid "Instantly download a ZIP file with a backup of the database."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:87
+#: ../../content/administration/maintain/odoo_online.rst:89
 msgid ""
 "Databases are backed up daily according to the `Odoo Cloud SLA "
 "<https://www.odoo.com/cloud-sla>`_."
 msgstr "数据库每天根据“Odoo Cloud SLA <https://www.odoo.com/cloud-sla>”进行备份。"
 
-#: ../../content/administration/maintain/odoo_online.rst:93
+#: ../../content/administration/maintain/odoo_online.rst:95
 msgid "Domains"
 msgstr "域名"
 
-#: ../../content/administration/maintain/odoo_online.rst:95
+#: ../../content/administration/maintain/odoo_online.rst:97
 msgid "Configure custom domains to access the database via another URL."
 msgstr "将自定义域配置为通过其他 URL 访问数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:98
+#: ../../content/administration/maintain/odoo_online.rst:100
 msgid ":doc:`domain_names`"
 msgstr ":d：`domain_names`"
 
-#: ../../content/administration/maintain/odoo_online.rst:103
+#: ../../content/administration/maintain/odoo_online.rst:105
 msgid "Tags"
 msgstr "标记"
 
-#: ../../content/administration/maintain/odoo_online.rst:105
+#: ../../content/administration/maintain/odoo_online.rst:107
 msgid ""
 "Add tags to sort your databases out. You can search the tags in the search "
 "bar."
 msgstr "添加标记以对数据库进行排序。您可以在搜索栏中搜索标签。"
 
-#: ../../content/administration/maintain/odoo_online.rst:110
+#: ../../content/administration/maintain/odoo_online.rst:112
 #: ../../content/administration/odoo_sh/getting_started/branches.rst:550
 msgid "Delete"
 msgstr "删除"
 
-#: ../../content/administration/maintain/odoo_online.rst:112
+#: ../../content/administration/maintain/odoo_online.rst:114
 msgid "Delete a database instantly."
 msgstr "立即删除数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:115
+#: ../../content/administration/maintain/odoo_online.rst:117
 msgid ""
 "Deleting a database means that all data is permanently lost. The deletion is"
 " instant and for all users. It is recommended to create a backup of the "
 "database before deleting it."
 msgstr "删除数据库意味着所有数据都将永久丢失。删除是即时的，适用于所有用户。建议在删除数据库之前创建数据库的备份。"
 
-#: ../../content/administration/maintain/odoo_online.rst:118
+#: ../../content/administration/maintain/odoo_online.rst:120
 msgid ""
-"Read carefully the warning message that pops up and proceed only if you "
-"fully understand the implications of deleting a database:"
-msgstr "请仔细阅读弹出的警告消息，只有在您完全了解删除数据库的含义后，才能继续操作："
+"Carefully read the warning message that pops up and proceed only if the "
+"implications of deleting a database are fully understood:"
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "A warning message is prompted before deleting a database."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:126
+#: ../../content/administration/maintain/odoo_online.rst:128
 msgid "Only an administrator can delete a database."
 msgstr "只有管理员才能删除数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:127
+#: ../../content/administration/maintain/odoo_online.rst:129
 msgid "The database name is immediately available for a new database."
 msgstr "数据库名称立即可用于新数据库。"
 
-#: ../../content/administration/maintain/odoo_online.rst:128
+#: ../../content/administration/maintain/odoo_online.rst:130
 msgid ""
 "It is not possible to delete a database if it is expired or linked to a "
 "subscription. If needed, please get in touch with `Odoo Support "
@@ -4520,43 +4599,43 @@ msgid ""
 msgstr ""
 "如果数据库已过期或链接到订阅，则无法删除该数据库。如果需要，请与“Odoo支持<https://www.odoo.com/help>”联系。"
 
-#: ../../content/administration/maintain/odoo_online.rst:130
-msgid ""
-"To delete your account, please get in touch with `Odoo Support "
-"<https://www.odoo.com/help>`_."
-msgstr "要删除您的帐户，请与“Odoo支持<https://www.odoo.com/help>”联系。"
-
-#: ../../content/administration/maintain/odoo_online.rst:135
+#: ../../content/administration/maintain/odoo_online.rst:136
 msgid "Contact Support"
 msgstr "联系支持"
 
-#: ../../content/administration/maintain/odoo_online.rst:137
+#: ../../content/administration/maintain/odoo_online.rst:138
 msgid ""
 "Access the Odoo `support page <https://www.odoo.com/help>`_ with your "
 "database's details already pre-filled."
 msgstr "访问Odoo的“支持页面<https://www.odoo.com/help>”_，其中已经预先填写了数据库的详细信息。"
 
-#: ../../content/administration/maintain/odoo_online.rst:143
+#: ../../content/administration/maintain/odoo_online.rst:144
 msgid "Invite / Remove Users"
 msgstr "邀请/删除用户"
 
-#: ../../content/administration/maintain/odoo_online.rst:145
+#: ../../content/administration/maintain/odoo_online.rst:146
 msgid ""
 "To invite users, fill out the email address of the new user and click on "
-"*Invite*. To add multiple users, click on *Add more users*."
-msgstr "要邀请用户，请填写新用户的电子邮件地址，然后单击*邀请*。要添加多个用户，请单击“*添加更多用户*”。"
+":guilabel:`Invite`. To add multiple users, click on :guilabel:`Add more "
+"users`."
+msgstr ""
 
 #: ../../content/administration/maintain/odoo_online.rstNone
 msgid "Clicking on \"Add more users\" adds additional email fields."
 msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:152
-msgid "To remove users, select the users to remove and click on *Remove*."
-msgstr "要删除用户，请选择要删除的用户，然后单击*删除*。"
+#: ../../content/administration/maintain/odoo_online.rst:153
+msgid ""
+"To remove users, select the users to remove and click on :guilabel:`Remove`."
+msgstr ""
 
-#: ../../content/administration/maintain/odoo_online.rst:155
+#: ../../content/administration/maintain/odoo_online.rst:156
 msgid ":doc:`/applications/general/users/manage_users`"
 msgstr ":doc:`/applications/general/users/manage_users`"
+
+#: ../../content/administration/maintain/odoo_online.rst:157
+msgid ":doc:`/applications/general/users/delete_account`"
+msgstr ""
 
 #: ../../content/administration/maintain/on_premise.rst:3
 msgid "On-premise database management"
