@@ -93,7 +93,10 @@ configure the Gmail Plugin.
 Install the Gmail Plugin
 ------------------------
 
-First, access the `GitHub repository <https://github.com/odoo/mail-client-extensions>`_ for the
+First, make sure you can create Google App Scripts. Visit https://script.google.com/home/usersettings
+and enable them if they are disabled.
+
+Then, access the `GitHub repository <https://github.com/odoo/mail-client-extensions>`_ for the
 Odoo Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click
 :guilabel:`Download ZIP` to download the Mail Plugin files onto the user's computer.
 
@@ -101,7 +104,7 @@ Odoo Mail Plugins. Next, click on the green :guilabel:`Code` button. Then, click
    :align: center
    :alt: Download the ZIP file from the Odoo GitHub repository for Mail Plugins.
 
-Open the ZIP file on the computer. Then, go to :menuselection:`mail-client-extensions-master -->
+Decompress the ZIP file on the computer. Then, go to :menuselection:`mail-client-extensions-master -->
 gmail --> src --> views`, and open the :file:`login.ts` file using any text editor software,
 such as Notepad (Windows), TextEdit (Mac), or Visual Studio Code.
 
@@ -113,19 +116,52 @@ Delete the following three lines of text from the :file:`login.ts` file:
         return notify("The URL must be a subdomain of odoo.com");
    }
 
-This removes the `odoo.com` domain constraint from the Gmail Plugin program.
+Similarly, go to :menuselection:`mail-client-extensions-master --> gmail`, and edit the file 
+:file:`appsscript.json`. Inside that file, you will see a list of URL patterns under the 
+``urlFetchWhitelist`` key. There:
 
-Next, in the ZIP file, go to :menuselection:`mail-client-extensions-master --> gmail`, and open the
-file called :guilabel:`README`. Follow the instructions in the :guilabel:`README` file to push the
-Gmail Plugin files as a Google Project.
+#. Replace all occurrences of ``https://odoo.com`` with your domain 
+   (e.g. ``https://my-odoo.example.com``). 
+#. If you need to use subdomains, replace all occurrences of ``https://*.odoo.com`` with your
+   domain (e.g. ``https://*.example.com``).
+#. If you don't need to use subdomains, remove all lines that contain ``https://*.odoo.com``.
 
 .. note::
-   The computer must be able to run Linux commands in order to follow the instructions on the
-   :guilabel:`README` file.
+   If these URL patterns are not enough for you, read
+   `Google documentation <https://developers.google.com/apps-script/add-ons/concepts/workspace-manifests#adding_prefixes_to_your_allowlist>`__
+   for more details on how to customize this list of URL patterns.
 
-After that, share the Google Project with the Gmail account that the user wishes to connect to
-Odoo. Then, click :guilabel:`Publish` and :guilabel:`Deploy from manifest`. Lastly, click
-:guilabel:`Install the add-on` to install the Gmail Plugin.
+This removes the `odoo.com` domain constraint from the Gmail Plugin program and enables your
+own domain(s).
+
+.. note::
+   The computer must be able to run Linux commands in order to follow the following instructions.
+   It also needs to have a working `NodeJS <https://nodejs.org/>`__ installation with 
+   `npm <https://www.npmjs.com/>`__ and `Clasp <https://github.com/google/clasp>`__ available.
+
+Next, in the decompressed ZIP folder, go to :menuselection:`mail-client-extensions-master --> gmail`
+and open a Linux terminal there. Run these ``bash`` commands:
+
+.. code-block:: bash
+
+   # Remove upstream Google Apps Script definition
+   rm .clasp.json
+
+   # Log in Google
+   clasp login
+
+   # Enable this required API (you must follow instructions from the command output)
+   clasp apis enable gmail
+
+   # Create and deploy your own version of the Google Apps Script
+   clasp create --type standalone
+   clasp push --force
+   read -p "Enter your domain: " domain
+   clasp deploy --description "Odoo Gmail Plugin ($domain)"
+   clasp open
+
+At this point, you have the project open in your browser. Share it with the 
+Gmail account(s) that must connect to Odoo.
 
 Configure the Odoo database
 ---------------------------
