@@ -7,8 +7,8 @@ stick to the :ref:`source install <setup/install/source>` (:dfn:`running Odoo fr
 code`), which is best suited for Odoo developers.
 
 Throughout this document, we assume that you are installing your development environment on a
-laptop provided by Odoo with Linux Mint installed and up-to-date. If that is not the case, switch to
-the :guilabel:`Windows` or :guilabel:`Mac OS` tab if any section of the installation guide,
+laptop provided by Odoo with Linux Mint installed and up-to-date. If that is not the case, select
+the :guilabel:`Windows` or :guilabel:`Mac OS` tab in any section of the installation guide,
 depending on which OS you are on. The steps remain essentially the same.
 
 Set up Git
