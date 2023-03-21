@@ -43,5 +43,4 @@ rounding according to your settings.
     :align: center
 
 .. note::
-   Odoo Point of Sale only support the *Add a rounding line*
-   rounding strategies and *Half-up* rounding methods.
+   Odoo Point of Sale only supports the :guilabel:`Add a rounding line` rounding strategy.
