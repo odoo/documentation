@@ -10,7 +10,7 @@ module. For example, in our real estate scenario we want to display the list of 
 directly in the regular user view.
 
 But before going through the specific Odoo module inheritance, let's see how we can alter the
-behavior of the standard CRUD (Create, Retrieve, Update or Delete) methods.
+behavior of the standard CRUD (Create, Read, Update or Delete) methods.
 
 Python Inheritance
 ==================
