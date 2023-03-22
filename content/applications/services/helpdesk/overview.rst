@@ -11,5 +11,5 @@ Overview
    overview/sla
    overview/receiving_tickets
    overview/reports
-   overview/forum_and_elearning
+   overview/help_center
    overview/ratings
