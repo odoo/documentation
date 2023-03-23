@@ -7,7 +7,7 @@ Odoo Enterprise Subscription Agreement (NL)
 
 .. only:: html
 
-    `Download PDF <odoo_enterprise_agreement_nl.pdf>`_
+    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement_nl.pdf>`_
 .. warning::
     Dit is een Nederlandse vertaling van de "Odoo Enterprise Subscription Agreement".
     Deze vertaling wordt verstrekt in de hoop dat deze het begrip zal vergemakkelijken,
