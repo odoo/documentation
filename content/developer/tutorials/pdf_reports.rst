@@ -50,11 +50,6 @@ Therefore, it is expected that your work tree will look something like this:
   ├── __init__.py
   └── __manifest__.py
 
-Note that you will often see other non-QWeb and non-XML files containing "report" in their name also within
-the report folder. These are unrelated to the reports covered in this tutorial and are covered in
-the :doc:`dashboards` tutorial. For now you can think of them as customized views that use direct
-SQL queries (sometimes referred to as SQL Views).
-
 Don't forget to add whatever files your template and action view will be into to your ``__manifest__.py``.
 In this case, you will want to add the files to the ``data`` list and remember that the files listed in a manifest
 are loaded sequentially!
