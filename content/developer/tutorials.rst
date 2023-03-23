@@ -15,7 +15,6 @@ Tutorials
     tutorials/unit_tests
     tutorials/mixins
     tutorials/pdf_reports
-    tutorials/dashboards
 
 .. cards::
 
@@ -66,9 +65,3 @@ Tutorials
       :target: tutorials/pdf_reports
 
       Use QWeb, Odoo's powerful templating engine, to create custom PDF reports for your documents.
-
-   .. card:: Visualize data in dashboards
-      :target: tutorials/dashboards
-
-      Create data visualization dashboards using the enterprise edition "Dashboard" view and
-      so-called "SQL views".
