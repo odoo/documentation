@@ -36,7 +36,7 @@
                         <p>{{ _("Applies to self-hosting, Odoo.SH and Odoo Cloud.") }}</p>
                         <div>
                             {%- set enterprise_agreement_path_en = 'legal/terms/enterprise.html' %}
-                            {%- if language_code == 'en' %}
+                            {%- if language_code not in legal_translations %}
                                 <a class="btn btn-primary" href="{{ enterprise_agreement_path_en }}" role="button">{{ _("Read") }}</a>
                             {%- else %}
                                 <a class="btn btn-primary" href="{{ 'legal/terms/i18n/enterprise_%s.html' % language_code }}" role="button">{{ _("Read") }}</a>
@@ -55,7 +55,7 @@
                         </div>
                         <div>
                             {%- set partnership_agreement_path_en = 'legal/terms/partnership.html' %}
-                            {%- if language_code == 'en' %}
+                            {%- if language_code not in legal_translations %}
                                 <a class="btn btn-primary" href="{{ partnership_agreement_path_en }}" role="button">{{ _("Read") }}</a>
                             {%- else %}
                                 <a class="btn btn-primary" href="{{ 'legal/terms/i18n/partnership_%s.html' % language_code }}" role="button">{{ _("Read") }}</a>
@@ -74,7 +74,7 @@
                         </div>
                         <div>
                             {%- set terms_of_sale_agreement_path_en = 'legal/terms/terms_of_sale.html' %}
-                            {%- if language_code == 'en' %}
+                            {%- if language_code not in legal_translations %}
                                 <a class="btn btn-primary" href="{{ terms_of_sale_agreement_path_en }}" role="button">{{ _("Read") }}</a>
                             {%- else %}
                                 <a class="btn btn-primary" href="{{ 'legal/terms/i18n/terms_of_sale_%s.html' % language_code }}" role="button">{{ _("Read") }}</a>
