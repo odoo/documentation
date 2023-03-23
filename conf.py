@@ -314,6 +314,12 @@ latex_documents = [
      'odoo_partnership_agreement_es.tex', 'Odoo Partnership Agreement (ES)', '', 'howto'),
 ]
 
+# List of languages that have legal translations (excluding EN). The keys must be in
+# `languages_names`. These translations will have a link to their versions of the legal
+# contracts, instead of the default EN one. The main legal documents are not part of the
+# translations since they have legal meaning.
+legal_translations = ['de', 'es', 'fr', 'nl']
+
 # The name of an image file (relative to this directory) to place at the top of the title page.
 latex_logo = 'static/img/odoo_logo.png'
 
@@ -441,6 +447,10 @@ def _generate_alternate_urls(app, pagename, templatename, context, doctree):
                         _build_url(_lang=_alternate_lang),
                     )
                 )
+
+        # Dynamic generation of localized legal doc links
+        context['legal_translations'] = legal_translations
+
 
     def _build_url(_version=None, _lang=None):
         if app.config.is_remote_build:

@@ -6,7 +6,7 @@ Odoo Partnership Agreement (FR)
 
 .. only:: html
 
-    `Download PDF <odoo_partnership_agreement_fr.pdf>`_
+    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_partnership_agreement_fr.pdf>`_
 .. warning::
     Ceci est une traduction en français du contrat “Odoo Partnership Agreement”.
     Cette traduction est fournie dans l’espoir qu’elle facilitera sa compréhension, mais elle
