@@ -10,3 +10,4 @@ eCommerce management
    ecommerce_management/order_handling
    ecommerce_management/customer_accounts
    ecommerce_management/customer_interaction
+   ecommerce_management/performance
