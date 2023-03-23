@@ -7,7 +7,7 @@ Acuerdo de suscripción de Odoo Enterprise
 
 .. only:: html
 
-    `Download PDF <odoo_enterprise_agreement_es.pdf>`_
+    `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement_es.pdf>`_
 .. warning::
     Esta es una traducción al español del "Odoo Enterprise Subscription Agreement".
     Esta traducción se proporciona con la esperanza de que facilite la comprensión, pero no tiene

@@ -6,7 +6,7 @@ Odoo Enterprise Subscription Agreement
 
 .. only:: html
 
-   `Download PDF <../../odoo_enterprise_agreement.pdf>`_
+   `Download PDF <https://www.odoo.com/documentation/{CURRENT_BRANCH}/odoo_enterprise_agreement.pdf>`_
 
 .. note:: Version 10a - 2022-10-27
 
