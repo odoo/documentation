@@ -1,43 +1,51 @@
-============================
-Tax rates (fiscal positions)
-============================
+=================================
+Flexible taxes (fiscal positions)
+=================================
 
-In Odoo, *Fiscal Positions* let you apply different taxes based on
-the customer location. In a *Point of Sale*, such as a restaurant, it can
-be used to apply different taxes depending if the customer eats in or
-takes away.
+When running a business, you may need to apply different taxes and record transactions on various
+accounts based on the location and type of business of your customers and providers.
 
-Set up fiscal positions for PoS
-===============================
+The **fiscal positions** feature enables you to establish rules that automatically select the right
+taxes and accounts used for each transaction.
 
-To enable this feature, go to :menuselection:`Point of Sale --> Configuration --> Point of Sale`
-and check *Fiscal Position per Order*. Now, you can choose the fiscal positions
-you want for your *PoS*.
+.. seealso::
+   - :doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`
+   - :doc:`../../../finance/accounting/taxation/taxes/taxes`
 
-.. image:: fiscal_position/fiscal_position_01.png
-    :align: center
+Configuration
+=============
 
-.. note::
-   You need to create your fiscal positions before using this feature.
+To enable the feature, go to :menuselection:`Point of Sale --> Configuration --> Settings`, scroll
+down to the :guilabel:`Accounting` section, and enable :guilabel:`Flexible Taxes`.
 
-Using fiscal positions
-======================
+Then, set a default fiscal position that should be applied to all sales in the selected POS in the
+:guilabel:`Default` field. You can also add more fiscal positions to choose from in the
+:guilabel:`Allowed` field.
 
-Once on your *PoS* interface, click on the *Tax* button.
-Now, choose the fiscal position you need for the current order.
+.. image:: fiscal_position/flexible-taxes-setting.png
+   :align: center
 
-.. image:: fiscal_position/fiscal_position_02.png
-    :align: center
-
-Set up a default fiscal position
-================================
-
-If you want to use a default fiscal position, meaning that a preexisting value is always
-automatically assigned, go to :menuselection:`Point of Sale --> Configuration
---> Point of Sale` and enable *Fiscal Position*. Now, choose one to set as the default one.
-
-.. image:: fiscal_position/fiscal_position_03.png
-    :align: center
+According to the :doc:`fiscal localization package <../../../finance/fiscal_localizations>`
+activated, several fiscal positions are preconfigured and can be set and used in POS. However, you
+can also :ref:`create new fiscal positions <fiscal_positions/mapping>`.
 
 .. note::
-   Now, the *tax* button is replaced by a *on site* button when on the *PoS* interface.
+   If you do not set a fiscal position, the tax remains as defined in the **customer taxes** field
+   on the product form.
+
+Use fiscal positions
+====================
+
+Open a :ref:`POS session <pos/start-session>` to use one of the allowed fiscal positions. Then,
+click the :guilabel:`Tax` button next to the **book-shaped** icon and select a fiscal position from
+the list. Doing so applies the defined rules automatically to all the products subject to the chosen
+fiscal position's regulations.
+
+.. image:: fiscal_position/set-tax.png
+   :align: center
+
+.. note::
+   If a default fiscal position is set, the tax button displays the name of the fiscal position.
+
+.. seealso::
+   :doc:`../../../finance/accounting/taxation/taxes/fiscal_positions`

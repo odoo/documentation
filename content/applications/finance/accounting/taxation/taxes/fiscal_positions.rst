@@ -26,6 +26,8 @@ They can be applied in various ways:
 Configuration
 =============
 
+ .. _fiscal_positions/mapping:
+
 Tax and Account Mapping
 -----------------------
 
