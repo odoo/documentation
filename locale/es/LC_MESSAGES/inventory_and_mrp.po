@@ -15,11 +15,11 @@
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2021
 # jabelchi, 2021
 # Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
-# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # AleEscandon <alejandra.escandon@jarsa.com.mx>, 2023
 # Lucia Pacheco <lpo@odoo.com>, 2023
 # Martin Trigaux, 2023
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -28,7 +28,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-02 07:38+0000\n"
 "PO-Revision-Date: 2021-05-18 05:18+0000\n"
-"Last-Translator: Pablo Rojas <rojaspablo88@gmail.com>, 2023\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
 "Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -4225,7 +4225,7 @@ msgstr ""
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:3
 msgid "Inventory Valuation Configuration"
-msgstr ""
+msgstr "Configuración de la valoración de inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:5
 msgid ""
@@ -4233,6 +4233,9 @@ msgid ""
 "inventory. That value should be reflected in the company's accounting "
 "records to accurately show the value of the company and all of its assets."
 msgstr ""
+"Las existencias a la mano de una empresa contribuyen a la valoración de su "
+"inventario. Ese valor debe figurar en los registros contables de la empresa "
+"para mostrar de forma precisa el valor de la empresa y de todos sus activos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:9
 msgid ""
@@ -4244,11 +4247,21 @@ msgid ""
 "Method` field will be set to `Standard Price` by default, and the "
 ":guilabel:`Inventory Valuation` field will be set to `Manual`."
 msgstr ""
+"De forma predeterminada, Odoo utiliza una valoración periódica de inventario"
+" (también conocida como valoración manual de inventario). Este método "
+"implica que el equipo de contabilidad registra asientos contables según el "
+"inventario físico de la empresa, y que los empleados del almacén cuentan las"
+" existencias. En Odoo, este método se refleja en cada categoría de producto,"
+" donde el campo :guilabel:`método de costo` se establecerá en `precio "
+"estándar` de forma predeterminada, y el campo :guilabel:`valoración de "
+"inventario` se establecerá en `manual`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rstNone
 msgid ""
 "The Inventory Valuation fields are located on the Product Categories form."
 msgstr ""
+"Los campos de valoración de inventario se ubican en el formulario de las "
+"categorías de producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:20
 msgid ""
@@ -4257,6 +4270,10 @@ msgid ""
 "entries whenever there are stock moves initiated between locations in a "
 "company's inventory."
 msgstr ""
+"Por otra parte, la valoración automatizada de inventario es un método de "
+"valoración integrado que actualiza el valor de inventario en tiempo real "
+"mediante la creación de asientos contables cuando se inician movimientos de "
+"existencias entre las ubicaciones del inventario de la empresa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:25
 msgid ""
@@ -4266,22 +4283,32 @@ msgid ""
 "checked to ensure accuracy, and adjustments may be needed on an ongoing "
 "basis depending on the needs and priorities of the business."
 msgstr ""
+"La valoración automatizada de inventario es un método recomendado para "
+"contadores expertos debido a los pasos adicionales en la configuración de "
+"asientos contables. Incluso después de la configuración inicial, deberá "
+"revisar el método de forma periódica para garantizar la exactitud, y puede "
+"ser necesario realizar ajustes de forma continua dependiendo de las "
+"necesidades y prioridades de la empresa."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:31
 msgid "Types of Accounting"
-msgstr ""
+msgstr "Tipos de contabilidad"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:33
 msgid ""
 "Accounting entries will depend on the accounting mode: Continental or Anglo-"
 "Saxon."
 msgstr ""
+"Los asientos contables dependerán del modo de contabilidad: continental o "
+"anglosajona."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:36
 msgid ""
 "Verify the accounting mode by activating the :ref:`developer-mode` and "
 "navigating to :menuselection:`Accounting --> Configuration --> Settings`."
 msgstr ""
+"Para comprobar el modo de contabilidad, active el :ref:`developer-mode` y "
+"vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:39
 msgid ""
@@ -4291,6 +4318,11 @@ msgid ""
 "Stock Accounts are used for the input and output accounts, and are both "
 "Asset Accounts in the Balance Sheet."
 msgstr ""
+"En la contabilidad anglosajona, el costo de los bienes vendidos se reporta "
+"cuando se venden o entregan productos. Esto significa que el costo de un "
+"bien solo se registra como un gasto cuando se factura un producto a un "
+"cliente. Se utilizan cuentas provisionales de existencias para las cuentas "
+"de entrada y salida, y ambas son cuentas de activos en el balance general."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:44
 msgid ""
@@ -4298,16 +4330,21 @@ msgid ""
 "product is received into stock. Additionally, a *single* Expense account is "
 "used for both input and output accounts in the Balance Sheet."
 msgstr ""
+"En la contabilidad continental, el costo de un bien se reporta en cuanto se "
+"recibe un producto en las existencias. Además, se utiliza una *única* cuenta"
+" de gastos tanto para las cuentas de entrada y salida en el balance general."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:49
 msgid "Costing Methods"
-msgstr ""
+msgstr "Métodos de costo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:51
 msgid ""
 "Below are the three costing methods that can be used in Odoo for inventory "
 "valuation."
 msgstr ""
+"Estos son los tres métodos de costo que puede utilizar en Odoo para su "
+"valoración de inventario."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:53
 msgid ""
@@ -4316,6 +4353,11 @@ msgid ""
 "compute the valuation. Even if the purchase price on a Purchase Order "
 "differs, the valuation will still use the cost defined on the product form."
 msgstr ""
+"**Precio estándar**: es el método de costo predeterminado en Odoo. El costo "
+"del producto se define de forma manual en el formulario del producto, y este"
+" costo se utiliza para calcular la valoración. Incluso si el precio de "
+"compra en una orden de compra es distinto, la valoración utilizará el costo "
+"que se definió en el formulario del producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:57
 msgid ""
@@ -4324,6 +4366,10 @@ msgid ""
 " on-hand. With this costing method, inventory valuation is *dynamic*, and "
 "constantly adjusts based on the purchase price of products."
 msgstr ""
+"**Costo promedio**: calcula la valoración de un producto según su costo "
+"promedio, dividido por el número total de existencias a la mano disponibles."
+" Al utilizar este método de costo, la valoración de inventario es *dinámica*"
+" y se ajusta con regularidad según el precio de compra de los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:60
 msgid ""
@@ -4336,6 +4382,15 @@ msgid ""
 "inventory valuation method for a variety of reasons, however, it's highly "
 "sensitive to input data and human error."
 msgstr ""
+"**Primeras entradas, primeras salidas**: lleva el seguimiento en tiempo real"
+" de los costos de artículos entrantes y salientes y utiliza el precio real "
+"de los productos para cambiar la valoración. El precio de compra más antiguo"
+" se utiliza como el costo del próximo bien vendido hasta que se venda un "
+"lote entero de ese producto. Cuando el siguiente lote de inventario avanza "
+"en la cola, se utiliza un costo de producto actualizado basado en la "
+"valoración de ese lote específico. Podría decirse que este método de "
+"valoración de inventario es el más preciso por varias razones, pero es muy "
+"sensible a los datos introducidos y a los errores humanos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:68
 msgid ""
@@ -4343,10 +4398,13 @@ msgid ""
 " recommended to consult an accountant first before making any adjustments "
 "here."
 msgstr ""
+"Cambiar el método de costo tiene un gran impacto en la valoración de "
+"inventario. Recomendamos ampliamente consultar a un contador antes de hacer "
+"cualquier ajuste."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:72
 msgid "Configure automated inventory valuation in Odoo"
-msgstr ""
+msgstr "Configurar la valoración automatizada de inventario en Odoo"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:74
 msgid ""
@@ -4355,12 +4413,18 @@ msgid ""
 "choose the category/categories where the automated valuation method should "
 "apply."
 msgstr ""
+"Puede hacer cambios en su valoración de inventario en "
+":menuselection:`Inventario --> Configuración --> Categorías de producto` y "
+"elija la categoría o categorías en las que se debería aplicar el método de "
+"valoración automatizada."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:79
 msgid ""
 "It is possible to use different valuation settings for different product "
 "categories."
 msgstr ""
+"Es posible utilizar distintos ajustes de valoración para categorías de "
+"producto distintas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:81
 msgid ""
@@ -4371,10 +4435,16 @@ msgid ""
 "In First Out (FIFO)` and switch the :guilabel:`Inventory Valuation` to "
 ":guilabel:`Automated`."
 msgstr ""
+"En la sección :guilabel:`valoración de inventario` hay dos campos: "
+":guilabel:`método de costo` y :guilabel:`valoración de inventario`. Elija el"
+" :guilabel:`método de costo` deseado en el menú desplegable (por ejemplo, "
+":guilabel:`estándar`, :guilabel:`costo promedio` o :guilabel:`primeras "
+"entradas, primeras salidas` y cambie la :guilabel:`valoración de inventario`"
+" a :guilabel:`automatizado`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:87
 msgid ":doc:`Using the inventory valuation <using_inventory_valuation>`"
-msgstr ""
+msgstr ":doc:`Usar la valoración de inventario <using_inventory_valuation>`"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:90
 msgid ""
@@ -4385,6 +4455,12 @@ msgid ""
 "based on the average purchase price both of inventory on hand and the costs "
 "accumulated from validated purchase orders."
 msgstr ""
+"Al elegir :guilabel:`costo promedio` como el :guilabel:`método de costo`, el"
+" valor númerico en el campo :guilabel:`costo` de los productos en la "
+"respectiva categoría de producto ya no se podrá editar, y aparecerá en color"
+" gris. El importe de :guilabel:`costo` se actualizará de forma automática "
+"según el precio de compra promedio del inventario a la mano y los costos "
+"acumulados de órdenes de compra validadas."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:96
 msgid ""
@@ -4392,6 +4468,9 @@ msgid ""
 "appear, as they are now required fields given the change to automated "
 "inventory valuation. These accounts are defined as follows:"
 msgstr ""
+"En la misma pantalla, aparecerán campos de :guilabel:`propiedades de la "
+"cuenta de existencias` porque ahora son campos necesarios debido al cambio a"
+" valoración de inventario. Estas cuentas se definen de la siguiente manera:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:100
 msgid ""
@@ -4399,6 +4478,9 @@ msgid ""
 "enabled on a product, this account will hold the current value of the "
 "products."
 msgstr ""
+":guilabel:`Cuenta de valoración de existencias`: cuando se habilita la "
+"valoración automatizada de inventario en un producto, esta cuenta contendrá "
+"el valor actual de los productos."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:102
 msgid ""
@@ -4408,6 +4490,12 @@ msgid ""
 "all products in a given category, and can also be set directly on each "
 "product."
 msgstr ""
+":guilabel:`Cuenta de entrada de existencias`: los apuntes del diario de "
+"contrapartida para todos los movimientos de entrada de existencias se "
+"registrarán en esta cuenta, a menos que se establezca una cuenta de "
+"valoración específica en la ubicación de origen. Este es el valor "
+"predeterminado para todos los productos en una categoría específica, y "
+"también se puede establecer directamente en cada producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:106
 msgid ""
@@ -4417,10 +4505,17 @@ msgid ""
 " for all products in a given category, and can also be set directly on each "
 "product."
 msgstr ""
+":guilabel:`Cuenta de salida de existencias`: los apuntes del diario de "
+"contrapartida para todos los movimientos de salida de existencias se "
+"registrarán en esta cuenta, a menos que se establezca una cuenta de "
+"valoración específica en la ubicación destino. Este es el valor "
+"predeterminado para todos los productos en una categoría específica, y "
+"también se puede establecer directamente en cada producto."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:112
 msgid "Access reporting data generated by inventory valuation"
 msgstr ""
+"Acceder a los datos de reporte generados por la valoración de inventario"
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:114
 msgid ""
@@ -4430,6 +4525,10 @@ msgid ""
 ":guilabel:`Unfold All` in order to see all of the latest data displayed, all"
 " at once."
 msgstr ""
+"Para empezar, vaya a :menuselection:`Contabilidad --> Reportes --> Balance "
+"general`. En la parte superior del tablero, cambie el valor del campo "
+":guilabel:`al` a :guilabel:`hoy` y ajuste el filtro :guilabel:`opciones` a "
+":guilabel:`desplegar todo` para ver todos los datos más recientes a la vez."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:119
 msgid ""
@@ -4437,6 +4536,9 @@ msgid ""
 ":guilabel:`Stock Valuation Account` line item, where the total valuation of "
 "all of the inventory on hand is displayed."
 msgstr ""
+"En la línea de apunte padre :guilabel:`activos circulantes`, busque la línea"
+" de apunte anidada :guilabel:`cuenta de valoración de existencias`, donde se"
+" muestra la valoración total de todo el inventario a la mano."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rst:123
 msgid ""
@@ -4448,10 +4550,20 @@ msgid ""
 ":guilabel:`Balance Sheet` can be added by choosing :guilabel:`Annotate`, "
 "filling in the text box, and clicking :guilabel:`Save`."
 msgstr ""
+"Puede acceder a información más específica con el menú desplegable "
+":guilabel:`cuenta de valoración de existencias`. Puede seleccionar "
+":guilabel:`libro mayor` para obtener una vista detallada de todos los "
+"asientos contables, o puede seleccionar :guilabel:`apuntes contables` para "
+"revisar los asientos de diario individualizados que se enviaron a la cuenta."
+" Además, puede agregar anotaciones en el :guilabel:`balance general` al "
+"hacer clic en :guilabel:`anotar`, llenar la caja de texto y hacer clic en "
+":guilabel:`guardar`."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config.rstNone
 msgid "See the full inventory valuation breakdown in Odoo Accounting app."
 msgstr ""
+"Puede ver el desglose completo de la valoración de inventario en la "
+"aplicación Contabilidad de Odoo."
 
 #: ../../content/applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation.rst:3
 msgid "Using the inventory valuation"
@@ -4691,6 +4803,10 @@ msgid ""
 " is cross-docking and is it for me? <https://www.odoo.com/blog/business-"
 "hacks-1/post/what-is-cross-docking-and-is-it-for-me-270>`_"
 msgstr ""
+"Para obtener más información sobre cómo organizar su almacén, consulte "
+"nuestro blog: `¿Qué es cross-docking y es lo que necesita? "
+"<https://www.odoo.com/blog/business-hacks-1/post/what-is-cross-docking-and-"
+"is-it-for-me-270>`_"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/cross_dock.rst:20
 msgid ""
