@@ -490,19 +490,19 @@ Idiomatics of Programming (Python)
 
     # a bit complex and with a redundant temp variable
     def axes(self, axis):
-            axes = []
-            if type(axis) == type([]):
-                    axes.extend(axis)
-            else:
-                    axes.append(axis)
-            return axes
+        axes = []
+        if type(axis) == type([]):
+            axes.extend(axis)
+        else:
+            axes.append(axis)
+        return axes
 
      # clearer
     def axes(self, axis):
-            if type(axis) == type([]):
-                    return list(axis) # clone the axis
-            else:
-                    return [axis] # single-element list
+        if type(axis) == type([]):
+            return list(axis) # clone the axis
+        else:
+            return [axis] # single-element list
 
 - Know your builtins : You should at least have a basic understanding of all
   the Python builtins (http://docs.python.org/library/functions.html)
@@ -524,7 +524,7 @@ meaning, be sure that you're using the right one.
     # not very good
     cube = []
     for i in res:
-            cube.append((i['id'],i['name']))
+        cube.append((i['id'],i['name']))
     # better
     cube = [(i['id'], i['name']) for i in res]
 
@@ -548,13 +548,13 @@ So, you can write ``if some_collection:`` instead of ``if len(some_collection):`
 
     # creates a temporary list and looks bar
     for key in my_dict.keys():
-            "do something..."
+        "do something..."
     # better
     for key in my_dict:
-            "do something..."
+        "do something..."
     # accessing the key,value pair
     for key, value in my_dict.items():
-            "do something..."
+        "do something..."
 
 - Use dict.setdefault
 
