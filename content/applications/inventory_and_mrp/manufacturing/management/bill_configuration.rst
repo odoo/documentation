@@ -12,7 +12,7 @@ that even product variants can have their own tailored :abbr:`BoMs (Bills of Mat
 Correctly setting up a :abbr:`BoM (Bill of Materials)` helps optimize the manufacturing process and
 save time.
 
-Set up a bill of baterials (BoM)
+Set up a bill of materials (BoM)
 ================================
 
 The simplest :abbr:`BoM (Bill of Materials)` setup is one without operations or instructions, only
