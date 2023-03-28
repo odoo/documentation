@@ -287,6 +287,10 @@ The final touch is to let the user delete a todo.
 
 Owl has a powerful `slot <{OWL_PATH}/doc/reference/slots.md>`_ system to allow you to write generic
 components. This is useful to factorize the common layout between different parts of the interface.
+When you create a generic component, you should like to insert information like title or description in your component but obviously, this informations will change from a component to another. Let's take the example of few cards to present few films, each card has a different title and a different description. 
+So, when you create your generic component, let's use __t-set-slot="SlotName"__ and when you use it (in a loop for example), let's use t-slot="SlotName". 
+
+.. tip:: The value of the slot has to be inside the slot tag. Don't forget that t-slot="SlotName"
 
 .. exercise::
 
