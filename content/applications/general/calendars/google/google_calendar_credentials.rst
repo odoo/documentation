@@ -5,6 +5,10 @@ Synchronize Google Calendar with Odoo
 Synchronize Google Calendar with Odoo to see and manage meetings from both platforms (updates go
 in both directions). This integration helps organize your schedule so you never miss a meeting.
 
+.. seealso::
+   - :doc:`/applications/general/auth/google`
+   - :doc:`/administration/maintain/google_oauth`
+
 Setup in Google
 ===============
 
