@@ -11,6 +11,10 @@ personal email address or an address created by a custom domain.
    For more information, visit `Microsoft's documentation <https://learn.microsoft.com/en-us/azure/
    active-directory/develop/quickstart-register-app>`_ on setting up OAuth in Azure.
 
+.. seealso::
+   - :doc:`/applications/general/auth/azure`
+   - :doc:`/applications/general/calendars/outlook/outlook_calendar`
+
 Setup in Microsoft Azure Portal
 ===============================
 

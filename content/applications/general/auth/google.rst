@@ -8,6 +8,10 @@ with their Google account.
 This is particularly helpful if your organization uses Google Workforce and you want the employees
 within your organization to connect to Odoo with their Google Accounts.
 
+.. seealso::
+   - :doc:`/applications/general/calendars/google/google_calendar_credentials`
+   - :doc:`/administration/maintain/google_oauth`
+
 .. _google-sign-in/configuration:
 
 Configuration
@@ -42,7 +46,7 @@ OAuth consent screen
       :align: center
       :alt: Google oauth consent selection menu
 
-#. Choose one of the options **(Internal / External)** as instructed, and click on *Create*.
+#. Choose the option for :guilabel:`internal`, and click on :guilabel:`Create`.
 
    .. image:: google/consent.png
       :align: center
