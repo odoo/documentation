@@ -11,6 +11,10 @@ email address or an address created by a custom domain.
    For more information, visit `Google's documentation
    <https://support.google.com/cloud/answer/6158849>`_ on setting up OAuth.
 
+.. seealso::
+   - :doc:`/applications/general/auth/google`
+   - :doc:`/applications/general/calendars/google/google_calendar_credentials`
+
 Setup in Google
 ===============
 
