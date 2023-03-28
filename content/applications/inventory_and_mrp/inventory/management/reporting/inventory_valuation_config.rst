@@ -1,6 +1,8 @@
 =================================
-Inventory Valuation Configuration
+Inventory valuation configuration
 =================================
+
+.. _inventory/inventory_valuation_config:
 
 All of a company's stock on-hand contributes to the valuation of its inventory. That value should
 be reflected in the company's accounting records to accurately show the value of the company and
@@ -27,32 +29,32 @@ between locations in a company's inventory.
    need to be periodically checked to ensure accuracy, and adjustments may be needed on an ongoing
    basis depending on the needs and priorities of the business.
 
-Types of Accounting
+Types of accounting
 -------------------
 
-Accounting entries will depend on the accounting mode: Continental or Anglo-Saxon.
+Accounting entries will depend on the accounting mode: *Continental* or *Anglo-Saxon*.
 
 .. tip::
-   Verify the accounting mode by activating the :ref:`developer-mode`
-   and navigating to :menuselection:`Accounting --> Configuration --> Settings`.
+   Verify the accounting mode by activating the :ref:`developer-mode` and navigating to
+   :menuselection:`Accounting --> Configuration --> Settings`.
 
-In Anglo-Saxon accounting, the costs of goods sold (COGS) are reported when products are sold or
+In *Anglo-Saxon* accounting, the costs of goods sold (COGS) are reported when products are sold or
 delivered. This means that the cost of a good is only recorded as an expense when a customer is
-invoiced for a product. Interim Stock Accounts are used for the input and output accounts, and are
-both Asset Accounts in the Balance Sheet.
+invoiced for a product. *Interim Stock Accounts* are used for the input and output accounts, and are
+both *Asset Accounts* in the balance sheet.
 
-In Continental accounting, the cost of a good is reported as soon as a product is received into
-stock. Additionally, a *single* Expense account is used for both input and output accounts in
-the Balance Sheet.
+In *Continental* accounting, the cost of a good is reported as soon as a product is received into
+stock. Additionally, a single *Expense* account is used for both input and output accounts in
+the balance sheet.
 
-Costing Methods
+Costing methods
 ---------------
 
 Below are the three costing methods that can be used in Odoo for inventory valuation.
 
 - **Standard Price**: is the default costing method in Odoo. The cost of the product is manually
   defined on the product form, and this cost is used to compute the valuation. Even if the purchase
-  price on a Purchase Order differs, the valuation will still use the cost defined on the product
+  price on a purchase order differs, the valuation will still use the cost defined on the product
   form.
 - **Average Cost (AVCO)**: calculates the valuation of a product based on the average cost of that
   product, divided by the total number of available stock on-hand. With this costing method,
@@ -81,10 +83,11 @@ valuation method should apply.
 Under the :guilabel:`Inventory Valuation` heading are two labels: :guilabel:`Costing Method` and
 :guilabel:`Inventory Valuation`. Pick the desired :guilabel:`Costing Method` using the drop-down
 menu (e.g. :guilabel:`Standard`, :guilabel:`Average Cost (AVCO)`, or :guilabel:`First In First Out
-(FIFO)` and switch the :guilabel:`Inventory Valuation` to :guilabel:`Automated`.
+(FIFO)`) and switch the :guilabel:`Inventory Valuation` to :guilabel:`Automated`.
 
 .. seealso::
-   :doc:`Using the inventory valuation <using_inventory_valuation>`
+   :doc:`Using the inventory valuation
+   </applications/inventory_and_mrp/inventory/management/reporting/using_inventory_valuation>`
 
 .. note::
    When choosing :guilabel:`Average Cost (AVCO)` as the :guilabel:`Costing Method`, the numerical
