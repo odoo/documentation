@@ -11,6 +11,10 @@ personal email address or an address created by a custom domain.
    `Microsoft Learn: Register an application with the Microsoft identity platform
    <https://learn.microsoft.com/azure/active-directory/develop/quickstart-register-app>`_
 
+.. seealso::
+   - :doc:`/applications/general/auth/azure`
+   - :doc:`/applications/general/calendars/outlook/outlook_calendar`
+
 Setup in Microsoft Azure Portal
 ===============================
 
