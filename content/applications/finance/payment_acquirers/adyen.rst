@@ -17,6 +17,10 @@ possibilities.
    - :ref:`payment_acquirers/add_new`
    - :doc:`../payment_acquirers`
 
+.. note::
+   Adyen works only with customers processing **more** than **10 million annually** or invoicing a
+   **minimum** of **1.000** transactions **per month**.
+
 Configuration
 =============
 
