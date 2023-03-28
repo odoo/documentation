@@ -47,16 +47,16 @@ The test runner will simply run any test case, as described in the official
 `unittest documentation`_, but Odoo provides a number of utilities and helpers
 related to testing Odoo content (modules, mainly):
 
-.. autoclass:: odoo.tests.common.TransactionCase
+.. autoclass:: odoo.tests.TransactionCase
     :members: browse_ref, ref
 
-.. autoclass:: odoo.tests.common.SingleTransactionCase
+.. autoclass:: odoo.tests.SingleTransactionCase
     :members: browse_ref, ref
 
-.. autoclass:: odoo.tests.common.HttpCase
+.. autoclass:: odoo.tests.HttpCase
     :members: browse_ref, ref, url_open, browser_js
 
-.. autofunction:: odoo.tests.common.tagged
+.. autofunction:: odoo.tests.tagged
 
 By default, tests are run once right after the corresponding module has been
 installed. Test cases can also be configured to run after all modules have
@@ -72,10 +72,10 @@ been installed, and not run right after the module installation::
         Page = self.env['website.page']
 
 The most common situation is to use
-:class:`~odoo.tests.common.TransactionCase` and test a property of a model
+:class:`~odoo.tests.TransactionCase` and test a property of a model
 in each method::
 
-    class TestModelA(common.TransactionCase):
+    class TestModelA(TransactionCase):
         def test_some_action(self):
             record = self.env['model.a'].create({'field': 'value'})
             record.some_action()
@@ -89,13 +89,13 @@ in each method::
 
     Test methods must start with ``test_``
 
-.. autoclass:: odoo.tests.common.Form
+.. autoclass:: odoo.tests.Form
     :members:
 
-.. autoclass:: odoo.tests.common.M2MProxy
+.. autoclass:: odoo.tests.M2MProxy
     :members: add, remove, clear
 
-.. autoclass:: odoo.tests.common.O2MProxy
+.. autoclass:: odoo.tests.O2MProxy
     :members: new, edit, remove
 
 Running tests
@@ -115,9 +115,9 @@ Test selection
 In Odoo, Python tests can be tagged to facilitate the test selection when
 running tests.
 
-Subclasses of :class:`odoo.tests.common.BaseCase` (usually through
-:class:`~odoo.tests.common.TransactionCase` or
-:class:`~odoo.tests.common.HttpCase`) are automatically tagged with
+Subclasses of :class:`odoo.tests.BaseCase` (usually through
+:class:`~odoo.tests.TransactionCase` or
+:class:`~odoo.tests.HttpCase`) are automatically tagged with
 ``standard`` and ``at_install`` by default.
 
 Invocation
@@ -132,12 +132,12 @@ This option defaults to ``+standard`` meaning tests tagged ``standard``
 (explicitly or implicitly) will be run by default when starting Odoo
 with :option:`--test-enable <odoo-bin --test-enable>`.
 
-When writing tests, the :func:`~odoo.tests.common.tagged` decorator can be
+When writing tests, the :func:`~odoo.tests.tagged` decorator can be
 used on **test classes** to add or remove tags.
 
 The decorator's arguments are tag names, as strings.
 
-.. danger:: :func:`~odoo.tests.common.tagged` is a class decorator, it has no
+.. danger:: :func:`~odoo.tests.tagged` is a class decorator, it has no
             effect on functions or methods
 
 Tags can be prefixed with the minus (``-``) sign, to *remove* them instead of
@@ -180,7 +180,7 @@ ones:
     $ odoo-bin --test-tags 'standard,-slow'
 
 When you write a test that does not inherit from the
-:class:`~odoo.tests.common.BaseCase`, this test will not have the default tags,
+:class:`~odoo.tests.BaseCase`, this test will not have the default tags,
 you have to add them explicitly to have the test included in the default test
 suite.  This is a common issue when using a simple ``unittest.TestCase`` as
 they're not going to get run:
@@ -230,7 +230,7 @@ Special tags
 ~~~~~~~~~~~~
 
 - ``standard``: All Odoo tests that inherit from
-  :class:`~odoo.tests.common.BaseCase` are implicitly tagged standard.
+  :class:`~odoo.tests.BaseCase` are implicitly tagged standard.
   :option:`--test-tags <odoo-bin --test-tags>` also defaults to ``standard``.
 
   That means untagged test will be executed by default when tests are enabled.
@@ -715,7 +715,7 @@ Python
 ~~~~~~
 
 To start a tour from a python test, make the class inherit from
-:class:`~odoo.tests.common.HTTPCase`, and call `start_tour`:
+:class:`~odoo.tests.HTTPCase`, and call `start_tour`:
 
 .. code-block:: python
 
@@ -858,7 +858,7 @@ Query counts
 
 One of the ways to test performance is to measure database queries. Manually, this can be tested with the
 `--log-sql` CLI parameter. If you want to establish the maximum number of queries for an operation,
-you can use the :meth:`~odoo.tests.common.BaseCase.assertQueryCount` method, integrated in Odoo test classes.
+you can use the :meth:`~odoo.tests.BaseCase.assertQueryCount` method, integrated in Odoo test classes.
 
 .. code-block:: python
 
