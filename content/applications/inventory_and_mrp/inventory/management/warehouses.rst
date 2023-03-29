@@ -8,5 +8,6 @@ Warehouses
    :titlesonly:
    :glob:
 
-   warehouses/warehouses_locations
    warehouses/resupply_warehouses
+   warehouses/warehouse_replenishment_transfer
+   warehouses/warehouses_locations
