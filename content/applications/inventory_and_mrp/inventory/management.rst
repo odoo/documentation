@@ -10,7 +10,6 @@ Warehouse Management
 
    management/products
    management/warehouses
-   management/replenishment_strategies
    management/delivery
    management/incoming
    management/misc
