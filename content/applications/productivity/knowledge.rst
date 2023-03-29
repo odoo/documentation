@@ -20,4 +20,5 @@ from other models, templates, etc.
    :titlesonly:
 
    knowledge/articles_editing
+   knowledge/management
    knowledge/properties
