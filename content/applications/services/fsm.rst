@@ -15,3 +15,4 @@ Field Service
 
    fsm/sales
    fsm/helpdesk
+   fsm/default_warehouse
