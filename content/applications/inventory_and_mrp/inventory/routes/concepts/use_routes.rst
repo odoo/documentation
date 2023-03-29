@@ -89,6 +89,8 @@ Area*. Then, once the quality check is done, move them to their *Storage Locatio
    orders and their products are grouped in one transfer, whereas the packing operation respects the
    grouping per customer order.
 
+.. _use-routes/routes-rules:
+
 Use routes and rules
 ====================
 
