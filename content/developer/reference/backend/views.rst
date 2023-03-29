@@ -1728,12 +1728,6 @@ Possible children of the view element are:
   ``name`` (required)
     the name of the field to fetch
 
-  ``allow_group_range_value`` (optional)
-    whether a ``date`` or ``datetime`` field allows a value computed from a
-    group range (which consists of the first and last dates of the group).
-    Enables the 'quick create' and 'drag and drop' features when the kanban
-    view is grouped by that field. Default: false.
-
 .. include:: views/header_buttons.rst
 
 .. note::
