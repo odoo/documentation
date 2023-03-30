@@ -13,6 +13,14 @@ tools to facilitate database interactions.
 Before moving forward in the exercise, make sure the ``estate`` module is installed, i.e. it
 must appear as 'Installed' in the Apps list.
 
+.. warning::
+
+   Do not use mutable global variables.
+
+   A single Odoo instance can run several databases in parallel within the same python process.
+   Distinct modules might be installed on each of these databases, therefore we cannot rely on
+   global variables that would be updated depending on installed modules.
+
 Object-Relational Mapping
 =========================
 
