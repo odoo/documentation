@@ -102,4 +102,4 @@ right and validate all related payments :
    :align: center
 
 .. seealso::
-   * :doc:`../feeds/bank_synchronization`
+   :doc:`../bank_synchronization`

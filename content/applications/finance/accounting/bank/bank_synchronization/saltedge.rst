@@ -1,6 +1,6 @@
-==========================================
-Salt Edge as bank synchronization provider
-==========================================
+=========
+Salt Edge
+=========
 
 **Salt Edge** is a third-party provider that aggregates banking information
 from your bank accounts. It supports ~5000 institutions in more than 50
@@ -8,12 +8,15 @@ countries.
 
 .. image:: saltedge/saltedge-logo.png
    :align: center
+   :width: 50%
    :alt: Salt Edge Logo
 
 Odoo can synchronize directly with your bank to get all bank statements imported
 automatically into your database.
 
-Salt Edge is a free third-party provider.
+.. seealso::
+   - :doc:`../bank_synchronization`
+   - :doc:`../bank_statements`
 
 Configuration
 =============
@@ -103,9 +106,3 @@ In case you already have a connection with the same credentials present on your 
 and this synchronization was created with Odoo, you will normally be able to find it by going to
 :menuselection:`Accounting --> Configuration --> Online Synchronization`. Please make sure to do an
 *Update Credentials* to reactivate the connection.
-
-.. seealso::
-
-   * :doc:`bank_synchronization`
-   * :doc:`ponto`
-   * :doc:`bank_statements`
