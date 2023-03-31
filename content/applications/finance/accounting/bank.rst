@@ -8,6 +8,7 @@ Bank and cash
    :titlesonly:
 
    bank/setup
-   bank/feeds
+   bank/bank_synchronization
+   bank/transactions
    bank/reconciliation
    bank/interbank
