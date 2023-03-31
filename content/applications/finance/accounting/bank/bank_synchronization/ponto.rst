@@ -1,6 +1,6 @@
-======================================
-Ponto as bank synchronization provider
-======================================
+=====
+Ponto
+=====
 
 **Ponto** is a service that allows companies and professionals to aggregate their accounts in one
 place and directly see all their transactions within one app. It is a third-party solution that is
@@ -16,9 +16,9 @@ into your database.
 Ponto is a paid third-party provider that can handle the synchronization between your bank accounts
 and Odoo. `Its pricing is 4€/month per account/integration <https://myponto.com/en#pricing>`_.
 
-.. note::
-   You can find more information about bank synchronization :doc:`on this page
-   <bank_synchronization>`.
+.. seealso::
+   - :doc:`../bank_synchronization`
+   - :doc:`../bank_statements`
 
 Configuration
 =============
@@ -115,10 +115,3 @@ and we advise you to contact Ponto directly.
 .. important::
    Using an institution in beta is beneficial for Ponto, it allows them to have real
    feedback on the connection with the institution.
-
-
-.. seealso::
-
-   * :doc:`bank_synchronization`
-   * :doc:`saltedge`
-   * :doc:`bank_statements`
