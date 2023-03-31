@@ -1,6 +1,8 @@
-======================================
-Bank synchronization: automatic import
-======================================
+:show-content:
+
+====================
+Bank synchronization
+====================
 
 Odoo can synchronize directly with your bank institution to get all bank statements imported
 automatically into your database.
@@ -15,9 +17,12 @@ To connect to the banks, Odoo uses multiple web-services:
 
 - **Plaid**: United States of America and Canada
 - **Yodlee**: Worldwide
-- **Salt Edge**: Europe (:doc:`more information <saltedge>`)
-- **Ponto**: Europe (:doc:`more information <ponto>`)
-- **EnableBanking**: Scandinavian countries
+- :doc:`Salt Edge <bank_synchronization/saltedge>`: Europe
+- :doc:`Ponto <bank_synchronization/ponto>`: Europe
+- **Enable Banking**: Scandinavian countries
+
+.. seealso::
+   :doc:`transactions`
 
 Configuration
 =============
@@ -196,7 +201,8 @@ You can update your credentials by going to :menuselection:`Accounting Dashboard
 Configuration --> Accounting: Online Synchronization`,open the connection you want to update your
 credentials and click on the :guilabel:`Update Credentials` button.
 
-.. seealso::
-   * :doc:`transactions`
-   * :doc:`ponto`
-   * :doc:`saltedge`
+.. toctree::
+   :titlesonly:
+
+   bank_synchronization/saltedge
+   bank_synchronization/ponto
