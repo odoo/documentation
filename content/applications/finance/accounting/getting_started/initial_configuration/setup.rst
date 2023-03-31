@@ -55,7 +55,7 @@ Connect your bank account to your database and have your bank statements synced 
 so, find your bank in the list, click on *Connect*, and follow the instructions on-screen.
 
 .. note::
-   :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this feature.
+   :doc:`Click here <../../bank/bank_synchronization>` for more information about this feature.
 
 If your Bank Institution can’t be synchronized automatically, or if you prefer not to sync it with
 your database, you may also configure your bank account manually by clicking on *Create it*, and
@@ -188,6 +188,6 @@ Send yourself a sample invoice by email to make sure everything is correctly con
 .. seealso::
    * :doc:`../../bank/setup/bank_accounts`
    * :doc:`chart_of_accounts`
-   * :doc:`../../bank/feeds/bank_synchronization`
+   * :doc:`../../bank/bank_synchronization`
    * :doc:`../../../fiscal_localizations`
    * `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_

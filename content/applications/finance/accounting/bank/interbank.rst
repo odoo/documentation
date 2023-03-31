@@ -91,7 +91,7 @@ Manage and reconcile bank statements
 ------------------------------------
 
 The next step is to book the bank statements to finalize the transaction by creating,
-:doc:`importing <feeds/transactions>`, or :doc:`synchronizing <feeds/bank_synchronization>` your
+:doc:`importing <transactions>`, or :doc:`synchronizing <bank_synchronization>` your
 :guilabel:`Transactions lines`. Fill in the :guilabel:`Ending balance` and click on the
 :guilabel:`Reconcile` button.
 
