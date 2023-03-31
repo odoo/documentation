@@ -125,5 +125,5 @@ line*.
 .. seealso::
 
    - :doc:`use_cases`
-   - :doc:`../feeds/bank_synchronization`
+   - :doc:`../bank_synchronization`
    - :doc:`../../receivables/customer_invoices/cash_discounts`
