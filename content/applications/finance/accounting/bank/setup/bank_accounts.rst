@@ -25,7 +25,7 @@ Add a new Bank Account
 ======================
 
 You can either connect your bank account to your Odoo database, or configure your bank account
-manually and :doc:`upload the bank statements manually <../feeds/bank_statements>`.
+manually and :doc:`upload the bank statements manually <../bank_statements>`.
 
 Bank Synchronization
 --------------------
@@ -37,7 +37,7 @@ To synchronize a new bank account, go to :menuselection:`Accounting --> Configur
 instructions on-screen.
 
 .. note::
-   :doc:`Click here <../../bank/feeds/bank_synchronization>` for more information about this bank
+   :doc:`Click here <../../bank/bank_synchronization>` for more information about this bank
    synchronization.
 
 .. image:: bank_accounts/bank_accounts_connect.png
@@ -90,6 +90,6 @@ how the bank statements are recorded and posted in the **Bank Statements** secti
    :alt: Advanced configuration of a bank account in Odoo Accounting
 
 .. seealso::
-   * :doc:`../../bank/feeds/bank_synchronization`
-   * :doc:`../feeds/bank_statements`
-   * `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_
+   - :doc:`../bank_synchronization`
+   - :doc:`../bank_statements`
+   - `Odoo Tutorials: Accounting Basics <https://www.odoo.com/r/lsZ>`_
