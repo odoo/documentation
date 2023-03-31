@@ -4,7 +4,7 @@ Bank accounts
 
 You can manage as many bank or cash accounts as needed on your database. Configuring them well
 allows you to have all your banking data up-to-date and ready for :doc:`reconciliation
-<../../bank/reconciliation/use_cases>` with your journal entries.
+<../reconciliation/use_cases>` with your journal entries.
 
 In Odoo Accounting, each bank account has a dedicated journal set to post all entries in a dedicated
 account. Both the journal and the account are automatically created and configured whenever you add
@@ -33,7 +33,7 @@ To connect your bank account to your database, go to :menuselection:`Accounting 
 follow the instructions.
 
 .. seealso::
-   :doc:`../../bank/feeds/bank_synchronization`
+   :doc:`../bank_synchronization`
 
 Create a bank account
 ---------------------
@@ -83,8 +83,8 @@ You can edit the accounting information and bank account number according to you
 
 .. seealso::
    - :doc:`../../others/multi_currency`
-   - :doc:`../../bank/feeds/bank_statements`
-   - :doc:`../../bank/setup/outstanding_accounts`
+   - :doc:`../bank_statements`
+   - :doc:`../setup/outstanding_accounts`
 
 Suspense account
 ----------------
@@ -132,5 +132,5 @@ Bank feeds
   with your database.
 
 .. seealso::
-   - :doc:`../../bank/feeds/bank_synchronization`
-   - :doc:`../../bank/feeds/bank_statements`
+   - :doc:`../bank_synchronization`
+   - :doc:`../bank_statements`
