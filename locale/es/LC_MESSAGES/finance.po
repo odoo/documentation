@@ -21,7 +21,6 @@
 # Cristóbal Martí Oliver <info@moblesmarti.com>, 2022
 # Nicolás Broggi <rnbroggi@gmail.com>, 2022
 # Cinthya Yepez <cinthyepez@gmail.com>, 2022
-# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2022
 # Valentino <vgaffuri2018@student.hult.edu>, 2022
 # Jorge Luis Alfonso <jlalfonso21@gmail.com>, 2022
 # José Cabrera Lozano <jose.cabrera@edukative.es>, 2022
@@ -31,7 +30,6 @@
 # jabelchi, 2022
 # Althay Ramallo Fuentes <arf@odoo.com>, 2022
 # Jesús Alan Ramos Rodríguez <alan.ramos@jarsa.com.mx>, 2022
-# Lucia Pacheco <lpo@odoo.com>, 2022
 # Óscar Fonseca <tecnico@extreme-micro.com>, 2022
 # Lina Maria Avendaño Carvajal <lina8823@gmail.com>, 2022
 # Annette Bwemere, 2023
@@ -41,6 +39,8 @@
 # marcescu, 2023
 # Jesse Garza <jga@odoo.com>, 2023
 # Martin Trigaux, 2023
+# Lucia Pacheco <lpo@odoo.com>, 2023
+# Patricia Gutiérrez Capetillo <pagc@odoo.com>, 2023
 # Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
@@ -71,8 +71,8 @@ msgid ""
 "**Odoo Invoicing** is a standalone invoicing app to create invoices, send "
 "them to your customers, and manage payments."
 msgstr ""
-"**Facturación de Odoo** es una aplicación autónoma para crear facturas, "
-"enviárselas a sus clientes y gestionar pagos."
+"**Facturación** es una aplicación autónoma para crear facturas, enviárselas "
+"a sus clientes y gestionar pagos."
 
 #: ../../content/applications/finance/accounting.rst:13
 msgid ""
@@ -3063,7 +3063,7 @@ msgstr "Tipos de cuentas"
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:23
 #: ../../content/applications/finance/fiscal_localizations/spain.rst:27
 msgid "Balance Sheet"
-msgstr "Balance de Situación"
+msgstr "Balance general"
 
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/chart_of_accounts.rst:67
 msgid "Receivable"
@@ -3113,7 +3113,7 @@ msgstr "Ganancias del año actual"
 #: ../../content/applications/finance/fiscal_localizations/germany.rst:24
 #: ../../content/applications/finance/fiscal_localizations/netherlands.rst:20
 msgid "Profit & Loss"
-msgstr "Ganancias y Pérdidas"
+msgstr "Ganancias y pérdidas"
 
 #: ../../content/applications/finance/accounting/getting_started/initial_configuration/chart_of_accounts.rst:93
 msgid "Other Income"
@@ -7659,7 +7659,7 @@ msgstr ""
 #: ../../content/applications/finance/accounting/receivables/customer_payments/batch_sdd.rst:92
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:342
 msgid "Customer invoices"
-msgstr ""
+msgstr "Facturas de cliente"
 
 #: ../../content/applications/finance/accounting/receivables/customer_invoices/cash_discounts.rst:3
 msgid "Cash discounts and tax reduction"
@@ -10495,7 +10495,7 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/followup.rst:33
 msgid "Follow-up reports"
-msgstr "Informes de seguimiento"
+msgstr "Reportes de seguimiento"
 
 #: ../../content/applications/finance/accounting/receivables/customer_payments/followup.rst:35
 msgid ""
@@ -12093,16 +12093,22 @@ msgid ""
 "the feature, go to the :guilabel:`Advanced Settings` tab, and enable "
 ":guilabel:`Lock Posted Entries with Hash`."
 msgstr ""
+"Para comenzar a usar la función hash, vaya a :menuselection:`Contabilidad "
+"--> Configuración > Diarios`. Abra el diario en el que desea activar al "
+"función, vaya a la pestaña :guilabel:`ajustes avanzados` y habilite la "
+"opción :guilabel:`bloquear asientos validados con hash`."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:37
 msgid ""
 "Once you post an entry on a locked journal, you cannot disable the feature "
 "anymore, nor edit any posted entry."
 msgstr ""
+"Una vez que registre un asiento en un diario bloqueado, no podrá "
+"deshabilitar la función ni editar ningún asiento registrado."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:43
 msgid "Report download"
-msgstr ""
+msgstr "Descargar reporte"
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:45
 msgid ""
@@ -12110,6 +12116,10 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Settings --> Reporting` and"
 " click on :guilabel:`Download the Data Inalterability Check Report`."
 msgstr ""
+"Para descargar el reporte de comprobación de la inalterabilidad de los "
+"datos, vaya a :menuselection:`Contabilidad --> Configuración --> Ajustes -->"
+" Reportes` y haga clic en :guilabel:`Descargar el reporte de comprobación de"
+" la inalterabilidad de los datos`."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:48
 msgid ""
@@ -12119,10 +12129,15 @@ msgid ""
 "coverage column tells you when a journal's posted entries started being "
 "locked."
 msgstr ""
+"La primera sección del reporte es un resumen de todos los diarios y su "
+"configuración. En la columna de comprobación de inalterabilidad puede ver si"
+" los asientos registrados en un diario están bloqueados con un hash (V) o no"
+" (X). La columna de cobertura indica cuándo comenzaron a bloquearse los "
+"asientos de un diario."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rstNone
 msgid "Configuration report for two journals"
-msgstr ""
+msgstr "Reporte de configuración de dos diarios"
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rst:57
 msgid ""
@@ -12130,10 +12145,13 @@ msgid ""
 "each hashed journal. You can view the first hashed entry and its "
 "corresponding hash and the last hashed entry and its corresponding hash."
 msgstr ""
+"La segunda sección muestra el resultado de la comprobación de la "
+"consistencia de los datos de cada diario con hash. Puede ver el primer y el "
+"último asiento con hash y sus hash correspondientes."
 
 #: ../../content/applications/finance/accounting/reporting/overview/data_inalterability.rstNone
 msgid "Data consistency check report for a journal"
-msgstr ""
+msgstr "Reporte de comprobación de consistencia de los datos de un diario"
 
 #: ../../content/applications/finance/accounting/reporting/overview/main_reports.rst:3
 msgid "Main reports available"
@@ -12426,13 +12444,15 @@ msgstr ""
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:3
 msgid "Tax carryover"
-msgstr ""
+msgstr "Traspaso de impuestos"
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:5
 msgid ""
 "When performing tax reports, the **tax carryover** feature allows carrying "
 "amounts from one period to another without creating new entries."
 msgstr ""
+"Al realizar reportes de impuestos, la función de **traspaso de impuestos** "
+"permite traspasar importes de un periodo a otro sin crear nuevos asientos."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:8
 msgid ""
@@ -12440,22 +12460,30 @@ msgid ""
 "where amounts must be transferred from period to period (for example, "
 "because the total of the line is negative)."
 msgstr ""
+"Se creó para cumplir los requisitos legales de ubicaciones determinadas, "
+"donde los importes deben transferirse de un periodo a otro (por ejemplo, "
+"porque el total de la línea es negativo)."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:11
 msgid ""
 "The feature is activated by default in countries where it is required, such "
 "as Belgium, France, and Italy. There is no specific configuration required."
 msgstr ""
+"La función se activa de forma predeterminada en países en los que es "
+"necesaria, como Bélgica, Francia e Italia. No se necesita de ninguna "
+"configuración específica."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:14
 msgid ""
 "Let’s take an example of a Belgian company that created a credit note of 100"
 " for one of their customers. The due tax is 21%."
 msgstr ""
+"Veamos el ejemplo de una empresa belga que crea una nota de crédito por 100 "
+"para uno de sus clientes. Los impuestos adeudados son del 21%."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rstNone
 msgid "Illustration with a credit note"
-msgstr ""
+msgstr "Ejemplo de una nota de crédito"
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:21
 msgid ""
@@ -12463,6 +12491,9 @@ msgid ""
 " a negative amount. But it must be declared to the government as zero, and "
 "the negative amount should be carried over to the next period."
 msgstr ""
+"En este caso, según las regulaciones locales, la casilla 81 del reporte de "
+"impuestos puede contener un importe negativo. Debe declararse al gobierno "
+"como cero, y el importe negativo debe traspasarse al siguiente periodo."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:25
 msgid ""
@@ -12470,11 +12501,16 @@ msgid ""
 "pop-up on line 81 explains that the amount will be carried over in the next "
 "period."
 msgstr ""
+"Si accede a :menuselection:`Contabilidad --> Reportes --> Reporte de "
+"impuestos`, una ventana emergente en la línea 81 explica que el importe se "
+"traspasará al siguiente periodo."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rstNone
 msgid ""
 "pop-up message stating the amount will be carried over to the next period"
 msgstr ""
+"Mensaje emergente que indica el importe que se traspasará al siguiente "
+"periodo"
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rst:32
 msgid ""
@@ -12483,52 +12519,62 @@ msgid ""
 " will be carried over to this line in the next period based on the existing "
 "transactions and the carryover from the previous period."
 msgstr ""
+"En el momento del cierre del periodo fiscal, el reporte de impuestos muestra"
+" que el importe se traspasó del periodo anterior. También indica el importe "
+"que se traspasará a esta línea en el siguiente periodo según las "
+"transacciones existentes y el traspaso del periodo anterior."
 
 #: ../../content/applications/finance/accounting/reporting/overview/tax_carryover.rstNone
 msgid "Illustration of the tax return"
-msgstr ""
+msgstr "Ejemplo de una declaración de impuestos"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:3
 msgid "Silverfin integration"
-msgstr ""
+msgstr "Integración con Silverfin"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:5
 msgid ""
 "`Silverfin <https://www.silverfin.com>`_ is a third-party service provider "
 "that offers a cloud platform for accountants."
 msgstr ""
+"`Silverfin <https://www.silverfin.com>`_ es un proveedor de servicios de "
+"terceros que ofrece una plataforma en la nube para contadores."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:8
 msgid ""
 "Odoo and Silverfin provide an integration to automate the synchronization of"
 " data."
 msgstr ""
+"Odoo y Silverfin se pueden integrar para automatizar la sincronización de "
+"datos."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:13
 msgid ""
 "To configure this integration, you need to input the following data into "
 "your Silverfin account:"
 msgstr ""
+"Para configurar esta integración, debe introducir los siguientes datos en su"
+" cuenta de Silverfin:"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:15
 msgid "user's email address"
-msgstr ""
+msgstr "Dirección de correo electrónico del usuario."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:16
 msgid ":ref:`Odoo API key <silverfin/api-key>`"
-msgstr ""
+msgstr ":ref:`Clave API de Odoo <silverfin/api-key>`."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:17
 msgid "URL of the Odoo database"
-msgstr ""
+msgstr "URL de la base de datos de Odoo."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:18
 msgid "name of your Odoo database"
-msgstr ""
+msgstr "Nombre de su base de datos de Odoo."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:23
 msgid "Odoo API key"
-msgstr ""
+msgstr "Clave API de Odoo"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:25
 msgid ""
@@ -12537,30 +12583,39 @@ msgid ""
 " :ref:`for multiple databases managed by a user <silverfin/api-multipledb>` "
 "(hosting: Odoo Online)."
 msgstr ""
+"Puede crear claves API externas de Odoo :ref:`para una sola base de datos "
+"<silverfin/api-singledb>` (para los alojamientos de Odoo en línea, local y "
+"Odoo.sh) o :ref:`para múltiples bases de datos gestinonadas por un usuario "
+"<silverfin/api-multipledb>` (para el alojamiento de Odoo en línea)."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:30
 msgid ""
 "These API keys are personal and provide full access to your user account. "
 "Store it securely."
 msgstr ""
+"Estas claves API son personales y brindan acceso completo a su cuenta de "
+"usuario. Guárdela con seguridad."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:31
 msgid ""
 "You can copy the API key only at its creation, and you cannot retrieve it "
 "later."
 msgstr ""
+"Puede copiar la clave API solo en el momento de la creación, no puede "
+"recuperarla más tarde."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:32
 msgid "If you need it again, create a new API key (and delete the old one)."
 msgstr ""
+"Si la necesita otra vez, cree una nueva clave API (y elimine la anterior)."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:35
 msgid ":doc:`/developer/reference/external_api`"
-msgstr ""
+msgstr ":doc:`/developer/reference/external_api`"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:40
 msgid "One key per database"
-msgstr ""
+msgstr "Una clave por base de datos"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:42
 msgid ""
@@ -12569,18 +12624,23 @@ msgid ""
 " click on :guilabel:`New API key`, confirm your password, give a descriptive"
 " name to your new key, and copy the new API key."
 msgstr ""
+"Para crear una nueva clave API para una única base de datos, haga clic en el"
+" menú de usuario y luego en :guilabel:`mi perfil`. En la pestaña "
+":guilabel:`seguridad de la cuenta`, haga clic en :guilabel:`nueva clave "
+"API`, confirme su contraseña, agregue un nombre descriptivo a su nueva clave"
+" y cópiela."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rstNone
 msgid "creation of an Odoo external API key for a database"
-msgstr ""
+msgstr "Creación de una clave API externa de Odoo para una base de datos"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:51
 msgid ":ref:`api/external_api/keys`"
-msgstr ""
+msgstr ":ref:`api/external_api/keys`"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:56
 msgid "One key for multiple databases (fiduciaries)"
-msgstr ""
+msgstr "Una clave para varias bases de datos (fiduciarias)"
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rst:58
 msgid ""
@@ -12592,10 +12652,18 @@ msgid ""
 "Key`, confirm your password, give a descriptive name to your new key, and "
 "copy the new API key."
 msgstr ""
+"Para crear una nueva clave API que sea válida para todas las bases de datos "
+"de un solo usuario **(este es el método más sencillo para fiduciarias)**, "
+"vaya al `sitio web de Odoo <https://www.odoo.com>`_  e inicie sesión con su "
+"cuenta de administrador. A continuación, abra `los ajustes de seguridad de "
+"su cuenta con el modo de desarrollador "
+"<https://www.odoo.com/my/security?debug=1>`_, haga clic en :guilabel:`nueva "
+"clave API`, confirme su contraseña, agregue un nombre descriptivo a su nueva"
+" clave y cópiela."
 
 #: ../../content/applications/finance/accounting/reporting/silverfin.rstNone
 msgid "creation of an Odoo external API key for an Odoo user"
-msgstr ""
+msgstr "Creación de una clave API externa para un usuario de Odoo"
 
 #: ../../content/applications/finance/accounting/taxation.rst:5
 msgid "Taxation"
@@ -16249,12 +16317,14 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:10
 msgid "`VIDEO WEBINAR <https://www.youtube.com/watch?v=_H1HbU-wKVg>`_."
-msgstr ""
+msgstr "`WEBINAR <https://www.youtube.com/watch?v=_H1HbU-wKVg>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:11
 msgid ""
 "`VIDEO WEBINAR ECOMMERCE <https://www.youtube.com/watch?v=5gUi2WWfRuI>`_."
 msgstr ""
+"`WEBINAR SOBRE COMERCIO ELECTRÓNICO "
+"<https://www.youtube.com/watch?v=5gUi2WWfRuI>`_."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:17
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:33
@@ -16267,6 +16337,8 @@ msgid ""
 ":ref:`Install <general/install>` the following modules to get all the "
 "features of the Argentinean localization:"
 msgstr ""
+":ref:`Instale <general/install>` los siguientes módulos para obtener todas "
+"las funciones de la localización de Argentina:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:28
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:44
@@ -16283,11 +16355,11 @@ msgstr "Descripción"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:29
 msgid ":guilabel:`Argentina - Accounting`"
-msgstr ""
+msgstr ":guilabel:`Argentina - Contabilidad`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:30
 msgid "`l10n_ar`"
-msgstr ""
+msgstr "`l10n_ar`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:31
 msgid ""
@@ -16296,40 +16368,47 @@ msgid ""
 " :abbr:`AFIP (Administración Federal de Ingresos Públicos)` regulations and "
 "guidelines."
 msgstr ""
+"Es el :ref:`paquete de localización fiscal <fiscal_localizations/packages>` "
+"predeterminado, el cual representa la configuración mínima para que una "
+"empresa opere en Argentina según las regulaciones y lineamientos de la "
+":abbr:`AFIP (Administración Federal de Ingresos Públicos)`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:34
 msgid ":guilabel:`Argentinean Accounting Reports`"
-msgstr ""
+msgstr ":guilabel:`Reportes de contabilidad para Argentina`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:35
 msgid "`l10n_ar_reports`"
-msgstr ""
+msgstr "`l10n_ar_reports`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:36
 msgid "VAT Book report and VAT summary report."
-msgstr ""
+msgstr "Reporte del libro de IVA y reporte resumido de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:37
 msgid ":guilabel:`Argentinean Electronic Invoicing`"
-msgstr ""
+msgstr "Facturación electrónica para Argentina"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:38
 msgid "`l10n_ar_edi`"
-msgstr ""
+msgstr "`l10n_ar_edi`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:39
 msgid ""
 "Includes all technical and functional requirements to generate electronic "
 "invoices via web service, based on the AFIP regulations."
 msgstr ""
+"Incluye todos los requisitos técnicos o funcionales para generar facturas "
+"electrónicas a través de los servicios web, según las regulaciones de la "
+"AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:41
 msgid ":guilabel:`Argentinean eCommerce`"
-msgstr ""
+msgstr ":guilabel:`Comercio electrónico en Argentina`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:42
 msgid "`l10n_ar_website_sale`"
-msgstr ""
+msgstr "`l10n_ar_website_sale`"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:43
 msgid ""
@@ -16337,12 +16416,15 @@ msgid ""
 "Responsibility in the eCommerce checkout form in order to create electronic "
 "invoices."
 msgstr ""
+"(opcional) Permite al usuario ver el tipo de identificación y la "
+"responsabilidad AFIP en el formulario de pago de Comercio electrónico para "
+"crear facturas electrónicas."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:47
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:66
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:43
 msgid "Configure your company"
-msgstr "Configure su empresa"
+msgstr "Configurar su empresa"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:49
 msgid ""
@@ -16351,11 +16433,15 @@ msgid ""
 "in is the :guilabel:`AFIP Responsibility Type`, which represents the fiscal "
 "obligation and structure of the company."
 msgstr ""
+"Una vez que los módulos están instalados, el primer paso es configurar los "
+"datos de su empresa. Además de la información básica, un campo clave para "
+"completar es el :guilabel:`tipo de responsabilidad AFIP`, el cual representa"
+" la obligación fiscal y la estructura de la empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Select AFIP Responsibility Type."
-msgstr ""
+msgstr "Selección del tipo de responsabilidad AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:58
 msgid "Chart of account"
@@ -16368,31 +16454,35 @@ msgid ""
 "type, and consider the frence between companies that do not require as many "
 "accounts as the companies that have more complex fiscal requirements:"
 msgstr ""
+"En Contabilidad, hay tres paquetes disponibles de :guilabel:`planes de "
+"cuentas`. Se basan en el tipo de responsabilidad AFIP de la empresa, y "
+"consideran la diferencia entre empresas que no necesitan tantas cuentas, "
+"como las empresas que tienen requisitos fiscales más complejos:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:65
 msgid "Monotributista (227 accounts);"
-msgstr ""
+msgstr "Monotributista (227 cuentas),"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:66
 msgid "IVA Exento (290 accounts);"
-msgstr ""
+msgstr "IVA Exento (290 cuentas),"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:67
 msgid "Responsable Inscripto (298 Accounts)."
-msgstr ""
+msgstr "Responsable Inscripto (298 cuentas)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Select Fiscal Localization Package."
-msgstr ""
+msgstr "Selección del paquete de localización fiscal."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:74
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:234
 msgid "Configure master data"
-msgstr ""
+msgstr "Configurar datos maestros"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:77
 msgid "Electronic Invoice Credentials"
-msgstr "Credenciales de facturación electrónica"
+msgstr "Credenciales de factura electrónica"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:80
 msgid "Environment"
@@ -16403,6 +16493,8 @@ msgid ""
 "The AFIP infrastructure is replicated in two separate environments, "
 "**testing** and **production**."
 msgstr ""
+"La infraestructura de AFIP se replica en dos entornos separados: de "
+"**prueba** y de **producción**."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:84
 msgid ""
@@ -16411,6 +16503,10 @@ msgid ""
 "environments are completely isolated from each other, the digital "
 "certificates of one instance are not valid in the other one."
 msgstr ""
+"El entorno de prueba es donde las empresas pueden probar sus bases de datos "
+"hasta que estén listas para pasar al entorno de **producción**. Como estos "
+"dos entornos están completamente aislados uno del otro, los certificados "
+"digitales de una instancia no son válidas en la otra."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:88
 msgid ""
@@ -16418,26 +16514,33 @@ msgid ""
 "Settings --> Argentinean Localization` and choose either :guilabel:`Prueba "
 "(Testing)` or :guilabel:`Produccion (Production)`."
 msgstr ""
+"Para seleccionar el entorno de una base de datos, vaya a "
+":menuselection:`Contabilidad --> Ajustes --> Localización de Argentina` y "
+"elija :guilabel:`Prueba` o :guilabel:`Producción`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Select AFIP database environment: Testing or Production."
-msgstr ""
+msgstr "Selección del entorno de la base de datos AFIP: prueba o producción."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:96
 msgid "AFIP certificates"
-msgstr ""
+msgstr "Certificados AFIP"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:98
 msgid ""
 "The electronic invoice and other AFIP services work with :guilabel:`Web "
 "Services (WS)` provided by the AFIP."
 msgstr ""
+"La facturación electrónica y otros servicios AFIP funcionan con los "
+":guilabel:`Web Services (WS)` proporcionados por la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:101
 msgid ""
 "In order to enable communication with the AFIP, the first step is to request"
 " a :guilabel:`Digital Certificate` if you do not have one already."
 msgstr ""
+"Para habilitar la comunicación con la AFIP, el primer paso es solicitar un "
+":guilabel:`certificado digital` si aún no tiene uno."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:104
 msgid ""
@@ -16445,10 +16548,14 @@ msgid ""
 "selected, a file with extension `.csr` (certificate signing request) is "
 "generated to be used in the AFIP portal to request the certificate."
 msgstr ""
+":guilabel:`Generar la solicitud de firma de certificado (Odoo)`. Cuando se "
+"selecciona esta opción, se genera un archivo con extensión `.csr` (solicitud"
+" de firma de certificado) para que se utilice en el portal de la AFIP para "
+"solicitar el certificado."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Request a certificate."
-msgstr ""
+msgstr "Solicitud de un certificado."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:111
 msgid ""
@@ -16457,6 +16564,10 @@ msgid ""
 "<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
 "to get a certificate."
 msgstr ""
+":guilabel:`Generar certificado (AFIP)`. Acceda al portal de la AFIP y siga "
+"las instrucciones descritas en `este documento "
+"<https://drive.google.com/file/d/17OKX2lNWd1bjUt3NxfqcCKBkBh-Xlpo-/ view>`_ "
+"para obtener un certificado."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:115
 msgid ""
@@ -16464,10 +16575,14 @@ msgid ""
 "is generated, upload it to Odoo using the :guilabel:`Pencil` icon next to "
 "the field :guilabel:`Certificado` and select the corresponding file."
 msgstr ""
+":guilabel:`Subir el certificado y la clave privada (Odoo)`. Una vez que se "
+"genere el certificado, súbalo a Odoo. Para hacerlo, debe utilizar el icono "
+"de :guilabel:`lápiz` junto al campo :guilabel:`Certificado` y seleccionar el"
+" archivo correspondiente."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Upload Certificate and Private Key."
-msgstr ""
+msgstr "Subida del certificado y la clave privada."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:123
 msgid ""
@@ -16478,23 +16593,31 @@ msgid ""
 "Homologation Certificate. The following message will be in the chatter when "
 "testing locally:"
 msgstr ""
+"En caso de que necesite configurar el certificado para homologación, "
+"consulte la documentación oficial de la AFIP: `Certificado para homologación"
+" <http://www.afip.gob.ar/ws/documentacion/certificados.asp>`_. Además, Odoo "
+"permite al usuario probar la facturación electrónica de forma local sin "
+"necesidad de un certificado para homologación. El siguiente mensaje figurará"
+" en el chatter cuando se realizan pruebas de forma local:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid ""
 "Invoice validated locally because it is in a testing environment without testing\n"
 "certificate/keys."
 msgstr ""
+"Factura validada de forma local porque está en un entorno de prueba sin certificado o claves\n"
+"de prueba."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:135
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:161
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:89
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:321
 msgid "Partner"
-msgstr "Contacto"
+msgstr "Partner"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:138
 msgid "Identification type and VAT"
-msgstr ""
+msgstr "Tipo de identificación e IVA"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:140
 msgid ""
@@ -16503,20 +16626,29 @@ msgid ""
 " transactions. There are six :guilabel:`Identification Types` available by "
 "default, as well as 32 inactive types."
 msgstr ""
+"Como parte de la localización de Argentina, los tipos de documento definidos"
+" por la AFIP ahora están disponibles en el **formulario de partner**. Esta "
+"información es necesaria para la mayoría de las transacciones. Hay seis "
+":guilabel:`tipos de identificación` disponibles de forma predeterminada, así"
+" como 32 tipos inactivos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "A list of AR Localization document types in Odoo, as defined by AFIP."
 msgstr ""
+"Una lista de tipos de documentos en la localización de Argentina en Odoo, "
+"definidos por la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:149
 msgid ""
 "The complete list of :guilabel:`Identification Types` defined by the AFIP is"
 " included in Odoo, but only the common ones are active."
 msgstr ""
+"La lista completa de :guilabel:`tipos de identificación` definida por la "
+"AFIP e incluye en Odoo, pero solo están activos los más comunes."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:153
 msgid "AFIP responsibility type"
-msgstr ""
+msgstr "Tipo de responsabilidad AFIP"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:155
 msgid ""
@@ -16524,6 +16656,9 @@ msgid ""
 "with customers and vendors is defined by the AFIP Responsibility type. This "
 "field should be defined in the **Partner form**."
 msgstr ""
+"En Argentina, el tipo de responsabilidad AFIP define el tipo de documento y "
+"las transacciones correspondientes asociadas con clientes y proveedores. "
+"Debe definir este campo en el **formulario de partner**."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:166
 msgid ""
@@ -16531,16 +16666,21 @@ msgid ""
 " their related financial account and configuration, e.g., 73 taxes for "
 ":guilabel:`Responsable Inscripto`."
 msgstr ""
+"Como parte del módulo de localización, los impuestos se crean de forma "
+"automática con su configuración y cuenta financiera relacionadas. Por "
+"ejemplo, hay 73 impuestos para :guilabel:`Responsable Inscripto`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid ""
 "A list of AR Localization taxes with financial amount and configuration in "
 "Odoo."
 msgstr ""
+"Una lista de impuestos con importe financiero y configuración en la "
+"localización de Argentina en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:174
 msgid "Taxes types"
-msgstr ""
+msgstr "Tipos de impuestos"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:176
 msgid "Argentina has several tax types, the most common ones are:"
@@ -16549,22 +16689,25 @@ msgstr "Argentina tiene varios tipos de impuestos, los más comunes son:"
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:178
 msgid ""
 ":guilabel:`VAT`: this is the regular VAT and can have various percentages;"
-msgstr ""
+msgstr ":guilabel:`IVA`: es el IVA normal y puede tener varios porcentajes."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:179
 msgid ""
 ":guilabel:`Perception`: advance payment of a tax that is applied on "
 "invoices;"
 msgstr ""
+":guilabel:`Percepción`: pago avanzado de un impuesto que se aplica a "
+"facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:180
 msgid ""
 ":guilabel:`Retention`: advance payment of a tax that is applied on payments."
 msgstr ""
+":guilabel:`Retención`: pago avanzado de un impuesto que se aplica a pagos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:183
 msgid "Special taxes"
-msgstr ""
+msgstr "Impuestos especiales"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:185
 msgid ""
@@ -16573,16 +16716,22 @@ msgid ""
 "creating a new tax, be sure to check if that tax is not already included as "
 "inactive."
 msgstr ""
+"Algunos impuestos argentinos no se utilizan con regularidad para todas las "
+"empresas. Ese tipo de opciones menos comunes se definen de forma "
+"predeterminada como inactivas en Odoo. Antes de crear un nuevo impuesto "
+"compruebe si el impuesto no está inactivo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid ""
 "A list showing less common Argentinean tax options, which are labeled as inactive in Odoo\n"
 "by default."
 msgstr ""
+"Una lista que muestra las opciones de impuestos menos comunes en Argentina, las cuales se definen como inactivas en Odoo\n"
+"de forma predeterminada."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:197
 msgid "Document types"
-msgstr ""
+msgstr "Tipos de documentos"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:199
 msgid ""
@@ -16592,6 +16741,11 @@ msgid ""
 "`AFIP <https://www.afip.gob.ar/>`__ is the governmental fiscal authority "
 "that defines such transactions."
 msgstr ""
+"En algunos países de América Latina, como Argentina, algunas transacciones "
+"contables como facturas de cliente o de proveedor se clasifican según los "
+"tipos de documento definidos por las autoridades fiscales gubernamentales. "
+"En Argentina, la autoridad fiscal gubernamental que define dichas "
+"transacciones es la `AFIP <https://www.afip.gob.ar/>`__."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:204
 msgid ""
@@ -16599,6 +16753,9 @@ msgid ""
 "clearly displayed in printed reports, invoices, and journal entries that "
 "list account moves."
 msgstr ""
+"El tipo de documento es información esencial que se debe mostrar con "
+"claridad en los reportes impresos, facturas y asientos contables que listen "
+"movimientos contables."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:207
 msgid ""
@@ -16607,22 +16764,31 @@ msgid ""
 "country in which the document is applicable (this data is created "
 "automatically when the localization module is installed)."
 msgstr ""
+"Cada tipo de documento puede tener una secuencia única por diario asignado. "
+"Como parte de la localización, el tipo de documento incluye el país en el "
+"que se puede aplicar el documento (estos datos se crean de forma automática "
+"cuando se instala el módulo de localización)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:211
 msgid ""
 "The information required for the :guilabel:`Document Types` is included by "
 "default so the user does not need to fill anything on this view:"
 msgstr ""
+"La información requerida para los :guilabel:`tipos de documento` se incluye "
+"de forma predeterminada, por lo que el usuario no necesita completar nada en"
+" esta vista:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "A list of document types in Odoo."
-msgstr ""
+msgstr "Una lista de tipos de documento en Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:219
 msgid ""
 "There are several :guilabel:`Document Types` types that are inactive by "
 "default, but can be activated as needed."
 msgstr ""
+"Hay varios :guilabel:`tipos de documento` que están inactivos de forma "
+"predeterminada, pero se pueden activar si es necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:223
 msgid "Letters"
@@ -16634,22 +16800,31 @@ msgid ""
 "indicate the type of transaction or operation. For example, when an invoice "
 "is related to a(n):"
 msgstr ""
+"Para Argentina, los :guilabel:`tipos de documento` incluyen una letra que "
+"indica el tipo de transacción u operación. Por ejemplo, cuando una factura "
+"se relaciona con una..."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:228
 msgid ""
 ":guilabel:`B2B transaction`, a document type :guilabel:`A` must be used;"
 msgstr ""
+":guilabel:`Transacción B2B`, se debe utilizar un tipo de documento "
+":guilabel:`A`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:229
 msgid ""
 ":guilabel:`B2C transaction`, a document type :guilabel:`B` must be used;"
 msgstr ""
+":guilabel:`Transacción B2C`, se debe utilizar un tipo de documento "
+":guilabel:`B`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:230
 msgid ""
 ":guilabel:`Exportation Transaction`, a document type :guilabel:`E` must be "
 "used."
 msgstr ""
+":guilabel:`Transacción de exportación`, se debe utilizar un tipo de "
+"documento :guilabel:`E`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:232
 msgid ""
@@ -16657,24 +16832,30 @@ msgid ""
 "associated with each :guilabel:`Document Type`, so there is no further "
 "configuration necessary."
 msgstr ""
+"The documents includLos documentos que se incluyen en la localización ya "
+"cuentan con la letra adecuada asociada con cada :guilabel:`tipo de "
+"documento`, por lo que no es necesario configurar nada más."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "document types grouped by letters."
-msgstr ""
+msgstr "Tipos de documento agrupados por letras."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:240
 msgid "Use on invoices"
-msgstr ""
+msgstr "Usar en facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:242
 msgid ""
 "The :guilabel:`Document Type` on each transaction will be determined by:"
 msgstr ""
+"El :guilabel:`tipo de documento` en cada transacción se determinará por:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:244
 msgid ""
 "The journal entry related to the invoice (if the journal uses documents);"
 msgstr ""
+"El asiento contable relacionado con la factura (si el diario utiliza "
+"documentos)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:245
 msgid ""
@@ -16682,6 +16863,9 @@ msgid ""
 "type of fiscal regime of the buyer and the type of fiscal regime of the "
 "vendor)."
 msgstr ""
+"Las condiciones que se aplicaron según el tipo de emisor y receptor (por "
+"ejemplo, el tipo de régimen fiscal del comprador y el tipo de régimen fiscal"
+" del proveedor)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:251
 msgid ""
@@ -16689,6 +16873,9 @@ msgid ""
 "depending on its usage and internal type. To configure journals, go to "
 ":menuselection:`Accounting --> Configuration --> Journals`."
 msgstr ""
+"En la localización de Argentina, el diario puede tener un enfoque distinto "
+"dependiendo de su uso y tipo interno. Para configurar sus diarios, vaya a "
+":menuselection:`Contabilidad --> Configuración --> Diarios`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:255
 msgid ""
@@ -16698,6 +16885,11 @@ msgid ""
 " on invoices, please refer to the section :ref:`2.3 document types "
 "<document-types>`."
 msgstr ""
+"Es posible activar la opción :guilabel:`usar documentos` en los diarios de "
+"ventas y compras, lo cual habilita una lista de :guilabel:`tipos de "
+"documentos` que se pueden relacionar con facturas de cliente o de proveedor."
+" Para obtener más detalles sobre las facturas, consulte la sección :ref:`2.3"
+" tipos de documentos <document-types>`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:260
 msgid ""
@@ -16706,10 +16898,14 @@ msgid ""
 "meaning, their use case will be mostly limited to monitoring account moves "
 "related to internal control processes."
 msgstr ""
+"Si no se habilita la opción :guilabel:`usar documentos` en los diarios de "
+"ventas o compras, estos no generarán facturas fiscales, lo que significa que"
+" su uso se limitará principalmente a monitorear los movimientos de cuenta "
+"relacionados con procesos internos de control."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:265
 msgid "AFIP information (also known as AFIP Point of Sale)"
-msgstr ""
+msgstr "Información AFIP (se conoce también como Punto de venta AFIP)"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:267
 msgid ""
@@ -16717,32 +16913,39 @@ msgid ""
 "journals and defines the type of AFIP POS that will be used to manage the "
 "transactions for which the journal is created."
 msgstr ""
+"El :guilabel:`Sistema PdV AFIP` es un campo que solo es visible en los "
+"diarios de **ventas** y define el tipo de PdV AFIP que se utilizará para "
+"gestionar las transacciones para las que se creó el diario."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:270
 msgid "The AFIP POS defines the following:"
-msgstr ""
+msgstr "El PdV AFIP define lo siguiente:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:272
 msgid "the sequences of document types related to the web service;"
 msgstr ""
+"Las secuencias de tipos de documentos relacionados con el servicio web."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:273
 msgid "the structure and data of the electronic invoice file."
-msgstr ""
+msgstr "La estructura y los datos del archivo de factura electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "A AFIP POS System field which is available on Sales journals in Odoo."
 msgstr ""
+"Un campo de Sistema PdV AFIP disponible en los diarios de venta de Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:280
 msgid "Web services"
-msgstr ""
+msgstr "Servicios web"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:282
 msgid ""
 "**Web services** help generate invoices for different purposes. Below are a "
 "few options to choose from:"
 msgstr ""
+"Los **servicios web** ayudan a generar facturas para distintos propósitos. "
+"Estas son algunas de las opciones que puede elegir:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:285
 msgid ""
@@ -16750,6 +16953,9 @@ msgid ""
 " used to generate invoices for document types A, B, C, M  with no detail per"
 " item;"
 msgstr ""
+":guilabel:`wsfev1: factura electrónica`: es el servicio más común, el cual "
+"se utiliza para generar facturas para los tipos de documento A, B, C, M sin "
+"detalles por artículo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:287
 msgid ""
@@ -16759,6 +16965,11 @@ msgid ""
 "<https://www.argentina.gob.ar/acceder-un-bono-por-fabricar-bienes-de-"
 "capital>`__;"
 msgstr ""
+":guilabel:`wsbfev1: bono fiscal electrónico`: es para quienes facturan "
+"bienes de capital y desean acceder al beneficio de los bonos de impuestos "
+"electrónicos que otorga el Ministerio de Economía. Para obtener más "
+"información, consulte `Bono fiscal <https://www.argentina.gob.ar/acceder-un-"
+"bono-por-fabricar-bienes-de-capital>`__;"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:291
 msgid ""
@@ -16766,20 +16977,28 @@ msgid ""
 "invoices for international customers and transactions that involve "
 "exportation processes, the document type related is type \"E\"."
 msgstr ""
+":guilabel:`wsfexv1: factura electrónica de exportación`: se utiliza para "
+"generar facturas para clientes internacionales y transacciones que "
+"involucran procesos de exportación. El tipo de documento relacionado es "
+"\"E\"."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Web Services."
-msgstr ""
+msgstr "Servicios web."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:299
 msgid "Here are some useful fields to know when working with web services:"
 msgstr ""
+"Estos son algunos campos útiles que debe conocer al trabajar con servicios "
+"web:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:301
 msgid ""
 ":guilabel:`AFIP POS Number`: is the number configured in the AFIP to "
 "identify the operations related to this AFIP POS;"
 msgstr ""
+":guilabel:`Nùmero de PdV en AFIP`: es el nùmero configurado en la AFIP para "
+"identificar las operaciones relacionadas con este PdV en AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:303
 msgid ""
@@ -16789,6 +17008,11 @@ msgid ""
 "AFIP will require the company to have one AFIP POS per location. This "
 "location will be printed in the invoice report;"
 msgstr ""
+":guilabel:`Direcciòn de PdV en AFIP`: es el campo de la dirección comercial "
+"registrada para el PdV, la cual normalmente es la misma dirección que la de "
+"la empresa. Por ejemplo, si una empresa tiene varias tiendas (ubicaciones "
+"fiscales), entonces la AFIP requerirá que la empresa tenga un PdV en AFIP "
+"por ubicación. Esta ubicación se imprimirá en el reporte de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:307
 msgid ""
@@ -16796,14 +17020,17 @@ msgid ""
 "document types (applicable to the journal) with the same letter will share "
 "the same sequence. For example:"
 msgstr ""
+":guilabel:`Libro unificado`: cuando el sistema PdV en AFIP es Preimpresa, "
+"los tipos de documentos (aplicables al diario) con la misma letra "
+"compartirán la misma secuencia. Por ejemplo:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:310
 msgid "Invoice: FA-A 0001-00000002;"
-msgstr ""
+msgstr "Factura: FA-A 0001-00000002."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:311
 msgid "Credit Note: NC-A 0001-00000003;"
-msgstr ""
+msgstr "Nota de crédito: NC-A 0001-00000003."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:312
 msgid "Debit Note: ND-A 0001-00000004."
@@ -16818,6 +17045,8 @@ msgid ""
 "For the first invoice, Odoo synchronizes with the AFIP automatically and "
 "displays the last sequence used."
 msgstr ""
+"Para la primera factura, Odoo se sincroniza con la AFIP de forma automática "
+"y muestra la última secuencia que se utilizó."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:321
 msgid ""
@@ -16827,6 +17056,11 @@ msgid ""
 "document type sequences, since the document number is provided by the "
 "vendor."
 msgstr ""
+"Al crear los :guilabel:`diarios de compra`, es posible definir si se "
+"relacionan con tipos de documentos o no. Si se selecciona la opción para "
+"usar documentos, no hay necesidad de asociar de forma manual las secuencias "
+"de tipo de documentos, ya que el proveedor proporciona el número de "
+"documento."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:327
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:168
@@ -16837,13 +17071,15 @@ msgstr "Uso y prueba"
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:330
 #: ../../content/applications/finance/fiscal_localizations/colombia.rst:171
 msgid "Invoice"
-msgstr "Facturas de clientes"
+msgstr "Facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:332
 msgid ""
 "The information below applies to invoice creation once the partners and "
 "journals are created and properly configured."
 msgstr ""
+"La información a continuación aplica para la creación de facturas una vez "
+"que se creen los partners y diarios y se configuren de forma adecuada."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:336
 msgid "Document type assignation"
@@ -16854,6 +17090,8 @@ msgid ""
 "When the partner is selected, the :guilabel:`Document Type` field will be "
 "filled in automatically based on the AFIP document type:"
 msgstr ""
+"Cuando se selecciona el partner, el campo :guilabel:`tipo de documento` se "
+"completará de forma automática según el tipo de documento AFIP:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:341
 msgid ""
@@ -16861,36 +17099,45 @@ msgid ""
 "of document that shows all the taxes in detail along with the customer's "
 "information."
 msgstr ""
+"**Factura para un cliente IVA Responsable Inscripto, prefijo A** es el tipo "
+"de documento que muestra todos los impuestos a detalle junto con la "
+"información del cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Invoice for a customer IVA Responsable Inscripto, prefix A."
-msgstr ""
+msgstr "Factura para un cliente IVA Responsable Inscripto, prefijo A."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:347
 msgid ""
 "**Invoice for an end customer, prefix B** is the type of document that does "
 "not detail the taxes, since the taxes are included in the total amount."
 msgstr ""
+"**Factura para un cliente final, prefijo B** es el tipo de documento que no "
+"detalla los impuestos, ya que se incluyen en el importe total."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Invoice for an end customer, prefix B."
-msgstr ""
+msgstr "Factura para un cliente final, prefijo B."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:353
 msgid ""
 "**Exportation Invoice, prefix E** is the type of document used when "
 "exporting goods that shows the incoterm."
 msgstr ""
+"**Factura de exportación, prefijo E** es el tipo de documento que se utiliza"
+" en la exportación de bienes que muestra el incoterm."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Exportation Invoice, prefix E"
-msgstr ""
+msgstr "Factura de exportación, prefijo E."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:359
 msgid ""
 "Even though some invoices use the same journal, the prefix and sequence are "
 "given by the :guilabel:`Document Type` field."
 msgstr ""
+"A pesar de que algunas facturas utilizan el mismo diario, es el campo "
+":guilabel:`tipo de documento` el que da el prefijo y la secuencia."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:362
 msgid ""
@@ -16898,10 +17145,13 @@ msgid ""
 "the different combinations of AFIP responsibility type but it can be updated"
 " manually by the user before confirming the invoice."
 msgstr ""
+"El :guilabel:`tipo de documento` más común se definirá de forma automática "
+"para las distintas combinaciones de tipo de responsabilidad AFIP, pero el "
+"usuario puede actualizarlo de forma manual antes de confirmar la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:367
 msgid "Electronic invoice elements"
-msgstr ""
+msgstr "Elementos de facturas electrónicas"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:369
 msgid ""
@@ -16911,42 +17161,56 @@ msgid ""
 " needs attention along with a proposed solution. If an error persists, the "
 "invoice remains in draft until the issue is resolved."
 msgstr ""
+"Cuando se usan facturas electrónicas, si toda la información es correcta "
+"entonces la factura se registra en la forma estándar a menos que haya un "
+"error que se deba solucionar. Cuando aparecen los mensajes de error, indican"
+" tanto el problema que necesita su atención como una propuesta de solución. "
+"Si el error persiste, la factura permanecerá en el estado de borrador hasta "
+"que se resuelva el problema."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:374
 msgid ""
 "Once the invoice is posted, the information related to the AFIP validation "
 "and status is displayed in the AFIP tab, including:"
 msgstr ""
+"Una vez que se registra la factura, la información relacionada con su estado"
+" y validación ante la AFIP se muestra en la pestaña AFIP. Esto incluye:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:377
 msgid ":guilabel:`AFIP Autorisation`: CAE number;"
-msgstr ""
+msgstr ":guilabel:`Autorización AFIP`: número de CAE."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:378
 msgid ""
 ":guilabel:`Expiration Date`: deadline to deliver the invoice to the "
 "customers (normally 10 days after the CAE is generated);"
 msgstr ""
+":guilabel:`Fecha de vencimiento`: fecha límite para entregar la factura al "
+"cliente (normalmente es de 10 días después de la generación de la CAE)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:380
 msgid ""
 ":guilabel:`Result:` indicates if the invoice has been :guilabel:`Aceptado en"
 " AFIP` and/or :guilabel:`Aceptado con Observaciones`."
 msgstr ""
+":guilabel:`Resultado:` indica si la factura se ha :guilabel:`aceptado en la "
+"AFIP` y/o :guilabel:`aceptado con observaciones`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "AFIP Status."
-msgstr ""
+msgstr "Estado de AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:388
 msgid "Invoice taxes"
-msgstr ""
+msgstr "Impuestos en facturas"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:390
 msgid ""
 "Based on the :guilabel:`AFIP Responsibility type`, the VAT tax can apply "
 "differently on the PDF report:"
 msgstr ""
+"Según el :guilabel:`tipo de responsabilidad AFIP`, el IVA se puede aplicar "
+"de formas diferentes en el reporte en PDF:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:393
 msgid ""
@@ -16954,10 +17218,13 @@ msgid ""
 "clearly identified in the report. This condition applies when the customer "
 "has the following AFIP Responsibility type of **Responsable Inscripto**;"
 msgstr ""
+":guilabel:`A. Impuestos excluidos`: en este caso, el importe gravado se debe"
+" identificar con claridad en el reporte. Esta condición se aplica cuando el "
+"cliente el tipo de responsabilidad AFIP es **responsable inscripto**."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Tax excluded."
-msgstr ""
+msgstr "Impuestos excluidos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:400
 msgid ""
@@ -16965,18 +17232,22 @@ msgid ""
 "included as part of the product price, subtotal, and totals. This condition "
 "applies when the customer has the following AFIP Responsibility types:"
 msgstr ""
+":guilabel:`B. Impuestos incluidos`: significa que el importe gravado se "
+"incluye en el precio del producto, el subtotal y los totales. Esta condición"
+" se aplica cuando el cliente tiene uno de los siguientes tipos de "
+"responsabilidad AFIP:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:404
 msgid "IVA Sujeto Exento;"
-msgstr ""
+msgstr "Sujeto exento de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:405
 msgid "Consumidor Final;"
-msgstr ""
+msgstr "Consumidor final."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:406
 msgid "Responsable Monotributo;"
-msgstr ""
+msgstr "Responsable monotributo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:407
 msgid "IVA liberado."
@@ -16984,16 +17255,16 @@ msgstr "IVA liberado."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:0
 msgid "Tax amount included."
-msgstr ""
+msgstr "Impuestos incluidos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:414
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:643
 msgid "Special use cases"
-msgstr ""
+msgstr "Casos de uso especiales"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:417
 msgid "Invoices for services"
-msgstr ""
+msgstr "Facturas de servicios"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:419
 msgid ""
@@ -17001,10 +17272,14 @@ msgid ""
 " to report the service starting and ending date, this information can be "
 "filled in the tab :guilabel:`Other Info`."
 msgstr ""
+"Para facturas electrónicas que incluyen :guilabel:`servicios`, la AFIP "
+"requiere que se reporte la fecha de inicio y de finalización del servicio. "
+"Esta información se puede registrar en la pestaña :guilabel:`otra "
+"información`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Invoices for Services."
-msgstr ""
+msgstr "Facturas de servicios."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:426
 msgid ""
@@ -17012,14 +17287,17 @@ msgid ""
 "values will be filled automatically with the first and last day of the "
 "invoice's month."
 msgstr ""
+"Si no se seleccionan las fechas de forma manual antes de validar la factura,"
+" los valores se completarán de forma automática con el primer y el último "
+"día del mes de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Service Dates."
-msgstr ""
+msgstr "Fechas de servicios."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:434
 msgid "Exportation invoices"
-msgstr ""
+msgstr "Facturas de exportación"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:436
 msgid ""
@@ -17027,10 +17305,14 @@ msgid ""
 "journal uses the AFIP POS System **Expo Voucher - Web Service** so that the "
 "proper document type(s) can be associated."
 msgstr ""
+"Las facturas relacionadas con :guilabel:`transacciones de exportación` "
+"requieren que un diario utilice el **comprobante de exportación - Web "
+"Service** del sistema PdV en AFIP para que se les asocie el tipo o tipos de "
+"documento adecuados."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Exporation journal."
-msgstr ""
+msgstr "Diario de exportación."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:443
 msgid ""
@@ -17038,44 +17320,52 @@ msgid ""
 "responsibility type :guilabel:`Cliente / Proveedor del Exterior` - "
 ":guilabel:`Ley N° 19.640`, Odoo automatically assigns the:"
 msgstr ""
+"Cuando el cliente seleccionado en la factura se configura con el tipo de "
+"responsabilidad AFIP :guilabel:`Cliente / Proveedor del exterior` - "
+":guilabel:`Ley N° 19.640`, Odoo asigna de forma automática:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:447
 msgid "Journal related to the exportation Web Service;"
-msgstr ""
+msgstr "El diario relacionado con el servicio web de exportación."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:448
 msgid "Exportation document type;"
-msgstr ""
+msgstr "Tipo de documento de exportación."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:449
 msgid "Fiscal position: Compras/Ventas al exterior;"
-msgstr ""
+msgstr "Posición fiscal: Compras/Ventas al exterior."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:450
 msgid "Concepto AFIP: Products / Definitive export of goods;"
-msgstr ""
+msgstr "Concepto AFIP: Productos / Exportación definitiva de mercancías."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:451
 msgid "Exempt Taxes."
-msgstr "Exención de impuestos"
+msgstr "Exención de impuestos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Export invoice fields autofilled in Odoo."
 msgstr ""
+"Campos de factura de exportación que se completan de forma automática en "
+"Odoo."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:458
 msgid ""
 "The Exportation Documents require Incoterms to be enabled and configured, "
 "which can be found in :menuselection:`Other Info --> Accounting`."
 msgstr ""
+"Los documentos de exportación requieren que se habiliten y configuren los "
+"Incoterms, puede hacerlo en :menuselection:`Otra información --> "
+"Contabilidad`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Export invoice - Incoterm."
-msgstr ""
+msgstr "Factura de exportación - Incoterm."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:466
 msgid "Fiscal bond"
-msgstr ""
+msgstr "Bono fiscal"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:468
 msgid ""
@@ -17083,52 +17373,57 @@ msgid ""
 " goods and wish to access the benefit of the Electronic Tax Bonds granted by"
 " the Ministry of Economy."
 msgstr ""
+"El :guilabel:`bono fiscal electrónico` lo utilizan quienes facturan bienes "
+"de capital y desean obtener el beneficio de los bonos fiscales electrónicos "
+"que otorga el Ministerio de Economía."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:471
 msgid ""
 "For these transactions, it is important to consider the following "
 "requirements:"
 msgstr ""
+"Para estas transacciones, es importante considerar los siguientes "
+"requisitos:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:473
 msgid "Currency (according to the parameter table) and invoice quotation;"
-msgstr ""
+msgstr "Divisa (según la tabla de parámetros) y cotización de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:474
 msgid "Taxes;"
-msgstr ""
+msgstr "Impuestos."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:475
 msgid "Zone;"
-msgstr ""
+msgstr "Zona."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:476
 msgid "Detail each item;"
-msgstr ""
+msgstr "Detalles de cada artículo:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:478
 msgid "Code according to the Common Nomenclator of Mercosur (NCM);"
-msgstr ""
+msgstr "Código acorde a la Nomenclatura Común del MERCOSUR (NCM)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:479
 msgid "Complete description;"
-msgstr ""
+msgstr "Descripción completa."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:480
 msgid "Unit Net Price;"
-msgstr ""
+msgstr "Precio unitario neto."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:481
 msgid "Quantity;"
-msgstr ""
+msgstr "Cantidad."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:482
 msgid "Unit of measurement;"
-msgstr ""
+msgstr "Unidad de medida."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:483
 msgid "Bonus;"
-msgstr ""
+msgstr "Bono."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:484
 msgid "VAT rate."
@@ -17136,7 +17431,7 @@ msgstr "Tasa de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:487
 msgid "Electronic credit invoice MiPyme (FCE)"
-msgstr ""
+msgstr "Factura de crédito electrónica MiPyme (FCE)"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:489
 msgid ""
@@ -17147,65 +17442,85 @@ msgid ""
 "them to increase their productivity, through the early collection of credits"
 " and receivables issued to their clients and/or vendors."
 msgstr ""
+"Para las facturas de pymes hay varios tipos de documento que se clasifican "
+"como **MiPyME**, las cuales se conocen como **facturas de crédito "
+"electrónica** (o **FCE**). Esta clasificación desarrolla un proceso que "
+"mejora las condiciones de financiamiento para pequeñas y medianas empresas y"
+" les permite incrementar su productividad mediante el cobro anticipado de "
+"créditos y cuentas por cobrar a sus clientes y/o proveedores."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:495
 msgid ""
 "For these transactions it's important to consider the following "
 "requirements:"
 msgstr ""
+"Para estas transacciones, es importante considerar los siguientes "
+"requisitos:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:497
 msgid "specific document types (201, 202, 206, etc);"
-msgstr ""
+msgstr "Tipos de documento específicos (201, 202, 206, etc.)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:498
 msgid "the emitter should be eligible by the AFIP to MiPyME transactions;"
-msgstr ""
+msgstr "La AFIP debe aceptar al emisor para transacciones MiPyME."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:499
 msgid "the amount should be bigger than 100,000 ARS;"
-msgstr ""
+msgstr "El importe debe ser mayor a 100,000 ARS."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:500
 msgid ""
 "A bank account type CBU must be related to the emisor, otherwise the invoice"
 " cannot be validated, having an error message such as the following."
 msgstr ""
+"Una cuenta bancaria tipo CBU se debe relacionar con el emisor, de lo "
+"contrario la factura no se puede validar, lo que generará un mensaje de "
+"error como el siguiente:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Bank account relation error."
-msgstr ""
+msgstr "Error al relacionar la cuenta bancaria."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:507
 msgid ""
 "To set up the :guilabel:`Transmission Mode`, go to settings and select "
 "either :guilabel:`SDC` or :guilabel:`ADC`."
 msgstr ""
+"Para configurar el :guilabel:`modo de transmisión`, vaya a los ajustes y "
+"seleccione :guilabel:`SDC` o :guilabel:`ADC`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Transmission Mode."
-msgstr ""
+msgstr "Modo de transmisión."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:514
 msgid ""
 "To change the :guilabel:`Transmission Mode` for a specific invoice, go to "
 "the :guilabel:`Other Info` tab and change it before confirming."
 msgstr ""
+"Para cambiar el :guilabel:`modo de transmisión` de una factura en "
+"específico, vaya a la pestaña :guilabel:`otra información`, cámbielo y "
+"confirme."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:518
 msgid ""
 "Changing the :guilabel:`Transmission Mode` will not change the mode selected"
 " in :guilabel:`Settings`."
 msgstr ""
+"Cambiar el :guilabel:`modo de transmisión` no cambiará el modo que se "
+"seleccionó en los :guilabel:`ajustes`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Transmission Mode on Invoice."
-msgstr ""
+msgstr "Modo de transmisión en una factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:525
 msgid ""
 "When creating a :guilabel:`Credit/Debit` note related to a FCE document:"
 msgstr ""
+"Al crear una nota :guilabel:`de crédito o débito` relacionada con un "
+"documento FCE:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:527
 msgid ""
@@ -17213,12 +17528,17 @@ msgid ""
 "from the invoice is transferred to the new :guilabel:`Credit and Debit "
 "Note`;"
 msgstr ""
+"Utilice los botones de :guilabel:`nota de crédito o débito` para que toda la"
+" información de la factura se transfiera a la nueva :guilabel:`nota de "
+"crédito o débito`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:529
 msgid ""
 "the document letter should be the same as than the originator document "
 "(either A or B);"
 msgstr ""
+"La letra del documento debe ser la misma que la del documento origen (ya sea"
+" A o B)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:530
 msgid ""
@@ -17227,20 +17547,28 @@ msgid ""
 "different between the emission day and the payment date. It is possible to "
 "create a credit/debit note to decrease/increase the amount to pay in ARS."
 msgstr ""
+"Se debe utilizar la misma divisa que en el documento de origen. Al usar una "
+"divisa secundaria puede haber una diferencia si la tasa de cambio es "
+"distinta entre el día de la emisión y la fecha del pago. Es posible crear "
+"una nota de crédito o débito para aumentar o reducir el importe a pagar en "
+"ARS."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Credit & debit notes buttons."
-msgstr ""
+msgstr "Botones de notas de crédito y débito."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:538
 msgid "When creating a :guilabel:`Credit Note` we can have two scenarios:"
 msgstr ""
+"Al crear una :guilabel:`nota de crédito` puede pasar uno de dos casos:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:540
 msgid ""
 "the FCE is rejected so the :guilabel:`Credit Note` should have the field "
 ":guilabel:`FCE, is Cancellation?` as *True*; or;"
 msgstr ""
+"Se rechaza la FCE, por lo que la :guilabel:`nota de crédito` debe tener el "
+"campo :guilabel:`FCE, ¿es cancelación?` *activado*."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:542
 msgid ""
@@ -17248,14 +17576,17 @@ msgid ""
 "this case the field :guilabel:`FCE, is Cancellation?` must be *empty* "
 "(false)."
 msgstr ""
+"La :guilabel:`nota de crédito` se crea para anular el documento de FCE. En "
+"este caso, el campo :guilabel:`FCE, ¿es cancelación?` debe permanecer "
+"*vacío*."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "FCE: Es Cancelación?"
-msgstr ""
+msgstr "FCE: ¿Es cancelación?"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:550
 msgid "Invoice printed report"
-msgstr "Factura impresa"
+msgstr "Reporte impreso de factura"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:552
 msgid ""
@@ -17264,14 +17595,18 @@ msgid ""
 "represents the CAE number. The expiration date is also displayed as it is a "
 "legal requirement."
 msgstr ""
+"El :guilabel:`reporte en PDF` relacionado con las facturas electrónicas "
+"validadas por la AFIP incluye un código de barras en la parte inferior que "
+"representa el número de CAE. La fecha de vencimiento se muestra también por "
+"ser requisito legal."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Invoice printed report."
-msgstr ""
+msgstr "Reporte de factura impreso."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:561
 msgid "Troubleshooting and auditing"
-msgstr ""
+msgstr "Solución de problemas y auditorías."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:563
 msgid ""
@@ -17281,14 +17616,19 @@ msgid ""
 "mode>`, then go to the :menuselection:`Accounting` menu and click on the "
 "button :guilabel:`Consult Invoice` button in AFIP."
 msgstr ""
+"Por motivos de auditoría y solución de problemas, es posible obtener "
+"información detallada de un número de factura que se envío previamente a la "
+"AFIP. Para obtener esta información, active el :ref:`modo de desarrollador "
+"<developer-mode>` y vaya al menú :menuselection:`Contabilidad` y haga clic "
+"en el botón :guilabel:`consultar factura` en la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Consult invoice in AFIP."
-msgstr ""
+msgstr "Consultar factura en la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Details of invoice consulted in AFIP."
-msgstr ""
+msgstr "Detalles de la factura en la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:576
 msgid ""
@@ -17296,10 +17636,14 @@ msgid ""
 "document type and POS Number as a reference for any possible issues on the "
 "sequence synchronization between Odoo and AFIP."
 msgstr ""
+"También es posible obtener el último número que se utilizó en la AFIP para "
+"un tipo de documento específico y el número de PdV como referencia para "
+"cualquier posible problema en la sincronización de la secuencia entre Odoo y"
+" la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Consult the last invoice number."
-msgstr ""
+msgstr "Consultar el último número de factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:587
 msgid ""
@@ -17308,10 +17652,14 @@ msgid ""
 "populated based on the AFIP Responsibility type of Issuer and Customer, but "
 "the value can be changed if necessary."
 msgstr ""
+"Según el diario de compras seleccionado para la factura de proveedor, el "
+":guilabel:`tipo de documento` ahora es un campo obligatorio. Este valor se "
+"completa de forma automática según el tipo de responsabilidad AFIP del "
+"emisor y el cliente, pero puede cambiar el valor si es necesario."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Changing journal and document type."
-msgstr ""
+msgstr "Cambio de diario y tipo de documento."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:595
 msgid ""
@@ -17320,10 +17668,14 @@ msgid ""
 "invalid, a user error will be displayed indicating the correct format that "
 "is expected."
 msgstr ""
+"El campo :guilabel:`número de documento` se debe registrar de forma manual y"
+" el formato se validará de manera automática. Sin embargo, en caso de que el"
+" formato no sea válido, se mostrará un error de usuario que indica el "
+"formato correcto."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Vendor bill document number."
-msgstr ""
+msgstr "Número de documento de factura de proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:603
 msgid ""
@@ -17331,10 +17683,14 @@ msgid ""
 "invoices, excepted that the document sequence is entered by the user using "
 "the following format: *Document Prefix - Letter - Document Number*."
 msgstr ""
+"El número de factura de proveedor tiene la misma estructura que las facturas"
+" de cliente, con la diferencia de que el usuario ingresa la secuencia del "
+"documento con el siguiente formato: *Prefijo del documento - Letra - Número "
+"de documento*."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:608
 msgid "Validate vendor bill number in AFIP"
-msgstr ""
+msgstr "Validar el número de factura de proveedor en la AFIP"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:610
 msgid ""
@@ -17343,12 +17699,19 @@ msgid ""
 ":menuselection:`Accounting --> Settings --> Argentinean Localization --> "
 "Validate document in the AFIP`, considering the following levels:"
 msgstr ""
+"Dado que la mayoría de las empresas cuentan con controles internos para "
+"verificar que la factura de proveedor se relaciona con un documento validado"
+" por la AFIP, se puede establecer una validación automática en "
+":menuselection:`Contabilidad --> Ajustes --> Localización de Argentina --> "
+"Validar documento en la AFIP`, tome en cuenta los siguientes niveles:"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:614
 msgid ""
 ":guilabel:`Not available:` the verification is not done (this is the default"
 " value);"
 msgstr ""
+":guilabel:`No disponible:` no se realiza la verificación (es el valor "
+"predeterminado)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:615
 msgid ""
@@ -17356,20 +17719,25 @@ msgid ""
 "valid it, only displays a warning but still allows the vendor bill to be "
 "posted;"
 msgstr ""
+":guilabel:`Disponible:` se realiza la verificación. En caso de que el número"
+" no sea válido, solo muestra una advertencia pero permite registrar la "
+"factura de proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:617
 msgid ""
 ":guilabel:`Required:` the verification is done and it does not allow the "
 "user to post the vendor bill if the document number is not valid."
 msgstr ""
+":guilabel:`Requerido:` se realiza la verificación y no permite al usuario "
+"registrar la factura de proveedor si el número de documento no es válido."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Verify Vendor Bills validity in AFIP."
-msgstr ""
+msgstr "Verificación de la validez de las facturas de proveedor en la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:625
 msgid "Validate vendor bills in Odoo"
-msgstr ""
+msgstr "Validar facturas de proveedor en Odoo"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:627
 msgid ""
@@ -17377,10 +17745,14 @@ msgid ""
 "vendor bills inside of Odoo, labeled :guilabel:`Verify on AFIP`, which is "
 "located next to the :guilabel:`AFIP Authorization code` field."
 msgstr ""
+"Cuando se habilita el ajuste de validación de proveedor, aparece un nuevo "
+"botón en las facturas de proveedor en Odoo denominado :guilabel:`verificar "
+"en la AFIP`, el cual se ubica a lado del campo :guilabel:`código de "
+"autorización AFIP`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Verify on AFIP."
-msgstr ""
+msgstr "Verificación en la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:635
 msgid ""
@@ -17388,20 +17760,25 @@ msgid ""
 ":guilabel:`Rejected` will be displayed on the dashboard and the details of "
 "the invalidation will be added to the chatter."
 msgstr ""
+"En caso de que la factura de proveedor no se pueda validar en la AFIP, se "
+"mostrará un valor de :guilabel:`rechazado` en el tablero y los detalles de "
+"la validación se agregarán en el chatter."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "AFIP authorization Rejected."
-msgstr ""
+msgstr "Autorización AFIP rechazada."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:646
 msgid "Untaxed concepts"
-msgstr ""
+msgstr "Conceptos sin impuestos"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:648
 msgid ""
 "There are some transactions that include items that are not a part of the "
 "VAT base amount, such as fuel and gasoline invoices."
 msgstr ""
+"Hay algunas transacciones que incluyen artículos que no forman parte del "
+"importe base de IVA, como facturas de combustible."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:651
 msgid ""
@@ -17409,14 +17786,17 @@ msgid ""
 "part of the VAT base amount, and an additional item to register the amount "
 "of the exempt concept."
 msgstr ""
+"La factura de proveedor se registrará con un artículo para cada producto que"
+" forme parte del importe base de IVA y un artículo adicional para registrar "
+"el importe del concepto exento."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "VAT exempt."
-msgstr ""
+msgstr "Exento de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:659
 msgid "Perception taxes"
-msgstr ""
+msgstr "Impuestos de percepción"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:661
 msgid ""
@@ -17426,10 +17806,15 @@ msgid ""
 "another for the perception. The perception default value is always "
 ":guilabel:`0.10`."
 msgstr ""
+"La factura de proveedor se registrará con un artículo para cada producto que"
+" forme parte del importe base de IVA y el impuesto de percepción se puede "
+"agregar en cualquiera de las líneas de producto. Como resultado, habrá un "
+"grupo de impuestos para el IVA y otro para la percepción. El valor "
+"predeterminado de percepción siempre es :guilabel:`0.10`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "VAT perception."
-msgstr ""
+msgstr "Percepción de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:670
 msgid ""
@@ -17438,14 +17823,18 @@ msgid ""
 "amount. After the VAT perception amount has been set, the invoice can then "
 "be validated."
 msgstr ""
+"Para editar la percepción de IVA y establecer el importe correcto, utilice "
+"el icono de :guilabel:`lápiz` que se encuentra a lado del importe de "
+":guilabel:`percepción`. Después de establecer el importe de percepción de "
+"IVA puede validar la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Enter the perception amount."
-msgstr ""
+msgstr "Introducir el importe de percepción."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:679
 msgid "Reports"
-msgstr "Informes"
+msgstr "Reportes"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:681
 msgid ""
@@ -17454,24 +17843,31 @@ msgid ""
 "navigating to :menuselection:`Accounting --> Reporting --> Argentinean "
 "Reports`"
 msgstr ""
+"Como parte de la instalación de la localización, se agregan los reportes "
+"financieros de Argentina al tablero de :guilabel:`Contabilidad`. Puede "
+"acceder a estos reportes en :menuselection:`Contabilidad --> Reportes --> "
+"Reportes de Argentina`."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Argentinean reports."
-msgstr ""
+msgstr "Reportes de Argentina."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:690
 msgid "VAT reports"
-msgstr ""
+msgstr "Reportes de IVA"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:693
 msgid "Sales VAT book"
-msgstr ""
+msgstr "Libro IVA de ventas"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:695
 msgid ""
 "In this report, all the sales are recorded, which are taken as the basis for"
 " the accounting records to determine the VAT (Tax Debit)."
 msgstr ""
+"En este reporte se registran todas las ventas, las cuales se toman como la "
+"base de los registros contables para determinar el IVA (débito de "
+"impuestos)."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:698
 msgid ""
@@ -17479,14 +17875,18 @@ msgid ""
 ":guilabel:`VAT BOOK (ZIP)` button in the top left, which contains `.txt` "
 "files to upload in the AFIP portal."
 msgstr ""
+"El reporte del libro :guilabel:`IVA de impuestos` se puede exportar en un "
+"archivo `.zip` mediante el botón :guilabel:`LIBRO IVA (ZIP)` en la parte "
+"superior izquierda. Este archivo zip contiene archivos `.txt` que se pueden "
+"subir al portal de la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Sales VAT book."
-msgstr ""
+msgstr "Libro IVA de ventas."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:706
 msgid "Purchases VAT book"
-msgstr ""
+msgstr "Libro IVA de compras"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:708
 msgid ""
@@ -17494,24 +17894,30 @@ msgid ""
 ":guilabel:`VAT BOOK (ZIP)` button in the top left, which contains `.txt` "
 "files to upload in the AFIP portal."
 msgstr ""
+"El reporte del libro :guilabel:`IVA de compras` se puede exportar en un "
+"archivo `.zip` mediante el botón :guilabel:`LIBRO IVA (ZIP)` en la parte "
+"superior izquierda. Este archivo zip contiene archivos `.txt` que se pueden "
+"subir al portal de la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "Purchases VAT book."
-msgstr ""
+msgstr "Libro IVA de compras."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:716
 msgid "VAT summary"
-msgstr ""
+msgstr "Resumen de IVA"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:718
 msgid ""
 "Pivot table designed to check the monthly VAT totals. This report is for "
 "internal usage, it is not sent to the AFIP."
 msgstr ""
+"Es una tabla dinámica diseñada para comprobar los totales mensuales de IVA. "
+"Este reporte es de uso interno y no se envía a la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "VAT Summary."
-msgstr ""
+msgstr "Resumen de IVA."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:726
 msgid "IIBB - Reports"
@@ -17519,7 +17925,7 @@ msgstr "IIBB - Reportes"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:729
 msgid "IIBB - Sales by jurisdiction"
-msgstr ""
+msgstr "IIBB - Ventas por jurisdicción"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:731
 msgid ""
@@ -17527,14 +17933,17 @@ msgid ""
 "Affidavit for the corresponding taxes to pay, therefore it is not sent to "
 "the AFIP."
 msgstr ""
+"Es una tabla dinámica en la que puede validar los ingresos brutos de cada "
+"jurisdicción. Es una declaración jurada de los impuestos por pagar "
+"correspondientes, por lo que no se envía a la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "IIBB Sales by jurisdiction."
-msgstr ""
+msgstr "IIBB Ventas por jurisdicción."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:739
 msgid "IIBB - Purchases by jurisdiction"
-msgstr ""
+msgstr "IIBB - Compras por jurisdicción"
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rst:741
 msgid ""
@@ -17542,10 +17951,13 @@ msgid ""
 " Affidavit for the corresponding taxes to pay, therefore it is not sent to "
 "the AFIP."
 msgstr ""
+"Es una tabla dinámica en la que puede validar las compras brutas de cada "
+"jurisdicción. Es una declaración jurada de los impuestos por pagar "
+"correspondientes, por lo que no se envía a la AFIP."
 
 #: ../../content/applications/finance/fiscal_localizations/argentina.rstNone
 msgid "IIBB Purchases by jurisdiction."
-msgstr ""
+msgstr "IIBB Compras por jurisdicción."
 
 #: ../../content/applications/finance/fiscal_localizations/australia.rst:3
 msgid "Australia"
@@ -18250,7 +18662,7 @@ msgstr ""
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:871
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:552
 msgid "Financial Reports"
-msgstr "Informes financieros"
+msgstr "Reportes financieros"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:126
 msgid ""
@@ -18262,7 +18674,7 @@ msgstr ""
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rstNone
 msgid "Fiscal reports parameters."
-msgstr "Parámetros de informes fiscales"
+msgstr "Parámetros de reportes fiscales"
 
 #: ../../content/applications/finance/fiscal_localizations/chile.rst:134
 #: ../../content/applications/finance/fiscal_localizations/peru.rst:226
@@ -21730,7 +22142,7 @@ msgid ""
 ":guilabel:`Journal Name`: in this format `[Emission Entity]-[Emission Point]"
 " [Document Type]`, for example: `001-001 Withholding`."
 msgstr ""
-":guilabel:`nombre del diario`: debe tener el siguiente formato: `[Entidad de"
+":guilabel:`Nombre del diario`: debe tener el siguiente formato: `[Entidad de"
 " emisión]-[Punto de emisión] [Tipo de documento]`, por ejemplo: `001-001 "
 "Retenciones`."
 
@@ -21788,24 +22200,34 @@ msgid ""
 ":menuselection:`Accounting --> Configuration --> Accounting:  Journals` and "
 "configure the following information:"
 msgstr ""
+"Debe crear un diario específico que se utilizará con liquidaciones de "
+"compra, para hacerlo vaya a :menuselection:`Contabilidad --> Configuración "
+"--> Contabilidad:  diarios` y configure la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:214
 msgid ""
 ":guilabel:`Journal Name`: in this format `[Emission Entity]-[Emission Point]"
 " [Document Type]`, for example: `001-001 Withhold`."
 msgstr ""
+":guilabel:`Nombre del diario`: debe tener el siguiente formato: `[Entidad de"
+" emisión]-[Punto de emisión] [Tipo de documento]`, por ejemplo: `001-001 "
+"Retención`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:217
 msgid ""
 ":guilabel:`Purchase Liquidations`: check the checkbox to enable purchase "
 "liquidations."
 msgstr ""
+":guilabel:`Liquidaciones de compra`: seleccione la casilla para habilitar "
+"las liquidaciones de compra."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid ""
 "Configuring purchase liquidations for Ecuador electronic document type of "
 "Withholding."
 msgstr ""
+"Configuración de liquidaciones de compra para el tipo de documento "
+"electrónico de retención en Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:239
 msgid ""
@@ -21815,6 +22237,12 @@ msgid ""
 " module, the accounts are mapped automatically in Taxes, Default Account "
 "Payable, Default Account Receivable."
 msgstr ""
+"El :doc:`plan de cuentas "
+"<../accounting/getting_started/initial_configuration/chart_of_accounts>` se "
+"instala de forma predeterminada como parte del conjunto de datos incluidos "
+"en el módulo de localización. Las cuentas se mapean de forma automática en "
+"impuestos, cuentas por pagar predeterminadas y cuentas por cobrar "
+"predeterminadas."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:243
 msgid ""
@@ -21822,10 +22250,13 @@ msgid ""
 "Superintendency of Companies, which is grouped in several categories and is "
 "compatible with NIIF accounting."
 msgstr ""
+"El plan de cuentas de Ecuador se basa en la versión más reciente de la "
+"Superintendencia de Compañías, la cual se agrupa en varias categorías y es "
+"compatible con la contabilidad NIIF."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:246
 msgid "You can add or delete accounts according to the company's needs."
-msgstr ""
+msgstr "Puede agregar o eliminar cuentas según las necesidades de la empresa."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:249
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:172
@@ -21838,16 +22269,20 @@ msgid ""
 "In addition to the basic information in your products, you must add the "
 "configuration of the withholding code (tax) that applies."
 msgstr ""
+"Además de la información básica en sus productos, debe configurar el código "
+"de retención (impuesto) que se debe aplicar."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:254
 msgid ""
 "Go to :menuselection:`Accounting --> Vendors:  Products` under the tab "
 "\"Purchase\""
 msgstr ""
+"Vaya a :menuselection:`Contabilidad --> Proveedores:  productos` en la "
+"pestaña \"compra\"."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Product for Ecuador."
-msgstr ""
+msgstr "Producto para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:261
 msgid "Contacts"
@@ -21855,33 +22290,42 @@ msgstr "Contactos"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:263
 msgid "Configure the next information when you create a contact:"
-msgstr ""
+msgstr "Al crear un contacto, configure la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:265
 msgid ""
 "Check the :guilabel:`Company` option on top if it is a contact with RUC, or "
 "check :guilabel:`Individual` if it is a contact with cedula or passport."
 msgstr ""
+"Seleccione la opción :guilabel:`empresa` en la parte superior si es un "
+"contacto con RUC, o seleccione :guilabel:`individuo` si es un contacto con "
+"cédula o pasaporte."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:268
 msgid ""
 ":guilabel:`Address`: :guilabel:`Street` is a required field to confirm the "
 "Electronic Invoice."
 msgstr ""
+":guilabel:`Dirección`: el campo :guilabel:`calle` es necesario para "
+"confirmar la factura electrónica."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:269
 msgid ""
 ":guilabel:`Identification Number`: select an identification type `RUC`, "
 "`Cedula`, or `Passport`."
 msgstr ""
+":guilabel:`Número de identificación`: seleccione un tipo de identificación: "
+"`RUC`, `cédula` o `pasaporte`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:270
 msgid ":guilabel:`Taxpayer Type`: select the contact's SRI Taxpayer Type."
 msgstr ""
+":guilabel:`Tipo de contribuyente`: seleccione el tipo de contribuyente del "
+"contacto según el SRI."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Contacts for Ecuador."
-msgstr ""
+msgstr "Contacto para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:279
 msgid ""
@@ -21889,58 +22333,75 @@ msgid ""
 "and Profit withholding will apply when you use this contact on Vendor Bill, "
 "and then create a withholding from there."
 msgstr ""
+"El :guilabel:`tipo de contribuyente de SRI` cuenta con la configuración de "
+"las retenciones de IVA y ganancias que se aplicarán cuando utilice este "
+"contacto en una factura de proveedor, puede crear una retención ahí."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:284
 msgid "Review your taxes"
-msgstr ""
+msgstr "Revisar sus impuestos"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:286
 msgid ""
 "As part of the localization module, taxes are automatically created with its"
 " configuration and related financial accounts."
 msgstr ""
+"Como parte del módulo de localización, los impuestos se crean de forma "
+"automática con su configuración y cuentas financieras correspondientes."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Taxes for Ecuador."
-msgstr ""
+msgstr "Impuestos en Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:293
 msgid "The following options have been automatically configured:"
-msgstr ""
+msgstr "Las siguientes opciones se configuran de forma automática:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:295
 msgid ""
 ":guilabel:`Tax Support`: to be configured only in the IVA tax, this option "
 "is useful when you register purchase withholdings."
 msgstr ""
+":guilabel:`Soporte de impuestos`: a configurar solo en el IVA, esta opción "
+"es útil cuando registra retenciones de compra."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:297
 msgid ""
 ":guilabel:`Code ATS`: to be configured only for income tax withholding "
 "codes, it is important when you register the withholding."
 msgstr ""
+":guilabel:`Código ATS`: a configurar solo para códigos de retención de "
+"impuestos de ingresos, es importante al registrar la retención."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:299
 msgid ""
 ":guilabel:`Tax Grids`: configure the codes of 104 form if it is a IVA tax "
 "and configure the codes of 103 form if it is a  income tax withholding code."
 msgstr ""
+":guilabel:`Tablas de impuestos`: configure los códigos del formulario 104 si"
+" es IVA y del formulario 103 si es un código de retención de ingresos."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:301
 msgid ":guilabel:`Tax Name`:"
-msgstr ""
+msgstr ":guilabel:`Nombre del impuesto`:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:303
 msgid ""
 "For IVA tax, format the name as: `IVA [percent] (104, [form code] [tax "
 "support code] [tax support short name])`"
 msgstr ""
+"Para el IVA, el formato del nombre debe ser el siguiente: `IVA [porcentaje] "
+"(104, [código del formulario] [código de soporte de impuestos] [nombre corto"
+" del soporte de impuestos])`"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:305
 msgid ""
 "For income tax withholding code, format the name as: `Code ATS [Percent of "
 "withhold] [withhold name]`"
 msgstr ""
+"Para el código de retenciones de impuestos de ingreso, el formado debe ser "
+"el siguiente: `Código ATS [Porcentaje de retención] [Nombre de la "
+"retención]`"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:308
 msgid ""
@@ -21949,14 +22410,18 @@ msgid ""
 "do so, for which you must base yourself on the configuration of the existing"
 " taxes."
 msgstr ""
+"Una vez que instale el módulo de localización para Ecuador, los impuestos "
+"más comunes se configuran de forma automática. Puede crear uno adicional si "
+"lo necesita, para hacerlo debe basarse en la configuración de los impuestos "
+"existentes."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Taxes with tax support for Ecuador."
-msgstr ""
+msgstr "Impuestos con soporte para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:317
 msgid "Review your Document Types"
-msgstr ""
+msgstr "Revisar sus tipos de documento"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:319
 msgid ""
@@ -21964,6 +22429,10 @@ msgid ""
 " classified by document types. These are defined by the government fiscal "
 "authorities, in this case by the SRI."
 msgstr ""
+"Algunas transacciones contables, como *facturas de cliente* o *de "
+"proveedor*, se clasifican por tipo de documento. Las autoridades fiscales "
+"gubernamentales definen los tipos de documento. En este caso, lo hace el "
+"SRI."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:322
 msgid ""
@@ -21972,16 +22441,22 @@ msgid ""
 "country on which the document is applicable; also the data is created "
 "automatically when the localization module is installed."
 msgstr ""
+"Cada tipo de documento puede tener una secuencia única por diario asignado. "
+"Como parte de la localización, el tipo de documento incluye el país en el "
+"que se puede aplicar el documento, y los datos se crea de forma automática "
+"cuando se instala el módulo de localización."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:326
 msgid ""
 "The information required for the document types is included by default so "
 "the user does not need to fill anything there."
 msgstr ""
+"La información requerida para los tipos de documento se incluye de forma "
+"predeterminada, por lo que el usuario no necesita introducir nada."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Document types for Ecuador."
-msgstr ""
+msgstr "Tipos de documento para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:334
 #: ../../content/applications/finance/fiscal_localizations/mexico.rst:252
@@ -21992,10 +22467,11 @@ msgstr "Flujos de trabajo"
 msgid ""
 "Once you have configured your database, you can register your documents."
 msgstr ""
+"Una vez que configure su base de datos, puede registrar sus documentos."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:339
 msgid "Sales documents"
-msgstr ""
+msgstr "Documentos de ventas"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:344
 msgid ""
@@ -22003,23 +22479,30 @@ msgid ""
 " are sent to SRI. These documents can be created from your sales order or "
 "manually. They must contain the following data:"
 msgstr ""
+"Las :guilabel:`facturas de clientes` son documentos electrónicos que, una "
+"vez validados, se envían al SRI. Se pueden crear desde su orden de venta o "
+"de forma manual. Deben incluir los siguientes datos:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:347
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:391
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:424
 msgid ":guilabel:`Customer`: type the customer's information."
-msgstr ""
+msgstr ":guilabel:`Cliente`: introduzca la información del cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:348
 msgid ""
 ":guilabel:`Journal`: select the option that matches the printer point for "
 "the customer invoice."
 msgstr ""
+":guilabel:`Diario`: seleccione la opción que corresponde con el punto de "
+"impresión de la factura de cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:349
 msgid ""
 ":guilabel:`Document Type`: type document type in this format `(01) Invoice`."
 msgstr ""
+":guilabel:`Tipo de documento`: introduzca el tipo de documento en el "
+"siguiente formato: `(01) Factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:350
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:470
@@ -22028,20 +22511,22 @@ msgid ""
 ":guilabel:`Payment Method (SRI)`: select how the invoice is going to be "
 "paid."
 msgstr ""
+":guilabel:`Método de pago (SRI)`: seleccione cómo se pagarán las facturas."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:351
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:471
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:509
 msgid ":guilabel:`Products`: specify the product with the correct taxes."
 msgstr ""
+":guilabel:`Productos`: especifique el producto con los impuestos correctos."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Customer invoice for Ecuador."
-msgstr ""
+msgstr "Factura de cliente para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:358
 msgid "Customer credit note"
-msgstr ""
+msgstr "Notas de crédito de clientes"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:360
 msgid ""
@@ -22053,16 +22538,26 @@ msgid ""
 "button to be directed to the :guilabel:`Create credit note` form, then "
 "complete the following information:"
 msgstr ""
+"Las :doc:`notas de crédito de clientes "
+"<../accounting/receivables/customer_invoices/credit_notes>` son documentos "
+"electrónicos que, una vez validados, se envían al SRI. Es necesario tener "
+"una factura validada (es decir, registrada) para poder registrar una nota de"
+" crédito. En la factura hay un botón denominado :guilabel:`nota de crédito`,"
+" haga clic en él para ir al formulario :guilabel:`crear nota de crédito` y "
+"complete la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:366
 msgid ":guilabel:`Credit Method`: select the type of credit method."
 msgstr ""
+":guilabel:`Método de crédito`: seleccione el tipo de método de crédito."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:368
 msgid ""
 ":guilabel:`Partial Refund`: use this option when you need to type the first "
 "number of documents and if it is a partial credit note."
 msgstr ""
+":guilabel:`Reembolso parcial`: utilice esta opción cuando necesite ingresar "
+"el primer número del documento y si es una nota de crédito parcial."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:370
 msgid ""
@@ -22070,6 +22565,9 @@ msgid ""
 " invoice and you need the credit note to be auto-validated and reconciled "
 "with the invoice."
 msgstr ""
+":guilabel:`Reembolso completo`: utilice esta opción si la nota de crédito es"
+" por el total de la factura y necesita que se valide de forma automática y "
+"se concilie con la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:372
 msgid ""
@@ -22078,18 +22576,24 @@ msgid ""
 "validated and reconciled with the invoice, and auto-create a new draft "
 "invoice."
 msgstr ""
+":guilabel:`Reembolso completo y nuevo borrador de factura`: utilice esta "
+"opción si la nota de crédito es por el total de la factura y necesita que se"
+" valide de forma automática y se concilie con la factura, y después se cree "
+"un nuevo borrador de factura automáticamente."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:376
 msgid ":guilabel:`Reason`: type the reason for the credit note."
-msgstr ""
+msgstr ":guilabel:`Razón`: escriba la razón de la nota de crédito."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:377
 msgid ":guilabel:`Rollback Date`: select the :guilabel:`specific` options."
 msgstr ""
+":guilabel:`Fecha de retroceso`: seleccione las opciones "
+":guilabel:`específicas`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:378
 msgid ":guilabel:`Reversal Date`: type the date."
-msgstr ""
+msgstr ":guilabel:`Fecha de reversión`: agregue la fecha."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:379
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:412
@@ -22098,14 +22602,18 @@ msgid ""
 "note, or leave it empty if you want to use the same journal as the original "
 "invoice."
 msgstr ""
+":guilabel:`Utilizar un diario específico`: seleccione el punto de impresión "
+"de para su nota de crédito, o déjelo en blanco si quiere utilizar el mismo "
+"diario que la factura original."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:382
 msgid "Once reviewed, you can click on the :guilabel:`Reverse` button."
 msgstr ""
+"Una vez hecho esto, puede hacer clic en el botón :guilabel:`revertir`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Add Customer Credit Note for Ecuador."
-msgstr ""
+msgstr "Agregar una nota de crédito de cliente para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:388
 msgid ""
@@ -22113,31 +22621,40 @@ msgid ""
 "amount of the credit note and then validate it. Before validating the credit"
 " note, review the following information:"
 msgstr ""
+"Cuando utiliza la opción :guilabel:`reembolso parcial`, puede cambiar el "
+"importe de la nota de crédito y luego validarla. Antes de hacerlo, revise la"
+" siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:392
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:425
 msgid ""
 ":guilabel:`Journal`: select the printer point for the customer Credit Note."
 msgstr ""
+":guilabel:`Diario`: seleccione el punto de impresión para la nota de "
+"crédito."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:393
 msgid ""
 ":guilabel:`Document Type`: this is the document type `(04) Credit Note`."
 msgstr ""
+":guilabel:`Tipo de documento`: elija el tipo de documento `(04) Nota de "
+"crédito`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:394
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:427
 msgid ""
 ":guilabel:`Products`: It must specify the product with the correct taxes."
 msgstr ""
+":guilabel:`Productos`: debe especificar el producto con los impuestos "
+"correctos."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Customer Credit Note for Ecuador."
-msgstr ""
+msgstr "Nota de crédito para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:401
 msgid "Customer debit note"
-msgstr ""
+msgstr "Notas de débito de clientes"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:403
 msgid ""
@@ -22147,48 +22664,64 @@ msgid ""
 "named :guilabel:`Debit Note`, click on this button to be directed to the "
 ":guilabel:`Create debit note` form, then complete the following information:"
 msgstr ""
+"Las :guilabel:`notas de débito de cliente` son documentos electrónicos que, "
+"una vez validados, se envían al SRI. Es necesario tener una factura validada"
+" (es decir, registrada) para poder registrar una nota de crédito. En la "
+"factura hay un botón denominado :guilabel:`nota de débito`, haga clic en él "
+"para ir al formulario :guilabel:`crear nota de débito` y complete la "
+"siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:408
 msgid ":guilabel:`Reason`: type the reason for the debit note."
-msgstr ""
+msgstr ":guilabel:`Razón`: escriba la razón de la nota de débito."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:409
 msgid ":guilabel:`Debit note date`: select the :guilabel:`specific` options."
 msgstr ""
+":guilabel:`Fecha de nota de débito`: seleccione las opciones "
+":guilabel:`específicas`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:410
 msgid ""
 ":guilabel:`Copy lines`: select this option if you need to register a debit "
 "note with the same lines of invoice."
 msgstr ""
+":guilabel:`Copiar líneas`: seleccione esta opción si necesita registrar una "
+"nota de débito con las mismas líneas que la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:415
 msgid ""
 "Once reviewed you can click on the :guilabel:`Create Debit Note` button."
 msgstr ""
+"Una vez hecho esto, puede hacer clic en el botón :guilabel:`crear nota de "
+"débito`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Add Customer Debit Note for Ecuador."
-msgstr ""
+msgstr "Agregar una nota de débito de cliente para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:421
 msgid ""
 "You can change the debit note amount, and then validate it. Before "
 "validating the debit note, review the following information:"
 msgstr ""
+"Puede cambiar el importe de la nota de débito y luego validarla. Antes de "
+"hacerlo, revise la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:426
 msgid ""
 ":guilabel:`Document Type`: this is the document type `(05) Debit Note`."
 msgstr ""
+":guilabel:`Tipo de documento`: elija el tipo de documento `(05) Nota de "
+"débito`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Customer Debit Note for Ecuador."
-msgstr ""
+msgstr "Nota de débito de cliente para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:434
 msgid "Customer withholding"
-msgstr ""
+msgstr "Retenciones de cliente"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:436
 msgid ""
@@ -22196,6 +22729,8 @@ msgid ""
 "company, this document is issued by the client in order to apply a "
 "withholding to the sale."
 msgstr ""
+"Las :guilabel:`retenciones de cliente` son documentos físicos de su empresa."
+" El cliente emite este documento para aplicar una retención a la venta."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:439
 msgid ""
@@ -22204,30 +22739,38 @@ msgid ""
 "Withhold`,  click on this button to be directed to the :guilabel:`Customer "
 "withholding` form, then complete the following information:"
 msgstr ""
+"Es necesario tener una factura validada (es decir, registrada) para poder "
+"registrar una retención de cliente. En la factura hay un botón denominado "
+":guilabel:`agregar retención`,  haga clic en él para ir al formulario de "
+":guilabel:`retención de cliente` y complete la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:443
 msgid ":guilabel:`Document Number`: type the withholding number."
-msgstr ""
+msgstr ":guilabel:`Número de documento`: escriba el número de retención."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:444
 msgid ""
 ":guilabel:`Withhold Lines`: select the taxes that the customer is "
 "withholding."
 msgstr ""
+":guilabel:`Líneas de retención`: seleccione los impuestos que el cliente "
+"desea retener."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:446
 msgid ""
 "Before validating the withholding, review that the amounts for each tax are "
 "the same as the original document."
 msgstr ""
+"Antes de validar la retención, revise que los importes para cada impuesto "
+"sean los mismos que en el documento original."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Customer withhold for Ecuador."
-msgstr ""
+msgstr "Retención de cliente para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:454
 msgid "Purchase Documents"
-msgstr ""
+msgstr "Documentos de compra"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:457
 msgid "Vendor bill"
@@ -22239,37 +22782,42 @@ msgid ""
 "this document is issued by your vendor when your company generates a "
 "purchase."
 msgstr ""
+"Las :guilabel:`facturas de proveedor` son documentos físicos de su empresa. "
+"El proveedor emite este documento cuando la empresa genera una compra."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:462
 msgid ""
 "The bills can be created from the purchase order or manually, it must "
 "contain the following information:"
 msgstr ""
+"Puede crear facturas de proveedor desde la orden de venta o de forma manual,"
+" deben contener la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:465
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:502
 msgid ":guilabel:`Vendor`: type the vendor's information."
-msgstr ""
+msgstr ":guilabel:`Proveedor`: introduzca la información del proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:466
 msgid ":guilabel:`Bill Date`: select the date of invoice."
-msgstr ""
+msgstr ":guilabel:`Fecha de factura`: seleccione la fecha de la factura."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:467
 msgid ":guilabel:`Journal`: it is the journal for vendor bills."
-msgstr ""
+msgstr ":guilabel:`Diario`: es el diario para las facturas de proveedor."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:468
 msgid ":guilabel:`Document Type`: this is the document type `(01) Invoice`"
 msgstr ""
+":guilabel:`Tipo de documento`: elija el tipo de documento `(01) Factura`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:469
 msgid ":guilabel:`Document number`: type the document number."
-msgstr ""
+msgstr ":guilabel:`Número de documento`: escriba el número de documento."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Purchases for Ecuador."
-msgstr ""
+msgstr "Compras para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:478
 msgid ""
@@ -22279,32 +22827,46 @@ msgid ""
 "the :guilabel:`Journal Items` tab click the :guilabel:`Edit` button and set "
 "the adjustment to go where you want."
 msgstr ""
+"En el momento de la creación de retenciones de compra, verifique que las "
+"bases (importes base) sean correctas. Si necesita editar el importe del "
+"impuesto en la :guilabel:`factura de proveedor`, haga clic en el botón "
+":guilabel:`editar`. Otra forma de hacerlo es hacer clic en el botón "
+":guilabel:`editar` en la pestaña :guilabel:`apuntes contables` y establecer "
+"a dónde quiere que se dirija el ajuste."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:484
 msgid "Purchase liquidation"
-msgstr ""
+msgstr "Liquidaciones de compra"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:486
 msgid ""
 "The :guilabel:`Purchase liquidation` is an electronic document that, when "
 "validated, is sent to SRI."
 msgstr ""
+"Las :guilabel:`liquidaciones de compra` son documentos electrónicos que, una"
+" vez validados, se envían al SRI."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:488
 msgid ""
 "Companies issue this type of electronic document when they purchase, and the"
 " vendor does not issue an invoice due to one or more of the following cases:"
 msgstr ""
+"Las empresas emiten este tipo de documento electrónico cuando realizan "
+"compras y los proveedores no emiten una factura en uno o más de los "
+"siguientes casos:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:491
 msgid "Services were provided by non-residents of Ecuador."
 msgstr ""
+"Los servicios fueron proporcionados por personas que no residen en Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:492
 msgid ""
 "Services provided by foreign companies without residency or establishment in"
 " Ecuador."
 msgstr ""
+"Los servicios fueron proporcionados por empresas extranjeras sin residencia "
+"o establecimiento en Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:493
 msgid ""
@@ -22312,18 +22874,25 @@ msgid ""
 "RUC, who due to their cultural level or hardiness are not able to issue "
 "sales receipts or customer invoices."
 msgstr ""
+"Son compras de bienes o servicios de personas naturales que no tienen un RUC"
+" registrado, quienes debido a su nivel cultural o rusticidad no pueden "
+"emitir recibos de venta o facturas de cliente."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:495
 msgid ""
 "Reimbursement for the purchase of goods or services to employees in a "
 "dependency relationship (full-time employee)."
 msgstr ""
+"Son reembolsos de compra de bienes o servicios a empleados en una relación "
+"de dependencia (empleados de tiempo completo)."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:497
 msgid ""
 "Services provided by members of collegiate bodies for the exercise of their "
 "function."
 msgstr ""
+"Los servicios fueron proporcionados por miembros de cuerpos colegiales para "
+"el ejercicio de sus funciones."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:499
 msgid ""
@@ -22331,18 +22900,25 @@ msgid ""
 ":guilabel:`Purchase Order` or manually from the :guilabel:`Vendor Bills` "
 "form view. It must contain the following data:"
 msgstr ""
+"Estos tipos de documentos electrónicos se pueden crear desde la "
+":guilabel:`orden de compra`, o de forma manual en la vista de formulario de "
+"la :guilabel:`factura de proveedor`. Debe contener los siguientes datos:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:503
 msgid ""
 ":guilabel:`Journal`: select the journal for the :guilabel:`Purchase "
 "Liquidation` with the correct printer point."
 msgstr ""
+":guilabel:`Diario`: seleccione el diario de la :guilabel:`liquidación de "
+"compra` con el punto de impresión correcto."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:505
 msgid ""
 ":guilabel:`Document Type`: this is the document type `(03) Purchase "
 "Liquidation`"
 msgstr ""
+":guilabel:`Tipo de documento`: elija el tipo de documento `(03) Liquidación "
+"de compra`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:506
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:526
@@ -22351,26 +22927,32 @@ msgid ""
 "only have to do this once, then the sequence will be automatically assigned "
 "for the next documents."
 msgstr ""
+":guilabel:`Número de documento`: escriba el número de documento (secuencia)."
+" Solo tendrá que hacerlo esta vez, después la secuencia se asignará a los "
+"siguientes documentos de forma automática."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:511
 msgid ""
 "Once you review the information you can validate the :guilabel:`Purchase "
 "Liquidation`."
 msgstr ""
+"Una vez hecho esto, puede validar la :guilabel:`liquidación de compra`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Purchase liquidation for Ecuador."
-msgstr ""
+msgstr "Liquidación de compra para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:518
 msgid "Purchase withholding"
-msgstr ""
+msgstr "Retenciones de compra"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:520
 msgid ""
 "The :guilabel:`Purchase withholding` is an electronic document that, when "
 "validated, is sent to SRI."
 msgstr ""
+"Las :guilabel:`retenciones de compra` son documentos electrónicos que, una "
+"vez validados, se envían al SRI."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:522
 msgid ""
@@ -22379,6 +22961,10 @@ msgid ""
 " :guilabel:`Add Withhold`, click on this button to be directed to the "
 ":guilabel:`Withholding` form, then complete the following information:"
 msgstr ""
+"Es necesario tener una facturada validada para registrar una "
+":guilabel:`retención de compra`. En la factura hay un botón denominado "
+":guilabel:`agregar retención`, haga clic en él para ir al formulario de "
+":guilabel:`retención` y complete la siguiente información:"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:528
 msgid ""
@@ -22387,16 +22973,20 @@ msgid ""
 "tax support are correct, and, if it is not correct, you can edit and select "
 "the correct taxes and tax support."
 msgstr ""
+":guilabel:`Líneas de retención`: los impuestos aparecen de forma automática "
+"según la configuración de productos y proveedores. Debe revisar si los "
+"impuestos y el soporte fiscal son correctos, en caso de que no lo sean puede"
+" editarlos y seleccionar los correctos."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:532
 msgid ""
 "Once you review the information you can validate the "
 ":guilabel:`Withholding`."
-msgstr ""
+msgstr "Una vez hecho esto, puede validar la :guilabel:`retención`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Purchase withhold for Ecuador."
-msgstr ""
+msgstr "Retención de compra para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:539
 msgid ""
@@ -22405,12 +22995,18 @@ msgid ""
 " to the tax applied on the :guilabel:`Vendor Bill` and change the "
 ":guilabel:`Tax Support` there."
 msgstr ""
+"No puede cambiar el soporte fiscal de un impuesto que no se incluyó en la "
+"configuración de los impuestos que se utilizan en la :guilabel:`factura de "
+"proveedor`. Para hacerlo, vaya al impuesto que se aplicó en la "
+":guilabel:`factura de proveedor` y cambie el :guilabel:`soporte fiscal`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:543
 msgid ""
 "A withholding tax can be divided into two or more lines, this will depend on"
 " whether two or more withholdings percentages apply."
 msgstr ""
+"Un impuesto de retención se puede dividir en dos o más líneas, esto "
+"dependerá de si se aplican dos o más porcentajes de retención."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:547
 msgid ""
@@ -22419,6 +23015,10 @@ msgid ""
 " system will allow you as long as the total of the bases matches the total "
 "from the :guilabel:`Vendor Bill`."
 msgstr ""
+"El sistema sugiere una retención de IVA del 30% con el soporte fiscal 01, "
+"puede agregar su retención de IVA del 70% en una nueva línea con el mismo "
+"soporte fiscal. El sistema le permitirá hacerlo siempre y cuando el total de"
+" las bases coincida con el total en la :guilabel:`factura de proveedor`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:554
 msgid ""
@@ -22426,6 +23026,9 @@ msgid ""
 "Odoo, we have two of the main financial reports used by companies. These are"
 " the reports 103 and 104."
 msgstr ""
+"En Ecuador hay reportes fiscales que las empresas presentan ante el SRI. En "
+"Odoo tenemos dos de los principales reportes financieros que las empresas "
+"utilizan: los reportes 103 y 104."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:557
 msgid ""
@@ -22433,16 +23036,22 @@ msgid ""
 ":menuselection:`Reporting --> Statements Reports --> Tax Report` and then "
 "filter by `Tax Report 103` or `Tax Report 104`."
 msgstr ""
+"Para utilizar estos reportes vaya a la aplicación :guilabel:`Contabilidad` y"
+" seleccione :menuselection:`Reportes --> Reportes de estados de cuenta --> "
+"Reporte de impuestos` y luego utilice el filtro `reporte de impuestos 103` o"
+" `reporte de impuestos 104`."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:561
 msgid "Report 103"
-msgstr ""
+msgstr "Reporte 103"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:563
 msgid ""
 "This report contains information of income tax withholdings in a given "
 "period, this can be reported monthly or semi-annually."
 msgstr ""
+"Este reporte contiene información de las retenciones de impuestos de "
+"ingresos en un periodo específico, puede ser mensual o semestral."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:566
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:579
@@ -22451,24 +23060,29 @@ msgid ""
 "amounts, which also includes the tax code within the parenthesis in order to"
 " report it to the SRI."
 msgstr ""
+"Puede consultar la información necesaria para reportar, la cual incluye los "
+"importes base y de impuestos, así como el código de impuestos en el "
+"paréntesis para poder declararlo aL SRI."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Report 103 form for Ecuador."
-msgstr ""
+msgstr "Formulario del reporte 103 para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:574
 msgid "Report 104"
-msgstr ""
+msgstr "Reporte 104"
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rst:576
 msgid ""
 "This report contains information on VAT tax and VAT withholding for a given "
 "period, this can be monthly or semi-annually."
 msgstr ""
+"Este reporte contiene información sobre el IVA y sus retenciones en un "
+"periodo específico, puede ser mensual o semestral."
 
 #: ../../content/applications/finance/fiscal_localizations/ecuador.rstNone
 msgid "Report 104 form for Ecuador."
-msgstr ""
+msgstr "Formulario del reporte 104 para Ecuador."
 
 #: ../../content/applications/finance/fiscal_localizations/egypt.rst:3
 msgid "Egypt"
@@ -23457,7 +24071,7 @@ msgid ""
 "Should a similar account code already be present in the system, the existing"
 " one is used instead of creating a new one."
 msgstr ""
-"Si hay un código de cuenta similar en el sistema, se usa el existente en "
+"Si hay un código de cuenta similar en el sistema, se usará el existente en "
 "lugar de crear uno nuevo."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:145
@@ -23479,7 +24093,7 @@ msgid ""
 msgstr ""
 "Esto significa que en los códigos de cuenta los ceros finales se recortan "
 "desde la derecha, y que la comparación entre los códigos de cuenta en el "
-"archivo FEC y los ya existentes en Odoo se realiza sólo en los primeros seis"
+"archivo FEC y los ya existentes en Odoo se realiza solo en los primeros seis"
 " dígitos de los códigos."
 
 #: ../../content/applications/finance/fiscal_localizations/france.rst:153
