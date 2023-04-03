@@ -2,6 +2,8 @@
 Use the Master Production Schedule
 ==================================
 
+.. _manufacturing/management/use_mps:
+
 The Master Production Schedule (MPS) is a valuable tool to plan your
 production based on your demand forecast.
 
