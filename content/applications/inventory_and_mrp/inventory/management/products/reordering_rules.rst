@@ -2,6 +2,8 @@
 Reordering rules
 ================
 
+.. _inventory/management/reordering_rules:
+
 Reordering rules are used to keep forecasted stock levels above a certain threshold without
 exceeding a specified upper limit. This is accomplished by specifying a minimum quantity that stock
 should not fall below and a maximum quantity that stock should not exceed.
