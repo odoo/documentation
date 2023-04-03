@@ -99,31 +99,28 @@ views (namely: `form`, `list`, `kanban`) by using the `widget` attribute.
 
       <field name="preview_moves" widget="account_resequence_widget"/>
 
+.. _tutorials/master_odoo_web_framework/image_preview_field:
+
 1. An `image_preview` field
 ===========================
 
 Each new order on the website will be created as an `awesome_tshirt.order`. This model has a
 `image_url` field (of type `char`), which is currently only visible as a string. We want to be able
-to see it in the form view.
-
-For this task, we need to create a new field component `image_preview`. This component is
-specified as follows: In readonly mode, it is only an image tag with the correct `src` if the field
-is set; In edit mode, it also behaves like classical `char` fields (you can use the `CharField` in
-your template by passing it in the props). An `input` should be displayed with the text value of the
-field, so it can be edited.
+to see the image itself in the form view.
 
 .. exercise::
 
-   #. Create a new `ImagePreview` component and use the `CharField` component in your template. You
-      can use `t-props
-      <{OWL_PATH}/doc/reference/props.md#dynamic-props>`_ to pass props
-      received by `ImagePreview` to `CharField`.
-   #. Register your field in the proper :ref:`registry <frontend/registries>`.
-   #. Update the arch of the form view to use your new field by setting the `widget` attribute.
+   #. Create a new `ImagePreview` component and register it in the proper :ref:`registry
+      <frontend/registries>`. Use the `CharField` component in your template. You can use `t-props
+      <{OWL_PATH}/doc/reference/props.md#dynamic-props>`_ to pass props received by `ImagePreview`
+      to `CharField`. Update the arch of the form view to use your new field by setting the `widget`
+      attribute.
+   #. Change the code of the `ImagePreview` component so that the image is displayed below the URL.
+   #. When the field is readonly, only the image should be displayed and the URL should be hidden.
 
 .. note::
-   It is possible to solve this exercise by inheriting `CharField` , but the goal of this exercise
-   is to create a field from scratch.
+   It is possible to solve this exercise by inheriting `CharField`, but the goal of this exercise is
+   to create a field from scratch.
 
 .. image:: 01_fields_and_views/image_field.png
    :align: center
@@ -136,11 +133,12 @@ field, so it can be edited.
 2. Improving the `image_preview` field
 ======================================
 
+We want to improve the field of the previous task to help the staff recognize orders for which some
+action should be done.
+
 .. exercise::
 
-   We want to improve the field of the previous task to help the staff recognize orders for which
-   some action should be done. In particular, we want to display a warning "MISSING TSHIRT DESIGN"
-   in red if there is no image URL specified on the order.
+   Display a warning "MISSING TSHIRT DESIGN" in red if there is no image URL specified on the order.
 
 .. image:: 01_fields_and_views/missing_image.png
    :align: center
@@ -150,9 +148,9 @@ field, so it can be edited.
 
 Let's see how to use inheritance to extend an existing component.
 
-There is a `is_late`, readonly, boolean field on the task model. That would be useful information to
-see on the list/kanban/view. Then, let us say that we want to add a red word "Late!" next to it
-whenever it is set to true.
+There is a `is_late`, readonly, boolean field on the order model. That would be useful information
+to see on the list/kanban/view. Then, let us say that we want to add a red word "Late!" next to it
+whenever it is set to `true`.
 
 .. exercise::
 
@@ -166,11 +164,8 @@ whenever it is set to true.
    :align: center
 
 .. seealso::
-
-   - `Example: A field inheriting another (JS)
-     <{GITHUB_PATH}/addons/account/static/src/components/account_type_selection/account_type_selection.js>`_
-   - `Example: A field inheriting another (XML)
-     <{GITHUB_PATH}/addons/account/static/src/components/account_type_selection/account_type_selection.xml>`_
+   - `Example: A field inheriting another
+     <{GITHUB_PATH}/addons/account/static/src/components/account_type_selection>`_
    - :ref:`Documentation on xpath <reference/views/inheritance>`
 
 4. Message for some customers
@@ -181,13 +176,16 @@ insert arbitrary components in the form view. Let us see how we can use it.
 
 .. exercise::
 
-   For a super efficient workflow, we would like to display a message/warning box with some
-   information in the form view, with specific messages depending on some conditions:
+   For a super efficient workflow, we would like to display an alert block with specific messages
+   depending on some conditions:
 
    - If the `image_url` field is not set, it should display "No image".
-   - If the amount of the order is higher than 100 euros, it should display "Add promotional
+   - If the `amount` of the order is higher than 100 euros, it should display "Add promotional
      material".
    - Make sure that your widget is updated in real time.
+
+   .. tip::
+      Try to evaluate `props.record` in the :guilabel:`Console` tab of your browser's dev tools.
 
 .. image:: 01_fields_and_views/warning_widget.png
    :align: center
@@ -197,26 +195,26 @@ insert arbitrary components in the form view. Let us see how we can use it.
    - `Example: Using the tag <widget> in a form view
      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
      addons/calendar/views/calendar_views.xml#L197>`_
-   - `Example: Implementation of a widget (JS)
-     <{GITHUB_PATH}/addons/web/static/src/views/widgets/week_days/week_days.js>`_
-   - `Example: Implementation of a widget (XML)
-     <{GITHUB_PATH}/addons/web/static/src/views/widgets/week_days/week_days.xml>`_
+   - `Example: Implementation of a widget
+     <{GITHUB_PATH}/addons/web/static/src/views/widgets/week_days>`_
 
 5. Use `markup`
 ===============
 
-Let's see how we can display raw HTML in a template. Before, there was a `t-raw` directive that
-would just output anything as HTML. This was unsafe, and has been replaced by a `t-out
-<{OWL_PATH}/doc/reference/templates.md#outputting-data>`_ directive that acts like a `t-esc` unless
-the data has been marked explicitly with a `markup` function.
+Let’s see how we can display raw HTML in a template. The `t-out` directive can be used for that
+propose. Indeed, `it generally acts like t-esc, unless the data has been marked explicitly with a
+markup function <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_. In that case, its value
+is injected as HTML.
 
 .. exercise::
 
    #. Modify the previous exercise to put the `image` and `material` words in bold.
    #. The warnings should be markuped, and the template should be modified to use `t-out`.
+   #. Import the `markup` function from Owl and, for each message, replace it with a call of the
+      function with the message passed as argument.
 
 .. note::
-   This is an example of a safe use of `t-out` , since the string is static.
+   This is an example of a safe use of `t-out`, since the string is static.
 
 .. image:: 01_fields_and_views/warning_widget2.png
    :align: center
@@ -311,18 +309,19 @@ The view description can define a `props` function, which receives the standard 
 the base props of the concrete view. The `props` function is executed only once, and can be thought
 of as being some kind of factory. It is useful to parse the `arch` XML document, and to allow the
 view to be parameterized (for example, it can return a Renderer component that will be used as
-Renderer), but then it makes it easy to customize the specific renderer used by a sub view.
+Renderer). Then, it is easy to customize the specific renderer used by a sub view.
 
-These props will be extended before being given to the Controller. In particular, the search props
+The props will be extended before being given to the Controller. In particular, the search props
 (domain/context/groupby) will be added.
 
-Then, the root component, commonly called the `Controller`, coordinates everything. It uses the
+Finally, the root component, commonly called the `Controller`, coordinates everything. It uses the
 generic `Layout` component (to add a control panel), instantiates a `Model`, and uses a `Renderer`
 component in the `Layout` default slot. The `Model` is tasked with loading and updating data, and
 the `Renderer` is supposed to handle all rendering work, along with all user interactions.
 
 In practice, once the t-shirt order is printed, we need to print a label to put on the package. To
-do that, let us add a button in the order form view control panel which will call a model method.
+do that, let us add a button in the order's form view's control panel, which will call a model
+method.
 
 There is a service dedicated to calling models methods: `orm_service`, located in
 `core/orm_service.js`. It provides a way to call common model methods, as well as a generic
@@ -343,18 +342,27 @@ There is a service dedicated to calling models methods: `orm_service`, located i
 
 .. exercise::
 
-   #. Create a customized form view extending the web form view and register it as
+   #. Create a customized form view extending the `web` form view and register it as
       `awesome_tshirt.order_form_view`.
-   #. Add a `js_class` attribute to the arch of the form view so Odoo will load it.
-   #. Create a new template inheriting from the form controller template to add a button after the
-      create button.
-   #. Add a button. Clicking on this button should call the method `print_label` from the model
-      `awesome_tshirt.order` with the proper id. Note: `print_label` is a mock method, it only
-      displays a message in the logs.
-   #. The button should be disabled if the current order is in `create` mode (i.e., it does not
+   #. Add a `js_class="awesome_tshirt.order_form_view"` attribute to the arch of the form view so
+      that Odoo will load it.
+   #. Create a new template inheriting from the form controller template and add a "Print Label"
+      button after the "New" button.
+   #. Clicking on this button should call the method `print_label` from the model
+      `awesome_tshirt.order` with the proper id.
+
+      .. note::
+         `print_label` is a mock method; it only displays a message in the logs.
+
+   #. The button should not be disabled if the current order is in `create` mode (i.e., it does not
       exist yet).
+
+      .. tip::
+         Log `this.props.resId` and `this.model.root.resId` and compare the two values before and
+         after entering `create` mode.
+
    #. The button should be displayed as a primary button if the customer is properly set and if the
-      task stage is `printed`. Otherwise, it is displayed as a secondary button.
+      task stage is `printed`. Otherwise, it should be displayed as a secondary button.
    #. Bonus point: clicking twice on the button should not trigger 2 RPCs.
 
    .. image:: 01_fields_and_views/form_button.png
@@ -371,6 +379,9 @@ There is a service dedicated to calling models methods: `orm_service`, located i
    - `Code: orm service <{GITHUB_PATH}/addons/web/static/src/core/orm_service.js>`_
    - `Example: Using the orm service
      <{GITHUB_PATH}/addons/account/static/src/components/open_move_widget/open_move_widget.js>`_
+   - `Code: useDebounced hook
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/src/core/utils/timing.js#L117>`_
 
 7. Auto-reload the kanban view
 ==============================
