@@ -43,15 +43,15 @@ button.
    import { Component, useState } from "@odoo/owl";
 
    class Counter extends Component {
-      static template = "my_module.Counter";
+       static template = "my_module.Counter";
 
-      setup() {
-         state = useState({ value: 0 });
-      }
+       setup() {
+           state = useState({ value: 0 });
+       }
 
-      increment() {
-         this.state.value++;
-      }
+       increment() {
+           this.state.value++;
+       }
    }
 
 The `Counter` component specifies the name of the template to render. The template is written in XML
@@ -80,9 +80,9 @@ route with your browser.
 .. exercise::
 
    #. Modify :file:`playground.js` so that it acts as a counter like in the example above. You will
-      need to use the `useState
-      <{OWL_PATH}/doc/reference/hooks.md#usestate>`_ function so that the component is re-rendered
-      whenever any part of the state object has been read by this component is modified.
+      need to use the `useState hook
+      <{OWL_PATH}/doc/reference/hooks.md#usestate>`_ so that the component is re-rendered
+      whenever any part of the state object that has been read by this component is modified.
    #. In the same component, create an `increment` method.
    #. Modify the template in :file:`playground.xml` so that it displays your counter variable. Use
       `t-esc <{OWL_PATH}/doc/reference/templates.md#outputting-data>`_ to output the data.
@@ -109,8 +109,8 @@ For now we have the logic of a counter in the `Playground` component, let us see
 
    #. Extract the counter code from the `Playground` component into a new `Counter` component.
    #. You can do it in the same file first, but once it's done, update your code to move the
-      `Counter` in its own file.
-   #. Make sure the template is in its own file, with the same name.
+      `Counter` in its own folder and file. Import it relatively from `./counter/counter`. Make sure
+      the template is in its own file, with the same name.
 
 .. important::
    Don't forget :code:`/** @odoo-module **/` in your JavaScript files. More information on this can
@@ -129,7 +129,7 @@ todos. This will be done incrementally in multiple exercises that will introduce
       **3. buy milk**.
    #. Add the Bootstrap classes `text-muted` and `text-decoration-line-through` on the task if it is
       done. To do that, you can use `dynamic attributes
-      <{OWL_PATH}/doc/reference/templates.md#dynamic-attributes>`_
+      <{OWL_PATH}/doc/reference/templates.md#dynamic-attributes>`_.
    #. Modify :file:`owl_playground/static/src/playground.js` and
       :file:`owl_playground/static/src/playground.xml` to display your new `Todo` component with
       some hard-coded props to test it first.
@@ -157,7 +157,7 @@ The `Todo` component has an implicit API. It expects to receive in its props the
 todo object in a specified format: `id`, `description` and `done`. Let us make that API more
 explicit. We can add a props definition that will let Owl perform a validation step in `dev mode
 <{OWL_PATH}/doc/reference/app.md#dev-mode>`_. You can activate the dev mode in the `App
-configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_
+configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_.
 
  It is a good practice to do props validation for every component.
 
@@ -165,8 +165,9 @@ configuration <{OWL_PATH}/doc/reference/app.md#configuration>`_
 
    #. Add `props validation <{OWL_PATH}/doc/reference/props.md#props-validation>`_ to the `Todo`
       component.
-   #. Make sure it passes in dev mode which is activated by default in `owl_playground`. The dev
-      mode can be activated and deactivated by modifying the `dev` attribute in the in the `config`
+   #. Open the :guilabel:`Console` tab of your browser's dev tools and make sure the props
+      validation passes in dev mode, which is activated by default in `owl_playground`. The dev mode
+      can be activated and deactivated by modifying the `dev` attribute in the in the `config`
       parameter of the `mount <{OWL_PATH}/doc/reference/app.md#mount-helper>`_ function in
       :file:`owl_playground/static/src/main.js`.
    #. Remove `done` from the props and reload the page. The validation should fail.
@@ -179,8 +180,9 @@ list.
 
 .. exercise::
 
-   #. Change the code to display a list of todos instead of just one, and use `t-foreach
-      <{OWL_PATH}/doc/reference/templates.md#loops>`_ in the template.
+   #. Change the code to display a list of todos instead of just one. Create a new `TodoList`
+      component to hold the `Todo` components and use `t-foreach
+      <{OWL_PATH}/doc/reference/templates.md#loops>`_ in its template.
    #. Think about how it should be keyed with the `t-key` directive.
 
 .. image:: 01_owl_components/todo_list.png
@@ -197,16 +199,14 @@ a todo to the list.
 
    #. Add an input above the task list with placeholder *Enter a new task*.
    #. Add an `event handler <{OWL_PATH}/doc/reference/event_handling.md>`_ on the `keyup` event
-      named ``addTodo``.
+      named `addTodo`.
    #. Implement `addTodo` to check if enter was pressed (:code:`ev.keyCode === 13`), and in that
-      case, create a new todo with the current content of the input as the description.
-   #. Make sure it has a unique id. It can be just a counter that increments at each todo.
-   #. Then, clear the input of all content.
+      case, create a new todo with the current content of the input as the description and clear the
+      input of all content.
+   #. Make sure the todo has a unique id. It can be just a counter that increments at each todo.
+   #. Wrap the todo list in a `useState` hook to let Owl know that it should update the UI when the
+      list is modified.
    #. Bonus point: don't do anything if the input is empty.
-
-   .. note::
-      Notice that nothing updates in the UI: this is because Owl does not know that it should update
-      the UI. This can be fixed by wrapping the todo list in a `useState` hook.
 
       .. code-block:: javascript
 
@@ -228,9 +228,10 @@ Let's see how we can access the DOM with `t-ref <{OWL_PATH}/doc/reference/refs.m
 .. exercise::
 
    #. Focus the `input` from the previous exercise when the dashboard is `mounted
-      <{OWL_PATH}/doc/reference/component.md#mounted>`_.
+      <{OWL_PATH}/doc/reference/component.md#mounted>`_. This this should be done from the
+      `TodoList` component.
    #. Bonus point: extract the code into a specialized `hook <{OWL_PATH}/doc/reference/hooks.md>`_
-      `useAutofocus`.
+      `useAutofocus` in a new :file:`owl_playground/utils.js` file.
 
 .. seealso::
    `Owl: Component lifecycle <{OWL_PATH}/doc/reference/component.md#lifecycle>`_
@@ -248,6 +249,11 @@ way to do this is by using a `callback prop
 
    #. Add an input with the attribute :code:`type="checkbox"` before the id of the task, which must
       be checked if the state `done` is true.
+
+      .. tip::
+         QWeb does not create attributes computed with the `t-att` directive it it evaluates to a
+         falsy value.
+
    #. Add a callback props `toggleState`.
    #. Add a `click` event handler on the input in the `Todo` component and make sure it calls the
       `toggleState` function with the todo id.
@@ -265,12 +271,12 @@ The final touch is to let the user delete a todo.
 .. exercise::
 
    #. Add a new callback prop `removeTodo`.
-   #. Insert :code:`<span class="fa fa-remove">` in the template of the `Todo` component.
+   #. Insert :code:`<span class="fa fa-remove"/>` in the template of the `Todo` component.
    #. Whenever the user clicks on it, it should call the `removeTodo` method.
 
-.. tip::
-   If you're using an array to store your todo list, you can use the JavaScript `splice` function
-   to remove a todo from it.
+      .. tip::
+         If you're using an array to store your todo list, you can use the JavaScript `splice`
+         function to remove a todo from it.
 
    .. code-block::
 
@@ -285,15 +291,18 @@ The final touch is to let the user delete a todo.
    :scale: 70%
    :align: center
 
-10. Generic components with slots
-=================================
+.. _tutorials/discover_js_framework/generic_card:
+
+10. Generic card with slots
+===========================
 
 Owl has a powerful `slot <{OWL_PATH}/doc/reference/slots.md>`_ system to allow you to write generic
 components. This is useful to factorize the common layout between different parts of the interface.
 
 .. exercise::
 
-   #. Write a `Card` component using the following Bootstrap HTML structure:
+   #. Insert a new `Card` component between the `Counter` and `Todolist` components. Use the
+      following Bootstrap HTML structure for the card:
 
       .. code-block:: html
 
@@ -310,18 +319,15 @@ components. This is useful to factorize the common layout between different part
          </div>
 
    #. This component should have two slots: one slot for the title, and one for the content (the
-      default slot).
+      default slot). It should be possible to use the `Card` component as follows:
 
-      .. example::
-         Here is how one could use it:
+      .. code-block:: html
 
-         .. code-block:: html
-
-               <Card>
-                  <t t-set-slot="title">Card title</t>
-                  <p class="card-text">Some quick example text...</p>
-                  <a href="#" class="btn btn-primary">Go somewhere</a>
-               </Card>
+         <Card>
+             <t t-set-slot="title">Card title</t>
+             <p class="card-text">Some quick example text...</p>
+             <a href="#" class="btn btn-primary">Go somewhere</a>
+         </Card>
 
    #. Bonus point: if the `title` slot is not given, the `h5` should not be rendered at all.
 
@@ -332,8 +338,8 @@ components. This is useful to factorize the common layout between different part
 .. seealso::
    `Bootstrap: documentation on cards <https://getbootstrap.com/docs/5.2/components/card/>`_
 
-11. Go further
-==============
+11. Extensive props validation
+==============================
 
 .. exercise::
 
