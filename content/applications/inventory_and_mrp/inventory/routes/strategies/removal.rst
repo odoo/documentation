@@ -201,7 +201,7 @@ Product Categories` and choose *FEFO* as the *Force Removal Strategy*.
    :align: center
    :alt: view of the FEFO strategy being set up as forced removal strategy.
 
-For this particular case, let’s use hand cream. As usual, we have three lots of them.
+For this particular case, let's use hand cream. As usual, we have three lots of them.
 
 +-----------------------+---------------+-----------------------+
 | **Lot / Serial No**   | **Product**   | **Expiration Date**   |
