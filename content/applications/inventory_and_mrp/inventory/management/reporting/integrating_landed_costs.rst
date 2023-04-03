@@ -2,6 +2,8 @@
 Landed costs: add additional costs to products
 ==============================================
 
+.. _inventory/reporting/landed_costs:
+
 When companies perform profit analyses, the data being examined must be as accurate as possible. To
 ensure that, **all** costs and expenses need to be accounted for, including the sum of expenses
 associated with shipping a product, which is also known as *landed costs*.
