@@ -31,6 +31,8 @@ Within the :guilabel:`Manufacturing` module, select :menuselection:`Configuratio
    :align: center
    :alt: An example of a fully configured work center form.
 
+.. _manufacturing/management/using_work_centers/wc-setup:
+
 Set standards for work center productivity
 ------------------------------------------
 
