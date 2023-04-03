@@ -27,6 +27,8 @@ maximum stock level.
 
 Reordering rules can be created and managed in the replenishment report, or from the product form.
 
+.. _inventory/management/products/strategies:
+
 Make to order
 -------------
 
