@@ -2,6 +2,8 @@
 Using inventory valuation
 =========================
 
+.. _inventory/reporting/using_inventory_val:
+
 *Inventory valuation* is a quintessential accounting procedure that calculates the value of on-hand
 stock. Once determined, the inventory valuation amount is then incorporated into a company's overall
 value.
