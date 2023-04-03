@@ -21,7 +21,7 @@ about the Odoo JavaScript framework in its entirety, as used by the web client.
    :width: 50%
 
 For this chapter, we will start from the empty dashboard provided by the `awesome_tshirt`
-addon. We will progressively add features to it, using the odoo framework.
+addon. We will progressively add features to it, using the Odoo JavaScript framework.
 
 .. admonition:: Goal
 
@@ -38,14 +38,18 @@ addon. We will progressively add features to it, using the odoo framework.
 ===============
 
 Most screens in the Odoo web client uses a common layout: a control panel on top, with some buttons,
-and a main content zone just below. This is done using a `Layout component
+and a main content zone just below. This is done using the `Layout component
 <{GITHUB_PATH}/addons/web/static/src/search/layout.js>`_, available in `@web/search/layout`.
 
 .. exercise::
 
    Update the `AwesomeDashboard` component located in :file:`awesome_tshirt/static/src/` to use the
-   `Layout` component. You can use :code:`{ "top-right": false, "bottom-right": false }` for the
-   `display` props of the `Layout` component.
+   `Layout` component. You can use
+   :code:`{controlPanel: { "top-right": false, "bottom-right": false } }` for the `display` props of
+   the `Layout` component.
+
+   Open http://localhost:8069/web, then open the :guilabel:`Awesome T-Shirts` app, and see the
+   result.
 
 .. image:: 02_web_framework/new_layout.png
    :align: center
@@ -61,12 +65,11 @@ and a main content zone just below. This is done using a `Layout component
 2. Add some buttons for quick navigation
 ========================================
 
-Bafien Carpink want buttons for easy access to common views in Odoo. In order to do that, you will
-need to use the action service.
+Let us now use the action service for an easy access to the common views in Odoo.
 
-:ref:`Services <frontend/services>` is a notion defined by the Odoo JavaScript framework, it is a
-persistent piece of code that exports state and/or functions. Each service can depend on other
-services, and components can import a service with the `useService()` hooks.
+:ref:`Services <frontend/services>` is a notion defined by the Odoo JavaScript framework; it is a
+persistent piece of code that exports a state and/or functions. Each service can depend on other
+services, and components can import a service with the `useService()` hook.
 
 .. example::
 
@@ -92,9 +95,17 @@ services, and components can import a service with the `useService()` hooks.
       exists, so you should use `its xml id
       <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
       odoo/addons/base/views/res_partner_views.xml#L525>`_).
-   #. A button `New Orders`, which opens a list view with all orders created in the last 7 days.
+   #. A button `New Orders`, which opens a list view with all orders created in the last 7 days. Use
+      the `Domain <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+      odoo/addons/web/static/src/core/domain.js#L19>`_ helper class to represent the domain.
+
+      .. tip::
+         One way to represent the desired domain could be
+         :code:`[('create_date','>=', (context_today() - datetime.timedelta(days=7)).strftime('%Y-%m-%d'))]`
+
    #. A button `Cancelled Order`, which opens a list of all orders created in the last 7 days, but
-      already cancelled.
+      already cancelled. Rather than defining the action twice, factorize it in a new `openOrders`
+      method.
 
 .. image:: 02_web_framework/navigation_buttons.png
    :align: center
@@ -109,9 +120,10 @@ services, and components can import a service with the `useService()` hooks.
 3. Call the server, add some statistics
 =======================================
 
-Let's improve the dashboard by adding a few cards (see the `Card` component made in the Owl
-training) containing a few statistics. There is a route `/awesome_tshirt/statistics` that will
-perform some computations and return an object containing some useful information.
+Let's improve the dashboard by adding a few cards (see the `Card` component :ref:`made in the
+previous chapter <tutorials/discover_js_framework/generic_card>`) containing a few statistics. There
+is a route `/awesome_tshirt/statistics` that performs some computations and returns an object
+containing some useful information.
 
 Whenever we need to call a specific controller, we need to use the :ref:`rpc service
 <frontend/services/rpc>`. It only exports a single function that perform the request:
@@ -162,11 +174,11 @@ Here is a short explanation on the various arguments:
 4. Cache network calls, create a service
 ========================================
 
-If you open your browser dev tools, in the network tabs, you will probably see that the call to
+If you open the :guilabel:`Network` tab of your browser's dev tools, you will see that the call to
 `/awesome_tshirt/statistics` is done every time the client action is displayed. This is because the
 `onWillStart` hook is called each time the `Dashboard` component is mounted. But in this case, we
-would probably prefer to do it only the first time, so we actually need to maintain some state
-outside of the `Dashboard` component. This is a nice use case for a service!
+would prefer to do it only the first time, so we actually need to maintain some state outside of the
+`Dashboard` component. This is a nice use case for a service!
 
 .. example::
 
@@ -188,13 +200,12 @@ outside of the `Dashboard` component. This is a nice use case for a service!
 
 .. exercise::
 
-   #. Implements a new `awesome_tshirt.statistics` service.
+   #. Register and import a new `awesome_tshirt.statistics` service.
    #. It should provide a function `loadStatistics` that, once called, performs the actual rpc, and
       always return the same information.
-   #. Maybe use the `memoize
-      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+   #. Use the `memoize <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
       addons/web/static/src/core/utils/functions.js#L11>`_ utility function from
-      `@web/core/utils/functions`
+      `@web/core/utils/functions` that will allow caching the statistics.
    #. Use this service in the `Dashboard` component.
    #. Check that it works as expected
 
@@ -206,13 +217,13 @@ outside of the `Dashboard` component. This is a nice use case for a service!
 5. Display a pie chart
 ======================
 
-Everyone likes charts (!), so let us add a pie chart in our dashboard, which displays the
+Everyone likes charts (!), so let us add a pie chart in our dashboard. It will display the
 proportions of t-shirts sold for each size: S/M/L/XL/XXL.
 
 For this exercise, we will use `Chart.js <https://www.chartjs.org/>`_. It is the chart library used
 by the graph view. However, it is not loaded by default, so we will need to either add it to our
-assets bundle, or lazy load it (it's usually better since our users will not have to load the
-chartjs code every time if they don't need it).
+assets bundle, or lazy load it. Lazy loading is usually better since our users will not have to load
+the chartjs code every time if they don't need it.
 
 .. exercise::
    #. Load chartjs, you can use the `loadJs
