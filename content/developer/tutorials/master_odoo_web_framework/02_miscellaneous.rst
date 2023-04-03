@@ -67,7 +67,7 @@ printer is not connected or ran out of paper).
       :scale: 60%
 
 .. seealso::
-   `Example: Code using the notification service
+   `Example: Using the notification service
    <{GITHUB_PATH}/addons/web/static/src/views/fields/image_url/image_url_field.js>`_
 
 2. Add a systray item
@@ -107,7 +107,6 @@ do that by calling periodically (for example, every minute) the server to reload
 
 .. exercise::
 
-   #. Modify the systray item code to get its data from the `tshirt` service.
    #. The `tshirt` service should periodically reload its data.
 
 Now, the question arises: how is the systray item notified that it should re-render itself? It can
@@ -115,11 +114,12 @@ be done in various ways but, for this training, we choose to use the most *decla
 
 .. exercise::
 
-   #. Modify the `tshirt` service to return a `reactive
+   2. Modify the `tshirt` service to return a `reactive
       <{OWL_PATH}/doc/reference/reactivity.md#reactive>`_ object. Reloading data should update the
       reactive object in place.
-   #. The systray item can then perform a `useState` on the service return value.
-   #. This is not really necessary, but you can also *package* the calls to `useService` and
+   3. The systray item can then perform a `useState
+      <{OWL_PATH}/doc/reference/reactivity.md#usestate>`_ on the service return value.
+   4. This is not really necessary, but you can also *package* the calls to `useService` and
       `useState` in a custom hook `useStatistics`.
 
 .. seealso::
@@ -137,48 +137,45 @@ by pressing `CTRL+K` in the Odoo interface.
 
 .. exercise::
 
-   Let us modify the image preview field (from a previous exercise) to add a command to the command
-   palette to open the image in a new browser tab (or window).
+   Modify the :ref:`image preview field <tutorials/master_odoo_web_framework/image_preview_field>`
+   to add a command to the command palette to open the image in a new browser tab (or window).
 
-   Make sure that the command is only active whenever a field preview is visible in the screen.
+   Ensure the command is only active whenever a field preview is visible on the screen.
 
    .. image:: 02_miscellaneous/new_command.png
       :align: center
 
 .. seealso::
-  - `Example: Using the useCommand hook
-    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-    addons/web/static/src/core/debug/debug_menu.js#L15>`_
-  - `Code: The command service
-    <{GITHUB_PATH}/addons/web/static/src/core/commands/command_service.js>`_
+  `Example: Using the useCommand hook
+  <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+  addons/web/static/src/core/debug/debug_menu.js#L15>`_
 
 5. Monkey patching a component
 ==============================
 
-Often, it is possible to do what we want by using existing extension points that allow
-customization, such as registering something in a registry. But it happens that we want to modify
-something that has no such mechanism. In that case, we have to fall back on a less safe form of
+Often, we can achieve what we want by using existing extension points that allow for customization,
+such as registering something in a registry. Sometimes, however, it happens that we want to modify
+something that has no such mechanism. In that case, we must fall back on a less safe form of
 customization: monkey patching. Almost everything in Odoo can be monkey patched.
 
-Bafien, our beloved leader, heard that employees perform better if they are constantly being
-watched. Since he is not able to be there in person for each and every one of his employees, he
-tasked you with the following: update the user interface to add a blinking red eye in the control
-panel. Clicking on that eye should open a dialog with the following message: "Bafien is watching
-you. This interaction is recorded and may be used in legal proceedings if necessary. Do you agree to
-these terms?".
+Bafien, our beloved leader, heard about employees performing better if they are constantly being
+watched. Since he cannot be there in person for each of his employees, he tasked you with updating
+the user interface to add a blinking red eye in the control panel. Clicking on that eye should open
+a dialog with the following message: "Bafien is watching you. This interaction is recorded and may
+be used in legal proceedings if necessary. Do you agree to these terms?"
 
 .. exercise::
 
-   #. Create the :file:`control_panel_patch.js` file, as well as corresponding CSS and XML files.
-   #. :doc:`Patch </developer/reference/frontend/patching_code>` the `ControlPanel` template to add
-      an icon next to the breadcrumbs. You might want to use the `fa-eye` or `fa-eyes` icons. Make
-      sure it is visible in all views!
-
-      .. tip::
-         There are two ways to inherit a template using XPath: by specifying
-         `t-inherit-mode="primary"`, which creates a new, independent template with the desired
-         modifications, or by using `t-inherit-mode="extension"`, which modifies the original
-         template in place.
+   #. :ref:`Inherit <reference/qweb/template_inheritance>` the `web.Breadcrumbs` template of the
+      `ControlPanel component <{GITHUB_PATH}/addons/web/static/src/search/control_panel>`_ to add an
+      icon next to the breadcrumbs. You might want to use the `fa-eye` or `fa-eyes` icons.
+   #. :doc:`Patch </developer/reference/frontend/patching_code>` the component to display the
+      message on click by using `the dialog service
+      <{GITHUB_PATH}/addons/web/static/src/core/dialog/dialog_service.js>`_. You can use
+      `ConfirmationDialog
+      <{GITHUB_PATH}/addons/web/static/src/core/confirmation_dialog/confirmation_dialog.js>`_.
+   #. Add the CSS class `blink` to the element representing the eye and paste the following code in
+      a new CSS file located in your patch's directory.
 
       .. code-block:: css
 
@@ -197,10 +194,6 @@ these terms?".
            }
          }
 
-   #. Import the ControlPanel component and the `patch` function.
-   #. Update the code to display the message on click by using the dialog service. You can use
-      `ConfirmationDialog`.
-
    .. image:: 02_miscellaneous/bafien_eye.png
       :align: center
       :scale: 60%
@@ -213,21 +206,10 @@ these terms?".
    - `Code: The patch function
      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
      addons/web/static/src/core/utils/patch.js#L16>`_
-   - `Code: The ControlPanel component
-     <{GITHUB_PATH}/addons/web/static/src/search/control_panel/control_panel.js>`_
    - `The Font Awesome website <https://fontawesome.com/>`_
-   - `Code: The dialog service <{GITHUB_PATH}/addons/web/static/src/core/dialog/dialog_service.js>`_
-   - `Code: ConfirmationDialog
-     <{GITHUB_PATH}/addons/web/static/src/core/confirmation_dialog/confirmation_dialog.js>`_
    - `Example: Using the dialog service
      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
      addons/board/static/src/board_controller.js#L88>`_
-   - `Example: XPath with t-inherit-mode="primary"
-     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-     addons/account/static/src/components/account_move_form/account_move_form_notebook.xml#L4>`_
-   - `Example: XPath with t-inherit-mode="extension"
-     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-     calendar/static/src/components/activity/activity.xml#L4>`_
 
 6. Fetching orders from a customer
 ==================================
@@ -240,33 +222,28 @@ from a given customer.
 
    #. Update :file:`tshirt_service.js` to add a `loadCustomers` method, which returns a promise that
       returns the list of all customers (and only performs the call once).
-   #. Import the `AutoComplete` component from `@web/core/autocomplete/autocomplete`.
-   #. Add it to the dashboard, next to the buttons in the control panel.
-   #. Update the code to fetch the list of customers with the tshirt service, and display it in the
-      autocomplete component, filtered by the `fuzzyLookup` method.
+   #. Add the `AutoComplete component <{GITHUB_PATH}/addons/web/static/src/core/autocomplete>`_ to
+      the dashboard, next to the buttons in the control panel.
+   #. Fetch the list of customers with the tshirt service, and display it in the AutoComplete
+      component, filtered by the `fuzzyLookup
+      <{GITHUB_PATH}/addons/web/static/src/core/utils/search.js>`_ method.
 
    .. image:: 02_miscellaneous/autocomplete.png
       :align: center
       :scale: 60%
 
-.. seealso::
-   - `Code: AutoComplete <{GITHUB_PATH}/addons/web/static/src/core/autocomplete/autocomplete.js>`_
-   - `Code: fuzzyLookup <{GITHUB_PATH}/addons/web/static/src/core/utils/search.js>`_
-
 7. Reintroduce Kitten Mode
 ==========================
 
-Let us add a special mode to Odoo: whenever the url contains `kitten=1`, we will display a kitten in
+Let us add a special mode to Odoo: whenever the URL contains `kitten=1`, we will display a kitten in
 the background of Odoo, because we like kittens.
 
 .. exercise::
 
-   #. Create a :file:`kitten_mode.js` file.
-   #. Create a `kitten` service, which should check the content of the active url hash with the
-      help of the :ref:`router service <frontend/services/router>`.
-   #. If `kitten` is set, we are in kitten mode. This should add a class `.o-kitten-mode` on the
-      document body.
-   #. Add the following CSS in :file:`kitten_mode.scss`:
+   #. Create a `kitten` service, which should check the content of the active URL hash with the
+      help of the :ref:`router service <frontend/services/router>`. If `kitten` is set in the URL,
+      add the class `o-kitten-mode` to the document body.
+   #. Add the following SCSS in :file:`kitten_mode.scss`:
 
       .. code-block:: css
 
@@ -281,7 +258,7 @@ the background of Odoo, because we like kittens.
          }
 
    #. Add a command to the command palette to toggle the kitten mode. Toggling the kitten mode
-      should toggle the `.o-kitten-mode` class and update the current URL accordingly.
+      should toggle the class `o-kitten-mode` and update the current URL accordingly.
 
    .. image:: 02_miscellaneous/kitten_mode.png
       :align: center
@@ -289,10 +266,10 @@ the background of Odoo, because we like kittens.
 8. Lazy loading our dashboard
 =============================
 
-This is not really necessary, but the exercise is interesting. Imagine that our awesome dashboard
-is a large application, with potentially multiple external libraries, lots of code/styles/templates.
-Also, suppose that the dashboard is only used by some users in some business flows, so we want to
-lazy load it in order to speed up the loading of the web client in most cases.
+This is not really necessary, but the exercise is interesting. Imagine that our awesome dashboard is
+a large application with potentially multiple external libraries and lots of code/styles/templates.
+Also, suppose that the dashboard is used only by some users in some business flows. It would be
+interesting to lazy load it in order to speed up the loading of the web client in most cases.
 
 So, let us do that!
 
@@ -300,22 +277,23 @@ So, let us do that!
 
    #. Modify the manifest to create a new :ref:`bundle <reference/assets_bundle>`
       `awesome_tshirt.dashboard`.
-   #. Add the awesome dashboard code to this bundle. If needed you can create folders and move
-      files.
-   #. Remove the code from the `web.assets_backend` bundle so it is not loaded twice.
+   #. Add the awesome dashboard code to this bundle. Create folders and move files if needed.
+   #. Remove the code from the `web.assets_backend` bundle so that it is not loaded twice.
 
-So far, we removed the dashboard from the main bundle, but it should now be lazily loaded. Right
-now, there is no client action registered in the action registry.
+So far, we only removed the dashboard from the main bundle; we now want to lazy load it. Currently,
+no client action is registered in the action registry.
 
 .. exercise::
 
-   #. Create a new file :file:`dashboard_loader.js`.
-   #. Copy the code registering `AwesomeDashboard` to the dashboard loader.
-   #. Register `AwesomeDashboard` as a `LazyComponent`.
-   #. Modify the code in the dashboard loader to use the lazy component `AwesomeDashboard`.
+   4. Create a new file :file:`dashboard_loader.js`.
+   5. Copy the code registering `AwesomeDashboard` to the dashboard loader.
+   6. Register `AwesomeDashboard` as a `LazyComponent
+      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+      addons/web/static/src/core/assets.js#L265-L282>`_.
+   7. Modify the code in the dashboard loader to use the lazy component `AwesomeDashboard`.
+
+If you open the :guilabel:`Network` tab of your browser's dev tools, you should see that
+:file:`awesome_tshirt.dashboard.min.js` is now loaded only when the Dashboard is first accessed.
 
 .. seealso::
-  - :ref:`Documentation on assets <reference/assets>`
-  - `Code: LazyComponent
-    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
-    addons/web/static/src/core/assets.js#L255>`_
+   :ref:`Documentation on assets <reference/assets>`
