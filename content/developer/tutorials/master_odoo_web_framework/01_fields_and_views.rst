@@ -8,9 +8,10 @@ like Chart.js. Now, let's learn how to create new fields and views.
 
 .. spoiler:: Solutions
 
-   The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
-   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/awesome_tshirt>`_. It is
-   recommended not to look at them before trying the exercises.
+   The solutions for each exercise of the chapter are hosted on the
+   `official Odoo tutorials repository
+   <https://github.com/odoo/tutorials/commits/{CURRENT_MAJOR_BRANCH}-solutions/awesome_tshirt>`_. It
+   is recommended not to look at them before trying the exercises.
 
 Fields and views are among the most important concepts in the Odoo user interface. They are key to
 many important user interactions, and should therefore work perfectly. In the context of the

@@ -16,8 +16,9 @@ Before getting into the exercises, make sure you have followed all the steps des
 .. spoiler:: Solutions
 
    The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
-   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/owl_playground>`_. It is
-   recommended to try to solve them first without looking at the solution!
+   repository
+   <https://github.com/odoo/tutorials/commits/{CURRENT_MAJOR_BRANCH}-solutions/owl_playground>`_. It
+   is recommended to try to solve them first without looking at the solution!
 
 .. tip::
    If you use Chrome as your web browser, you can install the `Owl Devtools` extension. This
@@ -67,7 +68,7 @@ and defines a part of user interface:
 
 You maybe noticed the `owl="1"` temporary attribute, it allows Odoo to differentiate Owl
 templates from the old JavaScript framework templates. Note that Owl templates are not the same
-as QWeb templates: they can contain additional directives, such as `t-on-click`. 
+as QWeb templates: they can contain additional directives, such as `t-on-click`.
 
 1. Displaying a counter
 =======================
