@@ -35,8 +35,9 @@ addon includes the necessary server files to add a new view.
 
 .. spoiler:: Solutions
 
-   The solutions for each exercise of the chapter are hosted on the `official Odoo tutorials
-   repository <https://github.com/odoo/tutorials/commits/{BRANCH}-solutions/awesome_gallery>`_.
+   The solutions for each exercise of the chapter are hosted on the
+   `official Odoo tutorials repository
+   <https://github.com/odoo/tutorials/commits/{CURRENT_MAJOR_BRANCH}-solutions/awesome_gallery>`_.
 
 1. Make a hello world view
 ==========================
