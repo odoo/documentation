@@ -164,6 +164,8 @@ checkboxes or datepickers. This page explains how to use these generic component
      - a small component to handle pagination
    * - :ref:`SelectMenu <frontend/select_menu>`
      - a dropdown component to choose between different options
+   * - :ref:`TagsList <frontend/tags_list>`
+     - a list of tags displayed in rounded pills
 
 .. _frontend/owl/actionswiper:
 
@@ -712,6 +714,10 @@ at the top of the element to display horizontally, or at the left for a vertical
 There are two ways to define your Notebook pages to instanciate, either by using `slot`'s,
 or by passing a dedicated `props`.
 
+A page can be disabled with the `isDisabled` attribute, set directly on the slot node, or
+in the page declaration, if the Notebook is used with the `pages` given as props. Once disabled,
+the corresponding tab is greyed out and set as inactive as well.
+
 Props
 ~~~~~
 
@@ -731,6 +737,9 @@ Props
     * - `defaultPage`
       - `string`
       - optional. Page `id` to display by default.
+    * - `icons`
+      - `array`
+      - optional. List of icons used in the tabs.
     * - `orientation`
       - `string`
       - optional. Whether tabs direction is `horizontal` or `vertical`.
@@ -896,9 +905,18 @@ Props
     * - `groups`
       - `array`
       - optional. List of `group`'s, containing `choices` to display in the dropdown.
+    * - `multiSelect`
+      - `boolean`
+      - optional. Enable multiple selections. When multiple selection is enabled, selected values are displayed as :ref:`tag <frontend/tags_list>`'s in the SelectMenu input.
     * - `togglerClass`
       - `string`
       - optional. classname set on the toggler button.
+    * - `required`
+      - `boolean`
+      - optional. Whether the selected value can be unselected.
+    * - `searchable`
+      - `boolean`
+      - optional. Whether a search box is visible in the dropdown.
     * - `searchPlaceholder`
       - `string`
       - optional. Text displayed as the search box placeholder.
@@ -992,4 +1010,98 @@ The shape of a `group` is the following:
    .. image:: owl_components/select_menu.png
       :width: 400 px
       :alt: Example of SelectMenu usage and customization
+      :align: center
+
+   When SelectMenu is used with multiple selection, the `value` props must be an `Array` containing the values of the selected choices.
+
+   .. image:: owl_components/select_menu_multiSelect.png
+      :width: 350 px
+      :alt: Example of SelectMenu used with multiple selection
+      :align: center
+
+.. _frontend/tags_list:
+
+TagsList
+--------
+
+Location
+~~~~~~~~
+
+`@web/core/tags_list/tags_list`
+
+Description
+~~~~~~~~~~~
+
+This component can display a list of tags in rounded pills. Those tags can either simply list a few values, or can be editable, allowing the removal of items.
+It can be possible to limit the number of displayed items using the `itemsVisible` props. If the list is longer than this limit, the number of additional items is
+shown in a circle next to the last tag.
+
+Props
+~~~~~
+
+.. list-table::
+    :widths: 20 20 60
+    :header-rows: 1
+
+    * - Name
+      - Type
+      - Description
+    * - `displayBadge`
+      - `boolean`
+      - optional. Whether the tag is displayed as a badge.
+    * - `displayText`
+      - `boolean`
+      - optional. Whether the tag is displayed with a text or not.
+    * - `itemsVisible`
+      - `number`
+      - optional. Limit of visible tags in the list.
+    * - `tags`
+      - `array`
+      - list of `tag`'s elements given to the component.
+
+The shape of a `tag` is the following:
+
+    - `colorIndex` is an optional color id.
+    - `id` is a unique identifier for the tag.
+    - `img` is an optional image displayed in a circle, just before the displayed text.
+    - `onClick` is an optional callback that can be given to the element. This allows the parent element to handle any functionality depending on the tag clicked.
+    - `onDelete` is an optional callback that can be given to the element. This makes the removal of the item from the list of tags possible, and must be handled by the parent element.
+    - `text` is the displayed `string` associated with the tag.
+
+.. example::
+
+   In the next example, a TagsList component is used to display multiple tags.
+   It's at the developer to handle from the parent what would happen when the tag is pressed, or when the delete button is clicked.
+
+   .. code-block:: javascript
+
+      import { TagsList } from "@web/core/tags_list/tags_list";
+
+      class Parent extends Component {
+        setup() {
+          this.tags = [{
+              id: "tag1",
+              text: "Earth"
+          }, {
+              colorIndex: 1,
+              id: "tag2",
+              text: "Wind",
+              onDelete: () => {...}
+          }, {
+              colorIndex: 2,
+              id: "tag3",
+              text: "Fire",
+              onClick: () => {...},
+              onDelete: () => {...}
+          }];
+        }
+      }
+      Parent.components = { TagsList };
+      Parent.template = xml`<TagsList tags="tags" />`;
+
+   Depending the attributes given to each tag, their appearance and behavior will differ.
+
+   .. image:: owl_components/tags_list.png
+      :width: 350 px
+      :alt: Examples of TagsList using different props and attributes
       :align: center
