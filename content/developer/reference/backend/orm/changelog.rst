@@ -4,6 +4,12 @@
 Changelog
 =========
 
+Odoo Online version 16.3
+========================
+
+- `odoo.models.Model._read_group` has a new signature with
+  `#110737 <https://github.com/odoo/odoo/pull/110737>`_
+
 Odoo Online version 16.2
 ========================
 
