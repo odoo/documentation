@@ -859,6 +859,8 @@ Search/Read
 
 .. automethod:: Model.read
 
+.. automethod:: Model._read_group
+
 .. automethod:: Model.read_group
 
 Fields
