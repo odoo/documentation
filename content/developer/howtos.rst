@@ -14,6 +14,7 @@ How-to guides
     howtos/javascript_client_action
     howtos/web_services
     howtos/company
+    howtos/create_reports
     howtos/accounting_localization
     howtos/translations
     howtos/provide_iap_services
@@ -51,6 +52,11 @@ How-to guides
 
       Learn how to manage multiple companies and deal with the records-related specificities of a
       multi-company environment.
+
+   .. card:: Create customized reports
+      :target: howtos/create_reports
+
+      Learn how to create customized reports with SQL Views.
 
    .. card:: Accounting localization
       :target: howtos/accounting_localization
