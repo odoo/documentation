@@ -17,8 +17,11 @@ Configuration on Flutterwave Dashboard
      `/payment/flutterwave/webhook` in the :guilabel:`URL` text field.
    | For example: `https://yourcompany.odoo.com/payment/flutterwave/webhook`.
 #. Fill the :guilabel:`Secret hash` with a password that you generate and save its value for later.
-#. Make sure all the remaining checkboxes are ticked.
+#. Make sure *all* the remaining checkboxes are ticked.
 #. Click on **Save** to finalize the configuration.
+
+.. image:: flutterwave/flutterwave-settings.png
+   :alt: Flutterwave settings
 
 .. _payment_providers/flutterwave/configure_odoo:
 
