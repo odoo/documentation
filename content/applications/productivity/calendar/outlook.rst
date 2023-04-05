@@ -1,6 +1,6 @@
-======================================
-Synchronize Outlook Calendar with Odoo
-======================================
+================================
+Outlook Calendar synchronization
+================================
 
 Synchronizing a user's Outlook Calendar with Odoo is useful for keeping track of their tasks and
 appointments across all related applications.
@@ -33,7 +33,7 @@ URI (URL) followed by `/microsoft_account/authentication`.
    Enter `https://www.companyname.odoo.com/microsoft_account/authentication` for the
    :guilabel:`Redirect URI`.
 
-.. image:: outlook_calendar/azure-register-application.png
+.. image:: outlook/azure-register-application.png
    :align: center
    :alt: The "Supported account type" and "Redirect URI" settings in the Microsoft Azure AD portal.
 
@@ -58,27 +58,27 @@ Configuration in Odoo
 In the Odoo database, go to :menuselection:`Settings --> General Settings --> Integrations` and
 activate the :guilabel:`Outlook Calendar` setting.
 
-.. image:: outlook_calendar/outlook-calendar-setting.png
+.. image:: outlook/outlook-calendar-setting.png
    :align: center
    :alt: The "Outlook Calendar" setting activated in Odoo.
 
 From the Microsoft Azure portal, under the :guilabel:`Overview` section of the application, copy
 the :guilabel:`Application (Client) ID`, and paste it into the :guilabel:`Client ID` field in Odoo.
 
-.. image:: outlook_calendar/client-id.png
+.. image:: outlook/client-id.png
    :align: center
    :alt: The "Client ID" in the Microsoft Azure portal.
 
 In the Microsoft Azure portal, under the :guilabel:`Certificates & secrets` section, copy the
 :guilabel:`Client Secret Value` and paste it into the :guilabel:`Client Secret` field in Odoo.
 
-.. image:: outlook_calendar/client-secret-value.png
+.. image:: outlook/client-secret-value.png
    :align: center
    :alt: The "Client Secret" token to be copied from Microsoft to Odoo.
 
 Finally, on the Odoo :menuselection:`Settings --> General Settings` page, click :guilabel:`Save`.
 
-.. _outlook_calendar/sync_with_outlook:
+.. _outlook/sync:
 
 Sync with Outlook
 =================
@@ -125,7 +125,7 @@ In the Odoo database, go to the :guilabel:`Calendar` module and click the :guila
 button. The page will redirect to a Microsoft login page, and the user is asked to log in to
 their account, if they are not already, and grant the required permissions.
 
-.. image:: outlook_calendar/outlook-sync-button.png
+.. image:: outlook/outlook-sync-button.png
    :align: center
    :alt: The "Outlook" sync button in Odoo Calendar.
 
@@ -134,11 +134,11 @@ The synchronization is a two-way process, meaning that events are reconciled in 
 
 .. note::
    All users that want to use the synchronization simply need to :ref:`sync their calendar with
-   Outlook <outlook_calendar/sync_with_outlook>`. The configuration of Microsoft's Azure account
+   Outlook <outlook/sync>`. The configuration of Microsoft's Azure account
    is only done once, as Azure AD tenants' Client IDs and Client Secrets are unique, and represent
    an organization that helps the user to manage a specific instance of Microsoft cloud services
    for their internal and external users.
 
 .. seealso::
-   - :doc:`../../../sales/crm/optimize/outlook_extension`
-   - :doc:`../google/google_calendar_credentials`
+   - :doc:`../../sales/crm/optimize/outlook_extension`
+   - :doc:`google`
