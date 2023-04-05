@@ -13,7 +13,7 @@ personal email address or an address created by a custom domain.
 
 .. seealso::
    - :doc:`/applications/general/auth/azure`
-   - :doc:`/applications/general/calendars/outlook/outlook_calendar`
+   - :doc:`/applications/productivity/calendar/outlook`
 
 Setup in Microsoft Azure Portal
 ===============================
