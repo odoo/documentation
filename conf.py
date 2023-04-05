@@ -110,7 +110,7 @@ else:
         # Running odoo needs python 3.7 min but monkey patch version_info to be compatible with 3.6.
         sys.version_info = (3, 7, 0)
     odoo_dir = odoo_sources_dirs[0].resolve()
-    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0])
+    source_read_replace_vals['ODOO_RELPATH'] = '/../' + str(odoo_sources_dirs[0]) + '/odoo'
     sys.path.insert(0, str(odoo_dir))
     import odoo.addons
     odoo.addons.__path__.append(str(odoo_dir) + '/addons')
