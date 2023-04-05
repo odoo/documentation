@@ -9,7 +9,7 @@ This is particularly helpful if your organization uses Google Workforce and you 
 within your organization to connect to Odoo with their Google Accounts.
 
 .. seealso::
-   - :doc:`/applications/general/calendars/google/google_calendar_credentials`
+   - :doc:`../../productivity/calendar/google`
    - :doc:`/administration/maintain/google_oauth`
 
 .. _google-sign-in/configuration:

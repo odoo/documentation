@@ -13,7 +13,7 @@ email address or an address created by a custom domain.
 
 .. seealso::
    - :doc:`/applications/general/auth/google`
-   - :doc:`/applications/general/calendars/google/google_calendar_credentials`
+   - :doc:`/applications/productivity/calendar/google`
 
 Setup in Google
 ===============
