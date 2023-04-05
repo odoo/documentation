@@ -1,6 +1,6 @@
-=====================================
-Synchronize Google Calendar with Odoo
-=====================================
+===============================
+Google Calendar synchronization
+===============================
 
 Synchronize Google Calendar with Odoo to see and manage meetings from both platforms (updates go
 in both directions). This integration helps organize your schedule so you never miss a meeting.
@@ -25,7 +25,7 @@ Begin by creating a new Google API project and enabling the Google Calendar API.
 
 Next, click :guilabel:`Select a project` and select or create an API project to store credentials.
 
-.. image:: google_calendar_credentials/new-api-project.png
+.. image:: google/new-api-project.png
    :align: center
    :alt: Create a new API project to store credentials.
 
@@ -34,14 +34,14 @@ Next, click :guilabel:`Select a project` and select or create an API project to 
 
 Then, open the API Project and click :guilabel:`Enable APIs and Services`.
 
-.. image:: google_calendar_credentials/enable-apis-services.png
+.. image:: google/enable-apis-services.png
    :align: center
    :alt: Enable APIs and Services on the API Project.
 
 After that, search for *Google Calendar API* using the search bar and select :guilabel:`Google
 Calendar API` from the search results. Click :guilabel:`Enable`.
 
-.. image:: google_calendar_credentials/enable-google-cal-api.png
+.. image:: google/enable-google-cal-api.png
    :align: center
    :alt: Enable the Google Calendar API.
 
@@ -55,7 +55,7 @@ four steps to create your API credentials.
 - In the first step, :guilabel:`Credential Type`, select the :guilabel:`Google Calendar API` and
   :guilabel:`User Data` options. Then, click :guilabel:`Next`.
 
-.. image:: google_calendar_credentials/credential-type.png
+.. image:: google/credential-type.png
    :align: center
    :alt: Select Google Calendar API and User Data for the Credential Type.
 
@@ -76,7 +76,7 @@ four steps to create your API credentials.
     your company's Odoo URL address followed by */google_account/authentication*. Finally, click
     :guilabel:`Create` and :guilabel:`Done`.
 
-.. image:: google_calendar_credentials/uri.png
+.. image:: google/uri.png
    :align: center
    :alt: Add the authorized JavaScript origins and the authorized redirect URIs.
 
@@ -94,7 +94,7 @@ Next, locate the credentials you just created for the Google Calendar API. Then,
 :guilabel:`Edit OAuth Client` (the pencil icon). The page will redirect to the edit page, where you
 can view the Client ID and the Client Secret.
 
-.. image:: google_calendar_credentials/edit-oauth-2.png
+.. image:: google/edit-oauth-2.png
    :align: center
    :alt: Click Edit OAuth Client to view the credential details.
 
@@ -105,7 +105,7 @@ Once the Client ID and the Client Secret are located, open the Odoo database and
 :menuselection:`Settings --> General Settings --> Integrations --> Google Calendar`. Check the box
 next to :guilabel:`Google Calendar`.
 
-.. image:: google_calendar_credentials/settings-google-cal.png
+.. image:: google/settings-google-cal.png
    :align: center
    :alt: The Google Calendar checkbox in General Settings.
 
@@ -116,7 +116,7 @@ page into their respective fields below the :guilabel:`Google Calendar` checkbox
 Finally, open the Calendar module in Odoo and click on the :guilabel:`Google` sync button to sync
 Google Calendar with Odoo.
 
-.. image:: google_calendar_credentials/sync-google.png
+.. image:: google/sync-google.png
    :align: center
    :alt: Click the Google sync button in Odoo Calendar to sync Google Calendar with Odoo.
 
@@ -124,12 +124,12 @@ Google Calendar with Odoo.
    The first time you sync your Google Calendar with Odoo, the page will redirect to your Google
    Account. Click :guilabel:`OK` and :guilabel:`Allow` to authorize Odoo to access Google Calendar.
 
-.. image:: google_calendar_credentials/trust-odoo.png
+.. image:: google/trust-odoo.png
    :align: center
    :alt: Give Odoo permission to access Google Calendar.
 
 Now, Odoo Calendar is successfully synced with Google Calendar!
 
-.. image:: google_calendar_credentials/successful-sync.png
+.. image:: google/successful-sync.png
    :align: center
    :alt: Successfully sync between Odoo and Google Calendar.
