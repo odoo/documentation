@@ -6,5 +6,5 @@ Due to specific requirements in Azure's OAuth implementation, Microsoft Azure OA
 is NOT compatible with Odoo at the moment.
 
 .. seealso::
-   - :doc:`/applications/general/calendars/outlook/outlook_calendar`
+   - :doc:`../../productivity/calendar/outlook`
    - :doc:`/administration/maintain/azure_oauth`
