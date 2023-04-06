@@ -1,54 +1,76 @@
-=========================
-Add subscription products
-=========================
+===============================
+Configure subscription products
+===============================
 
-To properly sell your subscriptions using our amazing **Odoo Subscriptions** application, you must
-follow these steps:
+By integrating closely with the Odoo *Sales* app, the *Subscriptions* app enables users to sell
+subscription products alongside regular sales products. While regular products are sold on a
+one-time basis, subscription products are sold on a renewing basis, generating recurring revenue.
 
-1. **Create your own subscription templates**
-2. **Create your own subscription products with the right settings**
+Configure recurrence periods
+============================
 
-As a result, you will be able to manage your subscriptions like any other product, create your
-quotations and continue the sales flow to track the number of subscriptions you sell and manage the
-revenue they generate.
+To get started with subscriptions, first make sure that the *recurrence periods* are configured as
+needed.
 
-Configuration
-=============
+Recurrence periods are the time periods in which subscriptions renew. They designate how often
+the customer pays for (and receives) subscription products.
 
-Go to :menuselection:`Subscriptions --> Subscription products` to learn how you can configure your
-own subscription products. You have the possibility to create a new product or edit an existing one.
-Once named, be careful to select the option *Can be sold* and deselect *Can be purchased*. For the
-product type, it is recommended to use *Service* for subscription products as they are non-material
-products that you provide to your customers. Finally, you can adapt your prices and also add an
-internal reference.
+To configure recurrence periods, go to :menuselection:`Subscriptions --> Configuration -->
+Recurrence Periods`.
 
-.. image:: subscription_products/subscription-products-configuration.png
-  :align: center
-  :alt: View of a subscription product form in Odoo Subscriptions
+The *Subscriptions* app comes with some basic recurrence periods already configured: Daily,
+Monthly, Quarterly, Weekly, Yearly, 3 Years, and 5 Years. These can be edited as needed, and any
+number of new recurrence periods can be added.
+
+To create a new recurrence period, click :guilabel:`New`. Then, type in the :guilabel:`Name` and
+:guilabel:`Duration` of the recurrence period, and select the :guilabel:`Unit` that defines the
+duration.
+
+.. example::
+   To create a recurrence period for a subscription that will renew every two weeks, set the
+   :guilabel:`Duration` to `2` and the :guilabel:`Unit` to `Weeks`.
+
+   .. image:: subscription_products/recurrence-period-form.png
+      :align: center
+      :alt: A recurrence period of 2 weeks.
+
+Configure the product form
+==========================
+
+To create a new subscription product, navigate to the *Subscriptions* app. Then go to
+:menuselection:`Subscriptions --> Products`, and click :guilabel:`New` to create a new product.
+
+The :guilabel:`Product Type` for the new product is automatically set to :guilabel:`Service`.
+Subscription products can be set to other types as well; however, they currently *cannot* be set to
+:guilabel:`Storable Product`.
+
+The new product also automatically has the :guilabel:`Recurring` checkbox activated. This enables
+Odoo to recognize it as a subscription product.
+
+.. image:: subscription_products/recurring-product-form.png
+   :align: center
+   :alt: The Recurring checkbox on the product form.
+
+Next, configure the :guilabel:`Time-based pricing` tab.
+
+Click :guilabel:`Add a price` to begin defining recurring prices.
+
+In the :guilabel:`Period` column, select a recurrence period. In the :guilabel:`Price` column,
+enter the price for that recurrence period.
+
+To create pricing rules for specific pricelists, select a pricelist in the :guilabel:`Pricelist`
+column. This allows customers included in this pricelist to receive special recurring pricing for
+the subscription product.
+
+.. image:: subscription_products/pricelist-time-based-pricing.png
+   :align: center
+   :alt: Pricelists in the “Time-based pricing” tab of the product form.
+
+Add as many lines as desired to the :guilabel:`Time-based pricing` table.
 
 .. note::
-   In the Sales tab, underneath the Subscriptions section, make sure the *Subscription products*
-   option is activated. In fact, if you create a subscription product from the **Odoo Subscriptions**
-   application, this option is selected by default. However, if you create a product from another
-   application, it is not the case.
+   An existing product can be made into a subscription product simply by marking it as
+   :guilabel:`Recurring` and configuring :guilabel:`Time-based pricing` on the product form.
 
-   .. image:: subscription_products/subscription-products-form.png
-     :align: center
-     :alt: View of a subscription product form in Odoo Subscriptions
-
-   You can also choose the subscription templates you want to use.
-
-   .. image:: subscription_products/subscription-products-using-subscription-templates.png
-     :align: center
-     :alt: View of a subscription product form in Odoo Subscriptions
-
-.. important::
-   Be sure to check out our documentation on how to create, edit and manage your own
-   :doc:`Subscription templates <../../subscriptions/configuration/subscription_templates>`
-   before creating your own subscription products. Once created, check out our documentation on how to
-   :doc:`Create a quotation using subscription products <../../subscriptions/sales_flow/create_a_quotation>`,
-   to complete the sales flow.
-
-.. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
+   A subscription product can still be sold as a regular product by adding it to a quotation and
+   *not* selecting a :guilabel:`Recurrence` on the quotation.
