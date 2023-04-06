@@ -55,137 +55,178 @@ accounts, smart matching suggestions, etc.
 Double-entry bookkeeping
 ========================
 
-Odoo automatically creates all the behind-the-scenes journal entries
-for each of your accounting transactions: customer invoices, point of
-sale order, expenses, inventory moves, etc.
+Odoo automatically creates all the underlying journal entries for all accounting transactions (e.g.,
+customer invoices, vendor bills, point-of-sales orders, expenses, inventory valuations, etc.).
 
-Odoo uses the rules of double-entry bookkeeping system: all journal
-entries are automatically balanced (sum of debits = sum of credits).
-
-.. seealso::
-   - :doc:`Understand Odoo's accounting transactions per document
-     <accounting/get_started/cheat_sheet>`
-
-Accrual and Cash Basis Methods
-==============================
-
-Odoo supports both accrual and cash basis reporting. This allows you to
-report income / expense at the time transactions occur (i.e., accrual basis), or when
-payment is made or received (i.e., cash basis).
-
-Multi-companies
-===============
-
-Odoo allows one to manage several companies within the same database. Each
-company has its own chart of accounts and rules. You can get
-consolidation reports following your consolidation rules.
-
-Users can access several companies but always work in one company at a
-time.
-
-Multi-currencies
-================
-
-Every transaction is recorded in the default currency of the
-company. For transactions occurring in another currency, Odoo stores
-both the value in the currency of the company and the value in the
-currency of the transaction. Odoo can generate currencies gains and
-losses after the reconciliation of the journal items.
-
-Currency rates are updated once a day using a yahoo.com online
-web-service.
-
-International Standards
-=======================
-
-Odoo accounting supports more than 50 countries. The Odoo core
-accounting implements accounting standards that are common to all
-countries. Specific modules exist per country for the
-specificities of the country like the chart of accounts, taxes, or
-bank interfaces.
-
-In particular, Odoo's core accounting engine supports:
-
-* Anglo-Saxon Accounting (U.S., U.K.,, and other English-speaking
-  countries including Ireland, Canada, Australia, and New Zealand)
-  where costs of good sold are reported when products are
-  sold/delivered.
-* European accounting where expenses are accounted at the supplier
-  bill.
-
-Odoo has modules to comply with IFRS rules.
-
-Accounts Receivable and Payable
-===============================
-
-By default, Odoo uses a single account for all account
-receivable entries and one for all accounts payable entries. You can
-create separate accounts per customers/suppliers, but you don't need
-to.
-
-As transactions are associated to customers or suppliers, you get
-reports to perform analysis per customer/supplier such as the customer
-statement, revenues per customers, aged receivable/payables, ...
-
-Wide range of financial reports
-===============================
-
-In Odoo, you can generate financial reports in real time. Odoo's
-reports range from basic accounting reports to advanced management
-reports. Odoo's reports include:
-
-* Performance reports (such as Profit and Loss, Budget Variance)
-* Position reports (such as Balance Sheet, Aged Payables, Aged
-  Receivables)
-* Cash reports (such as Bank Summary)
-* Detail reports (such as Trial Balance and General Ledger)
-* Management reports (such as Budgets, Executive Summary)
-
-Odoo's report engine allows you to customize your own report based on
-your own formulae.
-
-Import bank feeds automatically
-===============================
-
-Bank reconciliation is a process that matches your bank statement
-lines, as supplied by the bank, to your accounting transactions in the
-general ledger. Odoo makes bank reconciliation easy by frequently
-importing bank statement lines from your bank directly into your Odoo
-account. This means you can have a daily view of your cashflow without
-having to log into your online banking or wait for your paper bank
-statements.
-
-Odoo speeds up bank reconciliation by matching most of your imported
-bank statement lines to your accounting transactions. Odoo also
-remembers how you've treated other bank statement lines and provides
-suggested general ledger transactions.
-
-Calculate the tax you owe your tax authority
-============================================
-
-Odoo totals all your accounting transactions for your tax period and
-uses these totals to calculate your tax obligation. You can then check
-your sales tax by running Odoo's Tax Report.
-
-Inventory Valuation
-===================
-
-Odoo support both periodic (manual) and perpetual (automated)
-inventory valuations. The available methods are standard price,
-average price, LIFO (for countries allowing it) and FIFO.
+Odoo uses the double-entry bookkeeping system, whereby every entry needs a corresponding and
+opposite counterpart in a different account, with one account debited and the other credited.
+It ensures that all transactions are recorded accurately and consistently and that the accounts
+always balance.
 
 .. seealso::
-   - :doc:`View impact of the valuation method on your transactions
-     </applications/inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`
+   :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
 
-Easy retained earnings
+Accrual and cash basis
 ======================
 
-Retained earnings are the portion of income retained by your
-business. Odoo automatically calculates your current year earnings in
-real time so no year-end journal or rollover is required.  This is
-calculated by reporting the profit and loss balance to your balance
-sheet report automatically.
+Both accrual and cash basis accounting are supported in Odoo. This allows reporting income and
+expense either when the transaction occurs (accrual basis) or when the payment is made or received
+(cash basis).
+
+.. seealso::
+   :doc:`Cash basis <accounting/taxes/cash_basis>`
+
+Multi-company
+=============
+
+Several companies can be managed within the same database. Each company has its :doc:`chart of
+accounts <accounting/get_started/chart_of_accounts>`, which is also useful to generate consolidation
+reports. Users can access several companies but can only work on a single company's accounting at a
+time.
+
+Multi-currency environment
+==========================
+
+A :doc:`multi-currency <accounting/get_started/multi_currency>` environment with an automated
+exchange rate to ease international transactions is available in Odoo. Every transaction is recorded
+in the company's default currency; for transactions occurring in another currency, Odoo stores both
+the value in the company's currency and the transactions' currency value. Odoo generates currency
+gains and losses after reconciling the journal items.
+
+.. seealso::
+   :doc:`Manage a bank in a foreign currency <accounting/bank/foreign_currency>`
+
+International standards
+=======================
+
+Odoo Accounting supports more than 70 countries. It provides the central standards and mechanisms
+common to all nations, and thanks to country-specific modules, local requirements are fulfilled.
+Fiscal positions exist to address regional specificities like the chart of accounts, taxes, or any
+other requirements.
+
+.. seealso::
+   :doc:`Fiscal localization packages <fiscal_localizations>`
+
+Accounts receivable and payable
+===============================
+
+By default, there is a single account for the account receivable entries and one for the account
+payable entries. As transactions are linked to your **contacts**, you can run a report per customer,
+vendor, or supplier.
+
+The **Partner Ledger** report displays the balance of your customers and suppliers. It is available
+by going to :menuselection:`Accounting --> Reporting --> Partner Ledger`.
+
+Reporting
+=========
+
+The following financial :doc:`reports <accounting/reporting>` are available and updated in
+real-time:
+
++-----------------------------------------------+
+|               Financial reports               |
++============+==================================+
+| Statement  | Balance sheet                    |
+|            +----------------------------------+
+|            | Profit and loss                  |
+|            +----------------------------------+
+|            | Cash flow statement              |
+|            +----------------------------------+
+|            | Tax report                       |
+|            +----------------------------------+
+|            | ES sales list                    |
++------------+----------------------------------+
+| Audit      | General ledger                   |
+|            +----------------------------------+
+|            | Trial balance                    |
+|            +----------------------------------+
+|            | Journal report                   |
+|            +----------------------------------+
+|            | Intrastat report                 |
+|            +----------------------------------+
+|            | Check register                   |
++------------+----------------------------------+
+| Partner    | Partner ledger                   |
+|            +----------------------------------+
+|            | Aged receivable                  |
+|            +----------------------------------+
+|            | Aged payable                     |
++------------+----------------------------------+
+| Management | Invoice analysis                 |
+|            +----------------------------------+
+|            | Unrealized currency gains/losses |
+|            +----------------------------------+
+|            | Depreciation schedule            |
+|            +----------------------------------+
+|            | Disallowed expenses              |
+|            +----------------------------------+
+|            | Budget analysis                  |
+|            +----------------------------------+
+|            | Product margins                  |
+|            +----------------------------------+
+|            | 1099 report                      |
++------------+----------------------------------+
+
+.. tip::
+   :doc:`Create and customize reports <accounting/reporting/customize>` with Odoo's report engine.
+
+Tax report
+----------
+
+Odoo computes all accounting transactions for the specific tax period and uses these totals to
+calculate the tax obligation.
+
+.. important::
+   Once the tax report has been generated for a period, Odoo locks it and prevents the creation of
+   new journal entries involving VAT. Any correction to customer invoices or vendor bills has to
+   be recorded in the next period.
+
+.. note::
+   Depending on the country's localization, an XML version of the tax report can be generated to be
+   uploaded to the VAT platform of the relevant taxation authority.
+
+Bank synchronization
+====================
+
+The bank synchronization system directly connects with your bank institution to automatically
+import all transactions into your database. It gives an overview of your cash flow without logging
+into an online banking system or waiting for paper bank statements.
+
+.. seealso::
+   :doc:`Bank synchronization <accounting/bank/bank_synchronization>`
+
+Inventory valuation
+===================
+
+Both periodic (manual) and perpetual (automated) inventory valuations are supported in Odoo. The
+available methods are standard price, average price, :abbr:`LIFO (Last-In, First-Out)` and
+:abbr:`FIFO (First-In, First-Out).`
+
+.. seealso::
+   :doc:`View the impact of the valuation methods on transactions
+   <../inventory_and_mrp/inventory/management/reporting/inventory_valuation_config>`
+
+Retained earnings
+=================
+
+Retained earnings are the portion of income retained by a business. Odoo calculates current year
+earnings in real-time, so no year-end journal or rollover is required. The profit
+and loss balance is automatically reported on the balance sheet report.
+
+.. seealso::
+   :doc:`Accounting Cheat Sheet <accounting/get_started/cheat_sheet>`
+
+Fiduciaries
+===========
+
+The :guilabel:`Accounting Firms` mode can be activated by going to :menuselection:`Accounting -->
+Configuration --> Settings --> Accounting Firms mode`. When enabled:
+
+- The document's sequence becomes editable on all documents;
+- The :guilabel:`Total (tax incl.)` field appears to speed up and control the encoding by automating
+  line creation with the right account and tax;
+- :guilabel:`Invoice Date` and :guilabel:`Bill Date` are pre-filled when encoding a transaction.
+- A :guilabel:`Quick encoding` option is available for customer invoices and vendor bills.
 
 .. toctree::
    :titlesonly:
