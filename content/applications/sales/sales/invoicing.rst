@@ -13,4 +13,3 @@ Invoicing Method
    invoicing/time_materials
    invoicing/milestone
    invoicing/expense
-   invoicing/subscriptions

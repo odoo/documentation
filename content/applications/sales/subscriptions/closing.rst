@@ -41,7 +41,7 @@ Once enabled, this option gives your customers the right to close their own subs
 
 .. note::
    Be sure to check out our documentation on
-   how to :doc:`Use subscription templates <../../subscriptions/configuration/subscription_templates>`
+   how to :doc:`Use subscription templates <plans>`
    to fully understand the importance of this feature in a basic flow using the
    **Odoo Subscriptions** application.
 
@@ -98,10 +98,10 @@ added by the customer.
 
 .. note::
    Before closing a subscription, check out our documentation on how to
-   :doc:`Create a quotation using subscription products <../../subscriptions/sales_flow/create_a_quotation>`
+   :doc:`Create a quotation using subscription products <../subscriptions>`
    to understand how subscriptions are managed in the **Odoo Subscriptions** application.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
+   - :doc:`../subscriptions`
+   - :doc:`plans`
+   - :doc:`products`
