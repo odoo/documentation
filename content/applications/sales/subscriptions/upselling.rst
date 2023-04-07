@@ -36,7 +36,7 @@ Upsell your first subscription
 ==============================
 
 Before upselling a subscription, be sure to check out our documentation on how to
-:doc:`Create a quotation <../../subscriptions/sales_flow/create_a_quotation>` using subscription
+:doc:`Create a quotation <../subscriptions>` using subscription
 products. Indeed, once confirmed, a quotation becomes a sales order and a new subscription is
 automatically created. Therefore, this subscription has the status *In progress*. From there, you
 have the possibility to upsell your subscription.
@@ -80,6 +80,7 @@ The only difference between your two sales orders is the description underneath 
 *Subscription Management* category. There, you can easily visualize which one is your upselling.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
+   - :doc:`../subscriptions`
+   - :doc:`plans`
+   - :doc:`products`
+

@@ -23,7 +23,7 @@ Renew your first subscription
 =============================
 
 Before renewing a subscription, be sure to check out our documentation on how to
-:doc:`Create a quotation <../../subscriptions/sales_flow/create_a_quotation>` using subscription
+:doc:`Create a quotation <../subscriptions>` using subscription
 products. Indeed, once confirmed, a quotation becomes a sales order and a new subscription is
 automatically created. Therefore, this subscription has the status *In progress*. From there, you
 have the possibility to renew the subscription. In the Other Info tab, underneath the To Renew
@@ -77,6 +77,6 @@ to your *Subscriptions dashboard* and use the filter *To renew*.
   :alt: List view of all subscriptions and use of the filter to renew in Odoo Subscriptions
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
+   - :doc:`../subscriptions`
+   - :doc:`plans`
+   - :doc:`products`
