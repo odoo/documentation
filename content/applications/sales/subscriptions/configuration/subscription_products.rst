@@ -1,54 +1,58 @@
-=========================
-Add subscription products
-=========================
+==================
+Recurring products
+==================
 
-To properly sell your subscriptions using our amazing **Odoo Subscriptions** application, you must
-follow these steps:
+When creating a subscription, at least one product on the order lines must be configured as
+:ref:`recurring <subscriptions/product/recurring>`.
 
-1. **Create your own subscription templates**
-2. **Create your own subscription products with the right settings**
+If a single product is sold using more than one recurrence period, configure the product's
+:ref:`time based pricing <subscriptions/product/time-based-pricing>` to automatically adapt the unit
+price on the subscription based on the recurrence set.
 
-As a result, you will be able to manage your subscriptions like any other product, create your
-quotations and continue the sales flow to track the number of subscriptions you sell and manage the
-revenue they generate.
+.. _subscriptions/product/recurring:
 
 Configuration
 =============
 
-Go to :menuselection:`Subscriptions --> Subscription products` to learn how you can configure your
-own subscription products. You have the possibility to create a new product or edit an existing one.
-Once named, be careful to select the option *Can be sold* and deselect *Can be purchased*. For the
-product type, it is recommended to use *Service* for subscription products as they are non-material
-products that you provide to your customers. Finally, you can adapt your prices and also add an
-internal reference.
+To create a recurring product, go to :menuselection:`Subscriptions --> Subscriptions --> Products`
+and click :guilabel:`New`. Choose a :guilabel:`Product Name` and leave :guilabel:`Recurring` and
+:guilabel:`Can be Sold` enabled.
 
-.. image:: subscription_products/subscription-products-configuration.png
-  :align: center
-  :alt: View of a subscription product form in Odoo Subscriptions
+.. _subscriptions/product/time-based-pricing:
+
+Time based pricing
+------------------
+
+To set a recurring product's time based pricing, go to :menuselection:`Subscriptions -->
+Subscriptions --> Products`, select a product, and open the :guilabel:`Time based pricing` tab.
+Click :guilabel:`Add a price`, select a :guilabel:`Period`, and set a :guilabel:`Price`. Add as many
+prices as needed.
 
 .. note::
-   In the Sales tab, underneath the Subscriptions section, make sure the *Subscription products*
-   option is activated. In fact, if you create a subscription product from the **Odoo Subscriptions**
-   application, this option is selected by default. However, if you create a product from another
-   application, it is not the case.
+   :guilabel:`Daily` and :guilabel:`Hourly` periods cannot be used on recurring products.
 
-   .. image:: subscription_products/subscription-products-form.png
-     :align: center
-     :alt: View of a subscription product form in Odoo Subscriptions
+.. _subscriptions/product/pricelists:
 
-   You can also choose the subscription templates you want to use.
+Pricelists
+~~~~~~~~~~
 
-   .. image:: subscription_products/subscription-products-using-subscription-templates.png
-     :align: center
-     :alt: View of a subscription product form in Odoo Subscriptions
+:doc:`Pricelists <../../sales/products_prices/prices/pricing>` can be used with recurring products.
+To do so, go to :menuselection:`Sales --> Products --> Pricelists`, click :guilabel:`New`, name the
+pricelist, and open the :guilabel:`Time based rules` tab. Click :guilabel:`Add a line`, select a
+:guilabel:`Period`, and set a :guilabel:`Price`. Add as many lines as needed. Once done, the
+product's :ref:`time based pricing <subscriptions/product/time-based-pricing>` tab is automatically
+updated.
 
-.. important::
-   Be sure to check out our documentation on how to create, edit and manage your own
-   :doc:`Subscription templates <../../subscriptions/configuration/subscription_templates>`
-   before creating your own subscription products. Once created, check out our documentation on how to
-   :doc:`Create a quotation using subscription products <../../subscriptions/sales_flow/create_a_quotation>`,
-   to complete the sales flow.
+.. _subscriptions/product/ecommerce:
 
-.. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
+eCommerce
+~~~~~~~~~
+
+When a recurring product uses :ref:`time based pricing <subscriptions/product/time-based-pricing>`,
+only the shortest period is used on the eCommerce product page by default.
+
+To let the customer select the period, go to :menuselection:`Subscriptions --> Subscriptions -->
+Products`, select a product, and open the :guilabel:`Attributes & Variants` tab. Name the
+:guilabel:`Attribute`, create :guilabel:`Values` for the different periods that should be available,
+and save manually. Open the :guilabel:`Time Based Pricing` tab and select the correct
+:guilabel:`Product Variants` for each :guilabel:`Period`.
