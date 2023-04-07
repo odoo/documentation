@@ -103,7 +103,7 @@ The frequency of the invoicing and the services/products invoiced are
 defined on the contract.
 
 .. seealso::
-   - :doc:`/applications/sales/sales/invoicing/subscriptions`
+   - :doc:`/applications/sales/subscriptions`
 
 Others
 ======

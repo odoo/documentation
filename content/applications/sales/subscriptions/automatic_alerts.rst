@@ -1,6 +1,6 @@
-=======================
-Set up automatic alerts
-=======================
+================
+Automatic alerts
+================
 
 Now that your subscriptions are up and running, you want to stay up-to-date with your customers.
 Some automation would be appreciated since you would not want to go through the list of all your
@@ -80,7 +80,6 @@ retention rates very high.
    adapt them to your own needs.
 
 .. seealso::
-  - :doc:`../../subscriptions/configuration/subscription_templates`
-  - :doc:`../../subscriptions/configuration/subscription_products`
-  - :doc:`../../subscriptions/sales_flow/create_a_quotation`
-  - :doc:`../../subscriptions/reporting/subscription_reports`
+   - :doc:`../subscriptions`
+   - :doc:`plans`
+   - :doc:`products`
