@@ -20,8 +20,8 @@
 # AleEscandon <alejandra.escandon@jarsa.com.mx>, 2023
 # Martin Trigaux, 2023
 # Pablo Rojas <rojaspablo88@gmail.com>, 2023
-# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # Lucia Pacheco <lpo@odoo.com>, 2023
+# Braulio D. López Vázquez <bdl@odoo.com>, 2023
 # 
 #, fuzzy
 msgid ""
@@ -30,8 +30,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2023-03-03 11:23+0000\n"
 "PO-Revision-Date: 2021-11-02 08:48+0000\n"
-"Last-Translator: Lucia Pacheco <lpo@odoo.com>, 2023\n"
-"Language-Team: Spanish (https://www.transifex.com/odoo/teams/41243/es/)\n"
+"Last-Translator: Braulio D. López Vázquez <bdl@odoo.com>, 2023\n"
+"Language-Team: Spanish (https://app.transifex.com/odoo/teams/41243/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -6657,6 +6657,11 @@ msgid ""
 "appears in the destination location, Odoo generates a picking to fulfill "
 "this need."
 msgstr ""
+":guilabel:`Tomar de (pull)`: esta regla se activa por la necesidad de un "
+"producto en una ubicación específica. La necesidad puede venir de una orden "
+"de venta validada o de una orden de fabricación que requiere un componente "
+"específico. Cuando la necesidad aparece en la ubicación de destino, Odoo "
+"genera una recolección para satisfacer esta necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:236
 msgid ""
@@ -6665,6 +6670,10 @@ msgid ""
 "the source location, Odoo generates a picking to move those products to the "
 "destination location."
 msgstr ""
+":guilabel:`Enviar a (push)`: esta regla se activa por la llegada de algunos "
+"productos en la ubicación de origen definida. En caso de que el usuario "
+"mueva productos de la ubicación de origen, Odoo genera una recolección para "
+"mover esos productos a la ubicación de destino."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:239
 msgid ""
@@ -6675,30 +6684,45 @@ msgid ""
 "is triggered to fulfill it. Once the second need is fulfilled, the products "
 "are pushed to the destination location and all the needs are fulfilled."
 msgstr ""
+":guilabel:`Pull y push`: esta regla permite generar recolecciones en las dos"
+" situaciones que se explicaron anteriormente. Significa que cuando se "
+"necesitan productos en una ubicación específica, se crea un traslado de una "
+"ubicación anterior para satisfacer esa necesidad. Esto crea una necesidad en"
+" la ubicación anterior y se activa una regla para satisfacerla. Una vez que "
+"se satisfaga la segunda necesidad, los productos se envían a la primera "
+"ubicación y se satisfacen todas las necesidades."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:244
 msgid ""
 ":guilabel:`Buy`: when products are needed at the destination location, a "
 "request for quotation is created to fulfill the need."
 msgstr ""
+":guilabel:`Comprar`: cuando se necesitan productos en la ubicación de "
+"destino, se crea una solicitud de cotización para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:246
 msgid ""
 ":guilabel:`Manufacture`: when products are needed in the source location, a "
 "manufacturing order is created to fulfill the need."
 msgstr ""
+":guilabel:`Fabricar`: cuando se necesitan productos en la ubicación de "
+"origen, se crea una orden de fabricación para satisfacer la necesidad."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rstNone
 msgid ""
 "Overview of a \"Pull From\" rule that creates a transfer between the stock and the packing\n"
 "zone."
 msgstr ""
+"Vista general de una regla pull que creo un traslado entre la zona de existencias y la de\n"
+"empaquetado."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:254
 msgid ""
 "The :guilabel:`Operation Type` must also be defined on the rule. This "
 "defines which kind of picking is created from the rule."
 msgstr ""
+"También se debe definir el :guilabel:`tipo de operación` en la regla. Esto "
+"define qué tipo de recolección se crea a partir de la regla."
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:257
 msgid ""
@@ -6706,6 +6730,10 @@ msgid ""
 ":guilabel:`Pull & Push`, a :guilabel:`Supply Method` must be set. The "
 ":guilabel:`Supply Method` defines what happens at the source location:"
 msgstr ""
+"Si la :guilabel:`acción` de la regla se configura como :guilabel:`tomar de "
+"(pull)` o :guilabel:`pull y push`, se debe establecer un :guilabel:`método "
+"de suministro`. El :guilabel:`método de suministro` define qué sucede en la "
+"ubicación de origen:"
 
 #: ../../content/applications/inventory_and_mrp/inventory/routes/concepts/use_routes.rst:261
 msgid ""
