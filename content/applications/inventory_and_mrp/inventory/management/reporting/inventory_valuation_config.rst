@@ -2,7 +2,7 @@
 Inventory valuation configuration
 =================================
 
-.. _inventory/inventory_valuation_config:
+.. _inventory/management/inventory_valuation_config:
 
 All of a company's stock on-hand contributes to the valuation of its inventory. That value should
 be reflected in the company's accounting records to accurately show the value of the company and
