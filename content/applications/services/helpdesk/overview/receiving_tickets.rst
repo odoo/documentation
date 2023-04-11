@@ -120,7 +120,7 @@ Live Chat
 
 The *Live Chat* feature allows website visitors to connect directly with a support agent or chatbot.
 During these conversations, *Helpdesk* tickets can be instantly created by using the
-:doc:`response command </applications/websites/livechat/overview/responses>` `/helpdesk`.
+:doc:`response command </applications/websites/livechat/responses>` `/helpdesk`.
 
 To enable *Live Chat*, navigate to the :menuselection:`Configuration --> Teams` list view, select a
 team, and on the :guilabel:`Teams` settings page, click the check box next to :guilabel:`Live Chat`,
@@ -259,7 +259,7 @@ Create a support ticket from a live chat session
 Once live chat is enabled, operators will be able to communicate with site visitors in real time.
 
 During the conversation, an operator can use the shortcut :doc:`command
-</applications/websites/livechat/overview/responses>` `/helpdesk` to create a ticket without leaving
+</applications/websites/livechat/responses>` `/helpdesk` to create a ticket without leaving
 the chat window. The transcript from the conversation will be added to the new ticket, under the
 :guilabel:`Description` tab.
 
@@ -290,4 +290,4 @@ appropriate number of stars on the kanban card, or on the ticket.
 .. seealso::
    - :doc:`/applications/services/helpdesk/advanced/close_tickets`
    - :doc:`/applications/general/email_communication/email_servers`
-   - :doc:`/applications/websites/livechat/overview/get_started`
+   - :doc:`/applications/websites/livechat`
