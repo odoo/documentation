@@ -58,4 +58,4 @@ can change the Language to any previously installed language and click
     :align: center
 
 .. seealso::
-    * :doc:`../../websites/website/publish/translate`
+    * :doc:`../../websites/website/configuration/translate`
