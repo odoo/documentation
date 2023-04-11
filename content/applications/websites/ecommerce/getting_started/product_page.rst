@@ -28,4 +28,4 @@ See how to configure your products from links here below.
   - :doc:`../maximizing_revenue/cross_selling`
   - :doc:`../maximizing_revenue/reviews`
   - :doc:`../maximizing_revenue/pricing`
-  - :doc:`../../website/optimize/seo`
+  - :doc:`../../website/pages/seo`
