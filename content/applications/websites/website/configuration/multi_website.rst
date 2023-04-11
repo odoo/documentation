@@ -1,6 +1,6 @@
-=====================
-Manage Multi Websites
-=====================
+=================
+Multiple websites
+=================
 
 .. image:: multi_website/multi_website04.png
   :align: center

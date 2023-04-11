@@ -23,5 +23,6 @@ convert visitors into leads or revenues.
 .. toctree::
    :titlesonly:
 
-   website/publish
-   website/optimize
+   website/pages
+   website/configuration
+   website/reporting
