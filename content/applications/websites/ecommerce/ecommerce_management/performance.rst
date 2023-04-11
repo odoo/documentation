@@ -46,5 +46,5 @@ a simple and privacy-friendly alternative to Google Analytics. Everything can be
 Odoo, there is no need to visit Plausible.io's website to access your metrics.
 
 .. seealso::
-   - :doc:`/applications/websites/website/optimize/google_analytics`
-   - :doc:`/applications/websites/website/optimize/plausible`
+   - :doc:`/applications/websites/website/reporting/google_analytics`
+   - :doc:`/applications/websites/website/reporting/plausible`
