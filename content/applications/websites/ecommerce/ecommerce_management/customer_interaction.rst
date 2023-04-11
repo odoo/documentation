@@ -32,9 +32,9 @@ A chatbot is available and can simulate a human-like conversation with website v
 messages in a chat box.
 
 .. seealso::
-   - :doc:`../../livechat/overview/get_started`
-   - :doc:`../../livechat/overview/ratings`
-   - :doc:`../../livechat/overview/responses`
+   - :doc:`../../livechat`
+   - :doc:`../../livechat/ratings`
+   - :doc:`../../livechat/responses`
 
 .. _contact-form:
 
