@@ -171,7 +171,8 @@ to learn how to structure code in Odoo. Also, this will scale better with changi
 
 .. seealso::
    `Code: The switchView function
-   <{GITHUB_PATH}/addons/web/static/src/webclient/actions/action_service.js#L1329>`_
+   <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+   addons/web/static/src/webclient/actions/action_service.js#L1329>`_
 
 8. Add an optional tooltip
 ==========================
