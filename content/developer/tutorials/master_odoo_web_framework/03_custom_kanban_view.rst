@@ -135,7 +135,8 @@ customers with an active order.
 
    - `Code: The fuzzylookup function <{GITHUB_PATH}/addons/web/static/src/core/utils/search.js>`_
    - `Example: Using fuzzyLookup
-     <{GITHUB_PATH}/addons/web/static/tests/core/utils/search_test.js#L17>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/tests/core/utils/search_test.js#L17>`_
 
 7. Refactor the code to use `t-model`
 =====================================
