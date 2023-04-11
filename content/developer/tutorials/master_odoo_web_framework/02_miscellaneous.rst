@@ -96,7 +96,8 @@ notifications and provide access to certain features.
   - `Example: Adding some information to the "session info"
     <{GITHUB_PATH}/addons/barcodes/models/ir_http.py>`_
   - `Example: Reading the session information
-    <{GITHUB_PATH}/addons/barcodes/static/src/barcode_service.js#L5>`_
+    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+    addons/barcodes/static/src/barcode_service.js#L5>`_
 
 3. Real life update
 ===================
@@ -124,7 +125,8 @@ be done in various ways but, for this training, we choose to use the most *decla
 .. seealso::
   - `Documentation on reactivity <{OWL_PATH}/doc/reference/reactivity.md>`_
   - `Example: Use of reactive in a service
-    <{GITHUB_PATH}/addons/web/static/src/core/debug/profiling/profiling_service.js#L30>`_
+    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+    addons/web/static/src/core/debug/profiling/profiling_service.js#L30>`_
 
 4. Add a command to the command palette
 =======================================
@@ -145,7 +147,8 @@ by pressing `CTRL+K` in the Odoo interface.
 
 .. seealso::
   - `Example: Using the useCommand hook
-    <{GITHUB_PATH}/addons/web/static/src/core/debug/debug_menu.js#L15>`_
+    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+    addons/web/static/src/core/debug/debug_menu.js#L15>`_
   - `Code: The command service
     <{GITHUB_PATH}/addons/web/static/src/core/commands/command_service.js>`_
 
@@ -207,7 +210,9 @@ these terms?".
       :scale: 60%
 
 .. seealso::
-   - `Code: The patch function <{GITHUB_PATH}/addons/web/static/src/core/utils/patch.js#L16>`_
+   - `Code: The patch function
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/src/core/utils/patch.js#L16>`_
    - `Code: The ControlPanel component
      <{GITHUB_PATH}/addons/web/static/src/search/control_panel/control_panel.js>`_
    - `The Font Awesome website <https://fontawesome.com/>`_
@@ -215,11 +220,14 @@ these terms?".
    - `Code: ConfirmationDialog
      <{GITHUB_PATH}/addons/web/static/src/core/confirmation_dialog/confirmation_dialog.js>`_
    - `Example: Using the dialog service
-     <{GITHUB_PATH}/addons/board/static/src/board_controller.js#L88>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/board/static/src/board_controller.js#L88>`_
    - `Example: XPath with t-inherit-mode="primary"
-     <{GITHUB_PATH}/addons/account/static/src/components/account_move_form/account_move_form_notebook.xml#L4>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/account/static/src/components/account_move_form/account_move_form_notebook.xml#L4>`_
    - `Example: XPath with t-inherit-mode="extension"
-     <{GITHUB_PATH}/calendar/static/src/components/activity/activity.xml#L4>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     calendar/static/src/components/activity/activity.xml#L4>`_
 
 6. Fetching orders from a customer
 ==================================
@@ -308,4 +316,6 @@ now, there is no client action registered in the action registry.
 
 .. seealso::
   - :ref:`Documentation on assets <reference/assets>`
-  - `Code: LazyComponent <{GITHUB_PATH}/addons/web/static/src/core/assets.js#L255>`_
+  - `Code: LazyComponent
+    <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+    addons/web/static/src/core/assets.js#L255>`_

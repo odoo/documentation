@@ -195,7 +195,8 @@ insert arbitrary components in the form view. Let us see how we can use it.
 .. seealso::
 
    - `Example: Using the tag <widget> in a form view
-     <{GITHUB_PATH}/addons/calendar/views/calendar_views.xml#L197>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/calendar/views/calendar_views.xml#L197>`_
    - `Example: Implementation of a widget (JS)
      <{GITHUB_PATH}/addons/web/static/src/views/widgets/week_days/week_days.js>`_
    - `Example: Implementation of a widget (XML)
@@ -365,7 +366,8 @@ There is a service dedicated to calling models methods: `orm_service`, located i
    - `Example: Extending a view (XML)
      <{GITHUB_PATH}/addons/mass_mailing/static/src/views/mass_mailing_views.xml>`_
    - `Example: Using a js_class attribute
-     <{GITHUB_PATH}/addons/mass_mailing/views/mailing_contact_views.xml#L44>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/mass_mailing/views/mailing_contact_views.xml#L44>`_
    - `Code: orm service <{GITHUB_PATH}/addons/web/static/src/core/orm_service.js>`_
    - `Example: Using the orm service
      <{GITHUB_PATH}/addons/account/static/src/components/open_move_widget/open_move_widget.js>`_
