@@ -1,6 +1,6 @@
-==================================================
-How to do Search Engine Optimisation (SEO) in Odoo
-==================================================
+================================
+Search Engine Optimisation (SEO)
+================================
 
 Search Engine Optimization (SEO) is a set of good practices to optimize
 your website so that you get a better ranking in search engines like

@@ -1,6 +1,6 @@
-===================
-Website translation
-===================
+============
+Translations
+============
 
 The contents of your website pages (i.e., text strings) can be translated into different languages
 directly on your website.

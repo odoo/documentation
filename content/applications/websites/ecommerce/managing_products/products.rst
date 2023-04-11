@@ -191,13 +191,13 @@ The **eCommerce-related** fields to translate are:
 
 .. note::
    Having untranslated content on a web page may be detrimental to the user experience and
-   :doc:`SEO <../../../websites/website/optimize/seo>`.
+   :doc:`SEO <../../../websites/website/pages/seo>`.
 .. note::
    To check the language(s) of your website, go to :menuselection:`Website --> Configuration -->
    Settings --> Website Info section`.
 
 .. seealso::
-   - :doc:`../../../websites/website/optimize/seo`
+   - :doc:`../../../websites/website/pages/seo`
    - :ref:`Multi-language support <seo-multilanguage>`
 
 Website availability
