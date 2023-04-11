@@ -90,7 +90,8 @@ services, and components can import a service with the `useService()` hooks.
 
    #. A button `Customers`, which opens a kanban view with all customers (this action already
       exists, so you should use `its xml id
-      <{GITHUB_PATH}/odoo/addons/base/views/res_partner_views.xml#L513>`_).
+      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+      odoo/addons/base/views/res_partner_views.xml#L525>`_).
    #. A button `New Orders`, which opens a list view with all orders created in the last 7 days.
    #. A button `Cancelled Order`, which opens a list of all orders created in the last 7 days, but
       already cancelled.
@@ -155,7 +156,8 @@ Here is a short explanation on the various arguments:
 
    - `Code: rpc service <{GITHUB_PATH}/addons/web/static/src/core/network/rpc_service.js>`_
    - `Example: calling a route in onWillStart
-     <{GITHUB_PATH}/addons/lunch/static/src/views/search_model.js#L21>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/lunch/static/src/views/search_model.js#L21>`_
 
 4. Cache network calls, create a service
 ========================================
@@ -190,7 +192,8 @@ outside of the `Dashboard` component. This is a nice use case for a service!
    #. It should provide a function `loadStatistics` that, once called, performs the actual rpc, and
       always return the same information.
    #. Maybe use the `memoize
-      <{GITHUB_PATH}/addons/web/static/src/core/utils/functions.js#L11>`_ utility function from
+      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+      addons/web/static/src/core/utils/functions.js#L11>`_ utility function from
       `@web/core/utils/functions`
    #. Use this service in the `Dashboard` component.
    #. Check that it works as expected
@@ -213,7 +216,8 @@ chartjs code every time if they don't need it).
 
 .. exercise::
    #. Load chartjs, you can use the `loadJs
-      <{GITHUB_PATH}/addons/web/static/src/core/assets.js#L23>`_ function to load
+      <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+      addons/web/static/src/core/assets.js#L23>`_ function to load
       :file:`/web/static/lib/Chart/Chart.js`.
    #. In a `Card` (from previous exercises), display a `pie chart
       <https://www.chartjs.org/docs/2.8.0/charts/doughnut.html>`_ in the dashboard that displays the
@@ -226,9 +230,11 @@ chartjs code every time if they don't need it).
 
 .. seealso::
    - `Example: lazy loading a js file
-     <{GITHUB_PATH}/addons/web/static/src/views/graph/graph_renderer.js#L57>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/src/views/graph/graph_renderer.js#L57>`_
    - `Example: rendering a chart in a component
-     <{GITHUB_PATH}/addons/web/static/src/views/graph/graph_renderer.js#L641>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/src/views/graph/graph_renderer.js#L618>`_
 
 6. Going further
 ================
@@ -249,6 +255,8 @@ Here is a list of some small improvements you could try to do if you have the ti
 
 .. seealso::
    - `Example: use of env._t function
-     <{GITHUB_PATH}/addons/account/static/src/components/bills_upload/bills_upload.js#L64>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/account/static/src/components/bills_upload/bills_upload.js#L64>`_
    - `Code: translation code in web/
-     <{GITHUB_PATH}/addons/web/static/src/core/l10n/translation.js#L16>`_
+     <https://github.com/odoo/odoo/blob/1f4e583ba20a01f4c44b0a4ada42c4d3bb074273/
+     addons/web/static/src/core/l10n/translation.js#L16>`_
