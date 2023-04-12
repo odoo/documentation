@@ -79,29 +79,3 @@ visible in the attachment section, or embedded in the PDF.
      Information`.
    - Odoo supports the **Peppol BIS Billing 3.0** format that can be used via existing access
      points.
-
-Add new formats to a database created before July 2022
-------------------------------------------------------
-
-If your database was created before July 2022 and you wish to use one of the formats available from
-July 2022, you have to :ref:`install <general/install>` the module :guilabel:`Import/Export
-electronic invoices with UBL/CII` (module’s technical name: `account_edi_ubl_cii`) and your
-country-specific module.
-
-.. example::
-   If you want to use the Belgian format E-FFF in a database created prior to July 2022, you need to
-   :ref:`install <general/install>`:
-
-   .. list-table::
-      :header-rows: 1
-
-      * - Name
-        - Technical name
-      * - Belgium - E-Invoicing (UBL 2.0, e-fff)
-        - `l10n_be_edi`
-      * - Import/Export electronic invoices with UBL/CII
-        - `account_edi_ubl_cii`
-
-.. note::
-   Once the new module is installed, UBL 2.0 and UBL 2.1 formats no longer appear in the journal
-   since UBL BIS Billing 3.0 is available and more widely supported.
