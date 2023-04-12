@@ -47,6 +47,8 @@ Odoo supports, among others, the following formats.
      - For Dutch companies
    * - EHF 3.0
      - For Norwegian companies
+   * - SG BIS Billing 3.0
+     - For Singaporean companies
    * - A-NZ BIS Billing 3.0
      - For Australian/New Zealand companies
 
