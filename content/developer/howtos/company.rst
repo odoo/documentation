@@ -193,7 +193,7 @@ from view if the user does not have access to multiple companies. This is assess
 
 .. _howto/company/security:
 
-Security Rules
+Security rules
 --------------
 
 When working with records shared across companies or restricted to a single company, we must take
