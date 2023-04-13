@@ -3,7 +3,7 @@ Chapter 2: Odoo web framework
 =============================
 
 In the previous chapter, we learned to use Owl framework and its different concepts. We can now
-learn how to use the Odoo JavaScript framework which is is built on top of Owl.
+learn how to use the Odoo JavaScript framework which is built on top of Owl.
 
 .. graph TD
 ..     subgraph "Owl"
