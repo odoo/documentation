@@ -13,5 +13,4 @@ Field Service
 .. toctree::
    :titlesonly:
 
-   fsm/sales
-   fsm/helpdesk
+   field_service/onsite_interventions
