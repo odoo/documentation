@@ -13,6 +13,5 @@ Field Service
 .. toctree::
    :titlesonly:
 
-   fsm/sales
-   fsm/helpdesk
-   fsm/default_warehouse
+   field_service/onsite_interventions
+   field_service/default_warehouse
