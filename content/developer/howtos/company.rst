@@ -140,7 +140,7 @@ will be triggered to ensure the multi-company consistency of the record.
 
 .. _howto/company/default_company:
 
-Default Company
+Default company
 ---------------
 
 When the field `company_id` is made required on a model, a good practice is to set a default
