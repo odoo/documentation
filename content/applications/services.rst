@@ -9,5 +9,5 @@ Services
 
     services/project
     services/timesheets
-    services/fsm
+    services/field_service
     services/helpdesk
