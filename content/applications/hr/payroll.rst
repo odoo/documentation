@@ -357,3 +357,8 @@ Resume
    Currently, the :guilabel:`Resume` feature found inside the :menuselection:`Payroll app -->
    Configuration` menu is still in development and only serves a specific use case for Belgian
    markets. The documentation will be updated when this section has matured to more markets.
+
+.. toctree::
+   :titlesonly:
+
+   payroll/contracts
