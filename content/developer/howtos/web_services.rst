@@ -2,7 +2,7 @@
 Web Services
 ============
 
-The web-service module offer a common interface for all web-services :
+The web-service module offers a common interface for all web services:
 
 - XML-RPC
 - JSON-RPC
@@ -85,7 +85,7 @@ server with the library ``xmlrpc.client``::
             })
 
 .. seealso::
-   - :doc:`../reference/external_api`: The in-depth tutorial on XML-RPC with examples spanning multiple programming languages.
+   - :doc:`../reference/external_api`: The in-depth tutorial on XML-RPC, with examples spanning multiple programming languages.
 
 JSON-RPC Library
 ----------------
